@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT评测 - AI工具宝箱</title>
+    <meta name="description" content="ChatGPT全面评测：功能特性、使用教程、优缺点分析。OpenAI推出的GPT-5在多模态能力、推理速度方面全面升级，是目前最强大的通用AI助手。">
+    <meta name="keywords" content="ChatGPT评测,ChatGPT使用教程,GPT-5,ChatGPT功能,ChatGPT价格,AI对话工具">
+    <meta property="og:title" content="ChatGPT评测 - 2026年最强大AI助手">
+    <meta property="og:description" content="OpenAI ChatGPT全面评测，包含功能、价格、使用技巧。">
+    <meta property="og:type" content="article">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #fafafa; color: #333; line-height: 1.8; }
+        
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        .header-inner { max-width: 900px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .header h1 { color: #fff; font-size: 22px; }
+        .header h1 span { font-size: 12px; opacity: 0.8; display: block; font-weight: normal; margin-top: 2px; }
+        .header a { color: #fff; text-decoration: none; }
+
+        .breadcrumb { max-width: 900px; margin: 0 auto; padding: 15px 20px; font-size: 13px; color: #999; }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+
+        .article-container { max-width: 900px; margin: 0 auto; padding: 0 20px 40px; }
+        
+        .tool-header { background: #fff; border-radius: 16px; padding: 40px; margin-bottom: 30px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .tool-header-top { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 20px; }
+        .tool-icon-lg { width: 70px; height: 70px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; }
+        .tool-header-info h2 { font-size: 28px; margin-bottom: 8px; }
+        .tool-header-info .subtitle { color: #666; font-size: 15px; margin-bottom: 12px; }
+        .tool-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+        .tool-meta-item { font-size: 13px; color: #666; }
+        .tool-meta-item strong { color: #333; }
+        
+        .tool-badges { display: flex; gap: 8px; margin-bottom: 20px; }
+        
+        .action-bar { display: flex; gap: 12px; margin-top: 20px; }
+        .action-btn { padding: 10px 24px; border-radius: 8px; font-size: 14px; cursor: pointer; text-decoration: none; border: none; transition: all 0.3s; }
+        .action-btn-primary { background: #667eea; color: #fff; }
+        .action-btn-primary:hover { background: #5a6fd6; }
+        .action-btn-secondary { background: #f0f0f0; color: #333; }
+        .action-btn-secondary:hover { background: #e0e0e0; }
+
+        .rating-bar { display: flex; align-items: center; gap: 8px; font-size: 24px; color: #ffaa00; }
+
+        .article-body { background: #fff; border-radius: 16px; padding: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .article-body h2 { font-size: 22px; color: #333; margin: 30px 0 15px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+        .article-body h3 { font-size: 18px; color: #333; margin: 20px 0 10px; }
+        .article-body p { margin-bottom: 15px; color: #555; }
+        .article-body ul, .article-body ol { margin: 10px 0 15px 20px; color: #555; }
+        .article-body li { margin-bottom: 8px; }
+        
+        .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+        @media (max-width: 600px) { .pros-cons { grid-template-columns: 1fr; } }
+        .pros, .cons { padding: 20px; border-radius: 12px; }
+        .pros { background: #f0fff0; }
+        .cons { background: #fff0f0; }
+        .pros h4 { color: #00aa00; margin-bottom: 10px; }
+        .cons h4 { color: #ff4444; margin-bottom: 10px; }
+
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin: 15px 0; }
+        .feature-item { background: #f8f8ff; padding: 12px; border-radius: 8px; text-align: center; font-size: 14px; color: #555; }
+        .feature-item::before { content: '✅ '; }
+
+        .related-tools { background: #fff; border-radius: 16px; padding: 30px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-top: 30px; }
+        .related-tools h3 { font-size: 18px; margin-bottom: 15px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+        .related-card { padding: 15px; border: 1px solid #f0f0f0; border-radius: 10px; cursor: pointer; transition: all 0.3s; text-decoration: none; color: inherit; display: block; }
+        .related-card:hover { border-color: #667eea; box-shadow: 0 4px 15px rgba(102,126,234,0.15); }
+
+        .footer { background: #1a1a2e; color: #8892a4; padding: 30px 20px; text-align: center; margin-top: 40px; }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ChatGPT",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web, iOS, Android",
+        "description": "OpenAI推出的智能对话AI，是目前最强大的通用AI助手",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY",
+            "description": "免费版+Plus $20/月"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "125000"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/"><h1>🤖 AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <a href="/">首页</a> &gt; <a href="/">AI对话</a> &gt; <span>ChatGPT</span>
+    </nav>
+
+    <main class="article-container">
+        <div class="tool-header">
+            <div class="tool-header-top">
+                <div class="tool-icon-lg" style="background:#10a37f;">🟢</div>
+                <div class="tool-header-info">
+                    <h2>ChatGPT <span class="badge" style="background:#ff4444;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">HOT</span></h2>
+                    <p class="subtitle">OpenAI推出的智能对话AI，支持文本生成、代码编写、数据分析等多种任务。GPT-5多模态能力大幅提升，是目前最强大的通用AI助手。</p>
+                    <div class="rating-bar">⭐ 4.9 <span style="font-size:14px;color:#999;">(12.5万评价)</span></div>
+                </div>
+            </div>
+            <div class="tool-meta">
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：chat.openai.com</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：免费版 + Plus $20/月</div>
+                <div class="tool-meta-item">📦 <strong>平台</strong>：Web / iOS / Android</div>
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI对话 / AI写作</div>
+            </div>
+            <div class="action-bar">
+                <a href="https://chat.openai.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="#" class="action-btn action-btn-secondary">收藏工具</a>
+            </div>
+        </div>
+
+        <article class="article-body">
+            <h2>ChatGPT 是什么？</h2>
+            <p>ChatGPT是OpenAI开发的AI对话助手，基于GPT-5大语言模型。2026年最新版本的GPT-5带来了全面升级，支持文本、图片、音频、视频多模态输入输出，推理能力大幅提升。</p>
+            <p>作为全球使用人数最多的AI助手，ChatGPT已经从最初的对话工具发展为一个强大的通用AI平台，支持插件系统、GPTs定制、代码执行等高级功能。</p>
+
+            <h2>核心功能</h2>
+            <div class="features-grid">
+                <div class="feature-item">智能对话</div>
+                <div class="feature-item">代码生成</div>
+                <div class="feature-item">图片理解</div>
+                <div class="feature-item">文件分析</div>
+                <div class="feature-item">插件系统</div>
+                <div class="feature-item">GPTs定制</div>
+                <div class="feature-item">多模态交互</div>
+                <div class="feature-item">联网搜索</div>
+            </div>
+
+            <h2>版本对比</h2>
+            <table style="width:100%;border-collapse:collapse;margin:15px 0;">
+                <thead>
+                    <tr style="background:#f5f5f5;">
+                        <th style="padding:12px;border:1px solid #e0e0e0;text-align:left;">功能</th>
+                        <th style="padding:12px;border:1px solid #e0e0e0;text-align:center;">免费版</th>
+                        <th style="padding:12px;border:1px solid #e0e0e0;text-align:center;">Plus ($20/月)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding:12px;border:1px solid #e0e0e0;">GPT-5 访问</td><td style="padding:12px;border:1px solid #e0e0e0;text-align:center;">有限</td><td style="padding:12px;border:1px solid #e0e0e0;text-align:center;">无限制</td></tr>
+                    <tr><td style="padding:12px;border:1px solid #e0e0e0;">图片生成</td><td style="padding:12px;border:1px solid #e0e0e0;text-align:center;">DALL-E (有限)</td><td style="padding:12px;border:1px solid #e0e0e0;text-align:center;">DALL-E 4</td></tr>
+                    <tr><td style="padding:12px;border:1px solid #e0e0e0;">联网搜索</td><td style="padding:12px;border:1px solid #e0e0e0;text-align:center;">✅</td><td style="padding:12px;border:1px solid #e0e0e0;text-align:center;">✅</td></tr>
+                    <tr><td style="padding:12px;border:1px solid #e0e0e0;">文件分析</td><td style="padding:12px;border:1px solid #e0e0e0;text-align:center;">有限</td><td style="padding:12px;border:1px solid #e0e0e0;text-align:center;">无限制</td></tr>
+                    <tr><td style="padding:12px;border:1px solid #e0e0e0;">GPTs 创建</td><td style="padding:12px;border:1px solid #e0e0e0;text-align:center;">❌</td><td style="padding:12px;border:1px solid #e0e0e0;text-align:center;">✅</td></tr>
+                </tbody>
+            </table>
+
+            <h2>优缺点分析</h2>
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>👍 优点</h4>
+                    <ul>
+                        <li>多模态能力行业领先</li>
+                        <li>插件和GPTs生态丰富</li>
+                        <li>持续更新迭代，进步快</li>
+                        <li>中文支持优秀</li>
+                        <li>免费版功能已经很强</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>👎 缺点</h4>
+                    <ul>
+                        <li>国内需要科学上网</li>
+                        <li>免费版使用次数限制</li>
+                        <li>Plus价格对部分用户偏高</li>
+                        <li>偶尔出现幻觉输出</li>
+                        <li>隐私数据安全顾虑</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>使用技巧</h2>
+            <ol>
+                <li><strong>善用系统提示词</strong>：在设置中自定义ChatGPT的角色和回复风格，获得更精准的回答。</li>
+                <li><strong>多模态输入</strong>：直接上传图片、文件、截图让ChatGPT分析，比纯文本描述效果好很多。</li>
+                <li><strong>分步提问</strong>：复杂任务拆分成多步骤，每步确认后再进行下一步，准确率更高。</li>
+                <li><strong>使用GPTs</strong>：社区有大量定制化的GPTs，如翻译、写作、编程助手，直接使用。</li>
+                <li><strong>代码执行</strong>：让ChatGPT写代码并直接运行，快速验证结果。</li>
+            </ol>
+
+            <h2>适合人群</h2>
+            <p>ChatGPT适合几乎所有需要AI辅助的用户：学生、上班族、程序员、内容创作者、研究人员。免费版已经能满足日常使用，Plus版适合重度用户。</p>
+        </article>
+
+        <div class="related-tools">
+            <h3>🔗 相关工具推荐</h3>
+            <div class="related-grid">
+                <a href="/tools/claude/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🎭</div>
+                    <div style="font-weight:600;">Claude</div>
+                    <div style="font-size:13px;color:#666;">超长上下文AI助手</div>
+                </a>
+                <a href="/tools/kimi/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">👨‍💻</div>
+                    <div style="font-weight:600;">Kimi</div>
+                    <div style="font-size:13px;color:#666;">国产超长上下文AI</div>
+                </a>
+                <a href="/tools/doubao/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🤖</div>
+                    <div style="font-weight:600;">豆包</div>
+                    <div style="font-size:13px;color:#666;">字节AI助手</div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+[
+    {
+        "name": "ChatGPT",
+        "slug": "chatgpt",
+        "emoji": "\ud83d\udfe2",
+        "color": "#10a37f",
+        "description": "OpenAI推出的智能对话AI，支持文本生成、代码编写、数据分析等多种任务，是目前最强大的通用AI助手。2026年GPT-5已发布，多模态能力大幅提升。",
+        "category": "AI对话",
+        "tags": [
+            {"text": "AI对话"},
+            {"text": "AI写作"},
+            {"text": "免费可用", "type": "free"}
+        ],
+        "rating": "\u2b50 4.9",
+        "visits": "12.5万",
+        "badge": {"type": "hot", "text": "HOT"},
+        "url": "https://chat.openai.com",
+        "price": "免费版+Plus $20/月",
+        "pros": ["多模态能力强", "生态丰富", "持续更新迭代"],
+        "cons": ["免费版限制较多", "国内需翻墙"],
+        "features": ["智能对话", "代码生成", "图片理解", "文件分析", "插件系统", "GPTs定制"]
+    },
+    {
+        "name": "Claude",
+        "slug": "claude",
+        "emoji": "\ud83c\udfad",
+        "color": "#d97706",
+        "description": "Anthropic推出的AI助手，以安全性和长文本处理能力著称。Claude 4系列支持1000K超长上下文，在代码和写作方面表现卓越。",
+        "category": "AI对话",
+        "tags": [
+            {"text": "AI对话"},
+            {"text": "长文本"},
+            {"text": "免费可用", "type": "free"}
+        ],
+        "rating": "\u2b50 4.8",
+        "visits": "8.3万",
+        "badge": {"type": "new", "text": "NEW"},
+        "url": "https://claude.ai",
+        "price": "免费版+Pro $20/月",
+        "pros": ["超长上下文", "安全性高", "写作质量优秀"],
+        "cons": ["图片生成能力弱", "国内需翻墙"],
+        "features": ["智能对话", "长文档分析", "代码编写", "多语言翻译", "Artifacts功能"]
+    },
+    {
+        "name": "Midjourney",
+        "slug": "midjourney",
+        "emoji": "\ud83c\udfa8",
+        "color": "#7c3aed",
+        "description": "顶级AI绘画工具，通过文字描述生成高质量图片。V7版本画质达到照片级，支持风格一致性，设计师和创作者首选。",
+        "category": "AI绘画",
+        "tags": [
+            {"text": "AI绘画"},
+            {"text": "热门", "type": "hot"},
+            {"text": "付费"}
+        ],
+        "rating": "\u2b50 4.9",
+        "visits": "10.2万",
+        "badge": {"type": "pick", "text": "编辑推荐"},
+        "url": "https://midjourney.com",
+        "price": "基础$10/月起",
+        "pros": ["画质顶级", "艺术感强", "风格多样"],
+        "cons": ["纯付费", "需Discord使用", "无API"],
+        "features": ["文生图", "图生图", "风格一致性", "局部重绘", "图片放大", "混合提示"]
+    },
+    {
+        "name": "GitHub Copilot",
+        "slug": "github-copilot",
+        "emoji": "\ud83d\udcbb",
+        "color": "#3178c6",
+        "description": "AI编程助手，集成在VS Code等编辑器中，自动补全代码、生成函数、修复bug，支持50+编程语言，编程效率提升显著。",
+        "category": "AI编程",
+        "tags": [
+            {"text": "AI编程"},
+            {"text": "热门", "type": "hot"},
+            {"text": "付费"}
+        ],
+        "rating": "\u2b50 4.7",
+        "visits": "6.8万",
+        "badge": {"type": "hot", "text": "HOT"},
+        "url": "https://github.com/features/copilot",
+        "price": "免费个人版+Business $19/月",
+        "pros": ["编辑器集成好", "代码质量高", "支持语言多"],
+        "cons": ["付费才能用完整版", "偶有错误代码"],
+        "features": ["代码补全", "Chat问答", "代码解释", "单元测试生成", "CLI助手", "PR摘要"]
+    },
+    {
+        "name": "Notion AI",
+        "slug": "notion-ai",
+        "emoji": "\ud83d\udcca",
+        "color": "#ff6b6b",
+        "description": "集成在Notion中的AI助手，可以帮你写文档、总结笔记、翻译文本、生成大纲，是知识工作者的效率神器。",
+        "category": "AI办公",
+        "tags": [
+            {"text": "AI办公"},
+            {"text": "笔记"},
+            {"text": "付费"}
+        ],
+        "rating": "\u2b50 4.6",
+        "visits": "5.4万",
+        "url": "https://notion.so",
+        "price": "AI附加费$10/月",
+        "pros": ["无缝集成Notion", "多功能一体", "协作方便"],
+        "cons": ["需Notion订阅", "AI功能额外付费"],
+        "features": ["文档生成", "笔记总结", "翻译", "大纲生成", "表格处理", "数据库管理"]
+    },
+    {
+        "name": "Runway",
+        "slug": "runway",
+        "emoji": "\ud83d\udcf9",
+        "color": "#00b4d8",
+        "description": "专业AI视频编辑和生成工具，Gen-4支持高质量文生视频。支持去背景、视频修复、AI特效等，影视创作者必备。",
+        "category": "AI视频",
+        "tags": [
+            {"text": "AI视频"},
+            {"text": "热门", "type": "hot"},
+            {"text": "有免费版", "type": "free"}
+        ],
+        "rating": "\u2b50 4.7",
+        "visits": "4.2万",
+        "badge": {"type": "new", "text": "NEW"},
+        "url": "https://runwayml.com",
+        "price": "免费版+标准$15/月",
+        "pros": ["视频质量高", "功能丰富", "有免费额度"],
+        "cons": ["渲染较慢", "付费版较贵"],
+        "features": ["文生视频", "图生视频", "AI去背景", "视频修复", "运动笔刷", "风格迁移"]
+    },
+    {
+        "name": "Stable Diffusion",
+        "slug": "stable-diffusion",
+        "emoji": "\ud83c\udf1f",
+        "color": "#a855f7",
+        "description": "开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。",
+        "category": "AI绘画",
+        "tags": [
+            {"text": "AI绘画"},
+            {"text": "开源"},
+            {"text": "免费", "type": "free"}
+        ],
+        "rating": "\u2b50 4.7",
+        "visits": "9.1万",
+        "url": "https://stability.ai",
+        "price": "完全免费（需GPU）",
+        "pros": ["完全免费", "高度可定制", "社区活跃"],
+        "cons": ["需GPU硬件", "上手门槛高", "出图需调参"],
+        "features": ["文生图", "图生图", "Inpainting", "ControlNet", "LoRA训练", "SDXL Turbo"]
+    },
+    {
+        "name": "Kimi",
+        "slug": "kimi",
+        "emoji": "\ud83d\udc68\u200d\ud83d\udcbb",
+        "color": "#2563eb",
+        "description": "月之暗面推出的国产AI助手，支持200万字超长上下文，文档分析能力突出，国内可直连使用，中英文表现优秀。",
+        "category": "AI对话",
+        "tags": [
+            {"text": "AI对话"},
+            {"text": "国产"},
+            {"text": "免费可用", "type": "free"}
+        ],
+        "rating": "\u2b50 4.5",
+        "visits": "7.6万",
+        "url": "https://kimi.moonshot.cn",
+        "price": "免费使用",
+        "pros": ["国内直连", "超长上下文", "文档能力强"],
+        "cons": ["复杂推理偏弱", "图片生成缺失"],
+        "features": ["智能对话", "文档分析", "网页总结", "代码编写", "长文本处理"]
+    },
+    {
+        "name": "Cursor",
+        "slug": "cursor",
+        "emoji": "\ud83d\udd39",
+        "color": "#000000",
+        "description": "AI驱动的代码编辑器，基于VS Code深度改造。Tab补全、Cmd+K编辑、Chat对话三合一，目前最火的AI编程工具。",
+        "category": "AI编程",
+        "tags": [
+            {"text": "AI编程"},
+            {"text": "热门", "type": "hot"},
+            {"text": "有免费版", "type": "free"}
+        ],
+        "rating": "\u2b50 4.8",
+        "visits": "5.9万",
+        "badge": {"type": "hot", "text": "HOT"},
+        "url": "https://cursor.com",
+        "price": "免费版+Pro $20/月",
+        "pros": ["VS Code生态", "AI体验流畅", "多模型支持"],
+        "cons": ["免费次数有限", "网络需通畅"],
+        "features": ["Tab补全", "Cmd+K编辑", "AI Chat", "代码库理解", "多模型切换", "Git集成"]
+    },
+    {
+        "name": "Suno",
+        "slug": "suno",
+        "emoji": "\ud83c\udfb5",
+        "color": "#1a1a2e",
+        "description": "AI音乐生成工具，输入文字描述即可生成完整歌曲，包含歌词、旋律、人声。V4版本音质接近专业制作水平。",
+        "category": "AI音频",
+        "tags": [
+            {"text": "AI音频"},
+            {"text": "音乐"},
+            {"text": "有免费版", "type": "free"}
+        ],
+        "rating": "\u2b50 4.6",
+        "visits": "3.8万",
+        "url": "https://suno.com",
+        "price": "免费版+Pro $10/月",
+        "pros": ["生成速度快", "音质好", "操作简单"],
+        "cons": ["免费次数少", "风格有一定限制"],
+        "features": ["文生歌曲", "歌词生成", "风格选择", "音频延长", "AI人声", "混音"]
+    },
+    {
+        "name": "Canva AI",
+        "slug": "canva-ai",
+        "emoji": "\ud83c\udfa8",
+        "color": "#00c4cc",
+        "description": "全球最大在线设计平台，AI功能全面升级。支持AI生图、一键抠图、智能排版、AI写作辅助，设计小白也能做出专业作品。",
+        "category": "AI设计",
+        "tags": [
+            {"text": "AI设计"},
+            {"text": "模板多"},
+            {"text": "有免费版", "type": "free"}
+        ],
+        "rating": "\u2b50 4.5",
+        "visits": "6.2万",
+        "url": "https://canva.com",
+        "price": "免费版+Pro ¥120/月",
+        "pros": ["模板丰富", "操作简单", "中文支持好"],
+        "cons": ["高级功能需付费", "导出有水印(免费版)"],
+        "features": ["AI生图", "一键抠图", "智能排版", "AI文案", "视频编辑", "团队协作"]
+    },
+    {
+        "name": "豆包",
+        "slug": "doubao",
+        "emoji": "\ud83e\udd16",
+        "color": "#3b82f6",
+        "description": "字节跳动推出的AI助手，语音交互流畅，多模态能力强。集成在抖音、今日头条等生态，国内用户量最大的AI助手之一。",
+        "category": "AI对话",
+        "tags": [
+            {"text": "AI对话"},
+            {"text": "国产"},
+            {"text": "免费", "type": "free"}
+        ],
+        "rating": "\u2b50 4.4",
+        "visits": "11.3万",
+        "url": "https://doubao.com",
+        "price": "免费使用",
+        "pros": ["国内直连", "语音能力强", "字节生态"],
+        "cons": ["深度推理一般", "广告较多"],
+        "features": ["智能对话", "语音交互", "图片生成", "代码编写", "文档分析"]
+    }
+]
