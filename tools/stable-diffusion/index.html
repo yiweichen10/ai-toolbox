@@ -3,207 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>工具评测 - AI工具宝箱</title>
-    <meta name="description" content="AI工具详细评测，包含功能特性、优缺点分析、使用技巧和版本对比。">
-    <meta name="keywords" content="AI工具评测,AI工具对比">
+    <title>Stable Diffusion评测 - AI工具宝箱</title>
+    <meta name="description" content="Stable Diffusion全面评测：开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。">
+    <meta name="keywords" content="Stable Diffusion评测,Stable Diffusion使用教程,AI绘画工具">
+    <link rel="canonical" href="https://www.aitoolbox.hk/tools/stable-diffusion/index.html">
     <meta property="og:type" content="article">
+    <meta property="og:title" content="Stable Diffusion评测 - AI工具宝箱">
+    <meta property="og:description" content="开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。">
+    <meta property="og:url" content="https://www.aitoolbox.hk/tools/stable-diffusion/index.html">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json" id="structuredData">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Web",
-        "description": ""
-    }
-    </script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Stable Diffusion",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "本地部署 / Web",
+  "description": "开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。",
+  "offers": {
+    "@type": "Offer",
+    "price": "完全免费（需GPU）",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "ratingCount": "9.10000"
+  }
+}</script>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0;&#xFE0F; AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
         </div>
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/" id="bcCategory">分类</a> &gt; <span id="bcName">工具名</span>
+        <a href="/">首页</a> &gt; <a href="/">AI绘画</a> &gt; <span>Stable Diffusion</span>
     </nav>
 
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" id="toolIcon"></div>
+                <div class="tool-icon-lg" style="background:#a855f7;">🌟</div>
                 <div class="tool-header-info">
-                    <h2 id="toolName"></h2>
-                    <p class="subtitle" id="toolDesc"></p>
-                    <div class="rating-bar" id="toolRating"></div>
+                    <h2>Stable Diffusion</h2>
+                    <p class="subtitle">开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。</p>
+                    <div class="rating-bar">⭐ 4.7 <span style="font-size:14px;color:#999;">(9.1万浏览)</span></div>
                 </div>
             </div>
-            <div class="tool-meta" id="toolMeta"></div>
+            <div class="tool-meta">
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：stability.ai</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：完全免费（需GPU）</div>
+                <div class="tool-meta-item">📦 <strong>平台</strong>：本地部署 / Web</div>
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI绘画</div>
+            </div>
             <div class="action-bar">
-                <a href="#" id="toolUrl" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://stability.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
-        <div class="features-grid" id="toolFeatures"></div>
+        <div class="features-grid"><div class="feature-item">文生图</div>
+<div class="feature-item">图生图</div>
+<div class="feature-item">Inpainting</div>
+<div class="feature-item">ControlNet</div>
+<div class="feature-item">LoRA训练</div>
+<div class="feature-item">SDXL Turbo</div>
+</div>
 
-        <article class="article-body" id="toolContent"></article>
+        <article class="article-body">
+            <h2>Stable Diffusion 是什么？</h2>
 
-        <div class="pros-cons" id="toolProsCons" style="display:none;">
+<p>Stable Diffusion是开源的AI绘画模型，可以完全免费地在本地部署使用。与其他AI绘画工具不同，SD的高度可定制性是其最大优势——通过ControlNet、LoRA等技术，可以实现精确的图像控制。
+</p>
+
+<p>SD拥有最活跃的社区，海量的模型和LoRA资源可以免费获取使用。
+</p>
+
+<h2>核心功能</h2>
+
+<li><strong>文生图</strong>：通过Prompt生成图片</li>
+<li><strong>图生图</strong>：基于参考图生成新图片</li>
+<li><strong>Inpainting</strong>：局部修改图片特定区域</li>
+<li><strong>ControlNet</strong>：精确控制图片构图、姿态、深度等</li>
+<li><strong>LoRA训练</strong>：训练自定义风格模型</li>
+<li><strong>SDXL Turbo</strong>：实时生成，几秒出图</li>
+
+<h2>硬件要求</h2>
+<table><thead><tr><th>配置</th><th>最低要求</th><th>推荐配置</th></tr></thead><tbody><tr><td>显卡</td><td>6GB VRAM</td><td>12GB+ VRAM</td></tr><tr><td>内存</td><td>16GB</td><td>32GB</td></tr><tr><td>硬盘</td><td>10GB</td><td>50GB SSD</td></tr><tr><td>推荐</td><td>RTX 3060</td><td>RTX 4070+</td></tr></tbody></table>
+<h2>使用技巧</h2>
+
+<li><strong>WebUI选择</strong>：推荐ComfyUI（节点式）或Automatic1111（经典）。</li>
+<li><strong>模型选择</strong>：写实类用Juggernaut XL，动漫类用Anything V5。</li>
+<li><strong>ControlNet</strong>：配合Canny、OpenPose实现精确控制。</li>
+<li><strong>LoRA</strong>：在Civitai上找高质量LoRA提升特定风格。</li>
+<li><strong>参数调优</strong>：推荐参数：Steps 20-30, CFG Scale 7-9, Sampler DPM++。</li>
+
+<h2>适合人群</h2>
+
+<p>Stable Diffusion适合技术爱好者和追求自定义能力的创作者。如果你有 decent GPU，愿意花时间学习，SD是最强大且免费的AI绘画方案。
+</p>
+        </article>
+
+        <div class="pros-cons">
             <div class="pros">
-                <h4>&#x1F44D; 优点</h4>
-                <ul id="prosList"></ul>
+                <h4>👍 优点</h4>
+                <ul><li>完全免费无限制</li><li>高度可定制</li><li>社区活跃资源多</li><li>ControlNet强大</li><li>隐私安全本地运行</li></ul>
             </div>
             <div class="cons">
-                <h4>&#x1F44E; 缺点</h4>
-                <ul id="consList"></ul>
+                <h4>👎 缺点</h4>
+                <ul><li>需GPU硬件要求</li><li>上手门槛较高</li><li>需要调参学习</li><li>出图速度取决于硬件</li></ul>
             </div>
         </div>
 
-        <div class="related-tools" id="relatedSection" style="display:none;">
-            <h3>&#x1F517; 相关工具推荐</h3>
-            <div class="related-grid" id="relatedGrid"></div>
+        <div class="related-tools" id="relatedSection">
+            <h3>🔗 相关工具推荐</h3>
+            <div class="related-grid"><a href="/tools/midjourney/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🎨</div>
+                    <div style="font-weight:600;">Midjourney</div>
+                    <div style="font-size:13px;color:#666;">AI绘画</div>
+                </a>
+<a href="/tools/canva-ai/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🖼️</div>
+                    <div style="font-weight:600;">Canva AI</div>
+                    <div style="font-size:13px;color:#666;">AI设计</div>
+                </a>
+</div>
         </div>
     </main>
 
     <footer class="footer">
-        <p>&#x00A9; 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
     </footer>
-
-    <script>
-        const pathParts = window.location.pathname.split('/');
-        const slug = pathParts[pathParts.length - 2] || 'chatgpt';
-
-        fetch('/data/tools.json')
-            .then(r => r.json())
-            .then(tools => {
-                const tool = tools.find(t => t.slug === slug);
-                if (!tool) {
-                    document.getElementById('toolContent').innerHTML = '<p>工具未找到</p>';
-                    return;
-                }
-                renderTool(tool, tools);
-            })
-            .catch(() => {
-                document.getElementById('toolContent').innerHTML = '<p>加载失败</p>';
-            });
-
-        function renderTool(tool, allTools) {
-            // Meta
-            document.title = tool.name + '评测 - AI工具宝箱';
-            document.querySelector('meta[name="description"]').content = tool.name + '全面评测：' + tool.description;
-            document.querySelector('meta[name="keywords"]').content = tool.name + '评测,' + tool.name + '使用教程,' + tool.category + '工具';
-            document.querySelector('meta[property="og:title"]').content = tool.name + '评测 - AI工具宝箱';
-
-            // Structured data
-            const sd = JSON.parse(document.getElementById('structuredData').textContent);
-            sd.name = tool.name;
-            sd.description = tool.description;
-            sd.operatingSystem = tool.platform || 'Web';
-            document.getElementById('structuredData').textContent = JSON.stringify(sd);
-
-            // Breadcrumb
-            document.getElementById('bcCategory').textContent = tool.category;
-            document.getElementById('bcName').textContent = tool.name;
-
-            // Header
-            document.getElementById('toolIcon').style.background = tool.color;
-            document.getElementById('toolIcon').textContent = tool.emoji;
-
-            let nameHtml = tool.name;
-            if (tool.badge) {
-                const badgeColor = tool.badge.type === 'hot' ? '#ff4444' : tool.badge.type === 'new' ? '#00aa00' : '#667eea';
-                nameHtml += ' <span class="badge" style="background:' + badgeColor + ';color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">' + tool.badge.text + '</span>';
-            }
-            document.getElementById('toolName').innerHTML = nameHtml;
-            document.getElementById('toolDesc').textContent = tool.description;
-            document.getElementById('toolRating').innerHTML = tool.rating + ' <span style="font-size:14px;color:#999;">(' + tool.visits + '浏览)</span>';
-
-            // Meta info
-            let metaHtml = '';
-            metaHtml += '<div class="tool-meta-item">&#x1F310; <strong>官网</strong>：' + tool.url.replace('https://', '') + '</div>';
-            metaHtml += '<div class="tool-meta-item">&#x1F4B0; <strong>价格</strong>：' + tool.price + '</div>';
-            if (tool.platform) {
-                metaHtml += '<div class="tool-meta-item">&#x1F4E6; <strong>平台</strong>：' + tool.platform + '</div>';
-            }
-            metaHtml += '<div class="tool-meta-item">&#x1F3F7;&#xFE0F; <strong>分类</strong>：' + tool.category + '</div>';
-            document.getElementById('toolMeta').innerHTML = metaHtml;
-
-            // URL
-            document.getElementById('toolUrl').href = tool.url;
-
-            // Features
-            if (tool.features && tool.features.length > 0) {
-                let fHtml = '';
-                tool.features.forEach(f => {
-                    fHtml += '<div class="feature-item">' + f + '</div>';
-                });
-                document.getElementById('toolFeatures').innerHTML = fHtml;
-            }
-
-            // Content (Markdown to HTML)
-            if (tool.content) {
-                document.getElementById('toolContent').innerHTML = markdownToHtml(tool.content);
-            }
-
-            // Pros/Cons (use separate section, not from content)
-            if (tool.pros && tool.cons) {
-                document.getElementById('toolProsCons').style.display = 'grid';
-                document.getElementById('prosList').innerHTML = tool.pros.map(p => '<li>' + p + '</li>').join('');
-                document.getElementById('consList').innerHTML = tool.cons.map(c => '<li>' + c + '</li>').join('');
-            }
-
-            // Related tools
-            if (tool.related && tool.related.length > 0) {
-                document.getElementById('relatedSection').style.display = 'block';
-                let rHtml = '';
-                tool.related.forEach(rSlug => {
-                    const r = allTools.find(t => t.slug === rSlug);
-                    if (r) {
-                        rHtml += '<a href="/tools/' + r.slug + '/index.html" class="related-card">';
-                        rHtml += '<div style="font-size:24px;margin-bottom:8px;">' + r.emoji + '</div>';
-                        rHtml += '<div style="font-weight:600;">' + r.name + '</div>';
-                        rHtml += '<div style="font-size:13px;color:#666;">' + r.category + '</div>';
-                        rHtml += '</a>';
-                    }
-                });
-                document.getElementById('relatedGrid').innerHTML = rHtml;
-            }
-        }
-
-        function markdownToHtml(md) {
-            return md
-                .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-                .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-                .replace(/`([^`]+)`/g, '<code>$1</code>')
-                .replace(/```[\s\S]*?```/g, function(match) {
-                    var code = match.replace(/```\w*\n?/, '').replace(/```$/, '');
-                    return '<pre><code>' + code.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</code></pre>';
-                })
-                .replace(/\n(\|.+\|)\n(\|[-:| ]+\|)\n((?:\|.+\|\n?)+)/g, function(match, header, sep, body) {
-                    var headers = header.split('|').filter(function(c){return c.trim();});
-                    var rows = body.trim().split('\n');
-                    var table = '<table><thead><tr>';
-                    headers.forEach(function(h){table += '<th>' + h.trim() + '</th>';});
-                    table += '</tr></thead><tbody>';
-                    rows.forEach(function(row){
-                        var cells = row.split('|').filter(function(c){return c.trim();});
-                        table += '<tr>';
-                        cells.forEach(function(c){table += '<td>' + c.trim() + '</td>';});
-                        table += '</tr>';
-                    });
-                    table += '</tbody></table>';
-                    return table;
-                })
-                .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
-                .replace(/^- (.+)$/gm, '<li>$1</li>')
-                .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
-                .replace(/\n\n(?!<)/g, '\n</p><p>\n')
-                .replace(/<\/p>\s*<li>/g, '<li>')
-                .replace(/<\/li>\s*<p>/g, '</li>');
-        }
-    </script>
 </body>
 </html>

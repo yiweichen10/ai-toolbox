@@ -3,234 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文章标题 - AI工具宝箱</title>
-    <meta name="description" content="文章描述">
-    <meta name="keywords" content="关键词">
+    <title>AI绘画入门指南：从零开始学会AI绘画 - AI工具宝箱</title>
+    <meta name="description" content="AI绘画零基础入门教程，从工具选择到提示词编写，带你一步步学会用AI创作精美图片。">
+    <meta name="keywords" content="AI绘画入门,AI绘画教程,Midjourney教程,Stable Diffusion教程,AI绘画提示词">
+    <link rel="canonical" href="https://www.aitoolbox.hk/articles/ai-painting-guide/index.html">
     <meta property="og:type" content="article">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #fafafa; color: #333; line-height: 1.8; }
-        
-        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
-        .header-inner { max-width: 900px; margin: 0 auto; padding: 15px 20px; }
-        .header h1 { color: #fff; font-size: 22px; }
-        .header h1 span { font-size: 12px; opacity: 0.8; display: block; font-weight: normal; margin-top: 2px; }
-        .header a { color: #fff; text-decoration: none; }
-
-        .breadcrumb { max-width: 900px; margin: 0 auto; padding: 15px 20px; font-size: 13px; color: #999; }
-        .breadcrumb a { color: #667eea; text-decoration: none; }
-
-        .article-container { max-width: 900px; margin: 0 auto; padding: 0 20px 40px; }
-
-        .article-header { background: #fff; border-radius: 16px; padding: 40px; margin-bottom: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-        .article-header .tag { display: inline-block; background: #667eea; color: #fff; padding: 3px 12px; border-radius: 12px; font-size: 13px; margin-bottom: 15px; }
-        .article-header h2 { font-size: 30px; line-height: 1.4; margin-bottom: 15px; }
-        .article-header .meta { display: flex; gap: 20px; font-size: 14px; color: #999; }
-        .article-header .desc { margin-top: 15px; padding-top: 15px; border-top: 1px solid #f0f0f0; color: #666; font-size: 15px; }
-
-        .article-body { background: #fff; border-radius: 16px; padding: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-        .article-body h2 { font-size: 22px; color: #333; margin: 30px 0 15px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
-        .article-body h3 { font-size: 18px; color: #333; margin: 20px 0 10px; }
-        .article-body p { margin-bottom: 15px; color: #555; }
-        .article-body ul, .article-body ol { margin: 10px 0 15px 20px; color: #555; }
-        .article-body li { margin-bottom: 8px; }
-        .article-body strong { color: #333; }
-        .article-body table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-        .article-body th, .article-body td { padding: 12px; border: 1px solid #e0e0e0; }
-        .article-body th { background: #f5f5f5; text-align: left; }
-        .article-body code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
-        .article-body pre { background: #1a1a2e; color: #e0e0e0; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 15px 0; line-height: 1.5; }
-        .article-body pre code { background: none; padding: 0; color: inherit; }
-        .article-body blockquote { border-left: 4px solid #667eea; padding: 15px 20px; margin: 15px 0; background: #f8f8ff; border-radius: 0 8px 8px 0; color: #555; }
-
-        .toc { background: #f8f8ff; border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #e8e8f0; }
-        .toc h4 { margin-bottom: 10px; color: #333; }
-        .toc ul { list-style: none; margin: 0; }
-        .toc li { margin-bottom: 5px; }
-        .toc a { color: #667eea; text-decoration: none; font-size: 14px; }
-        .toc a:hover { text-decoration: underline; }
-
-        .nav-buttons { display: flex; justify-content: space-between; gap: 20px; margin-top: 30px; }
-        .nav-btn { flex: 1; padding: 15px 20px; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-decoration: none; color: #333; transition: all 0.3s; }
-        .nav-btn:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); color: #667eea; }
-        .nav-btn .label { font-size: 12px; color: #999; }
-        .nav-btn .title { font-size: 15px; font-weight: 600; margin-top: 5px; }
-
-        .footer { background: #1a1a2e; color: #8892a4; padding: 30px 20px; text-align: center; margin-top: 40px; }
-    </style>
+    <meta property="og:title" content="AI绘画入门指南：从零开始学会AI绘画 - AI工具宝箱">
+    <meta property="og:description" content="AI绘画零基础入门教程，从工具选择到提示词编写，带你一步步学会用AI创作精美图片。">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI绘画入门指南：从零开始学会AI绘画",
+  "description": "AI绘画零基础入门教程，从工具选择到提示词编写，带你一步步学会用AI创作精美图片。",
+  "datePublished": "2026年3月20日",
+  "author": {
+    "@type": "Organization",
+    "name": "AI工具宝箱"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI工具宝箱"
+  }
+}</script>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/"><h1>🤖 AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
         </div>
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/">文章</a> &gt; <span id="breadcrumbTitle">文章标题</span>
+        <a href="/">首页</a> &gt; <span>AI绘画</span> &gt; <span>AI绘画入门指南：从零开始学会AI绘画...</span>
     </nav>
 
     <main class="article-container">
-        <div class="article-header">
-            <div class="tag" id="articleTag">分类</div>
-            <h2 id="articleTitle">文章标题</h2>
-            <div class="meta">
-                <span id="articleDate">📅 日期</span>
-                <span>⏱️ 阅读约 8 分钟</span>
-                <span>👁️ 浏览</span>
+        <article class="article-body">
+            <h1 style="margin-bottom:16px;">AI绘画入门指南：从零开始学会AI绘画</h1>
+            <div style="color:#999;font-size:14px;margin-bottom:24px;">
+                2026年3月20日 · AI绘画
             </div>
-            <div class="desc" id="articleDesc">文章描述</div>
-        </div>
+            <h2>前言</h2>
 
-        <div class="toc" id="toc">
-            <h4>📋 文章目录</h4>
-            <ul id="tocList"></ul>
-        </div>
+<p>AI绘画是2026年最热门的AI应用之一。无论你是设计师、自媒体人还是普通爱好者，AI绘画都能帮你快速创作出令人惊艳的视觉作品。本文将从零开始，带你全面了解AI绘画。
+</p>
 
-        <article class="article-body" id="articleBody">
-            <!-- JS渲染 -->
+<h2>第一章：AI绘画工具选择</h2>
+
+<h3>入门推荐：Midjourney</h3>
+<li>优点：操作简单，出图质量高，社区活跃</li>
+<li>价格：$10/月起</li>
+<li>适合：不想折腾技术细节的创作者</li>
+
+<h3>免费方案：Stable Diffusion</h3>
+<li>优点：完全免费，高度可定制，模型丰富</li>
+<li>缺点：需要一定电脑配置（建议8GB以上显存）</li>
+<li>适合：技术爱好者，追求自定义能力</li>
+
+<h3>中文友好：文心一格</h3>
+<li>优点：国内直连，中文提示词支持好</li>
+<li>适合：不方便使用国外工具的用户</li>
+
+<h2>第二章：提示词编写技巧</h2>
+
+<h3>基本结构</h3>
+<p>一个好的提示词包含以下要素：
+</p>
+<pre><code>[主体] + [风格] + [光影] + [构图] + [细节] + [参数]
+<p></code></pre>
+</p>
+
+<h3>示例对比</h3>
+
+<p><strong>差的提示词：</strong>
+</p>
+<pre><code>一只猫
+<p></code></pre>
+</p>
+
+<p><strong>好的提示词：</strong>
+</p>
+<pre><code>一只橘色小猫，坐在窗台上，阳光洒在身上，水彩画风格，柔和光影，特写镜头，细节丰富，8K高清
+<p></code></pre>
+</p>
+
+<h3>常用风格关键词</h3>
+<li>写实风格：photorealistic, 8K, ultra detailed</li>
+<li>水彩风格：watercolor painting, soft colors, artistic</li>
+<li>日系动漫：anime style, Studio Ghibli, cel shading</li>
+<li>像素风：pixel art, 16-bit, retro game</li>
+<li>油画风格：oil painting, impasto, classical art</li>
+
+<h2>第三章：Midjourney实战</h2>
+
+<h3>基本操作流程</h3>
+<li>在Discord中输入 <code>/imagine</code></li>
+<li>输入提示词</li>
+<li>等待生成（约1分钟）</li>
+<li>选择满意的图片放大</li>
+
+<h3>进阶技巧</h3>
+<li><code>--ar 16:9</code> 设置宽高比</li>
+<li><code>--v 7</code> 使用V7模型</li>
+<li><code>--s 750</code> 设置风格化程度（0-1000）</li>
+<li><code>--no text</code> 排除文字</li>
+
+<h2>第四章：Stable Diffusion实战</h2>
+
+<h3>本地部署步骤</h3>
+<li>安装Python 3.10+</li>
+<li>安装PyTorch（CUDA版本）</li>
+<li>下载WebUI（Automatic1111或ComfyUI）</li>
+<li>下载模型文件（SDXL Turbo推荐）</li>
+<li>启动WebUI开始创作</li>
+
+<h3>推荐模型</h3>
+<li><strong>写实类</strong>：RealVisXL, Juggernaut XL</li>
+<li><strong>动漫类</strong>：Anything V5, Counterfeit</li>
+<li><strong>艺术类</strong>：DreamShaper, Deliberate</li>
+
+<h3>ControlNet使用</h3>
+<p>ControlNet可以实现精确控制：
+</p>
+<li>Canny Edge：边缘检测控制</li>
+<li>OpenPose：人物姿态控制</li>
+<li>Depth：深度图控制</li>
+<li>Segmentation：区域分割控制</li>
+
+<h2>第五章：AI绘画变现</h2>
+
+<h3>可行的变现方式</h3>
+<li><strong>壁纸/头像定制</strong>：闲鱼/淘宝接单，¥5-50/张</li>
+<li><strong>设计素材销售</strong>：在素材平台出售AI生成的设计素材</li>
+<li><strong>自媒体配图</strong>：为公众号/小红书批量生成配图</li>
+<li><strong>NFT艺术</strong>：创作AI艺术作品在NFT平台出售</li>
+<li><strong>设计服务</strong>：Logo设计、海报设计等</li>
+
+<h2>总结</h2>
+
+<p>AI绘画已经发展得非常成熟，入门门槛越来越低。建议从Midjourney开始体验，等熟悉后再尝试Stable Diffusion的进阶玩法。坚持练习，你很快就能创作出专业的AI绘画作品。
+</p>
         </article>
 
-        <div class="nav-buttons" id="navButtons">
-            <!-- JS渲染 -->
+        <div class="related-tools">
+            <h3>📖 相关文章</h3>
+            <div class="related-grid"><a href="/articles/ai-tools-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">2026年最值得尝试的20个AI工具盘点</div>
+                <div style="font-size:13px;color:#666;">2026年3月22日</div>
+            </a>
+<a href="/articles/chatgpt-vs-claude-vs-gemini/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">ChatGPT vs Claude vs Gemini：三大AI助手深度对比</div>
+                <div style="font-size:13px;color:#666;">2026年3月21日</div>
+            </a>
+<a href="/articles/cursor-vs-copilot-vs-windsurf/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">AI编程工具评测：Cursor vs GitHub Copilot vs Windsurf</div>
+                <div style="font-size:13px;color:#666;">2026年3月19日</div>
+            </a>
+</div>
         </div>
     </main>
 
     <footer class="footer">
         <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
     </footer>
-
-    <script>
-        // 根据当前路径加载对应文章
-        const pathParts = window.location.pathname.split('/');
-        const slug = pathParts[pathParts.length - 2] || 'ai-tools-2026';
-
-        fetch('/data/articles.json')
-            .then(r => r.json())
-            .then(articles => {
-                const article = articles.find(a => a.slug === slug);
-                if (!article) {
-                    document.getElementById('articleBody').innerHTML = '<p>文章未找到</p>';
-                    return;
-                }
-                renderArticle(article, articles);
-            })
-            .catch(() => {
-                document.getElementById('articleBody').innerHTML = '<p>加载失败</p>';
-            });
-
-        function renderArticle(article, allArticles) {
-            // 设置meta
-            document.title = article.title + ' - AI工具宝箱';
-            document.querySelector('meta[name="description"]').content = article.description;
-            document.querySelector('meta[name="keywords"]').content = article.keywords;
-            document.getElementById('breadcrumbTitle').textContent = article.title;
-            document.getElementById('articleTag').textContent = article.category;
-            document.getElementById('articleTitle').textContent = article.title;
-            document.getElementById('articleDate').textContent = '📅 ' + article.dateFull;
-            document.getElementById('articleDesc').textContent = article.description;
-
-            // 渲染Markdown内容（简易转换）
-            let html = markdownToHtml(article.content);
-            document.getElementById('articleBody').innerHTML = html;
-
-            // 生成目录
-            generateToc();
-
-            // 上下篇导航
-            renderNav(article, allArticles);
-
-            // 结构化数据
-            addStructuredData(article);
-        }
-
-        function markdownToHtml(md) {
-            let html = md
-                // 标题
-                .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-                .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-                // 粗体
-                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-                // 行内代码
-                .replace(/`([^`]+)`/g, '<code>$1</code>')
-                // 代码块
-                .replace(/```[\s\S]*?```/g, match => {
-                    const code = match.replace(/```\w*\n?/, '').replace(/```$/, '');
-                    return '<pre><code>' + escapeHtml(code) + '</code></pre>';
-                })
-                // 表格
-                .replace(/\n(\|.+\|)\n(\|[-:| ]+\|)\n((?:\|.+\|\n?)+)/g, (match, header, sep, body) => {
-                    const headers = header.split('|').filter(c => c.trim());
-                    const rows = body.trim().split('\n');
-                    let table = '<table><thead><tr>';
-                    headers.forEach(h => table += '<th>' + h.trim() + '</th>');
-                    table += '</tr></thead><tbody>';
-                    rows.forEach(row => {
-                        const cells = row.split('|').filter(c => c.trim());
-                        table += '<tr>';
-                        cells.forEach(c => table += '<td>' + c.trim() + '</td>');
-                        table += '</tr>';
-                    });
-                    table += '</tbody></table>';
-                    return table;
-                })
-                // 引用块
-                .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
-                // 无序列表
-                .replace(/^- (.+)$/gm, '<li>$1</li>')
-                // 有序列表
-                .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
-                // 段落
-                .replace(/\n\n(?!<)/g, '\n</p><p>\n')
-                // 合并相邻li
-                .replace(/<\/p>\s*<li>/g, '<li>')
-                .replace(/<\/li>\s*<p>/g, '</li>');
-
-            // 包裹在段落中
-            if (!html.startsWith('<')) html = '<p>' + html + '</p>';
-            return html;
-        }
-
-        function escapeHtml(str) {
-            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        }
-
-        function generateToc() {
-            const headings = document.querySelectorAll('.article-body h2, .article-body h3');
-            const tocList = document.getElementById('tocList');
-            if (headings.length === 0) { document.getElementById('toc').style.display = 'none'; return; }
-            headings.forEach((h, i) => {
-                h.id = 'heading-' + i;
-                const indent = h.tagName === 'H3' ? 'padding-left:20px;' : '';
-                tocList.innerHTML += `<li style="${indent}"><a href="#heading-${i}">${h.textContent}</a></li>`;
-            });
-        }
-
-        function renderNav(article, allArticles) {
-            const idx = allArticles.findIndex(a => a.slug === article.slug);
-            const prev = idx > 0 ? allArticles[idx - 1] : null;
-            const next = idx < allArticles.length - 1 ? allArticles[idx + 1] : null;
-            let html = '';
-            if (prev) html += `<a href="/articles/${prev.slug}/index.html" class="nav-btn"><div class="label">← 上一篇</div><div class="title">${prev.title}</div></a>`;
-            else html += '<div></div>';
-            if (next) html += `<a href="/articles/${next.slug}/index.html" class="nav-btn" style="text-align:right;"><div class="label">下一篇 →</div><div class="title">${next.title}</div></a>`;
-            document.getElementById('navButtons').innerHTML = html;
-        }
-
-        function addStructuredData(article) {
-            const script = document.createElement('script');
-            script.type = 'application/ld+json';
-            script.textContent = JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Article",
-                "headline": article.title,
-                "description": article.description,
-                "datePublished": article.dateFull,
-                "author": { "@type": "Organization", "name": "AI工具宝箱" },
-                "publisher": { "@type": "Organization", "name": "AI工具宝箱" }
-            });
-            document.head.appendChild(script);
-        }
-    </script>
 </body>
 </html>
