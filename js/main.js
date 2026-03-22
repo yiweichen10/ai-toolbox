@@ -64,15 +64,15 @@ function initCategoryFilter(tools) {
 function renderTools(toolsToRender) {
     const grid = document.getElementById('toolsGrid');
     if (!grid) return;
-    grid.innerHTML = toolsToRender.map(t => `
-        <article class="tool-card" onclick="location.href='/tools/${t.slug}/index.html'">
+    grid.innerHTML = toolsToRender.map((t, index) => `
+        <article class="tool-card fade-in" style="animation-delay: ${index * 0.05}s;" onclick="location.href='/tools/${t.slug}/index.html'">
             <div class="tool-icon" style="background:${t.color};">${t.emoji}</div>
             <h4>${t.name} ${t.badge ? `<span class="badge badge-${t.badge.type}">${t.badge.text}</span>` : ''}</h4>
             <p class="desc">${t.description}</p>
             <div class="tags">${t.tags.map(tag => `<span class="tag ${tag.type || ''}">${tag.text}</span>`).join('')}</div>
             <div class="meta">
-                <span class="rating">${t.rating}</span>
-                <span class="visits">${t.visits}</span>
+                <span class="rating">⭐ ${t.rating}</span>
+                <span class="visits">👁 ${t.visits}</span>
             </div>
         </article>
     `).join('');
