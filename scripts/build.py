@@ -298,6 +298,47 @@ def build_article_page(article, all_articles):
 </html>'''
     return html
 
+def generate_sitemap(tools, articles):
+    """生成 sitemap.xml"""
+    from datetime import datetime
+    today = datetime.now().strftime('%Y-%m-%d')
+
+    urls = []
+    # 首页
+    urls.append(f'''    <url>
+        <loc>https://www.aitoolbox.hk/</loc>
+        <lastmod>{today}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>''')
+
+    # 工具页
+    for tool in tools:
+        priority = '0.9' if tool.get('badge') else '0.8'
+        urls.append(f'''    <url>
+        <loc>https://www.aitoolbox.hk/tools/{tool['slug']}/index.html</loc>
+        <lastmod>{today}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>{priority}</priority>
+    </url>''')
+
+    # 文章页
+    for article in articles:
+        priority = '0.9' if '2026' in article.get('title', '') else '0.8'
+        urls.append(f'''    <url>
+        <loc>https://www.aitoolbox.hk/articles/{article['slug']}/index.html</loc>
+        <lastmod>{today}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>{priority}</priority>
+    </url>''')
+
+    sitemap = f'''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{chr(10).join(urls)}
+</urlset>'''
+
+    return sitemap
+
 def main():
     # 加载数据
     with open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8') as f:
@@ -324,6 +365,12 @@ def main():
         with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html)
         print(f'[OK] articles/{slug}/index.html')
+
+    # 生成 sitemap.xml
+    sitemap = generate_sitemap(tools, articles)
+    with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
+        f.write(sitemap)
+    print(f'[OK] sitemap.xml ({len(tools)} tools + {len(articles)} articles)')
 
     print(f'\nDone! {len(tools)} tools + {len(articles)} articles')
 
