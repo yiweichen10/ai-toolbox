@@ -7,6 +7,16 @@ import re
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 
+BAIDU_TONGJI = '''<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?YOUR_BAIDU_TONGJI_HASH";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>'''
+
 def markdown_to_html(md):
     """将Markdown转换为简单HTML"""
     if not md:
@@ -183,6 +193,7 @@ def build_tool_page(tool, all_tools):
     <meta property="og:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{structured_data}</script>
+{BAIDU_TONGJI}
 </head>
 <body>
     <header class="header">
@@ -257,6 +268,19 @@ def build_article_page(article, all_articles):
             <div class="related-grid">{cards}</div>
         </div>'''
 
+    # OG Image
+    og_image = f'https://www.aitoolbox.hk/images/og/{slug}-og.png'
+
+    # 信息图（文章内嵌）
+    infographic_path = os.path.join(BASE_DIR, 'images', 'infographics', f'{slug}-infographic.png')
+    has_infographic = os.path.exists(infographic_path)
+    infographic_html = ''
+    if has_infographic:
+        infographic_html = f'''<figure class="tool-infographic">
+            <img src="/images/infographics/{slug}-infographic.png" alt="{escape_html(article['title'])} - 数据对比信息图" width="1200" height="630" loading="lazy">
+            <figcaption>{escape_html(article['title'])} · 核心数据一览</figcaption>
+        </figure>'''
+
     structured_data = json.dumps({
         "@context": "https://schema.org",
         "@type": "Article",
@@ -264,7 +288,8 @@ def build_article_page(article, all_articles):
         "description": article.get('description', ''),
         "datePublished": article.get('dateFull', ''),
         "author": {"@type": "Organization", "name": "AI工具宝箱"},
-        "publisher": {"@type": "Organization", "name": "AI工具宝箱"}
+        "publisher": {"@type": "Organization", "name": "AI工具宝箱"},
+        "image": og_image
     }, ensure_ascii=False, indent=2)
 
     content_html = markdown_to_html(article.get('content', ''))
@@ -281,8 +306,16 @@ def build_article_page(article, all_articles):
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(article['title'])} - AI工具宝箱">
     <meta property="og:description" content="{escape_html(article.get('description', ''))}">
+    <meta property="og:image" content="{og_image}">
+    <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/index.html">
+    <meta property="og:site_name" content="AI工具宝箱">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{escape_html(article['title'])} - AI工具宝箱">
+    <meta name="twitter:description" content="{escape_html(article.get('description', ''))}">
+    <meta name="twitter:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{structured_data}</script>
+{BAIDU_TONGJI}
 </head>
 <body>
     <header class="header">
@@ -301,6 +334,7 @@ def build_article_page(article, all_articles):
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
                 {article.get('dateFull', article.get('date', ''))} · {escape_html(article.get('category', ''))}
             </div>
+            {infographic_html}
             {content_html}
         </article>
 
@@ -312,6 +346,42 @@ def build_article_page(article, all_articles):
     </footer>
 </body>
 </html>'''
+    return html
+
+def build_index_page(tools, articles):
+    """生成静态首页"""
+    index_path = os.path.join(BASE_DIR, 'index.html')
+    with open(index_path, 'r', encoding='utf-8') as f:
+        html = f.read()
+    
+    tools_html = ''
+    for i, t in enumerate(tools):
+        badge_html = f'<span class="badge badge-{t.get("badge", {}).get("type", "")}">{t.get("badge", {}).get("text", "")}</span>' if t.get('badge') else ''
+        tags_html = ''.join([f'<span class="tag {tag.get("type", "")}">{tag.get("text", "")}</span>' for tag in t.get('tags', [])])
+        tools_html += f'''                        <article class="tool-card fade-in" style="animation-delay: {i * 0.05}s;" onclick="location.href=\'/tools/{t['slug']}/index.html\'">
+                            <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
+                            <h4>{escape_html(t['name'])} {badge_html}</h4>
+                            <p class="desc">{escape_html(t['description'])}</p>
+                            <div class="tags">{tags_html}</div>
+                            <div class="meta">
+                                <span class="rating">{t['rating']}</span>
+                                <span class="visits">👁 {t['visits']}</span>
+                            </div>
+                        </article>\n'''
+        
+    articles_html = ''
+    for a in articles[:6]:
+        articles_html += f'''                        <li>
+                            <span class="date">{a.get('date', '')}</span>
+                            <a class="title" href="/articles/{a['slug']}/index.html">{escape_html(a['title'])}</a>
+                        </li>\n'''
+        
+    html = re.sub(r'(<div class="tools-grid" id="toolsGrid">)[\s\S]*?(</section>)', lambda m: m.group(1) + '\n' + tools_html + '                    </div>\n                </section>', html)
+    html = re.sub(r'(<ul id="articleList">)[\s\S]*?(</ul>)', lambda m: m.group(1) + '\n' + articles_html + '                    </ul>', html)
+    
+    if 'hm.baidu.com/hm.js' not in html:
+        html = html.replace('</head>', f'{BAIDU_TONGJI}\n</head>')
+        
     return html
 
 def generate_sitemap(tools, articles):
@@ -355,6 +425,28 @@ def generate_sitemap(tools, articles):
 
     return sitemap
 
+def push_to_baidu(urls):
+    """主动向百度搜索引擎推送链接"""
+    api_url = "http://data.zz.baidu.com/urls?site=https://www.aitoolbox.hk&token=WkOz42Q1xowpLZcB"
+    
+    try:
+        import urllib.request
+        import urllib.error
+        data = '\n'.join(urls).encode('utf-8')
+        req = urllib.request.Request(api_url, data=data, headers={'Content-Type': 'text/plain'})
+        try:
+            with urllib.request.urlopen(req, timeout=10) as response:
+                result = response.read().decode('utf-8')
+                print(f"[Baidu Push] Success: {result}")
+                return True
+        except urllib.error.HTTPError as e:
+            body = e.read().decode('utf-8', errors='replace')
+            print(f"[Baidu Push] HTTP {e.code}: {body}")
+            return False
+    except Exception as e:
+        print(f"[Baidu Push] Failed: {e}")
+        return False
+
 def main():
     # 加载数据
     with open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8') as f:
@@ -388,6 +480,38 @@ def main():
         f.write(sitemap)
     print(f'[OK] sitemap.xml ({len(tools)} tools + {len(articles)} articles)')
 
+    # 生成静态首页
+    index_html = build_index_page(tools, articles)
+    with open(os.path.join(BASE_DIR, 'index.html'), 'w', encoding='utf-8') as f:
+        f.write(index_html)
+    print(f'[OK] index.html (Static Pre-rendered)')
+
+    # 收集需要推送的链接（仅推送新增页面，避免浪费配额）
+    push_cache_file = os.path.join(BASE_DIR, '.baidu_pushed.json')
+    pushed_urls = set()
+    if os.path.exists(push_cache_file):
+        with open(push_cache_file, 'r', encoding='utf-8') as f:
+            pushed_urls = set(json.load(f))
+    
+    all_urls = ["https://www.aitoolbox.hk/"]
+    for tool in tools:
+        all_urls.append(f"https://www.aitoolbox.hk/tools/{tool['slug']}/index.html")
+    for article in articles:
+        all_urls.append(f"https://www.aitoolbox.hk/articles/{article['slug']}/index.html")
+    
+    new_urls = [u for u in all_urls if u not in pushed_urls]
+    
+    if new_urls:
+        print(f"\nPushing {len(new_urls)} new URLs to Baidu...")
+        push_result = push_to_baidu(new_urls)
+        # 只在推送成功时才更新缓存
+        if push_result:
+            pushed_urls.update(new_urls)
+            with open(push_cache_file, 'w', encoding='utf-8') as f:
+                json.dump(list(pushed_urls), f)
+    else:
+        print(f"\nNo new URLs to push. ({len(all_urls)} total, all already pushed)")
+    
     print(f'\nDone! {len(tools)} tools + {len(articles)} articles')
 
 if __name__ == '__main__':
