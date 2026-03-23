@@ -11,7 +11,7 @@ BAIDU_TONGJI = '''<script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?YOUR_BAIDU_TONGJI_HASH";
+  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
@@ -379,8 +379,11 @@ def build_index_page(tools, articles):
     html = re.sub(r'(<div class="tools-grid" id="toolsGrid">)[\s\S]*?(</section>)', lambda m: m.group(1) + '\n' + tools_html + '                    </div>\n                </section>', html)
     html = re.sub(r'(<ul id="articleList">)[\s\S]*?(</ul>)', lambda m: m.group(1) + '\n' + articles_html + '                    </ul>', html)
     
-    if 'hm.baidu.com/hm.js' not in html:
-        html = html.replace('</head>', f'{BAIDU_TONGJI}\n</head>')
+    # 移除模板中残留的旧百度统计占位代码，避免重复
+    html = re.sub(r'<script>\s*var _hmt\s*=\s*_hmt\s*\|\|\s*\[\];\s*\(function\(\)\s*\{[\s\S]*?hm\.src\s*=\s*"[^"]*YOUR_BAIDU_TONGJI_HASH[^"]*";[\s\S]*?\}\)\(\);?\s*</script>', '', html)
+    
+    # 注入真实百度统计代码
+    html = html.replace('</head>', f'{BAIDU_TONGJI}\n</head>')
         
     return html
 
