@@ -146,6 +146,19 @@ def build_tool_page(tool, all_tools):
         }
     }, ensure_ascii=False, indent=2)
 
+    # OG Image
+    og_image = f'https://www.aitoolbox.hk/images/og/{slug}-og.png'
+
+    # 信息图
+    infographic_path = os.path.join(BASE_DIR, 'images', 'infographics', f'{slug}-infographic.png')
+    has_infographic = os.path.exists(infographic_path)
+    infographic_html = ''
+    if has_infographic:
+        infographic_html = f'''<figure class="tool-infographic">
+            <img src="/images/infographics/{slug}-infographic.png" alt="{escape_html(tool['name'])}功能亮点信息图" width="1200" height="630" loading="lazy">
+            <figcaption>{escape_html(tool['name'])} 核心功能一览</figcaption>
+        </figure>'''
+
     # 文章内容（从content中移除重复的优缺点部分）
     content_md = tool.get('content', '')
     # 移除 content 中 "## 优缺点分析" 及之后到下一个 ## 的内容（因为我们有独立的优缺点区块）
@@ -167,6 +180,7 @@ def build_tool_page(tool, all_tools):
     <meta property="og:title" content="{escape_html(tool['name'])}评测 - AI工具宝箱">
     <meta property="og:description" content="{escape_html(tool['description'])}">
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/index.html">
+    <meta property="og:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{structured_data}</script>
 </head>
@@ -207,6 +221,8 @@ def build_tool_page(tool, all_tools):
         <article class="article-body">
             {content_html}
         </article>
+
+        {infographic_html}
 
         {pros_cons_html}
 

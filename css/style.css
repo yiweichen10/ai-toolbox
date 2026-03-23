@@ -923,6 +923,28 @@ body {
   border-bottom: none;
 }
 
+/* 工具信息图 */
+.tool-infographic {
+  margin: 32px 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.tool-infographic img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.tool-infographic figcaption {
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  background: var(--surface-bg);
+  border-top: 1px solid rgba(0,0,0,0.04);
+}
+
 /* 相关推荐 */
 .related-tools {
   margin-bottom: 32px;
