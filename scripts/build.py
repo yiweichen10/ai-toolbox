@@ -511,7 +511,7 @@ def build_index_page(tools, articles):
             <a href="/links.html">友情链接</a>''' # 暂时使用占位符链接
 
     # 替换内容
-    html = re.sub(r'(<div class="tools-grid" id="toolsGrid">)[\s\S]*?(</section>)', lambda m: m.group(1) + '\n' + tools_html + '                    </div>\n                </section>', html)
+    html = re.sub(r'(<div class="tools-grid" id="toolsGrid">)\s*</div>', r'\1\n' + tools_html + '\n                    </div>', html)
     html = re.sub(r'(<ul id="articleList">)[\s\S]*?(</ul>)', lambda m: m.group(1) + '\n' + articles_html + '                    </ul>', html)
     html = re.sub(r'(<div class="sidebar-card">\s*<h4>&#x1F525; 热门分类</h4>\s*<ul>)[\s\S]*?(</ul>\s*</div>)', lambda m: m.group(1) + '\n' + categories_html + '                    </ul>\n                </div>', html)
     html = re.sub(r'(<div class="footer-links">)[\s\S]*?(</div>)', lambda m: m.group(1) + '\n' + footer_links_html + '\n        </div>', html)
