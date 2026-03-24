@@ -4,6 +4,8 @@ import json
 import os
 import re
 
+from pypinyin import pinyin, Style
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 
@@ -16,6 +18,35 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>'''
+
+# 为常用分类提供固定且语义化的英文slug，优先使用这些
+CATEGORY_SLUG_MAP = {
+    "AI对话": "ai-chat",
+    "AI写作": "ai-writing",
+    "AI绘画": "ai-painting",
+    "AI编程": "ai-coding",
+    "AI视频": "ai-video",
+    "AI音频": "ai-audio",
+    "AI办公": "ai-office",
+    "AI设计": "ai-design",
+    "AI搜索": "ai-search",
+    "AI翻译": "ai-translation",
+    "AI自动化": "ai-automation",
+    "AI效率": "ai-efficiency",
+}
+
+def get_category_slug(category_name):
+    """
+    根据中文分类名生成SEO友好的英文slug。
+    优先使用预设映射，否则使用拼音。
+    """
+    if category_name in CATEGORY_SLUG_MAP:
+        return CATEGORY_SLUG_MAP[category_name]
+    
+    # 使用pypinyin生成拼音，并转换为连字符连接的小写形式
+    pinyin_list = pinyin(category_name, style=Style.NORMAL)
+    slug = '-'.join([item[0] for item in pinyin_list if item and item[0].strip()]).lower()
+    return slug
 
 def markdown_to_html(md):
     """将Markdown转换为简单HTML"""
@@ -261,7 +292,7 @@ def build_tool_page(tool, all_tools):
 
 def build_category_page(category_name, tools_in_category):
     """生成单个分类页的完整HTML"""
-    category_slug = category_name.replace(' ', '-').lower()
+    category_slug = get_category_slug(category_name)
     
     tools_html = ''
     for i, t in enumerate(tools_in_category):
@@ -466,11 +497,11 @@ def build_index_page(tools, articles):
     category_counts = get_category_stats(tools)
     categories_html = ''
     # 按照 index.html 中的顺序
-    ordered_categories = ["AI对话", "AI写作", "AI绘画", "AI编程", "AI视频", "AI音频", "AI办公", "AI设计"]
+    ordered_categories = ["AI对话", "AI写作", "AI绘画", "AI编程", "AI视频", "AI音频", "AI办公", "AI设计", "AI搜索", "AI翻译", "AI自动化", "AI效率"]
     for category in ordered_categories:
         count = category_counts.get(category, 0)
         # 假设分类页面路径为 /category/slug/index.html
-        category_slug = category.replace(' ', '-').lower()
+        category_slug = get_category_slug(category)
         categories_html += f'''                        <li><a href="/category/{category_slug}/index.html">{category} ({count})</a></li>\n'''
 
     # 更新页脚链接
@@ -589,7 +620,7 @@ def main():
     
     # 生成分类页
     for category_name, tools_in_category in tools_by_category.items():
-        category_slug = category_name.replace(' ', '-').lower()
+        category_slug = get_category_slug(category_name)
         dir_path = os.path.join(BASE_DIR, 'category', category_slug)
         os.makedirs(dir_path, exist_ok=True)
         html = build_category_page(category_name, tools_in_category)
@@ -619,7 +650,7 @@ def main():
 
     # 生成 sitemap.xml
     # 传递所有已发布的分类名称列表
-    sitemap = generate_sitemap(published_tools, articles, list(tools_by_category.keys()))
+    sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()])
     with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write(sitemap)
     print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + {len(tools_by_category)} categories)')
@@ -643,7 +674,7 @@ def main():
     for article in articles:
         all_urls.append(f"https://www.aitoolbox.hk/articles/{article['slug']}/index.html")
     for category_name in tools_by_category.keys(): # 添加分类页面的URL
-        category_slug = category_name.replace(' ', '-').lower()
+        category_slug = get_category_slug(category_name)
         all_urls.append(f"https://www.aitoolbox.hk/category/{category_slug}/index.html")
     
     new_urls = [u for u in all_urls if u not in pushed_urls]
