@@ -379,8 +379,9 @@ def build_index_page(tools, articles):
     html = re.sub(r'(<div class="tools-grid" id="toolsGrid">)[\s\S]*?(</section>)', lambda m: m.group(1) + '\n' + tools_html + '                    </div>\n                </section>', html)
     html = re.sub(r'(<ul id="articleList">)[\s\S]*?(</ul>)', lambda m: m.group(1) + '\n' + articles_html + '                    </ul>', html)
     
-    # 移除模板中残留的旧百度统计占位代码，避免重复
-    html = re.sub(r'<script>\s*var _hmt\s*=\s*_hmt\s*\|\|\s*\[\];\s*\(function\(\)\s*\{[\s\S]*?hm\.src\s*=\s*"[^"]*YOUR_BAIDU_TONGJI_HASH[^"]*";[\s\S]*?\}\)\(\);?\s*</script>', '', html)
+    # 移除所有已有的百度统计代码片段（无论占位符还是真实代码），避免重复叠加
+    html = re.sub(r'<script>\s*var _hmt\s*=\s*_hmt\s*\|\|\s*\[\];\s*\(function\(\)\s*\{[\s\S]*?hm\.src\s*=\s*"[^"]*";[\s\S]*?\}\)\(\);?\s*</script>', '', html)
+    html = re.sub(r'<!--\s*BAIDU_TONGJI_PLACEHOLDER\s*-->', '', html)
     
     # 注入真实百度统计代码
     html = html.replace('</head>', f'{BAIDU_TONGJI}\n</head>')
@@ -453,21 +454,25 @@ def push_to_baidu(urls):
 def main():
     # 加载数据
     with open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8') as f:
-        tools = json.load(f)
+        all_tools = json.load(f)
     with open(os.path.join(DATA_DIR, 'articles.json'), 'r', encoding='utf-8') as f:
         articles = json.load(f)
 
+    # 过滤出已发布的工具
+    published_tools = [tool for tool in all_tools if tool.get('published', False)]
+    print(f"检测到 {len(all_tools)} 个工具，其中 {len(published_tools)} 个已发布。")
+
     # 生成工具页
-    for tool in tools:
+    for tool in published_tools:
         slug = tool['slug']
         dir_path = os.path.join(BASE_DIR, 'tools', slug)
         os.makedirs(dir_path, exist_ok=True)
-        html = build_tool_page(tool, tools)
+        html = build_tool_page(tool, published_tools) # 传递已发布的工具列表
         with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html)
         print(f'[OK] tools/{slug}/index.html')
 
-    # 生成文章页
+    # 生成文章页 (文章不受published字段控制，全部生成)
     for article in articles:
         slug = article['slug']
         dir_path = os.path.join(BASE_DIR, 'articles', slug)
@@ -478,13 +483,13 @@ def main():
         print(f'[OK] articles/{slug}/index.html')
 
     # 生成 sitemap.xml
-    sitemap = generate_sitemap(tools, articles)
+    sitemap = generate_sitemap(published_tools, articles) # 使用已发布的工具
     with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write(sitemap)
-    print(f'[OK] sitemap.xml ({len(tools)} tools + {len(articles)} articles)')
+    print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles)')
 
     # 生成静态首页
-    index_html = build_index_page(tools, articles)
+    index_html = build_index_page(published_tools, articles) # 使用已发布的工具
     with open(os.path.join(BASE_DIR, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(index_html)
     print(f'[OK] index.html (Static Pre-rendered)')
@@ -497,7 +502,7 @@ def main():
             pushed_urls = set(json.load(f))
     
     all_urls = ["https://www.aitoolbox.hk/"]
-    for tool in tools:
+    for tool in published_tools: # 只推送已发布的工具
         all_urls.append(f"https://www.aitoolbox.hk/tools/{tool['slug']}/index.html")
     for article in articles:
         all_urls.append(f"https://www.aitoolbox.hk/articles/{article['slug']}/index.html")
@@ -515,7 +520,7 @@ def main():
     else:
         print(f"\nNo new URLs to push. ({len(all_urls)} total, all already pushed)")
     
-    print(f'\nDone! {len(tools)} tools + {len(articles)} articles')
+    print(f'\nDone! {len(published_tools)} tools + {len(articles)} articles')
 
 if __name__ == '__main__':
     main()
