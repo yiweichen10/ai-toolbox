@@ -81,6 +81,18 @@ def escape_html(text):
     """转义HTML特殊字符（用于属性值）"""
     return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
 
+def get_category_stats(tools):
+    """
+    统计每个分类下的工具数量，并返回一个字典。
+    例如：{'AI对话': 8, 'AI绘画': 12}
+    """
+    category_counts = {}
+    for tool in tools:
+        if tool.get('published', False) and 'category' in tool:
+            category = tool['category']
+            category_counts[category] = category_counts.get(category, 0) + 1
+    return category_counts
+
 def build_tool_page(tool, all_tools):
     """生成单个工具详情页的完整HTML"""
     slug = tool['slug']
@@ -247,6 +259,80 @@ def build_tool_page(tool, all_tools):
 </html>'''
     return html
 
+def build_category_page(category_name, tools_in_category):
+    """生成单个分类页的完整HTML"""
+    category_slug = category_name.replace(' ', '-').lower()
+    
+    tools_html = ''
+    for i, t in enumerate(tools_in_category):
+        badge_html = f'<span class="badge badge-{t.get("badge", {}).get("type", "")}">{t.get("badge", {}).get("text", "")}</span>' if t.get('badge') else ''
+        tags_html = ''.join([f'<span class="tag {tag.get("type", "")}">{tag.get("text", "")}</span>' for tag in t.get('tags', [])])
+        tools_html += f'''                        <article class="tool-card fade-in" style="animation-delay: {i * 0.05}s;" onclick="location.href=\'/tools/{t['slug']}/index.html\'">
+                            <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
+                            <h4>{escape_html(t['name'])} {badge_html}</h4>
+                            <p class="desc">{escape_html(t['description'])}</p>
+                            <div class="tags">{tags_html}</div>
+                            <div class="meta">
+                                <span class="rating">{t['rating']}</span>
+                                <span class="visits">👁 {t['visits']}</span>
+                            </div>
+                        </article>\n'''
+
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(category_name)} - AI工具宝箱</title>
+    <meta name="description" content="AI工具宝箱收录{escape_html(category_name)}分类下最新最全的AI工具。">
+    <meta name="keywords" content="AI工具,{escape_html(category_name)},人工智能,效率工具,AI导航">
+    <link rel="canonical" href="https://www.aitoolbox.hk/category/{category_slug}/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{escape_html(category_name)} - AI工具宝箱">
+    <meta property="og:description" content="AI工具宝箱收录{escape_html(category_name)}分类下最新最全的AI工具。">
+    <meta property="og:url" content="https://www.aitoolbox.hk/category/{category_slug}/index.html">
+    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/category-{category_slug}-og.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">
+    {{
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "{escape_html(category_name)} - AI工具宝箱",
+        "description": "AI工具宝箱收录{escape_html(category_name)}分类下最新最全的AI工具。",
+        "url": "https://www.aitoolbox.hk/category/{category_slug}/index.html"
+    }}
+    </script>
+{BAIDU_TONGJI}
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <a href="/">首页</a> &gt; <span>{escape_html(category_name)}</span>
+    </nav>
+
+    <main class="container">
+        <section class="section">
+            <div class="section-header">
+                <h3>{escape_html(category_name)}</h3>
+            </div>
+            <div class="tools-grid">
+{tools_html}
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+    </footer>
+</body>
+</html>'''
+    return html
+
 def build_article_page(article, all_articles):
     """生成单个文章页的完整HTML"""
     slug = article['slug']
@@ -349,11 +435,11 @@ def build_article_page(article, all_articles):
     return html
 
 def build_index_page(tools, articles):
-    """生成静态首页"""
-    index_path = os.path.join(BASE_DIR, 'index.html')
-    with open(index_path, 'r', encoding='utf-8') as f:
+    # 生成静态首页
+    index_html_template = os.path.join(BASE_DIR, 'index.html')
+    with open(index_html_template, 'r', encoding='utf-8') as f:
         html = f.read()
-    
+
     tools_html = ''
     for i, t in enumerate(tools):
         badge_html = f'<span class="badge badge-{t.get("badge", {}).get("type", "")}">{t.get("badge", {}).get("text", "")}</span>' if t.get('badge') else ''
@@ -375,9 +461,29 @@ def build_index_page(tools, articles):
                             <span class="date">{a.get('date', '')}</span>
                             <a class="title" href="/articles/{a['slug']}/index.html">{escape_html(a['title'])}</a>
                         </li>\n'''
-        
+    
+    # 动态生成热门分类列表
+    category_counts = get_category_stats(tools)
+    categories_html = ''
+    # 按照 index.html 中的顺序
+    ordered_categories = ["AI对话", "AI写作", "AI绘画", "AI编程", "AI视频", "AI音频", "AI办公", "AI设计"]
+    for category in ordered_categories:
+        count = category_counts.get(category, 0)
+        # 假设分类页面路径为 /category/slug/index.html
+        category_slug = category.replace(' ', '-').lower()
+        categories_html += f'''                        <li><a href="/category/{category_slug}/index.html">{category} ({count})</a></li>\n'''
+
+    # 更新页脚链接
+    footer_links_html = '''            <a href="/about.html">关于我们</a>
+            <a href="/contact.html">联系方式</a>
+            <a href="/privacy.html">隐私政策</a>
+            <a href="/links.html">友情链接</a>''' # 暂时使用占位符链接
+
+    # 替换内容
     html = re.sub(r'(<div class="tools-grid" id="toolsGrid">)[\s\S]*?(</section>)', lambda m: m.group(1) + '\n' + tools_html + '                    </div>\n                </section>', html)
     html = re.sub(r'(<ul id="articleList">)[\s\S]*?(</ul>)', lambda m: m.group(1) + '\n' + articles_html + '                    </ul>', html)
+    html = re.sub(r'(<div class="sidebar-card">\s*<h4>&#x1F525; 热门分类</h4>\s*<ul>)[\s\S]*?(</ul>\s*</div>)', lambda m: m.group(1) + '\n' + categories_html + '                    </ul>\n                </div>', html)
+    html = re.sub(r'(<div class="footer-links">)[\s\S]*?(</div>)', lambda m: m.group(1) + '\n' + footer_links_html + '\n        </div>', html)
     
     # 移除所有已有的百度统计代码片段（无论占位符还是真实代码），避免重复叠加
     html = re.sub(r'<script>\s*var _hmt\s*=\s*_hmt\s*\|\|\s*\[\];\s*\(function\(\)\s*\{[\s\S]*?hm\.src\s*=\s*"[^"]*";[\s\S]*?\}\)\(\);?\s*</script>', '', html)
@@ -388,7 +494,7 @@ def build_index_page(tools, articles):
         
     return html
 
-def generate_sitemap(tools, articles):
+def generate_sitemap(tools, articles, categories):
     """生成 sitemap.xml"""
     from datetime import datetime
     today = datetime.now().strftime('%Y-%m-%d')
@@ -420,6 +526,16 @@ def generate_sitemap(tools, articles):
         <lastmod>{today}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>{priority}</priority>
+    </url>''')
+    
+    # 分类页
+    for category_name in categories:
+        category_slug = category_name.replace(' ', '-').lower()
+        urls.append(f'''    <url>
+        <loc>https://www.aitoolbox.hk/category/{category_slug}/index.html</loc>
+        <lastmod>{today}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>''')
 
     sitemap = f'''<?xml version="1.0" encoding="UTF-8"?>
@@ -462,6 +578,25 @@ def main():
     published_tools = [tool for tool in all_tools if tool.get('published', False)]
     print(f"检测到 {len(all_tools)} 个工具，其中 {len(published_tools)} 个已发布。")
 
+    # 按分类分组工具
+    tools_by_category = {}
+    for tool in published_tools:
+        category = tool.get('category')
+        if category:
+            if category not in tools_by_category:
+                tools_by_category[category] = []
+            tools_by_category[category].append(tool)
+    
+    # 生成分类页
+    for category_name, tools_in_category in tools_by_category.items():
+        category_slug = category_name.replace(' ', '-').lower()
+        dir_path = os.path.join(BASE_DIR, 'category', category_slug)
+        os.makedirs(dir_path, exist_ok=True)
+        html = build_category_page(category_name, tools_in_category)
+        with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(html)
+        print(f'[OK] category/{category_slug}/index.html')
+
     # 生成工具页
     for tool in published_tools:
         slug = tool['slug']
@@ -483,10 +618,11 @@ def main():
         print(f'[OK] articles/{slug}/index.html')
 
     # 生成 sitemap.xml
-    sitemap = generate_sitemap(published_tools, articles) # 使用已发布的工具
+    # 传递所有已发布的分类名称列表
+    sitemap = generate_sitemap(published_tools, articles, list(tools_by_category.keys()))
     with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write(sitemap)
-    print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles)')
+    print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + {len(tools_by_category)} categories)')
 
     # 生成静态首页
     index_html = build_index_page(published_tools, articles) # 使用已发布的工具
@@ -506,6 +642,9 @@ def main():
         all_urls.append(f"https://www.aitoolbox.hk/tools/{tool['slug']}/index.html")
     for article in articles:
         all_urls.append(f"https://www.aitoolbox.hk/articles/{article['slug']}/index.html")
+    for category_name in tools_by_category.keys(): # 添加分类页面的URL
+        category_slug = category_name.replace(' ', '-').lower()
+        all_urls.append(f"https://www.aitoolbox.hk/category/{category_slug}/index.html")
     
     new_urls = [u for u in all_urls if u not in pushed_urls]
     
