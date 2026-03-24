@@ -198,7 +198,7 @@ def build_tool_page(tool, all_tools):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
         </div>
     </header>
 
