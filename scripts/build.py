@@ -465,6 +465,37 @@ def build_article_page(article, all_articles):
 </html>'''
     return html
 
+def replace_between_tags(html, start_tag, new_content):
+    """通过 div 嵌套深度精确替换标签间内容，避免正则贪婪匹配破坏HTML结构"""
+    start_idx = html.find(start_tag)
+    if start_idx == -1:
+        print(f'[WARN] 未找到标记: {start_tag}')
+        return html
+
+    content_start = start_idx + len(start_tag)
+    depth = 1
+    pos = content_start
+
+    while pos < len(html) and depth > 0:
+        next_open = html.find('<div', pos)
+        next_close = html.find('</div>', pos)
+
+        if next_close == -1:
+            print(f'[WARN] 未找到闭合标签: {start_tag}')
+            return html
+
+        if next_open != -1 and next_open < next_close:
+            depth += 1
+            pos = next_open + 4
+        else:
+            depth -= 1
+            if depth == 0:
+                return html[:content_start] + '\n' + new_content + '\n                    </div>' + html[next_close + 6:]
+            pos = next_close + 6
+
+    return html
+
+
 def build_index_page(tools, articles):
     # 生成静态首页
     index_html_template = os.path.join(BASE_DIR, 'index.html')
@@ -510,8 +541,8 @@ def build_index_page(tools, articles):
             <a href="/privacy.html">隐私政策</a>
             <a href="/links.html">友情链接</a>''' # 暂时使用占位符链接
 
-    # 替换内容
-    html = re.sub(r'(<div class="tools-grid" id="toolsGrid">)\s*</div>', r'\1\n' + tools_html + '\n                    </div>', html)
+    # 替换内容（replace_between_tags 通过 div 嵌套深度精确匹配，不会破坏 HTML 结构）
+    html = replace_between_tags(html, '<div class="tools-grid" id="toolsGrid">', tools_html)
     html = re.sub(r'(<ul id="articleList">)[\s\S]*?(</ul>)', lambda m: m.group(1) + '\n' + articles_html + '                    </ul>', html)
     html = re.sub(r'(<div class="sidebar-card">\s*<h4>&#x1F525; 热门分类</h4>\s*<ul>)[\s\S]*?(</ul>\s*</div>)', lambda m: m.group(1) + '\n' + categories_html + '                    </ul>\n                </div>', html)
     html = re.sub(r'(<div class="footer-links">)[\s\S]*?(</div>)', lambda m: m.group(1) + '\n' + footer_links_html + '\n        </div>', html)
