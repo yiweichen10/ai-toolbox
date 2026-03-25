@@ -543,6 +543,20 @@ def build_index_page(tools, articles):
             <a href="/privacy.html">隐私政策</a>
             <a href="/links.html">友情链接</a>''' # 暂时使用占位符链接
 
+    # 替换工具数量（动态计算）
+    all_tools_count = 0
+    tools_json_path = os.path.join(DATA_DIR, 'tools.json')
+    if os.path.exists(tools_json_path):
+        with open(tools_json_path, 'r', encoding='utf-8') as f:
+            all_tools_data = json.load(f)
+            all_tools_count = len(all_tools_data)
+    if all_tools_count > 100:
+        count_text = f'已收录 {all_tools_count // 100 * 100}+ 工具'
+    else:
+        count_text = f'已收录 {all_tools_count} 款工具'
+    html = re.sub(r'每日更新 · 已收录 \d+\+ 工具', f'每日更新 · {count_text}', html)
+    html = re.sub(r'每日更新 · 收录工具 持续更新', f'每日更新 · {count_text}', html)
+
     # 替换内容（replace_between_tags 通过 div 嵌套深度精确匹配，不会破坏 HTML 结构）
     html = replace_between_tags(html, '<div class="tools-grid" id="toolsGrid">', tools_html)
     html = re.sub(r'(<ul id="articleList">)[\s\S]*?(</ul>)', lambda m: m.group(1) + '\n' + articles_html + '                    </ul>', html)
@@ -553,6 +567,10 @@ def build_index_page(tools, articles):
     html = re.sub(r'<script>\s*var _hmt\s*=\s*_hmt\s*\|\|\s*\[\];\s*\(function\(\)\s*\{[\s\S]*?hm\.src\s*=\s*"[^"]*";[\s\S]*?\}\)\(\);?\s*</script>', '', html)
     html = re.sub(r'<!--\s*BAIDU_TONGJI_PLACEHOLDER\s*-->', '', html)
     
+    # 注入 OG 标签（如果缺失 og:url）
+    if 'og:url' not in html:
+        html = html.replace('</head>', '<meta property="og:url" content="https://www.aitoolbox.hk/">\n</head>')
+
     # 注入真实百度统计代码
     html = html.replace('</head>', f'{BAIDU_TONGJI}\n</head>')
         

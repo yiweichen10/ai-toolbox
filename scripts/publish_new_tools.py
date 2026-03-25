@@ -1,6 +1,7 @@
 import json
 import os
 import random
+import subprocess
 from datetime import datetime
 
 # 定义文件路径
@@ -46,8 +47,23 @@ def publish_new_tools(num_to_publish=3):
 
     # 4. 运行build.py重新生成网站
     print(f"正在运行 {BUILD_SCRIPT_PATH} 重新生成网站...")
-    os.system(f"python {BUILD_SCRIPT_PATH}") # 使用os.system执行，确保build.py的输出可见
+    result = subprocess.run(['python', BUILD_SCRIPT_PATH], capture_output=False)
+    if result.returncode != 0:
+        print("网站构建失败！")
+        return
     print("网站重新生成完成。")
+
+    # 5. Git commit + push 部署到 Vercel
+    tool_names = [t['name'] for t in tools_to_publish_now]
+    commit_msg = f"publish: 发布新工具 {', '.join(tool_names)}"
+    print(f"正在 git commit + push: {commit_msg}")
+    try:
+        subprocess.run(['git', 'add', '-A'], cwd=BASE_DIR, check=True)
+        subprocess.run(['git', 'commit', '-m', commit_msg], cwd=BASE_DIR, check=True)
+        subprocess.run(['git', 'push', 'origin', 'main'], cwd=BASE_DIR, check=True)
+        print("Git commit + push 成功，Vercel 将自动部署。")
+    except subprocess.CalledProcessError as e:
+        print(f"Git 操作失败: {e}")
 
     print(f"[{datetime.now()}] 新工具发布任务完成。")
 
