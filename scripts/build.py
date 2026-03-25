@@ -230,11 +230,11 @@ def build_tool_page(tool, all_tools):
     <title>{escape_html(tool['name'])}评测 - AI工具宝箱</title>
     <meta name="description" content="{escape_html(tool['name'])}全面评测：{escape_html(tool['description'])}">
     <meta name="keywords" content="{escape_html(tool['name'])}评测,{escape_html(tool['name'])}使用教程,{escape_html(tool['category'])}工具">
-    <link rel="canonical" href="https://www.aitoolbox.hk/tools/{slug}/index.html">
+    <link rel="canonical" href="https://www.aitoolbox.hk/tools/{slug}/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(tool['name'])}评测 - AI工具宝箱">
     <meta property="og:description" content="{escape_html(tool['description'])}">
-    <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/index.html">
+    <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/">
     <meta property="og:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{structured_data}</script>
@@ -319,11 +319,11 @@ def build_category_page(category_name, tools_in_category):
     <title>{escape_html(category_name)} - AI工具宝箱</title>
     <meta name="description" content="AI工具宝箱收录{escape_html(category_name)}分类下最新最全的AI工具。">
     <meta name="keywords" content="AI工具,{escape_html(category_name)},人工智能,效率工具,AI导航">
-    <link rel="canonical" href="https://www.aitoolbox.hk/category/{category_slug}/index.html">
+    <link rel="canonical" href="https://www.aitoolbox.hk/category/{category_slug}/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{escape_html(category_name)} - AI工具宝箱">
     <meta property="og:description" content="AI工具宝箱收录{escape_html(category_name)}分类下最新最全的AI工具。">
-    <meta property="og:url" content="https://www.aitoolbox.hk/category/{category_slug}/index.html">
+    <meta property="og:url" content="https://www.aitoolbox.hk/category/{category_slug}/">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/category-{category_slug}-og.png">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">
@@ -421,12 +421,12 @@ def build_article_page(article, all_articles):
     <title>{escape_html(article['title'])} - AI工具宝箱</title>
     <meta name="description" content="{escape_html(article.get('description', ''))}">
     <meta name="keywords" content="{escape_html(article.get('keywords', ''))}">
-    <link rel="canonical" href="https://www.aitoolbox.hk/articles/{slug}/index.html">
+    <link rel="canonical" href="https://www.aitoolbox.hk/articles/{slug}/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(article['title'])} - AI工具宝箱">
     <meta property="og:description" content="{escape_html(article.get('description', ''))}">
     <meta property="og:image" content="{og_image}">
-    <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/index.html">
+    <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/">
     <meta property="og:site_name" content="AI工具宝箱">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{escape_html(article['title'])} - AI工具宝箱">
@@ -594,7 +594,7 @@ def generate_sitemap(tools, articles, categories):
     for tool in tools:
         priority = '0.9' if tool.get('badge') else '0.8'
         urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/tools/{tool['slug']}/index.html</loc>
+        <loc>https://www.aitoolbox.hk/tools/{tool['slug']}/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>{priority}</priority>
@@ -604,7 +604,7 @@ def generate_sitemap(tools, articles, categories):
     for article in articles:
         priority = '0.9' if '2026' in article.get('title', '') else '0.8'
         urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/articles/{article['slug']}/index.html</loc>
+        <loc>https://www.aitoolbox.hk/articles/{article['slug']}/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>{priority}</priority>
@@ -614,7 +614,7 @@ def generate_sitemap(tools, articles, categories):
     for category_name in categories:
         category_slug = category_name.replace(' ', '-').lower()
         urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/category/{category_slug}/index.html</loc>
+        <loc>https://www.aitoolbox.hk/category/{category_slug}/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -721,9 +721,9 @@ def main():
     
     all_urls = ["https://www.aitoolbox.hk/"]
     for tool in published_tools: # 只推送已发布的工具
-        all_urls.append(f"https://www.aitoolbox.hk/tools/{tool['slug']}/index.html")
+        all_urls.append(f"https://www.aitoolbox.hk/tools/{tool['slug']}/")
     for article in articles:
-        all_urls.append(f"https://www.aitoolbox.hk/articles/{article['slug']}/index.html")
+        all_urls.append(f"https://www.aitoolbox.hk/articles/{article['slug']}/")
     for category_name in tools_by_category.keys(): # 添加分类页面的URL
         category_slug = get_category_slug(category_name)
         all_urls.append(f"https://www.aitoolbox.hk/category/{category_slug}/index.html")
