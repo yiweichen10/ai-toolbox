@@ -83,9 +83,11 @@ def markdown_to_html(md):
     # 加粗/行内代码
     html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
     html = re.sub(r'`([^`]+)`', r'<code>\1</code>', html)
-    # 列表
+    # 列表：将连续的 <li> 包裹在 <ul> 中
     html = re.sub(r'^- (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     html = re.sub(r'^(\d+)\. (.+)$', r'<li>\2</li>', html, flags=re.MULTILINE)
+    # 把连续的裸 <li> 行用 <ul> 包裹起来
+    html = re.sub(r'((?:<li>.*?</li>\n?)+)', r'<ul>\1</ul>', html)
     # 段落：将连续非标签行包裹成p
     lines = html.split('\n')
     result = []

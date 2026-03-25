@@ -550,30 +550,46 @@ def main():
     print(f"共 {len(tools)} 个工具，{len(articles)} 篇文章，开始生成SEO图片...\n")
 
     success_count = 0
+    skip_count = 0
 
     # 生成工具页图片
     for tool in tools:
         slug = tool['slug']
         name = tool['name']
+        
+        infographic_path = os.path.join(IMAGES_DIR, 'infographics', f'{slug}-infographic.png')
+        og_path = os.path.join(IMAGES_DIR, 'og', f'{slug}-og.png')
+        
+        # 跳过已存在的图片
+        if os.path.exists(infographic_path) and os.path.exists(og_path):
+            skip_count += 2
+            continue
+        
         print(f"[工具] {name}", flush=True)
 
-        infographic_path = os.path.join(IMAGES_DIR, 'infographics', f'{slug}-infographic.png')
-        print(f"  生成信息图...", end='', flush=True)
-        infographic_html = make_tool_infographic(tool, tools)
-        if generate_image(infographic_html, infographic_path):
-            print(f" OK")
-            success_count += 1
+        if not os.path.exists(infographic_path):
+            print(f"  生成信息图...", end='', flush=True)
+            infographic_html = make_tool_infographic(tool, tools)
+            if generate_image(infographic_html, infographic_path):
+                print(f" OK")
+                success_count += 1
+            else:
+                print(f" FAIL")
         else:
-            print(f" FAIL")
+            print(f"  信息图已存在，跳过")
+            skip_count += 1
 
-        og_path = os.path.join(IMAGES_DIR, 'og', f'{slug}-og.png')
-        print(f"  生成OG Image...", end='', flush=True)
-        og_html = make_og_image(tool, tools)
-        if generate_image(og_html, og_path):
-            print(f" OK")
-            success_count += 1
+        if not os.path.exists(og_path):
+            print(f"  生成OG Image...", end='', flush=True)
+            og_html = make_og_image(tool, tools)
+            if generate_image(og_html, og_path):
+                print(f" OK")
+                success_count += 1
+            else:
+                print(f" FAIL")
         else:
-            print(f" FAIL")
+            print(f"  OG Image已存在，跳过")
+            skip_count += 1
 
     # 生成文章页图片
     if articles:
@@ -602,7 +618,7 @@ def main():
                 print(f" FAIL")
 
     total = len(tools) * 2 + len(articles) * 2
-    print(f"\n完成! 生成 {success_count}/{total} 张图片")
+    print(f"\n完成! 生成 {success_count}/{total} 张图片 (跳过 {skip_count} 张已存在)")
     print(f"信息图目录: {os.path.join(IMAGES_DIR, 'infographics')}")
     print(f"OG Image目录: {os.path.join(IMAGES_DIR, 'og')}")
 

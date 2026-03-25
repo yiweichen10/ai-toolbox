@@ -92,30 +92,69 @@ var _hmt = _hmt || [];
 
 <h2>核心功能</h2>
 
-<li><strong>终端AI编程</strong>：在命令行中直接与Claude对话编程，无需离开开发环境</li>
+<ul><li><strong>终端AI编程</strong>：在命令行中直接与Claude对话编程，无需离开开发环境</li>
 <li><strong>代码库全局理解</strong>：能理解整个项目的文件结构、依赖关系和代码逻辑</li>
 <li><strong>Git操作集成</strong>：自动创建分支、提交代码、创建PR</li>
 <li><strong>文件读写管理</strong>：自主创建、修改、删除项目文件</li>
 <li><strong>多文件编辑</strong>：一次性修改多个文件，保持代码一致性</li>
 <li><strong>错误自动修复</strong>：遇到编译或运行错误时自动诊断和修复</li>
-
+</ul>
 <h2>版本对比</h2>
 <table><thead><tr><th>功能</th><th>免费版</th><th>Claude Pro ($20/月)</th><th>Claude Max ($100/月)</th></tr></thead><tbody><tr><td>Claude Code访问</td><td>有限</td><td>✅</td><td>✅ 5倍用量</td></tr><tr><td>Opus 4模型</td><td>❌</td><td>✅</td><td>✅</td></tr><tr><td>Sonnet 4模型</td><td>✅</td><td>✅</td><td>✅</td></tr><tr><td>代码库理解</td><td>有限</td><td>完整</td><td>完整</td></tr></tbody></table>
 <h2>使用技巧</h2>
 
-<li><strong>善用上下文</strong>：在项目根目录启动Claude Code，它会自动理解整个项目。</li>
+<ul><li><strong>善用上下文</strong>：在项目根目录启动Claude Code，它会自动理解整个项目。</li>
 <li><strong>分步指令</strong>：复杂任务拆分成多步，每步确认后再继续。</li>
 <li><strong>Git集成</strong>：让Claude Code自动创建分支和提交，避免手动操作。</li>
 <li><strong>代码审查</strong>：完成编码后让Claude Code审查自己的代码。</li>
 <li><strong>/compact 命令</strong>：上下文过长时使用压缩命令保持效率。</li>
-
+</ul>
 <h2>适合人群</h2>
 
 <p>Claude Code适合熟悉终端的全栈开发者和专业程序员。如果你日常在命令行中工作，Claude Code是最强大的AI编程伙伴。
 </p>
+<h3>深度评测</h3>
+
+<p>Claude Code 最大的优势在于它不是一个简单的代码补全工具，而是一个真正的"AI程序员"。它可以自主理解项目结构、读取多个文件、编写代码、运行测试、甚至创建 Git commit。
+</p>
+
+<p>在实际使用中，Claude Code 的代码质量非常高。它生成的代码通常比 GitHub Copilot 更完整、更少 bug，因为它能在写代码之前先理解整个项目的上下文。
+</p>
+
+<h3>与其他工具的对比</h3>
+
+<p>Claude Code vs GitHub Copilot：
+</p>
+<ul><li>Copilot 是代码补全插件，Claude Code 是独立终端工具</li>
+<li>Copilot 只看当前文件，Claude Code 理解整个项目</li>
+<li>Claude Code 可以自主执行 Git 操作和文件管理</li>
+</ul>
+<p>Claude Code vs Cursor：
+</p>
+<ul><li>Cursor 是完整 IDE，Claude Code 是轻量级终端工具</li>
+<li>Cursor 适合前端和全栈开发，Claude Code 更适合后端和系统编程</li>
+<li>Claude Code 的推理能力更强，适合复杂架构设计</li>
+</ul>
+<h3>实际使用场景</h3>
+
+<ul><li><strong>新项目搭建</strong>：告诉 Claude Code 你的需求，它能从零搭建完整的项目结构</li>
+<li><strong>Bug 修复</strong>：把报错信息贴给它，它会自动定位问题并修复</li>
+<li><strong>代码重构</strong>：选中一段代码让它优化，它会保持功能不变的情况下提升代码质量</li>
+<li><strong>学习新框架</strong>：问它怎么用某个框架，它会直接在你的项目中写好示例代码</li>
+<li><strong>代码审查</strong>：让它 review 你的 PR，给出改进建议</li>
+</ul>
+<h3>注意事项</h3>
+
+<ul><li>Claude Code 需要联网访问 Anthropic 的 API</li>
+<li>大量使用会产生较高的 API 费用（Max 计划 $100/月）</li>
+<li>对网络质量有要求，国内用户需要稳定的代理连接</li>
+<li>建议在重要项目上先在小分支上测试 Claude Code 的修改</li></ul>
         </article>
 
-        
+        <figure class="tool-infographic">
+            <img src="/images/infographics/claude-code-infographic.png" alt="Claude Code功能亮点信息图" width="1200" height="630" loading="lazy">
+            <figcaption>Claude Code 核心功能一览</figcaption>
+        </figure>
 
         <div class="pros-cons">
             <div class="pros">
