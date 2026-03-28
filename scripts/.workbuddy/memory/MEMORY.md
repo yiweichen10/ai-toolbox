@@ -16,7 +16,8 @@
   - URL 规范化（去掉 index.html 后缀）
   - 首页工具数量动态化
   - publish_new_tools.py 打通自动 git commit + push
-- 当前状态：100个工具（26个已发布，74个待发布）
+- 当前状态：100个工具（29个已发布，71个待发布）
+- **2026-03-27**：自动发布 OpenAI Codex, Tensor.Art, Otter.ai（commit 912584a）
 
 ## 注意事项
 - 百度推送API配额已用尽（400 over quota），需要等配额恢复
