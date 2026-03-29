@@ -129,7 +129,7 @@ def get_category_stats(tools):
 def build_tool_page(tool, all_tools):
     """生成单个工具详情页的完整HTML"""
     slug = tool['slug']
-    
+
     # 相关工具
     related_html = ''
     if tool.get('related'):
@@ -146,6 +146,35 @@ def build_tool_page(tool, all_tools):
             <h3>🔗 相关工具推荐</h3>
             <div class="related-grid">{related_cards}</div>
         </div>'''
+
+    # FAQ 区块
+    faq_html = ''
+    faq_schema = []
+    if tool.get('faq'):
+        for faq_item in tool['faq']:
+            question = faq_item.get('question', '')
+            answer = faq_item.get('answer', '')
+            if question and answer:
+                faq_html += f'''<div class="faq-item">
+                    <details>
+                        <summary>{escape_html(question)}</summary>
+                        <div class="faq-answer">{markdown_to_html(answer)}</div>
+                    </details>
+                </div>\n'''
+                # FAQ Schema
+                faq_schema.append({
+                    '@type': 'Question',
+                    'name': question,
+                    'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': answer
+                    }
+                })
+        if faq_html:
+            faq_html = f'''<div class="faq-section">
+                <h3>❓ 常见问题</h3>
+                {faq_html}
+            </div>'''
 
     # 功能列表
     features_html = ''
@@ -281,6 +310,8 @@ def build_tool_page(tool, all_tools):
         {infographic_html}
 
         {pros_cons_html}
+
+        {faq_html}
 
         {related_html}
     </main>
