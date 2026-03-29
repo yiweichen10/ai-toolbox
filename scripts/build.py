@@ -83,6 +83,8 @@ def markdown_to_html(md):
     # 加粗/行内代码
     html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
     html = re.sub(r'`([^`]+)`', r'<code>\1</code>', html)
+    # 链接 [text](url)
+    html = re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)', r'<a href="\2" target="_blank" rel="noopener">\1</a>', html)
     # 列表：将连续的 <li> 包裹在 <ul> 中
     html = re.sub(r'^- (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     html = re.sub(r'^(\d+)\. (.+)$', r'<li>\2</li>', html, flags=re.MULTILINE)
