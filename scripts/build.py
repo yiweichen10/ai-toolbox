@@ -83,7 +83,8 @@ def markdown_to_html(md):
     # 加粗/行内代码
     html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
     html = re.sub(r'`([^`]+)`', r'<code>\1</code>', html)
-    # 链接 [text](url)
+    # 链接 [text](url) — 先处理站内相对链接，再处理外链
+    html = re.sub(r'\[([^\]]+)\]\((/[^)]+)\)', r'<a href="\2">\1</a>', html)
     html = re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)', r'<a href="\2" target="_blank" rel="noopener">\1</a>', html)
     # 列表：将连续的 <li> 包裹在 <ul> 中
     html = re.sub(r'^- (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
@@ -606,7 +607,12 @@ def build_index_page(tools, articles):
 
     # 注入真实百度统计代码
     html = html.replace('</head>', f'{BAIDU_TONGJI}\n</head>')
-        
+
+    # 注入 Bing Webmaster 验证标签
+    BING_VERIFY = '    <meta name="msvalidate.01" content="D2B58E242903570E029A957ECDFF1E05" />'
+    if 'msvalidate.01' not in html:
+        html = html.replace('</head>', f'{BING_VERIFY}\n</head>')
+
     return html
 
 def generate_sitemap(tools, articles, categories):

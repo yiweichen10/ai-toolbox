@@ -19,9 +19,15 @@
 - 当前状态：100个工具（35个已发布，65个待发布）
 - **2026-03-27**：自动发布 OpenAI Codex, Tensor.Art, Otter.ai（commit 912584a）
 - **2026-03-29**：自动发布 天工AI, DALL-E 3, 秒画（commit 5bb9efc），当前35个已发布/65个待发布
+- **2026-03-29**：SEO紧急修复（commit f55ae49）
+  - 全量修正79个虚假URL（www.工具名.com → 真实官网）
+  - 修复65个工具content中引用的虚假URL
+  - 重写94个工具的FAQ（替换模板化垃圾内容为有价值针对性内容）
+  - **严重教训**：绝不能猜测或想象URL，所有工具的官网URL必须基于搜索确认的真实地址
 
 ## 注意事项
 - 百度推送API配额已用尽（400 over quota），需要等配额恢复
 - publish_new_tools.py 每天13:00自动发布3个工具
 - publish_new_tools.py 已支持自动 git commit + push，Vercel 会自动部署
 - 所有 URL 使用 clean URL 格式（不含 index.html），sitemap/canonical/og:url 统一规范
+- **URL合规红线**：tools.json中所有工具的url字段必须是真实可访问的官网地址，禁止使用 `www.工具名.com` 格式的猜测URL。添加新工具时必须通过搜索引擎确认真实官网
