@@ -1,54 +1,97 @@
 // SEO网站 - 主入口脚本
-// 负责加载文章数据、渲染列表、搜索、分类筛选
+// 首屏 12 个工具已在 HTML 内静态渲染，此脚本负责：
+// 1. 懒加载剩余工具（用 IntersectionObserver 感知滚动触底）
+// 2. 分类筛选（直接用内联的 window.__ALL_TOOLS__ 数据）
+// 3. 搜索功能
 
 document.addEventListener('DOMContentLoaded', () => {
-    initApp();
+    // 优先使用服务端内联数据，避免再次 fetch
+    const allTools = window.__ALL_TOOLS__ || [];
+    const remainingTools = window.__REMAINING_TOOLS__ || [];
+
+    // 懒加载剩余工具（滚动到底部时追加）
+    if (remainingTools.length > 0) {
+        setupLazyLoadTools(remainingTools);
+    }
+
+    // 分类筛选
+    initCategoryFilter(allTools);
+
+    // 搜索
+    initSearch(allTools);
+
+    // 文章列表（内联渲染，不再 fetch）
+    // 如果 articleList 为空则不重新渲染（已静态渲染）
 });
 
-async function initApp() {
-    // 加载文章数据
-    const articles = await loadArticles();
-    const tools = await loadTools();
-    
-    // 渲染最新文章
-    renderArticles(articles.slice(0, 6));
-    
-    // 初始化分类筛选
-    initCategoryFilter(tools);
-    
-    // 初始化搜索
-    initSearch(tools);
-}
+// ─────────────────────────────────────
+// 懒加载：在 toolsGrid 末尾放一个哨兵节点
+// 当哨兵进入视口时，批量追加工具卡片
+// ─────────────────────────────────────
+function setupLazyLoadTools(tools) {
+    const grid = document.getElementById('toolsGrid');
+    if (!grid) return;
 
-async function loadArticles() {
-    try {
-        const res = await fetch('/data/articles.json');
-        return await res.json();
-    } catch {
-        return [];
+    // 当前已渲染数（首屏静态 12 个）
+    let rendered = grid.querySelectorAll('.tool-card').length;
+    const BATCH = 12; // 每次追加数量
+    let queue = tools.slice(); // 剩余待渲染列表
+
+    // 哨兵节点
+    const sentinel = document.createElement('div');
+    sentinel.id = 'lazyLoadSentinel';
+    sentinel.style.cssText = 'height:1px;width:100%;';
+    grid.after(sentinel);
+
+    function loadBatch() {
+        if (queue.length === 0) {
+            observer.disconnect();
+            sentinel.remove();
+            return;
+        }
+        const batch = queue.splice(0, BATCH);
+        const fragment = document.createDocumentFragment();
+        batch.forEach((t, i) => {
+            const card = createToolCard(t, rendered + i);
+            fragment.appendChild(card);
+        });
+        grid.appendChild(fragment);
+        rendered += batch.length;
     }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadBatch();
+            }
+        });
+    }, { rootMargin: '200px' }); // 提前 200px 触发
+
+    observer.observe(sentinel);
 }
 
-async function loadTools() {
-    try {
-        const res = await fetch('/data/tools.json');
-        return await res.json();
-    } catch {
-        return [];
-    }
+function createToolCard(t, index) {
+    const badge = t.badge ? `<span class="badge badge-${t.badge.type}">${t.badge.text}</span>` : '';
+    const tags = (t.tags || []).map(tag => `<span class="tag ${tag.type || ''}">${tag.text}</span>`).join('');
+    const article = document.createElement('article');
+    article.className = 'tool-card fade-in';
+    article.style.animationDelay = `${(index % 12) * 0.05}s`;
+    article.onclick = () => { location.href = `/tools/${t.slug}/index.html`; };
+    article.innerHTML = `
+        <div class="tool-icon" style="background:${t.color};">${t.emoji}</div>
+        <h4>${escapeHtml(t.name)} ${badge}</h4>
+        <p class="desc">${escapeHtml(t.description)}</p>
+        <div class="tags">${tags}</div>
+        <div class="meta">
+            <span class="rating">${t.rating}</span>
+            <span class="visits">👁 ${t.visits}</span>
+        </div>`;
+    return article;
 }
 
-function renderArticles(articles) {
-    const list = document.getElementById('articleList');
-    if (!list) return;
-    list.innerHTML = articles.map(a => `
-        <li>
-            <span class="date">${a.date}</span>
-            <a class="title" href="/articles/${a.slug}/index.html">${a.title}</a>
-        </li>
-    `).join('');
-}
-
+// ─────────────────────────────────────
+// 分类筛选（覆盖渲染 toolsGrid）
+// ─────────────────────────────────────
 function initCategoryFilter(tools) {
     const btns = document.querySelectorAll('.cat-btn');
     btns.forEach(btn => {
@@ -56,7 +99,8 @@ function initCategoryFilter(tools) {
             btns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             const category = btn.dataset.category;
-            renderTools(category === 'all' ? tools : tools.filter(t => t.category === category));
+            const filtered = category === 'all' ? tools : tools.filter(t => t.category === category);
+            renderTools(filtered);
         });
     });
 }
@@ -64,39 +108,58 @@ function initCategoryFilter(tools) {
 function renderTools(toolsToRender) {
     const grid = document.getElementById('toolsGrid');
     if (!grid) return;
+    // 移除懒加载哨兵
+    const sentinel = document.getElementById('lazyLoadSentinel');
+    if (sentinel) sentinel.remove();
+
     grid.innerHTML = toolsToRender.map((t, index) => `
         <article class="tool-card fade-in" style="animation-delay: ${index * 0.05}s;" onclick="location.href='/tools/${t.slug}/index.html'">
             <div class="tool-icon" style="background:${t.color};">${t.emoji}</div>
-            <h4>${t.name} ${t.badge ? `<span class="badge badge-${t.badge.type}">${t.badge.text}</span>` : ''}</h4>
-            <p class="desc">${t.description}</p>
-            <div class="tags">${t.tags.map(tag => `<span class="tag ${tag.type || ''}">${tag.text}</span>`).join('')}</div>
+            <h4>${escapeHtml(t.name)} ${t.badge ? `<span class="badge badge-${t.badge.type}">${t.badge.text}</span>` : ''}</h4>
+            <p class="desc">${escapeHtml(t.description)}</p>
+            <div class="tags">${(t.tags || []).map(tag => `<span class="tag ${tag.type || ''}">${tag.text}</span>`).join('')}</div>
             <div class="meta">
-                <span class="rating">⭐ ${t.rating}</span>
+                <span class="rating">${t.rating}</span>
                 <span class="visits">👁 ${t.visits}</span>
             </div>
         </article>
     `).join('');
 }
 
+// ─────────────────────────────────────
+// 搜索
+// ─────────────────────────────────────
 function initSearch(tools) {
     const searchBtn = document.querySelector('.search-box button');
     const searchInput = document.getElementById('searchInput');
-    if (!searchBtn) return;
-    
+    if (!searchBtn || !searchInput) return;
+
     searchBtn.addEventListener('click', performSearch);
     searchInput.addEventListener('keypress', e => { if (e.key === 'Enter') performSearch(); });
-    
+
     function performSearch() {
         const query = searchInput.value.trim().toLowerCase();
         if (!query) return;
-        const results = tools.filter(t => 
-            t.name.toLowerCase().includes(query) || 
+        const results = tools.filter(t =>
+            t.name.toLowerCase().includes(query) ||
             t.description.toLowerCase().includes(query) ||
-            t.tags.some(tag => tag.text.toLowerCase().includes(query))
+            (t.tags || []).some(tag => tag.text.toLowerCase().includes(query))
         );
-        // 清除分类按钮激活状态
         document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-        document.querySelector('.cat-btn[data-category="all"]').classList.add('active');
+        const allBtn = document.querySelector('.cat-btn[data-category="all"]');
+        if (allBtn) allBtn.classList.add('active');
         renderTools(results);
     }
+}
+
+// ─────────────────────────────────────
+// 工具函数
+// ─────────────────────────────────────
+function escapeHtml(str) {
+    if (!str) return '';
+    return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
 }

@@ -214,13 +214,47 @@ def build_tool_page(tool, all_tools):
         platform_html = f'<div class="tool-meta-item">📦 <strong>平台</strong>：{tool["platform"]}</div>'
 
     # 结构化数据
-    structured_data = json.dumps({
+    from datetime import datetime
+    today_iso = datetime.now().strftime('%Y-%m-%d')
+    # 优先用工具数据里的日期字段，否则用今天
+    date_published = tool.get('datePublished', tool.get('date_published', today_iso))
+    date_modified = tool.get('dateModified', tool.get('date_modified', today_iso))
+
+    category_slug_for_schema = get_category_slug(tool.get('category', ''))
+    breadcrumb_data = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "首页",
+                "item": "https://www.aitoolbox.hk/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": tool.get('category', ''),
+                "item": f"https://www.aitoolbox.hk/category/{category_slug_for_schema}/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": tool['name'],
+                "item": f"https://www.aitoolbox.hk/tools/{slug}/"
+            }
+        ]
+    }
+
+    software_data = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": tool['name'],
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": tool.get('platform', 'Web'),
         "description": tool['description'],
+        "datePublished": date_published,
+        "dateModified": date_modified,
         "offers": {
             "@type": "Offer",
             "price": tool.get('price', ''),
@@ -231,7 +265,9 @@ def build_tool_page(tool, all_tools):
             "ratingValue": tool['rating'].replace('⭐ ', ''),
             "ratingCount": tool.get('visits', '0').replace('万', '0000')
         }
-    }, ensure_ascii=False, indent=2)
+    }
+    structured_data = json.dumps(software_data, ensure_ascii=False, indent=2)
+    breadcrumb_json = json.dumps(breadcrumb_data, ensure_ascii=False, indent=2)
 
     # OG Image
     og_image = f'https://www.aitoolbox.hk/images/og/{slug}-og.png'
@@ -269,6 +305,7 @@ def build_tool_page(tool, all_tools):
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/">
     <meta property="og:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_data}</script>
 {BAIDU_TONGJI}
 </head>
@@ -280,7 +317,7 @@ def build_tool_page(tool, all_tools):
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
+        <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
     </nav>
 
     <main class="article-container">
@@ -363,6 +400,26 @@ def build_category_page(category_name, tools_in_category):
     <script type="application/ld+json">
     {{
         "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "首页",
+                "item": "https://www.aitoolbox.hk/"
+            }},
+            {{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "{escape_html(category_name)}",
+                "item": "https://www.aitoolbox.hk/category/{category_slug}/"
+            }}
+        ]
+    }}
+    </script>
+    <script type="application/ld+json">
+    {{
+        "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "{escape_html(category_name)} - AI工具宝箱",
         "description": "AI工具宝箱收录{escape_html(category_name)}分类下最新最全的AI工具。",
@@ -434,15 +491,60 @@ def build_article_page(article, all_articles):
             <figcaption>{escape_html(article['title'])} · 核心数据一览</figcaption>
         </figure>'''
 
+    from datetime import datetime
+    today_iso = datetime.now().strftime('%Y-%m-%d')
+    article_date = article.get('dateFull', today_iso)
+    article_date_modified = article.get('dateModified', article_date)
+    article_category = article.get('category', '文章')
+    article_category_slug = get_category_slug(article_category)
+
+    breadcrumb_article_data = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "首页",
+                "item": "https://www.aitoolbox.hk/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": article_category,
+                "item": f"https://www.aitoolbox.hk/category/{article_category_slug}/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": article['title'],
+                "item": f"https://www.aitoolbox.hk/articles/{slug}/"
+            }
+        ]
+    }
+    breadcrumb_article_json = json.dumps(breadcrumb_article_data, ensure_ascii=False, indent=2)
+
     structured_data = json.dumps({
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": article['title'],
         "description": article.get('description', ''),
-        "datePublished": article.get('dateFull', ''),
+        "datePublished": article_date,
+        "dateModified": article_date_modified,
         "author": {"@type": "Organization", "name": "AI工具宝箱"},
-        "publisher": {"@type": "Organization", "name": "AI工具宝箱"},
-        "image": og_image
+        "publisher": {
+            "@type": "Organization",
+            "name": "AI工具宝箱",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.aitoolbox.hk/images/logo.png"
+            }
+        },
+        "image": og_image,
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": f"https://www.aitoolbox.hk/articles/{slug}/"
+        }
     }, ensure_ascii=False, indent=2)
 
     content_html = markdown_to_html(article.get('content', ''))
@@ -467,6 +569,7 @@ def build_article_page(article, all_articles):
     <meta name="twitter:description" content="{escape_html(article.get('description', ''))}">
     <meta name="twitter:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{breadcrumb_article_json}</script>
     <script type="application/ld+json">{structured_data}</script>
 {BAIDU_TONGJI}
 </head>
@@ -500,6 +603,125 @@ def build_article_page(article, all_articles):
 </body>
 </html>'''
     return html
+
+
+def build_article_list_pages(articles):
+    """生成文章分页列表页（/articles/page/1, page/2...）
+    每页 10 篇，并加入 rel=next/prev + canonical"""
+    
+    ITEMS_PER_PAGE = 10
+    total_pages = max(1, (len(articles) + ITEMS_PER_PAGE - 1) // ITEMS_PER_PAGE)
+    
+    for page_num in range(1, total_pages + 1):
+        start_idx = (page_num - 1) * ITEMS_PER_PAGE
+        end_idx = min(start_idx + ITEMS_PER_PAGE, len(articles))
+        page_articles = articles[start_idx:end_idx]
+        
+        # 生成当前页文章 HTML
+        articles_html = ''
+        for i, a in enumerate(page_articles):
+            articles_html += f'''                        <article class="article-card" style="animation-delay: {i * 0.05}s;">
+                            <h3><a href="/articles/{a['slug']}/index.html">{escape_html(a['title'])}</a></h3>
+                            <div class="article-meta">
+                                <span class="date">{a.get('dateFull', a.get('date', ''))}</span>
+                                <span class="category">{escape_html(a.get('category', ''))}</span>
+                            </div>
+                            <p class="summary">{escape_html(a.get('description', '')[:150])}</p>
+                        </article>\n'''
+        
+        # 生成分页导航 HTML
+        pagination_html = '<div class="pagination">'
+        if page_num > 1:
+            pagination_html += f'<a href="/articles/page/{page_num - 1}/" class="prev">&larr; 上一页</a>\n'
+        pagination_html += f'<span class="page-info">{page_num} / {total_pages}</span>\n'
+        if page_num < total_pages:
+            pagination_html += f'<a href="/articles/page/{page_num + 1}/" class="next">下一页 &rarr;</a>\n'
+        pagination_html += '</div>'
+        
+        # 生成链接标签（rel next/prev/canonical）
+        link_tags = f'    <link rel="canonical" href="https://www.aitoolbox.hk/articles/page/{page_num}/">\n'
+        if page_num > 1:
+            link_tags += f'    <link rel="prev" href="https://www.aitoolbox.hk/articles/page/{page_num - 1}/">\n'
+        if page_num < total_pages:
+            link_tags += f'    <link rel="next" href="https://www.aitoolbox.hk/articles/page/{page_num + 1}/">\n'
+        
+        # 生成页面 HTML
+        html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具宝箱 - 最新文章 第{page_num}页</title>
+    <meta name="description" content="AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。第{page_num}页。">
+    <meta name="keywords" content="AI工具,AI文章,AI评测,AI教程">
+    {link_tags}    <meta property="og:type" content="website">
+    <meta property="og:title" content="AI工具宝箱 - 最新文章">
+    <meta property="og:description" content="AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。">
+    <meta property="og:url" content="https://www.aitoolbox.hk/articles/page/{page_num}/">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">
+    {{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "首页",
+                "item": "https://www.aitoolbox.hk/"
+            }},
+            {{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "文章列表",
+                "item": "https://www.aitoolbox.hk/articles/page/1/"
+            }},
+            {{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "第 {page_num} 页",
+                "item": "https://www.aitoolbox.hk/articles/page/{page_num}/"
+            }}
+        ]
+    }}
+    </script>
+{BAIDU_TONGJI}
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0; AI工具宝箱 <span>每日更新 · 最新资讯</span></h1></a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <a href="/">首页</a> &gt; <a href="/articles/page/1/">文章列表</a> &gt; <span>第 {page_num} 页</span>
+    </nav>
+
+    <main class="article-container">
+        <h2 style="margin-bottom:24px;">&#x1F4DD; 最新文章</h2>
+        <div class="articles-list">
+{articles_html}
+        </div>
+        
+        {pagination_html}
+    </main>
+
+    <footer class="footer">
+        <p>&#xA9; 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+    </footer>
+</body>
+</html>'''
+        
+        # 创建目录并保存文件
+        dir_path = os.path.join(BASE_DIR, 'articles', 'page', str(page_num))
+        os.makedirs(dir_path, exist_ok=True)
+        with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(html)
+        print(f'[OK] articles/page/{page_num}/index.html')
+    
+    return total_pages
+
 
 def replace_between_tags(html, start_tag, new_content):
     """通过 div 嵌套深度精确替换标签间内容，避免正则贪婪匹配破坏HTML结构"""
@@ -538,8 +760,9 @@ def build_index_page(tools, articles):
     with open(index_html_template, 'r', encoding='utf-8') as f:
         html = f.read()
 
+    # 首屏 12 个工具静态渲染（改善 LCP）
     tools_html = ''
-    for i, t in enumerate(tools):
+    for i, t in enumerate(tools[:12]):  # 只渲染前 12 个
         badge_html = f'<span class="badge badge-{t.get("badge", {}).get("type", "")}">{t.get("badge", {}).get("text", "")}</span>' if t.get('badge') else ''
         tags_html = ''.join([f'<span class="tag {tag.get("type", "")}">{tag.get("text", "")}</span>' for tag in t.get('tags', [])])
         tools_html += f'''                        <article class="tool-card fade-in" style="animation-delay: {i * 0.05}s;" onclick="location.href=\'/tools/{t['slug']}/index.html\'">
@@ -552,6 +775,12 @@ def build_index_page(tools, articles):
                                 <span class="visits">👁 {t['visits']}</span>
                             </div>
                         </article>\n'''
+    
+    # 其余工具存储到 data 属性（JS 动态加载）
+    remaining_tools_json = json.dumps(tools[12:], ensure_ascii=False, indent=2)
+    
+    # 对全部工具的懒加载占位符（分类筛选时需要）
+    all_tools_json = json.dumps(tools, ensure_ascii=False, indent=2)
         
     articles_html = ''
     for a in articles[:6]:
@@ -597,6 +826,14 @@ def build_index_page(tools, articles):
     html = re.sub(r'(<div class="sidebar-card">\s*<h4>&#x1F525; 热门分类</h4>\s*<ul>)[\s\S]*?(</ul>\s*</div>)', lambda m: m.group(1) + '\n' + categories_html + '                    </ul>\n                </div>', html)
     html = re.sub(r'(<div class="footer-links">)[\s\S]*?(</div>)', lambda m: m.group(1) + '\n' + footer_links_html + '\n        </div>', html)
     
+    # 注入全部工具数据和剩余工具数据到全局变量（给 JS 使用）
+    # 这样 JS 的分类筛选、搜索功能不需要重新 fetch，直接用内联数据
+    inject_script = f'''<script>
+window.__ALL_TOOLS__ = {all_tools_json};
+window.__REMAINING_TOOLS__ = {remaining_tools_json};
+</script>'''
+    html = html.replace('</head>', inject_script + '\n</head>')
+    
     # 移除所有已有的百度统计代码片段（无论占位符还是真实代码），避免重复叠加
     html = re.sub(r'<script>\s*var _hmt\s*=\s*_hmt\s*\|\|\s*\[\];\s*\(function\(\)\s*\{[\s\S]*?hm\.src\s*=\s*"[^"]*";[\s\S]*?\}\)\(\);?\s*</script>', '', html)
     html = re.sub(r'<!--\s*BAIDU_TONGJI_PLACEHOLDER\s*-->', '', html)
@@ -615,7 +852,7 @@ def build_index_page(tools, articles):
 
     return html
 
-def generate_sitemap(tools, articles, categories):
+def generate_sitemap(tools, articles, categories, total_article_pages=1):
     """生成 sitemap.xml"""
     from datetime import datetime
     today = datetime.now().strftime('%Y-%m-%d')
@@ -627,6 +864,16 @@ def generate_sitemap(tools, articles, categories):
         <lastmod>{today}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+    </url>''')
+
+    # 文章列表分页（第1页优先级最高）
+    for p in range(1, total_article_pages + 1):
+        priority = '0.9' if p == 1 else '0.7'
+        urls.append(f'''    <url>
+        <loc>https://www.aitoolbox.hk/articles/page/{p}/</loc>
+        <lastmod>{today}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>{priority}</priority>
     </url>''')
 
     # 工具页
@@ -773,12 +1020,15 @@ def main():
             f.write(html)
         print(f'[OK] articles/{slug}/index.html')
 
+    # 生成文章分页列表页
+    total_pages = build_article_list_pages(articles)
+
     # 生成 sitemap.xml
     # 传递所有已发布的分类名称列表
-    sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()])
+    sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()], total_pages)
     with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write(sitemap)
-    print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + {len(tools_by_category)} categories)')
+    print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + {len(tools_by_category)} categories + {total_pages} article pages)')
 
     # 生成静态首页
     index_html = build_index_page(published_tools, articles) # 使用已发布的工具
