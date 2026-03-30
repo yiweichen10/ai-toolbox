@@ -666,6 +666,41 @@ def generate_sitemap(tools, articles, categories):
 
     return sitemap
 
+def push_to_indexnow(urls):
+    """通过 IndexNow 协议向 Bing/Yandex 等搜索引擎推送新链接"""
+    import urllib.request
+    import urllib.error
+    import json as _json
+
+    KEY = "d2b58e242903570e029a957ecdff1e05"  # 与 Bing 验证码同一个值（小写）
+    api_url = "https://api.indexnow.org/indexnow"
+
+    payload = _json.dumps({
+        "host": "www.aitoolbox.hk",
+        "key": KEY,
+        "keyLocation": f"https://www.aitoolbox.hk/{KEY}.txt",
+        "urlList": urls[:10000]  # IndexNow 单次上限 10000 条
+    }).encode("utf-8")
+
+    req = urllib.request.Request(
+        api_url,
+        data=payload,
+        headers={"Content-Type": "application/json; charset=utf-8"},
+        method="POST"
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            print(f"[IndexNow] Success: HTTP {resp.status}, pushed {len(urls)} URLs")
+            return True
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        print(f"[IndexNow] HTTP {e.code}: {body}")
+        return False
+    except Exception as e:
+        print(f"[IndexNow] Failed: {e}")
+        return False
+
+
 def push_to_baidu(urls):
     """主动向百度搜索引擎推送链接"""
     api_url = "http://data.zz.baidu.com/urls?site=https://www.aitoolbox.hk&token=WkOz42Q1xowpLZcB"
@@ -779,6 +814,23 @@ def main():
                 json.dump(list(pushed_urls), f)
     else:
         print(f"\nNo new URLs to push. ({len(all_urls)} total, all already pushed)")
+
+    # IndexNow 推送（Bing / Yandex / Seznam 同步）
+    indexnow_cache_file = os.path.join(BASE_DIR, '.indexnow_pushed.json')
+    indexnow_pushed = set()
+    if os.path.exists(indexnow_cache_file):
+        with open(indexnow_cache_file, 'r', encoding='utf-8') as f:
+            indexnow_pushed = set(json.load(f))
+
+    new_indexnow_urls = [u for u in all_urls if u not in indexnow_pushed]
+    if new_indexnow_urls:
+        print(f"\nPushing {len(new_indexnow_urls)} new URLs via IndexNow (Bing/Yandex)...")
+        if push_to_indexnow(new_indexnow_urls):
+            indexnow_pushed.update(new_indexnow_urls)
+            with open(indexnow_cache_file, 'w', encoding='utf-8') as f:
+                json.dump(list(indexnow_pushed), f)
+    else:
+        print(f"\nIndexNow: No new URLs to push. ({len(all_urls)} total, all already pushed)")
     
     print(f'\nDone! {len(published_tools)} tools + {len(articles)} articles')
 
