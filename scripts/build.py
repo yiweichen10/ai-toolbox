@@ -129,26 +129,85 @@ def get_category_stats(tools):
             category_counts[category] = category_counts.get(category, 0) + 1
     return category_counts
 
-def build_tool_page(tool, all_tools):
+def build_tool_page(tool, all_tools, all_articles=None):
     """生成单个工具详情页的完整HTML"""
     slug = tool['slug']
 
-    # 相关工具
+    # ── 相关工具（自动补足到5个：同分类2-3个 + 跨分类2-3个）──────────────
     related_html = ''
-    if tool.get('related'):
+    manually_related = tool.get('related', [])
+    manually_related_tools = [t for t in all_tools if t['slug'] in manually_related and t['slug'] != slug]
+
+    same_category = [t for t in all_tools if t['slug'] != slug and t.get('category') == tool.get('category')]
+    other_category = [t for t in all_tools if t['slug'] != slug and t.get('category') != tool.get('category')]
+
+    import random
+    same_shuffled = same_category.copy()
+    other_shuffled = other_category.copy()
+    random.seed(42)  # 保证每次生成结果稳定
+
+    # 优先用手动指定的，超出的自动补
+    selected = manually_related_tools.copy()
+    for t in same_shuffled:
+        if len(selected) >= 5:
+            break
+        if t not in selected:
+            selected.append(t)
+    for t in other_shuffled:
+        if len(selected) >= 5:
+            break
+        if t not in selected:
+            selected.append(t)
+
+    if selected:
         related_cards = ''
-        for r_slug in tool['related']:
-            r = next((t for t in all_tools if t['slug'] == r_slug), None)
-            if r:
-                related_cards += f'''<a href="/tools/{r['slug']}/index.html" class="related-card">
-                    <div style="font-size:24px;margin-bottom:8px;">{r['emoji']}</div>
-                    <div style="font-weight:600;">{r['name']}</div>
-                    <div style="font-size:13px;color:#666;">{r['category']}</div>
-                </a>\n'''
+        for r in selected[:5]:
+            related_cards += f'''<a href="/tools/{r['slug']}/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">{r['emoji']}</div>
+                <div style="font-weight:600;">{r['name']}</div>
+                <div style="font-size:13px;color:#666;">{r['category']}</div>
+            </a>
+'''
         related_html = f'''<div class="related-tools" id="relatedSection">
             <h3>🔗 相关工具推荐</h3>
             <div class="related-grid">{related_cards}</div>
         </div>'''
+
+    # ── 相关文章（工具页底部推荐2-3篇相关文章）────────────────────────
+    related_articles_html = ''
+    if all_articles:
+        tool_name = tool['name'].lower()
+        # 优先匹配工具名的文章
+        matched = []
+        for a in all_articles:
+            title_lower = a.get('title', '').lower()
+            desc_lower = a.get('description', '').lower()
+            if tool_name in title_lower or tool_name in desc_lower:
+                matched.append(a)
+        # 没有精确匹配的，取同类文章
+        if len(matched) < 2:
+            category_articles = [a for a in all_articles if a.get('category') == tool.get('category') and a not in matched]
+            matched.extend(category_articles[:3 - len(matched)])
+        # 还不够，取最新文章
+        if len(matched) < 2:
+            for a in all_articles:
+                if a not in matched:
+                    matched.append(a)
+                    if len(matched) >= 3:
+                        break
+
+        if matched:
+            cards = ''
+            for a in matched[:3]:
+                cards += f'''<a href="/articles/{a['slug']}/index.html" class="related-card">
+                    <div style="font-weight:600;margin-bottom:4px;">📖 {escape_html(a['title'][:30])}</div>
+                    <div style="font-size:13px;color:#666;">{a.get('dateFull', a.get('date', ''))}</div>
+                </a>
+'''
+            related_articles_html = f'''<div class="related-tools">
+                <h3>📚 相关文章</h3>
+                <div class="related-grid">{cards}</div>
+            </div>'''
 
     # FAQ 区块
     faq_html = ''
@@ -365,6 +424,8 @@ def build_tool_page(tool, all_tools):
         {faq_html}
 
         {related_html}
+
+        {related_articles_html}
     </main>
 
     <footer class="footer">
@@ -1016,7 +1077,7 @@ def main():
         slug = tool['slug']
         dir_path = os.path.join(BASE_DIR, 'tools', slug)
         os.makedirs(dir_path, exist_ok=True)
-        html = build_tool_page(tool, published_tools) # 传递已发布的工具列表
+        html = build_tool_page(tool, published_tools, articles) # 传递已发布工具列表 + 全部文章
         with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html)
         print(f'[OK] tools/{slug}/index.html')
