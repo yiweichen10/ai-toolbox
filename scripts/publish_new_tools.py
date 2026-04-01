@@ -27,11 +27,20 @@ def publish_new_tools(num_to_publish=3):
         print(f"错误: {TOOLS_JSON_PATH} 文件不存在。")
         return
 
+    published_tools = [tool for tool in all_tools if tool.get('published', False)]
     unpublished_tools = [tool for tool in all_tools if not tool.get('published', False)]
     
+    print(f"  库存状态: 已发布 {len(published_tools)} 个, 未发布 {len(unpublished_tools)} 个, 总计 {len(all_tools)} 个")
+    
     if not unpublished_tools:
-        print("没有未发布的工具了，任务结束。")
+        print("⚠️ 库存已耗尽！没有未发布的工具了，需要补充新工具。")
+        print("  → 运行 python scripts/generate_tools.py --count 20 来补充")
         return
+
+    if len(unpublished_tools) < 10:
+        print(f"⚠️ 低库存预警！仅剩 {len(unpublished_tools)} 个未发布工具，建议尽快补充。")
+        print(f"  → 预计还能发布 {len(unpublished_tools) // num_to_publish} 天")
+        print(f"  → 运行 python scripts/generate_tools.py --count 20 来补充")
 
     # 2. 随机选择num_to_publish个工具进行发布
     tools_to_publish_now = random.sample(unpublished_tools, min(num_to_publish, len(unpublished_tools)))
