@@ -269,6 +269,16 @@ def build_tool_page(tool, all_tools):
     structured_data = json.dumps(software_data, ensure_ascii=False, indent=2)
     breadcrumb_json = json.dumps(breadcrumb_data, ensure_ascii=False, indent=2)
 
+    # FAQ Schema（输出到<head>，用于Google丰富摘要）
+    faq_page_schema = ''
+    if faq_schema:
+        faq_page_schema_data = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faq_schema
+        }
+        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_page_schema_data, ensure_ascii=False)}</script>'
+
     # OG Image
     og_image = f'https://www.aitoolbox.hk/images/og/{slug}-og.png'
 
@@ -295,18 +305,19 @@ def build_tool_page(tool, all_tools):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{escape_html(tool['name'])}评测 - AI工具宝箱</title>
-    <meta name="description" content="{escape_html(tool['name'])}全面评测：{escape_html(tool['description'])}">
-    <meta name="keywords" content="{escape_html(tool['name'])}评测,{escape_html(tool['name'])}使用教程,{escape_html(tool['category'])}工具">
+    <title>{escape_html(tool['name'])}评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱</title>
+    <meta name="description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'])} 功能介绍、免费版体验、与同类工具对比。">
+    <meta name="keywords" content="{escape_html(tool['name'])},{escape_html(tool['name'])}评测,{escape_html(tool['name'])}使用教程,{escape_html(tool['category'])},AI工具">
     <link rel="canonical" href="https://www.aitoolbox.hk/tools/{slug}/">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="{escape_html(tool['name'])}评测 - AI工具宝箱">
-    <meta property="og:description" content="{escape_html(tool['description'])}">
+    <meta property="og:title" content="{escape_html(tool['name'])}评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱">
+    <meta property="og:description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'])}">
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/">
     <meta property="og:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_data}</script>
+    {faq_page_schema}
 {BAIDU_TONGJI}
 </head>
 <body>
