@@ -1,5 +1,10 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/tools/天工ai", "destination": "/tools/tiangong", "permanent": true },
+    { "source": "/tools/秒画", "destination": "/tools/miaohua", "permanent": true },
+    { "source": "/tools/秘塔ai搜索", "destination": "/tools/meta-so", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
