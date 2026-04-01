@@ -529,11 +529,57 @@ def build_category_page(category_name, tools_in_category):
 </html>'''
     return html
 
-def build_article_page(article, all_articles):
+def build_article_page(article, all_articles, all_tools=None):
     """生成单个文章页的完整HTML"""
     slug = article['slug']
-    
-    # 相关文章
+
+    # ── 相关工具（通过关键词匹配：标题/描述中提到哪些工具就推哪些）────
+    related_tools_html = ''
+    if all_tools:
+        article_title = article.get('title', '').lower()
+        article_desc = article.get('description', '').lower()
+        article_content = article.get('content', '').lower()
+        # 找工具名在文章中出现的工具
+        matched_tools = []
+        for t in all_tools:
+            tool_name_lower = t.get('name', '').lower()
+            if (tool_name_lower in article_title or
+                tool_name_lower in article_desc or
+                tool_name_lower in article_content):
+                matched_tools.append(t)
+        # 不够5个则按分类补充
+        if len(matched_tools) < 5:
+            article_category = article.get('category', '')
+            same_cat_tools = [t for t in all_tools
+                             if t.get('category') == article_category
+                             and t not in matched_tools]
+            for t in same_cat_tools:
+                if len(matched_tools) >= 5:
+                    break
+                matched_tools.append(t)
+        # 再不够，取热门工具
+        if len(matched_tools) < 5:
+            for t in sorted(all_tools, key=lambda x: x.get('visits', '0'), reverse=True):
+                if len(matched_tools) >= 5:
+                    break
+                if t not in matched_tools:
+                    matched_tools.append(t)
+
+        if matched_tools:
+            cards = ''
+            for t in matched_tools[:5]:
+                cards += f'''<a href="/tools/{t['slug']}/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">{t['emoji']}</div>
+                    <div style="font-weight:600;">{escape_html(t['name'])}</div>
+                    <div style="font-size:13px;color:#666;">{escape_html(t.get('category', ''))}</div>
+                </a>
+'''
+            related_tools_html = f'''<div class="related-tools">
+            <h3>🔧 相关工具</h3>
+            <div class="related-grid">{cards}</div>
+        </div>'''
+
+    # ── 相关文章 ──────────────────────────────────────────────────────
     related_html = ''
     same_category = [a for a in all_articles if a['slug'] != slug and a.get('category') == article.get('category')]
     if len(same_category) < 2:
@@ -667,6 +713,8 @@ def build_article_page(article, all_articles):
         </article>
 
         {related_html}
+
+        {related_tools_html}
     </main>
 
     <footer class="footer">
@@ -1087,7 +1135,7 @@ def main():
         slug = article['slug']
         dir_path = os.path.join(BASE_DIR, 'articles', slug)
         os.makedirs(dir_path, exist_ok=True)
-        html = build_article_page(article, articles)
+        html = build_article_page(article, articles, published_tools)
         with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html)
         print(f'[OK] articles/{slug}/index.html')
