@@ -13,60 +13,10 @@
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/comet/">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/comet-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://www.aitoolbox.hk/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "AI效率",
-      "item": "https://www.aitoolbox.hk/category/ai-efficiency/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Comet",
-      "item": "https://www.aitoolbox.hk/tools/comet/"
-    }
-  ]
-}</script>
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Comet",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "Web",
-  "description": "AI内容创作平台，帮助创作者快速生成博客、社交媒体和营销内容。内置SEO优化和内容日历管理，是内容运营的全能工具。",
-  "datePublished": "2026-04-02",
-  "dateModified": "2026-04-02",
-  "offers": {
-    "@type": "Offer",
-    "price": "免费版+Pro $10/月",
-    "priceCurrency": "USD"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "90000"
-  }
-}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Comet能做什么？", "acceptedAnswer": {"@type": "Answer", "text": "Comet是AI客户服务工具，用AI自动分析和归类客户反馈。支持整合多个客服渠道（邮件、聊天、社交媒体），AI自动识别客户情绪和问题类型，帮助团队提升服务质量。"}}]}</script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{structured_data}</script>
+    {faq_page_schema}
+{BAIDU_TONGJI}
 </head>
 <body>
     <header class="header">
@@ -76,196 +26,45 @@ var _hmt = _hmt || [];
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/category/ai-efficiency/">AI效率</a> &gt; <span>Comet</span>
+        <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
     </nav>
 
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#5080eb;">⚡️</div>
+                <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
                 <div class="tool-header-info">
-                    <h2>Comet <span class="badge" style="background:#667eea;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">HOT</span></h2>
-                    <p class="subtitle">AI内容创作平台，帮助创作者快速生成博客、社交媒体和营销内容。内置SEO优化和内容日历管理，是内容运营的全能工具。</p>
-                    <div class="rating-bar">⭐ 4.6 <span style="font-size:14px;color:#999;">(9万浏览)</span></div>
+                    <h2>{escape_html(tool['name'])}{badge_html}</h2>
+                    <p class="subtitle">{escape_html(tool['description'])}</p>
+                    <div class="rating-bar">{tool['rating']} <span style="font-size:14px;color:#999;">({tool.get('visits', '0')}浏览)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>官网</strong>：www.comet.com</div>
-                <div class="tool-meta-item">💰 <strong>价格</strong>：免费版+Pro $10/月</div>
-                <div class="tool-meta-item">📦 <strong>平台</strong>：Web</div>
-                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI效率</div>
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：{tool['url'].replace('https://', '')}</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：{tool.get('price', '')}</div>
+                {platform_html}
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
             </div>
             <div class="action-bar">
-                <a href="https://www.comet.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
-        <div class="features-grid"><div class="feature-item">AI写作</div>
-<div class="feature-item">SEO优化</div>
-<div class="feature-item">内容日历</div>
-<div class="feature-item">多平台</div>
-<div class="feature-item">分析报表</div>
-<div class="feature-item">团队协作</div>
-</div>
+        {features_html}
 
         <article class="article-body">
-            <h2>Comet 是什么？</h2>
-
-<p>Comet是AI内容创作平台，帮助创作者和营销团队快速生成博客、社交媒体和营销内容。内置SEO优化和内容日历管理功能。
-</p>
-
-<p>Comet让内容运营更加高效和系统化。
-</p>
-
-<h2>核心功能</h2>
-
-<ul><li><strong>AI写作</strong>：自动生成各类内容</li>
-<li><strong>SEO优化</strong>：内置SEO建议</li>
-<li><strong>内容日历</strong>：规划和管理内容发布</li>
-<li><strong>多平台适配</strong>：适配不同社交平台</li>
-<li><strong>分析报表</strong>：内容效果数据分析</li>
-<li><strong>团队协作</strong>：多人协作管理</li>
-</ul>
-<h2>适合人群</h2>
-
-<p>Comet适合内容运营团队和社媒管理者。
-</p>
-<h3>深度评测</h3>
-
-<p>Comet 是一款专注于提升效率的 AI 工具。它通过 AI 技术简化了复杂的工作流程。
-</p>
-
-<h3>使用技巧</h3>
-
-<ul><li>从核心功能开始，逐步深入</li>
-<li>根据具体需求定制使用方式</li>
-<li>关注更新日志，及时了解新功能</li>
-</ul>
-<h3>总结</h3>
-
-<p>Comet 是 AI效率 领域中一款不错的 AI 工具。AI内容创作平台，帮助创作者快速生成博客、社交媒体和营销内容。内置SEO优化和内容日历管理，是内容运营的全能工具。 从功能完整性来看，它覆盖了核心使用场景。
-</p>
-
-<p><strong>快速上手建议：</strong>
-</p>
-<ul><li>访问官网 www.comet.com 注册账号</li>
-<li>先使用免费版本 了解核心功能</li>
-<li>参考官方文档和教程加速学习</li>
-<li>加入用户社区获取使用技巧和最佳实践</li>
-</ul>
-<p><strong>价格参考：</strong> 免费版+Pro $10/月
-<strong>支持平台：</strong> Web
-</p>
-
-<h3>核心功能详解</h3>
-
-<p>AI 效率工具专注于解决日常工作中的效率痛点。通过智能化的功能设计，它能帮助用户节省时间、减少重复操作，让工作更加高效和轻松。
-</p>
-
-<h3>效率提升方式</h3>
-
-<ul><li><strong>自动化</strong>：自动执行重复性操作</li>
-<li><strong>智能化</strong>：AI 辅助决策和信息处理</li>
-<li><strong>快捷化</strong>：减少操作步骤和点击次数</li>
-<li><strong>集成化</strong>：打通多个工具和数据源</li>
-<li><strong>个性化</strong>：根据使用习惯智能调整</li>
-</ul>
-<h3>使用技巧</h3>
-
-<ul><li>充分利用快捷键和自定义配置</li>
-<li>将常用功能设置为一键操作</li>
-<li>定期探索新功能和使用技巧</li>
-<li>与其他工具集成发挥最大价值</li>
-<li>关注版本更新获取新功能</li>
-</ul>
-<h3>实际效果</h3>
-
-<p>大多数用户在使用一段时间后反馈：
-</p>
-<ul><li>日常操作效率提升 30-50%</li>
-<li>重复性工作时间减少 60%</li>
-<li>工作满意度明显提升</li>
-<li>有更多时间专注于创造性工作</li>
-</ul><h3>总结</h3>
-
-<p>Comet 是一款轻量级 AI 效率工具，适合追求简洁高效的用户。它没有复杂的功能堆砌，而是专注于做好核心场景。如果你厌倦了臃肿的工具，想要一个真正好用的 AI 助手，Comet 值得尝试。建议从免费版开始体验，确认它能满足你的需求后再考虑升级。
-</p>
+            {content_html}
         </article>
 
-        <figure class="tool-infographic">
-            <img src="/images/infographics/comet-infographic.png" alt="Comet功能亮点信息图" width="1200" height="630" loading="lazy">
-            <figcaption>Comet 核心功能一览</figcaption>
-        </figure>
+        {infographic_html}
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>👍 优点</h4>
-                <ul><li>SEO优化内置</li><li>内容日历</li><li>批量生成</li><li>多平台适配</li><li>分析报表</li></ul>
-            </div>
-            <div class="cons">
-                <h4>👎 缺点</h4>
-                <ul><li>质量不如GPT</li><li>价格较高</li><li>中文效果一般</li><li>功能较新</li><li>学习成本</li></ul>
-            </div>
-        </div>
+        {pros_cons_html}
 
-        <div class="faq-section">
-                <h3>❓ 常见问题</h3>
-                <div class="faq-item">
-                    <details>
-                        <summary>Comet能做什么？</summary>
-                        <div class="faq-answer"><p>Comet是AI客户服务工具，用AI自动分析和归类客户反馈。支持整合多个客服渠道（邮件、聊天、社交媒体），AI自动识别客户情绪和问题类型，帮助团队提升服务质量。
-</p></div>
-                    </details>
-                </div>
+        {faq_html}
 
-            </div>
+        {related_html}
 
-        <div class="related-tools" id="relatedSection">
-            <h3>🔗 相关工具推荐</h3>
-            <div class="related-grid"><a href="/tools/claude/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎭</div>
-                <div style="font-weight:600;">Claude</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/midjourney/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎨</div>
-                <div style="font-weight:600;">Midjourney</div>
-                <div style="font-size:13px;color:#666;">AI绘画</div>
-            </a>
-<a href="/tools/chatgpt/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🟢</div>
-                <div style="font-weight:600;">ChatGPT</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/github-copilot/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">💻</div>
-                <div style="font-weight:600;">GitHub Copilot</div>
-                <div style="font-size:13px;color:#666;">AI编程</div>
-            </a>
-<a href="/tools/cursor/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">⬛</div>
-                <div style="font-weight:600;">Cursor</div>
-                <div style="font-size:13px;color:#666;">AI编程</div>
-            </a>
-</div>
-        </div>
-
-        <div class="related-tools">
-                <h3>📚 相关文章</h3>
-                <div class="related-grid"><a href="/articles/ai-office-productivity-tools-2026/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 2026年AI办公效率工具推荐：从写周报到做PPT，8款工具</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-<a href="/articles/ai-translation-tools-2026-guide/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 AI翻译工具推荐2026：8款AI翻译软件实测，哪款翻译最准</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-<a href="/articles/deepseek-complete-guide-2026/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 DeepSeek完全使用指南：从入门到进阶，一文掌握Deep</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-</div>
-            </div>
+        {related_articles_html}
     </main>
 
     <footer class="footer">

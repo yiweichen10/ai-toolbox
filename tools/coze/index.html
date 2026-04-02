@@ -13,60 +13,10 @@
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/coze/">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/coze-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://www.aitoolbox.hk/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "AI自动化",
-      "item": "https://www.aitoolbox.hk/category/ai-automation/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Coze",
-      "item": "https://www.aitoolbox.hk/tools/coze/"
-    }
-  ]
-}</script>
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Coze",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "本地部署 / Web",
-  "description": "字节跳动推出的AI Bot开发平台，零代码创建AI智能体。支持接入多种大模型、插件、知识库，可发布到飞书、微信等多平台，是国内最易用的AI Agent构建工具。",
-  "datePublished": "2026-04-02",
-  "dateModified": "2026-04-02",
-  "offers": {
-    "@type": "Offer",
-    "price": "免费使用",
-    "priceCurrency": "USD"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "130000"
-  }
-}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Coze是什么？能做什么？", "acceptedAnswer": {"@type": "Answer", "text": "Coze是字节跳动推出的AI Bot开发平台。可以通过拖拽方式创建AI聊天机器人，不需要编程。支持添加插件、知识库、工作流等。创建的Bot可以发布到豆包、微信公众号等平台。"}}, {"@type": "Question", "name": "Coze免费吗？", "acceptedAnswer": {"@type": "Answer", "text": "Coze基础功能免费使用，包括创建Bot、添加插件和知识库。API调用有免费额度。适合想快速创建AI助手但不懂编程的用户。"}}]}</script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{structured_data}</script>
+    {faq_page_schema}
+{BAIDU_TONGJI}
 </head>
 <body>
     <header class="header">
@@ -76,188 +26,45 @@ var _hmt = _hmt || [];
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/category/ai-automation/">AI自动化</a> &gt; <span>Coze</span>
+        <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
     </nav>
 
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#4573bd;">⚙️</div>
+                <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
                 <div class="tool-header-info">
-                    <h2>Coze <span class="badge" style="background:#00aa00;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">HOT</span></h2>
-                    <p class="subtitle">字节跳动推出的AI Bot开发平台，零代码创建AI智能体。支持接入多种大模型、插件、知识库，可发布到飞书、微信等多平台，是国内最易用的AI Agent构建工具。</p>
-                    <div class="rating-bar">⭐ 4.6 <span style="font-size:14px;color:#999;">(13万浏览)</span></div>
+                    <h2>{escape_html(tool['name'])}{badge_html}</h2>
+                    <p class="subtitle">{escape_html(tool['description'])}</p>
+                    <div class="rating-bar">{tool['rating']} <span style="font-size:14px;color:#999;">({tool.get('visits', '0')}浏览)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>官网</strong>：www.coze.com</div>
-                <div class="tool-meta-item">💰 <strong>价格</strong>：免费使用</div>
-                <div class="tool-meta-item">📦 <strong>平台</strong>：本地部署 / Web</div>
-                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI自动化</div>
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：{tool['url'].replace('https://', '')}</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：{tool.get('price', '')}</div>
+                {platform_html}
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
             </div>
             <div class="action-bar">
-                <a href="https://www.coze.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
-        <div class="features-grid"><div class="feature-item">零代码Bot创建</div>
-<div class="feature-item">多模型接入</div>
-<div class="feature-item">插件系统</div>
-<div class="feature-item">知识库管理</div>
-<div class="feature-item">工作流编排</div>
-<div class="feature-item">多平台发布</div>
-</div>
+        {features_html}
 
         <article class="article-body">
-            <h2>Coze 是什么？</h2>
-
-<p>Coze是字节跳动推出的AI Bot开发平台，支持零代码创建AI智能体（Agent）。用户无需编程基础，通过可视化界面就能快速搭建功能强大的AI助手，并一键发布到飞书、微信公众号、掘金等多个平台。
-</p>
-
-<p>Coze内置了丰富的插件生态、知识库管理和工作流编排能力，是目前国内最易用的AI Agent构建工具。
-</p>
-
-<h2>核心功能</h2>
-
-<ul><li><strong>零代码Bot创建</strong>：可视化拖拽界面，无需编程即可创建AI智能体</li>
-<li><strong>多模型接入</strong>：支持豆包、GPT-4、Claude、Gemini等多种大语言模型</li>
-<li><strong>插件系统</strong>：内置搜索、图片生成、代码执行等丰富插件</li>
-<li><strong>知识库管理</strong>：上传文档让AI基于专属知识回答问题</li>
-<li><strong>工作流编排</strong>：通过流程图设计复杂的多步骤任务逻辑</li>
-<li><strong>多平台发布</strong>：一键发布到飞书、微信、C端等多平台</li>
-</ul>
-<h2>版本对比</h2>
-<table><thead><tr><th>功能</th><th>免费版</th><th>专业版</th></tr></thead><tbody><tr><td>Bot创建</td><td>✅</td><td>✅</td></tr><tr><td>模型调用</td><td>有限额度</td><td>更多额度</td></tr><tr><td>插件使用</td><td>✅</td><td>✅ 高级插件</td></tr><tr><td>工作流</td><td>基础</td><td>高级</td></tr><tr><td>价格</td><td>¥0</td><td>按量计费</td></tr></tbody></table>
-<h2>使用技巧</h2>
-
-<ul><li><strong>从模板开始</strong>：Coze提供了大量Bot模板，直接基于模板修改最快。</li>
-<li><strong>善用知识库</strong>：上传FAQ文档让Bot回答更专业。</li>
-<li><strong>插件组合</strong>：多个插件组合使用实现复杂功能。</li>
-<li><strong>工作流编排</strong>：复杂任务用工作流替代单轮对话。</li>
-<li><strong>多平台测试</strong>：发布前在不同平台测试效果。</li>
-</ul>
-<h2>适合人群</h2>
-
-<p>Coze适合产品经理、运营人员、内容创作者和非技术创业者。如果你想在飞书或微信上快速搭建一个AI助手，Coze是最简单的方案。
-</p>
-<h3>深度评测</h3>
-
-<p>Coze 的核心理念是"让每个人都能创建 AI Bot"。它的可视化编辑器非常直观，即使没有任何编程经验，也能在几分钟内创建一个功能完整的 AI 智能体。
-</p>
-
-<p>Coze 最大的亮点是工作流编排功能。你可以把复杂的任务拆解成多个步骤，每个步骤可以调用不同的模型、插件或 API，灵活组合出强大的自动化流程。
-</p>
-
-<h3>工作流编排详解</h3>
-
-<p>Coze 的工作流支持条件分支、循环、变量传递等高级功能。例如你可以创建一个"AI新闻助手"：先搜索最新新闻 → AI 总结 → 翻译成英文 → 发送到飞书群。整个过程不需要写一行代码。
-</p>
-
-<h3>多模型支持</h3>
-
-<p>Coze 不仅支持字节跳动自家的豆包大模型，还接入了 GPT-4、Claude、Gemini 等主流模型。你可以根据不同任务选择最合适的模型，甚至在一个 Bot 中混用多个模型。
-</p>
-
-<h3>发布渠道</h3>
-
-<p>创建好的 Bot 可以一键发布到：
-</p>
-<ul><li><strong>飞书</strong>：作为飞书机器人使用</li>
-<li><strong>微信</strong>：通过企业微信接入</li>
-<li><strong>Discord</strong>：作为 Discord Bot 运行</li>
-<li><strong>网页</strong>：生成独立网页供用户访问</li>
-<li><strong>API</strong>：提供 API 接口供开发者调用</li>
-</ul>
-<h3>与 Dify 的对比</h3>
-
-<p>Coze 和 Dify 都是 AI Agent 构建平台，但定位不同：
-</p>
-<ul><li>Coze 更偏 C 端，适合快速创建聊天机器人</li>
-<li>Dify 更偏 B 端，适合构建企业级 AI 应用</li>
-<li>Coze 的插件生态更丰富，Dify 的 RAG 能力更强</li></ul>
+            {content_html}
         </article>
 
-        <figure class="tool-infographic">
-            <img src="/images/infographics/coze-infographic.png" alt="Coze功能亮点信息图" width="1200" height="630" loading="lazy">
-            <figcaption>Coze 核心功能一览</figcaption>
-        </figure>
+        {infographic_html}
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>👍 优点</h4>
-                <ul><li>零代码门槛低</li><li>支持多种大模型</li><li>插件生态丰富</li><li>多平台一键发布</li><li>完全免费使用</li></ul>
-            </div>
-            <div class="cons">
-                <h4>👎 缺点</h4>
-                <ul><li>高级功能学习曲线</li><li>国内平台限制</li><li>自定义能力有限</li><li>依赖字节生态</li><li>企业级功能待完善</li></ul>
-            </div>
-        </div>
+        {pros_cons_html}
 
-        <div class="faq-section">
-                <h3>❓ 常见问题</h3>
-                <div class="faq-item">
-                    <details>
-                        <summary>Coze是什么？能做什么？</summary>
-                        <div class="faq-answer"><p>Coze是字节跳动推出的AI Bot开发平台。可以通过拖拽方式创建AI聊天机器人，不需要编程。支持添加插件、知识库、工作流等。创建的Bot可以发布到豆包、微信公众号等平台。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Coze免费吗？</summary>
-                        <div class="faq-answer"><p>Coze基础功能免费使用，包括创建Bot、添加插件和知识库。API调用有免费额度。适合想快速创建AI助手但不懂编程的用户。
-</p></div>
-                    </details>
-                </div>
+        {faq_html}
 
-            </div>
+        {related_html}
 
-        <div class="related-tools" id="relatedSection">
-            <h3>🔗 相关工具推荐</h3>
-            <div class="related-grid"><a href="/tools/chatgpt/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🟢</div>
-                <div style="font-weight:600;">ChatGPT</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/kimi/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">👨‍💻</div>
-                <div style="font-weight:600;">Kimi</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/dify/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">⚙️</div>
-                <div style="font-weight:600;">Dify</div>
-                <div style="font-size:13px;color:#666;">AI自动化</div>
-            </a>
-<a href="/tools/zapier-ai/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">⚙️</div>
-                <div style="font-weight:600;">Zapier AI</div>
-                <div style="font-size:13px;color:#666;">AI自动化</div>
-            </a>
-<a href="/tools/claude/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎭</div>
-                <div style="font-weight:600;">Claude</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-</div>
-        </div>
-
-        <div class="related-tools">
-                <h3>📚 相关文章</h3>
-                <div class="related-grid"><a href="/articles/ai-office-productivity-tools-2026/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 2026年AI办公效率工具推荐：从写周报到做PPT，8款工具</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-<a href="/articles/ai-translation-tools-2026-guide/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 AI翻译工具推荐2026：8款AI翻译软件实测，哪款翻译最准</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-<a href="/articles/deepseek-complete-guide-2026/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 DeepSeek完全使用指南：从入门到进阶，一文掌握Deep</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-</div>
-            </div>
+        {related_articles_html}
     </main>
 
     <footer class="footer">

@@ -13,60 +13,10 @@
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/gemini/">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/gemini-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://www.aitoolbox.hk/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "AI对话",
-      "item": "https://www.aitoolbox.hk/category/ai-chat/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Gemini",
-      "item": "https://www.aitoolbox.hk/tools/gemini/"
-    }
-  ]
-}</script>
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Gemini",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "Web",
-  "description": "Google推出的AI助手，基于Gemini 2.5大模型。原生多模态能力强大，支持100万token超长上下文，与Google生态深度整合，是ChatGPT的强有力竞争者。",
-  "datePublished": "2026-04-02",
-  "dateModified": "2026-04-02",
-  "offers": {
-    "@type": "Offer",
-    "price": "免费版+Pro $10/月",
-    "priceCurrency": "USD"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "ratingCount": "50000"
-  }
-}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Gemini和ChatGPT哪个好？", "acceptedAnswer": {"@type": "Answer", "text": "Gemini是Google推出的AI助手，最大的优势是与Google搜索和Google生态深度整合，信息获取能力强。在多模态理解（同时理解文字、图片、视频）方面也很强。ChatGPT在代码生成和插件生态方面更成熟。"}}, {"@type": "Question", "name": "Gemini免费吗？", "acceptedAnswer": {"@type": "Answer", "text": "Gemini基础版免费使用，集成在Google生态中。Advanced版$20/月，使用更强的Gemini Ultra模型，支持更多功能和更大的上下文。如果你使用Google全家桶，Gemini体验会更流畅。"}}, {"@type": "Question", "name": "Gemini能访问Google搜索吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以，Gemini与Google搜索深度整合，可以实时获取最新网络信息。这是相比很多AI助手的优势——搜索能力由全球最大的搜索引擎支撑，信息覆盖面广、时效性强。"}}]}</script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{structured_data}</script>
+    {faq_page_schema}
+{BAIDU_TONGJI}
 </head>
 <body>
     <header class="header">
@@ -76,176 +26,45 @@ var _hmt = _hmt || [];
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/category/ai-chat/">AI对话</a> &gt; <span>Gemini</span>
+        <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
     </nav>
 
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#6eb428;">💬</div>
+                <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
                 <div class="tool-header-info">
-                    <h2>Gemini <span class="badge" style="background:#00aa00;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">NEW</span></h2>
-                    <p class="subtitle">Google推出的AI助手，基于Gemini 2.5大模型。原生多模态能力强大，支持100万token超长上下文，与Google生态深度整合，是ChatGPT的强有力竞争者。</p>
-                    <div class="rating-bar">⭐ 5.0 <span style="font-size:14px;color:#999;">(5万浏览)</span></div>
+                    <h2>{escape_html(tool['name'])}{badge_html}</h2>
+                    <p class="subtitle">{escape_html(tool['description'])}</p>
+                    <div class="rating-bar">{tool['rating']} <span style="font-size:14px;color:#999;">({tool.get('visits', '0')}浏览)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>官网</strong>：gemini.google.com</div>
-                <div class="tool-meta-item">💰 <strong>价格</strong>：免费版+Pro $10/月</div>
-                <div class="tool-meta-item">📦 <strong>平台</strong>：Web</div>
-                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI对话</div>
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：{tool['url'].replace('https://', '')}</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：{tool.get('price', '')}</div>
+                {platform_html}
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
             </div>
             <div class="action-bar">
-                <a href="https://gemini.google.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
-        <div class="features-grid"><div class="feature-item">多模态对话</div>
-<div class="feature-item">超长文档分析</div>
-<div class="feature-item">图片理解生成</div>
-<div class="feature-item">代码编写</div>
-<div class="feature-item">联网搜索</div>
-<div class="feature-item">Google Workspace集成</div>
-</div>
+        {features_html}
 
         <article class="article-body">
-            <h2>Gemini 是什么？</h2>
-
-<p>Gemini是Google推出的AI助手，基于Gemini 2.5大语言模型。作为Google在AI领域的旗舰产品，Gemini以原生多模态能力和超长上下文窗口著称，支持文本、图片、音频、视频的理解和生成。
-</p>
-
-<p>Gemini与Google搜索、Gmail、Docs等生态深度整合，是目前ChatGPT最强大的竞争者之一。
-</p>
-
-<h2>核心功能</h2>
-
-<ul><li><strong>多模态对话</strong>：同时理解和生成文本、图片、音频、视频</li>
-<li><strong>超长文档分析</strong>：100万token上下文，一次处理超长文档</li>
-<li><strong>图片理解生成</strong>：基于Imagen 3的高质量图片生成能力</li>
-<li><strong>代码编写</strong>：支持多种编程语言的代码生成和调试</li>
-<li><strong>联网搜索</strong>：实时获取Google搜索结果</li>
-<li><strong>Google Workspace集成</strong>：直接操作Gmail、Docs、Sheets</li>
-</ul>
-<h2>版本对比</h2>
-<table><thead><tr><th>功能</th><th>免费版</th><th>Advanced ($20/月)</th></tr></thead><tbody><tr><td>Gemini 2.5 Pro</td><td>有限</td><td>无限制</td></tr><tr><td>上下文长度</td><td>100万token</td><td>100万token</td></tr><tr><td>图片生成</td><td>✅</td><td>✅ 高级</td></tr><tr><td>Workspace集成</td><td>❌</td><td>✅</td></tr><tr><td>优先访问</td><td>❌</td><td>✅</td></tr></tbody></table>
-<h2>使用技巧</h2>
-
-<ul><li><strong>上传长文档</strong>：利用超长上下文处理PDF论文或长文档。</li>
-<li><strong>图片分析</strong>：上传截图让Gemini分析UI设计或数据图表。</li>
-<li><strong>Gmail集成</strong>：Advanced用户可以让Gemini管理邮件。</li>
-<li><strong>Google搜索</strong>：提问时事问题，Gemini会实时搜索。</li>
-<li><strong>图片生成</strong>：用Imagen 3生成高质量图片。</li>
-</ul>
-<h2>适合人群</h2>
-
-<p>Gemini适合已经在使用Google生态的用户，以及需要超长上下文处理的研究人员和学生。如果你日常使用Gmail、Docs等产品，Gemini是无缝融入工作流的最佳选择。
-</p>
-<h3>总结</h3>
-
-<p>Gemini 是 AI对话 领域中一款不错的 AI 工具。Google推出的AI助手，基于Gemini 2.5大模型。原生多模态能力强大，支持100万token超长上下文，与Google生态深度整合，是ChatGPT的强有力竞争者。 从功能完整性来看，它覆盖了核心使用场景。
-</p>
-
-<p><strong>快速上手建议：</strong>
-</p>
-<ul><li>访问官网 gemini.google.com 注册账号</li>
-<li>先使用免费版本 了解核心功能</li>
-<li>参考官方文档和教程加速学习</li>
-<li>加入用户社区获取使用技巧和最佳实践</li>
-</ul>
-<p><strong>价格参考：</strong> 免费版+Pro $10/月
-<strong>支持平台：</strong> Web
-</p>
-
+            {content_html}
         </article>
 
-        <figure class="tool-infographic">
-            <img src="/images/infographics/gemini-infographic.png" alt="Gemini功能亮点信息图" width="1200" height="630" loading="lazy">
-            <figcaption>Gemini 核心功能一览</figcaption>
-        </figure>
+        {infographic_html}
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>👍 优点</h4>
-                <ul><li>多模态原生支持强</li><li>100万token超长上下文</li><li>Google生态深度整合</li><li>免费版功能强大</li><li>联网搜索实时</li></ul>
-            </div>
-            <div class="cons">
-                <h4>👎 缺点</h4>
-                <ul><li>国内需翻墙访问</li><li>中文能力不如GPT</li><li>插件生态较少</li><li>第三方集成有限</li><li>偶尔响应较慢</li></ul>
-            </div>
-        </div>
+        {pros_cons_html}
 
-        <div class="faq-section">
-                <h3>❓ 常见问题</h3>
-                <div class="faq-item">
-                    <details>
-                        <summary>Gemini和ChatGPT哪个好？</summary>
-                        <div class="faq-answer"><p>Gemini是Google推出的AI助手，最大的优势是与Google搜索和Google生态深度整合，信息获取能力强。在多模态理解（同时理解文字、图片、视频）方面也很强。ChatGPT在代码生成和插件生态方面更成熟。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Gemini免费吗？</summary>
-                        <div class="faq-answer"><p>Gemini基础版免费使用，集成在Google生态中。Advanced版$20/月，使用更强的Gemini Ultra模型，支持更多功能和更大的上下文。如果你使用Google全家桶，Gemini体验会更流畅。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Gemini能访问Google搜索吗？</summary>
-                        <div class="faq-answer"><p>可以，Gemini与Google搜索深度整合，可以实时获取最新网络信息。这是相比很多AI助手的优势——搜索能力由全球最大的搜索引擎支撑，信息覆盖面广、时效性强。
-</p></div>
-                    </details>
-                </div>
+        {faq_html}
 
-            </div>
+        {related_html}
 
-        <div class="related-tools" id="relatedSection">
-            <h3>🔗 相关工具推荐</h3>
-            <div class="related-grid"><a href="/tools/chatgpt/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🟢</div>
-                <div style="font-weight:600;">ChatGPT</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/kimi/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">👨‍💻</div>
-                <div style="font-weight:600;">Kimi</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/claude/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎭</div>
-                <div style="font-weight:600;">Claude</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/doubao/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🤖</div>
-                <div style="font-weight:600;">豆包</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/deepseek/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">💬</div>
-                <div style="font-weight:600;">DeepSeek</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-</div>
-        </div>
-
-        <div class="related-tools">
-                <h3>📚 相关文章</h3>
-                <div class="related-grid"><a href="/articles/ai-coding-tools-real-productivity-test-2026/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 AI编程工具到底能省多少时间？我用5个真实项目跑了3个月，数</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-<a href="/articles/ai-api-price-benchmark-2026/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 2026年大模型API价格横评：我把$100扔进去，看谁先烧</div>
-                    <div style="font-size:13px;color:#666;">2026年3月26日</div>
-                </a>
-<a href="/articles/chatgpt-vs-claude-vs-gemini/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 ChatGPT vs Claude vs Gemini：三大</div>
-                    <div style="font-size:13px;color:#666;">2026年3月21日</div>
-                </a>
-</div>
-            </div>
+        {related_articles_html}
     </main>
 
     <footer class="footer">

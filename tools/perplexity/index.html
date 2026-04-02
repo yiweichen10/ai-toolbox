@@ -13,60 +13,10 @@
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/perplexity/">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/perplexity-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://www.aitoolbox.hk/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "AI搜索",
-      "item": "https://www.aitoolbox.hk/category/ai-search/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Perplexity",
-      "item": "https://www.aitoolbox.hk/tools/perplexity/"
-    }
-  ]
-}</script>
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Perplexity",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "Web / iOS / Android",
-  "description": "AI驱动的搜索引擎，实时联网搜索并给出带引用的答案。比传统搜索引擎更智能，比ChatGPT信息更新，是新一代搜索工具的代表。",
-  "datePublished": "2026-04-02",
-  "dateModified": "2026-04-02",
-  "offers": {
-    "@type": "Offer",
-    "price": "免费版+Pro $20/月",
-    "priceCurrency": "USD"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "12.30000"
-  }
-}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Perplexity和普通搜索引擎有什么区别？", "acceptedAnswer": {"@type": "Answer", "text": "普通搜索引擎返回一堆网页链接让你自己看，Perplexity直接给你整理好的答案，并标注信息来源。相当于AI帮你读完所有相关网页然后写一份总结报告。搜索效率大幅提升，特别适合做研究和调研。"}}, {"@type": "Question", "name": "Perplexity免费版够用吗？", "acceptedAnswer": {"@type": "Answer", "text": "免费版可以使用标准搜索模式，每天有次数限制。Pro版$20/月可以使用更强的模型（如Claude 3、GPT-4）、Pro搜索（更深入的研究）、文件上传分析等。日常简单查询免费版够用，深度研究建议Pro版。"}}, {"@type": "Question", "name": "Perplexity和天工AI搜索有什么区别？", "acceptedAnswer": {"@type": "Answer", "text": "功能类似，都是AI搜索。Perplexity的英文信息源更丰富、答案质量更高；天工AI的中文搜索更好、国内直连免费。中文内容搜索推荐天工AI，英文内容或学术研究推荐Perplexity。"}}]}</script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{structured_data}</script>
+    {faq_page_schema}
+{BAIDU_TONGJI}
 </head>
 <body>
     <header class="header">
@@ -76,203 +26,45 @@ var _hmt = _hmt || [];
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/category/ai-search/">AI搜索</a> &gt; <span>Perplexity</span>
+        <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
     </nav>
 
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#20b2aa;">🔍</div>
+                <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
                 <div class="tool-header-info">
-                    <h2>Perplexity <span class="badge" style="background:#00aa00;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">NEW</span></h2>
-                    <p class="subtitle">AI驱动的搜索引擎，实时联网搜索并给出带引用的答案。比传统搜索引擎更智能，比ChatGPT信息更新，是新一代搜索工具的代表。</p>
-                    <div class="rating-bar">⭐ 4.8 <span style="font-size:14px;color:#999;">(12.3万浏览)</span></div>
+                    <h2>{escape_html(tool['name'])}{badge_html}</h2>
+                    <p class="subtitle">{escape_html(tool['description'])}</p>
+                    <div class="rating-bar">{tool['rating']} <span style="font-size:14px;color:#999;">({tool.get('visits', '0')}浏览)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>官网</strong>：www.perplexity.ai</div>
-                <div class="tool-meta-item">💰 <strong>价格</strong>：免费版+Pro $20/月</div>
-                <div class="tool-meta-item">📦 <strong>平台</strong>：Web / iOS / Android</div>
-                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI搜索</div>
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：{tool['url'].replace('https://', '')}</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：{tool.get('price', '')}</div>
+                {platform_html}
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
             </div>
             <div class="action-bar">
-                <a href="https://www.perplexity.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
-        <div class="features-grid"><div class="feature-item">AI搜索</div>
-<div class="feature-item">实时联网</div>
-<div class="feature-item">引用溯源</div>
-<div class="feature-item">多模型切换</div>
-<div class="feature-item">Copilot深度搜索</div>
-<div class="feature-item">文件分析</div>
-</div>
+        {features_html}
 
         <article class="article-body">
-            <h2>Perplexity 是什么？</h2>
-
-<p>Perplexity是AI驱动的搜索引擎，实时联网搜索并给出带引用来源的答案。它比传统搜索引擎更智能，比ChatGPT信息更新，是新一代搜索工具的代表产品。
-</p>
-
-<p>Perplexity特别适合需要快速获取准确信息并进行溯源的研究和学习场景。
-</p>
-
-<h2>核心功能</h2>
-
-<ul><li><strong>AI搜索</strong>：用自然语言提问，AI整合搜索结果回答</li>
-<li><strong>实时联网</strong>：搜索最新的网络信息，不受知识截止日期限制</li>
-<li><strong>引用溯源</strong>：每个答案都标注信息来源，可信度高</li>
-<li><strong>多模型切换</strong>：支持GPT-4o、Claude、Llama等多种模型</li>
-<li><strong>Copilot深度搜索</strong>：针对复杂问题进行深度多轮搜索</li>
-<li><strong>文件分析</strong>：上传PDF、图片等文件进行分析</li>
-</ul>
-<h2>版本对比</h2>
-<table><thead><tr><th>功能</th><th>免费版</th><th>Pro ($20/月)</th></tr></thead><tbody><tr><td>AI搜索</td><td>✅</td><td>✅</td></tr><tr><td>高级模型</td><td>有限</td><td>无限制</td></tr><tr><td>Copilot</td><td>有限</td><td>无限制</td></tr><tr><td>文件分析</td><td>基础</td><td>高级</td></tr><tr><td>API访问</td><td>❌</td><td>✅</td></tr></tbody></table>
-<h2>使用技巧</h2>
-
-<ul><li><strong>精确提问</strong>：问题越具体，答案越准确。</li>
-<li><strong>追问</strong>：对答案不满意可以追问更多细节。</li>
-<li><strong>Copilot模式</strong>：复杂问题用Copilot进行深度搜索。</li>
-<li><strong>切换模型</strong>：不同模型适合不同类型问题。</li>
-<li><strong>验证来源</strong>：点击引用链接验证信息可靠性。</li>
-</ul>
-<h2>适合人群</h2>
-
-<p>Perplexity适合研究人员、学生、记者、分析师和知识工作者。如果你需要快速获取准确信息并追溯来源，Perplexity是最佳选择。
-</p>
-<h3>总结</h3>
-
-<p>Perplexity 是 AI搜索 领域中一款不错的 AI 工具。AI驱动的搜索引擎，实时联网搜索并给出带引用的答案。比传统搜索引擎更智能，比ChatGPT信息更新，是新一代搜索工具的代表。 从功能完整性来看，它覆盖了核心使用场景。
-</p>
-
-<p><strong>快速上手建议：</strong>
-</p>
-<ul><li>访问官网 perplexity.ai 注册账号</li>
-<li>先使用免费版本 了解核心功能</li>
-<li>参考官方文档和教程加速学习</li>
-<li>加入用户社区获取使用技巧和最佳实践</li>
-</ul>
-<p><strong>价格参考：</strong> 免费版+Pro $20/月
-<strong>支持平台：</strong> Web / iOS / Android
-</p>
-
-<h3>核心功能详解</h3>
-
-<p>AI 搜索代表了搜索引擎的未来方向。与传统关键词搜索不同，AI 搜索能理解用户的真实意图，直接给出经过整理的回答，而不是一堆需要用户自行筛选的链接。
-</p>
-
-<h3>技术优势</h3>
-
-<ul><li><strong>语义理解</strong>：理解自然语言查询的真实意图</li>
-<li><strong>综合回答</strong>：从多个来源整合信息，给出完整答案</li>
-<li><strong>实时信息</strong>：获取最新的网络信息</li>
-<li><strong>来源引用</strong>：标注信息来源，方便核实</li>
-<li><strong>对话追问</strong>：支持多轮对话，逐步深入问题</li>
-</ul>
-<h3>使用技巧</h3>
-
-<ul><li>用自然语言提问，越具体越好</li>
-<li>对复杂问题分步骤追问</li>
-<li>关键数据交叉验证多个来源</li>
-<li>善用筛选和高级搜索功能</li>
-<li>注意区分事实和 AI 推断</li>
-</ul>
-<h3>与传统搜索引擎对比</h3>
-
-<ul><li>Google/Bing：返回链接列表，用户自行筛选</li>
-<li>AI 搜索：直接给出答案，附带来源</li>
-<li>适合需要快速获取信息和知识整合的场景</li>
-<li>对学术研究和专业问题搜索尤其有效</li></ul>
+            {content_html}
         </article>
 
-        <figure class="tool-infographic">
-            <img src="/images/infographics/perplexity-infographic.png" alt="Perplexity功能亮点信息图" width="1200" height="630" loading="lazy">
-            <figcaption>Perplexity 核心功能一览</figcaption>
-        </figure>
+        {infographic_html}
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>👍 优点</h4>
-                <ul><li>实时联网搜索</li><li>答案带引用来源</li><li>免费版功能强</li><li>搜索质量高</li><li>支持多种AI模型</li></ul>
-            </div>
-            <div class="cons">
-                <h4>👎 缺点</h4>
-                <ul><li>国内访问不稳定</li><li>Pro版价格偏高</li><li>中文结果有时不如英文</li><li>复杂问题深度有限</li></ul>
-            </div>
-        </div>
+        {pros_cons_html}
 
-        <div class="faq-section">
-                <h3>❓ 常见问题</h3>
-                <div class="faq-item">
-                    <details>
-                        <summary>Perplexity和普通搜索引擎有什么区别？</summary>
-                        <div class="faq-answer"><p>普通搜索引擎返回一堆网页链接让你自己看，Perplexity直接给你整理好的答案，并标注信息来源。相当于AI帮你读完所有相关网页然后写一份总结报告。搜索效率大幅提升，特别适合做研究和调研。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Perplexity免费版够用吗？</summary>
-                        <div class="faq-answer"><p>免费版可以使用标准搜索模式，每天有次数限制。Pro版$20/月可以使用更强的模型（如Claude 3、GPT-4）、Pro搜索（更深入的研究）、文件上传分析等。日常简单查询免费版够用，深度研究建议Pro版。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Perplexity和天工AI搜索有什么区别？</summary>
-                        <div class="faq-answer"><p>功能类似，都是AI搜索。Perplexity的英文信息源更丰富、答案质量更高；天工AI的中文搜索更好、国内直连免费。中文内容搜索推荐天工AI，英文内容或学术研究推荐Perplexity。
-</p></div>
-                    </details>
-                </div>
+        {faq_html}
 
-            </div>
+        {related_html}
 
-        <div class="related-tools" id="relatedSection">
-            <h3>🔗 相关工具推荐</h3>
-            <div class="related-grid"><a href="/tools/chatgpt/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🟢</div>
-                <div style="font-weight:600;">ChatGPT</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/claude/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎭</div>
-                <div style="font-weight:600;">Claude</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/meta-so/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🔍</div>
-                <div style="font-weight:600;">秘塔AI搜索</div>
-                <div style="font-size:13px;color:#666;">AI搜索</div>
-            </a>
-<a href="/tools/you.com/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🔍</div>
-                <div style="font-weight:600;">You.com</div>
-                <div style="font-size:13px;color:#666;">AI搜索</div>
-            </a>
-<a href="/tools/midjourney/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎨</div>
-                <div style="font-weight:600;">Midjourney</div>
-                <div style="font-size:13px;color:#666;">AI绘画</div>
-            </a>
-</div>
-        </div>
-
-        <div class="related-tools">
-                <h3>📚 相关文章</h3>
-                <div class="related-grid"><a href="/articles/ai-office-productivity-tools-2026/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 2026年AI办公效率工具推荐：从写周报到做PPT，8款工具</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-<a href="/articles/ai-translation-tools-2026-guide/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 AI翻译工具推荐2026：8款AI翻译软件实测，哪款翻译最准</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-<a href="/articles/deepseek-complete-guide-2026/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 DeepSeek完全使用指南：从入门到进阶，一文掌握Deep</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-</div>
-            </div>
+        {related_articles_html}
     </main>
 
     <footer class="footer">

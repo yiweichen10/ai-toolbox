@@ -13,60 +13,10 @@
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/dall-e-3/">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/dall-e-3-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://www.aitoolbox.hk/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "AI绘画",
-      "item": "https://www.aitoolbox.hk/category/ai-painting/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "DALL-E 3",
-      "item": "https://www.aitoolbox.hk/tools/dall-e-3/"
-    }
-  ]
-}</script>
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "DALL-E 3",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "Web / iOS / Android",
-  "description": "OpenAI推出的AI图片生成模型，集成在ChatGPT中。DALL-E 3理解文字描述的能力极强，生成的图片准确还原prompt意图，是目前最易用的AI绘画工具。",
-  "datePublished": "2026-04-02",
-  "dateModified": "2026-04-02",
-  "offers": {
-    "@type": "Offer",
-    "price": "基础$10/月起",
-    "priceCurrency": "USD"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "ratingCount": "200000"
-  }
-}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "DALL-E 3怎么用？需要单独付费吗？", "acceptedAnswer": {"@type": "Answer", "text": "DALL-E 3集成在ChatGPT中，不需要单独注册。免费版ChatGPT每天可以生成2张DALL-E 3图片，ChatGPT Plus用户（$20/月）可以无限制生成。也可以通过OpenAI API按量付费使用。"}}, {"@type": "Question", "name": "DALL-E 3和Midjourney哪个好？", "acceptedAnswer": {"@type": "Answer", "text": "DALL-E 3的优势是理解自然语言能力强（直接用中文描述即可）、使用门槛低（在ChatGPT里直接用）、文字渲染准确。Midjourney的优势是画质更顶级、艺术感更强、风格控制更精细。新手选DALL-E 3，追求极致画质选Midjourney。"}}, {"@type": "Question", "name": "DALL-E 3生成的图片可以商用吗？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT Plus用户生成的图片可以商用，OpenAI将生成内容的权利转让给用户。免费版的使用条款可能有限制，建议查看OpenAI最新的使用政策。"}}, {"@type": "Question", "name": "DALL-E 3能生成文字图片吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以，DALL-E 3在图片中渲染文字的能力是AI绘画工具中最强的之一。你可以在prompt中指定要显示的文字，比如'一张带有'Hello World'文字的霓虹灯牌'，生成的文字准确率很高。"}}, {"@type": "Question", "name": "如何用DALL-E 3生成图片？", "acceptedAnswer": {"@type": "Answer", "text": "在ChatGPT里直接说'画一张XX图'就行，描述越具体效果越好。比如：'画一张赛博朋克风格的东京夜景，宽屏比例，适合做壁纸'。DALL-E 3会自动理解语境并生成对应图片。每次生成4张，可选其中一张放大或变体。"}}]}</script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{structured_data}</script>
+    {faq_page_schema}
+{BAIDU_TONGJI}
 </head>
 <body>
     <header class="header">
@@ -76,186 +26,45 @@ var _hmt = _hmt || [];
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/category/ai-painting/">AI绘画</a> &gt; <span>DALL-E 3</span>
+        <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
     </nav>
 
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#abca64;">🎨</div>
+                <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
                 <div class="tool-header-info">
-                    <h2>DALL-E 3 <span class="badge" style="background:#667eea;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">编辑推荐</span></h2>
-                    <p class="subtitle">OpenAI推出的AI图片生成模型，集成在ChatGPT中。DALL-E 3理解文字描述的能力极强，生成的图片准确还原prompt意图，是目前最易用的AI绘画工具。</p>
-                    <div class="rating-bar">⭐ 4.7 <span style="font-size:14px;color:#999;">(20万浏览)</span></div>
+                    <h2>{escape_html(tool['name'])}{badge_html}</h2>
+                    <p class="subtitle">{escape_html(tool['description'])}</p>
+                    <div class="rating-bar">{tool['rating']} <span style="font-size:14px;color:#999;">({tool.get('visits', '0')}浏览)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>官网</strong>：openai.com/dall-e-3</div>
-                <div class="tool-meta-item">💰 <strong>价格</strong>：基础$10/月起</div>
-                <div class="tool-meta-item">📦 <strong>平台</strong>：Web / iOS / Android</div>
-                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI绘画</div>
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：{tool['url'].replace('https://', '')}</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：{tool.get('price', '')}</div>
+                {platform_html}
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
             </div>
             <div class="action-bar">
-                <a href="https://openai.com/dall-e-3" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
-        <div class="features-grid"><div class="feature-item">文生图</div>
-<div class="feature-item">图片编辑</div>
-<div class="feature-item">风格变化</div>
-<div class="feature-item">文字渲染</div>
-<div class="feature-item">高清放大</div>
-<div class="feature-item">ChatGPT集成</div>
-</div>
+        {features_html}
 
         <article class="article-body">
-            <h2>DALL-E 3 是什么？</h2>
-
-<p>DALL-E 3是OpenAI推出的AI图片生成模型，深度集成在ChatGPT中。用户可以直接在ChatGPT对话中描述想要的图片，DALL-E 3会准确理解并生成高质量图片。
-</p>
-
-<p>DALL-E 3最大的优势是理解自然语言描述的能力极强，不需要学习复杂的prompt语法，像跟人说话一样描述即可。
-</p>
-
-<h2>核心功能</h2>
-
-<ul><li><strong>文生图</strong>：用自然语言描述生成图片</li>
-<li><strong>图片编辑</strong>：在已有图片上添加、删除或修改元素</li>
-<li><strong>风格变化</strong>：对已生成的图片进行风格变化</li>
-<li><strong>文字渲染</strong>：在图片中准确渲染文字</li>
-<li><strong>高清放大</strong>：支持高分辨率图片生成</li>
-<li><strong>ChatGPT集成</strong>：直接在ChatGPT中生成图片</li>
-</ul>
-<h2>版本对比</h2>
-<table><thead><tr><th>功能</th><th>免费版</th><th>ChatGPT Plus ($20/月)</th></tr></thead><tbody><tr><td>图片生成</td><td>有限(2张/天)</td><td>DALL-E 3 无限制</td></tr><tr><td>图片编辑</td><td>❌</td><td>✅</td></tr><tr><td>高清模式</td><td>❌</td><td>✅</td></tr><tr><td>批量生成</td><td>❌</td><td>✅</td></tr></tbody></table>
-<h2>使用技巧</h2>
-
-<ul><li><strong>对话式生成</strong>：直接在ChatGPT中描述想要的图片。</li>
-<li><strong>迭代修改</strong>：不满意就让ChatGPT修改，如"把背景改成蓝色"。</li>
-<li><strong>结合上下文</strong>：在讨论某个话题后直接让它配图。</li>
-<li><strong>文生图</strong>：让DALL-E 3在图片中添加文字和logo。</li>
-<li><strong>风格参考</strong>：描述参考风格如"宫崎骏风格"。</li>
-</ul>
-<h2>适合人群</h2>
-
-<p>DALL-E 3适合已经在使用ChatGPT的用户和不需要专业级图片生成的普通用户。如果你想要最简单的AI绘画体验，DALL-E 3是最好的选择。
-</p>
-<h3>总结</h3>
-
-<p>DALL-E 3 是 AI绘画 领域中一款不错的 AI 工具。OpenAI推出的AI图片生成模型，集成在ChatGPT中。DALL-E 3理解文字描述的能力极强，生成的图片准确还原prompt意图，是目前最易用的AI绘画工具。 从功能完整性来看，它覆盖了核心使用场景。
-</p>
-
-<p><strong>快速上手建议：</strong>
-</p>
-<ul><li>访问官网 openai.com/dall-e-3 注册账号</li>
-<li>从入门计划开始 了解核心功能</li>
-<li>参考官方文档和教程加速学习</li>
-<li>加入用户社区获取使用技巧和最佳实践</li>
-</ul>
-<p><strong>价格参考：</strong> 基础$10/月起
-<strong>支持平台：</strong> Web / iOS / Android
-</p>
-
+            {content_html}
         </article>
 
-        <figure class="tool-infographic">
-            <img src="/images/infographics/dall-e-3-infographic.png" alt="DALL-E 3功能亮点信息图" width="1200" height="630" loading="lazy">
-            <figcaption>DALL-E 3 核心功能一览</figcaption>
-        </figure>
+        {infographic_html}
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>👍 优点</h4>
-                <ul><li>集成ChatGPT使用方便</li><li>理解prompt能力强</li><li>文字渲染准确</li><li>图片质量高</li><li>有免费额度</li></ul>
-            </div>
-            <div class="cons">
-                <h4>👎 缺点</h4>
-                <ul><li>需ChatGPT Plus订阅</li><li>生成速度一般</li><li>风格控制有限</li><li>免费版次数少</li><li>独立API较贵</li></ul>
-            </div>
-        </div>
+        {pros_cons_html}
 
-        <div class="faq-section">
-                <h3>❓ 常见问题</h3>
-                <div class="faq-item">
-                    <details>
-                        <summary>DALL-E 3怎么用？需要单独付费吗？</summary>
-                        <div class="faq-answer"><p>DALL-E 3集成在ChatGPT中，不需要单独注册。免费版ChatGPT每天可以生成2张DALL-E 3图片，ChatGPT Plus用户（$20/月）可以无限制生成。也可以通过OpenAI API按量付费使用。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>DALL-E 3和Midjourney哪个好？</summary>
-                        <div class="faq-answer"><p>DALL-E 3的优势是理解自然语言能力强（直接用中文描述即可）、使用门槛低（在ChatGPT里直接用）、文字渲染准确。Midjourney的优势是画质更顶级、艺术感更强、风格控制更精细。新手选DALL-E 3，追求极致画质选Midjourney。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>DALL-E 3生成的图片可以商用吗？</summary>
-                        <div class="faq-answer"><p>ChatGPT Plus用户生成的图片可以商用，OpenAI将生成内容的权利转让给用户。免费版的使用条款可能有限制，建议查看OpenAI最新的使用政策。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>DALL-E 3能生成文字图片吗？</summary>
-                        <div class="faq-answer"><p>可以，DALL-E 3在图片中渲染文字的能力是AI绘画工具中最强的之一。你可以在prompt中指定要显示的文字，比如'一张带有'Hello World'文字的霓虹灯牌'，生成的文字准确率很高。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>如何用DALL-E 3生成图片？</summary>
-                        <div class="faq-answer"><p>在ChatGPT里直接说'画一张XX图'就行，描述越具体效果越好。比如：'画一张赛博朋克风格的东京夜景，宽屏比例，适合做壁纸'。DALL-E 3会自动理解语境并生成对应图片。每次生成4张，可选其中一张放大或变体。
-</p></div>
-                    </details>
-                </div>
+        {faq_html}
 
-            </div>
+        {related_html}
 
-        <div class="related-tools" id="relatedSection">
-            <h3>🔗 相关工具推荐</h3>
-            <div class="related-grid"><a href="/tools/claude/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎭</div>
-                <div style="font-weight:600;">Claude</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/kimi/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">👨‍💻</div>
-                <div style="font-weight:600;">Kimi</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/midjourney/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎨</div>
-                <div style="font-weight:600;">Midjourney</div>
-                <div style="font-size:13px;color:#666;">AI绘画</div>
-            </a>
-<a href="/tools/stable-diffusion/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🌟</div>
-                <div style="font-weight:600;">Stable Diffusion</div>
-                <div style="font-size:13px;color:#666;">AI绘画</div>
-            </a>
-<a href="/tools/adobe-firefly/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎨</div>
-                <div style="font-weight:600;">Adobe Firefly</div>
-                <div style="font-size:13px;color:#666;">AI绘画</div>
-            </a>
-</div>
-        </div>
-
-        <div class="related-tools">
-                <h3>📚 相关文章</h3>
-                <div class="related-grid"><a href="/articles/ai-painting-guide/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 AI绘画入门指南：从零开始学会AI绘画</div>
-                    <div style="font-size:13px;color:#666;">2026年3月20日</div>
-                </a>
-<a href="/articles/how-to-use-midjourney-2026/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 如何注册和使用Midjourney：从零开始的完整教程（20</div>
-                    <div style="font-size:13px;color:#666;"></div>
-                </a>
-</div>
-            </div>
+        {related_articles_html}
     </main>
 
     <footer class="footer">

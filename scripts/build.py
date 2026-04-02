@@ -348,8 +348,9 @@ def build_tool_page(tool, all_tools, all_articles=None):
         }
         faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_page_schema_data, ensure_ascii=False)}</script>'
 
-    # OG Image
-    og_image = f'https://www.aitoolbox.hk/images/og/{slug}-og.png'
+    # OG Image（检查文件是否存在，避免死链）
+    og_image_local = os.path.join(BASE_DIR, 'images', 'og', f'{slug}-og.png')
+    og_image = f'https://www.aitoolbox.hk/images/og/{slug}-og.png' if os.path.exists(og_image_local) else ''
 
     # 信息图
     infographic_path = os.path.join(BASE_DIR, 'images', 'infographics', f'{slug}-infographic.png')
@@ -382,8 +383,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
     <meta property="og:title" content="{escape_html(tool['name'])}评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱">
     <meta property="og:description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'])}">
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/">
-    <meta property="og:image" content="{og_image}">
-    <link rel="stylesheet" href="/css/style.css">
+''' + (f'    <meta property="og:image" content="{og_image}">\n' if og_image else '') + '''    <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_data}</script>
     {faq_page_schema}
@@ -609,8 +609,9 @@ def build_article_page(article, all_articles, all_tools=None):
             <div class="related-grid">{cards}</div>
         </div>'''
 
-    # OG Image
-    og_image = f'https://www.aitoolbox.hk/images/og/{slug}-og.png'
+    # OG Image（检查文件是否存在，避免死链）
+    og_image_local = os.path.join(BASE_DIR, 'images', 'og', f'{slug}-og.png')
+    og_image = f'https://www.aitoolbox.hk/images/og/{slug}-og.png' if os.path.exists(og_image_local) else ''
 
     # 信息图（文章内嵌）
     infographic_path = os.path.join(BASE_DIR, 'images', 'infographics', f'{slug}-infographic.png')
@@ -671,7 +672,7 @@ def build_article_page(article, all_articles, all_tools=None):
                 "url": "https://www.aitoolbox.hk/images/logo.png"
             }
         },
-        "image": og_image,
+        "image": og_image if og_image else "https://www.aitoolbox.hk/images/logo.png",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": f"https://www.aitoolbox.hk/articles/{slug}/"
@@ -691,14 +692,12 @@ def build_article_page(article, all_articles, all_tools=None):
     <link rel="canonical" href="https://www.aitoolbox.hk/articles/{slug}/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(article['title'])} - AI工具宝箱">
-    <meta property="og:description" content="{escape_html(article.get('description', ''))}">
-    <meta property="og:image" content="{og_image}">
+    <meta property="og:description" content="{escape_html(article.get('description', ''))}">''' + (f'\n    <meta property="og:image" content="{og_image}">' if og_image else '') + f'''
     <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/">
     <meta property="og:site_name" content="AI工具宝箱">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{escape_html(article['title'])} - AI工具宝箱">
-    <meta name="twitter:description" content="{escape_html(article.get('description', ''))}">
-    <meta name="twitter:image" content="{og_image}">
+    <meta name="twitter:description" content="{escape_html(article.get('description', ''))}">''' + (f'\n    <meta name="twitter:image" content="{og_image}">' if og_image else '') + '''
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_article_json}</script>
     <script type="application/ld+json">{structured_data}</script>

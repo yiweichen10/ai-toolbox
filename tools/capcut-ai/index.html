@@ -13,60 +13,10 @@
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/capcut-ai/">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/capcut-ai-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://www.aitoolbox.hk/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "AI视频",
-      "item": "https://www.aitoolbox.hk/category/ai-video/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "CapCut AI",
-      "item": "https://www.aitoolbox.hk/tools/capcut-ai/"
-    }
-  ]
-}</script>
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "CapCut AI",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "本地部署 / Web",
-  "description": "字节跳动推出的AI视频编辑工具，原剪映国际版。内置AI字幕、AI配音、智能抠像等功能，是全球下载量最大的视频编辑应用。",
-  "datePublished": "2026-04-02",
-  "dateModified": "2026-04-02",
-  "offers": {
-    "@type": "Offer",
-    "price": "基础$10/月起",
-    "priceCurrency": "USD"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "60000"
-  }
-}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "CapCut AI能做什么？", "acceptedAnswer": {"@type": "Answer", "text": "CapCut（剪映国际版）的AI功能包括：AI自动剪辑、智能字幕、AI配音、背景替换、人像抠图等。集成在视频编辑工作流中，一键完成原本耗时的操作。适合短视频创作者提升效率。"}}]}</script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{structured_data}</script>
+    {faq_page_schema}
+{BAIDU_TONGJI}
 </head>
 <body>
     <header class="header">
@@ -76,188 +26,45 @@ var _hmt = _hmt || [];
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/category/ai-video/">AI视频</a> &gt; <span>CapCut AI</span>
+        <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
     </nav>
 
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#6576af;">🎬</div>
+                <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
                 <div class="tool-header-info">
-                    <h2>CapCut AI <span class="badge" style="background:#667eea;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">HOT</span></h2>
-                    <p class="subtitle">字节跳动推出的AI视频编辑工具，原剪映国际版。内置AI字幕、AI配音、智能抠像等功能，是全球下载量最大的视频编辑应用。</p>
-                    <div class="rating-bar">⭐ 4.5 <span style="font-size:14px;color:#999;">(6万浏览)</span></div>
+                    <h2>{escape_html(tool['name'])}{badge_html}</h2>
+                    <p class="subtitle">{escape_html(tool['description'])}</p>
+                    <div class="rating-bar">{tool['rating']} <span style="font-size:14px;color:#999;">({tool.get('visits', '0')}浏览)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>官网</strong>：www.capcut.com</div>
-                <div class="tool-meta-item">💰 <strong>价格</strong>：基础$10/月起</div>
-                <div class="tool-meta-item">📦 <strong>平台</strong>：本地部署 / Web</div>
-                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI视频</div>
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：{tool['url'].replace('https://', '')}</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：{tool.get('price', '')}</div>
+                {platform_html}
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
             </div>
             <div class="action-bar">
-                <a href="https://www.capcut.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
-        <div class="features-grid"><div class="feature-item">AI字幕</div>
-<div class="feature-item">AI配音</div>
-<div class="feature-item">智能抠像</div>
-<div class="feature-item">模板库</div>
-<div class="feature-item">特效库</div>
-<div class="feature-item">多端同步</div>
-</div>
+        {features_html}
 
         <article class="article-body">
-            <h2>CapCut AI 是什么？</h2>
-
-<p>CapCut（剪映国际版）是字节跳动推出的AI视频编辑工具，是全球下载量最大的视频编辑应用。内置AI字幕、AI配音、智能抠像等强大AI功能，大幅降低视频制作门槛。
-</p>
-
-<p>CapCut以完全免费和功能全面著称，是短视频创作者的首选编辑工具。
-</p>
-
-<h2>核心功能</h2>
-
-<ul><li><strong>AI字幕</strong>：自动识别语音生成字幕，支持多语言</li>
-<li><strong>AI配音</strong>：文字转语音，提供多种声音风格</li>
-<li><strong>智能抠像</strong>：一键去除视频背景</li>
-<li><strong>模板库</strong>：海量短视频模板一键使用</li>
-<li><strong>特效库</strong>：丰富的转场、滤镜和特效</li>
-<li><strong>多端同步</strong>：手机和PC端数据同步</li>
-</ul>
-<h2>版本对比</h2>
-<table><thead><tr><th>功能</th><th>免费版</th><th>Pro ($7.99/月)</th></tr></thead><tbody><tr><td>基础编辑</td><td>✅</td><td>✅</td></tr><tr><td>AI字幕</td><td>✅</td><td>✅</td></tr><tr><td>高级特效</td><td>❌</td><td>✅</td></tr><tr><td>云存储</td><td>有限</td><td>更多</td></tr><tr><td>去水印</td><td>❌</td><td>✅</td></tr></tbody></table>
-<h2>使用技巧</h2>
-
-<ul><li><strong>AI字幕</strong>：拍摄后一键生成字幕，快速高效。</li>
-<li><strong>模板复用</strong>：从热门模板开始修改。</li>
-<li><strong>智能抠像</strong>：绿幕效果不需要绿幕。</li>
-<li><strong>AI配音</strong>：不想出声就用AI配音。</li>
-</ul>
-<h2>适合人群</h2>
-
-<p>CapCut AI适合短视频创作者、Vlogger和社交媒体运营者。如果你需要在手机上快速剪辑视频，CapCut是最好的免费选择。
-</p>
-<h3>总结</h3>
-
-<p>CapCut AI 是 AI视频 领域中一款不错的 AI 工具。字节跳动推出的AI视频编辑工具，原剪映国际版。内置AI字幕、AI配音、智能抠像等功能，是全球下载量最大的视频编辑应用。 从功能完整性来看，它覆盖了核心使用场景。
-</p>
-
-<p><strong>快速上手建议：</strong>
-</p>
-<ul><li>访问官网 capcut.com 注册账号</li>
-<li>从入门计划开始 了解核心功能</li>
-<li>参考官方文档和教程加速学习</li>
-<li>加入用户社区获取使用技巧和最佳实践</li>
-</ul>
-<p><strong>价格参考：</strong> 基础$10/月起
-<strong>支持平台：</strong> 本地部署 / Web
-</p>
-
-<h3>核心功能详解</h3>
-
-<p>AI 视频生成是当前最热门的 AI 应用方向之一。这款工具能根据文字描述或图片生成视频内容，大大降低了视频创作的门槛。无论是短视频、动画还是产品展示，都能用它快速制作。
-</p>
-
-<h3>实际使用场景</h3>
-
-<ul><li><strong>社交媒体内容</strong>：为抖音、快手、小红书等平台批量制作短视频</li>
-<li><strong>产品宣传</strong>：快速制作产品演示视频和广告素材</li>
-<li><strong>教育培训</strong>：制作教学动画和知识科普视频</li>
-<li><strong>创意表达</strong>：将文字故事转化为视觉内容</li>
-<li><strong>商业演示</strong>：制作公司介绍和项目展示视频</li>
-</ul>
-<h3>视频制作技巧</h3>
-
-<ul><li>文案要简洁清晰，避免过于复杂的场景描述</li>
-<li>长视频建议分段生成再拼接，每段 5-15 秒效果最佳</li>
-<li>注意画面连贯性，保持前后风格一致</li>
-<li>添加合适的背景音乐和字幕提升观感</li>
-<li>多次生成选择最佳版本，AI 生成有随机性</li>
-</ul>
-<h3>与其他 AI 视频工具对比</h3>
-
-<ul><li><strong>Runway</strong>：功能最全面，专业度最高</li>
-<li><strong>Pika</strong>：操作最简单，上手最快</li>
-<li><strong>Sora</strong>：质量最高，但使用门槛也高</li>
-<li>本工具在特定场景下有自己的优势</li></ul>
+            {content_html}
         </article>
 
-        <figure class="tool-infographic">
-            <img src="/images/infographics/capcut-ai-infographic.png" alt="CapCut AI功能亮点信息图" width="1200" height="630" loading="lazy">
-            <figcaption>CapCut AI 核心功能一览</figcaption>
-        </figure>
+        {infographic_html}
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>👍 优点</h4>
-                <ul><li>完全免费</li><li>功能全面</li><li>AI功能强大</li><li>模板丰富</li><li>手机端体验好</li></ul>
-            </div>
-            <div class="cons">
-                <h4>👎 缺点</h4>
-                <ul><li>专业功能不足</li><li>导出有水印(免费版)</li><li>PC端功能少</li><li>高级AI需付费</li><li>国内版与国际版差异</li></ul>
-            </div>
-        </div>
+        {pros_cons_html}
 
-        <div class="faq-section">
-                <h3>❓ 常见问题</h3>
-                <div class="faq-item">
-                    <details>
-                        <summary>CapCut AI能做什么？</summary>
-                        <div class="faq-answer"><p>CapCut（剪映国际版）的AI功能包括：AI自动剪辑、智能字幕、AI配音、背景替换、人像抠图等。集成在视频编辑工作流中，一键完成原本耗时的操作。适合短视频创作者提升效率。
-</p></div>
-                    </details>
-                </div>
+        {faq_html}
 
-            </div>
+        {related_html}
 
-        <div class="related-tools" id="relatedSection">
-            <h3>🔗 相关工具推荐</h3>
-            <div class="related-grid"><a href="/tools/claude/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎭</div>
-                <div style="font-weight:600;">Claude</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/midjourney/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎨</div>
-                <div style="font-weight:600;">Midjourney</div>
-                <div style="font-size:13px;color:#666;">AI绘画</div>
-            </a>
-<a href="/tools/runway/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">📹</div>
-                <div style="font-weight:600;">Runway</div>
-                <div style="font-size:13px;color:#666;">AI视频</div>
-            </a>
-<a href="/tools/sora/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎬</div>
-                <div style="font-weight:600;">Sora</div>
-                <div style="font-size:13px;color:#666;">AI视频</div>
-            </a>
-<a href="/tools/pika/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">⚡</div>
-                <div style="font-weight:600;">Pika</div>
-                <div style="font-size:13px;color:#666;">AI视频</div>
-            </a>
-</div>
-        </div>
-
-        <div class="related-tools">
-                <h3>📚 相关文章</h3>
-                <div class="related-grid"><a href="/articles/ai-video-tools-2026-guide/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 2026年AI视频生成工具推荐：从可灵到Seedance，7</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-<a href="/articles/ai-office-productivity-tools-2026/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 2026年AI办公效率工具推荐：从写周报到做PPT，8款工具</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-<a href="/articles/ai-translation-tools-2026-guide/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 AI翻译工具推荐2026：8款AI翻译软件实测，哪款翻译最准</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-</div>
-            </div>
+        {related_articles_html}
     </main>
 
     <footer class="footer">

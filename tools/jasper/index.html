@@ -13,60 +13,10 @@
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/jasper/">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/jasper-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://www.aitoolbox.hk/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "AI写作",
-      "item": "https://www.aitoolbox.hk/category/ai-writing/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Jasper",
-      "item": "https://www.aitoolbox.hk/tools/jasper/"
-    }
-  ]
-}</script>
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Jasper",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "Web",
-  "description": "专业AI写作工具，专注于营销文案、博客文章、社交媒体内容生成。内置50+营销模板，企业级内容营销的首选工具。",
-  "datePublished": "2026-04-02",
-  "dateModified": "2026-04-02",
-  "offers": {
-    "@type": "Offer",
-    "price": "Creator $49/月起",
-    "priceCurrency": "USD"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "6.80000"
-  }
-}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Jasper 适合什么人使用？新手也能上手吗？", "acceptedAnswer": {"@type": "Answer", "text": "专业AI写作工具，专注于营销文案、博客文章、社交媒体内容生成。内置50+营销模板，企业级内容营销的首选工具。。它适合：1）营销文案、博客生成相关从业者；2）需要营销模板丰富、品牌语调定制的用户；3）想提高AI写作效率的个人或团队。对于新手，建议先从官方教程和示例入手，逐步探索功能。"}}, {"@type": "Question", "name": "Jasper 值得付费吗？和免费工具相比有什么优势？", "acceptedAnswer": {"@type": "Answer", "text": "Jasper 价格为 Creator $49/月起。相比免费工具，它的主要优势包括：营销模板丰富、品牌语调定制、团队协作功能。如果你是重度用户或对输出质量要求高，付费版本通常能带来更好的体验和效率。"}}, {"@type": "Question", "name": "Jasper 会保存我的数据吗？数据安全有保障吗？", "acceptedAnswer": {"@type": "Answer", "text": "数据安全是 AI 工具的重要考量。Jasper 通常会收集使用数据用于模型训练和服务改进（具体政策请查看隐私条款）。如果处理敏感信息，建议：1）了解其数据存储和处理方式；2）必要时使用隐私模式或本地部署版本；3）遵守数据保护法规。"}}]}</script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{structured_data}</script>
+    {faq_page_schema}
+{BAIDU_TONGJI}
 </head>
 <body>
     <header class="header">
@@ -76,200 +26,45 @@ var _hmt = _hmt || [];
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/category/ai-writing/">AI写作</a> &gt; <span>Jasper</span>
+        <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
     </nav>
 
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#ff4757;">✍️</div>
+                <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
                 <div class="tool-header-info">
-                    <h2>Jasper</h2>
-                    <p class="subtitle">专业AI写作工具，专注于营销文案、博客文章、社交媒体内容生成。内置50+营销模板，企业级内容营销的首选工具。</p>
-                    <div class="rating-bar">⭐ 4.5 <span style="font-size:14px;color:#999;">(6.8万浏览)</span></div>
+                    <h2>{escape_html(tool['name'])}{badge_html}</h2>
+                    <p class="subtitle">{escape_html(tool['description'])}</p>
+                    <div class="rating-bar">{tool['rating']} <span style="font-size:14px;color:#999;">({tool.get('visits', '0')}浏览)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>官网</strong>：www.jasper.ai</div>
-                <div class="tool-meta-item">💰 <strong>价格</strong>：Creator $49/月起</div>
-                <div class="tool-meta-item">📦 <strong>平台</strong>：Web</div>
-                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI写作</div>
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：{tool['url'].replace('https://', '')}</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：{tool.get('price', '')}</div>
+                {platform_html}
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
             </div>
             <div class="action-bar">
-                <a href="https://www.jasper.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
-        <div class="features-grid"><div class="feature-item">营销文案</div>
-<div class="feature-item">博客生成</div>
-<div class="feature-item">社交媒体</div>
-<div class="feature-item">品牌语调</div>
-<div class="feature-item">SEO优化</div>
-<div class="feature-item">多语言</div>
-</div>
+        {features_html}
 
         <article class="article-body">
-            <h2>Jasper 是什么？</h2>
-
-<p>Jasper是专业的AI写作工具，专注于营销文案、博客文章、社交媒体内容生成。内置50+营销模板，可以定制品牌语调，是企业级内容营销的首选工具。
-</p>
-
-<h2>核心功能</h2>
-
-<ul><li><strong>营销文案</strong>：广告文案、落地页、邮件营销</li>
-<li><strong>博客生成</strong>：SEO优化的长篇博客文章</li>
-<li><strong>社交媒体</strong>：各平台帖子和配图文案</li>
-<li><strong>品牌语调</strong>：定制符合品牌调性的写作风格</li>
-<li><strong>SEO优化</strong>：内置SEO建议和优化</li>
-<li><strong>多语言</strong>：支持30+语言内容生成</li>
-</ul>
-<h2>版本对比</h2>
-<table><thead><tr><th>方案</th><th>价格</th><th>字数/月</th></tr></thead><tbody><tr><td>Creator</td><td>$49/月</td><td>1万字</td></tr><tr><td>Pro</td><td>$69/月</td><td>无限制</td></tr><tr><td>Business</td><td>定制</td><td>无限制</td></tr></tbody></table>
-<h2>使用技巧</h2>
-
-<ul><li><strong>品牌语调</strong>：设置好Brand Voice保证内容一致性。</li>
-<li><strong>模板使用</strong>：从模板开始，效率更高。</li>
-<li><strong>SEO模式</strong>：写博客时开启SEO建议。</li>
-<li><strong>团队协作</strong>：建立团队工作区统一管理。</li>
-<li><strong>A/B测试</strong>：生成多个版本进行测试。</li>
-</ul>
-<h2>适合人群</h2>
-
-<p>Jasper适合营销团队、内容运营、广告人和企业。如果你需要大量高质量的营销内容，Jasper是值得投资的专业工具。
-</p>
-<h3>总结</h3>
-
-<p>Jasper 是 AI写作 领域中一款不错的 AI 工具。专业AI写作工具，专注于营销文案、博客文章、社交媒体内容生成。内置50+营销模板，企业级内容营销的首选工具。 从功能完整性来看，它覆盖了核心使用场景。
-</p>
-
-<p><strong>快速上手建议：</strong>
-</p>
-<ul><li>访问官网 jasper.ai 注册账号</li>
-<li>从入门计划开始 了解核心功能</li>
-<li>参考官方文档和教程加速学习</li>
-<li>加入用户社区获取使用技巧和最佳实践</li>
-</ul>
-<p><strong>价格参考：</strong> Creator $49/月起
-<strong>支持平台：</strong> Web
-</p>
-
-<h3>核心功能详解</h3>
-
-<p>AI 写作工具能帮助用户快速生成各类文本内容。无论是营销文案、技术文档、社交媒体帖子还是长篇文章，都能借助 AI 的力量提升写作效率。
-</p>
-
-<h3>主要应用场景</h3>
-
-<ul><li><strong>营销文案</strong>：产品描述、广告语、营销邮件</li>
-<li><strong>内容创作</strong>：博客文章、社交媒体帖子、视频脚本</li>
-<li><strong>商务文档</strong>：报告、提案、商务邮件</li>
-<li><strong>学术写作</strong>：论文大纲、文献综述、摘要</li>
-<li><strong>创意写作</strong>：故事、诗歌、剧本</li>
-</ul>
-<h3>使用技巧</h3>
-
-<ul><li>先让 AI 生成大纲，确认结构后再填充内容</li>
-<li>提供具体的写作要求和风格指南</li>
-<li>给出示例文本让 AI 模仿风格</li>
-<li>分段落生成，逐步完善内容</li>
-<li>生成的初稿务必人工润色和事实核查</li>
-</ul>
-<h3>与其他 AI 写作工具对比</h3>
-
-<ul><li><strong>Jasper</strong>：营销文案能力最强</li>
-<li><strong>QuillBot</strong>：改写和润色功能最好</li>
-<li><strong>Copy.ai</strong>：社交媒体内容生成最快</li>
-<li>本工具有自己的特色功能和优势</li></ul>
+            {content_html}
         </article>
 
-        <figure class="tool-infographic">
-            <img src="/images/infographics/jasper-infographic.png" alt="Jasper功能亮点信息图" width="1200" height="630" loading="lazy">
-            <figcaption>Jasper 核心功能一览</figcaption>
-        </figure>
+        {infographic_html}
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>👍 优点</h4>
-                <ul><li>营销模板丰富</li><li>品牌语调定制</li><li>团队协作功能</li><li>SEO优化建议</li><li>多语言支持</li></ul>
-            </div>
-            <div class="cons">
-                <h4>👎 缺点</h4>
-                <ul><li>价格较高</li><li>无免费版</li><li>创意写作偏弱</li><li>学习曲线稍陡</li></ul>
-            </div>
-        </div>
+        {pros_cons_html}
 
-        <div class="faq-section">
-                <h3>❓ 常见问题</h3>
-                <div class="faq-item">
-                    <details>
-                        <summary>Jasper 适合什么人使用？新手也能上手吗？</summary>
-                        <div class="faq-answer"><p>专业AI写作工具，专注于营销文案、博客文章、社交媒体内容生成。内置50+营销模板，企业级内容营销的首选工具。。它适合：1）营销文案、博客生成相关从业者；2）需要营销模板丰富、品牌语调定制的用户；3）想提高AI写作效率的个人或团队。对于新手，建议先从官方教程和示例入手，逐步探索功能。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Jasper 值得付费吗？和免费工具相比有什么优势？</summary>
-                        <div class="faq-answer"><p>Jasper 价格为 Creator $49/月起。相比免费工具，它的主要优势包括：营销模板丰富、品牌语调定制、团队协作功能。如果你是重度用户或对输出质量要求高，付费版本通常能带来更好的体验和效率。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Jasper 会保存我的数据吗？数据安全有保障吗？</summary>
-                        <div class="faq-answer"><p>数据安全是 AI 工具的重要考量。Jasper 通常会收集使用数据用于模型训练和服务改进（具体政策请查看隐私条款）。如果处理敏感信息，建议：1）了解其数据存储和处理方式；2）必要时使用隐私模式或本地部署版本；3）遵守数据保护法规。
-</p></div>
-                    </details>
-                </div>
+        {faq_html}
 
-            </div>
+        {related_html}
 
-        <div class="related-tools" id="relatedSection">
-            <h3>🔗 相关工具推荐</h3>
-            <div class="related-grid"><a href="/tools/chatgpt/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🟢</div>
-                <div style="font-weight:600;">ChatGPT</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/claude/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎭</div>
-                <div style="font-weight:600;">Claude</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/quillbot/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">✍️</div>
-                <div style="font-weight:600;">QuillBot</div>
-                <div style="font-size:13px;color:#666;">AI写作</div>
-            </a>
-<a href="/tools/midjourney/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎨</div>
-                <div style="font-weight:600;">Midjourney</div>
-                <div style="font-size:13px;color:#666;">AI绘画</div>
-            </a>
-<a href="/tools/github-copilot/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">💻</div>
-                <div style="font-weight:600;">GitHub Copilot</div>
-                <div style="font-size:13px;color:#666;">AI编程</div>
-            </a>
-</div>
-        </div>
-
-        <div class="related-tools">
-                <h3>📚 相关文章</h3>
-                <div class="related-grid"><a href="/articles/ai-writing-tools-2026-guide/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 2026年AI写作工具推荐：10款免费好用的AI写作神器实测</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-<a href="/articles/ai-office-productivity-tools-2026/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 2026年AI办公效率工具推荐：从写周报到做PPT，8款工具</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-<a href="/articles/ai-translation-tools-2026-guide/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 AI翻译工具推荐2026：8款AI翻译软件实测，哪款翻译最准</div>
-                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
-                </a>
-</div>
-            </div>
+        {related_articles_html}
     </main>
 
     <footer class="footer">

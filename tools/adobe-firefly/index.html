@@ -13,60 +13,10 @@
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/adobe-firefly/">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/adobe-firefly-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://www.aitoolbox.hk/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "AI绘画",
-      "item": "https://www.aitoolbox.hk/category/ai-painting/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Adobe Firefly",
-      "item": "https://www.aitoolbox.hk/tools/adobe-firefly/"
-    }
-  ]
-}</script>
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Adobe Firefly",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "Web",
-  "description": "Adobe推出的AI图片生成工具，深度集成Photoshop和Illustrator。基于版权安全的训练数据，生成效果专业，设计师的AI绘画首选。",
-  "datePublished": "2026-04-02",
-  "dateModified": "2026-04-02",
-  "offers": {
-    "@type": "Offer",
-    "price": "免费使用",
-    "priceCurrency": "USD"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "200000"
-  }
-}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Adobe Firefly和Midjourney哪个好？", "acceptedAnswer": {"@type": "Answer", "text": "Firefly的优势是与Photoshop/Illustrator等Adobe工具深度集成，商业使用更安全（只用授权素材训练）。画质不如Midjourney顶级，但稳定性好。专业设计师推荐Firefly（版权安全），追求极致画质选Midjourney。"}}, {"@type": "Question", "name": "Adobe Firefly免费吗？", "acceptedAnswer": {"@type": "Answer", "text": "Firefly网页版有25个免费积分/月。Creative Cloud订阅用户可以使用更完整的Firefly功能。独立订阅Firefly $5/月起。"}}, {"@type": "Question", "name": "Adobe Firefly能商用吗？", "acceptedAnswer": {"@type": "Answer", "text": "Adobe Firefly生成的图片可以商用。Adobe明确表示，使用Firefly生成的内容版权归属用户，不存在训练数据的版权争议。相比之下，Midjourney等工具的商用条款在部分地区仍有争议，Firefly在版权方面更安全。"}}, {"@type": "Question", "name": "如何用Firefly生成图片？", "acceptedAnswer": {"@type": "Answer", "text": "访问 firefly.adobe.com 或在Photoshop里直接使用。输入文字描述，选择风格模板，点击Generate。Firefly的优势是深度集成Adobe生态，生成后可以直接在Photoshop里继续编辑，非常适合设计师工作流。"}}]}</script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{structured_data}</script>
+    {faq_page_schema}
+{BAIDU_TONGJI}
 </head>
 <body>
     <header class="header">
@@ -76,179 +26,45 @@ var _hmt = _hmt || [];
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/category/ai-painting/">AI绘画</a> &gt; <span>Adobe Firefly</span>
+        <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
     </nav>
 
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#59cfe2;">🎨</div>
+                <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
                 <div class="tool-header-info">
-                    <h2>Adobe Firefly <span class="badge" style="background:#00aa00;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">HOT</span></h2>
-                    <p class="subtitle">Adobe推出的AI图片生成工具，深度集成Photoshop和Illustrator。基于版权安全的训练数据，生成效果专业，设计师的AI绘画首选。</p>
-                    <div class="rating-bar">⭐ 4.5 <span style="font-size:14px;color:#999;">(20万浏览)</span></div>
+                    <h2>{escape_html(tool['name'])}{badge_html}</h2>
+                    <p class="subtitle">{escape_html(tool['description'])}</p>
+                    <div class="rating-bar">{tool['rating']} <span style="font-size:14px;color:#999;">({tool.get('visits', '0')}浏览)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>官网</strong>：firefly.adobe.com</div>
-                <div class="tool-meta-item">💰 <strong>价格</strong>：免费使用</div>
-                <div class="tool-meta-item">📦 <strong>平台</strong>：Web</div>
-                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI绘画</div>
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：{tool['url'].replace('https://', '')}</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：{tool.get('price', '')}</div>
+                {platform_html}
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
             </div>
             <div class="action-bar">
-                <a href="https://firefly.adobe.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
-        <div class="features-grid"><div class="feature-item">文生图</div>
-<div class="feature-item">创意填充</div>
-<div class="feature-item">生成式填充</div>
-<div class="feature-item">文字效果</div>
-<div class="feature-item">图片扩展</div>
-<div class="feature-item">Ps集成</div>
-</div>
+        {features_html}
 
         <article class="article-body">
-            <h2>Adobe Firefly 是什么？</h2>
-
-<p>Adobe Firefly是Adobe推出的AI图片生成工具，深度集成在Photoshop、Illustrator等Adobe产品中。与其他AI绘画工具不同，Firefly基于版权安全的训练数据，生成的图片可以安全用于商业用途。
-</p>
-
-<p>Firefly特别适合设计师，可以直接在Photoshop中使用生成式填充等功能，无缝融入现有工作流。
-</p>
-
-<h2>核心功能</h2>
-
-<ul><li><strong>文生图</strong>：输入文字描述生成图片</li>
-<li><strong>创意填充</strong>：在Photoshop中用AI填充选区</li>
-<li><strong>生成式填充</strong>：扩展图片边界，AI自动补全</li>
-<li><strong>文字效果</strong>：将文字渲染为各种特效风格</li>
-<li><strong>图片扩展</strong>：放大图片并自动补全细节</li>
-<li><strong>Ps集成</strong>：直接在Photoshop中使用</li>
-</ul>
-<h2>版本对比</h2>
-<table><thead><tr><th>功能</th><th>免费版</th><th>Premium ($4.99/月)</th></tr></thead><tbody><tr><td>生成点数</td><td>25/月</td><td>1000/月</td></tr><tr><td>Photoshop集成</td><td>✅</td><td>✅ 优先</td></tr><tr><td>商用授权</td><td>✅</td><td>✅</td></tr><tr><td>培训数据</td><td>安全</td><td>安全</td></tr></tbody></table>
-<h2>使用技巧</h2>
-
-<ul><li><strong>Photoshop填充</strong>：选区后用生成式填充，输入描述自动生成。</li>
-<li><strong>结构参考</strong>：上传结构参考图控制构图。</li>
-<li><strong>样式参考</strong>：指定风格参考图保持设计一致性。</li>
-<li><strong>文字效果</strong>：用文字效果功能快速创建标题设计。</li>
-<li><strong>生成式扩展</strong>：放大图片时AI自动补全边缘。</li>
-</ul>
-<h2>适合人群</h2>
-
-<p>Adobe Firefly适合专业设计师、品牌设计师和企业营销团队。如果你已经在使用Adobe产品，Firefly是最安全的AI绘画方案。
-</p>
-<h3>总结</h3>
-
-<p>Adobe Firefly 是 AI绘画 领域中一款不错的 AI 工具。Adobe推出的AI图片生成工具，深度集成Photoshop和Illustrator。基于版权安全的训练数据，生成效果专业，设计师的AI绘画首选。 从功能完整性来看，它覆盖了核心使用场景。
-</p>
-
-<p><strong>快速上手建议：</strong>
-</p>
-<ul><li>访问官网 firefly.adobe.com 注册账号</li>
-<li>先使用免费版本 了解核心功能</li>
-<li>参考官方文档和教程加速学习</li>
-<li>加入用户社区获取使用技巧和最佳实践</li>
-</ul>
-<p><strong>价格参考：</strong> 免费使用
-<strong>支持平台：</strong> Web
-</p>
-
+            {content_html}
         </article>
 
-        <figure class="tool-infographic">
-            <img src="/images/infographics/adobe-firefly-infographic.png" alt="Adobe Firefly功能亮点信息图" width="1200" height="630" loading="lazy">
-            <figcaption>Adobe Firefly 核心功能一览</figcaption>
-        </figure>
+        {infographic_html}
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>👍 优点</h4>
-                <ul><li>集成Adobe生态</li><li>版权数据安全</li><li>生成效果专业</li><li>中文prompt支持好</li><li>企业级可用</li></ul>
-            </div>
-            <div class="cons">
-                <h4>👎 缺点</h4>
-                <ul><li>免费版限制多</li><li>需要Adobe账号</li><li>独立使用不如MJ灵活</li><li>创意性偏保守</li><li>生成速度一般</li></ul>
-            </div>
-        </div>
+        {pros_cons_html}
 
-        <div class="faq-section">
-                <h3>❓ 常见问题</h3>
-                <div class="faq-item">
-                    <details>
-                        <summary>Adobe Firefly和Midjourney哪个好？</summary>
-                        <div class="faq-answer"><p>Firefly的优势是与Photoshop/Illustrator等Adobe工具深度集成，商业使用更安全（只用授权素材训练）。画质不如Midjourney顶级，但稳定性好。专业设计师推荐Firefly（版权安全），追求极致画质选Midjourney。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Adobe Firefly免费吗？</summary>
-                        <div class="faq-answer"><p>Firefly网页版有25个免费积分/月。Creative Cloud订阅用户可以使用更完整的Firefly功能。独立订阅Firefly $5/月起。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Adobe Firefly能商用吗？</summary>
-                        <div class="faq-answer"><p>Adobe Firefly生成的图片可以商用。Adobe明确表示，使用Firefly生成的内容版权归属用户，不存在训练数据的版权争议。相比之下，Midjourney等工具的商用条款在部分地区仍有争议，Firefly在版权方面更安全。
-</p></div>
-                    </details>
-                </div>
-<div class="faq-item">
-                    <details>
-                        <summary>如何用Firefly生成图片？</summary>
-                        <div class="faq-answer"><p>访问 firefly.adobe.com 或在Photoshop里直接使用。输入文字描述，选择风格模板，点击Generate。Firefly的优势是深度集成Adobe生态，生成后可以直接在Photoshop里继续编辑，非常适合设计师工作流。
-</p></div>
-                    </details>
-                </div>
+        {faq_html}
 
-            </div>
+        {related_html}
 
-        <div class="related-tools" id="relatedSection">
-            <h3>🔗 相关工具推荐</h3>
-            <div class="related-grid"><a href="/tools/claude/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎭</div>
-                <div style="font-weight:600;">Claude</div>
-                <div style="font-size:13px;color:#666;">AI对话</div>
-            </a>
-<a href="/tools/sora/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎬</div>
-                <div style="font-weight:600;">Sora</div>
-                <div style="font-size:13px;color:#666;">AI视频</div>
-            </a>
-<a href="/tools/midjourney/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎨</div>
-                <div style="font-weight:600;">Midjourney</div>
-                <div style="font-size:13px;color:#666;">AI绘画</div>
-            </a>
-<a href="/tools/stable-diffusion/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🌟</div>
-                <div style="font-weight:600;">Stable Diffusion</div>
-                <div style="font-size:13px;color:#666;">AI绘画</div>
-            </a>
-<a href="/tools/dall-e-3/index.html" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎨</div>
-                <div style="font-weight:600;">DALL-E 3</div>
-                <div style="font-size:13px;color:#666;">AI绘画</div>
-            </a>
-</div>
-        </div>
-
-        <div class="related-tools">
-                <h3>📚 相关文章</h3>
-                <div class="related-grid"><a href="/articles/ai-painting-guide/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 AI绘画入门指南：从零开始学会AI绘画</div>
-                    <div style="font-size:13px;color:#666;">2026年3月20日</div>
-                </a>
-<a href="/articles/how-to-use-midjourney-2026/index.html" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 如何注册和使用Midjourney：从零开始的完整教程（20</div>
-                    <div style="font-size:13px;color:#666;"></div>
-                </a>
-</div>
-            </div>
+        {related_articles_html}
     </main>
 
     <footer class="footer">
