@@ -961,13 +961,21 @@ def build_index_page(tools, articles):
     html = re.sub(r'(<div class="sidebar-card">\s*<h4>&#x1F525; 热门分类</h4>\s*<ul>)[\s\S]*?(</ul>\s*</div>)', lambda m: m.group(1) + '\n' + categories_html + '                    </ul>\n                </div>', html)
     html = re.sub(r'(<div class="footer-links">)[\s\S]*?(</div>)', lambda m: m.group(1) + '\n' + footer_links_html + '\n        </div>', html)
     
-    # 注入全部工具数据和剩余工具数据到全局变量（给 JS 使用）
-    # 这样 JS 的分类筛选、搜索功能不需要重新 fetch，直接用内联数据
-    inject_script = f'''<script>
-window.__ALL_TOOLS__ = {all_tools_json};
-window.__REMAINING_TOOLS__ = {remaining_tools_json};
-</script>'''
-    html = html.replace('</head>', inject_script + '\n</head>')
+    # 生成外部工具数据文件（避免首页内联 4.7MB JSON）
+    tools_data_js_path = os.path.join(BASE_DIR, 'js', 'tools-data.js')
+    os.makedirs(os.path.dirname(tools_data_js_path), exist_ok=True)
+    with open(tools_data_js_path, 'w', encoding='utf-8') as f:
+        f.write(f'window.__ALL_TOOLS__ = {all_tools_json};\nwindow.__REMAINING_TOOLS__ = {remaining_tools_json};\n')
+    print(f'[OK] js/tools-data.js ({os.path.getsize(tools_data_js_path)//1024}KB)')
+
+    # 移除旧的内联 __ALL_TOOLS__ / __REMAINING_TOOLS__ 脚本（避免重复）
+    html = re.sub(r'<script>\s*window\.__ALL_TOOLS__\s*=\s*\[[\s\S]*?\];\s*\n?\s*window\.__REMAINING_TOOLS__\s*=\s*\[[\s\S]*?\];?\s*</script>', '', html)
+
+    # 移除旧的 tools-data.js 引用（避免重复注入）
+    html = re.sub(r'<script\s+src="/js/tools-data\.js"></script>\s*', '', html)
+
+    # 在 </head> 前注入外部数据文件引用
+    html = html.replace('</head>', '<script src="/js/tools-data.js"></script>\n</head>')
     
     # 移除所有已有的百度统计代码片段（无论占位符还是真实代码），避免重复叠加
     html = re.sub(r'<script>\s*var _hmt\s*=\s*_hmt\s*\|\|\s*\[\];\s*\(function\(\)\s*\{[\s\S]*?hm\.src\s*=\s*"[^"]*";[\s\S]*?\}\)\(\);?\s*</script>', '', html)

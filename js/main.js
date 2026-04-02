@@ -1,11 +1,10 @@
 // SEO网站 - 主入口脚本
 // 首屏 12 个工具已在 HTML 内静态渲染，此脚本负责：
 // 1. 懒加载剩余工具（用 IntersectionObserver 感知滚动触底）
-// 2. 分类筛选（直接用内联的 window.__ALL_TOOLS__ 数据）
+// 2. 分类筛选（用外部 js/tools-data.js 的 window.__ALL_TOOLS__ 数据）
 // 3. 搜索功能
 
-document.addEventListener('DOMContentLoaded', () => {
-    // 优先使用服务端内联数据，避免再次 fetch
+function initApp() {
     const allTools = window.__ALL_TOOLS__ || [];
     const remainingTools = window.__REMAINING_TOOLS__ || [];
 
@@ -22,6 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 文章列表（内联渲染，不再 fetch）
     // 如果 articleList 为空则不重新渲染（已静态渲染）
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 如果外部 tools-data.js 已加载（同步或快于 main.js），直接初始化
+    if (window.__ALL_TOOLS__) {
+        initApp();
+    } else {
+        // 否则等待所有脚本加载完成（tools-data.js 可能还在下载）
+        window.addEventListener('load', initApp);
+    }
 });
 
 // ─────────────────────────────────────
