@@ -19,6 +19,37 @@ from pypinyin import pinyin, Style
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 
+# OG图片自动生成：缺失时自动调用gen_seo_images生成
+def ensure_og_image(slug, data_obj=None, is_article=False):
+    """检查OG图片是否存在，不存在则自动生成。返回og_image URL或空字符串。"""
+    og_image_local = os.path.join(BASE_DIR, 'images', 'og', f'{slug}-og.png')
+    og_image_url = f'https://www.aitoolbox.hk/images/og/{slug}-og.png'
+    if os.path.exists(og_image_local):
+        return og_image_url
+    # 自动生成
+    try:
+        from gen_seo_images import make_article_og_image, make_og_image, generate_image
+        if is_article and data_obj:
+            html = make_article_og_image(data_obj)
+        elif data_obj and not is_article:
+            all_tools = []
+            tools_path = os.path.join(DATA_DIR, 'tools.json')
+            if os.path.exists(tools_path):
+                with open(tools_path, encoding='utf-8') as f:
+                    all_tools = json.load(f)
+            html = make_og_image(data_obj, all_tools)
+        else:
+            return ''
+        if generate_image(html, og_image_local):
+            print(f'  [OG] 自动生成: {slug}-og.png')
+            return og_image_url
+        else:
+            print(f'  [OG] 生成失败: {slug}-og.png')
+            return ''
+    except Exception as e:
+        print(f'  [OG] 生成异常: {slug} - {e}')
+        return ''
+
 BAIDU_TONGJI = '''<script>
 var _hmt = _hmt || [];
 (function() {
@@ -348,9 +379,8 @@ def build_tool_page(tool, all_tools, all_articles=None):
         }
         faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_page_schema_data, ensure_ascii=False)}</script>'
 
-    # OG Image（检查文件是否存在，避免死链）
-    og_image_local = os.path.join(BASE_DIR, 'images', 'og', f'{slug}-og.png')
-    og_image = f'https://www.aitoolbox.hk/images/og/{slug}-og.png' if os.path.exists(og_image_local) else ''
+    # OG Image（自动生成缺失的OG图片）
+    og_image = ensure_og_image(slug, data_obj=tool, is_article=False)
 
     # 信息图
     infographic_path = os.path.join(BASE_DIR, 'images', 'infographics', f'{slug}-infographic.png')
@@ -383,7 +413,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
     <meta property="og:title" content="{escape_html(tool['name'])}评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱">
     <meta property="og:description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'])}">
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/">
-''' + (f'    <meta property="og:image" content="{og_image}">\n' if og_image else '') + '''    <link rel="stylesheet" href="/css/style.css">
+''' + (f'    <meta property="og:image" content="{og_image}">\n' if og_image else '') + f'''    <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_data}</script>
     {faq_page_schema}
@@ -609,9 +639,8 @@ def build_article_page(article, all_articles, all_tools=None):
             <div class="related-grid">{cards}</div>
         </div>'''
 
-    # OG Image（检查文件是否存在，避免死链）
-    og_image_local = os.path.join(BASE_DIR, 'images', 'og', f'{slug}-og.png')
-    og_image = f'https://www.aitoolbox.hk/images/og/{slug}-og.png' if os.path.exists(og_image_local) else ''
+    # OG Image（自动生成缺失的OG图片）
+    og_image = ensure_og_image(slug, data_obj=article, is_article=True)
 
     # 信息图（文章内嵌）
     infographic_path = os.path.join(BASE_DIR, 'images', 'infographics', f'{slug}-infographic.png')
@@ -692,13 +721,13 @@ def build_article_page(article, all_articles, all_tools=None):
     <link rel="canonical" href="https://www.aitoolbox.hk/articles/{slug}/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(article['title'])} - AI工具宝箱">
-    <meta property="og:description" content="{escape_html(article.get('description', ''))}">''' + (f'\n    <meta property="og:image" content="{og_image}">' if og_image else '') + f'''
-    <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/">
+    <meta property="og:description" content="{escape_html(article.get('description', ''))}">
+''' + (f'    <meta property="og:image" content="{og_image}">\n' if og_image else '') + f'''    <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/">
     <meta property="og:site_name" content="AI工具宝箱">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{escape_html(article['title'])} - AI工具宝箱">
-    <meta name="twitter:description" content="{escape_html(article.get('description', ''))}">''' + (f'\n    <meta name="twitter:image" content="{og_image}">' if og_image else '') + '''
-    <link rel="stylesheet" href="/css/style.css">
+    <meta name="twitter:description" content="{escape_html(article.get('description', ''))}">
+''' + (f'    <meta name="twitter:image" content="{og_image}">\n' if og_image else '') + f'''    <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_article_json}</script>
     <script type="application/ld+json">{structured_data}</script>
 {BAIDU_TONGJI}

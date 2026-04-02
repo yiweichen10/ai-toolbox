@@ -13,10 +13,60 @@
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/fireflies.ai/">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/fireflies.ai-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{breadcrumb_json}</script>
-    <script type="application/ld+json">{structured_data}</script>
-    {faq_page_schema}
-{BAIDU_TONGJI}
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.aitoolbox.hk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI办公",
+      "item": "https://www.aitoolbox.hk/category/ai-office/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fireflies.ai",
+      "item": "https://www.aitoolbox.hk/tools/fireflies.ai/"
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Fireflies.ai",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web / iOS / Android",
+  "description": "AI会议记录工具，自动转录会议音频并生成智能摘要、行动项和关键词。支持Zoom、Google Meet、Teams等主流会议平台，是职场人士的会议效率神器。",
+  "datePublished": "2026-04-02",
+  "dateModified": "2026-04-02",
+  "offers": {
+    "@type": "Offer",
+    "price": "免费使用",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "ratingCount": "150000"
+  }
+}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Fireflies.ai和Otter.ai哪个好？", "acceptedAnswer": {"@type": "Answer", "text": "功能类似。Fireflies.ai在CRM集成（Salesforce、HubSpot）方面更强，适合销售团队。Otter.ai在实时转录和协作方面更好，适合通用场景。两者都提供AI会议纪要功能。"}}]}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </head>
 <body>
     <header class="header">
@@ -26,45 +76,185 @@
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
+        <a href="/">首页</a> &gt; <a href="/category/ai-office/">AI办公</a> &gt; <span>Fireflies.ai</span>
     </nav>
 
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
+                <div class="tool-icon-lg" style="background:#e973c5;">📊</div>
                 <div class="tool-header-info">
-                    <h2>{escape_html(tool['name'])}{badge_html}</h2>
-                    <p class="subtitle">{escape_html(tool['description'])}</p>
-                    <div class="rating-bar">{tool['rating']} <span style="font-size:14px;color:#999;">({tool.get('visits', '0')}浏览)</span></div>
+                    <h2>Fireflies.ai <span class="badge" style="background:#667eea;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">编辑推荐</span></h2>
+                    <p class="subtitle">AI会议记录工具，自动转录会议音频并生成智能摘要、行动项和关键词。支持Zoom、Google Meet、Teams等主流会议平台，是职场人士的会议效率神器。</p>
+                    <div class="rating-bar">⭐ 4.6 <span style="font-size:14px;color:#999;">(15万浏览)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>官网</strong>：{tool['url'].replace('https://', '')}</div>
-                <div class="tool-meta-item">💰 <strong>价格</strong>：{tool.get('price', '')}</div>
-                {platform_html}
-                <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：fireflies.ai</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：免费使用</div>
+                <div class="tool-meta-item">📦 <strong>平台</strong>：Web / iOS / Android</div>
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI办公</div>
             </div>
             <div class="action-bar">
-                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://fireflies.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
-        {features_html}
+        <div class="features-grid"><div class="feature-item">自动会议转录</div>
+<div class="feature-item">AI智能摘要</div>
+<div class="feature-item">行动项提取</div>
+<div class="feature-item">关键词标注</div>
+<div class="feature-item">会议搜索</div>
+<div class="feature-item">团队共享</div>
+</div>
 
         <article class="article-body">
-            {content_html}
+            <h2>Fireflies.ai 是什么？</h2>
+
+<p>Fireflies.ai是一款AI会议记录工具，能自动转录会议音频并生成智能摘要、行动项和关键词。支持Zoom、Google Meet、Microsoft Teams等主流会议平台，帮助你从繁琐的会议记录中解放出来。
+</p>
+
+<p>Fireflies.ai不仅能记录会议内容，还能智能提取决策、待办事项和关键讨论点，让团队成员快速了解会议核心信息。
+</p>
+
+<h2>核心功能</h2>
+
+<ul><li><strong>自动会议转录</strong>：自动加入会议并转录全部对话内容</li>
+<li><strong>AI智能摘要</strong>：生成会议要点总结，快速了解会议核心</li>
+<li><strong>行动项提取</strong>：自动识别会议中的待办事项和负责人</li>
+<li><strong>关键词标注</strong>：标注重要话题和讨论主题</li>
+<li><strong>会议搜索</strong>：在所有历史会议中搜索特定关键词</li>
+<li><strong>团队共享</strong>：会议记录一键分享给团队成员</li>
+</ul>
+<h2>版本对比</h2>
+<table><thead><tr><th>功能</th><th>免费版</th><th>Pro ($10/月)</th><th>Business ($19/月)</th></tr></thead><tbody><tr><td>会议转录</td><td>有限</td><td>无限制</td><td>无限制</td></tr><tr><td>AI摘要</td><td>✅</td><td>✅</td><td>✅</td></tr><tr><td>存储时间</td><td>1个月</td><td>无限制</td><td>无限制</td></tr><tr><td>团队协作</td><td>❌</td><td>基础</td><td>高级</td></tr><tr><td>CRM集成</td><td>❌</td><td>❌</td><td>✅</td></tr></tbody></table>
+<h2>使用技巧</h2>
+
+<ul><li><strong>自动加入</strong>：设置Fireflies.ai自动加入所有日历会议。</li>
+<li><strong>关键词提醒</strong>：设置关键词，会议中提到时自动高亮。</li>
+<li><strong>模板定制</strong>：自定义摘要模板，突出你关心的信息。</li>
+<li><strong>@ 提及</strong>：在摘要中@团队成员分配任务。</li>
+<li><strong>频道集成</strong>：连接Slack，会议摘要自动推送到频道。</li>
+</ul>
+<h2>适合人群</h2>
+
+<p>Fireflies.ai适合频繁开会的职场人士、项目经理和团队领导。如果你的团队每周有大量会议需要记录和跟进，Fireflies.ai能帮你节省大量时间。
+</p>
+<h3>深度评测</h3>
+
+<p>Fireflies.ai 是目前市场上最成熟的 AI 会议助手之一。它不仅能转录会议内容，还能自动生成会议纪要、提取行动项、识别关键决策，大幅提升会议效率。
+</p>
+
+<h3>核心使用场景</h3>
+
+<ul><li><strong>团队会议记录</strong>：自动参会并记录，会后生成结构化纪要</li>
+<li><strong>客户访谈</strong>：记录客户需求，提取关键信息</li>
+<li><strong>培训课程</strong>：转录培训内容，生成学习笔记</li>
+<li><strong>播客制作</strong>：转录音频内容，生成文字稿</li>
+<li><strong>跨语言会议</strong>：支持 69 种语言的实时转录</li>
+</ul>
+<h3>AI 智能分析功能</h3>
+
+<p>Fireflies.ai 的 AI 功能远超简单的语音转文字：
+</p>
+<ul><li><strong>自动提取 Action Items</strong>：识别会议中的待办事项和负责人</li>
+<li><strong>话题分段</strong>：按讨论主题自动分段，方便回看</li>
+<li><strong>情感分析</strong>：分析会议参与者的语气和情绪</li>
+<li><strong>智能问答</strong>：对会议内容提问，AI 会给出精准回答</li>
+<li><strong>关键词追踪</strong>：标记会议中的关键术语和概念</li>
+</ul>
+<h3>集成能力</h3>
+
+<p>Fireflies.ai 支持与主流工具集成：
+</p>
+<ul><li>Zoom、Google Meet、Microsoft Teams 自动参会</li>
+<li>Slack、Notion 自动分享会议纪要</li>
+<li>Salesforce、HubSpot 自动更新 CRM 记录</li>
+<li>Zapier 连接 5000+ 应用</li>
+</ul>
+<h3>价格方案</h3>
+
+<ul><li>免费版：每月 10 场会议转录</li>
+<li>Pro ($10/月)：无限转录 + AI 摘要</li>
+<li>Business ($19/月)：团队协作 + CRM 集成</li>
+<li>Enterprise：定制方案 + SSO 支持</li>
+</ul>
+<h3>适合人群</h3>
+
+<p>Fireflies.ai 适合经常开会的团队和远程工作者。如果你的工作涉及大量在线会议，Fireflies.ai 能帮你节省大量整理纪要的时间，让你专注于会议本身的内容讨论。
+</p>
         </article>
 
-        {infographic_html}
+        <figure class="tool-infographic">
+            <img src="/images/infographics/fireflies.ai-infographic.png" alt="Fireflies.ai功能亮点信息图" width="1200" height="630" loading="lazy">
+            <figcaption>Fireflies.ai 核心功能一览</figcaption>
+        </figure>
 
-        {pros_cons_html}
+        <div class="pros-cons">
+            <div class="pros">
+                <h4>👍 优点</h4>
+                <ul><li>自动转录准确率高</li><li>智能摘要节省时间</li><li>主流平台全覆盖</li><li>支持搜索会议内容</li><li>团队协作方便</li></ul>
+            </div>
+            <div class="cons">
+                <h4>👎 缺点</h4>
+                <ul><li>中文支持一般</li><li>免费版功能有限</li><li>英文转录效果最好</li><li>隐私数据顾虑</li><li>高级功能较贵</li></ul>
+            </div>
+        </div>
 
-        {faq_html}
+        <div class="faq-section">
+                <h3>❓ 常见问题</h3>
+                <div class="faq-item">
+                    <details>
+                        <summary>Fireflies.ai和Otter.ai哪个好？</summary>
+                        <div class="faq-answer"><p>功能类似。Fireflies.ai在CRM集成（Salesforce、HubSpot）方面更强，适合销售团队。Otter.ai在实时转录和协作方面更好，适合通用场景。两者都提供AI会议纪要功能。
+</p></div>
+                    </details>
+                </div>
 
-        {related_html}
+            </div>
 
-        {related_articles_html}
+        <div class="related-tools" id="relatedSection">
+            <h3>🔗 相关工具推荐</h3>
+            <div class="related-grid"><a href="/tools/claude/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">🎭</div>
+                <div style="font-weight:600;">Claude</div>
+                <div style="font-size:13px;color:#666;">AI对话</div>
+            </a>
+<a href="/tools/midjourney/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">🎨</div>
+                <div style="font-weight:600;">Midjourney</div>
+                <div style="font-size:13px;color:#666;">AI绘画</div>
+            </a>
+<a href="/tools/notion-ai/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">📊</div>
+                <div style="font-weight:600;">Notion AI</div>
+                <div style="font-size:13px;color:#666;">AI办公</div>
+            </a>
+<a href="/tools/gamma/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">📊</div>
+                <div style="font-weight:600;">Gamma</div>
+                <div style="font-size:13px;color:#666;">AI办公</div>
+            </a>
+<a href="/tools/wps-ai/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">📊</div>
+                <div style="font-weight:600;">WPS AI</div>
+                <div style="font-size:13px;color:#666;">AI办公</div>
+            </a>
+</div>
+        </div>
+
+        <div class="related-tools">
+                <h3>📚 相关文章</h3>
+                <div class="related-grid"><a href="/articles/ai-office-productivity-tools-2026/index.html" class="related-card">
+                    <div style="font-weight:600;margin-bottom:4px;">📖 2026年AI办公效率工具推荐：从写周报到做PPT，8款工具</div>
+                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
+                </a>
+<a href="/articles/ai-ppt-tools-2026/index.html" class="related-card">
+                    <div style="font-weight:600;margin-bottom:4px;">📖 AI PPT生成工具推荐：2026年最受欢迎的AI做PPT神</div>
+                    <div style="font-size:13px;color:#666;">2026年3月23日</div>
+                </a>
+</div>
+            </div>
     </main>
 
     <footer class="footer">

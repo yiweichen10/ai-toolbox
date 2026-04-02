@@ -13,10 +13,60 @@
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/chatgpt/">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/chatgpt-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{breadcrumb_json}</script>
-    <script type="application/ld+json">{structured_data}</script>
-    {faq_page_schema}
-{BAIDU_TONGJI}
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.aitoolbox.hk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI对话",
+      "item": "https://www.aitoolbox.hk/category/ai-chat/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ChatGPT",
+      "item": "https://www.aitoolbox.hk/tools/chatgpt/"
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ChatGPT",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web / iOS / Android",
+  "description": "OpenAI推出的智能对话AI，支持文本生成、代码编写、数据分析等多种任务，是目前最强大的通用AI助手。2026年GPT-5已发布，多模态能力大幅提升。",
+  "datePublished": "2026-04-02",
+  "dateModified": "2026-04-02",
+  "offers": {
+    "@type": "Offer",
+    "price": "免费版+Plus $20/月",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "12.50000"
+  }
+}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPT免费版和Plus版有什么区别？值得付费吗？", "acceptedAnswer": {"@type": "Answer", "text": "免费版可以使用GPT-5基础功能，有次数限制。Plus版（$20/月）可无限制使用GPT-5、DALL-E 4图片生成、GPTs创建、高级语音对话等。如果你每天重度使用AI辅助工作和学习，Plus版物超所值；偶尔使用的话免费版足够。"}}, {"@type": "Question", "name": "ChatGPT在国内怎么用？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT在国内需要通过科学上网访问。也可以使用官方API接口接入第三方客户端。国内用户也可以考虑DeepSeek、Kimi、豆包等国产替代品，功能接近且无需翻墙。"}}, {"@type": "Question", "name": "ChatGPT和Claude哪个更好？", "acceptedAnswer": {"@type": "Answer", "text": "各有所长。ChatGPT在多模态能力、插件生态、GPTs市场方面更强；Claude在长文本处理（1000K上下文）、代码质量、写作水平方面更优。建议都试试，根据具体需求选择。日常对话选ChatGPT，长文档和代码选Claude。"}}, {"@type": "Question", "name": "ChatGPT能处理哪些类型的文件？", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT支持上传PDF、Word、Excel、PPT、图片、音频、视频等多种格式。可以分析文档内容、提取数据、总结要点、生成图表等。Plus版支持更大的文件和更多的分析次数。"}}, {"@type": "Question", "name": "如何注册ChatGPT账号？", "acceptedAnswer": {"@type": "Answer", "text": "注册流程其实不复杂：1）访问 openai.com 点击 Sign up；2）用Gmail邮箱注册，国内手机号可以收验证码；3）注册完成后建议顺手充值，5美元起步，不充值只能用GPT-3.5，代码能力差很多。充值需要支持美元的信用卡，Depay虚拟卡教程在淘宝一搜就有。"}}, {"@type": "Question", "name": "如何获取ChatGPT API Key？", "acceptedAnswer": {"@type": "Answer", "text": "获取API Key只需三步：1）登录 openai.com；2）点击右上角账号 - API；3）创建一个新密钥（Create new secret key）。拿到Key后就可以在各种工具和脚本里接入了。注意：这个Key只有第一次显示时会完整看到，记得保存。"}}, {"@type": "Question", "name": "如何用ChatGPT写代码？", "acceptedAnswer": {"@type": "Answer", "text": "最有效的方式是分步提问：先把你的需求描述清楚，然后把代码报错信息完整贴出来，让它一步步解决。比如：输入'我想写一个Python脚本实现批量重命名文件，但os.rename报错了'，把报错信息一起扔给它，它会给可运行的代码和解释。"}}]}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </head>
 <body>
     <header class="header">
@@ -26,45 +76,195 @@
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
+        <a href="/">首页</a> &gt; <a href="/category/ai-chat/">AI对话</a> &gt; <span>ChatGPT</span>
     </nav>
 
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
+                <div class="tool-icon-lg" style="background:#10a37f;">🟢</div>
                 <div class="tool-header-info">
-                    <h2>{escape_html(tool['name'])}{badge_html}</h2>
-                    <p class="subtitle">{escape_html(tool['description'])}</p>
-                    <div class="rating-bar">{tool['rating']} <span style="font-size:14px;color:#999;">({tool.get('visits', '0')}浏览)</span></div>
+                    <h2>ChatGPT <span class="badge" style="background:#ff4444;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">HOT</span></h2>
+                    <p class="subtitle">OpenAI推出的智能对话AI，支持文本生成、代码编写、数据分析等多种任务，是目前最强大的通用AI助手。2026年GPT-5已发布，多模态能力大幅提升。</p>
+                    <div class="rating-bar">⭐ 4.9 <span style="font-size:14px;color:#999;">(12.5万浏览)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>官网</strong>：{tool['url'].replace('https://', '')}</div>
-                <div class="tool-meta-item">💰 <strong>价格</strong>：{tool.get('price', '')}</div>
-                {platform_html}
-                <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：chat.openai.com</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：免费版+Plus $20/月</div>
+                <div class="tool-meta-item">📦 <strong>平台</strong>：Web / iOS / Android</div>
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI对话</div>
             </div>
             <div class="action-bar">
-                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://chat.openai.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
-        {features_html}
+        <div class="features-grid"><div class="feature-item">智能对话</div>
+<div class="feature-item">代码生成</div>
+<div class="feature-item">图片理解</div>
+<div class="feature-item">文件分析</div>
+<div class="feature-item">插件系统</div>
+<div class="feature-item">GPTs定制</div>
+<div class="feature-item">多模态交互</div>
+<div class="feature-item">联网搜索</div>
+</div>
 
         <article class="article-body">
-            {content_html}
+            <h2>ChatGPT 是什么？</h2>
+
+<p>ChatGPT是OpenAI开发的AI对话助手，基于GPT-5大语言模型。2026年最新版本的GPT-5带来了全面升级，支持文本、图片、音频、视频多模态输入输出，推理能力大幅提升。
+</p>
+
+<p>作为全球使用人数最多的AI助手，ChatGPT已经从最初的对话工具发展为一个强大的通用AI平台，支持插件系统、GPTs定制、代码执行等高级功能。
+</p>
+
+<h2>核心功能</h2>
+
+<p>ChatGPT的功能覆盖面非常广，几乎可以处理所有基于文本的任务：
+</p>
+
+<ul><li><strong>智能对话</strong>：自然流畅的中文对话，理解上下文能力强</li>
+<li><strong>代码生成</strong>：支持Python、JavaScript、Java等50+编程语言</li>
+<li><strong>图片理解</strong>：上传图片让AI分析、描述、提取信息</li>
+<li><strong>文件分析</strong>：支持PDF、Word、Excel等格式文档分析</li>
+<li><strong>插件系统</strong>：扩展ChatGPT能力，如联网搜索、数据分析</li>
+<li><strong>GPTs定制</strong>：创建专属AI助手，自定义角色和知识库</li>
+<li><strong>多模态交互</strong>：同时处理文本、图片、音频和视频</li>
+<li><strong>联网搜索</strong>：获取实时信息，不再受知识截止日期限制</li>
+</ul>
+<h2>版本对比</h2>
+<table><thead><tr><th>功能</th><th>免费版</th><th>Plus ($20/月)</th></tr></thead><tbody><tr><td>GPT-5 访问</td><td>有限</td><td>无限制</td></tr><tr><td>图片生成</td><td>DALL-E (有限)</td><td>DALL-E 4</td></tr><tr><td>联网搜索</td><td>✅</td><td>✅</td></tr><tr><td>文件分析</td><td>有限</td><td>无限制</td></tr><tr><td>GPTs 创建</td><td>❌</td><td>✅</td></tr><tr><td>高级语音</td><td>❌</td><td>✅</td></tr></tbody></table>
+<h2>使用技巧</h2>
+
+<ul><li><strong>善用系统提示词</strong>：在设置中自定义ChatGPT的角色和回复风格，获得更精准的回答。</li>
+<li><strong>多模态输入</strong>：直接上传图片、文件、截图让ChatGPT分析，比纯文本描述效果好很多。</li>
+<li><strong>分步提问</strong>：复杂任务拆分成多步骤，每步确认后再进行下一步，准确率更高。</li>
+<li><strong>使用GPTs</strong>：社区有大量定制化的GPTs，如翻译、写作、编程助手，直接使用。</li>
+<li><strong>代码执行</strong>：让ChatGPT写代码并直接运行，快速验证结果。</li>
+</ul>
+<h2>适合人群</h2>
+
+<p>ChatGPT适合几乎所有需要AI辅助的用户：学生、上班族、程序员、内容创作者、研究人员。免费版已经能满足日常使用，Plus版适合重度用户。
+</p>
         </article>
 
-        {infographic_html}
+        <figure class="tool-infographic">
+            <img src="/images/infographics/chatgpt-infographic.png" alt="ChatGPT功能亮点信息图" width="1200" height="630" loading="lazy">
+            <figcaption>ChatGPT 核心功能一览</figcaption>
+        </figure>
 
-        {pros_cons_html}
+        <div class="pros-cons">
+            <div class="pros">
+                <h4>👍 优点</h4>
+                <ul><li>多模态能力行业领先</li><li>插件和GPTs生态丰富</li><li>持续更新迭代进步快</li><li>中文支持优秀</li><li>免费版功能已经很强</li></ul>
+            </div>
+            <div class="cons">
+                <h4>👎 缺点</h4>
+                <ul><li>国内需要科学上网</li><li>免费版使用次数限制</li><li>Plus价格对部分用户偏高</li><li>偶尔出现幻觉输出</li><li>隐私数据安全顾虑</li></ul>
+            </div>
+        </div>
 
-        {faq_html}
+        <div class="faq-section">
+                <h3>❓ 常见问题</h3>
+                <div class="faq-item">
+                    <details>
+                        <summary>ChatGPT免费版和Plus版有什么区别？值得付费吗？</summary>
+                        <div class="faq-answer"><p>免费版可以使用GPT-5基础功能，有次数限制。Plus版（$20/月）可无限制使用GPT-5、DALL-E 4图片生成、GPTs创建、高级语音对话等。如果你每天重度使用AI辅助工作和学习，Plus版物超所值；偶尔使用的话免费版足够。
+</p></div>
+                    </details>
+                </div>
+<div class="faq-item">
+                    <details>
+                        <summary>ChatGPT在国内怎么用？</summary>
+                        <div class="faq-answer"><p>ChatGPT在国内需要通过科学上网访问。也可以使用官方API接口接入第三方客户端。国内用户也可以考虑DeepSeek、Kimi、豆包等国产替代品，功能接近且无需翻墙。
+</p></div>
+                    </details>
+                </div>
+<div class="faq-item">
+                    <details>
+                        <summary>ChatGPT和Claude哪个更好？</summary>
+                        <div class="faq-answer"><p>各有所长。ChatGPT在多模态能力、插件生态、GPTs市场方面更强；Claude在长文本处理（1000K上下文）、代码质量、写作水平方面更优。建议都试试，根据具体需求选择。日常对话选ChatGPT，长文档和代码选Claude。
+</p></div>
+                    </details>
+                </div>
+<div class="faq-item">
+                    <details>
+                        <summary>ChatGPT能处理哪些类型的文件？</summary>
+                        <div class="faq-answer"><p>ChatGPT支持上传PDF、Word、Excel、PPT、图片、音频、视频等多种格式。可以分析文档内容、提取数据、总结要点、生成图表等。Plus版支持更大的文件和更多的分析次数。
+</p></div>
+                    </details>
+                </div>
+<div class="faq-item">
+                    <details>
+                        <summary>如何注册ChatGPT账号？</summary>
+                        <div class="faq-answer"><p>注册流程其实不复杂：1）访问 openai.com 点击 Sign up；2）用Gmail邮箱注册，国内手机号可以收验证码；3）注册完成后建议顺手充值，5美元起步，不充值只能用GPT-3.5，代码能力差很多。充值需要支持美元的信用卡，Depay虚拟卡教程在淘宝一搜就有。
+</p></div>
+                    </details>
+                </div>
+<div class="faq-item">
+                    <details>
+                        <summary>如何获取ChatGPT API Key？</summary>
+                        <div class="faq-answer"><p>获取API Key只需三步：1）登录 openai.com；2）点击右上角账号 - API；3）创建一个新密钥（Create new secret key）。拿到Key后就可以在各种工具和脚本里接入了。注意：这个Key只有第一次显示时会完整看到，记得保存。
+</p></div>
+                    </details>
+                </div>
+<div class="faq-item">
+                    <details>
+                        <summary>如何用ChatGPT写代码？</summary>
+                        <div class="faq-answer"><p>最有效的方式是分步提问：先把你的需求描述清楚，然后把代码报错信息完整贴出来，让它一步步解决。比如：输入'我想写一个Python脚本实现批量重命名文件，但os.rename报错了'，把报错信息一起扔给它，它会给可运行的代码和解释。
+</p></div>
+                    </details>
+                </div>
 
-        {related_html}
+            </div>
 
-        {related_articles_html}
+        <div class="related-tools" id="relatedSection">
+            <h3>🔗 相关工具推荐</h3>
+            <div class="related-grid"><a href="/tools/claude/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">🎭</div>
+                <div style="font-weight:600;">Claude</div>
+                <div style="font-size:13px;color:#666;">AI对话</div>
+            </a>
+<a href="/tools/kimi/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">👨‍💻</div>
+                <div style="font-weight:600;">Kimi</div>
+                <div style="font-size:13px;color:#666;">AI对话</div>
+            </a>
+<a href="/tools/doubao/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">🤖</div>
+                <div style="font-weight:600;">豆包</div>
+                <div style="font-size:13px;color:#666;">AI对话</div>
+            </a>
+<a href="/tools/gemini/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">💬</div>
+                <div style="font-weight:600;">Gemini</div>
+                <div style="font-size:13px;color:#666;">AI对话</div>
+            </a>
+<a href="/tools/deepseek/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">💬</div>
+                <div style="font-weight:600;">DeepSeek</div>
+                <div style="font-size:13px;color:#666;">AI对话</div>
+            </a>
+</div>
+        </div>
+
+        <div class="related-tools">
+                <h3>📚 相关文章</h3>
+                <div class="related-grid"><a href="/articles/ai-translation-tools-2026-guide/index.html" class="related-card">
+                    <div style="font-weight:600;margin-bottom:4px;">📖 AI翻译工具推荐2026：8款AI翻译软件实测，哪款翻译最准</div>
+                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
+                </a>
+<a href="/articles/ai-writing-tools-2026-guide/index.html" class="related-card">
+                    <div style="font-weight:600;margin-bottom:4px;">📖 2026年AI写作工具推荐：10款免费好用的AI写作神器实测</div>
+                    <div style="font-size:13px;color:#666;">2026年4月2日</div>
+                </a>
+<a href="/articles/chatgpt-vs-claude-vs-gemini/index.html" class="related-card">
+                    <div style="font-weight:600;margin-bottom:4px;">📖 ChatGPT vs Claude vs Gemini：三大</div>
+                    <div style="font-size:13px;color:#666;">2026年3月21日</div>
+                </a>
+</div>
+            </div>
     </main>
 
     <footer class="footer">

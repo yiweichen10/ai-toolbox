@@ -18,9 +18,64 @@
     <meta name="twitter:description" content="DeepSeek完全使用指南，涵盖网页版、APP、API三种使用方式。从基础功能到进阶技巧，包括深度思考(R1)、联网搜索、文件上传、代码执行等核心功能的详细使用方法。2026年最新版本，持续更新。">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/deepseek-complete-guide-2026-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{breadcrumb_article_json}</script>
-    <script type="application/ld+json">{structured_data}</script>
-{BAIDU_TONGJI}
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.aitoolbox.hk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI对话",
+      "item": "https://www.aitoolbox.hk/category/ai-chat/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "DeepSeek完全使用指南：从入门到进阶，一文掌握DeepSeek所有技巧",
+      "item": "https://www.aitoolbox.hk/articles/deepseek-complete-guide-2026/"
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DeepSeek完全使用指南：从入门到进阶，一文掌握DeepSeek所有技巧",
+  "description": "DeepSeek完全使用指南，涵盖网页版、APP、API三种使用方式。从基础功能到进阶技巧，包括深度思考(R1)、联网搜索、文件上传、代码执行等核心功能的详细使用方法。2026年最新版本，持续更新。",
+  "datePublished": "2026年4月2日",
+  "dateModified": "2026年4月2日",
+  "author": {
+    "@type": "Organization",
+    "name": "AI工具宝箱"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI工具宝箱",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.aitoolbox.hk/images/logo.png"
+    }
+  },
+  "image": "https://www.aitoolbox.hk/images/og/deepseek-complete-guide-2026-og.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.aitoolbox.hk/articles/deepseek-complete-guide-2026/"
+  }
+}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </head>
 <body>
     <header class="header">
@@ -30,22 +85,318 @@
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <span>{escape_html(article.get('category', '文章'))}</span> &gt; <span>{escape_html(article['title'])[:20]}...</span>
+        <a href="/">首页</a> &gt; <span>AI对话</span> &gt; <span>DeepSeek完全使用指南：从入门到进...</span>
     </nav>
 
     <main class="article-container">
         <article class="article-body">
-            <h1 style="margin-bottom:16px;">{escape_html(article['title'])}</h1>
+            <h1 style="margin-bottom:16px;">DeepSeek完全使用指南：从入门到进阶，一文掌握DeepSeek所有技巧</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                {article.get('dateFull', article.get('date', ''))} · {escape_html(article.get('category', ''))}
+                2026年4月2日 · AI对话
             </div>
-            {infographic_html}
-            {content_html}
+            
+            <h2>前言</h2>
+
+<p>DeepSeek是2025-2026年最火的国产AI大模型。免费、开源、中文理解好——这三个标签让它迅速成为国内用户最多的AI助手之一。
+</p>
+
+<p>但很多用户只用DeepSeek做最基础的对话，就像买了一台跑车只用来买菜。DeepSeek有很多强大的功能——深度思考、联网搜索、文件上传、代码执行、图像理解——大部分人根本没用过。
+</p>
+
+<p>这篇文章是DeepSeek的<strong>完全使用指南</strong>，从注册到进阶技巧全部覆盖。无论你是新手还是老用户，都能在这篇文章里找到新东西。
+</p>
+
+<h2>一、三种使用方式</h2>
+
+<p>DeepSeek有三种使用方式，适合不同的场景：
+</p>
+<table><thead><tr><th>方式</th><th>访问方式</th><th>费用</th><th>适合谁</th></tr></thead><tbody><tr><td>网页版</td><td>chat.deepseek.com</td><td>免费</td><td>普通用户，日常对话和写作</td></tr><tr><td>APP</td><td>iOS/Android 下载</td><td>免费</td><td>移动端使用，语音对话</td></tr><tr><td>API</td><td>platform.deepseek.com</td><td>按量付费（非常便宜）</td><td>开发者，集成到自己的产品</td></tr></tbody></table>
+<p>网页版和APP的功能完全一样，区别只是使用平台。API则是给开发者调用的。
+</p>
+
+<h2>二、核心功能详解</h2>
+
+<h3>1. 普通对话（V3模型）</h3>
+
+<p>DeepSeek的V3模型是日常对话的主力。直接在对话框输入问题就行。
+</p>
+
+<p><strong>V3模型擅长</strong>：
+</p>
+<ul><li>中文问答和理解</li>
+<li>文本写作和润色</li>
+<li>代码编写和调试</li>
+<li>数学推理</li>
+<li>日常翻译</li>
+</ul>
+<p><strong>使用技巧</strong>：
+</p>
+<ul><li>说清楚你的需求。比如不要说「帮我写个文案」，而要说「帮我写一条200字的抖音带货文案，产品是保温杯，目标人群是上班族，语气活泼」</li>
+<li>善用「继续」指令。如果DeepSeek的回答被截断了，说「继续」就能接着写</li>
+<li>可以让它扮演特定角色。比如「你是一个资深的Python开发者，帮我review这段代码」</li>
+</ul>
+<h3>2. 深度思考（R1模型）</h3>
+
+<p>DeepSeek R1是DeepSeek的推理模型，专门处理复杂问题。点击对话框上方的「深度思考」按钮就能切换。
+</p>
+
+<p><strong>R1模型和V3的区别</strong>：
+</p>
+<ul><li>V3适合日常对话，响应快</li>
+<li>R1适合复杂推理，响应慢但质量高</li>
+<li>R1在数学、编程、逻辑推理上明显强于V3</li>
+<li>R1会展示思考过程，你可以看到它怎么一步步推导出答案</li>
+</ul>
+<p><strong>R1最适合的场景</strong>：
+</p>
+<ul><li>数学题（尤其是竞赛级难度）</li>
+<li>复杂代码bug排查</li>
+<li>逻辑推理题</li>
+<li>复杂决策分析（比如多因素对比）</li>
+</ul>
+<p><strong>注意</strong>：R1的响应时间比V3长3-5倍。简单问题用V3就够了，别浪费R1的算力。
+</p>
+
+<h3>3. 联网搜索</h3>
+
+<p>DeepSeek支持联网搜索，点击「联网搜索」开关即可。
+</p>
+
+<p><strong>联网搜索适合</strong>：
+</p>
+<ul><li>查询最新信息（新闻、价格、数据）</li>
+<li>事实核查</li>
+<li>获取实时数据</li>
+</ul>
+<p><strong>技巧</strong>：问DeepSeek问题时加上「请搜索最新信息」或「请联网查询」，效果比直接问好。DeepSeek会先搜索再回答，信息更准确。
+</p>
+
+<h3>4. 文件上传</h3>
+
+<p>DeepSeek支持上传多种格式的文件，包括：
+</p>
+<ul><li>文档：PDF、Word、TXT、Markdown</li>
+<li>代码：各种编程语言源码文件</li>
+<li>图片：JPG、PNG、GIF</li>
+<li>数据：CSV、Excel</li>
+<li>压缩包：ZIP、RAR（会解压后分析）</li>
+</ul>
+<p><strong>实际使用案例</strong>：
+</p>
+
+<p><strong>案例1：论文阅读</strong>
+上传一篇PDF论文，让DeepSeek：「请帮我总结这篇论文的核心观点、研究方法和主要结论」。比你自己读快10倍。
+</p>
+
+<p><strong>案例2：数据分析</strong>
+上传一个CSV文件，让DeepSeek：「请分析这个销售数据，找出销量TOP10的产品，并分析它们的共同特征」。DeepSeek会直接给出数据分析结果。
+</p>
+
+<p><strong>案例3：代码审查</strong>
+上传一个Python文件，让DeepSeek：「请review这段代码，找出潜在的bug和性能问题，并给出修复建议」。
+</p>
+
+<p><strong>文件大小限制</strong>：单次上传最大50MB。如果文件太大，可以先做精简再上传。
+</p>
+
+<h3>5. 代码执行</h3>
+
+<p>DeepSeek可以执行Python代码。在对话中让它写代码时，它可以直接运行代码并返回结果。
+</p>
+
+<p><strong>使用场景</strong>：
+</p>
+<ul><li>数据处理和可视化</li>
+<li>数学计算</li>
+<li>算法验证</li>
+<li>自动化脚本</li>
+</ul>
+<p><strong>技巧</strong>：上传一个数据文件（CSV），然后说「请用Python分析这个数据，画出趋势图」。DeepSeek会写代码、运行代码、返回图表结果。
+</p>
+
+<h2>三、高级使用技巧</h2>
+
+<h3>技巧1：用Markdown格式化输出</h3>
+
+<p>告诉DeepSeek你想要的输出格式：
+</p>
+
+<p>「请用表格形式列出5款AI编程工具的对比，包含名称、价格、优势、劣势」
+</p>
+
+<p>「请用Markdown格式写一篇技术文档，包含标题、子标题、代码块和注意事项」
+</p>
+
+<h3>技巧2：多轮对话上下文利用</h3>
+
+<p>DeepSeek支持多轮对话。你可以在一个对话窗口中连续提问，它会记住之前的上下文。
+</p>
+
+<p><strong>实用场景</strong>：
+</p>
+<ul><li>「我是一名Python初学者」→ 建立用户画像</li>
+<li>「帮我写一个爬虫程序」→ 基于初学者画像给出简单版本</li>
+<li>「能不能加上进度条」→ 在前一个代码基础上修改</li>
+<li>「运行报错了：XXX」→ 基于之前的代码给出修复建议</li>
+</ul>
+<h3>技巧3：让DeepSeek扮演不同角色</h3>
+
+<p>DeepSeek的角色扮演能力很强。试试这些：
+</p>
+
+<ul><li>「你是一个资深产品经理，帮我分析这个功能需求」</li>
+<li>「你是一个英语老师，帮我修改这段英文邮件」</li>
+<li>「你是一个面试官，对我进行前端开发的技术面试」</li>
+<li>「你是一个心理咨询师，我最近工作压力大...」</li>
+</ul>
+<h3>技巧4：利用DeepSeek做学习辅助</h3>
+
+<ul><li>「请用简单的话解释量子计算，就像在给一个10岁孩子讲」</li>
+<li>「请出10道关于线性代数的练习题，从简单到困难」</li>
+<li>「请帮我制定一个3个月的Python学习计划，我每天有1小时学习时间」</li>
+</ul>
+<h3>技巧5：文件分析的高效工作流</h3>
+
+<ul><li>上传一个文档：「请提取这个文档中的所有关键数据点」</li>
+<li>基于提取结果继续提问：「请基于这些数据写一份分析报告」</li>
+<li>进一步要求：「请把报告翻译成英文」</li>
+<li>最后：「请把报告格式化成正式邮件格式」</li>
+</ul>
+<p>一个文档，四轮对话，从数据分析到英文邮件全搞定。
+</p>
+
+<h2>四、DeepSeek API 开发指南</h2>
+
+<h3>API 价格（2026年4月）</h3>
+<table><thead><tr><th>模型</th><th>输入价格</th><th>输出价格</th><th>上下文窗口</th></tr></thead><tbody><tr><td>DeepSeek V3</td><td>¥1/百万tokens</td><td>¥2/百万tokens</td><td>128K</td></tr><tr><td>DeepSeek R1</td><td>¥4/百万tokens</td><td>¥16/百万tokens</td><td>64K</td></tr></tbody></table>
+<p>这个价格是什么概念？ChatGPT GPT-5.4的价格是DeepSeek V3的<strong>约50倍</strong>。DeepSeek的API是目前所有主流大模型中最便宜的。
+</p>
+
+<h3>快速接入示例（Python）</h3>
+
+<pre><code>from openai import OpenAI
+
+<p>client = OpenAI(
+    api_key="your-api-key",
+    base_url="https://api.deepseek.com"
+)
+</p>
+
+<p>response = client.chat.completions.create(
+    model="deepseek-chat",
+    messages=[
+        {"role": "system", "content": "你是一个专业的写作助手"},
+        {"role": "user", "content": "帮我写一篇关于AI工具的介绍文章"}
+    ],
+    max_tokens=2000,
+    temperature=0.7
+)
+</p>
+
+<p>print(response.choices[0].message.content)
+</code></pre>
+</p>
+
+<h3>API 调用技巧</h3>
+
+<ul><li><strong>控制 max_tokens</strong>：根据你的需求设置输出长度。普通对话1000-2000足够，长文写作设4000-8000</li>
+<li><strong>调整 temperature</strong>：0.3适合正式文档（输出稳定），0.7适合创意写作（有变化），1.0适合头脑风暴</li>
+<li><strong>使用 system prompt</strong>：在 system 消息中明确告诉模型你想要的风格和要求</li>
+</ul>
+<h2>五、DeepSeek 的局限和应对</h2>
+
+<h3>局限1：知识截止日期</h3>
+
+<p>DeepSeek的训练数据有截止日期。对于非常新的信息（最近几天的新闻），需要使用联网搜索功能。
+</p>
+
+<h3>局限2：复杂推理偶尔出错</h3>
+
+<p>即使是R1模型，在非常复杂的逻辑推理上也可能出错。建议：重要的问题让DeepSeek分步推理，你逐步验证每一步。
+</p>
+
+<h3>局限3：长文本生成可能出现重复</h3>
+
+<p>超过3000字的生成，DeepSeek可能会开始重复之前的内容。应对方法：分多次生成，每次指定不同的部分。
+</p>
+
+<h3>局限4：特定领域不够专业</h3>
+
+<p>对于非常专业的领域（医学诊断、法律意见、金融投资），DeepSeek的建议仅供参考，不能替代专业人士。
+</p>
+
+<h2>FAQ</h2>
+
+<p><strong>Q1：DeepSeek完全免费吗？有什么限制？</strong>
+A：网页版和APP完全免费，但有以下限制：每轮对话有token上限（约8000字输出）、高峰期可能有排队、API按量收费。对于绝大多数个人用户，免费版完全够用。
+</p>
+
+<p><strong>Q2：DeepSeek V3和R1怎么选？</strong>
+A：简单问题用V3（快、省资源），复杂推理用R1（慢但准确）。判断标准：如果你的问题需要「想一下」才能回答，用R1；如果可以直接回答，用V3。
+</p>
+
+<p><strong>Q3：DeepSeek和ChatGPT哪个好？</strong>
+A：中文场景下DeepSeek更好（免费、中文理解更强、速度快），英文场景和创意写作ChatGPT更好。建议两个都装，根据场景切换使用。
+</p>
+
+<p><strong>Q4：DeepSeek的数据安全吗？</strong>
+A：DeepSeek官方声明不会用用户的对话数据训练模型，对话记录只有你自己能看到。但对于极其敏感的商业数据，建议使用API自部署方案，数据不经过DeepSeek服务器。
+</p>
+
+<p><strong>Q5：DeepSeek能生成图片吗？</strong>
+A：目前DeepSeek的图片生成功能有限。如果需要AI绘画，建议使用Midjourney或DALL-E。DeepSeek的主要优势在文本理解和代码生成。
+</p>
+
+<p>关注<a href="https://www.aitoolbox.hk/tools/deepseek/" target="_blank" rel="noopener">AI工具宝箱</a>获取DeepSeek最新功能更新和使用技巧。
+</p>
         </article>
 
-        {related_html}
+        <div class="related-tools">
+            <h3>📖 相关文章</h3>
+            <div class="related-grid"><a href="/articles/ai-office-productivity-tools-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">2026年AI办公效率工具推荐：从写周报到做PPT，8款工具让工作效率翻倍</div>
+                <div style="font-size:13px;color:#666;">2026年4月2日</div>
+            </a>
+<a href="/articles/ai-translation-tools-2026-guide/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">AI翻译工具推荐2026：8款AI翻译软件实测，哪款翻译最准确</div>
+                <div style="font-size:13px;color:#666;">2026年4月2日</div>
+            </a>
+<a href="/articles/ai-writing-tools-2026-guide/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">2026年AI写作工具推荐：10款免费好用的AI写作神器实测</div>
+                <div style="font-size:13px;color:#666;">2026年4月2日</div>
+            </a>
+</div>
+        </div>
 
-        {related_tools_html}
+        <div class="related-tools">
+            <h3>🔧 相关工具</h3>
+            <div class="related-grid"><a href="/tools/chatgpt/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🟢</div>
+                    <div style="font-weight:600;">ChatGPT</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/midjourney/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🎨</div>
+                    <div style="font-weight:600;">Midjourney</div>
+                    <div style="font-size:13px;color:#666;">AI绘画</div>
+                </a>
+<a href="/tools/deepseek/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💬</div>
+                    <div style="font-weight:600;">DeepSeek</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/claude/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🎭</div>
+                    <div style="font-weight:600;">Claude</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/kimi/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">👨‍💻</div>
+                    <div style="font-weight:600;">Kimi</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+</div>
+        </div>
     </main>
 
     <footer class="footer">

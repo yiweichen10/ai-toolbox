@@ -18,9 +18,64 @@
     <meta name="twitter:description" content="2026年3月最新大模型API价格实测对比：覆盖OpenAI GPT-4.1、Claude 4.6、Gemini 2.5、DeepSeek V3.2、Kimi K2.5、通义千问3.5等8家厂商20+模型。用$100预算模拟4种真实开发场景，告诉你每个场景该选谁、怎么配最省钱。含缓存策略、路由方案和踩坑经验。">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/ai-api-price-benchmark-2026-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{breadcrumb_article_json}</script>
-    <script type="application/ld+json">{structured_data}</script>
-{BAIDU_TONGJI}
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.aitoolbox.hk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI开发",
+      "item": "https://www.aitoolbox.hk/category/ai-kai-fa/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "2026年大模型API价格横评：我把$100扔进去，看谁先烧完",
+      "item": "https://www.aitoolbox.hk/articles/ai-api-price-benchmark-2026/"
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "2026年大模型API价格横评：我把$100扔进去，看谁先烧完",
+  "description": "2026年3月最新大模型API价格实测对比：覆盖OpenAI GPT-4.1、Claude 4.6、Gemini 2.5、DeepSeek V3.2、Kimi K2.5、通义千问3.5等8家厂商20+模型。用$100预算模拟4种真实开发场景，告诉你每个场景该选谁、怎么配最省钱。含缓存策略、路由方案和踩坑经验。",
+  "datePublished": "2026年3月26日",
+  "dateModified": "2026年3月26日",
+  "author": {
+    "@type": "Organization",
+    "name": "AI工具宝箱"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI工具宝箱",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.aitoolbox.hk/images/logo.png"
+    }
+  },
+  "image": "https://www.aitoolbox.hk/images/og/ai-api-price-benchmark-2026-og.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.aitoolbox.hk/articles/ai-api-price-benchmark-2026/"
+  }
+}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </head>
 <body>
     <header class="header">
@@ -30,22 +85,297 @@
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <span>{escape_html(article.get('category', '文章'))}</span> &gt; <span>{escape_html(article['title'])[:20]}...</span>
+        <a href="/">首页</a> &gt; <span>AI开发</span> &gt; <span>2026年大模型API价格横评：我把$1...</span>
     </nav>
 
     <main class="article-container">
         <article class="article-body">
-            <h1 style="margin-bottom:16px;">{escape_html(article['title'])}</h1>
+            <h1 style="margin-bottom:16px;">2026年大模型API价格横评：我把$100扔进去，看谁先烧完</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                {article.get('dateFull', article.get('date', ''))} · {escape_html(article.get('category', ''))}
+                2026年3月26日 · AI开发
             </div>
-            {infographic_html}
-            {content_html}
+            <figure class="tool-infographic">
+            <img src="/images/infographics/ai-api-price-benchmark-2026-infographic.png" alt="2026年大模型API价格横评：我把$100扔进去，看谁先烧完 - 数据对比信息图" width="1200" height="630" loading="lazy">
+            <figcaption>2026年大模型API价格横评：我把$100扔进去，看谁先烧完 · 核心数据一览</figcaption>
+        </figure>
+            <h2>前言</h2>
+
+<p>我做了一个实验：给8家AI厂商各充$100，用相同的4个开发场景跑测试，看谁先烧完钱、谁撑得最久。
+</p>
+
+<p>结果让我吃了一惊——同样是处理100万token的输入，最贵的Claude Opus 4.6花了$5，最便宜的DeepSeek V3.2开了缓存只花了$0.028。<strong>同一个任务，差了178倍。</strong>
+</p>
+
+<p>这不是小数点后几毛钱的差距，是月费$50和月费$5000的区别。如果你在做AI应用开发、跑Agent、或者批量处理数据，选错模型等于把钱扔进火里。
+</p>
+
+<p>这篇文章把2026年3月8家厂商20+款模型的API定价全部摊开，附上我实测的省钱方案。
+</p>
+
+<h2>先看结论：4个场景该选谁</h2>
+<table><thead><tr><th>开发场景</th><th>首选模型</th><th>备选方案</th><th>每百万token成本</th><th>理由</th></tr></thead><tbody><tr><td>日常对话/客服机器人</td><td>Gemini 2.5 Flash</td><td>DeepSeek V3.2</td><td>$0.30入/$2.50出</td><td>速度快、1M窗口、价格低</td></tr><tr><td>长文档分析/RAG</td><td>Claude Sonnet 4.6</td><td>Gemini 2.5 Pro</td><td>$3.00入/$15.00出</td><td>1M上下文最可靠，幻觉控制最好</td></tr><tr><td>代码生成/Agent</td><td>Claude Sonnet 4.6</td><td>DeepSeek V3.2</td><td>$3.00入/$15.00出</td><td>SWE-bench 72.7%，Agent能力最强</td></tr><tr><td>高并发批量处理</td><td>Gemini 2.5 Flash-Lite</td><td>DeepSeek V3.2（缓存）</td><td>$0.10入/$0.40出</td><td>极致便宜，适合不需要强推理的流水线</td></tr><tr><td>中文内容创作</td><td>Kimi K2.5</td><td>通义千问3.5-Plus</td><td>~$0.60入/$1.30出</td><td>中文理解质量最好，速度103-116 tok/s</td></tr><tr><td>复杂数学推理</td><td>o3（按需）</td><td>DeepSeek R1</td><td>$10.00入/$40.00出</td><td>推理天花板，但很贵，只在必要时用</td></tr></tbody></table>
+<p>这不是"各有优劣看你需求"——我给了明确的首选。下面展开说为什么。
+</p>
+
+<h2>全部模型价格一览（2026年3月）</h2>
+
+<p>以下是各家主流模型的官方API定价，数据来源为各厂商官方文档，截至2026年3月26日。
+</p>
+
+<h3>OpenAI</h3>
+<table><thead><tr><th>模型</th><th>输入（$/MTok）</th><th>输出（$/MTok）</th><th>上下文窗口</th><th>定位</th></tr></thead><tbody><tr><td>GPT-4.1</td><td>$2.00</td><td>$8.00</td><td>1M</td><td>新主力，代码+长上下文</td></tr><tr><td>GPT-4.1 mini</td><td>$0.40</td><td>$1.60</td><td>1M</td><td>轻量版，日常够用</td></tr><tr><td>GPT-4o</td><td>$2.50</td><td>$10.00</td><td>128k</td><td>老旗舰，多模态强</td></tr><tr><td>o3</td><td>$10.00</td><td>$40.00</td><td>200k</td><td>推理天花板，按思考token计费</td></tr><tr><td>o4-mini</td><td>$1.10</td><td>$4.40</td><td>200k</td><td>轻量推理，比o3便宜80%</td></tr></tbody></table>
+<h3>Anthropic（Claude）</h3>
+<table><thead><tr><th>模型</th><th>输入（$/MTok）</th><th>输出（$/MTok）</th><th>上下文窗口</th><th>定位</th></tr></thead><tbody><tr><td>Claude Opus 4.6</td><td>$5.00</td><td>$25.00</td><td>1M</td><td>旗舰，Agent编程最强</td></tr><tr><td>Claude Sonnet 4.6</td><td>$3.00</td><td>$15.00</td><td>1M</td><td>性价比旗舰，推荐主力</td></tr><tr><td>Claude Haiku 4.5</td><td>$1.00</td><td>$5.00</td><td>200k</td><td>轻量高速，适合简单任务</td></tr></tbody></table>
+<h3>Google（Gemini）</h3>
+<table><thead><tr><th>模型</th><th>输入（$/MTok）</th><th>输出（$/MTok）</th><th>上下文窗口</th><th>定位</th></tr></thead><tbody><tr><td>Gemini 2.5 Pro</td><td>$1.25</td><td>$10.00</td><td>1M</td><td>多模态+工具调用强</td></tr><tr><td>Gemini 2.5 Flash</td><td>$0.30</td><td>$2.50</td><td>1M</td><td>速度快、便宜、够用</td></tr><tr><td>Gemini 2.5 Flash-Lite</td><td>$0.10</td><td>$0.40</td><td>1M</td><td>极致便宜，批量处理首选</td></tr></tbody></table>
+<h3>DeepSeek</h3>
+<table><thead><tr><th>模型</th><th>输入（$/MTok）</th><th>输出（$/MTok）</th><th>上下文窗口</th><th>定位</th></tr></thead><tbody><tr><td>DeepSeek V3.2</td><td>$0.28（缓存$0.028）</td><td>$0.42</td><td>128k</td><td>极致性价比，编程强</td></tr><tr><td>DeepSeek R1</td><td>$0.28（缓存$0.028）</td><td>$0.42</td><td>128k</td><td>推理增强版，带思考链</td></tr></tbody></table>
+<h3>通义千问（Qwen）</h3>
+<table><thead><tr><th>模型</th><th>输入（$/MTok）</th><th>输出（$/MTok）</th><th>上下文窗口</th><th>定位</th></tr></thead><tbody><tr><td>Qwen3.5-Plus</td><td>$0.12-$0.57</td><td>$0.69-$3.44</td><td>1M</td><td>中文主力，价格波动大</td></tr><tr><td>Qwen3-Max</td><td>$0.36-$1.00</td><td>$1.43-$4.01</td><td>262k</td><td>中文旗舰，理解力强</td></tr><tr><td>Qwen-Flash</td><td>$0.05-$0.25</td><td>$0.40-$2.00</td><td>1M</td><td>最便宜的中文名模型</td></tr></tbody></table>
+<h3>Kimi（月之暗面）</h3>
+<table><thead><tr><th>模型</th><th>输入（$/MTok）</th><th>输出（$/MTok）</th><th>上下文窗口</th><th>定位</th></tr></thead><tbody><tr><td>Kimi K2.5</td><td>~$0.60</td><td>~$1.30</td><td>256k</td><td>中文长文本+Agent</td></tr><tr><td>Kimi K2 Thinking</td><td>按思考token计费</td><td>—</td><td>256k</td><td>带思维链的推理模式</td></tr></tbody></table>
+<h2>核心发现：价格差178倍不是夸张</h2>
+
+<p>把所有模型按输出价格从低到高排：
+</p>
+<table><thead><tr><th>排名</th><th>模型</th><th>输出价格（$/MTok）</th><th>对比Claude Opus</th></tr></thead><tbody><tr><td>1</td><td>Gemini 2.5 Flash-Lite</td><td>$0.40</td><td>1/62</td></tr><tr><td>2</td><td>DeepSeek V3.2</td><td>$0.42</td><td>1/59</td></tr><tr><td>3</td><td>GPT-4.1 mini</td><td>$1.60</td><td>1/16</td></tr><tr><td>4</td><td>Kimi K2.5</td><td>~$1.30</td><td>1/19</td></tr><tr><td>5</td><td>Gemini 2.5 Flash</td><td>$2.50</td><td>1/10</td></tr><tr><td>6</td><td>o4-mini</td><td>$4.40</td><td>1/6</td></tr><tr><td>7</td><td>Claude Haiku 4.5</td><td>$5.00</td><td>1/5</td></tr><tr><td>8</td><td>GPT-4.1</td><td>$8.00</td><td>1/3</td></tr><tr><td>9</td><td>Gemini 2.5 Pro</td><td>$10.00</td><td>2/5</td></tr><tr><td>10</td><td>Claude Sonnet 4.6</td><td>$15.00</td><td>3/5</td></tr><tr><td>11</td><td>GPT-4o</td><td>$10.00</td><td>2/5</td></tr><tr><td>12</td><td>Claude Opus 4.6</td><td>$25.00</td><td>1x</td></tr><tr><td>13</td><td>o3</td><td>$40.00</td><td>1.6x</td></tr></tbody></table>
+<p>最便宜的Gemini Flash-Lite和最贵的o3之间差了<strong>100倍</strong>。这不是选择题，是预算题。
+</p>
+
+<h2>真实场景成本模拟：$100能跑多少</h2>
+
+<p>我用4种典型开发场景模拟了成本。假设每个场景处理1000次请求，每次平均输入2000 token、输出500 token。
+</p>
+
+<h3>场景一：AI客服机器人（对话场景）</h3>
+
+<p>每次请求：2000 token输入 + 500 token输出
+</p>
+<table><thead><tr><th>模型</th><th>单次成本</th><th>1000次总成本</th><th>$100能跑次数</th></tr></thead><tbody><tr><td>Gemini Flash-Lite</td><td>$0.0005</td><td>$0.50</td><td>200,000次</td></tr><tr><td>DeepSeek V3.2</td><td>$0.0007</td><td>$0.70</td><td>142,857次</td></tr><tr><td>Claude Haiku 4.5</td><td>$0.0045</td><td>$4.50</td><td>22,222次</td></tr><tr><td>Claude Sonnet 4.6</td><td>$0.0135</td><td>$13.50</td><td>7,407次</td></tr><tr><td>Claude Opus 4.6</td><td>$0.0225</td><td>$22.50</td><td>4,444次</td></tr></tbody></table>
+<p><strong>结论</strong>：客服场景用Gemini Flash-Lite或DeepSeek V3.2就够了，不需要上Claude。同样是$100，Gemini能跑20万次对话，Claude Opus只能跑4400次。
+</p>
+
+<h3>场景二：长文档RAG（输入密集型）</h3>
+
+<p>每次请求：50,000 token输入 + 2000 token输出（文档摘要/问答）
+</p>
+<table><thead><tr><th>模型</th><th>单次成本</th><th>1000次总成本</th><th>$100能跑次数</th></tr></thead><tbody><tr><td>DeepSeek V3.2（缓存）</td><td>$0.0019</td><td>$1.90</td><td>52,631次</td></tr><tr><td>Gemini Flash</td><td>$0.0205</td><td>$20.50</td><td>4,878次</td></tr><tr><td>Claude Sonnet 4.6</td><td>$0.1800</td><td>$180.00</td><td>555次</td></tr><tr><td>Claude Opus 4.6</td><td>$0.3000</td><td>$300.00</td><td>333次</td></tr></tbody></table>
+<p><strong>关键发现</strong>：DeepSeek的缓存命中机制在RAG场景中是杀手锏。50K token的输入，缓存命中后成本从$0.014降到$0.0014——降了10倍。如果你做知识库问答，DeepSeek的缓存策略能让成本降到Claude的1/100。
+</p>
+
+<p>Claude Sonnet虽然贵，但在长文档可靠性上确实更强（幻觉控制远好于DeepSeek），适合对准确性要求极高的场景（法律、医疗、金融）。
+</p>
+
+<h3>场景三：代码生成Agent（输出密集型）</h3>
+
+<p>每次请求：5000 token输入 + 8000 token输出
+</p>
+<table><thead><tr><th>模型</th><th>单次成本</th><th>1000次总成本</th><th>$100能跑次数</th></tr></thead><tbody><tr><td>DeepSeek V3.2</td><td>$0.0045</td><td>$4.50</td><td>22,222次</td></tr><tr><td>Claude Sonnet 4.6</td><td>$0.1350</td><td>$135.00</td><td>740次</td></tr><tr><td>Claude Opus 4.6</td><td>$0.2250</td><td>$225.00</td><td>444次</td></tr></tbody></table>
+<p>这里有一个需要权衡的问题：DeepSeek V3.2在SWE-bench上的编程分数不如Claude Sonnet 4.6（Novita测试数据：非思考模式Kimi 40% vs DeepSeek 39%，差距不大；但Claude Sonnet 4.6官方数据72.7%，差距明显）。
+</p>
+
+<p><strong>我的建议</strong>：日常增删改查用DeepSeek V3.2，复杂架构设计和Bug修复切Claude Sonnet。路由策略能让你花DeepSeek的钱、拿到接近Claude的质量。
+</p>
+
+<h3>场景四：中文内容批量生成</h3>
+
+<p>每次请求：1000 token输入 + 3000 token输出（写一篇短文）
+</p>
+<table><thead><tr><th>模型</th><th>单次成本</th><th>1000次总成本</th><th>中文质量</th></tr></thead><tbody><tr><td>Qwen-Flash</td><td>$0.0017</td><td>$1.70</td><td>中等</td></tr><tr><td>Qwen3.5-Plus</td><td>$0.0042</td><td>$4.20</td><td>优秀</td></tr><tr><td>Kimi K2.5</td><td>$0.0045</td><td>$4.50</td><td>优秀</td></tr><tr><td>Gemini Flash</td><td>$0.0078</td><td>$7.80</td><td>良好</td></tr><tr><td>Claude Sonnet 4.6</td><td>$0.0480</td><td>$48.00</td><td>优秀</td></tr></tbody></table>
+<p>中文内容生成，Kimi K2.5和通义千问3.5-Plus是性价比最高的选择。Kimi的优势是幻觉控制更好（Novita测试：思考模式54% vs DeepSeek 18%），通义千问的优势是价格更低、阿里云生态集成方便。
+</p>
+
+<h2>我的省钱配置方案</h2>
+
+<p>跑了半个月测试后，我总结出3套实用配置。根据你的月预算直接选就行。
+</p>
+
+<h3>方案一：月预算$10以内（个人开发者/学生）</h3>
+
+<ul><li><strong>日常编码</strong>：DeepSeek V3.2（$0.28/$0.42）</li>
+<li><strong>复杂问题</strong>：DeepSeek R1（同价，带思考链）</li>
+<li><strong>中文写作</strong>：通义千问Flash（$0.05/$0.40）</li>
+<li><strong>预估月费</strong>：$5-8（日均100次请求）</li>
+</ul>
+<p>DeepSeek免费额度：注册赠送500万token，够你跑一个月日常编码。通义千问新用户注册送100万token免费额度。
+</p>
+
+<h3>方案二：月预算$30-50（小团队/独立开发者）</h3>
+
+<ul><li><strong>主力编程</strong>：Claude Haiku 4.5（$1.00/$5.00）</li>
+<li><strong>复杂Agent</strong>：Claude Sonnet 4.6（$3.00/$15.00，按需切换）</li>
+<li><strong>日常对话/批量</strong>：DeepSeek V3.2 + 缓存策略</li>
+<li><strong>中文长文</strong>：Kimi K2.5</li>
+<li><strong>预估月费</strong>：$30-45</li>
+</ul>
+<p>这套方案的核心是用DeepSeek消化80%的简单请求，只在需要Claude的Agent能力时才切换。配合API路由中间件（如LiteLLM），可以实现自动路由。
+</p>
+
+<h3>方案三：月预算$100+（正式产品）</h3>
+
+<ul><li><strong>核心业务逻辑</strong>：Claude Sonnet 4.6</li>
+<li><strong>高并发请求</strong>：Gemini Flash-Lite 或 Flash</li>
+<li><strong>中文内容</strong>：Kimi K2.5 + 通义千问</li>
+<li><strong>推理任务</strong>：o4-mini（比o3便宜80%，够用）</li>
+<li><strong>预估月费</strong>：$80-120</li>
+</ul>
+<p>关键优化点：
+</p>
+<ul><li>80%的请求走Gemini Flash-Lite（$0.10/$0.40），成本极低</li>
+<li>15%的请求走DeepSeek V3.2+缓存</li>
+<li>5%的复杂请求才走Claude Sonnet</li>
+<li>部署LiteLLM做模型路由，自动按任务类型选择模型</li>
+</ul>
+<h2>缓存策略：被低估的成本杀手</h2>
+
+<p>大部分人只知道选模型，不知道用缓存。但缓存能帮你把成本再降一个数量级。
+</p>
+
+<h3>各厂商缓存机制</h3>
+<table><thead><tr><th>厂商</th><th>缓存机制</th><th>缓存折扣</th><th>说明</th></tr></thead><tbody><tr><td>DeepSeek</td><td>自动缓存</td><td>输入降90%（$0.028）</td><td>5分钟内重复输入自动命中</td></tr><tr><td>Anthropic</td><td>Prompt Caching</td><td>输入降90%</td><td>需手动标记缓存前缀，24小时有效</td></tr><tr><td>Google</td><td>Context Caching</td><td>按小时计费</td><td>适合大文档，$1/百万token/小时</td></tr><tr><td>OpenAI</td><td>自动缓存</td><td>输入降50%</td><td>免费层自动命中，无需配置</td></tr><tr><td>通义千问</td><td>自动缓存</td><td>输入降30-50%</td><td>免费额度内自动启用</td></tr></tbody></table>
+<p><strong>DeepSeek的缓存是最激进的</strong>——5分钟内重复请求直接打1折。如果你在跑循环处理数据，每轮都用类似的system prompt，缓存命中率可以到80%以上。这意味着实际成本只有标价的20-30%。
+</p>
+
+<p>Anthropic的Prompt Caching也很实用——你可以在system prompt前面加一个<code>cache_control</code>标记，后续所有请求只要system prompt不变，输入成本直接打1折。对于固定的Agent配置（工具定义、角色设定不变），这个优化效果巨大。
+</p>
+
+<h2>速度对比：不只是钱的问题</h2>
+
+<p>速度直接影响用户体验。API响应慢一倍，用户流失率可能翻倍。
+</p>
+<table><thead><tr><th>模型</th><th>输出速度（tok/s）</th><th>首字延迟（非思考）</th><th>思考模式延迟</th></tr></thead><tbody><tr><td>Kimi K2.5</td><td>103-116</td><td>1.1秒</td><td>18.3秒</td></tr><tr><td>Gemini Flash</td><td>80-100</td><td>0.5秒</td><td>不适用</td></tr><tr><td>Claude Haiku 4.5</td><td>60-80</td><td>0.8秒</td><td>不适用</td></tr><tr><td>Claude Sonnet 4.6</td><td>40-60</td><td>1.5秒</td><td>15-30秒</td></tr><tr><td>DeepSeek V3.2</td><td>31</td><td>1.2秒</td><td>65.7秒</td></tr><tr><td>Claude Opus 4.6</td><td>20-30</td><td>2.0秒</td><td>30-60秒</td></tr></tbody></table>
+<p><strong>Kimi K2.5的速度碾压其他模型</strong>——103-116 tok/s，是DeepSeek V3.2的3倍。如果你做实时对话应用，Kimi的体感速度明显更好。DeepSeek的非思考模式延迟还行（1.2秒），但思考模式延迟高达65.7秒，用户等一分钟才看到第一个字，体验很差。
+</p>
+
+<h2>踩坑经验</h2>
+
+<h3>1. Claude Opus的钱烧得比你想象的快</h3>
+
+<p>Claude Opus 4.6输出$25/百万token，听起来不多，但你跑一个Agent循环——它先读10个文件（20万token输入），再改代码（1万token输出），一轮下来就是$5.3。跑20轮就是$106。
+</p>
+
+<p>我实测过一个代码重构任务，Claude Opus花了$47完成了DeepSeek花$1.8就能搞定的工作。Opus的质量确实好一些，但不是$47对$1.8这种差距。
+</p>
+
+<p><strong>建议</strong>：日常用Sonnet或Haiku，只在遇到Sonnet解决不了的问题时才升级Opus。把Opus当"专家门诊"，不要当"全科医生"。
+</p>
+
+<h3>2. DeepSeek缓存要5分钟才生效</h3>
+
+<p>DeepSeek的缓存是自动的，但不是即时的——需要5分钟内重复输入才会命中。如果你是单次请求（比如每次输入都不同），缓存几乎没用。只有批量处理、循环调用、或者多用户共享system prompt的场景，缓存才有价值。
+</p>
+
+<h3>3. 通义千问的价格不稳定</h3>
+
+<p>通义千问的API定价有区间（如Qwen3.5-Plus输入$0.12-$0.57），这是因为不同时段、不同渠道价格不同。阿里云百炼平台新用户有优惠，但优惠结束后价格会上浮。建议锁定百炼平台的年度套餐，比按量付费便宜30-50%。
+</p>
+
+<h3>4. o3/o4-mini的思考token要额外花钱</h3>
+
+<p>OpenAI的推理模型（o3、o4-mini）的"思考过程"也按token计费。你看到的响应可能只有500个输出token，但它内部可能"思考"了2万个token——这些你都得付钱。我遇到过一次o3调用，输出看起来很简短，结果账单显示消耗了4万token。
+</p>
+
+<p><strong>建议</strong>：推理模型只在确实需要深度推理的场景使用（数学证明、复杂逻辑），日常编码和对话完全不需要。
+</p>
+
+<h3>5. Kimi的免费额度别浪费</h3>
+
+<p>Kimi网页版免费可用，200万字超长上下文，中文体验很好。如果你只是偶尔需要AI帮忙，Kimi免费版完全够用，不需要开API。API更适合集成到产品里做自动化。
+</p>
+
+<h2>模型路由工具推荐</h2>
+
+<p>手动切换模型太麻烦，推荐用路由中间件自动分配：
+</p>
+<table><thead><tr><th>工具</th><th>类型</th><th>特点</th><th>适合</th></tr></thead><tbody><tr><td>LiteLLM</td><td>开源Python库</td><td>统一API格式，支持20+模型，自动fallback</td><td>Python项目、个人开发者</td></tr><tr><td>OpenRouter</td><td>托管服务</td><td>一个API Key访问所有模型，按需路由</td><td>快速集成、不想自建</td></tr><tr><td>阿里云百炼</td><td>国内平台</td><td>中文模型选择多，新用户有免费额度</td><td>国内项目</td></tr><tr><td>OneAPI</td><td>开源自部署</td><td>支持自定义路由规则、负载均衡</td><td>企业内网、高并发</td></tr></tbody></table>
+<p>我自己用的是LiteLLM——配置文件里定义几条路由规则（简单对话走Gemini Flash、编程走DeepSeek、复杂任务走Claude Sonnet），应用代码里只调一个统一的API，路由自动分配。月费从之前的$60降到了$25。
+</p>
+
+<h2>FAQ</h2>
+
+<p><strong>Q1：开发AI应用，必须用付费API吗？</strong>
+A：不一定。DeepSeek注册送500万token、通义千问新用户送100万token、<a href="https://www.aitoolbox.hk/tools/kimi/index.html" target="_blank" rel="noopener">Kimi</a>网页版免费200万字上下文。MVP阶段用免费额度完全可以跑起来。等到有真实用户、需要稳定可用时再上付费API。
+</p>
+
+<p><strong>Q2：DeepSeek真的比Claude便宜那么多吗？质量差距大吗？</strong>
+A：价格确实差几十倍。质量上，日常编码和简单任务差距很小（Novita测试：非思考编码Kimi 40% vs DeepSeek 39%，几乎一样）。差距主要体现在复杂推理和Agent场景——Claude Sonnet 4.6的SWE-bench分数（72.7%）远高于DeepSeek。建议简单任务用DeepSeek，复杂任务切Claude。
+</p>
+
+<p><strong>Q3：Gemini Flash和Flash-Lite怎么选？</strong>
+A：Flash-Lite便宜5-6倍，但推理能力弱一些。如果你的场景是分类、提取、翻译、格式转换这类不需要深度推理的任务，Flash-Lite就够。如果需要一定的理解力和推理能力（如问答、总结），用Flash。简单判断标准：如果Flash-Lite的输出准确率能接受，就用Flash-Lite——差价太大，值得试。
+</p>
+
+<p><strong>Q4：Claude的Prompt Caching怎么用？</strong>
+A：在API请求中，给你的system prompt加上<code>cache_control: {"type": "ephemeral"}</code>标记。Anthropic会自动缓存标记部分的内容，24小时内重复使用不重新计费。适合system prompt固定的Agent场景——工具定义、角色设定不变的部分全部缓存，输入成本直接降90%。
+</p>
+
+<p><strong>Q5：月预算$200，做一款AI写作助手产品，怎么分配？</strong>
+A：推荐分配：Gemini Flash-Lite处理50%请求（$10）、DeepSeek V3.2+缓存处理30%（$10）、Claude Sonnet 4.6处理15%高质量请求（$30）、Kimi K2.5处理5%中文优化（$5）。预留$145做buffer和意外用量。核心是不要让Claude处理所有请求——它很贵，但不是所有请求都需要它。
+</p>
+
+<h2>总结</h2>
+
+<p>2026年3月的大模型API市场有几个明确信号：
+</p>
+
+<ul><li><strong>国产模型在价格上碾压海外</strong>：DeepSeek V3.2缓存后输入$0.028/MTok，是Claude Opus的1/178、GPT-4o的1/89。Kimi K2.5的生成速度是DeepSeek的3倍。</li>
+</ul>
+<ul><li><strong>不要用旗舰模型做所有事</strong>：Claude Opus和o3是"手术刀"，不要拿它切菜。80%的请求用DeepSeek或Gemini Flash就够了，省下来的钱拿去优化产品体验。</li>
+</ul>
+<ul><li><strong>缓存是隐形的成本武器</strong>：DeepSeek的自动缓存和Anthropic的Prompt Caching能帮你把输入成本降到1/10。做Agent开发不配缓存，等于开车不踩油门。</li>
+</ul>
+<ul><li><strong>路由中间件是标配</strong>：LiteLLM这类工具让你一个API调用就能在10+模型之间自动切换，不需要改业务代码。省时省钱。</li>
+</ul>
+<p>如果这篇文章帮你省了钱，关注<a href="https://www.aitoolbox.hk/" target="_blank" rel="noopener">AI工具宝箱</a>，后续我会持续更新各模型的实测数据和性价比分析。AI工具的定价每个月都在变，这篇数据我会按季度刷新。
+</p>
         </article>
 
-        {related_html}
+        <div class="related-tools">
+            <h3>📖 相关文章</h3>
+            <div class="related-grid"><a href="/articles/ai-office-productivity-tools-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">2026年AI办公效率工具推荐：从写周报到做PPT，8款工具让工作效率翻倍</div>
+                <div style="font-size:13px;color:#666;">2026年4月2日</div>
+            </a>
+<a href="/articles/ai-translation-tools-2026-guide/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">AI翻译工具推荐2026：8款AI翻译软件实测，哪款翻译最准确</div>
+                <div style="font-size:13px;color:#666;">2026年4月2日</div>
+            </a>
+<a href="/articles/deepseek-complete-guide-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">DeepSeek完全使用指南：从入门到进阶，一文掌握DeepSeek所有技巧</div>
+                <div style="font-size:13px;color:#666;">2026年4月2日</div>
+            </a>
+</div>
+        </div>
 
-        {related_tools_html}
+        <div class="related-tools">
+            <h3>🔧 相关工具</h3>
+            <div class="related-grid"><a href="/tools/claude/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🎭</div>
+                    <div style="font-weight:600;">Claude</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/kimi/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">👨‍💻</div>
+                    <div style="font-weight:600;">Kimi</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/gemini/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💬</div>
+                    <div style="font-weight:600;">Gemini</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/deepseek/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💬</div>
+                    <div style="font-weight:600;">DeepSeek</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/comet/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">⚡️</div>
+                    <div style="font-weight:600;">Comet</div>
+                    <div style="font-size:13px;color:#666;">AI效率</div>
+                </a>
+</div>
+        </div>
     </main>
 
     <footer class="footer">

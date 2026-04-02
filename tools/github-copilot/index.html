@@ -13,10 +13,60 @@
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/github-copilot/">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/github-copilot-og.png">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{breadcrumb_json}</script>
-    <script type="application/ld+json">{structured_data}</script>
-    {faq_page_schema}
-{BAIDU_TONGJI}
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.aitoolbox.hk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI编程",
+      "item": "https://www.aitoolbox.hk/category/ai-coding/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "GitHub Copilot",
+      "item": "https://www.aitoolbox.hk/tools/github-copilot/"
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GitHub Copilot",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "VS Code / JetBrains / Neovim",
+  "description": "AI编程助手，集成在VS Code等编辑器中，自动补全代码、生成函数、修复bug，支持50+编程语言，编程效率提升显著。",
+  "datePublished": "2026-04-02",
+  "dateModified": "2026-04-02",
+  "offers": {
+    "@type": "Offer",
+    "price": "免费个人版+Business $19/月",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "ratingCount": "6.80000"
+  }
+}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "GitHub Copilot和Cursor哪个好？", "acceptedAnswer": {"@type": "Answer", "text": "Cursor是独立编辑器，AI能力更深（支持项目级上下文），体验更沉浸。GitHub Copilot是VS Code插件，轻量灵活，可以配合你现有的VS Code环境。重度编程推荐Cursor，想在VS Code里轻度辅助推荐Copilot。"}}, {"@type": "Question", "name": "GitHub Copilot有免费版吗？", "acceptedAnswer": {"@type": "Answer", "text": "GitHub Copilot对开源项目维护者、学生和认证的教育用户免费。普通用户$10/月或$100/年。企业版$39/月。相比Cursor的$20/月，Copilot价格更低。"}}, {"@type": "Question", "name": "如何在VS Code里启用GitHub Copilot？", "acceptedAnswer": {"@type": "Answer", "text": "1）安装VS Code；2）安装GitHub Copilot扩展；3）登录GitHub账号授权；4）开始编码时，Copilot会自动给出代码补全建议，按Tab键采纳，按Esc拒绝。支持Python、JavaScript、TypeScript、Go、Java等主流语言。"}}]}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </head>
 <body>
     <header class="header">
@@ -26,45 +76,176 @@
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
+        <a href="/">首页</a> &gt; <a href="/category/ai-coding/">AI编程</a> &gt; <span>GitHub Copilot</span>
     </nav>
 
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
+                <div class="tool-icon-lg" style="background:#3178c6;">💻</div>
                 <div class="tool-header-info">
-                    <h2>{escape_html(tool['name'])}{badge_html}</h2>
-                    <p class="subtitle">{escape_html(tool['description'])}</p>
-                    <div class="rating-bar">{tool['rating']} <span style="font-size:14px;color:#999;">({tool.get('visits', '0')}浏览)</span></div>
+                    <h2>GitHub Copilot <span class="badge" style="background:#ff4444;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">HOT</span></h2>
+                    <p class="subtitle">AI编程助手，集成在VS Code等编辑器中，自动补全代码、生成函数、修复bug，支持50+编程语言，编程效率提升显著。</p>
+                    <div class="rating-bar">⭐ 4.7 <span style="font-size:14px;color:#999;">(6.8万浏览)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>官网</strong>：{tool['url'].replace('https://', '')}</div>
-                <div class="tool-meta-item">💰 <strong>价格</strong>：{tool.get('price', '')}</div>
-                {platform_html}
-                <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：github.com/features/copilot</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：免费个人版+Business $19/月</div>
+                <div class="tool-meta-item">📦 <strong>平台</strong>：VS Code / JetBrains / Neovim</div>
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI编程</div>
             </div>
             <div class="action-bar">
-                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://github.com/features/copilot" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
-        {features_html}
+        <div class="features-grid"><div class="feature-item">代码补全</div>
+<div class="feature-item">Chat问答</div>
+<div class="feature-item">代码解释</div>
+<div class="feature-item">单元测试生成</div>
+<div class="feature-item">CLI助手</div>
+<div class="feature-item">PR摘要</div>
+</div>
 
         <article class="article-body">
-            {content_html}
+            <h2>GitHub Copilot 是什么？</h2>
+
+<p>GitHub Copilot是由GitHub（Microsoft）推出的AI编程助手，深度集成在VS Code、JetBrains、Neovim等主流编辑器中。它能够理解代码上下文，自动补全代码、生成函数、修复bug，支持50+编程语言。
+</p>
+
+<p>2026年，Copilot推出了免费个人版，大幅降低了使用门槛，成为全球最广泛使用的AI编程工具。
+</p>
+
+<h2>核心功能</h2>
+
+<ul><li><strong>代码补全</strong>：实时代码建议，按Tab即可接受</li>
+<li><strong>Chat问答</strong>：在编辑器中直接与AI对话编程问题</li>
+<li><strong>代码解释</strong>：选中代码，AI自动解释其功能</li>
+<li><strong>单元测试生成</strong>：自动为函数生成测试用例</li>
+<li><strong>CLI助手</strong>：在终端中用自然语言生成命令</li>
+<li><strong>PR摘要</strong>：自动生成Pull Request摘要</li>
+</ul>
+<h2>版本对比</h2>
+<table><thead><tr><th>方案</th><th>价格</th><th>特点</th></tr></thead><tbody><tr><td>免费个人版</td><td>$0</td><td>有限补全+Chat</td></tr><tr><td>Individual</td><td>$10/月</td><td>完整补全+Chat</td></tr><tr><td>Business</td><td>$19/月</td><td>企业管理+策略</td></tr><tr><td>Enterprise</td><td>$39/月</td><td>高级安全+合规</td></tr></tbody></table>
+<h2>使用技巧</h2>
+
+<ul><li><strong>写注释触发补全</strong>：先写函数注释，Copilot会根据注释生成代码。</li>
+<li><strong>Tab快速接受</strong>：多按Tab，让Copilot自动完成更多代码。</li>
+<li><strong>Chat提问</strong>：遇到问题直接在编辑器中问Copilot。</li>
+<li><strong>代码解释</strong>：看不懂的代码选中后让Copilot解释。</li>
+<li><strong>测试生成</strong>：写完函数后让Copilot生成测试用例。</li>
+</ul>
+<h2>适合人群</h2>
+
+<p>GitHub Copilot适合所有程序员，尤其是已经在使用VS Code或JetBrains的开发者。免费版已经能满足基本需求，是入门AI编程的最佳选择。
+</p>
+<h3>总结</h3>
+
+<p>GitHub Copilot 是 AI编程 领域中一款不错的 AI 工具。AI编程助手，集成在VS Code等编辑器中，自动补全代码、生成函数、修复bug，支持50+编程语言，编程效率提升显著。 从功能完整性来看，它覆盖了核心使用场景。
+</p>
+
+<p><strong>快速上手建议：</strong>
+</p>
+<ul><li>访问官网 github.com/features/copilot 注册账号</li>
+<li>先使用免费版本 了解核心功能</li>
+<li>参考官方文档和教程加速学习</li>
+<li>加入用户社区获取使用技巧和最佳实践</li>
+</ul>
+<p><strong>价格参考：</strong> 免费个人版+Business $19/月
+<strong>支持平台：</strong> VS Code / JetBrains / Neovim
+</p>
+
         </article>
 
-        {infographic_html}
+        <figure class="tool-infographic">
+            <img src="/images/infographics/github-copilot-infographic.png" alt="GitHub Copilot功能亮点信息图" width="1200" height="630" loading="lazy">
+            <figcaption>GitHub Copilot 核心功能一览</figcaption>
+        </figure>
 
-        {pros_cons_html}
+        <div class="pros-cons">
+            <div class="pros">
+                <h4>👍 优点</h4>
+                <ul><li>编辑器集成最好</li><li>代码补全速度快</li><li>支持50+编程语言</li><li>GitHub生态深度整合</li><li>免费个人版</li></ul>
+            </div>
+            <div class="cons">
+                <h4>👎 缺点</h4>
+                <ul><li>付费完整版较贵</li><li>偶有错误代码</li><li>理解项目上下文有限</li><li>Copilot+额外付费</li></ul>
+            </div>
+        </div>
 
-        {faq_html}
+        <div class="faq-section">
+                <h3>❓ 常见问题</h3>
+                <div class="faq-item">
+                    <details>
+                        <summary>GitHub Copilot和Cursor哪个好？</summary>
+                        <div class="faq-answer"><p>Cursor是独立编辑器，AI能力更深（支持项目级上下文），体验更沉浸。GitHub Copilot是VS Code插件，轻量灵活，可以配合你现有的VS Code环境。重度编程推荐Cursor，想在VS Code里轻度辅助推荐Copilot。
+</p></div>
+                    </details>
+                </div>
+<div class="faq-item">
+                    <details>
+                        <summary>GitHub Copilot有免费版吗？</summary>
+                        <div class="faq-answer"><p>GitHub Copilot对开源项目维护者、学生和认证的教育用户免费。普通用户$10/月或$100/年。企业版$39/月。相比Cursor的$20/月，Copilot价格更低。
+</p></div>
+                    </details>
+                </div>
+<div class="faq-item">
+                    <details>
+                        <summary>如何在VS Code里启用GitHub Copilot？</summary>
+                        <div class="faq-answer"><p>1）安装VS Code；2）安装GitHub Copilot扩展；3）登录GitHub账号授权；4）开始编码时，Copilot会自动给出代码补全建议，按Tab键采纳，按Esc拒绝。支持Python、JavaScript、TypeScript、Go、Java等主流语言。
+</p></div>
+                    </details>
+                </div>
 
-        {related_html}
+            </div>
 
-        {related_articles_html}
+        <div class="related-tools" id="relatedSection">
+            <h3>🔗 相关工具推荐</h3>
+            <div class="related-grid"><a href="/tools/chatgpt/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">🟢</div>
+                <div style="font-weight:600;">ChatGPT</div>
+                <div style="font-size:13px;color:#666;">AI对话</div>
+            </a>
+<a href="/tools/cursor/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">⬛</div>
+                <div style="font-weight:600;">Cursor</div>
+                <div style="font-size:13px;color:#666;">AI编程</div>
+            </a>
+<a href="/tools/replit-ai/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                <div style="font-weight:600;">Replit AI</div>
+                <div style="font-size:13px;color:#666;">AI编程</div>
+            </a>
+<a href="/tools/lovable/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                <div style="font-weight:600;">Lovable</div>
+                <div style="font-size:13px;color:#666;">AI编程</div>
+            </a>
+<a href="/tools/claude-code/index.html" class="related-card">
+                <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                <div style="font-weight:600;">Claude Code</div>
+                <div style="font-size:13px;color:#666;">AI编程</div>
+            </a>
+</div>
+        </div>
+
+        <div class="related-tools">
+                <h3>📚 相关文章</h3>
+                <div class="related-grid"><a href="/articles/cursor-alternatives-2026-test/index.html" class="related-card">
+                    <div style="font-weight:600;margin-bottom:4px;">📖 Cursor收费后，这7款AI编程工具谁值得用？（2026实</div>
+                    <div style="font-size:13px;color:#666;">2026年3月24日</div>
+                </a>
+<a href="/articles/cursor-vs-copilot-vs-windsurf/index.html" class="related-card">
+                    <div style="font-weight:600;margin-bottom:4px;">📖 AI编程工具评测：Cursor vs GitHub Copi</div>
+                    <div style="font-size:13px;color:#666;">2026年3月19日</div>
+                </a>
+<a href="/articles/cursor-vs-copilot-vs-windsurf-2026/index.html" class="related-card">
+                    <div style="font-weight:600;margin-bottom:4px;">📖 Cursor vs GitHub Copilot vs Wi</div>
+                    <div style="font-size:13px;color:#666;"></div>
+                </a>
+</div>
+            </div>
     </main>
 
     <footer class="footer">
