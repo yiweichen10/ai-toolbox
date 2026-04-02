@@ -955,6 +955,17 @@ def build_index_page(tools, articles):
     html = re.sub(r'每日更新 · 已收录 \d+\+ 工具', f'每日更新 · {count_text}', html)
     html = re.sub(r'每日更新 · 收录工具 持续更新', f'每日更新 · {count_text}', html)
 
+    # 动态替换 stats 区域数据（精选工具数量 + 分类数量）
+    cat_stats = get_category_stats(tools)
+    cat_count = len(cat_stats)
+    if all_tools_count > 100:
+        tool_stat_text = f'{all_tools_count // 100 * 100}+'
+    else:
+        tool_stat_text = str(all_tools_count)
+    html = re.sub(r'<div class="num">20\+</div>', f'<div class="num">{tool_stat_text}</div>', html)
+    html = re.sub(r'<div class="label">精选工具</div>', '<div class="label">精选工具</div>', html)
+    html = re.sub(r'<div class="num">12</div>(?=\s*<div class="label">工具分类</div>)', f'<div class="num">{cat_count}</div>', html)
+
     # 替换内容（replace_between_tags 通过 div 嵌套深度精确匹配，不会破坏 HTML 结构）
     html = replace_between_tags(html, '<div class="tools-grid" id="toolsGrid">', tools_html)
     html = re.sub(r'(<ul id="articleList">)[\s\S]*?(</ul>)', lambda m: m.group(1) + '\n' + articles_html + '                    </ul>', html)
@@ -1020,6 +1031,10 @@ document.addEventListener("DOMContentLoaded",function(){
 });
 </script>
 '''
+    # 先清理已存在的所有返回顶部相关内联脚本（防止重复注入）
+    html = re.sub(r'<script>\s*// 返回顶部按钮[\s\S]*?</script>\s*', '', html)
+    html = re.sub(r'<script>\s*\(function\(\)\{\s*var b=document\.getElementById\("backToTop"\)[\s\S]*?\}\)\(\);\s*</script>\s*', '', html)
+    # 注入一次兜底脚本（在 main.js 之前）
     html = html.replace('<script src="/js/main.js"></script>', BACK_TO_TOP_FAILSAFE + '<script src="/js/main.js"></script>')
 
     return html
