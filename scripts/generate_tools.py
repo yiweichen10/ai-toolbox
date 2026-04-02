@@ -11,6 +11,7 @@
 
 import json
 import os
+import re
 import sys
 import time
 import argparse
@@ -258,6 +259,16 @@ def main():
         print(f"[{i}/{len(tool_names)}]", end="")
         tool_data = generate_tool(name, existing_names, all_categories)
         if tool_data:
+            # 校验slug必须是小写英文+数字+短横线，禁止中文
+            slug = tool_data.get("slug", "")
+            if not re.match(r'^[a-z0-9][a-z0-9\-]*[a-z0-9]$', slug) or len(slug) < 2:
+                # 自动生成拼音/英文slug fallback
+                fallback = re.sub(r'[^a-zA-Z0-9\s]', '', tool_data["name"]).strip().lower()
+                fallback = re.sub(r'\s+', '-', fallback)
+                if not re.match(r'^[a-z0-9][a-z0-9\-]*[a-z0-9]$', fallback):
+                    fallback = f"tool-{i}"
+                print(f"  ⚠️ slug \"{slug}\" 包含非英文字符，已自动修正为 \"{fallback}\"")
+                tool_data["slug"] = fallback
             if tool_data["slug"] in existing_slugs:
                 tool_data["slug"] = tool_data["slug"] + "-2"
             generated.append(tool_data)

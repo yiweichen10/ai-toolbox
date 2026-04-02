@@ -1097,3 +1097,71 @@ body {
     font-size: 13px;
   }
 }
+
+/* ========== 返回顶部按钮 ========== */
+#backToTop {
+  position: fixed;
+  right: 28px;
+  bottom: 36px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-gradient);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.35);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+  z-index: 999;
+  pointer-events: none;
+}
+#backToTop.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+#backToTop:hover {
+  box-shadow: 0 6px 24px rgba(79, 70, 229, 0.5);
+  transform: translateY(-2px);
+}
+#backToTop svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ========== 最新文章标题行 ========== */
+.sidebar-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f1f5f9;
+}
+.sidebar-card-header h4 {
+  font-size: 18px;
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.sidebar-more-link {
+  font-size: 13px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.sidebar-more-link:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
