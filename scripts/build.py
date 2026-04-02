@@ -11,7 +11,7 @@ BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="返回顶部">
     </svg>
 </button>
 <script>
-(function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});})();
+document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>'''
 
 from pypinyin import pinyin, Style
@@ -995,10 +995,11 @@ window.__REMAINING_TOOLS__ = {remaining_tools_json};
     </button>'''
         html = html.replace('</body>', BACK_TO_TOP_HTML + '\n</body>')
 
-    # 注入返回顶部内联兜底脚本（在 main.js 之前执行）
+    # 注入返回顶部内联兜底脚本（在 main.js 之前，按钮之后执行）
+    # 注意：按钮可能在 main.js 引用之后，所以用 DOMContentLoaded 确保 DOM 就绪
     BACK_TO_TOP_FAILSAFE = '''<script>
-// 返回顶部按钮 - 内联兜底版本
-(function(){
+// 返回顶部按钮 - 内联兜底版本（DOMContentLoaded 确保按钮已存在）
+document.addEventListener("DOMContentLoaded",function(){
     var b=document.getElementById("backToTop");
     if(!b)return;
     var s=function(){
@@ -1008,7 +1009,7 @@ window.__REMAINING_TOOLS__ = {remaining_tools_json};
     window.addEventListener("scroll",s,{passive:true});
     s();
     b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
-})();
+});
 </script>
 '''
     html = html.replace('<script src="/js/main.js"></script>', BACK_TO_TOP_FAILSAFE + '<script src="/js/main.js"></script>')
