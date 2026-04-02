@@ -32,3 +32,4 @@
 - publish_new_tools.py 已支持自动 git commit + push，Vercel 会自动部署
 - 所有 URL 使用 clean URL 格式（不含 index.html），sitemap/canonical/og:url 统一规范
 - **URL合规红线**：tools.json中所有工具的url字段必须是真实可访问的官网地址，禁止使用 `www.工具名.com` 格式的猜测URL。添加新工具时必须通过搜索引擎确认真实官网
+- **slug合规红线**：所有工具的slug字段必须是纯小写英文+数字+短横线（如 `tencent-yuanbao`），禁止包含中文字符。generate_tools.py 已增加正则校验，非英文slug会自动fallback

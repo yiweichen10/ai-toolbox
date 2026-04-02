@@ -542,6 +542,12 @@ body {
   padding-bottom: 12px;
   border-bottom: 2px solid #f1f5f9;
 }
+/* 当 h4 在 sidebar-card-header 内时，由 header 承担分割线，h4 本身不加 */
+.sidebar-card-header h4 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
 .sidebar-card ul { list-style: none; }
 .sidebar-card li {
   padding: 12px 0;
@@ -1151,7 +1157,7 @@ body {
   border: none;
 }
 .sidebar-more-link {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 500;
