@@ -2,13 +2,39 @@ import json
 import os
 import random
 import subprocess
+import sys
 from datetime import datetime
 
 # 定义文件路径
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
+IMAGES_DIR = os.path.join(BASE_DIR, 'images')
 TOOLS_JSON_PATH = os.path.join(DATA_DIR, 'tools.json')
 BUILD_SCRIPT_PATH = os.path.join(BASE_DIR, 'scripts', 'build.py')
+
+# OG 图片生成函数
+sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+from gen_seo_images import make_og_image, generate_image
+
+def generate_tool_og_images(tools):
+    """为工具列表生成 OG 图片和信息图，返回成功数量"""
+    count = 0
+    for tool in tools:
+        slug = tool['slug']
+        og_path = os.path.join(IMAGES_DIR, 'og', f'{slug}-og.png')
+        inf_path = os.path.join(IMAGES_DIR, 'infographics', f'{slug}-infographic.png')
+        if not os.path.exists(og_path):
+            print(f"    生成 OG 图片: {tool['name']}...", end=' ', flush=True)
+            og_html = make_og_image(tool, tools)
+            if generate_image(og_html, og_path):
+                print('OK')
+                count += 1
+            else:
+                print('FAIL')
+        if not os.path.exists(inf_path):
+            # 信息图暂不强制要求，只确保 OG 必成
+            pass
+    return count
 
 def publish_new_tools(num_to_publish=3):
     """
@@ -54,7 +80,12 @@ def publish_new_tools(num_to_publish=3):
         json.dump(all_tools, f, ensure_ascii=False, indent=4)
     print(f"已更新 {len(tools_to_publish_now)} 个工具的发布状态到 {TOOLS_JSON_PATH}")
 
-    # 4. 运行build.py重新生成网站
+    # 4. 为本次发布工具生成 OG 图片（关键！防止死链）
+    print(f"正在为本次发布的 {len(tools_to_publish_now)} 个工具生成 OG 图片...")
+    og_count = generate_tool_og_images(tools_to_publish_now)
+    print(f"OG 图片生成完成: {og_count} 个成功")
+
+    # 5. 运行build.py重新生成网站
     print(f"正在运行 {BUILD_SCRIPT_PATH} 重新生成网站...")
     result = subprocess.run(['python', BUILD_SCRIPT_PATH], capture_output=False)
     if result.returncode != 0:
@@ -62,7 +93,7 @@ def publish_new_tools(num_to_publish=3):
         return
     print("网站重新生成完成。")
 
-    # 5. Git commit + push 部署到 Vercel
+    # 6. Git commit + push 部署到 Vercel
     tool_names = [t['name'] for t in tools_to_publish_now]
     commit_msg = f"publish: 发布新工具 {', '.join(tool_names)}"
     print(f"正在 git commit + push: {commit_msg}")
