@@ -939,11 +939,18 @@ def build_index_page(tools, articles):
                             </div>
                         </article>\n'''
     
+    # 轻量化工具数据（首页JS只需展示字段，content/pros/cons/features等大字段去掉）
+    # 这些字段的完整内容在各自独立的工具详情页（静态HTML）中，不影响SEO
+    LIGHTWEIGHT_KEYS = {'name', 'slug', 'emoji', 'color', 'description', 'category',
+                        'tags', 'rating', 'visits', 'badge', 'url', 'price', 'platform'}
+    def make_lightweight(tool_list):
+        return [{k: v for k, v in t.items() if k in LIGHTWEIGHT_KEYS} for t in tool_list]
+
     # 其余工具存储到 data 属性（JS 动态加载）
-    remaining_tools_json = json.dumps(tools[12:], ensure_ascii=False, indent=2)
-    
+    remaining_tools_json = json.dumps(make_lightweight(tools[12:]), ensure_ascii=False, indent=2)
+
     # 对全部工具的懒加载占位符（分类筛选时需要）
-    all_tools_json = json.dumps(tools, ensure_ascii=False, indent=2)
+    all_tools_json = json.dumps(make_lightweight(tools), ensure_ascii=False, indent=2)
         
     articles_html = ''
     for a in articles[:6]:
