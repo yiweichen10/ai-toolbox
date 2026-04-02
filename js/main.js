@@ -153,20 +153,37 @@ function initSearch(tools) {
 }
 
 // ─────────────────────────────────────
-// 返回顶部按钮
+// 返回顶部按钮（内联兜底 + IIFE主逻辑）
 // ─────────────────────────────────────
+// 注意：index.html 内联了一个 fail-safe 版本，
+// 这里是正式版本。如果此文件加载失败，内联版本仍能工作。
 (function initBackToTop() {
-    const btn = document.getElementById('backToTop');
-    if (!btn) return;
+    // 清除内联兜底版本的事件（避免重复绑定）
+    const existingBtn = document.getElementById('backToTop');
+    if (!existingBtn) return;
+
+    // 克隆节点以移除内联事件监听器
+    const btn = existingBtn.cloneNode(true);
+    existingBtn.parentNode.replaceChild(btn, existingBtn);
 
     // 滚动超过 400px 时显示按钮
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-            btn.classList.add('visible');
-        } else {
-            btn.classList.remove('visible');
+    let ticking = false;
+    const onScroll = () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
-    }, { passive: true });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    // 初始检查（页面可能已经滚动了）
+    onScroll();
 
     btn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });

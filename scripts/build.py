@@ -431,6 +431,15 @@ def build_tool_page(tool, all_tools, all_articles=None):
     <footer class="footer">
         <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
     </footer>
+
+    <button id="backToTop" aria-label="返回顶部">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    <script>
+    (function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});})();
+    </script>
 </body>
 </html>'''
     return html
@@ -525,9 +534,19 @@ def build_category_page(category_name, tools_in_category):
     <footer class="footer">
         <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
     </footer>
+
+    <button id="backToTop" aria-label="返回顶部">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    <script>
+    (function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});})();
+    </script>
 </body>
 </html>'''
     return html
+
 
 def build_article_page(article, all_articles, all_tools=None):
     """生成单个文章页的完整HTML"""
@@ -720,6 +739,15 @@ def build_article_page(article, all_articles, all_tools=None):
     <footer class="footer">
         <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
     </footer>
+
+    <button id="backToTop" aria-label="返回顶部">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    <script>
+    (function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});})();
+    </script>
 </body>
 </html>'''
     return html
@@ -830,6 +858,15 @@ def build_article_list_pages(articles):
     <footer class="footer">
         <p>&#xA9; 2026 AI工具宝箱 · 每日精选优质AI工具</p>
     </footer>
+
+    <button id="backToTop" aria-label="返回顶部">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    <script>
+    (function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});})();
+    </script>
 </body>
 </html>'''
         
@@ -969,6 +1006,34 @@ window.__REMAINING_TOOLS__ = {remaining_tools_json};
     BING_VERIFY = '    <meta name="msvalidate.01" content="D2B58E242903570E029A957ECDFF1E05" />'
     if 'msvalidate.01' not in html:
         html = html.replace('</head>', f'{BING_VERIFY}\n</head>')
+
+    # 确保返回顶部按钮存在（兜底注入）
+    if 'id="backToTop"' not in html:
+        BACK_TO_TOP_HTML = '''
+    <button id="backToTop" aria-label="返回顶部">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>'''
+        html = html.replace('</body>', BACK_TO_TOP_HTML + '\n</body>')
+
+    # 注入返回顶部内联兜底脚本（在 main.js 之前执行）
+    BACK_TO_TOP_FAILSAFE = '''<script>
+// 返回顶部按钮 - 内联兜底版本
+(function(){
+    var b=document.getElementById("backToTop");
+    if(!b)return;
+    var s=function(){
+        if(window.scrollY>400){b.classList.add("visible")}
+        else{b.classList.remove("visible")}
+    };
+    window.addEventListener("scroll",s,{passive:true});
+    s();
+    b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
+})();
+</script>
+'''
+    html = html.replace('<script src="/js/main.js"></script>', BACK_TO_TOP_FAILSAFE + '<script src="/js/main.js"></script>')
 
     return html
 
