@@ -17,8 +17,9 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
 from gen_seo_images import make_og_image, generate_image
 
 def generate_tool_og_images(tools):
-    """为工具列表生成 OG 图片和信息图，返回成功数量"""
+    """为工具列表生成 OG 图片和信息图，返回 (成功数, 跳过数)"""
     count = 0
+    skip = 0
     for tool in tools:
         slug = tool['slug']
         og_path = os.path.join(IMAGES_DIR, 'og', f'{slug}-og.png')
@@ -31,10 +32,13 @@ def generate_tool_og_images(tools):
                 count += 1
             else:
                 print('FAIL')
+        else:
+            print(f"    OG 图片已存在: {tool['name']}，跳过")
+            skip += 1
         if not os.path.exists(inf_path):
             # 信息图暂不强制要求，只确保 OG 必成
             pass
-    return count
+    return count, skip
 
 def publish_new_tools(num_to_publish=3):
     """
@@ -82,8 +86,8 @@ def publish_new_tools(num_to_publish=3):
 
     # 4. 为本次发布工具生成 OG 图片（关键！防止死链）
     print(f"正在为本次发布的 {len(tools_to_publish_now)} 个工具生成 OG 图片...")
-    og_count = generate_tool_og_images(tools_to_publish_now)
-    print(f"OG 图片生成完成: {og_count} 个成功")
+    og_count, og_skip = generate_tool_og_images(tools_to_publish_now)
+    print(f"OG 图片生成完成: {og_count} 个成功, {og_skip} 个跳过(已存在)")
 
     # 5. 运行build.py重新生成网站
     print(f"正在运行 {BUILD_SCRIPT_PATH} 重新生成网站...")
