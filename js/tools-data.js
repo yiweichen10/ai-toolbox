@@ -703,6 +703,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Bolt.new",
+    "slug": "bolt.new",
+    "emoji": "💻",
+    "color": "#8d362d",
+    "description": "StackBlitz推出的AI全栈开发工具，通过自然语言描述即可生成完整Web应用。内置AI代码生成、实时预览和一键部署，是快速原型开发的神器。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "7万",
+    "badge": {
+      "type": "new",
+      "text": "HOT"
+    },
+    "url": "https://bolt.new",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "WPS AI",
     "slug": "wps-ai",
     "emoji": "📊",
@@ -1131,6 +1159,34 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Writesonic",
+    "slug": "writesonic",
+    "emoji": "✍️",
+    "color": "#5b2946",
+    "description": "AI写作和SEO内容平台，提供博客生成、广告文案、产品描述等多种内容创作工具。内置SEO优化和品牌语调功能，是内容营销的一站式工具。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.0",
+    "visits": "2万",
+    "badge": {
+      "type": "new",
+      "text": null
+    },
+    "url": "https://writesonic.com",
+    "price": "基础$10/月起",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Otter.ai",
     "slug": "otter.ai",
     "emoji": "📊",
@@ -1186,6 +1242,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://fireflies.ai",
     "price": "免费使用",
     "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Speechify",
+    "slug": "speechify",
+    "emoji": "🎧",
+    "color": "#77557b",
+    "description": "AI文字转语音工具，将文本转换为自然逼真的语音。支持100+语言，多种声音选择，特别适合阅读障碍者和需要听书学习的人。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "17万",
+    "badge": {
+      "type": "new",
+      "text": "HOT"
+    },
+    "url": "https://speechify.com",
+    "price": "基础$10/月起",
+    "platform": "Web"
   },
   {
     "name": "Comet",
@@ -1738,6 +1822,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Bolt.new",
+    "slug": "bolt.new",
+    "emoji": "💻",
+    "color": "#8d362d",
+    "description": "StackBlitz推出的AI全栈开发工具，通过自然语言描述即可生成完整Web应用。内置AI代码生成、实时预览和一键部署，是快速原型开发的神器。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "7万",
+    "badge": {
+      "type": "new",
+      "text": "HOT"
+    },
+    "url": "https://bolt.new",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "WPS AI",
     "slug": "wps-ai",
     "emoji": "📊",
@@ -2166,6 +2278,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Writesonic",
+    "slug": "writesonic",
+    "emoji": "✍️",
+    "color": "#5b2946",
+    "description": "AI写作和SEO内容平台，提供博客生成、广告文案、产品描述等多种内容创作工具。内置SEO优化和品牌语调功能，是内容营销的一站式工具。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.0",
+    "visits": "2万",
+    "badge": {
+      "type": "new",
+      "text": null
+    },
+    "url": "https://writesonic.com",
+    "price": "基础$10/月起",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Otter.ai",
     "slug": "otter.ai",
     "emoji": "📊",
@@ -2221,6 +2361,34 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://fireflies.ai",
     "price": "免费使用",
     "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Speechify",
+    "slug": "speechify",
+    "emoji": "🎧",
+    "color": "#77557b",
+    "description": "AI文字转语音工具，将文本转换为自然逼真的语音。支持100+语言，多种声音选择，特别适合阅读障碍者和需要听书学习的人。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "17万",
+    "badge": {
+      "type": "new",
+      "text": "HOT"
+    },
+    "url": "https://speechify.com",
+    "price": "基础$10/月起",
+    "platform": "Web"
   },
   {
     "name": "Comet",
