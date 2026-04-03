@@ -1074,7 +1074,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
     return html
 
-def generate_sitemap(tools, articles, categories, total_article_pages=1):
+def generate_sitemap(tools, articles, categories):
     """生成 sitemap.xml"""
     from datetime import datetime
     today = datetime.now().strftime('%Y-%m-%d')
@@ -1088,15 +1088,8 @@ def generate_sitemap(tools, articles, categories, total_article_pages=1):
         <priority>1.0</priority>
     </url>''')
 
-    # 文章列表分页（第1页优先级最高）
-    for p in range(1, total_article_pages + 1):
-        priority = '0.9' if p == 1 else '0.7'
-        urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/articles/page/{p}/</loc>
-        <lastmod>{today}</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>{priority}</priority>
-    </url>''')
+    # 注意：不在sitemap中加入文章分页URL（/articles/page/N/），避免浪费爬虫预算
+    # 分页通过页面上的 rel=next/prev 让爬虫自然发现即可
 
     # 工具页
     for tool in tools:
@@ -1118,11 +1111,10 @@ def generate_sitemap(tools, articles, categories, total_article_pages=1):
         <priority>{priority}</priority>
     </url>''')
     
-    # 分类页
+    # 分类页（categories 参数已经是经过 get_category_slug 处理的 slug 列表）
     for category_name in categories:
-        category_slug = category_name.replace(' ', '-').lower()
         urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/category/{category_slug}/</loc>
+        <loc>https://www.aitoolbox.hk/category/{category_name}/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -1247,7 +1239,7 @@ def main():
 
     # 生成 sitemap.xml
     # 传递所有已发布的分类名称列表
-    sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()], total_pages)
+    sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()])
     with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write(sitemap)
     print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + {len(tools_by_category)} categories + {total_pages} article pages)')
@@ -1272,7 +1264,7 @@ def main():
         all_urls.append(f"https://www.aitoolbox.hk/articles/{article['slug']}/")
     for category_name in tools_by_category.keys(): # 添加分类页面的URL
         category_slug = get_category_slug(category_name)
-        all_urls.append(f"https://www.aitoolbox.hk/category/{category_slug}/index.html")
+        all_urls.append(f"https://www.aitoolbox.hk/category/{category_slug}/")
     
     new_urls = [u for u in all_urls if u not in pushed_urls]
     
