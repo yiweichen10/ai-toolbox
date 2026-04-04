@@ -2868,7 +2868,7 @@ def build_target(target):
 
 
 def inject_global_nav():
-    """后处理：在所有已生成的HTML文件中注入全局导航栏（仅在</header>后无.global-nav时）"""
+    """后处理：将全局导航栏注入到header内部（header-inner之后、</header>之前）"""
     nav_html = GLOBAL_NAV
     injected = 0
     for root, dirs, files in os.walk(BASE_DIR):
@@ -2879,16 +2879,17 @@ def inject_global_nav():
             try:
                 with open(fpath, 'r', encoding='utf-8') as f:
                     content = f.read()
-                # Only inject if has </header> but no .global-nav
+                # 注入到 </header> 之前（而不是后面），使导航成为header的一部分
                 if '</header>' in content and 'class="global-nav"' not in content:
-                    content = content.replace('</header>', '</header>\n' + nav_html, 1)
+                    # 在 </header> 前面插入导航，使其成为 header 的子元素
+                    content = content.replace('</header>', nav_html + '\n    </header>', 1)
                     with open(fpath, 'w', encoding='utf-8') as f:
                         f.write(content)
                     injected += 1
             except Exception:
                 pass
     if injected > 0:
-        print(f'[Post] Injected global nav into {injected} HTML files.')
+        print(f'[Post] Injected global nav into {injected} HTML files (inside header).')
     return injected
 
 

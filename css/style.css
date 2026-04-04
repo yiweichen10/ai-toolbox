@@ -1,19 +1,37 @@
-/* ═══ 全局导航栏 ═══ */
-.global-nav {
-  background: var(--surface-bg);
-  border-bottom: 1px solid #e2e8f0;
-  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+/* ═══ 统一顶部栏（Header + 导航合并） ═══ */
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 8px rgba(0,0,0,.04);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 200;
+}
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 全局导航栏 — 嵌入在 header 底部 */
+.global-nav {
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
+  position: static;
+  z-index: auto;
+  border-top: 1px solid #f1f5f9;
 }
 .global-nav-inner {
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 4px;
-  padding: 8px 20px;
+  gap: 2px;
+  padding: 8px 24px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -22,22 +40,31 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
   font-weight: 500;
-  color: var(--text-main);
+  color: var(--text-muted);
   text-decoration: none;
   white-space: nowrap;
-  transition: background .2s, color .2s;
+  transition: all .2s ease;
+  background: transparent;
+  border: 1px solid transparent;
 }
 .gn-item:hover {
-  background: #f1f5f9;
+  background: linear-gradient(135deg, rgba(79,70,229,0.06) 0%, rgba(124,58,237,0.06) 100%);
   color: var(--primary-color);
+  border-color: rgba(79,70,229,0.1);
+}
+.gn-item:first-child { /* 工具排行高亮 */
+  color: var(--primary-color);
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(79,70,229,0.08) 0%, rgba(124,58,237,0.08) 100%);
 }
 @media (max-width: 768px) {
-  .global-nav-inner { padding: 6px 12px; gap: 2px; }
-  .gn-item { padding: 5px 10px; font-size: 13px; }
+  .header-inner { padding: 10px 16px; }
+  .global-nav-inner { padding: 6px 14px; gap: 0; }
+  .gn-item { padding: 5px 11px; font-size: 12px; border-radius: 16px; }
 }
 
 :root {
@@ -103,27 +130,7 @@ body {
   border-radius: var(--radius-pill);
 }
 
-/* 毛玻璃 Header */
-.header {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  box-shadow: var(--shadow-sm);
-  transition: background 0.3s ease;
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+/* 搜索框：简洁现代风 */
 
 /* 为了搭配白底 Header，标题文字重新采用暗色调，但带一点渐变 */
 .header h1 { 
