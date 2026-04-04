@@ -1,3 +1,45 @@
+/* ═══ 全局导航栏 ═══ */
+.global-nav {
+  background: var(--surface-bg);
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.global-nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.global-nav-inner::-webkit-scrollbar { display: none; }
+.gn-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-main);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s, color .2s;
+}
+.gn-item:hover {
+  background: #f1f5f9;
+  color: var(--primary-color);
+}
+@media (max-width: 768px) {
+  .global-nav-inner { padding: 6px 12px; gap: 2px; }
+  .gn-item { padding: 5px 10px; font-size: 13px; }
+}
+
 :root {
   /* 基础主色调: 电光蓝与极光紫 */
   --primary-color: #4f46e5;

@@ -51,6 +51,17 @@ def ensure_og_image(slug, data_obj=None, is_article=False):
         print(f'  [OG] 生成异常: {slug} - {e}')
         return ''
 
+GLOBAL_NAV = '''    <nav class="global-nav" aria-label="全局导航">
+        <div class="global-nav-inner">
+            <a href="/ranking/" class="gn-item">📊 工具排行</a>
+            <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+            <a href="/live/" class="gn-item">📈 实时面板</a>
+            <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+            <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+            <a href="/category/" class="gn-item">📂 全部分类</a>
+        </div>
+    </nav>'''
+
 BAIDU_TONGJI = '''<script>
 var _hmt = _hmt || [];
 (function() {
@@ -414,7 +425,11 @@ def build_tool_page(tool, all_tools, all_articles=None):
     <meta property="og:title" content="{escape_html(tool['name'])}评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱">
     <meta property="og:description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'])}">
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/">
-''' + (f'    <meta property="og:image" content="{og_image}">\n' if og_image else '') + f'''    <link rel="stylesheet" href="/css/style.css">
+''' + (f'    <meta property="og:image" content="{og_image}">\n' if og_image else '') + f'''    <meta property="og:site_name" content="AI工具宝箱">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{escape_html(tool['name'])}评测2026 - AI工具宝箱">
+    <meta name="twitter:description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'][:80])}">''' + (f'\n    <meta name="twitter:image" content="{og_image}">' if og_image else '') + f'''
+    <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_data}</script>
     {faq_page_schema}
@@ -1966,6 +1981,10 @@ def build_article_page(article, all_articles, all_tools=None):
     from datetime import datetime
     today_iso = datetime.now().strftime('%Y-%m-%d')
     article_date = article.get('dateFull', today_iso)
+    # 将中文日期（如"2026年4月4日"）转为ISO格式（2026-04-04）
+    if article_date and re.match(r'^\d{4}年\d{1,2}月\d{1,2}日$', article_date):
+        m = re.match(r'(\d{4})年(\d{1,2})月(\d{1,2})日', article_date)
+        article_date = f'{m.group(1)}-{m.group(2).zfill(2)}-{m.group(3).zfill(2)}'
     article_date_modified = article.get('dateModified', article_date)
     article_category = article.get('category', '文章')
     article_category_slug = get_category_slug(article_category)
@@ -2762,6 +2781,9 @@ def build_target(target):
             f.write(index_html)
         print(f'[OK] index.html (Static Pre-rendered)')
 
+    # 后处理：注入全局导航栏到所有HTML文件
+    inject_global_nav()
+
     # ═══════════════════════════════════════════════════════
     # sitemap + 推送（每次都执行）
     # ═══════════════════════════════════════════════════════
@@ -2843,6 +2865,31 @@ def build_target(target):
             print(f"\nIndexNow: No new URLs to push. ({len(all_urls)} total, all already pushed)")
         
         print(f'\nDone! Target={target} | {len(published_tools)} tools + {len(articles)} articles + {quiz_count} quizzes + {ranking_count} rankings + {live_count} live')
+
+
+def inject_global_nav():
+    """后处理：在所有已生成的HTML文件中注入全局导航栏（仅在</header>后无.global-nav时）"""
+    nav_html = GLOBAL_NAV
+    injected = 0
+    for root, dirs, files in os.walk(BASE_DIR):
+        for fname in files:
+            if not fname.endswith('.html'):
+                continue
+            fpath = os.path.join(root, fname)
+            try:
+                with open(fpath, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                # Only inject if has </header> but no .global-nav
+                if '</header>' in content and 'class="global-nav"' not in content:
+                    content = content.replace('</header>', '</header>\n' + nav_html, 1)
+                    with open(fpath, 'w', encoding='utf-8') as f:
+                        f.write(content)
+                    injected += 1
+            except Exception:
+                pass
+    if injected > 0:
+        print(f'[Post] Injected global nav into {injected} HTML files.')
+    return injected
 
 
 def main():
