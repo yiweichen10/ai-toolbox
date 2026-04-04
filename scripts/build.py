@@ -1135,7 +1135,7 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
     keywords = ranking_data.get('keywords', [])
     ranked_tools = ranking_data.get('ranked_tools', [])[:20]  # 展示前20
     total_tools = ranking_data.get('total_tools', len(ranked_tools))
-    content = ranking_data.get('content')  # AI分析内容
+    content = ranking_data.get('content') or {}  # AI分析内容（None时用空字典）
     rtype = ranking_data.get('type', 'special')
     category = ranking_data.get('category', '')
     icon = ranking_data.get('icon', '📊')
@@ -1410,8 +1410,10 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
         <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 更新于 {(last_updated or _rdt.now().strftime('%Y-%m-%d %H:%M'))}</p>
     </footer>
 ''' + BACK_TO_TOP_BLOCK + '''
-</body>
+ </body>
 </html>'''
+    return html
+
 # ═══════════════════════════════════════════════════════
 # Phase 5b: Live Dashboard 数据加载与页面构建（动态数据面板）
 # ═══════════════════════════════════════════════════════
@@ -2698,7 +2700,11 @@ def build_target(target):
                     loc = f'quiz/' if is_main else f'quiz/{qslug}/'
                     print(f'  [FAIL] {loc}: {e}')
 
-        # 排名
+
+    # ═══════════════════════════════════════════════════════
+    # Phase 5: Ranking Pages（独立条件，支持 --target ranking）
+    # ═══════════════════════════════════════════════════════
+    if target in ('all', 'ranking', 'pseo'):
         if all_rankings:
             print(f'\n[Phase5] Generating ranking pages ({len(all_rankings)})...')
             for rd in all_rankings:
