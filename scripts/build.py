@@ -1443,6 +1443,65 @@ def load_live_data():
     return {}
 
 
+def _build_ranking_index_page(all_rankings):
+    """生成 ranking/index.html 总入口页：列出所有排行榜链接，默认跳转到综合榜"""
+    items_html = ''
+    for rd in all_rankings:
+        rslug = rd.get('slug', '')
+        title = rd.get('title', rslug)
+        icon = rd.get('icon', '📊')
+        category = rd.get('category', '')
+        if not rslug:
+            continue
+        # 短标题（去掉年份前缀等）
+        short_title = title.replace('2026年', '').replace('2026', '').strip()
+        cat_tag = f'<span style="font-size:11px;color:#888;">{category}</span>' if category else ''
+        items_html += f'''    <li>
+      <a href="/ranking/{rslug}/" style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;text-decoration:none;color:inherit;transition:background .2s;">
+        <span style="font-size:22px;">{icon}</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-weight:600;font-size:15px;">{escape_html(short_title)}</div>
+          {cat_tag}
+        </div>
+        <span style="color:#aaa;font-size:18px;">→</span>
+      </a>
+    </li>\n'''
+
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0;url=/ranking/2026-ai-tools-overall-ranking/">
+    <title>AI工具排行榜 - 全部榜单 | AI工具宝箱</title>
+    <meta name="description" content="AI工具宝箱全部排行榜：综合热度榜、免费工具榜、性价比榜、分类排行等16个榜单，覆盖AI对话/写作/绘画/编程/视频等全领域。">
+    <link rel="canonical" href="https://www.aitoolbox.hk/ranking/">
+    <link rel="stylesheet" href="/css/style.css">
+{BAIDU_TONGJI}
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0; AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+        </div>
+    </header>
+
+    <section style="max-width:720px;margin:40px auto;padding:0 24px;">
+        <h2 style="font-size:28px;font-weight:800;margin-bottom:8px;">📊 AI工具排行榜</h2>
+        <p style="color:var(--text-muted);margin-bottom:24px;font-size:15px;">
+            共 <strong>{len(all_rankings)}</strong> 个榜单 · 覆盖AI全领域 · 每日更新
+        </p>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:4px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid #f1f5f9;">
+{items_html}        </ul>
+        <p style="text-align:center;margin-top:20px;">
+            <a href="/" style="color:var(--primary-color);font-size:14px;text-decoration:none;">← 返回首页</a>
+        </p>
+    </section>
+</body>
+</html>'''
+    return html
+
+
 def build_live_page(live_data, page_config, all_tools, articles):
     """
     构建 live dashboard 的子页面。
@@ -2494,10 +2553,8 @@ def generate_sitemap(tools, articles, categories, compares=None, alternatives=No
         for rd in rankings:
             rslug = rd.get('slug', '')
             if rslug:
-                is_overall = rslug == '2026-ai-tools-overall-ranking'
-                loc = f'/' if is_overall else f'/{rslug}/'
                 urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/ranking{loc}</loc>
+        <loc>https://www.aitoolbox.hk/ranking/{rslug}/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
@@ -2728,22 +2785,28 @@ def build_target(target):
             print(f'\n[Phase5] Generating ranking pages ({len(all_rankings)})...')
             for rd in all_rankings:
                 rslug = rd.get('slug', 'unknown')
-                is_overall = rslug == '2026-ai-tools-overall-ranking'
-                if is_overall:
-                    dir_path = os.path.join(BASE_DIR, 'ranking')
-                else:
-                    dir_path = os.path.join(BASE_DIR, 'ranking', rslug)
+                # 所有ranking统一生成到 ranking/{slug}/ 子目录
+                dir_path = os.path.join(BASE_DIR, 'ranking', rslug)
                 os.makedirs(dir_path, exist_ok=True)
                 try:
                     html = build_ranking_page(rd, published_tools, articles)
                     with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
                         f.write(html)
-                    loc = f'ranking/' if is_overall else f'ranking/{rslug}/'
+                    loc = f'ranking/{rslug}/'
                     print(f'  [OK] {loc}index.html')
                     ranking_count += 1
                 except Exception as e:
-                    loc = f'ranking/' if is_overall else f'ranking/{rslug}/'
+                    loc = f'ranking/{rslug}/'
                     print(f'  [FAIL] {loc}: {e}')
+
+        # 生成 ranking/index.html 总入口页（跳转到综合榜 + 列出所有榜单）
+        try:
+            ranking_index_html = _build_ranking_index_page(all_rankings)
+            with open(os.path.join(BASE_DIR, 'ranking', 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(ranking_index_html)
+            print('  [OK] ranking/index.html (总入口页)')
+        except Exception as e:
+            print(f'  [FAIL] ranking/index.html: {e}')
 
     # ═══════════════════════════════════════════════════════
     # Phase 5b: Live Dashboard
@@ -2828,8 +2891,7 @@ def build_target(target):
         for rd in (all_rankings or []):
             rslug = rd.get('slug', '')
             if rslug:
-                is_overall = rslug == '2026-ai-tools-overall-ranking'
-                all_urls.append(f"https://www.aitoolbox.hk/ranking{'' if is_overall else '/' + rslug + '/'}")
+                all_urls.append(f"https://www.aitoolbox.hk/ranking/{rslug}/")
         for lp in (all_lives or []):
             lslug = lp.get('slug', '')
             if lslug:
