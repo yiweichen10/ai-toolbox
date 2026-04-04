@@ -902,6 +902,35 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "n8n",
+    "slug": "n8n",
+    "emoji": "⚙️",
+    "color": "#52b780",
+    "description": "开源的AI工作流自动化平台，通过可视化拖拽即可搭建自动化流程。支持300+应用集成，AI节点增强，是企业级自动化部署的首选工具。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "AI自动化"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.9",
+    "visits": "16万",
+    "badge": {
+      "type": "hot",
+      "text": "编辑推荐"
+    },
+    "url": "https://n8n.io",
+    "price": "免费使用",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Coze",
     "slug": "coze",
     "emoji": "⚙️",
@@ -1130,6 +1159,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "LiblibAI",
+    "slug": "liblibai",
+    "emoji": "🎨",
+    "color": "#e5e017",
+    "description": "国内最大的AI绘画在线平台，提供Stable Diffusion云端服务。丰富的中文模型和LoRA库，社区活跃，是国内AI绘画创作者的首选平台。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "3万",
+    "badge": {
+      "type": "new",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.liblib.art",
+    "price": "免费版+Pro $10/月",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "QuillBot",
     "slug": "quillbot",
     "emoji": "✍️",
@@ -1270,6 +1328,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://speechify.com",
     "price": "基础$10/月起",
     "platform": "Web"
+  },
+  {
+    "name": "Krisp",
+    "slug": "krisp",
+    "emoji": "🎧",
+    "color": "#eb06c6",
+    "description": "AI降噪工具，实时去除通话和会议中的背景噪音。无需特殊设备，普通耳机也能获得专业级通话音质，远程办公的必备工具。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.9",
+    "visits": "18万",
+    "badge": {
+      "type": null,
+      "text": "编辑推荐"
+    },
+    "url": "https://krisp.ai",
+    "price": "基础$10/月起",
+    "platform": "Web / iOS / Android"
   },
   {
     "name": "Comet",
@@ -2021,6 +2107,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "n8n",
+    "slug": "n8n",
+    "emoji": "⚙️",
+    "color": "#52b780",
+    "description": "开源的AI工作流自动化平台，通过可视化拖拽即可搭建自动化流程。支持300+应用集成，AI节点增强，是企业级自动化部署的首选工具。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "AI自动化"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.9",
+    "visits": "16万",
+    "badge": {
+      "type": "hot",
+      "text": "编辑推荐"
+    },
+    "url": "https://n8n.io",
+    "price": "免费使用",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Coze",
     "slug": "coze",
     "emoji": "⚙️",
@@ -2249,6 +2364,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "LiblibAI",
+    "slug": "liblibai",
+    "emoji": "🎨",
+    "color": "#e5e017",
+    "description": "国内最大的AI绘画在线平台，提供Stable Diffusion云端服务。丰富的中文模型和LoRA库，社区活跃，是国内AI绘画创作者的首选平台。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "3万",
+    "badge": {
+      "type": "new",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.liblib.art",
+    "price": "免费版+Pro $10/月",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "QuillBot",
     "slug": "quillbot",
     "emoji": "✍️",
@@ -2389,6 +2533,34 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://speechify.com",
     "price": "基础$10/月起",
     "platform": "Web"
+  },
+  {
+    "name": "Krisp",
+    "slug": "krisp",
+    "emoji": "🎧",
+    "color": "#eb06c6",
+    "description": "AI降噪工具，实时去除通话和会议中的背景噪音。无需特殊设备，普通耳机也能获得专业级通话音质，远程办公的必备工具。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.9",
+    "visits": "18万",
+    "badge": {
+      "type": null,
+      "text": "编辑推荐"
+    },
+    "url": "https://krisp.ai",
+    "price": "基础$10/月起",
+    "platform": "Web / iOS / Android"
   },
   {
     "name": "Comet",
