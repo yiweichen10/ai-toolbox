@@ -3,6 +3,7 @@
 import json
 import os
 import re
+import argparse
 
 # 返回顶部按钮 HTML + 内联脚本（避免在 f-string 中转义花括号）
 BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="返回顶部">
@@ -2557,7 +2558,11 @@ def push_to_baidu(urls):
         print(f"[Baidu Push] Failed: {e}")
         return False
 
-def main():
+def build_target(target):
+    """
+    构建指定目标或全部页面。
+    target: 'all' | 'articles' | 'tools' | 'live' | 'sitemap' | 'index' | 'pseo' | 'ranking'
+    """
     # 加载数据
     with open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8') as f:
         all_tools = json.load(f)
@@ -2576,247 +2581,273 @@ def main():
             if category not in tools_by_category:
                 tools_by_category[category] = []
             tools_by_category[category].append(tool)
-    
-    # 生成分类页
-    for category_name, tools_in_category in tools_by_category.items():
-        category_slug = get_category_slug(category_name)
-        dir_path = os.path.join(BASE_DIR, 'category', category_slug)
-        os.makedirs(dir_path, exist_ok=True)
-        html = build_category_page(category_name, tools_in_category)
-        with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-            f.write(html)
-        print(f'[OK] category/{category_slug}/index.html')
 
-    # 生成工具页
-    for tool in published_tools:
-        slug = tool['slug']
-        dir_path = os.path.join(BASE_DIR, 'tools', slug)
-        os.makedirs(dir_path, exist_ok=True)
-        html = build_tool_page(tool, published_tools, articles) # 传递已发布工具列表 + 全部文章
-        with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-            f.write(html)
-        print(f'[OK] tools/{slug}/index.html')
-
-    # 生成文章页 (文章不受published字段控制，全部生成)
-    for article in articles:
-        slug = article['slug']
-        dir_path = os.path.join(BASE_DIR, 'articles', slug)
-        os.makedirs(dir_path, exist_ok=True)
-        html = build_article_page(article, articles, published_tools)
-        with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-            f.write(html)
-        print(f'[OK] articles/{slug}/index.html')
-
-    # 生成文章分页列表页
-    total_pages = build_article_list_pages(articles)
-
-    # ═══════════════════════════════════════════════════════
-    # Phase 2+3: 生成对比页和替代方案页（程序化SEO）
-    # ═══════════════════════════════════════════════════════
+    # 加载所有辅助数据（后续推送和sitemap需要）
     compare_data = load_compare_data()
     all_compares = compare_data.get('compares', [])
     all_alternatives = compare_data.get('alternatives', [])
+    quiz_data = load_quiz_data()
+    all_quizzes = quiz_data.get('quizzes', [])
+    ranking_data = load_ranking_data()
+    all_rankings = ranking_data.get('rankings', [])
+    live_data = load_live_data()
+    all_lives = live_data.get('live_pages', [])
 
     compare_count = 0
     alt_count = 0
-
-    if all_compares:
-        print(f'\n[Phase2] Generating compare pages ({len(all_compares)})...')
-        for cp in all_compares:
-            cslug = cp.get('slug', 'unknown')
-            dir_path = os.path.join(BASE_DIR, 'compare', cslug)
-            os.makedirs(dir_path, exist_ok=True)
-            try:
-                html = build_compare_page(cp, published_tools, articles)
-                with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-                    f.write(html)
-                print(f'  [OK] compare/{cslug}/index.html')
-                compare_count += 1
-            except Exception as e:
-                print(f'  [FAIL] compare/{cslug}/: {e}')
-
-    if all_alternatives:
-        print(f'\n[Phase3] Generating alternatives pages ({len(all_alternatives)})...')
-        for alt in all_alternatives:
-            aslug = alt.get('slug', 'unknown')
-            dir_path = os.path.join(BASE_DIR, 'alternatives', aslug)
-            os.makedirs(dir_path, exist_ok=True)
-            try:
-                html = build_alternatives_page(alt, published_tools, articles)
-                with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-                    f.write(html)
-                print(f'  [OK] alternatives/{aslug}/index.html')
-                alt_count += 1
-            except Exception as e:
-                print(f'  [FAIL] alternatives/{aslug}/: {e}')
-
-    # ═══════════════════════════════════════════════════════
-    # Phase 4: Quiz / 工具选择器页面（程序化SEO）
-    # ═══════════════════════════════════════════════════════
-    quiz_data = load_quiz_data()
-    all_quizzes = quiz_data.get('quizzes', [])
     quiz_count = 0
-
-    if all_quizzes:
-        print(f'\n[Phase4] Generating quiz pages ({len(all_quizzes)})...')
-        for qd in all_quizzes:
-            qslug = qd.get('slug', 'unknown')
-            # 总入口放在 /quiz/index.html，其他在 /quiz/{slug}/index.html
-            is_main = qd.get('target_url') == '/quiz/' or qslug == 'ai-tool-finder-2026'
-            if is_main:
-                dir_path = os.path.join(BASE_DIR, 'quiz')
-            else:
-                dir_path = os.path.join(BASE_DIR, 'quiz', qslug)
-
-            os.makedirs(dir_path, exist_ok=True)
-            try:
-                html = build_quiz_page(qd, published_tools, articles)
-                with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-                    f.write(html)
-                loc = f'quiz/' if is_main else f'quiz/{qslug}/'
-                print(f'  [OK] {loc}index.html')
-                quiz_count += 1
-            except Exception as e:
-                loc = f'quiz/' if is_main else f'quiz/{qslug}/'
-                print(f'  [FAIL] {loc}: {e}')
-
-    # ═══════════════════════════════════════════════════════
-    # Phase 5: Ranking / 排名页面（动态排名系统）
-    # ═══════════════════════════════════════════════════════
-    ranking_data = load_ranking_data()
-    all_rankings = ranking_data.get('rankings', [])
     ranking_count = 0
-
-    if all_rankings:
-        print(f'\n[Phase5] Generating ranking pages ({len(all_rankings)})...')
-        for rd in all_rankings:
-            rslug = rd.get('slug', 'unknown')
-            is_overall = rslug == '2026-ai-tools-overall-ranking'
-            if is_overall:
-                dir_path = os.path.join(BASE_DIR, 'ranking')
-            else:
-                dir_path = os.path.join(BASE_DIR, 'ranking', rslug)
-
-            os.makedirs(dir_path, exist_ok=True)
-            try:
-                html = build_ranking_page(rd, published_tools, articles)
-                with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-                    f.write(html)
-                loc = f'ranking/' if is_overall else f'ranking/{rslug}/'
-                print(f'  [OK] {loc}index.html')
-                ranking_count += 1
-            except Exception as e:
-                loc = f'ranking/' if is_overall else f'ranking/{rslug}/'
-                print(f'  [FAIL] {loc}: {e}')
-
-    # ═══════════════════════════════════════════════════════
-    # Phase 5b: Live Dashboard / 动态数据面板（程序化SEO）
-    # ═══════════════════════════════════════════════════════
-    live_data = load_live_data()
-    all_lives = live_data.get('live_pages', [])
     live_count = 0
+    total_pages = 0
 
-    if all_lives:
-        print(f'\n[Phase5b] Generating live dashboard pages ({len(all_lives)})...')
-        for lp in all_lives:
-            lslug = lp.get('slug', 'unknown')
-            dir_path = os.path.join(BASE_DIR, 'live', lslug)
+    # ═══════════════════════════════════════════════════════
+    # 分类页（index 时生成，或 all 时生成）
+    # ═══════════════════════════════════════════════════════
+    if target in ('all', 'index'):
+        for category_name, tools_in_category in tools_by_category.items():
+            category_slug = get_category_slug(category_name)
+            dir_path = os.path.join(BASE_DIR, 'category', category_slug)
             os.makedirs(dir_path, exist_ok=True)
-            try:
-                html = build_live_page(live_data, lp, published_tools, articles)
-                with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-                    f.write(html)
-                print(f'  [OK] live/{lslug}/index.html')
-                live_count += 1
-            except Exception as e:
-                print(f'  [FAIL] live/{lslug}/: {e}')
+            html = build_category_page(category_name, tools_in_category)
+            with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(html)
+            print(f'[OK] category/{category_slug}/index.html')
 
-    # 生成 sitemap.xml
-    # 传递所有已发布的分类名称列表 + 对比/替代/Quiz/Ranking/Live数据
-    sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()],
-                                all_compares, all_alternatives,
-                                all_quizzes if 'all_quizzes' in dir() else [],
-                                all_rankings if 'all_rankings' in dir() else [],
-                                all_lives)
-    with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
-        f.write(sitemap)
-    print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + {len(tools_by_category)} categories + {total_pages} article pages + {compare_count} compares + {alt_count} alternatives + {quiz_count} quizzes + {ranking_count} rankings + {live_count} live)')
+    # ═══════════════════════════════════════════════════════
+    # 工具页
+    # ═══════════════════════════════════════════════════════
+    if target in ('all', 'tools'):
+        for tool in published_tools:
+            slug = tool['slug']
+            dir_path = os.path.join(BASE_DIR, 'tools', slug)
+            os.makedirs(dir_path, exist_ok=True)
+            html = build_tool_page(tool, published_tools, articles)
+            with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(html)
+            print(f'[OK] tools/{slug}/index.html')
 
-    # 生成静态首页
-    index_html = build_index_page(published_tools, articles) # 使用已发布的工具
-    with open(os.path.join(BASE_DIR, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write(index_html)
-    print(f'[OK] index.html (Static Pre-rendered)')
+    # ═══════════════════════════════════════════════════════
+    # 文章页
+    # ═══════════════════════════════════════════════════════
+    if target in ('all', 'articles'):
+        for article in articles:
+            slug = article['slug']
+            dir_path = os.path.join(BASE_DIR, 'articles', slug)
+            os.makedirs(dir_path, exist_ok=True)
+            html = build_article_page(article, articles, published_tools)
+            with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(html)
+            print(f'[OK] articles/{slug}/index.html')
 
-    # 收集需要推送的链接（仅推送新增页面，避免浪费配额）
-    push_cache_file = os.path.join(BASE_DIR, '.baidu_pushed.json')
-    pushed_urls = set()
-    if os.path.exists(push_cache_file):
-        with open(push_cache_file, 'r', encoding='utf-8') as f:
-            pushed_urls = set(json.load(f))
-    
-    all_urls = ["https://www.aitoolbox.hk/"]
-    for tool in published_tools: # 只推送已发布的工具
-        all_urls.append(f"https://www.aitoolbox.hk/tools/{tool['slug']}/")
-    for article in articles:
-        all_urls.append(f"https://www.aitoolbox.hk/articles/{article['slug']}/")
-    for category_name in tools_by_category.keys(): # 添加分类页面的URL
-        category_slug = get_category_slug(category_name)
-        all_urls.append(f"https://www.aitoolbox.hk/category/{category_slug}/")
-    for cp in (all_compares or []):  # 对比页
-        cslug = cp.get('slug', '')
-        if cslug:
-            all_urls.append(f"https://www.aitoolbox.hk/compare/{cslug}/")
-    for alt in (all_alternatives or []):  # 替代方案页
-        aslug = alt.get('slug', '')
-        if aslug:
-            all_urls.append(f"https://www.aitoolbox.hk/alternatives/{aslug}/")
-    for qd in (all_quizzes or []):  # Quiz选择器页
-        qslug = qd.get('slug', '')
-        if qslug:
-            is_main = (qd.get('target_url') == '/quiz/') or qslug == 'ai-tool-finder-2026'
-            all_urls.append(f"https://www.aitoolbox.hk/quiz{'' if is_main else '/' + qslug + '/'}")
-    for rd in (all_rankings or []):  # 排名页
-        rslug = rd.get('slug', '')
-        if rslug:
-            is_overall = rslug == '2026-ai-tools-overall-ranking'
-            all_urls.append(f"https://www.aitoolbox.hk/ranking{'' if is_overall else '/' + rslug + '/'}")
-    for lp in (all_lives or []):  # Live Dashboard 页
-        lslug = lp.get('slug', '')
-        if lslug:
-            all_urls.append(f"https://www.aitoolbox.hk/live/{lslug}/")
+        # 文章分页列表页
+        total_pages = build_article_list_pages(articles)
 
-    new_urls = [u for u in all_urls if u not in pushed_urls]
-    
-    if new_urls:
-        print(f"\nPushing {len(new_urls)} new URLs to Baidu...")
-        push_result = push_to_baidu(new_urls)
-        # 只在推送成功时才更新缓存
-        if push_result:
-            pushed_urls.update(new_urls)
-            with open(push_cache_file, 'w', encoding='utf-8') as f:
-                json.dump(list(pushed_urls), f)
-    else:
-        print(f"\nNo new URLs to push. ({len(all_urls)} total, all already pushed)")
+    # ═══════════════════════════════════════════════════════
+    # Phase 2+3: 对比页和替代方案页（pSEO）
+    # ═══════════════════════════════════════════════════════
+    if target in ('all', 'pseo'):
+        if all_compares:
+            print(f'\n[Phase2] Generating compare pages ({len(all_compares)})...')
+            for cp in all_compares:
+                cslug = cp.get('slug', 'unknown')
+                dir_path = os.path.join(BASE_DIR, 'compare', cslug)
+                os.makedirs(dir_path, exist_ok=True)
+                try:
+                    html = build_compare_page(cp, published_tools, articles)
+                    with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                        f.write(html)
+                    print(f'  [OK] compare/{cslug}/index.html')
+                    compare_count += 1
+                except Exception as e:
+                    print(f'  [FAIL] compare/{cslug}/: {e}')
 
-    # IndexNow 推送（Bing / Yandex / Seznam 同步）
-    indexnow_cache_file = os.path.join(BASE_DIR, '.indexnow_pushed.json')
-    indexnow_pushed = set()
-    if os.path.exists(indexnow_cache_file):
-        with open(indexnow_cache_file, 'r', encoding='utf-8') as f:
-            indexnow_pushed = set(json.load(f))
+        if all_alternatives:
+            print(f'\n[Phase3] Generating alternatives pages ({len(all_alternatives)})...')
+            for alt in all_alternatives:
+                aslug = alt.get('slug', 'unknown')
+                dir_path = os.path.join(BASE_DIR, 'alternatives', aslug)
+                os.makedirs(dir_path, exist_ok=True)
+                try:
+                    html = build_alternatives_page(alt, published_tools, articles)
+                    with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                        f.write(html)
+                    print(f'  [OK] alternatives/{aslug}/index.html')
+                    alt_count += 1
+                except Exception as e:
+                    print(f'  [FAIL] alternatives/{aslug}/: {e}')
 
-    new_indexnow_urls = [u for u in all_urls if u not in indexnow_pushed]
-    if new_indexnow_urls:
-        print(f"\nPushing {len(new_indexnow_urls)} new URLs via IndexNow (Bing/Yandex)...")
-        if push_to_indexnow(new_indexnow_urls):
-            indexnow_pushed.update(new_indexnow_urls)
-            with open(indexnow_cache_file, 'w', encoding='utf-8') as f:
-                json.dump(list(indexnow_pushed), f)
-    else:
-        print(f"\nIndexNow: No new URLs to push. ({len(all_urls)} total, all already pushed)")
-    
-    print(f'\nDone! {len(published_tools)} tools + {len(articles)} articles + {quiz_count} quizzes + {ranking_count} rankings + {live_count} live')
+        # Quiz
+        if all_quizzes:
+            print(f'\n[Phase4] Generating quiz pages ({len(all_quizzes)})...')
+            for qd in all_quizzes:
+                qslug = qd.get('slug', 'unknown')
+                is_main = qd.get('target_url') == '/quiz/' or qslug == 'ai-tool-finder-2026'
+                if is_main:
+                    dir_path = os.path.join(BASE_DIR, 'quiz')
+                else:
+                    dir_path = os.path.join(BASE_DIR, 'quiz', qslug)
+                os.makedirs(dir_path, exist_ok=True)
+                try:
+                    html = build_quiz_page(qd, published_tools, articles)
+                    with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                        f.write(html)
+                    loc = f'quiz/' if is_main else f'quiz/{qslug}/'
+                    print(f'  [OK] {loc}index.html')
+                    quiz_count += 1
+                except Exception as e:
+                    loc = f'quiz/' if is_main else f'quiz/{qslug}/'
+                    print(f'  [FAIL] {loc}: {e}')
+
+        # 排名
+        if all_rankings:
+            print(f'\n[Phase5] Generating ranking pages ({len(all_rankings)})...')
+            for rd in all_rankings:
+                rslug = rd.get('slug', 'unknown')
+                is_overall = rslug == '2026-ai-tools-overall-ranking'
+                if is_overall:
+                    dir_path = os.path.join(BASE_DIR, 'ranking')
+                else:
+                    dir_path = os.path.join(BASE_DIR, 'ranking', rslug)
+                os.makedirs(dir_path, exist_ok=True)
+                try:
+                    html = build_ranking_page(rd, published_tools, articles)
+                    with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                        f.write(html)
+                    loc = f'ranking/' if is_overall else f'ranking/{rslug}/'
+                    print(f'  [OK] {loc}index.html')
+                    ranking_count += 1
+                except Exception as e:
+                    loc = f'ranking/' if is_overall else f'ranking/{rslug}/'
+                    print(f'  [FAIL] {loc}: {e}')
+
+    # ═══════════════════════════════════════════════════════
+    # Phase 5b: Live Dashboard
+    # ═══════════════════════════════════════════════════════
+    if target in ('all', 'live', 'pseo'):
+        if all_lives:
+            print(f'\n[Phase5b] Generating live dashboard pages ({len(all_lives)})...')
+            dashboard_html = None
+            for lp in all_lives:
+                lslug = lp.get('slug', 'unknown')
+                dir_path = os.path.join(BASE_DIR, 'live', lslug)
+                os.makedirs(dir_path, exist_ok=True)
+                try:
+                    html = build_live_page(live_data, lp, published_tools, articles)
+                    with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                        f.write(html)
+                    if lslug == 'dashboard':
+                        dashboard_html = html
+                    print(f'  [OK] live/{lslug}/index.html')
+                    live_count += 1
+                except Exception as e:
+                    print(f'  [FAIL] live/{lslug}/: {e}')
+
+            if dashboard_html:
+                with open(os.path.join(BASE_DIR, 'live', 'index.html'), 'w', encoding='utf-8') as f:
+                    f.write(dashboard_html)
+                print(f'  [OK] live/index.html (dashboard)')
+
+    # ═══════════════════════════════════════════════════════
+    # 静态首页
+    # ═══════════════════════════════════════════════════════
+    if target in ('all', 'index'):
+        index_html = build_index_page(published_tools, articles)
+        with open(os.path.join(BASE_DIR, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(index_html)
+        print(f'[OK] index.html (Static Pre-rendered)')
+
+    # ═══════════════════════════════════════════════════════
+    # sitemap + 推送（每次都执行）
+    # ═══════════════════════════════════════════════════════
+    if target != 'none':  # 'none' 用于只构建HTML不推送的场景
+        sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()],
+                                    all_compares, all_alternatives,
+                                    all_quizzes,
+                                    all_rankings,
+                                    all_lives)
+        with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
+            f.write(sitemap)
+        print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + {len(tools_by_category)} categories + {total_pages} article pages + {compare_count} compares + {alt_count} alternatives + {quiz_count} quizzes + {ranking_count} rankings + {live_count} live)')
+
+        # 收集需要推送的链接
+        push_cache_file = os.path.join(BASE_DIR, '.baidu_pushed.json')
+        pushed_urls = set()
+        if os.path.exists(push_cache_file):
+            with open(push_cache_file, 'r', encoding='utf-8') as f:
+                pushed_urls = set(json.load(f))
+        
+        all_urls = ["https://www.aitoolbox.hk/"]
+        for tool in published_tools:
+            all_urls.append(f"https://www.aitoolbox.hk/tools/{tool['slug']}/")
+        for article in articles:
+            all_urls.append(f"https://www.aitoolbox.hk/articles/{article['slug']}/")
+        for category_name in tools_by_category.keys():
+            category_slug = get_category_slug(category_name)
+            all_urls.append(f"https://www.aitoolbox.hk/category/{category_slug}/")
+        for cp in (all_compares or []):
+            cslug = cp.get('slug', '')
+            if cslug:
+                all_urls.append(f"https://www.aitoolbox.hk/compare/{cslug}/")
+        for alt in (all_alternatives or []):
+            aslug = alt.get('slug', '')
+            if aslug:
+                all_urls.append(f"https://www.aitoolbox.hk/alternatives/{aslug}/")
+        for qd in (all_quizzes or []):
+            qslug = qd.get('slug', '')
+            if qslug:
+                is_main = (qd.get('target_url') == '/quiz/') or qslug == 'ai-tool-finder-2026'
+                all_urls.append(f"https://www.aitoolbox.hk/quiz{'' if is_main else '/' + qslug + '/'}")
+        for rd in (all_rankings or []):
+            rslug = rd.get('slug', '')
+            if rslug:
+                is_overall = rslug == '2026-ai-tools-overall-ranking'
+                all_urls.append(f"https://www.aitoolbox.hk/ranking{'' if is_overall else '/' + rslug + '/'}")
+        for lp in (all_lives or []):
+            lslug = lp.get('slug', '')
+            if lslug:
+                all_urls.append(f"https://www.aitoolbox.hk/live/{lslug}/")
+
+        new_urls = [u for u in all_urls if u not in pushed_urls]
+        
+        if new_urls:
+            print(f"\nPushing {len(new_urls)} new URLs to Baidu...")
+            push_result = push_to_baidu(new_urls)
+            if push_result:
+                pushed_urls.update(new_urls)
+                with open(push_cache_file, 'w', encoding='utf-8') as f:
+                    json.dump(list(pushed_urls), f)
+        else:
+            print(f"\nNo new URLs to push. ({len(all_urls)} total, all already pushed)")
+
+        # IndexNow 推送
+        indexnow_cache_file = os.path.join(BASE_DIR, '.indexnow_pushed.json')
+        indexnow_pushed = set()
+        if os.path.exists(indexnow_cache_file):
+            with open(indexnow_cache_file, 'r', encoding='utf-8') as f:
+                indexnow_pushed = set(json.load(f))
+
+        new_indexnow_urls = [u for u in all_urls if u not in indexnow_pushed]
+        if new_indexnow_urls:
+            print(f"\nPushing {len(new_indexnow_urls)} new URLs via IndexNow (Bing/Yandex)...")
+            if push_to_indexnow(new_indexnow_urls):
+                indexnow_pushed.update(new_indexnow_urls)
+                with open(indexnow_cache_file, 'w', encoding='utf-8') as f:
+                    json.dump(list(indexnow_pushed), f)
+        else:
+            print(f"\nIndexNow: No new URLs to push. ({len(all_urls)} total, all already pushed)")
+        
+        print(f'\nDone! Target={target} | {len(published_tools)} tools + {len(articles)} articles + {quiz_count} quizzes + {ranking_count} rankings + {live_count} live')
+
+
+def main():
+    parser = argparse.ArgumentParser(description='AI工具宝箱 SSG 构建脚本')
+    parser.add_argument('--target', '-t',
+                        choices=['all', 'articles', 'tools', 'live', 'pseo', 'ranking', 'index', 'sitemap', 'none'],
+                        default='all',
+                        help='构建目标（默认 all）：all=全量, articles=仅文章, tools=仅工具, live=仅Live面板, pseo=对比/替代/Quiz/排名/Live, index=首页+分类, sitemap=仅推送, none=仅构建HTML不推送')
+    args = parser.parse_args()
+    build_target(args.target)
+
 
 if __name__ == '__main__':
     main()
