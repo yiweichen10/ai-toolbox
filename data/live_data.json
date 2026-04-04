@@ -1,0 +1,1974 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "generated_at": "2026-04-04 10:04:09",
+    "source": "aitoolbox.hk-live-generator",
+    "tool_count": 52,
+    "update_policy": "每日自动更新，数据来源于工具官方信息聚合与用户评价分析"
+  },
+  "stats": {
+    "total_tools": 52,
+    "total_categories": 12,
+    "total_visits_str": "540",
+    "avg_rating": 4.6,
+    "price_distribution": {
+      "free": 36,
+      "freemium": 16,
+      "paid": 0,
+      "enterprise": 0
+    },
+    "today_active": "33",
+    "this_week_new": 1,
+    "last_updated": "2026-04-04 10:04",
+    "update_frequency": "每日自动更新"
+  },
+  "comparison_matrix": {
+    "title": "AI工具核心能力对比矩阵",
+    "description": "从价格、评分、功能、平台等7个维度横向对比主流AI工具，帮你快速找到最适合的那一款。",
+    "dimensions": [
+      {
+        "id": "price",
+        "name": "价格",
+        "type": "text"
+      },
+      {
+        "id": "rating",
+        "name": "评分",
+        "type": "number"
+      },
+      {
+        "id": "features_count",
+        "name": "功能数",
+        "type": "number"
+      },
+      {
+        "id": "platform",
+        "name": "平台",
+        "type": "text"
+      },
+      {
+        "id": "chinese",
+        "name": "中文",
+        "type": "badge"
+      },
+      {
+        "id": "api",
+        "name": "API",
+        "type": "badge"
+      },
+      {
+        "id": "free_tier",
+        "name": "免费层",
+        "type": "level"
+      }
+    ],
+    "tools": [
+      {
+        "slug": "lovable",
+        "name": "Lovable",
+        "emoji": "💻",
+        "color": "#bd5988",
+        "category": "AI编程",
+        "values": {
+          "price": "免费使用",
+          "rating": "⭐ 4.9",
+          "features_count": 6,
+          "platform": "本地部署 / Web",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/lovable/"
+      },
+      {
+        "slug": "you.com",
+        "name": "You.com",
+        "emoji": "🔍",
+        "color": "#cc363a",
+        "category": "AI搜索",
+        "values": {
+          "price": "免费使用",
+          "rating": "⭐ 5.0",
+          "features_count": 6,
+          "platform": "Web / iOS / Android",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/you.com/"
+      },
+      {
+        "slug": "chatgpt",
+        "name": "ChatGPT",
+        "emoji": "🟢",
+        "color": "#10a37f",
+        "category": "AI对话",
+        "values": {
+          "price": "免费版+Plus $20/月",
+          "rating": "⭐ 4.9",
+          "features_count": 8,
+          "platform": "Web / iOS / Android",
+          "chinese": "✅",
+          "api": "✅",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/chatgpt/"
+      },
+      {
+        "slug": "veo",
+        "name": "Veo",
+        "emoji": "🎬",
+        "color": "#01d125",
+        "category": "AI视频",
+        "values": {
+          "price": "基础$10/月起",
+          "rating": "⭐ 4.5",
+          "features_count": 6,
+          "platform": "Web",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 4
+        },
+        "detail_url": "/tools/veo/"
+      },
+      {
+        "slug": "sora",
+        "name": "Sora",
+        "emoji": "🎬",
+        "color": "#10a37f",
+        "category": "AI视频",
+        "values": {
+          "price": "ChatGPT Plus $20/月起",
+          "rating": "⭐ 4.9",
+          "features_count": 6,
+          "platform": "Web",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 4
+        },
+        "detail_url": "/tools/sora/"
+      },
+      {
+        "slug": "perplexity",
+        "name": "Perplexity",
+        "emoji": "🔍",
+        "color": "#20b2aa",
+        "category": "AI搜索",
+        "values": {
+          "price": "免费版+Pro $20/月",
+          "rating": "⭐ 4.8",
+          "features_count": 6,
+          "platform": "Web / iOS / Android",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/perplexity/"
+      },
+      {
+        "slug": "quillbot",
+        "name": "QuillBot",
+        "emoji": "✍️",
+        "color": "#0f273b",
+        "category": "AI写作",
+        "values": {
+          "price": "免费使用",
+          "rating": "⭐ 4.4",
+          "features_count": 6,
+          "platform": "本地部署 / Web",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/quillbot/"
+      },
+      {
+        "slug": "speechify",
+        "name": "Speechify",
+        "emoji": "🎧",
+        "color": "#77557b",
+        "category": "AI音频",
+        "values": {
+          "price": "基础$10/月起",
+          "rating": "⭐ 4.7",
+          "features_count": 6,
+          "platform": "Web",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 4
+        },
+        "detail_url": "/tools/speechify/"
+      },
+      {
+        "slug": "dall-e-3",
+        "name": "DALL-E 3",
+        "emoji": "🎨",
+        "color": "#abca64",
+        "category": "AI绘画",
+        "values": {
+          "price": "基础$10/月起",
+          "rating": "⭐ 4.7",
+          "features_count": 6,
+          "platform": "Web / iOS / Android",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 4
+        },
+        "detail_url": "/tools/dall-e-3/"
+      },
+      {
+        "slug": "zapier-ai",
+        "name": "Zapier AI",
+        "emoji": "⚙️",
+        "color": "#8fcaaa",
+        "category": "AI自动化",
+        "values": {
+          "price": "免费使用",
+          "rating": "⭐ 4.1",
+          "features_count": 6,
+          "platform": "本地部署 / Web",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/zapier-ai/"
+      },
+      {
+        "slug": "fliki",
+        "name": "Fliki",
+        "emoji": "🎬",
+        "color": "#5e42c2",
+        "category": "AI视频",
+        "values": {
+          "price": "免费版+Pro $10/月",
+          "rating": "⭐ 5.0",
+          "features_count": 6,
+          "platform": "本地部署 / Web",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/fliki/"
+      },
+      {
+        "slug": "github-copilot",
+        "name": "GitHub Copilot",
+        "emoji": "💻",
+        "color": "#3178c6",
+        "category": "AI编程",
+        "values": {
+          "price": "免费个人版+Business $19/月",
+          "rating": "⭐ 4.7",
+          "features_count": 6,
+          "platform": "VS Code / JetBrains ",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/github-copilot/"
+      }
+    ],
+    "last_updated": "2026-04-04 10:04"
+  },
+  "trends": {
+    "title": "AI工具热度趋势追踪",
+    "description": "追踪过去8周各分类和热门工具的搜索热度变化，发现正在上升的新星。",
+    "period": "近8周",
+    "categories": [
+      {
+        "category": "AI对话",
+        "icon": "💬",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 138
+          },
+          {
+            "week": "02/14",
+            "value": 159
+          },
+          {
+            "week": "02/21",
+            "value": 154
+          },
+          {
+            "week": "02/28",
+            "value": 144
+          },
+          {
+            "week": "03/07",
+            "value": 157
+          },
+          {
+            "week": "03/14",
+            "value": 158
+          },
+          {
+            "week": "03/21",
+            "value": 176
+          },
+          {
+            "week": "03/28",
+            "value": 194
+          }
+        ],
+        "current_value": 194,
+        "change_percent": 40.6,
+        "tool_count": 9
+      },
+      {
+        "category": "AI编程",
+        "icon": "💻",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 127
+          },
+          {
+            "week": "02/14",
+            "value": 151
+          },
+          {
+            "week": "02/21",
+            "value": 156
+          },
+          {
+            "week": "02/28",
+            "value": 158
+          },
+          {
+            "week": "03/07",
+            "value": 164
+          },
+          {
+            "week": "03/14",
+            "value": 143
+          },
+          {
+            "week": "03/21",
+            "value": 146
+          },
+          {
+            "week": "03/28",
+            "value": 161
+          }
+        ],
+        "current_value": 161,
+        "change_percent": 26.8,
+        "tool_count": 7
+      },
+      {
+        "category": "AI绘画",
+        "icon": "🎨",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 149
+          },
+          {
+            "week": "02/14",
+            "value": 128
+          },
+          {
+            "week": "02/21",
+            "value": 157
+          },
+          {
+            "week": "02/28",
+            "value": 168
+          },
+          {
+            "week": "03/07",
+            "value": 173
+          },
+          {
+            "week": "03/14",
+            "value": 175
+          },
+          {
+            "week": "03/21",
+            "value": 160
+          },
+          {
+            "week": "03/28",
+            "value": 158
+          }
+        ],
+        "current_value": 158,
+        "change_percent": 6.0,
+        "tool_count": 7
+      },
+      {
+        "category": "AI视频",
+        "icon": "🎬",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 100
+          },
+          {
+            "week": "02/14",
+            "value": 109
+          },
+          {
+            "week": "02/21",
+            "value": 112
+          },
+          {
+            "week": "02/28",
+            "value": 130
+          },
+          {
+            "week": "03/07",
+            "value": 142
+          },
+          {
+            "week": "03/14",
+            "value": 122
+          },
+          {
+            "week": "03/21",
+            "value": 114
+          },
+          {
+            "week": "03/28",
+            "value": 146
+          }
+        ],
+        "current_value": 146,
+        "change_percent": 46.0,
+        "tool_count": 7
+      },
+      {
+        "category": "AI办公",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 108
+          },
+          {
+            "week": "02/14",
+            "value": 93
+          },
+          {
+            "week": "02/21",
+            "value": 127
+          },
+          {
+            "week": "02/28",
+            "value": 119
+          },
+          {
+            "week": "03/07",
+            "value": 103
+          },
+          {
+            "week": "03/14",
+            "value": 119
+          },
+          {
+            "week": "03/21",
+            "value": 136
+          },
+          {
+            "week": "03/28",
+            "value": 118
+          }
+        ],
+        "current_value": 118,
+        "change_percent": 9.3,
+        "tool_count": 5
+      },
+      {
+        "category": "AI写作",
+        "icon": "✍️",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 101
+          },
+          {
+            "week": "02/14",
+            "value": 103
+          },
+          {
+            "week": "02/21",
+            "value": 85
+          },
+          {
+            "week": "02/28",
+            "value": 93
+          },
+          {
+            "week": "03/07",
+            "value": 111
+          },
+          {
+            "week": "03/14",
+            "value": 95
+          },
+          {
+            "week": "03/21",
+            "value": 121
+          },
+          {
+            "week": "03/28",
+            "value": 112
+          }
+        ],
+        "current_value": 112,
+        "change_percent": 10.9,
+        "tool_count": 3
+      },
+      {
+        "category": "AI设计",
+        "icon": "🖌️",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 94
+          },
+          {
+            "week": "02/14",
+            "value": 97
+          },
+          {
+            "week": "02/21",
+            "value": 97
+          },
+          {
+            "week": "02/28",
+            "value": 104
+          },
+          {
+            "week": "03/07",
+            "value": 105
+          },
+          {
+            "week": "03/14",
+            "value": 97
+          },
+          {
+            "week": "03/21",
+            "value": 89
+          },
+          {
+            "week": "03/28",
+            "value": 102
+          }
+        ],
+        "current_value": 102,
+        "change_percent": 8.5,
+        "tool_count": 2
+      },
+      {
+        "category": "AI搜索",
+        "icon": "🔍",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 94
+          },
+          {
+            "week": "02/14",
+            "value": 92
+          },
+          {
+            "week": "02/21",
+            "value": 109
+          },
+          {
+            "week": "02/28",
+            "value": 99
+          },
+          {
+            "week": "03/07",
+            "value": 111
+          },
+          {
+            "week": "03/14",
+            "value": 116
+          },
+          {
+            "week": "03/21",
+            "value": 118
+          },
+          {
+            "week": "03/28",
+            "value": 96
+          }
+        ],
+        "current_value": 96,
+        "change_percent": 2.1,
+        "tool_count": 3
+      },
+      {
+        "category": "AI自动化",
+        "icon": "⚡",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 72
+          },
+          {
+            "week": "02/14",
+            "value": 67
+          },
+          {
+            "week": "02/21",
+            "value": 84
+          },
+          {
+            "week": "02/28",
+            "value": 81
+          },
+          {
+            "week": "03/07",
+            "value": 76
+          },
+          {
+            "week": "03/14",
+            "value": 84
+          },
+          {
+            "week": "03/21",
+            "value": 96
+          },
+          {
+            "week": "03/28",
+            "value": 91
+          }
+        ],
+        "current_value": 91,
+        "change_percent": 26.4,
+        "tool_count": 3
+      },
+      {
+        "category": "AI效率",
+        "icon": "⚙️",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 77
+          },
+          {
+            "week": "02/14",
+            "value": 70
+          },
+          {
+            "week": "02/21",
+            "value": 65
+          },
+          {
+            "week": "02/28",
+            "value": 85
+          },
+          {
+            "week": "03/07",
+            "value": 85
+          },
+          {
+            "week": "03/14",
+            "value": 70
+          },
+          {
+            "week": "03/21",
+            "value": 83
+          },
+          {
+            "week": "03/28",
+            "value": 83
+          }
+        ],
+        "current_value": 83,
+        "change_percent": 7.8,
+        "tool_count": 1
+      },
+      {
+        "category": "AI音频",
+        "icon": "🎵",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 77
+          },
+          {
+            "week": "02/14",
+            "value": 66
+          },
+          {
+            "week": "02/21",
+            "value": 71
+          },
+          {
+            "week": "02/28",
+            "value": 87
+          },
+          {
+            "week": "03/07",
+            "value": 72
+          },
+          {
+            "week": "03/14",
+            "value": 84
+          },
+          {
+            "week": "03/21",
+            "value": 88
+          },
+          {
+            "week": "03/28",
+            "value": 78
+          }
+        ],
+        "current_value": 78,
+        "change_percent": 1.3,
+        "tool_count": 4
+      },
+      {
+        "category": "AI翻译",
+        "icon": "🌐",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 56
+          },
+          {
+            "week": "02/14",
+            "value": 54
+          },
+          {
+            "week": "02/21",
+            "value": 55
+          },
+          {
+            "week": "02/28",
+            "value": 53
+          },
+          {
+            "week": "03/07",
+            "value": 60
+          },
+          {
+            "week": "03/14",
+            "value": 53
+          },
+          {
+            "week": "03/21",
+            "value": 61
+          },
+          {
+            "week": "03/28",
+            "value": 57
+          }
+        ],
+        "current_value": 57,
+        "change_percent": 1.8,
+        "tool_count": 1
+      }
+    ],
+    "top_tools": [
+      {
+        "slug": "gemini",
+        "name": "Gemini",
+        "emoji": "💬",
+        "color": "#6eb428",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 99
+          },
+          {
+            "week": "02/14",
+            "value": 98
+          },
+          {
+            "week": "02/21",
+            "value": 103
+          },
+          {
+            "week": "02/28",
+            "value": 112
+          },
+          {
+            "week": "03/07",
+            "value": 103
+          },
+          {
+            "week": "03/14",
+            "value": 129
+          },
+          {
+            "week": "03/21",
+            "value": 120
+          },
+          {
+            "week": "03/28",
+            "value": 107
+          }
+        ],
+        "current_value": 107,
+        "change_percent": 8.1
+      },
+      {
+        "slug": "you.com",
+        "name": "You.com",
+        "emoji": "🔍",
+        "color": "#cc363a",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 81
+          },
+          {
+            "week": "02/14",
+            "value": 96
+          },
+          {
+            "week": "02/21",
+            "value": 94
+          },
+          {
+            "week": "02/28",
+            "value": 98
+          },
+          {
+            "week": "03/07",
+            "value": 107
+          },
+          {
+            "week": "03/14",
+            "value": 94
+          },
+          {
+            "week": "03/21",
+            "value": 121
+          },
+          {
+            "week": "03/28",
+            "value": 97
+          }
+        ],
+        "current_value": 97,
+        "change_percent": 19.8
+      },
+      {
+        "slug": "fliki",
+        "name": "Fliki",
+        "emoji": "🎬",
+        "color": "#5e42c2",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 115
+          },
+          {
+            "week": "02/14",
+            "value": 121
+          },
+          {
+            "week": "02/21",
+            "value": 115
+          },
+          {
+            "week": "02/28",
+            "value": 99
+          },
+          {
+            "week": "03/07",
+            "value": 110
+          },
+          {
+            "week": "03/14",
+            "value": 105
+          },
+          {
+            "week": "03/21",
+            "value": 135
+          },
+          {
+            "week": "03/28",
+            "value": 110
+          }
+        ],
+        "current_value": 110,
+        "change_percent": -4.3
+      },
+      {
+        "slug": "chatgpt",
+        "name": "ChatGPT",
+        "emoji": "🟢",
+        "color": "#10a37f",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 83
+          },
+          {
+            "week": "02/14",
+            "value": 104
+          },
+          {
+            "week": "02/21",
+            "value": 102
+          },
+          {
+            "week": "02/28",
+            "value": 114
+          },
+          {
+            "week": "03/07",
+            "value": 99
+          },
+          {
+            "week": "03/14",
+            "value": 100
+          },
+          {
+            "week": "03/21",
+            "value": 96
+          },
+          {
+            "week": "03/28",
+            "value": 89
+          }
+        ],
+        "current_value": 89,
+        "change_percent": 7.2
+      },
+      {
+        "slug": "midjourney",
+        "name": "Midjourney",
+        "emoji": "🎨",
+        "color": "#7c3aed",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 107
+          },
+          {
+            "week": "02/14",
+            "value": 101
+          },
+          {
+            "week": "02/21",
+            "value": 105
+          },
+          {
+            "week": "02/28",
+            "value": 122
+          },
+          {
+            "week": "03/07",
+            "value": 117
+          },
+          {
+            "week": "03/14",
+            "value": 131
+          },
+          {
+            "week": "03/21",
+            "value": 125
+          },
+          {
+            "week": "03/28",
+            "value": 121
+          }
+        ],
+        "current_value": 121,
+        "change_percent": 13.1
+      },
+      {
+        "slug": "sora",
+        "name": "Sora",
+        "emoji": "🎬",
+        "color": "#10a37f",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 100
+          },
+          {
+            "week": "02/14",
+            "value": 93
+          },
+          {
+            "week": "02/21",
+            "value": 107
+          },
+          {
+            "week": "02/28",
+            "value": 110
+          },
+          {
+            "week": "03/07",
+            "value": 87
+          },
+          {
+            "week": "03/14",
+            "value": 113
+          },
+          {
+            "week": "03/21",
+            "value": 103
+          },
+          {
+            "week": "03/28",
+            "value": 104
+          }
+        ],
+        "current_value": 104,
+        "change_percent": 4.0
+      },
+      {
+        "slug": "lovable",
+        "name": "Lovable",
+        "emoji": "💻",
+        "color": "#bd5988",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 96
+          },
+          {
+            "week": "02/14",
+            "value": 120
+          },
+          {
+            "week": "02/21",
+            "value": 128
+          },
+          {
+            "week": "02/28",
+            "value": 107
+          },
+          {
+            "week": "03/07",
+            "value": 107
+          },
+          {
+            "week": "03/14",
+            "value": 102
+          },
+          {
+            "week": "03/21",
+            "value": 133
+          },
+          {
+            "week": "03/28",
+            "value": 123
+          }
+        ],
+        "current_value": 123,
+        "change_percent": 28.1
+      },
+      {
+        "slug": "opus-clip",
+        "name": "Opus Clip",
+        "emoji": "🎬",
+        "color": "#c9a69d",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 115
+          },
+          {
+            "week": "02/14",
+            "value": 123
+          },
+          {
+            "week": "02/21",
+            "value": 114
+          },
+          {
+            "week": "02/28",
+            "value": 140
+          },
+          {
+            "week": "03/07",
+            "value": 115
+          },
+          {
+            "week": "03/14",
+            "value": 134
+          },
+          {
+            "week": "03/21",
+            "value": 111
+          },
+          {
+            "week": "03/28",
+            "value": 130
+          }
+        ],
+        "current_value": 130,
+        "change_percent": 13.0
+      },
+      {
+        "slug": "miaohua",
+        "name": "秒画",
+        "emoji": "🎨",
+        "color": "#b92a6d",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 88
+          },
+          {
+            "week": "02/14",
+            "value": 84
+          },
+          {
+            "week": "02/21",
+            "value": 99
+          },
+          {
+            "week": "02/28",
+            "value": 86
+          },
+          {
+            "week": "03/07",
+            "value": 84
+          },
+          {
+            "week": "03/14",
+            "value": 97
+          },
+          {
+            "week": "03/21",
+            "value": 104
+          },
+          {
+            "week": "03/28",
+            "value": 97
+          }
+        ],
+        "current_value": 97,
+        "change_percent": 10.2
+      },
+      {
+        "slug": "claude",
+        "name": "Claude",
+        "emoji": "🎭",
+        "color": "#d97706",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 106
+          },
+          {
+            "week": "02/14",
+            "value": 111
+          },
+          {
+            "week": "02/21",
+            "value": 113
+          },
+          {
+            "week": "02/28",
+            "value": 90
+          },
+          {
+            "week": "03/07",
+            "value": 104
+          },
+          {
+            "week": "03/14",
+            "value": 97
+          },
+          {
+            "week": "03/21",
+            "value": 108
+          },
+          {
+            "week": "03/28",
+            "value": 87
+          }
+        ],
+        "current_value": 87,
+        "change_percent": -17.9
+      },
+      {
+        "slug": "cursor",
+        "name": "Cursor",
+        "emoji": "⬛",
+        "color": "#000000",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 100
+          },
+          {
+            "week": "02/14",
+            "value": 107
+          },
+          {
+            "week": "02/21",
+            "value": 112
+          },
+          {
+            "week": "02/28",
+            "value": 117
+          },
+          {
+            "week": "03/07",
+            "value": 101
+          },
+          {
+            "week": "03/14",
+            "value": 126
+          },
+          {
+            "week": "03/21",
+            "value": 104
+          },
+          {
+            "week": "03/28",
+            "value": 141
+          }
+        ],
+        "current_value": 141,
+        "change_percent": 41.0
+      },
+      {
+        "slug": "perplexity",
+        "name": "Perplexity",
+        "emoji": "🔍",
+        "color": "#20b2aa",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 86
+          },
+          {
+            "week": "02/14",
+            "value": 97
+          },
+          {
+            "week": "02/21",
+            "value": 99
+          },
+          {
+            "week": "02/28",
+            "value": 89
+          },
+          {
+            "week": "03/07",
+            "value": 96
+          },
+          {
+            "week": "03/14",
+            "value": 93
+          },
+          {
+            "week": "03/21",
+            "value": 82
+          },
+          {
+            "week": "03/28",
+            "value": 97
+          }
+        ],
+        "current_value": 97,
+        "change_percent": 12.8
+      },
+      {
+        "slug": "elevenlabs",
+        "name": "ElevenLabs",
+        "emoji": "🎙️",
+        "color": "#000000",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 98
+          },
+          {
+            "week": "02/14",
+            "value": 100
+          },
+          {
+            "week": "02/21",
+            "value": 94
+          },
+          {
+            "week": "02/28",
+            "value": 85
+          },
+          {
+            "week": "03/07",
+            "value": 100
+          },
+          {
+            "week": "03/14",
+            "value": 106
+          },
+          {
+            "week": "03/21",
+            "value": 77
+          },
+          {
+            "week": "03/28",
+            "value": 125
+          }
+        ],
+        "current_value": 125,
+        "change_percent": 27.6
+      },
+      {
+        "slug": "github-copilot",
+        "name": "GitHub Copilot",
+        "emoji": "💻",
+        "color": "#3178c6",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 98
+          },
+          {
+            "week": "02/14",
+            "value": 92
+          },
+          {
+            "week": "02/21",
+            "value": 92
+          },
+          {
+            "week": "02/28",
+            "value": 104
+          },
+          {
+            "week": "03/07",
+            "value": 83
+          },
+          {
+            "week": "03/14",
+            "value": 119
+          },
+          {
+            "week": "03/21",
+            "value": 100
+          },
+          {
+            "week": "03/28",
+            "value": 85
+          }
+        ],
+        "current_value": 85,
+        "change_percent": -13.3
+      },
+      {
+        "slug": "runway",
+        "name": "Runway",
+        "emoji": "📹",
+        "color": "#00b4d8",
+        "weekly_data": [
+          {
+            "week": "02/07",
+            "value": 105
+          },
+          {
+            "week": "02/14",
+            "value": 98
+          },
+          {
+            "week": "02/21",
+            "value": 99
+          },
+          {
+            "week": "02/28",
+            "value": 97
+          },
+          {
+            "week": "03/07",
+            "value": 99
+          },
+          {
+            "week": "03/14",
+            "value": 117
+          },
+          {
+            "week": "03/21",
+            "value": 130
+          },
+          {
+            "week": "03/28",
+            "value": 140
+          }
+        ],
+        "current_value": 140,
+        "change_percent": 33.3
+      }
+    ],
+    "last_updated": "2026-04-04 10:04"
+  },
+  "heatmap": {
+    "title": "AI工具市场分布热力图",
+    "description": "从分类×价格的交叉视角看当前AI工具市场的格局，找出竞争激烈和蓝海区域。",
+    "heatmap": [
+      {
+        "category": "AI对话",
+        "icon": "💬",
+        "tool_count": 9,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 7,
+            "names": [
+              "ChatGPT",
+              "Claude",
+              "Kimi"
+            ]
+          },
+          "freemium": {
+            "count": 2,
+            "names": [
+              "腾讯元宝",
+              "Poe"
+            ]
+          }
+        },
+        "top_feature": "智能对话",
+        "recommended_slug": "chatgpt"
+      },
+      {
+        "category": "AI视频",
+        "icon": "🎬",
+        "tool_count": 7,
+        "avg_rating": 4.7,
+        "by_price": {
+          "free": {
+            "count": 4,
+            "names": [
+              "Runway",
+              "Pika",
+              "Opus Clip"
+            ]
+          },
+          "freemium": {
+            "count": 3,
+            "names": [
+              "Sora",
+              "Veo",
+              "CapCut AI"
+            ]
+          }
+        },
+        "top_feature": "文生视频",
+        "recommended_slug": "runway"
+      },
+      {
+        "category": "AI绘画",
+        "icon": "🎨",
+        "tool_count": 7,
+        "avg_rating": 4.7,
+        "by_price": {
+          "freemium": {
+            "count": 3,
+            "names": [
+              "Midjourney",
+              "DALL-E 3",
+              "秒画"
+            ]
+          },
+          "free": {
+            "count": 4,
+            "names": [
+              "Stable Diffusion",
+              "Adobe Firefly",
+              "Leonardo AI"
+            ]
+          }
+        },
+        "top_feature": "文生图",
+        "recommended_slug": "midjourney"
+      },
+      {
+        "category": "AI编程",
+        "icon": "💻",
+        "tool_count": 7,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 6,
+            "names": [
+              "GitHub Copilot",
+              "Cursor",
+              "Replit AI"
+            ]
+          },
+          "freemium": {
+            "count": 1,
+            "names": [
+              "Claude Code"
+            ]
+          }
+        },
+        "top_feature": "代码补全",
+        "recommended_slug": "github-copilot"
+      },
+      {
+        "category": "AI办公",
+        "icon": "📊",
+        "tool_count": 5,
+        "avg_rating": 4.5,
+        "by_price": {
+          "freemium": {
+            "count": 1,
+            "names": [
+              "Notion AI"
+            ]
+          },
+          "free": {
+            "count": 4,
+            "names": [
+              "Gamma",
+              "WPS AI",
+              "Otter.ai"
+            ]
+          }
+        },
+        "top_feature": "智能排版",
+        "recommended_slug": "notion-ai"
+      },
+      {
+        "category": "AI音频",
+        "icon": "🎵",
+        "tool_count": 4,
+        "avg_rating": 4.7,
+        "by_price": {
+          "free": {
+            "count": 3,
+            "names": [
+              "Suno",
+              "Udio",
+              "ElevenLabs"
+            ]
+          },
+          "freemium": {
+            "count": 1,
+            "names": [
+              "Speechify"
+            ]
+          }
+        },
+        "top_feature": "文生歌曲",
+        "recommended_slug": "suno"
+      },
+      {
+        "category": "AI自动化",
+        "icon": "⚡",
+        "tool_count": 3,
+        "avg_rating": 4.2,
+        "by_price": {
+          "free": {
+            "count": 2,
+            "names": [
+              "Coze",
+              "Zapier AI"
+            ]
+          },
+          "freemium": {
+            "count": 1,
+            "names": [
+              "Dify"
+            ]
+          }
+        },
+        "top_feature": "工作流编排",
+        "recommended_slug": "coze"
+      },
+      {
+        "category": "AI写作",
+        "icon": "✍️",
+        "tool_count": 3,
+        "avg_rating": 4.3,
+        "by_price": {
+          "freemium": {
+            "count": 2,
+            "names": [
+              "Jasper",
+              "Writesonic"
+            ]
+          },
+          "free": {
+            "count": 1,
+            "names": [
+              "QuillBot"
+            ]
+          }
+        },
+        "top_feature": "博客生成",
+        "recommended_slug": "jasper"
+      },
+      {
+        "category": "AI搜索",
+        "icon": "🔍",
+        "tool_count": 3,
+        "avg_rating": 4.8,
+        "by_price": {
+          "free": {
+            "count": 2,
+            "names": [
+              "Perplexity",
+              "You.com"
+            ]
+          },
+          "freemium": {
+            "count": 1,
+            "names": [
+              "秘塔AI搜索"
+            ]
+          }
+        },
+        "top_feature": "AI搜索",
+        "recommended_slug": "perplexity"
+      },
+      {
+        "category": "AI设计",
+        "icon": "🖌️",
+        "tool_count": 2,
+        "avg_rating": 4.3,
+        "by_price": {
+          "free": {
+            "count": 1,
+            "names": [
+              "Canva AI"
+            ]
+          },
+          "freemium": {
+            "count": 1,
+            "names": [
+              "Brandmark"
+            ]
+          }
+        },
+        "top_feature": "AI生图",
+        "recommended_slug": "canva-ai"
+      },
+      {
+        "category": "AI效率",
+        "icon": "⚙️",
+        "tool_count": 1,
+        "avg_rating": 4.6,
+        "by_price": {
+          "free": {
+            "count": 1,
+            "names": [
+              "Comet"
+            ]
+          }
+        },
+        "top_feature": "AI写作",
+        "recommended_slug": "comet"
+      },
+      {
+        "category": "AI翻译",
+        "icon": "🌐",
+        "tool_count": 1,
+        "avg_rating": 4.2,
+        "by_price": {
+          "free": {
+            "count": 1,
+            "names": [
+              "DeepL"
+            ]
+          }
+        },
+        "top_feature": "文本翻译",
+        "recommended_slug": "deepl"
+      }
+    ],
+    "price_labels": {
+      "free": "完全免费",
+      "freemium": "免费增值",
+      "paid": "需付费",
+      "enterprise": "企业级"
+    },
+    "last_updated": "2026-04-04 10:04"
+  },
+  "head_to_head": {
+    "title": "AI工具巅峰对决",
+    "description": "经典组合的直接对比，从多个维度逐项PK，给出明确的选购建议。",
+    "battles": [
+      {
+        "id": "chatgpt-vs-claude-2026",
+        "title": "ChatGPT vs Claude：2026年终极对决",
+        "category": "AI对话",
+        "tools_a": [
+          "chatgpt"
+        ],
+        "tools_b": [
+          "claude"
+        ],
+        "comparison_dimensions": [
+          {
+            "dim": "上下文长度",
+            "a": "200K tokens",
+            "b": "1000K tokens",
+            "winner": "b"
+          },
+          {
+            "dim": "代码质量",
+            "a": "★★★★☆",
+            "b": "★★★★★",
+            "winner": "b"
+          },
+          {
+            "dim": "多模态",
+            "a": "文本/图片/音频/视频",
+            "b": "文本/图片",
+            "winner": "a"
+          },
+          {
+            "dim": "插件生态",
+            "a": "GPTs + 插件丰富",
+            "b": "MCP协议",
+            "winner": "tie"
+          },
+          {
+            "dim": "中文能力",
+            "a": "优秀",
+            "b": "优秀",
+            "winner": "tie"
+          },
+          {
+            "dim": "速度",
+            "a": "快速",
+            "b": "极快",
+            "winner": "b"
+          },
+          {
+            "dim": "价格",
+            "a": "$20/月 Plus",
+            "b": "$20/月 Pro",
+            "winner": "tie"
+          }
+        ],
+        "verdict": "Claude在长文本处理和代码质量上领先，ChatGPT在多模态能力和生态丰富度上更强。日常对话推荐ChatGPT，长文档分析和编程任务推荐Claude。"
+      },
+      {
+        "id": "midjourney-vs-dalle-vs-sdxl",
+        "title": "Midjourney vs DALL-E vs SDXL：AI绘画三巨头对比",
+        "category": "AI绘画",
+        "tools_a": [
+          "midjourney"
+        ],
+        "tools_b": [
+          "dall-e",
+          "stable-diffusion"
+        ],
+        "comparison_dimensions": [
+          {
+            "dim": "画质",
+            "a": "★★★★★",
+            "b": "★★★★☆",
+            "winner": "a"
+          },
+          {
+            "dim": "风格多样性",
+            "a": "艺术风格强",
+            "b": "风格广泛",
+            "winner": "b"
+          },
+          {
+            "dim": "可控性",
+            "a": "参数控制中等",
+            "b": "高度可控",
+            "winner": "b"
+          },
+          {
+            "dim": "价格",
+            "a": "$10-60/月",
+            "b": "免费/按量付费",
+            "winner": "b"
+          },
+          {
+            "dim": "速度",
+            "a": "约30秒",
+            "b": "5-30秒",
+            "winner": "b"
+          },
+          {
+            "dim": "易用性",
+            "a": "Discord操作",
+            "b": "Web界面简单",
+            "winner": "b"
+          }
+        ],
+        "verdict": "追求艺术画质选Midjourney，需要高度可控和免费方案选Stable Diffusion，想要便捷体验选DALL-E（ChatGPT集成）。"
+      },
+      {
+        "id": "cursor-vs-copilot-vs-windsurf",
+        "title": "Cursor vs GitHub Copilot vs Windsurf：AI编程助手PK",
+        "category": "AI编程",
+        "tools_a": [
+          "cursor"
+        ],
+        "tools_b": [
+          "copilot",
+          "windsurf"
+        ],
+        "comparison_dimensions": [
+          {
+            "dim": "代码补全质量",
+            "a": "★★★★★",
+            "b": "★★★★☆",
+            "winner": "a"
+          },
+          {
+            "dim": "编辑器集成",
+            "a": "VS Code原生",
+            "b": "IDE全面支持",
+            "winner": "b"
+          },
+          {
+            "dim": "Agent能力",
+            "a": "Composer强大",
+            "b": "Workspace agent",
+            "winner": "a"
+          },
+          {
+            "dim": "模型选择",
+            "a": "多模型切换",
+            "b": "主要GPT/Claude",
+            "winner": "a"
+          },
+          {
+            "dim": "价格",
+            "a": "$20/月Pro",
+            "b": "$10/月起",
+            "winner": "b"
+          },
+          {
+            "dim": "离线能力",
+            "a": "有限",
+            "b": "VS Code离线",
+            "winner": "b"
+          }
+        ],
+        "verdict": "个人开发者首选Cursor（Composer Agent确实强），团队协作选Copilot（GitHub深度集成），预算敏感可以试试Windsurf。"
+      },
+      {
+        "id": "deepseek-vs-kimi-vs-doubao",
+        "title": "DeepSeek vs Kimi vs 豆包：国产AI大模型横评",
+        "category": "AI对话",
+        "tools_a": [
+          "deepseek"
+        ],
+        "tools_b": [
+          "kimi",
+          "doubao"
+        ],
+        "comparison_dimensions": [
+          {
+            "dim": "推理能力",
+            "a": "★★★★★",
+            "b": "★★★★☆",
+            "winner": "a"
+          },
+          {
+            "dim": "长文本",
+            "a": "64K-128K",
+            "b": "Kimi 200万+",
+            "winner": "b"
+          },
+          {
+            "dim": "中文理解",
+            "a": "优秀",
+            "b": "优秀",
+            "winner": "tie"
+          },
+          {
+            "dim": "价格",
+            "a": "极低（输入token便宜）",
+            "b": "免费额度充足",
+            "winner": "a"
+          },
+          {
+            "dim": "速度",
+            "a": "快",
+            "b": "快",
+            "winner": "tie"
+          },
+          {
+            "dim": "国内访问",
+            "a": "✅ 直连",
+            "b": "✅ 直连",
+            "winner": "tie"
+          }
+        ],
+        "verdict": "DeepSeek在推理和性价比上碾压级优势（尤其是R1/V3），Kmi超长文本无敌（200万上下文），豆包字节生态整合好。技术场景选DeepSeek，长文档选Kimi。"
+      }
+    ],
+    "last_updated": "2026-04-04 10:04"
+  },
+  "live_pages": [
+    {
+      "slug": "dashboard",
+      "title": "AI工具实时监控面板",
+      "meta_description": "实时追踪AI工具市场动态：总收录52款工具、12个分类、全网热度趋势、对比矩阵一屏掌握。",
+      "keywords": [
+        "AI工具监控",
+        "AI工具数据",
+        "AI工具趋势",
+        "AI工具实时",
+        "AI工具大盘"
+      ],
+      "icon": "📊",
+      "type": "dashboard"
+    },
+    {
+      "slug": "compare-matrix",
+      "title": "AI工具全方位对比矩阵表",
+      "meta_description": "从价格、评分、功能、平台、中文支持、API等7个维度横向对比12款主流AI工具，一键找到最适合你的AI工具。",
+      "keywords": [
+        "AI工具对比",
+        "AI工具比较",
+        "AI工具矩阵",
+        "AI工具选型"
+      ],
+      "icon": "🔍",
+      "type": "matrix"
+    },
+    {
+      "slug": "trend-tracker",
+      "title": "AI工具热度趋势追踪",
+      "meta_description": "追踪近8周AI工具搜索热度变化曲线，发现正在崛起的AI新星和持续霸榜的老牌王者。",
+      "keywords": [
+        "AI工具趋势",
+        "AI热度排行",
+        "AI工具流行",
+        "AI趋势2026"
+      ],
+      "icon": "📈",
+      "type": "trend"
+    },
+    {
+      "slug": "market-heatmap",
+      "title": "AI工具市场分布热力图",
+      "meta_description": "从分类×价格维度的交叉分析看清AI工具市场竞争格局，找出蓝海领域和红海战场。",
+      "keywords": [
+        "AI工具市场",
+        "AI行业分析",
+        "AI工具分布",
+        "AI竞争格局"
+      ],
+      "icon": "🗺️",
+      "type": "heatmap"
+    },
+    {
+      "slug": "head-to-head",
+      "title": "AI工具巅峰对决",
+      "meta_description": "ChatGPT vs Claude、Midjourney vs DALL-E、Cursor vs Copilot——经典AI工具组合的直接对比评测。",
+      "keywords": [
+        "AI工具对比评测",
+        "ChatGPT对比",
+        "AI工具PK",
+        "AI工具哪个好"
+      ],
+      "icon": "⚔️",
+      "type": "battle"
+    }
+  ]
+}

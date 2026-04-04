@@ -476,6 +476,944 @@ def build_tool_page(tool, all_tools, all_articles=None):
 </html>'''
     return html
 
+
+def build_compare_page(compare_data, all_tools, all_articles=None):
+    """
+    生成对比页面 (Phase 2: 程序化SEO)
+    URL格式: /compare/{toolA-vs-toolB}/index.html
+    覆盖关键词: "XX vs XX" / "XX和XX对比" / "XX XX哪个好"
+    """
+    slug = compare_data.get('slug', 'unknown')
+    title = compare_data.get('title', 'AI工具对比')
+    subtitle = compare_data.get('subtitle', '')
+    meta_desc = compare_data.get('meta_description', f'{title} - AI工具宝箱深度评测')
+    keywords = compare_data.get('keywords', [])
+    content_md = compare_data.get('content', '')
+    faq_list = compare_data.get('faq', [])
+    compared_slugs = compare_data.get('compared_tools', compare_data.get('compared_tools', []))
+    quick_verdict = compare_data.get('quick_verdict', {})
+    
+    # 获取被对比的工具对象
+    compared_tools = []
+    for s in compared_slugs:
+        t = next((tool for tool in all_tools if tool['slug'] == s), None)
+        if t:
+            compared_tools.append(t)
+    
+    # 对比工具头部（并排展示）
+    compare_headers = ''
+    for t in compared_tools:
+        compare_headers += f'''
+            <div class="compare-tool-card">
+                <div class="tool-icon-lg" style="background:{t['color']};font-size:36px;width:64px;height:64px;display:flex;align-items:center;justify-content:center;border-radius:12px;">{t['emoji']}</div>
+                <div style="font-weight:700;font-size:18px;margin-top:8px;">{escape_html(t['name'])}</div>
+                <div style="font-size:13px;color:#666;">{t.get('price', '')}</div>
+            </div>'''
+    
+    # Quick Verdict 区块
+    verdict_html = ''
+    if quick_verdict:
+        verdict_items = ''
+        for key, label in [('overall_winner', '🏆 综合推荐'), ('best_for_beginners', '🌱 新手推荐'),
+                           ('best_value', '💰 性价比之选'), ('best_for_pro', '🚀 专业用户推荐')]:
+            if key in quick_verdict:
+                winner = quick_verdict[key]
+                # 找到对应的工具
+                winner_tool = next((t for t in compared_tools if t['name'] in winner or winner in t['name']), None)
+                winner_name = winner_tool['name'] if winner_tool else winner
+                verdict_items += f'<li><strong>{label}</strong>：{winner_name}</li>\n'
+        if verdict_items:
+            verdict_html = f'''<div class="quick-verdict" style="background:linear-gradient(135deg,#f0f7ff,#e8f4f8);border-left:4px solid #4285F4;padding:20px 24px;border-radius:8px;margin:24px 0;">
+                <h3 style="margin:0 0 12px;font-size:18px;">⚡ 快速结论</h3>
+                <ul style="margin:0;padding-left:20px;line-height:2;">{verdict_items}</ul>
+            </div>'''
+
+    # FAQ
+    faq_html = ''
+    faq_schema = []
+    for faq_item in faq_list:
+        q = faq_item.get('question', '')
+        a = faq_item.get('answer', '')
+        if q and a:
+            faq_html += f'''<div class="faq-item"><details><summary>{escape_html(q)}</summary><div class="faq-answer">{markdown_to_html(a)}</div></details></div>\n'''
+            faq_schema.append({'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}})
+    if faq_html:
+        faq_html = f'<div class="faq-section"><h3>❓ 常见问题</h3>{faq_html}</div>'
+
+    # FAQ Schema
+    faq_page_schema = ''
+    if faq_schema:
+        faq_sd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema}
+        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
+
+    # Article Schema（对比文章也是Article类型）
+    from datetime import datetime as _dt
+    article_schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": meta_desc,
+        "datePublished": compare_data.get("last_updated", _dt.now().strftime('%Y-%m-%d')),
+        "dateModified": compare_data.get("last_updated", _dt.now().strftime('%Y-%m-%d')),
+        "author": {
+            "@type": "Organization",
+            "name": "AI工具宝箱",
+            "url": "https://www.aitoolbox.hk/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AI工具宝箱",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.aitoolbox.hk/images/og/default-og.png"
+            }
+        }
+    }
+    article_schema_json = json.dumps(article_schema, ensure_ascii=False, indent=2)
+
+    # Breadcrumb
+    breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoolbox.hk/"},
+            {"@type": "ListItem", "position": 2, "name": "工具对比", "item": "https://www.aitoolbox.hk/compare/"},
+            {"@type": "ListItem", "position": 3, "name": title[:30], "item": f"https://www.aitoolbox.hk/compare/{slug}/"}
+        ]
+    }
+    breadcrumb_json = json.dumps(breadcrumb, ensure_ascii=False, indent=2)
+
+    # 相关链接（每个被对比的工具链接到自己的工具页）
+    tool_link_parts = []
+    for t in compared_tools:
+        s = t['slug']
+        c = t['color']
+        e = t['emoji']
+        n = t['name']
+        tool_link_parts.append(f'<a href="/tools/{s}/index.html" style="display:inline-block;background:{c}22;color:{c};padding:6px 16px;border-radius:20px;text-decoration:none;font-size:14px;margin:4px;">{e} {n}详情</a>')
+    tool_links = ''.join(tool_link_parts)
+
+    # 内部链接：相关对比 + 相关替代方案
+    related_compares_html = ''
+    # 从所有已发布工具中找其他可能相关的对比组合
+    other_tools = [t for t in all_tools if t['slug'] not in compared_slugs][:5]
+    if other_tools and compared_tools:
+        extra_links = ''
+        main_tool = compared_tools[0] if compared_tools else None
+        for ot in other_tools[:4]:
+            combo_slug = build_compare_slug_from_slugs([main_tool['slug'], ot['slug']])
+            extra_links += f'<a href="/compare/{combo_slug}/" style="font-size:13px;color:#4285F4;text-decoration:none;display:block;padding:4px 0;">→ {main_tool["name"]} vs {ot["name"]}</a>'
+        if extra_links:
+            related_compares_html = f'''<div class="related-tools" style="margin-top:30px;">
+                <h3>🔗 更多相关对比</h3>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">{extra_links}</div>
+            </div>'''
+
+    content_html = markdown_to_html(content_md)
+
+    # OG Image
+    og_image = ensure_og_image(slug, data_obj=compare_data, is_article=True)
+
+    from datetime import datetime as _dt
+    today_iso = _dt.now().strftime('%Y-%m-%d')
+
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(title)} - AI工具宝箱</title>
+    <meta name="description" content="{escape_html(meta_desc)}">
+    <meta name="keywords" content="{escape_html(', '.join(keywords))},AI工具对比,AI工具评测">
+    <link rel="canonical" href="https://www.aitoolbox.hk/compare/{slug}/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{escape_html(title)}">
+    <meta property="og:description" content="{escape_html(meta_desc)}">
+    <meta property="og:url" content="https://www.aitoolbox.hk/compare/{slug}/">
+    <meta property="og:image" content="{og_image}">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{article_schema_json}</script>
+    {faq_page_schema}
+    {BAIDU_TONGJI}
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <a href="/">首页</a> &gt; <a href="/compare/">工具对比</a> &gt; <span>{' vs '.join([t['name'] for t in compared_tools])}</span>
+    </nav>
+
+    <main class="article-container">
+        <div class="compare-header" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;padding:24px;background:linear-gradient(135deg,#f8faff,#f0f4ff);border-radius:12px;margin-bottom:24px;">
+            {compare_headers}
+        </div>
+
+        {verdict_html}
+
+        <h2 style="font-size:22px;color:#333;">{escape_html(subtitle) if subtitle else ''}</h2>
+
+        <div style="margin:16px 0;display:flex;flex-wrap:wrap;gap:8px;">
+            {tool_links}
+        </div>
+
+        <article class="article-body">
+            {content_html}
+        </article>
+
+        {faq_html}
+
+        {related_compares_html}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 最后更新 {today_iso}</p>
+    </footer>
+    ''' + BACK_TO_TOP_BLOCK + '''
+</body>
+</html>'''
+    return html
+
+
+def build_alternatives_page(alt_data, all_tools, all_articles=None):
+    """
+    生成替代方案页面 (Phase 3: 替代方案页)
+    URL格式: /alternatives/{tool-slug}-alternatives/index.html
+    覆盖关键词: "XX替代" / "XX类似工具" / "XX平替" / "代替XX"
+    """
+    slug = alt_data.get('slug', 'unknown')
+    title = alt_data.get('title', 'AI工具替代方案')
+    meta_desc = alt_data.get('meta_description', f'{title} - AI工具宝箱')
+    keywords = alt_data.get('keywords', [])
+    content_md = alt_data.get('content', '')
+    faq_list = alt_data.get('faq', [])
+    target_slug = alt_data.get('target_tool', '')
+
+    # 目标工具
+    target_tool = next((t for t in all_tools if t['slug'] == target_slug), None)
+
+    # FAQ
+    faq_html = ''
+    faq_schema = []
+    for fi in faq_list:
+        q, a = fi.get('question', ''), fi.get('answer', '')
+        if q and a:
+            faq_html += f'''<div class="faq-item"><details><summary>{escape_html(q)}</summary><div class="faq-answer">{markdown_to_html(a)}</div></details></div>\n'''
+            faq_schema.append({'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}})
+    if faq_html:
+        faq_html = f'<div class="faq-section"><h3>❓ 常见问题</h3>{faq_html}</div>'
+
+    faq_page_schema = ''
+    if faq_schema:
+        faq_sd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema}
+        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
+
+    from datetime import datetime as _dt2
+    article_schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": meta_desc,
+        "datePublished": alt_data.get("last_updated", _dt2.now().strftime('%Y-%m-%d')),
+        "author": {"@type": "Organization", "name": "AI工具宝箱"},
+        "publisher": {"@type": "Organization", "name": "AI工具宝箱"}
+    }
+    article_schema_json = json.dumps(article_schema, ensure_ascii=False, indent=2)
+
+    breadcrumb = {
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoolbox.hk/"},
+            {"@type": "ListItem", "position": 2, "name": "替代方案", "item": "https://www.aitoolbox.hk/alternatives/"},
+            {"@type": "ListItem", "position": 3, "name": target_tool['name'] if target_tool else slug, "item": f"https://www.aitoolbox.hk/alternatives/{slug}/"}
+        ]
+    }
+    breadcrumb_json = json.dumps(breadcrumb, ensure_ascii=False, indent=2)
+
+    # 目标工具卡片
+    target_card_html = ''
+    if target_tool:
+        target_card_html = f'''<div style="background:#fff5e6;border:1px solid #ffd666;border-radius:10px;padding:20px;margin:20px 0;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+            <div style="font-size:40px;">{target_tool['emoji']}</div>
+            <div><strong>寻找替代方案：</strong>{target_tool['name']}</div>
+            <div style="color:#666;font-size:14px;">{target_tool.get('price','')}</div>
+            <a href="/tools/{target_slug}/" style="margin-left:auto;color:#4285F4;text-decoration:none;font-size:14px;">查看原工具详情 →</a>
+        </div>'''
+
+    content_html = markdown_to_html(content_md)
+    og_image = ensure_og_image(slug, data_obj=alt_data, is_article=True)
+    from datetime import datetime as _dt
+    today_iso = _dt.now().strftime('%Y-%m-%d')
+
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(title)} - AI工具宝箱</title>
+    <meta name="description" content="{escape_html(meta_desc)}">
+    <meta name="keywords" content="{escape_html(', '.join(keywords))},AI工具替代,AI工具推荐">
+    <link rel="canonical" href="https://www.aitoolbox.hk/alternatives/{slug}/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{escape_html(title)}">
+    <meta property="og:description" content="{escape_html(meta_desc)}">
+    <meta property="og:url" content="https://www.aitoolbox.hk/alternatives/{slug}/">
+    <meta property="og:image" content="{og_image}">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{article_schema_json}</script>
+    {faq_page_schema}
+    {BAIDU_TONGJI}
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <a href="/">首页</a> &gt; <a href="/alternatives/">替代方案</a> &gt; <span>{target_tool['name'] if target_tool else slug}</span>
+    </nav>
+
+    <main class="article-container">
+        {target_card_html}
+
+        <article class="article-body">
+            {content_html}
+        </article>
+
+        {faq_html}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 最后更新 {today_iso}</p>
+    </footer>
+    ''' + BACK_TO_TOP_BLOCK + '''
+</body>
+</html>'''
+    return html
+
+
+def build_compare_slug_from_slugs(slugs):
+    """从slug列表构建对比页slug（供内部链接使用）"""
+    return '-'.join(sorted(slugs))
+
+
+def load_compare_data():
+    """加载对比数据文件"""
+    compare_file = os.path.join(DATA_DIR, 'compare_data.json')
+    if os.path.exists(compare_file):
+        with open(compare_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {"compares": [], "alternatives": [], "metadata": {}}
+
+
+def load_quiz_data():
+    """加载Quiz数据文件 (Phase 4)"""
+    quiz_file = os.path.join(DATA_DIR, 'quiz_data.json')
+    if os.path.exists(quiz_file):
+        with open(quiz_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {"quizzes": [], "metadata": {}}
+
+
+def load_ranking_data():
+    """加载排名数据文件 (Phase 5)"""
+    ranking_file = os.path.join(DATA_DIR, 'ranking_data.json')
+    if os.path.exists(ranking_file):
+        with open(ranking_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {"rankings": [], "metadata": {}}
+
+
+# ════════════════════════════════════════════════════════
+# Phase 4: Quiz 页面构建
+# ════════════════════════════════════════════════════════
+
+def build_quiz_page(quiz_data, all_tools, all_articles=None):
+    """
+    生成 Quiz/工具选择器页面 (Phase 4)
+    URL: /quiz/{slug}/index.html 或 /quiz/index.html (总入口)
+    覆盖关键词: "AI工具选择器"、"哪个AI工具好"、"AI工具推荐测试"
+    """
+    slug = quiz_data.get('slug', 'unknown')
+    title = quiz_data.get('title', 'AI工具选择器')
+    meta_desc = quiz_data.get('meta_description', '')
+    keywords = quiz_data.get('keywords', [])
+    questions = quiz_data.get('questions', [])
+    content = quiz_data.get('content')  # AI生成的内容
+    rec_tool_slugs = quiz_data.get('recommended_tools', [])
+    category = quiz_data.get('category', 'all')
+    is_main_entry = (quiz_data.get('target_url') == '/quiz/') or (slug == 'ai-tool-finder-2026')
+
+    # 构建问答交互 HTML
+    questions_html = ''
+    for i, q in enumerate(questions):
+        qid = q.get('id', f'q{i+1}')
+        options_html = ''
+        for j, opt in enumerate(q.get('options', [])):
+            val = opt.get('value', f'opt{j}')
+            label_text = opt.get('label', '')
+            options_html += f'''                <label class="quiz-option" data-question="{qid}" data-value="{val}">
+                    <input type="radio" name="{qid}" value="{val}"> {escape_html(label_text)}
+                </label>\n'''
+        questions_html += f'''            <div class="quiz-question" data-question-id="{qid}">
+                <h3>{i+1}. {escape_html(q['text'])}</h3>
+                <div class="quiz-options">{options_html}                </div>
+            </div>
+'''
+
+    # 推荐工具卡片（基于答案匹配）
+    rec_tools_html = ''
+    if rec_tool_slugs:
+        for rs in rec_tool_slugs[:8]:
+            tool = next((t for t in all_tools if t['slug'] == rs), None)
+            if not tool:
+                continue
+            rec_tools_html += f'''            <div class="quiz-recommendation" data-tool-slug="{tool['slug']}" style="display:none;">
+                <a href="/tools/{tool['slug']}/index.html" class="rec-card">
+                    <div class="rec-icon" style="background:{tool['color']};">{tool['emoji']}</div>
+                    <div class="rec-info">
+                        <strong>{escape_html(tool['name'])}</strong>
+                        <span>{escape_html(tool.get('price',''))} | {tool['rating']}</span>
+                        <p>{escape_html(tool['description'][:80])}</p>
+                    </div>
+                    <span class="rec-arrow">查看详情 →</span>
+                </a>
+            </div>\n'''
+
+    # AI内容区域
+    content_html = ''
+    faq_section = ''
+    faq_schema_list = []
+
+    if content:
+        # Intro
+        intro = content.get('intro', '')
+        if intro:
+            content_html += f'<div class="quiz-intro">{markdown_to_html(intro)}</div>'
+
+        # Tool recommendations from AI
+        for tr in content.get('tool_recommendations', []):
+            tname = tr.get('tool_name', 'Unknown')
+            tprofile = tr.get('match_profile', '')
+            strengths = tr.get('strengths', [])
+            weaknesses = tr.get('weaknesses', [])
+            strengths_html = ''.join(f'<li>{s}</li>' for s in strengths)
+            weaknesses_html = ''.join(f'<li>{w}</li>' for w in weaknesses)
+            content_html += f'''<div class="tool-rec-detail">
+                <h3>{tname}</h3>
+                <p>{tprofile}</p>
+                <div class="tw-col">
+                    <div><strong>优势</strong><ul>{strengths_html}</ul></div>
+                    <div><strong>不足</strong><ul>{weaknesses_html}</ul></div>
+                </div>
+            </div>'''
+
+        # Content sections
+        for sec in content.get('content_sections', []):
+            heading = sec.get('heading', '')
+            body = sec.get('body', '')
+            if heading and body:
+                content_html += f'<section><h2>{escape_html(heading)}</h2>{markdown_to_html(body)}</section>'
+
+        # FAQ
+        faq_items = content.get('faq', [])
+        for fi in faq_items:
+            q, a = fi.get('question', ''), fi.get('answer', '')
+            if q and a:
+                faq_section += f'''<div class="faq-item"><details><summary>{escape_html(q)}</summary><div class="faq-answer">{markdown_to_html(a)}</div></details></div>\n'''
+                faq_schema_list.append({'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}})
+
+        # Conclusion
+        conclusion = content.get('conclusion', '')
+        if conclusion:
+            content_html += f'<div class="quiz-conclusion">{markdown_to_html(conclusion)}</div>'
+
+    if faq_section:
+        faq_section = f'<div class="faq-section"><h3>常见问题</h3>{faq_section}</div>'
+
+    # FAQ Schema
+    faq_page_schema = ''
+    if faq_schema_list:
+        faq_sd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema_list}
+        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
+
+    # Article Schema
+    from datetime import datetime as _dtq
+    article_schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": meta_desc,
+        "datePublished": quiz_data.get("last_updated", _dtq.now().strftime('%Y-%m-%d')),
+        "author": {"@type": "Organization", "name": "AI工具宝箱"},
+        "publisher": {"@type": "Organization", "name": "AI工具宝箱"}
+    }
+    article_schema_json = json.dumps(article_schema, ensure_ascii=False, indent=2)
+
+    # Breadcrumb
+    breadcrumb = {
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoolbox.hk/"},
+            {"@type": "ListItem", "position": 2, "name": "AI工具选择器", "item": "https://www.aitoolbox.hk/quiz/"},
+            {"@type": "ListItem", "position": 3, "name": title[:30], "item": f"https://www.aitoolbox.hk/quiz/{slug}/"}
+        ]
+    }
+    breadcrumb_json = json.dumps(breadcrumb, ensure_ascii=False, indent=2)
+
+    og_image = ensure_og_image(slug, data_obj=quiz_data, is_article=True)
+    from datetime import datetime as _dt
+    today_iso = _dt.now().strftime('%Y-%m-%d')
+
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(title)} - AI工具宝箱</title>
+    <meta name="description" content="{escape_html(meta_desc)}">
+    <meta name="keywords" content="{escape_html(', '.join(keywords))},AI工具选择器,AI工具推荐">
+    <link rel="canonical" href="https://www.aitoolbox.hk/quiz/{'/' if is_main_entry else slug + '/'}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{escape_html(title)}">
+    <meta property="og:description" content="{escape_html(meta_desc)}">
+    <meta property="og:url" content="https://www.aitoolbox.hk/quiz/{'/' if is_main_entry else slug + '/'}">
+    <meta property="og:image" content="{og_image}">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{article_schema_json}</script>
+    {faq_page_schema}
+{BAIDU_TONGJI}
+    <style>
+    .quiz-container {{ max-width:800px;margin:0 auto; }}
+    .quiz-progress {{ display:flex;justify-content:space-between;margin-bottom:24px;padding:12px;background:#f8f9fa;border-radius:10px; }}
+    .quiz-progress .step {{ font-size:12px;color:#999; }}
+    .quiz-progress .step.active {{ color:#4285F4;font-weight:700; }}
+    .quiz-question {{ background:#fff;padding:24px;border-radius:12px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,0.08); }}
+    .quiz-question h3 {{ margin:0 0 16px;color:#333; }}
+    .quiz-options {{ display:flex;flex-direction:column;gap:10px; }}
+    .quiz-option {{ display:block;padding:14px 18px;border:2px solid #e8e8e8;border-radius:10px;cursor:pointer;transition:all 0.2s;font-size:15px; }}
+    .quiz-option:hover {{ border-color:#4285F4;background:#f0f7ff; }}
+    .quiz-option input:checked + span, .quiz-option.selected {{ border-color:#4285F4;background:#e8f0fe; }}
+    .quiz-option input {{ display:none; }}
+    .quiz-result {{ text-align:center;padding:32px;display:none; }}
+    .quiz-result h2 {{ color:#4285F4;margin-bottom:20px; }}
+    .quiz-recommendation {{ margin:12px 0; }}
+    .rec-card {{ display:flex;align-items:center;gap:16px;padding:16px;border:1px solid #e8e8e8;border-radius:12px;text-decoration:none;color:inherit;transition:all 0.2s; }}
+    .rec-card:hover {{ border-color:#4285F4;box-shadow:0 4px 12px rgba(66,133,244,0.15);transform:translateY(-1px); }}
+    .rec-icon {{ width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0; }}
+    .rec-info {{ flex:1; }}
+    .rec-info strong {{ display:block;font-size:16px; }}
+    .rec-info span {{ color:#666;font-size:13px; }}
+    .rec-info p {{ margin:4px 0 0;color:#888;font-size:13px; }}
+    .rec-arrow {{ color:#4285F4;font-size:14px;flex-shrink:0; }}
+    .btn-quiz-submit {{ display:block;width:100%;padding:16px;background:linear-gradient(135deg,#4285F4,#5b9aff);color:#fff;border:none;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;margin-top:16px;transition:opacity 0.2s; }}
+    .btn-quiz-submit:hover {{ opacity:0.9; }}
+    .quiz-intro {{ background:#f0f7ff;padding:20px;border-radius:10px;margin-bottom:24px;border-left:4px solid #4285F4; }}
+    .quiz-conclusion {{ background:#f8f9fa;padding:20px;border-radius:10px;margin-top:24px; }}
+    .tool-rec-detail {{ margin:20px 0;padding:20px;background:#fff;border-radius:10px;border:1px solid #eee; }}
+    .tool-rec-detail h3 {{ color:#333;margin-top:0; }}
+    .tw-col {{ display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px; }}
+    @media(max-width:600px){{ .tw-col{{grid-template-columns:1fr;}} .rec-card{{flex-wrap:wrap;}} }}
+    </style>
+'''
+
+    # Build progress steps HTML (outside f-string to avoid scope issues)
+    _ps_parts = []
+    for i, q in enumerate(questions):
+        _qid = q.get('id', 'q' + str(i+1))
+        _qtext = escape_html(q['text'][:15])
+        _active = ' active' if i == 0 else ''
+        _ps_parts.append('<span class="step' + _active + '" data-step="' + _qid + '">' + str(i+1) + '. ' + _qtext + '</span>')
+    _ps_parts.append('<span class="step" data-step="result">结果</span>')
+    progress_steps = '\n                    '.join(_ps_parts)
+
+    html += f'''
+</head>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <a href="/">首页</a> &gt; <a href="/quiz/">AI工具选择器</a> &gt; <span>{title[:25]}...</span>
+    </nav>
+
+    <main class="article-container">
+        <div class="quiz-container">
+            <h1 style="text-align:center;">{escape_html(title)}</h1>
+
+            <div id="quizForm">
+                <div class="quiz-progress">
+                    {progress_steps}
+                </div>
+
+{questions_html}
+                <button class="btn-quiz-submit" onclick="showQuizResult()">查看我的推荐工具</button>
+            </div>
+
+            <div id="quizResult" class="quiz-result">
+                <h2>根据你的需求，我们推荐以下AI工具</h2>
+{rec_tools_html}
+                <button class="btn-quiz-submit" style="margin-top:20px;" onclick="resetQuiz()" style="background:#667eea;">重新测试</button>
+            </div>
+
+            {content_html}
+
+            {faq_section}
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 最后更新 {today_iso}</p>
+    </footer>
+''' + BACK_TO_TOP_BLOCK + '''
+<script>
+// Quiz 交互逻辑
+function showQuizResult() {
+    var answers = {};
+    document.querySelectorAll('.quiz-option input:checked').forEach(function(el) {
+        answers[el.name] = el.value;
+    });
+    if(Object.keys(answers).length < ''' + str(len(questions)) + ''') {
+        alert('请回答完所有问题后再查看推荐！');
+        return;
+    }
+    document.getElementById('quizForm').style.display = 'none';
+    var resultDiv = document.getElementById('quizResult');
+    resultDiv.style.display = 'block';
+    
+    // 显示所有推荐工具（简单版：全部显示，后续可做精确匹配逻辑）
+    resultDiv.querySelectorAll('.quiz-recommendation').forEach(function(el) { el.style.display='block'; });
+    window.scrollTo({top:resultDiv.offsetTop - 20, behavior:'smooth'});
+}
+function resetQuiz() {
+    document.getElementById('quizResult').style.display = 'none';
+    document.getElementById('quizForm').style.display = 'block';
+    document.querySelectorAll('.quiz-option input').forEach(function(el){el.checked=false;});
+    document.querySelectorAll('.quiz-option').forEach(function(el){el.classList.remove('selected');});
+    window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('.quiz-option').forEach(function(opt){
+    opt.addEventListener('click',function(){
+        var name=this.querySelector('input').name;
+        document.querySelectorAll('.quiz-option[name="'+name+'"]').forEach(function(o){o.classList.remove('selected');});
+        this.classList.add('selected');
+        this.querySelector('input').checked=true;
+    });
+});
+</script>
+</body>
+</html>'''
+    return html
+
+
+# ════════════════════════════════════════════════════════
+# Phase 5: Ranking 页面构建
+# ════════════════════════════════════════════════════════
+
+def build_ranking_page(ranking_data, all_tools, all_articles=None):
+    """
+    生成排名页面 (Phase 5)
+    URL: /ranking/{slug}/index.html 或 /ranking/index.html (总榜入口)
+    覆盖关键词: "AI工具排行榜"、"AI工具排名2026"、"热门AI工具"
+    """
+    slug = ranking_data.get('slug', 'unknown')
+    title = ranking_data.get('title', 'AI工具排行榜')
+    meta_desc = ranking_data.get('meta_description', '')
+    keywords = ranking_data.get('keywords', [])
+    ranked_tools = ranking_data.get('ranked_tools', [])[:20]  # 展示前20
+    total_tools = ranking_data.get('total_tools', len(ranked_tools))
+    content = ranking_data.get('content')  # AI分析内容
+    rtype = ranking_data.get('type', 'special')
+    category = ranking_data.get('category', '')
+    icon = ranking_data.get('icon', '📊')
+    methodology = ranking_data.get('methodology', {})
+    last_updated = ranking_data.get('last_updated', '')
+
+    is_overall = (slug == '2026-ai-tools-overall-ranking')
+
+    # 排名表格
+    table_rows = ''
+    medals = ['\U0001F947', '\U0001F948', '\U0001F949']  # 金银铜
+    for i, item in enumerate(ranked_tools):
+        rank = item.get('rank', i+1)
+        medal = medals[i] if i < 3 else str(rank)
+        score = item.get('score', 0)
+        sd = item.get('scores', {})
+        tool_name = item.get('name', 'Unknown')
+        tool_emoji = item.get('emoji', '🔧')
+        tool_color = item.get('color', '#666')
+        price = item.get('price', '')
+        rating = item.get('rating', '')
+        badge_html = ''
+        badge = item.get('badge', {})
+        if isinstance(badge, dict) and badge.get('text'):
+            btype = badge.get('type', '')
+            bcolor_map = {'hot': '#ff4444', 'new': '#00aa00', 'pick': '#667eea'}
+            bcolor = bcolor_map.get(btype, '#667eea')
+            badge_html = '<span class="badge" style="background:' + bcolor + ';color:#fff;font-size:11px;padding:2px 6px;border-radius:3px;">' + badge['text'] + '</span>'
+        
+        # 分数条
+        if rank <= 3:
+            bar_color = '#4285F4'
+        elif rank <= 10:
+            bar_color = '#667eea'
+        else:
+            bar_color = '#999'
+        bar_width = min(score, 100)
+        
+        # 趋势箭头
+        if rank <= 3:
+            trend_color = '#00aa00'
+            trend_sym = '&#8593;'
+        elif rank > 15:
+            trend_color = '#ff4444'
+            trend_sym = ''
+        else:
+            trend_color = '#666'
+            trend_sym = '&#8594;' if rank <= 10 else ''
+        
+        table_rows += f'''                <tr class="rank-row" data-rank="{rank}">
+                    <td class="rank-num">{medal}</td>
+                    <td class="rank-tool">
+                        <a href="/tools/{item['slug']}/index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+                            <span style="font-size:24px;background:{tool_color};width:40px;height:40px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;">{tool_emoji}</span>
+                            <span style="font-weight:600;">{escape_html(tool_name)}</span> {badge_html}
+                        </a>
+                    </td>
+                    <td class="rank-score">
+                        <div class="score-bar"><div class="score-fill" style="width:{bar_width}%;background:{bar_color};"></div></div>
+                        <span class="score-val">{score}</span>
+                    </td>
+                    <td class="rank-rating">{rating or '-'}</td>
+                    <td class="rank-price">{escape_html(price) or '免费'}</td>
+                    <td class="rank-trend">
+                        <span style="color:{trend_color};">{trend_sym}</span>
+                    </td>
+                </tr>
+'''
+
+    # AI内容区域
+    content_html = ''
+    faq_section = ''
+    faq_schema_list = []
+    trend_badge = ''
+    from datetime import datetime as _rdt
+
+    if content:
+        # Summary / 综述
+        summary = content.get('summary', '')
+        if summary:
+            content_html += f'<div class="ranking-summary">{markdown_to_html(summary)}</div>'
+            trend_badge = '<div class="live-badge">实时更新 · 数据截至 ' + (last_updated or _rdt.now().strftime('%Y-%m-%d')) + '</div>'
+
+        # Top3 分析
+        top3 = content.get('top3_analysis', [])
+        if top3:
+            top3_html = ''
+            for ta in top3:
+                top3_html += f'''<div class="podium-analysis">
+                    <h3>第{ta['rank']}名 - {ta.get('tool_name','')}</h3>
+                    {markdown_to_html(ta.get('analysis',''))}
+                </div>'''
+            content_html += f'<div class="top3-section">{top3_html}</div>'
+
+        # 趋势分析
+        trend = content.get('trend_analysis', '')
+        if trend:
+            content_html += f'<div class="trend-section"><h2>行业趋势分析</h2>{markdown_to_html(trend)}</div>'
+
+        # 分类洞察
+        insights = content.get('category_insights', [])
+        if insights:
+            ins_html = ''.join(f'<div class="insight-card"><h3>{escape_html(i["insight_title"])}</h3>{markdown_to_html(i["content"])}</div>' for i in insights)
+            content_html += f'<div class="insights-section"><h2>深度洞察</h2>{ins_html}</div>'
+
+        # FAQ
+        for fi in content.get('faq', []):
+            q, a = fi.get('question', ''), fi.get('answer', '')
+            if q and a:
+                faq_section += f'<div class="faq-item"><details><summary>{escape_html(q)}</summary><div class="faq-answer">{markdown_to_html(a)}</div></details></div>\n'
+                faq_schema_list.append({'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}})
+
+        # Conclusion
+        conclusion = content.get('conclusion', '')
+        if conclusion:
+            content_html += f'<div class="ranking-conclusion">{markdown_to_html(conclusion)}</div>'
+
+    if faq_section:
+        faq_section = f'<div class="faq-section"><h3>关于本排名</h3>{faq_section}</div>'
+
+    # FAQ Schema
+    faq_ps = ''
+    if faq_schema_list:
+        faq_sd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema_list}
+        faq_ps = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
+
+    # Schema (use _rdt already imported above)
+    # _dtr alias for backward compat
+    _dtr = _rdt
+    article_schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": meta_desc,
+        "datePublished": ranking_data.get("last_updated", _dtr.now().strftime('%Y-%m-%d'))[:10],
+        "dateModified": last_updated[:10] if last_updated else _dtr.now().strftime('%Y-%m-%d'),
+        "author": {"@type": "Organization", "name": "AI工具宝箱"},
+        "publisher": {"@type": "Organization", "name": "AI工具宝箱"}
+    }
+    article_schema_json = json.dumps(article_schema, ensure_ascii=False, indent=2)
+
+    # Breadcrumb
+    bc_name_2 = "AI工具排行榜" if is_overall else (category + "排行榜" if category else "排行榜")
+    breadcrumb = {
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoolbox.hk/"},
+            {"@type": "ListItem", "position": 2, "name": "AI工具排行", "item": "https://www.aitoolbox.hk/ranking/"},
+            {"@type": "ListItem", "position": 3, "name": title[:30], "item": f"https://www.aitoolbox.hk/ranking/{slug}/"}
+        ]
+    }
+    breadcrumb_json = json.dumps(breadcrumb, ensure_ascii=False, indent=2)
+
+    og_image = ensure_og_image(slug, data_obj=ranking_data, is_article=True)
+
+    # 相关链接：其他排名
+    related_links = ''
+    other_ranks = [
+        ('2026-ai-tools-overall-ranking', '综合热度榜'),
+        ('best-free-ai-tools-ranking-2026', '免费工具榜'),
+        ('best-value-ai-tools-ranking-2026', '性价比榜'),
+        ('rising-ai-tools-2026-trending', '新兴趋势榜')
+    ]
+    for rslug, rname in other_ranks:
+        if rslug != slug:
+            related_links += f'<a href="/ranking/{rslug}/" class="rank-sub-link">{rname} →</a>\n'
+
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(title)} - AI工具宝箱</title>
+    <meta name="description" content="{escape_html(meta_desc)}">
+    <meta name="keywords" content="{escape_html(', '.join(keywords))},AI工具排行榜,AI工具排名,AI热度排行">
+    <link rel="canonical" href="https://www.aitoolbox.hk/ranking/{slug}/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{escape_html(title)}">
+    <meta property="og:description" content="{escape_html(meta_desc)}">
+    <meta property="og:url" content="https://www.aitoolbox.hk/ranking/{slug}/">
+    <meta property="og:image" content="{og_image}">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{article_schema_json}</script>
+    {faq_ps}
+{BAIDU_TONGJI}
+    <style>
+    .ranking-hero {{ text-align:center;padding:32px 20px;background:linear-gradient(135deg,#f0f4ff,#e8f0fe);border-radius:16px;margin-bottom:28px; }}
+    .ranking-hero .hero-icon {{ font-size:56px;margin-bottom:12px; }}
+    .ranking-hero h1 {{ margin:0 0 8px;font-size:26px; }}
+    .ranking-hero p {{ color:#666;margin:0;font-size:15px; }}
+    .live-badge {{ display:inline-block;background:#00c853;color:#fff;font-size:12px;padding:3px 12px;border-radius:12px;margin-top:10px;font-weight:600;animation:pulse 2s infinite; }}
+    @keyframes pulse {{ 0%{{opacity:1}} 50%{{opacity:.7}} 100%{{opacity:1}} }}
+    .ranking-table-wrap {{ overflow-x:auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:28px; }}
+    .ranking-table {{ width:100%;border-collapse:collapse;min-width:600px; }}
+    .ranking-table th {{ background:#f8f9fa;padding:14px 12px;text-align:left;font-size:13px;color:#666;border-bottom:2px solid #eee;white-space:nowrap; }}
+    .ranking-table td {{ padding:12px;border-bottom:1px solid #f0f0f0;vertical-align:middle; }}
+    .rank-row:hover {{ background:#f8f9ff; }}
+    .rank-num {{ font-size:20px;text-align:center;width:50px;font-weight:700; }}
+    .rank-tool a {{ font-weight:600; }}
+    .rank-score {{ min-width:120px; }}
+    .score-bar {{ width:80px;height:6px;background:#eee;border-radius:3px;display:inline-block;vertical-align:middle;overflow:hidden; }}
+    .score-fill {{ height:100%;border-radius:3px;transition:width .5s; }}
+    .score-val {{ font-weight:700;font-size:14px;margin-left:6px; }}
+    .rank-rating {{ white-space:nowrap; }}
+    .rank-price {{ color:#666;font-size:13px;white-space:nowrap; }}
+    .rank-trend {{ text-align:center;font-size:16px; }}
+    .rank-sub-nav {{ display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;justify-content:center; }}
+    .rank-sub-link {{ display:inline-block;padding:8px 16px;background:#f0f4ff;color:#4285F4;border-radius:20px;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s; }}
+    .rank-sub-link:hover {{ background:#4285F4;color:#fff; }}
+    .ranking-summary {{ background:#f0f7ff;padding:20px 24px;border-left:4px solid #4285F4;border-radius:8px;margin-bottom:24px;font-size:15px;line-height:1.8; }}
+    .podium-analysis {{ background:#fff;padding:20px;border-radius:10px;margin:12px 0;border:1px solid #eee; }}
+    .podium-analysis h3 {{ color:#333;margin-top:0; }}
+    .trend-section,.insights-section {{ margin:28px 0; }}
+    .insight-card {{ background:#fafbfc;padding:20px;border-radius:10px;margin:12px 0;border-left:4px solid #667eea; }}
+    .insight-card h3 {{ margin-top:0;color:#333; }}
+    .ranking-conclusion {{ background:#f8f9fa;padding:24px;border-radius:10px;margin-top:24px; }}
+    .methodology-note {{ background:#fffbf0;border:1px solid #ffd666;border-radius:8px;padding:16px 20px;margin:20px 0;font-size:13px;color:#856404; }}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <a href/">首页</a> &gt; <a href="/ranking/">AI工具排行</a> &gt; <span>{title[:25]}...</span>
+    </nav>
+
+    <main class="article-container">
+        <div class="ranking-hero">
+            <div class="hero-icon">{icon}</div>
+            <h1>{escape_html(title)}</h1>
+            <p>{escape_html(meta_desc[:120])}</p>
+            {trend_badge}
+        </div>
+
+        <div class="rank-sub-nav">
+            {related_links}
+        </div>
+
+        <div class="ranking-table-wrap">
+            <table class="ranking-table">
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>工具名称</th>
+                        <th>综合分</th>
+                        <th>评分</th>
+                        <th>价格</th>
+                        <th>趋势</th>
+                    </tr>
+                </thead>
+                <tbody>
+{table_rows}
+                </tbody>
+            </table>
+        </div>
+
+        {content_html}
+
+        {faq_section}
+
+        <div class="methodology-note">
+            <strong>排名说明：</strong>本排名基于多维度数据综合计算（热度30% + 质量25% + 功能20% + 价格15% + 新鲜度10%），每日自动更新。数据来源于工具官方信息、用户评价聚合和市场活跃度指标。排名仅供参考，具体选择请根据个人需求和实际体验决定。
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 更新于 {(last_updated or _rdt.now().strftime('%Y-%m-%d %H:%M'))}</p>
+    </footer>
+''' + BACK_TO_TOP_BLOCK + '''
+</body>
+</html>'''
+    return html
+
+
 def build_category_page(category_name, tools_in_category):
     """生成单个分类页的完整HTML"""
     category_slug = get_category_slug(category_name)
@@ -1074,7 +2012,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
     return html
 
-def generate_sitemap(tools, articles, categories):
+def generate_sitemap(tools, articles, categories, compares=None, alternatives=None, quizzes=None, rankings=None):
     """生成 sitemap.xml"""
     from datetime import datetime
     today = datetime.now().strftime('%Y-%m-%d')
@@ -1118,6 +2056,59 @@ def generate_sitemap(tools, articles, categories):
         <lastmod>{today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>''')
+
+    # 对比页 (Phase 2)
+    if compares:
+        for cp in compares:
+            cslug = cp.get('slug', '')
+            if cslug:
+                prio = '0.9' if cp.get('priority') == 'high' else '0.8'
+                urls.append(f'''    <url>
+        <loc>https://www.aitoolbox.hk/compare/{cslug}/</loc>
+        <lastmod>{today}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>{prio}</priority>
+    </url>''')
+
+    # 替代方案页 (Phase 3)
+    if alternatives:
+        for alt in alternatives:
+            aslug = alt.get('slug', '')
+            if aslug:
+                urls.append(f'''    <url>
+        <loc>https://www.aitoolbox.hk/alternatives/{aslug}/</loc>
+        <lastmod>{today}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>''')
+
+    # Quiz 选择器页 (Phase 4)
+    if quizzes:
+        for qd in quizzes:
+            qslug = qd.get('slug', '')
+            if qslug:
+                is_main = (qd.get('target_url') == '/quiz/') or qslug == 'ai-tool-finder-2026'
+                loc = f'/' if is_main else f'/{qslug}/'
+                urls.append(f'''    <url>
+        <loc>https://www.aitoolbox.hk/quiz{loc}</loc>
+        <lastmod>{today}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>''')
+
+    # Ranking 排名页 (Phase 5)
+    if rankings:
+        for rd in rankings:
+            rslug = rd.get('slug', '')
+            if rslug:
+                is_overall = rslug == '2026-ai-tools-overall-ranking'
+                loc = f'/' if is_overall else f'/{rslug}/'
+                urls.append(f'''    <url>
+        <loc>https://www.aitoolbox.hk/ranking{loc}</loc>
+        <lastmod>{today}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
     </url>''')
 
     sitemap = f'''<?xml version="1.0" encoding="UTF-8"?>
@@ -1237,12 +2228,114 @@ def main():
     # 生成文章分页列表页
     total_pages = build_article_list_pages(articles)
 
+    # ═══════════════════════════════════════════════════════
+    # Phase 2+3: 生成对比页和替代方案页（程序化SEO）
+    # ═══════════════════════════════════════════════════════
+    compare_data = load_compare_data()
+    all_compares = compare_data.get('compares', [])
+    all_alternatives = compare_data.get('alternatives', [])
+
+    compare_count = 0
+    alt_count = 0
+
+    if all_compares:
+        print(f'\n[Phase2] Generating compare pages ({len(all_compares)})...')
+        for cp in all_compares:
+            cslug = cp.get('slug', 'unknown')
+            dir_path = os.path.join(BASE_DIR, 'compare', cslug)
+            os.makedirs(dir_path, exist_ok=True)
+            try:
+                html = build_compare_page(cp, published_tools, articles)
+                with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                    f.write(html)
+                print(f'  [OK] compare/{cslug}/index.html')
+                compare_count += 1
+            except Exception as e:
+                print(f'  [FAIL] compare/{cslug}/: {e}')
+
+    if all_alternatives:
+        print(f'\n[Phase3] Generating alternatives pages ({len(all_alternatives)})...')
+        for alt in all_alternatives:
+            aslug = alt.get('slug', 'unknown')
+            dir_path = os.path.join(BASE_DIR, 'alternatives', aslug)
+            os.makedirs(dir_path, exist_ok=True)
+            try:
+                html = build_alternatives_page(alt, published_tools, articles)
+                with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                    f.write(html)
+                print(f'  [OK] alternatives/{aslug}/index.html')
+                alt_count += 1
+            except Exception as e:
+                print(f'  [FAIL] alternatives/{aslug}/: {e}')
+
+    # ═══════════════════════════════════════════════════════
+    # Phase 4: Quiz / 工具选择器页面（程序化SEO）
+    # ═══════════════════════════════════════════════════════
+    quiz_data = load_quiz_data()
+    all_quizzes = quiz_data.get('quizzes', [])
+    quiz_count = 0
+
+    if all_quizzes:
+        print(f'\n[Phase4] Generating quiz pages ({len(all_quizzes)})...')
+        for qd in all_quizzes:
+            qslug = qd.get('slug', 'unknown')
+            # 总入口放在 /quiz/index.html，其他在 /quiz/{slug}/index.html
+            is_main = qd.get('target_url') == '/quiz/' or qslug == 'ai-tool-finder-2026'
+            if is_main:
+                dir_path = os.path.join(BASE_DIR, 'quiz')
+            else:
+                dir_path = os.path.join(BASE_DIR, 'quiz', qslug)
+
+            os.makedirs(dir_path, exist_ok=True)
+            try:
+                html = build_quiz_page(qd, published_tools, articles)
+                with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                    f.write(html)
+                loc = f'quiz/' if is_main else f'quiz/{qslug}/'
+                print(f'  [OK] {loc}index.html')
+                quiz_count += 1
+            except Exception as e:
+                loc = f'quiz/' if is_main else f'quiz/{qslug}/'
+                print(f'  [FAIL] {loc}: {e}')
+
+    # ═══════════════════════════════════════════════════════
+    # Phase 5: Ranking / 排名页面（动态排名系统）
+    # ═══════════════════════════════════════════════════════
+    ranking_data = load_ranking_data()
+    all_rankings = ranking_data.get('rankings', [])
+    ranking_count = 0
+
+    if all_rankings:
+        print(f'\n[Phase5] Generating ranking pages ({len(all_rankings)})...')
+        for rd in all_rankings:
+            rslug = rd.get('slug', 'unknown')
+            is_overall = rslug == '2026-ai-tools-overall-ranking'
+            if is_overall:
+                dir_path = os.path.join(BASE_DIR, 'ranking')
+            else:
+                dir_path = os.path.join(BASE_DIR, 'ranking', rslug)
+
+            os.makedirs(dir_path, exist_ok=True)
+            try:
+                html = build_ranking_page(rd, published_tools, articles)
+                with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                    f.write(html)
+                loc = f'ranking/' if is_overall else f'ranking/{rslug}/'
+                print(f'  [OK] {loc}index.html')
+                ranking_count += 1
+            except Exception as e:
+                loc = f'ranking/' if is_overall else f'ranking/{rslug}/'
+                print(f'  [FAIL] {loc}: {e}')
+
     # 生成 sitemap.xml
-    # 传递所有已发布的分类名称列表
-    sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()])
+    # 传递所有已发布的分类名称列表 + 对比/替代/Quiz/Ranking数据
+    sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()],
+                                all_compares, all_alternatives,
+                                all_quizzes if 'all_quizzes' in dir() else [],
+                                all_rankings if 'all_rankings' in dir() else [])
     with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write(sitemap)
-    print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + {len(tools_by_category)} categories + {total_pages} article pages)')
+    print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + {len(tools_by_category)} categories + {total_pages} article pages + {compare_count} compares + {alt_count} alternatives + {quiz_count} quizzes + {ranking_count} rankings)')
 
     # 生成静态首页
     index_html = build_index_page(published_tools, articles) # 使用已发布的工具
@@ -1265,6 +2358,24 @@ def main():
     for category_name in tools_by_category.keys(): # 添加分类页面的URL
         category_slug = get_category_slug(category_name)
         all_urls.append(f"https://www.aitoolbox.hk/category/{category_slug}/")
+    for cp in (all_compares or []):  # 对比页
+        cslug = cp.get('slug', '')
+        if cslug:
+            all_urls.append(f"https://www.aitoolbox.hk/compare/{cslug}/")
+    for alt in (all_alternatives or []):  # 替代方案页
+        aslug = alt.get('slug', '')
+        if aslug:
+            all_urls.append(f"https://www.aitoolbox.hk/alternatives/{aslug}/")
+    for qd in (all_quizzes or []):  # Quiz选择器页
+        qslug = qd.get('slug', '')
+        if qslug:
+            is_main = (qd.get('target_url') == '/quiz/') or qslug == 'ai-tool-finder-2026'
+            all_urls.append(f"https://www.aitoolbox.hk/quiz{'' if is_main else '/' + qslug + '/'}")
+    for rd in (all_rankings or []):  # 排名页
+        rslug = rd.get('slug', '')
+        if rslug:
+            is_overall = rslug == '2026-ai-tools-overall-ranking'
+            all_urls.append(f"https://www.aitoolbox.hk/ranking{'' if is_overall else '/' + rslug + '/'}")
     
     new_urls = [u for u in all_urls if u not in pushed_urls]
     
@@ -1296,7 +2407,7 @@ def main():
     else:
         print(f"\nIndexNow: No new URLs to push. ({len(all_urls)} total, all already pushed)")
     
-    print(f'\nDone! {len(published_tools)} tools + {len(articles)} articles')
+    print(f'\nDone! {len(published_tools)} tools + {len(articles)} articles + {quiz_count} quizzes + {ranking_count} rankings')
 
 if __name__ == '__main__':
     main()
