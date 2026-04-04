@@ -1502,6 +1502,114 @@ def _build_ranking_index_page(all_rankings):
     return html
 
 
+def _build_compare_index_page(all_compares):
+    """生成 compare/index.html 总入口页：列出所有对比评测链接"""
+    items_html = ''
+    for cp in (all_compares or []):
+        cslug = cp.get('slug', '')
+        title = cp.get('title', cslug)
+        if not cslug:
+            continue
+        items_html += f'''    <li>
+      <a href="/compare/{cslug}/" style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;text-decoration:none;color:inherit;transition:background .2s;">
+        <span style="font-size:22px;">⚖️</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-weight:600;font-size:15px;">{escape_html(title)}</div>
+        </div>
+        <span style="color:#aaa;font-size:18px;">→</span>
+      </a>
+    </li>\n'''
+    if not items_html:
+        items_html = '<li style="padding:24px;text-align:center;color:#999;">暂无对比评测内容</li>'
+
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具对比评测 - 全部对比 | AI工具宝箱</title>
+    <meta name="description" content="AI工具宝箱全部对比评测：深入对比多款AI工具的功能、价格、使用场景，帮你做出最佳选择。">
+    <link rel="canonical" href="https://www.aitoolbox.hk/compare/">
+    <link rel="stylesheet" href="/css/style.css">
+{BAIDU_TONGJI}
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0; AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+        </div>
+    </header>
+
+    <section style="max-width:720px;margin:40px auto;padding:0 24px;">
+        <h2 style="font-size:28px;font-weight:800;margin-bottom:8px;">⚖️ AI工具对比评测</h2>
+        <p style="color:var(--text-muted);margin-bottom:24px;font-size:15px;">
+            共 <strong>{len(all_compares or [])}</strong> 篇深度对比 · 帮你选对AI工具
+        </p>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:4px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid #f1f5f9;">
+{items_html}        </ul>
+        <p style="text-align:center;margin-top:20px;">
+            <a href="/" style="color:var(--primary-color);font-size:14px;text-decoration:none;">← 返回首页</a>
+        </p>
+    </section>
+</body>
+</html>'''
+    return html
+
+
+def _build_alternatives_index_page(all_alternatives):
+    """生成 alternatives/index.html 总入口页：列出所有替代方案链接"""
+    items_html = ''
+    for alt in (all_alternatives or []):
+        aslug = alt.get('slug', '')
+        title = alt.get('title', aslug)
+        if not aslug:
+            continue
+        items_html += f'''    <li>
+      <a href="/alternatives/{aslug}/" style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;text-decoration:none;color:inherit;transition:background .2s;">
+        <span style="font-size:22px;">🔄</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-weight:600;font-size:15px;">{escape_html(title)}</div>
+        </div>
+        <span style="color:#aaa;font-size:18px;">→</span>
+      </a>
+    </li>\n'''
+    if not items_html:
+        items_html = '<li style="padding:24px;text-align:center;color:#999;">暂无替代方案内容</li>'
+
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具替代方案推荐 - 全部替代方案 | AI工具宝箱</title>
+    <meta name="description" content="AI工具宝箱全部替代方案推荐：寻找ChatGPT、Midjourney等热门AI工具的最佳平替，含免费和国产替代。">
+    <link rel="canonical" href="https://www.aitoolbox.hk/alternatives/">
+    <link rel="stylesheet" href="/css/style.css">
+{BAIDU_TONGJI}
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0; AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+        </div>
+    </header>
+
+    <section style="max-width:720px;margin:40px auto;padding:0 24px;">
+        <h2 style="font-size:28px;font-weight:800;margin-bottom:8px;">🔄 AI工具替代方案</h2>
+        <p style="color:var(--text-muted);margin-bottom:24px;font-size:15px;">
+            共 <strong>{len(all_alternatives or [])}</strong> 个替代方案 · 找到最适合你的AI工具
+        </p>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:4px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid #f1f5f9;">
+{items_html}        </ul>
+        <p style="text-align:center;margin-top:20px;">
+            <a href="/" style="color:var(--primary-color);font-size:14px;text-decoration:none;">← 返回首页</a>
+        </p>
+    </section>
+</body>
+</html>'''
+    return html
+
+
 def build_live_page(live_data, page_config, all_tools, articles):
     """
     构建 live dashboard 的子页面。
@@ -1538,7 +1646,7 @@ def build_live_page(live_data, page_config, all_tools, articles):
     nav_tabs = _live_nav_tabs(page_slug)
 
     # Build HTML parts
-    header_nav = '<header class="header"><div class="container header-inner"><a href="/" class="logo">✨ AI工具宝箱</a><nav class="nav"><a href="/">首页</a><a href="/ranking/">排名</a><a href="/quiz/">选工具</a><a href="/live/">实时</a></nav></div></header>'
+    header_nav = '<header class="header">\n        <div class="header-inner">\n            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>\n        </div>\n    </header>'
     page_icon = '<span class="tool-icon-lg">' + icon_emoji + '</span>'
     h1_tag = '<h1>' + escape_html(page_title) + '</h1>'
     subtitle = '<p class="subtitle">' + escape_html(meta_desc) + '</p>'
@@ -1859,6 +1967,84 @@ def _live_section_battle(h2h):
     title = h2h.get('title') or ''
     desc = h2h.get('description') or ''
     return '<section class="live-section fullwidth"><h2>%s</h2><p class="desc">%s</p><div class="battle-container">%s</div></section>' % (title, desc, cards)
+
+
+
+
+def _build_category_index_page(tools_by_category):
+    """生成 category/index.html 总入口页：列出所有分类链接"""
+    # 按照固定顺序排列分类
+    ordered_categories = ["AI对话", "AI写作", "AI绘画", "AI编程", "AI视频", "AI音频", "AI办公", "AI设计", "AI搜索", "AI翻译", "AI自动化", "AI效率"]
+    category_emojis = {
+        "AI对话": "💬", "AI写作": "✍️", "AI绘画": "🎨", "AI编程": "💻",
+        "AI视频": "🎬", "AI音频": "🎵", "AI办公": "📁", "AI设计": "🎯",
+        "AI搜索": "🔍", "AI翻译": "🌐", "AI自动化": "⚙️", "AI效率": "⚡",
+    }
+    items_html = ''
+    for cat_name in ordered_categories:
+        if cat_name not in tools_by_category:
+            continue
+        cat_slug = get_category_slug(cat_name)
+        tool_count = len(tools_by_category[cat_name])
+        emoji = category_emojis.get(cat_name, '📂')
+        items_html += f'''    <li>
+      <a href="/category/{cat_slug}/" style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;text-decoration:none;color:inherit;transition:background .2s;">
+        <span style="font-size:22px;">{emoji}</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-weight:600;font-size:15px;">{escape_html(cat_name)}</div>
+          <span style="font-size:11px;color:#888;">{tool_count} 款工具</span>
+        </div>
+        <span style="color:#aaa;font-size:18px;">→</span>
+      </a>
+    </li>\n'''
+    # 额外的未在排序列表中的分类
+    for cat_name, tools_in in tools_by_category.items():
+        if cat_name not in ordered_categories:
+            cat_slug = get_category_slug(cat_name)
+            items_html += f'''    <li>
+      <a href="/category/{cat_slug}/" style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;text-decoration:none;color:inherit;transition:background .2s;">
+        <span style="font-size:22px;">📂</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-weight:600;font-size:15px;">{escape_html(cat_name)}</div>
+          <span style="font-size:11px;color:#888;">{len(tools_in)} 款工具</span>
+        </div>
+        <span style="color:#aaa;font-size:18px;">→</span>
+      </a>
+    </li>\n'''
+
+    total_cats = len(tools_by_category)
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具分类 - 全部分类 | AI工具宝箱</title>
+    <meta name="description" content="AI工具宝箱全部工具分类：AI对话、AI写作、AI绘画、AI编程、AI视频等12个分类，覆盖AI全领域，帮你快速找到适合的AI工具。">
+    <link rel="canonical" href="https://www.aitoolbox.hk/category/">
+    <link rel="stylesheet" href="/css/style.css">
+{BAIDU_TONGJI}
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0; AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+        </div>
+    </header>
+
+    <section style="max-width:720px;margin:40px auto;padding:0 24px;">
+        <h2 style="font-size:28px;font-weight:800;margin-bottom:8px;">📂 AI工具分类</h2>
+        <p style="color:var(--text-muted);margin-bottom:24px;font-size:15px;">
+            共 <strong>{total_cats}</strong> 个分类 · 覆盖AI全领域 · 每日更新
+        </p>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:4px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid #f1f5f9;">
+{items_html}        </ul>
+        <p style="text-align:center;margin-top:20px;">
+            <a href="/" style="color:var(--primary-color);font-size:14px;text-decoration:none;">← 返回首页</a>
+        </p>
+    </section>
+</body>
+</html>'''
+    return html
 
 
 def build_category_page(category_name, tools_in_category):
@@ -2691,6 +2877,15 @@ def build_target(target):
                 f.write(html)
             print(f'[OK] category/{category_slug}/index.html')
 
+        # 生成 category/index.html 总入口页（列出所有分类）
+        try:
+            cat_index_html = _build_category_index_page(tools_by_category)
+            with open(os.path.join(BASE_DIR, 'category', 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(cat_index_html)
+            print('  [OK] category/index.html (总入口页)')
+        except Exception as e:
+            print(f'  [FAIL] category/index.html: {e}')
+
     # ═══════════════════════════════════════════════════════
     # 工具页
     # ═══════════════════════════════════════════════════════
@@ -2753,6 +2948,24 @@ def build_target(target):
                     alt_count += 1
                 except Exception as e:
                     print(f'  [FAIL] alternatives/{aslug}/: {e}')
+
+        # 生成 compare/index.html 总入口页
+        try:
+            compare_index_html = _build_compare_index_page(all_compares)
+            with open(os.path.join(BASE_DIR, 'compare', 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(compare_index_html)
+            print('  [OK] compare/index.html (总入口页)')
+        except Exception as e:
+            print(f'  [FAIL] compare/index.html: {e}')
+
+        # 生成 alternatives/index.html 总入口页
+        try:
+            alt_index_html = _build_alternatives_index_page(all_alternatives)
+            with open(os.path.join(BASE_DIR, 'alternatives', 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(alt_index_html)
+            print('  [OK] alternatives/index.html (总入口页)')
+        except Exception as e:
+            print(f'  [FAIL] alternatives/index.html: {e}')
 
         # Quiz
         if all_quizzes:
