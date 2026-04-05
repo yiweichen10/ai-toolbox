@@ -731,6 +731,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Copilot（微软）",
+    "slug": "microsoft-copilot",
+    "emoji": "📊",
+    "color": "#88b507",
+    "description": "微软推出的AI助手，深度集成在Windows、Edge、Office中。基于GPT-4，是日常办公和效率提升的全能AI助手。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "18万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://copilot.microsoft.com",
+    "price": "免费使用",
+    "platform": "Web"
+  },
+  {
     "name": "WPS AI",
     "slug": "wps-ai",
     "emoji": "📊",
@@ -1100,6 +1129,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.capcut.com",
     "price": "基础$10/月起",
     "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Ideogram",
+    "slug": "ideogram",
+    "emoji": "🎨",
+    "color": "#a7f18a",
+    "description": "AI图片生成工具，以文字渲染能力著称。能在图片中准确生成英文文字和logo，是设计海报和品牌素材的AI绘画利器。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "14万",
+    "badge": {
+      "type": "pick",
+      "text": null
+    },
+    "url": "https://ideogram.ai",
+    "price": "基础$10/月起",
+    "platform": "Web"
   },
   {
     "name": "Leonardo AI",
@@ -1524,6 +1581,34 @@ window.__ALL_TOOLS__ = [
       "text": "编辑推荐"
     },
     "url": "https://brandmark.io",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Make",
+    "slug": "make",
+    "emoji": "⚙️",
+    "color": "#d2ae33",
+    "description": "可视化自动化平台（原Integromat），通过拖拽连接各种应用构建自动化工作流。支持1500+应用集成，比Zapier更灵活强大，技术团队的首选。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "AI自动化"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "16万",
+    "badge": {
+      "type": "pick",
+      "text": "NEW"
+    },
+    "url": "https://www.make.com",
     "price": "基础$10/月起",
     "platform": "本地部署 / Web"
   }
@@ -1936,6 +2021,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Copilot（微软）",
+    "slug": "microsoft-copilot",
+    "emoji": "📊",
+    "color": "#88b507",
+    "description": "微软推出的AI助手，深度集成在Windows、Edge、Office中。基于GPT-4，是日常办公和效率提升的全能AI助手。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "18万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://copilot.microsoft.com",
+    "price": "免费使用",
+    "platform": "Web"
+  },
+  {
     "name": "WPS AI",
     "slug": "wps-ai",
     "emoji": "📊",
@@ -2305,6 +2419,34 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.capcut.com",
     "price": "基础$10/月起",
     "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Ideogram",
+    "slug": "ideogram",
+    "emoji": "🎨",
+    "color": "#a7f18a",
+    "description": "AI图片生成工具，以文字渲染能力著称。能在图片中准确生成英文文字和logo，是设计海报和品牌素材的AI绘画利器。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "14万",
+    "badge": {
+      "type": "pick",
+      "text": null
+    },
+    "url": "https://ideogram.ai",
+    "price": "基础$10/月起",
+    "platform": "Web"
   },
   {
     "name": "Leonardo AI",
@@ -2729,6 +2871,34 @@ window.__REMAINING_TOOLS__ = [
       "text": "编辑推荐"
     },
     "url": "https://brandmark.io",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Make",
+    "slug": "make",
+    "emoji": "⚙️",
+    "color": "#d2ae33",
+    "description": "可视化自动化平台（原Integromat），通过拖拽连接各种应用构建自动化工作流。支持1500+应用集成，比Zapier更灵活强大，技术团队的首选。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "AI自动化"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "16万",
+    "badge": {
+      "type": "pick",
+      "text": "NEW"
+    },
+    "url": "https://www.make.com",
     "price": "基础$10/月起",
     "platform": "本地部署 / Web"
   }
