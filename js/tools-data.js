@@ -789,6 +789,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Character AI",
+    "slug": "character-ai",
+    "emoji": "💬",
+    "color": "#815fde",
+    "description": "AI角色扮演对话平台，可以和虚拟AI角色进行自然对话。支持创建自定义角色，社区有数百万个AI角色可供选择，是最受欢迎的AI娱乐平台。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "12万",
+    "badge": {
+      "type": "pick",
+      "text": "HOT"
+    },
+    "url": "https://character.ai",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "Poe",
     "slug": "poe",
     "emoji": "💬",
@@ -1302,6 +1330,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Remove.bg",
+    "slug": "remove.bg",
+    "emoji": "🖼️",
+    "color": "#71e5c1",
+    "description": "AI一键去背景工具，5秒内精确去除图片背景。支持批量处理和API集成，是全球使用最广泛的背景去除工具。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "6万",
+    "badge": {
+      "type": "pick",
+      "text": null
+    },
+    "url": "https://www.remove.bg",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "Otter.ai",
     "slug": "otter.ai",
     "emoji": "📊",
@@ -1328,6 +1384,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://otter.ai",
     "price": "免费使用",
     "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Beautiful.ai",
+    "slug": "beautiful.ai",
+    "emoji": "📊",
+    "color": "#33c396",
+    "description": "AI演示文稿设计工具，自动应用专业设计原则。智能排版、对齐和配色，让任何人都能做出专业级PPT。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "13万",
+    "badge": {
+      "type": null,
+      "text": "HOT"
+    },
+    "url": "https://www.beautiful.ai",
+    "price": "基础$10/月起",
+    "platform": "Web"
   },
   {
     "name": "Fireflies.ai",
@@ -2079,6 +2164,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Character AI",
+    "slug": "character-ai",
+    "emoji": "💬",
+    "color": "#815fde",
+    "description": "AI角色扮演对话平台，可以和虚拟AI角色进行自然对话。支持创建自定义角色，社区有数百万个AI角色可供选择，是最受欢迎的AI娱乐平台。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "12万",
+    "badge": {
+      "type": "pick",
+      "text": "HOT"
+    },
+    "url": "https://character.ai",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "Poe",
     "slug": "poe",
     "emoji": "💬",
@@ -2592,6 +2705,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Remove.bg",
+    "slug": "remove.bg",
+    "emoji": "🖼️",
+    "color": "#71e5c1",
+    "description": "AI一键去背景工具，5秒内精确去除图片背景。支持批量处理和API集成，是全球使用最广泛的背景去除工具。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "6万",
+    "badge": {
+      "type": "pick",
+      "text": null
+    },
+    "url": "https://www.remove.bg",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "Otter.ai",
     "slug": "otter.ai",
     "emoji": "📊",
@@ -2618,6 +2759,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://otter.ai",
     "price": "免费使用",
     "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Beautiful.ai",
+    "slug": "beautiful.ai",
+    "emoji": "📊",
+    "color": "#33c396",
+    "description": "AI演示文稿设计工具，自动应用专业设计原则。智能排版、对齐和配色，让任何人都能做出专业级PPT。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "13万",
+    "badge": {
+      "type": null,
+      "text": "HOT"
+    },
+    "url": "https://www.beautiful.ai",
+    "price": "基础$10/月起",
+    "platform": "Web"
   },
   {
     "name": "Fireflies.ai",
