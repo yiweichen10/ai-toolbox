@@ -55,16 +55,114 @@ def ensure_og_image(slug, data_obj=None, is_article=False):
         print(f'  [OG] 生成异常: {slug} - {e}')
         return ''
 
-GLOBAL_NAV = '''    <nav class="global-nav" aria-label="全局导航">
+
+# UI国际化字典 (SEO Face-lift)
+UI_I18N = {
+    'zh-CN': {
+        'nav_ranking': '📊 工具排行',
+        'nav_quiz': '🎯 AI工具选择器',
+        'nav_live': '📈 实时面板',
+        'nav_compare': '⚖️ 对比评测',
+        'nav_alternatives': '🔄 替代方案',
+        'nav_categories': '📂 全部分类',
+        'header_title': 'AI工具宝箱',
+        'header_subtitle': '每日更新 · 收录工具 持续更新',
+        'footer_text': 'AI工具宝箱 · 每日精选优质AI工具',
+        'breadcrumb_home': '首页',
+        'breadcrumb_articles': '文章列表',
+        'breadcrumb_compare': '工具对比',
+        'breadcrumb_alternative': '替代方案',
+        'breadcrumb_quiz': '工具选择器',
+        'breadcrumb_ranking': '工具排行榜',
+        'breadcrumb_live': '实时看板',
+        'breadcrumb_nav': '面包屑导航',
+        'related_tools': '🔧 相关工具',
+        'related_articles': '📖 相关文章',
+        'back_to_top': '返回顶部',
+        'last_updated': '最后更新',
+        'tool_website': '官网',
+        'tool_price': '价格',
+        'tool_category': '分类',
+        'tool_platform': '平台',
+        'tool_use_now': '立即使用',
+        'tool_features': '核心功能',
+        'tool_pros_cons': '优缺点分析',
+        'tool_pros': '✅ 优点',
+        'tool_cons': '❌ 缺点',
+        'view_details': '详情',
+        'more_compare': '🔗 更多相关对比',
+        'more_alternatives': '🔗 更多替代方案',
+        'latest_articles': '📝 最新文章',
+        'article_default_cat': '文章',
+        'page_num_prefix': '第',
+        'page_num_suffix': '页',
+        'visit_site': '立即访问',
+    },
+    'en': {
+        'nav_ranking': '📊 Ranking',
+        'nav_quiz': '🎯 AI Selector',
+        'nav_live': '📈 Live Board',
+        'nav_compare': '⚖️ Comparison',
+        'nav_alternatives': '🔄 Alternatives',
+        'nav_categories': '📂 Categories',
+        'header_title': 'AI Tool Box',
+        'header_subtitle': 'Daily Updates · Hand-picked AI Tools',
+        'footer_text': 'AI Tool Box · Quality AI Tools Daily',
+        'breadcrumb_home': 'Home',
+        'breadcrumb_articles': 'Articles',
+        'breadcrumb_compare': 'Comparison',
+        'breadcrumb_alternative': 'Alternatives',
+        'breadcrumb_quiz': 'AI Selector',
+        'breadcrumb_ranking': 'Ranking',
+        'breadcrumb_live': 'Live Board',
+        'breadcrumb_nav': 'Breadcrumb Navigation',
+        'related_tools': '🔧 Related Tools',
+        'related_articles': '📖 Related Articles',
+        'back_to_top': 'Back to Top',
+        'last_updated': 'Last Updated',
+        'tool_website': 'Website',
+        'tool_price': 'Pricing',
+        'tool_category': 'Category',
+        'tool_platform': 'Platform',
+        'tool_use_now': 'Use Now',
+        'tool_features': 'Key Features',
+        'tool_pros_cons': 'Pros & Cons',
+        'tool_pros': '✅ Pros',
+        'tool_cons': '❌ Cons',
+        'view_details': 'Details',
+        'more_compare': '🔗 More Comparisons',
+        'more_alternatives': '🔗 More Alternatives',
+        'latest_articles': '📝 Latest Articles',
+        'article_default_cat': 'Article',
+        'page_num_prefix': 'Page',
+        'page_num_suffix': '',
+        'visit_site': 'Visit Site',
+    }
+}
+
+def get_ui_text(key, lang='zh-CN'):
+    """获取指定语言的UI文本"""
+    if lang not in UI_I18N:
+        lang = 'zh-CN'
+    return UI_I18N[lang].get(key, UI_I18N['zh-CN'].get(key, ''))
+
+def get_global_nav(lang='zh-CN'):
+    """获取指定语言的全局导航栏HTML"""
+    _t = lambda k: get_ui_text(k, lang)
+    return f"""    <nav class="global-nav" aria-label="Global Navigation">
         <div class="global-nav-inner">
-            <a href="/ranking/" class="gn-item">📊 工具排行</a>
-            <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
-            <a href="/live/" class="gn-item">📈 实时面板</a>
-            <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
-            <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
-            <a href="/category/" class="gn-item">📂 全部分类</a>
+            <a href="/ranking/" class="gn-item">{_t("nav_ranking")}</a>
+            <a href="/quiz/" class="gn-item">{_t("nav_quiz")}</a>
+            <a href="/live/" class="gn-item">{_t("nav_live")}</a>
+            <a href="/compare/" class="gn-item">{_t("nav_compare")}</a>
+            <a href="/alternatives/" class="gn-item">{_t("nav_alternatives")}</a>
+            <a href="/category/" class="gn-item">{_t("nav_categories")}</a>
         </div>
-    </nav>'''
+    </nav>"""
+
+# 为旧有的手动HTML注入保留全局变量 (默认中文)
+GLOBAL_NAV = get_global_nav('zh-CN')
+
 
 BAIDU_TONGJI = '''<script>
 var _hmt = _hmt || [];
@@ -220,6 +318,10 @@ def get_category_stats(tools):
     return category_counts
 
 def build_tool_page(tool, all_tools, all_articles=None):
+    lang = tool.get('lang', 'zh-CN')
+    _t = lambda k: get_ui_text(k, lang)
+    global_nav = get_global_nav(lang)
+
     """生成单个工具详情页的完整HTML"""
     lang = tool.get('lang', 'zh-CN')
 
@@ -477,11 +579,11 @@ def build_tool_page(tool, all_tools, all_articles=None):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><h1>🛠️ {_t("header_title")} <span>{_t("header_subtitle")}</span></h1></a>
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="面包屑导航">
+    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">
         <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
     </nav>
 
@@ -524,7 +626,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
     </main>
 
     <footer class="footer">
-        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+        <p>© 2026 {_t("header_title")} · {_t("footer_text")}</p>
     </footer>
     ''' + BACK_TO_TOP_BLOCK + '''
 </body>
@@ -533,6 +635,10 @@ def build_tool_page(tool, all_tools, all_articles=None):
 
 
 def build_compare_page(compare_data, all_tools, all_articles=None):
+    lang = compare_data.get('lang', 'zh-CN')
+    _t = lambda k: get_ui_text(k, lang)
+    global_nav = get_global_nav(lang)
+
     """
     生成对比页面 (Phase 2: 程序化SEO)
     URL格式: /compare/{toolA-vs-toolB}/index.html
@@ -697,11 +803,11 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><h1>🛠️ {_t("header_title")} <span>{_t("header_subtitle")}</span></h1></a>
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="面包屑导航">
+    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">
         <a href="/">首页</a> &gt; <a href="/compare/">工具对比</a> &gt; <span>{' vs '.join([t['name'] for t in compared_tools])}</span>
     </nav>
 
@@ -737,6 +843,10 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
 
 
 def build_alternatives_page(alt_data, all_tools, all_articles=None):
+    lang = alt_data.get('lang', 'zh-CN')
+    _t = lambda k: get_ui_text(k, lang)
+    global_nav = get_global_nav(lang)
+
     """
     生成替代方案页面 (Phase 3: 替代方案页)
     URL格式: /alternatives/{tool-slug}-alternatives/index.html
@@ -831,11 +941,11 @@ def build_alternatives_page(alt_data, all_tools, all_articles=None):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><h1>🛠️ {_t("header_title")} <span>{_t("header_subtitle")}</span></h1></a>
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="面包屑导航">
+    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">
         <a href="/">首页</a> &gt; <a href="/alternatives/">替代方案</a> &gt; <span>{target_tool['name'] if target_tool else slug}</span>
     </nav>
 
@@ -895,6 +1005,10 @@ def load_ranking_data():
 # ════════════════════════════════════════════════════════
 
 def build_quiz_page(quiz_data, all_tools, all_articles=None):
+    lang = quiz_data.get('lang', 'zh-CN')
+    _t = lambda k: get_ui_text(k, lang)
+    global_nav = get_global_nav(lang)
+
     """
     生成 Quiz/工具选择器页面 (Phase 4)
     URL: /quiz/{slug}/index.html 或 /quiz/index.html (总入口)
@@ -1118,7 +1232,7 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="面包屑导航">
+    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">
         <a href="/">首页</a> &gt; <a href="/quiz/">AI工具选择器</a> &gt; <span>{title[:25]}...</span>
     </nav>
 
@@ -1321,6 +1435,10 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
 # ════════════════════════════════════════════════════════
 
 def build_ranking_page(ranking_data, all_tools, all_articles=None):
+    lang = ranking_data.get('lang', 'zh-CN')
+    _t = lambda k: get_ui_text(k, lang)
+    global_nav = get_global_nav(lang)
+
     """
     生成排名页面 (Phase 5)
     URL: /ranking/{slug}/index.html 或 /ranking/index.html (总榜入口)
@@ -1562,7 +1680,7 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="面包屑导航">
+    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">
         <a href/">首页</a> &gt; <a href="/ranking/">AI工具排行</a> &gt; <span>{title[:25]}...</span>
     </nav>
 
@@ -1795,6 +1913,10 @@ def _build_alternatives_index_page(all_alternatives):
 
 
 def build_live_page(live_data, page_config, all_tools, articles):
+    lang = live_data.get('lang', 'zh-CN')
+    _t = lambda k: get_ui_text(k, lang)
+    global_nav = get_global_nav(lang)
+
     """
     构建 live dashboard 的子页面。
     type: dashboard | matrix | trend | heatmap | battle
@@ -1832,7 +1954,7 @@ def build_live_page(live_data, page_config, all_tools, articles):
     nav_tabs = _live_nav_tabs(page_slug)
 
     # Build HTML parts
-    header_nav = '<header class="header">\n        <div class="header-inner">\n            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>\n        </div>\n    </header>'
+    header_nav = '<header class="header">\n        <div class="header-inner">\n            <a href="/" style="text-decoration:none;"><h1>🛠️ {_t("header_title")} <span>{_t("header_subtitle")}</span></h1></a>\n        </div>\n    </header>'
     page_icon = '<span class="tool-icon-lg">' + icon_emoji + '</span>'
     h1_tag = '<h1>' + escape_html(page_title) + '</h1>'
     subtitle = '<p class="subtitle">' + escape_html(meta_desc) + '</p>'
@@ -2234,6 +2356,10 @@ def _build_category_index_page(tools_by_category):
 
 
 def build_category_page(category_name, tools_in_category):
+    lang = 'zh-CN'
+    _t = lambda k: get_ui_text(k, lang)
+    global_nav = get_global_nav(lang)
+
     """生成单个分类页的完整HTML"""
     lang = 'zh-CN'
 
@@ -2303,11 +2429,11 @@ def build_category_page(category_name, tools_in_category):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><h1>🛠️ {_t("header_title")} <span>{_t("header_subtitle")}</span></h1></a>
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="面包屑导航">
+    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">
         <a href="/">首页</a> &gt; <span>{escape_html(category_name)}</span>
     </nav>
 
@@ -2323,7 +2449,7 @@ def build_category_page(category_name, tools_in_category):
     </main>
 
     <footer class="footer">
-        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+        <p>© 2026 {_t("header_title")} · {_t("footer_text")}</p>
     </footer>
     ''' + BACK_TO_TOP_BLOCK + '''
 </body>
@@ -2332,6 +2458,10 @@ def build_category_page(category_name, tools_in_category):
 
 
 def build_article_page(article, all_articles, all_tools=None):
+    lang = article.get('lang', 'zh-CN')
+    _t = lambda k: get_ui_text(k, lang)
+    global_nav = get_global_nav(lang)
+
     """生成单个文章页的完整HTML"""
     lang = article.get('lang', 'zh-CN')
 
@@ -2508,7 +2638,7 @@ def build_article_page(article, all_articles, all_tools=None):
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="面包屑导航">
+    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">
         <a href="/">首页</a> &gt; <span>{escape_html(article.get('category', '文章'))}</span> &gt; <span>{escape_html(article['title'])[:20]}...</span>
     </nav>
 
@@ -2528,7 +2658,7 @@ def build_article_page(article, all_articles, all_tools=None):
     </main>
 
     <footer class="footer">
-        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+        <p>© 2026 {_t("header_title")} · {_t("footer_text")}</p>
     </footer>
     ''' + BACK_TO_TOP_BLOCK + '''
 </body>
@@ -2537,6 +2667,10 @@ def build_article_page(article, all_articles, all_tools=None):
 
 
 def build_article_list_pages(articles):
+    lang = 'zh-CN'
+    _t = lambda k: get_ui_text(k, lang)
+    global_nav = get_global_nav(lang)
+
     """生成文章分页列表页（/articles/page/1, page/2...）
     每页 10 篇，并加入 rel=next/prev + canonical"""
     
@@ -2625,8 +2759,8 @@ def build_article_list_pages(articles):
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <a href="/articles/page/1/">文章列表</a> &gt; <span>第 {page_num} 页</span>
+    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">
+        <a href="/">首页</a> &gt; <a href="/articles/page/1/">{_t("breadcrumb_articles")}</a> &gt; <span>{_t("page_num_prefix")} {page_num} {_t("page_num_suffix")}</span>
     </nav>
 
     <main class="article-container">
@@ -2639,7 +2773,7 @@ def build_article_list_pages(articles):
     </main>
 
     <footer class="footer">
-        <p>&#xA9; 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+        <p>&#xA9; 2026 {_t("header_title")} · {_t("footer_text")}</p>
     </footer>
     ''' + BACK_TO_TOP_BLOCK + '''
 </body>
@@ -2687,6 +2821,10 @@ def replace_between_tags(html, start_tag, new_content):
 
 
 def build_index_page(tools, articles):
+    lang = 'zh-CN'
+    _t = lambda k: get_ui_text(k, lang)
+    global_nav = get_global_nav(lang)
+
     lang = 'zh-CN'
 
     # 生成静态首页
