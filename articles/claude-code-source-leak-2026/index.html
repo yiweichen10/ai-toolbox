@@ -112,24 +112,7 @@ var _hmt = _hmt || [];
 <h2>事件时间线：3月31日发生了什么</h2>
 <p>整个事件的导火索，是一个57MB的<code>.map</code>文件。
 </p>
-<p>| 时间 | 事件 |
-</p>
-<p>|------|------|
-</p>
-<p>| 2026年3月31日 | Anthropic在npm发布Claude Code CLI v2.1.88版本 |
-</p>
-<p>| 同日 | 工程配置疏漏：生产包中意外包含<code>cli.js.map</code> source map文件（57MB） |
-</p>
-<p>| 同日 | 安全研究员Chaofan Shou（FuzzLand实习生）在X平台发布发现 |
-</p>
-<p>| 数小时内 | 源码被全球开发者下载、备份、镜像 |
-</p>
-<p>| 数小时内 | GitHub出现多个镜像仓库，星标突破2万 |
-</p>
-<p>| 同日稍晚 | Anthropic紧急下架v2.1.88，关闭Cloudflare R2存储桶公开访问 |
-</p>
-<p>| 截至发稿 | Anthropic尚未发布官方声明 |
-</p>
+<div class="table-container"><table><thead><tr><th>时间</th><th>事件</th></tr></thead><tbody><tr><td>2026年3月31日</td><td>Anthropic在npm发布Claude Code CLI v2.1.88版本</td></tr><tr><td>同日</td><td>工程配置疏漏：生产包中意外包含<code>cli.js.map</code> source map文件（57MB）</td></tr><tr><td>同日</td><td>安全研究员Chaofan Shou（FuzzLand实习生）在X平台发布发现</td></tr><tr><td>数小时内</td><td>源码被全球开发者下载、备份、镜像</td></tr><tr><td>数小时内</td><td>GitHub出现多个镜像仓库，星标突破2万</td></tr><tr><td>同日稍晚</td><td>Anthropic紧急下架v2.1.88，关闭Cloudflare R2存储桶公开访问</td></tr><tr><td>截至发稿</td><td>Anthropic尚未发布官方声明</td></tr></tbody></table></div>
 <p>从发现到扩散，整个过程不超过6小时。
 </p>
 <h2>为什么一个.map文件能泄露全部源码</h2>
@@ -156,24 +139,7 @@ var _hmt = _hmt || [];
 <h2>泄露了什么：51.2万行代码里有什么</h2>
 <p>51.2万行TypeScript源码，1900多个文件，覆盖了Claude Code的核心架构：
 </p>
-<p>| 类别 | 具体内容 |
-</p>
-<p>|------|---------|
-</p>
-<p>| 核心架构 | 基于Bun运行时，React+Ink开发CLI界面 |
-</p>
-<p>| 内置工具模块 | 40+工具模块（文件读写、Git工作流、代码调试、网络请求等） |
-</p>
-<p>| 斜杠命令 | 50+斜杠命令（<code>/debug</code>、<code>/test</code>、<code>/refactor</code>等）的完整实现 |
-</p>
-<p>| 多Agent系统 | 多Agent编排系统、上下文管理机制、权限控制模型 |
-</p>
-<p>| 未发布功能 | 名为"Kairos"的助手模式（自定义系统提示词、定时签到等） |
-</p>
-<p>| 用户遥测 | 用户行为数据收集系统和安全逻辑 |
-</p>
-<p>| API鉴权 | 完整的API鉴权方案和内部实现细节 |
-</p>
+<div class="table-container"><table><thead><tr><th>类别</th><th>具体内容</th></tr></thead><tbody><tr><td>核心架构</td><td>基于Bun运行时，React+Ink开发CLI界面</td></tr><tr><td>内置工具模块</td><td>40+工具模块（文件读写、Git工作流、代码调试、网络请求等）</td></tr><tr><td>斜杠命令</td><td>50+斜杠命令（<code>/debug</code>、<code>/test</code>、<code>/refactor</code>等）的完整实现</td></tr><tr><td>多Agent系统</td><td>多Agent编排系统、上下文管理机制、权限控制模型</td></tr><tr><td>未发布功能</td><td>名为"Kairos"的助手模式（自定义系统提示词、定时签到等）</td></tr><tr><td>用户遥测</td><td>用户行为数据收集系统和安全逻辑</td></tr><tr><td>API鉴权</td><td>完整的API鉴权方案和内部实现细节</td></tr></tbody></table></div>
 <p>最让业界震惊的是<strong>Kairos功能</strong>——这是Anthropic尚未发布的下一代助手模式，自定义系统提示词和定时签到功能如果落地，将使Claude Code从"编程工具"进化为"个人AI助手"。这次泄露意味着竞争对手可以提前了解Anthropic的产品路线图。
 </p>
 <h2>为什么这次泄露比上次更严重</h2>
@@ -190,20 +156,7 @@ var _hmt = _hmt || [];
 <li>多Agent协作的核心算法（可以被借鉴/复制）</li>
 <li>未发布功能的设计思路（产品路线图泄露）</li>
 </ul>
-<p>| 对比项 | 3月27日内部文件泄露 | 3月31日源码泄露 |
-</p>
-<p>|--------|---------------------|----------------|
-</p>
-<p>| 泄露规模 | 3000份文档 | 51.2万行代码 |
-</p>
-<p>| 内容性质 | 内部运营/战略文档 | 完整产品源码 |
-</p>
-<p>| 可利用性 | 低（仅供阅读参考） | <strong>极高（可直接使用/逆向/攻击）</strong> |
-</p>
-<p>| 影响范围 | Anthropic品牌受损 | <strong>用户和竞品均受影响</strong> |
-</p>
-<p>| 补救可能 | 不可逆，但危害有限 | <strong>不可逆，竞品已拿到源码</strong> |
-</p>
+<div class="table-container"><table><thead><tr><th>对比项</th><th>3月27日内部文件泄露</th><th>3月31日源码泄露</th></tr></thead><tbody><tr><td>泄露规模</td><td>3000份文档</td><td>51.2万行代码</td></tr><tr><td>内容性质</td><td>内部运营/战略文档</td><td>完整产品源码</td></tr><tr><td>可利用性</td><td>低（仅供阅读参考）</td><td><strong>极高（可直接使用/逆向/攻击）</strong></td></tr><tr><td>影响范围</td><td>Anthropic品牌受损</td><td><strong>用户和竞品均受影响</strong></td></tr><tr><td>补救可能</td><td>不可逆，但危害有限</td><td><strong>不可逆，竞品已拿到源码</strong></td></tr></tbody></table></div>
 <h2>对开发者意味着什么</h2>
 <h3>好消息：普通用户没有数据泄露</h3>
 <p>Anthropic明确表示：这次泄露不涉及用户数据、API Key或模型权重。Claude Code是本地CLI工具，不上传你的代码到Anthropic服务器（除非你主动用云端功能）。普通用户不需要恐慌性地修改密码或删除账户。

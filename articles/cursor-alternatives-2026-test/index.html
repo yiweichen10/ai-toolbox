@@ -106,20 +106,7 @@ var _hmt = _hmt || [];
 <p>我花了两周时间，逐个实测了7款Cursor替代方案：Claude Code、Cline、GitHub Copilot、Windsurf、OpenAI Codex、Zed和Augment Code。不是简单看官网介绍，而是用同一个项目（一个5000行Python后端）做对比测试，记录真实数据和体验。这篇文章把结果全摊开了说。
 </p>
 <h2>先看结论</h2>
-<p>| 你是什么情况 | 推荐 | 月花费 | 理由 |
-</p>
-<p>|-------------|------|--------|------|
-</p>
-<p>| 预算为零 | Cline + DeepSeek | $0-10（API费） | 开源免费，BYOK，实测体验最接近Cursor |
-</p>
-<p>| 预算$10-15 | GitHub Copilot Pro | $10/月 | 免费层最慷慨（2000补全+50聊天），最广编辑器支持 |
-</p>
-<p>| 追求最强代码能力 | Claude Code Pro | $20/月 | SWE-bench 80.8%，多Agent协作，终端原生 |
-</p>
-<p>| 不想折腾 | Windsurf Pro | $15/月 | 最便宜付费方案，VS Code fork无迁移成本 |
-</p>
-<p>| 重度用户（8h+/天） | Cursor Ultra / Claude Max | $100-200/月 | 无限制用量，企业级功能 |
-</p>
+<div class="table-container"><table><thead><tr><th>你是什么情况</th><th>推荐</th><th>月花费</th><th>理由</th></tr></thead><tbody><tr><td>预算为零</td><td>Cline + DeepSeek</td><td>$0-10（API费）</td><td>开源免费，BYOK，实测体验最接近Cursor</td></tr><tr><td>预算$10-15</td><td>GitHub Copilot Pro</td><td>$10/月</td><td>免费层最慷慨（2000补全+50聊天），最广编辑器支持</td></tr><tr><td>追求最强代码能力</td><td>Claude Code Pro</td><td>$20/月</td><td>SWE-bench 80.8%，多Agent协作，终端原生</td></tr><tr><td>不想折腾</td><td>Windsurf Pro</td><td>$15/月</td><td>最便宜付费方案，VS Code fork无迁移成本</td></tr><tr><td>重度用户（8h+/天）</td><td>Cursor Ultra / Claude Max</td><td>$100-200/月</td><td>无限制用量，企业级功能</td></tr></tbody></table></div>
 <h2>七款工具实测数据</h2>
 <h3>1. Claude Code：SWE-bench第一，但别被分数骗了</h3>
 <p><strong>定位</strong>：终端原生的AI编程代理，不是编辑器插件，而是直接跑在你的终端里。
@@ -233,22 +220,7 @@ var _hmt = _hmt || [];
 <h2>价格透明度对比：谁在"隐藏收费"</h2>
 <p>这是我整理的真实月成本估算（基于每天4-6小时编码强度）：
 </p>
-<p>| 工具 | 标称月费 | 实际月费（重度使用） | 差距 | 透明度 |
-</p>
-<p>|------|---------|-------------------|------|--------|
-</p>
-<p>| Cline | $0 | $10-30（API费） | 低 | 高（自己控制模型） |
-</p>
-<p>| GitHub Copilot Pro | $10 | $10 | 无 | 高 |
-</p>
-<p>| Windsurf Pro | $15 | $25-35（积分追加） | 高 | 低 |
-</p>
-<p>| Cursor Pro | $20 | $40-50（升级Pro+） | 高 | 中 |
-</p>
-<p>| Claude Code Pro | $20 | $50-200+（API超限） | 极高 | 低 |
-</p>
-<p>| Augment Indie | $20 | $35-50（自动充值） | 中 | 低 |
-</p>
+<div class="table-container"><table><thead><tr><th>工具</th><th>标称月费</th><th>实际月费（重度使用）</th><th>差距</th><th>透明度</th></tr></thead><tbody><tr><td>Cline</td><td>$0</td><td>$10-30（API费）</td><td>低</td><td>高（自己控制模型）</td></tr><tr><td>GitHub Copilot Pro</td><td>$10</td><td>$10</td><td>无</td><td>高</td></tr><tr><td>Windsurf Pro</td><td>$15</td><td>$25-35（积分追加）</td><td>高</td><td>低</td></tr><tr><td>Cursor Pro</td><td>$20</td><td>$40-50（升级Pro+）</td><td>高</td><td>中</td></tr><tr><td>Claude Code Pro</td><td>$20</td><td>$50-200+（API超限）</td><td>极高</td><td>低</td></tr><tr><td>Augment Indie</td><td>$20</td><td>$35-50（自动充值）</td><td>中</td><td>低</td></tr></tbody></table></div>
 <p>关键发现：<strong>标价$20的四个工具（Cursor、Claude Code、Augment、Codex），实际月费可能相差10倍。</strong> Claude Code在重度使用下可能到$200+，而Codex固定$20（ChatGPT Plus包含）。Cline虽然"免费"，但API费全由你控制，反而是最透明的。
 </p>
 <h2>我的配置推荐</h2>

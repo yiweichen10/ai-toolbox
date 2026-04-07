@@ -156,34 +156,14 @@ var _hmt = _hmt || [];
 <h2>测试方法：4个真实任务</h2>
 <p>为了让对比公平，我设计了4个覆盖不同场景的任务，三个Agent同时执行（同一时间、同一网络环境），记录每个任务的完成情况。
 </p>
-<p>| 任务 | 类型 | 考察维度 |
-</p>
-<p>|------|------|---------|
-</p>
-<p>| 任务1：调研竞品 | 深度研究 | 信息准确性、深度、来源标注 |
-</p>
-<p>| 任务2：搭建Landing Page | Web开发 | 代码质量、功能完整度、设计水平 |
-</p>
-<p>| 任务3：Excel数据分析 | 数据处理 | 准确率、可视化质量、速度 |
-</p>
-<p>| 任务4：定时监控+通知 | 自动化运维 | 可靠性、延迟、稳定性 |
-</p>
+<div class="table-container"><table><thead><tr><th>任务</th><th>类型</th><th>考察维度</th></tr></thead><tbody><tr><td>任务1：调研竞品</td><td>深度研究</td><td>信息准确性、深度、来源标注</td></tr><tr><td>任务2：搭建Landing Page</td><td>Web开发</td><td>代码质量、功能完整度、设计水平</td></tr><tr><td>任务3：Excel数据分析</td><td>数据处理</td><td>准确率、可视化质量、速度</td></tr><tr><td>任务4：定时监控+通知</td><td>自动化运维</td><td>可靠性、延迟、稳定性</td></tr></tbody></table></div>
 <p>每个任务满分10分，按完成度打分。分数基于实际输出结果，不是主观感觉。
 </p>
 <h2>实测结果</h2>
 <h3>任务1：调研竞品（深度研究）</h3>
 <p><strong>任务描述</strong>：调研"2026年中国AI编程工具市场"，要求列出主要玩家、市场份额估算、用户口碑、定价策略，并生成一份带来源标注的研究报告。
 </p>
-<p>| Agent | 完成时间 | 成功率 | 得分 | 评价 |
-</p>
-<p>|-------|---------|-------|------|------|
-</p>
-<p>| <strong>Manus</strong> | 12分钟 | 100% | <strong>9.2</strong> | 研究深度远超预期，翻阅了30+网页，来源标注清晰 |
-</p>
-<p>| OpenClaw | 8分钟 | 100% | 7.5 | 速度快但深度一般，主要依赖搜索引擎前几条结果 |
-</p>
-<p>| MuleRun | 15分钟 | 100% | 7.0 | 结果可读性好，但数据来源不够多样 |
-</p>
+<div class="table-container"><table><thead><tr><th>Agent</th><th>完成时间</th><th>成功率</th><th>得分</th><th>评价</th></tr></thead><tbody><tr><td><strong>Manus</strong></td><td>12分钟</td><td>100%</td><td><strong>9.2</strong></td><td>研究深度远超预期，翻阅了30+网页，来源标注清晰</td></tr><tr><td>OpenClaw</td><td>8分钟</td><td>100%</td><td>7.5</td><td>速度快但深度一般，主要依赖搜索引擎前几条结果</td></tr><tr><td>MuleRun</td><td>15分钟</td><td>100%</td><td>7.0</td><td>结果可读性好，但数据来源不够多样</td></tr></tbody></table></div>
 <p><strong>Manus在这个任务上碾压了另外两个。</strong> 它不只是搜了一下就总结，而是真的去翻了竞品的官网、看了用户评价论坛、甚至找到了几个行业报告的数据。最终生成的PDF报告，每个数据点都有标注来源链接，可以直接引用。
 </p>
 <p>OpenClaw速度快（8分钟），但它主要靠API调搜索引擎，拿到前几条结果就总结了。如果你只需要一个快速概览，OpenClaw够用。但如果你需要可引用的研究报告，Manus的质量明显更高。
@@ -193,16 +173,7 @@ var _hmt = _hmt || [];
 <h3>任务2：搭建Landing Page（Web开发）</h3>
 <p><strong>任务描述</strong>：为一个虚构的"AI效率工具"产品搭建一个Landing Page，要求包含Hero区域、功能介绍、定价表、用户评价、联系表单，响应式设计。
 </p>
-<p>| Agent | 完成时间 | 能直接用？ | 得分 | 评价 |
-</p>
-<p>|-------|---------|----------|------|------|
-</p>
-<p>| OpenClaw | 25分钟 | 基本可以 | <strong>7.8</strong> | HTML/CSS代码干净，结构合理，需要微调 |
-</p>
-<p>| Manus | 20分钟 | 差不多 | 7.0 | 功能齐全但UI设计粗糙，配色不协调 |
-</p>
-<p>| MuleRun | 30分钟 | 不太行 | 5.5 | 生成了代码但有多处Bug，表单提交功能不工作 |
-</p>
+<div class="table-container"><table><thead><tr><th>Agent</th><th>完成时间</th><th>能直接用？</th><th>得分</th><th>评价</th></tr></thead><tbody><tr><td>OpenClaw</td><td>25分钟</td><td>基本可以</td><td><strong>7.8</strong></td><td>HTML/CSS代码干净，结构合理，需要微调</td></tr><tr><td>Manus</td><td>20分钟</td><td>差不多</td><td>7.0</td><td>功能齐全但UI设计粗糙，配色不协调</td></tr><tr><td>MuleRun</td><td>30分钟</td><td>不太行</td><td>5.5</td><td>生成了代码但有多处Bug，表单提交功能不工作</td></tr></tbody></table></div>
 <p><strong>OpenClaw在这个任务上表现最好。</strong> 它生成的HTML/CSS代码结构清晰，CSS用了变量统一管理颜色和字体，响应式断点设置合理。我只需要把文案和配色改成自己的，就能直接上线。
 </p>
 <p>Manus生成的页面功能全（该有的模块都有），但设计感差——配色像2015年的网站，字体大小不统一，按钮样式不协调。它更适合"快速出原型"，不适合直接上线。
@@ -212,16 +183,7 @@ var _hmt = _hmt || [];
 <h3>任务3：Excel数据分析</h3>
 <p><strong>任务描述</strong>：给了一份包含200行销售数据的CSV文件，要求计算月度趋势、产品分类占比、TOP10客户、同比增长率，并生成可视化图表。
 </p>
-<p>| Agent | 完成时间 | 准确率 | 得分 | 评价 |
-</p>
-<p>|-------|---------|-------|------|------|
-</p>
-<p>| <strong>Manus</strong> | 5分钟 | 98% | <strong>9.0</strong> | 图表专业、数据准确，自动生成了PDF报告 |
-</p>
-<p>| MuleRun | 7分钟 | 95% | 7.5 | 速度不错，但同比计算有误差 |
-</p>
-<p>| OpenClaw | 10分钟 | 92% | 6.5 | 需要手动指定分析步骤，自动化程度低 |
-</p>
+<div class="table-container"><table><thead><tr><th>Agent</th><th>完成时间</th><th>准确率</th><th>得分</th><th>评价</th></tr></thead><tbody><tr><td><strong>Manus</strong></td><td>5分钟</td><td>98%</td><td><strong>9.0</strong></td><td>图表专业、数据准确，自动生成了PDF报告</td></tr><tr><td>MuleRun</td><td>7分钟</td><td>95%</td><td>7.5</td><td>速度不错，但同比计算有误差</td></tr><tr><td>OpenClaw</td><td>10分钟</td><td>92%</td><td>6.5</td><td>需要手动指定分析步骤，自动化程度低</td></tr></tbody></table></div>
 <p><strong>Manus再次夺冠。</strong> 直接上传CSV文件，5分钟内给出了4张图表（折线图、饼图、柱状图、热力图）加一份分析摘要。数据准确率98%（一个小数点误差），图表配色和标注都很专业。
 </p>
 <p>MuleRun的Use Case广场里有"数据分析"模板，一键调用很方便。但它的同比增长计算公式有误——用的是环比（和上个月比）而不是同比（和去年同月比）。这种错误你不仔细看很难发现。
@@ -231,16 +193,7 @@ var _hmt = _hmt || [];
 <h3>任务4：定时监控+通知（自动化运维）</h3>
 <p><strong>任务描述</strong>：每2小时检查一个网页的价格变化，如果价格低于某个阈值，通过微信通知我。
 </p>
-<p>| Agent | 是否支持 | 设置难度 | 运行稳定性 | 得分 |
-</p>
-<p>|-------|---------|---------|----------|------|
-</p>
-<p>| <strong>MuleRun</strong> | ✅ 原生支持 | 简单（图形界面） | 24h运行零中断 | <strong>8.5</strong> |
-</p>
-<p>| OpenClaw | ✅ 支持 | 中等（需写配置） | 稳定，但占本地资源 | 7.5 |
-</p>
-<p>| Manus | ❌ 不支持 | — | — | <strong>0</strong> |
-</p>
+<div class="table-container"><table><thead><tr><th>Agent</th><th>是否支持</th><th>设置难度</th><th>运行稳定性</th><th>得分</th></tr></thead><tbody><tr><td><strong>MuleRun</strong></td><td>✅ 原生支持</td><td>简单（图形界面）</td><td>24h运行零中断</td><td><strong>8.5</strong></td></tr><tr><td>OpenClaw</td><td>✅ 支持</td><td>中等（需写配置）</td><td>稳定，但占本地资源</td><td>7.5</td></tr><tr><td>Manus</td><td>❌ 不支持</td><td>—</td><td>—</td><td><strong>0</strong></td></tr></tbody></table></div>
 <p><strong>这是MuleRun的主场。</strong> Computer模式天然支持这种7×24小时持续运行的任务。图形界面设置定时规则和通知渠道，不需要写代码。我测了48小时，没有一次中断或漏报。
 </p>
 <p>OpenClaw也能做，但需要写一个技能脚本（YAML+Python），配置cron定时器，自己搞定消息推送。技术门槛高了不少。好处是一旦配好，跑在本地不依赖任何云服务，也不需要付费。
@@ -248,26 +201,7 @@ var _hmt = _hmt || [];
 <p><strong>Manus完全不支持这类任务。</strong> 它的设计是"来一个任务做一个"，没有持续运行和定时触发的概念。如果你需要7×24自动化，Manus不是你的工具。
 </p>
 <h2>综合得分对比</h2>
-<p>| 维度 | Manus | OpenClaw | MuleRun | 胜出 |
-</p>
-<p>|------|-------|----------|---------|------|
-</p>
-<p>| 深度研究 | <strong>9.2</strong> | 7.5 | 7.0 | Manus |
-</p>
-<p>| Web开发 | 7.0 | <strong>7.8</strong> | 5.5 | OpenClaw |
-</p>
-<p>| 数据分析 | <strong>9.0</strong> | 6.5 | 7.5 | Manus |
-</p>
-<p>| 自动化运维 | 0 | 7.5 | <strong>8.5</strong> | MuleRun |
-</p>
-<p>| <strong>总分</strong> | <strong>25.2</strong> | <strong>29.3</strong> | <strong>28.5</strong> | <strong>OpenClaw</strong> |
-</p>
-<p>| 上手难度 | 2/10 | 8/10 | 1/10 | MuleRun |
-</p>
-<p>| 数据隐私 | 4/10 | 10/10 | 3/10 | OpenClaw |
-</p>
-<p>| 价格 | 6/10 | 10/10 | 7/10 | OpenClaw |
-</p>
+<div class="table-container"><table><thead><tr><th>维度</th><th>Manus</th><th>OpenClaw</th><th>MuleRun</th><th>胜出</th></tr></thead><tbody><tr><td>深度研究</td><td><strong>9.2</strong></td><td>7.5</td><td>7.0</td><td>Manus</td></tr><tr><td>Web开发</td><td>7.0</td><td><strong>7.8</strong></td><td>5.5</td><td>OpenClaw</td></tr><tr><td>数据分析</td><td><strong>9.0</strong></td><td>6.5</td><td>7.5</td><td>Manus</td></tr><tr><td>自动化运维</td><td>0</td><td>7.5</td><td><strong>8.5</strong></td><td>MuleRun</td></tr><tr><td><strong>总分</strong></td><td><strong>25.2</strong></td><td><strong>29.3</strong></td><td><strong>28.5</strong></td><td><strong>OpenClaw</strong></td></tr><tr><td>上手难度</td><td>2/10</td><td>8/10</td><td>1/10</td><td>MuleRun</td></tr><tr><td>数据隐私</td><td>4/10</td><td>10/10</td><td>3/10</td><td>OpenClaw</td></tr><tr><td>价格</td><td>6/10</td><td>10/10</td><td>7/10</td><td>OpenClaw</td></tr></tbody></table></div>
 <p>总分看OpenClaw第一，但这个数字有误导性——OpenClaw的高分很大程度上是因为它能做Manus做不了的运维任务。如果你不看运维场景，Manus的总分最高。
 </p>
 <h2>每个产品的真实定位</h2>
@@ -335,20 +269,7 @@ var _hmt = _hmt || [];
 <h2>价格横向对比</h2>
 <p>把三款Agent的价格放在一起看：
 </p>
-<p>| 项目 | Manus | OpenClaw | MuleRun |
-</p>
-<p>|------|-------|----------|---------|
-</p>
-<p>| 工具费用 | $0/$19/$199 | 免费 | $0/$19.9 |
-</p>
-<p>| API费用 | 包含 | 自理（$5-20/月） | 包含 |
-</p>
-<p>| 邀请码 | 需要 | 不需要 | 不需要 |
-</p>
-<p>| 实际月费（中度使用） | $19-199 | $5-20 | $19.9 |
-</p>
-<p>| 实际月费（重度使用） | $199+ | $20-50 | $19.9 |
-</p>
+<div class="table-container"><table><thead><tr><th>项目</th><th>Manus</th><th>OpenClaw</th><th>MuleRun</th></tr></thead><tbody><tr><td>工具费用</td><td>$0/$19/$199</td><td>免费</td><td>$0/$19.9</td></tr><tr><td>API费用</td><td>包含</td><td>自理（$5-20/月）</td><td>包含</td></tr><tr><td>邀请码</td><td>需要</td><td>不需要</td><td>不需要</td></tr><tr><td>实际月费（中度使用）</td><td>$19-199</td><td>$5-20</td><td>$19.9</td></tr><tr><td>实际月费（重度使用）</td><td>$199+</td><td>$20-50</td><td>$19.9</td></tr></tbody></table></div>
 <p><strong>性价比排名：OpenClaw > MuleRun > Manus</strong>
 </p>
 <p>OpenClaw免费+低成本API，重度使用一个月$50封顶。Manus重度使用直接上$199/月。MuleRun固定$19.9/月最省心。

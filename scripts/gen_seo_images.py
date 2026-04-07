@@ -302,6 +302,9 @@ def make_article_infographic(article):
     category = article.get('category', 'AI工具')
     date = article.get('dateFull', '')
     content = article.get('content', '')
+    if not isinstance(content, str):
+        content = article.get('meta_description', article.get('description', ''))
+    if not content: content = ''
 
     # 从文章中提取表格数据
     tables = []
@@ -460,6 +463,9 @@ def make_article_og_image(article):
     category = article.get('category', 'AI工具')
     date = article.get('dateFull', '')
     content = article.get('content', '')
+    if not isinstance(content, str):
+        content = article.get('meta_description', article.get('description', ''))
+    if not content: content = ''
 
     # 标题拆分（主标题+副标题）
     short_title = title[:22] + ('...' if len(title) > 22 else '')

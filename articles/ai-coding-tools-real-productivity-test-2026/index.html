@@ -119,43 +119,13 @@ var _hmt = _hmt || [];
 <li>每天记录：编码时间、AI交互次数、引入bug数、修复bug数、代码审查通过率</li>
 </ul>
 <h2>四套测试方案</h2>
-<p>| 方案 | 工具 | 模型 | 月费 | 定位 |
-</p>
-<p>|------|------|------|------|------|
-</p>
-<p>| A | Cursor Pro | Claude Opus 4.6 | $20+超额 | 旗舰级，能花钱解决的都不叫事 |
-</p>
-<p>| B | Claude Code Pro | Claude Sonnet 4.6 | $20+超额 | Anthropic原生，终端党 |
-</p>
-<p>| C | Cline + DeepSeek V3.2 | DeepSeek V3.2 | ~$5（API） | 极致性价比 |
-</p>
-<p>| D | GitHub Copilot Pro | GPT-5.4 Pro | $10 | 主流选择 |
-</p>
+<div class="table-container"><table><thead><tr><th>方案</th><th>工具</th><th>模型</th><th>月费</th><th>定位</th></tr></thead><tbody><tr><td>A</td><td>Cursor Pro</td><td>Claude Opus 4.6</td><td>$20+超额</td><td>旗舰级，能花钱解决的都不叫事</td></tr><tr><td>B</td><td>Claude Code Pro</td><td>Claude Sonnet 4.6</td><td>$20+超额</td><td>Anthropic原生，终端党</td></tr><tr><td>C</td><td>Cline + DeepSeek V3.2</td><td>DeepSeek V3.2</td><td>~$5（API）</td><td>极致性价比</td></tr><tr><td>D</td><td>GitHub Copilot Pro</td><td>GPT-5.4 Pro</td><td>$10</td><td>主流选择</td></tr></tbody></table></div>
 <p>注意方案A和方案B的月费都写了"+超额"——这不是笔误。我测了才知道，$20只是"起步价"。
 </p>
 <h2>核心数据一：时间到底省了多少</h2>
 <p>12周下来，5个项目总共写了约12万行代码（含AI生成和手写），这是按任务类型拆分的时间数据：
 </p>
-<p>| 任务类型 | 不用AI（基线） | 方案A Cursor | 方案B Claude Code | 方案C Cline+DS | 方案D Copilot |
-</p>
-<p>|---------|--------------|-------------|----------------|-------------|-------------|
-</p>
-<p>| 增删改查/CRUD | 4.2h/周 | 1.1h/周 | 1.3h/周 | 1.5h/周 | 1.8h/周 |
-</p>
-<p>| API接口开发 | 6.1h/周 | 2.8h/周 | 3.0h/周 | 3.5h/周 | 3.2h/周 |
-</p>
-<p>| 单元测试 | 3.8h/周 | 0.9h/周 | 0.8h/周 | 1.4h/周 | 1.2h/周 |
-</p>
-<p>| 文档编写 | 2.0h/周 | 0.3h/周 | 0.4h/周 | 0.8h/周 | 0.5h/周 |
-</p>
-<p>| Bug修复 | 5.5h/周 | 4.1h/周 | 3.8h/周 | 4.5h/周 | 4.3h/周 |
-</p>
-<p>| 复杂重构 | 8.0h/周 | 4.5h/周 | 3.2h/周 | 6.8h/周 | 5.5h/周 |
-</p>
-<p>| <strong>周总计</strong> | <strong>29.6h</strong> | <strong>13.7h</strong> | <strong>12.5h</strong> | <strong>18.5h</strong> | <strong>16.5h</strong> |
-</p>
-<p>| <strong>节省比例</strong> | — | <strong>53.7%</strong> | <strong>57.8%</strong> | <strong>37.5%</strong> | <strong>44.3%</strong> |
-</p>
+<div class="table-container"><table><thead><tr><th>任务类型</th><th>不用AI（基线）</th><th>方案A Cursor</th><th>方案B Claude Code</th><th>方案C Cline+DS</th><th>方案D Copilot</th></tr></thead><tbody><tr><td>增删改查/CRUD</td><td>4.2h/周</td><td>1.1h/周</td><td>1.3h/周</td><td>1.5h/周</td><td>1.8h/周</td></tr><tr><td>API接口开发</td><td>6.1h/周</td><td>2.8h/周</td><td>3.0h/周</td><td>3.5h/周</td><td>3.2h/周</td></tr><tr><td>单元测试</td><td>3.8h/周</td><td>0.9h/周</td><td>0.8h/周</td><td>1.4h/周</td><td>1.2h/周</td></tr><tr><td>文档编写</td><td>2.0h/周</td><td>0.3h/周</td><td>0.4h/周</td><td>0.8h/周</td><td>0.5h/周</td></tr><tr><td>Bug修复</td><td>5.5h/周</td><td>4.1h/周</td><td>3.8h/周</td><td>4.5h/周</td><td>4.3h/周</td></tr><tr><td>复杂重构</td><td>8.0h/周</td><td>4.5h/周</td><td>3.2h/周</td><td>6.8h/周</td><td>5.5h/周</td></tr><tr><td><strong>周总计</strong></td><td><strong>29.6h</strong></td><td><strong>13.7h</strong></td><td><strong>12.5h</strong></td><td><strong>18.5h</strong></td><td><strong>16.5h</strong></td></tr><tr><td><strong>节省比例</strong></td><td>—</td><td><strong>53.7%</strong></td><td><strong>57.8%</strong></td><td><strong>37.5%</strong></td><td><strong>44.3%</strong></td></tr></tbody></table></div>
 <p>几个关键发现：
 </p>
 <p><strong>第一，AI在增删改查和写测试上是真的能省时间。</strong> CRUD从4.2小时降到1.1小时（方案A），写测试从3.8小时降到0.8小时（方案B）。这类任务规则明确、重复度高，AI天生擅长。Cursor在这个场景下的表现确实最好。
@@ -180,34 +150,17 @@ var _hmt = _hmt || [];
 <p>12周内，按方案统计的bug数据（单位：个）：
 </p>
 <p>| 方案 | AI引入的bug | AI修复的bug | 净bug数 | bug审查通过率 |
-</p>
-<p>|------|-----------|-----------|---------|-------------|
-</p>
-<p>| A Cursor | 47 | 31 | +16 | 71%
-</p>
-<p>| B Claude Code | 38 | 29 | +9 | 83%
-</p>
-<p>| C Cline+DS | 62 | 22 | +40 | 58%
-</p>
-<p>| D Copilot | 41 | 26 | +15 | 68% |
-</p>
-<p>| 不用AI（基线） | — | — | 基线0 | 100% |
+<br>|------|-----------|-----------|---------|-------------|
+<br>| A Cursor | 47 | 31 | +16 | 71%
+<br>| B Claude Code | 38 | 29 | +9 | 83%
+<br>| C Cline+DS | 62 | 22 | +40 | 58%
+<br>| D Copilot | 41 | 26 | +15 | 68% |
+<br>| 不用AI（基线） | — | — | 基线0 | 100% |
 </p>
 <p>是的，AI不是在帮你修bug，是在<strong>帮你制造新bug</strong>的同时顺手修了一些。净bug数全是正数——意味着用AI之后，你的项目比不用AI多出了额外的bug。
 </p>
 <h3>按bug严重程度拆分</h3>
-<p>| 严重程度 | 方案A | 方案B | 方案C | 方案D |
-</p>
-<p>|---------|-------|-------|-------|-------|
-</p>
-<p>| 致命（数据丢失/安全漏洞） | 1 | 0 | 2 | 1 |
-</p>
-<p>| 高（功能异常） | 5 | 3 | 8 | 4 |
-</p>
-<p>| 中（边界条件/异常处理） | 15 | 12 | 22 | 14 |
-</p>
-<p>| 低（格式/命名/规范） | 26 | 23 | 30 | 22 |
-</p>
+<div class="table-container"><table><thead><tr><th>严重程度</th><th>方案A</th><th>方案B</th><th>方案C</th><th>方案D</th></tr></thead><tbody><tr><td>致命（数据丢失/安全漏洞）</td><td>1</td><td>0</td><td>2</td><td>1</td></tr><tr><td>高（功能异常）</td><td>5</td><td>3</td><td>8</td><td>4</td></tr><tr><td>中（边界条件/异常处理）</td><td>15</td><td>12</td><td>22</td><td>14</td></tr><tr><td>低（格式/命名/规范）</td><td>26</td><td>23</td><td>30</td><td>22</td></tr></tbody></table></div>
 <p><strong>Cline+DeepSeek引入的bug最多（62个），致命bug有2个。</strong> 一个是DeepSeek在写ORM查询时忘了加WHERE条件，导致全表更新；另一个是生成的SQL注入漏洞。这两个bug如果上了生产环境，后果很严重。
 </p>
 <p>Claude Code虽然也引入了38个bug，但没有致命级别的。它的安全意识明显更强——在涉及数据库操作时，Claude Code会自动加参数化查询和事务检查。
@@ -228,61 +181,18 @@ var _hmt = _hmt || [];
 <p>这是整个测试里最让我意外的发现。
 </p>
 <h3>SWE-bench最新排行（2026年4月）</h3>
-<p>| 排名 | 模型 | SWE-bench Verified | SWE-bench Pro |
-</p>
-<p>|------|------|-------------------|--------------|
-</p>
-<p>| 1 | GPT-5.4 Pro | 86% | 57.7% |
-</p>
-<p>| 2 | GPT-5.4 | 84% | — |
-</p>
-<p>| 3 | Claude Opus 4.6 | 80.8% | ~45% |
-</p>
-<p>| 4 | GPT-5.2 | 80% | — |
-</p>
-<p>| 5 | Claude Sonnet 4.6 | 79.6% | — |
-</p>
-<p>| 6 | Claude Opus 4.5 | 80.9% | — |
-</p>
-<p>| 7 | Gemini 3.1 Pro | 75% | 54.2% |
-</p>
-<p>| 8 | GPT-5.1-Codex-Max | 77.9% | — |
-</p>
-<p>| 9 | Kimi K2.5 | 76.8% | — |
-</p>
-<p>| 10 | GPT-5.2-Codex | 76% | — |
-</p>
+<div class="table-container"><table><thead><tr><th>排名</th><th>模型</th><th>SWE-bench Verified</th><th>SWE-bench Pro</th></tr></thead><tbody><tr><td>1</td><td>GPT-5.4 Pro</td><td>86%</td><td>57.7%</td></tr><tr><td>2</td><td>GPT-5.4</td><td>84%</td><td>—</td></tr><tr><td>3</td><td>Claude Opus 4.6</td><td>80.8%</td><td>~45%</td></tr><tr><td>4</td><td>GPT-5.2</td><td>80%</td><td>—</td></tr><tr><td>5</td><td>Claude Sonnet 4.6</td><td>79.6%</td><td>—</td></tr><tr><td>6</td><td>Claude Opus 4.5</td><td>80.9%</td><td>—</td></tr><tr><td>7</td><td>Gemini 3.1 Pro</td><td>75%</td><td>54.2%</td></tr><tr><td>8</td><td>GPT-5.1-Codex-Max</td><td>77.9%</td><td>—</td></tr><tr><td>9</td><td>Kimi K2.5</td><td>76.8%</td><td>—</td></tr><tr><td>10</td><td>GPT-5.2-Codex</td><td>76%</td><td>—</td></tr></tbody></table></div>
 <p>GPT-5.4 Pro在SWE-bench Verified上86%分，遥遥领先。按理说它在真实项目里应该最强。但实际上——
 </p>
 <h3>真实项目表现 vs SWE-bench排名</h3>
-<p>| 模型（工具） | SWE-bench Verified | 真实项目节省时间 | 真实项目bug率 | 综合评价 |
-</p>
-<p>|-------------|-------------------|---------------|------------|---------|
-</p>
-<p>| Claude Sonnet 4.6（Claude Code） | 79.6% | <strong>57.8%</strong> | <strong>中等（38个）</strong> | <strong>最佳综合表现</strong> |
-</p>
-<p>| Claude Opus 4.6（Cursor） | 80.8% | 53.7% | 较高（47个） | 速度快但bug多 |
-</p>
-<p>| DeepSeek V3.2（Cline） | ~39%（估计） | 37.5% | <strong>最高（62个）</strong> | 性价比高但质量差 |
-</p>
-<p>| GPT-5.4 Pro（Copilot） | 86% | 44.3% | 中等（41个） | <strong>最大反差：分数最高但表现平庸</strong> |
-</p>
+<div class="table-container"><table><thead><tr><th>模型（工具）</th><th>SWE-bench Verified</th><th>真实项目节省时间</th><th>真实项目bug率</th><th>综合评价</th></tr></thead><tbody><tr><td>Claude Sonnet 4.6（Claude Code）</td><td>79.6%</td><td><strong>57.8%</strong></td><td><strong>中等（38个）</strong></td><td><strong>最佳综合表现</strong></td></tr><tr><td>Claude Opus 4.6（Cursor）</td><td>80.8%</td><td>53.7%</td><td>较高（47个）</td><td>速度快但bug多</td></tr><tr><td>DeepSeek V3.2（Cline）</td><td>~39%（估计）</td><td>37.5%</td><td><strong>最高（62个）</strong></td><td>性价比高但质量差</td></tr><tr><td>GPT-5.4 Pro（Copilot）</td><td>86%</td><td>44.3%</td><td>中等（41个）</td><td><strong>最大反差：分数最高但表现平庸</strong></td></tr></tbody></table></div>
 <p>GPT-5.4 Pro拿到了86%的SWE-bench高分，但在真实项目里，节省时间排倒数第二，bug率也偏高。
 </p>
 <p><strong>原因分析：</strong> SWE-bench测试的是"给定一个GitHub issue，让AI在代码库里找到并修复对应的bug"。这是一个<strong>明确的、有上下文的、范围清晰的</strong>任务。而真实项目里的工作远比这复杂——模糊的需求、跨模块的依赖、没有文档的遗留代码、需要理解业务背景的决策。GPT-5.4 Pro在结构化任务上很强，但在模糊任务上不如Claude。
 </p>
 <p>还有一个数据很能说明问题：
 </p>
-<p>| 基准测试 | GPT-5.4 Pro | Claude Opus 4.6 |
-</p>
-<p>|---------|-----------|----------------|
-</p>
-<p>| SWE-bench Verified（修bug） | 86% | 80.8% |
-</p>
-<p>| Terminal-Bench 2.0（Agent自主执行） | 75.1% | 65.4% |
-</p>
-<p>| ARC-AGI-2（抽象推理） | 52.9% | 68.8% |
-</p>
+<div class="table-container"><table><thead><tr><th>基准测试</th><th>GPT-5.4 Pro</th><th>Claude Opus 4.6</th></tr></thead><tbody><tr><td>SWE-bench Verified（修bug）</td><td>86%</td><td>80.8%</td></tr><tr><td>Terminal-Bench 2.0（Agent自主执行）</td><td>75.1%</td><td>65.4%</td></tr><tr><td>ARC-AGI-2（抽象推理）</td><td>52.9%</td><td>68.8%</td></tr></tbody></table></div>
 <p>GPT在"修已知bug"上碾压Claude，但Claude在"抽象推理"上反过来碾压GPT。真实项目需要的是后者——理解业务逻辑、判断架构取舍、在模糊信息下做决策。
 </p>
 <p><strong>如果你只看SWE-bench选工具，你很可能选到最适合做竞赛题的模型，而不是最适合日常开发的模型。</strong>
@@ -290,18 +200,7 @@ var _hmt = _hmt || [];
 <h2>核心数据四：真正的成本</h2>
 <p>4套方案12周的实际花费：
 </p>
-<p>| 方案 | 工具月费 | 12周超额API费 | 总花费 | 每小时成本（基于节省时间） |
-</p>
-<p>|------|---------|-------------|-------|----------------|
-</p>
-<p>| A Cursor | $60（3个月） | $127 | <strong>$187</strong> | $0.23/h |
-</p>
-<p>| B Claude Code | $60 | $89 | <strong>$149</strong> | $0.18/h |
-</p>
-<p>| C Cline+DS | $0 | $31 | <strong>$31</strong> | $0.06/h |
-</p>
-<p>| D Copilot | $30（3个月） | $0（固定月费） | <strong>$30</strong> | $0.07/h |
-</p>
+<div class="table-container"><table><thead><tr><th>方案</th><th>工具月费</th><th>12周超额API费</th><th>总花费</th><th>每小时成本（基于节省时间）</th></tr></thead><tbody><tr><td>A Cursor</td><td>$60（3个月）</td><td>$127</td><td><strong>$187</strong></td><td>$0.23/h</td></tr><tr><td>B Claude Code</td><td>$60</td><td>$89</td><td><strong>$149</strong></td><td>$0.18/h</td></tr><tr><td>C Cline+DS</td><td>$0</td><td>$31</td><td><strong>$31</strong></td><td>$0.06/h</td></tr><tr><td>D Copilot</td><td>$30（3个月）</td><td>$0（固定月费）</td><td><strong>$30</strong></td><td>$0.07/h</td></tr></tbody></table></div>
 <p>Cursor的总花费最高（$187），因为超额费用最狠。Claude Code虽然也超，但它的Agent模式效率更高，实际消耗的token更少。
 </p>
 <p>Cline+DeepSeek和Copilot的总花费几乎一样（$31 vs $30），但Cline省的时间更少。<strong>按"每小时节省成本"算，Copilot反而是性价比最高的（$0.07/h）。</strong>
@@ -345,18 +244,7 @@ var _hmt = _hmt || [];
 <p>我的5个项目里有一个是接手别人的遗留代码（没有文档、没有注释、变量命名像密码）。4套方案在这个项目上的表现都一塌糊涂——AI无法理解没有语义信息的代码，给出的重构建议基本是"把变量名改成有意义的名字"这种废话。<strong>AI擅长写新代码，不擅长读旧代码。</strong>
 </p>
 <h2>最终推荐（基于3个月真实数据）</h2>
-<p>| 你是什么情况 | 推荐 | 理由 |
-</p>
-<p>|-------------|------|------|
-</p>
-<p>| 追求综合效率（时间+质量） | Claude Code Pro $20/月 | 省时间最多（57.8%），bug最少（38个），重构最强 |
-</p>
-<p>| 追求性价比 | Copilot Pro $10/月 | 每小时成本$0.07最低，集成最广，省心 |
-</p>
-<p>| 预算极低 | Cline + DeepSeek | 月费$5以内，简单任务够用，但必须严格审查 |
-</p>
-<p>| 全能型（不差钱） | Cursor Pro + Claude Code | Cursor做日常编码，Claude Code做复杂重构 |
-</p>
+<div class="table-container"><table><thead><tr><th>你是什么情况</th><th>推荐</th><th>理由</th></tr></thead><tbody><tr><td>追求综合效率（时间+质量）</td><td>Claude Code Pro $20/月</td><td>省时间最多（57.8%），bug最少（38个），重构最强</td></tr><tr><td>追求性价比</td><td>Copilot Pro $10/月</td><td>每小时成本$0.07最低，集成最广，省心</td></tr><tr><td>预算极低</td><td>Cline + DeepSeek</td><td>月费$5以内，简单任务够用，但必须严格审查</td></tr><tr><td>全能型（不差钱）</td><td>Cursor Pro + Claude Code</td><td>Cursor做日常编码，Claude Code做复杂重构</td></tr></tbody></table></div>
 <p>注意我没有推荐"只用一个工具"。3个月的实测告诉我，<strong>没有任何一个工具在所有场景下都是最优的</strong>。最实用的方案是组合使用：
 </p>
 <ul><li>80%的日常编码 → <a href="https://www.aitoolbox.hk/tools/cursor/index.html" target="_blank" rel="noopener">Cursor</a>（Tab补全最快）</li>

@@ -286,16 +286,12 @@ def markdown_to_html(md):
     # 统一换行符
     html = md.replace('\r\n', '\n')
     
-    # 确保表格和标题前后有换行符，方便正则匹配
-    html = re.sub(r'([^\n])\n\|', r'\1\n\n|', html)
-    
     # 代码块
     html = re.sub(r'```(\w*)\n([\s\S]*?)```', lambda m: '<pre><code>' + m.group(2).replace('&','&amp;').replace('<','&lt;').replace('>','&gt;') + '</code></pre>', html)
     
-    # 表格 (改进正则，支持无前导换行的情况)
+    # 表格 (改进正则，不吃掉前导换行)
     def table_replace(m):
         header = m.group(1)
-        sep = m.group(2)
         body = m.group(3)
         headers = [c.strip() for c in header.split('|') if c.strip()]
         rows = body.strip().split('\n')
@@ -310,11 +306,11 @@ def markdown_to_html(md):
             for c in cells:
                 table += f'<td>{c}</td>'
             table += '</tr>'
-        table += '</tbody></table></div>'
+        table += '</tbody></table></div>\n'
         return table
-    html = re.sub(r'(?:^|\n)(\|.+\|)\n(\|[-:| ]+\|)\n((?:\|.+\|(?:$|\n))+)', table_replace, html)
+    html = re.sub(r'(\|.+\|)\n(\|[\s\-\:| ]+\|)\n((?:\|.+\|(?:$|\n))+)', table_replace, html)
     
-    # 标题 (增加 # H1 支持)
+    # 标题
     html = re.sub(r'^### (.+)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
     html = re.sub(r'^## (.+)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
     html = re.sub(r'^# (.+)$', r'<h1>\1</h1>', html, flags=re.MULTILINE)
@@ -336,9 +332,6 @@ def markdown_to_html(md):
     html = re.sub(r'^(\d+)\. (.+)$', r'<li>\2</li>', html, flags=re.MULTILINE)
     html = re.sub(r'((?:<li>.*?</li>\n?)+)', r'<ul>\1</ul>', html)
     
-    # 分隔线
-    html = html.replace('\n---\n', '\n<hr>\n')
-    
     # 段落
     lines = html.split('\n')
     result = []
@@ -353,11 +346,11 @@ def markdown_to_html(md):
             
         is_tag = (stripped.startswith('<h') or stripped.startswith('<ul') or 
                   stripped.startswith('</ul') or stripped.startswith('<li') or 
-                  stripped.startswith('<table') or stripped.startswith('</table') or 
-                  stripped.startswith('<div') or stripped.startswith('</div') or 
-                  stripped.startswith('<pre') or stripped.startswith('</pre') or 
-                  stripped.startswith('<blockquote') or stripped.startswith('</blockquote') or 
-                  stripped.startswith('<hr'))
+                  stripped.startswith('</li') or stripped.startswith('<table') or 
+                  stripped.startswith('</table') or stripped.startswith('<div') or 
+                  stripped.startswith('</div') or stripped.startswith('<pre') or 
+                  stripped.startswith('</pre') or stripped.startswith('<blockquote') or 
+                  stripped.startswith('</blockquote') or stripped.startswith('<hr'))
         
         if is_tag:
             if in_p:
@@ -444,6 +437,29 @@ def build_tool_page(tool, all_tools, all_articles=None):
     cons_html = ''.join([f'<li>{escape_html(c)}</li>' for c in tool.get('cons', [])])
     features_html = ''.join([f'<li>{escape_html(f)}</li>' for f in tool.get('features', [])])
 
+    # FAQ Section
+    faq_section = ''
+    faq_schema_list = []
+    tool_faq = tool.get('faq', [])
+    if tool_faq:
+        faq_html = ''
+        for fi in tool_faq:
+            q, a = fi.get('question', ''), fi.get('answer', '')
+            if q and a:
+                faq_html += f'<div class="faq-item"><details><summary>{escape_html(q)}</summary><div class="faq-answer">{markdown_to_html(a)}</div></details></div>'
+                faq_schema_list.append({'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}})
+        if faq_html:
+            faq_section = f'<div class="faq-section"><h2>❓ {_t("tool_features")}</h2>{faq_html}</div>'
+
+    faq_page_schema = ''
+    if faq_schema_list:
+        faq_sd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema_list}
+        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
+
+    # Main Content
+    content_md = tool.get('content', '')
+    content_html = markdown_to_html(content_md)
+
     html = f'<!DOCTYPE html>\n<html lang="{lang}">\n<head>\n' \
            f'    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' \
            f'    <title>{escape_html(tool["name"])}{_t("meta_review_suffix")} - {_t("header_title")}</title>\n' \
@@ -455,6 +471,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
            f'    <link rel="stylesheet" href="/css/style.css">\n' \
            f'    <script type="application/ld+json">{json.dumps(breadcrumb_data)}</script>\n' \
            f'    <script type="application/ld+json">{json.dumps(software_data)}</script>\n' \
+           f'{faq_page_schema}\n' \
            f'{BAIDU_TONGJI}\n</head>\n<body>\n    {global_nav}\n' \
            f'    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">\n' \
            f'        <a href="/">{_t("breadcrumb_home")}</a> &gt; <a href="/category/{cat_slug}/">{escape_html(cat_i18n)}</a> &gt; <span>{escape_html(tool["name"])}</span>\n' \
@@ -481,6 +498,10 @@ def build_tool_page(tool, all_tools, all_articles=None):
            f'                <div class="pros-box"><h2>{_t("tool_pros")}</h2><ul>{pros_html}</ul></div>\n' \
            f'                <div class="cons-box"><h2>{_t("tool_cons")}</h2><ul>{cons_html}</ul></div>\n' \
            f'            </div>\n' \
+           f'            <div class="article-body">\n' \
+           f'                {content_html}\n' \
+           f'            </div>\n' \
+           f'            {faq_section}\n' \
            f'        </div>\n' \
            f'        {related_html}\n        {related_articles_html}\n' \
            f'    </main>\n\n    {get_footer_html(lang)}\n    {get_back_to_top_html(lang)}\n' \
@@ -1774,8 +1795,6 @@ def build_live_page(live_data, page_config, all_tools, articles):
     构建 live dashboard 的子页面。
     type: dashboard | matrix | trend | heatmap | battle
     """
-    lang = live_data.get('lang', 'zh-CN')
-
     from datetime import datetime as _ldt
 
     page_type = page_config.get('type', 'dashboard')
@@ -1807,45 +1826,49 @@ def build_live_page(live_data, page_config, all_tools, articles):
     nav_tabs = _live_nav_tabs(page_slug)
 
     # Build HTML parts
-    header_nav = '<header class="header">\n        <div class="header-inner">\n            <a href="/" style="text-decoration:none;"><h1>🛠️ {_t("header_title")} <span>{_t("header_subtitle")}</span></h1></a>\n        </div>\n    </header>'
+    header_nav = get_header_html(lang)
     page_icon = '<span class="tool-icon-lg">' + icon_emoji + '</span>'
     h1_tag = '<h1>' + escape_html(page_title) + '</h1>'
     subtitle = '<p class="subtitle">' + escape_html(meta_desc) + '</p>'
-    update_info = '<div class="last-update">📅 数据更新：' + escape_html(last_updated) + '</div>'
-    methodology = '<div class="methodology-note"><strong>数据说明：</strong>本面板数据由AIToolBox团队每日自动更新聚合，来源包括工具官方信息、公开搜索热度、用户评价等。所有数据仅供参考，具体选择请以各工具官方页面为准。</div>'
-    footer = '<footer class="footer"><p>&copy; 2026 AI工具宝箱 · 每日精选优质AI工具 · 更新于 ' + _ldt.now().strftime('%Y-%m-%d %H:%M') + '</p></footer>'
+    update_info = '<div class="last-update">📅 ' + _t("last_updated") + '：' + escape_html(last_updated) + '</div>'
+    methodology = '<div class="methodology-note"><strong>' + _t("tool_features") + '：</strong>本面板数据由AIToolBox团队每日自动更新聚合，来源包括工具官方信息、公开搜索热度、用户评价等。所有数据仅供参考，具体选择请以各工具官方页面为准。</div>'
+    footer = get_footer_html(lang)
 
     html = (
-        '<!DOCTYPE html>\n<html lang="{lang}">\n<head>\n'
+        f'<!DOCTYPE html>\n<html lang="{lang}">\n<head>\n'
         '    <meta charset="UTF-8">\n'
         '    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
-        '    <title>' + escape_html(page_title) + ' - AI工具宝箱</title>\n'
+        '    <title>' + escape_html(page_title) + ' - ' + _t("header_title") + '</title>\n'
         '    <meta name="description" content="' + escape_html(meta_desc) + '">\n'
-        '    <meta name="keywords" content="' + ','.join(keywords) + ',AI工具宝箱,aitoolbox.hk">\n'
+        '    <meta name="keywords" content="' + ','.join(keywords) + ',' + _t("header_title") + ',aitoolbox.hk">\n'
         '    <link rel="canonical" href="https://www.aitoolbox.hk/live/' + page_slug + '/">\n'
         '    <meta property="og:type" content="website">\n'
-        '    <meta property="og:title" content="' + escape_html(page_title) + ' - AI工具宝箱">\n'
+        '    <meta property="og:title" content="' + escape_html(page_title) + ' - ' + _t("header_title") + '">\n'
         '    <meta property="og:description" content="' + escape_html(meta_desc) + '">\n'
         '    <meta property="og:url" content="https://www.aitoolbox.hk/live/' + page_slug + '/">\n'
         '    <link rel="stylesheet" href="/css/style.css">\n'
-        '</head>\n<body>\n'
-        + header_nav + '\n\n    ' + nav_tabs + '\n\n'
-        '    <main class="container main-content">\n'
-        '        <div class="page-header">\n            '
-        + page_icon + '\n            '
-        + h1_tag + '\n            '
-        + subtitle + '\n            '
-        + update_info + '\n'
-        '        </div>\n\n        '
-        + section_html + '\n\n        '
-        + methodology + '\n'
-        '    </main>\n\n    '
-        + footer + '\n'
-        + get_back_to_top_html(lang) + '\n'
+        '    <link rel="stylesheet" href="/css/live.css">\n'
+        + BAIDU_TONGJI + '\n</head>\n'
+        '<body>\n'
+        '    ' + header_nav + '\n'
+        '    <div class="container live-container">\n'
+        '        <div class="live-header">\n'
+        '            ' + page_icon + '\n'
+        '            <div class="live-title-box">\n'
+        '                ' + h1_tag + '\n'
+        '                ' + subtitle + '\n'
+        '            </div>\n'
+        '            ' + update_info + '\n'
+        '        </div>\n'
+        '        ' + nav_tabs + '\n'
+        '        ' + section_html + '\n'
+        '        ' + methodology + '\n'
+        '    </div>\n'
+        '    ' + footer + '\n'
+        '    ' + get_back_to_top_html(lang) + '\n'
         '</body>\n</html>'
     )
     return html
-
 
 def _live_nav_tabs(active_slug):
     tabs = [

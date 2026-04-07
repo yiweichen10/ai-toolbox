@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "\u9996\u9875", "item": "https://www.aitoolbox.hk/"}, {"@type": "ListItem", "position": 2, "name": "AI\u7ed8\u753b", "item": "https://www.aitoolbox.hk/category/ai-painting/"}, {"@type": "ListItem", "position": 3, "name": "Stable Diffusion", "item": "https://www.aitoolbox.hk/tools/stable-diffusion/"}]}</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Stable Diffusion", "applicationCategory": "UtilitiesApplication", "operatingSystem": "\u672c\u5730\u90e8\u7f72 / Web", "description": "\u5f00\u6e90AI\u7ed8\u753b\u6a21\u578b\uff0c\u53ef\u672c\u5730\u90e8\u7f72\u514d\u8d39\u4f7f\u7528\u3002\u793e\u533a\u6d3b\u8dc3\uff0c\u6a21\u578b\u548cLoRA\u8d44\u6e90\u4e30\u5bcc\uff0c\u81ea\u5b9a\u4e49\u80fd\u529b\u6781\u5f3a\u3002", "datePublished": "2026-04-08", "dateModified": "2026-04-08", "offers": {"@type": "Offer", "price": "\u5b8c\u5168\u514d\u8d39\uff08\u9700GPU\uff09", "priceCurrency": "USD"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.5", "ratingCount": "9.1\u4e07"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Stable Diffusion免费吗？需要什么配置？", "acceptedAnswer": {"@type": "Answer", "text": "Stable Diffusion完全开源免费。但需要一定的硬件配置：至少需要NVIDIA显卡8GB显存（推荐12GB+）。没有好显卡的话，可以使用云端部署服务（如商汤的SenseNova等），按量付费。"}}, {"@type": "Question", "name": "Stable Diffusion和Midjourney哪个好？", "acceptedAnswer": {"@type": "Answer", "text": "Stable Diffusion免费开源、可本地部署、自定义性强（海量模型和LoRA），但需要技术能力和好显卡。Midjourney付费但使用简单、画质顶级、开箱即用。技术用户选SD，追求效率选MJ。"}}, {"@type": "Question", "name": "Stable Diffusion怎么上手？", "acceptedAnswer": {"@type": "Answer", "text": "推荐使用WebUI（如AUTOMATIC1111）或ComfyUI作为界面。新手可以先在云端平台（如Google Colab免费GPU）体验，再考虑本地部署。社区有大量教程和预设模型可以学习使用。"}}, {"@type": "Question", "name": "如何用Stable Diffusion生成高质量图片？", "acceptedAnswer": {"@type": "Answer", "text": "关键词是核心。基础公式：主体描述 + 风格 + 光线 + 画质。比如：'1girl, long hair, sunset beach, cinematic lighting, highly detailed, 8k'。另外要学会用Negative prompt（反向关键词）排除不想要的内容，比如：'low quality, blurry, distorted face'。"}}]}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -64,6 +65,76 @@ var _hmt = _hmt || [];
                 <div class="pros-box"><h2>✅ 优点</h2><ul><li>完全免费无限制</li><li>高度可定制</li><li>社区活跃资源多</li><li>ControlNet强大</li><li>隐私安全本地运行</li></ul></div>
                 <div class="cons-box"><h2>❌ 缺点</h2><ul><li>需GPU硬件要求</li><li>上手门槛较高</li><li>需要调参学习</li><li>出图速度取决于硬件</li></ul></div>
             </div>
+            <div class="article-body">
+                <h2>Stable Diffusion 是什么？</h2>
+<p>Stable Diffusion是开源的AI绘画模型，可以完全免费地在本地部署使用。与其他AI绘画工具不同，SD的高度可定制性是其最大优势——通过ControlNet、LoRA等技术，可以实现精确的图像控制。
+</p>
+<p>SD拥有最活跃的社区，海量的模型和LoRA资源可以免费获取使用。
+</p>
+<h2>核心功能</h2>
+<ul><li><strong>文生图</strong>：通过Prompt生成图片</li>
+<li><strong>图生图</strong>：基于参考图生成新图片</li>
+<li><strong>Inpainting</strong>：局部修改图片特定区域</li>
+<li><strong>ControlNet</strong>：精确控制图片构图、姿态、深度等</li>
+<li><strong>LoRA训练</strong>：训练自定义风格模型</li>
+<li><strong>SDXL Turbo</strong>：实时生成，几秒出图</li>
+</ul>
+<h2>硬件要求</h2>
+<div class="table-container"><table><thead><tr><th>配置</th><th>最低要求</th><th>推荐配置</th></tr></thead><tbody><tr><td>显卡</td><td>6GB VRAM</td><td>12GB+ VRAM</td></tr><tr><td>内存</td><td>16GB</td><td>32GB</td></tr><tr><td>硬盘</td><td>10GB</td><td>50GB SSD</td></tr><tr><td>推荐</td><td>RTX 3060</td><td>RTX 4070+</td></tr></tbody></table></div>
+<h2>优缺点分析</h2>
+<h3>👍 优点</h3>
+<ul><li>完全免费，无使用次数和功能限制</li>
+<li>高度可定制，ControlNet+LoRA实现精确控制</li>
+<li>社区活跃，Civitai等平台有海量模型资源</li>
+<li>本地运行，隐私安全</li>
+<li>支持NSFW内容生成（可选）</li>
+</ul>
+<h3>👎 缺点</h3>
+<ul><li>需要GPU硬件，入门门槛高</li>
+<li>上手需要学习Prompt编写和参数调优</li>
+<li>出图速度取决于硬件配置</li>
+<li>安装配置相对复杂</li>
+</ul>
+<h2>使用技巧</h2>
+<ul><li><strong>WebUI选择</strong>：推荐ComfyUI（节点式）或Automatic1111（经典）。</li>
+<li><strong>模型选择</strong>：写实类用Juggernaut XL，动漫类用Anything V5。</li>
+<li><strong>ControlNet</strong>：配合Canny、OpenPose实现精确控制。</li>
+<li><strong>LoRA</strong>：在Civitai上找高质量LoRA提升特定风格。</li>
+<li><strong>参数调优</strong>：推荐参数：Steps 20-30, CFG Scale 7-9, Sampler DPM++。</li>
+</ul>
+<h2>适合人群</h2>
+<p>Stable Diffusion适合技术爱好者和追求自定义能力的创作者。如果你有 decent GPU，愿意花时间学习，SD是最强大且免费的AI绘画方案。
+</p>
+<h3>深度评测</h3>
+<p>Stable Diffusion 在 AI 绘画领域占有一席之地。经过多轮测试，它在 创意和多样性 方面表现突出。
+</p>
+<p>与 Midjourney 和 Stable Diffusion 相比，Stable Diffusion 的 独特功能。生成的图片风格多样，适合多种设计场景。
+</p>
+<h3>使用技巧</h3>
+<ul><li>提示词要具体，包含主体、风格、光线、构图等要素</li>
+<li>利用 参数调节 获得更好的效果</li>
+</ul>3. 
+<ul><li>善用负面提示词排除不想要的元素</li>
+</ul>
+<h3>总结</h3>
+<p>Stable Diffusion 是 AI绘画 领域中一款不错的 AI 工具。开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。 从功能完整性来看，它覆盖了核心使用场景。
+</p>
+<p><strong>快速上手建议：</strong>
+</p>
+<ul><li>访问官网 stability.ai 注册账号</li>
+<li>先使用免费版本 了解核心功能</li>
+<li>参考官方文档和教程加速学习</li>
+<li>加入用户社区获取使用技巧和最佳实践</li>
+</ul>
+<p><strong>价格参考：</strong> 完全免费（需GPU）
+<br><strong>支持平台：</strong> 本地部署 / Web
+</p>
+            </div>
+            <div class="faq-section"><h2>❓ 核心功能</h2><div class="faq-item"><details><summary>Stable Diffusion免费吗？需要什么配置？</summary><div class="faq-answer"><p>Stable Diffusion完全开源免费。但需要一定的硬件配置：至少需要NVIDIA显卡8GB显存（推荐12GB+）。没有好显卡的话，可以使用云端部署服务（如商汤的SenseNova等），按量付费。
+</p></div></details></div><div class="faq-item"><details><summary>Stable Diffusion和Midjourney哪个好？</summary><div class="faq-answer"><p>Stable Diffusion免费开源、可本地部署、自定义性强（海量模型和LoRA），但需要技术能力和好显卡。Midjourney付费但使用简单、画质顶级、开箱即用。技术用户选SD，追求效率选MJ。
+</p></div></details></div><div class="faq-item"><details><summary>Stable Diffusion怎么上手？</summary><div class="faq-answer"><p>推荐使用WebUI（如AUTOMATIC1111）或ComfyUI作为界面。新手可以先在云端平台（如Google Colab免费GPU）体验，再考虑本地部署。社区有大量教程和预设模型可以学习使用。
+</p></div></details></div><div class="faq-item"><details><summary>如何用Stable Diffusion生成高质量图片？</summary><div class="faq-answer"><p>关键词是核心。基础公式：主体描述 + 风格 + 光线 + 画质。比如：'1girl, long hair, sunset beach, cinematic lighting, highly detailed, 8k'。另外要学会用Negative prompt（反向关键词）排除不想要的内容，比如：'low quality, blurry, distorted face'。
+</p></div></details></div></div>
         </div>
         <div class="related-tools"><h2>🔧 相关工具</h2><div class="related-grid"><a href="/tools/midjourney/index.html" class="related-card"><div style="font-size:24px;margin-bottom:8px;">🎨</div><div style="font-weight:600;">Midjourney</div><div style="font-size:13px;color:#666;">AI绘画</div></a><a href="/tools/dall-e-3/index.html" class="related-card"><div style="font-size:24px;margin-bottom:8px;">🎨</div><div style="font-weight:600;">DALL-E 3</div><div style="font-size:13px;color:#666;">AI绘画</div></a><a href="/tools/adobe-firefly/index.html" class="related-card"><div style="font-size:24px;margin-bottom:8px;">🎨</div><div style="font-weight:600;">Adobe Firefly</div><div style="font-size:13px;color:#666;">AI绘画</div></a><a href="/tools/ideogram/index.html" class="related-card"><div style="font-size:24px;margin-bottom:8px;">🎨</div><div style="font-weight:600;">Ideogram</div><div style="font-size:13px;color:#666;">AI绘画</div></a><a href="/tools/leonardo-ai/index.html" class="related-card"><div style="font-size:24px;margin-bottom:8px;">🎨</div><div style="font-weight:600;">Leonardo AI</div><div style="font-size:13px;color:#666;">AI绘画</div></a></div></div>
         <div class="related-tools"><h2>📖 相关文章</h2><div class="related-grid"><a href="/articles/ai-image-generation-tools-test-2026/index.html" class="related-card"><div style="font-weight:600;margin-bottom:4px;">我用6款AI画图工具各画了100张图：Midjourney不是最贵的但最值得，可灵是免费天花板</div><div style="font-size:13px;color:#666;">2026年4月6日</div></a><a href="/articles/ai-painting-guide/index.html" class="related-card"><div style="font-weight:600;margin-bottom:4px;">AI绘画入门指南：从零开始学会AI绘画</div><div style="font-size:13px;color:#666;">2026年3月20日</div></a><a href="/articles/how-to-use-midjourney-2026/index.html" class="related-card"><div style="font-weight:600;margin-bottom:4px;">如何注册和使用Midjourney：从零开始的完整教程（2026版）</div><div style="font-size:13px;color:#666;"></div></a></div></div>

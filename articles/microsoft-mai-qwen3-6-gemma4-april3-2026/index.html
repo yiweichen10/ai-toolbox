@@ -109,16 +109,7 @@ var _hmt = _hmt || [];
 </p>
 <h2>事件一：微软MAI三件套——"OpenAI的好盟友，好对手"</h2>
 <h3>三款模型覆盖企业AI三大刚需</h3>
-<p>| 模型 | 功能 | 核心性能数据 | 价格 |
-</p>
-<p>|------|------|------------|------|
-</p>
-<p>| MAI-Transcribe-1 | 语音转录 | 25种语言，WER 3.9%，11种核心语言FLEURS第一 | $0.36/小时 |
-</p>
-<p>| MAI-Voice-1 | 语音生成 | 1秒生成60秒音频，单GPU运行 | $22/百万字符 |
-</p>
-<p>| MAI-Image-2 | 文生图 | Arena.ai文生图排行榜第3，WPP已商用 | $5/百万token（文本输入） |
-</p>
+<div class="table-container"><table><thead><tr><th>模型</th><th>功能</th><th>核心性能数据</th><th>价格</th></tr></thead><tbody><tr><td>MAI-Transcribe-1</td><td>语音转录</td><td>25种语言，WER 3.9%，11种核心语言FLEURS第一</td><td>$0.36/小时</td></tr><tr><td>MAI-Voice-1</td><td>语音生成</td><td>1秒生成60秒音频，单GPU运行</td><td>$22/百万字符</td></tr><tr><td>MAI-Image-2</td><td>文生图</td><td>Arena.ai文生图排行榜第3，WPP已商用</td><td>$5/百万token（文本输入）</td></tr></tbody></table></div>
 <h3>MAI-Transcribe-1值得单独说</h3>
 <p>这是今天三件事里最容易被忽略但实际影响最大的一个模型。
 </p>
@@ -126,16 +117,7 @@ var _hmt = _hmt || [];
 </p>
 <p>微软这次的数据很能打：
 </p>
-<p>| 对比项 | MAI-Transcribe-1 | Whisper-large-v3 | Gemini 3.1 Flash |
-</p>
-<p>|--------|-----------------|-----------------|-------------------|
-</p>
-<p>| FLEURS核心语言 | <strong>11种第一</strong> | 低于MAI | 14种中11种低于MAI |
-</p>
-<p>| GPU成本 | <strong>降低50%</strong> | 基准 | 基准 |
-</p>
-<p>| 处理速度 | <strong>Azure Fast 2.5倍</strong> | 基准 | 基准 |
-</p>
+<div class="table-container"><table><thead><tr><th>对比项</th><th>MAI-Transcribe-1</th><th>Whisper-large-v3</th><th>Gemini 3.1 Flash</th></tr></thead><tbody><tr><td>FLEURS核心语言</td><td><strong>11种第一</strong></td><td>低于MAI</td><td>14种中11种低于MAI</td></tr><tr><td>GPU成本</td><td><strong>降低50%</strong></td><td>基准</td><td>基准</td></tr><tr><td>处理速度</td><td><strong>Azure Fast 2.5倍</strong></td><td>基准</td><td>基准</td></tr></tbody></table></div>
 <p>$0.36/小时的价格，比Azure现有的Fast服务便宜且快2.5倍。这不是小幅优化，是降维打击。
 </p>
 <h3>微软的真实意图</h3>
@@ -149,24 +131,7 @@ var _hmt = _hmt || [];
 </p>
 <h2>事件二：阿里Qwen3.6-Plus——国产编程模型的天花板</h2>
 <h3>核心Benchmark数据</h3>
-<p>| 评测 | Qwen3.6-Plus | Claude Opus 4.5 | GPT-5.4 Pro |
-</p>
-<p>|------|-------------|-----------------|-------------|
-</p>
-<p>| SWE-bench Verified | <strong>78.8%</strong> | 80.8% | 86% |
-</p>
-<p>| SWE-bench Multilingual | <strong>73.8%（第一）</strong> | — | — |
-</p>
-<p>| SWE-bench Pro | <strong>56.6%（第三）</strong> | ~45% | 57.7% |
-</p>
-<p>| LiveCodeBench | <strong>87.1%（第四）</strong> | — | — |
-</p>
-<p>| MMLU Pro | <strong>88.5%（第四）</strong> | — | — |
-</p>
-<p>| AIME 2026 | <strong>95.3%（第一）</strong> | — | — |
-</p>
-<p>| Terminal-Bench 2.0 | <strong>61.6%（第六）</strong> | 65.4% | 75.1% |
-</p>
+<div class="table-container"><table><thead><tr><th>评测</th><th>Qwen3.6-Plus</th><th>Claude Opus 4.5</th><th>GPT-5.4 Pro</th></tr></thead><tbody><tr><td>SWE-bench Verified</td><td><strong>78.8%</strong></td><td>80.8%</td><td>86%</td></tr><tr><td>SWE-bench Multilingual</td><td><strong>73.8%（第一）</strong></td><td>—</td><td>—</td></tr><tr><td>SWE-bench Pro</td><td><strong>56.6%（第三）</strong></td><td>~45%</td><td>57.7%</td></tr><tr><td>LiveCodeBench</td><td><strong>87.1%（第四）</strong></td><td>—</td><td>—</td></tr><tr><td>MMLU Pro</td><td><strong>88.5%（第四）</strong></td><td>—</td><td>—</td></tr><tr><td>AIME 2026</td><td><strong>95.3%（第一）</strong></td><td>—</td><td>—</td></tr><tr><td>Terminal-Bench 2.0</td><td><strong>61.6%（第六）</strong></td><td>65.4%</td><td>75.1%</td></tr></tbody></table></div>
 <p>几个关键发现：
 </p>
 <p><strong>第一，SWE-bench Verified 78.8%，和Claude Opus 4.5的80.8%只差2个百分点。</strong> 在编程这个最关键的AI应用场景上，国产模型已经追到了全球第一梯队。而且SWE-bench Multilingual拿了第一（73.8%），说明Qwen在多语言编程场景上甚至超过了Claude和GPT。
@@ -182,53 +147,14 @@ var _hmt = _hmt || [];
 </p>
 <p>这对于我们之前测试过的Cline+DeepSeek方案（$5/月）是直接升级：换成Cline+Qwen3.6-Plus，成本几乎不变，但SWE-bench从约39%（DeepSeek V3.2估计值）跳到78.8%——翻了一倍。
 </p>
-<p>| 方案 | 模型 | SWE-bench | 估算月费 | 编程能力 |
-</p>
-<p>|------|------|-----------|---------|---------|
-</p>
-<p>| Claude Code Pro | Claude Sonnet 4.6 | 79.6% | ~$40 | 第一梯队 |
-</p>
-<p>| Cline + Qwen3.6-Plus | Qwen3.6-Plus | 78.8% | ~$5 | 第一梯队 |
-</p>
-<p>| Cursor Pro | Claude Opus 4.6 | 80.8% | ~$60 | 第一梯队 |
-</p>
-<p>| Cline + DeepSeek | DeepSeek V3.2 | ~39% | ~$5 | 第二梯队 |
-</p>
+<div class="table-container"><table><thead><tr><th>方案</th><th>模型</th><th>SWE-bench</th><th>估算月费</th><th>编程能力</th></tr></thead><tbody><tr><td>Claude Code Pro</td><td>Claude Sonnet 4.6</td><td>79.6%</td><td>~$40</td><td>第一梯队</td></tr><tr><td>Cline + Qwen3.6-Plus</td><td>Qwen3.6-Plus</td><td>78.8%</td><td>~$5</td><td>第一梯队</td></tr><tr><td>Cursor Pro</td><td>Claude Opus 4.6</td><td>80.8%</td><td>~$60</td><td>第一梯队</td></tr><tr><td>Cline + DeepSeek</td><td>DeepSeek V3.2</td><td>~39%</td><td>~$5</td><td>第二梯队</td></tr></tbody></table></div>
 <p>Cline+Qwen3.6-Plus方案在SWE-bench上追平了Claude Code Pro，但成本只有八分之一。这可能是目前性价比最高的AI编程方案。
 </p>
 <h2>事件三：谷歌Gemma 4——Apache 2.0才是最大新闻</h2>
 <h3>四款模型覆盖端侧到工作站</h3>
-<p>| 模型 | 总参数 | 激活参数 | 上下文 | 定位 |
-</p>
-<p>|------|--------|---------|--------|------|
-</p>
-<p>| 31B Dense | 310亿 | 310亿 | 256K | 工作站部署，质量上限 |
-</p>
-<p>| 26B MoE | 252亿 | 38亿 | 256K | 云端推理，速度优先 |
-</p>
-<p>| E4B | 80亿 | 45亿 | 128K | 端侧，支持语音 |
-</p>
-<p>| E2B | 51亿 | 23亿 | 128K | 手机离线，内存<1.5GB |
-</p>
+<div class="table-container"><table><thead><tr><th>模型</th><th>总参数</th><th>激活参数</th><th>上下文</th><th>定位</th></tr></thead><tbody><tr><td>31B Dense</td><td>310亿</td><td>310亿</td><td>256K</td><td>工作站部署，质量上限</td></tr><tr><td>26B MoE</td><td>252亿</td><td>38亿</td><td>256K</td><td>云端推理，速度优先</td></tr><tr><td>E4B</td><td>80亿</td><td>45亿</td><td>128K</td><td>端侧，支持语音</td></tr><tr><td>E2B</td><td>51亿</td><td>23亿</td><td>128K</td><td>手机离线，内存<1.5GB</td></tr></tbody></table></div>
 <h3>Gemma 4 vs Gemma 3：代际飞跃</h3>
-<p>| 评测 | Gemma 4 31B | Gemma 3 27B | 提升 |
-</p>
-<p>|------|-----------|-----------|------|
-</p>
-<p>| AIME 2026（数学） | <strong>89.2%</strong> | 20.8% | <strong>+68.4%</strong> |
-</p>
-<p>| Codeforces ELO | <strong>2150</strong> | 110 | <strong>+2040</strong> |
-</p>
-<p>| LiveCodeBench v6 | <strong>80.0%</strong> | 29.1% | <strong>+50.9%</strong> |
-</p>
-<p>| GPQA Diamond（推理） | <strong>84.3%</strong> | 42.4% | <strong>+41.9%</strong> |
-</p>
-<p>| MMLU Pro | <strong>85.2%</strong> | 67.6% | <strong>+17.6%</strong> |
-</p>
-<p>| MMMU Pro（视觉） | <strong>76.9%</strong> | 49.7% | <strong>+27.2%</strong> |
-</p>
-<p>| MRCR v2 128K（长上下文） | <strong>66.4%</strong> | 13.5% | <strong>+52.9%</strong> |
-</p>
+<div class="table-container"><table><thead><tr><th>评测</th><th>Gemma 4 31B</th><th>Gemma 3 27B</th><th>提升</th></tr></thead><tbody><tr><td>AIME 2026（数学）</td><td><strong>89.2%</strong></td><td>20.8%</td><td><strong>+68.4%</strong></td></tr><tr><td>Codeforces ELO</td><td><strong>2150</strong></td><td>110</td><td><strong>+2040</strong></td></tr><tr><td>LiveCodeBench v6</td><td><strong>80.0%</strong></td><td>29.1%</td><td><strong>+50.9%</strong></td></tr><tr><td>GPQA Diamond（推理）</td><td><strong>84.3%</strong></td><td>42.4%</td><td><strong>+41.9%</strong></td></tr><tr><td>MMLU Pro</td><td><strong>85.2%</strong></td><td>67.6%</td><td><strong>+17.6%</strong></td></tr><tr><td>MMMU Pro（视觉）</td><td><strong>76.9%</strong></td><td>49.7%</td><td><strong>+27.2%</strong></td></tr><tr><td>MRCR v2 128K（长上下文）</td><td><strong>66.4%</strong></td><td>13.5%</td><td><strong>+52.9%</strong></td></tr></tbody></table></div>
 <p>AIME数学从20.8%到89.2%，Codeforces从110到2150——这不是迭代升级，是换了一个物种。31B参数能做到这个水平，说明谷歌在训练效率和架构设计上有实质性突破。
 </p>
 <h3>Apache 2.0意味着什么</h3>
@@ -246,16 +172,7 @@ var _hmt = _hmt || [];
 <p>和Pixel团队、高通、联发科的合作已经展开，Android AICore Developer Preview已支持。如果你是安卓开发者，未来12个月内你可以在App里内置Gemma 4的端侧模型。
 </p>
 <h2>三件事串在一起看</h2>
-<p>| 事件 | 核心信号 | 对OpenAI的威胁级别 |
-</p>
-<p>|------|---------|----------------|
-</p>
-<p>| 微软MAI三件套 | 最大盟友开始自研，2027年独立 | <strong>极高（战略级）</strong> |
-</p>
-<p>| 阿里Qwen3.6-Plus | SWE-bench追平Claude，价格差53倍 | <strong>高（技术级）</strong> |
-</p>
-<p>| 谷歌Gemma 4 | Apache 2.0开源，端侧部署成体系 | <strong>中高（生态级）</strong> |
-</p>
+<div class="table-container"><table><thead><tr><th>事件</th><th>核心信号</th><th>对OpenAI的威胁级别</th></tr></thead><tbody><tr><td>微软MAI三件套</td><td>最大盟友开始自研，2027年独立</td><td><strong>极高（战略级）</strong></td></tr><tr><td>阿里Qwen3.6-Plus</td><td>SWE-bench追平Claude，价格差53倍</td><td><strong>高（技术级）</strong></td></tr><tr><td>谷歌Gemma 4</td><td>Apache 2.0开源，端侧部署成体系</td><td><strong>中高（生态级）</strong></td></tr></tbody></table></div>
 <p>三个事件放在一起，呈现出一个清晰的趋势：<strong>OpenAI的技术垄断正在被多方向同时瓦解。</strong>
 </p>
 <ul><li>微软从"盟友"变成"亦友亦敌"——MAI系列直接对标OpenAI的产品线</li>
