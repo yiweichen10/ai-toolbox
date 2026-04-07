@@ -279,22 +279,36 @@ def get_category_slug(category_name):
         slug = category_name.lower()
     return slug
 
+def strip_duplicate_sections(md):
+    """移除Markdown正文中已在模板中展示的重复章节（核心功能、优缺点等）"""
+    if not md: return ""
+    # 移除 ## 核心功能... 直到下一个 ##
+    md = re.sub(r'##\s*(核心功能|Key Features|功能).*?(?=\n##|$)', '', md, flags=re.DOTALL | re.IGNORECASE)
+    # 移除 ## 优缺点分析... 直到下一个 ##
+    md = re.sub(r'##\s*(优缺点分析|Pros & Cons|优缺点).*?(?=\n##|$)', '', md, flags=re.DOTALL | re.IGNORECASE)
+    # 移除 ### 优点... 直到下一个 ## 或 ###
+    md = re.sub(r'###\s*(👍\s*优点|Pros).*?(?=\n(##|###)|$)', '', md, flags=re.DOTALL | re.IGNORECASE)
+    # 移除 ### 缺点... 直到下一个 ## 或 ###
+    md = re.sub(r'###\s*(👎\s*缺点|Cons).*?(?=\n(##|###)|$)', '', md, flags=re.DOTALL | re.IGNORECASE)
+    return md.strip()
+
+
 def markdown_to_html(md):
     """将Markdown转换为简单HTML (增强版)"""
     if not md:
         return ''
     # 统一换行符
-    html = md.replace('\r\n', '\n')
+    html = md.replace('\\r\\n', '\\n')
     
     # 代码块
-    html = re.sub(r'```(\w*)\n([\s\S]*?)```', lambda m: '<pre><code>' + m.group(2).replace('&','&amp;').replace('<','&lt;').replace('>','&gt;') + '</code></pre>', html)
+    html = re.sub(r'```(\\w*)\\n([\\s\\S]*?)```', lambda m: '<pre><code>' + m.group(2).replace('&','&amp;').replace('<','&lt;').replace('>','&gt;') + '</code></pre>', html)
     
     # 表格 (改进正则，不吃掉前导换行)
     def table_replace(m):
         header = m.group(1)
         body = m.group(3)
         headers = [c.strip() for c in header.split('|') if c.strip()]
-        rows = body.strip().split('\n')
+        rows = body.strip().split('\\n')
         table = '<div class="table-container"><table><thead><tr>'
         for h in headers:
             table += f'<th>{h}</th>'
@@ -306,7 +320,7 @@ def markdown_to_html(md):
             for c in cells:
                 table += f'<td>{c}</td>'
             table += '</tr>'
-        table += '</tbody></table></div>\n'
+        table += '</tbody></table></div>\\n'
         return table
     html = re.sub(r'(\|.+\|)\n(\|[\s\-\:| ]+\|)\n((?:\|.+\|(?:$|\n))+)', table_replace, html)
     
@@ -321,15 +335,15 @@ def markdown_to_html(md):
     # 加粗/斜体/行内代码
     html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
     html = re.sub(r'\*(.+?)\*', r'<em>\1</em>', html)
-    html = re.sub(r'`([^`]+)`', r'<code>\1</code>', html)
+    html = re.sub(r'`([^`]+)`', r'<code>\\1</code>', html)
     
     # 链接
-    html = re.sub(r'\[([^\]]+)\]\((/[^)]+)\)', r'<a href="\2">\1</a>', html)
-    html = re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)', r'<a href="\2" target="_blank" rel="noopener">\1</a>', html)
+    html = re.sub(r'\[([^]]+)\]\((/[^)]+)\)', r'<a href="\\2">\\1</a>', html)
+    html = re.sub(r'\[([^]]+)\]\((https?://[^)]+)\)', r'<a href="\\2" target="_blank" rel="noopener">\\1</a>', html)
     
     # 列表
     html = re.sub(r'^- (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
-    html = re.sub(r'^(\d+)\. (.+)$', r'<li>\2</li>', html, flags=re.MULTILINE)
+    html = re.sub(r'^(\d+)\. (.+)', r'<li>\2</li>', html, flags=re.MULTILINE)
     html = re.sub(r'((?:<li>.*?</li>\n?)+)', r'<ul>\1</ul>', html)
     
     # 段落
@@ -366,7 +380,6 @@ def markdown_to_html(md):
     if in_p:
         result.append('</p>')
     return '\n'.join(result)
-
 def escape_html(text):
     """转义HTML特殊字符（用于属性值）"""
     return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
@@ -422,90 +435,129 @@ def build_tool_page(tool, all_tools, all_articles=None):
     cat_i18n = get_i18n_category(tool.get('category', ''), lang)
     cat_slug = get_category_slug(tool.get('category', ''))
     
-    breadcrumb_data = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": _t("breadcrumb_home"), "item": "https://www.aitoolbox.hk/"},
-        {"@type": "ListItem", "position": 2, "name": cat_i18n, "item": f"https://www.aitoolbox.hk/category/{cat_slug}/"},
-        {"@type": "ListItem", "position": 3, "name": tool['name'], "item": f"https://www.aitoolbox.hk/tools/{slug}/"}
-    ]}
+    breadcrumb_data = {
+        "@context": "https://schema.org", 
+        "@type": "BreadcrumbList", 
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": _t("breadcrumb_home"), "item": "https://www.aitoolbox.hk/"},
+            {"@type": "ListItem", "position": 2, "name": cat_i18n, "item": f"https://www.aitoolbox.hk/category/{cat_slug}/"},
+            {"@type": "ListItem", "position": 3, "name": tool['name'], "item": f"https://www.aitoolbox.hk/tools/{slug}/"}
+        ]
+    }
     
     price_str = tool.get('price', '')
     if not price_str: price_str = "免费" if tool.get('type') == 'free' else "付费"
     
-    software_data = {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": tool['name'], "applicationCategory": "UtilitiesApplication", "operatingSystem": tool.get('platform', 'Web'), "description": tool.get('description', ''), "datePublished": "2026-04-08", "dateModified": "2026-04-08", "offers": {"@type": "Offer", "price": price_str, "priceCurrency": "USD"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": tool.get('score', '4.5'), "ratingCount": str(tool.get('visits', '100'))}}
+    software_data = {
+        "@context": "https://schema.org", 
+        "@type": "SoftwareApplication", 
+        "name": tool['name'], 
+        "applicationCategory": "UtilitiesApplication", 
+        "operatingSystem": tool.get('platform', 'Web'), 
+        "description": tool.get('description', ''), 
+        "datePublished": "2026-04-08", 
+        "dateModified": "2026-04-08", 
+        "offers": {"@type": "Offer", "price": price_str, "priceCurrency": "USD"}, 
+        "aggregateRating": {"@type": "AggregateRating", "ratingValue": tool.get('score', '4.5'), "ratingCount": str(tool.get('visits', '100'))}
+    }
     
     pros_html = ''.join([f'<li>{escape_html(p)}</li>' for p in tool.get('pros', [])])
     cons_html = ''.join([f'<li>{escape_html(c)}</li>' for c in tool.get('cons', [])])
     features_html = ''.join([f'<li>{escape_html(f)}</li>' for f in tool.get('features', [])])
+
+    features_section = f'''<div class="features-box" style="margin-bottom:32px;">
+                <h3>{_t("tool_features")}</h3>
+                <ul style="column-count:2;column-gap:40px;">{features_html}</ul>
+            </div>''' if features_html else ""
+
+    proscons_section = f'''<div class="pros-cons-grid">
+                <div class="pros-box"><h2>{_t("tool_pros")}</h2><ul>{pros_html}</ul></div>
+                <div class="cons-box"><h2>{_t("tool_cons")}</h2><ul>{cons_html}</ul></div>
+            </div>''' if (pros_html or cons_html) else ""
 
     # FAQ Section
     faq_section = ''
     faq_schema_list = []
     tool_faq = tool.get('faq', [])
     if tool_faq:
-        faq_html = ''
+        f_html = ''
         for fi in tool_faq:
             q, a = fi.get('question', ''), fi.get('answer', '')
             if q and a:
-                faq_html += f'<div class="faq-item"><details><summary>{escape_html(q)}</summary><div class="faq-answer">{markdown_to_html(a)}</div></details></div>'
+                f_html += f'<div class="faq-item"><details><summary>{escape_html(q)}</summary><div class="faq-answer">{markdown_to_html(a)}</div></details></div>'
                 faq_schema_list.append({'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}})
-        if faq_html:
-            faq_section = f'<div class="faq-section"><h2>❓ {_t("tool_features")}</h2>{faq_html}</div>'
+        if f_html:
+            faq_section = f'<div class="faq-section"><h2>❓ {_t("tool_features")}</h2>{f_html}</div>'
 
     faq_page_schema = ''
     if faq_schema_list:
         faq_sd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema_list}
         faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False, indent=2)}</script>'
 
-    # Main Content
-    content_md = tool.get('content', '')
+    # Main Content - 剥离重复章节
+    content_md = strip_duplicate_sections(tool.get('content', ''))
     content_html = markdown_to_html(content_md)
 
-    html = f'<!DOCTYPE html>\n<html lang="{lang}">\n<head>\n' \
-           f'    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' \
-           f'    <title>{escape_html(tool["name"])}{_t("meta_review_suffix")} - {_t("header_title")}</title>\n' \
-           f'    <meta name="description" content="{escape_html(tool.get("description", ""))} ">\n' \
-           f'    <link rel="canonical" href="https://www.aitoolbox.hk/tools/{slug}/">\n' \
-           f'    <meta property="og:title" content="{escape_html(tool["name"])}{_t("meta_review_suffix")} - {_t("header_title")}">\n' \
-           f'    <meta property="og:site_name" content="{_t("header_title")}">\n' \
-           f'    <meta name="twitter:title" content="{escape_html(tool["name"])} - {_t("header_title")}">\n' \
-           f'    <link rel="stylesheet" href="/css/style.css">\n' \
-           f'    <script type="application/ld+json">{json.dumps(breadcrumb_data, ensure_ascii=False, indent=2)}</script>\n' \
-           f'    <script type="application/ld+json">{json.dumps(software_data, ensure_ascii=False, indent=2)}</script>\n' \
-           f'{faq_page_schema}\n' \
-           f'{BAIDU_TONGJI}\n</head>\n<body>\n    {global_nav}\n' \
-           f'    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">\n' \
-           f'        <a href="/">{_t("breadcrumb_home")}</a> &gt; <a href="/category/{cat_slug}/">{escape_html(cat_i18n)}</a> &gt; <span>{escape_html(tool["name"])}</span>\n' \
-           f'    </nav>\n' \
-           f'    <main class="article-container">\n' \
-           f'        <div class="tool-header">\n' \
-           f'            <div class="tool-header-top">\n' \
-           f'                <div class="tool-icon-lg">{tool["emoji"]}</div>\n' \
-           f'                <div class="tool-header-info">\n' \
-           f'                    <h2>{escape_html(tool["name"])}</h2>\n' \
-           f'                    <p class="subtitle">{escape_html(tool.get("description", ""))}</p>\n' \
-           f'                </div>\n' \
-           f'            </div>\n' \
-           f'            <div class="tool-meta">\n' \
-           f'                <div class="tool-meta-item">🌐 <strong>{_t("tool_website")}</strong>：{tool.get("url", "")}</div>\n' \
-           f'                <div class="tool-meta-item">💰 <strong>{_t("tool_price")}</strong>：{price_str}</div>\n' \
-           f'                <div class="tool-meta-item">📦 <strong>{_t("tool_platform")}</strong>：{tool.get("platform", "")}</div>\n' \
-           f'            </div>\n' \
-           f'            <a href="{tool.get("url", "#")}" target="_blank" rel="noopener" class="visit-btn">{_t("visit_site")}</a>\n' \
-           f'        </div>\n' \
-           f'        <div class="tool-content">\n' \
-           f'            <h2>{_t("tool_features")}</h2><ul>{features_html}</ul>\n' \
-           f'            <div class="pros-cons-grid">\n' \
-           f'                <div class="pros-box"><h2>{_t("tool_pros")}</h2><ul>{pros_html}</ul></div>\n' \
-           f'                <div class="cons-box"><h2>{_t("tool_cons")}</h2><ul>{cons_html}</ul></div>\n' \
-           f'            </div>\n' \
-           f'            <div class="article-body">\n' \
-           f'                {content_html}\n' \
-           f'            </div>\n' \
-           f'            {faq_section}\n' \
-           f'        </div>\n' \
-           f'        {related_html}\n        {related_articles_html}\n' \
-           f'    </main>\n\n    {get_footer_html(lang)}\n    {get_back_to_top_html(lang)}\n' \
-           f'</body>\n</html>'
+    html = f'''<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(tool["name"])}{_t("meta_review_suffix")} - {_t("header_title")}</title>
+    <meta name="description" content="{escape_html(tool.get("description", ""))} ">
+    <meta name="keywords" content="{escape_html(tool["name"])}, AI工具, {cat_i18n}">
+    <link rel="canonical" href="https://www.aitoolbox.hk/tools/{slug}/">
+    <meta property="og:title" content="{escape_html(tool["name"])}{_t("meta_review_suffix")} - {_t("header_title")}">
+    <meta property="og:description" content="{escape_html(tool.get("description", ""))} ">
+    <meta property="og:image" content="{og_image}">
+    <meta property="og:site_name" content="{_t("header_title")}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{escape_html(tool["name"])} - {_t("header_title")}">
+    <meta name="twitter:description" content="{escape_html(tool.get("description", ""))} ">
+    <meta name="twitter:image" content="{og_image}">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{json.dumps(breadcrumb_data, ensure_ascii=False, indent=2)}</script>
+    <script type="application/ld+json">{json.dumps(software_data, ensure_ascii=False, indent=2)}</script>
+{faq_page_schema}
+{BAIDU_TONGJI}
+</head>
+<body>
+    {global_nav}
+    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">
+        <a href="/">{_t("breadcrumb_home")}</a> &gt; <a href="/category/{cat_slug}/">{escape_html(cat_i18n)}</a> &gt; <span>{escape_html(tool["name"])}</span>
+    </nav>
+    <main class="article-container">
+        <div class="tool-header">
+            <div class="tool-header-top">
+                <div class="tool-icon-lg">{tool["emoji"]}</div>
+                <div class="tool-header-info">
+                    <h1>{escape_html(tool["name"])}</h1>
+                    <p class="subtitle">{escape_html(tool.get("description", ""))}</p>
+                </div>
+            </div>
+            <div class="tool-meta">
+                <div class="tool-meta-item">🌐 <strong>{_t("tool_website")}</strong>：{tool.get("url", "")}</div>
+                <div class="tool-meta-item">💰 <strong>{_t("tool_price")}</strong>：{price_str}</div>
+                <div class="tool-meta-item">📦 <strong>{_t("tool_platform")}</strong>：{tool.get("platform", "")}</div>
+            </div>
+            <a href="{tool.get("url", "#")}" target="_blank" rel="noopener" class="visit-btn">{_t("visit_site")}</a>
+        </div>
+        <div class="tool-content">
+            {features_section}
+            {proscons_section}
+            <article class="article-body">
+                {content_html}
+            </article>
+            {faq_section}
+        </div>
+        {related_html}
+        {related_articles_html}
+    </main>
+
+    {get_footer_html(lang)}
+    {get_back_to_top_html(lang)}
+</body>
+</html>'''
     return html
 
 def build_compare_page(compare_data, all_tools, all_articles=None):
@@ -2348,16 +2400,18 @@ def build_article_page(article, all_articles, all_tools=None):
         matched_tools = []
         for t in all_tools:
             tool_name_lower = t.get('name', '').lower()
-            if (tool_name_lower in article_title or
-                tool_name_lower in article_desc or
+            if (tool_name_lower in article_title or 
+                tool_name_lower in article_desc or 
                 tool_name_lower in article_content):
                 matched_tools.append(t)
+        
+        # 自动补足相关工具
         if len(matched_tools) < 5:
             article_category = article.get('category', '')
             same_cat_tools = [t for t in all_tools if t.get('category') == article_category and t not in matched_tools]
             matched_tools.extend(same_cat_tools[:5-len(matched_tools)])
         if len(matched_tools) < 5:
-            sorted_tools = sorted(all_tools, key=lambda x: x.get('visits', '0'), reverse=True)
+            sorted_tools = sorted(all_tools, key=lambda x: x.get('visits', 0), reverse=True)
             for t in sorted_tools:
                 if len(matched_tools) >= 5: break
                 if t not in matched_tools: matched_tools.append(t)
@@ -2379,21 +2433,21 @@ def build_article_page(article, all_articles, all_tools=None):
         cards = ''
         for a in same_category[:3]:
             adate = a.get('dateFull', a.get('date', ''))
-            if lang == 'en' and '年' in adate:
-                m = re.match(r'(\d{4})年(\d{1,2})月(\d{1,2})日', adate)
-                if m: adate = f'{m.group(1)}-{m.group(2).zfill(2)}-{m.group(3).zfill(2)}'
             cards += f'<a href="/articles/{a["slug"]}/index.html" class="related-card">' \
                      f'<div style="font-weight:600;margin-bottom:4px;">{escape_html(a["title"])}</div>' \
                      f'<div style="font-size:13px;color:#666;">{adate}</div></a>'
         related_html = f'<div class="related-tools"><h3>{_t("related_articles")}</h3><div class="related-grid">{cards}</div></div>'
 
+    # OG Image & Infographic
     og_image = ensure_og_image(slug, data_obj=article, is_article=True)
-    infographic_html = ''
     infographic_path = os.path.join(BASE_DIR, 'images', 'infographics', f'{slug}-infographic.png')
-    if os.path.exists(infographic_path):
-        infographic_html = f'<figure class="tool-infographic">' \
-                           f'<img src="/images/infographics/{slug}-infographic.png" alt="{escape_html(article["title"])} - {_t("infographic_alt")}" width="1200" height="630" loading="lazy">' \
-                           f'<figcaption>{escape_html(article["title"])} · {_t("infographic_caption")}</figcaption></figure>'
+    has_infographic = os.path.exists(infographic_path)
+    infographic_html = ''
+    if has_infographic:
+        infographic_html = f'''<figure class="tool-infographic">
+            <img src="/images/infographics/{slug}-infographic.png" alt="{escape_html(article["title"])} - {_t("header_title")}" width="1200" height="630" loading="lazy">
+            <figcaption>{escape_html(article["title"])} - {_t("header_subtitle")}</figcaption>
+        </figure>'''
 
     from datetime import datetime
     today_iso = datetime.now().strftime('%Y-%m-%d')
@@ -2435,36 +2489,59 @@ def build_article_page(article, all_articles, all_tools=None):
     }, ensure_ascii=False, indent=2)
 
     raw_content = article.get('content', '').strip()
+    # 移除标题行
     title_line_pattern = r'^#\s+.*?' + re.escape(article['title'][:10]) + r'.*?\n'
     raw_content = re.sub(title_line_pattern, '', raw_content, count=1, flags=re.IGNORECASE)
     content_html = markdown_to_html(raw_content)
 
-    html = f'<!DOCTYPE html>\n<html lang="{lang}">\n<head>\n' \
-           f'    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' \
-           f'    <title>{escape_html(article["title"])} - {_t("header_title")}</title>\n' \
-           f'    <meta name="description" content="{escape_html(article.get("description", ""))} ">\n' \
-           f'    <link rel="canonical" href="https://www.aitoolbox.hk/articles/{slug}/">\n' \
-           f'    <meta property="og:type" content="article">\n' \
-           f'    <meta property="og:title" content="{escape_html(article["title"])} - {_t("header_title")}">\n' \
-           f'    <meta property="og:description" content="{escape_html(article.get("description", ""))} ">\n' \
-           f'    <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/">\n' \
-           f'    <meta property="og:site_name" content="{_t("header_title")}">\n' \
-           f'    <link rel="stylesheet" href="/css/style.css">\n' \
-           f'    <script type="application/ld+json">{breadcrumb_article_json}</script>\n' \
-           f'    <script type="application/ld+json">{structured_data}</script>\n' \
-           f'{BAIDU_TONGJI}\n</head>\n<body>\n    {global_nav}\n\n' \
-           f'    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">\n' \
-           f'        <a href="/">{_t("breadcrumb_home")}</a> &gt; <span>{escape_html(article_category)}</span> &gt; <span>{escape_html(article["title"])[:20]}...</span>\n' \
-           f'    </nav>\n\n    <main class="article-container">\n' \
-           f'        <article class="article-body">\n' \
-           f'            <h1 style="margin-bottom:16px;">{escape_html(article["title"])}</h1>\n' \
-           f'            <div style="color:#999;font-size:14px;margin-bottom:24px;">\n' \
-           f'                {display_date} · {escape_html(article_category)}\n' \
-           f'            </div>\n' \
-           f'            {infographic_html}\n            {content_html}\n' \
-           f'        </article>\n        {related_html}\n        {related_tools_html}\n' \
-           f'    </main>\n\n    {get_footer_html(lang)}\n    {get_back_to_top_html(lang)}\n' \
-           f'</body>\n</html>'
+    html = f'''<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(article["title"])} - {_t("header_title")}</title>
+    <meta name="description" content="{escape_html(article.get("description", ""))} ">
+    <meta name="keywords" content="{escape_html(article.get("keywords", ""))} ">
+    <link rel="canonical" href="https://www.aitoolbox.hk/articles/{slug}/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{escape_html(article["title"])} - {_t("header_title")}">
+    <meta property="og:description" content="{escape_html(article.get("description", ""))} ">
+    <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/">
+    <meta property="og:site_name" content="{_t("header_title")}">
+    <meta property="og:image" content="{og_image}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{escape_html(article["title"])} - {_t("header_title")}">
+    <meta name="twitter:description" content="{escape_html(article.get("description", ""))} ">
+    <meta name="twitter:image" content="{og_image}">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{breadcrumb_article_json}</script>
+    <script type="application/ld+json">{structured_data}</script>
+{BAIDU_TONGJI}
+</head>
+<body>
+    {global_nav}
+
+    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">
+        <a href="/">{_t("breadcrumb_home")}</a> &gt; <a href="/category/{article_category_slug}/">{escape_html(article_category)}</a> &gt; <span>{escape_html(article["title"])[:20]}...</span>
+    </nav>
+
+    <main class="article-container">
+        <article class="article-body">
+            <h1 style="margin-bottom:16px;">{escape_html(article["title"])}</h1>
+            <div style="color:#999;font-size:14px;margin-bottom:24px;">
+                {display_date} · {escape_html(article_category)}
+            </div>
+            {infographic_html}
+            {content_html}
+        </article>
+        {related_html}
+        {related_tools_html}
+    </main>
+
+    {get_footer_html(lang)}
+    {get_back_to_top_html(lang)}
+</body>
+</html>'''
     return html
 
 def build_article_list_pages(articles):

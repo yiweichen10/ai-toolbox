@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>如何用ChatGPT写代码：十年程序员的实战经验分享 - AI工具宝箱</title>
     <meta name="description" content="凌晨修Bug修到崩溃时随手扔给ChatGPT，5秒出答案。这不是科幻，是真实发生的。十年老程序员分享如何用ChatGPT写出能用的代码。 ">
+    <meta name="keywords" content="ChatGPT写代码,ChatGPT编程,AI辅助开发,ChatGPT教程 ">
     <link rel="canonical" href="https://www.aitoolbox.hk/articles/how-to-use-chatgpt-for-coding/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="如何用ChatGPT写代码：十年程序员的实战经验分享 - AI工具宝箱">
     <meta property="og:description" content="凌晨修Bug修到崩溃时随手扔给ChatGPT，5秒出答案。这不是科幻，是真实发生的。十年老程序员分享如何用ChatGPT写出能用的代码。 ">
     <meta property="og:url" content="https://www.aitoolbox.hk/articles/how-to-use-chatgpt-for-coding/">
     <meta property="og:site_name" content="AI工具宝箱">
+    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/how-to-use-chatgpt-for-coding-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="如何用ChatGPT写代码：十年程序员的实战经验分享 - AI工具宝箱">
+    <meta name="twitter:description" content="凌晨修Bug修到崩溃时随手扔给ChatGPT，5秒出答案。这不是科幻，是真实发生的。十年老程序员分享如何用ChatGPT写出能用的代码。 ">
+    <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/how-to-use-chatgpt-for-coding-og.png">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -90,7 +96,7 @@ var _hmt = _hmt || [];
     </nav>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <span>AI编程</span> &gt; <span>如何用ChatGPT写代码：十年程序员的...</span>
+        <a href="/">首页</a> &gt; <a href="/category/ai-coding/">AI编程</a> &gt; <span>如何用ChatGPT写代码：十年程序员的...</span>
     </nav>
 
     <main class="article-container">
@@ -106,26 +112,12 @@ var _hmt = _hmt || [];
 <br>别被OpenAI的界面吓到，直接去openai.com点Sign up，用Gmail最省事，国内手机号收验证码没问题。充值才是真正的坎——需要一张支持美元的信用卡，Depay虚拟卡在某宝一搜就有教程。不充值的话只能用GPT-3.5，代码能力差太多，建议直接充5美元起步。
 </p>
 <p>第一个真实案例：批量重命名文件
-<br>我要写个Python脚本，把文件夹里的所有jpg文件前面加上日期前缀，但<code>os</code>模块的用法记不清了。直接问ChatGPT：
+<br>我要写个Python脚本，把文件夹里的所有jpg文件前面加上日期前缀，但<code>\1</code>模块的用法记不清了。直接问ChatGPT：
 </p>
 <blockquote>用Python遍历指定文件夹下所有.jpg文件，在文件名前加上日期前缀，比如20230801_原文件名.jpg，给出完整代码并解释关键步骤</blockquote>
 <p>它秒回一段能直接跑的代码，注释写得跟老手写的一样：
 </p>
-<pre><code>import os
-<p>from datetime import datetime
-</p>
-<p>folder_path = "/path/to/your/folder"  # 你的实际路径
-<br>date_prefix = datetime.now().strftime("%Y%m%d")
-</p>
-<p>for filename in os.listdir(folder_path):
-<br>    if filename.endswith(".jpg"):
-<br>        new_name = f"{date_prefix}_{filename}"
-<br>        os.rename(
-<br>            os.path.join(folder_path, filename),
-<br>            os.path.join(folder_path, new_name)
-<br>        )
-<br>        print(f"Renamed: {filename} -&gt; {new_name}")
-<br></code></pre>
+<p>``<code>\1</code>``
 </p>
 <p>Debug的正确姿势
 <br>当代码报错时，把<strong>完整报错信息+相关代码</strong>一起扔给AI。比说我昨天遇到Django报错"OperationalError: no such table"，把错误日志和models.py内容一并发过去，它直接回我："你忘记运行migrate了，先python manage.py makemigrations再migrate。"这种低级错误人查半小时，AI5秒解决。
