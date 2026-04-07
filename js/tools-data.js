@@ -619,6 +619,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "HeyGen",
+    "slug": "heygen",
+    "emoji": "🎬",
+    "color": "#076252",
+    "description": "AI数字人视频生成平台，输入文字即可生成真人出镜的营销视频。支持40+语言，200+数字人形象，3分钟生成专业视频。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 5.0",
+    "visits": "2万",
+    "badge": {
+      "type": null,
+      "text": "编辑推荐"
+    },
+    "url": "https://www.heygen.com",
+    "price": "基础$10/月起",
+    "platform": "Web"
+  },
+  {
     "name": "DeepL",
     "slug": "deepl",
     "emoji": "🌐",
@@ -1358,6 +1386,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "即时设计AI",
+    "slug": "jsdesign-ai",
+    "emoji": "🖼️",
+    "color": "#5011b7",
+    "description": "国产AI设计工具，类似Figma的在线设计平台。内置AI生成布局、AI抠图和AI配图功能，是国内设计师的Figma替代品。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "6万",
+    "badge": {
+      "type": "pick",
+      "text": "HOT"
+    },
+    "url": "https://js.design",
+    "price": "免费使用",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Otter.ai",
     "slug": "otter.ai",
     "emoji": "📊",
@@ -1582,6 +1638,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://you.com",
     "price": "免费使用",
     "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Consensus",
+    "slug": "consensus",
+    "emoji": "🔍",
+    "color": "#48bf50",
+    "description": "AI学术搜索引擎，从学术论文中提取证据和结论。帮助研究者和学生快速找到科学论文中的答案，是学术研究的效率工具。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "AI搜索"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "15万",
+    "badge": {
+      "type": null,
+      "text": null
+    },
+    "url": "https://consensus.app",
+    "price": "基础$10/月起",
+    "platform": "Web"
   },
   {
     "name": "Fliki",
@@ -1994,6 +2078,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "HeyGen",
+    "slug": "heygen",
+    "emoji": "🎬",
+    "color": "#076252",
+    "description": "AI数字人视频生成平台，输入文字即可生成真人出镜的营销视频。支持40+语言，200+数字人形象，3分钟生成专业视频。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 5.0",
+    "visits": "2万",
+    "badge": {
+      "type": null,
+      "text": "编辑推荐"
+    },
+    "url": "https://www.heygen.com",
+    "price": "基础$10/月起",
+    "platform": "Web"
+  },
+  {
     "name": "DeepL",
     "slug": "deepl",
     "emoji": "🌐",
@@ -2733,6 +2845,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "即时设计AI",
+    "slug": "jsdesign-ai",
+    "emoji": "🖼️",
+    "color": "#5011b7",
+    "description": "国产AI设计工具，类似Figma的在线设计平台。内置AI生成布局、AI抠图和AI配图功能，是国内设计师的Figma替代品。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "6万",
+    "badge": {
+      "type": "pick",
+      "text": "HOT"
+    },
+    "url": "https://js.design",
+    "price": "免费使用",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Otter.ai",
     "slug": "otter.ai",
     "emoji": "📊",
@@ -2957,6 +3097,34 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://you.com",
     "price": "免费使用",
     "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Consensus",
+    "slug": "consensus",
+    "emoji": "🔍",
+    "color": "#48bf50",
+    "description": "AI学术搜索引擎，从学术论文中提取证据和结论。帮助研究者和学生快速找到科学论文中的答案，是学术研究的效率工具。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "AI搜索"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "15万",
+    "badge": {
+      "type": null,
+      "text": null
+    },
+    "url": "https://consensus.app",
+    "price": "基础$10/月起",
+    "platform": "Web"
   },
   {
     "name": "Fliki",
