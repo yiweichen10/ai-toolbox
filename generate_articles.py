@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 """
 SEO文章批量生成脚本 v2 — 深度内容版
@@ -53,6 +54,12 @@ ARTICLE_TYPES = {
         'priority': 3,
         'description': '具体AI工具从入门到进阶的实操教程',
         'keywords_target': '"怎么用""新手入门"类长尾教程词',
+    },
+    'E': {
+        'label': 'English Global Content',
+        'priority': 0,
+        'description': 'English articles for global audience (High Priority for Launch)',
+        'keywords_target': 'Global AI trends, ROI, high-intent English keywords',
     },
 }
 
@@ -860,10 +867,55 @@ PROMPTS_C = [
 # ================================================================
 #  全部文章池（A+B+C 合并，按优先级排列）
 # ================================================================
+
+# ================================================================
+#  E Category: English Global Content (Outbound strategy)
+# ================================================================
+PROMPTS_E = [
+    {
+        "title": "2026 AI Tool ROI Benchmark: 48+ Tools Tested for Real-World Profitability",
+        "slug": "2026-ai-tool-roi-benchmark-48-tools-profitability",
+        "description": "We rigorously tested 48+ AI tools across content creation, coding, and automation. Here is the definitive ROI report for 2026.",
+        "keywords": "AI Tool ROI, best AI tools 2026, profitable AI, AI tools benchmark, AI for business efficiency",
+        "category": "Market Trends",
+        "prompt": """You are a professional AI industry analyst with a focus on business ROI and practical implementation. Write a high-authority, deep-dive article (2000-3000 words).
+
+Theme: 2026 AI Tool ROI Benchmark: 48+ Tools Tested for Real-World Profitability
+
+Context: It's April 2026. The AI market has shifted from 'hype' to 'utility.' Businesses are cutting subscriptions that don't yield direct returns. We spent 3 months testing 48 tools.
+
+Requirements:
+- Categorize tools by: Content Gen, Dev Tools, Automation, and Niche Business Apps.
+- Use a 'Hard ROI' vs 'Soft ROI' metric.
+- Include a section on 'The 2026 Efficiency Stack.'
+- Critical and objective tone. No marketing fluff.
+
+Structure:
+## Executive Summary
+Summarize the state of AI efficiency in 2026. The era of generic wrappers is over.
+
+## Category 1: Generative Content - Beyond Text
+Focus on video and high-fidelity 3D assets. (Sora 2, Kling 3, etc.)
+
+## Category 2: Developer Productivity - The Agentic Shift
+Cursor, Windsurf, and the rise of autonomous coding agents.
+
+## Category 3: Business Automation - Connecting the Dots
+Make.com, Zapier Central, and multi-agent workflows.
+
+## The ROI Leaderboard (Table)
+List top 10 tools with estimated % efficiency gain.
+
+## Conclusion: How to Build Your 2026 AI Strategy
+"""
+    }
+]
+
 ALL_PROMPTS = (
     [(p, 'A') for p in PROMPTS_A] +
     [(p, 'B') for p in PROMPTS_B] +
-    [(p, 'C') for p in PROMPTS_C]
+    [(p, 'C') for p in PROMPTS_C] +
+    [(p, 'E') for p in PROMPTS_E]
 )
 
 
@@ -939,7 +991,7 @@ def select_next_article(force_type=None):
         return candidate_pool[0]
 
     # 轮替逻辑：上次产了什么类型，这次优先产下一个类型
-    type_order = ['A', 'B', 'C']
+    type_order = ['E', 'A', 'B', 'C']
     last_type = state.get("last_type")
 
     if last_type:
@@ -1040,7 +1092,7 @@ def generate_one(article_data, article_type):
 
 def main():
     parser = argparse.ArgumentParser(description='SEO文章批量生成器 v2 - 深度内容版')
-    parser.add_argument('--type', choices=['A', 'B', 'C'], help='强制指定文章类型 (A=国产AI对比 B=场景推荐 C=教程)')
+    parser.add_argument('--type', choices=['A', 'B', 'C', 'E'], help='强制指定文章类型 (A=国产AI对比 B=场景推荐 C=教程)')
     parser.add_argument('--list', action='store_true', help='查看轮替队列状态')
     parser.add_argument('--all', action='store_true', help='一键产出所有未产出的文章（谨慎使用！）')
     args = parser.parse_args()

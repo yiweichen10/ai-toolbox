@@ -15,7 +15,11 @@ BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="返回顶部">
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>'''
 
-from pypinyin import pinyin, Style
+try:
+    from pypinyin import pinyin, Style
+except ImportError:
+    pinyin = None
+    Style = None
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
@@ -96,9 +100,12 @@ def get_category_slug(category_name):
     if category_name in CATEGORY_SLUG_MAP:
         return CATEGORY_SLUG_MAP[category_name]
     
-    # 使用pypinyin生成拼音，并转换为连字符连接的小写形式
-    pinyin_list = pinyin(category_name, style=Style.NORMAL)
-    slug = '-'.join([item[0] for item in pinyin_list if item and item[0].strip()]).lower()
+    # Using pypinyin if available, otherwise fallback
+    if pinyin:
+        pinyin_list = pinyin(category_name, style=Style.NORMAL)
+        slug = '-'.join([item[0] for item in pinyin_list if item and item[0].strip()]).lower()
+    else:
+        slug = category_name.lower()
     return slug
 
 def markdown_to_html(md):
@@ -184,6 +191,8 @@ def get_category_stats(tools):
 
 def build_tool_page(tool, all_tools, all_articles=None):
     """生成单个工具详情页的完整HTML"""
+    lang = tool.get('lang', 'zh-CN')
+
     slug = tool['slug']
 
     # ── 相关工具（自动补足到5个：同分类2-3个 + 跨分类2-3个）──────────────
@@ -413,7 +422,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
     content_html = markdown_to_html(content_md)
 
     html = f'''<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{lang}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -499,6 +508,8 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
     URL格式: /compare/{toolA-vs-toolB}/index.html
     覆盖关键词: "XX vs XX" / "XX和XX对比" / "XX XX哪个好"
     """
+    lang = compare_data.get('lang', 'zh-CN')
+
     slug = compare_data.get('slug', 'unknown')
     title = compare_data.get('title', 'AI工具对比')
     subtitle = compare_data.get('subtitle', '')
@@ -634,7 +645,7 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
     today_iso = _dt.now().strftime('%Y-%m-%d')
 
     html = f'''<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{lang}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -701,6 +712,8 @@ def build_alternatives_page(alt_data, all_tools, all_articles=None):
     URL格式: /alternatives/{tool-slug}-alternatives/index.html
     覆盖关键词: "XX替代" / "XX类似工具" / "XX平替" / "代替XX"
     """
+    lang = alt_data.get('lang', 'zh-CN')
+
     slug = alt_data.get('slug', 'unknown')
     title = alt_data.get('title', 'AI工具替代方案')
     meta_desc = alt_data.get('meta_description', f'{title} - AI工具宝箱')
@@ -766,7 +779,7 @@ def build_alternatives_page(alt_data, all_tools, all_articles=None):
     today_iso = _dt.now().strftime('%Y-%m-%d')
 
     html = f'''<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{lang}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -857,6 +870,8 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
     URL: /quiz/{slug}/index.html 或 /quiz/index.html (总入口)
     覆盖关键词: "AI工具选择器"、"哪个AI工具好"、"AI工具推荐测试"
     """
+    lang = quiz_data.get('lang', 'zh-CN')
+
     slug = quiz_data.get('slug', 'unknown')
     title = quiz_data.get('title', 'AI工具选择器')
     meta_desc = quiz_data.get('meta_description', '')
@@ -1001,7 +1016,7 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
     today_iso = _dt.now().strftime('%Y-%m-%d')
 
     html = f'''<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{lang}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1281,6 +1296,8 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
     URL: /ranking/{slug}/index.html 或 /ranking/index.html (总榜入口)
     覆盖关键词: "AI工具排行榜"、"AI工具排名2026"、"热门AI工具"
     """
+    lang = ranking_data.get('lang', 'zh-CN')
+
     slug = ranking_data.get('slug', 'unknown')
     title = ranking_data.get('title', 'AI工具排行榜')
     meta_desc = ranking_data.get('meta_description', '')
@@ -1456,7 +1473,7 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
             related_links += f'<a href="/ranking/{rslug}/" class="rank-sub-link">{rname} →</a>\n'
 
     html = f'''<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{lang}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1752,6 +1769,8 @@ def build_live_page(live_data, page_config, all_tools, articles):
     构建 live dashboard 的子页面。
     type: dashboard | matrix | trend | heatmap | battle
     """
+    lang = live_data.get('lang', 'zh-CN')
+
     from datetime import datetime as _ldt
 
     page_type = page_config.get('type', 'dashboard')
@@ -1792,7 +1811,7 @@ def build_live_page(live_data, page_config, all_tools, articles):
     footer = '<footer class="footer"><p>&copy; 2026 AI工具宝箱 · 每日精选优质AI工具 · 更新于 ' + _ldt.now().strftime('%Y-%m-%d %H:%M') + '</p></footer>'
 
     html = (
-        '<!DOCTYPE html>\n<html lang="zh-CN">\n<head>\n'
+        '<!DOCTYPE html>\n<html lang="{lang}">\n<head>\n'
         '    <meta charset="UTF-8">\n'
         '    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
         '    <title>' + escape_html(page_title) + ' - AI工具宝箱</title>\n'
@@ -2186,6 +2205,8 @@ def _build_category_index_page(tools_by_category):
 
 def build_category_page(category_name, tools_in_category):
     """生成单个分类页的完整HTML"""
+    lang = 'zh-CN'
+
     category_slug = get_category_slug(category_name)
     
     tools_html = ''
@@ -2204,7 +2225,7 @@ def build_category_page(category_name, tools_in_category):
                         </article>\n'''
 
     html = f'''<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{lang}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2282,6 +2303,8 @@ def build_category_page(category_name, tools_in_category):
 
 def build_article_page(article, all_articles, all_tools=None):
     """生成单个文章页的完整HTML"""
+    lang = article.get('lang', 'zh-CN')
+
     slug = article['slug']
 
     # ── 相关工具（通过关键词匹配：标题/描述中提到哪些工具就推哪些）────
@@ -2423,7 +2446,7 @@ def build_article_page(article, all_articles, all_tools=None):
     content_html = markdown_to_html(article.get('content', ''))
 
     html = f'''<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{lang}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2630,6 +2653,8 @@ def replace_between_tags(html, start_tag, new_content):
 
 
 def build_index_page(tools, articles):
+    lang = 'zh-CN'
+
     # 生成静态首页
     index_html_template = os.path.join(BASE_DIR, 'index.html')
     with open(index_html_template, 'r', encoding='utf-8') as f:

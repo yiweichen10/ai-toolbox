@@ -1159,6 +1159,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Descript",
+    "slug": "descript",
+    "emoji": "🎬",
+    "color": "#e15e3e",
+    "description": "AI视频和播客编辑工具，像编辑文档一样编辑音视频。支持自动转录、文字编辑音视频、AI降噪和去除填充词，是内容创作者的全能编辑工具。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "15万",
+    "badge": {
+      "type": "new",
+      "text": "HOT"
+    },
+    "url": "https://www.descript.com",
+    "price": "免费使用",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "CapCut AI",
     "slug": "capcut-ai",
     "emoji": "🎬",
@@ -1556,6 +1585,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Arc浏览器",
+    "slug": "arc-browser",
+    "emoji": "⚡️",
+    "color": "#0f263a",
+    "description": "AI增强的新一代浏览器，重新定义网页浏览体验。内置AI助手、空间组织和自动标签管理，是Chrome的替代品。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI效率"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "12万",
+    "badge": {
+      "type": null,
+      "text": "NEW"
+    },
+    "url": "https://arc.net",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "Comet",
     "slug": "comet",
     "emoji": "⚡️",
@@ -1779,6 +1837,34 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.make.com",
     "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Recraft",
+    "slug": "recraft",
+    "emoji": "🎨",
+    "color": "#079245",
+    "description": "AI矢量图和插画生成工具，生成可直接编辑的SVG矢量图。专注于品牌设计、插画和图标，是设计师的AI矢量设计利器。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "16万",
+    "badge": {
+      "type": "new",
+      "text": "HOT"
+    },
+    "url": "https://www.recraft.ai",
+    "price": "免费使用",
     "platform": "本地部署 / Web"
   }
 ];
@@ -2618,6 +2704,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Descript",
+    "slug": "descript",
+    "emoji": "🎬",
+    "color": "#e15e3e",
+    "description": "AI视频和播客编辑工具，像编辑文档一样编辑音视频。支持自动转录、文字编辑音视频、AI降噪和去除填充词，是内容创作者的全能编辑工具。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "15万",
+    "badge": {
+      "type": "new",
+      "text": "HOT"
+    },
+    "url": "https://www.descript.com",
+    "price": "免费使用",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "CapCut AI",
     "slug": "capcut-ai",
     "emoji": "🎬",
@@ -3015,6 +3130,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Arc浏览器",
+    "slug": "arc-browser",
+    "emoji": "⚡️",
+    "color": "#0f263a",
+    "description": "AI增强的新一代浏览器，重新定义网页浏览体验。内置AI助手、空间组织和自动标签管理，是Chrome的替代品。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI效率"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "12万",
+    "badge": {
+      "type": null,
+      "text": "NEW"
+    },
+    "url": "https://arc.net",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "Comet",
     "slug": "comet",
     "emoji": "⚡️",
@@ -3238,6 +3382,34 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.make.com",
     "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Recraft",
+    "slug": "recraft",
+    "emoji": "🎨",
+    "color": "#079245",
+    "description": "AI矢量图和插画生成工具，生成可直接编辑的SVG矢量图。专注于品牌设计、插画和图标，是设计师的AI矢量设计利器。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "16万",
+    "badge": {
+      "type": "new",
+      "text": "HOT"
+    },
+    "url": "https://www.recraft.ai",
+    "price": "免费使用",
     "platform": "本地部署 / Web"
   }
 ];
