@@ -454,7 +454,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
     faq_page_schema = ''
     if faq_schema_list:
         faq_sd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema_list}
-        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
+        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False, indent=2)}</script>'
 
     # Main Content
     content_md = tool.get('content', '')
@@ -469,8 +469,8 @@ def build_tool_page(tool, all_tools, all_articles=None):
            f'    <meta property="og:site_name" content="{_t("header_title")}">\n' \
            f'    <meta name="twitter:title" content="{escape_html(tool["name"])} - {_t("header_title")}">\n' \
            f'    <link rel="stylesheet" href="/css/style.css">\n' \
-           f'    <script type="application/ld+json">{json.dumps(breadcrumb_data)}</script>\n' \
-           f'    <script type="application/ld+json">{json.dumps(software_data)}</script>\n' \
+           f'    <script type="application/ld+json">{json.dumps(breadcrumb_data, ensure_ascii=False, indent=2)}</script>\n' \
+           f'    <script type="application/ld+json">{json.dumps(software_data, ensure_ascii=False, indent=2)}</script>\n' \
            f'{faq_page_schema}\n' \
            f'{BAIDU_TONGJI}\n</head>\n<body>\n    {global_nav}\n' \
            f'    <nav class="breadcrumb" aria-label="{_t("breadcrumb_nav")}">\n' \
@@ -581,7 +581,7 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
     faq_page_schema = ''
     if faq_schema:
         faq_sd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema}
-        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
+        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False, indent=2)}</script>'
 
     # Article Schema（对比文章也是Article类型）
     from datetime import datetime as _dt
@@ -753,7 +753,7 @@ def build_alternatives_page(alt_data, all_tools, all_articles=None):
     faq_page_schema = ''
     if faq_schema:
         faq_sd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema}
-        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
+        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False, indent=2)}</script>'
 
     from datetime import datetime as _dt2
     article_schema = {
@@ -1003,7 +1003,7 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
     faq_page_schema = ''
     if faq_schema_list:
         faq_sd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema_list}
-        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
+        faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False, indent=2)}</script>'
 
     # Article Schema
     from datetime import datetime as _dtq
@@ -1451,7 +1451,7 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
     faq_ps = ''
     if faq_schema_list:
         faq_sd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema_list}
-        faq_ps = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
+        faq_ps = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False, indent=2)}</script>'
 
     # Schema (use _rdt already imported above)
     # _dtr alias for backward compat

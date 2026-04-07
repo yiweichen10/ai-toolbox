@@ -10,9 +10,88 @@
     <meta property="og:site_name" content="AI工具宝箱">
     <meta name="twitter:title" content="Stable Diffusion - AI工具宝箱">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "\u9996\u9875", "item": "https://www.aitoolbox.hk/"}, {"@type": "ListItem", "position": 2, "name": "AI\u7ed8\u753b", "item": "https://www.aitoolbox.hk/category/ai-painting/"}, {"@type": "ListItem", "position": 3, "name": "Stable Diffusion", "item": "https://www.aitoolbox.hk/tools/stable-diffusion/"}]}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Stable Diffusion", "applicationCategory": "UtilitiesApplication", "operatingSystem": "\u672c\u5730\u90e8\u7f72 / Web", "description": "\u5f00\u6e90AI\u7ed8\u753b\u6a21\u578b\uff0c\u53ef\u672c\u5730\u90e8\u7f72\u514d\u8d39\u4f7f\u7528\u3002\u793e\u533a\u6d3b\u8dc3\uff0c\u6a21\u578b\u548cLoRA\u8d44\u6e90\u4e30\u5bcc\uff0c\u81ea\u5b9a\u4e49\u80fd\u529b\u6781\u5f3a\u3002", "datePublished": "2026-04-08", "dateModified": "2026-04-08", "offers": {"@type": "Offer", "price": "\u5b8c\u5168\u514d\u8d39\uff08\u9700GPU\uff09", "priceCurrency": "USD"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.5", "ratingCount": "9.1\u4e07"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Stable Diffusion免费吗？需要什么配置？", "acceptedAnswer": {"@type": "Answer", "text": "Stable Diffusion完全开源免费。但需要一定的硬件配置：至少需要NVIDIA显卡8GB显存（推荐12GB+）。没有好显卡的话，可以使用云端部署服务（如商汤的SenseNova等），按量付费。"}}, {"@type": "Question", "name": "Stable Diffusion和Midjourney哪个好？", "acceptedAnswer": {"@type": "Answer", "text": "Stable Diffusion免费开源、可本地部署、自定义性强（海量模型和LoRA），但需要技术能力和好显卡。Midjourney付费但使用简单、画质顶级、开箱即用。技术用户选SD，追求效率选MJ。"}}, {"@type": "Question", "name": "Stable Diffusion怎么上手？", "acceptedAnswer": {"@type": "Answer", "text": "推荐使用WebUI（如AUTOMATIC1111）或ComfyUI作为界面。新手可以先在云端平台（如Google Colab免费GPU）体验，再考虑本地部署。社区有大量教程和预设模型可以学习使用。"}}, {"@type": "Question", "name": "如何用Stable Diffusion生成高质量图片？", "acceptedAnswer": {"@type": "Answer", "text": "关键词是核心。基础公式：主体描述 + 风格 + 光线 + 画质。比如：'1girl, long hair, sunset beach, cinematic lighting, highly detailed, 8k'。另外要学会用Negative prompt（反向关键词）排除不想要的内容，比如：'low quality, blurry, distorted face'。"}}]}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.aitoolbox.hk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI绘画",
+      "item": "https://www.aitoolbox.hk/category/ai-painting/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Stable Diffusion",
+      "item": "https://www.aitoolbox.hk/tools/stable-diffusion/"
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Stable Diffusion",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "本地部署 / Web",
+  "description": "开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。",
+  "datePublished": "2026-04-08",
+  "dateModified": "2026-04-08",
+  "offers": {
+    "@type": "Offer",
+    "price": "完全免费（需GPU）",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "9.1万"
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Stable Diffusion免费吗？需要什么配置？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stable Diffusion完全开源免费。但需要一定的硬件配置：至少需要NVIDIA显卡8GB显存（推荐12GB+）。没有好显卡的话，可以使用云端部署服务（如商汤的SenseNova等），按量付费。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Stable Diffusion和Midjourney哪个好？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stable Diffusion免费开源、可本地部署、自定义性强（海量模型和LoRA），但需要技术能力和好显卡。Midjourney付费但使用简单、画质顶级、开箱即用。技术用户选SD，追求效率选MJ。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Stable Diffusion怎么上手？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "推荐使用WebUI（如AUTOMATIC1111）或ComfyUI作为界面。新手可以先在云端平台（如Google Colab免费GPU）体验，再考虑本地部署。社区有大量教程和预设模型可以学习使用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何用Stable Diffusion生成高质量图片？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "关键词是核心。基础公式：主体描述 + 风格 + 光线 + 画质。比如：'1girl, long hair, sunset beach, cinematic lighting, highly detailed, 8k'。另外要学会用Negative prompt（反向关键词）排除不想要的内容，比如：'low quality, blurry, distorted face'。"
+      }
+    }
+  ]
+}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {

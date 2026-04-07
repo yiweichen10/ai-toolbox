@@ -10,9 +10,112 @@
     <meta property="og:site_name" content="AI工具宝箱">
     <meta name="twitter:title" content="Midjourney - AI工具宝箱">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "\u9996\u9875", "item": "https://www.aitoolbox.hk/"}, {"@type": "ListItem", "position": 2, "name": "AI\u7ed8\u753b", "item": "https://www.aitoolbox.hk/category/ai-painting/"}, {"@type": "ListItem", "position": 3, "name": "Midjourney", "item": "https://www.aitoolbox.hk/tools/midjourney/"}]}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Midjourney", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Discord / Web", "description": "\u9876\u7ea7AI\u7ed8\u753b\u5de5\u5177\uff0c\u901a\u8fc7\u6587\u5b57\u63cf\u8ff0\u751f\u6210\u9ad8\u8d28\u91cf\u56fe\u7247\u3002V7\u7248\u672c\u753b\u8d28\u8fbe\u5230\u7167\u7247\u7ea7\uff0c\u652f\u6301\u98ce\u683c\u4e00\u81f4\u6027\uff0c\u8bbe\u8ba1\u5e08\u548c\u521b\u4f5c\u8005\u9996\u9009\u3002", "datePublished": "2026-04-08", "dateModified": "2026-04-08", "offers": {"@type": "Offer", "price": "\u57fa\u7840$10/\u6708\u8d77", "priceCurrency": "USD"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.5", "ratingCount": "10.2\u4e07"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Midjourney怎么用？为什么要在Discord里？", "acceptedAnswer": {"@type": "Answer", "text": "Midjourney通过Discord平台使用，在Discord频道输入/imagine命令加描述即可生成图片。虽然对新手不太友好，但Discord的社区生态非常丰富，可以看别人的作品、学习prompt技巧。也有第三方网站封装了Midjourney API，提供网页版使用。"}}, {"@type": "Question", "name": "Midjourney V7和之前的版本有多大提升？", "acceptedAnswer": {"@type": "Answer", "text": "V7版本实现了照片级画质输出，在细节质感、光影表现、人物真实感方面大幅提升。还改进了风格一致性控制，可以让同一角色在不同场景中保持一致的外观。风格参考功能也更强大。"}}, {"@type": "Question", "name": "Midjourney必须付费吗？没有免费试用吗？", "acceptedAnswer": {"@type": "Answer", "text": "Midjourney从2024年起取消了免费试用，最低$10/月的基础版。不过可以通过官方活动偶尔获得试用机会，或者使用第三方平台（如某些国内平台）体验类似功能。"}}, {"@type": "Question", "name": "Midjourney生成的图片版权归属谁？", "acceptedAnswer": {"@type": "Answer", "text": "根据Midjourney的服务条款，付费用户对生成的图片拥有使用权利，包括商用。但不能声称是人类的创作。Midjourney不主张生成图片的版权，但具体法律情况因地区而异。"}}, {"@type": "Question", "name": "如何注册Midjourney？", "acceptedAnswer": {"@type": "Answer", "text": "Midjourney不需要独立注册，直接在Discord里使用：1）注册Discord账号；2）加入Midjourney官方Discord服务器；3）进入#newbies频道开始使用。国内用户需要稳定的梯子才能正常访问Discord。"}}, {"@type": "Question", "name": "如何生成第一张Midjourney图片？", "acceptedAnswer": {"@type": "Answer", "text": "在频道输入框输入 /imagine，然后描述你想生成的内容，比如'A cute cat playing piano, cartoon style'。回车发送，等待约30秒到1分钟，AI会生成4张候选图片。收到结果后可以用U1-U4放大某张图，或V1-V4生成变体。"}}, {"@type": "Question", "name": "Midjourney会员怎么充值？", "acceptedAnswer": {"@type": "Answer", "text": "Midjourney基础会员10美元每月，可生成约200张图。充值方式：在Discord频道输入 /subscribe 会生成一个订阅链接，用支持美元的信用卡购买。如果没有国际支付条件，淘宝有代充服务，但建议找可信店铺。"}}]}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.aitoolbox.hk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI绘画",
+      "item": "https://www.aitoolbox.hk/category/ai-painting/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Midjourney",
+      "item": "https://www.aitoolbox.hk/tools/midjourney/"
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Midjourney",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Discord / Web",
+  "description": "顶级AI绘画工具，通过文字描述生成高质量图片。V7版本画质达到照片级，支持风格一致性，设计师和创作者首选。",
+  "datePublished": "2026-04-08",
+  "dateModified": "2026-04-08",
+  "offers": {
+    "@type": "Offer",
+    "price": "基础$10/月起",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "10.2万"
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Midjourney怎么用？为什么要在Discord里？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midjourney通过Discord平台使用，在Discord频道输入/imagine命令加描述即可生成图片。虽然对新手不太友好，但Discord的社区生态非常丰富，可以看别人的作品、学习prompt技巧。也有第三方网站封装了Midjourney API，提供网页版使用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Midjourney V7和之前的版本有多大提升？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "V7版本实现了照片级画质输出，在细节质感、光影表现、人物真实感方面大幅提升。还改进了风格一致性控制，可以让同一角色在不同场景中保持一致的外观。风格参考功能也更强大。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Midjourney必须付费吗？没有免费试用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midjourney从2024年起取消了免费试用，最低$10/月的基础版。不过可以通过官方活动偶尔获得试用机会，或者使用第三方平台（如某些国内平台）体验类似功能。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Midjourney生成的图片版权归属谁？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "根据Midjourney的服务条款，付费用户对生成的图片拥有使用权利，包括商用。但不能声称是人类的创作。Midjourney不主张生成图片的版权，但具体法律情况因地区而异。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何注册Midjourney？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midjourney不需要独立注册，直接在Discord里使用：1）注册Discord账号；2）加入Midjourney官方Discord服务器；3）进入#newbies频道开始使用。国内用户需要稳定的梯子才能正常访问Discord。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何生成第一张Midjourney图片？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "在频道输入框输入 /imagine，然后描述你想生成的内容，比如'A cute cat playing piano, cartoon style'。回车发送，等待约30秒到1分钟，AI会生成4张候选图片。收到结果后可以用U1-U4放大某张图，或V1-V4生成变体。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Midjourney会员怎么充值？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midjourney基础会员10美元每月，可生成约200张图。充值方式：在Discord频道输入 /subscribe 会生成一个订阅链接，用支持美元的信用卡购买。如果没有国际支付条件，淘宝有代充服务，但建议找可信店铺。"
+      }
+    }
+  ]
+}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
