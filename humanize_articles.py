@@ -1,5 +1,5 @@
 """
-去AI味处理脚本 - 基于去AI味技能指南
+去AI味处理脚本 - 基于去AI味技能指南 (修复版)
 """
 
 import re, json, sys
@@ -21,23 +21,10 @@ AI_VOCAB = [
     "不难发现", "有目共睹",
 ]
 
-WATCH_WORDS_SIGNIFICANCE = [
-    "标志着", "意味着", "代表着", "预示着",
-    "凸显了", "揭示了", "说明了",
-    "发挥着重要作用", "具有重要意义",
-]
-
-WATCH_PHRASES_THREE = [
-    "第一、第二、第三",
-    "首先、其次、最后",
-    "其一、其二、其三",
-    "一方面、另一方面、此外",
-]
-
 def remove_em_dash(text):
     """把滥用em dash改成句号或逗号"""
-    # 去掉单独使用的 em dash 周围的空格
-    text = re.sub(r'\s*—\s*', ' ', text)
+    # 仅处理中文字符中间的破折号，且保留换行
+    text = re.sub(r'([^\n\s])\s*—\s*([^\n\s])', r'\1 \2', text)
     return text
 
 def fix_rule_of_three(text):
@@ -76,8 +63,8 @@ def fix_ai_vocab(text):
     """替换过度使用的AI词汇"""
     for word in AI_VOCAB:
         text = text.replace(word, '')
-    # 清理多余空格
-    text = re.sub(r'\s+', ' ', text)
+    # [修复] 仅清理多余的空格（水平空白），保留换行符
+    text = re.sub(r'[ \t]+', ' ', text)
     return text
 
 def fix_not_only_but(text):
@@ -87,10 +74,9 @@ def fix_not_only_but(text):
 
 def fix_specific(text):
     """处理具体问题"""
-    # 把标题型H3去掉
-    text = re.sub(r'^### (.+)$', r'\1', text, flags=re.MULTILINE)
-    # 把加粗去掉
-    text = re.sub(r'\*\*(.+?)\*\*', r'\1', text)
+    # [修复] 不再移除 Markdown 标题和加粗，保留文档结构
+    # text = re.sub(r'^### (.+)$', r'\1', text, flags=re.MULTILINE)
+    # text = re.sub(r'\*\*(.+?)\*\*', r'\1', text)
     return text
 
 def humanize(text):
@@ -106,7 +92,7 @@ def humanize(text):
     ]
     for step in steps:
         text = step(text)
-    # 清理多余空行
+    # 清理多余空行，最多保留两个连续换行
     text = re.sub(r'\n{3,}', '\n\n', text)
     text = text.strip()
     return text
@@ -121,11 +107,21 @@ print(f"Processing {len(drafts)} drafts...\n")
 processed = {}
 for slug, art in drafts.items():
     raw = art["content"]
-    humanized = humanize(raw)
-    print(f"[{slug}]")
+    # 核心修复：如果是英文文章（lang: en），跳过过度破坏的中文词汇处理，只做基础清理
+    is_english = art.get('lang') == 'en'
+    
+    if is_english:
+        # 英文仅做换行符清理和基本空格合并
+        text = re.sub(r'[ \t]+', ' ', raw)
+        text = re.sub(r'\n{3,}', '\n\n', text)
+        humanized = text.strip()
+    else:
+        humanized = humanize(raw)
+        
+    print(f"[{slug}] ({'EN' if is_english else 'ZH'})")
     print(f"  Original: {len(raw)} chars")
     print(f"  After:   {len(humanized)} chars")
-    print(f"  Preview: {humanized[:100]}...")
+    print(f"  Preview: {humanized[:100].replace('\n', ' ')}...")
     print()
     processed[slug] = humanized
 

@@ -107,47 +107,37 @@ var _hmt = _hmt || [];
             
             <p>上周三凌晨两点，眼皮实在撑不住了，代码里那个诡异的Python报错还没搞定。随手把错误信息扔给ChatGPT，5秒——它就给对了。从那之后我这个十年老程序员，不得不承认：这玩意儿是真的香。
 </p>
-
 <p>注册那些坑
-别被OpenAI的界面吓到，直接去openai.com点Sign up，用Gmail最省事，国内手机号收验证码没问题。充值才是真正的坎——需要一张支持美元的信用卡，Depay虚拟卡在某宝一搜就有教程。不充值的话只能用GPT-3.5，代码能力差太多，建议直接充5美元起步。
+<br>别被OpenAI的界面吓到，直接去openai.com点Sign up，用Gmail最省事，国内手机号收验证码没问题。充值才是真正的坎——需要一张支持美元的信用卡，Depay虚拟卡在某宝一搜就有教程。不充值的话只能用GPT-3.5，代码能力差太多，建议直接充5美元起步。
 </p>
-
 <p>第一个真实案例：批量重命名文件
-我要写个Python脚本，把文件夹里的所有jpg文件前面加上日期前缀，但<code>os</code>模块的用法记不清了。直接问ChatGPT：
+<br>我要写个Python脚本，把文件夹里的所有jpg文件前面加上日期前缀，但<code>os</code>模块的用法记不清了。直接问ChatGPT：
 </p>
-
 <blockquote>用Python遍历指定文件夹下所有.jpg文件，在文件名前加上日期前缀，比如20230801_原文件名.jpg，给出完整代码并解释关键步骤</blockquote>
-
 <p>它秒回一段能直接跑的代码，注释写得跟老手写的一样：
 </p>
-
 <pre><code>import os
 <p>from datetime import datetime
 </p>
-
 <p>folder_path = "/path/to/your/folder"  # 你的实际路径
-date_prefix = datetime.now().strftime("%Y%m%d")
+<br>date_prefix = datetime.now().strftime("%Y%m%d")
 </p>
-
 <p>for filename in os.listdir(folder_path):
-    if filename.endswith(".jpg"):
-        new_name = f"{date_prefix}_{filename}"
-        os.rename(
-            os.path.join(folder_path, filename),
-            os.path.join(folder_path, new_name)
-        )
-        print(f"Renamed: {filename} -&gt; {new_name}")
-</code></pre>
+<br>    if filename.endswith(".jpg"):
+<br>        new_name = f"{date_prefix}_{filename}"
+<br>        os.rename(
+<br>            os.path.join(folder_path, filename),
+<br>            os.path.join(folder_path, new_name)
+<br>        )
+<br>        print(f"Renamed: {filename} -&gt; {new_name}")
+<br></code></pre>
 </p>
-
 <p>Debug的正确姿势
-当代码报错时，把<strong>完整报错信息+相关代码</strong>一起扔给AI。比说我昨天遇到Django报错"OperationalError: no such table"，把错误日志和models.py内容一并发过去，它直接回我："你忘记运行migrate了，先python manage.py makemigrations再migrate。"这种低级错误人查半小时，AI5秒解决。
+<br>当代码报错时，把<strong>完整报错信息+相关代码</strong>一起扔给AI。比说我昨天遇到Django报错"OperationalError: no such table"，把错误日志和models.py内容一并发过去，它直接回我："你忘记运行migrate了，先python manage.py makemigrations再migrate。"这种低级错误人查半小时，AI5秒解决。
 </p>
-
 <p>三个月用下来的真实感受
-最崩溃的是：AI偶尔会一本正经地胡说八道，特别是数学计算，代码跑不通是常事。最爽的是：你知道要什么但懒得查文档，它10秒给你写好。
+<br>最崩溃的是：AI偶尔会一本正经地胡说八道，特别是数学计算，代码跑不通是常事。最爽的是：你知道要什么但懒得查文档，它10秒给你写好。
 </p>
-
 <p>彩蛋：试试对它说"用Python画一只会动的柴犬"，你会回来谢我的。
 </p>
         </article>

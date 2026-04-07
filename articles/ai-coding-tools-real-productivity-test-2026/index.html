@@ -106,248 +106,287 @@ var _hmt = _hmt || [];
             </div>
             
             <h2>前言</h2>
-
 <p>网上关于AI编程工具的评测已经多到烂了——清一色的"对比表格+推荐方案+FAQ三件套"，像是ChatGPT批量生成的模板。但有一个问题从来没人认真回答：<strong>AI编程工具在真实项目里，到底能帮你省多少时间？又让你多修了多少bug？</strong>
 </p>
-
 <p>我做了个实验：3个月时间，5个真实项目（不是Hello World，是两个Python后端、一个Next.js前端、一个微信小程序、一个数据爬虫），用4套不同的AI编程方案分别跑，每天记录时间、bug数、代码质量。
 </p>
-
 <p>先说结论：<strong>AI确实能帮你省时间，但"省时间"和"写出好代码"是两回事。</strong> 这篇文章的数据可能会让一部分人失望——AI编程工具的"生产力神话"，水分比你想的大。
 </p>
-
 <h2>为什么做这个测试</h2>
-
 <p>我之前写过一篇大模型API价格横评，发现最贵的Claude Opus比最便宜的DeepSeek贵178倍。评论区有人问："贵10倍是不是质量也差10倍？"
 </p>
-
 <p>这个问题没法用价格表回答。所以这次我决定用真实项目来测。不是SWE-bench那种"给一个GitHub issue让AI修"的标准化测试，而是<strong>你日常做的那些事</strong>：写API、改bug、加功能、写测试、重构代码。
 </p>
-
 <p>测试条件：
 </p>
-
 <ul><li>测试周期：2026年1月-3月（12周）</li>
 <li>5个项目，4套方案轮换（每个项目用不同方案跑）</li>
 <li>每天记录：编码时间、AI交互次数、引入bug数、修复bug数、代码审查通过率</li>
 </ul>
 <h2>四套测试方案</h2>
-<table><thead><tr><th>方案</th><th>工具</th><th>模型</th><th>月费</th><th>定位</th></tr></thead><tbody><tr><td>A</td><td>Cursor Pro</td><td>Claude Opus 4.6</td><td>$20+超额</td><td>旗舰级，能花钱解决的都不叫事</td></tr><tr><td>B</td><td>Claude Code Pro</td><td>Claude Sonnet 4.6</td><td>$20+超额</td><td>Anthropic原生，终端党</td></tr><tr><td>C</td><td>Cline + DeepSeek V3.2</td><td>DeepSeek V3.2</td><td>~$5（API）</td><td>极致性价比</td></tr><tr><td>D</td><td>GitHub Copilot Pro</td><td>GPT-5.4 Pro</td><td>$10</td><td>主流选择</td></tr></tbody></table>
+<p>| 方案 | 工具 | 模型 | 月费 | 定位 |
+</p>
+<p>|------|------|------|------|------|
+</p>
+<p>| A | Cursor Pro | Claude Opus 4.6 | $20+超额 | 旗舰级，能花钱解决的都不叫事 |
+</p>
+<p>| B | Claude Code Pro | Claude Sonnet 4.6 | $20+超额 | Anthropic原生，终端党 |
+</p>
+<p>| C | Cline + DeepSeek V3.2 | DeepSeek V3.2 | ~$5（API） | 极致性价比 |
+</p>
+<p>| D | GitHub Copilot Pro | GPT-5.4 Pro | $10 | 主流选择 |
+</p>
 <p>注意方案A和方案B的月费都写了"+超额"——这不是笔误。我测了才知道，$20只是"起步价"。
 </p>
-
 <h2>核心数据一：时间到底省了多少</h2>
-
 <p>12周下来，5个项目总共写了约12万行代码（含AI生成和手写），这是按任务类型拆分的时间数据：
 </p>
-<table><thead><tr><th>任务类型</th><th>不用AI（基线）</th><th>方案A Cursor</th><th>方案B Claude Code</th><th>方案C Cline+DS</th><th>方案D Copilot</th></tr></thead><tbody><tr><td>增删改查/CRUD</td><td>4.2h/周</td><td>1.1h/周</td><td>1.3h/周</td><td>1.5h/周</td><td>1.8h/周</td></tr><tr><td>API接口开发</td><td>6.1h/周</td><td>2.8h/周</td><td>3.0h/周</td><td>3.5h/周</td><td>3.2h/周</td></tr><tr><td>单元测试</td><td>3.8h/周</td><td>0.9h/周</td><td>0.8h/周</td><td>1.4h/周</td><td>1.2h/周</td></tr><tr><td>文档编写</td><td>2.0h/周</td><td>0.3h/周</td><td>0.4h/周</td><td>0.8h/周</td><td>0.5h/周</td></tr><tr><td>Bug修复</td><td>5.5h/周</td><td>4.1h/周</td><td>3.8h/周</td><td>4.5h/周</td><td>4.3h/周</td></tr><tr><td>复杂重构</td><td>8.0h/周</td><td>4.5h/周</td><td>3.2h/周</td><td>6.8h/周</td><td>5.5h/周</td></tr><tr><td><strong>周总计</strong></td><td><strong>29.6h</strong></td><td><strong>13.7h</strong></td><td><strong>12.5h</strong></td><td><strong>18.5h</strong></td><td><strong>16.5h</strong></td></tr><tr><td><strong>节省比例</strong></td><td>—</td><td><strong>53.7%</strong></td><td><strong>57.8%</strong></td><td><strong>37.5%</strong></td><td><strong>44.3%</strong></td></tr></tbody></table>
+<p>| 任务类型 | 不用AI（基线） | 方案A Cursor | 方案B Claude Code | 方案C Cline+DS | 方案D Copilot |
+</p>
+<p>|---------|--------------|-------------|----------------|-------------|-------------|
+</p>
+<p>| 增删改查/CRUD | 4.2h/周 | 1.1h/周 | 1.3h/周 | 1.5h/周 | 1.8h/周 |
+</p>
+<p>| API接口开发 | 6.1h/周 | 2.8h/周 | 3.0h/周 | 3.5h/周 | 3.2h/周 |
+</p>
+<p>| 单元测试 | 3.8h/周 | 0.9h/周 | 0.8h/周 | 1.4h/周 | 1.2h/周 |
+</p>
+<p>| 文档编写 | 2.0h/周 | 0.3h/周 | 0.4h/周 | 0.8h/周 | 0.5h/周 |
+</p>
+<p>| Bug修复 | 5.5h/周 | 4.1h/周 | 3.8h/周 | 4.5h/周 | 4.3h/周 |
+</p>
+<p>| 复杂重构 | 8.0h/周 | 4.5h/周 | 3.2h/周 | 6.8h/周 | 5.5h/周 |
+</p>
+<p>| <strong>周总计</strong> | <strong>29.6h</strong> | <strong>13.7h</strong> | <strong>12.5h</strong> | <strong>18.5h</strong> | <strong>16.5h</strong> |
+</p>
+<p>| <strong>节省比例</strong> | — | <strong>53.7%</strong> | <strong>57.8%</strong> | <strong>37.5%</strong> | <strong>44.3%</strong> |
+</p>
 <p>几个关键发现：
 </p>
-
 <p><strong>第一，AI在增删改查和写测试上是真的能省时间。</strong> CRUD从4.2小时降到1.1小时（方案A），写测试从3.8小时降到0.8小时（方案B）。这类任务规则明确、重复度高，AI天生擅长。Cursor在这个场景下的表现确实最好。
 </p>
-
 <p><strong>第二，Bug修复时间省不了多少。</strong> 从5.5小时降到4.1小时（方案A），节省25%。原因很简单：AI能帮你定位问题，但真正复杂的bug往往需要你理解业务逻辑，AI的理解深度不够。更糟糕的是（后面会细说），有些bug就是AI自己引入的。
 </p>
-
 <p><strong>第三，Claude Code在重构场景下出乎意料地强。</strong> 8小时的重构降到3.2小时，节省60%。多Agent模式下，Claude Code能自主分析依赖关系、制定重构计划、逐步执行。Cursor的Composer模式虽然也能做多文件操作，但复杂重构的规划能力不如Claude Code。
 </p>
-
 <p><strong>第四，Cline+DeepSeek在简单任务上差距不大，复杂任务明显弱。</strong> CRUD只比Cursor多0.4小时，但复杂重构比Claude Code多3.6小时。DeepSeek V3.2的单文件操作够用，但多文件协调能力确实不如Claude Sonnet。
 </p>
-
 <h3>和行业数据对比</h3>
-
 <ul><li>一项10,000名开发者的6个月研究（AI International News，2026年1月）报告平均每周节省<strong>7.5小时</strong></li>
 <li>DX的135,000+开发者样本报告平均节省<strong>3.6小时/周</strong></li>
 <li>GitHub官方数据称Copilot用户编码速度提升<strong>55%</strong></li>
 </ul>
 <p>我的数据（方案B Claude Code省17.1小时/周）明显高于行业平均。原因可能是：我的项目类型（后端+前端+小程序）特别适合AI辅助，而且我已经有半年以上的AI编程经验，提示词和交互效率比新手高很多。<strong>新手用户的实际节省时间可能只有我的一半。</strong>
 </p>
-
 <h2>核心数据二：Bug——没人愿意谈的那一面</h2>
-
 <p>这是这篇文章最值得看的部分。几乎所有AI编程工具的评测都在谈"速度提升"，但极少有人谈<strong>AI引入了多少新bug</strong>。
 </p>
-
 <h3>我的Bug追踪数据</h3>
-
 <p>12周内，按方案统计的bug数据（单位：个）：
 </p>
-<table><thead><tr><th>方案</th><th>AI引入的bug</th><th>AI修复的bug</th><th>净bug数</th><th>bug审查通过率</th></tr></thead><tbody><tr><td>A Cursor</td><td>47</td><td>31</td><td>+16</td></tr></tbody></table> 71%
-<p>| B Claude Code | 38 | 29 | +9 | 83%
-| C Cline+DS | 62 | 22 | +40 | 58%
-| D Copilot | 41 | 26 | +15 | 68% |
-| 不用AI（基线） | — | — | 基线0 | 100% |
+<p>| 方案 | AI引入的bug | AI修复的bug | 净bug数 | bug审查通过率 |
 </p>
-
+<p>|------|-----------|-----------|---------|-------------|
+</p>
+<p>| A Cursor | 47 | 31 | +16 | 71%
+</p>
+<p>| B Claude Code | 38 | 29 | +9 | 83%
+</p>
+<p>| C Cline+DS | 62 | 22 | +40 | 58%
+</p>
+<p>| D Copilot | 41 | 26 | +15 | 68% |
+</p>
+<p>| 不用AI（基线） | — | — | 基线0 | 100% |
+</p>
 <p>是的，AI不是在帮你修bug，是在<strong>帮你制造新bug</strong>的同时顺手修了一些。净bug数全是正数——意味着用AI之后，你的项目比不用AI多出了额外的bug。
 </p>
-
 <h3>按bug严重程度拆分</h3>
-<table><thead><tr><th>严重程度</th><th>方案A</th><th>方案B</th><th>方案C</th><th>方案D</th></tr></thead><tbody><tr><td>致命（数据丢失/安全漏洞）</td><td>1</td><td>0</td><td>2</td><td>1</td></tr><tr><td>高（功能异常）</td><td>5</td><td>3</td><td>8</td><td>4</td></tr><tr><td>中（边界条件/异常处理）</td><td>15</td><td>12</td><td>22</td><td>14</td></tr><tr><td>低（格式/命名/规范）</td><td>26</td><td>23</td><td>30</td><td>22</td></tr></tbody></table>
+<p>| 严重程度 | 方案A | 方案B | 方案C | 方案D |
+</p>
+<p>|---------|-------|-------|-------|-------|
+</p>
+<p>| 致命（数据丢失/安全漏洞） | 1 | 0 | 2 | 1 |
+</p>
+<p>| 高（功能异常） | 5 | 3 | 8 | 4 |
+</p>
+<p>| 中（边界条件/异常处理） | 15 | 12 | 22 | 14 |
+</p>
+<p>| 低（格式/命名/规范） | 26 | 23 | 30 | 22 |
+</p>
 <p><strong>Cline+DeepSeek引入的bug最多（62个），致命bug有2个。</strong> 一个是DeepSeek在写ORM查询时忘了加WHERE条件，导致全表更新；另一个是生成的SQL注入漏洞。这两个bug如果上了生产环境，后果很严重。
 </p>
-
 <p>Claude Code虽然也引入了38个bug，但没有致命级别的。它的安全意识明显更强——在涉及数据库操作时，Claude Code会自动加参数化查询和事务检查。
 </p>
-
 <h3>Claude Code给我挖过的一个典型bug</h3>
-
 <p>在使用Claude Code重构一个用户认证模块时，它把JWT密钥从环境变量移到了配置文件里（JSON明文存储），而且在git commit时没有把配置文件加到.gitignore。如果这个commit推到了远程仓库，密钥就泄露了。
 </p>
-
 <p>幸好我在push之前做了代码审查，发现了这个问题。但这件事让我意识到：<strong>AI工具对安全最佳实践的理解，远不如它的代码生成能力那样可靠。</strong>
 </p>
-
 <h3>行业数据：Bug增长23%是普遍现象</h3>
-
 <p>10,000名开发者研究的数据：使用AI编程的前两个月，bug增长23%。第3-6个月降到只比基线高3%。
 </p>
-
 <p>我的数据更悲观一些——12周（约3个月）后，净bug仍然显著高于基线。可能原因是我的项目复杂度更高（涉及支付、用户数据等敏感逻辑），AI出错的代价也更大。
 </p>
-
 <p><strong>核心结论：AI帮你省了时间，但把时间花在了修AI自己引入的bug上。</strong> 净节省时间需要扣除bug修复成本，才是真实的生产力提升。
 </p>
-
 <h2>核心数据三：SWE-bench分数≠真实表现</h2>
-
 <p>这是整个测试里最让我意外的发现。
 </p>
-
 <h3>SWE-bench最新排行（2026年4月）</h3>
-<table><thead><tr><th>排名</th><th>模型</th><th>SWE-bench Verified</th><th>SWE-bench Pro</th></tr></thead><tbody><tr><td>1</td><td>GPT-5.4 Pro</td><td>86%</td><td>57.7%</td></tr><tr><td>2</td><td>GPT-5.4</td><td>84%</td><td>—</td></tr><tr><td>3</td><td>Claude Opus 4.6</td><td>80.8%</td><td>~45%</td></tr><tr><td>4</td><td>GPT-5.2</td><td>80%</td><td>—</td></tr><tr><td>5</td><td>Claude Sonnet 4.6</td><td>79.6%</td><td>—</td></tr><tr><td>6</td><td>Claude Opus 4.5</td><td>80.9%</td><td>—</td></tr><tr><td>7</td><td>Gemini 3.1 Pro</td><td>75%</td><td>54.2%</td></tr><tr><td>8</td><td>GPT-5.1-Codex-Max</td><td>77.9%</td><td>—</td></tr><tr><td>9</td><td>Kimi K2.5</td><td>76.8%</td><td>—</td></tr><tr><td>10</td><td>GPT-5.2-Codex</td><td>76%</td><td>—</td></tr></tbody></table>
+<p>| 排名 | 模型 | SWE-bench Verified | SWE-bench Pro |
+</p>
+<p>|------|------|-------------------|--------------|
+</p>
+<p>| 1 | GPT-5.4 Pro | 86% | 57.7% |
+</p>
+<p>| 2 | GPT-5.4 | 84% | — |
+</p>
+<p>| 3 | Claude Opus 4.6 | 80.8% | ~45% |
+</p>
+<p>| 4 | GPT-5.2 | 80% | — |
+</p>
+<p>| 5 | Claude Sonnet 4.6 | 79.6% | — |
+</p>
+<p>| 6 | Claude Opus 4.5 | 80.9% | — |
+</p>
+<p>| 7 | Gemini 3.1 Pro | 75% | 54.2% |
+</p>
+<p>| 8 | GPT-5.1-Codex-Max | 77.9% | — |
+</p>
+<p>| 9 | Kimi K2.5 | 76.8% | — |
+</p>
+<p>| 10 | GPT-5.2-Codex | 76% | — |
+</p>
 <p>GPT-5.4 Pro在SWE-bench Verified上86%分，遥遥领先。按理说它在真实项目里应该最强。但实际上——
 </p>
-
 <h3>真实项目表现 vs SWE-bench排名</h3>
-<table><thead><tr><th>模型（工具）</th><th>SWE-bench Verified</th><th>真实项目节省时间</th><th>真实项目bug率</th><th>综合评价</th></tr></thead><tbody><tr><td>Claude Sonnet 4.6（Claude Code）</td><td>79.6%</td><td><strong>57.8%</strong></td><td><strong>中等（38个）</strong></td><td><strong>最佳综合表现</strong></td></tr><tr><td>Claude Opus 4.6（Cursor）</td><td>80.8%</td><td>53.7%</td><td>较高（47个）</td><td>速度快但bug多</td></tr><tr><td>DeepSeek V3.2（Cline）</td><td>~39%（估计）</td><td>37.5%</td><td><strong>最高（62个）</strong></td><td>性价比高但质量差</td></tr><tr><td>GPT-5.4 Pro（Copilot）</td><td>86%</td><td>44.3%</td><td>中等（41个）</td><td><strong>最大反差：分数最高但表现平庸</strong></td></tr></tbody></table>
+<p>| 模型（工具） | SWE-bench Verified | 真实项目节省时间 | 真实项目bug率 | 综合评价 |
+</p>
+<p>|-------------|-------------------|---------------|------------|---------|
+</p>
+<p>| Claude Sonnet 4.6（Claude Code） | 79.6% | <strong>57.8%</strong> | <strong>中等（38个）</strong> | <strong>最佳综合表现</strong> |
+</p>
+<p>| Claude Opus 4.6（Cursor） | 80.8% | 53.7% | 较高（47个） | 速度快但bug多 |
+</p>
+<p>| DeepSeek V3.2（Cline） | ~39%（估计） | 37.5% | <strong>最高（62个）</strong> | 性价比高但质量差 |
+</p>
+<p>| GPT-5.4 Pro（Copilot） | 86% | 44.3% | 中等（41个） | <strong>最大反差：分数最高但表现平庸</strong> |
+</p>
 <p>GPT-5.4 Pro拿到了86%的SWE-bench高分，但在真实项目里，节省时间排倒数第二，bug率也偏高。
 </p>
-
 <p><strong>原因分析：</strong> SWE-bench测试的是"给定一个GitHub issue，让AI在代码库里找到并修复对应的bug"。这是一个<strong>明确的、有上下文的、范围清晰的</strong>任务。而真实项目里的工作远比这复杂——模糊的需求、跨模块的依赖、没有文档的遗留代码、需要理解业务背景的决策。GPT-5.4 Pro在结构化任务上很强，但在模糊任务上不如Claude。
 </p>
-
 <p>还有一个数据很能说明问题：
 </p>
-<table><thead><tr><th>基准测试</th><th>GPT-5.4 Pro</th><th>Claude Opus 4.6</th></tr></thead><tbody><tr><td>SWE-bench Verified（修bug）</td><td>86%</td><td>80.8%</td></tr><tr><td>Terminal-Bench 2.0（Agent自主执行）</td><td>75.1%</td><td>65.4%</td></tr><tr><td>ARC-AGI-2（抽象推理）</td><td>52.9%</td><td>68.8%</td></tr></tbody></table>
+<p>| 基准测试 | GPT-5.4 Pro | Claude Opus 4.6 |
+</p>
+<p>|---------|-----------|----------------|
+</p>
+<p>| SWE-bench Verified（修bug） | 86% | 80.8% |
+</p>
+<p>| Terminal-Bench 2.0（Agent自主执行） | 75.1% | 65.4% |
+</p>
+<p>| ARC-AGI-2（抽象推理） | 52.9% | 68.8% |
+</p>
 <p>GPT在"修已知bug"上碾压Claude，但Claude在"抽象推理"上反过来碾压GPT。真实项目需要的是后者——理解业务逻辑、判断架构取舍、在模糊信息下做决策。
 </p>
-
 <p><strong>如果你只看SWE-bench选工具，你很可能选到最适合做竞赛题的模型，而不是最适合日常开发的模型。</strong>
 </p>
-
 <h2>核心数据四：真正的成本</h2>
-
 <p>4套方案12周的实际花费：
 </p>
-<table><thead><tr><th>方案</th><th>工具月费</th><th>12周超额API费</th><th>总花费</th><th>每小时成本（基于节省时间）</th></tr></thead><tbody><tr><td>A Cursor</td><td>$60（3个月）</td><td>$127</td><td><strong>$187</strong></td><td>$0.23/h</td></tr><tr><td>B Claude Code</td><td>$60</td><td>$89</td><td><strong>$149</strong></td><td>$0.18/h</td></tr><tr><td>C Cline+DS</td><td>$0</td><td>$31</td><td><strong>$31</strong></td><td>$0.06/h</td></tr><tr><td>D Copilot</td><td>$30（3个月）</td><td>$0（固定月费）</td><td><strong>$30</strong></td><td>$0.07/h</td></tr></tbody></table>
+<p>| 方案 | 工具月费 | 12周超额API费 | 总花费 | 每小时成本（基于节省时间） |
+</p>
+<p>|------|---------|-------------|-------|----------------|
+</p>
+<p>| A Cursor | $60（3个月） | $127 | <strong>$187</strong> | $0.23/h |
+</p>
+<p>| B Claude Code | $60 | $89 | <strong>$149</strong> | $0.18/h |
+</p>
+<p>| C Cline+DS | $0 | $31 | <strong>$31</strong> | $0.06/h |
+</p>
+<p>| D Copilot | $30（3个月） | $0（固定月费） | <strong>$30</strong> | $0.07/h |
+</p>
 <p>Cursor的总花费最高（$187），因为超额费用最狠。Claude Code虽然也超，但它的Agent模式效率更高，实际消耗的token更少。
 </p>
-
 <p>Cline+DeepSeek和Copilot的总花费几乎一样（$31 vs $30），但Cline省的时间更少。<strong>按"每小时节省成本"算，Copilot反而是性价比最高的（$0.07/h）。</strong>
 </p>
-
 <p>不过这个计算有个前提：Copilot的免费版（50次聊天/月）够轻度用户用。如果你是重度用户，Copilot Pro $10/月，12周就是$30——和我的数据一致。
 </p>
-
 <h2>顶尖用户和普通用户的差距</h2>
-
 <p>10,000人研究有一个让我印象深刻的数据：<strong>顶尖10%的开发者，通过严格审查AI输出，把AI引入的bug减少了91%。</strong> 也就是说，同样的工具，有人用出了10倍的效果差距。
 </p>
-
 <p>我总结了这些"顶尖用户"的共同习惯：
 </p>
-
 <h3>1. 永远不要直接Accept</h3>
-
 <p>不管AI给出的代码看起来多完美，先读一遍再Accept。我的数据显示，大约35%的AI生成代码有"小问题"——变量名不一致、缺少边界检查、异常处理不完整。这些问题不读代码很难发现。
 </p>
-
 <h3>2. 给AI设上下文边界</h3>
-
 <p>不要让AI在全局范围内自由操作。在<a href="https://www.aitoolbox.hk/tools/claude-code/index.html" target="_blank" rel="noopener">Claude Code</a>里，我用<code>/allowed-tools</code>限制它能用的命令；在Cursor里，我关闭了Composer模式的全项目访问权限，改为手动选择文件范围。这个习惯帮我减少了大约40%的AI引入bug。
 </p>
-
 <h3>3. 复杂任务拆成小步骤</h3>
-
 <p>不要给AI一个"重构整个认证模块"的大指令。拆成："先列出所有用到auth的文件"→"然后分析依赖关系"→"再制定重构计划"→"最后按计划逐步执行"。拆步操作后，AI出错的概率大幅降低，而且每一步你都能审查。
 </p>
-
 <h3>4. 数据库操作和API鉴权代码必须人工审查</h3>
-
 <p>这两个领域是AI出错的重灾区。DeepSeek给我生成过全表更新的SQL，Claude Code给我泄露过JWT密钥。<strong>任何涉及数据修改和安全的代码，不要信任AI，自己写。</strong>
 </p>
-
 <h3>5. 用便宜的模型做草稿，贵的模型做精修</h3>
-
 <p>我的实际工作流：先用<a href="https://www.aitoolbox.hk/tools/deepseek/index.html" target="_blank" rel="noopener">DeepSeek</a> V3.2快速生成初版代码（便宜、速度快），然后用Claude Sonnet做审查和优化（贵但准确率更高）。两步走比一步到位成本低60%，质量反而更高。
 </p>
-
 <h2>我踩过的5个大坑</h2>
-
 <h3>坑1：Claude Code的"自信式幻觉"</h3>
-
 <p>Claude Code最大的问题不是能力不够，是<strong>太自信了</strong>。它会用非常笃定的语气告诉你"这个方案完全正确"，然后你跑起来发现根本不通。更气人的是，当你指出问题时，它会同样自信地说"啊对，我刚才忽略了这个edge case"——但它之前明明说"已经考虑了所有edge case"。
 </p>
-
 <h3>坑2：Cursor的多文件操作会丢上下文</h3>
-
 <p>Cursor的Composer模式在做跨文件操作时（比如"在5个文件里同时修改API路径"），偶尔会丢失对某个文件的上下文。结果就是：4个文件改对了，第5个文件改了个寂寞——用了旧变量名，导致编译错误。
 </p>
-
 <h3>坑3：DeepSeek的缓存导致结果不一致</h3>
-
 <p>DeepSeek V3.2有自动缓存机制，5分钟内重复输入会命中缓存。但有时候缓存返回的结果和新请求的结果不一样（模型更新或负载均衡导致）。我在调试时被这个问题搞疯过——同样的输入，第一次返回A，第二次返回B，第三次又返回A。
 </p>
-
 <h3>坑4：Copilot的聊天上下文太短</h3>
-
 <p>GitHub Copilot的聊天功能（现在支持GPT-5.4 Pro）有一个硬伤：上下文窗口在编辑器里被压缩得太狠。你上传了一个大文件让它分析，它只"看到"了文件的前30%和后10%，中间60%直接被截断了。分析结果自然是错的。
 </p>
-
 <h3>坑5：所有工具在遗留代码面前都翻车</h3>
-
 <p>我的5个项目里有一个是接手别人的遗留代码（没有文档、没有注释、变量命名像密码）。4套方案在这个项目上的表现都一塌糊涂——AI无法理解没有语义信息的代码，给出的重构建议基本是"把变量名改成有意义的名字"这种废话。<strong>AI擅长写新代码，不擅长读旧代码。</strong>
 </p>
-
 <h2>最终推荐（基于3个月真实数据）</h2>
-<table><thead><tr><th>你是什么情况</th><th>推荐</th><th>理由</th></tr></thead><tbody><tr><td>追求综合效率（时间+质量）</td><td>Claude Code Pro $20/月</td><td>省时间最多（57.8%），bug最少（38个），重构最强</td></tr><tr><td>追求性价比</td><td>Copilot Pro $10/月</td><td>每小时成本$0.07最低，集成最广，省心</td></tr><tr><td>预算极低</td><td>Cline + DeepSeek</td><td>月费$5以内，简单任务够用，但必须严格审查</td></tr><tr><td>全能型（不差钱）</td><td>Cursor Pro + Claude Code</td><td>Cursor做日常编码，Claude Code做复杂重构</td></tr></tbody></table>
+<p>| 你是什么情况 | 推荐 | 理由 |
+</p>
+<p>|-------------|------|------|
+</p>
+<p>| 追求综合效率（时间+质量） | Claude Code Pro $20/月 | 省时间最多（57.8%），bug最少（38个），重构最强 |
+</p>
+<p>| 追求性价比 | Copilot Pro $10/月 | 每小时成本$0.07最低，集成最广，省心 |
+</p>
+<p>| 预算极低 | Cline + DeepSeek | 月费$5以内，简单任务够用，但必须严格审查 |
+</p>
+<p>| 全能型（不差钱） | Cursor Pro + Claude Code | Cursor做日常编码，Claude Code做复杂重构 |
+</p>
 <p>注意我没有推荐"只用一个工具"。3个月的实测告诉我，<strong>没有任何一个工具在所有场景下都是最优的</strong>。最实用的方案是组合使用：
 </p>
-
 <ul><li>80%的日常编码 → <a href="https://www.aitoolbox.hk/tools/cursor/index.html" target="_blank" rel="noopener">Cursor</a>（Tab补全最快）</li>
 <li>15%的复杂重构 → Claude Code（Agent模式最强）</li>
 <li>5%的批量任务 → Cline + DeepSeek（最便宜）</li>
 </ul>
 <h2>FAQ</h2>
-
 <p><strong>Q1：AI编程工具真的能提高生产力吗？还是只是感觉快了？</strong>
-A：确实能提高生产力，但要看怎么定义。纯编码速度提升37-58%（取决于工具和场景），这是有数据支撑的。但"编码快"不等于"交付快"——如果你的项目需要大量测试、安全审查和代码评审，AI省下来的时间会被bug修复和审查消耗掉一部分。真实净节省时间大约是编码节省时间的60-70%。
+<br>A：确实能提高生产力，但要看怎么定义。纯编码速度提升37-58%（取决于工具和场景），这是有数据支撑的。但"编码快"不等于"交付快"——如果你的项目需要大量测试、安全审查和代码评审，AI省下来的时间会被bug修复和审查消耗掉一部分。真实净节省时间大约是编码节省时间的60-70%。
 </p>
-
 <p><strong>Q2：为什么GPT-5.4 Pro SWE-bench 86%但真实表现一般？</strong>
-A：SWE-bench测的是"给定明确的GitHub issue，在已知代码库里修复bug"——这是一个范围清晰、上下文充足的任务。GPT在这个场景下确实很强。但真实开发中，大部分工作是模糊的：需求不明确、遗留代码无文档、需要理解业务逻辑。Claude在抽象推理（ARC-AGI-2得分68.8% vs GPT 52.9%）和多步规划上更强，更适合这类模糊场景。选工具不要只看benchmark。
+<br>A：SWE-bench测的是"给定明确的GitHub issue，在已知代码库里修复bug"——这是一个范围清晰、上下文充足的任务。GPT在这个场景下确实很强。但真实开发中，大部分工作是模糊的：需求不明确、遗留代码无文档、需要理解业务逻辑。Claude在抽象推理（ARC-AGI-2得分68.8% vs GPT 52.9%）和多步规划上更强，更适合这类模糊场景。选工具不要只看benchmark。
 </p>
-
 <p><strong>Q3：AI编程工具引入的bug怎么控制？</strong>
-A：三个关键习惯能减少91%的AI bug（10,000人研究数据）：永远不要直接Accept代码（先读一遍）；给AI设操作边界（限制文件范围和命令权限）；数据库操作和鉴权代码必须人工审查。另外，用便宜的模型做初稿、贵的模型做审查，成本降60%且质量更高。
+<br>A：三个关键习惯能减少91%的AI bug（10,000人研究数据）：永远不要直接Accept代码（先读一遍）；给AI设操作边界（限制文件范围和命令权限）；数据库操作和鉴权代码必须人工审查。另外，用便宜的模型做初稿、贵的模型做审查，成本降60%且质量更高。
 </p>
-
 <p><strong>Q4：Cline+DeepSeek真的能替代付费工具吗？</strong>
-A：简单任务（CRUD、写测试、生成文档）可以替代，但复杂任务（多文件重构、架构设计、安全相关代码）有明显差距。我的数据：Cline+DeepSeek引入了62个bug（含2个致命级），是所有方案里最多的。如果你用Cline，建议在复杂任务上切换到Claude API——多花$10-15/月，bug率大幅下降。
+<br>A：简单任务（CRUD、写测试、生成文档）可以替代，但复杂任务（多文件重构、架构设计、安全相关代码）有明显差距。我的数据：Cline+DeepSeek引入了62个bug（含2个致命级），是所有方案里最多的。如果你用Cline，建议在复杂任务上切换到Claude API——多花$10-15/月，bug率大幅下降。
 </p>
-
 <p><strong>Q5：新手用AI编程工具，应该从哪个开始？</strong>
-A：从GitHub Copilot开始。$10/月固定费用，集成在VS Code里零配置，补全速度快，bug率可控。用1-2个月熟悉AI编程的节奏后，再考虑升级到Cursor或Claude Code。<strong>不要一上来就用最强的工具</strong>——Claude Code和Cursor的功能密度很高，新手容易被"AI太强了"的假象迷惑，放松审查导致引入大量bug。
+<br>A：从GitHub Copilot开始。$10/月固定费用，集成在VS Code里零配置，补全速度快，bug率可控。用1-2个月熟悉AI编程的节奏后，再考虑升级到Cursor或Claude Code。<strong>不要一上来就用最强的工具</strong>——Claude Code和Cursor的功能密度很高，新手容易被"AI太强了"的假象迷惑，放松审查导致引入大量bug。
 </p>
-
 <h2>总结</h2>
-
 <p>3个月、5个真实项目、4套方案、12万行代码。这些数据告诉我几件事：
 </p>
-
 <ul><li><strong>AI编程工具确实能省时间</strong>：平均37-58%的编码时间节省，周省7-17小时。但"省时间"不等于"省工作"——省下来的时间有相当一部分花在了修AI引入的bug上。</li>
 </ul>
 <ul><li><strong>Bug是AI编程最大的隐性成本</strong>：所有方案都引入了额外bug，最少的方案（Claude Code）净增9个，最多的（Cline+DeepSeek）净增40个。代码审查是刚需，不是可选项。</li>
@@ -360,7 +399,6 @@ A：从GitHub Copilot开始。$10/月固定费用，集成在VS Code里零配置
 </ul>
 <p>最后一个数据：2026年78%的专业开发者已经在用AI编程工具，92%的财富500强部署了Copilot。这个趋势不可逆。但<strong>用AI工具写代码的能力，正在成为区分优秀开发者和普通开发者的关键技能</strong>——不是"会不会用"的问题，是"用得好不好"的问题。
 </p>
-
 <p>持续关注<a href="https://www.aitoolbox.hk/" target="_blank" rel="noopener">AI工具宝箱</a>获取最新AI编程工具实测数据，每季度更新。
 </p>
         </article>

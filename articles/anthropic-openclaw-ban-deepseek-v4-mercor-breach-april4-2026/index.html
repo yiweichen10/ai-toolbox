@@ -106,191 +106,259 @@ var _hmt = _hmt || [];
             </div>
             
             <h2>前言</h2>
-
 <p>2026年4月4日，AI圈没有给任何人喘息的机会。昨天微软MAI三件套+Qwen3.6+Gemma 4三连爆的热度还没散，今天又来了三颗炸弹——而且每一颗都在改写行业规则。
 </p>
-
 <p><strong>事件一</strong>：Anthropic宣布Claude订阅不再覆盖OpenClaw等第三方工具的使用量，从今天太平洋时间中午12点起正式生效。数百万用Claude订阅跑OpenClaw的开发者，一夜之间成本从$20/月变成了按量付费。
 </p>
-
 <p><strong>事件二</strong>：DeepSeek V4灰度测试曝光，SWE-bench Verified 83.7%，超过GPT-5和Claude Opus。自研Engram记忆机制、338种编程语言支持、百万级上下文——如果这些数据属实，开源编程模型的格局要变了。
 </p>
-
 <p><strong>事件三</strong>：AI数据供应商Mercor确认被TeamPCP黑客组织通过LiteLLM供应链攻击入侵，可能泄露了Meta、OpenAI、Anthropic的专有训练数据。Meta已暂停合作，OpenAI紧急调查。这不是普通的数据泄露——是AI行业的"原料配方"可能流入了暗网。
 </p>
-
 <p>三件事看似不相关，但串在一起看指向同一个趋势：<strong>AI行业正在从"野蛮生长"进入"规则重塑"阶段。</strong> Anthropic在收紧计费规则，DeepSeek在重写开源规则，Mercor事件则在敲响数据安全的警钟。
 </p>
-
 <h2>事件一：Anthropic封杀OpenClaw——$20/月的"无限量"时代结束了</h2>
-
 <h3>发生了什么</h3>
-
 <p>Anthropic在4月3日宣布，从4月4日太平洋时间中午12点（北京时间4月5日凌晨3点）起，Claude的订阅服务（Pro $20/月、Max $100/月）将不再覆盖通过第三方工具（如OpenClaw、Cline等）产生的使用量。
 </p>
-<table><thead><tr><th>变更项</th><th>旧政策</th><th>新政策</th></tr></thead><tbody><tr><td>订阅覆盖范围</td><td>Claude官网+第三方工具</td><td><strong>仅限Claude官网和官方产品</strong></td></tr><tr><td>第三方工具费用</td><td>包含在月费内</td><td><strong>按量付费（PAYG）</strong></td></tr><tr><td>生效时间</td><td>—</td><td>2026年4月4日</td></tr><tr><td>受影响工具</td><td>OpenClaw、Cline（Claude模式）等</td><td>主要为OpenClaw</td></tr></tbody></table>
+<p>| 变更项 | 旧政策 | 新政策 |
+</p>
+<p>|--------|--------|--------|
+</p>
+<p>| 订阅覆盖范围 | Claude官网+第三方工具 | <strong>仅限Claude官网和官方产品</strong> |
+</p>
+<p>| 第三方工具费用 | 包含在月费内 | <strong>按量付费（PAYG）</strong> |
+</p>
+<p>| 生效时间 | — | 2026年4月4日 |
+</p>
+<p>| 受影响工具 | OpenClaw、Cline（Claude模式）等 | 主要为OpenClaw |
+</p>
 <p>Anthropic官方给出的理由是：第三方工具给系统带来了"超乎寻常的压力"（outsized strain），影响了核心用户的体验。
 </p>
-
 <h3>对开发者的实际影响</h3>
-
 <p>这件事看起来只是改了个计费规则，但对AI编程工具生态的影响是地震级的。
 </p>
-
 <p><strong>直接受影响的用户</strong>：所有用Claude订阅（而非API）在OpenClaw上工作的开发者。此前，你付$20/月Pro订阅，可以在OpenClaw上无限使用Claude Sonnet。现在，这部分使用量要单独按API价格计算——Claude Sonnet的API价格是$3/MTok输入、$15/MTok输出。一个重度用户每月可能多花$30-80。
 </p>
-
 <p>Anthropic提供的过渡方案：
 </p>
-<table><thead><tr><th>补偿方案</th><th>内容</th><th>截止时间</th></tr></thead><tbody><tr><td>一次性抵扣金</td><td>相当于一个月订阅费的额度</td><td>4月17日前兑换</td></tr><tr><td>预购折扣</td><td>使用额度包最高30%折扣</td><td>持续有效</td></tr><tr><td>全额退款</td><td>不接受新条款可取消订阅并获得全额退款</td><td>4月17日前申请</td></tr></tbody></table>
+<p>| 补偿方案 | 内容 | 截止时间 |
+</p>
+<p>|----------|------|----------|
+</p>
+<p>| 一次性抵扣金 | 相当于一个月订阅费的额度 | 4月17日前兑换 |
+</p>
+<p>| 预购折扣 | 使用额度包最高30%折扣 | 持续有效 |
+</p>
+<p>| 全额退款 | 不接受新条款可取消订阅并获得全额退款 | 4月17日前申请 |
+</p>
 <h3>Anthropic的真实意图</h3>
-
 <p>Anthropic不是在"惩罚"第三方工具，而是在<strong>重新定义Claude的价值边界</strong>。
 </p>
-
 <p>Claude Code和Claude Cowork是Anthropic的官方产品，订阅收入直接归Anthropic。OpenClaw是第三方工具，Claude的使用量通过OpenClaw的API调用产生——Anthropic从中获得的收入远低于直接订阅。
 </p>
-
 <p>更重要的是，OpenClaw的使用模式是"挂机式"的——Agent自动执行任务，token消耗量远超人类对话。一个OpenClaw用户一晚上的token消耗，可能相当于100个Claude官网用户一周的用量。这对Anthropic的算力成本来说是巨大的负担。
 </p>
-<table><thead><tr><th>使用场景</th><th>平均token消耗/会话</th><th>Anthropic收入/会话</th></tr></thead><tbody><tr><td>Claude官网对话</td><td>5K-20K</td><td>$20/月（订阅费）</td></tr><tr><td>Claude Code（官方）</td><td>50K-500K</td><td>$20/月（订阅费）</td></tr><tr><td>OpenClaw Agent任务</td><td>200K-2M</td><td>$0（使用订阅额度）</td></tr></tbody></table>
+<p>| 使用场景 | 平均token消耗/会话 | Anthropic收入/会话 |
+</p>
+<p>|----------|-------------------|------------------|
+</p>
+<p>| Claude官网对话 | 5K-20K | $20/月（订阅费） |
+</p>
+<p>| Claude Code（官方） | 50K-500K | $20/月（订阅费） |
+</p>
+<p>| OpenClaw Agent任务 | 200K-2M | $0（使用订阅额度） |
+</p>
 <p>OpenClaw用户用$20/月消耗了Anthropic价值$50-200的算力。这个商业模型不可持续——Anthropic必须改。
 </p>
-
 <h3>对AI编程工具格局的影响</h3>
-
 <p>这个政策变更的直接后果是：
 </p>
-
 <ul><li><strong>OpenClaw用户成本大幅上升</strong>，部分用户可能转向直接用Claude Code（官方产品，订阅仍覆盖）</li>
 <li><strong>Cline用户如果用Claude API密钥（而非订阅），不受影响</strong>——API本来就是按量付费</li>
 <li><strong>Anthropic在推动用户从"订阅套利"转向"按使用付费"</strong>，长期看更公平，短期看用户有阵痛</li>
 </ul>
 <h3>谁不受影响</h3>
-
 <ul><li>Claude Code用户：官方产品，订阅完全覆盖</li>
 <li>Claude官网用户：完全不受影响</li>
 <li>使用Claude API密钥（而非订阅）的用户：本来就是按量付费，无变化</li>
 <li><a href="https://www.aitoolbox.hk/tools/cursor/index.html" target="_blank" rel="noopener">Cursor</a>用户：Cursor有自己的API计费体系，不受此政策影响</li>
 </ul>
 <h2>事件二：DeepSeek V4灰度测试——开源编程模型要变天了</h2>
-
 <h3>核心性能数据</h3>
-
 <p>DeepSeek V4的灰度测试数据已经在多个渠道曝光。如果这些数据属实，它将成为目前最强的开源编程模型——没有之一。
 </p>
-<table><thead><tr><th>基准测试</th><th>DeepSeek V4</th><th>GPT-5.4 Pro</th><th>Claude Opus 4.6</th><th>Qwen3.6-Plus</th></tr></thead><tbody><tr><td>SWE-bench Verified</td><td><strong>83.7%</strong></td><td>86%</td><td>80.8%</td><td>78.8%</td></tr><tr><td>HumanEval</td><td><strong>87.6%</strong></td><td>—</td><td>—</td><td>—</td></tr><tr><td>上下文长度</td><td><strong>100万token</strong></td><td>128K</td><td>200K</td><td>100万token</td></tr><tr><td>编程语言支持</td><td><strong>338种</strong></td><td>~100种</td><td>~80种</td><td>~200种</td></tr><tr><td>设计图转代码</td><td><strong>92%准确率</strong></td><td>无此功能</td><td>无此功能</td><td>~60%（估计）</td></tr></tbody></table>
+<p>| 基准测试 | DeepSeek V4 | GPT-5.4 Pro | Claude Opus 4.6 | Qwen3.6-Plus |
+</p>
+<p>|----------|------------|-------------|-----------------|-------------|
+</p>
+<p>| SWE-bench Verified | <strong>83.7%</strong> | 86% | 80.8% | 78.8% |
+</p>
+<p>| HumanEval | <strong>87.6%</strong> | — | — | — |
+</p>
+<p>| 上下文长度 | <strong>100万token</strong> | 128K | 200K | 100万token |
+</p>
+<p>| 编程语言支持 | <strong>338种</strong> | ~100种 | ~80种 | ~200种 |
+</p>
+<p>| 设计图转代码 | <strong>92%准确率</strong> | 无此功能 | 无此功能 | ~60%（估计） |
+</p>
 <p>几个关键信息：
 </p>
-
 <p><strong>第一，SWE-bench 83.7%，已经超过了Claude Opus 4.6（80.8%）</strong>，逼近GPT-5.4 Pro（86%）。考虑到V4还是灰度版本、未完全调优，正式版可能更高。开源模型在编程能力上追平闭源，这是第一次。
 </p>
-
 <p><strong>第二，Engram长期记忆机制</strong>是最大的架构创新。传统Transformer的记忆瓶颈在于：上下文窗口越大，推理成本指数级上升。DeepSeek的Engram机制将知识存储与推理解耦，实现近乎O(1)复杂度的知识检索——这意味着百万token上下文不再是"塞进去然后祈祷模型记得住"，而是"存起来随时精确调用"。
 </p>
-
 <p><strong>第三，338种编程语言支持</strong>。这个数字几乎是GPT-5.4（约100种）的3.4倍。对于使用小众语言（Rust、Elixir、Haskell等）的开发者来说，DeepSeek V4可能是唯一能"理解"他们代码的模型。
 </p>
-
 <p><strong>第四，Design2Code功能</strong>——给一张UI设计图，直接生成前端代码，准确率92%。我们之前测试Qwen3.6-Plus的多模态编程时，估计准确率约60%。如果DeepSeek V4真的能做到92%，这意味着前端开发者的生产力可能再次跃升。
 </p>
-
 <h3>架构创新：MoE + Engram</h3>
-<table><thead><tr><th>特性</th><th>DeepSeek V3.2</th><th>DeepSeek V4（灰度）</th></tr></thead><tbody><tr><td>架构</td><td>MoE（混合专家）</td><td>MoE + Engram记忆模块</td></tr><tr><td>参数量</td><td>671B（37B激活）</td><td>万亿级（具体未公布）</td></tr><tr><td>上下文</td><td>128K</td><td><strong>100万token</strong></td></tr><tr><td>记忆机制</td><td>无（标准上下文窗口）</td><td><strong>Engram条件记忆</strong></td></tr><tr><td>多模态</td><td>文本+图像理解</td><td><strong>文本+图像+视频端到端</strong></td></tr><tr><td>知识更新</td><td>需要重新训练</td><td><strong>动态知识库更新</strong></td></tr></tbody></table>
+<p>| 特性 | DeepSeek V3.2 | DeepSeek V4（灰度） |
+</p>
+<p>|------|--------------|-------------------|
+</p>
+<p>| 架构 | MoE（混合专家） | MoE + Engram记忆模块 |
+</p>
+<p>| 参数量 | 671B（37B激活） | 万亿级（具体未公布） |
+</p>
+<p>| 上下文 | 128K | <strong>100万token</strong> |
+</p>
+<p>| 记忆机制 | 无（标准上下文窗口） | <strong>Engram条件记忆</strong> |
+</p>
+<p>| 多模态 | 文本+图像理解 | <strong>文本+图像+视频端到端</strong> |
+</p>
+<p>| 知识更新 | 需要重新训练 | <strong>动态知识库更新</strong> |
+</p>
 <p>Engram是DeepSeek自研的记忆机制，名字来源于神经科学中的"记忆印迹"（Engram）概念。它的核心思想是：不要让模型"记住"所有东西，而是把知识存储在外部模块里，推理时按需检索。
 </p>
-
 <h3>对AI编程工具生态的影响</h3>
-
 <p>如果DeepSeek V4正式发布且性能达标，AI编程工具的性价比格局将再次被改写：
 </p>
-<table><thead><tr><th>方案</th><th>模型</th><th>SWE-bench</th><th>估算月费</th><th>推荐度</th></tr></thead><tbody><tr><td>Claude Code Pro</td><td>Claude Sonnet 4.6</td><td>79.6%</td><td>~$40</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td>Cline + DeepSeek V4</td><td>DeepSeek V4</td><td>83.7%</td><td>~$5-10</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td>Cursor Pro</td><td>Claude Opus 4.6</td><td>80.8%</td><td>~$60</td><td>⭐⭐⭐⭐</td></tr><tr><td>Cline + Qwen3.6-Plus</td><td>Qwen3.6-Plus</td><td>78.8%</td><td>~$5</td><td>⭐⭐⭐⭐</td></tr></tbody></table>
+<p>| 方案 | 模型 | SWE-bench | 估算月费 | 推荐度 |
+</p>
+<p>|------|------|-----------|---------|--------|
+</p>
+<p>| Claude Code Pro | Claude Sonnet 4.6 | 79.6% | ~$40 | ⭐⭐⭐⭐⭐ |
+</p>
+<p>| Cline + DeepSeek V4 | DeepSeek V4 | 83.7% | ~$5-10 | ⭐⭐⭐⭐⭐ |
+</p>
+<p>| Cursor Pro | Claude Opus 4.6 | 80.8% | ~$60 | ⭐⭐⭐⭐ |
+</p>
+<p>| Cline + Qwen3.6-Plus | Qwen3.6-Plus | 78.8% | ~$5 | ⭐⭐⭐⭐ |
+</p>
 <p><strong>Cline + DeepSeek V4可能在SWE-bench上超过Claude Code Pro，而成本只有八分之一。</strong> 这将是AI编程工具有史以来最大的性价比颠覆。
 </p>
-
 <p>不过有一个重要提醒：<strong>灰度数据≠正式版数据</strong>。DeepSeek V3发布前的爆料数据和最终版差距不大，但V4的架构跨度更大（新增Engram模块），灰度和正式版之间可能有调整。建议等正式发布后再做最终判断。
 </p>
-
 <h3>发布时间线</h3>
-<table><thead><tr><th>时间</th><th>事件</th></tr></thead><tbody><tr><td>2026年1月</td><td>小参数版灰度测试启动（部分社区适配）</td></tr><tr><td>2026年4月3日</td><td>多个渠道曝光大参数版灰度数据</td></tr><tr><td>2026年4月上旬（预计）</td><td><strong>正式发布（概率75%）</strong></td></tr><tr><td>原计划</td><td>2026年春节（2月中旬），已跳票</td></tr></tbody></table>
+<p>| 时间 | 事件 |
+</p>
+<p>|------|------|
+</p>
+<p>| 2026年1月 | 小参数版灰度测试启动（部分社区适配） |
+</p>
+<p>| 2026年4月3日 | 多个渠道曝光大参数版灰度数据 |
+</p>
+<p>| 2026年4月上旬（预计） | <strong>正式发布（概率75%）</strong> |
+</p>
+<p>| 原计划 | 2026年春节（2月中旬），已跳票 |
+</p>
 <p>DeepSeek创始人梁文锋亲自带队研发。此前V1到V3都是"按计划发布"，V4是第一次大幅跳票——说明架构创新确实有技术难度。
 </p>
-
 <h2>事件三：Mercor训练数据泄露——AI行业的"原料配方"流入了暗网</h2>
-
 <h3>事件链条</h3>
-
 <p>这是三件事里最令人不安的一个。
 </p>
-
 <pre><code>TeamPCP黑客组织
 <p>  → 入侵LiteLLM（AI API代理工具）
- → 在两个版本（1.82.7/1.82.8）中植入恶意代码
-  → 植入凭证窃取+K8s横向移动后门
-  → 影响数千家使用LiteLLM的组织
-  → Mercor（AI数据供应商）中招
-  → 专有训练数据可能泄露至暗网
-</code></pre>
+<br> → 在两个版本（1.82.7/1.82.8）中植入恶意代码
+<br>  → 植入凭证窃取+K8s横向移动后门
+<br>  → 影响数千家使用LiteLLM的组织
+<br>  → Mercor（AI数据供应商）中招
+<br>  → 专有训练数据可能泄露至暗网
+<br></code></pre>
 </p>
-
 <p><strong>LiteLLM</strong>是一个AI API代理工具，月下载量9500万次，大量AI公司用它来统一管理不同模型的API调用。攻击者在LiteLLM的两个版本中植入了后门代码——任何使用这两个版本的组织，其系统凭证和环境变量都可能被窃取。
 </p>
-
 <h3>Mercor是谁，为什么它泄露的数据这么重要</h3>
-
 <p>Mercor是一家价值100亿美元的AI数据服务公司，核心业务是为大型AI实验室提供<strong>定制化的专有训练数据</strong>。它的客户包括：
 </p>
-<table><thead><tr><th>客户</th><th>状态</th></tr></thead><tbody><tr><td>Meta</td><td><strong>已暂停合作</strong>，无限期停工</td></tr><tr><td>OpenAI</td><td>紧急调查中，尚未暂停</td></tr><tr><td>Anthropic</td><td>未置评</td></tr><tr><td>其他AI实验室</td><td>重新评估合作关系</td></tr></tbody></table>
+<p>| 客户 | 状态 |
+</p>
+<p>|------|------|
+</p>
+<p>| Meta | <strong>已暂停合作</strong>，无限期停工 |
+</p>
+<p>| OpenAI | 紧急调查中，尚未暂停 |
+</p>
+<p>| Anthropic | 未置评 |
+</p>
+<p>| 其他AI实验室 | 重新评估合作关系 |
+</p>
 <p>Mercor做的事情，本质上是"AI模型的饲料加工厂"。大型AI实验室（OpenAI、Meta、Anthropic）雇Mercor雇佣数千名人工承包商，为AI模型生成定制化的训练数据集——如何回答特定领域的问题、如何执行特定任务、如何验证答案的正确性。
 </p>
-
 <p><strong>这些数据集是AI模型的核心商业机密。</strong> 知道一家公司用什么数据、怎么训练的，就等于知道了它的"配方"。如果竞争对手拿到这些数据，可以复现类似的能力，甚至找到针对性攻击的方法。
 </p>
-
 <h3>泄露了什么</h3>
-
 <p>冒充Lapsus$的黑客在暗网声称拥有以下数据（真实性未完全确认）：
 </p>
-<table><thead><tr><th>数据类型</th><th>声称大小</th></tr></thead><tbody><tr><td>数据库</td><td>200GB+</td></tr><tr><td>源代码</td><td>近1TB</td></tr><tr><td>视频和其他文件</td><td>3TB</td></tr></tbody></table>
+<p>| 数据类型 | 声称大小 |
+</p>
+<p>|----------|----------|
+</p>
+<p>| 数据库 | 200GB+ |
+</p>
+<p>| 源代码 | 近1TB |
+</p>
+<p>| 视频和其他文件 | 3TB |
+</p>
 <p>如果这些数据确实包含Mercor为AI实验室生成的专有训练数据集，后果将是灾难性的。这相当于可口可乐的配方被公开了——虽然你有了配方，但你的生产线和品牌还是比不过可口可乐。不过，竞争对手可以基于这些数据更快地追赶，甚至找到你的模型在特定任务上的弱点。
 </p>
-
 <h3>为什么这件事和3月29日的LiteLLM事件有关联</h3>
-
 <p>3月29日的新闻速报里，我报道过LiteLLM遭TeamPCP供应链攻击的事件。当时的影响范围是"9500万月下载量受影响，3小时暴露窗口"。现在看来，那次攻击的实际影响远比当时报道的严重——<strong>Mercor就是那次攻击的最大受害者之一</strong>。
 </p>
-<table><thead><tr><th>对比</th><th>3月29日报道</th><th>4月4日更新</th></tr></thead><tbody><tr><td>攻击方式</td><td>LiteLLM供应链攻击</td><td>同一事件，影响扩大</td></tr><tr><td>受影响范围</td><td>"数千家组织"</td><td>确认包括Mercor（$100亿公司）</td></tr><tr><td>数据泄露</td><td>未确认</td><td>专有AI训练数据可能泄露</td></tr><tr><td>行业影响</td><td>安全警告级别</td><td>Meta暂停合作，OpenAI紧急调查</td></tr></tbody></table>
+<p>| 对比 | 3月29日报道 | 4月4日更新 |
+</p>
+<p>|------|------------|-------------|
+</p>
+<p>| 攻击方式 | LiteLLM供应链攻击 | 同一事件，影响扩大 |
+</p>
+<p>| 受影响范围 | "数千家组织" | 确认包括Mercor（$100亿公司） |
+</p>
+<p>| 数据泄露 | 未确认 | 专有AI训练数据可能泄露 |
+</p>
+<p>| 行业影响 | 安全警告级别 | Meta暂停合作，OpenAI紧急调查 |
+</p>
 <h3>对普通用户的影响</h3>
-
 <p>好消息：泄露的是AI模型训练数据，<strong>不是用户个人数据</strong>。OpenAI已声明用户对话数据未受影响。
 </p>
-
 <p>坏消息：如果训练数据真的流入暗网，它可能被用于：
 </p>
-
 <ul><li><strong>模型逆向工程</strong>：竞争对手分析训练策略，更快追赶</li>
 <li><strong>对抗性攻击</strong>：基于训练数据的弱点设计针对性的攻击</li>
 <li><strong>训练数据投毒参考</strong>：了解哪些数据被用于训练，设计针对性的"毒药"样本</li>
 </ul>
 <p>对AI开发者来说，这件事是一个严重的安全警示：<strong>你的AI工具链上的每一个环节——模型、API代理、数据供应商——都可能成为攻击入口。</strong>
 </p>
-
 <h2>三件事串在一起看</h2>
-<table><thead><tr><th>事件</th><th>改写的规则</th><th>对用户的影响</th></tr></thead><tbody><tr><td>Anthropic封杀OpenClaw</td><td>AI编程工具的计费规则</td><td>成本上升，但更公平</td></tr><tr><td>DeepSeek V4灰度</td><td>开源模型的性能天花板</td><td>性价比颠覆，$5挑战$40</td></tr><tr><td>Mercor数据泄露</td><td>AI训练数据的安全底线</td><td>行业信任危机，供应链安全升级</td></tr></tbody></table>
+<p>| 事件 | 改写的规则 | 对用户的影响 |
+</p>
+<p>|------|-----------|-------------|
+</p>
+<p>| Anthropic封杀OpenClaw | AI编程工具的计费规则 | 成本上升，但更公平 |
+</p>
+<p>| DeepSeek V4灰度 | 开源模型的性能天花板 | 性价比颠覆，$5挑战$40 |
+</p>
+<p>| Mercor数据泄露 | AI训练数据的安全底线 | 行业信任危机，供应链安全升级 |
+</p>
 <p>三个事件分别从商业、技术、安全三个维度重塑AI行业的规则：
 </p>
-
 <p><strong>商业维度</strong>：Anthropic的"订阅不再覆盖第三方工具"政策，标志着AI公司开始精细化运营——不再做"一个价格无限使用"的赔本买卖。未来其他厂商（包括OpenAI）可能跟进类似策略。
 </p>
-
 <p><strong>技术维度</strong>：DeepSeek V4的Engram记忆机制，如果效果如宣传所言，将从根本上改变大模型的记忆方式。百万token上下文+O(1)检索，意味着Agent可以"真正记住"跨会话的信息，而不是每次都从零开始。
 </p>
-
 <p><strong>安全维度</strong>：Mercor事件暴露了AI行业的供应链脆弱性。LiteLLM一个工具被攻破，就能影响数千家公司、泄露价值数百亿美元的专有数据。AI行业的"安全"不应该只关注模型本身，更要关注整个工具链。
 </p>
-
 <h2>本周AI动态速览</h2>
-
 <ul><li><strong>小米发布MiMo大模型</strong>：推出四档Token订阅套餐，月费39元起，直接对标DeepSeek</li>
 <li><strong>腾讯云推出"龙虾"Agent Memory服务</strong>：提升AI助理的记忆能力，和DeepSeek V4的Engram类似</li>
 <li><strong>广电行业组织严禁AI换脸</strong>：红果短剧AI剧《桃花簪》因"盗脸"侵权被下架</li>
@@ -298,42 +366,29 @@ var _hmt = _hmt || [];
 <li><strong>Anthropic成立政治行动委员会AnthroPAC</strong>：AI公司正式介入美国政治</li>
 </ul>
 <h2>FAQ</h2>
-
 <p><strong>Q1：Claude订阅不覆盖OpenClaw后，我的成本会增加多少？</strong>
 </p>
-
 <p>A：取决于你的使用量。轻度用户（每月通过OpenClaw消耗约50万token）额外成本约$10-20/月。重度用户（每月数百万token）可能额外增加$50-100。建议：优先使用Claude Code（官方产品，订阅覆盖），或用<a href="https://www.aitoolbox.hk/tools/deepseek/index.html" target="_blank" rel="noopener">DeepSeek</a> API替代（成本更低）。如果用<a href="https://www.aitoolbox.hk/tools/cursor/index.html" target="_blank" rel="noopener">Cline</a>接入DeepSeek V3.2，每月只需$5左右。
 </p>
-
 <p><strong>Q2：DeepSeek V4什么时候正式发布？值得等吗？</strong>
 </p>
-
 <p>A：预计4月上旬发布（概率75%），但DeepSeek V3也跳票过。如果V4的SWE-bench 83.7%数据属实，它将是目前性价比最高的编程模型——开源免费，性能超过Claude Opus。建议现在开始熟悉<a href="https://www.aitoolbox.hk/tools/cursor/index.html" target="_blank" rel="noopener">Cline</a>的使用（如果还没用的话），等V4发布后直接接入。
 </p>
-
 <p><strong>Q3：Mercor数据泄露会影响ChatGPT或Claude的安全性吗？</strong>
 </p>
-
 <p>A：不会直接影响。泄露的是训练数据（"怎么教模型的"），不是用户对话数据（"你和模型说了什么"）。你用ChatGPT或Claude的对话记录是安全的。但长期看，如果训练数据被竞争对手获取，他们可以更快地追赶，这可能间接加速AI模型的能力扩散。
 </p>
-
 <p><strong>Q4：LiteLLM安全事件和Mercor泄露有什么关系？</strong>
 </p>
-
 <p>A：因果关系。TeamPCP黑客组织通过在LiteLLM的两个版本中植入恶意代码（供应链攻击），窃取了使用这些版本的组织的系统凭证。Mercor恰好使用了被植入后门的LiteLLM版本，导致其系统被入侵。这和3月29日我们报道的是同一事件的后续——当时只知LiteLLM被攻击，现在知道了最大的受害者是Mercor。
 </p>
-
 <p><strong>Q5：AI编程工具现在应该怎么选？</strong>
 </p>
-
 <p>A：结合今天三条新闻，更新推荐方案：追求综合效率选Claude Code Pro（$20/月，订阅完全覆盖）；追求性价比等DeepSeek V4正式发布后再决定（目前先用Cline+Qwen3.6-Plus，$5/月）；使用第三方工具（OpenClaw等）的用户考虑切换到官方API或直接用Claude Code。不推荐：继续用Claude订阅跑OpenClaw（成本即将大幅上升）。
 </p>
-
 <h2>总结</h2>
-
 <p>2026年4月4日，三条新闻同时重塑AI行业的三个维度：
 </p>
-
 <ul><li><strong>Anthropic封杀OpenClaw</strong>：AI编程工具的"免费午餐"结束了。$20/月无限使用Claude的好日子一去不复返。Anthropic在用行动告诉行业：算力是昂贵的，不要指望用订阅费薅羊毛。这对依赖OpenClaw的开发者是坏消息，但推动了行业向更公平的按量付费模式转变。</li>
 </ul>
 <ul><li><strong>DeepSeek V4灰度测试</strong>：开源编程模型的天花板可能再次被打破。SWE-bench 83.7%、Engram记忆机制、338种编程语言——如果正式版数据属实，Cline+DeepSeek V4将是以$5/月挑战$40/月Claude Code的最强方案。DeepSeek正在用V4证明：开源不等于廉价，开源也可以是最好的。</li>

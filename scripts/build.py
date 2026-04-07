@@ -109,55 +109,85 @@ def get_category_slug(category_name):
     return slug
 
 def markdown_to_html(md):
-    """将Markdown转换为简单HTML"""
+    """将Markdown转换为简单HTML (增强版)"""
     if not md:
         return ''
-    html = md
+    # 统一换行符
+    html = md.replace('\r\n', '\n')
+    
+    # 确保表格和标题前后有换行符，方便正则匹配
+    html = re.sub(r'([^\n])\n\|', r'\1\n\n|', html)
+    
     # 代码块
     html = re.sub(r'```(\w*)\n([\s\S]*?)```', lambda m: '<pre><code>' + m.group(2).replace('&','&amp;').replace('<','&lt;').replace('>','&gt;') + '</code></pre>', html)
-    # 表格
+    
+    # 表格 (改进正则，支持无前导换行的情况)
     def table_replace(m):
         header = m.group(1)
         sep = m.group(2)
         body = m.group(3)
         headers = [c.strip() for c in header.split('|') if c.strip()]
         rows = body.strip().split('\n')
-        table = '<table><thead><tr>'
+        table = '<div class="table-container"><table><thead><tr>'
         for h in headers:
             table += f'<th>{h}</th>'
         table += '</tr></thead><tbody>'
         for row in rows:
             cells = [c.strip() for c in row.split('|') if c.strip()]
+            if not cells: continue
             table += '<tr>'
             for c in cells:
                 table += f'<td>{c}</td>'
             table += '</tr>'
-        table += '</tbody></table>'
+        table += '</tbody></table></div>'
         return table
-    html = re.sub(r'\n(\|.+\|)\n(\|[-:| ]+\|)\n((?:\|.+\|\n?)+)', table_replace, html)
-    # 标题
+    html = re.sub(r'(?:^|\n)(\|.+\|)\n(\|[-:| ]+\|)\n((?:\|.+\|(?:$|\n))+)', table_replace, html)
+    
+    # 标题 (增加 # H1 支持)
     html = re.sub(r'^### (.+)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
     html = re.sub(r'^## (.+)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
+    html = re.sub(r'^# (.+)$', r'<h1>\1</h1>', html, flags=re.MULTILINE)
+    
     # 引用
     html = re.sub(r'^> (.+)$', r'<blockquote>\1</blockquote>', html, flags=re.MULTILINE)
-    # 加粗/行内代码
+    
+    # 加粗/斜体/行内代码
     html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
+    html = re.sub(r'\*(.+?)\*', r'<em>\1</em>', html)
     html = re.sub(r'`([^`]+)`', r'<code>\1</code>', html)
-    # 链接 [text](url) — 先处理站内相对链接，再处理外链
+    
+    # 链接
     html = re.sub(r'\[([^\]]+)\]\((/[^)]+)\)', r'<a href="\2">\1</a>', html)
     html = re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)', r'<a href="\2" target="_blank" rel="noopener">\1</a>', html)
-    # 列表：将连续的 <li> 包裹在 <ul> 中
+    
+    # 列表
     html = re.sub(r'^- (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     html = re.sub(r'^(\d+)\. (.+)$', r'<li>\2</li>', html, flags=re.MULTILINE)
-    # 把连续的裸 <li> 行用 <ul> 包裹起来
     html = re.sub(r'((?:<li>.*?</li>\n?)+)', r'<ul>\1</ul>', html)
-    # 段落：将连续非标签行包裹成p
+    
+    # 分隔线
+    html = html.replace('\n---\n', '\n<hr>\n')
+    
+    # 段落
     lines = html.split('\n')
     result = []
     in_p = False
     for line in lines:
         stripped = line.strip()
-        is_tag = stripped.startswith('<h') or stripped.startswith('<ul') or stripped.startswith('</ul') or stripped.startswith('<li') or stripped.startswith('<table') or stripped.startswith('</table') or stripped.startswith('<pre') or stripped.startswith('</pre') or stripped.startswith('<blockquote') or stripped.startswith('</blockquote') or stripped == ''
+        if not stripped:
+            if in_p:
+                result.append('</p>')
+                in_p = False
+            continue
+            
+        is_tag = (stripped.startswith('<h') or stripped.startswith('<ul') or 
+                  stripped.startswith('</ul') or stripped.startswith('<li') or 
+                  stripped.startswith('<table') or stripped.startswith('</table') or 
+                  stripped.startswith('<div') or stripped.startswith('</div') or 
+                  stripped.startswith('<pre') or stripped.startswith('</pre') or 
+                  stripped.startswith('<blockquote') or stripped.startswith('</blockquote') or 
+                  stripped.startswith('<hr'))
+        
         if is_tag:
             if in_p:
                 result.append('</p>')
@@ -168,7 +198,7 @@ def markdown_to_html(md):
                 result.append('<p>' + line)
                 in_p = True
             else:
-                result.append(line)
+                result.append('<br>' + line)
     if in_p:
         result.append('</p>')
     return '\n'.join(result)

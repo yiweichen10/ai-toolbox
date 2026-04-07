@@ -70,14 +70,11 @@ ARTICLES_TO_ADD = [
 for slug, humanized_content in humanized.items():
     if slug in drafts:
         meta = drafts[slug]
-        ARTICLES_TO_ADD.append({
-            "title": meta["title"],
-            "slug": meta["slug"],
-            "description": meta["description"],
-            "keywords": meta["keywords"],
-            "category": meta["category"],
-            "content": humanized_content
-        })
+        entry = meta.copy()
+        entry["content"] = humanized_content
+        if "type" in entry: del entry["type"]
+        if "prompt" in entry: del entry["prompt"]
+        ARTICLES_TO_ADD.append(entry)
 
 added = 0
 for art in ARTICLES_TO_ADD:

@@ -109,50 +109,45 @@ var _hmt = _hmt || [];
             <figcaption>Google TurboQuant让存储芯片暴跌6%+NeurIPS封杀华为商汤+Claude Code自动模式上线：AI圈本周发生了什么 · 核心数据一览</figcaption>
         </figure>
             <h2>前言</h2>
-
 <p>这周AI圈热闹到不行。Google发了一篇论文，存储芯片公司集体跌了4%-6.5%，美光一夜蒸发几十亿市值。NeurIPS——AI领域最顶级的学术会议——把华为、商汤等873家中国机构拦在门外，中国计算机学会直接号召全国学者抵制。另一边，Anthropic悄悄给Claude Code开了个"自动挡"，AI编程工具从"副驾驶"正式变成"自动驾驶"。
 </p>
-
 <p>三件事放在一起看：AI技术加速、地缘政治撕裂、AI工具自主化——2026年3月最后一周，每一条都在重新定义行业的走向。
 </p>
-
 <h2>事件一：Google TurboQuant——一篇论文砸崩存储芯片板块</h2>
-
 <h3>发生了什么</h3>
-
 <p>3月24日，Google Research在官方博客发布了一项叫TurboQuant的KV Cache压缩算法。论文本身不算新鲜——计划在ICLR 2026和AISTATS 2026正式发表。但市场反应出乎所有人意料：发布当天，美光跌4.2%，西部数据跌6.5%，三星电子跌4%，SK海力士跌5.1%。全球存储芯片板块单日合计蒸发数百亿美元。
 </p>
-
 <p>原因很简单：TurboQuant把大模型推理的内存需求砍掉了83%。
 </p>
-
 <h3>核心数据</h3>
-<table><thead><tr><th>指标</th><th>传统FP16</th><th>INT4量化</th><th>KIVI</th><th><strong>TurboQuant</strong></th></tr></thead><tbody><tr><td>KV Cache内存占用</td><td>100%</td><td>25%</td><td>18%</td><td><strong>16.7%（降6倍）</strong></td></tr><tr><td>注意力计算延迟</td><td>1.0x</td><td>0.7x</td><td>0.65x</td><td><strong>0.37x（快2.7倍）</strong></td></tr><tr><td>海量文本检索召回率</td><td>100%</td><td>58%</td><td>72%</td><td><strong>99.8%（几乎无损）</strong></td></tr><tr><td>长上下文任务得分</td><td>68.2</td><td>62.1</td><td>64.3</td><td><strong>67.9（接近无损）</strong></td></tr></tbody></table>
+<p>| 指标 | 传统FP16 | INT4量化 | KIVI | <strong>TurboQuant</strong> |
+</p>
+<p>|------|---------|---------|------|--------------|
+</p>
+<p>| KV Cache内存占用 | 100% | 25% | 18% | <strong>16.7%（降6倍）</strong> |
+</p>
+<p>| 注意力计算延迟 | 1.0x | 0.7x | 0.65x | <strong>0.37x（快2.7倍）</strong> |
+</p>
+<p>| 海量文本检索召回率 | 100% | 58% | 72% | <strong>99.8%（几乎无损）</strong> |
+</p>
+<p>| 长上下文任务得分 | 68.2 | 62.1 | 64.3 | <strong>67.9（接近无损）</strong> |
+</p>
 <p>这个数据的含金量在于"几乎无损"三个字。之前也有各种KV Cache压缩方案，比如INT4量化能把内存砍到25%，但代价是检索召回率暴跌到58%——找出来的东西一半是错的。TurboQuant压缩到16.7%，召回率还有99.8%，长上下文得分和未压缩版本几乎一样。
 </p>
-
 <h3>怎么做到的</h3>
-
 <p>TurboQuant分两步走：
 </p>
-
 <p><strong>第一步：PolarQuant（极坐标量化）</strong>
 </p>
-
 <p>传统量化是在笛卡尔坐标系里压缩数字，TurboQuant先把向量随机旋转一下，转到极坐标系里。极坐标把向量分解成半径（多长）和角度（朝哪），半径用3-4 bit量化，角度用球面量化。好处是不用存额外的归一化参数——传统INT4量化需要存scale和zero-point，这些参数本身就占了额外空间。TurboQuant零额外开销。
 </p>
-
 <p><strong>第二步：QJL（1-bit误差校正）</strong>
 </p>
-
 <p>光压缩还不够精确。QJL用1 bit（就是一个+1或-1的符号）来校正残差。基于Johnson-Lindenstrauss引理做随机投影，保证内积估计无偏。简单说：用极其便宜的方式补上了压缩损失的精度。
 </p>
-
 <h3>对用户意味着什么</h3>
-
 <p>如果你是跑AI推理的开发者或公司，TurboQuant直接降的是你的账单：
 </p>
-
 <ul><li>单张H100原来只能跑32K上下文，现在能跑128K（或者并发量翻4倍）</li>
 <li>云服务商每token推理成本降60%+</li>
 <li>iPhone 15 Pro（8GB RAM）能本地跑32K上下文对话</li>
@@ -160,144 +155,137 @@ var _hmt = _hmt || [];
 </ul>
 <p>边缘设备受益最大。以前你想在本地跑70B模型+长上下文，至少需要80GB显存（一张A100）。TurboQuant之后，16GB的消费级GPU也能跑起来了。
 </p>
-
 <h3>对行业的冲击</h3>
-
 <p>存储芯片公司为什么跌？因为市场重新计算了AI服务器的内存需求。AI推理是HBM（高带宽内存）最大的增长引擎——如果同样的推理效果只需要1/6的内存，那新建数据中心对HBM的需求增速就要往下调了。
 </p>
-
 <p>不过也别急着说存储芯片完了。历史上这种"效率提升导致需求萎缩"的担忧，往往被"杰文斯悖论"打脸——效率越高，使用量越大，总需求反而上升。推理成本降了60%，意味着更多应用跑得起AI推理了，最终可能需要更多的算力总量。
 </p>
-
 <p><strong>已验证的模型</strong>：Gemma-7B、Mistral-7B、Llama-3-70B。尚未在70B+参数或MoE架构上验证，这是当前的局限。Google预计2026年Q2开源代码和白皮书。
 </p>
-
 <h2>事件二：NeurIPS封杀华为商汤等873家中国机构，CCF号召抵制</h2>
-
 <h3>发生了什么</h3>
-
 <p>3月25日，中国计算机学会（CCF）发布声明，强烈反对AI顶会NeurIPS在2026年会议条款中新增的限制规定。NeurIPS新增条款明确：禁止受美国OFAC（海外资产控制办公室）制裁清单上的实体参与投稿、审稿、编辑等学术服务。
 </p>
-
 <p>以"中国"为筛选条件，OFAC制裁清单上有873条相关条目。华为、商汤、旷视、中芯国际、中国移动/联通/电信全部在列。
 </p>
-
 <h3>CCF的回应</h3>
-
 <p>CCF的声明措辞很强硬，提了三点：
 </p>
-
 <ul><li><strong>强烈反对</strong>，认为此举违背学术开放、包容、平等原则</li>
 <li><strong>号召中国学者暂停投稿</strong>NeurIPS，同时拒绝提供审稿和领域主席服务</li>
 <li>如果NeurIPS不改正，<strong>从CCF推荐目录中移除</strong>（这意味着国内的学术评价体系不再认可NeurIPS）</li>
 </ul>
 <p>已经有多位中国学者公开拒绝NeurIPS的审稿邀请，包括西湖大学的修宇亮、强化学习研究者姜楠等。
 </p>
-
 <h3>对中国AI研究的影响</h3>
-
 <p>NeurIPS是AI领域影响力最大的学术会议之一。中国机构在这些顶会上的贡献近年来越来越大——清华大学在NeurIPS 2025的论文数已经全球第一。华为、腾讯、阿里过去都是NeurIPS的赞助方。
 </p>
-
 <p>被封杀的直接影响：这些机构的研究人员不能投稿、不能审稿、不能担任会议职务。间接影响：如果CCF的抵制号召生效，中国AI研究的学术交流渠道将进一步收窄。
 </p>
-
 <h3>历史参照</h3>
-
 <p>这不是第一次。2019年IEEE因类似制裁限制华为员工参与审稿，CCF当时就宣布暂停与IEEE通信学会的交流合作，后来IEEE做了调整。这次NeurIPS事件走的是同一个剧本，但对抗的级别更高——NeurIPS是AI领域的"皇冠"，比IEEE通信分会的分量重得多。
 </p>
-
 <h3>我的看法</h3>
-
 <p>学术政治化对谁都没好处。NeurIPS靠的是全球最优秀的论文来维持影响力——把全球AI论文产出第一的国家（中国）的头部机构排除在外，会议本身的质量也会受影响。而对中国学者来说，NeurIPS的背书在求职、评职称、拿项目时分量很重，彻底脱钩的代价不小。
 </p>
-
 <p>最可能的结果是两边各退一步：NeurIPS在执行层面做些模糊化处理，中国学者通过个人身份（非机构身份）继续参与。但这个趋势本身值得警惕——AI研究的"脱钩"正在从硬件、模型层面蔓延到学术交流层面。
 </p>
-
 <h2>事件三：Claude Code Auto Mode——AI编程从"副驾"到"自驾"</h2>
-
 <h3>发生了什么</h3>
-
 <p>3月24日，Anthropic正式推出Claude Code的Auto Mode（自动模式）。这个功能解决的是AI编程中一个很烦人的问题：每让AI干一件事，它都要问你"可以吗？可以吗？可以吗？"
 </p>
-
 <h3>之前的问题</h3>
-
 <p>用<a href="https://www.aitoolbox.hk/tools/cursor/index.html" target="_blank" rel="noopener">Cursor</a>或Claude Code写代码时，AI要改一个文件，你得点"允许"；要跑一条命令，你又得点"允许"。一个需要改20个文件的重构任务，你可能要点200次"允许"。这不叫AI辅助编程，叫"AI举手请示编程"。
 </p>
-
 <h3>Auto Mode怎么解决</h3>
-
 <p>Anthropic搞了一个内置的分类器（classifier），在每次操作之前自动判断安不安全：
 </p>
-<table><thead><tr><th>操作类型</th><th>Auto Mode处理方式</th></tr></thead><tbody><tr><td>创建/修改普通代码文件</td><td>直接执行，不用问你</td></tr><tr><td>运行<code>git status</code>、<code>ls</code>等只读命令</td><td>直接执行</td></tr><tr><td>运行<code>pip install</code>等安装命令</td><td>直接执行</td></tr><tr><td>删除文件、修改数据库、访问网络</td><td>自动拦截，引导Claude找替代方案</td></tr><tr><td>执行<code>rm -rf</code>等破坏性命令</td><td>拦截+提示用户</td></tr><tr><td>Claude反复尝试被拦截的操作</td><td>最终转给用户决定</td></tr></tbody></table>
+<p>| 操作类型 | Auto Mode处理方式 |
+</p>
+<p>|---------|----------------|
+</p>
+<p>| 创建/修改普通代码文件 | 直接执行，不用问你 |
+</p>
+<p>| 运行<code>git status</code>、<code>ls</code>等只读命令 | 直接执行 |
+</p>
+<p>| 运行<code>pip install</code>等安装命令 | 直接执行 |
+</p>
+<p>| 删除文件、修改数据库、访问网络 | 自动拦截，引导Claude找替代方案 |
+</p>
+<p>| 执行<code>rm -rf</code>等破坏性命令 | 拦截+提示用户 |
+</p>
+<p>| Claude反复尝试被拦截的操作 | 最终转给用户决定 |
+</p>
 <p>关键设计理念：<strong>安全操作自动过，危险操作拦下来。</strong> 不像之前的<code>dangerously-skip-permissions</code>模式（所有操作全放行，等于裸奔），Auto Mode至少有安全网。
 </p>
-
 <h3>三种模式对比</h3>
-<table><thead><tr><th>特性</th><th>默认模式（每步审批）</th><th>Auto Mode（智能审批）</th><th>危险模式（全放行）</th></tr></thead><tbody><tr><td>安全性</td><td>最高</td><td>较高（有分类器）</td><td>最低</td></tr><tr><td>自动化程度</td><td>低，频繁打断</td><td>高，适合长任务</td><td>最高</td></tr><tr><td>适合场景</td><td>敏感操作（数据库、生产环境）</td><td>复杂多步骤任务</td><td>隔离测试环境</td></tr><tr><td>用户体验</td><td>烦，要点200次"允许"</td><td>流畅，放手让它干</td><td>流畅但危险</td></tr></tbody></table>
+<p>| 特性 | 默认模式（每步审批） | Auto Mode（智能审批） | 危险模式（全放行） |
+</p>
+<p>|------|-----------------|-----------------|---------------|
+</p>
+<p>| 安全性 | 最高 | 较高（有分类器） | 最低 |
+</p>
+<p>| 自动化程度 | 低，频繁打断 | 高，适合长任务 | 最高 |
+</p>
+<p>| 适合场景 | 敏感操作（数据库、生产环境） | 复杂多步骤任务 | 隔离测试环境 |
+</p>
+<p>| 用户体验 | 烦，要点200次"允许" | 流畅，放手让它干 | 流畅但危险 |
+</p>
 <h3>当前限制</h3>
-
 <ul><li>仅向Claude Team用户开放（后续扩展到Enterprise和API）</li>
 <li>支持Claude Sonnet 4.6和Opus 4.6</li>
 <li>分类器偶尔会误判（放过风险操作或拦截安全操作）</li>
 <li>Anthropic自己都说"不能完全消除风险"，建议在隔离环境里用</li>
 </ul>
 <h3>对行业的影响</h3>
-
 <p>Auto Mode的意义不只是"少点几次按钮"。它标志着AI编程工具从"Copilot"（副驾驶）正式迈向"Autopilot"（自动驾驶）。
 </p>
-
 <ul><li><a href="https://www.aitoolbox.hk/tools/cursor/index.html" target="_blank" rel="noopener">Cursor</a>的核心体验是Tab补全+Cmd+K+Chat，本质还是人在开车，AI在副驾</li>
 <li><a href="https://www.aitoolbox.hk/tools/cursor/index.html" target="_blank" rel="noopener">Cline</a>和Claude Code的Agent模式已经能自主执行多步操作，但每步都要确认</li>
 <li>Auto Mode让AI真正自主判断安全性，不需要人时刻盯着</li>
 </ul>
 <p>这是正确方向。我之前用<a href="https://www.aitoolbox.hk/tools/cursor/index.html" target="_blank" rel="noopener">Cline</a>配DeepSeek做日常编码，最痛的点就是每次操作都要确认。一个15步的重构任务，前面12步都是<code>git checkout</code>、<code>ls</code>、<code>cat</code>这种无害操作，但每步都要手动点。Auto Mode这种智能分类器是迟早要有的东西，Anthropic先做了。
 </p>
-
 <h2>三件事放在一起看</h2>
-<table><thead><tr><th>事件</th><th>维度</th><th>信号</th></tr></thead><tbody><tr><td>TurboQuant</td><td>技术效率</td><td>AI推理的硬件门槛在快速降低，成本继续下降</td></tr><tr><td>NeurIPS封杀</td><td>地缘政治</td><td>AI领域的"脱钩"从产业延伸到学术，趋势加速</td></tr><tr><td>Claude Code Auto Mode</td><td>工具进化</td><td>AI编程从"辅助"走向"自主"，人机协作模式在变</td></tr></tbody></table>
+<p>| 事件 | 维度 | 信号 |
+</p>
+<p>|------|------|------|
+</p>
+<p>| TurboQuant | 技术效率 | AI推理的硬件门槛在快速降低，成本继续下降 |
+</p>
+<p>| NeurIPS封杀 | 地缘政治 | AI领域的"脱钩"从产业延伸到学术，趋势加速 |
+</p>
+<p>| Claude Code Auto Mode | 工具进化 | AI编程从"辅助"走向"自主"，人机协作模式在变 |
+</p>
 <p>三个信号指向同一个方向：AI工具在变得<strong>更便宜、更自主、更分裂</strong>。更便宜是因为TurboQuant这类技术持续压缩推理成本；更自主是因为Auto Mode这类功能让AI工具能独立完成更复杂的任务；更分裂是因为地缘政治让全球AI社区越来越难保持一体化。
 </p>
-
 <p>对普通开发者来说，好消息是：用得起、用得爽的AI工具越来越多。坏消息是：学术交流和政治纷争的余波，迟早会影响到工具的可用性和数据访问。
 </p>
-
 <h2>本周其他值得关注的消息</h2>
-
 <ul><li><strong>GPT-5.4 mini发布</strong>：OpenAI推出新一代轻量模型，性能接近GPT-5但成本更低</li>
 <li><strong>阿里千问AI打车上线</strong>：通义千问推出"AI打车"功能，语音交互串联打车+外卖+导航</li>
 <li><strong>腾讯元宝发布电脑版</strong>：腾讯AI助手从移动端拓展到桌面端</li>
 <li><strong>Cursor × Kimi确认合作</strong>：Cursor承认Composer 2基于国产Kimi 2.5基座，国产模型持续渗透国际工具链</li>
 </ul>
 <h2>FAQ</h2>
-
 <p><strong>Q1：TurboQuant开源了吗？我能直接用吗？</strong>
-A：目前还没开源。Google预计2026年Q2发布代码和白皮书。已有开发者在RTX 4090上复现了2-bit压缩效果，说明技术是可复现的。如果你急着想优化推理成本，可以先关注vLLM和TensorRT-LLM的更新——TurboQuant设计上兼容现有推理引擎，不需要微调或校准。
+<br>A：目前还没开源。Google预计2026年Q2发布代码和白皮书。已有开发者在RTX 4090上复现了2-bit压缩效果，说明技术是可复现的。如果你急着想优化推理成本，可以先关注vLLM和TensorRT-LLM的更新——TurboQuant设计上兼容现有推理引擎，不需要微调或校准。
 </p>
-
 <p><strong>Q2：存储芯片大跌，是买入机会还是长期趋势？</strong>
-A：短期是情绪反应过度。TurboQuant主要压缩KV Cache（推理阶段），对训练阶段的内存需求影响有限，而训练才是HBM最大的消耗场景。而且杰文斯悖论历史上多次应验——推理成本降了，推理调用量会大幅增加，总内存需求未必下降。长期看，AI推理市场在快速扩大，存储芯片的基本面没有根本改变。
+<br>A：短期是情绪反应过度。TurboQuant主要压缩KV Cache（推理阶段），对训练阶段的内存需求影响有限，而训练才是HBM最大的消耗场景。而且杰文斯悖论历史上多次应验——推理成本降了，推理调用量会大幅增加，总内存需求未必下降。长期看，AI推理市场在快速扩大，存储芯片的基本面没有根本改变。
 </p>
-
 <p><strong>Q3：CCF抵制NeurIPS，对中国AI从业者有什么实际影响？</strong>
-A：短期内影响有限。大部分中国研究者是以个人身份参与NeurIPS的（投稿用的是个人邮箱和 affiliation），机构制裁的实际执行有灰色地带。但如果NeurIPS严格执行，影响会很大——国内高校的学术评价体系认可CCF推荐目录里的会议，如果NeurIPS被移出目录，投NeurIPS对评职称、拿项目的帮助会打折。建议关注CCF后续的正式决定。
+<br>A：短期内影响有限。大部分中国研究者是以个人身份参与NeurIPS的（投稿用的是个人邮箱和 affiliation），机构制裁的实际执行有灰色地带。但如果NeurIPS严格执行，影响会很大——国内高校的学术评价体系认可CCF推荐目录里的会议，如果NeurIPS被移出目录，投NeurIPS对评职称、拿项目的帮助会打折。建议关注CCF后续的正式决定。
 </p>
-
 <p><strong>Q4：Claude Code Auto Mode安全吗？会不会把我的项目搞坏？</strong>
-A：比"危险模式"安全很多，但不是零风险。Anthropic明确建议在隔离环境中使用。我的建议是：用Docker跑一个容器，在里面让Auto Mode随便折腾，出了问题直接重建容器。别在含有生产数据库连接的项目里直接开Auto Mode。分类器偶尔会误判，Anthropic自己也承认这一点。
+<br>A：比"危险模式"安全很多，但不是零风险。Anthropic明确建议在隔离环境中使用。我的建议是：用Docker跑一个容器，在里面让Auto Mode随便折腾，出了问题直接重建容器。别在含有生产数据库连接的项目里直接开Auto Mode。分类器偶尔会误判，Anthropic自己也承认这一点。
 </p>
-
 <p><strong>Q5：这周三条新闻，哪个对普通AI用户影响最大？</strong>
-A：TurboQuant的影响最直接——它降的是推理成本，最终会传导到API价格和免费工具的可用性上。Claude Code Auto Mode其次，它提升的是AI编程的体验，但只影响用Claude Code的人。NeurIPS事件的影响更偏长期和间接，短期内普通用户感知不到。如果你是开发者，关注TurboQuant的开源进展；如果你用AI编程，可以试试Claude Code的Auto Mode。
+<br>A：TurboQuant的影响最直接——它降的是推理成本，最终会传导到API价格和免费工具的可用性上。Claude Code Auto Mode其次，它提升的是AI编程的体验，但只影响用Claude Code的人。NeurIPS事件的影响更偏长期和间接，短期内普通用户感知不到。如果你是开发者，关注TurboQuant的开源进展；如果你用AI编程，可以试试Claude Code的Auto Mode。
 </p>
-
 <h2>总结</h2>
-
 <p>2026年3月最后一周的AI圈，三条新闻勾勒出一个清晰的轮廓：技术效率在飞速提升（TurboQuant把内存砍6倍），AI工具在加速自主化（Claude Code Auto Mode），但全球AI合作的政治壁垒也在加高（NeurIPS封杀中国机构）。
 </p>
-
 <p>对用户的实际建议：
 </p>
 <ul><li>关注TurboQuant的开源进展，它可能在未来半年内改变AI推理的成本结构</li>
