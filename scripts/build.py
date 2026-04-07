@@ -2472,8 +2472,12 @@ def build_article_page(article, all_articles, all_tools=None):
             "@id": f"https://www.aitoolbox.hk/articles/{slug}/"
         }
     }, ensure_ascii=False, indent=2)
-
-    content_html = markdown_to_html(article.get('content', ''))
+    raw_content = article.get('content', '').strip()
+    # 自动移除正文中重复的标题（如果正文以 # Title 开头）
+    # 使用 re.escape 避免特殊字符干扰，并匹配开头
+    title_line_pattern = r'^#\s+.*?' + re.escape(article['title'][:10]) + r'.*?\n'
+    raw_content = re.sub(title_line_pattern, '', raw_content, count=1, flags=re.IGNORECASE)
+    content_html = markdown_to_html(raw_content)
 
     html = f'''<!DOCTYPE html>
 <html lang="{lang}">
