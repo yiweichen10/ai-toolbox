@@ -884,14 +884,26 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
             </div>
 '''
 
-    # 推荐工具卡片（基于答案匹配）
+    # 推荐工具卡片（基于答案匹配）——附带工具属性用于前端过滤
     rec_tools_html = ''
+    # 构建工具属性 JSON 供前端匹配使用
+    _tool_attr_map = {}
     if rec_tool_slugs:
-        for rs in rec_tool_slugs[:8]:
+        for rs in rec_tool_slugs[:12]:
             tool = next((t for t in all_tools if t['slug'] == rs), None)
             if not tool:
                 continue
-            rec_tools_html += f'''            <div class="quiz-recommendation" data-tool-slug="{tool['slug']}" style="display:none;">
+            _tags = [tag.get('text', '') for tag in tool.get('tags', [])]
+            _tool_attr_map[tool['slug']] = {
+                'name': tool['name'],
+                'category': tool.get('category', ''),
+                'price': tool.get('price', ''),
+                'tags': _tags,
+                'is_free': '免费' in tool.get('price', '') or tool.get('price', '') == '',
+                'has_api': any('API' in str(f) for f in tool.get('features', [])),
+                'platform': tool.get('platform', ''),
+            }
+            rec_tools_html += f'''            <div class="quiz-recommendation" data-tool-slug="{tool['slug']}" data-category="{tool.get('category','')}" data-is-free='{str(_tool_attr_map[tool['slug']]['is_free']).lower()}' data-tags='{json.dumps(_tags, ensure_ascii=False)}' style="display:none;">
                 <a href="/tools/{tool['slug']}/index.html" class="rec-card">
                     <div class="rec-icon" style="background:{tool['color']};">{tool['emoji']}</div>
                     <div class="rec-info">
@@ -1095,39 +1107,164 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
     </footer>
 ''' + BACK_TO_TOP_BLOCK + '''
 <script>
-// Quiz 交互逻辑
-function showQuizResult() {
-    var answers = {};
-    document.querySelectorAll('.quiz-option input:checked').forEach(function(el) {
-        answers[el.name] = el.value;
+// Quiz 交互逻辑 v2 — 支持取消选择 + 智能匹配推荐
+(function(){
+    // 点击选项：支持选中/取消
+    document.querySelectorAll('.quiz-option').forEach(function(opt){
+        opt.addEventListener('click', function(e){
+            // 阻止 label 默认行为，手动控制 radio
+            e.preventDefault();
+            var radio = this.querySelector('input[type="radio"]');
+            var name = radio.name;
+            // 如果已选中，则取消；否则选中
+            if (this.classList.contains('selected')) {
+                this.classList.remove('selected');
+                radio.checked = false;
+            } else {
+                document.querySelectorAll('.quiz-option input[name="'+name+'"]').forEach(function(o){
+                    o.closest('.quiz-option').classList.remove('selected');
+                    o.checked = false;
+                });
+                this.classList.add('selected');
+                radio.checked = true;
+            }
+            updateProgress();
+        });
     });
-    if(Object.keys(answers).length < ''' + str(len(questions)) + ''') {
-        alert('请回答完所有问题后再查看推荐！');
-        return;
+
+    // 更新进度条高亮
+    function updateProgress(){
+        var answered = document.querySelectorAll('.quiz-option.selected').length;
+        var total = document.querySelectorAll('.quiz-question').length;
+        document.querySelectorAll('.quiz-progress .step').forEach(function(s,i){
+            s.classList.toggle('active', i < answered);
+        });
     }
-    document.getElementById('quizForm').style.display = 'none';
-    var resultDiv = document.getElementById('quizResult');
-    resultDiv.style.display = 'block';
-    
-    // 显示所有推荐工具（简单版：全部显示，后续可做精确匹配逻辑）
-    resultDiv.querySelectorAll('.quiz-recommendation').forEach(function(el) { el.style.display='block'; });
-    window.scrollTo({top:resultDiv.offsetTop - 20, behavior:'smooth'});
-}
-function resetQuiz() {
-    document.getElementById('quizResult').style.display = 'none';
-    document.getElementById('quizForm').style.display = 'block';
-    document.querySelectorAll('.quiz-option input').forEach(function(el){el.checked=false;});
-    document.querySelectorAll('.quiz-option').forEach(function(el){el.classList.remove('selected');});
-    window.scrollTo({top:0,behavior:'smooth'});
-}
-document.querySelectorAll('.quiz-option').forEach(function(opt){
-    opt.addEventListener('click',function(){
-        var name=this.querySelector('input').name;
-        document.querySelectorAll('.quiz-option[name="'+name+'"]').forEach(function(o){o.classList.remove('selected');});
-        this.classList.add('selected');
-        this.querySelector('input').checked=true;
-    });
-});
+
+    // 答案 → 工具匹配规则
+    var ANSWER_MATCH_RULES = {
+        q1: function(v, tool){
+            var cat = tool.getAttribute('data-category') || '';
+            var tags = JSON.parse(tool.getAttribute('data-tags') || '[]');
+            var map = {
+                'chat':   ['AI对话','AI搜索','AI效率'],
+                'writing':['AI写作','AI办公'],
+                'image':  ['AI绘画','AI设计'],
+                'code':   ['AI编程','AI自动化']
+            };
+            var match = map[v] || [];
+            return match.indexOf(cat) !== -1 || match.some(function(t){ return tags.indexOf(t) !== -1; });
+        },
+        q2: function(v, tool){
+            if(v === 'free') return tool.getAttribute('data-is-free') === 'true';
+            if(v === 'any') return true;
+            if(v === 'low'){
+                var p = (tool.getAttribute('data-tags')||'[]');
+                return p.indexOf('免费增值') !== -1 || p.indexOf('免费可用') !== -1;
+            }
+            return true;
+        },
+        q3: function(v, tool){
+            if(v === 'cn'){
+                var tags = JSON.parse(tool.getAttribute('data-tags') || '[]');
+                return tags.indexOf('国内可用') !== -1 || tags.indexOf('国产') !== -1;
+            }
+            return true;
+        },
+        q4: function(v, tool){
+            return true; // 用户类型不硬过滤，只影响排序
+        },
+        q5: function(v, tool){
+            return true; // 看重什么不硬过滤，只影响排序
+        }
+    };
+
+    // 答案 → 排序加分（软匹配）
+    function computeScore(answers, tool){
+        var score = 0;
+        if(answers.q1){
+            var cat = tool.getAttribute('data-category') || '';
+            var tags = JSON.parse(tool.getAttribute('data-tags') || '[]');
+            var map = {'chat':['AI对话'],'writing':['AI写作'],'image':['AI绘画','AI设计'],'code':['AI编程']};
+            var m = map[answers.q1] || [];
+            if(m.indexOf(cat) !== -1) score += 10;
+            if(m.some(function(t){ return tags.indexOf(t) !== -1; })) score += 5;
+        }
+        if(answers.q2 === 'free' && tool.getAttribute('data-is-free') === 'true') score += 8;
+        if(answers.q2 === 'any') score += 3;
+        if(answers.q4 === 'pro' || answers.q4 === 'power') score += 3;
+        return score;
+    }
+
+    window.showQuizResult = function(){
+        var answers = {};
+        document.querySelectorAll('.quiz-option input:checked').forEach(function(el){
+            answers[el.name] = el.value;
+        });
+        var totalQ = ''' + str(len(questions)) + ''';
+        if(Object.keys(answers).length < totalQ){
+            alert('请回答完所有问题后再查看推荐！（或点击已选选项可取消选择）');
+            return;
+        }
+
+        document.getElementById('quizForm').style.display = 'none';
+        var resultDiv = document.getElementById('quizResult');
+        resultDiv.style.display = 'block';
+
+        // 智能匹配：根据答案过滤+排序推荐工具
+        var cards = resultDiv.querySelectorAll('.quiz-recommendation');
+        var scored = [];
+        cards.forEach(function(el){
+            var matchCount = 0;
+            var slug = el.getAttribute('data-tool-slug');
+            for(var qid in answers){
+                var ruleFn = ANSWER_MATCH_RULES[qid];
+                if(ruleFn && ruleFn(answers[qid], el)){
+                    matchCount++;
+                }
+            }
+            var sortScore = computeScore(answers, el);
+            scored.push({el: el, match: matchCount, sortScore: sortScore});
+        });
+
+        // 按匹配数降序 → 排序分降序
+        scored.sort(function(a,b){
+            if(b.match !== a.match) return b.match - a.match;
+            return b.sortScore - a.sortScore;
+        });
+
+        // 显示匹配度最高的前6个，其余隐藏
+        scored.forEach(function(item, i){
+            if(i < 6 && item.match > 0){
+                item.el.style.display = 'block';
+                item.el.style.order = i;
+            } else {
+                item.el.style.display = 'none';
+            }
+        });
+
+        // 如果没有任何匹配（理论不该发生），显示全部
+        var visible = resultDiv.querySelectorAll('.quiz-recommendation[style*="display: block"], .quiz-recommendation[style*="display:block"]');
+        if(visible.length === 0){
+            scored.forEach(function(item){ item.el.style.display = 'block'; });
+        }
+
+        // 更新进度条
+        document.querySelectorAll('.quiz-progress .step').forEach(function(s){ s.classList.add('active'); });
+
+        window.scrollTo({top: resultDiv.offsetTop - 20, behavior:'smooth'});
+    };
+
+    window.resetQuiz = function(){
+        document.getElementById('quizResult').style.display = 'none';
+        document.getElementById('quizForm').style.display = 'block';
+        document.querySelectorAll('.quiz-option input').forEach(function(el){ el.checked = false; });
+        document.querySelectorAll('.quiz-option').forEach(function(el){ el.classList.remove('selected'); });
+        document.querySelectorAll('.quiz-recommendation').forEach(function(el){ el.style.display = 'none'; el.style.order = ''; });
+        updateProgress();
+        window.scrollTo({top:0, behavior:'smooth'});
+    };
+})();
 </script>
 </body>
 </html>'''
