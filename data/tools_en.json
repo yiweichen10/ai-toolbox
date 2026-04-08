@@ -1,0 +1,246 @@
+[
+  {
+    "name": "ChatGPT",
+    "slug": "chatgpt",
+    "emoji": "🟢",
+    "color": "#10a37f",
+    "description": "OpenAI's flagship AI assistant for text generation, coding, data analysis, and creative work. GPT-4o delivers multimodal capabilities with industry-leading reasoning.",
+    "category": "AI Chat",
+    "tags": [
+      { "text": "AI Chat" },
+      { "text": "Writing" },
+      { "text": "Free tier", "type": "free" }
+    ],
+    "rating": "⭐ 4.9",
+    "visits": "125K",
+    "badge": { "type": "hot", "text": "HOT" },
+    "url": "https://chat.openai.com",
+    "price": "Free + Plus $20/mo",
+    "platform": "Web / iOS / Android",
+    "published": true,
+    "pros": [
+      "Best-in-class general reasoning",
+      "Huge plugin and GPT ecosystem",
+      "Strong code generation and debugging",
+      "Free tier available with GPT-4o"
+    ],
+    "cons": [
+      "Can hallucinate facts confidently",
+      "Knowledge cutoff limitations",
+      "Plus plan required for latest models"
+    ],
+    "features": [
+      "Multimodal input (text, image, file)",
+      "Custom GPTs marketplace",
+      "Code interpreter and data analysis",
+      "Voice conversation mode",
+      "Web browsing"
+    ],
+    "faq": [
+      {
+        "question": "Is ChatGPT free to use?",
+        "answer": "Yes, ChatGPT offers a free tier with access to GPT-4o (with limits). The Plus plan at $20/month unlocks higher rate limits and priority access."
+      },
+      {
+        "question": "What can ChatGPT do that other AI tools can't?",
+        "answer": "ChatGPT has the largest ecosystem of third-party plugins and Custom GPTs, plus strong multimodal capabilities including image understanding and generation via DALL-E."
+      }
+    ],
+    "content": "## ChatGPT Review 2026: Is It Still the Best AI Assistant?\n\nChatGPT remains the most widely-used AI assistant in the world, with over 100 million weekly active users. Since the release of GPT-4o, the free tier now includes multimodal capabilities that were previously locked behind the Plus subscription.\n\n## Who Should Use ChatGPT?\n\nChatGPT is ideal for writers, developers, researchers, and business professionals who need a general-purpose AI assistant. Its Custom GPT marketplace offers thousands of specialized tools built on top of the base model.\n\n## Pricing Breakdown\n\n- **Free**: GPT-4o with usage limits, image generation, voice mode\n- **Plus ($20/month)**: Higher limits, GPT-4o priority, advanced tools\n- **Team ($25/user/month)**: Shared workspace, admin controls\n- **Enterprise**: Custom pricing, SSO, compliance features\n\n## Verdict\n\nChatGPT is the safest default choice for most users. Its combination of capability, ecosystem, and free tier makes it unbeatable for general-purpose AI work."
+  },
+  {
+    "name": "Claude",
+    "slug": "claude",
+    "emoji": "🎭",
+    "color": "#d97706",
+    "description": "Anthropic's safety-focused AI assistant with 200K context window, exceptional writing quality, and strong reasoning. Claude 3.5 Sonnet is a top choice for long-form work.",
+    "category": "AI Chat",
+    "tags": [
+      { "text": "AI Chat" },
+      { "text": "Long context" },
+      { "text": "Free tier", "type": "free" }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "83K",
+    "badge": { "type": "new", "text": "NEW" },
+    "url": "https://claude.ai",
+    "price": "Free + Pro $20/mo",
+    "platform": "Web / iOS / Android",
+    "published": true,
+    "pros": [
+      "Superior long-form writing quality",
+      "200K token context window",
+      "Refuses harmful requests more consistently",
+      "Excellent at document analysis"
+    ],
+    "cons": [
+      "More cautious refusals than competitors",
+      "No image generation",
+      "Free tier has strict usage limits"
+    ],
+    "features": [
+      "200K context window",
+      "Document and PDF analysis",
+      "Code generation and review",
+      "Artifacts for interactive content",
+      "Projects for persistent memory"
+    ],
+    "faq": [
+      {
+        "question": "How is Claude different from ChatGPT?",
+        "answer": "Claude tends to produce more nuanced, high-quality writing and has a larger context window (200K vs GPT-4o's 128K). It is generally considered safer and more predictable, but has fewer integrations."
+      },
+      {
+        "question": "Can Claude access the internet?",
+        "answer": "Claude does not have real-time internet access in its standard interface, though the API can be integrated with web search tools."
+      }
+    ],
+    "content": "## Claude Review 2026: The Best AI for Writing and Long Documents\n\nClaude by Anthropic has carved out a strong reputation as the go-to AI for writers, lawyers, researchers, and anyone dealing with large documents. Its 200K context window means you can feed it entire books and get coherent analysis.\n\n## Strengths\n\nClaude consistently outperforms competitors on writing quality benchmarks. Its prose feels more natural, its arguments are more structured, and it handles nuance better than most models.\n\n## Pricing\n\n- **Free**: Limited daily messages with Claude 3.5 Sonnet\n- **Pro ($20/month)**: 5x more usage, priority access, Projects\n- **Team ($25/user/month)**: Shared workspaces\n- **Enterprise**: Custom pricing with compliance controls\n\n## Verdict\n\nIf your primary use case is writing, editing, or document analysis, Claude is likely your best option. For developers needing API integrations and plugins, ChatGPT has more ecosystem depth."
+  },
+  {
+    "name": "Midjourney",
+    "slug": "midjourney",
+    "emoji": "🎨",
+    "color": "#7c3aed",
+    "description": "The gold standard for AI image generation. Midjourney V6 produces photorealistic and artistic imagery with unmatched aesthetic quality and style consistency.",
+    "category": "AI Image",
+    "tags": [
+      { "text": "AI Image" },
+      { "text": "Hot", "type": "hot" },
+      { "text": "Paid" }
+    ],
+    "rating": "⭐ 4.9",
+    "visits": "102K",
+    "badge": { "type": "pick", "text": "Editor's Pick" },
+    "url": "https://www.midjourney.com",
+    "price": "Basic $10/mo",
+    "platform": "Web / Discord",
+    "published": true,
+    "pros": [
+      "Best aesthetic quality of any AI image tool",
+      "Consistent style across generations",
+      "Active community and inspiration feed",
+      "Character reference and style reference features"
+    ],
+    "cons": [
+      "No free tier",
+      "Requires subscription to get started",
+      "Limited editing of existing photos"
+    ],
+    "features": [
+      "Photorealistic and artistic image generation",
+      "Style reference (--sref)",
+      "Character reference (--cref)",
+      "Inpainting and vary region",
+      "Upscaling to 4K+"
+    ],
+    "faq": [
+      {
+        "question": "Does Midjourney have a free trial?",
+        "answer": "Midjourney removed its free trial in 2023. You must subscribe starting at $10/month to generate images."
+      },
+      {
+        "question": "What is the difference between Midjourney Basic and Standard plans?",
+        "answer": "Basic ($10/mo) gives ~200 images/month. Standard ($30/mo) gives unlimited relaxed generations plus more fast GPU hours."
+      }
+    ],
+    "content": "## Midjourney Review 2026: Still the King of AI Art?\n\nMidjourney V6 remains the benchmark that all other AI image tools are measured against. While competitors like DALL-E 3, Stable Diffusion, and Ideogram have closed the gap, Midjourney still leads on aesthetic coherence and artistic quality.\n\n## What Makes Midjourney Unique\n\nThe style reference (--sref) and character reference (--cref) features allow creators to maintain visual consistency across entire projects — something no other tool does as reliably.\n\n## Plans\n\n- **Basic ($10/mo)**: ~200 fast images/month\n- **Standard ($30/mo)**: Unlimited relaxed + 15h fast GPU\n- **Pro ($60/mo)**: Stealth mode + 30h fast GPU\n- **Mega ($120/mo)**: 60h fast GPU\n\n## Verdict\n\nFor designers, illustrators, and marketers who need consistently beautiful AI-generated images, Midjourney is worth the subscription."
+  },
+  {
+    "name": "GitHub Copilot",
+    "slug": "github-copilot",
+    "emoji": "💻",
+    "color": "#3178c6",
+    "description": "AI-powered coding assistant integrated into VS Code and JetBrains IDEs. Autocompletes code, generates functions, fixes bugs, and explains code across 50+ languages.",
+    "category": "AI Coding",
+    "tags": [
+      { "text": "AI Coding" },
+      { "text": "Hot", "type": "hot" },
+      { "text": "Paid" }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "68K",
+    "badge": { "type": "hot", "text": "HOT" },
+    "url": "https://github.com/features/copilot",
+    "price": "Free (limited) + Pro $10/mo",
+    "platform": "VS Code / JetBrains / Neovim / GitHub.com",
+    "published": true,
+    "pros": [
+      "Deeply integrated into popular IDEs",
+      "Free tier available for verified students",
+      "Multi-file context awareness",
+      "Supports pull request summaries on GitHub.com"
+    ],
+    "cons": [
+      "Can suggest outdated or insecure code",
+      "Privacy concerns with code being sent to servers",
+      "Business plan required for team features"
+    ],
+    "features": [
+      "Inline code completion",
+      "Copilot Chat for Q&A",
+      "Multi-file edits",
+      "PR summaries on GitHub.com",
+      "CLI suggestions"
+    ],
+    "faq": [
+      {
+        "question": "Is GitHub Copilot worth it for solo developers?",
+        "answer": "Yes. The $10/month Individual plan pays for itself quickly if you code regularly. Studies show productivity gains of 55%+ for common tasks."
+      },
+      {
+        "question": "How is Copilot different from Cursor or Windsurf?",
+        "answer": "Copilot focuses on inline completion inside existing editors. Cursor and Windsurf are full AI-native IDEs that offer more aggressive multi-file editing and agentic coding workflows."
+      }
+    ],
+    "content": "## GitHub Copilot Review 2026: Best AI Coding Tool for IDE Users?\n\nGitHub Copilot has become the standard AI coding companion for developers who prefer working inside familiar editors like VS Code or JetBrains. With the new Copilot Workspace and multi-file editing features, it competes directly with newer AI-native IDEs.\n\n## Who Is It For?\n\nDevelopers who want AI assistance inside their existing workflow without switching to a new IDE. The GitHub integration makes it especially valuable for teams using GitHub for version control.\n\n## Pricing\n\n- **Free**: 2,000 completions/month, 50 chat messages/month\n- **Pro ($10/mo)**: Unlimited completions and chat\n- **Business ($19/user/mo)**: Admin controls, audit logs, policy management\n- **Enterprise ($39/user/mo)**: Custom fine-tuning, security features\n\n## Verdict\n\nGitHub Copilot is the most natural choice for teams already on GitHub. For solo developers wanting the most powerful AI coding experience, consider pairing it with or switching to Cursor."
+  },
+  {
+    "name": "Notion AI",
+    "slug": "notion-ai",
+    "emoji": "📊",
+    "color": "#ff6b6b",
+    "description": "AI assistant built directly into Notion. Summarize notes, write drafts, translate content, and generate action items — all inside your existing workspace.",
+    "category": "AI Office",
+    "tags": [
+      { "text": "AI Office" },
+      { "text": "Notes" },
+      { "text": "Paid" }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "54K",
+    "url": "https://www.notion.so",
+    "price": "AI add-on $10/mo",
+    "platform": "Web / iOS / Android / Desktop",
+    "published": true,
+    "pros": [
+      "Native integration with all Notion content",
+      "No context switching between tools",
+      "Good at summarizing meeting notes",
+      "Supports 30+ languages"
+    ],
+    "cons": [
+      "Requires Notion subscription plus AI add-on",
+      "Less powerful than standalone AI tools",
+      "Cannot access external data"
+    ],
+    "features": [
+      "AI writing and editing inside pages",
+      "Summarize and extract action items",
+      "Translate across 30+ languages",
+      "Auto-fill database properties",
+      "Q&A over your workspace"
+    ],
+    "faq": [
+      {
+        "question": "Do I need a paid Notion plan to use Notion AI?",
+        "answer": "Notion AI is available as an add-on for $10/month on top of any Notion plan, including the free plan."
+      },
+      {
+        "question": "Can Notion AI search my entire workspace?",
+        "answer": "Yes, the Q&A feature can search and synthesize information across all pages you have access to in your workspace."
+      }
+    ],
+    "content": "## Notion AI Review 2026: Best AI for Knowledge Workers?\n\nNotion AI removes the friction of switching between your notes app and an AI assistant. For teams already using Notion as their knowledge base, it's the most contextually aware option available.\n\n## Key Use Cases\n\n- Summarizing long meeting notes into action items\n- Drafting project proposals from bullet points\n- Translating documents for international teams\n- Auto-filling database fields with AI-generated content\n\n## Pricing\n\n- **AI Add-on**: $10/user/month added to any Notion plan\n- **Notion Free + AI**: $10/month total for solo users\n- **Notion Plus + AI**: $18/month combined\n\n## Verdict\n\nIf you live in Notion, the AI add-on is worth it for the convenience alone. If you're not a Notion user, it's not worth switching just for the AI features — use ChatGPT or Claude instead."
+  }
+]
