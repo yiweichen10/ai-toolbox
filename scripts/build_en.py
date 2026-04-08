@@ -174,11 +174,48 @@ def hreflang_tags(zh_path: str, en_path: str) -> str:
 # ─── Tool page ────────────────────────────────────────────────────────────────
 
 def get_og_image_url(slug: str) -> str:
-    """Return og:image URL — use existing image if available, else fallback to logo."""
-    local_path = os.path.join(BASE_DIR, 'images', 'og', f'{slug}-og.png')
-    if os.path.exists(local_path):
+    """
+    Return og:image URL for English pages.
+    Priority: {slug}-en-og.png (English-specific) > {slug}-og.png (shared) > empty string
+    """
+    en_path = os.path.join(BASE_DIR, 'images', 'og', f'{slug}-en-og.png')
+    if os.path.exists(en_path):
+        return f'{SITE_DOMAIN}/images/og/{slug}-en-og.png'
+    zh_path = os.path.join(BASE_DIR, 'images', 'og', f'{slug}-og.png')
+    if os.path.exists(zh_path):
         return f'{SITE_DOMAIN}/images/og/{slug}-og.png'
-    return f'{SITE_DOMAIN}/images/logo.png'
+    return ''
+
+
+def ensure_en_og_image(slug: str, data_obj: dict, is_article: bool = False) -> str:
+    """
+    Ensure English OG image exists for the given slug.
+    If not found, generate it on-the-fly via gen_seo_images.
+    Returns the public URL, or empty string on failure.
+    """
+    en_path = os.path.join(BASE_DIR, 'images', 'og', f'{slug}-en-og.png')
+    if os.path.exists(en_path):
+        return f'{SITE_DOMAIN}/images/og/{slug}-en-og.png'
+    # Try to generate
+    try:
+        import sys as _sys
+        _scripts_dir = os.path.join(BASE_DIR, 'scripts')
+        if _scripts_dir not in _sys.path:
+            _sys.path.insert(0, BASE_DIR)
+        from scripts.gen_seo_images import (
+            make_og_image_en, make_article_og_image_en, generate_image
+        )
+        if is_article:
+            html = make_article_og_image_en(data_obj)
+        else:
+            # For tools we need all_tools; pass empty list as fallback
+            html = make_og_image_en(data_obj, [])
+        ok = generate_image(html, en_path)
+        if ok:
+            return f'{SITE_DOMAIN}/images/og/{slug}-en-og.png'
+    except Exception as e:
+        print(f'  [WARN] OG image generation failed for {slug}: {e}')
+    return ''
 
 
 def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -> str:
@@ -320,7 +357,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
 
     # hreflang
     hreflang  = hreflang_tags(f'/tools/{slug}/', f'/en/tools/{slug}/')
-    og_image  = get_og_image_url(slug)
+    og_image  = ensure_en_og_image(slug, tool, is_article=False)
 
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -335,12 +372,12 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     <meta property="og:title" content="{escape_html(name)} Review 2026 - {SITE_NAME}">
     <meta property="og:description" content="{escape_html(tool['description'][:150])}">
     <meta property="og:url" content="{SITE_DOMAIN}/en/tools/{slug}/">
-    <meta property="og:image" content="{og_image}">
+    {'<meta property="og:image" content="' + og_image + '">' if og_image else ''}
     <meta property="og:site_name" content="{SITE_NAME}">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="{'summary_large_image' if og_image else 'summary'}">
     <meta name="twitter:title" content="{escape_html(name)} Review 2026 - {SITE_NAME}">
     <meta name="twitter:description" content="{escape_html(tool['description'][:120])}">
-    <meta name="twitter:image" content="{og_image}">
+    {'<meta name="twitter:image" content="' + og_image + '">' if og_image else ''}
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_json}</script>
@@ -475,7 +512,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
     content_html = markdown_to_html(article.get('content',''))
     hreflang     = hreflang_tags(f'/articles/{slug}/', f'/en/articles/{slug}/')
-    og_image     = get_og_image_url(slug)
+    og_image     = ensure_en_og_image(slug, article, is_article=True)
 
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -490,12 +527,12 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     <meta property="og:title" content="{escape_html(title)} - {SITE_NAME}">
     <meta property="og:description" content="{escape_html(article.get('description',''))}">
     <meta property="og:url" content="{SITE_DOMAIN}/en/articles/{slug}/">
-    <meta property="og:image" content="{og_image}">
+    {'<meta property="og:image" content="' + og_image + '">' if og_image else ''}
     <meta property="og:site_name" content="{SITE_NAME}">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="{'summary_large_image' if og_image else 'summary'}">
     <meta name="twitter:title" content="{escape_html(title)} - {SITE_NAME}">
     <meta name="twitter:description" content="{escape_html(article.get('description',''))}">
-    <meta name="twitter:image" content="{og_image}">
+    {'<meta name="twitter:image" content="' + og_image + '">' if og_image else ''}
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_json}</script>

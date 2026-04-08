@@ -759,6 +759,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Grammarly AI",
+    "slug": "grammarly-ai",
+    "emoji": "✍️",
+    "color": "#213d33",
+    "description": "全球最流行的AI写作助手，实时检查语法、拼写和风格问题。支持英文写作润色、语气调整和翻译，是英文写作必备工具。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "1万",
+    "badge": {
+      "type": "new",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.grammarly.com",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Copilot（微软）",
     "slug": "microsoft-copilot",
     "emoji": "📊",
@@ -843,6 +872,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://character.ai",
     "price": "免费版+Pro $10/月",
     "platform": "Web"
+  },
+  {
+    "name": "讯飞星火",
+    "slug": "xinghuo-iflytek",
+    "emoji": "💬",
+    "color": "#ff775c",
+    "description": "科大讯飞推出的AI助手，基于星火大模型。以语音技术和教育场景为特色，支持语音交互和智能批改，是教育领域最强的AI助手。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "8万",
+    "badge": {
+      "type": null,
+      "text": null
+    },
+    "url": "https://xinghuo.xfyun.cn",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
   },
   {
     "name": "Poe",
@@ -1724,6 +1781,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://consensus.app",
     "price": "基础$10/月起",
     "platform": "Web"
+  },
+  {
+    "name": "Pixverse",
+    "slug": "pixverse",
+    "emoji": "🎬",
+    "color": "#9721f1",
+    "description": "AI视频生成工具，擅长文生视频和图片动效。特别是图片转动态效果的能力出色，让静态图片动起来，是社交媒体创作者的新宠。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "7万",
+    "badge": {
+      "type": "pick",
+      "text": "编辑推荐"
+    },
+    "url": "https://pixverse.ai",
+    "price": "基础$10/月起",
+    "platform": "Web / iOS / Android"
   },
   {
     "name": "Fliki",
@@ -2304,6 +2389,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Grammarly AI",
+    "slug": "grammarly-ai",
+    "emoji": "✍️",
+    "color": "#213d33",
+    "description": "全球最流行的AI写作助手，实时检查语法、拼写和风格问题。支持英文写作润色、语气调整和翻译，是英文写作必备工具。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "1万",
+    "badge": {
+      "type": "new",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.grammarly.com",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Copilot（微软）",
     "slug": "microsoft-copilot",
     "emoji": "📊",
@@ -2388,6 +2502,34 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://character.ai",
     "price": "免费版+Pro $10/月",
     "platform": "Web"
+  },
+  {
+    "name": "讯飞星火",
+    "slug": "xinghuo-iflytek",
+    "emoji": "💬",
+    "color": "#ff775c",
+    "description": "科大讯飞推出的AI助手，基于星火大模型。以语音技术和教育场景为特色，支持语音交互和智能批改，是教育领域最强的AI助手。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "8万",
+    "badge": {
+      "type": null,
+      "text": null
+    },
+    "url": "https://xinghuo.xfyun.cn",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
   },
   {
     "name": "Poe",
@@ -3269,6 +3411,34 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://consensus.app",
     "price": "基础$10/月起",
     "platform": "Web"
+  },
+  {
+    "name": "Pixverse",
+    "slug": "pixverse",
+    "emoji": "🎬",
+    "color": "#9721f1",
+    "description": "AI视频生成工具，擅长文生视频和图片动效。特别是图片转动态效果的能力出色，让静态图片动起来，是社交媒体创作者的新宠。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "7万",
+    "badge": {
+      "type": "pick",
+      "text": "编辑推荐"
+    },
+    "url": "https://pixverse.ai",
+    "price": "基础$10/月起",
+    "platform": "Web / iOS / Android"
   },
   {
     "name": "Fliki",
