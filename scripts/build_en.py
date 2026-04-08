@@ -173,6 +173,14 @@ def hreflang_tags(zh_path: str, en_path: str) -> str:
 
 # ─── Tool page ────────────────────────────────────────────────────────────────
 
+def get_og_image_url(slug: str) -> str:
+    """Return og:image URL — use existing image if available, else fallback to logo."""
+    local_path = os.path.join(BASE_DIR, 'images', 'og', f'{slug}-og.png')
+    if os.path.exists(local_path):
+        return f'{SITE_DOMAIN}/images/og/{slug}-og.png'
+    return f'{SITE_DOMAIN}/images/logo.png'
+
+
 def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -> str:
     slug = tool['slug']
     name = tool['name']
@@ -311,7 +319,8 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     content_html = markdown_to_html(content_md)
 
     # hreflang
-    hreflang = hreflang_tags(f'/tools/{slug}/', f'/en/tools/{slug}/')
+    hreflang  = hreflang_tags(f'/tools/{slug}/', f'/en/tools/{slug}/')
+    og_image  = get_og_image_url(slug)
 
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -326,10 +335,12 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     <meta property="og:title" content="{escape_html(name)} Review 2026 - {SITE_NAME}">
     <meta property="og:description" content="{escape_html(tool['description'][:150])}">
     <meta property="og:url" content="{SITE_DOMAIN}/en/tools/{slug}/">
+    <meta property="og:image" content="{og_image}">
     <meta property="og:site_name" content="{SITE_NAME}">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{escape_html(name)} Review 2026 - {SITE_NAME}">
     <meta name="twitter:description" content="{escape_html(tool['description'][:120])}">
+    <meta name="twitter:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_json}</script>
@@ -464,6 +475,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
     content_html = markdown_to_html(article.get('content',''))
     hreflang     = hreflang_tags(f'/articles/{slug}/', f'/en/articles/{slug}/')
+    og_image     = get_og_image_url(slug)
 
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -478,10 +490,12 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     <meta property="og:title" content="{escape_html(title)} - {SITE_NAME}">
     <meta property="og:description" content="{escape_html(article.get('description',''))}">
     <meta property="og:url" content="{SITE_DOMAIN}/en/articles/{slug}/">
+    <meta property="og:image" content="{og_image}">
     <meta property="og:site_name" content="{SITE_NAME}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{escape_html(title)} - {SITE_NAME}">
     <meta name="twitter:description" content="{escape_html(article.get('description',''))}">
+    <meta name="twitter:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_json}</script>
@@ -738,7 +752,12 @@ def build_index_en(tools: list, articles: list) -> str:
     <meta property="og:title" content="Best AI Tools 2026: {total_tools}+ Reviewed - {SITE_NAME}">
     <meta property="og:description" content="Find the best AI tools for writing, coding, image generation, and productivity. Updated daily.">
     <meta property="og:url" content="{SITE_DOMAIN}/en/">
+    <meta property="og:image" content="{SITE_DOMAIN}/images/logo.png">
     <meta property="og:site_name" content="{SITE_NAME}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Best AI Tools 2026: {total_tools}+ Reviewed - {SITE_NAME}">
+    <meta name="twitter:description" content="Find the best AI tools for writing, coding, image generation, and productivity. Updated daily.">
+    <meta name="twitter:image" content="{SITE_DOMAIN}/images/logo.png">
     <link rel="stylesheet" href="/css/style.css">
 {GA_BLOCK}
 </head>
