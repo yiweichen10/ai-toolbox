@@ -874,6 +874,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "智谱清言",
+    "slug": "zhipu-chatglm",
+    "emoji": "💬",
+    "color": "#4833ef",
+    "description": "智谱AI推出的国产AI助手，基于GLM大模型。以学术能力和数据分析著称，支持智能体和长文档处理，源自清华大学。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "16万",
+    "badge": {
+      "type": "new",
+      "text": "HOT"
+    },
+    "url": "https://chatglm.cn",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "讯飞星火",
     "slug": "xinghuo-iflytek",
     "emoji": "💬",
@@ -1387,6 +1416,34 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Copy.ai",
+    "slug": "copy.ai",
+    "emoji": "✍️",
+    "color": "#a5296e",
+    "description": "AI营销文案生成工具，专注于广告文案、邮件营销和社交媒体内容。内置100+营销模板，帮助企业批量生产高质量营销内容。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "12万",
+    "badge": {
+      "type": "hot",
+      "text": "NEW"
+    },
+    "url": "https://www.copy.ai",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "QuillBot",
     "slug": "quillbot",
     "emoji": "✍️",
@@ -1724,6 +1781,34 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://metaso.cn",
     "price": "基础$10/月起",
+    "platform": "Web"
+  },
+  {
+    "name": "Phind",
+    "slug": "phind",
+    "emoji": "🔍",
+    "color": "#b5f517",
+    "description": "面向开发者的AI搜索引擎，专为编程问题优化。直接搜索技术文档、代码示例和StackOverflow，给出可直接使用的代码答案。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "AI搜索"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "2万",
+    "badge": {
+      "type": "pick",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.phind.com",
+    "price": "免费版+Pro $10/月",
     "platform": "Web"
   },
   {
@@ -2504,6 +2589,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "智谱清言",
+    "slug": "zhipu-chatglm",
+    "emoji": "💬",
+    "color": "#4833ef",
+    "description": "智谱AI推出的国产AI助手，基于GLM大模型。以学术能力和数据分析著称，支持智能体和长文档处理，源自清华大学。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "16万",
+    "badge": {
+      "type": "new",
+      "text": "HOT"
+    },
+    "url": "https://chatglm.cn",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "讯飞星火",
     "slug": "xinghuo-iflytek",
     "emoji": "💬",
@@ -3017,6 +3131,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Copy.ai",
+    "slug": "copy.ai",
+    "emoji": "✍️",
+    "color": "#a5296e",
+    "description": "AI营销文案生成工具，专注于广告文案、邮件营销和社交媒体内容。内置100+营销模板，帮助企业批量生产高质量营销内容。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "12万",
+    "badge": {
+      "type": "hot",
+      "text": "NEW"
+    },
+    "url": "https://www.copy.ai",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "QuillBot",
     "slug": "quillbot",
     "emoji": "✍️",
@@ -3354,6 +3496,34 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://metaso.cn",
     "price": "基础$10/月起",
+    "platform": "Web"
+  },
+  {
+    "name": "Phind",
+    "slug": "phind",
+    "emoji": "🔍",
+    "color": "#b5f517",
+    "description": "面向开发者的AI搜索引擎，专为编程问题优化。直接搜索技术文档、代码示例和StackOverflow，给出可直接使用的代码答案。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "AI搜索"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "2万",
+    "badge": {
+      "type": "pick",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.phind.com",
+    "price": "免费版+Pro $10/月",
     "platform": "Web"
   },
   {
