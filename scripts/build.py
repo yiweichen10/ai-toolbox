@@ -2959,10 +2959,40 @@ def push_to_baidu(urls):
         print(f"[Baidu Push] Failed: {e}")
         return False
 
-def build_target(target):
+
+def _push_single_url(url):
+    """增量构建时推送单个新URL到百度和IndexNow"""
+    import urllib.request, urllib.error
+
+    # 百度推送
+    baidu_api = "http://data.zz.baidu.com/urls?site=https://www.aitoolbox.hk&token=WkOz42Q1xowpLZcB"
+    try:
+        data = url.encode('utf-8')
+        req = urllib.request.Request(baidu_api, data=data, headers={'Content-Type': 'text/plain'})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            print(f'[Baidu Push] {resp.read().decode("utf-8", errors="replace")}')
+    except urllib.error.HTTPError as e:
+        body = e.read().decode('utf-8', errors='replace')
+        print(f'[Baidu Push] HTTP {e.code}: {body}')
+    except Exception as e:
+        print(f'[Baidu Push] Failed: {e}')
+
+    # IndexNow推送
+    try:
+        indexnow_url = "https://api.indexnow.org/indexnow"
+        payload = json.dumps({"host": "www.aitoolbox.hk", "key": "a1b2c3d4e5f6g7h8", "urlList": [url]}).encode('utf-8')
+        req = urllib.request.Request(indexnow_url, data=payload, headers={'Content-Type': 'application/json'})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            print(f'[IndexNow] HTTP {resp.status}, pushed 1 URL')
+    except Exception as e:
+        print(f'[IndexNow] Failed: {e}')
+
+
+def build_target(target, slug=None):
     """
     构建指定目标或全部页面。
     target: 'all' | 'articles' | 'tools' | 'live' | 'sitemap' | 'index' | 'pseo' | 'ranking'
+    slug: 指定文章slug，仅构建该文章页+列表页+sitemap（增量构建模式）
     """
     # 加载数据
     with open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8') as f:
@@ -2974,7 +3004,7 @@ def build_target(target):
     published_tools = [tool for tool in all_tools if tool.get('published', False)]
     print(f"检测到 {len(all_tools)} 个工具，其中 {len(published_tools)} 个已发布。")
 
-    # 按分类分组工具
+    # 按分类分组工具（增量构建也需要）
     tools_by_category = {}
     for tool in published_tools:
         category = tool.get('category')
@@ -2982,6 +3012,41 @@ def build_target(target):
             if category not in tools_by_category:
                 tools_by_category[category] = []
             tools_by_category[category].append(tool)
+
+    # ═══════════════════════════════════════════════════════
+    # 增量构建模式：只构建指定slug的文章
+    # ═══════════════════════════════════════════════════════
+    if slug:
+        target_article = next((a for a in articles if a['slug'] == slug), None)
+        if not target_article:
+            print(f'[ERROR] 未找到文章: {slug}')
+            return False
+        print(f'\n[增量构建] 仅构建文章: {target_article["title"]}')
+        dir_path = os.path.join(BASE_DIR, 'articles', slug)
+        os.makedirs(dir_path, exist_ok=True)
+        html = build_article_page(target_article, articles, published_tools)
+        with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(html)
+        print(f'[OK] articles/{slug}/index.html')
+
+        # 更新文章分页列表页
+        total_pages = build_article_list_pages(articles)
+        print(f'[OK] 文章列表页已更新 ({total_pages} 页)')
+
+        # 后处理：注入全局导航
+        inject_global_nav()
+
+        # sitemap + 推送
+        sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()])
+        with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
+            f.write(sitemap)
+        print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles)')
+
+        # 推送新URL到百度和IndexNow
+        _push_single_url(f'https://www.aitoolbox.hk/articles/{slug}/index.html')
+
+        print(f'\n[完成] 增量构建: 1篇文章 + 列表页 + sitemap')
+        return True
 
     # 加载所有辅助数据（后续推送和sitemap需要）
     compare_data = load_compare_data()
@@ -3311,8 +3376,11 @@ def main():
                         choices=['all', 'articles', 'tools', 'live', 'pseo', 'ranking', 'index', 'sitemap', 'none'],
                         default='all',
                         help='构建目标（默认 all）：all=全量, articles=仅文章, tools=仅工具, live=仅Live面板, pseo=对比/替代/Quiz/排名/Live, index=首页+分类, sitemap=仅推送, none=仅构建HTML不推送')
+    parser.add_argument('--slug', '-s',
+                        type=str, default=None,
+                        help='增量构建：仅构建指定slug的文章页+列表页+sitemap')
     args = parser.parse_args()
-    build_target(args.target)
+    build_target(args.target, slug=args.slug)
 
 
 if __name__ == '__main__':
