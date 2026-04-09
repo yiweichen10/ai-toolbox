@@ -1784,34 +1784,6 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
-    "name": "Phind",
-    "slug": "phind",
-    "emoji": "🔍",
-    "color": "#b5f517",
-    "description": "面向开发者的AI搜索引擎，专为编程问题优化。直接搜索技术文档、代码示例和StackOverflow，给出可直接使用的代码答案。",
-    "category": "AI搜索",
-    "tags": [
-      {
-        "text": "AI搜索"
-      },
-      {
-        "text": "AI生成"
-      },
-      {
-        "text": "付费"
-      }
-    ],
-    "rating": "⭐ 4.5",
-    "visits": "2万",
-    "badge": {
-      "type": "pick",
-      "text": "编辑推荐"
-    },
-    "url": "https://www.phind.com",
-    "price": "免费版+Pro $10/月",
-    "platform": "Web"
-  },
-  {
     "name": "You.com",
     "slug": "you.com",
     "emoji": "🔍",
@@ -3496,34 +3468,6 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://metaso.cn",
     "price": "基础$10/月起",
-    "platform": "Web"
-  },
-  {
-    "name": "Phind",
-    "slug": "phind",
-    "emoji": "🔍",
-    "color": "#b5f517",
-    "description": "面向开发者的AI搜索引擎，专为编程问题优化。直接搜索技术文档、代码示例和StackOverflow，给出可直接使用的代码答案。",
-    "category": "AI搜索",
-    "tags": [
-      {
-        "text": "AI搜索"
-      },
-      {
-        "text": "AI生成"
-      },
-      {
-        "text": "付费"
-      }
-    ],
-    "rating": "⭐ 4.5",
-    "visits": "2万",
-    "badge": {
-      "type": "pick",
-      "text": "编辑推荐"
-    },
-    "url": "https://www.phind.com",
-    "price": "免费版+Pro $10/月",
     "platform": "Web"
   },
   {
