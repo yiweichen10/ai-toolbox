@@ -10,15 +10,18 @@ import time
 import os
 import sys
 import re
+import random
 
 # ─── Config ───────────────────────────────────────────────────────────
 API_KEY = "sk-necmvkjjvnysmuelonjjdkwzrmepuqtempxyghojejkvqzne"
 BASE_URL = "https://api.siliconflow.cn/v1/chat/completions"
-MODEL = "deepseek-ai/DeepSeek-V3"
+MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
 MAX_TOKENS = 4096
-REQUEST_DELAY = 3  # seconds between API calls
+REQUEST_DELAY_MIN = 3  # min seconds between API calls
+REQUEST_DELAY_MAX = 7  # max seconds between API calls
 MAX_RETRIES = 3
 PROGRESS_FILE = "data/_en_content_progress.json"
+API_TIMEOUT = 180  # seconds
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS_FILE = os.path.join(BASE_DIR, "data", "tools_en.json")
@@ -44,17 +47,26 @@ def call_api(system_prompt, user_prompt, max_retries=MAX_RETRIES):
 
     for attempt in range(max_retries):
         try:
-            resp = requests.post(BASE_URL, headers=headers, json=payload, timeout=60)
+            resp = requests.post(BASE_URL, headers=headers, json=payload, timeout=API_TIMEOUT)
             resp.raise_for_status()
             data = resp.json()
             content = data["choices"][0]["message"]["content"]
             return content
+        except requests.exceptions.Timeout:
+            print(f"  Timeout (attempt {attempt+1}/{max_retries}), retrying in {10*(attempt+1)}s...")
+            if attempt < max_retries - 1:
+                time.sleep(10 * (attempt + 1))
+        except requests.exceptions.ConnectionError as e:
+            print(f"  Connection error (attempt {attempt+1}/{max_retries}): {e}")
+            if attempt < max_retries - 1:
+                time.sleep(15 * (attempt + 1))
         except Exception as e:
             print(f"  API error (attempt {attempt+1}/{max_retries}): {e}")
             if attempt < max_retries - 1:
-                time.sleep(5 * (attempt + 1))
+                time.sleep(10 * (attempt + 1))
             else:
                 return None
+    return None
 
 
 def generate_tool_content(tool):
@@ -199,9 +211,11 @@ def main():
             fail_count += 1
             print(f"  ❌ Failed ({fail_count} failures)")
 
-        # Rate limiting
+        # Rate limiting with jitter
         if idx < len(pending) - 1:
-            time.sleep(REQUEST_DELAY)
+            delay = random.uniform(REQUEST_DELAY_MIN, REQUEST_DELAY_MAX)
+            print(f"  Waiting {delay:.1f}s...")
+            time.sleep(delay)
 
     # Summary
     print("\n" + "=" * 60)

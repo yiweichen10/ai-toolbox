@@ -17,7 +17,7 @@ DATA_FILE = os.path.join(BASE_DIR, 'data', 'tools.json')
 # AI API 配置
 API_URL = "https://api.siliconflow.cn/v1/chat/completions"
 API_KEY = "sk-necmvkjjvnysmuelonjjdkwzrmepuqtempxyghojejkvqzne"
-MODEL = "deepseek-ai/DeepSeek-V3"
+MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
 
 
 def call_ai(prompt, max_tokens=4000):

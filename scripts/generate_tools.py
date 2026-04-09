@@ -24,7 +24,7 @@ if sys.platform == "win32":
 # ===== 配置 =====
 API_KEY = "sk-necmvkjjvnysmuelonjjdkwzrmepuqtempxyghojejkvqzne"
 BASE_URL = "https://api.siliconflow.cn/v1"
-MODEL = "deepseek-ai/DeepSeek-V3"
+MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS_JSON_PATH = os.path.join(BASE_DIR, 'data', 'tools.json')

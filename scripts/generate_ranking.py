@@ -67,7 +67,7 @@ OUTPUT_FILE = os.path.join(DATA_DIR, 'ranking_data.json')
 # ── DeepSeek API ───────────────────────────────────────────
 API_URL = "https://api.siliconflow.cn/v1/chat/completions"
 API_KEY = "sk-necmvkjjvnysmuelonjjdkwzrmepuqtempxyghojejkvqzne"
-MODEL = "deepseek-ai/DeepSeek-V3"
+MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
 
 # ── 排名类型定义 ──────────────────────────────────────────
 RANKING_TYPES = [

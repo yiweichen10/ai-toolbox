@@ -37,7 +37,7 @@ OUTPUT_FILE = os.path.join(DATA_DIR, 'quiz_data.json')
 # ── DeepSeek API 配置 ─────────────────────────────────────
 API_URL = "https://api.siliconflow.cn/v1/chat/completions"
 API_KEY = "sk-necmvkjjvnysmuelonjjdkwzrmepuqtempxyghojejkvqzne"
-MODEL = "deepseek-ai/DeepSeek-V3"
+MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
 
 # ── Quiz 场景定义 ─────────────────────────────────────────
 # 每个场景是一组"问题→答案映射到工具"的推荐逻辑

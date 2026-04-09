@@ -41,7 +41,7 @@ STATE_FILE = os.path.join(BASE_DIR, 'data', '_compare_state.json')
 # ── AI API 配置（复用现有 DeepSeek-V3） ───────────────────
 API_URL = "https://api.siliconflow.cn/v1/chat/completions"
 API_KEY = "sk-necmvkjjvnysmuelonjjdkwzrmepuqtempxyghojejkvqzne"
-MODEL = "deepseek-ai/DeepSeek-V3"
+MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
 
 # ============================================================
 # 预定义热门对比组合（基于搜索量和用户需求）
