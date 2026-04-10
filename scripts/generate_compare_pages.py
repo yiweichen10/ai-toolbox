@@ -40,7 +40,14 @@ STATE_FILE = os.path.join(BASE_DIR, 'data', '_compare_state.json')
 
 # ── AI API 配置（复用现有 DeepSeek-V3） ───────────────────
 API_URL = "https://api.siliconflow.cn/v1/chat/completions"
-API_KEY = "sk-necmvkjjvnysmuelonjjdkwzrmepuqtempxyghojejkvqzne"
+import os
+from dotenv import load_dotenv
+
+# Load .env file (project root)
+dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
+load_dotenv(dotenv_path)
+
+API_KEY = os.getenv("SILICONFLOW_API_KEY", "")
 MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
 
 # ============================================================

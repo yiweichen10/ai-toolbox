@@ -22,8 +22,15 @@ if sys.platform == "win32":
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 # ===== 配置 =====
-API_KEY = "sk-necmvkjjvnysmuelonjjdkwzrmepuqtempxyghojejkvqzne"
-BASE_URL = "https://api.siliconflow.cn/v1"
+import os
+from dotenv import load_dotenv
+
+# Load .env file (project root)
+dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
+load_dotenv(dotenv_path)
+
+API_KEY = os.getenv("SILICONFLOW_API_KEY", "")
+BASE_URL = os.getenv("SILICONFLOW_BASE_URL", "https://api.siliconflow.cn/v1")
 MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

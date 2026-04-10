@@ -110,7 +110,7 @@ var _hmt = _hmt || [];
 <p>我做了一个实验：给8家AI厂商各充$100，用相同的4个开发场景跑测试，看谁先烧完钱、谁撑得最久。
 </p>
 
-<p>结果让我吃了一惊——同样是处理100万token的输入，最贵的Claude Opus 4.6花了$5，最便宜的DeepSeek V3.2开了缓存只花了$0.028。<strong>同一个任务，差了178倍。</strong>
+<p>结果让我吃了一惊——同样是处理100万token的输入，最贵的<a href="/tools/claude/" style="color:var(--primary-color);text-decoration:underline;text-underline-offset:3px;font-weight:500;">Claude</a> Opus 4.6花了$5，最便宜的<a href="/tools/deepseek/" style="color:var(--primary-color);text-decoration:underline;text-underline-offset:3px;font-weight:500;">DeepSeek</a> V3.2开了缓存只花了$0.028。<strong>同一个任务，差了178倍。</strong>
 </p>
 
 <p>这不是小数点后几毛钱的差距，是月费$50和月费$5000的区别。如果你在做AI应用开发、跑Agent、或者批量处理数据，选错模型等于把钱扔进火里。
@@ -120,7 +120,7 @@ var _hmt = _hmt || [];
 </p>
 
 <h2>先看结论：4个场景该选谁</h2>
-<table><thead><tr><th>开发场景</th><th>首选模型</th><th>备选方案</th><th>每百万token成本</th><th>理由</th></tr></thead><tbody><tr><td>日常对话/客服机器人</td><td>Gemini 2.5 Flash</td><td>DeepSeek V3.2</td><td>$0.30入/$2.50出</td><td>速度快、1M窗口、价格低</td></tr><tr><td>长文档分析/RAG</td><td>Claude Sonnet 4.6</td><td>Gemini 2.5 Pro</td><td>$3.00入/$15.00出</td><td>1M上下文最可靠，幻觉控制最好</td></tr><tr><td>代码生成/Agent</td><td>Claude Sonnet 4.6</td><td>DeepSeek V3.2</td><td>$3.00入/$15.00出</td><td>SWE-bench 72.7%，Agent能力最强</td></tr><tr><td>高并发批量处理</td><td>Gemini 2.5 Flash-Lite</td><td>DeepSeek V3.2（缓存）</td><td>$0.10入/$0.40出</td><td>极致便宜，适合不需要强推理的流水线</td></tr><tr><td>中文内容创作</td><td>Kimi K2.5</td><td>通义千问3.5-Plus</td><td>~$0.60入/$1.30出</td><td>中文理解质量最好，速度103-116 tok/s</td></tr><tr><td>复杂数学推理</td><td>o3（按需）</td><td>DeepSeek R1</td><td>$10.00入/$40.00出</td><td>推理天花板，但很贵，只在必要时用</td></tr></tbody></table>
+<table><thead><tr><th>开发场景</th><th>首选模型</th><th>备选方案</th><th>每百万token成本</th><th>理由</th></tr></thead><tbody><tr><td>日常对话/客服机器人</td><td><a href="/tools/gemini/" style="color:var(--primary-color);text-decoration:underline;text-underline-offset:3px;font-weight:500;">Gemini</a> 2.5 Flash</td><td>DeepSeek V3.2</td><td>$0.30入/$2.50出</td><td>速度快、1M窗口、价格低</td></tr><tr><td>长文档分析/RAG</td><td>Claude Sonnet 4.6</td><td>Gemini 2.5 Pro</td><td>$3.00入/$15.00出</td><td>1M上下文最可靠，幻觉控制最好</td></tr><tr><td>代码生成/Agent</td><td>Claude Sonnet 4.6</td><td>DeepSeek V3.2</td><td>$3.00入/$15.00出</td><td>SWE-bench 72.7%，Agent能力最强</td></tr><tr><td>高并发批量处理</td><td>Gemini 2.5 Flash-Lite</td><td>DeepSeek V3.2（缓存）</td><td>$0.10入/$0.40出</td><td>极致便宜，适合不需要强推理的流水线</td></tr><tr><td>中文内容创作</td><td><a href="/tools/kimi/" style="color:var(--primary-color);text-decoration:underline;text-underline-offset:3px;font-weight:500;">Kimi</a> K2.5</td><td>通义千问3.5-Plus</td><td>~$0.60入/$1.30出</td><td>中文理解质量最好，速度103-116 tok/s</td></tr><tr><td>复杂数学推理</td><td>o3（按需）</td><td>DeepSeek R1</td><td>$10.00入/$40.00出</td><td>推理天花板，但很贵，只在必要时用</td></tr></tbody></table>
 <p>这不是"各有优劣看你需求"——我给了明确的首选。下面展开说为什么。
 </p>
 
@@ -383,6 +383,17 @@ A：推荐分配：Gemini Flash-Lite处理50%请求（$10）、DeepSeek V3.2+缓
                 </a>
 </div>
         </div>
+    
+    <div class="article-site-cta" style="background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));border-radius:var(--radius-lg);padding:32px;margin-bottom:32px;text-align:center;color:#fff;">
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;">🎯 找到适合你的AI工具</h3>
+        <p style="font-size:15px;opacity:0.9;margin-bottom:20px;">浏览100+精选AI工具，按分类、排行、场景筛选</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a href="/ranking/" style="display:inline-flex;align-items:center;padding:12px 24px;background:rgba(255,255,255,0.2);color:#fff;border-radius:var(--radius-md);font-weight:700;text-decoration:none;backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.3);">📊 工具排行</a>
+            <a href="/quiz/" style="display:inline-flex;align-items:center;padding:12px 24px;background:rgba(255,255,255,0.2);color:#fff;border-radius:var(--radius-md);font-weight:700;text-decoration:none;backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.3);">🎯 AI工具选择器</a>
+            <a href="/category/" style="display:inline-flex;align-items:center;padding:12px 24px;background:rgba(255,255,255,0.2);color:#fff;border-radius:var(--radius-md);font-weight:700;text-decoration:none;backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.3);">📂 全部分类</a>
+        </div>
+    </div>
+    
     </main>
 
     <footer class="footer">
