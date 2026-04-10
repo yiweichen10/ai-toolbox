@@ -106,6 +106,9 @@ def markdown_to_html(md):
     if not md:
         return ''
     html = md
+    # 水平分隔线（---）转为 <hr>，必须放在代码块处理之前，避免误匹配
+    html = re.sub(r'\n---\s*\n', '\n<hr>\n', html)
+    html = re.sub(r'^---\s*$', '<hr>', html, flags=re.MULTILINE)
     # 代码块
     html = re.sub(r'```(\w*)\n([\s\S]*?)```', lambda m: '<pre><code>' + m.group(2).replace('&','&amp;').replace('<','&lt;').replace('>','&gt;') + '</code></pre>', html)
     # 表格
@@ -150,7 +153,7 @@ def markdown_to_html(md):
     in_p = False
     for line in lines:
         stripped = line.strip()
-        is_tag = stripped.startswith('<h') or stripped.startswith('<ul') or stripped.startswith('</ul') or stripped.startswith('<li') or stripped.startswith('<table') or stripped.startswith('</table') or stripped.startswith('<pre') or stripped.startswith('</pre') or stripped.startswith('<blockquote') or stripped.startswith('</blockquote') or stripped == ''
+        is_tag = stripped.startswith('<h') or stripped.startswith('<ul') or stripped.startswith('</ul') or stripped.startswith('<li') or stripped.startswith('<table') or stripped.startswith('</table') or stripped.startswith('<pre') or stripped.startswith('</pre') or stripped.startswith('<blockquote') or stripped.startswith('</blockquote') or stripped.startswith('<hr') or stripped == ''
         if is_tag:
             if in_p:
                 result.append('</p>')
@@ -2999,6 +3002,16 @@ def build_target(target, slug=None):
         all_tools = json.load(f)
     with open(os.path.join(DATA_DIR, 'articles.json'), 'r', encoding='utf-8') as f:
         articles = json.load(f)
+    # 按日期降序排列（最新文章在前），date格式为 "MM/DD"
+    def _article_date_key(a):
+        d = a.get('date', '')
+        # 尝试解析 MM/DD 格式
+        try:
+            parts = d.split('/')
+            return (int(parts[0]), int(parts[1]))
+        except:
+            return (0, 0)
+    articles.sort(key=_article_date_key, reverse=True)
 
     # 过滤出已发布的工具
     published_tools = [tool for tool in all_tools if tool.get('published', False)]
