@@ -619,6 +619,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Grok",
+    "slug": "grok",
+    "emoji": "💬",
+    "color": "#a76877",
+    "description": "xAI（马斯克旗下）推出的AI助手，以实时信息获取和幽默风格著称。深度集成X（Twitter），能实时获取最新消息，是信息时效性最强的AI助手。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "9万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://grok.com",
+    "price": "免费使用",
+    "platform": "Web"
+  },
+  {
     "name": "HeyGen",
     "slug": "heygen",
     "emoji": "🎬",
@@ -1358,6 +1386,34 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Flux",
+    "slug": "flux",
+    "emoji": "🎨",
+    "color": "#337b26",
+    "description": "Black Forest Labs推出的开源AI绘画模型，以真实感著称。Flux Pro版画质达到照片级，开源版本可免费商用，是Stable Diffusion的有力竞争者。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "9万",
+    "badge": {
+      "type": "pick",
+      "text": "编辑推荐"
+    },
+    "url": "https://blackforestlabs.ai",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "秒画",
     "slug": "miaohua",
     "emoji": "🎨",
@@ -1555,6 +1611,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://js.design",
     "price": "免费使用",
     "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Napkin AI",
+    "slug": "napkin-ai",
+    "emoji": "📊",
+    "color": "#7f95ff",
+    "description": "AI图表生成工具，将文字内容自动转化为精美的可视化图表和流程图。上传文档即可生成思维导图、流程图等，是知识工作者的可视化利器。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "3万",
+    "badge": {
+      "type": "new",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.napkin.ai",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
   },
   {
     "name": "Otter.ai",
@@ -2306,6 +2390,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Grok",
+    "slug": "grok",
+    "emoji": "💬",
+    "color": "#a76877",
+    "description": "xAI（马斯克旗下）推出的AI助手，以实时信息获取和幽默风格著称。深度集成X（Twitter），能实时获取最新消息，是信息时效性最强的AI助手。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "9万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://grok.com",
+    "price": "免费使用",
+    "platform": "Web"
+  },
+  {
     "name": "HeyGen",
     "slug": "heygen",
     "emoji": "🎬",
@@ -3045,6 +3157,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Flux",
+    "slug": "flux",
+    "emoji": "🎨",
+    "color": "#337b26",
+    "description": "Black Forest Labs推出的开源AI绘画模型，以真实感著称。Flux Pro版画质达到照片级，开源版本可免费商用，是Stable Diffusion的有力竞争者。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "9万",
+    "badge": {
+      "type": "pick",
+      "text": "编辑推荐"
+    },
+    "url": "https://blackforestlabs.ai",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "秒画",
     "slug": "miaohua",
     "emoji": "🎨",
@@ -3242,6 +3382,34 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://js.design",
     "price": "免费使用",
     "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Napkin AI",
+    "slug": "napkin-ai",
+    "emoji": "📊",
+    "color": "#7f95ff",
+    "description": "AI图表生成工具，将文字内容自动转化为精美的可视化图表和流程图。上传文档即可生成思维导图、流程图等，是知识工作者的可视化利器。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "3万",
+    "badge": {
+      "type": "new",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.napkin.ai",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
   },
   {
     "name": "Otter.ai",
