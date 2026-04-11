@@ -1302,6 +1302,34 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Synthesia",
+    "slug": "synthesia",
+    "emoji": "🎬",
+    "color": "#79ce64",
+    "description": "AI数字人视频制作平台，输入文字即可生成多语言数字人讲解视频。支持140+语言，70+数字人形象，是企业培训和营销视频的专业工具。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 5.0",
+    "visits": "8万",
+    "badge": {
+      "type": "hot",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.synthesia.io",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "CapCut AI",
     "slug": "capcut-ai",
     "emoji": "🎬",
@@ -1583,6 +1611,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.remove.bg",
     "price": "免费版+Pro $10/月",
     "platform": "Web"
+  },
+  {
+    "name": "Figma AI",
+    "slug": "figma-ai",
+    "emoji": "🖼️",
+    "color": "#ea5373",
+    "description": "全球最流行的UI设计工具Figma的AI功能升级版。AI自动生成UI布局、组件和设计方案，设计师的AI助手，无缝融入设计工作流。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "11万",
+    "badge": {
+      "type": "hot",
+      "text": "NEW"
+    },
+    "url": "https://www.figma.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web / iOS / Android"
   },
   {
     "name": "即时设计AI",
@@ -2091,6 +2148,34 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.recraft.ai",
     "price": "免费使用",
+    "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Fathom",
+    "slug": "fathom",
+    "emoji": "📊",
+    "color": "#ed792a",
+    "description": "AI会议记录助手，自动记录Zoom、Google Meet会议的摘要和行动项。轻量简洁，不录制音频只记录文字，是注重隐私的会议工具。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "15万",
+    "badge": {
+      "type": "hot",
+      "text": "NEW"
+    },
+    "url": "https://fathom.video",
+    "price": "基础$10/月起",
     "platform": "本地部署 / Web"
   }
 ];
@@ -3073,6 +3158,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Synthesia",
+    "slug": "synthesia",
+    "emoji": "🎬",
+    "color": "#79ce64",
+    "description": "AI数字人视频制作平台，输入文字即可生成多语言数字人讲解视频。支持140+语言，70+数字人形象，是企业培训和营销视频的专业工具。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 5.0",
+    "visits": "8万",
+    "badge": {
+      "type": "hot",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.synthesia.io",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "CapCut AI",
     "slug": "capcut-ai",
     "emoji": "🎬",
@@ -3354,6 +3467,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.remove.bg",
     "price": "免费版+Pro $10/月",
     "platform": "Web"
+  },
+  {
+    "name": "Figma AI",
+    "slug": "figma-ai",
+    "emoji": "🖼️",
+    "color": "#ea5373",
+    "description": "全球最流行的UI设计工具Figma的AI功能升级版。AI自动生成UI布局、组件和设计方案，设计师的AI助手，无缝融入设计工作流。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "11万",
+    "badge": {
+      "type": "hot",
+      "text": "NEW"
+    },
+    "url": "https://www.figma.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web / iOS / Android"
   },
   {
     "name": "即时设计AI",
@@ -3862,6 +4004,34 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.recraft.ai",
     "price": "免费使用",
+    "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Fathom",
+    "slug": "fathom",
+    "emoji": "📊",
+    "color": "#ed792a",
+    "description": "AI会议记录助手，自动记录Zoom、Google Meet会议的摘要和行动项。轻量简洁，不录制音频只记录文字，是注重隐私的会议工具。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "15万",
+    "badge": {
+      "type": "hot",
+      "text": "NEW"
+    },
+    "url": "https://fathom.video",
+    "price": "基础$10/月起",
     "platform": "本地部署 / Web"
   }
 ];

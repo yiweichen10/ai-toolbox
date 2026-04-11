@@ -110,7 +110,7 @@ var _hmt = _hmt || [];
 <p>2026年4月3日，AI圈炸了三颗雷。不是一颗，是三颗——而且每一颗都指向同一个方向。
 </p>
 
-<p>微软发布三款自研AI模型（MAI-Transcribe-1/MAI-Voice-1/MAI-Image-2），由前DeepMind联合创始人Mustafa Suleyman带队，豪言"到2027年自主打造大型尖端模型"。阿里千问Qwen3.6-Plus同日发布，SWE-bench Verified 78.8%直逼<a href="/tools/claude/" style="color:var(--primary-color);text-decoration:underline;text-underline-offset:3px;font-weight:500;">Claude</a> Opus 4.5的80.8%，且API定价只要Claude的十分之一。谷歌也不甘寂寞，Gemma 4凌晨发布，全面转向Apache 2.0开源许可，31B模型代码能力AIME提升68.4%。
+<p>微软发布三款自研AI模型（MAI-Transcribe-1/MAI-Voice-1/MAI-Image-2），由前DeepMind联合创始人Mustafa Suleyman带队，豪言"到2027年自主打造大型尖端模型"。阿里千问Qwen3.6-Plus同日发布，SWE-bench Verified 78.8%直逼Claude Opus 4.5的80.8%，且API定价只要Claude的十分之一。谷歌也不甘寂寞，Gemma 4凌晨发布，全面转向Apache 2.0开源许可，31B模型代码能力AIME提升68.4%。
 </p>
 
 <p>三件事分开看各有看点，放在一起看才看出门道：<strong>全行业都在加速"去OpenAI依赖"。</strong> 微软——OpenAI的最大投资者和合作伙伴——都开始自研了，其他人还有什么理由继续等OpenAI的API？
@@ -130,7 +130,7 @@ var _hmt = _hmt || [];
 
 <p>微软这次的数据很能打：
 </p>
-<table><thead><tr><th>对比项</th><th>MAI-Transcribe-1</th><th>Whisper-large-v3</th><th><a href="/tools/gemini/" style="color:var(--primary-color);text-decoration:underline;text-underline-offset:3px;font-weight:500;">Gemini</a> 3.1 Flash</th></tr></thead><tbody><tr><td>FLEURS核心语言</td><td><strong>11种第一</strong></td><td>低于MAI</td><td>14种中11种低于MAI</td></tr><tr><td>GPU成本</td><td><strong>降低50%</strong></td><td>基准</td><td>基准</td></tr><tr><td>处理速度</td><td><strong>Azure Fast 2.5倍</strong></td><td>基准</td><td>基准</td></tr></tbody></table>
+<table><thead><tr><th>对比项</th><th>MAI-Transcribe-1</th><th>Whisper-large-v3</th><th>Gemini 3.1 Flash</th></tr></thead><tbody><tr><td>FLEURS核心语言</td><td><strong>11种第一</strong></td><td>低于MAI</td><td>14种中11种低于MAI</td></tr><tr><td>GPU成本</td><td><strong>降低50%</strong></td><td>基准</td><td>基准</td></tr><tr><td>处理速度</td><td><strong>Azure Fast 2.5倍</strong></td><td>基准</td><td>基准</td></tr></tbody></table>
 <p>$0.36/小时的价格，比Azure现有的Fast服务便宜且快2.5倍。这不是小幅优化，是降维打击。
 </p>
 
@@ -169,12 +169,12 @@ var _hmt = _hmt || [];
 
 <h3>Qwen3.6-Plus在AI编程工具生态中的位置</h3>
 
-<p>Qwen3.6-Plus已经可以接入多种Agent框架：OpenClaw、Qwen Code、<a href="/tools/claude-code/" style="color:var(--primary-color);text-decoration:underline;text-underline-offset:3px;font-weight:500;">Claude Code</a>等。这意味着什么？<strong>你可以用Claude Code的界面，但跑Qwen的模型。</strong> 界面体验不变，成本降到十分之一，编程能力只差2个百分点。
+<p>Qwen3.6-Plus已经可以接入多种Agent框架：OpenClaw、Qwen Code、Claude Code等。这意味着什么？<strong>你可以用Claude Code的界面，但跑Qwen的模型。</strong> 界面体验不变，成本降到十分之一，编程能力只差2个百分点。
 </p>
 
-<p>这对于我们之前测试过的Cline+<a href="/tools/deepseek/" style="color:var(--primary-color);text-decoration:underline;text-underline-offset:3px;font-weight:500;">DeepSeek</a>方案（$5/月）是直接升级：换成Cline+Qwen3.6-Plus，成本几乎不变，但SWE-bench从约39%（DeepSeek V3.2估计值）跳到78.8%——翻了一倍。
+<p>这对于我们之前测试过的Cline+DeepSeek方案（$5/月）是直接升级：换成Cline+Qwen3.6-Plus，成本几乎不变，但SWE-bench从约39%（DeepSeek V3.2估计值）跳到78.8%——翻了一倍。
 </p>
-<table><thead><tr><th>方案</th><th>模型</th><th>SWE-bench</th><th>估算月费</th><th>编程能力</th></tr></thead><tbody><tr><td>Claude Code Pro</td><td>Claude Sonnet 4.6</td><td>79.6%</td><td>~$40</td><td>第一梯队</td></tr><tr><td>Cline + Qwen3.6-Plus</td><td>Qwen3.6-Plus</td><td>78.8%</td><td>~$5</td><td>第一梯队</td></tr><tr><td><a href="/tools/cursor/" style="color:var(--primary-color);text-decoration:underline;text-underline-offset:3px;font-weight:500;">Cursor</a> Pro</td><td>Claude Opus 4.6</td><td>80.8%</td><td>~$60</td><td>第一梯队</td></tr><tr><td>Cline + DeepSeek</td><td>DeepSeek V3.2</td><td>~39%</td><td>~$5</td><td>第二梯队</td></tr></tbody></table>
+<table><thead><tr><th>方案</th><th>模型</th><th>SWE-bench</th><th>估算月费</th><th>编程能力</th></tr></thead><tbody><tr><td>Claude Code Pro</td><td>Claude Sonnet 4.6</td><td>79.6%</td><td>~$40</td><td>第一梯队</td></tr><tr><td>Cline + Qwen3.6-Plus</td><td>Qwen3.6-Plus</td><td>78.8%</td><td>~$5</td><td>第一梯队</td></tr><tr><td>Cursor Pro</td><td>Claude Opus 4.6</td><td>80.8%</td><td>~$60</td><td>第一梯队</td></tr><tr><td>Cline + DeepSeek</td><td>DeepSeek V3.2</td><td>~39%</td><td>~$5</td><td>第二梯队</td></tr></tbody></table>
 <p>Cline+Qwen3.6-Plus方案在SWE-bench上追平了Claude Code Pro，但成本只有八分之一。这可能是目前性价比最高的AI编程方案。
 </p>
 
@@ -253,7 +253,7 @@ var _hmt = _hmt || [];
 <p><strong>Q4：AI编程工具现在怎么选？</strong>
 </p>
 
-<p>A：基于最新数据更新推荐：追求综合效率选Claude Code Pro（$20/月），追求性价比选Cline+Qwen3.6-Plus（$5/月，SWE-bench 78.8%），追求免费选<a href="/tools/github-copilot/" style="color:var(--primary-color);text-decoration:underline;text-underline-offset:3px;font-weight:500;">GitHub Copilot</a>免费版（50次/月）。不推荐：纯用DeepSeek做复杂编程（bug率太高，SWE-bench仅约39%）。
+<p>A：基于最新数据更新推荐：追求综合效率选Claude Code Pro（$20/月），追求性价比选Cline+Qwen3.6-Plus（$5/月，SWE-bench 78.8%），追求免费选GitHub Copilot免费版（50次/月）。不推荐：纯用DeepSeek做复杂编程（bug率太高，SWE-bench仅约39%）。
 </p>
 
 <p><strong>Q5：AI模型"去OpenAI依赖"这个趋势会持续吗？</strong>
@@ -329,17 +329,6 @@ var _hmt = _hmt || [];
                 </a>
 </div>
         </div>
-    
-    <div class="article-site-cta" style="background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));border-radius:var(--radius-lg);padding:32px;margin-bottom:32px;text-align:center;color:#fff;">
-        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;">🎯 找到适合你的AI工具</h3>
-        <p style="font-size:15px;opacity:0.9;margin-bottom:20px;">浏览100+精选AI工具，按分类、排行、场景筛选</p>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-            <a href="/ranking/" style="display:inline-flex;align-items:center;padding:12px 24px;background:rgba(255,255,255,0.2);color:#fff;border-radius:var(--radius-md);font-weight:700;text-decoration:none;backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.3);">📊 工具排行</a>
-            <a href="/quiz/" style="display:inline-flex;align-items:center;padding:12px 24px;background:rgba(255,255,255,0.2);color:#fff;border-radius:var(--radius-md);font-weight:700;text-decoration:none;backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.3);">🎯 AI工具选择器</a>
-            <a href="/category/" style="display:inline-flex;align-items:center;padding:12px 24px;background:rgba(255,255,255,0.2);color:#fff;border-radius:var(--radius-md);font-weight:700;text-decoration:none;backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.3);">📂 全部分类</a>
-        </div>
-    </div>
-    
     </main>
 
     <footer class="footer">
