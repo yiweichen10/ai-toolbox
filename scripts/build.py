@@ -189,6 +189,13 @@ def build_tool_page(tool, all_tools, all_articles=None):
     """生成单个工具详情页的完整HTML"""
     slug = tool['slug']
 
+    # ── SEO关键词：优先用seo_keywords字段，fallback到模板 ───────────────
+    seo_kw_list = tool.get('seo_keywords', [])
+    if seo_kw_list:
+        seo_kw = ','.join(k.strip() for k in seo_kw_list if k.strip())
+    else:
+        seo_kw = f"{tool['name']},{tool['name']}评测,{tool['name']}使用教程,{tool.get('category','')},AI工具"
+
     # ── 相关工具（自动补足到5个：同分类2-3个 + 跨分类2-3个）──────────────
     related_html = ''
     manually_related = tool.get('related', [])
@@ -422,7 +429,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{escape_html(tool['name'])}评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱</title>
     <meta name="description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'])} 功能介绍、免费版体验、与同类工具对比。">
-    <meta name="keywords" content="{escape_html(tool['name'])},{escape_html(tool['name'])}评测,{escape_html(tool['name'])}使用教程,{escape_html(tool['category'])},AI工具">
+    <meta name="keywords" content="{escape_html(seo_kw)}">
     <link rel="canonical" href="https://www.aitoolbox.hk/tools/{slug}/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(tool['name'])}评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱">

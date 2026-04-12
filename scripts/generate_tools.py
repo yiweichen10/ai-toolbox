@@ -31,28 +31,33 @@ load_dotenv(dotenv_path)
 
 API_KEY = os.getenv("SILICONFLOW_API_KEY", "")
 BASE_URL = os.getenv("SILICONFLOW_BASE_URL", "https://api.siliconflow.cn/v1")
-MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
+MODEL = "Pro/MiniMaxAI/MiniMax-M2.5"
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS_JSON_PATH = os.path.join(BASE_DIR, 'data', 'tools.json')
 
-# 预设的待生成工具列表
+# 预设的待生成工具列表（注意：去重逻辑会自动跳过已有工具）
 DEFAULT_TOOL_NAMES = [
-    "Perplexity AI", "Leonardo AI", "Suno AI", "Gamma AI", "Notion AI",
-    "Canva AI", "Figma AI", "Stable Diffusion 3", "Midjourney V7",
-    "Google Gemini", "Microsoft Copilot", "Anthropic Claude",
-    "Runway ML", "ElevenLabs", "D-ID", "Synthesia",
-    "Luma AI", "Kling AI", "HeyGen", "Cursor AI",
-    "Windsurf", "v0.dev", "Bolt.new", "Replit AI",
-    "Descript", "Otter.ai", "Fireflies.ai", "Grammarly",
-    "Jasper AI", "Copy.ai", "Writesonic", "Wordtune",
-    "Beautiful.ai", "Tome AI", "Tome", "Pitch AI",
-    "Zapier AI", "Make.com", "Bardeen", "Anthropic Console",
-    "Hugging Face", "Replicate", "Poe", "Phind",
-    "You.com", "Brave Search AI", "秘塔AI搜索", "天工AI",
-    "通义千问", "讯飞星火", "文心一言4.0", "智谱清言",
-    "腾讯混元", "字节跳动豆包", "月之暗面Kimi", "零一万物",
-    "MiniMax", "阶跃星辰", "百川智能", "商汤日日新",
+    # 国外工具
+    "Replicate", "Brave Search AI",
+    "Relume", "Miro AI", "Framer AI", "Webflow AI", "Spline AI",
+    "LottieFiles AI", "Augie AI", "Glitter AI",
+    "ElevenLabs", "Murf AI", "Play.ht", "Wondercraft AI",
+    "Synthesia", "HeyGen", "D-ID", "Veed.io",
+    "Luma AI", "Kaiber", "Domika", "Decohere",
+    "Photoroom", "Let's Enhance", "Clipdrop", "Magnific AI",
+    "Otter.ai", "Fireflies.ai", " tl;dv", "Grain",
+    "Descript", "Opus Clip", "Consensus", "Elicit",
+    "Writesonic", "Copy.ai", "Anyword", "Headlime",
+    "Zapier AI", "n8n", "Make", "Activepieces",
+    "Lovable", "v0.dev", "Bolt.new", "Replit AI", "CodeSandbox AI",
+    "Phind", "You.com", "Perplexity AI",
+    "Looka", "Cleanvoice", "Raycast AI", "Supabase AI",
+    "Beautiful.ai", "Tome", "Pitch",
+    # 国产工具
+    "腾讯混元", "零一万物", "阶跃星辰", "百川智能", "商汤日日新",
+    "飞书智能助手", "稿定设计AI", "纳米AI搜索", "360智脑",
+    "MiniMax", "NotebookLM", "智谱清言",
 ]
 
 
@@ -121,35 +126,49 @@ JSON结构：
         {{"question": "用户最关心的问题2", "answer": "具体有用的回答"}},
         {{"question": "用户最关心的问题3", "answer": "具体有用的回答"}},
         {{"question": "用户最关心的问题4", "answer": "具体有用的回答"}}
+    ],
+    "seo_keywords": [
+        "用户最可能搜索的核心词（1个，通常是工具名本身）",
+        "真实的长尾搜索词1（如：{tool_name}免费版、{tool_name}怎么样、{tool_name}和XX哪个好）",
+        "真实的长尾搜索词2",
+        "真实的长尾搜索词3",
+        "真实的长尾搜索词4"
     ]
 }}"""
 
 
 def build_content_prompt(tool_name, description, pros, cons, features):
     """第二次调用：专门生成content长文"""
-    return f"""你是AI工具评测博主，写一篇关于"{tool_name}"的深度评测文章。
+    return f"""你是一个AI工具站的内容编辑，写一篇关于"{tool_name}"的介绍文章。
 
 工具描述：{description}
 主要优点：{', '.join(pros)}
 主要缺点：{', '.join(cons)}
 核心功能：{', '.join(features)}
 
-要求：
-1. 必须在1500-2500字之间（严格要求）
-2. 直接输出Markdown文本，不要JSON包裹
-3. 必须包含以下所有章节（用##标题）：
-   - ## {tool_name}是什么？（200字以上介绍）
-   - ## 核心功能（5个功能详细介绍，每个含使用体验）
-   - ## 版本/套餐对比（用Markdown表格，至少对比2个版本）
-   - ## 优缺点分析（各3-5点详细说明，不要空话）
-   - ## 使用技巧（5条以上具体可操作的建议）
-   - ## 适合人群
-4. 要像真正用过的用户写的，有个人体验和具体数据
-5. 数据要具体（如"处理速度提升47%"），不要用"显著提升"这种模糊描述
-6. 有真实感，适当加入口语化表达"""
+写作风格要求：
+- 像一个了解AI工具的人向朋友推荐，语气自然、真实、有主见
+- 可以有观点和评价，但不要过度夸赞或贬低
+- 适当口语化，但不要刻意搞笑或用力过猛
+
+⚠️ 内容红线（违反将导致文章不可用）：
+- 禁止编造具体数据（如"提升32%""准确率92%"）。如需引用数据，必须用"据官方介绍""据社区反馈"等表述，或只描述定性感受
+- 禁止编造个人经历（如"我团队""我测试了30款""我用了18个月"）。可以用"很多用户反馈""实际使用中""据了解"等泛指表述
+- 禁止写"基于XX年XX月的体验"等虚构时间线
+
+文章结构（用##标题）：
+1. ## {tool_name}是什么？（通俗介绍，让没听过的人也能快速理解）
+2. ## 核心功能（5个功能，每个说清楚用途和实际感受）
+3. ## 版本/套餐对比（用Markdown表格，客观列出各版本差异）
+4. ## 值不值得用？（优点+缺点，最后给一个明确的总体结论）
+5. ## 使用建议（具体可操作的建议）
+6. ## 适合谁用？（分"推荐""可考虑""不推荐"三档）
+
+写作要求：简洁有力，不凑字数。该短则短，该详细则详细。
+直接输出Markdown文本，不要JSON包裹。"""
 
 
-def generate_tool(tool_name, existing_names, categories):
+def generate_tool(tool_name, existing_names, categories, verified_keywords=None):
     """生成单个工具（两次API调用）"""
     print(f"  正在生成: {tool_name}...")
 
@@ -213,20 +232,82 @@ def generate_tool(tool_name, existing_names, categories):
 
     tool_data["content"] = content
     tool_data["published"] = False
+
+    # Agent验证过的关键词优先，覆盖API自行生成的
+    if verified_keywords:
+        tool_data["seo_keywords"] = verified_keywords
+        print(f"    🔑 关键词: Agent验证词 {len(verified_keywords)} 个")
+    elif tool_data.get("seo_keywords"):
+        print(f"    🔑 关键词: API自行生成 {len(tool_data['seo_keywords'])} 个（建议Agent预验证）")
+    else:
+        print(f"    ⚠️ 关键词: 缺失")
+
     print(f"    ✅ 生成成功 (content: {len(content)} 字)")
     return tool_data
+
+
+def normalize_name(name):
+    """标准化工具名用于去重比较"""
+    n = name.lower().strip()
+    # 去掉常见后缀词（AI, V数字, ML, Pro, 3D, .com, 中文括号内容）
+    n = re.sub(r'\s+(AI|V\d+|ML|Pro|3D|\.com|AI\s*)\s*$', '', n)
+    n = re.sub(r'（.*?）', '', n)  # 去掉中文括号
+    n = n.strip()
+    return n
+
+
+def is_duplicate_tool(new_name, existing_tools):
+    """检查是否与已有工具重复（精确匹配 + 关键词模糊匹配）"""
+    new_lower = new_name.lower().strip()
+    new_norm = normalize_name(new_name)
+
+    for t in existing_tools:
+        existing_name = t["name"].lower().strip()
+        existing_norm = normalize_name(t["name"])
+        existing_slug = t["slug"].lower()
+
+        # 精确匹配
+        if new_lower == existing_name:
+            return True, f"完全同名: {t['name']}"
+        # 标准化后匹配（如 "Suno AI" vs "Suno", "Grammarly" vs "Grammarly AI"）
+        if new_norm and existing_norm and (new_norm == existing_norm or
+            new_norm in existing_norm or existing_norm in new_norm):
+            return True, f"标准化后匹配: {new_name} ~ {t['name']}"
+        # slug关键词包含（核心词>=3字符才匹配，避免过短误判）
+        core = re.sub(r'[^a-z0-9]', '', new_norm)
+        slug_core = re.sub(r'[^a-z0-9]', '', existing_slug)
+        if len(core) >= 3 and core == slug_core:
+            return True, f"slug匹配: {t['slug']}"
+
+    return False, None
 
 
 def main():
     parser = argparse.ArgumentParser(description="批量生成AI工具内容")
     parser.add_argument("--count", type=int, default=5, help="生成数量（默认5个）")
     parser.add_argument("--tools", type=str, default="", help="指定工具名，逗号分隔")
+    parser.add_argument("--keywords", type=str, default="", help="Agent验证过的关键词，格式：工具名:核心词|长尾1,长尾2;工具名2:核心词|长尾1（分号分隔多工具）")
     parser.add_argument("--dry-run", action="store_true", help="仅打印，不写入文件")
     args = parser.parse_args()
 
     print(f"=== 工具内容批量生成器（两次调用版）===")
     print(f"模型: {MODEL}")
     print(f"生成数量: {args.count}")
+
+    # 解析Agent验证过的关键词（格式：工具名:核心词|长尾1,长尾2;工具名2:核心词|长尾1）
+    keywords_map = {}
+    if args.keywords:
+        for entry in args.keywords.split(";"):
+            entry = entry.strip()
+            if ":" not in entry:
+                continue
+            tool_key, kw_str = entry.split(":", 1)
+            tool_key = tool_key.strip()
+            parts = kw_str.split("|", 1)
+            core = parts[0].strip()
+            long_tail = [k.strip() for k in parts[1].split(",") if k.strip()] if len(parts) > 1 else []
+            keywords_map[tool_key] = [core] + long_tail
+        print(f"Agent验证关键词: {len(keywords_map)} 个工具")
 
     # 读取已有工具
     existing_tools = []
@@ -244,7 +325,19 @@ def main():
     if args.tools:
         tool_names = [t.strip() for t in args.tools.split(",") if t.strip()]
     else:
-        tool_names = [t for t in DEFAULT_TOOL_NAMES if t not in existing_names]
+        # 使用增强去重过滤 DEFAULT_TOOL_NAMES
+        tool_names = []
+        skipped = []
+        for t in DEFAULT_TOOL_NAMES:
+            if t not in existing_names:
+                is_dup, reason = is_duplicate_tool(t, existing_tools)
+                if is_dup:
+                    skipped.append(f"{t} ({reason})")
+                else:
+                    tool_names.append(t)
+
+    if skipped:
+        print(f"去重跳过 {len(skipped)} 个: {', '.join(skipped)}")
 
     if len(tool_names) == 0:
         print("没有可生成的新工具了。")
@@ -264,8 +357,16 @@ def main():
     generated = []
     for i, name in enumerate(tool_names, 1):
         print(f"[{i}/{len(tool_names)}]", end="")
-        tool_data = generate_tool(name, existing_names, all_categories)
+        tool_data = generate_tool(name, existing_names, all_categories,
+                                  verified_keywords=keywords_map.get(name))
         if tool_data:
+            # 二次去重校验：生成后再次检查（API可能返回不同名字但同一工具）
+            is_dup, reason = is_duplicate_tool(tool_data["name"], existing_tools + generated)
+            if is_dup:
+                print(f"  ⚠️ 生成后检测重复 ({reason})，跳过: {tool_data['name']}")
+                time.sleep(1)
+                continue
+
             # 校验slug必须是小写英文+数字+短横线，禁止中文
             slug = tool_data.get("slug", "")
             if not re.match(r'^[a-z0-9][a-z0-9\-]*[a-z0-9]$', slug) or len(slug) < 2:
@@ -277,7 +378,9 @@ def main():
                 print(f"  ⚠️ slug \"{slug}\" 包含非英文字符，已自动修正为 \"{fallback}\"")
                 tool_data["slug"] = fallback
             if tool_data["slug"] in existing_slugs:
-                tool_data["slug"] = tool_data["slug"] + "-2"
+                print(f"  ⚠️ slug \"{tool_data['slug']}\" 已存在，跳过: {tool_data['name']}")
+                time.sleep(1)
+                continue
             generated.append(tool_data)
             existing_names.append(tool_data["name"])
             existing_slugs.append(tool_data["slug"])
