@@ -647,6 +647,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "NotebookLM",
+    "slug": "notebooklm",
+    "emoji": "📊",
+    "color": "#051c56",
+    "description": "Google推出的AI学习研究助手，上传文档即可生成学习指南、摘要和问答。特别适合学生和研究人员处理大量资料，让学习效率大幅提升。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "16万",
+    "badge": {
+      "type": null,
+      "text": null
+    },
+    "url": "https://notebooklm.google.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "HeyGen",
     "slug": "heygen",
     "emoji": "🎬",
@@ -1414,6 +1443,35 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Krea AI",
+    "slug": "krea-ai",
+    "emoji": "🎨",
+    "color": "#fd1418",
+    "description": "实时AI绘画工具，边画边生成，所见即所得。独特的实时生成体验让设计师能即时看到AI效果，大幅提升创作效率。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "6万",
+    "badge": {
+      "type": "pick",
+      "text": "NEW"
+    },
+    "url": "https://www.krea.ai",
+    "price": "免费版+Pro $10/月",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Flux",
     "slug": "flux",
     "emoji": "🎨",
@@ -1922,6 +1980,35 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://metaso.cn",
     "price": "基础$10/月起",
+    "platform": "Web"
+  },
+  {
+    "name": "纳米AI搜索",
+    "slug": "nano-ai-search",
+    "emoji": "🔍",
+    "color": "#1e13f9",
+    "description": "360推出的AI搜索引擎，结合360搜索的网页索引和AI总结能力。提供结构化的搜索答案和深度搜索模式。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "AI搜索"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "6万",
+    "badge": {
+      "type": "new",
+      "text": null
+    },
+    "url": "https://n.cn",
+    "price": "免费使用",
     "platform": "Web"
   },
   {
@@ -2503,6 +2590,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "NotebookLM",
+    "slug": "notebooklm",
+    "emoji": "📊",
+    "color": "#051c56",
+    "description": "Google推出的AI学习研究助手，上传文档即可生成学习指南、摘要和问答。特别适合学生和研究人员处理大量资料，让学习效率大幅提升。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "16万",
+    "badge": {
+      "type": null,
+      "text": null
+    },
+    "url": "https://notebooklm.google.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "HeyGen",
     "slug": "heygen",
     "emoji": "🎬",
@@ -3270,6 +3386,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Krea AI",
+    "slug": "krea-ai",
+    "emoji": "🎨",
+    "color": "#fd1418",
+    "description": "实时AI绘画工具，边画边生成，所见即所得。独特的实时生成体验让设计师能即时看到AI效果，大幅提升创作效率。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "6万",
+    "badge": {
+      "type": "pick",
+      "text": "NEW"
+    },
+    "url": "https://www.krea.ai",
+    "price": "免费版+Pro $10/月",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Flux",
     "slug": "flux",
     "emoji": "🎨",
@@ -3778,6 +3923,35 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://metaso.cn",
     "price": "基础$10/月起",
+    "platform": "Web"
+  },
+  {
+    "name": "纳米AI搜索",
+    "slug": "nano-ai-search",
+    "emoji": "🔍",
+    "color": "#1e13f9",
+    "description": "360推出的AI搜索引擎，结合360搜索的网页索引和AI总结能力。提供结构化的搜索答案和深度搜索模式。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "AI搜索"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "6万",
+    "badge": {
+      "type": "new",
+      "text": null
+    },
+    "url": "https://n.cn",
+    "price": "免费使用",
     "platform": "Web"
   },
   {
