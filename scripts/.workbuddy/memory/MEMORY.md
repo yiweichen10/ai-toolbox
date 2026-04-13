@@ -20,7 +20,7 @@
   - URL 规范化（去掉 index.html 后缀）
   - 首页工具数量动态化
   - publish_new_tools.py 打通自动 git commit + push
-- 当前状态：100个工具（37个已发布，63个待发布）
+- 当前状态：107个工具（81个已发布，26个待发布）
 - **2026-03-27**：自动发布 OpenAI Codex, Tensor.Art, Otter.ai（commit 912584a）
 - **2026-03-29**：自动发布 天工AI, DALL-E 3, 秒画（commit 5bb9efc），当前35个已发布/65个待发布
 - **2026-03-30**：手动发布 DeepSeek 和 Poe（commit 4ab160d），自动发布 QuillBot, Leonardo AI, You.com（commit 09d1545），当前40个已发布/60个待发布
