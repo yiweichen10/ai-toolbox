@@ -2676,8 +2676,15 @@ def build_index_page(tools, articles):
         
     articles_html = ''
     for a in articles[:6]:
+        # 统一日期显示格式为 MM/DD
+        d = a.get('date', '')
+        if '-' in d and len(d) == 10:
+            parts = d.split('-')
+            display_date = f'{int(parts[1]):02d}/{int(parts[2]):02d}'
+        else:
+            display_date = d
         articles_html += f'''                        <li>
-                            <span class="date">{a.get('date', '')}</span>
+                            <span class="date">{display_date}</span>
                             <a class="title" href="/articles/{a['slug']}/index.html">{escape_html(a['title'])}</a>
                         </li>\n'''
     
@@ -3009,15 +3016,21 @@ def build_target(target, slug=None):
         all_tools = json.load(f)
     with open(os.path.join(DATA_DIR, 'articles.json'), 'r', encoding='utf-8') as f:
         articles = json.load(f)
-    # 按日期降序排列（最新文章在前），date格式为 "MM/DD"
+    # 按日期降序排列（最新文章在前），date格式兼容 "MM/DD" 和 "YYYY-MM-DD"
     def _article_date_key(a):
         d = a.get('date', '')
-        # 尝试解析 MM/DD 格式
         try:
-            parts = d.split('/')
-            return (int(parts[0]), int(parts[1]))
+            if '-' in d and len(d) == 10:
+                # YYYY-MM-DD 格式
+                parts = d.split('-')
+                return (int(parts[0]), int(parts[1]), int(parts[2]))
+            elif '/' in d:
+                # MM/DD 格式
+                parts = d.split('/')
+                return (99, int(parts[0]), int(parts[1]))  # 年份占位99确保MM/DD排在前面
+            return (0, 0, 0)
         except:
-            return (0, 0)
+            return (0, 0, 0)
     articles.sort(key=_article_date_key, reverse=True)
 
     # 过滤出已发布的工具
