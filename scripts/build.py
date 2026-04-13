@@ -3027,7 +3027,7 @@ def build_target(target, slug=None):
             elif '/' in d:
                 # MM/DD 格式
                 parts = d.split('/')
-                return (99, int(parts[0]), int(parts[1]))  # 年份占位99确保MM/DD排在前面
+                return (2026, int(parts[0]), int(parts[1]))  # MM/DD格式默认2026年
             return (0, 0, 0)
         except:
             return (0, 0, 0)
