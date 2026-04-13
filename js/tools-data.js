@@ -788,6 +788,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "可灵AI",
+    "slug": "kling-ai",
+    "emoji": "🎬",
+    "color": "#354f8a",
+    "description": "快手推出的AI视频生成工具，以图片动效和视频生成质量著称。可灵1.6版本生成效果惊艳，是国内AI视频领域的标杆产品。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "1万",
+    "badge": {
+      "type": null,
+      "text": "编辑推荐"
+    },
+    "url": "https://klingai.kuaishou.com",
+    "price": "免费使用",
+    "platform": "Web"
+  },
+  {
     "name": "Bolt.new",
     "slug": "bolt.new",
     "emoji": "💻",
@@ -1072,6 +1101,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://lovable.dev",
     "price": "免费使用",
     "platform": "本地部署 / Web"
+  },
+  {
+    "name": "v0.dev",
+    "slug": "v0.dev",
+    "emoji": "💻",
+    "color": "#d67213",
+    "description": "Vercel推出的AI前端代码生成工具，用自然语言描述即可生成高质量的React/Tailwind代码。专注于前端UI生成，生成代码可直接在Next.js项目中使用。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "17万",
+    "badge": {
+      "type": "pick",
+      "text": null
+    },
+    "url": "https://v0.dev",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
   },
   {
     "name": "Claude Code",
@@ -2264,6 +2321,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://fathom.video",
     "price": "基础$10/月起",
     "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Hugging Face",
+    "slug": "hugging-face",
+    "emoji": "🤗",
+    "color": "#FFD700",
+    "description": "Hugging Face是全球领先的AI社区和平台，提供海量开源模型、数据集和工具，用于AI开发和部署。截至2026年，它已扩展为全栈AI生态系统，集成最新多模态和边缘计算技术，支持从研究到生产的高效工作流。平台持续推动开源AI创新，拥有活跃的全球开发者社区。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "开源"
+      },
+      {
+        "text": "AI模型"
+      },
+      {
+        "text": "社区",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "8000万+",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://huggingface.co",
+    "price": "免费版可用，付费计划起价$9/月",
+    "platform": "Web, API, 桌面应用"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -2731,6 +2817,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "可灵AI",
+    "slug": "kling-ai",
+    "emoji": "🎬",
+    "color": "#354f8a",
+    "description": "快手推出的AI视频生成工具，以图片动效和视频生成质量著称。可灵1.6版本生成效果惊艳，是国内AI视频领域的标杆产品。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "1万",
+    "badge": {
+      "type": null,
+      "text": "编辑推荐"
+    },
+    "url": "https://klingai.kuaishou.com",
+    "price": "免费使用",
+    "platform": "Web"
+  },
+  {
     "name": "Bolt.new",
     "slug": "bolt.new",
     "emoji": "💻",
@@ -3015,6 +3130,34 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://lovable.dev",
     "price": "免费使用",
     "platform": "本地部署 / Web"
+  },
+  {
+    "name": "v0.dev",
+    "slug": "v0.dev",
+    "emoji": "💻",
+    "color": "#d67213",
+    "description": "Vercel推出的AI前端代码生成工具，用自然语言描述即可生成高质量的React/Tailwind代码。专注于前端UI生成，生成代码可直接在Next.js项目中使用。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "17万",
+    "badge": {
+      "type": "pick",
+      "text": null
+    },
+    "url": "https://v0.dev",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
   },
   {
     "name": "Claude Code",
@@ -4207,5 +4350,34 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://fathom.video",
     "price": "基础$10/月起",
     "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Hugging Face",
+    "slug": "hugging-face",
+    "emoji": "🤗",
+    "color": "#FFD700",
+    "description": "Hugging Face是全球领先的AI社区和平台，提供海量开源模型、数据集和工具，用于AI开发和部署。截至2026年，它已扩展为全栈AI生态系统，集成最新多模态和边缘计算技术，支持从研究到生产的高效工作流。平台持续推动开源AI创新，拥有活跃的全球开发者社区。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "开源"
+      },
+      {
+        "text": "AI模型"
+      },
+      {
+        "text": "社区",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "8000万+",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://huggingface.co",
+    "price": "免费版可用，付费计划起价$9/月",
+    "platform": "Web, API, 桌面应用"
   }
 ];
