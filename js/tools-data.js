@@ -1841,6 +1841,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "飞书智能助手",
+    "slug": "feishu-assistant",
+    "emoji": "📊",
+    "color": "#340941",
+    "description": "字节跳动飞书内置的AI助手，深度整合在飞书文档、表格、会议和消息中。AI辅助办公全流程，是企业级AI办公的最佳实践。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "18万",
+    "badge": {
+      "type": null,
+      "text": "NEW"
+    },
+    "url": "https://www.feishu.cn",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Beautiful.ai",
     "slug": "beautiful.ai",
     "emoji": "📊",
@@ -1953,6 +1981,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://krisp.ai",
     "price": "基础$10/月起",
     "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Murf AI",
+    "slug": "murf-ai",
+    "emoji": "🎧",
+    "color": "#248e36",
+    "description": "AI配音和语音合成工具，提供120+种逼真AI声音。支持文本转语音、视频配音和语音克隆，是视频创作者和广告制作人的配音利器。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "3万",
+    "badge": {
+      "type": "hot",
+      "text": "NEW"
+    },
+    "url": "https://murf.ai",
+    "price": "免费使用",
+    "platform": "Web"
   },
   {
     "name": "Arc浏览器",
@@ -2321,6 +2377,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://fathom.video",
     "price": "基础$10/月起",
     "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Bardeen",
+    "slug": "bardeen",
+    "emoji": "⚡",
+    "color": "#FF6B35",
+    "description": "Bardeen 是一款基于 AI 的浏览器自动化与工作流构建工具，通过直观的图形界面和 AI 辅助，让用户无需编程即可连接不同应用并自动化重复任务。截止2026年，它已集成了超 5000 个应用连接器，并凭借其 AI 指令快速构建工作流（Magic Box）和 Scraping AI 功能，成为个人与团队提升效率的热门选择。其核心是帮助用户将繁琐的手动操作转化为一键执行的自动化流程。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "自动化"
+      },
+      {
+        "text": "工作流"
+      },
+      {
+        "text": "无代码",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约 150 万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.bardeen.ai",
+    "price": "提供免费版（功能有限）；个人专业版 $15/月（按年付）；团队版需联系定制。",
+    "platform": "Web（Chrome/Edge扩展）、macOS、Windows"
   },
   {
     "name": "Hugging Face",
@@ -3870,6 +3955,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "飞书智能助手",
+    "slug": "feishu-assistant",
+    "emoji": "📊",
+    "color": "#340941",
+    "description": "字节跳动飞书内置的AI助手，深度整合在飞书文档、表格、会议和消息中。AI辅助办公全流程，是企业级AI办公的最佳实践。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "18万",
+    "badge": {
+      "type": null,
+      "text": "NEW"
+    },
+    "url": "https://www.feishu.cn",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Beautiful.ai",
     "slug": "beautiful.ai",
     "emoji": "📊",
@@ -3982,6 +4095,34 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://krisp.ai",
     "price": "基础$10/月起",
     "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Murf AI",
+    "slug": "murf-ai",
+    "emoji": "🎧",
+    "color": "#248e36",
+    "description": "AI配音和语音合成工具，提供120+种逼真AI声音。支持文本转语音、视频配音和语音克隆，是视频创作者和广告制作人的配音利器。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "3万",
+    "badge": {
+      "type": "hot",
+      "text": "NEW"
+    },
+    "url": "https://murf.ai",
+    "price": "免费使用",
+    "platform": "Web"
   },
   {
     "name": "Arc浏览器",
@@ -4350,6 +4491,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://fathom.video",
     "price": "基础$10/月起",
     "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Bardeen",
+    "slug": "bardeen",
+    "emoji": "⚡",
+    "color": "#FF6B35",
+    "description": "Bardeen 是一款基于 AI 的浏览器自动化与工作流构建工具，通过直观的图形界面和 AI 辅助，让用户无需编程即可连接不同应用并自动化重复任务。截止2026年，它已集成了超 5000 个应用连接器，并凭借其 AI 指令快速构建工作流（Magic Box）和 Scraping AI 功能，成为个人与团队提升效率的热门选择。其核心是帮助用户将繁琐的手动操作转化为一键执行的自动化流程。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "自动化"
+      },
+      {
+        "text": "工作流"
+      },
+      {
+        "text": "无代码",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约 150 万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.bardeen.ai",
+    "price": "提供免费版（功能有限）；个人专业版 $15/月（按年付）；团队版需联系定制。",
+    "platform": "Web（Chrome/Edge扩展）、macOS、Windows"
   },
   {
     "name": "Hugging Face",
