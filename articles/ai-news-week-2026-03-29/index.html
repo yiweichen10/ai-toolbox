@@ -223,19 +223,19 @@ var _hmt = _hmt || [];
 
 <pre><code># 1. 检查版本
 <p>pip show litellm | grep Version
-# 如果显示1.82.7或1.82.8，立刻处理
+</p>
+<h1>如果显示1.82.7或1.82.8，立刻处理</h1>
+
+<h1>2. 查找恶意的.pth文件</h1>
+<p>find "$(python3 -c 'import site; print(site.getsitepackages()[0])')" -name "litellm_init.pth"
 </p>
 
-<p># 2. 查找恶意的.pth文件
-find "$(python3 -c 'import site; print(site.getsitepackages()[0])')" -name "litellm_init.pth"
+<h1>3. 检查持久化后门</h1>
+<p>ls -la ~/.config/sysmon/sysmon.py
 </p>
 
-<p># 3. 检查持久化后门
-ls -la ~/.config/sysmon/sysmon.py
-</p>
-
-<p># 4. K8s环境检查
-kubectl get pods -n kube-system | grep node-setup
+<h1>4. K8s环境检查</h1>
+<p>kubectl get pods -n kube-system | grep node-setup
 </code></pre>
 </p>
 

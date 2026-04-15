@@ -1,5 +1,13 @@
 ﻿# 自动化执行记录
 
+## 2026-04-14 13:00
+- **执行结果**: 成功
+- **发布工具**: Bardeen, Murf AI, 飞书智能助手
+- **当前状态**: 87个已发布, 20个待发布 (共107个)
+- **Commit**: 0926ca2
+- **备注**: OG图片1个新生成（Bardeen）+2个跳过（已存在）。generate_compare_pages模块缺失，Phase3跳过。百度推送仍 over quota，IndexNow 推送3个新URL成功。git push首次SSL失败，等60秒后重试成功。⚠️ git commit又误包含临时文件（_insert_article.py, _temp_article.json, scripts/_*.py），第4次！已修复publish_new_tools.py将`git add -A`改为`git add -u`+明确指定路径。库存20个，达到低库存预警阈值，但因本次已是publish+补充同一轮次，下轮再补充
+- **修复**: publish_new_tools.py git add策略从`-A`改为`-u`+明确路径，防止误提交临时文件
+
 ## 2026-04-13 13:00
 - **执行结果**: 成功
 - **发布工具**: 可灵AI, v0.dev, Hugging Face

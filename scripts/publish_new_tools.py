@@ -199,7 +199,15 @@ def publish_new_tools(num_to_publish=3):
     commit_msg = f"publish: 发布新工具 {', '.join(tool_names)}"
     print(f"正在 git commit + push: {commit_msg}")
     try:
-        subprocess.run(['git', 'add', '-A'], cwd=BASE_DIR, check=True)
+        # 只 add 已跟踪文件 + 本次新增的工具页，避免误提交临时文件
+        subprocess.run(['git', 'add', '-u'], cwd=BASE_DIR, check=True)  # only tracked modified files
+        for t in tools_to_publish_now:
+            tool_dir = os.path.join(BASE_DIR, 'tools', t['slug'])
+            if os.path.exists(tool_dir):
+                subprocess.run(['git', 'add', 'tools/' + t['slug'] + '/'], cwd=BASE_DIR, check=False)
+        # 确保关键生成文件被跟踪
+        for path in ['data/tools.json', 'images/og/', 'sitemap.xml', 'js/tools-data.js', 'index.html']:
+            subprocess.run(['git', 'add', path], cwd=BASE_DIR, check=False)
         subprocess.run(['git', 'commit', '-m', commit_msg], cwd=BASE_DIR, check=True)
         subprocess.run(['git', 'push', 'origin', 'main'], cwd=BASE_DIR, check=True)
         print("Git commit + push 成功，Vercel 将自动部署。")

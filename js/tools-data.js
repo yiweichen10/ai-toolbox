@@ -591,6 +591,35 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "千问",
+    "slug": "qwen-chat",
+    "emoji": "💬",
+    "color": "#bbdb80",
+    "description": "阿里云推出的AI助手，基于通义千问大模型。中文能力强，支持超长上下文，提供开源版本，是国产AI开源领域的领军者。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "4万",
+    "badge": {
+      "type": "pick",
+      "text": "NEW"
+    },
+    "url": "https://tongyi.aliyun.com/qianwen",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "腾讯元宝",
     "slug": "tencent-yuanbao",
     "emoji": "💬",
@@ -1898,6 +1927,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Tome",
+    "slug": "tome",
+    "emoji": "📊",
+    "color": "#927edb",
+    "description": "AI演示文稿和叙事工具，将想法转化为精美的演示和故事页面。以叙事为核心理念，适合创意展示。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 5.0",
+    "visits": "13万",
+    "badge": {
+      "type": "new",
+      "text": null
+    },
+    "url": "https://tome.app",
+    "price": "基础$10/月起",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Fireflies.ai",
     "slug": "fireflies.ai",
     "emoji": "📊",
@@ -2406,6 +2464,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.bardeen.ai",
     "price": "提供免费版（功能有限）；个人专业版 $15/月（按年付）；团队版需联系定制。",
     "platform": "Web（Chrome/Edge扩展）、macOS、Windows"
+  },
+  {
+    "name": "Anthropic Console",
+    "slug": "anthropic-console",
+    "emoji": "🧠",
+    "color": "#2563EB",
+    "description": "Anthropic Console是Anthropic官方AI平台，提供对Claude系列模型的直接访问和管理。截至2026年，它已集成Claude 3.5模型，支持API管理、模型微调和团队协作，成为企业AI应用的核心工具。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "API平台"
+      },
+      {
+        "text": "企业级",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "100万月访问",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://console.anthropic.com",
+    "price": "免费试用，Pro版$20/月",
+    "platform": "Web, iOS, Android"
   },
   {
     "name": "Hugging Face",
@@ -2705,6 +2792,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "千问",
+    "slug": "qwen-chat",
+    "emoji": "💬",
+    "color": "#bbdb80",
+    "description": "阿里云推出的AI助手，基于通义千问大模型。中文能力强，支持超长上下文，提供开源版本，是国产AI开源领域的领军者。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "4万",
+    "badge": {
+      "type": "pick",
+      "text": "NEW"
+    },
+    "url": "https://tongyi.aliyun.com/qianwen",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "腾讯元宝",
     "slug": "tencent-yuanbao",
     "emoji": "💬",
@@ -4012,6 +4128,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Tome",
+    "slug": "tome",
+    "emoji": "📊",
+    "color": "#927edb",
+    "description": "AI演示文稿和叙事工具，将想法转化为精美的演示和故事页面。以叙事为核心理念，适合创意展示。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 5.0",
+    "visits": "13万",
+    "badge": {
+      "type": "new",
+      "text": null
+    },
+    "url": "https://tome.app",
+    "price": "基础$10/月起",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Fireflies.ai",
     "slug": "fireflies.ai",
     "emoji": "📊",
@@ -4520,6 +4665,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.bardeen.ai",
     "price": "提供免费版（功能有限）；个人专业版 $15/月（按年付）；团队版需联系定制。",
     "platform": "Web（Chrome/Edge扩展）、macOS、Windows"
+  },
+  {
+    "name": "Anthropic Console",
+    "slug": "anthropic-console",
+    "emoji": "🧠",
+    "color": "#2563EB",
+    "description": "Anthropic Console是Anthropic官方AI平台，提供对Claude系列模型的直接访问和管理。截至2026年，它已集成Claude 3.5模型，支持API管理、模型微调和团队协作，成为企业AI应用的核心工具。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "API平台"
+      },
+      {
+        "text": "企业级",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "100万月访问",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://console.anthropic.com",
+    "price": "免费试用，Pro版$20/月",
+    "platform": "Web, iOS, Android"
   },
   {
     "name": "Hugging Face",

@@ -20,7 +20,7 @@
   - URL 规范化（去掉 index.html 后缀）
   - 首页工具数量动态化
   - publish_new_tools.py 打通自动 git commit + push
-- 当前状态：107个工具（81个已发布，26个待发布）
+- 当前状态：107个工具（87个已发布，20个待发布）→ 2026-04-14
 - **2026-03-27**：自动发布 OpenAI Codex, Tensor.Art, Otter.ai（commit 912584a）
 - **2026-03-29**：自动发布 天工AI, DALL-E 3, 秒画（commit 5bb9efc），当前35个已发布/65个待发布
 - **2026-03-30**：手动发布 DeepSeek 和 Poe（commit 4ab160d），自动发布 QuillBot, Leonardo AI, You.com（commit 09d1545），当前40个已发布/60个待发布
@@ -38,6 +38,7 @@
 - **URL合规红线**：tools.json中所有工具的url字段必须是真实可访问的官网地址，禁止使用 `www.工具名.com` 格式的猜测URL。添加新工具时必须通过搜索引擎确认真实官网
 - **slug合规红线**：所有工具的slug字段必须是纯小写英文+数字+短横线（如 `tencent-yuanbao`），禁止包含中文字符。generate_tools.py 已增加正则校验，非英文slug会自动fallback
 - **内链死链防护**（2026-04-13）：AI生成文章时手动写工具内链可能猜测错误slug导致404。校验脚本 `scripts/check_internal_links.py` 可检查+自动修复（--fix）。建议每次生成新文章后运行一次
+- **git add 安全策略**（2026-04-14修复）：publish_new_tools.py 的 `git add -A` 已改为 `git add -u` + 明确路径，防止误提交临时文件。此前已发生4次误提交事件
 
 ## 内容生成策略（2026-04-11确定）
 - **中文站默认模型**：Pro/MiniMaxAI/MiniMax-M2.5（质量4星、速度19.6秒、成本0.012元/篇）
