@@ -131,9 +131,10 @@ def markdown_to_html(md):
         table += '</tbody></table>'
         return table
     html = re.sub(r'\n(\|.+\|)\n(\|[-:| ]+\|)\n((?:\|.+\|\n?)+)', table_replace, html)
-    # 标题
+    # 标题（H1/H2/H3）
     html = re.sub(r'^### (.+)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
     html = re.sub(r'^## (.+)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
+    html = re.sub(r'^# (.+)$', r'<h1>\1</h1>', html, flags=re.MULTILINE)
     # 引用
     html = re.sub(r'^> (.+)$', r'<blockquote>\1</blockquote>', html, flags=re.MULTILINE)
     # 加粗/行内代码
@@ -2430,7 +2431,10 @@ def build_article_page(article, all_articles, all_tools=None):
         }
     }, ensure_ascii=False, indent=2)
 
-    content_html = markdown_to_html(article.get('content', ''))
+    # 渲染文章内容，剥离开头重复的H1标题（模板已有<h1>）
+    content_md = article.get('content', '')
+    content_md = re.sub(r'^# .+\n?', '', content_md)
+    content_html = markdown_to_html(content_md)
 
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
