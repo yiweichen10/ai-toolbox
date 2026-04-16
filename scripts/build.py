@@ -5,6 +5,11 @@ import os
 import re
 import argparse
 
+# 已知失效的URL（404/403/部署删除等），这些工具的"立即使用"按钮无href，保留文字但不跳转
+BROKEN_URLS = [
+    'https://tome.app',
+]
+
 # 返回顶部按钮 HTML + 内联脚本（避免在 f-string 中转义花括号）
 BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="返回顶部">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -415,6 +420,15 @@ def build_tool_page(tool, all_tools, all_articles=None):
             <figcaption>{escape_html(tool['name'])} 核心功能一览</figcaption>
         </figure>'''
 
+    # 失效URL的"立即使用"按钮（无href，保留文字）
+    if tool['url'] in BROKEN_URLS:
+        action_btn_html = '<span class="action-btn action-btn-primary disabled">立即使用 →</span>'
+    elif tool['url'] == '':
+        # 空URL（如已下架工具）→ 指向站内同类替代品页面
+        action_btn_html = '<a href="/tools/gamma/" class="action-btn action-btn-primary">查看替代工具 →</a>'
+    else:
+        action_btn_html = f'<a href="{tool["url"]}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>'
+
     # 文章内容（从content中移除重复的优缺点部分）
     content_md = tool.get('content', '')
     # 移除 content 中 "## 优缺点分析" 及之后到下一个 ## 的内容（因为我们有独立的优缺点区块）
@@ -474,7 +488,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
             </div>
             <div class="action-bar">
-                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                {action_btn_html}
             </div>
         </div>
 
