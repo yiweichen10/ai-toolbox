@@ -829,6 +829,11 @@ body {
   box-shadow: var(--shadow-lg);
   color: #fff;
 }
+.action-btn.disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
 
 /* 功能网格 */
 .features-grid {

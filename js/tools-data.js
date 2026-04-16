@@ -1951,7 +1951,7 @@ window.__ALL_TOOLS__ = [
       "type": "new",
       "text": null
     },
-    "url": "https://tome.app",
+    "url": "https://gamma.app",
     "price": "基础$10/月起",
     "platform": "Web / iOS / Android"
   },
@@ -4241,7 +4241,7 @@ window.__REMAINING_TOOLS__ = [
       "type": "new",
       "text": null
     },
-    "url": "https://tome.app",
+    "url": "https://gamma.app",
     "price": "基础$10/月起",
     "platform": "Web / iOS / Android"
   },
