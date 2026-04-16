@@ -92,7 +92,7 @@ URL_FIXES = {
     "Comet": "https://www.comet.com",
     "秘塔AI搜索": "https://metaso.cn",
     "纳米AI搜索": "https://n.cn",
-    "Phind": "https://www.phind.com",
+    "Phind": "https://phindai.org",
     "You.com": "https://you.com",
     "Consensus": "https://consensus.app",
     "Looka": "https://looka.com",

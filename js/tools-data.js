@@ -2206,7 +2206,7 @@ window.__ALL_TOOLS__ = [
       "type": "pick",
       "text": "编辑推荐"
     },
-    "url": "https://www.phind.com",
+    "url": "https://phindai.org",
     "price": "免费版+Pro $10/月",
     "platform": "Web"
   },
@@ -2489,7 +2489,7 @@ window.__ALL_TOOLS__ = [
       "type": "recommend",
       "text": "推荐"
     },
-    "url": "https://pitch.com/ai",
+    "url": "https://pitch.com",
     "price": "免费版有限制；专业版$25/月/用户起；企业版需定制",
     "platform": "Web, macOS, Windows, iOS, Android"
   },
@@ -4496,7 +4496,7 @@ window.__REMAINING_TOOLS__ = [
       "type": "pick",
       "text": "编辑推荐"
     },
-    "url": "https://www.phind.com",
+    "url": "https://phindai.org",
     "price": "免费版+Pro $10/月",
     "platform": "Web"
   },
@@ -4779,7 +4779,7 @@ window.__REMAINING_TOOLS__ = [
       "type": "recommend",
       "text": "推荐"
     },
-    "url": "https://pitch.com/ai",
+    "url": "https://pitch.com",
     "price": "免费版有限制；专业版$25/月/用户起；企业版需定制",
     "platform": "Web, macOS, Windows, iOS, Android"
   },
