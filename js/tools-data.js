@@ -2183,6 +2183,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Phind",
+    "slug": "phind",
+    "emoji": "🔍",
+    "color": "#b5f517",
+    "description": "面向开发者的AI搜索引擎，专为编程问题优化。直接搜索技术文档、代码示例和StackOverflow，给出可直接使用的代码答案。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "AI搜索"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "2万",
+    "badge": {
+      "type": "pick",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.phind.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "You.com",
     "slug": "you.com",
     "emoji": "🔍",
@@ -2437,6 +2465,35 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Pitch AI",
+    "slug": "pitch-ai",
+    "emoji": "📊",
+    "color": "#7C3AED",
+    "description": "Pitch AI 是一款专为商业演示和提案设计的智能生成工具，帮助用户快速创建美观、专业的幻灯片。截至2026年，它通过集成最新的多模态AI模型，新增了数据动态可视化、实时协作AI建议和一键品牌设计适配等高级功能，成为企业级演示方案的主流选择之一。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "幻灯片制作"
+      },
+      {
+        "text": "商业演示"
+      },
+      {
+        "text": "自动化设计",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约220万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://pitch.com/ai",
+    "price": "免费版有限制；专业版$25/月/用户起；企业版需定制",
+    "platform": "Web, macOS, Windows, iOS, Android"
+  },
+  {
     "name": "Bardeen",
     "slug": "bardeen",
     "emoji": "⚡",
@@ -2522,6 +2579,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://huggingface.co",
     "price": "免费版可用，付费计划起价$9/月",
     "platform": "Web, API, 桌面应用"
+  },
+  {
+    "name": "Brave Search AI",
+    "slug": "brave-search-ai",
+    "emoji": "🔍",
+    "color": "#FB542B",
+    "description": "Brave Search AI是Brave浏览器内置的AI搜索功能，基于自研索引提供AI摘要和智能答案，强调隐私保护，不追踪用户搜索历史。2026年集成了最新的LLM模型，搜索体验更加自然流畅，是追求干净、无追踪搜索体验用户的优质选择。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "隐私搜索"
+      },
+      {
+        "text": "AI摘要"
+      },
+      {
+        "text": "无追踪"
+      },
+      {
+        "text": "免费使用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "150万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://search.brave.com",
+    "price": "免费",
+    "platform": "浏览器插件/iOS/Android/桌面端"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -4384,6 +4473,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Phind",
+    "slug": "phind",
+    "emoji": "🔍",
+    "color": "#b5f517",
+    "description": "面向开发者的AI搜索引擎，专为编程问题优化。直接搜索技术文档、代码示例和StackOverflow，给出可直接使用的代码答案。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "AI搜索"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "2万",
+    "badge": {
+      "type": "pick",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.phind.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "You.com",
     "slug": "you.com",
     "emoji": "🔍",
@@ -4638,6 +4755,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Pitch AI",
+    "slug": "pitch-ai",
+    "emoji": "📊",
+    "color": "#7C3AED",
+    "description": "Pitch AI 是一款专为商业演示和提案设计的智能生成工具，帮助用户快速创建美观、专业的幻灯片。截至2026年，它通过集成最新的多模态AI模型，新增了数据动态可视化、实时协作AI建议和一键品牌设计适配等高级功能，成为企业级演示方案的主流选择之一。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "幻灯片制作"
+      },
+      {
+        "text": "商业演示"
+      },
+      {
+        "text": "自动化设计",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约220万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://pitch.com/ai",
+    "price": "免费版有限制；专业版$25/月/用户起；企业版需定制",
+    "platform": "Web, macOS, Windows, iOS, Android"
+  },
+  {
     "name": "Bardeen",
     "slug": "bardeen",
     "emoji": "⚡",
@@ -4723,5 +4869,37 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://huggingface.co",
     "price": "免费版可用，付费计划起价$9/月",
     "platform": "Web, API, 桌面应用"
+  },
+  {
+    "name": "Brave Search AI",
+    "slug": "brave-search-ai",
+    "emoji": "🔍",
+    "color": "#FB542B",
+    "description": "Brave Search AI是Brave浏览器内置的AI搜索功能，基于自研索引提供AI摘要和智能答案，强调隐私保护，不追踪用户搜索历史。2026年集成了最新的LLM模型，搜索体验更加自然流畅，是追求干净、无追踪搜索体验用户的优质选择。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "隐私搜索"
+      },
+      {
+        "text": "AI摘要"
+      },
+      {
+        "text": "无追踪"
+      },
+      {
+        "text": "免费使用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "150万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://search.brave.com",
+    "price": "免费",
+    "platform": "浏览器插件/iOS/Android/桌面端"
   }
 ];
