@@ -2352,6 +2352,63 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "360智脑",
+    "slug": "360-zhinain",
+    "emoji": "💬",
+    "color": "#53eee9",
+    "description": "360推出的AI助手，基于360智脑大模型。以安全和搜索为核心特色，深度整合360搜索和安全能力。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.9",
+    "visits": "10万",
+    "badge": {
+      "type": "pick",
+      "text": "编辑推荐"
+    },
+    "url": "https://ai.360.cn",
+    "price": "免费版+Pro $10/月",
+    "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Raycast AI",
+    "slug": "raycast-ai",
+    "emoji": "⚡️",
+    "color": "#abea2a",
+    "description": "Mac上的AI效率工具，替代Spotlight搜索。内置AI对话、代码片段管理和窗口管理，是Mac用户的生产力神器。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI效率"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "2万",
+    "badge": {
+      "type": "pick",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.raycast.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Brandmark",
     "slug": "brandmark",
     "emoji": "🖼️",
@@ -2611,6 +2668,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://search.brave.com",
     "price": "免费",
     "platform": "浏览器插件/iOS/Android/桌面端"
+  },
+  {
+    "name": "Let's Enhance",
+    "slug": "lets-enhance",
+    "emoji": "🖼️",
+    "color": "#6C5CE7",
+    "description": "Let's Enhance是一款基于AI的图像增强和放大工具，采用先进的深度学习技术将低分辨率图片智能提升至高清画质，支持4K/8K超分辨率输出。2026年版本新增了AI创意增强功能，可自动优化图像细节、色彩和构图，深受设计师和摄影师青睐。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "图像增强"
+      },
+      {
+        "text": "AI放大"
+      },
+      {
+        "text": "超分辨率"
+      },
+      {
+        "text": "图片修复",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://letsenhance.io",
+    "price": "免费版每月20张，付费版$9起/月",
+    "platform": "网页端"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -4642,6 +4731,63 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "360智脑",
+    "slug": "360-zhinain",
+    "emoji": "💬",
+    "color": "#53eee9",
+    "description": "360推出的AI助手，基于360智脑大模型。以安全和搜索为核心特色，深度整合360搜索和安全能力。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.9",
+    "visits": "10万",
+    "badge": {
+      "type": "pick",
+      "text": "编辑推荐"
+    },
+    "url": "https://ai.360.cn",
+    "price": "免费版+Pro $10/月",
+    "platform": "本地部署 / Web"
+  },
+  {
+    "name": "Raycast AI",
+    "slug": "raycast-ai",
+    "emoji": "⚡️",
+    "color": "#abea2a",
+    "description": "Mac上的AI效率工具，替代Spotlight搜索。内置AI对话、代码片段管理和窗口管理，是Mac用户的生产力神器。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI效率"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "2万",
+    "badge": {
+      "type": "pick",
+      "text": "编辑推荐"
+    },
+    "url": "https://www.raycast.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Brandmark",
     "slug": "brandmark",
     "emoji": "🖼️",
@@ -4901,5 +5047,37 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://search.brave.com",
     "price": "免费",
     "platform": "浏览器插件/iOS/Android/桌面端"
+  },
+  {
+    "name": "Let's Enhance",
+    "slug": "lets-enhance",
+    "emoji": "🖼️",
+    "color": "#6C5CE7",
+    "description": "Let's Enhance是一款基于AI的图像增强和放大工具，采用先进的深度学习技术将低分辨率图片智能提升至高清画质，支持4K/8K超分辨率输出。2026年版本新增了AI创意增强功能，可自动优化图像细节、色彩和构图，深受设计师和摄影师青睐。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "图像增强"
+      },
+      {
+        "text": "AI放大"
+      },
+      {
+        "text": "超分辨率"
+      },
+      {
+        "text": "图片修复",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://letsenhance.io",
+    "price": "免费版每月20张，付费版$9起/月",
+    "platform": "网页端"
   }
 ];
