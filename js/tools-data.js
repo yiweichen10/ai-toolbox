@@ -2466,6 +2466,35 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Supabase AI",
+    "slug": "supabase-ai",
+    "emoji": "💻",
+    "color": "#df7615",
+    "description": "开源的Firebase替代方案，提供数据库、认证、存储和AI功能。内置AI向量搜索和对话功能，是全栈AI应用的后端首选。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "10万",
+    "badge": {
+      "type": "pick",
+      "text": "NEW"
+    },
+    "url": "https://supabase.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Recraft",
     "slug": "recraft",
     "emoji": "🎨",
@@ -2670,6 +2699,41 @@ window.__ALL_TOOLS__ = [
     "platform": "浏览器插件/iOS/Android/桌面端"
   },
   {
+    "name": "Augie AI",
+    "slug": "augie-ai",
+    "emoji": "🤖",
+    "color": "#6366F1",
+    "description": "Augie AI是一款智能创意助手工具，帮助用户快速生成创意内容、自动化工作流程，提升个人和团队的工作效率。支持多种内容类型的AI生成与编辑。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI创意助手"
+      },
+      {
+        "text": "内容生成"
+      },
+      {
+        "text": "效率提升"
+      },
+      {
+        "text": "自动化工具"
+      },
+      {
+        "text": "2026年新工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约5万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://augie.ai",
+    "price": "基础版免费，专业版$19/月起",
+    "platform": "Web、iOS、Android"
+  },
+  {
     "name": "Let's Enhance",
     "slug": "lets-enhance",
     "emoji": "🖼️",
@@ -2699,6 +2763,40 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://letsenhance.io",
     "price": "免费版每月20张，付费版$9起/月",
+    "platform": "网页端"
+  },
+  {
+    "name": "Magnific AI",
+    "slug": "magnific-ai",
+    "emoji": "🎨",
+    "color": "#6366F1",
+    "description": "Magnific AI是一款专注于AI图像增强与超分辨率的工具，能够将低分辨率图像智能放大至4K甚至8K，同时自动增强细节和纹理。2026年推出最新版本，新增实时预览和批量处理功能，在设计师和内容创作者中保持高度关注。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI图像增强"
+      },
+      {
+        "text": "超分辨率放大"
+      },
+      {
+        "text": "AI修图"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "图像处理"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://magnific.ai",
+    "price": "免费版每月3次增强，付费版$12/月起",
     "platform": "网页端"
   },
   {
@@ -4889,6 +4987,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Supabase AI",
+    "slug": "supabase-ai",
+    "emoji": "💻",
+    "color": "#df7615",
+    "description": "开源的Firebase替代方案，提供数据库、认证、存储和AI功能。内置AI向量搜索和对话功能，是全栈AI应用的后端首选。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "10万",
+    "badge": {
+      "type": "pick",
+      "text": "NEW"
+    },
+    "url": "https://supabase.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Recraft",
     "slug": "recraft",
     "emoji": "🎨",
@@ -5093,6 +5220,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "浏览器插件/iOS/Android/桌面端"
   },
   {
+    "name": "Augie AI",
+    "slug": "augie-ai",
+    "emoji": "🤖",
+    "color": "#6366F1",
+    "description": "Augie AI是一款智能创意助手工具，帮助用户快速生成创意内容、自动化工作流程，提升个人和团队的工作效率。支持多种内容类型的AI生成与编辑。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI创意助手"
+      },
+      {
+        "text": "内容生成"
+      },
+      {
+        "text": "效率提升"
+      },
+      {
+        "text": "自动化工具"
+      },
+      {
+        "text": "2026年新工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约5万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://augie.ai",
+    "price": "基础版免费，专业版$19/月起",
+    "platform": "Web、iOS、Android"
+  },
+  {
     "name": "Let's Enhance",
     "slug": "lets-enhance",
     "emoji": "🖼️",
@@ -5122,6 +5284,40 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://letsenhance.io",
     "price": "免费版每月20张，付费版$9起/月",
+    "platform": "网页端"
+  },
+  {
+    "name": "Magnific AI",
+    "slug": "magnific-ai",
+    "emoji": "🎨",
+    "color": "#6366F1",
+    "description": "Magnific AI是一款专注于AI图像增强与超分辨率的工具，能够将低分辨率图像智能放大至4K甚至8K，同时自动增强细节和纹理。2026年推出最新版本，新增实时预览和批量处理功能，在设计师和内容创作者中保持高度关注。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI图像增强"
+      },
+      {
+        "text": "超分辨率放大"
+      },
+      {
+        "text": "AI修图"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "图像处理"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://magnific.ai",
+    "price": "免费版每月3次增强，付费版$12/月起",
     "platform": "网页端"
   },
   {
