@@ -2700,6 +2700,50 @@ window.__ALL_TOOLS__ = [
     "url": "https://letsenhance.io",
     "price": "免费版每月20张，付费版$9起/月",
     "platform": "网页端"
+  },
+  {
+    "name": "Seedance",
+    "slug": "seedance",
+    "emoji": "🎬",
+    "color": "#FF6A00",
+    "description": "字节跳动Seed实验室推出的AI视频生成模型，支持文生视频、图生视频。Seedance 2.0采用多模态音视频联合生成架构，支持文字/图片/音频/视频四种输入，可生成2K影院级画质视频，最长15秒，支持原生音画同步。免费用户可通过即梦/Dreamina平台每日生成。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "图生视频"
+      },
+      {
+        "text": "字节跳动"
+      },
+      {
+        "text": "即梦",
+        "type": "free"
+      },
+      {
+        "text": "Seedance 2.0"
+      },
+      {
+        "text": "视频编辑"
+      },
+      {
+        "text": "音画同步"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "8.2万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://seed.bytedance.com/zh/seedance2_0",
+    "price": "免费 + 付费",
+    "platform": "网页/App/API"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -5079,5 +5123,49 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://letsenhance.io",
     "price": "免费版每月20张，付费版$9起/月",
     "platform": "网页端"
+  },
+  {
+    "name": "Seedance",
+    "slug": "seedance",
+    "emoji": "🎬",
+    "color": "#FF6A00",
+    "description": "字节跳动Seed实验室推出的AI视频生成模型，支持文生视频、图生视频。Seedance 2.0采用多模态音视频联合生成架构，支持文字/图片/音频/视频四种输入，可生成2K影院级画质视频，最长15秒，支持原生音画同步。免费用户可通过即梦/Dreamina平台每日生成。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "图生视频"
+      },
+      {
+        "text": "字节跳动"
+      },
+      {
+        "text": "即梦",
+        "type": "free"
+      },
+      {
+        "text": "Seedance 2.0"
+      },
+      {
+        "text": "视频编辑"
+      },
+      {
+        "text": "音画同步"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "8.2万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://seed.bytedance.com/zh/seedance2_0",
+    "price": "免费 + 付费",
+    "platform": "网页/App/API"
   }
 ];
