@@ -874,6 +874,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Windsurf",
+    "slug": "windsurf",
+    "emoji": "💻",
+    "color": "#acbffa",
+    "description": "Codeium推出的AI代码编辑器，深度集成Cascade AI助手。支持代码补全、Chat对话和Agent模式，是Cursor之外另一款优秀的AI编程工具。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "2万",
+    "badge": {
+      "type": "hot",
+      "text": null
+    },
+    "url": "https://codeium.com/windsurf",
+    "price": "免费使用",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Grammarly AI",
     "slug": "grammarly-ai",
     "emoji": "✍️",
@@ -2732,6 +2760,64 @@ window.__ALL_TOOLS__ = [
     "url": "https://augie.ai",
     "price": "基础版免费，专业版$19/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Glitter AI",
+    "slug": "glitter-ai",
+    "emoji": "✨",
+    "color": "#8B5CF6",
+    "description": "Glitter AI 是一款新兴的AI智能助手，专注于提升用户的工作效率和创作能力。它通过自然语言处理技术帮助用户完成各种复杂任务，包括文案撰写、数据分析和灵感激发。2026年持续迭代更新，功能更加丰富实用。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "智能对话"
+      },
+      {
+        "text": "效率工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "50万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://glitter.ai",
+    "price": "基础功能免费，高级功能付费订阅",
+    "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Veed.io",
+    "slug": "veed-io",
+    "emoji": "🎬",
+    "color": "#777AB2",
+    "description": "Veed.io是一个功能强大的在线AI视频编辑平台，支持自动字幕、智能剪辑、语音转文字等高级功能。2026年平台新增AI视频增强和实时协作功能，成为内容创作者的首选工具。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "在线视频编辑"
+      },
+      {
+        "text": "AI字幕生成"
+      },
+      {
+        "text": "视频剪辑工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.veed.io",
+    "price": "免费版可用，付费版$12起/月",
+    "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）"
   },
   {
     "name": "Let's Enhance",
@@ -3395,6 +3481,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Windsurf",
+    "slug": "windsurf",
+    "emoji": "💻",
+    "color": "#acbffa",
+    "description": "Codeium推出的AI代码编辑器，深度集成Cascade AI助手。支持代码补全、Chat对话和Agent模式，是Cursor之外另一款优秀的AI编程工具。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "2万",
+    "badge": {
+      "type": "hot",
+      "text": null
+    },
+    "url": "https://codeium.com/windsurf",
+    "price": "免费使用",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Grammarly AI",
     "slug": "grammarly-ai",
     "emoji": "✍️",
@@ -5253,6 +5367,64 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://augie.ai",
     "price": "基础版免费，专业版$19/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Glitter AI",
+    "slug": "glitter-ai",
+    "emoji": "✨",
+    "color": "#8B5CF6",
+    "description": "Glitter AI 是一款新兴的AI智能助手，专注于提升用户的工作效率和创作能力。它通过自然语言处理技术帮助用户完成各种复杂任务，包括文案撰写、数据分析和灵感激发。2026年持续迭代更新，功能更加丰富实用。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "智能对话"
+      },
+      {
+        "text": "效率工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "50万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://glitter.ai",
+    "price": "基础功能免费，高级功能付费订阅",
+    "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Veed.io",
+    "slug": "veed-io",
+    "emoji": "🎬",
+    "color": "#777AB2",
+    "description": "Veed.io是一个功能强大的在线AI视频编辑平台，支持自动字幕、智能剪辑、语音转文字等高级功能。2026年平台新增AI视频增强和实时协作功能，成为内容创作者的首选工具。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "在线视频编辑"
+      },
+      {
+        "text": "AI字幕生成"
+      },
+      {
+        "text": "视频剪辑工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.veed.io",
+    "price": "免费版可用，付费版$12起/月",
+    "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）"
   },
   {
     "name": "Let's Enhance",
