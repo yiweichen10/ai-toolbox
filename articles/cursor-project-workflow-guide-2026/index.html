@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor项目级AI编程实战指南：从单文件到10万行工程，我用半年总结的8条黄金规则 - AI工具宝箱</title>
+    <meta name="description" content="Cursor项目级AI编程实战指南。我用Cursor开发了半年、累计3个项目10万行代码，总结出8条黄金规则：.cursorrules配置、Composer多文件重构、Agent模式提效、上下文管理技巧、.cursorignore避坑等。真实案例+性能数据+踩坑记录，帮你在真实项目中把AI编程效率拉满。">
+    <meta name="keywords" content="Cursor教程,Cursor项目配置,Cursor高级用法,Cursor .cursorrules,Cursor Composer,Cursor Agent模式,AI编程工作流,Cursor上下文管理">
+    <link rel="canonical" href="https://www.aitoolbox.hk/articles/cursor-project-workflow-guide-2026/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cursor项目级AI编程实战指南：从单文件到10万行工程，我用半年总结的8条黄金规则 - AI工具宝箱">
+    <meta property="og:description" content="Cursor项目级AI编程实战指南。我用Cursor开发了半年、累计3个项目10万行代码，总结出8条黄金规则：.cursorrules配置、Composer多文件重构、Agent模式提效、上下文管理技巧、.cursorignore避坑等。真实案例+性能数据+踩坑记录，帮你在真实项目中把AI编程效率拉满。">
+    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/cursor-project-workflow-guide-2026-og.png">
+    <meta property="og:url" content="https://www.aitoolbox.hk/articles/cursor-project-workflow-guide-2026/">
+    <meta property="og:site_name" content="AI工具宝箱">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cursor项目级AI编程实战指南：从单文件到10万行工程，我用半年总结的8条黄金规则 - AI工具宝箱">
+    <meta name="twitter:description" content="Cursor项目级AI编程实战指南。我用Cursor开发了半年、累计3个项目10万行代码，总结出8条黄金规则：.cursorrules配置、Composer多文件重构、Agent模式提效、上下文管理技巧、.cursorignore避坑等。真实案例+性能数据+踩坑记录，帮你在真实项目中把AI编程效率拉满。">
+    <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/cursor-project-workflow-guide-2026-og.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.aitoolbox.hk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI编程",
+      "item": "https://www.aitoolbox.hk/category/ai-coding/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cursor项目级AI编程实战指南：从单文件到10万行工程，我用半年总结的8条黄金规则",
+      "item": "https://www.aitoolbox.hk/articles/cursor-project-workflow-guide-2026/"
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cursor项目级AI编程实战指南：从单文件到10万行工程，我用半年总结的8条黄金规则",
+  "description": "Cursor项目级AI编程实战指南。我用Cursor开发了半年、累计3个项目10万行代码，总结出8条黄金规则：.cursorrules配置、Composer多文件重构、Agent模式提效、上下文管理技巧、.cursorignore避坑等。真实案例+性能数据+踩坑记录，帮你在真实项目中把AI编程效率拉满。",
+  "datePublished": "2026-04-19",
+  "dateModified": "2026-04-19",
+  "author": {
+    "@type": "Organization",
+    "name": "AI工具宝箱"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI工具宝箱",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.aitoolbox.hk/images/logo.png"
+    }
+  },
+  "image": "https://www.aitoolbox.hk/images/og/cursor-project-workflow-guide-2026-og.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.aitoolbox.hk/articles/cursor-project-workflow-guide-2026/"
+  }
+}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+        </div>
+        <nav class="global-nav" aria-label="全局导航">
+        <div class="global-nav-inner">
+            <a href="/ranking/" class="gn-item">📊 工具排行</a>
+            <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+            <a href="/live/" class="gn-item">📈 实时面板</a>
+            <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+            <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+            <a href="/category/" class="gn-item">📂 全部分类</a>
+        </div>
+    </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <a href="/">首页</a> &gt; <span>AI编程</span> &gt; <span>Cursor项目级AI编程实战指南：从单...</span>
+    </nav>
+
+    <main class="article-container">
+        <article class="article-body">
+            <h1 style="margin-bottom:16px;">Cursor项目级AI编程实战指南：从单文件到10万行工程，我用半年总结的8条黄金规则</h1>
+            <div style="color:#999;font-size:14px;margin-bottom:24px;">
+                2026年4月19日 · AI编程
+            </div>
+            
+            
+<p>Cursor的"AI代码补全"只是入门，真正拉开差距的是你能不能把它用到<strong>真实项目</strong>里。我半年里用Cursor开发了3个项目，累计修改和新增超过10万行代码。这篇文章不讲安装注册（网上太多了），只讲我在真实项目中踩过的坑和沉淀下来的方法论。
+</p>
+
+<p>先说结论：<strong>配置好项目级规则（.cursorrules）+ 熟练使用Composer多文件编辑 + 掌握Agent模式的使用时机</strong>，这三件事做好了，你的AI编程效率至少能翻3倍。
+</p>
+
+<h2>为什么写这篇</h2>
+
+<p>我一开始用Cursor也是单文件对话，写一个函数、改一个bug，感觉不错。但一旦项目规模超过5000行代码，问题就来了——AI不理解项目架构、改一处坏三处、生成的代码风格不统一。
+</p>
+
+<p>网上的教程99%停留在"安装+基础使用"，几乎没有人在讲项目级工程化的问题。这篇就是填补这个空白的。
+</p>
+
+<h2>黄金规则1：花20分钟写好.cursorrules，省下200小时</h2>
+
+<p><strong>这是我半年里最大的收获，没有之一。</strong>
+</p>
+
+<p>.cursorrules是Cursor的项目级配置文件，放在项目根目录，AI每次对话都会自动读取。我在第一个项目里没写这个文件，结果AI每次都按默认Python风格写代码，而我项目用的是Ruff+Black+isort。光是格式化问题就浪费了我十几个小时。
+</p>
+
+<p>现在我的每个项目.cursorrules都包含这几个部分：
+</p>
+
+<pre><code># 项目技术栈
+<ul><li>后端：FastAPI + SQLAlchemy + PostgreSQL</li>
+<li>前端：React + TypeScript + TailwindCSS</li>
+<li>包管理：uv (Python) + pnpm (Node)</li>
+</ul>
+<h1>代码规范</h1>
+<ul><li>Python遵循PEP 8，使用Ruff格式化，行宽120</li>
+<li>TypeScript严格模式，优先用interface而非type</li>
+<li>所有API端点必须有类型标注和docstring</li>
+<li>禁止使用any类型</li>
+</ul>
+<h1>命名规范</h1>
+<ul><li>文件名：snake_case（Python）/ kebab-case（前端）</li>
+<li>变量名：描述性命名，禁止单字母变量（循环除外）</li>
+<li>常量：UPPER_SNAKE_CASE</li>
+<li>数据库字段：snake_case</li>
+</ul>
+<h1>项目结构</h1>
+<ul><li>src/api/ → 路由定义</li>
+<li>src/models/ → 数据模型</li>
+<li>src/services/ → 业务逻辑</li>
+<li>src/schemas/ → Pydantic模式</li>
+</ul>
+<h1>禁止事项</h1>
+<ul><li>不要使用print调试，用logging</li>
+<li>不要在API端点直接写SQL，必须通过ORM</li>
+<li>不要在组件内直接fetch，走统一请求层</li>
+</ul></code></pre>
+
+<p><strong>效果对比</strong>：配置前，AI生成的代码我需要手动修改60%以上；配置后，这个比例降到了15%。关键是代码风格、项目结构、命名规范全部对齐，省去了大量"对齐"的心智负担。
+</p>
+
+<p>有朋友问过，这个和system prompt有啥区别？区别在于：system prompt是每次对话都传的，容易占token；.cursorrules是项目级持久化的，团队协作时所有人共享同一套规范，不需要每个人单独设置。
+</p>
+
+<h2>黄金规则2：Composer不是替代品，是你的多文件外科手术刀</h2>
+
+<p>大多数Cursor用户只用Chat面板（单文件编辑），从来没点过Composer。这是巨大的浪费。
+</p>
+
+<p><strong>Composer的核心价值是跨文件一致性修改。</strong>
+</p>
+
+<p>我遇到一个真实案例：项目需要把所有API的错误处理从自定义格式迁移到RFC 7807 Problem Details。涉及47个端点、12个中间件、3个前端错误处理函数。手动改至少要一整天。
+</p>
+
+<p>用Composer的操作步骤：
+</p>
+<ul><li>打开Composer（Ctrl/Cmd + I）</li>
+<li>把所有需要修改的文件拖进去（我一次性拖了32个文件）</li>
+<li>输入指令："将所有API错误处理迁移到RFC 7807 Problem Details格式，包括中间件、响应模型和前端错误组件"</li>
+<li>检查Diff，确认后Apply</li>
+</ul>
+<p><strong>结果</strong>：47分钟完成，经过测试只有2处需要手动微调（都是边界情况）。
+</p>
+
+<p><strong>Composer的适用场景判断</strong>：
+</p>
+<table><thead><tr><th>场景</th><th>用Composer</th><th>用Chat</th><th>理由</th></tr></thead><tbody><tr><td>重命名一个变量/函数</td><td>❌</td><td>✅</td><td>单文件单点修改，Chat更快</td></tr><tr><td>修改接口返回格式</td><td>✅</td><td>❌</td><td>涉及model+schema+route+前端，必须一致性</td></tr><tr><td>新增一个功能模块</td><td>✅</td><td>❌</td><td>需要同时创建多个文件，Composer一次搞定</td></tr><tr><td>修复一个Bug</td><td>❌</td><td>✅</td><td>大概率是单文件问题</td></tr><tr><td>重构数据层</td><td>✅</td><td>❌</td><td>model+migration+service+test全部要改</td></tr><tr><td>调整CSS样式</td><td>❌</td><td>✅</td><td>通常只涉及单个组件</td></tr></tbody></table>
+<p>一个很重要的细节：<strong>Composer里拖进去的文件顺序有影响</strong>。建议把"需要被参考"的文件放在前面，"需要被修改"的文件放在后面。比如迁移API格式时，我先拖了schema定义文件（参考），再拖了路由文件（修改）。
+</p>
+
+<h2>黄金规则3：Agent模式不是万能的，知道什么时候用什么时候不用</h2>
+
+<p>Cursor的Agent模式（右上角切换）可以自动执行终端命令、读取文件、多轮迭代。听起来很美好，但我的教训是：<strong>用错场景反而更慢</strong>。
+</p>
+
+<p><strong>Agent模式适合的场景</strong>：
+</p>
+<ul><li>"帮我给这个项目加单元测试，覆盖率要达到80%" — 需要读文件、创建测试文件、运行测试、根据结果调整</li>
+<li>"把这个模块的性能优化一下，先profiling再改" — 需要运行性能分析、读结果、修改代码</li>
+<li>"把这个Django项目迁移到FastAPI" — 大规模重构，需要反复确认和调整</li>
+</ul>
+<p><strong>Agent模式不适合的场景</strong>：
+</p>
+<ul><li>修改一个函数的逻辑 — 直接Chat，2秒搞定，Agent模式要花30秒"思考执行计划"</li>
+<li>调整UI布局 — Agent会反复启动预览服务器，来回折腾</li>
+<li>写一个简单的CRUD接口 — 代码量不大，Agent的"思考开销"不划算</li>
+</ul>
+<p><strong>我的经验数据</strong>：
+</p>
+<table><thead><tr><th>任务复杂度</th><th>Chat模式耗时</th><th>Agent模式耗时</th><th>推荐模式</th></tr></thead><tbody><tr><td>单函数修改（<20行）</td><td>15秒</td><td>45秒</td><td>Chat</td></tr><tr><td>单模块重构（20-200行）</td><td>3分钟</td><td>2分钟</td><td>Agent</td></tr><tr><td>跨模块重构（>200行）</td><td>15分钟</td><td>6分钟</td><td>Agent</td></tr><tr><td>新功能开发（3+文件）</td><td>20分钟</td><td>8分钟</td><td>Agent</td></tr><tr><td>调试复杂Bug</td><td>10分钟</td><td>12分钟</td><td>Chat</td></tr></tbody></table>
+<p>关键发现：<strong>复杂度在单函数级别时，Agent模式反而更慢</strong>，因为它需要先"规划"再执行，而简单任务Chat直接给答案更快。
+</p>
+
+<h2>黄金规则4：上下文管理——给AI看什么比问什么更重要</h2>
+
+<p>这是很多人忽略的隐性能力。Cursor的上下文窗口是有限的（目前约128K tokens），你把什么喂给它，直接决定了输出质量。
+</p>
+
+<p><strong>我在项目中总结的上下文管理策略</strong>：
+</p>
+
+<ul><li><strong>@Codebase搜索优先于全文件粘贴</strong>。不要用Ctrl+A全选然后贴给AI，用@Codebase搜索相关代码片段，只给AI看相关的部分。</li>
+</ul>
+<ul><li><strong>用@Docs引入官方文档</strong>。开发时遇到不确定的API用法，直接@Docs React或@Docs FastAPI，让AI基于最新官方文档回答，而不是靠它可能过时的训练数据。</li>
+</ul>
+<ul><li><strong>建立项目知识文件</strong>。在项目根目录创建一个ARCHITECTURE.md，记录核心架构决策、数据流、模块依赖关系。这样AI在分析项目时有一个"地图"，不用每次从零推断。</li>
+</ul>
+<ul><li><strong>上下文清零技巧</strong>。当对话超过20轮时，AI开始"遗忘"早期信息。与其继续一个超长对话，不如新开对话并简要描述背景，效率更高。</li>
+</ul>
+<p><strong>实测数据</strong>：同样一个"优化数据库查询性能"的任务，不管理上下文时，AI生成的方案覆盖了30%的实际瓶颈；用@Codebase精准定位后，覆盖率提升到85%。
+</p>
+
+<h2>黄金规则5：.cursorignore是你的保险丝</h2>
+
+<p>和.gitignore类似，Cursor也有.cursorignore，可以排除不需要被AI索引的文件。这不仅是隐私保护，更是<strong>性能优化</strong>。
+</p>
+
+<p><strong>我建议所有项目都排除以下内容</strong>：
+</p>
+
+<pre><code># .cursorignore
+<p>node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.log
+dist/
+build/
+.next/
+coverage/
+.mypy_cache/
+.pytest_cache/
+*.min.js
+*.min.css
+package-lock.json
+</code></pre>
+</p>
+
+<p><strong>为什么重要</strong>：我有个项目没配.cursorignore，Cursor尝试索引了node_modules里3万多个文件，结果：
+</p>
+<ul><li>索引时间从3秒涨到40秒</li>
+<li>@Codebase搜索返回大量噪音结果（npm包的源码被当成了项目代码）</li>
+<li>自动补全偶尔会建议npm包内部的实现细节，完全无关</li>
+</ul>
+<p>加了.cursorignore后，索引时间恢复到3秒，搜索结果全部是项目自有代码。
+</p>
+
+<p>还有一个容易忽略的点：<strong>large static assets</strong>。如果你项目里有大型JSON数据文件（比如10MB的模拟数据），一定要排除，否则会被塞进上下文里浪费token。
+</p>
+
+<h2>黄金规则6：善用Tab和Diff，不要无脑Accept All</h2>
+
+<p>Cursor的代码补全（灰色文字，按Tab接受）和Chat的Apply功能都支持逐行Review。<strong>永远不要点Accept All</strong>，除非你完全信任那段代码（比如纯粹的样板代码）。
+</p>
+
+<p><strong>我的Review流程</strong>：
+</p>
+<ul><li>先看Diff的红色（删除行）和绿色（新增行），确认逻辑方向对不对</li>
+<li>重点检查import语句——AI经常引入项目里没有的包</li>
+<li>检查函数签名是否和现有代码兼容</li>
+<li>看有没有硬编码的值（比如端口号、API Key占位符）</li>
+<li>确认后再Accept</li>
+</ul>
+<p>这个过程每段代码大概花30秒到1分钟，但能帮你避免90%的"AI改了一处、坏了三处"问题。
+</p>
+
+<p><strong>真实案例</strong>：有一次AI建议修改一个认证中间件的逻辑，看起来合理，但Diff里多了一行"跳过验证"的代码。如果我Accept All，这个安全漏洞就会上线。逐行Review救了我一次。
+</p>
+
+<h2>黄金规则7：版本控制是你的安全网，但不要过度依赖</h2>
+
+<p>每次Cursor做大规模修改前，我建议先提交一个commit。这不是不信任AI，而是工程习惯。
+</p>
+
+<p><strong>更具体的建议</strong>：
+</p>
+<ul><li>Composer修改超过5个文件时，先commit当前状态</li>
+<li>Agent模式执行超过5分钟时，先commit</li>
+<li>把.cursorrules纳入版本控制（团队共享）</li>
+<li>.cursorignore也纳入版本控制</li>
+</ul>
+<p><strong>踩坑经历</strong>：有一次Composer重构了一整个数据层，Apply后发现有一个SQL migration没被考虑到，导致数据库结构不一致。如果没有commit，回退就很麻烦。有了commit，git reset --hard 10秒恢复。
+</p>
+
+<p>但注意：<strong>不要每改一行就commit</strong>。过度commit会导致git历史混乱，rollback时找不到正确的版本。我的节奏是：每完成一个逻辑完整的改动就commit。
+</p>
+
+<h2>黄金规则8：和GitHub Copilot对比，Cursor到底值不值$20/月？</h2>
+
+<p>作为同时用过两个工具的人，我来给你一个真实对比：
+</p>
+<table><thead><tr><th>维度</th><th>Cursor</th><th>GitHub Copilot</th><th>我的评价</th></tr></thead><tbody><tr><td>代码补全速度</td><td>快（本地模型）</td><td>快（VSCode集成）</td><td>持平</td></tr><tr><td>多文件编辑</td><td>✅ Composer</td><td>❌ 无原生支持</td><td>Cursor完胜</td></tr><tr><td>项目理解能力</td><td>强（.cursorrules）</td><td>中等</td><td>Cursor更强</td></tr><tr><td>终端命令执行</td><td>✅ Agent模式</td><td>❌ 无</td><td>Cursor独有</td></tr><tr><td>IDE集成</td><td>自带编辑器</td><td>插件式，支持多IDE</td><td>Copilot更灵活</td></tr><tr><td>价格</td><td>$20/月</td><td>$10/月或$19/月（Business）</td><td>Copilot更便宜</td></tr><tr><td>离线使用</td><td>部分支持</td><td>不支持</td><td>Cursor更好</td></tr></tbody></table>
+<p><strong>我的结论</strong>：如果你主要写代码（而不是在VSCode里做其他事），<strong>Cursor值得</strong>。Composer和Agent模式带来的效率提升远超$10的差价。但如果你深度依赖VSCode的某个插件生态（比如Remote SSH + Docker），Copilot的插件模式更合适。
+</p>
+
+<p>顺便说一下，<a href="/tools/windsurf/index.html">Windsurf</a>也提供了类似的多文件编辑功能，但目前稳定性不如Cursor。我在3月份测试过，Composer级别的操作偶尔会卡死。
+</p>
+
+<h2>踩坑经验总结</h2>
+
+<ul><li><strong>.cursorrules不要写太长</strong>。我一开始写了800行的详细规范，结果发现AI反而"选择性遵守"，只看前200行左右。现在控制在150行以内，核心规范放前面。</li>
+</ul>
+<ul><li><strong>Composer最多拖15个文件</strong>。超过这个数量，AI的注意力会分散，修改质量明显下降。如果涉及的文件更多，分批处理。</li>
+</ul>
+<ul><li><strong>Agent模式会消耗API额度</strong>。如果你用的是Claude API，Agent模式一次复杂任务可能消耗$0.5-2的token费用。注意监控用量。</li>
+</ul>
+<ul><li><strong>Windows用户注意路径问题</strong>。Composer在Windows上偶尔会有路径分隔符问题（\\ vs /），导致AI生成的import路径错误。我在.cursorrules里显式指定了"使用正斜杠"来规避。</li>
+</ul>
+<ul><li><strong>大项目分模块设置.cursorrules</strong>。如果项目有多个子模块（比如monorepo），可以在子目录放独立的.cursorrules，子模块内的AI对话会优先使用子目录的配置。</li>
+</ul>
+<h2>FAQ</h2>
+
+<p><strong>Q：Cursor免费版够用吗？</strong>
+A：免费版有2000次/月的补全限制和50次/月的慢请求。如果只是偶尔用用，免费版够。但如果你像我一样每天用4-8小时，免费版根本不够用，Pro版（$20/月）几乎是必须的。
+</p>
+
+<p><strong>Q：.cursorrules会被上传到服务器吗？</strong>
+A：会的，作为上下文的一部分传给AI。所以不要在.cursorrules里放API Key、数据库密码等敏感信息。敏感信息放在.env里，并通过.cursorignore排除。
+</p>
+
+<p><strong>Q：Agent模式会不会误操作删文件？</strong>
+A：理论上会，但我用了半年从没遇到过。Agent的所有文件操作都需要你确认（Diff Review）。如果你真的很担心，可以在设置里关闭Agent的文件删除权限。
+</p>
+
+<p><strong>Q：团队协作时怎么统一Cursor配置？</strong>
+A：把.cursorrules和.cursorignore提交到Git仓库，团队成员clone下来就自动生效。这是我强烈推荐的做法——比每个人自己配置效率高得多。
+</p>
+
+<p><strong>Q：Cursor能替代Code Review吗？</strong>
+A：不能。AI生成的代码仍然需要人工Review。特别是涉及安全（认证、权限、数据校验）和性能（N+1查询、内存泄漏）的部分，必须人工确认。AI是放大器，不是替代品。
+</p>
+
+<h2>总结</h2>
+
+<p>Cursor在项目级编程中的价值远不止"代码补全"。通过8条规则的系统化配置，你可以把它从"有点好用的编辑器"变成"真正的开发效率倍增器"：
+</p>
+
+<ul><li>✅ .cursorrules配置 → 代码风格自动对齐</li>
+<li>✅ Composer多文件编辑 → 跨模块一致性修改</li>
+<li>✅ Agent模式按需使用 → 复杂任务自动化</li>
+<li>✅ 上下文精准管理 → AI输出质量翻倍</li>
+<li>✅ .cursorignore → 索引速度和搜索质量保障</li>
+<li>✅ 逐行Review → 避免90%的AI引入bug</li>
+<li>✅ 频繁commit → 大规模修改的安全网</li>
+<li>✅ 对比评估 → 明确Cursor的定位和性价比</li>
+</ul>
+<p>如果你已经在用Cursor但只停留在"Tab补全"阶段，建议今晚花20分钟把.cursorrules配好、试一次Composer——这是投入产出比最高的20分钟。
+</p>
+        </article>
+
+        <div class="related-tools">
+            <h3>📖 相关文章</h3>
+            <div class="related-grid"><a href="/articles/ai-coding-tools-real-productivity-test-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">AI编程工具到底能省多少时间？我用5个真实项目跑了3个月，数据打脸了</div>
+                <div style="font-size:13px;color:#666;">2026年4月2日</div>
+            </a>
+<a href="/articles/ai-coding-real-cost-traps-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">Anthropic泄露3000份文件+Cline免费方案碾压付费工具+中国大模型调用量反超美国：AI编程的钱都花在哪了？</div>
+                <div style="font-size:13px;color:#666;">2026年3月30日</div>
+            </a>
+<a href="/articles/cursor-alternatives-2026-test/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">Cursor收费后，这7款AI编程工具谁值得用？（2026实测对比）</div>
+                <div style="font-size:13px;color:#666;">2026年3月24日</div>
+            </a>
+</div>
+        </div>
+
+        <div class="related-tools">
+            <h3>🔧 相关工具</h3>
+            <div class="related-grid"><a href="/tools/claude/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🎭</div>
+                    <div style="font-weight:600;">Claude</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/github-copilot/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                    <div style="font-weight:600;">GitHub Copilot</div>
+                    <div style="font-size:13px;color:#666;">AI编程</div>
+                </a>
+<a href="/tools/cursor/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">⬛</div>
+                    <div style="font-weight:600;">Cursor</div>
+                    <div style="font-size:13px;color:#666;">AI编程</div>
+                </a>
+<a href="/tools/windsurf/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                    <div style="font-weight:600;">Windsurf</div>
+                    <div style="font-size:13px;color:#666;">AI编程</div>
+                </a>
+<a href="/tools/replit-ai/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                    <div style="font-weight:600;">Replit AI</div>
+                    <div style="font-size:13px;color:#666;">AI编程</div>
+                </a>
+</div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+    </footer>
+    <button id="backToTop" aria-label="返回顶部">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
+</script>
+</body>
+</html>
