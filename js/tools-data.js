@@ -1473,6 +1473,35 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Luma AI",
+    "slug": "luma-ai",
+    "emoji": "🎬",
+    "color": "#1c5d02",
+    "description": "Luma AI推出的Dream Machine视频生成模型，支持文生视频和图生视频。生成速度快、质量高，是目前最受欢迎的AI视频生成工具之一。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "6万",
+    "badge": {
+      "type": null,
+      "text": "NEW"
+    },
+    "url": "https://lumalabs.ai",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "CapCut AI",
     "slug": "capcut-ai",
     "emoji": "🎬",
@@ -2727,6 +2756,38 @@ window.__ALL_TOOLS__ = [
     "platform": "浏览器插件/iOS/Android/桌面端"
   },
   {
+    "name": "Framer AI",
+    "slug": "framer-ai",
+    "emoji": "🎨",
+    "color": "#5C2D91",
+    "description": "Framer AI是Framer平台内置的AI网站设计助手，可通过自然语言描述快速生成完整的网站页面和交互原型。2026年集成了最新的生成式AI技术，支持智能内容填充、响应式布局自动调整和一键发布功能，大幅提升设计师和开发者的工作效率。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "网站设计"
+      },
+      {
+        "text": "原型制作"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "响应式设计",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.framer.com",
+    "price": "免费版可用，付费版$15起/月",
+    "platform": "网页端、macOS、Windows"
+  },
+  {
     "name": "Augie AI",
     "slug": "augie-ai",
     "emoji": "🤖",
@@ -2818,6 +2879,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.veed.io",
     "price": "免费版可用，付费版$12起/月",
     "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）"
+  },
+  {
+    "name": "Decohere",
+    "slug": "decohere",
+    "emoji": "🎨",
+    "color": "#8B5CF6",
+    "description": "Decohere是一款专注于创意设计的AI图像生成工具，支持文字转图像、图像编辑和多种艺术风格生成。2026年最新版本增强了实时协作功能和移动端支持，成为设计师和创意工作者的热门选择。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI图像生成"
+      },
+      {
+        "text": "文字转图像"
+      },
+      {
+        "text": "艺术创作"
+      },
+      {
+        "text": "设计工具"
+      },
+      {
+        "text": "AI绘画",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://decohere.ai",
+    "price": "免费版每月50积分，付费版$9.99/月起",
+    "platform": "网页端/iOS/Android"
   },
   {
     "name": "Let's Enhance",
@@ -4080,6 +4176,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Luma AI",
+    "slug": "luma-ai",
+    "emoji": "🎬",
+    "color": "#1c5d02",
+    "description": "Luma AI推出的Dream Machine视频生成模型，支持文生视频和图生视频。生成速度快、质量高，是目前最受欢迎的AI视频生成工具之一。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.1",
+    "visits": "6万",
+    "badge": {
+      "type": null,
+      "text": "NEW"
+    },
+    "url": "https://lumalabs.ai",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "CapCut AI",
     "slug": "capcut-ai",
     "emoji": "🎬",
@@ -5334,6 +5459,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "浏览器插件/iOS/Android/桌面端"
   },
   {
+    "name": "Framer AI",
+    "slug": "framer-ai",
+    "emoji": "🎨",
+    "color": "#5C2D91",
+    "description": "Framer AI是Framer平台内置的AI网站设计助手，可通过自然语言描述快速生成完整的网站页面和交互原型。2026年集成了最新的生成式AI技术，支持智能内容填充、响应式布局自动调整和一键发布功能，大幅提升设计师和开发者的工作效率。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "网站设计"
+      },
+      {
+        "text": "原型制作"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "响应式设计",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.framer.com",
+    "price": "免费版可用，付费版$15起/月",
+    "platform": "网页端、macOS、Windows"
+  },
+  {
     "name": "Augie AI",
     "slug": "augie-ai",
     "emoji": "🤖",
@@ -5425,6 +5582,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.veed.io",
     "price": "免费版可用，付费版$12起/月",
     "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）"
+  },
+  {
+    "name": "Decohere",
+    "slug": "decohere",
+    "emoji": "🎨",
+    "color": "#8B5CF6",
+    "description": "Decohere是一款专注于创意设计的AI图像生成工具，支持文字转图像、图像编辑和多种艺术风格生成。2026年最新版本增强了实时协作功能和移动端支持，成为设计师和创意工作者的热门选择。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI图像生成"
+      },
+      {
+        "text": "文字转图像"
+      },
+      {
+        "text": "艺术创作"
+      },
+      {
+        "text": "设计工具"
+      },
+      {
+        "text": "AI绘画",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://decohere.ai",
+    "price": "免费版每月50积分，付费版$9.99/月起",
+    "platform": "网页端/iOS/Android"
   },
   {
     "name": "Let's Enhance",
