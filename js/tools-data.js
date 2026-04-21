@@ -2608,6 +2608,35 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Wordtune",
+    "slug": "wordtune",
+    "emoji": "✍️",
+    "color": "#4A90E2",
+    "description": "Wordtune 是一款由 AI 驱动的写作助手和编辑器，专注于文本重写、润色和语气调整，帮助用户提升写作的清晰度、流畅度和说服力。截至 2026 年，它持续更新其核心语言模型，并优化与主流办公软件和浏览器的集成体验，支持将初稿快速打磨成专业内容。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "重写"
+      },
+      {
+        "text": "润色"
+      },
+      {
+        "text": "语法检查",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约 800 万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.wordtune.com",
+    "price": "免费版功能有限；高级版约 $20/月；提供企业方案。",
+    "platform": "Web、Chrome/Edge 浏览器扩展、iOS、Android"
+  },
+  {
     "name": "Pitch AI",
     "slug": "pitch-ai",
     "emoji": "📊",
@@ -2788,6 +2817,41 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、macOS、Windows"
   },
   {
+    "name": "Spline AI",
+    "slug": "spline-ai",
+    "emoji": "🎨",
+    "color": "#FF5A1F",
+    "description": "Spline AI是Spline推出的AI驱动的3D设计工具，通过自然语言描述即可快速生成3D模型、场景和交互原型。2026年已支持多模态AI生成，可同时处理文字、图像和参考图生成3D内容，并提供实时预览和编辑功能。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "3D设计"
+      },
+      {
+        "text": "3D建模"
+      },
+      {
+        "text": "AI生成3D",
+        "type": "free"
+      },
+      {
+        "text": "交互设计"
+      },
+      {
+        "text": "Web3D"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://spline.design/ai",
+    "price": "免费版可用，Pro版$12/月起",
+    "platform": "Web浏览器"
+  },
+  {
     "name": "Augie AI",
     "slug": "augie-ai",
     "emoji": "🤖",
@@ -2879,6 +2943,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.veed.io",
     "price": "免费版可用，付费版$12起/月",
     "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）"
+  },
+  {
+    "name": "Domika",
+    "slug": "domika",
+    "emoji": "🤖",
+    "color": "#6366F1",
+    "description": "Domika是一款智能AI个人助理助手，专注于为用户提供便捷的日常任务管理和智能对话服务。它通过先进的自然语言处理技术，帮助用户高效处理信息、安排日程和解答问题。2026年持续更新功能，现已支持多平台同步和个性化定制服务。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "智能对话"
+      },
+      {
+        "text": "个人助理",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "50万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://domika.ai",
+    "price": "基础免费，Pro版29.9美元/月",
+    "platform": "Web、iOS、Android"
   },
   {
     "name": "Decohere",
@@ -5311,6 +5404,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Wordtune",
+    "slug": "wordtune",
+    "emoji": "✍️",
+    "color": "#4A90E2",
+    "description": "Wordtune 是一款由 AI 驱动的写作助手和编辑器，专注于文本重写、润色和语气调整，帮助用户提升写作的清晰度、流畅度和说服力。截至 2026 年，它持续更新其核心语言模型，并优化与主流办公软件和浏览器的集成体验，支持将初稿快速打磨成专业内容。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "重写"
+      },
+      {
+        "text": "润色"
+      },
+      {
+        "text": "语法检查",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约 800 万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.wordtune.com",
+    "price": "免费版功能有限；高级版约 $20/月；提供企业方案。",
+    "platform": "Web、Chrome/Edge 浏览器扩展、iOS、Android"
+  },
+  {
     "name": "Pitch AI",
     "slug": "pitch-ai",
     "emoji": "📊",
@@ -5491,6 +5613,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、macOS、Windows"
   },
   {
+    "name": "Spline AI",
+    "slug": "spline-ai",
+    "emoji": "🎨",
+    "color": "#FF5A1F",
+    "description": "Spline AI是Spline推出的AI驱动的3D设计工具，通过自然语言描述即可快速生成3D模型、场景和交互原型。2026年已支持多模态AI生成，可同时处理文字、图像和参考图生成3D内容，并提供实时预览和编辑功能。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "3D设计"
+      },
+      {
+        "text": "3D建模"
+      },
+      {
+        "text": "AI生成3D",
+        "type": "free"
+      },
+      {
+        "text": "交互设计"
+      },
+      {
+        "text": "Web3D"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://spline.design/ai",
+    "price": "免费版可用，Pro版$12/月起",
+    "platform": "Web浏览器"
+  },
+  {
     "name": "Augie AI",
     "slug": "augie-ai",
     "emoji": "🤖",
@@ -5582,6 +5739,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.veed.io",
     "price": "免费版可用，付费版$12起/月",
     "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）"
+  },
+  {
+    "name": "Domika",
+    "slug": "domika",
+    "emoji": "🤖",
+    "color": "#6366F1",
+    "description": "Domika是一款智能AI个人助理助手，专注于为用户提供便捷的日常任务管理和智能对话服务。它通过先进的自然语言处理技术，帮助用户高效处理信息、安排日程和解答问题。2026年持续更新功能，现已支持多平台同步和个性化定制服务。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "智能对话"
+      },
+      {
+        "text": "个人助理",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "50万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://domika.ai",
+    "price": "基础免费，Pro版29.9美元/月",
+    "platform": "Web、iOS、Android"
   },
   {
     "name": "Decohere",
