@@ -2974,7 +2974,7 @@ def push_to_indexnow(urls):
 
 def push_to_baidu(urls):
     """主动向百度搜索引擎推送链接"""
-    api_url = "http://data.zz.baidu.com/urls?site=https://www.aitoolbox.hk&token=WkOz42Q1xowpLZcB"
+    api_url = "http://data.zz.baidu.com/urls?site=https://www.aitoolbox.hk&token=SQjY1PUxykFOlFUk"
     
     try:
         import urllib.request
@@ -3000,7 +3000,7 @@ def _push_single_url(url):
     import urllib.request, urllib.error
 
     # 百度推送
-    baidu_api = "http://data.zz.baidu.com/urls?site=https://www.aitoolbox.hk&token=WkOz42Q1xowpLZcB"
+    baidu_api = "http://data.zz.baidu.com/urls?site=https://www.aitoolbox.hk&token=SQjY1PUxykFOlFUk"
     try:
         data = url.encode('utf-8')
         req = urllib.request.Request(baidu_api, data=data, headers={'Content-Type': 'text/plain'})
