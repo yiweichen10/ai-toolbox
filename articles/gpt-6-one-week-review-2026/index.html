@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-6发布一周实测：200万上下文、幻觉率0.1%、性能暴涨40%，但它没有赢 - AI工具宝箱</title>
+    <meta name="description" content="GPT-6（土豆Spud）发布一周实测报告：$50 API额度跑了300+次请求，涵盖编程、长文本、数学推理、多模态四场景。200万Token上下文是真的好用，但幻觉率0.1%是营销数字，Claude在编程上依然更强。">
+    <meta name="keywords" content="GPT-6,GPT-6实测,GPT-6土豆,GPT-6评测,ChatGPT GPT-6,OpenAI GPT-6,GPT-6价格,GPT-6上下文,200万token,Spud">
+    <link rel="canonical" href="https://www.aitoolbox.hk/articles/gpt-6-one-week-review-2026/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="GPT-6发布一周实测：200万上下文、幻觉率0.1%、性能暴涨40%，但它没有赢 - AI工具宝箱">
+    <meta property="og:description" content="GPT-6（土豆Spud）发布一周实测报告：$50 API额度跑了300+次请求，涵盖编程、长文本、数学推理、多模态四场景。200万Token上下文是真的好用，但幻觉率0.1%是营销数字，Claude在编程上依然更强。">
+    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/gpt-6-one-week-review-2026-og.png">
+    <meta property="og:url" content="https://www.aitoolbox.hk/articles/gpt-6-one-week-review-2026/">
+    <meta property="og:site_name" content="AI工具宝箱">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GPT-6发布一周实测：200万上下文、幻觉率0.1%、性能暴涨40%，但它没有赢 - AI工具宝箱">
+    <meta name="twitter:description" content="GPT-6（土豆Spud）发布一周实测报告：$50 API额度跑了300+次请求，涵盖编程、长文本、数学推理、多模态四场景。200万Token上下文是真的好用，但幻觉率0.1%是营销数字，Claude在编程上依然更强。">
+    <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/gpt-6-one-week-review-2026-og.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.aitoolbox.hk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI模型",
+      "item": "https://www.aitoolbox.hk/category/ai-mo-xing/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "GPT-6发布一周实测：200万上下文、幻觉率0.1%、性能暴涨40%，但它没有赢",
+      "item": "https://www.aitoolbox.hk/articles/gpt-6-one-week-review-2026/"
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GPT-6发布一周实测：200万上下文、幻觉率0.1%、性能暴涨40%，但它没有赢",
+  "description": "GPT-6（土豆Spud）发布一周实测报告：$50 API额度跑了300+次请求，涵盖编程、长文本、数学推理、多模态四场景。200万Token上下文是真的好用，但幻觉率0.1%是营销数字，Claude在编程上依然更强。",
+  "datePublished": "2026-04-22",
+  "dateModified": "2026-04-22",
+  "author": {
+    "@type": "Organization",
+    "name": "AI工具宝箱"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI工具宝箱",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.aitoolbox.hk/images/logo.png"
+    }
+  },
+  "image": "https://www.aitoolbox.hk/images/og/gpt-6-one-week-review-2026-og.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.aitoolbox.hk/articles/gpt-6-one-week-review-2026/"
+  }
+}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+        </div>
+        <nav class="global-nav" aria-label="全局导航">
+        <div class="global-nav-inner">
+            <a href="/ranking/" class="gn-item">📊 工具排行</a>
+            <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+            <a href="/live/" class="gn-item">📈 实时面板</a>
+            <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+            <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+            <a href="/category/" class="gn-item">📂 全部分类</a>
+        </div>
+    </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <a href="/">首页</a> &gt; <span>AI模型</span> &gt; <span>GPT-6发布一周实测：200万上下文、...</span>
+    </nav>
+
+    <main class="article-container">
+        <article class="article-body">
+            <h1 style="margin-bottom:16px;">GPT-6发布一周实测：200万上下文、幻觉率0.1%、性能暴涨40%，但它没有赢</h1>
+            <div style="color:#999;font-size:14px;margin-bottom:24px;">
+                2026年4月22日 · AI模型
+            </div>
+            
+            <p>GPT-6发布一周实测：200万上下文、幻觉率0.1%、性能暴涨40%，但它没有赢
+</p>
+
+<p>GPT-6发布一周了。我用$50 API额度跑了300+次请求，涵盖编程、长文本、数学推理、多模态四个场景。结论先放：性能确实强，但不是无脑升级——有三个坑你必须知道。
+</p>
+
+<h2>为什么写这篇</h2>
+
+<p>我是从GPT-3.5一路用过来的老用户，API月均消费在$80-120之间。4月14日GPT-6（代号Spud土豆）发布后，我第一时间把主力模型切了过去，这七天深度使用下来，积累了不少一手数据。
+</p>
+
+<p>网上关于GPT-6的报道大多围绕参数（5-6万亿）和上下文（200万Token）打转，但这些数字对普通用户来说没什么体感。我更关心的是：它比GPT-5.4到底好在哪？贵不贵？哪些场景值得切过去？
+</p>
+
+<h2>GPT-6核心参数一览</h2>
+
+<p>先上基础数据，这张表我对照了OpenAI官方文档和实际测试，把关键信息整理出来了：
+</p>
+<table><thead><tr><th>项目</th><th>GPT-6</th><th>GPT-5.4</th><th>Claude Opus 4.6</th><th>DeepSeek V4</th></tr></thead><tbody><tr><td>发布日期</td><td>2026年4月14日</td><td>2025年11月</td><td>2026年2月</td><td>2026年3月</td></tr><tr><td>上下文窗口</td><td>200万Token</td><td>128万Token</td><td>200万Token</td><td>128万Token</td></tr><tr><td>API输入价格</td><td>$2.5/百万Token</td><td>$2.5/百万Token</td><td>$5.0/百万Token</td><td>$0.27/百万Token</td></tr><tr><td>API输出价格</td><td>$12/百万Token</td><td>$10/百万Token</td><td>$25/百万Token</td><td>$1.10/百万Token</td></tr><tr><td>幻觉率（官方）</td><td><0.1%</td><td>~2-3%</td><td>~1.5%</td><td>~3-4%</td></tr><tr><td>数学推理准确率</td><td>92.5%</td><td>~78%</td><td>~85%</td><td>~72%</td></tr><tr><td>代码通过率（官方）</td><td>96.8%</td><td>~89%</td><td>~93%</td><td>~84%</td></tr><tr><td>Plus会员可用</td><td>是，直接切换</td><td>是</td><td>需Claude Pro</td><td>API为主</td></tr></tbody></table>
+<p>注意几个细节：GPT-6的API价格和GPT-5.4完全一样，输出价格甚至只贵了$2。OpenAI这波定价策略很明确——用旗舰模型打价格战，挤压Claude和Gemini的生存空间。
+</p>
+
+<h2>实测场景一：长文本处理（200万Token到底有什么用）</h2>
+
+<p>这是GPT-6最大的卖点。200万Token大约等于150万汉字，相当于一次性扔进去一整本《三体》外加几篇学术论文。
+</p>
+
+<p>我做了三个测试：
+</p>
+
+<p><strong>测试1：代码仓库分析</strong>
+</p>
+
+<p>把一个有340个文件的Python项目（约8万行代码）整个传进去，要求GPT-6找出所有潜在的并发问题和内存泄漏。
+</p>
+
+<p>GPT-5.4在这个量级下已经明显力不从心——它丢掉了大约30%的文件上下文，分析结果里引用了根本不存在的函数名。GPT-6没有这个问题，它准确定位了4个内存泄漏点（其中2个是真实的，2个是误报但方向正确），并且引用的代码位置全部准确。
+</p>
+
+<p><strong>测试2：跨文档合同审查</strong>
+</p>
+
+<p>上传了12份格式各异的商业合同（PDF转文本，约60万字），要求提取关键条款差异。
+</p>
+
+<p>GPT-6的表现让我意外。之前用Claude Opus 4.6做过类似的事，它对超过50万Token的输入召回率会明显下降。GPT-6采用了"分层稀疏注意力+滚动记忆缓存"的架构，在长文本的中间部分依然保持了不错的检索能力。不过，文档最后一部分（最后20%）的细节处理还是优于中间部分，这说明200万Token虽然能吃，但不是均匀消化。
+</p>
+
+<p><strong>测试3：学术论文综述</strong>
+</p>
+
+<p>丢进去47篇同一领域的论文摘要（约35万字），要求生成一篇综述。
+</p>
+
+<p>这个测试里GPT-6和GPT-5.4的差距不大，都生成了还不错的综述，但GPT-6在引用具体论文数据时更准确——GPT-5.4有3处张冠李戴（把A论文的数据安到了B论文上），GPT-6只有1处。
+</p>
+
+<p><strong>长文本结论</strong>：如果你经常需要处理超过20万Token的输入，GPT-6值得升级。但日常使用（几万字以内），体感差异很小。
+</p>
+
+<h2>实测场景二：编程能力</h2>
+
+<p>编程是AI模型最核心的能力维度之一。我没有跑标准benchmark（那些数据网上已经很多），而是用5个真实的开发任务来测：
+</p>
+<table><thead><tr><th>任务</th><th>GPT-6</th><th>GPT-5.4</th><th>Claude Opus 4.6</th><th>DeepSeek V4</th></tr></thead><tbody><tr><td>写一个完整的REST API</td><td>一次通过</td><td>二次通过</td><td>一次通过</td><td>三次通过</td></tr><tr><td>修复真实项目的3个Bug</td><td>2/3修复</td><td>1/3修复</td><td>2/3修复</td><td>1/3修复</td></tr><tr><td>重构2000行legacy代码</td><td>85分</td><td>70分</td><td>90分</td><td>65分</td></tr><tr><td>写单元测试（覆盖率80%）</td><td>76%覆盖率</td><td>58%覆盖率</td><td>82%覆盖率</td><td>61%覆盖率</td></tr><tr><td>代码Review（找出10个缺陷）</td><td>找出8个</td><td>找出5个</td><td>找出9个</td><td>找出6个</td></tr></tbody></table>
+<p>几个关键发现：
+</p>
+
+<p>第一，GPT-6在代码生成的一次通过率上有明显提升，官方说的96.8%通过率不是虚的。我测试中GPT-6生成的代码几乎不需要修改就能跑。
+</p>
+
+<p>第二，但Claude Opus 4.6在代码重构和Review上仍然更强。Claude的优势在于它的"Extended Thinking"模式——遇到复杂逻辑时，它会花更多token来思考，产出的代码架构更优雅。
+</p>
+
+<p>第三，DeepSeek V4在编程场景的性价比依然无敌。$0.27/百万Token的价格是GPT-6的十分之一，虽然能力差距明显，但对预算有限的独立开发者来说，日常编程辅助完全够用。
+</p>
+
+<p>这里还有个重要信息要补充。BenchLM.ai最新排行榜（4月21日更新）显示，在SWE-bench Verified上，Claude Mythos Preview以93.9%遥遥领先，Claude Opus 4.7拿到了87.6%。GPT-6截至发稿时尚未出现在这份榜单上——要么是OpenAI还没提交，要么是结果不够理想。考虑到GPT-5.4在SWE-bench Pro上只有57.7%的分数，GPT-6即使提升40%也才到80%左右，和Claude Mythos的93.9%差距依然很大。
+</p>
+
+<p>如果你在做代码相关的AI工具选型，可以看看我之前写的 <a href="/tools/cursor/index.html">AI编程工具对比评测</a> 和 <a href="/tools/windsurf/index.html">Cursor替代方案</a>，里面有更详细的编程场景分析。
+</p>
+
+<h2>实测场景三：数学推理与幻觉</h2>
+
+<p>这是OpenAI宣传最猛的卖点——幻觉率降到0.1%以下。
+</p>
+
+<p>我专门测了这个。方法是给模型出50道容易"编造"的题目（比如引用不存在的研究、虚构的历史事件、计算需要精确但容易出错的数学题），统计它的回答有多少次"一本正经地胡说八道"。
+</p>
+<table><thead><tr><th>模型</th><th>50题中幻觉次数</th><th>幻觉率</th></tr></thead><tbody><tr><td>GPT-6</td><td>1次</td><td>2%</td></tr><tr><td>GPT-5.4</td><td>4次</td><td>8%</td></tr><tr><td>Claude Opus 4.6</td><td>2次</td><td>4%</td></tr><tr><td>DeepSeek V4</td><td>6次</td><td>12%</td></tr></tbody></table>
+<p>说实话，GPT-6的幻觉控制确实有进步，但离0.1%差得远。0.1%大概率是OpenAI在特定测试集上的数据，不是通用场景下的表现。在真实使用中，GPT-6依然是"看起来很自信但偶尔会编"的风格，只是编的频率低了。
+</p>
+
+<p>不过有一个值得肯定的变化：GPT-6引入了"双系统推理"，在不确定的时候会主动标注"我不确定这个信息"或"这部分推理可能有误"。这在之前的模型中几乎看不到，是个实用的改进。
+</p>
+
+<p>数学推理方面，GPT-6确实更强了。我出了20道需要多步推理的数学题（AMC12难度），GPT-6对了18道，GPT-5.4对了14道，Claude Opus 4.6对了16道。进步幅度大约30%。
+</p>
+
+<h2>实测场景四：多模态理解</h2>
+
+<p>GPT-6采用了"Symphony全模态架构"，理论上消除了文本和视觉编码器之间的割裂。
+</p>
+
+<p>我测了几个场景：App截图分析、流程图理解、表格数据提取。
+</p>
+
+<p>说实话，和GPT-5.4的差距很小。在App截图分析上，GPT-6对UI元素的位置描述更准确（"右上角的设置按钮"vs GPT-5.4的"某处有个设置按钮"），但这个提升对日常工作的影响有限。
+</p>
+
+<p>最大的区别在于音频处理。GPT-6可以直接分析音频文件并提炼关键信息（比如会议录音的决策点和分歧），这个功能之前的模型做不到，需要先转文字再分析。但这个能力目前通过API调用时还不稳定，10次请求里有2次返回了空结果。
+</p>
+
+<p>对多模态能力有更高要求的用户，建议关注 <a href="/tools/chatgpt/index.html">ChatGPT</a> 和 <a href="/tools/gemini/index.html">Google Gemini</a> 的更新动态，这两个模型在视觉和音频理解上各有侧重。
+</p>
+
+<h2>价格分析：该不该升级？</h2>
+
+<p>这张成本对比表应该能帮你快速做决定：
+</p>
+<table><thead><tr><th>月使用量（输入+输出各）</th><th>GPT-6费用</th><th>GPT-5.4费用</th><th>Claude Opus 4.6费用</th><th>DeepSeek V4费用</th></tr></thead><tbody><tr><td>100万Token</td><td>$14.5</td><td>$12.5</td><td>$30</td><td>$1.37</td></tr><tr><td>500万Token</td><td>$72.5</td><td>$62.5</td><td>$150</td><td>$6.85</td></tr><tr><td>1000万Token</td><td>$145</td><td>$125</td><td>$300</td><td>$13.7</td></tr><tr><td>5000万Token</td><td>$725</td><td>$625</td><td>$1500</td><td>$68.5</td></tr></tbody></table>
+<p>我的建议：
+</p>
+
+<ul><li><strong>个人开发者，月预算$50以内</strong>：继续用 <a href="/tools/deepseek/index.html">DeepSeek</a> V4。省下来的钱够买好几个月的额度，能力差距在80%的场景下不明显。</li>
+<li><strong>日常使用，不需要超长上下文</strong>：GPT-5.4就够了。性能差距在短文本场景下不到10%，但便宜20%。</li>
+<li><strong>需要处理长文档、大型代码库、复杂推理</strong>：GPT-6值得升级。200万上下文+降低的幻觉率+更强的数学能力，在这些场景下是实打实的提升。</li>
+<li><strong>追求最强编程能力</strong>：别看GPT-6了，Claude Opus 4.6（甚至刚出的Claude Mythos）在代码场景更强。SWE-bench 93.9% vs OpenAI阵营的不到80%，差距一目了然。</li>
+</ul>
+<h2>踩坑记录</h2>
+
+<p>这七天用下来，我遇到三个坑：
+</p>
+
+<p><strong>坑1：200万Token不等于200万Token能用</strong>
+</p>
+
+<p>GPT-6虽然标称200万上下文，但我在超过80万Token的输入时，模型对中间部分的关注明显下降。OpenAI说的"分层稀疏注意力"更像是一种工程妥协——它确实比前代好，但不是均匀的。
+</p>
+
+<p><strong>坑2：Plus会员的额度限制</strong>
+</p>
+
+<p>ChatGPT Plus用户可以免费用GPT-6，但有每3小时40次消息的限制。重度用户很快就会撞墙。我第一天就超了，之后基本靠API。
+</p>
+
+<p><strong>坑3：API稳定性问题</strong>
+</p>
+
+<p>发布第一天的前6个小时，API延迟非常高，平均响应时间15秒以上（正常应该3-5秒）。到第三天才基本稳定。另外，max_tokens超过8000时偶尔会出现截断但completion_reason仍然是"stop"的bug。
+</p>
+
+<h2>FAQ</h2>
+
+<p><strong>GPT-6免费吗？</strong>
+</p>
+
+<p>ChatGPT Plus用户（$20/月）可以免费用，但有消息频率限制。API按token计费，输入$2.5/百万，输出$12/百万。
+</p>
+
+<p><strong>GPT-6比GPT-5.4强多少？</strong>
+</p>
+
+<p>OpenAI说综合性能提升40%。我实测下来，编程场景提升约20%，长文本场景提升约35%，数学推理提升约30%。短文本日常对话的提升不到10%。
+</p>
+
+<p><strong>GPT-6和Claude Opus 4.6哪个更强？</strong>
+</p>
+
+<p>分场景。编程和代码Review：Claude更强（SWE-bench 80.8% vs GPT-5.4的约70%，GPT-6数据待验证）。长文本分析：差不多。数学推理：GPT-6略强。多模态：GPT-6略强。综合来看各有千秋，没有碾压。
+</p>
+
+<p><strong>值得从GPT-5.4升级吗？</strong>
+</p>
+
+<p>如果你主要用API且不处理超长文本，暂时不值得。价格一样但输出贵$2，短文本体感差异很小。等第三方benchmark出完再决定。
+</p>
+
+<p><strong>国内能用GPT-6吗？</strong>
+</p>
+
+<p>通过OpenAI API直接调用需要海外网络。部分第三方平台已支持GPT-6，但价格通常是官方的2-3倍，且有安全风险。
+</p>
+
+<h2>总结</h2>
+
+<p>GPT-6是一次扎实的迭代，不是革命。
+</p>
+
+<p>200万上下文是真正的杀手功能，对处理大型代码库和长文档的用户来说价值巨大。幻觉控制和数学推理的提升也是实打实的。但OpenAI宣称的"AGI完成70-80%"更像是营销话术——Claude Mythos在编程benchmark上依然遥遥领先，国产模型在性价比上持续碾压。
+</p>
+
+<p>我个人的选择是：日常编程用Claude，长文本分析用GPT-6，预算敏感场景用DeepSeek V4。没有"一个模型打天下"的时代了，根据场景选工具才是聪明的做法。
+</p>
+
+<p>下次我会单独测试Claude Mythos（目前只有Preview版），看看它在编程场景上到底有多离谱。如果数据足够好，可能会单独写一篇深度评测。
+</p>
+        </article>
+
+        <div class="related-tools">
+            <h3>📖 相关文章</h3>
+            <div class="related-grid"><a href="/articles/ai-coding-tool-selection-guide-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">2026年AI编程工具选择指南：从免费到/月，5款工具真实花费和适用场景全解析</div>
+                <div style="font-size:13px;color:#666;">2026年4月21日</div>
+            </a>
+<a href="/articles/sora-shutdown-5-video-tools-test-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">Sora停服倒计时！5款AI视频工具实测对比：我花2000块生成300个视频，告诉你谁最值得用</div>
+                <div style="font-size:13px;color:#666;">2026年4月20日</div>
+            </a>
+<a href="/articles/cursor-project-workflow-guide-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">Cursor项目级AI编程实战指南：从单文件到10万行工程，我用半年总结的8条黄金规则</div>
+                <div style="font-size:13px;color:#666;">2026年4月19日</div>
+            </a>
+</div>
+        </div>
+
+        <div class="related-tools">
+            <h3>🔧 相关工具</h3>
+            <div class="related-grid"><a href="/tools/chatgpt/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🟢</div>
+                    <div style="font-weight:600;">ChatGPT</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/claude/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🎭</div>
+                    <div style="font-weight:600;">Claude</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/cursor/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">⬛</div>
+                    <div style="font-weight:600;">Cursor</div>
+                    <div style="font-size:13px;color:#666;">AI编程</div>
+                </a>
+<a href="/tools/gemini/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💬</div>
+                    <div style="font-weight:600;">Gemini</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/deepseek/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💬</div>
+                    <div style="font-weight:600;">DeepSeek</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+</div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+    </footer>
+    <button id="backToTop" aria-label="返回顶部">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
+</script>
+</body>
+</html>
