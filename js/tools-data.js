@@ -2608,6 +2608,35 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Perplexity AI",
+    "slug": "perplexity-ai",
+    "emoji": "🔍",
+    "color": "#6F47FF",
+    "description": "Perplexity AI 是一款先进的AI搜索引擎，提供精准、可靠的答案，并支持实时联网获取最新信息。2026年，它进一步优化了搜索结果的质量和速度，成为研究者和专业人士的首选工具。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "AI搜索"
+      },
+      {
+        "text": "实时联网"
+      },
+      {
+        "text": "精准答案",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "500万+",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.perplexity.ai",
+    "price": "免费版可用，Pro版$20/月",
+    "platform": "Web, iOS, Android"
+  },
+  {
     "name": "Wordtune",
     "slug": "wordtune",
     "emoji": "✍️",
@@ -3117,6 +3146,70 @@ window.__ALL_TOOLS__ = [
     "url": "https://seed.bytedance.com/zh/seedance2_0",
     "price": "免费 + 付费",
     "platform": "网页/App/API"
+  },
+  {
+    "name": "零一万物",
+    "slug": "01-ai",
+    "emoji": "🚀",
+    "color": "#4F46E5",
+    "description": "零一万物（01.AI）是由李开复创办的AI公司打造的大语言模型品牌，专注于Yi系列模型的研发与商业化应用。2026年已发布Yi-Lightning等新一代模型，在数学推理、代码生成等任务上表现突出，并提供开源版本和API服务。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大语言模型"
+      },
+      {
+        "text": "开源模型"
+      },
+      {
+        "text": "中文优化",
+        "type": "free"
+      },
+      {
+        "text": "API服务"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://01.ai",
+    "price": "免费版+付费API",
+    "platform": "Web/API/开源"
+  },
+  {
+    "name": "商汤日日新",
+    "slug": "sensenova",
+    "emoji": "🎯",
+    "color": "#0052CC",
+    "description": "商汤科技推出的AI大模型平台，提供日日新系列多模态大模型，涵盖语言、视觉、代码等多种能力。2026年已升级至5.0版本，在中文理解和多模态生成方面表现突出。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大模型"
+      },
+      {
+        "text": "多模态AI"
+      },
+      {
+        "text": "国产AI"
+      },
+      {
+        "text": "API调用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://platform.senseNova.com",
+    "price": "免费版+付费API",
+    "platform": "网页端 API"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -5404,6 +5497,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Perplexity AI",
+    "slug": "perplexity-ai",
+    "emoji": "🔍",
+    "color": "#6F47FF",
+    "description": "Perplexity AI 是一款先进的AI搜索引擎，提供精准、可靠的答案，并支持实时联网获取最新信息。2026年，它进一步优化了搜索结果的质量和速度，成为研究者和专业人士的首选工具。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "AI搜索"
+      },
+      {
+        "text": "实时联网"
+      },
+      {
+        "text": "精准答案",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "500万+",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.perplexity.ai",
+    "price": "免费版可用，Pro版$20/月",
+    "platform": "Web, iOS, Android"
+  },
+  {
     "name": "Wordtune",
     "slug": "wordtune",
     "emoji": "✍️",
@@ -5913,5 +6035,69 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://seed.bytedance.com/zh/seedance2_0",
     "price": "免费 + 付费",
     "platform": "网页/App/API"
+  },
+  {
+    "name": "零一万物",
+    "slug": "01-ai",
+    "emoji": "🚀",
+    "color": "#4F46E5",
+    "description": "零一万物（01.AI）是由李开复创办的AI公司打造的大语言模型品牌，专注于Yi系列模型的研发与商业化应用。2026年已发布Yi-Lightning等新一代模型，在数学推理、代码生成等任务上表现突出，并提供开源版本和API服务。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大语言模型"
+      },
+      {
+        "text": "开源模型"
+      },
+      {
+        "text": "中文优化",
+        "type": "free"
+      },
+      {
+        "text": "API服务"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://01.ai",
+    "price": "免费版+付费API",
+    "platform": "Web/API/开源"
+  },
+  {
+    "name": "商汤日日新",
+    "slug": "sensenova",
+    "emoji": "🎯",
+    "color": "#0052CC",
+    "description": "商汤科技推出的AI大模型平台，提供日日新系列多模态大模型，涵盖语言、视觉、代码等多种能力。2026年已升级至5.0版本，在中文理解和多模态生成方面表现突出。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大模型"
+      },
+      {
+        "text": "多模态AI"
+      },
+      {
+        "text": "国产AI"
+      },
+      {
+        "text": "API调用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://platform.senseNova.com",
+    "price": "免费版+付费API",
+    "platform": "网页端 API"
   }
 ];
