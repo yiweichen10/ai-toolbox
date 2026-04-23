@@ -1814,6 +1814,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Photoroom",
+    "slug": "photoroom",
+    "emoji": "🖼️",
+    "color": "#f87a8b",
+    "description": "AI图片编辑工具，专注于电商产品图。一键去除背景、AI场景生成、批量处理，是电商卖家的图片处理神器。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "18万",
+    "badge": {
+      "type": null,
+      "text": "HOT"
+    },
+    "url": "https://www.photoroom.com",
+    "price": "免费使用",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Figma AI",
     "slug": "figma-ai",
     "emoji": "🖼️",
@@ -3070,6 +3098,38 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端"
   },
   {
+    "name": "Clipdrop",
+    "slug": "clipdrop",
+    "emoji": "✨",
+    "color": "#12B4C5",
+    "description": "Clipdrop是由Stability AI推出的AI图像处理平台，提供背景去除、图像放大、物体移除、文本生成图像等专业工具。2026年集成了最新的Stability AI 3.0模型，图像处理速度和精度大幅提升，成为设计师和创意工作者的首选图像编辑工具。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "图像处理"
+      },
+      {
+        "text": "背景去除"
+      },
+      {
+        "text": "AI修图"
+      },
+      {
+        "text": "图片放大",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://clipdrop.co",
+    "price": "基础免费，高级版$9.99/月起",
+    "platform": "Web/iOS/Android/桌面端/Photoshop插件/Figma插件"
+  },
+  {
     "name": "Magnific AI",
     "slug": "magnific-ai",
     "emoji": "🎨",
@@ -3146,6 +3206,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://seed.bytedance.com/zh/seedance2_0",
     "price": "免费 + 付费",
     "platform": "网页/App/API"
+  },
+  {
+    "name": "Grain",
+    "slug": "grain",
+    "emoji": "🎙️",
+    "color": "#7C3AED",
+    "description": "Grain是一款AI驱动的会议智能助手，能够自动录制、转录和分析会议内容。2026年最新版本增强了多语言实时翻译和自定义知识库功能，帮助团队更高效地提取会议洞察和行动项。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "会议记录"
+      },
+      {
+        "text": "语音转文字"
+      },
+      {
+        "text": "会议分析",
+        "type": "free"
+      },
+      {
+        "text": "团队协作"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://grain.com",
+    "price": "免费版可用，Pro版$16/月，团队版$35/人/月",
+    "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
   },
   {
     "name": "零一万物",
@@ -4703,6 +4795,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Photoroom",
+    "slug": "photoroom",
+    "emoji": "🖼️",
+    "color": "#f87a8b",
+    "description": "AI图片编辑工具，专注于电商产品图。一键去除背景、AI场景生成、批量处理，是电商卖家的图片处理神器。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "18万",
+    "badge": {
+      "type": null,
+      "text": "HOT"
+    },
+    "url": "https://www.photoroom.com",
+    "price": "免费使用",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Figma AI",
     "slug": "figma-ai",
     "emoji": "🖼️",
@@ -5959,6 +6079,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端"
   },
   {
+    "name": "Clipdrop",
+    "slug": "clipdrop",
+    "emoji": "✨",
+    "color": "#12B4C5",
+    "description": "Clipdrop是由Stability AI推出的AI图像处理平台，提供背景去除、图像放大、物体移除、文本生成图像等专业工具。2026年集成了最新的Stability AI 3.0模型，图像处理速度和精度大幅提升，成为设计师和创意工作者的首选图像编辑工具。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "图像处理"
+      },
+      {
+        "text": "背景去除"
+      },
+      {
+        "text": "AI修图"
+      },
+      {
+        "text": "图片放大",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://clipdrop.co",
+    "price": "基础免费，高级版$9.99/月起",
+    "platform": "Web/iOS/Android/桌面端/Photoshop插件/Figma插件"
+  },
+  {
     "name": "Magnific AI",
     "slug": "magnific-ai",
     "emoji": "🎨",
@@ -6035,6 +6187,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://seed.bytedance.com/zh/seedance2_0",
     "price": "免费 + 付费",
     "platform": "网页/App/API"
+  },
+  {
+    "name": "Grain",
+    "slug": "grain",
+    "emoji": "🎙️",
+    "color": "#7C3AED",
+    "description": "Grain是一款AI驱动的会议智能助手，能够自动录制、转录和分析会议内容。2026年最新版本增强了多语言实时翻译和自定义知识库功能，帮助团队更高效地提取会议洞察和行动项。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "会议记录"
+      },
+      {
+        "text": "语音转文字"
+      },
+      {
+        "text": "会议分析",
+        "type": "free"
+      },
+      {
+        "text": "团队协作"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://grain.com",
+    "price": "免费版可用，Pro版$16/月，团队版$35/人/月",
+    "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
   },
   {
     "name": "零一万物",
