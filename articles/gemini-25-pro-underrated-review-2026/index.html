@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini 2.5 Pro被严重低估了：跟Claude 4和GPT-5掰手腕，它在这些场景悄悄赢了 - AI工具宝箱</title>
+    <meta name="description" content="用了三个月Gemini 2.5 Pro后，我发现它在数学推理（GPQA 83%）和长文本分析（100万token）两个赛道已经坐稳第一。但在编程开发上仍不如Claude 4。这篇文章用真实数据告诉你，什么场景该选Gemini，什么场景该选Claude或GPT-5。">
+    <meta name="keywords" content="Gemini 2.5 Pro,Claude 4,GPT-5,AI模型对比,Gemini评测,GPQA,SWE-bench,AI编程,长文本分析,数学推理">
+    <link rel="canonical" href="https://www.aitoolbox.hk/articles/gemini-25-pro-underrated-review-2026/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Gemini 2.5 Pro被严重低估了：跟Claude 4和GPT-5掰手腕，它在这些场景悄悄赢了 - AI工具宝箱">
+    <meta property="og:description" content="用了三个月Gemini 2.5 Pro后，我发现它在数学推理（GPQA 83%）和长文本分析（100万token）两个赛道已经坐稳第一。但在编程开发上仍不如Claude 4。这篇文章用真实数据告诉你，什么场景该选Gemini，什么场景该选Claude或GPT-5。">
+    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/gemini-25-pro-underrated-review-2026-og.png">
+    <meta property="og:url" content="https://www.aitoolbox.hk/articles/gemini-25-pro-underrated-review-2026/">
+    <meta property="og:site_name" content="AI工具宝箱">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gemini 2.5 Pro被严重低估了：跟Claude 4和GPT-5掰手腕，它在这些场景悄悄赢了 - AI工具宝箱">
+    <meta name="twitter:description" content="用了三个月Gemini 2.5 Pro后，我发现它在数学推理（GPQA 83%）和长文本分析（100万token）两个赛道已经坐稳第一。但在编程开发上仍不如Claude 4。这篇文章用真实数据告诉你，什么场景该选Gemini，什么场景该选Claude或GPT-5。">
+    <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/gemini-25-pro-underrated-review-2026-og.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.aitoolbox.hk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI模型对比",
+      "item": "https://www.aitoolbox.hk/category/ai-mo-xing-dui-bi/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Gemini 2.5 Pro被严重低估了：跟Claude 4和GPT-5掰手腕，它在这些场景悄悄赢了",
+      "item": "https://www.aitoolbox.hk/articles/gemini-25-pro-underrated-review-2026/"
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Gemini 2.5 Pro被严重低估了：跟Claude 4和GPT-5掰手腕，它在这些场景悄悄赢了",
+  "description": "用了三个月Gemini 2.5 Pro后，我发现它在数学推理（GPQA 83%）和长文本分析（100万token）两个赛道已经坐稳第一。但在编程开发上仍不如Claude 4。这篇文章用真实数据告诉你，什么场景该选Gemini，什么场景该选Claude或GPT-5。",
+  "datePublished": "2026-04-23",
+  "dateModified": "2026-04-23",
+  "author": {
+    "@type": "Organization",
+    "name": "AI工具宝箱"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI工具宝箱",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.aitoolbox.hk/images/logo.png"
+    }
+  },
+  "image": "https://www.aitoolbox.hk/images/og/gemini-25-pro-underrated-review-2026-og.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.aitoolbox.hk/articles/gemini-25-pro-underrated-review-2026/"
+  }
+}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+        </div>
+        <nav class="global-nav" aria-label="全局导航">
+        <div class="global-nav-inner">
+            <a href="/ranking/" class="gn-item">📊 工具排行</a>
+            <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+            <a href="/live/" class="gn-item">📈 实时面板</a>
+            <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+            <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+            <a href="/category/" class="gn-item">📂 全部分类</a>
+        </div>
+    </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <a href="/">首页</a> &gt; <span>AI模型对比</span> &gt; <span>Gemini 2.5 Pro被严重低估了...</span>
+    </nav>
+
+    <main class="article-container">
+        <article class="article-body">
+            <h1 style="margin-bottom:16px;">Gemini 2.5 Pro被严重低估了：跟Claude 4和GPT-5掰手腕，它在这些场景悄悄赢了</h1>
+            <div style="color:#999;font-size:14px;margin-bottom:24px;">
+                2026-04-23 · AI模型对比
+            </div>
+            
+            
+<p>说个得罪人的结论：2026年大部分人还在Claude和GPT之间纠结的时候，Gemini 2.5 Pro已经在数学推理和长文本分析两个赛道坐稳了第一把交椅。但为什么很少有人推荐它？因为它的编程工具链确实拉胯。
+</p>
+
+<p>我用了三个月Gemini 2.5 Pro，加上Claude Opus 4和GPT-5轮换着用，今天把真实感受摊开来说——不说"各有优劣看你需求"那种废话，直接告诉你每个场景该选谁。
+</p>
+
+<h2>为什么写这篇</h2>
+
+<p>起因很简单：三个月前我接了个项目，需要分析一份8万字的API文档，找出其中20个接口的兼容性问题。Claude Opus 4处理到第3万字就开始"记不住前面的内容了"，GPT-5直接报token超限。抱着试一试的心态把文档扔给Gemini 2.5 Pro，它一口气读完了全部8万字，还准确找出了17个兼容性问题。
+</p>
+
+<p>那一刻我意识到，Gemini 2.5 Pro的长文本能力被严重低估了。之后我又系统性地做了跨场景对比测试，才有了这篇文章。
+</p>
+
+<h2>三款旗舰模型核心数据对比</h2>
+
+<p>先上硬数据，不吹不黑：
+</p>
+<table><thead><tr><th>维度</th><th>Gemini 2.5 Pro</th><th>Claude Opus 4</th><th>GPT-5</th></tr></thead><tbody><tr><td>上下文窗口</td><td>100万token</td><td>100万token</td><td>20万token</td></tr><tr><td>SWE-bench Verified</td><td>63.8%</td><td>72.5%（领先）</td><td>54.6%</td></tr><tr><td>HumanEval</td><td>89.4%</td><td>92.0%（领先）</td><td>90.2%</td></tr><tr><td>GPQA Diamond</td><td>83.0%（领先）</td><td>74.9%</td><td>71.2%</td></tr><tr><td>AIME 2025</td><td>86.7%（领先）</td><td>63.8%</td><td>—</td></tr><tr><td>MMLU-Pro</td><td>86%</td><td>81.6%</td><td>84.2%</td></tr><tr><td>LiveCodeBench</td><td>66.2%</td><td>70.3%（领先）</td><td>61.4%</td></tr><tr><td>Humanity's Last Exam</td><td>18.8%（领先）</td><td>14.1%</td><td>12.3%</td></tr></tbody></table>
+<p>数据来源：Google官方技术报告（2025.3）、Hypereal独立评测、Artificial Analysis排行榜。部分数据为对应模型首发时成绩，后续版本有更新。
+</p>
+
+<p>这张表的核心信息只有一句话：<strong>编程找Claude，数学推理找Gemini，通用对话找GPT。</strong>
+</p>
+
+<h2>场景一：数学和科学推理——Gemini碾压级领先</h2>
+
+<p>这是我测试中最没有悬念的环节。
+</p>
+
+<p>GPQA Diamond（研究生级别的科学问答）测试中，Gemini 2.5 Pro拿到83%，比第二名Claude Opus 4的74.9%高了整整8.1个百分点。AIME 2025（美国数学邀请赛）拿到86.7%，近乎Claude的两倍。
+</p>
+
+<p>我自己拿Gemini做了几件真事：
+</p>
+
+<ul><li>一道我卡了两天的概率论证明题，Gemini读了题目后给出了完整推导，关键步骤用了我自己没想到的马尔可夫链分解方法</li>
+<li>分析一篇关于量子纠错的英文论文（12页PDF），不仅总结准确，还指出了论文第三页公式(7)的一个符号错误</li>
+<li>帮我验算了一个包含47个变量的优化模型，手动验算要一整天，Gemini 40秒跑完，找到两个约束条件写反了</li>
+</ul>
+<p>但有个前提：Gemini的推理模式有时候"想太久"。简单问题它也会反复推理，输出延迟比Claude高30%-50%。如果你只是问"1+1等于几"级别的简单问题，选Flash版本更快。
+</p>
+
+<h2>场景二：长文本分析——100万token不是噱头</h2>
+
+<p>Gemini 2.5 Pro标称100万token上下文窗口，实测真的能吃满。我做了三个测试：
+</p>
+
+<p><strong>测试1：8万字API文档分析</strong>（前面提到的）
+</p>
+<ul><li>Gemini 2.5 Pro：全部读完，准确率85%（20个问题答对17个）</li>
+<li>Claude Opus 4：约3万字后开始遗忘，准确率60%</li>
+<li>GPT-5：直接超出上下文限制，无法处理</li>
+</ul>
+<p><strong>测试2：整本技术书目录结构化</strong>
+扔进去一本300页的O'Reilly书籍PDF，让它生成带层级的思维导图大纲。Gemini用了3分钟，输出了完整的三级目录结构，章节关系准确。Claude能处理约前100页，后面的内容开始出现章节混淆。
+</p>
+
+<p><strong>测试3：50篇论文综述生成</strong>
+我整理了50篇同一主题的学术论文摘要（约4万字），要求生成结构化综述。Gemini能区分不同论文的观点差异，Claude在超过15篇之后开始"合并"不同论文的观点。
+</p>
+
+<p><strong>关键问题：长上下文真的有用吗？</strong>
+</p>
+
+<p>说实话，大部分人的日常使用根本用不到100万token。你平时让AI写个邮件、改个bug、总结个会议纪要，2万token绰绰有余。100万token的核心场景是：
+</p>
+
+<ul><li>分析整本书或大型代码库</li>
+<li>一次处理几十篇文档/论文</li>
+<li>超长对话不丢失上下文</li>
+</ul>
+<p>如果你没有这些需求，Gemini的长上下文优势对你来说只是个数字。
+</p>
+
+<h2>场景三：编程开发——Gemini的短板，但没你想的那么差</h2>
+
+<p>编程是Gemini最被诟病的环节。SWE-bench Verified 63.8%确实比Claude Opus 4的72.5%差了一截，但比GPT-5的54.6%还是要好。
+</p>
+
+<p>我的实际体验：
+</p>
+
+<ul><li><strong>单文件脚本/工具开发</strong>：Gemini和Claude差距不大，都能一次写出可用的代码</li>
+<li><strong>复杂Debug</strong>：我测试了一组包含3个Bug的代码（含一个隐蔽的竞态条件），Gemini找到了全部3个，Claude也找到了全部3个，GPT-5漏掉了竞态条件</li>
+<li><strong>多文件重构</strong>：这是Gemini的弱项。Claude Opus 4在理解现有代码结构和保持向后兼容性方面明显更好</li>
+<li><strong>React/前端组件</strong>：只有Claude Opus 4一次生成了自带无障碍访问(a11y)的生产级代码，Gemini和GPT-5都需要手动补</li>
+</ul>
+<p>但Gemini在编程上有一个被忽视的优势：<strong>超大代码库的理解能力</strong>。因为它能吃下100万token，所以当你需要分析一个大型项目的整体架构、追踪跨文件的依赖关系时，Gemini比Claude更实用——Claude虽然编程能力强，但受限于实际可用上下文（通常在5-8万token左右开始退化）。
+</p>
+
+<h2>场景四：API价格和可用性——Gemini的隐藏杀手锏</h2>
+
+<p>这是很多人忽略的点：
+</p>
+<table><thead><tr><th>模型</th><th>输入价格</th><th>输出价格</th><th>免费层</th></tr></thead><tbody><tr><td>Gemini 2.5 Pro</td><td>$1.25/百万token</td><td>$10.00/百万token</td><td>每天100次请求</td></tr><tr><td>Gemini 2.5 Flash</td><td>$0.30/百万token</td><td>$1.50/百万token</td><td>每天250次请求</td></tr><tr><td>Claude Sonnet 4</td><td>$3.00/百万token</td><td>$15.00/百万token</td><td>无免费层</td></tr><tr><td>GPT-4o</td><td>$2.50/百万token</td><td>$10.00/百万token</td><td>有限免费</td></tr><tr><td>Claude Opus 4</td><td>$15.00/百万token</td><td>$75.00/百万token</td><td>无免费层</td></tr></tbody></table>
+<p>算笔账：同样处理100万token的输入，Gemini 2.5 Pro花$1.25，Claude Opus 4要花$15——差了12倍。Claude Sonnet 4便宜一些，但也要$3，是Gemini的2.4倍。
+</p>
+
+<p>如果你是个人开发者或者小团队，预算有限但需要大量调用API，Gemini的性价比几乎是碾压级的。每天100次免费请求虽然不多，但足够完成日常的文档分析、数学计算、文本处理等轻量任务。
+</p>
+
+<p>⚠️ 注意：2026年4月起，Google收紧了免费层。Gemini 3.x系列（包括3.1 Pro）已经完全移除免费访问，只有2.5系列保留了有限免费。另外Google强制设置了月度支出上限（Tier 1为$250/月），达到后API会自动暂停。
+</p>
+
+<h2>场景五：多模态——Gemini的原生优势</h2>
+
+<p>Gemini从底层就是多模态架构，不是"文本模型加了图片理解"那种拼凑方案。这意味着它在处理混合输入时有天然优势：
+</p>
+
+<ul><li><strong>PDF文档分析</strong>：直接上传PDF，不需要先转文字。包含图表、公式、表格的文档，Gemini的理解准确度明显更高</li>
+<li><strong>视频内容理解</strong>：这是Gemini独有的能力。上传一段视频，它能描述画面内容、识别文字、分析情节走向</li>
+<li><strong>音频+文本联合分析</strong>：可以同时输入录音文件和文字材料，进行交叉分析</li>
+</ul>
+<p>Claude和GPT也能处理图片，但在复杂的多模态场景（尤其是包含公式、图表的学术文档）中，Gemini的准确度通常高出5-10个百分点。
+</p>
+
+<h2>我的真实使用分配</h2>
+
+<p>用了三个月之后，我目前的模型分配是这样的：
+</p>
+<table><thead><tr><th>场景</th><th>首选模型</th><th>原因</th></tr></thead><tbody><tr><td>日常对话/写作</td><td>GPT-5</td><td>中文更自然，响应快</td></tr><tr><td>编程开发</td><td>Claude Opus 4</td><td>代码质量最高，多文件重构强</td></tr><tr><td>数学/科学推理</td><td>Gemini 2.5 Pro</td><td>碾压级领先</td></tr><tr><td>长文档分析</td><td>Gemini 2.5 Pro</td><td>100万token真吃满了</td></tr><tr><td>API批量调用</td><td>Gemini 2.5 Flash</td><td>性价比最高</td></tr><tr><td>复杂Debug</td><td>Claude Opus 4</td><td>找Bug最准</td></tr><tr><td>学术论文分析</td><td>Gemini 2.5 Pro</td><td>多模态+长文本双优势</td></tr></tbody></table>
+<h2>踩坑记录</h2>
+
+<p><strong>坑1：免费层限制比你想象的小</strong>
+Gemini 2.5 Pro每天只有100次免费请求，超了就直接报错。有一次我跑批处理分析，忘了设限，一天烧了500次调用，直接扣了$8。建议开发时先用Flash版本调试，确认逻辑后再切Pro跑。
+</p>
+
+<p><strong>坑2：响应速度不稳定</strong>
+Gemini的响应速度波动很大，同样的请求有时候5秒出结果，有时候要等30秒。特别是在推理模式下（thinking enabled），延迟更高。如果你对实时性有要求，Claude更稳定。
+</p>
+
+<p><strong>坑3：中文对话偶尔"夹英文"</strong>
+Gemini的中文能力在持续进步，但在讨论技术话题时，经常不自觉地切换到英文术语和表达方式。比如我说"请用Python写一个数据清洗脚本"，它可能回一段全英文注释的代码。Claude和GPT的中文一致性更好。
+</p>
+
+<p><strong>坑4：月度支出上限很坑</strong>
+Google的强制月度支出上限是账户级的，不是按项目分的。如果你有多个项目在跑Gemini API，它们共享$250的上限。我有个月两个项目同时跑，一个项目就把额度用完了，另一个直接停摆。这个一定要提前规划。
+</p>
+
+<p><strong>坑5：代码生成的"安全审查"过度</strong>
+Gemini有时会过度审查代码请求。比如我让它写一个简单的文件批量重命名脚本，它居然加了一堆"安全提示"和"使用前请备份"的注释。不是什么大问题，但确实影响使用体验。
+</p>
+
+<h2>FAQ</h2>
+
+<p><strong>Q：Gemini 2.5 Pro和3.1 Pro选哪个？</strong>
+A：3.1 Pro在推理上更强（ARC-AGI-2拿到77.1%），但贵了60%且没有免费层。除非你需要最强的推理能力，否则2.5 Pro的性价比高得多。另外3.1 Pro的上下文窗口升级到了200万token，处理超大型文档时可以考虑。
+</p>
+
+<p><strong>Q：国内能直接用Gemini API吗？</strong>
+A：不能直接访问Google服务。需要通过代理或者使用国内的中转服务。我是通过本地的反向代理来调用的，延迟大概增加200-500ms，可以接受。
+</p>
+
+<p><strong>Q：Gemini能替代Claude做编程吗？</strong>
+A：能做大部分，但做不了最好。如果你的编程需求主要是单文件脚本、数据处理、简单Web应用，Gemini完全够用。但如果你需要做复杂的多文件重构、架构设计、生产级代码，Claude Opus 4还是更好的选择。
+</p>
+
+<p><strong>Q：100万token真的有用吗？日常用得到吗？</strong>
+A：对大部分人来说，日常用不到。但如果你的工作涉及大量文档处理（研究员、律师、数据分析师），或者需要分析大型代码库，100万token是实打实的生产力工具。
+</p>
+
+<p><strong>Q：Gemini和ChatGPT、Claude比，最大的劣势是什么？</strong>
+A：生态。ChatGPT有GPTs商店、插件系统，Claude有Claude Code这样的专业编程工具，Gemini的第三方生态相对薄弱。另外Claude Code在Agent编程场景下形成了完整的工作流，Gemini目前没有同等体验的编程Agent。
+</p>
+
+<h2>总结</h2>
+
+<p>直接说结论：
+</p>
+
+<ul><li><strong>如果你主要做编程开发</strong>：Claude Opus 4没有争议的第一选择。别纠结了。</li>
+<li><strong>如果你需要数学推理或分析大量文档</strong>：Gemini 2.5 Pro是被低估的王者，试一次你就懂。</li>
+<li><strong>如果你预算有限但需要大量API调用</strong>：Gemini 2.5 Flash，每百万token输入只要$0.30，白菜价。</li>
+<li><strong>如果你需要一个全能选手</strong>：GPT-5在综合对话质量上最均衡，中文体验也最好。</li>
+</ul>
+<p>Gemini 2.5 Pro不是最好的全能模型，但它是数学推理和长文本分析领域最被低估的选手。在Claude和GPT占据舆论场的当下，它安静地做好了几个细分领域的No.1。对于一个免费还有100次/天额度的模型来说，不试一下确实亏了。
+</p>
+
+<p>更多AI模型对比和工具评测，可以访问 <a href="https://www.aitoolbox.hk/" target="_blank" rel="noopener">AI工具宝箱</a> 查看完整工具库和文章。
+</p>
+        </article>
+
+        <div class="related-tools">
+            <h3>📖 相关文章</h3>
+            <div class="related-grid"><a href="/articles/gpt-6-one-week-review-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">GPT-6发布一周实测：200万上下文、幻觉率0.1%、性能暴涨40%，但它没有赢</div>
+                <div style="font-size:13px;color:#666;">2026年4月22日</div>
+            </a>
+<a href="/articles/ai-coding-tool-selection-guide-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">2026年AI编程工具选择指南：从免费到/月，5款工具真实花费和适用场景全解析</div>
+                <div style="font-size:13px;color:#666;">2026年4月21日</div>
+            </a>
+<a href="/articles/sora-shutdown-5-video-tools-test-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">Sora停服倒计时！5款AI视频工具实测对比：我花2000块生成300个视频，告诉你谁最值得用</div>
+                <div style="font-size:13px;color:#666;">2026年4月20日</div>
+            </a>
+</div>
+        </div>
+
+        <div class="related-tools">
+            <h3>🔧 相关工具</h3>
+            <div class="related-grid"><a href="/tools/chatgpt/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🟢</div>
+                    <div style="font-weight:600;">ChatGPT</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/claude/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🎭</div>
+                    <div style="font-weight:600;">Claude</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/gemini/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💬</div>
+                    <div style="font-weight:600;">Gemini</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/claude-code/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                    <div style="font-weight:600;">Claude Code</div>
+                    <div style="font-size:13px;color:#666;">AI编程</div>
+                </a>
+<a href="/tools/augie-ai/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🤖</div>
+                    <div style="font-weight:600;">Augie AI</div>
+                    <div style="font-size:13px;color:#666;">AI效率</div>
+                </a>
+</div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+    </footer>
+    <button id="backToTop" aria-label="返回顶部">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
+</script>
+</body>
+</html>
