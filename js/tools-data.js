@@ -1131,6 +1131,35 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "MiniMax",
+    "slug": "minimax",
+    "emoji": "💬",
+    "color": "#cdf32e",
+    "description": "MiniMax推出的AI平台，旗下海螺AI提供智能对话和视频生成。大模型能力出色，特别在语音合成和视频生成领域有独特优势。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "10万",
+    "badge": {
+      "type": "new",
+      "text": "HOT"
+    },
+    "url": "https://www.minimaxi.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "Lovable",
     "slug": "lovable",
     "emoji": "💻",
@@ -2842,6 +2871,40 @@ window.__ALL_TOOLS__ = [
     "platform": "浏览器插件/iOS/Android/桌面端"
   },
   {
+    "name": "Relume",
+    "slug": "relume",
+    "emoji": "🎨",
+    "color": "#6B4EFF",
+    "description": "AI驱动的网站设计和开发工具，专注于快速生成网站结构和设计系统。通过智能化的方式帮助用户快速创建响应式网站设计和Figma设计组件，是2026年网站设计领域的重要创新工具。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "网站设计"
+      },
+      {
+        "text": "AI建站"
+      },
+      {
+        "text": "Figma集成"
+      },
+      {
+        "text": "响应式设计"
+      },
+      {
+        "text": "设计系统"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://relume.io",
+    "price": "免费版可用，付费版$15/月起",
+    "platform": "Web浏览器,Figma插件"
+  },
+  {
     "name": "Framer AI",
     "slug": "framer-ai",
     "emoji": "🎨",
@@ -3162,6 +3225,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://magnific.ai",
     "price": "免费版每月3次增强，付费版$12/月起",
     "platform": "网页端"
+  },
+  {
+    "name": " tl;dv",
+    "slug": "tldv",
+    "emoji": "🎥",
+    "color": "#7C3AED",
+    "description": "tl;dv（Too Long; Didn't View）是一款AI会议记录工具，可自动录制、转录Google Meet和Zoom会议，并生成AI智能摘要。2026年推出的最新版本增强了多语言支持和实时协作功能，已成为远程团队不可或缺的会议效率工具。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "会议记录"
+      },
+      {
+        "text": "会议转录"
+      },
+      {
+        "text": "AI摘要"
+      },
+      {
+        "text": "远程办公",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://tldv.io",
+    "price": "免费版可用，付费版$12/月起",
+    "platform": "Chrome插件、Web端、iOS、Android"
   },
   {
     "name": "Seedance",
@@ -4112,6 +4207,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "MiniMax",
+    "slug": "minimax",
+    "emoji": "💬",
+    "color": "#cdf32e",
+    "description": "MiniMax推出的AI平台，旗下海螺AI提供智能对话和视频生成。大模型能力出色，特别在语音合成和视频生成领域有独特优势。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "10万",
+    "badge": {
+      "type": "new",
+      "text": "HOT"
+    },
+    "url": "https://www.minimaxi.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "Lovable",
     "slug": "lovable",
     "emoji": "💻",
@@ -5823,6 +5947,40 @@ window.__REMAINING_TOOLS__ = [
     "platform": "浏览器插件/iOS/Android/桌面端"
   },
   {
+    "name": "Relume",
+    "slug": "relume",
+    "emoji": "🎨",
+    "color": "#6B4EFF",
+    "description": "AI驱动的网站设计和开发工具，专注于快速生成网站结构和设计系统。通过智能化的方式帮助用户快速创建响应式网站设计和Figma设计组件，是2026年网站设计领域的重要创新工具。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "网站设计"
+      },
+      {
+        "text": "AI建站"
+      },
+      {
+        "text": "Figma集成"
+      },
+      {
+        "text": "响应式设计"
+      },
+      {
+        "text": "设计系统"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://relume.io",
+    "price": "免费版可用，付费版$15/月起",
+    "platform": "Web浏览器,Figma插件"
+  },
+  {
     "name": "Framer AI",
     "slug": "framer-ai",
     "emoji": "🎨",
@@ -6143,6 +6301,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://magnific.ai",
     "price": "免费版每月3次增强，付费版$12/月起",
     "platform": "网页端"
+  },
+  {
+    "name": " tl;dv",
+    "slug": "tldv",
+    "emoji": "🎥",
+    "color": "#7C3AED",
+    "description": "tl;dv（Too Long; Didn't View）是一款AI会议记录工具，可自动录制、转录Google Meet和Zoom会议，并生成AI智能摘要。2026年推出的最新版本增强了多语言支持和实时协作功能，已成为远程团队不可或缺的会议效率工具。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "会议记录"
+      },
+      {
+        "text": "会议转录"
+      },
+      {
+        "text": "AI摘要"
+      },
+      {
+        "text": "远程办公",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://tldv.io",
+    "price": "免费版可用，付费版$12/月起",
+    "platform": "Chrome插件、Web端、iOS、Android"
   },
   {
     "name": "Seedance",
