@@ -38,7 +38,7 @@ TOOLS_JSON_PATH = os.path.join(BASE_DIR, 'data', 'tools.json')
 
 # 预设的待生成工具列表（注意：去重逻辑会自动跳过已有工具）
 DEFAULT_TOOL_NAMES = [
-    # 国外工具
+    # === 旧列表（保留，脚本会自动去重跳过已生成的） ===
     "Replicate", "Brave Search AI",
     "Relume", "Miro AI", "Framer AI", "Webflow AI", "Spline AI",
     "LottieFiles AI", "Augie AI", "Glitter AI",
@@ -54,10 +54,29 @@ DEFAULT_TOOL_NAMES = [
     "Phind", "You.com", "Perplexity AI",
     "Looka", "Cleanvoice", "Raycast AI", "Supabase AI",
     "Beautiful.ai", "Tome", "Pitch",
-    # 国产工具
     "腾讯混元", "零一万物", "阶跃星辰", "百川智能", "商汤日日新",
     "飞书智能助手", "稿定设计AI", "纳米AI搜索", "360智脑",
     "MiniMax", "NotebookLM", "智谱清言",
+    # === 2026-04-25 新增 ===
+    # 国外 - AI编程
+    "Cognition AI", "Sourcegraph Cody", "Tabnine", "Pieces",
+    # 国外 - AI绘画/图像
+    "ComfyUI", "Fooocus", "Topaz Photo AI", "Upscayl", "Adobe Express AI",
+    # 国外 - AI音乐/音频
+    "Mubert", "AIVA", "Soundraw", "Boomy", "Krotos Studio",
+    # 国外 - AI视频
+    "Colossyan", "Elai", "Lalamu", "InVideo AI", "Pictory", "Kapwing",
+    # 国外 - AI写作/内容
+    "Rytr", "Jenni AI", "LanguageTool", "ProWritingAid",
+    # 国外 - AI SEO/营销
+    "Surfer SEO", "Frase", "Scalenut",
+    # 国外 - AI文档/数据
+    "ChatPDF", "Humata AI", "Julius AI",
+    # 国外 - AI社交/广告
+    "AdCreative AI", "Lumen5", "Predis AI",
+    # 国产工具
+    "文心一言", "紫东太初", "书生浦语", "面壁智能",
+    "即梦AI", "万兴播爆", "通义万相", "星火认知大模型",
 ]
 
 
