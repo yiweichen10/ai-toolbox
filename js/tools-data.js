@@ -2183,6 +2183,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Cleanvoice",
+    "slug": "cleanvoice",
+    "emoji": "🎧",
+    "color": "#299bec",
+    "description": "AI音频清理工具，自动去除录音中的填充词、口头禅和呼吸声。一键清理播客和视频音频，让录音品质专业。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "9万",
+    "badge": {
+      "type": null,
+      "text": "NEW"
+    },
+    "url": "https://cleanvoice.ai",
+    "price": "基础$10/月起",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Arc浏览器",
     "slug": "arc-browser",
     "emoji": "⚡️",
@@ -3036,6 +3064,40 @@ window.__ALL_TOOLS__ = [
     "platform": "Web、iOS、Android"
   },
   {
+    "name": "Play.ht",
+    "slug": "play-ht",
+    "emoji": "🎙️",
+    "color": "#6C47FF",
+    "description": "Play.ht是一款专业的AI文本转语音(TTS)工具，利用先进的深度学习技术将文本转换为自然流畅的人声。支持142种语言和800+种语音风格，2026年新增情感控制功能，可精细调节语速、音调和停顿。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "文本转语音"
+      },
+      {
+        "text": "AI语音合成"
+      },
+      {
+        "text": "TTS工具"
+      },
+      {
+        "text": "多语言支持"
+      },
+      {
+        "text": "语音生成"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://play.ht/",
+    "price": "免费版每月5000字符；专业版$9.99/月起，无限字符；企业版定制价格",
+    "platform": "Web浏览器/iOS App/Android App/Chrome扩展/WordPress插件/API接入"
+  },
+  {
     "name": "Veed.io",
     "slug": "veed-io",
     "emoji": "🎬",
@@ -3333,6 +3395,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://grain.com",
     "price": "免费版可用，Pro版$16/月，团队版$35/人/月",
     "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
+  },
+  {
+    "name": "CodeSandbox AI",
+    "slug": "codesandbox-ai",
+    "emoji": "🖥️",
+    "color": "#24292E",
+    "description": "CodeSandbox AI是集成在CodeSandbox在线IDE中的AI编程助手，为开发者提供智能代码补全、错误诊断和项目构建等云端开发能力。2026年最新版本增强了多模态理解和团队协作功能，支持实时协作编程和AI辅助调试。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "云IDE"
+      },
+      {
+        "text": "在线代码编辑器"
+      },
+      {
+        "text": "智能补全",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约150万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://codesandbox.io",
+    "price": "免费版可用，Pro版$9/月起",
+    "platform": "Web浏览器（无需安装）"
   },
   {
     "name": "零一万物",
@@ -5259,6 +5353,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Cleanvoice",
+    "slug": "cleanvoice",
+    "emoji": "🎧",
+    "color": "#299bec",
+    "description": "AI音频清理工具，自动去除录音中的填充词、口头禅和呼吸声。一键清理播客和视频音频，让录音品质专业。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音频"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "9万",
+    "badge": {
+      "type": null,
+      "text": "NEW"
+    },
+    "url": "https://cleanvoice.ai",
+    "price": "基础$10/月起",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Arc浏览器",
     "slug": "arc-browser",
     "emoji": "⚡️",
@@ -6112,6 +6234,40 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web、iOS、Android"
   },
   {
+    "name": "Play.ht",
+    "slug": "play-ht",
+    "emoji": "🎙️",
+    "color": "#6C47FF",
+    "description": "Play.ht是一款专业的AI文本转语音(TTS)工具，利用先进的深度学习技术将文本转换为自然流畅的人声。支持142种语言和800+种语音风格，2026年新增情感控制功能，可精细调节语速、音调和停顿。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "文本转语音"
+      },
+      {
+        "text": "AI语音合成"
+      },
+      {
+        "text": "TTS工具"
+      },
+      {
+        "text": "多语言支持"
+      },
+      {
+        "text": "语音生成"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://play.ht/",
+    "price": "免费版每月5000字符；专业版$9.99/月起，无限字符；企业版定制价格",
+    "platform": "Web浏览器/iOS App/Android App/Chrome扩展/WordPress插件/API接入"
+  },
+  {
     "name": "Veed.io",
     "slug": "veed-io",
     "emoji": "🎬",
@@ -6409,6 +6565,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://grain.com",
     "price": "免费版可用，Pro版$16/月，团队版$35/人/月",
     "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
+  },
+  {
+    "name": "CodeSandbox AI",
+    "slug": "codesandbox-ai",
+    "emoji": "🖥️",
+    "color": "#24292E",
+    "description": "CodeSandbox AI是集成在CodeSandbox在线IDE中的AI编程助手，为开发者提供智能代码补全、错误诊断和项目构建等云端开发能力。2026年最新版本增强了多模态理解和团队协作功能，支持实时协作编程和AI辅助调试。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "云IDE"
+      },
+      {
+        "text": "在线代码编辑器"
+      },
+      {
+        "text": "智能补全",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约150万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://codesandbox.io",
+    "price": "免费版可用，Pro版$9/月起",
+    "platform": "Web浏览器（无需安装）"
   },
   {
     "name": "零一万物",
