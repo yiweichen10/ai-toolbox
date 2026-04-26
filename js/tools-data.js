@@ -2409,6 +2409,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Looka",
+    "slug": "looka",
+    "emoji": "🖼️",
+    "color": "#0aa8d4",
+    "description": "AI Logo设计工具，输入品牌信息即可生成专业Logo。支持多种风格和模板，提供品牌套件（名片、信纸等），是创业者的品牌设计利器。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "18万",
+    "badge": {
+      "type": "pick",
+      "text": null
+    },
+    "url": "https://looka.com",
+    "price": "免费使用",
+    "platform": "Web"
+  },
+  {
     "name": "Pixverse",
     "slug": "pixverse",
     "emoji": "🎬",
@@ -3098,6 +3126,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web浏览器/iOS App/Android App/Chrome扩展/WordPress插件/API接入"
   },
   {
+    "name": "Wondercraft AI",
+    "slug": "wondercraft-ai",
+    "emoji": "🎙️",
+    "color": "#8B5CF6",
+    "description": "Wondercraft AI是一款专注于播客内容创作的AI工具，通过先进的语音合成技术将文本快速转换为专业播客音频。2026年平台新增多语言协作功能和AI脚本优化助手，支持团队实时协作编辑播客内容，已成为内容创作者和营销团队的热门选择。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI播客制作"
+      },
+      {
+        "text": "语音合成"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "AI音频",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://wondercraft.ai",
+    "price": "免费版每月10分钟，专业版$19/月起，企业版定制价格",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "Veed.io",
     "slug": "veed-io",
     "emoji": "🎬",
@@ -3491,6 +3551,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://platform.senseNova.com",
     "price": "免费版+付费API",
     "platform": "网页端 API"
+  },
+  {
+    "name": "Upscayl",
+    "slug": "upscayl",
+    "emoji": "🖼️",
+    "color": "#FFFFFF",
+    "description": "免费开源的AI图像超分辨率工具，采用深度学习技术将低分辨率图片智能放大至4K/8K，同时自动增强细节和纹理。作为跨平台桌面应用，2026年已更新至v5.0版本，新增批量处理和企业级API服务。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "图像超分"
+      },
+      {
+        "text": "免费开源"
+      },
+      {
+        "text": "AI放大"
+      },
+      {
+        "text": "多平台支持"
+      },
+      {
+        "text": "离线运行",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://upscayl.org",
+    "price": "免费（开源）",
+    "platform": "Windows / macOS / Linux"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -5579,6 +5674,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Looka",
+    "slug": "looka",
+    "emoji": "🖼️",
+    "color": "#0aa8d4",
+    "description": "AI Logo设计工具，输入品牌信息即可生成专业Logo。支持多种风格和模板，提供品牌套件（名片、信纸等），是创业者的品牌设计利器。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "18万",
+    "badge": {
+      "type": "pick",
+      "text": null
+    },
+    "url": "https://looka.com",
+    "price": "免费使用",
+    "platform": "Web"
+  },
+  {
     "name": "Pixverse",
     "slug": "pixverse",
     "emoji": "🎬",
@@ -6268,6 +6391,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web浏览器/iOS App/Android App/Chrome扩展/WordPress插件/API接入"
   },
   {
+    "name": "Wondercraft AI",
+    "slug": "wondercraft-ai",
+    "emoji": "🎙️",
+    "color": "#8B5CF6",
+    "description": "Wondercraft AI是一款专注于播客内容创作的AI工具，通过先进的语音合成技术将文本快速转换为专业播客音频。2026年平台新增多语言协作功能和AI脚本优化助手，支持团队实时协作编辑播客内容，已成为内容创作者和营销团队的热门选择。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI播客制作"
+      },
+      {
+        "text": "语音合成"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "AI音频",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://wondercraft.ai",
+    "price": "免费版每月10分钟，专业版$19/月起，企业版定制价格",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "Veed.io",
     "slug": "veed-io",
     "emoji": "🎬",
@@ -6661,5 +6816,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://platform.senseNova.com",
     "price": "免费版+付费API",
     "platform": "网页端 API"
+  },
+  {
+    "name": "Upscayl",
+    "slug": "upscayl",
+    "emoji": "🖼️",
+    "color": "#FFFFFF",
+    "description": "免费开源的AI图像超分辨率工具，采用深度学习技术将低分辨率图片智能放大至4K/8K，同时自动增强细节和纹理。作为跨平台桌面应用，2026年已更新至v5.0版本，新增批量处理和企业级API服务。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "图像超分"
+      },
+      {
+        "text": "免费开源"
+      },
+      {
+        "text": "AI放大"
+      },
+      {
+        "text": "多平台支持"
+      },
+      {
+        "text": "离线运行",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://upscayl.org",
+    "price": "免费（开源）",
+    "platform": "Windows / macOS / Linux"
   }
 ];
