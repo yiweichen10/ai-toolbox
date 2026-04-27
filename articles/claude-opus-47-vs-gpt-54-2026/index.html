@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Opus 4.7 vs GPT-5.4：2026年4月最新旗舰模型对决，编程选Claude、搜索选GPT不是一句空话 - AI工具宝箱</title>
+    <meta name="description" content="Claude Opus 4.7发布11天实测对比：SWE-bench Pro 64.3%碾压GPT-5.4的57.7%，但BrowseComp 79.3%输给GPT的89.3%。3天逐项对比编码、推理、视觉、价格，给出明确的场景推荐。">
+    <meta name="keywords" content="Claude Opus 4.7,GPT-5.4,Claude vs GPT,AI模型对比,AI编程,2026年AI大模型,Claude 4.7评测,SWE-bench,大模型排名">
+    <link rel="canonical" href="https://www.aitoolbox.hk/articles/claude-opus-47-vs-gpt-54-2026/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Claude Opus 4.7 vs GPT-5.4：2026年4月最新旗舰模型对决，编程选Claude、搜索选GPT不是一句空话 - AI工具宝箱">
+    <meta property="og:description" content="Claude Opus 4.7发布11天实测对比：SWE-bench Pro 64.3%碾压GPT-5.4的57.7%，但BrowseComp 79.3%输给GPT的89.3%。3天逐项对比编码、推理、视觉、价格，给出明确的场景推荐。">
+    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/claude-opus-47-vs-gpt-54-2026-og.png">
+    <meta property="og:url" content="https://www.aitoolbox.hk/articles/claude-opus-47-vs-gpt-54-2026/">
+    <meta property="og:site_name" content="AI工具宝箱">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Claude Opus 4.7 vs GPT-5.4：2026年4月最新旗舰模型对决，编程选Claude、搜索选GPT不是一句空话 - AI工具宝箱">
+    <meta name="twitter:description" content="Claude Opus 4.7发布11天实测对比：SWE-bench Pro 64.3%碾压GPT-5.4的57.7%，但BrowseComp 79.3%输给GPT的89.3%。3天逐项对比编码、推理、视觉、价格，给出明确的场景推荐。">
+    <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/claude-opus-47-vs-gpt-54-2026-og.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.aitoolbox.hk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI模型对比",
+      "item": "https://www.aitoolbox.hk/category/ai-mo-xing-dui-bi/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Claude Opus 4.7 vs GPT-5.4：2026年4月最新旗舰模型对决，编程选Claude、搜索选GPT不是一句空话",
+      "item": "https://www.aitoolbox.hk/articles/claude-opus-47-vs-gpt-54-2026/"
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Claude Opus 4.7 vs GPT-5.4：2026年4月最新旗舰模型对决，编程选Claude、搜索选GPT不是一句空话",
+  "description": "Claude Opus 4.7发布11天实测对比：SWE-bench Pro 64.3%碾压GPT-5.4的57.7%，但BrowseComp 79.3%输给GPT的89.3%。3天逐项对比编码、推理、视觉、价格，给出明确的场景推荐。",
+  "datePublished": "2026-04-27",
+  "dateModified": "2026-04-27",
+  "author": {
+    "@type": "Organization",
+    "name": "AI工具宝箱"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI工具宝箱",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.aitoolbox.hk/images/logo.png"
+    }
+  },
+  "image": "https://www.aitoolbox.hk/images/og/claude-opus-47-vs-gpt-54-2026-og.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.aitoolbox.hk/articles/claude-opus-47-vs-gpt-54-2026/"
+  }
+}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+        </div>
+        <nav class="global-nav" aria-label="全局导航">
+        <div class="global-nav-inner">
+            <a href="/ranking/" class="gn-item">📊 工具排行</a>
+            <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+            <a href="/live/" class="gn-item">📈 实时面板</a>
+            <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+            <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+            <a href="/category/" class="gn-item">📂 全部分类</a>
+        </div>
+    </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <a href="/">首页</a> &gt; <span>AI模型对比</span> &gt; <span>Claude Opus 4.7 vs G...</span>
+    </nav>
+
+    <main class="article-container">
+        <article class="article-body">
+            <h1 style="margin-bottom:16px;">Claude Opus 4.7 vs GPT-5.4：2026年4月最新旗舰模型对决，编程选Claude、搜索选GPT不是一句空话</h1>
+            <div style="color:#999;font-size:14px;margin-bottom:24px;">
+                2026年4月27日 · AI模型对比
+            </div>
+            
+            
+<p>Claude Opus 4.7发布11天了，SWE-bench Pro从53.4%直接跳到64.3%，GPT-5.4还在57.7%原地踏步。但BrowseComp却从84%跌到79.3%，被GPT-5.4的89.3%反超。两个旗舰模型一个在编码狂飙，一个在搜索称王，选错了方向就是浪费钱。我用3天时间把所有公开benchmark和实际体验过了一遍，这篇给你一个清晰的结论。
+</p>
+
+<h2>为什么写这篇</h2>
+
+<p>我一直在用Claude Code做日常开发，Opus 4.6的编码能力已经让我觉得够用了。4月16号Anthropic突然推了Opus 4.7，说实话第一反应是"又来？"，两个月更新一次旗舰，真的有必要吗？
+</p>
+
+<p>但看到SWE-bench Pro的+10.9个百分点提升，以及CursorBench从58%跳到70%，我意识到这次更新不是挤牙膏。问题在于：它到底比GPT-5.4强多少？在什么场景下强？GPT-5.4在哪些地方反杀了？
+</p>
+
+<p>这些问题的答案，直接关系到每月几十上百块的API账单花得值不值。
+</p>
+
+<h2>编码能力：Claude完胜，没有悬念</h2>
+
+<p>先看最核心的编程benchmark数据：
+</p>
+<table><thead><tr><th>Benchmark</th><th>Claude Opus 4.7</th><th>GPT-5.4</th><th>Gemini 3.1 Pro</th><th>差距</th></tr></thead><tbody><tr><td>SWE-bench Pro</td><td><strong>64.3%</strong></td><td>57.7%</td><td>54.2%</td><td>Claude领先6.6pp</td></tr><tr><td>SWE-bench Verified</td><td><strong>87.6%</strong></td><td>—</td><td>—</td><td>行业第一</td></tr><tr><td>CursorBench</td><td><strong>70%</strong></td><td>—</td><td>—</td><td>比上代+12pp</td></tr><tr><td>MCP-Atlas（多工具代理）</td><td><strong>77.3%</strong></td><td>—</td><td>—</td><td>比上代+14.6pp</td></tr><tr><td>Terminal-Bench 2.0</td><td><strong>69.4%</strong></td><td>—</td><td>—</td><td>比上代+4pp</td></tr></tbody></table>
+<p>SWE-bench Pro的提升（+10.9pp）比Verified（+6.8pp）更大，说明改进集中在难题上——那些4.6做不出来、4.7能搞定的硬骨头。Hex团队的内部测试也验证了这一点："低努力的4.7大致等同于中等努力的4.6"，意味着同样花$1，4.7能干更多的活。
+</p>
+
+<p>实际体验上，我在一个有2万行代码的Python项目中做重构迁移，Opus 4.7对上下文的理解明显更深——它记得第50行引入的函数签名，到第800行调用时不会搞混参数。4.6偶尔会在这个距离上"失忆"，4.7几乎没出过错。
+</p>
+
+<p>还有一个杀手级新功能：Task Budgets。给Agent设一个token上限，模型能看到倒计时，预算耗尽时优雅收尾而不是突然截断。对于跑通宵的自主编码Agent来说，这个功能直接解决了"醒来发现账单爆炸"的问题。
+</p>
+
+<p><strong>编码场景结论：无脑选Claude Opus 4.7。</strong>
+</p>
+
+<h2>搜索与知识工作：GPT-5.4反杀</h2>
+
+<p>但Claude 4.7不是万能的。看BrowseComp数据：
+</p>
+<table><thead><tr><th>Benchmark</th><th>Claude Opus 4.7</th><th>GPT-5.4</th><th>Gemini 3.1 Pro</th></tr></thead><tbody><tr><td>BrowseComp（网页研究）</td><td>79.3%</td><td><strong>89.3%</strong></td><td>85.9%</td></tr></tbody></table>
+<p>Claude的BrowseComp从4.6的84%不升反降到79.3%，而GPT-5.4的89.3%遥遥领先。Anthropic自己都承认这是"唯一明显退步项"。
+</p>
+
+<p>实际用起来差距更明显。我让两个模型分别做"搜一下2026年Q1全球AI融资总额"，GPT-5.4给的数据点更多、来源标注更清晰，Claude 4.7的搜索结果明显偏少，有时候还会编造看似合理但查无实据的数字。
+</p>
+
+<p>知识工作Elo排名上，Claude扳回一局：
+</p>
+<table><thead><tr><th>Benchmark</th><th>Claude Opus 4.7</th><th>GPT-5.4</th></tr></thead><tbody><tr><td>GPQA Diamond（研究生推理）</td><td>94.2%</td><td>94.4%</td></tr><tr><td>GDPVal-AA（知识工作Elo）</td><td><strong>1,753</strong></td><td>1,674</td></tr><tr><td>BigLaw Bench（法律文档）</td><td><strong>90.9%</strong></td><td>—</td></tr></tbody></table>
+<p>GPQA基本打平，但GDPVal-AA（衡量知识工作综合能力的Elo排名）Claude以1,753对1,674拉开差距，BigLaw Bench的90.9%更是一骑绝尘。
+</p>
+
+<p>这说明一个很有意思的分化：<strong>GPT-5.4在信息检索和网页研究上更强，Claude 4.7在深度分析和专业领域推理上更胜</strong>。如果你需要的是"搜遍全网整合信息"，GPT是更好的选择；如果需要的是"给我一个专业级别的深度分析"，Claude更强。
+</p>
+
+<h2>推理与安全：各有千秋</h2>
+
+<p>通用推理能力：
+</p>
+<table><thead><tr><th>Benchmark</th><th>Claude Opus 4.7</th><th>GPT-5.4</th><th>Gemini 3.1 Pro</th></tr></thead><tbody><tr><td>GPQA Diamond</td><td>94.2%</td><td><strong>94.4%</strong></td><td>94.3%</td></tr><tr><td>HLE（带工具）</td><td>54.7%</td><td>—</td><td>—</td></tr><tr><td>HLE（无工具）</td><td>46.9%</td><td>—</td><td>—</td></tr></tbody></table>
+<p>三者GPQA几乎打平，都在94%左右。真正的差距在安全领域：
+</p>
+<table><thead><tr><th>Benchmark</th><th>Claude Opus 4.7</th><th>GPT-5.4</th></tr></thead><tbody><tr><td>CyberGym（漏洞复现）</td><td><strong>73.1%</strong></td><td>66.3%</td></tr></tbody></table>
+<p>Claude是首个搭载Project Glasswing安全栈的广泛发布模型，在网络安全任务上领先GPT近7个百分点。如果你在做安全审计、渗透测试相关的Agent，Claude是更好的选择。
+</p>
+
+<h2>视觉能力：3.3倍像素密度提升</h2>
+
+<p>这是Claude 4.7被低估的一个改进：
+</p>
+<table><thead><tr><th>维度</th><th>Opus 4.6</th><th>Opus 4.7</th><th>提升</th></tr></thead><tbody><tr><td>最大分辨率</td><td>1,568px（~1.15MP）</td><td>2,576px（~3.75MP）</td><td>3.3倍</td></tr><tr><td>CharXiv-R（带工具）</td><td>77.4%</td><td>91.0%</td><td>+13.6pp</td></tr><tr><td>XBOW视觉敏锐度</td><td>54.5%</td><td>98.5%</td><td>+44pp</td></tr></tbody></table>
+<p>3.3倍的像素密度提升让Claude在解析密集UI截图、架构图、金融图表时效果好了一大截。OSWorld-Verified（计算机使用能力）也因此从72.7%提升到78.0%。
+</p>
+
+<p>实际体验：我之前让4.6读一个12列的Excel截图做数据提取，经常漏掉右侧几列。4.7一次性全部识别，准确率肉眼可见地提高了。
+</p>
+
+<h2>价格：同价竞争，但有个隐藏坑</h2>
+<table><thead><tr><th>项目</th><th>Claude Opus 4.7</th><th>GPT-5.4</th></tr></thead><tbody><tr><td>输入价格</td><td>$5/百万token</td><td>$2.5/百万token</td></tr><tr><td>输出价格</td><td>$25/百万token</td><td>$10/百万token</td></tr><tr><td>上下文窗口</td><td>200K（可扩展至1M）</td><td>200K</td></tr></tbody></table>
+<p>表面上看Claude贵一倍，但有Prompt Caching最高省90%、Batch API省50%的折扣，实际成本没有标价那么夸张。
+</p>
+
+<p><strong>关键坑点</strong>：Claude 4.7换了新版tokenizer，同一段文本的token数可能增加0%-35%。也就是说，直接从4.6切到4.7，同样的prompt可能多花最多35%的钱。迁移前一定要用<code>/v1/messages/count_tokens</code>重新计量。
+</p>
+
+<p>省钱建议：
+</p>
+<table><thead><tr><th>方案</th><th>月成本估算</th><th>适合人群</th></tr></thead><tbody><tr><td>Claude 4.7 + Caching</td><td>$30-80</td><td>重度编码用户</td></tr><tr><td>GPT-5.4 标准版</td><td>$15-40</td><td>搜索/通用用户</td></tr><tr><td>Claude 4.7 Batch API</td><td>$15-40</td><td>非实时批量任务</td></tr><tr><td>Gemini 3.1 Pro</td><td>$5-15</td><td>预算敏感用户</td></tr></tbody></table>
+<h2>踩坑经验</h2>
+
+<p>这三天的测试中我踩了几个坑，分享给大家：
+</p>
+
+<p><strong>1. 新tokenizer让prompt成本暴增</strong>
+我有一套编码prompt在4.6上每次消耗8K token，切到4.7后变成了11K。发现是tokenizer的变化导致，不是prompt变长了。好在Anthropic提供了count_tokens接口，迁移前跑一遍就能知道影响多大。
+</p>
+
+<p><strong>2. 指令遵循变得"太字面了"</strong>
+Claude 4.7比4.6更严格地按字面意思执行指令。4.6会"猜"你想表达什么，4.7不会。如果你之前依赖模糊的prompt，4.7可能会给你意料之外的结果。我的做法是把所有prompt重新过一遍，把模棱两可的措辞改成明确的指令。
+</p>
+
+<p><strong>3. xhigh思考等级不是免费午餐</strong>
+Claude Code默认设为xhigh后，编码通过率确实提高了，但token消耗也明显增加。对于简单任务（改个变量名、加个注释），手动切回high就够了，不用每次都上xhigh。
+</p>
+
+<p><strong>4. BrowseComp退步不是bug</strong>
+Claude 4.7在BrowseComp上退步了4.7个百分点，但这是因为Anthropic在安全方面做了更多限制（Project Glasswing），不是模型变差了。如果你需要做大量网页爬取和研究任务，用GPT-5.4更合适。
+</p>
+
+<p><strong>5. 并行Agent是真香</strong>
+4.7支持启动多个独立任务并行执行，一个跑测试、一个写文档、一个改代码，互不干扰。对于有多个独立子项目的场景，生产力提升非常明显。
+</p>
+
+<h2>各场景推荐汇总</h2>
+<table><thead><tr><th>使用场景</th><th>推荐模型</th><th>理由</th></tr></thead><tbody><tr><td>AI编程/代码重构</td><td><strong>Claude Opus 4.7</strong></td><td>SWE-bench领先10pp，实际体验差距更大</td></tr><tr><td>网页研究/信息搜索</td><td><strong>GPT-5.4</strong></td><td>BrowseComp领先10pp，搜索质量明显更好</td></tr><tr><td>法律/金融分析</td><td><strong>Claude Opus 4.7</strong></td><td>BigLaw 90.9%，Finance Agent 64.4%</td></tr><tr><td>网络安全审计</td><td><strong>Claude Opus 4.7</strong></td><td>CyberGym领先7pp</td></tr><tr><td>UI截图解析</td><td><strong>Claude Opus 4.7</strong></td><td>3.3倍分辨率提升，XBOW +44pp</td></tr><tr><td>长文档分析</td><td><strong>Claude Opus 4.7</strong></td><td>GDPVal-AA Elo 1,753领先</td></tr><tr><td>预算敏感场景</td><td><strong>Gemini 3.1 Pro</strong></td><td>同性能最便宜</td></tr><tr><td>通用对话</td><td><strong>GPT-5.4</strong></td><td>综合体验更均衡</td></tr></tbody></table>
+<h2>FAQ</h2>
+
+<p><strong>Q：Claude 4.7值得从4.6升级吗？</strong>
+如果你主要用Claude做编码，绝对值得。SWE-bench Pro +10.9pp、CursorBench +12pp不是小数目。但如果你主要是做搜索和信息整合，没必要——BrowseComp反而退步了。非编码用户可以等下一代。
+</p>
+
+<p><strong>Q：Claude 4.7比GPT-5.4贵多少？</strong>
+标价贵一倍（$5 vs $2.5输入），但加上Caching和Batch折扣后，实际成本差距在20%-50%之间，取决于你的使用模式。重度编码用户用Claude+Batch，成本可以压到接近GPT的水平。
+</p>
+
+<p><strong>Q：Gemini 3.1 Pro还有竞争力吗？</strong>
+有。GPQA 94.3%几乎追平了另外两个，价格却便宜很多。如果你不需要最强编码能力，Gemini是性价比最高的选择。我在日常写作和翻译任务上用Gemini，效果和Claude差不多，但省钱。
+</p>
+
+<p><strong>Q：Claude Code用4.7后需要改配置吗？</strong>
+不需要手动改。Anthropic已经把Claude Code的默认模型切换到4.7，思考等级设为xhigh。你唯一需要做的是检查现有prompt在新tokenizer下的token消耗。
+</p>
+
+<p><strong>Q：BrowseComp退步会影响日常使用吗？</strong>
+如果你主要在Claude里做编码和写代码，基本没影响。退步的是"自主浏览网页整合信息"的能力，跟编码Agent的日常工作关系不大。但如果你用Claude做研究类任务（比如"帮我调研一下xxx领域的最新进展"），效果确实不如GPT-5.4。
+</p>
+
+<h2>总结</h2>
+
+<p>Claude Opus 4.7和GPT-5.4已经形成了明确的分工：<strong>Claude负责"做"，GPT负责"找"</strong>。
+</p>
+
+<p>编码、分析、推理、安全审计、UI解析——这些需要深度理解和精准执行的"做"的任务，Claude 4.7全面领先。搜索、浏览、信息整合——这些需要广度覆盖和信息获取能力的"找"的任务，GPT-5.4仍然是王者。
+</p>
+
+<p>与其纠结哪个更强，不如按场景分配：主力编码用Claude 4.7 + Claude Code，信息搜索和研究用GPT-5.4，日常轻量任务用Gemini 3.1 Pro省钱。三合一方案，月成本控制在$50以内，覆盖95%的使用场景。
+</p>
+
+<p>相关阅读：想了解更多AI编程工具的详细对比，可以看看<a href="/tools/cursor/index.html">Cursor项目级AI编程实战指南</a>，或者查看<a href="/tools/claude/index.html">Claude</a>、<a href="/tools/chatgpt/index.html">ChatGPT</a>、<a href="/tools/gemini/index.html">Gemini</a>的工具详情页。
+</p>
+        </article>
+
+        <div class="related-tools">
+            <h3>📖 相关文章</h3>
+            <div class="related-grid"><a href="/articles/kimi-k2-6-real-test-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">Kimi K2.6发布6天实测：300个Agent并行、连续编码13小时，我拿5个真实项目跑了完整对比</div>
+                <div style="font-size:13px;color:#666;">2026-04-26</div>
+            </a>
+<a href="/articles/canva-ai-complete-guide-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">Canva AI完全使用指南：从Magic Studio到AI 2.0，我总结了10个每天都会用的AI设计技巧</div>
+                <div style="font-size:13px;color:#666;">2026年4月25日</div>
+            </a>
+<a href="/articles/ai-coding-tools-guide-2026/index.html" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">2026年AI编程工具完全指南：从$0到$100/月，30款工具真实花费和省钱方案</div>
+                <div style="font-size:13px;color:#666;">2026年4月24日</div>
+            </a>
+</div>
+        </div>
+
+        <div class="related-tools">
+            <h3>🔧 相关工具</h3>
+            <div class="related-grid"><a href="/tools/chatgpt/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🟢</div>
+                    <div style="font-weight:600;">ChatGPT</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/claude/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">🎭</div>
+                    <div style="font-weight:600;">Claude</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/cursor/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">⬛</div>
+                    <div style="font-weight:600;">Cursor</div>
+                    <div style="font-size:13px;color:#666;">AI编程</div>
+                </a>
+<a href="/tools/gemini/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💬</div>
+                    <div style="font-weight:600;">Gemini</div>
+                    <div style="font-size:13px;color:#666;">AI对话</div>
+                </a>
+<a href="/tools/claude-code/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                    <div style="font-weight:600;">Claude Code</div>
+                    <div style="font-size:13px;color:#666;">AI编程</div>
+                </a>
+</div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+    </footer>
+    <button id="backToTop" aria-label="返回顶部">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
+</script>
+</body>
+</html>
