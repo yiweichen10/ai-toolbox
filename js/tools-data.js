@@ -3553,6 +3553,34 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端 API"
   },
   {
+    "name": "Topaz Photo AI",
+    "slug": "topaz-photo-ai",
+    "emoji": "🖼️",
+    "color": "#FF6B35",
+    "description": "Topaz Photo AI是由Topaz Labs开发的专业图像增强工具，专注于利用深度学习技术提升照片质量、去除噪点和放大图像。2026年最新版本集成了更先进的AI模型，在保持细节的同时实现了更自然的图像重建效果，是专业摄影师和设计师必备的后期处理工具。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "图像增强"
+      },
+      {
+        "text": "AI降噪"
+      },
+      {
+        "text": "无损放大"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.topazlabs.com/topaz-photo-ai",
+    "price": "一次性购买$199，订阅$19.99/月",
+    "platform": "Windows/macOS"
+  },
+  {
     "name": "Upscayl",
     "slug": "upscayl",
     "emoji": "🖼️",
@@ -3586,6 +3614,66 @@ window.__ALL_TOOLS__ = [
     "url": "https://upscayl.org",
     "price": "免费（开源）",
     "platform": "Windows / macOS / Linux"
+  },
+  {
+    "name": "Adobe Express AI",
+    "slug": "adobe-express-ai",
+    "emoji": "🎨",
+    "color": "#FF0000",
+    "description": "Adobe Express AI是Adobe公司推出的AI辅助在线设计平台，利用Firefly生成式AI帮助用户快速创建社交媒体图形、海报、演示文稿和短视频等视觉内容。2026年平台集成了更多AI编辑功能和智能抠图能力，成为个人创作者和小型企业的首选设计工具。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "在线设计"
+      },
+      {
+        "text": "AI绘图"
+      },
+      {
+        "text": "社交媒体内容创作"
+      },
+      {
+        "text": "模板丰富",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约500万月访问量",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://express.adobe.com",
+    "price": "免费版可用，高级版每月$9.99起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "AIVA",
+    "slug": "aiva",
+    "emoji": "🎵",
+    "color": "#FF6B6B",
+    "description": "AIVA是一款专业级AI音乐创作引擎，支持用户生成原创音乐作品。平台提供多种音乐风格模板，可用于视频配乐、广告音乐、游戏音效等场景。2026年AIVA已集成更先进的情感识别技术，生成的音乐更加细腻动人。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "原创配乐"
+      },
+      {
+        "text": "免版税音乐"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://aiva.ai",
+    "price": "免费版可用，付费版$11.99/月起",
+    "platform": "网页端、iOS、Android"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -6818,6 +6906,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端 API"
   },
   {
+    "name": "Topaz Photo AI",
+    "slug": "topaz-photo-ai",
+    "emoji": "🖼️",
+    "color": "#FF6B35",
+    "description": "Topaz Photo AI是由Topaz Labs开发的专业图像增强工具，专注于利用深度学习技术提升照片质量、去除噪点和放大图像。2026年最新版本集成了更先进的AI模型，在保持细节的同时实现了更自然的图像重建效果，是专业摄影师和设计师必备的后期处理工具。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "图像增强"
+      },
+      {
+        "text": "AI降噪"
+      },
+      {
+        "text": "无损放大"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.topazlabs.com/topaz-photo-ai",
+    "price": "一次性购买$199，订阅$19.99/月",
+    "platform": "Windows/macOS"
+  },
+  {
     "name": "Upscayl",
     "slug": "upscayl",
     "emoji": "🖼️",
@@ -6851,5 +6967,65 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://upscayl.org",
     "price": "免费（开源）",
     "platform": "Windows / macOS / Linux"
+  },
+  {
+    "name": "Adobe Express AI",
+    "slug": "adobe-express-ai",
+    "emoji": "🎨",
+    "color": "#FF0000",
+    "description": "Adobe Express AI是Adobe公司推出的AI辅助在线设计平台，利用Firefly生成式AI帮助用户快速创建社交媒体图形、海报、演示文稿和短视频等视觉内容。2026年平台集成了更多AI编辑功能和智能抠图能力，成为个人创作者和小型企业的首选设计工具。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "在线设计"
+      },
+      {
+        "text": "AI绘图"
+      },
+      {
+        "text": "社交媒体内容创作"
+      },
+      {
+        "text": "模板丰富",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约500万月访问量",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://express.adobe.com",
+    "price": "免费版可用，高级版每月$9.99起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "AIVA",
+    "slug": "aiva",
+    "emoji": "🎵",
+    "color": "#FF6B6B",
+    "description": "AIVA是一款专业级AI音乐创作引擎，支持用户生成原创音乐作品。平台提供多种音乐风格模板，可用于视频配乐、广告音乐、游戏音效等场景。2026年AIVA已集成更先进的情感识别技术，生成的音乐更加细腻动人。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "原创配乐"
+      },
+      {
+        "text": "免版税音乐"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://aiva.ai",
+    "price": "免费版可用，付费版$11.99/月起",
+    "platform": "网页端、iOS、Android"
   }
 ];
