@@ -1615,6 +1615,34 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Freepik AI",
+    "slug": "freepik-ai",
+    "emoji": "🎨",
+    "color": "#9cae7f",
+    "description": "Freepik推出的AI设计工具，集AI生图、AI背景去除、智能修图于一体。依托Freepik海量设计素材库，是设计师的AI效率工具。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "10万",
+    "badge": {
+      "type": "pick",
+      "text": "NEW"
+    },
+    "url": "https://www.freepik.com",
+    "price": "基础$10/月起",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Krea AI",
     "slug": "krea-ai",
     "emoji": "🎨",
@@ -3553,6 +3581,40 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端 API"
   },
   {
+    "name": "ComfyUI",
+    "slug": "comfyui",
+    "emoji": "🎨",
+    "color": "#5B21B6",
+    "description": "ComfyUI是一个开源的、基于节点工作流的AI图像生成界面，专门为Stable Diffusion设计。2026年版本持续优化了节点执行效率和社区工作流分享功能，成为专业AI图像工作者的首选工具。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "节点工作流"
+      },
+      {
+        "text": "Stable Diffusion"
+      },
+      {
+        "text": "AI图像生成"
+      },
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "可视化界面"
+      }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://comfy.org/",
+    "price": "免费开源",
+    "platform": "Windows/Mac/Linux"
+  },
+  {
     "name": "Topaz Photo AI",
     "slug": "topaz-photo-ai",
     "emoji": "🖼️",
@@ -3674,6 +3736,40 @@ window.__ALL_TOOLS__ = [
     "url": "https://aiva.ai",
     "price": "免费版可用，付费版$11.99/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Colossyan",
+    "slug": "colossyan",
+    "emoji": "🎬",
+    "color": "#6C5CE7",
+    "description": "Colossyan是一个AI视频生成平台，专注于创建AI虚拟形象（数字人）视频。用户可以通过文本输入快速生成专业的主播视频，适用于企业培训、营销推广、产品演示等多种场景。2026年平台持续优化虚拟形象的真实感和多语言支持能力。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI虚拟形象"
+      },
+      {
+        "text": "数字人"
+      },
+      {
+        "text": "企业视频"
+      },
+      {
+        "text": "AI主播"
+      },
+      {
+        "text": "视频生成"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://colossyan.com",
+    "price": "免费版可用，付费版起价$19/月",
+    "platform": "网页端"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -4968,6 +5064,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "Freepik AI",
+    "slug": "freepik-ai",
+    "emoji": "🎨",
+    "color": "#9cae7f",
+    "description": "Freepik推出的AI设计工具，集AI生图、AI背景去除、智能修图于一体。依托Freepik海量设计素材库，是设计师的AI效率工具。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "10万",
+    "badge": {
+      "type": "pick",
+      "text": "NEW"
+    },
+    "url": "https://www.freepik.com",
+    "price": "基础$10/月起",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Krea AI",
     "slug": "krea-ai",
     "emoji": "🎨",
@@ -6906,6 +7030,40 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端 API"
   },
   {
+    "name": "ComfyUI",
+    "slug": "comfyui",
+    "emoji": "🎨",
+    "color": "#5B21B6",
+    "description": "ComfyUI是一个开源的、基于节点工作流的AI图像生成界面，专门为Stable Diffusion设计。2026年版本持续优化了节点执行效率和社区工作流分享功能，成为专业AI图像工作者的首选工具。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "节点工作流"
+      },
+      {
+        "text": "Stable Diffusion"
+      },
+      {
+        "text": "AI图像生成"
+      },
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "可视化界面"
+      }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://comfy.org/",
+    "price": "免费开源",
+    "platform": "Windows/Mac/Linux"
+  },
+  {
     "name": "Topaz Photo AI",
     "slug": "topaz-photo-ai",
     "emoji": "🖼️",
@@ -7027,5 +7185,39 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://aiva.ai",
     "price": "免费版可用，付费版$11.99/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Colossyan",
+    "slug": "colossyan",
+    "emoji": "🎬",
+    "color": "#6C5CE7",
+    "description": "Colossyan是一个AI视频生成平台，专注于创建AI虚拟形象（数字人）视频。用户可以通过文本输入快速生成专业的主播视频，适用于企业培训、营销推广、产品演示等多种场景。2026年平台持续优化虚拟形象的真实感和多语言支持能力。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI虚拟形象"
+      },
+      {
+        "text": "数字人"
+      },
+      {
+        "text": "企业视频"
+      },
+      {
+        "text": "AI主播"
+      },
+      {
+        "text": "视频生成"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://colossyan.com",
+    "price": "免费版可用，付费版起价$19/月",
+    "platform": "网页端"
   }
 ];
