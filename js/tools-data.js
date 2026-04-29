@@ -3215,6 +3215,35 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）"
   },
   {
+    "name": "Kaiber",
+    "slug": "kaiber",
+    "emoji": "🎬",
+    "color": "#6B4EE6",
+    "description": "Kaiber是一款专注于将静态图片转化为动态视频的AI艺术工具，通过先进的AI算法为用户创建音乐视频、动画短片和视觉艺术作品。2026年持续更新引擎，提升视频流畅度和艺术风格多样性，成为创意工作者的视频生成选择之一。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "图片转视频"
+      },
+      {
+        "text": "艺术创作",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "150万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://kaiber.ai",
+    "price": "免费版每月100积分，高级版$9.99/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "Domika",
     "slug": "domika",
     "emoji": "🤖",
@@ -3517,6 +3546,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web浏览器（无需安装）"
   },
   {
+    "name": "腾讯混元",
+    "slug": "tencent-hunyuan",
+    "emoji": "🧠",
+    "color": "#FA7298",
+    "description": "腾讯混元是腾讯推出的大型语言模型，采用混合专家架构，拥有千亿级参数。2026年已升级至Hunyuan-3.0版本，在中文理解、多轮对话和代码生成方面表现优异已全面接入腾讯生态",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "国产大模型"
+      },
+      {
+        "text": "腾讯系AI"
+      },
+      {
+        "text": "千亿参数",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://hunyuan.tencent.com",
+    "price": "免费使用，企业API按调用计费",
+    "platform": "网页端、API、企业微信、微信小程序"
+  },
+  {
     "name": "零一万物",
     "slug": "01-ai",
     "emoji": "🚀",
@@ -3770,6 +3828,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://colossyan.com",
     "price": "免费版可用，付费版起价$19/月",
     "platform": "网页端"
+  },
+  {
+    "name": "Rytr",
+    "slug": "rytr",
+    "emoji": "✍️",
+    "color": "#2E4057",
+    "description": "Rytr是一款由人工智能驱动的写作助手，可帮助用户在几分钟内创建高质量的内容。它支持超过30种语言，提供40多种写作模板，包括博客文章、邮件、社交媒体帖子等。2026年，Rytr持续优化其生成式AI模型，集成更先进的语言理解能力，为用户提供更精准、更流畅的内容创作体验。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "多语言支持"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "约450万月访问量",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://rytr.me",
+    "price": "免费版每月可生成5000字符，付费版从9美元/月起",
+    "platform": "网页版、iOS、Android"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -6664,6 +6754,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）"
   },
   {
+    "name": "Kaiber",
+    "slug": "kaiber",
+    "emoji": "🎬",
+    "color": "#6B4EE6",
+    "description": "Kaiber是一款专注于将静态图片转化为动态视频的AI艺术工具，通过先进的AI算法为用户创建音乐视频、动画短片和视觉艺术作品。2026年持续更新引擎，提升视频流畅度和艺术风格多样性，成为创意工作者的视频生成选择之一。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "图片转视频"
+      },
+      {
+        "text": "艺术创作",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "150万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://kaiber.ai",
+    "price": "免费版每月100积分，高级版$9.99/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "Domika",
     "slug": "domika",
     "emoji": "🤖",
@@ -6966,6 +7085,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web浏览器（无需安装）"
   },
   {
+    "name": "腾讯混元",
+    "slug": "tencent-hunyuan",
+    "emoji": "🧠",
+    "color": "#FA7298",
+    "description": "腾讯混元是腾讯推出的大型语言模型，采用混合专家架构，拥有千亿级参数。2026年已升级至Hunyuan-3.0版本，在中文理解、多轮对话和代码生成方面表现优异已全面接入腾讯生态",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "国产大模型"
+      },
+      {
+        "text": "腾讯系AI"
+      },
+      {
+        "text": "千亿参数",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://hunyuan.tencent.com",
+    "price": "免费使用，企业API按调用计费",
+    "platform": "网页端、API、企业微信、微信小程序"
+  },
+  {
     "name": "零一万物",
     "slug": "01-ai",
     "emoji": "🚀",
@@ -7219,5 +7367,37 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://colossyan.com",
     "price": "免费版可用，付费版起价$19/月",
     "platform": "网页端"
+  },
+  {
+    "name": "Rytr",
+    "slug": "rytr",
+    "emoji": "✍️",
+    "color": "#2E4057",
+    "description": "Rytr是一款由人工智能驱动的写作助手，可帮助用户在几分钟内创建高质量的内容。它支持超过30种语言，提供40多种写作模板，包括博客文章、邮件、社交媒体帖子等。2026年，Rytr持续优化其生成式AI模型，集成更先进的语言理解能力，为用户提供更精准、更流畅的内容创作体验。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "多语言支持"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "约450万月访问量",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://rytr.me",
+    "price": "免费版每月可生成5000字符，付费版从9美元/月起",
+    "platform": "网页版、iOS、Android"
   }
 ];
