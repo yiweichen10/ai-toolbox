@@ -3514,6 +3514,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
   },
   {
+    "name": "Activepieces",
+    "slug": "activepieces",
+    "emoji": "🔄",
+    "color": "#635BFF",
+    "description": "开源自动化工作流平台，支持可视化构建业务流程，连接200+应用。2026年推出AI Workflow功能，可通过自然语言自动生成自动化流程，大幅降低使用门槛。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "工作流自动化"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "无代码"
+      },
+      {
+        "text": "API集成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.activepieces.com",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "Web / Desktop / API"
+  },
+  {
     "name": "CodeSandbox AI",
     "slug": "codesandbox-ai",
     "emoji": "🖥️",
@@ -3605,6 +3637,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://01.ai",
     "price": "免费版+付费API",
     "platform": "Web/API/开源"
+  },
+  {
+    "name": "阶跃星辰",
+    "slug": "stepfun",
+    "emoji": "🚀",
+    "color": "#6366F1",
+    "description": "阶跃星辰（StepFun）是由前百度高管李开复创立的中国AI初创公司，专注于大型语言模型和多模态模型的研发。2025年推出Step-2大模型，参数规模达万亿级别，在数学推理和代码生成方面表现突出。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大模型"
+      },
+      {
+        "text": "多模态",
+        "type": "free"
+      },
+      {
+        "text": "中国AI"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "35万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.stepfun.com",
+    "price": "API按调用计费",
+    "platform": "Web / API"
   },
   {
     "name": "商汤日日新",
@@ -3828,6 +3889,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://colossyan.com",
     "price": "免费版可用，付费版起价$19/月",
     "platform": "网页端"
+  },
+  {
+    "name": "InVideo AI",
+    "slug": "invideo-ai",
+    "emoji": "🎬",
+    "color": "#FF4F4F",
+    "description": "InVideo AI是一款强大的AI视频生成平台，通过文本提示即可自动生成专业级视频内容。2026年平台集成了最新的AI视频模型，支持长视频生成和实时协作功能，成为企业和内容创作者的首选视频制作工具。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "自动化剪辑"
+      },
+      {
+        "text": "短视频制作"
+      },
+      {
+        "text": "文本转视频",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://invideo.io",
+    "price": "免费版可用，付费版$15/月起",
+    "platform": "网页端/iOS/Android"
   },
   {
     "name": "Rytr",
@@ -7053,6 +7146,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
   },
   {
+    "name": "Activepieces",
+    "slug": "activepieces",
+    "emoji": "🔄",
+    "color": "#635BFF",
+    "description": "开源自动化工作流平台，支持可视化构建业务流程，连接200+应用。2026年推出AI Workflow功能，可通过自然语言自动生成自动化流程，大幅降低使用门槛。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "工作流自动化"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "无代码"
+      },
+      {
+        "text": "API集成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.activepieces.com",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "Web / Desktop / API"
+  },
+  {
     "name": "CodeSandbox AI",
     "slug": "codesandbox-ai",
     "emoji": "🖥️",
@@ -7144,6 +7269,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://01.ai",
     "price": "免费版+付费API",
     "platform": "Web/API/开源"
+  },
+  {
+    "name": "阶跃星辰",
+    "slug": "stepfun",
+    "emoji": "🚀",
+    "color": "#6366F1",
+    "description": "阶跃星辰（StepFun）是由前百度高管李开复创立的中国AI初创公司，专注于大型语言模型和多模态模型的研发。2025年推出Step-2大模型，参数规模达万亿级别，在数学推理和代码生成方面表现突出。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大模型"
+      },
+      {
+        "text": "多模态",
+        "type": "free"
+      },
+      {
+        "text": "中国AI"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "35万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.stepfun.com",
+    "price": "API按调用计费",
+    "platform": "Web / API"
   },
   {
     "name": "商汤日日新",
@@ -7367,6 +7521,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://colossyan.com",
     "price": "免费版可用，付费版起价$19/月",
     "platform": "网页端"
+  },
+  {
+    "name": "InVideo AI",
+    "slug": "invideo-ai",
+    "emoji": "🎬",
+    "color": "#FF4F4F",
+    "description": "InVideo AI是一款强大的AI视频生成平台，通过文本提示即可自动生成专业级视频内容。2026年平台集成了最新的AI视频模型，支持长视频生成和实时协作功能，成为企业和内容创作者的首选视频制作工具。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "自动化剪辑"
+      },
+      {
+        "text": "短视频制作"
+      },
+      {
+        "text": "文本转视频",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://invideo.io",
+    "price": "免费版可用，付费版$15/月起",
+    "platform": "网页端/iOS/Android"
   },
   {
     "name": "Rytr",
