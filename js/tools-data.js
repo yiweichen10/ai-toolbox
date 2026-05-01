@@ -3056,6 +3056,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web浏览器"
   },
   {
+    "name": "LottieFiles AI",
+    "slug": "lottiefiles-ai",
+    "emoji": "🎬",
+    "color": "#5B2CFF",
+    "description": "LottieFiles推出的AI动画创作工具，利用人工智能技术帮助用户通过文字描述快速生成和编辑Lottie动画文件。2026年集成了最新的AI模型，支持自然语言生成动画、智能补间和风格迁移，大幅降低了动画创作的技术门槛。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "Lottie动画"
+      },
+      {
+        "text": "AI动画生成"
+      },
+      {
+        "text": "动画设计"
+      },
+      {
+        "text": "在线工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://lottiefiles.com/ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "Web"
+  },
+  {
     "name": "Augie AI",
     "slug": "augie-ai",
     "emoji": "🤖",
@@ -3514,6 +3546,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
   },
   {
+    "name": "Elicit",
+    "slug": "elicit",
+    "emoji": "🔬",
+    "color": "#6B46C1",
+    "description": "Elicit是Ought公司开发的AI研究助手，利用大语言模型自动分析学术论文、提取关键信息、生成文献综述。2026年新增多语言支持和自定义工作流功能，成为科研人员效率提升的必备工具。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "文献综述"
+      },
+      {
+        "text": "学术研究"
+      },
+      {
+        "text": "论文分析",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://elicit.org",
+    "price": "免费版可用，专业版$10/月起",
+    "platform": "网页端"
+  },
+  {
     "name": "Activepieces",
     "slug": "activepieces",
     "emoji": "🔄",
@@ -3730,6 +3791,41 @@ window.__ALL_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://comfy.org/",
+    "price": "免费开源",
+    "platform": "Windows/Mac/Linux"
+  },
+  {
+    "name": "Fooocus",
+    "slug": "fooocus",
+    "emoji": "🎨",
+    "color": "#8B5CF6",
+    "description": "Fooocus是由ControlNet作者lllyasviel开发的开源AI图像生成工具，基于Stable Diffusion XL优化，主打简化操作流程，让用户无需复杂参数调节即可生成高质量图像。2026年持续维护更新，社区生态不断完善。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "图像生成"
+      },
+      {
+        "text": "Stable Diffusion"
+      },
+      {
+        "text": "本地部署"
+      },
+      {
+        "text": "AI艺术",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "月访问量约45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://fooocus.io",
     "price": "免费开源",
     "platform": "Windows/Mac/Linux"
   },
@@ -6688,6 +6784,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web浏览器"
   },
   {
+    "name": "LottieFiles AI",
+    "slug": "lottiefiles-ai",
+    "emoji": "🎬",
+    "color": "#5B2CFF",
+    "description": "LottieFiles推出的AI动画创作工具，利用人工智能技术帮助用户通过文字描述快速生成和编辑Lottie动画文件。2026年集成了最新的AI模型，支持自然语言生成动画、智能补间和风格迁移，大幅降低了动画创作的技术门槛。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "Lottie动画"
+      },
+      {
+        "text": "AI动画生成"
+      },
+      {
+        "text": "动画设计"
+      },
+      {
+        "text": "在线工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://lottiefiles.com/ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "Web"
+  },
+  {
     "name": "Augie AI",
     "slug": "augie-ai",
     "emoji": "🤖",
@@ -7146,6 +7274,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
   },
   {
+    "name": "Elicit",
+    "slug": "elicit",
+    "emoji": "🔬",
+    "color": "#6B46C1",
+    "description": "Elicit是Ought公司开发的AI研究助手，利用大语言模型自动分析学术论文、提取关键信息、生成文献综述。2026年新增多语言支持和自定义工作流功能，成为科研人员效率提升的必备工具。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "文献综述"
+      },
+      {
+        "text": "学术研究"
+      },
+      {
+        "text": "论文分析",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://elicit.org",
+    "price": "免费版可用，专业版$10/月起",
+    "platform": "网页端"
+  },
+  {
     "name": "Activepieces",
     "slug": "activepieces",
     "emoji": "🔄",
@@ -7362,6 +7519,41 @@ window.__REMAINING_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://comfy.org/",
+    "price": "免费开源",
+    "platform": "Windows/Mac/Linux"
+  },
+  {
+    "name": "Fooocus",
+    "slug": "fooocus",
+    "emoji": "🎨",
+    "color": "#8B5CF6",
+    "description": "Fooocus是由ControlNet作者lllyasviel开发的开源AI图像生成工具，基于Stable Diffusion XL优化，主打简化操作流程，让用户无需复杂参数调节即可生成高质量图像。2026年持续维护更新，社区生态不断完善。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "图像生成"
+      },
+      {
+        "text": "Stable Diffusion"
+      },
+      {
+        "text": "本地部署"
+      },
+      {
+        "text": "AI艺术",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "月访问量约45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://fooocus.io",
     "price": "免费开源",
     "platform": "Windows/Mac/Linux"
   },
