@@ -591,6 +591,35 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "文心一言",
+    "slug": "wenxin-yiyan",
+    "emoji": "💬",
+    "color": "#d388c5",
+    "description": "百度推出的国产AI助手，基于文心大模型。深度整合百度搜索生态，中文理解能力优秀，国内可直连使用，是最主流的国产AI助手之一。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "1万",
+    "badge": {
+      "type": null,
+      "text": "NEW"
+    },
+    "url": "https://yiyan.baidu.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "千问",
     "slug": "qwen-chat",
     "emoji": "💬",
@@ -2923,6 +2952,40 @@ window.__ALL_TOOLS__ = [
     "platform": "Web, API, 桌面应用"
   },
   {
+    "name": "Replicate",
+    "slug": "replicate",
+    "emoji": "☁️",
+    "color": "#242424",
+    "description": "Replicate是一个云端AI模型运行平台，允许开发者通过简单的API调用来部署和运行开源机器学习模型。2026年平台已支持超过1000种模型，包括最新的大语言模型、图像生成模型和视频生成模型，并提供按需付费的计费方式。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "云端部署"
+      },
+      {
+        "text": "开源模型"
+      },
+      {
+        "text": "API服务"
+      },
+      {
+        "text": "按需付费"
+      },
+      {
+        "text": "模型市场"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "150万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://replicate.com",
+    "price": "按需付费，GPU计算每秒计费",
+    "platform": "Web/CLI/API"
+  },
+  {
     "name": "Brave Search AI",
     "slug": "brave-search-ai",
     "emoji": "🔍",
@@ -3573,6 +3636,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://elicit.org",
     "price": "免费版可用，专业版$10/月起",
     "platform": "网页端"
+  },
+  {
+    "name": "Anyword",
+    "slug": "anyword",
+    "emoji": "✍️",
+    "color": "#2563EB",
+    "description": "Anyword是一款专注于营销内容创作的AI写作工具，利用先进的机器学习技术帮助用户生成高质量的营销文案、广告文案和社交媒体内容。2026年最新版本增强了多语言支持和品牌调性定制功能，成为营销团队的热门选择。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "营销文案"
+      },
+      {
+        "text": "广告生成"
+      },
+      {
+        "text": "内容优化",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://anyword.com",
+    "price": "免费版每月2000词，专业版$39/月起",
+    "platform": "网页版、Chrome插件、WordPress插件"
   },
   {
     "name": "Activepieces",
@@ -4319,6 +4414,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "文心一言",
+    "slug": "wenxin-yiyan",
+    "emoji": "💬",
+    "color": "#d388c5",
+    "description": "百度推出的国产AI助手，基于文心大模型。深度整合百度搜索生态，中文理解能力优秀，国内可直连使用，是最主流的国产AI助手之一。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "免费可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "1万",
+    "badge": {
+      "type": null,
+      "text": "NEW"
+    },
+    "url": "https://yiyan.baidu.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web"
+  },
+  {
     "name": "千问",
     "slug": "qwen-chat",
     "emoji": "💬",
@@ -6651,6 +6775,40 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web, API, 桌面应用"
   },
   {
+    "name": "Replicate",
+    "slug": "replicate",
+    "emoji": "☁️",
+    "color": "#242424",
+    "description": "Replicate是一个云端AI模型运行平台，允许开发者通过简单的API调用来部署和运行开源机器学习模型。2026年平台已支持超过1000种模型，包括最新的大语言模型、图像生成模型和视频生成模型，并提供按需付费的计费方式。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "云端部署"
+      },
+      {
+        "text": "开源模型"
+      },
+      {
+        "text": "API服务"
+      },
+      {
+        "text": "按需付费"
+      },
+      {
+        "text": "模型市场"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "150万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://replicate.com",
+    "price": "按需付费，GPU计算每秒计费",
+    "platform": "Web/CLI/API"
+  },
+  {
     "name": "Brave Search AI",
     "slug": "brave-search-ai",
     "emoji": "🔍",
@@ -7301,6 +7459,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://elicit.org",
     "price": "免费版可用，专业版$10/月起",
     "platform": "网页端"
+  },
+  {
+    "name": "Anyword",
+    "slug": "anyword",
+    "emoji": "✍️",
+    "color": "#2563EB",
+    "description": "Anyword是一款专注于营销内容创作的AI写作工具，利用先进的机器学习技术帮助用户生成高质量的营销文案、广告文案和社交媒体内容。2026年最新版本增强了多语言支持和品牌调性定制功能，成为营销团队的热门选择。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "营销文案"
+      },
+      {
+        "text": "广告生成"
+      },
+      {
+        "text": "内容优化",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://anyword.com",
+    "price": "免费版每月2000词，专业版$39/月起",
+    "platform": "网页版、Chrome插件、WordPress插件"
   },
   {
     "name": "Activepieces",
