@@ -1985,6 +1985,34 @@ window.__ALL_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "稿定设计AI",
+    "slug": "gaoding-ai",
+    "emoji": "🖼️",
+    "color": "#12dffc",
+    "description": "国内最大的在线设计平台之一，AI功能全面升级。支持AI生图、AI消除、智能排版等，是国内自媒体运营者的设计利器。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "6万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.gaoding.com",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Napkin AI",
     "slug": "napkin-ai",
     "emoji": "📊",
@@ -2807,6 +2835,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web, iOS, Android"
   },
   {
+    "name": "D-ID",
+    "slug": "d-id",
+    "emoji": "🎬",
+    "color": "#FF6B6B",
+    "description": "D-ID 是一款专注于生成生动、逼真数字人视频的AI工具。它通过先进的AI技术将静态照片转化为能说话、有表情的动态视频，广泛应用于虚拟主播、视频营销、教育培训和个人娱乐等领域。截至2026年，其生成视频的真实感和实时动画技术已处于行业领先水平，并集成了更多主流AI模型以提升内容创作灵活性。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "数字人"
+      },
+      {
+        "text": "口型同步"
+      },
+      {
+        "text": "视频生成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "150万+",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.d-id.com",
+    "price": "提供免费试用，付费计划起价为每月5.99美元（个人版），含高级功能和企业方案。",
+    "platform": "Web平台，API接口"
+  },
+  {
     "name": "Wordtune",
     "slug": "wordtune",
     "emoji": "✍️",
@@ -3052,6 +3109,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web浏览器,Figma插件"
   },
   {
+    "name": "Miro AI",
+    "slug": "miro-ai",
+    "emoji": "🤝",
+    "color": "#FFD02F",
+    "description": "Miro AI是全球领先在线协作白板平台Miro的人工智能助手，通过AI技术帮助团队实现智能头脑风暴、自动生成思维导图和流程图，大幅提升协作效率。2026年Miro AI进一步集成多模态生成能力，支持AI驱动的白板内容智能分析和团队创意自动整理功能。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "在线白板"
+      },
+      {
+        "text": "团队协作"
+      },
+      {
+        "text": "思维导图",
+        "type": "free"
+      },
+      {
+        "text": "AI助手"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://miro.com/ai",
+    "price": "免费版可用，付费版$10+/月",
+    "platform": "网页端、iOS、Android、Windows、Mac"
+  },
+  {
     "name": "Framer AI",
     "slug": "framer-ai",
     "emoji": "🎨",
@@ -3082,6 +3171,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.framer.com",
     "price": "免费版可用，付费版$15起/月",
     "platform": "网页端、macOS、Windows"
+  },
+  {
+    "name": "Webflow AI",
+    "slug": "webflow-ai",
+    "emoji": "🕸️",
+    "color": "#146EF5",
+    "description": "Webflow AI 是知名可视化网页构建平台 Webflow 推出的内置智能助手，利用机器学习帮助用户通过自然语言快速生成网站布局、编写网页内容、优化SEO设置，并提供实时的设计建议和代码提示。2026年已升级至更精准的上下文理解能力，大幅提升无代码建站效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "无代码建站"
+      },
+      {
+        "text": "可视化编辑器"
+      },
+      {
+        "text": "响应式设计"
+      },
+      {
+        "text": "网站模板",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约420万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://webflow.com",
+    "price": "免费版可用，付费计划$14/月起，学生教育版免费",
+    "platform": "网页端（浏览器）"
   },
   {
     "name": "Spline AI",
@@ -3670,6 +3791,41 @@ window.__ALL_TOOLS__ = [
     "platform": "网页版、Chrome插件、WordPress插件"
   },
   {
+    "name": "Headlime",
+    "slug": "headlime",
+    "emoji": "✍️",
+    "color": "#4F46E5",
+    "description": "Headlime是一款专注于营销文案和广告标题生成的AI写作工具，利用先进的语言模型帮助用户快速创作吸引眼球的标题和广告文案。2026年版本增强了多语言支持和行业特定模板库，显著提升文案转化率。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "文案生成"
+      },
+      {
+        "text": "广告文案"
+      },
+      {
+        "text": "标题生成"
+      },
+      {
+        "text": "营销工具"
+      },
+      {
+        "text": "AI写作",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://headlime.com",
+    "price": "免费版可用，专业版$29/月起",
+    "platform": "网页端"
+  },
+  {
     "name": "Activepieces",
     "slug": "activepieces",
     "emoji": "🔄",
@@ -3824,6 +3980,41 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / API"
   },
   {
+    "name": "百川智能",
+    "slug": "baichuan-ai",
+    "emoji": "🔵",
+    "color": "#0066FF",
+    "description": "百川智能是由前搜狗CEO王小川创立的中国AI公司，专注于大语言模型的研发与应用。其百川系列模型在中文理解和生成方面表现优异，2026年持续更新迭代，提供API接口和智能对话产品。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大模型"
+      },
+      {
+        "text": "中文AI"
+      },
+      {
+        "text": "LLM"
+      },
+      {
+        "text": "国产AI"
+      },
+      {
+        "text": "智能对话",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "150万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.baichuan-ai.com",
+    "price": "免费使用",
+    "platform": "Web, API"
+  },
+  {
     "name": "商汤日日新",
     "slug": "sensenova",
     "emoji": "🎯",
@@ -3854,6 +4045,101 @@ window.__ALL_TOOLS__ = [
     "url": "https://platform.senseNova.com",
     "price": "免费版+付费API",
     "platform": "网页端 API"
+  },
+  {
+    "name": "Cognition AI",
+    "slug": "cognition-ai",
+    "emoji": "🧠",
+    "color": "#1E3A5F",
+    "description": "Cognition AI是由Cognition Labs开发的AI编程助手，以深度推理和代码分析能力著称。专注于复杂代码调试和架构设计，2026年已集成多模态理解能力，支持更精准的代码生成和错误诊断。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "代码调试"
+      },
+      {
+        "text": "深度推理",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://cognition.ai",
+    "price": "免费版+专业版（$19/月起）",
+    "platform": "Web / VS Code / JetBrains IDE"
+  },
+  {
+    "name": "Sourcegraph Cody",
+    "slug": "sourcegraph-cody",
+    "emoji": "🤖",
+    "color": "#0270D7",
+    "description": "Sourcegraph推出的AI编程助手，通过深度代码理解帮助开发者快速定位信息、编写代码和修复bug。2026年最新版本增强了代码库上下文理解能力，支持多语言代码生成和重构。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "代码理解"
+      },
+      {
+        "text": "编程助手"
+      },
+      {
+        "text": "IDE集成",
+        "type": "free"
+      },
+      {
+        "text": "代码检索"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://sourcegraph.com/cody",
+    "price": "免费版+专业版（$9/月）",
+    "platform": "VS Code、JetBrains IDEs、Neovim、浏览器扩展"
+  },
+  {
+    "name": "Tabnine",
+    "slug": "tabnine",
+    "emoji": "💻",
+    "color": "#6D5FFD",
+    "description": "Tabnine是一款AI驱动的代码补全工具，支持超过20种编程语言，能在VS Code、IntelliJ等主流IDE中提供智能代码建议。2025年推出Tabnine Chat功能，支持自然语言代码生成和解释，大幅提升开发者效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI代码补全"
+      },
+      {
+        "text": "IDE插件"
+      },
+      {
+        "text": "代码助手"
+      },
+      {
+        "text": "智能补全"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约500万月访问量",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.tabnine.com",
+    "price": "免费版可用，付费版$12/月起",
+    "platform": "VS Code、IntelliJ IDEA、PyCharm、WebStorm、Visual Studio、Eclipse等主流IDE"
   },
   {
     "name": "ComfyUI",
@@ -4020,6 +4306,34 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "Mubert",
+    "slug": "mubert",
+    "emoji": "🎵",
+    "color": "#7C3AED",
+    "description": "Mubert是一个AI音乐生成平台，利用先进的人工智能技术为内容创作者生成免版税的背景音乐。用户可以通过简单的描述生成符合特定情绪、风格和时长的音乐，适用于视频、播客、游戏等各种场景。2026年持续更新API服务和企业解决方案。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "免版税音乐"
+      },
+      {
+        "text": "背景音乐制作"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "150万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://mubert.com",
+    "price": "免费版可用，付费版起价$9.9/月",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "AIVA",
     "slug": "aiva",
     "emoji": "🎵",
@@ -4046,6 +4360,68 @@ window.__ALL_TOOLS__ = [
     "url": "https://aiva.ai",
     "price": "免费版可用，付费版$11.99/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Soundraw",
+    "slug": "soundraw",
+    "emoji": "🎵",
+    "color": "#7C3AED",
+    "description": "Soundraw是一款AI音乐生成工具，用户可以通过选择音乐流派、心情和时长，自动生成无版权的原创音乐。2026年持续更新，支持更精细的音乐控制功能，包括调节乐器配置、情感强度等。非常适合内容创作者、视频制作者和游戏开发者使用。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "无版权音乐"
+      },
+      {
+        "text": "音乐制作工具"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://soundraw.io",
+    "price": "免费版可用，付费计划起价$16.99/月",
+    "platform": "网页端"
+  },
+  {
+    "name": "Boomy",
+    "slug": "boomy",
+    "emoji": "🎵",
+    "color": "#1DB954",
+    "description": "Boomy是一款AI音乐生成工具，用户可通过简单操作在数十秒内创建原创音乐作品。平台支持多种音乐风格，包括电子、流行、古典等，并提供编辑和调整功能。截至2026年，Boomy已帮助用户生成超过1500万首AI音乐，是入门级AI音乐创作的人气选择。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "音频创作"
+      },
+      {
+        "text": "音乐制作"
+      },
+      {
+        "text": "免版税音乐"
+      },
+      {
+        "text": "流媒体发布"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://boomy.com",
+    "price": "免费版可用，付费版$9.99/月起",
+    "platform": "Web / iOS / Android"
   },
   {
     "name": "Colossyan",
@@ -4082,6 +4458,72 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端"
   },
   {
+    "name": "Elai",
+    "slug": "elai",
+    "emoji": "🎬",
+    "color": "#6366F1",
+    "description": "Elai是一个AI虚拟人视频生成平台，通过文本即可创建具有逼真AI主播的数字人视频。2026年平台升级至3.0版本，新增多语言配音同步和实时互动功能，成为企业营销和培训视频制作的主流选择。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI虚拟人"
+      },
+      {
+        "text": "文字转视频"
+      },
+      {
+        "text": "多语言支持",
+        "type": "free"
+      },
+      {
+        "text": "企业营销"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://elai.io",
+    "price": "免费试用，付费版本$29/月起",
+    "platform": "网页端"
+  },
+  {
+    "name": "Lalamu",
+    "slug": "lalamu",
+    "emoji": "👄",
+    "color": "#8B5CF6",
+    "description": "Lalamu是一款专业的AI口型同步工具，利用深度学习技术自动将音频与视频中人物的嘴唇动作精确匹配，支持多种语言和口型同步。2026年推出企业版，提供更高精度和批量处理能力。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "口型同步"
+      },
+      {
+        "text": "AI视频工具"
+      },
+      {
+        "text": "唇形匹配"
+      },
+      {
+        "text": "多语言支持"
+      },
+      {
+        "text": "视频编辑"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万月访问",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://lalamu.studio/",
+    "price": "免费版可用，专业版$19.9/月起",
+    "platform": "网页端、Windows、Mac"
+  },
+  {
     "name": "InVideo AI",
     "slug": "invideo-ai",
     "emoji": "🎬",
@@ -4114,6 +4556,66 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端/iOS/Android"
   },
   {
+    "name": "Pictory",
+    "slug": "pictory",
+    "emoji": "🎬",
+    "color": "#8B5CF6",
+    "description": "Pictory是一款AI视频生成工具，利用先进的人工智能技术将文本内容如博客文章、脚本等快速转换为专业视频。2026年最新版本增强了AI配音和自动字幕功能，支持70多种语言，并新增了AI视频数字人功能。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "文本转视频"
+      },
+      {
+        "text": "AI配音"
+      },
+      {
+        "text": "免费版可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://pictory.ai",
+    "price": "免费版可生成3个视频，付费版$19/月起",
+    "platform": "Web端"
+  },
+  {
+    "name": "Kapwing",
+    "slug": "kapwing",
+    "emoji": "🎬",
+    "color": "#6B46C1",
+    "description": "Kapwing是一款基于AI的在线视频编辑平台，提供视频剪辑、字幕生成、智能配音、视频模板等功能。2026年平台持续更新AI视频生成和自动化编辑功能，帮助用户快速制作社交媒体内容。支持团队协作和云端存储，是创作者制作短视频的理想工具。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "在线视频编辑"
+      },
+      {
+        "text": "AI视频制作"
+      },
+      {
+        "text": "字幕生成"
+      },
+      {
+        "text": "社交媒体内容创作"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.kapwing.com",
+    "price": "免费版可用，付费版$20/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "Rytr",
     "slug": "rytr",
     "emoji": "✍️",
@@ -4144,6 +4646,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://rytr.me",
     "price": "免费版每月可生成5000字符，付费版从9美元/月起",
     "platform": "网页版、iOS、Android"
+  },
+  {
+    "name": "Jenni AI",
+    "slug": "jenni-ai",
+    "emoji": "✍️",
+    "color": "#7C3AED",
+    "description": "Jenni AI是一款专注于学术写作和内容创作的AI写作助手，采用先进的AI技术帮助用户快速生成高质量的论文、文章和营销文案。2026年已升级至最新语言模型，写作质量和速度显著提升，支持25种语言，成为学生、研究人员和内容创作者的重要写作工具。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "论文写作"
+      },
+      {
+        "text": "学术助手",
+        "type": "free"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "文案生成"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://jenni.ai",
+    "price": "免费版可用，专业版$20/月起",
+    "platform": "网页端、iOS、Android"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -5808,6 +6345,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "本地部署 / Web"
   },
   {
+    "name": "稿定设计AI",
+    "slug": "gaoding-ai",
+    "emoji": "🖼️",
+    "color": "#12dffc",
+    "description": "国内最大的在线设计平台之一，AI功能全面升级。支持AI生图、AI消除、智能排版等，是国内自媒体运营者的设计利器。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "6万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.gaoding.com",
+    "price": "基础$10/月起",
+    "platform": "本地部署 / Web"
+  },
+  {
     "name": "Napkin AI",
     "slug": "napkin-ai",
     "emoji": "📊",
@@ -6630,6 +7195,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web, iOS, Android"
   },
   {
+    "name": "D-ID",
+    "slug": "d-id",
+    "emoji": "🎬",
+    "color": "#FF6B6B",
+    "description": "D-ID 是一款专注于生成生动、逼真数字人视频的AI工具。它通过先进的AI技术将静态照片转化为能说话、有表情的动态视频，广泛应用于虚拟主播、视频营销、教育培训和个人娱乐等领域。截至2026年，其生成视频的真实感和实时动画技术已处于行业领先水平，并集成了更多主流AI模型以提升内容创作灵活性。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "数字人"
+      },
+      {
+        "text": "口型同步"
+      },
+      {
+        "text": "视频生成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "150万+",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.d-id.com",
+    "price": "提供免费试用，付费计划起价为每月5.99美元（个人版），含高级功能和企业方案。",
+    "platform": "Web平台，API接口"
+  },
+  {
     "name": "Wordtune",
     "slug": "wordtune",
     "emoji": "✍️",
@@ -6875,6 +7469,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web浏览器,Figma插件"
   },
   {
+    "name": "Miro AI",
+    "slug": "miro-ai",
+    "emoji": "🤝",
+    "color": "#FFD02F",
+    "description": "Miro AI是全球领先在线协作白板平台Miro的人工智能助手，通过AI技术帮助团队实现智能头脑风暴、自动生成思维导图和流程图，大幅提升协作效率。2026年Miro AI进一步集成多模态生成能力，支持AI驱动的白板内容智能分析和团队创意自动整理功能。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "在线白板"
+      },
+      {
+        "text": "团队协作"
+      },
+      {
+        "text": "思维导图",
+        "type": "free"
+      },
+      {
+        "text": "AI助手"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://miro.com/ai",
+    "price": "免费版可用，付费版$10+/月",
+    "platform": "网页端、iOS、Android、Windows、Mac"
+  },
+  {
     "name": "Framer AI",
     "slug": "framer-ai",
     "emoji": "🎨",
@@ -6905,6 +7531,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.framer.com",
     "price": "免费版可用，付费版$15起/月",
     "platform": "网页端、macOS、Windows"
+  },
+  {
+    "name": "Webflow AI",
+    "slug": "webflow-ai",
+    "emoji": "🕸️",
+    "color": "#146EF5",
+    "description": "Webflow AI 是知名可视化网页构建平台 Webflow 推出的内置智能助手，利用机器学习帮助用户通过自然语言快速生成网站布局、编写网页内容、优化SEO设置，并提供实时的设计建议和代码提示。2026年已升级至更精准的上下文理解能力，大幅提升无代码建站效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "无代码建站"
+      },
+      {
+        "text": "可视化编辑器"
+      },
+      {
+        "text": "响应式设计"
+      },
+      {
+        "text": "网站模板",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约420万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://webflow.com",
+    "price": "免费版可用，付费计划$14/月起，学生教育版免费",
+    "platform": "网页端（浏览器）"
   },
   {
     "name": "Spline AI",
@@ -7493,6 +8151,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页版、Chrome插件、WordPress插件"
   },
   {
+    "name": "Headlime",
+    "slug": "headlime",
+    "emoji": "✍️",
+    "color": "#4F46E5",
+    "description": "Headlime是一款专注于营销文案和广告标题生成的AI写作工具，利用先进的语言模型帮助用户快速创作吸引眼球的标题和广告文案。2026年版本增强了多语言支持和行业特定模板库，显著提升文案转化率。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "文案生成"
+      },
+      {
+        "text": "广告文案"
+      },
+      {
+        "text": "标题生成"
+      },
+      {
+        "text": "营销工具"
+      },
+      {
+        "text": "AI写作",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://headlime.com",
+    "price": "免费版可用，专业版$29/月起",
+    "platform": "网页端"
+  },
+  {
     "name": "Activepieces",
     "slug": "activepieces",
     "emoji": "🔄",
@@ -7647,6 +8340,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / API"
   },
   {
+    "name": "百川智能",
+    "slug": "baichuan-ai",
+    "emoji": "🔵",
+    "color": "#0066FF",
+    "description": "百川智能是由前搜狗CEO王小川创立的中国AI公司，专注于大语言模型的研发与应用。其百川系列模型在中文理解和生成方面表现优异，2026年持续更新迭代，提供API接口和智能对话产品。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大模型"
+      },
+      {
+        "text": "中文AI"
+      },
+      {
+        "text": "LLM"
+      },
+      {
+        "text": "国产AI"
+      },
+      {
+        "text": "智能对话",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "150万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.baichuan-ai.com",
+    "price": "免费使用",
+    "platform": "Web, API"
+  },
+  {
     "name": "商汤日日新",
     "slug": "sensenova",
     "emoji": "🎯",
@@ -7677,6 +8405,101 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://platform.senseNova.com",
     "price": "免费版+付费API",
     "platform": "网页端 API"
+  },
+  {
+    "name": "Cognition AI",
+    "slug": "cognition-ai",
+    "emoji": "🧠",
+    "color": "#1E3A5F",
+    "description": "Cognition AI是由Cognition Labs开发的AI编程助手，以深度推理和代码分析能力著称。专注于复杂代码调试和架构设计，2026年已集成多模态理解能力，支持更精准的代码生成和错误诊断。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "代码调试"
+      },
+      {
+        "text": "深度推理",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://cognition.ai",
+    "price": "免费版+专业版（$19/月起）",
+    "platform": "Web / VS Code / JetBrains IDE"
+  },
+  {
+    "name": "Sourcegraph Cody",
+    "slug": "sourcegraph-cody",
+    "emoji": "🤖",
+    "color": "#0270D7",
+    "description": "Sourcegraph推出的AI编程助手，通过深度代码理解帮助开发者快速定位信息、编写代码和修复bug。2026年最新版本增强了代码库上下文理解能力，支持多语言代码生成和重构。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "代码理解"
+      },
+      {
+        "text": "编程助手"
+      },
+      {
+        "text": "IDE集成",
+        "type": "free"
+      },
+      {
+        "text": "代码检索"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://sourcegraph.com/cody",
+    "price": "免费版+专业版（$9/月）",
+    "platform": "VS Code、JetBrains IDEs、Neovim、浏览器扩展"
+  },
+  {
+    "name": "Tabnine",
+    "slug": "tabnine",
+    "emoji": "💻",
+    "color": "#6D5FFD",
+    "description": "Tabnine是一款AI驱动的代码补全工具，支持超过20种编程语言，能在VS Code、IntelliJ等主流IDE中提供智能代码建议。2025年推出Tabnine Chat功能，支持自然语言代码生成和解释，大幅提升开发者效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI代码补全"
+      },
+      {
+        "text": "IDE插件"
+      },
+      {
+        "text": "代码助手"
+      },
+      {
+        "text": "智能补全"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约500万月访问量",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.tabnine.com",
+    "price": "免费版可用，付费版$12/月起",
+    "platform": "VS Code、IntelliJ IDEA、PyCharm、WebStorm、Visual Studio、Eclipse等主流IDE"
   },
   {
     "name": "ComfyUI",
@@ -7843,6 +8666,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "Mubert",
+    "slug": "mubert",
+    "emoji": "🎵",
+    "color": "#7C3AED",
+    "description": "Mubert是一个AI音乐生成平台，利用先进的人工智能技术为内容创作者生成免版税的背景音乐。用户可以通过简单的描述生成符合特定情绪、风格和时长的音乐，适用于视频、播客、游戏等各种场景。2026年持续更新API服务和企业解决方案。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "免版税音乐"
+      },
+      {
+        "text": "背景音乐制作"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "150万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://mubert.com",
+    "price": "免费版可用，付费版起价$9.9/月",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "AIVA",
     "slug": "aiva",
     "emoji": "🎵",
@@ -7869,6 +8720,68 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://aiva.ai",
     "price": "免费版可用，付费版$11.99/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Soundraw",
+    "slug": "soundraw",
+    "emoji": "🎵",
+    "color": "#7C3AED",
+    "description": "Soundraw是一款AI音乐生成工具，用户可以通过选择音乐流派、心情和时长，自动生成无版权的原创音乐。2026年持续更新，支持更精细的音乐控制功能，包括调节乐器配置、情感强度等。非常适合内容创作者、视频制作者和游戏开发者使用。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "无版权音乐"
+      },
+      {
+        "text": "音乐制作工具"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://soundraw.io",
+    "price": "免费版可用，付费计划起价$16.99/月",
+    "platform": "网页端"
+  },
+  {
+    "name": "Boomy",
+    "slug": "boomy",
+    "emoji": "🎵",
+    "color": "#1DB954",
+    "description": "Boomy是一款AI音乐生成工具，用户可通过简单操作在数十秒内创建原创音乐作品。平台支持多种音乐风格，包括电子、流行、古典等，并提供编辑和调整功能。截至2026年，Boomy已帮助用户生成超过1500万首AI音乐，是入门级AI音乐创作的人气选择。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "音频创作"
+      },
+      {
+        "text": "音乐制作"
+      },
+      {
+        "text": "免版税音乐"
+      },
+      {
+        "text": "流媒体发布"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://boomy.com",
+    "price": "免费版可用，付费版$9.99/月起",
+    "platform": "Web / iOS / Android"
   },
   {
     "name": "Colossyan",
@@ -7905,6 +8818,72 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端"
   },
   {
+    "name": "Elai",
+    "slug": "elai",
+    "emoji": "🎬",
+    "color": "#6366F1",
+    "description": "Elai是一个AI虚拟人视频生成平台，通过文本即可创建具有逼真AI主播的数字人视频。2026年平台升级至3.0版本，新增多语言配音同步和实时互动功能，成为企业营销和培训视频制作的主流选择。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI虚拟人"
+      },
+      {
+        "text": "文字转视频"
+      },
+      {
+        "text": "多语言支持",
+        "type": "free"
+      },
+      {
+        "text": "企业营销"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://elai.io",
+    "price": "免费试用，付费版本$29/月起",
+    "platform": "网页端"
+  },
+  {
+    "name": "Lalamu",
+    "slug": "lalamu",
+    "emoji": "👄",
+    "color": "#8B5CF6",
+    "description": "Lalamu是一款专业的AI口型同步工具，利用深度学习技术自动将音频与视频中人物的嘴唇动作精确匹配，支持多种语言和口型同步。2026年推出企业版，提供更高精度和批量处理能力。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "口型同步"
+      },
+      {
+        "text": "AI视频工具"
+      },
+      {
+        "text": "唇形匹配"
+      },
+      {
+        "text": "多语言支持"
+      },
+      {
+        "text": "视频编辑"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万月访问",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://lalamu.studio/",
+    "price": "免费版可用，专业版$19.9/月起",
+    "platform": "网页端、Windows、Mac"
+  },
+  {
     "name": "InVideo AI",
     "slug": "invideo-ai",
     "emoji": "🎬",
@@ -7937,6 +8916,66 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端/iOS/Android"
   },
   {
+    "name": "Pictory",
+    "slug": "pictory",
+    "emoji": "🎬",
+    "color": "#8B5CF6",
+    "description": "Pictory是一款AI视频生成工具，利用先进的人工智能技术将文本内容如博客文章、脚本等快速转换为专业视频。2026年最新版本增强了AI配音和自动字幕功能，支持70多种语言，并新增了AI视频数字人功能。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "文本转视频"
+      },
+      {
+        "text": "AI配音"
+      },
+      {
+        "text": "免费版可用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://pictory.ai",
+    "price": "免费版可生成3个视频，付费版$19/月起",
+    "platform": "Web端"
+  },
+  {
+    "name": "Kapwing",
+    "slug": "kapwing",
+    "emoji": "🎬",
+    "color": "#6B46C1",
+    "description": "Kapwing是一款基于AI的在线视频编辑平台，提供视频剪辑、字幕生成、智能配音、视频模板等功能。2026年平台持续更新AI视频生成和自动化编辑功能，帮助用户快速制作社交媒体内容。支持团队协作和云端存储，是创作者制作短视频的理想工具。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "在线视频编辑"
+      },
+      {
+        "text": "AI视频制作"
+      },
+      {
+        "text": "字幕生成"
+      },
+      {
+        "text": "社交媒体内容创作"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.kapwing.com",
+    "price": "免费版可用，付费版$20/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "Rytr",
     "slug": "rytr",
     "emoji": "✍️",
@@ -7967,5 +9006,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://rytr.me",
     "price": "免费版每月可生成5000字符，付费版从9美元/月起",
     "platform": "网页版、iOS、Android"
+  },
+  {
+    "name": "Jenni AI",
+    "slug": "jenni-ai",
+    "emoji": "✍️",
+    "color": "#7C3AED",
+    "description": "Jenni AI是一款专注于学术写作和内容创作的AI写作助手，采用先进的AI技术帮助用户快速生成高质量的论文、文章和营销文案。2026年已升级至最新语言模型，写作质量和速度显著提升，支持25种语言，成为学生、研究人员和内容创作者的重要写作工具。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "论文写作"
+      },
+      {
+        "text": "学术助手",
+        "type": "free"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "文案生成"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://jenni.ai",
+    "price": "免费版可用，专业版$20/月起",
+    "platform": "网页端、iOS、Android"
   }
 ];
