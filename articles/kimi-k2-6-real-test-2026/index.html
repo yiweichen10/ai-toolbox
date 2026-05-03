@@ -106,7 +106,7 @@ var _hmt = _hmt || [];
             </div>
             
             
-<p>Kimi K2.6在SWE-Bench Pro上拿到58.6%，直接干翻了GPT-5.4和Claude Opus 4.6。作为同时用Cursor和Claude Code写了大半年代码的人，我第一时间把5个正在开发的项目扔给了它，看看国产开源模型到底能不能干活。
+<p>Kimi K2.6在SWE-Bench Pro上拿到58.6%，直接干翻了GPT-5.4和<a href="/tools/claude/">Claude</a> Opus 4.6。作为同时用<a href="/tools/cursor/">Cursor</a>和<a href="/tools/claude-code/">Claude Code</a>写了大半年代码的人，我第一时间把5个正在开发的项目扔给了它，看看国产开源模型到底能不能干活。
 </p>
 
 <p>结论先说：编码能力确实够强，Agent集群是真亮点，但API涨价58%这件事让成本优势缩水了不少。
@@ -169,7 +169,7 @@ var _hmt = _hmt || [];
 
 <h3>项目3：英文站多模型API适配层</h3>
 
-<p><strong>任务</strong>：写一个统一的多模型调用层，支持DeepSeek、Gemini、MiniMax和GLM的API
+<p><strong>任务</strong>：写一个统一的多模型调用层，支持<a href="/tools/deepseek/">DeepSeek</a>、<a href="/tools/gemini/">Gemini</a>、MiniMax和GLM的API
 </p>
 <table><thead><tr><th>维度</th><th>Kimi K2.6</th><th>Claude Code</th><th>Cursor</th></tr></thead><tbody><tr><td>首次正确率</td><td><strong>85%</strong></td><td>80%</td><td>75%</td></tr><tr><td>修改次数</td><td>2次</td><td>2次</td><td>3次</td></tr><tr><td>总耗时</td><td>6分钟</td><td>7分钟</td><td>9分钟</td></tr><tr><td>代码质量</td><td><strong>8.5/10</strong></td><td>8/10</td><td>7.5/10</td></tr></tbody></table>
 <p>这个项目K2.6表现最好。原因是多模型API适配主要涉及HTTP请求构造、JSON解析和错误处理，恰好是它最擅长的工程化编码场景。它生成的代码结构清晰，错误处理完整，甚至还主动加了重试机制和超时设置。

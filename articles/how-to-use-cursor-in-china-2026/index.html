@@ -67,6 +67,63 @@
     "@id": "https://www.aitoolbox.hk/articles/how-to-use-cursor-in-china-2026/"
   }
 }</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "国内如何用Cursor：从注册到上手的完整教程（2026年4月更新，含Cursor 3新功能）",
+  "description": "Cursor是目前最火的AI编程工具，但国内用户从注册到付费都有不少坑。这篇教程覆盖Cursor 3全部新功能（Agent窗口、Design Mode、Cloud Agents），详细说明国内注册流程、支付宝付款方法、中国IP模型限制及应对方案，帮你从零开始用上Cursor。",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "第一步：下载安装",
+      "text": "按照指南完成：第一步：下载安装"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "第二步：注册账号",
+      "text": "按照指南完成：第二步：注册账号"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "第三步：认识界面和核心功能",
+      "text": "按照指南完成：第三步：认识界面和核心功能"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "第四步：Cursor 3新功能上手（2026年4月）",
+      "text": "按照指南完成：第四步：Cursor 3新功能上手（2026年4月）"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "第五步：定价方案选择",
+      "text": "按照指南完成：第五步：定价方案选择"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "第六步：国内支付（重点）",
+      "text": "按照指南完成：第六步：国内支付（重点）"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 7,
+      "name": "第七步：中国IP模型限制及应对",
+      "text": "按照指南完成：第七步：中国IP模型限制及应对"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 8,
+      "name": "实际使用技巧",
+      "text": "按照指南完成：实际使用技巧"
+    }
+  ]
+}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -111,7 +168,7 @@ var _hmt = _hmt || [];
 
 <h2>为什么选Cursor而不是其他AI编程工具</h2>
 
-<p>先说结论：如果你是日常写代码的开发者，不管是前端、后端还是全栈，Cursor是2026年综合体验最好的AI编程工具。不是因为它最强（Claude Code在长上下文重构上更强），而是因为它最均衡——补全速度快、Agent模式好用、学习成本低。
+<p>先说结论：如果你是日常写代码的开发者，不管是前端、后端还是全栈，Cursor是2026年综合体验最好的AI编程工具。不是因为它最强（<a href="/tools/claude/">[Claude</a> Code](/tools/claude-code/)在长上下文重构上更强），而是因为它最均衡——补全速度快、Agent模式好用、学习成本低。
 </p>
 
 <p>2026年4月刚发布的Cursor 3又加了几个杀手级功能：Agent窗口（多Agent并行）、Design Mode（自然语言生成前端组件）、Cloud Agents（云端后台跑任务）。这些我在后面会详细讲。
@@ -119,7 +176,7 @@ var _hmt = _hmt || [];
 
 <p>先看看和主要竞品的对比：
 </p>
-<table><thead><tr><th>维度</th><th>Cursor 3</th><th>Claude Code</th><th>Windsurf</th></tr></thead><tbody><tr><td>补全速度</td><td>极快</td><td>中等</td><td>快</td></tr><tr><td>上下文窗口</td><td>120K</td><td>100万token</td><td>未公开</td></tr><tr><td>Agent模式</td><td>多Agent并行，可视化窗口</td><td>单Agent，命令行</td><td>基础Agent</td></tr><tr><td>Design Mode</td><td>支持</td><td>不支持</td><td>不支持</td></tr><tr><td>Cloud Agents</td><td>支持（后台持续运行）</td><td>不支持</td><td>不支持</td></tr><tr><td>免费额度</td><td>有限（约50次Agent/月）</td><td>按API计费</td><td>较多</td></tr><tr><td>Pro价格</td><td>$20/月</td><td>Max $100/月</td><td>$15/月</td></tr></tbody></table>
+<table><thead><tr><th>维度</th><th>Cursor 3</th><th>Claude Code</th><th><a href="/tools/windsurf/">Windsurf</a></th></tr></thead><tbody><tr><td>补全速度</td><td>极快</td><td>中等</td><td>快</td></tr><tr><td>上下文窗口</td><td>120K</td><td>100万token</td><td>未公开</td></tr><tr><td>Agent模式</td><td>多Agent并行，可视化窗口</td><td>单Agent，命令行</td><td>基础Agent</td></tr><tr><td>Design Mode</td><td>支持</td><td>不支持</td><td>不支持</td></tr><tr><td>Cloud Agents</td><td>支持（后台持续运行）</td><td>不支持</td><td>不支持</td></tr><tr><td>免费额度</td><td>有限（约50次Agent/月）</td><td>按API计费</td><td>较多</td></tr><tr><td>Pro价格</td><td>$20/月</td><td>Max $100/月</td><td>$15/月</td></tr></tbody></table>
 <p>如果你是新手或者日常开发为主，选Cursor准没错。如果你需要处理超大型项目（几十万行代码级别的重构），Claude Code更合适。很多老手现在用的是"Claude Code + Cursor"组合——Cursor写日常代码，Claude Code处理大规模重构。
 </p>
 
@@ -153,7 +210,7 @@ var _hmt = _hmt || [];
 <p><strong>1. Tab补全（最重要）</strong>
 </p>
 
-<p>你在编辑器里打字时，Cursor会自动预测你接下来要写的代码，灰色的建议直接按Tab接受。这个功能在免费版（Hobby）也有，且次数相对充足。我个人的使用体验：大概40%的建议可以直接接受，20%需要小改，剩下40%忽略。关键是速度——比Copilot快不少。
+<p>你在编辑器里打字时，Cursor会自动预测你接下来要写的代码，灰色的建议直接按Tab接受。这个功能在免费版（Hobby）也有，且次数相对充足。我个人的使用体验：大概40%的建议可以直接接受，20%需要小改，剩下40%忽略。关键是速度——比<a href="/tools/github-copilot/">Copilot</a>快不少。
 </p>
 
 <p><strong>2. Chat（Ctrl+L / Cmd+L）</strong>
@@ -194,7 +251,7 @@ var _hmt = _hmt || [];
 <p>用自然语言描述你要的前端界面，Agent直接生成React组件并实时预览。比如输入"创建一个带暗色模式的定价卡片，三列布局，中间那列突出显示"——直接出代码和预览。
 </p>
 
-<p>适合快速做原型、改UI、做Landing Page。不适合需要精确到像素的设计稿（那是Figma的事）。
+<p>适合快速做原型、改UI、做Landing Page。不适合需要精确到像素的设计稿（那是<a href="/tools/figma-ai/">Figma</a>的事）。
 </p>
 
 <p><strong>Cloud Agents</strong>
@@ -208,7 +265,7 @@ var _hmt = _hmt || [];
 <p>这是很多人纠结的部分，我直接给你建议：
 </p>
 <table><thead><tr><th>方案</th><th>月费</th><th>包含</th><th>适合谁</th></tr></thead><tbody><tr><td>Hobby（免费）</td><td>$0</td><td>有限Tab补全+约50次Agent/月</td><td>试试看，别指望干正事</td></tr><tr><td>Pro</td><td>$20/月</td><td>无限补全+$20额度</td><td>个人开发者，日常够用</td></tr><tr><td>Pro+</td><td>$60/月</td><td>无限补全+$70额度</td><td>重度用户，每天用Agent</td></tr><tr><td>Ultra</td><td>$200/月</td><td>无限补全+$400额度</td><td>团队Lead/自由职业者</td></tr><tr><td>Teams</td><td>$40/人/月</td><td>管理控制+SSO</td><td>小团队</td></tr><tr><td>Enterprise</td><td>联系销售</td><td>审计日志+SCIM</td><td>大公司</td></tr></tbody></table>
-<p><strong>额度制度说明</strong>：2025年6月起Cursor改为信用点（Credit）制。不同模型消耗不同：Claude Opus 4.6和GPT-5.4最贵（大约一次复杂请求$0.5-1），Gemini系列最便宜（约$0.05-0.1）。Auto模式会自动选性价比最高的模型，建议日常用Auto就行。
+<p><strong>额度制度说明</strong>：2025年6月起Cursor改为信用点（Credit）制。不同模型消耗不同：Claude Opus 4.6和GPT-5.4最贵（大约一次复杂请求$0.5-1），<a href="/tools/gemini/">Gemini</a>系列最便宜（约$0.05-0.1）。Auto模式会自动选性价比最高的模型，建议日常用Auto就行。
 </p>
 
 <p><strong>我的建议</strong>：个人开发者从Pro开始（$20/月），够用。如果经常用Agent跑复杂任务，升级到Pro+（$60/月）。Ultra留给月入过万的人。

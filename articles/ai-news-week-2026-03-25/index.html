@@ -110,7 +110,7 @@ var _hmt = _hmt || [];
         </figure>
             <h2>前言</h2>
 
-<p>2026年3月的最后一周，AI圈连续爆了三个大新闻。MiniMax把编程订阅计划升级为覆盖所有AI模态的Token Plan，字节Seedance 2.0在视频生成评测中超过了Sora和Veo 3，而MiniMax在港交所上市才61天，市值已经冲过百度。
+<p>2026年3月的最后一周，AI圈连续爆了三个大新闻。MiniMax把编程订阅计划升级为覆盖所有AI模态的Token Plan，字节<a href="/tools/seedance/">Seedance</a> 2.0在视频生成评测中超过了<a href="/tools/sora/">Sora</a>和<a href="/tools/veo/">Veo</a> 3，而MiniMax在港交所上市才61天，市值已经冲过百度。
 </p>
 
 <p>三个事件指向同一个趋势：国产AI不再追赶，开始定义新的游戏规则。
@@ -123,12 +123,12 @@ var _hmt = _hmt || [];
 <p>3月23日，MiniMax宣布将其原有的编程订阅计划Coding Plan全面升级为<strong>Token Plan</strong>，官方宣称这是全球首个覆盖全模态模型的统一订阅计划。
 </p>
 
-<p>简单说：以前你用ChatGPT对话付一份钱、用Midjourney画图付一份钱、用Suno做音乐又付一份钱。现在MiniMax说，¥49/月，编程、视频、语音、音乐、图像全部打包给你。
+<p>简单说：以前你用ChatGPT对话付一份钱、用Midjourney画图付一份钱、用<a href="/tools/suno/">Suno</a>做音乐又付一份钱。现在MiniMax说，¥49/月，编程、视频、语音、音乐、图像全部打包给你。
 </p>
 
 <h3>具体价格和配额</h3>
 <table><thead><tr><th>套餐</th><th>月费</th><th>M2.7文本（请求/5小时）</th><th>语音（字符/天）</th><th>图像（张/天）</th><th>视频生成</th></tr></thead><tbody><tr><td>Basic</td><td>¥29</td><td>600次</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Plus</td><td>¥49</td><td>1,500次</td><td>4,000字符</td><td>50张</td><td>768P快解</td></tr><tr><td>Pro</td><td>按需</td><td>更多配额</td><td>更多配额</td><td>更多配额</td><td>更多配额</td></tr></tbody></table>
-<p>Plus版¥49/月看起来很诱人——对比一下：OpenAI ChatGPT Plus $20/月（约¥145）只覆盖文本对话和基础图片生成；Midjourney $10/月起只画图；Runway $15/月起只做视频；Suno $10/月起只做音乐。分开买这些工具，月费至少¥500+。
+<p>Plus版¥49/月看起来很诱人——对比一下：OpenAI ChatGPT Plus $20/月（约¥145）只覆盖文本对话和基础图片生成；Midjourney $10/月起只画图；<a href="/tools/runway/">Runway</a> $15/月起只做视频；Suno $10/月起只做音乐。分开买这些工具，月费至少¥500+。
 </p>
 
 <h3>统一Token计费体系</h3>
@@ -144,7 +144,7 @@ var _hmt = _hmt || [];
 <p><strong>创作者</strong>：如果你是自媒体运营者，需要同时用AI写文案、做配图、配音、做短视频、生成BGM，Token Plan一口气全包了。¥49/月覆盖了之前需要5个工具订阅才能完成的工作流。
 </p>
 
-<p><strong>开发者</strong>：M2.7是MiniMax的主力编程模型，主打"自我进化"和"Cowork Agent"，在SWE-bench上的表现紧追Claude Code。加上视频和语音能力，对需要做AI Agent演示的开发者来说非常实用。
+<p><strong>开发者</strong>：M2.7是MiniMax的主力编程模型，主打"自我进化"和"Cowork Agent"，在SWE-bench上的表现紧追<a href="/tools/claude/">[Claude</a> Code](/tools/claude-code/)。加上视频和语音能力，对需要做AI Agent演示的开发者来说非常实用。
 </p>
 
 <p><strong>我的判断</strong>：¥49/月的价格策略明显是在打价格战。单看任何一个模态，MiniMax可能都不是最强的——对话不如<a href="https://www.aitoolbox.hk/tools/chatgpt/index.html" target="_blank" rel="noopener">ChatGPT</a>、画图不如<a href="https://www.aitoolbox.hk/tools/midjourney/index.html" target="_blank" rel="noopener">Midjourney</a>、视频刚被Seedance超过——但"全包"这个概念本身就有杀伤力。对于预算有限但需要多模态能力的用户，这是目前性价比最高的方案。
@@ -159,7 +159,7 @@ var _hmt = _hmt || [];
 
 <h3>Seedance 2.0的核心能力</h3>
 <table><thead><tr><th>能力</th><th>说明</th></tr></thead><tbody><tr><td>多模态输入</td><td>支持文本、图像、音频、视频混合输入</td></tr><tr><td>音画同步</td><td>生成画面时同步计算音频，口型自然对齐</td></tr><tr><td>物理模拟</td><td>运动稳定性高，物体运动符合物理规律</td></tr><tr><td>镜头控制</td><td>支持推、拉、摇、移专业镜头运动</td></tr><tr><td>输出分辨率</td><td>1080p</td></tr></tbody></table>
-<p>原生音画同步是Seedance 2.0最大的卖点。之前AI生成视频最大的痛点就是口型和声音对不上，需要后期用ElevenLabs等工具重新配音。Seedance直接在生成阶段就解决了这个问题，对短视频创作者来说是实打实的效率提升。
+<p>原生音画同步是Seedance 2.0最大的卖点。之前AI生成视频最大的痛点就是口型和声音对不上，需要后期用<a href="/tools/elevenlabs/">ElevenLabs</a>等工具重新配音。Seedance直接在生成阶段就解决了这个问题，对短视频创作者来说是实打实的效率提升。
 </p>
 
 <h3>可用平台</h3>
@@ -239,7 +239,7 @@ A：最直接的受益是工具选择更多、价格更低。之前需要翻墙+
 </p>
 
 <p><strong>Q5：国产AI在技术上真的超过国外了吗？</strong>
-A：在具体赛道上，国产AI已经开始超越或追平。Seedance 2.0超过Sora是视频生成领域的例子；DeepSeek登顶全球AI应用百强榜第四；Claude Code用了Kimi 2.5作为基座模型。但在通用推理、多模态理解等综合能力上，GPT-5和Claude 4仍有优势。更准确的说法是：差距在缩小，在特定场景已经反超。
+A：在具体赛道上，国产AI已经开始超越或追平。Seedance 2.0超过Sora是视频生成领域的例子；<a href="/tools/deepseek/">DeepSeek</a>登顶全球AI应用百强榜第四；Claude Code用了Kimi 2.5作为基座模型。但在通用推理、多模态理解等综合能力上，GPT-5和Claude 4仍有优势。更准确的说法是：差距在缩小，在特定场景已经反超。
 </p>
 
 <h2>总结</h2>

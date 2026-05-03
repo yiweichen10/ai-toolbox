@@ -2009,7 +2009,7 @@ window.__ALL_TOOLS__ = [
       "text": "NEW"
     },
     "url": "https://www.gaoding.com",
-    "price": "基础$10/月起",
+    "price": "免费版可用，AI创作会员¥30/月起（原价¥59/月）",
     "platform": "本地部署 / Web"
   },
   {
@@ -3137,7 +3137,7 @@ window.__ALL_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://miro.com/ai",
-    "price": "免费版可用，付费版$10+/月",
+    "price": "免费版可用，Starter$8/月起（年付），月付$10/月",
     "platform": "网页端、iOS、Android、Windows、Mac"
   },
   {
@@ -4011,7 +4011,7 @@ window.__ALL_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://www.baichuan-ai.com",
-    "price": "免费使用",
+    "price": "新用户赠¥80额度，API按token计费（Baichuan4-Air¥0.00098/千token起）",
     "platform": "Web, API"
   },
   {
@@ -4072,7 +4072,7 @@ window.__ALL_TOOLS__ = [
       "text": "HOT"
     },
     "url": "https://cognition.ai",
-    "price": "免费版+专业版（$19/月起）",
+    "price": "免费版可用，Pro$20/月起，Max$200/月，Teams$80/月起",
     "platform": "Web / VS Code / JetBrains IDE"
   },
   {
@@ -4107,7 +4107,7 @@ window.__ALL_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://sourcegraph.com/cody",
-    "price": "免费版+专业版（$9/月）",
+    "price": "免费版可用，Pro$9/月，Enterprise$19/月",
     "platform": "VS Code、JetBrains IDEs、Neovim、浏览器扩展"
   },
   {
@@ -4138,7 +4138,7 @@ window.__ALL_TOOLS__ = [
       "text": "HOT"
     },
     "url": "https://www.tabnine.com",
-    "price": "免费版可用，付费版$12/月起",
+    "price": "免费版可用（基础补全），Dev$9/月起（年付），月付$12/月",
     "platform": "VS Code、IntelliJ IDEA、PyCharm、WebStorm、Visual Studio、Eclipse等主流IDE"
   },
   {
@@ -4330,7 +4330,7 @@ window.__ALL_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://mubert.com",
-    "price": "免费版可用，付费版起价$9.9/月",
+    "price": "免费版可用（25首/月），Creator$14/月起，Pro$39/月",
     "platform": "网页端、iOS、Android"
   },
   {
@@ -4386,7 +4386,7 @@ window.__ALL_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://soundraw.io",
-    "price": "免费版可用，付费计划起价$16.99/月",
+    "price": "免费版可生成但不可下载，Creator$16.99/月起",
     "platform": "网页端"
   },
   {
@@ -4420,7 +4420,7 @@ window.__ALL_TOOLS__ = [
       "text": "HOT"
     },
     "url": "https://boomy.com",
-    "price": "免费版可用，付费版$9.99/月起",
+    "price": "免费版可用（不可下载），Creator$9.99/月起，Pro$29.99/月",
     "platform": "Web / iOS / Android"
   },
   {
@@ -4486,7 +4486,7 @@ window.__ALL_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://elai.io",
-    "price": "免费试用，付费版本$29/月起",
+    "price": "免费试用，Starter$29/月起，Pro$99/月",
     "platform": "网页端"
   },
   {
@@ -4520,7 +4520,7 @@ window.__ALL_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://lalamu.studio/",
-    "price": "免费版可用，专业版$19.9/月起",
+    "price": "免费版可用（120积分/月），Basic$9.99/月起，Premium$19.99/月",
     "platform": "网页端、Windows、Mac"
   },
   {
@@ -4581,7 +4581,7 @@ window.__ALL_TOOLS__ = [
       "text": "HOT"
     },
     "url": "https://pictory.ai",
-    "price": "免费版可生成3个视频，付费版$19/月起",
+    "price": "免费试用14天，Starter$25/月起（年付），月付$29/月",
     "platform": "Web端"
   },
   {
@@ -4612,7 +4612,7 @@ window.__ALL_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://www.kapwing.com",
-    "price": "免费版可用，付费版$20/月起",
+    "price": "免费版可用（含水印4分钟），Starter$16/月起，Pro$33/月",
     "platform": "网页端、iOS、Android"
   },
   {
@@ -4679,7 +4679,7 @@ window.__ALL_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://jenni.ai",
-    "price": "免费版可用，专业版$20/月起",
+    "price": "免费版可用（10次AI补全/天），Plus$12/月起，Pro$29/月",
     "platform": "网页端、iOS、Android"
   }
 ];
@@ -6369,7 +6369,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "NEW"
     },
     "url": "https://www.gaoding.com",
-    "price": "基础$10/月起",
+    "price": "免费版可用，AI创作会员¥30/月起（原价¥59/月）",
     "platform": "本地部署 / Web"
   },
   {
@@ -7497,7 +7497,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://miro.com/ai",
-    "price": "免费版可用，付费版$10+/月",
+    "price": "免费版可用，Starter$8/月起（年付），月付$10/月",
     "platform": "网页端、iOS、Android、Windows、Mac"
   },
   {
@@ -8371,7 +8371,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://www.baichuan-ai.com",
-    "price": "免费使用",
+    "price": "新用户赠¥80额度，API按token计费（Baichuan4-Air¥0.00098/千token起）",
     "platform": "Web, API"
   },
   {
@@ -8432,7 +8432,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "HOT"
     },
     "url": "https://cognition.ai",
-    "price": "免费版+专业版（$19/月起）",
+    "price": "免费版可用，Pro$20/月起，Max$200/月，Teams$80/月起",
     "platform": "Web / VS Code / JetBrains IDE"
   },
   {
@@ -8467,7 +8467,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://sourcegraph.com/cody",
-    "price": "免费版+专业版（$9/月）",
+    "price": "免费版可用，Pro$9/月，Enterprise$19/月",
     "platform": "VS Code、JetBrains IDEs、Neovim、浏览器扩展"
   },
   {
@@ -8498,7 +8498,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "HOT"
     },
     "url": "https://www.tabnine.com",
-    "price": "免费版可用，付费版$12/月起",
+    "price": "免费版可用（基础补全），Dev$9/月起（年付），月付$12/月",
     "platform": "VS Code、IntelliJ IDEA、PyCharm、WebStorm、Visual Studio、Eclipse等主流IDE"
   },
   {
@@ -8690,7 +8690,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://mubert.com",
-    "price": "免费版可用，付费版起价$9.9/月",
+    "price": "免费版可用（25首/月），Creator$14/月起，Pro$39/月",
     "platform": "网页端、iOS、Android"
   },
   {
@@ -8746,7 +8746,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://soundraw.io",
-    "price": "免费版可用，付费计划起价$16.99/月",
+    "price": "免费版可生成但不可下载，Creator$16.99/月起",
     "platform": "网页端"
   },
   {
@@ -8780,7 +8780,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "HOT"
     },
     "url": "https://boomy.com",
-    "price": "免费版可用，付费版$9.99/月起",
+    "price": "免费版可用（不可下载），Creator$9.99/月起，Pro$29.99/月",
     "platform": "Web / iOS / Android"
   },
   {
@@ -8846,7 +8846,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://elai.io",
-    "price": "免费试用，付费版本$29/月起",
+    "price": "免费试用，Starter$29/月起，Pro$99/月",
     "platform": "网页端"
   },
   {
@@ -8880,7 +8880,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://lalamu.studio/",
-    "price": "免费版可用，专业版$19.9/月起",
+    "price": "免费版可用（120积分/月），Basic$9.99/月起，Premium$19.99/月",
     "platform": "网页端、Windows、Mac"
   },
   {
@@ -8941,7 +8941,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "HOT"
     },
     "url": "https://pictory.ai",
-    "price": "免费版可生成3个视频，付费版$19/月起",
+    "price": "免费试用14天，Starter$25/月起（年付），月付$29/月",
     "platform": "Web端"
   },
   {
@@ -8972,7 +8972,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://www.kapwing.com",
-    "price": "免费版可用，付费版$20/月起",
+    "price": "免费版可用（含水印4分钟），Starter$16/月起，Pro$33/月",
     "platform": "网页端、iOS、Android"
   },
   {
@@ -9039,7 +9039,7 @@ window.__REMAINING_TOOLS__ = [
       "text": "推荐"
     },
     "url": "https://jenni.ai",
-    "price": "免费版可用，专业版$20/月起",
+    "price": "免费版可用（10次AI补全/天），Plus$12/月起，Pro$29/月",
     "platform": "网页端、iOS、Android"
   }
 ];

@@ -110,7 +110,7 @@ var _hmt = _hmt || [];
         </figure>
             <h2>前言</h2>
 
-<p>网上关于AI编程工具的评测已经多到烂了——清一色的"对比表格+推荐方案+FAQ三件套"，像是ChatGPT批量生成的模板。但有一个问题从来没人认真回答：<strong>AI编程工具在真实项目里，到底能帮你省多少时间？又让你多修了多少bug？</strong>
+<p>网上关于AI编程工具的评测已经多到烂了——清一色的"对比表格+推荐方案+FAQ三件套"，像是<a href="/tools/chatgpt/">ChatGPT</a>批量生成的模板。但有一个问题从来没人认真回答：<strong>AI编程工具在真实项目里，到底能帮你省多少时间？又让你多修了多少bug？</strong>
 </p>
 
 <p>我做了个实验：3个月时间，5个真实项目（不是Hello World，是两个Python后端、一个Next.js前端、一个微信小程序、一个数据爬虫），用4套不同的AI编程方案分别跑，每天记录时间、bug数、代码质量。
@@ -121,7 +121,7 @@ var _hmt = _hmt || [];
 
 <h2>为什么做这个测试</h2>
 
-<p>我之前写过一篇大模型API价格横评，发现最贵的Claude Opus比最便宜的DeepSeek贵178倍。评论区有人问："贵10倍是不是质量也差10倍？"
+<p>我之前写过一篇大模型API价格横评，发现最贵的<a href="/tools/claude/">Claude</a> Opus比最便宜的DeepSeek贵178倍。评论区有人问："贵10倍是不是质量也差10倍？"
 </p>
 
 <p>这个问题没法用价格表回答。所以这次我决定用真实项目来测。不是SWE-bench那种"给一个GitHub issue让AI修"的标准化测试，而是<strong>你日常做的那些事</strong>：写API、改bug、加功能、写测试、重构代码。
@@ -135,7 +135,7 @@ var _hmt = _hmt || [];
 <li>每天记录：编码时间、AI交互次数、引入bug数、修复bug数、代码审查通过率</li>
 </ul>
 <h2>四套测试方案</h2>
-<table><thead><tr><th>方案</th><th>工具</th><th>模型</th><th>月费</th><th>定位</th></tr></thead><tbody><tr><td>A</td><td>Cursor Pro</td><td>Claude Opus 4.6</td><td>$20+超额</td><td>旗舰级，能花钱解决的都不叫事</td></tr><tr><td>B</td><td>Claude Code Pro</td><td>Claude Sonnet 4.6</td><td>$20+超额</td><td>Anthropic原生，终端党</td></tr><tr><td>C</td><td>Cline + DeepSeek V3.2</td><td>DeepSeek V3.2</td><td>~$5（API）</td><td>极致性价比</td></tr><tr><td>D</td><td>GitHub Copilot Pro</td><td>GPT-5.4 Pro</td><td>$10</td><td>主流选择</td></tr></tbody></table>
+<table><thead><tr><th>方案</th><th>工具</th><th>模型</th><th>月费</th><th>定位</th></tr></thead><tbody><tr><td>A</td><td>Cursor Pro</td><td>Claude Opus 4.6</td><td>$20+超额</td><td>旗舰级，能花钱解决的都不叫事</td></tr><tr><td>B</td><td>Claude Code Pro</td><td>Claude Sonnet 4.6</td><td>$20+超额</td><td>Anthropic原生，终端党</td></tr><tr><td>C</td><td>Cline + DeepSeek V3.2</td><td>DeepSeek V3.2</td><td>~$5（API）</td><td>极致性价比</td></tr><tr><td>D</td><td><a href="/tools/github-copilot/">GitHub Copilot</a> Pro</td><td>GPT-5.4 Pro</td><td>$10</td><td>主流选择</td></tr></tbody></table>
 <p>注意方案A和方案B的月费都写了"+超额"——这不是笔误。我测了才知道，$20只是"起步价"。
 </p>
 
@@ -220,7 +220,7 @@ var _hmt = _hmt || [];
 </p>
 
 <h3>SWE-bench最新排行（2026年4月）</h3>
-<table><thead><tr><th>排名</th><th>模型</th><th>SWE-bench Verified</th><th>SWE-bench Pro</th></tr></thead><tbody><tr><td>1</td><td>GPT-5.4 Pro</td><td>86%</td><td>57.7%</td></tr><tr><td>2</td><td>GPT-5.4</td><td>84%</td><td>—</td></tr><tr><td>3</td><td>Claude Opus 4.6</td><td>80.8%</td><td>~45%</td></tr><tr><td>4</td><td>GPT-5.2</td><td>80%</td><td>—</td></tr><tr><td>5</td><td>Claude Sonnet 4.6</td><td>79.6%</td><td>—</td></tr><tr><td>6</td><td>Claude Opus 4.5</td><td>80.9%</td><td>—</td></tr><tr><td>7</td><td>Gemini 3.1 Pro</td><td>75%</td><td>54.2%</td></tr><tr><td>8</td><td>GPT-5.1-Codex-Max</td><td>77.9%</td><td>—</td></tr><tr><td>9</td><td>Kimi K2.5</td><td>76.8%</td><td>—</td></tr><tr><td>10</td><td>GPT-5.2-Codex</td><td>76%</td><td>—</td></tr></tbody></table>
+<table><thead><tr><th>排名</th><th>模型</th><th>SWE-bench Verified</th><th>SWE-bench Pro</th></tr></thead><tbody><tr><td>1</td><td>GPT-5.4 Pro</td><td>86%</td><td>57.7%</td></tr><tr><td>2</td><td>GPT-5.4</td><td>84%</td><td>—</td></tr><tr><td>3</td><td>Claude Opus 4.6</td><td>80.8%</td><td>~45%</td></tr><tr><td>4</td><td>GPT-5.2</td><td>80%</td><td>—</td></tr><tr><td>5</td><td>Claude Sonnet 4.6</td><td>79.6%</td><td>—</td></tr><tr><td>6</td><td>Claude Opus 4.5</td><td>80.9%</td><td>—</td></tr><tr><td>7</td><td><a href="/tools/gemini/">Gemini</a> 3.1 Pro</td><td>75%</td><td>54.2%</td></tr><tr><td>8</td><td>GPT-5.1-Codex-Max</td><td>77.9%</td><td>—</td></tr><tr><td>9</td><td><a href="/tools/kimi/">Kimi</a> K2.5</td><td>76.8%</td><td>—</td></tr><tr><td>10</td><td>GPT-5.2-Codex</td><td>76%</td><td>—</td></tr></tbody></table>
 <p>GPT-5.4 Pro在SWE-bench Verified上86%分，遥遥领先。按理说它在真实项目里应该最强。但实际上——
 </p>
 

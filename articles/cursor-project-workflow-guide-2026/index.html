@@ -67,6 +67,57 @@
     "@id": "https://www.aitoolbox.hk/articles/cursor-project-workflow-guide-2026/"
   }
 }</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cursor项目级AI编程实战指南：从单文件到10万行工程，我用半年总结的8条黄金规则",
+  "description": "Cursor项目级AI编程实战指南。我用Cursor开发了半年、累计3个项目10万行代码，总结出8条黄金规则：.cursorrules配置、Composer多文件重构、Agent模式提效、上下文管理技巧、.cursorignore避坑等。真实案例+性能数据+踩坑记录，帮你在真实项目中把AI编程效率拉满。",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "黄金规则1：花20分钟写好.cursorrules，省下200小时",
+      "text": "按照指南完成：黄金规则1：花20分钟写好.cursorrules，省下200小时"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "黄金规则2：Composer不是替代品，是你的多文件外科手术刀",
+      "text": "按照指南完成：黄金规则2：Composer不是替代品，是你的多文件外科手术刀"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "黄金规则3：Agent模式不是万能的，知道什么时候用什么时候不用",
+      "text": "按照指南完成：黄金规则3：Agent模式不是万能的，知道什么时候用什么时候不用"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "黄金规则4：上下文管理——给AI看什么比问什么更重要",
+      "text": "按照指南完成：黄金规则4：上下文管理——给AI看什么比问什么更重要"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "黄金规则5：.cursorignore是你的保险丝",
+      "text": "按照指南完成：黄金规则5：.cursorignore是你的保险丝"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "黄金规则6：善用Tab和Diff，不要无脑Accept All",
+      "text": "按照指南完成：黄金规则6：善用Tab和Diff，不要无脑Accept All"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 7,
+      "name": "黄金规则7：版本控制是你的安全网，但不要过度依赖",
+      "text": "按照指南完成：黄金规则7：版本控制是你的安全网，但不要过度依赖"
+    }
+  ]
+}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -311,7 +362,7 @@ package-lock.json
 <p>但注意：<strong>不要每改一行就commit</strong>。过度commit会导致git历史混乱，rollback时找不到正确的版本。我的节奏是：每完成一个逻辑完整的改动就commit。
 </p>
 
-<h2>黄金规则8：和GitHub Copilot对比，Cursor到底值不值$20/月？</h2>
+<h2>黄金规则8：和<a href="/tools/github-copilot/">GitHub Copilot</a>对比，Cursor到底值不值$20/月？</h2>
 
 <p>作为同时用过两个工具的人，我来给你一个真实对比：
 </p>
@@ -328,7 +379,7 @@ package-lock.json
 </ul>
 <ul><li><strong>Composer最多拖15个文件</strong>。超过这个数量，AI的注意力会分散，修改质量明显下降。如果涉及的文件更多，分批处理。</li>
 </ul>
-<ul><li><strong>Agent模式会消耗API额度</strong>。如果你用的是Claude API，Agent模式一次复杂任务可能消耗$0.5-2的token费用。注意监控用量。</li>
+<ul><li><strong>Agent模式会消耗API额度</strong>。如果你用的是<a href="/tools/claude/">Claude</a> API，Agent模式一次复杂任务可能消耗$0.5-2的token费用。注意监控用量。</li>
 </ul>
 <ul><li><strong>Windows用户注意路径问题</strong>。Composer在Windows上偶尔会有路径分隔符问题（\\ vs /），导致AI生成的import路径错误。我在.cursorrules里显式指定了"使用正斜杠"来规避。</li>
 </ul>

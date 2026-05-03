@@ -67,6 +67,39 @@
     "@id": "https://www.aitoolbox.hk/articles/local-ai-model-deployment-guide-2026/"
   }
 }</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "2026年本地部署AI大模型完整指南：从4GB笔记本到8卡服务器怎么选",
+  "description": "2026年本地部署AI大模型保姆级指南。按显卡配置分级推荐：4GB显存用Phi-4、8GB用Qwen3-8B、16GB用Qwen3-32B、24GB用DeepSeek-V3-lite。覆盖Ollama/LM Studio/vLLM三大部署工具实测对比，附显存需求和推理速度数据。",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "为什么折腾本地部署",
+      "text": "按照指南完成：为什么折腾本地部署"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "按你的硬件配置选模型",
+      "text": "按照指南完成：按你的硬件配置选模型"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "三大部署工具实测对比",
+      "text": "按照指南完成：三大部署工具实测对比"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "部署步骤（以Ollama为例）",
+      "text": "按照指南完成：部署步骤（以Ollama为例）"
+    }
+  ]
+}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -106,7 +139,7 @@ var _hmt = _hmt || [];
             </div>
             
             <h2>结论先说</h2>
-<p><p>跑了一周本地大模型，测试了15个主流开源模型在4种硬件配置下的表现。核心结论：8GB显存是目前本地部署的"甜蜜点"，用Ollama跑Qwen3-8B量化版，日常问答和写代码完全够用，零成本无限用。如果你有16GB以上显存，直接上Qwen3.5-32B的INT4量化，效果已经接近ChatGPT-4的水平。</p>
+<p><p>跑了一周本地大模型，测试了15个主流开源模型在4种硬件配置下的表现。核心结论：8GB显存是目前本地部署的"甜蜜点"，用Ollama跑Qwen3-8B量化版，日常问答和写代码完全够用，零成本无限用。如果你有16GB以上显存，直接上Qwen3.5-32B的INT4量化，效果已经接近<a href="/tools/chatgpt/">ChatGPT</a>-4的水平。</p>
 </p>
 
 <h2>为什么折腾本地部署</h2>
@@ -129,7 +162,7 @@ var _hmt = _hmt || [];
 </tbody>
 </p>
 </table>
-<p><p>4GB配置说实话体验一般，只能跑最小号的模型，响应速度在3-5 tokens/s，偶尔还会出现明显的理解偏差。如果你的电脑只有核显，我建议先试试Gemini或Kimi的免费额度，比本地跑4B模型体验好得多。</p>
+<p><p>4GB配置说实话体验一般，只能跑最小号的模型，响应速度在3-5 tokens/s，偶尔还会出现明显的理解偏差。如果你的电脑只有核显，我建议先试试<a href="/tools/gemini/">Gemini</a>或<a href="/tools/kimi/">Kimi</a>的免费额度，比本地跑4B模型体验好得多。</p>
 </p>
 
 <h3>8GB显存（RTX 3060/4060/苹果M1）</h3>

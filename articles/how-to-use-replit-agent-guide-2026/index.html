@@ -67,6 +67,45 @@
     "@id": "https://www.aitoolbox.hk/articles/how-to-use-replit-agent-guide-2026/"
   }
 }</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "国内如何使用Replit Agent：从注册到部署上线完整教程（2026年5月更新）",
+  "description": "2026年最新Replit Agent 3完整使用教程，覆盖国内注册、项目创建、数据库配置、一键部署全流程。包含Core 5和Pro 00两档套餐真实花费实测、积分消耗机制详解、3个避坑建议，帮助国内用户零基础上手Replit AI编程。",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "第一步：注册账号（国内用户）",
+      "text": "按照指南完成：第一步：注册账号（国内用户）"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "第二步：理解定价和积分（2026年2月改版后）",
+      "text": "按照指南完成：第二步：理解定价和积分（2026年2月改版后）"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "第三步：创建第一个项目",
+      "text": "按照指南完成：第三步：创建第一个项目"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "第四步：数据库配置（进阶但重要）",
+      "text": "按照指南完成：第四步：数据库配置（进阶但重要）"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "第五步：一键部署",
+      "text": "按照指南完成：第五步：一键部署"
+    }
+  ]
+}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -122,7 +161,7 @@ var _hmt = _hmt || [];
 <p>一句话：你用中文告诉它"帮我做一个待办事项Web应用，要有用户登录功能"，它会自动生成前后端代码、创建数据库表、配置环境变量、部署到一个公开URL上——全程不需要你写一行代码。
 </p>
 
-<p>它和Cursor、GitHub Copilot这类工具的核心区别：<strong>Replit是云端一体化的</strong>。你不需要本地装任何东西，不需要配环境，不需要管部署。打开浏览器就能干活。
+<p>它和<a href="/tools/cursor/">Cursor</a>、<a href="/tools/github-copilot/">GitHub [Copilot</a>](/tools/github-copilot/)这类工具的核心区别：<strong>Replit是云端一体化的</strong>。你不需要本地装任何东西，不需要配环境，不需要管部署。打开浏览器就能干活。
 </p>
 
 <h2>第一步：注册账号（国内用户）</h2>
@@ -293,8 +332,8 @@ var _hmt = _hmt || [];
 <p>Free套餐虽然能用Agent，但积分非常有限。大概够你创建1-2个简单的小项目。不要指望在Free套餐上做什么正经项目。
 </p>
 
-<h2>Replit Agent vs Cursor vs Bolt.new：什么时候用哪个</h2>
-<table><thead><tr><th>维度</th><th>Replit Agent</th><th>Cursor</th><th>Bolt.new</th></tr></thead><tbody><tr><td>运行环境</td><td>云端浏览器</td><td>本地IDE</td><td>云端浏览器</td></tr><tr><td>适合阶段</td><td>原型/新项目</td><td>全流程开发</td><td>前端原型</td></tr><tr><td>数据库</td><td>自动创建管理</td><td>需手动配</td><td>无内置</td></tr><tr><td>部署</td><td>一键部署到云端</td><td>需自行部署</td><td>5/月才有托管</td></tr><tr><td>代码质量</td><td>够用但不算精致</td><td>最高</td><td>中等</td></tr><tr><td>月费</td><td>/usr/bin/bash-00</td><td>0</td><td>/usr/bin/bash-5</td></tr><tr><td>国内使用</td><td>可直连</td><td>需安装客户端</td><td>可直连</td></tr></tbody></table>
+<h2>Replit Agent vs Cursor vs <a href="/tools/bolt.new/">Bolt.new</a>：什么时候用哪个</h2>
+<table><thead><tr><th>维度</th><th>Replit Agent</th><th>Cursor</th><th><a href="/tools/bolt.new/">Bolt.new</a></th></tr></thead><tbody><tr><td>运行环境</td><td>云端浏览器</td><td>本地IDE</td><td>云端浏览器</td></tr><tr><td>适合阶段</td><td>原型/新项目</td><td>全流程开发</td><td>前端原型</td></tr><tr><td>数据库</td><td>自动创建管理</td><td>需手动配</td><td>无内置</td></tr><tr><td>部署</td><td>一键部署到云端</td><td>需自行部署</td><td>5/月才有托管</td></tr><tr><td>代码质量</td><td>够用但不算精致</td><td>最高</td><td>中等</td></tr><tr><td>月费</td><td>/usr/bin/bash-00</td><td>0</td><td>/usr/bin/bash-5</td></tr><tr><td>国内使用</td><td>可直连</td><td>需安装客户端</td><td>可直连</td></tr></tbody></table>
 <p><strong>我的建议</strong>：
 </p>
 <ul><li>想快速搭个能用的东西 → Replit Agent</li>
@@ -323,7 +362,7 @@ var _hmt = _hmt || [];
 <p>可以。点右上角的菜单 → "Download as zip"，会下载完整的项目文件。也可以用Git clone。我推荐搭好原型后导出到本地用Cursor继续打磨。
 </p>
 
-<h3>Q5：Replit Agent和ChatGPT写代码有什么区别？</h3>
+<h3>Q5：Replit Agent和<a href="/tools/chatgpt/">ChatGPT</a>写代码有什么区别？</h3>
 
 <p>ChatGPT给你代码片段，你自己组装和运行。Replit Agent是端到端的——它写代码、运行、调试、部署全包了。对于不会编程的人来说，Replit的体验完全不同。
 </p>
@@ -365,11 +404,6 @@ var _hmt = _hmt || [];
                     <div style="font-weight:600;">ChatGPT</div>
                     <div style="font-size:13px;color:#666;">AI对话</div>
                 </a>
-<a href="/tools/github-copilot/index.html" class="related-card">
-                    <div style="font-size:24px;margin-bottom:8px;">💻</div>
-                    <div style="font-weight:600;">GitHub Copilot</div>
-                    <div style="font-size:13px;color:#666;">AI编程</div>
-                </a>
 <a href="/tools/cursor/index.html" class="related-card">
                     <div style="font-size:24px;margin-bottom:8px;">⬛</div>
                     <div style="font-weight:600;">Cursor</div>
@@ -383,6 +417,11 @@ var _hmt = _hmt || [];
 <a href="/tools/bolt.new/index.html" class="related-card">
                     <div style="font-size:24px;margin-bottom:8px;">💻</div>
                     <div style="font-weight:600;">Bolt.new</div>
+                    <div style="font-size:13px;color:#666;">AI编程</div>
+                </a>
+<a href="/tools/github-copilot/index.html" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                    <div style="font-weight:600;">GitHub Copilot</div>
                     <div style="font-size:13px;color:#666;">AI编程</div>
                 </a>
 </div>

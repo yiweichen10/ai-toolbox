@@ -2445,51 +2445,6 @@ def build_article_page(article, all_articles, all_tools=None):
         }
     }, ensure_ascii=False, indent=2)
 
-    # D型文章（操作指南类）自动生成 HowTo Schema
-    howto_schema_json = ''
-    d_type_keywords = ['指南', '教程', '使用方法', '怎么用', '如何使用', '步骤', '操作', '入门', '上手', '玩法', '如何注册', '如何用']
-    is_d_type = any(kw in article.get('title', '') for kw in d_type_keywords)
-    if is_d_type:
-        content_raw = article.get('content', '')
-        # 提取步骤：支持三种格式
-        # 1. Markdown h2: ## 标题
-        h2_steps = re.findall(r'^## (.+)$', content_raw, re.MULTILINE)
-        # 2. HTML h2: <h2...>标题</h2>
-        if not h2_steps:
-            h2_steps = re.findall(r'<h2[^>]*>(.*?)</h2>', content_raw, re.IGNORECASE)
-            # 去掉HTML标签
-            h2_steps = [re.sub(r'<[^>]+>', '', h).strip() for h in h2_steps]
-        # 3. 正文中的"第X步"或"步骤X"
-        if not h2_steps:
-            h2_steps = re.findall(r'第[一二三四五六七八九十\d]+步[：:]\s*(.+?)(?:[。\n]|$)', content_raw)
-            if not h2_steps:
-                h2_steps = re.findall(r'(第[一二三四五六七八九十\d]+步[：:][^\n。]{2,30})', content_raw)
-        # 过滤：只保留包含步骤/操作语义的标题
-        step_keywords = ['第', '步', '如何', '怎么', '注册', '安装', '配置', '创建', '部署', '使用', '设置', '登录', '上手', '入门', '操作', '技巧', '方法', '开始', '流程']
-        filtered_steps = [h for h in h2_steps if any(sk in h for sk in step_keywords)]
-        # 如果过滤后太少（<2步），则用所有非FAQ/总结/避坑的标题
-        if len(filtered_steps) < 2:
-            skip_keywords = ['FAQ', '总结', '为什么', '常见', '对比', 'vs', '避坑', '前言', '背景']
-            filtered_steps = [h for h in h2_steps if not any(sk in h for sk in skip_keywords)]
-        if len(filtered_steps) >= 2:
-            howto_steps = []
-            for i, step_title in enumerate(filtered_steps[:8], 1):  # 最多8步
-                howto_steps.append({
-                    "@type": "HowToStep",
-                    "position": i,
-                    "name": step_title,
-                    "text": f"按照指南完成：{step_title}"
-                })
-            howto_schema = {
-                "@context": "https://schema.org",
-                "@type": "HowTo",
-                "name": article['title'],
-                "description": article.get('description', ''),
-                "totalTime": "PT30M",
-                "step": howto_steps
-            }
-            howto_schema_json = json.dumps(howto_schema, ensure_ascii=False, indent=2)
-
     # 渲染文章内容，剥离开头重复的H1标题（模板已有<h1>）
     content_md = article.get('content', '')
     content_md = re.sub(r'^# .+\n?', '', content_md)
@@ -2514,7 +2469,7 @@ def build_article_page(article, all_articles, all_tools=None):
     <meta name="twitter:description" content="{escape_html(article.get('description', ''))}">
 ''' + (f'    <meta name="twitter:image" content="{og_image}">\n' if og_image else '') + f'''    <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_article_json}</script>
-    <script type="application/ld+json">{structured_data}</script>''' + (f'\n    <script type="application/ld+json">{howto_schema_json}</script>' if howto_schema_json else '') + f'''
+    <script type="application/ld+json">{structured_data}</script>
 {BAIDU_TONGJI}
 </head>
 <body>
