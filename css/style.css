@@ -106,12 +106,19 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   background-color: var(--body-bg);
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* 隐藏滚动条增强现代感 (可选) */
@@ -491,7 +498,7 @@ body {
 /* 首页主布局：无右侧边栏，全宽 */
 .main-layout-no-sidebar {
   min-width: 0;
-  grid-template-columns: 1fr;
+  width: 100%;
   display: block;
 }
 
@@ -2248,6 +2255,12 @@ body {
   .newsletter { padding: 32px 20px; }
   .newsletter .email-form { flex-direction: column; }
   .article-body { padding: 28px 20px; }
+  /* Fix 3：平板端侧边栏缩小，主内容区自适应 */
+  .home-container {
+    grid-template-columns: minmax(120px, 150px) 1fr;
+    padding: 20px;
+  }
+  .sidebar-cat { font-size: 13px; padding: 8px 10px; }
 }
 
 /* 手机端 (<768px)：单列布局、大触摸目标 */
