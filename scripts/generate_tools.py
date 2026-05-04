@@ -403,19 +403,19 @@ def main():
             generated.append(tool_data)
             existing_names.append(tool_data["name"])
             existing_slugs.append(tool_data["slug"])
+            # 逐个保存，防止中途超时丢失数据
+            existing_tools.append(tool_data)
+            with open(TOOLS_JSON_PATH, 'w', encoding='utf-8') as f:
+                json.dump(existing_tools, f, ensure_ascii=False, indent=4)
+            print(f"    💾 已保存到 tools.json (累计 {len(existing_tools)} 个)")
         time.sleep(1)
 
     if not generated:
         print("\n没有成功生成任何工具。")
         return
 
-    # 写入 tools.json
-    all_tools = existing_tools + generated
-    with open(TOOLS_JSON_PATH, 'w', encoding='utf-8') as f:
-        json.dump(all_tools, f, ensure_ascii=False, indent=4)
-
-    total = len(all_tools)
-    total_unpublished = sum(1 for t in all_tools if not t.get("published", False))
+    total = len(existing_tools)
+    total_unpublished = sum(1 for t in existing_tools if not t.get("published", False))
     print(f"\n✅ 完成！成功生成 {len(generated)} 个工具")
     print(f"   总计: {total} 个工具, 未发布: {total_unpublished} 个")
     print(f"   预计还可发布: {total_unpublished // 3} 天")

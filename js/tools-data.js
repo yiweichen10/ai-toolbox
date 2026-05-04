@@ -4840,6 +4840,104 @@ window.__ALL_TOOLS__ = [
     "price": "免费版可用（10次AI补全/天），Plus$12/月起，Pro$29/月",
     "platform": "网页端、iOS、Android",
     "created_date": "2026-03-22"
+  },
+  {
+    "name": "Frase",
+    "slug": "frase",
+    "emoji": "📝",
+    "color": "#6C47FF",
+    "description": "Frase是一款AI驱动的内容营销和SEO优化工具，通过智能分析搜索意图帮助用户创建高排名内容。2026年最新版本增强了AI写作助手和多语言支持功能，成为内容创作者提升搜索排名的首选工具。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "SEO优化"
+      },
+      {
+        "text": "内容营销"
+      },
+      {
+        "text": "AI写作工具"
+      },
+      {
+        "text": "文案生成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://frase.io",
+    "price": "免费版有限功能，专业版$12.99/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Surfer SEO",
+    "slug": "surfer-seo",
+    "emoji": "🌊",
+    "color": "#00C853",
+    "description": "Surfer SEO是一款专业的AI内容优化和SEO分析工具，通过实时分析搜索引擎结果页面（SERP），为用户提供内容优化建议、关键词策略和内容大纲。2026年集成了最新的NLP语义分析和AI内容生成功能，帮助用户创建更符合搜索引擎偏好的高质量内容。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "SEO优化"
+      },
+      {
+        "text": "内容营销"
+      },
+      {
+        "text": "关键词研究"
+      },
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "SER分析"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约180万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://surferseo.com",
+    "price": "免费版可用，付费版$49起/月",
+    "platform": "Web浏览器（Chrome/Safari/Firefox扩展）"
+  },
+  {
+    "name": "面壁智能",
+    "slug": "modelbest",
+    "emoji": "🧠",
+    "color": "#4A90D9",
+    "description": "面壁智能（ModelBest）是中国领先的大模型初创企业，专注于轻量级大模型和AI Agent研发。2026年推出新一代Agent产品，在企业级AI应用领域表现突出，开源模型社区活跃度持续上升。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大模型"
+      },
+      {
+        "text": "AI Agent",
+        "type": "free"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "中国公司"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://modelbest.cn",
+    "price": "免费版+企业付费",
+    "platform": "Web/API/本地部署"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -9456,5 +9554,103 @@ window.__REMAINING_TOOLS__ = [
     "price": "免费版可用（10次AI补全/天），Plus$12/月起，Pro$29/月",
     "platform": "网页端、iOS、Android",
     "created_date": "2026-03-22"
+  },
+  {
+    "name": "Frase",
+    "slug": "frase",
+    "emoji": "📝",
+    "color": "#6C47FF",
+    "description": "Frase是一款AI驱动的内容营销和SEO优化工具，通过智能分析搜索意图帮助用户创建高排名内容。2026年最新版本增强了AI写作助手和多语言支持功能，成为内容创作者提升搜索排名的首选工具。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "SEO优化"
+      },
+      {
+        "text": "内容营销"
+      },
+      {
+        "text": "AI写作工具"
+      },
+      {
+        "text": "文案生成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://frase.io",
+    "price": "免费版有限功能，专业版$12.99/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Surfer SEO",
+    "slug": "surfer-seo",
+    "emoji": "🌊",
+    "color": "#00C853",
+    "description": "Surfer SEO是一款专业的AI内容优化和SEO分析工具，通过实时分析搜索引擎结果页面（SERP），为用户提供内容优化建议、关键词策略和内容大纲。2026年集成了最新的NLP语义分析和AI内容生成功能，帮助用户创建更符合搜索引擎偏好的高质量内容。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "SEO优化"
+      },
+      {
+        "text": "内容营销"
+      },
+      {
+        "text": "关键词研究"
+      },
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "SER分析"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约180万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://surferseo.com",
+    "price": "免费版可用，付费版$49起/月",
+    "platform": "Web浏览器（Chrome/Safari/Firefox扩展）"
+  },
+  {
+    "name": "面壁智能",
+    "slug": "modelbest",
+    "emoji": "🧠",
+    "color": "#4A90D9",
+    "description": "面壁智能（ModelBest）是中国领先的大模型初创企业，专注于轻量级大模型和AI Agent研发。2026年推出新一代Agent产品，在企业级AI应用领域表现突出，开源模型社区活跃度持续上升。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大模型"
+      },
+      {
+        "text": "AI Agent",
+        "type": "free"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "中国公司"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://modelbest.cn",
+    "price": "免费版+企业付费",
+    "platform": "Web/API/本地部署"
   }
 ];
