@@ -8,9 +8,9 @@
   z-index: 200;
 }
 .header-inner {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 12px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,12 +26,12 @@
   border-top: 1px solid #f1f5f9;
 }
 .global-nav-inner {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 2px;
-  padding: 8px 24px;
+  padding: 8px 32px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -158,7 +158,7 @@ body {
 .search-bar-below-nav {
   background: var(--surface-bg);
   border-bottom: 1px solid #f1f5f9;
-  padding: 14px 24px;
+  padding: 14px 32px;
 }
 .search-bar-inner {
   max-width: 680px;
@@ -311,14 +311,16 @@ body {
 
 /* 主容器 */
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 40px 24px;
+  padding: 40px 32px;
 }
 
 /* 首页全宽容器（PC端左右布局铺满） */
 .home-container {
-  max-width: 100%;
+  max-width: 1440px;
+  width: 100%;
+  box-sizing: border-box;
   padding: 30px 32px;
   display: grid;
   grid-template-columns: 180px 1fr;
