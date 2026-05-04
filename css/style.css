@@ -8,8 +8,6 @@
   z-index: 200;
 }
 .header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 12px 32px;
   display: flex;
   justify-content: space-between;
@@ -26,8 +24,6 @@
   border-top: 1px solid #f1f5f9;
 }
 .global-nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 2px;
@@ -311,17 +307,13 @@ body {
 
 /* 主容器 */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
   padding: 40px 32px;
 }
 
-/* 首页全宽容器（PC端左右布局铺满，居中） */
+/* 首页全宽容器（PC端左右布局铺满） */
 .home-container {
-  max-width: 1200px;
-  margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
   padding: 30px 32px;
