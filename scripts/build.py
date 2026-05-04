@@ -2761,6 +2761,56 @@ def build_index_page(tools, articles):
         all_tools_html += make_card_html(t, i)
     html = replace_between_tags(html, '<div class="tools-grid" id="toolsGrid">', all_tools_html)
 
+    # ── AI前沿Tab新闻卡片：从articles.json动态获取最新5篇 ──
+    def parse_article_date(d):
+        """统一解析多种日期格式，缺省年份补2026"""
+        from datetime import datetime
+        d = d.strip()
+        for fmt in ('%Y-%m-%d', '%m/%d/%Y', '%Y/%m/%d'):
+            try:
+                return datetime.strptime(d, fmt)
+            except:
+                continue
+        # 只有月/日格式，补2026年
+        try:
+            dt = datetime.strptime(d, '%m/%d')
+            return dt.replace(year=2026)
+        except:
+            pass
+        try:
+            dt = datetime.strptime(d, '%m月%d日')
+            return dt.replace(year=2026)
+        except:
+            pass
+        return datetime.min
+    sorted_articles = sorted(articles, key=lambda a: parse_article_date(a.get('date', '')), reverse=True)
+    news_html = ''
+    tag_names = {'AI对话': 'AI资讯', 'AI写作': 'AI资讯', 'AI绘画': 'AI资讯', 'AI编程': '教程',
+                 'AI视频': 'AI资讯', 'AI音频': 'AI资讯', 'AI办公': 'AI资讯', 'AI设计': 'AI资讯',
+                 'AI搜索': 'AI资讯', 'AI翻译': 'AI资讯', 'AI自动化': 'AI教程', 'AI效率': '效率'}
+    for a in sorted_articles[:5]:
+        d = a.get('date', '')
+        # 统一显示为 MM/DD
+        display_date = d
+        if '-' in d and len(d) == 10:
+            parts = d.split('-')
+            display_date = f'{int(parts[1]):02d}/{int(parts[2]):02d}'
+        elif '/' in d:
+            parts = d.split('/')
+            if len(parts) == 3:
+                display_date = f'{int(parts[0]):02d}/{int(parts[1]):02d}'
+        cat = a.get('category', '')
+        tag = tag_names.get(cat, 'AI资讯')
+        news_html += f'''                                <a class="news-card-item" href="/articles/{a['slug']}/index.html">
+                                    <span class="news-card-date">{display_date}</span>
+                                    <span class="news-card-title">{escape_html(a['title'])}</span>
+                                    <span class="news-card-tag">{tag}</span>
+                                </a>
+'''
+    # 替换新闻卡片（保留"更多文章"链接）
+    news_re = re.compile(r'<!-- NEWS_CARDS_START -->[\s\S]*?<!-- NEWS_CARDS_END -->')
+    html = news_re.sub(f'<!-- NEWS_CARDS_START -->\n{news_html}                                <!-- NEWS_CARDS_END -->', html)
+
     # 工具数量显示 — 用re.sub替换（模板中可能已有内容如"共 100+ 款"）
     html = re.sub(r'<span class="tool-count" id="toolCount">.*?</span>', f'<span class="tool-count" id="toolCount">共 {len(tools)} 款</span>', html)
 

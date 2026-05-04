@@ -307,6 +307,8 @@ body {
 
 /* 主容器 */
 .container {
+  width: 100%;
+  box-sizing: border-box;
   padding: 40px 32px;
 }
 
@@ -316,7 +318,7 @@ body {
   box-sizing: border-box;
   padding: 30px 32px;
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: minmax(140px, 180px) 1fr;
   gap: 0;
   align-items: start;
 }
