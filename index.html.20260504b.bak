@@ -11,7 +11,6 @@
     <meta property="og:type" content="website">
     <meta name="google-site-verification" content="NjJJUoLmRA5AKUAWGZUFP-DQokiU0VFTk3CoM8dPJy8" />
     <meta name="baidu-site-verification" content="codeva-XNbeA8d8dZ" />
-    <meta name="msvalidate.01" content="D2B58E242903570E029A957ECDFF1E05" />
     <link rel="canonical" href="https://www.aitoolbox.hk/">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">
@@ -28,6 +27,10 @@
         }
     }
     </script>
+<meta property="og:url" content="https://www.aitoolbox.hk/">
+
+    <meta name="msvalidate.01" content="D2B58E242903570E029A957ECDFF1E05" />
+    <!-- 结构化数据(SEO) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -44,8 +47,12 @@
     <meta name="twitter:title" content="AI工具宝箱 - 发现最好用的AI工具">
     <meta name="twitter:description" content="收录最新最全AI工具，每日更新，帮你找到最适合的AI工具提升效率。">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/aitoolbox-og.png">
-    <script src="/js/tools-data.js" defer></script>
-<meta property="og:url" content="https://www.aitoolbox.hk/">
+
+
+
+
+
+<script src="/js/tools-data.js" defer></script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -55,7 +62,6 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
 </head>
 <body>
     <header class="header">

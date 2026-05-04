@@ -2901,32 +2901,24 @@ def build_index_page(tools, articles):
     # 移除旧的 tools-data.js 引用（避免重复注入）— 支持带defer和不带defer的
     html = re.sub(r'<script\s+src="/js/tools-data\.js(\?[^"]*)?"\s*(defer)?\s*></script>\s*', '', html)
 
+    # 在 </head> 前注入外部数据文件引用（加defer避免渲染阻塞）
+    html = html.replace('</head>', '<script src="/js/tools-data.js" defer></script>\n</head>')
+    
     # 移除所有已有的百度统计代码片段（无论占位符还是真实代码），避免重复叠加
     html = re.sub(r'<script>\s*var _hmt\s*=\s*_hmt\s*\|\|\s*\[\];\s*\(function\(\)\s*\{[\s\S]*?hm\.src\s*=\s*"[^"]*";[\s\S]*?\}\)\(\);?\s*</script>', '', html)
     html = re.sub(r'<!--\s*BAIDU_TONGJI_PLACEHOLDER\s*-->', '', html)
-
-    # 收集所有动态head注入内容
-    dynamic_head = ''
-    dynamic_head += '<script src="/js/tools-data.js" defer></script>\n'
-
+    
     # 注入 OG 标签（如果缺失 og:url）
     if 'og:url' not in html:
-        dynamic_head += '<meta property="og:url" content="https://www.aitoolbox.hk/">\n'
+        html = html.replace('</head>', '<meta property="og:url" content="https://www.aitoolbox.hk/">\n</head>')
 
-    # 注入百度统计代码
-    dynamic_head += f'{BAIDU_TONGJI}\n'
+    # 注入真实百度统计代码
+    html = html.replace('</head>', f'{BAIDU_TONGJI}\n</head>')
 
-    # 注入 Bing Webmaster 验证标签（如果缺失）
+    # 注入 Bing Webmaster 验证标签
     BING_VERIFY = '    <meta name="msvalidate.01" content="D2B58E242903570E029A957ECDFF1E05" />'
     if 'msvalidate.01' not in html:
-        dynamic_head += f'{BING_VERIFY}\n'
-
-    # 统一替换 BUILD_DYNAMIC_HEAD 占位符（首页模板专用）
-    if '<!-- BUILD_DYNAMIC_HEAD -->' in html:
-        html = html.replace('<!-- BUILD_DYNAMIC_HEAD -->', dynamic_head)
-    else:
-        # 非首页模板，fallback到</head>
-        html = html.replace('</head>', dynamic_head + '</head>')
+        html = html.replace('</head>', f'{BING_VERIFY}\n</head>')
 
     # 确保返回顶部按钮存在（兜底注入）
     if 'id="backToTop"' not in html:

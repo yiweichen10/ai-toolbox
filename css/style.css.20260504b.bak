@@ -491,8 +491,6 @@ body {
 /* 首页主布局：无右侧边栏，全宽 */
 .main-layout-no-sidebar {
   min-width: 0;
-  grid-template-columns: 1fr;
-  display: block;
 }
 
 /* 内容切换Tab板块（左侧卡片式导航 + 右侧内容区） */
@@ -528,7 +526,6 @@ body {
   transition: all .2s ease;
   text-align: left;
   width: 100%;
-  height: 112px;
 }
 .tab-card:hover {
   background: #fff;
@@ -735,7 +732,6 @@ body {
   .tab-card {
     padding: 10px 8px;
     gap: 6px;
-    height: auto;
   }
   .tab-card-icon {
     width: 28px;
@@ -761,7 +757,6 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: auto;
   }
   .tab-card-desc { display: none; }
   .tab-card-icon { width: 26px; height: 26px; font-size: 14px; }
