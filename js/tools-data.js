@@ -26,7 +26,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://chat.openai.com",
     "price": "免费版+Plus $20/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Claude",
@@ -55,7 +56,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://claude.ai",
     "price": "免费版+Pro $20/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Midjourney",
@@ -84,7 +86,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.midjourney.com",
     "price": "基础$10/月起",
-    "platform": "Discord / Web"
+    "platform": "Discord / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "GitHub Copilot",
@@ -113,7 +116,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://github.com/features/copilot",
     "price": "免费个人版+Business $19/月",
-    "platform": "VS Code / JetBrains / Neovim"
+    "platform": "VS Code / JetBrains / Neovim",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Cursor",
@@ -143,7 +147,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://cursor.com",
     "price": "免费版+Pro $20/月",
-    "platform": "Windows / macOS / Linux"
+    "platform": "Windows / macOS / Linux",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Kimi",
@@ -168,7 +173,8 @@ window.__ALL_TOOLS__ = [
     "visits": "7.6万",
     "url": "https://kimi.moonshot.cn",
     "price": "免费使用",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "豆包",
@@ -193,7 +199,8 @@ window.__ALL_TOOLS__ = [
     "visits": "11.3万",
     "url": "https://www.doubao.com",
     "price": "免费使用",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Notion AI",
@@ -217,7 +224,8 @@ window.__ALL_TOOLS__ = [
     "visits": "5.4万",
     "url": "https://www.notion.so",
     "price": "AI附加费$10/月",
-    "platform": "Web / iOS / Android / 桌面端"
+    "platform": "Web / iOS / Android / 桌面端",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Runway",
@@ -247,7 +255,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://runwayml.com",
     "price": "免费版+标准$15/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Stable Diffusion",
@@ -272,7 +281,8 @@ window.__ALL_TOOLS__ = [
     "visits": "9.1万",
     "url": "https://stability.ai",
     "price": "完全免费（需GPU）",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Suno",
@@ -297,7 +307,8 @@ window.__ALL_TOOLS__ = [
     "visits": "3.8万",
     "url": "https://suno.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Canva AI",
@@ -322,7 +333,8 @@ window.__ALL_TOOLS__ = [
     "visits": "6.2万",
     "url": "https://www.canva.com",
     "price": "免费版+Pro ¥120/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Sora",
@@ -351,7 +363,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://openai.com/sora",
     "price": "ChatGPT Plus $20/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Perplexity",
@@ -381,7 +394,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.perplexity.ai",
     "price": "免费版+Pro $20/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Pika",
@@ -403,7 +417,8 @@ window.__ALL_TOOLS__ = [
     "visits": "5.8万",
     "url": "https://pika.art",
     "price": "免费版+标准$10/月",
-    "platform": "Web / Discord"
+    "platform": "Web / Discord",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Udio",
@@ -428,7 +443,8 @@ window.__ALL_TOOLS__ = [
     "visits": "4.5万",
     "url": "https://www.udio.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Replit AI",
@@ -453,7 +469,8 @@ window.__ALL_TOOLS__ = [
     "visits": "7.2万",
     "url": "https://replit.com",
     "price": "免费版+Core $25/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Jasper",
@@ -477,7 +494,8 @@ window.__ALL_TOOLS__ = [
     "visits": "6.8万",
     "url": "https://www.jasper.ai",
     "price": "Creator $49/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Gamma",
@@ -502,7 +520,8 @@ window.__ALL_TOOLS__ = [
     "visits": "5.2万",
     "url": "https://gamma.app",
     "price": "免费版+Pro $16/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "ElevenLabs",
@@ -531,7 +550,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://elevenlabs.io",
     "price": "免费版+Starter $5/月",
-    "platform": "Web / API"
+    "platform": "Web / API",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Gemini",
@@ -560,7 +580,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://gemini.google.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-01"
   },
   {
     "name": "DeepSeek",
@@ -588,7 +609,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://chat.deepseek.com",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "文心一言",
@@ -617,7 +639,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://yiyan.baidu.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "千问",
@@ -646,7 +669,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://tongyi.aliyun.com/qianwen",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-15"
   },
   {
     "name": "腾讯元宝",
@@ -674,7 +698,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://yuanbao.tencent.com",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-02"
   },
   {
     "name": "Grok",
@@ -702,7 +727,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://grok.com",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-10"
   },
   {
     "name": "NotebookLM",
@@ -731,7 +757,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://notebooklm.google.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-12"
   },
   {
     "name": "HeyGen",
@@ -759,7 +786,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.heygen.com",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "DeepL",
@@ -787,7 +815,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.deepl.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-26"
   },
   {
     "name": "DALL-E 3",
@@ -815,7 +844,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://openai.com/dall-e-3",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-29"
   },
   {
     "name": "Adobe Firefly",
@@ -843,7 +873,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://firefly.adobe.com",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-31"
   },
   {
     "name": "可灵AI",
@@ -872,7 +903,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://klingai.kuaishou.com",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Bolt.new",
@@ -900,7 +932,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://bolt.new",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-03"
   },
   {
     "name": "Windsurf",
@@ -928,7 +961,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://codeium.com/windsurf",
     "price": "免费使用",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-19"
   },
   {
     "name": "Grammarly AI",
@@ -957,7 +991,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.grammarly.com",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-08"
   },
   {
     "name": "Copilot（微软）",
@@ -986,7 +1021,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://copilot.microsoft.com",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-05"
   },
   {
     "name": "WPS AI",
@@ -1015,7 +1051,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://ai.wps.cn",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-26"
   },
   {
     "name": "Character AI",
@@ -1043,7 +1080,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://character.ai",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-06"
   },
   {
     "name": "智谱清言",
@@ -1072,7 +1110,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://chatglm.cn",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-09"
   },
   {
     "name": "讯飞星火",
@@ -1100,7 +1139,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://xinghuo.xfyun.cn",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Poe",
@@ -1128,7 +1168,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://poe.com",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "天工AI",
@@ -1157,7 +1198,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.tiangong-china.com",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "MiniMax",
@@ -1186,7 +1228,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.minimaxi.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Lovable",
@@ -1215,7 +1258,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://lovable.dev",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-28"
   },
   {
     "name": "v0.dev",
@@ -1243,7 +1287,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://v0.dev",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-13"
   },
   {
     "name": "Claude Code",
@@ -1271,7 +1316,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://docs.anthropic.com/en/docs/claude-code",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "OpenAI Codex",
@@ -1299,7 +1345,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://openai.com/index/introducing-codex",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "n8n",
@@ -1328,7 +1375,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://n8n.io",
     "price": "免费使用",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-04"
   },
   {
     "name": "Coze",
@@ -1357,7 +1405,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.coze.com",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-25"
   },
   {
     "name": "Dify",
@@ -1386,7 +1435,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://dify.ai",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-31"
   },
   {
     "name": "Zapier AI",
@@ -1414,7 +1464,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://zapier.com",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-02"
   },
   {
     "name": "Veo",
@@ -1442,7 +1493,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://deepmind.google/technologies/veo",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Opus Clip",
@@ -1471,7 +1523,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.opus.pro",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-01"
   },
   {
     "name": "Descript",
@@ -1500,7 +1553,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.descript.com",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Synthesia",
@@ -1528,7 +1582,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.synthesia.io",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-11"
   },
   {
     "name": "Luma AI",
@@ -1557,7 +1612,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://lumalabs.ai",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-20"
   },
   {
     "name": "CapCut AI",
@@ -1585,7 +1641,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.capcut.com",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Ideogram",
@@ -1613,7 +1670,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://ideogram.ai",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Leonardo AI",
@@ -1641,7 +1699,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://leonardo.ai",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-30"
   },
   {
     "name": "Freepik AI",
@@ -1669,7 +1728,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.freepik.com",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-28"
   },
   {
     "name": "Krea AI",
@@ -1698,7 +1758,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.krea.ai",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Flux",
@@ -1726,7 +1787,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://blackforestlabs.ai",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "秒画",
@@ -1755,7 +1817,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://miaohua.sensetime.com",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-29"
   },
   {
     "name": "LiblibAI",
@@ -1784,7 +1847,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.liblib.art",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-04"
   },
   {
     "name": "Copy.ai",
@@ -1812,7 +1876,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.copy.ai",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-09"
   },
   {
     "name": "QuillBot",
@@ -1841,7 +1906,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://quillbot.com",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Writesonic",
@@ -1869,7 +1935,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://writesonic.com",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-03"
   },
   {
     "name": "Remove.bg",
@@ -1897,7 +1964,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.remove.bg",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-06"
   },
   {
     "name": "Photoroom",
@@ -1925,7 +1993,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.photoroom.com",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-23"
   },
   {
     "name": "Figma AI",
@@ -1954,7 +2023,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.figma.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-11"
   },
   {
     "name": "即时设计AI",
@@ -1982,7 +2052,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://js.design",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-07"
   },
   {
     "name": "稿定设计AI",
@@ -2010,7 +2081,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.gaoding.com",
     "price": "免费版可用，AI创作会员¥30/月起（原价¥59/月）",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Napkin AI",
@@ -2038,7 +2110,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.napkin.ai",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-10"
   },
   {
     "name": "Otter.ai",
@@ -2066,7 +2139,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://otter.ai",
     "price": "免费使用",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-27"
   },
   {
     "name": "飞书智能助手",
@@ -2094,7 +2168,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.feishu.cn",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-14"
   },
   {
     "name": "Beautiful.ai",
@@ -2123,7 +2198,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.beautiful.ai",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Tome",
@@ -2152,7 +2228,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Fireflies.ai",
@@ -2181,7 +2258,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://fireflies.ai",
     "price": "免费使用",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-25"
   },
   {
     "name": "Speechify",
@@ -2209,7 +2287,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://speechify.com",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Krisp",
@@ -2237,7 +2316,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://krisp.ai",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Murf AI",
@@ -2265,7 +2345,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://murf.ai",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-14"
   },
   {
     "name": "Cleanvoice",
@@ -2293,7 +2374,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://cleanvoice.ai",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-25"
   },
   {
     "name": "Arc浏览器",
@@ -2322,7 +2404,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://arc.net",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-07"
   },
   {
     "name": "Comet",
@@ -2350,7 +2433,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.comet.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "秘塔AI搜索",
@@ -2378,7 +2462,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://metaso.cn",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "纳米AI搜索",
@@ -2407,7 +2492,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://n.cn",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-12"
   },
   {
     "name": "Phind",
@@ -2435,7 +2521,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://phindai.org",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "You.com",
@@ -2463,7 +2550,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://you.com",
     "price": "免费使用",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-30"
   },
   {
     "name": "Consensus",
@@ -2491,7 +2579,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://consensus.app",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-07"
   },
   {
     "name": "Looka",
@@ -2519,7 +2608,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://looka.com",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Pixverse",
@@ -2547,7 +2637,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://pixverse.ai",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-08"
   },
   {
     "name": "Fliki",
@@ -2575,7 +2666,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://fliki.ai",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Tensor.Art",
@@ -2604,7 +2696,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://tensor.art",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-27"
   },
   {
     "name": "360智脑",
@@ -2633,7 +2726,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://ai.360.cn",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Raycast AI",
@@ -2661,7 +2755,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.raycast.com",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-17"
   },
   {
     "name": "Brandmark",
@@ -2690,7 +2785,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://brandmark.io",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-28"
   },
   {
     "name": "Make",
@@ -2718,7 +2814,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.make.com",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-05"
   },
   {
     "name": "Supabase AI",
@@ -2747,7 +2844,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://supabase.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-18"
   },
   {
     "name": "Recraft",
@@ -2775,7 +2873,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.recraft.ai",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-07"
   },
   {
     "name": "Fathom",
@@ -2803,7 +2902,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://fathom.video",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Perplexity AI",
@@ -2832,7 +2932,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.perplexity.ai",
     "price": "免费版可用，Pro版$20/月",
-    "platform": "Web, iOS, Android"
+    "platform": "Web, iOS, Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "D-ID",
@@ -2861,7 +2962,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.d-id.com",
     "price": "提供免费试用，付费计划起价为每月5.99美元（个人版），含高级功能和企业方案。",
-    "platform": "Web平台，API接口"
+    "platform": "Web平台，API接口",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Wordtune",
@@ -2890,7 +2992,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.wordtune.com",
     "price": "免费版功能有限；高级版约 $20/月；提供企业方案。",
-    "platform": "Web、Chrome/Edge 浏览器扩展、iOS、Android"
+    "platform": "Web、Chrome/Edge 浏览器扩展、iOS、Android",
+    "created_date": "2026-04-21"
   },
   {
     "name": "Pitch AI",
@@ -2919,7 +3022,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://pitch.com",
     "price": "免费版有限制；专业版$25/月/用户起；企业版需定制",
-    "platform": "Web, macOS, Windows, iOS, Android"
+    "platform": "Web, macOS, Windows, iOS, Android",
+    "created_date": "2026-04-16"
   },
   {
     "name": "Bardeen",
@@ -2948,7 +3052,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.bardeen.ai",
     "price": "提供免费版（功能有限）；个人专业版 $15/月（按年付）；团队版需联系定制。",
-    "platform": "Web（Chrome/Edge扩展）、macOS、Windows"
+    "platform": "Web（Chrome/Edge扩展）、macOS、Windows",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Anthropic Console",
@@ -2977,7 +3082,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://console.anthropic.com",
     "price": "免费试用，Pro版$20/月",
-    "platform": "Web, iOS, Android"
+    "platform": "Web, iOS, Android",
+    "created_date": "2026-04-15"
   },
   {
     "name": "Hugging Face",
@@ -3006,7 +3112,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://huggingface.co",
     "price": "免费版可用，付费计划起价$9/月",
-    "platform": "Web, API, 桌面应用"
+    "platform": "Web, API, 桌面应用",
+    "created_date": "2026-04-13"
   },
   {
     "name": "Replicate",
@@ -3040,7 +3147,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://replicate.com",
     "price": "按需付费，GPU计算每秒计费",
-    "platform": "Web/CLI/API"
+    "platform": "Web/CLI/API",
+    "created_date": "2026-05-02"
   },
   {
     "name": "Brave Search AI",
@@ -3072,7 +3180,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://search.brave.com",
     "price": "免费",
-    "platform": "浏览器插件/iOS/Android/桌面端"
+    "platform": "浏览器插件/iOS/Android/桌面端",
+    "created_date": "2026-04-16"
   },
   {
     "name": "Relume",
@@ -3106,7 +3215,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://relume.io",
     "price": "免费版可用，付费版$15/月起",
-    "platform": "Web浏览器,Figma插件"
+    "platform": "Web浏览器,Figma插件",
+    "created_date": "2026-04-24"
   },
   {
     "name": "Miro AI",
@@ -3138,7 +3248,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://miro.com/ai",
     "price": "免费版可用，Starter$8/月起（年付），月付$10/月",
-    "platform": "网页端、iOS、Android、Windows、Mac"
+    "platform": "网页端、iOS、Android、Windows、Mac",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Framer AI",
@@ -3170,7 +3281,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.framer.com",
     "price": "免费版可用，付费版$15起/月",
-    "platform": "网页端、macOS、Windows"
+    "platform": "网页端、macOS、Windows",
+    "created_date": "2026-04-20"
   },
   {
     "name": "Webflow AI",
@@ -3202,7 +3314,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://webflow.com",
     "price": "免费版可用，付费计划$14/月起，学生教育版免费",
-    "platform": "网页端（浏览器）"
+    "platform": "网页端（浏览器）",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Spline AI",
@@ -3237,7 +3350,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://spline.design/ai",
     "price": "免费版可用，Pro版$12/月起",
-    "platform": "Web浏览器"
+    "platform": "Web浏览器",
+    "created_date": "2026-04-21"
   },
   {
     "name": "LottieFiles AI",
@@ -3269,7 +3383,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://lottiefiles.com/ai",
     "price": "免费版可用，付费版$19/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-05-01"
   },
   {
     "name": "Augie AI",
@@ -3304,7 +3419,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://augie.ai",
     "price": "基础版免费，专业版$19/月起",
-    "platform": "Web、iOS、Android"
+    "platform": "Web、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Glitter AI",
@@ -3333,7 +3449,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://glitter.ai",
     "price": "基础功能免费，高级功能付费订阅",
-    "platform": "Web、iOS、Android"
+    "platform": "Web、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Play.ht",
@@ -3367,7 +3484,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://play.ht/",
     "price": "免费版每月5000字符；专业版$9.99/月起，无限字符；企业版定制价格",
-    "platform": "Web浏览器/iOS App/Android App/Chrome扩展/WordPress插件/API接入"
+    "platform": "Web浏览器/iOS App/Android App/Chrome扩展/WordPress插件/API接入",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Wondercraft AI",
@@ -3399,7 +3517,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://wondercraft.ai",
     "price": "免费版每月10分钟，专业版$19/月起，企业版定制价格",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-04-26"
   },
   {
     "name": "Veed.io",
@@ -3428,7 +3547,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.veed.io",
     "price": "免费版可用，付费版$12起/月",
-    "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）"
+    "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）",
+    "created_date": "2026-04-19"
   },
   {
     "name": "Kaiber",
@@ -3457,7 +3577,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://kaiber.ai",
     "price": "免费版每月100积分，高级版$9.99/月起",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-04-29"
   },
   {
     "name": "Domika",
@@ -3486,7 +3607,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://domika.ai",
     "price": "基础免费，Pro版29.9美元/月",
-    "platform": "Web、iOS、Android"
+    "platform": "Web、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Decohere",
@@ -3521,7 +3643,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://decohere.ai",
     "price": "免费版每月50积分，付费版$9.99/月起",
-    "platform": "网页端/iOS/Android"
+    "platform": "网页端/iOS/Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Let's Enhance",
@@ -3553,7 +3676,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://letsenhance.io",
     "price": "免费版每月20张，付费版$9起/月",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-04-17"
   },
   {
     "name": "Clipdrop",
@@ -3585,7 +3709,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://clipdrop.co",
     "price": "基础免费，高级版$9.99/月起",
-    "platform": "Web/iOS/Android/桌面端/Photoshop插件/Figma插件"
+    "platform": "Web/iOS/Android/桌面端/Photoshop插件/Figma插件",
+    "created_date": "2026-04-23"
   },
   {
     "name": "Magnific AI",
@@ -3619,7 +3744,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://magnific.ai",
     "price": "免费版每月3次增强，付费版$12/月起",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-04-18"
   },
   {
     "name": " tl;dv",
@@ -3651,7 +3777,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://tldv.io",
     "price": "免费版可用，付费版$12/月起",
-    "platform": "Chrome插件、Web端、iOS、Android"
+    "platform": "Chrome插件、Web端、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Seedance",
@@ -3695,7 +3822,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://seed.bytedance.com/zh/seedance2_0",
     "price": "免费 + 付费",
-    "platform": "网页/App/API"
+    "platform": "网页/App/API",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Grain",
@@ -3727,7 +3855,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://grain.com",
     "price": "免费版可用，Pro版$16/月，团队版$35/人/月",
-    "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
+    "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Elicit",
@@ -3756,7 +3885,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://elicit.org",
     "price": "免费版可用，专业版$10/月起",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Anyword",
@@ -3788,7 +3918,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://anyword.com",
     "price": "免费版每月2000词，专业版$39/月起",
-    "platform": "网页版、Chrome插件、WordPress插件"
+    "platform": "网页版、Chrome插件、WordPress插件",
+    "created_date": "2026-05-02"
   },
   {
     "name": "Headlime",
@@ -3823,7 +3954,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://headlime.com",
     "price": "免费版可用，专业版$29/月起",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Activepieces",
@@ -3855,7 +3987,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.activepieces.com",
     "price": "免费版可用，付费版$19/月起",
-    "platform": "Web / Desktop / API"
+    "platform": "Web / Desktop / API",
+    "created_date": "2026-03-22"
   },
   {
     "name": "CodeSandbox AI",
@@ -3887,7 +4020,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://codesandbox.io",
     "price": "免费版可用，Pro版$9/月起",
-    "platform": "Web浏览器（无需安装）"
+    "platform": "Web浏览器（无需安装）",
+    "created_date": "2026-04-25"
   },
   {
     "name": "腾讯混元",
@@ -3916,7 +4050,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://hunyuan.tencent.com",
     "price": "免费使用，企业API按调用计费",
-    "platform": "网页端、API、企业微信、微信小程序"
+    "platform": "网页端、API、企业微信、微信小程序",
+    "created_date": "2026-04-29"
   },
   {
     "name": "零一万物",
@@ -3948,7 +4083,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://01.ai",
     "price": "免费版+付费API",
-    "platform": "Web/API/开源"
+    "platform": "Web/API/开源",
+    "created_date": "2026-04-22"
   },
   {
     "name": "阶跃星辰",
@@ -3977,7 +4113,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.stepfun.com",
     "price": "API按调用计费",
-    "platform": "Web / API"
+    "platform": "Web / API",
+    "created_date": "2026-04-30"
   },
   {
     "name": "百川智能",
@@ -4012,7 +4149,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.baichuan-ai.com",
     "price": "新用户赠¥80额度，API按token计费（Baichuan4-Air¥0.00098/千token起）",
-    "platform": "Web, API"
+    "platform": "Web, API",
+    "created_date": "2026-03-22"
   },
   {
     "name": "商汤日日新",
@@ -4044,7 +4182,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://platform.senseNova.com",
     "price": "免费版+付费API",
-    "platform": "网页端 API"
+    "platform": "网页端 API",
+    "created_date": "2026-04-22"
   },
   {
     "name": "Cognition AI",
@@ -4073,7 +4212,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://cognition.ai",
     "price": "免费版可用，Pro$20/月起，Max$200/月，Teams$80/月起",
-    "platform": "Web / VS Code / JetBrains IDE"
+    "platform": "Web / VS Code / JetBrains IDE",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Sourcegraph Cody",
@@ -4108,7 +4248,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://sourcegraph.com/cody",
     "price": "免费版可用，Pro$9/月，Enterprise$19/月",
-    "platform": "VS Code、JetBrains IDEs、Neovim、浏览器扩展"
+    "platform": "VS Code、JetBrains IDEs、Neovim、浏览器扩展",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Tabnine",
@@ -4139,7 +4280,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.tabnine.com",
     "price": "免费版可用（基础补全），Dev$9/月起（年付），月付$12/月",
-    "platform": "VS Code、IntelliJ IDEA、PyCharm、WebStorm、Visual Studio、Eclipse等主流IDE"
+    "platform": "VS Code、IntelliJ IDEA、PyCharm、WebStorm、Visual Studio、Eclipse等主流IDE",
+    "created_date": "2026-03-22"
   },
   {
     "name": "ComfyUI",
@@ -4173,7 +4315,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://comfy.org/",
     "price": "免费开源",
-    "platform": "Windows/Mac/Linux"
+    "platform": "Windows/Mac/Linux",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Fooocus",
@@ -4208,7 +4351,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://fooocus.io",
     "price": "免费开源",
-    "platform": "Windows/Mac/Linux"
+    "platform": "Windows/Mac/Linux",
+    "created_date": "2026-05-01"
   },
   {
     "name": "Topaz Photo AI",
@@ -4236,7 +4380,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.topazlabs.com/topaz-photo-ai",
     "price": "一次性购买$199，订阅$19.99/月",
-    "platform": "Windows/macOS"
+    "platform": "Windows/macOS",
+    "created_date": "2026-04-27"
   },
   {
     "name": "Upscayl",
@@ -4271,7 +4416,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://upscayl.org",
     "price": "免费（开源）",
-    "platform": "Windows / macOS / Linux"
+    "platform": "Windows / macOS / Linux",
+    "created_date": "2026-04-26"
   },
   {
     "name": "Adobe Express AI",
@@ -4303,7 +4449,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://express.adobe.com",
     "price": "免费版可用，高级版每月$9.99起",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-04-27"
   },
   {
     "name": "Mubert",
@@ -4331,7 +4478,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://mubert.com",
     "price": "免费版可用（25首/月），Creator$14/月起，Pro$39/月",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "AIVA",
@@ -4359,7 +4507,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://aiva.ai",
     "price": "免费版可用，付费版$11.99/月起",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Soundraw",
@@ -4387,7 +4536,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://soundraw.io",
     "price": "免费版可生成但不可下载，Creator$16.99/月起",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Boomy",
@@ -4421,7 +4571,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://boomy.com",
     "price": "免费版可用（不可下载），Creator$9.99/月起，Pro$29.99/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Colossyan",
@@ -4455,7 +4606,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://colossyan.com",
     "price": "免费版可用，付费版起价$19/月",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-04-28"
   },
   {
     "name": "Elai",
@@ -4487,7 +4639,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://elai.io",
     "price": "免费试用，Starter$29/月起，Pro$99/月",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Lalamu",
@@ -4521,7 +4674,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://lalamu.studio/",
     "price": "免费版可用（120积分/月），Basic$9.99/月起，Premium$19.99/月",
-    "platform": "网页端、Windows、Mac"
+    "platform": "网页端、Windows、Mac",
+    "created_date": "2026-03-22"
   },
   {
     "name": "InVideo AI",
@@ -4553,7 +4707,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://invideo.io",
     "price": "免费版可用，付费版$15/月起",
-    "platform": "网页端/iOS/Android"
+    "platform": "网页端/iOS/Android",
+    "created_date": "2026-04-30"
   },
   {
     "name": "Pictory",
@@ -4582,7 +4737,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://pictory.ai",
     "price": "免费试用14天，Starter$25/月起（年付），月付$29/月",
-    "platform": "Web端"
+    "platform": "Web端",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Kapwing",
@@ -4613,7 +4769,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.kapwing.com",
     "price": "免费版可用（含水印4分钟），Starter$16/月起，Pro$33/月",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Rytr",
@@ -4645,7 +4802,8 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://rytr.me",
     "price": "免费版每月可生成5000字符，付费版从9美元/月起",
-    "platform": "网页版、iOS、Android"
+    "platform": "网页版、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Jenni AI",
@@ -4680,11 +4838,121 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://jenni.ai",
     "price": "免费版可用（10次AI补全/天），Plus$12/月起，Pro$29/月",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-03-22"
   }
 ];
 window.__REMAINING_TOOLS__ = [
   {
+    "name": "Runway",
+    "slug": "runway",
+    "emoji": "📹",
+    "color": "#00b4d8",
+    "description": "专业AI视频编辑和生成工具，Gen-4支持高质量文生视频。支持去背景、视频修复、AI特效等，影视创作者必备。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频"
+      },
+      {
+        "text": "热门",
+        "type": "hot"
+      },
+      {
+        "text": "有免费版",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "4.2万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://runwayml.com",
+    "price": "免费版+标准$15/月",
+    "platform": "Web",
+    "created_date": "2026-03-22"
+  },
+  {
+    "name": "Stable Diffusion",
+    "slug": "stable-diffusion",
+    "emoji": "🌟",
+    "color": "#a855f7",
+    "description": "开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "免费",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "9.1万",
+    "url": "https://stability.ai",
+    "price": "完全免费（需GPU）",
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
+  },
+  {
+    "name": "Suno",
+    "slug": "suno",
+    "emoji": "🎵",
+    "color": "#1a1a2e",
+    "description": "AI音乐生成工具，输入文字描述即可生成完整歌曲，包含歌词、旋律、人声。V4版本音质接近专业制作水平。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音频"
+      },
+      {
+        "text": "音乐"
+      },
+      {
+        "text": "有免费版",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "3.8万",
+    "url": "https://suno.com",
+    "price": "免费版+Pro $10/月",
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
+  },
+  {
+    "name": "Canva AI",
+    "slug": "canva-ai",
+    "emoji": "🖼️",
+    "color": "#00c4cc",
+    "description": "全球最大在线设计平台，AI功能全面升级。支持AI生图、一键抠图、智能排版、AI写作辅助，设计小白也能做出专业作品。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI设计"
+      },
+      {
+        "text": "模板多"
+      },
+      {
+        "text": "有免费版",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "6.2万",
+    "url": "https://www.canva.com",
+    "price": "免费版+Pro ¥120/月",
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
+  },
+  {
     "name": "Sora",
     "slug": "sora",
     "emoji": "🎬",
@@ -4711,7 +4979,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://openai.com/sora",
     "price": "ChatGPT Plus $20/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Perplexity",
@@ -4741,7 +5010,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.perplexity.ai",
     "price": "免费版+Pro $20/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Pika",
@@ -4763,7 +5033,8 @@ window.__REMAINING_TOOLS__ = [
     "visits": "5.8万",
     "url": "https://pika.art",
     "price": "免费版+标准$10/月",
-    "platform": "Web / Discord"
+    "platform": "Web / Discord",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Udio",
@@ -4788,7 +5059,8 @@ window.__REMAINING_TOOLS__ = [
     "visits": "4.5万",
     "url": "https://www.udio.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Replit AI",
@@ -4813,7 +5085,8 @@ window.__REMAINING_TOOLS__ = [
     "visits": "7.2万",
     "url": "https://replit.com",
     "price": "免费版+Core $25/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Jasper",
@@ -4837,7 +5110,8 @@ window.__REMAINING_TOOLS__ = [
     "visits": "6.8万",
     "url": "https://www.jasper.ai",
     "price": "Creator $49/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Gamma",
@@ -4862,7 +5136,8 @@ window.__REMAINING_TOOLS__ = [
     "visits": "5.2万",
     "url": "https://gamma.app",
     "price": "免费版+Pro $16/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "ElevenLabs",
@@ -4891,7 +5166,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://elevenlabs.io",
     "price": "免费版+Starter $5/月",
-    "platform": "Web / API"
+    "platform": "Web / API",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Gemini",
@@ -4920,7 +5196,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://gemini.google.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-01"
   },
   {
     "name": "DeepSeek",
@@ -4948,7 +5225,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://chat.deepseek.com",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "文心一言",
@@ -4977,7 +5255,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://yiyan.baidu.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "千问",
@@ -5006,7 +5285,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://tongyi.aliyun.com/qianwen",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-15"
   },
   {
     "name": "腾讯元宝",
@@ -5034,7 +5314,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://yuanbao.tencent.com",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-02"
   },
   {
     "name": "Grok",
@@ -5062,7 +5343,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://grok.com",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-10"
   },
   {
     "name": "NotebookLM",
@@ -5091,7 +5373,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://notebooklm.google.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-12"
   },
   {
     "name": "HeyGen",
@@ -5119,7 +5402,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.heygen.com",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "DeepL",
@@ -5147,7 +5431,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.deepl.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-26"
   },
   {
     "name": "DALL-E 3",
@@ -5175,7 +5460,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://openai.com/dall-e-3",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-29"
   },
   {
     "name": "Adobe Firefly",
@@ -5203,7 +5489,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://firefly.adobe.com",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-31"
   },
   {
     "name": "可灵AI",
@@ -5232,7 +5519,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://klingai.kuaishou.com",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Bolt.new",
@@ -5260,7 +5548,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://bolt.new",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-03"
   },
   {
     "name": "Windsurf",
@@ -5288,7 +5577,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://codeium.com/windsurf",
     "price": "免费使用",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-19"
   },
   {
     "name": "Grammarly AI",
@@ -5317,7 +5607,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.grammarly.com",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-08"
   },
   {
     "name": "Copilot（微软）",
@@ -5346,7 +5637,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://copilot.microsoft.com",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-05"
   },
   {
     "name": "WPS AI",
@@ -5375,7 +5667,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://ai.wps.cn",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-26"
   },
   {
     "name": "Character AI",
@@ -5403,7 +5696,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://character.ai",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-06"
   },
   {
     "name": "智谱清言",
@@ -5432,7 +5726,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://chatglm.cn",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-09"
   },
   {
     "name": "讯飞星火",
@@ -5460,7 +5755,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://xinghuo.xfyun.cn",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Poe",
@@ -5488,7 +5784,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://poe.com",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "天工AI",
@@ -5517,7 +5814,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.tiangong-china.com",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "MiniMax",
@@ -5546,7 +5844,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.minimaxi.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Lovable",
@@ -5575,7 +5874,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://lovable.dev",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-28"
   },
   {
     "name": "v0.dev",
@@ -5603,7 +5903,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://v0.dev",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-13"
   },
   {
     "name": "Claude Code",
@@ -5631,7 +5932,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://docs.anthropic.com/en/docs/claude-code",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "OpenAI Codex",
@@ -5659,7 +5961,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://openai.com/index/introducing-codex",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "n8n",
@@ -5688,7 +5991,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://n8n.io",
     "price": "免费使用",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-04"
   },
   {
     "name": "Coze",
@@ -5717,7 +6021,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.coze.com",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-25"
   },
   {
     "name": "Dify",
@@ -5746,7 +6051,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://dify.ai",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-31"
   },
   {
     "name": "Zapier AI",
@@ -5774,7 +6080,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://zapier.com",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-02"
   },
   {
     "name": "Veo",
@@ -5802,7 +6109,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://deepmind.google/technologies/veo",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Opus Clip",
@@ -5831,7 +6139,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.opus.pro",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-01"
   },
   {
     "name": "Descript",
@@ -5860,7 +6169,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.descript.com",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Synthesia",
@@ -5888,7 +6198,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.synthesia.io",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-11"
   },
   {
     "name": "Luma AI",
@@ -5917,7 +6228,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://lumalabs.ai",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-20"
   },
   {
     "name": "CapCut AI",
@@ -5945,7 +6257,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.capcut.com",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Ideogram",
@@ -5973,7 +6286,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://ideogram.ai",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Leonardo AI",
@@ -6001,7 +6315,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://leonardo.ai",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-30"
   },
   {
     "name": "Freepik AI",
@@ -6029,7 +6344,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.freepik.com",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-28"
   },
   {
     "name": "Krea AI",
@@ -6058,7 +6374,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.krea.ai",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Flux",
@@ -6086,7 +6403,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://blackforestlabs.ai",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "秒画",
@@ -6115,7 +6433,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://miaohua.sensetime.com",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-29"
   },
   {
     "name": "LiblibAI",
@@ -6144,7 +6463,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.liblib.art",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-04"
   },
   {
     "name": "Copy.ai",
@@ -6172,7 +6492,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.copy.ai",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-09"
   },
   {
     "name": "QuillBot",
@@ -6201,7 +6522,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://quillbot.com",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Writesonic",
@@ -6229,7 +6551,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://writesonic.com",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-03"
   },
   {
     "name": "Remove.bg",
@@ -6257,7 +6580,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.remove.bg",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-06"
   },
   {
     "name": "Photoroom",
@@ -6285,7 +6609,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.photoroom.com",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-23"
   },
   {
     "name": "Figma AI",
@@ -6314,7 +6639,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.figma.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-11"
   },
   {
     "name": "即时设计AI",
@@ -6342,7 +6668,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://js.design",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-07"
   },
   {
     "name": "稿定设计AI",
@@ -6370,7 +6697,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.gaoding.com",
     "price": "免费版可用，AI创作会员¥30/月起（原价¥59/月）",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Napkin AI",
@@ -6398,7 +6726,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.napkin.ai",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-10"
   },
   {
     "name": "Otter.ai",
@@ -6426,7 +6755,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://otter.ai",
     "price": "免费使用",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-27"
   },
   {
     "name": "飞书智能助手",
@@ -6454,7 +6784,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.feishu.cn",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-14"
   },
   {
     "name": "Beautiful.ai",
@@ -6483,7 +6814,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.beautiful.ai",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Tome",
@@ -6512,7 +6844,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Fireflies.ai",
@@ -6541,7 +6874,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://fireflies.ai",
     "price": "免费使用",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-25"
   },
   {
     "name": "Speechify",
@@ -6569,7 +6903,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://speechify.com",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Krisp",
@@ -6597,7 +6932,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://krisp.ai",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Murf AI",
@@ -6625,7 +6961,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://murf.ai",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-14"
   },
   {
     "name": "Cleanvoice",
@@ -6653,7 +6990,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://cleanvoice.ai",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-25"
   },
   {
     "name": "Arc浏览器",
@@ -6682,7 +7020,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://arc.net",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-07"
   },
   {
     "name": "Comet",
@@ -6710,7 +7049,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.comet.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "秘塔AI搜索",
@@ -6738,7 +7078,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://metaso.cn",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "纳米AI搜索",
@@ -6767,7 +7108,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://n.cn",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-12"
   },
   {
     "name": "Phind",
@@ -6795,7 +7137,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://phindai.org",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "You.com",
@@ -6823,7 +7166,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://you.com",
     "price": "免费使用",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-30"
   },
   {
     "name": "Consensus",
@@ -6851,7 +7195,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://consensus.app",
     "price": "基础$10/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-04-07"
   },
   {
     "name": "Looka",
@@ -6879,7 +7224,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://looka.com",
     "price": "免费使用",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Pixverse",
@@ -6907,7 +7253,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://pixverse.ai",
     "price": "基础$10/月起",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-08"
   },
   {
     "name": "Fliki",
@@ -6935,7 +7282,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://fliki.ai",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Tensor.Art",
@@ -6964,7 +7312,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://tensor.art",
     "price": "免费版+Pro $10/月",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-03-27"
   },
   {
     "name": "360智脑",
@@ -6993,7 +7342,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://ai.360.cn",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Raycast AI",
@@ -7021,7 +7371,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.raycast.com",
     "price": "免费版+Pro $10/月",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-17"
   },
   {
     "name": "Brandmark",
@@ -7050,7 +7401,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://brandmark.io",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-28"
   },
   {
     "name": "Make",
@@ -7078,7 +7430,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.make.com",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-05"
   },
   {
     "name": "Supabase AI",
@@ -7107,7 +7460,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://supabase.com",
     "price": "免费版+Pro $10/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-04-18"
   },
   {
     "name": "Recraft",
@@ -7135,7 +7489,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.recraft.ai",
     "price": "免费使用",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-04-07"
   },
   {
     "name": "Fathom",
@@ -7163,7 +7518,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://fathom.video",
     "price": "基础$10/月起",
-    "platform": "本地部署 / Web"
+    "platform": "本地部署 / Web",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Perplexity AI",
@@ -7192,7 +7548,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.perplexity.ai",
     "price": "免费版可用，Pro版$20/月",
-    "platform": "Web, iOS, Android"
+    "platform": "Web, iOS, Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "D-ID",
@@ -7221,7 +7578,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.d-id.com",
     "price": "提供免费试用，付费计划起价为每月5.99美元（个人版），含高级功能和企业方案。",
-    "platform": "Web平台，API接口"
+    "platform": "Web平台，API接口",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Wordtune",
@@ -7250,7 +7608,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.wordtune.com",
     "price": "免费版功能有限；高级版约 $20/月；提供企业方案。",
-    "platform": "Web、Chrome/Edge 浏览器扩展、iOS、Android"
+    "platform": "Web、Chrome/Edge 浏览器扩展、iOS、Android",
+    "created_date": "2026-04-21"
   },
   {
     "name": "Pitch AI",
@@ -7279,7 +7638,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://pitch.com",
     "price": "免费版有限制；专业版$25/月/用户起；企业版需定制",
-    "platform": "Web, macOS, Windows, iOS, Android"
+    "platform": "Web, macOS, Windows, iOS, Android",
+    "created_date": "2026-04-16"
   },
   {
     "name": "Bardeen",
@@ -7308,7 +7668,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.bardeen.ai",
     "price": "提供免费版（功能有限）；个人专业版 $15/月（按年付）；团队版需联系定制。",
-    "platform": "Web（Chrome/Edge扩展）、macOS、Windows"
+    "platform": "Web（Chrome/Edge扩展）、macOS、Windows",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Anthropic Console",
@@ -7337,7 +7698,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://console.anthropic.com",
     "price": "免费试用，Pro版$20/月",
-    "platform": "Web, iOS, Android"
+    "platform": "Web, iOS, Android",
+    "created_date": "2026-04-15"
   },
   {
     "name": "Hugging Face",
@@ -7366,7 +7728,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://huggingface.co",
     "price": "免费版可用，付费计划起价$9/月",
-    "platform": "Web, API, 桌面应用"
+    "platform": "Web, API, 桌面应用",
+    "created_date": "2026-04-13"
   },
   {
     "name": "Replicate",
@@ -7400,7 +7763,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://replicate.com",
     "price": "按需付费，GPU计算每秒计费",
-    "platform": "Web/CLI/API"
+    "platform": "Web/CLI/API",
+    "created_date": "2026-05-02"
   },
   {
     "name": "Brave Search AI",
@@ -7432,7 +7796,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://search.brave.com",
     "price": "免费",
-    "platform": "浏览器插件/iOS/Android/桌面端"
+    "platform": "浏览器插件/iOS/Android/桌面端",
+    "created_date": "2026-04-16"
   },
   {
     "name": "Relume",
@@ -7466,7 +7831,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://relume.io",
     "price": "免费版可用，付费版$15/月起",
-    "platform": "Web浏览器,Figma插件"
+    "platform": "Web浏览器,Figma插件",
+    "created_date": "2026-04-24"
   },
   {
     "name": "Miro AI",
@@ -7498,7 +7864,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://miro.com/ai",
     "price": "免费版可用，Starter$8/月起（年付），月付$10/月",
-    "platform": "网页端、iOS、Android、Windows、Mac"
+    "platform": "网页端、iOS、Android、Windows、Mac",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Framer AI",
@@ -7530,7 +7897,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.framer.com",
     "price": "免费版可用，付费版$15起/月",
-    "platform": "网页端、macOS、Windows"
+    "platform": "网页端、macOS、Windows",
+    "created_date": "2026-04-20"
   },
   {
     "name": "Webflow AI",
@@ -7562,7 +7930,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://webflow.com",
     "price": "免费版可用，付费计划$14/月起，学生教育版免费",
-    "platform": "网页端（浏览器）"
+    "platform": "网页端（浏览器）",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Spline AI",
@@ -7597,7 +7966,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://spline.design/ai",
     "price": "免费版可用，Pro版$12/月起",
-    "platform": "Web浏览器"
+    "platform": "Web浏览器",
+    "created_date": "2026-04-21"
   },
   {
     "name": "LottieFiles AI",
@@ -7629,7 +7999,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://lottiefiles.com/ai",
     "price": "免费版可用，付费版$19/月起",
-    "platform": "Web"
+    "platform": "Web",
+    "created_date": "2026-05-01"
   },
   {
     "name": "Augie AI",
@@ -7664,7 +8035,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://augie.ai",
     "price": "基础版免费，专业版$19/月起",
-    "platform": "Web、iOS、Android"
+    "platform": "Web、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Glitter AI",
@@ -7693,7 +8065,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://glitter.ai",
     "price": "基础功能免费，高级功能付费订阅",
-    "platform": "Web、iOS、Android"
+    "platform": "Web、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Play.ht",
@@ -7727,7 +8100,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://play.ht/",
     "price": "免费版每月5000字符；专业版$9.99/月起，无限字符；企业版定制价格",
-    "platform": "Web浏览器/iOS App/Android App/Chrome扩展/WordPress插件/API接入"
+    "platform": "Web浏览器/iOS App/Android App/Chrome扩展/WordPress插件/API接入",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Wondercraft AI",
@@ -7759,7 +8133,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://wondercraft.ai",
     "price": "免费版每月10分钟，专业版$19/月起，企业版定制价格",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-04-26"
   },
   {
     "name": "Veed.io",
@@ -7788,7 +8163,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.veed.io",
     "price": "免费版可用，付费版$12起/月",
-    "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）"
+    "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）",
+    "created_date": "2026-04-19"
   },
   {
     "name": "Kaiber",
@@ -7817,7 +8193,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://kaiber.ai",
     "price": "免费版每月100积分，高级版$9.99/月起",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-04-29"
   },
   {
     "name": "Domika",
@@ -7846,7 +8223,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://domika.ai",
     "price": "基础免费，Pro版29.9美元/月",
-    "platform": "Web、iOS、Android"
+    "platform": "Web、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Decohere",
@@ -7881,7 +8259,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://decohere.ai",
     "price": "免费版每月50积分，付费版$9.99/月起",
-    "platform": "网页端/iOS/Android"
+    "platform": "网页端/iOS/Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Let's Enhance",
@@ -7913,7 +8292,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://letsenhance.io",
     "price": "免费版每月20张，付费版$9起/月",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-04-17"
   },
   {
     "name": "Clipdrop",
@@ -7945,7 +8325,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://clipdrop.co",
     "price": "基础免费，高级版$9.99/月起",
-    "platform": "Web/iOS/Android/桌面端/Photoshop插件/Figma插件"
+    "platform": "Web/iOS/Android/桌面端/Photoshop插件/Figma插件",
+    "created_date": "2026-04-23"
   },
   {
     "name": "Magnific AI",
@@ -7979,7 +8360,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://magnific.ai",
     "price": "免费版每月3次增强，付费版$12/月起",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-04-18"
   },
   {
     "name": " tl;dv",
@@ -8011,7 +8393,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://tldv.io",
     "price": "免费版可用，付费版$12/月起",
-    "platform": "Chrome插件、Web端、iOS、Android"
+    "platform": "Chrome插件、Web端、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Seedance",
@@ -8055,7 +8438,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://seed.bytedance.com/zh/seedance2_0",
     "price": "免费 + 付费",
-    "platform": "网页/App/API"
+    "platform": "网页/App/API",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Grain",
@@ -8087,7 +8471,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://grain.com",
     "price": "免费版可用，Pro版$16/月，团队版$35/人/月",
-    "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
+    "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Elicit",
@@ -8116,7 +8501,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://elicit.org",
     "price": "免费版可用，专业版$10/月起",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Anyword",
@@ -8148,7 +8534,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://anyword.com",
     "price": "免费版每月2000词，专业版$39/月起",
-    "platform": "网页版、Chrome插件、WordPress插件"
+    "platform": "网页版、Chrome插件、WordPress插件",
+    "created_date": "2026-05-02"
   },
   {
     "name": "Headlime",
@@ -8183,7 +8570,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://headlime.com",
     "price": "免费版可用，专业版$29/月起",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Activepieces",
@@ -8215,7 +8603,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.activepieces.com",
     "price": "免费版可用，付费版$19/月起",
-    "platform": "Web / Desktop / API"
+    "platform": "Web / Desktop / API",
+    "created_date": "2026-03-22"
   },
   {
     "name": "CodeSandbox AI",
@@ -8247,7 +8636,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://codesandbox.io",
     "price": "免费版可用，Pro版$9/月起",
-    "platform": "Web浏览器（无需安装）"
+    "platform": "Web浏览器（无需安装）",
+    "created_date": "2026-04-25"
   },
   {
     "name": "腾讯混元",
@@ -8276,7 +8666,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://hunyuan.tencent.com",
     "price": "免费使用，企业API按调用计费",
-    "platform": "网页端、API、企业微信、微信小程序"
+    "platform": "网页端、API、企业微信、微信小程序",
+    "created_date": "2026-04-29"
   },
   {
     "name": "零一万物",
@@ -8308,7 +8699,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://01.ai",
     "price": "免费版+付费API",
-    "platform": "Web/API/开源"
+    "platform": "Web/API/开源",
+    "created_date": "2026-04-22"
   },
   {
     "name": "阶跃星辰",
@@ -8337,7 +8729,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.stepfun.com",
     "price": "API按调用计费",
-    "platform": "Web / API"
+    "platform": "Web / API",
+    "created_date": "2026-04-30"
   },
   {
     "name": "百川智能",
@@ -8372,7 +8765,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.baichuan-ai.com",
     "price": "新用户赠¥80额度，API按token计费（Baichuan4-Air¥0.00098/千token起）",
-    "platform": "Web, API"
+    "platform": "Web, API",
+    "created_date": "2026-03-22"
   },
   {
     "name": "商汤日日新",
@@ -8404,7 +8798,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://platform.senseNova.com",
     "price": "免费版+付费API",
-    "platform": "网页端 API"
+    "platform": "网页端 API",
+    "created_date": "2026-04-22"
   },
   {
     "name": "Cognition AI",
@@ -8433,7 +8828,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://cognition.ai",
     "price": "免费版可用，Pro$20/月起，Max$200/月，Teams$80/月起",
-    "platform": "Web / VS Code / JetBrains IDE"
+    "platform": "Web / VS Code / JetBrains IDE",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Sourcegraph Cody",
@@ -8468,7 +8864,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://sourcegraph.com/cody",
     "price": "免费版可用，Pro$9/月，Enterprise$19/月",
-    "platform": "VS Code、JetBrains IDEs、Neovim、浏览器扩展"
+    "platform": "VS Code、JetBrains IDEs、Neovim、浏览器扩展",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Tabnine",
@@ -8499,7 +8896,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.tabnine.com",
     "price": "免费版可用（基础补全），Dev$9/月起（年付），月付$12/月",
-    "platform": "VS Code、IntelliJ IDEA、PyCharm、WebStorm、Visual Studio、Eclipse等主流IDE"
+    "platform": "VS Code、IntelliJ IDEA、PyCharm、WebStorm、Visual Studio、Eclipse等主流IDE",
+    "created_date": "2026-03-22"
   },
   {
     "name": "ComfyUI",
@@ -8533,7 +8931,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://comfy.org/",
     "price": "免费开源",
-    "platform": "Windows/Mac/Linux"
+    "platform": "Windows/Mac/Linux",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Fooocus",
@@ -8568,7 +8967,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://fooocus.io",
     "price": "免费开源",
-    "platform": "Windows/Mac/Linux"
+    "platform": "Windows/Mac/Linux",
+    "created_date": "2026-05-01"
   },
   {
     "name": "Topaz Photo AI",
@@ -8596,7 +8996,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.topazlabs.com/topaz-photo-ai",
     "price": "一次性购买$199，订阅$19.99/月",
-    "platform": "Windows/macOS"
+    "platform": "Windows/macOS",
+    "created_date": "2026-04-27"
   },
   {
     "name": "Upscayl",
@@ -8631,7 +9032,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://upscayl.org",
     "price": "免费（开源）",
-    "platform": "Windows / macOS / Linux"
+    "platform": "Windows / macOS / Linux",
+    "created_date": "2026-04-26"
   },
   {
     "name": "Adobe Express AI",
@@ -8663,7 +9065,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://express.adobe.com",
     "price": "免费版可用，高级版每月$9.99起",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-04-27"
   },
   {
     "name": "Mubert",
@@ -8691,7 +9094,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://mubert.com",
     "price": "免费版可用（25首/月），Creator$14/月起，Pro$39/月",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "AIVA",
@@ -8719,7 +9123,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://aiva.ai",
     "price": "免费版可用，付费版$11.99/月起",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Soundraw",
@@ -8747,7 +9152,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://soundraw.io",
     "price": "免费版可生成但不可下载，Creator$16.99/月起",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Boomy",
@@ -8781,7 +9187,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://boomy.com",
     "price": "免费版可用（不可下载），Creator$9.99/月起，Pro$29.99/月",
-    "platform": "Web / iOS / Android"
+    "platform": "Web / iOS / Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Colossyan",
@@ -8815,7 +9222,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://colossyan.com",
     "price": "免费版可用，付费版起价$19/月",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-04-28"
   },
   {
     "name": "Elai",
@@ -8847,7 +9255,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://elai.io",
     "price": "免费试用，Starter$29/月起，Pro$99/月",
-    "platform": "网页端"
+    "platform": "网页端",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Lalamu",
@@ -8881,7 +9290,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://lalamu.studio/",
     "price": "免费版可用（120积分/月），Basic$9.99/月起，Premium$19.99/月",
-    "platform": "网页端、Windows、Mac"
+    "platform": "网页端、Windows、Mac",
+    "created_date": "2026-03-22"
   },
   {
     "name": "InVideo AI",
@@ -8913,7 +9323,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://invideo.io",
     "price": "免费版可用，付费版$15/月起",
-    "platform": "网页端/iOS/Android"
+    "platform": "网页端/iOS/Android",
+    "created_date": "2026-04-30"
   },
   {
     "name": "Pictory",
@@ -8942,7 +9353,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://pictory.ai",
     "price": "免费试用14天，Starter$25/月起（年付），月付$29/月",
-    "platform": "Web端"
+    "platform": "Web端",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Kapwing",
@@ -8973,7 +9385,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.kapwing.com",
     "price": "免费版可用（含水印4分钟），Starter$16/月起，Pro$33/月",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Rytr",
@@ -9005,7 +9418,8 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://rytr.me",
     "price": "免费版每月可生成5000字符，付费版从9美元/月起",
-    "platform": "网页版、iOS、Android"
+    "platform": "网页版、iOS、Android",
+    "created_date": "2026-03-22"
   },
   {
     "name": "Jenni AI",
@@ -9040,6 +9454,7 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://jenni.ai",
     "price": "免费版可用（10次AI补全/天），Plus$12/月起，Pro$29/月",
-    "platform": "网页端、iOS、Android"
+    "platform": "网页端、iOS、Android",
+    "created_date": "2026-03-22"
   }
 ];

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具宝箱 - 发现最好用的AI工具 | 每日更新</title>
+    <meta name="description" content="AI工具宝箱收录最新最全的AI工具，包括AI写作、AI绘画、AI编程、AI办公等分类。每日更新，帮你找到最适合的AI工具。">
+    <meta name="keywords" content="AI工具,AI写作,AI绘画,AI编程,ChatGPT,Midjourney,人工智能,效率工具,AI导航">
+    <meta property="og:title" content="AI工具宝箱 - 发现最好用的AI工具">
+    <meta property="og:description" content="收录最新最全AI工具，每日更新，帮你找到最适合的AI工具提升效率。">
+    <meta property="og:type" content="website">
+    <meta name="google-site-verification" content="NjJJUoLmRA5AKUAWGZUFP-DQokiU0VFTk3CoM8dPJy8" />
+    <meta name="baidu-site-verification" content="codeva-XNbeA8d8dZ" />
+    <link rel="canonical" href="https://www.aitoolbox.hk/">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI工具宝箱",
+        "description": "收录最新最全AI工具，每日更新",
+        "url": "https://www.aitoolbox.hk",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.aitoolbox.hk/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+<script src="/js/tools-data.js"></script>
+<meta property="og:url" content="https://www.aitoolbox.hk/">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6ac10754cf0bb444085d1d7764eb2c6b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <meta name="msvalidate.01" content="D2B58E242903570E029A957ECDFF1E05" />
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0; AI工具宝箱 <span>每日更新 · 已收录 100 款工具</span></h1></a>
+            <div class="search-box">
+                <input type="text" placeholder="搜索AI工具..." id="searchInput" aria-label="搜索AI工具">
+                <button aria-label="搜索">&#x1F50D;</button>
+            </div>
+        </div>
+        <nav class="global-nav" aria-label="全局导航">
+            <div class="global-nav-inner">
+                <a href="/ranking/" class="gn-item">📊 工具排行</a>
+                <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+                <a href="/live/" class="gn-item">📈 实时面板</a>
+                <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+                <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+                <a href="/category/" class="gn-item">📂 全部分类</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container home-container">
+        <!-- PC端左侧竖排分类导航 -->
+        <nav class="sidebar-nav" id="sidebarNav" aria-label="分类导航">
+            <button class="sidebar-cat active" data-category="all">&#x1F3AF; 全部</button>
+            <button class="sidebar-cat" data-category="AI对话">&#x1F4AC; AI对话</button>
+            <button class="sidebar-cat" data-category="AI写作">&#x270D;&#xFE0F; AI写作</button>
+            <button class="sidebar-cat" data-category="AI绘画">&#x1F3A8; AI绘画</button>
+            <button class="sidebar-cat" data-category="AI编程">&#x1F4BB; AI编程</button>
+            <button class="sidebar-cat" data-category="AI视频">&#x1F3AC; AI视频</button>
+            <button class="sidebar-cat" data-category="AI音频">&#x1F3B5; AI音频</button>
+            <button class="sidebar-cat" data-category="AI办公">&#x1F4C1; AI办公</button>
+            <button class="sidebar-cat" data-category="AI设计">&#x1F3A8; AI设计</button>
+        </nav>
+
+        <div class="main-layout">
+            <div>
+                <!-- 手机端横排分类 -->
+                <div class="mobile-categories" id="mobileCategories">
+                    <button class="cat-btn active" data-category="all">&#x1F3AF; 全部</button>
+                    <button class="cat-btn" data-category="AI对话">&#x1F4AC; AI对话</button>
+                    <button class="cat-btn" data-category="AI写作">&#x270D;&#xFE0F; AI写作</button>
+                    <button class="cat-btn" data-category="AI绘画">&#x1F3A8; AI绘画</button>
+                    <button class="cat-btn" data-category="AI编程">&#x1F4BB; AI编程</button>
+                    <button class="cat-btn" data-category="AI视频">&#x1F3AC; AI视频</button>
+                    <button class="cat-btn" data-category="AI音频">&#x1F3B5; AI音频</button>
+                    <button class="cat-btn" data-category="AI办公">&#x1F4C1; AI办公</button>
+                    <button class="cat-btn" data-category="AI设计">&#x1F3A8; AI设计</button>
+                </div>
+
+                <!-- 第一区块：今日收录 -->
+                <section class="home-section today-section" id="todaySection" style="display:none;">
+                    <div class="section-header">
+                        <h3>&#x1F4E5; 今日收录<span>NEW TODAY</span></h3>
+                    </div>
+                    <div class="tools-grid" id="todayGrid">
+<p style="color:var(--text-light);padding:20px 0;">今天暂无新工具收录，明天再来逛逛 ~</p>
+
+                    </div>
+                </section>
+
+                <!-- 第二区块：热门推荐 -->
+                <section class="home-section hot-section" id="hotSection">
+                    <div class="section-header">
+                        <h3>&#x1F525; 热门推荐<span>HOT PICKS</span></h3>
+                    </div>
+                    <div class="tools-grid" id="hotGrid">
+                        <article class="tool-card fade-in" style="animation-delay: 0.0s;" onclick="location.href='/tools/chatgpt/index.html'">
+                            <div class="tool-icon" style="background:#10a37f;">🟢</div>
+                            <h4>ChatGPT <span class="badge badge-hot">HOT</span></h4>
+                            <p class="desc">OpenAI推出的智能对话AI，支持文本生成、代码编写、数据分析等多种任务，是目前最强大的通用AI助手。2026年GPT-5已发布，多模态能力大幅提升。</p>
+                            <div class="tags"><span class="tag ">AI对话</span><span class="tag ">AI写作</span><span class="tag free">免费可用</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.9</span>
+                                <span class="visits">👁 12.5万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.05s;" onclick="location.href='/tools/midjourney/index.html'">
+                            <div class="tool-icon" style="background:#7c3aed;">🎨</div>
+                            <h4>Midjourney <span class="badge badge-pick">编辑推荐</span></h4>
+                            <p class="desc">顶级AI绘画工具，通过文字描述生成高质量图片。V7版本画质达到照片级，支持风格一致性，设计师和创作者首选。</p>
+                            <div class="tags"><span class="tag ">AI绘画</span><span class="tag hot">热门</span><span class="tag ">付费</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.9</span>
+                                <span class="visits">👁 10.2万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.1s;" onclick="location.href='/tools/github-copilot/index.html'">
+                            <div class="tool-icon" style="background:#3178c6;">💻</div>
+                            <h4>GitHub Copilot <span class="badge badge-hot">HOT</span></h4>
+                            <p class="desc">AI编程助手，集成在VS Code等编辑器中，自动补全代码、生成函数、修复bug，支持50+编程语言，编程效率提升显著。</p>
+                            <div class="tags"><span class="tag ">AI编程</span><span class="tag hot">热门</span><span class="tag ">付费</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.7</span>
+                                <span class="visits">👁 6.8万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.15000000000000002s;" onclick="location.href='/tools/cursor/index.html'">
+                            <div class="tool-icon" style="background:#000000;">⬛</div>
+                            <h4>Cursor <span class="badge badge-hot">HOT</span></h4>
+                            <p class="desc">AI驱动的代码编辑器，基于VS Code深度改造。Tab补全、Cmd+K编辑、Chat对话三合一，目前最火的AI编程工具。</p>
+                            <div class="tags"><span class="tag ">AI编程</span><span class="tag hot">热门</span><span class="tag free">有免费版</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.8</span>
+                                <span class="visits">👁 5.9万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.2s;" onclick="location.href='/tools/sora/index.html'">
+                            <div class="tool-icon" style="background:#10a37f;">🎬</div>
+                            <h4>Sora <span class="badge badge-hot">HOT</span></h4>
+                            <p class="desc">OpenAI推出的AI视频生成模型，支持文生视频和图生视频，能生成长达60秒的高质量视频，物理模拟能力出色，是AI视频领域的革命性产品。</p>
+                            <div class="tags"><span class="tag ">AI视频</span><span class="tag hot">热门</span><span class="tag ">付费</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.9</span>
+                                <span class="visits">👁 15.6万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.25s;" onclick="location.href='/tools/elevenlabs/index.html'">
+                            <div class="tool-icon" style="background:#000000;">🎙️</div>
+                            <h4>ElevenLabs <span class="badge badge-pick">编辑推荐</span></h4>
+                            <p class="desc">顶级AI语音合成工具，支持文字转语音、声音克隆、多语言配音。生成语音自然逼真，是播客、视频配音的首选。</p>
+                            <div class="tags"><span class="tag ">AI音频</span><span class="tag ">语音合成</span><span class="tag free">有免费版</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.8</span>
+                                <span class="visits">👁 8.9万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.30000000000000004s;" onclick="location.href='/tools/deepseek/index.html'">
+                            <div class="tool-icon" style="background:#956022;">💬</div>
+                            <h4>DeepSeek <span class="badge badge-hot">None</span></h4>
+                            <p class="desc">深度求索推出的国产AI助手，以超强代码能力和极低价格著称。DeepSeek-V3/R1开源模型性能对标GPT-4，是国内AI领域的标杆产品。</p>
+                            <div class="tags"><span class="tag ">AI对话</span><span class="tag ">AI生成</span><span class="tag ">付费</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.1</span>
+                                <span class="visits">👁 15万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.35000000000000003s;" onclick="location.href='/tools/qwen-chat/index.html'">
+                            <div class="tool-icon" style="background:#bbdb80;">💬</div>
+                            <h4>千问 <span class="badge badge-pick">NEW</span></h4>
+                            <p class="desc">阿里云推出的AI助手，基于通义千问大模型。中文能力强，支持超长上下文，提供开源版本，是国产AI开源领域的领军者。</p>
+                            <div class="tags"><span class="tag ">AI对话</span><span class="tag ">AI生成</span><span class="tag free">免费可用</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.5</span>
+                                <span class="visits">👁 4万</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+                <!-- 第三区块：全部工具 -->
+                <section class="home-section all-section" id="allSection">
+                    <div class="section-header">
+                        <h3>&#x1F3AF; 全部工具<span>ALL TOOLS</span></h3>
+                        <span class="tool-count" id="toolCount">共 159 款</span>
+                    </div>
+                    <div class="tools-grid" id="toolsGrid">
+                        <article class="tool-card fade-in" style="animation-delay: 0.0s;" onclick="location.href='/tools/chatgpt/index.html'">
+                            <div class="tool-icon" style="background:#10a37f;">🟢</div>
+                            <h4>ChatGPT <span class="badge badge-hot">HOT</span></h4>
+                            <p class="desc">OpenAI推出的智能对话AI，支持文本生成、代码编写、数据分析等多种任务，是目前最强大的通用AI助手。2026年GPT-5已发布，多模态能力大幅提升。</p>
+                            <div class="tags"><span class="tag ">AI对话</span><span class="tag ">AI写作</span><span class="tag free">免费可用</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.9</span>
+                                <span class="visits">👁 12.5万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.05s;" onclick="location.href='/tools/claude/index.html'">
+                            <div class="tool-icon" style="background:#d97706;">🎭</div>
+                            <h4>Claude <span class="badge badge-new">NEW</span></h4>
+                            <p class="desc">Anthropic推出的AI助手，以安全性和长文本处理能力著称。Claude 4系列支持1000K超长上下文，在代码和写作方面表现卓越。</p>
+                            <div class="tags"><span class="tag ">AI对话</span><span class="tag ">长文本</span><span class="tag free">免费可用</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.8</span>
+                                <span class="visits">👁 8.3万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.1s;" onclick="location.href='/tools/midjourney/index.html'">
+                            <div class="tool-icon" style="background:#7c3aed;">🎨</div>
+                            <h4>Midjourney <span class="badge badge-pick">编辑推荐</span></h4>
+                            <p class="desc">顶级AI绘画工具，通过文字描述生成高质量图片。V7版本画质达到照片级，支持风格一致性，设计师和创作者首选。</p>
+                            <div class="tags"><span class="tag ">AI绘画</span><span class="tag hot">热门</span><span class="tag ">付费</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.9</span>
+                                <span class="visits">👁 10.2万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.15000000000000002s;" onclick="location.href='/tools/github-copilot/index.html'">
+                            <div class="tool-icon" style="background:#3178c6;">💻</div>
+                            <h4>GitHub Copilot <span class="badge badge-hot">HOT</span></h4>
+                            <p class="desc">AI编程助手，集成在VS Code等编辑器中，自动补全代码、生成函数、修复bug，支持50+编程语言，编程效率提升显著。</p>
+                            <div class="tags"><span class="tag ">AI编程</span><span class="tag hot">热门</span><span class="tag ">付费</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.7</span>
+                                <span class="visits">👁 6.8万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.2s;" onclick="location.href='/tools/cursor/index.html'">
+                            <div class="tool-icon" style="background:#000000;">⬛</div>
+                            <h4>Cursor <span class="badge badge-hot">HOT</span></h4>
+                            <p class="desc">AI驱动的代码编辑器，基于VS Code深度改造。Tab补全、Cmd+K编辑、Chat对话三合一，目前最火的AI编程工具。</p>
+                            <div class="tags"><span class="tag ">AI编程</span><span class="tag hot">热门</span><span class="tag free">有免费版</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.8</span>
+                                <span class="visits">👁 5.9万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.25s;" onclick="location.href='/tools/kimi/index.html'">
+                            <div class="tool-icon" style="background:#2563eb;">👨‍💻</div>
+                            <h4>Kimi </h4>
+                            <p class="desc">月之暗面推出的国产AI助手，支持200万字超长上下文，文档分析能力突出，国内可直连使用，中英文表现优秀。</p>
+                            <div class="tags"><span class="tag ">AI对话</span><span class="tag ">国产</span><span class="tag free">免费可用</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.5</span>
+                                <span class="visits">👁 7.6万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.30000000000000004s;" onclick="location.href='/tools/doubao/index.html'">
+                            <div class="tool-icon" style="background:#3b82f6;">🤖</div>
+                            <h4>豆包 </h4>
+                            <p class="desc">字节跳动推出的AI助手，语音交互流畅，多模态能力强。集成在抖音、今日头条等生态，国内用户量最大的AI助手之一。</p>
+                            <div class="tags"><span class="tag ">AI对话</span><span class="tag ">国产</span><span class="tag free">免费</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.4</span>
+                                <span class="visits">👁 11.3万</span>
+                            </div>
+                        </article>
+                        <article class="tool-card fade-in" style="animation-delay: 0.35000000000000003s;" onclick="location.href='/tools/notion-ai/index.html'">
+                            <div class="tool-icon" style="background:#ff6b6b;">📊</div>
+                            <h4>Notion AI </h4>
+                            <p class="desc">集成在Notion中的AI助手，可以帮你写文档、总结笔记、翻译文本、生成大纲，是知识工作者的效率神器。</p>
+                            <div class="tags"><span class="tag ">AI办公</span><span class="tag ">笔记</span><span class="tag ">付费</span></div>
+                            <div class="meta">
+                                <span class="rating">⭐ 4.6</span>
+                                <span class="visits">👁 5.4万</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <div class="sidebar-card-header">
+                        <h4>&#x1F4DD; 最新文章</h4>
+                        <a href="/articles/page/1/index.html" class="sidebar-more-link">更多文章 →</a>
+                    </div>
+                    <ul id="articleList">
+                        <li>
+                            <span class="date">05/03/2026</span>
+                            <a class="title" href="/articles/how-to-use-replit-agent-guide-2026/index.html">国内如何使用Replit Agent：从注册到部署上线完整教程（2026年5月更新）</a>
+                        </li>
+                        <li>
+                            <span class="date">05/02</span>
+                            <a class="title" href="/articles/ai-audio-tools-guide-2026/index.html">2026年AI音频工具选型指南：13款工具真实成本核算+7大场景推荐（含国内可用性）</a>
+                        </li>
+                        <li>
+                            <span class="date">05/01</span>
+                            <a class="title" href="/articles/obsidian-vs-notion-vs-logseq-2026/index.html">Obsidian vs Notion vs Logseq：2026年AI笔记工具终极对比，我用半年换过来换过去后只留一个</a>
+                        </li>
+                        <li>
+                            <span class="date">04/30</span>
+                            <a class="title" href="/articles/ai-website-builder-test-2026/index.html">2026年AI建站工具实测：我用5款工具各搭了1个完整网站，真实花费、速度和质量全数据</a>
+                        </li>
+                        <li>
+                            <span class="date">04/29</span>
+                            <a class="title" href="/articles/how-to-use-cursor-in-china-2026/index.html">国内如何用Cursor：从注册到上手的完整教程（2026年4月更新，含Cursor 3新功能）</a>
+                        </li>
+                        <li>
+                            <span class="date">04/28</span>
+                            <a class="title" href="/articles/ai-tools-new-releases-april-2026/index.html">2026年4月新发布的10款AI工具全解析：我逐一测了，告诉你哪些值得用</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h4>&#x1F525; 热门分类</h4>
+                    <ul id="categoryList">
+                        <li><a href="/category/ai-chat/index.html">AI对话 (25)</a></li>
+                        <li><a href="/category/ai-writing/index.html">AI写作 (10)</a></li>
+                        <li><a href="/category/ai-painting/index.html">AI绘画 (18)</a></li>
+                        <li><a href="/category/ai-coding/index.html">AI编程 (17)</a></li>
+                        <li><a href="/category/ai-video/index.html">AI视频 (23)</a></li>
+                        <li><a href="/category/ai-audio/index.html">AI音频 (13)</a></li>
+                        <li><a href="/category/ai-office/index.html">AI办公 (16)</a></li>
+                        <li><a href="/category/ai-design/index.html">AI设计 (16)</a></li>
+                        <li><a href="/category/ai-search/index.html">AI搜索 (8)</a></li>
+                        <li><a href="/category/ai-translation/index.html">AI翻译 (1)</a></li>
+                        <li><a href="/category/ai-automation/index.html">AI自动化 (7)</a></li>
+                        <li><a href="/category/ai-efficiency/index.html">AI效率 (5)</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h4>&#x1F4A1; AI小知识</h4>
+                    <p style="font-size:13px;color:#666;line-height:1.8;">
+                        大语言模型（LLM）是当前AI应用的核心技术。GPT-5、Claude 4、Gemini 2.5是目前最强的三个模型，各有优劣。选择适合你的工具最重要。
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&#xA9; 2026 AI工具宝箱 · 每日精选优质AI工具</p>
+        <div class="footer-links">
+            <a href="/about.html">关于我们</a>
+            <a href="/contact.html">联系方式</a>
+            <a href="/privacy.html">隐私政策</a>
+            <a href="/links.html">友情链接</a>
+        </div>
+        <p style="margin-top:15px;font-size:13px;">用AI提升效率，让每个人都能享受技术红利。</p>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded",function(){
+        var b=document.getElementById("backToTop");
+        if(!b)return;
+        var s=function(){
+            if(window.scrollY>400){b.classList.add("visible")}
+            else{b.classList.remove("visible")}
+        };
+        window.addEventListener("scroll",s,{passive:true});
+        s();
+        b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
+    });
+    </script>
+    <script>
+// 返回顶部按钮 - 内联兜底版本（DOMContentLoaded 确保按钮已存在）
+document.addEventListener("DOMContentLoaded",function(){
+    var b=document.getElementById("backToTop");
+    if(!b)return;
+    var s=function(){
+        if(window.scrollY>400){b.classList.add("visible")}
+        else{b.classList.remove("visible")}
+    };
+    window.addEventListener("scroll",s,{passive:true});
+    s();
+    b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
+});
+</script>
+<script src="/js/main.js"></script>
+    <button id="backToTop" aria-label="返回顶部">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+</body>
+</html>

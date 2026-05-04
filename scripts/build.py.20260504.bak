@@ -2445,6 +2445,51 @@ def build_article_page(article, all_articles, all_tools=None):
         }
     }, ensure_ascii=False, indent=2)
 
+    # D型文章（操作指南类）自动生成 HowTo Schema
+    howto_schema_json = ''
+    d_type_keywords = ['指南', '教程', '使用方法', '怎么用', '如何使用', '步骤', '操作', '入门', '上手', '玩法', '如何注册', '如何用']
+    is_d_type = any(kw in article.get('title', '') for kw in d_type_keywords)
+    if is_d_type:
+        content_raw = article.get('content', '')
+        # 提取步骤：支持三种格式
+        # 1. Markdown h2: ## 标题
+        h2_steps = re.findall(r'^## (.+)$', content_raw, re.MULTILINE)
+        # 2. HTML h2: <h2...>标题</h2>
+        if not h2_steps:
+            h2_steps = re.findall(r'<h2[^>]*>(.*?)</h2>', content_raw, re.IGNORECASE)
+            # 去掉HTML标签
+            h2_steps = [re.sub(r'<[^>]+>', '', h).strip() for h in h2_steps]
+        # 3. 正文中的"第X步"或"步骤X"
+        if not h2_steps:
+            h2_steps = re.findall(r'第[一二三四五六七八九十\d]+步[：:]\s*(.+?)(?:[。\n]|$)', content_raw)
+            if not h2_steps:
+                h2_steps = re.findall(r'(第[一二三四五六七八九十\d]+步[：:][^\n。]{2,30})', content_raw)
+        # 过滤：只保留包含步骤/操作语义的标题
+        step_keywords = ['第', '步', '如何', '怎么', '注册', '安装', '配置', '创建', '部署', '使用', '设置', '登录', '上手', '入门', '操作', '技巧', '方法', '开始', '流程']
+        filtered_steps = [h for h in h2_steps if any(sk in h for sk in step_keywords)]
+        # 如果过滤后太少（<2步），则用所有非FAQ/总结/避坑的标题
+        if len(filtered_steps) < 2:
+            skip_keywords = ['FAQ', '总结', '为什么', '常见', '对比', 'vs', '避坑', '前言', '背景']
+            filtered_steps = [h for h in h2_steps if not any(sk in h for sk in skip_keywords)]
+        if len(filtered_steps) >= 2:
+            howto_steps = []
+            for i, step_title in enumerate(filtered_steps[:8], 1):  # 最多8步
+                howto_steps.append({
+                    "@type": "HowToStep",
+                    "position": i,
+                    "name": step_title,
+                    "text": f"按照指南完成：{step_title}"
+                })
+            howto_schema = {
+                "@context": "https://schema.org",
+                "@type": "HowTo",
+                "name": article['title'],
+                "description": article.get('description', ''),
+                "totalTime": "PT30M",
+                "step": howto_steps
+            }
+            howto_schema_json = json.dumps(howto_schema, ensure_ascii=False, indent=2)
+
     # 渲染文章内容，剥离开头重复的H1标题（模板已有<h1>）
     content_md = article.get('content', '')
     content_md = re.sub(r'^# .+\n?', '', content_md)
@@ -2469,7 +2514,7 @@ def build_article_page(article, all_articles, all_tools=None):
     <meta name="twitter:description" content="{escape_html(article.get('description', ''))}">
 ''' + (f'    <meta name="twitter:image" content="{og_image}">\n' if og_image else '') + f'''    <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_article_json}</script>
-    <script type="application/ld+json">{structured_data}</script>
+    <script type="application/ld+json">{structured_data}</script>''' + (f'\n    <script type="application/ld+json">{howto_schema_json}</script>' if howto_schema_json else '') + f'''
 {BAIDU_TONGJI}
 </head>
 <body>
@@ -2663,12 +2708,14 @@ def build_index_page(tools, articles):
     with open(index_html_template, 'r', encoding='utf-8') as f:
         html = f.read()
 
-    # 首屏 12 个工具静态渲染（改善 LCP）
-    tools_html = ''
-    for i, t in enumerate(tools[:12]):  # 只渲染前 12 个
+    from datetime import datetime
+    today_iso = datetime.now().strftime('%Y-%m-%d')
+
+    # ── 工具卡片HTML生成函数 ──
+    def make_card_html(t, i):
         badge_html = f'<span class="badge badge-{t.get("badge", {}).get("type", "")}">{t.get("badge", {}).get("text", "")}</span>' if t.get('badge') else ''
         tags_html = ''.join([f'<span class="tag {tag.get("type", "")}">{tag.get("text", "")}</span>' for tag in t.get('tags', [])])
-        tools_html += f'''                        <article class="tool-card fade-in" style="animation-delay: {i * 0.05}s;" onclick="location.href=\'/tools/{t['slug']}/index.html\'">
+        return f'''                        <article class="tool-card fade-in" style="animation-delay: {i * 0.05}s;" onclick="location.href='/tools/{t['slug']}/index.html'">
                             <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
                             <h4>{escape_html(t['name'])} {badge_html}</h4>
                             <p class="desc">{escape_html(t['description'])}</p>
@@ -2678,16 +2725,46 @@ def build_index_page(tools, articles):
                                 <span class="visits">👁 {t['visits']}</span>
                             </div>
                         </article>\n'''
-    
-    # 轻量化工具数据（首页JS只需展示字段，content/pros/cons/features等大字段去掉）
+
+    # ── 第一区块：今日收录 ──
+    today_tools = [t for t in tools if t.get('created_date') == today_iso]
+    today_html = ''
+    if today_tools:
+        for i, t in enumerate(today_tools):
+            today_html += make_card_html(t, i)
+    else:
+        today_html = '<p style="color:var(--text-light);padding:20px 0;">今天暂无新工具收录，明天再来逛逛 ~</p>\n'
+    html = replace_between_tags(html, '<div class="tools-grid" id="todayGrid">', today_html)
+    # 如果今天没有新工具，隐藏todaySection
+    if not today_tools:
+        html = html.replace('<section class="home-section today-section" id="todaySection">',
+                            '<section class="home-section today-section" id="todaySection" style="display:none;">')
+
+    # ── 第二区块：热门推荐（badge.type=hot 或 badge.type=pick，最多8个） ──
+    hot_tools = [t for t in tools if t.get('badge', {}).get('type') in ('hot', 'pick')][:8]
+    hot_html = ''
+    for i, t in enumerate(hot_tools):
+        hot_html += make_card_html(t, i)
+    html = replace_between_tags(html, '<div class="tools-grid" id="hotGrid">', hot_html)
+
+    # ── 第三区块：全部工具（首屏8个静态，剩余懒加载） ──
+    all_tools_html = ''
+    for i, t in enumerate(tools[:8]):
+        all_tools_html += make_card_html(t, i)
+    html = replace_between_tags(html, '<div class="tools-grid" id="toolsGrid">', all_tools_html)
+
+    # 工具数量显示
+    html = html.replace('<span class="tool-count" id="toolCount"></span>', f'<span class="tool-count" id="toolCount">共 {len(tools)} 款</span>')
+
+    # 轻量化工具数据（首页JS只需展示字段）
     # 这些字段的完整内容在各自独立的工具详情页（静态HTML）中，不影响SEO
     LIGHTWEIGHT_KEYS = {'name', 'slug', 'emoji', 'color', 'description', 'category',
-                        'tags', 'rating', 'visits', 'badge', 'url', 'price', 'platform'}
+                        'tags', 'rating', 'visits', 'badge', 'url', 'price', 'platform', 'created_date'}
     def make_lightweight(tool_list):
         return [{k: v for k, v in t.items() if k in LIGHTWEIGHT_KEYS} for t in tool_list]
 
-    # 其余工具存储到 data 属性（JS 动态加载）
-    remaining_tools_json = json.dumps(make_lightweight(tools[12:]), ensure_ascii=False, indent=2)
+    # 其余工具存储（跳过首屏8个）
+    remaining_tools_json = json.dumps(make_lightweight(tools[8:]), ensure_ascii=False, indent=2)
 
     # 对全部工具的懒加载占位符（分类筛选时需要）
     all_tools_json = json.dumps(make_lightweight(tools), ensure_ascii=False, indent=2)
@@ -2748,10 +2825,9 @@ def build_index_page(tools, articles):
     html = re.sub(r'<div class="label">精选工具</div>', '<div class="label">精选工具</div>', html)
     html = re.sub(r'<div class="num">12</div>(?=\s*<div class="label">工具分类</div>)', f'<div class="num">{cat_count}</div>', html)
 
-    # 替换内容（replace_between_tags 通过 div 嵌套深度精确匹配，不会破坏 HTML 结构）
-    html = replace_between_tags(html, '<div class="tools-grid" id="toolsGrid">', tools_html)
+    # 替换内容
     html = re.sub(r'(<ul id="articleList">)[\s\S]*?(</ul>)', lambda m: m.group(1) + '\n' + articles_html + '                    </ul>', html)
-    html = re.sub(r'(<div class="sidebar-card">\s*<h4>&#x1F525; 热门分类</h4>\s*<ul>)[\s\S]*?(</ul>\s*</div>)', lambda m: m.group(1) + '\n' + categories_html + '                    </ul>\n                </div>', html)
+    html = re.sub(r'(<ul id="categoryList">)[\s\S]*?(</ul>)', lambda m: m.group(1) + '\n' + categories_html + '                    </ul>', html)
     html = re.sub(r'(<div class="footer-links">)[\s\S]*?(</div>)', lambda m: m.group(1) + '\n' + footer_links_html + '\n        </div>', html)
     
     # 生成外部工具数据文件（避免首页内联 4.7MB JSON）

@@ -2215,9 +2215,13 @@ def build_category_page(category_name, tools_in_category):
     
     tools_html = ''
     for i, t in enumerate(tools_in_category):
-        badge_html = f'<span class="badge badge-{t.get("badge", {}).get("type", "")}">{t.get("badge", {}).get("text", "")}</span>' if t.get('badge') else ''
+        badge_data = t.get('badge', {})
+        if badge_data and badge_data.get('text') and badge_data.get('type'):
+            badge_html = f'<span class="badge badge-{badge_data["type"]}">{badge_data["text"]}</span>'
+        else:
+            badge_html = ''
         tags_html = ''.join([f'<span class="tag {tag.get("type", "")}">{tag.get("text", "")}</span>' for tag in t.get('tags', [])])
-        tools_html += f'''                        <article class="tool-card fade-in" style="animation-delay: {i * 0.05}s;" onclick="location.href=\'/tools/{t['slug']}/index.html\'">
+        tools_html += f'''                        <article class="tool-card fade-in" style="animation-delay: {round(i * 0.05, 2)}s;" onclick="location.href=\'/tools/{t['slug']}/index.html\'">
                             <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
                             <h4>{escape_html(t['name'])} {badge_html}</h4>
                             <p class="desc">{escape_html(t['description'])}</p>
@@ -2567,7 +2571,7 @@ def build_article_list_pages(articles):
         # 生成当前页文章 HTML
         articles_html = ''
         for i, a in enumerate(page_articles):
-            articles_html += f'''                        <article class="article-card" style="animation-delay: {i * 0.05}s;">
+            articles_html += f'''                        <article class="article-card" style="animation-delay: {round(i * 0.05, 2)}s;">
                             <h3><a href="/articles/{a['slug']}/index.html">{escape_html(a['title'])}</a></h3>
                             <div class="article-meta">
                                 <span class="date">{a.get('dateFull', a.get('date', ''))}</span>
@@ -2708,12 +2712,18 @@ def build_index_page(tools, articles):
     with open(index_html_template, 'r', encoding='utf-8') as f:
         html = f.read()
 
-    # 首屏 12 个工具静态渲染（改善 LCP）
-    tools_html = ''
-    for i, t in enumerate(tools[:12]):  # 只渲染前 12 个
-        badge_html = f'<span class="badge badge-{t.get("badge", {}).get("type", "")}">{t.get("badge", {}).get("text", "")}</span>' if t.get('badge') else ''
+    from datetime import datetime
+    today_iso = datetime.now().strftime('%Y-%m-%d')
+
+    # ── 工具卡片HTML生成函数 ──
+    def make_card_html(t, i):
+        badge_data = t.get('badge', {})
+        if badge_data and badge_data.get('text') and badge_data.get('type'):
+            badge_html = f'<span class="badge badge-{badge_data["type"]}">{badge_data["text"]}</span>'
+        else:
+            badge_html = ''
         tags_html = ''.join([f'<span class="tag {tag.get("type", "")}">{tag.get("text", "")}</span>' for tag in t.get('tags', [])])
-        tools_html += f'''                        <article class="tool-card fade-in" style="animation-delay: {i * 0.05}s;" onclick="location.href=\'/tools/{t['slug']}/index.html\'">
+        return f'''                        <article class="tool-card fade-in" style="animation-delay: {round(i * 0.05, 2)}s;" onclick="location.href='/tools/{t['slug']}/index.html'">
                             <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
                             <h4>{escape_html(t['name'])} {badge_html}</h4>
                             <p class="desc">{escape_html(t['description'])}</p>
@@ -2723,16 +2733,46 @@ def build_index_page(tools, articles):
                                 <span class="visits">👁 {t['visits']}</span>
                             </div>
                         </article>\n'''
-    
-    # 轻量化工具数据（首页JS只需展示字段，content/pros/cons/features等大字段去掉）
+
+    # ── 第一区块：今日收录 ──
+    today_tools = [t for t in tools if t.get('created_date') == today_iso]
+    today_html = ''
+    if today_tools:
+        for i, t in enumerate(today_tools):
+            today_html += make_card_html(t, i)
+    else:
+        today_html = '<p style="color:var(--text-light);padding:20px 0;">今天暂无新工具收录，明天再来逛逛 ~</p>\n'
+    html = replace_between_tags(html, '<div class="tools-grid" id="todayGrid">', today_html)
+    # 如果今天没有新工具，隐藏todaySection
+    if not today_tools:
+        html = html.replace('<section class="home-section today-section" id="todaySection">',
+                            '<section class="home-section today-section" id="todaySection" style="display:none;">')
+
+    # ── 第二区块：热门推荐（badge.type=hot 或 badge.type=pick，最多8个） ──
+    hot_tools = [t for t in tools if t.get('badge', {}).get('type') in ('hot', 'pick')][:8]
+    hot_html = ''
+    for i, t in enumerate(hot_tools):
+        hot_html += make_card_html(t, i)
+    html = replace_between_tags(html, '<div class="tools-grid" id="hotGrid">', hot_html)
+
+    # ── 第三区块：全部工具（首屏8个静态，剩余懒加载） ──
+    all_tools_html = ''
+    for i, t in enumerate(tools[:8]):
+        all_tools_html += make_card_html(t, i)
+    html = replace_between_tags(html, '<div class="tools-grid" id="toolsGrid">', all_tools_html)
+
+    # 工具数量显示 — 用re.sub替换（模板中可能已有内容如"共 100+ 款"）
+    html = re.sub(r'<span class="tool-count" id="toolCount">.*?</span>', f'<span class="tool-count" id="toolCount">共 {len(tools)} 款</span>', html)
+
+    # 轻量化工具数据（首页JS只需展示字段）
     # 这些字段的完整内容在各自独立的工具详情页（静态HTML）中，不影响SEO
     LIGHTWEIGHT_KEYS = {'name', 'slug', 'emoji', 'color', 'description', 'category',
-                        'tags', 'rating', 'visits', 'badge', 'url', 'price', 'platform'}
+                        'tags', 'rating', 'visits', 'badge', 'url', 'price', 'platform', 'created_date'}
     def make_lightweight(tool_list):
         return [{k: v for k, v in t.items() if k in LIGHTWEIGHT_KEYS} for t in tool_list]
 
-    # 其余工具存储到 data 属性（JS 动态加载）
-    remaining_tools_json = json.dumps(make_lightweight(tools[12:]), ensure_ascii=False, indent=2)
+    # 其余工具存储（跳过首屏8个）
+    remaining_tools_json = json.dumps(make_lightweight(tools[8:]), ensure_ascii=False, indent=2)
 
     # 对全部工具的懒加载占位符（分类筛选时需要）
     all_tools_json = json.dumps(make_lightweight(tools), ensure_ascii=False, indent=2)
@@ -2779,7 +2819,7 @@ def build_index_page(tools, articles):
         count_text = f'已收录 {all_tools_count // 100 * 100}+ 工具'
     else:
         count_text = f'已收录 {all_tools_count} 款工具'
-    html = re.sub(r'每日更新 · 已收录 \d+\+ 工具', f'每日更新 · {count_text}', html)
+    html = re.sub(r'每日更新 · 已收录 \d+\+ (?:款 )?工具', f'每日更新 · {count_text}', html)
     html = re.sub(r'每日更新 · 收录工具 持续更新', f'每日更新 · {count_text}', html)
 
     # 动态替换 stats 区域数据（精选工具数量 + 分类数量）
@@ -2793,10 +2833,9 @@ def build_index_page(tools, articles):
     html = re.sub(r'<div class="label">精选工具</div>', '<div class="label">精选工具</div>', html)
     html = re.sub(r'<div class="num">12</div>(?=\s*<div class="label">工具分类</div>)', f'<div class="num">{cat_count}</div>', html)
 
-    # 替换内容（replace_between_tags 通过 div 嵌套深度精确匹配，不会破坏 HTML 结构）
-    html = replace_between_tags(html, '<div class="tools-grid" id="toolsGrid">', tools_html)
+    # 替换内容
     html = re.sub(r'(<ul id="articleList">)[\s\S]*?(</ul>)', lambda m: m.group(1) + '\n' + articles_html + '                    </ul>', html)
-    html = re.sub(r'(<div class="sidebar-card">\s*<h4>&#x1F525; 热门分类</h4>\s*<ul>)[\s\S]*?(</ul>\s*</div>)', lambda m: m.group(1) + '\n' + categories_html + '                    </ul>\n                </div>', html)
+    html = re.sub(r'(<ul id="categoryList">)[\s\S]*?(</ul>)', lambda m: m.group(1) + '\n' + categories_html + '                    </ul>', html)
     html = re.sub(r'(<div class="footer-links">)[\s\S]*?(</div>)', lambda m: m.group(1) + '\n' + footer_links_html + '\n        </div>', html)
     
     # 生成外部工具数据文件（避免首页内联 4.7MB JSON）
@@ -2809,11 +2848,11 @@ def build_index_page(tools, articles):
     # 移除旧的内联 __ALL_TOOLS__ / __REMAINING_TOOLS__ 脚本（避免重复）
     html = re.sub(r'<script>\s*window\.__ALL_TOOLS__\s*=\s*\[[\s\S]*?\];\s*\n?\s*window\.__REMAINING_TOOLS__\s*=\s*\[[\s\S]*?\];?\s*</script>', '', html)
 
-    # 移除旧的 tools-data.js 引用（避免重复注入）
-    html = re.sub(r'<script\s+src="/js/tools-data\.js"></script>\s*', '', html)
+    # 移除旧的 tools-data.js 引用（避免重复注入）— 支持带defer和不带defer的
+    html = re.sub(r'<script\s+src="/js/tools-data\.js(\?[^"]*)?"\s*(defer)?\s*></script>\s*', '', html)
 
-    # 在 </head> 前注入外部数据文件引用
-    html = html.replace('</head>', '<script src="/js/tools-data.js"></script>\n</head>')
+    # 在 </head> 前注入外部数据文件引用（加defer避免渲染阻塞）
+    html = html.replace('</head>', '<script src="/js/tools-data.js" defer></script>\n</head>')
     
     # 移除所有已有的百度统计代码片段（无论占位符还是真实代码），避免重复叠加
     html = re.sub(r'<script>\s*var _hmt\s*=\s*_hmt\s*\|\|\s*\[\];\s*\(function\(\)\s*\{[\s\S]*?hm\.src\s*=\s*"[^"]*";[\s\S]*?\}\)\(\);?\s*</script>', '', html)
@@ -2841,28 +2880,10 @@ def build_index_page(tools, articles):
     </button>'''
         html = html.replace('</body>', BACK_TO_TOP_HTML + '\n</body>')
 
-    # 注入返回顶部内联兜底脚本（在 main.js 之前，按钮之后执行）
-    # 注意：按钮可能在 main.js 引用之后，所以用 DOMContentLoaded 确保 DOM 就绪
-    BACK_TO_TOP_FAILSAFE = '''<script>
-// 返回顶部按钮 - 内联兜底版本（DOMContentLoaded 确保按钮已存在）
-document.addEventListener("DOMContentLoaded",function(){
-    var b=document.getElementById("backToTop");
-    if(!b)return;
-    var s=function(){
-        if(window.scrollY>400){b.classList.add("visible")}
-        else{b.classList.remove("visible")}
-    };
-    window.addEventListener("scroll",s,{passive:true});
-    s();
-    b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
-});
-</script>
-'''
-    # 先清理已存在的所有返回顶部相关内联脚本（防止重复注入）
+    # BUG1修复：不再注入内联backToTop脚本，main.js已包含完整逻辑
+    # 清理可能存在的内联返回顶部脚本（防止重复）
     html = re.sub(r'<script>\s*// 返回顶部按钮[\s\S]*?</script>\s*', '', html)
     html = re.sub(r'<script>\s*\(function\(\)\{\s*var b=document\.getElementById\("backToTop"\)[\s\S]*?\}\)\(\);\s*</script>\s*', '', html)
-    # 注入一次兜底脚本（在 main.js 之前）
-    html = html.replace('<script src="/js/main.js"></script>', BACK_TO_TOP_FAILSAFE + '<script src="/js/main.js"></script>')
 
     return html
 
