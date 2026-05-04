@@ -495,13 +495,6 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-/* 首页主布局：无右侧边栏，全宽 */
-.main-layout-no-sidebar {
-  min-width: 0;
-  width: 100%;
-  display: block;
-}
-
 /* 内容切换Tab板块（左侧卡片式导航 + 右侧内容区） */
 .content-tabs {
   margin-bottom: 32px;
@@ -785,6 +778,15 @@ body {
 }
 @media (max-width: 992px) {
   .main-layout { grid-template-columns: 1fr; }
+}
+
+/* 首页主布局：无右侧边栏，全宽
+   必须定义在 .main-layout 之后，否则会被覆盖 */
+.main-layout-no-sidebar {
+  display: block !important;
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: unset;
 }
 
 /* Section 基础样式 */
@@ -2255,9 +2257,9 @@ body {
   .newsletter { padding: 32px 20px; }
   .newsletter .email-form { flex-direction: column; }
   .article-body { padding: 28px 20px; }
-  /* Fix 3：平板端侧边栏缩小，主内容区自适应 */
+  /* 平板端：左侧分类导航缩窄 */
   .home-container {
-    grid-template-columns: minmax(120px, 150px) 1fr;
+    grid-template-columns: minmax(110px, 140px) 1fr;
     padding: 20px;
   }
   .sidebar-cat { font-size: 13px; padding: 8px 10px; }
