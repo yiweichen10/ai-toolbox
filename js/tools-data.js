@@ -4908,6 +4908,66 @@ window.__ALL_TOOLS__ = [
     "platform": "Web浏览器（Chrome/Safari/Firefox扩展）"
   },
   {
+    "name": "AdCreative AI",
+    "slug": "adcreative-ai",
+    "emoji": "🎨",
+    "color": "#7C3AED",
+    "description": "AdCreative AI是一款专注于广告创意生成的AI工具，利用机器学习技术帮助营销人员和企业在几分钟内生成高转化率的广告素材。2026年平台集成了最新的生成式AI模型，支持文字转视频广告和动态创意优化功能，大幅提升广告投放效率。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "广告素材生成"
+      },
+      {
+        "text": "AI设计工具"
+      },
+      {
+        "text": "营销自动化"
+      },
+      {
+        "text": "转化率优化"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.adcreative.ai",
+    "price": "免费版可用，付费版$29-299/月",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "书生浦语",
+    "slug": "internlm",
+    "emoji": "📚",
+    "color": "#0066CC",
+    "description": "书生浦语（InternLM）是上海人工智能实验室自主研发的大语言模型系列，具备强大的对话理解、知识推理和代码生成能力。2026年最新版本InternLM 3在多模态理解和长文本处理方面有显著提升，支持超长上下文窗口。开源版本可供开发者免费使用，企业版提供商业化支持。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大语言模型"
+      },
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "长文本处理",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://internlm.org/",
+    "price": "基础版免费，企业版按需付费",
+    "platform": "Web/iOS/Android/API"
+  },
+  {
     "name": "面壁智能",
     "slug": "modelbest",
     "emoji": "🧠",
@@ -4938,6 +4998,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://modelbest.cn",
     "price": "免费版+企业付费",
     "platform": "Web/API/本地部署"
+  },
+  {
+    "name": "即梦AI",
+    "slug": "jimeng-ai",
+    "emoji": "🎨",
+    "color": "#2563EB",
+    "description": "即梦AI是字节跳动推出的AI图像生成工具，专注于通过文字描述生成高质量图片，支持图生图和智能编辑功能。2026年即梦AI持续迭代模型，生成速度和画质都有显著提升，已成为国内AI绘画领域的重要选择之一。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "文字生成图片"
+      },
+      {
+        "text": "图生图"
+      },
+      {
+        "text": "中文AI工具"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约500万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://jimeng.jinritemai.com/",
+    "price": "基础功能免费使用，高级功能付费订阅",
+    "platform": "网页端、安卓、iOS"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -9622,6 +9710,66 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web浏览器（Chrome/Safari/Firefox扩展）"
   },
   {
+    "name": "AdCreative AI",
+    "slug": "adcreative-ai",
+    "emoji": "🎨",
+    "color": "#7C3AED",
+    "description": "AdCreative AI是一款专注于广告创意生成的AI工具，利用机器学习技术帮助营销人员和企业在几分钟内生成高转化率的广告素材。2026年平台集成了最新的生成式AI模型，支持文字转视频广告和动态创意优化功能，大幅提升广告投放效率。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "广告素材生成"
+      },
+      {
+        "text": "AI设计工具"
+      },
+      {
+        "text": "营销自动化"
+      },
+      {
+        "text": "转化率优化"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.adcreative.ai",
+    "price": "免费版可用，付费版$29-299/月",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "书生浦语",
+    "slug": "internlm",
+    "emoji": "📚",
+    "color": "#0066CC",
+    "description": "书生浦语（InternLM）是上海人工智能实验室自主研发的大语言模型系列，具备强大的对话理解、知识推理和代码生成能力。2026年最新版本InternLM 3在多模态理解和长文本处理方面有显著提升，支持超长上下文窗口。开源版本可供开发者免费使用，企业版提供商业化支持。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大语言模型"
+      },
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "长文本处理",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://internlm.org/",
+    "price": "基础版免费，企业版按需付费",
+    "platform": "Web/iOS/Android/API"
+  },
+  {
     "name": "面壁智能",
     "slug": "modelbest",
     "emoji": "🧠",
@@ -9652,5 +9800,33 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://modelbest.cn",
     "price": "免费版+企业付费",
     "platform": "Web/API/本地部署"
+  },
+  {
+    "name": "即梦AI",
+    "slug": "jimeng-ai",
+    "emoji": "🎨",
+    "color": "#2563EB",
+    "description": "即梦AI是字节跳动推出的AI图像生成工具，专注于通过文字描述生成高质量图片，支持图生图和智能编辑功能。2026年即梦AI持续迭代模型，生成速度和画质都有显著提升，已成为国内AI绘画领域的重要选择之一。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "文字生成图片"
+      },
+      {
+        "text": "图生图"
+      },
+      {
+        "text": "中文AI工具"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约500万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://jimeng.jinritemai.com/",
+    "price": "基础功能免费使用，高级功能付费订阅",
+    "platform": "网页端、安卓、iOS"
   }
 ];
