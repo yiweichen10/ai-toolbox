@@ -11,9 +11,10 @@
     <meta property="og:title" content="ComfyUI评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱">
     <meta property="og:description" content="ComfyUI全面评测2026：ComfyUI是一个开源的、基于节点工作流的AI图像生成界面，专门为Stable Diffusion设计。2026年版本持续优化了节点执行效率和社区工作流分享功能，成为专业AI图像工作者的首选工具。">
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/comfyui/">
-    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/comfyui-og.png">
+    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/comfyui-og.png" width="1200" height="630">
+    <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="AI工具宝箱">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ComfyUI评测2026 - AI工具宝箱">
     <meta name="twitter:description" content="ComfyUI全面评测2026：ComfyUI是一个开源的、基于节点工作流的AI图像生成界面，专门为Stable Diffusion设计。2026年版本持续优化了节点执行效率和社区工作流分享功">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/comfyui-og.png">
@@ -46,20 +47,37 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "ComfyUI",
-  "applicationCategory": "UtilitiesApplication",
+  "applicationCategory": "ProductivityApplication",
   "operatingSystem": "Windows/Mac/Linux",
   "description": "ComfyUI是一个开源的、基于节点工作流的AI图像生成界面，专门为Stable Diffusion设计。2026年版本持续优化了节点执行效率和社区工作流分享功能，成为专业AI图像工作者的首选工具。",
-  "datePublished": "2026-05-05",
-  "dateModified": "2026-05-05",
+  "datePublished": "2026-05-06",
+  "dateModified": "2026-05-06",
   "offers": {
     "@type": "Offer",
-    "price": "免费开源",
+    "price": 0,
     "priceCurrency": "USD"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.8",
-    "ratingCount": "850000"
+    "ratingCount": 850000
+  },
+  "featureList": [
+    "可视化节点工作流编辑器",
+    "支持SDXL/SD1.5/SD3等多种模型",
+    "实时预览和批量生成",
+    "自定义节点和API集成",
+    "工作流模板市场分享",
+    "GPU显存优化和模型管理"
+  ],
+  "abstract": "ComfyUI是一个开源的、基于节点工作流的AI图像生成界面，专门为Stable Diffusion设计。2026年版本持续优化了节点执行效率和社区工作流分享功能，成为专业AI图像工作者的首选工具。",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".article-body h2",
+      ".article-body h3",
+      ".tool-header-info h2"
+    ]
   }
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ComfyUI和Web UI有什么区别？", "acceptedAnswer": {"@type": "Answer", "text": "ComfyUI采用节点式工作流，更适合复杂流程和批量处理，显存占用更低；Web UI界面更友好但自定义程度较低。新手推荐Web UI，进阶用户推荐ComfyUI。"}}, {"@type": "Question", "name": "ComfyUI是免费的吗？", "acceptedAnswer": {"@type": "Answer", "text": "完全免费开源，可以本地部署使用，无需付费。但需要自备高性能显卡和安装Stable Diffusion模型。"}}, {"@type": "Question", "name": "ComfyUI需要什么配置？", "acceptedAnswer": {"@type": "Answer", "text": "至少需要8GB显存的NVIDIA显卡，推荐16GB以上。官方有量化版本可在6GB显存下运行，但功能受限。"}}, {"@type": "Question", "name": "如何安装ComfyUI？", "acceptedAnswer": {"@type": "Answer", "text": "可从GitHub克隆仓库，安装Python依赖后运行run_cpu.bat（CPU）或run_gpu.bat（GPU）即可启动。官方和社区都有详细的安装教程。"}}]}</script>
@@ -124,6 +142,10 @@ var _hmt = _hmt || [];
 </div>
 
         <article class="article-body">
+            <div class="editor-summary" style="background:linear-gradient(135deg,#f8f9ff,#eef1ff);border-left:4px solid #667eea;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
+                <strong style="color:#667eea;font-size:15px;">📋 编辑总结</strong><br>
+                <span style="color:#444;">ComfyUI是一个开源的、基于节点工作流的AI图像生成界面，专门为Stable Diffusion设计。2026年版本持续优化了节点执行效率和社区工作流分享功能，成为专业AI图像工作者的首选工具。 定价：免费开源。推荐指数：⭐ 4.8。</span>
+            </div>
             <h1>ComfyUI是什么？</h1>
 
 <p>如果你用过Stable Diffusion Web UI（简称Web UI），那可以把ComfyUI理解为它的“专业模式”。它同样是用来生成AI图像的工具，但操作界面完全不同——不是点击几个按钮就完事，而是用一个个节点像搭积木一样组合成完整的工作流。

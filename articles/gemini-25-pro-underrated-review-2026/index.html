@@ -10,9 +10,14 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Gemini 2.5 Pro被严重低估了：跟Claude 4和GPT-5掰手腕，它在这些场景悄悄赢了 - AI工具宝箱">
     <meta property="og:description" content="用了三个月Gemini 2.5 Pro后，我发现它在数学推理（GPQA 83%）和长文本分析（100万token）两个赛道已经坐稳第一。但在编程开发上仍不如Claude 4。这篇文章用真实数据告诉你，什么场景该选Gemini，什么场景该选Claude或GPT-5。">
-    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/gemini-25-pro-underrated-review-2026-og.png">
+    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/gemini-25-pro-underrated-review-2026-og.png" width="1200" height="630">
     <meta property="og:url" content="https://www.aitoolbox.hk/articles/gemini-25-pro-underrated-review-2026/">
+    <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="AI工具宝箱">
+    <meta property="article:published_time" content="2026-04-23">
+    <meta property="article:modified_time" content="2026-04-23">
+    <meta property="article:author" content="AI工具宝箱">
+    <meta property="article:section" content="AI对话">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Gemini 2.5 Pro被严重低估了：跟Claude 4和GPT-5掰手腕，它在这些场景悄悄赢了 - AI工具宝箱">
     <meta name="twitter:description" content="用了三个月Gemini 2.5 Pro后，我发现它在数学推理（GPQA 83%）和长文本分析（100万token）两个赛道已经坐稳第一。但在编程开发上仍不如Claude 4。这篇文章用真实数据告诉你，什么场景该选Gemini，什么场景该选Claude或GPT-5。">
@@ -58,15 +63,37 @@
     "name": "AI工具宝箱",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.aitoolbox.hk/images/logo.png"
+      "url": "https://www.aitoolbox.hk/images/logo.png",
+      "width": 200,
+      "height": 60
     }
   },
-  "image": "https://www.aitoolbox.hk/images/og/gemini-25-pro-underrated-review-2026-og.png",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.aitoolbox.hk/images/og/gemini-25-pro-underrated-review-2026-og.png",
+    "width": 1200,
+    "height": 630
+  },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://www.aitoolbox.hk/articles/gemini-25-pro-underrated-review-2026/"
+  },
+  "abstract": "用了三个月Gemini 2.5 Pro后，我发现它在数学推理（GPQA 83%）和长文本分析（100万token）两个赛道已经坐稳第一。但在编程开发上仍不如Claude 4。这篇文章用真实数据告诉你，什么场景该选Gemini，什么场景该选Claude或GPT-5。",
+  "wordCount": 3057,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".article-body h2",
+      ".article-body h3"
+    ]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "AI对话",
+    "description": "用了三个月Gemini 2.5 Pro后，我发现它在数学推理（GPQA 83%）和长文本分析（100万token）两个赛道已经坐稳第一。但在编程开发上仍不如Claude 4。这篇文章用真实数据告诉你，什么场景该选Gemini，什么场景该选C"
   }
 }</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Gemini 2.5 Pro和3.1 Pro选哪个？**", "acceptedAnswer": {"@type": "Answer", "text": "3.1 Pro在推理上更强（ARC-AGI-2拿到77.1%），但贵了60%且没有免费层。除非你需要最强的推理能力，否则2.5 Pro的性价比高得多。另外3.1 Pro的上下文窗口升级到了200万token，处理超大型文档时可以考虑。\n\n**Q：国内能直接用Gemini API吗？**\nA：不能直接访问Google服务。需要通过代理或者使用国内的中转服务。我是通过本地的反向代理来调用的，延迟大概增加200-500ms，可以接受。\n\n**Q：Gemini能替代Claude做编程吗？**\nA：能做大部分，但做不了最好。如果你的编程需求主要是单文件脚本、数据处理、简单Web应用，Gemini完全够用。但如果你需要做复杂的多文件重构、架构设计、生产级代码，Claude Opus 4还是更好的选择。\n\n**Q：100万token真的有用吗？日常用得到吗？**\nA：对大部分人来说，日常用不到。但如果你的工作涉及大量文档处理（研究员、律师、数据分析师），或者需要分析大型代码库，100万token是实打实的生产力工具。\n\n**Q：Gemini和[ChatGPT](/tools/chatgpt/)、Claude比，最大的劣势是什么？**\nA：生态。ChatGPT有GPTs商店、插件系统，Claude有[Claude Code](/tools/claude-code/)这样的专业编程工具，Gemini的第三方生态相对薄弱。另外Claude Code在Agent编程场景下形成了完整的工作流，Gemini目前没有同等体验的编程Agent。\n\n## 总结\n\n直接说结论：\n\n- **如果你主要做编程开发**：Claude Opus 4没有争议的第一选择。别纠结了。\n- **如果你需要数学推理或分析大量文档**：Gemini 2.5 Pro是被低估的王者，试一次你就懂。\n- **如果你预算有限但需要大量API调用**：Gemini 2.5 Flash，每百万token输入只要$0.30，白菜价。\n- **如果你需要一个全能选手**：GPT-5在综合对话质量上最均衡，中文体验也最好。\n\nGemini 2.5 Pro不是最好的全能模型，但它是数学推理和长文本分析领域最被低估的选手。在Claude和GPT占据舆论场的当下，它安静地做好了几个细分领域的No.1。对于一个免费还有100次/天额度的模型来说，不试一下确实亏了。\n\n更多AI模型对比和工具评测，可以访问 [AI工具宝箱](https://www.aitoolbox.hk/) 查看完整工具库和文章。"}}]}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -105,6 +132,10 @@ var _hmt = _hmt || [];
                 2026-04-23 · AI对话
             </div>
             
+            <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
+                <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
+                <span style="color:#555;">用了三个月Gemini 2.5 Pro后，我发现它在数学推理（GPQA 83%）和长文本分析（100万token）两个赛道已经坐稳第一。但在编程开发上仍不如Claude 4。这篇文章用真实数据告诉你，什么场景该选Gemini，什么场景该选Claude或GPT-5。</span>
+            </div>
             
 <p>说个得罪人的结论：2026年大部分人还在Claude和GPT之间纠结的时候，Gemini 2.5 Pro已经在数学推理和长文本分析两个赛道坐稳了第一把交椅。但为什么很少有人推荐它？因为它的编程工具链确实拉胯。
 </p>

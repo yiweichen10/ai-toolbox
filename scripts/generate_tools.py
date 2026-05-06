@@ -77,6 +77,39 @@ DEFAULT_TOOL_NAMES = [
     # 国产工具
     "文心一言", "紫东太初", "书生浦语", "面壁智能",
     "即梦AI", "万兴播爆", "通义万相", "星火认知大模型",
+    # === 2026-05-05 新增 ===
+    # AI浏览器/搜索
+    "Perplexity Comet",
+    # AI编程/开发
+    "Aider", "Trae",
+    # AI演示/PPT
+    "SlidesAI",
+    # AI音乐/音频
+    "Mureka", "Beatoven.ai",
+    # AI视频
+    "HappyHorse",
+    # AI文档/协作
+    "Coda AI",
+    # AI SEO/营销
+    "Semrush AI",
+    # AI语音/克隆
+    "Resemble AI",
+    # AI效率/助手
+    "Monica AI",
+    # AI社媒管理
+    "Buffer AI",
+    # AI广告创意
+    "Pencil AI",
+    # AI写作/翻译
+    "DeepL Write", "Smartcat",
+    # AI数据分析
+    "Relevance AI",
+    # AI企业搜索
+    "Glean",
+    # AI学习/语言
+    "LingoAI", "Zety AI",
+    # 国产工具
+    "灵办AI", "夸克AI", "腾讯文档AI",
 ]
 
 

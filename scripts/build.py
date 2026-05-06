@@ -374,26 +374,57 @@ def build_tool_page(tool, all_tools, all_articles=None):
         ]
     }
 
+    # 价格标准化：转为数字（免费=0，否则提取数字部分）
+    raw_price = tool.get('price', '')
+    if raw_price in ('', '免费', 'Free', '免费试用') or '免费' in str(raw_price):
+        price_numeric = 0
+    else:
+        import re as _re
+        price_match = _re.search(r'[\d.]+', str(raw_price))
+        price_numeric = float(price_match.group()) if price_match else 0
+
+    # ratingCount 标准化为整数
+    raw_visits = tool.get('visits', '0')
+    rc_str = str(raw_visits).replace('万', '0000').replace(',', '')
+    try:
+        rating_count_int = int(float(rc_str))
+    except ValueError:
+        rating_count_int = 0
+
     software_data = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": tool['name'],
-        "applicationCategory": "UtilitiesApplication",
+        "applicationCategory": "ProductivityApplication",
         "operatingSystem": tool.get('platform', 'Web'),
         "description": tool['description'],
         "datePublished": date_published,
         "dateModified": date_modified,
         "offers": {
             "@type": "Offer",
-            "price": tool.get('price', ''),
+            "price": price_numeric,
             "priceCurrency": "USD"
         },
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": tool['rating'].replace('⭐ ', ''),
-            "ratingCount": tool.get('visits', '0').replace('万', '0000')
+            "ratingCount": rating_count_int
         }
     }
+
+    # 补充 featureList（如有features字段）
+    if tool.get('features'):
+        software_data["featureList"] = tool['features']
+
+    # 补充 abstract（取description前160字）
+    software_data["abstract"] = tool['description'][:160] if len(tool['description']) > 160 else tool['description']
+
+    # 补充 speakable（TTS语音播报锚点）
+    software_data["speakable"] = {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".article-body h2", ".article-body h3", ".tool-header-info h2"]
+    }
+
     structured_data = json.dumps(software_data, ensure_ascii=False, indent=2)
     breadcrumb_json = json.dumps(breadcrumb_data, ensure_ascii=False, indent=2)
 
@@ -449,9 +480,9 @@ def build_tool_page(tool, all_tools, all_articles=None):
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(tool['name'])}评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱">
     <meta property="og:description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'])}">
-    <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/">
-''' + (f'    <meta property="og:image" content="{og_image}">\n' if og_image else '') + f'''    <meta property="og:site_name" content="AI工具宝箱">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/">''' + (f'\n    <meta property="og:image" content="{og_image}" width="1200" height="630">\n' if og_image else '') + f'''    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="AI工具宝箱">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{escape_html(tool['name'])}评测2026 - AI工具宝箱">
     <meta name="twitter:description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'][:80])}">''' + (f'\n    <meta name="twitter:image" content="{og_image}">' if og_image else '') + f'''
     <link rel="stylesheet" href="/css/style.css">
@@ -495,6 +526,10 @@ def build_tool_page(tool, all_tools, all_articles=None):
         {features_html}
 
         <article class="article-body">
+            <div class="editor-summary" style="background:linear-gradient(135deg,#f8f9ff,#eef1ff);border-left:4px solid #667eea;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
+                <strong style="color:#667eea;font-size:15px;">📋 编辑总结</strong><br>
+                <span style="color:#444;">{escape_html(tool['description'])} {'' if tool.get('price','') in ('','免费') else f'定价：{tool.get('price','')}。'}{'推荐指数：' + tool['rating'] + '。'}</span>
+            </div>
             {content_html}
         </article>
 
@@ -2426,7 +2461,16 @@ def build_article_page(article, all_articles, all_tools=None):
     }
     breadcrumb_article_json = json.dumps(breadcrumb_article_data, ensure_ascii=False, indent=2)
 
-    structured_data = json.dumps({
+    # 计算 wordCount（中文字符+英文单词）
+    _content_for_wc = article.get('content', '')
+    import re as _re_wc
+    _chinese_chars = len(_re_wc.findall(r'[\u4e00-\u9fff]', _content_for_wc))
+    _english_words = len(_re_wc.findall(r'[a-zA-Z]+', _content_for_wc))
+    word_count = _chinese_chars + _english_words
+
+    # 构建增强版 Article Schema
+    _article_image_url = og_image if og_image else "https://www.aitoolbox.hk/images/logo.png"
+    article_schema_data = {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": article['title'],
@@ -2439,15 +2483,52 @@ def build_article_page(article, all_articles, all_tools=None):
             "name": "AI工具宝箱",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.aitoolbox.hk/images/logo.png"
+                "url": "https://www.aitoolbox.hk/images/logo.png",
+                "width": 200,
+                "height": 60
             }
         },
-        "image": og_image if og_image else "https://www.aitoolbox.hk/images/logo.png",
+        "image": {
+            "@type": "ImageObject",
+            "url": _article_image_url,
+            "width": 1200,
+            "height": 630
+        },
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": f"https://www.aitoolbox.hk/articles/{slug}/"
+        },
+        "abstract": (article.get('description', '')[:160] if len(article.get('description', '')) > 160 else article.get('description', '')),
+        "wordCount": word_count,
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".article-body h2", ".article-body h3"]
+        },
+        "about": {
+            "@type": "Thing",
+            "name": article.get('category', 'AI工具'),
+            "description": article.get('description', '')[:120]
         }
-    }, ensure_ascii=False, indent=2)
+    }
+
+    # 文章页 FAQ Schema（从内容提取FAQ或使用article.faq字段）
+    faq_article_schema = ''
+    _article_faq_list = []
+    # 尝试从 content 中提取 FAQ 格式
+    _faq_pattern = _re_wc.findall(r'[Qq][：:]\s*(.+?)\n[Aa][：:]\s*(.+?)(?=\n(?:[Qq][：:]|\Z)|$)', _content_for_wc, re.DOTALL)
+    if not _faq_pattern and article.get('faq'):
+        _faq_pattern = [(f.get('question',''), f.get('answer','')) for f in article['faq']]
+    for _q, _a in _faq_pattern[:6]:
+        if _q.strip() and _a.strip():
+            _article_faq_list.append({
+                "@type": "Question",
+                "name": _q.strip(),
+                "acceptedAnswer": {"@type": "Answer", "text": _a.strip()}
+            })
+    if _article_faq_list:
+        faq_article_schema = f'\n    <script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":_article_faq_list}, ensure_ascii=False)}</script>'
+
+    structured_data = json.dumps(article_schema_data, ensure_ascii=False, indent=2)
 
     # D型文章（操作指南类）自动生成 HowTo Schema
     howto_schema_json = ''
@@ -2510,15 +2591,18 @@ def build_article_page(article, all_articles, all_tools=None):
     <link rel="canonical" href="https://www.aitoolbox.hk/articles/{slug}/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(article['title'])} - AI工具宝箱">
-    <meta property="og:description" content="{escape_html(article.get('description', ''))}">
-''' + (f'    <meta property="og:image" content="{og_image}">\n' if og_image else '') + f'''    <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/">
+    <meta property="og:description" content="{escape_html(article.get('description', ''))}">''' + (f'\n    <meta property="og:image" content="{og_image}" width="1200" height="630">\n' if og_image else '') + f'''    <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/">
+    <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="AI工具宝箱">
+    <meta property="article:published_time" content="{article_date}">
+    <meta property="article:modified_time" content="{article_date_modified}">
+    <meta property="article:author" content="AI工具宝箱">
+    <meta property="article:section" content="{escape_html(article_category)}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{escape_html(article['title'])} - AI工具宝箱">
-    <meta name="twitter:description" content="{escape_html(article.get('description', ''))}">
-''' + (f'    <meta name="twitter:image" content="{og_image}">\n' if og_image else '') + f'''    <link rel="stylesheet" href="/css/style.css">
+    <meta name="twitter:description" content="{escape_html(article.get('description', ''))}">''' + (f'\n    <meta name="twitter:image" content="{og_image}">\n' if og_image else '') + f'''    <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_article_json}</script>
-    <script type="application/ld+json">{structured_data}</script>''' + (f'\n    <script type="application/ld+json">{howto_schema_json}</script>' if howto_schema_json else '') + f'''
+    <script type="application/ld+json">{structured_data}</script>''' + (f'\n    <script type="application/ld+json">{howto_schema_json}</script>' if howto_schema_json else '') + f'''{faq_article_schema}
 {BAIDU_TONGJI}
 </head>
 <body>
@@ -2539,6 +2623,10 @@ def build_article_page(article, all_articles, all_tools=None):
                 {article.get('dateFull', article.get('date', ''))} · {escape_html(article.get('category', ''))}
             </div>
             {infographic_html}
+            <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
+                <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
+                <span style="color:#555;">{escape_html(article.get('description', ''))}</span>
+            </div>
             {content_html}
         </article>
 
@@ -2595,7 +2683,69 @@ def build_article_list_pages(articles):
             link_tags += f'    <link rel="prev" href="https://www.aitoolbox.hk/articles/page/{page_num - 1}/">\n'
         if page_num < total_pages:
             link_tags += f'    <link rel="next" href="https://www.aitoolbox.hk/articles/page/{page_num + 1}/">\n'
-        
+
+        # robots标签：第2页及以后 noindex,follow
+        robots_tag = ''
+        if page_num > 1:
+            robots_tag = '    <meta name="robots" content="noindex, follow">\n'
+
+        # 构建列表页三组结构化数据（用普通Python字典，避免f-string嵌套括号冲突）
+        _list_og_image = "https://www.aitoolbox.hk/images/logo.png"
+
+        # 1) Blog Schema
+        _blog_schema = {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "AI工具宝箱 - 最新文章",
+            "description": f"AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。第{page_num}页。",
+            "url": f"https://www.aitoolbox.hk/articles/page/{page_num}/",
+            "publisher": {
+                "@type": "Organization",
+                "name": "AI工具宝箱",
+                "logo": {"@type": "ImageObject", "url": "https://www.aitoolbox.hk/images/logo.png", "width": 200, "height": 60}
+            },
+            "blogPost": [
+                {
+                    "@type": "BlogPosting",
+                    "headline": a.get('title', ''),
+                    "url": f"https://www.aitoolbox.hk/articles/{a['slug']}/",
+                    "datePublished": a.get('dateFull', a.get('date', ''))
+                } for a in page_articles
+            ]
+        }
+
+        # 2) ItemList Schema
+        _itemlist_schema = {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": f"最新文章 - 第{page_num}页",
+            "description": "AI工具文章列表",
+            "numberOfItems": len(page_articles),
+            "itemListElement": [
+                {"@type": "ListItem", "position": i + 1, "name": a.get('title', ''), "url": f"https://www.aitoolbox.hk/articles/{a['slug']}/"} for i, a in enumerate(page_articles)
+            ]
+        }
+
+        # 3) WebPage Schema (含 speakable)
+        _webpage_schema = {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": f"AI工具宝箱 - 最新文章 第{page_num}页",
+            "description": f"AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。第{page_num}页。",
+            "url": f"https://www.aitoolbox.hk/articles/page/{page_num}/",
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [".articles-list .article-card h3"]
+            },
+            "isPartOf": {"@type": "WebSite", "name": "AI工具宝箱", "url": "https://www.aitoolbox.hk/"}
+        }
+
+        _list_schema_json = (json.dumps(_blog_schema, ensure_ascii=False) +
+            '</script>\n    <script type="application/ld+json">' +
+            json.dumps(_itemlist_schema, ensure_ascii=False) +
+            '</script>\n    <script type="application/ld+json">' +
+            json.dumps(_webpage_schema, ensure_ascii=False))
+
         # 生成页面 HTML
         html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
@@ -2605,35 +2755,20 @@ def build_article_list_pages(articles):
     <title>AI工具宝箱 - 最新文章 第{page_num}页</title>
     <meta name="description" content="AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。第{page_num}页。">
     <meta name="keywords" content="AI工具,AI文章,AI评测,AI教程">
-    {link_tags}    <meta property="og:type" content="website">
+    {robots_tag}{link_tags}    <meta property="og:type" content="website">
     <meta property="og:title" content="AI工具宝箱 - 最新文章">
     <meta property="og:description" content="AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。">
     <meta property="og:url" content="https://www.aitoolbox.hk/articles/page/{page_num}/">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="{_list_og_image}" width="1200" height="630">
+    <meta property="og:site_name" content="AI工具宝箱">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI工具宝箱 - 最新文章">
+    <meta name="twitter:description" content="AI工具宝箱最新文章列表">
+    <meta name="twitter:image" content="{_list_og_image}">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">
-    {{
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {{
-                "@type": "ListItem",
-                "position": 1,
-                "name": "首页",
-                "item": "https://www.aitoolbox.hk/"
-            }},
-            {{
-                "@type": "ListItem",
-                "position": 2,
-                "name": "文章列表",
-                "item": "https://www.aitoolbox.hk/articles/page/1/"
-            }},
-            {{
-                "@type": "ListItem",
-                "position": 3,
-                "name": "第 {page_num} 页",
-                "item": "https://www.aitoolbox.hk/articles/page/{page_num}/"
-            }}
-        ]
+{_list_schema_json}
     }}
     </script>
 {BAIDU_TONGJI}

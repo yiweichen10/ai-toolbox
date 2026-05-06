@@ -11,9 +11,10 @@
     <meta property="og:title" content="Stable Diffusion评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱">
     <meta property="og:description" content="Stable Diffusion全面评测2026：开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。">
     <meta property="og:url" content="https://www.aitoolbox.hk/tools/stable-diffusion/">
-    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/stable-diffusion-og.png">
+    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/stable-diffusion-og.png" width="1200" height="630">
+    <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="AI工具宝箱">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Stable Diffusion评测2026 - AI工具宝箱">
     <meta name="twitter:description" content="Stable Diffusion全面评测2026：开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/stable-diffusion-og.png">
@@ -46,20 +47,37 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Stable Diffusion",
-  "applicationCategory": "UtilitiesApplication",
+  "applicationCategory": "ProductivityApplication",
   "operatingSystem": "本地部署 / Web",
   "description": "开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。",
-  "datePublished": "2026-05-05",
-  "dateModified": "2026-05-05",
+  "datePublished": "2026-05-06",
+  "dateModified": "2026-05-06",
   "offers": {
     "@type": "Offer",
-    "price": "完全免费（需GPU）",
+    "price": 0,
     "priceCurrency": "USD"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.7",
-    "ratingCount": "9.10000"
+    "ratingCount": 9
+  },
+  "featureList": [
+    "文生图",
+    "图生图",
+    "Inpainting",
+    "ControlNet",
+    "LoRA训练",
+    "SDXL Turbo"
+  ],
+  "abstract": "开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".article-body h2",
+      ".article-body h3",
+      ".tool-header-info h2"
+    ]
   }
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Stable Diffusion免费吗？需要什么配置？", "acceptedAnswer": {"@type": "Answer", "text": "Stable Diffusion完全开源免费。但需要一定的硬件配置：至少需要NVIDIA显卡8GB显存（推荐12GB+）。没有好显卡的话，可以使用云端部署服务（如商汤的SenseNova等），按量付费。"}}, {"@type": "Question", "name": "Stable Diffusion和Midjourney哪个好？", "acceptedAnswer": {"@type": "Answer", "text": "Stable Diffusion免费开源、可本地部署、自定义性强（海量模型和LoRA），但需要技术能力和好显卡。Midjourney付费但使用简单、画质顶级、开箱即用。技术用户选SD，追求效率选MJ。"}}, {"@type": "Question", "name": "Stable Diffusion怎么上手？", "acceptedAnswer": {"@type": "Answer", "text": "推荐使用WebUI（如AUTOMATIC1111）或ComfyUI作为界面。新手可以先在云端平台（如Google Colab免费GPU）体验，再考虑本地部署。社区有大量教程和预设模型可以学习使用。"}}, {"@type": "Question", "name": "如何用Stable Diffusion生成高质量图片？", "acceptedAnswer": {"@type": "Answer", "text": "关键词是核心。基础公式：主体描述 + 风格 + 光线 + 画质。比如：'1girl, long hair, sunset beach, cinematic lighting, highly detailed, 8k'。另外要学会用Negative prompt（反向关键词）排除不想要的内容，比如：'low quality, blurry, distorted face'。"}}]}</script>
@@ -124,6 +142,10 @@ var _hmt = _hmt || [];
 </div>
 
         <article class="article-body">
+            <div class="editor-summary" style="background:linear-gradient(135deg,#f8f9ff,#eef1ff);border-left:4px solid #667eea;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
+                <strong style="color:#667eea;font-size:15px;">📋 编辑总结</strong><br>
+                <span style="color:#444;">开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。 定价：完全免费（需GPU）。推荐指数：⭐ 4.7。</span>
+            </div>
             <h2>Stable Diffusion 是什么？</h2>
 
 <p>Stable Diffusion是开源的AI绘画模型，可以完全免费地在本地部署使用。与其他AI绘画工具不同，SD的高度可定制性是其最大优势——通过ControlNet、LoRA等技术，可以实现精确的图像控制。
