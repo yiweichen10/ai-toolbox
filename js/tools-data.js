@@ -4842,6 +4842,40 @@ window.__ALL_TOOLS__ = [
     "created_date": "2026-03-22"
   },
   {
+    "name": "ProWritingAid",
+    "slug": "prowritingaid",
+    "emoji": "✍️",
+    "color": "#0A6C6B",
+    "description": "专业AI写作辅助工具，专注语法检查、风格优化和可读性分析。支持25种语言，提供详细的写作报告和改进建议。2026年推出新版AI写作助手，集成了GPT-4技术，支持一键润色和创意写作功能。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "语法检查"
+      },
+      {
+        "text": "风格优化"
+      },
+      {
+        "text": "写作分析"
+      },
+      {
+        "text": "可读性提升"
+      },
+      {
+        "text": "英文写作"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "月访问量约120万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://prowritingaid.com",
+    "price": "免费版每月500词；付费版$20/月起，年付$99/年",
+    "platform": "网页端、桌面端（Windows/Mac）、浏览器插件（Chrome/Edge/Firefox）、Microsoft Word插件"
+  },
+  {
     "name": "Frase",
     "slug": "frase",
     "emoji": "📝",
@@ -5026,6 +5060,70 @@ window.__ALL_TOOLS__ = [
     "url": "https://jimeng.jinritemai.com/",
     "price": "基础功能免费使用，高级功能付费订阅",
     "platform": "网页端、安卓、iOS"
+  },
+  {
+    "name": "Trae",
+    "slug": "trae",
+    "emoji": "🤖",
+    "color": "#2563EB",
+    "description": "字节跳动推出的AI编程助手，集成于IDE中，支持智能代码补全、代码解释、Bug修复等功能。2026年已推出企业版，支持更强大的团队协作和私有化部署能力。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "字节跳动",
+        "type": "free"
+      },
+      {
+        "text": "IDE插件"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.trae.ai",
+    "price": "免费版+专业版（$19/月）",
+    "platform": "VS Code、JetBrains IDEs、Visual Studio"
+  },
+  {
+    "name": "Smartcat",
+    "slug": "smartcat",
+    "emoji": "🌐",
+    "color": "#2563EB",
+    "description": "Smartcat是一款AI驱动的翻译和本地化平台，通过神经机器翻译技术为企业和个人提供高质量的多语言内容解决方案。2026年平台集成了新一代大语言模型，翻译准确率提升40%，支持100+语言对实时互译。",
+    "category": "AI翻译",
+    "tags": [
+      {
+        "text": "AI翻译"
+      },
+      {
+        "text": "本地化"
+      },
+      {
+        "text": "多语言内容"
+      },
+      {
+        "text": "翻译管理",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://smartcat.com",
+    "price": "免费版可用，付费版$15/月起，企业版定制报价",
+    "platform": "Web / iOS / Android / API / 浏览器插件"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -9644,6 +9742,40 @@ window.__REMAINING_TOOLS__ = [
     "created_date": "2026-03-22"
   },
   {
+    "name": "ProWritingAid",
+    "slug": "prowritingaid",
+    "emoji": "✍️",
+    "color": "#0A6C6B",
+    "description": "专业AI写作辅助工具，专注语法检查、风格优化和可读性分析。支持25种语言，提供详细的写作报告和改进建议。2026年推出新版AI写作助手，集成了GPT-4技术，支持一键润色和创意写作功能。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "语法检查"
+      },
+      {
+        "text": "风格优化"
+      },
+      {
+        "text": "写作分析"
+      },
+      {
+        "text": "可读性提升"
+      },
+      {
+        "text": "英文写作"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "月访问量约120万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://prowritingaid.com",
+    "price": "免费版每月500词；付费版$20/月起，年付$99/年",
+    "platform": "网页端、桌面端（Windows/Mac）、浏览器插件（Chrome/Edge/Firefox）、Microsoft Word插件"
+  },
+  {
     "name": "Frase",
     "slug": "frase",
     "emoji": "📝",
@@ -9828,5 +9960,69 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://jimeng.jinritemai.com/",
     "price": "基础功能免费使用，高级功能付费订阅",
     "platform": "网页端、安卓、iOS"
+  },
+  {
+    "name": "Trae",
+    "slug": "trae",
+    "emoji": "🤖",
+    "color": "#2563EB",
+    "description": "字节跳动推出的AI编程助手，集成于IDE中，支持智能代码补全、代码解释、Bug修复等功能。2026年已推出企业版，支持更强大的团队协作和私有化部署能力。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "字节跳动",
+        "type": "free"
+      },
+      {
+        "text": "IDE插件"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.trae.ai",
+    "price": "免费版+专业版（$19/月）",
+    "platform": "VS Code、JetBrains IDEs、Visual Studio"
+  },
+  {
+    "name": "Smartcat",
+    "slug": "smartcat",
+    "emoji": "🌐",
+    "color": "#2563EB",
+    "description": "Smartcat是一款AI驱动的翻译和本地化平台，通过神经机器翻译技术为企业和个人提供高质量的多语言内容解决方案。2026年平台集成了新一代大语言模型，翻译准确率提升40%，支持100+语言对实时互译。",
+    "category": "AI翻译",
+    "tags": [
+      {
+        "text": "AI翻译"
+      },
+      {
+        "text": "本地化"
+      },
+      {
+        "text": "多语言内容"
+      },
+      {
+        "text": "翻译管理",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://smartcat.com",
+    "price": "免费版可用，付费版$15/月起，企业版定制报价",
+    "platform": "Web / iOS / Android / API / 浏览器插件"
   }
 ];

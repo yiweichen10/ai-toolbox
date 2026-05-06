@@ -231,7 +231,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
     if selected:
         related_cards = ''
         for r in selected[:5]:
-            related_cards += f'''<a href="/tools/{r['slug']}/index.html" class="related-card">
+            related_cards += f'''<a href="/tools/{r['slug']}/" class="related-card">
                 <div style="font-size:24px;margin-bottom:8px;">{r['emoji']}</div>
                 <div style="font-weight:600;">{r['name']}</div>
                 <div style="font-size:13px;color:#666;">{r['category']}</div>
@@ -268,7 +268,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
         if matched:
             cards = ''
             for a in matched[:3]:
-                cards += f'''<a href="/articles/{a['slug']}/index.html" class="related-card">
+                cards += f'''<a href="/articles/{a['slug']}/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">📖 {escape_html(a['title'][:30])}</div>
                     <div style="font-size:13px;color:#666;">{a.get('dateFull', a.get('date', ''))}</div>
                 </a>
@@ -374,22 +374,38 @@ def build_tool_page(tool, all_tools, all_articles=None):
         ]
     }
 
-    # 价格标准化：转为数字（免费=0，否则提取数字部分）
+    # 价格/offers数组化（从tool数据提取免费版和付费版两档）
     raw_price = tool.get('price', '')
+    price_str = str(raw_price).strip()
     if raw_price in ('', '免费', 'Free', '免费试用') or '免费' in str(raw_price):
-        price_numeric = 0
-    else:
+        offers_data = [
+            {"@type": "Offer", "name": "免费版", "price": "0", "priceCurrency": "USD", "description": f"{tool['name']}免费版基础功能"}
+        ]
+    elif price_str:
+        # 尝试解析价格数字
         import re as _re
-        price_match = _re.search(r'[\d.]+', str(raw_price))
-        price_numeric = float(price_match.group()) if price_match else 0
+        price_match = _re.search(r'[\d.]+', price_str)
+        price_num = price_match.group() if price_match else price_str
+        offers_data = [
+            {"@type": "Offer", "name": "免费版", "price": "0", "priceCurrency": "USD", "description": f"{tool['name']}免费版基础功能"},
+            {"@type": "Offer", "name": "付费版", "price": price_num, "priceCurrency": "USD", "description": f"{tool['name']}付费版全功能：{price_str}"}
+        ]
+    else:
+        offers_data = [
+            {"@type": "Offer", "name": "免费版", "price": "0", "priceCurrency": "USD", "description": f"{tool['name']}免费版基础功能"}
+        ]
 
-    # ratingCount 标准化为整数
-    raw_visits = tool.get('visits', '0')
-    rc_str = str(raw_visits).replace('万', '0000').replace(',', '')
-    try:
-        rating_count_int = int(float(rc_str))
-    except ValueError:
-        rating_count_int = 0
+    # developer信息（优先用tool.developer，否则用tool_name推断）
+    dev_name = tool.get('developer', tool.get('author', ''))
+    dev_url = tool.get('developer_url', tool.get('url', ''))
+    if dev_name:
+        dev_org = {"@type": "Organization", "name": dev_name}
+        if dev_url:
+            dev_org["url"] = dev_url
+    else:
+        dev_org = {"@type": "Organization", "name": tool['name']}
+        if dev_url:
+            dev_org["url"] = dev_url
 
     software_data = {
         "@context": "https://schema.org",
@@ -400,17 +416,17 @@ def build_tool_page(tool, all_tools, all_articles=None):
         "description": tool['description'],
         "datePublished": date_published,
         "dateModified": date_modified,
-        "offers": {
-            "@type": "Offer",
-            "price": price_numeric,
-            "priceCurrency": "USD"
-        },
+        "offers": offers_data,
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": tool['rating'].replace('⭐ ', ''),
-            "ratingCount": rating_count_int
-        }
+            "ratingCount": tool.get('visits', '0').replace('万', '0000').replace(',', '')
+        },
+        "inLanguage": ["zh", "en"]
     }
+
+    # developer信息（始终添加author，无developer时用工具名称兜底）
+    software_data["author"] = dev_org
 
     # 补充 featureList（如有features字段）
     if tool.get('features'):
@@ -422,7 +438,21 @@ def build_tool_page(tool, all_tools, all_articles=None):
     # 补充 speakable（TTS语音播报锚点）
     software_data["speakable"] = {
         "@type": "SpeakableSpecification",
-        "cssSelector": [".article-body h2", ".article-body h3", ".tool-header-info h2"]
+        "cssSelector": [".article-body h2", ".article-body h3", ".tool-header-info h2", ".tool-summary"]
+    }
+
+    # 补充 Review schema（Google导购评审摘要）
+    _rating_num = tool.get('rating_value', 4.0)
+    if isinstance(_rating_num, str):
+        _rating_num = float(_rating_num.replace('⭐', '').strip() or 4.0)
+    software_data["review"] = {
+        "@type": "Review",
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": _rating_num,
+            "bestRating": 5
+        },
+        "author": {"@type": "Organization", "name": "AI工具宝箱编辑组"}
     }
 
     structured_data = json.dumps(software_data, ensure_ascii=False, indent=2)
@@ -477,10 +507,10 @@ def build_tool_page(tool, all_tools, all_articles=None):
     <meta name="description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'])} 功能介绍、免费版体验、与同类工具对比。">
     <meta name="keywords" content="{escape_html(seo_kw)}">
     <link rel="canonical" href="https://www.aitoolbox.hk/tools/{slug}/">
-    <meta property="og:type" content="article">
+    <meta property="og:type" content="website">
     <meta property="og:title" content="{escape_html(tool['name'])}评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱">
     <meta property="og:description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'])}">
-    <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/">''' + (f'\n    <meta property="og:image" content="{og_image}" width="1200" height="630">\n' if og_image else '') + f'''    <meta property="og:locale" content="zh_CN">
+    <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/">''' + (f'\n    <meta property="og:image" content="{og_image}">\n    <meta property="og:image:width" content="1200">\n    <meta property="og:image:height" content="630">\n' if og_image else '') + f'''    <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="AI工具宝箱">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{escape_html(tool['name'])}评测2026 - AI工具宝箱">
@@ -526,7 +556,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
         {features_html}
 
         <article class="article-body">
-            <div class="editor-summary" style="background:linear-gradient(135deg,#f8f9ff,#eef1ff);border-left:4px solid #667eea;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
+            <div class="tool-summary" style="background:linear-gradient(135deg,#f8f9ff,#eef1ff);border-left:4px solid #667eea;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
                 <strong style="color:#667eea;font-size:15px;">📋 编辑总结</strong><br>
                 <span style="color:#444;">{escape_html(tool['description'])} {'' if tool.get('price','') in ('','免费') else f'定价：{tool.get('price','')}。'}{'推荐指数：' + tool['rating'] + '。'}</span>
             </div>
@@ -666,7 +696,7 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
         c = t['color']
         e = t['emoji']
         n = t['name']
-        tool_link_parts.append(f'<a href="/tools/{s}/index.html" style="display:inline-block;background:{c}22;color:{c};padding:6px 16px;border-radius:20px;text-decoration:none;font-size:14px;margin:4px;">{e} {n}详情</a>')
+        tool_link_parts.append(f'<a href="/tools/{s}/" style="display:inline-block;background:{c}22;color:{c};padding:6px 16px;border-radius:20px;text-decoration:none;font-size:14px;margin:4px;">{e} {n}详情</a>')
     tool_links = ''.join(tool_link_parts)
 
     # 内部链接：相关对比 + 相关替代方案
@@ -964,7 +994,7 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
                 'platform': tool.get('platform', ''),
             }
             rec_tools_html += f'''            <div class="quiz-recommendation" data-tool-slug="{tool['slug']}" data-category="{tool.get('category','')}" data-is-free='{str(_tool_attr_map[tool['slug']]['is_free']).lower()}' data-tags='{json.dumps(_tags, ensure_ascii=False)}' style="display:none;">
-                <a href="/tools/{tool['slug']}/index.html" class="rec-card">
+                <a href="/tools/{tool['slug']}/" class="rec-card">
                     <div class="rec-icon" style="background:{tool['color']};">{tool['emoji']}</div>
                     <div class="rec-info">
                         <strong>{escape_html(tool['name'])}</strong>
@@ -1400,7 +1430,7 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
         table_rows += f'''                <tr class="rank-row" data-rank="{rank}">
                     <td class="rank-num">{medal}</td>
                     <td class="rank-tool">
-                        <a href="/tools/{item['slug']}/index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+                        <a href="/tools/{item['slug']}/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
                             <span style="font-size:24px;background:{tool_color};width:40px;height:40px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;">{tool_emoji}</span>
                             <span style="font-weight:600;">{escape_html(tool_name)}</span> {badge_html}
                         </a>
@@ -2308,7 +2338,7 @@ def build_category_page(category_name, tools_in_category):
         "@type": "CollectionPage",
         "name": "{escape_html(category_name)} - AI工具宝箱",
         "description": "AI工具宝箱收录{escape_html(category_name)}分类下最新最全的AI工具。",
-        "url": "https://www.aitoolbox.hk/category/{category_slug}/index.html"
+        "url": "https://www.aitoolbox.hk/category/{category_slug}/"
     }}
     </script>
 {BAIDU_TONGJI}
@@ -2383,7 +2413,7 @@ def build_article_page(article, all_articles, all_tools=None):
         if matched_tools:
             cards = ''
             for t in matched_tools[:5]:
-                cards += f'''<a href="/tools/{t['slug']}/index.html" class="related-card">
+                cards += f'''<a href="/tools/{t['slug']}/" class="related-card">
                     <div style="font-size:24px;margin-bottom:8px;">{t['emoji']}</div>
                     <div style="font-weight:600;">{escape_html(t['name'])}</div>
                     <div style="font-size:13px;color:#666;">{escape_html(t.get('category', ''))}</div>
@@ -2402,7 +2432,7 @@ def build_article_page(article, all_articles, all_tools=None):
     if same_category:
         cards = ''
         for a in same_category[:3]:
-            cards += f'''<a href="/articles/{a['slug']}/index.html" class="related-card">
+            cards += f'''<a href="/articles/{a['slug']}/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">{escape_html(a['title'])}</div>
                 <div style="font-size:13px;color:#666;">{a.get('dateFull', a.get('date', ''))}</div>
             </a>\n'''
@@ -2498,7 +2528,7 @@ def build_article_page(article, all_articles, all_tools=None):
             "@type": "WebPage",
             "@id": f"https://www.aitoolbox.hk/articles/{slug}/"
         },
-        "abstract": (article.get('description', '')[:160] if len(article.get('description', '')) > 160 else article.get('description', '')),
+        "abstract": article.get('description', ''),
         "wordCount": word_count,
         "speakable": {
             "@type": "SpeakableSpecification",
@@ -2511,20 +2541,34 @@ def build_article_page(article, all_articles, all_tools=None):
         }
     }
 
-    # 文章页 FAQ Schema（从内容提取FAQ或使用article.faq字段）
+    # 文章页 FAQ Schema（逐对提取Q&A，避免DOTALL导致多Q&A混入一个Answer）
     faq_article_schema = ''
     _article_faq_list = []
-    # 尝试从 content 中提取 FAQ 格式
-    _faq_pattern = _re_wc.findall(r'[Qq][：:]\s*(.+?)\n[Aa][：:]\s*(.+?)(?=\n(?:[Qq][：:]|\Z)|$)', _content_for_wc, re.DOTALL)
-    if not _faq_pattern and article.get('faq'):
-        _faq_pattern = [(f.get('question',''), f.get('answer','')) for f in article['faq']]
-    for _q, _a in _faq_pattern[:6]:
-        if _q.strip() and _a.strip():
-            _article_faq_list.append({
-                "@type": "Question",
-                "name": _q.strip(),
-                "acceptedAnswer": {"@type": "Answer", "text": _a.strip()}
-            })
+    # 方式1：从content中逐对提取 "Q: ... \n A: ... "
+    _faq_raw = _re_wc.findall(r'(?:^|\n)[Qq][：:]\s*([^\n]+)\n[Aa][：:]\s*(.+?)(?=\n[Qq][：:]|\Z)', _content_for_wc, re.DOTALL)
+    if _faq_raw:
+        for _q, _a in _faq_raw:
+            _q = _q.strip()
+            _a = _a.strip()
+            # 清理Answer中的Markdown格式符号（**加粗**等不影响plain text语义）
+            _a_clean = _re_wc.sub(r'\*\*', '', _a)
+            if _q and _a_clean:
+                _article_faq_list.append({
+                    "@type": "Question",
+                    "name": _q,
+                    "acceptedAnswer": {"@type": "Answer", "text": _a_clean}
+                })
+    # 方式2：如果没提取到，使用 article.faq 字段
+    if not _article_faq_list and article.get('faq'):
+        for f_item in article['faq']:
+            _q = f_item.get('question', '')
+            _a = f_item.get('answer', '')
+            if _q.strip() and _a.strip():
+                _article_faq_list.append({
+                    "@type": "Question",
+                    "name": _q,
+                    "acceptedAnswer": {"@type": "Answer", "text": _a}
+                })
     if _article_faq_list:
         faq_article_schema = f'\n    <script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":_article_faq_list}, ensure_ascii=False)}</script>'
 
@@ -2591,12 +2635,12 @@ def build_article_page(article, all_articles, all_tools=None):
     <link rel="canonical" href="https://www.aitoolbox.hk/articles/{slug}/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(article['title'])} - AI工具宝箱">
-    <meta property="og:description" content="{escape_html(article.get('description', ''))}">''' + (f'\n    <meta property="og:image" content="{og_image}" width="1200" height="630">\n' if og_image else '') + f'''    <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/">
+    <meta property="og:description" content="{escape_html(article.get('description', ''))}">''' + (f'\n    <meta property="og:image" content="{og_image}">\n    <meta property="og:image:width" content="1200">\n    <meta property="og:image:height" content="630">\n' if og_image else '') + f'''    <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="AI工具宝箱">
     <meta property="article:published_time" content="{article_date}">
     <meta property="article:modified_time" content="{article_date_modified}">
-    <meta property="article:author" content="AI工具宝箱">
+    <meta property="article:author" content="AI工具宝箱编辑组">
     <meta property="article:section" content="{escape_html(article_category)}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{escape_html(article['title'])} - AI工具宝箱">
@@ -2660,7 +2704,7 @@ def build_article_list_pages(articles):
         articles_html = ''
         for i, a in enumerate(page_articles):
             articles_html += f'''                        <article class="article-card" style="animation-delay: {round(i * 0.05, 2)}s;">
-                            <h3><a href="/articles/{a['slug']}/index.html">{escape_html(a['title'])}</a></h3>
+                            <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
                             <div class="article-meta">
                                 <span class="date">{a.get('dateFull', a.get('date', ''))}</span>
                                 <span class="category">{escape_html(a.get('category', ''))}</span>
@@ -2689,16 +2733,26 @@ def build_article_list_pages(articles):
         if page_num > 1:
             robots_tag = '    <meta name="robots" content="noindex, follow">\n'
 
-        # 构建列表页三组结构化数据（用普通Python字典，避免f-string嵌套括号冲突）
+        # 构建列表页结构化数据
         _list_og_image = "https://www.aitoolbox.hk/images/logo.png"
 
-        # 1) Blog Schema
+        # 日期ISO格式化辅助函数
+        def _date_to_iso(d):
+            """将'2026年5月6日'转为'2026-05-06'"""
+            import re as _re_d
+            m = _re_d.match(r'(\d{4})年(\d{1,2})月(\d{1,2})日', str(d))
+            if m:
+                return f"{m.group(1)}-{m.group(2).zfill(2)}-{m.group(3).zfill(2)}"
+            return str(d)
+
+        # 1) Blog Schema（含author + ISO日期）
         _blog_schema = {
             "@context": "https://schema.org",
             "@type": "Blog",
             "name": "AI工具宝箱 - 最新文章",
             "description": f"AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。第{page_num}页。",
             "url": f"https://www.aitoolbox.hk/articles/page/{page_num}/",
+            "author": {"@type": "Person", "name": "AI工具宝箱编辑组", "url": "https://www.aitoolbox.hk/about"},
             "publisher": {
                 "@type": "Organization",
                 "name": "AI工具宝箱",
@@ -2709,7 +2763,7 @@ def build_article_list_pages(articles):
                     "@type": "BlogPosting",
                     "headline": a.get('title', ''),
                     "url": f"https://www.aitoolbox.hk/articles/{a['slug']}/",
-                    "datePublished": a.get('dateFull', a.get('date', ''))
+                    "datePublished": _date_to_iso(a.get('dateFull', a.get('date', '')))
                 } for a in page_articles
             ]
         }
@@ -2726,19 +2780,30 @@ def build_article_list_pages(articles):
             ]
         }
 
-        # 3) WebPage Schema (含 speakable)
+        # 3) WebPage Schema（含 speakable + abstract）
         _webpage_schema = {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": f"AI工具宝箱 - 最新文章 第{page_num}页",
             "description": f"AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。第{page_num}页。",
             "url": f"https://www.aitoolbox.hk/articles/page/{page_num}/",
+            "abstract": "AI工具宝箱文章专栏收录原创AI工具深度评测与对比分析，内容涵盖AI写作、AI绘画、AI编程、AI视频等12大分类。所有评测均基于编辑组实际测试，含真实性能数据、价格对比和适用场景建议，每周持续更新，累计61篇。",
             "speakable": {
                 "@type": "SpeakableSpecification",
-                "cssSelector": [".articles-list .article-card h3"]
+                "cssSelector": [".articles-page-intro", ".articles-list .article-card:first-child h3", ".articles-list .article-card:first-child .summary"]
             },
             "isPartOf": {"@type": "WebSite", "name": "AI工具宝箱", "url": "https://www.aitoolbox.hk/"}
         }
+
+        # 4) BreadcrumbList Schema
+        _breadcrumb_json = json.dumps({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoolbox.hk/"},
+                {"@type": "ListItem", "position": 2, "name": "文章列表", "item": "https://www.aitoolbox.hk/articles/"}
+            ]
+        }, ensure_ascii=False)
 
         _list_schema_json = (json.dumps(_blog_schema, ensure_ascii=False) +
             '</script>\n    <script type="application/ld+json">' +
@@ -2755,12 +2820,14 @@ def build_article_list_pages(articles):
     <title>AI工具宝箱 - 最新文章 第{page_num}页</title>
     <meta name="description" content="AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。第{page_num}页。">
     <meta name="keywords" content="AI工具,AI文章,AI评测,AI教程">
-    {robots_tag}{link_tags}    <meta property="og:type" content="website">
+    {robots_tag}{link_tags}    <meta property="og:type" content="blog">
     <meta property="og:title" content="AI工具宝箱 - 最新文章">
     <meta property="og:description" content="AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。">
     <meta property="og:url" content="https://www.aitoolbox.hk/articles/page/{page_num}/">
     <meta property="og:locale" content="zh_CN">
-    <meta property="og:image" content="{_list_og_image}" width="1200" height="630">
+    <meta property="og:image" content="{_list_og_image}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="AI工具宝箱">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI工具宝箱 - 最新文章">
@@ -2769,7 +2836,9 @@ def build_article_list_pages(articles):
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">
 {_list_schema_json}
-    }}
+    </script>
+    <script type="application/ld+json">
+{_breadcrumb_json}
     </script>
 {BAIDU_TONGJI}
 </head>
@@ -2785,7 +2854,10 @@ def build_article_list_pages(articles):
     </nav>
 
     <main class="article-container">
-        <h2 style="margin-bottom:24px;">&#x1F4DD; 最新文章</h2>
+        <div class="articles-page-intro">
+            <h1 style="margin-bottom:8px;">📝 最新文章</h1>
+            <p style="font-size:14px;color:#64748b;">原创AI工具深度评测与对比，每周更新，累计61篇。</p>
+        </div>
         <div class="articles-list">
 {articles_html}
         </div>
@@ -2936,7 +3008,7 @@ def build_index_page(tools, articles):
                 display_date = f'{int(parts[0]):02d}/{int(parts[1]):02d}'
         cat = a.get('category', '')
         tag = tag_names.get(cat, 'AI资讯')
-        news_html += f'''                                <a class="news-card-item" href="/articles/{a['slug']}/index.html">
+        news_html += f'''                                <a class="news-card-item" href="/articles/{a['slug']}/">
                                     <span class="news-card-date">{display_date}</span>
                                     <span class="news-card-title">{escape_html(a['title'])}</span>
                                     <span class="news-card-tag">{tag}</span>
@@ -2973,7 +3045,7 @@ def build_index_page(tools, articles):
             display_date = d
         articles_html += f'''                        <li>
                             <span class="date">{display_date}</span>
-                            <a class="title" href="/articles/{a['slug']}/index.html">{escape_html(a['title'])}</a>
+                            <a class="title" href="/articles/{a['slug']}/">{escape_html(a['title'])}</a>
                         </li>\n'''
     
     # 动态生成热门分类列表
@@ -2985,7 +3057,7 @@ def build_index_page(tools, articles):
         count = category_counts.get(category, 0)
         # 假设分类页面路径为 /category/slug/index.html
         category_slug = get_category_slug(category)
-        categories_html += f'''                        <li><a href="/category/{category_slug}/index.html">{category} ({count})</a></li>\n'''
+        categories_html += f'''                        <li><a href="/category/{category_slug}/">{category} ({count})</a></li>\n'''
 
     # 更新页脚链接
     footer_links_html = '''            <a href="/about.html">关于我们</a>

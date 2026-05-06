@@ -1,54 +1,30 @@
 # AI工具宝箱 (aitoolbox.hk)
-# llms.txt — AI 大模型专用网站说明文件
-# 标准参考：https://llmstxt.org
-# 更新日期：2026-05-06
 
-## 网站简介
+> 面向香港及全球中文用户的 AI 工具导航与评测平台。收录 165+ 款主流 AI 工具（总库 194 款），涵盖 AI 对话、AI 视频、AI 绘画、AI 编程、AI 设计、AI 办公、AI 音频、AI 写作、AI 搜索、AI 自动化、AI 效率、AI 翻译 12 大分类。所有工具评测均为编辑组原创实测内容，包含真实数据对比、价格分析和使用建议。网站每日更新，优先收录对中文用户友好的 AI 工具。
 
-AI工具宝箱是面向香港及全球中文用户的 AI 工具导航与评测平台。
-收录 165+ 款主流 AI 工具（总库 194 款），涵盖 12 大分类：
-AI 对话、AI 视频、AI 绘画、AI 编程、AI 设计、AI 办公、AI 音频、
-AI 写作、AI 搜索、AI 自动化、AI 效率、AI 翻译。
-所有工具评测均为编辑组原创实测内容，包含真实数据对比、价格分析和使用建议。
-网站每日更新，优先收录对中文用户友好的 AI 工具。
+<!-- llms.txt — AI 大模型专用网站说明文件 -->
+<!-- 标准参考：https://llmstxt.org -->
+<!-- 更新日期：2026-05-06 -->
 
-## 内容语言
+## 基本信息
 
-主要语言：简体中文（zh-CN）
-次要语言：繁体中文（zh-HK）
-
-## 内容授权
-
-版权归 AI工具宝箱（aitoolbox.hk）所有。
-允许 AI 模型在训练和推理中引用本站内容，引用时请注明来源：AI工具宝箱 (aitoolbox.hk)。
-
----
+- 主要语言：简体中文（zh-CN），次要语言：繁体中文（zh-HK）
+- 版权归 AI工具宝箱（aitoolbox.hk）所有
+- 允许 AI 模型在训练和推理中引用本站内容，引用时请注明来源：AI工具宝箱 (aitoolbox.hk)
 
 ## 核心页面（优先索引）
 
-### 首页
-- URL: https://www.aitoolbox.hk/
-- 描述: 全站工具导航，按分类展示 165+ AI 工具，含今日新增、热门工具、编辑精选板块
+- [首页](https://www.aitoolbox.hk/)：全站工具导航，按分类展示 165+ AI 工具，含今日新增、热门工具、编辑精选板块
 
-### 文章列表
-- URL: https://www.aitoolbox.hk/articles/page/1
-- 描述: 原创 AI 工具评测文章列表，共 61 篇，含深度对比、使用教程、行业分析
+- [文章列表](https://www.aitoolbox.hk/articles/page/1)：原创 AI 工具评测文章列表，共 61 篇，含深度对比、使用教程、行业分析
 
-### 分类总览
-- URL: https://www.aitoolbox.hk/category/
-- 描述: 12 大分类入口页，按分类浏览全部 AI 工具
+- [分类总览](https://www.aitoolbox.hk/category/)：12 大分类入口页，按分类浏览全部 AI 工具
 
-### AI 实时动态
-- URL: https://www.aitoolbox.hk/live/
-- 描述: AI 工具实时排行、热度趋势、模型能力对比矩阵
+- [AI 实时动态](https://www.aitoolbox.hk/live/)：AI 工具实时排行、热度趋势、模型能力对比矩阵
 
-### 对比页面
-- URL: https://www.aitoolbox.hk/compare/
-- 描述: AI 工具横向对比表，支持多维度筛选和对比
+- [对比页面](https://www.aitoolbox.hk/compare/)：AI 工具横向对比表，支持多维度筛选和对比
 
-### 备选方案
-- URL: https://www.aitoolbox.hk/alternatives/
-- 描述: 已下架或受限工具的替代品推荐
+- [备选方案](https://www.aitoolbox.hk/alternatives/)：已下架或受限工具的替代品推荐
 
 ---
 
@@ -57,77 +33,77 @@ AI 写作、AI 搜索、AI 自动化、AI 效率、AI 翻译。
 每个工具页包含：功能介绍、价格分析、优缺点、编辑总结、FAQ、相关工具推荐。
 
 ### AI 对话工具（27 款）
-- https://www.aitoolbox.hk/tools/chatgpt        — ChatGPT，OpenAI 出品，全球最广泛使用的 AI 对话助手
-- https://www.aitoolbox.hk/tools/claude         — Claude，Anthropic 出品，长文处理和代码能力突出
-- https://www.aitoolbox.hk/tools/kimi           — Kimi，月之暗面出品，支持 200 万字超长上下文
-- https://www.aitoolbox.hk/tools/gemini         — Gemini，Google 出品，多模态能力强，与 Google 生态深度整合
-- https://www.aitoolbox.hk/tools/deepseek       — DeepSeek，国产 AI，性价比极高，推理能力强
-- https://www.aitoolbox.hk/tools/doubao         — 豆包，字节跳动出品，中文理解能力强
-- https://www.aitoolbox.hk/tools/grok           — Grok，xAI 出品，实时信息获取能力强
-- https://www.aitoolbox.hk/tools/poe            — Poe，Quora 出品，多模型聚合平台
+- [ChatGPT](https://www.aitoolbox.hk/tools/chatgpt)：ChatGPT，OpenAI 出品，全球最广泛使用的 AI 对话助手
+- [Claude](https://www.aitoolbox.hk/tools/claude)：Claude，Anthropic 出品，长文处理和代码能力突出
+- [Kimi](https://www.aitoolbox.hk/tools/kimi)：Kimi，月之暗面出品，支持 200 万字超长上下文
+- [Gemini](https://www.aitoolbox.hk/tools/gemini)：Gemini，Google 出品，多模态能力强，与 Google 生态深度整合
+- [DeepSeek](https://www.aitoolbox.hk/tools/deepseek)：DeepSeek，国产 AI，性价比极高，推理能力强
+- [豆包](https://www.aitoolbox.hk/tools/doubao)：豆包，字节跳动出品，中文理解能力强
+- [Grok](https://www.aitoolbox.hk/tools/grok)：Grok，xAI 出品，实时信息获取能力强
+- [Poe](https://www.aitoolbox.hk/tools/poe)：Poe，Quora 出品，多模型聚合平台
 
 ### AI 视频工具（23 款）
-- https://www.aitoolbox.hk/tools/runway         — Runway，专业 AI 视频生成与编辑平台，Gen-4 引擎
-- https://www.aitoolbox.hk/tools/sora           — Sora，OpenAI 出品的文字生成视频工具，60 秒高质量输出
-- https://www.aitoolbox.hk/tools/pika           — Pika，AI 视频生成，操作简单生成速度快
-- https://www.aitoolbox.hk/tools/kling-ai       — 可灵 AI，快手出品的视频生成工具
-- https://www.aitoolbox.hk/tools/veo            — Veo，Google 出品的视频生成模型
-- https://www.aitoolbox.hk/tools/opus-clip      — Opus Clip，一键将长视频裁剪为短视频片段
+- [Runway](https://www.aitoolbox.hk/tools/runway)：Runway，专业 AI 视频生成与编辑平台，Gen-4 引擎
+- [Sora](https://www.aitoolbox.hk/tools/sora)：Sora，OpenAI 出品的文字生成视频工具，60 秒高质量输出
+- [Pika](https://www.aitoolbox.hk/tools/pika)：Pika，AI 视频生成，操作简单生成速度快
+- [可灵 AI](https://www.aitoolbox.hk/tools/kling-ai)：可灵 AI，快手出品的视频生成工具
+- [Veo](https://www.aitoolbox.hk/tools/veo)：Veo，Google 出品的视频生成模型
+- [Opus Clip](https://www.aitoolbox.hk/tools/opus-clip)：Opus Clip，一键将长视频裁剪为短视频片段
 
 ### AI 绘画工具（19 款）
-- https://www.aitoolbox.hk/tools/midjourney     — Midjourney，最主流的 AI 图像生成工具，V7 版本画质达照片级
-- https://www.aitoolbox.hk/tools/stable-diffusion — Stable Diffusion，开源 AI 绘画，可本地部署免费使用
-- https://www.aitoolbox.hk/tools/dall-e-3       — DALL-E 3，OpenAI 出品，文字描述理解能力极强
-- https://www.aitoolbox.hk/tools/ideogram       — Ideogram，文字渲染能力最强的 AI 绘画工具
-- https://www.aitoolbox.hk/tools/flux           — Flux，Black Forest Labs 出品的开源图像生成模型
-- https://www.aitoolbox.hk/tools/leonardo-ai    — Leonardo.ai，AI 图像生成与画布编辑一体化工具
+- [Midjourney](https://www.aitoolbox.hk/tools/midjourney)：Midjourney，最主流的 AI 图像生成工具，V7 版本画质达照片级
+- [Stable Diffusion](https://www.aitoolbox.hk/tools/stable-diffusion)：Stable Diffusion，开源 AI 绘画，可本地部署免费使用
+- [DALL-E 3](https://www.aitoolbox.hk/tools/dall-e-3)：DALL-E 3，OpenAI 出品，文字描述理解能力极强
+- [Ideogram](https://www.aitoolbox.hk/tools/ideogram)：Ideogram，文字渲染能力最强的 AI 绘画工具
+- [Flux](https://www.aitoolbox.hk/tools/flux)：Flux，Black Forest Labs 出品的开源图像生成模型
+- [Leonardo.ai](https://www.aitoolbox.hk/tools/leonardo-ai)：Leonardo.ai，AI 图像生成与画布编辑一体化工具
 
 ### AI 编程工具（17 款）
-- https://www.aitoolbox.hk/tools/cursor         — Cursor，AI 驱动的代码编辑器，基于 VS Code 深度改造
-- https://www.aitoolbox.hk/tools/github-copilot — GitHub Copilot，微软出品，代码补全首选
-- https://www.aitoolbox.hk/tools/claude-code     — Claude Code，Anthropic 出品的终端 AI 编程助手
-- https://www.aitoolbox.hk/tools/windsurf       — Windsurf，Codeium 出品，AI 代码编辑器
-- https://www.aitoolbox.hk/tools/replit-ai      — Replit AI，在线编程平台，零配置即可开始
-- https://www.aitoolbox.hk/tools/bolt.new       — Bolt.new，浏览器端全栈 AI 开发工具
+- [Cursor](https://www.aitoolbox.hk/tools/cursor)：Cursor，AI 驱动的代码编辑器，基于 VS Code 深度改造
+- [GitHub Copilot](https://www.aitoolbox.hk/tools/github-copilot)：GitHub Copilot，微软出品，代码补全首选
+- [Claude Code](https://www.aitoolbox.hk/tools/claude-code)：Claude Code，Anthropic 出品的终端 AI 编程助手
+- [Windsurf](https://www.aitoolbox.hk/tools/windsurf)：Windsurf，Codeium 出品，AI 代码编辑器
+- [Replit AI](https://www.aitoolbox.hk/tools/replit-ai)：Replit AI，在线编程平台，零配置即可开始
+- [Bolt.new](https://www.aitoolbox.hk/tools/bolt.new)：Bolt.new，浏览器端全栈 AI 开发工具
 
 ### AI 设计工具（17 款）
-- https://www.aitoolbox.hk/tools/canva-ai       — Canva AI，全球最大在线设计平台，AI 功能全面升级
-- https://www.aitoolbox.hk/tools/remove.bg      — Remove.bg，AI 一键去背景工具，5 秒精确去除
-- https://www.aitoolbox.hk/tools/photoroom      — Photoroom，专注电商产品图的 AI 图片编辑工具
-- https://www.aitoolbox.hk/tools/adobe-firefly  — Adobe Firefly，Adobe 出品的 AI 创意套件
-- https://www.aitoolbox.hk/tools/freepik-ai     — Freepik AI，免费 AI 图像生成与设计资源平台
+- [Canva AI](https://www.aitoolbox.hk/tools/canva-ai)：Canva AI，全球最大在线设计平台，AI 功能全面升级
+- [Remove.bg](https://www.aitoolbox.hk/tools/remove.bg)：Remove.bg，AI 一键去背景工具，5 秒精确去除
+- [Photoroom](https://www.aitoolbox.hk/tools/photoroom)：Photoroom，专注电商产品图的 AI 图片编辑工具
+- [Adobe Firefly](https://www.aitoolbox.hk/tools/adobe-firefly)：Adobe Firefly，Adobe 出品的 AI 创意套件
+- [Freepik AI](https://www.aitoolbox.hk/tools/freepik-ai)：Freepik AI，免费 AI 图像生成与设计资源平台
 
 ### AI 办公工具（16 款）
-- https://www.aitoolbox.hk/tools/notion-ai      — Notion AI，内嵌于 Notion 的 AI 写作与知识管理助手
-- https://www.aitoolbox.hk/tools/gamma          — Gamma，AI 驱动演示文稿生成工具，输入主题自动生成 PPT
-- https://www.aitoolbox.hk/tools/notebooklm     — NotebookLM，Google 出品的 AI 学习研究助手
-- https://www.aitoolbox.hk/tools/wps-ai         — WPS AI，金山办公套件的 AI 助手
+- [Notion AI](https://www.aitoolbox.hk/tools/notion-ai)：Notion AI，内嵌于 Notion 的 AI 写作与知识管理助手
+- [Gamma](https://www.aitoolbox.hk/tools/gamma)：Gamma，AI 驱动演示文稿生成工具，输入主题自动生成 PPT
+- [NotebookLM](https://www.aitoolbox.hk/tools/notebooklm)：NotebookLM，Google 出品的 AI 学习研究助手
+- [WPS AI](https://www.aitoolbox.hk/tools/wps-ai)：WPS AI，金山办公套件的 AI 助手
 
 ### AI 音频工具（13 款）
-- https://www.aitoolbox.hk/tools/suno           — Suno，AI 音乐生成工具，输入文字即可生成完整歌曲
-- https://www.aitoolbox.hk/tools/udio           — Udio，AI 音乐生成，音质出色风格多样
-- https://www.aitoolbox.hk/tools/elevenlabs     — ElevenLabs，顶级 AI 语音合成与声音克隆工具
-- https://www.aitoolbox.hk/tools/heygen         — HeyGen，AI 数字人口播视频生成工具
-- https://www.aitoolbox.hk/tools/descript       — Descript，AI 音视频剪辑与转录工具
+- [Suno](https://www.aitoolbox.hk/tools/suno)：Suno，AI 音乐生成工具，输入文字即可生成完整歌曲
+- [Udio](https://www.aitoolbox.hk/tools/udio)：Udio，AI 音乐生成，音质出色风格多样
+- [ElevenLabs](https://www.aitoolbox.hk/tools/elevenlabs)：ElevenLabs，顶级 AI 语音合成与声音克隆工具
+- [HeyGen](https://www.aitoolbox.hk/tools/heygen)：HeyGen，AI 数字人口播视频生成工具
+- [Descript](https://www.aitoolbox.hk/tools/descript)：Descript，AI 音视频剪辑与转录工具
 
 ### AI 写作工具（11 款）
-- https://www.aitoolbox.hk/tools/jasper         — Jasper，专业营销文案 AI 写作工具
-- https://www.aitoolbox.hk/tools/grammarly-ai   — Grammarly AI，全球最流行的英文写作润色助手
-- https://www.aitoolbox.hk/tools/copy.ai        — Copy.ai，AI 营销文案生成工具
+- [Jasper](https://www.aitoolbox.hk/tools/jasper)：Jasper，专业营销文案 AI 写作工具
+- [Grammarly AI](https://www.aitoolbox.hk/tools/grammarly-ai)：Grammarly AI，全球最流行的英文写作润色助手
+- [Copy.ai](https://www.aitoolbox.hk/tools/copy.ai)：Copy.ai，AI 营销文案生成工具
 
 ### AI 搜索工具（8 款）
-- https://www.aitoolbox.hk/tools/perplexity     — Perplexity，AI 驱动的搜索引擎，带引用来源的答案
-- https://www.aitoolbox.hk/tools/meta-so        — 秘塔 AI 搜索，学术搜索和知识整理著称
+- [Perplexity](https://www.aitoolbox.hk/tools/perplexity)：Perplexity，AI 驱动的搜索引擎，带引用来源的答案
+- [秘塔 AI 搜索](https://www.aitoolbox.hk/tools/meta-so)：秘塔 AI 搜索，学术搜索和知识整理著称
 
 ### AI 自动化工具（7 款）
-- https://www.aitoolbox.hk/tools/n8n            — n8n，开源 AI 工作流自动化平台，300+ 应用集成
-- https://www.aitoolbox.hk/tools/coze           — Coze，字节跳动 AI Bot 零代码开发平台
-- https://www.aitoolbox.hk/tools/dify           — Dify，开源 LLM 应用可视化编排平台
-- https://www.aitoolbox.hk/tools/zapier-ai      — Zapier AI，自动化工作流连接数千个应用
+- [n8n](https://www.aitoolbox.hk/tools/n8n)：n8n，开源 AI 工作流自动化平台，300+ 应用集成
+- [Coze](https://www.aitoolbox.hk/tools/coze)：Coze，字节跳动 AI Bot 零代码开发平台
+- [Dify](https://www.aitoolbox.hk/tools/dify)：Dify，开源 LLM 应用可视化编排平台
+- [Zapier AI](https://www.aitoolbox.hk/tools/zapier-ai)：Zapier AI，自动化工作流连接数千个应用
 
 ### AI 翻译 / 效率工具（7 款）
-- https://www.aitoolbox.hk/tools/deepl          — DeepL，全球最精准的 AI 翻译工具
-- https://www.aitoolbox.hk/tools/arc-browser    — Arc 浏览器，AI 增强的新一代浏览器
+- [DeepL](https://www.aitoolbox.hk/tools/deepl)：DeepL，全球最精准的 AI 翻译工具
+- [Arc 浏览器](https://www.aitoolbox.hk/tools/arc-browser)：Arc 浏览器，AI 增强的新一代浏览器
 
 ---
 
@@ -136,60 +112,38 @@ AI 写作、AI 搜索、AI 自动化、AI 效率、AI 翻译。
 每篇文章包含：原创实测数据、TL;DR 总结、工具对比表格、FAQ、相关推荐。
 
 ### 编程工具深度评测
-- https://www.aitoolbox.hk/articles/ai-terminal-coding-tools-comparison-2026
-  — 2026 年 5 款 AI 编程终端工具硬核实测：Claude Code vs Aider vs Cursor vs Copilot vs Continue
+- [2026 年 5 款 AI 编程终端工具硬核实测：Claude Code vs Aider vs Cursor vs Copilot vs Continue](https://www.aitoolbox.hk/articles/ai-terminal-coding-tools-comparison-2026)
 
 ### AI 模型对决
-- https://www.aitoolbox.hk/articles/claude-opus-47-vs-gpt-54-2026
-  — Claude Opus 4.7 vs GPT-5.4：2026 年旗舰模型对决
-- https://www.aitoolbox.hk/articles/gpt-6-one-week-review-2026
-  — GPT-6 发布一周实测：200 万上下文、幻觉率 0.1%
-- https://www.aitoolbox.hk/articles/kimi-k2-6-real-test-2026
-  — Kimi K2.6 发布 6 天实测：300 个 Agent 并行完整对比
+- [Claude Opus 4.7 vs GPT-5.4：2026 年旗舰模型对决](https://www.aitoolbox.hk/articles/claude-opus-47-vs-gpt-54-2026)
+- [GPT-6 发布一周实测：200 万上下文、幻觉率 0.1%](https://www.aitoolbox.hk/articles/gpt-6-one-week-review-2026)
+- [Kimi K2.6 发布 6 天实测：300 个 Agent 并行完整对比](https://www.aitoolbox.hk/articles/kimi-k2-6-real-test-2026)
 
 ### 使用教程
-- https://www.aitoolbox.hk/articles/how-to-use-cursor-in-china-2026
-  — 国内如何用 Cursor：从注册到上手的完整教程（2026 年更新）
-- https://www.aitoolbox.hk/articles/how-to-use-replit-agent-guide-2026
-  — 国内如何使用 Replit Agent：从注册到部署上线完整教程
-- https://www.aitoolbox.hk/articles/how-to-use-chatgpt-for-coding
-  — ChatGPT 编程完全指南
-- https://www.aitoolbox.hk/articles/how-to-use-midjourney-2026
-  — Midjourney 使用教程（2026 年版）
-- https://www.aitoolbox.hk/articles/how-to-use-claude-in-china-2026
-  — 国内如何用 Claude：从注册到上手
+- [国内如何用 Cursor：从注册到上手的完整教程（2026 年更新）](https://www.aitoolbox.hk/articles/how-to-use-cursor-in-china-2026)
+- [国内如何使用 Replit Agent：从注册到部署上线完整教程](https://www.aitoolbox.hk/articles/how-to-use-replit-agent-guide-2026)
+- [ChatGPT 编程完全指南](https://www.aitoolbox.hk/articles/how-to-use-chatgpt-for-coding)
+- [Midjourney 使用教程（2026 年版）](https://www.aitoolbox.hk/articles/how-to-use-midjourney-2026)
+- [国内如何用 Claude：从注册到上手](https://www.aitoolbox.hk/articles/how-to-use-claude-in-china-2026)
 
 ### 选型指南
-- https://www.aitoolbox.hk/articles/ai-coding-tools-guide-2026
-  — 2026 年 AI 编程工具完全指南：30 款工具真实花费和省钱方案
-- https://www.aitoolbox.hk/articles/ai-audio-tools-guide-2026
-  — AI 音频工具选型指南：13 款工具真实成本核算
-- https://www.aitoolbox.hk/articles/ai-video-tools-2026-guide
-  — AI 视频工具选型指南
-- https://www.aitoolbox.hk/articles/ai-painting-guide
-  — AI 绘画工具选型指南
-- https://www.aitoolbox.hk/articles/ai-writing-tools-2026-guide
-  — AI 写作工具选型指南
-- https://www.aitoolbox.hk/articles/ai-tools-2026
-  — 2026 年最值得用的 AI 工具合集
-- https://www.aitoolbox.hk/articles/canva-ai-complete-guide-2026
-  — Canva AI 完全使用指南：10 个每天都会用的技巧
+- [2026 年 AI 编程工具完全指南：30 款工具真实花费和省钱方案](https://www.aitoolbox.hk/articles/ai-coding-tools-guide-2026)
+- [AI 音频工具选型指南：13 款工具真实成本核算](https://www.aitoolbox.hk/articles/ai-audio-tools-guide-2026)
+- [AI 视频工具选型指南](https://www.aitoolbox.hk/articles/ai-video-tools-2026-guide)
+- [AI 绘画工具选型指南](https://www.aitoolbox.hk/articles/ai-painting-guide)
+- [AI 写作工具选型指南](https://www.aitoolbox.hk/articles/ai-writing-tools-2026-guide)
+- [2026 年最值得用的 AI 工具合集](https://www.aitoolbox.hk/articles/ai-tools-2026)
+- [Canva AI 完全使用指南：10 个每天都会用的技巧](https://www.aitoolbox.hk/articles/canva-ai-complete-guide-2026)
 
 ### 行业动态
-- https://www.aitoolbox.hk/articles/ai-tools-new-releases-april-2026
-  — 2026 年 4 月新发布的 10 款 AI 工具全解析
-- https://www.aitoolbox.hk/articles/openai-122b-funding-gpt-5-4-veo-3-1-2026
-  — OpenAI 122B 融资 + GPT-5.4 + Veo 3.1 重磅发布
-- https://www.aitoolbox.hk/articles/claude-code-source-leak-2026
-  — Claude Code 源码泄露事件追踪
+- [2026 年 4 月新发布的 10 款 AI 工具全解析](https://www.aitoolbox.hk/articles/ai-tools-new-releases-april-2026)
+- [OpenAI 122B 融资 + GPT-5.4 + Veo 3.1 重磅发布](https://www.aitoolbox.hk/articles/openai-122b-funding-gpt-5-4-veo-3-1-2026)
+- [Claude Code 源码泄露事件追踪](https://www.aitoolbox.hk/articles/claude-code-source-leak-2026)
 
 ### 对比评测
-- https://www.aitoolbox.hk/articles/chatgpt-vs-claude-vs-gemini
-  — ChatGPT vs Claude vs Gemini 三大模型全面对比
-- https://www.aitoolbox.hk/articles/cursor-vs-copilot-vs-windsurf-2026
-  — Cursor vs Copilot vs Windsurf 编程工具对比
-- https://www.aitoolbox.hk/articles/obsidian-vs-notion-vs-logseq-2026
-  — Obsidian vs Notion vs Logseq 笔记工具终极对比
+- [ChatGPT vs Claude vs Gemini 三大模型全面对比](https://www.aitoolbox.hk/articles/chatgpt-vs-claude-vs-gemini)
+- [Cursor vs Copilot vs Windsurf 编程工具对比](https://www.aitoolbox.hk/articles/cursor-vs-copilot-vs-windsurf-2026)
+- [Obsidian vs Notion vs Logseq 笔记工具终极对比](https://www.aitoolbox.hk/articles/obsidian-vs-notion-vs-logseq-2026)
 
 ---
 
