@@ -5094,6 +5094,72 @@ window.__ALL_TOOLS__ = [
     "platform": "VS Code、JetBrains IDEs、Visual Studio"
   },
   {
+    "name": "HappyHorse",
+    "slug": "happy-horse",
+    "emoji": "🐴",
+    "color": "#8B4513",
+    "description": "HappyHorse是一款专注于提升工作效率的AI助手工具，2026年推出全新3.0版本，集成了智能任务管理、自动化工作流程和数据分析等功能，帮助用户快速完成重复性工作。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "效率提升"
+      },
+      {
+        "text": "任务自动化"
+      },
+      {
+        "text": "工作流管理"
+      },
+      {
+        "text": "数据分析",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://happyhorse.ai",
+    "price": "免费版可用，付费版$9.9/月",
+    "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Semrush AI",
+    "slug": "semrush-ai",
+    "emoji": "🎯",
+    "color": "#FF642D",
+    "description": "Semrush是全球领先的SEO和内容营销平台，提供全面的关键词研究、竞争对手分析、流量洞察和内容优化功能。2026年平台进一步强化了AI驱动的内容生成和SEO建议功能，帮助用户更高效地创建搜索友好的内容。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "SEO优化"
+      },
+      {
+        "text": "关键词研究"
+      },
+      {
+        "text": "竞争对手分析"
+      },
+      {
+        "text": "内容营销"
+      },
+      {
+        "text": "网站流量分析"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "8500万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.semrush.com",
+    "price": "免费版可用，专业版$119.95/月起",
+    "platform": "网页端、桌面端（Windows/Mac）、移动端（iOS/Android）"
+  },
+  {
     "name": "Smartcat",
     "slug": "smartcat",
     "emoji": "🌐",
@@ -5124,6 +5190,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://smartcat.com",
     "price": "免费版可用，付费版$15/月起，企业版定制报价",
     "platform": "Web / iOS / Android / API / 浏览器插件"
+  },
+  {
+    "name": "Zety AI",
+    "slug": "zety-ai",
+    "emoji": "📝",
+    "color": "#2B3D52",
+    "description": "Zety AI是Zety平台推出的智能简历写作助手，利用人工智能技术帮助用户快速生成专业简历。2026年最新版本增强了AI优化功能，能够根据目标职位智能推荐关键词和改进建议，大幅提升简历通过率。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "简历制作"
+      },
+      {
+        "text": "职业发展"
+      },
+      {
+        "text": "AI写作"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://zety.com",
+    "price": "免费版可用，专业版约$9.99/月",
+    "platform": "网页端"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -9994,6 +10088,72 @@ window.__REMAINING_TOOLS__ = [
     "platform": "VS Code、JetBrains IDEs、Visual Studio"
   },
   {
+    "name": "HappyHorse",
+    "slug": "happy-horse",
+    "emoji": "🐴",
+    "color": "#8B4513",
+    "description": "HappyHorse是一款专注于提升工作效率的AI助手工具，2026年推出全新3.0版本，集成了智能任务管理、自动化工作流程和数据分析等功能，帮助用户快速完成重复性工作。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "效率提升"
+      },
+      {
+        "text": "任务自动化"
+      },
+      {
+        "text": "工作流管理"
+      },
+      {
+        "text": "数据分析",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://happyhorse.ai",
+    "price": "免费版可用，付费版$9.9/月",
+    "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Semrush AI",
+    "slug": "semrush-ai",
+    "emoji": "🎯",
+    "color": "#FF642D",
+    "description": "Semrush是全球领先的SEO和内容营销平台，提供全面的关键词研究、竞争对手分析、流量洞察和内容优化功能。2026年平台进一步强化了AI驱动的内容生成和SEO建议功能，帮助用户更高效地创建搜索友好的内容。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "SEO优化"
+      },
+      {
+        "text": "关键词研究"
+      },
+      {
+        "text": "竞争对手分析"
+      },
+      {
+        "text": "内容营销"
+      },
+      {
+        "text": "网站流量分析"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "8500万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.semrush.com",
+    "price": "免费版可用，专业版$119.95/月起",
+    "platform": "网页端、桌面端（Windows/Mac）、移动端（iOS/Android）"
+  },
+  {
     "name": "Smartcat",
     "slug": "smartcat",
     "emoji": "🌐",
@@ -10024,5 +10184,33 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://smartcat.com",
     "price": "免费版可用，付费版$15/月起，企业版定制报价",
     "platform": "Web / iOS / Android / API / 浏览器插件"
+  },
+  {
+    "name": "Zety AI",
+    "slug": "zety-ai",
+    "emoji": "📝",
+    "color": "#2B3D52",
+    "description": "Zety AI是Zety平台推出的智能简历写作助手，利用人工智能技术帮助用户快速生成专业简历。2026年最新版本增强了AI优化功能，能够根据目标职位智能推荐关键词和改进建议，大幅提升简历通过率。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "简历制作"
+      },
+      {
+        "text": "职业发展"
+      },
+      {
+        "text": "AI写作"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://zety.com",
+    "price": "免费版可用，专业版约$9.99/月",
+    "platform": "网页端"
   }
 ];
