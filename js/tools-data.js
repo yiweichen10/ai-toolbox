@@ -4942,6 +4942,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web浏览器（Chrome/Safari/Firefox扩展）"
   },
   {
+    "name": "Humata AI",
+    "slug": "humata-ai",
+    "emoji": "📄",
+    "color": "#4F46E5",
+    "description": "Humata AI是一款专注于PDF文档智能分析的AI工具，利用先进的大语言模型帮助用户快速理解长篇文档内容、提取关键信息、生成摘要和回答文档相关问题。2026年新增多文档对比分析和跨文档语义搜索功能，整体处理速度提升40%。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "PDF分析"
+      },
+      {
+        "text": "文档理解"
+      },
+      {
+        "text": "长文本处理"
+      },
+      {
+        "text": "智能摘要",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://humata.ai",
+    "price": "免费版每月50页；付费版Pro $19/月无限制",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "AdCreative AI",
     "slug": "adcreative-ai",
     "emoji": "🎨",
@@ -5060,6 +5092,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://jimeng.jinritemai.com/",
     "price": "基础功能免费使用，高级功能付费订阅",
     "platform": "网页端、安卓、iOS"
+  },
+  {
+    "name": "星火认知大模型",
+    "slug": "xinghuo-cognitive-model",
+    "emoji": "🔥",
+    "color": "#4A90E2",
+    "description": "讯飞星火认知大模型是科大讯飞自主研发的大型语言模型，已迭代至4.0版本，具备强大的文本生成、知识问答、数学推理、代码编写等能力，在国内企业级AI应用市场占据重要地位。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "国产大模型"
+      },
+      {
+        "text": "科大讯飞"
+      },
+      {
+        "text": "多模态",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "850万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://xinghuo.xfyun.cn/",
+    "price": "免费版 + 付费专业版",
+    "platform": "网页端 / iOS / Android / API"
   },
   {
     "name": "Trae",
@@ -5190,6 +5251,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://smartcat.com",
     "price": "免费版可用，付费版$15/月起，企业版定制报价",
     "platform": "Web / iOS / Android / API / 浏览器插件"
+  },
+  {
+    "name": "LingoAI",
+    "slug": "lingoai",
+    "emoji": "🌍",
+    "color": "#10B981",
+    "description": "LingoAI是一款专注于多语言翻译和跨语言沟通的AI工具，基于先进的神经网络技术提供实时、准确的翻译服务。2026年最新版本增强了上下文理解和行业术语支持，支持超过100种语言的互译，是跨境贸易、学术研究和国际交流的理想选择。",
+    "category": "AI翻译",
+    "tags": [
+      {
+        "text": "多语言翻译"
+      },
+      {
+        "text": "实时翻译"
+      },
+      {
+        "text": "AI翻译",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://lingoai.com",
+    "price": "免费版基础功能，高级版每月$9.99起",
+    "platform": "网页端、iOS、Android、Chrome插件"
   },
   {
     "name": "Zety AI",
@@ -9936,6 +10026,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web浏览器（Chrome/Safari/Firefox扩展）"
   },
   {
+    "name": "Humata AI",
+    "slug": "humata-ai",
+    "emoji": "📄",
+    "color": "#4F46E5",
+    "description": "Humata AI是一款专注于PDF文档智能分析的AI工具，利用先进的大语言模型帮助用户快速理解长篇文档内容、提取关键信息、生成摘要和回答文档相关问题。2026年新增多文档对比分析和跨文档语义搜索功能，整体处理速度提升40%。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "PDF分析"
+      },
+      {
+        "text": "文档理解"
+      },
+      {
+        "text": "长文本处理"
+      },
+      {
+        "text": "智能摘要",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://humata.ai",
+    "price": "免费版每月50页；付费版Pro $19/月无限制",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "AdCreative AI",
     "slug": "adcreative-ai",
     "emoji": "🎨",
@@ -10054,6 +10176,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://jimeng.jinritemai.com/",
     "price": "基础功能免费使用，高级功能付费订阅",
     "platform": "网页端、安卓、iOS"
+  },
+  {
+    "name": "星火认知大模型",
+    "slug": "xinghuo-cognitive-model",
+    "emoji": "🔥",
+    "color": "#4A90E2",
+    "description": "讯飞星火认知大模型是科大讯飞自主研发的大型语言模型，已迭代至4.0版本，具备强大的文本生成、知识问答、数学推理、代码编写等能力，在国内企业级AI应用市场占据重要地位。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "国产大模型"
+      },
+      {
+        "text": "科大讯飞"
+      },
+      {
+        "text": "多模态",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "850万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://xinghuo.xfyun.cn/",
+    "price": "免费版 + 付费专业版",
+    "platform": "网页端 / iOS / Android / API"
   },
   {
     "name": "Trae",
@@ -10184,6 +10335,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://smartcat.com",
     "price": "免费版可用，付费版$15/月起，企业版定制报价",
     "platform": "Web / iOS / Android / API / 浏览器插件"
+  },
+  {
+    "name": "LingoAI",
+    "slug": "lingoai",
+    "emoji": "🌍",
+    "color": "#10B981",
+    "description": "LingoAI是一款专注于多语言翻译和跨语言沟通的AI工具，基于先进的神经网络技术提供实时、准确的翻译服务。2026年最新版本增强了上下文理解和行业术语支持，支持超过100种语言的互译，是跨境贸易、学术研究和国际交流的理想选择。",
+    "category": "AI翻译",
+    "tags": [
+      {
+        "text": "多语言翻译"
+      },
+      {
+        "text": "实时翻译"
+      },
+      {
+        "text": "AI翻译",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://lingoai.com",
+    "price": "免费版基础功能，高级版每月$9.99起",
+    "platform": "网页端、iOS、Android、Chrome插件"
   },
   {
     "name": "Zety AI",
