@@ -4942,6 +4942,40 @@ window.__ALL_TOOLS__ = [
     "platform": "Web浏览器（Chrome/Safari/Firefox扩展）"
   },
   {
+    "name": "Scalenut",
+    "slug": "scalenut",
+    "emoji": "📝",
+    "color": "#00C853",
+    "description": "Scalenut是一款AI驱动的SEO和内容营销平台，专注于帮助用户创建SEO优化的内容。2026年平台集成了更先进的自然语言处理技术，支持多语言内容生成，并推出AI写作助手2.0版本，显著提升内容质量和创作效率。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "SEO优化"
+      },
+      {
+        "text": "内容营销"
+      },
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "关键词研究"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://scalenut.com",
+    "price": "免费版每月2000字，高级版$39起/月",
+    "platform": "网页版、Chrome插件"
+  },
+  {
     "name": "Humata AI",
     "slug": "humata-ai",
     "emoji": "📄",
@@ -5002,6 +5036,38 @@ window.__ALL_TOOLS__ = [
     },
     "url": "https://www.adcreative.ai",
     "price": "免费版可用，付费版$29-299/月",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Predis AI",
+    "slug": "predis-ai",
+    "emoji": "🎨",
+    "color": "#6366F1",
+    "description": "Predis AI是一款AI驱动的社交媒体内容创作平台，帮助用户快速生成吸引人的帖子、图像、视频和文案。2026年平台集成了最新的多模态生成模型，支持一键生成完整的社交媒体营销内容流，深受内容创作者和营销人员喜爱。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "社交媒体营销"
+      },
+      {
+        "text": "AI内容创作"
+      },
+      {
+        "text": "图像生成"
+      },
+      {
+        "text": "视频生成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://predis.ai",
+    "price": "免费版可用，付费版$29/月起",
     "platform": "网页端、iOS、Android"
   },
   {
@@ -5121,6 +5187,40 @@ window.__ALL_TOOLS__ = [
     "url": "https://xinghuo.xfyun.cn/",
     "price": "免费版 + 付费专业版",
     "platform": "网页端 / iOS / Android / API"
+  },
+  {
+    "name": "Aider",
+    "slug": "aider",
+    "emoji": "💻",
+    "color": "#10B981",
+    "description": "Aider是一个开源的AI配对编程助手，直接在终端中与你的Git仓库集成。它支持多种大语言模型，可以智能理解整个代码库并进行上下文感知的代码编辑和重构。2026年持续更新，增加了更强大的多文件分析和自动化测试生成能力。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "命令行工具"
+      },
+      {
+        "text": "Git集成"
+      },
+      {
+        "text": "代码编辑"
+      },
+      {
+        "text": "开源"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约15万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://aider.sh",
+    "price": "免费开源，支持接入多种LLM API",
+    "platform": "macOS、Linux、Windows"
   },
   {
     "name": "Trae",
@@ -10026,6 +10126,40 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web浏览器（Chrome/Safari/Firefox扩展）"
   },
   {
+    "name": "Scalenut",
+    "slug": "scalenut",
+    "emoji": "📝",
+    "color": "#00C853",
+    "description": "Scalenut是一款AI驱动的SEO和内容营销平台，专注于帮助用户创建SEO优化的内容。2026年平台集成了更先进的自然语言处理技术，支持多语言内容生成，并推出AI写作助手2.0版本，显著提升内容质量和创作效率。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "SEO优化"
+      },
+      {
+        "text": "内容营销"
+      },
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "关键词研究"
+      },
+      {
+        "text": "付费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://scalenut.com",
+    "price": "免费版每月2000字，高级版$39起/月",
+    "platform": "网页版、Chrome插件"
+  },
+  {
     "name": "Humata AI",
     "slug": "humata-ai",
     "emoji": "📄",
@@ -10086,6 +10220,38 @@ window.__REMAINING_TOOLS__ = [
     },
     "url": "https://www.adcreative.ai",
     "price": "免费版可用，付费版$29-299/月",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Predis AI",
+    "slug": "predis-ai",
+    "emoji": "🎨",
+    "color": "#6366F1",
+    "description": "Predis AI是一款AI驱动的社交媒体内容创作平台，帮助用户快速生成吸引人的帖子、图像、视频和文案。2026年平台集成了最新的多模态生成模型，支持一键生成完整的社交媒体营销内容流，深受内容创作者和营销人员喜爱。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "社交媒体营销"
+      },
+      {
+        "text": "AI内容创作"
+      },
+      {
+        "text": "图像生成"
+      },
+      {
+        "text": "视频生成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://predis.ai",
+    "price": "免费版可用，付费版$29/月起",
     "platform": "网页端、iOS、Android"
   },
   {
@@ -10205,6 +10371,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://xinghuo.xfyun.cn/",
     "price": "免费版 + 付费专业版",
     "platform": "网页端 / iOS / Android / API"
+  },
+  {
+    "name": "Aider",
+    "slug": "aider",
+    "emoji": "💻",
+    "color": "#10B981",
+    "description": "Aider是一个开源的AI配对编程助手，直接在终端中与你的Git仓库集成。它支持多种大语言模型，可以智能理解整个代码库并进行上下文感知的代码编辑和重构。2026年持续更新，增加了更强大的多文件分析和自动化测试生成能力。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "命令行工具"
+      },
+      {
+        "text": "Git集成"
+      },
+      {
+        "text": "代码编辑"
+      },
+      {
+        "text": "开源"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约15万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://aider.sh",
+    "price": "免费开源，支持接入多种LLM API",
+    "platform": "macOS、Linux、Windows"
   },
   {
     "name": "Trae",
