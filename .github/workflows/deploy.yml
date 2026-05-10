@@ -1,0 +1,37 @@
+name: Deploy to Alibaba Cloud
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p 22 121.43.144.99 >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Rsync deploy (incremental)
+        run: |
+          rsync -avz --delete \
+            --exclude='.env' \
+            --exclude='.git' \
+            --exclude='*.bak' \
+            --exclude='*.md' \
+            --exclude='data/' \
+            --exclude='scripts/' \
+            --exclude='images/' \
+            --exclude='_archive/' \
+            --exclude='backup/' \
+            --exclude='__pycache__/' \
+            --exclude='.github/' \
+            --exclude='vercel.json' \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
+            ./  root@121.43.144.99:/var/www/aitoollab/html/
