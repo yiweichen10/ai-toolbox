@@ -4,7 +4,7 @@ Phase 5: AI工具动态排名系统
 ============================
 
 核心思路：
-- aitoolbox.hk 是纯静态站（GitHub Pages），无后端服务器
+- aitoollab.cn 是纯静态站（GitHub Pages），无后端服务器
 - 方案：本地Python脚本定时抓取/聚合数据 → 生成 ranking_data.json → 构建HTML → push GitHub
 - 可通过 Windows 任务计划程序 / GitHub Actions 定时执行
 

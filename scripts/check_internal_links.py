@@ -18,7 +18,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS_FILE = os.path.join(BASE_DIR, 'data', 'tools.json')
 ARTICLES_FILE = os.path.join(BASE_DIR, 'data', 'articles.json')
-DOMAIN = 'www.aitoolbox.hk'
+DOMAIN = 'www.aitoollab.cn'
 
 
 def load_tools():
@@ -34,7 +34,7 @@ def load_articles():
 def extract_tool_links(content):
     """从文章内容中提取所有 /tools/xxx 链接"""
     # 匹配多种格式：/tools/xxx, /tools/xxx/, /tools/xxx/index.html
-    # 也匹配带域名的：https://www.aitoolbox.hk/tools/xxx
+    # 也匹配带域名的：https://www.aitoollab.cn/tools/xxx
     pattern = r'(?:https?://[^/]+)?/tools/([a-z0-9\-]+)/?(?:index\.html)?'
     matches = re.findall(pattern, content)
     return list(set(matches))

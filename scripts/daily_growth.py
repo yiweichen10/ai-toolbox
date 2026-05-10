@@ -48,7 +48,7 @@ def run_cmd(cmd):
 
 def main():
     print(f"\n{'='*60}")
-    print(f"[{datetime.now()}] 启动 aitoolbox.hk 每日自动化增长流程")
+    print(f"[{datetime.now()}] 启动 aitoollab.cn 每日自动化增长流程")
     print(f"{'='*60}")
 
     for step in STEPS[:6]: # Run first 6 steps normally

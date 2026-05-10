@@ -490,7 +490,7 @@ def main():
         "metadata": {
             "version": "1.0",
             "generated_at": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            "source": "aitoolbox.hk-live-generator",
+            "source": "aitoollab.cn-live-generator",
             "tool_count": len(tools),
             "update_policy": "每日自动更新，数据来源于工具官方信息聚合与用户评价分析"
         },

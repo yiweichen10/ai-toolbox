@@ -4,6 +4,14 @@ import json
 import os
 import re
 import argparse
+from dotenv import load_dotenv
+
+# 加载环境变量
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env'))
+
+# 站点配置（统一管理域名）
+SITE_DOMAIN = os.getenv('SITE_DOMAIN', 'https://www.aitoollab.cn')
+BAIDU_PUSH_TOKEN = os.getenv('BAIDU_PUSH_TOKEN', '')  # 百度推送token，留空则跳过百度推送
 
 # 已知失效的URL（404/403/部署删除等），这些工具的"立即使用"按钮无href，保留文字但不跳转
 BROKEN_URLS = [
@@ -29,7 +37,7 @@ DATA_DIR = os.path.join(BASE_DIR, 'data')
 def ensure_og_image(slug, data_obj=None, is_article=False):
     """检查OG图片是否存在，不存在则自动生成。返回og_image URL或空字符串。"""
     og_image_local = os.path.join(BASE_DIR, 'images', 'og', f'{slug}-og.png')
-    og_image_url = f'https://www.aitoolbox.hk/images/og/{slug}-og.png'
+    og_image_url = f'https://www.aitoollab.cn/images/og/{slug}-og.png'
     if os.path.exists(og_image_local):
         return og_image_url
     # 自动生成
@@ -357,19 +365,19 @@ def build_tool_page(tool, all_tools, all_articles=None):
                 "@type": "ListItem",
                 "position": 1,
                 "name": "首页",
-                "item": "https://www.aitoolbox.hk/"
+                "item": "https://www.aitoollab.cn/"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": tool.get('category', ''),
-                "item": f"https://www.aitoolbox.hk/category/{category_slug_for_schema}/"
+                "item": f"https://www.aitoollab.cn/category/{category_slug_for_schema}/"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": tool['name'],
-                "item": f"https://www.aitoolbox.hk/tools/{slug}/"
+                "item": f"https://www.aitoollab.cn/tools/{slug}/"
             }
         ]
     }
@@ -506,11 +514,11 @@ def build_tool_page(tool, all_tools, all_articles=None):
     <title>{escape_html(tool['name'])}评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱</title>
     <meta name="description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'])} 功能介绍、免费版体验、与同类工具对比。">
     <meta name="keywords" content="{escape_html(seo_kw)}">
-    <link rel="canonical" href="https://www.aitoolbox.hk/tools/{slug}/">
+    <link rel="canonical" href="https://www.aitoollab.cn/tools/{slug}/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{escape_html(tool['name'])}评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱">
     <meta property="og:description" content="{escape_html(tool['name'])}全面评测2026：{escape_html(tool['description'])}">
-    <meta property="og:url" content="https://www.aitoolbox.hk/tools/{slug}/">''' + (f'\n    <meta property="og:image" content="{og_image}">\n    <meta property="og:image:width" content="1200">\n    <meta property="og:image:height" content="630">\n' if og_image else '') + f'''    <meta property="og:locale" content="zh_CN">
+    <meta property="og:url" content="https://www.aitoollab.cn/tools/{slug}/">''' + (f'\n    <meta property="og:image" content="{og_image}">\n    <meta property="og:image:width" content="1200">\n    <meta property="og:image:height" content="630">\n' if og_image else '') + f'''    <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="AI工具宝箱">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{escape_html(tool['name'])}评测2026 - AI工具宝箱">
@@ -664,14 +672,14 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
         "author": {
             "@type": "Organization",
             "name": "AI工具宝箱",
-            "url": "https://www.aitoolbox.hk/"
+            "url": "https://www.aitoollab.cn/"
         },
         "publisher": {
             "@type": "Organization",
             "name": "AI工具宝箱",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.aitoolbox.hk/images/og/default-og.png"
+                "url": "https://www.aitoollab.cn/images/og/default-og.png"
             }
         }
     }
@@ -682,9 +690,9 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoolbox.hk/"},
-            {"@type": "ListItem", "position": 2, "name": "工具对比", "item": "https://www.aitoolbox.hk/compare/"},
-            {"@type": "ListItem", "position": 3, "name": title[:30], "item": f"https://www.aitoolbox.hk/compare/{slug}/"}
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.cn/"},
+            {"@type": "ListItem", "position": 2, "name": "工具对比", "item": "https://www.aitoollab.cn/compare/"},
+            {"@type": "ListItem", "position": 3, "name": title[:30], "item": f"https://www.aitoollab.cn/compare/{slug}/"}
         ]
     }
     breadcrumb_json = json.dumps(breadcrumb, ensure_ascii=False, indent=2)
@@ -731,11 +739,11 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
     <title>{escape_html(title)} - AI工具宝箱</title>
     <meta name="description" content="{escape_html(meta_desc)}">
     <meta name="keywords" content="{escape_html(', '.join(keywords))},AI工具对比,AI工具评测">
-    <link rel="canonical" href="https://www.aitoolbox.hk/compare/{slug}/">
+    <link rel="canonical" href="https://www.aitoollab.cn/compare/{slug}/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(title)}">
     <meta property="og:description" content="{escape_html(meta_desc)}">
-    <meta property="og:url" content="https://www.aitoolbox.hk/compare/{slug}/">
+    <meta property="og:url" content="https://www.aitoollab.cn/compare/{slug}/">
     <meta property="og:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
@@ -833,9 +841,9 @@ def build_alternatives_page(alt_data, all_tools, all_articles=None):
     breadcrumb = {
         "@context": "https://schema.org", "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoolbox.hk/"},
-            {"@type": "ListItem", "position": 2, "name": "替代方案", "item": "https://www.aitoolbox.hk/alternatives/"},
-            {"@type": "ListItem", "position": 3, "name": target_tool['name'] if target_tool else slug, "item": f"https://www.aitoolbox.hk/alternatives/{slug}/"}
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.cn/"},
+            {"@type": "ListItem", "position": 2, "name": "替代方案", "item": "https://www.aitoollab.cn/alternatives/"},
+            {"@type": "ListItem", "position": 3, "name": target_tool['name'] if target_tool else slug, "item": f"https://www.aitoollab.cn/alternatives/{slug}/"}
         ]
     }
     breadcrumb_json = json.dumps(breadcrumb, ensure_ascii=False, indent=2)
@@ -863,11 +871,11 @@ def build_alternatives_page(alt_data, all_tools, all_articles=None):
     <title>{escape_html(title)} - AI工具宝箱</title>
     <meta name="description" content="{escape_html(meta_desc)}">
     <meta name="keywords" content="{escape_html(', '.join(keywords))},AI工具替代,AI工具推荐">
-    <link rel="canonical" href="https://www.aitoolbox.hk/alternatives/{slug}/">
+    <link rel="canonical" href="https://www.aitoollab.cn/alternatives/{slug}/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(title)}">
     <meta property="og:description" content="{escape_html(meta_desc)}">
-    <meta property="og:url" content="https://www.aitoolbox.hk/alternatives/{slug}/">
+    <meta property="og:url" content="https://www.aitoollab.cn/alternatives/{slug}/">
     <meta property="og:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
@@ -1079,9 +1087,9 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
     breadcrumb = {
         "@context": "https://schema.org", "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoolbox.hk/"},
-            {"@type": "ListItem", "position": 2, "name": "AI工具选择器", "item": "https://www.aitoolbox.hk/quiz/"},
-            {"@type": "ListItem", "position": 3, "name": title[:30], "item": f"https://www.aitoolbox.hk/quiz/{slug}/"}
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.cn/"},
+            {"@type": "ListItem", "position": 2, "name": "AI工具选择器", "item": "https://www.aitoollab.cn/quiz/"},
+            {"@type": "ListItem", "position": 3, "name": title[:30], "item": f"https://www.aitoollab.cn/quiz/{slug}/"}
         ]
     }
     breadcrumb_json = json.dumps(breadcrumb, ensure_ascii=False, indent=2)
@@ -1098,11 +1106,11 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
     <title>{escape_html(title)} - AI工具宝箱</title>
     <meta name="description" content="{escape_html(meta_desc)}">
     <meta name="keywords" content="{escape_html(', '.join(keywords))},AI工具选择器,AI工具推荐">
-    <link rel="canonical" href="https://www.aitoolbox.hk/quiz/{'/' if is_main_entry else slug + '/'}">
+    <link rel="canonical" href="https://www.aitoollab.cn/quiz/{'/' if is_main_entry else slug + '/'}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(title)}">
     <meta property="og:description" content="{escape_html(meta_desc)}">
-    <meta property="og:url" content="https://www.aitoolbox.hk/quiz/{'/' if is_main_entry else slug + '/'}">
+    <meta property="og:url" content="https://www.aitoollab.cn/quiz/{'/' if is_main_entry else slug + '/'}">
     <meta property="og:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
@@ -1524,9 +1532,9 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
     breadcrumb = {
         "@context": "https://schema.org", "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoolbox.hk/"},
-            {"@type": "ListItem", "position": 2, "name": "AI工具排行", "item": "https://www.aitoolbox.hk/ranking/"},
-            {"@type": "ListItem", "position": 3, "name": title[:30], "item": f"https://www.aitoolbox.hk/ranking/{slug}/"}
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.cn/"},
+            {"@type": "ListItem", "position": 2, "name": "AI工具排行", "item": "https://www.aitoollab.cn/ranking/"},
+            {"@type": "ListItem", "position": 3, "name": title[:30], "item": f"https://www.aitoollab.cn/ranking/{slug}/"}
         ]
     }
     breadcrumb_json = json.dumps(breadcrumb, ensure_ascii=False, indent=2)
@@ -1553,11 +1561,11 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
     <title>{escape_html(title)} - AI工具宝箱</title>
     <meta name="description" content="{escape_html(meta_desc)}">
     <meta name="keywords" content="{escape_html(', '.join(keywords))},AI工具排行榜,AI工具排名,AI热度排行">
-    <link rel="canonical" href="https://www.aitoolbox.hk/ranking/{slug}/">
+    <link rel="canonical" href="https://www.aitoollab.cn/ranking/{slug}/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(title)}">
     <meta property="og:description" content="{escape_html(meta_desc)}">
-    <meta property="og:url" content="https://www.aitoolbox.hk/ranking/{slug}/">
+    <meta property="og:url" content="https://www.aitoollab.cn/ranking/{slug}/">
     <meta property="og:image" content="{og_image}">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
@@ -1702,7 +1710,7 @@ def _build_ranking_index_page(all_rankings):
     <meta http-equiv="refresh" content="0;url=/ranking/2026-ai-tools-overall-ranking/">
     <title>AI工具排行榜 - 全部榜单 | AI工具宝箱</title>
     <meta name="description" content="AI工具宝箱全部排行榜：综合热度榜、免费工具榜、性价比榜、分类排行等16个榜单，覆盖AI对话/写作/绘画/编程/视频等全领域。">
-    <link rel="canonical" href="https://www.aitoolbox.hk/ranking/">
+    <link rel="canonical" href="https://www.aitoollab.cn/ranking/">
     <link rel="stylesheet" href="/css/style.css">
 {BAIDU_TONGJI}
 </head>
@@ -1756,7 +1764,7 @@ def _build_compare_index_page(all_compares):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI工具对比评测 - 全部对比 | AI工具宝箱</title>
     <meta name="description" content="AI工具宝箱全部对比评测：深入对比多款AI工具的功能、价格、使用场景，帮你做出最佳选择。">
-    <link rel="canonical" href="https://www.aitoolbox.hk/compare/">
+    <link rel="canonical" href="https://www.aitoollab.cn/compare/">
     <link rel="stylesheet" href="/css/style.css">
 {BAIDU_TONGJI}
 </head>
@@ -1810,7 +1818,7 @@ def _build_alternatives_index_page(all_alternatives):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI工具替代方案推荐 - 全部替代方案 | AI工具宝箱</title>
     <meta name="description" content="AI工具宝箱全部替代方案推荐：寻找ChatGPT、Midjourney等热门AI工具的最佳平替，含免费和国产替代。">
-    <link rel="canonical" href="https://www.aitoolbox.hk/alternatives/">
+    <link rel="canonical" href="https://www.aitoollab.cn/alternatives/">
     <link rel="stylesheet" href="/css/style.css">
 {BAIDU_TONGJI}
 </head>
@@ -1887,12 +1895,12 @@ def build_live_page(live_data, page_config, all_tools, articles):
         '    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
         '    <title>' + escape_html(page_title) + ' - AI工具宝箱</title>\n'
         '    <meta name="description" content="' + escape_html(meta_desc) + '">\n'
-        '    <meta name="keywords" content="' + ','.join(keywords) + ',AI工具宝箱,aitoolbox.hk">\n'
-        '    <link rel="canonical" href="https://www.aitoolbox.hk/live/' + page_slug + '/">\n'
+        '    <meta name="keywords" content="' + ','.join(keywords) + ',AI工具宝箱,aitoollab.cn">\n'
+        '    <link rel="canonical" href="https://www.aitoollab.cn/live/' + page_slug + '/">\n'
         '    <meta property="og:type" content="website">\n'
         '    <meta property="og:title" content="' + escape_html(page_title) + ' - AI工具宝箱">\n'
         '    <meta property="og:description" content="' + escape_html(meta_desc) + '">\n'
-        '    <meta property="og:url" content="https://www.aitoolbox.hk/live/' + page_slug + '/">\n'
+        '    <meta property="og:url" content="https://www.aitoollab.cn/live/' + page_slug + '/">\n'
         '    <link rel="stylesheet" href="/css/style.css">\n'
         '</head>\n<body>\n'
         + header_nav + '\n\n    ' + nav_tabs + '\n\n'
@@ -2247,7 +2255,7 @@ def _build_category_index_page(tools_by_category):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI工具分类 - 全部分类 | AI工具宝箱</title>
     <meta name="description" content="AI工具宝箱全部工具分类：AI对话、AI写作、AI绘画、AI编程、AI视频等12个分类，覆盖AI全领域，帮你快速找到适合的AI工具。">
-    <link rel="canonical" href="https://www.aitoolbox.hk/category/">
+    <link rel="canonical" href="https://www.aitoollab.cn/category/">
     <link rel="stylesheet" href="/css/style.css">
 {BAIDU_TONGJI}
 </head>
@@ -2305,12 +2313,12 @@ def build_category_page(category_name, tools_in_category):
     <title>{escape_html(category_name)} - AI工具宝箱</title>
     <meta name="description" content="AI工具宝箱收录{escape_html(category_name)}分类下最新最全的AI工具。">
     <meta name="keywords" content="AI工具,{escape_html(category_name)},人工智能,效率工具,AI导航">
-    <link rel="canonical" href="https://www.aitoolbox.hk/category/{category_slug}/">
+    <link rel="canonical" href="https://www.aitoollab.cn/category/{category_slug}/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{escape_html(category_name)} - AI工具宝箱">
     <meta property="og:description" content="AI工具宝箱收录{escape_html(category_name)}分类下最新最全的AI工具。">
-    <meta property="og:url" content="https://www.aitoolbox.hk/category/{category_slug}/">
-    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/category-{category_slug}-og.png">
+    <meta property="og:url" content="https://www.aitoollab.cn/category/{category_slug}/">
+    <meta property="og:image" content="https://www.aitoollab.cn/images/og/category-{category_slug}-og.png">
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">
     {{
@@ -2321,13 +2329,13 @@ def build_category_page(category_name, tools_in_category):
                 "@type": "ListItem",
                 "position": 1,
                 "name": "首页",
-                "item": "https://www.aitoolbox.hk/"
+                "item": "https://www.aitoollab.cn/"
             }},
             {{
                 "@type": "ListItem",
                 "position": 2,
                 "name": "{escape_html(category_name)}",
-                "item": "https://www.aitoolbox.hk/category/{category_slug}/"
+                "item": "https://www.aitoollab.cn/category/{category_slug}/"
             }}
         ]
     }}
@@ -2338,7 +2346,7 @@ def build_category_page(category_name, tools_in_category):
         "@type": "CollectionPage",
         "name": "{escape_html(category_name)} - AI工具宝箱",
         "description": "AI工具宝箱收录{escape_html(category_name)}分类下最新最全的AI工具。",
-        "url": "https://www.aitoolbox.hk/category/{category_slug}/"
+        "url": "https://www.aitoollab.cn/category/{category_slug}/"
     }}
     </script>
 {BAIDU_TONGJI}
@@ -2473,19 +2481,19 @@ def build_article_page(article, all_articles, all_tools=None):
                 "@type": "ListItem",
                 "position": 1,
                 "name": "首页",
-                "item": "https://www.aitoolbox.hk/"
+                "item": "https://www.aitoollab.cn/"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": article_category,
-                "item": f"https://www.aitoolbox.hk/category/{article_category_slug}/"
+                "item": f"https://www.aitoollab.cn/category/{article_category_slug}/"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": article['title'],
-                "item": f"https://www.aitoolbox.hk/articles/{slug}/"
+                "item": f"https://www.aitoollab.cn/articles/{slug}/"
             }
         ]
     }
@@ -2499,7 +2507,7 @@ def build_article_page(article, all_articles, all_tools=None):
     word_count = _chinese_chars + _english_words
 
     # 构建增强版 Article Schema
-    _article_image_url = og_image if og_image else "https://www.aitoolbox.hk/images/logo.png"
+    _article_image_url = og_image if og_image else "https://www.aitoollab.cn/images/logo.png"
     article_schema_data = {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -2513,7 +2521,7 @@ def build_article_page(article, all_articles, all_tools=None):
             "name": "AI工具宝箱",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.aitoolbox.hk/images/logo.png",
+                "url": "https://www.aitoollab.cn/images/logo.png",
                 "width": 200,
                 "height": 60
             }
@@ -2526,7 +2534,7 @@ def build_article_page(article, all_articles, all_tools=None):
         },
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": f"https://www.aitoolbox.hk/articles/{slug}/"
+            "@id": f"https://www.aitoollab.cn/articles/{slug}/"
         },
         "abstract": article.get('description', ''),
         "wordCount": word_count,
@@ -2632,10 +2640,10 @@ def build_article_page(article, all_articles, all_tools=None):
     <title>{escape_html(article['title'])} - AI工具宝箱</title>
     <meta name="description" content="{escape_html(article.get('description', ''))}">
     <meta name="keywords" content="{escape_html(article.get('keywords', ''))}">
-    <link rel="canonical" href="https://www.aitoolbox.hk/articles/{slug}/">
+    <link rel="canonical" href="https://www.aitoollab.cn/articles/{slug}/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(article['title'])} - AI工具宝箱">
-    <meta property="og:description" content="{escape_html(article.get('description', ''))}">''' + (f'\n    <meta property="og:image" content="{og_image}">\n    <meta property="og:image:width" content="1200">\n    <meta property="og:image:height" content="630">\n' if og_image else '') + f'''    <meta property="og:url" content="https://www.aitoolbox.hk/articles/{slug}/">
+    <meta property="og:description" content="{escape_html(article.get('description', ''))}">''' + (f'\n    <meta property="og:image" content="{og_image}">\n    <meta property="og:image:width" content="1200">\n    <meta property="og:image:height" content="630">\n' if og_image else '') + f'''    <meta property="og:url" content="https://www.aitoollab.cn/articles/{slug}/">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="AI工具宝箱">
     <meta property="article:published_time" content="{article_date}">
@@ -2722,11 +2730,11 @@ def build_article_list_pages(articles):
         pagination_html += '</div>'
         
         # 生成链接标签（rel next/prev/canonical）
-        link_tags = f'    <link rel="canonical" href="https://www.aitoolbox.hk/articles/page/{page_num}/">\n'
+        link_tags = f'    <link rel="canonical" href="https://www.aitoollab.cn/articles/page/{page_num}/">\n'
         if page_num > 1:
-            link_tags += f'    <link rel="prev" href="https://www.aitoolbox.hk/articles/page/{page_num - 1}/">\n'
+            link_tags += f'    <link rel="prev" href="https://www.aitoollab.cn/articles/page/{page_num - 1}/">\n'
         if page_num < total_pages:
-            link_tags += f'    <link rel="next" href="https://www.aitoolbox.hk/articles/page/{page_num + 1}/">\n'
+            link_tags += f'    <link rel="next" href="https://www.aitoollab.cn/articles/page/{page_num + 1}/">\n'
 
         # robots标签：第2页及以后 noindex,follow
         robots_tag = ''
@@ -2734,7 +2742,7 @@ def build_article_list_pages(articles):
             robots_tag = '    <meta name="robots" content="noindex, follow">\n'
 
         # 构建列表页结构化数据
-        _list_og_image = "https://www.aitoolbox.hk/images/logo.png"
+        _list_og_image = "https://www.aitoollab.cn/images/logo.png"
 
         # 日期ISO格式化辅助函数
         def _date_to_iso(d):
@@ -2751,18 +2759,18 @@ def build_article_list_pages(articles):
             "@type": "Blog",
             "name": "AI工具宝箱 - 最新文章",
             "description": f"AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。第{page_num}页。",
-            "url": f"https://www.aitoolbox.hk/articles/page/{page_num}/",
-            "author": {"@type": "Person", "name": "AI工具宝箱编辑组", "url": "https://www.aitoolbox.hk/about"},
+            "url": f"https://www.aitoollab.cn/articles/page/{page_num}/",
+            "author": {"@type": "Person", "name": "AI工具宝箱编辑组", "url": "https://www.aitoollab.cn/about"},
             "publisher": {
                 "@type": "Organization",
                 "name": "AI工具宝箱",
-                "logo": {"@type": "ImageObject", "url": "https://www.aitoolbox.hk/images/logo.png", "width": 200, "height": 60}
+                "logo": {"@type": "ImageObject", "url": "https://www.aitoollab.cn/images/logo.png", "width": 200, "height": 60}
             },
             "blogPost": [
                 {
                     "@type": "BlogPosting",
                     "headline": a.get('title', ''),
-                    "url": f"https://www.aitoolbox.hk/articles/{a['slug']}/",
+                    "url": f"https://www.aitoollab.cn/articles/{a['slug']}/",
                     "datePublished": _date_to_iso(a.get('dateFull', a.get('date', '')))
                 } for a in page_articles
             ]
@@ -2776,7 +2784,7 @@ def build_article_list_pages(articles):
             "description": "AI工具文章列表",
             "numberOfItems": len(page_articles),
             "itemListElement": [
-                {"@type": "ListItem", "position": i + 1, "name": a.get('title', ''), "url": f"https://www.aitoolbox.hk/articles/{a['slug']}/"} for i, a in enumerate(page_articles)
+                {"@type": "ListItem", "position": i + 1, "name": a.get('title', ''), "url": f"https://www.aitoollab.cn/articles/{a['slug']}/"} for i, a in enumerate(page_articles)
             ]
         }
 
@@ -2786,13 +2794,13 @@ def build_article_list_pages(articles):
             "@type": "WebPage",
             "name": f"AI工具宝箱 - 最新文章 第{page_num}页",
             "description": f"AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。第{page_num}页。",
-            "url": f"https://www.aitoolbox.hk/articles/page/{page_num}/",
+            "url": f"https://www.aitoollab.cn/articles/page/{page_num}/",
             "abstract": "AI工具宝箱文章专栏收录原创AI工具深度评测与对比分析，内容涵盖AI写作、AI绘画、AI编程、AI视频等12大分类。所有评测均基于编辑组实际测试，含真实性能数据、价格对比和适用场景建议，每周持续更新，累计61篇。",
             "speakable": {
                 "@type": "SpeakableSpecification",
                 "cssSelector": [".articles-page-intro", ".articles-list .article-card:first-child h3", ".articles-list .article-card:first-child .summary"]
             },
-            "isPartOf": {"@type": "WebSite", "name": "AI工具宝箱", "url": "https://www.aitoolbox.hk/"}
+            "isPartOf": {"@type": "WebSite", "name": "AI工具宝箱", "url": "https://www.aitoollab.cn/"}
         }
 
         # 4) BreadcrumbList Schema
@@ -2800,8 +2808,8 @@ def build_article_list_pages(articles):
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoolbox.hk/"},
-                {"@type": "ListItem", "position": 2, "name": "文章列表", "item": "https://www.aitoolbox.hk/articles/"}
+                {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.cn/"},
+                {"@type": "ListItem", "position": 2, "name": "文章列表", "item": "https://www.aitoollab.cn/articles/"}
             ]
         }, ensure_ascii=False)
 
@@ -2823,7 +2831,7 @@ def build_article_list_pages(articles):
     {robots_tag}{link_tags}    <meta property="og:type" content="blog">
     <meta property="og:title" content="AI工具宝箱 - 最新文章">
     <meta property="og:description" content="AI工具宝箱最新文章列表，分享AI工具评测、使用教程、行业资讯等内容。">
-    <meta property="og:url" content="https://www.aitoolbox.hk/articles/page/{page_num}/">
+    <meta property="og:url" content="https://www.aitoollab.cn/articles/page/{page_num}/">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:image" content="{_list_og_image}">
     <meta property="og:image:width" content="1200">
@@ -3118,7 +3126,7 @@ def build_index_page(tools, articles):
 
     # 注入 OG 标签（如果缺失 og:url）
     if 'og:url' not in html:
-        dynamic_head += '<meta property="og:url" content="https://www.aitoolbox.hk/">\n'
+        dynamic_head += '<meta property="og:url" content="https://www.aitoollab.cn/">\n'
 
     # 注入百度统计代码
     dynamic_head += f'{BAIDU_TONGJI}\n'
@@ -3160,7 +3168,7 @@ def generate_sitemap(tools, articles, categories, compares=None, alternatives=No
     urls = []
     # 首页
     urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/</loc>
+        <loc>https://www.aitoollab.cn/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -3173,7 +3181,7 @@ def generate_sitemap(tools, articles, categories, compares=None, alternatives=No
     for tool in tools:
         priority = '0.9' if tool.get('badge') else '0.8'
         urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/tools/{tool['slug']}/</loc>
+        <loc>https://www.aitoollab.cn/tools/{tool['slug']}/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>{priority}</priority>
@@ -3183,7 +3191,7 @@ def generate_sitemap(tools, articles, categories, compares=None, alternatives=No
     for article in articles:
         priority = '0.9' if '2026' in article.get('title', '') else '0.8'
         urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/articles/{article['slug']}/</loc>
+        <loc>https://www.aitoollab.cn/articles/{article['slug']}/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>{priority}</priority>
@@ -3192,7 +3200,7 @@ def generate_sitemap(tools, articles, categories, compares=None, alternatives=No
     # 分类页（categories 参数已经是经过 get_category_slug 处理的 slug 列表）
     for category_name in categories:
         urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/category/{category_name}/</loc>
+        <loc>https://www.aitoollab.cn/category/{category_name}/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -3205,7 +3213,7 @@ def generate_sitemap(tools, articles, categories, compares=None, alternatives=No
             if cslug:
                 prio = '0.9' if cp.get('priority') == 'high' else '0.8'
                 urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/compare/{cslug}/</loc>
+        <loc>https://www.aitoollab.cn/compare/{cslug}/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>{prio}</priority>
@@ -3217,7 +3225,7 @@ def generate_sitemap(tools, articles, categories, compares=None, alternatives=No
             aslug = alt.get('slug', '')
             if aslug:
                 urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/alternatives/{aslug}/</loc>
+        <loc>https://www.aitoollab.cn/alternatives/{aslug}/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -3231,7 +3239,7 @@ def generate_sitemap(tools, articles, categories, compares=None, alternatives=No
                 is_main = (qd.get('target_url') == '/quiz/') or qslug == 'ai-tool-finder-2026'
                 loc = f'/' if is_main else f'/{qslug}/'
                 urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/quiz{loc}</loc>
+        <loc>https://www.aitoollab.cn/quiz{loc}</loc>
         <lastmod>{today}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -3243,7 +3251,7 @@ def generate_sitemap(tools, articles, categories, compares=None, alternatives=No
             rslug = rd.get('slug', '')
             if rslug:
                 urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/ranking/{rslug}/</loc>
+        <loc>https://www.aitoollab.cn/ranking/{rslug}/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
@@ -3255,7 +3263,7 @@ def generate_sitemap(tools, articles, categories, compares=None, alternatives=No
             lslug = lp.get('slug', '')
             if lslug:
                 urls.append(f'''    <url>
-        <loc>https://www.aitoolbox.hk/live/{lslug}/</loc>
+        <loc>https://www.aitoollab.cn/live/{lslug}/</loc>
         <lastmod>{today}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
@@ -3278,9 +3286,9 @@ def push_to_indexnow(urls):
     api_url = "https://api.indexnow.org/indexnow"
 
     payload = _json.dumps({
-        "host": "www.aitoolbox.hk",
+        "host": "www.aitoollab.cn",
         "key": KEY,
-        "keyLocation": f"https://www.aitoolbox.hk/{KEY}.txt",
+        "keyLocation": f"https://www.aitoollab.cn/{KEY}.txt",
         "urlList": urls[:10000]  # IndexNow 单次上限 10000 条
     }).encode("utf-8")
 
@@ -3305,7 +3313,10 @@ def push_to_indexnow(urls):
 
 def push_to_baidu(urls):
     """主动向百度搜索引擎推送链接"""
-    api_url = "http://data.zz.baidu.com/urls?site=https://www.aitoolbox.hk&token=SQjY1PUxykFOlFUk"
+    if not BAIDU_PUSH_TOKEN:
+        print("[Baidu Push] 跳过: 未配置 BAIDU_PUSH_TOKEN")
+        return False
+    api_url = f"http://data.zz.baidu.com/urls?site={SITE_DOMAIN}&token={BAIDU_PUSH_TOKEN}"
     
     try:
         import urllib.request
@@ -3331,7 +3342,8 @@ def _push_single_url(url):
     import urllib.request, urllib.error
 
     # 百度推送
-    baidu_api = "http://data.zz.baidu.com/urls?site=https://www.aitoolbox.hk&token=SQjY1PUxykFOlFUk"
+    if BAIDU_PUSH_TOKEN:
+        baidu_api = f"http://data.zz.baidu.com/urls?site={SITE_DOMAIN}&token={BAIDU_PUSH_TOKEN}"
     try:
         data = url.encode('utf-8')
         req = urllib.request.Request(baidu_api, data=data, headers={'Content-Type': 'text/plain'})
@@ -3346,7 +3358,7 @@ def _push_single_url(url):
     # IndexNow推送
     try:
         indexnow_url = "https://api.indexnow.org/indexnow"
-        payload = json.dumps({"host": "www.aitoolbox.hk", "key": "a1b2c3d4e5f6g7h8", "urlList": [url]}).encode('utf-8')
+        payload = json.dumps({"host": "www.aitoollab.cn", "key": "a1b2c3d4e5f6g7h8", "urlList": [url]}).encode('utf-8')
         req = urllib.request.Request(indexnow_url, data=payload, headers={'Content-Type': 'application/json'})
         with urllib.request.urlopen(req, timeout=10) as resp:
             print(f'[IndexNow] HTTP {resp.status}, pushed 1 URL')
@@ -3425,7 +3437,7 @@ def build_target(target, slug=None):
         print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles)')
 
         # 推送新URL到百度和IndexNow
-        _push_single_url(f'https://www.aitoolbox.hk/articles/{slug}/index.html')
+        _push_single_url(f'https://www.aitoollab.cn/articles/{slug}/index.html')
 
         print(f'\n[完成] 增量构建: 1篇文章 + 列表页 + sitemap')
         return True
@@ -3664,35 +3676,35 @@ def build_target(target, slug=None):
             with open(push_cache_file, 'r', encoding='utf-8') as f:
                 pushed_urls = set(json.load(f))
         
-        all_urls = ["https://www.aitoolbox.hk/"]
+        all_urls = ["https://www.aitoollab.cn/"]
         for tool in published_tools:
-            all_urls.append(f"https://www.aitoolbox.hk/tools/{tool['slug']}/")
+            all_urls.append(f"https://www.aitoollab.cn/tools/{tool['slug']}/")
         for article in articles:
-            all_urls.append(f"https://www.aitoolbox.hk/articles/{article['slug']}/")
+            all_urls.append(f"https://www.aitoollab.cn/articles/{article['slug']}/")
         for category_name in tools_by_category.keys():
             category_slug = get_category_slug(category_name)
-            all_urls.append(f"https://www.aitoolbox.hk/category/{category_slug}/")
+            all_urls.append(f"https://www.aitoollab.cn/category/{category_slug}/")
         for cp in (all_compares or []):
             cslug = cp.get('slug', '')
             if cslug:
-                all_urls.append(f"https://www.aitoolbox.hk/compare/{cslug}/")
+                all_urls.append(f"https://www.aitoollab.cn/compare/{cslug}/")
         for alt in (all_alternatives or []):
             aslug = alt.get('slug', '')
             if aslug:
-                all_urls.append(f"https://www.aitoolbox.hk/alternatives/{aslug}/")
+                all_urls.append(f"https://www.aitoollab.cn/alternatives/{aslug}/")
         for qd in (all_quizzes or []):
             qslug = qd.get('slug', '')
             if qslug:
                 is_main = (qd.get('target_url') == '/quiz/') or qslug == 'ai-tool-finder-2026'
-                all_urls.append(f"https://www.aitoolbox.hk/quiz{'' if is_main else '/' + qslug + '/'}")
+                all_urls.append(f"https://www.aitoollab.cn/quiz{'' if is_main else '/' + qslug + '/'}")
         for rd in (all_rankings or []):
             rslug = rd.get('slug', '')
             if rslug:
-                all_urls.append(f"https://www.aitoolbox.hk/ranking/{rslug}/")
+                all_urls.append(f"https://www.aitoollab.cn/ranking/{rslug}/")
         for lp in (all_lives or []):
             lslug = lp.get('slug', '')
             if lslug:
-                all_urls.append(f"https://www.aitoolbox.hk/live/{lslug}/")
+                all_urls.append(f"https://www.aitoollab.cn/live/{lslug}/")
 
         new_urls = [u for u in all_urls if u not in pushed_urls]
         

@@ -9,8 +9,8 @@ def analyze_html(filepath, label):
     title_match = re.search(r'<title>([^<]+)</title>', content)
     title = title_match.group(1) if title_match else label
     ext_links = re.findall(r'href="(https?://[^"]+)"', content)
-    own = [l for l in ext_links if 'aitoolbox.hk' in l or 'aitoollab' in l]
-    other = [l for l in ext_links if 'aitoolbox.hk' not in l and 'aitoollab' not in l]
+    own = [l for l in ext_links if 'aitoollab.cn' in l or 'aitoollab' in l]
+    other = [l for l in ext_links if 'aitoollab.cn' not in l and 'aitoollab' not in l]
     
     # 检查 rel=nofollow
     nofollow_links = re.findall(r'href="(https?://[^"]+)"[^>]*rel="[^"]*nofollow', content)
@@ -70,8 +70,8 @@ for root, dirs, files in os.walk(BASE):
             try:
                 content = open(fp, encoding='utf-8').read()
                 ext_links = re.findall(r'href="(https?://[^"]+)"', content)
-                own = [l for l in ext_links if 'aitoolbox.hk' in l or 'aitoollab' in l]
-                other = [l for l in ext_links if 'aitoolbox.hk' not in l and 'aitoollab' not in l]
+                own = [l for l in ext_links if 'aitoollab.cn' in l or 'aitoollab' in l]
+                other = [l for l in ext_links if 'aitoollab.cn' not in l and 'aitoollab' not in l]
                 total_own += len(own)
                 total_other += len(other)
                 total_pages += 1

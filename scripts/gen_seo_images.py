@@ -172,7 +172,7 @@ body {{ margin:0; width:1200px; height:630px; font-family:"Noto Sans SC",sans-se
       <div style="color:{color};font-size:14px;font-weight:600;word-break:break-all;">{escape_html(tool.get('url', '').replace('https://', ''))}</div>
     </div>
   </div>
-  <div class="brand">AI工具宝箱 · aitoolbox.hk</div>
+  <div class="brand">AI工具宝箱 · aitoollab.cn</div>
 </div>
 </body></html>'''
     return html
@@ -259,7 +259,7 @@ body {{ margin:0; width:1200px; height:630px; font-family:"Noto Sans SC",sans-se
     <div class="subtitle">{rating} · {escape_html(price)}</div>
     {"<div style='color:#64748b;font-size:16px;margin-top:8px;'>对比: " + escape_html(related_html) + "</div>" if related_html else ""}
   </div>
-  <div class="brand">AI工具宝箱 · aitoolbox.hk</div>
+  <div class="brand">AI工具宝箱 · aitoollab.cn</div>
 </div>
 </body></html>'''
     return html
@@ -449,7 +449,7 @@ tr:last-child td {{ border-bottom:none; }}
       <div class="insight-source">实测 + 数据 + 经验</div>
     </div>
   </div>
-  <div class="brand">AI工具宝箱 · aitoolbox.hk</div>
+  <div class="brand">AI工具宝箱 · aitoollab.cn</div>
 </div>
 </body></html>'''
     return html
@@ -532,7 +532,7 @@ body {{ margin:0; width:1200px; height:630px; font-family:"Noto Sans SC",sans-se
     <span>·</span>
     <span>AI工具宝箱</span>
     <span>·</span>
-    <span>aitoolbox.hk</span>
+    <span>aitoollab.cn</span>
   </div>
   <div class="brand">AI工具宝箱</div>
 </div>
@@ -724,7 +724,7 @@ def make_og_image_en(tool, all_tools):
         '    <div class="pros-row">' + pros_html + '</div>\n'
         '  </div>\n'
         '  <div class="brand">AI Tool Lab</div>\n'
-        '  <div class="domain">aitoolbox.hk</div>\n'
+        '  <div class="domain">aitoollab.cn</div>\n'
         '</div>\n'
         '</body></html>'
     )
@@ -809,7 +809,7 @@ def make_article_og_image_en(article):
         '    <span class="meta-sep">&middot;</span>\n'
         '    <span class="meta-item">AI Tool Lab</span>\n'
         '    <span class="meta-sep">&middot;</span>\n'
-        '    <span class="meta-item">aitoolbox.hk</span>\n'
+        '    <span class="meta-item">aitoollab.cn</span>\n'
         '  </div>\n'
         '  <div class="brand">AI Tool Lab</div>\n'
         '</div>\n'
