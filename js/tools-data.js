@@ -5255,6 +5255,41 @@ window.__ALL_TOOLS__ = [
     "platform": "VS Code、JetBrains IDEs、Visual Studio"
   },
   {
+    "name": "SlidesAI",
+    "slug": "slidesai",
+    "emoji": "📊",
+    "color": "#5B4FCF",
+    "description": "SlidesAI是一款AI驱动的演示文稿生成工具，可作为Google Slides和Microsoft PowerPoint插件使用。用户只需输入文本提示或主题，AI即可自动生成完整的幻灯片内容和布局。到2026年，SlidesAI已支持超过100种语言，新增AI图像生成和自定义品牌模板功能，成为演示文稿创作的主流AI工具之一。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "PPT制作"
+      },
+      {
+        "text": "演示文稿"
+      },
+      {
+        "text": "Google Slides插件",
+        "type": "free"
+      },
+      {
+        "text": "PowerPoint插件"
+      },
+      {
+        "text": "AI生成内容"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://slidesai.io",
+    "price": "免费版：每月3次生成；专业版：$10/月；商业版：$20/月",
+    "platform": "Google Slides、Microsoft PowerPoint、网页版"
+  },
+  {
     "name": "HappyHorse",
     "slug": "happy-horse",
     "emoji": "🐴",
@@ -5321,6 +5356,40 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、桌面端（Windows/Mac）、移动端（iOS/Android）"
   },
   {
+    "name": "Resemble AI",
+    "slug": "resemble-ai",
+    "emoji": "🎤",
+    "color": "#6C5CE7",
+    "description": "Resemble AI是一款专业的AI语音合成和声音克隆平台，支持从短音频样本中克隆声音，生成自然流畅的语音内容。2026年新增实时语音转换和情感控制功能，广泛应用于视频配音、游戏开发、语音助手等领域。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "语音合成"
+      },
+      {
+        "text": "声音克隆"
+      },
+      {
+        "text": "文本转语音"
+      },
+      {
+        "text": "API接入"
+      },
+      {
+        "text": "实时语音转换"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://resemble.ai",
+    "price": "免费版每月免费生成20分钟；付费版$0.006/秒起；企业定制套餐需联系销售",
+    "platform": "网页端、iOS、Android、API"
+  },
+  {
     "name": "Smartcat",
     "slug": "smartcat",
     "emoji": "🌐",
@@ -5351,6 +5420,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://smartcat.com",
     "price": "免费版可用，付费版$15/月起，企业版定制报价",
     "platform": "Web / iOS / Android / API / 浏览器插件"
+  },
+  {
+    "name": "Glean",
+    "slug": "glean",
+    "emoji": "🔍",
+    "color": "#6B4EFF",
+    "description": "Glean是一款企业级AI搜索和知识管理平台，帮助团队在分散的应用和文档中快速找到所需信息。2026年，Glean进一步强化了多模态搜索和企业知识图谱能力，成为企业数字化转型的重要助手。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "企业搜索"
+      },
+      {
+        "text": "知识管理"
+      },
+      {
+        "text": "团队协作",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.glean.com",
+    "price": "付费版起价$49/月，企业版需联系销售",
+    "platform": "Web/桌面端/iOS/Android"
   },
   {
     "name": "LingoAI",
@@ -10439,6 +10537,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "VS Code、JetBrains IDEs、Visual Studio"
   },
   {
+    "name": "SlidesAI",
+    "slug": "slidesai",
+    "emoji": "📊",
+    "color": "#5B4FCF",
+    "description": "SlidesAI是一款AI驱动的演示文稿生成工具，可作为Google Slides和Microsoft PowerPoint插件使用。用户只需输入文本提示或主题，AI即可自动生成完整的幻灯片内容和布局。到2026年，SlidesAI已支持超过100种语言，新增AI图像生成和自定义品牌模板功能，成为演示文稿创作的主流AI工具之一。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "PPT制作"
+      },
+      {
+        "text": "演示文稿"
+      },
+      {
+        "text": "Google Slides插件",
+        "type": "free"
+      },
+      {
+        "text": "PowerPoint插件"
+      },
+      {
+        "text": "AI生成内容"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://slidesai.io",
+    "price": "免费版：每月3次生成；专业版：$10/月；商业版：$20/月",
+    "platform": "Google Slides、Microsoft PowerPoint、网页版"
+  },
+  {
     "name": "HappyHorse",
     "slug": "happy-horse",
     "emoji": "🐴",
@@ -10505,6 +10638,40 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、桌面端（Windows/Mac）、移动端（iOS/Android）"
   },
   {
+    "name": "Resemble AI",
+    "slug": "resemble-ai",
+    "emoji": "🎤",
+    "color": "#6C5CE7",
+    "description": "Resemble AI是一款专业的AI语音合成和声音克隆平台，支持从短音频样本中克隆声音，生成自然流畅的语音内容。2026年新增实时语音转换和情感控制功能，广泛应用于视频配音、游戏开发、语音助手等领域。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "语音合成"
+      },
+      {
+        "text": "声音克隆"
+      },
+      {
+        "text": "文本转语音"
+      },
+      {
+        "text": "API接入"
+      },
+      {
+        "text": "实时语音转换"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://resemble.ai",
+    "price": "免费版每月免费生成20分钟；付费版$0.006/秒起；企业定制套餐需联系销售",
+    "platform": "网页端、iOS、Android、API"
+  },
+  {
     "name": "Smartcat",
     "slug": "smartcat",
     "emoji": "🌐",
@@ -10535,6 +10702,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://smartcat.com",
     "price": "免费版可用，付费版$15/月起，企业版定制报价",
     "platform": "Web / iOS / Android / API / 浏览器插件"
+  },
+  {
+    "name": "Glean",
+    "slug": "glean",
+    "emoji": "🔍",
+    "color": "#6B4EFF",
+    "description": "Glean是一款企业级AI搜索和知识管理平台，帮助团队在分散的应用和文档中快速找到所需信息。2026年，Glean进一步强化了多模态搜索和企业知识图谱能力，成为企业数字化转型的重要助手。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "企业搜索"
+      },
+      {
+        "text": "知识管理"
+      },
+      {
+        "text": "团队协作",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.glean.com",
+    "price": "付费版起价$49/月，企业版需联系销售",
+    "platform": "Web/桌面端/iOS/Android"
   },
   {
     "name": "LingoAI",
