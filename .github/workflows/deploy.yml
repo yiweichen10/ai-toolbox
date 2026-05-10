@@ -16,10 +16,9 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
 
-      - name: Add server to known_hosts
-        run: ssh-keyscan -p 22 121.43.144.99 >> ~/.ssh/known_hosts
-
       - name: Rsync deploy (incremental)
+        env:
+          SSH_OPTS: "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
         run: |
           rsync -avz --delete \
             --exclude='.env' \
@@ -34,4 +33,5 @@ jobs:
             --exclude='__pycache__/' \
             --exclude='.github/' \
             --exclude='vercel.json' \
+            -e "ssh $SSH_OPTS" \
             ./  root@121.43.144.99:/var/www/aitoollab/html/
