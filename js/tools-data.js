@@ -4842,6 +4842,35 @@ window.__ALL_TOOLS__ = [
     "created_date": "2026-03-22"
   },
   {
+    "name": "LanguageTool",
+    "slug": "language-tool",
+    "emoji": "✍️",
+    "color": "#0FA6E8",
+    "description": "LanguageTool是一款开源的智能语法和拼写检查工具，支持30多种语言，采用先进的AI技术实时检测文本错误。2026年推出企业版API和增强的上下文理解功能，成为写作辅助领域的标杆工具。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "语法检查"
+      },
+      {
+        "text": "拼写纠正"
+      },
+      {
+        "text": "多语言支持",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://languagetool.org",
+    "price": "免费版基础功能，高级版每月€9.99起，企业版定制价格",
+    "platform": "网页端、浏览器扩展（Chrome/Firefox/Edge）、桌面端（Windows/Mac/Linux）、Office插件、API"
+  },
+  {
     "name": "ProWritingAid",
     "slug": "prowritingaid",
     "emoji": "✍️",
@@ -4974,6 +5003,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://scalenut.com",
     "price": "免费版每月2000字，高级版$39起/月",
     "platform": "网页版、Chrome插件"
+  },
+  {
+    "name": "ChatPDF",
+    "slug": "chatpdf",
+    "emoji": "📄",
+    "color": "#2563EB",
+    "description": "ChatPDF是一个AI驱动的文档阅读助手，可以让你像与真人对话一样与PDF文档交流。2026年已支持多文档同时分析、跨文档问答、智能摘要提取等高级功能，成为科研人员、学生和职场人士处理学术论文和报告的高效工具。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "PDF阅读"
+      },
+      {
+        "text": "文档分析"
+      },
+      {
+        "text": "AI摘要"
+      },
+      {
+        "text": "学术工具"
+      },
+      {
+        "text": "知识提取",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://chatpdf.com",
+    "price": "免费版每天3个PDF，付费版$5/月起",
+    "platform": "网页版（支持移动端）"
   },
   {
     "name": "Humata AI",
@@ -5388,6 +5452,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://resemble.ai",
     "price": "免费版每月免费生成20分钟；付费版$0.006/秒起；企业定制套餐需联系销售",
     "platform": "网页端、iOS、Android、API"
+  },
+  {
+    "name": "Buffer AI",
+    "slug": "buffer-ai",
+    "emoji": "📱",
+    "color": "#168EEA",
+    "description": "Buffer AI是Buffer社交媒体管理平台的智能助手，利用人工智能技术帮助用户生成社交媒体内容、撰写吸引人的文案，并优化发布时机。支持多平台内容调度和数据分析，提升社交媒体运营效率。2026年持续更新AI功能，新增智能内容推荐和跨平台同步发布能力。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "社交媒体管理"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "AI文案生成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约50万月访问量",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://buffer.com",
+    "price": "基础版免费，专业版$15/月起，AI功能需订阅高级套餐",
+    "platform": "网页端、iOS、Android"
   },
   {
     "name": "Smartcat",
@@ -10124,6 +10217,35 @@ window.__REMAINING_TOOLS__ = [
     "created_date": "2026-03-22"
   },
   {
+    "name": "LanguageTool",
+    "slug": "language-tool",
+    "emoji": "✍️",
+    "color": "#0FA6E8",
+    "description": "LanguageTool是一款开源的智能语法和拼写检查工具，支持30多种语言，采用先进的AI技术实时检测文本错误。2026年推出企业版API和增强的上下文理解功能，成为写作辅助领域的标杆工具。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "语法检查"
+      },
+      {
+        "text": "拼写纠正"
+      },
+      {
+        "text": "多语言支持",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://languagetool.org",
+    "price": "免费版基础功能，高级版每月€9.99起，企业版定制价格",
+    "platform": "网页端、浏览器扩展（Chrome/Firefox/Edge）、桌面端（Windows/Mac/Linux）、Office插件、API"
+  },
+  {
     "name": "ProWritingAid",
     "slug": "prowritingaid",
     "emoji": "✍️",
@@ -10256,6 +10378,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://scalenut.com",
     "price": "免费版每月2000字，高级版$39起/月",
     "platform": "网页版、Chrome插件"
+  },
+  {
+    "name": "ChatPDF",
+    "slug": "chatpdf",
+    "emoji": "📄",
+    "color": "#2563EB",
+    "description": "ChatPDF是一个AI驱动的文档阅读助手，可以让你像与真人对话一样与PDF文档交流。2026年已支持多文档同时分析、跨文档问答、智能摘要提取等高级功能，成为科研人员、学生和职场人士处理学术论文和报告的高效工具。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "PDF阅读"
+      },
+      {
+        "text": "文档分析"
+      },
+      {
+        "text": "AI摘要"
+      },
+      {
+        "text": "学术工具"
+      },
+      {
+        "text": "知识提取",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://chatpdf.com",
+    "price": "免费版每天3个PDF，付费版$5/月起",
+    "platform": "网页版（支持移动端）"
   },
   {
     "name": "Humata AI",
@@ -10670,6 +10827,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://resemble.ai",
     "price": "免费版每月免费生成20分钟；付费版$0.006/秒起；企业定制套餐需联系销售",
     "platform": "网页端、iOS、Android、API"
+  },
+  {
+    "name": "Buffer AI",
+    "slug": "buffer-ai",
+    "emoji": "📱",
+    "color": "#168EEA",
+    "description": "Buffer AI是Buffer社交媒体管理平台的智能助手，利用人工智能技术帮助用户生成社交媒体内容、撰写吸引人的文案，并优化发布时机。支持多平台内容调度和数据分析，提升社交媒体运营效率。2026年持续更新AI功能，新增智能内容推荐和跨平台同步发布能力。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "社交媒体管理"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "AI文案生成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约50万月访问量",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://buffer.com",
+    "price": "基础版免费，专业版$15/月起，AI功能需订阅高级套餐",
+    "platform": "网页端、iOS、Android"
   },
   {
     "name": "Smartcat",
