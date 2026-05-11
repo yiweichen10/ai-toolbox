@@ -1,5 +1,16 @@
 # AI 工具每日发布自动化任务执行记录
 
+## 2026-05-10 13:00
+- **执行结果**: 成功。发布 6 个工具（publish_new_tools.py 3个 + deploy.sh 内部 3个）。
+- **发布工具**: Glean (glean), SlidesAI (slidesai), Resemble AI (resemble-ai), LanguageTool (language-tool), Buffer AI (buffer-ai), ChatPDF (chatpdf)
+- **库存状态**: 已发布 183 个, 未发布 11 个, 总计 194 个
+- **构建**: 302 个 HTML 文件生成成功（183 tools + 66 articles + 其他）
+- **部署**: 增量部署到阿里云成功（1个变化文件 index.html）
+- **推送**: IndexNow 403（SiteVerificationNotCompleted），百度推送跳过（未配置token）
+- **Git**: commit e3168fa6（发布）+ 46326ae7（部署），push 成功
+- **库存预警**: 11个未发布，约够3.7天，建议下次补充
+- **注意**: deploy.sh --publish 会再次执行 publish_new_tools.py，导致本日实际发布6个工具。若只想发布3个应直接用 deploy.sh 不带 --publish
+
 ## 2026-05-09 13:00
 - **执行结果**: 成功。发布 3 个工具。
 - **发布工具**: Predis AI (predis-ai), Aider (aider), Scalenut (scalenut)

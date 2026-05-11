@@ -5224,6 +5224,40 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、安卓、iOS"
   },
   {
+    "name": "通义万相",
+    "slug": "tongyi-wanxiang",
+    "emoji": "🎨",
+    "color": "#4F46E5",
+    "description": "阿里巴巴通义系列旗下的AI绘画生成工具，基于自研Composer大模型实现文本到图像的高质量转换。支持文生图、图生图、风格迁移等多种创作模式，2026年已升级至3.0版本，在中文理解和亚洲审美方面具有显著优势。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "文生图"
+      },
+      {
+        "text": "图生图"
+      },
+      {
+        "text": "中文优化"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "多风格生成"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约500万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://tongyi.aliyun.com/wanxiang",
+    "price": "基础版免费，专业版¥29/月起",
+    "platform": "Web/App/小程序"
+  },
+  {
     "name": "星火认知大模型",
     "slug": "xinghuo-cognitive-model",
     "emoji": "🔥",
@@ -5352,6 +5386,63 @@ window.__ALL_TOOLS__ = [
     "url": "https://slidesai.io",
     "price": "免费版：每月3次生成；专业版：$10/月；商业版：$20/月",
     "platform": "Google Slides、Microsoft PowerPoint、网页版"
+  },
+  {
+    "name": "Mureka",
+    "slug": "mureka",
+    "emoji": "🎵",
+    "color": "#6366F1",
+    "description": "Mureka是一款专注于AI音乐生成的创新工具，用户可以通过简单的文本描述或提示词创建原创音乐作品。2026年，Mureka增强了多轨道编辑功能和商业版权授权服务，成为独立音乐人和内容创作者的首选音乐生成平台。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "文本转音乐"
+      },
+      {
+        "text": "版权授权"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://mureka.ai",
+    "price": "免费版每月50积分，专业版$9.99/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Beatoven.ai",
+    "slug": "beatoven-ai",
+    "emoji": "🎵",
+    "color": "#1DB954",
+    "description": "Beatoven.ai是一款由人工智能驱动的音乐生成平台，专注于为内容创作者提供免版税的背景音乐。用户可以通过选择情绪、流派和时长，自动生成符合视频、播客或社交媒体内容的原创音乐。2026年平台持续更新，新增了更精细的情绪控制和AI协作功能，进一步提升音乐生成的定制化体验。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "免版税音乐"
+      },
+      {
+        "text": "视频配乐",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://beatoven.ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "Web、iOS、Android"
   },
   {
     "name": "HappyHorse",
@@ -10599,6 +10690,40 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、安卓、iOS"
   },
   {
+    "name": "通义万相",
+    "slug": "tongyi-wanxiang",
+    "emoji": "🎨",
+    "color": "#4F46E5",
+    "description": "阿里巴巴通义系列旗下的AI绘画生成工具，基于自研Composer大模型实现文本到图像的高质量转换。支持文生图、图生图、风格迁移等多种创作模式，2026年已升级至3.0版本，在中文理解和亚洲审美方面具有显著优势。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "文生图"
+      },
+      {
+        "text": "图生图"
+      },
+      {
+        "text": "中文优化"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "多风格生成"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约500万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://tongyi.aliyun.com/wanxiang",
+    "price": "基础版免费，专业版¥29/月起",
+    "platform": "Web/App/小程序"
+  },
+  {
     "name": "星火认知大模型",
     "slug": "xinghuo-cognitive-model",
     "emoji": "🔥",
@@ -10727,6 +10852,63 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://slidesai.io",
     "price": "免费版：每月3次生成；专业版：$10/月；商业版：$20/月",
     "platform": "Google Slides、Microsoft PowerPoint、网页版"
+  },
+  {
+    "name": "Mureka",
+    "slug": "mureka",
+    "emoji": "🎵",
+    "color": "#6366F1",
+    "description": "Mureka是一款专注于AI音乐生成的创新工具，用户可以通过简单的文本描述或提示词创建原创音乐作品。2026年，Mureka增强了多轨道编辑功能和商业版权授权服务，成为独立音乐人和内容创作者的首选音乐生成平台。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "文本转音乐"
+      },
+      {
+        "text": "版权授权"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://mureka.ai",
+    "price": "免费版每月50积分，专业版$9.99/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Beatoven.ai",
+    "slug": "beatoven-ai",
+    "emoji": "🎵",
+    "color": "#1DB954",
+    "description": "Beatoven.ai是一款由人工智能驱动的音乐生成平台，专注于为内容创作者提供免版税的背景音乐。用户可以通过选择情绪、流派和时长，自动生成符合视频、播客或社交媒体内容的原创音乐。2026年平台持续更新，新增了更精细的情绪控制和AI协作功能，进一步提升音乐生成的定制化体验。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "免版税音乐"
+      },
+      {
+        "text": "视频配乐",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://beatoven.ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "Web、iOS、Android"
   },
   {
     "name": "HappyHorse",

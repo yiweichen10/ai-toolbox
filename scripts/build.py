@@ -2986,15 +2986,15 @@ def build_index_page(tools, articles):
                 return datetime.strptime(d, fmt)
             except:
                 continue
-        # 只有月/日格式，补2026年
+        # 只有月/日格式，补2026年（避免Python 3.15 breaking change）
         try:
-            dt = datetime.strptime(d, '%m/%d')
-            return dt.replace(year=2026)
+            dt = datetime.strptime('2026/' + d, '%Y/%m/%d')
+            return dt
         except:
             pass
         try:
-            dt = datetime.strptime(d, '%m月%d日')
-            return dt.replace(year=2026)
+            dt = datetime.strptime('2026年' + d, '%Y年%m月%d日')
+            return dt
         except:
             pass
         return datetime.min
@@ -3282,7 +3282,7 @@ def push_to_indexnow(urls):
     import urllib.error
     import json as _json
 
-    KEY = "d2b58e242903570e029a957ecdff1e05"  # 与 Bing 验证码同一个值（小写）
+    KEY = "e66c6b3965b6490abd7bee1521893b1b"  # 中文站 IndexNow key（与 Bing Webmaster Tools 验证文件一致）
     api_url = "https://api.indexnow.org/indexnow"
 
     payload = _json.dumps({
