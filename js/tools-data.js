@@ -5103,6 +5103,41 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "Lumen5",
+    "slug": "lumen5",
+    "emoji": "🎬",
+    "color": "#FF4D4D",
+    "description": "Lumen5是一款领先的AI视频创作平台，专注于将文本内容（如博客文章、新闻稿）自动转换为营销视频。平台利用先进的人工智能技术分析文本要点，匹配相关素材并生成专业级视频，截至2026年已帮助全球超100万家企业实现内容营销视频化。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "文本转视频"
+      },
+      {
+        "text": "营销视频生成"
+      },
+      {
+        "text": "社交媒体内容创作"
+      },
+      {
+        "text": "企业视频制作"
+      },
+      {
+        "text": "AI视频编辑",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约120万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://lumen5.com",
+    "price": "免费版可用，专业版$19/月起，企业版定制价格",
+    "platform": "网页端（Web）、iOS、Android"
+  },
+  {
     "name": "Predis AI",
     "slug": "predis-ai",
     "emoji": "🎨",
@@ -5477,6 +5512,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web、iOS、Android"
   },
   {
+    "name": "Coda AI",
+    "slug": "coda-ai",
+    "emoji": "📋",
+    "color": "#0F7676",
+    "description": "Coda AI是Coda文档协作平台内置的智能助手，帮助用户用自然语言创建文档、构建自动化工作流程、生成数据报告和智能表格。2026年Coda进一步整合多模态AI，支持跨文档智能分析和团队知识库自动整理功能。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "文档协作"
+      },
+      {
+        "text": "项目管理"
+      },
+      {
+        "text": "工作流自动化"
+      },
+      {
+        "text": "AI写作助手",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://coda.io",
+    "price": "免费版可用，付费版$10/月起",
+    "platform": "网页/iOS/Android"
+  },
+  {
     "name": "Semrush AI",
     "slug": "semrush-ai",
     "emoji": "🎯",
@@ -5543,6 +5610,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://resemble.ai",
     "price": "免费版每月免费生成20分钟；付费版$0.006/秒起；企业定制套餐需联系销售",
     "platform": "网页端、iOS、Android、API"
+  },
+  {
+    "name": "Monica AI",
+    "slug": "monica-ai",
+    "emoji": "🤖",
+    "color": "#8B5CF6",
+    "description": "Monica AI是一款基于GPT-4的AI助手浏览器扩展和网页应用，集成在Chrome、Edge等主流浏览器中，为用户提供智能对话、内容创作、研究辅助等功能。2026年最新版本增强了多模态交互能力和个性化学习功能，响应速度和准确性均有显著提升。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "浏览器扩展"
+      },
+      {
+        "text": "写作辅助"
+      },
+      {
+        "text": "GPT-4",
+        "type": "free"
+      },
+      {
+        "text": "效率工具"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://monica.im",
+    "price": "基础免费版+高级付费版（$9.9/月起）",
+    "platform": "Chrome、Edge插件、iOS、Android、Web"
   },
   {
     "name": "Buffer AI",
@@ -10569,6 +10671,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "Lumen5",
+    "slug": "lumen5",
+    "emoji": "🎬",
+    "color": "#FF4D4D",
+    "description": "Lumen5是一款领先的AI视频创作平台，专注于将文本内容（如博客文章、新闻稿）自动转换为营销视频。平台利用先进的人工智能技术分析文本要点，匹配相关素材并生成专业级视频，截至2026年已帮助全球超100万家企业实现内容营销视频化。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "文本转视频"
+      },
+      {
+        "text": "营销视频生成"
+      },
+      {
+        "text": "社交媒体内容创作"
+      },
+      {
+        "text": "企业视频制作"
+      },
+      {
+        "text": "AI视频编辑",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约120万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://lumen5.com",
+    "price": "免费版可用，专业版$19/月起，企业版定制价格",
+    "platform": "网页端（Web）、iOS、Android"
+  },
+  {
     "name": "Predis AI",
     "slug": "predis-ai",
     "emoji": "🎨",
@@ -10943,6 +11080,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web、iOS、Android"
   },
   {
+    "name": "Coda AI",
+    "slug": "coda-ai",
+    "emoji": "📋",
+    "color": "#0F7676",
+    "description": "Coda AI是Coda文档协作平台内置的智能助手，帮助用户用自然语言创建文档、构建自动化工作流程、生成数据报告和智能表格。2026年Coda进一步整合多模态AI，支持跨文档智能分析和团队知识库自动整理功能。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "文档协作"
+      },
+      {
+        "text": "项目管理"
+      },
+      {
+        "text": "工作流自动化"
+      },
+      {
+        "text": "AI写作助手",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://coda.io",
+    "price": "免费版可用，付费版$10/月起",
+    "platform": "网页/iOS/Android"
+  },
+  {
     "name": "Semrush AI",
     "slug": "semrush-ai",
     "emoji": "🎯",
@@ -11009,6 +11178,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://resemble.ai",
     "price": "免费版每月免费生成20分钟；付费版$0.006/秒起；企业定制套餐需联系销售",
     "platform": "网页端、iOS、Android、API"
+  },
+  {
+    "name": "Monica AI",
+    "slug": "monica-ai",
+    "emoji": "🤖",
+    "color": "#8B5CF6",
+    "description": "Monica AI是一款基于GPT-4的AI助手浏览器扩展和网页应用，集成在Chrome、Edge等主流浏览器中，为用户提供智能对话、内容创作、研究辅助等功能。2026年最新版本增强了多模态交互能力和个性化学习功能，响应速度和准确性均有显著提升。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "浏览器扩展"
+      },
+      {
+        "text": "写作辅助"
+      },
+      {
+        "text": "GPT-4",
+        "type": "free"
+      },
+      {
+        "text": "效率工具"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://monica.im",
+    "price": "基础免费版+高级付费版（$9.9/月起）",
+    "platform": "Chrome、Edge插件、iOS、Android、Web"
   },
   {
     "name": "Buffer AI",
