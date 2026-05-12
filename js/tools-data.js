@@ -5170,6 +5170,38 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "紫东太初",
+    "slug": "zi-dong-tai-chu",
+    "emoji": "🟣",
+    "color": "#8B5CF6",
+    "description": "紫东太初是由中国科学院自动化研究所发布的多模态大模型，2026年已升级至3.0版本，支持文本、图像、音频、视频的全模态理解与生成。作为国产自主研发的基础大模型，在中文理解和多模态任务处理方面具有显著技术优势。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "国产大模型"
+      },
+      {
+        "text": "多模态AI"
+      },
+      {
+        "text": "中科院出品",
+        "type": "free"
+      },
+      {
+        "text": "免费使用"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://taichu.ia.ac.cn",
+    "price": "免费使用",
+    "platform": "Web端/移动端"
+  },
+  {
     "name": "书生浦语",
     "slug": "internlm",
     "emoji": "📚",
@@ -5257,6 +5289,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://jimeng.jinritemai.com/",
     "price": "基础功能免费使用，高级功能付费订阅",
     "platform": "网页端、安卓、iOS"
+  },
+  {
+    "name": "万兴播爆",
+    "slug": "wondershare-virbo",
+    "emoji": "🎬",
+    "color": "#7658FF",
+    "description": "万兴播爆是万兴科技推出的AI数字人视频生成工具，专注于营销短视频创作。支持多种数字人形象和语言，可快速生成产品介绍、直播切片、种草视频等内容。2026年新增AI脚本优化和智能剪辑功能，进一步提升创作效率。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "数字人视频"
+      },
+      {
+        "text": "AI短视频生成"
+      },
+      {
+        "text": "营销内容创作"
+      },
+      {
+        "text": "多语言配音"
+      },
+      {
+        "text": "TTS文字转语音",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://virbo.wondershare.com",
+    "price": "免费版可用，付费版¥99/月起",
+    "platform": "网页端/iOS/Android"
   },
   {
     "name": "通义万相",
@@ -5674,6 +5741,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://buffer.com",
     "price": "基础版免费，专业版$15/月起，AI功能需订阅高级套餐",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Pencil AI",
+    "slug": "pencil-ai",
+    "emoji": "✏️",
+    "color": "#6366F1",
+    "description": "Pencil AI是一款智能AI设计助手，专注于通过人工智能技术提升设计效率。2026年最新版本集成了先进的生成式AI模型，支持文本转图像、智能修图、元素生成等多种功能，帮助设计师和创作者快速实现创意构想。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI图像生成"
+      },
+      {
+        "text": "智能设计工具"
+      },
+      {
+        "text": "创意辅助"
+      },
+      {
+        "text": "设计效率",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约80万月访问量",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://pencilai.io",
+    "price": "免费版可用，付费版$15/月起",
+    "platform": "网页/iOS/Android/桌面端"
   },
   {
     "name": "Smartcat",
@@ -10738,6 +10837,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "紫东太初",
+    "slug": "zi-dong-tai-chu",
+    "emoji": "🟣",
+    "color": "#8B5CF6",
+    "description": "紫东太初是由中国科学院自动化研究所发布的多模态大模型，2026年已升级至3.0版本，支持文本、图像、音频、视频的全模态理解与生成。作为国产自主研发的基础大模型，在中文理解和多模态任务处理方面具有显著技术优势。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "国产大模型"
+      },
+      {
+        "text": "多模态AI"
+      },
+      {
+        "text": "中科院出品",
+        "type": "free"
+      },
+      {
+        "text": "免费使用"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://taichu.ia.ac.cn",
+    "price": "免费使用",
+    "platform": "Web端/移动端"
+  },
+  {
     "name": "书生浦语",
     "slug": "internlm",
     "emoji": "📚",
@@ -10825,6 +10956,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://jimeng.jinritemai.com/",
     "price": "基础功能免费使用，高级功能付费订阅",
     "platform": "网页端、安卓、iOS"
+  },
+  {
+    "name": "万兴播爆",
+    "slug": "wondershare-virbo",
+    "emoji": "🎬",
+    "color": "#7658FF",
+    "description": "万兴播爆是万兴科技推出的AI数字人视频生成工具，专注于营销短视频创作。支持多种数字人形象和语言，可快速生成产品介绍、直播切片、种草视频等内容。2026年新增AI脚本优化和智能剪辑功能，进一步提升创作效率。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "数字人视频"
+      },
+      {
+        "text": "AI短视频生成"
+      },
+      {
+        "text": "营销内容创作"
+      },
+      {
+        "text": "多语言配音"
+      },
+      {
+        "text": "TTS文字转语音",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://virbo.wondershare.com",
+    "price": "免费版可用，付费版¥99/月起",
+    "platform": "网页端/iOS/Android"
   },
   {
     "name": "通义万相",
@@ -11242,6 +11408,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://buffer.com",
     "price": "基础版免费，专业版$15/月起，AI功能需订阅高级套餐",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Pencil AI",
+    "slug": "pencil-ai",
+    "emoji": "✏️",
+    "color": "#6366F1",
+    "description": "Pencil AI是一款智能AI设计助手，专注于通过人工智能技术提升设计效率。2026年最新版本集成了先进的生成式AI模型，支持文本转图像、智能修图、元素生成等多种功能，帮助设计师和创作者快速实现创意构想。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI图像生成"
+      },
+      {
+        "text": "智能设计工具"
+      },
+      {
+        "text": "创意辅助"
+      },
+      {
+        "text": "设计效率",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约80万月访问量",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://pencilai.io",
+    "price": "免费版可用，付费版$15/月起",
+    "platform": "网页/iOS/Android/桌面端"
   },
   {
     "name": "Smartcat",
