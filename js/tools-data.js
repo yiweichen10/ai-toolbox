@@ -174,7 +174,8 @@ window.__ALL_TOOLS__ = [
     "url": "https://kimi.moonshot.cn",
     "price": "免费使用",
     "platform": "Web / iOS / Android",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "豆包",
@@ -200,7 +201,8 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.doubao.com",
     "price": "免费使用",
     "platform": "Web / iOS / Android",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Notion AI",
@@ -225,7 +227,8 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.notion.so",
     "price": "AI附加费$10/月",
     "platform": "Web / iOS / Android / 桌面端",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Runway",
@@ -282,7 +285,8 @@ window.__ALL_TOOLS__ = [
     "url": "https://stability.ai",
     "price": "完全免费（需GPU）",
     "platform": "本地部署 / Web",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Suno",
@@ -308,7 +312,8 @@ window.__ALL_TOOLS__ = [
     "url": "https://suno.com",
     "price": "免费版+Pro $10/月",
     "platform": "Web / iOS / Android",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Canva AI",
@@ -334,7 +339,8 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.canva.com",
     "price": "免费版+Pro ¥120/月",
     "platform": "Web / iOS / Android",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Sora",
@@ -418,7 +424,8 @@ window.__ALL_TOOLS__ = [
     "url": "https://pika.art",
     "price": "免费版+标准$10/月",
     "platform": "Web / Discord",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Udio",
@@ -444,7 +451,8 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.udio.com",
     "price": "免费版+Pro $10/月",
     "platform": "Web",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Replit AI",
@@ -470,7 +478,8 @@ window.__ALL_TOOLS__ = [
     "url": "https://replit.com",
     "price": "免费版+Core $25/月",
     "platform": "Web",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Jasper",
@@ -495,7 +504,8 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.jasper.ai",
     "price": "Creator $49/月起",
     "platform": "Web",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Gamma",
@@ -521,7 +531,8 @@ window.__ALL_TOOLS__ = [
     "url": "https://gamma.app",
     "price": "免费版+Pro $16/月",
     "platform": "Web",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "ElevenLabs",
@@ -5891,6 +5902,88 @@ window.__ALL_TOOLS__ = [
     "url": "https://zety.com",
     "price": "免费版可用，专业版约$9.99/月",
     "platform": "网页端"
+  },
+  {
+    "name": "灵办AI",
+    "slug": "lingban-ai",
+    "emoji": "🤖",
+    "color": "#4F46E5",
+    "description": "灵办AI是一款专注于智能办公的AI助手工具，集成AI对话、文档写作、翻译润色等功能，帮助用户提升工作效率。2026年持续更新优化，新增多模态理解和深度学习能力，在中文办公场景表现优异。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "免费可用"
+      },
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "智能助手",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "30万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://lingbanai.com",
+    "price": "基础功能免费，高级会员¥29/月",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Devin AI",
+    "slug": "devin-ai",
+    "emoji": "🤖",
+    "color": "#FF6B35",
+    "description": "Devin AI是Cognition Labs推出的全球首个AI软件工程师，能够独立完成代码编写、调试、Bug修复和项目部署等完整开发流程。2026年已推出企业版，支持超过20种主流编程语言，成为AI编程领域的标杆工具。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI软件工程师"
+      },
+      {
+        "text": "代码生成"
+      },
+      {
+        "text": "自动化开发"
+      },
+      {
+        "text": "智能调试"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约520万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://devin.ai",
+    "price": "免费版有使用限制，企业版付费",
+    "platform": "Web"
+  },
+  {
+    "name": "Ironclad AI",
+    "slug": "ironclad-ai",
+    "emoji": "📜",
+    "color": "#1E40AF",
+    "description": "AI驱动的合同管理和法律审查平台，自动识别合同条款风险、提取关键信息、生成合同摘要，大幅提升法务工作效率。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "法律AI"
+      },
+      {
+        "text": "合同管理"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.ironclad.ai",
+    "price": "企业定制",
+    "platform": "Web"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -5949,7 +6042,8 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://stability.ai",
     "price": "完全免费（需GPU）",
     "platform": "本地部署 / Web",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Suno",
@@ -5975,7 +6069,8 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://suno.com",
     "price": "免费版+Pro $10/月",
     "platform": "Web / iOS / Android",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Canva AI",
@@ -6001,7 +6096,8 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.canva.com",
     "price": "免费版+Pro ¥120/月",
     "platform": "Web / iOS / Android",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Sora",
@@ -6085,7 +6181,8 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://pika.art",
     "price": "免费版+标准$10/月",
     "platform": "Web / Discord",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Udio",
@@ -6111,7 +6208,8 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.udio.com",
     "price": "免费版+Pro $10/月",
     "platform": "Web",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Replit AI",
@@ -6137,7 +6235,8 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://replit.com",
     "price": "免费版+Core $25/月",
     "platform": "Web",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Jasper",
@@ -6162,7 +6261,8 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.jasper.ai",
     "price": "Creator $49/月起",
     "platform": "Web",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "Gamma",
@@ -6188,7 +6288,8 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://gamma.app",
     "price": "免费版+Pro $16/月",
     "platform": "Web",
-    "created_date": "2026-03-22"
+    "created_date": "2026-03-22",
+    "badge": {}
   },
   {
     "name": "ElevenLabs",
@@ -11558,5 +11659,87 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://zety.com",
     "price": "免费版可用，专业版约$9.99/月",
     "platform": "网页端"
+  },
+  {
+    "name": "灵办AI",
+    "slug": "lingban-ai",
+    "emoji": "🤖",
+    "color": "#4F46E5",
+    "description": "灵办AI是一款专注于智能办公的AI助手工具，集成AI对话、文档写作、翻译润色等功能，帮助用户提升工作效率。2026年持续更新优化，新增多模态理解和深度学习能力，在中文办公场景表现优异。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "免费可用"
+      },
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "智能助手",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "30万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://lingbanai.com",
+    "price": "基础功能免费，高级会员¥29/月",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Devin AI",
+    "slug": "devin-ai",
+    "emoji": "🤖",
+    "color": "#FF6B35",
+    "description": "Devin AI是Cognition Labs推出的全球首个AI软件工程师，能够独立完成代码编写、调试、Bug修复和项目部署等完整开发流程。2026年已推出企业版，支持超过20种主流编程语言，成为AI编程领域的标杆工具。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI软件工程师"
+      },
+      {
+        "text": "代码生成"
+      },
+      {
+        "text": "自动化开发"
+      },
+      {
+        "text": "智能调试"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约520万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://devin.ai",
+    "price": "免费版有使用限制，企业版付费",
+    "platform": "Web"
+  },
+  {
+    "name": "Ironclad AI",
+    "slug": "ironclad-ai",
+    "emoji": "📜",
+    "color": "#1E40AF",
+    "description": "AI驱动的合同管理和法律审查平台，自动识别合同条款风险、提取关键信息、生成合同摘要，大幅提升法务工作效率。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "法律AI"
+      },
+      {
+        "text": "合同管理"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.ironclad.ai",
+    "price": "企业定制",
+    "platform": "Web"
   }
 ];

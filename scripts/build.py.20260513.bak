@@ -2964,7 +2964,7 @@ def build_index_page(tools, articles):
                             '<section class="home-section today-section" id="todaySection" style="display:none;">')
 
     # ── 第二区块：热门推荐（badge.type=hot 或 badge.type=pick，最多8个） ──
-    hot_tools = [t for t in tools if (t.get('badge') or {}).get('type') in ('hot', 'pick')][:8]
+    hot_tools = [t for t in tools if t.get('badge', {}).get('type') in ('hot', 'pick')][:8]
     hot_html = ''
     for i, t in enumerate(hot_tools):
         hot_html += make_card_html(t, i)
