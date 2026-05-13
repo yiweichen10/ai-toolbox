@@ -110,10 +110,83 @@ DEFAULT_TOOL_NAMES = [
     "LingoAI", "Zety AI",
     # 国产工具
     "灵办AI", "夸克AI", "腾讯文档AI",
+
+    # === 2026-05-12 新增：2026年5月热门AI工具（去重后）===
+    # AI编程助手（新晋热门）
+    "Devin AI", "Amp", "OpenHands", "Cluely",
+    # AI模型/推理平台
+    "Groq", "Cerebras", "OpenRouter", "Mistral AI",
+    # AI框架/开发工具
+    "LangChain", "LlamaIndex",
+    # 向量数据库
+    "Pinecone", "Chroma", "Weaviate",
+    # AI代码审查/质量
+    "CodeRabbit", "Bloop",
+    # AI笔记/知识管理（新）
+    "Mem", "Recall", "Octarine",
+    # AI会议/邮件（新）
+    "Fathom", "Fireflies AI", "Notion AI Meeting",
+    # AI设计/品牌（新）
+    "IconScout AI", "StockImg AI", "Galileo AI",
+    # AI视频编辑（新晋）
+    "KapKap", "Vizard", "OpusClip",
+    # AI语音/配音（新）
+    "ElevenLabs Dubbing", "Respeecher",
+    # 国产大模型（2026热门）
+    "MiniMax M2.5", "StepFun Step-2", "Baichuan 2",
+    # AI运维/测试
+    "Meticulous", "Autify",
+    # AI电商/营销
+    "Shulex", "Jasper Chat",
+    # AI健康/医疗
+    "Hippocratic AI", "Glass Health",
+    # AI法律
+    "Harvey AI", "Ironclad AI",
+
+    # === 2026-05-12 第二轮更新：联网调研2026年4-5月最新热门AI工具 ===
+    # 【国际】AI Agent/工作流（Product Hunt May 2026 Top榜，Agent Infrastructure主题周）
+    "Mindra", "Shadow AI", "PandaProbe", "Kanwas", "FlowMarket",
+    "Postiz", "Huddle01 VMs", "Symphony Agent",
+    # 【国际】AI Agent/工作流 - 企业级
+    "Sierra Ghostwriter", "Cloud Computer Manus", "Gemini Deep Research Agent",
+    # 【国际】AI编程/IDE（Product Hunt Top + GitHub Trending）
+    "Kilo Code", "Warp Terminal", "Superset", "Zed Editor",
+    "deepclaude", "Tabstack", "Codex CLI",
+    # 【国际】AI设计/产品
+    "Wonder AI", "open-design", "Mintlify Editor",
+    # 【国际】AI视频/3D生成
+    "Hera Launch", "Velo AI", "VideoOS", "Pixelle-Video",
+    "Gen-4 Runway", "Luma Dream Machine",
+    # 【国际】AI浏览器自动化
+    "Agent Browser", "Browser Use",
+    # 【国际】AI安全（GitHub Trending新星）
+    "deepsec", "Xint Code",
+    # 【国际】AI金融/法律/其他
+    "TradingAgents", "mike AI", "RankSpot", "Schole AI",
+    "Jamie AI", "Alexa Plus", "Descript AI",
+    # 【国内】AI编程（2026年4月国产AI编程五强）
+    "文心快码", "通义灵码", "CodeBuddy腾讯",
+    # 【国内】AI视频生成（2026年4月Q2新品）
+    "Seedance 2.0", "Anijam", "Yoroll", "清影AI",
+    "海螺AI", "Vidu AI", "PixVerse AI",
+    # 【国内】AI设计/图像
+    "堆友AI", "美图设计室AI", "触站AI",
+    # 【国内】AI Agent/工作流
+    "扣子Coze", "Dify智能体", "百度千帆Agent",
+    # 【国内】AI硬件/具身智能（2026年5月新品）
+    "Unitree GD01", "AGIBOT智元", "AnySceneGen", "Dexbotic",
+    # 【国内】AI办公/效率
+    "WPS AI办公", "通义效率", "飞书智能伙伴",
+    # 【国内】AI浏览器/搜索
+    "秘塔AI搜索", "纳米AI", "夸克AI搜索",
+    # 【国内】AI写作/内容
+    "文思AI", "火山写作", "笔灵AI",
+    # 【国内】AI语音/音乐
+    "魔音工坊", "讯飞智作", "ACE Studio",
 ]
 
 
-def call_api(prompt, max_tokens=8000, timeout=180):
+def call_api(prompt, max_tokens=8000, timeout=300):
     """调用 DeepSeek-V3 API"""
     url = f"{BASE_URL}/chat/completions"
     headers = {
