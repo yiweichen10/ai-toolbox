@@ -5964,6 +5964,63 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "OpenHands",
+    "slug": "openhands",
+    "emoji": "🤖",
+    "color": "#4F46E5",
+    "description": "OpenHands是由All-Hands-AI开发的开源AI编程Agent，能够自主完成代码编写、Bug修复、软件测试等软件开发全流程任务。作为开源社区最活跃的AI编程助手之一，OpenHands在2026年持续迭代，支持多模态交互和高级推理能力。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "代码生成"
+      },
+      {
+        "text": "自动化测试"
+      },
+      {
+        "text": "Devin替代",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://all-hands.ai",
+    "price": "免费开源（Pro版$19/月）",
+    "platform": "Web/VS Code/CLI"
+  },
+  {
+    "name": "Hippocratic AI",
+    "slug": "hippocratic-ai",
+    "emoji": "🏥",
+    "color": "#DC2626",
+    "description": "专注医疗健康领域的AI助手，提供症状分析、用药咨询、健康建议等服务，强调安全性和合规性，正在申请医疗AI认证。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "医疗AI"
+      },
+      {
+        "text": "健康咨询"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.hippocraticai.com",
+    "price": "企业定制",
+    "platform": "Web"
+  },
+  {
     "name": "Ironclad AI",
     "slug": "ironclad-ai",
     "emoji": "📜",
@@ -5984,6 +6041,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.ironclad.ai",
     "price": "企业定制",
     "platform": "Web"
+  },
+  {
+    "name": "IconScout AI",
+    "slug": "iconscout-ai",
+    "emoji": "🎨",
+    "color": "#6366F1",
+    "description": "IconScout AI是IconScout推出的AI驱动图标和插画生成工具，利用生成式AI技术帮助用户快速创建自定义图标、插画和UI素材。2026年平台集成了最新的多模态AI模型，支持文本描述生成矢量图标，并提供丰富的风格选项。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI图标生成"
+      },
+      {
+        "text": "AI插画"
+      },
+      {
+        "text": "矢量素材"
+      },
+      {
+        "text": "UI设计"
+      },
+      {
+        "text": "IconScout",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "150万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://iconscout.com/ai",
+    "price": "免费版每月10个AI生成额度，专业版$9.99/月起",
+    "platform": "Web、iOS、Android"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -11721,6 +11813,63 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "OpenHands",
+    "slug": "openhands",
+    "emoji": "🤖",
+    "color": "#4F46E5",
+    "description": "OpenHands是由All-Hands-AI开发的开源AI编程Agent，能够自主完成代码编写、Bug修复、软件测试等软件开发全流程任务。作为开源社区最活跃的AI编程助手之一，OpenHands在2026年持续迭代，支持多模态交互和高级推理能力。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "代码生成"
+      },
+      {
+        "text": "自动化测试"
+      },
+      {
+        "text": "Devin替代",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://all-hands.ai",
+    "price": "免费开源（Pro版$19/月）",
+    "platform": "Web/VS Code/CLI"
+  },
+  {
+    "name": "Hippocratic AI",
+    "slug": "hippocratic-ai",
+    "emoji": "🏥",
+    "color": "#DC2626",
+    "description": "专注医疗健康领域的AI助手，提供症状分析、用药咨询、健康建议等服务，强调安全性和合规性，正在申请医疗AI认证。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "医疗AI"
+      },
+      {
+        "text": "健康咨询"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.hippocraticai.com",
+    "price": "企业定制",
+    "platform": "Web"
+  },
+  {
     "name": "Ironclad AI",
     "slug": "ironclad-ai",
     "emoji": "📜",
@@ -11741,5 +11890,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.ironclad.ai",
     "price": "企业定制",
     "platform": "Web"
+  },
+  {
+    "name": "IconScout AI",
+    "slug": "iconscout-ai",
+    "emoji": "🎨",
+    "color": "#6366F1",
+    "description": "IconScout AI是IconScout推出的AI驱动图标和插画生成工具，利用生成式AI技术帮助用户快速创建自定义图标、插画和UI素材。2026年平台集成了最新的多模态AI模型，支持文本描述生成矢量图标，并提供丰富的风格选项。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI图标生成"
+      },
+      {
+        "text": "AI插画"
+      },
+      {
+        "text": "矢量素材"
+      },
+      {
+        "text": "UI设计"
+      },
+      {
+        "text": "IconScout",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "150万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://iconscout.com/ai",
+    "price": "免费版每月10个AI生成额度，专业版$9.99/月起",
+    "platform": "Web、iOS、Android"
   }
 ];
