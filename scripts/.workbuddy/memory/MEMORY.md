@@ -30,6 +30,9 @@
   - 重写94个工具的FAQ（替换模板化垃圾内容为有价值针对性内容）
   - **严重教训**：绝不能猜测或想象URL，所有工具的官网URL必须基于搜索确认的真实地址
 
+## 已知 bug & 修复
+- **2026-05-13**: build.py line 2967 中 `t.get('badge', {}).get('type')` 在 badge=null 时会崩溃（.get('badge', {})无法处理键存在但值为None的情况）。已修复为 `(t.get('badge') or {}).get('type')`。同时 tools.json 中23个工具的 badge 字段从 null 修复为空对象 {}。
+
 ## 注意事项
 - 百度推送API配额已用尽（400 over quota），需要等配额恢复
 - publish_new_tools.py 每天13:00自动发布3个工具
