@@ -5999,6 +5999,82 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/VS Code/CLI"
   },
   {
+    "name": "OpenRouter",
+    "slug": "open-router",
+    "emoji": "🌐",
+    "color": "#2563EB",
+    "description": "OpenRouter是一个AI模型聚合平台，通过统一API接口让用户访问全球数百种AI模型，包括GPT-4o、Claude 3.5、Llama等顶级模型，支持模型比较与自由切换。2026年平台已集成超过300个AI模型，成为开发者首选的AI模型网关服务。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI模型聚合"
+      },
+      {
+        "text": "API集成"
+      },
+      {
+        "text": "多模型调用"
+      },
+      {
+        "text": "开发者工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://openrouter.ai",
+    "price": "按调用量计费，支持免费额度",
+    "platform": "Web/API/CLI"
+  },
+  {
+    "name": "Mem",
+    "slug": "mem-ai",
+    "emoji": "🧠",
+    "color": "#8B5CF6",
+    "description": "AI驱动的笔记和知识管理工具，自动连接想法、笔记和内容，构建个人知识图谱，帮助用户发现意想不到的知识关联。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "知识管理"
+      },
+      {
+        "text": "AI笔记"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://mem.ai",
+    "price": "免费版+$10/月",
+    "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Respeecher",
+    "slug": "respeecher",
+    "emoji": "🎙️",
+    "color": "#1F2937",
+    "description": "专业级AI语音克隆和配音平台，使用情感保留技术生成高度自然的语音复制品，被好莱坞电影和顶级播客采用。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "语音克隆"
+      },
+      {
+        "text": "专业级"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.respeecher.com",
+    "price": "企业定制",
+    "platform": "Web"
+  },
+  {
     "name": "Hippocratic AI",
     "slug": "hippocratic-ai",
     "emoji": "🏥",
@@ -11846,6 +11922,82 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://all-hands.ai",
     "price": "免费开源（Pro版$19/月）",
     "platform": "Web/VS Code/CLI"
+  },
+  {
+    "name": "OpenRouter",
+    "slug": "open-router",
+    "emoji": "🌐",
+    "color": "#2563EB",
+    "description": "OpenRouter是一个AI模型聚合平台，通过统一API接口让用户访问全球数百种AI模型，包括GPT-4o、Claude 3.5、Llama等顶级模型，支持模型比较与自由切换。2026年平台已集成超过300个AI模型，成为开发者首选的AI模型网关服务。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI模型聚合"
+      },
+      {
+        "text": "API集成"
+      },
+      {
+        "text": "多模型调用"
+      },
+      {
+        "text": "开发者工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://openrouter.ai",
+    "price": "按调用量计费，支持免费额度",
+    "platform": "Web/API/CLI"
+  },
+  {
+    "name": "Mem",
+    "slug": "mem-ai",
+    "emoji": "🧠",
+    "color": "#8B5CF6",
+    "description": "AI驱动的笔记和知识管理工具，自动连接想法、笔记和内容，构建个人知识图谱，帮助用户发现意想不到的知识关联。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "知识管理"
+      },
+      {
+        "text": "AI笔记"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://mem.ai",
+    "price": "免费版+$10/月",
+    "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Respeecher",
+    "slug": "respeecher",
+    "emoji": "🎙️",
+    "color": "#1F2937",
+    "description": "专业级AI语音克隆和配音平台，使用情感保留技术生成高度自然的语音复制品，被好莱坞电影和顶级播客采用。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "语音克隆"
+      },
+      {
+        "text": "专业级"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.respeecher.com",
+    "price": "企业定制",
+    "platform": "Web"
   },
   {
     "name": "Hippocratic AI",
