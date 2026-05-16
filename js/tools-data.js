@@ -5083,6 +5083,41 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "Julius AI",
+    "slug": "julius-ai",
+    "emoji": "📊",
+    "color": "#6366F1",
+    "description": "Julius AI是一款专注于数据分析和AI编程的智能工具，支持CSV、Excel等数据文件的无缝导入与分析。2026年新增高级机器学习模块和自动化报告生成功能，帮助用户快速从数据中提取洞察。是数据分析师、研究人员和业务用户的首选AI效率工具。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "数据分析"
+      },
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "CSV处理"
+      },
+      {
+        "text": "机器学习",
+        "type": "free"
+      },
+      {
+        "text": "Python辅助"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://julius.ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "Web端支持"
+  },
+  {
     "name": "AdCreative AI",
     "slug": "adcreative-ai",
     "emoji": "🎨",
@@ -5818,6 +5853,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android / API / 浏览器插件"
   },
   {
+    "name": "Relevance AI",
+    "slug": "relevance-ai",
+    "emoji": "🔍",
+    "color": "#6366F1",
+    "description": "Relevance AI是一个一站式AI应用开发平台，专注于帮助开发者快速构建、测试和部署AI工作流程。2026年平台集成了最新的多模态模型和向量数据库功能，支持企业级AI应用开发，提供可视化的工作流编排和实时分析能力。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "工作流自动化"
+      },
+      {
+        "text": "AI应用开发"
+      },
+      {
+        "text": "向量数据库"
+      },
+      {
+        "text": "无代码/低代码",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://relevanceai.com",
+    "price": "免费版可用，付费版$49/月起",
+    "platform": "Web / API / Python SDK"
+  },
+  {
     "name": "Glean",
     "slug": "glean",
     "emoji": "🔍",
@@ -6029,6 +6096,40 @@ window.__ALL_TOOLS__ = [
     "url": "https://openrouter.ai",
     "price": "按调用量计费，支持免费额度",
     "platform": "Web/API/CLI"
+  },
+  {
+    "name": "Pinecone",
+    "slug": "pinecone",
+    "emoji": "🔍",
+    "color": "#FF4F00",
+    "description": "Pinecone是一个高性能的向量数据库服务，专为存储和搜索高维向量嵌入而设计。作为RAG（检索增强生成）应用的核心基础设施，它能够帮助开发者快速构建语义搜索、推荐系统和AI记忆功能。2026年Pinecone已成为企业级AI应用的首选向量数据库平台。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "向量数据库"
+      },
+      {
+        "text": "语义搜索"
+      },
+      {
+        "text": "RAG"
+      },
+      {
+        "text": "嵌入存储"
+      },
+      {
+        "text": "AI基础设施"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "210万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.pinecone.io",
+    "price": "免费版可用，付费计划从$49/月起",
+    "platform": "云端（AWS、GCP、Azure）"
   },
   {
     "name": "Mem",
@@ -11008,6 +11109,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "Julius AI",
+    "slug": "julius-ai",
+    "emoji": "📊",
+    "color": "#6366F1",
+    "description": "Julius AI是一款专注于数据分析和AI编程的智能工具，支持CSV、Excel等数据文件的无缝导入与分析。2026年新增高级机器学习模块和自动化报告生成功能，帮助用户快速从数据中提取洞察。是数据分析师、研究人员和业务用户的首选AI效率工具。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "数据分析"
+      },
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "CSV处理"
+      },
+      {
+        "text": "机器学习",
+        "type": "free"
+      },
+      {
+        "text": "Python辅助"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://julius.ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "Web端支持"
+  },
+  {
     "name": "AdCreative AI",
     "slug": "adcreative-ai",
     "emoji": "🎨",
@@ -11743,6 +11879,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android / API / 浏览器插件"
   },
   {
+    "name": "Relevance AI",
+    "slug": "relevance-ai",
+    "emoji": "🔍",
+    "color": "#6366F1",
+    "description": "Relevance AI是一个一站式AI应用开发平台，专注于帮助开发者快速构建、测试和部署AI工作流程。2026年平台集成了最新的多模态模型和向量数据库功能，支持企业级AI应用开发，提供可视化的工作流编排和实时分析能力。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "工作流自动化"
+      },
+      {
+        "text": "AI应用开发"
+      },
+      {
+        "text": "向量数据库"
+      },
+      {
+        "text": "无代码/低代码",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://relevanceai.com",
+    "price": "免费版可用，付费版$49/月起",
+    "platform": "Web / API / Python SDK"
+  },
+  {
     "name": "Glean",
     "slug": "glean",
     "emoji": "🔍",
@@ -11954,6 +12122,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://openrouter.ai",
     "price": "按调用量计费，支持免费额度",
     "platform": "Web/API/CLI"
+  },
+  {
+    "name": "Pinecone",
+    "slug": "pinecone",
+    "emoji": "🔍",
+    "color": "#FF4F00",
+    "description": "Pinecone是一个高性能的向量数据库服务，专为存储和搜索高维向量嵌入而设计。作为RAG（检索增强生成）应用的核心基础设施，它能够帮助开发者快速构建语义搜索、推荐系统和AI记忆功能。2026年Pinecone已成为企业级AI应用的首选向量数据库平台。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "向量数据库"
+      },
+      {
+        "text": "语义搜索"
+      },
+      {
+        "text": "RAG"
+      },
+      {
+        "text": "嵌入存储"
+      },
+      {
+        "text": "AI基础设施"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "210万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.pinecone.io",
+    "price": "免费版可用，付费计划从$49/月起",
+    "platform": "云端（AWS、GCP、Azure）"
   },
   {
     "name": "Mem",
