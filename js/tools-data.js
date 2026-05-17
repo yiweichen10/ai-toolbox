@@ -6000,6 +6000,41 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "夸克AI",
+    "slug": "quark-ai",
+    "emoji": "🔍",
+    "color": "#0066FF",
+    "description": "夸克AI是阿里巴巴旗下夸克浏览器内置的智能搜索助手，集成先进的AI大模型技术，为用户提供智能搜索答案、内容创作辅助和知识问答服务。2026年已升级至最新版本，搜索体验更加智能高效。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "智能搜索"
+      },
+      {
+        "text": "浏览器AI助手"
+      },
+      {
+        "text": "中文AI"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "阿里巴巴",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.quark.cn",
+    "price": "免费",
+    "platform": "iOS/Android/Web/桌面端"
+  },
+  {
     "name": "Devin AI",
     "slug": "devin-ai",
     "emoji": "🤖",
@@ -6130,6 +6165,63 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.pinecone.io",
     "price": "免费版可用，付费计划从$49/月起",
     "platform": "云端（AWS、GCP、Azure）"
+  },
+  {
+    "name": "Chroma",
+    "slug": "chroma",
+    "emoji": "🗄️",
+    "color": "#5B21B6",
+    "description": "Chroma是一个开源的向量数据库，专为AI应用设计，用于存储和检索高维向量嵌入。它与LLM应用深度集成，帮助开发者构建语义搜索、聊天机器人和RAG系统。2026年Chroma持续更新，已支持更高效的混合搜索和云端部署选项。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "向量数据库"
+      },
+      {
+        "text": "嵌入存储"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "LLM应用开发",
+        "type": "free"
+      },
+      {
+        "text": "语义搜索"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.trychroma.com",
+    "price": "免费开源（云服务付费）",
+    "platform": "Web/API"
+  },
+  {
+    "name": "Harvey AI",
+    "slug": "harvey-ai",
+    "emoji": "⚖️",
+    "color": "#8B4513",
+    "description": "专为律师事务所打造的AI助手，能进行法律研究、合同分析、尽职调查等高级法律任务，已被多家顶级律所采用。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "法律AI"
+      },
+      {
+        "text": "企业级"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "N/A",
+    "url": "https://harvey.ai",
+    "price": "企业定制",
+    "platform": "Web",
+    "badge": {}
   },
   {
     "name": "Mem",
@@ -12026,6 +12118,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "夸克AI",
+    "slug": "quark-ai",
+    "emoji": "🔍",
+    "color": "#0066FF",
+    "description": "夸克AI是阿里巴巴旗下夸克浏览器内置的智能搜索助手，集成先进的AI大模型技术，为用户提供智能搜索答案、内容创作辅助和知识问答服务。2026年已升级至最新版本，搜索体验更加智能高效。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "智能搜索"
+      },
+      {
+        "text": "浏览器AI助手"
+      },
+      {
+        "text": "中文AI"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "阿里巴巴",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.quark.cn",
+    "price": "免费",
+    "platform": "iOS/Android/Web/桌面端"
+  },
+  {
     "name": "Devin AI",
     "slug": "devin-ai",
     "emoji": "🤖",
@@ -12156,6 +12283,63 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.pinecone.io",
     "price": "免费版可用，付费计划从$49/月起",
     "platform": "云端（AWS、GCP、Azure）"
+  },
+  {
+    "name": "Chroma",
+    "slug": "chroma",
+    "emoji": "🗄️",
+    "color": "#5B21B6",
+    "description": "Chroma是一个开源的向量数据库，专为AI应用设计，用于存储和检索高维向量嵌入。它与LLM应用深度集成，帮助开发者构建语义搜索、聊天机器人和RAG系统。2026年Chroma持续更新，已支持更高效的混合搜索和云端部署选项。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "向量数据库"
+      },
+      {
+        "text": "嵌入存储"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "LLM应用开发",
+        "type": "free"
+      },
+      {
+        "text": "语义搜索"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.trychroma.com",
+    "price": "免费开源（云服务付费）",
+    "platform": "Web/API"
+  },
+  {
+    "name": "Harvey AI",
+    "slug": "harvey-ai",
+    "emoji": "⚖️",
+    "color": "#8B4513",
+    "description": "专为律师事务所打造的AI助手，能进行法律研究、合同分析、尽职调查等高级法律任务，已被多家顶级律所采用。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "法律AI"
+      },
+      {
+        "text": "企业级"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "N/A",
+    "url": "https://harvey.ai",
+    "price": "企业定制",
+    "platform": "Web",
+    "badge": {}
   },
   {
     "name": "Mem",
