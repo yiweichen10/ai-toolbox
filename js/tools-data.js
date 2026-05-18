@@ -6035,6 +6035,41 @@ window.__ALL_TOOLS__ = [
     "platform": "iOS/Android/Web/桌面端"
   },
   {
+    "name": "腾讯文档AI",
+    "slug": "tencent-docs-ai",
+    "emoji": "📄",
+    "color": "#1E90FF",
+    "description": "腾讯文档AI是腾讯官方推出的智能文档处理助手，基于混元大模型构建。它提供智能写作、内容续写、总结归纳等核心功能，无缝集成于腾讯文档中，为个人和企业用户提供高效的文档创作体验。2026年持续更新，支持多模态内容处理和智能排版。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "腾讯文档"
+      },
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "智能写作",
+        "type": "free"
+      },
+      {
+        "text": "文档处理"
+      },
+      {
+        "text": "内容创作"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约500万月访问量",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://docs.qq.com/",
+    "price": "基础功能免费，高级AI功能需开通腾讯文档会员",
+    "platform": "网页端、Windows、Mac、iOS、Android、微信小程序"
+  },
+  {
     "name": "Devin AI",
     "slug": "devin-ai",
     "emoji": "🤖",
@@ -6099,6 +6134,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://all-hands.ai",
     "price": "免费开源（Pro版$19/月）",
     "platform": "Web/VS Code/CLI"
+  },
+  {
+    "name": "Groq",
+    "slug": "groq",
+    "emoji": "⚡",
+    "color": "#00D4AA",
+    "description": "Groq是一家专注于AI推理加速的科技公司，开发了专为大型语言模型设计的LPU（语言处理单元）芯片，提供超高速的AI推理API服务。截至2026年，Groq已支持多种主流大模型的推理部署，在AI编程和文本生成领域具有显著的性能优势。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI推理加速"
+      },
+      {
+        "text": "LPU芯片"
+      },
+      {
+        "text": "API服务"
+      },
+      {
+        "text": "大模型部署",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://groq.com",
+    "price": "提供免费 tier，付费计划按token计费",
+    "platform": "Web API，支持Python、Node.js等主流编程语言"
   },
   {
     "name": "OpenRouter",
@@ -6345,6 +6412,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://iconscout.com/ai",
     "price": "免费版每月10个AI生成额度，专业版$9.99/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Shulex",
+    "slug": "shulex",
+    "emoji": "📊",
+    "color": "#3B82F6",
+    "description": "Shulex（数脉）是一款专为跨境电商卖家设计的AI数据分析工具，专注于亚马逊平台的市场研究与竞品分析。通过AI算法帮助卖家洞察市场趋势、优化关键词策略，2026年已升级至3.0版本，新增智能销量预测与全链路运营分析功能。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "电商数据分析"
+      },
+      {
+        "text": "亚马逊运营"
+      },
+      {
+        "text": "竞品分析"
+      },
+      {
+        "text": "关键词研究",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.shulex.com",
+    "price": "免费版可用，付费版$39起/月",
+    "platform": "Web端支持"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -12153,6 +12252,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "iOS/Android/Web/桌面端"
   },
   {
+    "name": "腾讯文档AI",
+    "slug": "tencent-docs-ai",
+    "emoji": "📄",
+    "color": "#1E90FF",
+    "description": "腾讯文档AI是腾讯官方推出的智能文档处理助手，基于混元大模型构建。它提供智能写作、内容续写、总结归纳等核心功能，无缝集成于腾讯文档中，为个人和企业用户提供高效的文档创作体验。2026年持续更新，支持多模态内容处理和智能排版。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "腾讯文档"
+      },
+      {
+        "text": "AI办公"
+      },
+      {
+        "text": "智能写作",
+        "type": "free"
+      },
+      {
+        "text": "文档处理"
+      },
+      {
+        "text": "内容创作"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约500万月访问量",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://docs.qq.com/",
+    "price": "基础功能免费，高级AI功能需开通腾讯文档会员",
+    "platform": "网页端、Windows、Mac、iOS、Android、微信小程序"
+  },
+  {
     "name": "Devin AI",
     "slug": "devin-ai",
     "emoji": "🤖",
@@ -12217,6 +12351,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://all-hands.ai",
     "price": "免费开源（Pro版$19/月）",
     "platform": "Web/VS Code/CLI"
+  },
+  {
+    "name": "Groq",
+    "slug": "groq",
+    "emoji": "⚡",
+    "color": "#00D4AA",
+    "description": "Groq是一家专注于AI推理加速的科技公司，开发了专为大型语言模型设计的LPU（语言处理单元）芯片，提供超高速的AI推理API服务。截至2026年，Groq已支持多种主流大模型的推理部署，在AI编程和文本生成领域具有显著的性能优势。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI推理加速"
+      },
+      {
+        "text": "LPU芯片"
+      },
+      {
+        "text": "API服务"
+      },
+      {
+        "text": "大模型部署",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://groq.com",
+    "price": "提供免费 tier，付费计划按token计费",
+    "platform": "Web API，支持Python、Node.js等主流编程语言"
   },
   {
     "name": "OpenRouter",
@@ -12463,5 +12629,37 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://iconscout.com/ai",
     "price": "免费版每月10个AI生成额度，专业版$9.99/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Shulex",
+    "slug": "shulex",
+    "emoji": "📊",
+    "color": "#3B82F6",
+    "description": "Shulex（数脉）是一款专为跨境电商卖家设计的AI数据分析工具，专注于亚马逊平台的市场研究与竞品分析。通过AI算法帮助卖家洞察市场趋势、优化关键词策略，2026年已升级至3.0版本，新增智能销量预测与全链路运营分析功能。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "电商数据分析"
+      },
+      {
+        "text": "亚马逊运营"
+      },
+      {
+        "text": "竞品分析"
+      },
+      {
+        "text": "关键词研究",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.shulex.com",
+    "price": "免费版可用，付费版$39起/月",
+    "platform": "Web端支持"
   }
 ];
