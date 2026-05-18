@@ -1,5 +1,16 @@
 # AI 工具每日发布自动化任务执行记录
 
+## 2026-05-17 13:00
+- **执行结果**: 部分成功。发布 3 个工具，构建成功，阿里云增量部署成功，Git push 失败。
+- **发布工具**: Chroma (chroma), Harvey AI (harvey-ai), 夸克AI (quark-ai)
+- **库存状态**: 已发布 207 个, 未发布 24 个, 总计 231 个
+- **库存补充**: 无需补充，24个未发布库存约够8天
+- **构建**: 207 tools + 73 articles + 6 quizzes + 16 rankings + 5 live
+- **部署**: 增量部署到阿里云成功（1个变化文件 index.html）
+- **推送**: IndexNow 无新URL（322个全部已推送），百度推送跳过（未配置token）
+- **Git**: commit e32e5319 (发布) + f5458c2d (部署)，push 全部失败（GitHub 连接被重置）
+- **库存充足**: 24个未发布约够8天
+
 ## 2026-05-16 13:00
 - **执行结果**: 全部成功。发布 3 个工具，构建成功，阿里云增量部署成功，Git push 成功。
 - **发布工具**: Julius AI (julius-ai), Pinecone (pinecone), Relevance AI (relevance-ai)
