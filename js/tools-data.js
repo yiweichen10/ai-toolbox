@@ -6200,6 +6200,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/API/CLI"
   },
   {
+    "name": "LlamaIndex",
+    "slug": "llamaindex",
+    "emoji": "📚",
+    "color": "#4F46E5",
+    "description": "LlamaIndex是一个开源的数据框架，帮助开发者构建基于LLM的应用程序，2024年已全新品牌升级并持续完善企业级功能。它通过数据摄取、索引和查询能力，让AI模型能够高效访问私有或特定领域的知识库。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "数据框架"
+      },
+      {
+        "text": "向量检索"
+      },
+      {
+        "text": "RAG"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.llamaindex.ai",
+    "price": "免费开源版+付费云服务",
+    "platform": "Python/Node.js/TypeScript/Web"
+  },
+  {
     "name": "Pinecone",
     "slug": "pinecone",
     "emoji": "🔍",
@@ -6313,6 +6341,28 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Recall",
+    "slug": "recall-ai",
+    "emoji": "🧠",
+    "color": "#059669",
+    "description": "AI知识提取和记忆工具，自动总结网页、视频、播客内容，并建立知识网络，帮助高效积累和回顾信息。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "知识提取"
+      },
+      {
+        "text": "记忆增强"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.getrecall.ai",
+    "price": "免费版+$8/月",
+    "platform": "Web / Chrome扩展"
+  },
+  {
     "name": "Respeecher",
     "slug": "respeecher",
     "emoji": "🎙️",
@@ -6377,6 +6427,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.ironclad.ai",
     "price": "企业定制",
     "platform": "Web"
+  },
+  {
+    "name": "Octarine",
+    "slug": "octarine",
+    "emoji": "🧙",
+    "color": "#7C3AED",
+    "description": "Octarine是一款AI驱动的创意内容生成平台，专注于帮助营销人员和企业快速创建高质量的社交媒体内容、广告文案和品牌故事。2026年平台集成了最新的多模态AI模型，支持文本、图像和视频内容的协同创作，大幅提升内容生产效率。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "营销文案",
+        "type": "free"
+      },
+      {
+        "text": "社交媒体"
+      },
+      {
+        "text": "品牌营销"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://octarine.ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "网页端、iOS、Android"
   },
   {
     "name": "IconScout AI",
@@ -12417,6 +12502,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web/API/CLI"
   },
   {
+    "name": "LlamaIndex",
+    "slug": "llamaindex",
+    "emoji": "📚",
+    "color": "#4F46E5",
+    "description": "LlamaIndex是一个开源的数据框架，帮助开发者构建基于LLM的应用程序，2024年已全新品牌升级并持续完善企业级功能。它通过数据摄取、索引和查询能力，让AI模型能够高效访问私有或特定领域的知识库。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "数据框架"
+      },
+      {
+        "text": "向量检索"
+      },
+      {
+        "text": "RAG"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.llamaindex.ai",
+    "price": "免费开源版+付费云服务",
+    "platform": "Python/Node.js/TypeScript/Web"
+  },
+  {
     "name": "Pinecone",
     "slug": "pinecone",
     "emoji": "🔍",
@@ -12530,6 +12643,28 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Recall",
+    "slug": "recall-ai",
+    "emoji": "🧠",
+    "color": "#059669",
+    "description": "AI知识提取和记忆工具，自动总结网页、视频、播客内容，并建立知识网络，帮助高效积累和回顾信息。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "知识提取"
+      },
+      {
+        "text": "记忆增强"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.getrecall.ai",
+    "price": "免费版+$8/月",
+    "platform": "Web / Chrome扩展"
+  },
+  {
     "name": "Respeecher",
     "slug": "respeecher",
     "emoji": "🎙️",
@@ -12594,6 +12729,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.ironclad.ai",
     "price": "企业定制",
     "platform": "Web"
+  },
+  {
+    "name": "Octarine",
+    "slug": "octarine",
+    "emoji": "🧙",
+    "color": "#7C3AED",
+    "description": "Octarine是一款AI驱动的创意内容生成平台，专注于帮助营销人员和企业快速创建高质量的社交媒体内容、广告文案和品牌故事。2026年平台集成了最新的多模态AI模型，支持文本、图像和视频内容的协同创作，大幅提升内容生产效率。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "营销文案",
+        "type": "free"
+      },
+      {
+        "text": "社交媒体"
+      },
+      {
+        "text": "品牌营销"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://octarine.ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "网页端、iOS、Android"
   },
   {
     "name": "IconScout AI",
