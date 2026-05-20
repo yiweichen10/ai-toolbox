@@ -2677,7 +2677,7 @@ def build_article_page(article, all_articles, all_tools=None):
             {infographic_html}
             <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
                 <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
-                <span style="color:#555;">{escape_html(article.get('description') or article.get('summary', ''))}</span>
+                <span style="color:#555;">{escape_html(article.get('excerpt') or article.get('description') or article.get('summary', ''))}</span>
             </div>
             {content_html}
         </article>
