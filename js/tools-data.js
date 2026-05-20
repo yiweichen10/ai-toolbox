@@ -6136,6 +6136,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/VS Code/CLI"
   },
   {
+    "name": "Cluely",
+    "slug": "cluely",
+    "emoji": "✨",
+    "color": "#6366F1",
+    "description": "Cluely是一款功能强大的AI对话助手，基于先进的语言模型提供智能对话、问答和内容生成服务。2026年持续更新优化，支持多语言交互和多种应用场景，是日常工作和学习的得力AI伙伴。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "智能助手"
+      },
+      {
+        "text": "写作辅助"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://cluely.com",
+    "price": "免费版+付费版(19.9美元/月起)",
+    "platform": "网页端+iOS+Android"
+  },
+  {
     "name": "Groq",
     "slug": "groq",
     "emoji": "⚡",
@@ -6363,6 +6391,28 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / Chrome扩展"
   },
   {
+    "name": "KapKap",
+    "slug": "kapkap",
+    "emoji": "🎬",
+    "color": "#EF4444",
+    "description": "AI驱动的视频剪辑工具，专注于将长视频自动剪辑成短视频片段，智能识别高光时刻，一键生成适合TikTok/Reels/Shorts的短视频。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "视频剪辑"
+      },
+      {
+        "text": "短视频生成"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.kapkap.com",
+    "price": "免费版+Pro $15/月",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Respeecher",
     "slug": "respeecher",
     "emoji": "🎙️",
@@ -6529,6 +6579,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.shulex.com",
     "price": "免费版可用，付费版$39起/月",
     "platform": "Web端支持"
+  },
+  {
+    "name": "Glass Health",
+    "slug": "glass-health",
+    "emoji": "🏥",
+    "color": "#2E86AB",
+    "description": "Glass Health是一款专注于医疗领域的AI诊断辅助工具，通过先进的机器学习算法帮助医疗专业人员快速分析患者症状并生成鉴别诊断列表。2026年平台集成了最新的大语言模型，在保持医学准确性的同时大幅提升了响应速度和临床决策支持能力。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI诊断辅助"
+      },
+      {
+        "text": "医疗AI"
+      },
+      {
+        "text": "临床决策支持"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "45万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://glasshealth.ai",
+    "price": "免费版可用，Pro版约$29/月",
+    "platform": "Web、iOS、Android"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -12438,6 +12516,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web/VS Code/CLI"
   },
   {
+    "name": "Cluely",
+    "slug": "cluely",
+    "emoji": "✨",
+    "color": "#6366F1",
+    "description": "Cluely是一款功能强大的AI对话助手，基于先进的语言模型提供智能对话、问答和内容生成服务。2026年持续更新优化，支持多语言交互和多种应用场景，是日常工作和学习的得力AI伙伴。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI对话"
+      },
+      {
+        "text": "智能助手"
+      },
+      {
+        "text": "写作辅助"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://cluely.com",
+    "price": "免费版+付费版(19.9美元/月起)",
+    "platform": "网页端+iOS+Android"
+  },
+  {
     "name": "Groq",
     "slug": "groq",
     "emoji": "⚡",
@@ -12665,6 +12771,28 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / Chrome扩展"
   },
   {
+    "name": "KapKap",
+    "slug": "kapkap",
+    "emoji": "🎬",
+    "color": "#EF4444",
+    "description": "AI驱动的视频剪辑工具，专注于将长视频自动剪辑成短视频片段，智能识别高光时刻，一键生成适合TikTok/Reels/Shorts的短视频。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "视频剪辑"
+      },
+      {
+        "text": "短视频生成"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.kapkap.com",
+    "price": "免费版+Pro $15/月",
+    "platform": "Web / iOS / Android"
+  },
+  {
     "name": "Respeecher",
     "slug": "respeecher",
     "emoji": "🎙️",
@@ -12831,5 +12959,33 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.shulex.com",
     "price": "免费版可用，付费版$39起/月",
     "platform": "Web端支持"
+  },
+  {
+    "name": "Glass Health",
+    "slug": "glass-health",
+    "emoji": "🏥",
+    "color": "#2E86AB",
+    "description": "Glass Health是一款专注于医疗领域的AI诊断辅助工具，通过先进的机器学习算法帮助医疗专业人员快速分析患者症状并生成鉴别诊断列表。2026年平台集成了最新的大语言模型，在保持医学准确性的同时大幅提升了响应速度和临床决策支持能力。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI诊断辅助"
+      },
+      {
+        "text": "医疗AI"
+      },
+      {
+        "text": "临床决策支持"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "45万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://glasshealth.ai",
+    "price": "免费版可用，Pro版约$29/月",
+    "platform": "Web、iOS、Android"
   }
 ];
