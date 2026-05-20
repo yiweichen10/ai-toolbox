@@ -2390,7 +2390,7 @@ def build_article_page(article, all_articles, all_tools=None):
     related_tools_html = ''
     if all_tools:
         article_title = article.get('title', '').lower()
-        article_desc = article.get('description', '').lower()
+        article_desc = article.get('excerpt', article.get('description', '')).lower()
         article_content = article.get('content', '').lower()
         # 找工具名在文章中出现的工具
         matched_tools = []
@@ -2512,7 +2512,7 @@ def build_article_page(article, all_articles, all_tools=None):
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": article['title'],
-        "description": article.get('description', ''),
+        "description": article.get('excerpt', article.get('description', '')),
         "datePublished": article_date,
         "dateModified": article_date_modified,
         "author": {"@type": "Organization", "name": "AI工具宝箱"},
@@ -2621,7 +2621,7 @@ def build_article_page(article, all_articles, all_tools=None):
                 "@context": "https://schema.org",
                 "@type": "HowTo",
                 "name": article['title'],
-                "description": article.get('description', ''),
+                "description": article.get('excerpt', article.get('description', '')),
                 "totalTime": "PT30M",
                 "step": howto_steps
             }
