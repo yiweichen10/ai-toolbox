@@ -6228,6 +6228,40 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/API/CLI"
   },
   {
+    "name": "LangChain",
+    "slug": "langchain",
+    "emoji": "⛓️",
+    "color": "#6B46C1",
+    "description": "LangChain是一个开源的AI应用开发框架，旨在帮助开发者快速构建基于大语言模型的应用程序。2026年发布的最新版本增强了多模态支持和更高效的Agent编排能力，已成为AI应用开发领域的主流选择。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "开源框架"
+      },
+      {
+        "text": "大语言模型"
+      },
+      {
+        "text": "AI应用开发"
+      },
+      {
+        "text": "RAG"
+      },
+      {
+        "text": "Agent"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.langchain.com",
+    "price": "开源免费，付费版起价$39/月",
+    "platform": "Web/桌面/命令行"
+  },
+  {
     "name": "LlamaIndex",
     "slug": "llamaindex",
     "emoji": "📚",
@@ -6435,6 +6469,28 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Meticulous",
+    "slug": "meticulous",
+    "emoji": "🔬",
+    "color": "#0891B2",
+    "description": "AI驱动的UI测试自动化工具，自动记录用户操作并生成测试代码，无需手写测试脚本，大幅提升前端测试效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "自动化测试"
+      },
+      {
+        "text": "UI测试"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://meticulous.ai",
+    "price": "免费版+$25/月",
+    "platform": "Web / CI集成"
+  },
+  {
     "name": "Hippocratic AI",
     "slug": "hippocratic-ai",
     "emoji": "🏥",
@@ -6547,6 +6603,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://iconscout.com/ai",
     "price": "免费版每月10个AI生成额度，专业版$9.99/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Autify",
+    "slug": "autify",
+    "emoji": "🔧",
+    "color": "#4F46E5",
+    "description": "Autify是一款AI驱动的自动化测试平台，支持Web和移动应用的智能测试创建与维护。通过AI技术自动识别UI变化并更新测试脚本，大幅降低测试维护成本。2026年平台新增跨浏览器并行测试和AI生成测试用例功能，进一步提升测试效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "自动化测试"
+      },
+      {
+        "text": "AI测试"
+      },
+      {
+        "text": "Web测试"
+      },
+      {
+        "text": "移动端测试",
+        "type": "free"
+      },
+      {
+        "text": "无代码测试"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约45万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://autify.com",
+    "price": "免费试用14天，付费版$49/月起",
+    "platform": "Web/Windows/macOS/Linux"
   },
   {
     "name": "Shulex",
@@ -12608,6 +12699,40 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web/API/CLI"
   },
   {
+    "name": "LangChain",
+    "slug": "langchain",
+    "emoji": "⛓️",
+    "color": "#6B46C1",
+    "description": "LangChain是一个开源的AI应用开发框架，旨在帮助开发者快速构建基于大语言模型的应用程序。2026年发布的最新版本增强了多模态支持和更高效的Agent编排能力，已成为AI应用开发领域的主流选择。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "开源框架"
+      },
+      {
+        "text": "大语言模型"
+      },
+      {
+        "text": "AI应用开发"
+      },
+      {
+        "text": "RAG"
+      },
+      {
+        "text": "Agent"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.langchain.com",
+    "price": "开源免费，付费版起价$39/月",
+    "platform": "Web/桌面/命令行"
+  },
+  {
     "name": "LlamaIndex",
     "slug": "llamaindex",
     "emoji": "📚",
@@ -12815,6 +12940,28 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Meticulous",
+    "slug": "meticulous",
+    "emoji": "🔬",
+    "color": "#0891B2",
+    "description": "AI驱动的UI测试自动化工具，自动记录用户操作并生成测试代码，无需手写测试脚本，大幅提升前端测试效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "自动化测试"
+      },
+      {
+        "text": "UI测试"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://meticulous.ai",
+    "price": "免费版+$25/月",
+    "platform": "Web / CI集成"
+  },
+  {
     "name": "Hippocratic AI",
     "slug": "hippocratic-ai",
     "emoji": "🏥",
@@ -12927,6 +13074,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://iconscout.com/ai",
     "price": "免费版每月10个AI生成额度，专业版$9.99/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Autify",
+    "slug": "autify",
+    "emoji": "🔧",
+    "color": "#4F46E5",
+    "description": "Autify是一款AI驱动的自动化测试平台，支持Web和移动应用的智能测试创建与维护。通过AI技术自动识别UI变化并更新测试脚本，大幅降低测试维护成本。2026年平台新增跨浏览器并行测试和AI生成测试用例功能，进一步提升测试效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "自动化测试"
+      },
+      {
+        "text": "AI测试"
+      },
+      {
+        "text": "Web测试"
+      },
+      {
+        "text": "移动端测试",
+        "type": "free"
+      },
+      {
+        "text": "无代码测试"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约45万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://autify.com",
+    "price": "免费试用14天，付费版$49/月起",
+    "platform": "Web/Windows/macOS/Linux"
   },
   {
     "name": "Shulex",
