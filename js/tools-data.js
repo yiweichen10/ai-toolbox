@@ -6101,6 +6101,44 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Amp",
+    "slug": "amp",
+    "emoji": "⚡",
+    "color": "#8B5CF6",
+    "description": "Amp是Anthropic推出的AI编程助手，为开发者提供智能代码补全、代码理解和重构功能。作为Claude Code的前身，Amp专注于提升编程效率，支持多种编程语言和主流IDE集成。2026年版本增强了代码审查和自动化测试生成能力。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "VS Code扩展"
+      },
+      {
+        "text": "Anthropic"
+      },
+      {
+        "text": "免费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://anthropic.com/amp",
+    "price": "免费使用",
+    "platform": [
+      "VS Code",
+      "JetBrains IDEs",
+      "Visual Studio"
+    ]
+  },
+  {
     "name": "OpenHands",
     "slug": "openhands",
     "emoji": "🤖",
@@ -6469,6 +6507,28 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "StepFun Step-2",
+    "slug": "stepfun-step2",
+    "emoji": "🚶",
+    "color": "#F59E0B",
+    "description": "阶跃星辰推出的新一代多模态大模型，在数学推理、代码生成、中文理解等方面表现突出，是国产大模型的重要选手。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "国产大模型"
+      },
+      {
+        "text": "多模态"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.stepfun.com",
+    "price": "免费版+API按量付费",
+    "platform": "Web / API"
+  },
+  {
     "name": "Meticulous",
     "slug": "meticulous",
     "emoji": "🔬",
@@ -6603,6 +6663,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://iconscout.com/ai",
     "price": "免费版每月10个AI生成额度，专业版$9.99/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Galileo AI",
+    "slug": "galileo-ai",
+    "emoji": "🔭",
+    "color": "#5B4FCF",
+    "description": "Galileo AI是一款智能AI助手，专注于提升用户工作和学习效率。它能够理解复杂问题并提供精准答案，支持多轮对话和上下文记忆，帮助用户快速完成信息检索、文本撰写、数据分析等任务。2026年推出的最新版本增强了多模态交互能力和专业领域深度定制功能。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "效率工具"
+      },
+      {
+        "text": "智能问答",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://galileo.ai",
+    "price": "基础版免费，专业版$19/月起",
+    "platform": "网页端、iOS、Android"
   },
   {
     "name": "Autify",
@@ -12572,6 +12661,44 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Amp",
+    "slug": "amp",
+    "emoji": "⚡",
+    "color": "#8B5CF6",
+    "description": "Amp是Anthropic推出的AI编程助手，为开发者提供智能代码补全、代码理解和重构功能。作为Claude Code的前身，Amp专注于提升编程效率，支持多种编程语言和主流IDE集成。2026年版本增强了代码审查和自动化测试生成能力。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "VS Code扩展"
+      },
+      {
+        "text": "Anthropic"
+      },
+      {
+        "text": "免费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://anthropic.com/amp",
+    "price": "免费使用",
+    "platform": [
+      "VS Code",
+      "JetBrains IDEs",
+      "Visual Studio"
+    ]
+  },
+  {
     "name": "OpenHands",
     "slug": "openhands",
     "emoji": "🤖",
@@ -12940,6 +13067,28 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "StepFun Step-2",
+    "slug": "stepfun-step2",
+    "emoji": "🚶",
+    "color": "#F59E0B",
+    "description": "阶跃星辰推出的新一代多模态大模型，在数学推理、代码生成、中文理解等方面表现突出，是国产大模型的重要选手。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "国产大模型"
+      },
+      {
+        "text": "多模态"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.stepfun.com",
+    "price": "免费版+API按量付费",
+    "platform": "Web / API"
+  },
+  {
     "name": "Meticulous",
     "slug": "meticulous",
     "emoji": "🔬",
@@ -13074,6 +13223,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://iconscout.com/ai",
     "price": "免费版每月10个AI生成额度，专业版$9.99/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Galileo AI",
+    "slug": "galileo-ai",
+    "emoji": "🔭",
+    "color": "#5B4FCF",
+    "description": "Galileo AI是一款智能AI助手，专注于提升用户工作和学习效率。它能够理解复杂问题并提供精准答案，支持多轮对话和上下文记忆，帮助用户快速完成信息检索、文本撰写、数据分析等任务。2026年推出的最新版本增强了多模态交互能力和专业领域深度定制功能。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "效率工具"
+      },
+      {
+        "text": "智能问答",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://galileo.ai",
+    "price": "基础版免费，专业版$19/月起",
+    "platform": "网页端、iOS、Android"
   },
   {
     "name": "Autify",
