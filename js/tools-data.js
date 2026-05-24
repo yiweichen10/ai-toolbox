@@ -6419,6 +6419,28 @@ window.__ALL_TOOLS__ = [
     "badge": {}
   },
   {
+    "name": "CodeRabbit",
+    "slug": "coderabbit",
+    "emoji": "🐇",
+    "color": "#FF6B6B",
+    "description": "AI代码审查助手，自动分析GitHub/GitLab的Pull Request，提供行级评论、bug检测、性能建议和最佳实践提示，显著提升代码审查效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码审查"
+      },
+      {
+        "text": "GitHub集成"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.coderabbit.ai",
+    "price": "免费版+Team $10/月",
+    "platform": "GitHub / GitLab"
+  },
+  {
     "name": "Mem",
     "slug": "mem-ai",
     "emoji": "🧠",
@@ -6787,6 +6809,76 @@ window.__ALL_TOOLS__ = [
     "url": "https://glasshealth.ai",
     "price": "免费版可用，Pro版约$29/月",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Unitree GD01",
+    "slug": "unitree-gd01",
+    "emoji": "🐕",
+    "color": "#4CAF50",
+    "description": "宇树科技推出的智能四足机器人教育平台，支持Python和ROS编程，可实现复杂步态控制与AI视觉交互。2026年最新版本强化了自主导航和群体协作能力，广泛应用于高校科研和机器人竞赛领域。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "机器人"
+      },
+      {
+        "text": "四足机器人"
+      },
+      {
+        "text": "编程教育",
+        "type": "free"
+      },
+      {
+        "text": "ROS"
+      },
+      {
+        "text": "宇树科技"
+      },
+      {
+        "text": "STEM教育"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "12万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.unitree.com",
+    "price": "约$9,999起",
+    "platform": "支持平台：Windows/macOS/Linux，配套App支持iOS/Android"
+  },
+  {
+    "name": "AnySceneGen",
+    "slug": "anyscenegen",
+    "emoji": "🎨",
+    "color": "#7C3AED",
+    "description": "AnySceneGen是一款强大的AI场景生成工具，支持从文本描述快速生成高质量的室内外场景图像和3D场景。2026年最新版本集成了实时预览和多模态编辑功能，成为建筑师、设计师和游戏开发者的首选创作助手。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "场景生成"
+      },
+      {
+        "text": "AI作图"
+      },
+      {
+        "text": "室内设计"
+      },
+      {
+        "text": "3D场景",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://anyscenegen.ai",
+    "price": "免费版/月费$19起",
+    "platform": "Web/iOS/Android"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -12979,6 +13071,28 @@ window.__REMAINING_TOOLS__ = [
     "badge": {}
   },
   {
+    "name": "CodeRabbit",
+    "slug": "coderabbit",
+    "emoji": "🐇",
+    "color": "#FF6B6B",
+    "description": "AI代码审查助手，自动分析GitHub/GitLab的Pull Request，提供行级评论、bug检测、性能建议和最佳实践提示，显著提升代码审查效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码审查"
+      },
+      {
+        "text": "GitHub集成"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.coderabbit.ai",
+    "price": "免费版+Team $10/月",
+    "platform": "GitHub / GitLab"
+  },
+  {
     "name": "Mem",
     "slug": "mem-ai",
     "emoji": "🧠",
@@ -13347,5 +13461,75 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://glasshealth.ai",
     "price": "免费版可用，Pro版约$29/月",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Unitree GD01",
+    "slug": "unitree-gd01",
+    "emoji": "🐕",
+    "color": "#4CAF50",
+    "description": "宇树科技推出的智能四足机器人教育平台，支持Python和ROS编程，可实现复杂步态控制与AI视觉交互。2026年最新版本强化了自主导航和群体协作能力，广泛应用于高校科研和机器人竞赛领域。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "机器人"
+      },
+      {
+        "text": "四足机器人"
+      },
+      {
+        "text": "编程教育",
+        "type": "free"
+      },
+      {
+        "text": "ROS"
+      },
+      {
+        "text": "宇树科技"
+      },
+      {
+        "text": "STEM教育"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "12万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.unitree.com",
+    "price": "约$9,999起",
+    "platform": "支持平台：Windows/macOS/Linux，配套App支持iOS/Android"
+  },
+  {
+    "name": "AnySceneGen",
+    "slug": "anyscenegen",
+    "emoji": "🎨",
+    "color": "#7C3AED",
+    "description": "AnySceneGen是一款强大的AI场景生成工具，支持从文本描述快速生成高质量的室内外场景图像和3D场景。2026年最新版本集成了实时预览和多模态编辑功能，成为建筑师、设计师和游戏开发者的首选创作助手。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "场景生成"
+      },
+      {
+        "text": "AI作图"
+      },
+      {
+        "text": "室内设计"
+      },
+      {
+        "text": "3D场景",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://anyscenegen.ai",
+    "price": "免费版/月费$19起",
+    "platform": "Web/iOS/Android"
   }
 ];
