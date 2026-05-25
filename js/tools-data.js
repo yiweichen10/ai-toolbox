@@ -6811,6 +6811,110 @@ window.__ALL_TOOLS__ = [
     "platform": "Web、iOS、Android"
   },
   {
+    "name": "Shadow AI",
+    "slug": "shadow-ai",
+    "emoji": "🎭",
+    "color": "#1E1E2E",
+    "description": "Shadow AI是一款专注于隐私保护的智能AI助手，采用独特的\"影子模式\"技术，在后台智能分析用户需求并提供主动建议。2026年最新版本增强了多模态交互能力和企业级数据安全加密功能。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "隐私保护"
+      },
+      {
+        "text": "智能助手"
+      },
+      {
+        "text": "后台运行"
+      },
+      {
+        "text": "数据分析"
+      },
+      {
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "85,000",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://shadowai.com",
+    "price": "免费版/专业版$9.99/月",
+    "platform": "Web / iOS / Android / macOS / Windows"
+  },
+  {
+    "name": "RankSpot",
+    "slug": "rankspot",
+    "emoji": "🎯",
+    "color": "#4F46E5",
+    "description": "RankSpot是一款专业的AI驱动SEO排名监控与关键词分析工具，帮助用户实时追踪网站搜索引擎排名，优化关键词策略，提升有机流量。2026年集成最新大语言模型，支持智能竞争对手分析和内容优化建议。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "SEO优化"
+      },
+      {
+        "text": "关键词研究"
+      },
+      {
+        "text": "排名追踪"
+      },
+      {
+        "text": "竞争对手分析",
+        "type": "free"
+      },
+      {
+        "text": "网站分析"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约15万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://rankspot.io",
+    "price": "免费版可用，付费版$29/月起",
+    "platform": "Web端支持"
+  },
+  {
+    "name": "堆友AI",
+    "slug": "duiyou-ai",
+    "emoji": "🎨",
+    "color": "#FF6A00",
+    "description": "阿里巴巴达摩院推出的AI图像生成平台，支持文生图、图生图、AI换装等功能。2026年持续迭代模型能力，提升生成质量和速度，已成为国内AI绘画领域的重要工具选择。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "文生图"
+      },
+      {
+        "text": "图生图"
+      },
+      {
+        "text": "AI换装"
+      },
+      {
+        "text": "免费使用",
+        "type": "free"
+      },
+      {
+        "text": "国产AI"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "50万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://d.design/",
+    "price": "基础功能免费，高级功能付费",
+    "platform": "Web浏览器"
+  },
+  {
     "name": "Unitree GD01",
     "slug": "unitree-gd01",
     "emoji": "🐕",
@@ -13461,6 +13565,110 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://glasshealth.ai",
     "price": "免费版可用，Pro版约$29/月",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Shadow AI",
+    "slug": "shadow-ai",
+    "emoji": "🎭",
+    "color": "#1E1E2E",
+    "description": "Shadow AI是一款专注于隐私保护的智能AI助手，采用独特的\"影子模式\"技术，在后台智能分析用户需求并提供主动建议。2026年最新版本增强了多模态交互能力和企业级数据安全加密功能。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "隐私保护"
+      },
+      {
+        "text": "智能助手"
+      },
+      {
+        "text": "后台运行"
+      },
+      {
+        "text": "数据分析"
+      },
+      {
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "85,000",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://shadowai.com",
+    "price": "免费版/专业版$9.99/月",
+    "platform": "Web / iOS / Android / macOS / Windows"
+  },
+  {
+    "name": "RankSpot",
+    "slug": "rankspot",
+    "emoji": "🎯",
+    "color": "#4F46E5",
+    "description": "RankSpot是一款专业的AI驱动SEO排名监控与关键词分析工具，帮助用户实时追踪网站搜索引擎排名，优化关键词策略，提升有机流量。2026年集成最新大语言模型，支持智能竞争对手分析和内容优化建议。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "SEO优化"
+      },
+      {
+        "text": "关键词研究"
+      },
+      {
+        "text": "排名追踪"
+      },
+      {
+        "text": "竞争对手分析",
+        "type": "free"
+      },
+      {
+        "text": "网站分析"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约15万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://rankspot.io",
+    "price": "免费版可用，付费版$29/月起",
+    "platform": "Web端支持"
+  },
+  {
+    "name": "堆友AI",
+    "slug": "duiyou-ai",
+    "emoji": "🎨",
+    "color": "#FF6A00",
+    "description": "阿里巴巴达摩院推出的AI图像生成平台，支持文生图、图生图、AI换装等功能。2026年持续迭代模型能力，提升生成质量和速度，已成为国内AI绘画领域的重要工具选择。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "文生图"
+      },
+      {
+        "text": "图生图"
+      },
+      {
+        "text": "AI换装"
+      },
+      {
+        "text": "免费使用",
+        "type": "free"
+      },
+      {
+        "text": "国产AI"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "50万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://d.design/",
+    "price": "基础功能免费，高级功能付费",
+    "platform": "Web浏览器"
   },
   {
     "name": "Unitree GD01",
