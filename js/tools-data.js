@@ -6845,6 +6845,75 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android / macOS / Windows"
   },
   {
+    "name": "Kilo Code",
+    "slug": "kilo-code",
+    "emoji": "💻",
+    "color": "#6366F1",
+    "description": "Kilo Code是一款智能编程辅助工具，利用先进的大语言模型技术为开发者提供代码补全、错误修复和功能生成支持。2026年最新版本增强了多语言支持和上下文理解能力，已成为众多开发者日常编程的高效助手。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "开发者工具"
+      },
+      {
+        "text": "免费"
+      },
+      {
+        "text": "开源",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://kilocode.dev",
+    "price": "免费版/专业版",
+    "platform": "VS Code/JetBrains/浏览器插件"
+  },
+  {
+    "name": "Codex CLI",
+    "slug": "codex-cli",
+    "emoji": "💻",
+    "color": "#10A37F",
+    "description": "OpenAI推出的命令行编程助手，通过自然语言帮助开发者完成代码编写、调试和优化。支持本地CLI环境运行，集成多种编程语言和框架。截至2026年，Codex CLI已成为开发者日常编码的重要辅助工具。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "CLI工具"
+      },
+      {
+        "text": "命令行编程"
+      },
+      {
+        "text": "代码生成"
+      },
+      {
+        "text": "开发者工具"
+      },
+      {
+        "text": "OpenAI"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "50万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://github.com/openai/codex-cli",
+    "price": "免费开源",
+    "platform": "macOS/Windows/Linux"
+  },
+  {
     "name": "RankSpot",
     "slug": "rankspot",
     "emoji": "🎯",
@@ -6878,6 +6947,37 @@ window.__ALL_TOOLS__ = [
     "url": "https://rankspot.io",
     "price": "免费版可用，付费版$29/月起",
     "platform": "Web端支持"
+  },
+  {
+    "name": "Alexa Plus",
+    "slug": "alexa-plus",
+    "emoji": "🎙️",
+    "color": "#00CAFF",
+    "description": "Alexa Plus是亚马逊推出的AI语音助手升级版本，于2026年全面升级为生成式AI驱动。它不仅能完成传统语音助手的所有任务，还具备深度对话理解、多模态交互和个性化推荐能力。通过先进的自然语言处理技术，Alexa Plus可以理解复杂指令、进行上下文对话，并与其他智能设备无缝集成，为用户提供全面的智能生活体验。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "语音助手"
+      },
+      {
+        "text": "智能家居"
+      },
+      {
+        "text": "多模态AI"
+      },
+      {
+        "text": "亚马逊"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "8500万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.amazon.com/alexa-plus",
+    "price": "免费版+订阅版（每月5.99美元起）",
+    "platform": "网页、iOS、Android、智能音箱、智能手表、汽车"
   },
   {
     "name": "堆友AI",
@@ -13601,6 +13701,75 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android / macOS / Windows"
   },
   {
+    "name": "Kilo Code",
+    "slug": "kilo-code",
+    "emoji": "💻",
+    "color": "#6366F1",
+    "description": "Kilo Code是一款智能编程辅助工具，利用先进的大语言模型技术为开发者提供代码补全、错误修复和功能生成支持。2026年最新版本增强了多语言支持和上下文理解能力，已成为众多开发者日常编程的高效助手。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "开发者工具"
+      },
+      {
+        "text": "免费"
+      },
+      {
+        "text": "开源",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://kilocode.dev",
+    "price": "免费版/专业版",
+    "platform": "VS Code/JetBrains/浏览器插件"
+  },
+  {
+    "name": "Codex CLI",
+    "slug": "codex-cli",
+    "emoji": "💻",
+    "color": "#10A37F",
+    "description": "OpenAI推出的命令行编程助手，通过自然语言帮助开发者完成代码编写、调试和优化。支持本地CLI环境运行，集成多种编程语言和框架。截至2026年，Codex CLI已成为开发者日常编码的重要辅助工具。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "CLI工具"
+      },
+      {
+        "text": "命令行编程"
+      },
+      {
+        "text": "代码生成"
+      },
+      {
+        "text": "开发者工具"
+      },
+      {
+        "text": "OpenAI"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "50万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://github.com/openai/codex-cli",
+    "price": "免费开源",
+    "platform": "macOS/Windows/Linux"
+  },
+  {
     "name": "RankSpot",
     "slug": "rankspot",
     "emoji": "🎯",
@@ -13634,6 +13803,37 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://rankspot.io",
     "price": "免费版可用，付费版$29/月起",
     "platform": "Web端支持"
+  },
+  {
+    "name": "Alexa Plus",
+    "slug": "alexa-plus",
+    "emoji": "🎙️",
+    "color": "#00CAFF",
+    "description": "Alexa Plus是亚马逊推出的AI语音助手升级版本，于2026年全面升级为生成式AI驱动。它不仅能完成传统语音助手的所有任务，还具备深度对话理解、多模态交互和个性化推荐能力。通过先进的自然语言处理技术，Alexa Plus可以理解复杂指令、进行上下文对话，并与其他智能设备无缝集成，为用户提供全面的智能生活体验。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "语音助手"
+      },
+      {
+        "text": "智能家居"
+      },
+      {
+        "text": "多模态AI"
+      },
+      {
+        "text": "亚马逊"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "8500万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.amazon.com/alexa-plus",
+    "price": "免费版+订阅版（每月5.99美元起）",
+    "platform": "网页、iOS、Android、智能音箱、智能手表、汽车"
   },
   {
     "name": "堆友AI",
