@@ -28,9 +28,6 @@ BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="返回顶部">
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>'''
 
-# ICP 备案标识（统一管理，全站 footer 共用）
-ICP_BEIAN = '<a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">蜀ICP备2025172163号-2</a>'
-
 from pypinyin import pinyin, Style
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -586,7 +583,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
     </main>
 
     <footer class="footer">
-        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具 · ''' + ICP_BEIAN + '''</p>
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
     </footer>
     ''' + BACK_TO_TOP_BLOCK + '''
 </body>
@@ -788,7 +785,7 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 最后更新 {today_iso} &middot; ''' + ICP_BEIAN + '''</p>
+        <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 最后更新 {today_iso}</p>
     </footer>
     ''' + BACK_TO_TOP_BLOCK + '''
 </body>
@@ -908,7 +905,7 @@ def build_alternatives_page(alt_data, all_tools, all_articles=None):
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 最后更新 {today_iso} &middot; ''' + ICP_BEIAN + '''</p>
+        <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 最后更新 {today_iso}</p>
     </footer>
     ''' + BACK_TO_TOP_BLOCK + '''
 </body>
@@ -1204,7 +1201,7 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 最后更新 {today_iso} &middot; ''' + ICP_BEIAN + '''</p>
+        <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 最后更新 {today_iso}</p>
     </footer>
 ''' + BACK_TO_TOP_BLOCK + '''
 <script>
@@ -1660,7 +1657,7 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 更新于 {(last_updated or _rdt.now().strftime('%Y-%m-%d %H:%M'))} &middot; ''' + ICP_BEIAN + '''</p>
+        <p>&copy; 2026 AI工具宝箱 &middot; 每日精选优质AI工具 &middot; 更新于 {(last_updated or _rdt.now().strftime('%Y-%m-%d %H:%M'))}</p>
     </footer>
 ''' + BACK_TO_TOP_BLOCK + '''
  </body>
@@ -1890,7 +1887,7 @@ def build_live_page(live_data, page_config, all_tools, articles):
     subtitle = '<p class="subtitle">' + escape_html(meta_desc) + '</p>'
     update_info = '<div class="last-update">📅 数据更新：' + escape_html(last_updated) + '</div>'
     methodology = '<div class="methodology-note"><strong>数据说明：</strong>本面板数据由AIToolBox团队每日自动更新聚合，来源包括工具官方信息、公开搜索热度、用户评价等。所有数据仅供参考，具体选择请以各工具官方页面为准。</div>'
-    footer = '<footer class="footer"><p>&copy; 2026 AI工具宝箱 · 每日精选优质AI工具 · 更新于 ' + _ldt.now().strftime('%Y-%m-%d %H:%M') + ' · ' + ICP_BEIAN + '</p></footer>'
+    footer = '<footer class="footer"><p>&copy; 2026 AI工具宝箱 · 每日精选优质AI工具 · 更新于 ' + _ldt.now().strftime('%Y-%m-%d %H:%M') + '</p></footer>'
 
     html = (
         '<!DOCTYPE html>\n<html lang="zh-CN">\n<head>\n'
@@ -2377,7 +2374,7 @@ def build_category_page(category_name, tools_in_category):
     </main>
 
     <footer class="footer">
-        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具 · ''' + ICP_BEIAN + '''</p>
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
     </footer>
     ''' + BACK_TO_TOP_BLOCK + '''
 </body>
@@ -2691,7 +2688,7 @@ def build_article_page(article, all_articles, all_tools=None):
     </main>
 
     <footer class="footer">
-        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具 · ''' + ICP_BEIAN + '''</p>
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具</p>
     </footer>
     ''' + BACK_TO_TOP_BLOCK + '''
 </body>
@@ -2877,7 +2874,7 @@ def build_article_list_pages(articles):
     </main>
 
     <footer class="footer">
-        <p>&#xA9; 2026 AI工具宝箱 · 每日精选优质AI工具 · ''' + ICP_BEIAN + '''</p>
+        <p>&#xA9; 2026 AI工具宝箱 · 每日精选优质AI工具</p>
     </footer>
     ''' + BACK_TO_TOP_BLOCK + '''
 </body>
