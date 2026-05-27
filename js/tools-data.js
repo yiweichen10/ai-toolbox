@@ -6716,6 +6716,41 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "Baichuan 2",
+    "slug": "baichuan-2",
+    "emoji": "🤖",
+    "color": "#2563EB",
+    "description": "百川智能自主研发的大语言模型，专注于中文语义理解与生成。2026年发布Baichuan 2.5系列，在数学推理、代码生成和多轮对话方面有显著提升，支持长达128K上下文窗口。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大语言模型"
+      },
+      {
+        "text": "中文AI"
+      },
+      {
+        "text": "开源模型"
+      },
+      {
+        "text": "LLM"
+      },
+      {
+        "text": "百川智能",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.baichuan-ai.com",
+    "price": "基础版免费，专业版¥99/月起",
+    "platform": "Web/iOS/Android/API"
+  },
+  {
     "name": "Autify",
     "slug": "autify",
     "emoji": "🔧",
@@ -6949,6 +6984,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web端支持"
   },
   {
+    "name": "Jamie AI",
+    "slug": "jamie-ai",
+    "emoji": "🤖",
+    "color": "#6366F1",
+    "description": "Jamie AI是一款智能AI助手工具，专注于帮助用户提升工作和生活效率。它能够理解自然语言并提供精准的问答服务，支持文档分析、内容创作、数据处理等多种任务。2026年最新版本增强了多模态交互能力和企业级安全特性。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "效率工具"
+      },
+      {
+        "text": "智能问答",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "50万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://jamieai.com",
+    "price": "免费版/专业版$19/月",
+    "platform": "网页/iOS/Android/Chrome插件"
+  },
+  {
     "name": "Alexa Plus",
     "slug": "alexa-plus",
     "emoji": "🎙️",
@@ -6978,6 +7042,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.amazon.com/alexa-plus",
     "price": "免费版+订阅版（每月5.99美元起）",
     "platform": "网页、iOS、Android、智能音箱、智能手表、汽车"
+  },
+  {
+    "name": "文心快码",
+    "slug": "wenxin-kuaima",
+    "emoji": "⌨️",
+    "color": "#4E6EF2",
+    "description": "百度推出的AI编程辅助工具，基于文心大模型为企业开发者提供智能代码补全、代码生成、代码审查等功能。2026年已集成最新文心4.0大模型能力，支持多种主流编程语言和IDE插件。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "百度系"
+      },
+      {
+        "text": "企业级编程助手",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://cloud.baidu.com/product/code.html",
+    "price": "企业版付费订阅，个人版免费",
+    "platform": "Web / VS Code插件 / JetBrains插件"
   },
   {
     "name": "堆友AI",
@@ -13572,6 +13665,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "Baichuan 2",
+    "slug": "baichuan-2",
+    "emoji": "🤖",
+    "color": "#2563EB",
+    "description": "百川智能自主研发的大语言模型，专注于中文语义理解与生成。2026年发布Baichuan 2.5系列，在数学推理、代码生成和多轮对话方面有显著提升，支持长达128K上下文窗口。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大语言模型"
+      },
+      {
+        "text": "中文AI"
+      },
+      {
+        "text": "开源模型"
+      },
+      {
+        "text": "LLM"
+      },
+      {
+        "text": "百川智能",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.baichuan-ai.com",
+    "price": "基础版免费，专业版¥99/月起",
+    "platform": "Web/iOS/Android/API"
+  },
+  {
     "name": "Autify",
     "slug": "autify",
     "emoji": "🔧",
@@ -13805,6 +13933,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web端支持"
   },
   {
+    "name": "Jamie AI",
+    "slug": "jamie-ai",
+    "emoji": "🤖",
+    "color": "#6366F1",
+    "description": "Jamie AI是一款智能AI助手工具，专注于帮助用户提升工作和生活效率。它能够理解自然语言并提供精准的问答服务，支持文档分析、内容创作、数据处理等多种任务。2026年最新版本增强了多模态交互能力和企业级安全特性。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "效率工具"
+      },
+      {
+        "text": "智能问答",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "50万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://jamieai.com",
+    "price": "免费版/专业版$19/月",
+    "platform": "网页/iOS/Android/Chrome插件"
+  },
+  {
     "name": "Alexa Plus",
     "slug": "alexa-plus",
     "emoji": "🎙️",
@@ -13834,6 +13991,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.amazon.com/alexa-plus",
     "price": "免费版+订阅版（每月5.99美元起）",
     "platform": "网页、iOS、Android、智能音箱、智能手表、汽车"
+  },
+  {
+    "name": "文心快码",
+    "slug": "wenxin-kuaima",
+    "emoji": "⌨️",
+    "color": "#4E6EF2",
+    "description": "百度推出的AI编程辅助工具，基于文心大模型为企业开发者提供智能代码补全、代码生成、代码审查等功能。2026年已集成最新文心4.0大模型能力，支持多种主流编程语言和IDE插件。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "百度系"
+      },
+      {
+        "text": "企业级编程助手",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://cloud.baidu.com/product/code.html",
+    "price": "企业版付费订阅，个人版免费",
+    "platform": "Web / VS Code插件 / JetBrains插件"
   },
   {
     "name": "堆友AI",
