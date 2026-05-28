@@ -6915,6 +6915,105 @@ window.__ALL_TOOLS__ = [
     "platform": "VS Code/JetBrains/浏览器插件"
   },
   {
+    "name": "Warp Terminal",
+    "slug": "warp-terminal",
+    "emoji": "⌨️",
+    "color": "#1A1B26",
+    "description": "Warp Terminal是由Warp公司开发的现代化AI驱动终端，专为开发者设计。它采用Rust语言编写，支持AI命令补全、自然语言解释错误、智能协作等功能，大幅提升开发者命令行工作效率。2026年Warp持续更新AI功能，新增上下文感知和团队共享能力。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "终端工具"
+      },
+      {
+        "text": "命令行"
+      },
+      {
+        "text": "开发者工具"
+      },
+      {
+        "text": "Rust",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.warp.dev",
+    "price": "免费版+付费版（团队版$20/月起）",
+    "platform": "macOS, Linux, Windows"
+  },
+  {
+    "name": "Superset",
+    "slug": "apache-superset",
+    "emoji": "📊",
+    "color": "#5A4BEF",
+    "description": "Apache Superset是Apache软件基金会旗下的开源数据可视化和商业智能平台，支持多种数据源连接、丰富的图表类型和自助式数据分析。2026年版本增强了AI驱动的自然语言查询功能，用户可以通过文字描述自动生成可视化图表，大幅降低数据分析门槛。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "开源BI"
+      },
+      {
+        "text": "数据可视化"
+      },
+      {
+        "text": "数据分析"
+      },
+      {
+        "text": "SQL查询",
+        "type": "free"
+      },
+      {
+        "text": "企业级"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://superset.apache.org/",
+    "price": "免费开源",
+    "platform": "Web浏览器（云端/自托管）"
+  },
+  {
+    "name": "Zed Editor",
+    "slug": "zed-editor",
+    "emoji": "⚡",
+    "color": "#5C4EE5",
+    "description": "Zed Editor是由Atom编辑器原班人马打造的高性能代码编辑器，采用Rust编写，主打极致速度和AI辅助编程能力。2025年推出AI功能Zed AI，支持多模型集成和协作编辑。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码编辑器"
+      },
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "Rust"
+      },
+      {
+        "text": "高性能",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://zed.dev",
+    "price": "免费（基础版）/ $20/月（Pro）",
+    "platform": "macOS / Windows / Linux / Web"
+  },
+  {
     "name": "Codex CLI",
     "slug": "codex-cli",
     "emoji": "💻",
@@ -13862,6 +13961,105 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://kilocode.dev",
     "price": "免费版/专业版",
     "platform": "VS Code/JetBrains/浏览器插件"
+  },
+  {
+    "name": "Warp Terminal",
+    "slug": "warp-terminal",
+    "emoji": "⌨️",
+    "color": "#1A1B26",
+    "description": "Warp Terminal是由Warp公司开发的现代化AI驱动终端，专为开发者设计。它采用Rust语言编写，支持AI命令补全、自然语言解释错误、智能协作等功能，大幅提升开发者命令行工作效率。2026年Warp持续更新AI功能，新增上下文感知和团队共享能力。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "终端工具"
+      },
+      {
+        "text": "命令行"
+      },
+      {
+        "text": "开发者工具"
+      },
+      {
+        "text": "Rust",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.warp.dev",
+    "price": "免费版+付费版（团队版$20/月起）",
+    "platform": "macOS, Linux, Windows"
+  },
+  {
+    "name": "Superset",
+    "slug": "apache-superset",
+    "emoji": "📊",
+    "color": "#5A4BEF",
+    "description": "Apache Superset是Apache软件基金会旗下的开源数据可视化和商业智能平台，支持多种数据源连接、丰富的图表类型和自助式数据分析。2026年版本增强了AI驱动的自然语言查询功能，用户可以通过文字描述自动生成可视化图表，大幅降低数据分析门槛。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "开源BI"
+      },
+      {
+        "text": "数据可视化"
+      },
+      {
+        "text": "数据分析"
+      },
+      {
+        "text": "SQL查询",
+        "type": "free"
+      },
+      {
+        "text": "企业级"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://superset.apache.org/",
+    "price": "免费开源",
+    "platform": "Web浏览器（云端/自托管）"
+  },
+  {
+    "name": "Zed Editor",
+    "slug": "zed-editor",
+    "emoji": "⚡",
+    "color": "#5C4EE5",
+    "description": "Zed Editor是由Atom编辑器原班人马打造的高性能代码编辑器，采用Rust编写，主打极致速度和AI辅助编程能力。2025年推出AI功能Zed AI，支持多模型集成和协作编辑。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码编辑器"
+      },
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "Rust"
+      },
+      {
+        "text": "高性能",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://zed.dev",
+    "price": "免费（基础版）/ $20/月（Pro）",
+    "platform": "macOS / Windows / Linux / Web"
   },
   {
     "name": "Codex CLI",
