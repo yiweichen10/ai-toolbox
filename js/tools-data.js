@@ -6880,6 +6880,43 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android / macOS / Windows"
   },
   {
+    "name": "Huddle01 VMs",
+    "slug": "huddle01-vms",
+    "emoji": "🎥",
+    "color": "#6C5CE7",
+    "description": "Huddle01 VMs是去中心化视频会议平台Huddle01推出的虚拟机产品，为Web3和加密社区提供无需信任、可验证的视频会议基础设施。2026年最新版本集成了AI会议摘要、实时翻译和链上会议记录功能，支持ENS域名登录和钱包验证。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "去中心化"
+      },
+      {
+        "text": "视频会议"
+      },
+      {
+        "text": "Web3"
+      },
+      {
+        "text": "加密货币"
+      },
+      {
+        "text": "AI会议"
+      },
+      {
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约12万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://huddle01.com",
+    "price": "免费版可用，Pro版约$8/月",
+    "platform": "Web浏览器（Chrome、Firefox、Safari）、iOS/Android移动端"
+  },
+  {
     "name": "Kilo Code",
     "slug": "kilo-code",
     "emoji": "💻",
@@ -7172,6 +7209,40 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / VS Code插件 / JetBrains插件"
   },
   {
+    "name": "海螺AI",
+    "slug": "hailuo-ai",
+    "emoji": "🐚",
+    "color": "#2563EB",
+    "description": "字节跳动推出的AI对话助手，基于自研豆包大模型构建。提供智能问答、文本生成、代码辅助等功能，2026年持续更新迭代，响应速度快且支持多轮对话。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "国产AI"
+      },
+      {
+        "text": "字节跳动"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "多模态"
+      },
+      {
+        "text": "智能客服"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "500万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.hailuo.ai",
+    "price": "免费使用",
+    "platform": "网页版/iOS/Android"
+  },
+  {
     "name": "堆友AI",
     "slug": "duiyou-ai",
     "emoji": "🎨",
@@ -7275,6 +7346,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://anyscenegen.ai",
     "price": "免费版/月费$19起",
     "platform": "Web/iOS/Android"
+  },
+  {
+    "name": "通义效率",
+    "slug": "tongyi-efficiency",
+    "emoji": "⚡",
+    "color": "#409EFF",
+    "description": "阿里云推出的AI效率工具，集成通义大模型能力，专注于提供智能办公、内容创作和任务自动化服务。2026年版本增强了多模态交互和个性化推荐功能，成为企业提升工作效率的热门选择。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "阿里云"
+      },
+      {
+        "text": "通义系列"
+      },
+      {
+        "text": "智能办公"
+      },
+      {
+        "text": "效率工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://tongyi.aliyun.com/efficiency",
+    "price": "免费版/付费版",
+    "platform": "网页/iOS/Android"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -13928,6 +14031,43 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android / macOS / Windows"
   },
   {
+    "name": "Huddle01 VMs",
+    "slug": "huddle01-vms",
+    "emoji": "🎥",
+    "color": "#6C5CE7",
+    "description": "Huddle01 VMs是去中心化视频会议平台Huddle01推出的虚拟机产品，为Web3和加密社区提供无需信任、可验证的视频会议基础设施。2026年最新版本集成了AI会议摘要、实时翻译和链上会议记录功能，支持ENS域名登录和钱包验证。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "去中心化"
+      },
+      {
+        "text": "视频会议"
+      },
+      {
+        "text": "Web3"
+      },
+      {
+        "text": "加密货币"
+      },
+      {
+        "text": "AI会议"
+      },
+      {
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约12万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://huddle01.com",
+    "price": "免费版可用，Pro版约$8/月",
+    "platform": "Web浏览器（Chrome、Firefox、Safari）、iOS/Android移动端"
+  },
+  {
     "name": "Kilo Code",
     "slug": "kilo-code",
     "emoji": "💻",
@@ -14220,6 +14360,40 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / VS Code插件 / JetBrains插件"
   },
   {
+    "name": "海螺AI",
+    "slug": "hailuo-ai",
+    "emoji": "🐚",
+    "color": "#2563EB",
+    "description": "字节跳动推出的AI对话助手，基于自研豆包大模型构建。提供智能问答、文本生成、代码辅助等功能，2026年持续更新迭代，响应速度快且支持多轮对话。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "国产AI"
+      },
+      {
+        "text": "字节跳动"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "多模态"
+      },
+      {
+        "text": "智能客服"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "500万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.hailuo.ai",
+    "price": "免费使用",
+    "platform": "网页版/iOS/Android"
+  },
+  {
     "name": "堆友AI",
     "slug": "duiyou-ai",
     "emoji": "🎨",
@@ -14323,5 +14497,37 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://anyscenegen.ai",
     "price": "免费版/月费$19起",
     "platform": "Web/iOS/Android"
+  },
+  {
+    "name": "通义效率",
+    "slug": "tongyi-efficiency",
+    "emoji": "⚡",
+    "color": "#409EFF",
+    "description": "阿里云推出的AI效率工具，集成通义大模型能力，专注于提供智能办公、内容创作和任务自动化服务。2026年版本增强了多模态交互和个性化推荐功能，成为企业提升工作效率的热门选择。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "阿里云"
+      },
+      {
+        "text": "通义系列"
+      },
+      {
+        "text": "智能办公"
+      },
+      {
+        "text": "效率工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "850万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://tongyi.aliyun.com/efficiency",
+    "price": "免费版/付费版",
+    "platform": "网页/iOS/Android"
   }
 ];
