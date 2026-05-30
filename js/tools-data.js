@@ -6846,6 +6846,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web、iOS、Android"
   },
   {
+    "name": "Mindra",
+    "slug": "mindra",
+    "emoji": "🧠",
+    "color": "#6366F1",
+    "description": "Mindra是一款专注于智能思考辅助的AI工具，通过深度学习技术帮助用户进行复杂问题分析和决策支持。2026年推出的最新版本集成了多模态推理能力，能够同时处理文本、图像和音频信息，为个人和企业用户提供全方位的智能助理服务。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "智能分析"
+      },
+      {
+        "text": "多模态",
+        "type": "free"
+      },
+      {
+        "text": "决策辅助"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://mindra.ai",
+    "price": "免费版/月费$12.99起",
+    "platform": "网页/iOS/Android/桌面端"
+  },
+  {
     "name": "Shadow AI",
     "slug": "shadow-ai",
     "emoji": "🎭",
@@ -7083,6 +7115,69 @@ window.__ALL_TOOLS__ = [
     "url": "https://github.com/openai/codex-cli",
     "price": "免费开源",
     "platform": "macOS/Windows/Linux"
+  },
+  {
+    "name": "Luma Dream Machine",
+    "slug": "luma-dream-machine",
+    "emoji": "🎬",
+    "color": "#000000",
+    "description": "Luma Dream Machine 是由Luma AI推出的AI视频生成模型，能够根据文本描述和图像生成高质量视频内容。2026年已升级至最新版本，支持更长的视频片段和更精细的镜头控制，生成的视频在真实感和动态细节方面有显著提升。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "Luma AI"
+      },
+      {
+        "text": "视频创作"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://lumalabs.ai/dream-machine",
+    "price": "免费版每月30次生成次数，专业版$29.99/月起",
+    "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "mike AI",
+    "slug": "mike-ai",
+    "emoji": "🎤",
+    "color": "#6366F1",
+    "description": "mike AI是一款专注于语音交互的智能对话助手，基于先进的LLM大语言模型开发。它支持语音输入输出、智能对话、语音合成等功能，适合需要语音交互场景的用户。2026年已推出多语言支持和企业定制版本。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "语音交互"
+      },
+      {
+        "text": "智能对话"
+      },
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "语音合成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "50万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://mikeai.com",
+    "price": "免费版可用，Pro版$9.9/月",
+    "platform": "Web/iOS/Android/桌面端"
   },
   {
     "name": "RankSpot",
@@ -13997,6 +14092,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web、iOS、Android"
   },
   {
+    "name": "Mindra",
+    "slug": "mindra",
+    "emoji": "🧠",
+    "color": "#6366F1",
+    "description": "Mindra是一款专注于智能思考辅助的AI工具，通过深度学习技术帮助用户进行复杂问题分析和决策支持。2026年推出的最新版本集成了多模态推理能力，能够同时处理文本、图像和音频信息，为个人和企业用户提供全方位的智能助理服务。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "智能分析"
+      },
+      {
+        "text": "多模态",
+        "type": "free"
+      },
+      {
+        "text": "决策辅助"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://mindra.ai",
+    "price": "免费版/月费$12.99起",
+    "platform": "网页/iOS/Android/桌面端"
+  },
+  {
     "name": "Shadow AI",
     "slug": "shadow-ai",
     "emoji": "🎭",
@@ -14234,6 +14361,69 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://github.com/openai/codex-cli",
     "price": "免费开源",
     "platform": "macOS/Windows/Linux"
+  },
+  {
+    "name": "Luma Dream Machine",
+    "slug": "luma-dream-machine",
+    "emoji": "🎬",
+    "color": "#000000",
+    "description": "Luma Dream Machine 是由Luma AI推出的AI视频生成模型，能够根据文本描述和图像生成高质量视频内容。2026年已升级至最新版本，支持更长的视频片段和更精细的镜头控制，生成的视频在真实感和动态细节方面有显著提升。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "Luma AI"
+      },
+      {
+        "text": "视频创作"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://lumalabs.ai/dream-machine",
+    "price": "免费版每月30次生成次数，专业版$29.99/月起",
+    "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "mike AI",
+    "slug": "mike-ai",
+    "emoji": "🎤",
+    "color": "#6366F1",
+    "description": "mike AI是一款专注于语音交互的智能对话助手，基于先进的LLM大语言模型开发。它支持语音输入输出、智能对话、语音合成等功能，适合需要语音交互场景的用户。2026年已推出多语言支持和企业定制版本。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "语音交互"
+      },
+      {
+        "text": "智能对话"
+      },
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "语音合成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "50万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://mikeai.com",
+    "price": "免费版可用，Pro版$9.9/月",
+    "platform": "Web/iOS/Android/桌面端"
   },
   {
     "name": "RankSpot",
