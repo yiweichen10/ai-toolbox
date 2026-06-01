@@ -6978,6 +6978,41 @@ window.__ALL_TOOLS__ = [
     "platform": "Web浏览器（Chrome、Firefox、Safari）、iOS/Android移动端"
   },
   {
+    "name": "Sierra Ghostwriter",
+    "slug": "sierra-ghostwriter",
+    "emoji": "✍️",
+    "color": "#1E3A5F",
+    "description": "Sierra Ghostwriter是一款专业的AI写作助手，利用先进的自然语言处理技术帮助用户快速生成高质量内容。2026年最新版本增强了上下文理解和多语言支持功能，专注于为内容创作者、营销人员和商务人士提供高效的写作解决方案。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "文本编辑"
+      },
+      {
+        "text": "营销文案"
+      },
+      {
+        "text": "代笔工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约12万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://sierra-ghostwriter.ai",
+    "price": "免费版基础功能，高级版$19/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "Kilo Code",
     "slug": "kilo-code",
     "emoji": "💻",
@@ -7333,6 +7368,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / VS Code插件 / JetBrains插件"
   },
   {
+    "name": "通义灵码",
+    "slug": "tongyi-lingma",
+    "emoji": "💻",
+    "color": "#3B82F6",
+    "description": "阿里云推出的AI编程辅助工具，基于通义千问大模型打造。它提供代码智能补全、代码续写、注释生成、单元测试生成等核心功能，帮助开发者提升编码效率。2026年已升级至2.0版本，增强了多语言支持和中文编程场景的优化。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "阿里云",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://tongyi.aliyun.com/lingma",
+    "price": "免费版/专业版（¥59/月）",
+    "platform": "VS Code、JetBrains IDEs、Visual Studio、网页端"
+  },
+  {
     "name": "海螺AI",
     "slug": "hailuo-ai",
     "emoji": "🐚",
@@ -7365,6 +7429,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.hailuo.ai",
     "price": "免费使用",
     "platform": "网页版/iOS/Android"
+  },
+  {
+    "name": "Vidu AI",
+    "slug": "vidu-ai",
+    "emoji": "🎬",
+    "color": "#6C5CE7",
+    "description": "Vidu AI是生数科技推出的AI视频生成工具，支持文生视频和图生视频两大核心功能，能够根据文本描述或上传图片生成高质量视频内容。2026年已升级至2.0版本，新增主体参照和风格迁移功能，生成效率提升50%，画面质量和运动流畅度达到行业领先水平。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "图生视频"
+      },
+      {
+        "text": "视频创作工具"
+      },
+      {
+        "text": "国产AI工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "850万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.vidu.ai",
+    "price": "免费版每月100积分，付费版29美元/月起",
+    "platform": "Web / iOS / Android"
   },
   {
     "name": "堆友AI",
@@ -14320,6 +14419,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web浏览器（Chrome、Firefox、Safari）、iOS/Android移动端"
   },
   {
+    "name": "Sierra Ghostwriter",
+    "slug": "sierra-ghostwriter",
+    "emoji": "✍️",
+    "color": "#1E3A5F",
+    "description": "Sierra Ghostwriter是一款专业的AI写作助手，利用先进的自然语言处理技术帮助用户快速生成高质量内容。2026年最新版本增强了上下文理解和多语言支持功能，专注于为内容创作者、营销人员和商务人士提供高效的写作解决方案。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "文本编辑"
+      },
+      {
+        "text": "营销文案"
+      },
+      {
+        "text": "代笔工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约12万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://sierra-ghostwriter.ai",
+    "price": "免费版基础功能，高级版$19/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "Kilo Code",
     "slug": "kilo-code",
     "emoji": "💻",
@@ -14675,6 +14809,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / VS Code插件 / JetBrains插件"
   },
   {
+    "name": "通义灵码",
+    "slug": "tongyi-lingma",
+    "emoji": "💻",
+    "color": "#3B82F6",
+    "description": "阿里云推出的AI编程辅助工具，基于通义千问大模型打造。它提供代码智能补全、代码续写、注释生成、单元测试生成等核心功能，帮助开发者提升编码效率。2026年已升级至2.0版本，增强了多语言支持和中文编程场景的优化。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "阿里云",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://tongyi.aliyun.com/lingma",
+    "price": "免费版/专业版（¥59/月）",
+    "platform": "VS Code、JetBrains IDEs、Visual Studio、网页端"
+  },
+  {
     "name": "海螺AI",
     "slug": "hailuo-ai",
     "emoji": "🐚",
@@ -14707,6 +14870,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.hailuo.ai",
     "price": "免费使用",
     "platform": "网页版/iOS/Android"
+  },
+  {
+    "name": "Vidu AI",
+    "slug": "vidu-ai",
+    "emoji": "🎬",
+    "color": "#6C5CE7",
+    "description": "Vidu AI是生数科技推出的AI视频生成工具，支持文生视频和图生视频两大核心功能，能够根据文本描述或上传图片生成高质量视频内容。2026年已升级至2.0版本，新增主体参照和风格迁移功能，生成效率提升50%，画面质量和运动流畅度达到行业领先水平。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "图生视频"
+      },
+      {
+        "text": "视频创作工具"
+      },
+      {
+        "text": "国产AI工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "850万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.vidu.ai",
+    "price": "免费版每月100积分，付费版29美元/月起",
+    "platform": "Web / iOS / Android"
   },
   {
     "name": "堆友AI",
