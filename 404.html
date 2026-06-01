@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>页面未找到 - AI工具宝箱</title>
-    <meta name="description" content="你访问的页面不存在，返回AI工具宝箱首页探索优质AI工具。">
+    <title>404 页面未找到 - AI工具宝箱</title>
+    <meta name="description" content="你访问的页面不存在，试试搜索或浏览AI工具宝箱的精选AI工具与行业文章。">
     <meta name="robots" content="noindex, follow">
     <link rel="stylesheet" href="/css/style.css">
     <style>
@@ -15,7 +15,7 @@
             justify-content: center;
             min-height: 70vh;
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
         .error-404 .error-code {
             font-size: 120px;
@@ -26,6 +26,7 @@
             background-clip: text;
             line-height: 1;
             margin-bottom: 8px;
+            letter-spacing: -4px;
         }
         .error-404 .error-emoji {
             font-size: 48px;
@@ -46,15 +47,51 @@
             color: var(--text-muted);
             max-width: 480px;
             line-height: 1.7;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
         }
-        .error-404 .error-actions {
+        /* 搜索框 */
+        .error-search {
+            width: 100%;
+            max-width: 420px;
+            margin-bottom: 32px;
+        }
+        .error-search .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .error-search input {
+            width: 100%;
+            padding: 12px 20px 12px 46px;
+            border: 2px solid #e2e8f0;
+            border-radius: var(--radius-pill);
+            font-size: 15px;
+            background: var(--surface);
+            color: var(--text-main);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .error-search input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79,70,229,0.12);
+        }
+        .error-search input::placeholder {
+            color: #94a3b8;
+        }
+        .error-search .search-icon {
+            position: absolute;
+            left: 16px;
+            font-size: 18px;
+            color: #94a3b8;
+            pointer-events: none;
+        }
+        .error-actions {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .error-404 .btn-home {
+        .error-actions .btn-home {
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -68,17 +105,17 @@
             transition: all 0.2s;
             box-shadow: 0 4px 14px rgba(79,70,229,0.3);
         }
-        .error-404 .btn-home:hover {
+        .error-actions .btn-home:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(79,70,229,0.4);
             color: #fff;
         }
-        .error-404 .btn-back {
+        .error-actions .btn-back {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             padding: 12px 28px;
-            background: var(--surface-bg);
+            background: var(--surface);
             color: var(--text-main);
             text-decoration: none;
             font-weight: 600;
@@ -86,85 +123,121 @@
             border-radius: var(--radius-sm);
             border: 1px solid #e2e8f0;
             transition: all 0.2s;
+            cursor: pointer;
         }
-        .error-404 .btn-back:hover {
+        .error-actions .btn-back:hover {
             background: #f1f5f9;
             color: var(--text-main);
         }
-        .error-404 .error-suggest {
+        .error-suggest {
             margin-top: 40px;
             padding-top: 28px;
             border-top: 1px solid #e2e8f0;
-            max-width: 480px;
+            width: 100%;
+            max-width: 520px;
         }
-        .error-404 .error-suggest h3 {
+        .error-suggest h3 {
             font-size: 15px;
             color: var(--text-main);
-            margin-bottom: 14px;
+            margin-bottom: 16px;
+            font-weight: 600;
         }
-        .error-404 .error-suggest a {
-            display: block;
+        .error-suggest .suggest-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .error-suggest a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             padding: 10px 16px;
             color: var(--text-main);
             text-decoration: none;
             font-size: 14px;
             border-radius: var(--radius-sm);
-            transition: background 0.15s;
+            background: var(--surface);
+            border: 1px solid #f1f5f9;
+            transition: all 0.15s;
+            text-align: left;
         }
-        .error-404 .error-suggest a:hover {
+        .error-suggest a:hover {
             background: var(--body-bg);
-            color: var(--primary-color);
+            border-color: #e2e8f0;
+            color: var(--primary);
+            transform: translateX(2px);
         }
         @media (max-width: 480px) {
             .error-404 .error-code { font-size: 80px; }
             .error-404 h1 { font-size: 20px; }
+            .error-suggest .suggest-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <div class="container header-inner">
-            <a href="/" class="logo">✨ AI工具宝箱</a>
-            <nav class="nav">
-                <a href="/">首页</a>
-                <a href="/ranking/">排名</a>
-                <a href="/quiz/">选工具</a>
-                <a href="/live/">实时</a>
-            </nav>
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0; AI工具宝箱 <span>每日更新 · 已收录 100+ 款工具</span></h1></a>
         </div>
+        <nav class="global-nav" aria-label="全局导航">
+            <div class="global-nav-inner">
+                <a href="/ranking/" class="gn-item">&#x1F4CA; 工具排行</a>
+                <a href="/quiz/" class="gn-item">&#x1F3AF; AI工具选择器</a>
+                <a href="/live/" class="gn-item">&#x1F4C8; 实时面板</a>
+                <a href="/compare/" class="gn-item">&#x2696;&#xFE0F; 对比评测</a>
+                <a href="/alternatives/" class="gn-item">&#x1F504; 替代方案</a>
+                <a href="/category/" class="gn-item">&#x1F4C2; 全部分类</a>
+            </div>
+        </nav>
     </header>
-    <nav class="global-nav" aria-label="全局导航">
-        <div class="global-nav-inner">
-            <a href="/ranking/" class="gn-item">📊 工具排行</a>
-            <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
-            <a href="/live/" class="gn-item">📈 实时面板</a>
-            <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
-            <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
-            <a href="/category/" class="gn-item">📂 全部分类</a>
-        </div>
-    </nav>
 
     <div class="error-404">
         <div class="error-emoji">🔍</div>
         <div class="error-code">404</div>
-        <h1>页面走丢了</h1>
-        <p class="error-desc">你访问的页面可能已被移动、删除，或者从未存在。别担心，试试下面的链接找到你需要的AI工具。</p>
-        <div class="error-actions">
-            <a href="/" class="btn-home">🏠 返回首页</a>
-            <a href="javascript:history.back()" class="btn-back">← 返回上页</a>
+        <h1>这个页面没找到</h1>
+        <p class="error-desc">输入的网址可能有误，或者页面已被移动。试试搜索你需要的工具或文章吧。</p>
+
+        <div class="error-search">
+            <div class="search-box">
+                <span class="search-icon">🔎</span>
+                <input type="text" id="searchInput" placeholder="搜索AI工具或文章..." autofocus
+                       onkeydown="if(event.key==='Enter'&&this.value.trim())window.location.href='/?q='+encodeURIComponent(this.value.trim())">
+            </div>
         </div>
+
+        <div class="error-actions">
+            <a href="/" class="btn-home">返回首页</a>
+            <a href="/tools/" class="btn-back">浏览所有工具</a>
+            <a href="/category/" class="btn-back">查看分类</a>
+        </div>
+
         <div class="error-suggest">
-            <h3>你可能想去这些页面：</h3>
-            <a href="/ranking/">📊 AI工具排行榜</a>
-            <a href="/quiz/">🎯 AI工具选择器</a>
-            <a href="/live/dashboard/">📈 实时数据面板</a>
-            <a href="/tools/chatgpt/">🟢 ChatGPT 详细评测</a>
-            <a href="/tools/deepseek/">🧠 DeepSeek 详细评测</a>
+            <h3>你可能感兴趣：</h3>
+            <div class="suggest-grid">
+                <a href="/ranking/">工具排行榜</a>
+                <a href="/quiz/">AI工具选择器</a>
+                <a href="/compare/">工具对比评测</a>
+                <a href="/live/dashboard/">实时数据面板</a>
+                <a href="/articles/">AI行业文章</a>
+                <a href="/tools/chatgpt/">ChatGPT</a>
+                <a href="/tools/deepseek/">DeepSeek</a>
+                <a href="/tools/claude/">Claude</a>
+            </div>
         </div>
     </div>
 
-    <footer class="footer">
-        <p>&copy; 2026 AI工具宝箱 · 每日精选优质AI工具</p>copy; 2026 AI工具宝箱 · 每日精选优质AI工具 · <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">蜀ICP备2025172163号-2</a></p>
+    <footer class="footer" style="margin-top:60px">
+        <p>&copy; 2026 AI工具宝箱 · 每日精选优质AI工具 · <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">蜀ICP备2025172163号-2</a></p>
     </footer>
+
+    <script>
+    // 如果地址栏有 q 参数，自动填入搜索框
+    (function(){
+        var m = location.search.match(/[?&]q=([^&]*)/);
+        if (m) {
+            document.getElementById('searchInput').value = decodeURIComponent(m[1].replace(/\+/g,' '));
+        }
+    })();
+    </script>
 </body>
 </html>
