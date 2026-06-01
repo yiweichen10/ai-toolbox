@@ -6912,6 +6912,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android / macOS / Windows"
   },
   {
+    "name": "FlowMarket",
+    "slug": "flowmarket",
+    "emoji": "🔄",
+    "color": "#6366F1",
+    "description": "FlowMarket是一个AI工作流自动化平台和工具市场，帮助用户通过可视化拖拽构建自动化工作流程。2026年平台集成了200+AI应用和预制工作流模板，支持多模态AI模型调用，让企业和个人用户都能快速实现业务流程自动化。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "工作流自动化"
+      },
+      {
+        "text": "无代码"
+      },
+      {
+        "text": "AI应用市场",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://flowmarket.ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "网页端"
+  },
+  {
     "name": "Huddle01 VMs",
     "slug": "huddle01-vms",
     "emoji": "🎥",
@@ -7373,6 +7402,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web浏览器"
   },
   {
+    "name": "美图设计室AI",
+    "slug": "meitu-design-ai",
+    "emoji": "🎨",
+    "color": "#FF6B6B",
+    "description": "美图设计室AI是美图公司推出的智能设计平台，基于AI技术提供海量模板和智能生成功能，帮助用户快速完成海报、电商详情页、社交媒体配图等设计工作。2026年持续更新AI模特生成和商品图优化功能。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "海报设计"
+      },
+      {
+        "text": "电商设计"
+      },
+      {
+        "text": "AI绘图"
+      },
+      {
+        "text": "智能修图",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://design.meitu.com/",
+    "price": "免费版可用，付费会员29元/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "Unitree GD01",
     "slug": "unitree-gd01",
     "emoji": "🐕",
@@ -7473,6 +7534,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://tongyi.aliyun.com/efficiency",
     "price": "免费版/付费版",
     "platform": "网页/iOS/Android"
+  },
+  {
+    "name": "火山写作",
+    "slug": "huoshan-writing",
+    "emoji": "✍️",
+    "color": "#FE4A49",
+    "description": "火山写作是字节跳动推出的AI智能写作工具，基于豆包大模型技术，为用户提供中英文双语写作辅助服务。支持文章润色、改写、续写、翻译等多种功能，2026年已接入最新大模型版本，提升了长文本处理能力和专业领域写作支持。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "字节跳动"
+      },
+      {
+        "text": "中文写作",
+        "type": "free"
+      },
+      {
+        "text": "文章润色"
+      },
+      {
+        "text": "AI改写"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.volcengine.com/product/writing",
+    "price": "基础功能免费，高级会员¥29/月起",
+    "platform": "网页端、iOS、Android"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -14158,6 +14254,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android / macOS / Windows"
   },
   {
+    "name": "FlowMarket",
+    "slug": "flowmarket",
+    "emoji": "🔄",
+    "color": "#6366F1",
+    "description": "FlowMarket是一个AI工作流自动化平台和工具市场，帮助用户通过可视化拖拽构建自动化工作流程。2026年平台集成了200+AI应用和预制工作流模板，支持多模态AI模型调用，让企业和个人用户都能快速实现业务流程自动化。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "工作流自动化"
+      },
+      {
+        "text": "无代码"
+      },
+      {
+        "text": "AI应用市场",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://flowmarket.ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "网页端"
+  },
+  {
     "name": "Huddle01 VMs",
     "slug": "huddle01-vms",
     "emoji": "🎥",
@@ -14619,6 +14744,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web浏览器"
   },
   {
+    "name": "美图设计室AI",
+    "slug": "meitu-design-ai",
+    "emoji": "🎨",
+    "color": "#FF6B6B",
+    "description": "美图设计室AI是美图公司推出的智能设计平台，基于AI技术提供海量模板和智能生成功能，帮助用户快速完成海报、电商详情页、社交媒体配图等设计工作。2026年持续更新AI模特生成和商品图优化功能。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "海报设计"
+      },
+      {
+        "text": "电商设计"
+      },
+      {
+        "text": "AI绘图"
+      },
+      {
+        "text": "智能修图",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://design.meitu.com/",
+    "price": "免费版可用，付费会员29元/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "Unitree GD01",
     "slug": "unitree-gd01",
     "emoji": "🐕",
@@ -14719,5 +14876,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://tongyi.aliyun.com/efficiency",
     "price": "免费版/付费版",
     "platform": "网页/iOS/Android"
+  },
+  {
+    "name": "火山写作",
+    "slug": "huoshan-writing",
+    "emoji": "✍️",
+    "color": "#FE4A49",
+    "description": "火山写作是字节跳动推出的AI智能写作工具，基于豆包大模型技术，为用户提供中英文双语写作辅助服务。支持文章润色、改写、续写、翻译等多种功能，2026年已接入最新大模型版本，提升了长文本处理能力和专业领域写作支持。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "字节跳动"
+      },
+      {
+        "text": "中文写作",
+        "type": "free"
+      },
+      {
+        "text": "文章润色"
+      },
+      {
+        "text": "AI改写"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.volcengine.com/product/writing",
+    "price": "基础功能免费，高级会员¥29/月起",
+    "platform": "网页端、iOS、Android"
   }
 ];
