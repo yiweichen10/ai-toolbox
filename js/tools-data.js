@@ -6234,6 +6234,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web API，支持Python、Node.js等主流编程语言"
   },
   {
+    "name": "Cerebras",
+    "slug": "cerebras",
+    "emoji": "⚡",
+    "color": "#6B4EFF",
+    "description": "Cerebras Systems是全球领先的AI超级计算机制造商，其Wafer Scale Engine (WSE)系列芯片是世界上最大的AI处理器。Cerebras Cloud为开发者提供前所未有的AI训练和推理计算能力，2026年持续为企业级AI应用提供高性能算力服务。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI超算"
+      },
+      {
+        "text": "AI训练"
+      },
+      {
+        "text": "云计算"
+      },
+      {
+        "text": "芯片",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://cerebras.ai",
+    "price": "按需付费，联系销售获取报价",
+    "platform": "Web云服务 / API"
+  },
+  {
     "name": "OpenRouter",
     "slug": "open-router",
     "emoji": "🌐",
@@ -6571,6 +6603,28 @@ window.__ALL_TOOLS__ = [
     "url": "https://meticulous.ai",
     "price": "免费版+$25/月",
     "platform": "Web / CI集成"
+  },
+  {
+    "name": "Jasper Chat",
+    "slug": "jasper-chat",
+    "emoji": "🤖",
+    "color": "#FF6B35",
+    "description": "Jasper AI推出的对话式AI写作助手，专注于营销文案、品牌声音保持和SEO优化内容生成，是营销团队的内容生产利器。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "营销文案"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.jasper.ai/chat",
+    "price": "$39/月起",
+    "platform": "Web"
   },
   {
     "name": "Hippocratic AI",
@@ -6976,6 +7030,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://huddle01.com",
     "price": "免费版可用，Pro版约$8/月",
     "platform": "Web浏览器（Chrome、Firefox、Safari）、iOS/Android移动端"
+  },
+  {
+    "name": "Symphony Agent",
+    "slug": "symphony-agent",
+    "emoji": "🎼",
+    "color": "#8B5CF6",
+    "description": "Symphony Agent是一款专注于企业级工作流程自动化的AI多智能体协作平台，通过编排多个AI代理协同工作，实现复杂业务场景的自动化处理。2026年最新版本支持自定义工作流编排和深度API集成。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "AI代理"
+      },
+      {
+        "text": "工作流自动化"
+      },
+      {
+        "text": "企业级AI"
+      },
+      {
+        "text": "多智能体",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://symphonyagent.ai",
+    "price": "免费版/专业版$29/月/企业版定制",
+    "platform": "Web/iOS/Android"
   },
   {
     "name": "Sierra Ghostwriter",
@@ -13675,6 +13761,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web API，支持Python、Node.js等主流编程语言"
   },
   {
+    "name": "Cerebras",
+    "slug": "cerebras",
+    "emoji": "⚡",
+    "color": "#6B4EFF",
+    "description": "Cerebras Systems是全球领先的AI超级计算机制造商，其Wafer Scale Engine (WSE)系列芯片是世界上最大的AI处理器。Cerebras Cloud为开发者提供前所未有的AI训练和推理计算能力，2026年持续为企业级AI应用提供高性能算力服务。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI超算"
+      },
+      {
+        "text": "AI训练"
+      },
+      {
+        "text": "云计算"
+      },
+      {
+        "text": "芯片",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://cerebras.ai",
+    "price": "按需付费，联系销售获取报价",
+    "platform": "Web云服务 / API"
+  },
+  {
     "name": "OpenRouter",
     "slug": "open-router",
     "emoji": "🌐",
@@ -14012,6 +14130,28 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://meticulous.ai",
     "price": "免费版+$25/月",
     "platform": "Web / CI集成"
+  },
+  {
+    "name": "Jasper Chat",
+    "slug": "jasper-chat",
+    "emoji": "🤖",
+    "color": "#FF6B35",
+    "description": "Jasper AI推出的对话式AI写作助手，专注于营销文案、品牌声音保持和SEO优化内容生成，是营销团队的内容生产利器。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "营销文案"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://www.jasper.ai/chat",
+    "price": "$39/月起",
+    "platform": "Web"
   },
   {
     "name": "Hippocratic AI",
@@ -14417,6 +14557,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://huddle01.com",
     "price": "免费版可用，Pro版约$8/月",
     "platform": "Web浏览器（Chrome、Firefox、Safari）、iOS/Android移动端"
+  },
+  {
+    "name": "Symphony Agent",
+    "slug": "symphony-agent",
+    "emoji": "🎼",
+    "color": "#8B5CF6",
+    "description": "Symphony Agent是一款专注于企业级工作流程自动化的AI多智能体协作平台，通过编排多个AI代理协同工作，实现复杂业务场景的自动化处理。2026年最新版本支持自定义工作流编排和深度API集成。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "AI代理"
+      },
+      {
+        "text": "工作流自动化"
+      },
+      {
+        "text": "企业级AI"
+      },
+      {
+        "text": "多智能体",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://symphonyagent.ai",
+    "price": "免费版/专业版$29/月/企业版定制",
+    "platform": "Web/iOS/Android"
   },
   {
     "name": "Sierra Ghostwriter",
