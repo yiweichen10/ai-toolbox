@@ -78,16 +78,16 @@
 - **Git**: commit b3d6fd14 (发布, push成功) + 3fab307b (部署, push成功)
 - **库存充足**: 42个未发布约够14天
 
-## 2026-06-01 13:00
+## 2026-06-02 13:00
 - **执行结果**: 全部成功。发布 3 个工具，构建成功，阿里云增量部署成功，Git push 成功。
-- **发布工具**: Vidu AI (vidu-ai), Sierra Ghostwriter (sierra-ghostwriter), 通义灵码 (tongyi-lingma)
-- **库存状态**: 已发布 249 个, 未发布 39 个, 总计 288 个
-- **库存补充**: 未触发（未发布 39 个，库存充足）
-- **构建**: 249 tools + 88 articles + 6 quizzes + 16 rankings + 5 live, 392 HTML
+- **发布工具**: Jasper Chat (jasper-chat), Cerebras (cerebras), Symphony Agent (symphony-agent)
+- **库存状态**: 已发布 252 个, 未发布 36 个, 总计 288 个
+- **库存补充**: 未触发（未发布 36 个，库存充足）
+- **构建**: 252 tools + 89 articles + 6 quizzes + 16 rankings + 5 live, 396 HTML
 - **部署**: 增量部署到阿里云成功（7个变化文件：index.html + 6个live页面）
-- **推送**: IndexNow 无新URL（379个全部已推送）。百度推送 over quota
-- **Git**: commit c4d958df (发布, push成功) + a2d99d3c (部署, push成功)
-- **库存充足**: 39个未发布约够13天
+- **推送**: IndexNow 无新URL（383个全部已推送）。百度推送 over quota
+- **Git**: publish commit 推送失败（网络reset），deploy commit fc0d811b 推送成功
+- **库存充足**: 36个未发布约够12天
 
 ## 2026-05-30 13:00
 - **执行结果**: 全部成功。发布 3 个工具，构建成功，阿里云增量部署成功，Git push 成功。
