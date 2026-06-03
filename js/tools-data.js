@@ -7267,6 +7267,38 @@ window.__ALL_TOOLS__ = [
     "platform": "macOS/Windows/Linux"
   },
   {
+    "name": "Hera Launch",
+    "slug": "hera-launch",
+    "emoji": "🚀",
+    "color": "#6B4EE6",
+    "description": "Hera Launch是一款AI应用启动与部署平台，帮助开发者快速将AI能力集成到产品中。2026年已支持一键部署多模态AI应用，提供完整的CI/CD流程和监控解决方案。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI部署"
+      },
+      {
+        "text": "应用启动"
+      },
+      {
+        "text": "开发者工具"
+      },
+      {
+        "text": "多模态AI",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "约8万月访问",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://heralaunch.ai",
+    "price": "免费版可用，付费版$29/月起",
+    "platform": "Web/iOS/Android"
+  },
+  {
     "name": "Luma Dream Machine",
     "slug": "luma-dream-machine",
     "emoji": "🎬",
@@ -7481,6 +7513,74 @@ window.__ALL_TOOLS__ = [
     "url": "https://tongyi.aliyun.com/lingma",
     "price": "免费版/专业版（¥59/月）",
     "platform": "VS Code、JetBrains IDEs、Visual Studio、网页端"
+  },
+  {
+    "name": "Anijam",
+    "slug": "anijam",
+    "emoji": "🎬",
+    "color": "#FF6B35",
+    "description": "Anijam是一款AI动画生成工具，能够将静态图片智能转换为动态视频内容。2026年最新版本增强了姿态控制和风格迁移功能，支持多角色动画生成。平台提供简洁的拖拽界面，适合内容创作者和社交媒体用户快速制作动态内容。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI动画生成"
+      },
+      {
+        "text": "图片转视频"
+      },
+      {
+        "text": "动态内容创作"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "社交媒体工具"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约50万月访问量",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://anijam.ai",
+    "price": "基础功能免费，高级功能付费订阅",
+    "platform": "网页端/iOS/Android"
+  },
+  {
+    "name": "清影AI",
+    "slug": "qingying-ai",
+    "emoji": "🎬",
+    "color": "#007AFF",
+    "description": "清影AI是360公司推出的AI视频生成工具，支持文生视频和图生视频功能。用户可通过文字描述或上传图片快速生成6秒高清视频。2025年已升级至3.0版本，新增风格迁移和运动控制功能，目前提供免费和付费两种使用模式。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "图生视频"
+      },
+      {
+        "text": "短视频创作"
+      },
+      {
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://qingying.360.cn",
+    "price": "免费版可用，付费版会员39元/月",
+    "platform": "网页端、iOS、Android"
   },
   {
     "name": "海螺AI",
@@ -14794,6 +14894,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "macOS/Windows/Linux"
   },
   {
+    "name": "Hera Launch",
+    "slug": "hera-launch",
+    "emoji": "🚀",
+    "color": "#6B4EE6",
+    "description": "Hera Launch是一款AI应用启动与部署平台，帮助开发者快速将AI能力集成到产品中。2026年已支持一键部署多模态AI应用，提供完整的CI/CD流程和监控解决方案。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI部署"
+      },
+      {
+        "text": "应用启动"
+      },
+      {
+        "text": "开发者工具"
+      },
+      {
+        "text": "多模态AI",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "约8万月访问",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://heralaunch.ai",
+    "price": "免费版可用，付费版$29/月起",
+    "platform": "Web/iOS/Android"
+  },
+  {
     "name": "Luma Dream Machine",
     "slug": "luma-dream-machine",
     "emoji": "🎬",
@@ -15008,6 +15140,74 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://tongyi.aliyun.com/lingma",
     "price": "免费版/专业版（¥59/月）",
     "platform": "VS Code、JetBrains IDEs、Visual Studio、网页端"
+  },
+  {
+    "name": "Anijam",
+    "slug": "anijam",
+    "emoji": "🎬",
+    "color": "#FF6B35",
+    "description": "Anijam是一款AI动画生成工具，能够将静态图片智能转换为动态视频内容。2026年最新版本增强了姿态控制和风格迁移功能，支持多角色动画生成。平台提供简洁的拖拽界面，适合内容创作者和社交媒体用户快速制作动态内容。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI动画生成"
+      },
+      {
+        "text": "图片转视频"
+      },
+      {
+        "text": "动态内容创作"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "社交媒体工具"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约50万月访问量",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://anijam.ai",
+    "price": "基础功能免费，高级功能付费订阅",
+    "platform": "网页端/iOS/Android"
+  },
+  {
+    "name": "清影AI",
+    "slug": "qingying-ai",
+    "emoji": "🎬",
+    "color": "#007AFF",
+    "description": "清影AI是360公司推出的AI视频生成工具，支持文生视频和图生视频功能。用户可通过文字描述或上传图片快速生成6秒高清视频。2025年已升级至3.0版本，新增风格迁移和运动控制功能，目前提供免费和付费两种使用模式。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "图生视频"
+      },
+      {
+        "text": "短视频创作"
+      },
+      {
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://qingying.360.cn",
+    "price": "免费版可用，付费版会员39元/月",
+    "platform": "网页端、iOS、Android"
   },
   {
     "name": "海螺AI",
