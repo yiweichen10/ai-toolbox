@@ -7267,6 +7267,37 @@ window.__ALL_TOOLS__ = [
     "platform": "macOS/Windows/Linux"
   },
   {
+    "name": "open-design",
+    "slug": "open-design",
+    "emoji": "🎨",
+    "color": "#6366F1",
+    "description": "一个开源的AI驱动设计工具，专注于快速生成UI/UX设计和品牌视觉资产。2026年最新版本增加了实时协作功能和增强的文本到设计能力，支持从草图到完整设计的全流程AI辅助。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "UI设计"
+      },
+      {
+        "text": "开源设计工具"
+      },
+      {
+        "text": "品牌设计"
+      },
+      {
+        "text": "AI生成设计"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://open-design.io",
+    "price": "免费版可用，专业版$19/月",
+    "platform": "Web / macOS / Windows"
+  },
+  {
     "name": "Hera Launch",
     "slug": "hera-launch",
     "emoji": "🚀",
@@ -7717,6 +7748,76 @@ window.__ALL_TOOLS__ = [
     "url": "https://design.meitu.com/",
     "price": "免费版可用，付费会员29元/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "触站AI",
+    "slug": "zhu-zhan-ai",
+    "emoji": "🎨",
+    "color": "#8B5CF6",
+    "description": "触站AI是国内知名的AI绘画生成平台，集成文生图、图生图、AI改图等多功能，提供丰富的风格模型库和Lora定制选项，支持中文提示词，2026年持续更新最新AI绘图技术，为设计师和创作者提供高效的AI绘画解决方案。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘图"
+      },
+      {
+        "text": "文生图"
+      },
+      {
+        "text": "图像生成"
+      },
+      {
+        "text": "AI绘画平台",
+        "type": "free"
+      },
+      {
+        "text": "国产AI工具"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约120万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.zhustai.com",
+    "price": "基础免费（每日生成次数有限），付费会员29元/月起",
+    "platform": "网页端（Web）"
+  },
+  {
+    "name": "百度千帆Agent",
+    "slug": "baidu-qianfan-agent",
+    "emoji": "🤖",
+    "color": "#2932E1",
+    "description": "百度千帆Agent是百度推出的企业级AI Agent开发平台，基于文心大模型和ERNIE Bot SDK构建，支持企业快速创建、部署和管理智能Agent。2026年平台已升级至3.0版本，新增多Agent协同编排和行业垂直解决方案。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "百度"
+      },
+      {
+        "text": "Agent开发"
+      },
+      {
+        "text": "企业级AI"
+      },
+      {
+        "text": "文心大模型",
+        "type": "free"
+      },
+      {
+        "text": "工作流编排"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://qianfan.cloud.baidu.com/agent",
+    "price": "基础版免费，专业版¥99/月起，企业版定制报价",
+    "platform": "Web端 | API接入"
   },
   {
     "name": "Unitree GD01",
@@ -14894,6 +14995,37 @@ window.__REMAINING_TOOLS__ = [
     "platform": "macOS/Windows/Linux"
   },
   {
+    "name": "open-design",
+    "slug": "open-design",
+    "emoji": "🎨",
+    "color": "#6366F1",
+    "description": "一个开源的AI驱动设计工具，专注于快速生成UI/UX设计和品牌视觉资产。2026年最新版本增加了实时协作功能和增强的文本到设计能力，支持从草图到完整设计的全流程AI辅助。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "UI设计"
+      },
+      {
+        "text": "开源设计工具"
+      },
+      {
+        "text": "品牌设计"
+      },
+      {
+        "text": "AI生成设计"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://open-design.io",
+    "price": "免费版可用，专业版$19/月",
+    "platform": "Web / macOS / Windows"
+  },
+  {
     "name": "Hera Launch",
     "slug": "hera-launch",
     "emoji": "🚀",
@@ -15344,6 +15476,76 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://design.meitu.com/",
     "price": "免费版可用，付费会员29元/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "触站AI",
+    "slug": "zhu-zhan-ai",
+    "emoji": "🎨",
+    "color": "#8B5CF6",
+    "description": "触站AI是国内知名的AI绘画生成平台，集成文生图、图生图、AI改图等多功能，提供丰富的风格模型库和Lora定制选项，支持中文提示词，2026年持续更新最新AI绘图技术，为设计师和创作者提供高效的AI绘画解决方案。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘图"
+      },
+      {
+        "text": "文生图"
+      },
+      {
+        "text": "图像生成"
+      },
+      {
+        "text": "AI绘画平台",
+        "type": "free"
+      },
+      {
+        "text": "国产AI工具"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约120万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.zhustai.com",
+    "price": "基础免费（每日生成次数有限），付费会员29元/月起",
+    "platform": "网页端（Web）"
+  },
+  {
+    "name": "百度千帆Agent",
+    "slug": "baidu-qianfan-agent",
+    "emoji": "🤖",
+    "color": "#2932E1",
+    "description": "百度千帆Agent是百度推出的企业级AI Agent开发平台，基于文心大模型和ERNIE Bot SDK构建，支持企业快速创建、部署和管理智能Agent。2026年平台已升级至3.0版本，新增多Agent协同编排和行业垂直解决方案。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "百度"
+      },
+      {
+        "text": "Agent开发"
+      },
+      {
+        "text": "企业级AI"
+      },
+      {
+        "text": "文心大模型",
+        "type": "free"
+      },
+      {
+        "text": "工作流编排"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://qianfan.cloud.baidu.com/agent",
+    "price": "基础版免费，专业版¥99/月起，企业版定制报价",
+    "platform": "Web端 | API接入"
   },
   {
     "name": "Unitree GD01",
