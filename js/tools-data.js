@@ -6995,6 +6995,35 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端"
   },
   {
+    "name": "Postiz",
+    "slug": "postiz",
+    "emoji": "📅",
+    "color": "#6366F1",
+    "description": "Postiz是一款AI驱动的社交媒体排程与自动化管理工具，帮助用户跨平台统一规划和发布内容。2026年集成更强大的AI内容生成和智能发布时间优化功能，支持自动化评论互动和数据分析。是内容创作者和营销团队的效率神器。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "社交媒体管理"
+      },
+      {
+        "text": "内容排程"
+      },
+      {
+        "text": "自动化发布",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://postiz.com",
+    "price": "免费版可用，付费版$9/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "Huddle01 VMs",
     "slug": "huddle01-vms",
     "emoji": "🎥",
@@ -7097,6 +7126,37 @@ window.__ALL_TOOLS__ = [
     "url": "https://sierra-ghostwriter.ai",
     "price": "免费版基础功能，高级版$19/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Cloud Computer Manus",
+    "slug": "cloud-computer-manus",
+    "emoji": "☁️",
+    "color": "#2563EB",
+    "description": "Cloud Computer Manus是一款基于云计算技术的AI智能云桌面平台，为用户提供强大的远程计算能力和高效的工作环境。2026年最新版本集成了多模态AI助手，支持智能任务自动化和跨设备无缝协作，适合企业和个人用户的高性能计算需求。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "云电脑"
+      },
+      {
+        "text": "远程桌面"
+      },
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "云计算"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.cloudcomputermanus.com",
+    "price": "基础版免费，专业版$19.9/月，企业版联系销售",
+    "platform": "网页端、Windows、Mac、Linux、iOS、Android"
   },
   {
     "name": "Kilo Code",
@@ -7328,6 +7388,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://heralaunch.ai",
     "price": "免费版可用，付费版$29/月起",
     "platform": "Web/iOS/Android"
+  },
+  {
+    "name": "Velo AI",
+    "slug": "velo-ai",
+    "emoji": "🚀",
+    "color": "#6366F1",
+    "description": "Velo AI 是一款智能效率提升工具，利用先进的AI技术帮助用户自动化日常任务、优化工作流程并提升整体生产力。2026年推出的最新版本增强了多模态处理能力和跨平台协作功能，成为职场人士的得力助手。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "任务自动化"
+      },
+      {
+        "text": "工作流优化"
+      },
+      {
+        "text": "效率提升"
+      },
+      {
+        "text": "智能助手"
+      },
+      {
+        "text": "AI办公",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "50万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://veloai.com",
+    "price": "免费版基础功能，高级版$12.99/月",
+    "platform": "Web/iOS/Android/Chrome扩展"
   },
   {
     "name": "Luma Dream Machine",
@@ -14723,6 +14818,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端"
   },
   {
+    "name": "Postiz",
+    "slug": "postiz",
+    "emoji": "📅",
+    "color": "#6366F1",
+    "description": "Postiz是一款AI驱动的社交媒体排程与自动化管理工具，帮助用户跨平台统一规划和发布内容。2026年集成更强大的AI内容生成和智能发布时间优化功能，支持自动化评论互动和数据分析。是内容创作者和营销团队的效率神器。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "社交媒体管理"
+      },
+      {
+        "text": "内容排程"
+      },
+      {
+        "text": "自动化发布",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://postiz.com",
+    "price": "免费版可用，付费版$9/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "Huddle01 VMs",
     "slug": "huddle01-vms",
     "emoji": "🎥",
@@ -14825,6 +14949,37 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://sierra-ghostwriter.ai",
     "price": "免费版基础功能，高级版$19/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Cloud Computer Manus",
+    "slug": "cloud-computer-manus",
+    "emoji": "☁️",
+    "color": "#2563EB",
+    "description": "Cloud Computer Manus是一款基于云计算技术的AI智能云桌面平台，为用户提供强大的远程计算能力和高效的工作环境。2026年最新版本集成了多模态AI助手，支持智能任务自动化和跨设备无缝协作，适合企业和个人用户的高性能计算需求。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "云电脑"
+      },
+      {
+        "text": "远程桌面"
+      },
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "云计算"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.cloudcomputermanus.com",
+    "price": "基础版免费，专业版$19.9/月，企业版联系销售",
+    "platform": "网页端、Windows、Mac、Linux、iOS、Android"
   },
   {
     "name": "Kilo Code",
@@ -15056,6 +15211,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://heralaunch.ai",
     "price": "免费版可用，付费版$29/月起",
     "platform": "Web/iOS/Android"
+  },
+  {
+    "name": "Velo AI",
+    "slug": "velo-ai",
+    "emoji": "🚀",
+    "color": "#6366F1",
+    "description": "Velo AI 是一款智能效率提升工具，利用先进的AI技术帮助用户自动化日常任务、优化工作流程并提升整体生产力。2026年推出的最新版本增强了多模态处理能力和跨平台协作功能，成为职场人士的得力助手。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "任务自动化"
+      },
+      {
+        "text": "工作流优化"
+      },
+      {
+        "text": "效率提升"
+      },
+      {
+        "text": "智能助手"
+      },
+      {
+        "text": "AI办公",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "50万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://veloai.com",
+    "price": "免费版基础功能，高级版$12.99/月",
+    "platform": "Web/iOS/Android/Chrome扩展"
   },
   {
     "name": "Luma Dream Machine",
