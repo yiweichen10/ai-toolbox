@@ -6741,6 +6741,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web、iOS、Android"
   },
   {
+    "name": "StockImg AI",
+    "slug": "stockimg-ai",
+    "emoji": "🖼️",
+    "color": "#6366F1",
+    "description": "StockImg AI是一款专注于库存图片生成的AI工具，通过文本描述即可快速创建高质量的库存照片、插画和设计素材。2026年版本增强了商业授权和批量生成功能，成为设计师和营销人员的首选素材工具。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "库存图片生成"
+      },
+      {
+        "text": "AI绘图"
+      },
+      {
+        "text": "商业素材",
+        "type": "free"
+      },
+      {
+        "text": "图片设计"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://stockimg.ai",
+    "price": "免费版每月10张，专业版$19/月起",
+    "platform": "网页版、iOS、Android"
+  },
+  {
     "name": "Galileo AI",
     "slug": "galileo-ai",
     "emoji": "🔭",
@@ -7456,6 +7488,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "TradingAgents",
+    "slug": "trading-agents",
+    "emoji": "📈",
+    "color": "#1E3A5F",
+    "description": "TradingAgents是一款基于AI的智能交易分析助手，通过机器学习算法实时分析市场数据，帮助投资者制定量化交易策略。2026年最新版本集成了多模态市场预测模型，支持股票、加密货币、外汇等多元资产类别，提供智能风险管理建议。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "智能交易"
+      },
+      {
+        "text": "量化分析"
+      },
+      {
+        "text": "市场预测"
+      },
+      {
+        "text": "风险管理",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://tradingagents.ai",
+    "price": "免费版可用，专业版$29/月，企业版定制",
+    "platform": "Web、iOS、Android"
+  },
+  {
     "name": "mike AI",
     "slug": "mike-ai",
     "emoji": "🎤",
@@ -7521,6 +7585,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://rankspot.io",
     "price": "免费版可用，付费版$29/月起",
     "platform": "Web端支持"
+  },
+  {
+    "name": "Schole AI",
+    "slug": "schole-ai",
+    "emoji": "📚",
+    "color": "#6366F1",
+    "description": "Schole AI是一款专注于教育领域的智能学习助手，利用先进的AI技术为学生和研究人员提供个性化学习辅导、作业解答和知识探索服务。2026年推出的最新版本增强了多模态学习能力，支持图像、文档和视频等多种内容形式的交互分析。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI学习助手"
+      },
+      {
+        "text": "作业辅导"
+      },
+      {
+        "text": "智能问答"
+      },
+      {
+        "text": "教育工具"
+      },
+      {
+        "text": "学习效率",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://schole.ai",
+    "price": "免费版基础功能，高级版每月$9.99",
+    "platform": "Web、iOS、Android"
   },
   {
     "name": "Jamie AI",
@@ -14564,6 +14663,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web、iOS、Android"
   },
   {
+    "name": "StockImg AI",
+    "slug": "stockimg-ai",
+    "emoji": "🖼️",
+    "color": "#6366F1",
+    "description": "StockImg AI是一款专注于库存图片生成的AI工具，通过文本描述即可快速创建高质量的库存照片、插画和设计素材。2026年版本增强了商业授权和批量生成功能，成为设计师和营销人员的首选素材工具。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "库存图片生成"
+      },
+      {
+        "text": "AI绘图"
+      },
+      {
+        "text": "商业素材",
+        "type": "free"
+      },
+      {
+        "text": "图片设计"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://stockimg.ai",
+    "price": "免费版每月10张，专业版$19/月起",
+    "platform": "网页版、iOS、Android"
+  },
+  {
     "name": "Galileo AI",
     "slug": "galileo-ai",
     "emoji": "🔭",
@@ -15279,6 +15410,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "TradingAgents",
+    "slug": "trading-agents",
+    "emoji": "📈",
+    "color": "#1E3A5F",
+    "description": "TradingAgents是一款基于AI的智能交易分析助手，通过机器学习算法实时分析市场数据，帮助投资者制定量化交易策略。2026年最新版本集成了多模态市场预测模型，支持股票、加密货币、外汇等多元资产类别，提供智能风险管理建议。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "智能交易"
+      },
+      {
+        "text": "量化分析"
+      },
+      {
+        "text": "市场预测"
+      },
+      {
+        "text": "风险管理",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://tradingagents.ai",
+    "price": "免费版可用，专业版$29/月，企业版定制",
+    "platform": "Web、iOS、Android"
+  },
+  {
     "name": "mike AI",
     "slug": "mike-ai",
     "emoji": "🎤",
@@ -15344,6 +15507,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://rankspot.io",
     "price": "免费版可用，付费版$29/月起",
     "platform": "Web端支持"
+  },
+  {
+    "name": "Schole AI",
+    "slug": "schole-ai",
+    "emoji": "📚",
+    "color": "#6366F1",
+    "description": "Schole AI是一款专注于教育领域的智能学习助手，利用先进的AI技术为学生和研究人员提供个性化学习辅导、作业解答和知识探索服务。2026年推出的最新版本增强了多模态学习能力，支持图像、文档和视频等多种内容形式的交互分析。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI学习助手"
+      },
+      {
+        "text": "作业辅导"
+      },
+      {
+        "text": "智能问答"
+      },
+      {
+        "text": "教育工具"
+      },
+      {
+        "text": "学习效率",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://schole.ai",
+    "price": "免费版基础功能，高级版每月$9.99",
+    "platform": "Web、iOS、Android"
   },
   {
     "name": "Jamie AI",
