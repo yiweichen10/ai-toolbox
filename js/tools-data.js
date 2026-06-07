@@ -7390,6 +7390,41 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / macOS / Windows"
   },
   {
+    "name": "Mintlify Editor",
+    "slug": "mintlify-editor",
+    "emoji": "📝",
+    "color": "#00D4AA",
+    "description": "Mintlify Editor是一款由AI驱动的智能文档编写平台，专注于帮助开发团队创建、维护和优化技术文档。2026年推出的最新版本增强了AI自动补全功能和协作编辑体验，支持一键生成API文档，成为开发者文档领域的热门选择。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI文档生成"
+      },
+      {
+        "text": "技术文档"
+      },
+      {
+        "text": "API文档"
+      },
+      {
+        "text": "开发者工具"
+      },
+      {
+        "text": "版本控制",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "85K",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://mintlify.com",
+    "price": "免费版可用，专业版$49/月起",
+    "platform": "Web端"
+  },
+  {
     "name": "Hera Launch",
     "slug": "hera-launch",
     "emoji": "🚀",
@@ -7486,6 +7521,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://lumalabs.ai/dream-machine",
     "price": "免费版每月30次生成次数，专业版$29.99/月起",
     "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Xint Code",
+    "slug": "xint-code",
+    "emoji": "💻",
+    "color": "#4F46E5",
+    "description": "Xint Code是一款专注于代码生成和智能编程辅助的AI开发工具，基于先进的语言模型为开发者提供代码补全、错误修复和技术文档生成等功能。2026年最新版本增强了多语言支持和上下文理解能力，显著提升开发效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码助手"
+      },
+      {
+        "text": "编程辅助"
+      },
+      {
+        "text": "AI代码生成",
+        "type": "free"
+      },
+      {
+        "text": "开发者工具"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85,000",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://xintcode.ai",
+    "price": "免费版可用，Pro版$19/月",
+    "platform": "VS Code、JetBrains IDE、Visual Studio、网页端"
   },
   {
     "name": "TradingAgents",
@@ -8114,6 +8181,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://tongyi.aliyun.com/efficiency",
     "price": "免费版/付费版",
     "platform": "网页/iOS/Android"
+  },
+  {
+    "name": "飞书智能伙伴",
+    "slug": "feishu-smart-partner",
+    "emoji": "🤖",
+    "color": "#2F54EB",
+    "description": "飞书智能伙伴是字节跳动飞书平台推出的AI助手，深度集成于飞书办公套件中，为企业提供智能问答、文档协作、数据分析等能力。2026年持续迭代企业级AI功能，提升团队协作效率。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "企业AI助手"
+      },
+      {
+        "text": "协同办公"
+      },
+      {
+        "text": "智能文档",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.feishu.cn/",
+    "price": "免费版/付费版（企业定制）",
+    "platform": "Web/iOS/Android/桌面端"
   },
   {
     "name": "火山写作",
@@ -15312,6 +15408,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / macOS / Windows"
   },
   {
+    "name": "Mintlify Editor",
+    "slug": "mintlify-editor",
+    "emoji": "📝",
+    "color": "#00D4AA",
+    "description": "Mintlify Editor是一款由AI驱动的智能文档编写平台，专注于帮助开发团队创建、维护和优化技术文档。2026年推出的最新版本增强了AI自动补全功能和协作编辑体验，支持一键生成API文档，成为开发者文档领域的热门选择。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI文档生成"
+      },
+      {
+        "text": "技术文档"
+      },
+      {
+        "text": "API文档"
+      },
+      {
+        "text": "开发者工具"
+      },
+      {
+        "text": "版本控制",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "85K",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://mintlify.com",
+    "price": "免费版可用，专业版$49/月起",
+    "platform": "Web端"
+  },
+  {
     "name": "Hera Launch",
     "slug": "hera-launch",
     "emoji": "🚀",
@@ -15408,6 +15539,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://lumalabs.ai/dream-machine",
     "price": "免费版每月30次生成次数，专业版$29.99/月起",
     "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Xint Code",
+    "slug": "xint-code",
+    "emoji": "💻",
+    "color": "#4F46E5",
+    "description": "Xint Code是一款专注于代码生成和智能编程辅助的AI开发工具，基于先进的语言模型为开发者提供代码补全、错误修复和技术文档生成等功能。2026年最新版本增强了多语言支持和上下文理解能力，显著提升开发效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码助手"
+      },
+      {
+        "text": "编程辅助"
+      },
+      {
+        "text": "AI代码生成",
+        "type": "free"
+      },
+      {
+        "text": "开发者工具"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85,000",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://xintcode.ai",
+    "price": "免费版可用，Pro版$19/月",
+    "platform": "VS Code、JetBrains IDE、Visual Studio、网页端"
   },
   {
     "name": "TradingAgents",
@@ -16036,6 +16199,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://tongyi.aliyun.com/efficiency",
     "price": "免费版/付费版",
     "platform": "网页/iOS/Android"
+  },
+  {
+    "name": "飞书智能伙伴",
+    "slug": "feishu-smart-partner",
+    "emoji": "🤖",
+    "color": "#2F54EB",
+    "description": "飞书智能伙伴是字节跳动飞书平台推出的AI助手，深度集成于飞书办公套件中，为企业提供智能问答、文档协作、数据分析等能力。2026年持续迭代企业级AI功能，提升团队协作效率。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "企业AI助手"
+      },
+      {
+        "text": "协同办公"
+      },
+      {
+        "text": "智能文档",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.feishu.cn/",
+    "price": "免费版/付费版（企业定制）",
+    "platform": "Web/iOS/Android/桌面端"
   },
   {
     "name": "火山写作",
