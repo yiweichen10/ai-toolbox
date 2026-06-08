@@ -6298,6 +6298,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/API/CLI"
   },
   {
+    "name": "Mistral AI",
+    "slug": "mistral-ai",
+    "emoji": "🧠",
+    "color": "#FF6B6B",
+    "description": "Mistral AI是法国领先的人工智能公司，专注于开发开源和商业大语言模型。2026年推出Mistral Large 3，在多语言任务和代码生成方面表现卓越，为全球企业提供高性能AI API服务。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大语言模型"
+      },
+      {
+        "text": "开源模型"
+      },
+      {
+        "text": "API服务"
+      },
+      {
+        "text": "欧洲AI",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://mistral.ai",
+    "price": "免费API额度+付费计划",
+    "platform": "Web/API/开发者平台"
+  },
+  {
     "name": "LangChain",
     "slug": "langchain",
     "emoji": "⛓️",
@@ -6427,6 +6459,40 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.trychroma.com",
     "price": "免费开源（云服务付费）",
     "platform": "Web/API"
+  },
+  {
+    "name": "Weaviate",
+    "slug": "weaviate",
+    "emoji": "🗄️",
+    "color": "#4B6BFF",
+    "description": "Weaviate是一个开源的向量数据库，专门用于存储和检索AI应用中的向量嵌入。2026年已推出云托管服务，支持混合搜索和实时索引，成为构建AI应用的核心基础设施。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "向量数据库"
+      },
+      {
+        "text": "开源数据库"
+      },
+      {
+        "text": "语义搜索"
+      },
+      {
+        "text": "AI基础设施"
+      },
+      {
+        "text": "云数据库"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://weaviate.io",
+    "price": "免费开源版+云托管版",
+    "platform": "Web/桌面/移动端支持"
   },
   {
     "name": "Harvey AI",
@@ -6996,6 +7062,40 @@ window.__ALL_TOOLS__ = [
     "url": "https://shadowai.com",
     "price": "免费版/专业版$9.99/月",
     "platform": "Web / iOS / Android / macOS / Windows"
+  },
+  {
+    "name": "PandaProbe",
+    "slug": "panda-probe",
+    "emoji": "🐼",
+    "color": "#FF7F50",
+    "description": "PandaProbe是一款专注于智能搜索与数据探测的AI工具，基于2026年最新大模型技术，为用户提供精准、快速的多源信息检索与分析服务。该工具在中文搜索领域表现突出，支持深度内容理解和跨平台数据整合。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "AI搜索"
+      },
+      {
+        "text": "数据探测"
+      },
+      {
+        "text": "智能问答"
+      },
+      {
+        "text": "信息聚合"
+      },
+      {
+        "text": "中文优化"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约50万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://pandaprobe.com",
+    "price": "基础功能免费，专业版¥29/月起",
+    "platform": "网页端、移动端（iOS/Android）"
   },
   {
     "name": "FlowMarket",
@@ -14316,6 +14416,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web/API/CLI"
   },
   {
+    "name": "Mistral AI",
+    "slug": "mistral-ai",
+    "emoji": "🧠",
+    "color": "#FF6B6B",
+    "description": "Mistral AI是法国领先的人工智能公司，专注于开发开源和商业大语言模型。2026年推出Mistral Large 3，在多语言任务和代码生成方面表现卓越，为全球企业提供高性能AI API服务。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大语言模型"
+      },
+      {
+        "text": "开源模型"
+      },
+      {
+        "text": "API服务"
+      },
+      {
+        "text": "欧洲AI",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://mistral.ai",
+    "price": "免费API额度+付费计划",
+    "platform": "Web/API/开发者平台"
+  },
+  {
     "name": "LangChain",
     "slug": "langchain",
     "emoji": "⛓️",
@@ -14445,6 +14577,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.trychroma.com",
     "price": "免费开源（云服务付费）",
     "platform": "Web/API"
+  },
+  {
+    "name": "Weaviate",
+    "slug": "weaviate",
+    "emoji": "🗄️",
+    "color": "#4B6BFF",
+    "description": "Weaviate是一个开源的向量数据库，专门用于存储和检索AI应用中的向量嵌入。2026年已推出云托管服务，支持混合搜索和实时索引，成为构建AI应用的核心基础设施。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "向量数据库"
+      },
+      {
+        "text": "开源数据库"
+      },
+      {
+        "text": "语义搜索"
+      },
+      {
+        "text": "AI基础设施"
+      },
+      {
+        "text": "云数据库"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://weaviate.io",
+    "price": "免费开源版+云托管版",
+    "platform": "Web/桌面/移动端支持"
   },
   {
     "name": "Harvey AI",
@@ -15014,6 +15180,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://shadowai.com",
     "price": "免费版/专业版$9.99/月",
     "platform": "Web / iOS / Android / macOS / Windows"
+  },
+  {
+    "name": "PandaProbe",
+    "slug": "panda-probe",
+    "emoji": "🐼",
+    "color": "#FF7F50",
+    "description": "PandaProbe是一款专注于智能搜索与数据探测的AI工具，基于2026年最新大模型技术，为用户提供精准、快速的多源信息检索与分析服务。该工具在中文搜索领域表现突出，支持深度内容理解和跨平台数据整合。",
+    "category": "AI搜索",
+    "tags": [
+      {
+        "text": "AI搜索"
+      },
+      {
+        "text": "数据探测"
+      },
+      {
+        "text": "智能问答"
+      },
+      {
+        "text": "信息聚合"
+      },
+      {
+        "text": "中文优化"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约50万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://pandaprobe.com",
+    "price": "基础功能免费，专业版¥29/月起",
+    "platform": "网页端、移动端（iOS/Android）"
   },
   {
     "name": "FlowMarket",
