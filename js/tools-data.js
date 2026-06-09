@@ -7592,6 +7592,40 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/iOS/Android/Chrome扩展"
   },
   {
+    "name": "Pixelle-Video",
+    "slug": "pixelle-video",
+    "emoji": "🎬",
+    "color": "#8B5CF6",
+    "description": "Pixelle-Video是一款新一代AI视频生成工具，专注于将静态图像和文本描述转化为高质量动态视频内容。2026年更新支持4K超清输出和多轨道编辑功能，为创作者提供更强大的视觉叙事能力。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "视频生成"
+      },
+      {
+        "text": "图像转视频"
+      },
+      {
+        "text": "AI视频创作"
+      },
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "视频编辑"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://pixelle-video.ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "网页端/iOS/Android"
+  },
+  {
     "name": "Luma Dream Machine",
     "slug": "luma-dream-machine",
     "emoji": "🎬",
@@ -7939,6 +7973,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://anijam.ai",
     "price": "基础功能免费，高级功能付费订阅",
     "platform": "网页端/iOS/Android"
+  },
+  {
+    "name": "Yoroll",
+    "slug": "yoroll",
+    "emoji": "✨",
+    "color": "#6366F1",
+    "description": "Yoroll是一款2026年最新推出的AI效率工具，专注于智能任务管理和内容创作辅助。它通过先进的自然语言处理技术，帮助用户快速生成高质量内容，提升工作效率。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "AI效率"
+      },
+      {
+        "text": "智能助手"
+      },
+      {
+        "text": "内容生成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约5万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://yoroll.ai",
+    "price": "基础免费版+付费专业版",
+    "platform": "Web/iOS/Android"
   },
   {
     "name": "清影AI",
@@ -8310,6 +8376,40 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.feishu.cn/",
     "price": "免费版/付费版（企业定制）",
     "platform": "Web/iOS/Android/桌面端"
+  },
+  {
+    "name": "文思AI",
+    "slug": "wensi-ai",
+    "emoji": "✍️",
+    "color": "#4F46E5",
+    "description": "文思AI是一款专注于智能写作与内容创作的国产AI助手，基于先进的自然语言处理技术，为用户提供文章撰写、文案生成、思路梳理等多元化服务。2026年持续更新迭代，新增多模态理解和专业领域写作支持。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "智能写作"
+      },
+      {
+        "text": "文案生成"
+      },
+      {
+        "text": "国产AI"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "免费使用"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://wensi.ai",
+    "price": "免费版/专业版",
+    "platform": "Web / iOS / Android"
   },
   {
     "name": "火山写作",
@@ -15710,6 +15810,40 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web/iOS/Android/Chrome扩展"
   },
   {
+    "name": "Pixelle-Video",
+    "slug": "pixelle-video",
+    "emoji": "🎬",
+    "color": "#8B5CF6",
+    "description": "Pixelle-Video是一款新一代AI视频生成工具，专注于将静态图像和文本描述转化为高质量动态视频内容。2026年更新支持4K超清输出和多轨道编辑功能，为创作者提供更强大的视觉叙事能力。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "视频生成"
+      },
+      {
+        "text": "图像转视频"
+      },
+      {
+        "text": "AI视频创作"
+      },
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "视频编辑"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://pixelle-video.ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "网页端/iOS/Android"
+  },
+  {
     "name": "Luma Dream Machine",
     "slug": "luma-dream-machine",
     "emoji": "🎬",
@@ -16057,6 +16191,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://anijam.ai",
     "price": "基础功能免费，高级功能付费订阅",
     "platform": "网页端/iOS/Android"
+  },
+  {
+    "name": "Yoroll",
+    "slug": "yoroll",
+    "emoji": "✨",
+    "color": "#6366F1",
+    "description": "Yoroll是一款2026年最新推出的AI效率工具，专注于智能任务管理和内容创作辅助。它通过先进的自然语言处理技术，帮助用户快速生成高质量内容，提升工作效率。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "AI效率"
+      },
+      {
+        "text": "智能助手"
+      },
+      {
+        "text": "内容生成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约5万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://yoroll.ai",
+    "price": "基础免费版+付费专业版",
+    "platform": "Web/iOS/Android"
   },
   {
     "name": "清影AI",
@@ -16428,6 +16594,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.feishu.cn/",
     "price": "免费版/付费版（企业定制）",
     "platform": "Web/iOS/Android/桌面端"
+  },
+  {
+    "name": "文思AI",
+    "slug": "wensi-ai",
+    "emoji": "✍️",
+    "color": "#4F46E5",
+    "description": "文思AI是一款专注于智能写作与内容创作的国产AI助手，基于先进的自然语言处理技术，为用户提供文章撰写、文案生成、思路梳理等多元化服务。2026年持续更新迭代，新增多模态理解和专业领域写作支持。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "智能写作"
+      },
+      {
+        "text": "文案生成"
+      },
+      {
+        "text": "国产AI"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "免费使用"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://wensi.ai",
+    "price": "免费版/专业版",
+    "platform": "Web / iOS / Android"
   },
   {
     "name": "火山写作",
