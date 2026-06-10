@@ -6605,6 +6605,28 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Vizard",
+    "slug": "vizard",
+    "emoji": "🎯",
+    "color": "#7C3AED",
+    "description": "AI视频内容分析和剪辑平台，自动将长视频分割为多个短视频片段，内置AI虚拟主播功能，适合内容创作者批量生产社媒视频。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "视频剪辑"
+      },
+      {
+        "text": "虚拟主播"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://vizard.ai",
+    "price": "免费版+Pro $20/月",
+    "platform": "Web"
+  },
+  {
     "name": "Respeecher",
     "slug": "respeecher",
     "emoji": "🎙️",
@@ -7423,6 +7445,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://zed.dev",
     "price": "免费（基础版）/ $20/月（Pro）",
     "platform": "macOS / Windows / Linux / Web"
+  },
+  {
+    "name": "Tabstack",
+    "slug": "tabstack",
+    "emoji": "🗂️",
+    "color": "#4F46E5",
+    "description": "Tabstack是一款基于AI的浏览器标签页管理扩展，采用创新的堆栈式界面帮助用户智能整理和快速访问浏览器标签。通过AI自动分析用户浏览习惯，智能分类标签页，大幅提升工作和学习效率。2026年已推出AI驱动的智能搜索和跨设备同步功能。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "标签管理"
+      },
+      {
+        "text": "浏览器扩展"
+      },
+      {
+        "text": "效率工具"
+      },
+      {
+        "text": "AI分类",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约50万月访问",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://tabstack.io",
+    "price": "免费版+专业版（$4.99/月）",
+    "platform": "Chrome、Firefox、Edge、Safari"
   },
   {
     "name": "Codex CLI",
@@ -8445,6 +8499,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.volcengine.com/product/writing",
     "price": "基础功能免费，高级会员¥29/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "魔音工坊",
+    "slug": "moyin-gongfang",
+    "emoji": "🎤",
+    "color": "#FF6B35",
+    "description": "魔音工坊是一款由国内团队开发的AI文字转语音工具，支持多种音色和语言，生成的语音自然流畅。2026年持续更新，新增情感合成和实时配音功能，是内容创作者的好帮手。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "文字转语音"
+      },
+      {
+        "text": "AI配音"
+      },
+      {
+        "text": "语音合成"
+      },
+      {
+        "text": "音频编辑",
+        "type": "free"
+      },
+      {
+        "text": "多语言支持"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "月访问量约30万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.moyin.com/",
+    "price": "免费版可用，付费版每月29元起",
+    "platform": "网页端/iOS/Android"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -14823,6 +14912,28 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Vizard",
+    "slug": "vizard",
+    "emoji": "🎯",
+    "color": "#7C3AED",
+    "description": "AI视频内容分析和剪辑平台，自动将长视频分割为多个短视频片段，内置AI虚拟主播功能，适合内容创作者批量生产社媒视频。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "视频剪辑"
+      },
+      {
+        "text": "虚拟主播"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "N/A",
+    "badge": {},
+    "url": "https://vizard.ai",
+    "price": "免费版+Pro $20/月",
+    "platform": "Web"
+  },
+  {
     "name": "Respeecher",
     "slug": "respeecher",
     "emoji": "🎙️",
@@ -15641,6 +15752,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://zed.dev",
     "price": "免费（基础版）/ $20/月（Pro）",
     "platform": "macOS / Windows / Linux / Web"
+  },
+  {
+    "name": "Tabstack",
+    "slug": "tabstack",
+    "emoji": "🗂️",
+    "color": "#4F46E5",
+    "description": "Tabstack是一款基于AI的浏览器标签页管理扩展，采用创新的堆栈式界面帮助用户智能整理和快速访问浏览器标签。通过AI自动分析用户浏览习惯，智能分类标签页，大幅提升工作和学习效率。2026年已推出AI驱动的智能搜索和跨设备同步功能。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "标签管理"
+      },
+      {
+        "text": "浏览器扩展"
+      },
+      {
+        "text": "效率工具"
+      },
+      {
+        "text": "AI分类",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约50万月访问",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://tabstack.io",
+    "price": "免费版+专业版（$4.99/月）",
+    "platform": "Chrome、Firefox、Edge、Safari"
   },
   {
     "name": "Codex CLI",
@@ -16663,5 +16806,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.volcengine.com/product/writing",
     "price": "基础功能免费，高级会员¥29/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "魔音工坊",
+    "slug": "moyin-gongfang",
+    "emoji": "🎤",
+    "color": "#FF6B35",
+    "description": "魔音工坊是一款由国内团队开发的AI文字转语音工具，支持多种音色和语言，生成的语音自然流畅。2026年持续更新，新增情感合成和实时配音功能，是内容创作者的好帮手。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "文字转语音"
+      },
+      {
+        "text": "AI配音"
+      },
+      {
+        "text": "语音合成"
+      },
+      {
+        "text": "音频编辑",
+        "type": "free"
+      },
+      {
+        "text": "多语言支持"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "月访问量约30万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.moyin.com/",
+    "price": "免费版可用，付费版每月29元起",
+    "platform": "网页端/iOS/Android"
   }
 ];
