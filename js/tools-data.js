@@ -7513,6 +7513,35 @@ window.__ALL_TOOLS__ = [
     "platform": "macOS/Windows/Linux"
   },
   {
+    "name": "Wonder AI",
+    "slug": "wonder-ai",
+    "emoji": "✨",
+    "color": "#8B5CF6",
+    "description": "Wonder AI 是一款专注于创意内容生成的AI工具，通过自然语言处理技术帮助用户快速生成高质量的文案、图片和视频创意。2026年推出的最新版本增强了多模态生成能力和实时协作功能，成为创意工作者的首选工具。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "创意设计"
+      },
+      {
+        "text": "内容创作",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://wonderai.com",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "open-design",
     "slug": "open-design",
     "emoji": "🎨",
@@ -8339,6 +8368,38 @@ window.__ALL_TOOLS__ = [
     "platform": "支持平台：Windows/macOS/Linux，配套App支持iOS/Android"
   },
   {
+    "name": "AGIBOT智元",
+    "slug": "agibot-zhiyuan",
+    "emoji": "🤖",
+    "color": "#FF6B35",
+    "description": "智元机器人（AGIBOT）是由前华为天才少年稚晖君创立的通用人形机器人公司，专注于AI与机器人深度融合。2026年智元发布最新一代通用机器人平台，支持多场景智能交互与任务执行，为工业、商业及家庭场景提供解决方案。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "人形机器人"
+      },
+      {
+        "text": "通用AI"
+      },
+      {
+        "text": "智能交互"
+      },
+      {
+        "text": "具身智能",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.agibot.com",
+    "price": "联系定价",
+    "platform": "Web/iOS/Android"
+  },
+  {
     "name": "AnySceneGen",
     "slug": "anyscenegen",
     "emoji": "🎨",
@@ -8369,6 +8430,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://anyscenegen.ai",
     "price": "免费版/月费$19起",
     "platform": "Web/iOS/Android"
+  },
+  {
+    "name": "Dexbotic",
+    "slug": "dexbotic",
+    "emoji": "🤖",
+    "color": "#4F46E5",
+    "description": "Dexbotic是一款AI驱动的自动化工作流平台，通过智能机器人帮助用户自动化重复性任务，提升企业运营效率。2026年最新版本增强了多模态交互能力和企业级安全合规性。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "工作流自动化"
+      },
+      {
+        "text": "企业效率工具"
+      },
+      {
+        "text": "智能机器人",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约52万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://dexbotic.ai",
+    "price": "免费版可用，付费版$29/月起",
+    "platform": "Web / Windows / Mac"
   },
   {
     "name": "通义效率",
@@ -15820,6 +15910,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "macOS/Windows/Linux"
   },
   {
+    "name": "Wonder AI",
+    "slug": "wonder-ai",
+    "emoji": "✨",
+    "color": "#8B5CF6",
+    "description": "Wonder AI 是一款专注于创意内容生成的AI工具，通过自然语言处理技术帮助用户快速生成高质量的文案、图片和视频创意。2026年推出的最新版本增强了多模态生成能力和实时协作功能，成为创意工作者的首选工具。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "创意设计"
+      },
+      {
+        "text": "内容创作",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://wonderai.com",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
     "name": "open-design",
     "slug": "open-design",
     "emoji": "🎨",
@@ -16646,6 +16765,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "支持平台：Windows/macOS/Linux，配套App支持iOS/Android"
   },
   {
+    "name": "AGIBOT智元",
+    "slug": "agibot-zhiyuan",
+    "emoji": "🤖",
+    "color": "#FF6B35",
+    "description": "智元机器人（AGIBOT）是由前华为天才少年稚晖君创立的通用人形机器人公司，专注于AI与机器人深度融合。2026年智元发布最新一代通用机器人平台，支持多场景智能交互与任务执行，为工业、商业及家庭场景提供解决方案。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "人形机器人"
+      },
+      {
+        "text": "通用AI"
+      },
+      {
+        "text": "智能交互"
+      },
+      {
+        "text": "具身智能",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.agibot.com",
+    "price": "联系定价",
+    "platform": "Web/iOS/Android"
+  },
+  {
     "name": "AnySceneGen",
     "slug": "anyscenegen",
     "emoji": "🎨",
@@ -16676,6 +16827,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://anyscenegen.ai",
     "price": "免费版/月费$19起",
     "platform": "Web/iOS/Android"
+  },
+  {
+    "name": "Dexbotic",
+    "slug": "dexbotic",
+    "emoji": "🤖",
+    "color": "#4F46E5",
+    "description": "Dexbotic是一款AI驱动的自动化工作流平台，通过智能机器人帮助用户自动化重复性任务，提升企业运营效率。2026年最新版本增强了多模态交互能力和企业级安全合规性。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "工作流自动化"
+      },
+      {
+        "text": "企业效率工具"
+      },
+      {
+        "text": "智能机器人",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约52万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://dexbotic.ai",
+    "price": "免费版可用，付费版$29/月起",
+    "platform": "Web / Windows / Mac"
   },
   {
     "name": "通义效率",
