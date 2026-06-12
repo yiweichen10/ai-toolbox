@@ -7120,6 +7120,38 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、移动端（iOS/Android）"
   },
   {
+    "name": "Kanwas",
+    "slug": "kanwas",
+    "emoji": "⚡",
+    "color": "#6B5CE7",
+    "description": "Kanwas是一款专注于提升团队协作效率的AI工作流自动化平台，通过智能任务分配和流程优化，帮助团队在2026年实现更高效的项目管理与知识复用。平台支持多模态交互，集成200+企业应用，大幅降低跨工具协作成本。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI工作流"
+      },
+      {
+        "text": "任务自动化"
+      },
+      {
+        "text": "团队协作"
+      },
+      {
+        "text": "效率工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://kanwas.ai",
+    "price": "免费版/专业版$12/月/企业版定制",
+    "platform": "网页/iOS/Android/桌面端"
+  },
+  {
     "name": "FlowMarket",
     "slug": "flowmarket",
     "emoji": "🔄",
@@ -7675,6 +7707,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/iOS/Android/Chrome扩展"
   },
   {
+    "name": "VideoOS",
+    "slug": "video-os",
+    "emoji": "🎬",
+    "color": "#4F46E5",
+    "description": "VideoOS是一款专注于视频内容智能分析和处理的AI平台，通过深度学习技术实现视频内容识别、自动剪辑、智能标签等核心功能，帮助内容创作者和视频从业者提升工作效率。2026年最新版本增强了多模态理解能力，支持更精准的视频语义分析。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "视频分析"
+      },
+      {
+        "text": "智能剪辑"
+      },
+      {
+        "text": "内容识别"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://videoos.net",
+    "price": "免费版/专业版起价$29/月",
+    "platform": "Web/iOS/Android"
+  },
+  {
     "name": "Pixelle-Video",
     "slug": "pixelle-video",
     "emoji": "🎬",
@@ -7738,6 +7798,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://lumalabs.ai/dream-machine",
     "price": "免费版每月30次生成次数，专业版$29.99/月起",
     "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Browser Use",
+    "slug": "browser-use",
+    "emoji": "🌐",
+    "color": "#2563EB",
+    "description": "Browser Use是一款开源的浏览器自动化工具，允许AI代理自动控制浏览器执行各种网页任务。2026年最新版本增强了页面元素智能识别和多标签页并行处理能力，成为AI自动化工作流的热门选择。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "浏览器自动化"
+      },
+      {
+        "text": "AI代理"
+      },
+      {
+        "text": "开源"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约8万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://browser-use.com",
+    "price": "免费开源，付费版约$19/月",
+    "platform": "支持Windows、macOS、Linux，兼容Chrome、Firefox、Edge"
   },
   {
     "name": "Xint Code",
@@ -15517,6 +15605,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、移动端（iOS/Android）"
   },
   {
+    "name": "Kanwas",
+    "slug": "kanwas",
+    "emoji": "⚡",
+    "color": "#6B5CE7",
+    "description": "Kanwas是一款专注于提升团队协作效率的AI工作流自动化平台，通过智能任务分配和流程优化，帮助团队在2026年实现更高效的项目管理与知识复用。平台支持多模态交互，集成200+企业应用，大幅降低跨工具协作成本。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI工作流"
+      },
+      {
+        "text": "任务自动化"
+      },
+      {
+        "text": "团队协作"
+      },
+      {
+        "text": "效率工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://kanwas.ai",
+    "price": "免费版/专业版$12/月/企业版定制",
+    "platform": "网页/iOS/Android/桌面端"
+  },
+  {
     "name": "FlowMarket",
     "slug": "flowmarket",
     "emoji": "🔄",
@@ -16072,6 +16192,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web/iOS/Android/Chrome扩展"
   },
   {
+    "name": "VideoOS",
+    "slug": "video-os",
+    "emoji": "🎬",
+    "color": "#4F46E5",
+    "description": "VideoOS是一款专注于视频内容智能分析和处理的AI平台，通过深度学习技术实现视频内容识别、自动剪辑、智能标签等核心功能，帮助内容创作者和视频从业者提升工作效率。2026年最新版本增强了多模态理解能力，支持更精准的视频语义分析。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "视频分析"
+      },
+      {
+        "text": "智能剪辑"
+      },
+      {
+        "text": "内容识别"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://videoos.net",
+    "price": "免费版/专业版起价$29/月",
+    "platform": "Web/iOS/Android"
+  },
+  {
     "name": "Pixelle-Video",
     "slug": "pixelle-video",
     "emoji": "🎬",
@@ -16135,6 +16283,34 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://lumalabs.ai/dream-machine",
     "price": "免费版每月30次生成次数，专业版$29.99/月起",
     "platform": "Web / iOS / Android"
+  },
+  {
+    "name": "Browser Use",
+    "slug": "browser-use",
+    "emoji": "🌐",
+    "color": "#2563EB",
+    "description": "Browser Use是一款开源的浏览器自动化工具，允许AI代理自动控制浏览器执行各种网页任务。2026年最新版本增强了页面元素智能识别和多标签页并行处理能力，成为AI自动化工作流的热门选择。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "浏览器自动化"
+      },
+      {
+        "text": "AI代理"
+      },
+      {
+        "text": "开源"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约8万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://browser-use.com",
+    "price": "免费开源，付费版约$19/月",
+    "platform": "支持Windows、macOS、Linux，兼容Chrome、Firefox、Edge"
   },
   {
     "name": "Xint Code",
