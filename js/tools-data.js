@@ -6759,6 +6759,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Bloop",
+    "slug": "bloop",
+    "emoji": "🔍",
+    "color": "#6366F1",
+    "description": "Bloop是一款AI驱动的代码搜索和理解工具，帮助开发者用自然语言快速搜索和理解大型代码库。通过语义理解技术，用户可以快速定位所需代码，提升开发效率。2024年已被Sourcegraph收购，持续更新中。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码搜索"
+      },
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "开发者工具"
+      },
+      {
+        "text": "代码理解",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://bloop.ai",
+    "price": "免费版可用，付费版$12/月起",
+    "platform": "VS Code、JetBrains IDE、Chrome扩展"
+  },
+  {
     "name": "Octarine",
     "slug": "octarine",
     "emoji": "🧙",
@@ -8112,6 +8144,38 @@ window.__ALL_TOOLS__ = [
     "platform": "VS Code、JetBrains IDEs、Visual Studio、网页端"
   },
   {
+    "name": "CodeBuddy腾讯",
+    "slug": "codebuddy-tengxun",
+    "emoji": "🤖",
+    "color": "#1E90FF",
+    "description": "腾讯推出的AI编程助手，基于混元大模型为开发者提供智能代码补全、错误诊断和重构建议。支持多种编程语言和主流IDE插件集成，2026年已升级至2.0版本，代码理解能力大幅提升。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "腾讯混元",
+        "type": "free"
+      },
+      {
+        "text": "智能重构"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://codebuddy.cloud.tencent.com",
+    "price": "免费版/专业版（¥49/月）",
+    "platform": "VS Code/IntelliJ IDEA/Chrome/Edge"
+  },
+  {
     "name": "Anijam",
     "slug": "anijam",
     "emoji": "🎬",
@@ -8712,6 +8776,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.moyin.com/",
     "price": "免费版可用，付费版每月29元起",
     "platform": "网页端/iOS/Android"
+  },
+  {
+    "name": "讯飞智作",
+    "slug": "xunfei-zhizuo",
+    "emoji": "🎙️",
+    "color": "#4C6EF5",
+    "description": "科大讯飞推出的AI内容创作平台，支持AI写作、PPT生成、视频创作等全方位内容生产。2026年最新版本集成了讯飞星火4.0大模型，文本生成和理解能力显著提升，新增多模态内容创作功能。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "PPT生成"
+      },
+      {
+        "text": "视频创作"
+      },
+      {
+        "text": "智能办公",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://zhi.zuo.xunfei.cn",
+    "price": "免费版可用，付费版29元/月起",
+    "platform": "网页端、桌面端、移动端"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -15244,6 +15340,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web"
   },
   {
+    "name": "Bloop",
+    "slug": "bloop",
+    "emoji": "🔍",
+    "color": "#6366F1",
+    "description": "Bloop是一款AI驱动的代码搜索和理解工具，帮助开发者用自然语言快速搜索和理解大型代码库。通过语义理解技术，用户可以快速定位所需代码，提升开发效率。2024年已被Sourcegraph收购，持续更新中。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码搜索"
+      },
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "开发者工具"
+      },
+      {
+        "text": "代码理解",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://bloop.ai",
+    "price": "免费版可用，付费版$12/月起",
+    "platform": "VS Code、JetBrains IDE、Chrome扩展"
+  },
+  {
     "name": "Octarine",
     "slug": "octarine",
     "emoji": "🧙",
@@ -16597,6 +16725,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "VS Code、JetBrains IDEs、Visual Studio、网页端"
   },
   {
+    "name": "CodeBuddy腾讯",
+    "slug": "codebuddy-tengxun",
+    "emoji": "🤖",
+    "color": "#1E90FF",
+    "description": "腾讯推出的AI编程助手，基于混元大模型为开发者提供智能代码补全、错误诊断和重构建议。支持多种编程语言和主流IDE插件集成，2026年已升级至2.0版本，代码理解能力大幅提升。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "腾讯混元",
+        "type": "free"
+      },
+      {
+        "text": "智能重构"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://codebuddy.cloud.tencent.com",
+    "price": "免费版/专业版（¥49/月）",
+    "platform": "VS Code/IntelliJ IDEA/Chrome/Edge"
+  },
+  {
     "name": "Anijam",
     "slug": "anijam",
     "emoji": "🎬",
@@ -17197,5 +17357,37 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.moyin.com/",
     "price": "免费版可用，付费版每月29元起",
     "platform": "网页端/iOS/Android"
+  },
+  {
+    "name": "讯飞智作",
+    "slug": "xunfei-zhizuo",
+    "emoji": "🎙️",
+    "color": "#4C6EF5",
+    "description": "科大讯飞推出的AI内容创作平台，支持AI写作、PPT生成、视频创作等全方位内容生产。2026年最新版本集成了讯飞星火4.0大模型，文本生成和理解能力显著提升，新增多模态内容创作功能。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "PPT生成"
+      },
+      {
+        "text": "视频创作"
+      },
+      {
+        "text": "智能办公",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://zhi.zuo.xunfei.cn",
+    "price": "免费版可用，付费版29元/月起",
+    "platform": "网页端、桌面端、移动端"
   }
 ];
