@@ -33,6 +33,13 @@ API_KEY = os.getenv("SILICONFLOW_API_KEY", "")
 BASE_URL = os.getenv("SILICONFLOW_BASE_URL", "https://api.siliconflow.cn/v1")
 MODEL = "Pro/MiniMaxAI/MiniMax-M2.5"
 
+# 全部分类（即使 tools.json 中没有对应工具，API 也可为新增分类生成工具）
+ALL_CATEGORIES = [
+    "AI对话", "AI写作", "AI绘画", "AI编程", "AI视频", "AI音频",
+    "AI办公", "AI设计", "AI搜索", "AI翻译", "AI自动化", "AI效率",
+    "AI智能体", "AI开发", "AI行业应用",
+]
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS_JSON_PATH = os.path.join(BASE_DIR, 'data', 'tools.json')
 
@@ -183,6 +190,54 @@ DEFAULT_TOOL_NAMES = [
     "文思AI", "火山写作", "笔灵AI",
     # 【国内】AI语音/音乐
     "魔音工坊", "讯飞智作", "ACE Studio",
+
+    # === 2026-06-12 重磅扩容：AI智能体/Agent框架 + 垂域工具 + 2026最新 ===
+    # 【AI Agent 框架/智能体】（2026年最热赛道，OpenClaw 356K Stars，SKyclaw/Hermes/Superpowers均10万+Stars）
+    "OpenClaw", "CrewAI", "AG2", "LangGraph", "MetaGPT",
+    "Strands Agents", "OpenAI Agents SDK", "Flowise", "Langflow",
+    "Qwen-Agent", "Modelscope-Agent",
+    # 【AI编码/IDE】2026年新晋热门
+    "PearAI", "Melty", "Augment Code", "Qoder", "Cline",
+    "Qwen3-Coder-Next", "OpenCode",
+    # 【AI视频/3D】2026年新版本
+    "Kling 3.0", "Moonvalley", "Vidu 2.0", "Hedra", "Pollinations",
+    # 【AI音乐/音频】2026年新工具
+    "MusicFX", "Riffusion", "CosyVoice", "ChatTTS",
+    "Spark-TTS", "GPT-SoVITS", "F5-TTS",
+    # 【RAG/向量数据库】企业级AI基础设施
+    "RAGFlow", "Milvus", "Qdrant", "AnythingLLM",
+    "LightRAG", "GraphRAG", "Haystack", "Unstructured", "Verba",
+    # 【AI设计/品牌】端到端设计工具
+    "Base44", "Uizard", "Visily", "Khroma", "Flair AI",
+    "Wix AI", "Designs.ai", "Pixso AI",
+    "触手AI", "6pen Art", "无界AI", "创客贴AI",
+    "图怪兽", "易企秀", "绘蛙", "WHEE", "文心一格", "混元图像",
+    # 【AI语音/TTS】实时语音
+    "Cartesia", "Deepgram",
+    # 【AI知识库/文档】
+    "Algo", "Taskade",
+    # 【AI会议纪要】
+    "Read AI", "Avoma", "Sembly",
+    # 【AI客服】
+    "Intercom Fin", "Ada AI", "Zendesk AI",
+    # 【AI教育】
+    "Duolingo Max", "Khanmigo", "Quizlet AI",
+    # 【AI医疗】
+    "Tempus AI", "Ada Health",
+    # 【AI金融】
+    "Bloomberg GPT", "Kensho AI", "Alpaca AI",
+    # 【AI法律】
+    "CoCounsel", "Spellbook", "Robin AI",
+    # 【AI招聘】
+    "Eightfold", "HireVue AI",
+    # 【国产大模型】2026年6月密集发布
+    "MiniCPM-o", "GLM-5.1", "百川3",
+    # 【AI安全】
+    "Lakera Guard", "PromptArmor",
+    # 【AI硬件/机器人】2026年人形机器人元年
+    "Figure AI", "Tesla Optimus", "宇树H1",
+    # 【AI电商/营销】
+    "FeedHive", "Shopify Magic",
 ]
 
 
@@ -442,7 +497,10 @@ def main():
 
     existing_names = [t["name"] for t in existing_tools]
     existing_slugs = [t["slug"] for t in existing_tools]
-    all_categories = sorted(set(t.get("category", "") for t in existing_tools if t.get("category")))
+    all_categories = sorted(set(
+        list(t.get("category", "") for t in existing_tools if t.get("category")) +
+        ALL_CATEGORIES
+    ))
 
     print(f"已有工具: {len(existing_tools)} 个")
     print(f"已有分类: {', '.join(all_categories)}")

@@ -102,6 +102,9 @@ CATEGORY_SLUG_MAP = {
     "AI翻译": "ai-translation",
     "AI自动化": "ai-automation",
     "AI效率": "ai-efficiency",
+    "AI智能体": "ai-agent",
+    "AI开发": "ai-development",
+    "AI行业应用": "ai-verticals",
 }
 
 def get_category_slug(category_name):
@@ -2212,11 +2215,12 @@ def _live_section_battle(h2h):
 def _build_category_index_page(tools_by_category):
     """生成 category/index.html 总入口页：列出所有分类链接"""
     # 按照固定顺序排列分类
-    ordered_categories = ["AI对话", "AI写作", "AI绘画", "AI编程", "AI视频", "AI音频", "AI办公", "AI设计", "AI搜索", "AI翻译", "AI自动化", "AI效率"]
+    ordered_categories = ["AI对话", "AI写作", "AI绘画", "AI编程", "AI视频", "AI音频", "AI办公", "AI设计", "AI搜索", "AI翻译", "AI自动化", "AI效率", "AI智能体", "AI开发", "AI行业应用"]
     category_emojis = {
         "AI对话": "💬", "AI写作": "✍️", "AI绘画": "🎨", "AI编程": "💻",
         "AI视频": "🎬", "AI音频": "🎵", "AI办公": "📁", "AI设计": "🎯",
         "AI搜索": "🔍", "AI翻译": "🌐", "AI自动化": "⚙️", "AI效率": "⚡",
+        "AI智能体": "🤖", "AI开发": "🛠️", "AI行业应用": "🏢",
     }
     items_html = ''
     for cat_name in ordered_categories:
@@ -3063,7 +3067,7 @@ def build_index_page(tools, articles):
     category_counts = get_category_stats(tools)
     categories_html = ''
     # 按照 index.html 中的顺序
-    ordered_categories = ["AI对话", "AI写作", "AI绘画", "AI编程", "AI视频", "AI音频", "AI办公", "AI设计", "AI搜索", "AI翻译", "AI自动化", "AI效率"]
+    ordered_categories = ["AI对话", "AI写作", "AI绘画", "AI编程", "AI视频", "AI音频", "AI办公", "AI设计", "AI搜索", "AI翻译", "AI自动化", "AI效率", "AI智能体", "AI开发", "AI行业应用"]
     for category in ordered_categories:
         count = category_counts.get(category, 0)
         # 假设分类页面路径为 /category/slug/index.html
