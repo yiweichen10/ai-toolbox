@@ -8808,6 +8808,98 @@ window.__ALL_TOOLS__ = [
     "url": "https://zhi.zuo.xunfei.cn",
     "price": "免费版可用，付费版29元/月起",
     "platform": "网页端、桌面端、移动端"
+  },
+  {
+    "name": "PearAI",
+    "slug": "pear-ai",
+    "emoji": "🍐",
+    "color": "#10B981",
+    "description": "PearAI是一个开源的AI驱动代码编辑器，类似于Cursor和Windsurf，提供智能代码补全、生成、重构和调试功能。2026年版本增强了多模态交互和企业级协作功能，是程序员的高效编程伴侣。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "代码编辑器"
+      },
+      {
+        "text": "开源",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "52万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://pearai.com",
+    "price": "免费版+Pro版（$19/月）",
+    "platform": "Windows、macOS、Linux"
+  },
+  {
+    "name": "Melty",
+    "slug": "melty-ai",
+    "emoji": "✨",
+    "color": "#8B5CF6",
+    "description": "Melty是一款专注于AI内容创作的智能工具，支持多种场景下的文案生成与创意辅助。2026年持续迭代更新，新增多模态交互能力，在AI辅助创作领域展现出独特优势。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "文案生成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约45万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://melty.ai",
+    "price": "基础免费，付费版$12/月起",
+    "platform": "Web/iOS/Android"
+  },
+  {
+    "name": "Kling 3.0",
+    "slug": "kling-3-0",
+    "emoji": "🎬",
+    "color": "#FF4757",
+    "description": "快手可灵AI的2026年最新版本，专注于AI视频生成，支持文生视频、图生视频等多种模式。作为可灵AI的迭代升级，Kling 3.0在生成质量、速度和创意表现上均有显著提升，延续了快手在AI视频领域的技术优势。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "图生视频"
+      },
+      {
+        "text": "2026年新版本"
+      },
+      {
+        "text": "国产AI工具"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "约500万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://kling.kuaishou.com",
+    "price": "免费版可用，会员$12.99/月起",
+    "platform": "Web、iOS、Android"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -17389,5 +17481,97 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://zhi.zuo.xunfei.cn",
     "price": "免费版可用，付费版29元/月起",
     "platform": "网页端、桌面端、移动端"
+  },
+  {
+    "name": "PearAI",
+    "slug": "pear-ai",
+    "emoji": "🍐",
+    "color": "#10B981",
+    "description": "PearAI是一个开源的AI驱动代码编辑器，类似于Cursor和Windsurf，提供智能代码补全、生成、重构和调试功能。2026年版本增强了多模态交互和企业级协作功能，是程序员的高效编程伴侣。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "代码编辑器"
+      },
+      {
+        "text": "开源",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "52万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://pearai.com",
+    "price": "免费版+Pro版（$19/月）",
+    "platform": "Windows、macOS、Linux"
+  },
+  {
+    "name": "Melty",
+    "slug": "melty-ai",
+    "emoji": "✨",
+    "color": "#8B5CF6",
+    "description": "Melty是一款专注于AI内容创作的智能工具，支持多种场景下的文案生成与创意辅助。2026年持续迭代更新，新增多模态交互能力，在AI辅助创作领域展现出独特优势。",
+    "category": "AI写作",
+    "tags": [
+      {
+        "text": "AI写作"
+      },
+      {
+        "text": "内容创作"
+      },
+      {
+        "text": "文案生成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约45万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://melty.ai",
+    "price": "基础免费，付费版$12/月起",
+    "platform": "Web/iOS/Android"
+  },
+  {
+    "name": "Kling 3.0",
+    "slug": "kling-3-0",
+    "emoji": "🎬",
+    "color": "#FF4757",
+    "description": "快手可灵AI的2026年最新版本，专注于AI视频生成，支持文生视频、图生视频等多种模式。作为可灵AI的迭代升级，Kling 3.0在生成质量、速度和创意表现上均有显著提升，延续了快手在AI视频领域的技术优势。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "图生视频"
+      },
+      {
+        "text": "2026年新版本"
+      },
+      {
+        "text": "国产AI工具"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "约500万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://kling.kuaishou.com",
+    "price": "免费版可用，会员$12.99/月起",
+    "platform": "Web、iOS、Android"
   }
 ];
