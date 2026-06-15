@@ -8868,6 +8868,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/iOS/Android"
   },
   {
+    "name": "Augment Code",
+    "slug": "augment-code",
+    "emoji": "💻",
+    "color": "#6366F1",
+    "description": "Augment Code是一款专注于软件开发的人工智能编程助手，通过先进的代码理解和生成能力，帮助开发者更高效地编写、调试和优化代码。2026年最新版本增强了代码解释、多文件分析和自动化重构功能，成为程序员提升生产力的热门选择。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "代码调试"
+      },
+      {
+        "text": "软件开发",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://augmentcode.com",
+    "price": "免费版可用，Pro版$19/月",
+    "platform": "VS Code、JetBrains IDEs、Neovim、Vim"
+  },
+  {
     "name": "Kling 3.0",
     "slug": "kling-3-0",
     "emoji": "🎬",
@@ -8900,6 +8932,72 @@ window.__ALL_TOOLS__ = [
     "url": "https://kling.kuaishou.com",
     "price": "免费版可用，会员$12.99/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "MusicFX",
+    "slug": "musicfx",
+    "emoji": "🎵",
+    "color": "#4285F4",
+    "description": "MusicFX是Google推出的AI音乐生成工具，利用先进的机器学习技术根据文本提示创作音乐片段。2026年已支持更长的音频时长和更精细的风格控制，成为音乐创作者的重要辅助工具。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "Google AI"
+      },
+      {
+        "text": "音频创作"
+      },
+      {
+        "text": "免费使用"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://musicfx.google.com",
+    "price": "免费",
+    "platform": "网页端"
+  },
+  {
+    "name": "CosyVoice",
+    "slug": "cosy-voice",
+    "emoji": "🎙️",
+    "color": "#FF6B00",
+    "description": "CosyVoice是阿里通义千问团队开源的语音合成大模型，支持多语言、多音色、高自然度的语音生成。2026年推出企业版API，提供更稳定的并发服务和定制音色功能，广泛应用于有声内容创作、智能客服、视频配音等领域。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "语音合成"
+      },
+      {
+        "text": "TTS"
+      },
+      {
+        "text": "多语言支持"
+      },
+      {
+        "text": "阿里系",
+        "type": "free"
+      },
+      {
+        "text": "开源"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://cosyvoice.com",
+    "price": "免费版基础可用，企业版按调用量计费",
+    "platform": "Web/移动端/API"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -17541,6 +17639,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web/iOS/Android"
   },
   {
+    "name": "Augment Code",
+    "slug": "augment-code",
+    "emoji": "💻",
+    "color": "#6366F1",
+    "description": "Augment Code是一款专注于软件开发的人工智能编程助手，通过先进的代码理解和生成能力，帮助开发者更高效地编写、调试和优化代码。2026年最新版本增强了代码解释、多文件分析和自动化重构功能，成为程序员提升生产力的热门选择。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "代码调试"
+      },
+      {
+        "text": "软件开发",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://augmentcode.com",
+    "price": "免费版可用，Pro版$19/月",
+    "platform": "VS Code、JetBrains IDEs、Neovim、Vim"
+  },
+  {
     "name": "Kling 3.0",
     "slug": "kling-3-0",
     "emoji": "🎬",
@@ -17573,5 +17703,71 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://kling.kuaishou.com",
     "price": "免费版可用，会员$12.99/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "MusicFX",
+    "slug": "musicfx",
+    "emoji": "🎵",
+    "color": "#4285F4",
+    "description": "MusicFX是Google推出的AI音乐生成工具，利用先进的机器学习技术根据文本提示创作音乐片段。2026年已支持更长的音频时长和更精细的风格控制，成为音乐创作者的重要辅助工具。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成"
+      },
+      {
+        "text": "Google AI"
+      },
+      {
+        "text": "音频创作"
+      },
+      {
+        "text": "免费使用"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://musicfx.google.com",
+    "price": "免费",
+    "platform": "网页端"
+  },
+  {
+    "name": "CosyVoice",
+    "slug": "cosy-voice",
+    "emoji": "🎙️",
+    "color": "#FF6B00",
+    "description": "CosyVoice是阿里通义千问团队开源的语音合成大模型，支持多语言、多音色、高自然度的语音生成。2026年推出企业版API，提供更稳定的并发服务和定制音色功能，广泛应用于有声内容创作、智能客服、视频配音等领域。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "语音合成"
+      },
+      {
+        "text": "TTS"
+      },
+      {
+        "text": "多语言支持"
+      },
+      {
+        "text": "阿里系",
+        "type": "free"
+      },
+      {
+        "text": "开源"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://cosyvoice.com",
+    "price": "免费版基础可用，企业版按调用量计费",
+    "platform": "Web/移动端/API"
   }
 ];
