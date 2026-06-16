@@ -8810,6 +8810,73 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、桌面端、移动端"
   },
   {
+    "name": "OpenClaw",
+    "slug": "openclaw",
+    "emoji": "🦞",
+    "color": "#FF6B35",
+    "description": "OpenClaw是一款开源的AI驱动网页数据抓取与采集工具，通过智能解析技术自动识别网页结构，实现高效精准的数据提取。2026年持续更新，支持多种复杂网页场景的自动化采集。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "网页抓取"
+      },
+      {
+        "text": "数据采集"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "自动化",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约8万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://github.com/openclaw",
+    "price": "免费开源版/付费企业版",
+    "platform": "Web/桌面端"
+  },
+  {
+    "name": "Modelscope-Agent",
+    "slug": "modelscope-agent",
+    "emoji": "🤖",
+    "color": "#4C1EFF",
+    "description": "阿里魔搭（Modelscope）推出的AI Agent开发框架，提供多模型编排、工具调用、记忆管理等核心能力，帮助开发者快速构建企业级AI智能体应用。2026年持续更新Agent工作流编排能力，支持更复杂的业务场景集成。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "AI Agent"
+      },
+      {
+        "text": "智能体开发"
+      },
+      {
+        "text": "多模型编排"
+      },
+      {
+        "text": "阿里魔搭"
+      },
+      {
+        "text": "开源框架",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://modelscope.cn/agent",
+    "price": "免费开源",
+    "platform": "Web浏览器"
+  },
+  {
     "name": "PearAI",
     "slug": "pear-ai",
     "emoji": "🍐",
@@ -8998,6 +9065,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://cosyvoice.com",
     "price": "免费版基础可用，企业版按调用量计费",
     "platform": "Web/移动端/API"
+  },
+  {
+    "name": "Milvus",
+    "slug": "milvus",
+    "emoji": "🗄️",
+    "color": "#6B5CE7",
+    "description": "Milvus是全球领先的开源向量数据库，专注于高性能向量相似度搜索和大规模AI应用场景。截至2026年，Milvus已支持数十亿级向量数据的毫秒级检索，广泛应用于语义搜索、图像检索、推荐系统和RAG场景。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "向量数据库"
+      },
+      {
+        "text": "AI基础设施"
+      },
+      {
+        "text": "开源数据库"
+      },
+      {
+        "text": "相似度搜索",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "约85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://milvus.io",
+    "price": "开源免费，云服务订阅制",
+    "platform": "Docker、Kubernetes、Python、Go、Java、RESTful API"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -17581,6 +17680,73 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、桌面端、移动端"
   },
   {
+    "name": "OpenClaw",
+    "slug": "openclaw",
+    "emoji": "🦞",
+    "color": "#FF6B35",
+    "description": "OpenClaw是一款开源的AI驱动网页数据抓取与采集工具，通过智能解析技术自动识别网页结构，实现高效精准的数据提取。2026年持续更新，支持多种复杂网页场景的自动化采集。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "网页抓取"
+      },
+      {
+        "text": "数据采集"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "自动化",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约8万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://github.com/openclaw",
+    "price": "免费开源版/付费企业版",
+    "platform": "Web/桌面端"
+  },
+  {
+    "name": "Modelscope-Agent",
+    "slug": "modelscope-agent",
+    "emoji": "🤖",
+    "color": "#4C1EFF",
+    "description": "阿里魔搭（Modelscope）推出的AI Agent开发框架，提供多模型编排、工具调用、记忆管理等核心能力，帮助开发者快速构建企业级AI智能体应用。2026年持续更新Agent工作流编排能力，支持更复杂的业务场景集成。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "AI Agent"
+      },
+      {
+        "text": "智能体开发"
+      },
+      {
+        "text": "多模型编排"
+      },
+      {
+        "text": "阿里魔搭"
+      },
+      {
+        "text": "开源框架",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://modelscope.cn/agent",
+    "price": "免费开源",
+    "platform": "Web浏览器"
+  },
+  {
     "name": "PearAI",
     "slug": "pear-ai",
     "emoji": "🍐",
@@ -17769,5 +17935,37 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://cosyvoice.com",
     "price": "免费版基础可用，企业版按调用量计费",
     "platform": "Web/移动端/API"
+  },
+  {
+    "name": "Milvus",
+    "slug": "milvus",
+    "emoji": "🗄️",
+    "color": "#6B5CE7",
+    "description": "Milvus是全球领先的开源向量数据库，专注于高性能向量相似度搜索和大规模AI应用场景。截至2026年，Milvus已支持数十亿级向量数据的毫秒级检索，广泛应用于语义搜索、图像检索、推荐系统和RAG场景。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "向量数据库"
+      },
+      {
+        "text": "AI基础设施"
+      },
+      {
+        "text": "开源数据库"
+      },
+      {
+        "text": "相似度搜索",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "约85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://milvus.io",
+    "price": "开源免费，云服务订阅制",
+    "platform": "Docker、Kubernetes、Python、Go、Java、RESTful API"
   }
 ];
