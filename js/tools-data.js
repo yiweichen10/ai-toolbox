@@ -8842,6 +8842,41 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/桌面端"
   },
   {
+    "name": "AG2",
+    "slug": "ag2",
+    "emoji": "🤖",
+    "color": "#6366F1",
+    "description": "AG2是2026年推出的新一代AI编程开发平台，采用混合专家架构，专注于代码智能生成、自动化调试与重构支持。它能够理解复杂的编程上下文，提供精准的代码建议和多语言开发支持，适合各水平开发者使用。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "代码生成"
+      },
+      {
+        "text": "智能补全"
+      },
+      {
+        "text": "代码重构",
+        "type": "free"
+      },
+      {
+        "text": "自动化测试"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "45万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://ag2.ai",
+    "price": "免费版可用，专业版$19/月",
+    "platform": "Web / VS Code / JetBrains / CLI"
+  },
+  {
     "name": "Modelscope-Agent",
     "slug": "modelscope-agent",
     "emoji": "🤖",
@@ -8967,6 +9002,37 @@ window.__ALL_TOOLS__ = [
     "platform": "VS Code、JetBrains IDEs、Neovim、Vim"
   },
   {
+    "name": "OpenCode",
+    "slug": "opencode",
+    "emoji": "💻",
+    "color": "#2563EB",
+    "description": "OpenCode是一款新一代AI编程助手，通过深度学习模型为开发者提供智能代码补全、生成和调试功能。支持多种主流编程语言，集成于主流IDE中，帮助开发者显著提升编码效率。2026年推出的最新版本增加了上下文理解和多文件分析能力。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "智能代码生成"
+      },
+      {
+        "text": "开发者工具"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约50万月访问",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://opencode.ai",
+    "price": "免费版和专业版，专业版$19/月",
+    "platform": "VS Code、JetBrains IDEs、Visual Studio、Neovim"
+  },
+  {
     "name": "Kling 3.0",
     "slug": "kling-3-0",
     "emoji": "🎬",
@@ -8999,6 +9065,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://kling.kuaishou.com",
     "price": "免费版可用，会员$12.99/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Pollinations",
+    "slug": "pollinations",
+    "emoji": "🎨",
+    "color": "#10B981",
+    "description": "Pollinations是一个AI图像生成平台，通过文字描述快速生成高质量图像。支持多种艺术风格和模型选择，提供免费和付费版本。平台持续更新，2026年已集成最新的图像生成模型，在生成速度和图像质量方面都有显著提升。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI图像生成"
+      },
+      {
+        "text": "文字转图片"
+      },
+      {
+        "text": "AI艺术创作"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "多风格支持",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "520万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://pollinations.ai",
+    "price": "免费版可用，付费版$9.99/月起",
+    "platform": "网页端、iOS、Android"
   },
   {
     "name": "MusicFX",
@@ -17712,6 +17813,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web/桌面端"
   },
   {
+    "name": "AG2",
+    "slug": "ag2",
+    "emoji": "🤖",
+    "color": "#6366F1",
+    "description": "AG2是2026年推出的新一代AI编程开发平台，采用混合专家架构，专注于代码智能生成、自动化调试与重构支持。它能够理解复杂的编程上下文，提供精准的代码建议和多语言开发支持，适合各水平开发者使用。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "AI编程"
+      },
+      {
+        "text": "代码生成"
+      },
+      {
+        "text": "智能补全"
+      },
+      {
+        "text": "代码重构",
+        "type": "free"
+      },
+      {
+        "text": "自动化测试"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "45万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://ag2.ai",
+    "price": "免费版可用，专业版$19/月",
+    "platform": "Web / VS Code / JetBrains / CLI"
+  },
+  {
     "name": "Modelscope-Agent",
     "slug": "modelscope-agent",
     "emoji": "🤖",
@@ -17837,6 +17973,37 @@ window.__REMAINING_TOOLS__ = [
     "platform": "VS Code、JetBrains IDEs、Neovim、Vim"
   },
   {
+    "name": "OpenCode",
+    "slug": "opencode",
+    "emoji": "💻",
+    "color": "#2563EB",
+    "description": "OpenCode是一款新一代AI编程助手，通过深度学习模型为开发者提供智能代码补全、生成和调试功能。支持多种主流编程语言，集成于主流IDE中，帮助开发者显著提升编码效率。2026年推出的最新版本增加了上下文理解和多文件分析能力。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "智能代码生成"
+      },
+      {
+        "text": "开发者工具"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约50万月访问",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://opencode.ai",
+    "price": "免费版和专业版，专业版$19/月",
+    "platform": "VS Code、JetBrains IDEs、Visual Studio、Neovim"
+  },
+  {
     "name": "Kling 3.0",
     "slug": "kling-3-0",
     "emoji": "🎬",
@@ -17869,6 +18036,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://kling.kuaishou.com",
     "price": "免费版可用，会员$12.99/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Pollinations",
+    "slug": "pollinations",
+    "emoji": "🎨",
+    "color": "#10B981",
+    "description": "Pollinations是一个AI图像生成平台，通过文字描述快速生成高质量图像。支持多种艺术风格和模型选择，提供免费和付费版本。平台持续更新，2026年已集成最新的图像生成模型，在生成速度和图像质量方面都有显著提升。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI图像生成"
+      },
+      {
+        "text": "文字转图片"
+      },
+      {
+        "text": "AI艺术创作"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "多风格支持",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "520万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://pollinations.ai",
+    "price": "免费版可用，付费版$9.99/月起",
+    "platform": "网页端、iOS、Android"
   },
   {
     "name": "MusicFX",
