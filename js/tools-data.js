@@ -8877,6 +8877,41 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / VS Code / JetBrains / CLI"
   },
   {
+    "name": "Langflow",
+    "slug": "langflow",
+    "emoji": "🔗",
+    "color": "#7C3AED",
+    "description": "Langflow是一个开源的可视化AI工作流构建平台，基于LangChain构建，提供拖拽式界面帮助开发者快速创建复杂的LLM应用程序。2026年最新版本增强了多模态支持和企业级部署功能，已成为AI应用开发领域的主流工具之一。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "可视化工作流"
+      },
+      {
+        "text": "LangChain"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "AI应用开发"
+      },
+      {
+        "text": "RAG",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://langflow.org",
+    "price": "免费社区版 + Pro版$49/月",
+    "platform": "Web/桌面端/云服务"
+  },
+  {
     "name": "Modelscope-Agent",
     "slug": "modelscope-agent",
     "emoji": "🤖",
@@ -9133,6 +9168,38 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端"
   },
   {
+    "name": "Riffusion",
+    "slug": "riffusion",
+    "emoji": "🎵",
+    "color": "#FF4757",
+    "description": "Riffusion是一款基于Stable Diffusion微调的AI音乐生成模型，能够通过文本提示实时生成音乐和音频片段。2026年已支持多轨音频编辑和商业授权选项，成为独立音乐人和内容创作者的首选工具之一。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成",
+        "type": "free"
+      },
+      {
+        "text": "实时音频合成"
+      },
+      {
+        "text": "文本转音乐"
+      },
+      {
+        "text": "免费使用"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://riffusion.com",
+    "price": "免费版可用，Pro版$9.9/月",
+    "platform": "Web/iOS/Android"
+  },
+  {
     "name": "CosyVoice",
     "slug": "cosy-voice",
     "emoji": "🎙️",
@@ -9166,6 +9233,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://cosyvoice.com",
     "price": "免费版基础可用，企业版按调用量计费",
     "platform": "Web/移动端/API"
+  },
+  {
+    "name": "ChatTTS",
+    "slug": "chat-tts",
+    "emoji": "🎙️",
+    "color": "#FF6B6B",
+    "description": "ChatTTS是一款开源的对话式文本转语音模型，专门针对日常对话场景优化，支持中英文双语生成，语音自然流畅。截至2026年，ChatTTS已成为开源社区最受欢迎的TTS工具之一，拥有活跃的开发者社区和持续更新的模型版本。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "文本转语音"
+      },
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "对话式TTS"
+      },
+      {
+        "text": "中文语音合成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://github.com/2noise/ChatTTS",
+    "price": "免费开源",
+    "platform": "Web/Windows/Mac/Linux"
   },
   {
     "name": "Milvus",
@@ -17848,6 +17947,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / VS Code / JetBrains / CLI"
   },
   {
+    "name": "Langflow",
+    "slug": "langflow",
+    "emoji": "🔗",
+    "color": "#7C3AED",
+    "description": "Langflow是一个开源的可视化AI工作流构建平台，基于LangChain构建，提供拖拽式界面帮助开发者快速创建复杂的LLM应用程序。2026年最新版本增强了多模态支持和企业级部署功能，已成为AI应用开发领域的主流工具之一。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "可视化工作流"
+      },
+      {
+        "text": "LangChain"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "AI应用开发"
+      },
+      {
+        "text": "RAG",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://langflow.org",
+    "price": "免费社区版 + Pro版$49/月",
+    "platform": "Web/桌面端/云服务"
+  },
+  {
     "name": "Modelscope-Agent",
     "slug": "modelscope-agent",
     "emoji": "🤖",
@@ -18104,6 +18238,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端"
   },
   {
+    "name": "Riffusion",
+    "slug": "riffusion",
+    "emoji": "🎵",
+    "color": "#FF4757",
+    "description": "Riffusion是一款基于Stable Diffusion微调的AI音乐生成模型，能够通过文本提示实时生成音乐和音频片段。2026年已支持多轨音频编辑和商业授权选项，成为独立音乐人和内容创作者的首选工具之一。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "AI音乐生成",
+        "type": "free"
+      },
+      {
+        "text": "实时音频合成"
+      },
+      {
+        "text": "文本转音乐"
+      },
+      {
+        "text": "免费使用"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://riffusion.com",
+    "price": "免费版可用，Pro版$9.9/月",
+    "platform": "Web/iOS/Android"
+  },
+  {
     "name": "CosyVoice",
     "slug": "cosy-voice",
     "emoji": "🎙️",
@@ -18137,6 +18303,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://cosyvoice.com",
     "price": "免费版基础可用，企业版按调用量计费",
     "platform": "Web/移动端/API"
+  },
+  {
+    "name": "ChatTTS",
+    "slug": "chat-tts",
+    "emoji": "🎙️",
+    "color": "#FF6B6B",
+    "description": "ChatTTS是一款开源的对话式文本转语音模型，专门针对日常对话场景优化，支持中英文双语生成，语音自然流畅。截至2026年，ChatTTS已成为开源社区最受欢迎的TTS工具之一，拥有活跃的开发者社区和持续更新的模型版本。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "文本转语音"
+      },
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "对话式TTS"
+      },
+      {
+        "text": "中文语音合成",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万/月",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://github.com/2noise/ChatTTS",
+    "price": "免费开源",
+    "platform": "Web/Windows/Mac/Linux"
   },
   {
     "name": "Milvus",
