@@ -15,3 +15,11 @@
 - **Baidu Push**: 继续 over quota，84条URL被拒
 - **IndexNow**: 无新URL需推送（391条已全部推送过）
 - **结果**: ✅ 全部成功（百度推送持续受限）
+
+## 2026-06-17 14:40 (自动化任务)
+
+- **Step1**: 发布3个工具（AG2, Pollinations, OpenCode）→ 库存 297/320，未发布23个，无补货需求
+- **Step2**: deploy.sh 构建+增量部署（阿里云 121.43.144.99）+ Git commit (d8b535b4) + push（首次重试成功）
+- **Baidu Push**: 继续 over quota，136条URL被拒
+- **IndexNow**: 无新URL需推送（443条已全部推送过）
+- **结果**: ✅ 全部成功
