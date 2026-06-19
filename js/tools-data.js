@@ -7832,6 +7832,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Agent Browser",
+    "slug": "agent-browser",
+    "emoji": "🖥️",
+    "color": "#4F46E5",
+    "description": "Agent Browser是一款AI驱动的智能浏览器助手，能够自动化完成网页操作、数据抓取和在线任务。2026年推出的最新版本增强了多标签页管理和智能表单填写功能，成为提升在线工作效率的利器。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI浏览器"
+      },
+      {
+        "text": "自动化工具"
+      },
+      {
+        "text": "效率提升",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约50万月访问量",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://agentbrowser.ai",
+    "price": "免费版可用，付费版$9.9/月起",
+    "platform": "Chrome、Firefox、Edge浏览器扩展，支持Windows和macOS"
+  },
+  {
     "name": "Browser Use",
     "slug": "browser-use",
     "emoji": "🌐",
@@ -7858,6 +7887,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://browser-use.com",
     "price": "免费开源，付费版约$19/月",
     "platform": "支持Windows、macOS、Linux，兼容Chrome、Firefox、Edge"
+  },
+  {
+    "name": "DeepSec",
+    "slug": "deepsec",
+    "emoji": "🔒",
+    "color": "#1E3A5F",
+    "description": "DeepSec是一款专注于网络安全与AI深度融合的智能安全平台，集成AI辅助渗透测试、漏洞检测、威胁情报分析和自动化安全审计功能。2026年已升级至3.0版本，新增AI威胁预测和自适应防御建议模块，是安全从业者的智能助手。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "网络安全"
+      },
+      {
+        "text": "渗透测试"
+      },
+      {
+        "text": "漏洞扫描"
+      },
+      {
+        "text": "威胁检测"
+      },
+      {
+        "text": "AI安全",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://deepsec.io",
+    "price": "免费版/专业版($49/月)/企业版(定制)",
+    "platform": "Web/Windows/macOS/Linux"
   },
   {
     "name": "Xint Code",
@@ -8875,6 +8939,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://ag2.ai",
     "price": "免费版可用，专业版$19/月",
     "platform": "Web / VS Code / JetBrains / CLI"
+  },
+  {
+    "name": "OpenAI Agents SDK",
+    "slug": "openai-agents-sdk",
+    "emoji": "🤖",
+    "color": "#10A37F",
+    "description": "OpenAI Agents SDK是OpenAI于2024年底发布的官方AI代理开发框架，为开发者提供构建、部署和管理AI代理的完整工具链，支持多代理协作和复杂任务编排。截至2026年已迭代至v2.4版本，成为企业级AI应用开发的首选方案。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "AI代理开发"
+      },
+      {
+        "text": "多代理系统"
+      },
+      {
+        "text": "任务编排"
+      },
+      {
+        "text": "企业级AI",
+        "type": "free"
+      },
+      {
+        "text": "OpenAI生态"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://platform.openai.com/docs/agents",
+    "price": "按调用量计费，GPT-4o代理API $15/百万token",
+    "platform": "Python、Node.js、REST API"
   },
   {
     "name": "Langflow",
@@ -16902,6 +17001,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / iOS / Android"
   },
   {
+    "name": "Agent Browser",
+    "slug": "agent-browser",
+    "emoji": "🖥️",
+    "color": "#4F46E5",
+    "description": "Agent Browser是一款AI驱动的智能浏览器助手，能够自动化完成网页操作、数据抓取和在线任务。2026年推出的最新版本增强了多标签页管理和智能表单填写功能，成为提升在线工作效率的利器。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI浏览器"
+      },
+      {
+        "text": "自动化工具"
+      },
+      {
+        "text": "效率提升",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约50万月访问量",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://agentbrowser.ai",
+    "price": "免费版可用，付费版$9.9/月起",
+    "platform": "Chrome、Firefox、Edge浏览器扩展，支持Windows和macOS"
+  },
+  {
     "name": "Browser Use",
     "slug": "browser-use",
     "emoji": "🌐",
@@ -16928,6 +17056,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://browser-use.com",
     "price": "免费开源，付费版约$19/月",
     "platform": "支持Windows、macOS、Linux，兼容Chrome、Firefox、Edge"
+  },
+  {
+    "name": "DeepSec",
+    "slug": "deepsec",
+    "emoji": "🔒",
+    "color": "#1E3A5F",
+    "description": "DeepSec是一款专注于网络安全与AI深度融合的智能安全平台，集成AI辅助渗透测试、漏洞检测、威胁情报分析和自动化安全审计功能。2026年已升级至3.0版本，新增AI威胁预测和自适应防御建议模块，是安全从业者的智能助手。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "网络安全"
+      },
+      {
+        "text": "渗透测试"
+      },
+      {
+        "text": "漏洞扫描"
+      },
+      {
+        "text": "威胁检测"
+      },
+      {
+        "text": "AI安全",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约85万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://deepsec.io",
+    "price": "免费版/专业版($49/月)/企业版(定制)",
+    "platform": "Web/Windows/macOS/Linux"
   },
   {
     "name": "Xint Code",
@@ -17945,6 +18108,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://ag2.ai",
     "price": "免费版可用，专业版$19/月",
     "platform": "Web / VS Code / JetBrains / CLI"
+  },
+  {
+    "name": "OpenAI Agents SDK",
+    "slug": "openai-agents-sdk",
+    "emoji": "🤖",
+    "color": "#10A37F",
+    "description": "OpenAI Agents SDK是OpenAI于2024年底发布的官方AI代理开发框架，为开发者提供构建、部署和管理AI代理的完整工具链，支持多代理协作和复杂任务编排。截至2026年已迭代至v2.4版本，成为企业级AI应用开发的首选方案。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "AI代理开发"
+      },
+      {
+        "text": "多代理系统"
+      },
+      {
+        "text": "任务编排"
+      },
+      {
+        "text": "企业级AI",
+        "type": "free"
+      },
+      {
+        "text": "OpenAI生态"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://platform.openai.com/docs/agents",
+    "price": "按调用量计费，GPT-4o代理API $15/百万token",
+    "platform": "Python、Node.js、REST API"
   },
   {
     "name": "Langflow",
