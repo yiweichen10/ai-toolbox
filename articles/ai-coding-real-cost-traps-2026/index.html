@@ -140,7 +140,7 @@ var _hmt = _hmt || [];
                 <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
                 <span style="color:#555;">Anthropic因CMS配置失误泄露3000份内部文件（含Claude Mythos机密）、Cline+DeepSeek免费组合实测碾压$20/月付费工具、中国大模型周调用量4.69万亿Token反超美国。从三个真实事件出发，拆解AI编程工具的五大隐性成本陷阱，给你一套月费$10以内的最优配置方案。</span>
             </div>
-            <h2>前言</h2>
+            <h2 id="section-前言">前言</h2>
 
 <p>三件事凑到一起，让我重新审视了我花在AI编程上的钱。
 </p>
@@ -157,7 +157,7 @@ var _hmt = _hmt || [];
 <p>这三件事指向同一个结论：<strong>2026年的AI编程市场，不是"用什么工具"的问题，而是"你是不是在给工具商送钱"的问题。</strong> 这篇文章从三个真实事件出发，拆解AI编程工具的隐性成本，给你一套经实测验证的最优配置。
 </p>
 
-<h2>Anthropic泄露：当"安全第一"的公司被自己的CMS出卖</h2>
+<h2 id="section-anthropic泄露-当-安全第一-的公司被自己的cms出卖">Anthropic泄露：当"安全第一"的公司被自己的CMS出卖</h2>
 
 <h3>发生了什么</h3>
 
@@ -204,7 +204,7 @@ var _hmt = _hmt || [];
 <li><strong>Claude Mythos出来后会涨价吗？</strong> 几乎100%会。Anthropic的定价策略是"新模型定价显著高于旧模型"，Mythos的API价格大概率会超过Opus 4.6的$5/$25。</li>
 <li><strong>Opus 4.6会不会很快被降级？</strong> Anthropic每次发新旗舰，老旗舰就会降价或被归入"旧版"。如果你刚订阅了Claude Code Pro用Opus 4.6，可能很快就变成"花旗舰的钱用次旗舰的模型"。</li>
 </ul>
-<h2>我的成本实测：$5 vs $143</h2>
+<h2 id="section-我的成本实测-5-vs-143">我的成本实测：$5 vs $143</h2>
 
 <p>泄露事件让我重新审视了自己的AI编程支出。我做了一周的对照实验——同样的工作内容，分别用两套方案跑。
 </p>
@@ -237,7 +237,7 @@ var _hmt = _hmt || [];
 <p>这才是真正的坑：<strong>标价$20/月，实际月费可能到$600。</strong> Anthropic的定价页面不会告诉你这个数字。
 </p>
 
-<h2>中国大模型调用量反超：你的钱可以更省</h2>
+<h2 id="section-中国大模型调用量反超-你的钱可以更省">中国大模型调用量反超：你的钱可以更省</h2>
 
 <h3>4.69万亿Token意味着什么</h3>
 
@@ -266,7 +266,7 @@ var _hmt = _hmt || [];
 <p>如果你在用<a href="https://www.aitoollab.cn/tools/cursor/index.html" target="_blank" rel="noopener">Cline</a>做日常编码，Kimi K2.5是比DeepSeek更值得考虑的选择——Cloudflare的背书比任何评测都有说服力。
 </p>
 
-<h2>五大隐性成本陷阱</h2>
+<h2 id="section-五大隐性成本陷阱">五大隐性成本陷阱</h2>
 
 <p>结合我的实测经验和行业观察，AI编程工具有五个常见的隐性成本陷阱。
 </p>
@@ -320,7 +320,7 @@ var _hmt = _hmt || [];
 <p>信任成本的量化方式：如果你的代码涉及核心商业逻辑或敏感数据处理，用Claude API的风险溢价应该计入成本。即使风险实际很低，你投入的"额外关注和担忧"本身也是成本。
 </p>
 
-<h2>我的最终配置方案（2026年3月实测版）</h2>
+<h2 id="section-我的最终配置方案-2026年3月实测版">我的最终配置方案（2026年3月实测版）</h2>
 
 <p>跑了半个月对照实验后，这是我最推荐的配置：
 </p>
@@ -348,7 +348,7 @@ var _hmt = _hmt || [];
 <p>超过$30/月，说明你在用Claude Code处理它不擅长的任务（比如批量代码生成、简单增删改查）。这些任务用DeepSeek就够了。
 </p>
 
-<h2>对Anthropic泄露事件的个人判断</h2>
+<h2 id="section-对anthropic泄露事件的个人判断">对Anthropic泄露事件的个人判断</h2>
 
 <p>写到最后，我需要表明立场：
 </p>
@@ -362,7 +362,7 @@ var _hmt = _hmt || [];
 </ul>
 <ul><li>对开发者来说，Anthropic事件最大的教训是：<strong>不要把所有鸡蛋放在一个篮子里。</strong> 今天是Anthropic泄露，明天可能是OpenAI、Google。你的技术栈应该能在多个模型之间灵活切换，而不是绑定单一供应商。</li>
 </ul>
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <p><strong>Q1：Anthropic泄露的3000份文件里有什么敏感内容？</strong>
 A：包含员工育儿假记录、CEO闭门峰会纪要、内部安全评估报告、以及最重磅的Claude Mythos（代号Capybara）模型的评估数据。泄露原因是CMS权限配置失误，类似S3存储桶未关闭公开访问。目前 Anthropic 已确认泄露并开始内部审查。
@@ -384,7 +384,7 @@ A：DeepSeek V3.2在SWE-bench上的分数和Claude Sonnet有差距（约39% vs 7
 A：泄露的是内部文件，不是用户数据。你的API请求和代码数据理论上没有被泄露。但如果这次泄露是因为Anthropic内部流程问题，那你不得不考虑：他们的安全管理体系是否真的如他们宣称的那样严谨？如果你处理高度敏感的代码（金融交易逻辑、医疗数据处理），建议用本地部署方案（如OpenClaw + 本地模型）来规避风险。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>2026年3月的AI编程市场，三个信号值得每个开发者关注：
 </p>

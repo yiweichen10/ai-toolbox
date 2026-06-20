@@ -141,7 +141,7 @@ var _hmt = _hmt || [];
 <p>Claude Opus 4.7发布11天了，SWE-bench Pro从53.4%直接跳到64.3%，GPT-5.4还在57.7%原地踏步。但BrowseComp却从84%跌到79.3%，被GPT-5.4的89.3%反超。两个旗舰模型一个在编码狂飙，一个在搜索称王，选错了方向就是浪费钱。我用3天时间把所有公开benchmark和实际体验过了一遍，这篇给你一个清晰的结论。
 </p>
 
-<h2>为什么写这篇</h2>
+<h2 id="section-为什么写这篇">为什么写这篇</h2>
 
 <p>我一直在用<a href="/tools/claude-code/">Claude Code</a>做日常开发，Opus 4.6的编码能力已经让我觉得够用了。4月16号Anthropic突然推了Opus 4.7，说实话第一反应是"又来？"，两个月更新一次旗舰，真的有必要吗？
 </p>
@@ -152,7 +152,7 @@ var _hmt = _hmt || [];
 <p>这些问题的答案，直接关系到每月几十上百块的API账单花得值不值。
 </p>
 
-<h2>编码能力：Claude完胜，没有悬念</h2>
+<h2 id="section-编码能力-claude完胜-没有悬念">编码能力：Claude完胜，没有悬念</h2>
 
 <p>先看最核心的编程benchmark数据：
 </p>
@@ -169,7 +169,7 @@ var _hmt = _hmt || [];
 <p><strong>编码场景结论：无脑选Claude Opus 4.7。</strong>
 </p>
 
-<h2>搜索与知识工作：GPT-5.4反杀</h2>
+<h2 id="section-搜索与知识工作-gpt-5-4反杀">搜索与知识工作：GPT-5.4反杀</h2>
 
 <p>但Claude 4.7不是万能的。看BrowseComp数据：
 </p>
@@ -189,7 +189,7 @@ var _hmt = _hmt || [];
 <p>这说明一个很有意思的分化：<strong>GPT-5.4在信息检索和网页研究上更强，Claude 4.7在深度分析和专业领域推理上更胜</strong>。如果你需要的是"搜遍全网整合信息"，GPT是更好的选择；如果需要的是"给我一个专业级别的深度分析"，Claude更强。
 </p>
 
-<h2>推理与安全：各有千秋</h2>
+<h2 id="section-推理与安全-各有千秋">推理与安全：各有千秋</h2>
 
 <p>通用推理能力：
 </p>
@@ -200,7 +200,7 @@ var _hmt = _hmt || [];
 <p>Claude是首个搭载Project Glasswing安全栈的广泛发布模型，在网络安全任务上领先GPT近7个百分点。如果你在做安全审计、渗透测试相关的Agent，Claude是更好的选择。
 </p>
 
-<h2>视觉能力：3.3倍像素密度提升</h2>
+<h2 id="section-视觉能力-3-3倍像素密度提升">视觉能力：3.3倍像素密度提升</h2>
 
 <p>这是Claude 4.7被低估的一个改进：
 </p>
@@ -211,7 +211,7 @@ var _hmt = _hmt || [];
 <p>实际体验：我之前让4.6读一个12列的Excel截图做数据提取，经常漏掉右侧几列。4.7一次性全部识别，准确率肉眼可见地提高了。
 </p>
 
-<h2>价格：同价竞争，但有个隐藏坑</h2>
+<h2 id="section-价格-同价竞争-但有个隐藏坑">价格：同价竞争，但有个隐藏坑</h2>
 <table><thead><tr><th>项目</th><th>Claude Opus 4.7</th><th>GPT-5.4</th></tr></thead><tbody><tr><td>输入价格</td><td>$5/百万token</td><td>$2.5/百万token</td></tr><tr><td>输出价格</td><td>$25/百万token</td><td>$10/百万token</td></tr><tr><td>上下文窗口</td><td>200K（可扩展至1M）</td><td>200K</td></tr></tbody></table>
 <p>表面上看Claude贵一倍，但有Prompt Caching最高省90%、Batch API省50%的折扣，实际成本没有标价那么夸张。
 </p>
@@ -222,7 +222,7 @@ var _hmt = _hmt || [];
 <p>省钱建议：
 </p>
 <table><thead><tr><th>方案</th><th>月成本估算</th><th>适合人群</th></tr></thead><tbody><tr><td>Claude 4.7 + Caching</td><td>$30-80</td><td>重度编码用户</td></tr><tr><td>GPT-5.4 标准版</td><td>$15-40</td><td>搜索/通用用户</td></tr><tr><td>Claude 4.7 Batch API</td><td>$15-40</td><td>非实时批量任务</td></tr><tr><td>Gemini 3.1 Pro</td><td>$5-15</td><td>预算敏感用户</td></tr></tbody></table>
-<h2>踩坑经验</h2>
+<h2 id="section-踩坑经验">踩坑经验</h2>
 
 <p>这三天的测试中我踩了几个坑，分享给大家：
 </p>
@@ -247,9 +247,9 @@ Claude 4.7在BrowseComp上退步了4.7个百分点，但这是因为Anthropic在
 4.7支持启动多个独立任务并行执行，一个跑测试、一个写文档、一个改代码，互不干扰。对于有多个独立子项目的场景，生产力提升非常明显。
 </p>
 
-<h2>各场景推荐汇总</h2>
+<h2 id="section-各场景推荐汇总">各场景推荐汇总</h2>
 <table><thead><tr><th>使用场景</th><th>推荐模型</th><th>理由</th></tr></thead><tbody><tr><td>AI编程/代码重构</td><td><strong>Claude Opus 4.7</strong></td><td>SWE-bench领先10pp，实际体验差距更大</td></tr><tr><td>网页研究/信息搜索</td><td><strong>GPT-5.4</strong></td><td>BrowseComp领先10pp，搜索质量明显更好</td></tr><tr><td>法律/金融分析</td><td><strong>Claude Opus 4.7</strong></td><td>BigLaw 90.9%，Finance Agent 64.4%</td></tr><tr><td>网络安全审计</td><td><strong>Claude Opus 4.7</strong></td><td>CyberGym领先7pp</td></tr><tr><td>UI截图解析</td><td><strong>Claude Opus 4.7</strong></td><td>3.3倍分辨率提升，XBOW +44pp</td></tr><tr><td>长文档分析</td><td><strong>Claude Opus 4.7</strong></td><td>GDPVal-AA Elo 1,753领先</td></tr><tr><td>预算敏感场景</td><td><strong>Gemini 3.1 Pro</strong></td><td>同性能最便宜</td></tr><tr><td>通用对话</td><td><strong>GPT-5.4</strong></td><td>综合体验更均衡</td></tr></tbody></table>
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <p><strong>Q：Claude 4.7值得从4.6升级吗？</strong>
 如果你主要用Claude做编码，绝对值得。SWE-bench Pro +10.9pp、CursorBench +12pp不是小数目。但如果你主要是做搜索和信息整合，没必要——BrowseComp反而退步了。非编码用户可以等下一代。
@@ -271,7 +271,7 @@ Claude 4.7在BrowseComp上退步了4.7个百分点，但这是因为Anthropic在
 如果你主要在Claude里做编码和写代码，基本没影响。退步的是"自主浏览网页整合信息"的能力，跟编码Agent的日常工作关系不大。但如果你用Claude做研究类任务（比如"帮我调研一下xxx领域的最新进展"），效果确实不如GPT-5.4。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>Claude Opus 4.7和GPT-5.4已经形成了明确的分工：<strong>Claude负责"做"，GPT负责"找"</strong>。
 </p>

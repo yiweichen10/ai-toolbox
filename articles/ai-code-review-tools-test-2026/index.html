@@ -141,7 +141,7 @@ var _hmt = _hmt || [];
 <p>SonarQube精确度72%全场最高，但漏掉了一半以上的Bug；CodeRabbit免费版就能发现52%的问题，噪音率虽高但能用；GitHub Copilot的代码审查？噪音率3.2x，发出的评论里超过三分之二都是废话。这是我用一个月时间跑出来的真实数据。
 </p>
 
-<h2>为什么做这个测试</h2>
+<h2 id="section-为什么做这个测试">为什么做这个测试</h2>
 
 <p>我们团队5个人，日均PR大概15个。以前每个PR至少两个人Review，一天光Review就要花掉3-4小时。今年年初上了AI代码审查工具，选了GitHub Copilot——因为它"已经在那了"，不需要额外配置。
 </p>
@@ -152,7 +152,7 @@ var _hmt = _hmt || [];
 <p>所以我决定认真测一次。不是看官网介绍那种测，而是真刀真枪地埋Bug进去，看谁能找到。
 </p>
 
-<h2>测试方法</h2>
+<h2 id="section-测试方法">测试方法</h2>
 
 <p>我搭了两个测试项目：
 </p>
@@ -170,7 +170,7 @@ var _hmt = _hmt || [];
 <p>每款工具跑三遍取平均值，测试周期2026年3月1日到4月15日。
 </p>
 
-<h2>三张核心数据表</h2>
+<h2 id="section-三张核心数据表">三张核心数据表</h2>
 
 <h3>一、综合得分总表</h3>
 <table><thead><tr><th>工具</th><th>精确度</th><th>召回率</th><th>噪音率</th><th>响应时间</th><th>价格（月/人）</th></tr></thead><tbody><tr><td><strong>SonarQube AI</strong></td><td>72%</td><td>48%</td><td>0.8x</td><td>3分钟</td><td>$150起</td></tr><tr><td><strong>Augment Code Review</strong></td><td>65%</td><td>55%</td><td>1.5x</td><td>45秒</td><td>$48</td></tr><tr><td><strong>CodeRabbit</strong></td><td>58%</td><td>52%</td><td>2.1x</td><td>60秒</td><td>免费/$12</td></tr><tr><td><strong>通义灵码（阿里）</strong></td><td>48%</td><td>53%</td><td>2.5x</td><td>18秒</td><td>免费</td></tr><tr><td><strong>Cursor Bugbot</strong></td><td>55%</td><td>41%</td><td>2.4x</td><td>20秒</td><td>$20</td></tr><tr><td><strong>文心快码（百度）</strong></td><td>45%</td><td>50%</td><td>2.8x</td><td>15秒</td><td>免费</td></tr><tr><td><strong>GitHub Copilot Review</strong></td><td>42%</td><td>38%</td><td>3.2x</td><td>30秒</td><td>$10/$19</td></tr><tr><td><strong>豆包MarsCode</strong></td><td>40%</td><td>35%</td><td>3.5x</td><td>25秒</td><td>免费</td></tr></tbody></table>
@@ -180,7 +180,7 @@ var _hmt = _hmt || [];
 <table><thead><tr><th>工具</th><th>安全漏洞（8个）</th><th>逻辑错误（12个）</th><th>性能问题（6个）</th><th>风格问题（4个）</th></tr></thead><tbody><tr><td>SonarQube AI</td><td>找到6个</td><td>找到5个</td><td>找到2个</td><td>找到1个</td></tr><tr><td>Augment</td><td>找到5个</td><td>找到7个</td><td>找到4个</td><td>找到1个</td></tr><tr><td>CodeRabbit</td><td>找到5个</td><td>找到6个</td><td>找到3个</td><td>找到2个</td></tr><tr><td>通义灵码</td><td>找到4个</td><td>找到6个</td><td>找到4个</td><td>找到2个</td></tr><tr><td>Cursor Bugbot</td><td>找到4个</td><td>找到5个</td><td>找到3个</td><td>找到1个</td></tr><tr><td>文心快码</td><td>找到4个</td><td>找到6个</td><td>找到3个</td><td>找到2个</td></tr><tr><td>GitHub Copilot</td><td>找到3个</td><td>找到4个</td><td>找到3个</td><td>找到2个</td></tr><tr><td>豆包MarsCode</td><td>找到3个</td><td>找到4个</td><td>找到2个</td><td>找到1个</td></tr></tbody></table>
 <h3>三、按团队场景推荐</h3>
 <table><thead><tr><th>场景</th><th>推荐工具</th><th>理由</th></tr></thead><tbody><tr><td>个人开发者/开源项目</td><td>CodeRabbit免费版</td><td>零成本，52%召回率够用</td></tr><tr><td>3-10人小团队</td><td>CodeRabbit Pro</td><td>$12/人/月，性价比最高</td></tr><tr><td>10-50人中型团队</td><td>Augment</td><td>综合平衡最好，跨文件问题发现能力强</td></tr><tr><td>50人以上企业</td><td>SonarQube AI</td><td>精确度最高，支持私有部署</td></tr><tr><td>国内Java/Spring栈</td><td>通义灵码</td><td>免费，Java技术栈优势明显</td></tr><tr><td>中文注释为主的项目</td><td>文心快码</td><td>中文理解能力远超海外工具</td></tr><tr><td>已在用Copilot的团队</td><td>Copilot + CodeRabbit</td><td>Copilot当辅助，CodeRabbit当主力</td></tr></tbody></table>
-<h2>每款工具的使用体验</h2>
+<h2 id="section-每款工具的使用体验">每款工具的使用体验</h2>
 
 <h3>SonarQube AI：精确度之王，但偏保守</h3>
 
@@ -280,7 +280,7 @@ var _hmt = _hmt || [];
 <p>不过如果你是个人开发者，不走PR流程，Claude Code的代码分析能力确实很强，能当半个审查工具用。
 </p>
 
-<h2>几条真实踩坑经验</h2>
+<h2 id="section-几条真实踩坑经验">几条真实踩坑经验</h2>
 
 <p><strong>踩坑1：千万别用默认配置上线</strong>
 </p>
@@ -309,7 +309,7 @@ var _hmt = _hmt || [];
 <p>我一开始同时装了CodeRabbit和Copilot，结果PR评论区变成战场，两个人工Review的意见加上两款AI的评论，信息量过载。最后选了CodeRabbit当主力，Copilot关掉了自动Review。
 </p>
 
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <h3>AI代码审查工具会把我的代码泄露吗？</h3>
 
@@ -336,7 +336,7 @@ var _hmt = _hmt || [];
 <p>如果项目主要是中文注释、国内技术栈（Spring Cloud Alibaba、MyBatis等），通义灵码是最佳选择——免费、Java栈强、本土化好。如果需要PR级自动审查且有GitHub仓库，CodeRabbit更好。如果对数据安全要求极高，SonarQube私有部署是唯一选项。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>如果让我只推荐一款：<strong>个人和小团队选CodeRabbit</strong>，免费版就能用，Pro版$12/人/月性价比最高，配置灵活，社区活跃。<strong>中大型团队选Augment</strong>，综合能力最均衡，跨文件问题发现能力强。<strong>企业合规场景选SonarQube AI</strong>，精确度最高，支持私有部署，虽然贵但值。
 </p>

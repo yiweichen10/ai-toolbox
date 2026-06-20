@@ -2398,7 +2398,7 @@ def build_article_page(article, all_articles, all_tools=None):
     if all_tools:
         article_title = article.get('title', '').lower()
         article_desc = article.get('excerpt', article.get('description', '')).lower()
-        article_content = article.get('content', '').lower()
+        article_content = (article.get('content') or article.get('body', '')).lower()
         # 找工具名在文章中出现的工具
         matched_tools = []
         for t in all_tools:
@@ -2507,7 +2507,7 @@ def build_article_page(article, all_articles, all_tools=None):
     breadcrumb_article_json = json.dumps(breadcrumb_article_data, ensure_ascii=False, indent=2)
 
     # 计算 wordCount（中文字符+英文单词）
-    _content_for_wc = article.get('content', '')
+    _content_for_wc = (article.get('content') or article.get('body', ''))
     import re as _re_wc
     _chinese_chars = len(_re_wc.findall(r'[\u4e00-\u9fff]', _content_for_wc))
     _english_words = len(_re_wc.findall(r'[a-zA-Z]+', _content_for_wc))
@@ -2594,7 +2594,7 @@ def build_article_page(article, all_articles, all_tools=None):
     d_type_keywords = ['指南', '教程', '使用方法', '怎么用', '如何使用', '步骤', '操作', '入门', '上手', '玩法', '如何注册', '如何用']
     is_d_type = any(kw in article.get('title', '') for kw in d_type_keywords)
     if is_d_type:
-        content_raw = article.get('content', '')
+        content_raw = article.get('content') or article.get('body', '')
         # 提取步骤：支持三种格式
         # 1. Markdown h2: ## 标题
         h2_steps = re.findall(r'^## (.+)$', content_raw, re.MULTILINE)
@@ -2635,9 +2635,65 @@ def build_article_page(article, all_articles, all_tools=None):
             howto_schema_json = json.dumps(howto_schema, ensure_ascii=False, indent=2)
 
     # 渲染文章内容，剥离开头重复的H1标题（模板已有<h1>）
-    content_md = article.get('content', '')
+    content_md = article.get('content') or article.get('body', '')
     content_md = re.sub(r'^# .+\n?', '', content_md)
     content_html = markdown_to_html(content_md)
+
+    # ═══════════════════════════════════════════════════════
+    # 自动补全 TOC 锚点：如果 h2 缺 id 或 TOC 项缺 <a href>，自动生成
+    # ═══════════════════════════════════════════════════════
+    h2_tags = re.findall(r'<h2(?P<attrs>[^>]*)>(?P<text>.+?)</h2>', content_html)
+    # 过滤掉 TOC 内部的 h2（目录/本文导航 等，不需要 id）
+    body_h2s = [(attrs, text) for attrs, text in h2_tags
+                if not any(skip in text for skip in ['目录', '本文导航', '📑'])]
+
+    # Step 1: 给没有 id 的 body h2 自动生成 id
+    needs_fix = [(attrs, text) for attrs, text in body_h2s if 'id=' not in attrs]
+    if needs_fix:
+        for i, (attrs, text) in enumerate(needs_fix):
+            # 生成稳定的 id：用 h2 文本做 slug
+            section_id = 'section-' + re.sub(r'[^\w\u4e00-\u9fff]+', '-', text.strip()).strip('-').lower()
+            # 如果 id 重复，加序号
+            existing_ids = set(re.findall(r'id="([^"]+)"', content_html))
+            counter = 1
+            base_id = section_id
+            while section_id in existing_ids:
+                section_id = f'{base_id}-{counter}'
+                counter += 1
+            old_h2 = f'<h2{attrs}>{text}</h2>'
+            new_h2 = f'<h2{attrs} id="{section_id}">{text}</h2>'
+            content_html = content_html.replace(old_h2, new_h2, 1)
+
+    # Step 2: 给没有 <a href> 链接的 TOC <li> 项添加锚点
+    def _auto_link_toc(content, toc_match_start, toc_match_end):
+        """给 TOC 中无链接的 li 项自动添加 <a href>"""
+        toc_block = content[toc_match_start:toc_match_end]
+        li_pattern = re.compile(r'<li>\s*(.+?)\s*</li>', re.DOTALL)
+        items = li_pattern.findall(toc_block)
+        has_links = any('<a ' in item for item in items)
+        if has_links:
+            return content  # 已有链接，跳过
+
+        # 提取所有 h2 的 id 用于匹配
+        h2_id_text = re.findall(r'<h2[^>]*id="([^"]+)"[^>]*>(.+?)</h2>', content)
+        if len(h2_id_text) != len(items):
+            return content  # 数量对不上，不自动匹配
+
+        for (item_text, (h2_id, _)) in zip(items, h2_id_text):
+            old = f'<li>{item_text}</li>'
+            new = f'<li><a href="#{h2_id}">{item_text.strip()}</a></li>'
+            content = content.replace(old, new, 1)
+        return content
+
+    # 查找 table-of-contents div
+    toc_div_match = re.search(r'<div class="table-of-contents">.*?</div>', content_html, re.DOTALL)
+    if toc_div_match:
+        content_html = _auto_link_toc(content_html, toc_div_match.start(), toc_div_match.end())
+    else:
+        # 查找 "本文导航" 后面的 ol
+        nav_match = re.search(r'<h2[^>]*>本文导航</h2>\s*<ol>.*?</ol>', content_html, re.DOTALL)
+        if nav_match:
+            content_html = _auto_link_toc(content_html, nav_match.start(), nav_match.end())
 
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">

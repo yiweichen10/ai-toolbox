@@ -144,7 +144,7 @@ var _hmt = _hmt || [];
 <p>我花了两周时间，用五个不同的终端编程工具各跑了同一组任务——从一个Flask API项目搭建到复杂的多文件重构。有些结果在意料之中，有些让我重新审视了自己之前的选择。
 </p>
 
-<h2>为什么写这篇</h2>
+<h2 id="section-为什么写这篇">为什么写这篇</h2>
 
 <p>市面上的AI编程工具对比文章，十篇有八篇在比Cursor、Windsurf、GitHub Copilot这些IDE型工具。但有一个群体被严重忽视了——终端党。
 </p>
@@ -155,9 +155,9 @@ var _hmt = _hmt || [];
 <p>更重要的一点：2026年5月，这些终端工具都经历了重大更新。Claude Code支持了7个并行Agent和1M上下文，Codex CLI接入了GPT-5.3，Gemini CLI发布了开源版本。两三个月前的对比文章已经过时了。
 </p>
 
-<h2>五款工具一句话定位</h2>
+<h2 id="section-五款工具一句话定位">五款工具一句话定位</h2>
 <table><thead><tr><th>工具</th><th>开发者</th><th>核心模型</th><th>定价</th><th>一句话定位</th></tr></thead><tbody><tr><td>Claude Code</td><td>Anthropic</td><td>Claude Opus 4.7</td><td>API按量（Pro $20/月）</td><td>终端里的全栈AI程序员</td></tr><tr><td>Codex CLI</td><td>OpenAI</td><td>GPT-5.3-Codex</td><td>API按量（ChatGPT Plus $20/月）</td><td>OpenAI生态的终端入口</td></tr><tr><td>Gemini CLI</td><td>Google</td><td>Gemini 2.5 Pro</td><td>免费（Google AI Studio）</td><td>超长上下文+免费额度</td></tr><tr><td>Cline</td><td>第三方开源</td><td>可切换（Claude/GPT/Gemini）</td><td>免费扩展（自带API Key）</td><td>模型无关的灵活选择</td></tr><tr><td>Aider</td><td>开源社区</td><td>可切换（多模型）</td><td>免费开源</td><td>人机协作的终端IDE</td></tr></tbody></table>
-<h2>SWE-bench实测数据：Claude Code到底强多少</h2>
+<h2 id="section-swe-bench实测数据-claude-code到底强多少">SWE-bench实测数据：Claude Code到底强多少</h2>
 
 <p>先看硬数据。SWE-bench Verified是目前公认最权威的AI编程能力测试基准，要求AI独立修复真实的GitHub Issue。
 </p>
@@ -168,7 +168,7 @@ var _hmt = _hmt || [];
 <p><strong>实际体验中的差距没有SWE-bench显示的那么大。</strong> 我在日常任务中，Codex CLI和Gemini CLI的表现差距远没有87.6% vs 80.6%那么夸张。
 </p>
 
-<h2>实测环节：同一个任务，五个工具的真实表现</h2>
+<h2 id="section-实测环节-同一个任务-五个工具的真实表现">实测环节：同一个任务，五个工具的真实表现</h2>
 
 <p>我选了三个不同难度的任务来测试：
 </p>
@@ -196,7 +196,7 @@ var _hmt = _hmt || [];
 <p>但<strong>Cline的表现值得特别说一下</strong>。虽然它最终没能100%完成，但因为它每步都需要确认，你可以在过程中发现方向性问题并及时纠正。Claude Code是"先做完再检查"，Cline是"边做边检查"。对于高风险的迁移任务，后者的方式不一定更差。
 </p>
 
-<h2>成本核算：一个月用下来花了多少钱</h2>
+<h2 id="section-成本核算-一个月用下来花了多少钱">成本核算：一个月用下来花了多少钱</h2>
 
 <p>我用每个工具各工作了两周（真实日常开发，不是刻意刷任务），记录了实际的API花费：
 </p>
@@ -210,7 +210,7 @@ var _hmt = _hmt || [];
 </ul>
 <ul><li><strong>Aider的成本最低</strong>。因为它采用Architect/Editor双模型架构——强模型规划，弱模型编写。规划只占少量token，大部分实际编写工作用便宜模型（如Flash）完成。而且它的交互式工作方式意味着你会在过程中纠正错误，减少了AI来回试错的token浪费。</li>
 </ul>
-<h2>Aider为什么最被低估</h2>
+<h2 id="section-aider为什么最被低估">Aider为什么最被低估</h2>
 
 <p>SWE-bench上31.4%的成绩让很多人直接把Aider淘汰了。但这个分数有误导性。
 </p>
@@ -242,7 +242,7 @@ var _hmt = _hmt || [];
 <p>我后来在一些中等复杂度的日常任务上切换到了Aider，发现效率其实和Claude Code差不多，但成本只有三分之一。
 </p>
 
-<h2>踩坑经验</h2>
+<h2 id="section-踩坑经验">踩坑经验</h2>
 
 <p><strong>Claude Code的Rate Limit是真实痛点。</strong> Pro $20/月有使用量上限，我大概2-3小时就会触发限速。Max 5倍（$100/月）的额度是5倍，适合全天重度使用，但价格不便宜。
 </p>
@@ -256,7 +256,7 @@ var _hmt = _hmt || [];
 <p><strong>Cline的确认弹窗太多了。</strong> 每个文件修改、每个终端命令都要确认。好处是安全可控，坏处是你需要频繁按Enter，时间长了手指累。后来发现可以调整信任级别，但降低信任级别又失去了它的核心优势。
 </p>
 
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <p><strong>Q：Claude Code和<a href="/tools/cursor-ai/index.html">Cursor</a>选哪个？</strong>
 不是一类工具。<a href="/tools/cursor-ai/index.html">Cursor</a>是IDE（VS Code fork），Claude Code是终端工具。如果你日常工作在VS Code里，用Cursor的体验更顺滑。如果你是终端重度用户，或者需要在SSH/远程环境中工作，Claude Code是更好的选择。很多工程师的方案是两个都用：Cursor做日常编辑，Claude Code处理复杂重构。
@@ -278,7 +278,7 @@ var _hmt = _hmt || [];
 在SWE-bench的"AI完全自主"测试条件下确实不行。但Aider的设计就不是为了自主完成——它是为了"AI和人类协作迭代"。如果你愿意花时间审查和指导，Aider在中等复杂度任务上的实际完成率和Claude Code差距不大，但成本只有三分之一。
 </p>
 
-<h2>总结和推荐</h2>
+<h2 id="section-总结和推荐">总结和推荐</h2>
 <table><thead><tr><th>你的情况</th><th>推荐工具</th><th>原因</th></tr></thead><tbody><tr><td>全职开发者，每天写代码8小时+</td><td>Claude Code (Max 5倍)</td><td>能力最强，1M上下文，并行Agent</td></tr><tr><td>全职开发者，预算有限</td><td>Claude Code (Sonnet) + Aider</td><td>Sonnet做日常，Aider做需要迭代打磨的任务</td></tr><tr><td>兼职/学生，轻量使用</td><td>Gemini CLI（免费额度）</td><td>零成本，理解性任务够用</td></tr><tr><td>企业团队，需要统一管控</td><td>Cline + 企业API</td><td>BYO模型，通过安全审查，10人永久免费</td></tr><tr><td>追求成本效率</td><td>Aider</td><td>Architect/Editor分离，成本最低，Git原生管理</td></tr><tr><td>已在OpenAI生态</td><td>Codex CLI</td><td>学习成本最低，GPT-5.3能力够强</td></tr></tbody></table>
 <p><strong>我的个人选择</strong>：日常用Claude Code (Sonnet 4.6) 处理大部分任务，遇到需要反复打磨和迭代的任务切换到Aider。总成本约$0.80/天，大部分编程需求都能覆盖。
 </p>

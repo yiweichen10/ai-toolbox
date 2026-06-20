@@ -137,7 +137,7 @@ var _hmt = _hmt || [];
                 <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
                 <span style="color:#555;">2026年3月最新大模型API价格实测对比：覆盖OpenAI GPT-4.1、Claude 4.6、Gemini 2.5、DeepSeek V3.2、Kimi K2.5、通义千问3.5等8家厂商20+模型。用$100预算模拟4种真实开发场景，告诉你每个场景该选谁、怎么配最省钱。含缓存策略、路由方案和踩坑经验。</span>
             </div>
-            <h2>前言</h2>
+            <h2 id="section-前言">前言</h2>
 
 <p>我做了一个实验：给8家AI厂商各充$100，用相同的4个开发场景跑测试，看谁先烧完钱、谁撑得最久。
 </p>
@@ -151,12 +151,12 @@ var _hmt = _hmt || [];
 <p>这篇文章把2026年3月8家厂商20+款模型的API定价全部摊开，附上我实测的省钱方案。
 </p>
 
-<h2>先看结论：4个场景该选谁</h2>
+<h2 id="section-先看结论-4个场景该选谁">先看结论：4个场景该选谁</h2>
 <table><thead><tr><th>开发场景</th><th>首选模型</th><th>备选方案</th><th>每百万token成本</th><th>理由</th></tr></thead><tbody><tr><td>日常对话/客服机器人</td><td><a href="/tools/gemini/">Gemini</a> 2.5 Flash</td><td>DeepSeek V3.2</td><td>$0.30入/$2.50出</td><td>速度快、1M窗口、价格低</td></tr><tr><td>长文档分析/RAG</td><td>Claude Sonnet 4.6</td><td>Gemini 2.5 Pro</td><td>$3.00入/$15.00出</td><td>1M上下文最可靠，幻觉控制最好</td></tr><tr><td>代码生成/Agent</td><td>Claude Sonnet 4.6</td><td>DeepSeek V3.2</td><td>$3.00入/$15.00出</td><td>SWE-bench 72.7%，Agent能力最强</td></tr><tr><td>高并发批量处理</td><td>Gemini 2.5 Flash-Lite</td><td>DeepSeek V3.2（缓存）</td><td>$0.10入/$0.40出</td><td>极致便宜，适合不需要强推理的流水线</td></tr><tr><td>中文内容创作</td><td>Kimi K2.5</td><td>通义千问3.5-Plus</td><td>~$0.60入/$1.30出</td><td>中文理解质量最好，速度103-116 tok/s</td></tr><tr><td>复杂数学推理</td><td>o3（按需）</td><td>DeepSeek R1</td><td>$10.00入/$40.00出</td><td>推理天花板，但很贵，只在必要时用</td></tr></tbody></table>
 <p>这不是"各有优劣看你需求"——我给了明确的首选。下面展开说为什么。
 </p>
 
-<h2>全部模型价格一览（2026年3月）</h2>
+<h2 id="section-全部模型价格一览-2026年3月">全部模型价格一览（2026年3月）</h2>
 
 <p>以下是各家主流模型的官方API定价，数据来源为各厂商官方文档，截至2026年3月26日。
 </p>
@@ -173,7 +173,7 @@ var _hmt = _hmt || [];
 <table><thead><tr><th>模型</th><th>输入（$/MTok）</th><th>输出（$/MTok）</th><th>上下文窗口</th><th>定位</th></tr></thead><tbody><tr><td>Qwen3.5-Plus</td><td>$0.12-$0.57</td><td>$0.69-$3.44</td><td>1M</td><td>中文主力，价格波动大</td></tr><tr><td>Qwen3-Max</td><td>$0.36-$1.00</td><td>$1.43-$4.01</td><td>262k</td><td>中文旗舰，理解力强</td></tr><tr><td>Qwen-Flash</td><td>$0.05-$0.25</td><td>$0.40-$2.00</td><td>1M</td><td>最便宜的中文名模型</td></tr></tbody></table>
 <h3>Kimi（月之暗面）</h3>
 <table><thead><tr><th>模型</th><th>输入（$/MTok）</th><th>输出（$/MTok）</th><th>上下文窗口</th><th>定位</th></tr></thead><tbody><tr><td>Kimi K2.5</td><td>~$0.60</td><td>~$1.30</td><td>256k</td><td>中文长文本+Agent</td></tr><tr><td>Kimi K2 Thinking</td><td>按思考token计费</td><td>—</td><td>256k</td><td>带思维链的推理模式</td></tr></tbody></table>
-<h2>核心发现：价格差178倍不是夸张</h2>
+<h2 id="section-核心发现-价格差178倍不是夸张">核心发现：价格差178倍不是夸张</h2>
 
 <p>把所有模型按输出价格从低到高排：
 </p>
@@ -181,7 +181,7 @@ var _hmt = _hmt || [];
 <p>最便宜的Gemini Flash-Lite和最贵的o3之间差了<strong>100倍</strong>。这不是选择题，是预算题。
 </p>
 
-<h2>真实场景成本模拟：$100能跑多少</h2>
+<h2 id="section-真实场景成本模拟-100能跑多少">真实场景成本模拟：$100能跑多少</h2>
 
 <p>我用4种典型开发场景模拟了成本。假设每个场景处理1000次请求，每次平均输入2000 token、输出500 token。
 </p>
@@ -224,7 +224,7 @@ var _hmt = _hmt || [];
 <p>中文内容生成，Kimi K2.5和通义千问3.5-Plus是性价比最高的选择。Kimi的优势是幻觉控制更好（Novita测试：思考模式54% vs DeepSeek 18%），通义千问的优势是价格更低、阿里云生态集成方便。
 </p>
 
-<h2>我的省钱配置方案</h2>
+<h2 id="section-我的省钱配置方案">我的省钱配置方案</h2>
 
 <p>跑了半个月测试后，我总结出3套实用配置。根据你的月预算直接选就行。
 </p>
@@ -265,7 +265,7 @@ var _hmt = _hmt || [];
 <li>5%的复杂请求才走Claude Sonnet</li>
 <li>部署LiteLLM做模型路由，自动按任务类型选择模型</li>
 </ul>
-<h2>缓存策略：被低估的成本杀手</h2>
+<h2 id="section-缓存策略-被低估的成本杀手">缓存策略：被低估的成本杀手</h2>
 
 <p>大部分人只知道选模型，不知道用缓存。但缓存能帮你把成本再降一个数量级。
 </p>
@@ -278,7 +278,7 @@ var _hmt = _hmt || [];
 <p>Anthropic的Prompt Caching也很实用——你可以在system prompt前面加一个<code>cache_control</code>标记，后续所有请求只要system prompt不变，输入成本直接打1折。对于固定的Agent配置（工具定义、角色设定不变），这个优化效果巨大。
 </p>
 
-<h2>速度对比：不只是钱的问题</h2>
+<h2 id="section-速度对比-不只是钱的问题">速度对比：不只是钱的问题</h2>
 
 <p>速度直接影响用户体验。API响应慢一倍，用户流失率可能翻倍。
 </p>
@@ -286,7 +286,7 @@ var _hmt = _hmt || [];
 <p><strong>Kimi K2.5的速度碾压其他模型</strong>——103-116 tok/s，是DeepSeek V3.2的3倍。如果你做实时对话应用，Kimi的体感速度明显更好。DeepSeek的非思考模式延迟还行（1.2秒），但思考模式延迟高达65.7秒，用户等一分钟才看到第一个字，体验很差。
 </p>
 
-<h2>踩坑经验</h2>
+<h2 id="section-踩坑经验">踩坑经验</h2>
 
 <h3>1. Claude Opus的钱烧得比你想象的快</h3>
 
@@ -322,7 +322,7 @@ var _hmt = _hmt || [];
 <p>Kimi网页版免费可用，200万字超长上下文，中文体验很好。如果你只是偶尔需要AI帮忙，Kimi免费版完全够用，不需要开API。API更适合集成到产品里做自动化。
 </p>
 
-<h2>模型路由工具推荐</h2>
+<h2 id="section-模型路由工具推荐">模型路由工具推荐</h2>
 
 <p>手动切换模型太麻烦，推荐用路由中间件自动分配：
 </p>
@@ -330,7 +330,7 @@ var _hmt = _hmt || [];
 <p>我自己用的是LiteLLM——配置文件里定义几条路由规则（简单对话走Gemini Flash、编程走DeepSeek、复杂任务走Claude Sonnet），应用代码里只调一个统一的API，路由自动分配。月费从之前的$60降到了$25。
 </p>
 
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <p><strong>Q1：开发AI应用，必须用付费API吗？</strong>
 A：不一定。DeepSeek注册送500万token、通义千问新用户送100万token、<a href="https://www.aitoollab.cn/tools/kimi/index.html" target="_blank" rel="noopener">Kimi</a>网页版免费200万字上下文。MVP阶段用免费额度完全可以跑起来。等到有真实用户、需要稳定可用时再上付费API。
@@ -352,7 +352,7 @@ A：在API请求中，给你的system prompt加上<code>cache_control: {"type": 
 A：推荐分配：Gemini Flash-Lite处理50%请求（$10）、DeepSeek V3.2+缓存处理30%（$10）、Claude Sonnet 4.6处理15%高质量请求（$30）、Kimi K2.5处理5%中文优化（$5）。预留$145做buffer和意外用量。核心是不要让Claude处理所有请求——它很贵，但不是所有请求都需要它。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>2026年3月的大模型API市场有几个明确信号：
 </p>

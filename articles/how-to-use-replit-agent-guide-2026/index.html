@@ -180,7 +180,7 @@ var _hmt = _hmt || [];
 <p>我用Replit Agent 3从零搭了6个完整项目，包括一个带用户认证和数据库的全栈Web应用，总共花了不到5的积分。这篇文章把我踩过的坑、摸索出的技巧、以及不同套餐的真实花费全部整理出来，让你少走弯路。
 </p>
 
-<h2>为什么写这篇</h2>
+<h2 id="section-为什么写这篇">为什么写这篇</h2>
 
 <p>国内关于Replit的教程大多停留在"注册后怎么写Hello World"，对Agent 3的核心能力——自动建库、自动部署、积分消耗——基本没提。我踩了两个大坑：一次睡醒发现Agent跑了47次修复方案烧掉5；另一次数据库schema被改烂了只能重建。这些都是网上查不到的经验。
 </p>
@@ -188,7 +188,7 @@ var _hmt = _hmt || [];
 <p>此外，Replit在2026年2月做了大幅定价改版，旧教程里的 Hacker套餐和0 Pro套餐已经不存在了，你需要知道现在的真实价格。
 </p>
 
-<h2>Replit Agent 3是什么</h2>
+<h2 id="section-replit-agent-3是什么">Replit Agent 3是什么</h2>
 
 <p>一句话：你用中文告诉它"帮我做一个待办事项Web应用，要有用户登录功能"，它会自动生成前后端代码、创建数据库表、配置环境变量、部署到一个公开URL上——全程不需要你写一行代码。
 </p>
@@ -196,7 +196,7 @@ var _hmt = _hmt || [];
 <p>它和<a href="/tools/cursor/">Cursor</a>、<a href="/tools/github-copilot/">GitHub [Copilot</a>](/tools/github-copilot/)这类工具的核心区别：<strong>Replit是云端一体化的</strong>。你不需要本地装任何东西，不需要配环境，不需要管部署。打开浏览器就能干活。
 </p>
 
-<h2>第一步：注册账号（国内用户）</h2>
+<h2 id="section-第一步-注册账号-国内用户">第一步：注册账号（国内用户）</h2>
 
 <h3>邮箱注册</h3>
 
@@ -218,7 +218,7 @@ var _hmt = _hmt || [];
 <p>注册后有Free套餐可以体验Agent的基本功能。建议先用Free摸清楚流程，确认这个工具适合你之后，再考虑升级付费套餐。
 </p>
 
-<h2>第二步：理解定价和积分（2026年2月改版后）</h2>
+<h2 id="section-第二步-理解定价和积分-2026年2月改版后">第二步：理解定价和积分（2026年2月改版后）</h2>
 
 <p>这是最容易被坑的部分，先搞清楚再动手。
 </p>
@@ -242,7 +242,7 @@ var _hmt = _hmt || [];
 <p>总计约5，Core月套餐5完全够用。<strong>但如果你用Turbo模式做复杂项目，一次可能就烧掉-35</strong>，Pro套餐的00也会很快见底。
 </p>
 
-<h2>第三步：创建第一个项目</h2>
+<h2 id="section-第三步-创建第一个项目">第三步：创建第一个项目</h2>
 
 <h3>3.1 打开Agent</h3>
 
@@ -273,7 +273,7 @@ var _hmt = _hmt || [];
 <li>在Agent对话框里继续提修改要求，比如"把配色改成深色主题"、"加一个导出Excel功能"</li>
 <li>点击代码编辑器的文件树，手动修改任何文件（前提是你懂代码）</li>
 </ul>
-<h2>第四步：数据库配置（进阶但重要）</h2>
+<h2 id="section-第四步-数据库配置-进阶但重要">第四步：数据库配置（进阶但重要）</h2>
 
 <p>这是Replit Agent区别于其他AI编程工具的核心能力，也是最容易踩坑的地方。
 </p>
@@ -304,7 +304,7 @@ var _hmt = _hmt || [];
 <p>当Agent检测到你的项目需要API密钥（比如支付接口、邮件服务），它会暂停并弹出输入框让你填。<strong>这些密钥不会出现在代码里</strong>，而是存在Replit的密钥管理器中，以环境变量的方式引用。这个设计值得点赞。
 </p>
 
-<h2>第五步：一键部署</h2>
+<h2 id="section-第五步-一键部署">第五步：一键部署</h2>
 
 <h3>部署流程</h3>
 
@@ -331,7 +331,7 @@ var _hmt = _hmt || [];
 <p>我用自己的域名绑了一个项目，从配DNS到能访问总共花了8分钟。
 </p>
 
-<h2>避坑指南（我花了0+积分换来的经验）</h2>
+<h2 id="section-避坑指南-我花了0-积分换来的经验">避坑指南（我花了0+积分换来的经验）</h2>
 
 <h3>坑1：Agent自主循环烧积分（最严重）</h3>
 
@@ -364,7 +364,7 @@ var _hmt = _hmt || [];
 <p>Free套餐虽然能用Agent，但积分非常有限。大概够你创建1-2个简单的小项目。不要指望在Free套餐上做什么正经项目。
 </p>
 
-<h2>Replit Agent vs Cursor vs <a href="/tools/bolt.new/">Bolt.new</a>：什么时候用哪个</h2>
+<h2 id="section-replit-agent-vs-cursor-vs-a-href-tools-bolt-new-bolt-new-a-什么时候用哪个">Replit Agent vs Cursor vs <a href="/tools/bolt.new/">Bolt.new</a>：什么时候用哪个</h2>
 <table><thead><tr><th>维度</th><th>Replit Agent</th><th>Cursor</th><th><a href="/tools/bolt.new/">Bolt.new</a></th></tr></thead><tbody><tr><td>运行环境</td><td>云端浏览器</td><td>本地IDE</td><td>云端浏览器</td></tr><tr><td>适合阶段</td><td>原型/新项目</td><td>全流程开发</td><td>前端原型</td></tr><tr><td>数据库</td><td>自动创建管理</td><td>需手动配</td><td>无内置</td></tr><tr><td>部署</td><td>一键部署到云端</td><td>需自行部署</td><td>5/月才有托管</td></tr><tr><td>代码质量</td><td>够用但不算精致</td><td>最高</td><td>中等</td></tr><tr><td>月费</td><td>/usr/bin/bash-00</td><td>0</td><td>/usr/bin/bash-5</td></tr><tr><td>国内使用</td><td>可直连</td><td>需安装客户端</td><td>可直连</td></tr></tbody></table>
 <p><strong>我的建议</strong>：
 </p>
@@ -372,7 +372,7 @@ var _hmt = _hmt || [];
 <li>要做正经的生产级项目 → 搭好原型后迁移到Cursor</li>
 <li>纯前端页面快速验证 → Bolt.new</li>
 </ul>
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <h3>Q1：Replit在国内能正常用吗？</h3>
 
@@ -399,7 +399,7 @@ var _hmt = _hmt || [];
 <p>ChatGPT给你代码片段，你自己组装和运行。Replit Agent是端到端的——它写代码、运行、调试、部署全包了。对于不会编程的人来说，Replit的体验完全不同。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>Replit Agent 3是目前最适合编程新手和非技术人员的AI编程工具。它的核心价值不在于生成多好的代码，而在于<strong>把"从想法到可运行应用"这个过程的门槛降到了最低</strong>。
 </p>

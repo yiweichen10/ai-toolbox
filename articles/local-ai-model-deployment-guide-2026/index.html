@@ -170,17 +170,17 @@ var _hmt = _hmt || [];
                 <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
                 <span style="color:#555;">2026年本地部署AI大模型保姆级指南。按显卡配置分级推荐：4GB显存用Phi-4、8GB用Qwen3-8B、16GB用Qwen3-32B、24GB用DeepSeek-V3-lite。覆盖Ollama/LM Studio/vLLM三大部署工具实测对比，附显存需求和推理速度数据。</span>
             </div>
-            <h2>结论先说</h2>
+            <h2 id="section-结论先说">结论先说</h2>
 <p><p>跑了一周本地大模型，测试了15个主流开源模型在4种硬件配置下的表现。核心结论：8GB显存是目前本地部署的"甜蜜点"，用Ollama跑Qwen3-8B量化版，日常问答和写代码完全够用，零成本无限用。如果你有16GB以上显存，直接上Qwen3.5-32B的INT4量化，效果已经接近<a href="/tools/chatgpt/">ChatGPT</a>-4的水平。</p>
 </p>
 
-<h2>为什么折腾本地部署</h2>
+<h2 id="section-为什么折腾本地部署">为什么折腾本地部署</h2>
 <p><p>我是从去年开始认真研究本地部署的。之前一直用API调用，主要问题是两个：第一，用多了真贵，我上个月API账单花了800多块；第二，隐私，有些工作内容不方便上传到云端。</p>
 <p>本地部署最大的好处就是<strong>零边际成本</strong>。模型下载完之后，不管你问100个问题还是10000个问题，花的只是电费。而且数据完全不出你的电脑，处理公司文档、个人笔记之类的场景特别安心。</p>
 <p>2026年和一年前比，开源模型的质量提升非常明显。我拿Qwen3.5-9B和去年底GPT-4做对比测试，日常问答场景下准确率差距已经不到10%，代码生成场景差距大概15%左右。对于不需要最顶级能力的日常使用，完全够了。</p>
 </p>
 
-<h2>按你的硬件配置选模型</h2>
+<h2 id="section-按你的硬件配置选模型">按你的硬件配置选模型</h2>
 <p><p>这是我实测整理的推荐表，按显存从低到高排列：</p>
 </p>
 
@@ -255,7 +255,7 @@ var _hmt = _hmt || [];
 <p><p>这部分对个人用户来说参考意义不大，主要面向企业私有化部署。如果你是个人用户但确实需要旗舰模型的能力，建议直接用API调用（<a href="/tools/deepseek/index.html">DeepSeek</a>的价格已经很便宜了），本地部署697B模型的开销远大于API费用。</p>
 </p>
 
-<h2>三大部署工具实测对比</h2>
+<h2 id="section-三大部署工具实测对比">三大部署工具实测对比</h2>
 <p><p>目前本地部署主流工具就三个，我每个都用了至少一周，说说真实感受：</p>
 </p>
 
@@ -291,7 +291,7 @@ var _hmt = _hmt || [];
 <p>但它的配置门槛最高，需要一定的Linux和Docker基础，对Windows用户不太友好。适合有一定技术背景的用户。</p>
 </p>
 
-<h2>部署步骤（以Ollama为例）</h2>
+<h2 id="section-部署步骤-以ollama为例">部署步骤（以Ollama为例）</h2>
 <p><p>我以Windows+RTX 4060（8GB）为例，带你5分钟跑起来：</p>
 </p>
 
@@ -325,7 +325,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)</code></pre>
 </p>
 
-<h2>量化格式选择指南</h2>
+<h2 id="section-量化格式选择指南">量化格式选择指南</h2>
 <p><p>量化是把模型参数从高精度压缩到低精度，从而减少显存占用的技术。我测试了几种主流量化格式的效果差异：</p>
 </p>
 
@@ -343,7 +343,7 @@ print(response.choices[0].message.content)</code></pre>
 <p><p>我的建议：<strong>能用Q5就用Q5</strong>，这是质量和体积的最佳平衡点。只有在显存确实不够装Q5版本的时候，才降级到Q4。低于Q4的量化，质量损失就比较明显了，得不偿失。</p>
 </p>
 
-<h2>踩坑经验</h2>
+<h2 id="section-踩坑经验">踩坑经验</h2>
 <p><p>跑了一周本地模型，踩了几个坑分享出来：</p>
 </p>
 
@@ -359,7 +359,7 @@ print(response.choices[0].message.content)</code></pre>
 <p><p><strong>坑4：模型不是越大越好</strong><br>我一开始觉得越大肯定越强，结果把697B的DeepSeek-V3.2蒸馏版强行塞进16GB显存（Q2量化），效果反而不如32B的Q5量化。低精度量化对大模型的伤害远大于对小模型的伤害，<strong>宁可跑小模型高量化，不要跑大模型低量化</strong>。</p>
 </p>
 
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <h3>本地部署需要什么配置？</h3>
 <p><p>最低配置：4GB显存的独显（NVIDIA推荐），8GB以上系统内存。推荐配置：8GB显存（如RTX 4060），这是目前本地AI体验的"入门甜点"。没有NVIDIA显卡的话，苹果M1及以上芯片也可以，Intel/AMD核显也能跑但速度较慢。</p>
@@ -381,7 +381,7 @@ print(response.choices[0].message.content)</code></pre>
 <p><p>可以。因为Ollama提供OpenAI兼容API，你可以在<a href="/tools/claude/index.html">Claude</a>、<a href="/tools/notion-ai/index.html">Notion AI</a>等工具中把API地址指向本地Ollama。有些工具（如Cursor、Continue）已经原生支持Ollama集成，配置更简单。</p>
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 <p><p>2026年，本地部署AI大模型已经不是极客的专利了。一台8GB显存的普通电脑，用Ollama装一个Qwen3-8B，就能获得相当不错的AI助手体验，而且完全免费、无限使用。</p>
 <p>我的推荐路径：</p>
 </p>

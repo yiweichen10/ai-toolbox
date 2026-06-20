@@ -137,7 +137,7 @@ var _hmt = _hmt || [];
                 <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
                 <span style="color:#555;">2026年4月3日AI圈三连爆：微软发布MAI-Transcribe-1/MAI-Voice-1/MAI-Image-2三款自研模型豪言2027年自主打造尖端模型、阿里千问Qwen3.6-Plus发布SWE-bench达78.8%直逼Claude、谷歌Gemma 4全面转向Apache 2.0开源。三件事串在一起看，一场围绕&quot;去OpenAI依赖&quot;的暗战已经打响。</span>
             </div>
-            <h2>前言</h2>
+            <h2 id="section-前言">前言</h2>
 
 <p>2026年4月3日，AI圈炸了三颗雷。不是一颗，是三颗——而且每一颗都指向同一个方向。
 </p>
@@ -148,7 +148,7 @@ var _hmt = _hmt || [];
 <p>三件事分开看各有看点，放在一起看才看出门道：<strong>全行业都在加速"去OpenAI依赖"。</strong> 微软——OpenAI的最大投资者和合作伙伴——都开始自研了，其他人还有什么理由继续等OpenAI的API？
 </p>
 
-<h2>事件一：微软MAI三件套——"OpenAI的好盟友，好对手"</h2>
+<h2 id="section-事件一-微软mai三件套-openai的好盟友-好对手">事件一：微软MAI三件套——"OpenAI的好盟友，好对手"</h2>
 
 <h3>三款模型覆盖企业AI三大刚需</h3>
 <table><thead><tr><th>模型</th><th>功能</th><th>核心性能数据</th><th>价格</th></tr></thead><tbody><tr><td>MAI-Transcribe-1</td><td>语音转录</td><td>25种语言，WER 3.9%，11种核心语言FLEURS第一</td><td>$0.36/小时</td></tr><tr><td>MAI-Voice-1</td><td>语音生成</td><td>1秒生成60秒音频，单GPU运行</td><td>$22/百万字符</td></tr><tr><td>MAI-Image-2</td><td>文生图</td><td>Arena.ai文生图排行榜第3，WPP已商用</td><td>$5/百万token（文本输入）</td></tr></tbody></table>
@@ -180,7 +180,7 @@ var _hmt = _hmt || [];
 <p>对普通用户的影响：短期内没什么变化——你用的Copilot背后还是OpenAI的模型。但中期（1-2年），微软的产品线会逐步混入自研模型。如果MAI系列的质量追上来，你可能在不知不觉中已经不再依赖OpenAI。
 </p>
 
-<h2>事件二：阿里Qwen3.6-Plus——国产编程模型的天花板</h2>
+<h2 id="section-事件二-阿里qwen3-6-plus-国产编程模型的天花板">事件二：阿里Qwen3.6-Plus——国产编程模型的天花板</h2>
 
 <h3>核心Benchmark数据</h3>
 <table><thead><tr><th>评测</th><th>Qwen3.6-Plus</th><th>Claude Opus 4.5</th><th>GPT-5.4 Pro</th></tr></thead><tbody><tr><td>SWE-bench Verified</td><td><strong>78.8%</strong></td><td>80.8%</td><td>86%</td></tr><tr><td>SWE-bench Multilingual</td><td><strong>73.8%（第一）</strong></td><td>—</td><td>—</td></tr><tr><td>SWE-bench Pro</td><td><strong>56.6%（第三）</strong></td><td>~45%</td><td>57.7%</td></tr><tr><td>LiveCodeBench</td><td><strong>87.1%（第四）</strong></td><td>—</td><td>—</td></tr><tr><td>MMLU Pro</td><td><strong>88.5%（第四）</strong></td><td>—</td><td>—</td></tr><tr><td>AIME 2026</td><td><strong>95.3%（第一）</strong></td><td>—</td><td>—</td></tr><tr><td>Terminal-Bench 2.0</td><td><strong>61.6%（第六）</strong></td><td>65.4%</td><td>75.1%</td></tr></tbody></table>
@@ -210,7 +210,7 @@ var _hmt = _hmt || [];
 <p>Cline+Qwen3.6-Plus方案在SWE-bench上追平了Claude Code Pro，但成本只有八分之一。这可能是目前性价比最高的AI编程方案。
 </p>
 
-<h2>事件三：谷歌Gemma 4——Apache 2.0才是最大新闻</h2>
+<h2 id="section-事件三-谷歌gemma-4-apache-2-0才是最大新闻">事件三：谷歌Gemma 4——Apache 2.0才是最大新闻</h2>
 
 <h3>四款模型覆盖端侧到工作站</h3>
 <table><thead><tr><th>模型</th><th>总参数</th><th>激活参数</th><th>上下文</th><th>定位</th></tr></thead><tbody><tr><td>31B Dense</td><td>310亿</td><td>310亿</td><td>256K</td><td>工作站部署，质量上限</td></tr><tr><td>26B MoE</td><td>252亿</td><td>38亿</td><td>256K</td><td>云端推理，速度优先</td></tr><tr><td>E4B</td><td>80亿</td><td>45亿</td><td>128K</td><td>端侧，支持语音</td></tr><tr><td>E2B</td><td>51亿</td><td>23亿</td><td>128K</td><td>手机离线，内存<1.5GB</td></tr></tbody></table>
@@ -239,7 +239,7 @@ var _hmt = _hmt || [];
 <p>和Pixel团队、高通、联发科的合作已经展开，Android AICore Developer Preview已支持。如果你是安卓开发者，未来12个月内你可以在App里内置Gemma 4的端侧模型。
 </p>
 
-<h2>三件事串在一起看</h2>
+<h2 id="section-三件事串在一起看">三件事串在一起看</h2>
 <table><thead><tr><th>事件</th><th>核心信号</th><th>对OpenAI的威胁级别</th></tr></thead><tbody><tr><td>微软MAI三件套</td><td>最大盟友开始自研，2027年独立</td><td><strong>极高（战略级）</strong></td></tr><tr><td>阿里Qwen3.6-Plus</td><td>SWE-bench追平Claude，价格差53倍</td><td><strong>高（技术级）</strong></td></tr><tr><td>谷歌Gemma 4</td><td>Apache 2.0开源，端侧部署成体系</td><td><strong>中高（生态级）</strong></td></tr></tbody></table>
 <p>三个事件放在一起，呈现出一个清晰的趋势：<strong>OpenAI的技术垄断正在被多方向同时瓦解。</strong>
 </p>
@@ -255,14 +255,14 @@ var _hmt = _hmt || [];
 <li><strong>移动端开发者</strong>：关注Gemma 4的E2B/E4B端侧模型，Android原生AI能力即将升级</li>
 <li><strong>所有人</strong>：AI模型价格战已经全面打响，未来12个月你的AI工具成本大概率会继续下降</li>
 </ul>
-<h2>本周AI动态速览</h2>
+<h2 id="section-本周ai动态速览">本周AI动态速览</h2>
 
 <ul><li><strong>华为盘古5.0发布</strong>：主打千亿参数全学科推理，瞄准教育市场</li>
 <li><strong>英伟达Blackwell Ultra开始出货</strong>：H200替代者，AI训练集群密度提升40%</li>
 <li><strong>Anthropic完成E轮35亿美元融资</strong>：估值615亿美元，融资节奏与OpenAI同步</li>
 <li><strong>MiniMax发布Hailuo-2.3视频模型</strong>：与<a href="/tools/seedance/">Seedance</a> 2.0形成国内视频生成双雄</li>
 </ul>
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <p><strong>Q1：微软自研模型后，OpenAI会怎样？</strong>
 </p>
@@ -294,7 +294,7 @@ var _hmt = _hmt || [];
 <p>A：100%会持续。OpenAI现在的月收入20亿美元、估值8520亿美元，是整个AI行业最大的"收费站"。每一个不想给OpenAI交过路费的公司（微软、谷歌、阿里、Meta）都在自研。未来2-3年，OpenAI会从"唯一的AI模型供应商"变成"AI模型供应商之一"。对用户来说，这是好事——竞争导致价格下降、质量提升。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>2026年4月3日，三个事件同时发生不是巧合。微软MAI三件套发布、阿里Qwen3.6-Plus上线、谷歌Gemma 4开源——三件事指向同一个结论：<strong>AI行业的"OpenAI依赖症"正在被系统性地治愈。</strong>
 </p>

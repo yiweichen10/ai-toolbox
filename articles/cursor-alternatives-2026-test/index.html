@@ -140,7 +140,7 @@ var _hmt = _hmt || [];
                 <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
                 <span style="color:#555;">Cursor Pro涨到$20/月后值不值得？实测7款AI编程替代工具：Claude Code、Cline、GitHub Copilot、Windsurf、Codex、Zed、Augment Code。含真实SWE-bench分数、免费方案配置和踩坑经验。</span>
             </div>
-            <h2>前言</h2>
+            <h2 id="section-前言">前言</h2>
 
 <p><a href="/tools/cursor/">Cursor</a>从$15涨到$20/月，Pro计划对重度开发者来说额度越来越不够用——每天高强度编码超过4小时就得升级到$40的Pro+。73%试过Cursor的开发者最终转向了其他方案（2026年3月开发者调研数据）。
 </p>
@@ -148,9 +148,9 @@ var _hmt = _hmt || [];
 <p>我花了两周时间，逐个实测了7款Cursor替代方案：<a href="/tools/claude/">[Claude</a> Code](/tools/claude-code/)、Cline、<a href="/tools/github-copilot/">GitHub [Copilot</a>](/tools/github-copilot/)、<a href="/tools/windsurf/">Windsurf</a>、<a href="/tools/openai-codex/">OpenAI Codex</a>、Zed和Augment Code。不是简单看官网介绍，而是用同一个项目（一个5000行Python后端）做对比测试，记录真实数据和体验。这篇文章把结果全摊开了说。
 </p>
 
-<h2>先看结论</h2>
+<h2 id="section-先看结论">先看结论</h2>
 <table><thead><tr><th>你是什么情况</th><th>推荐</th><th>月花费</th><th>理由</th></tr></thead><tbody><tr><td>预算为零</td><td>Cline + <a href="/tools/deepseek/">DeepSeek</a></td><td>$0-10（API费）</td><td>开源免费，BYOK，实测体验最接近Cursor</td></tr><tr><td>预算$10-15</td><td>GitHub Copilot Pro</td><td>$10/月</td><td>免费层最慷慨（2000补全+50聊天），最广编辑器支持</td></tr><tr><td>追求最强代码能力</td><td>Claude Code Pro</td><td>$20/月</td><td>SWE-bench 80.8%，多Agent协作，终端原生</td></tr><tr><td>不想折腾</td><td>Windsurf Pro</td><td>$15/月</td><td>最便宜付费方案，VS Code fork无迁移成本</td></tr><tr><td>重度用户（8h+/天）</td><td>Cursor Ultra / Claude Max</td><td>$100-200/月</td><td>无限制用量，企业级功能</td></tr></tbody></table>
-<h2>七款工具实测数据</h2>
+<h2 id="section-七款工具实测数据">七款工具实测数据</h2>
 
 <h3>1. Claude Code：SWE-bench第一，但别被分数骗了</h3>
 
@@ -291,7 +291,7 @@ var _hmt = _hmt || [];
 <p><strong>结论</strong>：个人开发者和小团队不需要考虑。大企业如果对代码安全有严格要求，可以评估一下。
 </p>
 
-<h2>价格透明度对比：谁在"隐藏收费"</h2>
+<h2 id="section-价格透明度对比-谁在-隐藏收费">价格透明度对比：谁在"隐藏收费"</h2>
 
 <p>这是我整理的真实月成本估算（基于每天4-6小时编码强度）：
 </p>
@@ -299,7 +299,7 @@ var _hmt = _hmt || [];
 <p>关键发现：<strong>标价$20的四个工具（Cursor、Claude Code、Augment、Codex），实际月费可能相差10倍。</strong> Claude Code在重度使用下可能到$200+，而Codex固定$20（ChatGPT Plus包含）。Cline虽然"免费"，但API费全由你控制，反而是最透明的。
 </p>
 
-<h2>我的配置推荐</h2>
+<h2 id="section-我的配置推荐">我的配置推荐</h2>
 
 <p>基于两周实测，这是我给不同用户的推荐配置：
 </p>
@@ -328,7 +328,7 @@ var _hmt = _hmt || [];
 <li>或 GitHub Copilot Business $19/用户/月</li>
 <li>数据控制最强是Cline（代码不出本地）</li>
 </ul>
-<h2>踩坑经验总结</h2>
+<h2 id="section-踩坑经验总结">踩坑经验总结</h2>
 
 <ul><li><strong>别被SWE-bench分数迷了眼</strong>：80.8%和55%的差距在日常编码中没你想的那么大。大部分时候你不需要AI解决竞赛级难题，而是做增删改查和重构。</li>
 </ul>
@@ -340,7 +340,7 @@ var _hmt = _hmt || [];
 </ul>
 <ul><li><strong>工具组合优于单选一个</strong>：我用Cline做日常编码，Copilot做快速补全，遇到难题才调Claude Code。多工具组合比押注一个工具灵活得多。</li>
 </ul>
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <p><strong>Q1：Cline配DeepSeek真的够用吗？</strong>
 A：日常编码（增删改查、Bug修复、简单重构）完全够用，DeepSeek V3的代码能力在轻量级任务上不输GPT-4o。但复杂架构设计、多文件大规模重构还是需要Claude或GPT级别的模型。我的建议是DeepSeek做日常主力，遇到难题手动切模型。
@@ -362,7 +362,7 @@ A：Cline + 各平台免费API额度是目前最好的免费组合。DeepSeek注
 A：短期内不会。实测下来，这些工具在明确需求的前提下能写70%的代码，但需求理解、架构设计、安全审查、业务逻辑判断仍然需要人类。更准确的说法是：会用AI工具的程序员会取代不会用的。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>2026年3月的AI编程工具格局已经非常清晰：
 </p>

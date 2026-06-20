@@ -9136,6 +9136,41 @@ window.__ALL_TOOLS__ = [
     "platform": "VS Code、JetBrains IDEs、Neovim、Vim"
   },
   {
+    "name": "Cline",
+    "slug": "cline",
+    "emoji": "💻",
+    "color": "#4F46E5",
+    "description": "Cline（原名Cline Dev、Codia）是一个开源的AI编程助手，作为VS Code和JetBrains IDE的扩展运行。它可以自动编写代码、编辑文件、运行命令、修复Bug以及回答编程问题。截至2026年，Cline已成为最受欢迎的AI编程工具之一，GitHub星标数超过9万。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "VS Code插件"
+      },
+      {
+        "text": "Cursor替代",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://cline.dev",
+    "price": "免费开源（Pro版可选）",
+    "platform": "VS Code、JetBrains IDE、Cursor"
+  },
+  {
     "name": "OpenCode",
     "slug": "opencode",
     "emoji": "💻",
@@ -9362,6 +9397,75 @@ window.__ALL_TOOLS__ = [
       "text": "HOT"
     },
     "url": "https://github.com/2noise/ChatTTS",
+    "price": "免费开源",
+    "platform": "Web/Windows/Mac/Linux"
+  },
+  {
+    "name": "Spark-TTS",
+    "slug": "spark-tts",
+    "emoji": "🎙️",
+    "color": "#FF6B35",
+    "description": "Spark-TTS是一款开源的零样本文本转语音生成工具，支持多语言、多音色的高质量语音合成。2026年最新版本增加了情感控制功能和实时流式输出能力，适合内容创作者和开发者使用。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "语音合成"
+      },
+      {
+        "text": "TTS"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "多语言"
+      },
+      {
+        "text": "实时语音",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://github.com/spark-tts/spark-tts",
+    "price": "免费开源",
+    "platform": "Web/API/桌面端"
+  },
+  {
+    "name": "F5-TTS",
+    "slug": "f5-tts",
+    "emoji": "🎙️",
+    "color": "#8B5CF6",
+    "description": "F5-TTS是Suno团队开源的基于Flow Matching的文本转语音模型，支持中英文等多语言语音合成与声音克隆。2026年推出的F5-TTS 2.0版本进一步提升了语音自然度和情感表达能力，成为开源TTS领域的重要选择。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "文本转语音"
+      },
+      {
+        "text": "声音克隆"
+      },
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "多语言支持"
+      },
+      {
+        "text": "Flow Matching"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://github.com/SunoAI/F5-TTS",
     "price": "免费开源",
     "platform": "Web/Windows/Mac/Linux"
   },
@@ -18305,6 +18409,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "VS Code、JetBrains IDEs、Neovim、Vim"
   },
   {
+    "name": "Cline",
+    "slug": "cline",
+    "emoji": "💻",
+    "color": "#4F46E5",
+    "description": "Cline（原名Cline Dev、Codia）是一个开源的AI编程助手，作为VS Code和JetBrains IDE的扩展运行。它可以自动编写代码、编辑文件、运行命令、修复Bug以及回答编程问题。截至2026年，Cline已成为最受欢迎的AI编程工具之一，GitHub星标数超过9万。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码补全"
+      },
+      {
+        "text": "AI编程助手"
+      },
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "VS Code插件"
+      },
+      {
+        "text": "Cursor替代",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://cline.dev",
+    "price": "免费开源（Pro版可选）",
+    "platform": "VS Code、JetBrains IDE、Cursor"
+  },
+  {
     "name": "OpenCode",
     "slug": "opencode",
     "emoji": "💻",
@@ -18531,6 +18670,75 @@ window.__REMAINING_TOOLS__ = [
       "text": "HOT"
     },
     "url": "https://github.com/2noise/ChatTTS",
+    "price": "免费开源",
+    "platform": "Web/Windows/Mac/Linux"
+  },
+  {
+    "name": "Spark-TTS",
+    "slug": "spark-tts",
+    "emoji": "🎙️",
+    "color": "#FF6B35",
+    "description": "Spark-TTS是一款开源的零样本文本转语音生成工具，支持多语言、多音色的高质量语音合成。2026年最新版本增加了情感控制功能和实时流式输出能力，适合内容创作者和开发者使用。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "语音合成"
+      },
+      {
+        "text": "TTS"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "多语言"
+      },
+      {
+        "text": "实时语音",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://github.com/spark-tts/spark-tts",
+    "price": "免费开源",
+    "platform": "Web/API/桌面端"
+  },
+  {
+    "name": "F5-TTS",
+    "slug": "f5-tts",
+    "emoji": "🎙️",
+    "color": "#8B5CF6",
+    "description": "F5-TTS是Suno团队开源的基于Flow Matching的文本转语音模型，支持中英文等多语言语音合成与声音克隆。2026年推出的F5-TTS 2.0版本进一步提升了语音自然度和情感表达能力，成为开源TTS领域的重要选择。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "文本转语音"
+      },
+      {
+        "text": "声音克隆"
+      },
+      {
+        "text": "开源免费"
+      },
+      {
+        "text": "多语言支持"
+      },
+      {
+        "text": "Flow Matching"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://github.com/SunoAI/F5-TTS",
     "price": "免费开源",
     "platform": "Web/Windows/Mac/Linux"
   },

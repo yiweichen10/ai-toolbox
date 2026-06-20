@@ -141,7 +141,7 @@ var _hmt = _hmt || [];
                 <span style="color:#555;">2026年3月31日Anthropic Claude Code因npm打包配置疏漏，意外泄露51.2万行TypeScript源码。完整时间线、泄露原因、对开发者的实际影响和应对建议全部说清楚。</span>
             </div>
             
-<h2>前言</h2>
+<h2 id="section-前言">前言</h2>
 
 <p>2026年3月31日，Anthropic经历了堪称该公司有史以来最尴尬的一天。
 </p>
@@ -155,7 +155,7 @@ var _hmt = _hmt || [];
 <p>这篇文章把Claude Code源码泄露事件的完整时间线、泄露原因、对开发者的实际影响、以及如何在这次事件中保护自己，全部说清楚。
 </p>
 
-<h2>事件时间线：3月31日发生了什么</h2>
+<h2 id="section-事件时间线-3月31日发生了什么">事件时间线：3月31日发生了什么</h2>
 
 <p>整个事件的导火索，是一个57MB的<code>.map</code>文件。
 </p>
@@ -163,7 +163,7 @@ var _hmt = _hmt || [];
 <p>从发现到扩散，整个过程不超过6小时。
 </p>
 
-<h2>为什么一个.map文件能泄露全部源码</h2>
+<h2 id="section-为什么一个-map文件能泄露全部源码">为什么一个.map文件能泄露全部源码</h2>
 
 <p>要理解这次泄露的严重性，先得搞清楚source map文件是什么。
 </p>
@@ -193,7 +193,7 @@ cli.js.map (57MB，完整的源码地图)
 <p>一个配置失误，完整源码+下载链接打包进了生产发布包。
 </p>
 
-<h2>泄露了什么：51.2万行代码里有什么</h2>
+<h2 id="section-泄露了什么-51-2万行代码里有什么">泄露了什么：51.2万行代码里有什么</h2>
 
 <p>51.2万行TypeScript源码，1900多个文件，覆盖了Claude Code的核心架构：
 </p>
@@ -201,7 +201,7 @@ cli.js.map (57MB，完整的源码地图)
 <p>最让业界震惊的是<strong>Kairos功能</strong>——这是Anthropic尚未发布的下一代助手模式，自定义系统提示词和定时签到功能如果落地，将使Claude Code从"编程工具"进化为"个人AI助手"。这次泄露意味着竞争对手可以提前了解Anthropic的产品路线图。
 </p>
 
-<h2>为什么这次泄露比上次更严重</h2>
+<h2 id="section-为什么这次泄露比上次更严重">为什么这次泄露比上次更严重</h2>
 
 <p>你可能会问：Anthropic不是一周前刚泄露了3000份内部文件吗？这次51.2万行代码泄露和上次有什么不同？
 </p>
@@ -219,7 +219,7 @@ cli.js.map (57MB，完整的源码地图)
 <li>多Agent协作的核心算法（可以被借鉴/复制）</li>
 <li>未发布功能的设计思路（产品路线图泄露）</li>
 </ul><table><thead><tr><th>对比项</th><th>3月27日内部文件泄露</th><th>3月31日源码泄露</th></tr></thead><tbody><tr><td>泄露规模</td><td>3000份文档</td><td>51.2万行代码</td></tr><tr><td>内容性质</td><td>内部运营/战略文档</td><td>完整产品源码</td></tr><tr><td>可利用性</td><td>低（仅供阅读参考）</td><td><strong>极高（可直接使用/逆向/攻击）</strong></td></tr><tr><td>影响范围</td><td>Anthropic品牌受损</td><td><strong>用户和竞品均受影响</strong></td></tr><tr><td>补救可能</td><td>不可逆，但危害有限</td><td><strong>不可逆，竞品已拿到源码</strong></td></tr></tbody></table>
-<h2>对开发者意味着什么</h2>
+<h2 id="section-对开发者意味着什么">对开发者意味着什么</h2>
 
 <h3>好消息：普通用户没有数据泄露</h3>
 
@@ -240,7 +240,7 @@ cli.js.map (57MB，完整的源码地图)
 <p><strong>第三，Anthropic的信任度进一步受损。</strong> 一周内两次"低级失误"——CMS配置搞砸一次，npm打包搞砸一次。这不是技术问题，是流程管理问题。对于一家声称"安全第一"的公司，这种失误的代价不只是修复成本，是品牌信任。
 </p>
 
-<h2>我的应对建议</h2>
+<h2 id="section-我的应对建议">我的应对建议</h2>
 
 <h3>如果你用Claude Code</h3>
 
@@ -273,7 +273,7 @@ cli.js.map (57MB，完整的源码地图)
 <li>对产物做完整性校验（checksum），并与已知白名单对比</li>
 <li>大小异常检测（57MB的cli.js.map明显异常）</li>
 </ul>
-<h2>Anthropic一周内两次失误说明了什么</h2>
+<h2 id="section-anthropic一周内两次失误说明了什么">Anthropic一周内两次失误说明了什么</h2>
 
 <p>3月27日：CMS配置疏漏，3000份内部文件泄露（含Claude Mythos机密评估）
 3月31日：npm打包疏漏，51.2万行源码泄露
@@ -288,7 +288,7 @@ cli.js.map (57MB，完整的源码地图)
 <p>这给所有AI公司的警示是：技术做得好不等于运营做得好。当公司规模快速扩张时，发布流程、安全审计、权限管理这些"基础建设"如果跟不上，出事是必然的。
 </p>
 
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <p><strong>Q1：Claude Code源码泄露，我的代码会被别人看到吗？</strong>
 </p>
@@ -320,7 +320,7 @@ cli.js.map (57MB，完整的源码地图)
 <p>A：短期看，Claude Code的竞争优势被削弱——它的多Agent协作架构、工具调用设计、安全模型全部暴露在竞争对手面前。中期看，会有一批基于Claude Code技术思路的"类Claude Code"开源项目出现。长期看，AI编程工具的竞争将从"功能差异化"转向"安全可信度差异化"——谁能证明自己的发布流程更安全，谁就能获得企业用户的信任。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>2026年3月31日，Anthropic因npm打包配置疏漏，意外泄露了Claude Code的51.2万行TypeScript源码。这是该公司一周内第二次因"低级失误"引发的重大安全事故。
 </p>
@@ -377,10 +377,10 @@ cli.js.map (57MB，完整的源码地图)
                     <div style="font-weight:600;">Claude Code</div>
                     <div style="font-size:13px;color:#666;">AI编程</div>
                 </a>
-<a href="/tools/chatgpt/" class="related-card">
-                    <div style="font-size:24px;margin-bottom:8px;">🟢</div>
-                    <div style="font-weight:600;">ChatGPT</div>
-                    <div style="font-size:13px;color:#666;">AI对话</div>
+<a href="/tools/cline/" class="related-card">
+                    <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                    <div style="font-weight:600;">Cline</div>
+                    <div style="font-size:13px;color:#666;">AI编程</div>
                 </a>
 </div>
         </div>

@@ -180,7 +180,7 @@ var _hmt = _hmt || [];
 <p>我花了$300+订阅费踩坑，帮你省掉这笔钱。<strong>结论先说：预算$0也有能打的方案，预算$20/月可以覆盖90%的开发需求，$100/月是闲的。</strong>
 </p>
 
-<h2>为什么写这篇</h2>
+<h2 id="section-为什么写这篇">为什么写这篇</h2>
 
 <p>2026年4月，AI编程工具赛道已经卷到离谱。我数了一下，光是能"帮你写代码"的工具就有30多款，而且每月都有新选手入场。
 </p>
@@ -191,12 +191,12 @@ var _hmt = _hmt || [];
 <p>这篇文章是我踩了$300+坑之后的复盘。不是什么"十大工具推荐"——那种东西<a href="/tools/chatgpt/">ChatGPT</a>能写100篇。我要做的是：<strong>按你的预算，告诉你最优解是什么，以及为什么。</strong>
 </p>
 
-<h2>30款工具分5类，先搞清楚你要什么</h2>
+<h2 id="section-30款工具分5类-先搞清楚你要什么">30款工具分5类，先搞清楚你要什么</h2>
 
 <p>我把市面上的AI编程工具分成5类，每类解决不同的问题：
 </p>
 <table><thead><tr><th>类别</th><th>代表工具</th><th>解决什么</th><th>典型预算</th></tr></thead><tbody><tr><td>免费开源Agent</td><td>Cline, Aider, Continue.dev, Codex CLI</td><td>不花钱也能用AI写代码</td><td>$0</td></tr><tr><td>IDE插件</td><td>Cursor, <a href="/tools/windsurf/">Windsurf</a>, <a href="/tools/github-copilot/">GitHub Copilot</a>, Kiro</td><td>在编辑器里直接补全/聊天</td><td>$0-$20/月</td></tr><tr><td>独立Agent框架</td><td>Claude Code, OpenClaw</td><td>终端里自主完成复杂任务</td><td>$0-$100/月</td></tr><tr><td>低代码平台</td><td>Devin, <a href="/tools/bolt.new/">Bolt.new</a>, <a href="/tools/lovable/">Lovable</a>, v0</td><td>不会写代码也能做应用</td><td>$0-$20/月</td></tr><tr><td>桌面控制Agent</td><td>Manus, Claude Computer Use</td><td>操控浏览器和桌面完成综合任务</td><td>$0-$200/月</td></tr></tbody></table>
-<h2>第一类：$0免费开源方案（推荐新手从这里开始）</h2>
+<h2 id="section-第一类-0免费开源方案-推荐新手从这里开始">第一类：$0免费开源方案（推荐新手从这里开始）</h2>
 
 <p>这是我最想推荐给所有人的方案。2026年开源AI编程工具已经非常成熟了，够大多数场景用。
 </p>
@@ -244,7 +244,7 @@ var _hmt = _hmt || [];
 
 <h3>免费方案组合推荐</h3>
 <table><thead><tr><th>预算</th><th>组合方案</th><th>覆盖能力</th></tr></thead><tbody><tr><td>$0（纯本地）</td><td>Cline + Ollama（本地Qwen2.5-Coder）</td><td>基础补全+简单Agent</td></tr><tr><td>$0（+免费API）</td><td>Cline + DeepSeek API（每日免费额度）</td><td>日常开发够用</td></tr><tr><td>$0（+学生身份）</td><td>GitHub Copilot Free（2000次/月）+ Continue.dev</td><td>学生党最佳</td></tr><tr><td>~$5/月</td><td>Cline + DeepSeek API Pro</td><td>日常开发+Agent任务全覆盖</td></tr></tbody></table>
-<h2>第二类：主流IDE插件（$0-$20/月）</h2>
+<h2 id="section-第二类-主流ide插件-0-20-月">第二类：主流IDE插件（$0-$20/月）</h2>
 
 <h3>Cursor Pro（$20/月）—— 生态最完整的IDE</h3>
 
@@ -294,7 +294,7 @@ var _hmt = _hmt || [];
 <p><strong>劣势</strong>：插件生态不如VSCode系，只支持主流语言。
 </p>
 
-<h2>第三类：独立Agent框架（$0-$100/月）</h2>
+<h2 id="section-第三类-独立agent框架-0-100-月">第三类：独立Agent框架（$0-$100/月）</h2>
 
 <p>这一类是2026年最火的方向。它们不是帮你"补全代码"，而是自主完成"从需求到交付"的全流程。
 </p>
@@ -342,7 +342,7 @@ var _hmt = _hmt || [];
 
 <h3>独立Agent框架对比</h3>
 <table><thead><tr><th>工具</th><th>费用</th><th>模型支持</th><th>部署方式</th><th>适合谁</th></tr></thead><tbody><tr><td>Claude Code</td><td>$20/月(API另计)</td><td>仅Claude</td><td>云端/本地CLI</td><td>Claude深度用户</td></tr><tr><td>OpenClaw</td><td>免费</td><td>全部</td><td>本地</td><td>技术爱好者</td></tr><tr><td>Aider</td><td>免费</td><td>全部</td><td>本地CLI</td><td>Git重度用户</td></tr><tr><td>OpenHands</td><td>免费</td><td>全部</td><td>Docker</td><td>DevOps/运维</td></tr><tr><td>SWE-agent</td><td>免费</td><td>全部</td><td>本地</td><td>学术研究/测试</td></tr></tbody></table>
-<h2>第四类：低代码/无代码平台（$0-$20/月）</h2>
+<h2 id="section-第四类-低代码-无代码平台-0-20-月">第四类：低代码/无代码平台（$0-$20/月）</h2>
 
 <p>不会写代码？2026年这些平台能让你用自然语言描述需求，AI直接生成完整应用。
 </p>
@@ -368,7 +368,7 @@ var _hmt = _hmt || [];
 <p><strong>适合的场景</strong>：前端组件快速原型、UI设计灵感参考。
 </p>
 
-<h2>第五类：桌面控制Agent（$0-$200/月）</h2>
+<h2 id="section-第五类-桌面控制agent-0-200-月">第五类：桌面控制Agent（$0-$200/月）</h2>
 
 <p>这是2026年最前沿的方向——AI不只是写代码，它能操控你的浏览器、点击按钮、填写表单、操作任何桌面应用。
 </p>
@@ -386,7 +386,7 @@ var _hmt = _hmt || [];
 <p>Anthropic推出的桌面控制能力，Claude可以直接看到你的屏幕并操作鼠标键盘。目前还比较初级，但方向很明确。
 </p>
 
-<h2>按预算的终极推荐方案</h2>
+<h2 id="section-按预算的终极推荐方案">按预算的终极推荐方案</h2>
 
 <p>这是我踩了$300+坑之后总结的方案。不是"最好的工具"，是<strong>最划算的组合</strong>：
 </p>
@@ -394,9 +394,9 @@ var _hmt = _hmt || [];
 <p><strong>我现在的方案</strong>：Cursor Pro（$20）+ Cline + DeepSeek API（~$5/月） = 月均$25。覆盖了我95%的开发需求。
 </p>
 
-<h2>2026年AI编程工具价格一览</h2>
+<h2 id="section-2026年ai编程工具价格一览">2026年AI编程工具价格一览</h2>
 <table><thead><tr><th>工具</th><th>免费层</th><th>最低付费</th><th>最高付费</th><th>性价比评分</th></tr></thead><tbody><tr><td>Cline</td><td>完全免费</td><td>-</td><td>-</td><td>★★★★★</td></tr><tr><td>Aider</td><td>完全免费</td><td>-</td><td>-</td><td>★★★★☆</td></tr><tr><td>Continue.dev</td><td>完全免费</td><td>-</td><td>-</td><td>★★★★☆</td></tr><tr><td>Codex CLI</td><td>完全免费</td><td>-</td><td>-</td><td>★★★★☆</td></tr><tr><td>OpenClaw</td><td>完全免费</td><td>-</td><td>-</td><td>★★★★★</td></tr><tr><td>GitHub Copilot</td><td>2000次/月</td><td>$10/月</td><td>$39/月</td><td>★★★★☆</td></tr><tr><td>Cursor</td><td>2000次/月</td><td>$20/月</td><td>$40/月</td><td>★★★★☆</td></tr><tr><td>Windsurf</td><td>有免费层</td><td>$15/月</td><td>-</td><td>★★★☆☆</td></tr><tr><td>Claude Code</td><td>无（需Pro）</td><td>$20/月(API另计)</td><td>$100/月</td><td>★★★☆☆</td></tr><tr><td>Manus</td><td>有限积分</td><td>$19/月</td><td>$200/月</td><td>★★★☆☆</td></tr><tr><td>Bolt.new</td><td>有免费层</td><td>$20/月</td><td>-</td><td>★★★★☆</td></tr><tr><td>Lovable</td><td>有限免费</td><td>$20/月</td><td>-</td><td>★★★☆☆</td></tr><tr><td>v0</td><td>有限免费</td><td>$20/月</td><td>-</td><td>★★★★☆</td></tr><tr><td>Kiro</td><td>有限免费</td><td>$10/月</td><td>-</td><td>★★★☆☆</td></tr></tbody></table>
-<h2>踩坑经验（花了$300+学到的事）</h2>
+<h2 id="section-踩坑经验-花了-300-学到的事">踩坑经验（花了$300+学到的事）</h2>
 
 <p><strong>1. 别同时订阅太多工具。</strong> 我最蠢的时候同时开着Cursor Pro + Claude Max + Manus Pro，月花费$130。后来发现80%的时间只用Cursor，另外两个几乎闲置。
 </p>
@@ -413,7 +413,7 @@ var _hmt = _hmt || [];
 <p><strong>5. 关注学生/开源贡献者免费计划。</strong> GitHub Copilot、Cursor、Anthropic都有学生优惠或开源项目免费计划。如果你有edu邮箱，省下来的钱够吃好几顿火锅。
 </p>
 
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <p><strong>Q：完全不会编程，用哪个工具入门？</strong>
 A：Bolt.new或Lovable。它们不需要写代码，用自然语言描述需求就能生成应用。但要注意，生成的代码你可能看不懂，后续维护还是需要学编程。
@@ -435,7 +435,7 @@ A：短期内不会，但会替代"不会用AI的程序员"。我观察到的是
 A：取决于你的场景。如果只是写脚本、做小项目、学习编程，$0方案完全够用。如果做商业项目、团队协作、大型工程，建议至少投入$20/月。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>2026年AI编程工具市场已经足够成熟，<strong>$0方案不再是"凑合用"的水平，而是真正能打的方案。</strong> Cline + DeepSeek API的组合是我实测后最推荐的零成本方案。
 </p>

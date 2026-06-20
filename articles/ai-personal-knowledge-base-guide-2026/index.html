@@ -170,7 +170,7 @@ var _hmt = _hmt || [];
                 <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
                 <span style="color:#555;">手把手教你搭建个人AI知识库。不是泛泛的&quot;工具推荐&quot;，而是一套完整的三合一工作流：NotebookLM做AI研究助手（4月10日刚上线Gemini双向同步）、Obsidian做本地笔记存储、Claude做深度分析。附详细的注册/配置步骤、实际使用案例、常见问题解决。适合知识工作者、内容创作者、程序员、学生。</span>
             </div>
-            <h2>先说结论：别再一个工具找所有资料了</h2>
+            <h2 id="section-先说结论-别再一个工具找所有资料了">先说结论：别再一个工具找所有资料了</h2>
 
 <p>我之前的知识管理方式是：收藏夹里存了2000多个书签，微信收藏了500多条，电脑桌面上散落着各种PDF和Word文档。找一份两周前看过的报告，平均要花15-20分钟。
 </p>
@@ -192,7 +192,7 @@ var _hmt = _hmt || [];
 </p>
 
 <hr>
-<h2>为什么我要搭AI知识库</h2>
+<h2 id="section-为什么我要搭ai知识库">为什么我要搭AI知识库</h2>
 
 <p>我做aitoollab.cn的过程中，每天要处理大量的信息：AI工具新闻、技术文档、产品评测、竞品分析、用户反馈。这些信息分散在邮件、浏览器、微信、PDF、网页里。
 </p>
@@ -203,7 +203,7 @@ var _hmt = _hmt || [];
 <p>最大的改变不是"存得更多"，而是"找得到、用得上"。之前的知识管理像是把书堆在仓库里，书越多越乱。现在的AI知识库像是给仓库装了智能检索系统——你只要描述你要什么，AI帮你找出来，还顺便告诉你相关的信息。
 </p>
 
-<h2>第一步：NotebookLM——你的AI研究助手</h2>
+<h2 id="section-第一步-notebooklm-你的ai研究助手">第一步：NotebookLM——你的AI研究助手</h2>
 
 <h3>为什么选NotebookLM而不是其他</h3>
 
@@ -265,7 +265,7 @@ var _hmt = _hmt || [];
 <li><strong>网页来源可能失效</strong>。NotebookLM抓取网页时保存的是快照，如果网页结构复杂（大量JS渲染），可能抓取不完整。重要网页建议另存为PDF再上传。</li>
 <li><strong>YouTube字幕依赖质量</strong>。如果视频没有英文字幕，NotebookLM可能无法处理。中文视频目前支持有限。</li>
 </ul>
-<h2>第二步：Obsidian——你的本地知识仓库</h2>
+<h2 id="section-第二步-obsidian-你的本地知识仓库">第二步：Obsidian——你的本地知识仓库</h2>
 
 <h3>为什么一定要有本地存储</h3>
 
@@ -339,7 +339,7 @@ var _hmt = _hmt || [];
 <p><strong>实际案例</strong>：上周我要写一篇关于AI编程工具的文章。在Obsidian里搜了"编程"标签，找到了3个月前记的Claude Code使用笔记和2个月前的Cursor测试笔记。如果靠记忆，我根本想不起来还有这些资料。
 </p>
 
-<h2>第三步：Claude——深度分析和写作的最终武器</h2>
+<h2 id="section-第三步-claude-深度分析和写作的最终武器">第三步：Claude——深度分析和写作的最终武器</h2>
 
 <h3>Claude在知识库里的角色</h3>
 
@@ -383,7 +383,7 @@ var _hmt = _hmt || [];
 <p>简单说：NotebookLM是"读"的工具，Claude是"想和写"的工具。<strong>读完资料想深入分析和创造内容时，把资料丢给Claude。</strong>
 </p>
 
-<h2>三合一工作流：它们怎么串起来</h2>
+<h2 id="section-三合一工作流-它们怎么串起来">三合一工作流：它们怎么串起来</h2>
 
 <p>说了这么多单个工具，最关键的是<strong>怎么把三个工具串成一个流畅的工作流</strong>。这是网上所有教程都忽略的部分。
 </p>
@@ -425,7 +425,7 @@ var _hmt = _hmt || [];
 <p><strong>我的建议</strong>：刚开始不要追求全自动化。手动衔接反而能让你在"搬运"的过程中加深对资料的理解。等你用熟了、知道哪些环节是重复劳动，再用自动化替换。
 </p>
 
-<h2>不同人群的定制方案</h2>
+<h2 id="section-不同人群的定制方案">不同人群的定制方案</h2>
 
 <h3>程序员：技术文档+代码知识库</h3>
 <table><thead><tr><th>工具</th><th>用途</th><th>配置重点</th></tr></thead><tbody><tr><td>NotebookLM</td><td>存API文档、技术博客、架构图</td><td>按技术栈分Notebook（前端/后端/DevOps）</td></tr><tr><td>Obsidian</td><td>存代码片段、问题解决记录、学习笔记</td><td>安装代码高亮插件，用Dataview查Bug记录</td></tr><tr><td>Claude</td><td>代码审查、架构分析、技术方案设计</td><td>用Projects功能，每个项目一个工作空间</td></tr></tbody></table>
@@ -447,12 +447,12 @@ var _hmt = _hmt || [];
 <p><strong>注意</strong>：NotebookLM和Claude都是云端服务，敏感数据（客户隐私、法律机密）建议只在本地Obsidian中存储，不要上传到云端。
 </p>
 
-<h2>成本总结</h2>
+<h2 id="section-成本总结">成本总结</h2>
 <table><thead><tr><th>工具</th><th>费用</th><th>说明</th></tr></thead><tbody><tr><td>NotebookLM</td><td><strong>免费</strong></td><td>核心功能全部免费，50来源/Notebook</td></tr><tr><td>Obsidian</td><td><strong>免费</strong></td><td>核心功能免费，商业用途需$50一次性付费</td></tr><tr><td>Obsidian Sync</td><td>$4/月（可选）</td><td>多设备同步，不用可以省</td></tr><tr><td>Smart Connections插件</td><td><strong>免费</strong></td><td>插件本身免费，AI调用需API费</td></tr><tr><td>DeepSeek API（Smart Connections用）</td><td><strong><¥5/月</strong></td><td>极低成本，百万token才¥1</td></tr><tr><td>Claude Pro（深度分析用）</td><td><strong>$20/月</strong></td><td>如果不追求深度分析，DeepSeek免费版也够</td></tr><tr><td><strong>总计（最省方案）</strong></td><td><strong>¥0</strong></td><td>NotebookLM免费+Obsidian免费+DeepSeek免费</td></tr><tr><td><strong>总计（推荐方案）</strong></td><td><strong>¥30-40/月</strong></td><td>加上Claude Pro和Obsidian Sync</td></tr></tbody></table>
 <p>和市面上的知识管理SaaS比（Notion $10/月起、Roam Research $15/月、Coda $10/月起），这个方案不仅便宜得多，而且<strong>数据完全在你手里</strong>。
 </p>
 
-<h2>踩坑经验</h2>
+<h2 id="section-踩坑经验">踩坑经验</h2>
 
 <h3>坑1：不要一开始就搞太复杂的分类系统</h3>
 
@@ -499,7 +499,7 @@ var _hmt = _hmt || [];
 <li>每月2小时：回顾（浏览旧笔记、更新过时信息、删除无效内容）</li>
 <li>每季度：调整分类体系（根据内容增长调整文件夹结构）</li>
 </ul>
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <p><strong>Q1：完全零基础，从来没有用过知识管理工具，从哪个开始？</strong>
 </p>
@@ -537,7 +537,7 @@ var _hmt = _hmt || [];
 <p>A：当然有。NotebookLM的核心价值——多文档AI分析、音频摘要、来源引用——跟Gemini同步完全无关。这些功能从第一天就对所有人免费。Gemini同步只是一个"锦上添花"的便利功能，不是核心。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>个人AI知识库不是"选择最好的工具"，而是<strong>用多个工具的强项组合出一个大于部分之和的方案</strong>。NotebookLM负责"AI帮你读文档"，Obsidian负责"你的数据永远在你手里"，Claude负责"深度思考和创作"。三个工具各司其职，缺一不可。
 </p>

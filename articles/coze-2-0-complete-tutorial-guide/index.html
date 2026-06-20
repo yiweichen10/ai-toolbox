@@ -198,7 +198,7 @@ var _hmt = _hmt || [];
 <p><strong>结论先说：Coze是目前国内零基础用户搭建AI智能体的最佳选择，没有之一。</strong> 免费版就能用工作流、知识库、多智能体协同，2026年1月升级到2.0后加了AgentPlan长期规划和技能商店，我花了3天搭了5个能真正跑起来的智能体，这篇把每一步都写清楚。
 </p>
 
-<h2>为什么写这篇</h2>
+<h2 id="section-为什么写这篇">为什么写这篇</h2>
 
 <p>我之前用Dify搭过智能体，配置环境就得折腾半天（Docker、Python依赖、Nginx反向代理），部署完发现文档对新手极不友好。后来朋友推荐了Coze扣子——字节跳动出的平台，打开网页就能用，不用装任何东西。
 </p>
@@ -206,7 +206,7 @@ var _hmt = _hmt || [];
 <p>2026年1月Coze升级到2.0，我第一时间用新版搭了几个智能体（自动客服、内容创作流水线、数据报表分析），踩了不少坑。网上大多数Coze教程还停留在1.0的"创建一个聊天机器人"层面，对2.0的AgentPlan、技能商店、多智能体协同几乎没有覆盖。这篇是我踩完坑后的完整记录，按这个流程走，你能搭出一个真正能干活的智能体。
 </p>
 
-<h2>第一步：注册和界面熟悉（5分钟）</h2>
+<h2 id="section-第一步-注册和界面熟悉-5分钟">第一步：注册和界面熟悉（5分钟）</h2>
 
 <p>打开 <a href="https://www.coze.cn" target="_blank" rel="noopener">coze.cn</a>，用抖音号或手机号直接登录。国际版是 <a href="https://www.coze.com" target="_blank" rel="noopener">coze.com</a>，国内建议用coze.cn，模型响应更快，插件生态也更全。
 </p>
@@ -217,7 +217,7 @@ var _hmt = _hmt || [];
 <p><strong>我的建议</strong>：先别急着创建，去"空间"里逛10分钟，看看别人搭了什么。你会发现Coze的智能体不只是聊天机器人——有做电商选品分析的、有自动写小红书文案的、有监控舆情并生成报告的。这能帮你建立对"智能体能干什么"的直觉。
 </p>
 
-<h2>第二步：创建你的第一个智能体（15分钟）</h2>
+<h2 id="section-第二步-创建你的第一个智能体-15分钟">第二步：创建你的第一个智能体（15分钟）</h2>
 
 <p>点左侧"工作室"→"创建智能体"，有三个选项：
 </p>
@@ -240,17 +240,17 @@ var _hmt = _hmt || [];
 <p>你是一款智能手表的售后客服，语气亲切专业。
 </p>
 
-<h2>能力范围</h2>
+<h2 id="section-能力范围">能力范围</h2>
 <ul><li>回答产品功能问题（健康监测、运动模式、消息通知等）</li>
 <li>处理售后问题（退换货流程、保修政策）</li>
 <li>提供使用技巧（省电模式设置、表盘更换等）</li>
 </ul>
-<h2>回答规则</h2>
+<h2 id="section-回答规则">回答规则</h2>
 <ul><li>回答控制在200字以内</li>
 <li>涉及退换货时给出具体步骤，不要说"请联系客服"</li>
 <li>不确定的问题诚实说明，不要编造功能</li>
 </ul>
-<h2>禁止行为</h2>
+<h2 id="section-禁止行为">禁止行为</h2>
 <ul><li>不要推荐其他品牌产品</li>
 <li>不要讨论与智能手表无关的话题</li>
 </ul></code></pre>
@@ -258,7 +258,7 @@ var _hmt = _hmt || [];
 <p><strong>关键经验</strong>：人设提示词里一定要写"禁止行为"。AI默认倾向于"有求必应"，不设边界它会胡说八道。
 </p>
 
-<h2>第三步：配置模型（5分钟）</h2>
+<h2 id="section-第三步-配置模型-5分钟">第三步：配置模型（5分钟）</h2>
 
 <p>Coze 2.0支持多种模型，不同场景建议不同选择：
 </p>
@@ -266,7 +266,7 @@ var _hmt = _hmt || [];
 <p>在智能体编辑页左侧点击"模型"即可切换。我的建议是：<strong>先用豆包Pro跑通流程，效果不满意再换模型</strong>。大部分中文场景豆包Pro完全够用，没必要一开始就用贵的模型。
 </p>
 
-<h2>第四步：添加插件扩展能力（10分钟）</h2>
+<h2 id="section-第四步-添加插件扩展能力-10分钟">第四步：添加插件扩展能力（10分钟）</h2>
 
 <p>插件是让智能体"长手长脚"的关键。没有插件的智能体只能说，加了插件就能做。
 </p>
@@ -280,7 +280,7 @@ var _hmt = _hmt || [];
 <p>添加插件后记得在左侧"已添加"里调整优先级。Coze会按优先级顺序调用插件，把最常用的放前面。
 </p>
 
-<h2>第五步：搭建工作流（核心环节，30-60分钟）</h2>
+<h2 id="section-第五步-搭建工作流-核心环节-30-60分钟">第五步：搭建工作流（核心环节，30-60分钟）</h2>
 
 <p><strong>这是Coze真正拉开差距的地方。</strong> 工作流让你的智能体从"一问一答"变成"自动执行多步任务"。
 </p>
@@ -333,7 +333,7 @@ var _hmt = _hmt || [];
 <p><strong>经验</strong>：条件分支的逻辑要想清楚再搭，先在纸上画流程图。工作流调试最痛苦的是"逻辑对了但某个分支的提示词没写好"，排查起来非常耗时。
 </p>
 
-<h2>第六步：上传知识库（让AI懂你的业务）</h2>
+<h2 id="section-第六步-上传知识库-让ai懂你的业务">第六步：上传知识库（让AI懂你的业务）</h2>
 
 <p>如果你的智能体需要回答关于你公司/产品的问题，知识库是必须的。
 </p>
@@ -352,7 +352,7 @@ var _hmt = _hmt || [];
 <p><strong>关键发现</strong>：FAQ格式的文档检索准确率最高（97%），因为问答对本身就是"问题→答案"的结构，跟检索场景天然匹配。长篇PDF需要拆分成小章节上传，一整本50页的PDF丢进去，准确率会降到70%以下。
 </p>
 
-<h2>第七步：多智能体协同（进阶，1-2小时）</h2>
+<h2 id="section-第七步-多智能体协同-进阶-1-2小时">第七步：多智能体协同（进阶，1-2小时）</h2>
 
 <p>这是Coze 2.0的重头戏。当你发现一个智能体什么都想干但什么都干不好时，就该上多Agent了。
 </p>
@@ -382,7 +382,7 @@ var _hmt = _hmt || [];
 <p><strong>成本对比</strong>：多Agent模式Token消耗大约是单Agent的1.8倍（因为有中间传递环节），但质量提升值得这个成本。
 </p>
 
-<h2>第八步：发布到多平台（10分钟）</h2>
+<h2 id="section-第八步-发布到多平台-10分钟">第八步：发布到多平台（10分钟）</h2>
 
 <p>Coze 2.0支持一键发布到多个平台：
 </p>
@@ -393,7 +393,7 @@ var _hmt = _hmt || [];
 <p><strong>公众号发布的踩坑</strong>：Coze的公众号集成需要你在微信公众平台设置服务器URL和Token，这个配置过程官方文档写得很简略。关键是：验证Token时Coze会往你填的URL发一个GET请求，你需要确保这个URL是Coze提供的回调地址，不是你自己的服务器地址。
 </p>
 
-<h2>Coze 1.0 vs 2.0：升级了什么</h2>
+<h2 id="section-coze-1-0-vs-2-0-升级了什么">Coze 1.0 vs 2.0：升级了什么</h2>
 
 <p>如果你之前用过Coze，这里是你最关心的变化：
 </p>
@@ -401,7 +401,7 @@ var _hmt = _hmt || [];
 <p>最让我兴奋的是<strong>AgentPlan</strong>——你设定一个长期目标（比如"每天早上8点监控3个竞品的价格变化并生成报告"），Coze会自动拆解成每日任务、按时执行、汇总结果。这等于把智能体从"被动工具"变成了"主动助手"。
 </p>
 
-<h2>踩坑经验汇总</h2>
+<h2 id="section-踩坑经验汇总">踩坑经验汇总</h2>
 
 <h3>坑1：工作流调试地狱</h3>
 <p>搭建复杂工作流时，<strong>每加一个节点就测试一次</strong>。不要搭完整个流程才测试——出错时你根本不知道是哪个节点的问题。我第一次搭12个节点的工作流，测试发现输出乱码，排查了2小时才发现是第3个节点的变量名拼错了。
@@ -423,7 +423,7 @@ var _hmt = _hmt || [];
 <p>Coze内置的图像生成偶尔会出现文字变形（特别是中文字符）。如果需要生成包含中文文字的图片，建议用 <a href="/tools/jimeng-ai/index.html">即梦AI</a> 或 <a href="/tools/gaoding-design-ai/index.html">稿定设计AI</a> 专门做图，Coze里的图像生成更适合做概念图和插画。
 </p>
 
-<h2>Coze vs Dify：我为什么选Coze</h2>
+<h2 id="section-coze-vs-dify-我为什么选coze">Coze vs Dify：我为什么选Coze</h2>
 
 <p>两个我都用过超过3个月，说说真实感受：
 </p>
@@ -431,7 +431,7 @@ var _hmt = _hmt || [];
 <p><strong>我的结论</strong>：如果你是个人用户或小团队，想快速搭出能用的智能体，选Coze。如果你是技术团队，需要深度定制和完全掌控部署环境，选Dify。
 </p>
 
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <h3>Coze免费版能用多久？</h3>
 <p>没有时间限制，永久免费。但有Token额度限制（大约每天50-100次中等复杂度对话），超出后需等第二天重置或升级付费版。
@@ -453,7 +453,7 @@ var _hmt = _hmt || [];
 <p>能。Coze 2.0支持在工作流里设置定时触发器（Cron表达式），也可以通过API外部触发。配合AgentPlan功能，可以实现"每天自动执行某项任务"的完全自动化。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>Coze 2.0是我目前用过的对新手最友好的AI智能体搭建平台。核心优势三点：
 </p>
@@ -471,17 +471,17 @@ var _hmt = _hmt || [];
 
         <div class="related-tools">
             <h3>📖 相关文章</h3>
-            <div class="related-grid"><a href="/articles/multi-agent-ai-tools-guide-2026/" class="related-card">
+            <div class="related-grid"><a href="/articles/china-open-source-ai-wave-june-2026/" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">2026年6月国产AI开源大爆发：小米MiMo Code终结编程「失忆症」、华为CloudRobo打通机器人全链路、快手Keye-VL读懂数小时长视频——中国科技巨头为何集体「交卷」？</div>
+                <div style="font-size:13px;color:#666;">2026-06-20</div>
+            </a>
+<a href="/articles/multi-agent-ai-tools-guide-2026/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">2026年AI Agent编排工具终极指南：别再让一个模型干所有活了，这12个平台让你的AI学会「团队协作」</div>
                 <div style="font-size:13px;color:#666;">2026-06-19</div>
             </a>
 <a href="/articles/ai-video-generation-open-source-vs-closed-source-2026/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">AI视频生成2026：开源大军围剿闭源巨头，深度使用一个月后我的结论可能让你意外</div>
                 <div style="font-size:13px;color:#666;">2026-06-18</div>
-            </a>
-<a href="/articles/ai-data-analysis-tools-real-test-202606/" class="related-card">
-                <div style="font-weight:600;margin-bottom:4px;">2026年AI数据分析工具实测对比：我用同一份数据测了5款工具，免费的通义千问居然比ChatGPT还快</div>
-                <div style="font-size:13px;color:#666;">2026-06-17</div>
             </a>
 </div>
         </div>

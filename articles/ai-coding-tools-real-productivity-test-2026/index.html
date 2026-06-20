@@ -140,7 +140,7 @@ var _hmt = _hmt || [];
                 <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
                 <span style="color:#555;">用5个真实项目跑了3个月，实测AI编程工具的真实生产力。平均每周省7.5小时但bug涨23%？顶尖用户如何把bug降到0？SWE-bench 86%的GPT-5.4 Pro在真实项目里不如SWE-bench 65%的Gemini？一篇用数据说话的实测报告。</span>
             </div>
-            <h2>前言</h2>
+            <h2 id="section-前言">前言</h2>
 
 <p>网上关于AI编程工具的评测已经多到烂了——清一色的"对比表格+推荐方案+FAQ三件套"，像是<a href="/tools/chatgpt/">ChatGPT</a>批量生成的模板。但有一个问题从来没人认真回答：<strong>AI编程工具在真实项目里，到底能帮你省多少时间？又让你多修了多少bug？</strong>
 </p>
@@ -151,7 +151,7 @@ var _hmt = _hmt || [];
 <p>先说结论：<strong>AI确实能帮你省时间，但"省时间"和"写出好代码"是两回事。</strong> 这篇文章的数据可能会让一部分人失望——AI编程工具的"生产力神话"，水分比你想的大。
 </p>
 
-<h2>为什么做这个测试</h2>
+<h2 id="section-为什么做这个测试">为什么做这个测试</h2>
 
 <p>我之前写过一篇大模型API价格横评，发现最贵的<a href="/tools/claude/">Claude</a> Opus比最便宜的DeepSeek贵178倍。评论区有人问："贵10倍是不是质量也差10倍？"
 </p>
@@ -166,12 +166,12 @@ var _hmt = _hmt || [];
 <li>5个项目，4套方案轮换（每个项目用不同方案跑）</li>
 <li>每天记录：编码时间、AI交互次数、引入bug数、修复bug数、代码审查通过率</li>
 </ul>
-<h2>四套测试方案</h2>
+<h2 id="section-四套测试方案">四套测试方案</h2>
 <table><thead><tr><th>方案</th><th>工具</th><th>模型</th><th>月费</th><th>定位</th></tr></thead><tbody><tr><td>A</td><td>Cursor Pro</td><td>Claude Opus 4.6</td><td>$20+超额</td><td>旗舰级，能花钱解决的都不叫事</td></tr><tr><td>B</td><td>Claude Code Pro</td><td>Claude Sonnet 4.6</td><td>$20+超额</td><td>Anthropic原生，终端党</td></tr><tr><td>C</td><td>Cline + DeepSeek V3.2</td><td>DeepSeek V3.2</td><td>~$5（API）</td><td>极致性价比</td></tr><tr><td>D</td><td><a href="/tools/github-copilot/">GitHub Copilot</a> Pro</td><td>GPT-5.4 Pro</td><td>$10</td><td>主流选择</td></tr></tbody></table>
 <p>注意方案A和方案B的月费都写了"+超额"——这不是笔误。我测了才知道，$20只是"起步价"。
 </p>
 
-<h2>核心数据一：时间到底省了多少</h2>
+<h2 id="section-核心数据一-时间到底省了多少">核心数据一：时间到底省了多少</h2>
 
 <p>12周下来，5个项目总共写了约12万行代码（含AI生成和手写），这是按任务类型拆分的时间数据：
 </p>
@@ -200,7 +200,7 @@ var _hmt = _hmt || [];
 <p>我的数据（方案B Claude Code省17.1小时/周）明显高于行业平均。原因可能是：我的项目类型（后端+前端+小程序）特别适合AI辅助，而且我已经有半年以上的AI编程经验，提示词和交互效率比新手高很多。<strong>新手用户的实际节省时间可能只有我的一半。</strong>
 </p>
 
-<h2>核心数据二：Bug——没人愿意谈的那一面</h2>
+<h2 id="section-核心数据二-bug-没人愿意谈的那一面">核心数据二：Bug——没人愿意谈的那一面</h2>
 
 <p>这是这篇文章最值得看的部分。几乎所有AI编程工具的评测都在谈"速度提升"，但极少有人谈<strong>AI引入了多少新bug</strong>。
 </p>
@@ -246,7 +246,7 @@ var _hmt = _hmt || [];
 <p><strong>核心结论：AI帮你省了时间，但把时间花在了修AI自己引入的bug上。</strong> 净节省时间需要扣除bug修复成本，才是真实的生产力提升。
 </p>
 
-<h2>核心数据三：SWE-bench分数≠真实表现</h2>
+<h2 id="section-核心数据三-swe-bench分数-真实表现">核心数据三：SWE-bench分数≠真实表现</h2>
 
 <p>这是整个测试里最让我意外的发现。
 </p>
@@ -273,7 +273,7 @@ var _hmt = _hmt || [];
 <p><strong>如果你只看SWE-bench选工具，你很可能选到最适合做竞赛题的模型，而不是最适合日常开发的模型。</strong>
 </p>
 
-<h2>核心数据四：真正的成本</h2>
+<h2 id="section-核心数据四-真正的成本">核心数据四：真正的成本</h2>
 
 <p>4套方案12周的实际花费：
 </p>
@@ -287,7 +287,7 @@ var _hmt = _hmt || [];
 <p>不过这个计算有个前提：Copilot的免费版（50次聊天/月）够轻度用户用。如果你是重度用户，Copilot Pro $10/月，12周就是$30——和我的数据一致。
 </p>
 
-<h2>顶尖用户和普通用户的差距</h2>
+<h2 id="section-顶尖用户和普通用户的差距">顶尖用户和普通用户的差距</h2>
 
 <p>10,000人研究有一个让我印象深刻的数据：<strong>顶尖10%的开发者，通过严格审查AI输出，把AI引入的bug减少了91%。</strong> 也就是说，同样的工具，有人用出了10倍的效果差距。
 </p>
@@ -320,7 +320,7 @@ var _hmt = _hmt || [];
 <p>我的实际工作流：先用<a href="https://www.aitoollab.cn/tools/deepseek/index.html" target="_blank" rel="noopener">DeepSeek</a> V3.2快速生成初版代码（便宜、速度快），然后用Claude Sonnet做审查和优化（贵但准确率更高）。两步走比一步到位成本低60%，质量反而更高。
 </p>
 
-<h2>我踩过的5个大坑</h2>
+<h2 id="section-我踩过的5个大坑">我踩过的5个大坑</h2>
 
 <h3>坑1：Claude Code的"自信式幻觉"</h3>
 
@@ -347,7 +347,7 @@ var _hmt = _hmt || [];
 <p>我的5个项目里有一个是接手别人的遗留代码（没有文档、没有注释、变量命名像密码）。4套方案在这个项目上的表现都一塌糊涂——AI无法理解没有语义信息的代码，给出的重构建议基本是"把变量名改成有意义的名字"这种废话。<strong>AI擅长写新代码，不擅长读旧代码。</strong>
 </p>
 
-<h2>最终推荐（基于3个月真实数据）</h2>
+<h2 id="section-最终推荐-基于3个月真实数据">最终推荐（基于3个月真实数据）</h2>
 <table><thead><tr><th>你是什么情况</th><th>推荐</th><th>理由</th></tr></thead><tbody><tr><td>追求综合效率（时间+质量）</td><td>Claude Code Pro $20/月</td><td>省时间最多（57.8%），bug最少（38个），重构最强</td></tr><tr><td>追求性价比</td><td>Copilot Pro $10/月</td><td>每小时成本$0.07最低，集成最广，省心</td></tr><tr><td>预算极低</td><td>Cline + DeepSeek</td><td>月费$5以内，简单任务够用，但必须严格审查</td></tr><tr><td>全能型（不差钱）</td><td>Cursor Pro + Claude Code</td><td>Cursor做日常编码，Claude Code做复杂重构</td></tr></tbody></table>
 <p>注意我没有推荐"只用一个工具"。3个月的实测告诉我，<strong>没有任何一个工具在所有场景下都是最优的</strong>。最实用的方案是组合使用：
 </p>
@@ -356,7 +356,7 @@ var _hmt = _hmt || [];
 <li>15%的复杂重构 → Claude Code（Agent模式最强）</li>
 <li>5%的批量任务 → Cline + DeepSeek（最便宜）</li>
 </ul>
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <p><strong>Q1：AI编程工具真的能提高生产力吗？还是只是感觉快了？</strong>
 A：确实能提高生产力，但要看怎么定义。纯编码速度提升37-58%（取决于工具和场景），这是有数据支撑的。但"编码快"不等于"交付快"——如果你的项目需要大量测试、安全审查和代码评审，AI省下来的时间会被bug修复和审查消耗掉一部分。真实净节省时间大约是编码节省时间的60-70%。
@@ -378,7 +378,7 @@ A：简单任务（CRUD、写测试、生成文档）可以替代，但复杂任
 A：从GitHub Copilot开始。$10/月固定费用，集成在VS Code里零配置，补全速度快，bug率可控。用1-2个月熟悉AI编程的节奏后，再考虑升级到Cursor或Claude Code。<strong>不要一上来就用最强的工具</strong>——Claude Code和Cursor的功能密度很高，新手容易被"AI太强了"的假象迷惑，放松审查导致引入大量bug。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>3个月、5个真实项目、4套方案、12万行代码。这些数据告诉我几件事：
 </p>

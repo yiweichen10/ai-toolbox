@@ -140,7 +140,7 @@ var _hmt = _hmt || [];
                 <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
                 <span style="color:#555;">2026年3月最后一周AI行业四大重磅事件：OpenAI关停Sora（半年烧$2.7亿仅收入$210万）、LiteLLM遭TeamPCP供应链攻击（9500万月下载量受影响，3小时暴露窗口）、Arm发布首款自研136核AGI CPU（Meta首发，机架性能2倍于x86）、Anthropic推出Claude Computer Use（AI直接操控Mac桌面完成任务）。</span>
             </div>
-            <h2>前言</h2>
+            <h2 id="section-前言">前言</h2>
 
 <p>这周AI圈炸了四次。OpenAI亲手砍掉了<a href="/tools/sora/">Sora</a>——那个曾经让全世界为之疯狂的AI视频产品，存活不到半年就下线。就在同一天，LiteLLM被投毒了——9500万月下载量的Python包被植入了窃取凭证的后门，用了<a href="https://www.aitoollab.cn/tools/cursor/index.html" target="_blank" rel="noopener">Cursor</a>、<a href="/tools/claude/"><a href="https://www.aitoollab.cn/tools/claude-code/index.html" target="_blank" rel="noopener">Claude</a> Code</a>的开发者可能中招。与此同时，Arm做了35年来从没做过的事——自己造了一颗136核的CPU，Meta买了第一张票。而Anthropic直接把鼠标交给了Claude，让它操作你的电脑干活。
 </p>
@@ -148,7 +148,7 @@ var _hmt = _hmt || [];
 <p>四件事放在一起，指向一个清晰的信号：AI行业正在从"能不能做"进入"该不该做、怎么做才赚钱"的阶段。
 </p>
 
-<h2>事件一：Sora之死——OpenAI史上最大规模产品关停</h2>
+<h2 id="section-事件一-sora之死-openai史上最大规模产品关停">事件一：Sora之死——OpenAI史上最大规模产品关停</h2>
 
 <h3>发生了什么</h3>
 
@@ -193,7 +193,7 @@ var _hmt = _hmt || [];
 <li>API接口停止服务后，依赖Sora API的应用需要迁移到其他视频生成服务</li>
 <li>建议转向剪映（Seedance）、<a href="/tools/runway/">Runway</a>、<a href="/tools/pika/">Pika</a>等替代方案</li>
 </ul>
-<h2>事件二：LiteLLM被投毒——9500万月下载量的包差点成了后门</h2>
+<h2 id="section-事件二-litellm被投毒-9500万月下载量的包差点成了后门">事件二：LiteLLM被投毒——9500万月下载量的包差点成了后门</h2>
 
 <h3>发生了什么</h3>
 
@@ -282,7 +282,7 @@ var _hmt = _hmt || [];
 <p>对个人开发者来说，最实际的教训是：<strong>不要盲目<code>pip install -U</code></strong>。特别是在CI/CD流水线里，固定依赖版本比追最新版重要得多。
 </p>
 
-<h2>事件三：Arm造出了自己的芯片——136核，Meta买单</h2>
+<h2 id="section-事件三-arm造出了自己的芯片-136核-meta买单">事件三：Arm造出了自己的芯片——136核，Meta买单</h2>
 
 <h3>发生了什么</h3>
 
@@ -310,7 +310,7 @@ var _hmt = _hmt || [];
 <li><strong>AI推理成本有望下降</strong>：2倍性能意味着同样算力支出能跑更多推理任务</li>
 <li><strong>AI编程工具用户间接受益</strong>：推理成本下降→API价格下降→用<a href="https://www.aitoollab.cn/tools/chatgpt/index.html" target="_blank" rel="noopener">ChatGPT</a>、Claude等工具的成本也会跟着降</li>
 </ul>
-<h2>事件四：Claude能操作你的电脑了</h2>
+<h2 id="section-事件四-claude能操作你的电脑了">事件四：Claude能操作你的电脑了</h2>
 
 <h3>发生了什么</h3>
 
@@ -347,7 +347,7 @@ var _hmt = _hmt || [];
 <p>对<a href="https://www.aitoollab.cn/tools/cursor/index.html" target="_blank" rel="noopener">Cursor</a>和Claude Code这样的专用编程工具来说，Computer Use既是补充也是竞争——当Claude能操作整个电脑时，还需要一个专门的编辑器插件吗？
 </p>
 
-<h2>四件事串在一起看</h2>
+<h2 id="section-四件事串在一起看">四件事串在一起看</h2>
 <table><thead><tr><th>事件</th><th>信号</th></tr></thead><tbody><tr><td>Sora关停</td><td>AI行业从"卷功能"转向"卷商业化"，做不做得出功能不是问题，能不能赚钱才是</td></tr><tr><td>LiteLLM被投毒</td><td>AI开发生态的安全隐患正在被武器化，基础设施的信任边界需要重新定义</td></tr><tr><td>Arm AGI CPU</td><td>AI推理的硬件基础在加速变革，x86时代可能走向终结</td></tr><tr><td>Claude Computer Use</td><td>AI工具从"被动响应"走向"主动操作"，人机交互范式在变</td></tr></tbody></table>
 <p>四个信号指向同一个趋势：<strong>AI正在从"玩具"变成"基础设施"，而这个过程中，安全、成本和商业化是三个绕不过去的坎。</strong>
 </p>
@@ -362,7 +362,7 @@ var _hmt = _hmt || [];
 <li><strong>关注推理成本变化</strong>——Arm AGI CPU和TurboQuant等技术正在快速降低AI推理成本</li>
 <li><strong>警惕供应链安全</strong>——<code>pip install -U</code>之前想一想，你真的需要最新版吗？</li>
 </ul>
-<h2>本周其他值得关注的消息</h2>
+<h2 id="section-本周其他值得关注的消息">本周其他值得关注的消息</h2>
 
 <ul><li><strong>OpenAI整合产品线</strong>：将ChatGPT、Codex、浏览器Atlas合并为统一的桌面超级应用</li>
 <li><strong>Claude Opus 4.6发布</strong>：Anthropic同日发布，Tom's Guide评为"实际工作任务"的最佳AI</li>
@@ -370,7 +370,7 @@ var _hmt = _hmt || [];
 <li><strong>Anysphere（Cursor母公司）D轮融资$23亿</strong>：AI编程赛道持续吸金</li>
 <li><strong>中关村论坛AI主题日</strong>：众智FlagOS 2.0发布，全球首个通用智能体安全标准启动</li>
 </ul>
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <p><strong>Q1：Sora关停后，我的视频怎么办？</strong>
 A：OpenAI提供了作品保全时间窗口，请在关停前下载所有已生成的视频。替代方案推荐：剪映（集成Seedance 2.0，国内直接用）、Runway Gen-4（专业级视频生成）、Pika 2.0（操作简单，适合短视频）。
@@ -392,7 +392,7 @@ A：已开放订购，永擎电子、联想、Supermicro提供商用系统。但
 A：恰恰相反。AI视频赛道热度不减，只是商业模式在进化。Sora的失败在于它选择了"独立App"这条路——单独做一个视频生成App，用户付费意愿低、运营成本高。而字节把Seedance集成在剪映里、Google把Veo整合在Gemini中，走的是"平台嵌入"路线，用户在使用现有工具的过程中顺便用AI生成视频，付费意愿高得多。AI视频不是不行了，是模式选错了。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>2026年3月最后一周的AI圈，可以用四个关键词概括：<strong>关停、被黑、造芯、接管。</strong>
 </p>

@@ -141,7 +141,7 @@ var _hmt = _hmt || [];
 <p>4月AI圈又炸了——DeepSeek V4、Claude Opus 4.7、Cursor 3、Seedance 2.0密集发布，我跟踪了20多天，把值得关注的10款新品按类别整理出来了。
 </p>
 
-<h2>为什么写这篇</h2>
+<h2 id="section-为什么写这篇">为什么写这篇</h2>
 
 <p>我运营AI工具导航站，每天都会刷一遍GitHub Trending和Hugging Face新模型榜单。4月这一个月，新发布的产品数量让我自己都吃惊——光大模型就有12款，还不算各类Agent工具和硬件。信息过载是真实存在的，所以我决定做一次系统性的梳理，按"是否值得普通用户关注"这个标准来筛，而不是简单罗列。
 </p>
@@ -149,7 +149,7 @@ var _hmt = _hmt || [];
 <p>以下10款是我筛选后认为真正值得关注的产品。筛选标准：要么能力有突破，要么价格有优势，要么解决了真实痛点。纯PR发布、PPT造车的不在范围内。
 </p>
 
-<h2>一、大模型：4月的主战场</h2>
+<h2 id="section-一-大模型-4月的主战场">一、大模型：4月的主战场</h2>
 
 <h3>1. DeepSeek V4（4月24日）</h3>
 
@@ -239,7 +239,7 @@ var _hmt = _hmt || [];
 <p><a href="/tools/minimax/index.html">MiniMax功能详情与价格对比</a>
 </p>
 
-<h2>二、视频生成：从玩具到工具的质变</h2>
+<h2 id="section-二-视频生成-从玩具到工具的质变">二、视频生成：从玩具到工具的质变</h2>
 
 <h3>6. Seedance 2.0（4月2日公测，4月14日API上线）</h3>
 
@@ -266,7 +266,7 @@ var _hmt = _hmt || [];
 <p>目前信息不多，阿里云生态内使用。如果你做国内短视频内容，值得关注。
 </p>
 
-<h2>三、AI编程工具：从编辑器到Agent平台</h2>
+<h2 id="section-三-ai编程工具-从编辑器到agent平台">三、AI编程工具：从编辑器到Agent平台</h2>
 
 <h3>8. Cursor 3（4月2日发布）</h3>
 
@@ -289,7 +289,7 @@ var _hmt = _hmt || [];
 <p><a href="/tools/cursor/index.html">Cursor功能详情与使用指南</a>
 </p>
 
-<h2>四、语音与多模态</h2>
+<h2 id="section-四-语音与多模态">四、语音与多模态</h2>
 
 <h3>9. 字节豆包全双工语音AI（4月10日）</h3>
 
@@ -310,7 +310,7 @@ var _hmt = _hmt || [];
 <p>MAI-Transcribe-1支持离线使用，不需要网络就能运行，隐私保护好。我测试了中英文混合的场景，识别准确率在95%以上，但方言识别还有提升空间。
 </p>
 
-<h2>价格横向对比</h2>
+<h2 id="section-价格横向对比">价格横向对比</h2>
 
 <p>把4月新发布的大模型API价格放在一起看：
 </p>
@@ -318,9 +318,9 @@ var _hmt = _hmt || [];
 <p>DeepSeek V4-Flash的价格优势非常明显，是Claude Opus 4.7的百分之一以下。当然，能力差距也是客观存在的——但日常使用场景下，V4-Flash已经够用了。
 </p>
 
-<h2>我的推荐</h2>
+<h2 id="section-我的推荐">我的推荐</h2>
 <table><thead><tr><th>需求</th><th>推荐</th><th>理由</th></tr></thead><tbody><tr><td>编程首选</td><td>Claude Opus 4.7</td><td>SWE-bench最高，并行Agent实用</td></tr><tr><td>性价比之王</td><td>DeepSeek V4-Flash</td><td>价格极低+1M上下文+开源</td></tr><tr><td>本地部署</td><td>Gemma 4 2B/4B</td><td>Apache 2.0免费商用，轻量级</td></tr><tr><td>办公自动化</td><td>MiniMax M2.7</td><td>Office三件套编辑能力强</td></tr><tr><td>视频生成</td><td>Seedance 2.0</td><td>四模态输入，物理效果逼真</td></tr><tr><td>编程IDE</td><td>Cursor 3</td><td>Agent模式+BYOK，效率飞跃</td></tr></tbody></table>
-<h2>踩坑经验</h2>
+<h2 id="section-踩坑经验">踩坑经验</h2>
 
 <ul><li><strong>DeepSeek V4-Pro的xhigh模式token消耗惊人</strong>：一次架构设计任务花了12万tokens，成本约¥3.6。用之前先评估一下任务复杂度，简单任务用Flash就够了。</li>
 </ul>
@@ -332,7 +332,7 @@ var _hmt = _hmt || [];
 </ul>
 <ul><li><strong>Seedance 2.0的API还有排队机制</strong>：高峰期可能要等1-2分钟才能返回结果，不适合实时场景。</li>
 </ul>
-<h2>FAQ</h2>
+<h2 id="section-faq">FAQ</h2>
 
 <p><strong>Q：DeepSeek V4和V3.2差距大吗？</strong>
 A：差距主要体现在长上下文（1M vs 64K）和推理质量上。V4-Flash在短文本任务上和V3.2差距不大，但长文档分析V4明显更强。建议迁移，V3.2接口7月就要下线了。
@@ -354,7 +354,7 @@ A：按API价格算确实如此（¥2.1 vs ~¥105/百万tokens）。但能力上
 A：免费版有基础的Agent功能，但Cloud Agent和Composer 2需要Pro版（$20/月）。不过BYOK功能免费版就能用，你可以接入DeepSeek V4-Flash来降低成本。
 </p>
 
-<h2>总结</h2>
+<h2 id="section-总结">总结</h2>
 
 <p>2026年4月的AI工具发布潮有几个明确的趋势：
 </p>
