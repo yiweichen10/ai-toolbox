@@ -4,7 +4,7 @@
       "id": "main",
       "slug": "ai-tool-finder-2026",
       "title": "2026年AI工具选择器：3分钟找到最适合你的AI助手",
-      "meta_description": "不知道选哪个AI工具？通过我们的智能AI工具选择器，回答5个问题即可获得个性化推荐。涵盖AI对话、写作、绘画、编程等52款主流AI工具。",
+      "meta_description": "不知道选哪个AI工具？通过我们的智能AI工具选择器，回答5个问题即可获得个性化推荐。涵盖AI对话、写作、绘画、编程等300+款主流AI工具。",
       "keywords": [
         "AI工具选择器",
         "AI工具推荐",
@@ -121,15 +121,19 @@
       "recommended_tools": [
         "chatgpt",
         "claude",
-        "midjourney",
-        "github-copilot",
+        "deepseek",
         "cursor",
+        "midjourney",
         "kimi",
         "doubao",
+        "qwen-chat",
+        "github-copilot",
+        "gemini",
+        "sora",
         "notion-ai"
       ],
       "content": null,
-      "last_updated": "2026-04-04"
+      "last_updated": "2026-06-20"
     },
     {
       "id": "chat",
@@ -208,15 +212,19 @@
       "recommended_tools": [
         "chatgpt",
         "claude",
+        "deepseek",
         "kimi",
         "doubao",
         "gemini",
-        "deepseek",
+        "qwen-chat",
         "tencent-yuanbao",
+        "grok",
+        "wenxin-yiyan",
+        "zhipu-chatglm",
         "poe"
       ],
       "content": null,
-      "last_updated": "2026-04-04"
+      "last_updated": "2026-06-20"
     },
     {
       "id": "writing",
@@ -293,12 +301,19 @@
         }
       ],
       "recommended_tools": [
+        "chatgpt",
+        "claude",
+        "kimi",
         "jasper",
+        "copy.ai",
+        "writesonic",
         "quillbot",
-        "writesonic"
+        "rytr",
+        "jenni-ai",
+        "grammarly-ai"
       ],
       "content": null,
-      "last_updated": "2026-04-04"
+      "last_updated": "2026-06-20"
     },
     {
       "id": "image",
@@ -376,15 +391,20 @@
       ],
       "recommended_tools": [
         "midjourney",
-        "stable-diffusion",
         "dall-e-3",
+        "stable-diffusion",
         "adobe-firefly",
         "leonardo-ai",
-        "miaohua",
-        "tensor.art"
+        "ideogram",
+        "tongyi-wanxiang",
+        "jimeng-ai",
+        "liblibai",
+        "kling-ai",
+        "flux",
+        "miaohua"
       ],
       "content": null,
-      "last_updated": "2026-04-04"
+      "last_updated": "2026-06-20"
     },
     {
       "id": "code",
@@ -469,16 +489,21 @@
         }
       ],
       "recommended_tools": [
-        "github-copilot",
         "cursor",
-        "replit-ai",
+        "github-copilot",
+        "claude-code",
+        "windsurf",
+        "trae",
+        "aider",
         "bolt.new",
         "lovable",
-        "claude-code",
-        "openai-codex"
+        "v0.dev",
+        "openai-codex",
+        "replit-ai",
+        "tongyi-lingma"
       ],
       "content": null,
-      "last_updated": "2026-04-04"
+      "last_updated": "2026-06-20"
     },
     {
       "id": "video",
@@ -537,20 +562,21 @@
         }
       ],
       "recommended_tools": [
-        "runway",
         "sora",
+        "runway",
         "pika",
+        "kling-ai",
         "veo",
-        "opus-clip",
         "capcut-ai",
-        "fliki"
+        "opus-clip",
+        "invideo-ai",
+        "synthesia",
+        "luma-ai",
+        "hailuo-ai",
+        "vidu-ai"
       ],
       "content": null,
-      "last_updated": "2026-04-04"
+      "last_updated": "2026-06-20"
     }
-  ],
-  "metadata": {
-    "generated_at": "2026-04-04T09:52:07.390536",
-    "total": 6
-  }
+  ]
 }

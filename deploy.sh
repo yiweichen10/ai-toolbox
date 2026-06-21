@@ -27,8 +27,13 @@ echo "==========================================="
 
 if [ "$SKIP_BUILD" = false ]; then
     echo ""
-    echo "[1/4] 📦 构建静态站..."
+    echo "[0/4] 🔄 重新生成排名和仪表盘数据..."
     cd "$LOCAL_DIR"
+    python scripts/regenerate_data.py
+    echo "✅ 数据生成完成"
+
+    echo ""
+    echo "[1/4] 📦 构建静态站..."
     python scripts/build.py
     echo "✅ 构建完成"
 else
@@ -50,7 +55,6 @@ tar -czf "$TARBALL" \
     --exclude='*.toml' \
     --exclude='cookies.json' \
     --exclude='__pycache__' \
-    --exclude='images' \
     --exclude='ai_tool_covers' \
     --exclude='ai_inner_pages' \
     --exclude='viral_covers' \

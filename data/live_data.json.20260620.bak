@@ -1,0 +1,1892 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "generated_at": "2026-06-20 22:40",
+    "source": "aitoollab.cn-regenerate-data",
+    "tool_count": 320,
+    "article_count": 107,
+    "update_policy": "每次构建自动生成"
+  },
+  "stats": {
+    "total_tools": 320,
+    "total_categories": 14,
+    "total_articles": 107,
+    "total_visits_str": "62064万",
+    "avg_rating": 4.5,
+    "price_distribution": {
+      "free": 74,
+      "freemium": 199,
+      "paid": 42,
+      "enterprise": 5
+    },
+    "today_active": "320",
+    "this_week_new": 0,
+    "last_updated": "2026-06-20 22:40",
+    "update_frequency": "每次构建自动更新"
+  },
+  "comparison_matrix": {
+    "title": "AI工具核心能力对比矩阵",
+    "description": "从价格、评分、功能、平台等7个维度横向对比50款主流AI工具，帮你快速找到最适合的那一款。",
+    "dimensions": [
+      {
+        "id": "price",
+        "name": "价格",
+        "type": "text"
+      },
+      {
+        "id": "rating",
+        "name": "评分",
+        "type": "number"
+      },
+      {
+        "id": "features_count",
+        "name": "功能数",
+        "type": "number"
+      },
+      {
+        "id": "platform",
+        "name": "平台",
+        "type": "text"
+      },
+      {
+        "id": "chinese",
+        "name": "中文",
+        "type": "badge"
+      },
+      {
+        "id": "api",
+        "name": "API",
+        "type": "badge"
+      },
+      {
+        "id": "free_tier",
+        "name": "免费层",
+        "type": "level"
+      }
+    ],
+    "tools": [
+      {
+        "slug": "semrush-ai",
+        "name": "Semrush AI",
+        "emoji": "🎯",
+        "color": "#FF642D",
+        "category": "AI效率",
+        "values": {
+          "price": "免费版可用，专业版$119.95/月起",
+          "rating": "⭐ 4.7",
+          "features_count": 5,
+          "platform": "网页端、桌面端（Windows/Mac）、移动端（iOS/Android）",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/semrush-ai/"
+      },
+      {
+        "slug": "alexa-plus",
+        "name": "Alexa Plus",
+        "emoji": "🎙️",
+        "color": "#00CAFF",
+        "category": "AI对话",
+        "values": {
+          "price": "免费版+订阅版（每月5.99美元起）",
+          "rating": "⭐ 4.5",
+          "features_count": 4,
+          "platform": "网页、iOS、Android、智能音箱、智能手表、汽车",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/alexa-plus/"
+      },
+      {
+        "slug": "hugging-face",
+        "name": "Hugging Face",
+        "emoji": "🤗",
+        "color": "#FFD700",
+        "category": "AI编程",
+        "values": {
+          "price": "免费版可用，付费计划起价$9/月",
+          "rating": "⭐ 4.7",
+          "features_count": 3,
+          "platform": "Web, API, 桌面应用",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/hugging-face/"
+      },
+      {
+        "slug": "miro-ai",
+        "name": "Miro AI",
+        "emoji": "🤝",
+        "color": "#FFD02F",
+        "category": "AI办公",
+        "values": {
+          "price": "免费版可用，Starter$8/月起（年付），月付$10/月",
+          "rating": "⭐ 4.6",
+          "features_count": 4,
+          "platform": "网页端、iOS、Android、Windows、Mac",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/miro-ai/"
+      },
+      {
+        "slug": "play-ht",
+        "name": "Play.ht",
+        "emoji": "🎙️",
+        "color": "#6C47FF",
+        "category": "AI音频",
+        "values": {
+          "price": "免费版每月5000字符；专业版$9.99/月起，无限字符；企业版定制价格",
+          "rating": "⭐ 4.5",
+          "features_count": 5,
+          "platform": "Web浏览器/iOS App/Android App/Chrome扩展/WordPress插件/API接入",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/play-ht/"
+      },
+      {
+        "slug": "veed-io",
+        "name": "Veed.io",
+        "emoji": "🎬",
+        "color": "#777AB2",
+        "category": "AI视频",
+        "values": {
+          "price": "免费版可用，付费版$12起/月",
+          "rating": "⭐ 4.5",
+          "features_count": 3,
+          "platform": "网页端（支持Chrome、Safari、Edge等主流浏览器）",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/veed-io/"
+      },
+      {
+        "slug": "clipdrop",
+        "name": "Clipdrop",
+        "emoji": "✨",
+        "color": "#12B4C5",
+        "category": "AI设计",
+        "values": {
+          "price": "基础免费，高级版$9.99/月起",
+          "rating": "⭐ 4.7",
+          "features_count": 4,
+          "platform": "Web/iOS/Android/桌面端/Photoshop插件/Figma插件",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/clipdrop/"
+      },
+      {
+        "slug": "tencent-hunyuan",
+        "name": "腾讯混元",
+        "emoji": "🧠",
+        "color": "#FA7298",
+        "category": "AI对话",
+        "values": {
+          "price": "免费使用，企业API按调用计费",
+          "rating": "⭐ 4.2",
+          "features_count": 3,
+          "platform": "网页端、API、企业微信、微信小程序",
+          "chinese": "✅",
+          "api": "✅",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/tencent-hunyuan/"
+      },
+      {
+        "slug": "invideo-ai",
+        "name": "InVideo AI",
+        "emoji": "🎬",
+        "color": "#FF4F4F",
+        "category": "AI视频",
+        "values": {
+          "price": "免费版可用，付费版$15/月起",
+          "rating": "⭐ 4.5",
+          "features_count": 4,
+          "platform": "网页端/iOS/Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/invideo-ai/"
+      },
+      {
+        "slug": "kapwing",
+        "name": "Kapwing",
+        "emoji": "🎬",
+        "color": "#6B46C1",
+        "category": "AI视频",
+        "values": {
+          "price": "免费版可用（含水印4分钟），Starter$16/月起，Pro$33/月",
+          "rating": "⭐ 4.5",
+          "features_count": 4,
+          "platform": "网页端、iOS、Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/kapwing/"
+      },
+      {
+        "slug": "jenni-ai",
+        "name": "Jenni AI",
+        "emoji": "✍️",
+        "color": "#7C3AED",
+        "category": "AI写作",
+        "values": {
+          "price": "免费版可用（10次AI补全/天），Plus$12/月起，Pro$29/月",
+          "rating": "⭐ 4.6",
+          "features_count": 5,
+          "platform": "网页端、iOS、Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/jenni-ai/"
+      },
+      {
+        "slug": "language-tool",
+        "name": "LanguageTool",
+        "emoji": "✍️",
+        "color": "#0FA6E8",
+        "category": "AI写作",
+        "values": {
+          "price": "免费版基础功能，高级版每月€9.99起，企业版定制价格",
+          "rating": "⭐ 4.6",
+          "features_count": 3,
+          "platform": "网页端、浏览器扩展（Chrome/Firefox/Edge）、桌面端（Windows/Mac/Linux）、Office插件、API",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/language-tool/"
+      },
+      {
+        "slug": "chatpdf",
+        "name": "ChatPDF",
+        "emoji": "📄",
+        "color": "#2563EB",
+        "category": "AI效率",
+        "values": {
+          "price": "免费版每天3个PDF，付费版$5/月起",
+          "rating": "⭐ 4.5",
+          "features_count": 5,
+          "platform": "网页版（支持移动端）",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/chatpdf/"
+      },
+      {
+        "slug": "xinghuo-cognitive-model",
+        "name": "星火认知大模型",
+        "emoji": "🔥",
+        "color": "#4A90E2",
+        "category": "AI对话",
+        "values": {
+          "price": "免费版 + 付费专业版",
+          "rating": "⭐ 4.3",
+          "features_count": 3,
+          "platform": "网页端 / iOS / Android / API",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/xinghuo-cognitive-model/"
+      },
+      {
+        "slug": "trae",
+        "name": "Trae",
+        "emoji": "🤖",
+        "color": "#2563EB",
+        "category": "AI编程",
+        "values": {
+          "price": "免费版+专业版（$19/月）",
+          "rating": "⭐ 4.5",
+          "features_count": 4,
+          "platform": "VS Code、JetBrains IDEs、Visual Studio",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/trae/"
+      },
+      {
+        "slug": "quark-ai",
+        "name": "夸克AI",
+        "emoji": "🔍",
+        "color": "#0066FF",
+        "category": "AI搜索",
+        "values": {
+          "price": "免费",
+          "rating": "⭐ 4.3",
+          "features_count": 5,
+          "platform": "iOS/Android/Web/桌面端",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/quark-ai/"
+      },
+      {
+        "slug": "open-router",
+        "name": "OpenRouter",
+        "emoji": "🌐",
+        "color": "#2563EB",
+        "category": "AI效率",
+        "values": {
+          "price": "按调用量计费，支持免费额度",
+          "rating": "⭐ 4.7",
+          "features_count": 4,
+          "platform": "Web/API/CLI",
+          "chinese": "⚠️",
+          "api": "✅",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/open-router/"
+      },
+      {
+        "slug": "mistral-ai",
+        "name": "Mistral AI",
+        "emoji": "🧠",
+        "color": "#FF6B6B",
+        "category": "AI对话",
+        "values": {
+          "price": "免费API额度+付费计划",
+          "rating": "⭐ 4.5",
+          "features_count": 4,
+          "platform": "Web/API/开发者平台",
+          "chinese": "⚠️",
+          "api": "✅",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/mistral-ai/"
+      },
+      {
+        "slug": "baichuan-2",
+        "name": "Baichuan 2",
+        "emoji": "🤖",
+        "color": "#2563EB",
+        "category": "AI对话",
+        "values": {
+          "price": "基础版免费，专业版¥99/月起",
+          "rating": "⭐ 4.3",
+          "features_count": 5,
+          "platform": "Web/iOS/Android/API",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/baichuan-2/"
+      },
+      {
+        "slug": "vidu-ai",
+        "name": "Vidu AI",
+        "emoji": "🎬",
+        "color": "#6C5CE7",
+        "category": "AI视频",
+        "values": {
+          "price": "免费版每月100积分，付费版29美元/月起",
+          "rating": "⭐ 4.6",
+          "features_count": 5,
+          "platform": "Web / iOS / Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/vidu-ai/"
+      },
+      {
+        "slug": "meitu-design-ai",
+        "name": "美图设计室AI",
+        "emoji": "🎨",
+        "color": "#FF6B6B",
+        "category": "AI设计",
+        "values": {
+          "price": "免费版可用，付费会员29元/月起",
+          "rating": "⭐ 4.5",
+          "features_count": 4,
+          "platform": "网页端、iOS、Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/meitu-design-ai/"
+      },
+      {
+        "slug": "tongyi-efficiency",
+        "name": "通义效率",
+        "emoji": "⚡",
+        "color": "#409EFF",
+        "category": "AI效率",
+        "values": {
+          "price": "免费版/付费版",
+          "rating": "⭐ 4.3",
+          "features_count": 4,
+          "platform": "网页/iOS/Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/tongyi-efficiency/"
+      },
+      {
+        "slug": "wordtune",
+        "name": "Wordtune",
+        "emoji": "✍️",
+        "color": "#4A90E2",
+        "category": "AI写作",
+        "values": {
+          "price": "免费版功能有限；高级版约 $20/月；提供企业方案。",
+          "rating": "⭐ 4.6",
+          "features_count": 3,
+          "platform": "Web、Chrome/Edge 浏览器扩展、iOS、Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/wordtune/"
+      },
+      {
+        "slug": "devin-ai",
+        "name": "Devin AI",
+        "emoji": "🤖",
+        "color": "#FF6B35",
+        "category": "AI编程",
+        "values": {
+          "price": "免费版有使用限制，企业版付费",
+          "rating": "⭐ 4.5",
+          "features_count": 4,
+          "platform": "Web",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/devin-ai/"
+      },
+      {
+        "slug": "pollinations",
+        "name": "Pollinations",
+        "emoji": "🎨",
+        "color": "#10B981",
+        "category": "AI绘画",
+        "values": {
+          "price": "免费版可用，付费版$9.99/月起",
+          "rating": "⭐ 4.5",
+          "features_count": 5,
+          "platform": "网页端、iOS、Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/pollinations/"
+      },
+      {
+        "slug": "perplexity-ai",
+        "name": "Perplexity AI",
+        "emoji": "🔍",
+        "color": "#6F47FF",
+        "category": "AI搜索",
+        "values": {
+          "price": "免费版可用，Pro版$20/月",
+          "rating": "⭐ 4.8",
+          "features_count": 3,
+          "platform": "Web, iOS, Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/perplexity-ai/"
+      },
+      {
+        "slug": "tabnine",
+        "name": "Tabnine",
+        "emoji": "💻",
+        "color": "#6D5FFD",
+        "category": "AI编程",
+        "values": {
+          "price": "免费版可用（基础补全），Dev$9/月起（年付），月付$12/月",
+          "rating": "⭐ 4.5",
+          "features_count": 4,
+          "platform": "VS Code、IntelliJ IDEA、PyCharm、WebStorm、Visual Studio、Eclipse等主流IDE",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/tabnine/"
+      },
+      {
+        "slug": "adobe-express-ai",
+        "name": "Adobe Express AI",
+        "emoji": "🎨",
+        "color": "#FF0000",
+        "category": "AI设计",
+        "values": {
+          "price": "免费版可用，高级版每月$9.99起",
+          "rating": "⭐ 4.5",
+          "features_count": 4,
+          "platform": "网页端、iOS、Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/adobe-express-ai/"
+      },
+      {
+        "slug": "jimeng-ai",
+        "name": "即梦AI",
+        "emoji": "🎨",
+        "color": "#2563EB",
+        "category": "AI绘画",
+        "values": {
+          "price": "基础功能免费使用，高级功能付费订阅",
+          "rating": "⭐ 4.5",
+          "features_count": 3,
+          "platform": "网页端、安卓、iOS",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/jimeng-ai/"
+      },
+      {
+        "slug": "tongyi-wanxiang",
+        "name": "通义万相",
+        "emoji": "🎨",
+        "color": "#4F46E5",
+        "category": "AI绘画",
+        "values": {
+          "price": "基础版免费，专业版¥29/月起",
+          "rating": "⭐ 4.5",
+          "features_count": 5,
+          "platform": "Web/App/小程序",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/tongyi-wanxiang/"
+      },
+      {
+        "slug": "tencent-docs-ai",
+        "name": "腾讯文档AI",
+        "emoji": "📄",
+        "color": "#1E90FF",
+        "category": "AI办公",
+        "values": {
+          "price": "基础功能免费，高级AI功能需开通腾讯文档会员",
+          "rating": "⭐ 4.3",
+          "features_count": 5,
+          "platform": "网页端、Windows、Mac、iOS、Android、微信小程序",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/tencent-docs-ai/"
+      },
+      {
+        "slug": "hailuo-ai",
+        "name": "海螺AI",
+        "emoji": "🐚",
+        "color": "#2563EB",
+        "category": "AI对话",
+        "values": {
+          "price": "免费使用",
+          "rating": "⭐ 4.3",
+          "features_count": 5,
+          "platform": "网页版/iOS/Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/hailuo-ai/"
+      },
+      {
+        "slug": "kling-3-0",
+        "name": "Kling 3.0",
+        "emoji": "🎬",
+        "color": "#FF4757",
+        "category": "AI视频",
+        "values": {
+          "price": "免费版可用，会员$12.99/月起",
+          "rating": "⭐ 4.7",
+          "features_count": 5,
+          "platform": "Web、iOS、Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/kling-3-0/"
+      },
+      {
+        "slug": "rytr",
+        "name": "Rytr",
+        "emoji": "✍️",
+        "color": "#2E4057",
+        "category": "AI写作",
+        "values": {
+          "price": "免费版每月可生成5000字符，付费版从9美元/月起",
+          "rating": "⭐ 4.2",
+          "features_count": 4,
+          "platform": "网页版、iOS、Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/rytr/"
+      },
+      {
+        "slug": "webflow-ai",
+        "name": "Webflow AI",
+        "emoji": "🕸️",
+        "color": "#146EF5",
+        "category": "AI编程",
+        "values": {
+          "price": "免费版可用，付费计划$14/月起，学生教育版免费",
+          "rating": "⭐ 4.6",
+          "features_count": 4,
+          "platform": "网页端（浏览器）",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/webflow-ai/"
+      },
+      {
+        "slug": "pitch-ai",
+        "name": "Pitch AI",
+        "emoji": "📊",
+        "color": "#7C3AED",
+        "category": "AI办公",
+        "values": {
+          "price": "免费版有限制；专业版$25/月/用户起；企业版需定制",
+          "rating": "⭐ 4.3",
+          "features_count": 3,
+          "platform": "Web, macOS, Windows, iOS, Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/pitch-ai/"
+      },
+      {
+        "slug": "pinecone",
+        "name": "Pinecone",
+        "emoji": "🔍",
+        "color": "#FF4F00",
+        "category": "AI效率",
+        "values": {
+          "price": "免费版可用，付费计划从$49/月起",
+          "rating": "⭐ 4.6",
+          "features_count": 5,
+          "platform": "云端（AWS、GCP、Azure）",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/pinecone/"
+      },
+      {
+        "slug": "surfer-seo",
+        "name": "Surfer SEO",
+        "emoji": "🌊",
+        "color": "#00C853",
+        "category": "AI效率",
+        "values": {
+          "price": "免费版可用，付费版$49起/月",
+          "rating": "⭐ 4.6",
+          "features_count": 5,
+          "platform": "Web浏览器（Chrome/Safari/Firefox扩展）",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/surfer-seo/"
+      },
+      {
+        "slug": "d-id",
+        "name": "D-ID",
+        "emoji": "🎬",
+        "color": "#FF6B6B",
+        "category": "AI视频",
+        "values": {
+          "price": "提供免费试用，付费计划起价为每月5.99美元（个人版），含高级功能和企业方案。",
+          "rating": "⭐ 4.6",
+          "features_count": 3,
+          "platform": "Web平台，API接口",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/d-id/"
+      },
+      {
+        "slug": "bardeen",
+        "name": "Bardeen",
+        "emoji": "⚡",
+        "color": "#FF6B35",
+        "category": "AI自动化",
+        "values": {
+          "price": "提供免费版（功能有限）；个人专业版 $15/月（按年付）；团队版需联系定制。",
+          "rating": "⭐ 4.6",
+          "features_count": 3,
+          "platform": "Web（Chrome/Edge扩展）、macOS、Windows",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/bardeen/"
+      },
+      {
+        "slug": "replicate",
+        "name": "Replicate",
+        "emoji": "☁️",
+        "color": "#242424",
+        "category": "AI编程",
+        "values": {
+          "price": "按需付费，GPU计算每秒计费",
+          "rating": "⭐ 4.6",
+          "features_count": 5,
+          "platform": "Web/CLI/API",
+          "chinese": "⚠️",
+          "api": "✅",
+          "free_tier": 1
+        },
+        "detail_url": "/tools/replicate/"
+      },
+      {
+        "slug": "brave-search-ai",
+        "name": "Brave Search AI",
+        "emoji": "🔍",
+        "color": "#FB542B",
+        "category": "AI搜索",
+        "values": {
+          "price": "免费",
+          "rating": "⭐ 4.3",
+          "features_count": 4,
+          "platform": "浏览器插件/iOS/Android/桌面端",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/brave-search-ai/"
+      },
+      {
+        "slug": "kaiber",
+        "name": "Kaiber",
+        "emoji": "🎬",
+        "color": "#6B4EE6",
+        "category": "AI视频",
+        "values": {
+          "price": "免费版每月100积分，高级版$9.99/月起",
+          "rating": "⭐ 4.5",
+          "features_count": 3,
+          "platform": "网页端、iOS、Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/kaiber/"
+      },
+      {
+        "slug": "codesandbox-ai",
+        "name": "CodeSandbox AI",
+        "emoji": "🖥️",
+        "color": "#24292E",
+        "category": "AI编程",
+        "values": {
+          "price": "免费版可用，Pro版$9/月起",
+          "rating": "⭐ 4.3",
+          "features_count": 4,
+          "platform": "Web浏览器（无需安装）",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/codesandbox-ai/"
+      },
+      {
+        "slug": "baichuan-ai",
+        "name": "百川智能",
+        "emoji": "🔵",
+        "color": "#0066FF",
+        "category": "AI对话",
+        "values": {
+          "price": "新用户赠¥80额度，API按token计费（Baichuan4-Air¥0.00098/千token起）",
+          "rating": "⭐ 4.2",
+          "features_count": 5,
+          "platform": "Web, API",
+          "chinese": "✅",
+          "api": "✅",
+          "free_tier": 1
+        },
+        "detail_url": "/tools/baichuan-ai/"
+      },
+      {
+        "slug": "mubert",
+        "name": "Mubert",
+        "emoji": "🎵",
+        "color": "#7C3AED",
+        "category": "AI音频",
+        "values": {
+          "price": "免费版可用（25首/月），Creator$14/月起，Pro$39/月",
+          "rating": "⭐ 4.5",
+          "features_count": 3,
+          "platform": "网页端、iOS、Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/mubert/"
+      },
+      {
+        "slug": "iconscout-ai",
+        "name": "IconScout AI",
+        "emoji": "🎨",
+        "color": "#6366F1",
+        "category": "AI设计",
+        "values": {
+          "price": "免费版每月10个AI生成额度，专业版$9.99/月起",
+          "rating": "⭐ 4.5",
+          "features_count": 5,
+          "platform": "Web、iOS、Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/iconscout-ai/"
+      },
+      {
+        "slug": "prowritingaid",
+        "name": "ProWritingAid",
+        "emoji": "✍️",
+        "color": "#0A6C6B",
+        "category": "AI写作",
+        "values": {
+          "price": "免费版每月500词；付费版$20/月起，年付$99/年",
+          "rating": "⭐ 4.6",
+          "features_count": 5,
+          "platform": "网页端、桌面端（Windows/Mac）、浏览器插件（Chrome/Edge/Firefox）、Microsoft Word插件",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/prowritingaid/"
+      },
+      {
+        "slug": "lumen5",
+        "name": "Lumen5",
+        "emoji": "🎬",
+        "color": "#FF4D4D",
+        "category": "AI视频",
+        "values": {
+          "price": "免费版可用，专业版$19/月起，企业版定制价格",
+          "rating": "⭐ 4.5",
+          "features_count": 5,
+          "platform": "网页端（Web）、iOS、Android",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/lumen5/"
+      },
+      {
+        "slug": "zhu-zhan-ai",
+        "name": "触站AI",
+        "emoji": "🎨",
+        "color": "#8B5CF6",
+        "category": "AI绘画",
+        "values": {
+          "price": "基础免费（每日生成次数有限），付费会员29元/月起",
+          "rating": "⭐ 4.3",
+          "features_count": 5,
+          "platform": "网页端（Web）",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/zhu-zhan-ai/"
+      }
+    ]
+  },
+  "trends": {
+    "title": "AI工具热度趋势追踪",
+    "description": "追踪近8周各类AI工具的收录和关注趋势变化。",
+    "period": "近8周",
+    "categories": [
+      {
+        "category": "AI编程",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 493
+          },
+          {
+            "week": "05/01",
+            "value": 638
+          },
+          {
+            "week": "06/08",
+            "value": 674
+          },
+          {
+            "week": "07/15",
+            "value": 592
+          },
+          {
+            "week": "08/22",
+            "value": 492
+          },
+          {
+            "week": "09/01",
+            "value": 490
+          },
+          {
+            "week": "010/0",
+            "value": 612
+          },
+          {
+            "week": "011/1",
+            "value": 771
+          }
+        ],
+        "current_value": 771,
+        "change_percent": 56.4,
+        "tool_count": 47
+      },
+      {
+        "category": "AI对话",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 388
+          },
+          {
+            "week": "05/01",
+            "value": 502
+          },
+          {
+            "week": "06/08",
+            "value": 531
+          },
+          {
+            "week": "07/15",
+            "value": 466
+          },
+          {
+            "week": "08/22",
+            "value": 387
+          },
+          {
+            "week": "09/01",
+            "value": 386
+          },
+          {
+            "week": "010/0",
+            "value": 482
+          },
+          {
+            "week": "011/1",
+            "value": 607
+          }
+        ],
+        "current_value": 607,
+        "change_percent": 56.4,
+        "tool_count": 37
+      },
+      {
+        "category": "AI视频",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 388
+          },
+          {
+            "week": "05/01",
+            "value": 502
+          },
+          {
+            "week": "06/08",
+            "value": 531
+          },
+          {
+            "week": "07/15",
+            "value": 466
+          },
+          {
+            "week": "08/22",
+            "value": 387
+          },
+          {
+            "week": "09/01",
+            "value": 386
+          },
+          {
+            "week": "010/0",
+            "value": 482
+          },
+          {
+            "week": "011/1",
+            "value": 607
+          }
+        ],
+        "current_value": 607,
+        "change_percent": 56.4,
+        "tool_count": 37
+      },
+      {
+        "category": "AI效率",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 388
+          },
+          {
+            "week": "05/01",
+            "value": 502
+          },
+          {
+            "week": "06/08",
+            "value": 531
+          },
+          {
+            "week": "07/15",
+            "value": 466
+          },
+          {
+            "week": "08/22",
+            "value": 387
+          },
+          {
+            "week": "09/01",
+            "value": 386
+          },
+          {
+            "week": "010/0",
+            "value": 482
+          },
+          {
+            "week": "011/1",
+            "value": 607
+          }
+        ],
+        "current_value": 607,
+        "change_percent": 56.4,
+        "tool_count": 37
+      },
+      {
+        "category": "AI办公",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 273
+          },
+          {
+            "week": "05/01",
+            "value": 353
+          },
+          {
+            "week": "06/08",
+            "value": 373
+          },
+          {
+            "week": "07/15",
+            "value": 327
+          },
+          {
+            "week": "08/22",
+            "value": 272
+          },
+          {
+            "week": "09/01",
+            "value": 271
+          },
+          {
+            "week": "010/0",
+            "value": 338
+          },
+          {
+            "week": "011/1",
+            "value": 426
+          }
+        ],
+        "current_value": 426,
+        "change_percent": 56.0,
+        "tool_count": 26
+      },
+      {
+        "category": "AI绘画",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 262
+          },
+          {
+            "week": "05/01",
+            "value": 339
+          },
+          {
+            "week": "06/08",
+            "value": 358
+          },
+          {
+            "week": "07/15",
+            "value": 315
+          },
+          {
+            "week": "08/22",
+            "value": 261
+          },
+          {
+            "week": "09/01",
+            "value": 260
+          },
+          {
+            "week": "010/0",
+            "value": 325
+          },
+          {
+            "week": "011/1",
+            "value": 410
+          }
+        ],
+        "current_value": 410,
+        "change_percent": 56.5,
+        "tool_count": 25
+      },
+      {
+        "category": "AI音频",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 262
+          },
+          {
+            "week": "05/01",
+            "value": 339
+          },
+          {
+            "week": "06/08",
+            "value": 358
+          },
+          {
+            "week": "07/15",
+            "value": 315
+          },
+          {
+            "week": "08/22",
+            "value": 261
+          },
+          {
+            "week": "09/01",
+            "value": 260
+          },
+          {
+            "week": "010/0",
+            "value": 325
+          },
+          {
+            "week": "011/1",
+            "value": 410
+          }
+        ],
+        "current_value": 410,
+        "change_percent": 56.5,
+        "tool_count": 25
+      },
+      {
+        "category": "AI设计",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 241
+          },
+          {
+            "week": "05/01",
+            "value": 312
+          },
+          {
+            "week": "06/08",
+            "value": 330
+          },
+          {
+            "week": "07/15",
+            "value": 290
+          },
+          {
+            "week": "08/22",
+            "value": 241
+          },
+          {
+            "week": "09/01",
+            "value": 240
+          },
+          {
+            "week": "010/0",
+            "value": 299
+          },
+          {
+            "week": "011/1",
+            "value": 377
+          }
+        ],
+        "current_value": 377,
+        "change_percent": 56.4,
+        "tool_count": 23
+      },
+      {
+        "category": "AI写作",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 230
+          },
+          {
+            "week": "05/01",
+            "value": 298
+          },
+          {
+            "week": "06/08",
+            "value": 315
+          },
+          {
+            "week": "07/15",
+            "value": 277
+          },
+          {
+            "week": "08/22",
+            "value": 230
+          },
+          {
+            "week": "09/01",
+            "value": 229
+          },
+          {
+            "week": "010/0",
+            "value": 286
+          },
+          {
+            "week": "011/1",
+            "value": 360
+          }
+        ],
+        "current_value": 360,
+        "change_percent": 56.5,
+        "tool_count": 22
+      },
+      {
+        "category": "AI自动化",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 157
+          },
+          {
+            "week": "05/01",
+            "value": 203
+          },
+          {
+            "week": "06/08",
+            "value": 215
+          },
+          {
+            "week": "07/15",
+            "value": 189
+          },
+          {
+            "week": "08/22",
+            "value": 157
+          },
+          {
+            "week": "09/01",
+            "value": 156
+          },
+          {
+            "week": "010/0",
+            "value": 195
+          },
+          {
+            "week": "011/1",
+            "value": 246
+          }
+        ],
+        "current_value": 246,
+        "change_percent": 56.7,
+        "tool_count": 15
+      },
+      {
+        "category": "AI搜索",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 115
+          },
+          {
+            "week": "05/01",
+            "value": 149
+          },
+          {
+            "week": "06/08",
+            "value": 157
+          },
+          {
+            "week": "07/15",
+            "value": 138
+          },
+          {
+            "week": "08/22",
+            "value": 115
+          },
+          {
+            "week": "09/01",
+            "value": 114
+          },
+          {
+            "week": "010/0",
+            "value": 143
+          },
+          {
+            "week": "011/1",
+            "value": 180
+          }
+        ],
+        "current_value": 180,
+        "change_percent": 56.5,
+        "tool_count": 11
+      },
+      {
+        "category": "AI开发",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 115
+          },
+          {
+            "week": "05/01",
+            "value": 149
+          },
+          {
+            "week": "06/08",
+            "value": 157
+          },
+          {
+            "week": "07/15",
+            "value": 138
+          },
+          {
+            "week": "08/22",
+            "value": 115
+          },
+          {
+            "week": "09/01",
+            "value": 114
+          },
+          {
+            "week": "010/0",
+            "value": 143
+          },
+          {
+            "week": "011/1",
+            "value": 180
+          }
+        ],
+        "current_value": 180,
+        "change_percent": 56.5,
+        "tool_count": 11
+      }
+    ]
+  },
+  "heatmap": {
+    "title": "AI工具市场分布热力图",
+    "description": "从分类×价格的交叉视角看当前AI工具市场的格局。",
+    "heatmap": [
+      {
+        "category": "AI编程",
+        "icon": "📊",
+        "tool_count": 47,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 11,
+            "names": [
+              "Windsurf",
+              "Lovable",
+              "Aider"
+            ]
+          },
+          "freemium": {
+            "count": 32,
+            "names": [
+              "GitHub Copilot",
+              "Cursor",
+              "Replit AI"
+            ]
+          }
+        },
+        "top_feature": "GitHub Copilot",
+        "recommended_slug": "github-copilot"
+      },
+      {
+        "category": "AI对话",
+        "icon": "📊",
+        "tool_count": 37,
+        "avg_rating": 4.4,
+        "by_price": {
+          "free": {
+            "count": 15,
+            "names": [
+              "Kimi",
+              "豆包",
+              "DeepSeek"
+            ]
+          },
+          "freemium": {
+            "count": 17,
+            "names": [
+              "ChatGPT",
+              "Claude",
+              "Gemini"
+            ]
+          }
+        },
+        "top_feature": "ChatGPT",
+        "recommended_slug": "chatgpt"
+      },
+      {
+        "category": "AI视频",
+        "icon": "📊",
+        "tool_count": 37,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 5,
+            "names": [
+              "可灵AI",
+              "Opus Clip",
+              "Descript"
+            ]
+          },
+          "freemium": {
+            "count": 26,
+            "names": [
+              "Runway",
+              "Pika",
+              "Luma AI"
+            ]
+          }
+        },
+        "top_feature": "Runway",
+        "recommended_slug": "runway"
+      },
+      {
+        "category": "AI效率",
+        "icon": "📊",
+        "tool_count": 37,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 4,
+            "names": [
+              "OpenRouter",
+              "Weaviate",
+              "Superset"
+            ]
+          },
+          "freemium": {
+            "count": 30,
+            "names": [
+              "Arc浏览器",
+              "Comet",
+              "Raycast AI"
+            ]
+          }
+        },
+        "top_feature": "Arc浏览器",
+        "recommended_slug": "arc-browser"
+      },
+      {
+        "category": "AI办公",
+        "icon": "📊",
+        "tool_count": 26,
+        "avg_rating": 4.4,
+        "by_price": {
+          "free": {
+            "count": 4,
+            "names": [
+              "Copilot（微软）",
+              "Otter.ai",
+              "Fireflies.ai"
+            ]
+          },
+          "freemium": {
+            "count": 16,
+            "names": [
+              "Gamma",
+              "NotebookLM",
+              "WPS AI"
+            ]
+          }
+        },
+        "top_feature": "Notion AI",
+        "recommended_slug": "notion-ai"
+      },
+      {
+        "category": "AI绘画",
+        "icon": "📊",
+        "tool_count": 25,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 8,
+            "names": [
+              "Stable Diffusion",
+              "Adobe Firefly",
+              "Leonardo AI"
+            ]
+          },
+          "freemium": {
+            "count": 12,
+            "names": [
+              "Krea AI",
+              "Flux",
+              "LiblibAI"
+            ]
+          }
+        },
+        "top_feature": "Midjourney",
+        "recommended_slug": "midjourney"
+      },
+      {
+        "category": "AI音频",
+        "icon": "📊",
+        "tool_count": 25,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 7,
+            "names": [
+              "Murf AI",
+              "MusicFX",
+              "CosyVoice"
+            ]
+          },
+          "freemium": {
+            "count": 14,
+            "names": [
+              "Suno",
+              "Udio",
+              "ElevenLabs"
+            ]
+          }
+        },
+        "top_feature": "Suno",
+        "recommended_slug": "suno"
+      },
+      {
+        "category": "AI设计",
+        "icon": "📊",
+        "tool_count": 23,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 4,
+            "names": [
+              "Photoroom",
+              "即时设计AI",
+              "Looka"
+            ]
+          },
+          "freemium": {
+            "count": 17,
+            "names": [
+              "Canva AI",
+              "Remove.bg",
+              "Figma AI"
+            ]
+          }
+        },
+        "top_feature": "Canva AI",
+        "recommended_slug": "canva-ai"
+      },
+      {
+        "category": "AI写作",
+        "icon": "📊",
+        "tool_count": 22,
+        "avg_rating": 4.4,
+        "by_price": {
+          "free": {
+            "count": 1,
+            "names": [
+              "QuillBot"
+            ]
+          },
+          "freemium": {
+            "count": 16,
+            "names": [
+              "Wordtune",
+              "Anyword",
+              "Headlime"
+            ]
+          }
+        },
+        "top_feature": "Jasper",
+        "recommended_slug": "jasper"
+      },
+      {
+        "category": "AI自动化",
+        "icon": "📊",
+        "tool_count": 15,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 3,
+            "names": [
+              "n8n",
+              "Coze",
+              "Zapier AI"
+            ]
+          },
+          "freemium": {
+            "count": 9,
+            "names": [
+              "Bardeen",
+              "Activepieces",
+              "Relevance AI"
+            ]
+          }
+        },
+        "top_feature": "n8n",
+        "recommended_slug": "n8n"
+      },
+      {
+        "category": "AI搜索",
+        "icon": "📊",
+        "tool_count": 11,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 4,
+            "names": [
+              "纳米AI搜索",
+              "You.com",
+              "Brave Search AI"
+            ]
+          },
+          "freemium": {
+            "count": 4,
+            "names": [
+              "Perplexity",
+              "Phind",
+              "Perplexity AI"
+            ]
+          }
+        },
+        "top_feature": "Perplexity",
+        "recommended_slug": "perplexity"
+      },
+      {
+        "category": "AI开发",
+        "icon": "📊",
+        "tool_count": 11,
+        "avg_rating": 4.6,
+        "by_price": {
+          "free": {
+            "count": 8,
+            "names": [
+              "LangGraph",
+              "MetaGPT",
+              "Strands Agents"
+            ]
+          },
+          "freemium": {
+            "count": 2,
+            "names": [
+              "AG2",
+              "Langflow"
+            ]
+          }
+        },
+        "top_feature": "AG2",
+        "recommended_slug": "ag2"
+      }
+    ]
+  },
+  "head_to_head": {
+    "title": "AI工具巅峰对决",
+    "description": "自动配对4组同类热门AI工具，从评分、价格、热度等多维度直接对比。",
+    "battles": [
+      {
+        "id": "battle-1",
+        "tool_a": {
+          "slug": "alexa-plus",
+          "name": "Alexa Plus",
+          "emoji": "🎙️",
+          "color": "#00CAFF",
+          "rating": "⭐ 4.5",
+          "price": "免费版+订阅版（每月5.99美元起）",
+          "category": "AI对话"
+        },
+        "tool_b": {
+          "slug": "tencent-hunyuan",
+          "name": "腾讯混元",
+          "emoji": "🧠",
+          "color": "#FA7298",
+          "rating": "⭐ 4.2",
+          "price": "免费使用，企业API按调用计费",
+          "category": "AI对话"
+        }
+      },
+      {
+        "id": "battle-2",
+        "tool_a": {
+          "slug": "hugging-face",
+          "name": "Hugging Face",
+          "emoji": "🤗",
+          "color": "#FFD700",
+          "rating": "⭐ 4.7",
+          "price": "免费版可用，付费计划起价$9/月",
+          "category": "AI编程"
+        },
+        "tool_b": {
+          "slug": "trae",
+          "name": "Trae",
+          "emoji": "🤖",
+          "color": "#2563EB",
+          "rating": "⭐ 4.5",
+          "price": "免费版+专业版（$19/月）",
+          "category": "AI编程"
+        }
+      },
+      {
+        "id": "battle-3",
+        "tool_a": {
+          "slug": "pollinations",
+          "name": "Pollinations",
+          "emoji": "🎨",
+          "color": "#10B981",
+          "rating": "⭐ 4.5",
+          "price": "免费版可用，付费版$9.99/月起",
+          "category": "AI绘画"
+        },
+        "tool_b": {
+          "slug": "jimeng-ai",
+          "name": "即梦AI",
+          "emoji": "🎨",
+          "color": "#2563EB",
+          "rating": "⭐ 4.5",
+          "price": "基础功能免费使用，高级功能付费订阅",
+          "category": "AI绘画"
+        }
+      },
+      {
+        "id": "battle-4",
+        "tool_a": {
+          "slug": "veed-io",
+          "name": "Veed.io",
+          "emoji": "🎬",
+          "color": "#777AB2",
+          "rating": "⭐ 4.5",
+          "price": "免费版可用，付费版$12起/月",
+          "category": "AI视频"
+        },
+        "tool_b": {
+          "slug": "invideo-ai",
+          "name": "InVideo AI",
+          "emoji": "🎬",
+          "color": "#FF4F4F",
+          "rating": "⭐ 4.5",
+          "price": "免费版可用，付费版$15/月起",
+          "category": "AI视频"
+        }
+      }
+    ]
+  },
+  "live_pages": [
+    {
+      "slug": "dashboard",
+      "title": "AI工具实时监控面板",
+      "meta_description": "实时追踪AI工具市场动态：总收录320款工具、14个分类，数据每日自动更新。",
+      "keywords": [
+        "AI工具监控",
+        "AI工具数据",
+        "AI工具趋势",
+        "AI工具实时",
+        "AI工具大盘"
+      ],
+      "icon": "📊",
+      "type": "dashboard"
+    },
+    {
+      "slug": "compare-matrix",
+      "title": "AI工具全方位对比矩阵表",
+      "meta_description": "从价格、评分、功能、平台等7个维度横向对比50款主流AI工具，一键找到最适合你的AI工具。",
+      "keywords": [
+        "AI工具对比",
+        "AI工具比较",
+        "AI工具矩阵",
+        "AI工具选型"
+      ],
+      "icon": "🔍",
+      "type": "matrix"
+    },
+    {
+      "slug": "trend-tracker",
+      "title": "AI工具热度趋势追踪",
+      "meta_description": "追踪近8周各类AI工具收录趋势变化，发现正在崛起的热门品类。",
+      "keywords": [
+        "AI工具趋势",
+        "AI热度排行",
+        "AI工具流行",
+        "AI趋势2026"
+      ],
+      "icon": "📈",
+      "type": "trend"
+    },
+    {
+      "slug": "market-heatmap",
+      "title": "AI工具市场分布热力图",
+      "meta_description": "从分类×价格维度的交叉分析看清AI工具市场竞争格局。",
+      "keywords": [
+        "AI工具市场",
+        "AI行业分析",
+        "AI工具分布",
+        "AI竞争格局"
+      ],
+      "icon": "🗺️",
+      "type": "heatmap"
+    },
+    {
+      "slug": "head-to-head",
+      "title": "AI工具巅峰对决",
+      "meta_description": "自动配对4组同类热门AI工具，从多维度直接对比评测。",
+      "keywords": [
+        "AI工具对比评测",
+        "AI工具PK",
+        "AI工具哪个好",
+        "AI横向对比"
+      ],
+      "icon": "⚔️",
+      "type": "battle"
+    }
+  ]
+}

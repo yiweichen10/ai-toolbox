@@ -1,0 +1,235 @@
+// SEO网站 - 主入口脚本
+// 首页三级结构：今日收录 + 热门推荐 + 全部工具（懒加载）
+
+function initApp() {
+    const allTools = window.__ALL_TOOLS__ || [];
+    const remainingTools = window.__REMAINING_TOOLS__ || [];
+
+    // 懒加载剩余工具（滚动到底部追加到 toolsGrid）
+    if (remainingTools.length > 0) {
+        setupLazyLoadTools(remainingTools);
+    }
+
+    // 分类筛选
+    initCategoryFilter(allTools);
+
+    // 搜索
+    initSearch(allTools);
+
+    // 内容Tab切换
+    initContentTabs();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.__ALL_TOOLS__) {
+        initApp();
+    } else {
+        window.addEventListener('load', initApp);
+    }
+});
+
+// ── 懒加载：哨兵节点触发 ──
+function setupLazyLoadTools(tools) {
+    const grid = document.getElementById('toolsGrid');
+    if (!grid) return;
+
+    let rendered = grid.querySelectorAll('.tool-card').length;
+    const BATCH = 12;
+    let queue = tools.slice();
+
+    const sentinel = document.createElement('div');
+    sentinel.id = 'lazyLoadSentinel';
+    sentinel.style.cssText = 'height:1px;width:100%;';
+    grid.after(sentinel);
+
+    function loadBatch() {
+        if (queue.length === 0) {
+            observer.disconnect();
+            sentinel.remove();
+            return;
+        }
+        const batch = queue.splice(0, BATCH);
+        const fragment = document.createDocumentFragment();
+        batch.forEach((t, i) => {
+            fragment.appendChild(createToolCard(t, rendered + i));
+        });
+        grid.appendChild(fragment);
+        rendered += batch.length;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) loadBatch();
+        });
+    }, { rootMargin: '200px' });
+
+    observer.observe(sentinel);
+}
+
+function createToolCard(t, index) {
+    const badge = t.badge ? `<span class="badge badge-${t.badge.type}">${t.badge.text}</span>` : '';
+    const tags = (t.tags || []).map(tag => `<span class="tag ${tag.type || ''}">${tag.text}</span>`).join('');
+    const article = document.createElement('article');
+    article.className = 'tool-card fade-in';
+    article.style.animationDelay = `${(index % 12) * 0.05}s`;
+    article.onclick = () => { location.href = `/tools/${t.slug}/index.html`; };
+    article.innerHTML = `
+        <div class="tool-icon" style="background:${t.color};">${t.emoji}</div>
+        <h4>${escapeHtml(t.name)} ${badge}</h4>
+        <p class="desc">${escapeHtml(t.description)}</p>
+        <div class="tags">${tags}</div>
+        <div class="meta">
+            <span class="rating">${t.rating}</span>
+            <span class="visits">👁 ${t.visits}</span>
+        </div>`;
+    return article;
+}
+
+// ── 分类筛选 ──
+function initCategoryFilter(tools) {
+    const sidebarBtns = document.querySelectorAll('.sidebar-cat');
+    const mobileBtns = document.querySelectorAll('.mobile-categories .cat-btn');
+
+    function handleCategoryClick(category) {
+        sidebarBtns.forEach(b => b.classList.toggle('active', b.dataset.category === category));
+        mobileBtns.forEach(b => b.classList.toggle('active', b.dataset.category === category));
+
+        // 筛选全部工具渲染到toolsGrid
+        const filtered = category === 'all' ? tools : tools.filter(t => t.category === category);
+        const grid = document.getElementById('toolsGrid');
+        if (grid) {
+            const sentinel = document.getElementById('lazyLoadSentinel');
+            if (sentinel) sentinel.remove();
+            grid.innerHTML = filtered.map((t, i) => `
+                <article class="tool-card fade-in" style="animation-delay: ${i * 0.05}s;" onclick="location.href='/tools/${t.slug}/index.html'">
+                    <div class="tool-icon" style="background:${t.color};">${t.emoji}</div>
+                    <h4>${escapeHtml(t.name)} ${t.badge ? `<span class="badge badge-${t.badge.type}">${t.badge.text}</span>` : ''}</h4>
+                    <p class="desc">${escapeHtml(t.description)}</p>
+                    <div class="tags">${(t.tags || []).map(tag => `<span class="tag ${tag.type || ''}">${tag.text}</span>`).join('')}</div>
+                    <div class="meta">
+                        <span class="rating">${t.rating}</span>
+                        <span class="visits">👁 ${t.visits}</span>
+                    </div>
+                </article>
+            `).join('');
+            // 更新计数
+            const countEl = document.getElementById('toolCount');
+            if (countEl) countEl.textContent = `共 ${filtered.length} 款`;
+
+            // 🔧 修复1：更新区块标题，不再永远显示"全部工具"
+            const allSection = document.getElementById('allSection');
+            if (allSection) {
+                const h3 = allSection.querySelector('.section-header h3');
+                if (h3) {
+                    if (category === 'all') {
+                        h3.innerHTML = '&#x1F3AF; 全部工具<span>ALL TOOLS</span>';
+                    } else {
+                        h3.innerHTML = '&#x1F3AF; ' + category + '<span>' + category.toUpperCase() + '</span>';
+                    }
+                }
+                // 🔧 修复2：滚动到工具展示区，让用户看到筛选结果
+                setTimeout(function () {
+                    allSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+    }
+
+    sidebarBtns.forEach(btn => btn.addEventListener('click', () => handleCategoryClick(btn.dataset.category)));
+    mobileBtns.forEach(btn => btn.addEventListener('click', () => handleCategoryClick(btn.dataset.category)));
+}
+
+// ── 搜索 ──
+function initSearch(tools) {
+    const searchBtn = document.querySelector('.search-bar-below-nav .search-box button');
+    const searchInput = document.getElementById('searchInput');
+    if (!searchBtn || !searchInput) return;
+
+    function performSearch() {
+        const query = searchInput.value.trim().toLowerCase();
+        if (!query) return;
+        const results = tools.filter(t =>
+            t.name.toLowerCase().includes(query) ||
+            t.description.toLowerCase().includes(query) ||
+            (t.tags || []).some(tag => tag.text.toLowerCase().includes(query))
+        );
+        // 高亮"全部"
+        document.querySelectorAll('.sidebar-cat').forEach(b => b.classList.toggle('active', b.dataset.category === 'all'));
+        document.querySelectorAll('.mobile-categories .cat-btn').forEach(b => b.classList.toggle('active', b.dataset.category === 'all'));
+        const grid = document.getElementById('toolsGrid');
+        if (grid) {
+            grid.innerHTML = results.map((t, i) => `
+                <article class="tool-card fade-in" style="animation-delay: ${i * 0.05}s;" onclick="location.href='/tools/${t.slug}/index.html'">
+                    <div class="tool-icon" style="background:${t.color};">${t.emoji}</div>
+                    <h4>${escapeHtml(t.name)} ${t.badge ? `<span class="badge badge-${t.badge.type}">${t.badge.text}</span>` : ''}</h4>
+                    <p class="desc">${escapeHtml(t.description)}</p>
+                    <div class="tags">${(t.tags || []).map(tag => `<span class="tag ${tag.type || ''}">${tag.text}</span>`).join('')}</div>
+                    <div class="meta">
+                        <span class="rating">${t.rating}</span>
+                        <span class="visits">👁 ${t.visits}</span>
+                    </div>
+                </article>
+            `).join('');
+            const countEl = document.getElementById('toolCount');
+            if (countEl) countEl.textContent = `找到 ${results.length} 款`;
+
+            // 🔧 搜索后恢复标题为"全部工具"并滚动到结果区
+            const allSection2 = document.getElementById('allSection');
+            if (allSection2) {
+                const h3 = allSection2.querySelector('.section-header h3');
+                if (h3) h3.innerHTML = '&#x1F3AF; 全部工具<span>ALL TOOLS</span>';
+                setTimeout(function () {
+                    allSection2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+    }
+
+    searchBtn.addEventListener('click', performSearch);
+    searchInput.addEventListener('keypress', e => { if (e.key === 'Enter') performSearch(); });
+}
+
+// ── 内容Tab切换（左侧卡片式） ──
+function initContentTabs() {
+    const container = document.getElementById('contentTabs');
+    if (!container) return;
+    const cards = container.querySelectorAll('.tab-card');
+    const panels = container.querySelectorAll('.tab-panel');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const tab = card.dataset.tab;
+            cards.forEach(c => c.classList.remove('active'));
+            panels.forEach(p => p.classList.remove('active'));
+            card.classList.add('active');
+            const target = document.getElementById('panel-' + tab);
+            if (target) target.classList.add('active');
+        });
+    });
+}
+
+// ── 返回顶部 ──
+(function initBackToTop() {
+    const existingBtn = document.getElementById('backToTop');
+    if (!existingBtn) return;
+    const btn = existingBtn.cloneNode(true);
+    existingBtn.parentNode.replaceChild(btn, existingBtn);
+    let ticking = false;
+    const onScroll = () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                btn.classList.toggle('visible', window.scrollY > 400);
+                ticking = false;
+            });
+            ticking = true;
+        }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+})();
+
+function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}

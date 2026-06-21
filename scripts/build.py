@@ -292,6 +292,32 @@ def build_tool_page(tool, all_tools, all_articles=None):
                 <div class="related-grid">{cards}</div>
             </div>'''
 
+    # ── 侧边栏 HTML（从同一个 selected/matched 数据生成） ──
+    sidebar_tools_html = ''
+    if selected:
+        items = ''
+        for r in selected[:5]:
+            is_free = '免费' in r.get('price', '') or r.get('price', '') == ''
+            tag_html = ' <span class="rel-tag free">免费</span>' if is_free else ''
+            items += f'''<li class="rel-tool-item">
+                <span class="rel-tool-icon" style="background:{r.get('color','#f1f5f9')};">{r['emoji']}</span>
+                <a href="/tools/{r['slug']}/">{r['name']}</a>{tag_html}
+            </li>'''
+        sidebar_tools_html = f'''<div class="sidebar-card">
+            <h4>🔧 同类热门工具</h4>
+            {items}
+        </div>'''
+
+    sidebar_articles_html = ''
+    if matched:
+        items = ''
+        for a in matched[:3]:
+            items += f"<li><a href='/articles/{a['slug']}/'>{escape_html(a['title'][:35])}</a></li>"
+        sidebar_articles_html = f'''<div class="sidebar-card">
+            <h4>📖 相关文章</h4>
+            <ul>{items}</ul>
+        </div>'''
+
     # FAQ 区块
     faq_html = ''
     faq_schema = []
@@ -546,7 +572,8 @@ def build_tool_page(tool, all_tools, all_articles=None):
         <a href="/">首页</a> &gt; <a href="/category/{category_slug_for_schema}/">{escape_html(tool['category'])}</a> &gt; <span>{escape_html(tool['name'])}</span>
     </nav>
 
-    <main class="article-container">
+    <main class="article-container-wide">
+        <div class="content-main">
         <div class="tool-header">
             <div class="tool-header-top">
                 <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
@@ -583,9 +610,16 @@ def build_tool_page(tool, all_tools, all_articles=None):
 
         {faq_html}
 
-        {related_html}
+            <div class="mobile-ad-inline">📱 继续阅读 · 猜你喜欢</div>
+        </div><!-- /.content-main -->
 
-        {related_articles_html}
+        <div class="page-sidebar-wrap">
+        <aside class="page-sidebar">
+            <div class="ad-slot ad-slot-large"></div>
+            {sidebar_tools_html}
+            {sidebar_articles_html}
+        </aside>
+        </div>
     </main>
 
     <footer class="footer">
@@ -2456,6 +2490,33 @@ def build_article_page(article, all_articles, all_tools=None):
             <div class="related-grid">{cards}</div>
         </div>'''
 
+    # ── 文章页侧边栏 HTML ──
+    article_sidebar_tools_html = ''
+    if all_tools and matched_tools:
+        items = ''
+        for t in matched_tools[:5]:
+            is_free = '免费' in t.get('price', '') or t.get('price', '') == ''
+            tag_html = ' <span class="rel-tag free">免费</span>' if is_free else ''
+            items += f'''<li class="rel-tool-item">
+                <span class="rel-tool-icon" style="background:{t.get('color','#f1f5f9')};">{t.get('emoji','🔧')}</span>
+                <a href="/tools/{t['slug']}/">{t['name']}</a>{tag_html}
+            </li>'''
+        if items:
+            article_sidebar_tools_html = f'''<div class="sidebar-card">
+                <h4>🔧 文中提到的工具</h4>
+                {items}
+            </div>'''
+
+    article_sidebar_related_html = ''
+    if same_category:
+        items = ''
+        for a in same_category[:4]:
+            items += f"<li><a href='/articles/{a['slug']}/'>{escape_html(a['title'][:35])}</a></li>"
+        article_sidebar_related_html = f'''<div class="sidebar-card">
+            <h4>📖 相关文章</h4>
+            <ul>{items}</ul>
+        </div>'''
+
     # OG Image（自动生成缺失的OG图片）
     og_image = ensure_og_image(slug, data_obj=article, is_article=True)
 
@@ -2731,7 +2792,8 @@ def build_article_page(article, all_articles, all_tools=None):
         <a href="/">首页</a> &gt; <span>{escape_html(article.get('category', '文章'))}</span> &gt; <span>{escape_html(article['title'])[:20]}...</span>
     </nav>
 
-    <main class="article-container">
+    <main class="article-container-wide">
+        <div class="content-main">
         <article class="article-body">
             <h1 style="margin-bottom:16px;">{escape_html(article['title'])}</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
@@ -2745,9 +2807,16 @@ def build_article_page(article, all_articles, all_tools=None):
             {content_html}
         </article>
 
-        {related_html}
+            <div class="mobile-ad-inline">📱 继续阅读 · 猜你喜欢</div>
+        </div><!-- /.content-main -->
 
-        {related_tools_html}
+        <div class="page-sidebar-wrap">
+        <aside class="page-sidebar">
+            <div class="ad-slot ad-slot-large"></div>
+            {article_sidebar_tools_html}
+            {article_sidebar_related_html}
+        </aside>
+        </div>
     </main>
 
     <footer class="footer">
@@ -3062,11 +3131,20 @@ def build_index_page(tools, articles):
             pass
         return datetime.min
     sorted_articles = sorted(articles, key=lambda a: parse_article_date(a.get('date', '')), reverse=True)
+    
+    # ── 广告/推广列表（穿插在新闻之间，凤凰网风格）──
+    NEWS_ADS = [
+        {"title": "2026年免费AI工具大盘点：这12款国产工具零成本上手", "url": "/articles/ai-free-tools-china-2026/"},
+        {"title": "Cursor vs Copilot vs Windsurf 2026终极对比：我三家都用了一年", "url": "/articles/cursor-vs-copilot-vs-windsurf-2026/"},
+        {"title": "AI数据分析工具实测：我用同一份数据测了5款，免费的通义千问比ChatGPT还快", "url": "/articles/ai-data-analysis-tools-real-test-202606/"},
+        {"title": "AI写作工具推荐：从日报周报到万字长文，这6款覆盖你所有场景", "url": "/articles/ai-writing-tools-2026-guide/"},
+    ]
+    
     news_html = ''
     tag_names = {'AI对话': 'AI资讯', 'AI写作': 'AI资讯', 'AI绘画': 'AI资讯', 'AI编程': '教程',
                  'AI视频': 'AI资讯', 'AI音频': 'AI资讯', 'AI办公': 'AI资讯', 'AI设计': 'AI资讯',
                  'AI搜索': 'AI资讯', 'AI翻译': 'AI资讯', 'AI自动化': 'AI教程', 'AI效率': '效率'}
-    for a in sorted_articles[:5]:
+    for idx, a in enumerate(sorted_articles[:5]):
         d = a.get('date', '')
         # 统一显示为 MM/DD
         display_date = d
@@ -3083,6 +3161,15 @@ def build_index_page(tools, articles):
                                     <span class="news-card-date">{display_date}</span>
                                     <span class="news-card-title">{escape_html(a['title'])}</span>
                                     <span class="news-card-tag">{tag}</span>
+                                </a>
+'''
+        # 在第2篇新闻后插入1条推广（当前隐藏待启用）
+        if idx == 1:
+            ad = NEWS_ADS[0]
+            news_html += f'''                                <a class="news-card-item news-card-ad" href="{ad['url']}" style="display:none">
+                                    <span class="news-card-date">推广</span>
+                                    <span class="news-card-title">{ad['title']}</span>
+                                    <span class="news-card-tag ad-tag">推荐</span>
                                 </a>
 '''
     # 替换新闻卡片（保留"更多文章"链接）
