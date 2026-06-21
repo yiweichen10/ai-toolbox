@@ -8906,6 +8906,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/桌面端"
   },
   {
+    "name": "CrewAI",
+    "slug": "crew-ai",
+    "emoji": "🤖",
+    "color": "#FF6B35",
+    "description": "CrewAI是一个开源的多智能体协作框架，允许开发者创建多个AI代理协同工作来完成复杂任务。2026年已升级至v1.0版本，新增企业级安全控制和云端部署支持，成为构建AI智能体工作流的首选工具。",
+    "category": "AI智能体",
+    "tags": [
+      {
+        "text": "多智能体"
+      },
+      {
+        "text": "AI工作流"
+      },
+      {
+        "text": "开源框架"
+      },
+      {
+        "text": "自动化",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://crewai.com",
+    "price": "免费开源版/Pro版$29/月/Enterprise定制",
+    "platform": "Web/Python SDK/Docker"
+  },
+  {
     "name": "AG2",
     "slug": "ag2",
     "emoji": "🤖",
@@ -9009,6 +9041,40 @@ window.__ALL_TOOLS__ = [
     "url": "https://langflow.org",
     "price": "免费社区版 + Pro版$49/月",
     "platform": "Web/桌面端/云服务"
+  },
+  {
+    "name": "Qwen-Agent",
+    "slug": "qwen-agent",
+    "emoji": "🤖",
+    "color": "#3B82F6",
+    "description": "阿里巴巴开源的AI Agent开发框架，基于通义千问2.5大模型构建，提供多模态理解、工具调用和智能体编排能力。2026年持续更新增强了多智能体协作和自动化工作流功能。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "开源"
+      },
+      {
+        "text": "智能体框架"
+      },
+      {
+        "text": "阿里系"
+      },
+      {
+        "text": "Qwen生态"
+      },
+      {
+        "text": "自动化"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://github.com/QwenLM/Qwen-Agent",
+    "price": "免费开源",
+    "platform": "Web/API/Python"
   },
   {
     "name": "Modelscope-Agent",
@@ -9169,6 +9235,42 @@ window.__ALL_TOOLS__ = [
     "url": "https://cline.dev",
     "price": "免费开源（Pro版可选）",
     "platform": "VS Code、JetBrains IDE、Cursor"
+  },
+  {
+    "name": "Qwen3-Coder-Next",
+    "slug": "qwen3-coder-next",
+    "emoji": "💻",
+    "color": "#4B9FFF",
+    "description": "阿里云通义千问团队2026年推出的最新代码生成模型，专注于编程场景的智能代码补全、生成与调试。基于Qwen3架构深度优化，提供更精准的代码理解和生成能力，支持多种主流编程语言。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码生成"
+      },
+      {
+        "text": "AI编程",
+        "type": "free"
+      },
+      {
+        "text": "通义千问"
+      },
+      {
+        "text": "阿里云"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://tongyi.aliyun.com/qianwen",
+    "price": "网页端/API/IDE插件",
+    "platform": [
+      "网页端",
+      "API",
+      "IDE插件"
+    ]
   },
   {
     "name": "OpenCode",
@@ -18179,6 +18281,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web/桌面端"
   },
   {
+    "name": "CrewAI",
+    "slug": "crew-ai",
+    "emoji": "🤖",
+    "color": "#FF6B35",
+    "description": "CrewAI是一个开源的多智能体协作框架，允许开发者创建多个AI代理协同工作来完成复杂任务。2026年已升级至v1.0版本，新增企业级安全控制和云端部署支持，成为构建AI智能体工作流的首选工具。",
+    "category": "AI智能体",
+    "tags": [
+      {
+        "text": "多智能体"
+      },
+      {
+        "text": "AI工作流"
+      },
+      {
+        "text": "开源框架"
+      },
+      {
+        "text": "自动化",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://crewai.com",
+    "price": "免费开源版/Pro版$29/月/Enterprise定制",
+    "platform": "Web/Python SDK/Docker"
+  },
+  {
     "name": "AG2",
     "slug": "ag2",
     "emoji": "🤖",
@@ -18282,6 +18416,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://langflow.org",
     "price": "免费社区版 + Pro版$49/月",
     "platform": "Web/桌面端/云服务"
+  },
+  {
+    "name": "Qwen-Agent",
+    "slug": "qwen-agent",
+    "emoji": "🤖",
+    "color": "#3B82F6",
+    "description": "阿里巴巴开源的AI Agent开发框架，基于通义千问2.5大模型构建，提供多模态理解、工具调用和智能体编排能力。2026年持续更新增强了多智能体协作和自动化工作流功能。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "开源"
+      },
+      {
+        "text": "智能体框架"
+      },
+      {
+        "text": "阿里系"
+      },
+      {
+        "text": "Qwen生态"
+      },
+      {
+        "text": "自动化"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://github.com/QwenLM/Qwen-Agent",
+    "price": "免费开源",
+    "platform": "Web/API/Python"
   },
   {
     "name": "Modelscope-Agent",
@@ -18442,6 +18610,42 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://cline.dev",
     "price": "免费开源（Pro版可选）",
     "platform": "VS Code、JetBrains IDE、Cursor"
+  },
+  {
+    "name": "Qwen3-Coder-Next",
+    "slug": "qwen3-coder-next",
+    "emoji": "💻",
+    "color": "#4B9FFF",
+    "description": "阿里云通义千问团队2026年推出的最新代码生成模型，专注于编程场景的智能代码补全、生成与调试。基于Qwen3架构深度优化，提供更精准的代码理解和生成能力，支持多种主流编程语言。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码生成"
+      },
+      {
+        "text": "AI编程",
+        "type": "free"
+      },
+      {
+        "text": "通义千问"
+      },
+      {
+        "text": "阿里云"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万/月",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://tongyi.aliyun.com/qianwen",
+    "price": "网页端/API/IDE插件",
+    "platform": [
+      "网页端",
+      "API",
+      "IDE插件"
+    ]
   },
   {
     "name": "OpenCode",
