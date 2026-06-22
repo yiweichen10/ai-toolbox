@@ -9008,6 +9008,41 @@ window.__ALL_TOOLS__ = [
     "platform": "Python、Node.js、REST API"
   },
   {
+    "name": "Flowise",
+    "slug": "flowise",
+    "emoji": "🌊",
+    "color": "#1C1CFF",
+    "description": "Flowise是一个开源的低代码AI工作流构建平台，基于LangChain构建，提供可视化拖拽界面，帮助用户无需编码即可快速构建和部署AI智能体及复杂的工作流。2026年持续活跃更新，已支持多模态模型集成和企业级部署方案。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "低代码"
+      },
+      {
+        "text": "AI工作流"
+      },
+      {
+        "text": "LangChain"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "可视化编排",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://flowiseai.com",
+    "price": "免费开源版 + 付费云服务",
+    "platform": "Web端 / Docker / 本地部署"
+  },
+  {
     "name": "Langflow",
     "slug": "langflow",
     "emoji": "🔗",
@@ -9336,6 +9371,63 @@ window.__ALL_TOOLS__ = [
     "url": "https://kling.kuaishou.com",
     "price": "免费版可用，会员$12.99/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Vidu 2.0",
+    "slug": "vidu-2-0",
+    "emoji": "🎬",
+    "color": "#6366F1",
+    "description": "Vidu 2.0是生数科技推出的AI视频生成模型，专注于文字转视频和图片转视频，能够生成高质量、连贯性强的视频内容。2026年最新版本在运动细节和物理模拟方面有显著提升，支持4K超高清输出。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "文字转视频"
+      },
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "免费使用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约50万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.vidu.studio",
+    "price": "免费版限制时长，付费版¥29/月起",
+    "platform": "网页端"
+  },
+  {
+    "name": "Hedra",
+    "slug": "hedra",
+    "emoji": "🎬",
+    "color": "#8B5CF6",
+    "description": "Hedra是由Hedra Labs开发的AI角色视频生成工具，专注于将静态图像转换为具有一致性和生动表情的动态视频。2026年最新版本增强了口型同步精度和情感表达能力，支持更复杂的多角色场景生成，适合内容创作者和营销团队使用。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "角色动画"
+      },
+      {
+        "text": "口型同步"
+      },
+      {
+        "text": "AI视频生成"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.hedra.ai",
+    "price": "免费版每月80积分，专业版$10/月起",
+    "platform": "Web浏览器"
   },
   {
     "name": "Pollinations",
@@ -18383,6 +18475,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Python、Node.js、REST API"
   },
   {
+    "name": "Flowise",
+    "slug": "flowise",
+    "emoji": "🌊",
+    "color": "#1C1CFF",
+    "description": "Flowise是一个开源的低代码AI工作流构建平台，基于LangChain构建，提供可视化拖拽界面，帮助用户无需编码即可快速构建和部署AI智能体及复杂的工作流。2026年持续活跃更新，已支持多模态模型集成和企业级部署方案。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "低代码"
+      },
+      {
+        "text": "AI工作流"
+      },
+      {
+        "text": "LangChain"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "可视化编排",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://flowiseai.com",
+    "price": "免费开源版 + 付费云服务",
+    "platform": "Web端 / Docker / 本地部署"
+  },
+  {
     "name": "Langflow",
     "slug": "langflow",
     "emoji": "🔗",
@@ -18711,6 +18838,63 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://kling.kuaishou.com",
     "price": "免费版可用，会员$12.99/月起",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Vidu 2.0",
+    "slug": "vidu-2-0",
+    "emoji": "🎬",
+    "color": "#6366F1",
+    "description": "Vidu 2.0是生数科技推出的AI视频生成模型，专注于文字转视频和图片转视频，能够生成高质量、连贯性强的视频内容。2026年最新版本在运动细节和物理模拟方面有显著提升，支持4K超高清输出。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "文字转视频"
+      },
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "免费使用",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约50万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.vidu.studio",
+    "price": "免费版限制时长，付费版¥29/月起",
+    "platform": "网页端"
+  },
+  {
+    "name": "Hedra",
+    "slug": "hedra",
+    "emoji": "🎬",
+    "color": "#8B5CF6",
+    "description": "Hedra是由Hedra Labs开发的AI角色视频生成工具，专注于将静态图像转换为具有一致性和生动表情的动态视频。2026年最新版本增强了口型同步精度和情感表达能力，支持更复杂的多角色场景生成，适合内容创作者和营销团队使用。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "角色动画"
+      },
+      {
+        "text": "口型同步"
+      },
+      {
+        "text": "AI视频生成"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.hedra.ai",
+    "price": "免费版每月80积分，专业版$10/月起",
+    "platform": "Web浏览器"
   },
   {
     "name": "Pollinations",
