@@ -142,7 +142,7 @@ function initCategoryFilter() {
         clearActive();
         setActive(category);
 
-        var HEADER_OFFSET = 130;
+        var HEADER_OFFSET = 155;
         if (category === 'all') {
             var allSection = document.getElementById('allSection');
             if (allSection) {
@@ -263,7 +263,7 @@ function initSearch(allTools) {
             });
             if (first) {
                 setTimeout(function () {
-                    var top = first.getBoundingClientRect().top + window.pageYOffset - 130;
+                    var top = first.getBoundingClientRect().top + window.pageYOffset - 155;
                     window.scrollTo({ top: top, behavior: 'smooth' });
                 }, 100);
             }
@@ -305,7 +305,7 @@ function initContentTabs() {
     var onScroll = function () {
         if (!tickingBt) {
             requestAnimationFrame(function () {
-                btn.classList.toggle('visible', window.scrollY > 400);
+                btn.classList.toggle('visible', window.scrollY > 150);
                 tickingBt = false;
             });
             tickingBt = true;
