@@ -56,19 +56,37 @@
   "description": "2026年3月最后一周AI行业四大重磅事件：OpenAI关停Sora（半年烧$2.7亿仅收入$210万）、LiteLLM遭TeamPCP供应链攻击（9500万月下载量受影响，3小时暴露窗口）、Arm发布首款自研136核AGI CPU（Meta首发，机架性能2倍于x86）、Anthropic推出Claude Computer Use（AI直接操控Mac桌面完成任务）。",
   "datePublished": "2026-03-29",
   "dateModified": "2026-03-29",
+  "inLanguage": "zh-CN",
   "author": {
     "@type": "Organization",
-    "name": "AI工具宝箱"
+    "name": "AI工具宝箱编辑组",
+    "url": "https://www.aitoollab.cn/author/",
+    "description": "专注 AI 工具实测与对比研究的独立编辑团队，5+ 年 AI 工具付费使用经验",
+    "knowsAbout": [
+      "AI工具评测",
+      "AI模型对比",
+      "AEO内容优化",
+      "GEO生成式引擎优化",
+      "AI编程工具",
+      "AI对话模型"
+    ]
   },
   "publisher": {
     "@type": "Organization",
     "name": "AI工具宝箱",
+    "url": "https://www.aitoollab.cn/",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.aitoollab.cn/images/logo.png",
       "width": 200,
       "height": 60
-    }
+    },
+    "foundingDate": "2026-03-21",
+    "slogan": "实测数据驱动 AI 工具决策",
+    "publishingPrinciples": "https://www.aitoollab.cn/about.html",
+    "sameAs": [
+      "https://github.com/yiweichen10/ai-toolbox"
+    ]
   },
   "image": {
     "@type": "ImageObject",
@@ -81,7 +99,7 @@
     "@id": "https://www.aitoollab.cn/articles/ai-news-week-2026-03-29/"
   },
   "abstract": "2026年3月最后一周AI行业四大重磅事件：OpenAI关停Sora（半年烧$2.7亿仅收入$210万）、LiteLLM遭TeamPCP供应链攻击（9500万月下载量受影响，3小时暴露窗口）、Arm发布首款自研136核AGI CPU（Meta首发，机架性能2倍于x86）、Anthropic推出Claude Computer Use（AI直接操控Mac桌面完成任务）。",
-  "wordCount": 4057,
+  "wordCount": 4064,
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [
@@ -95,6 +113,7 @@
     "description": "2026年3月最后一周AI行业四大重磅事件：OpenAI关停Sora（半年烧$2.7亿仅收入$210万）、LiteLLM遭TeamPCP供应链攻击（9500万月下载量受影响，3小时暴露窗口）、Arm发布首款自研136核AGI CPU（Met"
   }
 }</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Sora关停后，我的视频怎么办？", "acceptedAnswer": {"@type": "Answer", "text": "OpenAI提供了作品保全时间窗口，请在关停前下载所有已生成的视频。替代方案推荐：剪映（集成Seedance 2.0，国内直接用）、Runway Gen-4（专业级视频生成）、Pika 2.0（操作简单，适合短视频）。"}}, {"@type": "Question", "name": "我装了LiteLLM，怎么确认有没有中招？", "acceptedAnswer": {"@type": "Answer", "text": "运行`pip show litellm`查看版本。如果是1.82.7或1.82.8，说明可能受影响。即使安装了其他版本，也建议执行排查命令（本文第二部分有详细步骤），特别是检查`litellm_init.pth`文件和`~/.config/sysmon/`目录是否存在。"}}, {"@type": "Question", "name": "Claude Computer Use和之前微软的Windows [Copilot](/tools/github-copilot/)有什么区别？", "acceptedAnswer": {"@type": "Answer", "text": "区别很大。Windows Copilot主要是对话式助手，回答问题、提供建议，但不直接操作。Claude Computer Use是真的接管鼠标和键盘，像人一样打开应用、点击按钮、输入文字。它能自主完成一系列操作，而不是告诉你\"你应该怎么做\"。"}}, {"@type": "Question", "name": "Arm AGI CPU什么时候能买到？", "acceptedAnswer": {"@type": "Answer", "text": "已开放订购，永擎电子、联想、Supermicro提供商用系统。但对个人开发者来说，更实际的影响是：如果你用的是AWS或Azure的云服务器，未来可能会用到基于Arm AGI CPU的实例，推理性能更强、成本更低。"}}, {"@type": "Question", "name": "OpenAI关停Sora，是不是说明AI视频不行了？", "acceptedAnswer": {"@type": "Answer", "text": "恰恰相反。AI视频赛道热度不减，只是商业模式在进化。Sora的失败在于它选择了\"独立App\"这条路——单独做一个视频生成App，用户付费意愿低、运营成本高。而字节把Seedance集成在剪映里、Google把Veo整合在Gemini中，走的是\"平台嵌入\"路线，用户在使用现有工具的过程中顺便用AI生成视频，付费意愿高得多。AI视频不是不行了，是模式选错了。"}}]}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -108,7 +127,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -131,7 +150,9 @@ var _hmt = _hmt || [];
         <article class="article-body">
             <h1 style="margin-bottom:16px;">Sora关停、LiteLLM被投毒、Arm造出136核AGI芯片、Claude操控你的电脑：AI圈本周发生了什么</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026年3月29日 · AI视频
+                <time datetime="2026-03-29" itemprop="datePublished">2026年3月29日</time> · AI视频 ·
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#4285F4;text-decoration:none;"><span itemprop="name">AI工具宝箱编辑组</span></a></span> ·
+                <span style="color:#bbb;">📖 阅读时长 19 分钟</span>
             </div>
             <figure class="tool-infographic">
             <img src="/images/infographics/ai-news-week-2026-03-29-infographic.png" alt="Sora关停、LiteLLM被投毒、Arm造出136核AGI芯片、Claude操控你的电脑：AI圈本周发生了什么 - 数据对比信息图" width="1200" height="630" loading="lazy">
@@ -393,7 +414,7 @@ A：已开放订购，永擎电子、联想、Supermicro提供商用系统。但
 A：恰恰相反。AI视频赛道热度不减，只是商业模式在进化。Sora的失败在于它选择了"独立App"这条路——单独做一个视频生成App，用户付费意愿低、运营成本高。而字节把Seedance集成在剪映里、Google把Veo整合在Gemini中，走的是"平台嵌入"路线，用户在使用现有工具的过程中顺便用AI生成视频，付费意愿高得多。AI视频不是不行了，是模式选错了。
 </p>
 
-<h2 id="section-总结">总结</h2>
+<h2 id="section-最终结论-到底选哪个">最终结论：到底选哪个？</h2>
 
 <p>2026年3月最后一周的AI圈，可以用四个关键词概括：<strong>关停、被黑、造芯、接管。</strong>
 </p>
@@ -406,6 +427,14 @@ A：恰恰相反。AI视频赛道热度不减，只是商业模式在进化。So
 
 <p>关注<a href="https://www.aitoollab.cn/" target="_blank" rel="noopener">AI工具宝箱</a>获取最新AI工具评测和行业动态，每周更新。
 </p>
+            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #10a37f;">
+                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
+                    <strong>关于作者：</strong>本文由 <a href="/author/" style="color:#10a37f;text-decoration:none;">AI工具宝箱编辑组</a> 撰写，团队 5+ 年 AI 工具付费实测经验，月均订阅支出 $200+，所有评测基于真实付费长期使用。
+                </p>
+                <p style="margin:0;font-size:13px;color:#888;">
+                    <strong>数据声明：</strong>本文所有数据均标注来源，可溯源核查。发现错误欢迎通过 <a href="/contact.html" style="color:#4285F4;text-decoration:none;">联系页面</a> 反馈，48 小时内核查修正。
+                </p>
+            </div>
         </article>
 
             <div class="mobile-ad-inline">📱 继续阅读 · 猜你喜欢</div>

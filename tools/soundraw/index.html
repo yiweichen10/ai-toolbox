@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Soundraw",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://soundraw.io",
+  "image": "https://www.aitoollab.cn/images/og/soundraw-og.png",
+  "applicationCategory": "MusicApplication",
+  "applicationSubCategory": "AI音频",
   "operatingSystem": "网页端",
   "description": "Soundraw是一款AI音乐生成工具，用户可以通过选择音乐流派、心情和时长，自动生成无版权的原创音乐。2026年持续更新，支持更精细的音乐控制功能，包括调节乐器配置、情感强度等。非常适合内容创作者、视频制作者和游戏开发者使用。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-03-22",
+  "dateModified": "2026-03-29",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Soundraw免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "16.99",
+      "priceCurrency": "USD",
+      "description": "Soundraw付费版：免费版可生成但不可下载，Creator$16.99/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "850000"
+    "ratingValue": 4.6,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Soundraw",
+    "name": "视频制作者和游戏",
     "url": "https://soundraw.io"
   },
   "featureList": [
@@ -84,6 +96,33 @@
     "多乐器配置调整",
     "情感强度和氛围控制",
     "一键导出多种格式"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "suno",
+      "url": "https://www.aitoollab.cn/tools/suno/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "udio",
+      "url": "https://www.aitoollab.cn/tools/udio/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "elevenlabs",
+      "url": "https://www.aitoollab.cn/tools/elevenlabs/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "murf-ai",
+      "url": "https://www.aitoollab.cn/tools/murf-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "aiva",
+      "url": "https://www.aitoollab.cn/tools/aiva/"
+    }
   ],
   "abstract": "Soundraw是一款AI音乐生成工具，用户可以通过选择音乐流派、心情和时长，自动生成无版权的原创音乐。2026年持续更新，支持更精细的音乐控制功能，包括调节乐器配置、情感强度等。非常适合内容创作者、视频制作者和游戏开发者使用。",
   "speakable": {
@@ -99,12 +138,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "完全无版权问题，生成的音乐可商用"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "操作简单，无需音乐基础即可生成专业音乐"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持自定义音乐时长、结构和情感强度"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "提供多种音乐流派和心情选择"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "定期更新模型，音乐质量持续提升"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版功能受限，下载需要付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "对音乐细节的精细控制仍有局限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "部分小众音乐风格支持有限"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可生成但不可下载，Creator$16.99/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI音频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-03-29" itemprop="dateModified">2026-03-29</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://soundraw.io" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://soundraw.io" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

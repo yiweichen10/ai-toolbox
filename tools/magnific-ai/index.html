@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Magnific AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://magnific.ai",
+  "image": "https://www.aitoollab.cn/images/og/magnific-ai-og.png",
+  "applicationCategory": "DesignApplication",
+  "applicationSubCategory": "AI绘画",
   "operatingSystem": "网页端",
   "description": "Magnific AI是一款专注于AI图像增强与超分辨率的工具，能够将低分辨率图像智能放大至4K甚至8K，同时自动增强细节和纹理。2026年推出最新版本，新增实时预览和批量处理功能，在设计师和内容创作者中保持高度关注。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-04-18",
+  "dateModified": "2026-04-25",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Magnific AI免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "12",
+      "priceCurrency": "USD",
+      "description": "Magnific AI付费版：免费版每月3次增强，付费版$12/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "850000"
+    "ratingValue": 4.6,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,33 @@
     "实时预览与参数调节",
     "批量图像处理"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "stable-diffusion",
+      "url": "https://www.aitoollab.cn/tools/stable-diffusion/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "midjourney",
+      "url": "https://www.aitoollab.cn/tools/midjourney/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "leonardo-ai",
+      "url": "https://www.aitoollab.cn/tools/leonardo-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "ideogram",
+      "url": "https://www.aitoollab.cn/tools/ideogram/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "runway",
+      "url": "https://www.aitoollab.cn/tools/runway/"
+    }
+  ],
   "abstract": "Magnific AI是一款专注于AI图像增强与超分辨率的工具，能够将低分辨率图像智能放大至4K甚至8K，同时自动增强细节和纹理。2026年推出最新版本，新增实时预览和批量处理功能，在设计师和内容创作者中保持高度关注。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +138,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI驱动的超分辨率放大技术，支持4K-8K输出"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "自动增强图像细节和纹理，保持自然真实感"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持Controlnet控制，保持图像结构和风格一致性"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "界面简洁易用，无需专业技术背景即可上手"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "免费版可体验基础功能，降低用户尝试门槛"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版使用次数限制严格，月仅3次"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "处理大尺寸图像时速度较慢，需等待较长时间"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "部分复杂图像增强后可能出现不自然的伪影"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "服务器资源有限，高峰期可能需要排队等待"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "缺乏本地部署版本，完全依赖云端处理"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +221,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +255,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版每月3次增强，付费版$12/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI绘画</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-04-25" itemprop="dateModified">2026-04-25</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://magnific.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://magnific.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

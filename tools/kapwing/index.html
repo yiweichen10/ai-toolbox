@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Kapwing",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://www.kapwing.com",
+  "image": "https://www.aitoollab.cn/images/og/kapwing-og.png",
+  "applicationCategory": "VideoEditingApplication",
+  "applicationSubCategory": "AI视频",
   "operatingSystem": "网页端、iOS、Android",
   "description": "Kapwing是一款基于AI的在线视频编辑平台，提供视频剪辑、字幕生成、智能配音、视频模板等功能。2026年平台持续更新AI视频生成和自动化编辑功能，帮助用户快速制作社交媒体内容。支持团队协作和云端存储，是创作者制作短视频的理想工具。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-03-22",
+  "dateModified": "2026-03-29",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,28 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Kapwing免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "16",
+      "priceCurrency": "USD",
+      "description": "Kapwing付费版：免费版可用（含水印4分钟），Starter$16/月起，Pro$33/月"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版2",
+      "price": "33",
+      "priceCurrency": "USD",
+      "description": "Kapwing付费版2：免费版可用（含水印4分钟），Starter$16/月起，Pro$33/月"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "8500000"
+    "ratingValue": 4.5,
+    "ratingCount": 8500000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +104,28 @@
     "团队协作和云端存储",
     "社交媒体一键发布"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "capcut-ai",
+      "url": "https://www.aitoollab.cn/tools/capcut-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "veed-io",
+      "url": "https://www.aitoollab.cn/tools/veed-io/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "runway",
+      "url": "https://www.aitoollab.cn/tools/runway/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "pika",
+      "url": "https://www.aitoollab.cn/tools/pika/"
+    }
+  ],
   "abstract": "Kapwing是一款基于AI的在线视频编辑平台，提供视频剪辑、字幕生成、智能配音、视频模板等功能。2026年平台持续更新AI视频生成和自动化编辑功能，帮助用户快速制作社交媒体内容。支持团队协作和云端存储，是创作者制作短视频的理想工具。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +140,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "完全基于浏览器，无需下载安装软件"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI自动生成字幕，支持多语言翻译"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "提供丰富的视频模板和素材库"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持团队协作和实时编辑"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "导出选项多样，支持社交媒体直出"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版有水印和时长限制"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "视频渲染速度受网络影响较大"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "高级AI功能需要付费订阅"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +213,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +247,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用（含水印4分钟），Starter$16/月起，Pro$33/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端、iOS、Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI视频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-03-29" itemprop="dateModified">2026-03-29</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://www.kapwing.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://www.kapwing.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

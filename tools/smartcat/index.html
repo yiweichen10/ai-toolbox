@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Smartcat",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://smartcat.com",
+  "image": "https://www.aitoollab.cn/images/og/smartcat-og.png",
+  "applicationCategory": "TranslationApplication",
+  "applicationSubCategory": "AI翻译",
   "operatingSystem": "Web / iOS / Android / API / 浏览器插件",
   "description": "Smartcat是一款AI驱动的翻译和本地化平台，通过神经机器翻译技术为企业和个人提供高质量的多语言内容解决方案。2026年平台集成了新一代大语言模型，翻译准确率提升40%，支持100+语言对实时互译。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Smartcat免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "15",
+      "priceCurrency": "USD",
+      "description": "Smartcat付费版：免费版可用，付费版$15/月起，企业版定制报价"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000"
+    "ratingValue": 4.5,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -87,6 +99,33 @@
     "API集成",
     "多格式文档支持"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "deepl",
+      "url": "https://www.aitoollab.cn/tools/deepl/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "google翻译",
+      "url": "https://www.aitoollab.cn/tools/google翻译/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "亚马逊翻译",
+      "url": "https://www.aitoollab.cn/tools/亚马逊翻译/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "deepseek",
+      "url": "https://www.aitoollab.cn/tools/deepseek/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "notion-ai",
+      "url": "https://www.aitoollab.cn/tools/notion-ai/"
+    }
+  ],
   "abstract": "Smartcat是一款AI驱动的翻译和本地化平台，通过神经机器翻译技术为企业和个人提供高质量的多语言内容解决方案。2026年平台集成了新一代大语言模型，翻译准确率提升40%，支持100+语言对实时互译。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -101,12 +140,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "支持100+语言对，覆盖全球主流语言"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI译后编辑（PE）功能，大幅提升翻译效率"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "集成术语库管理，保证术语一致性"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持团队协作，实时多人协同翻译"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "提供API接口，可无缝集成到企业工作流"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "中文翻译质量相比DeepL略有不足"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "企业版价格较高，小团队成本压力大"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "部分小语种翻译质量不稳定"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "界面加载速度有时较慢"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "客服响应速度有待提升"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +223,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +257,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，付费版$15/月起，企业版定制报价</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web / iOS / Android / API / 浏览器插件</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI翻译</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://smartcat.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://smartcat.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -364,7 +464,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/ai-translation-tools-2026-guide/'>AI翻译工具推荐2026：8款AI翻译软件实测，哪款翻译最准确</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/ai-translation-tools-2026-guide/'>AI翻译工具推荐2026：8款AI翻译软件实测，哪款翻译最准确</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

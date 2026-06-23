@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Aider",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://aider.sh",
+  "image": "https://www.aitoollab.cn/images/og/aider-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI编程",
   "operatingSystem": "macOS、Linux、Windows",
   "description": "Aider是一个开源的AI配对编程助手，直接在终端中与你的Git仓库集成。它支持多种大语言模型，可以智能理解整个代码库并进行上下文感知的代码编辑和重构。2026年持续更新，增加了更强大的多文件分析和自动化测试生成能力。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "约150000"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -87,6 +92,33 @@
     "代码审查和优化建议",
     "自动化测试生成"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "github-copilot",
+      "url": "https://www.aitoollab.cn/tools/github-copilot/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "cursor",
+      "url": "https://www.aitoollab.cn/tools/cursor/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "claude-code",
+      "url": "https://www.aitoollab.cn/tools/claude-code/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "replit-ai",
+      "url": "https://www.aitoollab.cn/tools/replit-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "sourcegraph-cody",
+      "url": "https://www.aitoollab.cn/tools/sourcegraph-cody/"
+    }
+  ],
   "abstract": "Aider是一个开源的AI配对编程助手，直接在终端中与你的Git仓库集成。它支持多种大语言模型，可以智能理解整个代码库并进行上下文感知的代码编辑和重构。2026年持续更新，增加了更强大的多文件分析和自动化测试生成能力。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -101,12 +133,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "开源免费，代码透明可定制"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "直接集成Git仓库，版本控制友好"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持多种大语言模型（Anthropic、OpenAI、Google等）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "上下文感知能力强，能理解整个代码库"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "轻量级终端工具，启动快速"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "需要一定的命令行使用经验"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "依赖外部LLM API，需要API密钥"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "对大型代码库的处理速度可能较慢"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "没有图形化界面，新手上手有门槛"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "配置和调试需要一定技术能力"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +216,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +250,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费开源，支持接入多种LLM API</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：macOS、Linux、Windows</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI编程</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://aider.sh" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://aider.sh" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

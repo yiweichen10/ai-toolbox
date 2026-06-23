@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Wordtune",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://www.wordtune.com",
+  "image": "https://www.aitoollab.cn/images/og/wordtune-og.png",
+  "applicationCategory": "WritingApplication",
+  "applicationSubCategory": "AI写作",
   "operatingSystem": "Web、Chrome/Edge 浏览器扩展、iOS、Android",
   "description": "Wordtune 是一款由 AI 驱动的写作助手和编辑器，专注于文本重写、润色和语气调整，帮助用户提升写作的清晰度、流畅度和说服力。截至 2026 年，它持续更新其核心语言模型，并优化与主流办公软件和浏览器的集成体验，支持将初稿快速打磨成专业内容。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-04-21",
+  "dateModified": "2026-04-28",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Wordtune免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "20",
+      "priceCurrency": "USD",
+      "description": "Wordtune付费版：免费版功能有限；高级版约 $20/月；提供企业方案。"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "约 800 0000"
+    "ratingValue": 4.6,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,23 @@
     "基础的语法与拼写检查",
     "抄袭检测（高级功能）"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "grammarly",
+      "url": "https://www.aitoollab.cn/tools/grammarly/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "quillbot",
+      "url": "https://www.aitoollab.cn/tools/quillbot/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "jasper",
+      "url": "https://www.aitoollab.cn/tools/jasper/"
+    }
+  ],
   "abstract": "Wordtune 是一款由 AI 驱动的写作助手和编辑器，专注于文本重写、润色和语气调整，帮助用户提升写作的清晰度、流畅度和说服力。截至 2026 年，它持续更新其核心语言模型，并优化与主流办公软件和浏览器的集成体验，支持将初稿快速打磨成专业内容。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +128,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "重写建议质量高，能有效提升文本可读性和表达多样性"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "响应速度快，几乎实时提供多个改写版本"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "与 Word、Outlook、Gmail 等办公场景集成良好"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持调整文本语气（正式、随意等），适应不同场合"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "界面简洁，学习成本低，易于上手使用"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "对中文等非英语语言的支持和优化相对较弱"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "高级功能需要订阅，免费版限制较多"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "有时对于非常专业的术语或复杂句式，改写可能不够自然"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +201,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +235,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版功能有限；高级版约 $20/月；提供企业方案。</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web、Chrome/Edge 浏览器扩展、iOS、Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI写作</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-04-28" itemprop="dateModified">2026-04-28</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://www.wordtune.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://www.wordtune.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

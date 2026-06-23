@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Relevance AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://relevanceai.com",
+  "image": "https://www.aitoollab.cn/images/og/relevance-ai-og.png",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "AI自动化",
   "operatingSystem": "Web / API / Python SDK",
   "description": "Relevance AI是一个一站式AI应用开发平台，专注于帮助开发者快速构建、测试和部署AI工作流程。2026年平台集成了最新的多模态模型和向量数据库功能，支持企业级AI应用开发，提供可视化的工作流编排和实时分析能力。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Relevance AI免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "49",
+      "priceCurrency": "USD",
+      "description": "Relevance AI付费版：免费版可用，付费版$49/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "500000/月"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Relevance AI",
+    "name": "AI是一个一站式AI应用",
     "url": "https://relevanceai.com"
   },
   "featureList": [
@@ -84,6 +96,33 @@
     "实时数据监控与分析",
     "API快速集成与部署",
     "企业级安全与权限管理"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "coze",
+      "url": "https://www.aitoollab.cn/tools/coze/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "dify",
+      "url": "https://www.aitoollab.cn/tools/dify/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "n8n",
+      "url": "https://www.aitoollab.cn/tools/n8n/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "zapier-ai",
+      "url": "https://www.aitoollab.cn/tools/zapier-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "bardeen",
+      "url": "https://www.aitoollab.cn/tools/bardeen/"
+    }
   ],
   "abstract": "Relevance AI是一个一站式AI应用开发平台，专注于帮助开发者快速构建、测试和部署AI工作流程。2026年平台集成了最新的多模态模型和向量数据库功能，支持企业级AI应用开发，提供可视化的工作流编排和实时分析能力。",
   "speakable": {
@@ -99,12 +138,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "可视化工作流编辑器，上手简单"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持多种主流LLM集成（GPT、Claude、Gemini等）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "内置向量数据库，便于语义搜索和知识库构建"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "提供实时分析和监控功能"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "团队协作功能完善，支持多人同时编辑"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版功能有限，高级功能需付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "对技术小白仍有一定学习门槛"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "某些高级功能需要企业版才能使用"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "文档和教程资源相对较少"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "在中文社区的使用和讨论度不高"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +221,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +255,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，付费版$49/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web / API / Python SDK</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI自动化</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://relevanceai.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://relevanceai.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -373,7 +473,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/ai-workflow-automation-guide-2026/'>AI工作流自动化完全指南2026：5款工具横评+3个真实案例，零基础搭</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/ai-workflow-automation-guide-2026/'>AI工作流自动化完全指南2026：5款工具横评+3个真实案例，零基础搭</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

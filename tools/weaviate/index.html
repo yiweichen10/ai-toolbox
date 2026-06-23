@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Weaviate",
+  "url": "https://weaviate.io",
+  "image": "https://www.aitoollab.cn/images/og/weaviate-og.png",
   "applicationCategory": "ProductivityApplication",
+  "applicationSubCategory": "AI效率",
   "operatingSystem": "Web/桌面/移动端支持",
   "description": "Weaviate是一个开源的向量数据库，专门用于存储和检索AI应用中的向量嵌入。2026年已推出云托管服务，支持混合搜索和实时索引，成为构建AI应用的核心基础设施。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "850000/月"
+    "ratingValue": 4.6,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Weaviate",
+    "name": "年已",
     "url": "https://weaviate.io"
   },
   "featureList": [
@@ -86,6 +91,33 @@
     "自动向量化模块",
     "可扩展的分布式架构",
     "完整的CRUD操作"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "pinecone",
+      "url": "https://www.aitoollab.cn/tools/pinecone/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "chroma",
+      "url": "https://www.aitoollab.cn/tools/chroma/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "milvus",
+      "url": "https://www.aitoollab.cn/tools/milvus/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "qdrant",
+      "url": "https://www.aitoollab.cn/tools/qdrant/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "langchain",
+      "url": "https://www.aitoollab.cn/tools/langchain/"
+    }
   ],
   "abstract": "Weaviate是一个开源的向量数据库，专门用于存储和检索AI应用中的向量嵌入。2026年已推出云托管服务，支持混合搜索和实时索引，成为构建AI应用的核心基础设施。",
   "speakable": {
@@ -101,12 +133,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "开源免费，自托管成本可控"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持混合搜索，结合关键词和向量语义"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "实时索引，毫秒级查询响应"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "原生支持GraphQL API，易于集成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "社区活跃，文档完善，适合开发者"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "需要一定技术背景才能部署维护"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "云托管价格相对较高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "大规模数据场景需要优化配置"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "部分高级功能需要企业版授权"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费开源版+云托管版</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web/桌面/移动端支持</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI效率</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://weaviate.io" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://weaviate.io" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -341,7 +429,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/ai-prompt-engineering-guide-500-tests/'>AI提示词工程实战指南：我测试了500组提示词，这8个技巧让输出质量从</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/ai-prompt-engineering-guide-500-tests/'>AI提示词工程实战指南：我测试了500组提示词，这8个技巧让输出质量从</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

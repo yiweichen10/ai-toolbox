@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "万兴播爆",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://virbo.wondershare.com",
+  "image": "https://www.aitoollab.cn/images/og/wondershare-virbo-og.png",
+  "applicationCategory": "VideoEditingApplication",
+  "applicationSubCategory": "AI视频",
   "operatingSystem": "网页端/iOS/Android",
   "description": "万兴播爆是万兴科技推出的AI数字人视频生成工具，专注于营销短视频创作。支持多种数字人形象和语言，可快速生成产品介绍、直播切片、种草视频等内容。2026年新增AI脚本优化和智能剪辑功能，进一步提升创作效率。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "万兴播爆免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "99",
+      "priceCurrency": "CNY",
+      "description": "万兴播爆付费版：免费版可用，付费版¥99/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000/月"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "万兴播爆",
+    "name": "万兴播爆是万兴科技",
     "url": "https://virbo.wondershare.com"
   },
   "featureList": [
@@ -84,6 +96,33 @@
     "智能脚本撰写",
     "视频模板套用",
     "自定义数字人形象"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "heygen",
+      "url": "https://www.aitoollab.cn/tools/heygen/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "synthesia",
+      "url": "https://www.aitoollab.cn/tools/synthesia/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "d-id",
+      "url": "https://www.aitoollab.cn/tools/d-id/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "runway",
+      "url": "https://www.aitoollab.cn/tools/runway/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "pika",
+      "url": "https://www.aitoollab.cn/tools/pika/"
+    }
   ],
   "abstract": "万兴播爆是万兴科技推出的AI数字人视频生成工具，专注于营销短视频创作。支持多种数字人形象和语言，可快速生成产品介绍、直播切片、种草视频等内容。2026年新增AI脚本优化和智能剪辑功能，进一步提升创作效率。",
   "speakable": {
@@ -99,12 +138,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "内置上百个数字人形象可选，涵盖多种职业风格"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持120+种语言配音，满足跨境营销需求"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "提供海量模板库，一键套用快速出片"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "AI脚本功能可自动生成视频文案"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持上传真人形象定制专属数字人"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版有水印，商用需付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "数字人表情和动作略显生硬"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "高峰期生成需排队等待"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "视频时长限制在3分钟以内"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +216,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +250,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，付费版¥99/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端/iOS/Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI视频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://virbo.wondershare.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://virbo.wondershare.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

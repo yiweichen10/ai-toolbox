@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "灵办AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://lingbanai.com",
+  "image": "https://www.aitoollab.cn/images/og/lingban-ai-og.png",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "AI办公",
   "operatingSystem": "网页端、iOS、Android",
   "description": "灵办AI是一款专注于智能办公的AI助手工具，集成AI对话、文档写作、翻译润色等功能，帮助用户提升工作效率。2026年持续更新优化，新增多模态理解和深度学习能力，在中文办公场景表现优异。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "灵办AI免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "29",
+      "priceCurrency": "CNY",
+      "description": "灵办AI付费版：基础功能免费，高级会员¥29/月"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "300000"
+    "ratingValue": 4.3,
+    "ratingCount": 300000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,23 @@
     "思维导图生成",
     "智能摘要提取"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "wps-ai",
+      "url": "https://www.aitoollab.cn/tools/wps-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "feishu-zhinengzhushou",
+      "url": "https://www.aitoollab.cn/tools/feishu-zhinengzhushou/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "tengxun-yuanbao",
+      "url": "https://www.aitoollab.cn/tools/tengxun-yuanbao/"
+    }
+  ],
   "abstract": "灵办AI是一款专注于智能办公的AI助手工具，集成AI对话、文档写作、翻译润色等功能，帮助用户提升工作效率。2026年持续更新优化，新增多模态理解和深度学习能力，在中文办公场景表现优异。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +128,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "完全免费的基础版本，对个人用户友好"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持AI对话、写作、翻译、润色等多种办公场景"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "响应速度快，输出内容质量稳定"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "界面简洁易用，上手门槛低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持多平台同步使用"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "高级功能需要付费，会员价格相对竞品偏高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "品牌知名度不如WPS AI、文心一言等大厂产品"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "自定义程度有限，无法完全定制专属工作流"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "目前仅支持中文，暂无英文版界面"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "缺乏API接口，企业集成能力有限"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：基础功能免费，高级会员¥29/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端、iOS、Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI办公</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://lingbanai.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://lingbanai.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

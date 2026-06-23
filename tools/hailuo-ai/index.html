@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "海螺AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://www.hailuo.ai",
+  "image": "https://www.aitoollab.cn/images/og/hailuo-ai-og.png",
+  "applicationCategory": "ChatApplication",
+  "applicationSubCategory": "AI对话",
   "operatingSystem": "网页版/iOS/Android",
   "description": "字节跳动推出的AI对话助手，基于自研豆包大模型构建。提供智能问答、文本生成、代码辅助等功能，2026年持续更新迭代，响应速度快且支持多轮对话。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "5000000"
+    "ratingValue": 4.3,
+    "ratingCount": 5000000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "海螺AI",
+    "name": "字节跳动",
     "url": "https://www.hailuo.ai"
   },
   "featureList": [
@@ -84,6 +89,33 @@
     "文章润色改写",
     "知识查询解答",
     "多语言翻译支持"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "kimi",
+      "url": "https://www.aitoollab.cn/tools/kimi/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "doubao",
+      "url": "https://www.aitoollab.cn/tools/doubao/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "wenxin-yiyan",
+      "url": "https://www.aitoollab.cn/tools/wenxin-yiyan/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "qianwen",
+      "url": "https://www.aitoollab.cn/tools/qianwen/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "zhipu-qingyan",
+      "url": "https://www.aitoollab.cn/tools/zhipu-qingyan/"
+    }
   ],
   "abstract": "字节跳动推出的AI对话助手，基于自研豆包大模型构建。提供智能问答、文本生成、代码辅助等功能，2026年持续更新迭代，响应速度快且支持多轮对话。",
   "speakable": {
@@ -99,12 +131,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "响应速度快，延迟低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "完全免费使用无需付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "基于字节跳动豆包大模型，技术实力强"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持多轮对话和上下文记忆"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "界面简洁易用，上手门槛低"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "功能相比GPT-4等还有提升空间"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "插件生态不够丰富"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "长文本处理能力有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "部分专业领域回答深度不足"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +209,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +243,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费使用</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页版/iOS/Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI对话</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://www.hailuo.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://www.hailuo.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

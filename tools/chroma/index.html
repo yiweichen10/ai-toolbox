@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Chroma",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://www.trychroma.com",
+  "image": "https://www.aitoollab.cn/images/og/chroma-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI编程",
   "operatingSystem": "Web/API",
   "description": "Chroma是一个开源的向量数据库，专为AI应用设计，用于存储和检索高维向量嵌入。它与LLM应用深度集成，帮助开发者构建语义搜索、聊天机器人和RAG系统。2026年Chroma持续更新，已支持更高效的混合搜索和云端部署选项。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000"
+    "ratingValue": 4.5,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Chroma",
+    "name": "帮助",
     "url": "https://www.trychroma.com"
   },
   "featureList": [
@@ -84,6 +89,33 @@
     "集合管理与元数据过滤",
     "Python/JS多语言SDK支持",
     "本地文件系统和云端存储"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "pinecone",
+      "url": "https://www.aitoollab.cn/tools/pinecone/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "weaviate",
+      "url": "https://www.aitoollab.cn/tools/weaviate/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "qdrant",
+      "url": "https://www.aitoollab.cn/tools/qdrant/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "langchain",
+      "url": "https://www.aitoollab.cn/tools/langchain/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "llamaindex",
+      "url": "https://www.aitoollab.cn/tools/llamaindex/"
+    }
   ],
   "abstract": "Chroma是一个开源的向量数据库，专为AI应用设计，用于存储和检索高维向量嵌入。它与LLM应用深度集成，帮助开发者构建语义搜索、聊天机器人和RAG系统。2026年Chroma持续更新，已支持更高效的混合搜索和云端部署选项。",
   "speakable": {
@@ -99,12 +131,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "完全开源免费，社区活跃"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "安装简单，Python API友好"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持多种嵌入模型（OpenAI、HuggingFace等）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "高效的向量相似性搜索"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持本地和云端部署"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "需要一定的编程基础"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "大规模生产环境需要优化配置"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "文档相对基础，高级功能教程较少"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "云服务仍在发展中"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +209,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +243,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费开源（云服务付费）</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web/API</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI编程</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://www.trychroma.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://www.trychroma.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

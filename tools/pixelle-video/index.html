@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Pixelle-Video",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://pixelle-video.ai",
+  "image": "https://www.aitoollab.cn/images/og/pixelle-video-og.png",
+  "applicationCategory": "VideoEditingApplication",
+  "applicationSubCategory": "AI视频",
   "operatingSystem": "网页端/iOS/Android",
   "description": "Pixelle-Video是一款新一代AI视频生成工具，专注于将静态图像和文本描述转化为高质量动态视频内容。2026年更新支持4K超清输出和多轨道编辑功能，为创作者提供更强大的视觉叙事能力。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Pixelle-Video免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "19",
+      "priceCurrency": "USD",
+      "description": "Pixelle-Video付费版：免费版可用，付费版$19/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "850000"
+    "ratingValue": 4.6,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -87,6 +99,33 @@
     "4K/8K超清输出",
     "API接口支持"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "pika",
+      "url": "https://www.aitoollab.cn/tools/pika/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "runway",
+      "url": "https://www.aitoollab.cn/tools/runway/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "luma-ai",
+      "url": "https://www.aitoollab.cn/tools/luma-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "kling-ai",
+      "url": "https://www.aitoollab.cn/tools/kling-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "pika-labs",
+      "url": "https://www.aitoollab.cn/tools/pika-labs/"
+    }
+  ],
   "abstract": "Pixelle-Video是一款新一代AI视频生成工具，专注于将静态图像和文本描述转化为高质量动态视频内容。2026年更新支持4K超清输出和多轨道编辑功能，为创作者提供更强大的视觉叙事能力。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -101,12 +140,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "文生视频和图生视频双模式支持"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "4K超清视频输出质量优秀"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "操作界面简洁新手友好"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持多语言包括中文"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "批量生成功能提升效率"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版有水印且生成次数有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "复杂场景动作有时不够自然"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "长视频生成需要等待较长时间"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "部分高级功能需订阅高级套餐"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "目前不支持中文界面"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +223,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +257,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，付费版$19/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端/iOS/Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI视频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://pixelle-video.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://pixelle-video.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

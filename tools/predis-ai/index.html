@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Predis AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://predis.ai",
+  "image": "https://www.aitoollab.cn/images/og/predis-ai-og.png",
+  "applicationCategory": "DesignApplication",
+  "applicationSubCategory": "AI设计",
   "operatingSystem": "网页端、iOS、Android",
   "description": "Predis AI是一款AI驱动的社交媒体内容创作平台，帮助用户快速生成吸引人的帖子、图像、视频和文案。2026年平台集成了最新的多模态生成模型，支持一键生成完整的社交媒体营销内容流，深受内容创作者和营销人员喜爱。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Predis AI免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "29",
+      "priceCurrency": "USD",
+      "description": "Predis AI付费版：免费版可用，付费版$29/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "850000/月"
+    "ratingValue": 4.6,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,33 @@
     "多平台账号管理",
     "竞品分析和灵感获取"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "canva-ai",
+      "url": "https://www.aitoollab.cn/tools/canva-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "adobe-firefly",
+      "url": "https://www.aitoollab.cn/tools/adobe-firefly/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "gamma",
+      "url": "https://www.aitoollab.cn/tools/gamma/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "jasper",
+      "url": "https://www.aitoollab.cn/tools/jasper/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "lumen5",
+      "url": "https://www.aitoollab.cn/tools/lumen5/"
+    }
+  ],
   "abstract": "Predis AI是一款AI驱动的社交媒体内容创作平台，帮助用户快速生成吸引人的帖子、图像、视频和文案。2026年平台集成了最新的多模态生成模型，支持一键生成完整的社交媒体营销内容流，深受内容创作者和营销人员喜爱。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +138,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "一键生成完整的社交媒体内容（包括图像、文案、标签）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI智能推荐热门话题和趋势，提升内容曝光"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持多平台一键发布（Instagram、Facebook、LinkedIn等）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "内置AI图像和视频生成功能，无需外部工具"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "直观的可视化编辑界面，新手也能快速上手"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版功能有限，高级功能需付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI生成内容有时需要手动调整以符合品牌调性"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "视频生成质量相比专业视频工具仍有提升空间"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，付费版$29/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端、iOS、Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI设计</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://predis.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://predis.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -348,7 +438,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/canva-ai-complete-guide-2026/'>Canva AI完全使用指南：从Magic Studio到AI 2.0</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/canva-ai-complete-guide-2026/'>Canva AI完全使用指南：从Magic Studio到AI 2.0</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

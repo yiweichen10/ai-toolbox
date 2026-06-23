@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "通义万相",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://tongyi.aliyun.com/wanxiang",
+  "image": "https://www.aitoollab.cn/images/og/tongyi-wanxiang-og.png",
+  "applicationCategory": "DesignApplication",
+  "applicationSubCategory": "AI绘画",
   "operatingSystem": "Web/App/小程序",
   "description": "阿里巴巴通义系列旗下的AI绘画生成工具，基于自研Composer大模型实现文本到图像的高质量转换。支持文生图、图生图、风格迁移等多种创作模式，2026年已升级至3.0版本，在中文理解和亚洲审美方面具有显著优势。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "通义万相免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "29",
+      "priceCurrency": "CNY",
+      "description": "通义万相付费版：基础版免费，专业版¥29/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "约5000000/月"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,33 @@
     "高分辨率输出：支持4K及以上清晰度",
     "批量生成：一次生成多张图片对比选择"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "stable-diffusion",
+      "url": "https://www.aitoollab.cn/tools/stable-diffusion/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "midjourney",
+      "url": "https://www.aitoollab.cn/tools/midjourney/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "文心一言",
+      "url": "https://www.aitoollab.cn/tools/文心一言/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "千问",
+      "url": "https://www.aitoollab.cn/tools/千问/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "秒画",
+      "url": "https://www.aitoollab.cn/tools/秒画/"
+    }
+  ],
   "abstract": "阿里巴巴通义系列旗下的AI绘画生成工具，基于自研Composer大模型实现文本到图像的高质量转换。支持文生图、图生图、风格迁移等多种创作模式，2026年已升级至3.0版本，在中文理解和亚洲审美方面具有显著优势。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +138,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "中文语义理解精准，提示词要求相对宽松"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "生成速度快，平均3-5秒即可出图"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "提供多种亚洲风格模板，适合国内用户审美"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "基础功能免费使用门槛低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "与阿里生态深度整合，支持淘宝、闲鱼等平台使用"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "复杂光影和结构处理仍有提升空间"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "部分细节存在畸变问题需要后期调整"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "欧美风格表现不如亚洲风格"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "高分辨率输出需要付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "社区资源和教程相对较少"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +221,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +255,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：基础版免费，专业版¥29/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web/App/小程序</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI绘画</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://tongyi.aliyun.com/wanxiang" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://tongyi.aliyun.com/wanxiang" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

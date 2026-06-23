@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "OpenHands",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://all-hands.ai",
+  "image": "https://www.aitoollab.cn/images/og/openhands-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI编程",
   "operatingSystem": "Web/VS Code/CLI",
   "description": "OpenHands是由All-Hands-AI开发的开源AI编程Agent，能够自主完成代码编写、Bug修复、软件测试等软件开发全流程任务。作为开源社区最活跃的AI编程助手之一，OpenHands在2026年持续迭代，支持多模态交互和高级推理能力。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "OpenHands免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "19",
+      "priceCurrency": "USD",
+      "description": "OpenHands付费版：免费开源（Pro版$19/月）"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000/月"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "OpenHands",
+    "name": "AI",
     "url": "https://all-hands.ai"
   },
   "featureList": [
@@ -84,6 +96,33 @@
     "项目架构分析与优化",
     "多轮对话式编程指导",
     "支持自定义工作流和插件扩展"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "devin-ai",
+      "url": "https://www.aitoollab.cn/tools/devin-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "cursor",
+      "url": "https://www.aitoollab.cn/tools/cursor/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "github-copilot",
+      "url": "https://www.aitoollab.cn/tools/github-copilot/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "replit-ai",
+      "url": "https://www.aitoollab.cn/tools/replit-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "claude-code",
+      "url": "https://www.aitoollab.cn/tools/claude-code/"
+    }
   ],
   "abstract": "OpenHands是由All-Hands-AI开发的开源AI编程Agent，能够自主完成代码编写、Bug修复、软件测试等软件开发全流程任务。作为开源社区最活跃的AI编程助手之一，OpenHands在2026年持续迭代，支持多模态交互和高级推理能力。",
   "speakable": {
@@ -99,12 +138,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "完全开源免费，社区活跃度高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持本地部署，数据隐私有保障"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "能够自主完成完整的软件开发流程"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "与Visual Studio Code深度集成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "多语言支持能力强，包括中文界面"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "对复杂项目的处理能力仍有局限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "需要较高配置的硬件支持本地运行"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "文档和教程相比商业工具不够完善"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "自动化测试的准确率有待提升"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +216,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +250,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费开源（Pro版$19/月）</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web/VS Code/CLI</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI编程</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://all-hands.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://all-hands.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

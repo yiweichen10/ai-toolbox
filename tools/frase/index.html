@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Frase",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://frase.io",
+  "image": "https://www.aitoollab.cn/images/og/frase-og.png",
+  "applicationCategory": "WritingApplication",
+  "applicationSubCategory": "AI写作",
   "operatingSystem": "网页端、iOS、Android",
   "description": "Frase是一款AI驱动的内容营销和SEO优化工具，通过智能分析搜索意图帮助用户创建高排名内容。2026年最新版本增强了AI写作助手和多语言支持功能，成为内容创作者提升搜索排名的首选工具。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Frase免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "12.99",
+      "priceCurrency": "USD",
+      "description": "Frase付费版：免费版有限功能，专业版$12.99/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000"
+    "ratingValue": 4.5,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -88,6 +100,33 @@
     "关键词研究工具",
     "自动生成常见问题"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "jasper",
+      "url": "https://www.aitoollab.cn/tools/jasper/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "copy-ai",
+      "url": "https://www.aitoollab.cn/tools/copy-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "writesonic",
+      "url": "https://www.aitoollab.cn/tools/writesonic/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "notion-ai",
+      "url": "https://www.aitoollab.cn/tools/notion-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "perplexity",
+      "url": "https://www.aitoollab.cn/tools/perplexity/"
+    }
+  ],
   "abstract": "Frase是一款AI驱动的内容营销和SEO优化工具，通过智能分析搜索意图帮助用户创建高排名内容。2026年最新版本增强了AI写作助手和多语言支持功能，成为内容创作者提升搜索排名的首选工具。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -102,12 +141,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "智能分析搜索意图，生成符合SEO要求的内容大纲"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "提供实时内容优化建议，提升文章质量"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "内置多种内容模板，满足不同场景需求"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持多语言内容创作和翻译"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "与Google Search Console等工具集成，追踪排名数据"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版功能受限，高级功能需要付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "对某些细分行业的专业术语理解有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI生成内容需要人工审核校对"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "学习曲线较陡，新手需要时间熟悉"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "部分高级功能仅在企业版中可用"
+        }
+      ]
     }
   }
 }</script>
@@ -125,7 +224,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -159,9 +258,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版有限功能，专业版$12.99/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端、iOS、Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI写作</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://frase.io" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://frase.io" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

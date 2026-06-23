@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Cerebras",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://cerebras.ai",
+  "image": "https://www.aitoollab.cn/images/og/cerebras-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI编程",
   "operatingSystem": "Web云服务 / API",
   "description": "Cerebras Systems是全球领先的AI超级计算机制造商，其Wafer Scale Engine (WSE)系列芯片是世界上最大的AI处理器。Cerebras Cloud为开发者提供前所未有的AI训练和推理计算能力，2026年持续为企业级AI应用提供高性能算力服务。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,15 +68,17 @@
     {
       "@type": "Offer",
       "name": "付费版",
-      "price": "按需付费，联系销售获取报价",
+      "price": "0",
       "priceCurrency": "USD",
-      "description": "Cerebras付费版全功能：按需付费，联系销售获取报价"
+      "description": "Cerebras付费版：按需付费，联系销售获取报价"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000"
+    "ratingValue": 4.5,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -81,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Cerebras",
+    "name": "Cloud为",
     "url": "https://cerebras.ai"
   },
   "featureList": [
@@ -91,6 +96,28 @@
     "模型推理API服务",
     "混合云和私有部署方案",
     "专业技术支持团队"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "hugging-face",
+      "url": "https://www.aitoollab.cn/tools/hugging-face/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "replicate",
+      "url": "https://www.aitoollab.cn/tools/replicate/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "nvidia",
+      "url": "https://www.aitoollab.cn/tools/nvidia/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "groq",
+      "url": "https://www.aitoollab.cn/tools/groq/"
+    }
   ],
   "abstract": "Cerebras Systems是全球领先的AI超级计算机制造商，其Wafer Scale Engine (WSE)系列芯片是世界上最大的AI处理器。Cerebras Cloud为开发者提供前所未有的AI训练和推理计算能力，2026年持续为企业级AI应用提供高性能算力服务。",
   "speakable": {
@@ -106,12 +133,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "全球最大的AI芯片WSE-3，单芯片包含4万亿晶体管"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "专为大规模AI训练设计，显著降低训练时间和成本"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "提供云端访问，无需自建超算集群"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "内存带宽远超传统GPU，适合大模型训练"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持主流AI框架和模型部署"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "主要面向企业级用户，个人开发者门槛较高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "价格相对传统云计算更高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "学习曲线陡峭，需要专业团队支持"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "地理位置限制，部分区域访问受限"
+        }
+      ]
     }
   }
 }</script>
@@ -129,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -163,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：按需付费，联系销售获取报价</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web云服务 / API</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI编程</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://cerebras.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://cerebras.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

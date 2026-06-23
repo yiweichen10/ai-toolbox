@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Vidu AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://www.vidu.ai",
+  "image": "https://www.aitoollab.cn/images/og/vidu-ai-og.png",
+  "applicationCategory": "VideoEditingApplication",
+  "applicationSubCategory": "AI视频",
   "operatingSystem": "Web / iOS / Android",
   "description": "Vidu AI是生数科技推出的AI视频生成工具，支持文生视频和图生视频两大核心功能，能够根据文本描述或上传图片生成高质量视频内容。2026年已升级至2.0版本，新增主体参照和风格迁移功能，生成效率提升50%，画面质量和运动流畅度达到行业领先水平。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "8500000"
+    "ratingValue": 4.6,
+    "ratingCount": 8500000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Vidu AI",
+    "name": "AI是生数科技",
     "url": "https://www.vidu.ai"
   },
   "featureList": [
@@ -84,6 +89,33 @@
     "风格迁移：一键切换视频艺术风格",
     "提示词优化：AI辅助优化生成提示词",
     "批量生成：支持同时生成多个视频版本"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "pika",
+      "url": "https://www.aitoollab.cn/tools/pika/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "runway",
+      "url": "https://www.aitoollab.cn/tools/runway/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "luma-ai",
+      "url": "https://www.aitoollab.cn/tools/luma-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "stable-diffusion",
+      "url": "https://www.aitoollab.cn/tools/stable-diffusion/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "秒画",
+      "url": "https://www.aitoollab.cn/tools/秒画/"
+    }
   ],
   "abstract": "Vidu AI是生数科技推出的AI视频生成工具，支持文生视频和图生视频两大核心功能，能够根据文本描述或上传图片生成高质量视频内容。2026年已升级至2.0版本，新增主体参照和风格迁移功能，生成效率提升50%，画面质量和运动流畅度达到行业领先水平。",
   "speakable": {
@@ -99,12 +131,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "支持文生视频和图生视频两种模式，创作灵活度高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "2026年2.0版本生成速度大幅提升，8秒视频仅需2分钟"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "画面质量优秀，运动流畅自然，细节表现力强"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持主体参照和风格迁移等高级功能"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "国产工具，中文界面友好，支持中文提示词"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版每月仅100积分，高质量视频消耗较快"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "复杂场景和抽象概念的视频生成仍有挑战"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "生成视频时长有限制，最长8秒"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "付费版价格相对竞品略高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "部分精细控制功能需要多次调整提示词"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +214,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +248,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版每月100积分，付费版29美元/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web / iOS / Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI视频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://www.vidu.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://www.vidu.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

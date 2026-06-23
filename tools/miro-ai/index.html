@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Miro AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://miro.com/ai",
+  "image": "https://www.aitoollab.cn/images/og/miro-ai-og.png",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "AI办公",
   "operatingSystem": "网页端、iOS、Android、Windows、Mac",
   "description": "Miro AI是全球领先在线协作白板平台Miro的人工智能助手，通过AI技术帮助团队实现智能头脑风暴、自动生成思维导图和流程图，大幅提升协作效率。2026年Miro AI进一步集成多模态生成能力，支持AI驱动的白板内容智能分析和团队创意自动整理功能。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-03-22",
+  "dateModified": "2026-03-29",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,28 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Miro AI免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "8",
+      "priceCurrency": "USD",
+      "description": "Miro AI付费版：免费版可用，Starter$8/月起（年付），月付$10/月"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版2",
+      "price": "10",
+      "priceCurrency": "USD",
+      "description": "Miro AI付费版2：免费版可用，Starter$8/月起（年付），月付$10/月"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "约8500000/月"
+    "ratingValue": 4.6,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -87,6 +106,28 @@
     "智能搜索和定位",
     "自动化任务整理"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "figma-ai",
+      "url": "https://www.aitoollab.cn/tools/figma-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "notion-ai",
+      "url": "https://www.aitoollab.cn/tools/notion-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "tome",
+      "url": "https://www.aitoollab.cn/tools/tome/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "即时设计ai",
+      "url": "https://www.aitoollab.cn/tools/即时设计ai/"
+    }
+  ],
   "abstract": "Miro AI是全球领先在线协作白板平台Miro的人工智能助手，通过AI技术帮助团队实现智能头脑风暴、自动生成思维导图和流程图，大幅提升协作效率。2026年Miro AI进一步集成多模态生成能力，支持AI驱动的白板内容智能分析和团队创意自动整理功能。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -101,12 +142,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI自动生成思维导图和流程图，提升效率"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "智能模板推荐，快速启动项目"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "实时团队协作，支持最多100人同时编辑"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "强大的第三方集成（Slack、Jira、Notion等）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "AI辅助内容分析和整理功能"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版AI功能有限，完整功能需付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "国内访问速度有时不稳定"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "高级AI功能需要企业版订阅"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "学习曲线较陡，新手需要时间熟悉"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +220,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +254,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，Starter$8/月起（年付），月付$10/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端、iOS、Android、Windows、Mac</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI办公</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-03-29" itemprop="dateModified">2026-03-29</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://miro.com/ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://miro.com/ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

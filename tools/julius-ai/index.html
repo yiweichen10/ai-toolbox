@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Julius AI",
+  "url": "https://julius.ai",
+  "image": "https://www.aitoollab.cn/images/og/julius-ai-og.png",
   "applicationCategory": "ProductivityApplication",
+  "applicationSubCategory": "AI效率",
   "operatingSystem": "Web端支持",
   "description": "Julius AI是一款专注于数据分析和AI编程的智能工具，支持CSV、Excel等数据文件的无缝导入与分析。2026年新增高级机器学习模块和自动化报告生成功能，帮助用户快速从数据中提取洞察。是数据分析师、研究人员和业务用户的首选AI效率工具。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Julius AI免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "19",
+      "priceCurrency": "USD",
+      "description": "Julius AI付费版：免费版可用，付费版$19/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "850000"
+    "ratingValue": 4.6,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -87,6 +99,33 @@
     "数据清洗和预处理",
     "团队协作与共享"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "chatgpt",
+      "url": "https://www.aitoollab.cn/tools/chatgpt/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "claude",
+      "url": "https://www.aitoollab.cn/tools/claude/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "perplexity",
+      "url": "https://www.aitoollab.cn/tools/perplexity/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "deepseek",
+      "url": "https://www.aitoollab.cn/tools/deepseek/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "cursor",
+      "url": "https://www.aitoollab.cn/tools/cursor/"
+    }
+  ],
   "abstract": "Julius AI是一款专注于数据分析和AI编程的智能工具，支持CSV、Excel等数据文件的无缝导入与分析。2026年新增高级机器学习模块和自动化报告生成功能，帮助用户快速从数据中提取洞察。是数据分析师、研究人员和业务用户的首选AI效率工具。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -101,12 +140,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "支持CSV、Excel等多格式数据文件导入和分析"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "内置Python和SQL代码生成能力，提升编程效率"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "智能数据可视化，自动生成图表和报表"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持自然语言查询数据，降低技术门槛"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "2026年新增机器学习模块，支持快速建模和预测"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "高级功能需要付费订阅，免费版有使用限制"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "对超大数据集（GB级别）处理速度较慢"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "国内访问速度不稳定，部分功能需要代理"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "无中文界面，对中文用户有一定学习成本"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "与专业BI工具相比，定制化程度有限"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +223,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +257,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，付费版$19/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web端支持</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI效率</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://julius.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://julius.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

@@ -95,11 +95,43 @@ rm -f "\$TARBALL"
 # 清理超过7天的备份
 find "\$BACKUP_DIR" -name "backup_*.tar.gz" -mtime +7 -delete 2>/dev/null || true
 
+# 部署 Nginx 安全头配置（首次部署时写入，已存在则跳过）
+NGINX_SECURITY_CONF="/etc/nginx/conf.d/security-headers.conf"
+if [ ! -f "\$NGINX_SECURITY_CONF" ]; then
+    echo "  📝 写入 Nginx 安全头配置..."
+    cat > "\$NGINX_SECURITY_CONF" << 'SECURITY_CONF'
+add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+add_header X-Content-Type-Options "nosniff" always;
+add_header X-Frame-Options "SAMEORIGIN" always;
+add_header X-XSS-Protection "1; mode=block" always;
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://hm.baidu.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'self'" always;
+add_header Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()" always;
+SECURITY_CONF
+    echo "  ✅ 安全头配置已写入"
+else
+    echo "  ℹ️  安全头配置已存在，跳过"
+fi
+
 echo "  🔄 重载 Nginx..."
 nginx -s reload 2>/dev/null || systemctl reload nginx || echo "  ⚠️ Nginx reload skipped"
 
 echo "  ✅ 部署完成!"
 DEPLOY_SCRIPT
+
+echo ""
+echo "[5/5] 📤 Git 备份排名/数据变更..."
+cd "$LOCAL_DIR"
+git add data/live_data.json data/ranking_data.json index.html live/ ranking/ 2>/dev/null
+if git diff --cached --quiet; then
+    echo "  无可提交变更"
+else
+    TOOL_COUNT=$(grep -c '"published": true' data/tools.json 2>/dev/null || echo "?")
+    ARTICLE_COUNT=$(grep -c '"published": true' data/articles.json 2>/dev/null || echo "?")
+    git commit -m "deploy: 全站构建+排名数据更新 (${TOOL_COUNT} tools + ${ARTICLE_COUNT} articles)" || true
+    git push origin main 2>&1 || echo "  ⚠️ Git push failed (network may be down)"
+    echo "  ✅ Git 已推送"
+fi
 
 # 清理本地临时文件
 rm -f "$TARBALL"

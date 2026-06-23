@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Luma Dream Machine",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://lumalabs.ai/dream-machine",
+  "image": "https://www.aitoollab.cn/images/og/luma-dream-machine-og.png",
+  "applicationCategory": "VideoEditingApplication",
+  "applicationSubCategory": "AI视频",
   "operatingSystem": "Web / iOS / Android",
   "description": "Luma Dream Machine 是由Luma AI推出的AI视频生成模型，能够根据文本描述和图像生成高质量视频内容。2026年已升级至最新版本，支持更长的视频片段和更精细的镜头控制，生成的视频在真实感和动态细节方面有显著提升。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Luma Dream Machine免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "29.99",
+      "priceCurrency": "USD",
+      "description": "Luma Dream Machine付费版：免费版每月30次生成次数，专业版$29.99/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000"
+    "ratingValue": 4.5,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Luma Dream Machine",
+    "name": "AI",
     "url": "https://lumalabs.ai/dream-machine"
   },
   "featureList": [
@@ -84,6 +96,33 @@
     "视频长度扩展",
     "风格化滤镜",
     "批量生成功能"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "runway",
+      "url": "https://www.aitoollab.cn/tools/runway/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "pika",
+      "url": "https://www.aitoollab.cn/tools/pika/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "sora",
+      "url": "https://www.aitoollab.cn/tools/sora/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "kling-ai",
+      "url": "https://www.aitoollab.cn/tools/kling-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "veo",
+      "url": "https://www.aitoollab.cn/tools/veo/"
+    }
   ],
   "abstract": "Luma Dream Machine 是由Luma AI推出的AI视频生成模型，能够根据文本描述和图像生成高质量视频内容。2026年已升级至最新版本，支持更长的视频片段和更精细的镜头控制，生成的视频在真实感和动态细节方面有显著提升。",
   "speakable": {
@@ -99,12 +138,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "生成的视频画质清晰，细节表现优秀"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持文本和图像两种方式生成视频"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "镜头运动自然流畅，具有电影感"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "操作界面简洁，上手难度低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持多种宽高比和分辨率选择"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版生成次数有限，高频使用需付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "复杂场景和动作有时会出现畸变"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "生成速度受服务器负载影响"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "不支持中文界面"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "对硬件要求较高，生成等待时间较长"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +221,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +255,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版每月30次生成次数，专业版$29.99/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web / iOS / Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI视频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://lumalabs.ai/dream-machine" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://lumalabs.ai/dream-machine" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

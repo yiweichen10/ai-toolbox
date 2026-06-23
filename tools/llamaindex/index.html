@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "LlamaIndex",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://www.llamaindex.ai",
+  "image": "https://www.aitoollab.cn/images/og/llamaindex-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI编程",
   "operatingSystem": "Python/Node.js/TypeScript/Web",
   "description": "LlamaIndex是一个开源的数据框架，帮助开发者构建基于LLM的应用程序，2024年已全新品牌升级并持续完善企业级功能。它通过数据摄取、索引和查询能力，让AI模型能够高效访问私有或特定领域的知识库。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "ratingCount": "850000"
+    "ratingValue": 4.7,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "LlamaIndex",
+    "name": "帮助",
     "url": "https://www.llamaindex.ai"
   },
   "featureList": [
@@ -84,6 +89,33 @@
     "查询引擎优化",
     "Agent构建框架",
     "监控与可观测性"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "langchain",
+      "url": "https://www.aitoollab.cn/tools/langchain/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "huggingface",
+      "url": "https://www.aitoollab.cn/tools/huggingface/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "replicate",
+      "url": "https://www.aitoollab.cn/tools/replicate/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "coze",
+      "url": "https://www.aitoollab.cn/tools/coze/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "dify",
+      "url": "https://www.aitoollab.cn/tools/dify/"
+    }
   ],
   "abstract": "LlamaIndex是一个开源的数据框架，帮助开发者构建基于LLM的应用程序，2024年已全新品牌升级并持续完善企业级功能。它通过数据摄取、索引和查询能力，让AI模型能够高效访问私有或特定领域的知识库。",
   "speakable": {
@@ -99,12 +131,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.7,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "完全开源免费，社区活跃度高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持多种数据源接入（PDF/文档/数据库等）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "提供灵活的索引策略，满足不同场景需求"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "与主流LLM无缝集成（OpenAI/Claude/Gemini等）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "企业级功能完善，支持私有化部署"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "对新手有一定学习曲线"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "文档有时不够详尽，需要查阅源码"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "大规模数据场景下性能优化需要经验"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +204,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +238,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费开源版+付费云服务</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Python/Node.js/TypeScript/Web</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI编程</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://www.llamaindex.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://www.llamaindex.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "清影AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://qingying.360.cn",
+  "image": "https://www.aitoollab.cn/images/og/qingying-ai-og.png",
+  "applicationCategory": "VideoEditingApplication",
+  "applicationSubCategory": "AI视频",
   "operatingSystem": "网页端、iOS、Android",
   "description": "清影AI是360公司推出的AI视频生成工具，支持文生视频和图生视频功能。用户可通过文字描述或上传图片快速生成6秒高清视频。2025年已升级至3.0版本，新增风格迁移和运动控制功能，目前提供免费和付费两种使用模式。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "850000"
+    "ratingValue": 4.3,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "清影AI",
+    "name": "公司",
     "url": "https://qingying.360.cn"
   },
   "featureList": [
@@ -84,6 +89,33 @@
     "运动控制：可调节运动幅度和速度",
     "背景音乐：自动匹配背景音效",
     "多平台输出：支持主流视频格式导出"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "pika",
+      "url": "https://www.aitoollab.cn/tools/pika/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "runway",
+      "url": "https://www.aitoollab.cn/tools/runway/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "luma-dream-machine",
+      "url": "https://www.aitoollab.cn/tools/luma-dream-machine/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "可灵AI",
+      "url": "https://www.aitoollab.cn/tools/可灵AI/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "sora",
+      "url": "https://www.aitoollab.cn/tools/sora/"
+    }
   ],
   "abstract": "清影AI是360公司推出的AI视频生成工具，支持文生视频和图生视频功能。用户可通过文字描述或上传图片快速生成6秒高清视频。2025年已升级至3.0版本，新增风格迁移和运动控制功能，目前提供免费和付费两种使用模式。",
   "speakable": {
@@ -99,12 +131,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "支持中英文双语提示词，兼容性好"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "生成速度较快，6秒视频约30秒生成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "基础功能免费使用门槛低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持图生视频，静态图片可转为动态"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "与360生态深度整合，可一键分享到平台"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "视频时长限制较短，仅6秒"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "付费版价格相对竞品偏高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "复杂动作场景生成效果一般"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "部分风格渲染会出现伪影"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +209,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +243,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，付费版会员39元/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端、iOS、Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI视频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://qingying.360.cn" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://qingying.360.cn" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

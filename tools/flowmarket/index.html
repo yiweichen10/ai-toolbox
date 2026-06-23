@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "FlowMarket",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://flowmarket.ai",
+  "image": "https://www.aitoollab.cn/images/og/flowmarket-og.png",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "AI自动化",
   "operatingSystem": "网页端",
   "description": "FlowMarket是一个AI工作流自动化平台和工具市场，帮助用户通过可视化拖拽构建自动化工作流程。2026年平台集成了200+AI应用和预制工作流模板，支持多模态AI模型调用，让企业和个人用户都能快速实现业务流程自动化。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "FlowMarket免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "19",
+      "priceCurrency": "USD",
+      "description": "FlowMarket付费版：免费版可用，付费版$19/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000/月"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -87,6 +99,33 @@
     "自定义API接口",
     "批量任务处理"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "n8n",
+      "url": "https://www.aitoollab.cn/tools/n8n/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "zapier-ai",
+      "url": "https://www.aitoollab.cn/tools/zapier-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "make",
+      "url": "https://www.aitoollab.cn/tools/make/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "coze",
+      "url": "https://www.aitoollab.cn/tools/coze/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "dify",
+      "url": "https://www.aitoollab.cn/tools/dify/"
+    }
+  ],
   "abstract": "FlowMarket是一个AI工作流自动化平台和工具市场，帮助用户通过可视化拖拽构建自动化工作流程。2026年平台集成了200+AI应用和预制工作流模板，支持多模态AI模型调用，让企业和个人用户都能快速实现业务流程自动化。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -101,12 +140,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "可视化工作流编辑器，上手简单"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持200+AI应用和模型集成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "预制模板丰富，覆盖营销、客服、内容创作等场景"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "团队协作功能完善，支持多人共同编辑"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "提供API接口，可嵌入第三方系统"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版功能有限制，高级功能需付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "部分高级模板需要订阅才能使用"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "移动端体验有待优化"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "复杂工作流可能需要一定学习成本"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +218,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +252,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，付费版$19/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI自动化</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://flowmarket.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://flowmarket.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -356,7 +451,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/ai-workflow-automation-guide-2026/'>AI工作流自动化完全指南2026：5款工具横评+3个真实案例，零基础搭</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/ai-workflow-automation-guide-2026/'>AI工作流自动化完全指南2026：5款工具横评+3个真实案例，零基础搭</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

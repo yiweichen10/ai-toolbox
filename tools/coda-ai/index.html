@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Coda AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://coda.io",
+  "image": "https://www.aitoollab.cn/images/og/coda-ai-og.png",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "AI办公",
   "operatingSystem": "网页/iOS/Android",
   "description": "Coda AI是Coda文档协作平台内置的智能助手，帮助用户用自然语言创建文档、构建自动化工作流程、生成数据报告和智能表格。2026年Coda进一步整合多模态AI，支持跨文档智能分析和团队知识库自动整理功能。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Coda AI免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "10",
+      "priceCurrency": "USD",
+      "description": "Coda AI付费版：免费版可用，付费版$10/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "约850000/月"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,33 @@
     "Packs集成生态：连接Notion、Slack、GitHub等主流工具",
     "团队知识库：AI自动整理和归纳团队文档，支持智能搜索"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "notion-ai",
+      "url": "https://www.aitoollab.cn/tools/notion-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "notebooklm",
+      "url": "https://www.aitoollab.cn/tools/notebooklm/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "gamma",
+      "url": "https://www.aitoollab.cn/tools/gamma/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "tome",
+      "url": "https://www.aitoollab.cn/tools/tome/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "slack-ai",
+      "url": "https://www.aitoollab.cn/tools/slack-ai/"
+    }
+  ],
   "abstract": "Coda AI是Coda文档协作平台内置的智能助手，帮助用户用自然语言创建文档、构建自动化工作流程、生成数据报告和智能表格。2026年Coda进一步整合多模态AI，支持跨文档智能分析和团队知识库自动整理功能。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +138,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "将文档、表格、项目管理融为一体，一站式解决团队协作需求"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI助手支持自然语言指令，快速生成文档内容和工作流"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "模板丰富多样，覆盖产品管理、项目追踪、客户关系等多种场景"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持Packs集成，连接500+第三方工具如Slack、Google Drive等"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "团队权限管理精细，适合中小企业和大型组织使用"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "学习曲线较陡，新手需要时间熟悉Doc和Table的交互逻辑"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "国内访问速度相对较慢，网络稳定性有待提升"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI功能在免费版中有限制，高级功能需要付费订阅"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，付费版$10/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页/iOS/Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI办公</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://coda.io" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://coda.io" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

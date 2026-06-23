@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Lumen5",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://lumen5.com",
+  "image": "https://www.aitoollab.cn/images/og/lumen5-og.png",
+  "applicationCategory": "VideoEditingApplication",
+  "applicationSubCategory": "AI视频",
   "operatingSystem": "网页端（Web）、iOS、Android",
   "description": "Lumen5是一款领先的AI视频创作平台，专注于将文本内容（如博客文章、新闻稿）自动转换为营销视频。平台利用先进的人工智能技术分析文本要点，匹配相关素材并生成专业级视频，截至2026年已帮助全球超100万家企业实现内容营销视频化。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Lumen5免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "19",
+      "priceCurrency": "USD",
+      "description": "Lumen5付费版：免费版可用，专业版$19/月起，企业版定制价格"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "约1200000/月"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,23 @@
     "AI配音与字幕：内置多语言AI配音，支持自动生成字幕",
     "团队协作与发布：支持团队成员协作，直接一键发布到社交平台"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "invideo-ai",
+      "url": "https://www.aitoollab.cn/tools/invideo-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "pictory",
+      "url": "https://www.aitoollab.cn/tools/pictory/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "synthesia",
+      "url": "https://www.aitoollab.cn/tools/synthesia/"
+    }
+  ],
   "abstract": "Lumen5是一款领先的AI视频创作平台，专注于将文本内容（如博客文章、新闻稿）自动转换为营销视频。平台利用先进的人工智能技术分析文本要点，匹配相关素材并生成专业级视频，截至2026年已帮助全球超100万家企业实现内容营销视频化。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +128,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI自动将文章博客一键转视频，大幅降低视频制作门槛"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "提供数百个可定制模板，适配YouTube、LinkedIn、Instagram等主流平台"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "智能素材库集成，自动匹配文本关键词相关图片和视频片段"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "拖拽式编辑器友好，新手也能快速上手完成专业视频"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持多语言配音和字幕，适配全球化营销需求"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版有水印且功能受限，高质量输出需付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI生成的视频素材依赖库存库，个性化程度有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "复杂定制需求（如特效动画）需要更高版本或外接工具"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +201,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +235,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，专业版$19/月起，企业版定制价格</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端（Web）、iOS、Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI视频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://lumen5.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://lumen5.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

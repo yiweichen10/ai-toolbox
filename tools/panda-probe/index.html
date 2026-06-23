@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "PandaProbe",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://pandaprobe.com",
+  "image": "https://www.aitoollab.cn/images/og/panda-probe-og.png",
+  "applicationCategory": "SearchApplication",
+  "applicationSubCategory": "AI搜索",
   "operatingSystem": "网页端、移动端（iOS/Android）",
   "description": "PandaProbe是一款专注于智能搜索与数据探测的AI工具，基于2026年最新大模型技术，为用户提供精准、快速的多源信息检索与分析服务。该工具在中文搜索领域表现突出，支持深度内容理解和跨平台数据整合。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "PandaProbe免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "29",
+      "priceCurrency": "CNY",
+      "description": "PandaProbe付费版：基础功能免费，专业版¥29/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "约500000/月"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,33 @@
     "PDF/网页长文智能解析",
     "语音搜索与多轮对话支持"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "perplexity",
+      "url": "https://www.aitoollab.cn/tools/perplexity/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "秘塔AI搜索",
+      "url": "https://www.aitoollab.cn/tools/秘塔AI搜索/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "纳米AI搜索",
+      "url": "https://www.aitoollab.cn/tools/纳米AI搜索/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "文心一言",
+      "url": "https://www.aitoollab.cn/tools/文心一言/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "Kimi",
+      "url": "https://www.aitoollab.cn/tools/Kimi/"
+    }
+  ],
   "abstract": "PandaProbe是一款专注于智能搜索与数据探测的AI工具，基于2026年最新大模型技术，为用户提供精准、快速的多源信息检索与分析服务。该工具在中文搜索领域表现突出，支持深度内容理解和跨平台数据整合。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +138,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "中文搜索理解能力强，返回结果精准度高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持多源数据聚合与深度内容分析"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "界面简洁直观，上手门槛低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "响应速度快，2026年版本延迟降低至0.3秒"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "提供个性化推荐和历史记录同步功能"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "国际知名度相对较低，英文搜索能力弱于竞品"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "高级分析功能需要付费订阅"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "目前仅支持中文和英文两种语言"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "暂未开放API接口给第三方开发者"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "社区和教程资源较少"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +221,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +255,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：基础功能免费，专业版¥29/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端、移动端（iOS/Android）</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI搜索</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://pandaprobe.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://pandaprobe.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -328,7 +428,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/perplexity-vs-metaso-vs-kimi-search-2026/'>Perplexity vs 秘塔AI vs Kimi搜索：2026年A</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/perplexity-vs-metaso-vs-kimi-search-2026/'>Perplexity vs 秘塔AI vs Kimi搜索：2026年A</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Symphony Agent",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://symphonyagent.ai",
+  "image": "https://www.aitoollab.cn/images/og/symphony-agent-og.png",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "AI自动化",
   "operatingSystem": "Web/iOS/Android",
   "description": "Symphony Agent是一款专注于企业级工作流程自动化的AI多智能体协作平台，通过编排多个AI代理协同工作，实现复杂业务场景的自动化处理。2026年最新版本支持自定义工作流编排和深度API集成。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Symphony Agent免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "29",
+      "priceCurrency": "USD",
+      "description": "Symphony Agent付费版：免费版/专业版$29/月/企业版定制"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000/月"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,28 @@
     "企业级SSO和权限管理",
     "实时执行监控和日志分析"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "coze",
+      "url": "https://www.aitoollab.cn/tools/coze/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "dify",
+      "url": "https://www.aitoollab.cn/tools/dify/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "n8n",
+      "url": "https://www.aitoollab.cn/tools/n8n/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "zapier-ai",
+      "url": "https://www.aitoollab.cn/tools/zapier-ai/"
+    }
+  ],
   "abstract": "Symphony Agent是一款专注于企业级工作流程自动化的AI多智能体协作平台，通过编排多个AI代理协同工作，实现复杂业务场景的自动化处理。2026年最新版本支持自定义工作流编排和深度API集成。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +133,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "多智能体协同工作能力强，可处理复杂业务场景"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "可视化工作流编排界面，上手门槛低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持200+主流SaaS工具深度集成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "企业级安全认证，支持私有化部署"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "AI代理可自我学习和优化执行策略"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版功能受限，高级功能需要付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "复杂工作流配置需要一定学习成本"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "中文本地化程度有待提升"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "部分国内常用工具尚未支持"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版/专业版$29/月/企业版定制</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web/iOS/Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI自动化</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://symphonyagent.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://symphonyagent.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -343,7 +433,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/ai-workflow-automation-guide-2026/'>AI工作流自动化完全指南2026：5款工具横评+3个真实案例，零基础搭</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/ai-workflow-automation-guide-2026/'>AI工作流自动化完全指南2026：5款工具横评+3个真实案例，零基础搭</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

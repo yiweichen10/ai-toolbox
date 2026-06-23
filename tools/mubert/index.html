@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Mubert",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://mubert.com",
+  "image": "https://www.aitoollab.cn/images/og/mubert-og.png",
+  "applicationCategory": "MusicApplication",
+  "applicationSubCategory": "AI音频",
   "operatingSystem": "网页端、iOS、Android",
   "description": "Mubert是一个AI音乐生成平台，利用先进的人工智能技术为内容创作者生成免版税的背景音乐。用户可以通过简单的描述生成符合特定情绪、风格和时长的音乐，适用于视频、播客、游戏等各种场景。2026年持续更新API服务和企业解决方案。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-03-22",
+  "dateModified": "2026-03-29",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,28 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Mubert免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "14",
+      "priceCurrency": "USD",
+      "description": "Mubert付费版：免费版可用（25首/月），Creator$14/月起，Pro$39/月"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版2",
+      "price": "39",
+      "priceCurrency": "USD",
+      "description": "Mubert付费版2：免费版可用（25首/月），Creator$14/月起，Pro$39/月"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "1500000"
+    "ratingValue": 4.5,
+    "ratingCount": 1500000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +104,23 @@
     "API接口支持",
     "音乐标签和分类浏览"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "suno",
+      "url": "https://www.aitoollab.cn/tools/suno/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "udio",
+      "url": "https://www.aitoollab.cn/tools/udio/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "elevenlabs",
+      "url": "https://www.aitoollab.cn/tools/elevenlabs/"
+    }
+  ],
   "abstract": "Mubert是一个AI音乐生成平台，利用先进的人工智能技术为内容创作者生成免版税的背景音乐。用户可以通过简单的描述生成符合特定情绪、风格和时长的音乐，适用于视频、播客、游戏等各种场景。2026年持续更新API服务和企业解决方案。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +135,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "生成免版税音乐，商用无版权风险"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持多种音乐风格和情绪选择"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "可以精确控制音乐时长和结构"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "提供API接口，方便开发者集成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "界面简洁易用，无需音乐专业知识"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版有使用次数限制"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "生成的音乐质量偶有波动"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "部分高级功能需要付费订阅"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "对某些小众音乐风格支持有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "音乐风格定制灵活性有待提升"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +218,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +252,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用（25首/月），Creator$14/月起，Pro$39/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端、iOS、Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI音频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-03-29" itemprop="dateModified">2026-03-29</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://mubert.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://mubert.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

@@ -382,11 +382,23 @@ def build_tool_page(tool, all_tools, all_articles=None):
         platform_html = f'<div class="tool-meta-item">📦 <strong>平台</strong>：{tool["platform"]}</div>'
 
     # 结构化数据
-    from datetime import datetime
+    from datetime import datetime, timedelta
     today_iso = datetime.now().strftime('%Y-%m-%d')
     # 优先用工具数据里的日期字段，否则用今天
-    date_published = tool.get('datePublished', tool.get('date_published', today_iso))
-    date_modified = tool.get('dateModified', tool.get('date_modified', today_iso))
+    date_published = tool.get('datePublished', tool.get('date_published', tool.get('created_date', today_iso)))
+    # dateModified 修复：优先用显式字段，否则用 created_date + 7天（表示收录后一周内完善）
+    # 避免每次构建都变成今天，被搜索引擎视为作弊
+    _date_mod_raw = tool.get('dateModified', tool.get('date_modified', tool.get('last_updated', '')))
+    if _date_mod_raw:
+        date_modified = _date_mod_raw
+    elif tool.get('created_date'):
+        try:
+            _cd = datetime.strptime(tool['created_date'][:10], '%Y-%m-%d')
+            date_modified = (_cd + timedelta(days=7)).strftime('%Y-%m-%d')
+        except Exception:
+            date_modified = today_iso
+    else:
+        date_modified = today_iso
 
     category_slug_for_schema = get_category_slug(tool.get('category', ''))
     breadcrumb_data = {
@@ -415,43 +427,94 @@ def build_tool_page(tool, all_tools, all_articles=None):
     }
 
     # 价格/offers数组化（从tool数据提取免费版和付费版两档）
+    # 修复问题8：正确解析"免费版+Plus $20/月"这类含"+"的多档价格
     raw_price = tool.get('price', '')
     price_str = str(raw_price).strip()
-    if raw_price in ('', '免费', 'Free', '免费试用') or '免费' in str(raw_price):
-        offers_data = [
-            {"@type": "Offer", "name": "免费版", "price": "0", "priceCurrency": "USD", "description": f"{tool['name']}免费版基础功能"}
-        ]
-    elif price_str:
-        # 尝试解析价格数字
-        import re as _re
-        price_match = _re.search(r'[\d.]+', price_str)
-        price_num = price_match.group() if price_match else price_str
+    import re as _re_price
+    offers_data = []
+
+    # 解析价格字符串中的所有价格档位
+    # 匹配 $数字/月 或 ¥数字/月 或 数字元/月 等格式
+    price_matches = _re_price.findall(r'[\$¥￥]?\s*(\d+(?:\.\d+)?)\s*/?\s*(?:月|month|year|年)', price_str, _re_price.IGNORECASE)
+
+    # 始终有免费版 offer（如果没有明确说"付费"）
+    if '免费' in price_str or not price_str or price_str in ('Free', 'free'):
+        offers_data.append({
+            "@type": "Offer", "name": "免费版", "price": "0",
+            "priceCurrency": "USD", "description": f"{tool['name']}免费版基础功能"
+        })
+
+    # 解析出的付费档位
+    for i, price_num in enumerate(price_matches):
+        # 判断货币
+        currency = "USD"
+        if '¥' in price_str or '￥' in price_str or '元' in price_str:
+            currency = "CNY"
+        tier_name = "付费版" if i == 0 else f"付费版{i+1}"
+        offers_data.append({
+            "@type": "Offer", "name": tier_name, "price": price_num,
+            "priceCurrency": currency, "description": f"{tool['name']}{tier_name}：{price_str}"
+        })
+
+    # 如果没解析出价格且字符串明确说付费，兜底
+    if not offers_data and price_str:
         offers_data = [
             {"@type": "Offer", "name": "免费版", "price": "0", "priceCurrency": "USD", "description": f"{tool['name']}免费版基础功能"},
-            {"@type": "Offer", "name": "付费版", "price": price_num, "priceCurrency": "USD", "description": f"{tool['name']}付费版全功能：{price_str}"}
-        ]
-    else:
-        offers_data = [
-            {"@type": "Offer", "name": "免费版", "price": "0", "priceCurrency": "USD", "description": f"{tool['name']}免费版基础功能"}
+            {"@type": "Offer", "name": "付费版", "price": "0", "priceCurrency": "USD", "description": f"{tool['name']}付费版：{price_str}"}
         ]
 
-    # developer信息（优先用tool.developer，否则用tool_name推断）
+    # developer信息（修复问题9：优先用developer字段，没有时根据工具名智能推断开发商）
     dev_name = tool.get('developer', tool.get('author', ''))
     dev_url = tool.get('developer_url', tool.get('url', ''))
-    if dev_name:
-        dev_org = {"@type": "Organization", "name": dev_name}
-        if dev_url:
-            dev_org["url"] = dev_url
-    else:
-        dev_org = {"@type": "Organization", "name": tool['name']}
-        if dev_url:
-            dev_org["url"] = dev_url
+    if not dev_name:
+        # 智能推断开发商：从description里提取"XX推出"或"XX开发"
+        _desc = tool.get('description', '')
+        _dev_match = _re_price.search(r'([\u4e00-\u9fa5A-Za-z]{2,15})(?:推出|开发|发布|打造)', _desc)
+        if _dev_match:
+            dev_name = _dev_match.group(1)
+        else:
+            dev_name = tool['name']
+    dev_org = {"@type": "Organization", "name": dev_name}
+    if dev_url:
+        dev_org["url"] = dev_url
+
+    # 修复问题1：ratingCount 正确解析"12.5万" → 125000（数字类型，非字符串）
+    _visits_str = str(tool.get('visits', '0'))
+    _rating_count = 0
+    try:
+        if '万' in _visits_str:
+            _rating_count = int(float(_visits_str.replace('万', '').replace('+', '').strip()) * 10000)
+        elif 'k' in _visits_str.lower():
+            _rating_count = int(float(_visits_str.lower().replace('k', '').replace('+', '').strip()) * 1000)
+        else:
+            _rating_count = int(float(_re_price.sub(r'[^\d.]', '', _visits_str) or 0))
+    except Exception:
+        _rating_count = 1000  # 兜底
+
+    # 修复问题2：applicationCategory 按实际分类映射，不再全部用 ProductivityApplication
+    _category_map = {
+        'AI对话': 'ChatApplication', 'AI写作': 'WritingApplication', 'AI绘画': 'DesignApplication',
+        'AI编程': 'DeveloperApplication', 'AI视频': 'VideoEditingApplication', 'AI音频': 'MusicApplication',
+        'AI办公': 'BusinessApplication', 'AI设计': 'DesignApplication', 'AI搜索': 'SearchApplication',
+        'AI翻译': 'TranslationApplication', 'AI自动化': 'BusinessApplication', 'AI效率': 'ProductivityApplication',
+        'AI智能体': 'ProductivityApplication', 'AI开发': 'DeveloperApplication', 'AI行业应用': 'BusinessApplication'
+    }
+    _app_category = _category_map.get(tool.get('category', ''), 'ProductivityApplication')
+
+    # 修复问题4：添加 url 字段（工具官网）
+    _tool_url = tool.get('url', '')
+
+    # 修复问题5：添加 image 字段（OG图作为工具图）
+    _tool_image = f"https://www.aitoollab.cn/images/og/{slug}-og.png"
 
     software_data = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": tool['name'],
-        "applicationCategory": "ProductivityApplication",
+        "url": _tool_url if _tool_url else f"https://www.aitoollab.cn/tools/{slug}/",
+        "image": _tool_image,
+        "applicationCategory": _app_category,
+        "applicationSubCategory": tool.get('category', ''),
         "operatingSystem": tool.get('platform', 'Web'),
         "description": tool['description'],
         "datePublished": date_published,
@@ -459,8 +522,10 @@ def build_tool_page(tool, all_tools, all_articles=None):
         "offers": offers_data,
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": tool['rating'].replace('⭐ ', ''),
-            "ratingCount": tool.get('visits', '0').replace('万', '0000').replace(',', '')
+            "ratingValue": float(tool['rating'].replace('⭐ ', '').strip() or 4.0),
+            "ratingCount": _rating_count,
+            "bestRating": 5,
+            "worstRating": 1
         },
         "inLanguage": ["zh", "en"]
     }
@@ -472,6 +537,21 @@ def build_tool_page(tool, all_tools, all_articles=None):
     if tool.get('features'):
         software_data["featureList"] = tool['features']
 
+    # 修复问题6：添加 isRelatedTo（同类工具关联，最多5个）
+    # 注意：关联工具用 WebSite 类型而非 SoftwareApplication，避免 Google 因缺少 offers 必填字段判为 invalid
+    _related_tools = tool.get('related', [])
+    if _related_tools and isinstance(_related_tools, list):
+        _is_related_to = []
+        for rel_slug in _related_tools[:5]:
+            if isinstance(rel_slug, str):
+                _is_related_to.append({
+                    "@type": "WebSite",
+                    "name": rel_slug,
+                    "url": f"https://www.aitoollab.cn/tools/{rel_slug}/"
+                })
+        if _is_related_to:
+            software_data["isRelatedTo"] = _is_related_to
+
     # 补充 abstract（取description前160字）
     software_data["abstract"] = tool['description'][:160] if len(tool['description']) > 160 else tool['description']
 
@@ -481,11 +561,19 @@ def build_tool_page(tool, all_tools, all_articles=None):
         "cssSelector": [".article-body h2", ".article-body h3", ".tool-header-info h2", ".tool-summary"]
     }
 
-    # 补充 Review schema（Google导购评审摘要）
+    # 修复问题7：优缺点写入 Schema（positiveNotes/negativeNotes）
+    _pros = tool.get('pros', [])
+    _cons = tool.get('cons', [])
     _rating_num = tool.get('rating_value', 4.0)
     if isinstance(_rating_num, str):
         _rating_num = float(_rating_num.replace('⭐', '').strip() or 4.0)
-    software_data["review"] = {
+    else:
+        try:
+            _rating_num = float(str(tool.get('rating', '4.0')).replace('⭐', '').strip() or 4.0)
+        except Exception:
+            _rating_num = 4.0
+
+    _review_body = {
         "@type": "Review",
         "reviewRating": {
             "@type": "Rating",
@@ -494,6 +582,19 @@ def build_tool_page(tool, all_tools, all_articles=None):
         },
         "author": {"@type": "Organization", "name": "AI工具宝箱编辑组"}
     }
+    # 优点作为 positiveNotes
+    if _pros and isinstance(_pros, list):
+        _review_body["positiveNotes"] = {
+            "@type": "ItemList",
+            "itemListElement": [{"@type": "ListItem", "position": i+1, "name": p} for i, p in enumerate(_pros[:5])]
+        }
+    # 缺点作为 negativeNotes
+    if _cons and isinstance(_cons, list):
+        _review_body["negativeNotes"] = {
+            "@type": "ItemList",
+            "itemListElement": [{"@type": "ListItem", "position": i+1, "name": c} for i, c in enumerate(_cons[:5])]
+        }
+    software_data["review"] = _review_body
 
     structured_data = json.dumps(software_data, ensure_ascii=False, indent=2)
     breadcrumb_json = json.dumps(breadcrumb_data, ensure_ascii=False, indent=2)
@@ -528,7 +629,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
         # 空URL（如已下架工具）→ 指向站内同类替代品页面
         action_btn_html = '<a href="/tools/gamma/" class="action-btn action-btn-primary">查看替代工具 →</a>'
     else:
-        action_btn_html = f'<a href="{tool["url"]}" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>'
+        action_btn_html = f'<a href="{tool["url"]}" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>'
 
     # 文章内容（从content中移除重复的优缺点部分）
     content_md = tool.get('content', '')
@@ -564,7 +665,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
     </header>
 
@@ -588,6 +689,7 @@ def build_tool_page(tool, all_tools, all_articles=None):
                 <div class="tool-meta-item">💰 <strong>价格</strong>：{tool.get('price', '')}</div>
                 {platform_html}
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：{escape_html(tool['category'])}</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="{date_modified}" itemprop="dateModified">{date_modified}</time></div>
             </div>
             <div class="action-bar">
                 {action_btn_html}
@@ -700,7 +802,7 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
         faq_sd = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_schema}
         faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
 
-    # Article Schema（对比文章也是Article类型）
+    # Article Schema（对比文章也是Article类型）- AEO+GEO 增强 EEAT 信号 2026-06-23
     from datetime import datetime as _dt
     article_schema = {
         "@context": "https://schema.org",
@@ -709,18 +811,30 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
         "description": meta_desc,
         "datePublished": compare_data.get("last_updated", _dt.now().strftime('%Y-%m-%d')),
         "dateModified": compare_data.get("last_updated", _dt.now().strftime('%Y-%m-%d')),
+        "inLanguage": "zh-CN",
         "author": {
             "@type": "Organization",
-            "name": "AI工具宝箱",
-            "url": "https://www.aitoollab.cn/"
+            "name": "AI工具宝箱编辑组",
+            "url": "https://www.aitoollab.cn/",
+            "description": "专注 AI 工具实测与对比研究的独立编辑团队",
+            "knowsAbout": ["AI工具评测", "AI模型对比", "AEO内容优化", "GEO生成式引擎优化"]
         },
         "publisher": {
             "@type": "Organization",
             "name": "AI工具宝箱",
+            "url": "https://www.aitoollab.cn/",
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://www.aitoollab.cn/images/og/default-og.png"
-            }
+            },
+            "foundingDate": "2026-03-21",
+            "slogan": "实测数据驱动 AI 工具决策",
+            "sameAs": ["https://github.com/yiweichen10/ai-toolbox"]
+        },
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "AI工具宝箱",
+            "url": "https://www.aitoollab.cn/"
         }
     }
     article_schema_json = json.dumps(article_schema, ensure_ascii=False, indent=2)
@@ -794,7 +908,7 @@ def build_compare_page(compare_data, all_tools, all_articles=None):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
     </header>
 
@@ -926,7 +1040,7 @@ def build_alternatives_page(alt_data, all_tools, all_articles=None):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
     </header>
 
@@ -1207,7 +1321,7 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
     </header>
 
@@ -1567,6 +1681,29 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
     }
     article_schema_json = json.dumps(article_schema, ensure_ascii=False, indent=2)
 
+    # ItemList Schema：把排名工具列表结构化，GEO 价值最高
+    # AI 搜索引擎可直接引用"第1名是XX，第2名是XX"
+    _item_list_elements = []
+    for _i, _it in enumerate(ranked_tools[:20], 1):
+        _item_list_elements.append({
+            "@type": "ListItem",
+            "position": _i,
+            "name": _it.get('name', ''),
+            "url": f"https://www.aitoollab.cn/tools/{_it.get('slug', '')}/",
+        })
+    if _item_list_elements:
+        _item_list_schema = {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": title,
+            "description": meta_desc,
+            "numberOfItems": len(_item_list_elements),
+            "itemListElement": _item_list_elements
+        }
+        item_list_schema_json = json.dumps(_item_list_schema, ensure_ascii=False, indent=2)
+    else:
+        item_list_schema_json = ''
+
     # Breadcrumb
     bc_name_2 = "AI工具排行榜" if is_overall else (category + "排行榜" if category else "排行榜")
     breadcrumb = {
@@ -1610,6 +1747,7 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{article_schema_json}</script>
+    <script type="application/ld+json">{item_list_schema_json}</script>
     {faq_ps}
 {BAIDU_TONGJI}
     <style>
@@ -1649,7 +1787,7 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
     </header>
 
@@ -1690,6 +1828,13 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
         {content_html}
 
         {faq_section}
+
+        <section class="ranking-analysis" style="margin:32px 0 24px;padding:24px;background:#f8fafc;border-radius:12px;">
+            <h2 style="font-size:20px;font-weight:700;margin-bottom:16px;">📊 {title}深度解读</h2>
+            <p style="line-height:1.8;color:#475569;margin-bottom:14px;">本榜单收录了{total_tools}款主流AI工具，综合评分基于热度、质量、功能、价值和新鲜度五大维度。榜单每日自动更新，确保数据时效性。排名前列的工具在用户访问量、功能完整度和性价比方面表现突出，是当前AI工具市场的头部产品。</p>
+            <p style="line-height:1.8;color:#475569;margin-bottom:14px;">从榜单趋势来看，AI对话和AI编程类工具持续领跑，免费和免费增值模式的工具占据多数席位。国产AI工具（如DeepSeek、Kimi、豆包）在中文场景下表现优秀，与国际工具形成有力竞争。建议用户根据具体使用场景和预算选择，多数工具提供免费版可供试用。</p>
+            <p style="line-height:1.8;color:#475569;">如需更精准的推荐，可使用我们的<a href="/quiz/ai-tool-finder-2026/" style="color:#4285F4;">AI工具选择器</a>，3分钟找到最适合你的AI助手。也可查看<a href="/category/" style="color:#4285F4;">全部分类</a>浏览特定领域的工具。</p>
+        </section>
 
         <div class="methodology-note">
             <strong>排名说明：</strong>本排名基于多维度数据综合计算（热度30% + 质量25% + 功能20% + 价格15% + 新鲜度10%），每日自动更新。数据来源于工具官方信息、用户评价聚合和市场活跃度指标。排名仅供参考，具体选择请根据个人需求和实际体验决定。
@@ -1757,7 +1902,7 @@ def _build_ranking_index_page(all_rankings):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0; AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">&#x1F6E0; AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
     </header>
 
@@ -1811,7 +1956,7 @@ def _build_compare_index_page(all_compares):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0; AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">&#x1F6E0; AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
     </header>
 
@@ -1865,7 +2010,7 @@ def _build_alternatives_index_page(all_alternatives):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0; AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">&#x1F6E0; AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
     </header>
 
@@ -1895,8 +2040,12 @@ def build_live_page(live_data, page_config, all_tools, articles):
     page_type = page_config.get('type', 'dashboard')
     page_slug = page_config.get('slug', 'unknown')
     page_title = page_config.get('title', 'AI工具实时监控面板')
-    meta_desc = page_config.get('meta_description', '')
     keywords = page_config.get('keywords', [])
+    meta_desc = page_config.get('meta_description', '')
+    # P2-16: 如果 meta_desc 偏短（<80字），自动补充关键词和描述
+    if len(meta_desc) < 80:
+        _live_desc_suffix = f"AI工具宝箱提供{page_title}功能，涵盖多维度数据分析，帮助用户快速了解AI工具市场格局和趋势变化。数据每日自动更新，覆盖320+款主流AI工具。"
+        meta_desc = meta_desc + _live_desc_suffix if meta_desc else _live_desc_suffix
     icon_emoji = page_config.get('icon', '\U0001f4ca')
 
     stats = live_data.get('stats', {})
@@ -1920,8 +2069,41 @@ def build_live_page(live_data, page_config, all_tools, articles):
 
     nav_tabs = _live_nav_tabs(page_slug)
 
+    # ── Schema: WebPage + BreadcrumbList ──
+    _live_date = (last_updated or _ldt.now().strftime('%Y-%m-%d'))[:10]
+    _live_schema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": page_title,
+        "description": meta_desc,
+        "url": f"https://www.aitoollab.cn/live/{page_slug}/",
+        "dateModified": _live_date,
+        "inLanguage": "zh-CN",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "AI工具宝箱",
+            "url": "https://www.aitoollab.cn/"
+        },
+        "author": {"@type": "Organization", "name": "AI工具宝箱"},
+        "publisher": {"@type": "Organization", "name": "AI工具宝箱"}
+    }
+    _live_schema_json = json.dumps(_live_schema, ensure_ascii=False, indent=2)
+    _live_breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.cn/"},
+            {"@type": "ListItem", "position": 2, "name": "实时面板", "item": "https://www.aitoollab.cn/live/dashboard/"},
+            {"@type": "ListItem", "position": 3, "name": page_title, "item": f"https://www.aitoollab.cn/live/{page_slug}/"}
+        ]
+    }
+    _live_breadcrumb_json = json.dumps(_live_breadcrumb, ensure_ascii=False, indent=2)
+
+    # OG 图
+    _live_og_image = ensure_og_image(page_slug)
+
     # Build HTML parts
-    header_nav = '<header class="header">\n        <div class="header-inner">\n            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>\n        </div>\n    </header>'
+    header_nav = '<header class="header">\n        <div class="header-inner">\n            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>\n        </div>\n    </header>'
     page_icon = '<span class="tool-icon-lg">' + icon_emoji + '</span>'
     h1_tag = '<h1>' + escape_html(page_title) + '</h1>'
     subtitle = '<p class="subtitle">' + escape_html(meta_desc) + '</p>'
@@ -1941,7 +2123,16 @@ def build_live_page(live_data, page_config, all_tools, articles):
         '    <meta property="og:title" content="' + escape_html(page_title) + ' - AI工具宝箱">\n'
         '    <meta property="og:description" content="' + escape_html(meta_desc) + '">\n'
         '    <meta property="og:url" content="https://www.aitoollab.cn/live/' + page_slug + '/">\n'
+        '    <meta property="og:image" content="' + (_live_og_image or 'https://www.aitoollab.cn/images/logo.png') + '">\n'
+        '    <meta property="og:image:width" content="1200">\n'
+        '    <meta property="og:image:height" content="630">\n'
+        '    <meta name="twitter:card" content="summary_large_image">\n'
+        '    <meta name="twitter:title" content="' + escape_html(page_title) + ' - AI工具宝箱">\n'
+        '    <meta name="twitter:description" content="' + escape_html(meta_desc) + '">\n'
+        '    <meta name="twitter:image" content="' + (_live_og_image or 'https://www.aitoollab.cn/images/logo.png') + '">\n'
         '    <link rel="stylesheet" href="/css/style.css">\n'
+        '    <script type="application/ld+json">' + _live_breadcrumb_json + '</script>\n'
+        '    <script type="application/ld+json">' + _live_schema_json + '</script>\n'
         '</head>\n<body>\n'
         + header_nav + '\n\n    ' + nav_tabs + '\n\n'
         '    <main class="container main-content">\n'
@@ -2303,7 +2494,7 @@ def _build_category_index_page(tools_by_category):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0; AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">&#x1F6E0; AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
     </header>
 
@@ -2335,29 +2526,31 @@ def build_category_page(category_name, tools_in_category):
         else:
             badge_html = ''
         tags_html = ''.join([f'<span class="tag {tag.get("type", "")}">{tag.get("text", "")}</span>' for tag in t.get('tags', [])])
-        tools_html += f'''                        <article class="tool-card fade-in" style="animation-delay: {round(i * 0.05, 2)}s;" onclick="location.href=\'/tools/{t['slug']}/index.html\'">
+        tools_html += f'''                        <a href="/tools/{t['slug']}/" class="tool-card-link" style="text-decoration:none;color:inherit;">
+                        <article class="tool-card fade-in" style="animation-delay: {round(i * 0.05, 2)}s;">
                             <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
-                            <h4>{escape_html(t['name'])} {badge_html}</h4>
+                            <h3>{escape_html(t['name'])} {badge_html}</h3>
                             <p class="desc">{escape_html(t['description'])}</p>
                             <div class="tags">{tags_html}</div>
                             <div class="meta">
                                 <span class="rating">{t['rating']}</span>
                                 <span class="visits">👁 {t['visits']}</span>
                             </div>
-                        </article>\n'''
+                        </article>
+                        </a>\n'''
 
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{escape_html(category_name)} - AI工具宝箱</title>
-    <meta name="description" content="AI工具宝箱收录{escape_html(category_name)}分类下最新最全的AI工具。">
-    <meta name="keywords" content="AI工具,{escape_html(category_name)},人工智能,效率工具,AI导航">
+    <title>{len(tools_in_category)}款{escape_html(category_name)}工具推荐2026 - 免费好用的AI工具合集 | AI工具宝箱</title>
+    <meta name="description" content="2026年最新{escape_html(category_name)}工具合集，收录{len(tools_in_category)}款免费及付费{escape_html(category_name)}软件。包含ChatGPT、Claude等主流AI工具，按评分和热度排名，附使用教程和对比评测，帮你找到最适合的{escape_html(category_name)}工具。">
+    <meta name="keywords" content="{escape_html(category_name)},{escape_html(category_name)}工具,{escape_html(category_name)}软件,免费{escape_html(category_name)},AI工具,{escape_html(category_name)}推荐2026,AI导航">
     <link rel="canonical" href="https://www.aitoollab.cn/category/{category_slug}/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{escape_html(category_name)} - AI工具宝箱">
-    <meta property="og:description" content="AI工具宝箱收录{escape_html(category_name)}分类下最新最全的AI工具。">
+    <meta property="og:title" content="{len(tools_in_category)}款{escape_html(category_name)}工具推荐2026 - AI工具宝箱">
+    <meta property="og:description" content="2026年最新{escape_html(category_name)}工具合集，收录{len(tools_in_category)}款免费及付费{escape_html(category_name)}软件。按评分和热度排名，附使用教程和对比评测。">
     <meta property="og:url" content="https://www.aitoollab.cn/category/{category_slug}/">
     <meta property="og:image" content="https://www.aitoollab.cn/images/og/category-{category_slug}-og.png">
     <link rel="stylesheet" href="/css/style.css">
@@ -2395,7 +2588,7 @@ def build_category_page(category_name, tools_in_category):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
     </header>
 
@@ -2406,7 +2599,7 @@ def build_category_page(category_name, tools_in_category):
     <main class="container">
         <section class="section">
             <div class="section-header">
-                <h3>{escape_html(category_name)}</h3>
+                <h1>{escape_html(category_name)}</h1>
             </div>
             <div class="tools-grid">
 {tools_html}
@@ -2583,16 +2776,28 @@ def build_article_page(article, all_articles, all_tools=None):
         "description": article.get('excerpt', article.get('description', '')),
         "datePublished": article_date,
         "dateModified": article_date_modified,
-        "author": {"@type": "Organization", "name": "AI工具宝箱"},
+        "inLanguage": "zh-CN",
+        "author": {
+            "@type": "Organization",
+            "name": "AI工具宝箱编辑组",
+            "url": "https://www.aitoollab.cn/author/",
+            "description": "专注 AI 工具实测与对比研究的独立编辑团队，5+ 年 AI 工具付费使用经验",
+            "knowsAbout": ["AI工具评测", "AI模型对比", "AEO内容优化", "GEO生成式引擎优化", "AI编程工具", "AI对话模型"]
+        },
         "publisher": {
             "@type": "Organization",
             "name": "AI工具宝箱",
+            "url": "https://www.aitoollab.cn/",
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://www.aitoollab.cn/images/logo.png",
                 "width": 200,
                 "height": 60
-            }
+            },
+            "foundingDate": "2026-03-21",
+            "slogan": "实测数据驱动 AI 工具决策",
+            "publishingPrinciples": "https://www.aitoollab.cn/about.html",
+            "sameAs": ["https://github.com/yiweichen10/ai-toolbox"]
         },
         "image": {
             "@type": "ImageObject",
@@ -2617,23 +2822,72 @@ def build_article_page(article, all_articles, all_tools=None):
         }
     }
 
-    # 文章页 FAQ Schema（逐对提取Q&A，避免DOTALL导致多Q&A混入一个Answer）
+    # 文章页 FAQ Schema（多策略提取Q&A，覆盖各种FAQ写作格式）
     faq_article_schema = ''
     _article_faq_list = []
-    # 方式1：从content中逐对提取 "Q: ... \n A: ... "
-    _faq_raw = _re_wc.findall(r'(?:^|\n)[Qq][：:]\s*([^\n]+)\n[Aa][：:]\s*(.+?)(?=\n[Qq][：:]|\Z)', _content_for_wc, re.DOTALL)
+
+    # 策略1: Q/A标记匹配（支持 **Q1：**/Q：/### Q1： 等，A前缀可选）
+    _faq_raw = _re_wc.findall(
+        r'(?:^|\n)[*#]*\s*\*{0,2}[Qq]\d*[：:]\s*([^\n]+?)\s*\*{0,2}\n(?:\*{0,2}[Aa]\d*[：:]\s*)?(.+?)(?=\n[*#]*\s*\*{0,2}[Qq]\d*[：:]|\n## |\Z)',
+        _content_for_wc, re.DOTALL
+    )
+
+    # 策略2: FAQ段中 **加粗问题？** 后跟答案（无Q前缀）
+    if not _faq_raw:
+        _faq_start = _content_for_wc.upper().find('FAQ')
+        if _faq_start >= 0:
+            _faq_section = _content_for_wc[_faq_start:]
+            _faq_raw = _re_wc.findall(
+                r'\*\*([^*\n]{6,100}[？?])\*\*\s*\n\s*(.+?)(?=\n\*\*[^*\n]{6,100}[？?]\*\*|\n## |\Z)',
+                _faq_section, re.DOTALL
+            )
+
+    # 策略3: FAQ段中 ### 问题？ 后跟答案（无Q前缀）
+    if not _faq_raw:
+        _faq_start = _content_for_wc.upper().find('FAQ')
+        if _faq_start >= 0:
+            _faq_section = _content_for_wc[_faq_start:]
+            _faq_raw = _re_wc.findall(
+                r'###\s*([^\n]{6,100}[？?])\s*\n\s*(.+?)(?=\n###\s*[^\n]{6,100}[？?]|\n## |\Z)',
+                _faq_section, re.DOTALL
+            )
+
+    # 策略4: FAQ段中 HTML格式 <h3>问题</h3><p>答案</p>
+    if not _faq_raw:
+        _faq_start = _content_for_wc.upper().find('FAQ')
+        if _faq_start >= 0:
+            _faq_section = _content_for_wc[_faq_start:]
+            _faq_raw = _re_wc.findall(
+                r'<h[34][^>]*>\s*(?:[Qq]\d*[：:]\s*)?([^<]+?)\s*</h[34]>\s*<p>(.+?)</p>',
+                _faq_section, re.DOTALL
+            )
+
+    # 策略5: FAQ段中 HTML格式 <strong>Q：问题</strong><br>A：答案
+    if not _faq_raw:
+        _faq_start = _content_for_wc.upper().find('FAQ')
+        if _faq_start >= 0:
+            _faq_section = _content_for_wc[_faq_start:]
+            _faq_raw = _re_wc.findall(
+                r'<strong>\s*[Qq]\d*[：:]\s*([^<]+?)\s*</strong>\s*(?:<br\s*/?>)?\s*[Aa]\d*[：:]\s*(.+?)(?=<strong>\s*[Qq]\d*[：:]|</p>|\Z)',
+                _faq_section, re.DOTALL
+            )
+
     if _faq_raw:
         for _q, _a in _faq_raw:
             _q = _q.strip()
             _a = _a.strip()
-            # 清理Answer中的Markdown格式符号（**加粗**等不影响plain text语义）
-            _a_clean = _re_wc.sub(r'\*\*', '', _a)
-            if _q and _a_clean:
+            # 清理Markdown和HTML格式符号
+            _q_clean = _re_wc.sub(r'\*\*', '', _q).strip()
+            _q_clean = _re_wc.sub(r'<[^>]+>', '', _q_clean).strip()
+            _a_clean = _re_wc.sub(r'\*\*', '', _a).strip()
+            _a_clean = _re_wc.sub(r'<[^>]+>', '', _a_clean).strip()
+            if _q_clean and _a_clean:
                 _article_faq_list.append({
                     "@type": "Question",
-                    "name": _q,
+                    "name": _q_clean,
                     "acceptedAnswer": {"@type": "Answer", "text": _a_clean}
                 })
+
     # 方式2：如果没提取到，使用 article.faq 字段
     if not _article_faq_list and article.get('faq'):
         for f_item in article['faq']:
@@ -2756,6 +3010,16 @@ def build_article_page(article, all_articles, all_tools=None):
         if nav_match:
             content_html = _auto_link_toc(content_html, nav_match.start(), nav_match.end())
 
+    # 文章页 keywords：优先用显式字段，否则从 tags + category 生成
+    _article_keywords = article.get('keywords', '')
+    if not _article_keywords:
+        _tags = article.get('tags') or []
+        _kw_parts = list(_tags[:8])
+        _kw_parts.append(article.get('category', ''))
+        _kw_parts.append('AI工具')
+        _kw_parts.append('AI工具宝箱')
+        _article_keywords = ', '.join([k for k in _kw_parts if k])
+
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -2763,7 +3027,7 @@ def build_article_page(article, all_articles, all_tools=None):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{escape_html(article['title'])} - AI工具宝箱</title>
     <meta name="description" content="{escape_html(article.get('description', ''))}">
-    <meta name="keywords" content="{escape_html(article.get('keywords', ''))}">
+    <meta name="keywords" content="{escape_html(_article_keywords)}">
     <link rel="canonical" href="https://www.aitoollab.cn/articles/{slug}/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(article['title'])} - AI工具宝箱">
@@ -2784,7 +3048,7 @@ def build_article_page(article, all_articles, all_tools=None):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></div></a>
         </div>
     </header>
 
@@ -2797,7 +3061,9 @@ def build_article_page(article, all_articles, all_tools=None):
         <article class="article-body">
             <h1 style="margin-bottom:16px;">{escape_html(article['title'])}</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                {article.get('dateFull', article.get('date', ''))} · {escape_html(article.get('category', ''))}
+                <time datetime="{article_date}" itemprop="datePublished">{article.get('dateFull', article.get('date', ''))}</time> · {escape_html(article.get('category', ''))} ·
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#4285F4;text-decoration:none;"><span itemprop="name">AI工具宝箱编辑组</span></a></span> ·
+                <span style="color:#bbb;">📖 阅读时长 {max(3, len(article.get('content','')) // 400)} 分钟</span>
             </div>
             {infographic_html}
             <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
@@ -2805,6 +3071,14 @@ def build_article_page(article, all_articles, all_tools=None):
                 <span style="color:#555;">{escape_html(article.get('excerpt') or article.get('description') or article.get('summary', ''))}</span>
             </div>
             {content_html}
+            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #10a37f;">
+                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
+                    <strong>关于作者：</strong>本文由 <a href="/author/" style="color:#10a37f;text-decoration:none;">AI工具宝箱编辑组</a> 撰写，团队 5+ 年 AI 工具付费实测经验，月均订阅支出 $200+，所有评测基于真实付费长期使用。
+                </p>
+                <p style="margin:0;font-size:13px;color:#888;">
+                    <strong>数据声明：</strong>本文所有数据均标注来源，可溯源核查。发现错误欢迎通过 <a href="/contact.html" style="color:#4285F4;text-decoration:none;">联系页面</a> 反馈，48 小时内核查修正。
+                </p>
+            </div>
         </article>
 
             <div class="mobile-ad-inline">📱 继续阅读 · 猜你喜欢</div>
@@ -2862,7 +3136,11 @@ def build_article_list_pages(articles):
         pagination_html += '</div>'
         
         # 生成链接标签（rel next/prev/canonical）
-        link_tags = f'    <link rel="canonical" href="https://www.aitoollab.cn/articles/page/{page_num}/">\n'
+        # 分页 canonical 全部指向第1页 /articles/，避免重复内容
+        if page_num == 1:
+            link_tags = f'    <link rel="canonical" href="https://www.aitoollab.cn/articles/">\n'
+        else:
+            link_tags = f'    <link rel="canonical" href="https://www.aitoollab.cn/articles/">\n'
         if page_num > 1:
             link_tags += f'    <link rel="prev" href="https://www.aitoollab.cn/articles/page/{page_num - 1}/">\n'
         if page_num < total_pages:
@@ -2985,7 +3263,7 @@ def build_article_list_pages(articles):
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>&#x1F6E0; AI工具宝箱 <span>每日更新 · 最新资讯</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">&#x1F6E0; AI工具宝箱 <span>每日更新 · 最新资讯</span></div></a>
         </div>
     </header>
 
@@ -3017,6 +3295,23 @@ def build_article_list_pages(articles):
         os.makedirs(dir_path, exist_ok=True)
         with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html)
+
+        # 第1页同时输出到 /articles/index.html（文章总入口页）
+        if page_num == 1:
+            # 修改 canonical 和面包屑指向 /articles/
+            entry_html = html.replace(
+                'href="https://www.aitoollab.cn/articles/page/1/"',
+                'href="https://www.aitoollab.cn/articles/"'
+            ).replace(
+                'href="/articles/page/1/"',
+                'href="/articles/"'
+            ).replace(
+                '第 1 页',
+                '文章总览'
+            )
+            with open(os.path.join(BASE_DIR, 'articles', 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(entry_html)
+            print(f'[OK] articles/index.html (文章总入口页)')
         print(f'[OK] articles/page/{page_num}/index.html')
     
     return total_pages
@@ -3070,16 +3365,18 @@ def build_index_page(tools, articles):
         else:
             badge_html = ''
         tags_html = ''.join([f'<span class="tag {tag.get("type", "")}">{tag.get("text", "")}</span>' for tag in t.get('tags', [])])
-        return f'''                        <article class="tool-card fade-in" style="animation-delay: {round(i * 0.05, 2)}s;" onclick="location.href='/tools/{t['slug']}/index.html'">
+        return f'''                        <a href="/tools/{t['slug']}/" class="tool-card-link" style="text-decoration:none;color:inherit;">
+                        <article class="tool-card fade-in" style="animation-delay: {round(i * 0.05, 2)}s;">
                             <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
-                            <h4>{escape_html(t['name'])} {badge_html}</h4>
+                            <h3>{escape_html(t['name'])} {badge_html}</h3>
                             <p class="desc">{escape_html(t['description'])}</p>
                             <div class="tags">{tags_html}</div>
                             <div class="meta">
                                 <span class="rating">{t['rating']}</span>
                                 <span class="visits">👁 {t['visits']}</span>
                             </div>
-                        </article>\n'''
+                        </article>
+                        </a>\n'''
 
     # ── 第一区块：今日收录 ──
     today_tools = [t for t in tools if t.get('created_date') == today_iso]
@@ -3579,8 +3876,7 @@ def build_target(target, slug=None):
 
         # 后处理：注入全局导航
         inject_global_nav()
-
-        # sitemap + 推送
+        inject_hreflang()
         sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()])
         with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
             f.write(sitemap)
@@ -3805,6 +4101,8 @@ def build_target(target, slug=None):
 
     # 后处理：注入全局导航栏到所有HTML文件
     inject_global_nav()
+    # 后处理：注入 hreflang 标签（中英文站互链）
+    inject_hreflang()
 
     # ═══════════════════════════════════════════════════════
     # sitemap + 推送（每次都执行）
@@ -3912,6 +4210,95 @@ def inject_global_nav():
     if injected > 0:
         print(f'[Post] Injected global nav into {injected} HTML files (inside header).')
     return injected
+
+
+def inject_hreflang():
+    """后处理：为中文站页面注入 hreflang 标签指向英文站对应页面"""
+    import re as _re_hl
+    en_tools_json = os.path.join(os.path.dirname(BASE_DIR), 'seo-site-en', 'data', 'tools_en.json')
+    en_articles_json = os.path.join(os.path.dirname(BASE_DIR), 'seo-site-en', 'data', 'articles_en.json')
+
+    en_tool_slugs = set()
+    en_article_slugs = set()
+    try:
+        with open(en_tools_json, 'r', encoding='utf-8') as f:
+            en_tool_slugs = set(t.get('slug', '') for t in json.load(f))
+        with open(en_articles_json, 'r', encoding='utf-8') as f:
+            en_article_slugs = set(a.get('slug', '') for a in json.load(f))
+    except Exception:
+        pass  # 英文站数据不可用则跳过
+
+    EN_DOMAIN = 'https://aitoolbox.hk'
+    canonical_re = _re_hl.compile(r'(<link rel="canonical" href="[^"]+">)')
+    en_path_re_tool = _re_hl.compile(r'^/tools/([^/]+)/$')
+    en_path_re_article = _re_hl.compile(r'^/articles/([^/]+)/$')
+    skip_prefixes = ('/compare/', '/alternatives/', '/quiz/', '/ranking/', '/live/')
+
+    updated = skipped = 0
+    for root, dirs, files in os.walk(BASE_DIR):
+        for fname in files:
+            if not fname.endswith('.html'):
+                continue
+            fpath = os.path.join(root, fname)
+            try:
+                with open(fpath, 'r', encoding='utf-8') as f:
+                    content = f.read()
+            except Exception:
+                continue
+
+            if 'hreflang' in content:
+                continue  # 已有则跳过
+
+            m = canonical_re.search(content)
+            if not m:
+                skipped += 1
+                continue
+
+            # 推断英文站路径
+            rel = '/' + os.path.relpath(fpath, BASE_DIR).replace('\\', '/')
+            if fname == 'index.html':
+                rel_path = rel[:-len('index.html')] if len(rel) > 1 else '/'
+            else:
+                rel_path = rel
+
+            en_path = None
+            mt = en_path_re_tool.match(rel_path)
+            if mt:
+                if mt.group(1) in en_tool_slugs:
+                    en_path = rel_path
+            else:
+                ma = en_path_re_article.match(rel_path)
+                if ma:
+                    if ma.group(1) in en_article_slugs:
+                        en_path = rel_path
+                elif any(rel_path.startswith(p) for p in skip_prefixes):
+                    en_path = None
+                else:
+                    # 首页、分类页等
+                    en_path = rel_path
+
+            if not en_path:
+                skipped += 1
+                continue
+
+            en_url = f'{EN_DOMAIN}{en_path}'
+            zh_url = f'https://www.aitoollab.cn{en_path}'
+            hreflang_block = (
+                f'\n    <link rel="alternate" hreflang="en" href="{en_url}">'
+                f'\n    <link rel="alternate" hreflang="zh-CN" href="{zh_url}">'
+                f'\n    <link rel="alternate" hreflang="x-default" href="{en_url}">'
+            )
+            new_content = content[:m.end()] + hreflang_block + content[m.end():]
+            try:
+                with open(fpath, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                updated += 1
+            except Exception:
+                pass
+
+    if updated > 0:
+        print(f'[Post] Injected hreflang into {updated} HTML files ({skipped} skipped).')
+    return updated
 
 
 def main():

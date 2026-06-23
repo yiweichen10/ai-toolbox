@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "CosyVoice",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://cosyvoice.com",
+  "image": "https://www.aitoollab.cn/images/og/cosy-voice-og.png",
+  "applicationCategory": "MusicApplication",
+  "applicationSubCategory": "AI音频",
   "operatingSystem": "Web/移动端/API",
   "description": "CosyVoice是阿里通义千问团队开源的语音合成大模型，支持多语言、多音色、高自然度的语音生成。2026年推出企业版API，提供更稳定的并发服务和定制音色功能，广泛应用于有声内容创作、智能客服、视频配音等领域。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "500000"
+    "ratingValue": 4.5,
+    "ratingCount": 500000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -87,6 +92,33 @@
     "企业级API服务",
     "批量音频处理"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "eleven-labs",
+      "url": "https://www.aitoollab.cn/tools/eleven-labs/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "murf-ai",
+      "url": "https://www.aitoollab.cn/tools/murf-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "speechify",
+      "url": "https://www.aitoollab.cn/tools/speechify/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "resemble-ai",
+      "url": "https://www.aitoollab.cn/tools/resemble-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "cleanvoice",
+      "url": "https://www.aitoollab.cn/tools/cleanvoice/"
+    }
+  ],
   "abstract": "CosyVoice是阿里通义千问团队开源的语音合成大模型，支持多语言、多音色、高自然度的语音生成。2026年推出企业版API，提供更稳定的并发服务和定制音色功能，广泛应用于有声内容创作、智能客服、视频配音等领域。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -101,12 +133,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "多语言支持，覆盖中英日韩等10+语种"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "音色丰富，提供10+预设音色并支持克隆"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "开源可用，个人开发者可免费使用"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "自然度高，语音流畅接近真人"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持实时合成，响应速度快"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "企业版价格相对较高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "部分小语种发音仍有机器感"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "定制音色需要提供足量音频样本"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "国内网络访问可能不稳定"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "文档和教程相对较少"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +216,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +250,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版基础可用，企业版按调用量计费</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web/移动端/API</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI音频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://cosyvoice.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://cosyvoice.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

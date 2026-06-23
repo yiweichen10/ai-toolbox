@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Superset",
+  "url": "https://superset.apache.org/",
+  "image": "https://www.aitoollab.cn/images/og/apache-superset-og.png",
   "applicationCategory": "ProductivityApplication",
+  "applicationSubCategory": "AI效率",
   "operatingSystem": "Web浏览器（云端/自托管）",
   "description": "Apache Superset是Apache软件基金会旗下的开源数据可视化和商业智能平台，支持多种数据源连接、丰富的图表类型和自助式数据分析。2026年版本增强了AI驱动的自然语言查询功能，用户可以通过文字描述自动生成可视化图表，大幅降低数据分析门槛。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000"
+    "ratingValue": 4.5,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -89,6 +94,33 @@
     "主题自定义和品牌化",
     "支持嵌入第三方应用"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "tableau",
+      "url": "https://www.aitoollab.cn/tools/tableau/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "power-bi",
+      "url": "https://www.aitoollab.cn/tools/power-bi/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "metabase",
+      "url": "https://www.aitoollab.cn/tools/metabase/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "looker",
+      "url": "https://www.aitoollab.cn/tools/looker/"
+    },
+    {
+      "@type": "WebSite",
+      "name": " Preset",
+      "url": "https://www.aitoollab.cn/tools/ Preset/"
+    }
+  ],
   "abstract": "Apache Superset是Apache软件基金会旗下的开源数据可视化和商业智能平台，支持多种数据源连接、丰富的图表类型和自助式数据分析。2026年版本增强了AI驱动的自然语言查询功能，用户可以通过文字描述自动生成可视化图表，大幅降低数据分析门槛。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -103,12 +135,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "完全开源免费，无商业授权费用"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持50+种数据源包括SQL/NoSQL/云服务"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "丰富的可视化图表和仪表盘定制能力"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持SQL实验室进行高级数据探索"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "强大的用户权限管理和企业级安全保障"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "自托管版本需要技术团队维护"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "初学者学习曲线较陡峭"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "大规模数据实时查询性能有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "部分高级功能需要企业版插件"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "移动端体验相对较弱"
+        }
+      ]
     }
   }
 }</script>
@@ -126,7 +218,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -160,9 +252,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费开源</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web浏览器（云端/自托管）</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI效率</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://superset.apache.org/" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://superset.apache.org/" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -360,7 +453,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/ai-prompt-engineering-guide-500-tests/'>AI提示词工程实战指南：我测试了500组提示词，这8个技巧让输出质量从</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/ai-prompt-engineering-guide-500-tests/'>AI提示词工程实战指南：我测试了500组提示词，这8个技巧让输出质量从</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "open-design",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://open-design.io",
+  "image": "https://www.aitoollab.cn/images/og/open-design-og.png",
+  "applicationCategory": "DesignApplication",
+  "applicationSubCategory": "AI设计",
   "operatingSystem": "Web / macOS / Windows",
   "description": "一个开源的AI驱动设计工具，专注于快速生成UI/UX设计和品牌视觉资产。2026年最新版本增加了实时协作功能和增强的文本到设计能力，支持从草图到完整设计的全流程AI辅助。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "open-design免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "19",
+      "priceCurrency": "USD",
+      "description": "open-design付费版：免费版可用，专业版$19/月"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "850000"
+    "ratingValue": 4.6,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,33 @@
     "多语言界面支持",
     "API开放集成"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "canva-ai",
+      "url": "https://www.aitoollab.cn/tools/canva-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "figma-ai",
+      "url": "https://www.aitoollab.cn/tools/figma-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "稿定设计AI",
+      "url": "https://www.aitoollab.cn/tools/稿定设计AI/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "即时设计AI",
+      "url": "https://www.aitoollab.cn/tools/即时设计AI/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "ideogram",
+      "url": "https://www.aitoollab.cn/tools/ideogram/"
+    }
+  ],
   "abstract": "一个开源的AI驱动设计工具，专注于快速生成UI/UX设计和品牌视觉资产。2026年最新版本增加了实时协作功能和增强的文本到设计能力，支持从草图到完整设计的全流程AI辅助。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +138,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "完全开源免费使用，降低设计门槛"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI智能生成UI组件和页面布局效率高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持多平台协作，团队实时编辑"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "丰富的设计模板库和资源社区"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "持续更新，功能迭代速度快"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "相较于Figma等成熟工具，社区资源较少"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "复杂交互设计能力有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "部分高级功能需要付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "中国区服务器访问速度不稳定"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "文档和教程资源相对匮乏"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +221,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +255,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，专业版$19/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web / macOS / Windows</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI设计</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://open-design.io" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://open-design.io" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -365,7 +465,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/canva-ai-complete-guide-2026/'>Canva AI完全使用指南：从Magic Studio到AI 2.0</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/canva-ai-complete-guide-2026/'>Canva AI完全使用指南：从Magic Studio到AI 2.0</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

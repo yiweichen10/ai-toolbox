@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "OpenAI Agents SDK",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://platform.openai.com/docs/agents",
+  "image": "https://www.aitoollab.cn/images/og/openai-agents-sdk-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI开发",
   "operatingSystem": "Python、Node.js、REST API",
   "description": "OpenAI Agents SDK是OpenAI于2024年底发布的官方AI代理开发框架，为开发者提供构建、部署和管理AI代理的完整工具链，支持多代理协作和复杂任务编排。截至2026年已迭代至v2.4版本，成为企业级AI应用开发的首选方案。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,15 +68,17 @@
     {
       "@type": "Offer",
       "name": "付费版",
-      "price": "4",
+      "price": "0",
       "priceCurrency": "USD",
-      "description": "OpenAI Agents SDK付费版全功能：按调用量计费，GPT-4o代理API $15/百万token"
+      "description": "OpenAI Agents SDK付费版：按调用量计费，GPT-4o代理API $15/百万token"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "ratingCount": "850000"
+    "ratingValue": 4.7,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -81,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "OpenAI Agents SDK",
+    "name": "年底发布的官方AI代理",
     "url": "https://platform.openai.com/docs/agents"
   },
   "featureList": [
@@ -91,6 +96,33 @@
     "实时监控与调试",
     "可扩展的工具集成",
     "企业级SSO与权限管理"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "claude-code",
+      "url": "https://www.aitoollab.cn/tools/claude-code/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "openai-codex",
+      "url": "https://www.aitoollab.cn/tools/openai-codex/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "langchain",
+      "url": "https://www.aitoollab.cn/tools/langchain/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "langgraph",
+      "url": "https://www.aitoollab.cn/tools/langgraph/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "crewai",
+      "url": "https://www.aitoollab.cn/tools/crewai/"
+    }
   ],
   "abstract": "OpenAI Agents SDK是OpenAI于2024年底发布的官方AI代理开发框架，为开发者提供构建、部署和管理AI代理的完整工具链，支持多代理协作和复杂任务编排。截至2026年已迭代至v2.4版本，成为企业级AI应用开发的首选方案。",
   "speakable": {
@@ -106,12 +138,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.7,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "OpenAI官方背书，兼容性和稳定性有保障"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持多代理协作和复杂工作流编排"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "内置安全护栏和内容过滤机制"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "与OpenAI生态系统深度集成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "提供完善的监控、日志和调试工具"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "对非OpenAI模型支持有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "企业版价格较高，中小型团队成本压力大"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "学习曲线较陡，需要熟悉代理架构设计"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "部分高级功能需要企业授权"
+        }
+      ]
     }
   }
 }</script>
@@ -129,7 +216,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -163,9 +250,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：按调用量计费，GPT-4o代理API $15/百万token</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Python、Node.js、REST API</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI开发</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://platform.openai.com/docs/agents" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://platform.openai.com/docs/agents" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -346,16 +434,16 @@ var _hmt = _hmt || [];
                 <span class="rel-tool-icon" style="background:#6B46C1;">⛓️</span>
                 <a href="/tools/langchain/">LangChain</a> <span class="rel-tag free">免费</span>
             </li><li class="rel-tool-item">
+                <span class="rel-tool-icon" style="background:#7C3AED;">🔗</span>
+                <a href="/tools/langgraph/">LangGraph</a> <span class="rel-tag free">免费</span>
+            </li><li class="rel-tool-item">
                 <span class="rel-tool-icon" style="background:#6366F1;">🤖</span>
                 <a href="/tools/ag2/">AG2</a> <span class="rel-tag free">免费</span>
-            </li><li class="rel-tool-item">
-                <span class="rel-tool-icon" style="background:#1C1CFF;">🌊</span>
-                <a href="/tools/flowise/">Flowise</a> <span class="rel-tag free">免费</span>
             </li>
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/china-open-source-ai-wave-june-2026/'>2026年6月国产AI开源大爆发：小米MiMo Code终结编程「失忆</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/china-open-source-ai-wave-june-2026/'>2026年6月国产AI开源大爆发：小米MiMo Code终结编程「失忆</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

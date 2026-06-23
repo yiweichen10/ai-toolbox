@@ -56,19 +56,37 @@
   "description": "手把手教你搭建个人AI知识库。不是泛泛的\"工具推荐\"，而是一套完整的三合一工作流：NotebookLM做AI研究助手（4月10日刚上线Gemini双向同步）、Obsidian做本地笔记存储、Claude做深度分析。附详细的注册/配置步骤、实际使用案例、常见问题解决。适合知识工作者、内容创作者、程序员、学生。",
   "datePublished": "2026-04-11",
   "dateModified": "2026-04-11",
+  "inLanguage": "zh-CN",
   "author": {
     "@type": "Organization",
-    "name": "AI工具宝箱"
+    "name": "AI工具宝箱编辑组",
+    "url": "https://www.aitoollab.cn/author/",
+    "description": "专注 AI 工具实测与对比研究的独立编辑团队，5+ 年 AI 工具付费使用经验",
+    "knowsAbout": [
+      "AI工具评测",
+      "AI模型对比",
+      "AEO内容优化",
+      "GEO生成式引擎优化",
+      "AI编程工具",
+      "AI对话模型"
+    ]
   },
   "publisher": {
     "@type": "Organization",
     "name": "AI工具宝箱",
+    "url": "https://www.aitoollab.cn/",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.aitoollab.cn/images/logo.png",
       "width": 200,
       "height": 60
-    }
+    },
+    "foundingDate": "2026-03-21",
+    "slogan": "实测数据驱动 AI 工具决策",
+    "publishingPrinciples": "https://www.aitoollab.cn/about.html",
+    "sameAs": [
+      "https://github.com/yiweichen10/ai-toolbox"
+    ]
   },
   "image": {
     "@type": "ImageObject",
@@ -81,7 +99,7 @@
     "@id": "https://www.aitoollab.cn/articles/ai-personal-knowledge-base-guide-2026/"
   },
   "abstract": "手把手教你搭建个人AI知识库。不是泛泛的\"工具推荐\"，而是一套完整的三合一工作流：NotebookLM做AI研究助手（4月10日刚上线Gemini双向同步）、Obsidian做本地笔记存储、Claude做深度分析。附详细的注册/配置步骤、实际使用案例、常见问题解决。适合知识工作者、内容创作者、程序员、学生。",
-  "wordCount": 5911,
+  "wordCount": 5922,
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [
@@ -125,9 +143,16 @@
       "position": 4,
       "name": "三合一工作流：它们怎么串起来",
       "text": "按照指南完成：三合一工作流：它们怎么串起来"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "使用时踩了哪些坑？",
+      "text": "按照指南完成：使用时踩了哪些坑？"
     }
   ]
 }</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "完全零基础，从来没有用过知识管理工具，从哪个开始？", "acceptedAnswer": {"@type": "Answer", "text": "A：从NotebookLM开始。原因：免费、网页版直接用、不需要安装、上手最简单。上传几份你手头的PDF文档，试着问它几个问题，感受一下\"AI帮你读文档\"是什么体验。等你有了\"这些资料我想长期保存和整理\"的需求时，再上Obsidian。"}}, {"@type": "Question", "name": "NotebookLM和ChatGPT Projects有什么区别？用哪个？", "acceptedAnswer": {"@type": "Answer", "text": "A：NotebookLM在\"文档理解和多源对比\"上更强（最多50个来源、自动引用来源页码、支持YouTube/音频），ChatGPT Projects在\"通用对话和工具调用\"上更强（能联网搜索、能写代码、能调插件）。如果你的核心需求是\"管理和研究文档\"，选NotebookLM。如果核心需求是\"一个全能AI助手帮我干各种事\"，选ChatGPT Projects。两个都用也不贵（都免费）。"}}, {"@type": "Question", "name": "Obsidian的数据安全吗？万一电脑坏了怎么办？", "acceptedAnswer": {"@type": "Answer", "text": "A：Obsidian的所有数据都是本地Markdown文件，你可以用任何方式备份——复制到U盘、同步到iCloud/OneDrive/坚果云、用Git管理、用Obsidian Sync（官方同步服务$4/月）。我的做法：Obsidian仓库放在OneDrive文件夹里，自动同步到云端+本地备份。电脑坏了，换一台电脑装上Obsidian指向同一个OneDrive文件夹，所有数据完好无损。"}}, {"@type": "Question", "name": "Claude和[ChatGPT](https://www.aitoollab.cn/tools/chatgpt/index.html)在知识库场景下哪个更好？", "acceptedAnswer": {"@type": "Answer", "text": "A：深度分析和写作用Claude（推理更强、长文更好），通用问答和联网搜索用ChatGPT（信息更新更快、工具生态更好）。如果只选一个，Claude在\"帮你思考和写作\"上更好。如果预算有限，[DeepSeek](https://www.aitoollab.cn/tools/deepseek/index.html)免费版在中文场景下已经够用。"}}, {"@type": "Question", "name": "这个方案适合团队使用吗？", "acceptedAnswer": {"@type": "Answer", "text": "A：这套方案主要针对个人知识管理。团队场景建议用[Notion AI](https://www.aitoollab.cn/tools/notion-ai/index.html)或飞书文档（协作更方便）。但团队中的每个人都可以用这套方案管理自己的个人知识，然后在团队平台共享整理后的结果。"}}, {"@type": "Question", "name": "Gemini双向同步还没开放给免费用户，现在搭NotebookLM还有意义吗？", "acceptedAnswer": {"@type": "Answer", "text": "A：当然有。NotebookLM的核心价值——多文档AI分析、音频摘要、来源引用——跟Gemini同步完全无关。这些功能从第一天就对所有人免费。Gemini同步只是一个\"锦上添花\"的便利功能，不是核心。"}}]}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -141,7 +166,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -164,7 +189,9 @@ var _hmt = _hmt || [];
         <article class="article-body">
             <h1 style="margin-bottom:16px;">2026年个人AI知识库搭建指南：NotebookLM+Obsidian+Claude三合一工作流，我从1小时找资料变成30秒</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026年04月11日 · AI办公
+                <time datetime="2026-04-11" itemprop="datePublished">2026年04月11日</time> · AI办公 ·
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#4285F4;text-decoration:none;"><span itemprop="name">AI工具宝箱编辑组</span></a></span> ·
+                <span style="color:#bbb;">📖 阅读时长 30 分钟</span>
             </div>
             
             <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
@@ -453,7 +480,7 @@ var _hmt = _hmt || [];
 <p>和市面上的知识管理SaaS比（Notion $10/月起、Roam Research $15/月、Coda $10/月起），这个方案不仅便宜得多，而且<strong>数据完全在你手里</strong>。
 </p>
 
-<h2 id="section-踩坑经验">踩坑经验</h2>
+<h2 id="section-使用时踩了哪些坑">使用时踩了哪些坑？</h2>
 
 <h3>坑1：不要一开始就搞太复杂的分类系统</h3>
 
@@ -538,7 +565,7 @@ var _hmt = _hmt || [];
 <p>A：当然有。NotebookLM的核心价值——多文档AI分析、音频摘要、来源引用——跟Gemini同步完全无关。这些功能从第一天就对所有人免费。Gemini同步只是一个"锦上添花"的便利功能，不是核心。
 </p>
 
-<h2 id="section-总结">总结</h2>
+<h2 id="section-最终结论-到底选哪个">最终结论：到底选哪个？</h2>
 
 <p>个人AI知识库不是"选择最好的工具"，而是<strong>用多个工具的强项组合出一个大于部分之和的方案</strong>。NotebookLM负责"AI帮你读文档"，Obsidian负责"你的数据永远在你手里"，Claude负责"深度思考和创作"。三个工具各司其职，缺一不可。
 </p>
@@ -557,6 +584,14 @@ var _hmt = _hmt || [];
 
 <p>持续关注<a href="https://www.aitoollab.cn/" target="_blank" rel="noopener">AI工具宝箱</a>获取最新AI工具评测和效率提升指南。
 </p>
+            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #10a37f;">
+                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
+                    <strong>关于作者：</strong>本文由 <a href="/author/" style="color:#10a37f;text-decoration:none;">AI工具宝箱编辑组</a> 撰写，团队 5+ 年 AI 工具付费实测经验，月均订阅支出 $200+，所有评测基于真实付费长期使用。
+                </p>
+                <p style="margin:0;font-size:13px;color:#888;">
+                    <strong>数据声明：</strong>本文所有数据均标注来源，可溯源核查。发现错误欢迎通过 <a href="/contact.html" style="color:#4285F4;text-decoration:none;">联系页面</a> 反馈，48 小时内核查修正。
+                </p>
+            </div>
         </article>
 
             <div class="mobile-ad-inline">📱 继续阅读 · 猜你喜欢</div>

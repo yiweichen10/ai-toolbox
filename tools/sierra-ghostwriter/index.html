@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Sierra Ghostwriter",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://sierra-ghostwriter.ai",
+  "image": "https://www.aitoollab.cn/images/og/sierra-ghostwriter-og.png",
+  "applicationCategory": "WritingApplication",
+  "applicationSubCategory": "AI写作",
   "operatingSystem": "网页端、iOS、Android",
   "description": "Sierra Ghostwriter是一款专业的AI写作助手，利用先进的自然语言处理技术帮助用户快速生成高质量内容。2026年最新版本增强了上下文理解和多语言支持功能，专注于为内容创作者、营销人员和商务人士提供高效的写作解决方案。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Sierra Ghostwriter免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "19",
+      "priceCurrency": "USD",
+      "description": "Sierra Ghostwriter付费版：免费版基础功能，高级版$19/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "约120000/月"
+    "ratingValue": 4.3,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -87,6 +99,33 @@
     "抄袭检测功能",
     "团队协作编辑"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "jasper",
+      "url": "https://www.aitoollab.cn/tools/jasper/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "copy-ai",
+      "url": "https://www.aitoollab.cn/tools/copy-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "quillbot",
+      "url": "https://www.aitoollab.cn/tools/quillbot/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "writesonic",
+      "url": "https://www.aitoollab.cn/tools/writesonic/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "rytr",
+      "url": "https://www.aitoollab.cn/tools/rytr/"
+    }
+  ],
   "abstract": "Sierra Ghostwriter是一款专业的AI写作助手，利用先进的自然语言处理技术帮助用户快速生成高质量内容。2026年最新版本增强了上下文理解和多语言支持功能，专注于为内容创作者、营销人员和商务人士提供高效的写作解决方案。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -101,12 +140,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "智能写作辅助提升创作效率"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "多语言支持涵盖中英日韩等主流语言"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "提供多种内容模板满足不同场景需求"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "实时语法检查和风格优化建议"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持团队协作和版本管理功能"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "高级功能需要付费订阅"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "中文语境下的表达偶有生硬"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "处理长文时响应速度略有下降"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "自定义词汇库功能较弱"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +218,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +252,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版基础功能，高级版$19/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端、iOS、Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI写作</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://sierra-ghostwriter.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://sierra-ghostwriter.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

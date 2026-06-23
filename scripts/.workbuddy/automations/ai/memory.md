@@ -1,5 +1,15 @@
 # aitoollab.cn 每日自动化执行记忆
 
+## 2026-06-22 执行摘要
+- **发布工具**: 3个 — Hedra, Vidu 2.0, Flowise
+- **库存状态**: 312 已发布 / 8 未发布 / 320 总计（充足，无需补充）
+- **部署结果**: 成功，已推送到阿里云服务器 (121.43.144.99)
+- **Git**: commit 7e7cb660 (publish) + f4ad344f (deploy) 均已推送到 GitHub main
+- **Baidu Push**: over quota（配额耗尽）
+- **IndexNow**: publish阶段推送3个新URL成功；deploy阶段无新URL
+- **构建统计**: 312 tools + 109 articles + 6 quizzes + 18 rankings + 5 live = 486 HTML
+- **备注**: deploy.sh 未自动commit排名/数据文件变更，手动补充 git add + commit + push
+
 ## 2026-06-21 执行摘要
 - **发布工具**: 3个 — Qwen-Agent, CrewAI, Qwen3-Coder-Next
 - **库存状态**: 309 已发布 / 11 未发布 / 320 总计（充足，无需补充）

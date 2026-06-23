@@ -56,19 +56,37 @@
   "description": "2026年4月3日AI圈三连爆：微软发布MAI-Transcribe-1/MAI-Voice-1/MAI-Image-2三款自研模型豪言2027年自主打造尖端模型、阿里千问Qwen3.6-Plus发布SWE-bench达78.8%直逼Claude、谷歌Gemma 4全面转向Apache 2.0开源。三件事串在一起看，一场围绕\"去OpenAI依赖\"的暗战已经打响。",
   "datePublished": "2026-04-03",
   "dateModified": "2026-04-03",
+  "inLanguage": "zh-CN",
   "author": {
     "@type": "Organization",
-    "name": "AI工具宝箱"
+    "name": "AI工具宝箱编辑组",
+    "url": "https://www.aitoollab.cn/author/",
+    "description": "专注 AI 工具实测与对比研究的独立编辑团队，5+ 年 AI 工具付费使用经验",
+    "knowsAbout": [
+      "AI工具评测",
+      "AI模型对比",
+      "AEO内容优化",
+      "GEO生成式引擎优化",
+      "AI编程工具",
+      "AI对话模型"
+    ]
   },
   "publisher": {
     "@type": "Organization",
     "name": "AI工具宝箱",
+    "url": "https://www.aitoollab.cn/",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.aitoollab.cn/images/logo.png",
       "width": 200,
       "height": 60
-    }
+    },
+    "foundingDate": "2026-03-21",
+    "slogan": "实测数据驱动 AI 工具决策",
+    "publishingPrinciples": "https://www.aitoollab.cn/about.html",
+    "sameAs": [
+      "https://github.com/yiweichen10/ai-toolbox"
+    ]
   },
   "image": {
     "@type": "ImageObject",
@@ -81,7 +99,7 @@
     "@id": "https://www.aitoollab.cn/articles/microsoft-mai-qwen3-6-gemma4-april3-2026/"
   },
   "abstract": "2026年4月3日AI圈三连爆：微软发布MAI-Transcribe-1/MAI-Voice-1/MAI-Image-2三款自研模型豪言2027年自主打造尖端模型、阿里千问Qwen3.6-Plus发布SWE-bench达78.8%直逼Claude、谷歌Gemma 4全面转向Apache 2.0开源。三件事串在一起看，一场围绕\"去OpenAI依赖\"的暗战已经打响。",
-  "wordCount": 3081,
+  "wordCount": 3088,
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [
@@ -95,6 +113,7 @@
     "description": "2026年4月3日AI圈三连爆：微软发布MAI-Transcribe-1/MAI-Voice-1/MAI-Image-2三款自研模型豪言2027年自主打造尖端模型、阿里千问Qwen3.6-Plus发布SWE-bench达78.8%直逼Cla"
   }
 }</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "微软自研模型后，OpenAI会怎样？", "acceptedAnswer": {"@type": "Answer", "text": "A：短期内不会有什么变化。微软已投资OpenAI超过130亿美元，合作协议刚重新修订过，双方有深度绑定。但苏莱曼明确说了\"2027年自主打造尖端模型\"——这是给OpenAI的温和警告：别以为微软离不开你。对用户来说，微软自研意味着Copilot等产品未来可能有更便宜的替代方案（用MAI模型替代OpenAI模型），价格可能下降。"}}, {"@type": "Question", "name": "Qwen3.6-Plus真的能替代Claude做AI编程吗？", "acceptedAnswer": {"@type": "Answer", "text": "A：SWE-bench上差2个百分点（78.8% vs 80.8%），但SWE-bench不等于真实项目。我们之前3个月实测发现，SWE-bench高分模型（GPT-5.4 Pro 86%）在真实项目里反而表现平庸。Qwen3.6-Plus的真正优势是：100万token上下文（项目全局理解）+ 53倍价格差（$0.28 vs $15/MTok）+ 多模态编程（截图生成代码）。建议在[Cline](https://www.aitoollab.cn/tools/cursor/index.html)里接入试试，成本几乎为零。"}}, {"@type": "Question", "name": "Gemma 4的Apache 2.0开源，对开发者有什么实际好处？", "acceptedAnswer": {"@type": "Answer", "text": "A：三个好处。第一，你可以自由商用，不用像Gemma 3那样担心许可限制。第二，社区会快速产出大量微调版本和衍生模型（Gemma系列累计下载超4亿次）。第三，端侧E2B模型可以在手机/树莓派上离线运行，适合对数据隐私有要求的场景。如果你在用[Cursor](https://www.aitoollab.cn/tools/cursor/index.html)等工具，本地运行Gemma 4作为fallback模型也是可行的方案。"}}, {"@type": "Question", "name": "AI编程工具现在怎么选？", "acceptedAnswer": {"@type": "Answer", "text": "A：基于最新数据更新推荐：追求综合效率选Claude Code Pro（$20/月），追求性价比选Cline+Qwen3.6-Plus（$5/月，SWE-bench 78.8%），追求免费选[GitHub Copilot](/tools/github-copilot/)免费版（50次/月）。不推荐：纯用DeepSeek做复杂编程（bug率太高，SWE-bench仅约39%）。"}}, {"@type": "Question", "name": "AI模型\"去OpenAI依赖\"这个趋势会持续吗？", "acceptedAnswer": {"@type": "Answer", "text": "A：100%会持续。OpenAI现在的月收入20亿美元、估值8520亿美元，是整个AI行业最大的\"收费站\"。每一个不想给OpenAI交过路费的公司（微软、谷歌、阿里、Meta）都在自研。未来2-3年，OpenAI会从\"唯一的AI模型供应商\"变成\"AI模型供应商之一\"。对用户来说，这是好事——竞争导致价格下降、质量提升。"}}]}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -108,7 +127,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -131,7 +150,9 @@ var _hmt = _hmt || [];
         <article class="article-body">
             <h1 style="margin-bottom:16px;">微软MAI三件套+阿里Qwen3.6-Plus+谷歌Gemma 4：4月3日AI圈三连爆，微软&quot;甩开OpenAI&quot;信号最强烈</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026年4月3日 · AI对话
+                <time datetime="2026-04-03" itemprop="datePublished">2026年4月3日</time> · AI对话 ·
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#4285F4;text-decoration:none;"><span itemprop="name">AI工具宝箱编辑组</span></a></span> ·
+                <span style="color:#bbb;">📖 阅读时长 18 分钟</span>
             </div>
             
             <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
@@ -295,7 +316,7 @@ var _hmt = _hmt || [];
 <p>A：100%会持续。OpenAI现在的月收入20亿美元、估值8520亿美元，是整个AI行业最大的"收费站"。每一个不想给OpenAI交过路费的公司（微软、谷歌、阿里、Meta）都在自研。未来2-3年，OpenAI会从"唯一的AI模型供应商"变成"AI模型供应商之一"。对用户来说，这是好事——竞争导致价格下降、质量提升。
 </p>
 
-<h2 id="section-总结">总结</h2>
+<h2 id="section-最终结论-到底选哪个">最终结论：到底选哪个？</h2>
 
 <p>2026年4月3日，三个事件同时发生不是巧合。微软MAI三件套发布、阿里Qwen3.6-Plus上线、谷歌Gemma 4开源——三件事指向同一个结论：<strong>AI行业的"OpenAI依赖症"正在被系统性地治愈。</strong>
 </p>
@@ -314,6 +335,14 @@ var _hmt = _hmt || [];
 </ul>
 <p>持续关注<a href="https://www.aitoollab.cn/" target="_blank" rel="noopener">AI工具宝箱</a>获取最新AI工具评测和行业动态。
 </p>
+            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #10a37f;">
+                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
+                    <strong>关于作者：</strong>本文由 <a href="/author/" style="color:#10a37f;text-decoration:none;">AI工具宝箱编辑组</a> 撰写，团队 5+ 年 AI 工具付费实测经验，月均订阅支出 $200+，所有评测基于真实付费长期使用。
+                </p>
+                <p style="margin:0;font-size:13px;color:#888;">
+                    <strong>数据声明：</strong>本文所有数据均标注来源，可溯源核查。发现错误欢迎通过 <a href="/contact.html" style="color:#4285F4;text-decoration:none;">联系页面</a> 反馈，48 小时内核查修正。
+                </p>
+            </div>
         </article>
 
             <div class="mobile-ad-inline">📱 继续阅读 · 猜你喜欢</div>

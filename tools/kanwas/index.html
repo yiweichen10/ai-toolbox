@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Kanwas",
+  "url": "https://kanwas.ai",
+  "image": "https://www.aitoollab.cn/images/og/kanwas-og.png",
   "applicationCategory": "ProductivityApplication",
+  "applicationSubCategory": "AI效率",
   "operatingSystem": "网页/iOS/Android/桌面端",
   "description": "Kanwas是一款专注于提升团队协作效率的AI工作流自动化平台，通过智能任务分配和流程优化，帮助团队在2026年实现更高效的项目管理与知识复用。平台支持多模态交互，集成200+企业应用，大幅降低跨工具协作成本。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Kanwas免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "12",
+      "priceCurrency": "USD",
+      "description": "Kanwas付费版：免费版/专业版$12/月/企业版定制"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "850000"
+    "ratingValue": 4.6,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -87,6 +99,33 @@
     "自动化提醒与通知",
     "知识库智能检索"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "notion-ai",
+      "url": "https://www.aitoollab.cn/tools/notion-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "clickup-ai",
+      "url": "https://www.aitoollab.cn/tools/clickup-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "asana-ai",
+      "url": "https://www.aitoollab.cn/tools/asana-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "monday-ai",
+      "url": "https://www.aitoollab.cn/tools/monday-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "todoist",
+      "url": "https://www.aitoollab.cn/tools/todoist/"
+    }
+  ],
   "abstract": "Kanwas是一款专注于提升团队协作效率的AI工作流自动化平台，通过智能任务分配和流程优化，帮助团队在2026年实现更高效的项目管理与知识复用。平台支持多模态交互，集成200+企业应用，大幅降低跨工具协作成本。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -101,12 +140,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "200+应用集成，跨平台协作无缝"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI自动生成任务流程，减少重复操作"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "智能日程规划，提升团队时间利用率"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "实时协作看板，团队进度一目了然"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "7×24小时AI助手支持，快速响应需求"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "新用户上手需要一定学习曲线"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "企业版价格相对较高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "部分高级功能仅支持英文界面"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "定制化程度高可能导致配置复杂"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +218,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +252,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版/专业版$12/月/企业版定制</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页/iOS/Android/桌面端</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI效率</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://kanwas.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://kanwas.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -358,7 +453,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/ai-prompt-engineering-guide-500-tests/'>AI提示词工程实战指南：我测试了500组提示词，这8个技巧让输出质量从</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/ai-prompt-engineering-guide-500-tests/'>AI提示词工程实战指南：我测试了500组提示词，这8个技巧让输出质量从</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

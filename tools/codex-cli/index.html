@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Codex CLI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://github.com/openai/codex-cli",
+  "image": "https://www.aitoollab.cn/images/og/codex-cli-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI编程",
   "operatingSystem": "macOS/Windows/Linux",
   "description": "OpenAI推出的命令行编程助手，通过自然语言帮助开发者完成代码编写、调试和优化。支持本地CLI环境运行，集成多种编程语言和框架。截至2026年，Codex CLI已成为开发者日常编码的重要辅助工具。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "500000"
+    "ratingValue": 4.6,
+    "ratingCount": 500000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Codex CLI",
+    "name": "OpenAI",
     "url": "https://github.com/openai/codex-cli"
   },
   "featureList": [
@@ -86,6 +91,33 @@
     "自定义脚本执行",
     "API集成能力",
     "多语言支持"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "openai-codex",
+      "url": "https://www.aitoollab.cn/tools/openai-codex/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "claude-code",
+      "url": "https://www.aitoollab.cn/tools/claude-code/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "codrabbit",
+      "url": "https://www.aitoollab.cn/tools/codrabbit/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "codesandbox-ai",
+      "url": "https://www.aitoollab.cn/tools/codesandbox-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "tabnine",
+      "url": "https://www.aitoollab.cn/tools/tabnine/"
+    }
   ],
   "abstract": "OpenAI推出的命令行编程助手，通过自然语言帮助开发者完成代码编写、调试和优化。支持本地CLI环境运行，集成多种编程语言和框架。截至2026年，Codex CLI已成为开发者日常编码的重要辅助工具。",
   "speakable": {
@@ -101,12 +133,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "命令行直接交互，无需切换界面"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持多种编程语言代码生成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "开源免费，社区活跃"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "轻量级工具，启动快速"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "与Git等版本控制工具无缝集成"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "需要一定的命令行基础"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "功能相比桌面版有所简化"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "国内访问GitHub可能需要代理"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "无图形界面，新手可能不适应"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "上下文理解能力有限制"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +216,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +250,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费开源</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：macOS/Windows/Linux</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI编程</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://github.com/openai/codex-cli" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://github.com/openai/codex-cli" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

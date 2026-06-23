@@ -7,6 +7,9 @@
     <meta name="description" content="Cline全面评测2026：Cline（原名Cline Dev、Codia）是一个开源的AI编程助手，作为VS Code和JetBrains IDE的扩展运行。它可以自动编写代码、编辑文件、运行命令、修复Bug以及回答编程问题。截至2026年，Cline已成为最受欢迎的AI编程工具之一，GitHub星标数超过9万。 功能介绍、免费版体验、与同类工具对比。">
     <meta name="keywords" content="Cline,Cline AI编程助手怎么样,Cline vs Cursor,Cline免费版,Cline安装使用教程">
     <link rel="canonical" href="https://www.aitoollab.cn/tools/cline/">
+    <link rel="alternate" hreflang="en" href="https://aitoolbox.hk/tools/cline/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.cn/tools/cline/">
+    <link rel="alternate" hreflang="x-default" href="https://aitoolbox.hk/tools/cline/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Cline评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱">
     <meta property="og:description" content="Cline全面评测2026：Cline（原名Cline Dev、Codia）是一个开源的AI编程助手，作为VS Code和JetBrains IDE的扩展运行。它可以自动编写代码、编辑文件、运行命令、修复Bug以及回答编程问题。截至2026年，Cline已成为最受欢迎的AI编程工具之一，GitHub星标数超过9万。">
@@ -49,11 +52,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Cline",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://cline.dev",
+  "image": "https://www.aitoollab.cn/images/og/cline-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI编程",
   "operatingSystem": "VS Code、JetBrains IDE、Cursor",
   "description": "Cline（原名Cline Dev、Codia）是一个开源的AI编程助手，作为VS Code和JetBrains IDE的扩展运行。它可以自动编写代码、编辑文件、运行命令、修复Bug以及回答编程问题。截至2026年，Cline已成为最受欢迎的AI编程工具之一，GitHub星标数超过9万。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +71,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "ratingCount": "850000"
+    "ratingValue": 4.7,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -89,6 +97,33 @@
     "文件搜索和替换",
     "SWE-bench测试表现优异"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "cursor",
+      "url": "https://www.aitoollab.cn/tools/cursor/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "github-copilot",
+      "url": "https://www.aitoollab.cn/tools/github-copilot/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "windsurf",
+      "url": "https://www.aitoollab.cn/tools/windsurf/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "replit-ai",
+      "url": "https://www.aitoollab.cn/tools/replit-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "claude-code",
+      "url": "https://www.aitoollab.cn/tools/claude-code/"
+    }
+  ],
   "abstract": "Cline（原名Cline Dev、Codia）是一个开源的AI编程助手，作为VS Code和JetBrains IDE的扩展运行。它可以自动编写代码、编辑文件、运行命令、修复Bug以及回答编程问题。截至2026年，Cline已成为最受欢迎的AI编程工具之一，GitHub星标数超过9万。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -103,12 +138,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.7,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "完全开源免费，基本功能不收费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持多文件自动编辑和代码生成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "内置Terminal，可直接执行命令行"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持自定义LLM API（如OpenAI、Anthropic、Ollama等）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "智能Bug修复和代码重构能力突出"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版使用Claude 3.5 Sonnet，有额度和功能限制"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "对本地LLM支持需要一定配置门槛"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "首次配置API Key对新手不够友好"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "部分复杂项目的上下文理解仍有局限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "无内置团队协作功能"
+        }
+      ]
     }
   }
 }</script>
@@ -126,7 +221,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -160,9 +255,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费开源（Pro版可选）</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：VS Code、JetBrains IDE、Cursor</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI编程</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://cline.dev" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://cline.dev" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

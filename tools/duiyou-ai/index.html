@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "堆友AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://d.design/",
+  "image": "https://www.aitoollab.cn/images/og/duiyou-ai-og.png",
+  "applicationCategory": "DesignApplication",
+  "applicationSubCategory": "AI绘画",
   "operatingSystem": "Web浏览器",
   "description": "阿里巴巴达摩院推出的AI图像生成平台，支持文生图、图生图、AI换装等功能。2026年持续迭代模型能力，提升生成质量和速度，已成为国内AI绘画领域的重要工具选择。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "500000"
+    "ratingValue": 4.3,
+    "ratingCount": 500000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "堆友AI",
+    "name": "阿里巴巴达摩院",
     "url": "https://d.design/"
   },
   "featureList": [
@@ -84,6 +89,33 @@
     "电商主图：自动生成商品展示图片",
     "智能抠图：AI自动识别并移除背景",
     "风格模型：多种艺术风格可选"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "tongyi-wanxiang",
+      "url": "https://www.aitoollab.cn/tools/tongyi-wanxiang/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "miao-hua",
+      "url": "https://www.aitoollab.cn/tools/miao-hua/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "yiyan-banyan",
+      "url": "https://www.aitoollab.cn/tools/yiyan-banyan/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "liblibai",
+      "url": "https://www.aitoollab.cn/tools/liblibai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "flux",
+      "url": "https://www.aitoollab.cn/tools/flux/"
+    }
   ],
   "abstract": "阿里巴巴达摩院推出的AI图像生成平台，支持文生图、图生图、AI换装等功能。2026年持续迭代模型能力，提升生成质量和速度，已成为国内AI绘画领域的重要工具选择。",
   "speakable": {
@@ -99,12 +131,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "阿里巴巴达摩院技术支持，模型质量有保障"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持中文提示词，对国内用户友好"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "提供AI换装、电商主图等垂直场景功能"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "基础功能完全免费，降低使用门槛"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "与阿里生态深度整合，支持淘宝、天猫素材使用"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "相比Midjourney，创意丰富度仍有提升空间"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "部分高级功能需要付费会员"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "服务器偶尔繁忙，生成速度不稳定"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "社区分享功能相对薄弱"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "国外用户使用存在一定限制"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +214,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +248,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：基础功能免费，高级功能付费</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web浏览器</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI绘画</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://d.design/" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://d.design/" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

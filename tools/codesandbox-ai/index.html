@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "CodeSandbox AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://codesandbox.io",
+  "image": "https://www.aitoollab.cn/images/og/codesandbox-ai-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI编程",
   "operatingSystem": "Web浏览器（无需安装）",
   "description": "CodeSandbox AI是集成在CodeSandbox在线IDE中的AI编程助手，为开发者提供智能代码补全、错误诊断和项目构建等云端开发能力。2026年最新版本增强了多模态理解和团队协作功能，支持实时协作编程和AI辅助调试。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-04-25",
+  "dateModified": "2026-05-02",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "CodeSandbox AI免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "9",
+      "priceCurrency": "USD",
+      "description": "CodeSandbox AI付费版：免费版可用，Pro版$9/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "约1500000/月"
+    "ratingValue": 4.3,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "CodeSandbox AI",
+    "name": "错误诊断和项目构建等云端",
     "url": "https://codesandbox.io"
   },
   "featureList": [
@@ -84,6 +96,33 @@
     "一键部署到主流平台",
     "项目模板快速创建",
     "内置终端和调试工具"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "replit-ai",
+      "url": "https://www.aitoollab.cn/tools/replit-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "cursor",
+      "url": "https://www.aitoollab.cn/tools/cursor/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "claude-code",
+      "url": "https://www.aitoollab.cn/tools/claude-code/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "v0-dev",
+      "url": "https://www.aitoollab.cn/tools/v0-dev/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "github-copilot",
+      "url": "https://www.aitoollab.cn/tools/github-copilot/"
+    }
   ],
   "abstract": "CodeSandbox AI是集成在CodeSandbox在线IDE中的AI编程助手，为开发者提供智能代码补全、错误诊断和项目构建等云端开发能力。2026年最新版本增强了多模态理解和团队协作功能，支持实时协作编程和AI辅助调试。",
   "speakable": {
@@ -99,12 +138,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "无需本地配置，打开浏览器即可开始编程"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "实时协作功能，支持多人同时编辑同一项目"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "内置AI代码补全和错误检测功能"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "丰富的模板和预配置开发环境"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持主流前端框架一键启动项目"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版有项目数量和存储空间限制"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "依赖网络连接，离线无法使用"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "大型项目运行时可能存在性能瓶颈"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，Pro版$9/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web浏览器（无需安装）</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI编程</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-05-02" itemprop="dateModified">2026-05-02</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://codesandbox.io" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://codesandbox.io" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

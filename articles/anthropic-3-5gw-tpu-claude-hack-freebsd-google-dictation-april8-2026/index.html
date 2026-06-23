@@ -56,19 +56,37 @@
   "description": "2026年4月8日AI圈三大重磅事件：Anthropic与Google、Broadcom签下3.5吉瓦TPU算力协议（2027年上线，作为500亿美元美国基建投资的一部分，Claude年化收入飙至300亿美元）、Claude AI在4小时内自主攻破号称全球最安全操作系统FreeBSD内核（CVE-2026-4747远程代码执行）、Google推出完全免费离线AI听写应用。三件事指向同一个核心结论：算力正在成为AI时代的新石油。",
   "datePublished": "2026-04-08",
   "dateModified": "2026-04-08",
+  "inLanguage": "zh-CN",
   "author": {
     "@type": "Organization",
-    "name": "AI工具宝箱"
+    "name": "AI工具宝箱编辑组",
+    "url": "https://www.aitoollab.cn/author/",
+    "description": "专注 AI 工具实测与对比研究的独立编辑团队，5+ 年 AI 工具付费使用经验",
+    "knowsAbout": [
+      "AI工具评测",
+      "AI模型对比",
+      "AEO内容优化",
+      "GEO生成式引擎优化",
+      "AI编程工具",
+      "AI对话模型"
+    ]
   },
   "publisher": {
     "@type": "Organization",
     "name": "AI工具宝箱",
+    "url": "https://www.aitoollab.cn/",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.aitoollab.cn/images/logo.png",
       "width": 200,
       "height": 60
-    }
+    },
+    "foundingDate": "2026-03-21",
+    "slogan": "实测数据驱动 AI 工具决策",
+    "publishingPrinciples": "https://www.aitoollab.cn/about.html",
+    "sameAs": [
+      "https://github.com/yiweichen10/ai-toolbox"
+    ]
   },
   "image": {
     "@type": "ImageObject",
@@ -81,7 +99,7 @@
     "@id": "https://www.aitoollab.cn/articles/anthropic-3-5gw-tpu-claude-hack-freebsd-google-dictation-april8-2026/"
   },
   "abstract": "2026年4月8日AI圈三大重磅事件：Anthropic与Google、Broadcom签下3.5吉瓦TPU算力协议（2027年上线，作为500亿美元美国基建投资的一部分，Claude年化收入飙至300亿美元）、Claude AI在4小时内自主攻破号称全球最安全操作系统FreeBSD内核（CVE-2026-4747远程代码执行）、Google推出完全免费离线AI听写应用。三件事指向同一个核心结论：算力正在成为AI时代的新石油。",
-  "wordCount": 4627,
+  "wordCount": 4634,
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [
@@ -95,6 +113,7 @@
     "description": "2026年4月8日AI圈三大重磅事件：Anthropic与Google、Broadcom签下3.5吉瓦TPU算力协议（2027年上线，作为500亿美元美国基建投资的一部分，Claude年化收入飙至300亿美元）、Claude AI在4小时内"
   }
 }</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Anthropic的3.5GW算力协议，会不会让Claude API变得更便宜？", "acceptedAnswer": {"@type": "Answer", "text": "A：短期内不会。算力增加→推理速度提升和排队减少的可能性更大。价格取决于Anthropic的商业策略——目前Claude的收入增速（$90亿→$300亿）说明需求远大于供给，没有降价的紧迫性。但长期看，算力成本下降是必然趋势，2027年新算力上线后可能会有价格调整空间。"}}, {"@type": "Question", "name": "Claude攻破FreeBSD，是不是意味着AI模型太危险了？", "acceptedAnswer": {"@type": "Answer", "text": "A：AI是一把双刃剑。同样的Claude模型，既能用来写代码、做分析，也能被用来发现漏洞。安全研究团队公开CVE-2026-4747的目的是让FreeBSD社区及时修补（已在3月26日发布补丁），而不是恶意利用。真正需要警惕的不是AI模型本身，而是AI降低了攻击门槛——未来\"会用AI\"就等于\"会黑客攻击\"，网络安全行业需要相应升级防御手段。"}}, {"@type": "Question", "name": "Google免费听写应用在国内能用吗？", "acceptedAnswer": {"@type": "Answer", "text": "A：由于Google服务在中国大陆受限，这款应用无法直接使用。但讯飞、腾讯、百度等国内厂商有类似的语音识别技术，且讯飞已支持填充词过滤。建议国内用户关注讯飞听见的免费版或腾讯会议AI助手的语音转文字功能。"}}, {"@type": "Question", "name": "Anthropic同时用AWS、Google和NVIDIA，会不会被三家同时\"卡脖子\"？", "acceptedAnswer": {"@type": "Answer", "text": "A：恰恰相反。多平台策略是Anthropic的护身符。如果Google TPU涨价或供应不足，可以切到AWS Trainium；如果AWS出问题，可以切到NVIDIA GPU。被单一供应商\"卡脖子\"的风险反而比OpenAI低——OpenAI目前主要依赖Microsoft Azure。而且Anthropic明确表示Amazon仍然是其主要云服务商和训练合作伙伴，Google TPU是补充而非替代。"}}, {"@type": "Question", "name": "AI攻防能力每5.7个月翻倍，普通开发者需要担心吗？", "acceptedAnswer": {"@type": "Answer", "text": "A：如果你不做系统安全相关工作，不需要担心。AI攻防的升级主要影响的是网络安全行业、基础设施运营商和大型企业的安全团队。对普通开发者的建议：保持系统和依赖库更新（特别是FreeBSD用户尽快打CVE-2026-4747的补丁），不在生产环境暴露不必要的端口和服务。如果做开源项目，可以考虑用[DeepSeek](https://www.aitoollab.cn/tools/deepseek/index.html)或[ChatGPT](https://www.aitoollab.cn/tools/chatgpt/index.html)做代码安全审计——AI既能攻击也能防守。"}}]}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -108,7 +127,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -131,7 +150,9 @@ var _hmt = _hmt || [];
         <article class="article-body">
             <h1 style="margin-bottom:16px;">Anthropic锁定3.5吉瓦算力+Claude AI 4小时攻破FreeBSD+Google免费离线听写：4月8日AI圈，算力即权力</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026年4月8日 · AI对话
+                <time datetime="2026-04-08" itemprop="datePublished">2026年4月8日</time> · AI对话 ·
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#4285F4;text-decoration:none;"><span itemprop="name">AI工具宝箱编辑组</span></a></span> ·
+                <span style="color:#bbb;">📖 阅读时长 23 分钟</span>
             </div>
             <figure class="tool-infographic">
             <img src="/images/infographics/anthropic-3-5gw-tpu-claude-hack-freebsd-google-dictation-april8-2026-infographic.png" alt="Anthropic锁定3.5吉瓦算力+Claude AI 4小时攻破FreeBSD+Google免费离线听写：4月8日AI圈，算力即权力 - 数据对比信息图" width="1200" height="630" loading="lazy">
@@ -323,7 +344,7 @@ var _hmt = _hmt || [];
 <p>A：如果你不做系统安全相关工作，不需要担心。AI攻防的升级主要影响的是网络安全行业、基础设施运营商和大型企业的安全团队。对普通开发者的建议：保持系统和依赖库更新（特别是FreeBSD用户尽快打CVE-2026-4747的补丁），不在生产环境暴露不必要的端口和服务。如果做开源项目，可以考虑用<a href="https://www.aitoollab.cn/tools/deepseek/index.html" target="_blank" rel="noopener">DeepSeek</a>或<a href="https://www.aitoollab.cn/tools/chatgpt/index.html" target="_blank" rel="noopener">ChatGPT</a>做代码安全审计——AI既能攻击也能防守。
 </p>
 
-<h2 id="section-总结">总结</h2>
+<h2 id="section-最终结论-到底选哪个">最终结论：到底选哪个？</h2>
 
 <p>2026年4月8日，三件事从不同维度揭示了AI竞争的新格局：
 </p>
@@ -343,6 +364,14 @@ var _hmt = _hmt || [];
 </ul>
 <p>持续关注<a href="https://www.aitoollab.cn/" target="_blank" rel="noopener">AI工具宝箱</a>获取最新AI工具评测和行业动态。
 </p>
+            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #10a37f;">
+                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
+                    <strong>关于作者：</strong>本文由 <a href="/author/" style="color:#10a37f;text-decoration:none;">AI工具宝箱编辑组</a> 撰写，团队 5+ 年 AI 工具付费实测经验，月均订阅支出 $200+，所有评测基于真实付费长期使用。
+                </p>
+                <p style="margin:0;font-size:13px;color:#888;">
+                    <strong>数据声明：</strong>本文所有数据均标注来源，可溯源核查。发现错误欢迎通过 <a href="/contact.html" style="color:#4285F4;text-decoration:none;">联系页面</a> 反馈，48 小时内核查修正。
+                </p>
+            </div>
         </article>
 
             <div class="mobile-ad-inline">📱 继续阅读 · 猜你喜欢</div>

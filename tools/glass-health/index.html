@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Glass Health",
+  "url": "https://glasshealth.ai",
+  "image": "https://www.aitoollab.cn/images/og/glass-health-og.png",
   "applicationCategory": "ProductivityApplication",
+  "applicationSubCategory": "AI效率",
   "operatingSystem": "Web、iOS、Android",
   "description": "Glass Health是一款专注于医疗领域的AI诊断辅助工具，通过先进的机器学习算法帮助医疗专业人员快速分析患者症状并生成鉴别诊断列表。2026年平台集成了最新的大语言模型，在保持医学准确性的同时大幅提升了响应速度和临床决策支持能力。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Glass Health免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "29",
+      "priceCurrency": "USD",
+      "description": "Glass Health付费版：免费版可用，Pro版约$29/月"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "450000/月"
+    "ratingValue": 4.3,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,23 @@
     "医学文献：链接相关最新医学文献，支持循证决策",
     "临床笔记：自动生成结构化临床笔记和入院记录"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "kimi",
+      "url": "https://www.aitoollab.cn/tools/kimi/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "文心一言",
+      "url": "https://www.aitoollab.cn/tools/文心一言/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "智谱清言",
+      "url": "https://www.aitoollab.cn/tools/智谱清言/"
+    }
+  ],
   "abstract": "Glass Health是一款专注于医疗领域的AI诊断辅助工具，通过先进的机器学习算法帮助医疗专业人员快速分析患者症状并生成鉴别诊断列表。2026年平台集成了最新的大语言模型，在保持医学准确性的同时大幅提升了响应速度和临床决策支持能力。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +128,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "快速生成结构化的鉴别诊断列表，节省医生诊断时间"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "基于循证医学知识库，诊断建议有据可依"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持症状描述和体征输入，交互友好"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "提供相关检查建议和诊疗路径参考"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "持续更新的医学数据库，保持诊断时效性"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "仅面向医疗专业人员，普通用户无法使用"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "诊断建议仅供参考，不能替代最终临床判断"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "部分复杂病例的诊断准确率有待提升"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "中文版本功能相对英文版有所简化"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +206,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +240,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，Pro版约$29/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web、iOS、Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI效率</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://glasshealth.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://glasshealth.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -343,7 +428,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/ai-prompt-engineering-guide-500-tests/'>AI提示词工程实战指南：我测试了500组提示词，这8个技巧让输出质量从</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/ai-prompt-engineering-guide-500-tests/'>AI提示词工程实战指南：我测试了500组提示词，这8个技巧让输出质量从</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

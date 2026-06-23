@@ -8973,6 +8973,38 @@ window.__ALL_TOOLS__ = [
     "platform": "Web / VS Code / JetBrains / CLI"
   },
   {
+    "name": "LangGraph",
+    "slug": "langgraph",
+    "emoji": "🔗",
+    "color": "#7C3AED",
+    "description": "LangGraph 是由 LangChain 团队构建的开源框架，专门用于创建具有状态的多代理应用程序和工作流。它支持循环和分支逻辑，使开发者能够构建复杂的、可控的 AI 代理系统。2026年已支持更细粒度的代理编排和增强的持久化能力。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "多代理系统"
+      },
+      {
+        "text": "工作流编排"
+      },
+      {
+        "text": "状态管理"
+      },
+      {
+        "text": "开源框架",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://langchain-ai.github.io/langgraph/",
+    "price": "免费开源",
+    "platform": "Python, JavaScript/TypeScript"
+  },
+  {
     "name": "OpenAI Agents SDK",
     "slug": "openai-agents-sdk",
     "emoji": "🤖",
@@ -9235,6 +9267,41 @@ window.__ALL_TOOLS__ = [
     "url": "https://augmentcode.com",
     "price": "免费版可用，Pro版$19/月",
     "platform": "VS Code、JetBrains IDEs、Neovim、Vim"
+  },
+  {
+    "name": "Qoder",
+    "slug": "qoder",
+    "emoji": "💻",
+    "color": "#6366F1",
+    "description": "Qoder是由Sana Labs开发的AI编程助手，专注于为开发者提供智能代码生成、补全和调试服务。2026年集成最新的大语言模型，支持多语言编程和项目级代码理解，帮助开发者提升编码效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码生成"
+      },
+      {
+        "text": "编程助手"
+      },
+      {
+        "text": "AI代码补全"
+      },
+      {
+        "text": "开发者工具",
+        "type": "free"
+      },
+      {
+        "text": "Sana Labs"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://qoder.ai",
+    "price": "免费版和专业版，专业版$19/月",
+    "platform": "VS Code、JetBrains IDEs、Visual Studio、Chrome、Firefox"
   },
   {
     "name": "Cline",
@@ -9628,6 +9695,44 @@ window.__ALL_TOOLS__ = [
     "url": "https://github.com/spark-tts/spark-tts",
     "price": "免费开源",
     "platform": "Web/API/桌面端"
+  },
+  {
+    "name": "GPT-SoVITS",
+    "slug": "gpt-sovits",
+    "emoji": "🎙️",
+    "color": "#8B5CF6",
+    "description": "开源的零样本语音克隆与合成工具，仅需5-10秒音频即可克隆声音并生成自然流畅的语音内容。支持中英文等多种语言，2026年持续更新优化推理速度与音质。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "语音克隆"
+      },
+      {
+        "text": "TTS"
+      },
+      {
+        "text": "零样本合成"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "声音合成"
+      },
+      {
+        "text": "AI语音",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://github.com/RVC-Boss/GPT-SoVITS",
+    "price": "免费开源",
+    "platform": "Windows/Mac/Linux"
   },
   {
     "name": "F5-TTS",
@@ -18440,6 +18545,38 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web / VS Code / JetBrains / CLI"
   },
   {
+    "name": "LangGraph",
+    "slug": "langgraph",
+    "emoji": "🔗",
+    "color": "#7C3AED",
+    "description": "LangGraph 是由 LangChain 团队构建的开源框架，专门用于创建具有状态的多代理应用程序和工作流。它支持循环和分支逻辑，使开发者能够构建复杂的、可控的 AI 代理系统。2026年已支持更细粒度的代理编排和增强的持久化能力。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "多代理系统"
+      },
+      {
+        "text": "工作流编排"
+      },
+      {
+        "text": "状态管理"
+      },
+      {
+        "text": "开源框架",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://langchain-ai.github.io/langgraph/",
+    "price": "免费开源",
+    "platform": "Python, JavaScript/TypeScript"
+  },
+  {
     "name": "OpenAI Agents SDK",
     "slug": "openai-agents-sdk",
     "emoji": "🤖",
@@ -18702,6 +18839,41 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://augmentcode.com",
     "price": "免费版可用，Pro版$19/月",
     "platform": "VS Code、JetBrains IDEs、Neovim、Vim"
+  },
+  {
+    "name": "Qoder",
+    "slug": "qoder",
+    "emoji": "💻",
+    "color": "#6366F1",
+    "description": "Qoder是由Sana Labs开发的AI编程助手，专注于为开发者提供智能代码生成、补全和调试服务。2026年集成最新的大语言模型，支持多语言编程和项目级代码理解，帮助开发者提升编码效率。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码生成"
+      },
+      {
+        "text": "编程助手"
+      },
+      {
+        "text": "AI代码补全"
+      },
+      {
+        "text": "开发者工具",
+        "type": "free"
+      },
+      {
+        "text": "Sana Labs"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://qoder.ai",
+    "price": "免费版和专业版，专业版$19/月",
+    "platform": "VS Code、JetBrains IDEs、Visual Studio、Chrome、Firefox"
   },
   {
     "name": "Cline",
@@ -19095,6 +19267,44 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://github.com/spark-tts/spark-tts",
     "price": "免费开源",
     "platform": "Web/API/桌面端"
+  },
+  {
+    "name": "GPT-SoVITS",
+    "slug": "gpt-sovits",
+    "emoji": "🎙️",
+    "color": "#8B5CF6",
+    "description": "开源的零样本语音克隆与合成工具，仅需5-10秒音频即可克隆声音并生成自然流畅的语音内容。支持中英文等多种语言，2026年持续更新优化推理速度与音质。",
+    "category": "AI音频",
+    "tags": [
+      {
+        "text": "语音克隆"
+      },
+      {
+        "text": "TTS"
+      },
+      {
+        "text": "零样本合成"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "声音合成"
+      },
+      {
+        "text": "AI语音",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://github.com/RVC-Boss/GPT-SoVITS",
+    "price": "免费开源",
+    "platform": "Windows/Mac/Linux"
   },
   {
     "name": "F5-TTS",

@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Qwen-Agent",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://github.com/QwenLM/Qwen-Agent",
+  "image": "https://www.aitoollab.cn/images/og/qwen-agent-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI开发",
   "operatingSystem": "Web/API/Python",
   "description": "阿里巴巴开源的AI Agent开发框架，基于通义千问2.5大模型构建，提供多模态理解、工具调用和智能体编排能力。2026年持续更新增强了多智能体协作和自动化工作流功能。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000"
+    "ratingValue": 4.5,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Qwen-Agent",
+    "name": "Agent",
     "url": "https://github.com/QwenLM/Qwen-Agent"
   },
   "featureList": [
@@ -84,6 +89,33 @@
     "RAG检索增强",
     "自动化工作流编排",
     "MCP协议支持"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "dify",
+      "url": "https://www.aitoollab.cn/tools/dify/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "coze",
+      "url": "https://www.aitoollab.cn/tools/coze/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "langchain",
+      "url": "https://www.aitoollab.cn/tools/langchain/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "通义千问",
+      "url": "https://www.aitoollab.cn/tools/通义千问/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "langgraph",
+      "url": "https://www.aitoollab.cn/tools/langgraph/"
+    }
   ],
   "abstract": "阿里巴巴开源的AI Agent开发框架，基于通义千问2.5大模型构建，提供多模态理解、工具调用和智能体编排能力。2026年持续更新增强了多智能体协作和自动化工作流功能。",
   "speakable": {
@@ -99,12 +131,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "基于强大的Qwen 2.5模型，提供一流的语言理解和生成能力"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "开源免费，社区活跃，文档完善"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持多模态理解，可处理图像、音频等多种输入"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "内置丰富的工具调用和智能体编排能力"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "与阿里云服务深度集成，部署便捷"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "对硬件要求较高，需要GPU资源支持"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "中文文档相对英文版本不够完整"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "生态系统相比LangChain等还有提升空间"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +204,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +238,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费开源</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web/API/Python</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI开发</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://github.com/QwenLM/Qwen-Agent" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://github.com/QwenLM/Qwen-Agent" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -344,16 +427,16 @@ var _hmt = _hmt || [];
                 <span class="rel-tool-icon" style="background:#6B46C1;">⛓️</span>
                 <a href="/tools/langchain/">LangChain</a> <span class="rel-tag free">免费</span>
             </li><li class="rel-tool-item">
+                <span class="rel-tool-icon" style="background:#7C3AED;">🔗</span>
+                <a href="/tools/langgraph/">LangGraph</a> <span class="rel-tag free">免费</span>
+            </li><li class="rel-tool-item">
                 <span class="rel-tool-icon" style="background:#6366F1;">🤖</span>
                 <a href="/tools/ag2/">AG2</a> <span class="rel-tag free">免费</span>
-            </li><li class="rel-tool-item">
-                <span class="rel-tool-icon" style="background:#10A37F;">🤖</span>
-                <a href="/tools/openai-agents-sdk/">OpenAI Agents SDK</a>
             </li>
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/china-open-source-ai-wave-june-2026/'>2026年6月国产AI开源大爆发：小米MiMo Code终结编程「失忆</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/china-open-source-ai-wave-june-2026/'>2026年6月国产AI开源大爆发：小米MiMo Code终结编程「失忆</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

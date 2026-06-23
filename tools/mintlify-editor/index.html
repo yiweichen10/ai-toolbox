@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Mintlify Editor",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://mintlify.com",
+  "image": "https://www.aitoollab.cn/images/og/mintlify-editor-og.png",
+  "applicationCategory": "WritingApplication",
+  "applicationSubCategory": "AI写作",
   "operatingSystem": "Web端",
   "description": "Mintlify Editor是一款由AI驱动的智能文档编写平台，专注于帮助开发团队创建、维护和优化技术文档。2026年推出的最新版本增强了AI自动补全功能和协作编辑体验，支持一键生成API文档，成为开发者文档领域的热门选择。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Mintlify Editor免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "49",
+      "priceCurrency": "USD",
+      "description": "Mintlify Editor付费版：免费版可用，专业版$49/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.4",
-    "ratingCount": "85K"
+    "ratingValue": 4.4,
+    "ratingCount": 85000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Mintlify Editor",
+    "name": "专注于帮助",
     "url": "https://mintlify.com"
   },
   "featureList": [
@@ -84,6 +96,23 @@
     "版本历史管理与分支支持",
     "自定义域名和品牌定制",
     "SEO优化和文档搜索功能"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "gitbook",
+      "url": "https://www.aitoollab.cn/tools/gitbook/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "readme",
+      "url": "https://www.aitoollab.cn/tools/readme/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "docusaurus",
+      "url": "https://www.aitoollab.cn/tools/docusaurus/"
+    }
   ],
   "abstract": "Mintlify Editor是一款由AI驱动的智能文档编写平台，专注于帮助开发团队创建、维护和优化技术文档。2026年推出的最新版本增强了AI自动补全功能和协作编辑体验，支持一键生成API文档，成为开发者文档领域的热门选择。",
   "speakable": {
@@ -99,12 +128,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.4,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI智能补全功能强大，大幅提升文档编写效率"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "自动识别代码并生成规范的API文档"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持Markdown格式，兼容主流版本控制系统"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "团队协作功能完善，支持多人实时编辑"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "提供丰富的文档模板和主题定制选项"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "付费版本价格相对较高，中小企业成本压力大"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "自定义主题需要一定的代码能力"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "离线编辑支持有限，依赖网络连接"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "与部分CI/CD工具集成不够顺畅"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +206,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +240,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，专业版$49/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web端</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI写作</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://mintlify.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://mintlify.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

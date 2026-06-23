@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Grain",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://grain.com",
+  "image": "https://www.aitoollab.cn/images/og/grain-og.png",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "AI办公",
   "operatingSystem": "Web、iOS、Android、Chrome扩展、Slack、Zoom",
   "description": "Grain是一款AI驱动的会议智能助手，能够自动录制、转录和分析会议内容。2026年最新版本增强了多语言实时翻译和自定义知识库功能，帮助团队更高效地提取会议洞察和行动项。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-03-22",
+  "dateModified": "2026-03-29",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Grain免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "16",
+      "priceCurrency": "USD",
+      "description": "Grain付费版：免费版可用，Pro版$16/月，团队版$35/人/月"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000"
+    "ratingValue": 4.5,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -89,6 +101,33 @@
     "自定义会议模板",
     "自动生成会议纪要邮件"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "otter-ai",
+      "url": "https://www.aitoollab.cn/tools/otter-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "notion-ai",
+      "url": "https://www.aitoollab.cn/tools/notion-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "descript",
+      "url": "https://www.aitoollab.cn/tools/descript/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "fireflies-ai",
+      "url": "https://www.aitoollab.cn/tools/fireflies-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "zoom",
+      "url": "https://www.aitoollab.cn/tools/zoom/"
+    }
+  ],
   "abstract": "Grain是一款AI驱动的会议智能助手，能够自动录制、转录和分析会议内容。2026年最新版本增强了多语言实时翻译和自定义知识库功能，帮助团队更高效地提取会议洞察和行动项。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -103,12 +142,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "自动录制和转录 Zoom、Google Meet、Teams 会议"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI 智能提取关键信息、行动项和决策"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持多语言实时翻译，覆盖 30+ 语言"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "一键生成会议摘要和要点笔记"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "与 Notion、Slack、Salesforce 等工具深度集成"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版功能受限，仅支持 5 次会议/月"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "对非英语会议的转录准确度略低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "部分高级分析功能仅在企业版可用"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "依赖网络连接，离线使用体验不佳"
+        }
+      ]
     }
   }
 }</script>
@@ -126,7 +220,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -160,9 +254,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，Pro版$16/月，团队版$35/人/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web、iOS、Android、Chrome扩展、Slack、Zoom</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI办公</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-03-29" itemprop="dateModified">2026-03-29</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://grain.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://grain.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

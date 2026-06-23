@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Fooocus",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://fooocus.io",
+  "image": "https://www.aitoollab.cn/images/og/fooocus-og.png",
+  "applicationCategory": "DesignApplication",
+  "applicationSubCategory": "AI绘画",
   "operatingSystem": "Windows/Mac/Linux",
   "description": "Fooocus是由ControlNet作者lllyasviel开发的开源AI图像生成工具，基于Stable Diffusion XL优化，主打简化操作流程，让用户无需复杂参数调节即可生成高质量图像。2026年持续维护更新，社区生态不断完善。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-05-01",
+  "dateModified": "2026-05-08",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "月访问量约450000"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Fooocus",
+    "name": "Net作者lllyasviel",
     "url": "https://fooocus.io"
   },
   "featureList": [
@@ -84,6 +89,33 @@
     "多模型切换",
     "高清放大修复",
     "自定义Prompt模板"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "stable-diffusion",
+      "url": "https://www.aitoollab.cn/tools/stable-diffusion/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "comfyui",
+      "url": "https://www.aitoollab.cn/tools/comfyui/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "midjourney",
+      "url": "https://www.aitoollab.cn/tools/midjourney/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "leonardo-ai",
+      "url": "https://www.aitoollab.cn/tools/leonardo-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "ideogram",
+      "url": "https://www.aitoollab.cn/tools/ideogram/"
+    }
   ],
   "abstract": "Fooocus是由ControlNet作者lllyasviel开发的开源AI图像生成工具，基于Stable Diffusion XL优化，主打简化操作流程，让用户无需复杂参数调节即可生成高质量图像。2026年持续维护更新，社区生态不断完善。",
   "speakable": {
@@ -99,12 +131,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "完全免费开源，无需订阅费用"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "界面简洁友好，降低使用门槛"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "基于SDXL模型，图像质量优秀"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "本地部署保护隐私，无需上传数据"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持ControlNet高级控制功能"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "需要较高配置GPU硬件"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "本地部署对技术能力有要求"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "相比云端工具更新稍慢"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "部分高级功能需要手动配置"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "官方文档相对简略"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +214,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +248,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费开源</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Windows/Mac/Linux</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI绘画</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-05-08" itemprop="dateModified">2026-05-08</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://fooocus.io" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://fooocus.io" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

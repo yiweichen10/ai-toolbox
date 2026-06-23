@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Seedance",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://seed.bytedance.com/zh/seedance2_0",
+  "image": "https://www.aitoollab.cn/images/og/seedance-og.png",
+  "applicationCategory": "VideoEditingApplication",
+  "applicationSubCategory": "AI视频",
   "operatingSystem": "网页/App/API",
   "description": "字节跳动Seed实验室推出的AI视频生成模型，支持文生视频、图生视频。Seedance 2.0采用多模态音视频联合生成架构，支持文字/图片/音频/视频四种输入，可生成2K影院级画质视频，最长15秒，支持原生音画同步。免费用户可通过即梦/Dreamina平台每日生成。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-03-22",
+  "dateModified": "2026-03-29",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "ratingCount": "8.20000"
+    "ratingValue": 4.7,
+    "ratingCount": 82000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Seedance",
+    "name": "字节跳动Seed实验室",
     "url": "https://seed.bytedance.com/zh/seedance2_0"
   },
   "featureList": [
@@ -86,6 +91,33 @@
     "多镜头叙事",
     "视频续接",
     "多风格预设"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "runway",
+      "url": "https://www.aitoollab.cn/tools/runway/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "pika",
+      "url": "https://www.aitoollab.cn/tools/pika/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "kling",
+      "url": "https://www.aitoollab.cn/tools/kling/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "sora",
+      "url": "https://www.aitoollab.cn/tools/sora/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "minimax-video",
+      "url": "https://www.aitoollab.cn/tools/minimax-video/"
+    }
   ],
   "abstract": "字节跳动Seed实验室推出的AI视频生成模型，支持文生视频、图生视频。Seedance 2.0采用多模态音视频联合生成架构，支持文字/图片/音频/视频四种输入，可生成2K影院级画质视频，最长15秒，支持原生音画同步。免费用户可通过即梦/Dreamina平台每日生成。",
   "speakable": {
@@ -101,12 +133,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.7,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费额度慷慨（即梦每日225代币）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "2K影院级画质"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "原生音画同步"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持多模态输入（文字/图片/音频/视频）"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "国内直接使用，无需科学上网"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版高峰期排队15-30分钟"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "单次最长仅15秒"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "音频生成积分消耗翻倍"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "参考图/视频输入额外消耗20-50%积分"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "失败生成同样消耗积分"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +216,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +250,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费 + 付费</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页/App/API</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI视频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-03-29" itemprop="dateModified">2026-03-29</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://seed.bytedance.com/zh/seedance2_0" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://seed.bytedance.com/zh/seedance2_0" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

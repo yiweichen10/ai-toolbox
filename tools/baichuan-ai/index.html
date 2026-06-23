@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "百川智能",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://www.baichuan-ai.com",
+  "image": "https://www.aitoollab.cn/images/og/baichuan-ai-og.png",
+  "applicationCategory": "ChatApplication",
+  "applicationSubCategory": "AI对话",
   "operatingSystem": "Web, API",
   "description": "百川智能是由前搜狗CEO王小川创立的中国AI公司，专注于大语言模型的研发与应用。其百川系列模型在中文理解和生成方面表现优异，2026年持续更新迭代，提供API接口和智能对话产品。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-03-22",
+  "dateModified": "2026-03-29",
   "offers": [
     {
       "@type": "Offer",
@@ -65,15 +68,17 @@
     {
       "@type": "Offer",
       "name": "付费版",
-      "price": "80",
+      "price": "0",
       "priceCurrency": "USD",
-      "description": "百川智能付费版全功能：新用户赠¥80额度，API按token计费（Baichuan4-Air¥0.00098/千token起）"
+      "description": "百川智能付费版：新用户赠¥80额度，API按token计费（Baichuan4-Air¥0.00098/千token起）"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.2",
-    "ratingCount": "1500000/月"
+    "ratingValue": 4.2,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -92,6 +97,33 @@
     "多轮对话支持",
     "代码辅助生成"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "kimi",
+      "url": "https://www.aitoollab.cn/tools/kimi/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "文心一言",
+      "url": "https://www.aitoollab.cn/tools/文心一言/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "智谱清言",
+      "url": "https://www.aitoollab.cn/tools/智谱清言/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "千问",
+      "url": "https://www.aitoollab.cn/tools/千问/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "腾讯混元",
+      "url": "https://www.aitoollab.cn/tools/腾讯混元/"
+    }
+  ],
   "abstract": "百川智能是由前搜狗CEO王小川创立的中国AI公司，专注于大语言模型的研发与应用。其百川系列模型在中文理解和生成方面表现优异，2026年持续更新迭代，提供API接口和智能对话产品。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -106,12 +138,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.2,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "中文理解能力强，生成内容符合中文语境"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "响应速度快，推理效率高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "提供免费Web版本供用户体验"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "API接口完善，文档详尽易上手"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "持续更新迭代，模型能力不断增强"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "相比国际顶级大模型仍有提升空间"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "某些垂直专业领域知识覆盖有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "生态系统相对国际竞品还不够丰富"
+        }
+      ]
     }
   }
 }</script>
@@ -129,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -163,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：新用户赠¥80额度，API按token计费（Baichuan4-Air¥0.00098/千token起）</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web, API</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI对话</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-03-29" itemprop="dateModified">2026-03-29</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://www.baichuan-ai.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://www.baichuan-ai.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

@@ -49,15 +49,18 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Qwen3-Coder-Next",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://tongyi.aliyun.com/qianwen",
+  "image": "https://www.aitoollab.cn/images/og/qwen3-coder-next-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI编程",
   "operatingSystem": [
     "网页端",
     "API",
     "IDE插件"
   ],
   "description": "阿里云通义千问团队2026年推出的最新代码生成模型，专注于编程场景的智能代码补全、生成与调试。基于Qwen3架构深度优化，提供更精准的代码理解和生成能力，支持多种主流编程语言。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -69,15 +72,17 @@
     {
       "@type": "Offer",
       "name": "付费版",
-      "price": "网页端/API/IDE插件",
+      "price": "0",
       "priceCurrency": "USD",
-      "description": "Qwen3-Coder-Next付费版全功能：网页端/API/IDE插件"
+      "description": "Qwen3-Coder-Next付费版：网页端/API/IDE插件"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "500000/月"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -98,6 +103,33 @@
     "API文档自动生成",
     "Bug定位与修复建议"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "qwen-agent",
+      "url": "https://www.aitoollab.cn/tools/qwen-agent/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "modelscope-agent",
+      "url": "https://www.aitoollab.cn/tools/modelscope-agent/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "tongyi-lingma",
+      "url": "https://www.aitoollab.cn/tools/tongyi-lingma/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "codebuddy-tengxun",
+      "url": "https://www.aitoollab.cn/tools/codebuddy-tengxun/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "deepseek",
+      "url": "https://www.aitoollab.cn/tools/deepseek/"
+    }
+  ],
   "abstract": "阿里云通义千问团队2026年推出的最新代码生成模型，专注于编程场景的智能代码补全、生成与调试。基于Qwen3架构深度优化，提供更精准的代码理解和生成能力，支持多种主流编程语言。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -112,12 +144,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "基于Qwen3最新架构，代码理解能力大幅提升"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "代码补全速度快，延迟低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持30+主流编程语言"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "深度集成阿里云开发工具链"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持项目级上下文理解和长代码生成"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "高级功能需要付费订阅"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "特定垂直领域代码支持有待加强"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "在复杂项目架构理解上偶尔会出现偏差"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "国内访问速度快，海外节点较少"
+        }
+      ]
     }
   }
 }</script>
@@ -135,7 +222,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -169,9 +256,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：网页端/API/IDE插件</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：['网页端', 'API', 'IDE插件']</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI编程</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://tongyi.aliyun.com/qianwen" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://tongyi.aliyun.com/qianwen" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

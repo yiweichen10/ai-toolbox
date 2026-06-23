@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Augment Code",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://augmentcode.com",
+  "image": "https://www.aitoollab.cn/images/og/augment-code-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI编程",
   "operatingSystem": "VS Code、JetBrains IDEs、Neovim、Vim",
   "description": "Augment Code是一款专注于软件开发的人工智能编程助手，通过先进的代码理解和生成能力，帮助开发者更高效地编写、调试和优化代码。2026年最新版本增强了代码解释、多文件分析和自动化重构功能，成为程序员提升生产力的热门选择。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Augment Code免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "19",
+      "priceCurrency": "USD",
+      "description": "Augment Code付费版：免费版可用，Pro版$19/月"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "850000"
+    "ratingValue": 4.6,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Augment Code",
+    "name": "Code是一款专注于软件",
     "url": "https://augmentcode.com"
   },
   "featureList": [
@@ -86,6 +98,33 @@
     "代码片段生成",
     "单元测试自动生成",
     "API文档生成"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "github-copilot",
+      "url": "https://www.aitoollab.cn/tools/github-copilot/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "cursor",
+      "url": "https://www.aitoollab.cn/tools/cursor/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "claude-code",
+      "url": "https://www.aitoollab.cn/tools/claude-code/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "tabnine",
+      "url": "https://www.aitoollab.cn/tools/tabnine/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "replit-ai",
+      "url": "https://www.aitoollab.cn/tools/replit-ai/"
+    }
   ],
   "abstract": "Augment Code是一款专注于软件开发的人工智能编程助手，通过先进的代码理解和生成能力，帮助开发者更高效地编写、调试和优化代码。2026年最新版本增强了代码解释、多文件分析和自动化重构功能，成为程序员提升生产力的热门选择。",
   "speakable": {
@@ -101,12 +140,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "智能代码补全和生成能力强"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持多种主流编程语言"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "与VS Code等IDE深度集成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "代码解释和文档生成功能实用"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "多文件上下文理解能力强"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版功能有一定限制"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "某些小众语言支持欠佳"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "需要网络连接才能使用"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "国内访问速度可能不稳定"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +218,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +252,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，Pro版$19/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：VS Code、JetBrains IDEs、Neovim、Vim</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI编程</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://augmentcode.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://augmentcode.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Mureka",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://mureka.ai",
+  "image": "https://www.aitoollab.cn/images/og/mureka-og.png",
+  "applicationCategory": "MusicApplication",
+  "applicationSubCategory": "AI音频",
   "operatingSystem": "网页端、iOS、Android",
   "description": "Mureka是一款专注于AI音乐生成的创新工具，用户可以通过简单的文本描述或提示词创建原创音乐作品。2026年，Mureka增强了多轨道编辑功能和商业版权授权服务，成为独立音乐人和内容创作者的首选音乐生成平台。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Mureka免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "9.99",
+      "priceCurrency": "USD",
+      "description": "Mureka付费版：免费版每月50积分，专业版$9.99/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000"
+    "ratingValue": 4.5,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,33 @@
     "一键生成专辑封面",
     "批量导出多版本"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "suno",
+      "url": "https://www.aitoollab.cn/tools/suno/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "udio",
+      "url": "https://www.aitoollab.cn/tools/udio/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "boomy",
+      "url": "https://www.aitoollab.cn/tools/boomy/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "mubert",
+      "url": "https://www.aitoollab.cn/tools/mubert/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "aiva",
+      "url": "https://www.aitoollab.cn/tools/aiva/"
+    }
+  ],
   "abstract": "Mureka是一款专注于AI音乐生成的创新工具，用户可以通过简单的文本描述或提示词创建原创音乐作品。2026年，Mureka增强了多轨道编辑功能和商业版权授权服务，成为独立音乐人和内容创作者的首选音乐生成平台。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +138,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "生成速度快，最快30秒完成一首完整曲目"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持多种音乐风格，包括电子、流行、古典、爵士等"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "提供高质量音频输出，最高支持320kbps"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "音乐可直接用于商业项目，提供完整版权授权"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "界面简洁易用，无需音乐专业知识即可上手"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版功能受限，高级风格需要付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "部分复杂编曲细节处理不如人工制作精细"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "对中文提示词的理解和响应有时不够准确"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "批量生成时需要等待排队"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +216,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +250,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版每月50积分，专业版$9.99/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端、iOS、Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI音频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://mureka.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://mureka.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

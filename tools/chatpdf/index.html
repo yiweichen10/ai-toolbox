@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "ChatPDF",
+  "url": "https://chatpdf.com",
+  "image": "https://www.aitoollab.cn/images/og/chatpdf-og.png",
   "applicationCategory": "ProductivityApplication",
+  "applicationSubCategory": "AI效率",
   "operatingSystem": "网页版（支持移动端）",
   "description": "ChatPDF是一个AI驱动的文档阅读助手，可以让你像与真人对话一样与PDF文档交流。2026年已支持多文档同时分析、跨文档问答、智能摘要提取等高级功能，成为科研人员、学生和职场人士处理学术论文和报告的高效工具。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "ChatPDF免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "5",
+      "priceCurrency": "USD",
+      "description": "ChatPDF付费版：免费版每天3个PDF，付费版$5/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "8500000"
+    "ratingValue": 4.5,
+    "ratingCount": 8500000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,23 @@
     "目录导航跳转",
     "跨语言支持"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "perplexity",
+      "url": "https://www.aitoollab.cn/tools/perplexity/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "notion-ai",
+      "url": "https://www.aitoollab.cn/tools/notion-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "gamma",
+      "url": "https://www.aitoollab.cn/tools/gamma/"
+    }
+  ],
   "abstract": "ChatPDF是一个AI驱动的文档阅读助手，可以让你像与真人对话一样与PDF文档交流。2026年已支持多文档同时分析、跨文档问答、智能摘要提取等高级功能，成为科研人员、学生和职场人士处理学术论文和报告的高效工具。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +128,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "支持直接问答PDF内容，快速定位关键信息"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "可同时分析多个PDF文档并进行跨文档比较"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "自动生成文档摘要和要点提炼"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持中文、英文等100+语言文档"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "界面简洁易用，无需注册即可体验基础功能"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版有每日上传数量限制"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "对扫描版PDF支持有限，需要OCR预处理"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "无法处理加密或受保护的PDF文件"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "复杂图表和公式解析能力有待提升"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "离线使用功能受限"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版每天3个PDF，付费版$5/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页版（支持移动端）</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI效率</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://chatpdf.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://chatpdf.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -332,7 +422,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/ai-prompt-engineering-guide-500-tests/'>AI提示词工程实战指南：我测试了500组提示词，这8个技巧让输出质量从</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/ai-prompt-engineering-guide-500-tests/'>AI提示词工程实战指南：我测试了500组提示词，这8个技巧让输出质量从</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

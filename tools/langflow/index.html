@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Langflow",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://langflow.org",
+  "image": "https://www.aitoollab.cn/images/og/langflow-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI开发",
   "operatingSystem": "Web/桌面端/云服务",
   "description": "Langflow是一个开源的可视化AI工作流构建平台，基于LangChain构建，提供拖拽式界面帮助开发者快速创建复杂的LLM应用程序。2026年最新版本增强了多模态支持和企业级部署功能，已成为AI应用开发领域的主流工具之一。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Langflow免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "49",
+      "priceCurrency": "USD",
+      "description": "Langflow付费版：免费社区版 + Pro版$49/月"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "850000"
+    "ratingValue": 4.6,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Langflow",
+    "name": "提供拖拽式界面帮助",
     "url": "https://langflow.org"
   },
   "featureList": [
@@ -84,6 +96,33 @@
     "API一键导出部署",
     "组件市场扩展",
     "实时预览调试"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "langchain",
+      "url": "https://www.aitoollab.cn/tools/langchain/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "coze",
+      "url": "https://www.aitoollab.cn/tools/coze/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "dify",
+      "url": "https://www.aitoollab.cn/tools/dify/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "n8n",
+      "url": "https://www.aitoollab.cn/tools/n8n/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "flowise",
+      "url": "https://www.aitoollab.cn/tools/flowise/"
+    }
   ],
   "abstract": "Langflow是一个开源的可视化AI工作流构建平台，基于LangChain构建，提供拖拽式界面帮助开发者快速创建复杂的LLM应用程序。2026年最新版本增强了多模态支持和企业级部署功能，已成为AI应用开发领域的主流工具之一。",
   "speakable": {
@@ -99,12 +138,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "拖拽式可视化界面，降低AI应用开发门槛"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "完全开源透明，可自定义扩展"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "内置丰富的预置组件和模板库"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持主流大模型无缝切换集成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "活跃的社区生态和持续更新"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "相比纯代码方案灵活性略受限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "复杂工作流性能可能受影响"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "企业版功能需要付费"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费社区版 + Pro版$49/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web/桌面端/云服务</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI开发</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://langflow.org" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://langflow.org" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -350,7 +440,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/china-open-source-ai-wave-june-2026/'>2026年6月国产AI开源大爆发：小米MiMo Code终结编程「失忆</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/china-open-source-ai-wave-june-2026/'>2026年6月国产AI开源大爆发：小米MiMo Code终结编程「失忆</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

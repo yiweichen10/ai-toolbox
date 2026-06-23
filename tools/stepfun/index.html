@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "阶跃星辰",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://www.stepfun.com",
+  "image": "https://www.aitoollab.cn/images/og/stepfun-og.png",
+  "applicationCategory": "ChatApplication",
+  "applicationSubCategory": "AI对话",
   "operatingSystem": "Web / API",
   "description": "阶跃星辰（StepFun）是由前百度高管李开复创立的中国AI初创公司，专注于大型语言模型和多模态模型的研发。2025年推出Step-2大模型，参数规模达万亿级别，在数学推理和代码生成方面表现突出。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-04-30",
+  "dateModified": "2026-05-07",
   "offers": [
     {
       "@type": "Offer",
@@ -65,15 +68,17 @@
     {
       "@type": "Offer",
       "name": "付费版",
-      "price": "API按调用计费",
+      "price": "0",
       "priceCurrency": "USD",
-      "description": "阶跃星辰付费版全功能：API按调用计费"
+      "description": "阶跃星辰付费版：API按调用计费"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "350000"
+    "ratingValue": 4.3,
+    "ratingCount": 350000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -92,6 +97,33 @@
     "长文本处理",
     "API接口开放"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "wenxin-yiyan",
+      "url": "https://www.aitoollab.cn/tools/wenxin-yiyan/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "qianwen",
+      "url": "https://www.aitoollab.cn/tools/qianwen/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "zhipu-qingyan",
+      "url": "https://www.aitoollab.cn/tools/zhipu-qingyan/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "minimax",
+      "url": "https://www.aitoollab.cn/tools/minimax/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "deepseek",
+      "url": "https://www.aitoollab.cn/tools/deepseek/"
+    }
+  ],
   "abstract": "阶跃星辰（StepFun）是由前百度高管李开复创立的中国AI初创公司，专注于大型语言模型和多模态模型的研发。2025年推出Step-2大模型，参数规模达万亿级别，在数学推理和代码生成方面表现突出。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -106,12 +138,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "万亿参数Step-2大模型，技术实力强"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "多模态能力强，支持图像理解和生成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "在数学推理和代码生成方面表现优异"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "团队背景强大，核心成员来自顶级科技公司"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持API接入，便于开发者集成"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "产品知名度相对较低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "生态建设还在早期阶段"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "相比竞品产品化程度有待提升"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "中文语料训练可能不如国内大厂丰富"
+        }
+      ]
     }
   }
 }</script>
@@ -129,7 +216,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -163,9 +250,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：API按调用计费</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web / API</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI对话</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-05-07" itemprop="dateModified">2026-05-07</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://www.stepfun.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://www.stepfun.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Headlime",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://headlime.com",
+  "image": "https://www.aitoollab.cn/images/og/headlime-og.png",
+  "applicationCategory": "WritingApplication",
+  "applicationSubCategory": "AI写作",
   "operatingSystem": "网页端",
   "description": "Headlime是一款专注于营销文案和广告标题生成的AI写作工具，利用先进的语言模型帮助用户快速创作吸引眼球的标题和广告文案。2026年版本增强了多语言支持和行业特定模板库，显著提升文案转化率。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-03-22",
+  "dateModified": "2026-03-29",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Headlime免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "29",
+      "priceCurrency": "USD",
+      "description": "Headlime付费版：免费版可用，专业版$29/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "450000"
+    "ratingValue": 4.5,
+    "ratingCount": 450000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -85,6 +97,28 @@
     "文案风格自定义",
     "A/B测试文案建议"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "copy-ai",
+      "url": "https://www.aitoollab.cn/tools/copy-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "jasper",
+      "url": "https://www.aitoollab.cn/tools/jasper/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "writesonic",
+      "url": "https://www.aitoollab.cn/tools/writesonic/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "quillbot",
+      "url": "https://www.aitoollab.cn/tools/quillbot/"
+    }
+  ],
   "abstract": "Headlime是一款专注于营销文案和广告标题生成的AI写作工具，利用先进的语言模型帮助用户快速创作吸引眼球的标题和广告文案。2026年版本增强了多语言支持和行业特定模板库，显著提升文案转化率。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -99,12 +133,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "标题生成效率高，10秒内可产出数十个创意标题"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "内置2000+行业模板，覆盖电商、教育、科技等多个领域"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持多语言文案生成，包括中英日韩等主流语言"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "AI智能优化功能可根据反馈自动调整文案风格"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "团队协作功能支持多人实时编辑和版本管理"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版每日生成数量有限制，高级功能需付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "对中国本土化营销文案的理解有时不够精准"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "长篇文案生成质量不如专业长文写作工具"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "缺乏与其他营销工具的直接集成"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，专业版$29/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI写作</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-03-29" itemprop="dateModified">2026-03-29</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://headlime.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://headlime.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

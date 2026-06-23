@@ -95,7 +95,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.header h1 {
+.header h1, .header .site-logo {
   font-size: 22px;
   font-weight: 800;
   background: var(--bg-gradient);
@@ -108,7 +108,7 @@ body {
   letter-spacing: -0.5px;
   white-space: nowrap;
 }
-.header h1 span {
+.header h1 span, .header .site-logo span {
   font-size: 12px;
   font-weight: 500;
   -webkit-text-fill-color: var(--text-muted);
@@ -411,7 +411,7 @@ body {
   flex-shrink: 0;
   box-shadow: 0 0 0 6px color-mix(in srgb, currentColor 12%, transparent);
 }
-.cat-section .section-header h3 {
+.cat-section .section-header h2, .cat-section .section-header h3 {
   font-size: 22px;
   font-weight: 800;
   letter-spacing: -0.3px;
@@ -446,9 +446,9 @@ body {
   letter-spacing: 0.8px;
   font-weight: 700;
 }
-.today-section .section-header h3 span { background: #dcfce7; color: #16a34a; }
-.hot-section   .section-header h3 span { background: #ffedd5; color: #ea580c; }
-.all-section   .section-header h3 span { background: #ede9fe; color: var(--primary); }
+.today-section .section-header h2 span, .today-section .section-header h3 span { background: #dcfce7; color: #16a34a; }
+.hot-section   .section-header h2 span, .hot-section   .section-header h3 span { background: #ffedd5; color: #ea580c; }
+.all-section   .section-header h2 span, .all-section   .section-header h3 span { background: #ede9fe; color: var(--primary); }
 .tool-count { font-size: 13px; color: var(--text-muted); font-weight: 500; }
 .section a {
   color: var(--primary);
@@ -466,6 +466,11 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 20px;
+}
+.tool-card-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 .tool-card {
   background: var(--surface);
@@ -506,7 +511,7 @@ body {
   margin-bottom: 12px;
   flex-shrink: 0;
 }
-.tool-card h4 {
+.tool-card h3, .tool-card h4 {
   font-size: 16px;
   margin-bottom: 6px;
   color: var(--text-main);
@@ -1107,7 +1112,7 @@ body {
   .tools-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
   .tool-card-body { padding: 14px 14px 36px; }
   .tool-icon { width: 44px; height: 44px; font-size: 22px; margin-bottom: 10px; }
-  .tool-card h4 { font-size: 14px; }
+  .tool-card h3, .tool-card h4 { font-size: 14px; }
   .tool-card .desc { font-size: 12.5px; -webkit-line-clamp: 3; }
   .tool-card:hover { transform: none; }
   .tool-card::after { opacity: 0.6; transform: translateX(0); }

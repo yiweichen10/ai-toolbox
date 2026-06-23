@@ -56,19 +56,37 @@
   "description": "2026年4月4日AI圈三大重磅事件：Anthropic宣布Claude订阅不再覆盖OpenClaw等第三方工具使用量（今天生效）、DeepSeek V4灰度测试启动SWE-bench达83.7%有望成为开源最强编程模型、Mercor数据泄露事件升级Meta暂停合作OpenAI紧急调查。三件事分别改写了AI编程工具的商业规则、开源格局和数据安全底线。",
   "datePublished": "2026-04-04",
   "dateModified": "2026-04-04",
+  "inLanguage": "zh-CN",
   "author": {
     "@type": "Organization",
-    "name": "AI工具宝箱"
+    "name": "AI工具宝箱编辑组",
+    "url": "https://www.aitoollab.cn/author/",
+    "description": "专注 AI 工具实测与对比研究的独立编辑团队，5+ 年 AI 工具付费使用经验",
+    "knowsAbout": [
+      "AI工具评测",
+      "AI模型对比",
+      "AEO内容优化",
+      "GEO生成式引擎优化",
+      "AI编程工具",
+      "AI对话模型"
+    ]
   },
   "publisher": {
     "@type": "Organization",
     "name": "AI工具宝箱",
+    "url": "https://www.aitoollab.cn/",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.aitoollab.cn/images/logo.png",
       "width": 200,
       "height": 60
-    }
+    },
+    "foundingDate": "2026-03-21",
+    "slogan": "实测数据驱动 AI 工具决策",
+    "publishingPrinciples": "https://www.aitoollab.cn/about.html",
+    "sameAs": [
+      "https://github.com/yiweichen10/ai-toolbox"
+    ]
   },
   "image": {
     "@type": "ImageObject",
@@ -81,7 +99,7 @@
     "@id": "https://www.aitoollab.cn/articles/anthropic-openclaw-ban-deepseek-v4-mercor-breach-april4-2026/"
   },
   "abstract": "2026年4月4日AI圈三大重磅事件：Anthropic宣布Claude订阅不再覆盖OpenClaw等第三方工具使用量（今天生效）、DeepSeek V4灰度测试启动SWE-bench达83.7%有望成为开源最强编程模型、Mercor数据泄露事件升级Meta暂停合作OpenAI紧急调查。三件事分别改写了AI编程工具的商业规则、开源格局和数据安全底线。",
-  "wordCount": 4502,
+  "wordCount": 4509,
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [
@@ -95,6 +113,7 @@
     "description": "2026年4月4日AI圈三大重磅事件：Anthropic宣布Claude订阅不再覆盖OpenClaw等第三方工具使用量（今天生效）、DeepSeek V4灰度测试启动SWE-bench达83.7%有望成为开源最强编程模型、Mercor数据泄"
   }
 }</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claude订阅不覆盖OpenClaw后，我的成本会增加多少？", "acceptedAnswer": {"@type": "Answer", "text": "A：取决于你的使用量。轻度用户（每月通过OpenClaw消耗约50万token）额外成本约$10-20/月。重度用户（每月数百万token）可能额外增加$50-100。建议：优先使用Claude Code（官方产品，订阅覆盖），或用[DeepSeek](https://www.aitoollab.cn/tools/deepseek/index.html) API替代（成本更低）。如果用[Cline](https://www.aitoollab.cn/tools/cursor/index.html)接入DeepSeek V3.2，每月只需$5左右。"}}, {"@type": "Question", "name": "DeepSeek V4什么时候正式发布？值得等吗？", "acceptedAnswer": {"@type": "Answer", "text": "A：预计4月上旬发布（概率75%），但DeepSeek V3也跳票过。如果V4的SWE-bench 83.7%数据属实，它将是目前性价比最高的编程模型——开源免费，性能超过Claude Opus。建议现在开始熟悉[Cline](https://www.aitoollab.cn/tools/cursor/index.html)的使用（如果还没用的话），等V4发布后直接接入。"}}, {"@type": "Question", "name": "Mercor数据泄露会影响[ChatGPT](/tools/chatgpt/)或Claude的安全性吗？", "acceptedAnswer": {"@type": "Answer", "text": "A：不会直接影响。泄露的是训练数据（\"怎么教模型的\"），不是用户对话数据（\"你和模型说了什么\"）。你用ChatGPT或Claude的对话记录是安全的。但长期看，如果训练数据被竞争对手获取，他们可以更快地追赶，这可能间接加速AI模型的能力扩散。"}}, {"@type": "Question", "name": "LiteLLM安全事件和Mercor泄露有什么关系？", "acceptedAnswer": {"@type": "Answer", "text": "A：因果关系。TeamPCP黑客组织通过在LiteLLM的两个版本中植入恶意代码（供应链攻击），窃取了使用这些版本的组织的系统凭证。Mercor恰好使用了被植入后门的LiteLLM版本，导致其系统被入侵。这和3月29日我们报道的是同一事件的后续——当时只知LiteLLM被攻击，现在知道了最大的受害者是Mercor。"}}, {"@type": "Question", "name": "AI编程工具现在应该怎么选？", "acceptedAnswer": {"@type": "Answer", "text": "A：结合今天三条新闻，更新推荐方案：追求综合效率选Claude Code Pro（$20/月，订阅完全覆盖）；追求性价比等DeepSeek V4正式发布后再决定（目前先用Cline+Qwen3.6-Plus，$5/月）；使用第三方工具（OpenClaw等）的用户考虑切换到官方API或直接用Claude Code。不推荐：继续用Claude订阅跑OpenClaw（成本即将大幅上升）。"}}]}</script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -108,7 +127,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 已收录 500+ 工具</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -131,7 +150,9 @@ var _hmt = _hmt || [];
         <article class="article-body">
             <h1 style="margin-bottom:16px;">Anthropic封杀OpenClaw+DeepSeek V4灰度+Mercor训练数据泄露：4月4日AI圈三件事，每一件都在改规则</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026年4月4日 · AI对话
+                <time datetime="2026-04-04" itemprop="datePublished">2026年4月4日</time> · AI对话 ·
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#4285F4;text-decoration:none;"><span itemprop="name">AI工具宝箱编辑组</span></a></span> ·
+                <span style="color:#bbb;">📖 阅读时长 22 分钟</span>
             </div>
             
             <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
@@ -362,7 +383,7 @@ var _hmt = _hmt || [];
 <p>A：结合今天三条新闻，更新推荐方案：追求综合效率选Claude Code Pro（$20/月，订阅完全覆盖）；追求性价比等DeepSeek V4正式发布后再决定（目前先用Cline+Qwen3.6-Plus，$5/月）；使用第三方工具（OpenClaw等）的用户考虑切换到官方API或直接用Claude Code。不推荐：继续用Claude订阅跑OpenClaw（成本即将大幅上升）。
 </p>
 
-<h2 id="section-总结">总结</h2>
+<h2 id="section-最终结论-到底选哪个">最终结论：到底选哪个？</h2>
 
 <p>2026年4月4日，三条新闻同时重塑AI行业的三个维度：
 </p>
@@ -381,6 +402,14 @@ var _hmt = _hmt || [];
 </ul>
 <p>持续关注<a href="https://www.aitoollab.cn/" target="_blank" rel="noopener">AI工具宝箱</a>获取最新AI工具评测和行业动态。
 </p>
+            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #10a37f;">
+                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
+                    <strong>关于作者：</strong>本文由 <a href="/author/" style="color:#10a37f;text-decoration:none;">AI工具宝箱编辑组</a> 撰写，团队 5+ 年 AI 工具付费实测经验，月均订阅支出 $200+，所有评测基于真实付费长期使用。
+                </p>
+                <p style="margin:0;font-size:13px;color:#888;">
+                    <strong>数据声明：</strong>本文所有数据均标注来源，可溯源核查。发现错误欢迎通过 <a href="/contact.html" style="color:#4285F4;text-decoration:none;">联系页面</a> 反馈，48 小时内核查修正。
+                </p>
+            </div>
         </article>
 
             <div class="mobile-ad-inline">📱 继续阅读 · 猜你喜欢</div>

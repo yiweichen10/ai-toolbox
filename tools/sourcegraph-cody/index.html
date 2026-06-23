@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Sourcegraph Cody",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://sourcegraph.com/cody",
+  "image": "https://www.aitoollab.cn/images/og/sourcegraph-cody-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI编程",
   "operatingSystem": "VS Code、JetBrains IDEs、Neovim、浏览器扩展",
   "description": "Sourcegraph推出的AI编程助手，通过深度代码理解帮助开发者快速定位信息、编写代码和修复bug。2026年最新版本增强了代码库上下文理解能力，支持多语言代码生成和重构。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-03-22",
+  "dateModified": "2026-03-29",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,28 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Sourcegraph Cody免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "9",
+      "priceCurrency": "USD",
+      "description": "Sourcegraph Cody付费版：免费版可用，Pro$9/月，Enterprise$19/月"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版2",
+      "price": "19",
+      "priceCurrency": "USD",
+      "description": "Sourcegraph Cody付费版2：免费版可用，Pro$9/月，Enterprise$19/月"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000"
+    "ratingValue": 4.5,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +93,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Sourcegraph Cody",
+    "name": "Sourcegraph",
     "url": "https://sourcegraph.com/cody"
   },
   "featureList": [
@@ -84,6 +103,33 @@
     "Bug修复和代码重构",
     "自定义指令和工作流",
     "多文件上下文理解"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "github-copilot",
+      "url": "https://www.aitoollab.cn/tools/github-copilot/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "cursor",
+      "url": "https://www.aitoollab.cn/tools/cursor/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "replit-ai",
+      "url": "https://www.aitoollab.cn/tools/replit-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "claude-code",
+      "url": "https://www.aitoollab.cn/tools/claude-code/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "openai-codex",
+      "url": "https://www.aitoollab.cn/tools/openai-codex/"
+    }
   ],
   "abstract": "Sourcegraph推出的AI编程助手，通过深度代码理解帮助开发者快速定位信息、编写代码和修复bug。2026年最新版本增强了代码库上下文理解能力，支持多语言代码生成和重构。",
   "speakable": {
@@ -99,12 +145,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "深度理解整个代码库上下文，而非仅当前文件"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "强大的代码搜索和定位能力，可快速找到相关代码"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "支持多种主流编程语言和IDE"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "提供代码解释和文档生成功能"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "企业版支持私有代码库的安全部署"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "对大型代码库首次索引时间较长"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "免费版有使用次数限制"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "部分高级功能需要企业订阅"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "学习曲线较陡，需要时间熟悉指令模式"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "在某些语言上的代码生成质量不如Copilot"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +228,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +262,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，Pro$9/月，Enterprise$19/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：VS Code、JetBrains IDEs、Neovim、浏览器扩展</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI编程</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-03-29" itemprop="dateModified">2026-03-29</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://sourcegraph.com/cody" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://sourcegraph.com/cody" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

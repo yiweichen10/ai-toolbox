@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Spark-TTS",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://github.com/spark-tts/spark-tts",
+  "image": "https://www.aitoollab.cn/images/og/spark-tts-og.png",
+  "applicationCategory": "MusicApplication",
+  "applicationSubCategory": "AI音频",
   "operatingSystem": "Web/API/桌面端",
   "description": "Spark-TTS是一款开源的零样本文本转语音生成工具，支持多语言、多音色的高质量语音合成。2026年最新版本增加了情感控制功能和实时流式输出能力，适合内容创作者和开发者使用。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "850000"
+    "ratingValue": 4.5,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Spark-TTS",
+    "name": "适合内容创作者和",
     "url": "https://github.com/spark-tts/spark-tts"
   },
   "featureList": [
@@ -84,6 +89,33 @@
     "实时流式输出",
     "CLI命令行工具",
     "API接口集成"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "elevenlabs",
+      "url": "https://www.aitoollab.cn/tools/elevenlabs/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "speechify",
+      "url": "https://www.aitoollab.cn/tools/speechify/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "murf-ai",
+      "url": "https://www.aitoollab.cn/tools/murf-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "cosyvoice",
+      "url": "https://www.aitoollab.cn/tools/cosyvoice/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "chattts",
+      "url": "https://www.aitoollab.cn/tools/chattts/"
+    }
   ],
   "abstract": "Spark-TTS是一款开源的零样本文本转语音生成工具，支持多语言、多音色的高质量语音合成。2026年最新版本增加了情感控制功能和实时流式输出能力，适合内容创作者和开发者使用。",
   "speakable": {
@@ -99,12 +131,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "完全开源免费，可自行部署"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持零样本语音克隆"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "多语言支持包括中文、英文等"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "推理速度快，延迟低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "社区活跃，持续更新迭代"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "需要一定的技术能力部署"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "音色数量相对有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "部分高级功能需要配置GPU"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "缺乏官方商业支持"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +209,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +243,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费开源</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web/API/桌面端</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI音频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://github.com/spark-tts/spark-tts" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://github.com/spark-tts/spark-tts" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

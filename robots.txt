@@ -1,5 +1,52 @@
+# AI 引擎爬虫 - 显式允许（AEO/GEO 优化 2026-06-23）
+# 这些爬虫对 AI 引擎引用你的内容至关重要
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# 默认所有爬虫
 User-agent: *
 Allow: /
-Sitemap: https://www.aitoolbox.hk/sitemap.xml
 
-# AI工具宝箱 - SEO站点地图
+Sitemap: https://www.aitoollab.cn/sitemap.xml

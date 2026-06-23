@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Unitree GD01",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://www.unitree.com",
+  "image": "https://www.aitoollab.cn/images/og/unitree-gd01-og.png",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "AI办公",
   "operatingSystem": "支持平台：Windows/macOS/Linux，配套App支持iOS/Android",
   "description": "宇树科技推出的智能四足机器人教育平台，支持Python和ROS编程，可实现复杂步态控制与AI视觉交互。2026年最新版本强化了自主导航和群体协作能力，广泛应用于高校科研和机器人竞赛领域。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,15 +68,17 @@
     {
       "@type": "Offer",
       "name": "付费版",
-      "price": "9",
+      "price": "0",
       "priceCurrency": "USD",
-      "description": "Unitree GD01付费版全功能：约$9,999起"
+      "description": "Unitree GD01付费版：约$9,999起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "120000"
+    "ratingValue": 4.5,
+    "ratingCount": 120000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -81,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Unitree GD01",
+    "name": "宇树科技",
     "url": "https://www.unitree.com"
   },
   "featureList": [
@@ -93,6 +98,33 @@
     "群机器人协作",
     "ROS/ROS2全支持",
     "Python/C++SDK"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "comfyui",
+      "url": "https://www.aitoollab.cn/tools/comfyui/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "fooocus",
+      "url": "https://www.aitoollab.cn/tools/fooocus/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "topaz-photo-ai",
+      "url": "https://www.aitoollab.cn/tools/topaz-photo-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "upscayl",
+      "url": "https://www.aitoollab.cn/tools/upscayl/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "copilot-microsoft",
+      "url": "https://www.aitoollab.cn/tools/copilot-microsoft/"
+    }
   ],
   "abstract": "宇树科技推出的智能四足机器人教育平台，支持Python和ROS编程，可实现复杂步态控制与AI视觉交互。2026年最新版本强化了自主导航和群体协作能力，广泛应用于高校科研和机器人竞赛领域。",
   "speakable": {
@@ -108,12 +140,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "开源SDK和丰富的API接口，便于二次开发"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持ROS和Python编程，兼容主流机器人框架"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "运动控制精度高，支持多种复杂步态"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "配备深度摄像头和LiDAR，支持SLAM导航"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "模块化设计，配件丰富可扩展性强"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "价格相对较高，不适合个人爱好者"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "需要一定的编程基础才能充分发挥功能"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "中文教程和文档相对较少"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "硬件维护成本较高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "续航时间约2-3小时，需要频繁充电"
+        }
+      ]
     }
   }
 }</script>
@@ -131,7 +223,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -165,9 +257,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：约$9,999起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：支持平台：Windows/macOS/Linux，配套App支持iOS/Android</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI办公</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://www.unitree.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://www.unitree.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

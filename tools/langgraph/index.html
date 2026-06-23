@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LangGraph评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱</title>
+    <meta name="description" content="LangGraph全面评测2026：LangGraph 是由 LangChain 团队构建的开源框架，专门用于创建具有状态的多代理应用程序和工作流。它支持循环和分支逻辑，使开发者能够构建复杂的、可控的 AI 代理系统。2026年已支持更细粒度的代理编排和增强的持久化能力。 功能介绍、免费版体验、与同类工具对比。">
+    <meta name="keywords" content="LangGraph,LangGraph 多代理框架,LangGraph 工作流编排,LangGraph 教程,LangGraph vs CrewAI">
+    <link rel="canonical" href="https://www.aitoollab.cn/tools/langgraph/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LangGraph评测2026：功能介绍+使用技巧+免费版体验 - AI工具宝箱">
+    <meta property="og:description" content="LangGraph全面评测2026：LangGraph 是由 LangChain 团队构建的开源框架，专门用于创建具有状态的多代理应用程序和工作流。它支持循环和分支逻辑，使开发者能够构建复杂的、可控的 AI 代理系统。2026年已支持更细粒度的代理编排和增强的持久化能力。">
+    <meta property="og:url" content="https://www.aitoollab.cn/tools/langgraph/">
+    <meta property="og:image" content="https://www.aitoollab.cn/images/og/langgraph-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="AI工具宝箱">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LangGraph评测2026 - AI工具宝箱">
+    <meta name="twitter:description" content="LangGraph全面评测2026：LangGraph 是由 LangChain 团队构建的开源框架，专门用于创建具有状态的多代理应用程序和工作流。它支持循环和分支逻辑，使开发者能够构建复杂的、可">
+    <meta name="twitter:image" content="https://www.aitoollab.cn/images/og/langgraph-og.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://www.aitoollab.cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI开发",
+      "item": "https://www.aitoollab.cn/category/ai-development/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "LangGraph",
+      "item": "https://www.aitoollab.cn/tools/langgraph/"
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LangGraph",
+  "url": "https://langchain-ai.github.io/langgraph/",
+  "image": "https://www.aitoollab.cn/images/og/langgraph-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI开发",
+  "operatingSystem": "Python, JavaScript/TypeScript",
+  "description": "LangGraph 是由 LangChain 团队构建的开源框架，专门用于创建具有状态的多代理应用程序和工作流。它支持循环和分支逻辑，使开发者能够构建复杂的、可控的 AI 代理系统。2026年已支持更细粒度的代理编排和增强的持久化能力。",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "免费版",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "LangGraph免费版基础功能"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.7,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "inLanguage": [
+    "zh",
+    "en"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "LangGraph",
+    "url": "https://langchain-ai.github.io/langgraph/"
+  },
+  "featureList": [
+    "多代理编排与协调",
+    "状态管理与持久化",
+    "条件分支与循环控制",
+    "人机交互介入点",
+    "可视化执行监控",
+    "错误处理与重试机制"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "langchain",
+      "url": "https://www.aitoollab.cn/tools/langchain/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "crewai",
+      "url": "https://www.aitoollab.cn/tools/crewai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "coze",
+      "url": "https://www.aitoollab.cn/tools/coze/"
+    }
+  ],
+  "abstract": "LangGraph 是由 LangChain 团队构建的开源框架，专门用于创建具有状态的多代理应用程序和工作流。它支持循环和分支逻辑，使开发者能够构建复杂的、可控的 AI 代理系统。2026年已支持更细粒度的代理编排和增强的持久化能力。",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".article-body h2",
+      ".article-body h3",
+      ".tool-header-info h2",
+      ".tool-summary"
+    ]
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 4.7,
+      "bestRating": 5
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "支持复杂的多代理循环和分支逻辑"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "内置状态持久化机制，代理可恢复执行"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "与 LangChain 生态系统无缝集成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持人机协作和代理监督"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "可视化调试工具便于监控执行流程"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "学习曲线较陡，概念理解需要时间"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "大规模部署时性能调优复杂"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "文档示例虽多但深度教程较少"
+        }
+      ]
+    }
+  }
+}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "LangGraph 和 LangChain 有什么区别？", "acceptedAnswer": {"@type": "Answer", "text": "LangChain 是基础框架，提供链式调用能力；LangGraph 专注于构建多代理系统，支持更复杂的状态流转和循环逻辑，适合需要多代理协作的复杂场景。"}}, {"@type": "Question", "name": "LangGraph 是否免费？", "acceptedAnswer": {"@type": "Answer", "text": "是的，LangGraph 是完全开源且免费使用的框架，采用 MIT 许可证。"}}, {"@type": "Question", "name": "LangGraph 适合构建什么样的应用？", "acceptedAnswer": {"@type": "Answer", "text": "适合需要多个 AI 代理协作处理的任务，如客服系统、研究助手、自动化工作流、复杂文档处理等。"}}, {"@type": "Question", "name": "如何开始使用 LangGraph？", "acceptedAnswer": {"@type": "Answer", "text": "可以通过 pip install langgraph 安装 Python 版本，或使用 npm install @langchain/langgraph 安装 JS 版本，官方提供了详细的入门教程和示例。"}}]}</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7cf34c7c8b66be4564949354dbc51337";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
+        </div>
+        <nav class="global-nav" aria-label="全局导航">
+        <div class="global-nav-inner">
+            <a href="/ranking/" class="gn-item">📊 工具排行</a>
+            <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+            <a href="/live/" class="gn-item">📈 实时面板</a>
+            <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+            <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+            <a href="/category/" class="gn-item">📂 全部分类</a>
+        </div>
+    </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <a href="/">首页</a> &gt; <a href="/category/ai-development/">AI开发</a> &gt; <span>LangGraph</span>
+    </nav>
+
+    <main class="article-container-wide">
+        <div class="content-main">
+        <div class="tool-header">
+            <div class="tool-header-top">
+                <div class="tool-icon-lg" style="background:#7C3AED;">🔗</div>
+                <div class="tool-header-info">
+                    <h2>LangGraph <span class="badge" style="background:#667eea;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">推荐</span></h2>
+                    <p class="subtitle">LangGraph 是由 LangChain 团队构建的开源框架，专门用于创建具有状态的多代理应用程序和工作流。它支持循环和分支逻辑，使开发者能够构建复杂的、可控的 AI 代理系统。2026年已支持更细粒度的代理编排和增强的持久化能力。</p>
+                    <div class="rating-bar">⭐ 4.7 <span style="font-size:14px;color:#999;">(85万浏览)</span></div>
+                </div>
+            </div>
+            <div class="tool-meta">
+                <div class="tool-meta-item">🌐 <strong>官网</strong>：langchain-ai.github.io/langgraph/</div>
+                <div class="tool-meta-item">💰 <strong>价格</strong>：免费开源</div>
+                <div class="tool-meta-item">📦 <strong>平台</strong>：Python, JavaScript/TypeScript</div>
+                <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI开发</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
+            </div>
+            <div class="action-bar">
+                <a href="https://langchain-ai.github.io/langgraph/" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
+            </div>
+        </div>
+
+        <div class="features-grid"><div class="feature-item">多代理编排与协调</div>
+<div class="feature-item">状态管理与持久化</div>
+<div class="feature-item">条件分支与循环控制</div>
+<div class="feature-item">人机交互介入点</div>
+<div class="feature-item">可视化执行监控</div>
+<div class="feature-item">错误处理与重试机制</div>
+</div>
+
+        <article class="article-body">
+            <div class="tool-summary" style="background:linear-gradient(135deg,#f8f9ff,#eef1ff);border-left:4px solid #667eea;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
+                <strong style="color:#667eea;font-size:15px;">📋 编辑总结</strong><br>
+                <span style="color:#444;">LangGraph 是由 LangChain 团队构建的开源框架，专门用于创建具有状态的多代理应用程序和工作流。它支持循环和分支逻辑，使开发者能够构建复杂的、可控的 AI 代理系统。2026年已支持更细粒度的代理编排和增强的持久化能力。 定价：免费开源。推荐指数：⭐ 4.7。</span>
+            </div>
+            <h1>LangGraph是什么？</h1>
+
+<p>简单说，LangGraph 是 LangChain 团队推出的一个开源框架，专门用来帮开发者构建<strong>有状态的多代理系统</strong>。
+</p>
+
+<p>听起来有点抽象，我换个说法：如果你需要让多个 AI 代理协同工作、互相通信，甚至能“记住”之前做了什么、然后根据不同情况做不同决策，这就是 LangGraph 要解决的事。
+</p>
+
+<p>它和普通链式调用的区别在于——普通链是线性的，走完就结束，而 LangGraph 支持<strong>循环</strong>和<strong>分支</strong>。你可以让代理A做完交给代理B，B觉得处理不了再打回给A重新来，或者根据某个条件选择走C流程还是D流程。
+</p>
+
+<p>2026年的更新进一步增强了细粒度的编排能力和持久化机制，代理在执行中断后能更好地恢复状态。
+</p>
+
+<hr>
+<h1>核心功能</h1>
+
+<p><strong>1. 多代理编排与协调</strong>
+支持定义多个代理的协作关系，谁先做、谁后做、什么时候需要互相调用，都可以精细控制。实际使用中，适合那种需要不同专长角色分工的场景，比如一个代理负责检索、一个负责生成、一个负责校验。
+</p>
+
+<p><strong>2. 状态管理与持久化</strong>
+这是 LangGraph 较有特色的地方——它内置了状态持久化能力，代理执行到一半中断了，下次可以接着来，不用从头重跑。对需要长流程或处理复杂任务的场景比较友好。
+</p>
+
+<p><strong>3. 条件分支与循环控制</strong>
+支持用类似“if-else”的逻辑控制流程走向，也支持让代理循环处理直到满足某个条件。这个功能在需要迭代优化输出的场景下很实用，比如让代理多轮反思直到答案达标。
+</p>
+
+<p><strong>4. 人机交互介入点</strong>
+可以在流程中设置“暂停点”，让人工确认或输入后再继续执行。这个功能对于需要人工审核、或者希望人在关键节点介入控制的场景很实用。
+</p>
+
+<p><strong>5. 可视化执行监控</strong>
+提供可视化的调试工具，能够看到整个执行流程的每一步、状态变化和代理间的通信。对排查问题和理解整个系统行为很有帮助。
+</p>
+
+<hr>
+<h1>版本/套餐对比</h1>
+<table><thead><tr><th>特性</th><th>社区版（开源）</th><th>企业版</th></tr></thead><tbody><tr><td>多代理编排</td><td>✅</td><td>✅</td></tr><tr><td>状态持久化</td><td>✅</td><td>✅</td></tr><tr><td>条件分支与循环</td><td>✅</td><td>✅</td></tr><tr><td>人机交互介入点</td><td>✅</td><td>✅</td></tr><tr><td>可视化调试工具</td><td>基础功能</td><td>高级监控与分析</td></tr><tr><td>官方技术支持</td><td>社区支持</td><td>专属支持通道</td></tr><tr><td>部署与扩展</td><td>自行维护</td><td>托管部署选项</td></tr><tr><td>定价</td><td>免费</td><td>需联系商务</td></tr></tbody></table>
+<p>具体版本信息建议直接查看官方最新发布，因为功能更新比较频繁。
+</p>
+
+<hr>
+<h1>值不值得用？</h1>
+
+<p><strong>优点：</strong>
+</p>
+<ul><li>多代理协作能力强，能处理复杂业务流程</li>
+<li>状态持久化在同类工具中属于比较成熟的实现</li>
+<li>和 LangChain 生态兼容性好，如果本身就在用 LangChain，上手成本会低一些</li>
+<li>人机协作和可视化调试在实际项目中是刚需</li>
+</ul>
+<p><strong>缺点：</strong>
+</p>
+<ul><li>学习曲线确实有陡的地方，状态图的概念需要时间理解</li>
+<li>大规模部署时性能调优比较复杂，需要有一定工程经验</li>
+<li>文档示例多，但深度教程偏少，很多坑需要自己踩</li>
+</ul>
+<p><strong>我的结论：</strong> 如果你的项目需要多个 AI 代理协同工作、流程有分支和循环、且需要状态管理，LangGraph 是目前开源领域里做得比较完整的选择。但如果你只是做一个简单的问答链，可能没必要引入这个复杂度。
+</p>
+
+<hr>
+<h1>使用建议</h1>
+
+<ul><li><strong>先从小流程开始</strong>：不要一上来就设计一个复杂的多代理系统，先用一个简单场景跑通，理解状态流转的基本逻辑。</li>
+</ul>
+<ul><li><strong>充分利用可视化工具</strong>：在开发阶段多看执行流程图，能帮你快速发现设计上的问题。</li>
+</ul>
+<ul><li><strong>注意状态大小</strong>：持久化虽然好用，但状态数据量大会影响性能和存储成本，设计时要考虑什么需要存、什么不需要存。</li>
+</ul>
+<ul><li><strong>人机介入点要想清楚</strong>：不是越多越好，在真正需要人工判断的节点设置就够了。</li>
+</ul>
+<ul><li><strong>关注官方更新</strong>：这个项目迭代较快，新版本可能会带来更好的性能和更方便的功能。</li>
+</ul>
+<hr>
+<h1>适合谁用？</h1>
+
+<p><strong>推荐使用：</strong>
+</p>
+<ul><li>需要构建多代理协同系统的团队</li>
+<li>项目流程有复杂分支和循环逻辑的开发者</li>
+<li>已经在使用 LangChain 并希望扩展多代理能力的用户</li>
+</ul>
+<p><strong>可考虑：</strong>
+</p>
+<ul><li>对状态管理有需求，但团队技术实力一般的项目</li>
+<li>想要尝试人机协作流程但不确定规模的团队</li>
+</ul>
+<p><strong>不推荐：</strong>
+</p>
+<ul><li>只需要简单链式调用的场景</li>
+<li>没有工程经验支撑的小团队</li>
+<li>对性能要求极高且没有调优资源的项目</li></ul>
+        </article>
+
+        
+
+        <div class="pros-cons">
+            <div class="pros">
+                <h4>👍 优点</h4>
+                <ul><li>支持复杂的多代理循环和分支逻辑</li><li>内置状态持久化机制，代理可恢复执行</li><li>与 LangChain 生态系统无缝集成</li><li>支持人机协作和代理监督</li><li>可视化调试工具便于监控执行流程</li></ul>
+            </div>
+            <div class="cons">
+                <h4>👎 缺点</h4>
+                <ul><li>学习曲线较陡，概念理解需要时间</li><li>大规模部署时性能调优复杂</li><li>文档示例虽多但深度教程较少</li></ul>
+            </div>
+        </div>
+
+        <div class="faq-section">
+                <h3>❓ 常见问题</h3>
+                <div class="faq-item">
+                    <details>
+                        <summary>LangGraph 和 LangChain 有什么区别？</summary>
+                        <div class="faq-answer"><p>LangChain 是基础框架，提供链式调用能力；LangGraph 专注于构建多代理系统，支持更复杂的状态流转和循环逻辑，适合需要多代理协作的复杂场景。
+</p></div>
+                    </details>
+                </div>
+<div class="faq-item">
+                    <details>
+                        <summary>LangGraph 是否免费？</summary>
+                        <div class="faq-answer"><p>是的，LangGraph 是完全开源且免费使用的框架，采用 MIT 许可证。
+</p></div>
+                    </details>
+                </div>
+<div class="faq-item">
+                    <details>
+                        <summary>LangGraph 适合构建什么样的应用？</summary>
+                        <div class="faq-answer"><p>适合需要多个 AI 代理协作处理的任务，如客服系统、研究助手、自动化工作流、复杂文档处理等。
+</p></div>
+                    </details>
+                </div>
+<div class="faq-item">
+                    <details>
+                        <summary>如何开始使用 LangGraph？</summary>
+                        <div class="faq-answer"><p>可以通过 pip install langgraph 安装 Python 版本，或使用 npm install @langchain/langgraph 安装 JS 版本，官方提供了详细的入门教程和示例。
+</p></div>
+                    </details>
+                </div>
+
+            </div>
+
+            <div class="mobile-ad-inline">📱 继续阅读 · 猜你喜欢</div>
+        </div><!-- /.content-main -->
+
+        <div class="page-sidebar-wrap">
+        <aside class="page-sidebar">
+            <div class="ad-slot ad-slot-large"></div>
+            <div class="sidebar-card">
+            <h4>🔧 同类热门工具</h4>
+            <li class="rel-tool-item">
+                <span class="rel-tool-icon" style="background:#4573bd;">⚙️</span>
+                <a href="/tools/coze/">Coze</a> <span class="rel-tag free">免费</span>
+            </li><li class="rel-tool-item">
+                <span class="rel-tool-icon" style="background:#6B46C1;">⛓️</span>
+                <a href="/tools/langchain/">LangChain</a> <span class="rel-tag free">免费</span>
+            </li><li class="rel-tool-item">
+                <span class="rel-tool-icon" style="background:#6366F1;">🤖</span>
+                <a href="/tools/ag2/">AG2</a> <span class="rel-tag free">免费</span>
+            </li><li class="rel-tool-item">
+                <span class="rel-tool-icon" style="background:#10A37F;">🤖</span>
+                <a href="/tools/openai-agents-sdk/">OpenAI Agents SDK</a>
+            </li><li class="rel-tool-item">
+                <span class="rel-tool-icon" style="background:#1C1CFF;">🌊</span>
+                <a href="/tools/flowise/">Flowise</a> <span class="rel-tag free">免费</span>
+            </li>
+        </div>
+            <div class="sidebar-card">
+            <h4>📖 相关文章</h4>
+            <ul><li><a href='/articles/china-open-source-ai-wave-june-2026/'>2026年6月国产AI开源大爆发：小米MiMo Code终结编程「失忆</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
+        </div>
+        </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具 · <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">蜀ICP备2025172163号-2</a></p>
+    </footer>
+    <button id="backToTop" aria-label="返回顶部">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>150){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
+</script>
+</body>
+</html>

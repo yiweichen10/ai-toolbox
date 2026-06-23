@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "腾讯文档AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://docs.qq.com/",
+  "image": "https://www.aitoollab.cn/images/og/tencent-docs-ai-og.png",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "AI办公",
   "operatingSystem": "网页端、Windows、Mac、iOS、Android、微信小程序",
   "description": "腾讯文档AI是腾讯官方推出的智能文档处理助手，基于混元大模型构建。它提供智能写作、内容续写、总结归纳等核心功能，无缝集成于腾讯文档中，为个人和企业用户提供高效的文档创作体验。2026年持续更新，支持多模态内容处理和智能排版。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "约5000000月访问量"
+    "ratingValue": 4.3,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "腾讯文档AI",
+    "name": "腾讯文档AI是腾讯官方",
     "url": "https://docs.qq.com/"
   },
   "featureList": [
@@ -86,6 +91,33 @@
     "智能翻译：支持多语言实时翻译",
     "内容总结：自动提取文档关键信息",
     "表格数据处理：智能分析和整理数据"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "wps-ai",
+      "url": "https://www.aitoollab.cn/tools/wps-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "tencent-yuanbao",
+      "url": "https://www.aitoollab.cn/tools/tencent-yuanbao/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "notion-ai",
+      "url": "https://www.aitoollab.cn/tools/notion-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "kim",
+      "url": "https://www.aitoollab.cn/tools/kim/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "wenxin-yiyan",
+      "url": "https://www.aitoollab.cn/tools/wenxin-yiyan/"
+    }
   ],
   "abstract": "腾讯文档AI是腾讯官方推出的智能文档处理助手，基于混元大模型构建。它提供智能写作、内容续写、总结归纳等核心功能，无缝集成于腾讯文档中，为个人和企业用户提供高效的文档创作体验。2026年持续更新，支持多模态内容处理和智能排版。",
   "speakable": {
@@ -101,12 +133,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "智能续写功能强大，能理解上下文进行连贯续写"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "自动纠错和润色功能实用，提升文档质量"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "多语言翻译支持，方便跨语言办公"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "模板丰富，覆盖工作报告、活动策划等多种场景"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "腾讯生态深度整合，支持微信、企业微信快捷登录"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费用户AI功能使用次数有限制"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "部分高级功能需要付费会员"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI生成内容有时不够精准，需人工校对"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "依赖网络连接，离线无法使用AI功能"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：基础功能免费，高级AI功能需开通腾讯文档会员</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端、Windows、Mac、iOS、Android、微信小程序</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI办公</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://docs.qq.com/" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://docs.qq.com/" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

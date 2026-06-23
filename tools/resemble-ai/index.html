@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Resemble AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://resemble.ai",
+  "image": "https://www.aitoollab.cn/images/og/resemble-ai-og.png",
+  "applicationCategory": "MusicApplication",
+  "applicationSubCategory": "AI音频",
   "operatingSystem": "网页端、iOS、Android、API",
   "description": "Resemble AI是一款专业的AI语音合成和声音克隆平台，支持从短音频样本中克隆声音，生成自然流畅的语音内容。2026年新增实时语音转换和情感控制功能，广泛应用于视频配音、游戏开发、语音助手等领域。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "850000"
+    "ratingValue": 4.3,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Resemble AI",
+    "name": "游戏",
     "url": "https://resemble.ai"
   },
   "featureList": [
@@ -86,6 +91,33 @@
     "多语言支持（98+语言）",
     "API与Webhook集成",
     "语音编辑与后期处理"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "elevenlabs",
+      "url": "https://www.aitoollab.cn/tools/elevenlabs/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "murf-ai",
+      "url": "https://www.aitoollab.cn/tools/murf-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "play-ht",
+      "url": "https://www.aitoollab.cn/tools/play-ht/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "speechify",
+      "url": "https://www.aitoollab.cn/tools/speechify/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "wellsaid-labs",
+      "url": "https://www.aitoollab.cn/tools/wellsaid-labs/"
+    }
   ],
   "abstract": "Resemble AI是一款专业的AI语音合成和声音克隆平台，支持从短音频样本中克隆声音，生成自然流畅的语音内容。2026年新增实时语音转换和情感控制功能，广泛应用于视频配音、游戏开发、语音助手等领域。",
   "speakable": {
@@ -101,12 +133,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "支持5秒音频快速克隆声音，门槛低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "提供神经语音引擎，语音自然度高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "API接口完善，便于开发者集成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "支持98种语言和口音，本地化能力强"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "实时语音转换功能，支持直播和通话场景"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版时长限制严格，扩展成本较高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "克隆声音需要清晰音频样本，质量要求较高"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "某些复杂情感表达仍需手动微调"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "部分高级功能仅限企业版使用"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +211,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +245,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版每月免费生成20分钟；付费版$0.006/秒起；企业定制套餐需联系销售</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端、iOS、Android、API</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI音频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://resemble.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://resemble.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

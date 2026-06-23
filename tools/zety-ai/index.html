@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Zety AI",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://zety.com",
+  "image": "https://www.aitoollab.cn/images/og/zety-ai-og.png",
+  "applicationCategory": "WritingApplication",
+  "applicationSubCategory": "AI写作",
   "operatingSystem": "网页端",
   "description": "Zety AI是Zety平台推出的智能简历写作助手，利用人工智能技术帮助用户快速生成专业简历。2026年最新版本增强了AI优化功能，能够根据目标职位智能推荐关键词和改进建议，大幅提升简历通过率。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Zety AI免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "9.99",
+      "priceCurrency": "USD",
+      "description": "Zety AI付费版：免费版可用，专业版约$9.99/月"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "约850000/月"
+    "ratingValue": 4.5,
+    "ratingCount": 1000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Zety AI",
+    "name": "AI是Zety平台",
     "url": "https://zety.com"
   },
   "featureList": [
@@ -84,6 +96,23 @@
     "语法和表达检查",
     "求职信自动生成",
     "简历评分与改进建议"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "notion-ai",
+      "url": "https://www.aitoollab.cn/tools/notion-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "jasper",
+      "url": "https://www.aitoollab.cn/tools/jasper/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "canva-ai",
+      "url": "https://www.aitoollab.cn/tools/canva-ai/"
+    }
   ],
   "abstract": "Zety AI是Zety平台推出的智能简历写作助手，利用人工智能技术帮助用户快速生成专业简历。2026年最新版本增强了AI优化功能，能够根据目标职位智能推荐关键词和改进建议，大幅提升简历通过率。",
   "speakable": {
@@ -99,12 +128,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.5,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI智能优化简历内容，针对性更强"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "丰富的简历模板库，涵盖多行业"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "实时语法检查和表达改进建议"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "一键生成求职信功能"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持多语言简历制作"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "部分高级功能需要付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "主要面向英文简历，中文支持有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI生成的简历可能缺乏个性化"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +201,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +235,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，专业版约$9.99/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI写作</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://zety.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://zety.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

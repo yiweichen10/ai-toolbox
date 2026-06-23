@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "紫东太初",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://taichu.ia.ac.cn",
+  "image": "https://www.aitoollab.cn/images/og/zi-dong-tai-chu-og.png",
+  "applicationCategory": "ChatApplication",
+  "applicationSubCategory": "AI对话",
   "operatingSystem": "Web端/移动端",
   "description": "紫东太初是由中国科学院自动化研究所发布的多模态大模型，2026年已升级至3.0版本，支持文本、图像、音频、视频的全模态理解与生成。作为国产自主研发的基础大模型，在中文理解和多模态任务处理方面具有显著技术优势。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "850000"
+    "ratingValue": 4.3,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "紫东太初",
+    "name": "太初是由中国科学院自动化研究所",
     "url": "https://taichu.ia.ac.cn"
   },
   "featureList": [
@@ -84,6 +89,33 @@
     "视频理解：视频内容分析、关键帧提取",
     "语音交互：支持语音输入输出，实现自然对话",
     "API服务：提供标准化API接口，支持企业定制集成"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "文心一言",
+      "url": "https://www.aitoollab.cn/tools/文心一言/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "千问",
+      "url": "https://www.aitoollab.cn/tools/千问/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "腾讯混元",
+      "url": "https://www.aitoollab.cn/tools/腾讯混元/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "智谱清言",
+      "url": "https://www.aitoollab.cn/tools/智谱清言/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "商汤日日新",
+      "url": "https://www.aitoollab.cn/tools/商汤日日新/"
+    }
   ],
   "abstract": "紫东太初是由中国科学院自动化研究所发布的多模态大模型，2026年已升级至3.0版本，支持文本、图像、音频、视频的全模态理解与生成。作为国产自主研发的基础大模型，在中文理解和多模态任务处理方面具有显著技术优势。",
   "speakable": {
@@ -99,12 +131,62 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "中国科学院自动化研究所自主研发，技术背景雄厚"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "支持文本、图像、音频、视频多模态理解和生成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "在中文语义理解方面表现优秀，契合国内用户需求"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "提供API接口，方便开发者二次开发集成"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "持续迭代更新，2026年已升级至3.0版本"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "相比国际顶级大模型，品牌知名度和应用生态有待提升"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "部分高级功能需要企业版授权，个人用户权限有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "多模态生成质量有时不够稳定，需多次尝试"
+        }
+      ]
     }
   }
 }</script>
@@ -122,7 +204,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -156,9 +238,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费使用</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web端/移动端</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI对话</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-06-23" itemprop="dateModified">2026-06-23</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://taichu.ia.ac.cn" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://taichu.ia.ac.cn" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

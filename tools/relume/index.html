@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Relume",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://relume.io",
+  "image": "https://www.aitoollab.cn/images/og/relume-og.png",
+  "applicationCategory": "DesignApplication",
+  "applicationSubCategory": "AI设计",
   "operatingSystem": "Web浏览器,Figma插件",
   "description": "AI驱动的网站设计和开发工具，专注于快速生成网站结构和设计系统。通过智能化的方式帮助用户快速创建响应式网站设计和Figma设计组件，是2026年网站设计领域的重要创新工具。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-04-24",
+  "dateModified": "2026-05-01",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Relume免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "15",
+      "priceCurrency": "USD",
+      "description": "Relume付费版：免费版可用，付费版$15/月起"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "850000"
+    "ratingValue": 4.6,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +86,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "Relume",
+    "name": "AI驱动的网站设计和",
     "url": "https://relume.io"
   },
   "featureList": [
@@ -86,6 +98,33 @@
     "AI内容生成",
     "设计模板库",
     "网站导出功能"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "figma-ai",
+      "url": "https://www.aitoollab.cn/tools/figma-ai/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "framer",
+      "url": "https://www.aitoollab.cn/tools/framer/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "webflow",
+      "url": "https://www.aitoollab.cn/tools/webflow/"
+    },
+    {
+      "@type": "WebSite",
+      "name": " Durable",
+      "url": "https://www.aitoollab.cn/tools/ Durable/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "squarespace-ai",
+      "url": "https://www.aitoollab.cn/tools/squarespace-ai/"
+    }
   ],
   "abstract": "AI驱动的网站设计和开发工具，专注于快速生成网站结构和设计系统。通过智能化的方式帮助用户快速创建响应式网站设计和Figma设计组件，是2026年网站设计领域的重要创新工具。",
   "speakable": {
@@ -101,12 +140,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.6,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI快速生成网站结构和布局，大幅提升设计效率"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "与Figma深度集成，支持设计组件同步"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "提供丰富的预制组件库和模板"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "响应式设计功能强大，自动适配多设备"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持网站克隆和复制功能"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版功能受限，高级功能需要付费"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "对复杂定制化需求支持有限"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "学习曲线相对较陡，需要时间熟悉"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "部分用户反映生成的布局有时需要手动调整"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "客服响应速度有待提升"
+        }
+      ]
     }
   }
 }</script>
@@ -124,7 +223,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -158,9 +257,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，付费版$15/月起</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web浏览器,Figma插件</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI设计</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-05-01" itemprop="dateModified">2026-05-01</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://relume.io" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://relume.io" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
@@ -360,7 +460,7 @@ var _hmt = _hmt || [];
         </div>
             <div class="sidebar-card">
             <h4>📖 相关文章</h4>
-            <ul><li><a href='/articles/canva-ai-complete-guide-2026/'>Canva AI完全使用指南：从Magic Studio到AI 2.0</a></li><li><a href='/articles/adobe-2026-creators-toolkit-report-ai-analysis/'>Adobe 2026创作者报告全解读：16000名创作者的AI真相——</a></li><li><a href='/articles/ai-open-weight-model-explosion-june-2026/'>2026年6月AI开源模型大爆发：25+模型一周齐发，从LLM到3D全</a></li></ul>
+            <ul><li><a href='/articles/canva-ai-complete-guide-2026/'>Canva AI完全使用指南：从Magic Studio到AI 2.0</a></li><li><a href='/articles/ai-tools-market-panorama-2026-june-6-truths/'>2026年6月AI工具市场全景：320款工具数据揭示的6个真相</a></li><li><a href='/articles/jianying-ai-tutorial-2026/'>剪映AI功能完全使用教程2026：从智能剪辑到数字人播报，14个功能让</a></li></ul>
         </div>
         </aside>
         </div>

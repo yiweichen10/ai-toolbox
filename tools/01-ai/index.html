@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "零一万物",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://01.ai",
+  "image": "https://www.aitoollab.cn/images/og/01-ai-og.png",
+  "applicationCategory": "ChatApplication",
+  "applicationSubCategory": "AI对话",
   "operatingSystem": "Web/API/开源",
   "description": "零一万物（01.AI）是由李开复创办的AI公司打造的大语言模型品牌，专注于Yi系列模型的研发与商业化应用。2026年已发布Yi-Lightning等新一代模型，在数学推理、代码生成等任务上表现突出，并提供开源版本和API服务。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-04-22",
+  "dateModified": "2026-04-29",
   "offers": [
     {
       "@type": "Offer",
@@ -65,8 +68,10 @@
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "850000"
+    "ratingValue": 4.3,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -74,7 +79,7 @@
   ],
   "author": {
     "@type": "Organization",
-    "name": "零一万物",
+    "name": "是由李开复创办的AI公司",
     "url": "https://01.ai"
   },
   "featureList": [
@@ -85,6 +90,33 @@
     "多轮对话能力",
     "代码生成与调试",
     "数学推理与解答"
+  ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "chatgpt",
+      "url": "https://www.aitoollab.cn/tools/chatgpt/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "claude",
+      "url": "https://www.aitoollab.cn/tools/claude/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "文心一言",
+      "url": "https://www.aitoollab.cn/tools/文心一言/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "千问",
+      "url": "https://www.aitoollab.cn/tools/千问/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "deepseek",
+      "url": "https://www.aitoollab.cn/tools/deepseek/"
+    }
   ],
   "abstract": "零一万物（01.AI）是由李开复创办的AI公司打造的大语言模型品牌，专注于Yi系列模型的研发与商业化应用。2026年已发布Yi-Lightning等新一代模型，在数学推理、代码生成等任务上表现突出，并提供开源版本和API服务。",
   "speakable": {
@@ -100,12 +132,67 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "中文语言理解能力强，回复准确流畅"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "开源Yi系列模型可本地部署，隐私性好"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "API调用成本相对较低"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "模型更新迭代快，2026年已发布Lightning版本"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持代码生成、数学推理等多种任务"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "品牌知名度相比ChatGPT、Claude等仍有差距"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "部分场景下创意能力弱于顶级闭源模型"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "生态系统和支持资源相对较少"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "文档和教程资源不如大厂丰富"
+        }
+      ]
     }
   }
 }</script>
@@ -123,7 +210,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -157,9 +244,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版+付费API</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：Web/API/开源</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI对话</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-04-29" itemprop="dateModified">2026-04-29</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://01.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://01.ai" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 

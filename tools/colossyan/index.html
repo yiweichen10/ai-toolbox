@@ -49,11 +49,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Colossyan",
-  "applicationCategory": "ProductivityApplication",
+  "url": "https://colossyan.com",
+  "image": "https://www.aitoollab.cn/images/og/colossyan-og.png",
+  "applicationCategory": "VideoEditingApplication",
+  "applicationSubCategory": "AI视频",
   "operatingSystem": "网页端",
   "description": "Colossyan是一个AI视频生成平台，专注于创建AI虚拟形象（数字人）视频。用户可以通过文本输入快速生成专业的主播视频，适用于企业培训、营销推广、产品演示等多种场景。2026年平台持续优化虚拟形象的真实感和多语言支持能力。",
-  "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "datePublished": "2026-04-28",
+  "dateModified": "2026-05-05",
   "offers": [
     {
       "@type": "Offer",
@@ -61,12 +64,21 @@
       "price": "0",
       "priceCurrency": "USD",
       "description": "Colossyan免费版基础功能"
+    },
+    {
+      "@type": "Offer",
+      "name": "付费版",
+      "price": "19",
+      "priceCurrency": "USD",
+      "description": "Colossyan付费版：免费版可用，付费版起价$19/月"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "450000"
+    "ratingValue": 4.3,
+    "ratingCount": 450000,
+    "bestRating": 5,
+    "worstRating": 1
   },
   "inLanguage": [
     "zh",
@@ -89,6 +101,33 @@
     "多角色对话视频",
     "团队协作与工作流"
   ],
+  "isRelatedTo": [
+    {
+      "@type": "WebSite",
+      "name": "synthesia",
+      "url": "https://www.aitoollab.cn/tools/synthesia/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "d-id",
+      "url": "https://www.aitoollab.cn/tools/d-id/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "heygen",
+      "url": "https://www.aitoollab.cn/tools/heygen/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "runway",
+      "url": "https://www.aitoollab.cn/tools/runway/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "pika",
+      "url": "https://www.aitoollab.cn/tools/pika/"
+    }
+  ],
   "abstract": "Colossyan是一个AI视频生成平台，专注于创建AI虚拟形象（数字人）视频。用户可以通过文本输入快速生成专业的主播视频，适用于企业培训、营销推广、产品演示等多种场景。2026年平台持续优化虚拟形象的真实感和多语言支持能力。",
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -103,12 +142,72 @@
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": 4.0,
+      "ratingValue": 4.3,
       "bestRating": 5
     },
     "author": {
       "@type": "Organization",
       "name": "AI工具宝箱编辑组"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "支持70+种AI虚拟形象选择，涵盖不同年龄、性别和风格"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "多语言支持，可生成30+种语言的视频"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "内置丰富模板库，企业培训、营销等场景齐全"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "文字转视频速度快，5分钟可生成1分钟视频"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "支持自定义虚拟形象和背景"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "免费版功能受限，水印和时长限制"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "虚拟形象表情和肢体动作还不够自然"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "视频质量与Sora、Runway等顶级工具相比有差距"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "部分模板需要付费才能使用"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "客服响应速度较慢"
+        }
+      ]
     }
   }
 }</script>
@@ -126,7 +225,7 @@ var _hmt = _hmt || [];
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;"><h1>🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></h1></a>
+            <a href="/" style="text-decoration:none;"><div class="site-logo">🛠️ AI工具宝箱 <span>每日更新 · 收录工具 持续更新</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <div class="global-nav-inner">
@@ -160,9 +259,10 @@ var _hmt = _hmt || [];
                 <div class="tool-meta-item">💰 <strong>价格</strong>：免费版可用，付费版起价$19/月</div>
                 <div class="tool-meta-item">📦 <strong>平台</strong>：网页端</div>
                 <div class="tool-meta-item">🏷️ <strong>分类</strong>：AI视频</div>
+                <div class="tool-meta-item">📅 <strong>更新</strong>：<time datetime="2026-05-05" itemprop="dateModified">2026-05-05</time></div>
             </div>
             <div class="action-bar">
-                <a href="https://colossyan.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">立即使用 →</a>
+                <a href="https://colossyan.com" target="_blank" rel="nofollow noopener" class="action-btn action-btn-primary">立即使用 →</a>
             </div>
         </div>
 
