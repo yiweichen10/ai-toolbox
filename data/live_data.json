@@ -1,27 +1,27 @@
 {
   "metadata": {
     "version": "1.0",
-    "generated_at": "2026-06-23 09:56",
+    "generated_at": "2026-06-23 18:51",
     "source": "aitoollab.cn-regenerate-data",
-    "tool_count": 320,
-    "article_count": 110,
+    "tool_count": 330,
+    "article_count": 111,
     "update_policy": "每次构建自动生成"
   },
   "stats": {
-    "total_tools": 320,
+    "total_tools": 330,
     "total_categories": 14,
-    "total_articles": 110,
-    "total_visits_str": "62064万",
+    "total_articles": 111,
+    "total_visits_str": "62439万",
     "avg_rating": 4.5,
     "price_distribution": {
-      "free": 74,
-      "freemium": 199,
+      "free": 79,
+      "freemium": 204,
       "paid": 42,
       "enterprise": 5
     },
-    "today_active": "320",
+    "today_active": "330",
     "this_week_new": 0,
-    "last_updated": "2026-06-23 09:56",
+    "last_updated": "2026-06-23 18:51",
     "update_frequency": "每次构建自动更新"
   },
   "comparison_matrix": {
@@ -1215,40 +1215,40 @@
         "weekly_data": [
           {
             "week": "04/22",
-            "value": 241
+            "value": 262
           },
           {
             "week": "05/01",
-            "value": 312
+            "value": 339
           },
           {
             "week": "06/08",
-            "value": 330
+            "value": 358
           },
           {
             "week": "07/15",
-            "value": 290
+            "value": 315
           },
           {
             "week": "08/22",
-            "value": 241
+            "value": 261
           },
           {
             "week": "09/01",
-            "value": 240
+            "value": 260
           },
           {
             "week": "010/0",
-            "value": 299
+            "value": 325
           },
           {
             "week": "011/1",
-            "value": 377
+            "value": 410
           }
         ],
-        "current_value": 377,
-        "change_percent": 56.4,
-        "tool_count": 23
+        "current_value": 410,
+        "change_percent": 56.5,
+        "tool_count": 25
       },
       {
         "category": "AI写作",
@@ -1290,6 +1290,47 @@
         "current_value": 360,
         "change_percent": 56.5,
         "tool_count": 22
+      },
+      {
+        "category": "AI开发",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 199
+          },
+          {
+            "week": "05/01",
+            "value": 258
+          },
+          {
+            "week": "06/08",
+            "value": 272
+          },
+          {
+            "week": "07/15",
+            "value": 239
+          },
+          {
+            "week": "08/22",
+            "value": 199
+          },
+          {
+            "week": "09/01",
+            "value": 198
+          },
+          {
+            "week": "010/0",
+            "value": 247
+          },
+          {
+            "week": "011/1",
+            "value": 311
+          }
+        ],
+        "current_value": 311,
+        "change_percent": 56.3,
+        "tool_count": 19
       },
       {
         "category": "AI自动化",
@@ -1334,47 +1375,6 @@
       },
       {
         "category": "AI搜索",
-        "icon": "📊",
-        "weekly_data": [
-          {
-            "week": "04/22",
-            "value": 115
-          },
-          {
-            "week": "05/01",
-            "value": 149
-          },
-          {
-            "week": "06/08",
-            "value": 157
-          },
-          {
-            "week": "07/15",
-            "value": 138
-          },
-          {
-            "week": "08/22",
-            "value": 115
-          },
-          {
-            "week": "09/01",
-            "value": 114
-          },
-          {
-            "week": "010/0",
-            "value": 143
-          },
-          {
-            "week": "011/1",
-            "value": 180
-          }
-        ],
-        "current_value": 180,
-        "change_percent": 56.5,
-        "tool_count": 11
-      },
-      {
-        "category": "AI开发",
         "icon": "📊",
         "weekly_data": [
           {
@@ -1605,7 +1605,7 @@
       {
         "category": "AI设计",
         "icon": "📊",
-        "tool_count": 23,
+        "tool_count": 25,
         "avg_rating": 4.5,
         "by_price": {
           "free": {
@@ -1617,7 +1617,7 @@
             ]
           },
           "freemium": {
-            "count": 17,
+            "count": 19,
             "names": [
               "Canva AI",
               "Remove.bg",
@@ -1651,6 +1651,32 @@
         },
         "top_feature": "Jasper",
         "recommended_slug": "jasper"
+      },
+      {
+        "category": "AI开发",
+        "icon": "📊",
+        "tool_count": 19,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 13,
+            "names": [
+              "LangGraph",
+              "MetaGPT",
+              "Strands Agents"
+            ]
+          },
+          "freemium": {
+            "count": 5,
+            "names": [
+              "AG2",
+              "Langflow",
+              "AnythingLLM"
+            ]
+          }
+        },
+        "top_feature": "AG2",
+        "recommended_slug": "ag2"
       },
       {
         "category": "AI自动化",
@@ -1703,31 +1729,6 @@
         },
         "top_feature": "Perplexity",
         "recommended_slug": "perplexity"
-      },
-      {
-        "category": "AI开发",
-        "icon": "📊",
-        "tool_count": 11,
-        "avg_rating": 4.6,
-        "by_price": {
-          "free": {
-            "count": 8,
-            "names": [
-              "LangGraph",
-              "MetaGPT",
-              "Strands Agents"
-            ]
-          },
-          "freemium": {
-            "count": 2,
-            "names": [
-              "AG2",
-              "Langflow"
-            ]
-          }
-        },
-        "top_feature": "AG2",
-        "recommended_slug": "ag2"
       }
     ]
   },
@@ -1825,7 +1826,7 @@
     {
       "slug": "dashboard",
       "title": "AI工具实时监控面板",
-      "meta_description": "实时追踪AI工具市场动态：总收录320款工具、14个分类，数据每日自动更新。",
+      "meta_description": "实时追踪AI工具市场动态：总收录330款工具、14个分类，数据每日自动更新。",
       "keywords": [
         "AI工具监控",
         "AI工具数据",
