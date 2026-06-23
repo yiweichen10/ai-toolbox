@@ -33,6 +33,9 @@
 
     <!-- Canonical -->
     <link rel="canonical" href="https://www.aitoollab.cn/">
+    <link rel="alternate" hreflang="en" href="https://aitoolbox.hk/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.cn/">
+    <link rel="alternate" hreflang="x-default" href="https://aitoolbox.hk/">
 
     <!-- 性能优化：预连接字体 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,12 +63,13 @@
         }
     }
     </script>
-    <!-- 结构化数据：组织信息 -->
+    <!-- 结构化数据：组织信息（AEO+GEO 增强 EEAT 信号 2026-06-23） -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "AI工具宝箱",
+        "alternateName": "AIToolLab",
         "url": "https://www.aitoollab.cn",
         "logo": {
             "@type": "ImageObject",
@@ -73,6 +77,18 @@
             "width": 1200,
             "height": 630
         },
+        "foundingDate": "2026-03-21",
+        "founder": {
+            "@type": "Organization",
+            "name": "AI工具宝箱编辑组",
+            "description": "专注 AI 工具实测与对比研究的独立编辑团队",
+            "knowsAbout": ["AI工具评测", "AI模型对比", "AEO内容优化", "GEO生成式引擎优化", "AI编程工具", "AI对话模型"]
+        },
+        "description": "AI工具宝箱是专注 AI 工具实测对比的独立评测站点，收录 320+ 款 AI 工具，每月发布 8-10 篇深度对比评测，所有数据均可溯源核查。",
+        "knowsAbout": ["AI工具", "AI大模型", "AI编程工具", "AI绘画", "AI视频", "AI办公", "AI对话", "AEO", "GEO"],
+        "slogan": "实测数据驱动 AI 工具决策",
+        "publishingPrinciples": "https://www.aitoollab.cn/about.html",
+        "actionableFeedbackPolicy": "所有评测数据均来自公开来源或作者实测，每篇文章均标注数据来源，可溯源核查。",
         "sameAs": [
             "https://github.com/yiweichen10/ai-toolbox"
         ]
@@ -91,6 +107,9 @@
     <!-- JS defer 加载，不阻塞渲染 -->
     <!-- 百度统计（异步，不阻塞） -->
     
+
+
+
 
 
 
