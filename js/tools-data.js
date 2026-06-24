@@ -9440,6 +9440,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Web、iOS、Android"
   },
   {
+    "name": "Moonvalley",
+    "slug": "moonvalley",
+    "emoji": "🎬",
+    "color": "#6366F1",
+    "description": "Moonvalley是一款由前DeepMind团队成员创立的AI视频生成工具，专注于通过文本描述或图像生成高质量视频内容。2026年最新版本增强了动态一致性处理，支持最长10秒的1080p视频生成，在视频流畅度和物理真实感方面表现突出。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "视频创作",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://moonvalley.ai",
+    "price": "免费版每月50 credits，付费版起价$9.99/月",
+    "platform": "Web端支持"
+  },
+  {
     "name": "Vidu 2.0",
     "slug": "vidu-2-0",
     "emoji": "🎬",
@@ -9799,6 +9828,70 @@ window.__ALL_TOOLS__ = [
     "url": "https://milvus.io",
     "price": "开源免费，云服务订阅制",
     "platform": "Docker、Kubernetes、Python、Go、Java、RESTful API"
+  },
+  {
+    "name": "Visily",
+    "slug": "visily",
+    "emoji": "🎨",
+    "color": "#6366F1",
+    "description": "Visily是一款AI驱动的UI设计工具，能够通过截图快速生成可编辑的设计稿，并支持文本描述自动生成用户界面。2026年新增多人实时协作功能和增强的AI设计建议，让团队设计效率大幅提升。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "UI设计"
+      },
+      {
+        "text": "截图转设计"
+      },
+      {
+        "text": "原型设计"
+      },
+      {
+        "text": "AI生成设计",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "45万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://visily.ai",
+    "price": "免费版可用，付费版$12/月起",
+    "platform": "Web/Mac/Windows"
+  },
+  {
+    "name": "6pen Art",
+    "slug": "6pen-art",
+    "emoji": "🎨",
+    "color": "#FF6B35",
+    "description": "6pen Art是由国内AI公司面包多推出的AI绘画生成工具，支持文生图、图生图等多种创作模式。2026年最新版本增强了可控生成能力和风格迁移功能，在国内AI绘画市场中具有较高的性价比优势。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "文生图"
+      },
+      {
+        "text": "图生图"
+      },
+      {
+        "text": "AI艺术生成"
+      },
+      {
+        "text": "中文AI绘画",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://6pen.art",
+    "price": "免费版可用，付费版约9元/月起",
+    "platform": "网页端、iOS、Android"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -19012,6 +19105,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web、iOS、Android"
   },
   {
+    "name": "Moonvalley",
+    "slug": "moonvalley",
+    "emoji": "🎬",
+    "color": "#6366F1",
+    "description": "Moonvalley是一款由前DeepMind团队成员创立的AI视频生成工具，专注于通过文本描述或图像生成高质量视频内容。2026年最新版本增强了动态一致性处理，支持最长10秒的1080p视频生成，在视频流畅度和物理真实感方面表现突出。",
+    "category": "AI视频",
+    "tags": [
+      {
+        "text": "文生视频"
+      },
+      {
+        "text": "AI视频生成"
+      },
+      {
+        "text": "视频创作",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://moonvalley.ai",
+    "price": "免费版每月50 credits，付费版起价$9.99/月",
+    "platform": "Web端支持"
+  },
+  {
     "name": "Vidu 2.0",
     "slug": "vidu-2-0",
     "emoji": "🎬",
@@ -19371,5 +19493,69 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://milvus.io",
     "price": "开源免费，云服务订阅制",
     "platform": "Docker、Kubernetes、Python、Go、Java、RESTful API"
+  },
+  {
+    "name": "Visily",
+    "slug": "visily",
+    "emoji": "🎨",
+    "color": "#6366F1",
+    "description": "Visily是一款AI驱动的UI设计工具，能够通过截图快速生成可编辑的设计稿，并支持文本描述自动生成用户界面。2026年新增多人实时协作功能和增强的AI设计建议，让团队设计效率大幅提升。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "UI设计"
+      },
+      {
+        "text": "截图转设计"
+      },
+      {
+        "text": "原型设计"
+      },
+      {
+        "text": "AI生成设计",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "45万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://visily.ai",
+    "price": "免费版可用，付费版$12/月起",
+    "platform": "Web/Mac/Windows"
+  },
+  {
+    "name": "6pen Art",
+    "slug": "6pen-art",
+    "emoji": "🎨",
+    "color": "#FF6B35",
+    "description": "6pen Art是由国内AI公司面包多推出的AI绘画生成工具，支持文生图、图生图等多种创作模式。2026年最新版本增强了可控生成能力和风格迁移功能，在国内AI绘画市场中具有较高的性价比优势。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "文生图"
+      },
+      {
+        "text": "图生图"
+      },
+      {
+        "text": "AI艺术生成"
+      },
+      {
+        "text": "中文AI绘画",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://6pen.art",
+    "price": "免费版可用，付费版约9元/月起",
+    "platform": "网页端、iOS、Android"
   }
 ];

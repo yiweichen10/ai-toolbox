@@ -3440,7 +3440,10 @@ def build_index_page(tools, articles):
     news_html = ''
     tag_names = {'AI对话': 'AI资讯', 'AI写作': 'AI资讯', 'AI绘画': 'AI资讯', 'AI编程': '教程',
                  'AI视频': 'AI资讯', 'AI音频': 'AI资讯', 'AI办公': 'AI资讯', 'AI设计': 'AI资讯',
-                 'AI搜索': 'AI资讯', 'AI翻译': 'AI资讯', 'AI自动化': 'AI教程', 'AI效率': '效率'}
+                 'AI搜索': 'AI资讯', 'AI翻译': 'AI资讯', 'AI自动化': 'AI教程', 'AI效率': '效率',
+                 '数据洞察': 'AI洞察', 'AI评测': 'AI评测', 'AI工具评测': 'AI评测', 'AI模型评测': 'AI评测',
+                 'tool-review': 'AI评测', 'tools-comparison': 'AI评测',
+                 '行业趋势': 'AI资讯', 'industry-analysis': 'AI资讯'}
     for idx, a in enumerate(sorted_articles[:5]):
         d = a.get('date', '')
         # 统一显示为 MM/DD
