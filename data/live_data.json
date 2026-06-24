@@ -1,27 +1,27 @@
 {
   "metadata": {
     "version": "1.0",
-    "generated_at": "2026-06-23 18:51",
+    "generated_at": "2026-06-24 13:50",
     "source": "aitoollab.cn-regenerate-data",
-    "tool_count": 330,
+    "tool_count": 340,
     "article_count": 111,
     "update_policy": "每次构建自动生成"
   },
   "stats": {
-    "total_tools": 330,
+    "total_tools": 340,
     "total_categories": 14,
     "total_articles": 111,
-    "total_visits_str": "62439万",
+    "total_visits_str": "64044万",
     "avg_rating": 4.5,
     "price_distribution": {
-      "free": 79,
-      "freemium": 204,
+      "free": 80,
+      "freemium": 213,
       "paid": 42,
       "enterprise": 5
     },
-    "today_active": "330",
+    "today_active": "340",
     "this_week_new": 0,
-    "last_updated": "2026-06-23 18:51",
+    "last_updated": "2026-06-24 13:50",
     "update_frequency": "每次构建自动更新"
   },
   "comparison_matrix": {
@@ -438,6 +438,23 @@
           "free_tier": 3
         },
         "detail_url": "/tools/tongyi-efficiency/"
+      },
+      {
+        "slug": "wix-ai",
+        "name": "Wix AI",
+        "emoji": "🎨",
+        "color": "#0C0887",
+        "category": "AI设计",
+        "values": {
+          "price": "免费版可用，高级版$17/月起",
+          "rating": "⭐ 4.5",
+          "features_count": 5,
+          "platform": "网页端",
+          "chinese": "⚠️",
+          "api": "❌",
+          "free_tier": 3
+        },
+        "detail_url": "/tools/wix-ai/"
       },
       {
         "slug": "wordtune",
@@ -865,6 +882,23 @@
         "detail_url": "/tools/iconscout-ai/"
       },
       {
+        "slug": "wujie-ai",
+        "name": "无界AI",
+        "emoji": "🎨",
+        "color": "#6366F1",
+        "category": "AI绘画",
+        "values": {
+          "price": "免费使用",
+          "rating": "⭐ 4.2",
+          "features_count": 5,
+          "platform": "网页端",
+          "chinese": "✅",
+          "api": "❌",
+          "free_tier": 5
+        },
+        "detail_url": "/tools/wujie-ai/"
+      },
+      {
         "slug": "prowritingaid",
         "name": "ProWritingAid",
         "emoji": "✍️",
@@ -880,40 +914,6 @@
           "free_tier": 3
         },
         "detail_url": "/tools/prowritingaid/"
-      },
-      {
-        "slug": "lumen5",
-        "name": "Lumen5",
-        "emoji": "🎬",
-        "color": "#FF4D4D",
-        "category": "AI视频",
-        "values": {
-          "price": "免费版可用，专业版$19/月起，企业版定制价格",
-          "rating": "⭐ 4.5",
-          "features_count": 5,
-          "platform": "网页端（Web）、iOS、Android",
-          "chinese": "⚠️",
-          "api": "❌",
-          "free_tier": 3
-        },
-        "detail_url": "/tools/lumen5/"
-      },
-      {
-        "slug": "zhu-zhan-ai",
-        "name": "触站AI",
-        "emoji": "🎨",
-        "color": "#8B5CF6",
-        "category": "AI绘画",
-        "values": {
-          "price": "基础免费（每日生成次数有限），付费会员29元/月起",
-          "rating": "⭐ 4.3",
-          "features_count": 5,
-          "platform": "网页端（Web）",
-          "chinese": "✅",
-          "api": "❌",
-          "free_tier": 3
-        },
-        "detail_url": "/tools/zhu-zhan-ai/"
       }
     ]
   },
@@ -1087,6 +1087,88 @@
         "tool_count": 37
       },
       {
+        "category": "AI设计",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 336
+          },
+          {
+            "week": "05/01",
+            "value": 434
+          },
+          {
+            "week": "06/08",
+            "value": 459
+          },
+          {
+            "week": "07/15",
+            "value": 403
+          },
+          {
+            "week": "08/22",
+            "value": 335
+          },
+          {
+            "week": "09/01",
+            "value": 333
+          },
+          {
+            "week": "010/0",
+            "value": 417
+          },
+          {
+            "week": "011/1",
+            "value": 525
+          }
+        ],
+        "current_value": 525,
+        "change_percent": 56.2,
+        "tool_count": 32
+      },
+      {
+        "category": "AI绘画",
+        "icon": "📊",
+        "weekly_data": [
+          {
+            "week": "04/22",
+            "value": 294
+          },
+          {
+            "week": "05/01",
+            "value": 380
+          },
+          {
+            "week": "06/08",
+            "value": 401
+          },
+          {
+            "week": "07/15",
+            "value": 353
+          },
+          {
+            "week": "08/22",
+            "value": 293
+          },
+          {
+            "week": "09/01",
+            "value": 292
+          },
+          {
+            "week": "010/0",
+            "value": 365
+          },
+          {
+            "week": "011/1",
+            "value": 459
+          }
+        ],
+        "current_value": 459,
+        "change_percent": 56.1,
+        "tool_count": 28
+      },
+      {
         "category": "AI办公",
         "icon": "📊",
         "weekly_data": [
@@ -1128,89 +1210,7 @@
         "tool_count": 26
       },
       {
-        "category": "AI绘画",
-        "icon": "📊",
-        "weekly_data": [
-          {
-            "week": "04/22",
-            "value": 262
-          },
-          {
-            "week": "05/01",
-            "value": 339
-          },
-          {
-            "week": "06/08",
-            "value": 358
-          },
-          {
-            "week": "07/15",
-            "value": 315
-          },
-          {
-            "week": "08/22",
-            "value": 261
-          },
-          {
-            "week": "09/01",
-            "value": 260
-          },
-          {
-            "week": "010/0",
-            "value": 325
-          },
-          {
-            "week": "011/1",
-            "value": 410
-          }
-        ],
-        "current_value": 410,
-        "change_percent": 56.5,
-        "tool_count": 25
-      },
-      {
         "category": "AI音频",
-        "icon": "📊",
-        "weekly_data": [
-          {
-            "week": "04/22",
-            "value": 262
-          },
-          {
-            "week": "05/01",
-            "value": 339
-          },
-          {
-            "week": "06/08",
-            "value": 358
-          },
-          {
-            "week": "07/15",
-            "value": 315
-          },
-          {
-            "week": "08/22",
-            "value": 261
-          },
-          {
-            "week": "09/01",
-            "value": 260
-          },
-          {
-            "week": "010/0",
-            "value": 325
-          },
-          {
-            "week": "011/1",
-            "value": 410
-          }
-        ],
-        "current_value": 410,
-        "change_percent": 56.5,
-        "tool_count": 25
-      },
-      {
-        "category": "AI设计",
         "icon": "📊",
         "weekly_data": [
           {
@@ -1525,6 +1525,58 @@
         "recommended_slug": "arc-browser"
       },
       {
+        "category": "AI设计",
+        "icon": "📊",
+        "tool_count": 32,
+        "avg_rating": 4.4,
+        "by_price": {
+          "free": {
+            "count": 4,
+            "names": [
+              "Photoroom",
+              "即时设计AI",
+              "Looka"
+            ]
+          },
+          "freemium": {
+            "count": 26,
+            "names": [
+              "Canva AI",
+              "Remove.bg",
+              "Figma AI"
+            ]
+          }
+        },
+        "top_feature": "Canva AI",
+        "recommended_slug": "canva-ai"
+      },
+      {
+        "category": "AI绘画",
+        "icon": "📊",
+        "tool_count": 28,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 9,
+            "names": [
+              "Stable Diffusion",
+              "Adobe Firefly",
+              "Leonardo AI"
+            ]
+          },
+          "freemium": {
+            "count": 14,
+            "names": [
+              "Krea AI",
+              "Flux",
+              "LiblibAI"
+            ]
+          }
+        },
+        "top_feature": "Midjourney",
+        "recommended_slug": "midjourney"
+      },
+      {
         "category": "AI办公",
         "icon": "📊",
         "tool_count": 26,
@@ -1551,32 +1603,6 @@
         "recommended_slug": "notion-ai"
       },
       {
-        "category": "AI绘画",
-        "icon": "📊",
-        "tool_count": 25,
-        "avg_rating": 4.5,
-        "by_price": {
-          "free": {
-            "count": 8,
-            "names": [
-              "Stable Diffusion",
-              "Adobe Firefly",
-              "Leonardo AI"
-            ]
-          },
-          "freemium": {
-            "count": 12,
-            "names": [
-              "Krea AI",
-              "Flux",
-              "LiblibAI"
-            ]
-          }
-        },
-        "top_feature": "Midjourney",
-        "recommended_slug": "midjourney"
-      },
-      {
         "category": "AI音频",
         "icon": "📊",
         "tool_count": 25,
@@ -1601,32 +1627,6 @@
         },
         "top_feature": "Suno",
         "recommended_slug": "suno"
-      },
-      {
-        "category": "AI设计",
-        "icon": "📊",
-        "tool_count": 25,
-        "avg_rating": 4.5,
-        "by_price": {
-          "free": {
-            "count": 4,
-            "names": [
-              "Photoroom",
-              "即时设计AI",
-              "Looka"
-            ]
-          },
-          "freemium": {
-            "count": 19,
-            "names": [
-              "Canva AI",
-              "Remove.bg",
-              "Figma AI"
-            ]
-          }
-        },
-        "top_feature": "Canva AI",
-        "recommended_slug": "canva-ai"
       },
       {
         "category": "AI写作",
@@ -1826,7 +1826,7 @@
     {
       "slug": "dashboard",
       "title": "AI工具实时监控面板",
-      "meta_description": "实时追踪AI工具市场动态：总收录330款工具、14个分类，数据每日自动更新。",
+      "meta_description": "实时追踪AI工具市场动态：总收录340款工具、14个分类，数据每日自动更新。",
       "keywords": [
         "AI工具监控",
         "AI工具数据",
