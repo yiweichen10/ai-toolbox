@@ -5,7 +5,7 @@
       "id": "overall",
       "slug": "2026-ai-tools-overall-ranking",
       "title": "2026年AI工具综合排行榜",
-      "meta_description": "2026年最新AI工具综合排行榜，基于评分、热度、功能等多维度数据计算。已收录340款主流AI工具，每日自动更新。",
+      "meta_description": "2026年最新AI工具综合排行榜，基于评分、热度、功能等多维度数据计算。已收录370款主流AI工具，每日自动更新。",
       "keywords": [
         "AI工具排行榜",
         "AI工具排名",
@@ -148,6 +148,28 @@
           "rank": 6
         },
         {
+          "slug": "whee",
+          "name": "WHEE",
+          "emoji": "🎨",
+          "color": "#FF6B6B",
+          "score": 93.8,
+          "scores": {
+            "hot": 40,
+            "quality": 25.799999999999997,
+            "functionality": 18,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "基础功能免费，高级功能付费订阅",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约500万月访问量",
+          "rank": 7
+        },
+        {
           "slug": "upscayl",
           "name": "Upscayl",
           "emoji": "🖼️",
@@ -167,7 +189,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 7
+          "rank": 8
         },
         {
           "slug": "semrush-ai",
@@ -189,7 +211,7 @@
             "text": "推荐"
           },
           "visits": "8500万",
-          "rank": 8
+          "rank": 9
         },
         {
           "slug": "metagpt",
@@ -211,7 +233,7 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 9
+          "rank": 10
         },
         {
           "slug": "cline",
@@ -233,7 +255,7 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 10
+          "rank": 11
         },
         {
           "slug": "kling-3-0",
@@ -255,7 +277,51 @@
             "text": "HOT"
           },
           "visits": "约500万/月",
-          "rank": 11
+          "rank": 12
+        },
+        {
+          "slug": "deepgram",
+          "name": "Deepgram",
+          "emoji": "🎙️",
+          "color": "#0D0D0D",
+          "score": 93.2,
+          "scores": {
+            "hot": 40,
+            "quality": 28.200000000000003,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.7",
+          "price": "免费额度：每月45,000分钟；付费：$0.004/分钟起",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 13
+        },
+        {
+          "slug": "duolingo-max",
+          "name": "Duolingo Max",
+          "emoji": "🦉",
+          "color": "#58CC02",
+          "score": 93.2,
+          "scores": {
+            "hot": 40,
+            "quality": 28.200000000000003,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.7",
+          "price": "免费版+付费订阅（Duolingo Max约$12.99/月）",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "月访问量约5000万",
+          "rank": 14
         },
         {
           "slug": "relume",
@@ -277,7 +343,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 12
+          "rank": 15
         },
         {
           "slug": "decohere",
@@ -299,7 +365,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 13
+          "rank": 16
         },
         {
           "slug": "magnific-ai",
@@ -321,7 +387,7 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 14
+          "rank": 17
         },
         {
           "slug": "jenni-ai",
@@ -343,7 +409,7 @@
             "text": "推荐"
           },
           "visits": "850万/月",
-          "rank": 15
+          "rank": 18
         },
         {
           "slug": "prowritingaid",
@@ -365,7 +431,7 @@
             "text": "推荐"
           },
           "visits": "月访问量约120万",
-          "rank": 16
+          "rank": 19
         },
         {
           "slug": "surfer-seo",
@@ -387,7 +453,7 @@
             "text": "推荐"
           },
           "visits": "约180万/月",
-          "rank": 17
+          "rank": 20
         },
         {
           "slug": "julius-ai",
@@ -409,7 +475,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 18
+          "rank": 21
         },
         {
           "slug": "pinecone",
@@ -431,7 +497,7 @@
             "text": "推荐"
           },
           "visits": "210万",
-          "rank": 19
+          "rank": 22
         },
         {
           "slug": "weaviate",
@@ -453,7 +519,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 20
+          "rank": 23
         },
         {
           "slug": "autify",
@@ -475,7 +541,7 @@
             "text": "推荐"
           },
           "visits": "约45万/月",
-          "rank": 21
+          "rank": 24
         },
         {
           "slug": "codex-cli",
@@ -497,7 +563,7 @@
             "text": "HOT"
           },
           "visits": "50万",
-          "rank": 22
+          "rank": 25
         },
         {
           "slug": "pixelle-video",
@@ -519,7 +585,7 @@
             "text": "NEW"
           },
           "visits": "85万",
-          "rank": 23
+          "rank": 26
         },
         {
           "slug": "schole-ai",
@@ -541,7 +607,7 @@
             "text": "NEW"
           },
           "visits": "85万",
-          "rank": 24
+          "rank": 27
         },
         {
           "slug": "vidu-ai",
@@ -563,7 +629,7 @@
             "text": "HOT"
           },
           "visits": "850万",
-          "rank": 25
+          "rank": 28
         },
         {
           "slug": "langflow",
@@ -585,7 +651,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 26
+          "rank": 29
         },
         {
           "slug": "ragflow",
@@ -607,7 +673,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 27
+          "rank": 30
         },
         {
           "slug": "graphrag",
@@ -629,7 +695,29 @@
             "text": "推荐"
           },
           "visits": "85,000",
-          "rank": 28
+          "rank": 31
+        },
+        {
+          "slug": "read-ai",
+          "name": "Read AI",
+          "emoji": "📖",
+          "color": "#6366F1",
+          "score": 92.6,
+          "scores": {
+            "hot": 40,
+            "quality": 27.599999999999998,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.6",
+          "price": "免费版可用，付费版$19/月起",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "150万",
+          "rank": 32
         },
         {
           "slug": "spline-ai",
@@ -651,7 +739,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 29
+          "rank": 33
         },
         {
           "slug": "play-ht",
@@ -673,7 +761,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 30
+          "rank": 34
         },
         {
           "slug": "headlime",
@@ -695,7 +783,7 @@
             "text": "推荐"
           },
           "visits": "45万",
-          "rank": 31
+          "rank": 35
         },
         {
           "slug": "sourcegraph-cody",
@@ -717,7 +805,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 32
+          "rank": 36
         },
         {
           "slug": "fooocus",
@@ -739,7 +827,7 @@
             "text": "推荐"
           },
           "visits": "月访问量约45万",
-          "rank": 33
+          "rank": 37
         },
         {
           "slug": "lalamu",
@@ -761,7 +849,7 @@
             "text": "推荐"
           },
           "visits": "50万月访问",
-          "rank": 34
+          "rank": 38
         },
         {
           "slug": "scalenut",
@@ -783,7 +871,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 35
+          "rank": 39
         },
         {
           "slug": "chatpdf",
@@ -805,7 +893,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 36
+          "rank": 40
         },
         {
           "slug": "lumen5",
@@ -827,7 +915,7 @@
             "text": "推荐"
           },
           "visits": "约120万/月",
-          "rank": 37
+          "rank": 41
         },
         {
           "slug": "wondershare-virbo",
@@ -849,7 +937,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 38
+          "rank": 42
         },
         {
           "slug": "tongyi-wanxiang",
@@ -871,7 +959,7 @@
             "text": "推荐"
           },
           "visits": "约500万/月",
-          "rank": 39
+          "rank": 43
         },
         {
           "slug": "aider",
@@ -893,7 +981,7 @@
             "text": "推荐"
           },
           "visits": "约15万",
-          "rank": 40
+          "rank": 44
         },
         {
           "slug": "slidesai",
@@ -915,7 +1003,7 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 41
+          "rank": 45
         },
         {
           "slug": "monica-ai",
@@ -937,7 +1025,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 42
+          "rank": 46
         },
         {
           "slug": "amp",
@@ -959,7 +1047,7 @@
             "text": "推荐"
           },
           "visits": "50万",
-          "rank": 43
+          "rank": 47
         },
         {
           "slug": "openhands",
@@ -981,7 +1069,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 44
+          "rank": 48
         },
         {
           "slug": "langchain",
@@ -1003,7 +1091,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 45
+          "rank": 49
         },
         {
           "slug": "chroma",
@@ -1025,99 +1113,11 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 46
-        },
-        {
-          "slug": "iconscout-ai",
-          "name": "IconScout AI",
-          "emoji": "🎨",
-          "color": "#6366F1",
-          "score": 92.0,
-          "scores": {
-            "hot": 40,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费版每月10个AI生成额度，专业版$9.99/月起",
-          "badge": {
-            "type": "new",
-            "text": "NEW"
-          },
-          "visits": "150万",
-          "rank": 47
-        },
-        {
-          "slug": "panda-probe",
-          "name": "PandaProbe",
-          "emoji": "🐼",
-          "color": "#FF7F50",
-          "score": 92.0,
-          "scores": {
-            "hot": 40,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "基础功能免费，专业版¥29/月起",
-          "badge": {
-            "type": "new",
-            "text": "NEW"
-          },
-          "visits": "约50万/月",
-          "rank": 48
-        },
-        {
-          "slug": "kilo-code",
-          "name": "Kilo Code",
-          "emoji": "💻",
-          "color": "#6366F1",
-          "score": 92.0,
-          "scores": {
-            "hot": 40,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费版/专业版",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85万",
-          "rank": 49
-        },
-        {
-          "slug": "apache-superset",
-          "name": "Superset",
-          "emoji": "📊",
-          "color": "#5A4BEF",
-          "score": 92.0,
-          "scores": {
-            "hot": 40,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费开源",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85万",
           "rank": 50
         }
       ],
-      "total_tools": 340,
-      "last_updated": "2026-06-24 13:56",
+      "total_tools": 370,
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -1130,7 +1130,7 @@
       "id": "free",
       "slug": "best-free-ai-tools-ranking-2026",
       "title": "2026年最佳免费AI工具排行榜",
-      "meta_description": "完全免费的AI工具排行榜，80款免费AI工具按综合评分排序。帮你零成本体验最新AI技术。",
+      "meta_description": "完全免费的AI工具排行榜，85款免费AI工具按综合评分排序。帮你零成本体验最新AI技术。",
       "keywords": [
         "免费AI工具",
         "免费AI",
@@ -1251,6 +1251,28 @@
           "rank": 5
         },
         {
+          "slug": "whee",
+          "name": "WHEE",
+          "emoji": "🎨",
+          "color": "#FF6B6B",
+          "score": 93.8,
+          "scores": {
+            "hot": 40,
+            "quality": 25.799999999999997,
+            "functionality": 18,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "基础功能免费，高级功能付费订阅",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约500万月访问量",
+          "rank": 6
+        },
+        {
           "slug": "upscayl",
           "name": "Upscayl",
           "emoji": "🖼️",
@@ -1270,7 +1292,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 6
+          "rank": 7
         },
         {
           "slug": "metagpt",
@@ -1292,7 +1314,7 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 7
+          "rank": 8
         },
         {
           "slug": "cline",
@@ -1314,7 +1336,7 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 8
+          "rank": 9
         },
         {
           "slug": "weaviate",
@@ -1336,7 +1358,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 9
+          "rank": 10
         },
         {
           "slug": "codex-cli",
@@ -1358,7 +1380,7 @@
             "text": "HOT"
           },
           "visits": "50万",
-          "rank": 10
+          "rank": 11
         },
         {
           "slug": "ragflow",
@@ -1380,7 +1402,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 11
+          "rank": 12
         },
         {
           "slug": "graphrag",
@@ -1402,7 +1424,7 @@
             "text": "推荐"
           },
           "visits": "85,000",
-          "rank": 12
+          "rank": 13
         },
         {
           "slug": "fooocus",
@@ -1424,7 +1446,7 @@
             "text": "推荐"
           },
           "visits": "月访问量约45万",
-          "rank": 13
+          "rank": 14
         },
         {
           "slug": "aider",
@@ -1446,7 +1468,7 @@
             "text": "推荐"
           },
           "visits": "约15万",
-          "rank": 14
+          "rank": 15
         },
         {
           "slug": "amp",
@@ -1468,7 +1490,7 @@
             "text": "推荐"
           },
           "visits": "50万",
-          "rank": 15
+          "rank": 16
         },
         {
           "slug": "chroma",
@@ -1490,7 +1512,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 16
+          "rank": 17
         },
         {
           "slug": "apache-superset",
@@ -1512,7 +1534,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 17
+          "rank": 18
         },
         {
           "slug": "flowise",
@@ -1534,7 +1556,7 @@
             "text": "推荐"
           },
           "visits": "45万",
-          "rank": 18
+          "rank": 19
         },
         {
           "slug": "qwen-agent",
@@ -1556,7 +1578,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 19
+          "rank": 20
         },
         {
           "slug": "cosy-voice",
@@ -1578,7 +1600,7 @@
             "text": "推荐"
           },
           "visits": "50万",
-          "rank": 20
+          "rank": 21
         },
         {
           "slug": "spark-tts",
@@ -1600,7 +1622,7 @@
             "text": "NEW"
           },
           "visits": "85万",
-          "rank": 21
+          "rank": 22
         },
         {
           "slug": "f5-tts",
@@ -1622,7 +1644,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 22
+          "rank": 23
         },
         {
           "slug": "qdrant",
@@ -1644,7 +1666,7 @@
             "text": "推荐"
           },
           "visits": "35万",
-          "rank": 23
+          "rank": 24
         },
         {
           "slug": "haystack",
@@ -1666,7 +1688,51 @@
             "text": "推荐"
           },
           "visits": "约45万",
-          "rank": 24
+          "rank": 25
+        },
+        {
+          "slug": "eightfold",
+          "name": "Eightfold",
+          "emoji": "🎯",
+          "color": "#1E40AF",
+          "score": 92.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "企业定制定价，提供免费演示",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约50万月访问量",
+          "rank": 26
+        },
+        {
+          "slug": "glm-5-1",
+          "name": "GLM-5.1",
+          "emoji": "🧠",
+          "color": "#6B5BFF",
+          "score": 92.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费使用，API付费",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "850万",
+          "rank": 27
         },
         {
           "slug": "quark-ai",
@@ -1688,7 +1754,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 25
+          "rank": 28
         },
         {
           "slug": "tencent-docs-ai",
@@ -1710,7 +1776,7 @@
             "text": "推荐"
           },
           "visits": "约500万月访问量",
-          "rank": 26
+          "rank": 29
         },
         {
           "slug": "anijam",
@@ -1732,77 +1798,11 @@
             "text": "NEW"
           },
           "visits": "约50万月访问量",
-          "rank": 27
-        },
-        {
-          "slug": "hailuo-ai",
-          "name": "海螺AI",
-          "emoji": "🐚",
-          "color": "#2563EB",
-          "score": 90.8,
-          "scores": {
-            "hot": 40,
-            "quality": 25.799999999999997,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "免费使用",
-          "badge": {
-            "type": "new",
-            "text": "NEW"
-          },
-          "visits": "500万",
-          "rank": 28
-        },
-        {
-          "slug": "duiyou-ai",
-          "name": "堆友AI",
-          "emoji": "🎨",
-          "color": "#FF6A00",
-          "score": 90.8,
-          "scores": {
-            "hot": 40,
-            "quality": 25.799999999999997,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "基础功能免费，高级功能付费",
-          "badge": {
-            "type": "new",
-            "text": "NEW"
-          },
-          "visits": "50万",
-          "rank": 29
-        },
-        {
-          "slug": "modelscope-agent",
-          "name": "Modelscope-Agent",
-          "emoji": "🤖",
-          "color": "#4C1EFF",
-          "score": 90.8,
-          "scores": {
-            "hot": 40,
-            "quality": 25.799999999999997,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "免费开源",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85万",
           "rank": 30
         }
       ],
-      "total_tools": 80,
-      "last_updated": "2026-06-24 13:56",
+      "total_tools": 85,
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "免费工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -1815,7 +1815,7 @@
       "id": "value",
       "slug": "best-value-ai-tools-ranking-2026",
       "title": "2026年AI工具性价比排行榜",
-      "meta_description": "综合考虑价格和性能，293款高性价比AI工具排名。免费+付费，每分钱都花在刀刃上。",
+      "meta_description": "综合考虑价格和性能，316款高性价比AI工具排名。免费+付费，每分钱都花在刀刃上。",
       "keywords": [
         "性价比AI",
         "AI工具性价比",
@@ -1958,6 +1958,28 @@
           "rank": 6
         },
         {
+          "slug": "whee",
+          "name": "WHEE",
+          "emoji": "🎨",
+          "color": "#FF6B6B",
+          "score": 93.8,
+          "scores": {
+            "hot": 40,
+            "quality": 25.799999999999997,
+            "functionality": 18,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "基础功能免费，高级功能付费订阅",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约500万月访问量",
+          "rank": 7
+        },
+        {
           "slug": "upscayl",
           "name": "Upscayl",
           "emoji": "🖼️",
@@ -1977,7 +1999,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 7
+          "rank": 8
         },
         {
           "slug": "semrush-ai",
@@ -1999,7 +2021,7 @@
             "text": "推荐"
           },
           "visits": "8500万",
-          "rank": 8
+          "rank": 9
         },
         {
           "slug": "metagpt",
@@ -2021,7 +2043,7 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 9
+          "rank": 10
         },
         {
           "slug": "cline",
@@ -2043,7 +2065,7 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 10
+          "rank": 11
         },
         {
           "slug": "kling-3-0",
@@ -2065,7 +2087,51 @@
             "text": "HOT"
           },
           "visits": "约500万/月",
-          "rank": 11
+          "rank": 12
+        },
+        {
+          "slug": "deepgram",
+          "name": "Deepgram",
+          "emoji": "🎙️",
+          "color": "#0D0D0D",
+          "score": 93.2,
+          "scores": {
+            "hot": 40,
+            "quality": 28.200000000000003,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.7",
+          "price": "免费额度：每月45,000分钟；付费：$0.004/分钟起",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 13
+        },
+        {
+          "slug": "duolingo-max",
+          "name": "Duolingo Max",
+          "emoji": "🦉",
+          "color": "#58CC02",
+          "score": 93.2,
+          "scores": {
+            "hot": 40,
+            "quality": 28.200000000000003,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.7",
+          "price": "免费版+付费订阅（Duolingo Max约$12.99/月）",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "月访问量约5000万",
+          "rank": 14
         },
         {
           "slug": "relume",
@@ -2087,7 +2153,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 12
+          "rank": 15
         },
         {
           "slug": "decohere",
@@ -2109,7 +2175,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 13
+          "rank": 16
         },
         {
           "slug": "magnific-ai",
@@ -2131,7 +2197,7 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 14
+          "rank": 17
         },
         {
           "slug": "jenni-ai",
@@ -2153,7 +2219,7 @@
             "text": "推荐"
           },
           "visits": "850万/月",
-          "rank": 15
+          "rank": 18
         },
         {
           "slug": "prowritingaid",
@@ -2175,7 +2241,7 @@
             "text": "推荐"
           },
           "visits": "月访问量约120万",
-          "rank": 16
+          "rank": 19
         },
         {
           "slug": "surfer-seo",
@@ -2197,7 +2263,7 @@
             "text": "推荐"
           },
           "visits": "约180万/月",
-          "rank": 17
+          "rank": 20
         },
         {
           "slug": "julius-ai",
@@ -2219,7 +2285,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 18
+          "rank": 21
         },
         {
           "slug": "pinecone",
@@ -2241,7 +2307,7 @@
             "text": "推荐"
           },
           "visits": "210万",
-          "rank": 19
+          "rank": 22
         },
         {
           "slug": "weaviate",
@@ -2263,7 +2329,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 20
+          "rank": 23
         },
         {
           "slug": "autify",
@@ -2285,7 +2351,7 @@
             "text": "推荐"
           },
           "visits": "约45万/月",
-          "rank": 21
+          "rank": 24
         },
         {
           "slug": "codex-cli",
@@ -2307,7 +2373,7 @@
             "text": "HOT"
           },
           "visits": "50万",
-          "rank": 22
+          "rank": 25
         },
         {
           "slug": "pixelle-video",
@@ -2329,7 +2395,7 @@
             "text": "NEW"
           },
           "visits": "85万",
-          "rank": 23
+          "rank": 26
         },
         {
           "slug": "schole-ai",
@@ -2351,7 +2417,7 @@
             "text": "NEW"
           },
           "visits": "85万",
-          "rank": 24
+          "rank": 27
         },
         {
           "slug": "vidu-ai",
@@ -2373,7 +2439,7 @@
             "text": "HOT"
           },
           "visits": "850万",
-          "rank": 25
+          "rank": 28
         },
         {
           "slug": "langflow",
@@ -2395,7 +2461,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 26
+          "rank": 29
         },
         {
           "slug": "ragflow",
@@ -2417,77 +2483,11 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 27
-        },
-        {
-          "slug": "graphrag",
-          "name": "GraphRAG",
-          "emoji": "🕸️",
-          "color": "#4F46E5",
-          "score": 92.6,
-          "scores": {
-            "hot": 39.43535140571434,
-            "quality": 28.200000000000003,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.7",
-          "price": "免费开源",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85,000",
-          "rank": 28
-        },
-        {
-          "slug": "spline-ai",
-          "name": "Spline AI",
-          "emoji": "🎨",
-          "color": "#FF5A1F",
-          "score": 92.0,
-          "scores": {
-            "hot": 40,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费版可用，Pro版$12/月起",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85万",
-          "rank": 29
-        },
-        {
-          "slug": "play-ht",
-          "name": "Play.ht",
-          "emoji": "🎙️",
-          "color": "#6C47FF",
-          "score": 92.0,
-          "scores": {
-            "hot": 40,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费版每月5000字符；专业版$9.99/月起，无限字符；企业版定制价格",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "850万",
           "rank": 30
         }
       ],
-      "total_tools": 293,
-      "last_updated": "2026-06-24 13:56",
+      "total_tools": 316,
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "性价比评分 = 综合评分/(1+价格系数)，免费工具系数最优",
@@ -3172,7 +3172,7 @@
         }
       ],
       "total_tools": 30,
-      "last_updated": "2026-06-24 13:56",
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "按收录时间和近期关注度排序",
@@ -3185,7 +3185,7 @@
       "id": "ai-chatbot-ranking-2026",
       "slug": "ai-chatbot-ranking-2026",
       "title": "2026年AI对话工具排行榜",
-      "meta_description": "2026年最新AI对话工具排行榜，已收录37款AI对话工具，按综合评分排序，帮你找到最适合的工具。",
+      "meta_description": "2026年最新AI对话工具排行榜，已收录40款AI对话工具，按综合评分排序，帮你找到最适合的工具。",
       "keywords": [
         "AI对话排行榜",
         "AI对话排名",
@@ -3218,6 +3218,28 @@
           "rank": 1
         },
         {
+          "slug": "glm-5-1",
+          "name": "GLM-5.1",
+          "emoji": "🧠",
+          "color": "#6B5BFF",
+          "score": 92.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费使用，API付费",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "850万",
+          "rank": 2
+        },
+        {
           "slug": "baichuan-2",
           "name": "Baichuan 2",
           "emoji": "🤖",
@@ -3237,7 +3259,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 2
+          "rank": 3
         },
         {
           "slug": "hailuo-ai",
@@ -3259,7 +3281,7 @@
             "text": "NEW"
           },
           "visits": "500万",
-          "rank": 3
+          "rank": 4
         },
         {
           "slug": "modelbest",
@@ -3281,7 +3303,7 @@
             "text": "推荐"
           },
           "visits": "50万/月",
-          "rank": 4
+          "rank": 5
         },
         {
           "slug": "mistral-ai",
@@ -3303,7 +3325,7 @@
             "text": "HOT"
           },
           "visits": "850万",
-          "rank": 5
+          "rank": 6
         },
         {
           "slug": "alexa-plus",
@@ -3325,7 +3347,29 @@
             "text": "推荐"
           },
           "visits": "8500万",
-          "rank": 6
+          "rank": 7
+        },
+        {
+          "slug": "minicpm-o",
+          "name": "MiniCPM-o",
+          "emoji": "🤖",
+          "color": "#2563EB",
+          "score": 89.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 12,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费开源",
+          "badge": {
+            "type": "new",
+            "text": "NEW"
+          },
+          "visits": "85万",
+          "rank": 8
         },
         {
           "slug": "chatgpt",
@@ -3347,7 +3391,7 @@
             "text": "HOT"
           },
           "visits": "12.5万",
-          "rank": 7
+          "rank": 9
         },
         {
           "slug": "360-zhinain",
@@ -3369,7 +3413,7 @@
             "text": "编辑推荐"
           },
           "visits": "10万",
-          "rank": 8
+          "rank": 10
         },
         {
           "slug": "anthropic-console",
@@ -3391,7 +3435,7 @@
             "text": "HOT"
           },
           "visits": "100万月访问",
-          "rank": 9
+          "rank": 11
         },
         {
           "slug": "01-ai",
@@ -3413,7 +3457,7 @@
             "text": "NEW"
           },
           "visits": "85万",
-          "rank": 10
+          "rank": 12
         },
         {
           "slug": "sensenova",
@@ -3435,7 +3479,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 11
+          "rank": 13
         },
         {
           "slug": "zi-dong-tai-chu",
@@ -3457,7 +3501,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 12
+          "rank": 14
         },
         {
           "slug": "mike-ai",
@@ -3479,7 +3523,7 @@
             "text": "NEW"
           },
           "visits": "50万/月",
-          "rank": 13
+          "rank": 15
         },
         {
           "slug": "claude",
@@ -3501,7 +3545,7 @@
             "text": "NEW"
           },
           "visits": "8.3万",
-          "rank": 14
+          "rank": 16
         },
         {
           "slug": "character-ai",
@@ -3523,7 +3567,7 @@
             "text": "HOT"
           },
           "visits": "12万",
-          "rank": 15
+          "rank": 17
         },
         {
           "slug": "gemini",
@@ -3545,7 +3589,7 @@
             "text": "NEW"
           },
           "visits": "5万",
-          "rank": 16
+          "rank": 18
         },
         {
           "slug": "baichuan-ai",
@@ -3567,7 +3611,7 @@
             "text": "推荐"
           },
           "visits": "150万/月",
-          "rank": 17
+          "rank": 19
         },
         {
           "slug": "tiangong",
@@ -3589,7 +3633,7 @@
             "text": "编辑推荐"
           },
           "visits": "17万",
-          "rank": 18
+          "rank": 20
         },
         {
           "slug": "minimax",
@@ -3611,7 +3655,7 @@
             "text": "HOT"
           },
           "visits": "10万",
-          "rank": 19
+          "rank": 21
         },
         {
           "slug": "doubao",
@@ -3630,7 +3674,7 @@
           "price": "免费使用",
           "badge": {},
           "visits": "11.3万",
-          "rank": 20
+          "rank": 22
         },
         {
           "slug": "kimi",
@@ -3649,7 +3693,7 @@
           "price": "免费使用",
           "badge": {},
           "visits": "7.6万",
-          "rank": 21
+          "rank": 23
         },
         {
           "slug": "glitter-ai",
@@ -3671,7 +3715,7 @@
             "text": "NEW"
           },
           "visits": "50万/月",
-          "rank": 22
+          "rank": 24
         },
         {
           "slug": "domika",
@@ -3693,7 +3737,7 @@
             "text": "NEW"
           },
           "visits": "50万/月",
-          "rank": 23
+          "rank": 25
         },
         {
           "slug": "internlm",
@@ -3715,7 +3759,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 24
+          "rank": 26
         },
         {
           "slug": "xinghuo-cognitive-model",
@@ -3737,7 +3781,7 @@
             "text": "HOT"
           },
           "visits": "850万",
-          "rank": 25
+          "rank": 27
         },
         {
           "slug": "cluely",
@@ -3759,7 +3803,29 @@
             "text": "NEW"
           },
           "visits": "85万/月",
-          "rank": 26
+          "rank": 28
+        },
+        {
+          "slug": "ada-ai",
+          "name": "Ada AI",
+          "emoji": "🤖",
+          "color": "#6C5CE7",
+          "score": 84.8,
+          "scores": {
+            "hot": 40,
+            "quality": 25.799999999999997,
+            "functionality": 9,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "免费版/专业版$9.9/月",
+          "badge": {
+            "type": "new",
+            "text": "NEW"
+          },
+          "visits": "50万",
+          "rank": 29
         },
         {
           "slug": "grok",
@@ -3781,77 +3847,11 @@
             "text": "NEW"
           },
           "visits": "9万",
-          "rank": 27
-        },
-        {
-          "slug": "tencent-hunyuan",
-          "name": "腾讯混元",
-          "emoji": "🧠",
-          "color": "#FA7298",
-          "score": 84.2,
-          "scores": {
-            "hot": 40,
-            "quality": 25.200000000000003,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.2",
-          "price": "免费使用，企业API按调用计费",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "850万",
-          "rank": 28
-        },
-        {
-          "slug": "deepseek",
-          "name": "DeepSeek",
-          "emoji": "💬",
-          "color": "#956022",
-          "score": 83.6,
-          "scores": {
-            "hot": 40,
-            "quality": 24.599999999999998,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.1",
-          "price": "免费使用",
-          "badge": {
-            "type": "hot",
-            "text": null
-          },
-          "visits": "15万",
-          "rank": 29
-        },
-        {
-          "slug": "zhipu-chatglm",
-          "name": "智谱清言",
-          "emoji": "💬",
-          "color": "#4833ef",
-          "score": 83.6,
-          "scores": {
-            "hot": 40,
-            "quality": 24.599999999999998,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.1",
-          "price": "免费版+Pro $10/月",
-          "badge": {
-            "type": "new",
-            "text": "HOT"
-          },
-          "visits": "16万",
           "rank": 30
         }
       ],
-      "total_tools": 37,
-      "last_updated": "2026-06-24 13:56",
+      "total_tools": 40,
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI对话工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -3864,7 +3864,7 @@
       "id": "ai-writing-tool-ranking-2026",
       "slug": "ai-writing-tool-ranking-2026",
       "title": "2026年AI写作工具排行榜",
-      "meta_description": "2026年最新AI写作工具排行榜，已收录22款AI写作工具，按综合评分排序，帮你找到最适合的工具。",
+      "meta_description": "2026年最新AI写作工具排行榜，已收录23款AI写作工具，按综合评分排序，帮你找到最适合的工具。",
       "keywords": [
         "AI写作排行榜",
         "AI写作排名",
@@ -3963,6 +3963,28 @@
           "rank": 4
         },
         {
+          "slug": "spellbook",
+          "name": "Spellbook",
+          "emoji": "📝",
+          "color": "#6366F1",
+          "score": 91.2,
+          "scores": {
+            "hot": 39.22471989593555,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费版/专业版$29/月/团队版$99/月",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约8万",
+          "rank": 5
+        },
+        {
           "slug": "octarine",
           "name": "Octarine",
           "emoji": "🧙",
@@ -3982,7 +4004,7 @@
             "text": "NEW"
           },
           "visits": "85万",
-          "rank": 5
+          "rank": 6
         },
         {
           "slug": "sierra-ghostwriter",
@@ -4004,7 +4026,7 @@
             "text": "推荐"
           },
           "visits": "约12万/月",
-          "rank": 6
+          "rank": 7
         },
         {
           "slug": "wensi-ai",
@@ -4026,7 +4048,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 7
+          "rank": 8
         },
         {
           "slug": "anyword",
@@ -4048,7 +4070,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 8
+          "rank": 9
         },
         {
           "slug": "frase",
@@ -4070,7 +4092,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 9
+          "rank": 10
         },
         {
           "slug": "rytr",
@@ -4092,7 +4114,7 @@
             "text": "推荐"
           },
           "visits": "约450万月访问量",
-          "rank": 10
+          "rank": 11
         },
         {
           "slug": "wordtune",
@@ -4114,7 +4136,7 @@
             "text": "HOT"
           },
           "visits": "约 800 万",
-          "rank": 11
+          "rank": 12
         },
         {
           "slug": "language-tool",
@@ -4136,7 +4158,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 12
+          "rank": 13
         },
         {
           "slug": "zety-ai",
@@ -4158,7 +4180,7 @@
             "text": "推荐"
           },
           "visits": "约85万/月",
-          "rank": 13
+          "rank": 14
         },
         {
           "slug": "bi-ling-ai",
@@ -4180,7 +4202,7 @@
             "text": "推荐"
           },
           "visits": "85万月访问量",
-          "rank": 14
+          "rank": 15
         },
         {
           "slug": "quillbot",
@@ -4202,7 +4224,7 @@
             "text": null
           },
           "visits": "15万",
-          "rank": 15
+          "rank": 16
         },
         {
           "slug": "melty-ai",
@@ -4224,7 +4246,7 @@
             "text": "NEW"
           },
           "visits": "约45万/月",
-          "rank": 16
+          "rank": 17
         },
         {
           "slug": "copy.ai",
@@ -4246,7 +4268,7 @@
             "text": "NEW"
           },
           "visits": "12万",
-          "rank": 17
+          "rank": 18
         },
         {
           "slug": "jasper",
@@ -4265,7 +4287,7 @@
           "price": "Creator $49/月起",
           "badge": {},
           "visits": "6.8万",
-          "rank": 18
+          "rank": 19
         },
         {
           "slug": "grammarly-ai",
@@ -4287,7 +4309,7 @@
             "text": "编辑推荐"
           },
           "visits": "1万",
-          "rank": 19
+          "rank": 20
         },
         {
           "slug": "writesonic",
@@ -4309,7 +4331,7 @@
             "text": null
           },
           "visits": "2万",
-          "rank": 20
+          "rank": 21
         },
         {
           "slug": "mintlify-editor",
@@ -4331,7 +4353,7 @@
             "text": "推荐"
           },
           "visits": "85K",
-          "rank": 21
+          "rank": 22
         },
         {
           "slug": "jasper-chat",
@@ -4350,11 +4372,11 @@
           "price": "$39/月起",
           "badge": {},
           "visits": "N/A",
-          "rank": 22
+          "rank": 23
         }
       ],
-      "total_tools": 22,
-      "last_updated": "2026-06-24 13:56",
+      "total_tools": 23,
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI写作工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -4367,7 +4389,7 @@
       "id": "ai-image-generator-ranking-2026",
       "slug": "ai-image-generator-ranking-2026",
       "title": "2026年AI绘画工具排行榜",
-      "meta_description": "2026年最新AI绘画工具排行榜，已收录28款AI绘画工具，按综合评分排序，帮你找到最适合的工具。",
+      "meta_description": "2026年最新AI绘画工具排行榜，已收录32款AI绘画工具，按综合评分排序，帮你找到最适合的工具。",
       "keywords": [
         "AI绘画排行榜",
         "AI绘画排名",
@@ -4400,6 +4422,28 @@
           "rank": 1
         },
         {
+          "slug": "whee",
+          "name": "WHEE",
+          "emoji": "🎨",
+          "color": "#FF6B6B",
+          "score": 93.8,
+          "scores": {
+            "hot": 40,
+            "quality": 25.799999999999997,
+            "functionality": 18,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "基础功能免费，高级功能付费订阅",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约500万月访问量",
+          "rank": 2
+        },
+        {
           "slug": "decohere",
           "name": "Decohere",
           "emoji": "🎨",
@@ -4419,7 +4463,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 2
+          "rank": 3
         },
         {
           "slug": "magnific-ai",
@@ -4441,7 +4485,7 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 3
+          "rank": 4
         },
         {
           "slug": "fooocus",
@@ -4463,7 +4507,7 @@
             "text": "推荐"
           },
           "visits": "月访问量约45万",
-          "rank": 4
+          "rank": 5
         },
         {
           "slug": "tongyi-wanxiang",
@@ -4485,7 +4529,7 @@
             "text": "推荐"
           },
           "visits": "约500万/月",
-          "rank": 5
+          "rank": 6
         },
         {
           "slug": "pollinations",
@@ -4507,7 +4551,7 @@
             "text": "HOT"
           },
           "visits": "520万",
-          "rank": 6
+          "rank": 7
         },
         {
           "slug": "duiyou-ai",
@@ -4529,7 +4573,7 @@
             "text": "NEW"
           },
           "visits": "50万",
-          "rank": 7
+          "rank": 8
         },
         {
           "slug": "zhu-zhan-ai",
@@ -4551,7 +4595,7 @@
             "text": "推荐"
           },
           "visits": "约120万/月",
-          "rank": 8
+          "rank": 9
         },
         {
           "slug": "chuchu-ai",
@@ -4573,7 +4617,51 @@
             "text": "NEW"
           },
           "visits": "约45万/月",
-          "rank": 9
+          "rank": 10
+        },
+        {
+          "slug": "wenxin-yige",
+          "name": "文心一格",
+          "emoji": "🎨",
+          "color": "#2932E1",
+          "score": 90.8,
+          "scores": {
+            "hot": 40,
+            "quality": 25.799999999999997,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "基础功能免费，高级功能订阅制（每月39元起）",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约850万月访问",
+          "rank": 11
+        },
+        {
+          "slug": "hunyuan-image",
+          "name": "混元图像",
+          "emoji": "🎨",
+          "color": "#FA7298",
+          "score": 90.8,
+          "scores": {
+            "hot": 40,
+            "quality": 25.799999999999997,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "免费版每月100张，会员39元/月无限量",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 12
         },
         {
           "slug": "wujie-ai",
@@ -4595,7 +4683,7 @@
             "text": "推荐"
           },
           "visits": "150万/月",
-          "rank": 10
+          "rank": 13
         },
         {
           "slug": "lets-enhance",
@@ -4617,7 +4705,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 11
+          "rank": 14
         },
         {
           "slug": "anyscenegen",
@@ -4639,7 +4727,29 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 12
+          "rank": 15
+        },
+        {
+          "slug": "huiwa",
+          "name": "绘蛙",
+          "emoji": "🎨",
+          "color": "#FF6B35",
+          "score": 89.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 12,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "基础免费，付费版29元/月起",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 16
         },
         {
           "slug": "stockimg-ai",
@@ -4661,7 +4771,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 13
+          "rank": 17
         },
         {
           "slug": "6pen-art",
@@ -4683,7 +4793,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 14
+          "rank": 18
         },
         {
           "slug": "leonardo-ai",
@@ -4705,7 +4815,7 @@
             "text": "NEW"
           },
           "visits": "14万",
-          "rank": 15
+          "rank": 19
         },
         {
           "slug": "stable-diffusion",
@@ -4724,7 +4834,7 @@
           "price": "完全免费（需GPU）",
           "badge": {},
           "visits": "9.1万",
-          "rank": 16
+          "rank": 20
         },
         {
           "slug": "flux",
@@ -4746,7 +4856,7 @@
             "text": "编辑推荐"
           },
           "visits": "9万",
-          "rank": 17
+          "rank": 21
         },
         {
           "slug": "adobe-firefly",
@@ -4768,7 +4878,7 @@
             "text": "HOT"
           },
           "visits": "20万",
-          "rank": 18
+          "rank": 22
         },
         {
           "slug": "tensor.art",
@@ -4790,7 +4900,7 @@
             "text": "NEW"
           },
           "visits": "18万",
-          "rank": 19
+          "rank": 23
         },
         {
           "slug": "jimeng-ai",
@@ -4812,7 +4922,7 @@
             "text": "推荐"
           },
           "visits": "约500万/月",
-          "rank": 20
+          "rank": 24
         },
         {
           "slug": "midjourney",
@@ -4834,7 +4944,7 @@
             "text": "编辑推荐"
           },
           "visits": "10.2万",
-          "rank": 21
+          "rank": 25
         },
         {
           "slug": "recraft",
@@ -4856,7 +4966,7 @@
             "text": "HOT"
           },
           "visits": "16万",
-          "rank": 22
+          "rank": 26
         },
         {
           "slug": "krea-ai",
@@ -4878,7 +4988,7 @@
             "text": "NEW"
           },
           "visits": "6万",
-          "rank": 23
+          "rank": 27
         },
         {
           "slug": "dall-e-3",
@@ -4900,7 +5010,7 @@
             "text": "编辑推荐"
           },
           "visits": "20万",
-          "rank": 24
+          "rank": 28
         },
         {
           "slug": "ideogram",
@@ -4922,7 +5032,7 @@
             "text": null
           },
           "visits": "14万",
-          "rank": 25
+          "rank": 29
         },
         {
           "slug": "miaohua",
@@ -4944,55 +5054,11 @@
             "text": null
           },
           "visits": "7万",
-          "rank": 26
-        },
-        {
-          "slug": "liblibai",
-          "name": "LiblibAI",
-          "emoji": "🎨",
-          "color": "#e5e017",
-          "score": 82.4,
-          "scores": {
-            "hot": 35.8169700377573,
-            "quality": 27.599999999999998,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.6",
-          "price": "免费版+Pro $10/月",
-          "badge": {
-            "type": "new",
-            "text": "编辑推荐"
-          },
-          "visits": "3万",
-          "rank": 27
-        },
-        {
-          "slug": "freepik-ai",
-          "name": "Freepik AI",
-          "emoji": "🎨",
-          "color": "#9cae7f",
-          "score": 80.2,
-          "scores": {
-            "hot": 40,
-            "quality": 25.200000000000003,
-            "functionality": 9,
-            "value": 6,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.2",
-          "price": "基础$10/月起",
-          "badge": {
-            "type": "pick",
-            "text": "NEW"
-          },
-          "visits": "10万",
-          "rank": 28
+          "rank": 30
         }
       ],
-      "total_tools": 28,
-      "last_updated": "2026-06-24 13:56",
+      "total_tools": 32,
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI绘画工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -5005,7 +5071,7 @@
       "id": "ai-coding-tool-ranking-2026",
       "slug": "ai-coding-tool-ranking-2026",
       "title": "2026年AI编程工具排行榜",
-      "meta_description": "2026年最新AI编程工具排行榜，已收录47款AI编程工具，按综合评分排序，帮你找到最适合的工具。",
+      "meta_description": "2026年最新AI编程工具排行榜，已收录48款AI编程工具，按综合评分排序，帮你找到最适合的工具。",
       "keywords": [
         "AI编程排行榜",
         "AI编程排名",
@@ -5676,8 +5742,8 @@
           "rank": 30
         }
       ],
-      "total_tools": 47,
-      "last_updated": "2026-06-24 13:56",
+      "total_tools": 48,
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI编程工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -6362,7 +6428,7 @@
         }
       ],
       "total_tools": 37,
-      "last_updated": "2026-06-24 13:56",
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI视频工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -6375,7 +6441,7 @@
       "id": "ai-audio-tool-ranking-2026",
       "slug": "ai-audio-tool-ranking-2026",
       "title": "2026年AI音频工具排行榜",
-      "meta_description": "2026年最新AI音频工具排行榜，已收录25款AI音频工具，按综合评分排序，帮你找到最适合的工具。",
+      "meta_description": "2026年最新AI音频工具排行榜，已收录27款AI音频工具，按综合评分排序，帮你找到最适合的工具。",
       "keywords": [
         "AI音频排行榜",
         "AI音频排名",
@@ -6408,6 +6474,28 @@
           "rank": 1
         },
         {
+          "slug": "deepgram",
+          "name": "Deepgram",
+          "emoji": "🎙️",
+          "color": "#0D0D0D",
+          "score": 93.2,
+          "scores": {
+            "hot": 40,
+            "quality": 28.200000000000003,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.7",
+          "price": "免费额度：每月45,000分钟；付费：$0.004/分钟起",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 2
+        },
+        {
           "slug": "play-ht",
           "name": "Play.ht",
           "emoji": "🎙️",
@@ -6427,7 +6515,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 2
+          "rank": 3
         },
         {
           "slug": "moyin-gongfang",
@@ -6449,7 +6537,7 @@
             "text": "推荐"
           },
           "visits": "月访问量约30万",
-          "rank": 3
+          "rank": 4
         },
         {
           "slug": "cosy-voice",
@@ -6471,7 +6559,7 @@
             "text": "推荐"
           },
           "visits": "50万",
-          "rank": 4
+          "rank": 5
         },
         {
           "slug": "spark-tts",
@@ -6493,7 +6581,7 @@
             "text": "NEW"
           },
           "visits": "85万",
-          "rank": 5
+          "rank": 6
         },
         {
           "slug": "f5-tts",
@@ -6515,7 +6603,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 6
+          "rank": 7
         },
         {
           "slug": "boomy",
@@ -6537,7 +6625,7 @@
             "text": "HOT"
           },
           "visits": "85万/月",
-          "rank": 7
+          "rank": 8
         },
         {
           "slug": "resemble-ai",
@@ -6559,7 +6647,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 8
+          "rank": 9
         },
         {
           "slug": "chat-tts",
@@ -6581,7 +6669,7 @@
             "text": "HOT"
           },
           "visits": "85万/月",
-          "rank": 9
+          "rank": 10
         },
         {
           "slug": "wondercraft-ai",
@@ -6603,7 +6691,7 @@
             "text": "推荐"
           },
           "visits": "45万",
-          "rank": 10
+          "rank": 11
         },
         {
           "slug": "riffusion",
@@ -6625,7 +6713,29 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 11
+          "rank": 12
+        },
+        {
+          "slug": "cartesia",
+          "name": "Cartesia",
+          "emoji": "🎙️",
+          "color": "#6366F1",
+          "score": 89.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 12,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费版可用，付费版$19/月起",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 13
         },
         {
           "slug": "musicfx",
@@ -6647,7 +6757,7 @@
             "text": "NEW"
           },
           "visits": "85万",
-          "rank": 12
+          "rank": 14
         },
         {
           "slug": "elevenlabs",
@@ -6669,7 +6779,7 @@
             "text": "编辑推荐"
           },
           "visits": "8.9万",
-          "rank": 13
+          "rank": 15
         },
         {
           "slug": "soundraw",
@@ -6691,7 +6801,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 14
+          "rank": 16
         },
         {
           "slug": "mubert",
@@ -6713,7 +6823,7 @@
             "text": "推荐"
           },
           "visits": "150万",
-          "rank": 15
+          "rank": 17
         },
         {
           "slug": "aiva",
@@ -6735,7 +6845,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 16
+          "rank": 18
         },
         {
           "slug": "mureka",
@@ -6757,7 +6867,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 17
+          "rank": 19
         },
         {
           "slug": "beatoven-ai",
@@ -6779,7 +6889,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 18
+          "rank": 20
         },
         {
           "slug": "udio",
@@ -6798,7 +6908,7 @@
           "price": "免费版+Pro $10/月",
           "badge": {},
           "visits": "4.5万",
-          "rank": 19
+          "rank": 21
         },
         {
           "slug": "krisp",
@@ -6820,7 +6930,7 @@
             "text": "编辑推荐"
           },
           "visits": "18万",
-          "rank": 20
+          "rank": 22
         },
         {
           "slug": "suno",
@@ -6839,7 +6949,7 @@
           "price": "免费版+Pro $10/月",
           "badge": {},
           "visits": "3.8万",
-          "rank": 21
+          "rank": 23
         },
         {
           "slug": "speechify",
@@ -6861,7 +6971,7 @@
             "text": "HOT"
           },
           "visits": "17万",
-          "rank": 22
+          "rank": 24
         },
         {
           "slug": "murf-ai",
@@ -6883,7 +6993,7 @@
             "text": "NEW"
           },
           "visits": "3万",
-          "rank": 23
+          "rank": 25
         },
         {
           "slug": "cleanvoice",
@@ -6905,7 +7015,7 @@
             "text": "NEW"
           },
           "visits": "9万",
-          "rank": 24
+          "rank": 26
         },
         {
           "slug": "respeecher",
@@ -6924,11 +7034,11 @@
           "price": "企业定制",
           "badge": {},
           "visits": "N/A",
-          "rank": 25
+          "rank": 27
         }
       ],
-      "total_tools": 25,
-      "last_updated": "2026-06-24 13:56",
+      "total_tools": 27,
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI音频工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -6941,7 +7051,7 @@
       "id": "ai-office-tool-ranking-2026",
       "slug": "ai-office-tool-ranking-2026",
       "title": "2026年AI办公工具排行榜",
-      "meta_description": "2026年最新AI办公工具排行榜，已收录26款AI办公工具，按综合评分排序，帮你找到最适合的工具。",
+      "meta_description": "2026年最新AI办公工具排行榜，已收录27款AI办公工具，按综合评分排序，帮你找到最适合的工具。",
       "keywords": [
         "AI办公排行榜",
         "AI办公排名",
@@ -7172,6 +7282,28 @@
           "rank": 10
         },
         {
+          "slug": "sembly",
+          "name": "Sembly",
+          "emoji": "🎙️",
+          "color": "#6366F1",
+          "score": 87.8,
+          "scores": {
+            "hot": 40,
+            "quality": 25.799999999999997,
+            "functionality": 12,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "免费版可用，专业版$10/月起",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 11
+        },
+        {
           "slug": "microsoft-copilot",
           "name": "Copilot（微软）",
           "emoji": "📊",
@@ -7191,7 +7323,7 @@
             "text": "NEW"
           },
           "visits": "18万",
-          "rank": 11
+          "rank": 12
         },
         {
           "slug": "otter.ai",
@@ -7213,7 +7345,7 @@
             "text": "HOT"
           },
           "visits": "14万",
-          "rank": 12
+          "rank": 13
         },
         {
           "slug": "fireflies.ai",
@@ -7235,7 +7367,7 @@
             "text": "编辑推荐"
           },
           "visits": "15万",
-          "rank": 13
+          "rank": 14
         },
         {
           "slug": "feishu-smart-partner",
@@ -7257,7 +7389,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 14
+          "rank": 15
         },
         {
           "slug": "tome",
@@ -7279,7 +7411,7 @@
             "text": null
           },
           "visits": "13万",
-          "rank": 15
+          "rank": 16
         },
         {
           "slug": "wps-ai",
@@ -7301,7 +7433,7 @@
             "text": null
           },
           "visits": "16万",
-          "rank": 16
+          "rank": 17
         },
         {
           "slug": "pitch-ai",
@@ -7323,7 +7455,7 @@
             "text": "推荐"
           },
           "visits": "约220万/月",
-          "rank": 17
+          "rank": 18
         },
         {
           "slug": "lingban-ai",
@@ -7345,7 +7477,7 @@
             "text": "推荐"
           },
           "visits": "30万",
-          "rank": 18
+          "rank": 19
         },
         {
           "slug": "gamma",
@@ -7364,7 +7496,7 @@
           "price": "免费版+Pro $16/月",
           "badge": {},
           "visits": "5.2万",
-          "rank": 19
+          "rank": 20
         },
         {
           "slug": "notebooklm",
@@ -7386,7 +7518,7 @@
             "text": null
           },
           "visits": "16万",
-          "rank": 20
+          "rank": 21
         },
         {
           "slug": "napkin-ai",
@@ -7408,7 +7540,7 @@
             "text": "编辑推荐"
           },
           "visits": "3万",
-          "rank": 21
+          "rank": 22
         },
         {
           "slug": "feishu-assistant",
@@ -7430,7 +7562,7 @@
             "text": "NEW"
           },
           "visits": "18万",
-          "rank": 22
+          "rank": 23
         },
         {
           "slug": "notion-ai",
@@ -7449,7 +7581,7 @@
           "price": "AI附加费$10/月",
           "badge": {},
           "visits": "5.4万",
-          "rank": 23
+          "rank": 24
         },
         {
           "slug": "beautiful.ai",
@@ -7471,7 +7603,7 @@
             "text": "HOT"
           },
           "visits": "13万",
-          "rank": 24
+          "rank": 25
         },
         {
           "slug": "fathom",
@@ -7493,7 +7625,7 @@
             "text": "NEW"
           },
           "visits": "15万",
-          "rank": 25
+          "rank": 26
         },
         {
           "slug": "mem-ai",
@@ -7512,11 +7644,11 @@
           "price": "免费版+$10/月",
           "badge": {},
           "visits": "N/A",
-          "rank": 26
+          "rank": 27
         }
       ],
-      "total_tools": 26,
-      "last_updated": "2026-06-24 13:56",
+      "total_tools": 27,
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI办公工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -7529,7 +7661,7 @@
       "id": "ai-design-tool-ranking-2026",
       "slug": "ai-design-tool-ranking-2026",
       "title": "2026年AI设计工具排行榜",
-      "meta_description": "2026年最新AI设计工具排行榜，已收录32款AI设计工具，按综合评分排序，帮你找到最适合的工具。",
+      "meta_description": "2026年最新AI设计工具排行榜，已收录33款AI设计工具，按综合评分排序，帮你找到最适合的工具。",
       "keywords": [
         "AI设计排行榜",
         "AI设计排名",
@@ -7672,6 +7804,28 @@
           "rank": 6
         },
         {
+          "slug": "eqxiu",
+          "name": "易企秀",
+          "emoji": "🎨",
+          "color": "#1890FF",
+          "score": 92.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "基础功能免费，高级模板和AI功能需付费，会员39元/月起",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "月访问量约500万",
+          "rank": 7
+        },
+        {
           "slug": "tuguaishou",
           "name": "图怪兽",
           "emoji": "🎨",
@@ -7691,7 +7845,7 @@
             "text": "推荐"
           },
           "visits": "约120万/月",
-          "rank": 7
+          "rank": 8
         },
         {
           "slug": "clipdrop",
@@ -7713,7 +7867,7 @@
             "text": "推荐"
           },
           "visits": "850万/月",
-          "rank": 8
+          "rank": 9
         },
         {
           "slug": "adcreative-ai",
@@ -7735,7 +7889,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 9
+          "rank": 10
         },
         {
           "slug": "predis-ai",
@@ -7757,7 +7911,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 10
+          "rank": 11
         },
         {
           "slug": "open-design",
@@ -7779,7 +7933,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 11
+          "rank": 12
         },
         {
           "slug": "framer-ai",
@@ -7801,7 +7955,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 12
+          "rank": 13
         },
         {
           "slug": "lottiefiles-ai",
@@ -7823,7 +7977,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 13
+          "rank": 14
         },
         {
           "slug": "adobe-express-ai",
@@ -7845,7 +7999,7 @@
             "text": "推荐"
           },
           "visits": "约500万月访问量",
-          "rank": 14
+          "rank": 15
         },
         {
           "slug": "meitu-design-ai",
@@ -7867,7 +8021,7 @@
             "text": "推荐"
           },
           "visits": "约850万/月",
-          "rank": 15
+          "rank": 16
         },
         {
           "slug": "khroma",
@@ -7889,7 +8043,7 @@
             "text": "推荐"
           },
           "visits": "约50万月访问量",
-          "rank": 16
+          "rank": 17
         },
         {
           "slug": "pencil-ai",
@@ -7911,7 +8065,7 @@
             "text": "NEW"
           },
           "visits": "约80万月访问量",
-          "rank": 17
+          "rank": 18
         },
         {
           "slug": "visily",
@@ -7933,7 +8087,7 @@
             "text": "NEW"
           },
           "visits": "45万",
-          "rank": 18
+          "rank": 19
         },
         {
           "slug": "designs-ai",
@@ -7955,7 +8109,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 19
+          "rank": 20
         },
         {
           "slug": "pixso-ai",
@@ -7977,7 +8131,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 20
+          "rank": 21
         },
         {
           "slug": "chuangketie-ai",
@@ -7999,7 +8153,7 @@
             "text": "推荐"
           },
           "visits": "约50万月访问",
-          "rank": 21
+          "rank": 22
         },
         {
           "slug": "looka",
@@ -8021,7 +8175,7 @@
             "text": null
           },
           "visits": "18万",
-          "rank": 22
+          "rank": 23
         },
         {
           "slug": "wonder-ai",
@@ -8043,7 +8197,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 23
+          "rank": 24
         },
         {
           "slug": "uizard",
@@ -8065,7 +8219,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 24
+          "rank": 25
         },
         {
           "slug": "photoroom",
@@ -8087,7 +8241,7 @@
             "text": "HOT"
           },
           "visits": "18万",
-          "rank": 25
+          "rank": 26
         },
         {
           "slug": "canva-ai",
@@ -8106,7 +8260,7 @@
           "price": "免费版+Pro ¥120/月",
           "badge": {},
           "visits": "6.2万",
-          "rank": 26
+          "rank": 27
         },
         {
           "slug": "figma-ai",
@@ -8128,7 +8282,7 @@
             "text": "NEW"
           },
           "visits": "11万",
-          "rank": 27
+          "rank": 28
         },
         {
           "slug": "topaz-photo-ai",
@@ -8150,7 +8304,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 28
+          "rank": 29
         },
         {
           "slug": "remove.bg",
@@ -8172,33 +8326,11 @@
             "text": null
           },
           "visits": "6万",
-          "rank": 29
-        },
-        {
-          "slug": "jsdesign-ai",
-          "name": "即时设计AI",
-          "emoji": "🖼️",
-          "color": "#5011b7",
-          "score": 83.0,
-          "scores": {
-            "hot": 38.22521000306915,
-            "quality": 25.799999999999997,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "免费使用",
-          "badge": {
-            "type": "pick",
-            "text": "HOT"
-          },
-          "visits": "6万",
           "rank": 30
         }
       ],
-      "total_tools": 32,
-      "last_updated": "2026-06-24 13:56",
+      "total_tools": 33,
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI设计工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -8465,7 +8597,7 @@
         }
       ],
       "total_tools": 11,
-      "last_updated": "2026-06-24 13:56",
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI搜索工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -8556,7 +8688,7 @@
         }
       ],
       "total_tools": 3,
-      "last_updated": "2026-06-24 13:56",
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI翻译工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -8911,7 +9043,7 @@
         }
       ],
       "total_tools": 15,
-      "last_updated": "2026-06-24 13:56",
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI自动化工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -8924,7 +9056,7 @@
       "id": "ai-productivity-tool-ranking-2026",
       "slug": "ai-productivity-tool-ranking-2026",
       "title": "2026年AI效率工具排行榜",
-      "meta_description": "2026年最新AI效率工具排行榜，已收录37款AI效率工具，按综合评分排序，帮你找到最适合的工具。",
+      "meta_description": "2026年最新AI效率工具排行榜，已收录43款AI效率工具，按综合评分排序，帮你找到最适合的工具。",
       "keywords": [
         "AI效率排行榜",
         "AI效率排名",
@@ -8957,6 +9089,28 @@
           "rank": 1
         },
         {
+          "slug": "duolingo-max",
+          "name": "Duolingo Max",
+          "emoji": "🦉",
+          "color": "#58CC02",
+          "score": 93.2,
+          "scores": {
+            "hot": 40,
+            "quality": 28.200000000000003,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.7",
+          "price": "免费版+付费订阅（Duolingo Max约$12.99/月）",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "月访问量约5000万",
+          "rank": 2
+        },
+        {
           "slug": "surfer-seo",
           "name": "Surfer SEO",
           "emoji": "🌊",
@@ -8976,7 +9130,7 @@
             "text": "推荐"
           },
           "visits": "约180万/月",
-          "rank": 2
+          "rank": 3
         },
         {
           "slug": "julius-ai",
@@ -8998,7 +9152,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 3
+          "rank": 4
         },
         {
           "slug": "pinecone",
@@ -9020,7 +9174,7 @@
             "text": "推荐"
           },
           "visits": "210万",
-          "rank": 4
+          "rank": 5
         },
         {
           "slug": "weaviate",
@@ -9042,7 +9196,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 5
+          "rank": 6
         },
         {
           "slug": "schole-ai",
@@ -9064,7 +9218,29 @@
             "text": "NEW"
           },
           "visits": "85万",
-          "rank": 6
+          "rank": 7
+        },
+        {
+          "slug": "read-ai",
+          "name": "Read AI",
+          "emoji": "📖",
+          "color": "#6366F1",
+          "score": 92.6,
+          "scores": {
+            "hot": 40,
+            "quality": 27.599999999999998,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.6",
+          "price": "免费版可用，付费版$19/月起",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "150万",
+          "rank": 8
         },
         {
           "slug": "scalenut",
@@ -9086,7 +9262,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 7
+          "rank": 9
         },
         {
           "slug": "chatpdf",
@@ -9108,7 +9284,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 8
+          "rank": 10
         },
         {
           "slug": "apache-superset",
@@ -9130,7 +9306,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 9
+          "rank": 11
         },
         {
           "slug": "rankspot",
@@ -9152,7 +9328,29 @@
             "text": "NEW"
           },
           "visits": "约15万/月",
-          "rank": 10
+          "rank": 12
+        },
+        {
+          "slug": "tempus-ai",
+          "name": "Tempus AI",
+          "emoji": "⏱️",
+          "color": "#1E3A5F",
+          "score": 92.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费版/专业版($9.99/月)/企业版($29.99/月)",
+          "badge": {
+            "type": "new",
+            "text": "NEW"
+          },
+          "visits": "85万",
+          "rank": 13
         },
         {
           "slug": "velo-ai",
@@ -9174,7 +9372,29 @@
             "text": "NEW"
           },
           "visits": "50万",
-          "rank": 11
+          "rank": 14
+        },
+        {
+          "slug": "avoma",
+          "name": "Avoma",
+          "emoji": "🎯",
+          "color": "#4F46E5",
+          "score": 90.8,
+          "scores": {
+            "hot": 40,
+            "quality": 25.799999999999997,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "提供免费版本，付费计划从$19/月起，企业版定制价格",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约50万月访问量",
+          "rank": 15
         },
         {
           "slug": "open-router",
@@ -9196,7 +9416,7 @@
             "text": "推荐"
           },
           "visits": "850万/月",
-          "rank": 12
+          "rank": 16
         },
         {
           "slug": "shulex",
@@ -9218,7 +9438,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 13
+          "rank": 17
         },
         {
           "slug": "shadow-ai",
@@ -9240,7 +9460,7 @@
             "text": "NEW"
           },
           "visits": "85,000",
-          "rank": 14
+          "rank": 18
         },
         {
           "slug": "kanwas",
@@ -9262,7 +9482,7 @@
             "text": "NEW"
           },
           "visits": "85万",
-          "rank": 15
+          "rank": 19
         },
         {
           "slug": "humata-ai",
@@ -9284,7 +9504,7 @@
             "text": "推荐"
           },
           "visits": "85万/月",
-          "rank": 16
+          "rank": 20
         },
         {
           "slug": "happy-horse",
@@ -9306,7 +9526,7 @@
             "text": "NEW"
           },
           "visits": "50万/月",
-          "rank": 17
+          "rank": 21
         },
         {
           "slug": "mindra",
@@ -9328,7 +9548,7 @@
             "text": "NEW"
           },
           "visits": "85万",
-          "rank": 18
+          "rank": 22
         },
         {
           "slug": "tabstack",
@@ -9350,7 +9570,29 @@
             "text": "推荐"
           },
           "visits": "约50万月访问",
-          "rank": 19
+          "rank": 23
+        },
+        {
+          "slug": "taskade",
+          "name": "Taskade",
+          "emoji": "📋",
+          "color": "#2ECC71",
+          "score": 89.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 12,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费版可用，付费版$8/月起",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约50万月访问量",
+          "rank": 24
         },
         {
           "slug": "augie-ai",
@@ -9372,7 +9614,7 @@
             "text": "NEW"
           },
           "visits": "约5万/月",
-          "rank": 20
+          "rank": 25
         },
         {
           "slug": "trading-agents",
@@ -9394,7 +9636,7 @@
             "text": "NEW"
           },
           "visits": "85万/月",
-          "rank": 21
+          "rank": 26
         },
         {
           "slug": "tongyi-efficiency",
@@ -9416,7 +9658,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 22
+          "rank": 27
         },
         {
           "slug": "jamie-ai",
@@ -9438,7 +9680,29 @@
             "text": "HOT"
           },
           "visits": "50万/月",
-          "rank": 23
+          "rank": 28
+        },
+        {
+          "slug": "quizlet-ai",
+          "name": "Quizlet AI",
+          "emoji": "📚",
+          "color": "#3C7EFF",
+          "score": 86.6,
+          "scores": {
+            "hot": 40,
+            "quality": 27.599999999999998,
+            "functionality": 9,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.6",
+          "price": "基础版免费，专业版约$7.99/月，教育版需联系销售",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "月访问量约8500万",
+          "rank": 29
         },
         {
           "slug": "comet",
@@ -9460,143 +9724,11 @@
             "text": "HOT"
           },
           "visits": "9万",
-          "rank": 24
-        },
-        {
-          "slug": "elicit",
-          "name": "Elicit",
-          "emoji": "🔬",
-          "color": "#6B46C1",
-          "score": 86.0,
-          "scores": {
-            "hot": 40,
-            "quality": 27.0,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费版可用，专业版$10/月起",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "85万",
-          "rank": 25
-        },
-        {
-          "slug": "galileo-ai",
-          "name": "Galileo AI",
-          "emoji": "🔭",
-          "color": "#5B4FCF",
-          "score": 86.0,
-          "scores": {
-            "hot": 40,
-            "quality": 27.0,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "基础版免费，专业版$19/月起",
-          "badge": {
-            "type": "new",
-            "text": "NEW"
-          },
-          "visits": "85万/月",
-          "rank": 26
-        },
-        {
-          "slug": "postiz",
-          "name": "Postiz",
-          "emoji": "📅",
-          "color": "#6366F1",
-          "score": 86.0,
-          "scores": {
-            "hot": 40,
-            "quality": 27.0,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费版可用，付费版$9/月起",
-          "badge": {
-            "type": "new",
-            "text": "NEW"
-          },
-          "visits": "85万",
-          "rank": 27
-        },
-        {
-          "slug": "yoroll",
-          "name": "Yoroll",
-          "emoji": "✨",
-          "color": "#6366F1",
-          "score": 85.4,
-          "scores": {
-            "hot": 37.59176003468815,
-            "quality": 25.799999999999997,
-            "functionality": 12,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "基础免费版+付费专业版",
-          "badge": {
-            "type": "new",
-            "text": "NEW"
-          },
-          "visits": "约5万/月",
-          "rank": 28
-        },
-        {
-          "slug": "buffer-ai",
-          "name": "Buffer AI",
-          "emoji": "📱",
-          "color": "#168EEA",
-          "score": 84.8,
-          "scores": {
-            "hot": 40,
-            "quality": 25.799999999999997,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "基础版免费，专业版$15/月起，AI功能需订阅高级套餐",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "约50万月访问量",
-          "rank": 29
-        },
-        {
-          "slug": "glass-health",
-          "name": "Glass Health",
-          "emoji": "🏥",
-          "color": "#2E86AB",
-          "score": 84.8,
-          "scores": {
-            "hot": 40,
-            "quality": 25.799999999999997,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "免费版可用，Pro版约$29/月",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "45万/月",
           "rank": 30
         }
       ],
-      "total_tools": 37,
-      "last_updated": "2026-06-24 13:56",
+      "total_tools": 43,
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI效率工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -9643,7 +9775,7 @@
         }
       ],
       "total_tools": 1,
-      "last_updated": "2026-06-24 13:56",
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI智能体工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -9656,7 +9788,7 @@
       "id": "ai-development-tool-ranking-2026",
       "slug": "ai-development-tool-ranking-2026",
       "title": "2026年AI开发工具排行榜",
-      "meta_description": "2026年最新AI开发工具排行榜，已收录19款AI开发工具，按综合评分排序，帮你找到最适合的工具。",
+      "meta_description": "2026年最新AI开发工具排行榜，已收录20款AI开发工具，按综合评分排序，帮你找到最适合的工具。",
       "keywords": [
         "AI开发排行榜",
         "AI开发排名",
@@ -10019,6 +10151,28 @@
           "rank": 16
         },
         {
+          "slug": "alpaca-ai",
+          "name": "Alpaca AI",
+          "emoji": "🦙",
+          "color": "#C4A484",
+          "score": 87.2,
+          "scores": {
+            "hot": 40,
+            "quality": 25.200000000000003,
+            "functionality": 12,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.2",
+          "price": "免费开源",
+          "badge": {
+            "type": "new",
+            "text": "NEW"
+          },
+          "visits": "约50万月访问量",
+          "rank": 17
+        },
+        {
           "slug": "unstructured",
           "name": "Unstructured",
           "emoji": "📄",
@@ -10038,7 +10192,7 @@
             "text": "推荐"
           },
           "visits": "45万",
-          "rank": 17
+          "rank": 18
         },
         {
           "slug": "base44",
@@ -10060,7 +10214,7 @@
             "text": "NEW"
           },
           "visits": "85,000",
-          "rank": 18
+          "rank": 19
         },
         {
           "slug": "verba",
@@ -10082,22 +10236,267 @@
             "text": "NEW"
           },
           "visits": "约45万月访问",
-          "rank": 19
+          "rank": 20
         }
       ],
-      "total_tools": 19,
-      "last_updated": "2026-06-24 13:56",
+      "total_tools": 20,
+      "last_updated": "2026-06-25 09:54",
       "content": null,
       "methodology": {
         "scoring": "AI开发工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
         "data_refresh": "每次构建自动更新",
         "disclaimer": "排名基于算法自动计算，仅供参考"
       }
+    },
+    {
+      "type": "category",
+      "id": "ai-industry-tool-ranking-2026",
+      "slug": "ai-industry-tool-ranking-2026",
+      "title": "2026年AI行业应用工具排行榜",
+      "meta_description": "2026年最新AI行业应用工具排行榜，已收录10款AI行业应用工具，按综合评分排序，帮你找到最适合的工具。",
+      "keywords": [
+        "AI行业应用排行榜",
+        "AI行业应用排名",
+        "AI行业应用工具",
+        "AI工具"
+      ],
+      "icon": "🏢",
+      "category": "AI行业应用",
+      "ranked_tools": [
+        {
+          "slug": "cocounsel",
+          "name": "CoCounsel",
+          "emoji": "⚖️",
+          "color": "#1E3A5F",
+          "score": 92.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "订阅制，$39/月起，Clio用户可免费使用基础版",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "约45万",
+          "rank": 1
+        },
+        {
+          "slug": "eightfold",
+          "name": "Eightfold",
+          "emoji": "🎯",
+          "color": "#1E40AF",
+          "score": 92.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "企业定制定价，提供免费演示",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约50万月访问量",
+          "rank": 2
+        },
+        {
+          "slug": "ada-health",
+          "name": "Ada Health",
+          "emoji": "🩺",
+          "color": "#4A90D9",
+          "score": 90.8,
+          "scores": {
+            "hot": 40,
+            "quality": 25.799999999999997,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "基础版免费，专业版$9.99/月",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "520万",
+          "rank": 3
+        },
+        {
+          "slug": "intercom-fin",
+          "name": "Intercom Fin",
+          "emoji": "🤖",
+          "color": "#1F8DED",
+          "score": 88.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "起价$74/每月（根据对话量收费）",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约850万/月",
+          "rank": 4
+        },
+        {
+          "slug": "khanmigo",
+          "name": "Khanmigo",
+          "emoji": "📚",
+          "color": "#14BF96",
+          "score": 88.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 5
+        },
+        {
+          "slug": "bloomberg-gpt",
+          "name": "Bloomberg GPT",
+          "emoji": "📈",
+          "color": "#000000",
+          "score": 88.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "需订阅彭博终端机（$2,000+/月）",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 6
+        },
+        {
+          "slug": "robin-ai",
+          "name": "Robin AI",
+          "emoji": "⚖️",
+          "color": "#4F46E5",
+          "score": 85.6,
+          "scores": {
+            "hot": 40,
+            "quality": 27.599999999999998,
+            "functionality": 12,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.6",
+          "price": "订阅制：个人版$29/月，专业版$99/月，企业版定制",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 7
+        },
+        {
+          "slug": "zendesk-ai",
+          "name": "Zendesk AI",
+          "emoji": "🎧",
+          "color": "#03363D",
+          "score": 85.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 12,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "基础版$49/用户/月起，AI功能需额外付费",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约850万/月",
+          "rank": 8
+        },
+        {
+          "slug": "hirevue-ai",
+          "name": "HireVue AI",
+          "emoji": "👔",
+          "color": "#FF6B6B",
+          "score": 83.8,
+          "scores": {
+            "hot": 40,
+            "quality": 25.799999999999997,
+            "functionality": 12,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "企业定制（联系销售）",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约85万",
+          "rank": 9
+        },
+        {
+          "slug": "kensho-ai",
+          "name": "Kensho AI",
+          "emoji": "📊",
+          "color": "#1E3A5F",
+          "score": 82.0,
+          "scores": {
+            "hot": 40,
+            "quality": 27.0,
+            "functionality": 9,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "企业定制定价",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约50万月访问",
+          "rank": 10
+        }
+      ],
+      "total_tools": 10,
+      "last_updated": "2026-06-25 09:54",
+      "content": null,
+      "methodology": {
+        "scoring": "AI行业应用工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
+        "data_refresh": "每次构建自动更新",
+        "disclaimer": "排名基于算法自动计算，仅供参考"
+      }
     }
   ],
   "metadata": {
-    "generated_at": "2026-06-24T13:56:59.317136",
-    "total_tools": 340,
+    "generated_at": "2026-06-25T09:54:44.906900",
+    "total_tools": 370,
     "update_frequency": "per-build",
     "methodology": {
       "scoring": "综合评分制（热度40% + 质量30% + 功能20% + 价值10%）",
