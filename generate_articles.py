@@ -44,7 +44,7 @@ load_dotenv(dotenv_path)
 
 API_KEY = os.getenv("SILICONFLOW_API_KEY", "")
 BASE_URL = os.getenv("SILICONFLOW_BASE_URL", "https://api.siliconflow.cn/v1")
-MODEL = "deepseek-ai/DeepSeek-V3"
+MODEL = "deepseek-ai/DeepSeek-V4-Pro"
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DRAFTS_FILE = os.path.join(BASE_DIR, '_article_drafts.json')

@@ -44,7 +44,7 @@ dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 load_dotenv(dotenv_path)
 
 API_KEY = os.getenv("SILICONFLOW_API_KEY", "")
-MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
+MODEL = "deepseek-ai/DeepSeek-V4-Pro"
 
 # ── Quiz 场景定义 ─────────────────────────────────────────
 # 每个场景是一组"问题→答案映射到工具"的推荐逻辑

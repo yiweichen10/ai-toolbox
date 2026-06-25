@@ -48,7 +48,7 @@ dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 load_dotenv(dotenv_path)
 
 API_KEY = os.getenv("SILICONFLOW_API_KEY", "")
-MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
+MODEL = "deepseek-ai/DeepSeek-V4-Pro"
 
 # ============================================================
 # 预定义热门对比组合（基于搜索量和用户需求）

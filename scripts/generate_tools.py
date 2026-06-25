@@ -238,6 +238,30 @@ DEFAULT_TOOL_NAMES = [
     "Figure AI", "Tesla Optimus", "宇树H1",
     # 【AI电商/营销】
     "FeedHive", "Shopify Magic",
+
+    # === 2026-06-24 扩容：工作流/智能体/数据工具 ===
+    # 【AI工作流/自动化】2026年热门工作流编排与自动化平台
+    "Temporal", "Trigger.dev", "Pipedream", "UiPath",
+    "Retool AI", "OutSystems AI", "BuildShip", "Superblocks",
+    "Kestra", "Dagster",
+    # 【AI智能体/Agent框架】2026年新兴Agent开发框架
+    "AutoGen", "Smolagents", "Agno", "SuperAGI",
+    "Botpress", "Voiceflow", "TaskWeaver", "AgentGPT",
+    "Phidata", "Beam AI", "Lindy AI",
+    # 【AI数据分析/BI】2026年AI驱动的数据工具
+    "Databricks AI", "Snowflake AI", "Hex.tech", "Deepnote",
+    "MindsDB", "ThoughtSpot", "Dataiku", "MotherDuck",
+    "Rill Data", "Evidence.dev", "Sigma Computing",
+    # 【AI搜索/研究API】2026年新一代搜索工具
+    "Tavily AI", "Exa AI", "Perplexity Sonar",
+    # 【AI低代码/无代码】2026年AI建站与内部工具
+    "Glide AI", "Bubble AI", "Softr AI", "Airtable AI",
+    # 【AI API平台】
+    "Together AI", "Fireworks AI", "Anyscale",
+    # 【AI安全/合规】
+    "Lakera", "TrojAI", "HiddenLayer",
+    # 【AI DevOps】
+    "Harness AI", "Kubiya AI", "Pulumi AI",
 ]
 
 

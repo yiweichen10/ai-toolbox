@@ -9830,6 +9830,34 @@ window.__ALL_TOOLS__ = [
     "platform": "Docker、Kubernetes、Python、Go、Java、RESTful API"
   },
   {
+    "name": "Unstructured",
+    "slug": "unstructured",
+    "emoji": "📄",
+    "color": "#2D3748",
+    "description": "Unstructured是一个开源的文档处理库，专注于将非结构化数据（PDF、Word、HTML、Markdown、PPT等）转换为结构化文本，便于AI应用和RAG场景使用。2026年已支持更高效的表格提取和多语言文档处理能力。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "文档处理"
+      },
+      {
+        "text": "数据预处理"
+      },
+      {
+        "text": "RAG"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://unstructured.io/",
+    "price": "开源免费/企业版付费",
+    "platform": "Python、API、Docker"
+  },
+  {
     "name": "Visily",
     "slug": "visily",
     "emoji": "🎨",
@@ -9862,6 +9890,40 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/Mac/Windows"
   },
   {
+    "name": "Wix AI",
+    "slug": "wix-ai",
+    "emoji": "🎨",
+    "color": "#0C0887",
+    "description": "Wix AI是Wix推出的AI网站构建助手，帮助用户通过自然语言描述快速生成专业网站设计和内容。2026年集成了最新的多模态AI技术，支持智能图像生成和布局优化，让建站变得更加简单高效。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI建站"
+      },
+      {
+        "text": "网站设计"
+      },
+      {
+        "text": "无代码"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "智能建站"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "8500000",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.wix.com",
+    "price": "免费版可用，高级版$17/月起",
+    "platform": "网页端"
+  },
+  {
     "name": "6pen Art",
     "slug": "6pen-art",
     "emoji": "🎨",
@@ -9892,6 +9954,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://6pen.art",
     "price": "免费版可用，付费版约9元/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Kensho AI",
+    "slug": "kensho-ai",
+    "emoji": "📊",
+    "color": "#1E3A5F",
+    "description": "S&P Global旗下企业级AI数据分析平台，专注于为金融、商业和政府领域提供结构化数据分析和洞察。2026年集成更先进的自然语言处理能力，支持企业用户通过自然语言查询复杂数据集。",
+    "category": "AI行业应用",
+    "tags": [
+      {
+        "text": "数据分析"
+      },
+      {
+        "text": "商业智能"
+      },
+      {
+        "text": "企业级AI"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约50万月访问",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.kensho.com",
+    "price": "企业定制定价",
+    "platform": "Web / API"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -19495,6 +19585,34 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Docker、Kubernetes、Python、Go、Java、RESTful API"
   },
   {
+    "name": "Unstructured",
+    "slug": "unstructured",
+    "emoji": "📄",
+    "color": "#2D3748",
+    "description": "Unstructured是一个开源的文档处理库，专注于将非结构化数据（PDF、Word、HTML、Markdown、PPT等）转换为结构化文本，便于AI应用和RAG场景使用。2026年已支持更高效的表格提取和多语言文档处理能力。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "文档处理"
+      },
+      {
+        "text": "数据预处理"
+      },
+      {
+        "text": "RAG"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "45万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://unstructured.io/",
+    "price": "开源免费/企业版付费",
+    "platform": "Python、API、Docker"
+  },
+  {
     "name": "Visily",
     "slug": "visily",
     "emoji": "🎨",
@@ -19527,6 +19645,40 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web/Mac/Windows"
   },
   {
+    "name": "Wix AI",
+    "slug": "wix-ai",
+    "emoji": "🎨",
+    "color": "#0C0887",
+    "description": "Wix AI是Wix推出的AI网站构建助手，帮助用户通过自然语言描述快速生成专业网站设计和内容。2026年集成了最新的多模态AI技术，支持智能图像生成和布局优化，让建站变得更加简单高效。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "AI建站"
+      },
+      {
+        "text": "网站设计"
+      },
+      {
+        "text": "无代码"
+      },
+      {
+        "text": "AI生成"
+      },
+      {
+        "text": "智能建站"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "8500000",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.wix.com",
+    "price": "免费版可用，高级版$17/月起",
+    "platform": "网页端"
+  },
+  {
     "name": "6pen Art",
     "slug": "6pen-art",
     "emoji": "🎨",
@@ -19557,5 +19709,33 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://6pen.art",
     "price": "免费版可用，付费版约9元/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Kensho AI",
+    "slug": "kensho-ai",
+    "emoji": "📊",
+    "color": "#1E3A5F",
+    "description": "S&P Global旗下企业级AI数据分析平台，专注于为金融、商业和政府领域提供结构化数据分析和洞察。2026年集成更先进的自然语言处理能力，支持企业用户通过自然语言查询复杂数据集。",
+    "category": "AI行业应用",
+    "tags": [
+      {
+        "text": "数据分析"
+      },
+      {
+        "text": "商业智能"
+      },
+      {
+        "text": "企业级AI"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约50万月访问",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.kensho.com",
+    "price": "企业定制定价",
+    "platform": "Web / API"
   }
 ];
