@@ -9956,6 +9956,101 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "绘蛙",
+    "slug": "huiwa",
+    "emoji": "🎨",
+    "color": "#FF6B35",
+    "description": "绘蛙是阿里巴巴推出的AI图像生成工具，基于自研大模型实现高质量文字转图像创作。该工具支持多种风格和场景的图像生成，2026年已升级至3.0版本，新增中文优化和商业素材库功能。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "文生图"
+      },
+      {
+        "text": "中文提示词优化"
+      },
+      {
+        "text": "商业素材"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://huiwa.cn",
+    "price": "基础免费，付费版29元/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Ada AI",
+    "slug": "ada-ai",
+    "emoji": "🤖",
+    "color": "#6C5CE7",
+    "description": "Ada AI是一款智能对话助手，专注于提供高效的日常任务处理和知识问答服务。2026年最新版本增加了多模态理解和个性化学习能力，能够更好地适应用户习惯并提供定制化建议。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "智能对话"
+      },
+      {
+        "text": "效率工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "50万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://adaai.com",
+    "price": "免费版/专业版$9.9/月",
+    "platform": "Web/iOS/Android/Chrome扩展"
+  },
+  {
+    "name": "Tempus AI",
+    "slug": "tempus-ai",
+    "emoji": "⏱️",
+    "color": "#1E3A5F",
+    "description": "Tempus AI是一款专注于时间管理与效率提升的智能助手，通过AI技术帮助用户优化时间安排、提升工作生产力。2026年最新版本增加了跨平台同步和智能日程优化功能，成为商务人士和团队的时间管理首选工具。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "时间管理"
+      },
+      {
+        "text": "日程规划"
+      },
+      {
+        "text": "效率工具"
+      },
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "生产力提升",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://tempus-ai.com",
+    "price": "免费版/专业版($9.99/月)/企业版($29.99/月)",
+    "platform": "网页/iOS/Android/Chrome插件/桌面端"
+  },
+  {
     "name": "Kensho AI",
     "slug": "kensho-ai",
     "emoji": "📊",
@@ -19709,6 +19804,101 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://6pen.art",
     "price": "免费版可用，付费版约9元/月起",
     "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "绘蛙",
+    "slug": "huiwa",
+    "emoji": "🎨",
+    "color": "#FF6B35",
+    "description": "绘蛙是阿里巴巴推出的AI图像生成工具，基于自研大模型实现高质量文字转图像创作。该工具支持多种风格和场景的图像生成，2026年已升级至3.0版本，新增中文优化和商业素材库功能。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘画"
+      },
+      {
+        "text": "文生图"
+      },
+      {
+        "text": "中文提示词优化"
+      },
+      {
+        "text": "商业素材"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://huiwa.cn",
+    "price": "基础免费，付费版29元/月起",
+    "platform": "网页端、iOS、Android"
+  },
+  {
+    "name": "Ada AI",
+    "slug": "ada-ai",
+    "emoji": "🤖",
+    "color": "#6C5CE7",
+    "description": "Ada AI是一款智能对话助手，专注于提供高效的日常任务处理和知识问答服务。2026年最新版本增加了多模态理解和个性化学习能力，能够更好地适应用户习惯并提供定制化建议。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "智能对话"
+      },
+      {
+        "text": "效率工具",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "50万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://adaai.com",
+    "price": "免费版/专业版$9.9/月",
+    "platform": "Web/iOS/Android/Chrome扩展"
+  },
+  {
+    "name": "Tempus AI",
+    "slug": "tempus-ai",
+    "emoji": "⏱️",
+    "color": "#1E3A5F",
+    "description": "Tempus AI是一款专注于时间管理与效率提升的智能助手，通过AI技术帮助用户优化时间安排、提升工作生产力。2026年最新版本增加了跨平台同步和智能日程优化功能，成为商务人士和团队的时间管理首选工具。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "时间管理"
+      },
+      {
+        "text": "日程规划"
+      },
+      {
+        "text": "效率工具"
+      },
+      {
+        "text": "AI助手"
+      },
+      {
+        "text": "生产力提升",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://tempus-ai.com",
+    "price": "免费版/专业版($9.99/月)/企业版($29.99/月)",
+    "platform": "网页/iOS/Android/Chrome插件/桌面端"
   },
   {
     "name": "Kensho AI",
