@@ -9956,6 +9956,41 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "图怪兽",
+    "slug": "tuguaishou",
+    "emoji": "🎨",
+    "color": "#FF6B35",
+    "description": "图怪兽是一款在线AI智能设计平台，提供海量模板素材，支持海报、PPT、社交媒体配图、名片等设计制作，2026年持续更新AI抠图、AI智能生成文案等功能，降低设计门槛。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "在线设计"
+      },
+      {
+        "text": "海报制作"
+      },
+      {
+        "text": "AI智能设计"
+      },
+      {
+        "text": "模板素材",
+        "type": "free"
+      },
+      {
+        "text": "平面设计"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约120万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.tuguaishou.com",
+    "price": "基础功能免费，VIP会员29.9元/月起",
+    "platform": "网页端（PC/移动端浏览器）、小程序"
+  },
+  {
     "name": "绘蛙",
     "slug": "huiwa",
     "emoji": "🎨",
@@ -10014,6 +10049,34 @@ window.__ALL_TOOLS__ = [
     "url": "https://adaai.com",
     "price": "免费版/专业版$9.9/月",
     "platform": "Web/iOS/Android/Chrome扩展"
+  },
+  {
+    "name": "Quizlet AI",
+    "slug": "quizlet-ai",
+    "emoji": "📚",
+    "color": "#3C7EFF",
+    "description": "Quizlet AI是全球知名学习平台Quizlet于2023年推出的AI辅助功能，通过智能闪卡生成、自适应学习路径和即时反馈帮助学生更高效地掌握知识。2026年进一步集成大语言模型，提供个性化学习建议和智能辅导功能。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI学习助手"
+      },
+      {
+        "text": "闪卡工具"
+      },
+      {
+        "text": "教育科技"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "月访问量约8500万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://quizlet.com",
+    "price": "基础版免费，专业版约$7.99/月，教育版需联系销售",
+    "platform": "网页端、iOS、Android"
   },
   {
     "name": "Tempus AI",
@@ -10077,6 +10140,40 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.kensho.com",
     "price": "企业定制定价",
     "platform": "Web / API"
+  },
+  {
+    "name": "GLM-5.1",
+    "slug": "glm-5-1",
+    "emoji": "🧠",
+    "color": "#6B5BFF",
+    "description": "智谱AI推出的第五代基座大语言模型，在推理、数学、编程和多模态理解方面有显著提升。2026年最新版本支持更长的上下文窗口和更快的推理速度，是国产大模型的代表性产品。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大语言模型"
+      },
+      {
+        "text": "国产大模型"
+      },
+      {
+        "text": "多模态模型"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "长上下文"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.zhipuai.cn/",
+    "price": "免费使用，API付费",
+    "platform": "Web/iOS/Android/小程序"
   }
 ];
 window.__REMAINING_TOOLS__ = [
@@ -19806,6 +19903,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "图怪兽",
+    "slug": "tuguaishou",
+    "emoji": "🎨",
+    "color": "#FF6B35",
+    "description": "图怪兽是一款在线AI智能设计平台，提供海量模板素材，支持海报、PPT、社交媒体配图、名片等设计制作，2026年持续更新AI抠图、AI智能生成文案等功能，降低设计门槛。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "在线设计"
+      },
+      {
+        "text": "海报制作"
+      },
+      {
+        "text": "AI智能设计"
+      },
+      {
+        "text": "模板素材",
+        "type": "free"
+      },
+      {
+        "text": "平面设计"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约120万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.tuguaishou.com",
+    "price": "基础功能免费，VIP会员29.9元/月起",
+    "platform": "网页端（PC/移动端浏览器）、小程序"
+  },
+  {
     "name": "绘蛙",
     "slug": "huiwa",
     "emoji": "🎨",
@@ -19864,6 +19996,34 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://adaai.com",
     "price": "免费版/专业版$9.9/月",
     "platform": "Web/iOS/Android/Chrome扩展"
+  },
+  {
+    "name": "Quizlet AI",
+    "slug": "quizlet-ai",
+    "emoji": "📚",
+    "color": "#3C7EFF",
+    "description": "Quizlet AI是全球知名学习平台Quizlet于2023年推出的AI辅助功能，通过智能闪卡生成、自适应学习路径和即时反馈帮助学生更高效地掌握知识。2026年进一步集成大语言模型，提供个性化学习建议和智能辅导功能。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "AI学习助手"
+      },
+      {
+        "text": "闪卡工具"
+      },
+      {
+        "text": "教育科技"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "月访问量约8500万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://quizlet.com",
+    "price": "基础版免费，专业版约$7.99/月，教育版需联系销售",
+    "platform": "网页端、iOS、Android"
   },
   {
     "name": "Tempus AI",
@@ -19927,5 +20087,39 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.kensho.com",
     "price": "企业定制定价",
     "platform": "Web / API"
+  },
+  {
+    "name": "GLM-5.1",
+    "slug": "glm-5-1",
+    "emoji": "🧠",
+    "color": "#6B5BFF",
+    "description": "智谱AI推出的第五代基座大语言模型，在推理、数学、编程和多模态理解方面有显著提升。2026年最新版本支持更长的上下文窗口和更快的推理速度，是国产大模型的代表性产品。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "大语言模型"
+      },
+      {
+        "text": "国产大模型"
+      },
+      {
+        "text": "多模态模型"
+      },
+      {
+        "text": "免费使用"
+      },
+      {
+        "text": "长上下文"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "850万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.zhipuai.cn/",
+    "price": "免费使用，API付费",
+    "platform": "Web/iOS/Android/小程序"
   }
 ];

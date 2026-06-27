@@ -3476,6 +3476,26 @@ def build_index_page(tools, articles):
     news_re = re.compile(r'<!-- NEWS_CARDS_START -->[\s\S]*?<!-- NEWS_CARDS_END -->')
     html = news_re.sub(f'<!-- NEWS_CARDS_START -->\n{news_html}                                <!-- NEWS_CARDS_END -->', html)
 
+    # ── AI辞典Tab词典卡片：从dict_terms.json动态获取已发布的前8条 ──
+    dict_html = ''
+    dict_terms = []
+    dict_data_path = os.path.join(DATA_DIR, 'dict_terms.json')
+    if os.path.exists(dict_data_path):
+        with open(dict_data_path, 'r', encoding='utf-8') as f:
+            all_dict = json.load(f)
+            dict_terms = [t for t in all_dict if t.get('published', True)]
+    for term in dict_terms[:8]:
+        dict_html += f'''                                <a class="dict-card-item" href="/dict/{term['slug']}/">
+                                    <div class="dict-card-icon">{term['emoji']}</div>
+                                    <div class="dict-card-body">
+                                        <h4>{escape_html(term['term'])}</h4>
+                                        <p>{escape_html(term['brief'])}</p>
+                                    </div>
+                                </a>
+'''
+    dict_re = re.compile(r'<!-- DICT_CARDS_START -->[\s\S]*?<!-- DICT_CARDS_END -->')
+    html = dict_re.sub(f'<!-- DICT_CARDS_START -->\n{dict_html}                                <!-- DICT_CARDS_END -->', html)
+
     # 工具数量显示 — 用re.sub替换（模板中可能已有内容如"共 100+ 款"）
     html = re.sub(r'<span class="tool-count" id="toolCount">.*?</span>', f'<span class="tool-count" id="toolCount">共 {len(tools)} 款</span>', html)
 
@@ -3610,7 +3630,370 @@ def build_index_page(tools, articles):
 
     return html
 
-def generate_sitemap(tools, articles, categories, compares=None, alternatives=None, quizzes=None, rankings=None, lives=None):
+def build_dict_page(term, all_terms, index):
+    """生成单个词典术语的详情页"""
+    slug = term['slug']
+    term_name = term['term']
+    en_name = term.get('en', '')
+    emoji = term.get('emoji', '📖')
+    category = term.get('category', '')
+    tags = term.get('tags', [])
+    detail = term.get('detail', term.get('brief', ''))
+    brief = term.get('brief', '')
+
+    # 转换detail中的markdown为HTML（简单处理：**加粗**、\n换行、代码块、列表）
+    def md_to_html(text):
+        # 先对纯文本部分做HTML转义
+        text = escape_html(text)
+        # 恢复被转义的markdown标记并转为HTML
+        # 代码块
+        text = re.sub(r'```(\w*)\n([\s\S]*?)```', r'<pre><code>\2</code></pre>', text)
+        # 行内代码 (注意：转义后 ` 变为 &#96;)
+        text = re.sub(r'&#96;([^&#96;]+)&#96;', r'<code>\1</code>', text)
+        # 加粗
+        text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+        # 标题
+        lines = text.split('\n')
+        result = []
+        for line in lines:
+            if line.startswith('### '):
+                result.append(f'<h3>{line[4:]}</h3>')
+            elif line.startswith('## '):
+                result.append(f'<h2>{line[3:]}</h2>')
+            elif line.startswith('- &lt;strong&gt;') or line.startswith('- <strong>'):
+                # 带加粗的列表项，保持HTML
+                content = line[2:]
+                result.append(f'<li>{content}</li>')
+            elif line.startswith('- '):
+                result.append(f'<li>{line[2:]}</li>')
+            elif line.strip() == '':
+                result.append('')
+            elif line.startswith('|'):
+                result.append(line)
+            else:
+                result.append(line)
+        text = '\n'.join(result)
+        # 包裹<li>序列
+        text = re.sub(r'((?:<li>.*?</li>\n?)+)', r'<ul>\n\1</ul>', text)
+        # 段落
+        text = re.sub(r'\n\n+', '</p><p>', text)
+        text = '<p>' + text + '</p>'
+        # 清理空段落和不正确的嵌套
+        text = re.sub(r'<p>\s*</p>', '', text)
+        text = re.sub(r'<p>(\s*<h[23]>)', r'\1', text)
+        text = re.sub(r'(</h[23]>)\s*</p>', r'\1', text)
+        text = re.sub(r'<p>(\s*<ul>)', r'\1', text)
+        text = re.sub(r'(</ul>)\s*</p>', r'\1', text)
+        text = re.sub(r'<p>(\s*<pre>)', r'\1', text)
+        text = re.sub(r'(</pre>)\s*</p>', r'\1', text)
+        return text
+
+    # 预加工：将 **章节标题**： 模式转为 ### 章节标题，让 md_to_html 生成 <h3>
+    # 避免 md_to_html 中 <ul> 闭合导致后续 <strong> 失去 <p> 包裹的问题
+    detail = re.sub(r'\n\n\*\*(.+?)\*\*：', r'\n\n### \1\n\n', detail)
+
+    detail_html = md_to_html(detail)
+
+    # 后处理：按 <h3> 切分，每段包裹为 section 卡片
+    h3_parts = re.split(r'(<h3>[^<]+</h3>)', detail_html)
+    if len(h3_parts) > 1:
+        intro_html = h3_parts[0]
+        sections_html = []
+        for i in range(1, len(h3_parts), 2):
+            h3_tag = h3_parts[i]
+            content = h3_parts[i + 1] if i + 1 < len(h3_parts) else ''
+            title_match = re.match(r'<h3>(.+)</h3>', h3_tag)
+            if title_match:
+                sections_html.append(f'<section class="dict-section"><h3>{title_match.group(1)}</h3>{content}</section>')
+            else:
+                sections_html.append(h3_tag + content)
+        detail_html = intro_html + '\n'.join(sections_html)
+
+    tags_html = ''.join([f'<span>{escape_html(t)}</span>' for t in tags])
+    category_html = f'<span class="dict-detail-category">{escape_html(category)}</span>'
+
+    # 侧边栏：快速参考 + 词条导航
+    sb_prev = ''
+    sb_next = ''
+    if index > 0:
+        pt = all_terms[index - 1]
+        sb_prev = f'<a href="/dict/{pt["slug"]}/">{pt.get("emoji","📖")} {escape_html(pt["term"])}</a>'
+    if index < len(all_terms) - 1:
+        nt = all_terms[index + 1]
+        sb_next = f'<a href="/dict/{nt["slug"]}/">{nt.get("emoji","📖")} {escape_html(nt["term"])}</a>'
+    sidebar_html = f'''<aside class="dict-detail-sidebar">
+        <div class="dict-quick-facts">
+            <h4>快速参考</h4>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">英文名</div>
+                <div class="dict-fact-value">{escape_html(en_name)}</div>
+            </div>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">分类</div>
+                <div class="dict-fact-value">{escape_html(category)}</div>
+            </div>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">标签</div>
+                <div class="dict-fact-value">{', '.join(escape_html(t) for t in tags)}</div>
+            </div>
+        </div>
+        <div class="dict-side-nav">
+            <h4>浏览词条</h4>
+            <div class="dict-side-nav-links">
+                {sb_prev}
+                <a href="/dict/">📖 返回词典首页</a>
+                {sb_next}
+            </div>
+        </div>
+    </aside>'''
+
+    # 相关词条（同分类的其他词条，最多6个）
+    same_category = [t for t in all_terms if t.get('category') == category and t['slug'] != slug][:6]
+    related_html = ''
+    if same_category:
+        related_cards = ''.join([
+            f'<a class="dict-related-card" href="/dict/{t["slug"]}/"><span class="dict-related-emoji">{t.get("emoji","📖")}</span>{escape_html(t["term"])}</a>'
+            for t in same_category
+        ])
+        related_html = f'''        <div class="dict-related">
+            <h3>同分类词条</h3>
+            <div class="dict-related-grid">
+                {related_cards}
+            </div>
+        </div>'''
+
+    # 底部导航
+    prev_link = ''
+    next_link = ''
+    if index > 0:
+        prev_term = all_terms[index - 1]
+        prev_link = f'<a href="/dict/{prev_term["slug"]}/">← {escape_html(prev_term["term"])}</a>'
+    if index < len(all_terms) - 1:
+        next_term = all_terms[index + 1]
+        next_link = f'<a href="/dict/{next_term["slug"]}/">{escape_html(next_term["term"])} →</a>'
+
+    title = f'{term_name} - AI词典 | AI工具宝箱'
+    description = brief[:150]
+    canonical = f'https://www.aitoollab.cn/dict/{slug}/'
+    og_image = ensure_og_image(f'dict-{slug}', {'name': term_name, 'emoji': emoji, 'description': brief})
+
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(title)}</title>
+    <meta name="description" content="{escape_html(description)}">
+    <meta name="keywords" content="{escape_html(term_name)},AI词典,AI术语,人工智能概念,{escape_html(en_name)}">
+    <link rel="canonical" href="{canonical}">
+    <meta property="og:title" content="{escape_html(title)}">
+    <meta property="og:description" content="{escape_html(description)}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{canonical}">
+    {f'<meta property="og:image" content="{og_image}">' if og_image else ''}
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- BUILD_DYNAMIC_HEAD -->
+    <script type="application/ld+json">
+    {{
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "{escape_html(term_name)}",
+      "description": "{escape_html(brief)}",
+      "inDefinedTermSet": {{
+        "@type": "DefinedTermSet",
+        "name": "AI工具宝箱 - AI词典"
+      }}
+    }}
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;">
+                <div class="site-logo">🛠 AI工具宝箱 <span>每日更新 · 已收录 100+ 款工具</span></div>
+            </a>
+        </div>
+        <nav class="global-nav" aria-label="全局导航">
+            <div class="global-nav-inner">
+                <a href="/ranking/" class="gn-item">📊 工具排行</a>
+                <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+                <a href="/live/" class="gn-item">📈 实时面板</a>
+                <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+                <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+                <a href="/category/" class="gn-item">📂 全部分类</a>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <div class="breadcrumb-inner">
+            <a href="/">首页</a>
+            <span class="sep">›</span>
+            <a href="/dict/">AI词典</a>
+            <span class="sep">›</span>
+            <span>{escape_html(term_name)}</span>
+        </div>
+    </nav>
+
+    <main class="dict-detail-page">
+        <header class="dict-detail-header">
+            <div class="dict-detail-icon">{emoji}</div>
+            <h1>{escape_html(term_name)}</h1>
+            <div class="dict-detail-en">{escape_html(en_name)}</div>
+            {category_html}
+            <div class="dict-detail-tags">{tags_html}</div>
+        </header>
+        <div class="dict-detail-layout">
+            <div class="dict-detail-main">
+                <article>
+                    <div class="dict-detail-body">
+                        {detail_html}
+                    </div>
+                </article>
+            </div>
+            {sidebar_html}
+        </div>
+        <nav class="dict-detail-nav">
+            {prev_link}
+            {next_link}
+        </nav>
+        {related_html}
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具 · {ICP_BEIAN}</p>
+        <div class="footer-links">
+            <a href="/about.html">关于我们</a>
+            <a href="/contact.html">联系方式</a>
+            <a href="/privacy.html">隐私政策</a>
+            <a href="/links.html">友情链接</a>
+        </div>
+        <p>用AI提升效率，让每个人都能享受技术红利。</p>
+    </footer>
+    {BACK_TO_TOP_BLOCK}
+</body>
+</html>'''
+    return html
+
+
+def _build_dict_index_page(terms):
+    """生成AI词典总入口页 /dict/index.html"""
+    # 按分类分组
+    categories = {}
+    for term in terms:
+        cat = term.get('category', '其他')
+        if cat not in categories:
+            categories[cat] = []
+        categories[cat].append(term)
+
+    # 分类顺序
+    cat_order = ['基础概念', '技术原理', '使用技巧', '基础设施', '前沿概念']
+    ordered_cats = [c for c in cat_order if c in categories]
+    for c in categories:
+        if c not in ordered_cats:
+            ordered_cats.append(c)
+
+    sections_html = ''
+    for cat in ordered_cats:
+        cat_terms = categories[cat]
+        cards = ''
+        for term in cat_terms:
+            cards += f'''                    <a class="dict-list-card" href="/dict/{term['slug']}/">
+                        <div class="dict-list-icon">{term.get('emoji', '📖')}</div>
+                        <div class="dict-list-body">
+                            <h4>{escape_html(term['term'])}</h4>
+                            <p>{escape_html(term.get('brief', ''))}</p>
+                            <div class="dict-list-en">{escape_html(term.get('en', ''))}</div>
+                        </div>
+                    </a>
+'''
+        sections_html += f'''            <section class="dict-category-section">
+                <h2 class="dict-category-title">{escape_html(cat)}</h2>
+                <div class="dict-list-items">
+{cards}                </div>
+            </section>
+'''
+
+    title = 'AI词典 - AI术语大全 | AI工具宝箱'
+    description = f'全面的AI术语词典，涵盖{len(terms)}个核心人工智能概念。大语言模型、RAG、Agent、Transformer等AI基础知识一网打尽。'
+    canonical = 'https://www.aitoollab.cn/dict/'
+
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(title)}</title>
+    <meta name="description" content="{escape_html(description)}">
+    <meta name="keywords" content="AI词典,人工智能术语,机器学习概念,深度学习术语,大模型术语,AI基础知识">
+    <link rel="canonical" href="{canonical}">
+    <meta property="og:title" content="{escape_html(title)}">
+    <meta property="og:description" content="{escape_html(description)}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{canonical}">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- BUILD_DYNAMIC_HEAD -->
+    <script type="application/ld+json">
+    {{
+      "@context": "https://schema.org",
+      "@type": "DefinedTermSet",
+      "name": "AI工具宝箱 - AI词典",
+      "description": "{escape_html(description)}"
+    }}
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;">
+                <div class="site-logo">🛠 AI工具宝箱 <span>每日更新 · 已收录 100+ 款工具</span></div>
+            </a>
+        </div>
+        <nav class="global-nav" aria-label="全局导航">
+            <div class="global-nav-inner">
+                <a href="/ranking/" class="gn-item">📊 工具排行</a>
+                <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+                <a href="/live/" class="gn-item">📈 实时面板</a>
+                <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+                <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+                <a href="/category/" class="gn-item">📂 全部分类</a>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <div class="breadcrumb-inner">
+            <a href="/">首页</a>
+            <span class="sep">›</span>
+            <span>AI词典</span>
+        </div>
+    </nav>
+
+    <main class="dict-list-page">
+        <header class="dict-list-header">
+            <h1>📖 AI 词典</h1>
+            <p>{len(terms)} 个核心AI概念，从入门到精通，一文读懂人工智能</p>
+        </header>
+{sections_html}    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具 · {ICP_BEIAN}</p>
+        <div class="footer-links">
+            <a href="/about.html">关于我们</a>
+            <a href="/contact.html">联系方式</a>
+            <a href="/privacy.html">隐私政策</a>
+            <a href="/links.html">友情链接</a>
+        </div>
+        <p>用AI提升效率，让每个人都能享受技术红利。</p>
+    </footer>
+    {BACK_TO_TOP_BLOCK}
+</body>
+</html>'''
+    return html
+
+
+def generate_sitemap(tools, articles, categories, compares=None, alternatives=None, quizzes=None, rankings=None, lives=None, dict_terms=None):
     """生成 sitemap.xml"""
     from datetime import datetime
     today = datetime.now().strftime('%Y-%m-%d')
@@ -3719,6 +4102,22 @@ def generate_sitemap(tools, articles, categories, compares=None, alternatives=No
         <priority>0.9</priority>
     </url>''')
 
+    # AI词典页
+    if dict_terms:
+        urls.append(f'''    <url>
+        <loc>https://www.aitoollab.cn/dict/</loc>
+        <lastmod>{today}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>''')
+        for term in dict_terms:
+            urls.append(f'''    <url>
+        <loc>https://www.aitoollab.cn/dict/{term['slug']}/</loc>
+        <lastmod>{today}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>''')
+
     sitemap = f'''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {chr(10).join(urls)}
@@ -3816,6 +4215,15 @@ def _push_single_url(url):
         print(f'[IndexNow] Failed: {e}')
 
 
+def _load_dict_terms():
+    """加载AI词典数据"""
+    dict_data_path = os.path.join(DATA_DIR, 'dict_terms.json')
+    if os.path.exists(dict_data_path):
+        with open(dict_data_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return []
+
+
 def build_target(target, slug=None):
     """
     构建指定目标或全部页面。
@@ -3880,7 +4288,8 @@ def build_target(target, slug=None):
         # 后处理：注入全局导航
         inject_global_nav()
         inject_hreflang()
-        sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()])
+        dict_terms = [t for t in _load_dict_terms() if t.get('published', True)]
+        sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()], dict_terms=dict_terms)
         with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
             f.write(sitemap)
         print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles)')
@@ -4094,6 +4503,31 @@ def build_target(target, slug=None):
                 print(f'  [OK] live/index.html (dashboard)')
 
     # ═══════════════════════════════════════════════════════
+    # AI词典
+    # ═══════════════════════════════════════════════════════
+    if target in ('all', 'dict'):
+        dict_terms = [t for t in _load_dict_terms() if t.get('published', True)]
+        if dict_terms:
+            print(f'\n[Dict] Generating dict pages ({len(dict_terms)} published terms)...')
+            # 词典总入口页
+            dict_index_html = _build_dict_index_page(dict_terms)
+            dir_path = os.path.join(BASE_DIR, 'dict')
+            os.makedirs(dir_path, exist_ok=True)
+            with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(dict_index_html)
+            print(f'  [OK] dict/index.html (总入口页)')
+
+            # 各词条详情页
+            for i, term in enumerate(dict_terms):
+                slug = term['slug']
+                term_dir = os.path.join(BASE_DIR, 'dict', slug)
+                os.makedirs(term_dir, exist_ok=True)
+                html = build_dict_page(term, dict_terms, i)
+                with open(os.path.join(term_dir, 'index.html'), 'w', encoding='utf-8') as f:
+                    f.write(html)
+                print(f'  [OK] dict/{slug}/index.html')
+
+    # ═══════════════════════════════════════════════════════
     # 静态首页
     # ═══════════════════════════════════════════════════════
     if target in ('all', 'index'):
@@ -4111,14 +4545,16 @@ def build_target(target, slug=None):
     # sitemap + 推送（每次都执行）
     # ═══════════════════════════════════════════════════════
     if target != 'none':  # 'none' 用于只构建HTML不推送的场景
+        dict_terms = [t for t in _load_dict_terms() if t.get('published', True)]
         sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()],
                                     all_compares, all_alternatives,
                                     all_quizzes,
                                     all_rankings,
-                                    all_lives)
+                                    all_lives,
+                                    dict_terms)
         with open(os.path.join(BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
             f.write(sitemap)
-        print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + {len(tools_by_category)} categories + {total_pages} article pages + {compare_count} compares + {alt_count} alternatives + {quiz_count} quizzes + {ranking_count} rankings + {live_count} live)')
+        print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + {len(tools_by_category)} categories + {total_pages} article pages + {compare_count} compares + {alt_count} alternatives + {quiz_count} quizzes + {ranking_count} rankings + {live_count} live + {len(dict_terms)} dict)')
 
         # 收集需要推送的链接
         push_cache_file = os.path.join(BASE_DIR, '.baidu_pushed.json')
@@ -4156,6 +4592,12 @@ def build_target(target, slug=None):
             lslug = lp.get('slug', '')
             if lslug:
                 all_urls.append(f"https://www.aitoollab.cn/live/{lslug}/")
+
+        # AI词典URL
+        if dict_terms:
+            all_urls.append("https://www.aitoollab.cn/dict/")
+            for term in dict_terms:
+                all_urls.append(f"https://www.aitoollab.cn/dict/{term['slug']}/")
 
         new_urls = [u for u in all_urls if u not in pushed_urls]
         
@@ -4307,9 +4749,9 @@ def inject_hreflang():
 def main():
     parser = argparse.ArgumentParser(description='AI工具宝箱 SSG 构建脚本')
     parser.add_argument('--target', '-t',
-                        choices=['all', 'articles', 'tools', 'live', 'pseo', 'ranking', 'index', 'sitemap', 'none'],
+                        choices=['all', 'articles', 'tools', 'live', 'pseo', 'ranking', 'index', 'sitemap', 'dict', 'none'],
                         default='all',
-                        help='构建目标（默认 all）：all=全量, articles=仅文章, tools=仅工具, live=仅Live面板, pseo=对比/替代/Quiz/排名/Live, index=首页+分类, sitemap=仅推送, none=仅构建HTML不推送')
+                        help='构建目标（默认 all）：all=全量, articles=仅文章, tools=仅工具, live=仅Live面板, pseo=对比/替代/Quiz/排名/Live, ranking=仅排名, index=首页+分类, sitemap=仅推送, dict=仅AI词典, none=仅构建HTML不推送')
     parser.add_argument('--slug', '-s',
                         type=str, default=None,
                         help='增量构建：仅构建指定slug的文章页+列表页+sitemap')
