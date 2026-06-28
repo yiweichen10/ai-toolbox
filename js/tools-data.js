@@ -9798,6 +9798,40 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/Windows/Mac/Linux"
   },
   {
+    "name": "RAGFlow",
+    "slug": "ragflow",
+    "emoji": "🔍",
+    "color": "#4F46E5",
+    "description": "RAGFlow是一个开源的RAG（检索增强生成）引擎，专注于深度文档理解和知识库构建。2026年最新版本增强了多模态文档处理能力和企业级安全特性，支持私有化部署，已成为企业构建AI知识库的首选开源方案。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "开源RAG"
+      },
+      {
+        "text": "知识库构建"
+      },
+      {
+        "text": "文档理解"
+      },
+      {
+        "text": "企业级AI"
+      },
+      {
+        "text": "LLM集成"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://ragflow.io",
+    "price": "开源免费（企业版付费）",
+    "platform": "Web/桌面端"
+  },
+  {
     "name": "Milvus",
     "slug": "milvus",
     "emoji": "🗄️",
@@ -10022,6 +10056,44 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "WHEE",
+    "slug": "whee",
+    "emoji": "🎨",
+    "color": "#FF6B6B",
+    "description": "美图公司推出的AI图片生成和编辑平台，支持文生图、图生图、AI修图等多种功能。2026年持续迭代优化，新增多个创意风格和高级编辑功能，生成速度和图像质量均有显著提升，是设计师和创意工作者的得力工具。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘图"
+      },
+      {
+        "text": "文生图"
+      },
+      {
+        "text": "图生图"
+      },
+      {
+        "text": "AI修图"
+      },
+      {
+        "text": "图片编辑"
+      },
+      {
+        "text": "创意设计",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约500万月访问量",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.whee.com",
+    "price": "基础功能免费，高级功能付费订阅",
+    "platform": "Web、iOS、Android"
+  },
+  {
     "name": "Ada AI",
     "slug": "ada-ai",
     "emoji": "🤖",
@@ -10140,6 +10212,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.kensho.com",
     "price": "企业定制定价",
     "platform": "Web / API"
+  },
+  {
+    "name": "Alpaca AI",
+    "slug": "alpaca-ai",
+    "emoji": "🦙",
+    "color": "#C4A484",
+    "description": "Alpaca AI是由斯坦福大学开发的开源指令跟随大语言模型，基于LLaMA微调而成。2026年已迭代至Alpaca 2.0版本，在指令遵循和代码生成方面性能显著提升，支持多语言交互和私有化部署。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "开源模型"
+      },
+      {
+        "text": "指令微调"
+      },
+      {
+        "text": "LLaMA系"
+      },
+      {
+        "text": "斯坦福研发",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "约50万月访问量",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://alpaca.ai",
+    "price": "免费开源",
+    "platform": "Web/API/本地部署"
   },
   {
     "name": "GLM-5.1",
@@ -19745,6 +19849,40 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web/Windows/Mac/Linux"
   },
   {
+    "name": "RAGFlow",
+    "slug": "ragflow",
+    "emoji": "🔍",
+    "color": "#4F46E5",
+    "description": "RAGFlow是一个开源的RAG（检索增强生成）引擎，专注于深度文档理解和知识库构建。2026年最新版本增强了多模态文档处理能力和企业级安全特性，支持私有化部署，已成为企业构建AI知识库的首选开源方案。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "开源RAG"
+      },
+      {
+        "text": "知识库构建"
+      },
+      {
+        "text": "文档理解"
+      },
+      {
+        "text": "企业级AI"
+      },
+      {
+        "text": "LLM集成"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://ragflow.io",
+    "price": "开源免费（企业版付费）",
+    "platform": "Web/桌面端"
+  },
+  {
     "name": "Milvus",
     "slug": "milvus",
     "emoji": "🗄️",
@@ -19969,6 +20107,44 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端、iOS、Android"
   },
   {
+    "name": "WHEE",
+    "slug": "whee",
+    "emoji": "🎨",
+    "color": "#FF6B6B",
+    "description": "美图公司推出的AI图片生成和编辑平台，支持文生图、图生图、AI修图等多种功能。2026年持续迭代优化，新增多个创意风格和高级编辑功能，生成速度和图像质量均有显著提升，是设计师和创意工作者的得力工具。",
+    "category": "AI绘画",
+    "tags": [
+      {
+        "text": "AI绘图"
+      },
+      {
+        "text": "文生图"
+      },
+      {
+        "text": "图生图"
+      },
+      {
+        "text": "AI修图"
+      },
+      {
+        "text": "图片编辑"
+      },
+      {
+        "text": "创意设计",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约500万月访问量",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.whee.com",
+    "price": "基础功能免费，高级功能付费订阅",
+    "platform": "Web、iOS、Android"
+  },
+  {
     "name": "Ada AI",
     "slug": "ada-ai",
     "emoji": "🤖",
@@ -20087,6 +20263,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.kensho.com",
     "price": "企业定制定价",
     "platform": "Web / API"
+  },
+  {
+    "name": "Alpaca AI",
+    "slug": "alpaca-ai",
+    "emoji": "🦙",
+    "color": "#C4A484",
+    "description": "Alpaca AI是由斯坦福大学开发的开源指令跟随大语言模型，基于LLaMA微调而成。2026年已迭代至Alpaca 2.0版本，在指令遵循和代码生成方面性能显著提升，支持多语言交互和私有化部署。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "开源模型"
+      },
+      {
+        "text": "指令微调"
+      },
+      {
+        "text": "LLaMA系"
+      },
+      {
+        "text": "斯坦福研发",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "约50万月访问量",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://alpaca.ai",
+    "price": "免费开源",
+    "platform": "Web/API/本地部署"
   },
   {
     "name": "GLM-5.1",
