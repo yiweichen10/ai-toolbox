@@ -37,7 +37,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 
 # OG图片自动生成：缺失时自动调用gen_seo_images生成
-def ensure_og_image(slug, data_obj=None, is_article=False):
+def ensure_og_image(slug, data_obj=None, is_article=False, is_dict=False):
     """检查OG图片是否存在，不存在则自动生成。返回og_image URL或空字符串。"""
     og_image_local = os.path.join(BASE_DIR, 'images', 'og', f'{slug}-og.png')
     og_image_url = f'https://www.aitoollab.cn/images/og/{slug}-og.png'
@@ -45,8 +45,10 @@ def ensure_og_image(slug, data_obj=None, is_article=False):
         return og_image_url
     # 自动生成
     try:
-        from gen_seo_images import make_article_og_image, make_og_image, generate_image
-        if is_article and data_obj:
+        from gen_seo_images import make_article_og_image, make_og_image, make_dict_og_image, generate_image
+        if is_dict and data_obj:
+            html = make_dict_og_image(data_obj)
+        elif is_article and data_obj:
             html = make_article_og_image(data_obj)
         elif data_obj and not is_article:
             all_tools = []
@@ -3775,7 +3777,7 @@ def build_dict_page(term, all_terms, index):
     title = f'{term_name} - AI词典 | AI工具宝箱'
     description = brief[:150]
     canonical = f'https://www.aitoollab.cn/dict/{slug}/'
-    og_image = ensure_og_image(f'dict-{slug}', {'name': term_name, 'emoji': emoji, 'description': brief})
+    og_image = ensure_og_image(f'dict-{slug}', {'term': term_name, 'emoji': emoji, 'brief': brief, 'category': category or 'AI词典', 'en': en_name}, is_dict=True)
 
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">

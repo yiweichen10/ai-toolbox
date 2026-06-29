@@ -13,6 +13,9 @@ import json
 import os
 import re
 import sys
+import subprocess
+import socket
+import time
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
@@ -265,33 +268,149 @@ body {{ margin:0; width:1200px; height:630px; font-family:"Noto Sans SC",sans-se
     return html
 
 
-def generate_image(html, output_path, width=1200, height=630):
-    """调用 html2png API 生成图片"""
+def make_dict_og_image(term_data):
+    """生成词典词条 OG Image - 1200x630"""
+    term = term_data.get('term', term_data.get('name', ''))
+    emoji = term_data.get('emoji', '📖')
+    brief = term_data.get('brief', term_data.get('description', ''))
+    category = term_data.get('category', 'AI词典')
+    en = term_data.get('en', '')
+
+    short_brief = brief[:100] + ('...' if len(brief) > 100 else '')
+
+    html = f'''<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* {{ margin:0; padding:0; box-sizing:border-box; }}
+body {{ margin:0; width:1200px; height:630px; font-family:"Noto Sans SC",sans-serif; }}
+.card {{
+  width:1200px; height:630px;
+  background: linear-gradient(160deg, #0f172a 0%, #1a2332 50%, #0f172a 100%);
+  display:flex; flex-direction:column; justify-content:center;
+  position:relative; overflow:hidden; padding:60px 80px;
+}}
+.grid-bg {{
+  position:absolute; inset:0; opacity:0.03;
+  background-image: linear-gradient(#fff 1px, transparent 1px),
+                    linear-gradient(90deg, #fff 1px, transparent 1px);
+  background-size: 40px 40px;
+}}
+.accent-line {{ position:absolute; left:0; top:0; bottom:0; width:6px; background:linear-gradient(180deg,#6366f1,#8b5cf6,#a78bfa); }}
+.content {{ position:relative; z-index:1; }}
+.badge {{
+  display:inline-block; background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; padding:5px 16px; border-radius:6px;
+  font-size:13px; font-weight:700; margin-bottom:24px; letter-spacing:0.5px;
+}}
+.emoji {{ font-size:56px; margin-bottom:16px; line-height:1; }}
+.term-name {{
+  color:#f8fafc; font-size:52px; font-weight:900; line-height:1.2;
+  margin-bottom:8px; letter-spacing:-0.5px;
+}}
+.term-en {{
+  color:#64748b; font-size:18px; font-weight:400; margin-bottom:20px;
+}}
+.term-brief {{
+  color:#94a3b8; font-size:16px; line-height:1.7;
+  max-width:800px; margin-bottom:32px;
+  border-left:3px solid #6366f1; padding-left:18px;
+}}
+.meta-row {{ display:flex; gap:24px; align-items:center; }}
+.meta-item {{ color:#475569; font-size:14px; font-weight:500; }}
+.meta-sep {{ color:#334155; }}
+.brand {{ position:absolute; bottom:26px; right:40px; color:#6366f1; font-size:14px; font-weight:700; }}
+</style></head>
+<body>
+<div class="card">
+  <div class="grid-bg"></div>
+  <div class="accent-line"></div>
+  <div class="content">
+    <div class="badge">{escape_html(category)}</div>
+    <div class="emoji">{emoji}</div>
+    <div class="term-name">{escape_html(term)}</div>
+    {f'<div class="term-en">{escape_html(en)}</div>' if en else ''}
+    <div class="term-brief">{escape_html(short_brief)}</div>
+    <div class="meta-row">
+      <span class="meta-item">AI词典</span>
+      <span class="meta-sep">&middot;</span>
+      <span class="meta-item">aitoollab.cn</span>
+    </div>
+  </div>
+  <div class="brand">AI工具宝箱</div>
+</div>
+</body></html>'''
+    return html
+
+
+def _free_port():
+    """找一个空闲端口"""
+    sock = socket.socket()
+    sock.bind(('', 0))
+    port = sock.getsockname()[1]
+    sock.close()
+    return port
+
+
+def _kill_port(port):
+    """释放端口占用"""
     try:
-        r = httpx.post(
-            f"{API}?width={width}&height={height}&deviceScaleFactor=2",
-            content=html.encode('utf-8'),
-            headers={"Content-Type": "text/html; charset=utf-8"},
-            timeout=30
+        subprocess.run(f'netstat -ano | findstr :{port}', shell=True,
+                       capture_output=True, timeout=5)
+    except:
+        pass
+
+
+def generate_image(html, output_path, width=1200, height=630):
+    """Playwright 截图生成 OG 图片（替代 html2png.dev API）"""
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    tmp_dir = os.path.dirname(output_path)
+    tmp_html = os.path.join(tmp_dir, '_tmp_og.html')
+
+    with open(tmp_html, 'w', encoding='utf-8') as f:
+        f.write(html)
+
+    port = _free_port()
+    server = subprocess.Popen(
+        [sys.executable, '-m', 'http.server', str(port), '--directory', tmp_dir],
+        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+    )
+
+    try:
+        time.sleep(0.8)
+        subprocess.run(
+            f'playwright-cli open --browser=chrome http://localhost:{port}/_tmp_og.html',
+            shell=True, capture_output=True, timeout=15
         )
-        if r.status_code == 200:
-            data = r.json()
-            if data.get("success"):
-                img_url = data["url"]
-                img_r = httpx.get(img_url, timeout=30)
-                os.makedirs(os.path.dirname(output_path), exist_ok=True)
-                with open(output_path, 'wb') as f:
-                    f.write(img_r.content)
-                return True
-            else:
-                print(f"  API error: {data}")
-                return False
-        else:
-            print(f"  HTTP error: {r.status_code}")
-            return False
+        time.sleep(1)
+        subprocess.run(
+            f'playwright-cli resize {width} {height}',
+            shell=True, capture_output=True, timeout=5
+        )
+        time.sleep(0.3)
+        result = subprocess.run(
+            f'playwright-cli screenshot --filename="{output_path}"',
+            shell=True, capture_output=True, timeout=15
+        )
+        # close 可能超时，不影响截图结果
+        try:
+            subprocess.run('playwright-cli close', shell=True, capture_output=True, timeout=5)
+        except:
+            pass
+        success = os.path.exists(output_path) and os.path.getsize(output_path) > 100
+        if not success:
+            print(f"  Screenshot failed or empty: {result.stderr.decode()[:200] if result.stderr else 'unknown'}")
+        return success
     except Exception as e:
         print(f"  FAIL: {e}")
         return False
+    finally:
+        server.terminate()
+        _kill_port(port)
+        try:
+            os.remove(tmp_html)
+        except:
+            pass
 
 
 def make_article_infographic(article):

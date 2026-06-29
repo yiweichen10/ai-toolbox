@@ -10025,6 +10025,41 @@ window.__ALL_TOOLS__ = [
     "platform": "网页端（PC/移动端浏览器）、小程序"
   },
   {
+    "name": "易企秀",
+    "slug": "eqxiu",
+    "emoji": "🎨",
+    "color": "#1890FF",
+    "description": "易企秀是国内领先的H5页面制作和在线设计平台，2026年推出AI智能设计功能，支持AI生成H5页面、PPT、海报等设计内容，帮助用户快速完成营销物料制作。平台提供丰富的模板库和可视化编辑工具，降低设计门槛。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "H5制作"
+      },
+      {
+        "text": "PPT制作"
+      },
+      {
+        "text": "海报设计"
+      },
+      {
+        "text": "AI生成设计",
+        "type": "free"
+      },
+      {
+        "text": "营销物料"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "月访问量约500万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.eqixiu.com",
+    "price": "基础功能免费，高级模板和AI功能需付费，会员39元/月起",
+    "platform": "网页端（PC/移动端）、小程序"
+  },
+  {
     "name": "绘蛙",
     "slug": "huiwa",
     "emoji": "🎨",
@@ -10092,6 +10127,35 @@ window.__ALL_TOOLS__ = [
     "url": "https://www.whee.com",
     "price": "基础功能免费，高级功能付费订阅",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Algo",
+    "slug": "algo",
+    "emoji": "⚡",
+    "color": "#6366F1",
+    "description": "Algo是一款专注于算法优化和代码辅助的AI编程工具，通过智能分析帮助开发者编写更高效的代码。2026年最新版本集成了深度学习驱动的代码优化引擎，支持多种编程语言的算法加速建议。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码优化"
+      },
+      {
+        "text": "算法辅助"
+      },
+      {
+        "text": "编程助手",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://algo.ai",
+    "price": "免费版/专业版$19/月",
+    "platform": "Web/VS Code/IntelliJ"
   },
   {
     "name": "Ada AI",
@@ -10244,6 +10308,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://alpaca.ai",
     "price": "免费开源",
     "platform": "Web/API/本地部署"
+  },
+  {
+    "name": "MiniCPM-o",
+    "slug": "minicpm-o",
+    "emoji": "🤖",
+    "color": "#2563EB",
+    "description": "MiniCPM-o是MiniMax公司推出的新一代多模态大模型，主打端侧部署能力，支持图像、音频、视频、文本等多种模态的理解与生成。2026年最新版本在推理效率和 多模态理解能力上均有显著提升，兼顾高性能与低资源消耗。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "多模态AI"
+      },
+      {
+        "text": "端侧大模型"
+      },
+      {
+        "text": "MiniMax"
+      },
+      {
+        "text": "开源模型",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://huggingface.co/MiniMaxAI/MiniCPM-o",
+    "price": "免费开源",
+    "platform": "Web/iOS/Android/桌面端/嵌入式"
   },
   {
     "name": "GLM-5.1",
@@ -20076,6 +20172,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "网页端（PC/移动端浏览器）、小程序"
   },
   {
+    "name": "易企秀",
+    "slug": "eqxiu",
+    "emoji": "🎨",
+    "color": "#1890FF",
+    "description": "易企秀是国内领先的H5页面制作和在线设计平台，2026年推出AI智能设计功能，支持AI生成H5页面、PPT、海报等设计内容，帮助用户快速完成营销物料制作。平台提供丰富的模板库和可视化编辑工具，降低设计门槛。",
+    "category": "AI设计",
+    "tags": [
+      {
+        "text": "H5制作"
+      },
+      {
+        "text": "PPT制作"
+      },
+      {
+        "text": "海报设计"
+      },
+      {
+        "text": "AI生成设计",
+        "type": "free"
+      },
+      {
+        "text": "营销物料"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "月访问量约500万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.eqixiu.com",
+    "price": "基础功能免费，高级模板和AI功能需付费，会员39元/月起",
+    "platform": "网页端（PC/移动端）、小程序"
+  },
+  {
     "name": "绘蛙",
     "slug": "huiwa",
     "emoji": "🎨",
@@ -20143,6 +20274,35 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://www.whee.com",
     "price": "基础功能免费，高级功能付费订阅",
     "platform": "Web、iOS、Android"
+  },
+  {
+    "name": "Algo",
+    "slug": "algo",
+    "emoji": "⚡",
+    "color": "#6366F1",
+    "description": "Algo是一款专注于算法优化和代码辅助的AI编程工具，通过智能分析帮助开发者编写更高效的代码。2026年最新版本集成了深度学习驱动的代码优化引擎，支持多种编程语言的算法加速建议。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "代码优化"
+      },
+      {
+        "text": "算法辅助"
+      },
+      {
+        "text": "编程助手",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "85万",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://algo.ai",
+    "price": "免费版/专业版$19/月",
+    "platform": "Web/VS Code/IntelliJ"
   },
   {
     "name": "Ada AI",
@@ -20295,6 +20455,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://alpaca.ai",
     "price": "免费开源",
     "platform": "Web/API/本地部署"
+  },
+  {
+    "name": "MiniCPM-o",
+    "slug": "minicpm-o",
+    "emoji": "🤖",
+    "color": "#2563EB",
+    "description": "MiniCPM-o是MiniMax公司推出的新一代多模态大模型，主打端侧部署能力，支持图像、音频、视频、文本等多种模态的理解与生成。2026年最新版本在推理效率和 多模态理解能力上均有显著提升，兼顾高性能与低资源消耗。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "多模态AI"
+      },
+      {
+        "text": "端侧大模型"
+      },
+      {
+        "text": "MiniMax"
+      },
+      {
+        "text": "开源模型",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "85万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://huggingface.co/MiniMaxAI/MiniCPM-o",
+    "price": "免费开源",
+    "platform": "Web/iOS/Android/桌面端/嵌入式"
   },
   {
     "name": "GLM-5.1",

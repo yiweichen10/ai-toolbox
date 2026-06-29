@@ -1,5 +1,15 @@
 # aitoollab.cn 每日自动化执行记忆
 
+## 2026-06-28 执行摘要
+- **发布工具**: 3个 — Alpaca AI, RAGFlow, WHEE
+- **库存状态**: 330 已发布 / 40 未发布 / 370 总计（充足，无需补充）
+- **部署结果**: 成功，已推送到阿里云服务器 (121.43.144.99)
+- **Git**: commit 834da59b (publish) + 0edce37f (deploy) 均已推送到 GitHub main
+- **Baidu Push**: over quota（配额耗尽）
+- **IndexNow**: publish阶段推送3个新URL成功；deploy阶段无新URL
+- **构建统计**: 330 tools + 116 articles + 6 quizzes + 19 rankings + 5 live + 12 dict = 515 HTML
+- **备注**: OG图片全部HTTP 500失败（已知问题），不影响构建和部署。Publish阶段git push成功：commit 834da59b。Deploy阶段git push成功：0edce37f。
+
 ## 2026-06-27 执行摘要
 - **发布工具**: 3个 — Quizlet AI, 图怪兽, GLM-5.1
 - **库存状态**: 327 已发布 / 43 未发布 / 370 总计（充足，无需补充）
