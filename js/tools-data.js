@@ -10158,6 +10158,41 @@ window.__ALL_TOOLS__ = [
     "platform": "Web/VS Code/IntelliJ"
   },
   {
+    "name": "Read AI",
+    "slug": "read-ai",
+    "emoji": "📖",
+    "color": "#6366F1",
+    "description": "Read AI是一款AI驱动的会议助手和文档阅读工具，专注于会议摘要、关键信息提取和智能阅读辅助。2026年推出的最新版本增强了多语言实时翻译和深度内容理解能力，已成为企业和个人提升工作效率的热门选择。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "会议助手"
+      },
+      {
+        "text": "AI摘要"
+      },
+      {
+        "text": "文档阅读"
+      },
+      {
+        "text": "效率工具",
+        "type": "free"
+      },
+      {
+        "text": "智能提取"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "150万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://read.ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
+  },
+  {
     "name": "Ada AI",
     "slug": "ada-ai",
     "emoji": "🤖",
@@ -10185,6 +10220,38 @@ window.__ALL_TOOLS__ = [
     "url": "https://adaai.com",
     "price": "免费版/专业版$9.9/月",
     "platform": "Web/iOS/Android/Chrome扩展"
+  },
+  {
+    "name": "Zendesk AI",
+    "slug": "zendesk-ai",
+    "emoji": "🎧",
+    "color": "#03363D",
+    "description": "Zendesk AI是内置于Zendesk客户服务平台中的AI功能，提供智能客服代理、自动回复、意图识别和工作流自动化。2026年推出的最新版本增强了多模态理解和预测性客户分析能力，帮助企业实现更高效的客户支持。",
+    "category": "AI行业应用",
+    "tags": [
+      {
+        "text": "AI客服"
+      },
+      {
+        "text": "客户支持"
+      },
+      {
+        "text": "自动化"
+      },
+      {
+        "text": "企业级AI",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.zendesk.com",
+    "price": "基础版$49/用户/月起，AI功能需额外付费",
+    "platform": "Web、iOS、Android"
   },
   {
     "name": "Quizlet AI",
@@ -10308,6 +10375,40 @@ window.__ALL_TOOLS__ = [
     "url": "https://alpaca.ai",
     "price": "免费开源",
     "platform": "Web/API/本地部署"
+  },
+  {
+    "name": "CoCounsel",
+    "slug": "cocounsel",
+    "emoji": "⚖️",
+    "color": "#1E3A5F",
+    "description": "CoCounsel是由法律科技公司Clio推出的AI法律助手，基于GPT-4技术构建，专为律师和法律专业人士设计。2026年版本新增了更精准的判例分析能力和多语言合同审查功能，已成为北美地区超过50,000家律所的常用工具。",
+    "category": "AI行业应用",
+    "tags": [
+      {
+        "text": "法律AI"
+      },
+      {
+        "text": "文档分析"
+      },
+      {
+        "text": "合同审查"
+      },
+      {
+        "text": "判例研究"
+      },
+      {
+        "text": "法律写作"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约45万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://cocounsel.clio.com",
+    "price": "订阅制，$39/月起，Clio用户可免费使用基础版",
+    "platform": "Web / Chrome扩展 / Microsoft Word插件"
   },
   {
     "name": "MiniCPM-o",
@@ -20305,6 +20406,41 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Web/VS Code/IntelliJ"
   },
   {
+    "name": "Read AI",
+    "slug": "read-ai",
+    "emoji": "📖",
+    "color": "#6366F1",
+    "description": "Read AI是一款AI驱动的会议助手和文档阅读工具，专注于会议摘要、关键信息提取和智能阅读辅助。2026年推出的最新版本增强了多语言实时翻译和深度内容理解能力，已成为企业和个人提升工作效率的热门选择。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "会议助手"
+      },
+      {
+        "text": "AI摘要"
+      },
+      {
+        "text": "文档阅读"
+      },
+      {
+        "text": "效率工具",
+        "type": "free"
+      },
+      {
+        "text": "智能提取"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "150万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://read.ai",
+    "price": "免费版可用，付费版$19/月起",
+    "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
+  },
+  {
     "name": "Ada AI",
     "slug": "ada-ai",
     "emoji": "🤖",
@@ -20332,6 +20468,38 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://adaai.com",
     "price": "免费版/专业版$9.9/月",
     "platform": "Web/iOS/Android/Chrome扩展"
+  },
+  {
+    "name": "Zendesk AI",
+    "slug": "zendesk-ai",
+    "emoji": "🎧",
+    "color": "#03363D",
+    "description": "Zendesk AI是内置于Zendesk客户服务平台中的AI功能，提供智能客服代理、自动回复、意图识别和工作流自动化。2026年推出的最新版本增强了多模态理解和预测性客户分析能力，帮助企业实现更高效的客户支持。",
+    "category": "AI行业应用",
+    "tags": [
+      {
+        "text": "AI客服"
+      },
+      {
+        "text": "客户支持"
+      },
+      {
+        "text": "自动化"
+      },
+      {
+        "text": "企业级AI",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约850万/月",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://www.zendesk.com",
+    "price": "基础版$49/用户/月起，AI功能需额外付费",
+    "platform": "Web、iOS、Android"
   },
   {
     "name": "Quizlet AI",
@@ -20455,6 +20623,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://alpaca.ai",
     "price": "免费开源",
     "platform": "Web/API/本地部署"
+  },
+  {
+    "name": "CoCounsel",
+    "slug": "cocounsel",
+    "emoji": "⚖️",
+    "color": "#1E3A5F",
+    "description": "CoCounsel是由法律科技公司Clio推出的AI法律助手，基于GPT-4技术构建，专为律师和法律专业人士设计。2026年版本新增了更精准的判例分析能力和多语言合同审查功能，已成为北美地区超过50,000家律所的常用工具。",
+    "category": "AI行业应用",
+    "tags": [
+      {
+        "text": "法律AI"
+      },
+      {
+        "text": "文档分析"
+      },
+      {
+        "text": "合同审查"
+      },
+      {
+        "text": "判例研究"
+      },
+      {
+        "text": "法律写作"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "约45万",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://cocounsel.clio.com",
+    "price": "订阅制，$39/月起，Clio用户可免费使用基础版",
+    "platform": "Web / Chrome扩展 / Microsoft Word插件"
   },
   {
     "name": "MiniCPM-o",
