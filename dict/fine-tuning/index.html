@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine-tuning (微调) - AI词典 | AI工具宝箱</title>
+    <meta name="description" content="在预训练模型的基础上，用特定领域数据继续训练，使其适应特定任务或风格。是AI定制化的核心技术手段。">
+    <meta name="keywords" content="Fine-tuning (微调),AI词典,AI术语,人工智能概念,Fine-tuning">
+    <link rel="canonical" href="https://www.aitoollab.cn/dict/fine-tuning/">
+    <link rel="alternate" hreflang="en" href="https://aitoolbox.hk/dict/fine-tuning/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.cn/dict/fine-tuning/">
+    <link rel="alternate" hreflang="x-default" href="https://aitoolbox.hk/dict/fine-tuning/">
+    <meta property="og:title" content="Fine-tuning (微调) - AI词典 | AI工具宝箱">
+    <meta property="og:description" content="在预训练模型的基础上，用特定领域数据继续训练，使其适应特定任务或风格。是AI定制化的核心技术手段。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.cn/dict/fine-tuning/">
+    <meta property="og:image" content="https://www.aitoollab.cn/images/og/dict-fine-tuning-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- BUILD_DYNAMIC_HEAD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "Fine-tuning (微调)",
+      "description": "在预训练模型的基础上，用特定领域数据继续训练，使其适应特定任务或风格。是AI定制化的核心技术手段。",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "AI工具宝箱 - AI词典"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;">
+                <div class="site-logo">🛠 AI工具宝箱 <span>每日更新 · 已收录 100+ 款工具</span></div>
+            </a>
+        </div>
+        <nav class="global-nav" aria-label="全局导航">
+            <div class="global-nav-inner">
+                <a href="/ranking/" class="gn-item">📊 工具排行</a>
+                <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+                <a href="/live/" class="gn-item">📈 实时面板</a>
+                <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+                <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+                <a href="/category/" class="gn-item">📂 全部分类</a>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <div class="breadcrumb-inner">
+            <a href="/">首页</a>
+            <span class="sep">›</span>
+            <a href="/dict/">AI词典</a>
+            <span class="sep">›</span>
+            <span>Fine-tuning (微调)</span>
+        </div>
+    </nav>
+
+    <main class="dict-detail-page">
+        <header class="dict-detail-header">
+            <div class="dict-detail-icon">🔧</div>
+            <h1>Fine-tuning (微调)</h1>
+            <div class="dict-detail-en">Fine-tuning</div>
+            <span class="dict-detail-category">技术原理</span>
+            <div class="dict-detail-tags"><span>AI训练</span><span>定制化</span></div>
+        </header>
+        <div class="dict-detail-layout">
+            <div class="dict-detail-main">
+                <article>
+                    <div class="dict-detail-body">
+                        <p>微调（Fine-tuning）是让通用AI模型适应特定领域或任务的关键技术。与其从零训练一个模型（成本极高），不如拿一个已经训练好的强大模型，用少量特定数据&quot;教&quot;它新技能。</p><section class="dict-section"><h3>微调 vs 提示词 vs RAG</h3><ul>
+<li><strong>提示词工程</strong>：不改模型，只优化输入。成本最低，效果有限</li>
+<li><strong>RAG</strong>：不改模型，给模型查资料。适合知识密集型任务</li>
+<li><strong>微调</strong>：修改模型参数。适合风格/格式/行为模式的深度定制</li>
+</ul>
+</section>
+<section class="dict-section"><h3>微调方法演进</h3><ul>
+<li><strong>全量微调</strong>：更新所有参数（成本高，效果好）</li>
+<li><strong>LoRA（Low-Rank Adaptation）</strong>：只训练少量额外参数，大幅降低成本，2024年后成为主流</li>
+<li><strong>QLoRA</strong>：LoRA + 量化，消费级显卡也能微调70B模型</li>
+<li><strong>DPO（Direct Preference Optimization）</strong>：用偏好数据直接优化，替代RLHF</li>
+</ul>
+</section>
+<section class="dict-section"><h3>适用场景</h3><ul>
+<li>让通用模型学会公司内部的术语和文档风格</li>
+<li>训练模型输出特定格式（如JSON Schema严格遵循）</li>
+<li>优化模型在特定语言/方言上的表现</li>
+</ul>
+</section>
+<section class="dict-section"><h3>注意</h3><p>微调不是&quot;灌输知识&quot;的好方法——知识应该通过RAG提供。微调更适合改变模型的&quot;行为&quot;和&quot;风格&quot;。</p></section>
+                    </div>
+                </article>
+            </div>
+            <aside class="dict-detail-sidebar">
+        <div class="dict-quick-facts">
+            <h4>快速参考</h4>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">英文名</div>
+                <div class="dict-fact-value">Fine-tuning</div>
+            </div>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">分类</div>
+                <div class="dict-fact-value">技术原理</div>
+            </div>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">标签</div>
+                <div class="dict-fact-value">AI训练, 定制化</div>
+            </div>
+        </div>
+        <div class="dict-side-nav">
+            <h4>浏览词条</h4>
+            <div class="dict-side-nav-links">
+                <a href="/dict/diffusion-model/">🌫️ 扩散模型 (Diffusion Model)</a>
+                <a href="/dict/">📖 返回词典首页</a>
+                <a href="/dict/token/">🪙 Token (标记)</a>
+            </div>
+        </div>
+    </aside>
+        </div>
+        <nav class="dict-detail-nav">
+            <a href="/dict/diffusion-model/">← 扩散模型 (Diffusion Model)</a>
+            <a href="/dict/token/">Token (标记) →</a>
+        </nav>
+                <div class="dict-related">
+            <h3>同分类词条</h3>
+            <div class="dict-related-grid">
+                <a class="dict-related-card" href="/dict/rag/"><span class="dict-related-emoji">🔍</span>RAG (检索增强生成)</a><a class="dict-related-card" href="/dict/embedding/"><span class="dict-related-emoji">🧮</span>Embedding (向量嵌入)</a><a class="dict-related-card" href="/dict/transformer/"><span class="dict-related-emoji">⚙️</span>Transformer架构</a><a class="dict-related-card" href="/dict/diffusion-model/"><span class="dict-related-emoji">🌫️</span>扩散模型 (Diffusion Model)</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具 · <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">蜀ICP备2025172163号-2</a></p>
+        <div class="footer-links">
+            <a href="/about.html">关于我们</a>
+            <a href="/contact.html">联系方式</a>
+            <a href="/privacy.html">隐私政策</a>
+            <a href="/links.html">友情链接</a>
+        </div>
+        <p>用AI提升效率，让每个人都能享受技术红利。</p>
+    </footer>
+    <button id="backToTop" aria-label="返回顶部">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>150){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
+</script>
+</body>
+</html>

@@ -1,5 +1,15 @@
 # aitoollab.cn 每日自动化执行记忆
 
+## 2026-06-29 执行摘要
+- **发布工具**: 3个 — MiniCPM-o, Algo, 易企秀
+- **库存状态**: 333 已发布 / 37 未发布 / 370 总计（充足，无需补充）
+- **部署结果**: 成功，已推送到阿里云服务器 (121.43.144.99)
+- **Git**: commit f45906a9 (publish) + c897f9f9 (deploy) 均已推送到 GitHub main
+- **Baidu Push**: over quota（配额耗尽）
+- **IndexNow**: publish阶段推送3个新URL成功；deploy阶段无新URL
+- **构建统计**: 333 tools + 117 articles + 6 quizzes + 19 rankings + 5 live + 14 dict = 519 HTML
+- **备注**: OG图片全部成功（3/3），库存充足无需补充工具
+
 ## 2026-06-28 执行摘要
 - **发布工具**: 3个 — Alpaca AI, RAGFlow, WHEE
 - **库存状态**: 330 已发布 / 40 未发布 / 370 总计（充足，无需补充）

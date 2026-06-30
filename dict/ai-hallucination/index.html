@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI幻觉 (Hallucination) - AI词典 | AI工具宝箱</title>
+    <meta name="description" content="AI自信地生成看似合理但事实错误的内容。所有LLM都存在幻觉问题，是无法完全消除的固有特性，但可以通过RAG等技术大幅减少。">
+    <meta name="keywords" content="AI幻觉 (Hallucination),AI词典,AI术语,人工智能概念,AI Hallucination">
+    <link rel="canonical" href="https://www.aitoollab.cn/dict/ai-hallucination/">
+    <link rel="alternate" hreflang="en" href="https://aitoolbox.hk/dict/ai-hallucination/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.cn/dict/ai-hallucination/">
+    <link rel="alternate" hreflang="x-default" href="https://aitoolbox.hk/dict/ai-hallucination/">
+    <meta property="og:title" content="AI幻觉 (Hallucination) - AI词典 | AI工具宝箱">
+    <meta property="og:description" content="AI自信地生成看似合理但事实错误的内容。所有LLM都存在幻觉问题，是无法完全消除的固有特性，但可以通过RAG等技术大幅减少。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.cn/dict/ai-hallucination/">
+    <meta property="og:image" content="https://www.aitoollab.cn/images/og/dict-ai-hallucination-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- BUILD_DYNAMIC_HEAD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "AI幻觉 (Hallucination)",
+      "description": "AI自信地生成看似合理但事实错误的内容。所有LLM都存在幻觉问题，是无法完全消除的固有特性，但可以通过RAG等技术大幅减少。",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "AI工具宝箱 - AI词典"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;">
+                <div class="site-logo">🛠 AI工具宝箱 <span>每日更新 · 已收录 100+ 款工具</span></div>
+            </a>
+        </div>
+        <nav class="global-nav" aria-label="全局导航">
+            <div class="global-nav-inner">
+                <a href="/ranking/" class="gn-item">📊 工具排行</a>
+                <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+                <a href="/live/" class="gn-item">📈 实时面板</a>
+                <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+                <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+                <a href="/category/" class="gn-item">📂 全部分类</a>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <div class="breadcrumb-inner">
+            <a href="/">首页</a>
+            <span class="sep">›</span>
+            <a href="/dict/">AI词典</a>
+            <span class="sep">›</span>
+            <span>AI幻觉 (Hallucination)</span>
+        </div>
+    </nav>
+
+    <main class="dict-detail-page">
+        <header class="dict-detail-header">
+            <div class="dict-detail-icon">🌪️</div>
+            <h1>AI幻觉 (Hallucination)</h1>
+            <div class="dict-detail-en">AI Hallucination</div>
+            <span class="dict-detail-category">基础概念</span>
+            <div class="dict-detail-tags"><span>AI问题</span><span>可靠性</span></div>
+        </header>
+        <div class="dict-detail-layout">
+            <div class="dict-detail-main">
+                <article>
+                    <div class="dict-detail-body">
+                        <p>AI幻觉（Hallucination）是指AI模型生成的内容虽然在语法和逻辑上看起来合理，但包含事实性错误。这是所有大语言模型的固有特性，不是Bug。</p><section class="dict-section"><h3>为什么会产生幻觉</h3><ul>
+<li>LLM本质是&quot;概率预测器&quot;，而非&quot;事实数据库&quot;</li>
+<li>训练数据中可能包含错误信息</li>
+<li>面对不确定的问题，模型倾向于&quot;编造&quot;而非承认不知道</li>
+<li>长文本生成中，模型可能遗忘前面的约束条件</li>
+</ul>
+</section>
+<section class="dict-section"><h3>幻觉的常见类型</h3><ul>
+<li><strong>事实错误</strong>：说爱因斯坦发明了电话</li>
+<li><strong>引文编造</strong>：引用不存在的论文、书籍、法律条文</li>
+<li><strong>数据虚构</strong>：编造统计数字和&quot;研究表明&quot;</li>
+<li><strong>逻辑矛盾</strong>：前后自相矛盾</li>
+<li><strong>信息拼接</strong>：把两个正确的事实组合成错误的信息</li>
+</ul>
+</section>
+<section class="dict-section"><h3>如何减少幻觉</h3><p>1. <strong>RAG</strong>：让模型基于真实文档回答，而非依赖记忆
+2. <strong>Grounding</strong>：要求模型标注信息来源
+3. <strong>约束Prompt</strong>：&quot;如果你不确定，直接说不知道&quot;
+4. <strong>多轮验证</strong>：让另一个模型检查答案的事实性
+5. <strong>降低Temperature</strong>：减少随机性，增加确定性</p></section>
+<section class="dict-section"><h3>重要认知</h3><p>幻觉不可能完全消除。2026年最好的模型（GPT-5、Claude 4）仍有3-8%的幻觉率。使用AI产出重要内容时，必须人工验证关键事实。</p></section>
+                    </div>
+                </article>
+            </div>
+            <aside class="dict-detail-sidebar">
+        <div class="dict-quick-facts">
+            <h4>快速参考</h4>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">英文名</div>
+                <div class="dict-fact-value">AI Hallucination</div>
+            </div>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">分类</div>
+                <div class="dict-fact-value">基础概念</div>
+            </div>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">标签</div>
+                <div class="dict-fact-value">AI问题, 可靠性</div>
+            </div>
+        </div>
+        <div class="dict-side-nav">
+            <h4>浏览词条</h4>
+            <div class="dict-side-nav-links">
+                <a href="/dict/open-vs-closed-source/">🔓 开源模型 vs 闭源模型</a>
+                <a href="/dict/">📖 返回词典首页</a>
+                
+            </div>
+        </div>
+    </aside>
+        </div>
+        <nav class="dict-detail-nav">
+            <a href="/dict/open-vs-closed-source/">← 开源模型 vs 闭源模型</a>
+            
+        </nav>
+                <div class="dict-related">
+            <h3>同分类词条</h3>
+            <div class="dict-related-grid">
+                <a class="dict-related-card" href="/dict/llm/"><span class="dict-related-emoji">🤖</span>大语言模型 (LLM)</a><a class="dict-related-card" href="/dict/text-to-image/"><span class="dict-related-emoji">🎨</span>文生图 (Text-to-Image)</a><a class="dict-related-card" href="/dict/ai-coding/"><span class="dict-related-emoji">💻</span>AI编程 (AI Coding)</a><a class="dict-related-card" href="/dict/ai-agent/"><span class="dict-related-emoji">🕵️</span>AI Agent (智能体)</a><a class="dict-related-card" href="/dict/token/"><span class="dict-related-emoji">🪙</span>Token (标记)</a><a class="dict-related-card" href="/dict/multimodal-ai/"><span class="dict-related-emoji">🌈</span>多模态AI (Multimodal AI)</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具 · <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">蜀ICP备2025172163号-2</a></p>
+        <div class="footer-links">
+            <a href="/about.html">关于我们</a>
+            <a href="/contact.html">联系方式</a>
+            <a href="/privacy.html">隐私政策</a>
+            <a href="/links.html">友情链接</a>
+        </div>
+        <p>用AI提升效率，让每个人都能享受技术红利。</p>
+    </footer>
+    <button id="backToTop" aria-label="返回顶部">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>150){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
+</script>
+</body>
+</html>

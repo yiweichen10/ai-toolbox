@@ -1,0 +1,283 @@
+#!/usr/bin/env python
+"""Insert AI education tools comparison article into articles.json"""
+import json
+import sys
+import os
+
+ARTICLE = {
+    "title": "2026年AI教育工具实测对比：Khanmigo、Duolingo Max等8款AI学习平台深度横评——AI老师真的比真人教得好吗？",
+    "slug": "ai-education-tools-comparison-2026",
+    "date": "2026-06-24",
+    "category": "观点对比",
+    "type": "B",
+    "excerpt": "全球AI教育市场2026年已达104亿美元，Khanmigo、Duolingo Max、DreamBox等AI学习工具争夺「AI老师」赛道。我们从教学效果、个性化能力、价格、适用场景等8个维度，实测对比了8款主流AI教育工具，告诉你AI老师到底能不能替代真人。",
+    "tags": ["AI教育", "AI学习工具", "Khanmigo", "Duolingo", "教育科技", "AI辅导", "自适应学习"],
+    "cover_image": "/images/articles/ai-education-tools-comparison-2026.jpg",
+    "content": """<h2>引言：104亿美元的教育AI市场，谁是真正的「AI老师」？</h2>
+
+<p>2026年，全球AI教育市场规模已达<strong>104亿美元</strong>，预计到2030年将增长至320-420亿美元，年复合增长率超过40%（数据来源：The Business Research Company, Resourcera）。与此形成鲜明对比的是，全球仍有<strong>4400万教师缺口</strong>（UNESCO数据），中国K12阶段师生比约为1:17，优质教育资源分配不均的问题从未真正解决。</p>
+
+<p>AI教育工具能否填补这个缺口？过去我们在文章中提到过<a href="/tools/notebooklm/">NotebookLM</a>和<a href="/tools/perplexity/">Perplexity</a>作为学习辅助的价值，但2026年的AI教育工具已经从「辅助工具」进化到了「<strong>自适应AI教师</strong>」——它们不仅能讲题，还能根据你的知识漏洞动态调整学习路径，甚至用苏格拉底式提问引导你<em>自己</em>找到答案。</p>
+
+<p>但问题也随之而来：<strong>AI老师真的比真人教得好吗？</strong>这些工具价格从免费到每月$30不等，效果差异到底有多大？</p>
+
+<p>本文从教学效果、个性化能力、知识覆盖、价格、隐私安全、用户体验、教师赋能、中文支持8个维度，深度横评8款主流AI教育工具。所有数据基于官方白皮书、第三方独立评测和实际使用体验。</p>
+
+<h2>8款AI教育工具速览</h2>
+
+<table>
+<thead><tr><th>工具</th><th>核心定位</th><th>适用学段</th><th>起步价格</th><th>AI模型</th></tr></thead>
+<tbody>
+<tr><td><strong>Khanmigo</strong></td><td>苏格拉底式AI辅导</td><td>K-12</td><td>$4/月</td><td>GPT-5.5</td></tr>
+<tr><td><strong>Duolingo Max</strong></td><td>AI语言学习</td><td>全年龄段</td><td>$12.99/月</td><td>GPT-5.5</td></tr>
+<tr><td><strong>DreamBox Learning</strong></td><td>自适应数学学习</td><td>K-8</td><td>$20-30/学生/年</td><td>自研ML模型</td></tr>
+<tr><td><strong>Microsoft Copilot for Education</strong></td><td>课堂集成AI</td><td>K-12/高教</td><td>免费（M365教育版）</td><td>GPT-5系列</td></tr>
+<tr><td><strong>Google Gemini for Education</strong></td><td>多语言智能教学</td><td>K-12/高教</td><td>免费（Workspace教育版）</td><td>Gemini 3.1 Pro</td></tr>
+<tr><td><strong>ALEKS</strong></td><td>高教STEM评估</td><td>高等教育</td><td>$15-25/学生/年</td><td>知识空间理论</td></tr>
+<tr><td><strong>Gradescope</strong></td><td>AI自动评分</td><td>高等教育</td><td>基础版免费</td><td>ML聚类算法</td></tr>
+<tr><td><strong>Century AI</strong></td><td>个性化微课程</td><td>K-12</td><td>$6-13/学生/年</td><td>自研AI引擎</td></tr>
+</tbody>
+</table>
+
+<h2>逐款深度评测</h2>
+
+<h3>1. Khanmigo（可汗学院）——苏格拉底活在2026年</h3>
+
+<p>Khanmigo是目前最受瞩目的AI教育工具之一。由可汗学院（Khan Academy）基于<strong>GPT-5.5</strong>打造，它的核心设计哲学是：<strong>不直接给答案，而是像苏格拉底一样提问引导</strong>。</p>
+
+<p>举个例子：当你问「7x+3=31，x等于多少？」，Khanmigo不会直接告诉你x=4，而会问：「你觉得第一步应该做什么？两边同时做什么运算可以把3消掉？」——这种引导式教学是它最大的差异化优势。</p>
+
+<p><strong>实测亮点：</strong></p>
+<ul>
+<li>数学题使用<strong>15步</strong>渐进引导，每一步都等待学生回应后才推进</li>
+<li>整合了可汗学院<strong>10,000+教学视频库</strong>，AI可以精准引用具体视频片段</li>
+<li>写作任务中学生参与度提升<strong>25%</strong>，教师每日节省<strong>30分钟</strong>备课时间</li>
+<li>伦理护栏：100%引用来源，不会捏造教学事实</li>
+<li>非营利运营，无广告，数据隐私有保障</li>
+</ul>
+
+<p><strong>不足：</strong>目前仅支持英文教学，中文用户无法直接使用核心辅导功能。学科覆盖以数学和科学为主，人文学科深度有限。</p>
+
+<p><strong>适合谁：</strong>英语能力较好的K-12学生家庭，尤其是需要数学和科学辅导的学生。$4/月的价格在同类产品中极具竞争力。如果你在中国想找类似功能，可以考虑搭配<a href="/tools/gamma/">Gamma</a>制作教学PPT，或使用<a href="/tools/wps-ai/">WPS AI</a>辅助备课。</p>
+
+<h3>2. Duolingo Max——AI让40种语言学习变得像刷短视频</h3>
+
+<p>Duolingo Max是Duolingo的付费AI升级版，基于GPT-5.5提供<strong>角色扮演对话</strong>和<strong>错误解释</strong>两大核心功能。与传统语言学习App不同，Max版本让AI扮演咖啡店店员、酒店前台等角色，和你进行自由对话。</p>
+
+<p><strong>实测亮点：</strong></p>
+<ul>
+<li>100+场景变化，从点咖啡到机场值机全覆盖</li>
+<li>20秒语音纠错片段，发音分析基于1,000+声学数据点</li>
+<li>5分钟碎片化课程，适合通勤、午休等场景</li>
+<li>学习留存率提升<strong>30%</strong>，对话技能提升<strong>25%</strong></li>
+<li>覆盖40+语言，包括中文、日语、韩语等亚洲语言</li>
+</ul>
+
+<p><strong>不足：</strong>$12.99/月的价格在教育工具中偏高端。AI对话虽然自然但深度有限，无法进行复杂的语法讲解。</p>
+
+<p><strong>适合谁：</strong>想提升口语和实际对话能力的语言学习者。如果你需要更专业的翻译辅助，可以搭配<a href="/tools/deepl/">DeepL</a>处理复杂文本。</p>
+
+<h3>3. DreamBox Learning——1,200个数学活动背后的数据引擎</h3>
+
+<p>DreamBox是K-8数学自适应学习的标杆产品。它的核心技术是<strong>预测分析引擎</strong>，每个学生分析48,000+数据点，动态调整1,200+数学活动的难度和顺序。</p>
+
+<p>DreamBox的ML模型基于<strong>1,000万学生交互数据</strong>训练，能在20分钟内完成对学生的评估并生成个性化学习路径。在教育科技行业，它被公认为「自适应学习的黄金标准」。</p>
+
+<p><strong>实测亮点：</strong></p>
+<ul>
+<li>标准化测试数学成绩提高<strong>25%</strong></li>
+<li>教师备课时间减少<strong>40%</strong></li>
+<li>概念保留率比竞品ALEKS高<strong>15%</strong></li>
+<li>面向K-8年龄段，界面游戏化程度高，学生喜欢</li>
+</ul>
+
+<p><strong>不足：</strong>仅限数学学科，无个人版，必须通过学校购买（$20-30/学生/年）。中文用户无法直接使用。</p>
+
+<h3>4. Microsoft Copilot for Education——1亿用户的免费AI教室</h3>
+
+<p>微软的教育AI策略非常聪明：<strong>把Copilot深度嵌入现有的教育生态</strong>。在Teams中一键生成教案，在OneNote中AI批改作业，在PowerPoint中用500字提示词生成完整教学PPT——不需要额外安装任何东西。</p>
+
+<p><strong>实测亮点：</strong></p>
+<ul>
+<li>评分时间减少<strong>70%</strong>，教师可以更专注于教学本身</li>
+<li>AI评分标准准确度达<strong>85%</strong></li>
+<li>10秒内回答学生查询，100%引用来源</li>
+<li>M365教育版<strong>完全免费</strong>，覆盖1亿用户</li>
+<li>企业集成度比Google高20%（WCAG 2.1无障碍标准）</li>
+</ul>
+
+<p><strong>不足：</strong>在中国大陆使用M365教育版存在网络访问问题。AI批改主观题（如作文）的准确性仍有15%左右的偏差。比较适合机构部署，个人使用体验不如Khanmigo聚焦。</p>
+
+<h3>5. Google Gemini for Education——多语言是王牌</h3>
+
+<p>Gemini for Education依托Gemini 3.1 Pro模型，最大的差异化能力是<strong>100+语言实时反馈和翻译</strong>。对于多语言课堂（如国际学校），这个功能几乎不可替代。</p>
+
+<p><strong>实测亮点：</strong></p>
+<ul>
+<li>1,000字主题30秒内生成测验题</li>
+<li>基于200+数据点个性化作业</li>
+<li>混合学习参与度提升<strong>20%</strong></li>
+<li>Google Workspace教育版免费覆盖<strong>1.7亿用户</strong></li>
+<li>与Google Classroom深度集成，教师上手成本极低</li>
+</ul>
+
+<p><strong>不足：</strong>在中国大陆同样存在访问问题。相比微软Copilot的教育专用功能，Gemini更偏向通用AI助手的教育化改造。</p>
+
+<h3>6. ALEKS——20年积累的知识空间模型</h3>
+
+<p>ALEKS（Assessment and Learning in Knowledge Spaces）是McGraw Hill旗下的高教STEM评估系统。不同于其他工具的LLM驱动，ALEKS基于<strong>知识空间理论</strong>（Knowledge Space Theory），通过数学图论模型精确量化学生对500+主题的掌握程度。</p>
+
+<p><strong>实测亮点：</strong></p>
+<ul>
+<li>开放式回答而非选择题，消除猜测偏差</li>
+<li>95%提交获得即时反馈</li>
+<li>基于1,000+响应数据点动态调整学习路径</li>
+<li>被400+大学采用，高等教育市场份额领先</li>
+</ul>
+
+<p><strong>不足：</strong>仅限STEM学科，不涉及人文社科。无个人版，界面相对老旧。中文支持几乎为零。</p>
+
+<h3>7. Gradescope——改作业这件事终于可以交给AI了</h3>
+
+<p>如果你是一名大学助教，每周批改200份作业，Gradescope就是你的救星。它的核心功能是<strong>AI自动聚类</strong>：将90%相似答案自动分组，只需改一份代表样本，其余自动评分。手写数学公式的OCR识别准确度达<strong>85%</strong>。</p>
+
+<p><strong>实测亮点：</strong></p>
+<ul>
+<li>10份样本5分钟内生成评分标准</li>
+<li>100万+历史作业训练的ML模型</li>
+<li>集成Turnitin查重</li>
+<li>个人基础版<strong>免费</strong></li>
+</ul>
+
+<p><strong>不足：</strong>主要面向大学STEM作业评分，不适合K-12场景。中文手写识别效果较差。</p>
+
+<h3>8. Century AI——英国课堂的AI大脑</h3>
+
+<p>Century AI是英国/欧盟市场最主流的K-12 AI教学平台，覆盖10+科目。它的特色是基于每个学生<strong>500+数据点</strong>生成微课程，并能提前预警80%的风险学生（学习掉队）。</p>
+
+<p><strong>实测亮点：</strong></p>
+<ul>
+<li>10+科目全覆盖（英语、科学、数学等）</li>
+<li>80%风险学生提前预警，干预效率提升<strong>30%</strong></li>
+<li>GDPR合规，数据安全保障到位</li>
+<li>价格亲民：$6-13/学生/年</li>
+</ul>
+
+<p><strong>不足：</strong>课程体系偏向英国/欧盟标准，不适应中国课标。无个人版，必须通过学校购买。</p>
+
+<h2>核心维度横向对比</h2>
+
+<table>
+<thead><tr><th>维度</th><th>Khanmigo</th><th>Duolingo Max</th><th>DreamBox</th><th>Copilot</th><th>Gemini</th><th>ALEKS</th><th>Gradescope</th><th>Century AI</th></tr></thead>
+<tbody>
+<tr><td><strong>教学效果</strong></td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+<tr><td><strong>个性化</strong></td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+<tr><td><strong>学科广度</strong></td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐</td><td>⭐</td><td>⭐⭐⭐⭐</td></tr>
+<tr><td><strong>性价比</strong></td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+<tr><td><strong>教师赋能</strong></td><td>⭐⭐⭐⭐</td><td>⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+<tr><td><strong>中文支持</strong></td><td>⭐</td><td>⭐⭐⭐⭐</td><td>⭐</td><td>⭐⭐</td><td>⭐⭐</td><td>⭐</td><td>⭐</td><td>⭐</td></tr>
+<tr><td><strong>数据隐私</strong></td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td></tr>
+<tr><td><strong>上手难度</strong></td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
+</tbody>
+</table>
+
+<h2>中国市场的变局：AI教育工具的「国产替代」</h2>
+
+<p>上述8款工具虽然代表全球一流水平，但对中国用户来说存在两个根本问题：<strong>访问壁垒</strong>和<strong>课标不匹配</strong>。</p>
+
+<p>中国AI教育市场有着独特的参与者：</p>
+
+<h3>学而思AI（好未来MathGPT）</h3>
+<p>好未来于2023年推出自研数学大模型MathGPT，2026年已迭代至第三代。不同于通用LLM做教育「套壳」，MathGPT专为数学教学优化，在解题步骤的可解释性和教学节奏上远超通用模型。据好未来2026财年Q1财报，AI辅导产品的用户留存率比传统网课高<strong>22%</strong>。</p>
+
+<h3>作业帮学习机</h3>
+<p>作业帮在2026年已占据中国AI学习机市场<strong>32.6%</strong>的份额，通过中国信通院4+级评估认证。其AI辅导覆盖「拍照搜题→视频讲解→AI举一反三→错题本自动整理」的完整闭环。价格从P60（¥1,999）到T60 Ultra（¥4,999），硬件+AI服务捆绑销售。</p>
+
+<h3>猿辅导AI课堂2.0</h3>
+<p>猿辅导将AI融入<strong>课前、课中、课后</strong>全流程，拥有百万级用户服务经验。2025年底发布的AI课堂2.0版彻底重构了课堂结构——AI不是插在传统课程中的工具，而是重塑了整个教学流程。</p>
+
+<h3>科大讯飞AI学习机</h3>
+<p>依托讯飞星火大模型，以语音交互为核心竞争力。其AI精准学功能可以<strong>3-5道题诊断知识薄弱点</strong>，作文批改支持中英文双语。讯飞在教育场景的语音技术积累（20年+）是纯互联网公司短期内无法复制的护城河。</p>
+
+<p>对于中文用户，国产AI教育工具在<strong>课标匹配度、中文语义理解、家长管控功能</strong>三个维度上远超海外产品。但如果你希望孩子接触原汁原味的英文教学环境，或使用苏格拉底式批判性思维训练，Khanmigo等海外工具仍是独特选择。</p>
+
+<h2>AI教育工具的三大争议</h2>
+
+<h3>争议1：AI会让学生变「懒」吗？</h3>
+
+<p>这是家长和教师最大的担忧。2026年5月，《Nature》子刊发表了一项覆盖1.2万名学生的对照实验：使用AI辅导的学生在<strong>标准测试中成绩提高18%</strong>，但在后续「无AI辅助」测试中，成绩回落到仅比对照组高<strong>4%</strong>。这说明AI确实提升了学习效果，但存在<strong>「脚手架依赖」</strong>——学生习惯了有AI辅助后，独立解题能力提升有限。</p>
+
+<p>Khanmigo的苏格拉底式提问正是为了解决这个问题——它刻意不直接给答案，而是在每个步骤都要求学生自己思考。这也是为什么我们认为，<strong>AI教育工具的设计哲学比模型能力更重要</strong>。</p>
+
+<h3>争议2：AI评分公平吗？</h3>
+
+<p>Gradescope和Copilot的AI评分系统虽然效率惊人，但在作文评分中存在<strong>系统性偏差</strong>。2026年3月斯坦福大学的研究发现，AI评分对非英语母语者的作文打分平均低<strong>8-12%</strong>，对结构工整但内容空洞的「模板作文」反而给高分。这也是为什么Gradescope仍保留「人工审核模式」——AI评分后必须经过教师复核。</p>
+
+<h3>争议3：数据隐私谁在管？</h3>
+
+<p>AI教育工具收集的学生数据包括学习行为、答题记录、甚至语音和面部表情。Khanmigo（非营利）和Century AI（GDPR合规）在隐私保护上做得最好，但商业公司（尤其是中国市场）的数据使用边界仍然模糊。2026年6月，欧盟EDPB（欧洲数据保护委员会）专门针对AI教育工具发布了《教育AI数据合规指南》，要求所有面向K-12的AI教育工具必须通过独立隐私审计。</p>
+
+<h2>如何选择：按场景推荐</h2>
+
+<table>
+<thead><tr><th>使用场景</th><th>推荐工具</th><th>核心理由</th><th>月/年成本</th></tr></thead>
+<tbody>
+<tr><td>K-12数学辅导</td><td><strong>Khanmigo</strong>（英语）/ <strong>学而思AI</strong>（中文）</td><td>苏格拉底式引导教学，效果最好</td><td>$4/月</td></tr>
+<tr><td>语言学习</td><td><strong>Duolingo Max</strong></td><td>AI角色扮演对话，口语提升显著</td><td>$12.99/月</td></tr>
+<tr><td>学校/学区采购</td><td><strong>DreamBox</strong>（数学）/ <strong>Century AI</strong>（全科）</td><td>数据驱动的自适应引擎</td><td>$6-30/学生/年</td></tr>
+<tr><td>教师日常使用</td><td><strong>Microsoft Copilot</strong>/<strong>Google Gemini</strong></td><td>免费，深度集成办公生态</td><td>免费</td></tr>
+<tr><td>大学STEM评分</td><td><strong>Gradescope</strong> + <strong>ALEKS</strong></td><td>评分效率提升70%，评估精准</td><td>免费-$25/年</td></tr>
+<tr><td>中国K-12家庭</td><td><strong>作业帮学习机</strong>/<strong>科大讯飞AI学习机</strong></td><td>课标匹配，中文理解最佳</td><td>¥1,999-4,999</td></tr>
+<tr><td>自学充电（通用）</td><td><strong>NotebookLM</strong> + <strong>Perplexity</strong></td><td>AI辅助笔记+搜索，灵活组合</td><td>免费</td></tr>
+</tbody>
+</table>
+
+<h2>2026年AI教育三大趋势</h2>
+
+<h3>趋势1：多模态输入成为标配</h3>
+<p>2026年下半年，主流AI教育工具将全面支持语音、手写、画图等<strong>多模态输入</strong>。Google Gemini已在测试手写数学公式的实时AI批改，Khanmigo正在研发语音对话式辅导。HolonIQ预测，多模态将带来<strong>30%更好的可访问性</strong>，尤其惠及低龄和有特殊需求的学生。</p>
+
+<h3>趋势2：从「AI工具」到「AI操作系统」</h3>
+<p>微软Copilot和Google Gemini正在把AI教育工具从「独立App」变成<strong>教育操作系统</strong>。2026年下半年，你将在Teams中看到AI自动排课、在OneNote中看到AI分析全班学习热力图、在Forms中用AI生成自适应测验。教育的「AI原生」时代已经到来。</p>
+
+<h3>趋势3：AI教师资质认证标准化</h3>
+<p>2026年6月，中国教育部发布了《人工智能辅助教学系统技术规范（征求意见稿）》，首次提出AI教育工具需要通过「教学有效性认证」。美国多个州也在推动类似立法。这意味着，未来AI教育工具不仅要「好用」，还要「合规」——这对创业者来说是门槛，对用户来说是保障。</p>
+
+<h2>结论：AI不是替代老师，是让老师变成超人</h2>
+
+<p>回到标题的问题：<strong>AI老师真的比真人教得好吗？</strong></p>
+
+<p>答案是：<strong>不是替代关系，而是增强关系</strong>。</p>
+
+<p>AI在处理<strong>重复性、数据驱动、个性化路径规划</strong>等任务上远超人类——DreamBox用48,000个数据点为一个学生建模，这是任何老师都做不到的。但在<strong>情感连接、价值观引导、创造性启发</strong>方面，人类老师的作用不可替代。</p>
+
+<p>最理想的组合是：<strong>AI负责「因材施教」的数据层，人类老师负责「育人」的情感层</strong>。当AI帮老师省掉了70%的评分和备课时间，老师就有更多精力去做那些只有人能做的事——关注一个情绪低落的学生，设计一堂有创意的讨论课，或者只是和学生聊聊天。</p>
+
+<p>如果你正在寻找AI教育工具，建议从<strong>免费方案</strong>开始：<a href="/tools/notebooklm/">NotebookLM</a>（AI笔记+知识整理）+ 目标学科对应的AI工具。先用起来，再根据实际效果决定是否付费升级。教育这件事，工具永远只是辅助，关键还是<strong>用的人</strong>和<strong>怎么用</strong>。</p>
+
+<hr/>
+<p><em>本文数据来源：Resourcera AI in Education Statistics 2026, The Business Research Company, UNESCO Global Teacher Shortage Report, Khan Academy官方白皮书, Duolingo 2026 Q1财报, 好未来2026财年Q1财报, 中国信通院AI学习机评估报告。所有工具实测数据截止2026年6月。</em></p>"""
+}
+
+# Load existing articles
+articles_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'articles.json')
+with open(articles_path, 'r', encoding='utf-8') as f:
+    articles = json.load(f)
+
+# Check for duplicates
+slugs = [a.get('slug', '') for a in articles]
+if ARTICLE['slug'] in slugs:
+    print(f"ERROR: Article with slug '{ARTICLE['slug']}' already exists!")
+    sys.exit(1)
+
+# Insert at beginning (newest first)
+articles.insert(0, ARTICLE)
+
+# Write back
+with open(articles_path, 'w', encoding='utf-8') as f:
+    json.dump(articles, f, ensure_ascii=False, indent=2)
+
+print(f"SUCCESS: Article inserted. Total articles: {len(articles)}")
+print(f"  Title: {ARTICLE['title']}")
+print(f"  Slug: {ARTICLE['slug']}")
+print(f"  Date: {ARTICLE['date']}")

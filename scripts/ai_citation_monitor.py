@@ -1,0 +1,223 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+AI引用监控脚本 - 2026-06-24
+每周自动查询AI平台，检查aitoollab.cn是否被引用
+使用DeepSeek API（通过SiliconFlow）模拟AI搜索查询
+
+用法：
+    python ai_citation_monitor.py              # 执行监控
+    python ai_citation_monitor.py --report     # 查看历史报告
+"""
+import os
+import csv
+import json
+import requests
+from datetime import datetime
+from pathlib import Path
+
+# 配置
+BASE_DIR = Path(r"C:\Users\27040\WorkBuddy\20260321092139\seo-site")
+REPORT_DIR = BASE_DIR / "data" / "ai_citation_reports"
+REPORT_DIR.mkdir(parents=True, exist_ok=True)
+
+# API配置（从.env读取）
+API_KEY = os.getenv("SILICONFLOW_API_KEY", "")
+BASE_URL = os.getenv("SILICONFLOW_BASE_URL", "https://api.siliconflow.cn/v1")
+MODEL = "deepseek-ai/DeepSeek-V4-Pro"
+
+# 如果环境变量没读到，尝试从.env文件加载
+if not API_KEY:
+    env_file = BASE_DIR / ".env"
+    if env_file.exists():
+        with open(env_file, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.startswith("SILICONFLOW_API_KEY="):
+                    API_KEY = line.split("=", 1)[1].strip()
+                    break
+
+# 监控的核心查询词（5个）
+MONITOR_QUERIES = [
+    "AI编程工具哪个好",
+    "AI对话模型对比2026",
+    "Obsidian vs Notion哪个好",
+    "AI工具市场数据分析",
+    "AI搜索工具推荐",
+]
+
+# 我们要检查的域名
+OUR_DOMAIN = "aitoollab.cn"
+
+def query_ai(prompt, timeout=120, max_retries=2):
+    """调用DeepSeek API查询（加重试+长超时）"""
+    headers = {
+        "Authorization": f"Bearer {API_KEY}",
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "model": MODEL,
+        "messages": [
+            {"role": "user", "content": prompt}
+        ],
+        "max_tokens": 2000,
+        "temperature": 0.3,  # 低温度保证一致性
+    }
+    for attempt in range(1, max_retries + 1):
+        try:
+            resp = requests.post(
+                f"{BASE_URL}/chat/completions",
+                headers=headers,
+                json=payload,
+                timeout=(30, timeout)  # (connect_timeout, read_timeout)
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            return data["choices"][0]["message"]["content"]
+        except Exception as e:
+            if attempt < max_retries:
+                import time
+                wait = attempt * 5
+                print(f"    重试 {attempt}/{max_retries}（等待{wait}秒）...")
+                time.sleep(wait)
+            else:
+                return f"[ERROR] {e}"
+
+def check_citation(response_text, query):
+    """检查AI回答中是否引用了我们的域名"""
+    cited = OUR_DOMAIN in response_text
+    # 也检查常见变体
+    cited = cited or "aitoollab" in response_text.lower() or "AI工具宝箱" in response_text
+
+    # 提取引用上下文（如果被引用）
+    context = ""
+    if cited:
+        idx = response_text.lower().find(OUR_DOMAIN.lower())
+        if idx == -1:
+            idx = response_text.lower().find("aitoollab")
+        if idx == -1:
+            idx = response_text.find("AI工具宝箱")
+        if idx >= 0:
+            start = max(0, idx - 100)
+            end = min(len(response_text), idx + 200)
+            context = response_text[start:end].replace("\n", " ")
+
+    return {
+        "query": query,
+        "cited": cited,
+        "context": context[:300] if context else "",
+        "response_length": len(response_text),
+    }
+
+def run_monitor():
+    """执行监控"""
+    print("=" * 60)
+    print(f"AI引用监控 - {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    print(f"监控域名: {OUR_DOMAIN}")
+    print(f"查询平台: DeepSeek V3 (SiliconFlow)")
+    print(f"查询数量: {len(MONITOR_QUERIES)}")
+    print("=" * 60)
+
+    if not API_KEY:
+        print("[ERROR] 未找到 SILICONFLOW_API_KEY")
+        return
+
+    results = []
+    cited_count = 0
+
+    for i, query in enumerate(MONITOR_QUERIES, 1):
+        print(f"\n[{i}/{len(MONITOR_QUERIES)}] 查询: {query}")
+        prompt = f"请详细回答以下问题，并列出你的信息来源：\n\n{query}"
+        response = query_ai(prompt)
+
+        if response.startswith("[ERROR]"):
+            print(f"  ❌ 查询失败: {response}")
+            results.append({
+                "date": datetime.now().strftime("%Y-%m-%d"),
+                "query": query,
+                "cited": False,
+                "context": response,
+                "response_length": 0,
+            })
+            continue
+
+        result = check_citation(response, query)
+        result["date"] = datetime.now().strftime("%Y-%m-%d")
+        results.append(result)
+
+        if result["cited"]:
+            cited_count += 1
+            print(f"  ✅ 被引用！")
+            if result["context"]:
+                print(f"     上下文: {result['context'][:150]}...")
+        else:
+            print(f"  ❌ 未被引用 (回答长度: {result['response_length']})")
+
+    # 生成报告
+    report_date = datetime.now().strftime("%Y-%m-%d")
+    csv_file = REPORT_DIR / f"citation_report_{report_date}.csv"
+
+    with open(csv_file, "w", encoding="utf-8-sig", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["date", "query", "cited", "context", "response_length"])
+        writer.writeheader()
+        writer.writerows(results)
+
+    # 追加到汇总文件
+    summary_file = REPORT_DIR / "citation_summary.csv"
+    file_exists = summary_file.exists()
+    with open(summary_file, "a", encoding="utf-8-sig", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["date", "query", "cited", "context", "response_length"])
+        if not file_exists:
+            writer.writeheader()
+        writer.writerows(results)
+
+    print("\n" + "=" * 60)
+    print(f"监控完成")
+    print(f"  被引用: {cited_count}/{len(MONITOR_QUERIES)} ({cited_count*100//len(MONITOR_QUERIES)}%)")
+    print(f"  报告文件: {csv_file}")
+    print(f"  汇总文件: {summary_file}")
+    print("=" * 60)
+
+def show_report():
+    """显示历史报告"""
+    summary_file = REPORT_DIR / "citation_summary.csv"
+    if not summary_file.exists():
+        print("暂无历史报告")
+        return
+
+    print("=" * 60)
+    print("AI引用监控历史报告")
+    print("=" * 60)
+
+    with open(summary_file, "r", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+
+    if not rows:
+        print("暂无数据")
+        return
+
+    # 按日期分组统计
+    from collections import defaultdict
+    by_date = defaultdict(lambda: {"total": 0, "cited": 0})
+    for r in rows:
+        d = r["date"]
+        by_date[d]["total"] += 1
+        if r["cited"] == "True":
+            by_date[d]["cited"] += 1
+
+    print(f"\n{'日期':<12} {'被引用次数':<10} {'总查询':<8} {'引用率':<8}")
+    print("-" * 40)
+    for d in sorted(by_date.keys()):
+        v = by_date[d]
+        rate = v["cited"] * 100 // v["total"] if v["total"] > 0 else 0
+        print(f"{d:<12} {v['cited']:<10} {v['total']:<8} {rate}%")
+
+    print(f"\n总计: {len(rows)} 条记录")
+    print(f"报告目录: {REPORT_DIR}")
+
+if __name__ == "__main__":
+    import sys
+    if "--report" in sys.argv:
+        show_report()
+    else:
+        run_monitor()

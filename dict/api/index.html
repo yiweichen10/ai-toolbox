@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API (应用程序接口) - AI词典 | AI工具宝箱</title>
+    <meta name="description" content="让不同软件系统相互通信的接口。几乎所有AI服务都通过API提供，开发者通过API将AI能力集成到自己的应用中。">
+    <meta name="keywords" content="API (应用程序接口),AI词典,AI术语,人工智能概念,Application Programming Interface">
+    <link rel="canonical" href="https://www.aitoollab.cn/dict/api/">
+    <link rel="alternate" hreflang="en" href="https://aitoolbox.hk/dict/api/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.cn/dict/api/">
+    <link rel="alternate" hreflang="x-default" href="https://aitoolbox.hk/dict/api/">
+    <meta property="og:title" content="API (应用程序接口) - AI词典 | AI工具宝箱">
+    <meta property="og:description" content="让不同软件系统相互通信的接口。几乎所有AI服务都通过API提供，开发者通过API将AI能力集成到自己的应用中。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.cn/dict/api/">
+    <meta property="og:image" content="https://www.aitoollab.cn/images/og/dict-api-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- BUILD_DYNAMIC_HEAD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "API (应用程序接口)",
+      "description": "让不同软件系统相互通信的接口。几乎所有AI服务都通过API提供，开发者通过API将AI能力集成到自己的应用中。",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "AI工具宝箱 - AI词典"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;">
+                <div class="site-logo">🛠 AI工具宝箱 <span>每日更新 · 已收录 100+ 款工具</span></div>
+            </a>
+        </div>
+        <nav class="global-nav" aria-label="全局导航">
+            <div class="global-nav-inner">
+                <a href="/ranking/" class="gn-item">📊 工具排行</a>
+                <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+                <a href="/live/" class="gn-item">📈 实时面板</a>
+                <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+                <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+                <a href="/category/" class="gn-item">📂 全部分类</a>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <div class="breadcrumb-inner">
+            <a href="/">首页</a>
+            <span class="sep">›</span>
+            <a href="/dict/">AI词典</a>
+            <span class="sep">›</span>
+            <span>API (应用程序接口)</span>
+        </div>
+    </nav>
+
+    <main class="dict-detail-page">
+        <header class="dict-detail-header">
+            <div class="dict-detail-icon">🔌</div>
+            <h1>API (应用程序接口)</h1>
+            <div class="dict-detail-en">Application Programming Interface</div>
+            <span class="dict-detail-category">使用技巧</span>
+            <div class="dict-detail-tags"><span>开发</span><span>集成</span></div>
+        </header>
+        <div class="dict-detail-layout">
+            <div class="dict-detail-main">
+                <article>
+                    <div class="dict-detail-body">
+                        <p>API（Application Programming Interface）是软件之间的&quot;通信协议&quot;。在AI领域，API是开发者使用AI能力的主要方式——不需要自己训练和部署模型，只需调用云端API即可。</p><section class="dict-section"><h3>AI API的工作原理</h3><p>1. 你发送一个HTTP请求，包含Prompt和参数
+2. 云端的GPU集群运行AI模型处理你的请求
+3. 返回生成的文本/图片/音频等结果
+4. 按Token数量或调用次数计费</p></section>
+<section class="dict-section"><h3>主流AI API提供商</h3><ul>
+<li><strong>OpenAI API</strong>：GPT-5、DALL·E、Whisper、Embedding</li>
+<li><strong>Anthropic API</strong>：Claude 4系列</li>
+<li><strong>Google AI API</strong>：Gemini 2.5系列</li>
+<li><strong>DeepSeek API</strong>：DeepSeek-V3，性价比最高</li>
+<li><strong>硅基流动（SiliconFlow）</strong>：国产API聚合平台，支持多种开源模型</li>
+<li><strong>Together AI、Groq</strong>：专注推理速度的平台</li>
+</ul>
+</section>
+<section class="dict-section"><h3>API调用示例（Python）</h3><pre><code>import openai
+client = openai.OpenAI(api_key=&quot;sk-xxx&quot;, base_url=&quot;https://api.deepseek.com&quot;)
+response = client.chat.completions.create(
+    model=&quot;deepseek-chat&quot;,
+    messages=[{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Hello!&quot;}]
+)
+print(response.choices[0].message.content)
+</code></pre></section>
+<section class="dict-section"><h3>常见概念</h3><ul>
+<li><strong>Rate Limit</strong>：每分钟/每天调用次数上限</li>
+<li><strong>Streaming</strong>：逐字返回结果，提升用户体验</li>
+<li><strong>Temperature</strong>：控制输出随机性（0=确定，1=创意）</li></ul></section>
+                    </div>
+                </article>
+            </div>
+            <aside class="dict-detail-sidebar">
+        <div class="dict-quick-facts">
+            <h4>快速参考</h4>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">英文名</div>
+                <div class="dict-fact-value">Application Programming Interface</div>
+            </div>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">分类</div>
+                <div class="dict-fact-value">使用技巧</div>
+            </div>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">标签</div>
+                <div class="dict-fact-value">开发, 集成</div>
+            </div>
+        </div>
+        <div class="dict-side-nav">
+            <h4>浏览词条</h4>
+            <div class="dict-side-nav-links">
+                <a href="/dict/gpu/">🖥️ GPU (图形处理器)</a>
+                <a href="/dict/">📖 返回词典首页</a>
+                <a href="/dict/open-vs-closed-source/">🔓 开源模型 vs 闭源模型</a>
+            </div>
+        </div>
+    </aside>
+        </div>
+        <nav class="dict-detail-nav">
+            <a href="/dict/gpu/">← GPU (图形处理器)</a>
+            <a href="/dict/open-vs-closed-source/">开源模型 vs 闭源模型 →</a>
+        </nav>
+                <div class="dict-related">
+            <h3>同分类词条</h3>
+            <div class="dict-related-grid">
+                <a class="dict-related-card" href="/dict/prompt-engineering/"><span class="dict-related-emoji">✍️</span>提示词工程 (Prompt Engineering)</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具 · <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">蜀ICP备2025172163号-2</a></p>
+        <div class="footer-links">
+            <a href="/about.html">关于我们</a>
+            <a href="/contact.html">联系方式</a>
+            <a href="/privacy.html">隐私政策</a>
+            <a href="/links.html">友情链接</a>
+        </div>
+        <p>用AI提升效率，让每个人都能享受技术红利。</p>
+    </footer>
+    <button id="backToTop" aria-label="返回顶部">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>150){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
+</script>
+</body>
+</html>

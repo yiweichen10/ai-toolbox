@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扩散模型 (Diffusion Model) - AI词典 | AI工具宝箱</title>
+    <meta name="description" content="一种生成模型，通过逐步&quot;去噪&quot;将随机噪声转化为高质量图像。Stable Diffusion、DALL·E、Midjourney都基于此技术。">
+    <meta name="keywords" content="扩散模型 (Diffusion Model),AI词典,AI术语,人工智能概念,Diffusion Model">
+    <link rel="canonical" href="https://www.aitoollab.cn/dict/diffusion-model/">
+    <link rel="alternate" hreflang="en" href="https://aitoolbox.hk/dict/diffusion-model/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.cn/dict/diffusion-model/">
+    <link rel="alternate" hreflang="x-default" href="https://aitoolbox.hk/dict/diffusion-model/">
+    <meta property="og:title" content="扩散模型 (Diffusion Model) - AI词典 | AI工具宝箱">
+    <meta property="og:description" content="一种生成模型，通过逐步&quot;去噪&quot;将随机噪声转化为高质量图像。Stable Diffusion、DALL·E、Midjourney都基于此技术。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aitoollab.cn/dict/diffusion-model/">
+    <meta property="og:image" content="https://www.aitoollab.cn/images/og/dict-diffusion-model-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- BUILD_DYNAMIC_HEAD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "扩散模型 (Diffusion Model)",
+      "description": "一种生成模型，通过逐步&quot;去噪&quot;将随机噪声转化为高质量图像。Stable Diffusion、DALL·E、Midjourney都基于此技术。",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "AI工具宝箱 - AI词典"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" style="text-decoration:none;">
+                <div class="site-logo">🛠 AI工具宝箱 <span>每日更新 · 已收录 100+ 款工具</span></div>
+            </a>
+        </div>
+        <nav class="global-nav" aria-label="全局导航">
+            <div class="global-nav-inner">
+                <a href="/ranking/" class="gn-item">📊 工具排行</a>
+                <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
+                <a href="/live/" class="gn-item">📈 实时面板</a>
+                <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
+                <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
+                <a href="/category/" class="gn-item">📂 全部分类</a>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <div class="breadcrumb-inner">
+            <a href="/">首页</a>
+            <span class="sep">›</span>
+            <a href="/dict/">AI词典</a>
+            <span class="sep">›</span>
+            <span>扩散模型 (Diffusion Model)</span>
+        </div>
+    </nav>
+
+    <main class="dict-detail-page">
+        <header class="dict-detail-header">
+            <div class="dict-detail-icon">🌫️</div>
+            <h1>扩散模型 (Diffusion Model)</h1>
+            <div class="dict-detail-en">Diffusion Model</div>
+            <span class="dict-detail-category">技术原理</span>
+            <div class="dict-detail-tags"><span>AI绘画</span><span>生成模型</span></div>
+        </header>
+        <div class="dict-detail-layout">
+            <div class="dict-detail-main">
+                <article>
+                    <div class="dict-detail-body">
+                        <p>扩散模型（Diffusion Model）是当前最主流的图像生成技术范式。它的核心思想是：先学习如何给图片&quot;加噪&quot;（正向过程），然后学会如何&quot;去噪&quot;恢复原图（反向过程）。当训练完成后，只需从纯噪声开始逐步去噪，就能生成全新的图片。</p><section class="dict-section"><h3>工作流程</h3><p>1. <strong>训练阶段</strong>：给真实图片逐步添加噪声，训练模型学会逆向去噪
+2. <strong>生成阶段</strong>：从随机噪声开始，模型根据文字提示逐步去噪，每一步都让画面更清晰
+3. 通常需要20-50步去噪迭代才能生成一张高质量图片</p></section>
+<section class="dict-section"><h3>关键概念</h3><ul>
+<li><strong>Latent Diffusion</strong>：不在像素空间而是在压缩的潜空间扩散，大幅降低计算量（Stable Diffusion的核心创新）</li>
+<li><strong>CFG（Classifier-Free Guidance）</strong>：控制文字提示对生成结果的影响力</li>
+<li><strong>Sampler（采样器）</strong>：不同的去噪算法（DDIM、Euler、DPM++），影响生成速度和质量</li>
+</ul>
+</section>
+<section class="dict-section"><h3>主流模型</h3><ul>
+<li>Stable Diffusion系列（开源，生态最丰富）</li>
+<li>Flux（2024年发布，文字渲染能力最强）</li>
+<li>DALL·E系列（OpenAI，闭源）</li>
+<li>Midjourney（闭源，艺术质量最高）</li>
+<li>Sora（OpenAI，视频扩散模型）</li></ul></section>
+                    </div>
+                </article>
+            </div>
+            <aside class="dict-detail-sidebar">
+        <div class="dict-quick-facts">
+            <h4>快速参考</h4>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">英文名</div>
+                <div class="dict-fact-value">Diffusion Model</div>
+            </div>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">分类</div>
+                <div class="dict-fact-value">技术原理</div>
+            </div>
+            <div class="dict-fact-item">
+                <div class="dict-fact-label">标签</div>
+                <div class="dict-fact-value">AI绘画, 生成模型</div>
+            </div>
+        </div>
+        <div class="dict-side-nav">
+            <h4>浏览词条</h4>
+            <div class="dict-side-nav-links">
+                <a href="/dict/transformer/">⚙️ Transformer架构</a>
+                <a href="/dict/">📖 返回词典首页</a>
+                <a href="/dict/fine-tuning/">🔧 Fine-tuning (微调)</a>
+            </div>
+        </div>
+    </aside>
+        </div>
+        <nav class="dict-detail-nav">
+            <a href="/dict/transformer/">← Transformer架构</a>
+            <a href="/dict/fine-tuning/">Fine-tuning (微调) →</a>
+        </nav>
+                <div class="dict-related">
+            <h3>同分类词条</h3>
+            <div class="dict-related-grid">
+                <a class="dict-related-card" href="/dict/rag/"><span class="dict-related-emoji">🔍</span>RAG (检索增强生成)</a><a class="dict-related-card" href="/dict/embedding/"><span class="dict-related-emoji">🧮</span>Embedding (向量嵌入)</a><a class="dict-related-card" href="/dict/transformer/"><span class="dict-related-emoji">⚙️</span>Transformer架构</a><a class="dict-related-card" href="/dict/fine-tuning/"><span class="dict-related-emoji">🔧</span>Fine-tuning (微调)</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 AI工具宝箱 · 每日精选优质AI工具 · <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">蜀ICP备2025172163号-2</a></p>
+        <div class="footer-links">
+            <a href="/about.html">关于我们</a>
+            <a href="/contact.html">联系方式</a>
+            <a href="/privacy.html">隐私政策</a>
+            <a href="/links.html">友情链接</a>
+        </div>
+        <p>用AI提升效率，让每个人都能享受技术红利。</p>
+    </footer>
+    <button id="backToTop" aria-label="返回顶部">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>150){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
+</script>
+</body>
+</html>
