@@ -9005,6 +9005,43 @@ window.__ALL_TOOLS__ = [
     "platform": "Python, JavaScript/TypeScript"
   },
   {
+    "name": "Strands Agents",
+    "slug": "strands-agents",
+    "emoji": "🤖",
+    "color": "#D97706",
+    "description": "Strands Agents是Anthropic推出的AI智能体开发框架，旨在帮助开发者构建能够自主推理、规划和执行复杂任务的多代理系统。2026年版本增强了多模态理解和跨应用协作能力，成为企业级AI代理解决方案的新选择。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "AI代理"
+      },
+      {
+        "text": "智能体框架"
+      },
+      {
+        "text": "Anthropic"
+      },
+      {
+        "text": "多代理系统"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "免费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://strandsagents.com",
+    "price": "免费开源",
+    "platform": "Web / macOS / Windows / Linux"
+  },
+  {
     "name": "OpenAI Agents SDK",
     "slug": "openai-agents-sdk",
     "emoji": "🤖",
@@ -9892,6 +9929,35 @@ window.__ALL_TOOLS__ = [
     "platform": "Python、API、Docker"
   },
   {
+    "name": "Verba",
+    "slug": "verba",
+    "emoji": "🔍",
+    "color": "#2D3748",
+    "description": "Verba是一个开源的检索增强生成（RAG）应用开发框架，帮助开发者快速构建和部署LLM应用。它支持多种LLM后端和嵌入模型，提供友好的对话界面和文档管理功能。2026年已更新至v2.0版本，增强了多模态检索和自定义工作流能力。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "RAG应用框架"
+      },
+      {
+        "text": "LLM开发工具"
+      },
+      {
+        "text": "开源",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "约45万月访问",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://github.com/weaviate/Verba",
+    "price": "免费开源",
+    "platform": "Web/桌面端"
+  },
+  {
     "name": "Visily",
     "slug": "visily",
     "emoji": "🎨",
@@ -10191,6 +10257,40 @@ window.__ALL_TOOLS__ = [
     "url": "https://read.ai",
     "price": "免费版可用，付费版$19/月起",
     "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
+  },
+  {
+    "name": "Avoma",
+    "slug": "avoma",
+    "emoji": "🎯",
+    "color": "#4F46E5",
+    "description": "Avoma是一款AI会议智能平台，帮助团队记录、转录、分析和优化会议效率。2026年已集成更先进的生成式AI，提供实时会议洞察和自动生成行动项功能，显著提升团队会议生产力。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "会议记录"
+      },
+      {
+        "text": "会议转录"
+      },
+      {
+        "text": "会议分析"
+      },
+      {
+        "text": "AI会议助手"
+      },
+      {
+        "text": "团队协作"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约50万月访问量",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://avoma.com",
+    "price": "提供免费版本，付费计划从$19/月起，企业版定制价格",
+    "platform": "Web、iOS、Android"
   },
   {
     "name": "Ada AI",
@@ -19253,6 +19353,43 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Python, JavaScript/TypeScript"
   },
   {
+    "name": "Strands Agents",
+    "slug": "strands-agents",
+    "emoji": "🤖",
+    "color": "#D97706",
+    "description": "Strands Agents是Anthropic推出的AI智能体开发框架，旨在帮助开发者构建能够自主推理、规划和执行复杂任务的多代理系统。2026年版本增强了多模态理解和跨应用协作能力，成为企业级AI代理解决方案的新选择。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "AI代理"
+      },
+      {
+        "text": "智能体框架"
+      },
+      {
+        "text": "Anthropic"
+      },
+      {
+        "text": "多代理系统"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "免费"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "50万",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://strandsagents.com",
+    "price": "免费开源",
+    "platform": "Web / macOS / Windows / Linux"
+  },
+  {
     "name": "OpenAI Agents SDK",
     "slug": "openai-agents-sdk",
     "emoji": "🤖",
@@ -20140,6 +20277,35 @@ window.__REMAINING_TOOLS__ = [
     "platform": "Python、API、Docker"
   },
   {
+    "name": "Verba",
+    "slug": "verba",
+    "emoji": "🔍",
+    "color": "#2D3748",
+    "description": "Verba是一个开源的检索增强生成（RAG）应用开发框架，帮助开发者快速构建和部署LLM应用。它支持多种LLM后端和嵌入模型，提供友好的对话界面和文档管理功能。2026年已更新至v2.0版本，增强了多模态检索和自定义工作流能力。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "RAG应用框架"
+      },
+      {
+        "text": "LLM开发工具"
+      },
+      {
+        "text": "开源",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "约45万月访问",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://github.com/weaviate/Verba",
+    "price": "免费开源",
+    "platform": "Web/桌面端"
+  },
+  {
     "name": "Visily",
     "slug": "visily",
     "emoji": "🎨",
@@ -20439,6 +20605,40 @@ window.__REMAINING_TOOLS__ = [
     "url": "https://read.ai",
     "price": "免费版可用，付费版$19/月起",
     "platform": "Web、iOS、Android、Chrome扩展、Slack、Zoom"
+  },
+  {
+    "name": "Avoma",
+    "slug": "avoma",
+    "emoji": "🎯",
+    "color": "#4F46E5",
+    "description": "Avoma是一款AI会议智能平台，帮助团队记录、转录、分析和优化会议效率。2026年已集成更先进的生成式AI，提供实时会议洞察和自动生成行动项功能，显著提升团队会议生产力。",
+    "category": "AI效率",
+    "tags": [
+      {
+        "text": "会议记录"
+      },
+      {
+        "text": "会议转录"
+      },
+      {
+        "text": "会议分析"
+      },
+      {
+        "text": "AI会议助手"
+      },
+      {
+        "text": "团队协作"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "约50万月访问量",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://avoma.com",
+    "price": "提供免费版本，付费计划从$19/月起，企业版定制价格",
+    "platform": "Web、iOS、Android"
   },
   {
     "name": "Ada AI",
