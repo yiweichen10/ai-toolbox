@@ -2,11 +2,13 @@
 # 模块6：从 build.py 拆分（2026-08-24）
 import os
 import re
+import json
 from datetime import datetime as _dt_build
 
 from build_lib.html_utils import (
-    escape_html,
+    escape_html, _emit, _collapse_blank_lines,
 )
+from build_lib.data_loaders import (get_category_slug,)
 from build_lib.render_tool import (
     make_tool_card_html, tool_icon_html, get_category_stats, resolve_icon,
 )

@@ -2,6 +2,7 @@
 # 模块7：从 build.py 拆分（2026-08-24）
 import os
 import re
+import json
 import random
 
 from build_lib.html_utils import (
@@ -11,7 +12,7 @@ from build_lib.data_loaders import (
     get_category_slug, load_compare_data, load_quiz_data, load_ranking_data,
 )
 from build_lib.render_tool import (
-    build_tool_page, make_tool_card_html, tool_icon_html,
+    build_tool_page, make_tool_card_html, tool_icon_html, ensure_og_image,
 )
 
 

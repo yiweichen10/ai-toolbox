@@ -2,17 +2,19 @@
 # 模块8：从 build.py 拆分（2026-08-24）
 import os
 import re
+import json
 import random
 
 from build_lib.html_utils import (
     escape_html, markdown_to_html,
 )
 from build_lib.data_loaders import (
-    load_ranking_data, get_category_slug,
+    load_ranking_data, get_category_slug, get_published_tool_slugs,
 )
 from build_lib.render_tool import (
-    make_tool_card_html, build_tool_page, tool_icon_html,
+    make_tool_card_html, build_tool_page, tool_icon_html, resolve_icon, ensure_og_image,
 )
+from build_lib.render_article import (replace_between_tags,)
 
 
 def build_ranking_page(ranking_data, all_tools, all_articles=None):

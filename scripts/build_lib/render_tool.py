@@ -2,6 +2,7 @@
 # 模块4：从 build.py 拆分（2026-08-24）
 import os
 import re
+import json
 import random
 from datetime import datetime, timedelta
 
@@ -9,7 +10,7 @@ from build_lib.html_utils import (
     escape_html, extract_faq_section, markdown_to_html,
 )
 from build_lib.data_loaders import (
-    get_category_slug, get_published_tool_slugs, load_articles,
+    get_category_slug, get_published_tool_slugs, load_articles, _LINK_STOPWORDS,
 )
 
 
@@ -235,7 +236,7 @@ def inject_internal_links(html, current_slug='', max_links=5):
         for name, slug in link_map:
             if slug == current_slug or slug in linked_slugs:
                 continue
-            if name in build._LINK_STOPWORDS or len(name) < 3:
+            if name in _LINK_STOPWORDS or len(name) < 3:
                 continue
             pat = build._get_link_pat(name)
             m = pat.search(part)
@@ -863,7 +864,7 @@ def build_tool_page(tool, all_tools, all_articles=None, all_compares=None, all_a
     _tool_title = build_tool_title(tool)
     _tool_title_short = _tool_title.split(' - ')[0]
     _tool_pos = build.gen_positioning(tool)
-    _tool_meta = build_meta(tool['name'], _tool_pos, tool.get('description', ''), build.BUILD_YEAR, tool=tool)
+    _tool_meta = build.build_meta(tool['name'], _tool_pos, tool.get('description', ''), build.BUILD_YEAR, tool=tool)
 
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">

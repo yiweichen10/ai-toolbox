@@ -9,8 +9,9 @@ from build_lib.html_utils import (
     escape_html, markdown_to_html, extract_faq_section, shift_headings, _emit,
 )
 from build_lib.render_tool import (
-    inject_internal_links, clean_broken_tool_links,
+    inject_internal_links, clean_broken_tool_links, tool_icon_html, ensure_og_image,
 )
+from build_lib.data_loaders import (get_category_slug,)
 
 
 def _get_article_description(article):
