@@ -225,8 +225,11 @@ def publish_new_tools(num_to_publish=3):
         print(f"  [WARN] Phase3 自动生成失败 (非致命): {e}")
 
     # 5. 运行build.py重新生成网站
-    print(f"正在运行 {BUILD_SCRIPT_PATH} 重新生成网站...")
-    result = subprocess.run(['python', BUILD_SCRIPT_PATH], capture_output=False)
+    # 2026-08-24：-t tools --no-push（拆分后实测优化）
+    #   -t tools：只重建工具相关页（详情/分类/首页/tools-data/sitemap），发布工具不涉及文章/词典/快讯，全量重建属浪费
+    #   --no-push：发布链路后续自动化会 build --target tools（推送点）或 deploy.sh，此处推送会造成百度 over quota + IndexNow 重复推送
+    print(f"正在运行 {BUILD_SCRIPT_PATH} -t tools --no-push 重新生成网站...")
+    result = subprocess.run(['python', BUILD_SCRIPT_PATH, '-t', 'tools', '--no-push'], capture_output=False)
     if result.returncode != 0:
         print("网站构建失败！")
         return
