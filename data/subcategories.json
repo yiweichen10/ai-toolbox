@@ -1,0 +1,134 @@
+{
+  "ai-verticals": {
+    "name": "AI行业应用",
+    "subcats": {
+      "ai-legal": {
+        "name": "AI法律",
+        "intro": "2026年最值得关注的AI法律工具合集，收录4款专注合同审查、法律研究、尽职调查的法律AI助手，覆盖国际律所与中小企业场景。",
+        "how_to_choose": "选法律AI先看适用法域（中美欧差异大）与数据合规（客户资料保密）；合同审查优先 Ironclad / Robin AI，法律研究优先 Harvey / CoCounsel。"
+      },
+      "ai-medical": {
+        "name": "AI医疗",
+        "intro": "AI医疗健康工具精选，收录4款覆盖症状自查、诊断辅助、健康咨询的合规医疗AI，强调安全性与认证资质。",
+        "how_to_choose": "医疗场景对合规要求极高，优先选择已获医疗认证或标注“非诊断替代”的产品；健康自检用 Ada Health，辅助诊断用 Glass Health。"
+      },
+      "ai-finance": {
+        "name": "AI金融",
+        "intro": "AI金融与量化工具合集，收录4款覆盖金融大模型、量化交易、数据分析与CFO财务洞察的金融AI。",
+        "how_to_choose": "金融数据敏感，选已对接权威数据源（如 Bloomberg Terminal）或支持私有化部署的方案；量化交易注意回测与实盘风险隔离。"
+      },
+      "ai-education": {
+        "name": "AI教育",
+        "intro": "AI教育学习工具合集，收录4款覆盖语言学习、个性化辅导、自适应练习的AI学习助手。",
+        "how_to_choose": "语言练习选 Duolingo Max；K12/通识引导式学习选 Khanmigo；备考刷卡选 Quizlet AI；科研与高阶辅导选 Schole AI。"
+      },
+      "ai-recruitment": {
+        "name": "AI招聘",
+        "intro": "AI招聘与人才工具合集，收录2款覆盖智能招聘、人才匹配与AI视频面试的HR科技产品。",
+        "how_to_choose": "招聘规模大、需人才库智能匹配选 Eightfold；面试环节降本增效、需客观评估选 HireVue AI。"
+      },
+      "ai-customer-service": {
+        "name": "AI客服",
+        "intro": "AI智能客服工具合集，收录2款内置GPT级对话能力的客服平台，自动应答、意图识别与工作流自动化。",
+        "how_to_choose": "已在用 Intercom / Zendesk 的团队直接开启内置AI最省心；评估重点看多语言、知识库对接与人工兜底机制。"
+      },
+      "ai-robot": {
+        "name": "AI机器人",
+        "intro": "AI机器人与具身智能合集，收录2款覆盖四足机器人与通用人形机器人的国产代表，支持编程与AI视觉交互。",
+        "how_to_choose": "教育/科研编程入门选 Unitree GD01；关注通用人形与产业落地选 AGIBOT 智元；注意 SDK 生态与二次开发资料完整度。"
+      },
+      "ai-security": {
+        "name": "AI安全",
+        "intro": "AI网络安全工具合集，收录专注AI辅助渗透测试、漏洞检测与威胁情报的智能安全平台。",
+        "how_to_choose": "安全工具需授权合规使用；优先选择支持自动化审计加人工复核、可对接现有 SOC 的产品，如 DeepSec。"
+      }
+    }
+  },
+  "ai-writing": {
+    "name": "AI写作",
+    "subcats": {
+      "ai-seo": {
+        "name": "AI SEO优化",
+        "intro": "2026年AI驱动的内容SEO优化工具精选，收录3款专注搜索意图分析、SERP对标、关键词优化的平台级工具，帮助内容创作者精准提升排名。",
+        "how_to_choose": "选AI SEO工具先看数据源（实时抓取SERP还是历史快照）和本地化支持（中英日等多语种）；全面型用 Surfer SEO，AI内容brief用 Frase，性价比选 Scalenut。"
+      },
+      "ai-grammar": {
+        "name": "AI语法校对",
+        "intro": "收录5款顶级的AI语法检查与文本润色工具，覆盖30+语言，从基础拼写纠错到高级风格改写一站式解决，英文写作必备。",
+        "how_to_choose": "通用英文校对用 Grammarly AI 或 ProWritingAid（后者写作报告更详细）；开源/隐私优先用 LanguageTool；改写润色用 QuillBot 或 Wordtune。"
+      },
+      "ai-marketing-copy": {
+        "name": "AI营销文案",
+        "intro": "2026年AI营销文案生成工具精选，覆盖广告文案、邮件营销、社交媒体、品牌内容等场景，帮助企业批量生产高质量营销素材。",
+        "how_to_choose": "企业级品牌调性管理用 Jasper；快速批量生成用 Copy.ai；数据驱动的文案优化用 Anyword；中文本地化场景可搭配国内工具。"
+      },
+      "ai-content-writing": {
+        "name": "AI智能写作",
+        "intro": "收录12款通用型AI智能写作助手，覆盖文章撰写、长文创作、故事叙事、学术写作、多语言翻译等全场景写作需求，2026年AI写作的核心入口。",
+        "how_to_choose": "全能通用选 Rytr（40+模板）或 文思AI（中文优化）；长文/报告选 LongCat-2.0（10万字上下文）；学术论文选 Jenni AI；故事叙事选 Claude Fable 5；国内多场景选 笔灵AI 或 火山写作。"
+      }
+    }
+  },
+  "ai-design": {
+    "name": "AI设计",
+    "subcats": {
+      "ai-ui-design": {
+        "name": "AI界面设计",
+        "intro": "2026年AI驱动的UI/UX设计工具精选，收录12款覆盖原型生成、截图转设计、Figma集成、前端代码输出的智能界面设计工具，设计师与产品经理的效率利器。",
+        "how_to_choose": "Figma用户优先选 Figma AI / Figma for Agents；国产替代选 即时设计AI 或 Pixso AI；快速原型用 Uizard / Visily；代码级输出用 Relume / Magic Patterns。"
+      },
+      "ai-image-editing": {
+        "name": "AI图像处理",
+        "intro": "AI图像处理与修图工具合集，收录7款专注智能抠图、背景去除、图像增强、无损放大、批量修图的专业工具，电商运营与摄影师的图片处理利器。",
+        "how_to_choose": "电商产品图用 Photoroom（场景生成）；批量去背景用 Remove.bg；图像放大用 Upscayl（免费开源）或 Topaz Photo AI（专业付费）；国内用 稿定设计AI 或 美图设计室AI。"
+      },
+      "ai-graphic-design": {
+        "name": "AI平面设计",
+        "intro": "AI平面与模板设计工具精选，收录11款覆盖海报制作、社媒配图、H5页面、数据可视化、动画素材的多场景在线设计平台，无需专业设计技能即可出图。",
+        "how_to_choose": "通用全能型选 Canva AI 或 Adobe Express AI；国内本土模板用 创客贴AI / 图怪兽 / 易企秀；社媒营销用 Predis AI；图标动画用 LottieFiles AI。"
+      },
+      "ai-brand-design": {
+        "name": "AI品牌设计",
+        "intro": "AI品牌与Logo设计工具合集，收录7款覆盖Logo生成、品牌套件、色彩搭配、广告素材、图标生成的智能品牌设计工具，创业者和营销团队的品牌建设利器。",
+        "how_to_choose": "Logo快速生成用 Looka 或 Brandmark；品牌视觉一致性用 Flair AI；配色方案用 Khroma；图标素材用 IconScout AI；广告转化优化用 AdCreative AI。"
+      }
+    }
+  },
+  "ai-video": {
+    "name": "AI视频",
+    "subcats": {
+      "ai-video-generation": {
+        "name": "AI视频生成",
+        "intro": "2026年AI视频生成工具大全，收录18款顶级文生视频与图生视频工具，覆盖Sora级画质、长视频生成、图片动效、创意短片等场景，视频创作者的AI生产力引擎。",
+        "how_to_choose": "国际顶配用 Sora / Veo / Runway Gen-4；国产标杆用 可灵AI(Kling 3.0) / 海螺AI / Vidu 2.0；图片动效用 Luma Dream Machine / Pika / Pixverse；字节系生态用 即梦(Seedance)。"
+      },
+      "ai-digital-human": {
+        "name": "AI数字人",
+        "intro": "AI数字人与虚拟主播工具精选，收录8款覆盖数字人视频生成、口型同步、多语言配音、虚拟形象定制的专业平台，企业培训与营销出镜的高效解决方案。",
+        "how_to_choose": "企业级多语言培训用 HeyGen 或 Synthesia；口型同步精度高用 Hedra 或 Lalamu；国产营销场景用 万兴播爆；低成本虚拟主播用 D-ID / Elai。"
+      },
+      "ai-video-editing": {
+        "name": "AI视频剪辑",
+        "intro": "AI视频剪辑与编辑工具合集，收录15款覆盖智能字幕、自动剪辑、文本转视频、长视频转短视频、AI配音的全能剪辑平台，内容创作者和运营团队的视频生产力工具。",
+        "how_to_choose": "长视频转短视频用 Opus Clip / KapKap；通用在线剪辑用 CapCut AI / Veed.io / Kapwing；文本转视频用 InVideo AI / Lumen5；专业编辑用 Descript。"
+      }
+    }
+  },
+  "ai-detection": {
+    "name": "AI检测",
+    "subcats": {
+      "ai-humanize": {
+        "name": "降AI率",
+        "intro": "2026年降AI率与降AIGC痕迹工具合集，收录13款专注学术写作场景的降AI率工具，适配知网、维普、万方最新检测规则，帮助论文作者在保留原创内容的同时降低AIGC痕迹。",
+        "how_to_choose": "论文降AI率先看是否适配目标检测库（知网/维普/万方）；主流选择有 稿易、笔灵、千笔、茅茅虫、PaperFake、学术猹（网易有道）；注意先备份原文，降AI率后务必人工复核避免语义偏差。",
+        "keywords": ["降AI率", "AI降重", "论文降AI率", "降AIGC痕迹", "AI率检测", "AIGC降重"]
+      },
+      "ai-content-detector": {
+        "name": "内容检测",
+        "intro": "2026年AI内容检测工具合集，收录9款覆盖AI文本识别、论文查重、原创度检测、AI率检测的检测工具，教育、出版与内容平台用于识别AI生成内容、维护学术诚信。",
+        "how_to_choose": "学术AI率检测用 GPTZero、朱雀AI检测（腾讯）、睿信论文检测；内容平台原创度用 Originality.AI、CopyLeaks、Winston AI；免费轻量可用 Sapling / Smodin / Writer。",
+        "keywords": ["AI内容检测", "AI检测", "AI查重", "论文查重", "AI率检测", "AI检测工具", "原创度检测"]
+      }
+    }
+  }
+}

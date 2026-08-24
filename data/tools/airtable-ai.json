@@ -1,0 +1,143 @@
+{
+  "name": "Airtable AI",
+  "slug": "airtable-ai",
+  "positioning": "免费AI办公工具，AI 自动化+Field好用吗",
+  "auto_positioning": true,
+  "emoji": "📊",
+  "color": "#FFBF00",
+  "description": "Airtable AI 是 Airtable 平台内置的 AI 能力，以对话式方式将业务数据转化为自定义界面、自动化工作流与可编排行动的 AI 代理（Agents），面向企业团队协作。",
+  "category": "AI办公",
+  "tags": [
+    "智能表格",
+    "AI办公",
+    "自动化",
+    "数据管理",
+    "Field Agents"
+  ],
+  "rating": "⭐4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.airtable.com/",
+  "price": "免费版 + Team $20/席/月起（含 AI 额度）",
+  "platform": "Web, iOS, Android",
+  "pros": [
+    "自然语言直接查询数据",
+    "AI 自动生成公式与汇总",
+    "与现有 Airtable 工作流深度集成",
+    "预构建 AI 功能（分类、填充等）",
+    "界面直观，适合非技术用户"
+  ],
+  "cons": [
+    "免费版 AI 调用额度有限",
+    "复杂分析不及专业 BI 工具",
+    "极大数据集响应变慢",
+    "按编辑器席位计费，团队成本上升快"
+  ],
+  "features": [
+    "内置 AI 字段：分类、总结、生成、翻译、实体抽取",
+    "AI 自动化（触发即运行）",
+    "Field Agents：行变更触发翻译/分类/研究",
+    "Omni 助手：联网研究、分析文档、编辑记录",
+    "Cobuilder：自然语言生成应用",
+    "企业级安全：SOC 2、HIPAA、ISO；数据不用于训练"
+  ],
+  "related": [
+    "notion-ai",
+    "coda-ai",
+    "feishu-assistant"
+  ],
+  "faq": [
+    {
+      "q": "Airtable AI 需要额外付费吗？",
+      "a": "所有套餐均含 AI 额度：Free 每编辑器 500 credits/月，Team 15,000、Business 20,000、Enterprise Scale 25,000；超额可购附加 credit 包（$40/月/20,000）。"
+    },
+    {
+      "q": "Airtable AI 支持哪些模型？",
+      "a": "集成 OpenAI、Gemini、Llama、Anthropic 等主流模型，企业级安全并支持 MCP。"
+    }
+  ],
+  "seo_keywords": [
+    "Airtable AI",
+    "Airtable AI怎么样",
+    "Airtable AI免费版",
+    "Airtable AI使用教程",
+    "Airtable AI和Notion AI哪个好"
+  ],
+  "content": "## Airtable AI是什么？\n\nAirtable 本身就像一个“数据库 + 电子表格”的混合体，很多人用它管项目、管内容、管客户。现在它把 AI 直接塞进了这个平台——不是外面接个插件，而是内嵌在表格里。你可以用大白话问它“帮我统计上个月各渠道的线索量”，它直接出结果；想写个复杂公式，说一句“计算销售额大于1000且本周未发货的订单数”，它自动生成。本质上，Airtable AI 让一个非技术用户也能像数据分析师一样操作，同时保留了一贯的灵活视图（表格、看板、日历等）。对于已经在用 Airtable 的团队来说，这不是换工具，而是原地升级。\n\n## 核心功能\n\n### 1. 自然语言查询表格数据\n不用写 SQL，直接在搜索框或者 AI 助手里输入“显示所有未完成且优先级高的任务，按截止日期排序”，它就能把数据筛出来。实际用下来，简单的条件查询基本一次过，复杂一点的多条件组合偶尔需要调整措辞，但比手动建过滤器快很多。\n\n### 2. AI 自动生成公式\nAirtable 的公式字段对新手不太友好（比如 SUMIF、VLOOKUP 的嵌套）。现在你只要描述想要的逻辑，比如“如果状态是‘进行中’并且负责人是张三，则返回1，否则0”，AI 直接帮你写好公式，复制粘贴就行。对老手来说，也能省去翻文档和调试的时间。\n\n### 3. 智能分类与自动填充\n比如你有一列“产品名称”，想给它加上“品类”标签。选中一列，让 AI 根据已有的数据特征自动分类。实际体验中，分类准确度取决于数据本身有多规范，太模糊的文本（比如口语化描述）偶尔会分错，但整体很有用。也可以根据某列内容自动填充另一列，比如根据“客户名”自动补全“所属地区”。\n\n### 4. 生成式文本创建\n适合内容运营场景：批量写产品描述、项目摘要、邮件草稿。选中几条记录，AI 根据预设模板或自由描述生成文本。这个功能比较依赖你给提示词的清晰度，但省去了逐条手写的时间，尤其适合标准化输出。\n\n### 5. AI 助手解释字段和建议\n鼠标悬停在一个字段上，AI 会解释这个字段是做什么的（类似内嵌文档），或者根据你当前的数据给你下一步操作建议——比如“这个字段的取值是时间，你可能想建一个日历视图”。对于团队新人来说，这能减少培训成本。\n\n### 6. 自动化工作流中的 AI 节点\nAirtable 的自动化里多了“AI 节点”。你可以设置：当新记录创建时，自动用 AI 提取文本中的关键信息、分析情感、或者生成摘要。比如客户反馈表单进来，自动打上“积极/消极”标签。这块在实际应用中需要先试跑几次，调整 prompt，但跑通后能减少人工处理量。\n\n## 版本/套餐对比\n\nAirtable AI 功能是集成在现有版本中的，不同付费等级有调用次数和功能的差异。根据官方信息，大致的区别如下（具体数目和价格请以官网为准）：\n\n| 版本        | AI 功能特点 |\n|------------|------------|\n| 免费版      | 可用基础 AI 功能，但每月调用次数有限（如几十次），适合个人简单试用 |\n| 团队版（Team） | 调用次数大幅增加，支持更多自动化 AI 节点，适合小团队日常使用 |\n| 商业版（Business） | 更高的调用额度，支持高级 AI 模型和自定义 prompt，适合对数据量有要求的团队 |\n| 企业版      | 定制化方案，包括私有部署和数据合规保障 |\n\n## 值不值得用？\n\n**优点**\n- 降低门槛：不懂 SQL 和公式的人也能直接和表格对话，尤其适合运营、市场、项目管理等非技术岗位。\n- 省时间：自动生成公式和分类，省去手动写、手动调的重复劳动。\n- 无迁移成本：如果团队已经在用 Airtable，直接打开开关就能用，不用换平台或来回导数据。\n- 协作友好：所有操作都在原有的共享表格里，权限、视图、评论这些都不受影响。\n\n**缺点**\n- 免费版限制明显：AI 查询次数少，对轻度用户还行，但重度使用者很快会碰到次数上限。\n- 复杂分析不够强：遇到跨表关联、多条件聚合、趋势预测等需求，Airtable AI 的能力不如专门的 BI 工具（比如 Tableau、Metabase）灵活。\n- 大数据集性能：几千行数据还好，几万行以上做 AI 查询时响应会变慢，毕竟不是为极海量数据处理设计的。\n\n**总体结论**：如果你是 Airtable 的现有用户，且日常工作中大量用到数据筛选、公式、分类、或内容生成，那 AI 功能很值得开，能明显提升效率。但如果你的目标是做深度数据挖掘或者商业智能分析，建议搭配专业 BI 工具使用，不要指望用它替代。\n\n## 使用建议\n\n1. **从小处开始**：先用自然语言查询替代手动过滤，熟悉之后再看公式生成和自动分类，逐步迁移工作流。\n2. **优化数据规范**：AI 的分析效果高度依赖表格数据的整洁度。字段命名尽量标准（比如“客户姓名”而不是“名字”），减少空值和杂乱格式。\n3. **注意调用次数**：免费版用户可以把 AI 留给自己最耗时的任务（比如生成复杂公式、批量写文案），日常简单筛选还是手动来。\n4. **结合自动化**：尝试把 AI 节点嵌入到常用自动流程里（比如新表单提交后自动情感分析），能最大化减少重复劳动。\n5. **团队培训**：让团队成员知道有 AI 助手可以用，尤其是那些怕公式或 SQL 的同事，一个简单提问就能搞定很多事。\n\n## 适合谁用？\n\n**推荐**\n- 已经在使用 Airtable 的团队（项目管理、内容运营、市场活动）——几乎零成本升级。\n- 非技术岗位但对数据处理有需求的人（运营、编辑、产品经理）。\n- 需要快速批量生成文本或分类内容的内容团队。\n\n**可考虑**\n- 正在评估数据库/表格工具且团队以非技术人员为主的初创团队，Airtable AI 可以作为加分项。\n- 数据量不大（万行以内）、分析需求以基础查询和公式为主的中小型团队。\n\n**不推荐**\n- 需要进行复杂数据建模、多表关联、实时大数据分析的场景，建议选专业 BI 工具。\n- 团队预算极其紧张、对免费版调用次数非常敏感的用户（因为免费版限制确实存在）。\n- 已经深度使用 Excel 公式且迁移成本高的个人，除非有协作需求，否则不一定值得切换。",
+  "published": true,
+  "source_url": "https://www.airtable.com/",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://www.airtable.com/",
+  "verified_publisher": "Airtable（由 Howie Liu 等创立）",
+  "verified_what": "Airtable 平台内置的 AI 能力，将 AI 直接嵌入表格/数据库，用于分类、总结、生成内容、字段代理与 Omni 助手",
+  "verified_price": "所有套餐含 AI 额度：Free（500 AI credits/编辑器/月）；Team $20/席/月（年付，$24 月付，15,000 credits）；Business $45/席/月（年付，$54 月付，20,000 credits）；Enterprise Scale 定制（25,000 credits）；额外 AI credit 包 $40/月/20,000",
+  "verified_platform": "Web / iOS / Android / Mac / Windows",
+  "verified_features": [
+    "内置 AI 字段：分类、总结、生成、翻译、实体抽取",
+    "AI 自动化（触发即运行）",
+    "Field Agents：行变更触发翻译/分类/研究",
+    "Omni 助手：联网研究、分析文档、编辑记录",
+    "Cobuilder：自然语言生成应用",
+    "企业级安全：SOC 2、HIPAA、ISO；数据不用于训练"
+  ],
+  "verified_description": "Airtable AI 是 Airtable 平台内置的 AI 能力，以对话式方式将业务数据转化为自定义界面、自动化工作流与可编排行动的 AI 代理（Agents），面向企业团队协作。",
+  "content_flags": "原 FAQ 称“免费版最多 2GB/Base”应为 1GB/Base；价格表述偏笼统，已补全各档 AI 额度。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "编辑评分（公开评测约 4.7/5）",
+  "rating_verified": true,
+  "verified_pros": [
+    "自然语言直接查询数据",
+    "AI 自动生成公式与汇总",
+    "与现有 Airtable 工作流深度集成",
+    "预构建 AI 功能（分类、填充等）",
+    "界面直观，适合非技术用户"
+  ],
+  "verified_cons": [
+    "免费版 AI 调用额度有限",
+    "复杂分析不及专业 BI 工具",
+    "极大数据集响应变慢",
+    "按编辑器席位计费，团队成本上升快"
+  ],
+  "verified_faq": [
+    {
+      "q": "Airtable AI 需要额外付费吗？",
+      "a": "所有套餐均含 AI 额度：Free 每编辑器 500 credits/月，Team 15,000、Business 20,000、Enterprise Scale 25,000；超额可购附加 credit 包（$40/月/20,000）。"
+    },
+    {
+      "q": "Airtable AI 支持哪些模型？",
+      "a": "集成 OpenAI、Gemini、Llama、Anthropic 等主流模型，企业级安全并支持 MCP。"
+    }
+  ],
+  "verified_tags": [
+    "智能表格",
+    "AI办公",
+    "自动化",
+    "数据管理",
+    "Field Agents"
+  ],
+  "verified_category": "AI办公",
+  "source_urls": [
+    "https://app.airtable.com/pricing",
+    "https://support.airtable.com/v1/docs/airtable-ai-billing",
+    "https://toolchase.com/tool/airtable-ai/"
+  ],
+  "verify_notes": "价格已补全为各档含 AI credit；免费版附件上限为 1GB/Base。",
+  "compare_section": {
+    "competitors": [
+      "tome",
+      "tldv",
+      "slidesai"
+    ],
+    "verdict": "Airtable AI 与 Tome、 tl;dv、SlidesAI 同属AI办公赛道：Airtable AI 的 内置 AI 字段：分类、总结、生成、翻译、实体抽取 是亮点，价格 免费版 + Team $20/席/月起（含 AI 额度）；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "created_date": "2026-08-01",
+  "published_date": "2026-08-01"
+}

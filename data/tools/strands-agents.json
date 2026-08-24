@@ -1,0 +1,141 @@
+{
+  "name": "Strands Agents",
+  "slug": "strands-agents",
+  "positioning": "免费AI智能体平台：多智能体编排+任意模型支持",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#D97706",
+  "description": "AWS 开源的 AI 智能体开发 SDK（Python & TypeScript），采用模型驱动方式，用极少量代码即可构建并运行单/多智能体应用，支持任意模型并与 AWS 生态深度集成。",
+  "category": "AI智能体",
+  "tags": [
+    "AI智能体",
+    "开发框架",
+    "开源",
+    "AWS",
+    "SDK"
+  ],
+  "rating": "⭐4.5（编辑评分）",
+  "visits": "50万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://strandsagents.com",
+  "price": "免费开源",
+  "platform": "Web / macOS / Windows / Linux",
+  "pros": [
+    "AWS 官方开源",
+    "模型驱动极简开发",
+    "多智能体编排强大",
+    "与 AWS 生态集成好",
+    "支持任意模型"
+  ],
+  "cons": [
+    "偏向 AWS 生态",
+    "需要一定工程能力",
+    "文档以英文为主"
+  ],
+  "features": [
+    "模型驱动 agent 定义（model+tools+prompt）",
+    "多智能体编排（Agents-as-Tools / Handoffs / Swarm）",
+    "任意模型支持（Bedrock、Anthropic、Ollama、Meta 等 via LiteLLM）",
+    "会话记忆与状态管理",
+    "内置可观测性与安全",
+    "与 AWS 原生服务集成"
+  ],
+  "related": [
+    "langchain",
+    "langgraph",
+    "openhands",
+    "claude-code",
+    "anthropic-console"
+  ],
+  "faq": [
+    {
+      "q": "Strands Agents 是谁开发的？",
+      "a": "由亚马逊云科技（AWS）开源并维护，是开源 AI 智能体 SDK；Anthropic 等公司贡献了模型支持，但并非 Anthropic 出品。"
+    },
+    {
+      "q": "Strands Agents 收费吗？",
+      "a": "免费开源（Apache 2.0），可本地开发并部署到 AWS Bedrock / AgentCore 等环境。"
+    }
+  ],
+  "seo_keywords": [
+    "Strands Agents",
+    "Strands Agents AI代理",
+    "Anthropic Strands",
+    "AI智能体框架对比",
+    "Strands Agents教程"
+  ],
+  "content": "## Strands Agents 是什么？\n\nAWS 开源的 AI 智能体开发 SDK（Python & TypeScript），以模型驱动方式用少量代码构建并运行单/多智能体应用。\n\nAWS 开源的 AI 智能体开发 SDK（Python & TypeScript），采用模型驱动方式，用极少量代码即可构建并运行单/多智能体应用，支持任意模型并与 AWS 生态深度集成。\n\n## 核心功能\n\n- 模型驱动 agent 定义（model+tools+prompt）\n- 多智能体编排（Agents-as-Tools / Handoffs / Swarm）\n- 任意模型支持（Bedrock、Anthropic、Ollama、Meta 等 via LiteLLM）\n- 会话记忆与状态管理\n- 内置可观测性与安全\n- 与 AWS 原生服务集成\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 免费开源（Apache 2.0） |\n| 支持平台 | Python, TypeScript/JavaScript, 可本地与云端（AWS Bedrock / AgentCore）部署 |\n| 评分 | ⭐4.5（编辑评分） |\n| 开发商 | Amazon Web Services（AWS）开源社区项目，Anthropic 等贡献模型支持 |\n\n## 价格与平台\n\n- **价格**：免费开源（Apache 2.0）\n- **平台**：Python, TypeScript/JavaScript, 可本地与云端（AWS Bedrock / AgentCore）部署\n- **官网**：https://strandsagents.com\n\n## 优缺点分析\n\n### 优点\n\n- AWS 官方开源\n- 模型驱动极简开发\n- 多智能体编排强大\n- 与 AWS 生态集成好\n- 支持任意模型\n\n### 缺点\n\n- 偏向 AWS 生态\n- 需要一定工程能力\n- 文档以英文为主\n\n## 常见问题（FAQ）\n\n**Strands Agents 是谁开发的？**\n\n由亚马逊云科技（AWS）开源并维护，是开源 AI 智能体 SDK；Anthropic 等公司贡献了模型支持，但并非 Anthropic 出品。\n\n**Strands Agents 收费吗？**\n\n免费开源（Apache 2.0），可本地开发并部署到 AWS Bedrock / AgentCore 等环境。\n\n\n## 最终结论\n\nStrands Agents 是AI智能体领域的一款 AI 工具，其核心优势在于AWS 官方开源。\n此外，模型驱动极简开发。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-05-26",
+  "published_date": "2026-05-26",
+  "verified_url": "https://strandsagents.com",
+  "verified_publisher": "Amazon Web Services（AWS）开源社区项目，Anthropic 等贡献模型支持",
+  "verified_what": "AWS 开源的 AI 智能体开发 SDK（Python & TypeScript），以模型驱动方式用少量代码构建并运行单/多智能体应用。",
+  "verified_price": "免费开源（Apache 2.0）",
+  "verified_platform": "Python, TypeScript/JavaScript, 可本地与云端（AWS Bedrock / AgentCore）部署",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "模型驱动 agent 定义（model+tools+prompt）",
+    "多智能体编排（Agents-as-Tools / Handoffs / Swarm）",
+    "任意模型支持（Bedrock、Anthropic、Ollama、Meta 等 via LiteLLM）",
+    "会话记忆与状态管理",
+    "内置可观测性与安全",
+    "与 AWS 原生服务集成"
+  ],
+  "verified_description": "AWS 开源的 AI 智能体开发 SDK（Python & TypeScript），采用模型驱动方式，用极少量代码即可构建并运行单/多智能体应用，支持任意模型并与 AWS 生态深度集成。",
+  "content_flags": "长文称“Strands Agents 是 Anthropic 推出的 AI 智能体开发框架”为严重错误——实为 AWS 开源项目，Anthropic 仅贡献模型支持；另“2026 年多模态增强”等表述无官方依据。整段需重写。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5（编辑评分）",
+  "rating_source": "GitHub / 开源社区（AWS 官方开源，无单一权威评分，保留编辑评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "AWS 官方开源",
+    "模型驱动极简开发",
+    "多智能体编排强大",
+    "与 AWS 生态集成好",
+    "支持任意模型"
+  ],
+  "verified_cons": [
+    "偏向 AWS 生态",
+    "需要一定工程能力",
+    "文档以英文为主"
+  ],
+  "verified_faq": [
+    {
+      "q": "Strands Agents 是谁开发的？",
+      "a": "由亚马逊云科技（AWS）开源并维护，是开源 AI 智能体 SDK；Anthropic 等公司贡献了模型支持，但并非 Anthropic 出品。"
+    },
+    {
+      "q": "Strands Agents 收费吗？",
+      "a": "免费开源（Apache 2.0），可本地开发并部署到 AWS Bedrock / AgentCore 等环境。"
+    }
+  ],
+  "verified_tags": [
+    "AI智能体",
+    "开发框架",
+    "开源",
+    "AWS",
+    "SDK"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://strandsagents.com/",
+    "https://strandsagents.com/blog/introducing-strands-agents",
+    "https://aws.amazon.com/jp/blogs/opensource/introducing-strands-agents-1-0-production-ready-multi-agent-orchestration-made-simple/"
+  ],
+  "verify_notes": "原内容将出品方误作 Anthropic，属严重事实错误，已重写 corrected_content。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Strands Agents 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Strands Agents 的 模型驱动 agent 定义（model+tools+prompt） 是亮点，价格 免费开源；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

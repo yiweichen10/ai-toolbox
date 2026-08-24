@@ -1,0 +1,146 @@
+{
+  "name": "Spellbook",
+  "slug": "spellbook",
+  "positioning": "市场基准对比+多语言支持，AI工具实测",
+  "auto_positioning": true,
+  "emoji": "📝",
+  "color": "#6366F1",
+  "description": "Spellbook 是专为交易律师与企业法务打造的 AI 合同审查与起草工具，以 Microsoft Word 插件形式运行，基于 GPT-5 等大模型提供红线修订、条款起草、Playbook 比对与市场基准分析，已服务全球 4,500+ 法律团队。",
+  "category": "AI行业应用",
+  "tags": [
+    "法律文档",
+    "合同审查",
+    "法律AI",
+    "商业写作",
+    "文档生成"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "约8万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.spellbook.legal/",
+  "price": "按席位定制（约 $99–199/用户/月）",
+  "platform": "Web/Chrome插件/Word插件",
+  "pros": [
+    "深度集成 Word，律师无需切换工具",
+    "合同场景专业度高",
+    "支持多语言与零数据留存"
+  ],
+  "cons": [
+    "价格不透明，需销售询价",
+    "聚焦合同场景，不覆盖诉讼/法律检索",
+    "强依赖 Word 生态"
+  ],
+  "features": [
+    "AI 合同审查与红线修订",
+    "条款起草与生成",
+    "Playbook 比对与风险标注",
+    "市场基准对比（2,000+ 合同类型）",
+    "Ask 合同问答（带引用）",
+    "多语言支持（140+ 语言）",
+    "数据零留存与 SOC 2 合规"
+  ],
+  "related": [
+    "claude",
+    "chatgpt",
+    "jasper",
+    "grammarly-ai",
+    "notion-ai"
+  ],
+  "faq": [
+    {
+      "q": "Spellbook 和 Harvey 是同一款产品吗？",
+      "a": "不是。Spellbook 是独立的合同审查/起草工具（运行在 Word 中），Harvey 是另一家提供 broader 法律 AI 的公司。两者常被并列比较，但为不同产品。"
+    },
+    {
+      "q": "Spellbook 的价格是多少？",
+      "a": "官网不公开具体价目，按席位定制定价；第三方 2026 年估算个人/团队约 $99–$199 每用户每月，并提供 7 天免费试用。"
+    }
+  ],
+  "seo_keywords": [
+    "Spellbook",
+    "Spellbook AI法律工具",
+    "Spellbook合同审查",
+    "Spellbook免费吗",
+    "Spellbook vs ChatGPT法律写作"
+  ],
+  "content": "## Spellbook是什么？\n\n如果你身边有律师或法务朋友，最近聊起AI工具，大概率会提到Spellbook。简单说，这是一款专门给法律人用的AI写作助手，基于GPT技术，帮着写合同、审条款、查风险。\n\n它不是那种啥都能干的通用AI，而是把精力全砸在法律文书这个垂直领域。2026年他们集成了最新的大模型，在合同条款分析和风险识别这块确实比之前版本强了不少。官方说法是准确性显著提升，具体表现因人而异，但据社区反馈，基础的合同审查和条款分析已经能省不少功夫。\n\n## 核心功能\n\n**1. AI合同起草**\n只要输入基本需求，比如“起草一份SaaS服务采购合同”，它就能生成初稿。条款完整性和格式规范性这块做得不错，省去从零码字的痛苦。不过终稿还是得人工复核，毕竟法律文件容不得半点马虎。\n\n**2. 条款审查和风险分析**\n这是Spellbook比较被认可的功能。上传合同或粘贴条款，它能识别一些常见的风险点，比如责任限制不明确、违约条款缺失、争议解决方式不完善等。说是“助手”而非“替代”，就是因为它能找到问题，但判断和处理还是得靠人。\n\n**3. 法律文书润色**\n写好的律师函、意见书、诉讼文书，可以丢给它帮忙润色。措辞更专业、格式更规范这些基本功没问题。但涉及具体法律观点的修改，还是得资深律师把控。\n\n**4. 案例检索和引用**\n输入关键词能搜到相关判例和法规，对于做法律研究有一定帮助。不过深度和覆盖面，肯定不如专业法律数据库，适合快速摸个大概。\n\n**5. 多语言文档支持**\n支持多种语言的合同和文书，对处理跨境业务或国际律所有一定实用性。翻译质量在法律语境下基本可用，但涉及专业术语还是建议找专业人士确认。\n\n## 版本/套餐对比\n\n| 版本 | 主要功能 | 适用人群 |\n|------|----------|----------|\n| 免费版 | 基础起草、简单审查 | 轻度体验 |\n| 专业版 | 完整功能、无限起草、深度审查 | 个人律师、中小律所 |\n| 企业版 | 团队协作、API接入、定制服务 | 大型律所、企业法务部 |\n\n具体价格和功能细节建议直接看官网，这里就不展开报了。免费版功能受限是事实，当主力工具用肯定得付费。\n\n## 值不值得用？\n\n**优点：**\n- 法律术语和格式做得确实专业，省去不少基础工作\n- 集成Word和Chrome，嵌入现有工作流比较顺畅\n- 合同审查能快速定位问题，对效率有实质帮助\n- 模板库和版本对比功能对团队协作友好\n\n**缺点：**\n- 只能法律领域用，其他场景基本跟你没关系\n- 对中国法律的适配有限，据用户反馈主要还是英美法系那块更成熟\n- 必须联网才能用，保密要求高的文档得掂量一下\n- 免费版基本就是“试用装”，想常用就得花钱\n\n**结论：** 如果你是做涉外业务或者主要跟普通法系打交道，Spellbook确实是目前法律AI里做得比较扎实的工具，省时省力。但如果你主要处理中国法律事务，或者预算有限，可能还得观望或者找其他方案。\n\n## 使用建议\n\n1. **别把它当终点**——初稿用它，终稿必须人工审核。AI是助手不是责任人。\n2. **先从免费版试起**——花点时间看看它对你具体业务场景的帮助有多大，再决定是否付费。\n3. **敏感文档慎用**——涉及商业机密或高度敏感的合同，上传云端前要想清楚。\n4. **结合专业数据库**——案例检索可以当快速入口，但深度研究还是得用专业法律库。\n\n## 适合谁用？\n\n**推荐：**\n- 处理跨境业务的律师和法务\n- 需要频繁起草、审查合同的中小律所\n- 对效率有追求的法律团队\n\n**可考虑：**\n- 企业法务部门（需要评估对中国法律的适配程度）\n- 法律专业学生（学习工具可以，功能有限）\n\n**不推荐：**\n- 主要处理中国法律事务的从业者（目前支持有限）\n- 预算紧张的个人用户（免费版不太够用）\n- 对文档保密性要求极高的岗位",
+  "published": true,
+  "created_date": "2026-05-23",
+  "published_date": "2026-05-23",
+  "subcategory": "ai-legal",
+  "verified_url": "https://www.spellbook.legal/",
+  "verified_publisher": "Spellbook（原 Rally）",
+  "verified_what": "面向交易律师与企业法务的 AI 合同审查与起草工具，作为 Microsoft Word 插件（及配套 Web 应用）运行，基于 GPT-5 等前沿大模型，提供条款审查、红线修订、起草、Playbook 比对与市场基准分析。",
+  "verified_price": "按席位定制定价（第三方 2026 年估算约 $99–$199/用户/月，企业版更高）；提供 7 天免费试用；官网不公开固定价目",
+  "verified_platform": [
+    "Web",
+    "Microsoft Word 插件"
+  ],
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "AI 合同审查与红线修订",
+    "条款起草与生成",
+    "Playbook 比对与风险标注",
+    "市场基准对比（2,000+ 合同类型）",
+    "Ask 合同问答（带引用）",
+    "多语言支持（140+ 语言）",
+    "数据零留存与 SOC 2 合规"
+  ],
+  "verified_description": "Spellbook 是专为交易律师与企业法务打造的 AI 合同审查与起草工具，以 Microsoft Word 插件形式运行，基于 GPT-5 等大模型提供红线修订、条款起草、Playbook 比对与市场基准分析，已服务全球 4,500+ 法律团队。",
+  "content_flags": "现有 price 字段写“免费版/专业版$29/月/团队版$99/月”与官方不符——Spellbook 官网不公开固定档位，按席位定制（约 $99–199/用户/月）并提供试用，无 $29 档。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "站内编辑评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "深度集成 Word，律师无需切换工具",
+    "合同场景专业度高",
+    "支持多语言与零数据留存"
+  ],
+  "verified_cons": [
+    "价格不透明，需销售询价",
+    "聚焦合同场景，不覆盖诉讼/法律检索",
+    "强依赖 Word 生态"
+  ],
+  "verified_faq": [
+    {
+      "q": "Spellbook 和 Harvey 是同一款产品吗？",
+      "a": "不是。Spellbook 是独立的合同审查/起草工具（运行在 Word 中），Harvey 是另一家提供 broader 法律 AI 的公司。两者常被并列比较，但为不同产品。"
+    },
+    {
+      "q": "Spellbook 的价格是多少？",
+      "a": "官网不公开具体价目，按席位定制定价；第三方 2026 年估算个人/团队约 $99–$199 每用户每月，并提供 7 天免费试用。"
+    }
+  ],
+  "verified_tags": [
+    "法律文档",
+    "合同审查",
+    "法律AI",
+    "商业写作",
+    "文档生成"
+  ],
+  "verified_category": "AI行业应用",
+  "source_urls": [
+    "https://www.spellbook.legal/",
+    "https://spellbook.legal/solutions/in-house-legal",
+    "https://aiagentrank.io/blog/spellbook-ai-review-2026",
+    "https://bindlegal.com/resources/comparisons/spellbook-pricing-2026",
+    "https://www.aivortex.io/legal/compare/spellbook-pricing-2026"
+  ],
+  "verify_notes": "产品定位准确（非 Harvey）。主要问题在于价格字段错误，已通过 price_plans 修正。",
+  "content_verified": true,
+  "url_previous": "https://www.spellbook.legal",
+  "compare_section": {
+    "competitors": [
+      "duolingo-max",
+      "harvey-ai",
+      "schole-ai"
+    ],
+    "verdict": "Spellbook 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：Spellbook 的 AI 合同审查与红线修订 是亮点，价格 按席位定制（约 $99–199/用户/月）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

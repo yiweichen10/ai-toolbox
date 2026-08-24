@@ -1,0 +1,161 @@
+{
+  "name": "DeepSec",
+  "slug": "deepsec",
+  "positioning": "免费AI工具，正则候选识别+AI 调查好用吗",
+  "auto_positioning": true,
+  "emoji": "🔒",
+  "color": "#1E3A5F",
+  "description": "DeepSec 是 Vercel Labs 于 2026 年 5 月开源的 AI 驱动代码安全扫描工具（Apache-2.0），由编码 Agent（Claude、Codex 等）在自有基础设施上对整仓库做仓库级漏洞分析，而非托管的商业安全平台；可自托管、接入 CI/CD，适合希望以开源方式做「AI 辅助安全审查」的团队。",
+  "category": "AI行业应用",
+  "tags": [
+    "网络安全",
+    "漏洞扫描",
+    "AI安全",
+    "SAST",
+    "开源",
+    "代码审计",
+    "CI/CD"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "约85万/月",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://github.com/vercel-labs/deepsec",
+  "price": "免费开源（Apache-2.0）",
+  "platform": "Web/Windows/macOS/Linux",
+  "pros": [
+    "完全免费开源（Apache-2.0），可自托管",
+    "仓库级语义分析，能发现规则引擎漏掉的逻辑漏洞",
+    "再验证步骤降低误报率",
+    "可接入现有 Claude/Codex 订阅或 Vercel AI Gateway",
+    "支持 CI 门禁与插件扩展"
+  ],
+  "cons": [
+    "仅适用于应用/服务，库与框架需自定义",
+    "大仓库扫描耗时长（单机可能数天），需 Sandbox 并行",
+    "误报率约 10–20%",
+    "需自备 API 额度，成本随规模上升",
+    "需一定安全与工程背景"
+  ],
+  "features": [
+    "Agent 驱动的仓库级漏洞扫描",
+    "正则候选识别（scan 阶段）",
+    "AI 调查（Claude Opus 4.7 / GPT 5.5 等）",
+    "再验证（revalidate）降低误报",
+    "Git 元数据富化（定位负责人）",
+    "导出 Markdown/JSON、PR/CI 门禁、插件系统、断点续跑"
+  ],
+  "related": [
+    "tabnine",
+    "sourcegraph-cody",
+    "aider"
+  ],
+  "faq": [
+    {
+      "q": "DeepSec 是免费的吗？",
+      "a": "是，DeepSec 完全免费开源（Apache-2.0），没有订阅或付费专业版；运行需自备 Claude/Codex API 凭据或 Vercel AI Gateway，分布式扫描可用 Vercel Sandbox（按量计费）。"
+    },
+    {
+      "q": "DeepSec 和传统安全工具有什么区别？",
+      "a": "DeepSec 用编码 Agent 做仓库级语义分析，理解代码上下文与数据流，能发现传统规则扫描漏掉的逻辑漏洞，并给出可操作修复建议；内置 revalidate 降低误报。"
+    },
+    {
+      "q": "DeepSec 支持哪些模型？",
+      "a": "默认使用 Claude Opus 4.7（max effort）与 GPT 5.5（xhigh reasoning），也兼容 Anthropic/OpenAI 的 cyber 微调模型及自带 Key；通过 Vercel AI Gateway 一个 Key 同时覆盖 Claude 与 Codex。"
+    },
+    {
+      "q": "使用 DeepSec 需要安全背景吗？",
+      "a": "它有 AI 辅助与清晰报告，新手可上手做基础扫描，但充分发挥价值（写自定义 matcher、解读高危发现、接入 CI）建议具备一定安全/工程背景。"
+    }
+  ],
+  "seo_keywords": [
+    "deepsec",
+    "deepsec AI安全工具",
+    "deepsec渗透测试",
+    "deepsec漏洞扫描工具",
+    "AI网络安全平台推荐"
+  ],
+  "content": "## DeepSec 是什么？\n\nDeepSec 是 **Vercel Labs** 于 **2026 年 5 月** 开源发布的一款 AI 驱动代码安全扫描 **命令行工具（CLI）**，以 Apache 2.0 协议发布。它不是一个托管的商业安全平台，而是跑在你自己基础设施上的开源工具——你拉取仓库、本地或云端运行，结果完全掌握在自己手里。\n\n---\n\n## 它怎么工作\n\nDeepSec 依托 Claude Opus、Codex 等编码智能体，对**整个仓库**做仓库级（repo-level）的漏洞分析，而不只是单文件扫描。它让编码智能体像一名安全工程师那样去阅读代码、追踪数据流、判断哪些路径可能触发真实漏洞。\n\n**关键特征：**\n\n- **开源 CLI**：代码在 `vercel-labs/deepsec` 公开仓库，可审计、可自托管。\n- **Apache 2.0**：商用友好，可集成进自己的 CI/CD。\n- **智能体驱动**：借助前沿编码模型做语义级漏洞理解，而非纯规则匹配。\n- **本地优先**：分析过程运行在你的环境内，代码不必上传到第三方平台。\n\n---\n\n## 适合谁用\n\n如果你团队已经在用 Vercel 生态，或希望把\"AI 辅助安全审查\"以开源、自托管的方式接入研发流水线，DeepSec 是一个值得直接读源码、按需改造的起点。想了解细节，建议看 GitHub 上的 `vercel-labs/deepsec` 仓库与 Vercel 官方博客的说明。\n",
+  "published": true,
+  "created_date": "2026-06-16",
+  "published_date": "2026-06-16",
+  "subcategory": "ai-security",
+  "verified_url": "https://github.com/vercel-labs/deepsec",
+  "verified_publisher": "Vercel Labs (Vercel)",
+  "verified_what": "Vercel Labs 开源的 AI 安全审计工具（security harness），由编码 Agent（Claude、Codex 等）驱动，在自有基础设施上对整个代码仓库做仓库级漏洞分析，定位难以发现的真实漏洞。",
+  "verified_price": "完全免费开源（Apache-2.0），无订阅/付费专业版。运行需自备 Claude/Codex API 凭据或 Vercel AI Gateway；大规模并行扫描可选 Vercel Sandbox 微 VM（按量计费）。",
+  "verified_platform": "Web/Windows/macOS/Linux（Node.js 环境，CLI 运行；可 fanout 到 Vercel Sandbox）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "Agent 驱动的仓库级漏洞扫描",
+    "正则候选识别（scan 阶段）",
+    "AI 调查（Claude Opus 4.7 / GPT 5.5 等）",
+    "再验证（revalidate）降低误报",
+    "Git 元数据富化（定位负责人）",
+    "导出 Markdown/JSON、PR/CI 门禁、插件系统、断点续跑"
+  ],
+  "verified_description": "DeepSec 是 Vercel Labs 于 2026 年 5 月开源的 AI 驱动代码安全扫描工具（Apache-2.0），由编码 Agent（Claude、Codex 等）在自有基础设施上对整仓库做仓库级漏洞分析，而非托管的商业安全平台；可自托管、接入 CI/CD，适合希望以开源方式做「AI 辅助安全审查」的团队。",
+  "content_flags": "price",
+  "price_verified": true,
+  "verified_pros": [
+    "完全免费开源（Apache-2.0），可自托管",
+    "仓库级语义分析，能发现规则引擎漏掉的逻辑漏洞",
+    "再验证步骤降低误报率",
+    "可接入现有 Claude/Codex 订阅或 Vercel AI Gateway",
+    "支持 CI 门禁与插件扩展"
+  ],
+  "verified_cons": [
+    "仅适用于应用/服务，库与框架需自定义",
+    "大仓库扫描耗时长（单机可能数天），需 Sandbox 并行",
+    "误报率约 10–20%",
+    "需自备 API 额度，成本随规模上升",
+    "需一定安全与工程背景"
+  ],
+  "verified_faq": [
+    {
+      "q": "DeepSec 是免费的吗？",
+      "a": "是，DeepSec 完全免费开源（Apache-2.0），没有订阅或付费专业版；运行需自备 Claude/Codex API 凭据或 Vercel AI Gateway，分布式扫描可用 Vercel Sandbox（按量计费）。"
+    },
+    {
+      "q": "DeepSec 和传统安全工具有什么区别？",
+      "a": "DeepSec 用编码 Agent 做仓库级语义分析，理解代码上下文与数据流，能发现传统规则扫描漏掉的逻辑漏洞，并给出可操作修复建议；内置 revalidate 降低误报。"
+    },
+    {
+      "q": "DeepSec 支持哪些模型？",
+      "a": "默认使用 Claude Opus 4.7（max effort）与 GPT 5.5（xhigh reasoning），也兼容 Anthropic/OpenAI 的 cyber 微调模型及自带 Key；通过 Vercel AI Gateway 一个 Key 同时覆盖 Claude 与 Codex。"
+    },
+    {
+      "q": "使用 DeepSec 需要安全背景吗？",
+      "a": "它有 AI 辅助与清晰报告，新手可上手做基础扫描，但充分发挥价值（写自定义 matcher、解读高危发现、接入 CI）建议具备一定安全/工程背景。"
+    }
+  ],
+  "verified_tags": [
+    "网络安全",
+    "漏洞扫描",
+    "AI安全",
+    "SAST",
+    "开源",
+    "代码审计",
+    "CI/CD"
+  ],
+  "verified_category": "AI行业应用",
+  "source_urls": [
+    "https://github.com/vercel-labs/deepsec",
+    "https://vercel.com/blog/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base",
+    "https://www.everydev.ai/tools/deepsec"
+  ],
+  "verify_notes": "原 price 字段称「专业版$49/月/企业版定制」不实；DeepSec 完全免费开源（Apache-2.0），无订阅付费版。已修正价格。产品主体与描述相符。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "duolingo-max",
+      "harvey-ai",
+      "schole-ai"
+    ],
+    "verdict": "DeepSec 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：DeepSec 的 Agent 驱动的仓库级漏洞扫描 是亮点，价格 免费开源（Apache-2.0）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

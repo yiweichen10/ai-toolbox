@@ -1,0 +1,144 @@
+{
+  "name": "Seedream 5.0 Pro",
+  "slug": "seedream-5-0-pro",
+  "positioning": "免费AI绘画推荐：图层分离、交互式精准编辑",
+  "auto_positioning": true,
+  "emoji": "🔮",
+  "color": "#4A90D9",
+  "description": "Seedream 5.0 Pro 是字节跳动（ByteDance）Seed 团队于 2026 年 7 月发布的专业级多模态图像生成与编辑模型，主打可控生产：支持文生图 / 图生图、交互式精准编辑（点选、圈选、图层分离）、复杂信息可视化与十余种语言原生渲染，已在火山方舟、豆包、即梦上线。",
+  "category": "AI绘画",
+  "tags": [
+    "AI绘画",
+    "AI图像生成",
+    "图层分离",
+    "精准编辑",
+    "多语言文字"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "800万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://seed.bytedance.com/seedream5_0_pro",
+  "price": "API 按量 / 豆包·即梦免费额度",
+  "platform": "Web、API",
+  "pros": [
+    "编辑可控性强（图层分离、局部重绘）",
+    "文字渲染与密集信息图准确",
+    "多语种原生支持",
+    "面向生产 / 商业场景"
+  ],
+  "cons": [
+    "更细粒度文字渲染与像素级编辑仍有提升空间（官方承认）",
+    "独立第三方评测尚少",
+    "国内优先上线"
+  ],
+  "features": [
+    "文生图 / 图生图",
+    "交互式精准编辑（点选 / 圈选 / 草图 / 坐标标注）",
+    "图层分离",
+    "复杂信息可视化（信息图 / 图表）",
+    "真实影像与人像质感",
+    "原生多语种输入与渲染（十余种语言）"
+  ],
+  "related": [
+    "midjourney",
+    "dall-e-3",
+    "stable-diffusion",
+    "flux",
+    "adobe-firefly",
+    "leonardo-ai",
+    "jimeng-ai",
+    "tongyi-wanxiang"
+  ],
+  "faq": [
+    {
+      "q": "Seedream 5.0 Pro 怎么用？",
+      "a": "可在 seed.bytedance.com 项目主页、火山方舟体验中心（Doubao-Seedream-5.0-pro）或豆包 / 即梦中选择使用。"
+    },
+    {
+      "q": "Seedream 5.0 Pro 收费吗？",
+      "a": "通过火山方舟 API 按量计费；豆包、即梦提供免费体验额度。"
+    }
+  ],
+  "seo_keywords": [
+    "Seedream 5.0 Pro",
+    "Seedream 5.0 Pro免费版",
+    "Seedream 5.0 Pro怎么样",
+    "Seedream 5.0 Pro和DeepSeek哪个好",
+    "Seedream 5.0 Pro官网"
+  ],
+  "content": "# Seedream 5.0 Pro：字节跳动 Seed 团队的专业级 AI 图像生成模型\n\nSeedream 5.0 Pro 是字节跳动（ByteDance）Seed 团队推出的旗舰级 AI 图像生成与编辑模型，主打“从生成到生产”的完整图像工作流。它不是聊天机器人，也不是通用助手，而是面向设计师、营销人和内容创作者的图像生产工具。\n\n---\n\n## Seedream 5.0 Pro 是什么？\n\n简单来说，它是一个文字/图片驱动的高精度图像生成器。你输入一段描述或上传参考图，它能直接输出可用于海报、电商详情页、广告创意、社交媒体配图甚至印刷物料的成品图。官方将其定位为“多模态图像生成模型”，核心能力集中在图像生成、精准编辑和图层分离三大块。\n\n和普通文生图工具“抽卡式”的随机输出不同，Seedream 5.0 Pro 更强调可控性：你可以框选局部、用涂鸦或箭头标注修改区域，让模型只改目标位置，其余部分保持不变。\n\n---\n\n## 核心功能\n\n### 1. 文本/图像生成高质量视觉\n支持文生图和图生图，能够处理多主体、复杂构图、特定光影和镜头语言。生成结果在细节、质感和氛围上都有较高完成度，适合广告、电商、品牌视觉等商业场景。\n\n### 2. 交互式精准编辑\n通过选框、点、箭头、涂鸦或坐标标注目标区域，配合自然语言指令，实现局部重绘、内容替换、风格迁移等操作。修改只影响指定区域，背景和其他元素保持原样。\n\n### 3. 图层分离\n可以把生成或上传的图片拆分为 10 个以上独立可编辑图层（文字、主体、背景、装饰等），并智能补全被遮挡部分，方便在 PS/Figma 中继续精修。\n\n### 4. 原生多语言文字渲染\n支持中文、英文、阿拉伯语、日语、韩语、泰语等十余种语言直接在图中生成文字，排版整齐、字形准确，适合做海报标题、菜单、价格标签等多语言物料。\n\n### 5. 高密度信息图与 UI 设计\n能根据提示自动规划信息层级，输出信息图、教育海报、电商长图、UI 首屏等需要复杂版面组织的视觉内容。\n\n### 6. 多种比例与质量档位\n支持 1:1、16:9、9:16、4:5 等常见比例，以及基础和高清档位，可以直接按发布尺寸生成，省去二次裁剪。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 定位 | 适合场景 |\n|------|------|---------|\n| Seedream 5.0 Lite | 轻量快速生成 | 日常配图、草图、快速预览 |\n| Seedream 5.0 Pro | 旗舰可控生成 | 商业海报、产品摄影、图层编辑、多语言文字 |\n\n官方采用按量计费的 Credits 模式。新用户注册后通常可获得少量免费额度试用；后续按生成的张数、分辨率、模型档位扣除积分，失败生成一般自动返还。具体价格和套餐以 seed.bytedance.com 实时页面为准。\n\n---\n\n## 值不值得用？\n\n**优点：**\n- 可控编辑能力强，局部重绘和图层分离对设计师非常实用。\n- 多语言文字渲染稳定，适合出海/多语言物料。\n- 信息图和电商长图生成效果可用度高。\n- 生成结果质感接近商业摄影/设计成品。\n\n**缺点：**\n- 按量计费，高频使用成本不低。\n- 对提示词有一定要求，复杂场景需要多次调整。\n- 部分高级功能（如图层分离）的学习成本略高。\n\n**总体结论：** 如果你需要的是“能直接用于发布”的商业图像，而不是随手玩玩的概念图，Seedream 5.0 Pro 是 2026 年值得重点试用的国产图像模型之一。\n\n---\n\n## 使用建议\n\n- 写提示词时把需要出现在画面中的文字用引号括起来，模型识别更稳。\n- 做产品/人像图时上传 1-10 张参考图，保持角色、产品、风格一致。\n- 需要二次设计时开启图层分离，导出后在 PS/Figma 继续精修。\n- 先用免费额度试效果，确认符合需求后再购买 Credits。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n- 平面设计师、电商运营、广告创意、出海营销团队\n- 内容创作者、自媒体、品牌视觉从业者\n\n**可考虑：**\n- 普通用户偶尔做配图、社交媒体封面\n\n**不推荐：**\n- 只需要聊天或文字生成，完全没有图像需求的人\n- 预算有限且只需要简单文生图的用户（免费 Lite 或其它轻量工具可能更划算）\n\n---\n\n总的来说，Seedream 5.0 Pro 的优势在于“可控”和“可生产”：不是给你一张可能好看的图，而是给你一张能拆分、能编辑、能直接用的图。如果你的工作流里本来就有 PS/Figma/电商后台，它的图层分离和多语言文字会让效率明显提升。",
+  "published": true,
+  "created_date": "2026-07-16",
+  "published_date": "2026-07-16",
+  "verified_url": "https://seed.bytedance.com/seedream5_0_pro",
+  "verified_publisher": "字节跳动（ByteDance）Seed 团队",
+  "verified_what": "字节跳动 Seed 团队 2026 年 7 月发布的多模态图像创作模型，主打“从生成到生产”的可控图像生成与精准编辑。",
+  "verified_price": "通过火山方舟（Volcengine）API 按量计费；亦在豆包、即梦免费体验额度内使用。无独立订阅价。",
+  "verified_platform": [
+    "Web（seed.bytedance.com）",
+    "火山方舟 API",
+    "豆包 App",
+    "即梦"
+  ],
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "文生图 / 图生图",
+    "交互式精准编辑（点选 / 圈选 / 草图 / 坐标标注）",
+    "图层分离",
+    "复杂信息可视化（信息图 / 图表）",
+    "真实影像与人像质感",
+    "原生多语种输入与渲染（十余种语言）"
+  ],
+  "verified_description": "Seedream 5.0 Pro 是字节跳动（ByteDance）Seed 团队于 2026 年 7 月发布的专业级多模态图像生成与编辑模型，主打可控生产：支持文生图 / 图生图、交互式精准编辑（点选、圈选、图层分离）、复杂信息可视化与十余种语言原生渲染，已在火山方舟、豆包、即梦上线。",
+  "price_verified": true,
+  "verified_pros": [
+    "编辑可控性强（图层分离、局部重绘）",
+    "文字渲染与密集信息图准确",
+    "多语种原生支持",
+    "面向生产 / 商业场景"
+  ],
+  "verified_cons": [
+    "更细粒度文字渲染与像素级编辑仍有提升空间（官方承认）",
+    "独立第三方评测尚少",
+    "国内优先上线"
+  ],
+  "verified_faq": [
+    {
+      "q": "Seedream 5.0 Pro 怎么用？",
+      "a": "可在 seed.bytedance.com 项目主页、火山方舟体验中心（Doubao-Seedream-5.0-pro）或豆包 / 即梦中选择使用。"
+    },
+    {
+      "q": "Seedream 5.0 Pro 收费吗？",
+      "a": "通过火山方舟 API 按量计费；豆包、即梦提供免费体验额度。"
+    }
+  ],
+  "verified_tags": [
+    "AI绘画",
+    "AI图像生成",
+    "图层分离",
+    "精准编辑",
+    "多语言文字"
+  ],
+  "verified_category": "AI绘画",
+  "source_urls": [
+    "https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro",
+    "https://console.volcengine.com/ark/region:ark+cn-beijing/model/detail?Id=doubao-seedream-5-0-pro",
+    "https://www.chooseai.net/news/4948"
+  ],
+  "verify_notes": "版本真实存在（2026-07-09 发布）。现有 description/content 准确。多源确认（官方博客、火山方舟、媒体报道）。",
+  "content_verified": true,
+  "url_previous": "https://seed.bytedance.com/zh/seedream5_0_pro",
+  "compare_section": {
+    "competitors": [
+      "midjourney",
+      "miaohua",
+      "comfyui"
+    ],
+    "verdict": "Seedream 5.0 Pro 与 Midjourney、秒画、ComfyUI 同属AI绘画赛道：Seedream 5.0 Pro 的 文生图 / 图生图 是亮点，价格 API 按量 / 豆包·即梦免费额度；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

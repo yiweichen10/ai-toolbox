@@ -1,0 +1,151 @@
+{
+  "name": "Autify",
+  "slug": "autify",
+  "emoji": "🔧",
+  "color": "#4F46E5",
+  "description": "Autify是AI驱动的端到端测试自动化平台，无需写代码，录屏即可创建测试用例，AI自动识别UI变化并修复脚本，降低维护成本。支持Web、iOS、Android，提供跨平台并行测试与CI/CD集成。定价：14天免费试用；Autify for Mobile公开价Starter $199/月(年付$149)、Pro $599/月(年付$499)、Enterprise定制；Web/Nexus需联系销售询价。适合UI迭代频繁、想省测试维护成本的团队；免费额度受限，复杂交互仍需人工。",
+  "category": "AI编程",
+  "tags": [
+    "自动化测试",
+    "AI测试",
+    "Web测试",
+    "移动端测试",
+    "无代码测试"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "约45万/月",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://autify.com",
+  "price": "14天免费试用；移动版$199/月起（Web版需询价）",
+  "platform": "Web/Windows/macOS/Linux",
+  "pros": [
+    "AI自动修复降低维护成本",
+    "支持Web/iOS/Android",
+    "无代码录制易上手",
+    "智能UI变化检测",
+    "CI/CD集成顺畅"
+  ],
+  "cons": [
+    "公开价格偏高(移动版$199/月起)",
+    "复杂交互仍需人工",
+    "亚太节点偶尔不稳定",
+    "Web版价格不透明需询价"
+  ],
+  "features": [
+    "AI测试用例生成",
+    "智能UI元素识别与变化检测",
+    "自动脚本修复维护",
+    "跨平台并行测试",
+    "测试报告与分析",
+    "REST API与CI/CD集成",
+    "无代码录制"
+  ],
+  "related": [],
+  "faq": [
+    {
+      "q": "Autify支持哪些测试类型？",
+      "a": "Web与移动(iOS/Android)的功能、回归、UI测试。"
+    },
+    {
+      "q": "AI自动修复效果如何？",
+      "a": "可识别UI变化自动更新脚本，复杂场景仍需人工审核。"
+    },
+    {
+      "q": "有免费版本吗？",
+      "a": "14天免费试用，另有功能受限的免费档。"
+    },
+    {
+      "q": "支持哪些CI/CD工具？",
+      "a": "支持Jenkins、GitHub Actions、GitLab CI、CircleCI等。"
+    }
+  ],
+  "seo_keywords": [
+    "Autify",
+    "Autify自动化测试",
+    "Autify AI测试平台",
+    "Autify vs Cypress",
+    "Autify移动端测试工具"
+  ],
+  "content": "# Autify是什么？\n\n简单说，Autify是一款用AI帮你做自动化测试的工具。你不需要写代码，用拖拽的方式就能创建测试用例，它能自动帮你检测界面变化、修护测试脚本，省去很多手工维护的麻烦。\n\n以前做自动化测试最头疼的就是UI一改，测试脚本全废，得重新写。Autify就是来解决这个痛点的——它会用AI识别界面元素的变化，然后自动更新测试路径。据官方介绍，这东西能让维护成本降低八成以上，具体数字咱不深究，但确实能省不少重复劳动。\n\n支持Web、iOS、Android三个平台，2026年还加了跨浏览器并行测试和AI生成测试用例的功能，测试跑起来更快更省时间。\n\n---\n\n## 核心功能\n\n### 1. AI自动生成测试用例\n\n你只需要告诉Autify要测什么流程，它就能帮你生成测试用例。不用自己动手写脚本，点点鼠标就能跑起来。对新手比较友好，但复杂场景可能还是需要自己调整一下。\n\n### 2. 智能UI变化检测\n\n这是Autify的核心卖点。页面元素变了的，它能自动识别出来，然后更新测试路径。据用户反馈，这个功能在UI迭代频繁的项目里确实能省很多手动修改脚本的时间。\n\n### 3. 自动修复测试脚本\n\n脚本跑失败了，AI会尝试自动修复，不用你从头排查。很多时候就是元素定位变了，Autify能自己搞定，不用人介入。不过复杂交互场景有时候还是会失败，需要手动调整。\n\n### 4. 跨平台并行测试\n\nWeb、iOS、Android可以同时跑，还能跨浏览器并行。据官方介绍，2026年这个功能做了优化，效率提升明显。实际用起来，并行执行确实比串行快很多，省时间。\n\n### 5. CI/CD集成\n\n支持REST API，能和Jenkins、GitHub Actions这些CI/CD工具对接。测试可以嵌入到开发流程里，代码提交自动跑测试，流程更顺滑。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 免费版 | 专业版 | 企业版 |\n|------|--------|--------|--------|\n| **测试场景数** | 有限制 | 较多 | 不限 |\n| **AI功能** | 基础 | 完整 | 完整 |\n| **并行测试** | 不支持 | 支持 | 支持 |\n| **CI/CD集成** | 有限 | 完整 | 完整 |\n| **技术支持** | 社区 | 邮件支持 | 专属客服 |\n| **价格** | 免费 | 付费 | 定制报价 |\n\n免费版功能比较基础，测试场景数量有限制，如果项目规模大或者用例多，大概率需要升级到付费版。\n\n---\n\n## 值不值得用？\n\n### 优点\n\n- **维护成本确实降了**：AI自动修复和UI变化检测这两个功能，对经常改界面的团队很实用\n- **多平台覆盖**：Web、iOS、Android一次搞定，不用找多个工具\n- **门槛低**：不用写代码，拖拽就能建测试用例，团队里非技术的也能上手\n- **CI/CD集成顺畅**：和现有开发流程衔接自然\n\n### 缺点\n\n- **免费版太受限**：场景数卡得比较紧，小团队想白嫖可能不够用\n- **复杂场景还是得人介入**：有些交互逻辑比较复杂的测试，AI处理不来，得自己动手\n- **亚太地区服务器偶尔慢**：有用户反馈亚太节点响应不稳定，跑大规模测试时可能有点影响\n\n### 总体结论\n\nAutify适合那种UI迭代频繁、想省测试维护成本的团队。它不能完全替代人工，但能帮你省下不少重复劳动。免费版薅羊毛可以试试，但正经项目用建议还是上付费版。\n\n---\n\n## 使用建议\n\n1. **从小场景开始**：先拿一两个简单流程试试AI生成和自动修复的效果，评估完再扩大范围\n2. **复杂场景预留人工时间**：别指望AI搞定所有东西，复杂的交互测试还是得自己写，完了让它辅助维护\n3. **关注亚太节点状态**：如果你的用户主要在亚太，测试跑起来慢的话，可以考虑反馈给官方或者调整测试策略\n4. **结合CI/CD使用**：把测试嵌入CI流程里，代码提交自动跑，能早点发现问题\n\n---\n\n## 适合谁用？\n\n**推荐**：UI迭代频繁的Web/移动产品团队、测试资源有限的初创公司、想降低测试维护成本的团队\n\n**可考虑**：测试场景非常复杂、需要深度定制的企业；预算紧张且测试需求简单的项目\n\n**不推荐**：测试用例极少的手动测试场景、对亚太地区响应速度要求极高的实时系统\n\n## 常见问题（FAQ）\n\n**Autify支持哪些测试类型？**\n\nWeb与移动(iOS/Android)的功能、回归、UI测试。\n\n**AI自动修复效果如何？**\n\n可识别UI变化自动更新脚本，复杂场景仍需人工审核。\n\n**有免费版本吗？**\n\n14天免费试用，另有功能受限的免费档。\n\n**支持哪些CI/CD工具？**\n\n支持Jenkins、GitHub Actions、GitLab CI、CircleCI等。",
+  "published": true,
+  "created_date": "2026-05-18",
+  "published_date": "2026-05-18",
+  "verified_url": "https://autify.com",
+  "verified_publisher": "Autify, Inc.",
+  "verified_what": "Autify是AI驱动的端到端测试自动化平台（Autify Nexus / Autify for Mobile），通过录屏与AI自愈维护测试脚本，支持Web与移动应用的功能、回归、UI测试，可集成CI/CD。",
+  "verified_price": "14天免费试用；公开定价Autify for Mobile：Starter $199/月(年付$149)、Pro $599/月(年付$499)、Enterprise定制。Web/Nexus未公开统一起价（需联系销售）。",
+  "verified_platform": "Web / Windows / macOS / Linux / 移动(iOS、Android)",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "AI测试用例生成",
+    "智能UI元素识别与变化检测",
+    "自动脚本修复维护",
+    "跨平台并行测试",
+    "测试报告与分析",
+    "REST API与CI/CD集成",
+    "无代码录制"
+  ],
+  "verified_description": "Autify是AI驱动的端到端测试自动化平台，无需写代码，录屏即可创建测试用例，AI自动识别UI变化并修复脚本，降低维护成本。支持Web、iOS、Android，提供跨平台并行测试与CI/CD集成。定价：14天免费试用；Autify for Mobile公开价Starter $199/月(年付$149)、Pro $599/月(年付$499)、Enterprise定制；Web/Nexus需联系销售询价。适合UI迭代频繁、想省测试维护成本的团队；免费额度受限，复杂交互仍需人工。",
+  "content_flags": "PRICING_PARTIAL",
+  "verified_pros": [
+    "AI自动修复降低维护成本",
+    "支持Web/iOS/Android",
+    "无代码录制易上手",
+    "智能UI变化检测",
+    "CI/CD集成顺畅"
+  ],
+  "verified_cons": [
+    "公开价格偏高(移动版$199/月起)",
+    "复杂交互仍需人工",
+    "亚太节点偶尔不稳定",
+    "Web版价格不透明需询价"
+  ],
+  "verified_faq": [
+    {
+      "q": "Autify支持哪些测试类型？",
+      "a": "Web与移动(iOS/Android)的功能、回归、UI测试。"
+    },
+    {
+      "q": "AI自动修复效果如何？",
+      "a": "可识别UI变化自动更新脚本，复杂场景仍需人工审核。"
+    },
+    {
+      "q": "有免费版本吗？",
+      "a": "14天免费试用，另有功能受限的免费档。"
+    },
+    {
+      "q": "支持哪些CI/CD工具？",
+      "a": "支持Jenkins、GitHub Actions、GitLab CI、CircleCI等。"
+    }
+  ],
+  "verified_tags": [
+    "自动化测试",
+    "AI测试",
+    "Web测试",
+    "移动端测试",
+    "无代码测试"
+  ],
+  "verified_category": "AI编程",
+  "conflict_note": "原数据称付费版$49/月起，但官网公开价中Autify for Mobile为$199/月起，Web/Nexus未公开统一起价(需询价)。$49/月与官方不符，已按可见公开价修正并标注Web版需询价。",
+  "source_urls": [
+    "https://autify.com/pricing",
+    "https://nocode.autify.com/pricing",
+    "https://help.autify.com/mobile/docs/frequently-asked-questions-about-autifys-free-trial"
+  ],
+  "verify_notes": "工具真实；原$49/月起定价偏低，官方移动版起价$199/月。",
+  "content_verified": true,
+  "price_verified": true,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Autify 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Autify 的 AI测试用例生成 是亮点，价格 14天免费试用；移动版$199/月起（Web版需询价）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

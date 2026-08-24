@@ -1,0 +1,104 @@
+{
+  "name": "Windsurf（已更名 Devin Desktop）",
+  "slug": "windsurf",
+  "emoji": "💻",
+  "color": "#acbffa",
+  "description": "Windsurf 已于 2026 年 6 月正式更名为 Devin Desktop（Cognition 出品），是基于 VS Code 的 AI 编程 IDE，内置 Cascade 智能体，支持多文件改代码、跑测试、装依赖。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "AI编程"
+    },
+    {
+      "text": "AI生成"
+    },
+    {
+      "text": "付费"
+    }
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "2万",
+  "badge": {
+    "type": "hot",
+    "text": null
+  },
+  "url": "https://windsurf.com (永久重定向→devin.ai/desktop)",
+  "price": "Free 免费（有限额度 + 无限 Tab 补全）；Pro $20/月（全模型访问 + 云端代理）；Max $200/月（更高额度）；Teams $80/月起 + 每全席位 $40/月。改名后定价沿用，未因更名涨价外另行调整。",
+  "platform": "Windows / macOS / Linux（桌面端）/ VS Code 扩展 / JetBrains 扩展",
+  "pros": [
+    "免费版功能强大",
+    "Cascade AI体验好",
+    "支持多模型",
+    "轻量快速",
+    "VS Code插件兼容"
+  ],
+  "cons": [
+    "生态不如Cursor",
+    "知名度较低",
+    "Agent模式待完善",
+    "大项目性能一般",
+    "插件生态较少"
+  ],
+  "features": [
+    "AI代码补全",
+    "Cascade Chat",
+    "Agent模式",
+    "多模型切换",
+    "终端集成",
+    "代码理解"
+  ],
+  "related": [
+    "sora",
+    "kimi"
+  ],
+  "content": "## Windsurf（已更名 Devin Desktop） 是什么？\nWindsurf 已于 2026 年 6 月 2 日正式更名为 **Devin Desktop**（Cognition 出品）。它仍然是你熟悉的那个 AI 编程 IDE——基于 VS Code 代码基座，深度集成 Cascade 智能体——只是统一到了 Devin 品牌下。windsurf.com 与 codeium.com 现在都会重定向到 devin.ai。\n\n改名后产品形态不变：完整的编辑器、插件、快捷键、工作流都原样保留，只是主视图多了个 Agent Command Center（Spaces、Kanban 视图、多智能体管理）。简单说，它从「一个很强的 AI 编辑器」变成了「管理你所有本地/云端 Agent 的指挥中心」。\n\n## 核心功能\n\n1. **Cascade / Devin Local 智能体**：用自然语言描述需求（比如给项目加用户登录），它会规划步骤、建文件、装包、跑测试，在一个流程里完成多步改动。改名后的本地代理叫 Devin Local，用 Rust 重写，比旧 Cascade 更省 token。\n2. **内联补全**：实时智能补全，按 Tab 接受，能理解整个项目上下文。\n3. **多模型切换**：可在 OpenAI、Claude、Gemini 以及 Cognition 自家的 SWE 系列模型之间按需切换。\n4. **Agent Command Center**：在单一 Kanban 视图里管理所有本地和云端 Agent，支持 Spaces 共享上下文。\n5. **全 IDE 兼容**：扩展、LSP、键位绑定与 Windsurf/VS Code 向后兼容，JetBrains 系（IntelliJ、PyCharm、WebStorm）也继续可用。\n\n## 定价\n\n改名不影响定价，现有套餐自动延续：\n\n- **Free**：免费，有限 Agent 额度 + 无限 Tab 补全 + 有限模型\n- **Pro**：$20/月（注：改名前为 $15/月，已随 2026 年调价涨到 $20），全模型访问、云端代理、SWE 1.6 及开源模型\n- **Max**：$200/月，额度显著高于 Pro\n- **Teams**：$80/月起步，每全席位额外 $40/月，含管理后台与共享额度\n- **Enterprise**：定制报价\n\n## 适合谁\n\n适合写代码、想要 Cursor 级别 AI 编程体验的人。免费档真心能用；重度用户（让 Agent 干改一整个模块的活）再考虑 Pro/Max。它和 Cursor 常被拿来比，差别主要在 Agent 交互手感与 Cognition/Devin 生态路线图，而非价格（两者 Pro 现在都是 $20/月）。\n\n## 小结\n\nWindsurf = 2026 年 6 月更名后的 **Devin Desktop**，Cognition 出品的 AI 编程 IDE，强项是 Cascade/Devin Local 带来的多步自动编码。平台为 Windows/macOS/Linux 桌面端加 VS Code/JetBrains 扩展，**没有 iOS/Android 版**。官网：devin.ai/desktop（windsurf.com 会跳转过去）。\n\n## 常见问题（FAQ）\n\n**Windsurf是什么？**\n\nWindsurf是Codeium推出的AI代码编辑器，和Cursor类似。特色在于Cascade功能——AI可以连续执行多步骤操作，自动处理依赖关系。价格更便宜（$15/月），是Cursor的有力竞争者。\n\n**Windsurf和Cursor哪个好？**\n\nCursor生态更成熟、用户更多、AI能力略强。Windsurf价格更低（$15 vs $20）、Cascade流程自动化更流畅。两者都基于VS Code，可以都试试再决定。",
+  "published": true,
+  "faq": [
+    {
+      "question": "Windsurf是什么？",
+      "answer": "Windsurf是Codeium推出的AI代码编辑器，和Cursor类似。特色在于Cascade功能——AI可以连续执行多步骤操作，自动处理依赖关系。价格更便宜（$15/月），是Cursor的有力竞争者。"
+    },
+    {
+      "question": "Windsurf和Cursor哪个好？",
+      "answer": "Cursor生态更成熟、用户更多、AI能力略强。Windsurf价格更低（$15 vs $20）、Cascade流程自动化更流畅。两者都基于VS Code，可以都试试再决定。"
+    }
+  ],
+  "created_date": "2026-04-19",
+  "verified_url": "https://windsurf.com (永久重定向→devin.ai/desktop)",
+  "verified_publisher": "Cognition (2025-12收购Codeium/Windsurf, 2026-06-02更名Devin Desktop)",
+  "verified_what": "Cognition出品的AI编程IDE。2026年6月从Windsurf更名为Devin Desktop，转型为Agent Command Center(Kanban统一管理本地+云端代理)。支持ACP开放协议运行Codex/Claude Agent等第三方代理。内置SWE-1.7编程模型(2026-07-08发布)、Devin Local代理(替代已退役Cascade)、Fast Context代码检索。",
+  "verified_price": "Free $0(轻量代理配额+无限Tab补全) / Pro $20/月(全模型+云代理+SWE-1.7免费) / Max $200/月(极高配额) / Teams $80/月base+$40/全席位/月 / Enterprise 询价(SSO+VPC部署)",
+  "verified_platform": "Windows/macOS/Linux(桌面端)、VS Code扩展、JetBrains扩展",
+  "verified_features": [
+    "Agent Command Center(Kanban多代理管理)",
+    "Devin Local代理(Rust重写,替代7/1退役的Cascade)",
+    "SWE-1.7编码模型(免费)",
+    "ACP开放协议(Codex/Claude Agent/OpenCode等第三方代理)",
+    "Spaces(共享上下文+Git worktrees)",
+    "Fast Context(毫秒级代码检索)",
+    "Supercomplete智能Tab补全"
+  ],
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "source_urls": [
+    "https://windsurf.com",
+    "https://windsurf.com/blog/windsurf-is-now-devin-desktop",
+    "https://docs.windsurf.com/windsurf/",
+    "https://automationatlas.io/answers/windsurf-pricing-explained-2026/",
+    "https://aivy.com.au/resources/cursor-vs-windsurf-devin-desktop",
+    "https://awesomeagents.ai/reviews/review-devin-desktop"
+  ],
+  "verify_notes": "5个独立源定价完全一致。SWE-1.7于2026-07-08发布替代SWE-1.6。Cascade 7/1正式退役。Pro从$15→$20(2026-03)。定价模式从credits改为配额制。",
+  "content_verified": true,
+  "url_previous": "https://windsurf.com（重定向至devin.ai/desktop）",
+  "compare_section": {
+    "competitors": [
+      "tongyi-lingma",
+      "cline",
+      "codex-cli"
+    ],
+    "verdict": "Windsurf（已更名 Devin Desktop） 与 通义灵码、Cline、Codex CLI 同属AI编程赛道。在性价比上，Windsurf（已更名 Devin Desktop）（Free 免费（有限额度 + 无限 Tab 补全）；Pro $20/月（全模型访问 + 云端代理）；Max $200/月（更高额度）；Teams $80/月起 + 每全席位 $40/月。改名后定价沿用，未因更名涨价外另行调整。）门槛更低；口碑方面，Windsurf（已更名 Devin Desktop）（⭐ 4.7）领先；Windsurf（已更名 Devin Desktop） 的优势在于Cognition出品的AI编程IDE。2026年6月从Windsurf更名为Devin Desktop，转型为Agen，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

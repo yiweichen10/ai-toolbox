@@ -1,0 +1,161 @@
+{
+  "name": "Qwen-Agent",
+  "slug": "qwen-agent",
+  "positioning": "免费AI智能体平台，代码解释器+示例应用好用吗",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#3B82F6",
+  "description": "阿里通义千问开源的 Agent 开发框架，基于 Qwen≥3.0 系列模型，提供 Function Calling、MCP、代码解释器、RAG 与示例应用，可自托管。",
+  "category": "AI智能体",
+  "tags": [
+    "开源",
+    "智能体框架",
+    "Qwen",
+    "MCP",
+    "RAG",
+    "Agent开发"
+  ],
+  "rating": "⭐4.5",
+  "visits": "85万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://github.com/QwenLM/Qwen-Agent",
+  "price": "免费开源（模型按 DashScope/API 计费）",
+  "platform": "Web/API/Python",
+  "pros": [
+    "完全免费开源，社区活跃（GitHub 16k+ Star）",
+    "基于强 Qwen 模型，中文表现出色",
+    "功能全面（工具调用/MCP/RAG/代码解释器）",
+    "可自托管，灵活部署",
+    "与阿里云生态衔接方便"
+  ],
+  "cons": [
+    "自托管需 GPU / 环境配置",
+    "中文文档弱于英文",
+    "生态成熟度不及 LangChain",
+    "需要一定开发能力"
+  ],
+  "features": [
+    "Function Calling / 工具调用",
+    "MCP 协议支持",
+    "代码解释器",
+    "RAG 检索增强",
+    "多模态与记忆能力",
+    "示例应用（浏览器助手、自定义助手）"
+  ],
+  "related": [
+    "dify",
+    "coze",
+    "langchain",
+    "langgraph"
+  ],
+  "faq": [
+    {
+      "q": "Qwen-Agent 是什么？",
+      "a": "阿里通义千问开源的 Agent 开发框架，基于 Qwen≥3.0 系列模型，提供 Function Calling、MCP、代码解释器、RAG、浏览器助手等。"
+    },
+    {
+      "q": "免费吗？",
+      "a": "完全免费开源（Apache 2.0），可自托管；调用模型需自备 DashScope / OpenAI 兼容服务或本地模型。"
+    },
+    {
+      "q": "和 Coze 区别？",
+      "a": "Qwen-Agent 是开源本地部署框架，适合开发者；Coze 是字节云端零代码平台。"
+    },
+    {
+      "q": "如何部署？",
+      "a": "pip install qwen-agent 或克隆 GitHub 仓库，需 Python 3.10+。"
+    }
+  ],
+  "seo_keywords": [
+    "Qwen-Agent",
+    "Qwen-Agent开源",
+    "Qwen-Agent教程",
+    "阿里AI Agent框架",
+    "Qwen-Agent vs LangChain"
+  ],
+  "content": "# Qwen-Agent是什么？\n\n简单说，Qwen-Agent是阿里巴巴开源的一个AI Agent开发框架，底层用的是他们家自己的通义千问2.5大模型。如果你之前用过LangChain或者AutoGPT这类工具，可以把Qwen-Agent理解为类似的东西——它帮你把大模型变得更\"有用\"，能调用工具、处理多种类型的信息、还能让多个AI Agent配合干活。\n\n它比较适合想自己搭建AI应用、但又不想从零写底层逻辑的开发者。官方说法是2026年持续更新加强了多智能体协作和自动化工作流这块，实际用起来的感觉是——确实比早期版本省心不少。\n\n---\n\n## 核心功能\n\n**1. 多智能体协作框架**\n\n这个是Qwen-Agent比较突出的点。你可以让多个Agent分工合作，比如一个负责理解用户需求，一个负责调用API，另一个负责整理输出结果。官方叫\"多智能体协作\"，实际场景中更像是流水线作业。适合复杂任务拆解，但不是那种\"一个Agent解决所有问题\"的思路。\n\n**2. 工具调用与Function Calling**\n\n支持让大模型主动调用外部工具。比如让它查天气、读文件、调其他API。这个能力本身不算新鲜，但Qwen-Agent做得比较无缝，配置好工具描述后模型就能自动触发，不需要写一堆胶水代码。\n\n**3. 多模态理解与生成**\n\n能处理图片、音频这些非文字内容。官方强调是基于Qwen 2.5的多模态能力，具体效果取决于你用的模型版本。处理图像描述、简单问答这些场景够用，但要是对标专门的视觉模型，可能还需要再评估。\n\n**4. RAG检索增强**\n\n内置了检索增强生成的能力，可以接自己的知识库。对于企业场景比较友好——不用把所有东西都塞进模型上下文，直接查资料再生成答案，成本和效果都更可控。\n\n**5. 自动化工作流编排**\n\n这个是2026年更新的重点。可以把多个步骤串成自动化流程，比如\"用户提问 → 查知识库 → 调工具 → 生成回答 → 格式化输出\"。不用写代码，通过配置就能完成一些常见场景的自动化。\n\n---\n\n## 版本/套餐对比\n\n| 特性 | 开源版 | 阿里云付费版 |\n|-----|--------|-------------|\n| 模型基础 | Qwen 2.5 开源模型 | Qwen 2.5 旗舰/Plus模型 |\n| 多智能体协作 | ✅ 支持 | ✅ 支持，性能优化 |\n| 工具调用 | ✅ 支持 | ✅ 支持，集成更多阿里云服务 |\n| 多模态能力 | ✅ 基础版 | ✅ 增强版 |\n| RAG | ✅ 需自行部署 | ✅ 云端托管，开箱即用 |\n| 工作流编排 | ✅ 社区版功能 | ✅ 图形化编排，付费保障 |\n| 技术支持 | 社区论坛 | 官方工单响应 |\n| 部署方式 | 完全自托管 | 云端API / 私有化部署 |\n\n开源版基本功能都有，付费版主要优势在于更强的模型、云端托管的便捷性，以及企业级支持。个人开发者或者小团队用开源版完全够用。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 模型底子确实强，Qwen 2.5在中文理解这块表现不错，生成质量有保障\n- 开源免费，社区挺活跃，遇到问题能在GitHub上找到不少参考\n- 文档整体还算完善，英文比中文更全，但基本够用\n- 跟阿里云其他服务衔接方便，如果你本身就在用阿里云，部署成本低\n- 多模态、工具调用、编排这些功能都内置了，不用自己造轮子\n\n**缺点：**\n\n- 硬件门槛摆在那儿，跑起来需要GPU，本地部署对机器有要求\n- 中文文档确实比英文弱一些，有些新功能的说明可能只有英文版\n- 生态系统还在成长中，第三方插件、模板这些没LangChain那么丰富\n\n**总体结论：** 对于在阿里云生态内或者对中文AI应用有需求的开发者，Qwen-Agent是个值得尝试的选择。开源版白嫖不亏，付费版看你的规模和预算。如果你是追求生态成熟度，可能还是LangChain更稳；但如果看重模型效果和阿里云集成，Qwen-Agent完全能打。\n\n---\n\n## 使用建议\n\n1. **先从开源版入手**——本地装一个Mini模型跑跑看，感受一下工具调用和编排能力，再决定要不要上大模型。\n\n2. **硬件准备**——至少要有一张能打的显卡，显存16G往上会比较稳妥。要不然跑起来会很痛苦。\n\n3. **阿里云用户优先**——如果你本来就有阿里云账号，直接用他们的付费版会省很多部署和调试的破事儿。\n\n4. **英文文档备着**——遇到中文写得不明确的地方，去翻英文版，通常信息更全。\n\n5. **从小场景开始**——别一上来就搞复杂的多智能体协作，先跑通一个简单的工具调用流程再说。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n\n- 已经在用阿里云服务的团队\n- 需要做中文AI应用的开发者\n- 想快速搭建企业内部AI助手的公司\n\n**可考虑：**\n\n- 对硬件资源有限的个人开发者（可以先试试云端API版本）\n- 需要丰富第三方插件生态的用户（可以对比LangChain）\n\n**不推荐：**\n\n- 完全没有技术背景的小白用户（上手有一定门槛）\n- 对硬件完全没有条件支撑、也不考虑云端方案的场景\n\n## 常见问题（FAQ）\n\n**Qwen-Agent 是什么？**\n\n阿里通义千问开源的 Agent 开发框架，基于 Qwen≥3.0 系列模型，提供 Function Calling、MCP、代码解释器、RAG、浏览器助手等。\n\n**免费吗？**\n\n完全免费开源（Apache 2.0），可自托管；调用模型需自备 DashScope / OpenAI 兼容服务或本地模型。\n\n**和 Coze 区别？**\n\nQwen-Agent 是开源本地部署框架，适合开发者；Coze 是字节云端零代码平台。\n\n**如何部署？**\n\npip install qwen-agent 或克隆 GitHub 仓库，需 Python 3.10+。",
+  "published": true,
+  "created_date": "2026-05-02",
+  "published_date": "2026-05-02",
+  "verified_url": "https://github.com/QwenLM/Qwen-Agent",
+  "verified_publisher": "阿里巴巴通义千问团队 (Qwen Team / Alibaba)",
+  "verified_what": "阿里通义千问开源的 Agent 开发框架，基于 Qwen≥3.0 系列模型，提供 Function Calling、MCP、代码解释器、RAG 与浏览器助手等能力。",
+  "verified_price": "完全免费开源（Apache 2.0），可自托管；调用模型需自备 DashScope / OpenAI 兼容 / 本地模型服务（按模型计费）。",
+  "verified_platform": "Python / API / 自托管 / Web UI（Gradio）",
+  "verified_features": [
+    "Function Calling / 工具调用",
+    "MCP 协议支持",
+    "代码解释器",
+    "RAG 检索增强",
+    "多模态与记忆能力",
+    "示例应用（浏览器助手、自定义助手）"
+  ],
+  "verified_description": "阿里通义千问开源的 Agent 开发框架，基于 Qwen≥3.0 系列模型，提供 Function Calling、MCP、代码解释器、RAG 与示例应用，可自托管。",
+  "content_flags": "描述基于'通义千问2.5'，现已升级为 Qwen≥3.0 系列（含 2026 年开源的 Qwen3.5）。",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "暂无权威外部评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全免费开源，社区活跃（GitHub 16k+ Star）",
+    "基于强 Qwen 模型，中文表现出色",
+    "功能全面（工具调用/MCP/RAG/代码解释器）",
+    "可自托管，灵活部署",
+    "与阿里云生态衔接方便"
+  ],
+  "verified_cons": [
+    "自托管需 GPU / 环境配置",
+    "中文文档弱于英文",
+    "生态成熟度不及 LangChain",
+    "需要一定开发能力"
+  ],
+  "verified_faq": [
+    {
+      "q": "Qwen-Agent 是什么？",
+      "a": "阿里通义千问开源的 Agent 开发框架，基于 Qwen≥3.0 系列模型，提供 Function Calling、MCP、代码解释器、RAG、浏览器助手等。"
+    },
+    {
+      "q": "免费吗？",
+      "a": "完全免费开源（Apache 2.0），可自托管；调用模型需自备 DashScope / OpenAI 兼容服务或本地模型。"
+    },
+    {
+      "q": "和 Coze 区别？",
+      "a": "Qwen-Agent 是开源本地部署框架，适合开发者；Coze 是字节云端零代码平台。"
+    },
+    {
+      "q": "如何部署？",
+      "a": "pip install qwen-agent 或克隆 GitHub 仓库，需 Python 3.10+。"
+    }
+  ],
+  "verified_tags": [
+    "开源",
+    "智能体框架",
+    "Qwen",
+    "MCP",
+    "RAG",
+    "Agent开发"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://github.com/QwenLM/Qwen-Agent",
+    "https://github.com/QwenLM/Qwen-Agent/blob/main/README_CN.md",
+    "https://github.com/QwenLM/qwen-agent"
+  ],
+  "verify_notes": "模型底座已从 Qwen2.5 演进到 Qwen≥3.0，长文描述已过时，已标注。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "crew-ai",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Qwen-Agent 与 CrewAI、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道。在性价比上，Qwen-Agent（免费开源（模型按 DashScope/API 计费））门槛更低；若看重口碑，MetaGPT（4.7）评分更高；Qwen-Agent 的优势在于阿里通义千问开源的 Agent 开发框架，基于 Qwen≥3.0 系列模型，提供 Function Calling、MC，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

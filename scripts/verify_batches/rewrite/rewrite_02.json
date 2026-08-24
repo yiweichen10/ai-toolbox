@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "rankspot",
+    "name": "RankSpot",
+    "verdict": "REAL",
+    "official_url": "https://www.rankspot.ai",
+    "vendor": "RankSpot",
+    "desc_issue": "URL 错误：记录域名 rankspot.io 应为 rankspot.ai；且描述将其定位为'SEO 排名监控工具'，但真实 RankSpot 是自动化 SEO 内容发布 AI Agent（自动研究/写作/发布文章到博客），排名监控只是其部分能力。",
+    "evidence": "所有第三方评测与官网均指向 rankspot.ai（AI SEO 自动发布 Agent）"
+  },
+  {
+    "slug": "miaohua",
+    "name": "秒画",
+    "verdict": "REAL",
+    "official_url": "https://miaohua.sensetime.com",
+    "vendor": "商汤科技 (SenseTime) — 记录误写为字节跳动",
+    "desc_issue": "厂商错误：记录描述称『字节跳动推出』，实际为商汤科技（SenseTime）旗下 AI 绘画产品；URL 正确。",
+    "evidence": "miaohua.sensetime.com 为商汤官方域名，秒画是商汤的文生图产品，并非字节跳动。"
+  },
+  {
+    "slug": "domika",
+    "name": "Domika",
+    "verdict": "UNCERTAIN",
+    "official_url": null,
+    "vendor": null,
+    "desc_issue": "描述称其为“AI个人助理（日程/任务/对话）”，但真实 Domika 是 Home Assistant 客户端应用（domika.app，开发者 DevPocket），并非 AI 助理；domika.ai 与所描述的 AI 助理产品无法对应。",
+    "evidence": "检索到的真实 Domika 为家庭自动化客户端，与条目描述的 AI 助理不符，domika.ai 对应的 AI 助理产品无法确认。"
+  },
+  {
+    "slug": "tabbit",
+    "name": "Tabbit",
+    "verdict": "REAL",
+    "official_url": "https://tabbit.ai",
+    "vendor": "Tabbit (北京酷讯互动科技有限公司)",
+    "desc_issue": "Misdescribed as a '智能标签管理工具' (tab manager). Tabbit is actually an AI-native browser (Tabbit AI Browser), not just a tab/bookmark manager.",
+    "evidence": "Tabbit confirmed real; it is an AI browser, not merely a bookmark/tab manager."
+  },
+  {
+    "slug": "minicpm-o",
+    "name": "MiniCPM-o",
+    "verdict": "REAL",
+    "official_url": "https://huggingface.co/openbmb/MiniCPM-o",
+    "vendor": "面壁智能 (ModelBest) / OpenBMB",
+    "desc_issue": "Description wrongly attributes MiniCPM-o to 'MiniMax公司'; it is actually developed by ModelBest (面壁智能) / OpenBMB, NOT MiniMax. Recorded URL huggingface.co/MiniMaxAI/MiniCPM-o points to the wrong org (should be OpenBMB).",
+    "evidence": "MiniCPM-o is by ModelBest/OpenBMB (huggingface.co/openbmb); confirmed by modelbest.cn and multiple tech writeups. Not MiniMax."
+  },
+  {
+    "slug": "unitree-gd01",
+    "name": "Unitree GD01",
+    "verdict": "REAL",
+    "official_url": "https://www.unitree.com",
+    "vendor": "宇树科技 (Unitree Robotics)",
+    "desc_issue": "Description wrong: GD01 is a manned transformable mecha/robot (载人变形机甲, ~$650K), NOT a quadruped education robot.",
+    "evidence": "Unitree GD01 is a human-rideable transformable mecha unveiled in 2025; not a quadruped education platform."
+  },
+  {
+    "slug": "lightrag",
+    "name": "LightRAG",
+    "verdict": "REAL",
+    "official_url": "https://github.com/HKUDS/LightRAG",
+    "vendor": "香港大学（HKU）数据智能实验室 / HKUDS",
+    "desc_issue": "描述称『香港中文大学（深圳）』，错误；实为香港大学（The University of Hong Kong）数据智能实验室开发，论文发表于EMNLP 2025",
+    "evidence": "论文与仓库确认 HKUDS=香港大学数据智能实验室，非香港中文大学（深圳）"
+  },
+  {
+    "slug": "velo-ai",
+    "name": "Velo AI",
+    "verdict": "UNCERTAIN",
+    "official_url": null,
+    "vendor": null,
+    "desc_issue": "记录 URL veloai.com 未获证实；描述为“通用效率/任务自动化工具”与真实 Velo(usevelo.ai，AI 视频工具)不符，疑似拼凑描述",
+    "evidence": "搜索未确认 veloai.com 为有效站点；真实 Velo 为 usevelo.ai（AI 视频），另存 velo-ai.tech(测试)、velorai.co 等不同产品"
+  },
+  {
+    "slug": "seedream-5-0-pro",
+    "name": "Seedream 5.0 Pro",
+    "verdict": "REAL",
+    "official_url": "https://seed.bytedance.com/zh/seedream5_0_pro",
+    "vendor": "字节跳动（ByteDance）",
+    "desc_issue": "描述称“阶跃星辰于2026年初发布”且归类为AI对话，实际是字节跳动（ByteDance）Seed 团队的 AI 图像生成/编辑模型，并非对话类 LLM；记录 URL seedream.stepfun.com 也非官方（stepfun 为阶跃星辰域名，属张冠李戴），官方站点为 seed.bytedance.com",
+    "evidence": "Seedream 5.0 Pro 为字节跳动图像模型，官站 seed.bytedance.com，与阶跃星辰无关"
+  }
+]

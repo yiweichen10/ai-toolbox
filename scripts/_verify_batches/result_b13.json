@@ -1,0 +1,126 @@
+{
+  "batch_id": "b13",
+  "category": "AI行业应用",
+  "tools": [
+    {
+      "slug": "harvey-ai",
+      "name": "Harvey AI",
+      "url_current": "https://harvey.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "harvey.ai 为真实官网，面向律所/企业法务的 AI 法律工作平台（法律研究、合同分析、尽调等），企业级定价不公开，描述与官网一致，无幻觉。"
+    },
+    {
+      "slug": "hippocratic-ai",
+      "name": "Hippocratic AI",
+      "url_current": "https://www.hippocraticai.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "hippocraticai.com 为真实官网，专注医疗健康生成式 AI Agent（非诊断/非处方，强调安全合规），企业级 B2B 定价，与描述总体一致。需注意其明确‘不诊断、不开方’，描述中‘症状分析/用药咨询’措辞略宽泛但属同类医疗 AI 服务，未判定为幻觉。"
+    },
+    {
+      "slug": "ironclad-ai",
+      "name": "Ironclad AI",
+      "url_current": "https://www.ironclad.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "ironclad.ai 为真实官网，AI 合同管理与法律审查平台，企业级定价不公开，描述与官网一致，无幻觉。"
+    },
+    {
+      "slug": "glass-health",
+      "name": "Glass Health",
+      "url_current": "https://glass.health",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网确实存在且功能描述正确（面向临床医生的 AI 临床决策支持与病历撰写）。但定价编造：免费 Lite 档存在，官方 Pro 档约 $81–90/月（另有 Starter ~$18–20、Max 从 $180 起），并非描述的‘Pro版约$29/月’。来源：glass.health/pricing 及多家评测。"
+    },
+    {
+      "slug": "deepsec",
+      "name": "DeepSec",
+      "url_current": "https://github.com/vercel-labs/deepsec",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "仓库 github.com/vercel-labs/deepsec 真实存在（Vercel Labs，2026-05 开源，Apache 2.0，依托 Claude/Codex 智能体做仓库级漏洞扫描），描述/正文均准确。但定价编造：该工具为免费开源 CLI，无任何 $49/月 Pro 付费档（成本来自自付 AI 模型 API 费用），来源：仓库 README 与 LICENSE。"
+    },
+    {
+      "slug": "trading-agents",
+      "name": "TradingAgents",
+      "url_current": "https://www.tradingagents-ai.com",
+      "url_ok": false,
+      "url_correct": "https://tradingagents.co",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 URL 错误：tradingagents-ai.com 并非官方站点，真实官网为 tradingagents.co（对应开源仓库 github.com/TauricResearch/TradingAgents）。真实产品是开源的多智能体 LLM 交易研究框架（Python/CLI，研究用途），并非带 Web/iOS/Android App、免费/专业版$29/月/企业版的商业 SaaS。描述、正文、定价、平台均张冠李戴。来源：tradingagents.co、TauricResearch GitHub、arXiv 论文。"
+    },
+    {
+      "slug": "schole-ai",
+      "name": "Schole AI",
+      "url_current": "https://schole.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 schole.ai 真实，且描述准确：Scholé 是基于 EPFL/伯克利/哈佛研究的‘企业级 AI 素养与培训平台’，面向组织与团队。但正文张冠李戴——把企业培训平台写成‘面向学生/研究人员的解题作业助手’，且定价编造：无 $9.99/月 消费级高级版（官网为 B2B demo 制，无公开个人订阅价）。来源：schole.ai 官网与融资新闻。"
+    },
+    {
+      "slug": "unitree-gd01",
+      "name": "Unitree GD01",
+      "url_current": "https://www.unitree.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 unitree.com 真实，且描述准确：GD01 是宇树 2026-05 发布的全球首款量产载人变形机甲（可切换双足/四足，约 500kg），起售价 390 万元人民币（约 65 万美元）。但正文张冠李戴——把载人机甲写成‘四足机器狗教育平台’，且定价编造：‘约$9,999起’严重偏低（真实约 $650K）。来源：China Daily、Global Times、Xinhua 2026-05 报道。"
+    },
+    {
+      "slug": "agibot-zhiyuan",
+      "name": "AGIBOT智元",
+      "url_current": "https://www.agibot.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "agibot.com 为真实官网，智元机器人由稚晖君（彭志辉，前华为）创立的通用具身智能/人形机器人公司，B 端为主、联系定价，描述与官网一致，无幻觉。"
+    },
+    {
+      "slug": "intercom-fin",
+      "name": "Intercom Fin",
+      "url_current": "https://www.intercom.com/fin",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "description"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网（intercom.com/fin 现跳转 fin.ai）真实，定价基本合理（Intercom Essential 基础套餐起价约 $74/月，Fin 按 $0.99/次解决量计费，与‘按对话量收费’相符）。但模型归属过时：描述/正文称‘基于 GPT-4 构建’，而 fin.ai 官方现称 Fin 运行于自研专有模型 Apex 1.0 / Apex Flash（非 GPT-4）。部分 2026 第三方评测仍写 GPT-4，故标 medium 置信度。来源：fin.ai 官网。"
+    }
+  ]
+}

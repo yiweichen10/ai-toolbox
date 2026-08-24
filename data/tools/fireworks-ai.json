@@ -1,0 +1,153 @@
+{
+  "name": "Fireworks AI",
+  "slug": "fireworks-ai",
+  "emoji": "🎆",
+  "color": "#7C3AED",
+  "description": "Fireworks AI 是由 PyTorch 原班团队创立的推理与训练平台，提供开源模型的高速推理、微调与全参训练，覆盖文本、视觉、音频、图像与嵌入等多模态，按 Token 计费并兼容 OpenAI/Anthropic API，主打高性能与低成本。",
+  "category": "AI开发",
+  "tags": [
+    "AI推理",
+    "模型部署",
+    "微调",
+    "开源模型",
+    "多模态"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://fireworks.ai",
+  "price": "按 Token 计费（Serverless/On-Demand/Reserved）",
+  "platform": "Web, API",
+  "pros": [
+    "推理速度快，FP8/自研引擎优化吞吐与延迟",
+    "支持多种主流开源模型一键部署与微调",
+    "OpenAI/Anthropic 兼容 API，迁移成本低",
+    "与 LangChain、LlamaIndex 等主流框架集成",
+    "企业级合规（SOC2/HIPAA/GDPR）与可靠性"
+  ],
+  "cons": [
+    "免费额度有限，高频/大规模需付费",
+    "部分小众模型预置镜像不足",
+    "成本随用量与预留容量变化，需规划",
+    "文档与社区相对头部闭源厂仍偏少"
+  ],
+  "features": [
+    "Serverless 推理：按 Token 计费，兼容 OpenAI/Anthropic API",
+    "On-Demand 专用部署与 Reserved 预留容量，多区域",
+    "微调与训练（RL、量化感知微调等），支持大模型",
+    "模型库覆盖文本、视觉、音频、图像与嵌入/重排序（100+ 模型，含 MiniMax、DeepSeek、Llama、Qwen 等）",
+    "函数调用、结构化输出、视觉模型与批量推理",
+    "SOC2 / HIPAA / GDPR 合规，支持 BYOC 与零数据留存"
+  ],
+  "related": [
+    "together-ai",
+    "replicate",
+    "groq",
+    "open-router"
+  ],
+  "faq": [
+    {
+      "q": "Fireworks AI 免费吗？",
+      "a": "提供免费额度与初创计划，超出后按 token 或部署类型计费，具体以官网最新政策为准。"
+    },
+    {
+      "q": "Fireworks AI 支持哪些模型？",
+      "a": "支持 Llama、Mistral、DeepSeek、MiniMax、Qwen、Gemma 等 100+ 开源与开放模型，并持续更新。"
+    },
+    {
+      "q": "如何在 Fireworks AI 上微调模型？",
+      "a": "通过控制台或 API 上传数据集，选择基础模型与微调方法（如 LoRA/RL/量化感知微调），平台自动完成训练并部署。"
+    },
+    {
+      "q": "Fireworks AI 与其他推理平台相比有什么优势？",
+      "a": "主打由 PyTorch 团队打造的高吞吐低延迟推理、FP8 优化、完整训练+推理生命周期，以及与主流开发工具原生兼容。"
+    }
+  ],
+  "seo_keywords": [
+    "Fireworks AI",
+    "Fireworks AI怎么样",
+    "Fireworks AI免费版",
+    "Fireworks AI使用教程",
+    "Fireworks AI和Replicate哪个好"
+  ],
+  "content": "# Fireworks AI 是什么？\n\n如果你最近在折腾大模型应用，大概率会碰到一个问题：模型选好了，部署起来却头疼——要么太慢，要么太贵，要么配置起来一堆坑。Fireworks AI 就是专门解决这个痛点的平台。简单说，它是一个**高性能的生成式 AI 推理和微调服务**，帮你把 Llama、Mistral 这类开源模型快速部署成可用的 API，同时通过 FP8 等优化技术把推理速度拉上去、成本压下来。\n\n和市面上其他同类服务相比，Fireworks 的核心思路很直接：**不让你在部署和运维上浪费精力，把性能优化做到极致**。你丢一个模型上去，它会自动做负载均衡、支持流式输出，还能跟 LangChain、LlamaIndex 这些主流框架无缝对接，开发者几乎不用改代码就能接入。\n\n---\n\n## 核心功能\n\n1. **模型推理 API**  \n   文本生成、代码补全、对话补全，一行 API 调用就能用。实际体验上，**响应速度确实快**，尤其在短文本生成场景，几乎感觉不到延迟。流式输出也支持得很好，适合做实时聊天工具。\n\n2. **模型微调（LoRA 等）**  \n   想做自己的专属模型？Fireworks 支持高效的微调方法（比如 LoRA），不需要从头训练。很多用户反馈，微调后的模型在特定任务上（比如客服、文书摘要）效果提升明显，而且开销可控。\n\n3. **自定义模型部署与托管**  \n   如果你有自己的模型（比如从 Hugging Face 下载的），可以上传并托管到 Fireworks 上，它会帮你处理推理优化和自动扩缩容。**不用自己搭 GPU 服务器**，这点对中小企业很友好。\n\n4. **自动扩展和负载均衡**  \n   流量波动大？Fireworks 能根据请求量自动增加或减少实例，高峰期不崩，闲时不多花钱。这一点在生产环境里很关键，省心。\n\n5. **与主流框架兼容的接口**  \n   它提供了和 OpenAI SDK 风格一致的接口，也原生支持 LangChain、LlamaIndex。这意味着你**迁移成本极低**——原来用 OpenAI 的代码，改个 base_url 就能切换到 Fireworks 上跑开源模型。\n\n---\n\n## 版本/套餐对比\n\n| 版本类型 | 定位 | 特点 |\n|---------|------|------|\n| 免费版 | 体验和试用 | 提供一定量的免费 API 调用额度，适合个人测试和小项目验证 |\n| 按量付费版 | 中小规模生产 | 按 token 或调用次数计费，无长期合约，适合流量不稳定的场景 |\n| 企业版 | 大规模、高要求生产 | 提供 SLA 保障、专属资源池、技术支持，价格需联系销售 |\n\n> 具体价格细节暂未公开，官方提供免费额度体验，高频使用需要付费。建议先去申请试用，感受一下速度再决定是否付费。\n\n---\n\n## 值不值得用？\n\n**优点**  \n- **推理速度快**：FP8 优化不是噱头，实际跑 Llama 3 这类模型确实比很多自建方案快一截。  \n- **上手简单**：一键部署主流模型，不用折腾环境配置。  \n- **灵活性高**：支持微调、自定义部署，还能和现有框架无缝集成。  \n- **企业级保障**：有 SLA，适合对稳定性有要求的业务。\n\n**缺点**  \n- **免费额度有限**：测试还行，真要用起来很快就要掏钱。  \n- **小众模型支持不足**：像一些冷门的中文、多模态模型，官方不一定提供预部署镜像。  \n- **文档和社区资源偏少**：遇到问题可能需要自己去翻文档或提工单，不如 OpenAI 那么热闹。\n\n**总体结论**：**值得一试，尤其适合追求速度和易用性的开发团队**。如果你主要用 Llama、Mistral 这类主流模型，Fireworks 几乎是目前性价比最高的托管方案之一。但如果你依赖小众模型或需要大量的免费额度，可能需要再对比一下其他选择。\n\n---\n\n## 使用建议\n\n- **先用免费额度跑一轮测试**：把自己的业务逻辑和 Fireworks API 对接，确认响应速度和稳定性满足要求。  \n- **从 OpenAI SDK 迁移非常方便**：只需要改下 endpoint 和 API key，原有代码几乎不用动。  \n- **微调前先评估数据质量**：LoRA 虽然便宜，但数据不好效果也打折扣，建议先用小批量试试。  \n- **考虑按量付费起步**：初期流量不确定时，按量付费比包月更灵活，等流量稳定后再谈企业版。  \n- **关注官方文档和更新**：社区资源虽然少，但官方更新还算勤快，尤其新模型支持速度不错。\n\n---\n\n## 适合谁用？\n\n**推荐**  \n- 需要快速部署 Llama、Mistral 等模型做产品的**中小型团队**  \n- 想从 OpenAI API 切换到开源模型、**降低成本的开发者**  \n- 对推理速度有较高要求的**实时应用**（如聊天机器人、代码助手）  \n\n**可考虑**  \n- 想尝试模型微调但**不想自己搭环境**的个人开发者  \n- 有稳定流量、需要SLA保障的**中型企业**  \n\n**不推荐**  \n- 预算极低、主要靠免费 API 做实验的**个人爱好者**（免费额度不够用）  \n- 必须使用非常小众或自研模型的**团队**（Fireworks 对这类模型支持有限）  \n- 对数据隐私有极端要求、需要完全本地部署的**机构**（这是托管服务，数据经过平台）\n\n## 常见问题（FAQ）\n\n**Fireworks AI 免费吗？**\n\n提供免费额度与初创计划，超出后按 token 或部署类型计费，具体以官网最新政策为准。\n\n**Fireworks AI 支持哪些模型？**\n\n支持 Llama、Mistral、DeepSeek、MiniMax、Qwen、Gemma 等 100+ 开源与开放模型，并持续更新。\n\n**如何在 Fireworks AI 上微调模型？**\n\n通过控制台或 API 上传数据集，选择基础模型与微调方法（如 LoRA/RL/量化感知微调），平台自动完成训练并部署。\n\n**Fireworks AI 与其他推理平台相比有什么优势？**\n\n主打由 PyTorch 团队打造的高吞吐低延迟推理、FP8 优化、完整训练+推理生命周期，以及与主流开发工具原生兼容。",
+  "published": true,
+  "source_url": "https://fireworks.ai",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://fireworks.ai",
+  "verified_publisher": "Fireworks AI（PyTorch 原班团队创立，CEO Lin Qiao）",
+  "verified_what": "Fireworks AI 是由 PyTorch 原班团队创立的推理与训练平台，提供开源模型的高速推理、微调与全参训练，覆盖文本、视觉、音频、图像与嵌入等多模态。",
+  "verified_price": "按 Token 计费（Serverless / On-Demand / Reserved）；并提供免费额度与初创计划，具体价格以官网为准。",
+  "verified_platform": "Web、API（OpenAI / Anthropic 兼容）、多云区域部署",
+  "verified_features": [
+    "Serverless 推理：按 Token 计费，兼容 OpenAI/Anthropic API",
+    "On-Demand 专用部署与 Reserved 预留容量，多区域",
+    "微调与训练（RL、量化感知微调等），支持大模型",
+    "模型库覆盖文本、视觉、音频、图像与嵌入/重排序（100+ 模型，含 MiniMax、DeepSeek、Llama、Qwen 等）",
+    "函数调用、结构化输出、视觉模型与批量推理",
+    "SOC2 / HIPAA / GDPR 合规，支持 BYOC 与零数据留存"
+  ],
+  "verified_description": "Fireworks AI 是由 PyTorch 原班团队创立的推理与训练平台，提供开源模型的高速推理、微调与全参训练，覆盖文本、视觉、音频、图像与嵌入等多模态，按 Token 计费并兼容 OpenAI/Anthropic API，主打高性能与低成本。",
+  "price_verified": true,
+  "verified_pros": [
+    "推理速度快，FP8/自研引擎优化吞吐与延迟",
+    "支持多种主流开源模型一键部署与微调",
+    "OpenAI/Anthropic 兼容 API，迁移成本低",
+    "与 LangChain、LlamaIndex 等主流框架集成",
+    "企业级合规（SOC2/HIPAA/GDPR）与可靠性"
+  ],
+  "verified_cons": [
+    "免费额度有限，高频/大规模需付费",
+    "部分小众模型预置镜像不足",
+    "成本随用量与预留容量变化，需规划",
+    "文档与社区相对头部闭源厂仍偏少"
+  ],
+  "verified_faq": [
+    {
+      "q": "Fireworks AI 免费吗？",
+      "a": "提供免费额度与初创计划，超出后按 token 或部署类型计费，具体以官网最新政策为准。"
+    },
+    {
+      "q": "Fireworks AI 支持哪些模型？",
+      "a": "支持 Llama、Mistral、DeepSeek、MiniMax、Qwen、Gemma 等 100+ 开源与开放模型，并持续更新。"
+    },
+    {
+      "q": "如何在 Fireworks AI 上微调模型？",
+      "a": "通过控制台或 API 上传数据集，选择基础模型与微调方法（如 LoRA/RL/量化感知微调），平台自动完成训练并部署。"
+    },
+    {
+      "q": "Fireworks AI 与其他推理平台相比有什么优势？",
+      "a": "主打由 PyTorch 团队打造的高吞吐低延迟推理、FP8 优化、完整训练+推理生命周期，以及与主流开发工具原生兼容。"
+    }
+  ],
+  "verified_tags": [
+    "AI推理",
+    "模型部署",
+    "微调",
+    "开源模型",
+    "多模态"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://fireworks.ai/",
+    "https://fireworks.ai/startups"
+  ],
+  "verify_notes": "官网确认「From the creators of PyTorch」、高速推理/微调/训练、Serverless/On-Demand/Reserved 计费、多模态模型库，与现有数据一致，无需重大修正。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Fireworks AI 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Fireworks AI 的 Serverless 推理：按 Token 计费，兼容 OpenAI/Anthropic API 是亮点，价格 按 Token 计费（Serverless/On-Demand/Reserved）；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-02",
+  "created_date": "2026-08-02"
+}

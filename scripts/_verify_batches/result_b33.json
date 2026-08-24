@@ -1,0 +1,126 @@
+{
+  "batch_id": "b33",
+  "category": "AI绘画",
+  "tools": [
+    {
+      "slug": "stockimg-ai",
+      "name": "StockImg AI",
+      "url_current": "https://stockimg.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 stockimg.ai 为 AI 设计/库存图生成平台，文生图、Logo、插画、商业授权、批量生成、iOS/Android App（App Store/Play Store 可下载）均属实；定价'免费版每月10张，专业版$19/月起'与官网($19-$29/月、免费10张/月)一致。无幻觉。"
+    },
+    {
+      "slug": "duiyou-ai",
+      "name": "堆友AI",
+      "url_current": "https://d.design/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 d.design 为阿里巴巴设计(Alibaba Design)出品、采用达摩院 CV 算法；文生图/图生图/AI换装/电商主图/智能抠图(顽兔)等功能、Web 平台、基础免费+高级付费均属实。归属'阿里巴巴达摩院'基本准确。"
+    },
+    {
+      "slug": "zhu-zhan-ai",
+      "name": "触站AI",
+      "url_current": "https://www.czhanai.com/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 czhanai.com 为 AI 绘画平台，文生图/图生图/AI改图/风格模板/Lora定制等功能属实；定价'基础免费(每日有限)，付费会员29元/月起'有多方来源(月度会员29元)佐证。平台标注'网页端'略有遗漏(另有 App)，但不构成事实错误。"
+    },
+    {
+      "slug": "anyscenegen",
+      "name": "AnySceneGen",
+      "url_current": "https://anyscenegen.ai",
+      "url_ok": false,
+      "url_correct": "https://anyscenegen.intime3d.com/",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": true,
+      "confidence": "high",
+      "notes": "严重问题：①官网 URL 错误，anyscenegen.ai 无法访问，真实官网为 anyscenegen.intime3d.com（及 GitHub）。②正文功能完全张冠李戴——真实产品是虚时科技(Intime AI)×地瓜机器人面向'具身智能/机器人训练'的 3D 仿真空间生成平台（生成带物理属性的可仿真 3D 场景），而非正文所述'室内/游戏 2D 场景图生成工具'。短描述(具身智能仿真平台)正确，但长正文错误。③定价'免费版/月费$19起'无官方依据（产品为 B2B 开发者 Beta 平台）。"
+    },
+    {
+      "slug": "pollinations",
+      "name": "Pollinations",
+      "url_current": "https://pollinations.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 pollinations.ai 是面向开发者的多模态 API 平台(文本/图像/视频/音频)，采用 Pollen 积分制，免费起步、按用量/Bring-Your-Own-Pollen，无'$9.99/月'订阅套餐（定价编造）；官网无 iOS/Android 原生 App（平台标注'iOS、Android'不实）。图像生成功能属实但整体定位描述有偏差。"
+    },
+    {
+      "slug": "chuchu-ai",
+      "name": "触手AI",
+      "url_current": "https://www.chuchuai.com",
+      "url_ok": false,
+      "url_correct": "https://acgnai.art/",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网 URL 错误：chuchuai.com 无法访问且非官方域名，真实官网为 acgnai.art（现迁移至 chushou.art）。功能(文生图/图生图/局部重绘/200+风格/4K)、平台(iOS/Android/小程序)描述基本准确；但'高级版每月39元起'与'2026年3.0引擎'未见官方明确依据，建议人工核实定价与版本号。"
+    },
+    {
+      "slug": "6pen-art",
+      "name": "6pen Art",
+      "url_current": "https://6pen.art",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网 6pen.art 仍可访问但已发布停运公告('是时候说再见了')，引导迁移至 6pen Pro(6pen.pro)；文中'2026年最新版本增强了可控生成'与官网现状(产品已停运/迁移)不符。历史功能(文生图/图生图/局部重绘)曾属实，'面包多'归属准确。建议人工裁定是否下架或更新。URL 本身可访问，故 url_ok 记为 true。"
+    },
+    {
+      "slug": "wujie-ai",
+      "name": "无界AI",
+      "url_current": "https://www.wujieai.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "low",
+      "notes": "官网 wujieai.com 现已转型为'桌面级 AIPC 智能体'(绘图Agent/写作Agent/本地算力)，不再是纯网页端 AI 绘画平台；文中'平台:网页端'标注与当前定位存疑（是否仍保留网页版待核实）。文生图等 AI 绘画功能仍属其绘图 Agent 能力，'免费使用'大致属实。建议人工核实平台形态。"
+    },
+    {
+      "slug": "huiwa",
+      "name": "绘蛙",
+      "url_current": "https://huiwa.cn",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "low",
+      "notes": "官网 huiwa.cn（多次抓取超时，但被多家站点列为官方域名；另有 ihuiwa.com 及淘宝子域 huihua.taobao.com）为阿里巴巴旗下电商 AI 图文工具；'阿里巴巴推出'与'付费版29元/月起'均有来源佐证。功能(文字生图/风格迁移/商业素材库)属实。但平台标注'网页端、iOS、Android'中 iOS/Android 原生 App 未见明确依据(官网主推网页+微信小程序)，建议人工核实。"
+    },
+    {
+      "slug": "whee",
+      "name": "WHEE",
+      "url_current": "https://www.whee.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 whee.com 为美图公司出品(域名 wheeai.meitudata.com)，文生图/图生图/AI修图/AI海报/AI扩图/AI消除等功能，与'美图公司推出''基础功能免费、高级功能付费订阅'均属实。无幻觉。"
+    }
+  ]
+}

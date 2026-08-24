@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "AI工具宝箱",
+  "short_name": "AI工具宝箱",
+  "description": "发现最好用的AI工具：收录 500+ 款工具与深度实测，每日更新。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#00A64F",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "/assets/icons/pwa-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

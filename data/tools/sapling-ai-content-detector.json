@@ -1,0 +1,79 @@
+{
+  "name": "Sapling AI Content Detector",
+  "slug": "sapling-ai-content-detector",
+  "positioning": "免费AI检测工具：句子级高亮标记+免费免注册即贴即测",
+  "auto_positioning": true,
+  "emoji": "🌿",
+  "color": "#0D9488",
+  "description": "Sapling 推出的免费在线 AI 内容检测工具，可识别常见大模型生成的文本，与其 AI 写作助手、客服消息助手生态打通，适合内容自查场景。",
+  "category": "AI检测",
+  "tags": [
+    "AIGC检测",
+    "AI内容检测",
+    "免费",
+    "在线",
+    "写作助手"
+  ],
+  "rating": "⭐ 4.2",
+  "visits": "约50万/月",
+  "url": "https://sapling.ai",
+  "price": "免费",
+  "platform": "Web",
+  "pros": [
+    "免费无需注册即开即用",
+    "覆盖主流新模型识别",
+    "Chrome 扩展检测方便",
+    "与写作助手工具联动",
+    "检测结果即时反馈"
+  ],
+  "cons": [
+    "免费版 2000 字符限制严格",
+    "功能相对单一无批量检测",
+    "短文本误报风险偏高",
+    "检测为附属功能非核心产品"
+  ],
+  "features": [
+    "免费免注册即贴即测",
+    "覆盖 GPT/Claude/Gemini 等模型",
+    "句子级高亮标记",
+    "Chrome 扩展网页内检测",
+    "AI 检测 API 接入",
+    "与 Sapling 写作生态联动"
+  ],
+  "related": [
+    "gptzero",
+    "smodin-ai-content-detector",
+    "winston-ai"
+  ],
+  "faq": [
+    {
+      "q": "Sapling 检测器需要注册吗？",
+      "a": "不需要，访问 sapling.ai/ai-content-detector 粘贴文本即可检测，免费版单次约 2,000 字符。"
+    },
+    {
+      "q": "检测结果怎么解读？",
+      "a": "输出 AI 概率与句子标记，概率越高越可能由 AI 生成；建议结合其他工具交叉验证后再下结论。"
+    },
+    {
+      "q": "如何检测更长文本？",
+      "a": "免费版上限约 2,000 字符，升级 Sapling Pro 后可检测约 100,000 字符，也可拆分文本多次检测或使用 API。"
+    }
+  ],
+  "seo_keywords": [
+    "免费AI检测工具",
+    "Sapling AI检测",
+    "在线AI内容检测",
+    "AI文本检测免费",
+    "ChatGPT内容检测"
+  ],
+  "content": "## Sapling AI Content Detector 是什么？\n\nSapling AI Content Detector 是知名 AI 写作与客服工具厂商 Sapling 推出的在线 AI 内容检测工具，主打\"免费、轻量、即贴即测\"。把文本粘贴到网页就能得到 AI 生成概率与句子级标记，无需注册登录，官方宣称检测率 97%+、误报率低于 3%。\n\nSapling 本身是做 AI 写作助手、客服消息助手和语法纠错的，检测器是它内容生态里的一环，因此检测能力与语法/写作工具联动，还能通过 Chrome 扩展在 ChatGPT 等页面内一键检测生成结果。适合做发布前的快速自查，是免费 AI 检测场景里很实用的一款。\n\n### 核心功能\n\n- **免费在线检测**：无需注册，粘贴文本即可检测，免费单次支持约 2,000 字符。\n- **多模型识别**：覆盖 GPT-5、Claude、Gemini、Qwen、DeepSeek 等主流模型输出，并定期重新训练适配。\n- **句子级高亮标记**：标出疑似 AI 生成的句子，方便针对性修改。\n- **Chrome 扩展**：网页中选中文本即可检测，在 ChatGPT 对话页内每个生成结果旁有一键检测按钮。\n- **AI 检测 API**：支持将检测能力接入自有系统与批量处理流程。\n- **与 Sapling 写作生态联动**：检测后可直接调用改写、语法修正等功能。\n\n### 适用场景\n\n- **内容发布前自查**：博主、编辑、SEO 从业者发布前快速确认 AI 痕迹，配合人工润色。\n- **求职与客服场景**：简历、邮件、客服话术的快速 AI 筛查。\n- **学生与教育辅助**：作业、论文的自查与 AI 使用自查。\n\n### 价格\n\n检测器本身免费，免费版单次约 2,000 字符；Pro 订阅用户可检测最长约 100,000 字符的文本，并提供优先 API 等能力。订阅价格以官网为准。\n\n### 优缺点\n\n- 优点：完全免费、无需注册，即贴即测；Chrome 扩展方便；支持主流新模型；与 Sapling 写作工具联动。\n- 缺点：免费版单次 2,000 字符限制较严格；功能相对单一，无批量与抄袭检测；短文本易误报。\n\n### 常见问题\n\n**Sapling AI Content Detector 收费吗？** 免费版不收费，无需注册即可检测短文本；检测更长文本需要 Sapling Pro 订阅。\n\n**免费版一次能检测多少字？** 官方说明免费版限制约 2,000 字符（约 300-500 词），Pro 用户可检测约 100,000 字符。\n\n**为什么我的原创文字被判定为 AI？** 文本越短、越正式/模板化，误报概率越高，建议加长上下文后重新检测或与其他工具交叉验证。",
+  "published": true,
+  "created_date": "2026-08-03",
+  "published_date": "2026-08-03",
+  "subcategory": "ai-content-detector",
+  "confidence": "medium",
+  "conflict": false,
+  "content_flags": "new",
+  "price_verified": false,
+  "category_check": "AI检测(重归类 2026-08-05)"
+}

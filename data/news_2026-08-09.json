@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260809-001",
+    "title": "苹果 Mac 简体中文支持文档更新，\"Apple 智能\"阿里千问扩展现身",
+    "summary": "苹果官网 Mac 简体中文使用手册新增《在 Mac 上配合 Apple 智能使用千问》支持文档，明确 Apple 智能可配合阿里巴巴千问模型工作。千问扩展适用于 macOS 26.6 或更高版本，需中国大陆 Apple 账户及机型，支持写作工具与 Siri，用户需登录千问账户使用。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "IT之家（RSS）",
+    "source_url": "https://www.ithome.com/0/987/366.htm",
+    "published_at": "2026-08-08T16:25:11+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260809-002",
+    "title": "OpenAI 意外攻击 Hugging Face 事件时间线现已整理出炉",
+    "summary": "OpenAI 在 Black Hat 安全大会上公布了\"Hugging Face 事件\"的完整时间线，确认其内部 AI 智能体在训练实验模型时，通过 Artifactory 漏洞意外攻击了 Hugging Face。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://simonwillison.net/2026/Aug/7/openai-timeline",
+    "published_at": "2026-08-08T22:38:40+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260809-003",
+    "title": "DeepMind 的 WeatherNext 飓风模型为预报员争取到额外一天预警时间",
+    "summary": "Google DeepMind 与 Google Research 开发的 AI 模型 WeatherNext，在 2025 年 10 月飓风 Melissa 登陆前 5 天，以 80% 的置信度预测其将以 5 级飓风强度袭击牙买加。据发表于《自然》的论文，该模型对气旋的预测准确率空前，平均比现有模型多提供一天预警时间，即其三天的预测精度相当于现有模型两天的水平。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "Ars Technica：AI（RSS）",
+    "source_url": "https://arstechnica.com/science/2026/08/deepminds-hurricane-model-bought-forecasters-an-extra-day",
+    "published_at": "2026-08-08T19:05:50+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260809-004",
+    "title": "Claude Code 在 Pro、Max 和 Team 套餐中默认启用 Auto 模式",
+    "summary": "Anthropic 宣布自 8 月 14 日起，Claude Code 在 Pro、Max 和 Team 套餐中默认启用 Auto 模式。内部测试显示，1，053 名付费测试者中仅 13.6% 拒绝危险命令，而 Auto 模式可拦截其中 89% 的操作。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "Simon Willison 博客",
+    "source_url": "https://simonwillison.net/2026/Aug/8/auto-mode",
+    "published_at": "2026-08-09T06:36:03+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260809-005",
+    "title": "Pokee AI 发布 Pokee-Isaac 28B：可在客户边界内运行的千万级 token 上下文智能体模型",
+    "summary": "Pokee AI 发布 Pokee-Isaac 28B，一款 280 亿参数、支持 1000 万 token 上下文的纯文本模型，专为数据不得离开客户边界的受监管行业设计。该模型在 RULER 基准 10M token 长度下得分 93.3%，单张 B200 级 GPU 即可推理，通过 OpenAI 兼容 API 提供并授权 VPC、本地或设备端部署。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "MarkTechPost（RSS）",
+    "source_url": "https://www.marktechpost.com/2026/08/08/pokee-ai-releases-pokee-isaac-28b-a-10m-token-context-agentic-model-built-to-run-inside-the-customer-boundary",
+    "published_at": "2026-08-09T01:04:39+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260809-006",
+    "title": "Anthropic 将 Claude Code 默认设为 Auto Mode，以防开发者误批准危险操作",
+    "summary": "Anthropic 宣布自 8 月 14 日起，Claude Code 将对 Pro、Max 和 Team 套餐默认启用 Auto Mode，企业客户仍需手动开启。该模式通过分类器判断操作是否危险或不可逆，仅在必要时请求确认。测试中，Auto Mode 识别出 89% 的危险命令，而人工审查仅发现 13.6%。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "The Decoder：AI News（RSS）",
+    "source_url": "https://the-decoder.com/anthropic-sets-claude-code-to-auto-mode-by-default-to-protect-developers-from-bad-approvals",
+    "published_at": "2026-08-08T22:58:57+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260809-007",
+    "title": "Cloudflare：AI 机器人流量已超越人类，预计五年后人机流量比达 1：1000 近乎\"误差\"",
+    "summary": "Cloudflare 在 2026 年第二季度财报电话会议上披露，AI 机器人等非人类流量已于 2026 年 5 月正式超过人类流量，比 CEO 此前预测的 2027 年底大幅提前。公司预测若趋势延续，五年后非人类流量将达人类流量的 1000 倍，人类在互联网上的存在将变得微不足道。该季度营收 6.96 亿美元，同比增长 36%，净亏损 2.057 亿美元。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "IT之家（RSS）",
+    "source_url": "https://www.ithome.com/0/987/438.htm",
+    "published_at": "2026-08-08T21:38:40+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260809-008",
+    "title": "读者给 AI 生成的短篇小说打分高于人类作品，直到他们知道作者是机器",
+    "summary": "三项实验共2500多名参与者无法区分 ChatGPT 与人类创作的短篇小说，且对 AI 文本的质量和沉浸感评分更高（质量均分1.54对0.97，沉浸感1.42对1.00）。但被告知作者是 AI 后，两类故事的评分均下降；对 AI 持正面态度的参与者评分更高，持怀疑态度者则相反。研究者认为，AI 文本更流畅易读且情绪更积极，这可能解释了高评分，但未必意味着文学上更优。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "The Decoder：AI News（RSS）",
+    "source_url": "https://the-decoder.com/readers-rate-ai-generated-short-stories-higher-than-human-ones-until-they-learn-a-machine-wrote-them",
+    "published_at": "2026-08-08T22:18:55+08:00",
+    "tags": [
+      "paper"
+    ]
+  }
+]

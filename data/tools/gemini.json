@@ -1,0 +1,150 @@
+{
+  "name": "Gemini",
+  "slug": "gemini",
+  "positioning": "多模态对话+超长上下文：免费AI助手怎么用",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#6eb428",
+  "description": "Google 免费AI助手，基于最新 Gemini 3.7 Flash 多模态大模型（2026-08-13 发布，主打编程/智能体与复杂工作流），支持 100 万 token 超长上下文，与 Google 搜索及 Workspace 生态深度整合。",
+  "updated_date": "2026-08-14",
+  "category": "AI对话",
+  "tags": [
+    "AI对话",
+    "多模态",
+    "免费可用",
+    "Google生态"
+  ],
+  "rating": "⭐ 5.0",
+  "visits": "5万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://gemini.google.com",
+  "price": "免费版 + Google AI Pro $19.99/月",
+  "platform": "Web",
+  "pros": [
+    "原生多模态能力业界领先",
+    "1M（100万）token超长上下文窗口",
+    "Gemini 3.7 Flash 编程/智能体能力强（DeepSWE v1.1 65.3%，2026-08-13 发布）",
+    "与Google搜索/Workspace深度整合",
+    "免费版功能已较强",
+    "API 引导价低（$0.75/$3.75 每百万token，2026年底前）"
+  ],
+  "cons": [
+    "国内需翻墙访问",
+    "中文理解与生成弱于GPT/Claude（部分评测）",
+    "插件与第三方生态不如ChatGPT丰富",
+    "高级模型与功能需付费订阅"
+  ],
+  "features": [
+    "多模态对话（文本/图像/视频/音频/代码）",
+    "超长上下文（1M tokens，输入100万/输出6.5万）",
+    "最新模型 Gemini 3.7 Flash（2026-08-13 发布）：编程/智能体/复杂工作流向，DeepSWE v1.1 65.3%、FrontierCode 1.1 Main 43.6%（大幅超越 3.6 Flash）",
+    "Gemini 3.6 Flash（上一代）与旗舰 Gemini 3.5 Pro（官方未公布上线时间）",
+    "联网搜索与 Deep Research",
+    "Google Workspace 集成（Gmail/Docs/Sheets等）",
+    "Gemini Live 实时摄像头对话"
+  ],
+  "related": [
+    "kimi",
+    "chatgpt"
+  ],
+  "content": "## Gemini 是什么？\n\nGemini 是 Google（Google DeepMind）推出的AI助手与多模态大模型家族，以原生多模态能力和 100 万 token 超长上下文著称，与 Google 搜索、Gmail、Docs 等生态深度整合，是目前 ChatGPT 最强大的竞争者之一。\n\n2026-08-13 谷歌发布最新模型 Gemini 3.7 Flash，官方称其为目前“最智能的工作型模型”，主打编程、智能体（Agent）与复杂工作流，不到一个月连发多款 Flash 模型，竞争重心明显转向 AI 编程与智能体的规模化落地。\n\n## 核心功能\n\n- **多模态对话**：同时理解文本、图片、视频、音频、PDF，输出文本\n- **超长上下文**：1M tokens（输入 100 万 / 输出 6.5 万），一次处理超长文档\n- **编程与智能体**：3.7 Flash 面向 Agent 工作流，DeepSWE v1.1 达 65.3%、FrontierCode 1.1 Main 达 43.6%，均大幅超越上一代 3.6 Flash（49.0% / 34.4%）\n- **联网搜索与 Deep Research**：实时获取 Google 搜索结果，复杂问题自动多轮调研\n- **Google Workspace 集成**：直接操作 Gmail、Docs、Sheets、Drive\n- **Gemini Live**：实时摄像头对话\n\n## 模型阵容\n\n| 模型 | 状态 | 说明 |\n|---|---|---|\n| Gemini 3.7 Flash | 最新（2026-08-13 发布） | 编程/智能体/复杂工作流向，1M 上下文，引导价 $0.75/$3.75 |\n| Gemini 3.6 Flash | 上一代（2026-07 发布） | 3.7 Flash 的直接前代 |\n| Gemini 3.5 Pro | 旗舰，官方未公布上线时间 | 市场高度关注的下一代旗舰 |\n\n## 价格\n\n- **免费版**：基础功能免费使用（有限额度）\n- **Google AI Pro**：$19.99/月，更强模型、更大上下文、Deep Research、2TB 存储\n- **Google AI Ultra**：$249.99/月，Deep Think、Veo 视频生成、30TB 存储\n- **API 按 token 计费**：Gemini 3.7 Flash 引导价 $0.75/百万输入 token、$3.75/百万输出 token（2026-12-31 前，为 3.6 Flash 原价一半）；2027-01-01 起恢复 $1.50/$7.50。消费端 3.7 Flash 通过 Spark 向 Google AI Pro/Ultra 订阅用户开放（160+ 国家/地区）。\n\n## 优缺点分析\n\n### 👍 优点\n- 原生多模态能力业界领先\n- 100 万 token 超长上下文窗口\n- 3.7 Flash 编程/智能体能力大幅提升（DeepSWE v1.1 65.3%）\n- 与 Google 搜索/Workspace 生态深度整合\n- API 引导价格有竞争力（年底前半价）\n\n### 👎 缺点\n- 国内需要科学上网\n- 中文理解与生成能力部分评测弱于 GPT/Claude\n- 插件与第三方生态不如 ChatGPT 丰富\n- 旗舰 Gemini 3.5 Pro 上线时间未公布\n\n## 使用技巧\n\n1. **上传长文档**：利用 1M 超长上下文处理 PDF 论文或长文档。\n2. **编程与 Agent**：用 3.7 Flash 处理多步骤编码任务与智能体工作流。\n3. **Gmail 集成**：Pro 用户可让 Gemini 直接管理邮件。\n4. **Deep Research**：复杂问题自动多轮联网搜索并生成研究报告。\n5. **Google 搜索**：提问时事问题，Gemini 实时搜索最新信息。\n\n## 适合人群\n\nGemini 适合已在用 Google 生态的用户，以及需要超长上下文、编程与智能体能力的研究人员、开发者和学生。\n\n> 提示：以上数据来源于 Google 官方发布（2026-08-13 Gemini 3.7 Flash 公告与模型卡）及公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "faq": [
+    {
+      "q": "Gemini 最新模型是什么？",
+      "a": "Gemini 3.7 Flash（2026-08-13 官方发布）：谷歌称其为目前“最智能的工作型模型”，主打编程、智能体与复杂工作流；1M 上下文，编程基准大幅超越上一代（DeepSWE v1.1 65.3% vs 49.0%、FrontierCode 1.1 Main 43.6% vs 34.4%）；API 引导价 $0.75/$3.75 每百万 token（2026 年底前，之后恢复 $1.50/$7.50）。消费端经 Spark 向 Google AI Pro/Ultra 订阅用户开放。旗舰 Gemini 3.5 Pro 官方尚未公布上线时间。"
+    },
+    {
+      "q": "Gemini和ChatGPT哪个好？",
+      "a": "Gemini最大优势是与Google搜索及Google生态（Gmail、Docs、Drive）深度整合，信息获取与多模态理解强。ChatGPT在代码生成与插件生态上更成熟。两者定位相近，可按使用场景选择。"
+    },
+    {
+      "q": "Gemini免费吗？",
+      "a": "基础版免费使用。Google AI Pro订阅为$19.99/月，可使用更强的Gemini Pro级模型、更大上下文、Deep Research与2TB存储；Ultra为$249.99/月。"
+    },
+    {
+      "q": "Gemini能访问Google搜索吗？",
+      "a": "可以，Gemini与Google搜索深度整合，可实时获取最新网络信息，并由全球最大搜索引擎支撑，信息覆盖广、时效性强。"
+    }
+  ],
+  "created_date": "2026-04-01",
+  "verified_url": "https://gemini.google.com",
+  "verified_publisher": "Google (Google DeepMind)",
+  "verified_what": "Google推出的AI助手与多模态大模型家族，深度整合Google搜索与Workspace生态，支持文本、图像、视频、音频与代码理解。",
+  "verified_price": "免费版（使用Gemini 3 Flash等模型，有限额度）；Google AI Pro $19.99/月（含Gemini Advanced/Pro级模型、2TB Google One存储、Deep Research、Workspace集成）；Google AI Ultra $249.99/月（含Deep Think、Veo视频生成、30TB存储）。另有Gemini API按token计费。注：2026年I/O新增Google AI Plus层级，具体价格未在本批来源中确认。",
+  "verified_platform": "Web / iOS / Android / API",
+  "last_verified": "2026-08-14",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "多模态对话（文本/图像/视频/音频/代码）",
+    "超长上下文（1M tokens，输入100万/输出6.5万）",
+    "最新模型 Gemini 3.7 Flash（2026-08-13 发布）：编程/智能体/复杂工作流向，DeepSWE v1.1 65.3%、FrontierCode 1.1 Main 43.6%（大幅超越 3.6 Flash）",
+    "Gemini 3.6 Flash（上一代）与旗舰 Gemini 3.5 Pro（官方未公布上线时间）",
+    "联网搜索与 Deep Research",
+    "Google Workspace 集成（Gmail/Docs/Sheets等）",
+    "Gemini Live 实时摄像头对话"
+  ],
+  "verified_description": "Google 免费AI助手，基于最新 Gemini 3.7 Flash 多模态大模型（2026-08-13 发布，主打编程/智能体与复杂工作流），支持 100 万 token 超长上下文，与 Google 搜索及 Workspace 生态深度整合。",
+  "content_flags": "原长文为 Gemini 2.5 时代数据（版本对比表/Advanced $20/价格$10/月），严重过时，已全量重写至 Gemini 3.7 Flash 时代",
+  "price_verified": true,
+  "verified_pros": [
+    "原生多模态能力业界领先",
+    "1M（100万）token超长上下文窗口",
+    "Gemini 3.7 Flash 编程/智能体能力强（DeepSWE v1.1 65.3%，2026-08-13 发布）",
+    "与Google搜索/Workspace深度整合",
+    "免费版功能已较强",
+    "API 引导价低（$0.75/$3.75 每百万token，2026年底前）"
+  ],
+  "verified_cons": [
+    "国内需翻墙访问",
+    "中文理解与生成弱于GPT/Claude（部分评测）",
+    "插件与第三方生态不如ChatGPT丰富",
+    "高级模型与功能需付费订阅"
+  ],
+  "verified_faq": [
+    {
+      "q": "Gemini 最新模型是什么？",
+      "a": "Gemini 3.7 Flash（2026-08-13 官方发布）：谷歌称其为目前“最智能的工作型模型”，主打编程、智能体与复杂工作流；1M 上下文，编程基准大幅超越上一代（DeepSWE v1.1 65.3% vs 49.0%、FrontierCode 1.1 Main 43.6% vs 34.4%）；API 引导价 $0.75/$3.75 每百万 token（2026 年底前，之后恢复 $1.50/$7.50）。消费端经 Spark 向 Google AI Pro/Ultra 订阅用户开放。旗舰 Gemini 3.5 Pro 官方尚未公布上线时间。"
+    },
+    {
+      "q": "Gemini和ChatGPT哪个好？",
+      "a": "Gemini最大优势是与Google搜索及Google生态（Gmail、Docs、Drive）深度整合，信息获取与多模态理解强。ChatGPT在代码生成与插件生态上更成熟。两者定位相近，可按使用场景选择。"
+    },
+    {
+      "q": "Gemini免费吗？",
+      "a": "基础版免费使用。Google AI Pro订阅为$19.99/月，可使用更强的Gemini Pro级模型、更大上下文、Deep Research与2TB存储；Ultra为$249.99/月。"
+    },
+    {
+      "q": "Gemini能访问Google搜索吗？",
+      "a": "可以，Gemini与Google搜索深度整合，可实时获取最新网络信息，并由全球最大搜索引擎支撑，信息覆盖广、时效性强。"
+    }
+  ],
+  "verified_tags": [
+    "AI对话",
+    "多模态",
+    "免费可用",
+    "Google生态"
+  ],
+  "verified_category": "AI对话",
+  "conflict_note": "各来源对2026当前具体模型层级表述略有差异（I/O 2026称已发3.5 Flash、3.5 Pro将发；Gemini生态页显示3.6 Flash与3.5 Pro coming soon），但均确认Gemini 3.x系列存在，与条目描述'3.6 Flash与3.5 Pro'总体吻合。价格方面原$10/月与权威来源$19.99/月冲突，已纠正。",
+  "source_urls": [
+    "https://deepmind.google/blog/introducing-gemini-3-7-flash",
+    "https://deepmind.google/models/model-cards/gemini-3-7-flash",
+    "https://9to5google.com/2026/08/13/gemini-3-7-flash-launch/"
+  ],
+  "verify_notes": "Gemini 3.7 Flash 2026-08-13 官方发布（deepmind blog + 模型卡 + 9to5google）；1M 上下文不变；引导价 $0.75/$3.75 至 2026-12-31，2027-01-01 起 $1.50/$7.50；消费端经 Spark 向 AI Pro/Ultra 开放；旗舰 3.5 Pro 未公布上线时间",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "tencent-hunyuan",
+      "xinghuo-cognitive-model",
+      "mistral-ai"
+    ],
+    "verdict": "Gemini 与 腾讯混元、星火认知大模型、Mistral AI 同属AI对话赛道。在性价比上，Gemini（免费版 + Google AI Pro $19.99/月）门槛更低；口碑方面，Gemini（⭐ 5.0）领先；Gemini 的优势在于Google推出的AI助手与多模态大模型家族，深度整合Google搜索与Workspace生态，支持文本、图像、视频、音，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "name": "LangGraph",
+  "slug": "langgraph",
+  "positioning": "多代理编排与协调+状态管理与持久化：免费AI开发工具",
+  "auto_positioning": true,
+  "emoji": "🔗",
+  "color": "#7C3AED",
+  "description": "LangGraph 是由 LangChain 团队构建的开源低层框架，专门用于创建有状态的多代理应用程序与工作流。它支持循环和分支逻辑，并提供持久化执行、短期记忆与流式输出，使开发者能够构建复杂、可控、可投入生产的 AI 代理系统。",
+  "category": "AI开发",
+  "tags": [
+    "多代理系统",
+    "工作流编排",
+    "状态管理",
+    "开源框架",
+    "LangChain"
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "85万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://langchain-ai.github.io/langgraph/",
+  "price": "免费开源（MIT）；LangGraph Platform 企业云服务另计",
+  "platform": "Python, JavaScript/TypeScript",
+  "pros": [
+    "支持复杂的多代理循环与分支逻辑",
+    "内置状态持久化，代理可断点恢复",
+    "与 LangChain 生态无缝集成",
+    "支持人机协作与代理监督",
+    "可视化调试工具便于监控执行流程"
+  ],
+  "cons": [
+    "学习曲线较陡，状态图概念需要时间理解",
+    "大规模部署时性能调优复杂",
+    "深度教程相对示例偏少"
+  ],
+  "features": [
+    "多代理编排与协调",
+    "状态管理与持久化（checkpointer）",
+    "条件分支与循环控制",
+    "人机协作介入点（human-in-the-loop）",
+    "可视化执行监控（LangGraph Studio）",
+    "流式输出与错误处理/重试"
+  ],
+  "related": [
+    "langchain",
+    "crew-ai",
+    "coze"
+  ],
+  "faq": [
+    {
+      "q": "LangGraph 和 LangChain 有什么区别？",
+      "a": "LangChain 是基础框架，提供链式调用能力；LangGraph 专注于构建有状态的多代理系统，支持循环与分支逻辑，适合复杂代理编排场景。"
+    },
+    {
+      "q": "LangGraph 是否免费？",
+      "a": "是的，LangGraph 框架本身完全开源免费，采用 MIT 许可证；仅托管平台 LangGraph Platform 为商业服务。"
+    },
+    {
+      "q": "LangGraph 适合构建什么应用？",
+      "a": "适合客服系统、研究助手、自动化工作流、复杂文档处理等需要多代理协作与状态流转的任务。"
+    },
+    {
+      "q": "如何开始使用？",
+      "a": "可通过 pip install langgraph（Python）或 npm install @langchain/langgraph（JS）安装，官网提供入门教程与示例。"
+    }
+  ],
+  "seo_keywords": [
+    "LangGraph",
+    "LangGraph 多代理框架",
+    "LangGraph 工作流编排",
+    "LangGraph 教程",
+    "LangGraph vs CrewAI"
+  ],
+  "content": "## LangGraph是什么？\n\n简单说，LangGraph 是 LangChain 团队推出的一个开源框架，专门用来帮开发者构建**有状态的多代理系统**。\n\n听起来有点抽象，我换个说法：如果你需要让多个 AI 代理协同工作、互相通信，甚至能“记住”之前做了什么、然后根据不同情况做不同决策，这就是 LangGraph 要解决的事。\n\n它和普通链式调用的区别在于——普通链是线性的，走完就结束，而 LangGraph 支持**循环**和**分支**。你可以让代理A做完交给代理B，B觉得处理不了再打回给A重新来，或者根据某个条件选择走C流程还是D流程。\n\n2026年的更新进一步增强了细粒度的编排能力和持久化机制，代理在执行中断后能更好地恢复状态。\n\n---\n\n## 核心功能\n\n**1. 多代理编排与协调**\n支持定义多个代理的协作关系，谁先做、谁后做、什么时候需要互相调用，都可以精细控制。实际使用中，适合那种需要不同专长角色分工的场景，比如一个代理负责检索、一个负责生成、一个负责校验。\n\n**2. 状态管理与持久化**\n这是 LangGraph 较有特色的地方——它内置了状态持久化能力，代理执行到一半中断了，下次可以接着来，不用从头重跑。对需要长流程或处理复杂任务的场景比较友好。\n\n**3. 条件分支与循环控制**\n支持用类似“if-else”的逻辑控制流程走向，也支持让代理循环处理直到满足某个条件。这个功能在需要迭代优化输出的场景下很实用，比如让代理多轮反思直到答案达标。\n\n**4. 人机交互介入点**\n可以在流程中设置“暂停点”，让人工确认或输入后再继续执行。这个功能对于需要人工审核、或者希望人在关键节点介入控制的场景很实用。\n\n**5. 可视化执行监控**\n提供可视化的调试工具，能够看到整个执行流程的每一步、状态变化和代理间的通信。对排查问题和理解整个系统行为很有帮助。\n\n---\n\n## 版本/套餐对比\n\n| 特性 | 社区版（开源） | 企业版 |\n|------|---------------|--------|\n| 多代理编排 | ✅ | ✅ |\n| 状态持久化 | ✅ | ✅ |\n| 条件分支与循环 | ✅ | ✅ |\n| 人机交互介入点 | ✅ | ✅ |\n| 可视化调试工具 | 基础功能 | 高级监控与分析 |\n| 官方技术支持 | 社区支持 | 专属支持通道 |\n| 部署与扩展 | 自行维护 | 托管部署选项 |\n| 定价 | 免费 | 需联系商务 |\n\n具体版本信息建议直接查看官方最新发布，因为功能更新比较频繁。\n\n---\n\n## 值不值得用？\n\n**优点：**\n- 多代理协作能力强，能处理复杂业务流程\n- 状态持久化在同类工具中属于比较成熟的实现\n- 和 LangChain 生态兼容性好，如果本身就在用 LangChain，上手成本会低一些\n- 人机协作和可视化调试在实际项目中是刚需\n\n**缺点：**\n- 学习曲线确实有陡的地方，状态图的概念需要时间理解\n- 大规模部署时性能调优比较复杂，需要有一定工程经验\n- 文档示例多，但深度教程偏少，很多坑需要自己踩\n\n**我的结论：** 如果你的项目需要多个 AI 代理协同工作、流程有分支和循环、且需要状态管理，LangGraph 是目前开源领域里做得比较完整的选择。但如果你只是做一个简单的问答链，可能没必要引入这个复杂度。\n\n---\n\n## 使用建议\n\n1. **先从小流程开始**：不要一上来就设计一个复杂的多代理系统，先用一个简单场景跑通，理解状态流转的基本逻辑。\n\n2. **充分利用可视化工具**：在开发阶段多看执行流程图，能帮你快速发现设计上的问题。\n\n3. **注意状态大小**：持久化虽然好用，但状态数据量大会影响性能和存储成本，设计时要考虑什么需要存、什么不需要存。\n\n4. **人机介入点要想清楚**：不是越多越好，在真正需要人工判断的节点设置就够了。\n\n5. **关注官方更新**：这个项目迭代较快，新版本可能会带来更好的性能和更方便的功能。\n\n---\n\n## 适合谁用？\n\n**推荐使用：**\n- 需要构建多代理协同系统的团队\n- 项目流程有复杂分支和循环逻辑的开发者\n- 已经在使用 LangChain 并希望扩展多代理能力的用户\n\n**可考虑：**\n- 对状态管理有需求，但团队技术实力一般的项目\n- 想要尝试人机协作流程但不确定规模的团队\n\n**不推荐：**\n- 只需要简单链式调用的场景\n- 没有工程经验支撑的小团队\n- 对性能要求极高且没有调优资源的项目",
+  "published": true,
+  "created_date": "2026-05-26",
+  "published_date": "2026-05-26",
+  "verified_url": "https://langchain-ai.github.io/langgraph/",
+  "verified_publisher": "LangChain（LangChain AI, Inc.）",
+  "verified_what": "LangGraph 是 LangChain 团队推出的开源低层代理编排框架，用于构建有状态、可循环、可控的复杂多代理系统与长时间运行的工作流；内置代理运行时（持久化执行、短期记忆、人机协作、流式输出）。",
+  "verified_price": "开源免费（MIT 许可证）。另有商业化的 LangGraph Platform（原 LangGraph Cloud）提供托管部署、可视化调试（LangGraph Studio）、监控与企业支持，需联系销售/按用量计费。",
+  "verified_platform": "Python、JavaScript/TypeScript（也可通过 LangGraph Platform 部署托管）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "多代理编排与协调",
+    "状态管理与持久化（checkpointer）",
+    "条件分支与循环控制",
+    "人机协作介入点（human-in-the-loop）",
+    "可视化执行监控（LangGraph Studio）",
+    "流式输出与错误处理/重试"
+  ],
+  "verified_description": "LangGraph 是由 LangChain 团队构建的开源低层框架，专门用于创建有状态的多代理应用程序与工作流。它支持循环和分支逻辑，并提供持久化执行、短期记忆与流式输出，使开发者能够构建复杂、可控、可投入生产的 AI 代理系统。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.7",
+  "rating_source": "站内编辑评分（人气/实用度）",
+  "rating_verified": true,
+  "verified_pros": [
+    "支持复杂的多代理循环与分支逻辑",
+    "内置状态持久化，代理可断点恢复",
+    "与 LangChain 生态无缝集成",
+    "支持人机协作与代理监督",
+    "可视化调试工具便于监控执行流程"
+  ],
+  "verified_cons": [
+    "学习曲线较陡，状态图概念需要时间理解",
+    "大规模部署时性能调优复杂",
+    "深度教程相对示例偏少"
+  ],
+  "verified_faq": [
+    {
+      "q": "LangGraph 和 LangChain 有什么区别？",
+      "a": "LangChain 是基础框架，提供链式调用能力；LangGraph 专注于构建有状态的多代理系统，支持循环与分支逻辑，适合复杂代理编排场景。"
+    },
+    {
+      "q": "LangGraph 是否免费？",
+      "a": "是的，LangGraph 框架本身完全开源免费，采用 MIT 许可证；仅托管平台 LangGraph Platform 为商业服务。"
+    },
+    {
+      "q": "LangGraph 适合构建什么应用？",
+      "a": "适合客服系统、研究助手、自动化工作流、复杂文档处理等需要多代理协作与状态流转的任务。"
+    },
+    {
+      "q": "如何开始使用？",
+      "a": "可通过 pip install langgraph（Python）或 npm install @langchain/langgraph（JS）安装，官网提供入门教程与示例。"
+    }
+  ],
+  "verified_tags": [
+    "多代理系统",
+    "工作流编排",
+    "状态管理",
+    "开源框架",
+    "LangChain"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://langchain-ai.github.io/langgraph/",
+    "https://www.langchain.com/blog/langgraph-v1",
+    "https://blog.langchain.com/langgraph-cloud/"
+  ],
+  "verify_notes": "官方文档域名 langchain-ai.github.io/langgraph 为 LangChain 官方 GitHub Pages，属真实官方来源。现有描述基本准确，仅补充 LangGraph Platform 商业托管层。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "LangGraph 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：LangGraph 的 多代理编排与协调 是亮点，价格 免费开源（MIT）；LangGraph Platform 企业云服务另计；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

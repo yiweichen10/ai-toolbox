@@ -1,0 +1,126 @@
+{
+  "batch_id": "b20",
+  "category": "AI开发",
+  "tools": [
+    {
+      "slug": "supabase-ai",
+      "name": "Supabase AI",
+      "url_current": "https://supabase.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "价格字段写“Pro $10/月”错误：Supabase Pro 实际为 $25/月（额外项目才从 $10/月起），同工具 content 表格已正确列 $25。来源：supabase.com/pricing。"
+    },
+    {
+      "slug": "anthropic-console",
+      "name": "Anthropic Console",
+      "url_current": "https://console.anthropic.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "价格“Pro版$20/月”实为 Claude Pro 消费订阅价（claude.ai），Console 是 API 开发平台、按 token 计费，属张冠李戴；content 称 2026 年“最新集成 Claude 3.5 模型”错误，2026 年已有 Opus 4.8 / Sonnet 5 等。来源：anthropic.com/pricing。"
+    },
+    {
+      "slug": "groq",
+      "name": "Groq",
+      "url_current": "https://groq.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 groq.com 正常，免费 tier + 按 token 付费描述属实，无幻觉。"
+    },
+    {
+      "slug": "cerebras",
+      "name": "Cerebras",
+      "url_current": "https://cerebras.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 cerebras.ai 正常；推理服务提供免费试用 + 按 token 付费（Developer）及企业联系销售，价格描述属实。"
+    },
+    {
+      "slug": "open-router",
+      "name": "OpenRouter",
+      "url_current": "https://openrouter.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 openrouter.ai 正常，按调用量计费 + 免费额度描述属实。"
+    },
+    {
+      "slug": "llamaindex",
+      "name": "LlamaIndex",
+      "url_current": "https://www.llamaindex.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 llamaindex.ai 正常，开源免费 + 付费云服务（LlamaCloud）描述属实。"
+    },
+    {
+      "slug": "pinecone",
+      "name": "Pinecone",
+      "url_current": "https://www.pinecone.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "价格字段“付费计划从 $49/月起”错误：Pinecone 当前付费档为 Builder $20/月、Standard 最低 $50/月（另有免费 Starter）。来源：pinecone.io/pricing。"
+    },
+    {
+      "slug": "chroma",
+      "name": "Chroma",
+      "url_current": "https://www.trychroma.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 trychroma.com 正常，开源免费 + 云服务付费描述属实。"
+    },
+    {
+      "slug": "weaviate",
+      "name": "Weaviate",
+      "url_current": "https://weaviate.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["platform"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "platform 字段写“Web/桌面/移动端支持”不准确：Weaviate 是服务端向量数据库，通过 API/SDK（Python/JS/Go/Java）及云托管访问，无桌面/移动端客户端。"
+    },
+    {
+      "slug": "langgraph",
+      "name": "LangGraph",
+      "url_current": "https://langchain-ai.github.io/langgraph/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL 为 LangChain 官方 GitHub Pages 文档（现重定向至 docs.langchain.com），属官方；开源免费描述属实，无幻觉。"
+    }
+  ]
+}

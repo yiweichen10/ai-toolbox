@@ -1,0 +1,126 @@
+{
+  "batch_id": "b21",
+  "category": "AI开发",
+  "tools": [
+    {
+      "slug": "flowise",
+      "name": "Flowise",
+      "url_current": "https://flowiseai.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 flowiseai.com 正确，为 Flowise 官方站点（FlowiseAI 出品）。开源免费 + Flowise Cloud 付费云属实（Free $0 / Starter $35 / Pro $65），描述与定价无幻觉。"
+    },
+    {
+      "slug": "langflow",
+      "name": "Langflow",
+      "url_current": "https://langflow.org",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 langflow.org 正确（现由社区/OSS 维护，曾属 DataStax/IBM）。但描述中\"Pro版$49/月\"无官方依据：DataStax 已于2026年3月停止托管其 Langflow Cloud，第三方资料（aimode.in 等）指 Pro/Team 约 $100-300/月，官方站点未列出 $49 档位，属定价编造。"
+    },
+    {
+      "slug": "ragflow",
+      "name": "RAGFlow",
+      "url_current": "https://ragflow.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 ragflow.io 正确（InfiniFlow 出品）。开源免费 + 云端/企业版付费属实（RAGFlow Cloud 提供订阅），描述无明确幻觉。注：具体企业版档位价格未在官网首页明示，未做硬性断言。"
+    },
+    {
+      "slug": "milvus",
+      "name": "Milvus",
+      "url_current": "https://milvus.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 milvus.io 正确（Zilliz 出品）。开源免费 + Zilliz Cloud 托管云服务属实，描述与定价无幻觉。"
+    },
+    {
+      "slug": "qdrant",
+      "name": "Qdrant",
+      "url_current": "https://qdrant.tech/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 qdrant.tech 正确（Rust 编写的开源向量数据库）。开源免费 + Qdrant Cloud 收费（含免费层）属实，描述与定价无幻觉。"
+    },
+    {
+      "slug": "anythingllm",
+      "name": "AnythingLLM",
+      "url_current": "https://anythingllm.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 anythingllm.com 正确（Mintplex Labs 出品）。但描述中\"付费云服务版起价$9/月\"错误：官方托管云最低档为 Basic $50/月（Pro $99/月，Enterprise 定制），并非 $9/月（$9.99 仅第三方托管商 agntable 的报价，非官方）。属定价编造。"
+    },
+    {
+      "slug": "lightrag",
+      "name": "LightRAG",
+      "url_current": "https://github.com/HKUDS/LightRAG",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网（官方仓库 github.com/HKUDS/LightRAG）正确。但正文 content 误将开发团队归属为\"香港中文大学（深圳）数据科学学院\"，实际为香港大学（HKU）数据智能实验室 HKUDS（description 顶部描述正确，正文自相矛盾）。属公司/产品归属错（张冠李戴）。价格\"免费开源\"属实。"
+    },
+    {
+      "slug": "graphrag",
+      "name": "GraphRAG",
+      "url_current": "https://github.com/microsoft/graphrag",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网（官方仓库 github.com/microsoft/graphrag）正确，由微软开源。描述\"2026年已发布2.0版本\"属实（GraphRAG 2.0.0 为重大 API 重做版本；当前最新已至 3.x），无幻觉。免费开源属实。"
+    },
+    {
+      "slug": "haystack",
+      "name": "Haystack",
+      "url_current": "https://haystack.deepset.ai/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 haystack.deepset.ai 正确（deepset 出品，德国公司）。开源免费 + 付费企业版属实（现品牌为 deepset Studio / Haystack Enterprise 平台与企业支持），描述无明确幻觉。注：\"Deepset Cloud\"旧品牌名已演进为 deepset Studio/Enterprise，实质付费企业版存在。"
+    },
+    {
+      "slug": "unstructured",
+      "name": "Unstructured",
+      "url_current": "https://unstructured.io/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 unstructured.io 正确。开源库免费 + 企业版/数据平台付费属实，描述与定价无幻觉。"
+    }
+  ]
+}

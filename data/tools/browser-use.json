@@ -1,0 +1,153 @@
+{
+  "name": "Browser Use",
+  "slug": "browser-use",
+  "positioning": "免费AI自动化工具推荐：开源库、多标签页并行管理",
+  "auto_positioning": true,
+  "emoji": "🌐",
+  "color": "#2563EB",
+  "description": "Browser Use 是开源的浏览器自动化/网页 Agent 框架与平台，让 AI 代理像人一样控制浏览器完成网页任务；开源库（MIT）可自托管，托管云则提供隐身浏览器、代理与验证码能力，并支持 OpenAI、Anthropic、Google 等模型及自带 Key。",
+  "category": "AI自动化",
+  "tags": [
+    "浏览器自动化",
+    "AI代理",
+    "开源",
+    "Web Agent",
+    "开发者工具"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "约8万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://browser-use.com",
+  "price": "免费开源（MIT）；云免费层 + Dev $29/月起",
+  "platform": "支持Windows、macOS、Linux，兼容Chrome、Firefox、Edge",
+  "pros": [
+    "开源免费（MIT），社区活跃（100k+ stars）",
+    "支持主流浏览器与多种 AI 模型",
+    "自动识别页面元素，减少配置",
+    "托管云提供隐身浏览器、代理与验证码绕过",
+    "免费层 + 按量计费，门槛低"
+  ],
+  "cons": [
+    "复杂动态网页仍有局限，Agent 可能卡死/循环",
+    "云端按 token 与带宽计费，复杂任务成本较高",
+    "需要一定技术门槛进行二次开发",
+    "非技术用户体验不够无代码化"
+  ],
+  "features": [
+    "AI 控制浏览器自动执行网页任务",
+    "智能页面元素识别与交互",
+    "多标签页并行管理",
+    "开源库（MIT）+ 托管云（隐身浏览器/代理/验证码）",
+    "支持 OpenAI、Anthropic、Google 等多模型及自带 Key",
+    "提供 API、SDK 与 Agent 技能"
+  ],
+  "related": [
+    "windsurf"
+  ],
+  "faq": [
+    {
+      "q": "Browser Use 是免费的吗？",
+      "a": "开源 Python 库（MIT）完全免费；云端提供免费层（3 并发会话、每月约 10 个 agent 任务），超出后按量计费或选择 Dev $29/月起套餐。"
+    },
+    {
+      "q": "Browser Use 支持哪些浏览器？",
+      "a": "开源库与云均兼容 Chrome、Firefox、Edge 等主流浏览器，推荐使用 Chrome 以获得最佳兼容性。"
+    },
+    {
+      "q": "非技术人员能使用 Browser Use 吗？",
+      "a": "基础任务可用预设/云界面，但复杂自动化流程需要 Python 与一定技术知识；它本质是面向开发者的框架。"
+    },
+    {
+      "q": "Browser Use 的云端怎么计费？",
+      "a": "免费层之后按使用量计费：浏览器会话约 $0.02/小时、代理带宽 $5/GB，模型 token 按 1.2x 供应商价或自带 Key 加 0.2x 编排费；套餐 Dev $29、Business $299、Scaleup $999/月。"
+    }
+  ],
+  "seo_keywords": [
+    "Browser Use",
+    "Browser Use浏览器自动化",
+    "Browser Use免费版",
+    "Browser Use怎么样",
+    "Browser Use和OpenHands对比"
+  ],
+  "content": "## Browser Use是什么？\n\n如果你经常需要让AI帮你操作浏览器——比如自动填表、批量抓取数据、或者让AI代替你点击网页上的各种按钮——那 Browser Use 可能是目前最适合你的工具之一。\n\n它本质上是一个让AI代理“驾驶”浏览器的开源框架。你不需要写复杂的Selenium脚本，也不用自己处理各种网页解析的破事，Browser Use会自动识别页面上的元素，然后根据你的指令去操作。2026年的最新版本在页面元素识别和多标签页并行处理上做了不少优化，对于需要处理复杂工作流的人来说友好了一些。\n\n## 核心功能\n\n**1. AI控制浏览器执行任务**\n\n这是最基础的能力。你给出一个自然语言指令，比如“帮我在这个页面搜索XXX，然后把结果截图”，Browser Use就会控制浏览器去完成。整个过程你都能看到AI在做什么，而不是一个黑盒。\n\n**2. 智能页面元素识别**\n\n不需要你自己去定位DOM元素，Browser Use能自动识别按钮、输入框、链接等可交互元素。据官方介绍，识别准确率在主流网页上表现不错，但遇到一些特殊的自定义控件或者动态加载的内容时，可能还是需要你手动辅助一下。\n\n**3. 多标签页并行管理**\n\n这是新版增强的能力。你可以同时让AI操作多个标签页，比如同时打开多个页面抓取数据、或者并行执行不同的任务。对于需要批量处理的工作来说，效率提升比较明显。\n\n**4. 自定义工作流和脚本录制**\n\n你可以把常用的操作流程保存下来，变成可复用的工作流。也可以录制自己手动操作的步骤，让AI学习并自动执行。适合那些有固定操作流程的重复性任务。\n\n**5. 多模型支持和API集成**\n\n支持接入OpenAI、Anthropic等主流大模型，也提供了API接口，方便你把它集成到自己的应用或者工作流里。对于开发者来说，这点比较友好。\n\n## 版本/套餐对比\n\n| 版本 | 价格 | 功能差异 |\n|------|------|----------|\n| 开源版 | 免费 | 基础浏览器自动化、智能元素识别、多标签页管理、开源社区支持 |\n| 付费版 | 据官方介绍有付费档位 | 高级元素识别能力、更强并行处理能力、技术支持、优先更新 |\n\n具体价格和功能细节建议直接去看官方文档，因为这部分信息可能会变。\n\n## 值不值得用？\n\n**优点：**\n\n- 开源免费这点很香，代码透明，有能力的话完全可以自己魔改\n- 支持多种AI模型，不绑死在某一个供应商上\n- 自动识别页面元素确实能省不少功夫，不用天天跟XPath较劲\n- 社区比较活跃，据社区反馈更新频率还可以，问题响应也相对及时\n\n**缺点：**\n\n- 对那种加载特别慢、元素频繁变化的复杂动态网页，处理起来还是有点吃力\n- 虽说门槛比写原生Selenium低不少，但要想用得顺手，多少还是需要点技术底子\n- 部分高级功能要付费，免费版够不够用取决于你的具体需求\n\n**总体结论：** 如果你有一定技术基础，需要让AI帮你自动化浏览器操作，Browser Use值得一试。它的开源免费属性降低了尝试成本，核心功能也覆盖了大多数常见场景。但如果你期待它能完美处理所有网页操作，可能还需要调整预期。\n\n## 使用建议\n\n1. **从小任务开始**：先拿一个简单的任务试试水，比如让AI帮你填一个表单或者点几个按钮，感受一下它的行为逻辑。\n\n2. **复杂页面做好兜底**：遇到动态加载的网页，可以在指令里加入等待逻辑，或者准备好备选方案。\n\n3. **充分利用工作流功能**：如果有重复性任务，花点时间把流程固化下来，后续会省很多事。\n\n4. **关注官方更新**：功能迭代比较快，定期看看更新日志，可能有你需要的新能力。\n\n## 适合谁用？\n\n**推荐：**\n\n- 有一定技术能力的开发者或者自动化爱好者\n- 需要批量处理网页数据的运营/产品人员\n- 想把浏览器操作集成到自己AI应用里的团队\n\n**可考虑：**\n\n- 技术小白但愿意花时间学习的也可以尝试，不过初期可能会有点吃力\n- 对自动化有需求但不想自己写代码的，可以看看有没有现成的工作流模板可以用\n\n**不推荐：**\n\n- 期待开箱即用、完全不需要任何配置就能处理所有网页操作的\n- 需要处理极度复杂、反爬机制严格的网页的（目前这类场景还是更适合专业的爬虫方案）",
+  "published": true,
+  "created_date": "2026-05-27",
+  "published_date": "2026-05-27",
+  "verified_url": "https://browser-use.com",
+  "verified_publisher": "Browser Use (raised $17M)",
+  "verified_what": "开源的浏览器自动化/网页 Agent 框架与平台，让 AI 代理像人一样控制浏览器完成网页任务；开源库（MIT）加上托管的 Browser Harness、隐身浏览器与 Web Agent 云服务。",
+  "verified_price": "开源库免费（MIT）；云端有免费层（3 并发会话、每月约 10 个 agent 任务）+ 按量计费（浏览器约 $0.02/小时、代理带宽 $5/GB、模型 token 1.2x 或自带 Key 加 0.2x 编排费）。付费套餐 Dev $29/月、Business $299/月、Scaleup $999/月（转化为额度）。",
+  "verified_platform": "支持 Windows / macOS / Linux；Python 库 + 托管云；兼容 Chrome、Firefox、Edge",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "AI 控制浏览器自动执行网页任务",
+    "智能页面元素识别与交互",
+    "多标签页并行管理",
+    "开源库（MIT）+ 托管云（隐身浏览器/代理/验证码）",
+    "支持 OpenAI、Anthropic、Google 等多模型及自带 Key",
+    "提供 API、SDK 与 Agent 技能"
+  ],
+  "verified_description": "Browser Use 是开源的浏览器自动化/网页 Agent 框架与平台，让 AI 代理像人一样控制浏览器完成网页任务；开源库（MIT）可自托管，托管云则提供隐身浏览器、代理与验证码能力，并支持 OpenAI、Anthropic、Google 等模型及自带 Key。",
+  "content_flags": "price",
+  "price_verified": true,
+  "verified_pros": [
+    "开源免费（MIT），社区活跃（100k+ stars）",
+    "支持主流浏览器与多种 AI 模型",
+    "自动识别页面元素，减少配置",
+    "托管云提供隐身浏览器、代理与验证码绕过",
+    "免费层 + 按量计费，门槛低"
+  ],
+  "verified_cons": [
+    "复杂动态网页仍有局限，Agent 可能卡死/循环",
+    "云端按 token 与带宽计费，复杂任务成本较高",
+    "需要一定技术门槛进行二次开发",
+    "非技术用户体验不够无代码化"
+  ],
+  "verified_faq": [
+    {
+      "q": "Browser Use 是免费的吗？",
+      "a": "开源 Python 库（MIT）完全免费；云端提供免费层（3 并发会话、每月约 10 个 agent 任务），超出后按量计费或选择 Dev $29/月起套餐。"
+    },
+    {
+      "q": "Browser Use 支持哪些浏览器？",
+      "a": "开源库与云均兼容 Chrome、Firefox、Edge 等主流浏览器，推荐使用 Chrome 以获得最佳兼容性。"
+    },
+    {
+      "q": "非技术人员能使用 Browser Use 吗？",
+      "a": "基础任务可用预设/云界面，但复杂自动化流程需要 Python 与一定技术知识；它本质是面向开发者的框架。"
+    },
+    {
+      "q": "Browser Use 的云端怎么计费？",
+      "a": "免费层之后按使用量计费：浏览器会话约 $0.02/小时、代理带宽 $5/GB，模型 token 按 1.2x 供应商价或自带 Key 加 0.2x 编排费；套餐 Dev $29、Business $299、Scaleup $999/月。"
+    }
+  ],
+  "verified_tags": [
+    "浏览器自动化",
+    "AI代理",
+    "开源",
+    "Web Agent",
+    "开发者工具"
+  ],
+  "verified_category": "AI自动化",
+  "source_urls": [
+    "https://browser-use.com",
+    "https://browser-use.com/pricing",
+    "https://docs.browser-use.com/pricing",
+    "https://github.com/browser-use/browser-use"
+  ],
+  "verify_notes": "原 price 字段称「付费版约$19/月」不准确；官网云套餐为 Dev $29、Business $299、Scaleup $999/月，且开源库免费。已修正价格区间。其余描述与产品相符。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "n8n",
+      "make",
+      "bardeen"
+    ],
+    "verdict": "Browser Use 与 n8n、Make、Bardeen 同属AI自动化赛道：Browser Use 的 AI 控制浏览器自动执行网页任务 是亮点，价格 免费开源（MIT）；云免费层 + Dev $29/月起；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

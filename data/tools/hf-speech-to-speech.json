@@ -1,0 +1,91 @@
+{
+  "name": "HuggingFace Speech-to-Speech",
+  "slug": "hf-speech-to-speech",
+  "positioning": "Hugging Face 官方出品的本地语音 Agent 管线（开源项目），将 VAD→STT→LLM→TTS 串联为低延迟、全模块可替换的语音助手框架，通过 OpenAI Realtime 兼容的 WebSocket API 暴露，可完全本地运行、数据不出本机。",
+  "auto_positioning": false,
+  "emoji": "🗣️",
+  "color": "#FFD21E",
+  "description": "HuggingFace Speech-to-Speech 是 Hugging Face 官方出品的本地语音 Agent 管线，把 VAD（语音活动检测）→ STT（语音转写）→ LLM（大模型应答）→ TTS（语音合成）拆成四个可替换阶段，通过 OpenAI Realtime 兼容的 WebSocket API 暴露服务。整套栈可完全跑在本地，数据不出本机，是构建私有语音 Agent 与客服机器人的理想底座，已在数千台 Reachy Mini 机器人上作为对话后端投产。",
+  "category": "AI音频",
+  "tags": [
+    "语音Agent",
+    "开源",
+    "本地运行",
+    "Hugging Face",
+    "WebSocket"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "pick",
+    "text": "开源项目"
+  },
+  "url": "https://github.com/huggingface/speech-to-speech",
+  "price": "开源免费（Apache-2.0，自托管，需自备算力）",
+  "platform": [
+    "开源（Python/本地）",
+    "支持本地与云端 LLM 后端"
+  ],
+  "pros": [
+    "全开源、本地运行，数据不出本机，隐私友好",
+    "模块化管线，VAD/STT/LLM/TTS 每个环节都可替换",
+    "OpenAI Realtime 兼容 WebSocket API，接入成本低",
+    "已在数千台 Reachy Mini 机器人上生产运行",
+    "兼容 Whisper、Llama、Qwen3-TTS、Gemma 等开源模型"
+  ],
+  "cons": [
+    "需要自行部署与配置，对非技术用户门槛较高",
+    "本地运行依赖 GPU/算力，延迟与效果受硬件影响"
+  ],
+  "features": [
+    "低延迟语音 Agent 管线：VAD → STT → LLM → TTS",
+    "每个组件可插拔替换",
+    "OpenAI Realtime 兼容 WebSocket 服务",
+    "支持 llama.cpp / vLLM 本地 LLM 后端",
+    "默认 Parakeet TDT + Qwen3-TTS 实时路径",
+    "已作为 Reachy Mini 机器人对话后端投产"
+  ],
+  "related": [
+    "elevenlabs",
+    "chatgpt",
+    "suno"
+  ],
+  "content": "## HuggingFace Speech-to-Speech 是什么？\nHuggingFace Speech-to-Speech 是 Hugging Face 官方出品的本地语音 Agent 管线（开源项目），目标是让开发者用开源模型自建一个能听、会想、能说的语音助手。它把整条链路拆成四个可替换的阶段——VAD（语音活动检测）→ STT（语音转写）→ LLM（大模型应答）→ TTS（语音合成），通过 OpenAI Realtime 兼容的 WebSocket API 暴露服务。整套栈可以完全跑在本地，数据不出本机，是构建私有语音 Agent 与客服机器人的理想底座。它已在数千台 Reachy Mini 机器人上作为对话后端投产。\n\n## 核心功能\n1. 低延迟模块化管线：VAD→STT→LLM→TTS，每个阶段独立线程、队列连接，延迟可控。\n2. 全组件可插拔：STT、LLM、TTS 都能换，LLM 槽位支持任意 OpenAI 兼容协议。\n3. 本地或云端自由切换：既能指向托管供应商，也能指向本机 vLLM / llama.cpp，做到完全开源栈。\n4. 默认实时路径：Parakeet TDT 本地 STT + OpenAI 兼容 LLM + Qwen3-TTS 本地语音输出。\n5. 生产背书：作为 Reachy Mini 机器人的对话后端，已在真实硬件规模运行。\n\n## 版本/套餐对比\n项目本身开源免费（Apache-2.0），无 SaaS 套餐；成本主要是你自托管的算力。开发者按需选择本地模型规模即可。\n\n## 值不值得用？\n如果你要做自己的语音 Agent，而不是接第三方 API，这个项目非常值得。它把语音助手这件原本很碎的事，用一套标准管线收拢起来，又保留每个环节的替换自由。隐私敏感、需要私有部署的团队尤其合适。代价是你需要自己部署和调参。\n\n## 使用建议\n1. 先用 pip install speech-to-speech 跑通默认实时服务，再逐步替换模型。\n2. 想彻底本地化，就用 llama.cpp 起一个 Gemma 之类的本地 LLM 后端指过去。\n3. 任何 OpenAI Realtime 兼容客户端都能连，直接复用现有前端。\n\n## 适合谁用？（三档）\n- 重度用户：做语音 Agent 产品、客服机器人的团队，拿它当生产底座。\n- 中度用户：想给自己的应用加语音交互的开发者，fork 后改组件。\n- 轻度用户：单纯想本地跑个语音助手玩的研究者，按文档几步即可。",
+  "published": true,
+  "faq": [
+    {
+      "q": "它是完全开源的吗？",
+      "a": "是的，项目以 Apache-2.0 协议开源，并在 GitHub Trending 期间获得大量关注（约 10K stars，数据点会变动），可完全本地自托管。"
+    },
+    {
+      "q": "必须全部本地运行吗？",
+      "a": "不必须。LLM 槽位支持任意 OpenAI 兼容协议，你可以指向托管供应商，也可以指向本机 vLLM / llama.cpp，做到完全开源栈。"
+    },
+    {
+      "q": "接入成本高吗？",
+      "a": "不高，它通过 OpenAI Realtime 兼容的 WebSocket API 暴露服务，任何兼容客户端都能连，前端基本可复用。"
+    },
+    {
+      "q": "有哪些默认模型组合？",
+      "a": "默认实时路径为 Parakeet TDT 本地 STT + OpenAI 兼容 LLM + Qwen3-TTS 本地语音输出，每个环节都能替换。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Speech-to-Speech",
+    "Hugging Face 语音",
+    "本地语音Agent",
+    "开源语音助手",
+    "语音管线"
+  ],
+  "source_urls": [
+    "https://github.com/huggingface/speech-to-speech/tree/main",
+    "https://ima.qq.com/wiki/?shareId=8e4d900818b7253fc409e0f8d47c9d65724f8c88ec2bbbfd893f9bb5da34755f"
+  ],
+  "confidence": "medium",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-22"
+}

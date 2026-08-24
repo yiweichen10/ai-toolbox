@@ -1,0 +1,126 @@
+{
+  "batch_id": "b31",
+  "category": "AI绘画",
+  "tools": [
+    {
+      "slug": "midjourney",
+      "name": "Midjourney",
+      "url_current": "https://www.midjourney.com",
+      "url_ok": true,
+      "url_correct": "https://www.midjourney.com",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实。基础版$10/月起正确（官方四档 $10/$30/$60/$120）。内容所述V7版本属实。无幻觉。"
+    },
+    {
+      "slug": "stable-diffusion",
+      "name": "Stable Diffusion",
+      "url_current": "https://stability.ai",
+      "url_ok": true,
+      "url_correct": "https://stability.ai",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实。开源免费需GPU正确；ControlNet/LoRA/SDXL Turbo 功能属实。无幻觉。"
+    },
+    {
+      "slug": "dall-e-3",
+      "name": "DALL-E 3",
+      "url_current": "https://openai.com/dall-e-3",
+      "url_ok": true,
+      "url_correct": "https://openai.com/dall-e-3",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实。但price字段'基础$10/月起'错误：DALL-E 3无独立$10档，需ChatGPT Plus($20/月)或按图计费API（约$0.04-0.12/张）。来源：openai.com定价 / stackscored 2026。"
+    },
+    {
+      "slug": "adobe-firefly",
+      "name": "Adobe Firefly",
+      "url_current": "https://firefly.adobe.com",
+      "url_ok": true,
+      "url_correct": "https://firefly.adobe.com",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网真实。含免费档，但另有Premium($4.99/月)。'免费使用'表述偏简略，但免费档属实，不判幻觉。"
+    },
+    {
+      "slug": "ideogram",
+      "name": "Ideogram",
+      "url_current": "https://ideogram.ai",
+      "url_ok": true,
+      "url_correct": "https://ideogram.ai",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实。price字段'基础$10/月起'错误：官网无$10档，Basic $8/月（老用户）或新用户入门Plus $20/月。来源：ideogram.ai定价 / aitoolradar 2026。"
+    },
+    {
+      "slug": "leonardo-ai",
+      "name": "Leonardo AI",
+      "url_current": "https://leonardo.ai",
+      "url_ok": true,
+      "url_correct": "https://leonardo.ai",
+      "hallucination": true,
+      "hallucination_fields": ["platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实。但platform字段'本地部署'错误：Leonardo AI为云端Web平台，不支持本地部署（内容自身亦描述为Web）。来源：leonardo.ai / comparegen 2026。"
+    },
+    {
+      "slug": "freepik-ai",
+      "name": "Freepik AI",
+      "url_current": "https://www.freepik.com",
+      "url_ok": true,
+      "url_correct": "https://www.freepik.com",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网真实。price'基础$10/月起'近似Premium约€10.83/月（$11-12），属合理近似，不判幻觉。"
+    },
+    {
+      "slug": "krea-ai",
+      "name": "Krea AI",
+      "url_current": "https://www.krea.ai",
+      "url_ok": true,
+      "url_correct": "https://www.krea.ai",
+      "hallucination": true,
+      "hallucination_fields": ["platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实。platform字段'本地部署'错误：Krea AI为云端Web实时工具，无本地部署。价格存在来源冲突（官方页Pro $35，另有来源Pro $10），按铁律不判价格幻觉。来源：krea.ai官方。"
+    },
+    {
+      "slug": "flux",
+      "name": "Flux",
+      "url_current": "https://blackforestlabs.ai",
+      "url_ok": true,
+      "url_correct": "https://blackforestlabs.ai",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实。price字段'Pro $10/月'错误：Flux Pro为按图计费API（约$0.04-0.055/张），无$10/月订阅档；Schnell/Dev开源免费。来源：blackforestlabs.ai / bfl文档 2026。"
+    },
+    {
+      "slug": "miaohua",
+      "name": "秒画",
+      "url_current": "https://miaohua.sensetime.com",
+      "url_ok": true,
+      "url_correct": "https://miaohua.sensetime.com",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实（商汤）。但content将秒画错误归为'字节跳动/豆包AI'，实为商汤科技(SenseTime)'日日新'体系产品。来源：sensetime.com官方 / miaohuacn.com。价格$10/月起存疑（国产产品），按铁律不判价格幻觉。"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "name": "CartAI",
+  "name_cn": "CartAI",
+  "slug": "cartai",
+  "emoji": "🤖",
+  "color": "#059669",
+  "description": "面向Agent商务的结账API。让AI Agent能在真实商家页面上完成结账并将订单跟踪到确认。开发者侧提供Catalog、Checkouts、Payments和Monetization四部分能力，是构建购物Agent和导购产品的关键基础设施。",
+  "category": "AI行业应用",
+  "tags": [
+    {
+      "text": "AI行业应用"
+    },
+    {
+      "text": "免费可用",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "新品",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://cartai.ai",
+  "price": "待确认",
+  "platform": "Web",
+  "pros": [
+    "让 AI Agent 真正完成端到端交易（含合规支付）",
+    "无需自行处理 PCI/3DS/反爬，降低集成门槛",
+    "开源 MCP 服务器，易接入主流编程工具",
+    "联盟分润内建，便于购物 Agent 变现",
+    "幂等重试安全设计，降低重复下单风险"
+  ],
+  "cons": [
+    "价格未公开，企业级成本需询价",
+    "目前仅支持美国零售商，其他地区待扩展",
+    "依赖商家页面结构与合作式风控策略",
+    "面向开发者，无低代码界面"
+  ],
+  "features": [
+    "真实商家页面端到端结账",
+    "托管式 PCI 合规支付",
+    "跨商家产品搜索与实时估价",
+    "联盟佣金归因与分润",
+    "开源 MCP 服务器（Apache 2.0）",
+    "Hosted Cart 一行嵌入组件"
+  ],
+  "related": [],
+  "content": "## CartAI 是什么？\n\nCartAI 是面向 AI Agent 商务的结账 API 与 MCP 服务，定位是「处理结账的 AI Agent」——开发者通过一套 REST API，让 AI Agent 在真实商家页面上完成结账、订阅、发票支付与订单提交，并把订单跟踪到确认。它由 TheCartAI 团队打造，2026 年 7 月在 Product Hunt 上榜（#2，440+ 票），是构建购物 Agent 与导购产品的关键基础设施。\n\nCartAI 填补了浏览器自动化与 Agent 支付之间的空白：通用浏览器自动化只管「导航」，不保证「交易真正落地」；而 CartAI 把可编程交易做成单一原语，内置组合式工作流、PCI 合规支付与「合作式」机器人缓解（与 Cloudflare、Human、Fingerprint 等信任体系协作而非绕过），并已在 BestBuy、Newegg、Jomashop、Ulta 等真实商家页面上完成验证。\n\n### 核心功能\n\n- **Catalog 商品目录**：跨商家实时搜索产品、获取变体与实时价格，在生成购物车前先给出结账预估。\n- **Checkouts 结账**：在真实商家结算页完成订单，提供归一化订单与 webhooks，跟踪到确认。\n- **Payments 支付**：托管式 PCI 合规支付，基于 Visa Intelligent Commerce 与 Mastercard Agent Pay，PCI 范围不落在你的技术栈上。\n- **Monetization 变现**：内建联盟佣金归因与分润，Agent 通过你的界面下单时依然可获收益。\n- **MCP Server（开源 Apache 2.0）**：为 Claude Desktop、Claude Code、Cursor、VS Code 等提供产品搜索、结账预估、支付与会话等工具。\n- **Hosted Cart 嵌入式结账**：一行代码嵌入变体选择、地址、支付与确认组件，为从未有过结账能力的页面提供「即插即用」结算。\n\n### 适用场景\n\n- **购物 Agent 与导购产品**：给 AI 购物助手、推荐引擎、市场聚合页赋予真实下单能力。\n- **电商与订阅自动化**：自动化结账、订阅开通/取消、发票支付与 B2B 采购单提交，替代人工操作。\n- **内容与创作者商业化**：在编辑页、推荐流、创作者页面直接嵌入结账，把流量原地变现。\n\n### 价格\n\nCartAI 按 API/用量计费，具体价格未公开标价，官方 Terms 显示费用会在账户后台展示或另行约定，可能基于交易量或 GMV 点数计算；新账户默认赠送至少 10 次完整测试结账的免费额度，第三方目录显示约 $29/月起。开发者可先试用再按需付费，具体以官网为准。\n\n> 以上信息依据 CartAI 官网、开发者文档及第三方评测整理；当前支持范围以美国零售商为主，定价与支持地区如有变动，请以官网实时信息为准。",
+  "published": true,
+  "faq": [
+    {
+      "q": "CartAI 是什么？",
+      "a": "CartAI 是面向 AI Agent 的结账基础设施：通过 API 或 MCP 服务器，让 Agent 在真实商家页面完成结账、订阅、发票与订单，并处理 PCI 合规支付与联盟分润。"
+    },
+    {
+      "q": "CartAI 如何收费？",
+      "a": "按 API/用量计费，具体价格未公开标价，新账户赠送至少 10 次测试结账的免费额度；第三方目录显示约 $29/月起，企业方案需联系销售，以官网为准。"
+    },
+    {
+      "q": "CartAI 支持哪些地区与商家？",
+      "a": "当前 Agent 主要在美国零售商网站上运行，结账默认采用访客模式；不同商家可能与风控体系合作程度不同，具体支持范围以官方文档为准。"
+    }
+  ],
+  "created_date": "2026-07-28",
+  "published_date": "2026-07-28",
+  "verified_url": "https://cartai.ai",
+  "verified_publisher": "CartAI（TheCartAI）",
+  "verified_what": "面向 Agent 商务的结账 API / MCP 服务：让 AI Agent 能在真实商家页面上完成结账、订阅、发票与订单等交易，并提供托管式 PCI 合规支付与联盟分润，是构建购物 Agent 与导购产品的关键基础设施。",
+  "verified_price": "按 API/用量计费，具体价格未公开（开发者可免费试用/免费额度）；第三方目录称约 $29/月起；企业定制。含开源 MCP 服务器（Apache 2.0）。",
+  "verified_platform": "Web（REST API、MCP Server、Hosted Cart 组件）",
+  "last_verified": "2026-07-31",
+  "confidence": "medium",
+  "conflict": false,
+  "verified_features": [
+    "Catalog：跨商家实时产品搜索、变体与价格预估",
+    "Checkout：在真实结算页完成订单并 Webhook 回调",
+    "Payments：托管式 PCI 合规支付（Visa Intelligent Commerce / Mastercard Agent Pay）",
+    "Monetization：联盟佣金归因与分润",
+    "开源 MCP 服务器（Claude/Cursor/Codex 等接入）",
+    "Hosted Cart 一键嵌入结账组件"
+  ],
+  "verified_description": "CartAI 是面向 Agent 商务的结账 API 与 MCP 服务，让 AI Agent 能在真实商家页面上完成结账、订阅与订单，并提供托管式 PCI 合规支付与联盟分润，是构建购物 Agent 与导购产品的关键基础设施。",
+  "content_flags": "原文 description 与分类基本准确；仅定价「待确认」现已可补为按 API/用量计费（企业定制）；features 仅「AI驱动」过于简略，已展开。",
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "暂无权威外部评分（编辑评分）",
+  "verified_pros": [
+    "让 AI Agent 真正完成端到端交易（含合规支付）",
+    "无需自行处理 PCI/3DS/反爬，降低集成门槛",
+    "开源 MCP 服务器，易接入主流编程工具",
+    "联盟分润内建，便于购物 Agent 变现"
+  ],
+  "verified_cons": [
+    "价格未公开，企业级成本需询价",
+    "依赖商户页面结构与反爬策略",
+    "面向开发者，无低代码界面"
+  ],
+  "verified_faq": [
+    {
+      "q": "CartAI 是什么？",
+      "a": "CartAI 是面向 AI Agent 的结账基础设施：通过 API 或 MCP 服务器，让 Agent 在真实商家页面完成结账、订阅、发票与订单，并处理 PCI 合规支付与联盟分润。"
+    },
+    {
+      "q": "CartAI 如何收费？",
+      "a": "按 API/用量计费，具体价格未公开，开发者可先试用；第三方目录显示约 $29/月起，企业方案需联系销售。"
+    }
+  ],
+  "verified_tags": [
+    "AI行业应用",
+    "Agent商务",
+    "结账API",
+    "MCP",
+    "电商基础设施"
+  ],
+  "verified_category": "AI行业应用",
+  "source_urls": [
+    "https://cartai.ai/",
+    "https://www.cartai.ai/product/catalog",
+    "http://www.cartai.ai/",
+    "https://exploreai.tools/tools/cartai",
+    "http://www.jxxy.net/ai/articles/cartai-agent-checkout-api"
+  ],
+  "verify_notes": "价格无官方公开标价，confidence 标 medium；原文核心信息准确，已补充核心功能。",
+  "content_verified": false,
+  "url_previous": "https://www.cartai.ai/",
+  "compare_section": {
+    "competitors": [
+      "duolingo-max",
+      "harvey-ai",
+      "schole-ai"
+    ],
+    "verdict": "CartAI 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：CartAI 的 AI驱动 是亮点，价格 待确认；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "seo_keywords": [
+    "CartAI 结账 API",
+    "AI Agent 购物",
+    "Agent 商务基础设施",
+    "AI 结账自动化",
+    "MCP 电商工具"
+  ]
+}

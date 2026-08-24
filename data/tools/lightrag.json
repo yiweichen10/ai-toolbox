@@ -1,0 +1,148 @@
+{
+  "name": "LightRAG",
+  "slug": "lightrag",
+  "positioning": "四种分块策略+流式输出与：免费AI开发工具怎么用",
+  "auto_positioning": true,
+  "emoji": "📄",
+  "color": "#4F46E5",
+  "description": "LightRAG 是由香港大学（HKU）数据智能实验室（HKUDS）开发的开源轻量级检索增强生成（RAG）框架，基于知识图谱实现高效的双层级文档检索，MIT 协议可商用自托管；最新 v1.5.6（2026-08-06）新增原生 PostgreSQL 图存储 PGTableGraphStorage（摆脱 Apache AGE 依赖，PostgreSQL 一库覆盖全部存储类型），并修复上传文件名路径遍历安全漏洞。",
+  "category": "AI开发",
+  "tags": [
+    "RAG框架",
+    "检索增强生成",
+    "开源",
+    "文档问答",
+    "知识图谱",
+    "向量检索"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "85,000",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://github.com/HKUDS/LightRAG",
+  "price": "免费开源（MIT）",
+  "platform": "Python 3.8+、支持Docker部署",
+  "pros": [
+    "完全开源免费，MIT 可商用",
+    "轻量易部署",
+    "支持多种文档与向量库",
+    "社区活跃（HKUDS 持续维护）",
+    "有 EMNLP 2025 论文支撑"
+  ],
+  "cons": [
+    "企业级权限/部署需自行实现",
+    "多模型行为差异需关注",
+    "大规模部署需手动调优"
+  ],
+  "features": [
+    "基于知识图谱的双层级检索增强生成",
+    "轻量级 RAG 框架，易部署",
+    "多文档/多模态格式支持（PDF/Word/图片/表格/公式等，合并 RAG-Anything）",
+    "PGTableGraphStorage 原生 PostgreSQL 图存储（v1.5.6 新增，摆脱 Apache AGE 依赖，性能更高/占用更小，PostgreSQL 成为全能后端）",
+    "多向量数据库集成（Milvus/Qdrant/Chroma/Neo4j/PostgreSQL/MongoDB/OpenSearch 等）",
+    "四种分块策略（Fix/Recursive/Vector/Paragraph）",
+    "角色化 LLM 配置（EXTRACT/QUERY/KEYWORDS/VLM）",
+    "DOCX Smart Heading 智能标题识别（v1.5.5 新增）",
+    "流式输出与 WebUI 知识图谱可视化"
+  ],
+  "related": [
+    "ragflow",
+    "milvus",
+    "qdrant",
+    "anythingllm",
+    "langchain"
+  ],
+  "faq": [
+    {
+      "q": "LightRAG 免费吗？",
+      "a": "是，采用 MIT 协议完全开源免费，可商用。"
+    },
+    {
+      "q": "LightRAG 支持哪些向量数据库？",
+      "a": "支持 Milvus、Qdrant、Chroma、Neo4j、PostgreSQL、MongoDB、OpenSearch 等，提供统一接口；v1.5.6 起 PostgreSQL 可一库覆盖全部四种存储类型。"
+    }
+  ],
+  "seo_keywords": [
+    "LightRAG",
+    "LightRAG开源",
+    "LightRAG RAG框架",
+    "LightRAG vs LangChain",
+    "轻量级RAG工具推荐"
+  ],
+  "content": "## LightRAG是什么？\n\n简单说，LightRAG就是一个帮你快速搭建文档问答系统的开源工具。想象一下，你需要让AI能回答\"根据这份合同/手册/报告，某个问题该怎么处理\"——这类需求在过去需要不少技术门槛，但LightRAG把它变得更简单了。\n\n它由香港大学（HKU）数据智能实验室（HKUDS）团队开发，专注于轻量级、高效这两个点，并有 EMNLP 2025 论文支撑。2026年迭代明显提速：5月合并多模态 RAG 系统 RAG-Anything，8月初发布 v1.5.6，新增原生 PostgreSQL 图存储（PGTableGraphStorage）等能力，在开源 RAG 圈子里属于活跃项目。\n\n## 核心功能\n\n**1. 多文档/多模态格式支持**\n\nPDF、Word、TXT、图片、表格、公式等都能直接处理，不用自己先做格式转换。v1.5.5 起内置 DOCX 解析器新增 Smart Heading 智能标题识别：即使文档缺少规范的 Word 大纲级别，也能自动恢复标题结构，让按标题分块更贴合文档真实语义，减少错误切块。据社区反馈，处理过程比较顺畅，对中文文档的支持也做得不错。\n\n**2. 多向量数据库集成**\n\nMilvus、Qdrant、Chroma、Neo4j、PostgreSQL、MongoDB、OpenSearch 等主流存储都能接入，你可以根据已有技术栈或项目规模选合适的数据库，不被绑定。\n\n**3. 原生 PostgreSQL 图存储（v1.5.6 新增）**\n\nv1.5.6（2026-08-06 发布）引入 PGTableGraphStorage：基于原生 PostgreSQL 表构建图存储，不再依赖 Apache AGE 扩展，部署更简单、图存储性能更高、占用更小，并将取代基于 AGE 的 PGGraphStorage 成为 PostgreSQL 的首选方案。升级后 PostgreSQL 一个数据库即可覆盖四种存储类型，成为 LightRAG 的全能后端数据库。\n\n**4. 高效语义检索**\n\n这是RAG的核心能力——能把用户的自然语言问题和文档内容匹配上。实际使用中，检索速度和准确度在同级别开源方案里属于主流水平。\n\n**5. 灵活的分块与解析策略**\n\nv1.5.x 引入四种可选分块策略（Fix/Recursive/Vector/Paragraph），并支持按 EXTRACT、QUERY、KEYWORDS、VLM 四类角色分别配置不同 LLM；解析环节可接入 MinerU、Docling 等外部服务。\n\n**6. 插件化架构与 WebUI**\n\n插件化设计便于按需扩展；自带 WebUI，支持文档插入、查询与知识图谱可视化。\n\n**7. 流式输出支持**\n\n回答能一个字一个字蹦出来，不用等完整结果生成完，体验上更接近和真人对话。\n\n## 版本/套餐对比\n\nLightRAG 为纯开源项目（MIT），无付费商业版：\n\n| 版本 | 定位 | 适合场景 |\n|------|------|----------|\n| 社区版（MIT） | 免费开源、可商用 | 个人项目、原型验证、中小规模应用 |\n\n如需官方技术支持或商业保障，可关注 HKUDS 生态内的相关服务，具体以官方发布为准。\n\n## 值不值得用？\n\n**优点：**\n\n- 完全开源免费（MIT），可商用\n- 部署确实轻量，上手速度快\n- 多文档格式和多向量库的支持灵活性不错\n- 插件化设计给二次开发留了空间\n- 社区活跃（HKUDS 持续维护，迭代快）\n\n**缺点：**\n\n- 文档和教程相对商业方案偏少，遇到问题需要多靠社区\n- 企业级功能比如权限管理这些，需要自己动手实现\n- 大规模部署时需要手动调优，不是开箱即用\n- GUI比较基础，界面功能不算丰富\n\n**我的看法：** 如果你预算有限、想快速做个原型或者中小规模部署，LightRAG是个值得考虑的选择。但如果你是大企业、对稳定性和支持要求很高，或者图省事，那可能还是商业方案更稳妥。\n\n## 使用建议\n\n1. **从小规模开始验证**：先拿少量文档测试流程，确认效果再扩大规模\n2. **选合适的向量数据库**：根据数据量和对性能的要求，Milvus适合大规模、Chroma适合轻量场景\n3. **PostgreSQL 用户升级到 v1.5.6 优先用 PGTableGraphStorage**：原生表图存储摆脱 Apache AGE 依赖，性能更高、占用更小，一个库搞定全部存储\n4. **DOCX 文档多用 Smart Heading**：解析时开启智能标题识别，能明显改善分块质量\n5. **关注社区动态**：官方文档不全的问题可以靠看社区的讨论和案例来弥补\n6. **提前规划企业功能**：如果要用在生产环境，权限管理、日志审计这些最好一开始就想清楚怎么做\n\n## 适合谁用？\n\n**推荐：**\n\n- 个人开发者或小团队做原型\n- 需要快速验证RAG方案可行性的技术选型阶段\n- 中小规模（几千到几万篇文档量级）的知识库场景\n\n**可考虑：**\n\n- 对多模态检索有需求的团队（已合并 RAG-Anything，支持图文表格公式）\n- 已有一定技术实力、愿意投入时间做二次开发的公司\n\n**不推荐：**\n\n- 大规模企业级应用、对SLA要求严格的场景\n- 完全没有技术团队、指望开箱即用不用操心的\n- 需要完整权限管理和审计功能的（目前需要自己实现）",
+  "published": true,
+  "created_date": "2026-05-28",
+  "published_date": "2026-05-28",
+  "verified_url": "https://github.com/HKUDS/LightRAG",
+  "verified_publisher": "香港大学（HKU）数据智能实验室（HKUDS）",
+  "verified_what": "开源轻量级 RAG 框架（MIT），基于知识图谱实现高效双层级文档检索；最新 v1.5.6（2026-08-06 发布）新增 PGTableGraphStorage 原生 PostgreSQL 图存储（摆脱 Apache AGE 依赖、性能更高占用更小、PostgreSQL 一库覆盖四种存储），并修复上传文件名路径遍历/符号链接攻击漏洞。",
+  "verified_price": "免费开源（MIT）",
+  "verified_platform": "本地部署（Python）、WebUI、API",
+  "last_verified": "2026-08-07",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "基于知识图谱的双层级检索增强生成",
+    "轻量级 RAG 框架，易部署",
+    "多文档/多模态格式支持（PDF/Word/图片/表格/公式等，合并 RAG-Anything）",
+    "PGTableGraphStorage 原生 PostgreSQL 图存储（v1.5.6 新增，摆脱 Apache AGE 依赖，性能更高/占用更小，PostgreSQL 成为全能后端）",
+    "多向量数据库集成（Milvus/Qdrant/Chroma/Neo4j/PostgreSQL/MongoDB/OpenSearch 等）",
+    "四种分块策略（Fix/Recursive/Vector/Paragraph）",
+    "角色化 LLM 配置（EXTRACT/QUERY/KEYWORDS/VLM）",
+    "DOCX Smart Heading 智能标题识别（v1.5.5 新增）",
+    "流式输出与 WebUI 知识图谱可视化"
+  ],
+  "verified_description": "LightRAG 是由香港大学（HKU）数据智能实验室（HKUDS）开发的开源轻量级检索增强生成（RAG）框架，基于知识图谱实现高效的双层级文档检索，MIT 协议可商用自托管；最新 v1.5.6（2026-08-06）新增原生 PostgreSQL 图存储 PGTableGraphStorage（摆脱 Apache AGE 依赖，PostgreSQL 一库覆盖全部存储类型），并修复上传文件名路径遍历安全漏洞。",
+  "content_flags": "版本更新（2026-08-07）：v1.5.6（2026-08-06 官方发布）新增 PGTableGraphStorage 原生 PostgreSQL 图存储（摆脱 Apache AGE 依赖，性能更高/占用更小，PostgreSQL 成为全能后端），并修复上传文件名路径遍历/符号链接攻击漏洞；description/features/content 已同步 v1.5.5→v1.5.6。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "编辑评分（本站）",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全开源免费，MIT 可商用",
+    "轻量易部署",
+    "支持多种文档与向量库",
+    "社区活跃（HKUDS 持续维护）",
+    "有 EMNLP 2025 论文支撑"
+  ],
+  "verified_cons": [
+    "企业级权限/部署需自行实现",
+    "多模型行为差异需关注",
+    "大规模部署需手动调优"
+  ],
+  "verified_faq": [
+    {
+      "q": "LightRAG 免费吗？",
+      "a": "是，采用 MIT 协议完全开源免费，可商用。"
+    },
+    {
+      "q": "LightRAG 支持哪些向量数据库？",
+      "a": "支持 Milvus、Qdrant、Chroma、Neo4j、PostgreSQL、MongoDB、OpenSearch 等，提供统一接口；v1.5.6 起 PostgreSQL 可一库覆盖全部四种存储类型。"
+    }
+  ],
+  "verified_tags": [
+    "RAG框架",
+    "检索增强生成",
+    "开源",
+    "文档问答",
+    "知识图谱",
+    "向量检索"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://github.com/HKUDS/LightRAG/releases"
+  ],
+  "verify_notes": "v1.5.6 为 GitHub 官方最新稳定版（2026-08-06，v1.5.5...v1.5.6 diff）；页面原为 v1.5.5（2026-07-31）信息，上轮 08-02 更新 v1.5.5 时未预见 6 天后出新版。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "LightRAG 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：LightRAG 的 基于知识图谱的双层级检索增强生成 是亮点，价格 免费开源（MIT）；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "updated_date": "2026-08-07"
+}

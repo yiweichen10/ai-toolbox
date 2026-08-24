@@ -1,0 +1,126 @@
+{
+  "batch_id": "b27",
+  "category": "AI设计",
+  "tools": [
+    {
+      "slug": "canva-ai",
+      "name": "Canva AI",
+      "url_current": "https://www.canva.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正确。content中'AI生图50次/月'为编造：Canva官方为共享AI额度（免费最高200次标准/20次高级AI，Pro为10倍），非固定50次/月。价格'¥120/月'无法确认为官方定价（Canva已退出中国大陆，官方Pro约$14.99/月、年付约$10/月），存疑但未计为幻觉。"
+    },
+    {
+      "slug": "remove.bg",
+      "name": "Remove.bg",
+      "url_current": "https://www.remove.bg",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确。当前订阅价：Lite $8.10/月、Pro $35.10/月（年付）、Volume+ $80.10/月，免费版仅出低清水印预览。数据'Pro $10/月'及content'Pro $9/月'为过时/虚构定价。"
+    },
+    {
+      "slug": "photoroom",
+      "name": "Photoroom",
+      "url_current": "https://www.photoroom.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确，为云端SaaS+移动端(iOS/Android)，无本地部署。'本地部署 / Web'中'本地部署'为错误归属。有免费版，价格描述基本成立（Pro约£9.99/月，区域定价）。"
+    },
+    {
+      "slug": "figma-ai",
+      "name": "Figma AI",
+      "url_current": "https://www.figma.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确。当前 Professional 全席位 $16/月、Organization $55/月。数据'Pro $10/月'错误；content中'Professional $15/月 / Organization $45/月'亦略过时。"
+    },
+    {
+      "slug": "jsdesign-ai",
+      "name": "即时设计AI",
+      "url_current": "https://js.design",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["platform"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正确，即时设计为浏览器云端工具，无本地部署版本，'本地部署 / Web'中'本地部署'错误。基础功能免费，价格描述正确。"
+    },
+    {
+      "slug": "gaoding-ai",
+      "name": "稿定设计AI",
+      "url_current": "https://www.gaoding.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正确。当前模板会员8元/月起、大会员16.5元/月起（含AI创作），无'AI创作会员¥30/月（原价¥59）'档位，价格虚构；content'基础$10/月起'亦错误（官网人民币计价）。平台为Web云端，仅企业版支持私有化部署。"
+    },
+    {
+      "slug": "looka",
+      "name": "Looka",
+      "url_current": "https://looka.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确。Looka需付费下载Logo（品牌套件订阅或一次性Logo包），仅可免费预览生成，'免费使用'为错误；实际Logo下载需购买（$20起等）。"
+    },
+    {
+      "slug": "brandmark",
+      "name": "Brandmark",
+      "url_current": "https://brandmark.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确。Brandmark为一次性买断制（Basic $35、Designer $95、Enterprise $195），非'$10/月'订阅；且为纯Web工具，'本地部署'错误。"
+    },
+    {
+      "slug": "relume",
+      "name": "Relume",
+      "url_current": "https://relume.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正确。付费起步为 Starter $18/月（Pro $40/月、Team $36/人/月），数据'付费版$15/月起'金额不准确；免费版存在。"
+    },
+    {
+      "slug": "framer-ai",
+      "name": "Framer AI",
+      "url_current": "https://www.framer.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网正确。Framer有免费版；付费起步 Basic 约 $9/月(SGD 12)、Pro 约 $26/月(SGD 35)，美元区Pro常见$15/月。'$15起/月'与Pro档接近但偏低估入门档，区域定价差异大，无法确认是否编造，故不计为幻觉。"
+    }
+  ]
+}

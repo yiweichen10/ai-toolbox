@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260813-001",
+    "title": "零基础用户半天上手 AI 的12步实操流程",
+    "summary": "文章给出一套零基础用户半天上手 AI 的12步实操流程：准备内存不低于16G 的电脑，订阅 ChatGPT 并安装 Codex 或使用 WorkBuddy，用语音输入法以【背景、痛点、需求】框架向 AI 交代任务，经苏格拉底提问澄清需求后投喂文件让 AI 直接完成，最后沉淀为可复用 Skill。文中建议 Codex 选 GPT-5.6 Sol 最高模型，WorkBuddy 选 Kimi K3。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "公众号：数字生命卡兹克",
+    "source_url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685084&idx=1&sn=0899296dbc140eeb745f7a99f9d5ed9c",
+    "published_at": "2026-08-12T08:08:00+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260813-002",
+    "title": "Meta 开源 Muse Glimmer 登陆 OpenRouter",
+    "summary": "Meta AI 超级智能实验室的首个开放权重模型 Muse Glimmer 已在 OpenRouter 上线！\n\n这是一款 30B 密集文本+图像模型，采用 Apache 2.0 许可证，旨在成为可靠的本地智能体，MCP Atlas 得分 75.5，SWE-Bench Pro 得分 51.2。\n\nhttps://openrouter.ai/meta/muse-glimmer-30b",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "X：OpenRouter (@OpenRouter)",
+    "source_url": "https://x.com/OpenRouter/status/2087509478480765218",
+    "published_at": "2026-08-12T20:00:18+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260813-003",
+    "title": "空货架还是丢钥匙？Google 研究：Recall 是参数化事实性的瓶颈",
+    "summary": "Google Research 提出知识画像框架，发现前沿 LLM（如 Gemini3、GPT-5）的事实编码接近饱和，但回忆（recall）能力不足，多数事实错误源于\"丢钥匙\"而非\"空货架\"。该框架将事实分为编码失败、回忆失败等五类画像，并配套推出 WikiProfile 基准，含 2，150 条维基百科事实，每条配 10 个问题，用于分别探测编码、回忆与识别能力。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "Google Research：Blog（网页）",
+    "source_url": "https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality",
+    "published_at": "2026-08-13T01:57:36+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260813-004",
+    "title": "xAI 发布 Grok 4.6，强化长时运行智能体能力",
+    "summary": "xAI 今日发布 Grok 4.6，在 Grok 4.5 基础上重点强化长时运行智能体及更复杂的交互式与视觉工作能力。该模型在多项智能体编码与知识工作基准上达到前沿水平，在 Artificial Analysis Intelligence Index（九项基准综合分）上追平 GPT-5.6 Sol。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "xAI：News（网页）",
+    "source_url": "https://x.ai/news/grok-4-6",
+    "published_at": "2026-08-12T08:00:00+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260813-005",
+    "title": "Research Gold 号称\"100%人类撰写、绝不使用 AI\"，实则全程由 AI 驱动",
+    "summary": "面向医学研究者的网站 Research Gold 宣称其服务\"100%由人类撰写、绝不使用 AI\"，并列出多名博士审稿人。但调查发现，这些审稿人系 AI 生成、并不存在；部分真实方法学家的身份和照片未经许可被挪用。致电该公司时，自称\"Sarah\"的 AI 助手坚称自己是真人，邮件与聊天回复也均为 AI 生成。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://www.404media.co/company-offering-100-human-written-never-ai-peer-review-is-entirely-ai",
+    "published_at": "2026-08-12T13:41:30+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260813-006",
+    "title": "DeepSeek V4 Pro 与 Grok 4.6同日发布，双双逼近 Claude Fable 5体验",
+    "summary": "DeepSeek V4 Pro 正式版与 Grok 4.6在2小时内先后发布，均为1.6T/1.5T 参数模型，逼近 Claude Fable 5体验。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "公众号：数字生命卡兹克",
+    "source_url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685175&idx=1&sn=64c383b5b757945397894270c5f38301",
+    "published_at": "2026-08-13T06:22:28+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260813-007",
+    "title": "OpenRouter 推出实时网页搜索基准测试：如何为智能体选择引擎、深度与模型",
+    "summary": "OpenRouter 发布实时排行榜，系统评测模型、搜索引擎、搜索方法与预算四类配置组合。数据显示，将搜索预算从 1 轮增至 25 轮可使 BrowseComp 得分近乎翻倍，成本仅增 2.5-7 倍；模型选择比引擎更重要，平均分差 15 分 vs 10 分。失败率高的任务应降低搜索深度以控制成本。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "OpenRouter：Announcements（RSS）",
+    "source_url": "https://openrouter.ai/blog/announcements/web-search-benchmark",
+    "published_at": "2026-08-12T08:00:00+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260813-008",
+    "title": "阿里开放 Qwen3.8-2.4T-A95B 模型权重：2.4T MoE、激活 95B、原生 256K 上下文",
+    "summary": "阿里 Qwen 团队正式开放 Qwen3.8-2.4T-A95B 模型权重，这是 Qwen-Max 级别模型首次开源。模型总参数 2.4T，每个 Token 激活 95B，原生支持 262，144 Token 上下文并可扩展至 1，010，000 Token。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "IT之家（RSS）",
+    "source_url": "https://www.ithome.com/0/989/001.htm",
+    "published_at": "2026-08-13T00:10:01+08:00",
+    "tags": [
+      "models"
+    ]
+  }
+]

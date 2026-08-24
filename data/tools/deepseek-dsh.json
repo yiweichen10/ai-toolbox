@@ -1,0 +1,93 @@
+{
+  "slug": "deepseek-dsh",
+  "name": "DeepSeek DSH",
+  "category": "AI编程",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "emoji": "🐋",
+  "color": "#2563EB",
+  "platform": "Web / 本地部署（Node.js）",
+  "price": "开源免费（MIT），推理按模型 API 计费",
+  "positioning": "开源通用 Agent 运行时（Harness），一切皆插件",
+  "rating": "⭐ 4.3",
+  "rating_source": "GitHub 17万+ Star / 公开评测",
+  "description": "深度求索开源的 Agent 运行时框架（DeepSeek Harness，代号黑鲸），MIT 协议，基于 Cordis 内核的「一切皆插件」架构。免费开源、自备 API Key，可自由拼装模型、工具、技能与沙箱。",
+  "url": "https://github.com/deepseek-ai/dsh",
+  "tags": [
+    {
+      "text": "AI编程"
+    },
+    {
+      "text": "开源免费",
+      "type": "free"
+    }
+  ],
+  "features": [
+    "一切皆插件架构（Cordis 内核）",
+    "四类内置预设（Standard/PTC/Minimal/Creator）",
+    "仓库检查、Shell 执行、文件与网页搜索",
+    "子智能体委派与任务计划",
+    "追加式完整轨迹日志",
+    "Token 消耗与缓存命中率看板",
+    "审批策略与沙箱隔离"
+  ],
+  "pros": [
+    "MIT 开源可自由修改",
+    "插件化架构，能力可替换扩展",
+    "上线一周 GitHub Star 破 17 万",
+    "完整轨迹日志便于调试审计"
+  ],
+  "cons": [
+    "developer preview，接口可能破坏性变更",
+    "生态与文档尚在积累",
+    "需自备模型 Key"
+  ],
+  "faq": [
+    {
+      "question": "DeepSeek DSH 是什么？",
+      "answer": "DeepSeek DSH（DeepSeek Harness，代号黑鲸）是深度求索开源的 Agent 运行时框架，2026 年 8 月发布，MIT 协议。它负责工具调用、沙箱执行、会话管理、任务调度等执行层能力，让模型能真正完成多步骤任务。"
+    },
+    {
+      "question": "DSH 怎么收费？",
+      "answer": "框架完全开源免费（MIT），不携带模型与 Key，推理费用按所接模型 API 计费，兼容 DeepSeek 官方 API 与第三方模型。"
+    },
+    {
+      "question": "DSH 和 Claude Code 有什么区别？",
+      "answer": "DSH 走「一切皆插件」的开源底座路线，任何能力都可在配置层替换或扩展；Claude Code 是 Anthropic 的一体化产品。DSH 自由度更高，但调优与踩坑成本也更高。"
+    },
+    {
+      "question": "DSH 适合谁？",
+      "answer": "适合希望最大自由度拼装自己 Agent 的开发者与团队，成本敏感、拥抱开源生态的用户，配合 DeepSeek 全家桶体验最顺。"
+    }
+  ],
+  "related": [
+    "deepseek",
+    "codex-cli",
+    "claude-code",
+    "zcode"
+  ],
+  "seo_keywords": [
+    "DeepSeek DSH",
+    "DeepSeek Harness",
+    "DSH 智能体",
+    "Agent Harness",
+    "开源Agent运行时",
+    "DeepSeek智能体框架"
+  ],
+  "created_date": "2026-08-23",
+  "updated_date": "2026-08-23",
+  "published": true,
+  "content_verified": true,
+  "confidence": 0.9,
+  "last_verified": "2026-08-23",
+  "source_urls": [
+    "https://github.com/deepseek-ai/dsh",
+    "https://dev.to/diflowrin/deepseek-harness-plugin-first-agent-runtime-2djh",
+    "https://www.kimi.com/zh-cn/resources/kimi-code-introduction",
+    "https://github.com/MoonshotAI/kimi-code"
+  ],
+  "visits": "0",
+  "content": "## DeepSeek DSH 是什么？\n\nDeepSeek DSH（DeepSeek Harness，代号「黑鲸」）是深度求索（DeepSeek）于 2026 年 8 月开源的 Agent 运行时框架，采用 MIT 协议。它不是模型，也不是一问一答的编程助手，而是「套在模型外面、给模型安上手」的那层执行层：负责工具调用、沙箱执行、会话管理、任务调度与审批策略，让模型能真正完成多步骤任务而不是只输出文字。\n\nDSH 的核心理念是「一切皆插件」：模型适配器、工具注册表、会话持久化、沙箱、计划、调度、UI 全部以插件形式存在，底层由 Cordis 元框架驱动。开发者可以在配置层自由选择、替换或扩展任何能力，无需修改源码——这是它对标 Claude Code 等一体化编程 Agent 的差异化打法。\n\n## 核心功能\n\n- **仓库级代码操作**：检查代码仓库、编辑文件、执行 Shell 命令、搜索文件与网页\n- **任务规划与委派**：维护任务计划、调用技能（Skill）、把子任务委派给子智能体（Subagent）\n- **审批策略**：涉及高权限操作时强制用户确认，可配置自动化等级\n- **完整轨迹追踪**：追加式会话日志，记录系统提示、推理过程、每次工具调用与结果，失败环节可精确定位\n- **Token 成本看板**：底部实时显示 Token 消耗与缓存命中率统计\n- **四类内置预设**：Standard（全能开发）、PTC/Code（TS 编程 SDK 批量工作流）、Minimal（轻量基准测试）、Creator（插件二次开发调试）\n\n## 安装与运行\n\nDSH 支持两种部署方式：`npx @deepseek-ai/dsh web` 一键启动 Web 端，或从 GitHub 拉取源码用 pnpm 本地编译。框架本身不携带任何模型与 Key，登录填入 DeepSeek API Key 即可接入，也兼容第三方大模型与本地部署端点。\n\n## 价格\n\nDSH 框架完全开源免费（MIT 协议），推理费用按所接模型的 API 计费。官方同日（2026-08-13）上调了 V4-Pro API 价格，峰时输入 $1.32/百万 token、输出 $3.96/百万 token，错峰约为一半——「框架免费送、推理按量收」是这套组合的核心逻辑。\n\n## 优缺点分析\n\n### 👍 优点\n- MIT 开源，可自由修改、二次开发\n- 插件化架构，任何能力可替换、可扩展\n- 上线一周 GitHub Star 破 17 万，社区热度极高\n- 完整轨迹日志，调试与审计体验好\n\n### 👎 缺点\n- 仍处于 developer preview，扩展契约随时可能破坏性变更\n- 生态与文档尚在积累，调优需要自己踩坑\n- 需要自备模型 Key，成本由模型服务决定\n\n## 适合人群\n\nDSH 适合希望最大自由度拼装自己 Agent 的开发者与团队，尤其是成本敏感、拥抱开源生态、愿意自己调优的用户。配合 DeepSeek 全家桶（V4-Flash / V4-Pro / V4-Flash-Vision-Exp）体验最顺。\n\n## 关键信息\n\n| 项目 | 内容 |\n|------|------|\n| 官方仓库 | github.com/deepseek-ai/dsh |\n| 开发商 | 深度求索（DeepSeek） |\n| 首次发布 | 2026年8月13日（v0.1） |\n| 开源协议 | MIT |\n| 内核 | Cordis 插件框架 |\n| 价格 | 开源免费，推理按 API 计费 |\n| 平台 | Web / 本地部署（Node.js） |\n\n> 以上信息来自 DeepSeek 官方仓库、VentureBeat/InfoQ 报道及公开文档（2026-08）。"
+}

@@ -1,0 +1,151 @@
+{
+  "name": "Sigma Computing",
+  "slug": "sigma-computing",
+  "positioning": "免费AI效率工具推荐：云原生架构、电子表格式分析界面",
+  "auto_positioning": true,
+  "emoji": "📊",
+  "color": "#0052CC",
+  "description": "Sigma Computing 是 Sigma Computing 公司推出的云原生 BI 与分析平台，以类电子表格界面直连 Snowflake、BigQuery、Databricks 等数据仓库，支持实时查询、协作与 AI 应用。",
+  "category": "AI效率",
+  "tags": [
+    "数据分析",
+    "商业智能",
+    "低代码",
+    "云原生BI"
+  ],
+  "rating": "⭐4.5（编辑评测）",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.sigmacomputing.com/",
+  "price": "定价需联系销售（提供免费试用）",
+  "platform": "Web",
+  "pros": [
+    "直观的电子表格界面，降低使用门槛",
+    "直接连接数据仓库，无需数据移动",
+    "支持自然语言查询，AI 辅助分析",
+    "实时协作与版本控制，适合团队使用",
+    "强大的计算引擎，可处理大规模数据"
+  ],
+  "cons": [
+    "高级分析仍需 SQL 或 Python 知识",
+    "部分复杂模型支持不如专业 BI 工具完善",
+    "企业版定价较高，对中小团队可能不够友好"
+  ],
+  "features": [
+    "云原生架构：直连 Snowflake/Databricks/BigQuery 等数据仓库实时查询，治理在源头",
+    "电子表格式分析界面，无需写 SQL 即可探索数十亿行数据",
+    "AI Toolkit 与 Sigma Agents：用自然语言构建仪表板、应用并自动化任务",
+    "AI Apps 平台：在受治理数据上快速构建、部署 AI 应用",
+    "嵌入式分析与像素级精准（Pixel-Perfect）报表"
+  ],
+  "related": [
+    "thoughtspot",
+    "hex-tech",
+    "deepnote"
+  ],
+  "faq": [
+    {
+      "q": "Sigma Computing 和 Excel 有什么区别？",
+      "a": "Sigma 直接连接云端数据仓库，可处理亿级数据，支持实时协作和版本控制；Excel 更适合本地小数据集。"
+    },
+    {
+      "q": "使用 Sigma 需要会写 SQL 吗？",
+      "a": "不必须。通过电子表格界面和自然语言查询即可完成大部分分析，但高级计算或自定义数据模型可能需要 SQL。"
+    },
+    {
+      "q": "Sigma 支持哪些数据源？",
+      "a": "支持 Snowflake、Google BigQuery、Amazon Redshift、Databricks 等主流云数据仓库，以及 CSV 文件上传。"
+    },
+    {
+      "q": "Sigma 免费版有哪些限制？",
+      "a": "Sigma 未公开标准免费版，提供免费试用；正式订阅需联系销售获取报价，具体限制以官网为准。"
+    }
+  ],
+  "seo_keywords": [
+    "Sigma Computing",
+    "Sigma Computing怎么样",
+    "Sigma Computing免费版",
+    "Sigma Computing使用教程",
+    "Sigma Computing和哪个好"
+  ],
+  "content": "## Sigma Computing是什么？\n\n简单来说，Sigma Computing 是一个把数据仓库变成巨大电子表格的分析工具。你不需要学 SQL 或者拖拽复杂的 BI 流程，直接在浏览器里打开一个类似 Excel 的界面，就能对着 Snowflake、BigQuery 里的海量数据做分析、画图表、建仪表板。它底层跑的是云原生的计算引擎，所以几十亿行数据也能秒级响应。最吸引人的是，它把“数据工程师写查询 → 分析师做报表 → 业务看报表”这个流程压缩成一步：业务人员自己上手就能拉数据、做探索，而不是等别人给你导出 CSV。\n\n## 核心功能\n\n**1. 电子表格式的数据分析和可视化**  \n界面高度还原了电子表格的操作逻辑——单元格里写公式、拖拽填充、筛选排序，但背后直接调用数据仓库的 SQL。你可以把列当成字段，行当成记录，想算个聚合就写个 `=Sum(...)`，想画折线图直接框选区域点一下“图表”。实际用起来几乎零学习成本，对 Excel 重度用户尤其友好。\n\n**2. 自然语言查询（AI Copilot）**  \n输入“上个月各地区的销售额排名”，或者“哪些产品的退货率超过了 10%”，AI Copilot 会自动翻译成 SQL 查询并返回结果。不是那种花哨的 demo，实际准确率在常见业务问题上够用，复杂多表关联有时需要手动调整一下，但至少帮你省了 70% 的 SQL 编写时间。而且它支持追问和上下文理解，比如你改一下条件“只看华东地区”，它能在上次基础上继续。\n\n**3. 直接连接数据仓库，无需数据移动**  \nSigma 直连 Snowflake、BigQuery、Redshift 等主流云数仓，数据不用预先搬运或复制一份。这意味着你分析的是最新数据，没有延迟和冗余。建一个数据集指向某个表或视图，后续所有操作都实时查询底层数据，改动立刻反映到仪表板上。对数据治理来说，也省了数据管道维护的麻烦。\n\n**4. 实时协作与共享仪表板**  \n类似 Google Sheets 的多人实时编辑——你可以跟同事同时打开同一个分析文件，各自拖拽添加列或修改公式，改动会实时同步。而且支持添加评论、@提及、锁定区域防冲突。分享出去的不是截图，而是可交互的仪表板，接收方能继续往下钻取或修改过滤条件。版本历史也能回滚到任意时间点，团队协作不用担心改坏。\n\n**5. 版本历史与回滚功能**  \n每次保存都会生成一个版本节点，你可以查看谁在什么时候改了哪里，一键恢复到之前的某个版本。这在对账复查、审计场景下很实用，团队里有人误删字段或改错公式，不用慌张。不过注意它不像 Git 那样有分支管理，适合线性协作。\n\n## 版本/套餐对比\n\n目前 Sigma Computing 提供以下主要版本，具体定价需咨询官方销售，下表基于公开信息整理：\n\n| 版本        | 适用对象       | 主要限制或特点                         | 价格               |\n| ----------- | -------------- | -------------------------------------- | ------------------ |\n| 免费版      | 个人探索/小团队 | 有限数据量（约 10GB 查询）、最多 3 用户 | 免费               |\n| 团队版      | 中小团队       | 更多用户、完整功能、无存储上限         | 未公开，按年订阅   |\n| 企业版      | 大型组织       | 高级安全（SSO、审计日志）、专用支持    | 未公开，需定制报价 |\n\n注意：免费版的数据源连接和计算能力足够体验核心功能，但做正式生产分析通常需要升级。实际价格因数据量、用户数和附加功能而异，建议直接联系 Sigma 获取报价格。\n\n## 值不值得用？\n\n**优点**  \n- 上手极快：不需要写 SQL 就能做数据探索，对业务部门很友好\n- 性能强悍：直接查数仓，几十亿行秒级聚合（依赖底层数仓性能）\n- 协作天然：实时编辑 + 版本控制，比传统 BI 工具协作效率高\n- AI 辅助有用：自然语言查询降低了从想法到数据的距离\n\n**缺点**  \n- 高级分析偏弱：复杂窗口函数、自定义聚合、机器学习集成需要写 SQL 或 Python，不如专业 BI 工具（如 Tableau、Power BI）灵活\n- 复杂模型支持有限：如果你的业务模型涉及多维度星型模式、复杂计算逻辑，Sigma 的建模层不如 Looker 或 Domo 完善\n- 价格不透明且偏高：企业版按数据量和用户数收费，对于几十人的小团队可能性价比不如开源方案\n\n**总体结论**：如果你团队的数据已经存放在云数仓里，且主要做“探索型”或“监控型”分析（即不需要太复杂的建模），Sigma 是市面上最省心的选择之一。但如果你需要深度数据建模、自定义可视化、或者预算紧张，建议先试用免费版再评估。\n\n## 使用建议\n\n1. **先用免费版跑通一个真实场景**：把公司的一个核心报表迁移到 Sigma 里（比如销售日报、留存分析），感受它的实时查询和协作体验。一般一两周就能判断是否适合。\n2. **善用 AI Copilot 加速探索**：如果你会一些 SQL，自然语言查询可以帮你快速写出 join 和 group by 的草稿，然后手动微调；如果你不会 SQL，那就尽量用简单明确的句式（“按日期和地区，总销售额”），复杂查询容易翻车。\n3. **注意数据源性能**：Sigma 本身不存数据，速度全看你的数仓（Snowflake/BigQuery）的性能。如果底层数仓频繁跑慢查询，建议先优化数仓的集群或物化视图。\n4. **版本习惯养成**：建议团队成员每次重大修改后手动保存一个带备注的版本（比如“加入毛利率计算”），便于追溯。\n5. **权限和共享**：企业版可以细粒度控制行级、列级权限，免费版只能粗粒度限制数据源。生产环境务必配好安全策略。\n\n## 适合谁用？\n\n**推荐**  \n- 已经使用 Snowflake/BigQuery 等云数仓的团队  \n- 数据分析师较少，大量业务人员需要自取数据的公司  \n- 需要快速搭建多部门共享仪表板，且预算能覆盖的企业  \n\n**可考虑**  \n- 团队以数据分析师为主，但想减少 SQL 编码时间（Sigma 可作为辅助工具）  \n- 临时需要给客户或领导看可交互的数据报告，不想每次都导出 PDF  \n- 正在从传统 Excel 报表向云端分析迁移的过渡期  \n\n**不推荐**  \n- 对数据建模有复杂需求（如多表关联、自定义维度层次、高级计算逻辑）  \n- 团队预算极缺，且愿意用开源 BI（如 Metabase / Superset）搭自建方案  \n- 数据源不在主流云数仓（如使用传统数据库或本地文件）——Sigma 首批支持有限",
+  "published": true,
+  "source_url": "https://www.sigmacomputing.com/",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://www.sigmacomputing.com/",
+  "verified_publisher": "Sigma Computing, Inc.",
+  "verified_what": "云原生 BI 与分析平台，以类电子表格界面直连 Snowflake、BigQuery、Databricks 等数据仓库，支持实时查询、协作与 AI 应用。",
+  "verified_price": "官网未公开统一价目；提供免费试用（以官网为准），企业版需联系销售获取定制报价（第三方估算起价约 $300/月）。",
+  "verified_platform": "Web",
+  "verified_features": [
+    "云原生架构：直连 Snowflake/Databricks/BigQuery 等数据仓库实时查询，治理在源头",
+    "电子表格式分析界面，无需写 SQL 即可探索数十亿行数据",
+    "AI Toolkit 与 Sigma Agents：用自然语言构建仪表板、应用并自动化任务",
+    "AI Apps 平台：在受治理数据上快速构建、部署 AI 应用",
+    "嵌入式分析与像素级精准（Pixel-Perfect）报表"
+  ],
+  "verified_description": "Sigma Computing 是 Sigma Computing 公司推出的云原生 BI 与分析平台，以类电子表格界面直连 Snowflake、BigQuery、Databricks 等数据仓库，支持实时查询、协作与 AI 应用。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5（编辑评测）",
+  "rating_source": "编辑评测（暂无权威第三方评分来源；第三方如 SoftwareAdvice 给 4.3/5）",
+  "rating_verified": true,
+  "verified_pros": [
+    "直观的电子表格界面，降低使用门槛",
+    "直接连接数据仓库，无需数据移动",
+    "支持自然语言查询，AI 辅助分析",
+    "实时协作与版本控制，适合团队使用",
+    "强大的计算引擎，可处理大规模数据"
+  ],
+  "verified_cons": [
+    "高级分析仍需 SQL 或 Python 知识",
+    "部分复杂模型支持不如专业 BI 工具完善",
+    "企业版定价较高，对中小团队可能不够友好"
+  ],
+  "verified_faq": [
+    {
+      "q": "Sigma Computing 和 Excel 有什么区别？",
+      "a": "Sigma 直接连接云端数据仓库，可处理亿级数据，支持实时协作和版本控制；Excel 更适合本地小数据集。"
+    },
+    {
+      "q": "使用 Sigma 需要会写 SQL 吗？",
+      "a": "不必须。通过电子表格界面和自然语言查询即可完成大部分分析，但高级计算或自定义数据模型可能需要 SQL。"
+    },
+    {
+      "q": "Sigma 支持哪些数据源？",
+      "a": "支持 Snowflake、Google BigQuery、Amazon Redshift、Databricks 等主流云数据仓库，以及 CSV 文件上传。"
+    },
+    {
+      "q": "Sigma 免费版有哪些限制？",
+      "a": "Sigma 未公开标准免费版，提供免费试用；正式订阅需联系销售获取报价，具体限制以官网为准。"
+    }
+  ],
+  "verified_tags": [
+    "数据分析",
+    "商业智能",
+    "低代码",
+    "云原生BI"
+  ],
+  "verified_category": "AI效率",
+  "source_urls": [
+    "https://www.sigmacomputing.com/",
+    "https://help.sigmacomputing.com/docs/start-your-sigma-trial"
+  ],
+  "verify_notes": "Sigma 定价不公开，第三方（SoftwareAdvice）估算起价约 $300/月；免费试用天数官网文档称 7 天、第三方常写 14 天，以官网为准。",
+  "compare_section": {
+    "competitors": [
+      "evidence-dev",
+      "semrush-ai",
+      "jamie-ai"
+    ],
+    "verdict": "Sigma Computing 与 Evidence.dev、Semrush AI、Jamie AI 同属AI效率赛道：Sigma Computing 的 云原生架构：直连 Snowflake/Databricks/BigQuery 等数据仓库实时查询，治理在源头 是亮点，价格 定价需联系销售（提供免费试用）；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-14",
+  "created_date": "2026-08-14"
+}

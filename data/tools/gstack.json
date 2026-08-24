@@ -1,0 +1,90 @@
+{
+  "name": "gstack",
+  "slug": "gstack",
+  "positioning": "Y Combinator CEO Garry Tan 公开的开源 Claude Code 配置集，把 23 个专家角色与 8 个强力工具以斜杠命令形式打包，将单人 Claude Code 变成一支虚拟工程团队。",
+  "auto_positioning": false,
+  "emoji": "🏗️",
+  "color": "#F59E0B",
+  "description": "gstack 是 Y Combinator 现任 CEO Garry Tan 公开的开源 Claude Code 配置集，仓库位于 github.com/garrytan/gstack，采用 MIT 许可证。它把 Garry 本人日常使用的 Claude Code 设置完整开源——23 个主张明确的专家角色（CEO、设计师、工程经理、QA、安全官、发布工程师等）和 8 个强力工具，全部以 Markdown 斜杠命令存在，按 Think→Plan→Build→Review→Test→Ship→Reflect 的冲刺流程推进项目。",
+  "category": "AI编程",
+  "tags": [
+    "Claude Code",
+    "AI配置包",
+    "开源",
+    "提示词工程",
+    "vibe coding",
+    "虚拟团队"
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "pick",
+    "text": "开源 · YC CEO 出品"
+  },
+  "url": "https://github.com/garrytan/gstack",
+  "price": "免费开源（MIT），无付费版本",
+  "platform": "Claude Code（macOS / Linux / Windows）",
+  "pros": [
+    "23 个专家角色即开即用，覆盖从产品到发布的全流程",
+    "MIT 免费开源，团队可通过提交配置共享同一套流程",
+    "流程化冲刺（Think→Ship），避免并行 agent 变成混乱来源",
+    "与 Greptile 集成做双层 PR 审查，减少漏网 bug",
+    "强 opinionated 的默认设置，降低“该怎么用 AI”的决策成本"
+  ],
+  "cons": [
+    "仅限 Claude Code 环境，不兼容其他 coding agent",
+    "命令与流程较多，初上手需要学习与适应",
+    "默认流程相当武断，未必适合所有团队的工作方式"
+  ],
+  "features": [
+    "23 个专家斜杠命令：/office-hours 重新框定问题，/plan-ceo-review 挑战范围",
+    "8 个强力工具：/review 找出通过 CI 却会炸在生产的 bug，/ship 同步测试开 PR",
+    "流程化冲刺：技能按真实工程 sprint 排序，逐环喂给下一环",
+    "Greptile 双层审查：/review 与 /ship 读取并分类处理 PR 评论",
+    "浏览器与测试：内置无头 Chromium 的 /browse 与真实点击的 /qa",
+    "生产护栏：/careful、/freeze、/guard 组合约束危险操作"
+  ],
+  "related": [
+    "openai",
+    "langchain",
+    "langsmith"
+  ],
+  "content": "## gstack 是什么？\n\ngstack 是 Y Combinator 现任 CEO Garry Tan 公开的开源 Claude Code 配置集，仓库位于 github.com/garrytan/gstack，采用 MIT 许可证。它把 Garry 本人日常使用的 Claude Code 设置完整开源——23 个主张明确的专家角色（从 CEO、设计师、工程经理到 QA、安全官、发布工程师）和 8 个强力工具，全部以 Markdown 斜杠命令的形式存在。本质上，gstack 把“一个通用 AI 助手”重构成“一支虚拟工程团队”，让单人开发者也能按 Think→Plan→Build→Review→Test→Ship→Reflect 的冲刺流程推进项目。\n\n## 核心功能\n\n1. 23 个专家角色：/office-hours 重新框定产品问题，/plan-ceo-review 挑战范围，/plan-eng-review 锁定架构。\n2. 8 个强力工具：/review 找出通过 CI 却会炸在生产的 bug，/ship 同步、测试、开 PR。\n3. 流程化冲刺：技能按真实工程 sprint 排序，每个技能喂给下一个，避免并行 agent 变成混乱来源。\n4. Greptile 双层审查：/review 与 /ship 读取 Greptile 的 PR 评论并分类处理，有效问题进关键发现。\n5. 浏览器与测试：内置无头 Chromium 的 /browse 与 /qa，用真实浏览器点真实 bug。\n\n## 版本/套餐对比\n\ngstack 完全免费开源（MIT），无付费版本；安装即用，团队可通过提交 .claude/skills/gstack 共享同一套配置。\n\n## 值不值得用？\n\n如果你的工作方式是“丢一句话给 Claude Code 等代码”，gstack 会明显改变你的产出质量——它逼你在写代码前先想清楚产品与架构，并在合并前多层审查。代价是学习一堆斜杠命令、接受它相当“武断”的默认流程。对严肃做产品的独立开发者和小团队，性价比极高。\n\n## 使用建议\n\n`git clone https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd ~/.claude/skills/gstack && ./setup`，然后在 CLAUDE.md 里加入 gstack 段；从 /office-hours 起步，按流程走到 /ship；想给生产环境加护栏就用 /careful、/freeze、/guard 组合。团队共享时把 .claude/skills/gstack 提交进仓库，队友跑一次 setup 即可。\n\n## 适合谁用？\n\n- 独立开发者 / 创始人：想“像二十人团队一样交付”的个人。\n- 小团队：希望把评审、测试、部署流程标准化的工程组。\n- 追求流程纪律的人：认可“无流程的 10 个 agent = 10 个混乱源”的理念者。",
+  "published": false,
+  "faq": [
+    {
+      "question": "gstack 是模型还是工具？",
+      "answer": "gstack 既不是模型也不是独立软件，而是一套 Claude Code 的配置与技能包（Markdown 斜杠命令），把 Claude Code 改造成虚拟工程团队。"
+    },
+    {
+      "question": "使用 gstack 要花钱吗？",
+      "answer": "不需要。gstack 采用 MIT 许可证完全免费开源，你只需承担 Claude Code 本身的订阅与模型 API 费用。"
+    },
+    {
+      "question": "它只能在 Claude Code 里用吗？",
+      "answer": "是的，gstack 是为 Claude Code 设计的配置集，无法直接在 Cursor、Codex 等其他 coding agent 中使用。"
+    },
+    {
+      "question": "团队怎么共享同一套 gstack？",
+      "answer": "把 ~/.claude/skills/gstack 复制到仓库的 .claude/skills/gstack 并提交，队友执行一次 setup 即可获得完全相同的流程与角色。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "gstack",
+    "Garry Tan",
+    "Claude Code配置",
+    "AI软件工厂",
+    "虚拟工程团队"
+  ],
+  "source_urls": [
+    "https://github.com/garrytan/gstack",
+    "https://weihaoqu.github.io/learnAIDoc/wiki/gstack-ai-software-factory",
+    "https://gstacks.org/tw"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

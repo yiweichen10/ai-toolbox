@@ -1,0 +1,99 @@
+{
+  "batch_id": "b30",
+  "category": "AI设计",
+  "tools": [
+    {
+      "slug": "chuangketie-ai",
+      "name": "创客贴AI",
+      "url_current": "https://www.chuangkit.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": [
+        "price"
+      ],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网(chuangkit.com/price/vip)通用版标价¥6/月起，站内写“VIP会员29.9元/月起”。该价与App Store内购¥29/月档接近，但高于网页端官方标价，价档不一致/可能取了App端价格，建议核实当前入口价。功能描述(文生图/智能抠图/一键PPT/智能排版)与官方一致。"
+    },
+    {
+      "slug": "tuguaishou",
+      "name": "图怪兽",
+      "url_current": "https://www.tuguaishou.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": [
+        "price"
+      ],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网(818ps.com)个人商用VIP实际为4.92元/月起、个人商用SVIP 8.3元/月；站内价格字段写“29.9元/月起”、正文写“个人会员约¥60/月”，均与官方不符，属定价编造/过期。功能描述(模板库/AI抠图/AI文案/图片编辑/团队协作)与官方一致，无功能张冠李戴。注：主域名为818ps.com，tuguaishou.com可正常解析到图怪兽。"
+    },
+    {
+      "slug": "eqxiu",
+      "name": "易企秀",
+      "url_current": "https://www.eqixiu.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "low",
+      "notes": "官网eqixiu.com为正常运营的易企秀(北京中网易企秀科技)，功能描述(H5/海报/PPT/AI生成)与官方一致。定价“会员39元/月起”无法与官方清晰对应：官方VIP月卡标价298元，促销页显示VIP 16.6元/月起、SVIP 23.3元/月起，价档复杂，建议人工复核。"
+    },
+    {
+      "slug": "graphify",
+      "name": "Graphify",
+      "url_current": "https://graphify.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "low",
+      "notes": "官网graphify.ai确为数据可视化/KPI工具，但/pricing页返回404，首页仅提real-time updates/dynamic visualizations，未提及“$12/月Pro版”与“Chrome扩展”。正文所述自然语言生成图表、实时协作、数据清洗等细节无法在官网核实，且搜索结果多为同名其他产品(graphifylabs.ai知识图谱、getgraphify.com Notion图谱)，疑似信息混淆，建议人工复核定价与平台。"
+    },
+    {
+      "slug": "blop",
+      "name": "Blop",
+      "url_current": "https://blopai.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": [
+        "content",
+        "price"
+      ],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "严重幻觉。官网blopai.com显示Blop是面向工程团队的QA测试代理(Playwright浏览器测试，测试以.blop.ts代码形式存于repo，跑在CI中，按Starter €199/Team €599/Scale €1499每月收费，早期访问免费)。但站内正文将其描述成平面设计工具(文生图/海报/品牌套件/批量社交封面)，并编造定价“免费版每日5次生成/Pro $12月”——均属张冠李戴+定价编造。短描述(QA代理)正确，长正文完全错误。"
+    },
+    {
+      "slug": "figma-for-agents",
+      "name": "Figma for Agents",
+      "url_current": "https://www.figma.com/agents",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "low",
+      "notes": "官网figma.com/agents确为Figma 2026年推出的AI智能体(面向设计师、集成于画布、可生成布局/批量编辑/评论转设计)，在专业版/组织版/企业版可用，描述与官方一致。“免费版每月限50次操作”的免费额度说法在官网未明确标注，无法核实，建议人工复核。"
+    },
+    {
+      "slug": "magic-patterns-agent-2-0",
+      "name": "Magic Patterns Agent 2.0",
+      "url_current": "https://magicpatterns.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": [
+        "price"
+      ],
+      "conflict": true,
+      "confidence": "high",
+      "notes": "官网magicpatterns.com为AI产品设计工具(提示词/需求转高保真UI)。定价编造：站内写“Pro $29/月、团队版 $79/月”，官方实际为 Free/$0、Starter $17-20/月、Business $85-100/月、Enterprise定制，无“Pro $29”与“团队版 $79”档。“Agent 2.0”版本名与“VS Code扩展”未在官网明确核实，建议人工复核。"
+    }
+  ]
+}

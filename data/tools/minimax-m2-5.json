@@ -1,0 +1,159 @@
+{
+  "name": "MiniMax M2.5",
+  "slug": "minimax-m2-5",
+  "positioning": "免费AI助手推荐：办公场景交付、高吞吐低成本",
+  "auto_positioning": true,
+  "emoji": "🧠",
+  "color": "#4F46E5",
+  "description": "MiniMax M2.5 是 MiniMax 于 2026 年 2 月发布的「原生 Agent 生产级」大语言模型，在编程（SWE-Bench Verified 80.2%）、工具调用与搜索、办公等场景达到 SOTA，主打高吞吐低成本，权重已开源，适合接进 Agent 与工具链落地。",
+  "category": "AI对话",
+  "tags": [
+    "大语言模型",
+    "Agent",
+    "开源",
+    "长文本",
+    "低成本推理"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://minimax.io/models/text",
+  "price": "API 输入 $0.3 / 输出 $2.4 每百万 token；权重开源免费",
+  "platform": "Web, API, 开源(本地部署)",
+  "pros": [
+    "长文本与编程能力强，SWE-Bench Verified 80.2%",
+    "Agent 工具调用/搜索能力突出（BrowseComp 76%+）",
+    "中文场景表现优秀，多轮连贯",
+    "高吞吐低成本，适合规模化 Agent 部署",
+    "权重开源，可私有化部署，数据可控",
+    "支持结构化输出与函数调用"
+  ],
+  "cons": [
+    "权重已开源，但本地部署需算力与运维投入",
+    "相较 GPT-4 等，多模态与全球生态仍在完善",
+    "API 定价随版本迭代可能调整，以官网为准",
+    "作为较新模型，第三方插件与社区教程仍在增长"
+  ],
+  "features": [
+    "编程 SOTA：SWE-Bench Verified 80.2%、Multi-SWE-Bench 领先",
+    "Agent 工具调用与搜索：BrowseComp 等基准突出",
+    "办公场景交付：Word / PPT / Excel 金融建模",
+    "高吞吐低成本：100 TPS，输出价约为同级的 1/10–1/20",
+    "权重开源（HuggingFace / GitHub），支持私有化部署",
+    "原生 Spec 能力：编码前主动拆解架构与规划"
+  ],
+  "related": [
+    "minimax",
+    "deepseek",
+    "kimi"
+  ],
+  "faq": [
+    {
+      "q": "MiniMax M2.5 和 MiniMax 是什么关系？",
+      "a": "M2.5 是 MiniMax 公司推出的升级版大语言模型，于 2026 年 2 月发布，相比前代在推理、长文本与 Agent 能力上明显提升。"
+    },
+    {
+      "q": "MiniMax M2.5 是免费的吗？",
+      "a": "权重已在 HuggingFace / GitHub 开源，可免费本地部署；通过 API 或 MiniMax Agent 使用需按 token 计费。"
+    },
+    {
+      "q": "MiniMax M2.5 支持哪些平台？",
+      "a": "支持 Web 体验、API 接入，以及基于 vLLM / SGLang 的开源本地部署，也可在 MiniMax Agent 平台使用。"
+    },
+    {
+      "q": "MiniMax M2.5 和 GPT-4 相比如何？",
+      "a": "在中文理解与长文本/编程/成本上具优势，开源权重也利于私有化；多模态与全球生态丰富度仍不及 GPT-4，选型取决于场景与预算。"
+    }
+  ],
+  "seo_keywords": [
+    "MiniMax M2.5",
+    "MiniMax M2.5怎么样",
+    "MiniMax M2.5免费版",
+    "MiniMax M2.5使用教程",
+    "MiniMax M2.5和哪个好"
+  ],
+  "content": "## MiniMax M2.5 是 MiniM 是什么？\n\nMiniMax M2.5 是 MiniMax 于 2026 年 2 月发布的大语言模型，主打在编程、Agent 工具调用与搜索、办公等真实生产力场景里达到 SOTA，同时把吞吐和成本压到对开发者友好的水平，定位是\"既强又能用得起\"。\n\n## 核心功能\n\n编程是它最亮眼的维度：在 SWE-Bench Verified 上取得 80.2% 的成绩，并在 Multi-SWE-Bench 上位列第一，意味着它能真正改仓库、跑测试、修 bug，而不只是聊代码。Agent 工具调用与搜索能力同样突出，BrowseComp 达到 76.3%，在需要多轮检索、调用外部工具的复杂任务上表现稳健，更像一个能自己查资料、自己动手的同事。办公场景里，它能产出 Word、PPT、Excel 金融建模这类可用交付物，而不只是给建议，贴近真实的业务产出。\n\n## 价格与平台\n\n效率上，M2.5 提供 100 TPS 的高吞吐版本，输出价格约为同级别模型的 1/10–1/20，对需要大规模调用的业务很关键，推理成本不再成为上线的拦路虎。API 定价为输入 $0.3/百万 token（100 TPS 版）、输出 $2.4/百万 token；50 TPS 版本更低，给预算更紧的场景留了余地。权重已开源（HuggingFace / GitHub），可借助 vLLM、SGLang 做私有化部署，兼顾成本与数据可控。\n\n你可以通过 API 或 MiniMax Agent 平台使用它。对既要强编程与 Agent 能力、又在意部署成本和自主性的团队，M2.5 是一个\"能干活、也花得起\"的选项。\n\n从定位看，M2.5 更偏向\"能执行任务的工程模型\"，而不是闲聊模型——它在 SWE-Bench、BrowseComp 这类需要动手和检索的基准上突出，正说明它适合接进 Agent 和工具链里干活。若你只是想要一个对话助手，它的优势未必完全发挥；但若你在做编程助手、研究 Agent、办公自动化，它的性价比值得认真评估。开源权重则给\"必须私有化、不能出网\"的场景留了退路，让企业在合规前提下也能用上同等能力。选它，本质上是在为\"能落地\"而不是\"能聊天\"付费。\n\n## 最终结论\n\n从工作流角度，M2.5 最适合接进\"需要动手的 Agent\"里：写代码、跑检索、填表格，而不是当闲聊框。但它的强项在工程和检索，纯创意写作未必比通用模型突出。建议把它接到你的开发工具链或 MiniMax Agent，用具体任务验证吞吐与成本；对预算敏感又想私有化的团队，开源权重是值得认真评估的退路。\n",
+  "published": true,
+  "source_url": "https://www.minimax.io/news/minimax-m25",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://minimax.io/models/text",
+  "verified_publisher": "MiniMax（稀宇科技）",
+  "verified_what": "MiniMax M2.5 是 MiniMax 于 2026 年 2 月发布的大语言模型，定位为「原生 Agent 生产级模型」，在编程、工具调用与搜索、办公等真实生产力场景达到 SOTA，主打高吞吐、低成本，权重已开源。",
+  "verified_price": "API 输入 $0.3/百万 token（100 TPS 版），输出 $2.4/百万 token；50 TPS 版更低。权重开源可免费本地部署（vLLM / SGLang）。",
+  "verified_platform": "Web、API、开源（本地部署 vLLM / SGLang）、MiniMax Agent 平台",
+  "verified_features": [
+    "编程 SOTA：SWE-Bench Verified 80.2%、Multi-SWE-Bench 领先",
+    "Agent 工具调用与搜索：BrowseComp 等基准突出",
+    "办公场景交付：Word / PPT / Excel 金融建模",
+    "高吞吐低成本：100 TPS，输出价约为同级的 1/10–1/20",
+    "权重开源（HuggingFace / GitHub），支持私有化部署",
+    "原生 Spec 能力：编码前主动拆解架构与规划"
+  ],
+  "verified_description": "MiniMax M2.5 是 MiniMax 于 2026 年 2 月发布的「原生 Agent 生产级」大语言模型，在编程（SWE-Bench Verified 80.2%）、工具调用与搜索、办公等场景达到 SOTA，主打高吞吐低成本，权重已开源，适合接进 Agent 与工具链落地。",
+  "content_flags": "原 cons 中「模型权重未开源」与事实相反（已开源）；已更正 verified_cons",
+  "price_verified": true,
+  "verified_pros": [
+    "长文本与编程能力强，SWE-Bench Verified 80.2%",
+    "Agent 工具调用/搜索能力突出（BrowseComp 76%+）",
+    "中文场景表现优秀，多轮连贯",
+    "高吞吐低成本，适合规模化 Agent 部署",
+    "权重开源，可私有化部署，数据可控",
+    "支持结构化输出与函数调用"
+  ],
+  "verified_cons": [
+    "权重已开源，但本地部署需算力与运维投入",
+    "相较 GPT-4 等，多模态与全球生态仍在完善",
+    "API 定价随版本迭代可能调整，以官网为准",
+    "作为较新模型，第三方插件与社区教程仍在增长"
+  ],
+  "verified_faq": [
+    {
+      "q": "MiniMax M2.5 和 MiniMax 是什么关系？",
+      "a": "M2.5 是 MiniMax 公司推出的升级版大语言模型，于 2026 年 2 月发布，相比前代在推理、长文本与 Agent 能力上明显提升。"
+    },
+    {
+      "q": "MiniMax M2.5 是免费的吗？",
+      "a": "权重已在 HuggingFace / GitHub 开源，可免费本地部署；通过 API 或 MiniMax Agent 使用需按 token 计费。"
+    },
+    {
+      "q": "MiniMax M2.5 支持哪些平台？",
+      "a": "支持 Web 体验、API 接入，以及基于 vLLM / SGLang 的开源本地部署，也可在 MiniMax Agent 平台使用。"
+    },
+    {
+      "q": "MiniMax M2.5 和 GPT-4 相比如何？",
+      "a": "在中文理解与长文本/编程/成本上具优势，开源权重也利于私有化；多模态与全球生态丰富度仍不及 GPT-4，选型取决于场景与预算。"
+    }
+  ],
+  "verified_tags": [
+    "大语言模型",
+    "Agent",
+    "开源",
+    "长文本",
+    "低成本推理"
+  ],
+  "verified_category": "AI对话",
+  "source_urls": [
+    "https://platform.minimax.io/docs/release-notes/models",
+    "https://www.jjckb.cn/20260213/f083116f8a184cb4919d6b783df219ea/c.html",
+    "https://www.stdaily.com/web/gdxw/2026-02/13/content_474094.html",
+    "https://www.toutiao.com/article/7606235503498740258/"
+  ],
+  "verify_notes": "多来源（MiniMax 官方发布说明、经济参考报、科技日报、今日头条）确认 M2.5 于 2026-02-12/13 发布并全球开源。现有数据 features 写「权重开源」正确，但 cons 误写「模型权重未开源」——已更正。另：原数据称 Multi-SWE-Bench「第一」，来源称其超越 Opus 4.6 达行业最好水平，表述可信。定价 $0.3/$2.4 每百万 token 与报道一致。",
+  "compare_section": {
+    "competitors": [
+      "gemini",
+      "chatgpt",
+      "360-zhinain"
+    ],
+    "verdict": "MiniMax M2.5 与 Gemini、ChatGPT、360智脑 同属AI对话赛道：MiniMax M2.5 的 编程 SOTA：SWE-Bench Verified 80.2%、Multi-SWE-Bench 领先 是亮点，价格 API 输入 $0.3 / 输出 $2.4 每百万 token；权重开源免费；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-13",
+  "created_date": "2026-08-13"
+}

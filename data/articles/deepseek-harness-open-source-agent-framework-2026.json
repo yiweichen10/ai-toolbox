@@ -1,0 +1,173 @@
+{
+  "title": "DeepSeek Harness 开源公测：模型(大脑)+Harness(身体)=Agent，\"一切皆插件\"的智能体框架——开发者喊出\"向 Claude Code 说再见\"？（2026年8月）",
+  "slug": "deepseek-harness-open-source-agent-framework-2026",
+  "date": "2026-08-15",
+  "dateFull": "2026-08-15",
+  "category": "AI资讯",
+  "tags": [
+    {
+      "text": "AI资讯",
+      "type": "hot"
+    },
+    {
+      "text": "DeepSeek Harness",
+      "type": "topic"
+    },
+    {
+      "text": "智能体框架",
+      "type": "topic"
+    },
+    {
+      "text": "一切皆插件",
+      "type": "topic"
+    },
+    {
+      "text": "Cordis",
+      "type": "topic"
+    },
+    {
+      "text": "AI Agent",
+      "type": "topic"
+    }
+  ],
+  "excerpt": "8月13日深夜，DeepSeek 在官宣 V4-Pro 转正与涨价预告两小时后，甩出第三张牌：智能体框架 Harness v0.1 开发者预览版，MIT 协议开源。\"一切皆插件\"、基于 Cordis 元框架、可接任何 OpenAI 兼容模型——官方公式 Model+Harness=Agent。本文拆解 Harness 架构哲学，并与 Claude Code、OpenAI Codex 及国产 Agent 平台横评。",
+  "description": "2026年8月13日晚，DeepSeek Harness v0.1 开发者预览版公测并以 MIT 协议开源：模型/工具/技能/会话/沙箱/存储/UI 全部插件化，底层基于 Cordis 元框架，支持标准/PTC/极简/创造四种运行模式，兼容任意 OpenAI 兼容模型（含本地 Ollama）。官方公式 Model+Harness=Agent，产品定位对标 OpenAI Codex 与 Anthropic Claude Code。本文拆解其架构哲学（插件化、Agent Loop 生命周期、Session Log 权威日志、子智能体编排），并与 Claude Code、OpenAI Codex 及 Coze/Dify/OpenClaw 等国产平台做七维横评。",
+  "keywords": "DeepSeek Harness, 智能体框架, Agent框架, 一切皆插件, Cordis, 开源Agent, Claude Code替代, DeepSeek开源, AI编程工具, 多智能体编排, PTC模式, MCP, 2026 AI",
+  "author": "AI工具宝箱编辑组",
+  "related_tools": [
+    "deepseek",
+    "claude-code",
+    "openai-codex",
+    "coze",
+    "dify",
+    "openclaw",
+    "cline",
+    "cursor",
+    "github-copilot",
+    "qwen-chat",
+    "kimi",
+    "zhipu-chatglm",
+    "gemini",
+    "chatgpt",
+    "claude",
+    "openai-agents-sdk",
+    "ollama",
+    "doubao",
+    "baidu-qianfan-agent",
+    "langchain"
+  ],
+  "infographic": {
+    "title": "2026 年 Agent 开发框架三强横评",
+    "subtitle": "DeepSeek Harness · Claude Code · OpenAI Codex",
+    "icon": "🔧",
+    "tools": [
+      {
+        "name": "DeepSeek Harness",
+        "sub": "MIT 开源 · 一切皆插件",
+        "emoji": "🐋",
+        "badges": [
+          [
+            "MIT 开源·厂商中立",
+            "best"
+          ],
+          [
+            "v0.1 预览版",
+            "score"
+          ]
+        ]
+      },
+      {
+        "name": "Claude Code",
+        "sub": "Anthropic · 闭源",
+        "emoji": "🟠",
+        "badges": [
+          [
+            "Agent 能力业界标杆",
+            "best"
+          ],
+          [
+            "模型强绑定·成本上升",
+            "score"
+          ]
+        ]
+      },
+      {
+        "name": "OpenAI Codex",
+        "sub": "OpenAI · 闭源",
+        "emoji": "⚡",
+        "badges": [
+          [
+            "Ultrafast 750 tok/s",
+            "best"
+          ],
+          [
+            "绑定 GPT-5.6 家族",
+            "score"
+          ]
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "label": "开源协议",
+        "values": [
+          "MIT 开源",
+          "闭源",
+          "闭源"
+        ]
+      },
+      {
+        "label": "插件化架构",
+        "values": [
+          "一切皆插件（Cordis）",
+          "官方维护，可扩展有限",
+          "官方维护，可扩展有限"
+        ]
+      },
+      {
+        "label": "模型锁定",
+        "values": [
+          "不锁定·任意 OpenAI 兼容",
+          "绑定 Claude 系",
+          "绑定 GPT 系"
+        ]
+      },
+      {
+        "label": "本地/离线部署",
+        "values": [
+          "支持（Ollama 等）",
+          "不支持",
+          "不支持"
+        ]
+      },
+      {
+        "label": "多智能体编排",
+        "values": [
+          "子 Agent+工作流内置",
+          "支持",
+          "支持"
+        ]
+      },
+      {
+        "label": "审计/日志",
+        "values": [
+          "Session Log 权威事件源",
+          "有回放",
+          "有回放"
+        ]
+      },
+      {
+        "label": "成熟度",
+        "values": [
+          "v0.1 预览版·生态初建",
+          "成熟·生态大",
+          "成熟·生态大"
+        ]
+      }
+    ]
+  },
+  "content": "# DeepSeek Harness 开源公测：模型(大脑)+Harness(身体)=Agent，\"一切皆插件\"的智能体框架——开发者喊出\"向 Claude Code 说再见\"？（2026年8月）\n\n**8 月 13 日深夜，DeepSeek 只用了两个小时，就完成了一次\"闪电三连击\"。**\n\n先是 [DeepSeek V4 Pro 正式版转正](/articles/deepseek-v4-pro-ga-0813-vs-grok46-fable5/)（1M 上下文、384K 输出、Agent 能力暴涨）；紧接着官方预告 API 价格\"大幅上涨\"（[单日 8 万亿 Token 压垮价格屠夫](/articles/deepseek-api-price-increase-august-2026/)）；就在外界还在消化这两条消息时，DeepSeek Harness v0.1 开发者预览版正式公测，并同步以 MIT 协议在 GitHub 开源。\n\n半小时破 1 万星，首日冲到 3 万星，Hacker News 登顶 TOP 1。有人晒出内测合影，有人在社交平台留言：\"DeepSeek 把一切开源，我们终于不用生活在 Anthropic 的统治之下了。\"\"这是向 Claude Code 说再见的那一天。\"\n\n本文不打算复述\"DeepSeek 又发新东西\"的通稿，而是拆三层：**Harness 到底是什么、它的\"一切皆插件\"哲学为什么被看作一种组装智能体的新方式、以及它与 Claude Code、OpenAI Codex 和国产 Agent 平台相比到底几斤几两。**\n\n## 一、先定位：Harness 不是新模型，也不是 API 客户端\n\n很多人看到\"DeepSeek Harness\"第一反应是\"DeepSeek 又出模型了\"。不是。官方给出过一个非常直白的公式：\n\n> **模型（大脑）+ Harness（身体）= 智能体（Agent）**\n\nHarness 的英文原意是\"马具、线束\"——把力量连接到可以工作的机构上，又不让这股力量脱缰。落到 AI 上，Harness 负责把模型接到文件系统、Shell、代码编辑器、网页和其他 Agent 上，同时记录它做了什么、限制它能做什么，并在出错时决定是重试、取消、压缩上下文，还是把问题交还给用户。\n\n它是一套用来**构建、运行和扩展智能体的 SDK 与应用框架**：默认连接 DeepSeek 自家模型（也可一键换成其他厂商），让模型读取项目、修改文件、运行命令、管理任务、分配子任务，并通过 Web UI、全屏终端、Headless 命令或自动化协议与用户交互。\n\n这个定位，决定了它真正对标的是 [Claude Code](/tools/claude-code/)、[OpenAI Codex](/tools/openai-codex/)、OpenAI Agents SDK，而不是任何一款\"聊天大模型\"。\n\n## 二、战略跃迁：DeepSeek 不再只卖模型，开始抢\"开发者入口\"\n\n第一财经的点评一针见血：**DeepSeek Harness 更重要的意义，是 DeepSeek 不再满足于只提供一个可以被调用的模型，而是开始争夺模型之上的开发者入口。**\n\n过去两年，DeepSeek 的角色是\"算力性价比之王\"——从 [V4-Flash 的 ¥1/百万 token](/articles/deepseek-v4-flash-agent-open-source-2026/) 到 [V4-Pro 的峰谷定价](/articles/deepseek-v4-official-peak-valley-pricing-202607/)，它赢在\"同样的活，花最少的钱\"。但模型层之上，开发者真正每天打开的工具是 IDE 和 Agent——这些入口目前被 Claude Code、Cursor、GitHub Copilot 牢牢把持。\n\n做编程智能体，商业上几乎是必然选择：据 Research and Markets 数据，2025 年全球 AI 编程工具市场规模已达 295.7 亿美元（约合人民币 2011 亿元），预计 2030 年攀升至 646.8 亿美元，年复合增长率约 17.1%。\n\n值得注意的是，这个项目的负责人是崔添翼——浙江大学计算机本科、在量化机构 Jane Street 工作九年，2026 年 3 月才加入 DeepSeek。8 月 2 日他面向全球公开征集内测用户，要求提交代码仓库账号与代表作品，入选者签保密协议。从立项（5 月）到公测（8 月 13 日），只有三个多月。\n\n## 三、\"一切皆插件\"：这不是一个产品，是一种组装智能体的方式\n\nHarness 最醒目的设计主张是**\"一切皆插件\"**——模型、工具、技能、会话、沙箱、存储、循环、调度、UI，所有 Agent 能力都由插件组合而成，可以自由替换、灵活重组。**甚至连 Agent Loop 本身也是插件。**\n\n底层是 Cordis 插件元框架（元框架理念来自北京大学与 DeepSeek 联合署名论文《A Programming Paradigm for Spatiotemporal Composability》）。运行中的 Harness 本质上是一个 Cordis Context，不同包向 Context 注册服务、事件和能力，最终由配置文件把它们组合成一套可运行的智能体。\n\n看仓库结构会更直观：超过 230 个 workspace 成员，代码分布在 packages/、apps/、examples/、python/、native/ 等区域。文件系统、终端、子进程、PTY、语言服务器、网页访问、技能、子智能体、工作流、计划模式、会话持久化、凭据、遥测——几乎每一项能力都有自己的包。\n\n把普通 Agent 项目比作一台装好的电脑，Harness 更像一块尺寸惊人的洞洞板：模型、工具、界面、存储、安全策略和上下文管理都可以插上去，也都可以拔下来。它提供了一套默认组装方案，但 DeepSeek 真正想创造的，不是某个固定形态的\"DeepSeek 编程助手\"，而是一种**组装智能体的方式**。\n\n文档里还有一层很关键的\"接口/实现/消费者\"三分法：以 Bash 为例，接口定义\"执行命令\"是什么，本地实现负责真正创建进程，面向模型的工具包把能力变成模型可理解的 schema。将来本地 Shell 要换成远程容器、云端沙箱或企业执行平台，理论上只需替换实现层，不必重写模型工具和 Agent Loop。\n\n## 四、Agent Loop 不是\"一个循环\"，而是一套交通规则\n\n很多早期 Agent 项目的核心可以简化成几行：把消息发给模型，模型返回工具调用，执行工具，把结果发回，直到输出文本。Harness 当然也做这件事，但把它拆成了严格的生命周期：\n\n- 一次用户输入开启一个 **Turn**，一个 Turn 含多个 **Step**，一个 Step 对应一次模型请求及其后续工具执行；\n- 工具调用不是\"拿到函数名就执行\"，而要经过**前置策略、不可逆操作的安全守卫、实际执行、后置处理、内容整理、结果通知**——允许/拒绝、超时、重试、指标统计、附加上下文，都可以从流水线不同位置接入；\n- 工具可以声明某类调用并发安全，调度器就让连续只读任务并行；一旦碰到修改状态或无法确定安全性的调用，就把它当屏障，等前面任务结束后独占执行；\n- 它还认真处理了运行中消息的去向：用户在 Agent 工作时发来的新内容，可能是下一轮任务，也可能是转向指令。系统区分排队消息、注入上下文与 Steering，并通过回执确认某条转向指令是否真正进入了某次模型请求——不只关心\"消息收到了\"，还关心\"模型究竟在哪一步看到了它\"。\n\n这套设计在\"一问一答\"时显得过度设计，但当 Agent 同时搜索十个文件、运行测试、接收用户追加指令、还要允许随时取消时，这些规则会从\"过度设计\"变成\"事故调查里最想早点拥有的东西\"。\n\n## 五、Session Log：模型看见的一切，都必须能从日志重建\n\nHarness 另一个值得关注的设计是 **Session Log**。项目规定：凡是模型看见的内容，都必须能够从日志中重建。用户消息、运行环境上下文、模型请求信息、流式输出、工具调用和结果、压缩事件、权限切换、取消原因，全部以事件形式进入**追加式会话流**。\n\n界面、持久化、恢复、Fork、遥测和回放，不应该各自维护一份\"差不多正确\"的状态，而应从**同一个事件源派生**。这解决了一个 Agent 系统里非常棘手的问题：当一次任务出错，我们究竟能不能知道模型当时看到了什么？\n\n系统在请求边界保存足以重建消息的记录，原始流式 chunk 也会保留。会话持久化本身是插件（JSONL / SQLite 后端），Resume 沿原会话继续，Fork 从确定的历史边界派生新会话。对调试、评估、审计和自动化来说，这提供了统一基础——**这也和 8 月 14 日 Claude 全量上线\"隐形水印\"、AI 内容溯源走向可验证的行业趋势同频**（[详见专文](/articles/claude-watermark-ai-content-provenance-2026/)）。\n\n## 六、四种模式：同一个宿主，四种 Agent 人格\n\nWeb UI 提供四种 Agent 预设模式。它们不是四套彼此独立的 Agent，而是基于同一套 Harness 宿主、装配不同工具/提示词/运行时能力：\n\n| 模式 | 核心能力 | 适合场景 |\n|------|---------|---------|\n| **标准模式** | 文件编辑+Shell+检索+Skills+计划+子 Agent+工作流 | 绝大多数日常开发 |\n| **PTC 模式** | 模型写一段 TypeScript 程序，一次 run_code 组合多步操作 | 调用链长的复杂任务，省 token |\n| **极简模式** | 只有持久 Bash + str_replace_editor 两个工具 | 路径明确的直接编码 |\n| **创造模式** | 可运行模型编写的插件代码、探索并重组运行时 | 高级用户/框架开发者 |\n\n其中 **PTC（Program-That-Calls）模式**是最有想象力的一个：让模型先写一段 TypeScript 程序，把多步工具调用编排成一次执行，减少模型与工具之间反复往返的开销。这是\"让模型当程序员，而不是当调参工\"的尝试。\n\n## 七、从一个 Agent 到一群 Agent\n\nHarness 已内置多智能体能力：主 Agent 可以把任务委派给子 Agent，子 Agent 可以是新实例、从已有会话的完成边界 Fork，或通过 ACP 连接外部子进程。每个 Agent 拥有自己的上下文层（自己的工具、提示词、命令），某个子 Agent 可以被限制为只做搜索和分析，另一个才被允许改文件——注册在 Agent 作用域里的能力会随生命周期自动清理。\n\n实测中，有开发者用配置了 V4-Flash 的 Harness 构建第一人称丧尸射击游戏，30 多分钟得到可玩成品，期间创建了 **5 个并行执行的子智能体**；用它复现\"华强买瓜\"3D 动画，比同提示词下配置 GPT-5.6 sol 的 Codex 效果更好——而 V4-Flash 的参数规模远小于 GPT-5.6 sol，说明框架本身立了大功。\n\n工作流模块则更进一步：用脚本驱动多智能体编排，连接多个子任务、结构化输出和继续执行。计划、目标、待办、后台任务四个组件各有生命周期：计划记录协作阶段，目标跨会话持续存在，待办是轻量任务清单，后台任务管理仍在运行的实际工作。\n\n## 八、三强横评：Harness vs Claude Code vs OpenAI Codex（含国产平台）\n\n信息图：**DeepSeek Harness / Claude Code / OpenAI Codex 七维横评**（生成于文末）。\n\n**DeepSeek Harness（v0.1 预览版）**：MIT 开源最激进；\"一切皆插件\"架构灵活性最高；模型不锁定，官方支持接 OpenAI 兼容后端、甚至 [Ollama](/tools/ollama/) 本地模型实现完全离线；但 v0.1 仍是预览版，插件生态初建，稳定性和文档成熟度不及两位对手。\n\n**Claude Code**：Anthropic 出品，Agent 能力业界标杆，与 Claude 模型深度绑定（[Fable 5 取消订阅制转按量计费](/articles/deepseek-v4-pro-ga-0813-vs-grok46-fable5/)后成本门槛上升）；闭源，生态成熟但可定制性弱。\n\n**OpenAI Codex**：背靠 GPT-5.6 家族，[Ultrafast 模式 750 tok/s](/articles/deepseek-v4-flash-agent-open-source-2026/)把推理速度拉到 14 倍；同为闭源，面向 OpenAI 模型优化。\n\n国产侧，[Coze](/tools/coze/)、[Dify](/tools/dify/)、[OpenClaw](/tools/openclaw/) 走的是\"平台型 Agent 工作流\"路线，面向非深度开发者做可视化编排；Harness 则是面向开发者的代码级框架，两者受众错位。对坚持开源、想换模型、要完全掌控上下文的团队，Harness 的\"洞洞板\"形态是当前唯一选择。\n\n## 九、十分钟上手：npx 一条命令\n\n已安装 Node.js 的环境，一条命令即可启动 Web UI：\n\n```bash\nnpx @deepseek-ai/dsh web\n```\n\n默认地址 http://127.0.0.1:3080。Web UI 内置了直接配置其他模型服务的入口，无需手动改配置文件——你可以接 DeepSeek，也可以接 [Kimi](/tools/kimi/)、[通义千问](/tools/qwen-chat/)、[智谱清言](/tools/zhipu-chatglm/) 等数十家厂商，密钥写入 $DSH_HOME/.credentials.yaml，环境变量和 .env 可作为自动化回退来源（注意：密钥不应写入 cordis.yml 或会话日志）。\n\n想从源码跑：`git clone https://github.com/deepseek-ai/deepseek-harness` → `pnpm install` → `pnpm run build` → `pnpm dsh web`。\n\n## 十、诚实边界：v0.1 就是 v0.1\n\n有开发者评价\"一切皆插件\"让模型成为技术栈中一个可替换的部分，MIT 协议是\"非常酷也非常早期\"的激进举措。三个需要泼冷水的点：\n\n1. **\"替代 Claude Code\"为时尚早**。v0.1 的核心插件与基础接口还在快速迭代，配置补丁替换的是整个 config 而非深度合并（只写一个新字段可能把原有 API Key 一起弄丢），这类细节都说明项目处于早期；\n2. **插件生态决定上限**。框架再灵活，最终比拼的是\"有多少人愿意为它写高质量插件\"，这需要时间积累；\n3. **模型能力仍是天花板**。Harness 解决的是\"把活干完\"的执行层问题，但判断力、代码质量仍取决于你接入的模型。\n\n## 十一、行业拐点：开源 Agent 框架之战正式开打\n\n把时间线拉长看，2026 年 8 月这半个月密集发生的事其实是一条主线：**英伟达发布模型路由器 Switchyard（[按任务分诊调度](/articles/nvidia-nemo-switchyard-model-router-2026/)）→ 中国大模型八周五连发（[硅谷企业悄悄换底座](/articles/china-ai-models-five-releases-silicon-valley-switch-base-2026/)）→ DeepSeek 开源 Harness 争夺 Agent 入口**。\n\n模型层的竞争已从\"谁最强\"蔓延到\"谁能把模型变成能干活的东西\"。Claude Code、Codex 是闭源的，OpenAI Agents SDK 是开源的但绑定 OpenAI 生态，而 Harness 选择了 MIT + 厂商中立——这几乎是复制 Android 当年的打法：**用开源底座抢生态位，让所有人的 Agent 都跑在自己的框架上**。\n\n对普通开发者，这件事的短期意义很实际：多了一个免费、可换模型、可完全掌控的 Agent 框架选项；对行业，它意味着\"Agent 基础设施\"正在成为继模型之后的新战场——而这个战场，DeepSeek 已经进场了。\n\n---\n\n### 常见问题（FAQ）\n\n**Q1：DeepSeek Harness 和 DeepSeek 大模型是什么关系？**\nA：Harness 不是模型，是智能体框架。官方公式\"模型(大脑)+Harness(身体)=Agent\"。默认可接 DeepSeek 自家模型，也支持任意 OpenAI 兼容后端（包括本地 [Ollama](/tools/ollama/)），模型层可整体替换。\n\n**Q2：DeepSeek Harness 开源吗？用什么协议？**\nA：开源，MIT 协议（v0.1 开发者预览版，2026 年 8 月 13 日晚公测）。仓库 github.com/deepseek-ai/deepseek-harness，首日 3 万+ Star，Hacker News 登顶。\n\n**Q3：\"一切皆插件\"是什么意思？**\nA：模型、工具、技能、会话、沙箱、存储、循环、调度、UI 等所有 Agent 能力都由插件组合而成，可自由替换重组，连 Agent Loop 本身也是插件。底层基于 Cordis 元框架，配置文件（cordis.yml）决定组装出什么形态的 Agent。\n\n**Q4：Harness 支持哪些运行模式？**\nA：四种预设：标准模式（完整编码 Agent）、PTC 模式（模型写 TypeScript 程序一次执行多步调用）、极简模式（仅 Bash+编辑器两工具）、创造模式（可运行模型编写的插件代码，面向高级用户）。\n\n**Q5：DeepSeek Harness 能替代 Claude Code 吗？**\nA：目前不能。v0.1 是预览版，插件生态与稳定性尚在初期。但它提供了闭源工具没有的三样东西：MIT 开源、模型不锁定、可完全离线部署。对追求可控性的团队，是值得关注的新选项。\n\n---\n\n*数据来源：DeepSeek 官方公告、第一财经、IT之家、智东西、Hacker News 社区实测，信息截至 2026-08-15，以官方最新发布为准。*\n",
+  "orig_category": "AI资讯",
+  "content_type": "AI资讯",
+  "seo_title": "DeepSeek Harness 开源公测：模型+Harness=Agent，一切皆插件的智能体框架，能否终结 Claude Code 统治？"
+}

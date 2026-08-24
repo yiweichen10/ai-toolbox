@@ -1,0 +1,68 @@
+{
+  "name": "ClickPrompt",
+  "slug": "clickprompt",
+  "emoji": "💬",
+  "color": "#0ea5e9",
+  "description": "开源免费的在线AI提示词设计工具，支持Stable Diffusion、ChatGPT、GitHub Copilot等模型的提示词查看、分享、一键运行与在线生成，提供编程、写作、设计等行业的Prompt生成模板。",
+  "category": "AI提示词",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI提示词"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://www.clickprompt.org/",
+  "price": "免费",
+  "platform": "Web",
+  "pros": [
+    "完全免费、开源（MIT）",
+    "同时支持 Stable Diffusion、ChatGPT、GitHub Copilot 多模型",
+    "可视化生成器，上手门槛低",
+    "提供编程、写作、设计等行业模板",
+    "社区样例库可参考、可分享"
+  ],
+  "cons": [
+    "项目更新节奏放缓，部分功能仍在规划/试验中",
+    "一键运行需要自备 OpenAI / HuggingFace 密钥",
+    "Prompt 优化器等高级功能尚未落地",
+    "国际化与生态仍在扩展中，部分功能以英文为主"
+  ],
+  "features": [
+    "开源免费MIT协议",
+    "ChatGPT/SD一键运行",
+    "在线提示词生成器",
+    "行业模板(编程/写作/设计)",
+    "Prompt样例库社区分享",
+    "HuggingFace图片生成集成"
+  ],
+  "related": [],
+  "content": "## ClickPrompt 是什么？\n\nClickPrompt 是一款开源、免费的在线 AI 提示词设计工具，专为 Prompt 编写者设计，官网为 clickprompt.org。它支持 Stable Diffusion、ChatGPT、GitHub Copilot 等多种基于提示词的 AI 应用，可以一键查看、分享和运行这些模型的提示词，并提供在线的提示词生成器。\n\n项目以 MIT 协议在 GitHub 开源（github.com/prompt-engineering/click-prompt），使用 React + Next.js + TypeScript 构建，由 Thoughtworks 工程师 phodal（Phodal Huang）等发起。它把\"提示词学习、设计、运行\"整合到一套可视化界面中，适合想系统学习提示词、又懒得手写复杂模板的 AI 用户。\n\n### 核心功能\n\n- **一键运行**：支持 ChatGPT 和 Stable Diffusion 的一键运行（需自备 API 密钥），学习提示词的同时直接验证效果。\n- **在线提示词生成器**：内置 Stable Diffusion 人物生成器、Stable Diffusion → ChatGPT 转换生成器等，通过选择或输入关键词快速生成高质量提示词。\n- **Prompt 样例库**：查看用户分享的 Stable Diffusion、ChatGPT、GitHub Copilot 提示词样例，展示并分享自己的作品（基于 GitHub PR 协作贡献）。\n- **行业特定提示词生成器**：提供编程、写作、设计等行业的专业提示词模板，提升对应领域的工作效率。\n- **AI 学习资料库**：收集提示词学习资料，可在平台上直接运行示例，边学边用。\n- **可视化点选式组合**：通过界面点选 tag 和参数组合提示词，无需手写复杂语法。\n- **HuggingFace 集成**：可接入 HuggingFace 实现在线生成 Stable Diffusion 图片。\n\n### 适用场景\n\n- **AI 绘画（Stable Diffusion）爱好者**：用可视化生成器组合高质量绘画提示词，快速试出想要的画面。\n- **需要行业化模板的从业者**：编程、写作、设计等场景直接使用行业提示词生成器，省去从零编写。\n- **提示词学习新手**：通过样例库和资料库学习提示词，配合一键运行直观看到不同提示词的效果差异。\n\n### 价格\n\nClickPrompt 完全免费、开源（MIT 协议），无需付费。注意：在线一键运行 ChatGPT 或 Stable Diffusion 时，需要自行准备对应的 OpenAI / HuggingFace API 密钥。",
+  "published": true,
+  "faq": [
+    {
+      "q": "ClickPrompt 收费吗？",
+      "a": "完全免费、开源，采用 MIT 协议，无需付费即可使用全部核心功能。"
+    },
+    {
+      "q": "支持哪些 AI 模型？",
+      "a": "支持 Stable Diffusion、ChatGPT、GitHub Copilot 等基于提示词的 AI 应用，并集成了 HuggingFace。"
+    },
+    {
+      "q": "一键运行需要什么条件？",
+      "a": "需要在平台上配置自己的 OpenAI 或 HuggingFace API 密钥，才能实现在线运行 ChatGPT 或生成 Stable Diffusion 图片。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://www.clickprompt.org/",
+  "last_verified": "2026-08-05",
+  "confidence": "medium",
+  "verify_notes": "二轮核实(WebSearch 2026-08-05)：GitHub 开源项目确认存在；主站已由 prompt.phodal.com 迁移至 clickprompt.org（WebFetch 当前未能直连，vercel 备用地址已404），confidence=medium 待复查。",
+  "seo_keywords": [
+    "ClickPrompt",
+    "提示词生成器",
+    "Stable Diffusion提示词",
+    "ChatGPT提示词工具",
+    "开源提示词工具"
+  ]
+}

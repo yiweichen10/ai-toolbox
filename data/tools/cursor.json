@@ -1,0 +1,127 @@
+{
+  "name": "Cursor",
+  "slug": "cursor",
+  "positioning": "免费版够用吗？Tab补全+AI对话",
+  "emoji": "⬛",
+  "color": "#000000",
+  "description": "AI代码编辑器（基于VS Code），免费版可用、Pro $20/月起。2026年8月被SpaceX全资收购，内置自研Composer模型与Grok 4.6，支持Cursor Router智能路由、Cloud Agents云端智能体与Builds环境预构建。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "AI编程"
+    },
+    {
+      "text": "热门",
+      "type": "hot"
+    },
+    {
+      "text": "有免费版",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.8",
+  "visits": "5.9万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://cursor.com",
+  "price": "免费版 + Pro $20/月起",
+  "platform": "Windows / macOS / Linux",
+  "pros": [
+    "AI体验最流畅",
+    "VS Code完整生态",
+    "代码库全局理解",
+    "多模型切换",
+    "Cmd+K编辑体验佳"
+  ],
+  "cons": [
+    "免费次数有限",
+    "网络需通畅",
+    "需单独安装编辑器",
+    "部分插件兼容性"
+  ],
+  "features": [
+    "自研 Composer 模型 + Grok 4.6（同属 SpaceX 体系）",
+    "Cursor Router 智能路由，按任务调用 OpenAI/Anthropic/Google 等前沿模型",
+    "Composer 多文件智能体式编辑（Agent 模式）",
+    "Cloud Agents 云端自主编码、测试、提交 PR",
+    "Builds 环境预构建，智能体启动快 3 倍、首 token 快 3 倍",
+    "Tab 多行 diff 补全 / Cmd+K 内联编辑 / AI Chat（@ 引用）",
+    "Bugbot 自动 PR 审查与修复",
+    "MCP / 技能 / 钩子可扩展；团队版含共享上下文、安全审查、SAML/OIDC SSO",
+    "iOS / iPad 移动端远程操控智能体"
+  ],
+  "related": [
+    "github-copilot",
+    "claude",
+    "chatgpt"
+  ],
+  "content": "## Cursor 是什么？\n\nCursor 是 AI 代码编辑器（基于 VS Code 深度改造），将 AI 深度集成进补全、编辑与对话工作流。2026 年 8 月，Cursor 被 SpaceX 全资收购，成为其子公司，借助 SpaceX 的 GPU 算力训练更强、更低成本的模型。\n\nCursor 内置自研模型 Composer，并接入 Grok 4.6（同属 SpaceX 体系），同时通过 Cursor Router 智能路由调用 OpenAI、Anthropic、Google 等前沿模型，按任务复杂度自动选模。\n\n## 核心功能\n\n- **Tab 补全**：灰色 AI 建议，按 Tab 接受，支持多行 diff 预测\n- **Cmd+K 编辑**：选中代码后用自然语言描述修改\n- **AI Chat**：侧边栏对话，可用 @ 引用文件与代码片段\n- **Composer 多文件编辑**：跨文件智能体式改代码\n- **Cursor Router**：自动按请求选模型，支持 Intelligence / Balance / Cost 三档优化\n- **Cloud Agents**：后台自主编码、测试、提交 PR 的云端智能体\n- **Builds**：环境预构建，智能体启动速度提升 3 倍、首 token 快 3 倍\n- **Bugbot**：自动审查 PR、定位并修复 bug\n- **MCP / 技能 / 钩子**：可扩展工具链；团队版含共享上下文、安全审查与 SAML/OIDC SSO\n- **移动端**：iOS / iPad 支持远程操控智能体、全 PR 审查\n\n## 模型与定价\n\n| 方案 | 价格 | 包含 |\n|------|------|------|\n| Hobby | 免费 | 有限 Agent 请求 + Composer 访问 |\n| Pro | $20/月 | 扩展 Agent 额度 + Grok 额度 + 前沿模型 |\n| Pro+ | $60/月 | 更高额度 |\n| Ultra | $200/月 | 最高额度 |\n| Teams | $40/用户/月 | 团队计费、共享上下文、Bugbot 审查、SSO |\n| Enterprise | 询价 | 池化用量、SCIM、审计日志、优先支持 |\n\n印度市场另有 ₹649/月的 Cursor Start 本地定价档。模型侧以自研 Composer 与 Grok 4.6 为主，前沿模型经 Cursor Router 路由到 OpenAI / Anthropic / Google 等。\n\n## 实测表现 & 关键指标\n\n以下数据来自官方公开信息（cursor.com/pricing、cursor.com/changelog），可溯源核查。\n\n| 指标 | 数值 | 数据来源 |\n|------|------|---------|\n| 免费档 | Hobby：有限 Agent 请求 + Composer 访问 | Cursor 官网定价页 |\n| Pro 订阅价 | $20/月 | Cursor 官网定价页 |\n| Teams 价 | $40/用户/月 | Cursor 官网定价页 |\n| 支持模型 | Composer（自研）+ Grok 4.6 + 前沿模型（Router 路由） | Cursor 官网 changelog |\n| 近期能力 | Cloud Agents、Builds 环境预构建、iPad/iOS 支持 | Cursor 官网 changelog |\n| 所属公司 | 2026-08-14 起为 SpaceX 全资子公司 | cursor.com/blog/joining-spacex |\n| 支持平台 | Windows / macOS / Linux / iOS / iPad | Cursor 官网 |\n\n## 优缺点分析\n\n### 👍 优点\n- AI 编程体验成熟，补全 / 编辑 / Chat 三位一体\n- 完整继承 VS Code 生态，插件通用\n- 自研 Composer + Grok 4.6 + 多厂商前沿模型，经 Router 智能选模\n- Cloud Agents 与 Builds 让后台自主编码更可靠\n- 移动端可远程操控智能体\n\n### 👎 缺点\n- 免费版 Agent 请求有限，重度使用需付费\n- 需要稳定网络\n- 独立编辑器，不能作为插件使用\n- 部分 VS Code 插件存在兼容问题\n\n## 使用技巧\n\n1. **多按 Tab**：让 Cursor 自动完成更多代码。\n2. **Cmd+K 编辑**：选中代码 → Cmd+K → 描述修改 → 回车。\n3. **@ 引用**：在 Chat 中用 @ 引用文件或代码，上下文更准确。\n4. **Cursor Router**：Auto 模式选 Balance，日常性价比最高。\n5. **.cursorrules**：项目根目录创建规则文件，定制 AI 行为。\n\n## 适合人群\n\nCursor 适合追求 AI 编程效率的开发者、初创团队与企业研发团队。如果你希望 AI 深度融入编程工作流，Cursor 是当前主流选择之一。\n\n## 常见问题（FAQ）\n\n**Cursor 现在属于哪家公司？**\n2026 年 8 月 14 日，Cursor 被 SpaceX 全资收购，成为其子公司（cursor.com/blog/joining-spacex）。\n\n**Cursor 支持哪些模型？**\n内置自研 Composer 模型与 Grok 4.6，并通过 Cursor Router 智能路由调用 OpenAI、Anthropic、Google 等前沿模型。\n\n**Cursor 免费版够用吗？**\nHobby 免费档提供有限 Agent 请求与 Composer 访问，适合轻度学习与体验；重度开发建议 Pro $20/月。\n\n## 总结\n\nCursor 是 AI 编程领域成熟的 AI 代码编辑器，现属 SpaceX 体系，内置 Composer 与 Grok 4.6，并支持多厂商前沿模型经 Router 智能路由。从功能完整性看，它覆盖了从补全、编辑、对话到云端自主编码的核心场景。\n\n**快速上手建议：**\n- 访问官网 cursor.com 下载安装\n- 先用免费 Hobby 版了解核心功能\n- 重度使用直接上 Pro（$20/月）\n- 团队使用选 Teams（$40/用户/月）\n\n**支持平台：** Windows / macOS / Linux / iOS / iPad\n",
+  "published": true,
+  "faq": [
+    {
+      "question": "Cursor和GitHub Copilot哪个更好？",
+      "answer": "Cursor是独立的AI代码编辑器（基于VS Code），AI能力更深地集成在编辑器中，支持整个项目的上下文理解。GitHub Copilot是VS Code插件，轻量但功能相对基础。重度编程用户推荐Cursor，轻度辅助推荐Copilot。"
+    },
+    {
+      "question": "Cursor免费吗？",
+      "answer": "Cursor有免费版，每月有2000次AI补全和50次高级请求。Pro版$20/月，提供无限次AI补全和高级请求。对于专业开发者，Pro版性价比很高。"
+    },
+    {
+      "question": "Cursor支持哪些编程语言？",
+      "answer": "Cursor支持几乎所有主流编程语言，包括Python、JavaScript/TypeScript、Java、C/C++、Go、Rust、PHP等。它基于VS Code，所以VS Code的所有语言支持和插件都能用。"
+    },
+    {
+      "question": "Cursor能导入我现有的VS Code配置吗？",
+      "answer": "可以，Cursor兼容VS Code的设置、插件和快捷键。安装Cursor后可以一键导入VS Code的配置，几乎零迁移成本。你的VS Code插件、主题、设置都可以直接使用。"
+    },
+    {
+      "question": "如何用Cursor写第一个项目？",
+      "answer": "打开Cursor后，点击左上角'New Project'，输入项目名称和描述。Cursor会自动生成基础代码结构，然后你可以在代码编辑器里继续对话，比如'帮我添加用户登录功能'。它支持整个项目的上下文理解，改代码后继续对话它知道你在做什么。"
+    }
+  ],
+  "created_date": "2026-03-22",
+  "aeo_geo_updated": "2026-06-23",
+  "verified_url": "https://cursor.com",
+  "verified_publisher": "Anysphere（2026-08-14 起为 SpaceX 全资子公司）",
+  "verified_what": "AI 代码编辑器（基于 VS Code），内置自研 Composer 模型与 Grok 4.6，支持 Cursor Router 智能路由、Cloud Agents 与 Builds。",
+  "verified_price": "Hobby 免费（有限Agent请求+Composer访问） / Pro $20/月 / Pro+ $60/月 / Ultra $200/月 / Teams $40/用户/月 / Enterprise 询价（印度另有 ₹649/月 Cursor Start）",
+  "verified_platform": "Windows, macOS, Linux, iOS, iPad, Web, API",
+  "verified_features": [
+    "自研 Composer 模型 + Grok 4.6（同属 SpaceX 体系）",
+    "Cursor Router 智能路由，按任务调用 OpenAI/Anthropic/Google 等前沿模型",
+    "Composer 多文件智能体式编辑（Agent 模式）",
+    "Cloud Agents 云端自主编码、测试、提交 PR",
+    "Builds 环境预构建，智能体启动快 3 倍、首 token 快 3 倍",
+    "Tab 多行 diff 补全 / Cmd+K 内联编辑 / AI Chat（@ 引用）",
+    "Bugbot 自动 PR 审查与修复",
+    "MCP / 技能 / 钩子可扩展；团队版含共享上下文、安全审查、SAML/OIDC SSO",
+    "iOS / iPad 移动端远程操控智能体"
+  ],
+  "last_verified": "2026-08-17",
+  "confidence": "high",
+  "conflict": false,
+  "source_urls": [
+    "https://cursor.com/blog/joining-spacex",
+    "https://cursor.com/changelog",
+    "https://cursor.com/pricing",
+    "https://cursor.com/blog/router"
+  ],
+  "verify_notes": "2026-08-17 核实：cursor.com/blog/joining-spacex 确认 2026-08-14 被 SpaceX 全资收购；changelog 确认 Cloud Agents/Builds/Router/iPad 等近期功能；pricing 确认 Hobby/Pro/Pro+/Ultra/Teams/Enterprise 现行档位（与现有 verified_price 一致，未改价格）。原 content 严重过时，已全量重写。未编造具体版本号（官方 changelog 以日期条目发布，无 '3.x' 版本字符串）。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "tongyi-lingma",
+      "cline",
+      "codex-cli"
+    ],
+    "verdict": "Cursor 与 通义灵码、Cline、Codex CLI 同属AI编程赛道。在性价比上，Cursor（免费版+Pro $20/月）门槛更低；口碑方面，Cursor（⭐ 4.8）领先；Cursor 的优势在于AI编程IDE，基于VS Code深度定制。2026年支持Agent多文件编辑、Tab智能补全、MCP技能钩子系统、云端，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  },
+  "verified_description": "AI代码编辑器（基于VS Code），免费版可用、Pro $20/月起。2026年8月被SpaceX全资收购，内置自研Composer模型与Grok 4.6，支持Cursor Router智能路由、Cloud Agents云端智能体与Builds环境预构建。",
+  "content_flags": "原长文滞留2026-04数据（GPT-4o/Claude 3.5/Gemini Pro + 旧请求制定价表 + 实测数据标注2026-04），已全量重写为2026时代（SpaceX收购+Composer/Grok 4.6+Router+Cloud Agents+Builds+现行定价）。",
+  "price_verified": true,
+  "verified_category": "AI编程",
+  "updated_date": "2026-08-17"
+}

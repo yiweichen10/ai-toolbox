@@ -1,0 +1,167 @@
+{
+  "name": "Pixelle-Video",
+  "slug": "pixelle-video",
+  "positioning": "免费AI视频工具推荐：主题生成视频、多模型接入",
+  "auto_positioning": true,
+  "emoji": "🎬",
+  "color": "#8B5CF6",
+  "description": "Pixelle-Video 是阿里巴巴 AIDC-AI 开源的 AI 全自动短视频生成引擎（Apache-2.0），输入主题即可自动完成文案、配图/视频、语音合成与一键成片，支持本地与云端部署。",
+  "category": "AI视频",
+  "tags": [
+    {
+      "text": "AI视频"
+    },
+    {
+      "text": "文生视频"
+    },
+    {
+      "text": "图生视频"
+    },
+    {
+      "text": "开源"
+    }
+  ],
+  "rating": "⭐4.6",
+  "visits": "85万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://github.com/AIDC-AI/Pixelle-Video",
+  "price": "免费开源（Apache-2.0）",
+  "platform": "网页端/iOS/Android",
+  "pros": [
+    "完全开源免费（Apache-2.0），可商用",
+    "全链路自动化，零剪辑门槛",
+    "灵活接入多种第三方模型，不绑定单一家",
+    "部署友好（Windows 包、Docker、云端）",
+    "社区活跃（GitHub 高星标）"
+  ],
+  "cons": [
+    "本身不生成内容，成片质量取决于接入的第三方模型",
+    "本地生图/生视频对显卡显存要求较高",
+    "官方自带模板审美偏工具化",
+    "需自行配置 API Key 与模型服务"
+  ],
+  "features": [
+    "主题生成视频：自动完成文案、配图/视频、语音解说、BGM 与一键合成",
+    "文生视频 / 图生视频",
+    "多模型接入：ComfyUI、RunningHub、DashScope、OpenAI、Kling 等",
+    "本地 / 云端双模式部署，含 Windows 一键包与 Docker",
+    "批量生成与历史记录",
+    "自带模板与 BGM，支持 API"
+  ],
+  "related": [
+    "pika",
+    "runway",
+    "luma-ai",
+    "kling-ai",
+    "tongyi-wanxiang"
+  ],
+  "faq": [
+    {
+      "q": "Pixelle-Video 是什么？",
+      "a": "Pixelle-Video 是阿里巴巴 AIDC-AI 开源的 AI 全自动短视频引擎（Apache-2.0），输入主题即可自动完成文案、配图/视频、语音合成与一键成片。"
+    },
+    {
+      "q": "收费吗？",
+      "a": "完全开源免费（Apache-2.0），可自托管与企业使用，无付费版。"
+    },
+    {
+      "q": "支持哪些模型？",
+      "a": "通过配置接入 ComfyUI、RunningHub、DashScope、OpenAI、ARK、Kling 等第三方图像/视频/语音模型。"
+    }
+  ],
+  "seo_keywords": [
+    "Pixelle-Video",
+    "Pixelle-Video AI视频生成工具",
+    "AI视频生成软件推荐",
+    "图生视频AI工具哪个好",
+    "Pixelle-Video免费版怎么样",
+    "文生视频AI工具对比"
+  ],
+  "content": "## Pixelle-Video 是什么？\n\n阿里巴巴 AIDC-AI 开源的 AI 全自动短视频生成引擎（Apache-2.0），输入主题即可自动完成文案、配图/视频、语音合成与一键成片。\n\nPixelle-Video 是阿里巴巴 AIDC-AI 开源的 AI 全自动短视频生成引擎（Apache-2.0），输入主题即可自动完成文案、配图/视频、语音合成与一键成片，支持本地与云端部署。\n\n## 核心功能\n\n- 主题生成视频：自动完成文案、配图/视频、语音解说、BGM 与一键合成\n- 文生视频 / 图生视频\n- 多模型接入：ComfyUI、RunningHub、DashScope、OpenAI、Kling 等\n- 本地 / 云端双模式部署，含 Windows 一键包与 Docker\n- 批量生成与历史记录\n- 自带模板与 BGM，支持 API\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 开源免费（Apache-2.0），自托管；无付费版。 |\n| 支持平台 | Web（Streamlit 界面）, Desktop（自托管）, API, Docker |\n| 评分 | ⭐4.6 |\n| 开发商 | 阿里巴巴 AIDC-AI |\n\n## 价格与平台\n\n- **价格**：开源免费（Apache-2.0），自托管；无付费版。\n- **平台**：Web（Streamlit 界面）, Desktop（自托管）, API, Docker\n- **官网**：https://github.com/AIDC-AI/Pixelle-Video\n\n## 优缺点分析\n\n### 优点\n\n- 完全开源免费（Apache-2.0），可商用\n- 全链路自动化，零剪辑门槛\n- 灵活接入多种第三方模型，不绑定单一家\n- 部署友好（Windows 包、Docker、云端）\n- 社区活跃（GitHub 高星标）\n\n### 缺点\n\n- 本身不生成内容，成片质量取决于接入的第三方模型\n- 本地生图/生视频对显卡显存要求较高\n- 官方自带模板审美偏工具化\n- 需自行配置 API Key 与模型服务\n\n## 常见问题（FAQ）\n\n**Pixelle-Video 是什么？**\n\nPixelle-Video 是阿里巴巴 AIDC-AI 开源的 AI 全自动短视频引擎（Apache-2.0），输入主题即可自动完成文案、配图/视频、语音合成与一键成片。\n\n**收费吗？**\n\n完全开源免费（Apache-2.0），可自托管与企业使用，无付费版。\n\n**支持哪些模型？**\n\n通过配置接入 ComfyUI、RunningHub、DashScope、OpenAI、ARK、Kling 等第三方图像/视频/语音模型。\n\n\n## 最终结论\n\nPixelle-Video 是AI视频领域的一款 AI 工具，其核心优势在于完全开源免费（Apache-2.0），可商用。\n此外，全链路自动化，零剪辑门槛。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-07-02",
+  "published_date": "2026-07-02",
+  "subcategory": "ai-video-generation",
+  "verified_url": "https://github.com/AIDC-AI/Pixelle-Video",
+  "verified_publisher": "阿里巴巴 AIDC-AI",
+  "verified_what": "阿里巴巴 AIDC-AI 开源的 AI 全自动短视频生成引擎（Apache-2.0），输入主题即可自动完成文案、配图/视频、语音合成与一键成片。",
+  "verified_price": "开源免费（Apache-2.0），自托管；无付费版。",
+  "verified_platform": "Web（Streamlit 界面）, Desktop（自托管）, API, Docker",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "主题生成视频：自动完成文案、配图/视频、语音解说、BGM 与一键合成",
+    "文生视频 / 图生视频",
+    "多模型接入：ComfyUI、RunningHub、DashScope、OpenAI、Kling 等",
+    "本地 / 云端双模式部署，含 Windows 一键包与 Docker",
+    "批量生成与历史记录",
+    "自带模板与 BGM，支持 API"
+  ],
+  "verified_description": "Pixelle-Video 是阿里巴巴 AIDC-AI 开源的 AI 全自动短视频生成引擎（Apache-2.0），输入主题即可自动完成文案、配图/视频、语音合成与一键成片，支持本地与云端部署。",
+  "content_flags": "原 content 将开源免费项目虚构为“免费版/专业版/企业版”付费套餐并标注 $19/月起，且声称“不支持中文界面”（项目提供中文 README 与中文 Prompt），属严重幻觉与过时信息。",
+  "price_verified": true,
+  "verified_rating": "⭐4.6",
+  "rating_source": "编辑评分（综合 GitHub 开源热度）",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全开源免费（Apache-2.0），可商用",
+    "全链路自动化，零剪辑门槛",
+    "灵活接入多种第三方模型，不绑定单一家",
+    "部署友好（Windows 包、Docker、云端）",
+    "社区活跃（GitHub 高星标）"
+  ],
+  "verified_cons": [
+    "本身不生成内容，成片质量取决于接入的第三方模型",
+    "本地生图/生视频对显卡显存要求较高",
+    "官方自带模板审美偏工具化",
+    "需自行配置 API Key 与模型服务"
+  ],
+  "verified_faq": [
+    {
+      "q": "Pixelle-Video 是什么？",
+      "a": "Pixelle-Video 是阿里巴巴 AIDC-AI 开源的 AI 全自动短视频引擎（Apache-2.0），输入主题即可自动完成文案、配图/视频、语音合成与一键成片。"
+    },
+    {
+      "q": "收费吗？",
+      "a": "完全开源免费（Apache-2.0），可自托管与企业使用，无付费版。"
+    },
+    {
+      "q": "支持哪些模型？",
+      "a": "通过配置接入 ComfyUI、RunningHub、DashScope、OpenAI、ARK、Kling 等第三方图像/视频/语音模型。"
+    }
+  ],
+  "verified_tags": [
+    {
+      "text": "AI视频"
+    },
+    {
+      "text": "文生视频"
+    },
+    {
+      "text": "图生视频"
+    },
+    {
+      "text": "开源"
+    }
+  ],
+  "verified_category": "AI视频",
+  "source_urls": [
+    "https://github.com/AIDC-AI/Pixelle-Video",
+    "http://deepseek.club/topic/2551",
+    "http://bobcozzi.com/AIDC-AI/Pixelle-Video"
+  ],
+  "verify_notes": "原价格“付费版$19/月起”为虚构；类别 AI视频 正确。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "heygen",
+      "synthesia",
+      "sora"
+    ],
+    "verdict": "Pixelle-Video 与 HeyGen、Synthesia、Sora 同属AI视频赛道：Pixelle-Video 的 主题生成视频：自动完成文案、配图/视频、语音解说、BGM 与一键合成 是亮点，价格 免费开源（Apache-2.0）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

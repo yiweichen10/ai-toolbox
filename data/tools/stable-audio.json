@@ -1,0 +1,98 @@
+{
+  "name": "Stable Audio",
+  "slug": "stable-audio",
+  "positioning": "Stable Audio是什么？Stability AI音乐生成好用吗",
+  "auto_positioning": false,
+  "emoji": "🎵",
+  "color": "#6E56CF",
+  "description": "Stable Audio 是 Stability AI 推出的 AI 音乐与音效生成工具，用自然语言描述即可生成最长约 6 分钟、44.1kHz 立体声的高清音频。它同时支持音乐、音效与声音设计，并提供对内容创作者友好的商用授权。",
+  "category": "AI音频",
+  "tags": [
+    {
+      "text": "音乐生成"
+    },
+    {
+      "text": "音效"
+    },
+    {
+      "text": "商用授权"
+    },
+    {
+      "text": "免费可用",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://stableaudio.com",
+  "price": "免费版可用；付费 Pro 约 $11.99/月（以官网实时价格为准）",
+  "platform": "Web",
+  "pros": [
+    "文本描述即可生成，几乎零门槛",
+    "音质达 CD 级（44.1kHz 立体声），适合专业后期",
+    "商用授权清晰，对视频/游戏/播客创作者友好",
+    "既支持音乐，也支持音效与声音设计，不只做歌曲",
+    "生成速度快，多数情况几十秒出片"
+  ],
+  "cons": [
+    "免费版额度与时长有限，且不能商用",
+    "相比 Suno/Udio，不擅长生成带人声的完整歌曲",
+    "重度使用额度用尽需付费，成本需注意"
+  ],
+  "features": [
+    "文本生成音乐与音效（Text-to-Audio）",
+    "音频转音频，做风格迁移与变体（Audio-to-Audio）",
+    "人声输入转音乐/音效（第一版 Beta）",
+    "最长约 6 分钟、44.1kHz 立体声输出",
+    "商用授权友好，可在商业项目使用",
+    "多种流派、乐器、情绪与节奏控制"
+  ],
+  "related": [
+    "suno",
+    "udio",
+    "elevenlabs"
+  ],
+  "content": "## Stable Audio是什么？\nStable Audio 是 Stability AI（也就是推出 Stable Diffusion 的那家公司）推出的 AI 音乐与音效生成工具。它的思路很直接：你用自然语言描述想要的音乐或音效——比如“舒缓的 lo-fi 嘻哈、90 BPM、带钢琴和黑胶噪点”——模型就能在几十秒内生成一段可以听、可以下载、还能商用的音频。和 Suno、Udio 更偏向“生成带人声的完整歌曲”不同，Stable Audio 一开始的定位就是“音乐 + 音效 + 声音设计”的创作素材库，对做视频配乐、游戏音效、播客片头的人来说很实用。根据官网说明，现在它能生成最长 6 分钟、44.1kHz 立体声的高清音频，并允许在你自己的商业项目里使用。\n\n## 核心功能\n1. 文本生成音频（Text-to-Audio）：输入风格、乐器、情绪、节奏等描述，直接出音乐或音效，门槛极低。\n2. 音频转音频（Audio-to-Audio）：把一段已有的音频和文字一起喂进去，做风格迁移和变体，适合二次创作。\n3. 人声输入（Beta）：可以上传人声，让模型把它转成音乐或音效，目前是第一版测试功能。\n4. 商用授权友好：付费方案生成的音频可在视频、游戏、播客等商业项目里使用，省去版权顾虑。\n5. CD 级音质输出：44.1kHz 立体声，接近专业录音室标准，导出的素材能直接进后期工程。\n\n## 版本/套餐对比\n| 方案 | 每月生成额度 | 单次最长 | 商用 | 价格 |\n| --- | --- | --- | --- | --- |\n| 免费版 | 约 20 次 | 45 秒 | 不支持 | 免费 |\n| Pro 付费版 | 约 500 次 | 90 秒（官网现称最长 6 分钟） | 支持 | 约 $11.99/月（以官网为准） |\n\n注：免费版音频仅限个人非商业用途；具体额度与价格以官网实时页面为准。\n\n## 值不值得用？\n优点：上手快、出片快，文本描述即可生成；音质专业，适合做配乐和音效；商用授权清晰，对内容创作者友好。\n缺点：免费版时长和次数都有限，且不能商用；相比 Suno/Udio 在“带人声歌曲”上不是强项；额度用完需付费。\n结论：如果你要的是背景音乐、音效、声音素材，而不是一首带歌词的完整歌曲，Stable Audio 很值得一试，尤其是配合付费商用授权做项目时性价比不错。\n\n## 使用建议\n- 描述越具体越好：把流派、乐器、情绪、BPM、时长都写进提示词，效果明显更可控。\n- 先用免费版跑 20 次摸清模型脾气，确定常用风格后再考虑 Pro。\n- 生成后用 DAW（如 Audacity、Logic）做淡入淡出和拼接，能更自然地嵌进视频。\n- 商用前确认订阅的是支持商用的方案，避免版权风险。\n\n## 适合谁用？\n- 推荐：视频创作者、播客主、独立游戏开发者、需要批量配乐的营销团队。\n- 可考虑：音乐爱好者、想快速做演示小样的制作人。\n- 不推荐：主要想生成“带人声演唱的完整歌曲”的用户，建议优先看 Suno、Udio。",
+  "published": true,
+  "faq": [
+    {
+      "question": "Stable Audio 生成的内容可以商用吗？",
+      "answer": "付费 Pro 方案生成的音频可在视频、游戏、播客等商业项目中使用；免费版仅限个人非商业用途。具体授权以官网条款为准。"
+    },
+    {
+      "question": "Stable Audio 和 Suno、Udio 有什么区别？",
+      "answer": "Stable Audio 更偏音乐素材、音效和声音设计，支持最长约 6 分钟、44.1kHz 立体声输出；Suno/Udio 更擅长生成带人声的完整歌曲。按需求选择即可。"
+    },
+    {
+      "question": "免费版能用多少次？",
+      "answer": "公开资料称免费版每月约 20 次生成、单次最长 45 秒，且仅限非商业用途；准确额度以官网实时页面为准。"
+    },
+    {
+      "question": "生成一段音乐要多久？",
+      "answer": "多数情况下几十秒内即可生成并预览、下载，适合快速出素材。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Stable Audio",
+    "Stable Audio怎么样",
+    "Stable Audio免费版",
+    "Stable Audio使用教程",
+    "Stable Audio和哪个好"
+  ],
+  "source_urls": [
+    "https://stableaudio.com",
+    "https://www.songmeaning.io/tw/tw/ai-%E9%9F%B3%E6%A8%82%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7stability-ai-%E7%9A%84-stable-audio-%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-88425",
+    "https://la-studio.cc/en/blog/dtm-paid-plan-comparison-ai-music-generation"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-16"
+}

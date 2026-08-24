@@ -1,0 +1,108 @@
+{
+  "name": "Sora",
+  "slug": "sora",
+  "positioning": "AI视频工具推荐：文生视频、图生视频",
+  "auto_positioning": true,
+  "emoji": "🎬",
+  "color": "#10a37f",
+  "description": "OpenAI 的文本/图像生成视频模型（Sora）。已于 2026-04-26 停止 Web/App 服务，Sora API 将于 2026-09-24 停用，历史内容可导出。",
+  "category": "AI视频",
+  "tags": [
+    {
+      "text": "AI视频"
+    },
+    {
+      "text": "热门",
+      "type": "hot"
+    },
+    {
+      "text": "付费"
+    }
+  ],
+  "rating": "⭐ 4.9",
+  "visits": "15.6万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://openai.com/sora",
+  "price": "已停服（2026-04-26 起终止服务）",
+  "platform": "已停服（原 Web + iOS/Android App）",
+  "pros": [
+    "视频质量业界顶尖",
+    "物理模拟真实",
+    "最长60秒视频",
+    "多角度镜头切换",
+    "与ChatGPT集成"
+  ],
+  "cons": [
+    "需ChatGPT Plus订阅",
+    "生成等待时间长",
+    "热门时段排队",
+    "复杂场景偶有瑕疵"
+  ],
+  "features": [
+    "文生视频",
+    "图生视频",
+    "视频延长",
+    "多镜头切换",
+    "物理模拟",
+    "风格控制"
+  ],
+  "related": [
+    "runway",
+    "pika",
+    "midjourney"
+  ],
+  "content": "## Sora 是什么？\n\nSora 是 OpenAI 推出的文本/图像生成视频模型。需要特别说明的是：**Sora 的 Web 与 App 服务已于 2026 年 4 月 26 日停止运营，Sora API 也将在 2026 年 9 月 24 日停用**。目前该产品已不再接受新用户使用。\n\n在停服前，Sora 支持文生视频、图生视频，并以其出色的物理模拟能力著称——生成视频中人物动作、物体运动符合物理规律。它曾被认为是 AI 视频领域的标志性成果之一。\n\n## 如果你曾使用 Sora\n\n- 历史生成内容仍可在停服后的导出窗口内从 sora.chatgpt.com/sunset 导出，建议尽早操作。\n- 仍在寻找 AI 视频生成工具？可关注 Runway、Kling、Pika 等在售替代方案。\n\n## 核心能力（停服前）\n\n- **文生视频**：输入文字描述生成视频片段\n- **图生视频**：基于静态图片生成动态视频\n- **视频延长**：延长已有视频片段\n- **多镜头**：同一视频中切换镜头（均已随停服不可用）",
+  "published": true,
+  "faq": [
+    {
+      "question": "Sora可以生成多长的视频？",
+      "answer": "Sora目前可以生成最长1分钟的高清视频。根据OpenAI的演示，视频质量非常高，场景连贯性和物理准确性都很出色。不过目前Sora仍在逐步开放中，普通用户可能还需要等待。"
+    },
+    {
+      "question": "Sora怎么用？",
+      "answer": "Sora通过OpenAI平台使用，目前主要面向ChatGPT Plus和Pro用户。在ChatGPT中描述你想要的视频场景，Sora会生成对应的视频。也可能通过独立的Sora网站访问。"
+    },
+    {
+      "question": "Sora怎么申请使用？",
+      "answer": "Sora目前还在内测阶段，需要在 openai.com/sora 申请候补名单。申请通过后会自动收到邮件通知。付费ChatGPT Plus用户（20美元每月）目前尚不确定是否有Sora优先访问权限，具体以官方公告为准。"
+    },
+    {
+      "question": "Sora生成的视频最长多久？",
+      "answer": "目前Sora生成的视频最长支持20秒。输入文字描述场景，Sora会生成连贯的视频片段，支持复杂场景、多角色互动和物理效果模拟。实际可用时长取决于提示词的复杂程度。"
+    }
+  ],
+  "created_date": "2026-03-22",
+  "subcategory": "ai-video-generation",
+  "verified_url": "https://openai.com/sora",
+  "verified_publisher": "",
+  "verified_what": "",
+  "verified_price": "已停服，无在售订阅。此前随 ChatGPT Plus $20/月、Pro $200/月捆绑提供 Sora 访问（2026-04-26 起终止）。",
+  "verified_platform": "",
+  "verified_features": [],
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "conflict_note": "多家第三方评测站(aitoolfinder/toolradar/deevidreview)仍称 Sora 随 ChatGPT Plus/Pro 捆绑在售，与 OpenAI 官方停服公告冲突；以官方帮助中心为准。",
+  "source_urls": [
+    "https://help.openai.com/sora",
+    "https://openai.com/sora"
+  ],
+  "verify_notes": "",
+  "content_verified": true,
+  "discontinued": true,
+  "verified_description": "OpenAI 的文本/图像生成视频模型（Sora）。已于 2026-04-26 停止 Web/App 服务，Sora API 将于 2026-09-24 停用，历史内容可导出。",
+  "content_flags": "原长文称 Sora 为'AI视频领域的革命性产品，正在改变游戏规则'并描述在售能力(60秒视频等)，实为 2026-04-26 已停服。已重写。",
+  "price_verified": true,
+  "compare_section": {
+    "competitors": [
+      "invideo-ai",
+      "vidu-ai",
+      "kaiber"
+    ],
+    "verdict": "Sora 与 InVideo AI、Vidu AI、Kaiber 同属AI视频赛道。若优先性价比，InVideo AI（免费版 + Plus $25/月起·Max $60/月起）门槛更低；口碑方面，Sora（⭐ 4.9）领先；Sora 的优势在于OpenAI 的文本/图像生成视频模型（Sora）。已于 2026-04-26 停止 Web/App 服务，Sora A，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

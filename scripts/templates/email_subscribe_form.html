@@ -1,0 +1,47 @@
+<!--
+  老访客重量版 · 邮件订阅表单（2026-08-14 设计稿，未上线）
+
+  状态：待接入第三方邮件服务后启用。静态站无后端，订阅提交必须交给第三方服务：
+  方案A（免费起步）：Buttondown（免费前100订阅者）/ Mailchimp（免费500联系人）托管表单，直接改 action；
+  方案B（国内稳定）：阿里云邮件推送 DirectMail / 腾讯云 SES，需要域名验证 + 服务端接收表单（可用云函数/表单网关）。
+
+  启用步骤：
+  1. 注册服务商、建列表，拿到表单 action / API 地址；
+  2. 把下方 action 与隐藏字段替换成服务商要求的值；
+  3. 由 scripts/build.py 的后处理注入器（类似 inject_pwa）注入到文章页侧边栏 + 首页底部；
+  4. 部署后必须实测：真实邮箱订阅 → 收到确认邮件 → 列表里出现订阅者（闭环验收）。
+
+  设计原则：只留邮箱一个字段（低摩擦）；钩子写"每周精选实测"；暗色模式用 CSS 变量。
+-->
+<div class="email-subscribe" data-theme-safe>
+  <h3 class="email-subscribe__title">📬 每周精选 AI 工具实测</h3>
+  <p class="email-subscribe__desc">订阅即收：本周最值得用的 3 款工具 + 价格变化提醒，不刷屏、可随时退订。</p>
+  <form class="email-subscribe__form"
+        action="__PROVIDER_FORM_ACTION__"
+        method="post"
+        target="_blank">
+    <input type="email"
+           name="email"
+           class="email-subscribe__input"
+           placeholder="输入邮箱地址"
+           required />
+    <input type="hidden" name="__PROVIDER_HIDDEN_FIELD__" value="__PROVIDER_HIDDEN_VALUE__" />
+    <button type="submit" class="email-subscribe__btn">订阅</button>
+  </form>
+  <p class="email-subscribe__note">已订阅用户还可免费使用站内收藏与 PWA 安装，随时回访。</p>
+</div>
+
+<style>
+  .email-subscribe { background: var(--surface-2, #f6f8fb); border: 1px solid var(--border, #e5e7eb);
+    border-radius: 12px; padding: 16px; margin: 16px 0; }
+  .email-subscribe__title { margin: 0 0 6px; font-size: 16px; color: var(--text, #222); }
+  .email-subscribe__desc { margin: 0 0 12px; font-size: 13px; color: var(--text-2, #666); line-height: 1.5; }
+  .email-subscribe__form { display: flex; gap: 8px; flex-wrap: wrap; }
+  .email-subscribe__input { flex: 1; min-width: 180px; padding: 9px 12px; border: 1px solid #d0d5dd;
+    border-radius: 8px; font-size: 14px; background: var(--surface-1, #fff); color: var(--text, #222); }
+  .email-subscribe__btn { padding: 9px 18px; border: 0; border-radius: 8px; background: #4285F4;
+    color: #fff; font-size: 14px; cursor: pointer; }
+  .email-subscribe__note { margin: 10px 0 0; font-size: 12px; color: var(--text-3, #999); }
+  [data-theme="dark"] .email-subscribe { background: #1e293b; border-color: #334155; }
+  [data-theme="dark"] .email-subscribe__input { background: #0f172a; border-color: #334155; color: #e2e8f0; }
+</style>

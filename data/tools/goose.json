@@ -1,0 +1,98 @@
+{
+  "name": "Goose",
+  "slug": "goose",
+  "positioning": "Goose是什么？Block开源免费AI编程Agent能替代Claude Code吗",
+  "auto_positioning": false,
+  "emoji": "🦆",
+  "color": "#16A34A",
+  "description": "Goose 是 Block（原 Square）开源的本机 AI 编程 Agent，Apache 2.0 协议，用 Rust 编写，桌面端与 CLI 共享同一套 Agent 内核。它不只给代码建议，还能装依赖、执行命令、改文件、跑测试。最大特点是不绑模型：可接 Anthropic、OpenAI、Google、Bedrock、OpenRouter 等十几家供应商，也能通过 Ollama 跑本地模型做到零 API 花费。项目现由 Linux 基金会旗下 AAIF 治理。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "免费可用",
+      "type": "free"
+    },
+    {
+      "text": "开源"
+    },
+    {
+      "text": "本地运行"
+    },
+    {
+      "text": "多模型"
+    }
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://block.github.io/goose/",
+  "price": "免费开源（Apache 2.0），无订阅无席位费；实际成本仅为你自选模型供应商的 API 用量，改用 Ollama 等本地模型可做到零 API 支出",
+  "platform": "macOS / Linux / Windows（桌面应用 + CLI + 可嵌入 API）",
+  "pros": [
+    "Apache 2.0 完全免费，无订阅、无席位费、无厂商给你定配额",
+    "真正的模型中立：十几家供应商任选，Ollama 本地模型可零成本运行",
+    "Recipes 把工作流写成可参数化的 YAML，配合内置调度器能无人值守跑，还能进 CI/CD",
+    "lead/worker 双模型配置：规划用强模型、执行用便宜模型，是实打实的成本控制",
+    "桌面端与 CLI 共用一套内核，并通过 ACP 接入 VS Code、Cursor、JetBrains 等编辑器"
+  ],
+  "cons": [
+    "输出质量完全取决于你选的模型，官方文档也承认它最依赖强工具调用能力，配弱模型体验会明显下滑",
+    "它不是编辑器，没有可比 Cursor 的内联 diff 审阅界面，仍需自备 IDE",
+    "自带 API Key 意味着 token 账单和风险边界都在你身上，Agentic 循环烧钱较快"
+  ],
+  "features": [
+    "自主执行：给一个任务就能写代码、跑代码、看报错、自己改，直到收敛",
+    "Recipes：参数化 YAML 工作流，支持子配方，可分享、可被调度器无人值守执行",
+    "Subagents：并行拉起独立子代理处理可拆分任务",
+    "MCP 生态：70+ 官方扩展，兼容 MCP 服务器，可接数据库、Figma、VS Code 等外部工具",
+    "多模型与本地推理：15+ 供应商，含 Ollama / LM Studio 等本地方案，数据不出机器",
+    "安全控制：提示注入检测、工具权限控制、沙箱模式与对抗式审阅者"
+  ],
+  "related": [
+    "claude-code",
+    "codex-cli",
+    "cline"
+  ],
+  "content": "## Goose是什么？\n\nGoose 是 Block（就是 Square 和 Cash App 背后那家公司）开源的 AI 编程 Agent，Apache 2.0 协议，主体用 Rust 写，桌面端那层是 TypeScript。它的定位不是「代码助理」，而是「本机工程代理」——不只告诉你该怎么做，而是自己动手：装依赖、执行命令、编辑文件、跑测试并分析结果，把一个工程任务从开始推到交付。\n\n它最被拿来说的一点是免费。Claude Code 这类工具月费在 $20 到 $200 区间，2026 年 8 月 VentureBeat 专门写过一篇，讲 Goose 作为免费替代品正被开发者追捧：本地运行、无订阅、不依赖云端、也没有每几小时重置一次的速率限制。另一件值得注意的事是治理——项目现在归 Linux 基金会旗下的 AAIF（Agentic AI Foundation）管，Anthropic、Block 和 OpenAI 都是创始贡献方，路线图不由单一厂商说了算。GitHub 星数在 2026 年中已过 4.8 万。\n\n## 核心功能\n\n1. 自主执行闭环。给任务、走开，它会写代码、运行、发现报错、自己修，而不是把建议丢回给你。\n2. Recipes。这是它比较独特的一块：把重复工作写成参数化的 YAML 工作流文件，支持子配方，可以分享给团队、可以被内置调度器无人值守执行，也能塞进 CI/CD。多数开源编程 Agent 没有这层持久化能力。\n3. Subagents。可以并行拉起彼此独立的子代理，把能拆的任务同时推。\n4. 模型完全自选。十几家供应商——Anthropic、OpenAI、Google、Azure、Bedrock、OpenRouter 都行；也支持 Ollama、LM Studio 这类本地推理，数据一步不出机器。还能配 lead/worker 双模型：规划用贵的，执行用便宜的。\n5. MCP 扩展与安全控制。70+ 扩展、兼容 MCP 服务器，能接数据库、Figma、VS Code；同时内置提示注入检测、工具权限控制、沙箱模式和对抗式审阅者。\n\n## 版本/套餐对比\n\nGoose 没有套餐可比——Apache 2.0 开源，只有一个版本，桌面应用、CLI、可嵌入 API、全部扩展都在里面，不限用量，也没有企业版或 SLA。你真正要付的是模型钱：自带 API Key，按供应商标价直接结算；换成 Ollama 跑本地模型则 API 支出为零，代价是能力打折。安装很快：macOS 用 `brew install --cask block-goose` 或 `brew install block-goose-cli`，Linux / WSL 走官方 curl 一行脚本，Windows 下载 Release 包，装完 `goose configure` 走一遍向导选模型即可。\n\n## 值不值得用？\n\n值得，但要清楚它换来的是什么。你拿到的是控制权：不绑模型、不绑编辑器、不绑供应商，Recipes 还能把团队工作流沉淀成可执行的文件。这在开源阵营里属于第一梯队，而且 Block 内部上万名员工在用、又交给了 Linux 基金会，不像那种下个季度就没人维护的项目。\n\n你放弃的是「开箱即用的顺滑」。官方文档自己都承认 Goose 高度依赖模型的工具调用能力，配弱模型体验会明显下滑；它也不是编辑器，没有 Cursor 那种内联 diff 审阅面板；早期 Hacker News 上的反馈里有人提到过意外改动文件、部分扩展不可用、文档不清楚等问题；2026 年 4 月的仓库与文档迁移也带来过一段混乱。另外，自带 Key 意味着 Agentic 循环的 token 账单和「Agent 有 shell 权限」的风险边界都归你。\n\n## 使用建议\n\n1. 先用 Ollama 跑本地模型摸清操作习惯，零成本熟悉它的执行边界，再切云端模型做真活。\n2. 一定要配 lead/worker：规划走强模型，执行走便宜模型，这一步对长任务的账单影响很直观。\n3. 把重复劳动尽早写成 Recipe。一次投入，后面靠调度器无人值守跑，这才是 Goose 真正的复利点。\n4. 认真配权限和沙箱。它能执行真实命令，别在重要仓库里裸奔。\n5. 想留在编辑器里的话，走 ACP 接进 VS Code / Cursor / JetBrains，别硬逼自己换工作方式。\n\n## 适合谁用？\n\n推荐：已经握有模型 API Key、习惯命令行，且想摆脱订阅与厂商配额的开发者和小团队，尤其是需要把工作流固化成可复用文件的团队。\n可考虑：对隐私或成本敏感、打算配本地模型跑气隙环境的用户；以及正在为 $100-200/月的编程工具账单纠结的重度用户。\n不推荐：完全的编程新手（建议先从 Cursor 之类图形化工具入门）；需要 SLA、SSO 与厂商担责的采购导向型企业；以及只想要一个开箱最准、不愿折腾配置的用户。",
+  "published": false,
+  "faq": [
+    {
+      "question": "Goose 真的完全免费吗？",
+      "answer": "软件本身是的。Goose 采用 Apache 2.0 开源协议，没有付费档位、没有订阅和席位费。你唯一的支出是所选模型供应商的 API 用量；如果通过 Ollama 等方案跑本地模型，API 支出可以是零。"
+    },
+    {
+      "question": "Goose 能替代 Claude Code 吗？",
+      "answer": "能覆盖大部分场景但不是 1:1 替代。Goose 在免费、模型中立、本地运行和 Recipes 工作流上占优；Claude Code 在与 Anthropic 模型的深度适配和开箱即用的顺滑度上更强。官方文档也提到 Goose 高度依赖工具调用能力，配 Claude 系模型体验最好。"
+    },
+    {
+      "question": "Goose 支持哪些模型？可以本地跑吗？",
+      "answer": "支持十几家供应商，包括 Anthropic、OpenAI、Google、Azure、Bedrock、OpenRouter 等；同时支持 Ollama、LM Studio 等本地推理方案，代码和提示词不出本机。还可以配置 lead/worker 双模型来控制成本。"
+    },
+    {
+      "question": "Recipes 是什么？有什么用？",
+      "answer": "Recipes 是可复用的 YAML 工作流定义，能打包任务目标、所需扩展、结构化输入和子配方，相当于给 Agent 存的宏。它可以在团队间分享，也能被内置调度器无人值守执行或接入 CI/CD。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Goose",
+    "Goose怎么样",
+    "Goose免费吗",
+    "Goose替代Claude Code",
+    "Block Goose使用教程"
+  ],
+  "source_urls": [
+    "https://github.com/block/goose",
+    "https://block.github.io/goose",
+    "https://rywalker.com/research/goose",
+    "https://aiforautomation.io/news/2026-03-27-goose-33k-stars-free-claude-code-alternative-any-llm"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

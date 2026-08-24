@@ -1,0 +1,150 @@
+{
+  "name": "PixVerse AI",
+  "slug": "pixverse",
+  "emoji": "🎬",
+  "color": "#6C5CE7",
+  "description": "PixVerse 是专注 AI 视频生成的研究与产品公司，提供文生/图生视频、对话式 Agent、口型同步、多镜头与角色一致性，并面向企业提供视频基础模型与 API。",
+  "category": "AI视频",
+  "tags": [
+    "文生视频",
+    "图生视频",
+    "社交媒体创作"
+  ],
+  "rating": "⭐4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://pixverse.ai",
+  "price": "免费版 + Standard $10/月、Pro $30/月、Premium $60/月",
+  "platform": "Web（app.pixverse.ai）、iOS/Android 移动端、API/CLI",
+  "pros": [
+    "图片转动态效果佳",
+    "支持文生/图生视频，创作灵活",
+    "操作简单，上手容易",
+    "适合社交媒体创作者",
+    "生成速度快"
+  ],
+  "cons": [
+    "免费版功能及时长有限制",
+    "部分生成结果需手动调整",
+    "同类竞争工具较多"
+  ],
+  "features": [
+    "文本/图片生成视频（Text & Image to Video）",
+    "对话式 Agent 创作：用自然语言把创意转化为视频",
+    "口型同步与音频（Lip Sync & Audio）",
+    "多镜头生成与跨镜头角色一致性（Multi-shot / Character reference）",
+    "企业级视频基础模型与 API"
+  ],
+  "related": [
+    "runway",
+    "pika",
+    "kling-3-0",
+    "luma-dream-machine"
+  ],
+  "faq": [
+    {
+      "q": "PixVerse AI 和 PixVerse 有什么区别？",
+      "a": "PixVerse AI 即 PixVerse 的 AI 视频产品；名称无实质分裂，均为同一产品。"
+    },
+    {
+      "q": "PixVerse 价格是多少？",
+      "a": "Basic 免费；Standard $10/月、Pro $30/月、Premium $60/月（均为月付价），另有 Ultra 与团队/企业方案。"
+    },
+    {
+      "q": "免费版可以使用哪些功能？",
+      "a": "免费版提供有限积分的视频生成，支持文生视频与图生视频，但输出带水印、分辨率较低。"
+    },
+    {
+      "q": "支持哪些输入格式？",
+      "a": "支持文本提示词与图片上传（JPEG、PNG 等），生成 MP4 视频。"
+    }
+  ],
+  "seo_keywords": [
+    "PixVerse AI",
+    "PixVerse AI怎么样",
+    "PixVerse AI免费版",
+    "PixVerse AI使用教程",
+    "PixVerse AI和哪个好"
+  ],
+  "content": "## PixVerse AI 是什么？\n\nPixVerse 是一家专注 AI 视频生成的研究与产品公司，目标是把高质量视频模型的生成能力，做成普通创作者和企业都能直接用的工具。它支持文本生视频、图片生视频，并配套对话式 Agent、口型同步、多镜头与角色一致性等能力；面向企业，还提供视频基础模型与 API，可以把生成能力接进自有系统。\n\n## 核心功能\n\n最直接的入口是文本/图片生成视频（Text & Image to Video）：给一句提示词或一张参考图，就能得到一段短片。更进一步，PixVerse 提供对话式 Agent 创作——你用自然语言描述想法，Agent 帮你把创意一步步转成视频，降低写提示词的门槛，让不会写复杂 prompt 的人也能出片。Lip Sync & Audio 让画中人物对口型、配上声音；Multi-shot / Character reference 则保证跨多个镜头时角色外观一致，不至于上一秒和下一秒\"换了一张脸\"，这对做连续叙事很关键。\n\n对企业用户，PixVerse 提供企业级视频基础模型与 API（含命令行 CLI），可以把视频生成嵌进自有生产流水线，按批次、按比例、按时长从终端批量出片。官方也强调其在生成质量和成本效率上的平衡，适合需要规模化产出的营销和创意团队，而不只是玩票。\n\n## 价格与平台\n\n使用渠道上，PixVerse 覆盖 Web（app.pixverse.ai）、iOS/Android 移动端，以及 API/CLI。价格方面，免费版可用；付费有 Standard $10/月、Pro $30/月、Premium $60/月 等档位（来源为官网联盟计划博客）。无论你想做一条酷炫的社媒短片，还是把视频生成接进产品里，PixVerse 都提供了从玩到用的完整路径。\n\n从体验上看，PixVerse 的门槛不算高：手机上就能出片，网页端功能更全，企业则走 API 做规模化生产。它和纯提示词类工具的不同在于，提供了 Agent、模板、Marketing Hub 等更\"产品化\"的入口，让不懂参数的人也能完成一条能用的广告短片，而懂行的人又能下钻到 CLI 和参数化调用。总体而言，它适合从玩票到生产的连续需求，不必上了规模就换工具；对想快速试水 AI 视频、又不愿被技术细节劝退的人，是个顺手的起点。\n\n## 最终结论\n\n从工作流角度，PixVerse 把\"写提示词\"的门槛降了下来：Agent 和模板让不懂参数的人也能出片，CLI 又给工程化留了口子。但它再顺手，也替代不了你对画面审美和叙事的判断。建议先用模板跑通一条片，再逐步加参考图和控制参数；把 PixVerse 当制作管线的一环，而非从灵感到成片的唯一黑盒。\n",
+  "published": false,
+  "created_date": "2026-04-08",
+  "data_quality": {
+    "last_content_updated": "2026-07-28"
+  },
+  "source_url": "https://pixverse.ai",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://pixverse.ai",
+  "verified_publisher": "PixVerse",
+  "verified_what": "专注 AI 视频生成的研究与产品公司，提供文生/图生视频、对话式 Agent、口型同步、多镜头与角色一致性，并面向企业提供视频基础模型与 API",
+  "verified_price": "Basic 免费（90 注册积分 + 60 每日刷新，带水印）；Standard $10/月；Pro $30/月；Premium $60/月；另有 Ultra $199/月、Team 及 Enterprise 定制（年付更便宜）",
+  "verified_platform": "Web（app.pixverse.ai）, iOS, Android, API",
+  "verified_features": [
+    "文本/图片生成视频（Text & Image to Video）",
+    "对话式 Agent 创作：用自然语言把创意转化为视频",
+    "口型同步与音频（Lip Sync & Audio）",
+    "多镜头生成与跨镜头角色一致性（Multi-shot / Character reference）",
+    "企业级视频基础模型与 API"
+  ],
+  "verified_description": "PixVerse 是专注 AI 视频生成的研究与产品公司，提供文生/图生视频、对话式 Agent、口型同步、多镜头与角色一致性，并面向企业提供视频基础模型与 API。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "编辑评分（非外部权威评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "图片转动态效果佳",
+    "支持文生/图生视频，创作灵活",
+    "操作简单，上手容易",
+    "适合社交媒体创作者",
+    "生成速度快"
+  ],
+  "verified_cons": [
+    "免费版功能及时长有限制",
+    "部分生成结果需手动调整",
+    "同类竞争工具较多"
+  ],
+  "verified_faq": [
+    {
+      "q": "PixVerse AI 和 PixVerse 有什么区别？",
+      "a": "PixVerse AI 即 PixVerse 的 AI 视频产品；名称无实质分裂，均为同一产品。"
+    },
+    {
+      "q": "PixVerse 价格是多少？",
+      "a": "Basic 免费；Standard $10/月、Pro $30/月、Premium $60/月（均为月付价），另有 Ultra 与团队/企业方案。"
+    },
+    {
+      "q": "免费版可以使用哪些功能？",
+      "a": "免费版提供有限积分的视频生成，支持文生视频与图生视频，但输出带水印、分辨率较低。"
+    },
+    {
+      "q": "支持哪些输入格式？",
+      "a": "支持文本提示词与图片上传（JPEG、PNG 等），生成 MP4 视频。"
+    }
+  ],
+  "verified_tags": [
+    "文生视频",
+    "图生视频",
+    "社交媒体创作"
+  ],
+  "verified_category": "AI视频",
+  "source_urls": [
+    "https://pixverse.ai",
+    "https://toolchase.com/tool/pixverse"
+  ],
+  "verify_notes": "基线定价（Standard $10/月、Pro $30/月、Premium $60/月）与官网一致；实际还有 Ultra $199/月与 Team 方案。",
+  "compare_section": {
+    "competitors": [
+      "heygen",
+      "synthesia",
+      "sora"
+    ],
+    "verdict": "PixVerse AI 与 HeyGen、Synthesia、Sora 同属AI视频赛道：PixVerse AI 的 文本/图片生成视频（Text & Image to Video） 是亮点，价格 免费版 + Standard $10/月、Pro $30/月、Premium $60/月；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

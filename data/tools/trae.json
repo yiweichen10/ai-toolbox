@@ -1,0 +1,131 @@
+{
+  "name": "Trae",
+  "slug": "trae",
+  "positioning": "免费AI编程IDE：SOLO模式+代码补全",
+  "emoji": "🤖",
+  "color": "#2563EB",
+  "description": "Trae 是字节跳动推出的 AI 原生 IDE 与编程助手，提供 IDE 与 SOLO 自主编程两种模式，支持代码补全、解释、重构、测试与多智能体协作，并面向团队提供企业版私有化部署。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "AI IDE",
+    "代码补全",
+    "字节跳动",
+    "Coding Agent",
+    "MCP"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "850万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://www.trae.ai/",
+  "price": "免费版 + 付费订阅（含企业版）",
+  "platform": "VS Code、JetBrains IDEs、Visual Studio",
+  "pros": [
+    "字节跳动技术背书，中文支持好",
+    "IDE 与 SOLO 双模式，兼顾控制感与自动化",
+    "支持多模型切换与插件化集成"
+  ],
+  "cons": [
+    "高级 Agent/企业能力依赖付费",
+    "深度使用需联网与账号"
+  ],
+  "features": [
+    "AI 代码补全与生成",
+    "代码解释、重构与单测生成",
+    "Builder / SOLO 自主 Coding Agent 模式",
+    "多智能体生态与自定义 Agent（MCP）",
+    "企业版：私有化/VPC 部署、知识库、安全合规（SOC 2）"
+  ],
+  "related": [
+    "cursor",
+    "github-copilot",
+    "replit-ai",
+    "claude-code"
+  ],
+  "faq": [
+    {
+      "q": "Trae 是字节跳动的产品吗？",
+      "a": "是，Trae 由字节跳动推出，官方域名 trae.ai 与 trae.cn 并存（国际版/国内版）。"
+    },
+    {
+      "q": "Trae 支持哪些平台？",
+      "a": "支持 macOS、Windows、Linux，以及 Web、移动端与 VS Code/JetBrains 插件。"
+    }
+  ],
+  "seo_keywords": [
+    "Trae",
+    "Trae AI编程工具",
+    "Trae vs Cursor",
+    "Trae免费版",
+    "Trae怎么样",
+    "字节跳动AI编程"
+  ],
+  "content": "# Trae是什么？\n\nTrae是字节跳动推出的AI编程助手，直接集成在IDE里用。你可能用过Copilot或者Cursor，Trae差不多是同类产品，但背靠字节的技术底子，在代码补全和中文支持这块做得比较顺手。\n\n简单说，它就是一个能帮你写代码、解释代码、修Bug的智能助手。2026年还推出了企业版，支持团队协作和私有化部署。\n\n---\n\n## 核心功能\n\n**1. 智能代码补全与生成**\n写代码时能实时给你补全建议，支持从单行片段到整个函数块的生成。实际用起来响应速度挺快的，延迟低，这点体验不错。\n\n**2. 代码解释与重构**\n遇到看不懂的代码可以直接选中让它解释，也能帮你重构代码、优化逻辑。对新手友好，也适合接手别人代码时快速理解。\n\n**3. Bug自动检测与修复**\n能帮你发现代码中的问题，并给出修复建议。日常开发中这个功能挺实用的，尤其是一些低级错误能提前catch。\n\n**4. 自然语言转代码**\n用自然语言描述需求，它能帮你生成对应代码。这个功能适合快速原型开发，或者写一些重复性的代码结构。\n\n**5. 团队协作与知识库**\n企业版支持团队共享知识库，成员之间可以复用prompt模板和代码规范。对团队协作有一定帮助。\n\n**6. 自定义Prompt模板**\n可以自己定义常用的prompt模板，标准化一些常见的代码生成任务。适合有固定开发流程的团队。\n\n---\n\n## 版本/套餐对比\n\n| 特性 | 免费版 | 专业版 | 企业版 |\n|------|--------|--------|--------|\n| 代码补全 | ✅ | ✅ | ✅ |\n| 代码解释与重构 | ✅ | ✅ | ✅ |\n| Bug检测与修复 | ✅ | ✅ | ✅ |\n| 自然语言转代码 | ✅ | ✅ | ✅ |\n| 自定义Prompt模板 | ❌ | ✅ | ✅ |\n| 团队知识库 | ❌ | ❌ | ✅ |\n| 私有化部署 | ❌ | ❌ | ✅ |\n| 价格 | 免费 | 付费 | 按需报价 |\n\n---\n\n## 值不值得用？\n\n**优点：**\n- 字节跳动技术背书，模型能力有保障\n- 对中文开发者友好，本土化体验不错\n- 代码补全速度快，延迟低\n- 支持主流编程语言\n- 免费版功能对个人开发者基本够用\n\n**缺点：**\n- 生态插件比Cursor少\n- 企业版价格相对较高\n- 部分高级功能需要专业版\n- 对中国大陆以外地区支持有限\n- 文档和社区资源还在建设中\n\n**总体结论：** 作为一款AI编程助手，Trae在基础功能上已经做得比较完善，免费版对个人开发者很友好。但如果你对插件生态有较高需求，或者需要更完善的社区支持，可能还需要观望一下它的后续发展。\n\n---\n\n## 使用建议\n\n1. **先从免费版开始**：个人开发者可以直接用免费版，功能基本够用，体验一下是否适合自己。\n2. **注意数据安全**：虽然Trae有企业版，但涉及敏感项目时还是要注意数据隐私，了解清楚数据处理方式。\n3. **结合其他工具使用**：目前生态插件较少，可以搭配其他工具一起使用，互补优势。\n4. **关注版本更新**：产品还在发展阶段，功能和价格可能会有调整，建议定期关注官方动态。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n- 中文开发者，追求本土化体验\n- 个人开发者，需要免费好用的代码助手\n- 国内团队，有协作和知识库需求\n\n**可考虑：**\n- 对插件生态有较高需求的用户\n- 海外开发者（目前支持有限）\n- 预算有限的小团队\n\n**不推荐：**\n- 需要完整生态插件的重度IDE用户\n- 对价格敏感的小团队（企业版价格较高）\n- 需要完善社区支持的用户\n\n## 常见问题（FAQ）\n\n**Trae 是字节跳动的产品吗？**\n\n是，Trae 由字节跳动推出，官方域名 trae.ai 与 trae.cn 并存（国际版/国内版）。\n\n**Trae 支持哪些平台？**\n\n支持 macOS、Windows、Linux，以及 Web、移动端与 VS Code/JetBrains 插件。",
+  "published": true,
+  "created_date": "2026-06-06",
+  "published_date": "2026-06-06",
+  "verified_url": "https://www.trae.ai/",
+  "verified_publisher": "字节跳动（ByteDance）",
+  "verified_what": "Trae 是字节跳动推出的 AI 原生 IDE 与 AI 编程助手，提供 IDE 模式与 SOLO（自主 Coding Agent）模式，支持代码补全、生成、解释、重构、测试与多智能体协作。",
+  "verified_price": "提供免费版与付费订阅（Pro/团队方案）；另有 TRAE Enterprise 面向企业（SaaS 或 VPC 部署）。具体价格以官网为准。",
+  "verified_platform": "macOS、Windows、Linux（.deb/.rpm）、Web、移动端、VS Code / JetBrains 插件",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "AI 代码补全与生成",
+    "代码解释、重构与单测生成",
+    "Builder / SOLO 自主 Coding Agent 模式",
+    "多智能体生态与自定义 Agent（MCP）",
+    "企业版：私有化/VPC 部署、知识库、安全合规（SOC 2）"
+  ],
+  "verified_description": "Trae 是字节跳动推出的 AI 原生 IDE 与编程助手，提供 IDE 与 SOLO 自主编程两种模式，支持代码补全、解释、重构、测试与多智能体协作，并面向团队提供企业版私有化部署。",
+  "price_verified": true,
+  "verified_pros": [
+    "字节跳动技术背书，中文支持好",
+    "IDE 与 SOLO 双模式，兼顾控制感与自动化",
+    "支持多模型切换与插件化集成"
+  ],
+  "verified_cons": [
+    "高级 Agent/企业能力依赖付费",
+    "深度使用需联网与账号"
+  ],
+  "verified_faq": [
+    {
+      "q": "Trae 是字节跳动的产品吗？",
+      "a": "是，Trae 由字节跳动推出，官方域名 trae.ai 与 trae.cn 并存（国际版/国内版）。"
+    },
+    {
+      "q": "Trae 支持哪些平台？",
+      "a": "支持 macOS、Windows、Linux，以及 Web、移动端与 VS Code/JetBrains 插件。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "AI IDE",
+    "代码补全",
+    "字节跳动",
+    "Coding Agent",
+    "MCP"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://www.trae.ai/",
+    "https://www.trae.ai/enterprise",
+    "https://www.trae.cn/"
+  ],
+  "verify_notes": "信息准确；已确认推出企业版（TRAE Enterprise）。",
+  "content_verified": true,
+  "url_previous": "https://www.trae.ai",
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Trae 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Trae 的 AI 代码补全与生成 是亮点，价格 免费版 + 付费订阅（含企业版）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

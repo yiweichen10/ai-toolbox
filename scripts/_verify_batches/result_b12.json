@@ -1,0 +1,66 @@
+{
+  "batch_id": "b12",
+  "category": "AI智能体",
+  "tools": [
+    {
+      "slug": "termi-protocol",
+      "name": "Termi Protocol",
+      "url_current": "https://termi.com",
+      "url_ok": false,
+      "url_correct": "https://termiprotocol.com",
+      "hallucination": true,
+      "hallucination_fields": ["price", "description", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "termi.com 实际是墨西哥 POS 支付终端公司（Terminal punto de venta），与 AI 无关，URL 错误。真实 Termi Protocol 是本地优先的 3D AI 编码代理可视化桌面应用（官网 termiprotocol.com，来源 aat.ee/everydev.ai）。存储描述将其虚构为“去中心化 AI 推理协议、主网 2000+ 模型、以太坊/Solana 集成”，属张冠李戴+编造；定价“按 Token $0.01/1000”亦为虚构，真实为一次性终身通行证约 $6.99（Founder Backer）。"
+    },
+    {
+      "slug": "persona-js",
+      "name": "Persona.js",
+      "url_current": "https://persona.js.org",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "persona.js.org 是 Persona.js 的 js.org 官方子域名（跳转至官网 persona-chat.dev），产品真实：Runtype Labs 开源 Vanilla JS AI 聊天 UI 组件库（MIT 免费），描述与官网一致（来源 persona-chat.dev/toolworthy.ai）。但“企业版 $299/月”未在官网证实——Persona.js 为开源免费库，付费企业版未确认，定价存疑，故整体标 low 置信。"
+    },
+    {
+      "slug": "abot-world",
+      "name": "Abot-World",
+      "url_current": "https://abot.world",
+      "url_ok": false,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "description", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "abot.world 为停放/跳转域名（“Click here to enter”），非产品官网。存储描述的“多模态 AI 代理协作平台、实时协作白板、自适应学习引擎、SOC 2 认证”在公开网络无对应产品。真实世界中“ABot-World”仅指高德(Gaode)的具身智能物理世界模型（机器人仿真引擎，来源 ifnews/qq.com），与描述完全不符，属张冠李戴+编造；定价“专业版 $19/月”亦为虚构。该 SaaS 产品似不存在，无法给出正确官网。"
+    },
+    {
+      "slug": "runway-agent",
+      "name": "Runway Agent",
+      "url_current": "https://runwayml.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "runwayml.com 是 Runway 真实官网；Runway Agent 确为 2026-05-13 发布的对话式 AI 视频创作 Agent，定价（$15/$35/$95 档）与官网一致（来源 runwayml.com/news/introducing-runway-agent、ponpon.ai）。但 content 称其“底层自动选用 Gen-4.5、Seedance 2.0、Kling、Veo 等最优模型”为编造——Runway Agent 仅使用 Runway 自有模型（Gen-4.5/GWM-1），Seedance/Kling/Veo 系竞品模型不会被调用（来源 ponpon.ai）。"
+    },
+    {
+      "slug": "pulse",
+      "name": "Pulse",
+      "url_current": "https://pulse.ai",
+      "url_ok": false,
+      "url_correct": "https://pulsehq.tech",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "pulse.ai 为停放/出售域名（“privately owned, not for sale”），非 Pulse 官网。真实 Pulse 是 2026-07-23 Product Hunt 发布的权限感知企业大脑（连接 Slack/邮件/文档/会议/25+ 工具，通过 MCP 内置于 Claude/Cursor/ChatGPT），描述准确，官网为 pulsehq.tech（来源 hunted.space/aipure.ai）。仅 URL 错误，内容与描述无误；定价“待确认”为诚实标注。"
+    }
+  ]
+}

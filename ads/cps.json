@@ -1,0 +1,277 @@
+{
+  "_说明": "CPS推广映射数据，供 loader.js 按品类注入'立即体验'卡。url 中的 {{VAR}} 为占位符，需在对应平台注册推广后替换为你的专属链接。loader.js 检测到 url 仍含 '{{' 会自动跳过该卡（避免展示无效链接）。填完链接并把 config.json 的 cps.enabled 改为 true 即上线。",
+  "_更新_2026-07-14": "撤销硅基流动（仅¥16代金券/人，非现金，价值过低）。原硅基流动5品类重排：AI绘画/AI视频/AI音频→腾讯云（混元CPS，均含对应AI产品），AI设计/AI搜索→阿里云（百炼/开放搜索）。主推腾讯云+阿里云。",
+  "images": {
+    "_comment": "CPS推广卡片官方推广图。腾讯用官方推广包(含Logo+文案)，阿里/百度留空走CSS品牌卡。图片放 ads/images/，loader fetch no-store 立即生效。",
+    "阿里云云大使": "",
+    "腾讯混元推广": "",
+    "百度文心合伙人": ""
+  },
+  "hooks": {
+    "_comment": "引流钩子（2026-08-12 新增）：卡片顶部福利条，优先用条目自己的 hook 字段，未配置则按渠道取这里。千问/百炼新用户免费额度按官方活动口径。",
+    "阿里云云大使": "🎁 新用户赠超 1 亿 Tokens 免费额度",
+    "腾讯混元推广": "🎁 4核4G服务器新客 38 元/年起",
+    "百度文心合伙人": ""
+  },
+  "logos": {
+    "_comment": "CPS推广卡片LOGO，建议透明底 PNG/SVG，60x60 以上。路径相对于 ads/。留空或不存在则 CSS 显示品牌首字母占位。",
+    "阿里云云大使": "",
+    "腾讯混元推广": "",
+    "百度文心合伙人": ""
+  },
+  "by_category": {
+    "AI对话": {
+      "network": "腾讯混元推广",
+      "brandText": "腾讯云",
+      "name": "腾讯云 Token Plan",
+      "cta": "查看优惠",
+      "headline": "腾讯云 Token Plan 低至 28 元/月，主流大模型极速调用",
+      "url": "https://cloud.tencent.com/act/cps/redirect?redirect=6544&cps_key=9cda63d2f7940ba9d8f5781432d1a468&from=console&cps_promotion_id=102964&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-chat&utm_content=tencent",
+      "desc": "对话/写作/多模态一站体验；新客 4核4G 服务器 38 元/年起"
+    },
+    "AI写作": {
+      "network": "百度文心合伙人",
+      "brandText": "百度智能云",
+      "name": "文心一言",
+      "cta": "免费试用",
+      "headline": "文心一言企业级大模型，AI 写作/文案助手",
+      "url": "https://cloud.baidu.com/campaign/ambassador-product/index.html?ambassadorId=1b4eb3e8cdec436e8d9ba7ff8bdbe3b6&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-writing&utm_content=baidu",
+      "desc": "注册即可体验，办公创作效率翻倍"
+    },
+    "AI绘画": {
+      "network": "腾讯混元推广",
+      "brandText": "腾讯云",
+      "name": "腾讯云 Token Plan",
+      "cta": "查看优惠",
+      "headline": "腾讯云 Token Plan 低至 28 元/月，文生图/图生图极速调用",
+      "url": "https://cloud.tencent.com/act/cps/redirect?redirect=6544&cps_key=9cda63d2f7940ba9d8f5781432d1a468&from=console&cps_promotion_id=102965&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-image&utm_content=tencent",
+      "desc": "图像创作 + 媒体能力一站调用；新客 4核4G 服务器 38 元/年起"
+    },
+    "AI视频": {
+      "network": "腾讯混元推广",
+      "brandText": "腾讯云",
+      "name": "腾讯云 Token Plan",
+      "cta": "查看优惠",
+      "headline": "腾讯云 Token Plan 低至 28 元/月，视频生成/媒体处理极速调用",
+      "url": "https://cloud.tencent.com/act/cps/redirect?redirect=6544&cps_key=9cda63d2f7940ba9d8f5781432d1a468&from=console&cps_promotion_id=102969&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-video&utm_content=tencent",
+      "desc": "视频生成与媒体处理一站调用；新客 4核4G 服务器 38 元/年起"
+    },
+    "AI编程": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "阿里云大模型",
+      "cta": "立即体验",
+      "headline": "阿里云百炼大模型 + 通义灵码智能编程",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-coding&utm_content=aliyun",
+      "desc": "新用户可试用，模型调用/API 一站式接入"
+    },
+    "AI开发": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "阿里云百炼",
+      "cta": "立即体验",
+      "headline": "阿里云百炼，模型部署与 Agent 开发",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-dev&utm_content=aliyun",
+      "desc": "新用户可试用，快速搭建企业级 AI 应用"
+    },
+    "AI智能体": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "阿里云 Agent",
+      "cta": "立即体验",
+      "headline": "阿里云 Agent 智能体开发平台",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-agent&utm_content=aliyun",
+      "desc": "Agent-C 类返佣高达 30%，新用户可试用"
+    },
+    "AI音频": {
+      "network": "腾讯混元推广",
+      "brandText": "腾讯云",
+      "name": "腾讯云 Token Plan",
+      "cta": "查看优惠",
+      "headline": "腾讯云 Token Plan 低至 28 元/月，语音合成/识别极速调用",
+      "url": "https://cloud.tencent.com/act/cps/redirect?redirect=6544&cps_key=9cda63d2f7940ba9d8f5781432d1a468&from=console&cps_promotion_id=102968&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-audio&utm_content=tencent",
+      "desc": "语音 API + 多模态模型一站调用；新客 4核4G 服务器 38 元/年起"
+    },
+    "AI设计": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "阿里云大模型",
+      "cta": "立即体验",
+      "headline": "阿里云通义万相，AI 设计与图像生成",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-design&utm_content=aliyun",
+      "desc": "新用户可试用，设计类 AI 模型一键调用"
+    },
+    "AI办公": {
+      "network": "百度文心合伙人",
+      "brandText": "百度智能云",
+      "name": "文心一言",
+      "cta": "免费试用",
+      "headline": "文心一言，AI 办公/文档智能助手",
+      "url": "https://cloud.baidu.com/campaign/ambassador-product/index.html?ambassadorId=1b4eb3e8cdec436e8d9ba7ff8bdbe3b6&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-office&utm_content=baidu",
+      "desc": "注册即可体验，报告/邮件/PPT 快速生成"
+    },
+    "AI效率": {
+      "network": "百度文心合伙人",
+      "brandText": "百度智能云",
+      "name": "文心一言",
+      "cta": "免费试用",
+      "headline": "文心一言效率工具，AI 帮你省时间",
+      "url": "https://cloud.baidu.com/campaign/ambassador-product/index.html?ambassadorId=1b4eb3e8cdec436e8d9ba7ff8bdbe3b6&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-productivity&utm_content=baidu",
+      "desc": "注册即可体验，总结/翻译/日程一键搞定"
+    },
+    "AI自动化": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "阿里云",
+      "cta": "立即体验",
+      "headline": "阿里云自动化与 Agent 云服务",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-automation&utm_content=aliyun",
+      "desc": "新用户可试用，企业流程自动化快速落地"
+    },
+    "AI搜索": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "阿里云",
+      "cta": "立即体验",
+      "headline": "阿里云智能开放搜索 OpenSearch",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-search&utm_content=aliyun",
+      "desc": "新用户可试用，构建企业级智能搜索"
+    },
+    "AI行业应用": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "阿里云",
+      "cta": "立即体验",
+      "headline": "阿里云行业大模型解决方案",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-industry&utm_content=aliyun",
+      "desc": "新用户可试用，覆盖金融/医疗/制造等多行业"
+    },
+    "AI翻译": {
+      "network": "百度文心合伙人",
+      "brandText": "百度智能云",
+      "name": "文心一言",
+      "cta": "免费试用",
+      "headline": "文心一言多语言翻译 AI",
+      "url": "https://cloud.baidu.com/campaign/ambassador-product/index.html?ambassadorId=1b4eb3e8cdec436e8d9ba7ff8bdbe3b6&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-translate&utm_content=baidu",
+      "desc": "注册即可体验，文档/对话/实时翻译"
+    }
+  },
+  "by_slug": {
+    "_comment": "工具级专属推广位（按 slug 覆盖品类卡），优先级高于 by_category。loader.js 在 tool 页先查 by_slug[slug]，命中即用，未命中回落 by_category。",
+    "workbuddy": {
+      "network": "腾讯混元推广",
+      "brandText": "腾讯云",
+      "name": "WorkBuddy 全场景 AI 办公工作台",
+      "cta": "免费体验",
+      "hook": "每天领 100 信用点 · HY3 混元模型免费",
+      "headline": "腾讯出品 AI Agent 办公工作台",
+      "url": "https://cloud.tencent.com/act/cps/redirect?redirect=6871&cps_key=9cda63d2f7940ba9d8f5781432d1a468&from=console&cps_promotion_id=102970&utm_source=aitoollab&utm_medium=cps&utm_campaign=workbuddy&utm_content=tencent",
+      "desc": "一句话启动任务，多 Agent 并行交付报告/表格/代码；打通腾讯文档、邮箱、会议、知识库。"
+    }
+  },
+  "by_news_category": {
+    "_comment": "资讯页 CPS 卡按快讯栏目匹配渠道（2026-08-12 新增）。loader.js 取当前页第一条快讯的栏目标签匹配；未命中回落到 default。改文案/链接后 fetch no-store 立即生效，无需重建。",
+    "模型发布": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "千问 AI 平台",
+      "cta": "免费领取",
+      "headline": "刚发布的模型想亲自上手？千问新用户赠 1 亿+ Tokens 免费额度",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=model-release&utm_content=aliyun",
+      "desc": "千问模型与技能一站调用，写代码/写作/绘图/Agent 都能用"
+    },
+    "论文研究": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "千问 AI 平台",
+      "cta": "免费领取",
+      "headline": "论文里的模型效果，亲自跑一遍才知道——新用户赠 1 亿+ Tokens",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=paper-research&utm_content=aliyun",
+      "desc": "千问模型与技能一站调用，复现论文结论、验证新思路一站搞定"
+    },
+    "产品发布": {
+      "network": "腾讯混元推广",
+      "brandText": "腾讯云",
+      "name": "腾讯云 Token Plan",
+      "cta": "查看优惠",
+      "headline": "新 AI 产品想试算力？腾讯云 Token Plan 低至 28 元/月",
+      "url": "https://cloud.tencent.com/act/cps/redirect?redirect=6544&cps_key=9cda63d2f7940ba9d8f5781432d1a468&from=console&cps_promotion_id=102967&utm_source=aitoollab&utm_medium=cps&utm_campaign=product-release&utm_content=tencent",
+      "desc": "多种主流模型极速调用，支持 OpenClaw/Hermes 等热门镜像；新客 4核4G 服务器 38 元/年起"
+    },
+    "行业动态": {
+      "network": "百度文心合伙人",
+      "brandText": "百度智能云",
+      "name": "文心一言",
+      "cta": "免费试用",
+      "headline": "大厂动作不断，文心一言企业级大模型跟上节奏",
+      "url": "https://cloud.baidu.com/campaign/ambassador-product/index.html?ambassadorId=1b4eb3e8cdec436e8d9ba7ff8bdbe3b6&utm_source=aitoollab&utm_medium=cps&utm_campaign=industry-news&utm_content=baidu",
+      "desc": "AI 写作/办公/翻译一站式，新用户注册即可免费试用"
+    },
+    "观点": {
+      "network": "腾讯混元推广",
+      "brandText": "腾讯云",
+      "name": "腾讯云 Token Plan",
+      "cta": "查看优惠",
+      "headline": "观点之外，算力价格也要看懂——Token Plan 低至 28 元/月",
+      "url": "https://cloud.tencent.com/act/cps/redirect?redirect=6544&cps_key=9cda63d2f7940ba9d8f5781432d1a468&from=console&cps_promotion_id=102966&utm_source=aitoollab&utm_medium=cps&utm_campaign=opinion&utm_content=tencent",
+      "desc": "多种主流模型极速调用，新客上云专属价 4核4G 服务器 38 元/年起"
+    }
+  },
+  "by_article_category": {
+    "_comment": "文章页 CPS 卡按文章分类匹配渠道（2026-08-12 新增）。loader.js 优先用 by_category（AI对话等工具品类直接复用），未命中再查这里，最后回落 default。",
+    "AI资讯": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "千问 AI 平台",
+      "cta": "免费领取",
+      "headline": "千问 AI 平台：模型与技能一站调用，新用户赠 1 亿+ Tokens",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-news&utm_content=aliyun",
+      "desc": "开源模型与本地 Agent 正热，新用户领取额度直接上手主流开源模型"
+    },
+    "AI行业动态": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "千问 AI 平台",
+      "cta": "免费领取",
+      "headline": "行业动态背后的模型能力，新用户赠 1 亿+ Tokens 免费上手",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-industry-news&utm_content=aliyun",
+      "desc": "千问模型与技能一站调用，跟上行业节奏从亲自体验开始"
+    },
+    "AI行业分析": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "千问 AI 平台",
+      "cta": "免费领取",
+      "headline": "深度分析之外，亲自跑一遍模型才有真判断——新用户赠 1 亿+ Tokens",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=ai-industry-analysis&utm_content=aliyun",
+      "desc": "千问模型与技能一站调用，验证分析结论一站搞定"
+    },
+    "行业趋势": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "千问 AI 平台",
+      "cta": "免费领取",
+      "headline": "趋势背后的开源模型，新用户赠 1 亿+ Tokens 提前布局",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=industry-trend&utm_content=aliyun",
+      "desc": "千问模型与技能一站调用，写代码/写作/绘图/Agent 都能用"
+    },
+    "数据洞察": {
+      "network": "阿里云云大使",
+      "brandText": "阿里云",
+      "name": "千问 AI 平台",
+      "cta": "免费领取",
+      "headline": "数据洞察背后是模型能力，新用户赠 1 亿+ Tokens 亲身验证",
+      "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=data-insight&utm_content=aliyun",
+      "desc": "千问模型与技能一站调用，用真实数据形成自己的判断"
+    }
+  },
+  "default": {
+    "network": "阿里云云大使",
+    "brandText": "阿里云",
+    "name": "千问 AI 平台",
+    "cta": "免费领取",
+    "headline": "千问 AI 平台：模型与技能，一站调用",
+    "url": "https://www.aliyun.com/benefit/client/cross?userCode=z9mrbzqf&utm_source=aitoollab&utm_medium=cps&utm_campaign=default&utm_content=aliyun",
+    "desc": "新用户赠超 1 亿 Tokens 免费额度，写代码/写作/绘图/Agent 都能用"
+  }
+}

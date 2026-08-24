@@ -1,0 +1,94 @@
+{
+  "name": "ChatGPT Voice",
+  "slug": "chatgpt-voice",
+  "positioning": "OpenAI 于 2026年8月9日为 ChatGPT 桌面应用上线的语音交互功能，基于全新 GPT-Live 全双工语音模型系列，可通过语音对话、控制 AI 智能体并在电脑上执行多步骤任务。",
+  "auto_positioning": false,
+  "emoji": "🎙️",
+  "color": "#10A37F",
+  "description": "ChatGPT Voice 是 OpenAI 为 ChatGPT 桌面应用上线的语音交互功能，底层基于当月推出的 GPT-Live 全双工语音模型系列。用户可用语音直接对话、控制 AI 智能体，并让其在电脑上执行多步骤任务（如创建代码线程、提交 PR、定位 Bug），同时支持 ChatGPT Work 与 Codex，可调用计算机操作能力访问网站与应用。",
+  "category": "AI音频",
+  "tags": [
+    "语音助手",
+    "全双工",
+    "ChatGPT",
+    "桌面端",
+    "GPT-Live"
+  ],
+  "rating": "⭐ 4.4",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "桌面端新上线"
+  },
+  "url": "https://chatgpt.com",
+  "price": "随 ChatGPT 订阅包含（Plus/Pro/Go 等）；免费用户可用 GPT-Live-1 mini",
+  "platform": [
+    "桌面端（macOS/Windows）",
+    "iOS",
+    "Android",
+    "Web"
+  ],
+  "pros": [
+    "全双工自然对话，可打断、可停顿，不再抢话",
+    "桌面端能语音控制 Agent 执行多步骤任务",
+    "支持 ChatGPT Work 与 Codex，可调用计算机操作能力",
+    "macOS 上通过 Appshots 读取屏幕内容（含 alt-text）",
+    "iOS 远程访问可在 Codex 中使用语音"
+  ],
+  "cons": [
+    "涉及付款、发消息、改权限等敏感操作仍需手动确认",
+    "暂不支持屏幕共享与视频共享"
+  ],
+  "features": [
+    "ChatGPT-Live 全双工语音模型系列",
+    "付费用户 GPT-Live-1，免费用户 GPT-Live-1 mini",
+    "语音控制 AI 智能体在电脑执行任务",
+    "支持 ChatGPT Work 与 Codex",
+    "macOS Appshots 读取屏幕内容",
+    "高敏感操作强制手动确认"
+  ],
+  "related": [
+    "chatgpt",
+    "elevenlabs",
+    "stepfun"
+  ],
+  "content": "## ChatGPT Voice 是什么？\nChatGPT Voice 是 OpenAI 于 2026 年 8 月 9 日为 ChatGPT 桌面应用上线的语音交互功能，底层基于当月早些时候推出的全新 GPT-Live 语音模型系列。它把 ChatGPT 从打字问答升级为动口指挥：你可以用自然语言直接对话、控制 AI 智能体，并让它在电脑上执行任务，比如创建代码线程、提交 Pull Request、定位 Bug 根本原因。简单说，语音不再是附属的输入方式，而是驱动 Agent 干活的入口。\n\n## 核心功能\n1. 全双工语音：真正能同时听和说，可以打断、可以停顿，不再因为短暂沉默被抢话，对话接近真人。\n2. 桌面端执行力：通过语音下达包含多个步骤的复杂指令，并在 AI 需要补充信息或确认时随时回应。\n3. 联动 Work 与 Codex：ChatGPT Voice 同时支持 ChatGPT Work 和 Codex，可调用计算机操作能力访问网站与应用。\n4. 屏幕理解：在 macOS 上借助 Appshots，可授权 ChatGPT 读取屏幕内容（含 alt-text），让语音指令更有的放矢。\n5. 移动远程：通过 iOS 应用的远程访问功能，也能在 Codex 中使用 ChatGPT Voice。\n\n## 版本/套餐对比\n付费用户（Pro/Plus/Go）默认使用完整的 GPT-Live-1 模型；免费用户可使用更轻量的 GPT-Live-1 mini。语音功能本身随 ChatGPT 订阅包含，无需额外付费。\n\n## 值不值得用？\n如果你本来就重度使用 ChatGPT，尤其在做开发或桌面办公，这次升级值得马上试。全双工解决了老版语音最恼人的抢话问题，桌面端的执行能力又让语音从聊天变成了办事。不过它目前仍是助手而非自动驾驶，敏感操作仍需你点头。\n\n## 使用建议\n1. 桌面端首次使用点输入框右侧语音图标并授权麦克风即可。\n2. 复杂任务用语音分步骤下指令，遇到付款、发消息、改权限等高风险操作，系统会强制让你手动确认，别指望它全自动。\n3. 想要更稳的推理，可在对话中让它调用前沿模型处理深度问题。\n\n## 适合谁用？（三档）\n- 重度用户：开发者用语音驱动 Codex 提交 PR、查 Bug，效率提升明显。\n- 中度用户：日常用 ChatGPT 写作、办公的人，用语音输入和追问更顺手。\n- 轻度用户：只想更自然地聊天、练口语的用户，免费版 GPT-Live-1 mini 已够用。",
+  "published": true,
+  "faq": [
+    {
+      "q": "ChatGPT Voice 和旧版语音有什么区别？",
+      "a": "核心变化是换成 ChatGPT-Live 全双工模型，可同时听和说、能打断停顿；桌面端还新增了控制 Agent 在电脑上执行多步骤任务的能力。"
+    },
+    {
+      "q": "免费用户能用吗？",
+      "a": "可以，免费用户使用更轻量的 GPT-Live-1 mini；Pro/Plus/Go 等付费用户可使用完整的 GPT-Live-1，语音功能本身随订阅包含。"
+    },
+    {
+      "q": "它能直接帮我操作电脑吗？",
+      "a": "桌面端可以调用计算机操作能力访问网站与应用、执行多步骤指令，但涉及付款、发消息、改权限等高风险操作会强制要求你手动确认。"
+    },
+    {
+      "q": "手机端能用语音控制 Codex 吗？",
+      "a": "可以，通过 iOS 应用的远程访问功能，就能在 Codex 中使用 ChatGPT Voice。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "ChatGPT Voice",
+    "ChatGPT 语音",
+    "GPT-Live",
+    "全双工语音",
+    "语音助手"
+  ],
+  "source_urls": [
+    "https://www.163.com/dy/article/L3SDSLPE0511B8LM.html",
+    "https://infosecu.technews.tw/2026/08/10/new-gpt-live-voice-mode/",
+    "https://news.aibase.com/zh/news/30207"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-23"
+}

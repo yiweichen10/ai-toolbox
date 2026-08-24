@@ -1,0 +1,80 @@
+{
+  "slug": "grass",
+  "name": "Grass",
+  "emoji": "🌱",
+  "color": "#22C55E",
+  "description": "Solana 上的数据 DePIN，用户共享闲置带宽抓取公开网页数据供 AI 训练，并用零知识证明保证数据可溯源。",
+  "price": "GRASS 代币总量 10 亿枚；共享带宽即可赚取代币，数据购买按量付费，具体以官网为准。",
+  "platform": "Web / Browser Extension",
+  "content": "## 是什么\nGrass 是 Solana 上的去中心化数据网络（DePIN），用户安装浏览器插件共享闲置带宽，抓取公开网页数据，为 AI 模型训练提供经授权、可溯源的数据集，用户据此赚取 GRASS 代币。\n\n## 核心特点\n- 零门槛参与：只需浏览器插件和闲置带宽，无需额外硬件。\n- 数据可溯源：用零知识证明验证抓取数据未被篡改，为 AI 买家提供可信来源。\n- 主权数据 Rollup：在 Solana 上构建数据账本，永久记录数据来源。\n- 商业化落地：年化收入约 3300 万美元，已交付超 7000 TB 网页数据。\n\n## 技术原理\n网络由节点、路由器、验证者和 ZK 处理器构成。节点贡献带宽抓取公开网页；路由器管理流量；验证者批量处理数据并生成 zk-SNARK 证明；数据账本把原始数据集与链上证明绑定，形成完整溯源链。\n\n## 价格与收费\nGRASS 代币总量 10 亿枚。用户通过贡献带宽赚取代币，也可质押 GRASS 参与网络并获奖励。AI 公司购买数据集按量付费，具体价格以官网为准。\n\n## 适用人群/场景\n适合想用闲置带宽赚取被动收益的普通用户，以及需要大规模、可溯源训练数据的 AI 实验室与企业。\n\n数据以官网为准。",
+  "faq": [
+    {
+      "q": "Grass 是什么？",
+      "a": "Grass 是 Solana 上的去中心化数据网络，用户共享闲置带宽抓取公开网页数据供 AI 训练，并赚取 GRASS 代币。"
+    },
+    {
+      "q": "如何参与 Grass？",
+      "a": "只需安装浏览器扩展并共享闲置带宽即可，无需额外硬件，是最容易上手的 DePIN 项目之一。"
+    },
+    {
+      "q": "GRASS 代币总量是多少？",
+      "a": "固定供应量为 10 亿枚，用于网络交易、质押以保障网络安全，以及参与治理。"
+    },
+    {
+      "q": "Grass 如何保证数据可溯源？",
+      "a": "验证者批量处理数据并生成零知识证明，把数据集与链上证明绑定，形成不可篡改的数据溯源记录。"
+    },
+    {
+      "q": "Grass 的团队与融资情况？",
+      "a": "由 Wynd Labs 团队开发，完成 350 万美元种子轮，由 Polychain Capital 与 Tribe Capital 领投。"
+    },
+    {
+      "q": "Grass 的商业化进展如何？",
+      "a": "年化收入约 3300 万美元，已交付超 7000 TB 网页数据，覆盖数百万节点与 190 多个国家。"
+    },
+    {
+      "q": "GRASS 代币有什么用途？",
+      "a": "用于支付数据访问、质押给路由器以赚取奖励，以及参与网络升级与合作的治理投票。"
+    }
+  ],
+  "features": [
+    "共享带宽赚取代币",
+    "零知识证明数据溯源",
+    "主权数据 Rollup",
+    "数百万节点网络"
+  ],
+  "pros": [
+    "零硬件成本、门槛极低",
+    "ZK 证明保证数据可信",
+    "已有真实收入与买家",
+    "用户掌握数据权益"
+  ],
+  "cons": [
+    "网络爬虫面临监管审查风险",
+    "节点增多导致单用户收益被摊薄",
+    "空投解锁带来抛压"
+  ],
+  "tags": [
+    "去中心化AI",
+    "数据DePIN",
+    "零知识证明",
+    "AI训练数据"
+  ],
+  "source_urls": [
+    "https://www.getgrass.io",
+    "https://coinmarketcap.com/cmc-ai/grass/what-is/",
+    "https://www.datawallet.com/crypto/best-depin-projects",
+    "https://www.gate.com/crypto-wiki/article/what-is-grass-a-comprehensive-guide-to-the-grass-token-20260122"
+  ],
+  "url": "https://www.getgrass.io",
+  "category": "去中心化AI",
+  "rating": "⭐ 4.1",
+  "visits": "暂无数据",
+  "published": true,
+  "content_verified": true,
+  "confidence": "high",
+  "last_verified": "2026-08-17",
+  "published_date": "2026-08-17",
+  "created_date": "2026-08-17",
+  "badge": null
+}

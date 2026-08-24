@@ -1,0 +1,126 @@
+{
+  "batch_id": "b29",
+  "category": "AI设计",
+  "tools": [
+    {
+      "slug": "wonder-ai",
+      "name": "Wonder AI",
+      "url_current": "https://wonderai.app",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网确认 Wonder AI 是 Codeway 出品的 AI 绘画/文生图应用（iOS/Android、40+ 艺术风格、AI Logo、AI Tattoo），与 description 一致。但 content 将其写成可写文案、做视频脚本、多语言、团队协作的创意工具，并称'2026年推出'——实为功能张冠李戴（该应用早已上线，纯属 AI 绘图，无文案/视频脚本能力）。tools_current 的 price（$19/月）未在官网公开页确认，疑为拼凑。"
+    },
+    {
+      "slug": "open-design",
+      "name": "open-design",
+      "url_current": "https://open-design.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 FAQ 明确：Open Design 免费、Apache-2.0、无订阅制（'there is no Open Design subscription'），故站内'专业版$19/月'为编造定价。content 称'2026年最新版本加入实时协作功能、团队成员可同时编辑同一项目'，但官网说明多人共享 daemon 仍在路线图（非已上线功能），疑似功能张冠李戴。description（nexu-io 开源/BYOK/Claude Design 替代品）准确。"
+    },
+    {
+      "slug": "meitu-design-ai",
+      "name": "美图设计室AI",
+      "url_current": "https://design.meitu.com/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "功能（AI海报、商品图背景替换、AI模特试穿、智能抠图、批量详情页）与官网一致。会员29元/月未在公开页面确认，建议人工复核定价。"
+    },
+    {
+      "slug": "uizard",
+      "name": "Uizard",
+      "url_current": "https://uizard.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网定价页：Uizard Pro 为 $12/月（年付），Business $39/月，无 $19 档；Autodesigner 当前为 2.0（NEW），无 3.0 版本（content 称'2026年推出3.0版本'系编造）；官网仅提供 Web 端、未提供 iOS/Android 客户端（platform 称'Web/iOS/Android'不准确）。核心功能（草图/文字/截图转设计、协作）与官网一致。"
+    },
+    {
+      "slug": "visily",
+      "name": "Visily",
+      "url_current": "https://visily.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网定价：Starter $0、Pro $11/编辑器/月（年付）、Business $29；站内写'付费版$12/月起'，与官网 $11 相差约$1，疑似轻微过期/取整，建议人工裁定。功能（截图/文本转UI、实时协作、Export to Code 代码导出）均与官网一致。"
+    },
+    {
+      "slug": "khroma",
+      "name": "Khroma",
+      "url_current": "https://khroma.co",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 Khroma 为完全免费的浏览器端 AI 配色工具，无任何付费订阅或企业版。站内'付费版$9/月'及 description/content 中'2026年推出企业版、团队协作、品牌色彩管理、多平台导出'均属编造（Khroma 无团队/企业功能，仅个人配色，导出仅 HEX/RGB/CMYK 等格式）。"
+    },
+    {
+      "slug": "flair-ai",
+      "name": "Flair AI",
+      "url_current": "https://flair.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网定价：Free $0、Pro $8/月、Pro+ $26/月、Scale $38/月，无 $29 档；站内'Pro版$29/月起'系编造/过期。功能描述（品牌视觉生成、智能产品摄影、营销素材、品牌一致性）与官网一致。"
+    },
+    {
+      "slug": "wix-ai",
+      "name": "Wix AI",
+      "url_current": "https://www.wix.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网（Wix Harmony AI 建站器 + Aria 助手，支持文本/对话转网站、AI 图像生成、SEO、聊天机器人等）与 description/content 一致；定价 Light $17/月（年付）与站内'高级版$17/月起'相符。URL 为 wix.com 主站，正确可用。"
+    },
+    {
+      "slug": "designs-ai",
+      "name": "Designs.ai",
+      "url_current": "https://designs.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网定价为新加坡元：Plus S$49/月、Pro S$99/月、Enterprise S$239/月，无 $29 档，且币种应为 SGD 而非 USD；定价页未显示免费版。站内'免费版可用，付费版$29/月起'不准确（价格与币种均错）。功能描述（Logo/图形/视频/演示文稿生成、品牌一致性）与官网一致。"
+    },
+    {
+      "slug": "pixso-ai",
+      "name": "Pixso AI",
+      "url_current": "https://pixso.cn",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "功能（文生图、AI抠图、智能擦除、生成图标、生成UI组件、设计稿转代码 ArkUI/HTML/SwiftUI/Vue）与官网一致。会员29元/月未在公开页面确认，建议人工复核定价。"
+    }
+  ]
+}

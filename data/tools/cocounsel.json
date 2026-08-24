@@ -1,0 +1,150 @@
+{
+  "name": "CoCounsel",
+  "slug": "cocounsel",
+  "positioning": "免费AI工具：时间线+文档审查与跨文档提问",
+  "auto_positioning": true,
+  "emoji": "⚖️",
+  "color": "#1E3A5F",
+  "description": "CoCounsel 是汤森路透推出的企业级 AI 法律助手（前身 Casetext），将法律研究、文档审查、合同分析与 deposition 准备等技能锚定在 Westlaw、Practical Law 等权威法律内容之上，以真实引用降低幻觉风险，通常作为 Westlaw 附加组件以销售报价制捆绑销售。",
+  "category": "AI行业应用",
+  "tags": [
+    "AI法律",
+    "法律研究",
+    "合同分析",
+    "Westlaw",
+    "企业级"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "约45万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://cocounsel.thomsonreuters.com/",
+  "price": "无免费版；销售报价制，单用户约 $104–$639/月",
+  "platform": "Web / Chrome扩展 / Microsoft Word插件",
+  "pros": [
+    "答案锚定权威法律数据库，引用可信",
+    "覆盖法律研究、审查、合同、deposition 等核心技能",
+    "可与 Westlaw/Practical Law 生态整合",
+    "适合已在使用 Thomson Reuters 产品的律所"
+  ],
+  "cons": [
+    "价格不透明，需销售报价且通常绑年框",
+    "深度绑定 Westlaw 生态，迁移成本高",
+    "不与 Westlaw 绑定无法单独购买",
+    "高级功能（deposition、时间线）对复杂材料仍需大量人工编辑"
+  ],
+  "features": [
+    "基于 Westlaw/Practical Law 的法律研究（带真实引用）",
+    "文档审查与跨文档提问",
+    "合同数据提取与分析",
+    "deposition 准备与问卷生成",
+    "时间线（chronology）构建",
+    "grounding 降低引用幻觉风险（仍需律师核对）"
+  ],
+  "related": [
+    "claude",
+    "chatgpt",
+    "perplexity",
+    "deepseek",
+    "gemini"
+  ],
+  "faq": [
+    {
+      "q": "CoCounsel 有免费版吗？",
+      "a": "没有免费版，通常提供 14–30 天试用。采用销售报价制，单用户综合成本约 $104–$639/月，且多作为 Westlaw 附加组件捆绑销售。"
+    },
+    {
+      "q": "CoCounsel 为什么比通用大模型更适合法律工作？",
+      "a": "它的研究与起草锚定在 Westlaw 和 Practical Law 等经人工维护的权威内容之上，而非凭模型在开放网络「猜」，可显著降低错引判例、编造假案号的风险；但最终每条引用仍须律师核对。"
+    },
+    {
+      "q": "CoCounsel 基于什么模型？",
+      "a": "最早基于 OpenAI GPT-4 构建，后续新一代 CoCounsel Legal 演进到基于 Anthropic 的 Claude 模型；其价值更多来自法律内容 grounding 而非底层模型本身。"
+    }
+  ],
+  "seo_keywords": [
+    "CoCounsel",
+    "CoCounsel AI法律助手",
+    "AI法律工具推荐",
+    "律师效率工具",
+    "法律AI软件2026"
+  ],
+  "content": "## CoCounsel 是什么？\nCoCounsel 是汤森路透（Thomson Reuters）的旗舰级 AI 法律助手，前身是 2023 年被汤森路透以约 6.5 亿美元收购的 Casetext 产品。它跟普通聊天机器人的最大区别，在于“答案从哪来”：CoCounsel 的检索和起草是锚定在 Westlaw 和 Practical Law 这些经过人工编辑维护的权威法律内容上的，而不是凭模型在开放互联网上“猜”。这能显著降低引错判例、编出假案号的风险——当然最终每条引用仍要律师核对。它最早基于 OpenAI GPT-4 构建（Casetext 创立于 2013 年，是最早拿到 GPT-4 早期权限的法律科技公司之一），后续新一代 CoCounsel Legal 也演进到基于 Anthropic 的 Claude 模型。\n\n## 核心功能\n- 法律研究：用自然语言提问，返回带真实引用的答案，检索跑在 Westlaw 内容而非开放网上。\n- 文档审查：一次性上传一批文档，跨文档提问，做尽调、发现阶段的海量阅读。\n- 摘要与合同数据抽取：把长合同、卷宗、笔录浓缩成要点，或批量抽出关键条款与数据点。\n- 询问准备（deposition）：根据现有材料生成询问提纲与大纲。\n- 时间线：从文档集自动构建事件时间线（结构清晰的文档效果最好）。\n- 这些能力以“技能（skills）”形式组织，而非单一聊天框；定位是“极快、需要复核的初级律师”，不是替代律师。\n\n## 当前套餐结构\n截至 2026 年，官方 CoCounsel 方案页列出了四个选项：CoCounsel Legal（旗舰，含完整 Westlaw Advantage 与 Practical Law Dynamic Tool Set）、Westlaw Advantage with CoCounsel Essentials（Westlaw 研究 + 文档技能）、Practical Law Dynamic Tool Set with CoCounsel Essentials（Practical Law 知识库路线）、以及 CoCounsel Essentials（独立的 Word 内文档分析与起草，不含判例检索）。早年常见的 “CoCounsel Core” 命名已不再作为官方在售档位，第三方网站引用的 $225/月多为历史遗留口径。\n\n## 实际使用中的体感\n律师们用得最多的，是“用自然语言做研究、拿回带真实引用的答案”这一环——相比在 Westlaw 里手写布尔检索式，描述需求就能返回相关判例，确实省时间。文档审查上，把一堆合同丢进去、让它比对条款或标偏差，也比人肉快。但 deposition 与 timeline 这类较新功能仍偏“辅助”：结构清晰的文档还好，杂乱材料需要大量人工修；时间线功能对简单编年史有用，复杂案件仍要重排。\n\n## 幻觉、局限与生态锁定\nCoCounsel 的卖点“grounded in Westlaw”能减少幻觉，但并不能完全消除——任何 AI 输出在进卷宗前都该人工核验引用。在功能上，它对判例研究和法律分析最强，对邮件、备忘录、客户沟通这类不映射到 Westlaw 库的工作帮助有限。商业上，它深度绑定 Westlaw：多数情况下不能脱离 Westlaw 单独购买，对已是 Westlaw 用户的律所是顺理成章的延伸，对其他人则是更高的“生态总账”。\n\n## 一个关键的采购提醒\n评估 CoCounsel 时，不要只盯“AI 助手”本身的价格，而要把你已经付的 Westlaw 费用一起算进“生态总账”——它本质是让 Westlaw 更粘、也让离开 Westlaw 更难的捆绑策略。对小所来说，单价往往比大客户更高，且没有透明价目表、没有自助注册，采购前一定要找销售拿到针对自己规模和司法辖区的书面报价，再决定是否入场。\n\n## 定价\nCoCounsel 没有公开价目表，也不提供永久免费版，通常只有 14–30 天的试用。它走销售报价、按席位（seat）计费，并多作为 Westlaw 的附加组件捆绑销售。第三方 2026 年的核查显示，单用户月费大约在 $104–$639 之间，取决于所选套餐、司法辖区范围和合约年限（1/2/3 年，长约更便宜）。对已是 Westlaw 用户的律所，真实成本常常是按席位叠加后更高。确切报价需联系汤森路透销售按规模和配置评估，且没有自助式注册入口。\n\n## 适合谁\n- 已经在用 Westlaw / Practical Law 的律所和法律部门：把 AI 推理叠在已有权威内容上，是最自然的延伸。\n- 做大量判例研究、合同审查的诉讼与交易团队：自然语言检索 + 真实引用能省下可观时间。\n- 需要研究支撑但需要控制“幻觉”风险的专业法律场景。\n\n## 小结\nCoCounsel 的护城河就是“grounded in Westlaw”：它把 AI 助手接在汤森路透几十年的权威法律库上，对已经深陷该生态的律所来说是顺理成章的生产力升级。代价是生态锁定和高门槛定价——它不能脱离 Westlaw 单独存在，小所或个人要权衡这笔“生态总账”。把它当不知疲倦、但需要你把关的初级律师用，是最务实的预期。",
+  "published": true,
+  "created_date": "2026-06-08",
+  "published_date": "2026-06-08",
+  "subcategory": "ai-legal",
+  "verified_url": "https://cocounsel.thomsonreuters.com/",
+  "verified_publisher": "Thomson Reuters（汤森路透）",
+  "verified_what": "CoCounsel 是汤森路透推出的企业级 AI 法律助手，前身为 2023 年被收购的 Casetext；其研究与起草锚定在 Westlaw、Practical Law 等权威法律内容之上，提供法律研究、文档审查、合同分析与 deposition 准备等技能。",
+  "verified_price": "无免费版；采用销售报价的订阅制。2026 年官方方案分为四档：CoCounsel Essentials、Westlaw Advantage with CoCounsel Essentials（配置器示例约 $639/用户/月，随司法辖区与年限浮动）、Practical Law Dynamic Tool Set with CoCounsel Essentials、CoCounsel Legal（全包含，第三方报道约 $850/用户/月）。单用户综合成本约 $104–$639/月，通常需签年框，常以 Westlaw 附加组件形式捆绑销售。",
+  "verified_platform": "Web / Chrome 扩展 / Microsoft Word 插件",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "基于 Westlaw/Practical Law 的法律研究（带真实引用）",
+    "文档审查与跨文档提问",
+    "合同数据提取与分析",
+    "deposition 准备与问卷生成",
+    "时间线（chronology）构建",
+    "grounding 降低引用幻觉风险（仍需律师核对）"
+  ],
+  "verified_description": "CoCounsel 是汤森路透推出的企业级 AI 法律助手（前身 Casetext），将法律研究、文档审查、合同分析与 deposition 准备等技能锚定在 Westlaw、Practical Law 等权威法律内容之上，以真实引用降低幻觉风险，通常作为 Westlaw 附加组件以销售报价制捆绑销售。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "",
+  "rating_verified": true,
+  "verified_pros": [
+    "答案锚定权威法律数据库，引用可信",
+    "覆盖法律研究、审查、合同、deposition 等核心技能",
+    "可与 Westlaw/Practical Law 生态整合",
+    "适合已在使用 Thomson Reuters 产品的律所"
+  ],
+  "verified_cons": [
+    "价格不透明，需销售报价且通常绑年框",
+    "深度绑定 Westlaw 生态，迁移成本高",
+    "不与 Westlaw 绑定无法单独购买",
+    "高级功能（deposition、时间线）对复杂材料仍需大量人工编辑"
+  ],
+  "verified_faq": [
+    {
+      "q": "CoCounsel 有免费版吗？",
+      "a": "没有免费版，通常提供 14–30 天试用。采用销售报价制，单用户综合成本约 $104–$639/月，且多作为 Westlaw 附加组件捆绑销售。"
+    },
+    {
+      "q": "CoCounsel 为什么比通用大模型更适合法律工作？",
+      "a": "它的研究与起草锚定在 Westlaw 和 Practical Law 等经人工维护的权威内容之上，而非凭模型在开放网络「猜」，可显著降低错引判例、编造假案号的风险；但最终每条引用仍须律师核对。"
+    },
+    {
+      "q": "CoCounsel 基于什么模型？",
+      "a": "最早基于 OpenAI GPT-4 构建，后续新一代 CoCounsel Legal 演进到基于 Anthropic 的 Claude 模型；其价值更多来自法律内容 grounding 而非底层模型本身。"
+    }
+  ],
+  "verified_tags": [
+    "AI法律",
+    "法律研究",
+    "合同分析",
+    "Westlaw",
+    "企业级"
+  ],
+  "verified_category": "AI行业应用",
+  "source_urls": [
+    "https://cocounsel.thomsonreuters.com/",
+    "https://aitoolsbakery.com/blog/cocounsel-pricing-2026",
+    "https://aitoolsbakery.com/blog/cocounsel-review/",
+    "https://costbench.pages.dev/software/ai-legal-tools/cocounsel/free-plan"
+  ],
+  "verify_notes": "原数据价格（无免费版、单用户约 $104–$639/月、Westlaw 附加组件捆绑）与多方 2026 年来源一致，准确。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "duolingo-max",
+      "harvey-ai",
+      "schole-ai"
+    ],
+    "verdict": "CoCounsel 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：CoCounsel 的 基于 Westlaw/Practical Law 的法律研究（带真实引用） 是亮点，价格 无免费版；销售报价制，单用户约 $104–$639/月；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

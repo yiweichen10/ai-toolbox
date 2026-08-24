@@ -1,0 +1,102 @@
+{
+  "batch_id": "b45",
+  "category": "AI音频",
+  "tools": [
+    {
+      "slug": "cosy-voice",
+      "name": "CosyVoice",
+      "url_current": "https://github.com/FunAudioLLM/CosyVoice",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "URL为阿里FunAudioLLM官方开源仓库，正确。CosyVoice是阿里通义实验室开源TTS，可经阿里云百炼(DashScope)API按量付费调用，'企业版按调用量计费'属实；'2026年推出付费企业版'时间表述存疑但付费API真实存在。功能描述基本准确。"
+    },
+    {
+      "slug": "chat-tts",
+      "name": "ChatTTS",
+      "url_current": "https://github.com/2noise/ChatTTS",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL为2noise官方开源仓库，正确。ChatTTS为开源免费对话式TTS，中英文双语、多音色、语速语调调节等功能描述准确，无编造。"
+    },
+    {
+      "slug": "spark-tts",
+      "name": "Spark-TTS",
+      "url_current": "https://github.com/SparkAudio/Spark-TTS",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "URL为SparkAudio官方开源仓库，正确。但content称'2026年最新版本增加了情感控制功能'——官方README（2025年）仅列出可控生成（性别/音高/语速），未提及情感控制，也不存在'2026版本'，属功能编造。来源：github.com/SparkAudio/Spark-TTS。"
+    },
+    {
+      "slug": "gpt-sovits",
+      "name": "GPT-SoVITS",
+      "url_current": "https://github.com/RVC-Boss/GPT-SoVITS",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL为RVC-Boss官方开源仓库，正确。GPT-SoVITS开源免费，5-10秒音频克隆、WebUI、多语言、批量TTS等功能描述准确。"
+    },
+    {
+      "slug": "f5-tts",
+      "name": "F5-TTS",
+      "url_current": "https://github.com/SWivid/F5-TTS",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL为SWivid官方仓库，正确。但content称'它是Suno团队开源的文本转语音模型'，实则由SWivid社区维护（description已正确标注'并非Suno团队产品'）。content将归属错写为Suno，属张冠李戴。来源：github.com/SWivid/F5-TTS。"
+    },
+    {
+      "slug": "cartesia",
+      "name": "Cartesia",
+      "url_current": "https://cartesia.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL为官网cartesia.ai，正确。但price称'付费版$19/月起'——官网定价为Free $0、Pro $4-5/月、Startup $39-49/月、Scale $239-299/月，无$19/月档位，定价编造。功能描述（实时语音合成、语音克隆、40+语言）准确。来源：cartesia.ai/pricing及多家2026评测。"
+    },
+    {
+      "slug": "deepgram",
+      "name": "Deepgram",
+      "url_current": "https://deepgram.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "URL为官网deepgram.com，正确。price中'免费45,000分钟/月、$0.004/分钟起'基本属实（来自$200额度按约$0.0043/分钟）。但description与content称'支持140种语言'——官方及多家评测显示Deepgram支持约30-45种语言，140种明显夸大编造。来源：aitoolbox.hk、dynalord.com等2026评测及官网。"
+    },
+    {
+      "slug": "phinite",
+      "name": "Phinite",
+      "url_current": "https://www.phinite.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL为官网phinite.ai，正确。但content将Phinite描述为'AI语音合成与音频修复工具'，实为多智能体AI编排平台（Agentic OS，与description一致）；且price称'免费试用3天、Pro版$19/月'——官网为Free(1K agent sessions)、Builder $20/月、Pro $100/月、Enterprise定制，产品形态与定价均编造。来源：phinite.ai官网。"
+    }
+  ]
+}

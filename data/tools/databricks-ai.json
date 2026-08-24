@@ -1,0 +1,152 @@
+{
+  "name": "Databricks AI",
+  "slug": "databricks-ai",
+  "positioning": "免费AI开发工具，Unity+Vector好用吗",
+  "auto_positioning": true,
+  "emoji": "📊",
+  "color": "#FF6B35",
+  "description": "Databricks AI 是 Databricks 数据智能平台（Data Intelligence Platform）内置的 AI 能力套件，基于 Mosaic AI 在统一湖仓上构建、部署生成式 AI 与机器学习应用。",
+  "category": "AI开发",
+  "tags": [
+    "数据平台",
+    "机器学习",
+    "大模型部署"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.databricks.com",
+  "price": "按用量计费（DBU）；免费试用 $400 额度",
+  "platform": "Web（云端 SaaS，部署于 AWS/Azure/GCP）",
+  "pros": [
+    "统一的数据与 AI 平台，减少数据移动",
+    "原生支持多种大语言模型（如 DBRX）",
+    "强大的 MLflow 集成，简化实验和模型管理",
+    "Serverless 推理端点，低延迟部署",
+    "与 Delta Lake / Unity Catalog 深度整合，数据治理完善"
+  ],
+  "cons": [
+    "学习曲线较陡，需要了解 Spark 与数据湖仓概念",
+    "成本可能较高，特别是大规模推理场景（DBU 与云资源双重计费）",
+    "部分高级功能需要企业版/承诺用量许可"
+  ],
+  "features": [
+    "Mosaic AI：构建并部署生产级 AI 智能体/复合系统（Agent Bricks、Agent Framework、Agent Evaluation）",
+    "Unity Catalog AI Governance：统一治理企业内所有 LLM 与 MCP，统一安全与访问策略",
+    "Vector Search：高性能向量数据库，支持 RAG 检索与实时数据同步",
+    "Model Serving / Foundation Model API：统一部署 GenAI 与经典 ML 模型，调用主流大模型",
+    "MLflow 与 AutoML：实验管理、模型训练/微调（含开源模型 DBRX）"
+  ],
+  "related": [
+    "langchain",
+    "pinecone",
+    "milvus",
+    "llamaindex",
+    "hugging-face"
+  ],
+  "faq": [
+    {
+      "q": "Databricks AI 与 Snowflake 有什么区别？",
+      "a": "Databricks 更强调开源与数据湖仓一体，提供统一的 AI 训练与推理环境；Snowflake 侧重云数据仓库，AI 能力主要通过 Snowpark 等扩展实现。两者数据治理理念不同，Databricks 的 Unity Catalog 更灵活。"
+    },
+    {
+      "q": "Databricks AI 支持哪些大语言模型？",
+      "a": "Databricks 自研了 DBRX 模型，也支持通过 Model Serving 部署 Llama、Mistral 等开源模型，以及通过 AI Gateway 调用 OpenAI、Anthropic、Google 等第三方模型。"
+    },
+    {
+      "q": "Databricks AI 免费版如何使用？",
+      "a": "Databricks 提供免费试用（含 $400 DBU 额度/14 天），社区与学习用途可在自有云账户中运行；完整企业功能需按用量或承诺用量付费。"
+    },
+    {
+      "q": "Databricks AI 适合中小企业吗？",
+      "a": "若已有数据工程与 AI 结合需求，Databricks 提供弹性计费和 Serverless 选项，可降低基础设施管理成本。但学习成本较高，建议先试用评估。"
+    }
+  ],
+  "seo_keywords": [
+    "Databricks AI",
+    "Databricks AI怎么样",
+    "Databricks AI免费版",
+    "Databricks AI使用教程",
+    "Databricks AI和哪个好"
+  ],
+  "content": "## Databricks AI是什么？\n\n如果你对大数据、机器学习和生成式AI都有点兴趣，那么Databricks AI这个名字你多半听说过。它是Databricks数据智能平台内部的一套AI功能套件，说白了就是让用户在自己数据湖仓（Delta Lake + Unity Catalog）的地盘上，直接跑大语言模型、训练自定义模型、做SQL分析，不用再把数据搬来搬去。\n\n核心思路很直接：数据在哪，AI就在哪。以前你可能要先把数据从数据仓库搬到专门的AI平台，现在Databricks AI把这两件事合到一起了。它原生支持多种大语言模型（比如他们自己开源的DBRX），同时保留了MLflow做实验管理，以及Serverless推理端点做模型部署。如果你已经在用Spark或Delta Lake，那Databricks AI基本就是为这个生态量身定做的。\n\n## 核心功能\n\n### 1. Databricks SQL与AI分析  \n你可以在同一个Notebook里写SQL查数据，然后直接调用大语言模型做自然语言对话或文本生成。实际用起来感受就是“丝滑”——不用切工具，数据分析师也能顺手用上AI，门槛比想象中低。\n\n### 2. MLflow实验记录与模型注册  \nMLflow本身就是Databricks孵化的开源项目，现在深度集成在平台里。训练模型的时候，每次实验的参数、指标、代码版本都会自动记录，方便回溯和对比。注册模型之后，可以一键部署到Serving端点，整个流程很清晰。\n\n### 3. Model Serving（自定义与基础模型推理）  \n支持部署你自家训练的模型，也支持一键调用DBRX、Llama、Mistral等开源模型。采用Serverless架构，按请求量计费，延迟控制得不错。不过大规模推理时成本要留意，后面会提到。\n\n### 4. Databricks AI助手（自然语言查询数据）  \n这个功能对非技术用户比较友好——直接打一句自然语言问题，比如“上季度销售额最高的产品是什么”，AI助手就会把它转成SQL去查Delta Lake，然后返回结果。准确率不是100%，但常见问法基本能搞定，能省不少写SQL的时间。\n\n### 5. Delta Sharing与数据协作  \n借助Delta Lake的开放格式，你可以把数据或模型直接共享给其他组织，对方不需要同样用Databricks也能读取。对于需要跨团队、跨公司协作的场景非常实用，而且权限控制能做到Unity Catalog级别。\n\n### 6. AutoML与特征工程自动化  \n如果你不想手撸模型，AutoML可以自动尝试不同算法和超参数，给出最优方案。特征工程方面也提供了一些自动生成特征的工具，但说实话，真正复杂的特征逻辑还是要人工介入，自动化更多是帮你打基础。\n\n## 版本/套餐对比\n\nDatabricks提供免费试用和按用量的付费模式，具体套餐分为工作区版本（Community Edition、Standard、Premium、Enterprise）以及AI功能相关的额外许可。以下是根据公开信息整理的简化对比：\n\n| 版本 | 主要特点 | AI功能支持 | 适合场景 |\n|------|----------|------------|----------|\n| Community Edition（免费） | 基本Notebook、Spark集群（有限资源） | 无完整的AI/ML服务 | 学习、小规模实验 |\n| Standard | 基础SQL分析、Delta Lake、MLflow | 基础模型推理（需额外付费） | 中小型数据分析团队 |\n| Premium | 增强权限管理、SQL端性能优化 | 支持Model Serving、AI助手 | 有一定AI需求的团队 |\n| Enterprise | Unity Catalog、Serverless推理、高级安全 | 全部AI功能（包括DBRX等） | 大型企业、合规要求高 |\n\n> 注意：具体价格未公开，需联系销售获取报价。实际使用中，免费版和试用版足够体验核心流程，但生产级AI推理建议直接上Premium或Enterprise。\n\n## 值不值得用？\n\n**优点**  \n- 统一平台，数据不用来回倒，减少运维麻烦。  \n- 原生支持多种大语言模型，DBRX在开源模型中表现不错。  \n- MLflow集成很成熟，实验管理和模型注册一步到位。  \n- Serverless推理端点低延迟，适合生产环境。  \n- 与Delta Lake、Unity Catalog深度整合，数据治理和血缘追溯都现成。\n\n**缺点**  \n- 学习曲线确实有点陡：Spark概念、数据湖仓理念、还有Databricks自身的Notebook生态，初上手会觉得“东西太多”。  \n- 成本可能偏高，尤其是大规模推理场景。Serverless按调用量计费，流量大了账单容易超预期。  \n- 部分高级功能（比如Unity Catalog、Serverless端点的自动扩缩）需要企业版许可，小团队想用全套会受限。\n\n**总体结论**：如果你已经有Spark生态或正在构建数据湖仓，那么Databricks AI绝对值得认真考虑——它能让数据+AI的闭环在同一个平台完成。但如果你只是偶尔跑个模型，不想深入Spark，那可能其他更轻量的AI平台（比如Hugging Face + 自己数据仓库）更适合你。\n\n## 使用建议\n\n1. **先试用免费版**：熟悉MLflow、Notebook和基本SQL分析，了解核心流程。  \n2. **从小规模推理开始**：先用公开数据集跑一次DBRX或Llama，感受性能和成本，再决定是否上生产。  \n3. **善用MLflow记录**：哪怕只是调参实验也养成记录习惯，后期回溯会非常省心。  \n4. **注意成本监控**：Serverless推理虽有延迟优势，但建议设置用量上限，防止意外超支。  \n5. **利用AI助手做辅助**：让业务团队先尝试自然语言查询，反馈准确率后再决定是否推广。\n\n## 适合谁用？\n\n**推荐**  \n- 已有Databricks或Spark集群的团队，希望快速引入AI能力。  \n- 数据工程师和数据科学家需要同一个平台协作，减少数据搬运。  \n- 企业级数据治理要求高（需要Unity Catalog、血缘追踪）。\n\n**可考虑**  \n- 有AI需求但还没决定用哪套架构的团队——可以先从免费版体验，再决定是否买单。  \n- 主要使用开源大模型且愿意自己管理部署的用户，Databricks的托管推理省心省力。\n\n**不推荐**  \n- 纯业务分析人员，不想学任何Spark和编程语言，只想用Excel或BI工具。  \n- 只有偶尔跑少量模型的需求，预算有限，更推荐Colab或Hugging Face Space。  \n- 对数据主权和云端锁定量有顾虑的组织（Databricks主要跑在AWS/Azure/GCP上）。",
+  "published": true,
+  "source_url": "https://www.databricks.com/product/machine-learning",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://www.databricks.com",
+  "verified_publisher": "Databricks, Inc.",
+  "verified_what": "Databricks 数据智能平台（Data Intelligence Platform）内置的 AI/生成式 AI 能力套件（Mosaic AI），在统一湖仓上构建、部署生产级 GenAI 与机器学习应用。",
+  "verified_price": "按用量计费（DBU，按秒计）；各产品起价不同：AI/GenAI 约 $0.07/DBU、数据仓库 $0.22/DBU、交互式工作负载 $0.40/DBU、运营数据库 $0.069/CU 等。提供免费试用（含 $400 DBU 额度/14 天）；企业承诺用量（Committed Use）享折扣，需联系销售。",
+  "verified_platform": "Web, API, Cloud (AWS/Azure/GCP)",
+  "verified_features": [
+    "Mosaic AI：构建并部署生产级 AI 智能体/复合系统（Agent Bricks、Agent Framework、Agent Evaluation）",
+    "Unity Catalog AI Governance：统一治理企业内所有 LLM 与 MCP，统一安全与访问策略",
+    "Vector Search：高性能向量数据库，支持 RAG 检索与实时数据同步",
+    "Model Serving / Foundation Model API：统一部署 GenAI 与经典 ML 模型，调用主流大模型",
+    "MLflow 与 AutoML：实验管理、模型训练/微调（含开源模型 DBRX）"
+  ],
+  "verified_description": "Databricks AI 是 Databricks 数据智能平台（Data Intelligence Platform）内置的 AI 能力套件，基于 Mosaic AI 在统一湖仓上构建、部署生成式 AI 与机器学习应用。",
+  "content_flags": "定价描述称“需联系销售、暂未公开”略有误导——标准用量（DBU）定价已公开于官网定价页，仅企业承诺用量需洽谈；其余内容基本准确。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "暂无权威外部评分（保留编辑评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "统一的数据与 AI 平台，减少数据移动",
+    "原生支持多种大语言模型（如 DBRX）",
+    "强大的 MLflow 集成，简化实验和模型管理",
+    "Serverless 推理端点，低延迟部署",
+    "与 Delta Lake / Unity Catalog 深度整合，数据治理完善"
+  ],
+  "verified_cons": [
+    "学习曲线较陡，需要了解 Spark 与数据湖仓概念",
+    "成本可能较高，特别是大规模推理场景（DBU 与云资源双重计费）",
+    "部分高级功能需要企业版/承诺用量许可"
+  ],
+  "verified_faq": [
+    {
+      "q": "Databricks AI 与 Snowflake 有什么区别？",
+      "a": "Databricks 更强调开源与数据湖仓一体，提供统一的 AI 训练与推理环境；Snowflake 侧重云数据仓库，AI 能力主要通过 Snowpark 等扩展实现。两者数据治理理念不同，Databricks 的 Unity Catalog 更灵活。"
+    },
+    {
+      "q": "Databricks AI 支持哪些大语言模型？",
+      "a": "Databricks 自研了 DBRX 模型，也支持通过 Model Serving 部署 Llama、Mistral 等开源模型，以及通过 AI Gateway 调用 OpenAI、Anthropic、Google 等第三方模型。"
+    },
+    {
+      "q": "Databricks AI 免费版如何使用？",
+      "a": "Databricks 提供免费试用（含 $400 DBU 额度/14 天），社区与学习用途可在自有云账户中运行；完整企业功能需按用量或承诺用量付费。"
+    },
+    {
+      "q": "Databricks AI 适合中小企业吗？",
+      "a": "若已有数据工程与 AI 结合需求，Databricks 提供弹性计费和 Serverless 选项，可降低基础设施管理成本。但学习成本较高，建议先试用评估。"
+    }
+  ],
+  "verified_tags": [
+    "数据平台",
+    "机器学习",
+    "大模型部署"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://www.databricks.com",
+    "https://www.databricks.com/product/pricing"
+  ],
+  "verify_notes": "定价为按秒计费的 DBU 模式，无单一固定价格；免费试用含 $400 DBU 额度。官方域名 databricks.com 正确。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Databricks AI 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Databricks AI 的 Mosaic AI：构建并部署生产级 AI 智能体/复合系统（Agent Bricks、Agent Framework、Agent Evaluation） 是亮点，价格 按用量计费（DBU）；免费试用 $400 额度；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-05",
+  "created_date": "2026-08-05"
+}

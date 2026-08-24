@@ -1,0 +1,155 @@
+{
+  "name": "CodeBuddy腾讯",
+  "slug": "codebuddy-tengxun",
+  "positioning": "免费AI编程工具：AI代码补全+单元测试生成",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#1E90FF",
+  "description": "CodeBuddy是腾讯云推出的AI编程助手，基于混元大模型与DeepSeek双核驱动，覆盖代码补全、生成、注释转代码、单元测试与智能对话等全流程开发场景。它提供插件、独立IDE与CLI三端形态，支持200+编程语言与主流IDE，并深度集成腾讯云生态（CloudBase、EdgeOne、CloudStudio），适合个人开发者与企业研发团队提升编码效率。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "代码助手",
+    "腾讯云",
+    "混元大模型",
+    "IDE插件",
+    "CLI",
+    "代码补全"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "85万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://copilot.tencent.com",
+  "price": "个人体验版免费，标准版99元/月（包月70元）起",
+  "platform": "VS Code/IntelliJ IDEA/Chrome/Edge",
+  "pros": [
+    "个人体验版免费、上手零成本",
+    "支持200+编程语言与主流IDE",
+    "插件/IDE/CLI三端覆盖开发全流程",
+    "腾讯生态集成（CloudBase、EdgeOne、CloudStudio）",
+    "企业级知识库与安全审计"
+  ],
+  "cons": [
+    "高级能力需付费订阅",
+    "企业专享版需100人起购，门槛高",
+    "重度调用积分消耗较快"
+  ],
+  "features": [
+    "AI代码补全（实时续写、注释生成代码）",
+    "智能技术对话与问答",
+    "单元测试生成",
+    "代码理解与跨文件分析",
+    "自动任务/Agent开发",
+    "Figma设计稿转代码",
+    "MCP与云部署集成（CloudBase/CloudStudio）",
+    "多模型调度（混元/DeepSeek/Claude/GPT/Gemini等）"
+  ],
+  "related": [
+    "github-copilot",
+    "cursor",
+    "tongyi-lingma",
+    "wenxin-kuaima"
+  ],
+  "faq": [
+    {
+      "q": "CodeBuddy支持哪些语言和IDE？",
+      "a": "理论不限制语言，前端HTML/JS/Vue/React、后端Python/Java/PHP、客户端Java/Kotlin/Swift等均支持；可集成VS Code、JetBrains等主流IDE，也有独立IDE与CLI。"
+    },
+    {
+      "q": "个人版是否免费？",
+      "a": "体验版永久免费，提供基础积分与代码实时补全限免；标准版及以上按月/年付费，连续包月有折扣。"
+    },
+    {
+      "q": "国际版与国内版有何区别？",
+      "a": "国内版为 copilot.tencent.com，国际版为 codebuddy.ai，模型与计费略有差异，可按登录方式选择。"
+    }
+  ],
+  "seo_keywords": [
+    "CodeBuddy腾讯",
+    "腾讯AI编程助手",
+    "CodeBuddy腾讯怎么样",
+    "CodeBuddy腾讯免费版",
+    "腾讯混元编程助手",
+    "AI代码补全工具推荐"
+  ],
+  "content": "## CodeBuddy腾讯是什么？\n\nCodeBuddy是腾讯推出的AI编程助手，基于腾讯混元大模型开发。简单说，它就是一个能帮你写代码、查bug、优化代码的AI小助手。\n\n2026年升级到2.0版本后，代码理解能力提升明显。支持Python、Java、JavaScript、Go等主流编程语言，可以直接集成到主流IDE里用。对国内开发者比较友好的是，它支持中文编程问答，有什么问题直接用中文问就行，不用刻意切换英文。\n\n---\n\n## 核心功能\n\n**1. 智能代码补全**\n\n不只是简单的单词补全，它能根据上下文逻辑一次生成多行代码。比如你写了个函数开头，它能猜到你想干嘛，直接把整个函数补完。实际用起来省不少敲键盘的功夫。\n\n**2. 代码错误诊断与修复**\n\n写完代码一运行报错了，CodeBuddy能帮你定位问题并给出修复方案。它不只是告诉你哪里错了，还会解释为什么错、怎么改。对新手比较友好，老手也能省掉一些排查的时间。\n\n**3. 自然语言生成代码**\n\n用大白话描述你想实现的功能，它就能帮你生成代码。比如你说\"帮我写一个读取CSV文件的函数\"，它就能给你生成一段可用的代码。适合快速原型开发或者写一些重复性的工具函数。\n\n**4. 代码重构建议**\n\n这个功能挺实用的。它能分析你写的代码，指出可以优化的地方，比如重复代码、命名不规范、逻辑可以更简洁等等。相当于有个资深程序员在旁边帮你review代码。\n\n**5. 技术文档问答**\n\n遇到陌生的API或者库不知道怎么用，直接问CodeBuddy就行。它会结合文档给你解释，比自己翻文档要快。不过具体效果取决于你要查的东西是不是主流技术栈。\n\n---\n\n## 版本/套餐对比\n\n| | 免费版 | 专业版 | 企业版 |\n|---|---|---|---|\n| **价格** | 免费 | 付费 | 定制 |\n| **代码补全** | ✅ 基础 | ✅ 高级 | ✅ 完整 |\n| **错误诊断** | ✅ 基础 | ✅ 高级 | ✅ 完整 |\n| **自然语言生成** | ✅ 有限额 | ✅ 无限额 | ✅ 无限额 |\n| **代码重构** | ❌ | ✅ | ✅ |\n| **团队协作** | ❌ | ✅ | ✅ |\n| **私有化部署** | ❌ | ❌ | ✅ |\n| **技术支持** | 社区 | 工单 | 专属 |\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 基于腾讯混元大模型，代码理解确实有两把刷子\n- 中文编程问答对国内开发者很友好，上手门槛低\n- 跟腾讯云生态集成，如果本身就用腾讯云的话体验会更顺滑\n- 多语言支持做得比较全，主流语言基本都有覆盖\n- 企业版支持私有化，对有安全要求的团队是个选项\n\n**缺点：**\n\n- 生态插件比Copilot还是少一些，第三方集成没那么丰富\n- 高级功能需要付费，免费版功能有限\n- 离线能力一般，没网的时候基本没法用\n\n**总体结论：** 对于国内开发者来说，CodeBuddy是个值得试试的选择。特别是如果你已经用腾讯云的产品，它的生态优势会更明显。免费版够不够用取决于你的需求，如果想要完整的重构和协作功能，还是得考虑付费版。\n\n---\n\n## 使用建议\n\n1. **先从免费版试起**：别急着付费，看看基础功能能不能满足你的日常需求\n2. **结合IDE使用**：安装好对应插件后效果最好，别只在网页端用\n3. **把AI当作辅助而不是替代**：它擅长处理重复性代码和快速生成，但复杂业务逻辑还是得自己把控\n4. **注意隐私**：虽然企业版有私有化部署，但如果写的是敏感业务代码，先了解下数据处理机制\n\n---\n\n## 适合谁用？\n\n**推荐：**\n\n- 国内团队的日常开发工作\n- 已经使用腾讯云生态的开发者\n- 需要中文编程问答支持的程序员\n\n**可考虑：**\n\n- 对代码补全和辅助功能有较高需求的个人开发者\n- 需要团队协作功能的中小型开发团队\n\n**不推荐：**\n\n- 对生态插件丰富度要求极高、需要大量第三方集成的用户\n- 完全离线工作、无法使用云端服务的场景",
+  "published": true,
+  "created_date": "2026-06-10",
+  "published_date": "2026-06-10",
+  "verified_url": "https://copilot.tencent.com",
+  "verified_publisher": "腾讯（Tencent）",
+  "verified_what": "腾讯云推出的AI编程助手（代码助手），基于混元大模型与DeepSeek双核驱动，提供代码补全、生成、注释转代码、单元测试与智能对话等能力，覆盖IDE插件、独立IDE与CLI三端。",
+  "verified_price": "个人版分体验版（免费）、标准版（99元/月，连续包月70元/月）、高级版（199元/月，连续包月140元/月）、旗舰版（999元/月，连续包月700元/月）；企业版：企业旗舰版198元/人/月（2376元/人/年），企业专享版316元/人/月（100人起购）。",
+  "verified_platform": "Web、VS Code/JetBrains等IDE插件、CodeBuddy IDE、CodeBuddy Code CLI、Windows/macOS/Linux",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "AI代码补全（实时续写、注释生成代码）",
+    "智能技术对话与问答",
+    "单元测试生成",
+    "代码理解与跨文件分析",
+    "自动任务/Agent开发",
+    "Figma设计稿转代码",
+    "MCP与云部署集成（CloudBase/CloudStudio）",
+    "多模型调度（混元/DeepSeek/Claude/GPT/Gemini等）"
+  ],
+  "verified_description": "CodeBuddy是腾讯云推出的AI编程助手，基于混元大模型与DeepSeek双核驱动，覆盖代码补全、生成、注释转代码、单元测试与智能对话等全流程开发场景。它提供插件、独立IDE与CLI三端形态，支持200+编程语言与主流IDE，并深度集成腾讯云生态（CloudBase、EdgeOne、CloudStudio），适合个人开发者与企业研发团队提升编码效率。",
+  "price_verified": true,
+  "verified_pros": [
+    "个人体验版免费、上手零成本",
+    "支持200+编程语言与主流IDE",
+    "插件/IDE/CLI三端覆盖开发全流程",
+    "腾讯生态集成（CloudBase、EdgeOne、CloudStudio）",
+    "企业级知识库与安全审计"
+  ],
+  "verified_cons": [
+    "高级能力需付费订阅",
+    "企业专享版需100人起购，门槛高",
+    "重度调用积分消耗较快"
+  ],
+  "verified_faq": [
+    {
+      "q": "CodeBuddy支持哪些语言和IDE？",
+      "a": "理论不限制语言，前端HTML/JS/Vue/React、后端Python/Java/PHP、客户端Java/Kotlin/Swift等均支持；可集成VS Code、JetBrains等主流IDE，也有独立IDE与CLI。"
+    },
+    {
+      "q": "个人版是否免费？",
+      "a": "体验版永久免费，提供基础积分与代码实时补全限免；标准版及以上按月/年付费，连续包月有折扣。"
+    },
+    {
+      "q": "国际版与国内版有何区别？",
+      "a": "国内版为 copilot.tencent.com，国际版为 codebuddy.ai，模型与计费略有差异，可按登录方式选择。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "代码助手",
+    "腾讯云",
+    "混元大模型",
+    "IDE插件",
+    "CLI",
+    "代码补全"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://copilot.tencent.com",
+    "https://copilot.tencent.com/docs/ide/Account/pricing",
+    "https://cloud.tencent.com/product/acc",
+    "https://www.codebuddy.ai/"
+  ],
+  "verify_notes": "现有内容基本准确（基于混元、支持多语言、集成IDE等）。补充了官方定价与三端形态。",
+  "content_verified": true,
+  "url_previous": "https://codebuddy.cloud.tencent.com",
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "CodeBuddy腾讯 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：CodeBuddy腾讯 的 AI代码补全（实时续写、注释生成代码） 是亮点，价格 个人体验版免费，标准版99元/月（包月70元）起；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

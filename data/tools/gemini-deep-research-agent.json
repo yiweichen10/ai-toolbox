@@ -1,0 +1,150 @@
+{
+  "name": "Gemini Deep Research Agent",
+  "slug": "gemini-deep-research-agent",
+  "positioning": "免费AI搜索推荐：可连接、协同规划",
+  "auto_positioning": true,
+  "emoji": "🔬",
+  "color": "#4285F4",
+  "description": "Gemini Deep Research 是 Google 推出的深度研究智能体（基于 Gemini 模型），像研究助理一样自主规划多步路径、反复检索、综合数十到数百个来源，最后交出一份带引用的研究报告，并可连接 Gmail/Drive 等 Google 生态资料。",
+  "category": "AI搜索",
+  "tags": [
+    "深度研究",
+    "报告生成",
+    "多源整理",
+    "Google",
+    "AI搜索"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://gemini.google.com",
+  "price": "免费层有限次；完整能力需 Google AI Pro $19.99/月 或 Ultra",
+  "platform": "Web, 移动, API",
+  "pros": [
+    "基于 Gemini 强推理，研究深度强",
+    "自动多步搜索，省去手动查找",
+    "结构化报告附引用来源，可核对",
+    "支持复杂开放性问题",
+    "与 Google 生态深度整合"
+  ],
+  "cons": [
+    "完整深度研究需付费订阅（AI Pro 起）",
+    "生成速度受任务复杂度影响，较长",
+    "早期偏英文优化，现多语言支持已大幅扩展（并非「仅支持英文」）",
+    "长报告依赖检索质量，需人工把关"
+  ],
+  "features": [
+    "自主规划多步研究路径并迭代检索",
+    "综合数十至数百个来源，生成带引用的报告",
+    "可连接 Gmail/Drive/Chat 等 Google 生态来源",
+    "协同规划（执行前查看/修改研究计划）",
+    "导出至 Google Docs、生成音频概览与可视化图表",
+    "通过 Gemini App 与 Gemini API 使用"
+  ],
+  "related": [
+    "perplexity",
+    "perplexity-ai",
+    "notebooklm",
+    "meta-so"
+  ],
+  "faq": [
+    {
+      "q": "Gemini Deep Research 免费吗？",
+      "a": "免费层（Gemini 3.x Flash）可有限次使用 Deep Research；完整能力需 Google AI Pro（$19.99/月，原 Gemini Advanced）或 AI Ultra 订阅。"
+    },
+    {
+      "q": "如何使用 Gemini Deep Research？",
+      "a": "访问 gemini.google.com，选择支持深度研究的 Gemini 模型并启用 Deep Research 模式，输入问题后等待其自动规划、检索并生成带引用的报告。"
+    },
+    {
+      "q": "支持中文吗？",
+      "a": "早期以英文优化为主，2026 年版本已大幅扩展多语言（含中文）支持；复杂研究用英文通常仍更佳，但中文场景已明显可用。"
+    }
+  ],
+  "seo_keywords": [
+    "Gemini Deep Research Agent",
+    "Gemini Deep Research Agent怎么样",
+    "Gemini Deep Research Agent免费版",
+    "Gemini Deep Research Agent使用教程",
+    "Gemini Deep Research Agent和哪个好"
+  ],
+  "content": "## Gemini Deep Research Agent 是什么？\n\nGemini Deep Research 是 Google 推出的深度研究智能体（基于 Gemini 模型），它不像普通问答那样给一句快照，而是像一个研究助理：自己规划多步路径、反复检索、综合几十到几百个来源，最后交出一份带引用的研究报告，把\"研究\"这件事真正交给模型跑。\n\n它先自主规划研究路线——提出查询、读取结果、识别知识差距、再搜一轮，如此迭代深入，并能钻进网页内部抓取具体数据，而不是只停在搜索结果摘要。综合阶段，它会把来自公开网络和你的个人资料（如 Gmail、Drive、Chat 等 Google 生态来源）的信息融合起来，生成结构化的报告，关键论断都附上出处，方便你核对，也降低了\"瞎编引用\"的风险。\n\n## 适合人群\n\n你还能参与规划：在研究真正执行前，先查看并修改它拟定的研究计划，避免方向跑偏，让模型替你跑之前先对齐意图。产出可导出到 Google Docs，生成音频概览，以及可视化图表，让长报告更易消费，也更适合在团队里分享。面向开发者，它通过 Gemini App 与 Gemini API（Interactions API）提供，能把这种自主研究能力嵌进你自己的应用。\n\n## 价格与平台\n\n价格上，Gemini Deep Research 随 Gemini Advanced / Google AI Pro / Ultra 等订阅提供；免费版有每日研究次数限制，重度使用需升级。对需要做竞品分析、尽职调查、文献梳理等重研究活儿的人，它把\"从几天到几小时\"的研究周期压缩了下来。\n\n实际用下来，它的强项是有据可查的长报告，而非即时闲聊；对需要快、需要引用、需要跨多个来源综合的问题最有用。接入 Gmail、Drive 后，它能基于你的私人资料给答案，但这也要求你理解数据授权边界，清楚哪些资料被纳入了检索。对研究、战略、投研等\"信息密度高、容错率低\"的岗位，它是把冗长检索外包出去的利器。免费版适合先感受节奏，重度和团队用途再上订阅；把它当研究助理而非搜索引擎，才能发挥出\"自主规划+带引用报告\"的真正价值。\n\n## 最终结论\n\n从工作流角度，Gemini Deep Research 最适合作为\"重研究任务的前置引擎\"：先让它跑出带引用的报告，你再做判断和深加工。但它不是即时问答，复杂课题往往要等它多轮检索。建议把问题拆清楚、先确认研究计划，再放手让它查；接入个人资料后，它对\"基于我自己的数据\"的追问尤其有用，能省下大量手动翻找的时间。\n",
+  "published": true,
+  "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/deep-research-agent-gemini-api/",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://gemini.google.com",
+  "verified_publisher": "Google（Google DeepMind / Alphabet）",
+  "verified_what": "Gemini Deep Research 是 Google 推出的深度研究智能体（基于 Gemini 模型），可自主规划多步研究、检索并综合网络与用户资料（Gmail/Drive 等），生成带引用的研究报告。",
+  "verified_price": "随 Google AI Pro（$19.99/月，即原 Gemini Advanced）与 AI Ultra 订阅提供；免费层（Gemini 3.x Flash）对 Deep Research 有每日/有限次数限制。",
+  "verified_platform": "Web、移动端（iOS/Android）、API（Gemini API / Interactions API）。",
+  "verified_features": [
+    "自主规划多步研究路径并迭代检索",
+    "综合数十至数百个来源，生成带引用的报告",
+    "可连接 Gmail/Drive/Chat 等 Google 生态来源",
+    "协同规划（执行前查看/修改研究计划）",
+    "导出至 Google Docs、生成音频概览与可视化图表",
+    "通过 Gemini App 与 Gemini API 使用"
+  ],
+  "verified_description": "Gemini Deep Research 是 Google 推出的深度研究智能体（基于 Gemini 模型），像研究助理一样自主规划多步路径、反复检索、综合数十到数百个来源，最后交出一份带引用的研究报告，并可连接 Gmail/Drive 等 Google 生态资料。",
+  "content_flags": "略有滞后：原描述称「基于 Gemini 2.0」「目前仅支持英文」，2026 年实际已迭代到 Gemini 3.x 且多语言（含中文）支持已大幅扩展；其余核心描述准确。",
+  "price_verified": true,
+  "verified_pros": [
+    "基于 Gemini 强推理，研究深度强",
+    "自动多步搜索，省去手动查找",
+    "结构化报告附引用来源，可核对",
+    "支持复杂开放性问题",
+    "与 Google 生态深度整合"
+  ],
+  "verified_cons": [
+    "完整深度研究需付费订阅（AI Pro 起）",
+    "生成速度受任务复杂度影响，较长",
+    "早期偏英文优化，现多语言支持已大幅扩展（并非「仅支持英文」）",
+    "长报告依赖检索质量，需人工把关"
+  ],
+  "verified_faq": [
+    {
+      "q": "Gemini Deep Research 免费吗？",
+      "a": "免费层（Gemini 3.x Flash）可有限次使用 Deep Research；完整能力需 Google AI Pro（$19.99/月，原 Gemini Advanced）或 AI Ultra 订阅。"
+    },
+    {
+      "q": "如何使用 Gemini Deep Research？",
+      "a": "访问 gemini.google.com，选择支持深度研究的 Gemini 模型并启用 Deep Research 模式，输入问题后等待其自动规划、检索并生成带引用的报告。"
+    },
+    {
+      "q": "支持中文吗？",
+      "a": "早期以英文优化为主，2026 年版本已大幅扩展多语言（含中文）支持；复杂研究用英文通常仍更佳，但中文场景已明显可用。"
+    }
+  ],
+  "verified_tags": [
+    "深度研究",
+    "报告生成",
+    "多源整理",
+    "Google",
+    "AI搜索"
+  ],
+  "verified_category": "AI搜索",
+  "source_urls": [
+    "https://gemini.google.com",
+    "https://www.aiworthit.com/blog/google-gemini-review",
+    "https://geotoolbox.ai/blog/gemini-pricing",
+    "https://aipriceguide.co/pricing/gemini/"
+  ],
+  "verify_notes": "核心概念准确，仅模型版本与语言支持描述需更新。",
+  "compare_section": {
+    "competitors": [
+      "perplexity",
+      "perplexity-ai",
+      "glean"
+    ],
+    "verdict": "Gemini Deep Research Agent 与 Perplexity、Perplexity AI、Glean 同属AI搜索赛道：Gemini Deep Research Agent 的 自主规划多步研究路径并迭代检索 是亮点，价格 免费层有限次；完整能力需 Google AI Pro $19.99/月 或 Ultra；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-07",
+  "created_date": "2026-08-07"
+}

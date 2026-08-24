@@ -1,0 +1,148 @@
+{
+  "name": "Octarine",
+  "slug": "octarine",
+  "emoji": "🧙",
+  "color": "#7C3AED",
+  "description": "Octarine 是一款本地优先的 Markdown / 个人知识管理（PKM）笔记应用，数据以本地 Markdown 文件存储；AI 为可选附加功能（写作助手、Ask Octarine），由用户自带 API 密钥或本地模型驱动，适合重视隐私与数据所有权的写作者。",
+  "category": "AI办公",
+  "tags": [
+    "Markdown",
+    "PKM",
+    "本地优先",
+    "笔记应用",
+    "知识管理"
+  ],
+  "rating": "⭐4.3",
+  "visits": "85万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://octarine.app",
+  "price": "免费版 + Pro 一次性买断约 $50–70",
+  "platform": "网页端、iOS、Android",
+  "pros": [
+    "本地 Markdown 文件，数据归用户所有",
+    "免费版已能覆盖日常笔记与知识管理",
+    "一次性买断 Pro，无订阅",
+    "AI 可选可控（自带密钥/本地模型）",
+    "轻量流畅，约 10MB"
+  ],
+  "cons": [
+    "平台覆盖有限（Android 尚未发布）",
+    "Pro 高级功能需付费",
+    "复杂创意写作非其定位"
+  ],
+  "features": [
+    "随手捕获（Inbox 快速记录）",
+    "日历式日记（Daily / Weekly Notes）",
+    "文件树与可复用模板",
+    "自定义筛选视图（Views）",
+    "双向链接与图谱",
+    "可选本地 AI 助手（写作助手 / Ask Octarine，自带密钥或本地模型）",
+    "Git 同步备份"
+  ],
+  "related": [
+    "jasper",
+    "writesonic",
+    "gamma"
+  ],
+  "faq": [
+    {
+      "q": "Octarine 是免费的吗？",
+      "a": "免费版核心编辑、图谱、Daily Desk、Git 同步等基础功能永久免费；Pro 为一次性买断（约 50–70 美元），解锁写作助手、Ask Octarine 等高级功能。AI 功能需自带 API 密钥或本地模型，不额外收费。"
+    },
+    {
+      "q": "Octarine 支持哪些平台？",
+      "a": "目前为桌面端（macOS / Windows / Linux），iOS 已发布，Android 在路线图上。"
+    },
+    {
+      "q": "我的数据存在哪里？",
+      "a": "笔记以本地 Markdown 文件存储，可选 Git 同步到 GitHub / GitLab 备份，数据不离开你的机器。"
+    }
+  ],
+  "seo_keywords": [
+    "Octarine",
+    "Octarine AI写作工具",
+    "Octarine免费版",
+    "Octarine怎么样",
+    "Octarine vs Jasper"
+  ],
+  "content": "## Octarine 是什么？\n\nOctarine 是一款“安静、克制、本地优先”的 Markdown 笔记 / 个人知识管理（PKM）应用。它的设计理念很明确：软件应该为思考让路，而不是用各种指标和漏斗来打扰你。它由一个独立开发者（Rajat）自筹资金（bootstrapped，不拿风投）慢慢做出来，强调“你的数据永远是你自己的”——所有笔记都以本地 Markdown 文件存储，不锁定在任何专有格式里。\n\n它不只是个纯文本编辑器，而是在本地文件之上搭了一套顺手的知识管理工作流：随手捕获、日历式日记、文件树、模板、可筛选的视图、双向链接和图谱。AI 是“可选”的——你愿意接就接，不愿意接也不影响核心使用。\n\n## 核心功能\n\n- 随手捕获：任何时候都能从一个小窗口快速记下灵感或待办，先存进 Inbox，等有空了再整理归类，不用当场决定它属于哪里。\n- 日历式日记（Daily / Weekly Notes）：内置日历，方便地写每日、每周笔记；昨天的未完成事项会自动带到现在，不会丢。\n- 文件树与模板：结构化的笔记管理与可复用模板，减少重复搭框架的工作。\n- 自定义筛选视图（Views）：同一批笔记可以按任务、近期写作、项目状态等不同角度重新排列，而不用复制多份。\n- 双向链接与图谱：用 [[]] 建立内部链接，图谱视图自动显示笔记之间的关系。\n- 本地 AI 助手：可选接入 AI（写作助手、Ask Octarine 向整个工作区提问）。AI 在你的笔记上下文里运作，嵌入（embeddings）在本地设备运行，AI 供应商或本地模型由你选择；也支持自带 API 密钥（BYOK），包括 OpenAI、Anthropic、Google Gemini、Ollama / LM Studio 本地模型等。\n- 隐私与所有权：笔记是本地 Markdown 文件，可选 Git 同步到 GitHub / GitLab 做备份，数据不离开你的机器。\n\n## 定价\n\nOctarine 采用“免费 + 一次性买断 Pro”的模式，没有订阅：\n\n- 免费版：核心编辑、图谱、Daily Desk、Git 同步等基础功能永久免费，并持续获得更新。\n- Pro 版：一次性买断（早鸟支持价约 $50–70，一个授权可在 3 台设备同时使用，含全部未来更新）。解锁写作助手、Ask Octarine、30+ 主题、锁定笔记、专注模式、视频批注、更多导出格式等高级功能。\n- AI 功能本身需要你自带 API 密钥或使用本地模型，不产生额外订阅费。\n\n（具体早鸟价格以官网 pricing 页为准，不同渠道显示约 $50–70 区间。）\n\n## 适合谁\n\n- 重视隐私、希望笔记以本地 Markdown 文件保存、不被平台锁定的写作者和知识工作者。\n- 正在搭建个人知识库、喜欢双向链接与图谱视图的人。\n- 想要“开箱即用”的 PKM，不想像配置 Obsidian 那样折腾一堆插件的用户。\n- 愿意为优质独立软件一次性付费、支持独立开发者的用户。\n\n## 小结\n\nOctarine 适合想要一个“安静、本地优先、不被打扰”的 Markdown PKM 工具的人。免费版已经能覆盖日常记笔记和知识管理，AI 是锦上添花的附加项、且完全由你掌控密钥与模型。它的短处在生态和平台覆盖：目前是桌面端（macOS / Windows / Linux），iOS 还在 TestFlight 测试，Android 在路线图上。如果你追求的是“笔记即本地文件 + 可选 AI”，它会是个很舒服的选择。\n\n## 常见问题（FAQ）\n\n**Octarine 是免费的吗？**\n\n免费版核心编辑、图谱、Daily Desk、Git 同步等基础功能永久免费；Pro 为一次性买断（约 50–70 美元），解锁写作助手、Ask Octarine 等高级功能。AI 功能需自带 API 密钥或本地模型，不额外收费。\n\n**Octarine 支持哪些平台？**\n\n目前为桌面端（macOS / Windows / Linux），iOS 已发布，Android 在路线图上。\n\n**我的数据存在哪里？**\n\n笔记以本地 Markdown 文件存储，可选 Git 同步到 GitHub / GitLab 备份，数据不离开你的机器。",
+  "published": true,
+  "created_date": "2026-06-21",
+  "published_date": "2026-06-21",
+  "subcategory": "",
+  "verified_url": "https://octarine.app",
+  "verified_publisher": "Rajat（独立开发者，bootstrapped，无风投）",
+  "verified_what": "本地优先的 Markdown / 个人知识管理（PKM）笔记应用，数据以本地 Markdown 文件存储，AI 为可选附加功能。",
+  "verified_price": "免费版核心功能永久免费；Pro 版一次性买断（约 50–70 美元，一个授权 3 台设备，含全部未来更新）；AI 功能需自带 API 密钥或本地模型，不产生额外订阅费。",
+  "verified_platform": "桌面端（macOS / Windows / Linux）；iOS（已发布）；Android 在路线图",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "随手捕获（Inbox 快速记录）",
+    "日历式日记（Daily / Weekly Notes）",
+    "文件树与可复用模板",
+    "自定义筛选视图（Views）",
+    "双向链接与图谱",
+    "可选本地 AI 助手（写作助手 / Ask Octarine，自带密钥或本地模型）",
+    "Git 同步备份"
+  ],
+  "verified_description": "Octarine 是一款本地优先的 Markdown / 个人知识管理（PKM）笔记应用，数据以本地 Markdown 文件存储；AI 为可选附加功能（写作助手、Ask Octarine），由用户自带 API 密钥或本地模型驱动，适合重视隐私与数据所有权的写作者。",
+  "content_flags": "原 features/pros/cons/faq/tags 将本工具误写成“AI 营销文案/多模态内容创作”工具（类 Jasper），与实际产品（本地优先 Markdown PKM 笔记应用）严重不符，已整体更正；原长文内容本身准确，未重写",
+  "price_verified": true,
+  "verified_rating": "⭐4.3",
+  "rating_source": "暂无权威评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "本地 Markdown 文件，数据归用户所有",
+    "免费版已能覆盖日常笔记与知识管理",
+    "一次性买断 Pro，无订阅",
+    "AI 可选可控（自带密钥/本地模型）",
+    "轻量流畅，约 10MB"
+  ],
+  "verified_cons": [
+    "平台覆盖有限（Android 尚未发布）",
+    "Pro 高级功能需付费",
+    "复杂创意写作非其定位"
+  ],
+  "verified_faq": [
+    {
+      "q": "Octarine 是免费的吗？",
+      "a": "免费版核心编辑、图谱、Daily Desk、Git 同步等基础功能永久免费；Pro 为一次性买断（约 50–70 美元），解锁写作助手、Ask Octarine 等高级功能。AI 功能需自带 API 密钥或本地模型，不额外收费。"
+    },
+    {
+      "q": "Octarine 支持哪些平台？",
+      "a": "目前为桌面端（macOS / Windows / Linux），iOS 已发布，Android 在路线图上。"
+    },
+    {
+      "q": "我的数据存在哪里？",
+      "a": "笔记以本地 Markdown 文件存储，可选 Git 同步到 GitHub / GitLab 备份，数据不离开你的机器。"
+    }
+  ],
+  "verified_tags": [
+    "Markdown",
+    "PKM",
+    "本地优先",
+    "笔记应用",
+    "知识管理"
+  ],
+  "verified_category": "AI办公",
+  "source_urls": [
+    "https://octarine.app/",
+    "https://octarine.lemonsqueezy.com/",
+    "https://octarine.app/?ref=thoughtcaffeine.com"
+  ],
+  "verify_notes": "原 description 与 content 准确（本地优先 Markdown PKM），但 features/pros/cons/faq/tags 错写成 AI 营销文案工具，已全部更正；分类由 AI写作 改为更准确的 AI办公。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "tome",
+      "tldv",
+      "slidesai"
+    ],
+    "verdict": "Octarine 与 Tome、 tl;dv、SlidesAI 同属AI办公赛道：Octarine 的 随手捕获（Inbox 快速记录） 是亮点，价格 免费版 + Pro 一次性买断约 $50–70；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

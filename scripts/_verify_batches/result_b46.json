@@ -1,0 +1,126 @@
+{
+  "batch_id": "b46",
+  "category": "AI写作",
+  "tools": [
+    {
+      "slug": "jasper",
+      "name": "Jasper",
+      "url_current": "https://www.jasper.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网现行定价已无「Creator $49」套餐（该档已取消/更名）。现行付费入门为 Pro：$59/月（年付）或 $69/月（月付），Business 为定制报价。站内写的 Creator $49/月 与 Pro $69/月 中，Pro 月付价吻合，但 Creator $49 为过期/虚构档位。功能（营销文案/品牌语调/30+语言/SEO）与官网一致，URL 正确。"
+    },
+    {
+      "slug": "grammarly-ai",
+      "name": "Grammarly AI",
+      "url_current": "https://www.grammarly.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "平台标注「本地部署 / Web」错误：Grammarly 为云端 SaaS（浏览器插件+桌面/移动端），不支持本地/私有化部署。价格「基础$10/月起」无对应套餐，实际 Pro $12/月（年付）/$30（月付），Enterprise 定制；正文写的 Premium $12/月 与官网 Pro 年付价吻合，但价格字段 $10 失实。归属（Grammarly Inc.）正确。"
+    },
+    {
+      "slug": "copy.ai",
+      "name": "Copy.ai",
+      "url_current": "https://www.copy.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "价格严重失实：现行最低付费套餐为 Chat $29/月，Growth $1000/月 等，无 $10 或「Pro $49/月」套餐（正文亦写 Pro $49/月，同样错误）。平台标注「本地部署」错误（Copy.ai 为纯云端 SaaS）。归属正确。"
+    },
+    {
+      "slug": "quillbot",
+      "name": "QuillBot",
+      "url_current": "https://quillbot.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "平台标注「本地部署 / Web」错误：QuillBot 为云端 SaaS，不支持本地部署。价格字段写「免费使用」表述片面——实际有免费版（$0）+ Premium（$4.17/月 年付，约 $9.99/月 付）；正文写 Premium $9.99/月 与官网月付价吻合。功能（改写/语法/摘要/翻译/查重）与官网一致，URL 正确。"
+    },
+    {
+      "slug": "writesonic",
+      "name": "Writesonic",
+      "url_current": "https://writesonic.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "价格严重失实：官网现行套餐为 Starter $79/月起步（AI Search Visibility/SEO+GEO 平台）、Basic $199、Growth $399、Enterprise 定制，无「基础$10/月」或正文所写「Pro $16/月」套餐。平台标注 iOS/Android 未在官网核实（主网页端），存疑但不列为确证幻觉。功能与 URL 正确，归属无误。"
+    },
+    {
+      "slug": "wordtune",
+      "name": "Wordtune",
+      "url_current": "https://www.wordtune.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "价格「高级版约 $20/月」失实：官网实际 Advanced $4.89–6.99/月（年付/月付）、Unlimited $6.99–9.99/月，最高个人档仅 $9.99/月，无 $20 档。平台（Web/Chrome·Edge 扩展/iOS/Android）与归属（AI21 Labs）均正确，URL 正确。"
+    },
+    {
+      "slug": "anyword",
+      "name": "Anyword",
+      "url_current": "https://anyword.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网定价页未列出免费版（仅 Starter $39/月 年付起、Data-Driven $99/月、Business/Enterprise 定制），站内「免费版每月2000词」疑似失实（可能混淆了 7 天免费试用）。「专业版$39/月起」与 Starter 年付价吻合。功能（营销文案/表现预测/品牌语调/多语言）与官网一致。置信度中等，建议人工复核免费档。"
+    },
+    {
+      "slug": "headlime",
+      "name": "Headlime",
+      "url_current": "https://headlime.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "low",
+      "notes": "官网仍可访问且为 Headlime 官方站（未跳错站），但页面为遗留营销页、无清晰现行定价。Headlime 已于早前与 Conversion.ai（现 Jasper）合并，是否仍独立售卖、「专业版$29/月起」定价是否有效存疑，需人工裁定。功能描述（标题/广告文案生成、模板库）与官网宣传一致。无确凿幻觉证据，故 hallucination=false，但标记 conflict 待核。"
+    },
+    {
+      "slug": "rytr",
+      "name": "Rytr",
+      "url_current": "https://rytr.me",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "免费版实际每月 10K 字符（站内及正文均写 5000，偏低，属价格错误）；付费 Unlimited 约 $7.5/月（年付）起、Premium $24.16/月，与「付费版从9美元/月起」接近。但正文声称的「AI图像生成」功能官网并不存在（Products 仅浏览器扩展/My Voice/Plagiarism/API），属编造功能。URL 正确，归属无误。"
+    },
+    {
+      "slug": "jenni-ai",
+      "name": "Jenni AI",
+      "url_current": "https://jenni.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "价格完全吻合官网：Free（10 次 AI 补全/天）、Plus $12/月、Pro $29/月。功能（学术写作/改写/查重/语法检查/多语言）与官网一致。平台标注 iOS/Android 未在定价页核实（官网主网页端），未列为确证幻觉。URL 正确，无幻觉。"
+    }
+  ]
+}

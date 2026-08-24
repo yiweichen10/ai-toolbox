@@ -1,0 +1,96 @@
+{
+  "name": "Claude Agent SDK",
+  "slug": "claude-agent-sdk",
+  "positioning": "Claude Agent SDK是什么？Anthropic官方生产级Agent SDK好用吗",
+  "auto_positioning": false,
+  "emoji": "⚙️",
+  "color": "#D4A27F",
+  "description": "Claude Agent SDK 是 Anthropic 官方的生产级 Agent SDK，把驱动 Claude Code 的同一套工具、Agent 循环与上下文管理以库的形式开放，支持 Python 与 TypeScript。它内置文件读写、命令执行、网页搜索等工具，并原生支持 Hooks、子代理、MCP、权限控制、会话与技能系统，是 Anthropic 生态构建 Agent 的原生选择。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "免费可用",
+      "type": "free"
+    },
+    {
+      "text": "Anthropic官方"
+    },
+    {
+      "text": "生产级"
+    },
+    {
+      "text": "MCP"
+    }
+  ],
+  "rating": "⭐ 4.8",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://docs.anthropic.com/en/api/agent-sdk",
+  "price": "免费使用（需 Anthropic API Key，按 API 调用计费）",
+  "platform": "Python / TypeScript（跨平台）",
+  "pros": [
+    "与 Claude Code 同源，复用经过实战打磨的 Agent 循环",
+    "内置工具齐全：读写文件、执行命令、网页搜索等",
+    "原生支持 Hooks、子代理、MCP、权限、会话与技能系统",
+    "Python 与 TypeScript 双语言，可嵌入自有进程",
+    "官方长期维护，文档与示例完善"
+  ],
+  "cons": [
+    "深度绑定 Claude 模型与 Anthropic 商业条款",
+    "生产部署需自行管理沙箱与会话基础设施",
+    "品牌使用受 Anthropic 规范限制，不能冒充 Claude Code"
+  ],
+  "features": [
+    "内置工具：读取、写入、编辑文件，运行命令，搜索网页",
+    "Hooks：在 Agent 生命周期关键节点运行自定义代码",
+    "子代理：为聚焦子任务派生专门的子 Agent",
+    "MCP：通过 Model Context Protocol 连接外部工具与数据源",
+    "权限：控制哪些工具自动运行、哪些需人工审批",
+    "会话与技能：跨交换维护上下文，可恢复或分叉，自动加载 .claude/ 配置"
+  ],
+  "related": [
+    "langchain",
+    "openai",
+    "mastra"
+  ],
+  "content": "## Claude Agent SDK是什么？\n\nClaude Agent SDK 是 Anthropic 官方推出的生产级 Agent SDK。一句话概括它的定位：把驱动 Claude Code 的那套能力——工具、Agent 循环、上下文管理——打包成库，让你在自己的进程里用 Python 或 TypeScript 直接调用。换句话说，Claude Code 本身能干的事，你现在可以当作可编程组件嵌进自己的应用。官方还特意把它和 CLI、Client SDK、Managed Agents 做了区分：如果你不想自己实现工具循环，就选 Agent SDK；想跑长任务又不愿管沙箱，就去看 Managed Agents。\n\n## 核心功能\n\n1. 内置工具：开箱即用地读取、写入、编辑文件，运行命令，以及搜索网页，覆盖 Agent 最常需要的操作面。\n2. Hooks：在 Agent 生命周期的关键节点插入自定义代码，用来做日志、护栏、外部通知等，非常灵活。\n3. 子代理：针对聚焦的子任务派生专门的子 Agent，把大任务拆给更专精的角色处理。\n4. MCP：通过 Model Context Protocol 连接外部工具与数据源，文件系统、数据库、API 都能接。\n5. 权限：精细控制哪些工具自动运行、哪些必须人工审批，生产环境里这是安全底线。\n6. 会话与技能：跨多轮交换维护上下文，可随时恢复或分叉；自动从项目的 .claude/ 与 ~/.claude/ 加载技能、命令、记忆与配置，和 Claude Code 体验一致。\n\n## 版本/套餐对比\n\nSDK 本身免费使用，按调用量走 Anthropic API 计费。TypeScript SDK 把对应平台的 Claude Code 原生二进制作为可选依赖打包，无需单独安装 Claude Code。生产部署需注意：Anthropic 不允许第三方用 claude.ai 登录或转售速率限制，应使用 Quickstart 中的 API Key 认证方式。未提供分层商业定价。\n\n## 值不值得用？\n\n优点：和 Claude Code 同源，等于直接复用经过大量实战打磨的 Agent 循环，省去自己造轮子的坑；内置工具齐全、Hooks/子代理/MCP/权限/会话/技能一套全给；Python 与 TypeScript 双语言，文档与示例完善。缺点：深度绑定 Claude 模型与 Anthropic 商业条款，难以换模型；生产部署要自己管理沙箱与会话基础设施（不想管就上 Managed Agents）；品牌使用受规范限制，不能把它包装成 Claude Code。结论：如果你本就打算基于 Claude 构建单 Agent 加多子代理的应用，这是最正统、最省心的选择。\n\n## 使用建议\n\n1. 先跑官方 Quickstart，建一个能读代码、找 bug 并自动修复的最小 Agent，把链路打通。\n2. 用 Hooks 在关键节点挂日志与护栏，别等出事才补可观测。\n3. 复杂任务拆给子代理，主 Agent 负责编排与汇总。\n4. 需要外部能力时优先走 MCP，而不是在 Agent 里hardcode 调 API。\n\n## 适合谁用？\n\n推荐：想基于 Claude 构建单 Agent+多子代理应用的团队与开发者。\n可考虑：需要把 Claude 能力嵌入自有产品的工程团队（注意品牌合规）。\n不推荐：希望模型无关、随时切换多家 LLM 的团队（绑定较重）。",
+  "published": false,
+  "faq": [
+    {
+      "question": "Claude Agent SDK 和 Claude Code 是什么关系？",
+      "answer": "Agent SDK 把驱动 Claude Code 的同一套工具、Agent 循环与上下文管理以库的形式开放，可在 Python/TypeScript 中编程调用；Claude Code 是面向日常交互的终端界面。"
+    },
+    {
+      "question": "支持哪些语言？",
+      "answer": "官方提供 Python 与 TypeScript 两种 SDK；若要用其他语言驱动，可通过 CLI 以子进程方式运行并指定 JSON 输出格式。"
+    },
+    {
+      "question": "Claude Agent SDK 免费吗？",
+      "answer": "SDK 本身免费使用，但需 Anthropic API Key，按 API 调用量计费；生产环境须遵守 Anthropic 商业条款。"
+    },
+    {
+      "question": "和 Managed Agents 有什么区别？",
+      "answer": "Agent SDK 在你自己的进程里跑 Agent 循环，需自行管理沙箱与会话；Managed Agents 是托管的 REST API，由 Anthropic 运行 Agent 与沙箱，适合长任务与异步场景。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Claude Agent SDK",
+    "Claude Agent SDK怎么样",
+    "Claude Agent SDK免费版",
+    "Claude Agent SDK使用教程",
+    "Claude Agent SDK和哪个好"
+  ],
+  "source_urls": [
+    "https://console.anthropic.com/docs/en/agent-sdk/overview",
+    "https://console.anthropic.com/docs/en/agent-sdk/quickstart"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

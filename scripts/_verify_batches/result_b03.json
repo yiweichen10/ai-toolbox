@@ -1,0 +1,126 @@
+{
+  "batch_id": "b03",
+  "category": "AI编程",
+  "tools": [
+    {
+      "slug": "openhands",
+      "name": "OpenHands",
+      "url_current": "https://all-hands.ai",
+      "url_ok": false,
+      "url_correct": "https://openhands.dev",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网主站应为 openhands.dev（云端 app.all-hands.dev），all-hands.ai 两次抓取失败且搜索无官方引用，非确认主站；官方 Pro 版定价 $20/月，存储写 $19/月有误（来源：OpenHands 官方文档及第三方评测 vantaige.io/jiangren）。"
+    },
+    {
+      "slug": "langchain",
+      "name": "LangChain",
+      "url_current": "https://www.langchain.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 langchain.com 正常；LangChain 为开源框架（免费），商业产品 LangSmith Plus 起价 $39/席位/月，存储的'开源免费、付费版起价$39/月'与描述均准确（来源：langchain.com/pricing）。"
+    },
+    {
+      "slug": "coderabbit",
+      "name": "CodeRabbit",
+      "url_current": "https://www.coderabbit.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 coderabbit.ai 正常；实际付费档为 Pro $24/用户/月（年付）/$30 月付、Pro+ $48，无 $10 的 Team 档，存储'Team $10/月'定价编造（来源：coderabbit.ai/pricing）。"
+    },
+    {
+      "slug": "meticulous",
+      "name": "Meticulous",
+      "url_current": "https://meticulous.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网 meticulous.ai 正常，AI 驱动 UI 测试自动化、自动生成测试描述准确；定价不透明（官网仅'预约演示'），第三方来源有 $25/$99/$399 多种说法，$25/月 存疑但非明确编造，故不判幻觉（来源：dev.to、stackpick 等多家评测）。"
+    },
+    {
+      "slug": "bloop",
+      "name": "Bloop",
+      "url_current": "https://bloop.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "bloop.ai 为 Bloop 官网（但产品已于 2026-04 宣布停运）；描述称'2024年被Sourcegraph收购、持续更新中'均不实——Bloop 未被 Sourcegraph 收购（二者为竞品，无收购记录），且公司正在关停而非持续更新；定价 $12/用户/月 属实（来源：Sourceforge 竞品对比、nimbalyst 关停报道）。"
+    },
+    {
+      "slug": "autify",
+      "name": "Autify",
+      "url_current": "https://autify.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 autify.com 正常，AI 自动化测试平台、跨浏览器/移动端描述准确；实际付费起价为 NoCode Starter $199/月（年付$149），无 $49/月 档，存储'付费版$49/月起'定价编造（来源：nocode.autify.com/pricing）。"
+    },
+    {
+      "slug": "kilo-code",
+      "name": "Kilo Code",
+      "url_current": "https://kilocode.dev",
+      "url_ok": false,
+      "url_correct": "https://kilo.ai",
+      "hallucination": true,
+      "hallucination_fields": ["platform"],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官方站点为 kilo.ai / kilocode.ai（kilocode.dev 抓取失败且非确认主站）；平台写成'浏览器插件'不实——Kilo Code 是 VS Code/JetBrains 扩展 + CLI + 云端，并非浏览器插件（来源：kilo.ai）。免费/付费（Kilo Pass、Teams）结构基本准确。"
+    },
+    {
+      "slug": "warp-terminal",
+      "name": "Warp Terminal",
+      "url_current": "https://www.warp.dev",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 warp.dev 正常（AI 终端、Rust、已开源，描述准确）；当前付费档为 Build/Max/Business（$50/用户/月）等，无 $20/月的 Team 档，存储'团队版$20/月起'定价编造（来源：warp.dev/pricing）。"
+    },
+    {
+      "slug": "zed-editor",
+      "name": "Zed Editor",
+      "url_current": "https://zed.dev",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 zed.dev 正常（Atom 团队打造、Rust、内置 AI 协作，描述准确）；实际 Pro 版 $10/月（非 $20），基础版免费准确（来源：zed.dev/pricing）。"
+    },
+    {
+      "slug": "codex-cli",
+      "name": "Codex CLI",
+      "url_current": "https://github.com/openai/codex-cli",
+      "url_ok": false,
+      "url_correct": "https://github.com/openai/codex",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "存储 URL github.com/openai/codex-cli 返回 404（仓库不存在）；OpenAI Codex CLI 现置于官方仓库 github.com/openai/codex。描述'OpenAI 命令行编程助手'与'免费开源'均准确（来源：OpenAI 帮助中心、openai/codex 仓库）。"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "Learning Prompt",
+  "slug": "learningprompt",
+  "emoji": "💬",
+  "color": "#8b5cf6",
+  "description": "免费的AI提示词学习平台",
+  "category": "AI提示词",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI提示词"
+    },
+    {
+      "text": "Learning Prompt"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://learningprompt.wiki/",
+  "price": "免费",
+  "platform": "Web",
+  "pros": [
+    "完全免费，无需注册登录",
+    "中文友好，中英术语对照降低学习门槛",
+    "重原理和方法，培养自主设计提示词的能力",
+    "开源维护，接受社区建议与勘误",
+    "随模型迭代持续更新，案例丰富"
+  ],
+  "cons": [
+    "不提供现成提示词模板，重在教方法",
+    "目前主要覆盖 ChatGPT 和 Midjourney 两个工具",
+    "个人/社区维护，更新节奏不固定",
+    "不能替代官方文档，深入使用还需动手实验"
+  ],
+  "features": [
+    "免费中文提示词工程教程",
+    "ChatGPT与Midjourney双教程",
+    "方法论导向授人以渔",
+    "中英术语对照",
+    "实战案例优化对比",
+    "开源托管于GitHub"
+  ],
+  "related": [
+    "promptpilot",
+    "explinks-prompts",
+    "prompt-engineering-guide"
+  ],
+  "content": "## Learning Prompt 是什么？\n\nLearning Prompt 是一个免费、开源的中文 AI 提示词工程（Prompt Engineering）学习平台，官网为 learningprompt.wiki。它由一位中文开发者创立——因觉得市面优秀教程多为英文、阅读门槛高，便动手用中文写一套系统教程，以\"输出驱动输入\"的方式边学边写。\n\n与那些直接堆\"现成提示词\"的网站不同，Learning Prompt 主打\"授人以渔\"：重点讲解提示词背后的原理、方法与思考框架（角色设定、任务拆解、输出约束等），告诉你\"为什么这样写有效\"\"如何自己设计提示词\"，并提供 ChatGPT 与 Midjourney 两套完整教程。\n\n### 核心功能\n\n- **系统化教程体系**：从 AI101 基础概念到进阶技巧，分章节系统讲解 ChatGPT（文本生成）与 Midjourney（图像生成）的使用逻辑。\n- **方法论导向**：不罗列可复制的提示词，而是教\"思考框架\"，帮用户建立结构化提示词思维。\n- **中英术语对照**：关键概念附英文原文，便于用户后续查阅国际资料，衔接全球社区。\n- **实战案例解析**：通过具体例子展示提示词优化前后的效果差异，直观体现技巧价值。\n- **交互式学习体验**：部分章节附带实战演练，边学边练，在实践中验证和理解原理。\n- **持续更新与开源**：内容托管于 GitHub，随模型迭代（如 GPT-4o、Midjourney v6）补充新用法；支持读者提交建议与勘误，多语言可切换（简体中文/英文）。\n\n### 适用场景\n\n- **AI 新手系统入门**：学生、职场人想快速掌握与大模型有效沟通的基本方法，零基础也能从\"什么是 prompt\"学起。\n- **教师与培训教学**：高校或培训机构可将其作为 AI 素养课程的辅助教材。\n- **创作者与开发者提效**：程序员、设计师、自媒体人通过学习原理写出更精准的指令，告别碎片化搜索、构建完整的提示词知识框架。\n\n### 价格\n\nLearning Prompt 完全免费：无需注册、无需登录，打开网页即可阅读全部内容，遵循 CC BY-NC 4.0 知识共享许可协议。",
+  "published": true,
+  "faq": [
+    {
+      "q": "Learning Prompt 有现成的提示词可以用吗？",
+      "a": "没有。平台重在讲授提示词的原理、方法与思考框架，教你如何自己写出好提示词，而不是提供可直接复制的模板。"
+    },
+    {
+      "q": "需要付费或注册吗？",
+      "a": "完全免费，无需登录，打开网页即可阅读全部教程内容，遵循 CC BY-NC 4.0 许可。"
+    },
+    {
+      "q": "适合完全没接触过 AI 的人吗？",
+      "a": "适合。教程从\"什么是 prompt\"讲起，语言平实、无技术门槛，零基础也能跟随学习。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://learningprompt.wiki/?utm_source=ai-bot.cn",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "verify_notes": "来源 ai-bot.cn 收录页采集；官网可达性验证：HTTP 200",
+  "seo_keywords": [
+    "提示词学习",
+    "提示词工程教程",
+    "Prompt Engineering教程",
+    "ChatGPT提示词教程",
+    "Midjourney提示词教程"
+  ]
+}

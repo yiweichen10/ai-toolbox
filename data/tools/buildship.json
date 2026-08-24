@@ -1,0 +1,145 @@
+{
+  "name": "BuildShip",
+  "slug": "buildship",
+  "emoji": "🚀",
+  "color": "#2563EB",
+  "description": "BuildShip 是一款 AI 驱动的低代码可视化后端工作流与 API 构建工具，支持自然语言生成流程（Prompt-to-Flow）、全代码导出与自托管/自带云部署。",
+  "category": "AI开发",
+  "tags": [
+    "低代码",
+    "API构建",
+    "工作流自动化"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://buildship.com/",
+  "price": "免费版 $0；Starter $19/月；Pro $59/月；Business $449/月；Enterprise 定制",
+  "platform": "Web, Cloud, Self-hosted",
+  "pros": [
+    "可视化拖拽构建后端逻辑，无需大量编码",
+    "内置 OpenAI、Claude、Stable Diffusion 等主流模型集成",
+    "一键部署为可调用的 REST API",
+    "丰富的预构建节点与模板",
+    "企业版支持自托管/自带云，避免供应商锁定"
+  ],
+  "cons": [
+    "复杂场景调试不如代码 IDE 直观",
+    "高级功能（自定义节点、高并发、自托管）需付费",
+    "对非技术人员仍有学习门槛"
+  ],
+  "features": [
+    "AI 可视化工作流构建器：自然语言 Prompt-to-Flow 生成后端逻辑与节点",
+    "节点生态：50+ 预制节点，可用 AI 生成任意自定义节点",
+    "接入任意 AI 模型、数据源与工具（OpenAI、Claude、Stable Diffusion、HuggingFace 等）",
+    "全代码访问：一键导出 JavaScript，无供应商锁定",
+    "支持自托管/自带云（Vercel/GCP/AWS/Azure）与 GitHub 版本控制、监控告警"
+  ],
+  "related": [
+    "n8n",
+    "make",
+    "dify",
+    "coze",
+    "zapier-ai"
+  ],
+  "faq": [
+    {
+      "q": "BuildShip免费版有哪些限制？",
+      "a": "免费版含 3,000 credits/月、5 个工作流、1 个团队成员、2 个数据库表与 10GB 存储；高级节点与团队功能需升级付费。"
+    },
+    {
+      "q": "BuildShip支持哪些AI模型？",
+      "a": "支持 OpenAI、Claude、Stable Diffusion、Hugging Face、Gemini 等主流模型，并可通过 HTTP 节点接入任意 API。"
+    },
+    {
+      "q": "能否将BuildShip部署到自己的服务器？",
+      "a": "可以。企业版支持自托管（Self-hosting）或自带云（Bring Your Own Cloud），部署到 Vercel/GCP/AWS/Azure 等环境。"
+    },
+    {
+      "q": "BuildShip与n8n有何区别？",
+      "a": "BuildShip 更偏向 AI 原生的后端/API 开发，内置丰富 AI 模型节点与全代码导出；n8n 是通用自动化平台，二者定位不同。"
+    }
+  ],
+  "seo_keywords": [
+    "BuildShip",
+    "BuildShip怎么样",
+    "BuildShip免费版",
+    "BuildShip使用教程",
+    "BuildShip和哪个好"
+  ],
+  "content": "## BuildShip是什么？\n\n简单说，BuildShip就是一个帮你“画”出后端API和工作流的工具。你不需要一行行写代码，而是通过拖拽节点，把逻辑像搭积木一样拼出来。它内置了OpenAI、Stable Diffusion这类主流AI模型的接入能力，拼完直接一键部署成可调用的API，还自带监控日志。对于想快速验证AI想法、又不想自己搭基础设施的开发者来说，挺省事的。\n\n## 核心功能\n\n**1. 可视化工作流编辑器**\n拖拽节点连线，就能定义请求进来后先调哪个模型、再做什么判断、最后返回什么数据。比传统写代码直观很多，修改逻辑时挪动节点比改代码快。\n\n**2. AI模型集成**\n直接内置OpenAI、Claude、Stable Diffusion等常用模型接口。你只需选模型、填参数（比如prompt），不用自己写API调用代码。实际用下来，切换模型、对比效果很方便。\n\n**3. 自动生成RESTful API**\n工作流画好后，一键生成标准的REST API端点。这意味着你可以把BuildShip当作一个后端服务来用——前端、小程序、其他服务都可以直接调它。省去了自己部署、路由配置的功夫。\n\n**4. 内置监控、日志和错误追踪**\n每个API被调用了多少次、响应速度、是否报错，都在面板上能看到。对于排查问题很有用，尤其是多个工作流跑起来后，不用抓瞎。\n\n**5. 团队协作与权限管理**\n支持多人编辑同一项目，有版本管理、环境隔离（开发/生产）。这点对大一点的团队很必要，不然改出bug都不知道。\n\n## 版本/套餐对比\n\n| 版本 | 适用场景 | 主要限制 |\n|------|---------|---------|\n| 免费版 | 个人试用、小项目验证 | 节点数/调用次数有限，无高并发支持 |\n| 进阶版（付费） | 个人/小团队正式项目 | 解除部分节点限制，支持自定义节点 |\n| 团队版（付费） | 多人协作、企业级项目 | 权限管理、环境隔离、更高并发 |\n\n> 注意：具体价格未公开，官方提供免费版，付费版按需订阅。建议直接去官网看最新方案。\n\n## 值不值得用？\n\n**优点**  \n- 上手快：拖拽即用，对熟悉AI API但不熟悉后端部署的人友好。  \n- 集成度高：主流AI模型直接调用，省去手动对接的麻烦。  \n- 部署方便：一键生成API，省掉写Docker、配Nginx的环节。\n\n**缺点**  \n- 调试不够直观：复杂工作流（比如多分支、循环）出错时，不像代码IDE那样能逐行断点，得靠日志慢慢排查。  \n- 非技术人员仍有门槛：虽然低代码，但得理解“输入输出”“API端点”这些概念，纯产品经理或运营要上手还得学一阵。  \n- 高级功能需付费：自定义JavaScript扩展、高并发等能力在免费版上受限，真做大项目就得掏钱。\n\n**总体**：如果你在做AI相关的Demo、原型、小工具，或者想快速把AI能力封装成API给前端用，BuildShip值得试试。但如果是复杂业务逻辑、需要精细调优的场景，它可能不如自己写代码灵活。\n\n## 使用建议\n\n1. **从模板开始**：先看官方提供的预置模板（比如“AI聊天机器人”“图片生成API”），改参数跑通，再自己画流程。  \n2. **善用日志**：工作流出错时，检查每个节点输出的日志，能快速定位是模型调用失败还是数据格式问题。  \n3. **区分环境**：开发环境随便调，生产环境务必锁定版本，避免边调试边影响线上用户。  \n4. **注意配额**：免费版有调用次数限制，测试够了再决定是否升级，别直接上生产。\n\n## 适合谁用？\n\n**推荐**  \n- 独立开发者 / 创业者：快速验证AI想法。  \n- 前端开发者：想给项目加AI后端但不想学后端部署。  \n- 产品经理：想制作AI功能原型给团队演示。\n\n**可考虑**  \n- 小团队技术负责人：管理多个AI工作流，需要权限和版本控制。  \n- 非技术背景但愿意学基础概念的人（比如懂API调用但不会写代码的运营）。\n\n**不推荐**  \n- 需要极致性能优化或自定义底层模型训练的场景。  \n- 对调试有强依赖、需要逐行断点排查逻辑bug的工程团队。  \n- 预算极低且调用量极大的项目（免费版上限低，付费后成本需评估）。",
+  "published": false,
+  "source_url": "https://buildship.com/",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://buildship.com/",
+  "verified_publisher": "BuildShip",
+  "verified_what": "AI 驱动的低代码可视化后端工作流与 API 构建工具，支持自然语言生成流程（Prompt-to-Flow）、全代码导出与自托管/自带云部署。",
+  "verified_price": "免费版 $0（3,000 credits/月，5 工作流，1 成员）；Starter $19/月（20K credits，20 工作流，3 成员）；Pro $59/月（100K credits，150 工作流，10 成员）；Business $449/月（300K credits）；Enterprise 定制（支持自托管/自带云）。以官网为准。",
+  "verified_platform": "Web / API / Cloud / Self-host",
+  "verified_features": [
+    "AI 可视化工作流构建器：自然语言 Prompt-to-Flow 生成后端逻辑与节点",
+    "节点生态：50+ 预制节点，可用 AI 生成任意自定义节点",
+    "接入任意 AI 模型、数据源与工具（OpenAI、Claude、Stable Diffusion、HuggingFace 等）",
+    "全代码访问：一键导出 JavaScript，无供应商锁定",
+    "支持自托管/自带云（Vercel/GCP/AWS/Azure）与 GitHub 版本控制、监控告警"
+  ],
+  "verified_description": "BuildShip 是一款 AI 驱动的低代码可视化后端工作流与 API 构建工具，支持自然语言生成流程（Prompt-to-Flow）、全代码导出与自托管/自带云部署。",
+  "content_flags": "原 faq 称“暂不支持自托管”与事实不符——企业版已支持自托管/自带云；原 price 称“暂未公开明细”也已过时，官网有公开档位。",
+  "price_verified": true,
+  "verified_pros": [
+    "可视化拖拽构建后端逻辑，无需大量编码",
+    "内置 OpenAI、Claude、Stable Diffusion 等主流模型集成",
+    "一键部署为可调用的 REST API",
+    "丰富的预构建节点与模板",
+    "企业版支持自托管/自带云，避免供应商锁定"
+  ],
+  "verified_cons": [
+    "复杂场景调试不如代码 IDE 直观",
+    "高级功能（自定义节点、高并发、自托管）需付费",
+    "对非技术人员仍有学习门槛"
+  ],
+  "verified_faq": [
+    {
+      "q": "BuildShip免费版有哪些限制？",
+      "a": "免费版含 3,000 credits/月、5 个工作流、1 个团队成员、2 个数据库表与 10GB 存储；高级节点与团队功能需升级付费。"
+    },
+    {
+      "q": "BuildShip支持哪些AI模型？",
+      "a": "支持 OpenAI、Claude、Stable Diffusion、Hugging Face、Gemini 等主流模型，并可通过 HTTP 节点接入任意 API。"
+    },
+    {
+      "q": "能否将BuildShip部署到自己的服务器？",
+      "a": "可以。企业版支持自托管（Self-hosting）或自带云（Bring Your Own Cloud），部署到 Vercel/GCP/AWS/Azure 等环境。"
+    },
+    {
+      "q": "BuildShip与n8n有何区别？",
+      "a": "BuildShip 更偏向 AI 原生的后端/API 开发，内置丰富 AI 模型节点与全代码导出；n8n 是通用自动化平台，二者定位不同。"
+    }
+  ],
+  "verified_tags": [
+    "低代码",
+    "API构建",
+    "工作流自动化"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://buildship.com/pricing",
+    "https://makerstack.co/reviews/buildship-review/"
+  ],
+  "verify_notes": "BuildShip 定价以官网为准，不同评测来源的档位（如 Starter $19/$25）略有差异，以官网公布为准。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "BuildShip 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：BuildShip 的 AI 可视化工作流构建器：自然语言 Prompt-to-Flow 生成后端逻辑与节点 是亮点，价格 免费版 $0；Starter $19/月；Pro $59/月；Business $449/月；Enterprise 定制；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

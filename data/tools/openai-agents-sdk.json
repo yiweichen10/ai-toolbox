@@ -1,0 +1,165 @@
+{
+  "name": "OpenAI Agents SDK",
+  "slug": "openai-agents-sdk",
+  "positioning": "MCP集成+Agent原语：免费AI智能体平台怎么用",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#10A37F",
+  "description": "OpenAI Agents SDK是OpenAI于2025年3月发布的官方多智能体开发框架(MIT许可)，替代实验项目Swarm。提供Agent、Handoffs、Guardrails和Tracing四大核心原语，支持Python和TypeScript。2026年4月新增Sandbox Agents实现容器隔离执行。截至2026年中为v0.x，GitHub星标27,000+。",
+  "category": "AI智能体",
+  "tags": [
+    "多智能体框架",
+    "AI Agent开发",
+    "OpenAI生态",
+    "任务编排",
+    "开源框架",
+    "MCP协议"
+  ],
+  "rating": "4.7",
+  "visits": "85万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://platform.openai.com/docs/agents",
+  "price": "SDK免费开源(MIT) / API按OpenAI标准token计费",
+  "platform": "Python、Node.js、REST API",
+  "pros": [
+    "OpenAI官方维护，与前沿模型深度优化绑定",
+    "极简API设计(Agent/Handoffs/Guardrails三大原语)，学习曲线平坦",
+    "免费内建追踪和可视化调试，零配置即可使用",
+    "MCP协议原生支持，生态扩展性强",
+    "2026年Sandbox Agents更新解决生产级安全隔离问题"
+  ],
+  "cons": [
+    "OpenAI生态锁定倾向(Responses API、托管工具为OpenAI独有)",
+    "仍为v0.x(截至2026年6月v0.17.5)，API可能变更",
+    "非OpenAI模型支持为二等公民(LiteLLM集成标记beta)",
+    "无商业支持层或SLA，生产运维全靠自己",
+    "默认追踪上传至OpenAI后端，零数据保留策略组织不可用"
+  ],
+  "features": [
+    "Agent原语: 定义LLM agent(指令+工具)，4行代码创建最小agent",
+    "Handoffs(代理交接): Agent间基于意图自动路由委托",
+    "Guardrails(护栏): 输入/输出验证，可暂停或重定向执行",
+    "Sandbox Agents(2026年4月更新): 容器隔离执行，检查文件/运行命令/编辑代码",
+    "MCP集成: 原生支持Model Context Protocol服务器",
+    "OpenTelemetry追踪: 免费内建追踪至OpenAI仪表盘，支持25+外部处理器"
+  ],
+  "related": [
+    "claude-code",
+    "openai-codex",
+    "langchain",
+    "langgraph",
+    "crew-ai"
+  ],
+  "faq": [
+    {
+      "q": "OpenAI Agents SDK是什么时候发布的？",
+      "a": "2025年3月15日正式发布，是OpenAI官方多智能体开发框架，取代了此前的实验项目Swarm。2024年底并未发布——这是常见误解(可能与Swarm实验项目混淆)。"
+    },
+    {
+      "q": "最新版本是多少？",
+      "a": "截至2026年6月，Python SDK版本为v0.17.5，TypeScript版本为v0.8.5。目前仍为v0.x未达到稳定版1.0。条目中'v2.4版本'的说法完全错误。"
+    },
+    {
+      "q": "和LangChain/LangGraph哪个好？",
+      "a": "Agents SDK更轻量、OpenAI模型体验最优，适合OpenAI深度集成项目；LangGraph提供更多模型选择和图形化工作流控制(含循环工作流和时间旅行调试)，但学习曲线更陡。"
+    },
+    {
+      "q": "支持哪些编程语言？",
+      "a": "Python(主要)和TypeScript/Node.js。Sandbox Agents功能目前仅Python可用，TypeScript计划中但无具体时间表。"
+    }
+  ],
+  "seo_keywords": [
+    "OpenAI Agents SDK",
+    "OpenAI Agents SDK使用方法",
+    "AI代理开发框架对比",
+    "OpenAI Agents SDK价格",
+    "如何构建AI代理"
+  ],
+  "content": "## OpenAI Agents SDK 是什么？\n\nOpenAI Agents SDK是OpenAI官方发布的轻量级生产级多智能体开发框架(MIT许可)，于2025年3月发布(替代实验项目Swarm)，提供Agent定义、Handoffs(代理交接)、Guardrails(护栏)、Tracing(追踪)核心原语，支持Python和TypeScript。\n\nOpenAI Agents SDK是OpenAI于2025年3月发布的官方多智能体开发框架(MIT许可)，替代实验项目Swarm。提供Agent、Handoffs、Guardrails和Tracing四大核心原语，支持Python和TypeScript。2026年4月新增Sandbox Agents实现容器隔离执行。截至2026年中为v0.x，GitHub星标27,000+。\n\n## 核心功能\n\n- Agent原语: 定义LLM agent(指令+工具)，4行代码创建最小agent\n- Handoffs(代理交接): Agent间基于意图自动路由委托\n- Guardrails(护栏): 输入/输出验证，可暂停或重定向执行\n- Sandbox Agents(2026年4月更新): 容器隔离执行，检查文件/运行命令/编辑代码\n- MCP集成: 原生支持Model Context Protocol服务器\n- OpenTelemetry追踪: 免费内建追踪至OpenAI仪表盘，支持25+外部处理器\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | SDK本身免费开源(MIT许可证)。API调用按标准OpenAI定价计费: 以token和工具使用量为基础。无商业支持层或企业版额外费用。沙盒Agent功能需容器基础设施(自带或使用Blaxel/Cloudflare/Daytona/E2B等内置支持)。 |\n| 支持平台 | Python SDK / TypeScript(JS) SDK / REST API |\n| 评分 | 4.7 |\n| 开发商 | OpenAI |\n\n## 价格与平台\n\n- **价格**：SDK本身免费开源(MIT许可证)。API调用按标准OpenAI定价计费: 以token和工具使用量为基础。无商业支持层或企业版额外费用。沙盒Agent功能需容器基础设施(自带或使用Blaxel/Cloudflare/Daytona/E2B等内置支持)。\n- **平台**：Python SDK / TypeScript(JS) SDK / REST API\n- **官网**：https://platform.openai.com/docs/agents\n\n## 优缺点分析\n\n### 优点\n\n- OpenAI官方维护，与前沿模型深度优化绑定\n- 极简API设计(Agent/Handoffs/Guardrails三大原语)，学习曲线平坦\n- 免费内建追踪和可视化调试，零配置即可使用\n- MCP协议原生支持，生态扩展性强\n- 2026年Sandbox Agents更新解决生产级安全隔离问题\n\n### 缺点\n\n- OpenAI生态锁定倾向(Responses API、托管工具为OpenAI独有)\n- 仍为v0.x(截至2026年6月v0.17.5)，API可能变更\n- 非OpenAI模型支持为二等公民(LiteLLM集成标记beta)\n- 无商业支持层或SLA，生产运维全靠自己\n- 默认追踪上传至OpenAI后端，零数据保留策略组织不可用\n\n## 常见问题（FAQ）\n\n**OpenAI Agents SDK是什么时候发布的？**\n\n2025年3月15日正式发布，是OpenAI官方多智能体开发框架，取代了此前的实验项目Swarm。2024年底并未发布——这是常见误解(可能与Swarm实验项目混淆)。\n\n**最新版本是多少？**\n\n截至2026年6月，Python SDK版本为v0.17.5，TypeScript版本为v0.8.5。目前仍为v0.x未达到稳定版1.0。条目中'v2.4版本'的说法完全错误。\n\n**和LangChain/LangGraph哪个好？**\n\nAgents SDK更轻量、OpenAI模型体验最优，适合OpenAI深度集成项目；LangGraph提供更多模型选择和图形化工作流控制(含循环工作流和时间旅行调试)，但学习曲线更陡。\n\n**支持哪些编程语言？**\n\nPython(主要)和TypeScript/Node.js。Sandbox Agents功能目前仅Python可用，TypeScript计划中但无具体时间表。\n\n\n## 最终结论\n\nOpenAI Agents SDK 是AI智能体领域的一款 AI 工具，其核心优势在于OpenAI官方维护，与前沿模型深度优化绑定。\n此外，极简API设计(Agent/Handoffs/Guardrails三大原语)，学习曲线平坦。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-06-24",
+  "published_date": "2026-06-24",
+  "verified_url": "https://platform.openai.com/docs/agents",
+  "verified_publisher": "OpenAI",
+  "verified_what": "OpenAI Agents SDK是OpenAI官方发布的轻量级生产级多智能体开发框架(MIT许可)，于2025年3月发布(替代实验项目Swarm)，提供Agent定义、Handoffs(代理交接)、Guardrails(护栏)、Tracing(追踪)核心原语，支持Python和TypeScript。",
+  "verified_price": "SDK本身免费开源(MIT许可证)。API调用按标准OpenAI定价计费: 以token和工具使用量为基础。无商业支持层或企业版额外费用。沙盒Agent功能需容器基础设施(自带或使用Blaxel/Cloudflare/Daytona/E2B等内置支持)。",
+  "verified_platform": "Python SDK / TypeScript(JS) SDK / REST API",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "Agent原语: 定义LLM agent(指令+工具)，4行代码创建最小agent",
+    "Handoffs(代理交接): Agent间基于意图自动路由委托",
+    "Guardrails(护栏): 输入/输出验证，可暂停或重定向执行",
+    "Sandbox Agents(2026年4月更新): 容器隔离执行，检查文件/运行命令/编辑代码",
+    "MCP集成: 原生支持Model Context Protocol服务器",
+    "OpenTelemetry追踪: 免费内建追踪至OpenAI仪表盘，支持25+外部处理器"
+  ],
+  "verified_description": "OpenAI Agents SDK是OpenAI于2025年3月发布的官方多智能体开发框架(MIT许可)，替代实验项目Swarm。提供Agent、Handoffs、Guardrails和Tracing四大核心原语，支持Python和TypeScript。2026年4月新增Sandbox Agents实现容器隔离执行。截至2026年中为v0.x，GitHub星标27,000+。",
+  "content_flags": "1) 致命错误: 发布时间'2024年底'→实际2025年3月15日; 2) 致命错误: 版本'v2.4'→实际v0.17.x; 3) Release版本描述完全虚构(v2.4不存在); 4) 定价'GPT-4o代理API $15/百万token'过于简化; 5) 未提及2026年4月重大更新(Sandbox Agents); 6) 未提及Swarm项目前身",
+  "price_verified": true,
+  "verified_rating": "4.7",
+  "rating_source": "GitHub星标(~27K)与开发者社区评价",
+  "rating_verified": true,
+  "verified_pros": [
+    "OpenAI官方维护，与前沿模型深度优化绑定",
+    "极简API设计(Agent/Handoffs/Guardrails三大原语)，学习曲线平坦",
+    "免费内建追踪和可视化调试，零配置即可使用",
+    "MCP协议原生支持，生态扩展性强",
+    "2026年Sandbox Agents更新解决生产级安全隔离问题"
+  ],
+  "verified_cons": [
+    "OpenAI生态锁定倾向(Responses API、托管工具为OpenAI独有)",
+    "仍为v0.x(截至2026年6月v0.17.5)，API可能变更",
+    "非OpenAI模型支持为二等公民(LiteLLM集成标记beta)",
+    "无商业支持层或SLA，生产运维全靠自己",
+    "默认追踪上传至OpenAI后端，零数据保留策略组织不可用"
+  ],
+  "verified_faq": [
+    {
+      "q": "OpenAI Agents SDK是什么时候发布的？",
+      "a": "2025年3月15日正式发布，是OpenAI官方多智能体开发框架，取代了此前的实验项目Swarm。2024年底并未发布——这是常见误解(可能与Swarm实验项目混淆)。"
+    },
+    {
+      "q": "最新版本是多少？",
+      "a": "截至2026年6月，Python SDK版本为v0.17.5，TypeScript版本为v0.8.5。目前仍为v0.x未达到稳定版1.0。条目中'v2.4版本'的说法完全错误。"
+    },
+    {
+      "q": "和LangChain/LangGraph哪个好？",
+      "a": "Agents SDK更轻量、OpenAI模型体验最优，适合OpenAI深度集成项目；LangGraph提供更多模型选择和图形化工作流控制(含循环工作流和时间旅行调试)，但学习曲线更陡。"
+    },
+    {
+      "q": "支持哪些编程语言？",
+      "a": "Python(主要)和TypeScript/Node.js。Sandbox Agents功能目前仅Python可用，TypeScript计划中但无具体时间表。"
+    }
+  ],
+  "verified_tags": [
+    "多智能体框架",
+    "AI Agent开发",
+    "OpenAI生态",
+    "任务编排",
+    "开源框架",
+    "MCP协议"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://openai.com/index/the-next-evolution-of-the-agents-sdk/",
+    "https://vantaige.io/ai-tool/openai-agents-sdk",
+    "https://rywalker.com/research/openai-agents-sdk",
+    "https://openlinksw.com/data/html/openai-agents-sdk-next-evolution-infographic.html"
+  ],
+  "verify_notes": "两个严重事实错误: (1) 发布时间不是2024年底而是2025年3月; (2) 版本号不是v2.4而是v0.17.x。这两个是AI生成幻觉的典型表现。整个'截至2026年已迭代至v2.4版本'的描述完全虚构。条目整体方向(功能描述、生态定位)基本正确但需要纠正时间线和版本号。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "crew-ai",
+      "metagpt",
+      "qwen-agent"
+    ],
+    "verdict": "OpenAI Agents SDK 与 CrewAI、MetaGPT、Qwen-Agent 同属AI智能体赛道。在性价比上，OpenAI Agents SDK（SDK免费开源(MIT) / API按OpenAI标准token计费）门槛更低；口碑方面，OpenAI Agents SDK（4.7）领先；OpenAI Agents SDK 的优势在于OpenAI Agents SDK是OpenAI官方发布的轻量级生产级多智能体开发框架(MIT许可)，于2025年3月发，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

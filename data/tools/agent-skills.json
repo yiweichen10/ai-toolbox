@@ -1,0 +1,141 @@
+{
+  "name": "agent-skills",
+  "slug": "agent-skills",
+  "positioning": "免费AI智能体平台，领域专长封装+跨产品复用好用吗",
+  "auto_positioning": true,
+  "emoji": "🧠",
+  "color": "#6C5CE7",
+  "description": "Agent Skills 是 Anthropic 发布的开放标准，用 SKILL.md 格式把指令、脚本与资源打包成可复用、跨平台的「技能」，让 AI 智能体按需加载领域能力；本身是免费规范，而非商业 SaaS 平台。",
+  "category": "AI智能体",
+  "tags": [
+    "AI智能体",
+    "开放标准",
+    "SKILL.md",
+    "技能组件",
+    "Agent"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "230万/月",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://agentskills.io",
+  "price": "免费开放标准",
+  "platform": "Web、iOS、Android",
+  "pros": [
+    "完全免费、开放的规范",
+    "跨工具复用，避免被单一产品锁定",
+    "按需加载，节省上下文 token",
+    "生态广泛采纳，社区共建"
+  ],
+  "cons": [
+    "是「知识包」而非运行时插件，不替你连外部 API/数据库（需配合 MCP）",
+    "需理解 SKILL.md 格式才能编写",
+    "具体兼容客户端（如 Claude、Cursor）可能有各自订阅，但标准本身免费"
+  ],
+  "features": [
+    "领域专长封装（法律/数据分析/排版等）",
+    "可重复工作流固化",
+    "跨产品复用（一次编写，多处运行）",
+    "渐进式披露（发现→激活→执行，未用到的技能不占 token）",
+    "SKILL.md 规范（name/description/license/compatibility 等）",
+    "与 MCP 互补（Skills 分享知识，MCP 连接工具）"
+  ],
+  "related": [
+    "dify",
+    "coze",
+    "n8n"
+  ],
+  "faq": [
+    {
+      "q": "Agent Skills 收费吗？",
+      "a": "不收费。它是 Anthropic 发布的免费开放标准，规范文档、示例技能库与校验工具均对所有人开放。"
+    },
+    {
+      "q": "Agent Skills 和 Dify、Coze 有什么区别？",
+      "a": "Agent Skills 是一套让智能体「在需要时能调用正确知识」的打包与分发格式/标准，而非托管式 SaaS 平台；Dify 偏企业级工作流，Coze 偏 C 端对话机器人。"
+    },
+    {
+      "q": "哪些工具支持 Agent Skills？",
+      "a": "Claude Code、Cursor、VS Code、OpenAI Codex、Gemini CLI、GitHub Copilot、Amp、Roo Code、Goose 等均已采纳该规范。"
+    }
+  ],
+  "seo_keywords": [
+    "agent-skills",
+    "agent-skills免费版",
+    "agent-skills怎么样",
+    "agent-skills和Dify哪个好",
+    "AI智能体技能平台推荐"
+  ],
+  "content": "## agent-skills 是什么？\nAgent Skills 是 Anthropic 最初开发并作为开放标准发布的一套轻量级格式，用来给 AI 智能体“扩展能力”。它的核心思想很简单：把一个技能做成一个文件夹，里面至少要有一份 SKILL.md 文件，写上这个技能是做什么的、什么时候该用，以及具体的操作指引；还可以带上 scripts/、references/、assets/ 等目录，把可执行的代码、参考文档和模板一起打包。智能体在启动时只会先看到每个技能的名字和一句话描述，等真正遇到匹配的任务时，才把完整的 SKILL.md 读进上下文去执行——这种“按需加载”的设计让它既能挂很多技能，又不会一直占着上下文。换句话说，Agent Skills 不是又一个聊天机器人，而是一套让智能体“在需要时能调用正确知识”的打包与分发方式。\n\n## 核心功能\n- 打包领域专长：把法律审查流程、数据分析流水线、演示文稿排版这类专业知识写成可复用的指令和资源，一次写好，到处可用。\n- 固化可重复工作流：把多步骤任务变成一致、可审计的流程，团队成员照着做就不会走样。\n- 跨产品复用：同一个技能可以在所有支持 Agent Skills 的客户端里运行，作者写一次，Claude、Cursor、VS Code、Codex 等都能用。\n- 渐进式披露：分“发现—激活—执行”三步加载，未用到的技能不消耗 token，效率更高。\n- 与 MCP 互补：Skills 负责“分享知识”，MCP 负责“连接外部工具”，两者定位不同、可以配合使用。\n\n## SKILL.md 与规范细节\n一个标准的技能至少包含 name 和 description 两个字段：name 是小写字母、数字和连字符组成的标识符，最长 64 字符，且要和父文件夹同名；description 则要用一两句话讲清这个技能“做什么、何时用”，并带上能帮智能体识别任务的关键词，因为它直接决定模型会不会在众多技能里选中这一个。除此之外，作者还能声明 license（许可证）、compatibility（运行环境要求，如需要哪些系统包或网络访问）、metadata（自定义键值）和 allowed-tools（预批准的工具有哪些）。这种结构化的元信息，让技能既能被人读懂，也能被智能体可靠地自动匹配。\n\n## 与规则、命令的区别\n很多人会把 Skills、AGENTS.md 和命令（command）搞混。简单区分：规则是“永远要这样做”的全局约束，每次都加载；AGENTS.md 是“这个项目怎么运作”的约定，也是每次都加载；而技能是“这件事怎么做”的模块化能力，按需加载。判断标准很直接——如果希望它应用到每一个任务，那就是规则；如果只是某个具体任务才需要，那就是技能。也正因如此，技能不会像规则那样污染每一次对话的上下文。\n\n## 采用与生态\nAgent Skills 的规范在 agentskills.io 上提供完整的 specification 页面、GitHub 仓库与社区讨论渠道，并对整个生态开放贡献。它已经被一众主流 AI 开发工具采纳，包括 Claude Code、Cursor、OpenAI Codex、Gemini CLI、VS Code、GitHub Copilot、Amp、Roo Code、Goose 等。对企业与团队而言，它最大的价值在于把组织知识沉淀成“可移植、可版本化”的技能包——一次写好，就能在多个兼容产品间复用，而不是锁死在某一个工具里。\n\n## 一个小提醒\nAgent Skills 是“知识包”而不是“插件”——它本身不替你连外部 API 或数据库，那属于 MCP（模型上下文协议）的范畴。把两者配合好，才能让智能体既懂方法、又能动手。理解这个边界，才能正确判断什么时候该写技能、什么时候该接 MCP。\n\n## 定价\nAgent Skills 本身是免费、开放的规范。官方提供了完整的 SKILL.md 规范文档、快速上手教程、示例技能库，以及一个用来校验技能、生成提示词 XML 的参考工具库，这些都对所有人开放，使用不收取费用。需要注意的是，具体某个智能体产品（比如 Claude、Cursor）本身可能有自己的订阅或计费，但 Agent Skills 这套格式和工具不额外收费。\n\n## 适合谁\n- 想把自己团队的流程、规范沉淀成“可复用能力包”的企业与团队。\n- 开发 AI 智能体、IDE 插件或 Agent 产品的工程师，希望给产品加上技能系统。\n- 个人开发者，想把常用任务（比如处理 PDF、生成发布说明）封装成技能，跨工具通用。\n\n## 小结\nAgent Skills 的价值在于它把“怎么做好一件事”从一次性提示词，变成了可版本化、可共享、可跨产品复用的能力包。它不是直接面向终端用户的 App，而是一套底层标准；如果你在用 Claude、Cursor 或 VS Code 这类工具，很可能已经在不知不觉中受益了。",
+  "published": true,
+  "created_date": "2026-07-17",
+  "published_date": "2026-07-17",
+  "verified_url": "https://agentskills.io",
+  "verified_publisher": "Anthropic（后由开源社区共同维护）",
+  "verified_what": "Agent Skills 是 Anthropic 最初开发并作为开放标准发布的轻量级格式，用 SKILL.md 把指令、脚本与资源打包成可复用、跨产品的「技能」，让 AI 智能体按需加载领域能力。",
+  "verified_price": "免费开放标准（规范、文档、示例技能库与校验工具均免费，使用不收取费用）。",
+  "verified_platform": "跨平台规范；兼容 Claude Code、Cursor、VS Code、OpenAI Codex、Gemini CLI、GitHub Copilot 等支持 Agent Skills 的客户端。",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "领域专长封装（法律/数据分析/排版等）",
+    "可重复工作流固化",
+    "跨产品复用（一次编写，多处运行）",
+    "渐进式披露（发现→激活→执行，未用到的技能不占 token）",
+    "SKILL.md 规范（name/description/license/compatibility 等）",
+    "与 MCP 互补（Skills 分享知识，MCP 连接工具）"
+  ],
+  "verified_description": "Agent Skills 是 Anthropic 发布的开放标准，用 SKILL.md 格式把指令、脚本与资源打包成可复用、跨平台的「技能」，让 AI 智能体按需加载领域能力；本身是免费规范，而非商业 SaaS 平台。",
+  "content_flags": "原 pros/cons/features/faq 将 Agent Skills 描述为一个带调用额度、技能交易市场的商业 SaaS 平台（500+ 预置技能、免费版每月 100 次调用、社区技能买卖等），但 Agent Skills 实为 Anthropic 的免费开放标准，无 SaaS、无按量计费。已据官网订正。",
+  "verified_pros": [
+    "完全免费、开放的规范",
+    "跨工具复用，避免被单一产品锁定",
+    "按需加载，节省上下文 token",
+    "生态广泛采纳，社区共建"
+  ],
+  "verified_cons": [
+    "是「知识包」而非运行时插件，不替你连外部 API/数据库（需配合 MCP）",
+    "需理解 SKILL.md 格式才能编写",
+    "具体兼容客户端（如 Claude、Cursor）可能有各自订阅，但标准本身免费"
+  ],
+  "verified_faq": [
+    {
+      "q": "Agent Skills 收费吗？",
+      "a": "不收费。它是 Anthropic 发布的免费开放标准，规范文档、示例技能库与校验工具均对所有人开放。"
+    },
+    {
+      "q": "Agent Skills 和 Dify、Coze 有什么区别？",
+      "a": "Agent Skills 是一套让智能体「在需要时能调用正确知识」的打包与分发格式/标准，而非托管式 SaaS 平台；Dify 偏企业级工作流，Coze 偏 C 端对话机器人。"
+    },
+    {
+      "q": "哪些工具支持 Agent Skills？",
+      "a": "Claude Code、Cursor、VS Code、OpenAI Codex、Gemini CLI、GitHub Copilot、Amp、Roo Code、Goose 等均已采纳该规范。"
+    }
+  ],
+  "verified_tags": [
+    "AI智能体",
+    "开放标准",
+    "SKILL.md",
+    "技能组件",
+    "Agent"
+  ],
+  "verified_category": "AI智能体",
+  "conflict_note": "描述与详细内容（开放标准/SKILL.md）准确；但 pros/cons/features/faq 描述的是一个不存在的 SaaS 平台（调用限额、技能市场、定价），属虚构，已据 agentskills.io 订正 verified_*。",
+  "source_urls": [
+    "https://agentskills.io"
+  ],
+  "verify_notes": "建议补充更多独立来源（GitHub 仓库/文档站）以强化交叉验证；核心结论明确：免费开放标准，无商业订阅。",
+  "content_verified": true,
+  "price_verified": true,
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "agent-skills 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：agent-skills 的 领域专长封装（法律/数据分析/排版等） 是亮点，价格 免费开放标准；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

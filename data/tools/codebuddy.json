@@ -1,0 +1,186 @@
+{
+  "name": "CodeBuddy",
+  "name_cn": "CodeBuddy（腾讯云代码助手）",
+  "slug": "codebuddy",
+  "emoji": "💻",
+  "color": "#0052D9",
+  "description": "腾讯云代码助手 CodeBuddy（Code Where You Build）——AI 时代的智能编程伙伴，基于 AI 的全流程智能编程工具，打通从自然语言需求、设计稿到代码研发、一键部署上线的完整链路，提供 IDE、插件、CodeBuddy Code（CLI）三种形态，支持混元/DeepSeek 多模型与 MCP 集成。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "代码补全",
+    "腾讯云",
+    "IDE插件",
+    "免费可用",
+    "组件库"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "N/A",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://www.codebuddy.cn/",
+  "price": "免费体验版；个人版 99 元/月起（企业版 198 元/人/月）",
+  "platform": "VS Code / JetBrains IDEs / 独立IDE / CLI / 微信开发者工具",
+  "pros": [
+    "腾讯云官方出品，技术背书强",
+    "全流程 AI 驱动：需求到设计到代码到部署",
+    "设计稿一键转代码",
+    "NES 预测编辑，补全超越当前行",
+    "支持混元、DeepSeek 等多模型",
+    "插件/IDE/CLI 三形态覆盖全场景",
+    "深度集成 CloudBase/Supabase 等后端",
+    "支持 MCP 与自定义 Agent/Skills"
+  ],
+  "cons": [
+    "国际知名度不如 Copilot 和 Cursor",
+    "企业版价格需咨询/按坐席",
+    "深度绑定腾讯云生态",
+    "部分高级能力需订阅"
+  ],
+  "features": [
+    "智能需求分析与 PRD 生成",
+    "设计稿转代码（Figma 到前后端代码）",
+    "实时代码补全与 NES 预测编辑",
+    "智能诊断与一键修复",
+    "自动生成单元测试",
+    "代码理解与审查（@workspace/#Codebase）",
+    "Ask/Craft/Plan 三种模式",
+    "自定义 Agent/Skills/Rules/Memories 与 MCP 集成",
+    "一键部署到 CloudBase/CloudStudio/EdgeOne",
+    "多模型支持（混元/DeepSeek 等）"
+  ],
+  "related": [
+    "cursor",
+    "trae",
+    "github-copilot",
+    "claude-code",
+    "windsurf"
+  ],
+  "faq": [
+    {
+      "q": "CodeBuddy 是什么？",
+      "a": "CodeBuddy 是腾讯云推出的 AI 辅助编程工具，定位为「全流程智能编程伙伴」，打通从产品构思、设计、代码研发到部署上线的完整链路，支持 IDE、插件、CLI 三种形态。"
+    },
+    {
+      "q": "CodeBuddy 是免费的吗？",
+      "a": "提供免费体验版，个人开发者可用基础代码补全、对话、设计转代码等功能；个人付费版 99 元/月起，企业版按坐席计费（旗舰版 198 元/人/月）。"
+    },
+    {
+      "q": "CodeBuddy 支持哪些 IDE？",
+      "a": "插件支持 VS Code、JetBrains 系列（IntelliJ IDEA/PyCharm/GoLand 等）、微信开发者工具等；CLI 版需 Node.js 18+。"
+    },
+    {
+      "q": "CodeBuddy 支持哪些 AI 模型？",
+      "a": "支持多模型切换，包括腾讯混元、DeepSeek 等对话大模型。"
+    }
+  ],
+  "seo_keywords": [
+    "CodeBuddy",
+    "腾讯云代码助手",
+    "CodeBuddy AI编程",
+    "CodeBuddy vs Cursor",
+    "腾讯AI编程工具",
+    "CodeBuddy怎么样",
+    "CodeBuddy免费版",
+    "CodeBuddy插件",
+    "CodeBuddy使用教程",
+    "CodeBuddy和WorkBuddy区别",
+    "CodeBuddy Code",
+    "CodeBuddy IDE",
+    "CodeBuddy CLI",
+    "Code Where You Build",
+    "腾讯云代码助手 CodeBuddy"
+  ],
+  "content": "# CodeBuddy是什么？\n\nCodeBuddy（腾讯云代码助手）是**腾讯云推出的AI辅助编程工具**，定位为「全流程智能编程伙伴」。它的目标不是只做代码补全，而是打通从**产品构思 → 设计 → 代码研发 → 部署上线**的完整链路，让AI成为开发者的全能搭档。\n\n产品提供三种形态——**IDE、插件、CLI**，覆盖从专业开发者到零基础用户的全场景需求：产品/设计师用IDE做「对话即编程」，日常编码者用插件即插即用，DevOps/资深工程师用CLI做自动化。\n\n---\n\n## 核心功能\n\n**1. 智能需求分析**\n用自然语言描述产品构思，AI自动生成结构化的需求文档（PRD），并给出需求优化建议。\n\n**2. 智能设计生成**\n支持自然语言或手绘草图转高保真设计稿，还能基于TDesign、MUI、Shadcn等组件库快速组装界面，通过自然语言指令实时调整设计风格。\n\n**3. 一键设计转代码**\n内置Figma功能，直接将设计稿转换为可维护的前后端代码，打通设计到开发的「最后一公里」。\n\n**4. 实时代码补全与NES预测编辑**\n毫秒级代码预测，深度适配项目编码风格。Code Completion Pro引入NES（Next Edit Suggestions）能力，不止补全当前行，还能预测下一步编码意图，自动给出相关后续代码块建议，实现「写一行，补全十行」的预测式体验。\n\n**5. 智能编程助手**\n实时代码补全、多文件代码生成、行内对话解决问题，融入现有开发工作流。\n\n**6. 智能诊断与一键修复**\n自动检测潜在Bug和性能瓶颈，提供一键修复方案。\n\n**7. 自动生成单元测试**\n根据代码逻辑自动生成单元测试，提升测试覆盖率。\n\n**8. 代码理解与审查**\n快速解释现有代码、智能代码审查、工程结构分析（支持@workspace和#Codebase）。\n\n---\n\n## 三种交互模式\n\n| 模式 | 定位 | 适用场景 |\n|------|------|----------|\n| Ask（对话模式） | 技术问答与概念解释，不直接改代码 | 快速查API、找思路 |\n| Craft（Agent模式） | 当前上下文内的代码生成与本地修改 | 精确写函数、小范围重构 |\n| Plan（规划模式） | 最强自动化，先建任务清单再自主执行 | 跨文件修改、复杂功能开发 |\n\n---\n\n## 可扩展的「大脑」\n\n- **Memories**：自动记录你的偏好和项目上下文，AI越用越准。\n- **Rules**：通过自定义`.codebuddy/rules`强制AI遵循特定架构或编码规范。\n- **Skills**：针对特定场景（如安全审计、性能测试）封装的专业指令集。\n- **MCP（模型上下文协议）**：开放协议，可接入数据库、实时搜索等第三方工具。\n- **自定义模型（API集成）**：支持通过API接入自定义模型，扩展AI能力。\n\n---\n\n## 生态与部署集成\n\nCodeBuddy深度集成腾讯生态与主流开发服务，开箱即用：\n- **BaaS服务**：内置Supabase和腾讯云开发CloudBase，自动处理数据库和用户认证。\n- **一键部署**：支持部署到CloudStudio、EdgeOne Pages等平台。\n- **组件库**：基于TDesign、MUI、Shadcn等快速组装界面。\n- **多模型**：支持混元、DeepSeek等多种对话大模型。\n\n---\n\n## 支持的语言与框架\n\n理论上不限制代码语言，支持主流技术栈：\n- **前端**：HTML、JavaScript、CSS、Vue、React、Bootstrap等\n- **后端**：Node.js、Python、Java、C#、Ruby、PHP等\n- **客户端**：Java、Kotlin、Swift、Objective-C、C#等\n- **其他**：C++、Go、Rust、TypeScript、Shell、PowerShell、R、MATLAB等\n\n---\n\n## 值不值得用？\n\n**优点：**\n- 腾讯云官方出品，技术背书强\n- 全流程AI驱动，不止聊天能落地交付\n- 设计稿一键转代码，产设研一体\n- NES预测编辑，补全体验领先\n- 插件/IDE/CLI三形态，适配不同角色\n- 深度集成腾讯云生态，部署顺畅\n- 支持MCP与自定义Agent，可扩展性强\n- 免费版功能已足够个人开发者\n\n**缺点：**\n- 国际知名度不如Copilot和Cursor\n- 深度绑定腾讯云生态\n- 企业版价格需咨询\n- 需要腾讯云账号登录\n\n**总体结论：** CodeBuddy是国内第一梯队的AI编程工具，尤其适合已经或计划使用腾讯云生态（CloudBase/Supabase/EdgeOne）的开发者。它在「设计转代码」和「全流程交付」上的能力是其差异化优势。免费版功能扎实，建议从插件版入手体验。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n- 使用腾讯云生态的开发者/团队\n- 需要设计稿转代码的产品/全栈/设计师\n- 想要全流程AI辅助（需求→部署）的团队\n- 国内网络环境、追求中文体验的开发者\n\n**可考虑：**\n- 对国际生态（GitHub Copilot）有强依赖者\n- 纯命令行自动化开发（CLI版可满足）\n- 偏好开源方案的用户\n\n**不推荐：**\n- 完全脱离腾讯云、追求极致中立的团队\n- 只需要轻量补全、不愿登录账号的用户",
+  "published": true,
+  "created_date": "2026-07-27",
+  "published_date": "2026-07-27",
+  "verified_url": "https://www.codebuddy.cn/",
+  "verified_publisher": "腾讯云（Tencent Cloud）",
+  "verified_what": "腾讯云代码助手 CodeBuddy——AI 时代的智能编程伙伴，基于 AI 的全流程智能编程工具，打通从自然语言需求、设计稿到代码研发、一键部署上线的完整链路，提供 IDE、插件、CLI（CodeBuddy Code）三种形态。",
+  "verified_price": "免费体验版；个人版 标准版 99 元/月（连续包月 70 元）、高级版 199 元/月（连续包月 140 元）、旗舰版 999 元/月（连续包月 700 元）；企业版 旗舰版 198 元/人/月、专享版 316 元/人/月。国际版 Pro $9.95/月、Team $40/坐席/月。",
+  "verified_platform": "Web、IDE 插件（VS Code、JetBrains 等）、CLI、Desktop",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "智能需求分析与 PRD 生成",
+    "设计稿转代码（Figma 到前后端代码）",
+    "实时代码补全与 NES 预测编辑",
+    "智能诊断与一键修复",
+    "自动生成单元测试",
+    "代码理解与审查（@workspace/#Codebase）",
+    "Ask/Craft/Plan 三种模式",
+    "自定义 Agent/Skills/Rules/Memories 与 MCP 集成",
+    "一键部署到 CloudBase/CloudStudio/EdgeOne",
+    "多模型支持（混元/DeepSeek 等）"
+  ],
+  "verified_description": "腾讯云代码助手 CodeBuddy（Code Where You Build）——AI 时代的智能编程伙伴，基于 AI 的全流程智能编程工具，打通从自然语言需求、设计稿到代码研发、一键部署上线的完整链路，提供 IDE、插件、CodeBuddy Code（CLI）三种形态，支持混元/DeepSeek 多模型与 MCP 集成。",
+  "content_flags": "原文整体准确；定价「免费版可用，团队/企业版付费」较笼统，已补具体档位。其余（三形态、Figma 转代码、NES、组件库、CloudBase 集成等）与官方一致。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.6",
+  "rating_source": "暂无权威外部评分（编辑评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "腾讯云官方出品，技术背书强",
+    "全流程 AI 驱动：需求到设计到代码到部署",
+    "设计稿一键转代码",
+    "NES 预测编辑，补全超越当前行",
+    "支持混元、DeepSeek 等多模型",
+    "插件/IDE/CLI 三形态覆盖全场景",
+    "深度集成 CloudBase/Supabase 等后端",
+    "支持 MCP 与自定义 Agent/Skills"
+  ],
+  "verified_cons": [
+    "国际知名度不如 Copilot 和 Cursor",
+    "企业版价格需咨询/按坐席",
+    "深度绑定腾讯云生态",
+    "部分高级能力需订阅"
+  ],
+  "verified_faq": [
+    {
+      "q": "CodeBuddy 是什么？",
+      "a": "CodeBuddy 是腾讯云推出的 AI 辅助编程工具，定位为「全流程智能编程伙伴」，打通从产品构思、设计、代码研发到部署上线的完整链路，支持 IDE、插件、CLI 三种形态。"
+    },
+    {
+      "q": "CodeBuddy 是免费的吗？",
+      "a": "提供免费体验版，个人开发者可用基础代码补全、对话、设计转代码等功能；个人付费版 99 元/月起，企业版按坐席计费（旗舰版 198 元/人/月）。"
+    },
+    {
+      "q": "CodeBuddy 支持哪些 IDE？",
+      "a": "插件支持 VS Code、JetBrains 系列（IntelliJ IDEA/PyCharm/GoLand 等）、微信开发者工具等；CLI 版需 Node.js 18+。"
+    },
+    {
+      "q": "CodeBuddy 支持哪些 AI 模型？",
+      "a": "支持多模型切换，包括腾讯混元、DeepSeek 等对话大模型。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "代码补全",
+    "腾讯云",
+    "IDE插件",
+    "免费可用",
+    "组件库"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://www.codebuddy.cn/",
+    "https://www.codebuddy.cn/docs/plugin/%E4%BA%A7%E5%93%81%E7%AE%80%E4%BB%8B/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E",
+    "https://cloud.tencent.com/product/acc?fromSo",
+    "https://intl.cloud.tencent.com/zh/document/product/1256/77270",
+    "http://staging-codebuddy.tencent.com/docs/ide/Account/pricing"
+  ],
+  "verify_notes": "国内个人版 2026-07-01 起由单一定价升级为标准/高级/旗舰三档；国际版为 Pro/Team。价格以官方文档为准。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "CodeBuddy 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：CodeBuddy 的 智能需求分析与 PRD 生成 是亮点，价格 免费体验版；个人版 99 元/月起（企业版 198 元/人/月）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

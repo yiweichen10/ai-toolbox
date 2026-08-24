@@ -1,0 +1,158 @@
+{
+  "name": "Luma Dream Machine",
+  "slug": "luma-dream-machine",
+  "emoji": "🎬",
+  "color": "#000000",
+  "description": "Luma AI的Dream Machine是基于Ray3推理模型的AI视频生成平台，支持文本/图片/视频转电影级视频，1080p HDR输出。Free $0（有限），Standard $29.99/月（推荐，商业授权）。ProductHunt 4.5。",
+  "category": "AI视频",
+  "tags": [
+    "AI视频生成",
+    "文生视频",
+    "图生视频",
+    "Luma AI",
+    "Ray3"
+  ],
+  "rating": "⭐ 4.4",
+  "visits": "85万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://lumalabs.ai/dream-machine",
+  "price": "Free（有限），Lite $9.99/月起，Standard $29.99/月（推荐）",
+  "platform": "Web / iOS / Android",
+  "pros": [
+    "Ray3视频质量业界领先，物理动效逼真",
+    "生成速度极快（标准片段<10秒），效率高",
+    "摄像机运动控制专业，电影感强",
+    "Ray3 Modify实现视频引导AI生成"
+  ],
+  "cons": [
+    "免费版严重受限（30次图片生成，无水印无法商用，无视频生成free）",
+    "生成一致性差——同提示词多次生成结果不一",
+    "无内置音频生成（纯视频输出）",
+    "Credit消耗不透明，复杂生成消耗更多但不提前告知"
+  ],
+  "features": [
+    "文本转视频生成（Ray3.14推理模型）",
+    "图片转视频动画",
+    "Ray3 Modify（视频转视频+关键帧控制+角色参考）",
+    "摄像机运动控制（推拉摇移跟等专业运镜）",
+    "1080p原生+HDR/EXR输出",
+    "循环视频和视频延长功能"
+  ],
+  "related": [
+    "runway",
+    "pika",
+    "sora",
+    "kling-ai",
+    "veo"
+  ],
+  "faq": [
+    {
+      "q": "Luma Dream Machine免费吗？",
+      "a": "Free $0仅提供30次图片生成/月（有水印、无商业授权、无视频生成）。Lite $9.99/月含70次生成（仍水印）。Standard $29.99/月是第一个可商用无水印计划（150次生成）。年付省20%。"
+    },
+    {
+      "q": "Luma Dream Machine和Runway/Sora哪个好？",
+      "a": "Luma在视频真实感和物理动效上领先Runway，Ray3推理模型是首个能'思考'的视频模型。Sora已停运。Runway优势在集成编辑工具链更完善。Luma更适合追求电影级画面质量的创作者。"
+    },
+    {
+      "q": "Luma Dream Machine支持哪些输入？",
+      "a": "文本转视频、图片转视频、视频转视频（Ray3 Modify）。支持关键帧设置（起始/结束帧）、角色参考一致性、摄像机运动预设。不支持音频输入或音频同步生成。"
+    },
+    {
+      "q": "生成的视频可以商用吗？",
+      "a": "Standard $29.99/月及以上计划包含商业使用权。Free和Lite计划仅限个人非商业使用。"
+    }
+  ],
+  "seo_keywords": [
+    "Luma Dream Machine",
+    "Luma Dream Machine免费版",
+    "Luma Dream Machine怎么样",
+    "AI视频生成工具推荐",
+    "Luma Dream Machine和Runway对比"
+  ],
+  "content": "# Luma Dream Machine 是什么？\n\nLuma Dream Machine 是 Luma AI 推出的一款 AI 视频生成工具，简单来说就是你给它一段文字或一张图片，它能帮你生成一段视频。2026 年已经升级到最新版本，生成的视频在真实感和细节表现上比之前好了不少，支持更长的片段，镜头控制也更精细了。\n\n如果你之前接触过 Runway、Pika 这些工具，可以把 Dream Machine 理解成同类型的选手，但在镜头运动的自然度上做得比较突出，生成的画面有一种“电影感”，这是它比较圈粉的一点。\n\n---\n\n## 核心功能\n\n**1. 文本转视频**\n\n输入一段描述，它就能生成对应的视频。比如写“一只猫在夕阳下的草地上奔跑”，它会根据描述生成一段几秒钟的视频。生成质量在同类工具里属于中上水平，细节和动态都过得去，但复杂场景偶尔会有畸变。\n\n**2. 图像转视频动画**\n\n上传一张静态图片，它能让图片“动”起来。这个功能挺实用的，比如把一张风景照变成一段短视频，或者让人物表情有一些细微的动态。效果取决于图片本身的质量和复杂度。\n\n**3. 多镜头角度控制**\n\n你可以指定镜头的运动方式，比如推拉、旋转、跟随等。这个功能对想做有电影感短片的人来说比较友好，能让视频看起来不那么“平”。\n\n**4. 视频长度扩展**\n\n基础版本生成的视频长度有限，最新版本支持更长的片段。不过说实话，目前 AI 视频生成都有一个问题：时间越长，前后一致性越难保持，Dream Machine 也不例外。\n\n**5. 风格化滤镜**\n\n内置了多种风格可以选择，比如电影感、动漫风格、复古风等。滤镜效果算是中规中矩，不是那种特别惊艳的类型，但胜在稳定，不会出现明显的风格撕裂。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 生成次数 | 视频长度 | 分辨率 | 并发任务 | 价格 |\n|------|----------|----------|--------|----------|------|\n| 免费版 | 有限 | 较短 | 720p | 单任务 | 免费 |\n| 专业版 | 充足 | 较长 | 1080p | 多任务 | 付费 |\n| 企业版 | 不限 | 最长 | 4K | 批量处理 | 按需报价 |\n\n免费版适合尝鲜，但额度用得很快；专业版适合个人创作者；企业版适合有批量生成需求的团队。\n\n---\n\n## 值不值得用？\n\n### 优点\n\n- 视频画质清晰，细节表现不错\n- 镜头运动比较自然，有电影感\n- 支持文生视频和图生视频两种方式\n- 界面简洁，上手门槛低\n- 宽高比和分辨率选择多\n\n### 缺点\n\n- 免费版额度太少，高频使用必须付费\n- 复杂场景和快速动作容易出现畸变\n- 生成速度受服务器负载影响，高峰期要等比较久\n- 没有中文界面，对国内用户不太友好\n- 等待时间偏长，对急性子不太友好\n\n### 结论\n\n如果你只是偶尔玩一玩，免费版够用了。但如果你想认真做内容，比如做短视频或者项目演示，付费版是必须的。整体来说，Dream Machine 在 AI 视频生成这个赛道上属于“能打”的选手，但不是那种“吊打一切”的存在。适合对视频质量有一定要求、但预算有限的个人创作者。\n\n---\n\n## 使用建议\n\n1. **描述要具体**：文字描述越详细，生成效果越好。与其写“一只狗在跑”，不如写“一只金毛在阳光下的草地上奔跑，镜头从侧面跟随”。\n2. **图片质量要高**：图生视频功能对原图质量很敏感，建议用高清、无明显噪点的图片。\n3. **避开复杂动作**：快速切换、多人同框、剧烈运动这类场景目前 AI 处理得还不是太好，容易出现畸变。\n4. **错峰使用**：高峰期服务器负载大，生成速度慢，尽量避开热门时段。\n5. **多尝试**：AI 生成有一定随机性，同一个描述多试几次，往往能拿到更满意的结果。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n\n- 个人短视频创作者\n- 需要快速生成概念视频的设计师\n- 想尝试 AI 视频但预算有限的入门用户\n\n**可考虑：**\n\n- 有一定视频制作需求的自媒体人\n- 需要批量生成视频内容的营销团队\n\n**不推荐：**\n\n- 对视频质量要求极高的专业影视团队\n- 需要精确控制每一帧的专业创作者\n- 完全不接受等待和随机性的用户\n\n## 常见问题（FAQ）\n\n**Luma Dream Machine免费吗？**\n\nFree $0仅提供30次图片生成/月（有水印、无商业授权、无视频生成）。Lite $9.99/月含70次生成（仍水印）。Standard $29.99/月是第一个可商用无水印计划（150次生成）。年付省20%。\n\n**Luma Dream Machine和Runway/Sora哪个好？**\n\nLuma在视频真实感和物理动效上领先Runway，Ray3推理模型是首个能'思考'的视频模型。Sora已停运。Runway优势在集成编辑工具链更完善。Luma更适合追求电影级画面质量的创作者。\n\n**Luma Dream Machine支持哪些输入？**\n\n文本转视频、图片转视频、视频转视频（Ray3 Modify）。支持关键帧设置（起始/结束帧）、角色参考一致性、摄像机运动预设。不支持音频输入或音频同步生成。\n\n**生成的视频可以商用吗？**\n\nStandard $29.99/月及以上计划包含商业使用权。Free和Lite计划仅限个人非商业使用。",
+  "published": true,
+  "created_date": "2026-06-01",
+  "published_date": "2026-06-01",
+  "subcategory": "ai-video-generation",
+  "verified_url": "https://lumalabs.ai/dream-machine",
+  "verified_publisher": "Luma AI (Luma Labs)",
+  "verified_what": "Luma AI推出的AI视频生成平台，基于Ray3推理模型将文本/图片/视频转为电影级视频，支持1080p HDR输出和摄像机运动控制",
+  "verified_price": "Free $0（仅30次图片生成/月，有水印，无商用）；Lite $9.99/月（70次生成）；Standard $29.99/月（150次生成，无水印，商业授权）；Pro $99.99/月（400次生成，优先队列）；Premier $499.99/月（2430次生成，最高优先）。年付节省20%。另有Plus/Pro/Ultra分级（$30/$90/$300/月）根据不同来源。",
+  "verified_platform": "Web / iOS / Android / API",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "文本转视频生成（Ray3.14推理模型）",
+    "图片转视频动画",
+    "Ray3 Modify（视频转视频+关键帧控制+角色参考）",
+    "摄像机运动控制（推拉摇移跟等专业运镜）",
+    "1080p原生+HDR/EXR输出",
+    "循环视频和视频延长功能"
+  ],
+  "verified_description": "Luma AI的Dream Machine是基于Ray3推理模型的AI视频生成平台，支持文本/图片/视频转电影级视频，1080p HDR输出。Free $0（有限），Standard $29.99/月（推荐，商业授权）。ProductHunt 4.5。",
+  "content_flags": "1. 价格过时：原文'免费版每月30次生成，专业版$29.99/月'——实际Free仅有30次图片生成（无视频），Standard $29.99/月才是可商用方案。2. 遗漏Lite $9.99/月中间方案。3. 未提及Ray3推理模型（2026年核心升级，首个AI视频推理模型）。4. 未提及Ray3 Modify（视频转视频+关键帧控制）。5. 2026年新增HDR/EXR输出和摄像机运动控制未提及。6. 免费版实际没有视频生成能力（仅图片）。7. '不支持中文界面'仍需确认（Luma是国际产品）。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.4",
+  "rating_source": "ProductHunt 4.5 (8 reviews), aitoolscoop 4.4/5, aitoolradar 4.2/5",
+  "rating_verified": true,
+  "verified_pros": [
+    "Ray3视频质量业界领先，物理动效逼真",
+    "生成速度极快（标准片段<10秒），效率高",
+    "摄像机运动控制专业，电影感强",
+    "Ray3 Modify实现视频引导AI生成"
+  ],
+  "verified_cons": [
+    "免费版严重受限（30次图片生成，无水印无法商用，无视频生成free）",
+    "生成一致性差——同提示词多次生成结果不一",
+    "无内置音频生成（纯视频输出）",
+    "Credit消耗不透明，复杂生成消耗更多但不提前告知"
+  ],
+  "verified_faq": [
+    {
+      "q": "Luma Dream Machine免费吗？",
+      "a": "Free $0仅提供30次图片生成/月（有水印、无商业授权、无视频生成）。Lite $9.99/月含70次生成（仍水印）。Standard $29.99/月是第一个可商用无水印计划（150次生成）。年付省20%。"
+    },
+    {
+      "q": "Luma Dream Machine和Runway/Sora哪个好？",
+      "a": "Luma在视频真实感和物理动效上领先Runway，Ray3推理模型是首个能'思考'的视频模型。Sora已停运。Runway优势在集成编辑工具链更完善。Luma更适合追求电影级画面质量的创作者。"
+    },
+    {
+      "q": "Luma Dream Machine支持哪些输入？",
+      "a": "文本转视频、图片转视频、视频转视频（Ray3 Modify）。支持关键帧设置（起始/结束帧）、角色参考一致性、摄像机运动预设。不支持音频输入或音频同步生成。"
+    },
+    {
+      "q": "生成的视频可以商用吗？",
+      "a": "Standard $29.99/月及以上计划包含商业使用权。Free和Lite计划仅限个人非商业使用。"
+    }
+  ],
+  "verified_tags": [
+    "AI视频生成",
+    "文生视频",
+    "图生视频",
+    "Luma AI",
+    "Ray3"
+  ],
+  "verified_category": "AI视频",
+  "source_urls": [
+    "https://lumalabs.ai/dream-machine",
+    "https://popularaitools.ai/tools/luma-ai",
+    "https://aitoolradar.io/guides/luma-dream-machine",
+    "https://aiproductivity.ai/tools/luma-dream-machine/"
+  ],
+  "verify_notes": "Luma Dream Machine已升级到Ray3.14推理模型（2026），是首个具有推理能力的AI视频模型。与最初版本相比：速度4x提升，成本3x降低，原生1080p。注意：免费版没有视频生成能力（仅30次图片生成/月有水印）。价格跨多个来源有差异（不同地区的美元定价），以官网lumalabs.ai为准。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "invideo-ai",
+      "vidu-ai",
+      "kaiber"
+    ],
+    "verdict": "Luma Dream Machine 与 InVideo AI、Vidu AI、Kaiber 同属AI视频赛道。若优先性价比，InVideo AI（免费版 + Plus $25/月起·Max $60/月起）门槛更低；若看重口碑，InVideo AI（⭐ 4.5）评分更高；Luma Dream Machine 的优势在于Luma AI推出的AI视频生成平台，基于Ray3推理模型将文本/图片/视频转为电影级视频，支持1080p HDR输出和，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "name": "Pulse",
+  "name_cn": "Pulse",
+  "slug": "pulse",
+  "positioning": "AI智能体平台推荐：MCP 内置于、权限感知统一记忆",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#0891b2",
+  "description": "公司级权限感知主动Agent大脑。连接Slack、邮件、文档、会议和25+工具，构建权限感知的统一记忆。每条回答附带引用，决策只记录一次不再重复解释。通过MCP内置于Claude、Cursor和ChatGPT中。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "AI智能体"
+    },
+    {
+      "text": "免费可用",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "新品",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://pulsehq.tech",
+  "price": "待确认",
+  "platform": "Web",
+  "pros": [
+    "解决企业知识孤岛与「答案无法溯源」痛点",
+    "权限感知设计合规友好，不扩大任何人的可见范围",
+    "逐行引用 + 置信度，明显降低幻觉风险",
+    "通过 MCP 直接嵌入主流 AI 工具，无需切换工作流",
+    "决策与承诺自动沉淀，减少重复解释"
+  ],
+  "cons": [
+    "无公开定价，需预约 Demo / 私有接入",
+    "2026 年 7 月新上线，生态与成熟度待验证",
+    "历史数据回填通常需 2-6 小时，初次落地有成本",
+    "暂不支持完整自托管（仅 Enterprise 支持 BYOK）"
+  ],
+  "features": [
+    "权限感知统一记忆，ACL 镜像检索",
+    "决策记忆自动捕获理由与负责人",
+    "逐行引用 + 置信度评分的可信回答",
+    "主动监控停滞项与风险信号",
+    "代理动作人工审批、可撤销",
+    "MCP 内置于 Claude/Cursor/ChatGPT"
+  ],
+  "related": [],
+  "content": "## Pulse 是什么？\n\nPulse 是面向团队的企业级「公司大脑」（Company Brain），由独立开发者 Apoorv Jain 打造，2026 年 7 月在 Product Hunt 上线。它把散落在 Slack、邮件、文档、会议等 25+ 工具中的决策、经验与上下文整合为一个权限感知的统一记忆，让团队 AI 的回答有据可查——每条回答逐行附带引用与置信度，决策只记录一次、不再重复解释。\n\nPulse 的理念是「个体 AI 让一个人更快，团队 AI 让整个公司更聪明」。它通过 MCP 内置于 Claude、Cursor、ChatGPT，让主流 AI 工具开局就了解你的公司；同时坚持严格的产品边界：不搞个人绩效评分、不用客户数据训练、不扩大任何人的权限、所有外部写入都需人工批准。产品面向知识密集型的中小型科技团队，核心解决知识孤岛与「答案无法溯源」的痛点。\n\n### 核心功能\n\n- **权限感知记忆**：镜像 Slack 频道隐私、Confluence 页面限制、GitHub 仓库权限与 Drive 文件 ACL，「在源工具里看不到的，在 Pulse 里也看不到」。\n- **决策记忆与决策图谱**：自动记录每个决策的理由、负责人与来源，支持回放备选方案、失败案例库与预判风险。\n- **逐行引用 + 置信度**：每条回答逐行标注来源，区分「已引用/推断」，置信分数按团队反馈每周校准。\n- **主动监控（Watch）**：检测停滞的工作、卡住的决策、客户 Champion 离职与承诺到期，主动提醒。\n- **代理动作（Agent Actions）**：自动起草 Slack 消息、Linear 工单与文档草稿，永不静默发送，全部进入人工审批收件箱且可撤销。\n- **MCP 服务器与六大界面**：以 MCP 接入 Claude/Cursor/ChatGPT，并提供 Home、Ask、Search、Map、People、Voice 六大交互界面。\n\n### 适用场景\n\n- **新员工快速上手**：新人第一天就能检索多年的决策、Playbook 与专家地图，把原本 8 个月的上手周期缩短到数周。\n- **跨工具深度调研**：在文档、工单与聊天记录中做跨工具检索，生成带出处与置信度的综合报告。\n- **决策沉淀与防流失**：在定价调整、架构选型等关键决策发生时自动留存依据，避免人走经验散。\n\n### 价格\n\nPulse 官网未公开具体定价，目前以私有团队接入与 20 分钟 Demo 预约为主；设有 Enterprise 计划，支持自带模型密钥（BYOK，含 Anthropic、AWS Bedrock、Azure OpenAI）。正式报价需联系官方，具体以官网为准。\n\n> 以上信息依据 Pulse 官网及 Product Hunt 发布页整理，定价与功能如有变动，请以官网实时信息为准。",
+  "published": true,
+  "faq": [
+    {
+      "q": "Pulse 是什么？",
+      "a": "Pulse 是团队级「公司大脑」，把散落在 Slack、邮件、文档、会议等 25+ 工具里的决策与知识整合为权限感知的统一记忆，并在回答时逐行给出引用。"
+    },
+    {
+      "q": "Pulse 支持哪些工具与 AI 助手？",
+      "a": "集成 Slack、GitHub、Notion、Linear、Calendar、Drive、Confluence、Jira、会议等 25+ 连接器，并通过 MCP 接入 Claude、Cursor、ChatGPT。"
+    },
+    {
+      "q": "Pulse 怎么收费？",
+      "a": "官网未公开价格，目前以私有团队接入与 Demo 预约为主，并设有 Enterprise 计划（支持自带密钥 BYOK），具体报价需联系官方，以官网为准。"
+    }
+  ],
+  "created_date": "2026-07-28",
+  "published_date": "2026-07-28",
+  "verified_url": "https://pulsehq.tech",
+  "verified_publisher": "Pulse",
+  "verified_what": "Pulse 是面向团队的企业级「公司大脑」：连接 Slack、GitHub、Notion、Linear、邮件、会议等 25+ 工具，构建权限感知的统一记忆，逐行引用回答，并可通过 MCP 接入 Claude、Cursor、ChatGPT。",
+  "verified_price": "定价未公开。官网仅提供私有团队接入（private onboarding）与 20 分钟 Demo 预约，并提及 Enterprise 计划（支持 BYOK，如 Anthropic / AWS Bedrock / Azure OpenAI）；暂无公开套餐与价格。",
+  "verified_platform": "Web（App 主页、Ask、Search、Map、People、Voice 多界面）、MCP Server、Developer API；内嵌于 Claude / Cursor / ChatGPT",
+  "last_verified": "2026-07-31",
+  "confidence": "medium",
+  "conflict": false,
+  "verified_features": [
+    "连接 25+ 工具构建权限感知统一记忆",
+    "逐行引用 + 置信度评分的可信回答",
+    "决策图谱（Decision/Process Graph）记录决定与依据",
+    "主动推送：标记停滞项与风险信号",
+    "代理动作：起草工单/消息/文档（人工审批、可撤销）",
+    "严格复制源工具 ACL 的权限镜像检索",
+    "MCP Server 与 Developer API 接入主流 AI 工具"
+  ],
+  "verified_description": "Pulse 是面向团队的企业级权限感知 AI 大脑，整合 Slack、邮件、文档、会议等 25+ 工具为企业构建统一记忆，逐行引用作答，并可通过 MCP 无缝接入 Claude、Cursor、ChatGPT，让团队 AI 真正服务于集体知识而非个人效率。",
+  "verified_pros": [
+    "解决企业知识孤岛与「答案无法溯源」痛点",
+    "权限感知，看不到源工具就看不到，合规友好",
+    "逐行引用 + 置信度，降低幻觉风险",
+    "通过 MCP 直接嵌入 Claude/Cursor/ChatGPT，无需切换工作流",
+    "主动式提醒与决策记忆，减少重复解释"
+  ],
+  "verified_cons": [
+    "无公开定价，需预约 Demo / 私有接入",
+    "较新（2026 年 7 月 Product Hunt 上线），生态与成熟度待验证",
+    "依赖多工具连接与权限配置，落地有一定实施成本",
+    "完整自托管尚未提供（仅 Enterprise 支持 BYOK）"
+  ],
+  "verified_faq": [
+    {
+      "q": "Pulse 是什么？",
+      "a": "Pulse 是团队级「公司大脑」，把散落在 Slack、邮件、文档、会议等 25+ 工具里的决策与知识整合为权限感知的统一记忆，并在回答时逐行给出引用。"
+    },
+    {
+      "q": "Pulse 支持哪些工具与 AI 助手？",
+      "a": "集成 Slack、GitHub、Notion、Linear、Calendar、Drive、Confluence、Jira、会议等 25+ 连接器，并通过 MCP 接入 Claude、Cursor、ChatGPT。"
+    },
+    {
+      "q": "Pulse 怎么收费？",
+      "a": "官网未公开价格，目前以私有团队接入与 Demo 预约为主，并设有 Enterprise 计划（支持自带密钥 BYOK），具体报价需联系官方。"
+    }
+  ],
+  "verified_tags": [
+    "AI智能体",
+    "企业知识",
+    "权限感知",
+    "MCP",
+    "团队协作"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://pulsehq.tech",
+    "https://www.producthunt.com.cn/pulse-8b54daa9-91ad-4daa-a590-379978b01867",
+    "https://www.hunted.space/product/pulse-47"
+  ],
+  "verify_notes": "pulsehq.tech 为真实官网，2026-07-23 Product Hunt 上线（约 88 upvotes）。现有数据描述（权限感知、25+ 工具、MCP 接入 Claude/Cursor/ChatGPT）与官网及 PH 一致。定价未公开，原数据「待确认」属实；已据官网更新为「私有接入/Enterprise，无公开价格」。",
+  "content_verified": false,
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Pulse 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Pulse 的 AI驱动 是亮点，价格 待确认；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "seo_keywords": [
+    "Pulse 公司大脑",
+    "企业级 AI 智能体",
+    "权限感知 AI",
+    "MCP 企业知识库",
+    "团队 AI 记忆工具"
+  ]
+}

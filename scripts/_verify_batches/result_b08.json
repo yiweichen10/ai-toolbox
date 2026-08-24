@@ -1,0 +1,126 @@
+{
+  "batch_id": "b08",
+  "category": "AI对话",
+  "tools": [
+    {
+      "slug": "stepfun",
+      "name": "阶跃星辰",
+      "url_current": "https://www.stepfun.com",
+      "url_ok": true,
+      "url_correct": "https://www.stepfun.com",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网（stepfun.com）真实，Step-2万亿参数自研底座属实。但content误称公司由「前百度高管李开复」创立——李开复实为01.AI（零一万物）创始人且从未任职百度；阶跃星辰真正创始人为姜大昕（前微软亚洲研究院），description已正确指出「并非由李开复创立」。（来源：阶跃星辰官网及公开报道）"
+    },
+    {
+      "slug": "baichuan-ai",
+      "name": "百川智能",
+      "url_current": "https://www.baichuan-ai.com",
+      "url_ok": true,
+      "url_correct": "https://www.baichuan-ai.com",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网（baichuan-ai.com）真实，创始人王小川（前搜狗CEO）属实。API单价 Baichuan4-Air ¥0.00098/千token（官网称0.98厘/千token）与官方一致。但「新用户赠¥80额度」未能在官网核实，存疑。（来源：百川智能官网）"
+    },
+    {
+      "slug": "sensenova",
+      "name": "商汤日日新",
+      "url_current": "https://platform.senseNova.com",
+      "url_ok": false,
+      "url_correct": "https://platform.sensenova.cn",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网域名错误：存储url为platform.senseNova.com，商汤官方隐私政策明确官网为 platform.sensenova.cn（.cn而非.com）。「2026年已升级至5.0版本」存疑——SenseNova 5.0实为2024年4月发布，2026年是否仍以5.0为最新版本无法确定。（来源：商汤官网sensetime.com及隐私政策页）"
+    },
+    {
+      "slug": "zi-dong-tai-chu",
+      "name": "紫东太初",
+      "url_current": "https://taichu.ia.ac.cn",
+      "url_ok": true,
+      "url_correct": "https://taichu.ia.ac.cn",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网（taichu.ia.ac.cn，中科院自动化所）真实。但description与content均称「2026年已升级至3.0版本」，而官网新闻显示2026年当前代际为「紫东太初4.0」（2026年3月发布），3.0版本号已过时。（来源：紫东太初官网新闻）"
+    },
+    {
+      "slug": "internlm",
+      "name": "书生浦语",
+      "url_current": "https://github.com/InternLM/InternLM",
+      "url_ok": true,
+      "url_correct": "https://github.com/InternLM/InternLM",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "GitHub仓库 github.com/InternLM/InternLM 为上海人工智能实验室官方仓库，属实。InternLM 3为真实版本。价格「基础版免费，企业版按需付费」与开源+商业授权模式一致。（来源：InternLM官方GitHub）"
+    },
+    {
+      "slug": "modelbest",
+      "name": "面壁智能",
+      "url_current": "https://modelbest.cn",
+      "url_ok": true,
+      "url_correct": "https://modelbest.cn",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网（modelbest.cn）真实，面壁智能MiniCPM系列及开源+企业付费模式与官方一致，无幻觉。（来源：面壁智能官网）"
+    },
+    {
+      "slug": "xinghuo-cognitive-model",
+      "name": "星火认知大模型",
+      "url_current": "https://xinghuo.xfyun.cn/",
+      "url_ok": true,
+      "url_correct": "https://xinghuo.xfyun.cn/",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网（xinghuo.xfyun.cn，科大讯飞）真实，星火4.0版本属实（官网提及4.0 Ultra）。免费版+付费专业版模式符合官方。（来源：讯飞星火官网）"
+    },
+    {
+      "slug": "monica-ai",
+      "name": "Monica AI",
+      "url_current": "https://monica.im",
+      "url_ok": true,
+      "url_correct": "https://monica.im",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网（monica.im）真实。价格「基础免费版+高级付费版（$9.9/月起）」经多方核实Pro=$9.9/月属实。但description称「基于GPT-4」已过时，现官网显示其整合GPT-5.5/Claude 4.7/Gemini 3.1等多模型。（来源：Monica官网及第三方评测）"
+    },
+    {
+      "slug": "cluely",
+      "name": "Cluely",
+      "url_current": "https://cluely.com",
+      "url_ok": true,
+      "url_correct": "https://cluely.com",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网（cluely.com）真实，价格「付费版19.9美元/月起」属实（Pro=$19.99/月）。但description称其为「功能强大的AI对话助手」、content称「跟ChatGPT、Claude这类工具差不多」属张冠李戴：Cluely实际定位为「隐形AI会议助手/记事本」（实时监听会议、屏幕共享中不可见，早年以面试作弊营销闻名），并非通用对话助手。（来源：Cluely官网及多篇评测）"
+    },
+    {
+      "slug": "mistral-ai",
+      "name": "Mistral AI",
+      "url_current": "https://mistral.ai",
+      "url_ok": true,
+      "url_correct": "https://mistral.ai",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网（mistral.ai）真实，法国公司、创始人出自DeepMind/Meta属实。Mistral Large 3真实存在（2025年12月2日发布，非2026；Apache 2.0，675B总/41B激活参数，多模态）。API定价$0.50/$1.50 per 1M tokens。（来源：Mistral官网）"
+    }
+  ]
+}

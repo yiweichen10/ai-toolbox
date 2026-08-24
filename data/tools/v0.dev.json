@@ -1,0 +1,130 @@
+{
+  "name": "v0.dev",
+  "slug": "v0.dev",
+  "positioning": "组件生成+Design：免费AI编程工具怎么用",
+  "auto_positioning": true,
+  "emoji": "💻",
+  "color": "#d67213",
+  "description": "Vercel 推出的 AI 前端代码生成工具，用自然语言或截图生成高质量 React/Tailwind 代码与 UI 组件，支持 Design Mode 可视化编辑、GitHub 同步与一键部署。免费版可用，付费 Plus $30/用户/月。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "AI前端",
+    "React",
+    "免费可用"
+  ],
+  "rating": "⭐4.4",
+  "visits": "17万",
+  "badge": {
+    "type": "pick",
+    "text": null
+  },
+  "url": "https://v0.dev",
+  "price": "免费版 + Plus $30/用户/月",
+  "platform": "Web",
+  "pros": [
+    "生成代码质量高、结构清晰",
+    "React/Tailwind 原生",
+    "与 Vercel/Next.js 生态无缝整合",
+    "支持截图转代码与设计模式可视化编辑",
+    "免费额度可用"
+  ],
+  "cons": [
+    "仅前端生成，无后端能力",
+    "按积分/模型计费，复杂迭代消耗快",
+    "主要为 Vercel 生态绑定",
+    "付费门槛较高（Plus $30/用户/月）"
+  ],
+  "features": [
+    "UI 代码生成（React/Tailwind）",
+    "组件生成",
+    "截图/设计图转代码",
+    "自然语言迭代修改",
+    "Design Mode 可视化编辑",
+    "一键部署到 Vercel / GitHub 同步"
+  ],
+  "related": [
+    "midjourney",
+    "kimi"
+  ],
+  "content": "## v0.dev 是什么？\n\nv0.dev是Vercel推出的AI前端代码生成工具，用自然语言描述即可生成高质量的React和Tailwind CSS代码。专注于前端UI组件和页面生成，生成的代码可以直接复制到Next.js项目中使用。\n\nv0.dev是前端开发者的效率神器，特别适合快速构建UI原型。\n\n## 核心功能\n\n- **UI代码生成**：描述UI需求，生成React/Tailwind代码\n- **组件生成**：生成可复用的React组件\n- **截图转代码**：上传设计截图自动生成代码\n- **迭代修改**：用自然语言修改已生成的代码\n- **代码复制**：一键复制代码到剪贴板\n- **Vercel部署**：直接部署到Vercel\n\n## 版本对比\n\n| 功能 | 免费版 | Premium ($20/月) |\n|------|--------|------------------|\n| 生成次数 | 有限/月 | 更多 |\n| 代码复制 | ✅ | ✅ |\n| 截图转代码 | ❌ | ✅ |\n| 高级组件 | ❌ | ✅ |\n\n## 优缺点分析\n\n### 👍 优点\n- 生成的代码质量高，结构清晰\n- React和Tailwind原生支持\n- 与Vercel/Next.js生态无缝整合\n- 生成速度极快\n- 免费额度较多\n\n### 👎 缺点\n- 仅支持前端，无后端能力\n- 复杂交互组件能力有限\n- 免费生成次数有上限\n- 深度绑定React/Tailwind技术栈\n\n## 使用技巧\n\n1. **详细描述**：描述颜色、布局、交互等细节。\n2. **截图输入**：上传设计稿截图，AI生成对应代码。\n3. **分步迭代**：先生成基础布局，再逐步添加细节。\n4. **组件化**：让AI生成可复用的组件。\n5. **直接部署**：满意后一键部署到Vercel预览。\n\n## 适合人群\n\nv0.dev适合前端开发者、UI设计师和全栈工程师。如果你需要快速构建前端UI，v0.dev是最专业的AI工具。\n### 总结\n\nv0.dev 是 AI编程 领域中一款不错的 AI 工具。Vercel推出的AI前端代码生成工具，用自然语言描述即可生成高质量的React/Tailwind代码。专注于前端UI生成，生成代码可直接在Next.js项目中使用。 从功能完整性来看，它覆盖了核心使用场景。\n\n**快速上手建议：**\n- 访问官网 v0.dev 注册账号\n- 先使用免费版本 了解核心功能\n- 参考官方文档和教程加速学习\n- 加入用户社区获取使用技巧和最佳实践\n\n**价格参考：** 免费版+Pro $10/月\n**支持平台：** Web\n\n### 核心功能详解\n\n这款 AI 编程工具的核心价值在于让开发者更高效地写代码。它能理解自然语言描述的需求，自动生成对应的代码。更重要的是，它不仅能写新代码，还能理解现有代码库，进行修改、重构和优化。\n\n在实际开发流程中，它的使用场景非常广泛：\n- **需求到代码**：描述功能需求，自动生成初始代码\n- **Bug 排查**：粘贴错误信息，AI 分析原因并给出修复方案\n- **代码审查**：让 AI 审查代码质量，发现潜在问题\n- **单元测试**：自动生成测试用例，提高代码覆盖率\n- **文档编写**：根据代码自动生成注释和 API 文档\n\n### 与其他 AI 编程工具对比\n\n- **GitHub Copilot**：最成熟的代码补全插件，IDE 集成最好\n- **Cursor**：全功能 AI IDE，适合独立开发者\n- **Claude Code**：终端原生，适合命令行开发者\n- 本工具在特定场景下有独特优势\n\n### 使用技巧\n\n1. 在编码前先用自然语言描述完整需求，再让 AI 生成\n2. 利用代码上下文功能，让 AI 理解项目结构\n3. 重要代码务必人工审查，AI 生成的代码可能有隐藏问题\n4. 善用版本控制，方便回退 AI 的修改\n5. 结合自动化测试验证 AI 生成代码的正确性",
+  "published": true,
+  "faq": [
+    {
+      "q": "v0.dev 能做什么？",
+      "a": "用文字描述或截图/设计稿生成高质量 React/Next.js 前端代码与 UI 组件，支持 Design Mode 可视化编辑、GitHub 同步与一键部署到 Vercel，适合快速搭建前端界面与原型。"
+    },
+    {
+      "q": "v0.dev 收费吗？",
+      "a": "有免费版（每月 $5 额度、每日 7 条消息）；付费为 Plus $30/用户/月、Business $100/用户/月。原资料称 $10 或 $20/月的 Premium 计划已取消，当前改为积分制（Free/Plus/Business）。"
+    }
+  ],
+  "created_date": "2026-04-13",
+  "verified_url": "https://v0.dev",
+  "verified_publisher": "Vercel",
+  "verified_what": "Vercel 推出的 AI 前端代码生成工具，用自然语言或截图生成 React/Tailwind 代码与 UI 组件。",
+  "verified_price": "免费版 $0（每月 $5 额度、每日 7 条消息、可部署到 Vercel、Design Mode 可视化编辑、GitHub 同步）；Plus $30/用户/月（全部模型、$30 月额度 + $2 每日登录额度、团队共享、集中计费）；Business $100/用户/月（训练数据默认退出、同上额度）；Enterprise 定制。模型按 token 计费（v0 Mini/Pro/Max/Max Fast 不同单价）。",
+  "verified_platform": "Web, Vercel 部署, API",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "UI 代码生成（React/Tailwind）",
+    "组件生成",
+    "截图/设计图转代码",
+    "自然语言迭代修改",
+    "Design Mode 可视化编辑",
+    "一键部署到 Vercel / GitHub 同步"
+  ],
+  "verified_description": "Vercel 推出的 AI 前端代码生成工具，用自然语言或截图生成高质量 React/Tailwind 代码与 UI 组件，支持 Design Mode 可视化编辑、GitHub 同步与一键部署。免费版可用，付费 Plus $30/用户/月。",
+  "content_flags": "原 price 字段'免费版+Pro $10/月'及内容'Premium $20/月'均过时——v0 已改为积分制：Free $0 / Plus $30 / Business $100（按用户/月），旧 Pro/Premium 档已取消。",
+  "price_verified": true,
+  "verified_rating": "⭐4.4",
+  "rating_source": "暂无权威评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "生成代码质量高、结构清晰",
+    "React/Tailwind 原生",
+    "与 Vercel/Next.js 生态无缝整合",
+    "支持截图转代码与设计模式可视化编辑",
+    "免费额度可用"
+  ],
+  "verified_cons": [
+    "仅前端生成，无后端能力",
+    "按积分/模型计费，复杂迭代消耗快",
+    "主要为 Vercel 生态绑定",
+    "付费门槛较高（Plus $30/用户/月）"
+  ],
+  "verified_faq": [
+    {
+      "q": "v0.dev 能做什么？",
+      "a": "用文字描述或截图/设计稿生成高质量 React/Next.js 前端代码与 UI 组件，支持 Design Mode 可视化编辑、GitHub 同步与一键部署到 Vercel，适合快速搭建前端界面与原型。"
+    },
+    {
+      "q": "v0.dev 收费吗？",
+      "a": "有免费版（每月 $5 额度、每日 7 条消息）；付费为 Plus $30/用户/月、Business $100/用户/月。原资料称 $10 或 $20/月的 Premium 计划已取消，当前改为积分制（Free/Plus/Business）。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "AI前端",
+    "React",
+    "免费可用"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://v0.app/pricing",
+    "https://vercel.com/pricing"
+  ],
+  "verify_notes": "官方域名为 v0.dev（产品页 v0.app）。定价模型已大幅调整：旧 $10/$20 档取消，现为 Free/Plus $30/Business $100 积分制。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "tongyi-lingma",
+      "cline",
+      "codex-cli"
+    ],
+    "verdict": "v0.dev 与 通义灵码、Cline、Codex CLI 同属AI编程赛道。在性价比上，v0.dev（免费版 + Plus $30/用户/月）门槛更低；若看重口碑，Cline（4.7）评分更高；v0.dev 的优势在于Vercel 推出的 AI 前端代码生成工具，用自然语言或截图生成 React/Tailwind 代码与 UI 组件。，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "title": "浏览器 MCP 实战教程：Chrome MCP 稳定版怎么配怎么用（2026年8月）",
+  "seo_title": "浏览器 MCP 实战：Chrome DevTools MCP 1.0 配置与选型（2026-08）",
+  "slug": "browser-mcp-practical-guide-2026",
+  "date": "2026-08-21",
+  "dateFull": "2026-08-21",
+  "category": "AI工具教程",
+  "content_type": "AI教程",
+  "tags": [
+    "浏览器 MCP",
+    "Chrome MCP",
+    "Chrome DevTools MCP",
+    "Playwright MCP",
+    "AI Agent",
+    "MCP 教程"
+  ],
+  "summary": "Chrome 官方 MCP 已在 2026 年 5 月转正：这篇实战教程讲清 Chrome DevTools MCP、Playwright MCP、浏览器自动连接三条路线怎么选、10 分钟怎么配，并给出 Lighthouse、内存、扩展三个上手案例与踩坑清单。",
+  "description": "2026 年 8 月浏览器 MCP 怎么选怎么配：Chrome DevTools for agents 已出 1.0 稳定版，对比 Chrome DevTools MCP 与 Playwright MCP，教你 10 分钟配好，附自动连接、Lighthouse、内存与扩展调试实战和踩坑清单。",
+  "keywords": "浏览器 MCP, Chrome MCP, Chrome DevTools MCP, Playwright MCP, 浏览器自动化, AI Agent, MCP 教程",
+  "author": "AI工具宝箱编辑部",
+  "related_tools": [
+    "browser-use",
+    "agent-browser",
+    "cline",
+    "browser-act"
+  ],
+  "faq": [
+    {
+      "question": "2026 年 8 月浏览器 MCP 到底该用哪个？",
+      "answer": "调试网页报错、性能、内存、扩展，首选 Chrome 官方的 Chrome DevTools MCP（1.0 稳定版）；写 E2E 或要跨浏览器就选 Playwright MCP；要 AI 接管已登录会话，用 chrome://inspect 开远程调试后加 --auto-connect。"
+    },
+    {
+      "question": "Chrome DevTools MCP 现在怎么装？",
+      "answer": "Claude Code 用 /plugin marketplace add ChromeDevTools/chrome-devtools-mcp 再加 /plugin install chrome-devtools-mcp@chrome-devtools-plugins；Gemini CLI 用 gemini extensions install --auto-update https://github.com/ChromeDevTools/chrome-devtools-mcp；其他客户端用 npx chrome-devtools-mcp。"
+    },
+    {
+      "question": "让 AI 接管我当前打开的浏览器需要做什么？",
+      "answer": "用 Chrome 144 以上版本，打开 chrome://inspect/#remote-debugging 启用远程调试，启动 MCP server 时加 --auto-connect，AI 就能直接操作带登录态的当前浏览器会话。"
+    },
+    {
+      "question": "Chrome MCP 能跨浏览器使用吗？",
+      "answer": "不能。Chrome DevTools MCP 基于 Chrome DevTools Protocol，只支持 Chrome/Chromium；要测 Firefox 或 WebKit 得用 Playwright MCP，它天然跨浏览器。"
+    },
+    {
+      "question": "WebMCP 和 Chrome DevTools MCP 是什么关系？",
+      "answer": "两个层面：WebMCP 是 Chrome 149 起的 Origin Trial 开放标准，让网站把 JS 函数和表单暴露成 AI 可直接调用的工具；Chrome DevTools MCP 是调试侧工具，DevTools 里还专门有 WebMCP 面板帮你调试站点暴露的工具。"
+    }
+  ],
+  "content": "## 先说结论\n\n2026 年 8 月玩浏览器 MCP，首选 Chrome 官方方案：5 月 19 日 DevTools for agents 发布 1.0 稳定版，MCP server 已到 1.7.0。调试用 Chrome DevTools MCP，E2E 用 Playwright MCP，接管已登录浏览器用 chrome://inspect 加 --auto-connect。基础安装看 5 月的[教程](https://www.aitoollab.cn/articles/chrome-devtools-mcp-tutorial-2026/)，这篇讲 8 月新变化。\n\n## 一、8 月现状：官方 MCP 已转正\n\n- 2026-05-19：DevTools for agents 1.0 稳定版（[官方公告](https://developer.chrome.com/blog/devtools-for-agents-v1)）：MCP server + CLI + skills，含 Lighthouse、扩展、内存调试。\n- 2026-06-08：v1.2.0（[GitHub Releases](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases)）加 TOON 输出、close_heapsnapshot。\n- Chrome 144+：chrome://inspect/#remote-debugging 开远程调试即可自动连接（[配置文档](https://developer.chrome.com/docs/devtools/agents/get-started/configuration)）。\n\n![图1：官方仓库（真实截图，桌面 1280×800）](https://www.aitoollab.cn/images/articles/browser-mcp-practical-guide-2026/1-chrome-devtools-mcp-github-desktop.png)\n\n## 二、三条路线怎么选\n\n| 方案 | 适合 | 限制 |\n| --- | --- | --- |\n| Chrome DevTools MCP | 调试、Lighthouse、内存、扩展 | 只支持 Chrome |\n| Playwright MCP | E2E、跨浏览器、动态页面 | 调试内部状态弱 |\n| Chrome 自动连接 | 接管已登录会话 | Chrome 144+ 且手动开开关 |\n\n## 三、10 分钟配好\n\nClaude Code：/plugin marketplace add ChromeDevTools/chrome-devtools-mcp + /plugin install chrome-devtools-mcp@chrome-devtools-plugins。其他客户端：mcpServers 配 npx chrome-devtools-mcp。让 AI 列出标签页验证。\n\n![图2：1.0 稳定版官方公告（真实截图，桌面 1280×800）](https://www.aitoollab.cn/images/articles/browser-mcp-practical-guide-2026/2-devtools-for-agents-v1-blog-desktop.png)\n\n## 四、实战 1：接管已登录的浏览器\n\n查登录后台最省事：chrome://inspect/#remote-debugging 开远程调试，用 npx chrome-devtools-mcp --auto-connect 启动，AI 基于登录状态查报错。\n\n![图3：自动连接与远程调试开关（真实截图，移动 390×844）](https://www.aitoollab.cn/images/articles/browser-mcp-practical-guide-2026/3-configuration-docs-mobile.png)\n\n## 五、实战 2：Lighthouse 与性能\n\nLighthouse 已是 MCP 工具。提示词：对当前页面跑一次审计，看 SEO 和可访问性，列最低三项并给修改建议。AI 会结合控制台和网络面板定位，也可先开网络/CPU 节流。\n\n## 六、实战 3：内存与扩展调试\n\n内存：让 AI 打堆快照找 detached DOM，官方 skill 自动对比。扩展：AI 能安装、重载、触发动作，自动「保存—刷新—看效果」。\n\n## 七、8 月踩坑清单\n\n- --auto-connect 连不上：确认 Chrome 144+ 且远程调试已开；\n- 测 Firefox/WebKit：Chrome MCP 不支持，用 Playwright MCP；\n- token 太费：重复动作写成 CLI 脚本；\n- 端口冲突：换端口或开新实例；\n- WebMCP 还在 Origin Trial：线上别押注。"
+}

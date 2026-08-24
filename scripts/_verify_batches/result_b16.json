@@ -1,0 +1,126 @@
+{
+  "batch_id": "b16",
+  "category": "AI搜索",
+  "tools": [
+    {
+      "slug": "perplexity",
+      "name": "Perplexity",
+      "url_current": "https://www.perplexity.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 perplexity.ai 为真实官网；Pro 版 $20/月准确（多源确认），描述与功能均无误。"
+    },
+    {
+      "slug": "meta-so",
+      "name": "秘塔AI搜索",
+      "url_current": "https://metaso.cn",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 metaso.cn 正确；但价格“基础$10/月起”错误：秘塔AI搜索付费会员以人民币计价（App Store 月度会员¥39、第三方测评 Pro 约¥49/月、Standard 约¥29/月），不存在美元 $10 定价，币种与金额均不准确。"
+    },
+    {
+      "slug": "nano-ai-search",
+      "name": "纳米AI搜索",
+      "url_current": "https://n.cn",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 n.cn（360 纳米搜索）正确；免费使用属实，描述与功能无误。"
+    },
+    {
+      "slug": "phind",
+      "name": "Phind",
+      "url_current": "https://www.phind.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 phind.com 正确；价格“Pro $10/月”存疑：第三方报道 Phind Pro 多为 $15–20/月（$15/$17/$19.99/$20 不等），未见 $10 档位，金额编造可能大。另 content 中“访问官网 phindai.org”为错误网址（正确为 phind.com）。"
+    },
+    {
+      "slug": "you.com",
+      "name": "You.com",
+      "url_current": "https://you.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 you.com 正确；存在免费版（描述“免费使用”属实），You Pro $20/月亦在 content 中标明，无编造。"
+    },
+    {
+      "slug": "consensus",
+      "name": "Consensus",
+      "url_current": "https://consensus.app",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 consensus.app 正确；价格“基础$10/月起”与 content 中 Premium $9.99/月一致（$10 为四舍五入），学术搜索定位准确，无编造。"
+    },
+    {
+      "slug": "perplexity-ai",
+      "name": "Perplexity AI",
+      "url_current": "https://www.perplexity.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 perplexity.ai 正确，Pro $20/月准确；但 content 中“答案准确率提升到92.3%、比2025年提升11%”及“三级可信度标注系统(🔵高/🟡中/🔴待验证)”属虚构具体数据/功能——独立基准多为约92%且无此官方分级系统，疑为编造。"
+    },
+    {
+      "slug": "brave-search-ai",
+      "name": "Brave Search AI",
+      "url_current": "https://search.brave.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 search.brave.com 正确；免费属实（付费仅针对浏览器增值功能如VPN，搜索本身免费），content 亦自陈“完全免费”，无编造。"
+    },
+    {
+      "slug": "glean",
+      "name": "Glean",
+      "url_current": "https://www.glean.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 glean.com 正确；Glean 不公开标价，买方报道约 $50/用户/月且有100席最低门槛，“付费版起价$49/月、企业版需联系销售”与事实基本吻合（企业定制报价属实），无编造。"
+    },
+    {
+      "slug": "quark-ai",
+      "name": "夸克AI",
+      "url_current": "https://www.quark.cn",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 quark.cn（阿里夸克）正确；免费属实，内置浏览器AI助手定位准确，无编造。"
+    }
+  ]
+}

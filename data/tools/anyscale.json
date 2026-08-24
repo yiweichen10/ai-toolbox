@@ -1,0 +1,141 @@
+{
+  "name": "Anyscale",
+  "slug": "anyscale",
+  "positioning": "AI开发工具推荐：分布式训练、在线推理",
+  "auto_positioning": true,
+  "emoji": "⚙️",
+  "color": "#0052CC",
+  "description": "Anyscale 是由 Ray 开源框架原班团队打造的生产级 AI 计算平台，帮助团队在任意云上构建、运行和扩展数据/AI 工作负载（训练、推理、微调），无需自行管理集群。",
+  "category": "AI开发",
+  "tags": [
+    "分布式计算",
+    "Ray框架",
+    "AI平台",
+    "模型推理",
+    "AI开发"
+  ],
+  "rating": "⭐4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.anyscale.com/",
+  "price": "按量计费（新用户 $100 额度，无月费）",
+  "platform": "Web（托管云平台，支持 AWS/Azure/GCP 等）",
+  "pros": [
+    "深度集成 Ray，分布式能力强",
+    "自动扩缩容，降低运维成本",
+    "无服务器推理部署简洁",
+    "兼容 PyTorch、TensorFlow、JAX 等",
+    "Ray 社区活跃，文档丰富"
+  ],
+  "cons": [
+    "学习曲线较陡，需理解 Ray 编程模型",
+    "对 Ray 强依赖",
+    "大规模长期运行成本可能较高",
+    "纯推理场景有更轻量替代"
+  ],
+  "features": [
+    "分布式训练（Ray Train）",
+    "批处理推理与嵌入生成",
+    "在线推理（Ray Serve）",
+    "Anyscale Endpoints 托管 LLM 推理（约 $1/百万 token）",
+    "Private Endpoints（VPC 内部署）",
+    "多云/混合云编排与企业治理（SSO/SAML/SCIM、审计）"
+  ],
+  "related": [
+    "langchain",
+    "dify",
+    "replicate"
+  ],
+  "faq": [
+    {
+      "q": "Anyscale 与 Ray 是什么关系？",
+      "a": "Anyscale 由 Ray 的创建团队推出，是托管的 Ray 平台，提供比开源 Ray 更易用的控制台、自动缩放、安全与企业级支持。"
+    },
+    {
+      "q": "Anyscale 如何计费？",
+      "a": "按用量计费，无月费；新用户赠 $100 额度，GPU 按分钟计费，Anyscale Endpoints 从 $1/百万 token 起。"
+    }
+  ],
+  "seo_keywords": [
+    "Anyscale",
+    "Anyscale怎么样",
+    "Anyscale免费版",
+    "Anyscale使用教程",
+    "Anyscale和哪个好"
+  ],
+  "content": "## Anyscale是什么？\n\n简单说，Anyscale 是一个让你能把 Python 代码从“本机跑”变成“分布式跑”的平台，背后支撑它的是开源框架 Ray。如果你写过 PyTorch 或 TensorFlow 的训练脚本，想把它放到多台机器上加速，或者想一键部署一个推理 API 并自动扩容，Anyscale 就是干这个的。\n\n它的核心理念是：你不需要关心集群的搭建、节点挂掉怎么办、GPU 怎么分配——这些交给平台，你只管写业务逻辑。很多人第一次用会觉得“这不就是个托管版 Ray 吗？”对，但它把 Ray 的运维坑填了不少，也提供了无服务器推理、自动缩放这些开箱即用的能力。\n\n## 核心功能\n\n**1. 分布式模型训练与超参数调优**  \n这是 Anyscale 最直接的价值。你把训练脚本用 Ray 的 `@ray.remote` 装饰一下，就能在集群上并行跑。超参数调优用内置的 Tune 库，自动搜索最佳参数组合，省去手动调参的体力活。实际用下来，对那种单机显卡跑不动、或者一次要跑几百组实验的场景很友好。\n\n**2. 高性能模型推理服务（无服务器/自托管）**  \nAnyscale 提供两种推理模式：无服务器模式，你上传模型，它自动创建端点、按调用量自动扩缩容；自托管模式，你指定集群大小，自己控制资源。很多用户反馈无服务器模式在流量波动大的场景下性价比不错——没请求时几乎不花钱，高峰时瞬间拉起多个副本。\n\n**3. 原生的 Ray Data 数据处理管道**  \n数据预处理、特征工程这些也能放在同一个 Ray 集群上做。Ray Data 支持从 S3、GCS 等源读取，做 map/batch 操作，输出到训练 pipeline。好处是整个流程不用来回换框架，数据不落盘，减少 IO 开销。不过如果你已经用 Spark 或 Pandas 跑得好好的，倒也不必硬迁。\n\n**4. 任务调度与自动扩缩容**  \nAnyscale 会根据你的任务需求自动申请和释放机器。比如你提交一个训练任务，它评估需要 8 张 GPU，就自动从云上拉起 2 台 4 卡机器；任务结束，机器自动下线。这比手动管理 Kubernetes 集群省心很多，尤其适合非运维出身的团队。\n\n**5. 与 MLOps 工具集成 + 多团队协作**  \n原生集成 MLflow、Weights & Biases，训练日志、模型版本直接挂载。还支持 workspace 级别的资源隔离，不同团队可以共用集群但互不干扰。这点对大公司比较实用——不用每个团队单独买一套环境。\n\n## 版本/套餐对比\n\nAnyscale 的定价模式比较复杂，不同云、不同资源类型（CPU/GPU）价格不同。目前公开的信息是提供免费试用额度（比如 100 美元或 200 美元时长），正式付费按实际消耗的计算资源计费。更详细的套餐价格建议直接访问官网查看，因为涉及云厂商折扣和地域差异，这里不编造数据。\n\n| 版本 | 适用场景 | 特点 |\n|------|----------|------|\n| 免费版 | 个人试用、小规模学习 | 提供一定额度的免费计算时间，可体验基本功能 |\n| 按需付费 | 中小团队、短期项目 | 按集群使用的 CPU/GPU 时长计费，无长期合同 |\n| 企业版（定制） | 大规模生产、合规要求高 | 包括专属集群、SLA、技术支持、自定义资源配额 |\n\n## 值不值得用？\n\n**优点很明显：**  \n- 深度集成 Ray，分布式计算能力很强，尤其适合需要灵活调度任务的场景  \n- 自动扩缩容降低运维成本，不需要专门招人管集群  \n- 无服务器推理部署非常简洁，十分钟就能把一个模型变成 API  \n- 兼容主流 ML 框架，PyTorch、TensorFlow、JAX 都能用  \n- Ray 社区活跃，文档和示例丰富，遇到问题容易搜到解答  \n\n**缺点也确实存在：**  \n- 学习曲线——你得先理解 Ray 的编程模型，比如 `@ray.remote`、`ray.put`、`ray.get` 这些概念，对于只用过单机跑脚本的开发者，一开始会有点懵  \n- 对 Ray 的强依赖意味着如果你的业务需要用到 Ray 生态之外的库（比如某些旧版 Spark 集成），会有些别扭  \n- 大规模长期运行时，如果资源利用率不高（比如频繁启停机器），账单可能会比预想的高  \n\n总体结论：**如果你的团队已经在使用或计划使用 Ray，Anyscale 是非常省心的选择；如果你只是偶尔跑个小模型，直接用 Colab 或自己搭个 K8s 更便宜。**\n\n## 使用建议\n\n- 先用免费额度试跑一个小项目（比如一个简单的图片分类训练 + 推理 API），确认它符合你的工作流，再投入正式使用  \n- 团队里最好有一两个人熟悉 Ray 的基本概念，否则学习成本可能会拖慢进度  \n- 对于生产环境，建议开启预算警报和自动缩容策略，避免资源闲置浪费  \n- 如果需要多团队共享集群，提前规划好 workspace 和资源配额，避免互相抢占  \n- 部署推理服务时，优先用无服务器模式起步，等流量稳定后再评估要不要切到自托管  \n\n## 适合谁用？\n\n**推荐：**  \n- 正在用 Ray 做分布式训练的团队（比如 NLP 大模型、强化学习场景）  \n- 需要快速上线模型推理服务，又不想自己运维 K8s 的中小型团队  \n- 多团队协作、资源隔离需求明确的企业用户  \n\n**可考虑：**  \n- 对分布式计算感兴趣，想学习 Ray 但又不想从头搭环境的个人开发者  \n- 已有云账号但手动管理 GPU 集群比较吃力的团队  \n\n**不推荐：**  \n- 只做单机小模型训练（比如笔记本就能跑的实验），用 Anyscale 纯粹是大炮打蚊子  \n- 团队完全不用 Python，或者对 Ray 生态之外的依赖很深（比如主要用 TensorFlow Serving + Kubernetes）  \n- 预算非常紧张，且对运维成本不敏感（自己搭集群可能更省钱）",
+  "published": false,
+  "source_url": "https://www.anyscale.com/platform",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://www.anyscale.com/",
+  "verified_publisher": "Anyscale（由 Ray 开源框架原班团队创立）",
+  "verified_what": "基于 Ray 的生产级 AI 计算平台，提供分布式训练、微调、批处理与在线推理（含 Anyscale Endpoints）",
+  "verified_price": "按用量计费（Pay-as-you-go），新用户 $100 额度，无月费；GPU 按分钟计费；Anyscale Endpoints 托管推理从 $1/百万 token 起；Private Endpoints 企业定制",
+  "verified_platform": "Web（托管云 / BYOC，支持 AWS / Azure / GCP）",
+  "verified_features": [
+    "分布式训练（Ray Train）",
+    "批处理推理与嵌入生成",
+    "在线推理（Ray Serve）",
+    "Anyscale Endpoints 托管 LLM 推理（约 $1/百万 token）",
+    "Private Endpoints（VPC 内部署）",
+    "多云/混合云编排与企业治理（SSO/SAML/SCIM、审计）"
+  ],
+  "verified_description": "Anyscale 是由 Ray 开源框架原班团队打造的生产级 AI 计算平台，帮助团队在任意云上构建、运行和扩展数据/AI 工作负载（训练、推理、微调），无需自行管理集群。",
+  "content_flags": "原内容称价格“暂未公开”已过时：官网现为按量计费 + $100 新用户额度，Endpoints 从 $1/百万 token 起。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "编辑评分（公开评测约 4.3/5）",
+  "rating_verified": true,
+  "verified_pros": [
+    "深度集成 Ray，分布式能力强",
+    "自动扩缩容，降低运维成本",
+    "无服务器推理部署简洁",
+    "兼容 PyTorch、TensorFlow、JAX 等",
+    "Ray 社区活跃，文档丰富"
+  ],
+  "verified_cons": [
+    "学习曲线较陡，需理解 Ray 编程模型",
+    "对 Ray 强依赖",
+    "大规模长期运行成本可能较高",
+    "纯推理场景有更轻量替代"
+  ],
+  "verified_faq": [
+    {
+      "q": "Anyscale 与 Ray 是什么关系？",
+      "a": "Anyscale 由 Ray 的创建团队推出，是托管的 Ray 平台，提供比开源 Ray 更易用的控制台、自动缩放、安全与企业级支持。"
+    },
+    {
+      "q": "Anyscale 如何计费？",
+      "a": "按用量计费，无月费；新用户赠 $100 额度，GPU 按分钟计费，Anyscale Endpoints 从 $1/百万 token 起。"
+    }
+  ],
+  "verified_tags": [
+    "分布式计算",
+    "Ray框架",
+    "AI平台",
+    "模型推理",
+    "AI开发"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://www.anyscale.com/",
+    "https://www.anyscale.com/pricing",
+    "https://toolchase.com/tool/anyscale"
+  ],
+  "verify_notes": "关键修正：价格由“暂未公开”改为按量计费 + $100 额度。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Anyscale 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Anyscale 的 分布式训练（Ray Train） 是亮点，价格 按量计费（新用户 $100 额度，无月费）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

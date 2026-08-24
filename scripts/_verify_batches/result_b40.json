@@ -1,0 +1,126 @@
+{
+  "batch_id": "b40",
+  "category": "AI办公",
+  "tools": [
+    {
+      "slug": "fathom",
+      "name": "Fathom",
+      "url_current": "https://fathom.video",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "①描述与正文称『不录制音频只记录文字』错误：官网明确录制会议（pricing页列 Unlimited recordings & call storage，支持 bot 或 bot-free capture），Fathom 实际会录制音视频。②定价『基础$10/月起』错误：官网无$10档——免费$0，个人付费最低 Premium $16/月(年付)/$20月付，团队$19/月、商业$34月付等。"
+    },
+    {
+      "slug": "miro-ai",
+      "name": "Miro AI",
+      "url_current": "https://miro.com/ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 miro.com/ai 与 miro.com/pricing 确认：Miro AI 为 Miro 在线白板内置 AI 助手（AI Playbooks / Sidekicks / Flows，多模态理解画板内容），Starter $8/月(年付)/$10月付 与站内一致；2026 多模态升级描述属实。无幻觉。"
+    },
+    {
+      "slug": "tldv",
+      "name": " tl;dv",
+      "url_current": "https://tldv.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网 tldv.io 明确支持 30+ 语言（含中文），但站内正文写『支持 90 多种语言』错误（应为 30+）。定价『付费版$12/月起』官网定价页 /pricing 返回 404、首页未列具体付费价，无法核实，存疑需人工裁定。"
+    },
+    {
+      "slug": "grain",
+      "name": "Grain",
+      "url_current": "https://grain.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "①正文写『支持 30 多种语言』与官网『transcripts available in 100+ languages』不符（至少为 100+）。②定价『Pro版$16/月、团队版$35/人/月』与官网套餐名不符：官网为 Starter $15/月(年付)/$19月付、Business $29/月(年付)/$39月付，站内名称(Pro/团队版)在官网不存在，数值近似但错名。"
+    },
+    {
+      "slug": "slidesai",
+      "name": "SlidesAI",
+      "url_current": "https://slidesai.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 slidesai.io/pricing 确认：免费版为 12 次/年（非站内『每月3次』）；Pro €8.79/月(约$9.5，非$10)、Premium €18.30/月(约$20，官网称 Premium 而非『商业版』)。免费额度描述明显错误，付费命名/数值亦有出入。AI图像生成功能属实。"
+    },
+    {
+      "slug": "coda-ai",
+      "name": "Coda AI",
+      "url_current": "https://coda.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网 coda.io 确认 Coda AI 为文档协作平台的 AI 助手（AI chat / assistant / AI column，600+ 集成），功能描述属实；但 Coda 已更名为 Superhuman Docs 且官网大改版，站内『付费版$10/月起』需人工确认最新价格与 AI 计费方式。"
+    },
+    {
+      "slug": "zety-ai",
+      "name": "Zety AI",
+      "url_current": "https://zety.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 zety.com/pricing 确认：免费版（仅 TXT 导出），Pro 包 $1.95 试用14天后自动续费 $25.95/4周(约$28/月)，年付 $71.40/年(约$5.95/月)；站内『专业版约$9.99/月』错误，无此档。AI 简历写作/优化功能属实（AI content suggestions / Resume Check）。"
+    },
+    {
+      "slug": "lingban-ai",
+      "name": "灵办AI",
+      "url_current": "https://ilingban.com/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网 ilingban.com WebFetch 失败，经 WebSearch 确认 ilingban.com 为官方域名且正常存在；其为浏览器插件形态 AI 办公助手，功能（AI对话/写作/翻译/PDF解析）与 ¥29/月 会员定价与站内基本吻合。建议人工确认平台描述（产品以浏览器插件为主，而非纯『网页端、iOS、Android』）。"
+    },
+    {
+      "slug": "tencent-docs-ai",
+      "name": "腾讯文档AI",
+      "url_current": "https://docs.qq.com/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 docs.qq.com 确认腾讯文档 AI 助手（基于混元大模型，智能写作/续写/总结/翻译，全品类文档生成），平台（网页/Windows/Mac/iOS/Android/微信小程序）与站内一致；『高级AI功能需开通会员』与官网会员体系一致。无幻觉。"
+    },
+    {
+      "slug": "mem-ai",
+      "name": "Mem",
+      "url_current": "https://mem.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网 mem.ai 确认 Mem 为 AI 笔记/知识管理工具（Mem Workspace + Agent，自动关联笔记、构建知识上下文），由 Mem Labs 推出，产品与功能描述准确；但站内『Mem Pro 约$12/月 / 免费版+$10/月』未能在官网直接核实最新价格，建议人工确认。"
+    }
+  ]
+}

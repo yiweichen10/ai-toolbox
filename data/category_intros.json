@@ -1,0 +1,196 @@
+{
+  "ai-writing": {
+    "intro": "<p>写文章、写报告、写文案——AI写作已经不只是\"帮你改错别字\"了。2026年的AI写作工具能根据几个关键词生成完整长文、模仿特定风格、甚至一键完成中英文互译并润色。市面上从免费到付费、从通用写作到垂直领域的学术/营销/小说工具，选择非常多。如果你是内容创作者、自媒体人或日常办公需要大量文字输出，用对工具能把每周写作时间压到原来的三分之一。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>中文写作优先看百度系/字节系工具（如文心一言、豆包），天然中文语感好；需要长文创作和逻辑推理选ChatGPT或Claude；预算有限的从免费额度大的开始试，不要一上来就买年费。</p>"
+  },
+  "ai-painting": {
+    "intro": "<p>只要输入一段文字描述，就能生成一张画——这就是AI绘画。从Midjourney的\"照片级写实\"到Stable Diffusion的开源可控，再到国产即梦AI、文心一格的中文理解优势，不同工具在画质、风格、速度上差异明显。2026年的AI绘画不仅能\"文生图\"，还能\"图生图\"、局部重绘、甚至一键生成短视频封面和海报素材。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>追求画质选Midjourney（需翻墙付费）；需要中文理解和免费额度选即梦AI或文心一格；想做深度创作（训练自己的模型、插件扩展）选Stable Diffusion开源生态；不做设计的小白优先试国内免费工具，先用起来再升级。</p>"
+  },
+  "ai-video": {
+    "intro": "<p>不架相机、不请演员、不学剪辑，靠文字就能生成视频——AI视频生成正在改变内容创作的游戏规则。从可灵AI的\"文生视频\"到即梦的数字人播报，再到剪映的AI自动剪辑，2026年这条赛道上国产工具已经可以和Sora掰手腕。短视频博主、电商卖家、企业培训，都在用AI把视频制作成本压到近乎为零。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>做短视频/口播优先试可灵AI和即梦（视频质量领先且国内可用）；需要AI自动加字幕和简单剪辑选剪映；做数字人/虚拟主播选HeyGen或D-ID；注意免费版通常有水印或有时间限制，商用需要付费版。</p>"
+  },
+  "ai-coding": {
+    "intro": "<p>AI编程工具是2026年增长最快的赛道之一。从Cursor这种\"全代码编辑器\"到GitHub Copilot的代码补全，再到国产的DeepSeek Coder和通义灵码，AI已经能帮你写函数、修bug、解释代码、甚至把需求描述直接变成可运行的项目。不论你是十年经验的老程序员还是刚学Python的新手，AI编程助手都能让你写代码的速度提升一个量级。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>日常写代码选GitHub Copilot或Cursor（编辑器集成最成熟）；预算有限或需要中文语境选DeepSeek Coder或通义灵码（免费额度大方）；做AI Agent开发选Claude Code；注意Cursor和Copilot目前都需要付费，但学生和开源项目有免费通道。</p>"
+  },
+  "ai-chat": {
+    "intro": "<p>AI对话（聊天机器人）是大多数人接触AI的\"第一站\"。从ChatGPT到DeepSeek、豆包、Kimi、文心一言、Claude——2026年的AI对话工具已经不只是\"回答你的问题\"，它们能写代码、分析数据、翻译文件、联网搜索、甚至多轮对话中帮你做决策。选择一个趁手的AI助手，相当于随身带了一个随时待命的\"知识顾问\"。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>综合能力最强选ChatGPT（需翻墙付费）；中文场景和免费额度选DeepSeek或豆包；需要长文本分析（如读论文、财报）选Kimi或Claude（上下文窗口超大）；不想翻墙且需实时联网选文心一言或通义千问。</p>"
+  },
+  "ai-office": {
+    "intro": "<p>AI办公工具正在重新定义\"上班\"这件事。自动生成PPT、一句话总结会议纪要、Excel公式不用手写——2026年，从WPS AI到微软Copilot、从Notion AI到钉钉智能助理，办公软件全线AI化。以前需要花半天做的周报、要翻好几个模板做的汇报PPT，现在几分钟就能搞定。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>国内办公选WPS AI（深度集成在WPS里，上手成本低）；写文档/做知识管理选Notion AI；企业协同选钉钉/飞书的AI功能；做专业PPT和数据分析选Gamma或微软Copilot（效果更好但需付费）。</p>"
+  },
+  "ai-design": {
+    "intro": "<p>不请设计师也能做出不错的海报、Logo和UI界面——这就是AI设计工具的吸引力。从Canva的AI设计助手到Adobe Firefly的专业级生成，从一键抠图到自动配色排版，2026年的AI设计工具已经覆盖了平面设计、Logo设计、UI原型、3D建模等多个方向。自媒体人、电商卖家、初创团队，都在用AI设计把\"找设计师\"这件事变成\"自己动手\"。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>做社交媒体图片/海报选Canva（模板多、上手快、免费版够用）；专业设计需求选Adobe Firefly或Midjourney；做Logo和品牌VI选Looka或Hatchful；注意区分\"AI辅助设计\"和\"AI生成设计\"——前者是人主导AI辅助，后者是AI全自动生成。</p>"
+  },
+  "ai-translation": {
+    "intro": "<p>AI翻译已经从\"把word丢进翻译软件\"升级为\"实时多语言对话+专业领域术语保真\"。ChatGPT和DeepSeek能做到信达雅的翻译质量（不再是\"机翻味\"），DeepL在专业文档翻译上仍是标杆，而豆包和通义千问在中英互译场景下甚至超过了传统翻译软件。2026年，跨国团队协作、学术论文阅读、出海电商文案，都用AI翻译替代了人工翻译的第一轮。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>中英互译追求质量选DeepSeek或ChatGPT（比传统翻译软件自然得多）；专业文档（法律/医学/技术）选DeepL（术语准确率最高）；需要批量翻译长文档选沉浸式翻译插件；做多语言网站或App用自动翻译API（OpenAI/DeepSeek API）。</p>"
+  },
+  "ai-audio": {
+    "intro": "<p>AI配音、AI音乐生成、AI声音克隆——音频领域的AI革命来得比想象中更快。从剪映的\"一键AI配音\"到ElevenLabs的\"声音克隆\"，再到Suno的\"文字生成歌曲\"，2026年的AI音频工具已经能让一个完全没有录音设备的人，制作出\"播客级别\"的音频内容。短视频配音、有声书录制、播客制作，AI音频都是降本增效的利器。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>做短视频配音选剪映或微软Azure语音（中文语音自然、免费额度够用）；需要多语种或定制声音选ElevenLabs（声音克隆最成熟）；做AI音乐/BGM选Suno或网易天音；注意商用版权——部分工具的免费版生成内容不可用于商业用途。</p>"
+  },
+  "ai-search": {
+    "intro": "<p>AI搜索引擎不再给你\"十条蓝色链接\"，而是直接给你答案。Perplexity、秘塔AI搜索、天工AI搜索——这些2026年最火的AI搜索工具，能理解你的问题意图，整合多个来源给出结构化回答，并标注出处。无论是学术研究、市场调研还是日常\"百度一下\"，AI搜索的效率和深度都远超传统搜索引擎。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>深度研究和学术搜索选Perplexity（支持追问+来源追溯，质量最高但需翻墙）；中文场景选秘塔AI搜索或天工AI（免费、直接出答案、无广告）；需要实时信息（如新闻/股价）选带联网功能的ChatGPT或DeepSeek；日常替代百度搜索先从秘塔开始试用。</p>"
+  },
+  "ai-automation": {
+    "intro": "<p>AI自动化不是\"替代人\"，而是\"替代那些重复的、让人崩溃的手工操作\"。从Zapier的AI自动化工作流到Make的\"可视化编排\"，再到n8n的开源自部署方案，2026年的AI自动化工具能把\"收到邮件→保存附件→整理到表格→发通知\"这种多步操作，变成一条\"设置一次、自动运行\"的流程。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>个人轻度使用选Zapier或Make（免费版可做日常自动化）；企业级/数据敏感场景选n8n（开源可自部署，数据不出公司）；国内替代选集简云；非技术用户优先选有\"模板市场\"的工具，从模板开始改比自己从零搭快得多。</p>"
+  },
+  "ai-efficiency": {
+    "intro": "<p>AI效率工具是一个有点\"万能\"的品类——AI笔记、AI日程管理、AI邮件助手、AI阅读器，它们都有一个共同目标：帮你\"省时间\"。2026年，从Notion AI的\"一句话生成文档\"到Mem的\"AI帮你记笔记\"，再到Otter.ai的\"自动生成会议纪要\"，AI效率工具正在把知识工作者从重复劳动中解放出来。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>做知识管理和笔记选Notion AI或Mem；管理邮件和日程选Superhuman或Shortwave；会议记录和转录选Otter.ai或飞书妙记；注意不要贪多——选1-2个核心工具深耕，比装十个但都不习惯用效果好得多。</p>"
+  },
+  "ai-agent": {
+    "intro": "<p>如果说ChatGPT是\"你问它答\"，那AI Agent就是\"你给目标，它自己想办法完成\"。2026年AI Agent赛道大爆发：AutoGPT能自主规划多步任务、MetaGPT用多Agent模拟软件公司、字节跳动的Coze让非程序员也能\"搭\"出自己的AI智能体。从自动写代码到自动做调研再到自动回复客服，AI Agent代表着\"AI替你做事\"的下一阶段。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>非程序员想搭建自己的Agent选Coze或Dify（零代码、中文友好）；需要深度开发选LangChain或AutoGPT；企业客服/营销场景选字节豆包或阿里通义的Agent平台；注意Agent目前仍处于快速迭代期，功能和稳定性每个月都在变，选活跃社区的项目更不容易\"踩坑然后没人维护\"。</p>"
+  },
+  "ai-verticals": {
+    "intro": "<p>AI垂直工具是\"专门给某个行业或场景做的AI\"——医疗AI帮你看片子、法律AI帮你审合同、金融AI帮你做交易策略、教育AI帮你出题批卷。这些工具不像通用AI那样\"什么都能聊\"，但在自己的领域里可能比GPT-5还专业。2026年，越来越多的垂直AI工具开始落地商用，医生、律师、教师、交易员都在用它们提升专业效率。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>先明确你的行业和场景（医疗/法律/金融/教育/电商等），再在细分领域内对比；注意垂直AI工具通常不免费（专业领域训练成本高），但多数提供试用；选有行业认证或合作的工具（如医疗AI需有医疗器械认证）；如果不确定，先用通用AI（ChatGPT/DeepSeek）跑通核心需求，再评估是否值得为垂直工具付费。</p>"
+  },
+  "ai-development": {
+    "intro": "<p>AI开发工具是\"给做AI的人用的AI\"——模型训练平台、MLOps工具、向量数据库、API网关，这些工具让开发者不用从零搭基础设施就能把AI能力集成到自己的产品里。从Hugging Face的模型库到LangChain的Agent开发框架，再到Pinecone的向量搜索，2026年的AI开发生态已经相当成熟。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>找预训练模型选Hugging Face（全球最大的模型库，大部分免费）；做LLM应用开发选LangChain或LlamaIndex；需要向量数据库选Pinecone或Milvus（国产替代）；部署和监控选Weights &amp; Biases或MLflow。刚入门的开发者从Hugging Face + LangChain这两个组合开始就够了。</p>"
+  },
+  "ai-learning": {
+    "intro": "<p>想系统学习AI却不知道从哪开始？AI学习教程、AI课程和AI入门网站已经比想象中多——从Coursera、DeepLearning.AI的国际名校课程，到fast.ai、动手学深度学习的开源教程，再到飞桨AI Studio、AI大学堂的国内实训平台，覆盖从零基础入门到大模型开发的全路线。2026年最火的AI学习方式是跟着AI新手入门教程边学边练，通过Kaggle等社区实战上手。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>零基础想快速入门AI，先找免费AI课程和AI新手入门教程（微软Generative AI for Beginners、Elements of AI都是很好的起点）；想系统进阶走工程路线，选Coursera或DeepLearning.AI的系统课；喜欢中文环境和动手实训，用飞桨AI Studio、AI大学堂、ShowMeAI；想找AI学习路线图做规划，参考阿里云AI学习路线。预算有限就从免费教程开始，把AI学习网站收藏起来一步步推进。</p>",
+    "title_body": "AI学习教程与入门网站推荐",
+    "keywords": [
+      "AI学习",
+      "AI教程",
+      "AI课程",
+      "AI入门",
+      "AI学习网站",
+      "如何学习AI",
+      "AI新手入门教程",
+      "AI学习路线",
+      "AI自学",
+      "AI学习平台"
+    ],
+    "faq": [
+      [
+        "AI学习教程哪个好？",
+        "AI学习教程的选择取决于你的基础和目标：零基础优先看AI新手入门教程（微软Generative AI for Beginners、Elements of AI免费且系统）；想学深度学习理论选fast.ai或动手学深度学习；想拿到体系化认证选Coursera、DeepLearning.AI。建议先用免费AI课程确认兴趣方向，再决定是否投入系统课程。"
+      ],
+      [
+        "零基础如何入门AI？",
+        "三步走：第一步跟AI入门教程建立概念（推荐Elements of AI、AI新手入门教程）；第二步用AI学习网站边学边练（Kaggle、飞桨AI Studio有大量免费实训）；第三步按AI学习路线图系统推进（参考阿里云AI学习路线），从Python和机器学习基础开始，逐步进入大模型和Agent开发。"
+      ],
+      [
+        "有免费的AI课程吗？",
+        "有。免费的AI课程非常多：OpenAI Academy、Google AI、Elements of AI、微软Generative AI for Beginners和ML for Beginners全部免费；Coursera和DeepLearning.AI的多数课程可免费旁听；飞桨AI Studio、ShowMeAI提供免费的中文学习资源。免费资源足够支撑到入门和中级水平。"
+      ],
+      [
+        "如何学习AI大模型开发？",
+        "学习大模型开发建议按这条路线：先掌握Python和机器学习基础，再学习Prompt工程和API调用，然后了解RAG检索增强和微调，最后动手做Agent开发。AI大学堂、飞桨AI Studio提供大模型方向的AI课程和在线编码环境，动手学深度学习（D2L）是经典教材。"
+      ],
+      [
+        "AI入门要学多久？",
+        "AI入门没有固定时间，取决于投入强度：每天2小时持续学习，约1-2个月可以掌握基础概念并能调用API做简单应用；3-6个月可以独立完成一个机器学习小项目。重点是坚持AI自学路线，结合AI教程实操而不是只看视频。"
+      ],
+      [
+        "AI学习网站推荐有哪些？",
+        "综合推荐：Coursera（名校课程）、DeepLearning.AI（吴恩达系列）、Kaggle（实战竞赛）、fast.ai（免费实用）、飞桨AI Studio（国内实训）、AI大学堂（讯飞课程与认证）、ShowMeAI（中文资料库）、MachineLearningMastery（教程站）、Google AI（官方学习平台）。"
+      ]
+    ]
+  },
+  "ai-detection": {
+    "intro": "<p>AI内容检测与降AI率工具正在成为学术和内容行业的刚需。一端是论文查重、AI率检测、AI内容检测工具（GPTZero、朱雀AI检测、Originality.AI），帮学校和企业识别AI生成内容；另一端是降AI率、降AIGC痕迹工具（稿易、笔灵、千笔、学术猹），帮论文作者在保持原创的前提下降低AIGC检出率。2026年，知网、维普、万方全面接入AI检测，让这两个方向的需求同时爆发。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>学生写论文降AI率，先确认工具适配的检测库（知网/维普/万方），主流有稿易、笔灵、千笔、PaperFake、学术猹；老师或编辑做AI内容检测，优先GPTZero、朱雀AI检测（腾讯）、睿信论文检测；内容平台或出海团队做原创度检测，选Originality.AI、CopyLeaks、Winston AI；预算有限先用免费版（GPTZero基础版、Sapling、Smodin）。注意降AI率不等于洗稿，降完后务必人工复核。</p>",
+    "title_body": "AI检测与论文查重工具推荐",
+    "keywords": [
+      "AI检测",
+      "AI查重",
+      "AI率检测",
+      "AI检测工具",
+      "论文查重",
+      "论文AI率检测",
+      "AI内容检测",
+      "降AI率",
+      "AIGC检测",
+      "知网查重"
+    ],
+    "faq": [
+      [
+        "论文查重和AI率检测有什么区别？",
+        "论文查重检测的是文字重复率（与已发表文献的相似度），知网、维普、万方都有成熟的查重系统；AI率检测（也叫AIGC检测）检测的是文字是否由AI生成，通过困惑度、爆发性等特征判断。两者目的不同但经常一起使用，2026年主流学术检测平台已把两者整合，论文AI率检测成为毕业季新刚需。"
+      ],
+      [
+        "有没有免费的论文查重和AI检测工具？",
+        "有。免费论文查重：论文查重免费查重、免费论文查重网站等提供基础额度；AI检测免费版：GPTZero基础版每月1万字、Sapling、Smodin、Writer的AI Content Detector免费，朱雀AI检测（腾讯）提供免费额度。注意免费版一般有字数或次数限制，重要论文建议对比多款工具交叉验证。"
+      ],
+      [
+        "降AI率工具安全吗？会破坏论文内容吗？",
+        "正规降AI率工具（稿易、笔灵、千笔、PaperFake等）通过改写句式、调整表达、替换同义词来降低AIGC痕迹，尽量保留原意。但任何自动改写都可能引入语义偏差，使用前务必备份原文，降完后逐段人工复核；也不要依赖降AI率规避学术诚信问题，工具应服务于合理润色而非造假。"
+      ],
+      [
+        "AI率太高怎么办？如何有效降AI率？",
+        "AI率太高的有效做法：先分段用降AI率工具处理（PaperFake、茅茅虫支持多格式文档），重点改写AI痕迹最重的段落；补充个人真实案例、数据和个人化表达，这是最有效的降AIGC方法；调整句式长短和结构变化（AI生成文本通常句式规律）。降完后用AI率检测工具复测，通常能降到合格线。"
+      ],
+      [
+        "AI检测工具哪个准确？",
+        "不同检测器侧重不同：教育学术场景GPTZero、朱雀AI检测口碑较好；内容平台原创度场景Originality.AI、CopyLeaks更常用；免费轻量选Smodin、Sapling、Writer。没有100%准确的检测器，重要文本建议多个检测工具交叉验证，再结合人工判断。"
+      ],
+      [
+        "降AI率和AI内容检测是同一类工具吗？",
+        "不是，但属于同一生态。AI内容检测（AI检测、AI查重、AI率检测）用于识别文本是否为AI生成；降AI率工具（降AI率、AI降重、降AIGC痕迹）用于改写文本以降低被检出概率。两者方向相反：检测工具帮审核方把关，降AI率工具帮作者规避。本分类下分别有内容检测和降AI率两个子类目。"
+      ],
+      [
+        "AI检测工具怎么用？",
+        "AI检测工具用法都很简单：粘贴文本或上传文档（支持PDF、Word、TXT），点击检测，几秒内返回AI概率评分和疑似段落高亮。GPTZero支持句子级分析，能指出哪些句子最像AI生成；批量场景可用API接入（GPTZero、Originality.AI都提供API）。"
+      ]
+    ]
+  },
+  "ai-prompt": {
+    "intro": "<p>AI提示词（Prompt）是2026年用好AI的关键技能。同样的模型，提示词写得好坏直接决定输出质量——这就是提示词工程（Prompt Engineering）的价值。AI提示词工具帮你管理、优化、生成高质量提示词：PromptHero、PublicPrompts收集了海量AI绘画提示词，AIPRM、Snack Prompt为ChatGPT准备了场景化指令库，LangGPT把提示词结构化写作变成模板。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>找现成的AI绘画提示词，用PromptHero、PublicPrompts、Stable Diffusion Prompt Book；管理ChatGPT场景化指令，用AIPRM、AI Short、Snack Prompt；想系统学习提示词怎么写，用Learning Prompt、提示工程指南（Prompt Engineering Guide）；需要提示词生成和优化，用PromptPerfect、ClickPrompt、MeiGen；提示词变现或团队协作，用PromptBase、幂简AI提示词商城。免费资源占多数，先用起来再按需付费。</p>",
+    "title_body": "AI提示词工具与提示词库推荐",
+    "keywords": [
+      "AI提示词",
+      "提示词",
+      "提示词工程",
+      "AI绘画提示词",
+      "AI提示词库",
+      "prompt",
+      "AI指令"
+    ],
+    "faq": [
+      [
+        "prompt是什么意思？",
+        "prompt（提示词/指令）是你给AI模型的输入文本，用来引导AI生成你想要的输出。比如让AI画图时输入的一段描述、让ChatGPT写文章时给的要求，都是prompt。提示词的质量直接影响AI输出质量，这也是提示词工程成为热门技能的原因。"
+      ],
+      [
+        "AI提示词怎么写？",
+        "写提示词有几个通用技巧：明确角色（你是资深编辑）、明确任务（帮我写一篇800字文章）、给出背景和约束（面向新手、不要用专业术语）、示例示范（给一个参考样例）、迭代优化（根据输出调整）。结构化提示词可以用LangGPT模板；不想从零写可以用AI提示词生成器或PromptPerfect优化。"
+      ],
+      [
+        "有哪些好用的AI提示词工具？",
+        "按用途分：AI绘画提示词库——PromptHero、PublicPrompts、Stable Diffusion Prompt Book；ChatGPT指令库——AIPRM、AI Short、Snack Prompt；提示词学习——Learning Prompt、提示工程指南；提示词生成优化——PromptPerfect、ClickPrompt、MeiGen、AI Prompt Generator；提示词交易——PromptBase、幂简AI提示词商城。"
+      ],
+      [
+        "提示词和咒语有什么区别？",
+        "没有本质区别，都是用户对AI的输入指令。中文语境下「咒语」多用于AI绘画社区（AI绘画提示词），偏口语化；「提示词」更通用，覆盖所有AI场景（文本、绘画、视频）；英文都是prompt。AI文生图提示词、AI文生视频提示词这类具体场景的prompt也有专门的收集平台。"
+      ],
+      [
+        "提示词工程难学吗？",
+        "不难，入门门槛很低：学会基本结构（角色+任务+要求）就能写出可用的提示词；进阶需要掌握上下文管理、思维链、few-shot示例、提示词模板复用等技巧。学习资源方面，提示工程指南（PromptingGuide.ai）是权威免费教程，Learning Prompt是中文友好的学习平台。"
+      ],
+      [
+        "AI提示词库可以免费使用吗？",
+        "多数提示词库免费：PromptHero、PublicPrompts、Awesome ChatGPT Prompts、AI Short都免费开放；AIPRM的免费版提供常用指令，高级指令需订阅；PromptBase是付费交易市场（提示词作者定价出售）。建议先用免费资源，收藏常用提示词形成自己的指令库。"
+      ]
+    ]
+  },
+  "decentralized-ai": {
+    "intro": "<p>去中心化 AI 用区块链与代币激励，把 AI 算力、模型和数据从少数公司手里解放出来——Bittensor 让全球节点协作训练模型、Render 与 Akash 汇集闲置 GPU 算力、ElizaOS 提供开源 Agent 框架、AIXBT 自动追踪链上情报。对开发者与创作者，它是「花更少的钱、用更多算力」的新选择；对投资者，它是 AI×Web3 这条新兴赛道的入口。</p>",
+    "how_to_choose": "<p><strong>怎么选：</strong>想贡献算力或模型获利，看 Bittensor、Akash、Render（按 GPU 型号和激励机制选）；想快速搭 Web3 智能体，用开源框架 ElizaOS；只想获取链上行情情报、不做交易，用 AIXBT。注意这类工具涉及代币与链上操作，务必以官网为准、量力参与，本站在此仅作工具收录，不构成任何投资建议。</p>"
+  }
+}

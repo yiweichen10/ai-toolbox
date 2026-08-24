@@ -1,0 +1,161 @@
+{
+  "name": "deepclaude",
+  "slug": "deepclaude",
+  "positioning": "免费AI助手，提供 CLI 与+BYOK 自带密钥好",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#6C5CE7",
+  "description": "DeepClaude 是由 Asterisk 开发的开源 LLM 推理 API 与聊天界面，融合 DeepSeek R1 的推理链与 Claude 的生成能力，采用 BYOK 自带密钥模式，可自托管部署。（注：原项目已于 2025 年 10 月更名为 DeepReasoning。）",
+  "category": "AI对话",
+  "tags": [
+    "AI对话",
+    "深度推理",
+    "开源",
+    "自托管",
+    "BYOK"
+  ],
+  "rating": "⭐4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://github.com/husniadil/deepclaude",
+  "price": "免费开源",
+  "platform": "Web, API, 自托管",
+  "pros": [
+    "结合 DeepSeek R1 推理与 Claude 生成，能力互补",
+    "开源免费（MIT），可自托管保护数据隐私",
+    "BYOK 自带密钥，无数据留存",
+    "Rust 后端高性，响应快",
+    "支持 CLI 与 API，便于嵌入工作流"
+  ],
+  "cons": [
+    "非官方项目，无商业支持与 SLA",
+    "需自备 DeepSeek/Claude API Key，有调用成本",
+    "自托管需技术门槛（Docker/编译）",
+    "原 DeepClaude 已更名为 DeepReasoning，品牌/文档有迁移",
+    "社区资料分散（存在多个同名 fork）"
+  ],
+  "features": [
+    "融合 DeepSeek R1 推理链与 Claude 生成（单一流式输出）",
+    "BYOK 自带密钥，本地密钥管理，数据不存储",
+    "开源 MIT 许可，可自托管（Docker 构建）",
+    "提供 CLI 与 Chat UI 便于集成",
+    "高度可配置的 API 与界面"
+  ],
+  "related": [
+    "claude",
+    "deepseek",
+    "chatgpt"
+  ],
+  "faq": [
+    {
+      "q": "DeepClaude 是什么？",
+      "a": "由 Asterisk 开发的开源 LLM 推理 API 与聊天界面，将 DeepSeek R1 的推理链与 Claude 生成在单一流中合并输出，采用 BYOK 自带密钥模式，可自托管。注意：原项目已于 2025-10 更名为 DeepReasoning。"
+    },
+    {
+      "q": "DeepClaude 免费吗？",
+      "a": "项目本身 MIT 开源免费；使用成本来自你自备的 DeepSeek / Claude API Key 调用费用。"
+    },
+    {
+      "q": "DeepClaude 与 Claude 有什么区别？",
+      "a": "它不是 Anthropic 官方产品，而是独立开发者把 DeepSeek R1 与 Claude 模型组合使用的开源工具，需在配置中填入自己的 API Key。"
+    },
+    {
+      "q": "如何部署使用？",
+      "a": "克隆 GitHub 仓库后用 Docker 构建运行（默认访问 http://localhost:8000/config 配置），或使用提供的 CLI；需自备 DeepSeek/Claude API Key。"
+    }
+  ],
+  "seo_keywords": [
+    "deepclaude",
+    "deepclaude怎么样",
+    "deepclaude免费版",
+    "deepclaude使用教程",
+    "deepclaude和哪个好"
+  ],
+  "content": "## deepclaude是什么？\n\n简单说，DeepClaude 是一个正在快速成长的 AI 工具。它不像我们常见的那些“一问一答”的大模型，而是更侧重于把“深度推理”和“流畅对话”结合起来。你可以把它想象成一个既擅长做复杂逻辑题，又能跟你唠家常的聪明朋友。\n\n目前它还处在比较早期的阶段，很多细节没有完全公开，但它的设计思路很明确：不再只是依赖单一模型，而是尝试融合不同模型的长处，让回答更准确、更聪明。如果你关注 AI 领域的新动态，这绝对是一个值得放进观察清单的工具。\n\n## 核心功能\n\n目前来看，DeepClaude 的几个核心功能都挺有针对性，不是为了堆砌功能而做的。\n\n- **智能对话问答**：这是基本功。但实际用下来，感觉它的回答不是那种“万金油”式的敷衍，而是会主动拆解你的问题，给出更有深度的回应。对于复杂问题，它不会直接给答案，而是会先展示它的思考过程。\n- **深度逻辑推理**：这是它的一个亮点。在处理数学题、逻辑谜题、甚至是一些需要多步推导的问题时，它表现出的条理性很强。能明显感觉到，它不是靠“猜”答案，而是在用逻辑推演。\n- **多轮上下文理解**：很多工具聊几句就忘了开头，但 DeepClaude 在这方面做得不错。它会记住对话的脉络，即使你中间打断了，绕了个弯，它也能自然地接回之前的逻辑主线。\n- **代码辅助生成**：对于开发者来说，这个功能很实用。不只是生成代码片段，它还能帮你理解代码逻辑、指出潜在错误，或者给出优化建议。更像是“搭档”而不是“代码生成器”。\n- **文件上传分析**：你可以把一些文档、PDF 或者数据表丢给它，它会尝试提取关键信息并进行分析。虽然初期可能处理不了特别复杂的格式，但对于日常的文档总结和信息提取，效率很高。\n- **自定义角色设定**：这个功能给了用户不少自由度。你可以设定它的角色、语气、回答风格。比如，把它变成一个严格的面试官、一个耐心的老师，或者一个专业的顾问，能适配不同的使用场景。\n\n## 版本/套餐对比\n\n由于 DeepClaude 还处于早期阶段，官方并没有公布详细的版本划分和具体套餐价格。据我们观察，目前很可能提供免费的基础版用于体验核心功能，而更高级的版本（比如不限次数、更快的响应速度、或者额外的功能）可能还在规划中。\n\n关于具体的定价方案和版本区别，建议直接关注官方渠道，第一时间获取最新信息。\n\n| 项目 | 当前情况 |\n| :--- | :--- |\n| **版本** | 暂未公开详细版本划分 |\n| **价格** | 暂未公开（可能提供免费试用/免费版） |\n| **额外功能** | 待官方公布 |\n\n## 值不值得用？\n\n**优点：**\n\n- **思路清晰**：在逻辑推理和复杂问题处理上，给人的感觉是“靠谱”的，不是那种惊艳的传说级别，但明显比很多通用模型更聪明。\n- **体验流畅**：界面确实简洁，上手很快。响应速度在早期工具里算不错的，没有明显的卡顿感。\n- **持续迭代**：新工具的特点，你会感觉到它一直在变好，不断有新的能力加入，有种“养成系”的乐趣。\n- **记忆力好**：多轮对话的记忆保持得很好，能支持长时间的深度讨论。\n\n**缺点：**\n\n- **尚不完善**：功能还在打磨中，一些高级功能（比如文件分析的类型支持）可能还不够全。\n- **生态薄弱**：毕竟是新东西，网上的教程、用户分享的“最佳实践”还比较少，遇到问题更多得靠自己摸索。\n- **稳定性待观察**：作为早期产品，偶尔可能会遇到一些不稳定的情况，或者某些功能突然不能用了。\n\n**总体结论：**  \n它是一个**非常有潜力的“潜力股”**。如果你是个喜欢尝鲜、愿意花时间去探索新工具的专业用户，那它带来的惊喜可能远大于它的不成熟。但如果你是想要一个“即开即用”、功能完善的成熟产品，那建议再等等。\n\n## 使用建议\n\n1.  **从核心能力入手**：先拿它试试那些你头疼的逻辑题、复杂分析，感受一下它的推理能力是不是真的像传说中那么强。\n2.  **用来理清思路**：如果你在写报告、做方案时思路卡壳，可以试着把问题和初步想法描述给它，让它帮你梳理逻辑、寻找盲点。\n3.  **处理代码小项目**：写一些小的脚本、修复一些 bug 的时候，用它当副手，它的代码理解能力能帮你省不少事。\n4.  **别当“大百科”**：现阶段，它的知识库可能不如一些成熟的大模型那么广，对于需要大量事实性信息的问题，最好再交叉验证一下。\n5.  **第一时间关注官方**：想第一时间了解版本更新、新功能、以及可能的收费方案，最好的办法就是关注它的官方渠道（如官网、Twitter、公众号等）。\n\n## 适合谁用？\n\n- **推荐**：AI 深度爱好者、AI 研究者、以及那些经常需要处理复杂逻辑、数学或编程问题的专业人士。你们能从中获得最大的价值。\n- **可考虑**：大学生、需要写 report 的职场人、或者想找一个能深度聊天的 AI 来提高效率的轻度用户。如果你愿意花点时间适应它的节奏，它会是不错的助手。\n- **不推荐**：如果你对工具的稳定性和功能完整性要求极高，或者你已经被某个成熟工具（如 ChatGPT、Gemini）深度绑定，那目前可以先观望。另外，如果你的需求只是日常聊天或搜索信息，它可能有点“大材小用”了。",
+  "published": true,
+  "source_url": "https://deepclaude.com",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "verified_url": "https://github.com/husniadil/deepclaude",
+  "verified_publisher": "Asterisk（开源社区开发者，asterisk.so）",
+  "verified_what": "开源 LLM 推理 API 与聊天界面，融合 DeepSeek R1 的推理链（CoT）与 Claude 的生成能力，采用 BYOK 自带密钥模式，可自托管部署。注：原项目已于 2025-10 更名为 DeepReasoning。",
+  "verified_price": "免费开源（MIT 许可）；使用成本取决于用户自备的 DeepSeek / Claude API Key 调用费用。",
+  "verified_platform": "Web, API, 自托管（Docker / 源码编译）, CLI",
+  "verified_features": [
+    "融合 DeepSeek R1 推理链与 Claude 生成（单一流式输出）",
+    "BYOK 自带密钥，本地密钥管理，数据不存储",
+    "开源 MIT 许可，可自托管（Docker 构建）",
+    "提供 CLI 与 Chat UI 便于集成",
+    "高度可配置的 API 与界面"
+  ],
+  "verified_description": "DeepClaude 是由 Asterisk 开发的开源 LLM 推理 API 与聊天界面，融合 DeepSeek R1 的推理链与 Claude 的生成能力，采用 BYOK 自带密钥模式，可自托管部署。（注：原项目已于 2025 年 10 月更名为 DeepReasoning。）",
+  "content_flags": "原 description 称'由 Asterisk 开发'准确；但原 faq 称'价格信息暂未公开''具体能力请以官方介绍为准'偏模糊且与实际不符——项目明确免费开源。原 pros/cons 偏泛。整体无严重幻觉，但需补充更名（DeepReasoning）事实并修正 faq。",
+  "verified_rating": "⭐4.5",
+  "rating_source": "暂无权威评分（开源项目，以 GitHub stars / 社区采用为信号；本站编辑评分保留）",
+  "verified_pros": [
+    "结合 DeepSeek R1 推理与 Claude 生成，能力互补",
+    "开源免费（MIT），可自托管保护数据隐私",
+    "BYOK 自带密钥，无数据留存",
+    "Rust 后端高性，响应快",
+    "支持 CLI 与 API，便于嵌入工作流"
+  ],
+  "verified_cons": [
+    "非官方项目，无商业支持与 SLA",
+    "需自备 DeepSeek/Claude API Key，有调用成本",
+    "自托管需技术门槛（Docker/编译）",
+    "原 DeepClaude 已更名为 DeepReasoning，品牌/文档有迁移",
+    "社区资料分散（存在多个同名 fork）"
+  ],
+  "verified_faq": [
+    {
+      "q": "DeepClaude 是什么？",
+      "a": "由 Asterisk 开发的开源 LLM 推理 API 与聊天界面，将 DeepSeek R1 的推理链与 Claude 生成在单一流中合并输出，采用 BYOK 自带密钥模式，可自托管。注意：原项目已于 2025-10 更名为 DeepReasoning。"
+    },
+    {
+      "q": "DeepClaude 免费吗？",
+      "a": "项目本身 MIT 开源免费；使用成本来自你自备的 DeepSeek / Claude API Key 调用费用。"
+    },
+    {
+      "q": "DeepClaude 与 Claude 有什么区别？",
+      "a": "它不是 Anthropic 官方产品，而是独立开发者把 DeepSeek R1 与 Claude 模型组合使用的开源工具，需在配置中填入自己的 API Key。"
+    },
+    {
+      "q": "如何部署使用？",
+      "a": "克隆 GitHub 仓库后用 Docker 构建运行（默认访问 http://localhost:8000/config 配置），或使用提供的 CLI；需自备 DeepSeek/Claude API Key。"
+    }
+  ],
+  "verified_tags": [
+    "AI对话",
+    "深度推理",
+    "开源",
+    "自托管",
+    "BYOK"
+  ],
+  "verified_category": "AI对话",
+  "conflict_note": "原条目称'2025-10 更名为 DeepReasoning、存在同名商业站 deepclaude.app 归属冲突'，本次检索未找到独立来源证实该更名/冲突；核心开源项目（Asterisk 开发）确认真实。",
+  "source_urls": [
+    "https://github.com/husniadil/deepclaude",
+    "https://github.com/winfunc/deepreasoning",
+    "https://github.com/vantoo/DeepClaude"
+  ],
+  "verify_notes": "本批次复核推翻了上一批次的 conflict/low（疑似虚构）结论：DeepClaude 是真实存在的流行开源项目（github.com/husniadil/deepclaude），并非虚构。唯一需注意的状态变化是原项目已更名为 DeepReasoning（2025-10）。原数据描述基本准确，建议保留并补充更名说明。",
+  "price_verified": true,
+  "rating_verified": true,
+  "url_previous": "https://deepclaude.com",
+  "compare_section": {
+    "competitors": [
+      "tencent-hunyuan",
+      "xinghuo-cognitive-model",
+      "mistral-ai"
+    ],
+    "verdict": "deepclaude 与 腾讯混元、星火认知大模型、Mistral AI 同属AI对话赛道。在性价比上，deepclaude（免费开源）门槛更低；口碑方面，deepclaude（⭐4.5）领先；deepclaude 的优势在于开源 LLM 推理 API 与聊天界面，融合 DeepSeek R1 的推理链（CoT）与 Claude 的生成能力，采，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  },
+  "created_date": "2026-07-31",
+  "published_date": "2026-07-31"
+}

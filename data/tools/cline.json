@@ -1,0 +1,166 @@
+{
+  "name": "Cline",
+  "slug": "cline",
+  "positioning": "完整BYOK+MCP：免费AI编程工具怎么用",
+  "auto_positioning": true,
+  "emoji": "💻",
+  "color": "#4F46E5",
+  "description": "Cline是一个开源AI编程Agent(Apache 2.0)，前身为Claude Dev(2024年更名)。以VS Code扩展形式运行，支持多文件自动编辑、终端命令执行、浏览器自动化和MCP协议，具备Plan/Act双模式和每步人工审批机制。BYOK设计支持15+模型提供商，零订阅锁。GitHub星标61,000+，安装量500万+。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程助手",
+    "开源",
+    "VS Code扩展",
+    "MCP协议",
+    "代码自动生成",
+    "BYOK"
+  ],
+  "rating": "4.7",
+  "visits": "85万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://cline.bot",
+  "price": "免费开源(BYOK自付API费用) / Teams $20/用户/月 / Enterprise定制",
+  "platform": "VS Code、JetBrains IDE、Cursor",
+  "pros": [
+    "完全开源免费(Apache 2.0)，无扩展付费墙，仅自付模型API成本",
+    "Plan/Act双模式设计透明安全，每步可人工审批",
+    "模型无关性最强：支持15+提供商，可从便宜模型切到最强模型无缝切换",
+    "MCP生态扩展性极强，可连接数据库/API/外部系统",
+    "GitHub Octoverse 2025增长最快AI项目(4704% YoY贡献者增长)，社区活跃"
+  ],
+  "cons": [
+    "BYOK模式导致日常使用成本$15-120/月不等，重度用户可能比Cursor订阅更贵",
+    "需自行管理API密钥，新手配置门槛较高",
+    "对话15-20轮后上下文窗口退化，需重新开始任务",
+    "每步人工审批安全但降低了大规模例行变更的效率",
+    "JetBrains支持需Teams付费计划"
+  ],
+  "features": [
+    "Plan & Act双模式: Plan模式先分析代码库、提出计划；Act模式分步执行并等待人工审批",
+    "多文件协调编辑: 跨文件修改，自动保持imports/types/行为一致性",
+    "完整BYOK: 支持Anthropic/OpenAI/Gemini/DeepSeek/Groq/AWS Bedrock/Azure/本地Ollama/LM Studio等15+提供商",
+    "MCP Marketplace: 原生Model Context Protocol支持，一键安装社区MCP服务器(GitHub/Postgres/Slack等)",
+    "终端命令执行: 内建Terminal，运行dev server/测试/部署并实时响应输出",
+    "浏览器自动化: 打开URL、截图、点击元素，视觉验证UI变更"
+  ],
+  "related": [
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "replit-ai",
+    "claude-code"
+  ],
+  "faq": [
+    {
+      "q": "Cline原名是什么？是Codia吗？",
+      "a": "原始名称为Claude Dev(不是Codia)。2024年10月v2.0发布时正式更名为Cline，VS Code Marketplace ID(saoudrizwan.claude-dev)保持不变。'原名Codia'是错误信息。"
+    },
+    {
+      "q": "Cline免费吗？",
+      "a": "VS Code扩展完全免费开源(Apache 2.0)。使用成本取决于你选择的AI模型API费用：配Gemini免费API可零成本运行，配Claude Sonnet平均$15-120/月。Teams计划$20/用户/月。"
+    },
+    {
+      "q": "Cline和Cursor哪个好？",
+      "a": "Cline开源免费、模型选择自由、每步可审批，适合注重控制权和透明的开发者；Cursor体验更一体化、UI更美观、月费固定可预测($20/月)，适合开箱即用。"
+    },
+    {
+      "q": "Cline支持哪些IDE？",
+      "a": "VS Code(主力)、JetBrains IDE(需Teams计划)、Cursor(兼容)、CLI终端。部分资料称支持'Cursor作为平台'但实际是Cline可在Cursor(VS Code fork)中运行。"
+    }
+  ],
+  "seo_keywords": [
+    "Cline",
+    "Cline AI编程助手怎么样",
+    "Cline vs Cursor",
+    "Cline免费版",
+    "Cline安装使用教程"
+  ],
+  "content": "## Cline是什么？\n\nCline是一个开源的AI编程助手，你可以把它理解成一个能自己动手写代码的“智能搭档”。它以插件形式集成在VS Code和JetBrains这些主流编辑器里，不仅能帮你补全代码，还能自己动手修改文件、执行命令行操作，甚至能帮你修Bug。\n\n这两年在开发者圈子里挺火的，GitHub上星标已经超过9万，是目前最受欢迎的AI编程工具之一。关键是它开源免费，基本功能不收钱，这对个人开发者来说挺友好的。\n\n它的前身叫Cline Dev，后来改名叫Cline，也曾经叫过Codia，你现在搜到的基本都叫Cline。\n\n## 核心功能\n\n**1. 智能代码补全和生成**\n\n不只是简单的代码补全，它能理解你的项目上下文，直接生成完整的函数、模块，甚至整个文件。你告诉它要做什么，它就能写出相应的代码，体验接近于有个资深程序员坐在旁边帮你写。\n\n**2. 多文件自动编辑**\n\n这是Cline比较强的地方。很多AI编程工具只能处理单个文件，但Cline能同时修改多个文件，理解它们之间的关联。重构代码、批量修改变量名这些操作做起来比较顺手。\n\n**3. 内置Terminal，直接执行命令**\n\n不用切换到系统终端，在编辑器里就能运行git、npm、docker这些命令。它甚至能自己调用命令行来完成一些复杂的构建或部署任务。\n\n**4. Bug自动修复和代码重构**\n\n检测到问题后，它会直接给出修复建议或者帮你改代码。重构能力也比较靠谱，尤其适合那种“知道该改但懒得多”的场景。\n\n**5. Git深度集成**\n\n支持自动提交、创建分支、合并代码等操作。提交信息都能帮你写好，常规的版本控制操作基本不用手动敲命令。\n\n## 版本/套餐对比\n\n| 版本 | 模型 | 功能限制 | 价格 |\n|------|------|----------|------|\n| 免费版 | Claude 3.5 Sonnet | 有额度限制，复杂功能受限 | 免费 |\n| Pro版 | 更强模型 | 额度更高，功能更全 | 付费 |\n| 自定义后端 | 支持接入OpenAI、Anthropic、Ollama等 | 需要自行配置API | 按API计费 |\n\n免费版基本够用，但如果你是重度用户，Pro版的体验会好很多。另外它支持自己接LLM API，不想受限于官方模型的话可以折腾一下。\n\n## 值不值得用？\n\n**优点：**\n\n- 开源免费这点很实在，个人开发者用起来没负担\n- 多文件编辑能力强，做重构比单文件工具顺手\n- 内置Terminal， workflow比较流畅\n- 接入自定义LLM的灵活性高，不被某一家绑定\n- Git集成做得比较完善，日常操作基本覆盖\n\n**缺点：**\n\n- 免费版有额度限制，高频使用可能会遇到瓶颈\n- 首次配置API Key对新手不太友好，得研究一下\n- 本地LLM支持需要一定技术门槛\n- 复杂项目的上下文理解偶尔还是会有偏差\n- 没有团队协作功能，企业场景不太适合\n\n**我的结论：**\n\n对于个人开发者和小型团队来说，Cline是一个性价比很高的选择。免费版能用，付费版也不贵，功能覆盖日常编程的大部分场景。如果你已经在用VS Code或JetBrains，装一个试试不亏。它不一定适合所有人，但作为AI编程助手，它属于“值得先装上”的那一类。\n\n## 使用建议\n\n1. **从免费版开始体验**，先感受一下它的能力边界，再决定要不要升级\n2. **如果想用自定义LLM**，建议先从Ollama这种本地模型入手，配置门槛相对低\n3. **养成查看它生成代码的习惯**，AI写的代码不一定完美，自己过一遍放心\n4. **复杂项目可以分步操作**，让它先理解整体结构，再逐步细化\n5. **利用Git集成功能**，但提交前最好自己检查一下改动\n\n## 适合谁用？\n\n**推荐：**\n\n- 个人开发者\n- 小型项目团队\n- 想提升效率的程序员\n- 对开源工具有偏好的用户\n\n**可考虑：**\n\n- 中型团队（需要评估协作需求）\n- 需要强上下文理解的大型项目\n\n**不推荐：**\n\n- 对数据隐私要求极高的企业（需要评估API数据流向）\n- 完全不想接触任何配置的用户（Cline还是需要一点上手成本的）",
+  "published": true,
+  "created_date": "2026-06-05",
+  "published_date": "2026-06-05",
+  "verified_url": "https://cline.bot",
+  "verified_publisher": "Cline Bot Inc. (创始人: Saoud Rizwan)",
+  "verified_what": "Cline是一个开源的AI编程Agent(Apache 2.0许可)，作为VS Code扩展运行，支持多文件编辑、终端命令执行、浏览器自动化和MCP协议。原名Claude Dev(2024年10月更名为Cline)。截至2026年VS Code安装量500万+，GitHub星标61,000+。",
+  "verified_price": "个人免费: VS Code扩展免费(仅自付LLM API费用); Teams: $20/用户/月(共享模型密钥、使用追踪、JetBrains支持); Enterprise: 定制(VPC/本地部署、SSO、审计日志、SLA)。API成本取决于模型选择: 低端Gemini约$15/月，重使用Claude Sonnet可达$30-120/月。",
+  "verified_platform": "VS Code / JetBrains(Teams计划) / CLI / Cursor(兼容)",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "Plan & Act双模式: Plan模式先分析代码库、提出计划；Act模式分步执行并等待人工审批",
+    "多文件协调编辑: 跨文件修改，自动保持imports/types/行为一致性",
+    "完整BYOK: 支持Anthropic/OpenAI/Gemini/DeepSeek/Groq/AWS Bedrock/Azure/本地Ollama/LM Studio等15+提供商",
+    "MCP Marketplace: 原生Model Context Protocol支持，一键安装社区MCP服务器(GitHub/Postgres/Slack等)",
+    "终端命令执行: 内建Terminal，运行dev server/测试/部署并实时响应输出",
+    "浏览器自动化: 打开URL、截图、点击元素，视觉验证UI变更"
+  ],
+  "verified_description": "Cline是一个开源AI编程Agent(Apache 2.0)，前身为Claude Dev(2024年更名)。以VS Code扩展形式运行，支持多文件自动编辑、终端命令执行、浏览器自动化和MCP协议，具备Plan/Act双模式和每步人工审批机制。BYOK设计支持15+模型提供商，零订阅锁。GitHub星标61,000+，安装量500万+。",
+  "content_flags": "1) 原名描述错误: '原名Cline Dev、Codia'→实际原名为Claude Dev(从未叫Codia); 2) 星标数过时: '9万'→实际约61K; 3) 许可证描述不准确: 应注明Apache 2.0; 4) 平台未提CLI; 5) '免费版使用Claude 3.5 Sonnet有额度限制'→Cline是BYOK模式，无内置免费模型; 6) Pro版价格$20/月起应为Teams $20/用户/月; 7) 未提Plan/Act双模式这一核心功能",
+  "price_verified": true,
+  "verified_rating": "4.7",
+  "rating_source": "agentsai.fyi (7.6/10) & 社区评价",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全开源免费(Apache 2.0)，无扩展付费墙，仅自付模型API成本",
+    "Plan/Act双模式设计透明安全，每步可人工审批",
+    "模型无关性最强：支持15+提供商，可从便宜模型切到最强模型无缝切换",
+    "MCP生态扩展性极强，可连接数据库/API/外部系统",
+    "GitHub Octoverse 2025增长最快AI项目(4704% YoY贡献者增长)，社区活跃"
+  ],
+  "verified_cons": [
+    "BYOK模式导致日常使用成本$15-120/月不等，重度用户可能比Cursor订阅更贵",
+    "需自行管理API密钥，新手配置门槛较高",
+    "对话15-20轮后上下文窗口退化，需重新开始任务",
+    "每步人工审批安全但降低了大规模例行变更的效率",
+    "JetBrains支持需Teams付费计划"
+  ],
+  "verified_faq": [
+    {
+      "q": "Cline原名是什么？是Codia吗？",
+      "a": "原始名称为Claude Dev(不是Codia)。2024年10月v2.0发布时正式更名为Cline，VS Code Marketplace ID(saoudrizwan.claude-dev)保持不变。'原名Codia'是错误信息。"
+    },
+    {
+      "q": "Cline免费吗？",
+      "a": "VS Code扩展完全免费开源(Apache 2.0)。使用成本取决于你选择的AI模型API费用：配Gemini免费API可零成本运行，配Claude Sonnet平均$15-120/月。Teams计划$20/用户/月。"
+    },
+    {
+      "q": "Cline和Cursor哪个好？",
+      "a": "Cline开源免费、模型选择自由、每步可审批，适合注重控制权和透明的开发者；Cursor体验更一体化、UI更美观、月费固定可预测($20/月)，适合开箱即用。"
+    },
+    {
+      "q": "Cline支持哪些IDE？",
+      "a": "VS Code(主力)、JetBrains IDE(需Teams计划)、Cursor(兼容)、CLI终端。部分资料称支持'Cursor作为平台'但实际是Cline可在Cursor(VS Code fork)中运行。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程助手",
+    "开源",
+    "VS Code扩展",
+    "MCP协议",
+    "代码自动生成",
+    "BYOK"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://cline.bot",
+    "https://frontman.sh/blog/best-open-source-ai-coding-tools-2026/",
+    "https://www.devtoollab.com/ai-tools/cline",
+    "https://agentsai.fyi/agents/cline",
+    "https://vantaige.io/ai-tool/cline"
+  ],
+  "verify_notes": "最重要的更正：Cline从未叫过'Codia'。原始名称是Claude Dev，2024年10月更名为Cline。'Codia'可能是与其他AI工具混淆。Cline在2025年GitHub Octoverse报告中增长4704% YoY(贡献者)，是最快的AI开源项目。$32M融资(Emergence Capital领投)。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "tongyi-lingma",
+      "codex-cli",
+      "lovable"
+    ],
+    "verdict": "Cline 与 通义灵码、Codex CLI、Lovable 同属AI编程赛道。在性价比上，Cline（免费开源(BYOK自付API费用) / Teams $20/用户/月 / Enterprise定制）门槛更低；若看重口碑，Lovable（⭐4.9）评分更高；Cline 的优势在于Cline是一个开源的AI编程Agent(Apache 2.0许可)，作为VS Code扩展运行，支持多文件编辑、终端命，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

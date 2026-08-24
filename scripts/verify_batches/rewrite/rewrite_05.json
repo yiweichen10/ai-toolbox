@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "sierra-ghostwriter",
+    "name": "Sierra Ghostwriter",
+    "verdict": "REAL",
+    "official_url": "https://sierra.ai",
+    "vendor": "Sierra",
+    "desc_issue": "产品定位错误：Sierra 的 Ghostwriter 是“构建客户体验AI智能体”的平台，并非AI写作助手；且记录域名 sierra-ghostwriter.ai 非官方（Sierra 官网为 sierra.ai），疑似拼凑域名",
+    "evidence": "Web搜索确认 Sierra 真实存在，但 Ghostwriter 为智能体构建工具，sierra-ghostwriter.ai 未确认为官方站点"
+  },
+  {
+    "slug": "schole-ai",
+    "name": "Schole AI",
+    "verdict": "REAL",
+    "official_url": "https://schole.ai",
+    "vendor": "Scholé Inc. (EPFL 背景)",
+    "desc_issue": "定位偏差：记录描述为『面向学生/研究人员的作业解答学习助手』，真实 Scholé AI 更偏企业级（B2B）AI 素养与员工培训平台，而非单纯学生作业工具。URL 正确。",
+    "evidence": "schole.ai 为真实官方站点（Scholé Inc.，EPFL 起源），主打企业 AI 培训/素养，与记录中『学生作业助手』的消费级定位有偏差。"
+  },
+  {
+    "slug": "alpaca-ai",
+    "name": "Alpaca AI",
+    "verdict": "UNCERTAIN",
+    "official_url": null,
+    "vendor": null,
+    "desc_issue": "描述称“斯坦福开发、2026年迭代至 Alpaca 2.0 可商用版本”误导；Stanford Alpaca 是 2023 年研究模型（stanford_alpaca，权重已下架），不存在 alpaca.ai 所描述的在售 2.0 商业产品。",
+    "evidence": "Stanford Alpaca 仅为研究项目，alpaca.ai 未对应所描述的商业产品，描述含夸大/虚构内容。"
+  },
+  {
+    "slug": "dexbotic",
+    "name": "Dexbotic",
+    "verdict": "REAL",
+    "official_url": "https://www.dexbotic.com",
+    "vendor": "原力灵机（ForceOrigins，CEO 唐文斌）",
+    "desc_issue": "描述完全错误：实际为开源 VLA（视觉-语言-动作）具身智能机器人开发框架，并非 Zapier 式自动化工作流平台；URL 应为 .com 而非 .ai",
+    "evidence": "搜索显示官方站点为 dexbotic.com，产品为具身智能机器人框架而非自动化工作流"
+  },
+  {
+    "slug": "octarine",
+    "name": "Octarine",
+    "verdict": "REAL",
+    "official_url": "https://octarine.ai",
+    "vendor": "Octarine (open-source, local-first notes)",
+    "desc_issue": "Description wrong: real Octarine is a local-first Markdown/PKM note-taking app, NOT a marketing/social-media content generation platform.",
+    "evidence": "octarine.ai is a local-first Markdown notes/PKM app; does not match the marketing-content description."
+  },
+  {
+    "slug": "augie-ai",
+    "name": "Augie AI",
+    "verdict": "REAL",
+    "official_url": "https://augie.ai",
+    "vendor": "Storyblocks (Augie)",
+    "desc_issue": "实为AI视频生成/剪辑工具（Augie by Storyblocks），目录描述为通用'创意助手'略有偏差；且存在多个同名Augie产品（如销售助手myaugieai.com）易混淆",
+    "evidence": "augie.ai对应Augie（Storyblocks旗下AI视频工具），同名产品较多致歧义"
+  },
+  {
+    "slug": "amp",
+    "name": "Amp",
+    "verdict": "REAL",
+    "official_url": "https://sourcegraph.com/amp",
+    "vendor": "Sourcegraph（Amp Inc.）",
+    "desc_issue": "记录URL为 platform.claude.com（Claude平台），且描述称『Anthropic推出、Claude Code前身』均错误；Amp 实为 Sourcegraph 推出的编程Agent，后与Sourcegraph独立为 Amp Inc.",
+    "evidence": "sourcegraph.com/amp 为官方地址，Sourcegraph创始团队出品，非Anthropic产品"
+  },
+  {
+    "slug": "agent-skills",
+    "name": "agent-skills",
+    "verdict": "REAL",
+    "official_url": "https://agentskills.ai",
+    "vendor": "Anthropic (开放标准) / agentskills.ai",
+    "desc_issue": "记录 URL agent-skills.ai（带连字符）应无连字符 agentskills.ai；描述称“集成500+预置技能组件、多模型编排与混合推理”等具体数字未证实——真实 Agent Skills 为 Anthropic 发布的开放标准(SKILL.md 格式封装能力)",
+    "evidence": "Agentskills.ai 为真实站点（Pre-built AI Agents for Business Owners）；Anthropic 亦发布 Agent Skills 开放标准(agentskills.io)；agent-skills.ai 连字符域名为错误"
+  }
+]

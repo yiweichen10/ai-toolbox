@@ -1,0 +1,157 @@
+{
+  "name": "Termi Protocol",
+  "slug": "termi-protocol",
+  "positioning": "AI编程工具：自带代理+检查点与回溯",
+  "auto_positioning": true,
+  "emoji": "🧠",
+  "color": "#6C5CE7",
+  "description": "Termi Protocol 是本地优先的桌面应用，把你已在用的 AI 编码智能体（Claude Code、Codex、Gemini CLI 等）在 3D 虚拟房间里实时可视化，方便观看、审批与回溯每一步操作；无任何区块链或代币。",
+  "category": "AI编程",
+  "tags": [
+    "AI编码",
+    "3D可视化",
+    "本地优先",
+    "智能体控制",
+    "开发者工具"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "月访问量约 85 万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://termiprotocol.com",
+  "price": "终身买断 $6.99（非订阅）",
+  "platform": "Web, API, SDK (Python, JavaScript, Rust)",
+  "pros": [
+    "本地优先，代码与 API key 不出本机",
+    "真实终端（xterm+PTY）而非重放日志",
+    "检查点可秒级回溯坏改动",
+    "多代理文件锁防止同时改同一文件",
+    "一次性买断，无订阅、无用量上限"
+  ],
+  "cons": [
+    "需自备 CLI 编码代理与 API key，新手门槛高",
+    "仍处早期（Milano 章节上线，其余按路线图解锁）",
+    "游戏化元素（宠物/XP）并非所有人都需要",
+    "非 AI 模型提供方，不卖算力"
+  ],
+  "features": [
+    "实时 3D 工作流可视化：读取/写入/命令变为可见动作",
+    "自带代理（BYOK，本地优先）：兼容 Claude Code/Codex/Gemini CLI 等",
+    "命令中心驾驶舱：真实终端（xterm+PTY）、任务看板、检查点、实时成本、项目记忆",
+    "检查点与回溯：每次改动快照，秒级回退",
+    "多代理安全控制：审批/暂停 + 文件锁防冲突",
+    "游戏化层：XP/联赛、可成长宠物（可选）"
+  ],
+  "related": [
+    "browser-use",
+    "crew-ai",
+    "langgraph"
+  ],
+  "faq": [
+    {
+      "q": "Termi Protocol 和区块链/去中心化 AI 有关吗？",
+      "a": "无关。它没有任何区块链、代币或去中心化算力市场，也不提供或转售 AI 模型；只是本地「观察+控制室」，代理在你本机用你的 key 运行。"
+    },
+    {
+      "q": "需要什么才能运行？",
+      "a": "你自己的 AI 编码 CLI（Claude Code、Codex、Gemini CLI 等）与对应 API key；Termi 在本地运行并做 3D 可视化。"
+    },
+    {
+      "q": "关闭应用会丢失进度吗？",
+      "a": "不会。任务看板、检查点与各代理的项目记忆都会保存，重开可继续。"
+    },
+    {
+      "q": "支持哪些平台？",
+      "a": "macOS 与 Windows，购买后直接下载桌面应用。"
+    }
+  ],
+  "seo_keywords": [
+    "Termi Protocol",
+    "Termi Protocol 免费版",
+    "Termi Protocol 和中心化AI区别",
+    "去中心化AI推理平台",
+    "Termi Protocol 智能体协议"
+  ],
+  "content": "## Termi Protocol 是什么？\nTermi Protocol（termiprotocol.com）是一款本地优先的桌面应用，它的核心创意很特别：把你已经在终端里跑的 AI 编码智能体，放进一个 3D 虚拟“房间”里实时可视化。你的 AI 代理会像一个小人一样在房间里走动、去柜子边读文件、坐下写代码、在真实终端里跑命令——每一步都变成你能直接看到的动作，而不是一堆滚动的日志文字。\n\n必须重点澄清：网上把它描述成“去中心化 AI 推理与智能体协作协议、连接全球算力、支持 2000 个模型、集成以太坊和 Solana、按 Token 计费”，这完全是错误的。Termi Protocol 没有任何区块链、代币或去中心化算力市场，它本身也不提供或转售任何 AI 模型。它只是一个“观察者 + 控制室”，你自己的代理在你自己机器上、用你自己的 API key 运行。\n\n## 核心功能\n\n1. 实时 3D 工作流可视化：把读取文件、写代码、运行命令这些终端动作，渲染成房间里的实时动作，让代理行为不再“黑盒”。\n2. 自带代理（BYOK，本地优先）：兼容 Claude Code、Codex、Gemini CLI、Copilot、Grok CLI、Aider、Ollama、Amazon Q、Groq 等 CLI 代理，全部在你本机用你自己的密钥执行。\n3. 命令中心驾驶舱：每个代理配一个真实终端（xterm + PTY）、任务看板、检查点、实时成本（token 与美元）和项目记忆，集中在一个面板里。\n4. 检查点与回溯：每一次改动自动快照，出错或跑偏了可以几秒回退到任意检查点。\n5. 多代理安全控制：需要人工确认时弹出审批/暂停，并用文件锁防止两个代理同时改同一个文件。\n\n## 定价\n\nTermi Protocol 不是订阅制。官网定价页给出的是一次性“终身通行证”（Founding Backer / Lifetime Pass），创始支持者价为 $6.99，一次性付费、永久解锁完整应用及后续所有章节（Milano 已上线，Istanbul、London 等按路线图陆续解锁）。没有自动续费，也没有用量上限。\n\n## 适合谁\n\n它适合已经在用 CLI 编码代理的开发者、工程团队和独立开发者——尤其是受够了“代理在终端里默默改了一堆东西、关掉窗口上下文就没了、出事还得自己擦屁股”的人。它提供的是透明度、可控性和会话持久化，而不是新的模型能力。新手需要先准备好一个支持的 CLI 代理和对应 API key 才能用。\n\n## 小结\n\nTermi Protocol 是一个把“不透明的终端代理”变成“看得见的 3D 工作台”的本地工具，卖点是观察、审批、回溯与持久化。它不卖算力、不碰区块链、不按 Token 收费。一次性 $6.99 终身买断，对重度使用编码代理的人来说性价比很高。\n\n如果你经常同时开两三个编码代理、又总担心它们改坏文件或互相打架，那文件锁和检查点这两个功能会非常实用。它也不是给完全新手准备的——你得先有自己的 CLI 代理和 API key，否则装了也跑不起来。把它理解成“给已有工作流加一层可视化与保险”，预期就对了。\n\n## 常见问题（FAQ）\n\n**Termi Protocol 和区块链/去中心化 AI 有关吗？**\n\n无关。它没有任何区块链、代币或去中心化算力市场，也不提供或转售 AI 模型；只是本地「观察+控制室」，代理在你本机用你的 key 运行。\n\n**需要什么才能运行？**\n\n你自己的 AI 编码 CLI（Claude Code、Codex、Gemini CLI 等）与对应 API key；Termi 在本地运行并做 3D 可视化。\n\n**关闭应用会丢失进度吗？**\n\n不会。任务看板、检查点与各代理的项目记忆都会保存，重开可继续。\n\n**支持哪些平台？**\n\nmacOS 与 Windows，购买后直接下载桌面应用。",
+  "published": true,
+  "created_date": "2026-07-24",
+  "published_date": "2026-07-24",
+  "verified_url": "https://termiprotocol.com",
+  "verified_publisher": "Termi Protocol（团队/公司名未公开）",
+  "verified_what": "本地优先的桌面应用，将 Claude Code、Codex、Gemini CLI 等 AI 编码智能体的工作实时可视化为 3D 房间，便于观看、审批、回溯。",
+  "verified_price": "一次性终身通行证 $6.99（创始支持者价），非订阅制，无自动续费、无用量上限；后续章节均含在内。（官网亦见 $7.99/$10 等变动价）",
+  "verified_platform": "Desktop（macOS、Windows）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "实时 3D 工作流可视化：读取/写入/命令变为可见动作",
+    "自带代理（BYOK，本地优先）：兼容 Claude Code/Codex/Gemini CLI 等",
+    "命令中心驾驶舱：真实终端（xterm+PTY）、任务看板、检查点、实时成本、项目记忆",
+    "检查点与回溯：每次改动快照，秒级回退",
+    "多代理安全控制：审批/暂停 + 文件锁防冲突",
+    "游戏化层：XP/联赛、可成长宠物（可选）"
+  ],
+  "verified_description": "Termi Protocol 是本地优先的桌面应用，把你已在用的 AI 编码智能体（Claude Code、Codex、Gemini CLI 等）在 3D 虚拟房间里实时可视化，方便观看、审批与回溯每一步操作；无任何区块链或代币。",
+  "content_flags": "features/pros/cons/faq/tags 描述的是「去中心化 AI 推理网络/区块链/代币/算力市场」，与真实产品（本地 3D 可视化桌面应用）完全不符，属严重幻觉，需整体替换；description/content 已正确，保留。",
+  "verified_rating": "⭐ 4.3",
+  "rating_source": "",
+  "verified_pros": [
+    "本地优先，代码与 API key 不出本机",
+    "真实终端（xterm+PTY）而非重放日志",
+    "检查点可秒级回溯坏改动",
+    "多代理文件锁防止同时改同一文件",
+    "一次性买断，无订阅、无用量上限"
+  ],
+  "verified_cons": [
+    "需自备 CLI 编码代理与 API key，新手门槛高",
+    "仍处早期（Milano 章节上线，其余按路线图解锁）",
+    "游戏化元素（宠物/XP）并非所有人都需要",
+    "非 AI 模型提供方，不卖算力"
+  ],
+  "verified_faq": [
+    {
+      "q": "Termi Protocol 和区块链/去中心化 AI 有关吗？",
+      "a": "无关。它没有任何区块链、代币或去中心化算力市场，也不提供或转售 AI 模型；只是本地「观察+控制室」，代理在你本机用你的 key 运行。"
+    },
+    {
+      "q": "需要什么才能运行？",
+      "a": "你自己的 AI 编码 CLI（Claude Code、Codex、Gemini CLI 等）与对应 API key；Termi 在本地运行并做 3D 可视化。"
+    },
+    {
+      "q": "关闭应用会丢失进度吗？",
+      "a": "不会。任务看板、检查点与各代理的项目记忆都会保存，重开可继续。"
+    },
+    {
+      "q": "支持哪些平台？",
+      "a": "macOS 与 Windows，购买后直接下载桌面应用。"
+    }
+  ],
+  "verified_tags": [
+    "AI编码",
+    "3D可视化",
+    "本地优先",
+    "智能体控制",
+    "开发者工具"
+  ],
+  "verified_category": "AI编程",
+  "conflict_note": "现有条目的 description 与 content 已正确说明 Termi Protocol 是本地 3D 可视化桌面应用、非区块链；但其 tags/pros/cons/features 却将其虚构为去中心化区块链 AI 推理协议（链上验证、DeFi 集成、质押代币解锁等），与真实产品严重矛盾。属结构化字段虚构。",
+  "source_urls": [
+    "https://termiprotocol.com/",
+    "https://www.dir2ai.com/en/tool/termiprotocol",
+    "https://chatgate.ai/post/termi-protocol"
+  ],
+  "verify_notes": "官网明确否认区块链属性；原 features/pros/cons/faq 为编造的去中心化网络描述。",
+  "content_verified": true,
+  "price_verified": true,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Termi Protocol 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Termi Protocol 的 实时 3D 工作流可视化：读取/写入/命令变为可见动作 是亮点，价格 终身买断 $6.99（非订阅）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

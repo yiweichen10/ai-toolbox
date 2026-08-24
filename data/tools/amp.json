@@ -1,0 +1,152 @@
+{
+  "name": "Amp",
+  "slug": "amp",
+  "positioning": "免费AI编程工具：Smart+多种代理模式",
+  "auto_positioning": true,
+  "emoji": "⚡",
+  "color": "#8B5CF6",
+  "description": "Amp 是由 Sourcegraph 推出的智能体式 AI 编程助手，以终端/编辑器插件形式运行，支持自主推理、多文件编辑与复杂任务执行。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "代码助手",
+    "AI智能体",
+    "终端工具",
+    "VS Code"
+  ],
+  "rating": "⭐4.0（The AI Agent Index 编辑评分）",
+  "visits": "50万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://sourcegraph.com/amp",
+  "price": "免费档 + 按量付费（从 $5 起）/ 企业版",
+  "platform": "VS Code / JetBrains IDEs / Visual Studio",
+  "pros": [
+    "基于前沿模型（Claude、GPT 等）且 token 不人为截断",
+    "免费档额度充足",
+    "深度代码库理解能力强",
+    "终端/编辑器无缝集成",
+    "透明按量计费（零加价）"
+  ],
+  "cons": [
+    "按量计费成本不如订阅可预测",
+    "对企业缺乏现成托管模型（需自带 API key）",
+    "CLI 为中心、文档相对滞后",
+    "企业治理能力需付费"
+  ],
+  "features": [
+    "智能体式多文件代码编辑与命令执行",
+    "深度代码库理解（基于 Sourcegraph 代码图谱）",
+    "@file/@repo/@symbol 精确上下文控制",
+    "Smart Apply 应用建议",
+    "多种代理模式（深度推理/无限制/轻量）",
+    "共享线程与团队协作"
+  ],
+  "related": [
+    "claude-code",
+    "github-copilot",
+    "cursor",
+    "tabnine",
+    "sourcegraph-cody"
+  ],
+  "faq": [
+    {
+      "q": "Amp 是免费的吗？",
+      "a": "Amp 提供免费档（每日赠送约 $10 额度，广告支持），也可按 LLM 实际成本充值使用（最低 $5 起，零加价）；企业版在通行成本上加 50%。"
+    },
+    {
+      "q": "Amp 支持哪些编辑器？",
+      "a": "Amp 以 CLI 形式运行于 macOS/Linux/Windows(WSL)，并集成 VS Code、Cursor、Windsurf、JetBrains（2025.1+）、Neovim、Zed 等。"
+    },
+    {
+      "q": "Amp 和 Claude Code 是什么关系？",
+      "a": "Amp 由 Sourcegraph 开发，与 Anthropic 的 Claude Code 是不同公司的不同产品；Amp 仅调用包括 Claude 在内的多家前沿模型，并非 Claude Code 的前身。"
+    }
+  ],
+  "seo_keywords": [
+    "Amp AI编程助手",
+    "Amp免费代码补全工具",
+    "Amp vs Copilot",
+    "Amp编程工具推荐",
+    "AI代码助手Amp"
+  ],
+  "content": "## Amp是什么？\n\nAmp 是 Anthropic 推出的 AI 编程助手，你可以把它理解为\"程序员版的智能提示工具\"。它能帮你补全代码、解释代码逻辑、甚至帮你重构和修 bug。简单说就是你写代码时，它在旁边帮你\"打下手\"——有些代码你不用自己敲，它能猜到你想写什么；遇到看不懂的代码，它能给你讲明白；写完以后还能帮你检查有没有问题。\n\n为什么特别提它？因为 Amp 是 Claude Code 的\"前身\"，算是 Anthropic 在 AI 编程这个赛道的早期产品。虽然现在 Claude Code 功能更丰富了，但 Amp 依然在更新，2026 版还加入了代码审查和自动化测试生成的能力。最关键的是——**它完全免费**，这点对个人开发者很有吸引力。\n\n## 核心功能\n\n**智能代码补全**\n\n这是 Amp 最基础也最常用的功能。写着写着代码，它能根据上下文猜到你接下来想写什么，直接给你补全。有些场景下按一下 tab 就能完成一整行甚至一小段逻辑。实际体验中，对于常见框架和库的写法，补全命中率挺高的，但遇到比较个性化或者业务逻辑复杂的代码，还是得自己动手。\n\n**代码理解和解释**\n\n丢一段代码进去，Amp 能帮你梳理这段代码在干什么、变量怎么流转、逻辑怎么走的。适合接手别人项目时快速上手，或者自己写了几个月后回头看忘了具体实现细节。属于那种\"不用的时候想不起来，用的时候真香\"的功能。\n\n**自动化代码重构**\n\n如果你有一段代码写得比较乱，或者想用更优雅的方式重写，Amp 可以给出重构建议。它不只是简单地改格式，有时候会帮你把重复的逻辑抽出来、把嵌套过深的判断扁平化。不过重构涉及的风险比较大，建议看完建议后自己判断，别无脑接受。\n\n**错误检测和修复建议**\n\n写完代码运行报错，Amp 能帮你定位问题并给出修复思路。它不只能看出语法错误，有些逻辑上的 bug 也能捕捉到。个人感觉对新手比较友好，老手可能更多是把它当\"第二双眼睛\"用。\n\n**单元测试生成**\n\n2026 版新增的功能。能根据你已有的代码自动生成单元测试用例，覆盖常见的测试场景。生成的测试不一定完美，但作为一个起点能省不少功夫，后续自己再补齐边界情况就行。\n\n## 版本/套餐对比\n\n| 版本 | 价格 | 核心功能 | 适用人群 |\n|------|------|----------|----------|\n| Amp 免费版 | 免费 | 代码补全、代码理解、重构建议、错误检测、单元测试生成 | 个人开发者、学生 |\n| Claude Code | 免费/付费订阅 | Amp 全部功能 + 更强的上下文理解 + 企业级管理后台 | 专业开发者、企业团队 |\n\n目前 Amp 只有一个版本，就是免费版。功能上基本覆盖了日常开发需求。如果想要更强大的代码理解和项目管理能力，可以考虑同门的 Claude Code，但那就是另一个产品了。\n\n## 值不值得用？\n\n**优点：**\n\n- **免费**：不用花钱，对于个人开发者来说很友好\n- **基于 Claude 模型**：代码理解能力确实不错，不是那种\"智障补全\"\n- **多语言支持**：主流编程语言基本都覆盖，IDE 集成也做了适配\n- **实时代码补全和错误检测**：反应速度可以，写代码时不会觉得拖沓\n\n**缺点：**\n\n- **国内访问速度一般**：有时候响应会慢半拍，网络高峰期更明显\n- **功能比 Claude Code 少**：毕竟定位不同，如果想要更全面的企业功能，Claude Code 更合适\n- **文档和教程资源有限**：遇到问题不太好找到详细的解决方案，更多靠自己摸索\n- **没有企业管理后台**：团队协作和管理方面的功能基本没有\n\n**总体结论：** 对于个人开发者来说，Amp 是一款值得试试的工具。免费、基础功能扎实、日常开发中能实实在在帮上忙。但如果你在团队中工作、需要管理功能，或者对响应速度要求很高，那可能需要评估一下是否够用。\n\n## 使用建议\n\n1. **把 Amp 当\"副驾驶\"而不是\"司机\"**：补全和建议可以用，但核心逻辑自己把握，别完全依赖。\n2. **结合 IDE 使用体验更好**：Amp 和 VS Code 集成比较完善，装好插件后基本无感运行。\n3. **遇到访问慢的问题可以尝试优化网络**：或者在不着急的时候让它在后台跑，不影响主流程。\n4. **重构和测试生成功能，用之前先过一遍**：AI 生成的代码不是 100% 可靠的，当个参考就行。\n\n## 适合谁用？\n\n**推荐：**\n\n- 个人开发者、独立项目开发者\n- 学生或刚入门编程的学习者\n- 想提升效率又不想花太多钱的程序员\n\n**可考虑：**\n\n- 小团队（但需要评估是否有管理后台的需求）\n- 对访问速度不敏感的用户（网络环境允许的情况下）\n\n**不推荐：**\n\n- 需要团队管理功能的企业用户\n- 对响应速度要求极高、无法容忍延迟的开发者\n- 已使用 Claude Code 并满足需求的用户（两者功能有重叠）",
+  "published": true,
+  "created_date": "2026-05-12",
+  "published_date": "2026-05-12",
+  "verified_url": "https://sourcegraph.com/amp",
+  "verified_publisher": "Sourcegraph（Amp 由 Sourcegraph 开发）",
+  "verified_what": "Sourcegraph 推出的智能体式（agentic）AI 编程助手，在终端/编辑器（VS Code、JetBrains 等）中运行，可自主推理、多文件编辑与执行命令。",
+  "verified_price": "免费档（每日赠送约 $10 额度、广告支持）；按量付费（从 $5 起充值，按 LLM 实际成本零加价）；企业版在通行成本上加 50%（含 SSO/安全管理）。",
+  "verified_platform": "CLI（macOS/Linux/Windows via WSL）；VS Code、Cursor、Windsurf、JetBrains、Neovim、Zed",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "智能体式多文件代码编辑与命令执行",
+    "深度代码库理解（基于 Sourcegraph 代码图谱）",
+    "@file/@repo/@symbol 精确上下文控制",
+    "Smart Apply 应用建议",
+    "多种代理模式（深度推理/无限制/轻量）",
+    "共享线程与团队协作"
+  ],
+  "verified_description": "Amp 是由 Sourcegraph 推出的智能体式 AI 编程助手，以终端/编辑器插件形式运行，支持自主推理、多文件编辑与复杂任务执行。",
+  "content_flags": "原简介/内容错误称“Amp 是 Anthropic 推出的 Claude Code 前身”——实际由 Sourcegraph 开发、与 Anthropic 无关（仅调用其模型）；原称“完全免费”不完全准确（有免费档+按量付费）；其余功能描述基本准确。",
+  "price_verified": true,
+  "verified_rating": "⭐4.0（The AI Agent Index 编辑评分）",
+  "rating_source": "The AI Agent Index（2026-07，编辑评分 4.0/5；G2 4.5/5，91 评测，来源待核）",
+  "rating_verified": true,
+  "verified_pros": [
+    "基于前沿模型（Claude、GPT 等）且 token 不人为截断",
+    "免费档额度充足",
+    "深度代码库理解能力强",
+    "终端/编辑器无缝集成",
+    "透明按量计费（零加价）"
+  ],
+  "verified_cons": [
+    "按量计费成本不如订阅可预测",
+    "对企业缺乏现成托管模型（需自带 API key）",
+    "CLI 为中心、文档相对滞后",
+    "企业治理能力需付费"
+  ],
+  "verified_faq": [
+    {
+      "q": "Amp 是免费的吗？",
+      "a": "Amp 提供免费档（每日赠送约 $10 额度，广告支持），也可按 LLM 实际成本充值使用（最低 $5 起，零加价）；企业版在通行成本上加 50%。"
+    },
+    {
+      "q": "Amp 支持哪些编辑器？",
+      "a": "Amp 以 CLI 形式运行于 macOS/Linux/Windows(WSL)，并集成 VS Code、Cursor、Windsurf、JetBrains（2025.1+）、Neovim、Zed 等。"
+    },
+    {
+      "q": "Amp 和 Claude Code 是什么关系？",
+      "a": "Amp 由 Sourcegraph 开发，与 Anthropic 的 Claude Code 是不同公司的不同产品；Amp 仅调用包括 Claude 在内的多家前沿模型，并非 Claude Code 的前身。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "代码助手",
+    "AI智能体",
+    "终端工具",
+    "VS Code"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://sourcegraph.com/amp",
+    "https://makerstack.co/reviews/amp-review/",
+    "https://theaiagentindex.com/compare/amp-vs-openai-codex",
+    "https://softwarerundown.com/github-copilot-vs-cursor-vs-amp"
+  ],
+  "verify_notes": "域名 ampcode.com 为 Amp 登录/安装入口，归属 Sourcegraph。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Amp 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Amp 的 智能体式多文件代码编辑与命令执行 是亮点，价格 免费档 + 按量付费（从 $5 起）/ 企业版；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "name": "Fooocus",
+  "slug": "fooocus",
+  "positioning": "免费AI绘画，文生图生成+高清放大修复好用吗",
+  "auto_positioning": true,
+  "emoji": "🎨",
+  "color": "#8B5CF6",
+  "description": "Fooocus 是由 ControlNet 作者 lllyasviel 开发的开源 AI 图像生成工具，基于 Stable Diffusion XL（SDXL），主打“免参数调优”的极简体验——用户输入提示词即可生成高质量图片，类似 Midjourney 但完全本地离线、免费（GPL-3.0）。它内置 Inpaint/Outpaint、图像提示、ControlNet 风格控制与高清放大等功能，并提供 Windows 一键安装包。需注意：项目已进入 Limited LTS（仅修 bug）维护模式，自 2024 年 8 月 v2.5.5 起不再新增功能，也不支持 Flux / SD 3.5 等新架构；官方明确提醒 fooocus.com 等网站均为仿冒，仅 GitHub 为唯一官方来源。",
+  "category": "AI绘画",
+  "tags": [
+    "开源免费",
+    "图像生成",
+    "Stable Diffusion",
+    "本地部署",
+    "AI艺术"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "月访问量约45万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://github.com/lllyasviel/Fooocus",
+  "price": "免费开源",
+  "platform": "Windows/Mac/Linux",
+  "pros": [
+    "完全免费开源，本地运行保护隐私",
+    "界面极简，无需复杂参数即可出图",
+    "基于 SDXL，画质扎实",
+    "内置 Inpaint / 图像提示等实用功能",
+    "社区活跃，有众多 fork"
+  ],
+  "cons": [
+    "已进入 LTS（仅修 bug）维护模式，自 2024-08 v2.5.5 起无新功能",
+    "不支持 Flux / SD 3.5 等新架构",
+    "最低 4GB 显存（数据原称 8GB 偏高）",
+    "本地部署仍需一定技术基础",
+    "官方提醒大量 fooocus.com 等网站为仿冒，仅 GitHub 为官方源"
+  ],
+  "features": [
+    "文生图生成",
+    "图生图 / 图像提示",
+    "内置 Inpaint / Outpaint",
+    "ControlNet 风格高级控制",
+    "高清放大修复",
+    "内置 GPT-2 提示词扩展",
+    "一键安装（Windows run.bat）"
+  ],
+  "related": [
+    "stable-diffusion",
+    "comfyui",
+    "midjourney",
+    "leonardo-ai",
+    "ideogram"
+  ],
+  "faq": [
+    {
+      "q": "Fooocus 是免费的吗？",
+      "a": "是的，Fooocus 是完全免费的开源工具（GPL-3.0），可本地部署免费使用，无任何订阅费用。"
+    },
+    {
+      "q": "Fooocus 需要什么配置？",
+      "a": "最低约 4GB 显存（NVIDIA）即可运行，Apple Silicon 经 MPS 支持；数据原称 8GB 显存偏高，4GB 亦可。"
+    },
+    {
+      "q": "Fooocus 和 Midjourney 哪个好？",
+      "a": "Fooocus 优势在于免费开源、可本地离线、隐私安全；Midjourney 优势在于上手简单、生成稳定、云端无需配置。"
+    },
+    {
+      "q": "Fooocus 还在更新吗？",
+      "a": "项目已进入 Limited LTS（仅修复 bug）模式，自 2024 年 8 月 v2.5.5 起无新功能，且不计划迁移 Flux / SD3.5 等新架构；新模型需求建议转向 ComfyUI 或 Forge。"
+    }
+  ],
+  "seo_keywords": [
+    "Fooocus",
+    "Fooocus AI绘画工具",
+    "Fooocus免费开源",
+    "Fooocus安装教程",
+    "Fooocus和Stable Diffusion区别"
+  ],
+  "content": "# Fooocus是什么？\n\nFooocus是一个开源的AI图像生成工具，由ControlNet的作者lllyasviel开发。它基于Stable Diffusion XL（SDXL）模型，主打的就是“简单”——让用户不用调一堆复杂参数，也能生成质量不错的图片。\n\n简单来说，你可以把它理解为一个“懒人版”的Stable Diffusion。官方把操作流程极度简化了，默认参数通常就能出好图，不需要你又是研究采样器，又是调整CFG参数。对于想尝试AI绘图但被SD劝退的人来说，Fooocus是个不错的入门选择。\n\n## 核心功能\n\n**文生图生成**\n直接输入文字描述就能出图。SDXL底模的底子在那儿，画质相比SD 1.5有明显提升，人物比例、整体构图都更自然。内置了一些Prompt模板，对新手比较友好。\n\n**图生图转换**\n支持用一张图片作为参考进行重绘。可以用来改变图片风格、调整构图，或者做一些局部修改。实际使用中效果取决于原图质量和描述词的匹配度。\n\n**ControlNet控制**\n这是Fooocus的核心竞争力之一。虽然界面简化了，但ControlNet的完整功能都保留着——你可以用线稿控制、深度图、姿态检测等方式精确控制生成结果。对有进阶需求的用户来说，这个功能非常实用。\n\n**多模型切换**\n支持加载不同的Checkpoint模型和LoRA，可以根据需求切换二次元、写实、插画等不同风格。社区有大量适配的模型资源。\n\n**高清放大修复**\n内置超分功能，可以把低分辨率图片放大并修复细节。适合生成完成后提升画质，不用再借助额外的放大工具。\n\n## 版本/套餐对比\n\nFooocus本身是免费开源的，没有付费版本。以下是部署方式的对比：\n\n| 部署方式 | 硬件要求 | 隐私性 | 更新速度 | 适合人群 |\n|---------|---------|--------|---------|---------|\n| 本地部署（推荐） | 至少16GB显存 | ★★★★★ | 依赖手动 | 有显卡、重视隐私 |\n| 云端GPU | 无本地要求 | ★★☆☆☆ | 即时 | 暂时没显卡但想体验 |\n\n官方提供一键安装包，降低了本地部署的门槛。\n\n## 值不值得用？\n\n**优点：**\n\n- 完全免费开源，不用担心订阅费涨价或服务关停\n- 界面清爽，对比SD、WebUI那些复杂界面，Fooocus真的算是“开箱即用”\n- 图像质量有SDXL兜底，基础效果有保障\n- 隐私数据留在本地，不上传云端\n- ControlNet功能完整保留，没因为简化而阉割\n\n**缺点：**\n\n- 硬件门槛摆在那儿，显存16GB以下跑起来会比较吃力\n- 本地部署还是需要一些技术基础，不是点一下就完事\n- 功能没有云端工具那么实时更新\n- 官方文档比较简略，遇到问题得靠社区\n\n**总体结论：** 对于有显卡、想本地跑AI绘图的人来说，Fooocus是目前性价比最高的选择之一。免费、画质OK、功能全，而且开源意味着长期可用。不适合完全没硬件资源的小白用户，那类用户选云端工具更实际。\n\n## 使用建议\n\n1. **显存16GB以上再考虑本地部署**，否则体验会很痛苦。云端GPU托管是折中方案。\n2. **先别急着调参数**，用默认设置跑几张感受一下，很多人对它的默认出图质量其实挺满意的。\n3. **ControlNet是进阶关键**，想精准控制画面构图的话，务必花时间熟悉这几个预处理器。\n4. **模型不要堆太多**，选几个常用的Checkpoint和LoRA就行，太多反而选择困难。\n5. **关注社区动态**，GitHub和Hugging Face上经常有新的模型和工作流分享，比官方更新还勤快。\n\n## 适合谁用？\n\n**推荐：**\n\n- 有本地GPU（16GB+显存）且重视隐私的用户\n- 之前被SD复杂界面劝退，但又想用SDXL的人\n- 想白嫖AI绘图工具的技术爱好者\n\n**可考虑：**\n\n- 显卡显存不够但想尝试的，可以先找云端GPU体验\n- 对图像质量要求极高，可能需要结合其他工具叠加使用\n\n**不推荐：**\n\n- 完全没有显卡、也不愿意用云端服务的用户\n- 需要官方完整技术支持的企业用户（文档确实简略）\n\n## 常见问题（FAQ）\n\n**Fooocus 是免费的吗？**\n\n是的，Fooocus 是完全免费的开源工具（GPL-3.0），可本地部署免费使用，无任何订阅费用。\n\n**Fooocus 需要什么配置？**\n\n最低约 4GB 显存（NVIDIA）即可运行，Apple Silicon 经 MPS 支持；数据原称 8GB 显存偏高，4GB 亦可。\n\n**Fooocus 和 Midjourney 哪个好？**\n\nFooocus 优势在于免费开源、可本地离线、隐私安全；Midjourney 优势在于上手简单、生成稳定、云端无需配置。\n\n**Fooocus 还在更新吗？**\n\n项目已进入 Limited LTS（仅修复 bug）模式，自 2024 年 8 月 v2.5.5 起无新功能，且不计划迁移 Flux / SD3.5 等新架构；新模型需求建议转向 ComfyUI 或 Forge。",
+  "published": true,
+  "created_date": "2026-05-01",
+  "verified_url": "https://github.com/lllyasviel/Fooocus",
+  "verified_publisher": "lllyasviel（ControlNet 作者）",
+  "verified_what": "基于 Stable Diffusion XL（SDXL）的开源 AI 图像生成工具，主打极简“免参数调优”体验，类似 Midjourney 但完全本地离线、免费。",
+  "verified_price": "完全免费开源（GPL-3.0），本地运行，无订阅费用。",
+  "verified_platform": [
+    "Windows",
+    "Mac",
+    "Linux",
+    "Apple Silicon（MPS）"
+  ],
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "文生图生成",
+    "图生图 / 图像提示",
+    "内置 Inpaint / Outpaint",
+    "ControlNet 风格高级控制",
+    "高清放大修复",
+    "内置 GPT-2 提示词扩展",
+    "一键安装（Windows run.bat）"
+  ],
+  "verified_description": "Fooocus 是由 ControlNet 作者 lllyasviel 开发的开源 AI 图像生成工具，基于 Stable Diffusion XL（SDXL），主打“免参数调优”的极简体验——用户输入提示词即可生成高质量图片，类似 Midjourney 但完全本地离线、免费（GPL-3.0）。它内置 Inpaint/Outpaint、图像提示、ControlNet 风格控制与高清放大等功能，并提供 Windows 一键安装包。需注意：项目已进入 Limited LTS（仅修 bug）维护模式，自 2024 年 8 月 v2.5.5 起不再新增功能，也不支持 Flux / SD 3.5 等新架构；官方明确提醒 fooocus.com 等网站均为仿冒，仅 GitHub 为唯一官方来源。",
+  "content_flags": "原内容称“建议至少 16GB 内存和 8GB 显存”偏高（官方最低约 4GB 显存）；又称“2026 年持续维护更新”略显乐观——实际已进入 LTS 仅修 bug 模式，无新功能。整体描述基本准确。",
+  "price_verified": true,
+  "verified_pros": [
+    "完全免费开源，本地运行保护隐私",
+    "界面极简，无需复杂参数即可出图",
+    "基于 SDXL，画质扎实",
+    "内置 Inpaint / 图像提示等实用功能",
+    "社区活跃，有众多 fork"
+  ],
+  "verified_cons": [
+    "已进入 LTS（仅修 bug）维护模式，自 2024-08 v2.5.5 起无新功能",
+    "不支持 Flux / SD 3.5 等新架构",
+    "最低 4GB 显存（数据原称 8GB 偏高）",
+    "本地部署仍需一定技术基础",
+    "官方提醒大量 fooocus.com 等网站为仿冒，仅 GitHub 为官方源"
+  ],
+  "verified_faq": [
+    {
+      "q": "Fooocus 是免费的吗？",
+      "a": "是的，Fooocus 是完全免费的开源工具（GPL-3.0），可本地部署免费使用，无任何订阅费用。"
+    },
+    {
+      "q": "Fooocus 需要什么配置？",
+      "a": "最低约 4GB 显存（NVIDIA）即可运行，Apple Silicon 经 MPS 支持；数据原称 8GB 显存偏高，4GB 亦可。"
+    },
+    {
+      "q": "Fooocus 和 Midjourney 哪个好？",
+      "a": "Fooocus 优势在于免费开源、可本地离线、隐私安全；Midjourney 优势在于上手简单、生成稳定、云端无需配置。"
+    },
+    {
+      "q": "Fooocus 还在更新吗？",
+      "a": "项目已进入 Limited LTS（仅修复 bug）模式，自 2024 年 8 月 v2.5.5 起无新功能，且不计划迁移 Flux / SD3.5 等新架构；新模型需求建议转向 ComfyUI 或 Forge。"
+    }
+  ],
+  "verified_tags": [
+    "开源免费",
+    "图像生成",
+    "Stable Diffusion",
+    "本地部署",
+    "AI艺术"
+  ],
+  "verified_category": "AI绘画",
+  "source_urls": [
+    "https://github.com/lllyasviel/Fooocus",
+    "https://huggingface.co/spaces/Ffftdtd5dtft/cxcxcxc/resolve/main/readme.md?download=true",
+    "https://www.promptzone.com/aisha_rahman_ea6e2be3/fooocus-vs-comfyui-vs-automatic1111-2026-which-stable-diffusion-frontend-to-pick-efh",
+    "https://yuzec.com/tools/fooocus",
+    "https://clawbot.ai/wiki/voice-memory/fooocus-simplified-sd.html"
+  ],
+  "verify_notes": "修正：最低 4GB 显存（非 8GB）；项目 LTS 维护模式，无 Flux/SD3.5。仅 GitHub 为官方源，fooocus.com 等为仿冒。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "midjourney",
+      "miaohua",
+      "comfyui"
+    ],
+    "verdict": "Fooocus 与 Midjourney、秒画、ComfyUI 同属AI绘画赛道：Fooocus 的 文生图生成 是亮点，价格 免费开源；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

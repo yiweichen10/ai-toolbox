@@ -1,0 +1,126 @@
+{
+  "batch_id": "b35",
+  "category": "AI效率",
+  "tools": [
+    {
+      "slug": "arc-browser",
+      "name": "Arc浏览器",
+      "url_current": "https://arc.net",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "Arc 由 The Browser Company 开发，实际完全免费（含 Arc Max AI 套件），并不存在 $10/月的 Pro 付费版，站内 price 字段为编造；且 Arc 是 macOS/Windows 桌面浏览器，并非 Web 端（platform 字段『Web』错误）。功能描述（空间组织、AI助手等）基本准确。"
+    },
+    {
+      "slug": "comet",
+      "name": "Comet",
+      "url_current": "https://www.comet.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 comet.com 是 Comet ML（LLM 可观测性 Opik + MLOps 实验追踪平台），并非内容创作工具；站内正文将其描述为『AI内容创作平台/SEO内容日历管理』属功能张冠李戴，且与同条目 description（已正确写出 ML 实验追踪）自相矛盾。URL 本身正确。"
+    },
+    {
+      "slug": "raycast-ai",
+      "name": "Raycast AI",
+      "url_current": "https://www.raycast.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "Raycast 仅支持 macOS 桌面端（非 Web、非本地部署的通用服务），platform 字段『本地部署 / Web』错误；Pro 实际为 $8/月，站内 price 字段写 $10/月（且正文版本对比表中又写 $8/月，自相矛盾）。功能描述（Spotlight 替代、AI对话、代码片段等）准确。"
+    },
+    {
+      "slug": "augie-ai",
+      "name": "Augie AI",
+      "url_current": "https://augie.ai",
+      "url_ok": false,
+      "url_correct": "https://www.augie.studio",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "augie.ai 域名已停放（GoDaddy parked page），链接失效；真实官网为 augie.studio（Augie by Aug X Labs / Storyblocks）。站内正文将其描述为『AI写作助手/营销文案生成』属功能张冠李戴——实际 Augie 是 AI 视频生成与剪辑工具（把脚本或素材转为带字幕配乐的社媒短视频）；价格 $19/月也与官网（Premium 约 $34–39/月）不符。同条目 description 写的『视频生成与剪辑工具』才是正确的。"
+    },
+    {
+      "slug": "elicit",
+      "name": "Elicit",
+      "url_current": "https://elicit.org",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网为同一产品（Elicit 论文研究助手，Ought/Elicit 出品），免费版 + Plus 约 $10/月价格基本准确，功能描述（读论文、提取信息、文献综述）无误；但 description 与 content 中『2026年新增多语言支持和自定义工作流功能』未能在官网最新发布（API/MCP/Research Agent/PRISMA 等）中核实，存疑，建议人工裁定。"
+    },
+    {
+      "slug": "chatpdf",
+      "name": "ChatPDF",
+      "url_current": "https://chatpdf.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网事实与站内一致：免费版有限额、Pro 约 $5/月，支持多文档对话（Multi-File Chats）与逐页引用。功能与定价描述均无误，无幻觉。"
+    },
+    {
+      "slug": "humata-ai",
+      "name": "Humata AI",
+      "url_current": "https://humata.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "Humata 实际定价为免费版（60页/10次问答）与 Expert $9.99/月（500免费页后按 $0.02/页计费），并非站内所写『Pro $19/月无限制』——价格编造。功能描述（PDF问答、摘要、多文档对比）基本准确，多文档对比为官网真实功能。"
+    },
+    {
+      "slug": "julius-ai",
+      "name": "Julius AI",
+      "url_current": "https://julius.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网为数据分析工具，功能描述（自然语言问数据、代码生成、可视化、数据清洗）准确；付费版约 $20/月起（站内写 $19/月，接近，仅微差），无明显幻觉。『2026新增机器学习模块和自动化报告生成』等更新描述未逐一核实但主体无误。"
+    },
+    {
+      "slug": "happy-horse",
+      "name": "HappyHorse",
+      "url_current": "https://happyhorse.ai",
+      "url_ok": false,
+      "url_correct": "https://happyhorseai.com",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "happyhorse.ai 访问失败/疑似失效，真实官网为 happyhorseai.com（阿里巴巴 HappyHorse 是文生/图生视频大模型，带原生同步音轨、最高 1080p）。站内正文却将其描述为『AI任务管理/自动化工作流/数据分析工具3.0版』属功能张冠李戴，与同条目 description（视频生成平台）自相矛盾。价格 $9.9/月未在官网明确核实。"
+    },
+    {
+      "slug": "semrush-ai",
+      "name": "Semrush AI",
+      "url_current": "https://www.semrush.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网为 SEO/内容营销平台，Pro $119.95/月价格准确，关键词研究、竞品分析、站点审计、反向链接等功能描述与官网一致；AI 内容辅助为其真实能力，无幻觉。"
+    }
+  ]
+}

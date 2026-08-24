@@ -1,0 +1,152 @@
+{
+  "name": "Kubiya AI",
+  "slug": "kubiya-ai",
+  "positioning": "可视化工作流编排+自然语言驱动的基础设，AI工具实测",
+  "auto_positioning": true,
+  "emoji": "⚙️",
+  "color": "#4A90D9",
+  "description": "Kubiya 是面向 DevOps / 平台工程团队的对话式 AI 助手，用自然语言在 Slack、MS Teams 与 CLI 中执行云基础设施操作（部署、扩缩容、CI/CD、故障响应）。",
+  "category": "AI行业应用",
+  "tags": [
+    {
+      "text": "DevOps"
+    },
+    {
+      "text": "云基础设施"
+    },
+    {
+      "text": "自动化",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://kubiya.ai",
+  "price": "暂未公开（联系销售获取报价）",
+  "platform": "Web / Slack / MS Teams / CLI",
+  "pros": [
+    "自然语言即可操作复杂的云基础设施",
+    "原生支持Kubernetes、Terraform等主流DevOps工具",
+    "大幅减少手动运维操作，降低人为错误",
+    "提供团队协作与权限管理，适合企业使用",
+    "可集成到现有CI/CD流程中实现端到端自动化"
+  ],
+  "cons": [
+    "非DevOps背景的用户上手有一定学习曲线",
+    "功能深度依赖所连接的第三方云平台",
+    "高级自动化和定制功能可能需要付费订阅"
+  ],
+  "features": [
+    "自然语言驱动的基础设施操作（部署、扩缩容、回滚）",
+    "集成 Slack / MS Teams / CLI，提供开发者自助服务",
+    "连接 100+ 工具：AWS、Kubernetes、GitHub、Terraform 等",
+    "可视化工作流编排（Composer）与 Python SDK",
+    "临时权限、审计日志与团队协作"
+  ],
+  "related": [
+    "n8n",
+    "zapier-ai",
+    "make"
+  ],
+  "faq": [
+    {
+      "question": "Kubiya AI主要解决什么问题？",
+      "answer": "Kubiya AI主要帮助DevOps和工程团队通过自然语言自动化云基础设施管理、Kubernetes部署、Terraform编排等日常运维任务，减少手动操作，提升效率。"
+    },
+    {
+      "question": "Kubiya AI与传统DevOps工具有什么区别？",
+      "answer": "传统DevOps工具通常需要编写脚本或配置文件，Kubiya AI提供自然语言交互界面，让工程师用对话方式执行操作，降低了使用门槛，同时内置多种自动化模板和集成。"
+    },
+    {
+      "question": "Kubiya AI支持哪些云平台？",
+      "answer": "Kubiya AI支持主流云平台如AWS、Azure、Google Cloud，以及与Kubernetes、Terraform、GitHub Actions、Jenkins等工具的集成。"
+    },
+    {
+      "question": "使用Kubiya AI安全吗？",
+      "answer": "Kubiya AI采用企业级安全标准，支持SSO、RBAC权限控制，所有操作都有审计日志，且数据加密传输，可满足合规要求。"
+    }
+  ],
+  "seo_keywords": [
+    "Kubiya AI",
+    "Kubiya AI怎么样",
+    "Kubiya AI免费版",
+    "Kubiya AI使用教程",
+    "Kubiya AI和哪个好"
+  ],
+  "content": "# Kubiya AI 是什么？\n\n简单说，Kubiya AI 就是给 DevOps 团队配的一个“听得懂人话”的云运维助手。你不需要记敲不完的 kubectl 命令、不用反复对着 Terraform 文档抄模板，直接说“把生产环境的 Nginx 扩容到 5 个副本”或者“帮我看一下昨天 CI/CD 流水线为什么挂掉了”，它就能听懂你意思，然后自动去执行对应的云平台操作。\n\n它本质上是一个 AI Agent，绑定了你的 Kubernetes 集群、Terraform 状态文件、CI/CD 工具（比如 Jenkins、GitLab CI）等基础设施。以前需要人工写脚本、点控制台、查日志的重复工作，现在可以交代给 Kubiya AI 去跑。尤其适合那种“半夜告警响了，得手动处理”的场景——它能识别告警、给出修复建议，甚至直接帮你执行标准操作。\n\n所以，它不是一个“聊天玩具”，而是一个实实在在帮你把运维干活效率拉高的工具。团队里只要有人会描述问题，就能用它操作底层资源，降低了对“运维老司机”个人经验的依赖。\n\n---\n\n## 核心功能\n\n### 1. 自然语言查询与操作云资源\n这是最直观的功能。你可以在 Kubiya 的聊天界面里直接问：“目前所有 Pod 里哪个内存使用率最高？”它就会去查集群数据然后告诉你结果。如果想操作，比如“把 staging 环境的 Redis 实例升级到 6GB”，它也能帮你调云平台的 API 执行。实际体验下来，对于常见的查询和操作，准确率挺高，省掉了在多个控制台之间跳转的麻烦。\n\n### 2. 自动化 Kubernetes 集群管理\nK8s 的日常操作——滚动更新、节点扩缩容、查看 Deployment 状态、清理 Terminating 的 Pod——都能通过 Kubiya 一句话完成。它还能理解“灰度发布”这类概念，结合你定义的策略去执行。团队里刚上手 K8s 的成员，也可以通过它安全地做基础操作（只要权限配置好了），而不需要先记住一堆 kubectl 参数。\n\n### 3. Terraform 基础设施即代码集成\n如果你团队用 Terraform 管云资源，Kubiya 可以帮你跑 `plan`、`apply`，甚至自动生成简单的 Terraform 代码片段。比如你说“在新加坡区域开一台 t3.medium 的 EC2，打上 team=backend 标签”，它会把对应的 Terraform 资源配置写出来，或者直接 apply 到你的工作区。对于频繁的增删改环境操作，这能省不少写代码的时间。\n\n### 4. CI/CD 流水线自动触发与监控\n把 Kubiya 集成到 Jenkins、GitHub Actions 或 GitLab CI 之后，你可以通过对话直接触发某个流水线、查看当前构建进度、检查失败的 stage 日志。它还能在你代码合并后自动触发部署，并且把结果推送到你的团队聊天频道。很多用户反馈，这让他们不用再频繁切到 CI 工具页面刷状态，效率提升明显。\n\n### 5. 实时告警分析与自动修复建议\n这个功能比较实用——当 Prometheus、Datadog 等监控工具发出告警时，Kubiya 会自动拉取上下文（比如日志、指标），分析可能原因，并给出修复步骤。对于已知的常见故障模式（比如磁盘满了、Pod OOM），它甚至能直接执行预设的修复脚本。等于把“告警-排查-处理”这个闭环缩短了，减少 MTTR（平均修复时间）。\n\n### 6. 团队角色与权限控制\n企业用这个功能必不可少。Kubiya 支持对接 SSO，可以按 RBAC 逻辑给不同成员分配不同的操作权限。比如开发者只能查询和重启自己负责的服务，而 SRE 可以执行集群级的变更。操作历史也会被记录审计，合规上比较放心。\n\n---\n\n## 版本/套餐对比\n\n| 版本/套餐 | 适用规模 | 主要区别 | 价格 |\n|---|---|---|---|\n| 免费版（或试用版） | 个人/小团队测试 | 基础的自然语言查询、有限的操作次数、单集群连接 | 免费 |\n| 团队版 | 中大型团队 | 完整的自动化功能、多集群/多云支持、高级告警分析、审计日志、角色权限管理 | 需联系销售（价格暂未公开） |\n| 企业版 | 组织级部署 | 定制化工作流、私有化部署选项、专属 SLA、API 配额更高 | 需联系销售（价格暂未公开） |\n\n**说明**：Kubiya 官方目前提供免费体验额度，具体付费方案在官网上可以申请试用或预约演示。高级功能和自定义自动化模块通常需要付费订阅，但基础查询和简单操作在免费版里也够跑一跑感受一下。\n\n---\n\n## 值不值得用？\n\n**优点**  \n- 自然语言交互降低了操作云基础设施的门槛，不用记一堆命令行。\n- 原生对接 K8s、Terraform、CI/CD 等主流工具，集成成本不算高。\n- 减少手动操作带来的人为失误，尤其适合变更频繁的环境。\n- 团队协作和权限控制做得很完善，企业用起来放心。\n\n**缺点**  \n- 如果团队里全是非 DevOps 背景的人，一开始还是会懵——你得先理解“什么是 Namespace”“什么是 Terraform state”，才能用好它。学习曲线有，但比直接学命令行低。\n- 它的价值高度依赖你绑定的第三方平台。如果你的云环境冷门（非 AWS/Azure/GCP 主流），或者 CI/CD 工具是小众产品，集成效果会打折扣。\n- 高级自动化、自定义工作流这些“真香”功能需要付费，免费版只能体验基本操作。\n\n**总体结论**：如果你的团队已经有 DevOps 流程在用 Kubernetes 或 Terraform，并且经常有重复性运维任务，那 Kubiya 非常值得一试。免费版就能上手验证效果。但如果你们团队只有一两个人偶尔用云资源，或者基础设施极其简单（一台服务器跑所有），那它的价值有限，可能反而增加复杂度。\n\n---\n\n## 使用建议\n\n1. **先从小范围试水**：选一个非生产环境的小集群，把 Kubiya 连上，跑几个常用查询和简单操作（比如查看日志、重启 Pod）。让团队感受一下自然语言交互的便利性。\n2. **权限要提前规划好**：别一上来给所有人管理员角色。先用 RBAC 限制只能读不能写，等大家习惯后再逐步开放变更权限。\n3. **配合告警规则使用**：把 Kubiya 和你的监控系统（如 Prometheus）打通，设置几条常见告警的自动修复命令。这样能最快看到效率提升。\n4. **把常见操作写成模板**：比如“扩容副本数”“回滚到上一个版本”这种高频任务，在 Kubiya 里做成预设命令或工作流，以后直接一句话触发。\n5. **定期 review 操作记录**：利用它的审计日志，看看哪些操作被频繁执行，哪些是误操作，从而优化自动化脚本。\n\n---\n\n## 适合谁用？\n\n**✅ 推荐**  \n- 使用 Kubernetes + Terraform + CI/CD 的 DevOps 或 SRE 团队（中型以上，重复运维任务多）。\n- 希望降低“运维门槛”的初创或成长型公司，让后端开发也能安全地做一些基础运维操作。\n- 有多云或混合云环境管理需求的运维部门。\n\n**⚠️ 可考虑**  \n- 个人开发者或小团队（2-3人），日常运维量不大——免费版够用，但付费可能不划算。\n- 团队工具链以 AWS CDK、Pulumi 等替代方案为主的——Kubiya 也支持部分，但需要自己测试集成深度。\n\n**❌ 不推荐**  \n- 团队使用自建、非主流的云平台或运维工具，且没有精力做额外适配。\n- 基础设施极其简单（比如只托管几个静态网站），手动操作已经很快，不需要自动化助手。\n- 预算紧张且对 AI 工具持怀疑态度——建议先观望，等更多用户案例验证效果。\n\n## 常见问题（FAQ）\n\n**Kubiya AI 主要解决什么问题？**\n\n帮助 DevOps 与平台工程团队通过自然语言自动化云基础设施管理、Kubernetes 部署、Terraform 编排等日常运维任务，减少手动操作。\n\n**与传统 DevOps 工具有什么区别？**\n\n传统工具需写脚本或配置文件，Kubiya 提供自然语言交互，让工程师用对话方式执行操作，并内置多种自动化模板与集成。\n\n**支持哪些云平台？**\n\n支持 AWS、Azure、Google Cloud，以及与 Kubernetes、Terraform、GitHub Actions、Jenkins 等工具的集成；并与 Microsoft 有企业合作。\n\n**使用安全吗？**\n\n采用企业级安全标准，支持 SSO、RBAC 权限控制，所有操作有审计日志，数据加密传输，可在私有云/本地执行。",
+  "published": false,
+  "source_url": "https://docs.kubiya.ai/",
+  "last_verified": "2026-08-16",
+  "confidence": "medium",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://kubiya.ai",
+  "verified_publisher": "Kubiya（Kubiya.ai）",
+  "verified_what": "面向 DevOps / 平台工程团队的对话式 AI 助手（AI Teammates），用自然语言在 Slack、MS Teams 与 CLI 中执行云基础设施操作（部署、扩缩容、CI/CD、故障响应）。",
+  "verified_price": "暂未公开（以企业版为主，需联系销售 / 预约演示）",
+  "verified_platform": "Web, Slack, MS Teams, CLI, API",
+  "verified_features": [
+    "自然语言驱动的基础设施操作（部署、扩缩容、回滚）",
+    "集成 Slack / MS Teams / CLI，提供开发者自助服务",
+    "连接云与 DevOps 工具：AWS、Kubernetes、GitHub、Terraform 等",
+    "可视化工作流编排（Composer）与 Python SDK",
+    "临时权限、审计日志、RBAC 与团队协作"
+  ],
+  "verified_description": "Kubiya 是面向 DevOps / 平台工程团队的对话式 AI 助手（AI Teammates），用自然语言在 Slack、MS Teams 与 CLI 中执行云基础设施操作（部署、扩缩容、CI/CD、故障响应）。",
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "暂无权威外部评分（编辑评分）",
+  "verified_pros": [
+    "自然语言即可操作复杂的云基础设施",
+    "原生支持 Kubernetes、Terraform 等主流 DevOps 工具",
+    "大幅减少手动运维操作，降低人为错误",
+    "提供团队协作与权限管理，适合企业使用",
+    "可集成到现有 CI/CD 流程中实现端到端自动化"
+  ],
+  "verified_cons": [
+    "非 DevOps 背景的用户上手有一定学习曲线",
+    "功能深度依赖所连接的第三方云平台",
+    "定价未公开，需联系销售"
+  ],
+  "verified_faq": [
+    {
+      "q": "Kubiya AI 主要解决什么问题？",
+      "a": "帮助 DevOps 与平台工程团队通过自然语言自动化云基础设施管理、Kubernetes 部署、Terraform 编排等日常运维任务，减少手动操作。"
+    },
+    {
+      "q": "与传统 DevOps 工具有什么区别？",
+      "a": "传统工具需写脚本或配置文件，Kubiya 提供自然语言交互，让工程师用对话方式执行操作，并内置多种自动化模板与集成。"
+    },
+    {
+      "q": "支持哪些云平台？",
+      "a": "支持 AWS、Azure、Google Cloud，以及与 Kubernetes、Terraform、GitHub Actions、Jenkins 等工具的集成；并与 Microsoft 有企业合作。"
+    },
+    {
+      "q": "使用安全吗？",
+      "a": "采用企业级安全标准，支持 SSO、RBAC 权限控制，所有操作有审计日志，数据加密传输，可在私有云/本地执行。"
+    }
+  ],
+  "verified_tags": [
+    "DevOps",
+    "云基础设施",
+    "自动化"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://kubiya.ai",
+    "https://www.businesswire.com/news/home/20241113350704/en/Kubiya-Introduces-Captain-Kubernetes-Industry%E2%80%99s-First-AI-Teammate-for-Autonomous-Kubernetes-Operations"
+  ],
+  "verify_notes": "原分类为 AI行业应用，实际更偏向 AI 智能体（对话式 DevOps 代理），已调整；定价未公开。",
+  "compare_section": {
+    "competitors": [
+      "duolingo-max",
+      "harvey-ai",
+      "schole-ai"
+    ],
+    "verdict": "Kubiya AI 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：Kubiya AI 的 自然语言驱动的基础设施操作（部署、扩缩容、回滚） 是亮点，价格 暂未公开；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

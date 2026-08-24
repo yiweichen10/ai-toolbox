@@ -1,0 +1,76 @@
+{
+  "name": "提示工程指南",
+  "slug": "prompt-engineering-guide",
+  "positioning": "免费AI提示词工具：可复现+开源社区协作",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#8b5cf6",
+  "description": "提示工程指南（Prompt Engine...",
+  "category": "AI提示词",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI提示词"
+    },
+    {
+      "text": "提示工程指南"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://www.promptingguide.ai/zh",
+  "price": "免费版/付费版",
+  "platform": "Web",
+  "pros": [
+    "权威开源、6 万+ star",
+    "完全免费无需注册",
+    "体系完整从入门到高级",
+    "可复现代码与多语言",
+    "持续更新、社区协作"
+  ],
+  "cons": [
+    "偏理论与文档风格",
+    "内容体量庞大耗时",
+    "中文版更新略滞后"
+  ],
+  "features": [
+    "CoT/ToT/ReAct 推理框架",
+    "RAG 与函数调用指南",
+    "模型特定提示词指南",
+    "可复现 Jupyter 代码",
+    "13 种语言支持",
+    "开源社区协作"
+  ],
+  "related": [
+    "promptpilot",
+    "explinks-prompts",
+    "google-prompt-gallery"
+  ],
+  "content": "## 提示工程指南 是什么？\n\n提示工程指南（Prompt Engineering Guide）是由 DAIR.AI 团队打造的免费开源提示工程学习平台，也是全球提示词工程教育的事实标准之一，其 GitHub 仓库已获得超过 6 万 star，服务超 300 万学习者。内容从提示词基础概念讲到 AI Agent 构建，覆盖提示设计技巧、高级推理框架、RAG、函数调用、多模态提示、模型特定指南与风险伦理等全栈知识，并提供大量可复现的代码示例，支持包括中文在内的 13 种语言。\n\n### 核心功能\n\n- **系统化知识体系**：按\"提示词基础—进阶技巧—应用场景—模型指南—风险与安全\"分章节递进讲解，从 LLM 设置、提示词要素一路延伸到 AI Agent 构建。\n- **主流技术全覆盖**：详解零样本/少样本提示、链式思考（CoT）、思维树（ToT）、自一致性（Self-Consistency）、检索增强生成（RAG）、ReAct、Function Calling 等关键技术。\n- **真实案例与代码**：提供情感分类、代码生成、数学推理、信息抽取等场景的完整提示示例及 Jupyter Notebook 可复现代码。\n- **多模型对比指南**：分模型讲解 ChatGPT、Claude、Gemini、Llama、Mistral 等的提示词写法差异与最佳实践。\n- **风险与伦理讨论**：深入剖析提示注入、幻觉、偏见等安全问题的成因与缓解策略，帮助构建安全可控的 AI 应用。\n- **开源与社区协作**：内容托管于 GitHub，支持读者提交勘误或新增内容，保持动态更新。\n\n### 适用场景\n\n- **高校教学与自学**：计算机、AI 相关专业学生可按章节循序渐进，系统掌握提示工程原理与应用。\n- **开发者构建 AI 应用**：工程师可参考 Function Calling、RAG、Agent 等章节，设计可靠的大模型交互逻辑。\n- **企业 AI 团队培训**：作为内部技术文档，统一团队对提示设计、安全防护的认知标准。\n\n### 价格\n\n指南网页版完全免费，无付费墙、无广告、无需注册，所有内容开放访问；官方另设有 Academy 付费课程，优惠码 PROMPTING20 可享 20% 折扣，具体以官网为准。\n\n### 优缺点\n\n- 优点：内容权威、体系完整、持续更新；完全免费开放，学习门槛低；支持 13 种语言与可复现代码；从入门到高级推理框架全覆盖。\n- 缺点：内容偏理论与技术文档风格，面向工程实战的\"套路模板\"较少；体量庞大，自学需要投入较多时间；中文翻译与更新速度略滞后于英文版。",
+  "published": true,
+  "faq": [
+    {
+      "q": "提示工程指南收费吗？",
+      "a": "网页版完全免费，无付费墙、无广告、无需注册；官方另设 Academy 付费课程，具体以官网为准。"
+    },
+    {
+      "q": "适合完全零基础的人吗？",
+      "a": "适合。指南从提示词基础概念讲起，按章节递进到高级技巧与 AI Agent 构建，配套大量可复现代码示例，零基础也能循序渐进。"
+    },
+    {
+      "q": "有哪些语言版本？",
+      "a": "支持包括中文、英文、日语、韩语、西班牙语等 13 种语言，中文版可直接访问 promptingguide.ai/zh。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://www.promptingguide.ai/zh",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "verify_notes": "来源 ai-bot.cn 收录页采集；官网可达性验证：HTTP 200",
+  "seo_keywords": [
+    "提示工程指南",
+    "Prompt Engineering",
+    "提示词工程教程",
+    "提示词学习",
+    "promptingguide"
+  ]
+}

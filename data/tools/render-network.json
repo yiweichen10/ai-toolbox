@@ -1,0 +1,78 @@
+{
+  "name": "Render Network",
+  "slug": "render-network",
+  "emoji": "🎨",
+  "color": "#6B46C1",
+  "description": "去中心化GPU渲染与计算网络，将全球闲置GPU算力聚合为分布式渲染/AI推理资源池，为创作者和开发者提供低成本算力。",
+  "category": "去中心化AI",
+  "tags": [
+    {
+      "text": "去中心化算力"
+    },
+    {
+      "text": "GPU渲染"
+    },
+    {
+      "text": "AI推理"
+    }
+  ],
+  "rating": "⭐ 4.2",
+  "visits": "N/A",
+  "badge": null,
+  "url": "https://rendernetwork.com",
+  "price": "按量付费（RENDER代币结算）",
+  "platform": "Web / API",
+  "pros": [
+    "去中心化GPU",
+    "成本较低",
+    "分布式冗余",
+    "创作者生态"
+  ],
+  "cons": [
+    "任务排队",
+    "需了解Web3",
+    "国内访问需合规"
+  ],
+  "features": [
+    "分布式渲染",
+    "AI推理算力",
+    "节点网络",
+    "API接入"
+  ],
+  "faq": [
+    {
+      "q": "Render 和传统云渲染比便宜多少？",
+      "a": "Render 利用闲置 GPU，通常能显著降低成本，部分案例渲染费用可比 AWS 低一个数量级，具体取决于档位与供需。"
+    },
+    {
+      "q": "RENDER 和 RNDR 是什么关系？",
+      "a": "RNDR 是原以太坊代币，2023 年迁移到 Solana 并更名为 RENDER，最大供应量约 644.2 万枚。"
+    },
+    {
+      "q": "Render 支持哪些渲染器？",
+      "a": "支持 OctaneRender、Redshift、Blender Cycles，以及 Runway、Black Forest Labs、Luma、Stability AI 等生成式 AI 工具。"
+    },
+    {
+      "q": "Tier 2 和 Tier 3 有什么区别？",
+      "a": "Tier 2 是优先档，速度更快、分配更强节点，定价 100 OBh/RENDER；Tier 3 是经济档，价格更低但无队列优先，定价 200 OBh/RENDER。"
+    },
+    {
+      "q": "用户支付的 RENDER 去哪了？",
+      "a": "采用销毁型机制（BME），支付的 RENDER 会被销毁，把网络使用量与代币供应直接挂钩，另收 5% 协议费。"
+    },
+    {
+      "q": "如何成为节点运营商？",
+      "a": "拥有闲置 GPU 即可注册为节点运营商接单渲染，按完成的 OctaneBench 小时数获得 RENDER 奖励。"
+    }
+  ],
+  "content": "## 是什么\nRender Network 是世界上首个去中心化 GPU 渲染与计算平台，由渲染软件公司 OTOY 推出。它把全球闲置的 GPU 算力汇集起来，让创作者按需租用，完成 3D 渲染、视觉特效和生成式 AI 计算，价格远低于传统云渲染。\n\n## 核心特点\n- 支持主流渲染器：兼容 OctaneRender、Redshift、Blender Cycles，以及 Runway、Black Forest Labs、Luma、Stability AI 等生成式 AI 工具。\n- 按优先级分档计价：Tier 2（优先档）100 OBh/RENDER，Tier 3（经济档）200 OBh/RENDER，可灵活平衡速度与成本。\n- 销毁型通缩机制（BME）：用户支付的 RENDER 会被销毁，把网络使用量与代币供应直接挂钩。\n- 代币 RENDER：最大供应量约 644.2 万枚，2023 年从以太坊的 RNDR 迁移至 Solana 的 RENDER。\n\n## 技术原理\n创作者把场景文件（如 ORBX 格式）上传到 Render 平台，设置分辨率、采样数、帧范围等参数；节点运营商（闲置 GPU 提供者）接单并完成渲染，结果上传云端存储。任务按 OctaneBench 性能分档分配给节点，每笔任务收取 5% 协议费用于维持网络，付款以 RENDER 计价并销毁，形成「使用越多、供应越紧」的平衡。\n\n## 价格与收费\n不设最低消费与预付费，按需计价；Tier 3 经济档为 200 OBh/RENDER，Tier 2 优先档为 100 OBh/RENDER，另收 5% 协议费。相比传统云渲染通常可显著节省成本，具体以官网报价为准。\n\n## 适用人群\n适合电影 VFX、3D 动画、游戏资产渲染的创作者与工作室，以及需要低成本 GPU 做 AI 推理或训练的开发者。\n数据以官网为准。",
+  "published": true,
+  "source_urls": [
+    "https://rendernetwork.com",
+    "https://messari.co/4qYLfOw"
+  ],
+  "content_verified": true,
+  "last_verified": "2026-08-16",
+  "created_date": "2026-08-16",
+  "published_date": "2026-08-16"
+}

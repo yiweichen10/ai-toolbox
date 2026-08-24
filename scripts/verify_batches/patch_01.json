@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "mem-ai",
+    "description": "Mem 是 Mem Labs 推出的 AI 驱动笔记与知识管理工具，通过自动组织笔记、建立知识关联图，帮助用户构建可对话的“第二大脑”。",
+    "content": "Mem 由 Mem Labs 于 2020 年推出，是一款 AI 原生的笔记与知识管理应用。它不依赖手动建文件夹或打标签，而是用 AI 自动连接笔记、构建个人知识图谱，并通过 Mem Chat 让你用自然语言查询自己的全部笔记。免费版可用，Mem Pro 订阅约 $12/月解锁无限 AI 对话与深度搜索，适合知识工作者、研究者与个人团队沉淀和检索信息。"
+  },
+  {
+    "slug": "raycast-ai",
+    "description": "Raycast 是 macOS 上的 AI 效率工具，作为 Spotlight 的增强替代，内置 AI 对话、代码片段管理与窗口管理。",
+    "content": "Raycast 是 macOS 平台上的 AI 效率启动器，定位为系统 Spotlight 的增强替代。它提供快速搜索、AI 对话、代码片段管理、窗口管理与丰富的插件系统，通过快捷键即可调用。Raycast AI 让 Mac 用户随时进行 AI 问答与文本处理。需注意：Raycast 仅支持 macOS 桌面端，并非“本地部署”或“网页应用”。"
+  },
+  {
+    "slug": "looka",
+    "description": "Looka 是 AI Logo 设计工具，输入品牌信息即可生成专业 Logo，并提供品牌套件（名片、信纸等）。",
+    "content": "Looka 是一款 AI Logo 设计工具，输入品牌名称与偏好即可生成多个专业 Logo 方案，并配套提供完整的品牌套件（名片、信纸、社交媒体素材等）。需注意：Looka 可免费生成预览，但下载 Logo 与设计文件需付费（低清约 $20 起，品牌套件更高）。适合创业者快速建立品牌形象。"
+  },
+  {
+    "slug": "fliki",
+    "description": "Fliki 是 AI 视频制作工具，将文本、博客、推文一键转为带 AI 配音的短视频。",
+    "content": "Fliki 是一款 AI 视频制作工具，能将文本、博客文章、推文等一键转为短视频，内置 2000+ 种 AI 配音、海量素材库与多种模板。它是一款纯网页 SaaS 应用（非本地部署），适合内容创作者将文字内容快速视频化。免费版可用，付费版解锁更长时长与去水印等能力。"
+  },
+  {
+    "slug": "galileo-ai",
+    "description": "Galileo 是面向 LLM/AI 应用开发者的 AI 可观测与评测平台，用于构建评估、监控与运行时护栏。",
+    "content": "Galileo（galileo.ai）是面向 AI 工程师与开发团队的可观测与评测（observability & evaluation）平台，并非通用 AI 对话助手。它提供离线评估、生产监控与运行时护栏，帮助团队在开发到上线的全生命周期中检测幻觉、工具调用错误，保障 AI 应用可靠运行（覆盖 RAG、Agent、安全与合规评估）。由 Vikram Chatterji 等人于 2021 年创立，现已并入 Cisco。"
+  },
+  {
+    "slug": "kling-3-0",
+    "description": "可灵 AI（Kling）是快手推出的 AI 视频生成模型，支持文生视频、图生视频等模式。",
+    "content": "可灵 AI（Kling）是快手推出的 AI 视频生成产品，支持文生视频、图生视频等主流模式，国内起步较早，生成质量与效率在同类中领先。免费版即可生成短视频，会员提供更长时长与更高权益。（注：原描述中的“Kling 3.0”具体版本号请以快手官方最新命名为准，可灵系列确有持续迭代，但“3.0”版本名未能独立核实。）"
+  },
+  {
+    "slug": "anyscenegen",
+    "description": "AnySceneGen 是虚时科技推出的面向具身智能/机器人训练的仿真空间生成平台，可生成带物理属性的可仿真 3D 场景。",
+    "content": "AnySceneGen 由虚时科技（Intime AI）于 2026 年 5 月发布，是一个面向具身智能训练的仿真空间数据生成平台。用户基于多模态输入即可快速生成带完整物理属性的三维仿真场景，可直接导入 Isaac Sim、MuJoCo 等平台用于机器人训练、评测与数据采集。它更偏向机器人/具身智能的数据基础设施，而非单纯的创意出图工具。（官网域名请以厂商公布为准。）"
+  },
+  {
+    "slug": "rankspot",
+    "description": "RankSpot 是 AI SEO 自动发布 Agent，自动研究关键词、撰写并发布 SEO/AI 搜索优化文章到你的博客。",
+    "content": "RankSpot（官网 rankspot.ai）是一款 AI SEO 自动代理（agent），自动完成关键词研究、文章撰写与发布到博客的全流程，帮助网站在 Google 与 ChatGPT 等 AI 搜索中获得曝光。它支持 WordPress、Webflow、Shopify 等平台，并包含竞争对手追踪与内容优化建议。免费试用 3 篇文章，付费版每月 $39 起。（原记录域名 rankspot.io 有误，应为 rankspot.ai；且它并非单纯的排名监控工具，而是内容自动发布型 SEO Agent。）"
+  },
+  {
+    "slug": "propane",
+    "description": "Propane 是面向产品团队的客户情报平台（customer intelligence OS），整合多源客户数据形成统一上下文，供团队与 coding agent 使用。",
+    "content": "Propane（官网 usepropane.ai，丹麦 Propane ApS）是一款面向产品团队的“客户情报操作系统”，并非 AI 写作助手。它把分散在 HubSpot、Intercom、Slack 等工具中的客户信号整合为统一的共享上下文，帮助产品、市场、客户成功等团队基于真实客户洞察做决策，并可将完整上下文一键交接给 coding agent。采用固定月费（约 €50/月）加按使用量计费模式。"
+  },
+  {
+    "slug": "persona-js",
+    "description": "Persona.js 是 Runtype Labs 推出的开源 Vanilla JS AI 聊天 UI 组件库，可将流式聊天/语音无缝嵌入任意网站。",
+    "content": "Persona.js 是一个轻量级开源的 Vanilla JS AI 聊天 UI 组件库（由 Runtype Labs 的 Nathan Booker 与 Nate Stewart 创建），并非 AI 角色/人格模拟框架。它无框架依赖、后端无关，并原生支持 WebMCP 协议，使 AI 助手能发现并调用宿主页面暴露的工具（如搜索、购物车、表单）。开发者可通过几行 JS 为网站添加流式聊天、语音与 copilot 体验。npm 包 @runtypelabs/persona，免费开源。"
+  },
+  {
+    "slug": "chatgpt-work",
+    "description": "ChatGPT Work 是 OpenAI 面向团队的智能体，可跨连接的应用与文件研究、分析并产出文档/表格/演示等成果。",
+    "content": "ChatGPT Work 是 OpenAI 推出的团队向智能体（agent），基于 GPT-5.6，能围绕团队工具与文件收集上下文、规划并执行较长周期的任务，产出文档、表格、演示文稿与交互式 Sites。它支持安排一次性或周期性任务、审批关键操作，并内置企业级安全与治理，面向 Plus/Pro/Business/Enterprise 等付费计划开放。（原描述称“基于 GPT-4o”已过时，实际为 GPT-5.6。）"
+  },
+  {
+    "slug": "gemini-omni",
+    "description": "Gemini Omni 是 Google 在 I/O 2026 发布的视频生成与编辑模型，可通过自然对话创作和编辑视频。",
+    "content": "Gemini Omni 是 Google 在 2026 年 I/O 大会上发布的视频生成与编辑模型（非通用代码助手），已通过 Gemini 应用、Google Flow 等提供。它可将文本、图像、音频、视频作为输入，生成高质量视频，并支持用自然语言对话式编辑画面（如换背景、改镜头、保持一致角色）。它深度集成于 Gemini 应用与 Google 生态。原描述称其“整合 Gemini 2.5 Pro”且支持代码生成并不准确。"
+  }
+]

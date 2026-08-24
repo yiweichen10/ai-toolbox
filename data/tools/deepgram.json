@@ -1,0 +1,167 @@
+{
+  "name": "Deepgram",
+  "slug": "deepgram",
+  "emoji": "🎙️",
+  "color": "#0D0D0D",
+  "description": "Deepgram是企业级语音AI平台，提供高准确度、低成本的语音转文字（STT）、语音合成（TTS）与语音代理（Voice Agent）API。其Nova模型支持45+种语言，提供实时流式与批量转录、说话人分离和智能格式化，新用户可获$200免费额度，按量计费。",
+  "category": "AI音频",
+  "tags": [
+    "语音识别",
+    "语音转文字",
+    "实时转录",
+    "STT",
+    "AI转录",
+    "语音代理"
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "85万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://deepgram.com",
+  "price": "免费$200额度；STT按量$0.0042/分钟起",
+  "platform": "Web API、Python、Node.js、Go、Ruby、Java、C#、PHP",
+  "pros": [
+    "转录速度快、延迟低（实时流式）",
+    "Nova模型支持45+种语言",
+    "价格按量计费，性价比较高",
+    "支持说话人分离与智能格式化",
+    "提供统一Voice Agent API（STT+TTS+LLM编排）",
+    "新用户赠送$200免费额度",
+    "SDK齐全，集成方便"
+  ],
+  "cons": [
+    "免费额度为积分制（非固定分钟数）",
+    "中文等非英语场景准确率可能略低于英文",
+    "无内置编辑/标注工具，需自行处理文本",
+    "高级分析（情感/意图）按token计费"
+  ],
+  "features": [
+    "实时流式语音转文字",
+    "批量异步转录",
+    "说话人分离（Diarization）",
+    "自动标点与智能格式化",
+    "关键词提示（Keyterm Prompting）",
+    "噪声过滤与音频增强",
+    "多语言支持（Nova 45+语言）",
+    "语音合成（Aura TTS）",
+    "语音代理API（统一STT+TTS+LLM）",
+    "情感/主题/意图分析"
+  ],
+  "related": [
+    "descript",
+    "krisp",
+    "speechify"
+  ],
+  "faq": [
+    {
+      "q": "Deepgram免费版有什么限制？",
+      "a": "新注册账户赠送$200免费额度，可用于所有功能试用，按实际用量扣减，并非固定每月分钟数。"
+    },
+    {
+      "q": "Deepgram支持中文吗？",
+      "a": "支持中文（简体/繁体）及45+种语言，但中文等语言的准确率可能略低于英语，可选用对应模型优化。"
+    },
+    {
+      "q": "Deepgram和Whisper哪个好？",
+      "a": "Deepgram的Nova模型在速度、成本和实时流式方面通常优于原生Whisper，且提供统一Voice Agent API；具体选择取决于场景。"
+    },
+    {
+      "q": "如何集成Deepgram？",
+      "a": "提供REST API、WebSocket及多种语言SDK（Python/Node.js/Go等），文档完善，可快速接入。"
+    }
+  ],
+  "seo_keywords": [
+    "Deepgram",
+    "Deepgram语音转文字怎么样",
+    "Deepgram vs Whisper",
+    "Deepgram API价格",
+    "Deepgram支持中文吗",
+    "实时语音转文字API"
+  ],
+  "content": "## Deepgram 是什么？\n\n企业级语音AI平台，提供语音转文字（STT）、语音合成（TTS）与语音代理（Voice Agent）API，主打高精度、低成本的实时与批量转录。\n\nDeepgram是企业级语音AI平台，提供高准确度、低成本的语音转文字（STT）、语音合成（TTS）与语音代理（Voice Agent）API。其Nova模型支持45+种语言，提供实时流式与批量转录、说话人分离和智能格式化，新用户可获$200免费额度，按量计费。\n\n## 核心功能\n\n- 实时流式语音转文字\n- 批量异步转录\n- 说话人分离（Diarization）\n- 自动标点与智能格式化\n- 关键词提示（Keyterm Prompting）\n- 噪声过滤与音频增强\n- 多语言支持（Nova 45+语言）\n- 语音合成（Aura TTS）\n- 语音代理API（统一STT+TTS+LLM）\n- 情感/主题/意图分析\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 新用户$200免费额度；STT按分钟计费：Nova-3单语$0.0042/分钟起（Growth），Nova-3多语$0.0050/分钟起；TTS按千字符计费；Voice Agent按连接分钟$0.068/分钟起。提供Pay As You Go与Growth方案。 |\n| 支持平台 | REST API、WebSocket、Python/Node.js/Go/Ruby/Java/C#/PHP SDK |\n| 评分 | ⭐ 4.7 |\n| 开发商 | Deepgram, Inc. |\n\n## 价格与平台\n\n- **价格**：新用户$200免费额度；STT按分钟计费：Nova-3单语$0.0042/分钟起（Growth），Nova-3多语$0.0050/分钟起；TTS按千字符计费；Voice Agent按连接分钟$0.068/分钟起。提供Pay As You Go与Growth方案。\n- **平台**：REST API、WebSocket、Python/Node.js/Go/Ruby/Java/C#/PHP SDK\n- **官网**：https://deepgram.com\n\n## 优缺点分析\n\n### 优点\n\n- 转录速度快、延迟低（实时流式）\n- Nova模型支持45+种语言\n- 价格按量计费，性价比较高\n- 支持说话人分离与智能格式化\n- 提供统一Voice Agent API（STT+TTS+LLM编排）\n- 新用户赠送$200免费额度\n- SDK齐全，集成方便\n\n### 缺点\n\n- 免费额度为积分制（非固定分钟数）\n- 中文等非英语场景准确率可能略低于英文\n- 无内置编辑/标注工具，需自行处理文本\n- 高级分析（情感/意图）按token计费\n\n## 常见问题（FAQ）\n\n**Deepgram免费版有什么限制？**\n\n新注册账户赠送$200免费额度，可用于所有功能试用，按实际用量扣减，并非固定每月分钟数。\n\n**Deepgram支持中文吗？**\n\n支持中文（简体/繁体）及45+种语言，但中文等语言的准确率可能略低于英语，可选用对应模型优化。\n\n**Deepgram和Whisper哪个好？**\n\nDeepgram的Nova模型在速度、成本和实时流式方面通常优于原生Whisper，且提供统一Voice Agent API；具体选择取决于场景。\n\n**如何集成Deepgram？**\n\n提供REST API、WebSocket及多种语言SDK（Python/Node.js/Go等），文档完善，可快速接入。\n\n\n## 最终结论\n\nDeepgram 是AI音频领域的一款 AI 工具，其核心优势在于转录速度快、延迟低（实时流式）。\n此外，Nova模型支持45+种语言。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-06-15",
+  "published_date": "2026-06-15",
+  "verified_url": "https://deepgram.com",
+  "verified_publisher": "Deepgram, Inc.",
+  "verified_what": "企业级语音AI平台，提供语音转文字（STT）、语音合成（TTS）与语音代理（Voice Agent）API，主打高精度、低成本的实时与批量转录。",
+  "verified_price": "新用户$200免费额度；STT按分钟计费：Nova-3单语$0.0042/分钟起（Growth），Nova-3多语$0.0050/分钟起；TTS按千字符计费；Voice Agent按连接分钟$0.068/分钟起。提供Pay As You Go与Growth方案。",
+  "verified_platform": "REST API、WebSocket、Python/Node.js/Go/Ruby/Java/C#/PHP SDK",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "实时流式语音转文字",
+    "批量异步转录",
+    "说话人分离（Diarization）",
+    "自动标点与智能格式化",
+    "关键词提示（Keyterm Prompting）",
+    "噪声过滤与音频增强",
+    "多语言支持（Nova 45+语言）",
+    "语音合成（Aura TTS）",
+    "语音代理API（统一STT+TTS+LLM）",
+    "情感/主题/意图分析"
+  ],
+  "verified_description": "Deepgram是企业级语音AI平台，提供高准确度、低成本的语音转文字（STT）、语音合成（TTS）与语音代理（Voice Agent）API。其Nova模型支持45+种语言，提供实时流式与批量转录、说话人分离和智能格式化，新用户可获$200免费额度，按量计费。",
+  "content_flags": "原数据称支持140种语言（实际Nova约45+种）；原免费额度为每月45,000分钟（实际为$200积分额度）——均为过时/夸大数据",
+  "price_verified": true,
+  "verified_pros": [
+    "转录速度快、延迟低（实时流式）",
+    "Nova模型支持45+种语言",
+    "价格按量计费，性价比较高",
+    "支持说话人分离与智能格式化",
+    "提供统一Voice Agent API（STT+TTS+LLM编排）",
+    "新用户赠送$200免费额度",
+    "SDK齐全，集成方便"
+  ],
+  "verified_cons": [
+    "免费额度为积分制（非固定分钟数）",
+    "中文等非英语场景准确率可能略低于英文",
+    "无内置编辑/标注工具，需自行处理文本",
+    "高级分析（情感/意图）按token计费"
+  ],
+  "verified_faq": [
+    {
+      "q": "Deepgram免费版有什么限制？",
+      "a": "新注册账户赠送$200免费额度，可用于所有功能试用，按实际用量扣减，并非固定每月分钟数。"
+    },
+    {
+      "q": "Deepgram支持中文吗？",
+      "a": "支持中文（简体/繁体）及45+种语言，但中文等语言的准确率可能略低于英语，可选用对应模型优化。"
+    },
+    {
+      "q": "Deepgram和Whisper哪个好？",
+      "a": "Deepgram的Nova模型在速度、成本和实时流式方面通常优于原生Whisper，且提供统一Voice Agent API；具体选择取决于场景。"
+    },
+    {
+      "q": "如何集成Deepgram？",
+      "a": "提供REST API、WebSocket及多种语言SDK（Python/Node.js/Go等），文档完善，可快速接入。"
+    }
+  ],
+  "verified_tags": [
+    "语音识别",
+    "语音转文字",
+    "实时转录",
+    "STT",
+    "AI转录",
+    "语音代理"
+  ],
+  "verified_category": "AI音频",
+  "source_urls": [
+    "https://deepgram.com",
+    "https://deepgram.com/pricing",
+    "https://developers.deepgram.com/docs/make-your-first-api-request"
+  ],
+  "verify_notes": "语言数140→45+；免费额度由固定分钟改为$200积分；每分钟单价$0.004基本准确。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "krisp",
+      "elevenlabs",
+      "udio"
+    ],
+    "verdict": "Deepgram 与 Krisp、ElevenLabs、Udio 同属AI音频赛道：Deepgram 的 实时流式语音转文字 是亮点，价格 免费$200额度；STT按量$0.0042/分钟起；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

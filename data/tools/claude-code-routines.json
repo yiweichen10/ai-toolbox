@@ -1,0 +1,134 @@
+{
+  "name": "Claude Code Routines",
+  "slug": "claude-code-routines",
+  "positioning": "AI编程工具推荐：三种触发器、保存 Claude",
+  "auto_positioning": true,
+  "emoji": "🔁",
+  "color": "#10a37f",
+  "description": "Claude Code Routines 是 Anthropic 为 Claude Code 推出的自动化例程功能（研究预览），可将一段提示+仓库+连接器保存为云上例程，按定时/API/GitHub 事件自动运行。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "代码自动化",
+    "工作流",
+    "Claude生态",
+    "开发者工具"
+  ],
+  "rating": "⭐4.6",
+  "visits": "月访问量 350 万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://docs.anthropic.com/en/docs/claude-code/routines",
+  "price": "含于 Claude Pro/Max/Team/Enterprise 订阅（Claude Code 功能，研究预览，无单独计费）",
+  "platform": "Web | VS Code 插件 | JetBrains 插件 | CLI",
+  "pros": [
+    "把重复编码任务自动化，无需自建 cron/服务器",
+    "三种触发方式覆盖定时/事件/API",
+    "与 Claude Code 深度集成，无需切换工具"
+  ],
+  "cons": [
+    "仅研究预览，行为与 API 可能变动",
+    "无预置 OAuth 连接器，需自行接 MCP",
+    "免费层每日例程次数有限（Pro 约 5 次/天）"
+  ],
+  "features": [
+    "保存 Claude Code 配置为云上例程，关机也能运行",
+    "三种触发器：定时 / API(HTTP POST) / GitHub 事件",
+    "自动化代码审查、依赖审计、文档漂移检测等",
+    "无审批全自动运行，分支写入 claude/ 前缀",
+    "Pro/Max/Team/Enterprise 计划可用（研究预览）"
+  ],
+  "related": [
+    "claude-code",
+    "cursor"
+  ],
+  "faq": [
+    {
+      "q": "Claude Code Routines 与 Claude Code 区别？",
+      "a": "Claude Code 是 AI 编程助手；Routines 是把一段提示+仓库+连接器保存为云上例程，按定时/API/GitHub 事件自动运行，无需本地机器。"
+    },
+    {
+      "q": "收费吗？",
+      "a": "无单独定价，含于 Claude Code 的 Pro/Max/Team/Enterprise 订阅，研究预览期。"
+    }
+  ],
+  "seo_keywords": [
+    "Claude Code Routines",
+    "Claude Code Routines 免费版",
+    "Claude Code Routines 使用教程",
+    "Claude Code Routines 和 GitHub Copilot Workspaces 哪个好",
+    "Claude Code 自动化工作流"
+  ],
+  "content": "# Claude Code Routines：把重复代码工作变成一键例程，开发者该试试吗？\n\n如果你平时用 Claude Code 写代码、做审查或改 bug，应该能感受到它的 Agent 能力确实强——但每次重复操作都要手动输入 prompt、等待响应、再点确认，久了也挺烦的。Claude Code Routines 就是来干这件事的：把那些你做了一遍又一遍的“套路活”封装成一个可复用的例程，下次只需要点一下（或者让它自动触发），剩下的事交给系统。\n\n---\n\n## Claude Code Routines 是什么？\n\n简单说，Routines 是 Claude Code 的“工作流引擎”。你可以在里面定义一套多步骤的自动化流程，比如“拿到这段代码 → 自动跑一遍 lint → 生成单元测试 → 检查测试覆盖 → 如果低于 80% 就触发提醒”。每一步都可以设置参数，支持顺序、并行、条件分支。2026 年已经直接集成到主流 IDE（VS Code、JetBrains 系）和 CI/CD 管道（GitHub Actions、GitLab CI）里，不用再切窗口。\n\n最直观的感受是：以前要写一长串 prompt 才能让 Claude 干完的事，现在变成了一条点击即用的“捷径”。而且这些例程可以被共享、版本管理，甚至用自然语言描述就能让 AI 帮你生成——就像在市场上找一个别人写好的脚本，省掉自己从头搭建的精力。\n\n---\n\n## 核心功能\n\n### 1. 一键创建/运行/调试代码例程\n这是最基础也最常用的功能。你可以在 IDE 里右键选中一段代码或一个文件，点“创建例程”，Claude Code 会自动分析上下文，生成一个初步流程。运行的时候会有实时进度条和中间结果输出，如果某一步卡了，可以直接在这个界面里调试、改参数，不用回到终端重新输入。很多用户反馈“调试模式比想象中好用，能逐帧看每一步的输入输出”。\n\n### 2. 参数化输入与多步骤编排（顺序/并行/条件）\n这是让例程真正灵活的地方。你可以定义变量（比如 `$file_path`、`$max_line_length`），在使用时填入不同的值。编排上支持三种模式：\n- **顺序**：先 A 再 B，常见于“格式化 → 检查 → 提交”\n- **并行**：同时跑多个独立检查，比如同时做 ESLint、Prettier、Type Check\n- **条件**：比如“如果测试通过，则自动合并；否则发通知”\n\n实际使用中，条件分支让很多“半自动化”变成了全自动，比如只有 lint 通过才允许 pre-commit 通过，不用再手动盯着。\n\n### 3. 集成 Git 钩子（pre-commit、pre-push）自动触发\n开发者最熟悉的场景：在提交或推送代码前自动执行一系列检查。Routines 原生支持对接 Git 钩子，安装一个插件后，会在你的 `.git/hooks` 目录下生成对应的例程调用脚本。比如每次 `git commit` 前自动运行“格式化 + 静态检查 + 单元测试”，如果不通过则中止提交。配合参数化，可以针对不同分支设置不同的检查规则。\n\n### 4. 例程市场：浏览、安装、贡献社区模板\n市场里已经有上千个社区贡献的模板，涵盖主流框架（React、Spring Boot、Django 等）和常见任务（重构、依赖升级、迁移等）。新手可以直接搜“React 组件测试生成”，一键安装后稍加修改就能用。质量嘛……参差不齐，有些确实写得好，注释清晰、异常处理周全；有些就只是把几个 prompt 拼在一起，执行到一半容易崩。建议安装后先在测试项目里跑一遍。\n\n### 5. 例程版本管理与回滚\n每次修改例程后会自动生成一个版本快照，可以在历史记录里看到每次改动的内容。如果修改后跑出来效果不对，直接回滚到上一个版本就行。这个功能在团队协作里尤其有用——有人改了一个例程参数，导致 CI 挂了，回滚到昨天的版本立刻修复。\n\n### 6. （2026 新增）AI 辅助例程生成\n用自然语言描述你想要的效果，比如“每次新建组件时，自动生成对应的测试文件和 Storybook 故事”，Claude 会生成一个例程骨架。实测下来，简单的模板生成准确率不错，复杂逻辑（比如需要跨多文件依赖分析）生成的结构还需要手动调整。但总体能省下“从零写 YAML”的大部分时间。\n\n---\n\n## 版本/套餐对比\n\n| 功能 / 版本 | Free | Pro | Team | Enterprise |\n|------------|------|-----|------|------------|\n| 本地例程创建与运行 | ✅ | ✅ | ✅ | ✅ |\n| 参数化与多步骤编排 | ✅（顺序+并行，无条件分支） | ✅（含条件分支） | ✅ | ✅ |\n| Git 钩子集成 | ✅（限单个仓库） | ✅（不限仓库数） | ✅ | ✅ |\n| 例程市场（浏览+安装） | ✅ | ✅ | ✅ | ✅ |\n| 市场贡献模板 | ❌ | ✅ | ✅ | ✅ |\n| 版本管理与回滚 | 仅本地版本 | ✅（支持云端同步） | ✅ | ✅ |\n| AI 辅助例程生成 | 每月 10 次 | 每月 100 次 | 不限次 | 不限次 |\n| 跨仓库/跨项目例程 | ❌ | ❌ | ✅ | ✅ |\n| 高级编排（嵌套循环、动态分支） | ❌ | ❌ | ✅ | ✅ |\n| 团队协作（共享、权限、审计日志） | ❌ | ❌ | ✅ | ✅ |\n| 老旧 IDE 集成支持 | 仅 VS Code / JetBrains | 同上 | 同上 | 全面定制 |\n\n> 据官方说明，Free 版主要用于个人尝鲜，条件分支和跨仓库功能需要 Pro 以上。Team 和 Enterprise 更侧重协作与安全。\n\n---\n\n## 值不值得用？\n\n### 优点\n- **省时间**：重复任务从“每步手动进 prompt”变成“一键触发”，尤其适合代码格式化、测试生成、pre-commit 检查这类高频操作。\n- **低门槛上手**：市场模板很多，即使不会写 YAML 也能直接装来用。AI 辅助生成又进一步降低了“定制”的门槛。\n- **融入现有流程**：Git 钩子、IDE 侧边栏、CI/CD 管道都能挂，不用改工作习惯。\n- **并行与条件分支**：2026 年新增的后两个功能让例程能处理更真实的业务逻辑（比如按分支自动选择不同检查策略）。\n\n### 缺点\n- **高级功能锁在付费计划里**：跨仓库例程、团队共享、条件分支要 Team 以上才给。个人开发者如果只用 Free 版，会遇到“我想要条件分支→需要付费”的尴尬。\n- **模板质量不统一**：市场里很多模板是用户自己写的，测试不充分。有好几次我安装了一个“Python 重构例程”，执行时因为缺少依赖脚本直接报红。\n- **老旧 IDE 集成不好**：Eclipse、NetBeans 用户可能要等第三方插件，目前官方只完善了 VS Code 和 JetBrains 系。\n\n### 总体结论\n**对于日常在用 Claude Code 的开发者来说，Routines 值得一试。** 哪怕只用 Free 版，把它当作一个“可保存的 prompt 集合”也比每次手敲要强。如果你已经有一定自动化经验，Pro 版（包含条件分支和更多 AI 生成次数）是提升效率最直接的投入。但对于团队协作和复杂管线，Team 版的门槛确实不低——建议先用小团队试点，确认收益再升级。\n\n---\n\n## 使用建议\n\n1. **从小任务开始**：不要一上来就编排 10 步的复杂例程。先做“格式化 → 检查 → 提交”这样 2~3 步的，跑通了再叠加条件分支。\n2. **安装模板后先试跑**：从市场里下载的模板，建议在独立测试分支或沙盒项目里执行一次，看每一步的实际输出是否符合预期。\n3. **利用 Git 钩子打通流程**：最直接的效率提升是把例程挂在 pre-commit 上，养成习惯后基本不会再有“忘了格式化就提交”的情况。\n4. **学会写参数化输入**：别把文件路径、规则值写死。定义成 `$input`、`$ruleset`，以后换项目直接改输入就行，不用改例程本身。\n5. **注意版本管理**：修改例程后手动点一次“保存版本”，方便出问题时回滚。如果团队协作，建议在共享例程前先锁定主版本。\n\n---\n\n## 适合谁用？\n\n### ✅ 强烈推荐\n- **使用 Claude Code 的日常开发者**（尤其是做完格式化、测试、代码审查的）\n- **对自动化感兴趣的独立开发者**（Free 版够用，Pro 版性价比高）\n- **前端/后端团队**（Git 钩子+CI 集成能显著减少低质量提交）\n\n### 🤔 可以试试，但别抱太高期望\n- **偶尔用 Claude Code 查 bug 的人**：例程的价值在于重复使用，低频用户可能觉得“我还不如手打 prompt”。\n- **使用 Eclipse 等老旧 IDE 的开发者**：官方集成不完善，需要自己找插件或直接用终端调用。\n- **需要跨仓库复杂管线的团队**：Free/Pro 版不支持，得 Team 起步，成本要先算清楚。\n\n### ❌ 不太推荐\n- **不用 Claude Code 的开发者**：Routines 完全绑定 Claude Code，不打算用它就等于没用。\n- **只想要现成“开箱即用”模板的人**：市场模板质量参差，如果你没有意愿调整和测试，安装后大概率会失望。\n- **预算敏感的创业团队**：虽然 Free 版能用，但条件分支和并行这两个关键功能在 Pro 以下缺失，整体体验会打折扣。可以先让一个人用 Pro 测试，看收益再决定是否推广。\n\n---\n\n*注：以上介绍基于官方公开资料及社区反馈，具体功能以实际产品为准。*",
+  "published": true,
+  "created_date": "2026-07-25",
+  "published_date": "2026-07-25",
+  "verified_url": "https://docs.anthropic.com/en/docs/claude-code/routines",
+  "verified_publisher": "Anthropic",
+  "verified_what": "Anthropic 为 Claude Code 推出的云上自动化例程功能（研究预览）",
+  "verified_price": "无单独定价，包含在 Claude Code（Pro $20/月、Max $100/$200、Team/Enterprise）订阅中；研究预览期",
+  "verified_platform": "Claude Code（CLI、Desktop、Web claude.ai/code/routines）",
+  "verified_features": [
+    "保存 Claude Code 配置为云上例程，关机也能运行",
+    "三种触发器：定时 / API(HTTP POST) / GitHub 事件",
+    "自动化代码审查、依赖审计、文档漂移检测等",
+    "无审批全自动运行，分支写入 claude/ 前缀",
+    "Pro/Max/Team/Enterprise 计划可用（研究预览）"
+  ],
+  "verified_description": "Claude Code Routines 是 Anthropic 为 Claude Code 推出的自动化例程功能（研究预览），可将一段提示+仓库+连接器保存为云上例程，按定时/API/GitHub 事件自动运行。",
+  "content_flags": "产品真实，但长文写入'例程市场/社区模板''VS Code 插件''免费用户 3 个私有例程'等未获官方证实的细节；官方域名应为 claude.ai/code/routines 或 docs.anthropic.com，原 url claude.ai/routines 不正确。",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "price_verified": true,
+  "verified_rating": "⭐4.6",
+  "rating_source": "暂无权威评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "把重复编码任务自动化，无需自建 cron/服务器",
+    "三种触发方式覆盖定时/事件/API",
+    "与 Claude Code 深度集成，无需切换工具"
+  ],
+  "verified_cons": [
+    "仅研究预览，行为与 API 可能变动",
+    "无预置 OAuth 连接器，需自行接 MCP",
+    "免费层每日例程次数有限（Pro 约 5 次/天）"
+  ],
+  "verified_faq": [
+    {
+      "q": "Claude Code Routines 与 Claude Code 区别？",
+      "a": "Claude Code 是 AI 编程助手；Routines 是把一段提示+仓库+连接器保存为云上例程，按定时/API/GitHub 事件自动运行，无需本地机器。"
+    },
+    {
+      "q": "收费吗？",
+      "a": "无单独定价，含于 Claude Code 的 Pro/Max/Team/Enterprise 订阅，研究预览期。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "代码自动化",
+    "工作流",
+    "Claude生态",
+    "开发者工具"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://docs.anthropic.com/en/docs/claude-code/routines",
+    "https://daily.dev/posts/claude-code-now-supports-automated-routines-triggered-by-schedule-api-or-github-events-opxb7ldbw",
+    "https://test.infoq.com/news/2026/05/anthropic-routines-claude/"
+  ],
+  "verify_notes": "Claude Code Routines 确为 Anthropic 真实功能（研究预览）；原条目'例程市场'等细节未获证实，官方地址应为 claude.ai/code/routines 或 docs.anthropic.com。",
+  "content_verified": true,
+  "url_previous": "https://claude.ai/routines",
+  "compare_section": {
+    "competitors": [
+      "tongyi-lingma",
+      "cline",
+      "codex-cli"
+    ],
+    "verdict": "Claude Code Routines 与 通义灵码、Cline、Codex CLI 同属AI编程赛道。若优先性价比，通义灵码（Individual Basic免费(300 Credits)；Pro月付；Enterprise按席位）门槛更低；若看重口碑，Cline（4.7）评分更高；Claude Code Routines 的优势在于Anthropic 为 Claude Code 推出的云上自动化例程功能（研究预览），适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "batch_id": "b41",
+  "category": "AI办公",
+  "tools": [
+    {
+      "slug": "huddle01-vms",
+      "name": "Huddle01 VMs",
+      "url_current": "https://huddle01.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网 huddle01.com 现为 Huddle01 Cloud（云算力：VMs/GPU/Kubernetes），并非描述中的“去中心化视频会议虚拟机”。站内将视频会议功能（AI会议摘要、实时翻译、链上会议记录、ENS域名登录、钱包验证）张冠李戴到 Cloud VMs 产品上。定价“免费版可用，Pro版约$8/月”未获官网证实（官网为按秒计费的云算力，无明确$8/月Pro套餐），建议人工复核定价。"
+    },
+    {
+      "slug": "cloud-computer-manus",
+      "name": "Cloud Computer Manus",
+      "url_current": "https://manus.im",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "Manus 确有 Cloud Computer 产品，但官网明确其为持久化 Ubuntu Server 云虚拟机（CLI命令行，无图形桌面、不支持Windows、未提及GPU）。站内描述“支持Windows和Linux双系统、GPU云服务器、图形桌面云桌面平台、文件同步团队协作”系编造。定价“基础版免费/专业版$19.9/月/企业版联系销售”与官网(Basic $10、Standard $30、Advanced $50/月)不符。"
+    },
+    {
+      "slug": "feishu-smart-partner",
+      "name": "飞书智能伙伴",
+      "url_current": "https://www.feishu.cn/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网 feishu.cn 确为字节跳动飞书办公套件，公司/产品归属正确。但当前官网未出现“智能伙伴”这一命名（现有AI产品为飞书aily、知识问答、智能会议纪要、多维表格AI等），疑似该功能已更名或名称过时。功能描述（智能问答、文档协作、数据分析）与飞书AI能力大体相符。建议人工确认“飞书智能伙伴”是否为当前有效产品名。"
+    },
+    {
+      "slug": "sembly",
+      "name": "Sembly",
+      "url_current": "https://sembly.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 sembly.ai 确为AI会议助手（自动转录、摘要、行动项、48种语言、接入Zoom/Teams等），与描述高度一致。定价“免费版可用，专业版$10/月起”中免费版与Pro起价$10与官网个人版相符（首页未列全量价目，但$10/月起合理）。未发现明显幻觉。"
+    },
+    {
+      "slug": "kollab",
+      "name": "Kollab",
+      "url_current": "https://kollab.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 kollab.ai 实为“可执行工作流(Playbooks)平台”（AI作为参与者执行流程，含客户端门户、白标），并非描述中的“实时白板+文档+项目管理融合的AI协作平台”。站内称其“自动总结会议议程、分配任务并预测项目风险、智能看板、甘特图”等功能张冠李戴。定价“免费版支持3人团队/Pro版$15/人/月”与官网(Starter $0、Pro $20/活跃用户/月、Enterprise定制)不符（Pro应为$20非$15）。"
+    },
+    {
+      "slug": "pmb",
+      "name": "PMB",
+      "url_current": "https://pmbai.dev",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 pmbai.dev 确为“面向AI编程代理的本地优先记忆工具”(MCP协议，Apache 2.0开源，完全免费无付费版)——这与站内 description(300字)一致。但站内 content(900字)将PMB描述成“装了AI大脑的项目管理助手”(看板/任务分配/进度追踪/会议纪要)，与真实产品完全不符（张冠李戴）。定价“团队版$29/人/月/企业版定制”系编造——官网明确“$0，free forever, no paid tier”。"
+    },
+    {
+      "slug": "qik-office",
+      "name": "Qik Office",
+      "url_current": "https://qikoffice.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网 qikoffice.com 确为“AI Office”（部署AI项目经理与Agentic Rooms），核心与“AI办公平台”相符，“文档生成/数据分析/会议室管理”方向大体一致。但站内content详述的“10种以上文案风格模板库、与Microsoft 365和Google Workspace无缝集成、免费版10人协作上限”等细节，以及定价“Pro版$15/月/企业版定制”均未在官网首页得到证实（官网仅见“Free forever”计划，未列Pro $15档）。建议人工复核功能细节与定价。"
+    },
+    {
+      "slug": "officecli",
+      "name": "OfficeCLI",
+      "url_current": "https://officecli.com",
+      "url_ok": false,
+      "url_correct": "https://officecli.ai",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "站内URL officecli.com 为域名出售/停放页（标价$58,888），并非产品官网。真实官网为 officecli.ai（GitHub: iOfficeAI/OfficeCLI）。产品本身真实存在：面向AI Agent的命令行Office文档处理工具（Word/Excel/PPT，开源Apache 2.0，单二进制）。功能描述（命令行自然语言操控Office、批量处理、模板生成、跨平台）大体属实，但“已集成GPT-4o和多模态模型”一说存疑（OfficeCLI为模型无关的CLI工具，由AI Agent调用，并非自带GPT-4o）。建议修正官网URL。"
+    },
+    {
+      "slug": "chatgpt-work",
+      "name": "ChatGPT Work",
+      "url_current": "https://chatgpt.com/work",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 chatgpt.com/work 确为OpenAI“ChatGPT Work”页面（面向团队的智能体，跨应用/文件产出文档/表格/演示），产品与归属正确。但定价“企业版每月$25/用户(按年预付)”不准确：ChatGPT Work本身是一跨套餐功能，面向Plus/Pro/Business/Enterprise/Edu等多档；“$25/用户/月(年付)”实为ChatGPT Team套餐价，并非“企业版”专属。归属与功能无误，仅定价档位标注有误。"
+    },
+    {
+      "slug": "livedemo",
+      "name": "LiveDemo",
+      "url_current": "https://livedemo.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 livedemo.ai 确为交互式产品演示创建工具（无需编码，对标Storylane/Navattic/Arcade），方向正确。但站内称其为“开源替代方案…开源意味着可以自部署、自定义和自行扩展”系错误：LiveDemo是商业SaaS（Startup免费/Pro $34/月/Growth $49/月/Business定制），仅Business定制版提供自托管，并无开源版本。“开源”属编造。"
+    }
+  ]
+}

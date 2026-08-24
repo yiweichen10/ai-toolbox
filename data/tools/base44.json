@@ -1,0 +1,158 @@
+{
+  "name": "Base44",
+  "slug": "base44",
+  "emoji": "🔧",
+  "color": "#2563EB",
+  "description": "Base44 是被 Wix 收购的 AI 无代码应用搭建平台（vibe coding），通过自然语言即可生成包含前端、后端、数据库、认证与一键部署的完整可用全栈 Web 应用。",
+  "category": "AI开发",
+  "tags": [
+    "AI应用生成",
+    "无代码",
+    "全栈开发",
+    "vibe coding",
+    "Wix"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "85,000",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://base44.com",
+  "price": "免费版 $0；付费 $16/月起（年付）",
+  "platform": "Web / VS Code / JetBrains / CLI",
+  "pros": [
+    "自然语言即可生成可上线的全栈应用",
+    "内置后端、数据库与认证，降低搭建门槛",
+    "非技术创始人可快速验证想法",
+    "Wix 收购后持续快速迭代",
+    "免费版可零成本试建应用"
+  ],
+  "cons": [
+    "采用信用点计费，复杂应用消耗快",
+    "代码导出仅前端（数据库不可移植）",
+    "复杂业务逻辑与冷门场景易出错",
+    "深度绑定平台，存在锁定风险"
+  ],
+  "features": [
+    "自然语言生成全栈应用（前端+后端+数据库+认证+托管）",
+    "可视化编辑器调整颜色/文案/布局",
+    "一键集成（Stripe、Slack、Google 等）",
+    "Superagents 自主智能体工作流",
+    "GitHub 集成与前端代码导出",
+    "自定义域名与多模型选择"
+  ],
+  "related": [
+    "github-copilot",
+    "cursor",
+    "replit-ai",
+    "cline"
+  ],
+  "faq": [
+    {
+      "q": "Base44 是什么？",
+      "a": "Base44 是一个 AI 应用生成器：用一段文字描述你想要的 App，AI 即可生成包含数据库、认证、前端与托管部署的可运行全栈 Web 应用，无需手写代码。"
+    },
+    {
+      "q": "Base44 收费吗？",
+      "a": "提供永久免费版（每月 25 条消息积分），付费版从 Starter $16/月（年付）起，至 Elite $160/月，按消息积分与集成积分计费。"
+    },
+    {
+      "q": "Base44 支持导出代码吗？",
+      "a": "Builder 及以上套餐可将前端代码导出到 GitHub，但数据库与后端仍托管在 Base44 平台，不可整体导出。"
+    },
+    {
+      "q": "Base44 已被收购了吗？",
+      "a": "是的，Wix 于 2025 年 6 月以约 8000 万美元收购 Base44，目前作为 Wix 旗下独立产品运营。"
+    }
+  ],
+  "seo_keywords": [
+    "Base44",
+    "Base44 AI代码生成工具",
+    "Base44免费版",
+    "Base44 vs GitHub Copilot",
+    "AI编程助手推荐"
+  ],
+  "content": "# Base44 是什么？\n\nBase44 是一个 AI 驱动的无代码应用搭建平台（vibe coding）。你用大白话描述想要的应用，它就能生成包含前端界面、后端逻辑、数据库、用户认证和托管部署的完整全栈 Web 应用，并给你一个可点击、可登录、数据可持久化的真实运行地址。\n\n2025 年 6 月，Wix 以约 8000 万美元收购 Base44，目前作为 Wix 旗下独立产品持续运营，并保持快速迭代（如自研 Base 1 模型、Superagents、GitHub 集成、移动端应用等）。\n\n---\n\n## 核心功能\n\n自然语言生成全栈应用：描述需求即可生成完整应用，而非仅生成代码片段。前端、后端、数据库、认证与托管一体打包。\n\n可视化编辑器：颜色、文案、布局可直接在可视化编辑器里调整，无需重新提示词，也不额外消耗积分。\n\n一键集成：原生集成 Stripe、Slack、Google Sheets/Drive、SendGrid、Twilio 等，方便接入支付、通知与 AI 能力。\n\nSuperagents 自主智能体：可运行自主工作流，并支持 Slack、WhatsApp 集成与移动端。\n\nGitHub 集成与代码导出：Builder 及以上套餐可将前端代码导出到 GitHub。\n\n自定义域名与多模型：付费版支持自定义域名，并可在主流大模型（如 Claude、Gemini、GPT 等）间按项目切换。\n\n---\n\n## 版本/套餐\n\n| 版本 | 年付价 | 适用 |\n|------|--------|------|\n| 免费版 | $0 | 25 消息积分/月，体验核心能力 |\n| Starter | $16/月 | 无限应用数、应用内代码编辑 |\n| Builder | $40/月 | 自定义域名、GitHub 集成、后端函数 |\n| Pro | $80/月 | 高用量应用 |\n| Elite | $160/月 | 最高积分额度 |\n\n（月付价格约比年付高 20%）\n\n---\n\n## 值不值得用？\n\n优点：\n- 非技术创始人也能快速把想法变成可运行应用\n- 后端、数据库、认证开箱即用，省去最难的搭建环节\n- Wix 收购后资源更足，迭代快\n- 免费版即可零成本试建\n\n缺点：\n- 采用信用点计费，复杂应用的迭代很费积分\n- 代码导出仅限前端，数据库不可移植，存在平台锁定\n- 业务逻辑越复杂越容易出错，冷门场景支持有限\n\n结论：对想快速验证想法、做 MVP 或内部工具的个人与小企业，Base44 是很顺手的选择；若需要完全自有代码、复杂生产级系统或严格合规，需谨慎评估锁定风险。\n\n## 常见问题（FAQ）\n\n**Base44 是什么？**\n\nBase44 是一个 AI 应用生成器：用一段文字描述你想要的 App，AI 即可生成包含数据库、认证、前端与托管部署的可运行全栈 Web 应用，无需手写代码。\n\n**Base44 收费吗？**\n\n提供永久免费版（每月 25 条消息积分），付费版从 Starter $16/月（年付）起，至 Elite $160/月，按消息积分与集成积分计费。\n\n**Base44 支持导出代码吗？**\n\nBuilder 及以上套餐可将前端代码导出到 GitHub，但数据库与后端仍托管在 Base44 平台，不可整体导出。\n\n**Base44 已被收购了吗？**\n\n是的，Wix 于 2025 年 6 月以约 8000 万美元收购 Base44，目前作为 Wix 旗下独立产品运营。",
+  "published": true,
+  "created_date": "2026-05-22",
+  "published_date": "2026-05-22",
+  "verified_url": "https://base44.com",
+  "verified_publisher": "Wix（2025 年 6 月以约 8000 万美元收购 Base44；创始人为 Maor Shlomo）",
+  "verified_what": "AI 无代码应用搭建平台（vibe coding）：用自然语言描述需求，即可生成包含前端、后端、数据库、身份认证与托管的全栈 Web 应用，并一键发布。",
+  "verified_price": "免费版 $0/月（25 消息积分+100 集成积分）；Starter $16/月（年付）或 $20/月（月付）；Builder $40/月（年付）或 $50/月（月付）；Pro $80/月（年付）或 $100/月（月付）；Elite $160/月（年付）或 $200/月（月付）。",
+  "verified_platform": "Web（云端平台，含 Android 应用）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "自然语言生成全栈应用（前端+后端+数据库+认证+托管）",
+    "可视化编辑器调整颜色/文案/布局",
+    "一键集成（Stripe、Slack、Google 等）",
+    "Superagents 自主智能体工作流",
+    "GitHub 集成与前端代码导出",
+    "自定义域名与多模型选择"
+  ],
+  "verified_description": "Base44 是被 Wix 收购的 AI 无代码应用搭建平台（vibe coding），通过自然语言即可生成包含前端、后端、数据库、认证与一键部署的完整可用全栈 Web 应用。",
+  "content_flags": "原文将 Base44 错误描述为「IDE 代码补全/重构工具」，声称支持 30+ 语言、IDE 插件（VS Code/JetBrains/Atom）、Bug 自动修复、单元测试自动生成、Git 集成等，均与事实不符——Base44 是云端全栈应用生成平台，并非代码补全插件；定价「$19/月起」亦不准确（实际 Starter 年付 $16/月起）；FAQ 中「免费版每日生成500次」「支持 Atom」等均为编造。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "暂无权威外部评分（编辑评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "自然语言即可生成可上线的全栈应用",
+    "内置后端、数据库与认证，降低搭建门槛",
+    "非技术创始人可快速验证想法",
+    "Wix 收购后持续快速迭代",
+    "免费版可零成本试建应用"
+  ],
+  "verified_cons": [
+    "采用信用点计费，复杂应用消耗快",
+    "代码导出仅前端（数据库不可移植）",
+    "复杂业务逻辑与冷门场景易出错",
+    "深度绑定平台，存在锁定风险"
+  ],
+  "verified_faq": [
+    {
+      "q": "Base44 是什么？",
+      "a": "Base44 是一个 AI 应用生成器：用一段文字描述你想要的 App，AI 即可生成包含数据库、认证、前端与托管部署的可运行全栈 Web 应用，无需手写代码。"
+    },
+    {
+      "q": "Base44 收费吗？",
+      "a": "提供永久免费版（每月 25 条消息积分），付费版从 Starter $16/月（年付）起，至 Elite $160/月，按消息积分与集成积分计费。"
+    },
+    {
+      "q": "Base44 支持导出代码吗？",
+      "a": "Builder 及以上套餐可将前端代码导出到 GitHub，但数据库与后端仍托管在 Base44 平台，不可整体导出。"
+    },
+    {
+      "q": "Base44 已被收购了吗？",
+      "a": "是的，Wix 于 2025 年 6 月以约 8000 万美元收购 Base44，目前作为 Wix 旗下独立产品运营。"
+    }
+  ],
+  "verified_tags": [
+    "AI应用生成",
+    "无代码",
+    "全栈开发",
+    "vibe coding",
+    "Wix"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://base44.com/",
+    "https://base44.com/blog/how-much-does-base44-cost",
+    "https://vibecoding.app/blog/base44-review",
+    "https://flowstep.ai/blog/base44-review/",
+    "https://justinmckelvey.com/blog/what-is-base44"
+  ],
+  "verify_notes": "原数据把 Base44 当成 IDE 代码补全工具描述，属严重产品身份错误；已按官方与多篇评测重写。价格以官网 2026-07 公布的年付价为准。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Base44 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Base44 的 自然语言生成全栈应用（前端+后端+数据库+认证+托管） 是亮点，价格 免费版 $0；付费 $16/月起（年付）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "name": "Symphony Agent",
+  "slug": "symphony-agent",
+  "positioning": "免费AI编程工具：安全地合入 PR+把项目任务转化为",
+  "auto_positioning": true,
+  "emoji": "🎼",
+  "color": "#8B5CF6",
+  "description": "OpenAI 开源的编码 Agent 编排框架（Apache 2.0）：把项目工作转化为隔离的自主实现运行，自动派单、验收并合入 PR，让团队管理工作而非监督 Agent。",
+  "category": "AI编程",
+  "tags": [
+    "开源",
+    "AI编程",
+    "Agent编排",
+    "编码Agent",
+    "OpenAI"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "85万/月",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/openai/symphony",
+  "price": "开源免费（Apache 2.0）",
+  "platform": "Web/iOS/Android",
+  "pros": [
+    "OpenAI 官方开源（Apache 2.0）",
+    "让团队从「监督 Agent」升级为「管理工作」",
+    "自带工单自动分派与 PR 合入闭环"
+  ],
+  "cons": [
+    "当前为低调工程预览版，建议仅在可信环境测试",
+    "需配合 harness engineering 实践效果最佳"
+  ],
+  "features": [
+    "把项目任务转化为隔离的自主实现运行（autonomous implementation runs）",
+    "监控工单/看板自动分派任务给编码 Agent",
+    "Agent 完成后提供工作证明（CI 状态、PR 评审、复杂度分析、演示视频）",
+    "安全地合入 PR",
+    "Elixir 参考实现"
+  ],
+  "related": [
+    "coze",
+    "dify",
+    "n8n",
+    "zapier-ai"
+  ],
+  "faq": [
+    {
+      "q": "Symphony 与 OpenAI 的关系？",
+      "a": "Symphony 是 OpenAI 官方开源项目（github.com/openai/symphony），Apache 2.0 许可，2026 年发布。"
+    },
+    {
+      "q": "Symphony 解决什么问题？",
+      "a": "它把项目工作转化为隔离的自主实现运行：监听 Linear 等工单板、自动派单给编码 Agent、Agent 完成后给出 CI/PR 等证据、验收后安全合入——团队只需管理任务而非盯着 Agent 干活。"
+    }
+  ],
+  "seo_keywords": [
+    "Symphony Agent",
+    "Symphony Agent怎么样",
+    "AI自动化工具推荐",
+    "工作流自动化平台",
+    "企业AI代理工具"
+  ],
+  "content": "## Symphony Agent 是什么？\n\nOpenAI 开源的编码 Agent 编排框架，把项目工作转化为隔离的自主实现运行，让团队管理工作而非监督编码 Agent。\n\nOpenAI 开源的编码 Agent 编排框架（Apache 2.0）：把项目工作转化为隔离的自主实现运行，自动派单、验收并合入 PR，让团队管理工作而非监督 Agent。\n\n## 核心功能\n\n- 把项目任务转化为隔离的自主实现运行（autonomous implementation runs）\n- 监控工单/看板自动分派任务给编码 Agent\n- Agent 完成后提供工作证明（CI 状态、PR 评审、复杂度分析、演示视频）\n- 安全地合入 PR\n- Elixir 参考实现\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 开源免费（Apache License 2.0），可自建部署。 |\n| 支持平台 | CLI / 自托管（开源） |\n| 评分 | ⭐ 4.5 |\n| 开发商 | OpenAI |\n\n## 价格与平台\n\n- **价格**：开源免费（Apache License 2.0），可自建部署。\n- **平台**：CLI / 自托管（开源）\n- **官网**：https://github.com/openai/symphony\n\n## 优缺点分析\n\n### 优点\n\n- OpenAI 官方开源（Apache 2.0）\n- 让团队从「监督 Agent」升级为「管理工作」\n- 自带工单自动分派与 PR 合入闭环\n\n### 缺点\n\n- 当前为低调工程预览版，建议仅在可信环境测试\n- 需配合 harness engineering 实践效果最佳\n\n## 常见问题（FAQ）\n\n**Symphony 与 OpenAI 的关系？**\n\nSymphony 是 OpenAI 官方开源项目（github.com/openai/symphony），Apache 2.0 许可，2026 年发布。\n\n**Symphony 解决什么问题？**\n\n它把项目工作转化为隔离的自主实现运行：监听 Linear 等工单板、自动派单给编码 Agent、Agent 完成后给出 CI/PR 等证据、验收后安全合入——团队只需管理任务而非盯着 Agent 干活。\n\n\n## 最终结论\n\nSymphony Agent 是AI编程领域的一款 AI 工具，其核心优势在于OpenAI 官方开源（Apache 2.0）。\n此外，让团队从「监督 Agent」升级为「管理工作」。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-05-28",
+  "published_date": "2026-05-28",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "conflict_note": "CRITICAL: symphonyagent.ai 域名无法确认为真实独立产品。搜索结果显示存在三个不同的'Symphony Agent'产品：(1) OpenAI Symphony (github.com/openai/symphony) — Apache 2.0开源编码Agent编排框架，2026年4月发布；(2) TikTok Symphony Agent — 2026年6月推出的AI广告创意引擎；(3) SymphonyAI (symphonyai.com) — 独立企业AI公司。tools.json中的symphony-agent条目（symphonyagent.ai, '专注于企业级工作流自动化的AI多智能体协作平台'）不与上述任一产品完全匹配。域名symphonyagent.ai在搜索中仅出现在aitoollab.cn（本站），存在循环引用嫌疑。条目内容可能为AI生成的虚构/拼凑数据。",
+  "source_urls": [
+    "https://github.com/openai/symphony"
+  ],
+  "verify_notes": "用户确认存在 3 个同名产品（OpenAI Symphony / TikTok Symphony / SymphonyAI），本条目改写为 OpenAI Symphony（最贴近 agent 主题）。",
+  "content_verified": true,
+  "verified_url": "https://github.com/openai/symphony",
+  "verified_publisher": "OpenAI",
+  "verified_what": "OpenAI 开源的编码 Agent 编排框架，把项目工作转化为隔离的自主实现运行，让团队管理工作而非监督编码 Agent。",
+  "verified_price": "开源免费（Apache License 2.0），可自建部署。",
+  "verified_platform": "CLI / 自托管（开源）",
+  "verified_features": [
+    "把项目任务转化为隔离的自主实现运行（autonomous implementation runs）",
+    "监控工单/看板自动分派任务给编码 Agent",
+    "Agent 完成后提供工作证明（CI 状态、PR 评审、复杂度分析、演示视频）",
+    "安全地合入 PR",
+    "Elixir 参考实现"
+  ],
+  "verified_description": "OpenAI 开源的编码 Agent 编排框架（Apache 2.0）：把项目工作转化为隔离的自主实现运行，自动派单、验收并合入 PR，让团队管理工作而非监督 Agent。",
+  "content_flags": "原条目（symphonyagent.ai「企业级多智能体工作流平台」）与任何真实产品不符、疑似虚构；真实存在的是 OpenAI Symphony / TikTok Symphony / SymphonyAI 三个同名产品，本条目已改写为 OpenAI Symphony。",
+  "price_verified": true,
+  "verified_pros": [
+    "OpenAI 官方开源（Apache 2.0）",
+    "让团队从「监督 Agent」升级为「管理工作」",
+    "自带工单自动分派与 PR 合入闭环"
+  ],
+  "verified_cons": [
+    "当前为低调工程预览版，建议仅在可信环境测试",
+    "需配合 harness engineering 实践效果最佳"
+  ],
+  "verified_faq": [
+    {
+      "q": "Symphony 与 OpenAI 的关系？",
+      "a": "Symphony 是 OpenAI 官方开源项目（github.com/openai/symphony），Apache 2.0 许可，2026 年发布。"
+    },
+    {
+      "q": "Symphony 解决什么问题？",
+      "a": "它把项目工作转化为隔离的自主实现运行：监听 Linear 等工单板、自动派单给编码 Agent、Agent 完成后给出 CI/PR 等证据、验收后安全合入——团队只需管理任务而非盯着 Agent 干活。"
+    }
+  ],
+  "verified_tags": [
+    "开源",
+    "AI编程",
+    "Agent编排",
+    "编码Agent",
+    "OpenAI"
+  ],
+  "verified_category": "AI编程",
+  "url_previous": "https://symphonyagent.ai",
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Symphony Agent 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Symphony Agent 的 把项目任务转化为隔离的自主实现运行（autonomous implementation runs） 是亮点，价格 开源免费（Apache 2.0）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

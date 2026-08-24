@@ -1,0 +1,126 @@
+{
+  "batch_id": "b32",
+  "category": "AI绘画",
+  "tools": [
+    {
+      "slug": "liblibai",
+      "name": "LiblibAI",
+      "url_current": "https://www.liblib.art",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "① 定价字段写「免费版+Pro $10/月」错误：LiblibAI 为人民币计价国内平台，公开资料显示会员最低约 ¥29-39/月（入门版/基础版VIP），并无美元 $10/月 档。② 平台字段写「本地部署 / Web」错误：LiblibAI 是云端 SaaS 平台（Web/App），不提供本地部署。功能描述（云端SD、中文模型库、LoRA、ControlNet、图生图、社区）基本属实。"
+    },
+    {
+      "slug": "tensor.art",
+      "name": "Tensor.Art",
+      "url_current": "https://tensor.art",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正常，为 Stable Diffusion 云端生图与模型托管平台。定价「免费版+Pro $10/月」基本属实（Pro 约 $9.90/月，免费档每日 50-100 算力）。平台「Web」正确。功能描述与官网一致，无幻觉。"
+    },
+    {
+      "slug": "recraft",
+      "name": "Recraft",
+      "url_current": "https://www.recraft.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["platform", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "① 平台字段写「本地部署 / Web」错误：Recraft 是纯云端 SaaS（含 API/移动端），不支持本地部署。② 正文版本对比表写「Premium ($8/月)」与官网不符：官网实际为 Basic $10/月、Pro $16/月、Teams $18/月（年付价），无 $8 档。顶部价格字段「免费使用」可理解为有免费档（$0），不算完全虚假。"
+    },
+    {
+      "slug": "decohere",
+      "name": "Decohere",
+      "url_current": "https://decohere.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正常，产品为实时 AI 图像+视频生成器，功能描述（文生图、风格、编辑、批量、社区画廊）与官网一致，无张冠李戴。但正文版本对比表写「专业版 ¥98/月、团队版 ¥298/月」为编造：Decohere 实际以美元计价，付费档为 Explorer $9/月（年付 $7.99）、Creator $29/月、Director $59/月，无人民币定价。顶部价格字段「付费版$9.99/月起」基本准确。"
+    },
+    {
+      "slug": "lets-enhance",
+      "name": "Let's Enhance",
+      "url_current": "https://letsenhance.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正常，AI 图像放大/增强工具。定价字段写「免费版每月20张，付费版$9起/月」：付费 $9/月起（Starter 100 credits/月，年付 $9）准确；但免费档实为注册赠送 10 次额度（一次性，非「每月20张」），免费额度描述不实。功能描述（超分、去噪、色彩优化、批处理、4K/8K）与官网一致。"
+    },
+    {
+      "slug": "magnific-ai",
+      "name": "Magnific AI",
+      "url_current": "https://magnific.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "① 定价字段「免费版每月3次增强，付费版$12/月起」错误：Magnific 为纯付费工具，无永久免费版（仅 24 小时试用、50 token≈10 次放大）；付费 Pro 起价 $39/月（另有 Premium $99/月、Business $299/月），并非 $12/月。② 正文核心功能列「Controlnet控制支持」为编造：Magnific 无 ControlNet，实际控制为 Creativity/Resemblance 滑块与提示词引导。「2026新增实时预览/批量处理」亦不准确（非 2026 新增）。注：magnific.ai 现重定向至 magnific.com（Freepik 更名 Magnific），仍指向同一产品，URL 有效。"
+    },
+    {
+      "slug": "comfyui",
+      "name": "ComfyUI",
+      "url_current": "https://comfy.org/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 comfy.org 为 ComfyUI 官方站点，正常。免费开源、节点式工作流、面向 Stable Diffusion，平台 Windows/Mac/Linux 均正确。无幻觉。"
+    },
+    {
+      "slug": "fooocus",
+      "name": "Fooocus",
+      "url_current": "https://github.com/lllyasviel/Fooocus",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "GitHub 仓库地址正确（官方唯一源码地址），作者 lllyasviel、基于 SDXL、免费开源均属实；作者确为 ControlNet 作者。Fooocus 无官方商业域名（任何 fooocus.com 等均为假冒），故 GitHub 仓库为正确官方地址。无幻觉。"
+    },
+    {
+      "slug": "jimeng-ai",
+      "name": "即梦AI",
+      "url_current": "https://dreamina.jianying.com/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL 仍可访问并正确指向「即梦AI」（字节跳动/剪映旗下，支持文生图、图生图、文/图生视频）。当前官方主域名为 jimeng.jianying.com，dreamina.jianying.com 为旧 Dreamina 域名仍可用（内链已指向 jimeng.jianying.com），建议后续统一为 jimeng.jianying.com，但非错误站点。定价「基础免费+高级付费」、平台「网页端/安卓/iOS」均正确。无幻觉。"
+    },
+    {
+      "slug": "tongyi-wanxiang",
+      "name": "通义万相",
+      "url_current": "https://tongyi.aliyun.com/wanxiang",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网正常（tongyi.aliyun.com/wanxiang，阿里「万相」图像/视频生成模型）。内容幻觉：正文称「2026年已升级至3.0版本」，但官网页面当前显示「万相2.7能力介绍」，版本号不实。存疑项（conflict，建议人工裁定）：① 定价字段「专业版¥29/月起」与多源公开资料（专业版约 ¥49.9-99/月、创意版 ¥99/月）不符；② 描述「基于自研Composer大模型」未获官方证实（通义万相基于通义系列大模型，Composer 说法存疑）。功能（文生图、图生图、局部重绘、风格模板、高分辨率、批量生成）与官网一致。"
+    }
+  ]
+}

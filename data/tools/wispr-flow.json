@@ -1,0 +1,99 @@
+{
+  "name": "Wispr Flow Notetaker",
+  "slug": "wispr-flow",
+  "positioning": "Wispr Flow Notetaker是什么？无机器人AI会议记录工具好用吗",
+  "auto_positioning": false,
+  "emoji": "🎙️",
+  "color": "#6366F1",
+  "description": "Wispr Flow Notetaker 是 Wispr Flow 在语音输入之外推出的会议记录功能，2026 年 8 月 5 日登上 Product Hunt 日榜前列。它不派机器人进会议，而是直接抓取设备系统音频，因此 Zoom、Google Meet、Teams、Slack Huddles、Discord、FaceTime 甚至线下面谈都能转录；支持说话人识别、跨会议提问，并可通过 MCP 把会议内容送进 Claude、ChatGPT 等 AI 工具。免费版即可使用。",
+  "category": "AI办公",
+  "tags": [
+    {
+      "text": "免费可用",
+      "type": "free"
+    },
+    {
+      "text": "无需机器人"
+    },
+    {
+      "text": "MCP支持"
+    },
+    {
+      "text": "仅Mac"
+    }
+  ],
+  "rating": "⭐ 4.4",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://wisprflow.ai",
+  "price": "Free 0 美元（含 Notetaker、说话人识别与 MCP，每周会议次数有上限）；Pro 15 美元/用户/月，年付 12 美元/用户/月；Enterprise 定制报价（Notetaker 企业版官方标注即将支持）",
+  "platform": "Notetaker 目前仅支持 macOS（说话人识别需 macOS 14.4 以上），Windows 与移动端官方称即将推出；语音输入支持 Mac / Windows / iOS / Android",
+  "pros": [
+    "不派机器人进会议，靠系统音频转录，Zoom/Meet/Teams/Discord 甚至线下对话都能覆盖",
+    "会前读取会议邀请与已教过的词汇，人名、术语识别更准",
+    "免费版就包含 Notetaker、说话人识别与 MCP，5 分钟以内的录音不计入每周额度",
+    "已订阅 Pro 的语音输入用户不加价获得会议记录，一份订阅覆盖两件事",
+    "可一步导入 Granola 的历史笔记，迁移成本极低"
+  ],
+  "cons": [
+    "Notetaker 目前仅限 macOS，Windows 与移动端未落地，混合设备团队难全员铺开",
+    "无可见机器人意味着参会者可能不知情，获取知情同意的责任完全落在使用者身上",
+    "启用 Notetaker 必须打开 Private Cloud Sync，而签署 HIPAA 所需的 BAA 会永久禁用该同步，真正需要 HIPAA 合规的机构等于用不了"
+  ],
+  "features": [
+    "无机器人转录：直接捕捉设备系统音频，不依赖接入会议 API",
+    "说话人识别：区分不同参会者并归属发言内容（需 macOS 14.4 以上）",
+    "术语与人名学习：会前读取会议邀请与已教词汇，提升专有名词准确率",
+    "跨会议提问：可针对单场会议或全部历史会议提问",
+    "MCP 集成：把会议笔记送进 Claude、ChatGPT、Cursor 等 AI 工具继续处理",
+    "日历与 Slack 连接：与既有工作流打通，输出摘要与待办"
+  ],
+  "related": [
+    "wps-ai",
+    "feishu",
+    "dingtalk"
+  ],
+  "content": "## Wispr Flow Notetaker是什么？\n\nWispr Flow 原本是个语音输入工具——按住说话，文字落进任何应用。Notetaker 是它 2026 年 8 月新加的会议记录能力，上线当周就冲到 Product Hunt 日榜前列。\n\n它最不一样的地方在于实现路径：不派机器人进会议室。市面上多数 AI 会议工具靠一个 bot 加入 Zoom 或 Meet 来录音，Notetaker 直接抓取设备的系统音频。这带来一个很实际的好处——覆盖面几乎不受限制：Zoom、Google Meet、Teams、Slack Huddles、Discord、FaceTime、WhatsApp，连线下面对面聊天都能转录，因为它根本不需要接入某个视频会议的 API。它还会在会前读取会议邀请和你已经教过的词汇，所以人名和行业术语的识别比通用转录准。转录完的内容可以直接提问，也能通过 MCP 送进 Claude、ChatGPT 或 Cursor 继续加工。\n\n## 核心功能\n\n1. 无机器人转录：捕捉系统音频，线上线下通吃，参会者界面里不会多出一个陌生 bot。\n2. 说话人识别：区分不同参会者并归属发言，这项需要 macOS 14.4 以上，比 Wispr Flow 主应用的最低要求高一截。\n3. 术语与人名学习：会前读邀请、读你教过的词汇，专有名词更准。\n4. 跨会议提问：可以只问某一场，也可以问「过去一个季度这个客户提过预算吗」这类跨会议问题。\n5. MCP 集成：免费版就带，会议笔记能直接被 Claude、ChatGPT、Cursor 读取，接着做摘要、待办或写进别的系统。\n\n## 版本/套餐对比\n\n免费版 0 美元，包含 Notetaker（仅 Mac）、说话人识别、跨会议提问、MCP、日历与 Slack 连接，以及每周 2000 词的桌面端语音输入额度，每周会议次数有上限但官方未公布具体数字，5 分钟以内的录音不计入额度。Pro 每用户 15 美元/月，年付降到 12 美元/月（约 144 美元/年），解锁无限语音输入、更高会议额度与更长笔记留存、进阶推理模型。Enterprise 为定制报价，提供 SOC 2 Type II、ISO 27001、SAML SSO、SCIM、审计日志等，但官方明确标注 Notetaker 企业版「即将支持」。学生与教育邮箱可享 Pro 五折。\n\n## 值不值得用？\n\n优点很扎实：无机器人的路线让覆盖面远超同类；免费版给得相当大方，MCP 也不设门槛；如果你本来就在为语音输入付 Pro，会议记录是白送的，一份订阅解决两件事；从 Granola 迁移只要一步。\n\n缺点必须认真看。第一，只支持 macOS，Windows 和移动端都还没落地，混合设备的团队没法全员铺开。第二，没有可见机器人意味着少了一个「正在录音」的提示，官方把获取知情同意的责任完整划给使用者——这不是一句免责声明就能解决的团队流程问题。第三，也是最硬的一处矛盾：启用 Notetaker 必须开 Private Cloud Sync，而一旦签署 HIPAA 所需的 BAA，Private Cloud Sync 会被永久禁用。也就是说，真正需要 HIPAA 合规的医疗机构，这个功能对他们等于摆设。\n\n结论：Mac 用户、尤其是已经在用 Wispr Flow 语音输入的人，免费版就值得试；但把它铺给全公司之前，先把设备、同意流程和合规这三关过一遍。\n\n## 使用建议\n\n1. 先拿一场低风险的内部会试，明确告知在录音，然后核对说话人标注和待办抽取是否准。\n2. 把「开场口头告知 + 日历备注」固化成团队规范，别只依赖产品文档里的那句提醒。\n3. 检查 Cloud Sync、留存时长与模型训练开关，敏感会议前务必确认一遍。\n4. 用 MCP 把笔记接进 AI 工具时注意，这会引入第二套留存与访问条款，别让数据边界断在这一步。\n\n## 适合谁用？\n\n推荐：Mac 用户、已在用 Wispr Flow 语音输入的个人与小团队。\n可考虑：会议密集、需要跨平台（含线下）统一记录的顾问、销售与研究者。\n不推荐：Windows 为主的团队，以及有 HIPAA 等强合规要求的医疗、法务机构。",
+  "published": true,
+  "faq": [
+    {
+      "question": "Wispr Flow Notetaker 免费吗？",
+      "answer": "免费版即包含 Notetaker、说话人识别、跨会议提问与 MCP，每周会议次数有上限（官方未公布具体数字），5 分钟以内的录音不计入额度。Pro 为每用户 15 美元/月、年付 12 美元/月。"
+    },
+    {
+      "question": "Notetaker 支持 Windows 吗？",
+      "answer": "目前仅支持 macOS，说话人识别还需要 macOS 14.4 以上版本。官方表示 Windows 版即将推出，移动端仍在路线图上，均未给出具体时间。"
+    },
+    {
+      "question": "它会派机器人加入我的会议吗？",
+      "answer": "不会。Notetaker 直接捕捉设备的系统音频，因此 Zoom、Google Meet、Teams、Slack Huddles、Discord、FaceTime 乃至线下面谈都能转录。代价是参会者看不到录音提示，官方要求使用者自行取得必要的知情同意。"
+    },
+    {
+      "question": "已经订阅了 Flow Pro，需要为 Notetaker 加钱吗？",
+      "answer": "不需要。Notetaker 落在既有的 Wispr Flow 订阅体系内，Pro 用户无需额外付费即可使用，且免费版本身也包含该功能。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Wispr Flow Notetaker",
+    "Wispr Flow怎么样",
+    "Wispr Flow免费版",
+    "Wispr Flow使用教程",
+    "Wispr Flow和Granola哪个好"
+  ],
+  "source_urls": [
+    "https://wisprflow.ai/pricing",
+    "https://www.ic.work/article/wispr-flow-notetaker-hipaa-compliance-contradiction",
+    "https://musthave.ai/wispr-flow-notetaker-bot-free-consent",
+    "https://mrktcorrect.com/blog/wispr-flow-vs-granola"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-17"
+}

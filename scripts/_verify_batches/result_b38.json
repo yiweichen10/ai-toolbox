@@ -1,0 +1,54 @@
+{
+  "batch_id": "b38",
+  "category": "AI效率",
+  "tools": [
+    {
+      "slug": "rosply",
+      "name": "Rosply",
+      "url_current": "https://rosply.ai",
+      "url_ok": false,
+      "url_correct": "https://rosply.com",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content", "price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确域名为 rosply.com（而非 rosply.ai，后者无法访问/失效）。真实 Rosply 是‘通过看屏幕、控制鼠标键盘来自动操作电脑’的桌面 AI 代理（支持 Windows/macOS/Linux），一次性买断 $29、非订阅制。站内数据却将其写成‘面向企业级用户的 AI 对话与效率工具’，宣称 Web/iOS/Android/Windows/Mac、订阅制 Pro $15/月与团队版 $29/月/人、团队文档协作——与官网事实严重不符，属功能张冠李戴 + 定价编造 + 平台错误，整条数据几乎都是错的。"
+    },
+    {
+      "slug": "octolens",
+      "name": "Octolens",
+      "url_current": "https://octolens.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网可正常访问，产品定位（AI 社媒监听/品牌与竞品监测、情感分析）与站内描述一致。但站内定价‘付费版从 $49/月起’已过期：官网当前在售为 Pro $159/月（按年计费）、Scale $499/月、Enterprise 定制；免费项仅为 5k 提及的免费试用（是否含永久免费版存疑）。$49 系旧版/第三方过时报价。建议人工复核官网当前档位后更正价格；功能与定位无误。"
+    },
+    {
+      "slug": "asi-one",
+      "name": "ASI:One",
+      "url_current": "https://asi-one.ai",
+      "url_ok": false,
+      "url_correct": "https://asi1.ai",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网正确域名为 asi1.ai（数字 1，而非 asi-one.ai，后者失效/无法访问）。真实 ASI:One 由 Fetch.ai 打造的 Web3 原生 LLM/智能体平台，含开发者 API（agentic reasoning、tool calling、图像生成）与‘个人 AI’社交协调产品。站内称‘专业版 $19/月、团队版 $49/月’及‘iOS/Android/桌面客户端’在官网均无对应证据（官网以 API/网页端为主，未提及此类消费订阅档与移动/桌面客户端）。功能描述（多模态 + 自主智能体 + 写作/分析/编程/设计）大致吻合，故仅定价与平台存疑，建议人工复核。"
+    },
+    {
+      "slug": "flint",
+      "name": "Flint",
+      "url_current": "https://www.flintnote.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网可访问。开发者归属‘Tim Disney（disnet）’与‘本地优先、开源’均属实（已交叉核实其博客 disnetdev.com 与 GitHub disnet/flint-note）。但存在三处幻觉：① 定价编造——站内称 Pro $15/月、团队版 $29/人/月，官网实为免费开源、开放测试，无任何付费档；② 平台错误——站内称 Web/iOS/macOS/Windows，官网仅 macOS/Windows/Linux 桌面端，无 Web/iOS；③ 功能张冠李戴——站内将其写成‘面向团队决策的 AI 知识管理平台’，强调视频/音频抽取、实时协作白板、会议录音生成待办，而官网定位是个人笔记应用（写笔记、双向链接、AI 连接建议、间隔复习），无团队协作白板/录音待办等能力。"
+    }
+  ]
+}

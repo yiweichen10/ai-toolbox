@@ -1,0 +1,126 @@
+{
+  "batch_id": "b02",
+  "category": "AI编程",
+  "tools": [
+    {
+      "slug": "replicate",
+      "name": "Replicate",
+      "url_current": "https://replicate.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 replicate.com 正常，描述为云端运行开源模型、按需按 GPU 秒计费，与官网一致（CPU $0.0001/秒、T4 GPU $0.000225/秒等）。无幻觉。"
+    },
+    {
+      "slug": "webflow-ai",
+      "name": "Webflow AI",
+      "url_current": "https://webflow.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 webflow.com 正常，定价含免费版及 Basic $14/月起（年付），与官网完全一致；教育版免费属官网教育计划。无幻觉。"
+    },
+    {
+      "slug": "codesandbox-ai",
+      "name": "CodeSandbox AI",
+      "url_current": "https://codesandbox.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 codesandbox.io 正常，免费版+Pro $9/月（按工作区年付）与官网一致。内容表中'Team版'为旧档命名（现 Builder/Enterprise），但价格字段准确，不判幻觉。"
+    },
+    {
+      "slug": "cognition-ai",
+      "name": "Cognition AI",
+      "url_current": "https://cognition.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 cognition.ai 是 Cognition 公司站，实际产品为 Devin；所写功能与定价(Pro $20/Max $200/Teams $80)均与 Devin 吻合。注意'Cognition AI'是公司名而非独立产品，与 devin-ai 条目重复，建议合并。事实未编造，不判幻觉。"
+    },
+    {
+      "slug": "sourcegraph-cody",
+      "name": "Sourcegraph Cody",
+      "url_current": "https://sourcegraph.com/cody",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 sourcegraph.com/cody 正常，定价 Free / Pro $9/月 / Enterprise $19/席位月，与官网完全一致。无幻觉。"
+    },
+    {
+      "slug": "tabnine",
+      "name": "Tabnine",
+      "url_current": "https://www.tabnine.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 tabnine.com 正常；Dev $9/月（年付）与当前官网一致，免费版亦存在（2026 多来源引用）。注：Tabnine 已转向企业定价（Code Assistant $39 等），但 Dev/免费档仍被引用，未构成明显编造，不判幻觉。"
+    },
+    {
+      "slug": "aider",
+      "name": "Aider",
+      "url_current": "https://aider.sh",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 aider.sh 正常，开源免费、可接入多种 LLM API，与事实一致。无幻觉。"
+    },
+    {
+      "slug": "trae",
+      "name": "Trae",
+      "url_current": "https://www.trae.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 trae.ai 正常（字节跳动出品，描述正确）。但定价'专业版$19/月'错误：官网当前 Pro 为 $10/月（首月 $5），另有 Lite $3/$10、Pro+ $30、Ultra $100，并不存在 $19 档。属定价编造。"
+    },
+    {
+      "slug": "devin-ai",
+      "name": "Devin AI",
+      "url_current": "https://devin.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 devin.ai 正常，免费版(Free $0，有限额)+企业版付费与官网一致（Pro $20/Max $200/Teams $80 起）。无幻觉。"
+    },
+    {
+      "slug": "amp",
+      "name": "Amp",
+      "url_current": "https://sourcegraph.com/amp",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "url 仍可访问（Amp 现独立为 Amp Inc.，规范站 ampcode.com）。但内容严重错误：称'Amp 是 Anthropic 推出的 AI 编程助手''Claude Code 的前身'——事实为 Amp 由 Sourcegraph/Amp Inc. 开发，Claude Code 是 Anthropic 另一款产品，二者无关。属公司/产品归属错+张冠李戴；且现已推出订阅付费，并非'完全免费'。"
+    }
+  ]
+}

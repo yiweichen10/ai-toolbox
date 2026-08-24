@@ -1,0 +1,139 @@
+{
+  "name": "Pollinations",
+  "slug": "pollinations",
+  "emoji": "🎨",
+  "color": "#10B981",
+  "description": "Pollinations是一个开源AI聚合平台（非单一图像生成工具），通过统一API提供文本、图像、音频、视频生成，无需注册即可免费使用，采用Pollen积分制支持高级模型。",
+  "category": "AI开发",
+  "tags": [
+    "AI开发平台",
+    "多模态API",
+    "开源",
+    "免费使用",
+    "图像生成",
+    "文本生成",
+    "音频生成"
+  ],
+  "rating": "⭐ 3.9",
+  "visits": "520万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://pollinations.ai",
+  "price": "免费使用基础功能；高级模型按Pollen积分付费（$1≈1 Pollen）",
+  "platform": "网页端、iOS、Android",
+  "pros": [
+    "无需注册/API Key即可免费生成图片和文本",
+    "OpenAI兼容API，切换成本极低",
+    "完全开源，可自托管，数据隐私有保障"
+  ],
+  "cons": [
+    "不是传统“AI绘画工具”，而是开发者API平台，普通用户入口不直观",
+    "无正式SLA或企业级支持",
+    "高级模型需要Pollen积分，重度使用须付费"
+  ],
+  "features": [
+    "统一API聚合（文本、图像、音频、视频多模态）",
+    "OpenAI兼容端点，零认证即可调用",
+    "Pollen积分系统与社区贡献奖励",
+    "开源全栈，支持自托管",
+    "500+社区项目生态"
+  ],
+  "related": [
+    "midjourney",
+    "stable-diffusion",
+    "dall-e-3",
+    "ideogram",
+    "leonardo-ai",
+    "flux"
+  ],
+  "faq": [
+    {
+      "q": "Pollinations是免费的吗？",
+      "a": "基础图文生成完全免费，无需注册。高级模型使用Pollen积分制（$1≈1 Pollen），开发者通过社区贡献可获免费配额。"
+    },
+    {
+      "q": "Pollinations只能生成图片吗？",
+      "a": "不是。Pollinations是统一API平台，支持文本、图像、音频、视频四类生成，聚合了Flux、GPT-5、Claude、Gemini等主流模型。"
+    },
+    {
+      "q": "Pollinations生成的图片可以商用吗？",
+      "a": "Pollinations本身不限制输出用途，但各底层模型有各自的许可条款，商用前需确认具体模型的许可证。"
+    }
+  ],
+  "seo_keywords": [
+    "pollinations",
+    "pollinations ai怎么用",
+    "pollinations免费吗",
+    "pollinations vs midjourney",
+    "pollinations图片生成教程",
+    "pollinations中文版"
+  ],
+  "content": "## Pollinations 是什么？\n\n开源AI聚合平台，通过统一API提供文本、图像、音频、视频生成服务，无需注册即可免费使用基础功能。\n\nPollinations是一个开源AI聚合平台（非单一图像生成工具），通过统一API提供文本、图像、音频、视频生成，无需注册即可免费使用，采用Pollen积分制支持高级模型。\n\n## 核心功能\n\n- 统一API聚合（文本、图像、音频、视频多模态）\n- OpenAI兼容端点，零认证即可调用\n- Pollen积分系统与社区贡献奖励\n- 开源全栈，支持自托管\n- 500+社区项目生态\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 免费层：无需注册，基础图文生成无限制。付费采用 Pollen 积分制（$1≈1 Pollen），1 Pollen≈333张Turbo图片/200张Kontext图片/100,000+条文本响应。开发者按活跃度获得免费 Pollen 配额（Seed/Flower/Nectar三级）。无传统月费订阅制。 |\n| 支持平台 | Web/API/CLI |\n| 评分 | ⭐ 3.9 |\n| 开发商 | Pollinations (Berlin-based open-source community) |\n\n## 价格与平台\n\n- **价格**：免费层：无需注册，基础图文生成无限制。付费采用 Pollen 积分制（$1≈1 Pollen），1 Pollen≈333张Turbo图片/200张Kontext图片/100,000+条文本响应。开发者按活跃度获得免费 Pollen 配额（Seed/Flower/Nectar三级）。无传统月费订阅制。\n- **平台**：Web/API/CLI\n- **官网**：https://pollinations.ai\n\n## 优缺点分析\n\n### 优点\n\n- 无需注册/API Key即可免费生成图片和文本\n- OpenAI兼容API，切换成本极低\n- 完全开源，可自托管，数据隐私有保障\n\n### 缺点\n\n- 不是传统“AI绘画工具”，而是开发者API平台，普通用户入口不直观\n- 无正式SLA或企业级支持\n- 高级模型需要Pollen积分，重度使用须付费\n\n## 常见问题（FAQ）\n\n**Pollinations是免费的吗？**\n\n基础图文生成完全免费，无需注册。高级模型使用Pollen积分制（$1≈1 Pollen），开发者通过社区贡献可获免费配额。\n\n**Pollinations只能生成图片吗？**\n\n不是。Pollinations是统一API平台，支持文本、图像、音频、视频四类生成，聚合了Flux、GPT-5、Claude、Gemini等主流模型。\n\n**Pollinations生成的图片可以商用吗？**\n\nPollinations本身不限制输出用途，但各底层模型有各自的许可条款，商用前需确认具体模型的许可证。\n\n\n## 最终结论\n\nPollinations 是AI开发领域的一款 AI 工具，其核心优势在于无需注册/API Key即可免费生成图片和文本。\n此外，OpenAI兼容API，切换成本极低。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-07-04",
+  "published_date": "2026-07-04",
+  "verified_url": "https://pollinations.ai",
+  "verified_publisher": "Pollinations (Berlin-based open-source community)",
+  "verified_what": "开源AI聚合平台，通过统一API提供文本、图像、音频、视频生成服务，无需注册即可免费使用基础功能。",
+  "verified_price": "免费层：无需注册，基础图文生成无限制。付费采用 Pollen 积分制（$1≈1 Pollen），1 Pollen≈333张Turbo图片/200张Kontext图片/100,000+条文本响应。开发者按活跃度获得免费 Pollen 配额（Seed/Flower/Nectar三级）。无传统月费订阅制。",
+  "verified_platform": "Web/API/CLI",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "统一API聚合（文本、图像、音频、视频多模态）",
+    "OpenAI兼容端点，零认证即可调用",
+    "Pollen积分系统与社区贡献奖励",
+    "开源全栈，支持自托管",
+    "500+社区项目生态"
+  ],
+  "verified_description": "Pollinations是一个开源AI聚合平台（非单一图像生成工具），通过统一API提供文本、图像、音频、视频生成，无需注册即可免费使用，采用Pollen积分制支持高级模型。",
+  "content_flags": "严重幻觉：原内容将其定位为AI绘画工具并描述'付费版$9.99/月起'，实为多模态API开发者平台且采用Pollen积分制（非月费订阅）。描述的功能、定价、定位均与实际不符。建议全文重写。",
+  "price_verified": true,
+  "verified_rating": "⭐ 3.9",
+  "rating_source": "ToolJunction editor (2026-07)",
+  "rating_verified": true,
+  "verified_pros": [
+    "无需注册/API Key即可免费生成图片和文本",
+    "OpenAI兼容API，切换成本极低",
+    "完全开源，可自托管，数据隐私有保障"
+  ],
+  "verified_cons": [
+    "不是传统“AI绘画工具”，而是开发者API平台，普通用户入口不直观",
+    "无正式SLA或企业级支持",
+    "高级模型需要Pollen积分，重度使用须付费"
+  ],
+  "verified_faq": [
+    {
+      "q": "Pollinations是免费的吗？",
+      "a": "基础图文生成完全免费，无需注册。高级模型使用Pollen积分制（$1≈1 Pollen），开发者通过社区贡献可获免费配额。"
+    },
+    {
+      "q": "Pollinations只能生成图片吗？",
+      "a": "不是。Pollinations是统一API平台，支持文本、图像、音频、视频四类生成，聚合了Flux、GPT-5、Claude、Gemini等主流模型。"
+    },
+    {
+      "q": "Pollinations生成的图片可以商用吗？",
+      "a": "Pollinations本身不限制输出用途，但各底层模型有各自的许可条款，商用前需确认具体模型的许可证。"
+    }
+  ],
+  "verified_tags": [
+    "AI开发平台",
+    "多模态API",
+    "开源",
+    "免费使用",
+    "图像生成",
+    "文本生成",
+    "音频生成"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://pollinations.ai",
+    "https://www.tooljunction.io/ai-tools/pollinations/",
+    "https://toolin.ai/tools/pollinations-ai"
+  ],
+  "verify_notes": "最大发现：原tools.json将其归类为AI绘画并描述为订阅制，实际为多模态API开发者平台+积分制。定位、定价、功能全部需要修正。唯一正确的是域名pollinations.ai。",
+  "content_verified": true
+}

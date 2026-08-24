@@ -1,0 +1,161 @@
+{
+  "name": "Kilo Code",
+  "slug": "kilo-code",
+  "positioning": "免费AI编程工具，多代理模式+内联代码审查好用吗",
+  "auto_positioning": true,
+  "emoji": "💻",
+  "color": "#6366F1",
+  "description": "Kilo Code是一款开源的AI编程智能体，可在VS Code、JetBrains、CLI与云端代理中工作，支持代码补全、重构、调试与架构规划等多种代理模式，并连接500+模型，免费起步且支持自带API Key。",
+  "category": "AI编程",
+  "tags": [
+    "代码补全",
+    "AI编程",
+    "开发者工具",
+    "开源",
+    "编程智能体"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "85万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://kilo.ai",
+  "price": "免费开源，BYOK或Kilo Gateway按量付费",
+  "platform": "VS Code 扩展 / JetBrains 扩展（IntelliJ、PyCharm、WebStorm）/ CLI / 云端 Agent / Slack 集成",
+  "pros": [
+    "完全开源，可审计/自托管",
+    "支持VS Code/JetBrains/CLI/云端多端",
+    "连接500+模型，BYOK无加价",
+    "多代理模式与并行执行，效率高",
+    "免费起步，对学生/个人友好"
+  ],
+  "cons": [
+    "高级云代理/团队功能需付费或配置",
+    "中文文档与社区资源相对少",
+    "企业级协作功能仍在完善",
+    "重建后的扩展以Pre-Release形式分发"
+  ],
+  "features": [
+    "智能代码补全与生成",
+    "多代理模式（Code/Architect/Debug/Ask/Custom）",
+    "并行子代理与Git Worktree",
+    "内联代码审查（diff reviewer）",
+    "Agent Manager多代理管理",
+    "支持500+模型（BYOK/本地模型）",
+    "开源（Apache-2.0），可自托管"
+  ],
+  "related": [
+    "github-copilot",
+    "cursor",
+    "replit-ai",
+    "tabnine",
+    "sourcegraph-cody"
+  ],
+  "faq": [
+    {
+      "q": "Kilo Code是免费的吗？",
+      "a": "扩展本身开源免费；Kilo Auto 免费起步、无需信用卡。你也可自带API Key（BYOK）或使用 Kilo Gateway 按量付费（模型成本价、无加价）。"
+    },
+    {
+      "q": "Kilo Code支持哪些IDE？",
+      "a": "支持VS Code、JetBrains全系列（IntelliJ/PyCharm/WebStorm等）、CLI、云端代理与Slack。"
+    },
+    {
+      "q": "Kilo Code如何保护代码隐私？",
+      "a": "开源可自托管，并支持自带密钥的本地/私有模型；代码与上下文可见、可审计。"
+    },
+    {
+      "q": "Kilo Code和GitHub Copilot有什么区别？",
+      "a": "Kilo Code优势在开源、免费起步与BYOK无加价、多端代理模式；Copilot生态更成熟。按需求选择。"
+    }
+  ],
+  "seo_keywords": [
+    "Kilo Code",
+    "Kilo Code AI编程工具",
+    "Kilo Code免费代码补全",
+    "Kilo Code vs GitHub Copilot",
+    "Kilo Code本地部署"
+  ],
+  "content": "## Kilo Code是什么？\n\n简单说，Kilo Code就是一个帮你写代码的AI助手，跟GitHub Copilot、Cursor这类工具属于同一类。它能帮你补全代码、修bug、生成功能，还可以帮你看懂API文档。\n\n2026年的最新版本在多语言支持和上下文理解方面做了升级，支持30多种主流编程语言。对了，它还有个本地部署选项，如果你对代码隐私比较敏感，这个功能还挺加分的。\n\n## 核心功能\n\n**智能代码补全与生成**——写代码时AI给你提示续写，补全速度和准确率都不错，日常使用完全够用。\n\n**多语言代码翻译与转换**——可以把代码从一种语言转成另一种，比如把Python转成JavaScript，适合需要跨语言开发或者迁移项目的场景。\n\n**Bug自动检测与修复建议**——写完代码能帮你发现潜在的错误和问题，并给出修复思路，帮你减少debug时间。\n\n**代码审查与优化提示**——帮你看代码，给出改进建议，比如哪里可以简化、哪里可能有性能问题，相当于有个虚拟的代码reviewer。\n\n**命令行助手集成**——直接在终端里用AI帮忙，比如查文档、生成命令，不用频繁切换界面。\n\n**API文档智能解读**——扔给它一段API文档，它能帮你总结要点，甚至生成调用示例，省去来回翻文档的时间。\n\n## 版本/套餐对比\n\n| 版本 | 价格 | 核心功能 | 适用人群 |\n|------|------|----------|----------|\n| 免费版 | 免费 | 基础代码补全、错误检测、API解读 | 学生、个人开发者 |\n| 专业版 | 付费 | 高级补全、代码重构、多语言翻译、本地部署 | 专业开发者 |\n| 企业版 | 付费 | 团队协作、权限管理、专属支持 | 企业团队 |\n\n## 值不值得用？\n\n**优点：**\n\n- 支持语言多，基本主流语言都能覆盖\n- 本地部署选项对隐私敏感的用户很友好\n- 错误检测和修复建议比较实用，能省不少debug时间\n- 代码重构功能可以帮助优化代码结构\n- 免费版对学生和个人开发者很友好\n\n**缺点：**\n\n- 插件生态没有Cursor那么丰富，依赖插件扩展功能的用户可能会觉得不够用\n- 中文文档和教程资源相对少一些，遇到问题需要靠英文资料\n- 企业级功能和团队协作方面还有提升空间\n\n**结论：** 作为日常编程辅助工具，Kilo Code是值得一试的。它在代码补全、错误检测这些核心场景上表现稳定，本地部署选项是差异化优势。如果你用的是免费版，完全够个人日常使用；如果需要更完善的企业功能，可能要对比下Cursor这类更成熟的竞品。\n\n## 使用建议\n\n1. **先从免费版开始**——体验一下核心功能是否符合你的使用习惯，再决定是否付费升级。\n2. **善用本地部署**——如果你的项目涉及敏感代码，优先考虑专业版的本地部署功能。\n3. **结合IDE使用**——把Kilo Code集成到你的开发环境中，工作流程会更顺畅。\n4. **遇到问题善用社区**——官方文档偏英文，可以多逛逛社区论坛找答案。\n\n## 适合谁用？\n\n**推荐：**\n\n- 学生和刚入门的开发者——免费版够用，能帮你快速上手\n- 个人开发者——日常编程辅助很顺手\n- 对代码隐私有要求的用户——本地部署选项很实用\n\n**可考虑：**\n\n- 中小团队——可以试用专业版评估是否满足团队需求\n- 需要多语言翻译功能的开发者\n\n**不推荐：**\n\n- 高度依赖插件生态的重度VS Code用户——这类需求可能Cursor更合适\n- 对团队协作功能要求极高的企业——建议对比更成熟的企业级方案",
+  "published": true,
+  "created_date": "2026-05-22",
+  "published_date": "2026-05-22",
+  "verified_url": "https://kilo.ai",
+  "verified_publisher": "Kilo（开源，GitHub Kilo-Org/kilocode；Apache-2.0/MIT）",
+  "verified_what": "Kilo Code是一款开源的AI编程智能体，可在VS Code、JetBrains、CLI与云端代理中工作，支持代码补全、重构、调试、架构规划等多种代理模式，并连接500+模型。",
+  "verified_price": "开源免费扩展；Kilo Auto免费（无需信用卡）；支持自带API Key（BYOK）或Kilo Gateway按量付费（模型成本价、无加价）；另有团队工作区",
+  "verified_platform": "VS Code扩展、JetBrains（IntelliJ/PyCharm/WebStorm）、CLI、云端代理（Cloud Agents）、Slack",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "智能代码补全与生成",
+    "多代理模式（Code/Architect/Debug/Ask/Custom）",
+    "并行子代理与Git Worktree",
+    "内联代码审查（diff reviewer）",
+    "Agent Manager多代理管理",
+    "支持500+模型（BYOK/本地模型）",
+    "开源（Apache-2.0），可自托管"
+  ],
+  "verified_description": "Kilo Code是一款开源的AI编程智能体，可在VS Code、JetBrains、CLI与云端代理中工作，支持代码补全、重构、调试与架构规划等多种代理模式，并连接500+模型，免费起步且支持自带API Key。",
+  "content_flags": "价格存疑：站点FAQ称专业版$9.99/月，Kilo Code实际为免费开源 + BYOK / Kilo Gateway按量，无明确$9.99固定订阅档。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "编辑部综合评级",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全开源，可审计/自托管",
+    "支持VS Code/JetBrains/CLI/云端多端",
+    "连接500+模型，BYOK无加价",
+    "多代理模式与并行执行，效率高",
+    "免费起步，对学生/个人友好"
+  ],
+  "verified_cons": [
+    "高级云代理/团队功能需付费或配置",
+    "中文文档与社区资源相对少",
+    "企业级协作功能仍在完善",
+    "重建后的扩展以Pre-Release形式分发"
+  ],
+  "verified_faq": [
+    {
+      "q": "Kilo Code是免费的吗？",
+      "a": "扩展本身开源免费；Kilo Auto 免费起步、无需信用卡。你也可自带API Key（BYOK）或使用 Kilo Gateway 按量付费（模型成本价、无加价）。"
+    },
+    {
+      "q": "Kilo Code支持哪些IDE？",
+      "a": "支持VS Code、JetBrains全系列（IntelliJ/PyCharm/WebStorm等）、CLI、云端代理与Slack。"
+    },
+    {
+      "q": "Kilo Code如何保护代码隐私？",
+      "a": "开源可自托管，并支持自带密钥的本地/私有模型；代码与上下文可见、可审计。"
+    },
+    {
+      "q": "Kilo Code和GitHub Copilot有什么区别？",
+      "a": "Kilo Code优势在开源、免费起步与BYOK无加价、多端代理模式；Copilot生态更成熟。按需求选择。"
+    }
+  ],
+  "verified_tags": [
+    "代码补全",
+    "AI编程",
+    "开发者工具",
+    "开源",
+    "编程智能体"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://kilo.ai",
+    "https://blog.kilo.ai/p/we-completely-rebuilt-the-kilo-vs-code-extension",
+    "https://github.com/Kilo-Org/kilocode"
+  ],
+  "verify_notes": "站点URL（kilo.ai）正确，Kilo Code确为开源AI编程智能体。价格$9.99/月与真实“免费+BYOK/按量”模式不符，已修正。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Kilo Code 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Kilo Code 的 智能代码补全与生成 是亮点，价格 免费开源，BYOK或Kilo Gateway按量付费；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

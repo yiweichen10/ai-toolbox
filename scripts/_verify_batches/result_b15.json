@@ -1,0 +1,78 @@
+{
+  "batch_id": "b15",
+  "category": "AI行业应用",
+  "tools": [
+    {
+      "slug": "eightfold",
+      "name": "Eightfold",
+      "url_current": "https://eightfold.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网确认其为 AI Native Talent Intelligence Platform（招聘/人才管理），与描述基本一致。但官网仅提供'Book a demo'企业定制入口，无任何公开定价；正文中的'企业版/专业版/入门版'三档分层定价表及'小型企业/试用'定位在官网查无依据，疑似编造。"
+    },
+    {
+      "slug": "hirevue-ai",
+      "name": "HireVue AI",
+      "url_current": "https://www.hirevue.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网确认其为 AI 视频面试/技能评估平台，核心定位一致。但正文称 AI 分析候选人'表情神态'（面部表情），而 HireVue 已于 2021 年停用面部情绪分析，该表述属过时/不实；另'2026年新增实时协作面试功能'在官网无对应说明，存疑。"
+    },
+    {
+      "slug": "blink-ai-cfo",
+      "name": "Blink AI CFO",
+      "url_current": "https://blinkaicfo.io",
+      "url_ok": false,
+      "url_correct": "https://www.blink.new/agents",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content", "platform"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "blinkaicfo.io 无法打开（fetch failed），非真实站点。真实产品为 YC 系 Blink.new 推出的 AI CFO 智能体'Gerald'，运行于 Slack/Telegram/Discord，并非 Web 仪表盘/移动端 App（平台写错）。站内所写'专业版$99/月''现金流预测准确率95%''对接SAP/Oracle/用友ERP'均无依据：真实智能体套餐约 $22–45/月起，对接的是 Stripe、QuickBooks、Alpaca、Brex、Notion 等，非 SAP/Oracle/用友。功能与定价均为编造。"
+    },
+    {
+      "slug": "cartai",
+      "name": "CartAI",
+      "url_current": "https://cartai.dev",
+      "url_ok": false,
+      "url_correct": "https://www.cartai.ai/",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "cartai.dev 返回无关占位页'InstaClone — Share your moments'，非真实站点（URL 错误）。真实官网为 cartai.ai。正文描述的'面向 Agent 商务的结账 API'及 Catalog/Checkouts/Payments/Monetization 四能力与 Product Hunt #2（2026-07-21，414 票）完全一致，内容准确；'待确认'定价亦属稳妥表述。问题仅在于 URL 错误。"
+    },
+    {
+      "slug": "lakera-guard",
+      "name": "Lakera Guard",
+      "url_current": "https://www.lakera.ai/guard",
+      "url_ok": false,
+      "url_correct": "https://www.lakera.ai/",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "lakera.ai/guard 返回 404（路径错误）。Lakera Guard 为真实产品，官网主站 lakera.ai，提供提示注入/越狱检测、LLM 防火墙、REST API/Python SDK，与正文内容一致；'价格暂未公开'亦合理（曾处 private beta）。问题仅在于 URL 路径错误。"
+    },
+    {
+      "slug": "hiddenlayer",
+      "name": "HiddenLayer",
+      "url_current": "https://hiddenlayer.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网确认其为 Total AI Security 平台，覆盖 AI Discovery / Supply Chain Security / Attack Simulation / Runtime Security。正文所述对抗性攻击检测、模型窃取防护、训练数据投毒检测、模型运行时实时监控等内容均与官网一致，定价'暂未公开'合理，无幻觉。"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+import json
+
+patches = [
+    {
+        "slug": "claude-fable-5",
+        "description": "Claude Fable 5 是 Anthropic 推出的旗舰大语言模型（Frontier Model），擅长软件工程、知识工作、科研与长上下文推理，并非专门的写作/故事创作工具。",
+        "content": "Claude Fable 5 是 Anthropic 的旗舰级大语言模型，定位于复杂推理、长时智能体（agentic work）与大规模项目任务。它在软件工程、知识工作、视觉理解与科研等基准上表现突出，可经 Claude.ai、Claude Code、Anthropic API、Amazon Bedrock、Google Vertex AI 等渠道使用，知识截止日期为 2026 年 1 月。需要注意：它并非文生故事类写作工具，也不存在名为 fable.anthropic.com 的官方站点，Anthropic 官方站点为 anthropic.com 与 claude.ai。"
+    },
+    {
+        "slug": "githits",
+        "description": "GitHits 是面向 AI 编程代理的开源代码索引与检索服务（MCP），为开发者代理提供基于真实开源实现的高质量上下文。",
+        "content": "GitHits 是一个为 AI 编程代理（如 Claude Code、Cursor、Copilot）提供开源代码上下文的服务。它通过版本感知（version-aware）的索引，将公开仓库、文档与包数据解析为可检索的符号、调用关系与示例，让代理基于真实实现而非凭空猜测生成代码，从而减少幻觉与重试循环。GitHits 以 MCP 服务器形式接入现有工作流，官方站点为 githits.com（原记录的 githits.ai 非官方域名）。"
+    },
+    {
+        "slug": "tempus-ai",
+        "description": "Tempus AI（Tempus AI Daily Planner）是一款 AI 驱动的日程规划与专注类 App，可通过语音或文字快速生成个性化每日计划。",
+        "content": "Tempus AI 是一款面向 iOS/macOS 的 AI 日程规划与专注应用（Tempus AI Daily Planner）。用户可用语音或文字描述任务，由 AI 在数秒内生成兼顾优先级、截止日期与习惯的每日时间线，并内置强提醒、习惯追踪与番茄钟。它支持 iPhone、iPad、Mac 多设备通过 iCloud 同步。官方站点为 gettempus.app（原记录的 tempus-ai.com 非官方域名），采用免费+内购模式。"
+    },
+    {
+        "slug": "augie-ai",
+        "description": "Augie AI（Augie by Storyblocks）是 Storyblocks 推出的 AI 视频生成与剪辑工具，可将脚本或素材快速转为带字幕与配乐的社媒短视频。",
+        "content": "Augie AI 是 Storyblocks 旗下的 AI 视频创作工具（站点 augie.ai），面向非专业用户，可将文字脚本、现有素材或音频自动生成带字幕、配乐与品牌元素的短视频，并提供 Magic Search、AI 配音/声音克隆、媒体库等功能，常用于播客切片、营销与社媒内容再创作。它并非通用型“创意助手”写作工具，而是专注于视频生成与剪辑（注意：市场上另有同名销售助手 AugieAI，请勿混淆）。"
+    },
+    {
+        "slug": "alexa-plus",
+        "description": "Alexa Plus（Alexa+）是亚马逊推出的生成式 AI 语音助手，支持深度对话、跨服务任务执行与多设备协同。",
+        "content": "Alexa Plus（Alexa+）是亚马逊基于生成式 AI 打造的新一代语音助手，具备自然多轮对话、上下文记忆与跨服务执行能力，可完成提醒、购物、订票、智能家居控制等任务，并在 Echo、Fire TV、手机 App 与浏览器间保持对话连续。订阅方面，Alexa+ 对非 Prime 用户的标准版定价为 19.99 美元/月，Prime 会员可免费使用（目录原记录的“5.99 美元/月起”有误）。官方信息见 amazon.com 的 Alexa+ 页面。"
+    }
+]
+
+with open(r"C:\Users\27040\WorkBuddy\20260321092139\seo-site\scripts\verify_batches\patch_09.json", "w", encoding="utf-8") as f:
+    json.dump(patches, f, ensure_ascii=False, indent=2)
+
+# 长度校验
+for p in patches:
+    print(p["slug"], "desc_len=", len(p["description"]), "content_len=", len(p["content"]))
+print("Total patches:", len(patches))

@@ -1,0 +1,87 @@
+{
+  "name": "ZCode",
+  "slug": "zcode",
+  "published": true,
+  "positioning": "免费 AI 编程工具，长任务开发环境",
+  "emoji": "⌨️",
+  "color": "#4F46E5",
+  "description": "智谱（Z.ai）推出的 AI 编程工具（Agentic 开发环境），工具本身免费、自备 API Key 即可用。深度适配 GLM-5.2，支持多 Agent 并发、长任务自主执行与远程监控。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "AI编程"
+    },
+    {
+      "text": "有免费版",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.3",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://zcode.z.ai",
+  "price": "工具免费（自备 API Key）",
+  "platform": "Windows / macOS / Linux",
+  "pros": [
+    "工具本身完全免费",
+    "深度适配 GLM-5.2 长程推理",
+    "多 Agent 并发任务管理",
+    "支持 Claude Code/Codex/Gemini 接入",
+    "微信/飞书/Telegram 远程监控"
+  ],
+  "cons": [
+    "模型 Key 需自备",
+    "长任务依赖底层模型质量",
+    "Linux 版仍为 Beta",
+    "插件生态尚在积累"
+  ],
+  "features": [
+    "自研 ZCode Agent 内核",
+    "分组式任务工作区",
+    "多 Agent 并发",
+    "GLM-5.2 深度适配",
+    "Claude Code/Codex/Gemini 接入",
+    "远程监控（微信/飞书/Telegram）",
+    "高权限操作确认"
+  ],
+  "related": [
+    "glm-5-2",
+    "claude-code",
+    "codex-cli",
+    "trae"
+  ],
+  "content": "## ZCode 是什么？\n\nZCode 是智谱（Z.ai）推出的 AI 编程工具（Agentic Development Environment，ADE），定位是面向长任务的智能体开发环境：选一个项目目录作为工作区，让 AI Agent 进入目录持续执行任务，而不是一问一答地聊天。2026 年 6 月发布的 3.0 版本全面切换自研 ZCode Agent 内核，深度适配 GLM-5.2 长程推理。\n\nZCode 工具本身完全免费，不托管任何模型或 API Key，用户自行接入智谱 Z.AI、Claude Code、Codex、Gemini 或任意兼容 OpenAI/Anthropic 协议的服务（含本地部署）。\n\n## 核心功能\n\n- **自研 ZCode Agent 内核**：针对 GLM 深度优化长程推理，让 Agent 端到端稳定完成跨度长、步骤多的开发任务\n- **分组式任务工作区**：支持拖拽折叠、跨区迁移、批量管理，可管控多个 Agent 并发任务\n- **多框架兼容**：接入 Claude Code、Codex、Gemini 等主流 Agent 工具\n- **多类型附件**：支持图片、文件路径、白板截图上传，辅助代码批注与任务描述\n- **远程监控**：通过 Telegram、微信、飞书等工具远程查看 Agent 执行状况\n- **安全确认**：涉及高权限操作或文件修改时需用户确认，降低 Agent 自主执行风险\n\n## 价格\n\nZCode 工具本身完全免费，个人开发者与企业团队均可使用。使用时不托管模型或 Key，需自行提供并管理 API Key：\n\n- 智谱 Z.AI 官方服务\n- Claude Code / Codex / Gemini 原生订阅\n- 任意兼容 Anthropic / OpenAI 协议的 AI 服务\n- 本地托管部署的 AI 服务\n\n## 优缺点分析\n\n### 👍 优点\n- 工具免费，接入灵活（自带 Key 即可用）\n- 深度适配 GLM-5.2，长任务执行稳定\n- 可视化桌面管理多 Agent 并发，比纯命令行门槛低\n- 支持微信/飞书远程监控，长任务不必守在电脑前\n\n### 👎 缺点\n- 需要自备模型 API Key，成本由模型服务决定\n- 长任务效果依赖底层模型质量\n- 相对 Cursor 等成熟 IDE，插件生态仍在积累\n\n## 适合人群\n\nZCode 适合需要 AI Agent 长时间自主完成开发任务的开发者与团队，尤其是深度使用 GLM 系列模型的用户，以及希望把 Claude Code、Codex、Gemini 等 Agent 统一到一个可视化工作区的人群。\n\n## 关键信息\n\n| 项目 | 内容 |\n|------|------|\n| 官网 | zcode.z.ai |\n| 开发商 | 智谱（Z.ai） |\n| 首次发布 | 2025年12月（Z Code） |\n| 3.0 发布 | 2026年6月13日 |\n| 适配模型 | GLM-5.2（可接入其他） |\n| 价格 | 工具免费，自备 API Key |\n| 平台 | Windows / macOS / Linux |\n\n> 以上信息来自智谱官方文档、官网及公开报道（2026-06/07）。",
+  "created_date": "2026-08-06",
+  "verified_url": "https://zcode.z.ai",
+  "last_verified": "2026-08-06",
+  "confidence": "high",
+  "verify_notes": "首轮核实(2026-08-06)：官网 zcode.z.ai + 智谱官方文档 docs.bigmodel.cn/cn/coding-plan/tool/zcode + IT之家/百度百科确认 3.0 版本与 GLM-5.2 适配；工具免费、自备 API Key。",
+  "seo_keywords": [
+    "ZCode",
+    "ZCode 3.0",
+    "智谱AI编程",
+    "GLM-5.2编程",
+    "AI IDE",
+    "Agentic开发环境"
+  ],
+  "faq": [
+    {
+      "question": "ZCode 是什么？",
+      "answer": "智谱（Z.ai）推出的 AI 编程工具（Agentic 开发环境），工具本身免费、自备 API Key 即可用；3.0 版本全面切换自研 ZCode Agent 内核，深度适配 GLM-5.2。"
+    },
+    {
+      "question": "ZCode 怎么收费？",
+      "answer": "工具完全免费，不托管模型或 Key；用户自行接入智谱 Z.AI、Claude Code、Codex、Gemini 或任意兼容 OpenAI/Anthropic 协议的服务（含本地部署）。"
+    },
+    {
+      "question": "ZCode 支持哪些功能？",
+      "answer": "多 Agent 并发分组工作区、多框架兼容、图片和文件附件、Telegram/微信/飞书远程监控、高权限操作需用户确认。"
+    },
+    {
+      "question": "ZCode 适合谁？",
+      "answer": "需要 AI Agent 长时间自主完成开发任务的开发者与团队，尤其深度使用 GLM 系列、想把 Claude Code 和 Codex 统一到一个可视化工作区的人。"
+    }
+  ]
+}

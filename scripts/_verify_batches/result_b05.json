@@ -1,0 +1,102 @@
+{
+  "batch_id": "b05",
+  "category": "AI编程",
+  "tools": [
+    {
+      "slug": "qoder",
+      "name": "Qoder",
+      "url_current": "https://www.qoder.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网(www.qoder.com)及阿里云文档确认 Qoder 为阿里云产品，2026-05-20 由通义灵码(Lingma)更名而来（来源：help.aliyun.com/zh/lingma/qoder-cn）。但 content 称『Qoder是Sana Labs推出的一款AI编程助手』，公司归属张冠李戴。URL正确。定价『专业版$19/月』存疑——官网采用积分/订阅席位制（个人基础版免费、个人专业版、企业标准版/专属版），未见$19明确档位。"
+    },
+    {
+      "slug": "cline",
+      "name": "Cline",
+      "url_current": "https://cline.dev",
+      "url_ok": false,
+      "url_correct": "https://cline.bot",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "cline.dev 域名在售（GoDaddy 标价 $59,999），并非官方站点，真实官网为 cline.bot（来源：cline.bot）。Cline 确为开源免费 AI 编码代理、含 Pro 版，产品定位/功能/定价描述基本准确。content 提及前身『Cline Dev/Codia』略有出入（真实曾用名为 Claude Dev，GitHub: saoudrizwan.claude-dev），属轻微史实误差，非功能张冠李戴，故未计为幻觉。"
+    },
+    {
+      "slug": "qwen3-coder-next",
+      "name": "Qwen3-Coder-Next",
+      "url_current": "https://tongyi.aliyun.com/qianwen",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "tongyi.aliyun.com/qianwen 为真实阿里通义千问站点，但页面展示的是通用千问助手（截屏问答、语音输入法等），未能核实『Qwen3-Coder-Next』这一具体型号/产品。阿里确有 Qwen3-Coder 代码模型，但『-Next』命名未在官网确认，产品名存疑，建议进一步核实。按不确定原则未判为幻觉。"
+    },
+    {
+      "slug": "opencode",
+      "name": "OpenCode",
+      "url_current": "https://opencode.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网(opencode.ai)确认 OpenCode 为开源免费 AI 编码代理（『Free models included or connect any model from any provider』，160K GitHub Stars），无付费专业版。存储定价『专业版$19/月』为编造档位，故判定价格幻觉。URL正确。"
+    },
+    {
+      "slug": "swytchcode",
+      "name": "Swytchcode",
+      "url_current": "https://swytchcode.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网(swytchcode.com)确认 Swytchcode 是面向 AI Agent 的生产级 API 执行/工具调用层（含鉴权、重试、Schema 校验，『Reliable tool execution』），并非 content 所述『代码语言互译工具，覆盖50+语言，把 Python 转 JavaScript』。功能张冠李戴。URL正确。定价『Pro $10/月』官网仅称『Free to start』，未明确核实。"
+    },
+    {
+      "slug": "qwenpaw",
+      "name": "QwenPaw",
+      "url_current": "https://qwenpaw.dev",
+      "url_ok": false,
+      "url_correct": "（qwenpaw.dev 域名待售，疑似虚构产品，未找到真实官网）",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "qwenpaw.dev 域名在售（GoDaddy 标价 $5,500），无真实官网，高度疑似虚构产品。content 描述的『基于通义千问的开发助手』及定价『Pro $9.9/月』均无任何官方来源，判定为编造。URL错误+产品虚构。"
+    },
+    {
+      "slug": "claude-code-routines",
+      "name": "Claude Code Routines",
+      "url_current": "https://claude.ai/routines",
+      "url_ok": false,
+      "url_correct": "（claude.ai/routines 返回404页面不存在；Claude Code 真实地址 https://claude.ai/code）",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "claude.ai/routines 访问返回『Page not found』，页面不存在，URL错误。未能核实 Anthropic 有『Claude Code Routines』这一产品或功能（来源：claude.ai 仅 404）。content 所述工作流引擎及『免费(Claude Pro可用)/Team·Enterprise 含高级 Routines』等定价描述疑似编造，但 An平台可能在其他入口提供类似能力，故置信度记为 medium。"
+    },
+    {
+      "slug": "codebuddy",
+      "name": "CodeBuddy",
+      "url_current": "https://www.codebuddy.cn/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网(www.codebuddy.cn)确认 CodeBuddy 为腾讯云代码助手，功能（IDE/插件/CLI 三端、Figma 设计稿转代码、CloudBase/Supabase 后端集成、组件库、多模型）与描述一致，定价『免费版可用，团队/企业版付费』合理。无幻觉。"
+    }
+  ]
+}

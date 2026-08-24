@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "galileo-ai",
+    "name": "Galileo AI",
+    "verdict": "REAL",
+    "official_url": "https://galileo.ai",
+    "vendor": "Galileo（已被 Cisco 收购）",
+    "desc_issue": "明显错误：描述称其为'专注工作学习效率的智能 AI 助手'，但真实的 galileo.ai 是面向 LLM 开发者的 AI 可观测与评测平台（AI observability & eval），用于监控/评估 AI 应用，并非通用对话助手。",
+    "evidence": "galileo.ai 官网明确为 AI 评测/可观测平台，创始人 Vikram Chatterji 等"
+  },
+  {
+    "slug": "nex-n2",
+    "name": "Nex-N2",
+    "verdict": "REAL",
+    "official_url": "https://nex-agi.cn",
+    "vendor": "Nex-AGI（上海，联合多家科研/创业团队）",
+    "desc_issue": "产品定位严重失实：真实 Nex-N2 是开源的“能动性大模型/AI智能体基础模型”（可部署的LLM），并非面向普通用户的“AI搜索与知识引擎”；记录域名 nex-n2.ai 未出现在任何官方来源（官方主页为 nex-agi.cn / nex.sii.edu.cn / HuggingFace / ModelScope）",
+    "evidence": "Web搜索确认 Nex-N2 为 Nex-AGI 开源智能体模型，官方域名为 nex-agi.cn，与搜索引擎描述不符"
+  },
+  {
+    "slug": "comet",
+    "name": "Comet",
+    "verdict": "REAL",
+    "official_url": "https://www.comet.com",
+    "vendor": "Comet (Comet ML)",
+    "desc_issue": "描述称其为“AI内容创作平台（博客/社媒/营销内容）”有误；comet.com 实际是 Comet ML，提供 ML 实验追踪与 LLM 可观测性平台 Opik，并非内容创作工具。",
+    "evidence": "comet.com 为真实官网，但业务定位与描述不符，属 ML 实验/可观测性平台。"
+  },
+  {
+    "slug": "openclaw",
+    "name": "OpenClaw",
+    "verdict": "REAL",
+    "official_url": "https://openclaw.ai",
+    "vendor": "Peter Steinberger (openclaw.ai)",
+    "desc_issue": "Misdescribed as a 'web scraping / data collection tool'. OpenClaw is actually a personal AI agent / assistant platform, not a web scraper.",
+    "evidence": "OpenClaw confirmed real; it is an AI agent platform, official site is openclaw.ai (github.com/openclaw is only the org page)."
+  },
+  {
+    "slug": "wonder-ai",
+    "name": "Wonder AI",
+    "verdict": "REAL",
+    "official_url": "https://wonderai.app",
+    "vendor": "Codeway",
+    "desc_issue": "Description mischaracterizes Wonder AI as a general creative-content tool (copywriting, image ideas, video scripts); it is actually an AI art/image generator (text-to-image) by Codeway. Recorded URL wonderai.com is not the confirmed official site (official is wonderai.app).",
+    "evidence": "Wonder AI by Codeway is an AI art generator; official site wonderai.app (per toolify/Codeway product page)."
+  },
+  {
+    "slug": "deepsec",
+    "name": "DeepSec",
+    "verdict": "UNCERTAIN",
+    "official_url": null,
+    "vendor": "Unknown / unverified",
+    "desc_issue": "No commercial 'DeepSec' AI security platform found at deepsec.io. Real 'DeepSec' references: the DeepSec security conference (deepsec.net), Trend Micro Deep Security, and an academic DEEPSEC adversarial-ML project. The described commercial AI pentest platform (with $49/mo pricing) is unverifiable.",
+    "evidence": "No verified product at deepsec.io; 'DeepSec' matches a conference / Trend Micro / academic project, not a commercial AI security platform."
+  },
+  {
+    "slug": "qingying-ai",
+    "name": "清影AI",
+    "verdict": "REAL",
+    "official_url": "https://chatglm.cn",
+    "vendor": "智谱AI（Zhipu AI）",
+    "desc_issue": "描述称『360公司推出』，错误；清影(Ying)实为智谱AI基于CogVideoX开发的AI视频生成工具",
+    "evidence": "经济日报/百度百科等确认清影由智谱AI发布，非360；chatglm.cn 为智谱域名"
+  },
+  {
+    "slug": "pixelle-video",
+    "name": "Pixelle-Video",
+    "verdict": "REAL",
+    "official_url": "https://github.com/AIDC-AI/Pixelle-Video",
+    "vendor": "AIDC-AI (阿里巴巴智能计算团队)",
+    "desc_issue": "记录 URL pixelle-video.ai 错误（真实为开源项目主页）；且描述称“高级功能付费订阅”不实——Pixelle-Video 是完全免费的开源项目(Apache-2.0)，无付费计划",
+    "evidence": "Pixelle-Video 是 AIDC-AI 开源的全自动短视频引擎，官网 aidc-ai.github.io/Pixelle-Video 及 GitHub AIDC-AI/Pixelle-Video；pixelle-video.ai 未作为官方站点出现"
+  },
+  {
+    "slug": "strands-agents",
+    "name": "Strands Agents",
+    "verdict": "REAL",
+    "official_url": "https://strandsagents.com",
+    "vendor": "Amazon Web Services（AWS）",
+    "desc_issue": "描述称“Anthropic推出的AI智能体开发框架”，实际由 AWS（亚马逊云科技）开源开发，Anthropic 仅为贡献者之一（提供 API 接入支持）",
+    "evidence": "AWS 官方开源博客确认 Strands Agents 为 AWS 开源 SDK，非 Anthropic 产品"
+  }
+]

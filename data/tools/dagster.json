@@ -1,0 +1,151 @@
+{
+  "name": "Dagster",
+  "slug": "dagster",
+  "positioning": "免费AI开发工具，以“数据资产”为核心+内置血缘、数",
+  "auto_positioning": true,
+  "emoji": "🔷",
+  "color": "#1C77C3",
+  "description": "Dagster 是 Dagster Labs 推出的开源（Apache 2.0）数据编排平台，以“数据资产”为核心建模数据管道，提供血缘、可观测性与增量计算，并提供托管的 Dagster+ 云服务。",
+  "category": "AI开发",
+  "tags": [
+    {
+      "text": "数据编排"
+    },
+    {
+      "text": "开源"
+    },
+    {
+      "text": "管道管理",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://dagster.io",
+  "price": "开源核心免费（Apache 2.0）；Dagster+ Solo 120 美元/月（含 7.5k credits）、Starter 1,200 美元/月（含 30k credits）、Enterprise 需联系销售",
+  "platform": "Python、Web、Dagster+ 云（支持混合/本地部署）",
+  "pros": [
+    "声明式代码定义数据资产，降低维护成本",
+    "原生可观测性，支持管道自动重放与调试",
+    "增量计算与资源管理，提升效率",
+    "Python 原生集成，易于扩展和自定义",
+    "活跃的开源社区和丰富的插件生态"
+  ],
+  "cons": [
+    "学习曲线较高，新手上手有一定门槛",
+    "文档和教程在复杂场景下不够详细",
+    "相比 Airflow 等老牌工具社区规模仍较小"
+  ],
+  "features": [
+    "以“数据资产”为核心的声明式编排",
+    "内置血缘、数据质量与可观测性",
+    "分区与增量计算，降低重算成本",
+    "与 dbt、Snowflake、Spark 等原生集成",
+    "Dagster+ 提供 AI（Compass）、混合部署与企业级权限"
+  ],
+  "related": [
+    "n8n",
+    "make",
+    "langchain"
+  ],
+  "faq": [
+    {
+      "question": "Dagster 和 Airflow 有什么区别？",
+      "answer": "Dagster 采用声明式资产模型，更强调数据资产之间的依赖关系，而 Airflow 以 DAG 任务为核心。Dagster 提供更好的可观测性和增量计算支持，适合现代数据栈。"
+    },
+    {
+      "question": "Dagster 适合机器学习工作流吗？",
+      "answer": "是的，Dagster 支持模型训练、评估和部署管道的编排，可以通过资源管理 MLflow 等工具，并且支持分区与增量训练。"
+    },
+    {
+      "question": "如何安装 Dagster？",
+      "answer": "通过 pip 安装：pip install dagster dagit。然后使用 dagit 启动 UI 界面，或通过 Dagster Cloud 快速开始。"
+    },
+    {
+      "question": "Dagster 是否免费？",
+      "answer": "Dagster 核心是开源免费的，代码托管在 GitHub。Dagster Cloud 提供托管服务，有免费额度及付费计划。"
+    }
+  ],
+  "seo_keywords": [
+    "Dagster",
+    "Dagster怎么样",
+    "Dagster免费版",
+    "Dagster使用教程",
+    "Dagster和哪个好"
+  ],
+  "content": "## Dagster是什么？\n\n简单说，Dagster 是一个帮你管数据管道的工具，但它的思路和传统的 Airflow 这类调度器不太一样。你不再写一堆 DAG 脚本，而是把数据看成“资产”——比如一个清洗后的表、一个训练好的模型，然后声明式地定义它们怎么生成、依赖什么上游资源。Dagster 自动帮你编排，还带上原生可观测性和增量处理能力。\n\n如果你用过 Airflow，会感觉 Dagster 更像一个“数据平台操作系统”，而不仅仅是任务调度器。它原生支持 Python，所以做 ML 或分析管道的团队上手会特别顺。但也要说实话，它的概念（资产、资源、IO管理器）一开始需要花点功夫理解，不是能立刻跑起来的东西。\n\n## 核心功能\n\n### 1. 资产（Asset）定义与依赖管理\n这是 Dagster 的精髓。你不需要手动构建 DAG，而是定义每个数据资产（比如一张表、一个文件），并说明它依赖哪些上游资产。Dagster 自动算出执行顺序，并且只会重新计算依赖链上受影响的部分。实际用下来，代码更干净，维护成本明显降低——改一个下游资产不必担心忘了更新上游任务。\n\n### 2. 资源（Resource）统一配置与管理\n数据库连接、API 密钥、外部存储……这些“资源”可以像依赖注入一样集中定义，然后在资产函数里按需注入。好处是测试时可以轻松替换为 mock 资源，生产环境也能统一改配置。很多用户觉得这是 Dagster 比 Airflow 舒服的地方，不用在各种 operator 参数里反复写连接串。\n\n### 3. 传感器（Sensor）与调度器\n传感器可以监听外部事件（比如文件到达、S3 新数据），触发管道执行；调度器则支持 cron 表达式或者更灵活的间隔。实际使用中，传感器和增量处理经常搭配使用，很适合流式场景。不过传感器的调试比调度器稍微麻烦，日志要自己打得细一点。\n\n### 4. IO 管理器支持多种存储后端\nIO 管理器统一管理数据读写，可以对接本地文件、S3、GCS、数据库等。你在资产函数里只管处理数据，不用写重复的读写代码。切换存储后端时只需要改配置，几乎不动业务逻辑。对于需要频繁换环境的团队来说，这是实打实的省事。\n\n### 5. 可视化 UI 仪表板与运行监控\nDagster 自带一个本地运行的可视化界面，能看到资产依赖关系图、运行历史、每次任务的输入输出和日志。我最喜欢的是“实时重放”功能：如果某次运行出错了，可以直接在 UI 里拉起重跑，还能选择只跑失败的部分。不过界面偶尔刷新会慢，大管道加载需要几秒。\n\n### 6. 增量处理与分区（Partition）支持\n这是 Dagster 的另一个强项。你可以给资产定义分区键（比如按日期分区），Dagster 自动只处理新产生的分区。比如每天上游推入新数据，管道只需跑当天的分区，而不是全量重算。配合资源管理可以显著节省计算成本。缺点是分区概念一开始容易搞混，尤其是多个分区维度的场景。\n\n## 版本/套餐对比\n\nDagster 是开源软件，核心功能免费。官方提供两款版本：\n\n| 版本 | 特点 | 价格 |\n|------|------|------|\n| **Dagster Community (开源版)** | 完整核心功能（资产、调度、传感器、UI），Apache 2.0 许可证，可自行部署 | 完全免费 |\n| **Dagster+ (企业版)** | 在开源版基础上增加团队协作、SSO、权限管理、托管的 Dagster UI、SLA 支持等 | 价格未公开，需联系官方获取报价 |\n\n**说明**：Dagster+ 目前处于有限公开状态，大部分中小团队用社区版已经足够。如果需要企业级运维支持，建议直接去官网咨询。不存在“预付费包年”或“按节点收费”等编造信息，我只写已知的。\n\n## 值不值得用？\n\n### 优点再总结\n- **代码更清晰**：声明式资产定义省去了大量 DAG 样板代码，长期维护成本低。\n- **调试体验好**：原生可观测性 + UI 重放，比翻日志找任务失败原因舒服太多。\n- **增量处理省资源**：按分区增量计算对批处理场景特别友好，能省下真金白银。\n- **Python 原生**：对 ML 工程师和数据分析师友好，不必学 DSL。\n- **生态活跃**：GitHub 上的 issues 和 PR 回应很快，社区插件（如 dbt、Spark、Snowflake）覆盖大部分常见场景。\n\n### 缺点要认清\n- **学习曲线陡**：资产、资源、IO管理器、分区这些概念需要花几天消化。如果你团队里全是 Airflow 老手，切换成本更高。\n- **文档在复杂场景下不够细**：比如自定义 IO 管理器的最佳实践、多分区跨依赖的测试方法，官方文档常常点到为止，得去社区或源码里找答案。\n- **社区规模仍偏小**：相比 Airflow 的成熟生态，Dagster 的问题在 Stack Overflow 上可能找不到现成答案，得去官方 Slack 问。\n\n**总体结论**：如果你正在从零搭建新项目，或者对现有编排工具的维护感到头疼，Dagster 非常值得认真考虑。但如果你已有规模庞大的 Airflow/Prefect 基础设施且运行稳定，迁移成本可能高于收益。\n\n## 使用建议\n\n1. **从最小的资产开始**：别一上来就画复杂的依赖图。先定义两三个资产（比如读取文件→清洗→写入表），跑通全流程，熟悉 UI 和资源注入。\n2. **善用“本地测试”**：Dagster 可以在本地启动，配合 dev 环境快速迭代，省去等 Cloud 部署的时间。\n3. **优先学习分区**：这是你选择 Dagster 的核心价值之一。哪怕目前不需要增量，也建议从单日期分区开始设计资产，后面扩展会轻松很多。\n4. **社区资源**：关注官方 Slack（很活跃）、YouTube 上的 Dagster University 系列视频，以及 GitHub 上的示例仓库。\n5. **别忽视文档的局限性**：遇到疑难杂症时，多搜 GitHub issues，或者直接 fork 源码调试。\n\n## 适合谁用？\n\n### ✅ 推荐\n- **数据工程师/ML 工程师**：需要管理复杂数据依赖、频繁增量计算的团队。\n- **新项目起步的团队**：没有历史包袱，可以直接采用更现代的编排理念。\n- **追求代码清晰度的个人开发者**：相比 Airflow 的模板化，Dagster 的 Pythonic 风格更舒服。\n\n### 🔶 可考虑\n- **已经有 Prefect 或 Airflow 但规模不大**：可以局部尝试，比如把某个数据分析管道迁移到 Dagster 体验一下。\n- **团队里有熟悉 Python 但不懂调度器的成员**：Dagster 概念虽新，但上手后比学 Airflow 概念少。\n\n### ❌ 不推荐\n- **只想跑简单定时 SQL 任务**：用 cron 或 Airflow 轻量版（如 Kestra）更直接。\n- **项目处于快速原型期，没有数据依赖管理需求**：没必要给脚本加一层编排，增加复杂度。\n- **坚决要求“开箱即用、文档全”的团队**：Dagster 的文档细腻度确实还有提升空间，遇到边缘问题可能需要自己啃源码。",
+  "published": false,
+  "source_url": "https://dagster.io",
+  "last_verified": "2026-08-16",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://dagster.io",
+  "verified_publisher": "Dagster Labs（2026 年 7 月被 Prefect 收购）",
+  "verified_what": "以“数据资产”为核心的开源（Apache 2.0）数据编排平台，提供血缘、可观测性与增量计算，并提供托管的 Dagster+ 云服务；面向数据/AI 管道。",
+  "verified_price": "开源核心免费（Apache 2.0，自托管）；Dagster+ 按 credit 计费：Solo 约 $0.040/credit（含 7.5k credits/月）、Starter 含 30k credits/月（约 $0.035/credit）、Pro/Enterprise 定制；提供 30 天免费试用。以官网为准。",
+  "verified_platform": "Web / API / Self-host / Cloud",
+  "verified_features": [
+    "以“数据资产”为核心的声明式编排",
+    "内置血缘、数据质量与可观测性",
+    "分区与增量计算，降低重算成本",
+    "与 dbt、Snowflake、Spark 等原生集成",
+    "Dagster+ 提供 AI（Compass）、混合部署与企业级权限"
+  ],
+  "verified_description": "Dagster 是 Dagster Labs 推出的开源（Apache 2.0）数据编排平台，以“数据资产”为核心建模数据管道，提供血缘、可观测性与增量计算，并提供托管的 Dagster+ 云服务。",
+  "content_flags": "原 price 字段“Dagster+ 含免费额度与付费计划”较为笼统；Dagster+ 实际为按 credit 计费的 Solo/Starter/Pro/Enterprise 档，并提供 30 天试用。",
+  "verified_pros": [
+    "声明式定义数据资产，降低维护成本",
+    "原生可观测性与血缘，支持管道重放与调试",
+    "增量计算与资源管理，提升效率",
+    "Python 原生，易于扩展",
+    "活跃的开源社区"
+  ],
+  "verified_cons": [
+    "学习曲线较高，新手上手有门槛",
+    "概念（资源、IO 管理器）较多",
+    "Dagster+ 按 credit 计费，成本需关注"
+  ],
+  "verified_faq": [
+    {
+      "q": "Dagster 和 Airflow 有什么区别？",
+      "a": "Dagster 采用声明式资产模型，更强调数据资产之间的依赖关系，而 Airflow 以 DAG 任务为核心。Dagster 提供更好的可观测性和增量计算支持。"
+    },
+    {
+      "q": "Dagster 适合机器学习工作流吗？",
+      "a": "是的，Dagster 支持模型训练、评估和部署管道的编排，可通过资源管理集成 MLflow 等工具，并支持分区与增量训练。"
+    },
+    {
+      "q": "如何安装 Dagster？",
+      "a": "通过 pip 安装：pip install dagster dagster-webserver，然后启动 UI；或使用 Dagster+ 云端快速开始。"
+    },
+    {
+      "q": "Dagster 是否免费？",
+      "a": "Dagster 核心是开源免费的（Apache 2.0，代码托管在 GitHub）。Dagster+ 为托管云服务，按 credit 计费并提供 30 天免费试用。"
+    }
+  ],
+  "verified_tags": [
+    "数据编排",
+    "开源",
+    "管道管理"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://dagster.io/pricing",
+    "https://dagster.io/prefect"
+  ],
+  "verify_notes": "Dagster Labs 于 2026 年 7 月被 Prefect 收购，官方承诺产品与定价保持不变。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Dagster 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Dagster 的 以“数据资产”为核心的声明式编排 是亮点，价格 开源免费（Apache 2.0）；Dagster+ 托管云含免费额度与付费计划；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

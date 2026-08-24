@@ -1,0 +1,96 @@
+{
+  "name": "Atlaso",
+  "slug": "atlaso",
+  "positioning": "Atlaso 是面向 AI 工具的共享记忆层，通过一次 MCP 接入，让 Claude Code、Cursor、Codex、Claude Desktop 等工具共享同一份上下文（项目、决策、工作习惯），自动捕获决策/风险点/未完成问题并在下次对话前回忆，个人与项目记忆分离。",
+  "auto_positioning": false,
+  "emoji": "🧠",
+  "color": "#00B8D9",
+  "description": "Atlaso 是一款面向 AI 工具的共享记忆层。很多开发者同时开着 Claude Code、Cursor、Codex 好几个编程助手，但每换一个入口就要把项目背景、技术决策、命名习惯重新讲一遍。Atlaso 通过一次 MCP 接入，让这些工具共享同一份上下文：自动捕获决策、风险点、未完成问题，并在下次对话前召回相关记忆，个人记忆与项目记忆分离，避免串项目。2026 年 8 月 4 日 Product Hunt 当日 #3。",
+  "category": "AI效率",
+  "tags": [
+    "记忆层",
+    "MCP",
+    "跨工具",
+    "上下文",
+    "效率"
+  ],
+  "rating": "⭐ 4.1",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "Product Hunt 入围"
+  },
+  "url": "https://atlaso.ai",
+  "price": "Free 免费（1 设备 1 工具）；Pro $10/月；Build $25/月",
+  "platform": [
+    "MCP 接入",
+    "Claude Code",
+    "Cursor",
+    "Codex",
+    "Claude Desktop",
+    "Web"
+  ],
+  "pros": [
+    "跨工具共享记忆，告别反复介绍项目背景",
+    "一次 MCP 接入，几乎零配置（约 1 分钟，无需 API key）",
+    "记忆可查看、搜索、删除，非黑箱",
+    "个人记忆与项目记忆分离，防串项目",
+    "官方称保存前清理密钥、传输与存储加密"
+  ],
+  "cons": [
+    "新兴产品，无长期安全审计背书",
+    "免费版仅 1 设备 1 工具，跨工具价值需付费",
+    "工作上下文存放在第三方云端，敏感项目需谨慎"
+  ],
+  "features": [
+    "跨 AI 工具的统一记忆层（MCP）",
+    "自动捕获决策、风险点、未完成问题",
+    "会话前选择性召回相关记忆",
+    "个人记忆 / 项目记忆分离",
+    "仪表盘搜索与删除记忆",
+    "付费版含 Ambient Memory、背景增强、API"
+  ],
+  "related": [
+    "chatgpt",
+    "stepfun",
+    "hermes-agent"
+  ],
+  "content": "## Atlaso 是什么？\nAtlaso 是一款面向 AI 工具的共享记忆层。很多开发者同时开着 Claude Code、Cursor、Codex 好几个编程助手，但每换一个入口，就要把项目背景、技术决策、命名习惯重新讲一遍——因为记忆被锁死在单个工具里。Atlaso 的解法是：通过一次 MCP 接入，让这些工具共享同一份上下文。它会在你工作的过程中自动捕获决策、风险点、未完成问题，并在下次对话前召回相关记忆，个人记忆与项目记忆分离，避免串项目。\n\n## 核心功能\n1. 跨工具统一记忆：Claude Code、Cursor、Codex、Claude Desktop、OpenCode 等接一次 MCP 即可共享记忆。\n2. 自动捕获与召回：每轮结束后沉淀决策/警告/待办，下轮对话前选择性召回相关内容。\n3. 个人 / 项目记忆分离：个人习惯跨工具跟随，项目上下文隔离到仓库，防泄漏。\n4. 可查看可管理：仪表盘能搜索、删除记忆，不是黑箱。\n5. 选择性混合检索：召回的是少量相关片段，而非整库注入。\n6. 付费版增强：Ambient Memory 开场简报、背景结构化、记忆 Q&A、JSON 导出与 API。\n\n## 版本/套餐对比\nFree 免费（限 1 设备 1 工具）；Pro $10/月，解锁无限工具设备、Ambient Memory、背景增强、记忆 Q&A、JSON 导出；Build $25/月，额外提供面向终端用户的开发者记忆 API。\n\n## 值不值得用？\n如果你同时用多个 AI 编程助手，Atlaso 值得一试，因为它真正切中重复解释背景的痛点，而且借 MCP 而非私有 SDK，接入摩擦极低。但要清醒：它是新晋产品，没有独立安全审计；工作上下文存在第三方云端，敏感项目先在非敏感仓库试。\n\n## 使用建议\n1. 先连一个工具、一个项目，验证它能记住一条明确技术决策，再手动删除看是否符合预期。\n2. 免费版只能验证单工具，跨工具价值要上 Pro。\n3. 改了某个决策后，检查召回结果是否同步更新，别盲目信任。\n\n## 适合谁用？（三档）\n- 重度用户：同时跑多个编程 Agent 的开发者，Pro 能明显省去重复说明。\n- 中度用户：用一两个 AI 工具、想攒长期上下文的个人。\n- 轻度用户：只想体验 AI 记得我的新手，免费版够用。",
+  "published": false,
+  "faq": [
+    {
+      "q": "Atlaso 是怎么接入的？",
+      "a": "通过一次 MCP 接入，官方称约 1 分钟、无需 API key；支持 Claude Code、Cursor、Codex、Claude Desktop、OpenCode 等，ChatGPT 标注为即将支持。"
+    },
+    {
+      "q": "免费版能用什么？",
+      "a": "Free 版限 1 设备 1 工具，能验证捕获与召回，但体现不出跨工具共享的核心价值；跨工具需升级 Pro（$10/月）。"
+    },
+    {
+      "q": "记忆安全吗？",
+      "a": "官方称保存前清理密钥、传输与存储加密、不会用记忆训练模型；但这些是厂商声明，非独立审计，敏感或受监管工作仍需自行评估。"
+    },
+    {
+      "q": "价格和套餐怎么分？",
+      "a": "Free 免费（1 设备 1 工具）；Pro $10/月，加无限工具设备与增强功能；Build $25/月，加开发者记忆 API。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Atlaso",
+    "AI 记忆层",
+    "MCP 记忆",
+    "跨工具上下文",
+    "AI 效率"
+  ],
+  "source_urls": [
+    "https://dreaming.press/posts/tool-highlight-atlaso-one-mcp-memory-across-coding-agents.html",
+    "https://chatgate.ai/post/atlaso",
+    "https://neodrop.ai/zh-cn/post/01cS6UrTar-"
+  ],
+  "confidence": "medium",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

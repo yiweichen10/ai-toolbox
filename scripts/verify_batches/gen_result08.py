@@ -1,0 +1,376 @@
+# -*- coding: utf-8 -*-
+import json
+
+results = [
+    {
+        "slug": "coderabbit",
+        "name": "CodeRabbit",
+        "verdict": "REAL",
+        "official_url": "https://www.coderabbit.ai",
+        "url_correct": True,
+        "vendor": "CodeRabbit",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official site coderabbit.ai; AI code-review bot for GitHub/GitLab PRs, widely referenced."
+    },
+    {
+        "slug": "kling-ai",
+        "name": "可灵AI",
+        "verdict": "REAL",
+        "official_url": "https://klingai.kuaishou.com",
+        "url_correct": True,
+        "vendor": "快手 (Kuaishou)",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Kuaishou official Kling AI site; AI video/image-to-video generation, domestic benchmark."
+    },
+    {
+        "slug": "tome",
+        "name": "Tome",
+        "verdict": "REAL",
+        "official_url": "https://tomeapp.ai/",
+        "url_correct": True,
+        "vendor": "Tome",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official tomeapp.ai; AI presentation & narrative storytelling tool."
+    },
+    {
+        "slug": "speechify",
+        "name": "Speechify",
+        "verdict": "REAL",
+        "official_url": "https://speechify.com",
+        "url_correct": True,
+        "vendor": "Speechify Inc.",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official speechify.com; TTS with 100+ languages and celebrity voices."
+    },
+    {
+        "slug": "jasper",
+        "name": "Jasper",
+        "verdict": "REAL",
+        "official_url": "https://www.jasper.ai",
+        "url_correct": True,
+        "vendor": "Jasper AI",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official jasper.ai; enterprise marketing copy generator with 50+ templates."
+    },
+    {
+        "slug": "recraft",
+        "name": "Recraft",
+        "verdict": "REAL",
+        "official_url": "https://www.recraft.ai",
+        "url_correct": True,
+        "vendor": "Recraft",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official recraft.ai; AI vector/illustration/SVG generator for designers."
+    },
+    {
+        "slug": "suno",
+        "name": "Suno",
+        "verdict": "REAL",
+        "official_url": "https://suno.com",
+        "url_correct": True,
+        "vendor": "Suno",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official suno.com; AI music/song generation from text prompts."
+    },
+    {
+        "slug": "brave-search-ai",
+        "name": "Brave Search AI",
+        "verdict": "REAL",
+        "official_url": "https://search.brave.com",
+        "url_correct": True,
+        "vendor": "Brave Software",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official Brave Search with AI answer summaries; privacy-first, ad-free."
+    },
+    {
+        "slug": "opencode",
+        "name": "OpenCode",
+        "verdict": "REAL",
+        "official_url": "https://opencode.ai",
+        "url_correct": True,
+        "vendor": "SST / Anomaly (OpenCode)",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official opencode.ai; open-source terminal-based AI coding agent."
+    },
+    {
+        "slug": "zapier-ai",
+        "name": "Zapier AI",
+        "verdict": "REAL",
+        "official_url": "https://zapier.com",
+        "url_correct": True,
+        "vendor": "Zapier",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official zapier.com; automation platform with 6000+ app integrations and AI features."
+    },
+    {
+        "slug": "ideogram",
+        "name": "Ideogram",
+        "verdict": "REAL",
+        "official_url": "https://ideogram.ai",
+        "url_correct": True,
+        "vendor": "Ideogram",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official ideogram.ai; AI image generator known for in-image text rendering."
+    },
+    {
+        "slug": "coze",
+        "name": "Coze",
+        "verdict": "REAL",
+        "official_url": "https://www.coze.com",
+        "url_correct": True,
+        "vendor": "字节跳动 (ByteDance)",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official coze.com; ByteDance no-code AI bot/agent builder."
+    },
+    {
+        "slug": "octarine",
+        "name": "Octarine",
+        "verdict": "REAL",
+        "official_url": "https://octarine.ai",
+        "url_correct": True,
+        "vendor": "Octarine (open-source, local-first notes)",
+        "desc_issue": "Description wrong: real Octarine is a local-first Markdown/PKM note-taking app, NOT a marketing/social-media content generation platform.",
+        "confidence": "medium",
+        "evidence": "octarine.ai is a local-first Markdown notes/PKM app; does not match the marketing-content description."
+    },
+    {
+        "slug": "langflow",
+        "name": "Langflow",
+        "verdict": "REAL",
+        "official_url": "https://langflow.org",
+        "url_correct": True,
+        "vendor": "Langflow",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official langflow.org; open-source visual LangChain workflow builder."
+    },
+    {
+        "slug": "jamie-ai",
+        "name": "Jamie AI",
+        "verdict": "REAL",
+        "official_url": "https://meetjamie.ai",
+        "url_correct": False,
+        "vendor": "Jamie (German company)",
+        "desc_issue": "Batch URL jamieai.com is wrong (real site meetjamie.ai). Description also overstates it as a general AI assistant; actual product is a privacy-first AI meeting note taker (German, GDPR-compliant, 100+ languages).",
+        "confidence": "high",
+        "evidence": "Official meetjamie.ai confirmed; privacy-first AI meeting notes, audio deleted after transcription."
+    },
+    {
+        "slug": "glass-health",
+        "name": "Glass Health",
+        "verdict": "REAL",
+        "official_url": "https://glass.health",
+        "url_correct": False,
+        "vendor": "Glass Health Inc (San Francisco)",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official glass.health confirmed; clinical AI (differential diagnosis, scribing) by Dereck Paul, 120k+ clinicians."
+    },
+    {
+        "slug": "video-os",
+        "name": "VideoOS",
+        "verdict": "REAL",
+        "official_url": "https://jupitrr.com",
+        "url_correct": False,
+        "vendor": "Jupitrr AI",
+        "desc_issue": "URL videoos.net does not belong to the product; real 'VideoOS' is Jupitrr AI's all-in-one video workflow at jupitrr.com. Description (video planning/editing/publishing) roughly matches Jupitrr's VideoOS.",
+        "confidence": "medium",
+        "evidence": "Jupitrr's VideoOS at jupitrr.com; videoos.net is an unrelated framework, not the product site."
+    },
+    {
+        "slug": "moyin-gongfang",
+        "name": "魔音工坊",
+        "verdict": "REAL",
+        "official_url": "https://www.moyin.com/",
+        "url_correct": True,
+        "vendor": "魔音工坊 (喜马拉雅/Ximalaya 旗下)",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official moyin.com; Chinese AI text-to-speech tool with emotional/real-time dubbing."
+    },
+    {
+        "slug": "cocounsel",
+        "name": "CoCounsel",
+        "verdict": "REAL",
+        "official_url": "https://cocounsel.com",
+        "url_correct": False,
+        "vendor": "Thomson Reuters (NOT Clio)",
+        "desc_issue": "Vendor/attribution wrong: batch says 'by Clio', but CoCounsel is Thomson Reuters' AI legal assistant (built on Westlaw). URL cocounsel.clio.com is misleading — Clio is a separate law-practice software company.",
+        "confidence": "high",
+        "evidence": "CoCounsel is Thomson Reuters product (cocounsel.com); Clio is an unrelated legal-practice-management vendor."
+    },
+    {
+        "slug": "deepsec",
+        "name": "DeepSec",
+        "verdict": "UNCERTAIN",
+        "official_url": None,
+        "url_correct": False,
+        "vendor": "Unknown / unverified",
+        "desc_issue": "No commercial 'DeepSec' AI security platform found at deepsec.io. Real 'DeepSec' references: the DeepSec security conference (deepsec.net), Trend Micro Deep Security, and an academic DEEPSEC adversarial-ML project. The described commercial AI pentest platform (with $49/mo pricing) is unverifiable.",
+        "confidence": "low",
+        "evidence": "No verified product at deepsec.io; 'DeepSec' matches a conference / Trend Micro / academic project, not a commercial AI security platform."
+    },
+    {
+        "slug": "taskade",
+        "name": "Taskade",
+        "verdict": "REAL",
+        "official_url": "https://taskade.com",
+        "url_correct": True,
+        "vendor": "Taskade",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official taskade.com; AI team collaboration, tasks, notes, mind-maps, agents."
+    },
+    {
+        "slug": "adcreative-ai",
+        "name": "AdCreative AI",
+        "verdict": "REAL",
+        "official_url": "https://www.adcreative.ai",
+        "url_correct": True,
+        "vendor": "AdCreative.ai",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official adcreative.ai; AI ad-creative generation for high-conversion marketing."
+    },
+    {
+        "slug": "unitree-gd01",
+        "name": "Unitree GD01",
+        "verdict": "REAL",
+        "official_url": "https://www.unitree.com",
+        "url_correct": True,
+        "vendor": "宇树科技 (Unitree Robotics)",
+        "desc_issue": "Description wrong: GD01 is a manned transformable mecha/robot (载人变形机甲, ~$650K), NOT a quadruped education robot.",
+        "confidence": "medium",
+        "evidence": "Unitree GD01 is a human-rideable transformable mecha unveiled in 2025; not a quadruped education platform."
+    },
+    {
+        "slug": "zety-ai",
+        "name": "Zety AI",
+        "verdict": "REAL",
+        "official_url": "https://zety.com",
+        "url_correct": True,
+        "vendor": "Zety",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official zety.com; resume builder with AI writing/optimization features."
+    },
+    {
+        "slug": "kanwas",
+        "name": "Kanwas",
+        "verdict": "REAL",
+        "official_url": "https://kanwas.ai",
+        "url_correct": True,
+        "vendor": "Kanwas",
+        "desc_issue": None,
+        "confidence": "medium",
+        "evidence": "Official kanwas.ai; AI team-context workspace / workflow automation."
+    },
+    {
+        "slug": "cluely",
+        "name": "Cluely",
+        "verdict": "REAL",
+        "official_url": "https://cluely.com",
+        "url_correct": True,
+        "vendor": "Cluely",
+        "desc_issue": None,
+        "confidence": "medium",
+        "evidence": "Official cluely.com; AI assistant (notably for live meetings/interviews)."
+    },
+    {
+        "slug": "pmb",
+        "name": "PMB",
+        "verdict": "REAL",
+        "official_url": "https://pmbai.dev",
+        "url_correct": False,
+        "vendor": "gunbark.dev / open-source (oleksiijko)",
+        "desc_issue": "Description wrong: PMB is a local-first memory tool for AI coding agents (MCP, works with Claude Code/Cursor/Codex) — NOT a project management assistant.",
+        "confidence": "high",
+        "evidence": "Official pmbai.dev confirmed; SQLite+LanceDB local memory, 29 MCP tools, no cloud/API key."
+    },
+    {
+        "slug": "slidesai",
+        "name": "SlidesAI",
+        "verdict": "REAL",
+        "official_url": "https://slidesai.io",
+        "url_correct": True,
+        "vendor": "SlidesAI",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official slidesai.io; AI slide generator as Google Slides / PowerPoint plugin."
+    },
+    {
+        "slug": "humata-ai",
+        "name": "Humata AI",
+        "verdict": "REAL",
+        "official_url": "https://humata.ai",
+        "url_correct": True,
+        "vendor": "Humata",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official humata.ai; AI PDF/document analysis and Q&A."
+    },
+    {
+        "slug": "blop",
+        "name": "Blop",
+        "verdict": "REAL",
+        "official_url": "https://blopai.com",
+        "url_correct": False,
+        "vendor": "Blop (blopai.com, founder Alejandro Laurlund)",
+        "desc_issue": "Description wrong: Blop is a UX/UI optimization & QA testing agent (turns design feedback into code / Playwright browser tests in CI) — NOT a social-media design/poster assistant.",
+        "confidence": "high",
+        "evidence": "Official blopai.com confirmed; 'Cursor for UX/UI optimization', QA agent for browser tests in GitHub Actions."
+    },
+    {
+        "slug": "kaiber",
+        "name": "Kaiber",
+        "verdict": "REAL",
+        "official_url": "https://kaiber.ai",
+        "url_correct": True,
+        "vendor": "Kaiber",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official kaiber.ai; AI image-to-video / music-video generation tool."
+    },
+    {
+        "slug": "warp-terminal",
+        "name": "Warp Terminal",
+        "verdict": "REAL",
+        "official_url": "https://www.warp.dev",
+        "url_correct": True,
+        "vendor": "Warp",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official warp.dev; Rust-based AI-powered terminal for developers."
+    },
+    {
+        "slug": "wordtune",
+        "name": "Wordtune",
+        "verdict": "REAL",
+        "official_url": "https://www.wordtune.com",
+        "url_correct": True,
+        "vendor": "AI21 Labs",
+        "desc_issue": None,
+        "confidence": "high",
+        "evidence": "Official wordtune.com; AI rewriting / tone-adjustment writing assistant by AI21 Labs."
+    }
+]
+
+with open("result_08.json", "w", encoding="utf-8") as f:
+    json.dump(results, f, ensure_ascii=False, indent=2)
+
+print("Wrote", len(results), "entries to result_08.json")
+from collections import Counter
+print("Verdicts:", dict(Counter(r["verdict"] for r in results)))
+print("URL correct:", dict(Counter(r["url_correct"] for r in results)))

@@ -1,0 +1,161 @@
+{
+  "name": "LanguageTool",
+  "slug": "language-tool",
+  "positioning": "免费AI写作推荐：AI改写、多语言",
+  "auto_positioning": true,
+  "emoji": "✍️",
+  "color": "#0FA6E8",
+  "description": "LanguageTool是一款开源的AI语法与拼写检查工具，支持30多种语言，提供风格建议、标点纠正与AI改写，覆盖网页、浏览器扩展、Office插件与API。",
+  "category": "AI写作",
+  "tags": [
+    "语法检查",
+    "拼写纠正",
+    "多语言",
+    "开源",
+    "写作辅助",
+    "浏览器扩展"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "850万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://languagetool.org",
+  "price": "免费版；Premium约€4.90/月（年付）或€19.90/月（月付）；团队/企业版定制",
+  "platform": "网页端、浏览器扩展（Chrome/Firefox/Edge）、桌面端（Windows/Mac/Linux）、Office插件、API",
+  "pros": [
+    "支持30+语言，开源免费版实用",
+    "浏览器扩展实时检测",
+    "英语及欧洲语言准确率高",
+    "提供API便于集成",
+    "团队样式指南与词典"
+  ],
+  "cons": [
+    "中文支持相对较弱",
+    "免费版功能与字符数有限",
+    "部分高级建议需人工判断",
+    "部分功能需联网"
+  ],
+  "features": [
+    "语法与拼写检查",
+    "风格与标点建议",
+    "AI改写（paraphraser）",
+    "多语言（30+）",
+    "自定义词典与样式指南",
+    "团队词典",
+    "微软Word/Google Docs插件",
+    "API接口"
+  ],
+  "related": [
+    "grammarly-ai",
+    "quillbot",
+    "wordtune"
+  ],
+  "faq": [
+    {
+      "q": "LanguageTool免费版和付费版有什么区别？",
+      "a": "免费版做基础拼写与简单标点检查（每文本最多1万字符）；Premium提供增强语法、风格建议、无限AI改写、更长文本等，个人版年付约€4.90/月。"
+    },
+    {
+      "q": "LanguageTool支持中文吗？",
+      "a": "支持中文检查，但相比英语等语言准确性有限，建议中文写作结合其他工具。"
+    },
+    {
+      "q": "LanguageTool和Grammarly哪个好？",
+      "a": "Grammarly英语更精准但仅支持英语；LanguageTool支持30+语言且有开源免费版，取决于主要语言需求。"
+    },
+    {
+      "q": "LanguageTool有API吗？",
+      "a": "提供API，开发者可将其语法检查集成到自有应用中；另有团队与企业版。"
+    }
+  ],
+  "seo_keywords": [
+    "LanguageTool",
+    "LanguageTool免费版",
+    "LanguageTool怎么样",
+    "LanguageTool语法检查",
+    "LanguageTool和Grammarly对比"
+  ],
+  "content": "# LanguageTool是什么？\n\n简单说，LanguageTool就是一款帮你检查语法和拼写错误的工具。它支持30多种语言，用的是AI技术，能够在你不注意的时候帮你发现文本里的小问题。\n\n这款工具开源也有几年了，2026年加了企业版API和更强的上下文理解功能，现在在写作辅助这块算是做得比较成熟的。浏览器有插件装了就能用，网页上打字也能实时检测，用起来挺方便的。\n\n---\n\n## 核心功能\n\n**1. 语法和拼写检查**\n\n这是本行。打出英文或者其他欧洲语言的时候，它能快速标出拼写错误、语法问题，用得准不准主要看你写什么语言。英语和德语、法语这些准确率挺高的，但中文支持就比较一般，这个得说实话。\n\n**2. 风格建议和词汇优化**\n\n它不只是挑错，还会给你推荐更恰当的用词和表达方式。比如一句话写得有点啰嗦，它会建议你换个更简洁的说法。适合想提升写作质量的人，但不是那种帮你重写整段的功能。\n\n**3. 标点符号自动纠正**\n\n引号多余、逗号错位、该用分号用了句号这类问题，它能帮你发现并纠正。写长文章的时候挺省心的。\n\n**4. 多语言即时翻译对照**\n\n写非母语内容时，可以看看它给出的翻译对照，帮助理解某些表达在别的语言里怎么说的。这个功能比较基础，不能替代专业翻译工具。\n\n**5. 自定义词典和规则设置**\n\n如果你有特定的专业术语或者常用词，可以加到自定义词典里，避免每次都被标成错误。写技术文档或者行业相关内容时会用到。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 价格 | 功能限制 |\n|------|------|----------|\n| 免费版 | 免费 | 基础语法检查，有使用次数限制，高级语法建议不可用 |\n| Premium | 付费订阅 | 完整语法检查、风格建议、高级错误检测、无次数限制 |\n| Enterprise | 付费定制 | API接口、自定义规则、批量处理、团队管理功能 |\n\n---\n\n## 值不值得用？\n\n**优点：**\n- 支持语言多，30多种语言覆盖日常写作需求\n- 浏览器插件用起来很方便，网页输入时实时检测\n- 英语和欧洲语言的检测准确率确实不错\n- 有API，开发者想集成到自己产品里也方便\n- 开源免费版对个人用户来说基本够用\n\n**缺点：**\n- 中文支持确实弱，写中文用它基本没用\n- 免费版功能有限，想用完整功能得付费\n- 有些高级语法建议不够精准，不能完全依赖\n- 离线基本用不了，得有网络\n\n**总体结论：** 如果你主要写英文或者其他欧洲语言，需要一个日常帮检查语法拼写的工具，LanguageTool值得试试。免费版够用，付费版也不算贵。但如果你主要写中文，或者需要检查很专业的学术文章，那它的帮助就比较有限了。\n\n---\n\n## 使用建议\n\n1. **装浏览器插件**：写邮件、填表单、发帖子的时候开着，它会自动检测，省心。\n2. **别全信**：高级语法建议看看就好，有些不一定对，结合自己判断。\n3. **英文写作利器，中文写作PASS**：英文用用它提升很大，中文的话目前建议找其他工具。\n4. **想用高级功能再考虑付费**：免费版日常够用了，先试试再说。\n5. **开发者可以看看API**：如果想集成到自己产品里，企业版性价比还行。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n- 经常写英文邮件、文档的人\n- 需要多语言写作的学生或工作者\n- 英文学习者想检查自己写的内容\n\n**可考虑：**\n- 开发者想集成语法检查功能\n- 需要风格润色的写作者\n- 偶尔写写非母语文本的人\n\n**不推荐：**\n- 主要写中文内容的用户\n- 需要离线使用的场景\n- 对高级语法准确性要求极高的学术写作者（建议找更专业的校对）\n\n## 常见问题（FAQ）\n\n**LanguageTool免费版和付费版有什么区别？**\n\n免费版做基础拼写与简单标点检查（每文本最多1万字符）；Premium提供增强语法、风格建议、无限AI改写、更长文本等，个人版年付约€4.90/月。\n\n**LanguageTool支持中文吗？**\n\n支持中文检查，但相比英语等语言准确性有限，建议中文写作结合其他工具。\n\n**LanguageTool和Grammarly哪个好？**\n\nGrammarly英语更精准但仅支持英语；LanguageTool支持30+语言且有开源免费版，取决于主要语言需求。\n\n**LanguageTool有API吗？**\n\n提供API，开发者可将其语法检查集成到自有应用中；另有团队与企业版。",
+  "published": true,
+  "created_date": "2026-05-27",
+  "published_date": "2026-05-27",
+  "subcategory": "ai-grammar",
+  "verified_url": "https://languagetool.org",
+  "verified_publisher": "LanguageTool (LanguageTool GmbH)",
+  "verified_what": "开源的智能语法与拼写检查工具，支持30+语言，提供风格建议、标点纠正与AI改写（paraphraser）。",
+  "verified_price": "免费版：基础拼写与简单标点检查，每文本最多1万字符、每天3次AI改写；Premium个人版：月付€19.90，季付€39.90（€13.30/月），年付€59.89（约€4.90/月），2年€99.90（约€4.16/月）；团队版：€56.90/用户/年；企业版定制。",
+  "verified_platform": "网页端、浏览器扩展（Chrome/Firefox/Edge/Safari/Opera）、桌面端（Windows/Mac/Linux）、Office插件、iOS、API",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "语法与拼写检查",
+    "风格与标点建议",
+    "AI改写（paraphraser）",
+    "多语言（30+）",
+    "自定义词典与样式指南",
+    "团队词典",
+    "微软Word/Google Docs插件",
+    "API接口"
+  ],
+  "verified_description": "LanguageTool是一款开源的AI语法与拼写检查工具，支持30多种语言，提供风格建议、标点纠正与AI改写，覆盖网页、浏览器扩展、Office插件与API。",
+  "content_flags": "价格字段有误：现有写“高级版每月€9.99起”，官网实际个人Premium起价约€4.90/月（年付）或€19.90/月（月付）。",
+  "price_verified": true,
+  "verified_pros": [
+    "支持30+语言，开源免费版实用",
+    "浏览器扩展实时检测",
+    "英语及欧洲语言准确率高",
+    "提供API便于集成",
+    "团队样式指南与词典"
+  ],
+  "verified_cons": [
+    "中文支持相对较弱",
+    "免费版功能与字符数有限",
+    "部分高级建议需人工判断",
+    "部分功能需联网"
+  ],
+  "verified_faq": [
+    {
+      "q": "LanguageTool免费版和付费版有什么区别？",
+      "a": "免费版做基础拼写与简单标点检查（每文本最多1万字符）；Premium提供增强语法、风格建议、无限AI改写、更长文本等，个人版年付约€4.90/月。"
+    },
+    {
+      "q": "LanguageTool支持中文吗？",
+      "a": "支持中文检查，但相比英语等语言准确性有限，建议中文写作结合其他工具。"
+    },
+    {
+      "q": "LanguageTool和Grammarly哪个好？",
+      "a": "Grammarly英语更精准但仅支持英语；LanguageTool支持30+语言且有开源免费版，取决于主要语言需求。"
+    },
+    {
+      "q": "LanguageTool有API吗？",
+      "a": "提供API，开发者可将其语法检查集成到自有应用中；另有团队与企业版。"
+    }
+  ],
+  "verified_tags": [
+    "语法检查",
+    "拼写纠正",
+    "多语言",
+    "开源",
+    "写作辅助",
+    "浏览器扩展"
+  ],
+  "verified_category": "AI写作",
+  "source_urls": [
+    "https://languagetool.org",
+    "https://languagetool.org/premium",
+    "https://help.languagetool.org/hc/en-us/articles/39254510973335-What-subscriptions-does-LanguageTool-offer"
+  ],
+  "verify_notes": "现有price字段€9.99与官网不符，已按官方订阅价修正。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "wordtune",
+      "jenni-ai",
+      "prowritingaid"
+    ],
+    "verdict": "LanguageTool 与 Wordtune、Jenni AI、ProWritingAid 同属AI写作赛道：LanguageTool 的 语法与拼写检查 是亮点，价格 免费版；Premium约€4.90/月（年付）或€19.90/月（月付）；团队/企业版定制；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

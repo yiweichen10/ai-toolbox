@@ -1,0 +1,77 @@
+{
+  "name": "PromptHero",
+  "slug": "prompthero",
+  "positioning": "免费AI提示词工具推荐：百万级多模型提示词库、图文对",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#8b5cf6",
+  "description": "全球最大的AI提示词搜索与社区平台（自述#1 prompt engineering网站），收录数百万条覆盖Midjourney、Stable Diffusion、Sora、Nano Banana、Seedream、ChatGPT Image等模型的提示词，可查看生成效果与参数配置。",
+  "category": "AI提示词",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI提示词"
+    },
+    {
+      "text": "PromptHero"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://prompthero.com",
+  "price": "免费版/付费版",
+  "platform": "Web",
+  "pros": [
+    "全球头部提示词社区，数据量巨大且覆盖模型全",
+    "提示词与效果图、参数强绑定，复现成功率高",
+    "免费即可搜索浏览，门槛低",
+    "学院课程与挑战赛提供完整学习路径",
+    "提供 API 与数据集，适合开发者与研究者"
+  ],
+  "cons": [
+    "优质内容多为英文，中文创作者有语言门槛",
+    "付费会员价格不同渠道信息不一致，需以官网为准",
+    "每日免费搜索/生成额度有限",
+    "图片提示词偏绘画领域，纯文本类提示词相对较少"
+  ],
+  "features": [
+    "百万级多模型提示词库",
+    "图文对照与参数解析",
+    "PromptHero Academy 学院课程",
+    "风格融合热榜与A/B测试",
+    "社区挑战赛与作品推荐",
+    "开发者API与数据集"
+  ],
+  "related": [
+    "promptpilot",
+    "explinks-prompts",
+    "prompt-engineering-guide"
+  ],
+  "content": "## PromptHero 是什么？\n\nPromptHero 是全球领先的 AI 提示词（Prompt）搜索引擎与创作者社区之一，官网自述为\"#1 prompt engineering 网站\"。平台收录了数百万条由社区贡献的实测提示词，覆盖 Midjourney、Stable Diffusion、Sora、DALL-E、FLUX、Ideogram、ChatGPT 等主流生成式模型，每条提示词都配有真实生成效果图和完整参数（宽高比、Seed、风格化强度等），支持一键复制直接使用。无论你是 AI 绘画新手还是资深提示词工程师，都能在这里\"抄作业\"或找到创作灵感。\n\n与传统提示词网站只给文字不同，PromptHero 把\"提示词 + 效果图 + 参数\"三者绑定展示，让用户直观看到每条提示词能生成什么，也能精确复现别人的作品。平台还通过 PromptHero Academy（学院）、风格融合热榜和主题创作挑战赛，构建起从\"找提示词\"到\"学提示词\"再到\"练提示词\"的完整学习链路。\n\n### 核心功能\n\n- **百万级多模型提示词库**：收录数百万条提示词，兼容 Midjourney、Stable Diffusion、DALL-E、FLUX、Sora、ChatGPT 等 20+ 主流模型，可按模型、风格、主题和热度筛选。\n- **图文对照与参数解析**：每条提示词附带 AI 生成效果图及宽高比、Seed、CFG、采样器等参数，支持一键复制，方便复现或二次微调。\n- **PromptHero Academy 学院**：提供从入门到进阶的生成式 AI 课程，系统讲解提示词编写技巧、参数优化逻辑与高级权重语法。\n- **社区与创作挑战赛**：支持发布作品、收藏点赞与评论，定期举办品牌设计、角色创作等主题挑战赛，优质内容可获首页推荐曝光。\n- **风格融合与 A/B 测试**：内置\"风格融合热榜\"推荐低畸变率的跨风格混搭词对，收藏夹支持同一主题多版本提示词快照，方便对比测试。\n- **开发者 API 与数据集**：向开发者和研究者开放 API 访问与提示词数据集，支持微调 LoRA、ControlNet、DreamBooth 等资源下载。\n\n### 适用场景\n\n- **AI 绘画创作者**：在 Midjourney、Stable Diffusion 等工具中快速查找参考提示词，一键复制\"抄作业\"或微调出自己的风格。\n- **提示词工程师与研究者**：通过 Academy 系统学习提示工程，分析高赞提示词结构，或通过 API/数据集开展研究。\n- **内容团队与营销人员**：快速获取经过社区验证的图片/文案提示词模板，批量产出概念图与素材，缩短创意试错周期。\n\n### 价格\n\n基础搜索与浏览功能永久免费（含每日有限次数的搜索与生成额度）。Supporter/Pro 会员订阅提供去广告、更高生成配额、作品置顶、API 访问等进阶权益，不同渠道显示的价格区间差异较大，具体档位与价格以官网为准。",
+  "published": true,
+  "faq": [
+    {
+      "q": "PromptHero 支持哪些 AI 模型？",
+      "a": "支持 Midjourney、Stable Diffusion、DALL-E、FLUX、Sora、ChatGPT、Ideogram 等 20 余种主流文生图与文生文模型，可在搜索时按模型标签筛选。"
+    },
+    {
+      "q": "PromptHero 免费吗？",
+      "a": "基础搜索与浏览永久免费，含每日有限额度；Supporter/Pro 会员提供去广告、更多生成配额、API 访问等权益，具体价格以官网为准。"
+    },
+    {
+      "q": "可以把提示词直接拿去用吗？",
+      "a": "可以。每条提示词均附带生成效果图与参数，点击 Copy 一键复制后，可直接粘贴到对应的 AI 绘画工具中使用，也可按需微调。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://prompthero.com",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "verify_notes": "二轮核实(WebFetch 2026-08-05)：prompthero.com 可达，页面完整。",
+  "seo_keywords": [
+    "PromptHero",
+    "AI提示词搜索",
+    "Midjourney提示词库",
+    "提示词社区",
+    "AI绘画提示词"
+  ]
+}

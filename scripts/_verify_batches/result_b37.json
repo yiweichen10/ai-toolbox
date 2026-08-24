@@ -1,0 +1,126 @@
+{
+  "batch_id": "b37",
+  "category": "AI效率",
+  "tools": [
+    {
+      "slug": "velo-ai",
+      "name": "Velo AI",
+      "url_current": "https://usevelo.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "定价编造：站内称高级版$12.99/月，官网定价页实际 Pro 为 $49/月（另有 Ultra $200/月、Enterprise 定制）。功能描述基本准确（AI 视频创作平台：将屏幕/文档/笔记转为演示、培训、支持视频），URL 正确。"
+    },
+    {
+      "slug": "jamie-ai",
+      "name": "Jamie AI",
+      "url_current": "https://meetjamie.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "正文幻觉：站内正文将 Jamie 写成通用 AI 对话/文档/写作/翻译助手（类 ChatGPT），实际官网为隐私优先的 AI 会议纪要工具（无机器人入会、100+ 语言、GDPR/EU 托管）。描述准确，URL 正确。价格 $19/月描述项未逐项核实官网。"
+    },
+    {
+      "slug": "yoroll",
+      "name": "Yoroll",
+      "url_current": "https://yoroll.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": true,
+      "confidence": "high",
+      "notes": "正文幻觉：站内正文将 Yoroll 写成智能任务管理/内容创作/翻译工具，实际官网为 AI 原生互动视频游戏创作平台（文本/图片/短片生成可玩分支剧情游戏）。描述准确，URL 正确。备注：描述中公司归属 'LinearGame' 官网未直接体现，存疑，建议人工裁定。"
+    },
+    {
+      "slug": "tongyi-efficiency",
+      "name": "通义效率",
+      "url_current": "https://tongyi.aliyun.com/efficiency",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL 与产品均真实（tongyi.aliyun.com/efficiency 为通义效率，含实时记录/阅读助手/PPT 创作）。描述与正文大体符合阿里通义 AI 办公能力，无明确幻觉。备注：正文将部分通用通义千问能力（如代码辅助编写）泛化到通义效率，略有夸大但非明显张冠李戴。"
+    },
+    {
+      "slug": "taskade",
+      "name": "Taskade",
+      "url_current": "https://taskade.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "定价过期/错误：站内称付费版 $8/月起，官网定价页实际付费入门为 Pro $10/月（年付），另有 Business $25、Max $100、Enterprise $250。功能描述与正文准确（AI 协作/任务管理/思维导图/自动化），URL 正确。"
+    },
+    {
+      "slug": "read-ai",
+      "name": "Read AI",
+      "url_current": "https://read.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "功能描述与正文准确（AI 会议助手：摘要/转录/智能阅读/Ask Read 跨会议邮件文档检索）。URL 正确。定价 $19/月起未逐项核实官网，存疑但不判幻觉。"
+    },
+    {
+      "slug": "avoma",
+      "name": "Avoma",
+      "url_current": "https://avoma.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "功能、定价（AI Meeting Assistant $19/用户/月起，对话智能附加 $29/用户/月）与平台均与官网一致。URL 正确，无幻觉。"
+    },
+    {
+      "slug": "tempus-ai",
+      "name": "Tempus AI",
+      "url_current": "https://www.gettempus.app",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["platform", "price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "多处幻觉：①平台编造——站内称支持网页/iOS/Android/Chrome插件/桌面端，官网实际仅 Apple 生态（iPhone/iPad/Mac/Apple Watch），无 Android/网页/Chrome 插件；②定价编造——专业版$9.99/月、企业版$29.99/月均不实，App Store 实际 Pro 月费约 $5.99、终身 $29.99（一次性买断），无'企业版/月'档；③正文虚构团队协作/共享日历功能，官网为无账号个人 ADHD 规划 App。描述（AI 日程规划与专注 App）准确，URL 正确。"
+    },
+    {
+      "slug": "fellou",
+      "name": "Fellou",
+      "url_current": "https://fellou.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "多处幻觉：①正文张冠李戴——将 Fellou 写成可视化拖拽式工作流自动化工具（类 Zapier：节点编辑器、GPT-4/Claude/Gemini 一键对比），实际官网为'世界首个 Agentic AI 浏览器'，以自然语言指令驱动网页/桌面自动化；②定价编造——Pro 版 $19/月、团队版 $49/月均不实，官网约 Starter/Plus $19-20/月、Pro $39.90/月、Ultra $199.90/月；③平台存疑——站内列 Web/iOS/Android，官网为 Windows/Mac 桌面客户端（无移动端）。描述'工作流自动化平台'部分贴合但定位不准，URL 正确。"
+    },
+    {
+      "slug": "tabbit",
+      "name": "Tabbit",
+      "url_current": "https://tabbit.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["platform", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "多处幻觉：①平台错误——站内称 Chrome/Edge/Safari/Firefox 扩展 + Web 端，官网实际为 macOS 原生 AI 浏览器应用（Apple Silicon/Intel），非浏览器扩展；②正文张冠李戴——将 Tabbit 描述为书签/标签页智能管理工具，实际官网定位为 'AI-Powered Browser'（AI 浏览器）。描述（AI 原生浏览器）准确，URL 正确。"
+    }
+  ]
+}

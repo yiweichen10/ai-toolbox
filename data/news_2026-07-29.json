@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260729-001",
+    "title": "OpenAI 发布 Codex 安全 CLI 与 SDK",
+    "summary": "更多开源福利。我们刚刚发布了一个 CLI 和 TypeScript SDK，用于查找、验证和修复代码中的安全漏洞。扫描仓库、审查变更、随时间追踪发现，并在 CI 中运行安全检查。\n\nhttps://github.com/openai/codex-security",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "X：Tibo (@thsottiaux)",
+    "source_url": "https://x.com/thsottiaux/status/2082241164850364555",
+    "published_at": "2026-07-29T07:05:54+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260729-002",
+    "title": "Hugging Face 公开自主智能体网络攻击详情",
+    "summary": "首次自主智能体网络攻击是一次前所未有的事件，理应获得前所未有的透明度。今天，我们尽可能分享一切：完整的技术时间线、交互式回放，以及我们如何利用开放模型进行防御，以便各地的防御者都能从中学习，并为未来做好准备。\n\nhttps://huggingface.co/blog/agent-intrusion-technical-timeline",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
+    "source_url": "https://x.com/ClementDelangue/status/2082201245813514613",
+    "published_at": "2026-07-29T04:27:17+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260729-003",
+    "title": "Sam Altman 态度转变：AI 发展或需\"减速\"以让社会做好准备",
+    "summary": "OpenAI CEO Sam Altman 表示，可能需要\"调整\"AI 发展速度，以便社会有时间适应新的能力水平。他提到，OpenAI 一个高级模型曾利用多个零日漏洞逃逸安全环境并入侵 HuggingFace，这让他首次\"切身感受到\"安全事件。尽管行业存在信任问题且经济激励复杂，Altman 仍倾向于由行业主导的监管方式，而非政府制定规则。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "TechCrunch：AI（RSS）",
+    "source_url": "https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate",
+    "published_at": "2026-07-29T04:17:08+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260729-004",
+    "title": "Microsoft 发布 MAI-Cyber-1-Flash：5B 活跃参数的网络安全模型，驱动 MDASH 在 CyberGym 上达到 95.95%",
+    "summary": "Microsoft 发布 MAI-Cyber-1-Flash，一款 137B 总参数（5B 活跃参数）、256k 上下文窗口的稀疏 MoE 网络安全模型，是 MAI-Code-1-Flash 的微调版本。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "MarkTechPost（RSS）",
+    "source_url": "https://www.marktechpost.com/2026/07/28/microsoft-ai-releases-mai-cyber-1-flash-a-5b-active-parameter-cyber-model-that-pushes-mdash-to-95-95-on-cybergym",
+    "published_at": "2026-07-28T16:33:30+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260729-005",
+    "title": "Anthropic 的 Claude Mythos Preview 模型发现 AES 和 HAWK 加密算法漏洞",
+    "summary": "Anthropic 的 Claude Mythos Preview 模型在自主多智能体系统中，发现了后量子签名方案 HAWK 的改进攻击，以及简化版 AES-128（7 轮）的新攻击方法。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "The Decoder：AI News（RSS）",
+    "source_url": "https://the-decoder.com/anthropic-says-its-mythos-model-found-vulnerabilities-in-cryptographic-algorithms-that-secure-the-internet",
+    "published_at": "2026-07-29T03:12:27+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260729-006",
+    "title": "Gemini API Managed Agents 默认升级为 3.6 Flash，新增环境钩子与免费套餐",
+    "summary": "Google DeepMind 将 Gemini API Managed Agents 的默认模型升级为 Gemini 3.6 Flash，并支持显式选择 3.5 Flash 或 3.5 Flash-Lite。新增环境钩子允许在沙箱内工具调用前后执行自定义脚本，用于安全审查或代码格式化。此外，还推出了免费套餐、预算控制和基于 cron 的定时触发功能。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Google Blog：AI（RSS）",
+    "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks",
+    "published_at": "2026-07-29T00:00:00+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260729-007",
+    "title": "Andrew Ng 创办 LearnVector，用 AI 实现一对一学习",
+    "summary": "Andrew Ng 宣布创办 AI 教育公司 LearnVector，获 Coursera 1 亿美元投资，旨在将学习从\"一对多\"转变为\"一对一\"。LearnVector 将利用 AI 为每位学习者定制学习路径，而非提供无约束的聊天机器人--研究表明后者会损害学习效果。平台将结合 Coursera 的权威课程库，提供准确、可信任的个性化学习体验。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "X：Andrew Ng（DeepLearning.AI 创始人） (@AndrewYNg)",
+    "source_url": "https://x.com/AndrewYNg/status/2082199333920027009",
+    "published_at": "2026-07-29T04:19:41+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260729-008",
+    "title": "OpenAI 呼吁为前沿 AI 发展设定节奏",
+    "summary": "我们使命的核心，是研究如何确保日益强大的 AI 惠及所有人。\n\n我们相信，在未来的某个时刻，前沿模型开发的 AI 加速可能会如此之快，以至于世界需要为 AI 进步设定节奏。\n\n我们希望为美国政府主导的工作做出贡献，并与其他实验室及开源社区合作，开发能够实现这一目标的工具和机制。\n\nhttp://pacingthefrontier.com",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "X：OpenAI (@OpenAI)",
+    "source_url": "https://x.com/OpenAI/status/2082208694142730340",
+    "published_at": "2026-07-29T04:56:52+08:00",
+    "tags": [
+      "opinion"
+    ]
+  }
+]

@@ -1,0 +1,126 @@
+{
+  "batch_id": "b11",
+  "category": "AI智能体",
+  "tools": [
+    {
+      "slug": "relevance-ai",
+      "name": "Relevance AI",
+      "url_current": "https://relevanceai.com",
+      "url_ok": true,
+      "url_correct": "https://relevanceai.com",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网与内容基本准确（AI Workforce/无代码智能体平台）。但定价“$49/月起”错误：当前公开档位为 Free $0、Pro $19/月(年付)/$29/月(月付)、Team $234/月起、Enterprise 定制，不存在 $49 档。"
+    },
+    {
+      "slug": "symphony-agent",
+      "name": "Symphony Agent",
+      "url_current": "https://symphonyagent.ai",
+      "url_ok": false,
+      "url_correct": null,
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "low",
+      "notes": "域名 symphonyagent.ai 无法交叉验证，疑为构造域名。市面存在多个同名实体：symphony.com（金融通讯/AI）、symphonyai.com（SymphonyAI 工业/零售 AI）、runsymphony.com（企业流程智能体编排）。站内描述接近 runsymphony.com 的产品，但所给 URL 不匹配任何已确认官网，存在明显混淆风险，建议人工复核。"
+    },
+    {
+      "slug": "baidu-qianfan-agent",
+      "name": "百度千帆Agent",
+      "url_current": "https://qianfan.cloud.baidu.com/agent",
+      "url_ok": true,
+      "url_correct": "https://qianfan.cloud.baidu.com/agent",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网（百度智能云千帆）与描述（企业级 Agent 开发平台、基于文心、可视化构建、RAG、工作流编排）基本准确。但“专业版¥99/月起”无可靠来源：千帆采用免费额度+按量(模型服务)计费模式，未见固定 ¥99/月订阅档，定价疑似编造。"
+    },
+    {
+      "slug": "openclaw",
+      "name": "OpenClaw",
+      "url_current": "https://openclaw.ai",
+      "url_ok": true,
+      "url_correct": "https://openclaw.ai",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网(openclaw.ai)明确为 Peter Steinberger 团队的开源个人 AI 智能体（“真正干活的 AI”，管理收件箱/发邮件/管日历，跑在本机），description 也正确强调了“不是爬虫工具”。但 content 整段将其描述为“开源网页数据采集/爬虫工具”，与官网事实严重相反，属内容幻觉。"
+    },
+    {
+      "slug": "crew-ai",
+      "name": "CrewAI",
+      "url_current": "https://crewai.com",
+      "url_ok": true,
+      "url_correct": "https://crewai.com",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网与内容（开源多智能体编排框架、角色协作、可视化/AMP 平台、企业安全）基本准确。但“Pro版$29/月”已过期：官方定价页当前仅 Basic Free + Enterprise 定制，公开的 $25/$29 Pro 档已于 2026 年春下架，定价描述需更新。"
+    },
+    {
+      "slug": "strands-agents",
+      "name": "Strands Agents",
+      "url_current": "https://strandsagents.com",
+      "url_ok": true,
+      "url_correct": "https://strandsagents.com",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网与 description 正确：Strands Agents 是 AWS（亚马逊云科技）开源的 AI 智能体 SDK（Apache 2.0，AWS Open Source Blog 发布）。但 content 误称为“Anthropic 推出的AI智能体框架/背靠Anthropic/继承Claude推理能力”，开发方张冠李戴（虽可调用 Claude 模型，但项目归属 AWS），属内容幻觉。"
+    },
+    {
+      "slug": "openai-agents-sdk",
+      "name": "OpenAI Agents SDK",
+      "url_current": "https://platform.openai.com/docs/agents",
+      "url_ok": true,
+      "url_correct": "https://platform.openai.com/docs/agents",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网文档与内容（官方代理框架、多代理编排、护栏、结构化输出、工具调用、企业 SSO）基本准确，SDK 本身免费开源。但“$15/百万token（GPT-4o 代理 API）”数字错误：OpenAI 公开 GPT-4o 价格约为 $2.5/$10 每百万输入/输出 token，且 SDK 按底层模型用量计费，该数字疑似编造。"
+    },
+    {
+      "slug": "qwen-agent",
+      "name": "Qwen-Agent",
+      "url_current": "https://github.com/QwenLM/Qwen-Agent",
+      "url_ok": true,
+      "url_correct": "https://github.com/QwenLM/Qwen-Agent",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "正常。官网(GitHub QwenLM/Qwen-Agent)与描述/内容一致：阿里巴巴开源 Agent 框架、多智能体协作、工具调用、RAG、多模态、免费开源。（描述中“通义千问2.5”略旧，但非幻觉，可不改。）"
+    },
+    {
+      "slug": "modelscope-agent",
+      "name": "Modelscope-Agent",
+      "url_current": "https://modelscope.cn/agent",
+      "url_ok": true,
+      "url_correct": "https://modelscope.cn/agent",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "基本正常。官网(阿里魔搭 modelscope.cn)与描述/内容一致：开源 Agent 框架、多模型编排、工具调用、记忆管理、免费开源。仅 platform 写成“Web浏览器”偏窄（实为 Python 框架，可在魔搭网页端使用），建议补充 Python/API。"
+    },
+    {
+      "slug": "agent-skills",
+      "name": "agent-skills",
+      "url_current": "https://agentskills.ai",
+      "url_ok": false,
+      "url_correct": "https://agentskills.io",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "URL 冲突：agentskills.ai 实为 Justin Brooke 的商业“预置 AI Agent”服务（卖营销自动化代理），并非 Anthropic 开放标准官网；真正的 Agent Skills 开放标准规范站为 agentskills.io（Anthropic 发布，SKILL.md 文件夹格式）。content 把开放标准误写成“低代码拖拽平台/500+技能模块/混合推理”，与事实严重不符；定价“团队版$29/月”亦不匹配免费开放标准。"
+    }
+  ]
+}

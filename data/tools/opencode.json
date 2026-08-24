@@ -1,0 +1,157 @@
+{
+  "name": "OpenCode",
+  "slug": "opencode",
+  "positioning": "终端优先+开源、提供商无关：免费AI编程工具怎么用",
+  "auto_positioning": true,
+  "emoji": "💻",
+  "color": "#2563EB",
+  "description": "OpenCode 是由 SST/Anomaly 团队开发的开源 AI 编程智能体（coding agent），采用 MIT 协议、完全免费。它以终端为核心，同时提供桌面应用与 IDE 扩展，支持自带 API Key 接入 75+ 家大模型，能读取/编辑文件、执行命令并自我测试，是 Claude Code / Cursor 的开源替代方案。",
+  "category": "AI编程",
+  "tags": [
+    "开源",
+    "AI编程智能体",
+    "终端TUI",
+    "Provider无关",
+    "MIT"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "约50万月访问",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://opencode.ai",
+  "price": "完全免费开源（MIT）；可选 OpenCode Zen 托管模型按需付费",
+  "platform": "VS Code、JetBrains IDEs、Visual Studio、Neovim",
+  "pros": [
+    "100% 开源免费（MIT），可审计可自托管",
+    "提供商无关，不绑定任何模型厂商",
+    "终端体验优秀，支持桌面端与 IDE 扩展",
+    "自带 Key 或本地模型，代码与上下文隐私友好",
+    "活跃社区，2026 年成为最热门的开源代码 Agent 之一"
+  ],
+  "cons": [
+    "以终端/TUI 为主，纯 GUI 用户需适应",
+    "OpenCode Zen 托管模型按用量计费",
+    "复杂项目分析能力依赖所选模型"
+  ],
+  "features": [
+    "开源、提供商无关（75+ LLM，自带 API Key）",
+    "终端优先（TUI）+ 桌面应用 + IDE 扩展",
+    "内置 build（全权限）与 plan（只读）双代理",
+    "客户端/服务器架构，支持远程驱动",
+    "开箱即用的 LSP 支持",
+    "OpenCode Zen 精选托管模型（可选）"
+  ],
+  "related": [
+    "cursor",
+    "github-copilot",
+    "cline",
+    "qoder",
+    "replit-ai"
+  ],
+  "faq": [
+    {
+      "q": "OpenCode 是免费的吗？",
+      "a": "是的，OpenCode 采用 MIT 协议完全免费开源；你只需为使用的底层模型付费（自带 Key 则零订阅成本），可选 OpenCode Zen 托管模型按用量计费。"
+    },
+    {
+      "q": "OpenCode 支持哪些模型？",
+      "a": "提供商无关，支持 Claude、GPT、Gemini、本地模型等 75+ 家 LLM 提供商，通过 Models.dev 统一接入。"
+    },
+    {
+      "q": "OpenCode 和 Claude Code 有什么区别？",
+      "a": "能力相近，但 OpenCode 100% 开源、不绑定单一厂商，默认可用 LSP，并采用客户端/服务器架构；Claude Code 闭源且绑定 Anthropic。"
+    },
+    {
+      "q": "OpenCode 支持哪些平台？",
+      "a": "以终端 TUI 为主，同时提供桌面应用（macOS/Windows/Linux）与 IDE 扩展，支持远程驱动。"
+    }
+  ],
+  "seo_keywords": [
+    "OpenCode",
+    "OpenCode AI编程助手",
+    "OpenCode vs Copilot",
+    "OpenCode免费版",
+    "OpenCode代码补全"
+  ],
+  "content": "## OpenCode 是什么？\n\nOpenCode 是由 SST/Anomaly 团队开发的开源 AI 编程智能体（coding agent），采用 MIT 协议，完全免费且代码可审计。它以终端（TUI）为主，同时提供桌面应用、IDE 扩展与 CLI，能读取/编辑文件、执行命令并自我测试；强调提供商无关（Provider-agnostic），自带 API Key 即可接入 75+ 家 LLM。\n\nOpenCode 是由 SST/Anomaly 团队开发的开源 AI 编程智能体（coding agent），采用 MIT 协议、完全免费。它以终端为核心，同时提供桌面应用与 IDE 扩展，支持自带 API Key 接入 75+ 家大模型，能读取/编辑文件、执行命令并自我测试，是 Claude Code / Cursor 的开源替代方案。\n\n## 核心功能\n\n- 开源、提供商无关（75+ LLM，自带 API Key）\n- 终端优先（TUI）+ 桌面应用 + IDE 扩展\n- 内置 build（全权限）与 plan（只读）双代理\n- 客户端/服务器架构，支持远程驱动\n- 开箱即用的 LSP 支持\n- OpenCode Zen 精选托管模型（可选）\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | OpenCode 本身完全免费开源（MIT）。可选 OpenCode Zen 托管模型服务（官方精选并基准测试过的编程模型），按需为模型用量付费；也可完全自带 API Key 零订阅成本。无传统「Pro/企业版」月费订阅。 |\n| 支持平台 | 终端 TUI / 桌面应用（macOS、Windows、Linux）/ IDE 扩展 / CLI |\n| 评分 | ⭐ 4.5 |\n| 开发商 | Anomaly Innovations（原 SST / Serverless Stack 团队，@thdxr、@jayair） |\n\n## 价格与平台\n\n- **价格**：OpenCode 本身完全免费开源（MIT）。可选 OpenCode Zen 托管模型服务（官方精选并基准测试过的编程模型），按需为模型用量付费；也可完全自带 API Key 零订阅成本。无传统「Pro/企业版」月费订阅。\n- **平台**：终端 TUI / 桌面应用（macOS、Windows、Linux）/ IDE 扩展 / CLI\n- **官网**：https://opencode.ai\n\n## 优缺点分析\n\n### 优点\n\n- 100% 开源免费（MIT），可审计可自托管\n- 提供商无关，不绑定任何模型厂商\n- 终端体验优秀，支持桌面端与 IDE 扩展\n- 自带 Key 或本地模型，代码与上下文隐私友好\n- 活跃社区，2026 年成为最热门的开源代码 Agent 之一\n\n### 缺点\n\n- 以终端/TUI 为主，纯 GUI 用户需适应\n- OpenCode Zen 托管模型按用量计费\n- 复杂项目分析能力依赖所选模型\n\n## 常见问题（FAQ）\n\n**OpenCode 是免费的吗？**\n\n是的，OpenCode 采用 MIT 协议完全免费开源；你只需为使用的底层模型付费（自带 Key 则零订阅成本），可选 OpenCode Zen 托管模型按用量计费。\n\n**OpenCode 支持哪些模型？**\n\n提供商无关，支持 Claude、GPT、Gemini、本地模型等 75+ 家 LLM 提供商，通过 Models.dev 统一接入。\n\n**OpenCode 和 Claude Code 有什么区别？**\n\n能力相近，但 OpenCode 100% 开源、不绑定单一厂商，默认可用 LSP，并采用客户端/服务器架构；Claude Code 闭源且绑定 Anthropic。\n\n**OpenCode 支持哪些平台？**\n\n以终端 TUI 为主，同时提供桌面应用（macOS/Windows/Linux）与 IDE 扩展，支持远程驱动。\n\n\n## 最终结论\n\nOpenCode 是AI编程领域的一款 AI 工具，其核心优势在于100% 开源免费（MIT），可审计可自托管。\n此外，提供商无关，不绑定任何模型厂商。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-06-26",
+  "published_date": "2026-06-26",
+  "verified_url": "https://opencode.ai",
+  "verified_publisher": "Anomaly Innovations（原 SST / Serverless Stack 团队，@thdxr、@jayair）",
+  "verified_what": "OpenCode 是由 SST/Anomaly 团队开发的开源 AI 编程智能体（coding agent），采用 MIT 协议，完全免费且代码可审计。它以终端（TUI）为主，同时提供桌面应用、IDE 扩展与 CLI，能读取/编辑文件、执行命令并自我测试；强调提供商无关（Provider-agnostic），自带 API Key 即可接入 75+ 家 LLM。",
+  "verified_price": "OpenCode 本身完全免费开源（MIT）。可选 OpenCode Zen 托管模型服务（官方精选并基准测试过的编程模型），按需为模型用量付费；也可完全自带 API Key 零订阅成本。无传统「Pro/企业版」月费订阅。",
+  "verified_platform": "终端 TUI / 桌面应用（macOS、Windows、Linux）/ IDE 扩展 / CLI",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "开源、提供商无关（75+ LLM，自带 API Key）",
+    "终端优先（TUI）+ 桌面应用 + IDE 扩展",
+    "内置 build（全权限）与 plan（只读）双代理",
+    "客户端/服务器架构，支持远程驱动",
+    "开箱即用的 LSP 支持",
+    "OpenCode Zen 精选托管模型（可选）"
+  ],
+  "verified_description": "OpenCode 是由 SST/Anomaly 团队开发的开源 AI 编程智能体（coding agent），采用 MIT 协议、完全免费。它以终端为核心，同时提供桌面应用与 IDE 扩展，支持自带 API Key 接入 75+ 家大模型，能读取/编辑文件、执行命令并自我测试，是 Claude Code / Cursor 的开源替代方案。",
+  "content_flags": "原内容定价与产品形态严重失实：声称「专业版 $19/月、企业版价格较高」的订阅结构并不存在；OpenCode 实为完全免费开源（MIT）的终端优先编程智能体，并非以 IDE 内联补全为主的付费助手。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "站内编辑评分（人气/实用度）",
+  "rating_verified": true,
+  "verified_pros": [
+    "100% 开源免费（MIT），可审计可自托管",
+    "提供商无关，不绑定任何模型厂商",
+    "终端体验优秀，支持桌面端与 IDE 扩展",
+    "自带 Key 或本地模型，代码与上下文隐私友好",
+    "活跃社区，2026 年成为最热门的开源代码 Agent 之一"
+  ],
+  "verified_cons": [
+    "以终端/TUI 为主，纯 GUI 用户需适应",
+    "OpenCode Zen 托管模型按用量计费",
+    "复杂项目分析能力依赖所选模型"
+  ],
+  "verified_faq": [
+    {
+      "q": "OpenCode 是免费的吗？",
+      "a": "是的，OpenCode 采用 MIT 协议完全免费开源；你只需为使用的底层模型付费（自带 Key 则零订阅成本），可选 OpenCode Zen 托管模型按用量计费。"
+    },
+    {
+      "q": "OpenCode 支持哪些模型？",
+      "a": "提供商无关，支持 Claude、GPT、Gemini、本地模型等 75+ 家 LLM 提供商，通过 Models.dev 统一接入。"
+    },
+    {
+      "q": "OpenCode 和 Claude Code 有什么区别？",
+      "a": "能力相近，但 OpenCode 100% 开源、不绑定单一厂商，默认可用 LSP，并采用客户端/服务器架构；Claude Code 闭源且绑定 Anthropic。"
+    },
+    {
+      "q": "OpenCode 支持哪些平台？",
+      "a": "以终端 TUI 为主，同时提供桌面应用（macOS/Windows/Linux）与 IDE 扩展，支持远程驱动。"
+    }
+  ],
+  "verified_tags": [
+    "开源",
+    "AI编程智能体",
+    "终端TUI",
+    "Provider无关",
+    "MIT"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://opencode.ai",
+    "https://github.com/sst/opencode",
+    "https://nerdleveltech.com/opencode-open-source-ai-coding-agent-explained"
+  ],
+  "verify_notes": "官方域名 opencode.ai 核实有效（即 SST/Anomaly 开源 OpenCode 的官网，桌面端下载位于 opencode.ai/download）。原 tools.json 将 OpenCode 描述为「免费版+专业版 $19/月、企业版价格较高」的 IDE 编程助手，与真实产品严重不符：OpenCode 实为 100% 免费开源、终端优先的 coding agent，无 $19/月 Pro 订阅。已提供 corrected_content 全量重写。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "OpenCode 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：OpenCode 的 开源、提供商无关（75+ LLM，自带 API Key） 是亮点，价格 完全免费开源（MIT）；可选 OpenCode Zen 托管模型按需付费；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

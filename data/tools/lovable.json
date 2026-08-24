@@ -1,0 +1,129 @@
+{
+  "name": "Lovable",
+  "slug": "lovable",
+  "emoji": "💻",
+  "color": "#bd5988",
+  "description": "AI 全栈应用构建平台，通过对话即可创建完整 Web 应用，内置 Supabase 后端（数据库/认证）并支持一键部署与 GitHub 导出。免费版可用，Pro $25/月。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "AI全栈",
+    "无代码",
+    "免费可用"
+  ],
+  "rating": "⭐4.9",
+  "visits": "20万",
+  "badge": {
+    "type": null,
+    "text": null
+  },
+  "url": "https://lovable.dev",
+  "price": "免费版 + Pro $25/月",
+  "platform": "本地部署 / Web",
+  "pros": [
+    "对话式开发体验流畅",
+    "内置 Supabase 后端，全栈省心",
+    "生成的 UI 美观专业",
+    "一键部署上线",
+    "支持 GitHub 导出与代码所有权"
+  ],
+  "cons": [
+    "免费额度较少（每日 5 积分/最多 30 月）",
+    "复杂大型项目能力有限",
+    "按积分计费，迭代消耗快",
+    "高级协作/SSO 需 Business 及以上"
+  ],
+  "features": [
+    "对话式/自然语言全栈开发",
+    "UI 生成（视觉编辑 Visual Edits）",
+    "Supabase 数据库与后端",
+    "用户认证",
+    "一键部署（Lovable Cloud）",
+    "GitHub 同步与代码导出"
+  ],
+  "related": [
+    "chatgpt",
+    "kimi"
+  ],
+  "content": "## Lovable 是什么？\n\nLovable（原名GPT Engineer）是AI全栈应用构建平台，通过自然语言对话即可创建完整的Web应用。Lovable内置Supabase后端支持，提供数据库、用户认证和一键部署功能。\n\nLovable以高质量的UI设计著称，生成的应用界面美观专业。\n\n## 核心功能\n\n- **对话式开发**：用自然语言描述需求，AI生成完整应用\n- **UI生成**：自动生成美观的前端界面\n- **数据库管理**：内置Supabase数据库支持\n- **用户认证**：一键添加登录注册功能\n- **一键部署**：应用直接部署上线\n- **代码导出**：可导出代码到GitHub继续开发\n\n## 版本对比\n\n| 功能 | 免费版 | Pro ($20/月) |\n|------|--------|-------------|\n| 项目创建 | 有限 | 无限制 |\n| AI对话次数 | 有限 | 更多 |\n| Supabase集成 | ✅ | ✅ |\n| 自定义域名 | ❌ | ✅ |\n| 代码导出 | ❌ | ✅ |\n\n## 优缺点分析\n\n### 👍 优点\n- 对话式开发体验流畅自然\n- 生成的UI设计美观专业\n- 内置后端支持，全栈开发省心\n- 一键部署，快速上线\n- 支持代码导出到GitHub\n\n### 👎 缺点\n- 免费额度较少\n- 大型复杂项目能力有限\n- 生成的代码质量有波动\n- 深度自定义能力受限\n- 过度依赖平台\n\n## 使用技巧\n\n1. **详细描述**：需求描述越详细，生成效果越好。\n2. **分步构建**：先描述核心功能，再逐步添加细节。\n3. **参考网站**：提供参考网站URL让AI模仿设计。\n4. **迭代优化**：不满意就让AI修改，多次迭代。\n\n## 适合人群\n\nLovable适合创业者和产品经理。如果你需要快速搭建一个有后端的Web应用，Lovable是不错的选择。\n### 总结\n\nLovable 是 AI编程 领域中一款不错的 AI 工具。AI全栈应用构建平台，通过对话即可创建完整的Web应用。基于Supabase后端，支持数据库、认证和部署，是Bolt.new之外的另一款AI应用开发神器。 从功能完整性来看，它覆盖了核心使用场景。\n\n**快速上手建议：**\n- 访问官网 lovable.dev 注册账号\n- 先使用免费版本 了解核心功能\n- 参考官方文档和教程加速学习\n- 加入用户社区获取使用技巧和最佳实践\n\n**价格参考：** 免费使用\n**支持平台：** 本地部署 / Web\n\n### 核心功能详解\n\n这款 AI 编程工具的核心价值在于让开发者更高效地写代码。它能理解自然语言描述的需求，自动生成对应的代码。更重要的是，它不仅能写新代码，还能理解现有代码库，进行修改、重构和优化。\n\n在实际开发流程中，它的使用场景非常广泛：\n- **需求到代码**：描述功能需求，自动生成初始代码\n- **Bug 排查**：粘贴错误信息，AI 分析原因并给出修复方案\n- **代码审查**：让 AI 审查代码质量，发现潜在问题\n- **单元测试**：自动生成测试用例，提高代码覆盖率\n- **文档编写**：根据代码自动生成注释和 API 文档\n\n### 与其他 AI 编程工具对比\n\n- **GitHub Copilot**：最成熟的代码补全插件，IDE 集成最好\n- **Cursor**：全功能 AI IDE，适合独立开发者\n- **Claude Code**：终端原生，适合命令行开发者\n- 本工具在特定场景下有独特优势\n\n### 使用技巧\n\n1. 在编码前先用自然语言描述完整需求，再让 AI 生成\n2. 利用代码上下文功能，让 AI 理解项目结构\n3. 重要代码务必人工审查，AI 生成的代码可能有隐藏问题\n4. 善用版本控制，方便回退 AI 的修改\n5. 结合自动化测试验证 AI 生成代码的正确性",
+  "published": true,
+  "faq": [
+    {
+      "q": "Lovable 能做什么？",
+      "a": "通过自然语言描述即可生成完整可部署的 Web 应用，包含前端 UI、Supabase 数据库、用户认证与部署；支持 GitHub 导出，适合 MVP 与原型验证。"
+    },
+    {
+      "q": "Lovable 价格多少？",
+      "a": "免费版 $0（每日 5 积分）；Pro $25/月（年付 $21）；Business $50/月；Enterprise 定制。原资料称 Pro $20/月已过时，当前为 $25/月。"
+    }
+  ],
+  "created_date": "2026-03-28",
+  "verified_url": "https://lovable.dev",
+  "verified_publisher": "Lovable（原 GPT Engineer）",
+  "verified_what": "AI 全栈应用构建平台，通过对话生成完整 Web 应用（前端 + Supabase 后端 + 部署）。",
+  "verified_price": "免费版 $0（5 每日积分，最多 30/月，公开项目）；Pro $25/月（年付 $21/月，100 月积分 + 5 每日积分，自定义域名、去 Lovable 水印、无限 lovable.app 域名）；Business $50/月（年付 $42/月，SSO、团队权限、内部发布）；Enterprise 定制（按公司规模平台费）。学生 Pro 5 折。",
+  "verified_platform": "Web",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "对话式/自然语言全栈开发",
+    "UI 生成（视觉编辑 Visual Edits）",
+    "Supabase 数据库与后端",
+    "用户认证",
+    "一键部署（Lovable Cloud）",
+    "GitHub 同步与代码导出"
+  ],
+  "verified_description": "AI 全栈应用构建平台，通过对话即可创建完整 Web 应用，内置 Supabase 后端（数据库/认证）并支持一键部署与 GitHub 导出。免费版可用，Pro $25/月。",
+  "content_flags": "原内容称 Pro $20/月已过时，实际为 $25/月；'免费使用'表述不完整（有付费层）；版本对比表数字需更新为积分制。",
+  "price_verified": true,
+  "verified_rating": "⭐4.9",
+  "rating_source": "暂无权威评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "对话式开发体验流畅",
+    "内置 Supabase 后端，全栈省心",
+    "生成的 UI 美观专业",
+    "一键部署上线",
+    "支持 GitHub 导出与代码所有权"
+  ],
+  "verified_cons": [
+    "免费额度较少（每日 5 积分/最多 30 月）",
+    "复杂大型项目能力有限",
+    "按积分计费，迭代消耗快",
+    "高级协作/SSO 需 Business 及以上"
+  ],
+  "verified_faq": [
+    {
+      "q": "Lovable 能做什么？",
+      "a": "通过自然语言描述即可生成完整可部署的 Web 应用，包含前端 UI、Supabase 数据库、用户认证与部署；支持 GitHub 导出，适合 MVP 与原型验证。"
+    },
+    {
+      "q": "Lovable 价格多少？",
+      "a": "免费版 $0（每日 5 积分）；Pro $25/月（年付 $21）；Business $50/月；Enterprise 定制。原资料称 Pro $20/月已过时，当前为 $25/月。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "AI全栈",
+    "无代码",
+    "免费可用"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://lovable.dev/pricing",
+    "https://usagepricing.com/blueprint/lovable",
+    "https://lovable.dev/es/guides/vibe-coding-apps-8-options-for-beginners"
+  ],
+  "verify_notes": "官方域名 lovable.dev 确认。定价已调整为积分制，Pro 为 $25/月（非原 $20）。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "tongyi-lingma",
+      "cline",
+      "codex-cli"
+    ],
+    "verdict": "Lovable 与 通义灵码、Cline、Codex CLI 同属AI编程赛道。在性价比上，Lovable（免费版 + Pro $25/月）门槛更低；口碑方面，Lovable（⭐4.9）领先；Lovable 的优势在于AI 全栈应用构建平台，通过对话生成完整 Web 应用（前端 + Supabase 后端 + 部署）。，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

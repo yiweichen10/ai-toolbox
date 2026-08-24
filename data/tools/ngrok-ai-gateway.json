@@ -1,0 +1,92 @@
+{
+  "name": "ngrok AI Gateway",
+  "slug": "ngrok-ai-gateway",
+  "positioning": "ngrok 推出的托管式 AI 网关（ngrok.ai），用一个 key 一个 URL 统一路由 OpenAI、Anthropic 与自托管模型，内置可观测性、访问控制与故障回退。",
+  "auto_positioning": false,
+  "emoji": "🔀",
+  "color": "#6B46C1",
+  "description": "ngrok AI Gateway（ngrok.ai）是 ngrok 在 2026 年 8 月推出的托管式 AI 网关，于 8 月 5 日登上 Product Hunt 当日第 4 名。它解决“多模型混用时代每家一个 key、一套配置”的接入痛点：给你一个托管网关和一把访问密钥，把 OpenAI、Anthropic、自托管模型以及你自己硬件上跑的模型统一到一个 URL 下路由，私有模型通过 ngrok 网络接入而无需暴露公网。",
+  "category": "AI开发",
+  "tags": [
+    "AI网关",
+    "多模型路由",
+    "可观测性",
+    "OpenAI",
+    "Anthropic",
+    "故障回退"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "Product Hunt #4"
+  },
+  "url": "https://ngrok.ai/",
+  "price": "免费起步，按需计费（具体定价以官网为准）",
+  "platform": "Web / API（云端托管）",
+  "pros": [
+    "一个 URL 统一路由 OpenAI、Anthropic 与自托管模型，无需重写应用",
+    "私有模型接入而不暴露到公网，安全性更好",
+    "统一可观测：token、延迟、错误、成本集中到一个面板",
+    "按应用/开发者签发访问密钥，细粒度控制可调用的供应商与模型",
+    "内置故障回退，模型或 key 失败时自动切到健康备援"
+  ],
+  "cons": [
+    "把模型流量又多托付给一层中间件，引入额外依赖",
+    "用量计费需要持续盯紧，避免账单失控",
+    "产品较新（2026 年 8 月刚发布），长期稳定性有待观察"
+  ],
+  "features": [
+    "统一 URL 路由：把 SDK 指向 gateway.ngrok.ai 即可在多家模型间切换",
+    "私有模型接入：本地 GPU / 内网模型经 ngrok 网络接入，不开端口不暴露公网",
+    "用量可观测：token、延迟、错误、模型、供应商与预估成本一屏掌握",
+    "访问控制：按应用或开发者签发独立密钥并限定可调用的模型",
+    "故障回退：定义模型列表，失败时自动尝试下一个健康备援",
+    "兼容 OpenAI / Anthropic / Vercel AI 等主流 SDK"
+  ],
+  "related": [
+    "openai",
+    "langchain",
+    "vllm"
+  ],
+  "content": "## ngrok AI Gateway 是什么？\n\nngrok AI Gateway（ngrok.ai）是 ngrok 在 2026 年 8 月推出的托管式 AI 网关，于 8 月 5 日登上 Product Hunt 当日第 4 名。它解决的是“多模型混用时代每家一个 key、一套配置”的接入痛点：给你一个托管网关和一把访问密钥，把 OpenAI、Anthropic、自托管模型以及你自己硬件上跑的模型统一到一个 URL 下路由。你的私有模型通过 ngrok 网络接入，既能和托管模型并列调度，又不必暴露到公网。\n\n## 核心功能\n\n1. 统一 URL 路由：把 SDK 指向 gateway.ngrok.ai，即可在 OpenAI、Anthropic、自托管模型间切换，无需重写应用。\n2. 私有模型接入：把跑在笔记本、本地 GPU 或私有网络上的模型接进来，不开端口、不暴露公网。\n3. 用量可观测：在一个面板追踪 token、延迟、错误、模型、供应商与预估成本，告别多个 provider 仪表盘来回切。\n4. 访问控制：按应用或开发者签发独立访问密钥，限定每个密钥可调用的供应商与模型。\n5. 故障回退：定义模型列表，当某个模型或 key 失败时自动尝试下一个健康备援。\n\n## 版本/套餐对比\n\nngrok AI Gateway 提供免费起步的托管层（可自带 OpenAI/Anthropic key，或用 ngrok 额度代发请求）；具体付费档位与额度以官网为准，本页不臆测价格。\n\n## 值不值得用？\n\n对已经在 juggling 多个 provider key、又不想自己搭一套网关的团队，ngrok.ai 几乎是降维打击——它把“模型路由 + 私有连通 + 可观测 + 回退”打包成基础设施，而不是又一个要维护的内部项目。代价是你把模型流量又多托付给一层中间件，用量计费需要盯紧，且产品本身较新。\n\n## 使用建议\n\n先把所有 provider key 收拢到 ngrok.ai 的一个网关下；用独立密钥给不同应用/开发者做权限隔离；在网关层配好回退顺序；把用量面板接进现有监控。它尤其适合“模型策略频繁变动”的阶段，用来吸收变化而不动应用代码。\n\n## 适合谁用？\n\n- 平台 / 基础设施团队：不想每次换模型都重搭一套网关。\n- 跑私有模型的开发者：需要把本地/内网模型安全接进生产。\n- 多模型策略团队：要在 OpenAI、Anthropic 与自托管之间灵活切换者。",
+  "published": true,
+  "faq": [
+    {
+      "question": "ngrok AI Gateway 和普通 AI 网关有什么不同？",
+      "answer": "它依托 ngrok 已有的网络能力，强调“私有模型不暴露公网”的安全接入，同时把路由、可观测、访问控制与回退做成开箱即用的托管层，而非需要自建的组件。"
+    },
+    {
+      "question": "可以自带模型 key 吗？",
+      "answer": "可以。你既能用 ngrok 的额度代发请求，也能带入自己的 OpenAI、Anthropic 或自定义 provider key，只把 ngrok.ai 当作统一入口与可观测层。"
+    },
+    {
+      "question": "它兼容哪些 SDK？",
+      "answer": "ngrok.ai 兼容 OpenAI、Anthropic、Vercel AI 等主流 SDK，把端点指向 gateway.ngrok.ai 即可，无需为切换模型重写应用。"
+    },
+    {
+      "question": "私有模型是怎么接入的？",
+      "answer": "私有模型通过 ngrok 网络接入网关，运行在笔记本、本地 GPU 或私有网络上，对外不需要开端口或暴露公网地址。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "ngrok AI Gateway",
+    "AI网关",
+    "多模型路由",
+    "LLM网关",
+    "AI可观测性"
+  ],
+  "source_urls": [
+    "https://ngrok.ai/",
+    "https://ngrok.com/",
+    "https://www.hunted.space/product/ngrok-ai-gateway",
+    "https://ainativefoundation.org/ai-native-product-insights-2026w32"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-18"
+}

@@ -1,0 +1,94 @@
+{
+  "name": "Cloudflare OS",
+  "slug": "cloudflare-os",
+  "positioning": "Cloudflare OS是什么_开源AI操作系统_企业Agent工作空间",
+  "auto_positioning": false,
+  "emoji": "☁️",
+  "color": "#F38020",
+  "description": "Cloudflare 在 2026 年 8 月「Agents Week」开源发布的 AI 操作系统（Apache 2.0），给每位员工分配一个 Agent 和工作空间，围绕企业自身语境、工具和规则定制。不是内核意义的 OS，而是 Agent 工作空间 + 治理层 + 可修改应用的组合。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "开源项目"
+    },
+    {
+      "text": "企业Agent"
+    },
+    {
+      "text": "免费可用",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "PH当日第一"
+  },
+  "url": "https://github.com/cloudflare/cloudflare-os",
+  "price": "价格暂未公开",
+  "platform": "Web",
+  "pros": [
+    "开源（Apache 2.0）可自托管，避免被单一闭源平台锁定",
+    "把「Agent 作为原语」重构企业工作方式的思路清晰",
+    "与 Cloudflare Computer（运行环境）、Wallets（支付）形成完整 Agent 基建栈",
+    "企业可按自身环境、工具与规则塑形",
+    "Cloudflare 自家已数千员工每日使用，有真实落地验证"
+  ],
+  "cons": [
+    "项目很新（2026 年 8 月发布），文档与稳定性仍在演进",
+    "深度使用依赖 Cloudflare 自家基础设施（Workers / Durable Objects）",
+    "作为自托管平台需要一定的运维能力"
+  ],
+  "features": [
+    "Agent 工作空间：从浏览器对话起步，每次对话扎根于组织沉淀的语境与技能",
+    "安全与治理层：通过治理框架接入内部数据，可控、可审计",
+    "可修改应用：Agent 能构建小应用，员工分享并持续修改",
+    "企业级定制：公司可围绕自身环境、工具与规则塑形",
+    "开源可自托管：Apache 2.0，代码托管于 GitHub（cloudflare/cloudflare-os）",
+    "员工级 Agent：给每位员工分配一个 Agent 与适配的工作区"
+  ],
+  "related": [
+    "claude",
+    "openai",
+    "coze"
+  ],
+  "content": "## Cloudflare OS 是什么？\nCloudflare OS 是 Cloudflare 在 2026 年 8 月 5 日「Agents Week」开源发布的 AI 操作系统（Apache 2.0），目标是「为你的公司构建 AI 操作系统」。它不是一个内核意义上的 OS，而是一个围绕企业自身语境、工具和规则定制的 Agent 工作空间：给每位员工分配一个 Agent 和与之适配的工作区，Agent 能在隔离运行时里写代码、通过治理框架访问内部数据、并构建可分享可迭代的小应用。Cloudflare 自己从 5 月起就把初版给到每位员工试用，到 8 月已有数千人每天用它做文档、幻灯片、事务自动化和内部工具。\n\n## 核心功能\n1. Agent 工作空间：从浏览器对话起步，但每次对话都扎根于组织沉淀的语境与技能。\n2. 安全与治理层：通过治理框架接入内部数据，可控、可审计。\n3. 可修改应用：Agent 能构建小应用，员工分享并持续修改。\n4. 企业级定制：公司可围绕自身环境、工具与规则塑形。\n5. 开源可自托管：Apache 2.0，代码托管于 GitHub（cloudflare/cloudflare-os）。\n\n## 版本/套餐对比\n本项目为开源软件，以自托管为主，无商业付费套餐层级；Cloudflare 在其底层 Workers / Durable Objects 等基础设施上提供相应云服务（具体以 Cloudflare 官网为准）。\n\n## 值不值得用？\n优点：把「Agent 作为原语」重构企业工作方式的思路清晰，开源可自托管避免被单一闭源平台锁定；与同周的 Cloudflare Computer（运行环境）、Cloudflare Wallets（支付）形成完整 Agent 基建栈。缺点：项目很新，文档与稳定性仍在演进；深度使用依赖 Cloudflare 自家基础设施。结论：想研究或自托管企业 Agent 工作空间，值得关注与试用。\n\n## 使用建议\n从官方仓库拉取，先在小范围团队试点工作空间与技能沉淀，再评估是否接入内部数据与 Cloudflare 云底座。关注 Hacker News 与仓库更新节奏，区分预览能力与生产能力。\n\n## 适合谁用？\n- 推荐：希望自托管企业 Agent 平台、已在用 Cloudflare 基础设施的技术团队。\n- 可考虑：想理解「Agent 操作系统」范式的研究者与企业 IT。\n- 不推荐：想要开箱即用 SaaS、不愿自建与运维的组织。",
+  "published": false,
+  "faq": [
+    {
+      "question": "Cloudflare OS 是一个真正的操作系统吗？",
+      "answer": "不是内核意义的 OS。它更像一个开源的 Agent 工作空间平台：从浏览器对话起步，每次对话扎根于组织沉淀的语境与技能，Agent 能在隔离运行时写代码、访问内部数据并构建可分享的小应用。"
+    },
+    {
+      "question": "它是开源的吗？",
+      "answer": "是。Cloudflare OS 以 Apache 2.0 协议开源，代码托管在 github.com/cloudflare/cloudflare-os，可自托管。"
+    },
+    {
+      "question": "和 Cloudflare Computer、Wallets 是什么关系？",
+      "answer": "三者同属 Cloudflare 的 Agent 基建组合：OS 是工作空间与治理层，Computer 负责给 Agent 提供虚拟电脑（运行环境），Wallets 负责可编程支付（花钱能力）。"
+    },
+    {
+      "question": "适合普通小公司直接用吗？",
+      "answer": "目前更适合有技术团队、愿意自托管与运维的组织。想要开箱即用 SaaS 的团队建议再观望其成熟度与文档完善度。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Cloudflare OS",
+    "Cloudflare OS怎么样",
+    "Cloudflare OS免费版",
+    "Cloudflare OS使用教程",
+    "Cloudflare OS和哪个好"
+  ],
+  "source_urls": [
+    "https://github.com/cloudflare/cloudflare-os",
+    "https://clauday.com/article/2b067dc2-6a0a-4317-baf7-3e5838c6dcd8",
+    "https://producthunt.programnotes.cn/en/p/product-hunt-daily-2026-08-07"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

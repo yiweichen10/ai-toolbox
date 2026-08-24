@@ -1,0 +1,153 @@
+{
+  "name": "Softr AI",
+  "slug": "softr-ai",
+  "positioning": "生成业务逻辑+双模式：免费AI开发工具怎么用",
+  "auto_positioning": true,
+  "emoji": "🛠️",
+  "color": "#3B82F6",
+  "description": "Softr AI 是 Softr 推出的 AI 应用生成器，面向业务团队，通过自然语言一次性生成包含界面、数据库与业务逻辑的门户、内部工具等 Web 应用，无需编写代码。",
+  "category": "AI开发",
+  "tags": [
+    {
+      "text": "无代码"
+    },
+    {
+      "text": "应用生成"
+    },
+    {
+      "text": "Airtable集成",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.softr.io/ai-app-generator",
+  "price": "Free 0 美元；Basic 19 美元/月（年付，月付 25）；Pro 99 美元/月（年付，月付 119）；Business 329 美元/月（年付，月付 395）；Enterprise 定制",
+  "platform": "Web",
+  "pros": [
+    "无需编码即可构建功能完整的Web应用",
+    "支持Airtable、Google Sheets等常见数据源",
+    "内置AI辅助生成页面内容与布局",
+    "丰富的模板库，快速启动MVP",
+    "支持用户认证、权限管理等功能"
+  ],
+  "cons": [
+    "复杂业务逻辑和自定义交互支持有限",
+    "自定义CSS/JS能力较弱",
+    "免费版功能受限，高级功能需要付费"
+  ],
+  "features": [
+    "AI 一次性生成完整应用：页面、布局、用户流程与界面",
+    "自动创建并组织数据库（字段、关系与结构）",
+    "生成业务逻辑：用户操作、权限与自动化工作流",
+    "双模式：AI 生成与可视化编辑自由切换，支持 vibe coding",
+    "内置登录认证（邮箱/密码、魔法链接、Google、SSO）与权限分组"
+  ],
+  "related": [
+    "glide-ai",
+    "retool-ai",
+    "webflow-ai"
+  ],
+  "faq": [
+    {
+      "question": "Softr AI 是什么？",
+      "answer": "Softr AI 是 Softr 无代码平台内的 AI 功能，用户通过自然语言描述即可生成应用页面、组件和逻辑，无需编写代码。"
+    },
+    {
+      "question": "Softr AI 免费吗？",
+      "answer": "Softr 提供免费版，但功能有限制（如应用数量、数据记录数等）。AI 功能在免费版中可能有一定使用额度，完整功能需要订阅付费计划。"
+    },
+    {
+      "question": "Softr AI 与 Bubble 相比如何？",
+      "answer": "Softr AI 更注重快速搭建数据驱动的门户和内部工具，学习曲线更低；Bubble 提供更强大的自定义逻辑，但复杂度也更高。"
+    },
+    {
+      "question": "Softr AI 支持哪些数据源？",
+      "answer": "支持 Airtable、Google Sheets、HubSpot、Salesforce 等常见数据源，也可通过 API 或 Zapier 连接更多服务。"
+    }
+  ],
+  "seo_keywords": [
+    "Softr AI",
+    "Softr AI怎么样",
+    "Softr AI免费版",
+    "Softr AI使用教程",
+    "Softr AI和哪个好"
+  ],
+  "content": "## Softr AI是什么？\n\n简单说，Softr AI 是 Softr 这个无代码平台里自带的一个智能助手。你不需要写任何代码，只要用自然语言告诉它“我想做一个客户管理后台”，它就能帮你生成页面、列表、表单这些基础模块，再连上你的 Airtable 或 Google Sheets 数据，一个能用的 Web 应用就搭起来了。\n\n如果你用过 Bubble 或 Webflow 这类工具，会觉得 Softr 更轻量——它不是为了做复杂系统，而是帮助快速落地一个 MVP（最小可行产品）、一个会员门户、或者一个内部工具。AI 的角色就是把“拖拽组件”这件事变成了“打字描述”，省去你熟悉布局和控件的时间。对于非技术背景的人来说，这个体验挺友好的。\n\n## 核心功能\n\n**1. AI 生成应用组件**  \n输入一句话，比如“添加一个显示近期订单的列表”，AI 就会生成一个带数据绑定的列表组件，你只需要确认数据源和字段映射。实际感受是：对于标准场景（列表、表单、图表）很省事，但遇到特殊布局还是要自己手动调整。\n\n**2. 数据连接器**  \n支持 Airtable、Google Sheets、HubSpot、Notion 等常见数据源。这是 Softr 的核心卖点——你的数据可以继续留在原来的地方，Softr 作为一个“展示层”来读取和写入。好处是不用迁移数据，坏处是实时同步有时会有延迟，特别是 Google Sheets 变化频繁时。\n\n**3. 内置用户认证与权限管理**  \n支持邮箱/Google 登录、角色权限（管理员、编辑者、普通用户等）。对于企业门户或客户面板来说，这个功能很实用，开箱即用，不需要额外配置后端。\n\n**4. 响应式页面设计**  \n生成的页面默认适配移动端，但细节上（比如间距、字体大小）偶尔需要微调。整体来说，对于展示型页面够用，对像素级设计要求高的场景会有点受限。\n\n**5. 第三方集成（Zapier、Stripe 等）**  \n可以连 Zapier 做自动化，或者接入 Stripe 收付款。这意味着你可以在 Softr 上搭一个带支付功能的会员系统或课程平台，门槛很低。\n\n## 版本/套餐对比\n\n| 版本       | 用户数 | 数据源限制 | AI 功能可用性 | 价格说明 |\n|-----------|--------|------------|--------------|----------|\n| 免费版     | 有限   | 1个数据源  | 有次数限制   | 免费      |\n| 专业版     | 更多   | 多个数据源 | 无限使用     | 按年/月付费 |\n| 商业版     | 更多   | 无限       | 无限制       | 需订阅    |\n| 企业版     | 自定义 | 自定义     | 无限制       | 联系销售  |\n\n> 具体价格因市场活动变化，暂不公开详细数字。建议直接访问官网查看当前定价，通常提供 14 天免费试用。\n\n## 值不值得用？\n\n**优点**  \n- 真的不需要写代码，甚至不需要懂 HTML/CSS。\n- 和 Airtable、Google Sheets 配合无缝，适合已有数据结构的团队。\n- AI 生成初稿的效率很高，尤其是做原型和 MVP 时。\n- 模板库丰富，从 CRM 到招聘门户都有，节省从零开始的时间。\n\n**缺点**  \n- 复杂业务逻辑搞不定，比如多步骤审批流、复杂的条件分支，还是得靠 Zapier 或外部系统兜底。\n- 自定义 CSS/JS 能力很弱，想改个按钮样式都得靠预设主题。设计自由度远不如 Webflow。\n- 免费版功能阉割明显，数据源只能连一个，AI 调用次数有限，适合尝鲜但不适合正式使用。\n- 响应式在个别复杂组件上表现一般，需要手动调。\n\n**总体结论：** 如果你是做轻量级 Web 应用、内部工具、客户门户，而且数据已经躺在 Airtable 或 Sheets 里，Softr AI 是一个高效且低成本的选择。但如果你想做大流量、高复杂度、极致定制化的产品，它不太合适。\n\n## 使用建议\n\n1. **先连数据源，再让 AI 生成**。让 AI 知道你有哪些表、字段关系，生成的结果会更准确。空数据源下 AI 只能猜，效果打折扣。\n2. **使用模板快速启动**。官网有几十个模板（比如：会员中心、任务管理、招聘门户），基于模板修改比从空白页开始快很多。\n3. **注意数据源的性能**。如果数据行数超过 5 万，或者有大量并发读写，建议先做压力测试，或者考虑用 Airtable 的付费版优化查询速度。\n4. **利用 AI 生成初稿，然后手工微调**。AI 做的布局不一定完美，但省了你拖组件的时间。调整时多用“重复区域”和“条件可见性”两个功能，能解决大部分定制需求。\n5. **付费前先算好用户数**。Softr 按活跃用户计费，如果你的应用面向内部 20 人团队，免费版可能够用；如果是面向公众的 500 人注册，建议直接上专业版。\n\n## 适合谁用？\n\n**推荐**  \n- 非技术创业者/产品经理：想快速验证一个 Web 应用想法，搭出 MVP 给用户或投资人看。\n- 中小企业运营/HR/项目经理：需要内部工具（如任务看板、客户管理）但公司没有开发资源。\n- 已有 Airtable/Google Sheets 数据的团队：想把这些数据做成可交互的网页界面。\n\n**可考虑**  \n- 独立开发者/自由职业者：想快速给客户交付一个轻量级门户，Softr 能大幅缩短工期。\n- 教育机构/博主：搭建会员课程平台或资料下载站，结合支付集成很方便。\n\n**不推荐**  \n- 需要深度定制 UI 或复杂业务逻辑的项目（如电商后台、多团队协作系统）。\n- 对页面加载速度、SEO 有极致要求的大型网站。\n- 已经有成熟技术团队，追求完全自控和扩展性的公司。",
+  "published": false,
+  "source_url": "https://www.softr.io/ai-app-generator",
+  "last_verified": "2026-08-16",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://www.softr.io/ai-app-generator",
+  "verified_publisher": "Softr (Softr Studio Inc.)",
+  "verified_what": "Softr 推出的 AI 应用生成器，用自然语言一次性生成含界面、数据库与业务逻辑的无代码 Web 应用。",
+  "verified_price": "免费版 $0/月（无限应用、10 名用户、5 AI credits）；付费档：Starter $29/月、Professional $79/月、Business $199/月（年付价更低），Enterprise 定制。注：官网博客另提及 2026 新档位 Basic $49/Professional $139/Business $269，与定价页有出入，以官方定价页为准。",
+  "verified_platform": "Web，可发布为 PWA（iOS/Android）",
+  "verified_features": [
+    "AI Co-Builder：用自然语言描述即可生成含数据库与业务逻辑的应用",
+    "Vibe Coding：用提示生成自定义 UI 组件，继承应用权限与数据源",
+    "原生 Softr Databases 与 17+ 数据源集成（Airtable、Google Sheets、Notion、SQL 等）",
+    "细粒度权限与用户组、可选 SSO、内置登录认证",
+    "内置工作流自动化与 100+ 模板库"
+  ],
+  "verified_description": "Softr AI 是 Softr 推出的 AI 应用生成器，面向业务团队，通过自然语言一次性生成包含界面、数据库与业务逻辑的门户、内部工具等 Web 应用，无需编写代码。",
+  "content_flags": "长文版本/价格对比未列出具体价格（现官网已公开 Starter $29 等档位），略有陈旧；其余内容基本准确。",
+  "verified_rating": "⭐4.5（编辑评分）",
+  "rating_source": "编辑评分（站内综合判断，无独立第三方权威评分核查）",
+  "verified_pros": [
+    "无需编码即可构建功能完整的Web应用",
+    "支持Airtable、Google Sheets等常见数据源",
+    "内置AI辅助生成页面内容与布局",
+    "丰富的模板库，快速启动MVP",
+    "支持用户认证、权限管理等功能"
+  ],
+  "verified_cons": [
+    "复杂业务逻辑和自定义交互支持有限",
+    "自定义CSS/JS能力较弱",
+    "免费版功能受限，高级功能需要付费"
+  ],
+  "verified_faq": [
+    {
+      "q": "Softr AI 是什么？",
+      "a": "Softr AI 是 Softr 无代码平台内的 AI 功能，用户通过自然语言描述即可生成应用页面、组件和逻辑，无需编写代码。"
+    },
+    {
+      "q": "Softr AI 免费吗？",
+      "a": "Softr 提供免费版（含一定 AI credits 与应用/用户额度），AI 功能在免费版中有额度限制，完整功能需要订阅付费计划。"
+    },
+    {
+      "q": "Softr AI 与 Bubble 相比如何？",
+      "a": "Softr AI 更注重快速搭建数据驱动的门户和内部工具，学习曲线更低；Bubble 提供更强大的自定义逻辑，但复杂度也更高。"
+    },
+    {
+      "q": "Softr AI 支持哪些数据源？",
+      "a": "支持 Airtable、Google Sheets、HubSpot、Salesforce、Notion、SQL 等常见数据源，也可通过 REST API 或 Zapier 连接更多服务。"
+    }
+  ],
+  "verified_tags": [
+    "无代码",
+    "应用生成",
+    "Airtable集成"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://docs.softr.io/workspace-and-billing/pricing-and-plans",
+    "https://www.softr.io/ai-app-generator"
+  ],
+  "verify_notes": "定价页与 2026 博客档位数字不一致，已以官方定价页为主并标注差异。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Softr AI 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Softr AI 的 AI 一次性生成完整应用：页面、布局、用户流程与界面 是亮点，价格 提供免费版，付费计划价格以官网为准；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

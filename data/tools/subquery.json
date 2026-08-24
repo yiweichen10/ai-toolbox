@@ -1,0 +1,80 @@
+{
+  "slug": "subquery",
+  "name": "SubQuery",
+  "emoji": "🔍",
+  "color": "#8B5CF6",
+  "description": "已从去中心化索引转向 AskSubQuery，用户用自然语言查询 300+ 条链的区块链数据，由 GraphQLAgent MCP 驱动。",
+  "price": "SQT 代币；AskSubQuery 提供免费额度，SQT 质押可获每日免费查询额度，超出按量付费，具体以官网为准。",
+  "platform": "Web / API",
+  "content": "## 是什么\nSubQuery 成立于 2021 年，曾是多链去中心化索引协议，现已转向 AI 数据层：旗舰产品 AskSubQuery 让任何人用自然语言查询 300+ 条链的区块链数据。\n\n## 核心特点\n- 自然语言查询：无需写 GraphQL 或看 schema，像聊天一样提问即可。\n- GraphQLAgent MCP：把 SubQuery 与 The Graph 数据源接入 AI 智能体，实现 AI 原生查询。\n- 多链覆盖：支持 300+ 网络，包括以太坊、Solana、Polkadot。\n- 开发者工具：SDK、MCP 集成与 Hermes 子网（Bittensor SN82）辅助开发。\n\n## 技术原理\nAskSubQuery 背后是 OpenAI 模型、LangChain 编排与深度区块链知识的结合。AI 自动分析项目 schema、理解实体关系并生成 GraphQL 查询，执行后解释结果。SQT 质押者可获每日免费查询额度。\n\n## 价格与收费\nSQT 为 ERC-20 代币，部署于以太坊与 Base。平台提供免费额度，SQT 质押可获得每日免费查询，超出按量付费。具体以官网为准。\n\n## 适用人群/场景\n适合想快速分析链上数据的分析师、创始人与开发者，以及想用自然语言把区块链数据接入智能体的团队。\n\n数据以官网为准。",
+  "faq": [
+    {
+      "q": "SubQuery 是什么？",
+      "a": "SubQuery 成立于 2021 年，曾是去中心化索引协议，现已转向 AI 数据层，旗舰产品 AskSubQuery 支持自然语言查询区块链数据。"
+    },
+    {
+      "q": "AskSubQuery 是什么？",
+      "a": "AskSubQuery 让用户用自然语言提问，AI 自动生成 GraphQL 查询并返回结果，无需写代码或理解 schema。"
+    },
+    {
+      "q": "GraphQLAgent MCP 是什么？",
+      "a": "它是把 SubQuery 与 The Graph 数据源接入 AI 智能体的 Model Context Protocol 服务，实现 AI 原生查询。"
+    },
+    {
+      "q": "支持多少条链？",
+      "a": "支持 300+ 网络，包括以太坊、Solana、Polkadot 等。"
+    },
+    {
+      "q": "SQT 代币有什么用途？",
+      "a": "SQT 是 ERC-20 代币（以太坊与 Base），质押 SQT 可获得每日免费查询额度，也可用于平台付费。"
+    },
+    {
+      "q": "Hermes 子网是什么？",
+      "a": "Hermes（Bittensor SN82）训练并激励 GraphQL 原生 AI 智能体，AskSubQuery 是其首个授权调用方。"
+    },
+    {
+      "q": "为什么从去中心化索引转型？",
+      "a": "为聚焦 AI 数据层，SubQuery 收缩去中心化索引网络，全力投入 AskSubQuery，让 SQT 继续处于生态中心。"
+    }
+  ],
+  "features": [
+    "自然语言区块链查询",
+    "GraphQLAgent MCP",
+    "300+ 链覆盖",
+    "AI 辅助索引开发"
+  ],
+  "pros": [
+    "自然语言查询降低使用门槛",
+    "多链覆盖广（300+ 网络）",
+    "与 The Graph 数据源互通",
+    "AI 与 MCP 深度集成"
+  ],
+  "cons": [
+    "战略转型带来生态不确定性",
+    "曾发生 SQT 安全事件",
+    "作为开发者工具仍有一定学习成本"
+  ],
+  "tags": [
+    "AI开发",
+    "区块链数据",
+    "自然语言查询",
+    "MCP"
+  ],
+  "source_urls": [
+    "https://subquery.network",
+    "https://subquery.ghost.io/introducing-asksubquery-ai-that-answers-your-blockchain-questions",
+    "https://subquery.ghost.io/2025-year-in-review-for-subquery/?lng=uk",
+    "https://solanacompass.com/projects/subquery"
+  ],
+  "url": "https://subquery.network",
+  "category": "AI开发",
+  "rating": "⭐ 4.0",
+  "visits": "暂无数据",
+  "published": true,
+  "content_verified": true,
+  "confidence": "high",
+  "last_verified": "2026-08-17",
+  "published_date": "2026-08-17",
+  "created_date": "2026-08-17",
+  "badge": null
+}

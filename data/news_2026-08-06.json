@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260806-001",
+    "title": "Atlassian Rovo 被曝存在数据窃取漏洞，可绕过安全控制",
+    "summary": "Atlassian Rovo AI 被曝存在可窃取租户内 Jira 工单和 Confluence 文档的漏洞，攻击通过间接提示注入利用其 URL 检索工具实现，无需人工审批即可执行，且即使组织禁用 Rovo 的网页搜索功能，该攻击依然有效。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://www.promptarmor.com/resources/atlassian-rovo-exfiltrates-data",
+    "published_at": "2026-08-06T05:11:36+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260806-002",
+    "title": "开源「活人感写作.skill」：一个帮你写出没有 AI 味的文字的通用写作技能",
+    "summary": "数字生命卡兹克开源「活人感写作.skill」（英文名 human Writing.skill），旨在去除 AI 味、帮用户写出有真实生活感的文字。该 Skill 鼓励用户提供真实案例与情感，并针对辞章端禁用 AI 常用口癖和黑话，同时适配 Qwen 3.8 Max、DeepSeek V4 Pro、Kimi K3等模型，可直接用于 WorkBuddy、千问办公等产品。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "公众号：数字生命卡兹克",
+    "source_url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647684946&idx=1&sn=ae7edcc572b998dc4e1ac3591977aa85",
+    "published_at": "2026-08-05T09:35:42+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260806-003",
+    "title": "Cloudflare 提出智能体访问模型（Agent Access Model）",
+    "summary": "Cloudflare 发布《The Agent Access Model》论文，提出面向 AI 智能体的访问控制模型 AAM，核心规则是\"不信任运行\"，对任务执行图中的每个动作基于智能体身份、授权任务及已触达资源进行实时授权。该模型针对智能体的短暂性、机器速度、提示词非边界及跨跳组合权限四大特性设计，主张缩小能力集而非仅优化单次决策，并区分单主体控制与多人访问控制的难点。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "Cloudflare Blog",
+    "source_url": "https://blog.cloudflare.com/the-agent-access-model",
+    "published_at": "2026-08-05T21:00:41+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260806-004",
+    "title": "LLM 0.32 发布：新增推理轨迹、OpenAI Responses、服务端工具与更智能的日志",
+    "summary": "Simon Willison 发布 LLM 0.32，这是该项目自启动以来最重要的新版本。新版本支持显示推理轨迹、服务端工具、OpenAI Responses API，并默认使用 GPT-5.6 Luna 模型。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Simon Willison 博客",
+    "source_url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm",
+    "published_at": "2026-08-05T07:58:24+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260806-005",
+    "title": "NVIDIA 发布 Alpamayo 2 Super：面向 Robotaxi 与自动驾驶的 34B 开源视觉-语言-动作模型",
+    "summary": "NVIDIA 发布 Alpamayo 2 Super，一款 34B 参数的视觉-语言-动作（VLA）模型，专为自动驾驶长尾事件设计，权重采用 Linux 基金会 OpenMDW-1.1 许可，代码为 Apache 2.0，发布首日即可商用。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "MarkTechPost（RSS）",
+    "source_url": "https://www.marktechpost.com/2026/08/05/nvidia-alpamayo-2-super-open-vla-model-autonomous-driving",
+    "published_at": "2026-08-05T16:25:11+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260806-006",
+    "title": "Jeff Dean 宣布离开谷歌，创办 DiscoLoop AI",
+    "summary": "Jeff Dean 在谷歌任职 27 年后宣布离职，将于明日正式离开。他称谷歌已从 25 人发展到 19 万余人，拥有十三款用户超十亿的产品。他将与 Sanjay Ghemawat、Oriol Vinyals 和 Quoc Le 共同创办 DiscoLoop AI。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "X：Jeff Dean (@JeffDean)",
+    "source_url": "https://x.com/JeffDean/status/2085083442669318443",
+    "published_at": "2026-08-06T03:20:06+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260806-007",
+    "title": "烧了5亿 token 后，我给 Codex 和 Claude Code 做 Skill 上下文瘦身的新技巧",
+    "summary": "作者为 Codex 和 Claude Code 中300多个 Skill 做上下文瘦身，发现每次新会话仅 Skill 列表就占约9.9k token，按7月使用强度粗算，多余 Skill 列表约吃掉4到5亿 token 的上下文空间。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "公众号：卡尔的AI沃茨",
+    "source_url": "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247509161&idx=1&sn=bd9aa077bbc46a6049ad66af6d15af0f",
+    "published_at": "2026-08-05T14:46:00+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260806-008",
+    "title": "Cloudflare OS：面向智能体、应用与工作的开放平台",
+    "summary": "Cloudflare 开源新版 Cloudflare OS，任何组织均可部署并连接内部系统。该平台为每位员工提供基于公司上下文与技能的智能体工作区，包含隔离运行时、安全治理框架及可共享修改的个人应用。此前内部版本已供数千名员工日常使用，新版针对协作中的信息暴露风险重建了安全基础。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Cloudflare Blog",
+    "source_url": "https://blog.cloudflare.com/cloudflare-os",
+    "published_at": "2026-08-05T21:00:00+08:00",
+    "tags": [
+      "products"
+    ]
+  }
+]

@@ -1,0 +1,126 @@
+{
+  "batch_id": "b44",
+  "category": "AI音频",
+  "tools": [
+    {
+      "slug": "aiva",
+      "name": "AIVA",
+      "url_current": "https://aiva.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网aiva.ai可访问且确为AIVA。定价官网为欧元：Free €0、Standard €11/月（年付）、Pro €33/月（年付，含VAT）；数据写'付费版$11.99/月起'由欧元换算而来，量级吻合。平台网页端/iOS/Android正确。内容中'2026年集成情感识别技术'未独立核实，但非明显错误。"
+    },
+    {
+      "slug": "soundraw",
+      "name": "Soundraw",
+      "url_current": "https://soundraw.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网现付费档：Creator $5.99/月（限时优惠）、Artist Starter $10.49、Artist Pro $12.59、Artist Unlimited $17.49；数据写'Creator$16.99/月起'明显过期/错误（实际Creator仅$5.99）。另外当前官网已无'免费可生成但不可下载'的免费生成档。平台'网页端'正确。"
+    },
+    {
+      "slug": "boomy",
+      "name": "Boomy",
+      "url_current": "https://boomy.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网定价：Free $0（25次保存、无下载、无商用）、Creator $9.99/月、Pro $29.99/月，与数据'免费版可用（不可下载），Creator$9.99/月起，Pro$29.99/月'完全一致。平台Web/iOS/Android正确。"
+    },
+    {
+      "slug": "mureka",
+      "name": "Mureka",
+      "url_current": "https://mureka.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网(mureka.ai，Skywork AI)现行定价：Basic $8/月、Pro $24/月（均年付价）；数据写'专业版$9.99/月起、免费版每月50积分'与现行定价不符，疑似旧版定价或混淆了第三方'Mureka V9'站点（$9.9档）的计费。功能描述（文本生成音乐、歌词、多轨混音、商用授权）基本正确。URL正确。"
+    },
+    {
+      "slug": "beatoven-ai",
+      "name": "Beatoven.ai",
+      "url_current": "https://beatoven.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网付费档约$10/月（Creator）至$20/月（Visionary），另有$3/分钟按量付费；数据写'付费版$19/月起'处于区间内，基本可接受。免费试用存在。平台标注Web/iOS/Android，但官网主要为Web端。"
+    },
+    {
+      "slug": "resemble-ai",
+      "name": "Resemble AI",
+      "url_current": "https://resemble.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "low",
+      "notes": "官网resemble.ai已转型为'生成式AI安全/深度伪造检测'平台，但语音克隆/TTS仍是其核心产品（'5秒克隆'、98种语言、实时语音转换、情感控制、API等描述均属实）。定价'免费版每月20分钟 + $0.006/秒起 + 企业定制'因官网改版未能核实，存疑，建议人工裁定。平台标注含iOS/Android，实际以Web/API为主。"
+    },
+    {
+      "slug": "respeecher",
+      "name": "Respeecher",
+      "url_current": "https://www.respeecher.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网respeecher.com确认，产品为专业级AI语音克隆/TTS（情感保留、被好莱坞/顶级播客采用均属实）。定价'企业定制'正确（官网另有TTS API按$2/小时计费档，数据未提及，但不矛盾）。平台Web正确。"
+    },
+    {
+      "slug": "moyin-gongfang",
+      "name": "魔音工坊",
+      "url_current": "https://www.moyin.com/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "low",
+      "notes": "URL moyin.com可访问且确实指向魔音工坊（短视频/有声书AI配音平台），非错误站点。但定价'付费版每月29元起'与官网SVIP会员48-68元/月存在出入（29元/月或指声音克隆子功能或旧价），存疑，建议人工裁定。平台网页端/iOS/Android正确。"
+    },
+    {
+      "slug": "musicfx",
+      "name": "MusicFX",
+      "url_current": "https://musicfx.google.com",
+      "url_ok": false,
+      "url_correct": "https://labs.google/fx/tools/music-fx",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "MusicFX是Google Labs完全免费的AI音乐实验，无任何Pro付费版；数据正文却虚构了'Pro版 付费订阅 约60秒 更精细 有（商业授权）'的付费档，属内容幻觉（编造不存在的功能/定价）。价格字段'免费'正确。URL musicfx.google.com抓取失败，规范地址应为 labs.google/fx/tools/music-fx（或 aitestkitchen.withgoogle.com/tools/music-fx）。"
+    },
+    {
+      "slug": "riffusion",
+      "name": "Riffusion",
+      "url_current": "https://riffusion.com",
+      "url_ok": false,
+      "url_correct": "https://www.riffusionaimusic.com",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "数据URL riffusion.com抓取两次均返回'Google Flow Music'（错误站点），非Riffusion内容，属跳转/失效错误；Riffusion AI当前官网为 riffusionaimusic.com（2026年Q1上线，定价Free/$4.99 Starter/$8 Pro/$39.99 Studio）。产品描述'基于Stable Diffusion微调的AI音乐生成模型'为历史起源、属实；定价'Pro版$9.9/月'与现行Pro $8/月大致接近，内容基本无误，主要问题在URL需更正。"
+    }
+  ]
+}

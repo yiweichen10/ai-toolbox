@@ -1,0 +1,126 @@
+{
+  "batch_id": "b23",
+  "category": "AI视频",
+  "tools": [
+    {
+      "slug": "runway",
+      "name": "Runway",
+      "url_current": "https://runwayml.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确(runwayml.com)。价格准确：官方 Standard $15/月、Pro $35/月、Max/Unlimited $95/月（runwayml.com/en/pricing，按月计费价），与存储内容表一致。功能描述(Gen-4/4.5、运动笔刷等)准确。"
+    },
+    {
+      "slug": "sora",
+      "name": "Sora",
+      "url_current": "https://openai.com/sora",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确(openai.com/sora)。价格准确：Sora 通过 ChatGPT Plus $20/月 与 Pro $200/月 使用，与存储内容表一致。功能(文生视频/图生视频/最长60秒)准确。"
+    },
+    {
+      "slug": "pika",
+      "name": "Pika",
+      "url_current": "https://pika.art",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正确(pika.art)。短期price\"免费版+标准$10/月\"准确(Standard $10/月)。但内容表写 Pro $30/月，官方实际 Pro 为 $35/月（pika.art 定价），属轻微偏差，未作为幻觉标记。"
+    },
+    {
+      "slug": "heygen",
+      "name": "HeyGen",
+      "url_current": "https://www.heygen.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确(heygen.com)。短期price\"基础$10/月起\"系虚构：HeyGen 最低付费档为 Creator $29/月（help.heygen.com 定价页），无 $10 档。内容表 Business 写 $89/月亦错，官方实际 Business $149/月（另有 Pro $49/月）。功能(数字人/175+语言/语音克隆)描述准确。"
+    },
+    {
+      "slug": "kling-ai",
+      "name": "可灵AI",
+      "url_current": "https://klingai.kuaishou.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正确(klingai.kuaishou.com，确为快手旗下)。短期price\"免费使用\"表述不完整：可灵有免费额度但也存在会员/付费档，非纯免费；未作为虚构定价标记。功能(文生视频/图片动效)描述准确。"
+    },
+    {
+      "slug": "veo",
+      "name": "Veo",
+      "url_current": "https://deepmind.google/technologies/veo",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网正确(deepmind.google/technologies/veo)。短期price\"基础$10/月起\"存疑：Veo 常规通过 Gemini Advanced $19.99/月 或 Ultra $249.99/月 使用（与内容表 Advanced $20/月一致）；2026年新增 Google AI Plus 约 $10.98/月亦含 Veo 3.1 Fast，$10 或指此档，但与常规 $19.99 答案存在歧义，置信度低，未标记幻觉。功能(文生视频/Gemini集成)准确。"
+    },
+    {
+      "slug": "synthesia",
+      "name": "Synthesia",
+      "url_current": "https://www.synthesia.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确(synthesia.io)。短期price\"基础$10/月起\"虚构：最低付费档为 Starter $29/月（synthesia.io/pricing），无 $10 档。平台写\"本地部署 / Web\"错误：Synthesia 为纯云端 SaaS，无本地部署选项。内容表 Starter $29/Creator $89 准确，功能(数字人/160+语言)准确。"
+    },
+    {
+      "slug": "luma-ai",
+      "name": "Luma AI",
+      "url_current": "https://lumalabs.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确(lumalabs.ai)。短期price\"免费版+Pro $10/月\"虚构：Luma Dream Machine 付费档为 Standard 约$30/月、Pro 约$99.99/月、Premier 约$500/月（lumalabs.ai），无 $10 档。内容表 Pro 写 $29.99/月亦错（实际约$99.99）。功能(Dream Machine 文生/图生视频)描述准确。"
+    },
+    {
+      "slug": "capcut-ai",
+      "name": "CapCut AI",
+      "url_current": "https://www.capcut.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正确(capcut.com)。短期price\"基础$10/月起\"基本可接受：官方 Standard $9.99/月、Pro $19.99/月（capcut.com 定价），$10 约为 Standard 价取整。内容表 Pro 写 $7.99/月有误（实际 Pro $19.99），但未标记幻觉。平台\"本地部署/Web\"指其桌面/移动客户端，基本合理。功能(剪映国际版/AI字幕/智能抠像)准确。"
+    },
+    {
+      "slug": "fliki",
+      "name": "Fliki",
+      "url_current": "https://fliki.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确(fliki.ai)。短期price\"免费版+Pro $10/月\"虚构：Fliki 最低付费档为 Standard $28/月（fliki.ai/pricing），无 $10 档。平台写\"本地部署 / Web\"错误：Fliki 为纯网页端 SaaS，无本地/桌面应用（2026评测确认仅浏览器可用）。内容表 Standard $28 准确，功能(文本转视频/2000+声音)准确。"
+    }
+  ]
+}

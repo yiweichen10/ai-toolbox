@@ -1,0 +1,159 @@
+{
+  "name": "Chroma",
+  "slug": "chroma",
+  "emoji": "🗄️",
+  "color": "#5B21B6",
+  "description": "Chroma是开源(Apache 2.0)的向量检索数据库，把文本/图片转成向量存储并做相似度召回，支持多种嵌入模型、元数据过滤与混合搜索，提供Python/JS SDK，可本地或云端部署。Chroma Cloud已于2025年8月正式GA，按量计费（写入$2.50/GiB、存储$0.33/GiB/月）。适合中小团队搭RAG、语义搜索，安装简单、免费开源，大规模生产需做性能调优。",
+  "category": "AI开发",
+  "tags": [
+    "向量数据库",
+    "嵌入存储",
+    "开源",
+    "LLM应用开发",
+    "语义搜索"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "85万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.trychroma.com",
+  "price": "免费开源；Chroma Cloud按量付费（含免费额度，Team $250/月起）",
+  "platform": "Web/API",
+  "pros": [
+    "完全开源免费(Apache 2.0)",
+    "安装简单、Python API友好",
+    "支持多种嵌入模型",
+    "高效的向量相似性搜索",
+    "支持本地与云端部署",
+    "Chroma Cloud已正式可用"
+  ],
+  "cons": [
+    "大规模生产需配置优化",
+    "自托管运维有门槛",
+    "高级教程相对少"
+  ],
+  "features": [
+    "向量嵌入存储与检索",
+    "多种嵌入模型集成",
+    "相似性搜索(余弦/欧氏)",
+    "集合与元数据过滤",
+    "Python/JS多语言SDK",
+    "本地与云端部署",
+    "混合搜索(向量+全文)",
+    "Serverless"
+  ],
+  "related": [
+    "pinecone",
+    "weaviate",
+    "qdrant",
+    "langchain",
+    "llamaindex"
+  ],
+  "faq": [
+    {
+      "q": "Chroma是免费的吗？",
+      "a": "开源版免费自托管；Chroma Cloud有免费额度，按量计费。"
+    },
+    {
+      "q": "Chroma适合什么场景？",
+      "a": "主要用于RAG系统、语义搜索、聊天机器人、推荐系统等向量检索场景。"
+    },
+    {
+      "q": "Chroma和Pinecone有什么区别？",
+      "a": "Chroma开源可自托管；Pinecone全托管闭源，更省心。"
+    },
+    {
+      "q": "如何安装Chroma？",
+      "a": "使用 pip install chromadb（注意包名为chromadb，非chroma-db）。"
+    }
+  ],
+  "seo_keywords": [
+    "Chroma向量数据库",
+    "Chroma AI开源工具",
+    "Chroma怎么样",
+    "Chroma vs Pinecone",
+    "Chroma向量数据库教程"
+  ],
+  "content": "# Chroma 介绍\n\n## Chroma是什么？\n\n简单说，Chroma就是一个专门用来存\"向量\"的数据库。什么叫向量？就是你把文字、图片、语音这些内容转换成AI能理解的数字形式。比如你问AI\"推荐一部科幻电影\"，它会把这句话转换成一大串数字，这些数字就是向量。\n\nChroma做的事情就是：把这些向量存起来，然后当你搜索的时候，快速找到最相似的内容。\n\n它开源、免费，核心定位就是给AI应用擦屁股——帮你搞定向量存储和检索这档子破事，这样你就能专心写业务逻辑。2026年它还在持续更新，混合搜索和云端部署这些功能逐步在加。\n\n对于想自己搭RAG系统、或者做语义搜索的人来说，Chroma是个绕不开的选择。\n\n---\n\n## 核心功能\n\n**1. 向量存储与检索**\n\n这是老本行。把文本转成向量存进去，搜的时候按相似度给你召回结果。余弦相似度、欧氏距离这些常用的度量方式都支持。实际用起来，查询延迟控制在几百毫秒级别，对中小型应用来说足够了。\n\n**2. 多模型嵌入集成**\n\n不需要自己折腾嵌入模型，Chroma直接帮你集成好了。OpenAI的text-embedding-ada-002、HuggingFace的sentence-transformers，这些主流模型都能直接用。省得你自己写调用代码。\n\n**3. 集合管理与元数据过滤**\n\n可以创建多个\"集合\"来管理不同的数据。还能给向量打上元数据标签，搜索时支持按元数据过滤。比如你存了两千条产品评论，想只搜\"好评\"或者\"2024年以后的\"，直接加过滤条件就行，不用先全量查出来再手动筛。\n\n**4. 多语言SDK**\n\nPython和JavaScript/TypeScript的SDK都有，文档写得比较清晰。JS这边做前端项目或者Node服务的时候也能用，生态覆盖得还行。\n\n**5. 部署灵活**\n\n本地文件系统、云端存储都支持。本地跑demo很方便，搭生产环境也能选云端。官方在持续完善云服务这块，但目前来说部署选项比创业初期已经丰富多了。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 价格 | 适用场景 | 核心能力 |\n|------|------|----------|----------|\n| 开源版 | 免费 | 个人项目、学习、原型开发 | 本地部署、基础向量检索、Python/JS SDK |\n| 云服务（Beta） | 按量/订阅 | 中小规模生产环境 | 云端托管、自动扩缩容、基础运维 |\n\n目前云服务还在发展中，功能没有开源版那么完整，但胜在不用自己管服务器。具体定价要去看官方最新的方案，这里不多展开。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 完全开源免费，踩坑成本低\n- 社区挺活跃，GitHub上issue反馈速度说得过去\n- 安装简单，pip装上就能跑\n- Python API设计得很友好，入门门槛低\n- 向量检索效率对得起它的定位，大厂可能不够用，但中小项目绑绑有余\n\n**缺点：**\n\n- 多少需要点编程基础，纯小白上手会有点吃力\n- 大规模生产环境需要自己做一些性能调优，比如分片、索引策略这些\n- 文档偏基础，高级玩家想深挖会发现资料不够\n- 云服务还在打磨中，生产级稳定性有待更多验证\n\n**我的结论：**\n\n如果你在做AI应用、需要向量检索这块能力，Chroma绝对值得一试。它不是最强的向量数据库，但在\"易用性+免费+开源\"这个三角里，它拿捏得挺准。生产环境用之前建议评估一下规模诉求，小项目闭眼入，大项目做好调研。\n\n---\n\n## 使用建议\n\n1. **从小处着手**：先用开源版跑通Demo，不要一上来就搞云端部署。把流程跑通了再考虑扩展。\n\n2. **选对嵌入模型**：不同的嵌入模型对召回效果影响很大。可以先用默认的试试，效果不满意再换。官方文档有推荐模型列表。\n\n3. **注意数据量级**：Chroma单机版适合几十万条向量以内的场景。超过这个量级，要么考虑分布式方案，要么直接上专业的向量数据库服务。\n\n4. **元数据过滤善用起来**：别把所有信息都塞进向量里，能用元数据过滤的就别让向量检索来扛，能省不少查询时间。\n\n5. **关注官方更新**：版本迭代比较勤，新功能出来往往能解决一些痛点。GitHub上star一下，有新版别忘了升级。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n\n- 个人开发者做AI原型\n- 中小团队搭建RAG系统、语义搜索\n- 想学习向量数据库原理的人\n\n**可考虑：**\n\n- 有一定技术能力、愿意花时间做配置优化的团队\n- 对云端托管有需求、可以接受Beta版服务的企业\n\n**不推荐：**\n\n- 完全没有编程基础、期待开箱即用的用户\n- 需要处理上亿级向量、要求99.99%稳定性的超大规模生产环境",
+  "published": true,
+  "created_date": "2026-06-02",
+  "published_date": "2026-06-02",
+  "verified_url": "https://www.trychroma.com",
+  "verified_publisher": "Chroma, Inc.",
+  "verified_what": "Chroma是开源的AI向量检索数据库（Apache 2.0），提供向量、全文与元数据混合搜索，可在本地自托管或通过Chroma Cloud全托管使用。",
+  "verified_price": "开源版免费自托管；Chroma Cloud按量计费（写入$2.50/GiB、存储$0.33/GiB/月、查询$0.0075/TiB），含Starter免费额度、Team $250+用量、Enterprise定制。",
+  "verified_platform": "Web / API / Python / JS / 命令行",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "向量嵌入存储与检索",
+    "多种嵌入模型集成",
+    "相似性搜索(余弦/欧氏)",
+    "集合与元数据过滤",
+    "Python/JS多语言SDK",
+    "本地与云端部署",
+    "混合搜索(向量+全文)",
+    "Serverless"
+  ],
+  "verified_description": "Chroma是开源(Apache 2.0)的向量检索数据库，把文本/图片转成向量存储并做相似度召回，支持多种嵌入模型、元数据过滤与混合搜索，提供Python/JS SDK，可本地或云端部署。Chroma Cloud已于2025年8月正式GA，按量计费（写入$2.50/GiB、存储$0.33/GiB/月）。适合中小团队搭RAG、语义搜索，安装简单、免费开源，大规模生产需做性能调优。",
+  "content_flags": "MINOR_ERRORS",
+  "price_verified": true,
+  "verified_pros": [
+    "完全开源免费(Apache 2.0)",
+    "安装简单、Python API友好",
+    "支持多种嵌入模型",
+    "高效的向量相似性搜索",
+    "支持本地与云端部署",
+    "Chroma Cloud已正式可用"
+  ],
+  "verified_cons": [
+    "大规模生产需配置优化",
+    "自托管运维有门槛",
+    "高级教程相对少"
+  ],
+  "verified_faq": [
+    {
+      "q": "Chroma是免费的吗？",
+      "a": "开源版免费自托管；Chroma Cloud有免费额度，按量计费。"
+    },
+    {
+      "q": "Chroma适合什么场景？",
+      "a": "主要用于RAG系统、语义搜索、聊天机器人、推荐系统等向量检索场景。"
+    },
+    {
+      "q": "Chroma和Pinecone有什么区别？",
+      "a": "Chroma开源可自托管；Pinecone全托管闭源，更省心。"
+    },
+    {
+      "q": "如何安装Chroma？",
+      "a": "使用 pip install chromadb（注意包名为chromadb，非chroma-db）。"
+    }
+  ],
+  "verified_tags": [
+    "向量数据库",
+    "嵌入存储",
+    "开源",
+    "LLM应用开发",
+    "语义搜索"
+  ],
+  "verified_category": "AI开发",
+  "conflict_note": "原FAQ误写为pip install chroma-db，正确为pip install chromadb；原内容称云服务为Beta，Chroma Cloud已于2025年8月正式GA。其余准确。",
+  "source_urls": [
+    "https://www.trychroma.com",
+    "https://trychroma.com/pricing",
+    "https://docs.trychroma.com/cloud/getting-started"
+  ],
+  "verify_notes": "开源与品牌信息准确；两处小错误已修正。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Chroma 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Chroma 的 向量嵌入存储与检索 是亮点，价格 免费开源；Chroma Cloud按量付费（含免费额度，Team $250/月起）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

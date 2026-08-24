@@ -1,0 +1,75 @@
+{
+  "name": "Stable Diffusion Prompt Book",
+  "slug": "sd-prompt-book",
+  "positioning": "修饰词分类库+Magic：免费AI提示词工具怎么用",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#8b5cf6",
+  "description": "OpenArt推出的免费Stable Diffusion提示词指南手册（Prompt Book），系统讲解SD提示词写法并提供可直接下载的PDF教程，是AI绘画提示词入门与进阶的经典资料。",
+  "category": "AI提示词",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI提示词"
+    },
+    {
+      "text": "Stable Diffusion Prompt Book"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://openart.ai/promptbook",
+  "price": "免费版/付费版",
+  "platform": "Web",
+  "pros": [
+    "完全免费可下载 PDF",
+    "内容系统案例丰富",
+    "一线社区作者编写",
+    "参数与修饰词讲解细致"
+  ],
+  "cons": [
+    "未覆盖 SDXL/SD3 新生态",
+    "仅针对 Stable Diffusion",
+    "需时间通读消化"
+  ],
+  "features": [
+    "Prompt 格式详解",
+    "修饰词分类库",
+    "Magic Words 魔法词",
+    "SD 参数调节指南",
+    "img2img 局部重绘",
+    "免费 PDF 下载"
+  ],
+  "related": [
+    "promptpilot",
+    "explinks-prompts",
+    "prompt-engineering-guide"
+  ],
+  "content": "## Stable Diffusion Prompt Book 是什么？\n\nStable Diffusion Prompt Book 是 AI 绘画社区 OpenArt 联合 PublicPrompts 等社区作者推出的免费 Stable Diffusion 提示词指南手册，系统讲解 SD 提示词的写法、修饰词与参数调优，并提供可在线阅读或下载的 PDF 版本。它被称为 AI 绘画提示词入门与进阶的\"经典教材\"，收录了大量可直接参考的风格关键词与实战案例，帮助用户在 Stable Diffusion 及其 WebUI 工具中稳定复现高质量图像。\n\n### 核心功能\n\n- **Prompt 格式详解**：系统讲解提示词的句子结构与常见写法，包括权重符号、修饰词排序等基础语法。\n- **修饰词分类库**：按摄影、插画、艺术媒介、情绪、艺术家风格、美学风格等分类收录大量修饰词，帮助精准控制画面。\n- **Magic Words 魔法词**：整理可显著提升画面质量的\"魔法词汇\"，如赛博朋克、水墨、电影光效等风格关键词。\n- **参数调节指南**：详解分辨率、CFG Scale、步数、Seed、采样器等关键参数的作用与推荐取值。\n- **img2img 与局部重绘**：介绍图生图、In/Out Painting 的提示词应用技巧，扩展创作玩法。\n- **实战案例对比**：通过同一主题不同提示词的生成效果对比，直观展示语言细节对画面的影响。\n\n### 适用场景\n\n- **AI 绘画新手入门**：从提示词格式、修饰词到参数设置一步到位，快速上手 Stable Diffusion。\n- **进阶创作者调优**：用修饰词库与参数指南优化画面风格，稳定复现或微调已有作品。\n- **教学与教程编写**：作为 AI 绘画课程与教程的系统性参考资料。\n\n### 价格\n\nPrompt Book 完全免费，用户可在 openart.ai/promptbook 在线阅读或直接下载 PDF 使用，无需付费。OpenArt 平台自身的部分高级课程与会员功能另计，以官网为准。\n\n### 优缺点\n\n- 优点：完全免费、PDF 可直接下载；内容系统、案例丰富，适合从零学习；由社区一线作者编写，贴近实战；参数与修饰词讲解细致。\n- 缺点：内容最后更新于 2022 年，未覆盖 SDXL、SD3 及更新的模型生态；以 Stable Diffusion 为主，对其他模型参考有限；篇幅较长，需要时间通读消化。",
+  "published": true,
+  "faq": [
+    {
+      "q": "Stable Diffusion Prompt Book 免费吗？",
+      "a": "完全免费，可在 openart.ai/promptbook 在线阅读或直接下载 PDF，无需付费。"
+    },
+    {
+      "q": "这本书适合新手吗？",
+      "a": "适合。它从提示词格式、修饰词到参数调节逐步讲解，并配有大量案例对比，是 AI 绘画新手入门的经典教材。"
+    },
+    {
+      "q": "内容是否覆盖最新的 SD 模型？",
+      "a": "内容最后更新于 2022 年，主要针对早期 Stable Diffusion 生态，未覆盖 SDXL/SD3，新版模型建议结合官方文档使用。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://openart.ai/promptbook",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "verify_notes": "二轮核实(WebFetch 2026-08-05)：openart.ai/promptbook 可达，含PDF下载。",
+  "seo_keywords": [
+    "Stable Diffusion提示词",
+    "SD Prompt Book",
+    "AI绘画提示词教程",
+    "SD提示词手册",
+    "OpenArt"
+  ]
+}

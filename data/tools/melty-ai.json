@@ -1,0 +1,136 @@
+{
+  "name": "Melty",
+  "slug": "melty-ai",
+  "emoji": "✨",
+  "color": "#8B5CF6",
+  "description": "Melty（Melty Labs）是开源 AI 代码编辑器，主打 git-first：每条 AI 对话自动生成 git 提交，可回退、分支与重置；持续感知代码库（编译器/终端/历史），支持多文件改动与重构，对标 Cursor，MIT 协议完全开源。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "代码编辑器",
+    "开源",
+    "Git集成"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "约45万/月",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://melty.sh",
+  "price": "开源免费（MIT）；Pro 早期 $10/月",
+  "platform": "Web/iOS/Android",
+  "pros": [
+    "开源免费、MIT 协议",
+    "git 原生可追溯，改错可回退",
+    "持续代码库上下文，无需反复解释",
+    "多文件编辑能力强"
+  ],
+  "cons": [
+    "早期阶段（v0.2）尚不稳定",
+    "插件生态较小",
+    "需一定配置成本",
+    "知名度低于 Cursor"
+  ],
+  "features": [
+    "每次 AI 对话自动生成 git 提交（可 revert/branch/reset）",
+    "持续感知代码库（编译器/终端/git 历史）",
+    "多文件大范围改动与重构",
+    "自动生成提交说明",
+    "开源 MIT，可自托管 AI 后端",
+    "支持本地模型（Ollama）与主流模型"
+  ],
+  "related": [
+    "chatgpt",
+    "claude",
+    "writesonic"
+  ],
+  "faq": [
+    {
+      "q": "Melty 是免费的吗？",
+      "a": "是，开源免费（MIT），仅需自付底层模型 API 费用；另有 Pro 早期访问约 $10/月（托管后端与优先支持）。"
+    },
+    {
+      "q": "Melty 是 VS Code 分支吗？",
+      "a": "基于部分开源组件构建的独立编辑器，主打 chat-first 与 git 深度集成，并非简单分支。"
+    }
+  ],
+  "seo_keywords": [
+    "Melty",
+    "Melty AI怎么样",
+    "Melty免费版",
+    "AI写作工具推荐",
+    "Melty和ChatGPT对比"
+  ],
+  "content": "## Melty 是什么？\n\nMelty 是 Melty Labs 做的一款开源 AI 代码编辑器，最大的标签是“git 优先（git-first）”。它的设计哲学很特别：你每发一条对话消息、让 AI 改一次代码，它都会自动生成一个 git 提交（还带 AI 写的提交说明）。于是你和 AI 协作的整个过程，天然就是一条可回退、可审计的 git 历史——想反悔就用 git revert，想分叉就用 git branch，不用在聊天框和编辑器之间反复粘贴。\n\n它由 Charlie Holtz（来自 Replicate）和 Jackson de Campos（来自 Netflix）创立，基于 Electron、界面借鉴 VS Code 的思路，但以 MIT 协议完全开源，不收订阅费。\n\n## 核心功能\n\n- 每次改动都是提交：AI 的每一次代码修改都会变成 git commit，可用标准 git 操作（revert / branch / reset / squash）随意回退或分叉，解决了 AI 改代码“改完没法追溯”的痛点。\n- 持续感知代码库：从终端到 GitHub，Melty 全程感知你在做什么，不用你反复解释背景，像真正的结对编程伙伴。\n- 多文件大改动：能跨多个文件做较大范围的重构、从零创建网页应用、在大型代码库里导航。\n- 自动写提交记录：帮你给改动生成提交说明。\n- 开源透明：MIT 许可，可自行检视与修改。\n\n## 定价\n\nMelty 完全免费、开源（MIT），编辑器本身没有任何订阅费用。真正花钱的是它在背后调用的 AI 模型——费用取决于你接入的模型供应商和密钥。由于它是早期访问（early access / waitlist）阶段的产品，具体接入方式与支持的模型以官方仓库为准。\n\n## 适合谁\n\n- 想让 AI 的每一次改动都可追溯、可一键回退的开发者。\n- 做大型多文件重构、希望 AI 像结对伙伴一样持续理解代码库的人。\n- 喜欢开源、不想被商业工具锁定或按席位付费的工程师。\n- 已经熟悉 VS Code 界面、想换一个更“git 原生”的 AI 编辑器的人。\n\n## 小结\n\nMelty 的卖点很清晰：把“AI 改代码”和“版本控制”绑死，每次改动都留下可回退的痕迹。对重视可逆性和审计的开发者很有吸引力，而且免费开源、上手零成本。需要提醒的是，Melty 现在仍处于早期访问阶段，生态和成熟度不如 Cursor、VS Code 这类成熟编辑器；另外，访问其官网 melty.sh 目前会跳转到同团队的新产品 Conductor（一个用于在 Mac 上并行跑多个 coding agent 的工具），如果你想直接用 Melty 本体，建议去 GitHub 上的 meltylabs/melty 仓库获取。\n\n如果你是那种“让 AI 改完代码后总不放心、想随时能回退”的人，Melty 的思路值得一试：它的每一次改动都留在 git 历史里，相当于给 AI 的每一步都留了底稿。这在做实验性重构、或者接手陌生代码库时尤其有用——错了就退，不用担心改到无法还原。\n\n## 常见问题（FAQ）\n\n**Melty 是免费的吗？**\n\n是，开源免费（MIT），仅需自付底层模型 API 费用；另有 Pro 早期访问约 $10/月（托管后端与优先支持）。\n\n**Melty 是 VS Code 分支吗？**\n\n基于部分开源组件构建的独立编辑器，主打 chat-first 与 git 深度集成，并非简单分支。",
+  "published": true,
+  "created_date": "2026-06-04",
+  "published_date": "2026-06-04",
+  "subcategory": "",
+  "verified_url": "https://melty.sh",
+  "verified_publisher": "Melty Labs（Charlie Holtz、Jackson de Campos）",
+  "verified_what": "开源 AI 代码编辑器（git-first），每次 AI 对话自动生成 git 提交，可回退/分支/重置，对标 Cursor/Windsurf。",
+  "verified_price": "开源免费（MIT）；Pro 早期访问约 $10/月（托管高性能后端、优先支持）。",
+  "verified_platform": "桌面端（Mac/Linux/Windows）独立编辑器",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "每次 AI 对话自动生成 git 提交（可 revert/branch/reset）",
+    "持续感知代码库（编译器/终端/git 历史）",
+    "多文件大范围改动与重构",
+    "自动生成提交说明",
+    "开源 MIT，可自托管 AI 后端",
+    "支持本地模型（Ollama）与主流模型"
+  ],
+  "verified_description": "Melty（Melty Labs）是开源 AI 代码编辑器，主打 git-first：每条 AI 对话自动生成 git 提交，可回退、分支与重置；持续感知代码库（编译器/终端/历史），支持多文件改动与重构，对标 Cursor，MIT 协议完全开源。",
+  "content_flags": "原 features/pros/cons/faq 被错误填充为 AI 写作类内容（智能文案生成、多语言输出、文案模板等），与实际「开源 AI 代码编辑器」严重不符；长文内容本身准确，已通过 verified_* 字段修正。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.3",
+  "rating_source": "编辑评分（本站）",
+  "rating_verified": true,
+  "verified_pros": [
+    "开源免费、MIT 协议",
+    "git 原生可追溯，改错可回退",
+    "持续代码库上下文，无需反复解释",
+    "多文件编辑能力强"
+  ],
+  "verified_cons": [
+    "早期阶段（v0.2）尚不稳定",
+    "插件生态较小",
+    "需一定配置成本",
+    "知名度低于 Cursor"
+  ],
+  "verified_faq": [
+    {
+      "q": "Melty 是免费的吗？",
+      "a": "是，开源免费（MIT），仅需自付底层模型 API 费用；另有 Pro 早期访问约 $10/月（托管后端与优先支持）。"
+    },
+    {
+      "q": "Melty 是 VS Code 分支吗？",
+      "a": "基于部分开源组件构建的独立编辑器，主打 chat-first 与 git 深度集成，并非简单分支。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "代码编辑器",
+    "开源",
+    "Git集成"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://copilot-alternatives.com/alternative/melty",
+    "https://de.github.com/meltylabs/melty",
+    "https://cursor-alternatives.com/ai-ides/melty-cursor-alternative"
+  ],
+  "verify_notes": "核心纠偏：该工具是代码编辑器而非写作工具，原 features/pros/cons/faq 整组为幻觉，已重写。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Melty 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Melty 的 每次 AI 对话自动生成 git 提交（可 revert/branch/reset） 是亮点，价格 开源免费（MIT）；Pro 早期 $10/月；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

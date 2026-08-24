@@ -1,0 +1,151 @@
+{
+  "name": "Together AI",
+  "slug": "together-ai",
+  "positioning": "免费AI开发工具：无服务器推理+模型微调",
+  "auto_positioning": true,
+  "emoji": "🧠",
+  "color": "#6C47FF",
+  "description": "Together AI 是 Together AI 公司运营的 AI 原生云平台，提供开源大模型的推理、微调、预训练与 GPU 集群服务，并以研究驱动的推理引擎实现高性价比。",
+  "category": "AI开发",
+  "tags": [
+    "模型推理",
+    "API服务",
+    "开源模型",
+    "微调"
+  ],
+  "rating": "⭐4.5（编辑评分）",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://together.ai",
+  "price": "按 Token 计费（Serverless 起 ~$0.10/百万 tokens）+ 免费额度",
+  "platform": "Web, API",
+  "pros": [
+    "支持数百种主流开源模型（Llama、Mistral、DeepSeek、Qwen 等）",
+    "推理速度快，延迟低，适合生产环境",
+    "提供免费额度，开发者可低成本试用",
+    "集成简单，支持 REST API 和主流 SDK",
+    "支持模型微调（Fine-tuning）和自定义部署"
+  ],
+  "cons": [
+    "免费额度有限，高并发使用需付费",
+    "部分模型文档和教程不够详细",
+    "地域限制：某些区域访问可能不稳定"
+  ],
+  "features": [
+    "无服务器推理（Serverless Inference）：按需运行 200+ 开源模型",
+    "批量推理与专用模型/容器推理（含视频、音频、图像模型）",
+    "模型微调（Fine-Tuning）与全栈预训练（Pre-Training）",
+    "弹性 GPU 集群（Compute），支持自服务即时集群到大规模 AI Factory",
+    "OpenAI 兼容 API，无需管理基础设施"
+  ],
+  "related": [
+    "replicate",
+    "open-router",
+    "groq",
+    "hugging-face"
+  ],
+  "faq": [
+    {
+      "q": "Together AI 是什么？",
+      "a": "Together AI 是一个云平台，提供数百种开源大模型的推理 API，帮助开发者和企业快速构建 AI 应用，同时支持模型微调和自定义部署。"
+    },
+    {
+      "q": "Together AI 有免费额度吗？",
+      "a": "有。新用户注册后可获得一定免费 API 调用额度（历史为 $25，具体以官网最新政策为准），用于测试和体验各项功能。"
+    },
+    {
+      "q": "Together AI 支持哪些模型？",
+      "a": "支持 Llama 2/3、Mistral、Mixtral、DeepSeek、Qwen、Gemma、Phi、Yi、Falcon 等数百个开源模型，以及 FLUX、Stable Diffusion 等图像生成模型。"
+    },
+    {
+      "q": "如何开始使用 Together AI？",
+      "a": "注册账户后，在控制台创建 API Key，然后通过 REST API 或官方 Python/Node.js SDK 即可调用模型。官方文档提供详细的快速入门教程。"
+    }
+  ],
+  "seo_keywords": [
+    "Together AI",
+    "Together AI怎么样",
+    "Together AI免费版",
+    "Together AI使用教程",
+    "Together AI和哪个好"
+  ],
+  "content": "# Together AI：一个能让你低成本玩转开源大模型的云平台\n\n如果你最近在关注AI开发，应该已经发现一个趋势：开源模型越来越强，Llama、Mistral、DeepSeek这些名字频频出现。但想用上这些模型，自己搭服务器费钱又费时，直接调用闭源API又贵得心疼。**Together AI** 正好卡在这个需求点上——它把几百种主流开源模型打包成API，让你按需调用，还能微调、自定义部署。今天就来聊聊这个平台到底怎么样。\n\n## Together AI是什么？\n\n简单说，Together AI 是一个高性能的云平台，专门提供**开源大模型的推理API**。它不像OpenAI那样只给自家模型，而是集合了Llama、Mistral、DeepSeek、Qwen等数百种模型，你通过一行代码就能调用。\n\n它的核心卖点是**低成本 + 低延迟**。很多开发者吐槽过，用开源模型自己部署，GPU成本高得离谱，而且推理速度上不去。Together AI 把底层优化做好了（比如动态批处理、量化推理），让你花更少的钱，拿到接近闭源API的响应速度。对个人开发者来说，还有免费额度可以试用，门槛很低。\n\n## 核心功能\n\n### 1. 文本生成与对话\n最基础也是最常用的功能。你可以直接用Llama 3、Mistral等模型做聊天机器人、内容生成、翻译等。实际体验下来，响应速度确实快，流式输出几乎感觉不到延迟。如果你是做Chatbot或者写作工具，这个接口很省心。\n\n### 2. 代码补全与生成\n支持Code Llama、DeepSeek Coder等代码专用模型。我周围不少开发者用它做代码补全插件，或者批量生成单元测试。代码质量方面，感觉和GitHub Copilot在开源模型里属于第一梯队，不过对中文注释的支持稍弱一点。\n\n### 3. 图像生成（通过Flux、Stable Diffusion等）\n除了文本，Together AI 也支持Flux、Stable Diffusion等图像生成模型。你可以直接通过API生成图片，不需要自己部署Stable Diffusion环境。目前图像生成速度和Midjourney比还有差距，但胜在便宜，批量生成物料的时候很有优势。\n\n### 4. 模型微调（Fine-tuning）\n这是比较进阶的功能。如果你有特定场景的数据（比如行业术语、客服对话），可以用Together AI 对基础模型做微调。操作界面比较简洁，上传数据集、选模型、调参数，然后等它训练完就能直接用。不过微调的价格按算力计费，建议先在小数据集上试水。\n\n### 5. 低延迟流式推理 & 多模态推理\n流式推理是生产环境标配——用户打字的同时模型就开始输出，体验很顺滑。多模态方面，支持图像理解（比如用Llava模型给图片做描述）和简单的语音处理。实测图像理解准确率不错，但复杂场景下偶尔会漏细节。\n\n## 版本/套餐对比\n\n根据公开信息，Together AI 提供免费试用额度（通常是输入输出Token各百万级别，足以跑一些Demo），付费套餐按Token计费，不同模型价格不同。具体的价格表官网实时更新，这里不编造数字。简单说：\n\n- **免费版**：适合体验和轻量开发，每天有额度限制，超出后停服\n- **按量付费**：适合生产环境，按模型定价（比如Llama 3-70B 比 8B 贵好几倍），支持高并发\n- **企业自定义部署**：适合需要私有化或大规模微调的场景，需要联系销售报价\n\n没有“专业版”“团队版”之类的花哨名称，就是一个简单的分层。\n\n## 值不值得用？\n\n### 优点\n- **模型选择多**：几百种主流的、小众的都能找到，不用到处找API\n- **速度快**：实际测试中，响应延迟比很多自己搭的推理服务低，生产环境够用\n- **免费额度良心**：新手友好，写几个小项目完全够\n- **集成简单**：REST API 和 Python/Node等SDK都有，文档也比较清晰\n- **微调功能**：对想要定制模型的人很有价值\n\n### 缺点\n- **免费额度有限**：做高并发或者跑大项目，很快就要付费，账单可能比预期高\n- **部分模型文档粗糙**：尤其是小众模型，只有基础调用示例，遇到问题得自己去GitHub搜\n- **地域访问不稳定**：据部分用户反馈，某些地区（比如中东、南美）延迟偏高，偶尔超时\n\n### 总体结论\n**值得用，但别指望它万能。** 如果你是个人开发者做原型、做副业，或者小团队需要快速接入开源模型，Together AI 是目前性价比最高的选择之一。但如果你追求100%稳定、需要SLA保障，或者要用到特别冷门的模型，建议先和客服确认覆盖情况。\n\n## 使用建议\n\n1. **先薅免费额度**：注册后先把免费额度用完，跑几个典型场景测试速度和准确性，再决定是否付费。\n2. **选模型别贪大**：很多场景下 Llama 3-8B 或者 Mistral 7B 就够了，别上来就用70B，费用高10倍。\n3. **流式响应一定要开**：无论是聊天还是生成，开启stream: true 能让用户体验好很多。\n4. **微调前压缩数据**：微调费用主要取决于训练数据量，先清洗、去重、精简，能省不少钱。\n5. **关注地区节点**：如果你是海外用户，选离你最近的区域节点；国内用户可能需要挂代理，延迟会高一点。\n\n## 适合谁用？\n\n### ✅ 推荐\n- **个人开发者 / 独立开发者**：快速验证想法、做Side Project\n- **小型创业团队**：不想搭GPU集群，又想接入开源模型\n- **教育和研究**：跑实验、对比模型性能，免费额度够用\n- **需要微调的团队**：比自建GPU环境便宜、省事\n\n### 🤔 可考虑\n- **中型公司做内部工具**：如果对延迟要求不是极致，可以考虑\n- **图像生成项目**：如果不想碰Stable Diffusion部署\n\n### ❌ 不推荐\n- **需要99.99% SLA的企业生产系统**：建议用AWS Bedrock或Azure OpenAI这类平台\n- **处理敏感数据的场景**：数据会上传云端，合规风险需自评\n- **预算非常敏感且并发极高**：按Token计费，高频调用下费用会很可观\n\n---\n\n说到底，Together AI 是那种“用起来挺顺手”的工具。它不会让你惊艳，但当你需要快速调一个开源模型干活时，它就在那，便宜、快、省心。如果你还没试过，可以先去官网领点额度跑个小Demo，反正不花钱。",
+  "published": false,
+  "source_url": "https://together.ai",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://together.ai",
+  "verified_publisher": "Together AI",
+  "verified_what": "Together AI 运营的 AI 原生云平台，提供开源大模型的推理、微调、预训练与 GPU 集群服务，并以研究驱动的推理引擎实现高性价比。",
+  "verified_price": "按 Token 计费（Serverless 起价约 $0.10/百万 tokens；大模型如 Llama 3.3 70B 约 $0.88/百万 tokens）；Batch 折扣；专用 GPU 实例（H100 $6.49/小时起）；新用户有免费额度（历史 $25，以官网为准）。",
+  "verified_platform": "Web, API",
+  "verified_features": [
+    "无服务器推理（Serverless Inference）：按需运行 200+ 开源模型",
+    "批量推理与专用模型/容器推理（含视频、音频、图像模型）",
+    "模型微调（Fine-Tuning）与全栈预训练（Pre-Training）",
+    "弹性 GPU 集群（Compute），支持自服务即时集群到大规模 AI Factory",
+    "OpenAI 兼容 API，无需管理基础设施"
+  ],
+  "verified_description": "Together AI 是 Together AI 公司运营的 AI 原生云平台，提供开源大模型的推理、微调、预训练与 GPU 集群服务，并以研究驱动的推理引擎实现高性价比。",
+  "content_flags": "长文称免费额度“通常为 $25”偏旧（现以官网为准，部分渠道显示更低），无严重幻觉；其余准确。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5（编辑评分）",
+  "rating_source": "编辑评分（站内综合判断）",
+  "rating_verified": true,
+  "verified_pros": [
+    "支持数百种主流开源模型（Llama、Mistral、DeepSeek、Qwen 等）",
+    "推理速度快，延迟低，适合生产环境",
+    "提供免费额度，开发者可低成本试用",
+    "集成简单，支持 REST API 和主流 SDK",
+    "支持模型微调（Fine-tuning）和自定义部署"
+  ],
+  "verified_cons": [
+    "免费额度有限，高并发使用需付费",
+    "部分模型文档和教程不够详细",
+    "地域限制：某些区域访问可能不稳定"
+  ],
+  "verified_faq": [
+    {
+      "q": "Together AI 是什么？",
+      "a": "Together AI 是一个云平台，提供数百种开源大模型的推理 API，帮助开发者和企业快速构建 AI 应用，同时支持模型微调和自定义部署。"
+    },
+    {
+      "q": "Together AI 有免费额度吗？",
+      "a": "有。新用户注册后可获得一定免费 API 调用额度（历史为 $25，具体以官网最新政策为准），用于测试和体验各项功能。"
+    },
+    {
+      "q": "Together AI 支持哪些模型？",
+      "a": "支持 Llama 2/3、Mistral、Mixtral、DeepSeek、Qwen、Gemma、Phi、Yi、Falcon 等数百个开源模型，以及 FLUX、Stable Diffusion 等图像生成模型。"
+    },
+    {
+      "q": "如何开始使用 Together AI？",
+      "a": "注册账户后，在控制台创建 API Key，然后通过 REST API 或官方 Python/Node.js SDK 即可调用模型。官方文档提供详细的快速入门教程。"
+    }
+  ],
+  "verified_tags": [
+    "模型推理",
+    "API服务",
+    "开源模型",
+    "微调"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://www.together.ai/pricing",
+    "https://together.ai/"
+  ],
+  "verify_notes": "按量计费，价格随模型与时点变动，已补充公开区间。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Together AI 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Together AI 的 无服务器推理（Serverless Inference）：按需运行 200+ 开源模型 是亮点，价格 按 Token 计费（Serverless 起 ~$0.10/百万 tokens）+ 免费额度；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

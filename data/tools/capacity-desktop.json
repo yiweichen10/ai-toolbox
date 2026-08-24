@@ -1,0 +1,98 @@
+{
+  "name": "Capacity Desktop",
+  "slug": "capacity-desktop",
+  "positioning": "Capacity Desktop是什么？免费本地Mac版AI建站工具好用吗",
+  "auto_positioning": false,
+  "emoji": "🧱",
+  "color": "#F97316",
+  "description": "Capacity Desktop 是一款免费、无需注册的 macOS 应用，用自然语言生成可运行的 Web、移动端、桌面与小游戏应用。它主打「本地优先 + 自带模型 Key」：项目就是本机上的普通文件夹和 git 仓库，AI 用你自己的 Claude / GPT / Gemini / DeepSeek 等 Key 按供应商原价计费，官方不转售 token、不加价卖 credits。2026 年 8 月 5 日在 Product Hunt 上线，被称为「住在 Mac 上的免费 Lovable」。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "免费可用",
+      "type": "free"
+    },
+    {
+      "text": "本地优先"
+    },
+    {
+      "text": "自然语言建站"
+    },
+    {
+      "text": "自带模型Key"
+    }
+  ],
+  "rating": "⭐ 4.4",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://capacity.so/desktop",
+  "price": "Beta 期间完全免费且无需注册；官方说明后续收费计划是一次性授权而非订阅，且不转售 AI token；模型费用由用户用自己的 API Key 按供应商原价直付",
+  "platform": "macOS（Apple Silicon）；官方称 Windows / Linux 在路线图上",
+  "pros": [
+    "项目就是普通文件夹加 git 仓库，能用任意编辑器打开、直接交给开发者，随时走人无锁定",
+    "自带模型 Key 按供应商原价计费，内置花费面板，不吃加价 credits 的差价",
+    "版本恢复时间线：每次改动都可回滚，AI 改歪了一键退回，不丢东西",
+    "零终端：自动检测并安装项目所需的 Git、Node 等开发工具，非技术用户不用碰命令行",
+    "自带 80+ 精选设计模板，也支持导入已有仓库；发布页一键连 GitHub + Vercel 并预检环境变量"
+  ],
+  "cons": [
+    "仅支持 Apple Silicon 的 macOS，Windows 与 Linux 只在路线图上",
+    "必须自备 AI API Key，对完全不懂供应商计费的新手是一道额外门槛",
+    "两人团队维护、且处于 Beta 阶段，正式定价与移动端上架流程都还没落地"
+  ],
+  "features": [
+    "自然语言生成应用：描述需求即产出可运行的 Web、移动端、桌面与小游戏项目",
+    "自带模型（BYOAI）：支持 Claude、GPT、Gemini、Grok、Kimi、DeepSeek、OpenRouter 等，账单直连供应商并有花费面板",
+    "版本恢复时间线：每次修改生成可恢复版本，一键回滚失败的 AI 生成",
+    "本地文件存储：项目以普通文件夹与 git 仓库形式存在本机，可随时导出或交接",
+    "模板库与导入：80+ 手工挑选的设计模板，或直接导入已有仓库继续做",
+    "一键发布与自动装工具：连接 GitHub + Vercel、预检环境变量后直接部署；自动安装 Git、Node 等依赖，无需终端"
+  ],
+  "related": [
+    "lovable",
+    "bolt.new",
+    "cursor"
+  ],
+  "content": "## Capacity Desktop是什么？\n\nCapacity Desktop 是一款 macOS 应用（目前仅支持 Apple Silicon），用自然语言把想法变成能跑的应用——Web、移动端、桌面端甚至小游戏都能生成。它的 Product Hunt 标语很直白：「一个住在你 Mac 上的免费 Lovable」。\n\n做它的是两个产品人 Baptiste 和 Samuel，动机说得很清楚：他们喜欢 Lovable 和 Bolt 带来的可能性，但不想为此付租——不想被加价卖 AI credits，不想代码被扣在云端工作区里，也不想「导出」是个事后补上的按钮。所以 Capacity Desktop 的设计原则是本地优先：项目就是你机器上一个普通文件夹加一个 git 仓库，AI 走你自己的 API Key 按原价结算，官方明确表态「我们卖工具，不转售 token」。2026 年 8 月 5 日上线 Product Hunt，拿到 140 票、当日第九，是这个两人团队的第三次发布，前两次分别是 Spec Coding 和 Capacity 2.0。\n\n## 核心功能\n\n1. 自然语言到真应用。描述需求，它生成完整可运行的项目，覆盖 Web、移动端、桌面和游戏几类形态。\n2. 自带模型（BYOAI）。支持 Claude、GPT、Gemini、Grok、Kimi、DeepSeek、OpenRouter 等，账单直接走供应商，应用内有花费面板，每次会话花多少一目了然。这一条是它跟主流云端建站工具最本质的差别——那些工具的 credits 里含加价，这里不含。\n3. 版本恢复时间线。每一次改动都生成一个可恢复版本，AI 生成跑偏了一键回滚，官方强调「不会丢任何状态」。用过 AI 建站工具的人都知道这个功能有多必要。\n4. 本地文件存储。项目是标准文件夹和 git 仓库，你可以在任意编辑器里打开，可以直接交给另一个开发者，也可以随时彻底离开这个平台。\n5. 模板库与导入。内置 80+ 手工挑选的设计模板，或者导入一个你已有的仓库继续做。\n6. 一键发布与自动装工具。发布页连 GitHub 和 Vercel，先预检环境变量再部署；另外它会自动识别项目需要的 Git、Node 等工具并帮你装好，全程不需要开终端——这一点对非技术用户很关键。\n\n## 版本/套餐对比\n\n现在只有一个版本：Beta 期间完全免费，不需要注册，下载即用。官方对后续收费给了明确表态——计划是一次性授权（one-time license），不做订阅，也永远不加价卖 credits；模型费用始终由你用自己的 Key 直付给供应商。这个承诺在 AI 建站这个普遍走订阅加 credits 的赛道里算是少见的选择。要注意的是正式定价尚未公布，移动端应用商店上架流程也还在路线图上没实现。\n\n## 值不值得用？\n\n对愿意自己管 API Key 的人来说，它的取舍很划算。你拿到的是所有权和透明度：代码是自己的、git 历史是自己的、AI 花费是自己的且看得见。加上版本回滚和自动装工具这两块打磨得细，实际体验比「又一个 AI 建站工具」要扎实。\n\n限制也很实在。第一是平台，只有 Apple Silicon 的 Mac，Windows 和 Linux 只在路线图上，官方还在评论区问用户更需要哪个。第二是自带 Key 这道门槛——对完全不懂供应商计费的用户来说，这是需要额外学习的一步，官方自己也把它列为「诚实的部分」。第三是团队只有两个人、产品还在 Beta，如果你想要的是全托管、浏览器打开就能用、AI 额度内置、完全不做基础设施决策的体验，那它不是给你的。\n\n## 使用建议\n\n1. 先确认硬件：必须是 Apple Silicon 的 Mac，Intel 机器目前用不了。\n2. 装之前先把 API Key 准备好。DeepSeek 或 Gemini 这类便宜的适合起步，摸清生成质量后再上贵模型。\n3. 从模板起步而不是从零描述。80+ 模板里挑接近的改，比空白开局收敛得快得多。\n4. 盯着花费面板做几轮，建立对「一次改动大概多少钱」的直觉，这是自带 Key 模式的必修课。\n5. 生成偏了立刻用恢复时间线回滚，别指望靠继续提示把它掰回来。\n6. 项目是标准 git 仓库，重要东西记得自己 push 一份到 GitHub。\n\n## 适合谁用？\n\n推荐：用 Apple Silicon Mac、已经有 AI API Key，且不愿意把代码和数据放在别人服务器上的独立开发者、产品经理和创业者。\n可考虑：想做内部小工具、自定义看板或原型的非技术专业人士——零终端加自动装工具这两点确实降低了门槛；也适合正在为云端建站工具的 credits 账单纠结的人。\n不推荐：Windows / Linux 用户（暂时无解）；需要团队协作与托管服务的场景；以及希望「注册即用、AI 额度内置、完全不管基础设施」的用户——这类需求更适合 Lovable 这类云端产品。",
+  "published": false,
+  "faq": [
+    {
+      "question": "Capacity Desktop 真的免费吗？",
+      "answer": "Beta 期间是的，下载即用且无需注册。官方说明后续收费计划是一次性授权而非订阅，也不会加价转售 AI credits。唯一持续支出是你自己的 AI API Key 费用，按供应商原价直付。"
+    },
+    {
+      "question": "Capacity Desktop 支持 Windows 吗？",
+      "answer": "目前不支持。它只提供 macOS（Apple Silicon）版本，Windows 与 Linux 在官方路线图上，尚未给出发布时间。开发者在 Product Hunt 评论中还在收集用户对平台优先级的反馈。"
+    },
+    {
+      "question": "它和 Lovable、Bolt 有什么区别？",
+      "answer": "最大差别是本地优先和自带模型。Lovable、Bolt 这类云端产品把项目托管在自己服务器上并出售含加价的 AI credits；Capacity Desktop 把项目存成你机器上的普通文件夹与 git 仓库，AI 走你自己的 Key 按原价计费，随时可以带着代码离开。"
+    },
+    {
+      "question": "生成的代码归我吗？可以交给开发者继续做吗？",
+      "answer": "可以。项目以标准文件夹加 git 仓库的形式存在本机，能用任意编辑器打开、直接交给其他开发者，也可以随时脱离这个工具继续开发，不存在平台锁定。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Capacity Desktop",
+    "Capacity Desktop怎么样",
+    "Mac AI建站工具",
+    "Capacity Desktop免费吗",
+    "Capacity Desktop和Lovable哪个好"
+  ],
+  "source_urls": [
+    "https://capacity.so/",
+    "https://completeaitraining.com/ai-tools/capacity-desktop/",
+    "https://launly.com/products/capacity-desktop",
+    "https://ustack.app/blogs/producthunt-daily-2026-08-05"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

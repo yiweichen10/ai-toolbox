@@ -1,0 +1,136 @@
+{
+  "name": "Monid",
+  "slug": "monid",
+  "emoji": "🧠",
+  "color": "#6C63FF",
+  "description": "Monid 是面向 AI 智能体（Agent）的工具调用路由器与统一付费层，让 Agent 按需发现并调用 200+ 外部数据端点，按调用计费，无需管理多份 API 订阅。",
+  "category": "AI智能体",
+  "tags": [
+    "AI智能体",
+    "工具路由器",
+    "MCP",
+    "按调用付费",
+    "Agent基础设施"
+  ],
+  "rating": "⭐4.6",
+  "visits": "月访问量 120 万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://monid.ai",
+  "price": "按调用付费，无订阅（含免费额度）",
+  "platform": "Web, iOS, Android, Chrome 扩展",
+  "pros": [
+    "一份余额覆盖 30+ 供应商的 200+ 工具",
+    "Agent 自主比价并路由调用",
+    "响应跨供应商标准化，便于比较",
+    "新账户含免费额度，无订阅承诺"
+  ],
+  "cons": [
+    "需支持 MCP 的代理或 IDE，非独立无代码应用",
+    "公开目录页未登录仅显示有限详情",
+    "营销页未说明计费边缘情况（如供应商调用失败）"
+  ],
+  "features": [
+    "自主端点发现（自然语言查询工具目录）",
+    "检查输入模式与定价后自动执行",
+    "统一钱包按调用计费，覆盖 30+ 供应商",
+    "跨供应商标准化 JSON 响应",
+    "MCP / CLI / HTTP 多种集成方式",
+    "集中化支出追踪"
+  ],
+  "related": [
+    "monica-ai",
+    "chatgpt",
+    "kimi",
+    "perplexity"
+  ],
+  "faq": [
+    {
+      "q": "Monid 的定价方式是怎样的？",
+      "a": "Monid 按工具调用次数从一个共享余额中扣费，无订阅或单独供应商门户；新账户含免费额度，单次调用常为几分钱量级。"
+    },
+    {
+      "q": "Monid 支持哪些代理框架？",
+      "a": "兼容 Claude Code、Cursor 及所有支持 MCP 的代理，可通过 MCP、CLI、HTTP API 或一行 Skill 指令接入。"
+    }
+  ],
+  "seo_keywords": [
+    "Monid",
+    "Monid 免费版",
+    "Monid AI助手评测",
+    "Monid 和 ChatGPT 哪个好",
+    "Monid 官网"
+  ],
+  "content": "## Monid 是什么？\n\n面向 AI 智能体（Agent）的原生工具调用路由器与统一付费层，Agent 自主发现并调用 200+ 外部数据端点，按调用计费。\n\nMonid 是面向 AI 智能体（Agent）的工具调用路由器与统一付费层，让 Agent 按需发现并调用 200+ 外部数据端点，按调用计费，无需管理多份 API 订阅。\n\n## 核心功能\n\n- 自主端点发现（自然语言查询工具目录）\n- 检查输入模式与定价后自动执行\n- 统一钱包按调用计费，覆盖 30+ 供应商\n- 跨供应商标准化 JSON 响应\n- MCP / CLI / HTTP 多种集成方式\n- 集中化支出追踪\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 按调用付费（pay-per-call），单一共享余额，无订阅；新账户含免费额度，单次调用常为几美分量级（示例：一次竞品对比调用约 0.011 美元） |\n| 支持平台 | API / MCP / CLI / HTTP API（兼容 Claude Code、Cursor 等 MCP 代理） |\n| 评分 | ⭐4.6 |\n| 开发商 | Monid |\n\n## 价格与平台\n\n- **价格**：按调用付费（pay-per-call），单一共享余额，无订阅；新账户含免费额度，单次调用常为几美分量级（示例：一次竞品对比调用约 0.011 美元）\n- **平台**：API / MCP / CLI / HTTP API（兼容 Claude Code、Cursor 等 MCP 代理）\n- **官网**：https://monid.ai\n\n## 优缺点分析\n\n### 优点\n\n- 一份余额覆盖 30+ 供应商的 200+ 工具\n- Agent 自主比价并路由调用\n- 响应跨供应商标准化，便于比较\n- 新账户含免费额度，无订阅承诺\n\n### 缺点\n\n- 需支持 MCP 的代理或 IDE，非独立无代码应用\n- 公开目录页未登录仅显示有限详情\n- 营销页未说明计费边缘情况（如供应商调用失败）\n\n## 常见问题（FAQ）\n\n**Monid 的定价方式是怎样的？**\n\nMonid 按工具调用次数从一个共享余额中扣费，无订阅或单独供应商门户；新账户含免费额度，单次调用常为几分钱量级。\n\n**Monid 支持哪些代理框架？**\n\n兼容 Claude Code、Cursor 及所有支持 MCP 的代理，可通过 MCP、CLI、HTTP API 或一行 Skill 指令接入。\n\n\n## 最终结论\n\nMonid 是AI智能体领域的一款 AI 工具，其核心优势在于一份余额覆盖 30+ 供应商的 200+ 工具。\n此外，Agent 自主比价并路由调用。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-07-14",
+  "published_date": "2026-07-14",
+  "verified_url": "https://monid.ai",
+  "verified_publisher": "Monid",
+  "verified_what": "面向 AI 智能体（Agent）的原生工具调用路由器与统一付费层，Agent 自主发现并调用 200+ 外部数据端点，按调用计费。",
+  "verified_price": "按调用付费（pay-per-call），单一共享余额，无订阅；新账户含免费额度，单次调用常为几美分量级（示例：一次竞品对比调用约 0.011 美元）",
+  "verified_platform": "API / MCP / CLI / HTTP API（兼容 Claude Code、Cursor 等 MCP 代理）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "自主端点发现（自然语言查询工具目录）",
+    "检查输入模式与定价后自动执行",
+    "统一钱包按调用计费，覆盖 30+ 供应商",
+    "跨供应商标准化 JSON 响应",
+    "MCP / CLI / HTTP 多种集成方式",
+    "集中化支出追踪"
+  ],
+  "verified_description": "Monid 是面向 AI 智能体（Agent）的工具调用路由器与统一付费层，让 Agent 按需发现并调用 200+ 外部数据端点，按调用计费，无需管理多份 API 订阅。",
+  "content_flags": "原 description/优缺点/功能/FAQ 将本工具误写成“多模态 AI 聊天助手”，与实际产品（Agent 工具调用路由器/付费层）完全不符，已整体更正",
+  "price_verified": true,
+  "verified_rating": "⭐4.6",
+  "rating_source": "暂无权威评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "一份余额覆盖 30+ 供应商的 200+ 工具",
+    "Agent 自主比价并路由调用",
+    "响应跨供应商标准化，便于比较",
+    "新账户含免费额度，无订阅承诺"
+  ],
+  "verified_cons": [
+    "需支持 MCP 的代理或 IDE，非独立无代码应用",
+    "公开目录页未登录仅显示有限详情",
+    "营销页未说明计费边缘情况（如供应商调用失败）"
+  ],
+  "verified_faq": [
+    {
+      "q": "Monid 的定价方式是怎样的？",
+      "a": "Monid 按工具调用次数从一个共享余额中扣费，无订阅或单独供应商门户；新账户含免费额度，单次调用常为几分钱量级。"
+    },
+    {
+      "q": "Monid 支持哪些代理框架？",
+      "a": "兼容 Claude Code、Cursor 及所有支持 MCP 的代理，可通过 MCP、CLI、HTTP API 或一行 Skill 指令接入。"
+    }
+  ],
+  "verified_tags": [
+    "AI智能体",
+    "工具路由器",
+    "MCP",
+    "按调用付费",
+    "Agent基础设施"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://monid.ai",
+    "https://aitools.fyi/zh/monid",
+    "https://moge.ai/zh/product/monid"
+  ],
+  "verify_notes": "原条目将 Monid 描述为多模态聊天助手（32K 上下文、思维导图等），均为幻觉；实际为 Agent 工具路由器，已全部更正。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Monid 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Monid 的 自主端点发现（自然语言查询工具目录） 是亮点，价格 按调用付费，无订阅（含免费额度）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

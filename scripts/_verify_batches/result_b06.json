@@ -1,0 +1,126 @@
+{
+  "batch_id": "b06",
+  "category": "AI对话",
+  "tools": [
+    {
+      "slug": "chatgpt",
+      "name": "ChatGPT",
+      "url_current": "https://chat.openai.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网URL(chat.openai.com)为OpenAI官方旧域名，仍可用，现规范域名为chatgpt.com；定价Plus $20/月属实(来源:OpenAI定价页)。描述中GPT-5.6 Sol/Terra/Luna等模型版本号无法核实，未判定为幻觉。"
+    },
+    {
+      "slug": "claude",
+      "name": "Claude",
+      "url_current": "https://claude.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "claude.ai为Anthropic官方站；Pro $20/月(月付)属实(来源:claude.ai定价页)。Claude 4系列/Sonnet 5/Fable 5及1000K上下文等版本与参数无法完全核实，未判定为幻觉。"
+    },
+    {
+      "slug": "kimi",
+      "name": "Kimi",
+      "url_current": "https://kimi.moonshot.cn",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "kimi.moonshot.cn为月之暗面官方站，免费可用属实；200万字上下文为Kimi标志性能力。K3(2.8T参数)等版本号无法核实，未判定为幻觉。"
+    },
+    {
+      "slug": "doubao",
+      "name": "豆包",
+      "url_current": "https://www.doubao.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "doubao.com为字节跳动官方站，基础功能免费属实(来源:官网)。正文中'会员版¥12/月起'说法无法核实，但免费使用成立，不判为幻觉。"
+    },
+    {
+      "slug": "gemini",
+      "name": "Gemini",
+      "url_current": "https://gemini.google.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "定价虚构：描述与price字段写'Pro $10/月'，实际Google AI Pro(原Gemini Advanced)为$19.99/月(来源:gemini.google.com订阅页、aipricing.guru 2026-07-15)。正文表格$20正确，与描述$10自相矛盾。"
+    },
+    {
+      "slug": "deepseek",
+      "name": "DeepSeek",
+      "url_current": "https://deepseek.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "deepseek.com为官方站，'免费额度可用，API按token计费'模式属实(来源:官网)。V4 Pro等版本号无法核实，未判定为幻觉。"
+    },
+    {
+      "slug": "wenxin-yiyan",
+      "name": "文心一言",
+      "url_current": "https://yiyan.baidu.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "定价虚构：price字段写'Pro $10/月'为虚构美元定价；实际文心Plus会员为人民币¥59.9/月(连续包月¥49.9)，产品已升级为'文小言'(来源:yiyan.baidu.com、百度官方及媒体报道)。正文¥59/月正确，与$10矛盾。"
+    },
+    {
+      "slug": "qwen-chat",
+      "name": "千问",
+      "url_current": "https://tongyi.aliyun.com/qianwen",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "定价虚构：price字段写'Pro $10/月'为虚构美元定价；实际千问个人专业版(Pro)为人民币59元/月，基础对话永久免费(来源:阿里云百炼平台、开发者社区文档)。"
+    },
+    {
+      "slug": "tencent-yuanbao",
+      "name": "腾讯元宝",
+      "url_current": "https://yuanbao.tencent.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "定价虚构且与正文矛盾：price字段写'基础$10/月起'为虚构美元定价，而正文称'完全免费'；实际元宝基础免费，Pro约19-29元/月(人民币)(来源:腾讯官网、公开报道)。"
+    },
+    {
+      "slug": "grok",
+      "name": "Grok",
+      "url_current": "https://grok.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "grok.com为xAI官方站，免费可用属实(SuperGrok另付费)。公司/产品归属正确(马斯克xAI)，无张冠李戴(来源:官网)。"
+    }
+  ]
+}

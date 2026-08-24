@@ -1,0 +1,150 @@
+{
+  "name": "Kestra",
+  "slug": "kestra",
+  "positioning": "内置可观测性+自托管：免费AI自动化工具怎么用",
+  "auto_positioning": true,
+  "emoji": "⚡",
+  "color": "#4A90D9",
+  "description": "Kestra 是一个开源的事件驱动工作流编排平台（由 Kestra 公司维护），用声明式 YAML 编排数据、AI 与基础设施流程，支持 1600+ 插件、自托管与云部署。",
+  "category": "AI自动化",
+  "tags": [
+    "工作流",
+    "开源",
+    "数据管道"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://kestra.io",
+  "price": "开源免费 + 企业版定制",
+  "platform": "Web、Docker、Kubernetes、CLI",
+  "pros": [
+    "开源且支持自托管，数据完全可控",
+    "声明式 YAML 配置，直观且易于版本控制",
+    "拥有 1600+ 插件，快速集成各类数据库和云服务",
+    "支持事件驱动、定时调度和 API 触发多种模式",
+    "架构模块化，可通过自定义插件和任务类型扩展"
+  ],
+  "cons": [
+    "复杂工作流的学习曲线较陡，需熟悉 YAML 和 DSL",
+    "社区版缺乏一些企业级功能（如 RBAC、SSO）",
+    "UI 界面相对简约"
+  ],
+  "features": [
+    "声明式 YAML 工作流定义，支持版本控制与代码审查",
+    "事件驱动 / 定时 / API / Webhook 多种触发器",
+    "1600+ 官方插件，集成数据库、云与消息队列",
+    "内置可观测性：日志、重试与失败恢复",
+    "自托管（Docker/Kubernetes）或 Kestra Cloud 托管"
+  ],
+  "related": [
+    "n8n",
+    "make",
+    "zapier-ai"
+  ],
+  "faq": [
+    {
+      "q": "Kestra 是否开源免费？",
+      "a": "是的，Kestra 社区版在 GitHub 上开源，现采用 Apache 2.0 协议（早期曾用 Elastic License 2.0），可免费使用和自托管；企业版提供 SSO、RBAC 和优先级支持。"
+    },
+    {
+      "q": "支持哪些部署方式？",
+      "a": "支持 Docker、Docker Compose、Kubernetes 以及 Kestra Cloud 托管。"
+    },
+    {
+      "q": "与 n8n、Make 有什么不同？",
+      "a": "Kestra 更专注数据工程和 ETL，采用声明式 YAML，适合需版本控制与高可复现性的团队；n8n、Make 偏向低代码连接。"
+    },
+    {
+      "q": "如何与数据库集成？",
+      "a": "提供 JDBC 插件支持 MySQL、PostgreSQL、Snowflake 等，也有 BigQuery、Redshift 等专用插件，可通过 YAML 配置直接执行 SQL。"
+    }
+  ],
+  "seo_keywords": [
+    "Kestra",
+    "Kestra怎么样",
+    "Kestra免费版",
+    "Kestra使用教程",
+    "Kestra和哪个好"
+  ],
+  "content": "## Kestra是什么？\n\n简单说，Kestra 是一个**开源的工作流自动化平台**，专治各种“任务编排”的麻烦事。它最大的特点是用 **YAML 文件**来定义整个流程——就像写配置文件一样，把你要跑的数据管道、ETL 任务、云服务操作挨个写清楚，然后 Kestra 帮你按顺序或按事件触发执行。\n\n它不像 Airflow 那样需要你写 Python DAG，也不像传统 Jenkins 那样偏向 CI/CD。Kestra 更侧重**数据管道和云基础设施的自动化**，比如：每天定时从数据库拉数据、清洗后写入数据湖；或者监控到新文件上传到 S3 就自动触发一个处理流程。因为它完全开源且支持自托管，数据留在自己手里，很多注重数据安全的团队会用它替代 SaaS 产品。\n\n一句话：如果你喜欢“写配置就能干活”的风格，又需要事件驱动和定时调度，Kestra 值得看看。\n\n## 核心功能\n\n**1. YAML 工作流定义与版本管理**  \n所有流程都用声明式 YAML 写，不用编程语言。这样做的好处是：文件本身就是文档，而且能丢进 Git 做版本控制，回溯、协作都很方便。实际使用中，只要熟悉 YAML 和 DSL 的写法，定义一个包含分支、循环、子流程的任务链比写代码直观很多。不过需要适应它的语法细节，比如条件判断的格式。\n\n**2. 事件驱动和定时调度触发器**  \n支持三种主流触发方式：  \n- **定时**：cron 表达式，常规操作。  \n- **事件驱动**：监听 Kafka、SQS、文件事件等，收到消息自动启动工作流。  \n- **API 触发**：通过 REST API 直接调用。  \n这点对数据管道很实用——比如“当新文件到达 FTP 时立刻处理”，不需要轮询，省资源。\n\n**3. 内置插件市场（300+ 插件）**  \nKestra 有丰富的插件生态，覆盖数据库（PostgreSQL、MySQL、MongoDB）、消息队列（Kafka、RabbitMQ）、云服务（AWS、GCP、Azure）、甚至工单系统（Jira）。通过插件可以快速集成，不用自己写连接代码。实际体验中，大多数常用服务都有官方插件，但小众平台可能得自己开发自定义插件。\n\n**4. 实时监控、日志查看和失败重试机制**  \nWeb UI 里能看到每个工作流的运行状态、耗时、日志输出。失败时会自动重试（可配置重试次数和间隔），也支持发送通知（邮件、Slack）。对于生产环境，这个功能足够用了，但 UI 界面比较简约，没有 Airflow 那种 DAG 图形化拖拽视图，调试时主要靠看日志。\n\n**5. REST API 支持外部系统集成**  \nKestra 开放了完整的 REST API，可以把它当作一个“工作流引擎”嵌入到你的现有系统里。比如你的后台服务调用 API 创建一个工作流，然后查询执行结果。配合 Webhook 就能实现很多自动化联动。\n\n**6. 支持 Docker、Kubernetes 等多环境部署**  \n能跑在 Docker compose、Kubernetes（Helm chart）、甚至裸机上。官方也提供托管的云版（Kestra Cloud），但社区版自托管更灵活。部署文档比较清晰，新手也能用 Docker 几分钟启动一个实例。\n\n## 版本/套餐对比\n\nKestra 主要分为**社区版（开源）** 和**企业版**。社区版完全免费，功能核心；企业版在安全、权限、高可用方面做了增强。具体价格未公开，需联系官方。\n\n| 功能 | 社区版 | 企业版 |\n|------|--------|--------|\n| 工作流引擎（YAML 定义、触发、执行） | ✅ | ✅ |\n| 300+ 插件 | ✅ | ✅ |\n| REST API | ✅ | ✅ |\n| 自托管（Docker/K8s） | ✅ | ✅ |\n| 角色权限（RBAC） | ❌ | ✅ |\n| 单点登录（SSO） | ❌ | ✅ |\n| 审计日志 | ❌ | ✅ |\n| 技术支持 | 社区 | 官方支持 |\n\n> 注意：社区版虽然功能完整，但缺少企业级治理功能，团队较大或有合规需求时建议考虑企业版。\n\n## 值不值得用？\n\n**优点**  \n- 开源 + 自托管，数据不出网，安全可控。  \n- YAML 配置清晰，版本管理友好。  \n- 插件生态丰富，集成成本低。  \n- 多种触发方式灵活，事件驱动和定时都能覆盖。  \n- 架构模块化，可以自己写插件扩展。\n\n**缺点**  \n- 学习曲线：如果你不熟悉 YAML 和 Kestra 的 DSL，刚开始写复杂工作流（条件分支、错误处理、嵌套子流程）会有点绕。  \n- 社区版缺少 RBAC、SSO，多人协作时权限管理比较原始。  \n- UI 比较朴素，没有可视化拖拽界面，高级调试（比如断点、实时变量查看）也欠缺。\n\n**总体结论**  \n如果你需要一个**轻量、自托管、事件驱动**的工作流引擎，并且团队能接受 YAML 写法，Kestra 是一个性价比很高的选择。它不像 Airflow 那样重度（需要 Python 和复杂架构），也不像传统调度器那样功能单一。但如果你的场景需要复杂的可视化编排、强大的企业级权限，或者团队全是非技术人员，那它可能不是最优解。\n\n## 使用建议\n\n1. **从简单场景入手**：先写一个定时抓取数据库并发送邮件的流程，熟悉 YAML 语法和触发方式。  \n2. **善用官方示例库**：Kestra 官方提供了很多模板（比如“从 Postgres 到 CSV”），可以直接改参数用，比从零开始快很多。  \n3. **插件优先原则**：在集成外部服务前，先去插件市场搜一下，大概率有现成的。没有的话才考虑写自定义插件（需要 Java/Kotlin）。  \n4. **重视日志和监控**：生产环境一定要配置通知（Slack/邮件），失败重试设置合理的次数（比如 3 次），避免无限重试。  \n5. **版本管理要跟上**：把 .yaml 文件放 Git 仓库，每次变更走 PR 审查，不然多人修改容易冲突。\n\n## 适合谁用？\n\n**推荐使用**  \n- 数据团队需要做 ETL/ELT 管道的编排。  \n- 后端或运维团队需要自动化云基础设施操作（启停实例、清理资源）。  \n- 需要事件驱动（比如监听消息队列）的自动化场景。  \n- 对数据主权敏感，必须自托管的团队。\n\n**可以考虑**  \n- 团队已经熟悉 YAML/DSL，想找一个比 Airflow 更轻量的替代品。  \n- 需要快速集成 100+ 外部服务的场景，但预算有限。\n\n**不推荐**  \n- 需要图形化拖拽界面、零代码操作的非技术用户。  \n- 企业级规模，需要完善的 RBAC、SSO、审计等治理功能（除非买企业版）。  \n- 需要实时流处理（Kestra 是批处理为主，不擅长实时流计算）。",
+  "published": true,
+  "source_url": "https://kestra.io",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://kestra.io",
+  "verified_publisher": "Kestra Technologies（Kestra 公司）",
+  "verified_what": "开源的事件驱动工作流编排平台，用声明式 YAML 编排数据、AI 与基础设施流程，支持 1600+ 插件、自托管与云部署。",
+  "verified_price": "开源免费（Apache 2.0 社区版）；Enterprise 企业版含 SSO/RBAC/审计日志等，需联系销售定价；另提供 Kestra Cloud 托管。",
+  "verified_platform": "Web（UI）, Self-Hosted（Docker/Kubernetes）, Cloud, API",
+  "verified_features": [
+    "声明式 YAML 工作流定义，支持版本控制与代码审查",
+    "事件驱动 / 定时 / API / Webhook 多种触发器",
+    "1600+ 官方插件，集成数据库、云与消息队列",
+    "内置可观测性：日志、重试与失败恢复",
+    "自托管（Docker/Kubernetes）或 Kestra Cloud 托管"
+  ],
+  "verified_description": "Kestra 是一个开源的事件驱动工作流编排平台（由 Kestra 公司维护），用声明式 YAML 编排数据、AI 与基础设施流程，支持 1600+ 插件、自托管与云部署。",
+  "content_flags": "长文称“300+ 插件”，官网现称 1600+ 插件；FAQ 称社区版采用 Elastic License 2.0，官网/GitHub 现标注为 Apache 2.0，需修正。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "暂无权威外部评分（编辑评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "开源且支持自托管，数据完全可控",
+    "声明式 YAML 配置，直观且易于版本控制",
+    "拥有 1600+ 插件，快速集成各类数据库和云服务",
+    "支持事件驱动、定时调度和 API 触发多种模式",
+    "架构模块化，可通过自定义插件和任务类型扩展"
+  ],
+  "verified_cons": [
+    "复杂工作流的学习曲线较陡，需熟悉 YAML 和 DSL",
+    "社区版缺乏一些企业级功能（如 RBAC、SSO）",
+    "UI 界面相对简约"
+  ],
+  "verified_faq": [
+    {
+      "q": "Kestra 是否开源免费？",
+      "a": "是的，Kestra 社区版在 GitHub 上开源，现采用 Apache 2.0 协议（早期曾用 Elastic License 2.0），可免费使用和自托管；企业版提供 SSO、RBAC 和优先级支持。"
+    },
+    {
+      "q": "支持哪些部署方式？",
+      "a": "支持 Docker、Docker Compose、Kubernetes 以及 Kestra Cloud 托管。"
+    },
+    {
+      "q": "与 n8n、Make 有什么不同？",
+      "a": "Kestra 更专注数据工程和 ETL，采用声明式 YAML，适合需版本控制与高可复现性的团队；n8n、Make 偏向低代码连接。"
+    },
+    {
+      "q": "如何与数据库集成？",
+      "a": "提供 JDBC 插件支持 MySQL、PostgreSQL、Snowflake 等，也有 BigQuery、Redshift 等专用插件，可通过 YAML 配置直接执行 SQL。"
+    }
+  ],
+  "verified_tags": [
+    "工作流",
+    "开源",
+    "数据管道"
+  ],
+  "verified_category": "AI自动化",
+  "source_urls": [
+    "https://kestra.io/?auto/",
+    "https://github.com/kestra-io/kestra"
+  ],
+  "verify_notes": "插件数从早期版本大幅增长；许可证已改为 Apache 2.0。",
+  "compare_section": {
+    "competitors": [
+      "n8n",
+      "make",
+      "bardeen"
+    ],
+    "verdict": "Kestra 与 n8n、Make、Bardeen 同属AI自动化赛道：Kestra 的 声明式 YAML 工作流定义，支持版本控制与代码审查 是亮点，价格 开源免费 + 企业版定制；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-02",
+  "created_date": "2026-08-02"
+}

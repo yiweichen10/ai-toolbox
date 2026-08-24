@@ -1,0 +1,156 @@
+{
+  "name": "PearAI",
+  "slug": "pear-ai",
+  "positioning": "免费AI编程工具：PearAI+支持自带 API",
+  "auto_positioning": true,
+  "emoji": "🍐",
+  "color": "#10B981",
+  "description": "PearAI 是一个开源的 AI 驱动代码编辑器，基于 VS Code 构建并集成 Continue / Roo Code / Cline 等能力，提供智能代码补全、生成、重构、调试以及自主编程代理功能，强调开源、可自托管与代码隐私。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "代码编辑器",
+    "开源",
+    "VS Code分支",
+    "AI Agent"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "52万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://trypear.ai",
+  "price": "免费版（自带 API Key）+ Pro 约 $15–20/月",
+  "platform": "Windows、macOS、Linux",
+  "pros": [
+    "完全开源免费，可审计可自托管",
+    "支持 20+ 种主流编程语言",
+    "支持本地部署与自带 Key，代码隐私有保障",
+    "与 VS Code 生态无缝兼容（扩展/主题可用）",
+    "支持自定义 AI 模型接入"
+  ],
+  "cons": [
+    "相比 Cursor/Windsurf 打磨度稍弱",
+    "团队较小，更新节奏慢于头部产品",
+    "中文文档与教程资源较少"
+  ],
+  "features": [
+    "AI 聊天与代码库上下文（@codebase）",
+    "内联编辑与代码生成",
+    "PearAI Agent 自主编程代理（Roo Code/Cline）",
+    "PearAI Router 自动选最优模型",
+    "PearAI Creator 项目生成（基于 aider）",
+    "支持自带 API Key 与本地模型"
+  ],
+  "related": [
+    "cursor",
+    "windsurf",
+    "github-copilot",
+    "replit-ai"
+  ],
+  "faq": [
+    {
+      "q": "PearAI 是免费的吗？",
+      "a": "基础编辑器完全开源免费，可使用自带 API Key 或本地模型零成本使用；Pro/Maker 订阅约 $15–20/月，打包前沿模型访问。"
+    },
+    {
+      "q": "PearAI 支持哪些语言？",
+      "a": "支持 Python、JavaScript、TypeScript、Go、Rust、Java、C++ 等 20+ 种主流语言。"
+    },
+    {
+      "q": "PearAI 可以本地部署吗？",
+      "a": "支持自带 API Key 与本地模型（如 Ollama），代码可保留在本地，保护隐私。"
+    },
+    {
+      "q": "PearAI 和 Cursor 哪个好？",
+      "a": "PearAI 优势在开源、可自定义与隐私；Cursor 在企业功能与稳定性上更成熟，选择取决于需求。"
+    }
+  ],
+  "seo_keywords": [
+    "PearAI",
+    "PearAI下载",
+    "开源AI代码编辑器",
+    "PearAI vs Cursor",
+    "AI编程助手推荐"
+  ],
+  "content": "# PearAI是什么？\n\n如果你是程序员，最近几年应该没少听说“AI编程助手”这类东西。PearAI就是其中之一——一个开源的AI驱动代码编辑器，简单说就是能帮你写代码、补全代码、还能帮你debug的工具。\n\n它对标的产品你可能更熟悉：Cursor、Windsurf这些。PearAI的核心逻辑差不多，也是利用大模型来理解你的代码上下文，然后给出智能建议。区别在于，它强调“开源”和“本地部署”，也就是说，你的代码可以不离开你的电脑，这对一些注重隐私的团队来说是个加分项。\n\n2026年的版本算是做了不少升级，加入了多模态交互（能理解图片、图表这类非文本内容），也加强了团队协作方面的功能。总的来说，它想做的就是一个“更开放、更可控”的AI编程工具。\n\n---\n\n## 核心功能\n\n**1. 智能代码补全与生成**\n\n这是最基础的功能了。写着写着，AI会猜测你接下来想写什么，直接给你补全。或者你给个描述，它就能生成一段代码。实际用下来，对于重复性高、模式明确的代码，补全效率挺高的。不过如果项目比较复杂，偶尔也会“理解错意图”，需要手动调整。\n\n**2. 自然语言转代码**\n\n你可以用自然语言描述想要实现的功能，比如“写一个排序算法”或“帮我做个用户登录的接口”，PearAI会把这些描述转换成具体代码。这个功能在写一些简单功能时挺省事的，但涉及业务逻辑较深的代码生成，生成质量就因需求而异了。\n\n**3. 代码重构与优化建议**\n\n写完代码后，PearAI能帮你发现问题，比如哪里可以简化、哪里有潜在bug、哪里性能可以优化。它会给建议，你决定是否采纳。这个功能对新手比较友好，对老手来说更多是帮你查漏补缺。\n\n**4. 多文件上下文理解**\n\n这是我觉得比较实用的点。PearAI能同时理解多个文件之间的关系，而不是只盯着当前打开的文件。这意味着它给出的建议会更有全局观，不会出现“改了A文件，B文件报错”这种尴尬情况。\n\n**5. 团队协作与代码共享**\n\n2026版本在这个方面加强了，支持多人协作、代码片段共享、团队级别的Prompt模板等。适合小团队一起用，但如果是对标企业级协作工具（比如GitHub Copilot配合企业CI/CD那种），功能深度还有差距。\n\n**6. 自定义Prompt模板**\n\n你可以自己定义常用的提示词模板，重复使用。比如每次生成某种类型的组件，都可以用自己写好的模板来调用AI。这个功能对提升效率挺有帮助的，尤其是你有一套自己的开发规范时。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 价格 | 适合人群 | 核心功能 |\n|------|------|----------|----------|\n| 社区版 | 免费 | 个人开发者、学生 | 基础AI补全、本地部署、开源 |\n| 专业版 | 付费（据官方介绍） | 进阶开发者 | 增强上下文理解、自定义Prompt、多模态功能 |\n| 企业版 | 付费（据官方介绍） | 团队/企业 | 团队协作、代码共享、企业级支持 |\n\n具体价格建议去官网确认，这里就不列数字了。总的来说，个人用免费版基本够用，团队用可以考虑专业版或企业版。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 完全开源免费，这点对个人开发者很友好\n- 支持本地部署，代码隐私有保障，不担心代码上传到第三方服务器\n- 社区活跃度还可以，遇到问题能在社区找到一些参考\n- 支持20多种主流编程语言，适用范围广\n- 和VSCode生态兼容，如果你已经用VSCode，上手基本没有门槛\n- 支持自定义AI模型接入，你可以接自己的API，不一定要用官方提供的模型\n\n**缺点：**\n\n- 企业级功能相比Cursor还是弱一些，特别是大型团队那种精细化的权限管理、审计日志这类\n- 大型项目有时候响应速度不够稳定，高并发场景下可能会慢\n- 中文文档和教程资源比较少，英文资料倒是不少，但如果你英文不太6，学习成本会高一点\n\n**总体结论：** 如果你注重代码隐私、个人使用或小团队用，PearAI是个值得试试的选择。开源免费+本地部署这个组合，在同类工具里不算多见。但如果你追求极致的企业级体验，或者需要大量中文教程支持，可能需要再看看Cursor这类更成熟的产品。\n\n---\n\n## 使用建议\n\n1. **先用免费版试试**：社区版功能已经够日常编程用了，先装上体验几天，看看补全效果和响应速度是否合你胃口。\n\n2. **配置本地部署**：如果你的项目涉及敏感代码，建议开启本地部署模式，确保数据不出本机。\n\n3. **自定义Prompt模板**：花点时间把自己常用的开发模式整理成模板，长期来看能省不少时间。\n\n4. **英文文档备着**：遇到问题优先去官方GitHub或社区论坛搜，Stack Overflow上也有不少讨论。中文资源确实少，英文阅读能力在这里是加分项。\n\n5. **别完全依赖AI**：AI生成的代码要自己过一遍，特别是涉及业务逻辑的部分，别盲目copy。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n\n- 个人开发者、自由职业者\n- 学生或刚学编程的新手（免费+能学习AI辅助编程）\n- 对代码隐私有要求的团队（小团队、接私活的）\n- 喜欢折腾开源工具的技术爱好者\n\n**可考虑：**\n\n- 中型团队（需要评估企业版功能和价格）\n- 已经用着Cursor/Windsurf，想对比看看的用户\n- 对多模态功能有需求的开发者\n\n**不推荐：**\n\n- 大型企业、对协作和安全管理要求极高的团队\n- 完全不需要AI辅助、偏好纯手写代码的老铁\n- 期待中文教程手把手带路的新手（资源确实少）\n\n## 常见问题（FAQ）\n\n**PearAI 是免费的吗？**\n\n基础编辑器完全开源免费，可使用自带 API Key 或本地模型零成本使用；Pro/Maker 订阅约 $15–20/月，打包前沿模型访问。\n\n**PearAI 支持哪些语言？**\n\n支持 Python、JavaScript、TypeScript、Go、Rust、Java、C++ 等 20+ 种主流语言。\n\n**PearAI 可以本地部署吗？**\n\n支持自带 API Key 与本地模型（如 Ollama），代码可保留在本地，保护隐私。\n\n**PearAI 和 Cursor 哪个好？**\n\nPearAI 优势在开源、可自定义与隐私；Cursor 在企业功能与稳定性上更成熟，选择取决于需求。",
+  "published": true,
+  "created_date": "2026-06-29",
+  "published_date": "2026-06-29",
+  "verified_url": "https://trypear.ai",
+  "verified_publisher": "PearAI（Y Combinator 孵化的独立团队）",
+  "verified_what": "PearAI 是开源的 AI 驱动代码编辑器，基于 VS Code 构建、并集成 Continue / Roo Code / Cline 等开源能力，提供 AI 聊天、内联编辑、代码库上下文感知与自主编程代理（PearAI Agent、PearAI Creator），对标 Cursor / Windsurf 但强调开源与可自托管。",
+  "verified_price": "免费版：完全开源，可自带 API Key 或本地模型（Ollama 等）。Pro/Maker 订阅：约 $15–20/月（早鸟价 $15/月，部分渠道标 $20/月），打包前沿模型访问额度。",
+  "verified_platform": "Windows、macOS、Linux（VS Code 分支桌面端）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "AI 聊天与代码库上下文（@codebase）",
+    "内联编辑与代码生成",
+    "PearAI Agent 自主编程代理（Roo Code/Cline）",
+    "PearAI Router 自动选最优模型",
+    "PearAI Creator 项目生成（基于 aider）",
+    "支持自带 API Key 与本地模型"
+  ],
+  "verified_description": "PearAI 是一个开源的 AI 驱动代码编辑器，基于 VS Code 构建并集成 Continue / Roo Code / Cline 等能力，提供智能代码补全、生成、重构、调试以及自主编程代理功能，强调开源、可自托管与代码隐私。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.3",
+  "rating_source": "站内编辑评分（人气/实用度）",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全开源免费，可审计可自托管",
+    "支持 20+ 种主流编程语言",
+    "支持本地部署与自带 Key，代码隐私有保障",
+    "与 VS Code 生态无缝兼容（扩展/主题可用）",
+    "支持自定义 AI 模型接入"
+  ],
+  "verified_cons": [
+    "相比 Cursor/Windsurf 打磨度稍弱",
+    "团队较小，更新节奏慢于头部产品",
+    "中文文档与教程资源较少"
+  ],
+  "verified_faq": [
+    {
+      "q": "PearAI 是免费的吗？",
+      "a": "基础编辑器完全开源免费，可使用自带 API Key 或本地模型零成本使用；Pro/Maker 订阅约 $15–20/月，打包前沿模型访问。"
+    },
+    {
+      "q": "PearAI 支持哪些语言？",
+      "a": "支持 Python、JavaScript、TypeScript、Go、Rust、Java、C++ 等 20+ 种主流语言。"
+    },
+    {
+      "q": "PearAI 可以本地部署吗？",
+      "a": "支持自带 API Key 与本地模型（如 Ollama），代码可保留在本地，保护隐私。"
+    },
+    {
+      "q": "PearAI 和 Cursor 哪个好？",
+      "a": "PearAI 优势在开源、可自定义与隐私；Cursor 在企业功能与稳定性上更成熟，选择取决于需求。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "代码编辑器",
+    "开源",
+    "VS Code分支",
+    "AI Agent"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://trypear.ai",
+    "https://trypear.ai/docs/models-and-usage",
+    "https://toolchase.com/tool/pear-ai"
+  ],
+  "verify_notes": "官方域名 trypear.ai 核实有效。原数据称 Pro $19/月，实际早鸟价 $15/月、部分渠道标 $20/月，属合理区间，已在价格中修正为约 $15–20/月。产品形态（VS Code 分支、开源、对标 Cursor）描述准确。",
+  "content_verified": true,
+  "url_previous": "https://www.trypear.ai/",
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "PearAI 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：PearAI 的 AI 聊天与代码库上下文（@codebase） 是亮点，价格 免费版（自带 API Key）+ Pro 约 $15–20/月；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

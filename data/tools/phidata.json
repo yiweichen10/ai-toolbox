@@ -1,0 +1,151 @@
+{
+  "name": "Phidata",
+  "slug": "phidata",
+  "positioning": "免费AI智能体平台推荐：构建具备记忆、多智能体",
+  "auto_positioning": true,
+  "emoji": "🧠",
+  "color": "#4A90D9",
+  "description": "Phidata 现已更名为 Agno，是由 Agno 团队开源的多模态 AI 智能体框架，用于构建具备记忆、知识库与函数调用能力的智能体和工作流，支持多模型与多智能体编排。",
+  "category": "AI智能体",
+  "tags": [
+    "开源",
+    "智能体框架",
+    "多LLM",
+    "知识库"
+  ],
+  "rating": "⭐4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.agno.com",
+  "price": "开源免费 + Pro $150/月 起（AgentOS）",
+  "platform": "Python / Web（开源库 + Agno Cloud）",
+  "pros": [
+    "完全开源，可自托管",
+    "支持多种主流大语言模型",
+    "内置知识库与向量存储集成",
+    "强大的函数调用与工具链",
+    "活跃的社区与持续更新（GitHub 39k+ stars）"
+  ],
+  "cons": [
+    "学习曲线较陡，需一定编程基础",
+    "AgentOS 免费层仅本地模式，生产需付费 Pro",
+    "部分高级 RAG/向量文档仍偏少"
+  ],
+  "features": [
+    "构建具备记忆（memory）、知识（knowledge）、工具（tools）与推理能力的智能体",
+    "多智能体（multi-agent）编排，可组成团队协作",
+    "内置 Agentic RAG 与结构化输出",
+    "多模态（文本/图像/音频/视频）支持",
+    "模型无关，支持 30+ 模型提供商；提供 AgentUI 与监控（AgentOS）"
+  ],
+  "related": [
+    "langchain",
+    "crew-ai",
+    "autogen"
+  ],
+  "faq": [
+    {
+      "q": "Phidata 是免费的吗？",
+      "a": "核心框架开源免费；Agno（原 Phidata）提供 AgentOS 控制面，Free 层本地使用，Pro 为 $150/月，Enterprise 定制。"
+    },
+    {
+      "q": "支持哪些语言模型？",
+      "a": "支持 OpenAI、Anthropic、Google Gemini、Mistral、Groq 等 30+ 模型提供商，并可扩展。"
+    },
+    {
+      "q": "如何构建一个 AI 助手？",
+      "a": "用 Python 安装 agno 库，定义 Agent 类，配置模型、知识与工具后运行；也可在 AgentOS 中管理。"
+    },
+    {
+      "q": "Phidata 和 LangChain 有何区别？",
+      "a": "Agno 更聚焦 Agent 生产运行时（内存、监控、编排）；LangChain 是更底层的链式调用框架，两者可互补。"
+    }
+  ],
+  "seo_keywords": [
+    "Phidata",
+    "Phidata怎么样",
+    "Phidata免费版",
+    "Phidata使用教程",
+    "Phidata和哪个好"
+  ],
+  "content": "## Phidata 与 Agno 是什么关系？\n\nPhidata 这个开源智能体框架已经在 2024 年正式更名为 **Agno**（官网 agno.com）。团队还是原来那支，产品定位也没变：它是一个用于构建具备记忆、知识库与函数调用能力的多模态 AI 智能体和工作流的框架。所以今天你在 GitHub 或文档里看到的 Agno，就是此前的 Phidata——叫新名字，内核延续。对老用户来说，已写的代码和文档大多仍能对应上，迁移成本不高。\n\n## 主要能做什么\n\n**1. 有记忆、有知识、会调用工具的智能体**\n你可以给一个大模型配上 memory（记忆）、knowledge（知识库）、tools（工具）和推理能力，让它从\"只会聊天的模型\"变成能查资料、记上下文、动手干活的智能体。\n\n**2. 多智能体编排**\n支持把多个智能体组合成团队协同：一个负责检索、一个负责分析、一个负责执行，框架帮你把它们之间的消息和任务编排好。\n\n**3. Agentic RAG 与结构化输出**\n内置 Agentic RAG 能力，让检索增强更贴近真实任务；同时支持结构化输出，方便把结果直接喂给下游系统。\n\n**4. 多模态**\n文本、图像、音频、视频都能作为智能体的输入输出，不只停留在文字。\n\n**5. 模型无关**\n背后接 30 多家模型提供商，不必绑定某一家；还提供 Agent UI 与监控，方便本地调试和观察智能体运行。\n\n## 在哪些环境用\n\n它本质是 Python 开源库，可以用 pip 安装后本地跑，也能接 Agno Cloud 做托管与团队协作。开发者把它放进现有 Python 项目里集成成本很低，想私有化部署也行。\n\n## 价格怎么算\n\n框架本身开源免费。Agno 另外提供 Agno Cloud 托管版，用于把智能体跑成生产级平台（含运行时、监控、私有化部署等），其具体价格官方暂未公开，需要的企业可联系团队了解。\n\n## 常见用法\n\n实际落地时，Agno 常被用来做几类事：接上知识库做企业内部问答助手，把多个智能体编成研究小组做信息梳理，或者给现有产品嵌入一个会调用工具的对话层。因为它的运行时偏轻、启动快，也很适合做原型验证，跑通了再往 Agno Cloud 上搬。\n\n## 值不值得用\n\n如果你要用代码搭真正能\"干活\"的 AI 智能体，又想保留数据主权和灵活选型，Agno（原 Phidata）是当下很顺手的开源选择。它不适合只想点几下就生成内容的非技术用户——那是另一类无代码工具的事。",
+  "published": true,
+  "source_url": "https://www.phidata.com/blog/introducing-agno",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://www.agno.com",
+  "verified_publisher": "Agno（原 Phidata 团队）",
+  "verified_what": "Agno（原 Phidata）开源的多模态 AI 智能体框架与运行时，用于构建具备记忆、知识库与工具调用的智能体和工作流",
+  "verified_price": "开源框架免费（Apache 2.0）；AgentOS 托管控制面 Free（本地）/ Pro $150/月（含 4 席位、1 条实时连接）/ Enterprise 定制",
+  "verified_platform": "Python 框架, API, 自托管, AgentOS 云",
+  "verified_features": [
+    "构建具备记忆（memory）、知识（knowledge）、工具（tools）与推理能力的智能体",
+    "多智能体（multi-agent）编排，可组成团队协作",
+    "内置 Agentic RAG 与结构化输出",
+    "多模态（文本/图像/音频/视频）支持",
+    "模型无关，支持 30+ 模型提供商；提供 AgentUI 与监控（AgentOS）"
+  ],
+  "verified_description": "Phidata 现已更名为 Agno，是由 Agno 团队开源的多模态 AI 智能体框架，用于构建具备记忆、知识库与函数调用能力的智能体和工作流，支持多模型与多智能体编排。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "编辑评分（非外部权威评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全开源，可自托管",
+    "支持多种主流大语言模型",
+    "内置知识库与向量存储集成",
+    "强大的函数调用与工具链",
+    "活跃的社区与持续更新（GitHub 39k+ stars）"
+  ],
+  "verified_cons": [
+    "学习曲线较陡，需一定编程基础",
+    "AgentOS 免费层仅本地模式，生产需付费 Pro",
+    "部分高级 RAG/向量文档仍偏少"
+  ],
+  "verified_faq": [
+    {
+      "q": "Phidata 是免费的吗？",
+      "a": "核心框架开源免费；Agno（原 Phidata）提供 AgentOS 控制面，Free 层本地使用，Pro 为 $150/月，Enterprise 定制。"
+    },
+    {
+      "q": "支持哪些语言模型？",
+      "a": "支持 OpenAI、Anthropic、Google Gemini、Mistral、Groq 等 30+ 模型提供商，并可扩展。"
+    },
+    {
+      "q": "如何构建一个 AI 助手？",
+      "a": "用 Python 安装 agno 库，定义 Agent 类，配置模型、知识与工具后运行；也可在 AgentOS 中管理。"
+    },
+    {
+      "q": "Phidata 和 LangChain 有何区别？",
+      "a": "Agno 更聚焦 Agent 生产运行时（内存、监控、编排）；LangChain 是更底层的链式调用框架，两者可互补。"
+    }
+  ],
+  "verified_tags": [
+    "开源",
+    "智能体框架",
+    "多LLM",
+    "知识库"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://www.agno.com",
+    "https://www.phidata.com/pricing"
+  ],
+  "verify_notes": "已正式更名为 Agno（agno.com）；原 phidata.com 现亦指向 Agno。定价已公开：Pro $150/月。",
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Phidata 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Phidata 的 构建具备记忆（memory）、知识（knowledge）、工具（tools）与推理能力的智能体 是亮点，价格 开源免费 + Pro $150/月 起（AgentOS）；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-10",
+  "created_date": "2026-08-10"
+}

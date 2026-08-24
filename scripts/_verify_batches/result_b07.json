@@ -1,0 +1,126 @@
+{
+  "batch_id": "b07",
+  "category": "AI对话",
+  "tools": [
+    {
+      "slug": "character-ai",
+      "name": "Character AI",
+      "url_current": "https://character.ai",
+      "url_ok": true,
+      "url_correct": "https://character.ai",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "正常。官网 character.ai，c.ai+ 订阅 $9.99/月，与站内“免费版+Pro $10/月”基本一致；角色扮演/社区角色/语音通话等功能描述属实。"
+    },
+    {
+      "slug": "zhipu-chatglm",
+      "name": "智谱清言",
+      "url_current": "https://chatglm.cn",
+      "url_ok": true,
+      "url_correct": "https://chatglm.cn",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL正确（chatglm.cn 为智谱清言官方站）。定价编造：站内“免费版+Pro $10/月”无依据，真实为人民币计费（标准版50元/月、大会员99元/月、专业版200元/月），币种与金额均错。"
+    },
+    {
+      "slug": "xinghuo-iflytek",
+      "name": "讯飞星火",
+      "url_current": "https://xinghuo.xfyun.cn",
+      "url_ok": true,
+      "url_correct": "https://xinghuo.xfyun.cn",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "URL正确。定价“基础$10/月起”无依据：消费者端免费使用，API 按 token 计费（约3元/百万tokens），并无 $10/月 订阅档；平台标注“本地部署”对消费端亦不准确（本地/私有化仅面向企业API）。"
+    },
+    {
+      "slug": "poe",
+      "name": "Poe",
+      "url_current": "https://poe.com",
+      "url_ok": true,
+      "url_correct": "https://poe.com",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL正确（Quora 旗下）。价格字段“基础$10/月起”与正文“Poe订阅 $22/月”均错误：真实付费入门档 $4.99/月（1万积分/日），主力 $19.99/月（100万积分/月），另有 $49.99–$249.99 档，无 $10 或 $22 档。"
+    },
+    {
+      "slug": "tiangong",
+      "name": "天工AI",
+      "url_current": "https://www.tiangong-china.com",
+      "url_ok": true,
+      "url_correct": "https://www.tiangong-china.com",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL为昆仑万维官方域名（另有 canonical tiangong.cn）。定价“免费版+Pro $10/月”错误：真实为人民币会员（Basic 包月 ¥45–48、Plus ¥85–88、Ultra ¥188/月），币种与金额均错。"
+    },
+    {
+      "slug": "minimax",
+      "name": "MiniMax",
+      "url_current": "https://www.minimaxi.com",
+      "url_ok": true,
+      "url_correct": "https://www.minimaxi.com",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "URL正确（另有 hailuoai.com）。正文称“MiniMax完全免费使用”不实：存在付费会员（海螺AI 至臻版约 ¥899/月、年费过万）与 MiniMax Code Token Plan（Max ¥119/月）及按量 API 计费；价格字段“$10/月”亦错。"
+    },
+    {
+      "slug": "360-zhinain",
+      "name": "360智脑",
+      "url_current": "https://ai.360.cn",
+      "url_ok": true,
+      "url_correct": "https://ai.360.cn",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL为官方域名（另有 ai.360.com）。定价“免费版+Pro $10/月”错误：真实为人民币（标准版约 ¥49/月、专业版约 ¥99/月），币种与金额均错。"
+    },
+    {
+      "slug": "glitter-ai",
+      "name": "Glitter AI",
+      "url_current": "https://glitter.ai",
+      "url_ok": false,
+      "url_correct": "https://www.glitter.io",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "URL红线：glitter.ai 为 GoDaddy 待售/停放域名，非官网（真实官网 glitter.io）。内容幻觉：长正文将产品写成“通用AI聊天助手（写文案/数据分析/头脑风暴）”，但实际 Glitter AI 是“屏幕录制+语音讲解自动生成分步SOP/文档指南”工具，且与自身 description（屏幕录制转SOP）自相矛盾。"
+    },
+    {
+      "slug": "tencent-hunyuan",
+      "name": "腾讯混元",
+      "url_current": "https://hunyuan.tencent.com",
+      "url_ok": true,
+      "url_correct": "https://hunyuan.tencent.com",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "正常。官网 hunyuan.tencent.com；描述中 Hy3（295B 参数 MoE、Apache 2.0 开源）与搜索结果（2026-07 上线、295B/激活21B）一致；免费+企业 API 按 token 计费属实。"
+    },
+    {
+      "slug": "01-ai",
+      "name": "零一万物",
+      "url_current": "https://01.ai",
+      "url_ok": true,
+      "url_correct": "https://www.01.ai",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "正常。官网 01.ai（李开复创办），Yi 系列开源模型 + 按量 API（Yi-Lightning 约 ¥0.99/百万tokens），与站内描述一致。"
+    }
+  ]
+}

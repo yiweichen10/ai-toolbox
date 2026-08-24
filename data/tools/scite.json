@@ -1,0 +1,96 @@
+{
+  "name": "Scite",
+  "slug": "scite",
+  "positioning": "Scite是什么？科研文献AI搜索引擎好用吗",
+  "auto_positioning": false,
+  "emoji": "📚",
+  "color": "#5B3FA0",
+  "description": "Scite 是面向科研人员的文献智能平台，最大特色是 Smart Citations（智能引文）：它不仅统计一篇论文被引用了多少次，还分析每次引用的语境，标注是“支持”“反驳”还是“提及”。这让研究者能快速判断某项研究到底站不站得住脚，而不是被高引用数误导。",
+  "category": "AI搜索",
+  "tags": [
+    {
+      "text": "科研文献"
+    },
+    {
+      "text": "引文分析"
+    },
+    {
+      "text": "学术搜索"
+    }
+  ],
+  "rating": "⭐ 4.4",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://scite.ai",
+  "price": "7 天免费试用；个人 Basic $20/月（年付约 $12/月）、Pro $50/月、Team $100/月，企业版定制",
+  "platform": "Web",
+  "pros": [
+    "Smart Citations 区分支持/反驳/提及，能看出研究是否站得住脚",
+    "索引规模大（公开称 10 亿+ 引文陈述、3 亿+ 文献），覆盖面广",
+    "Reference Check 能在投稿前标出被撤稿或饱受争议的参考文献",
+    "与 Zotero、浏览器扩展等文献管理工作流集成顺畅",
+    "Scite Assistant 仅基于已验证引文作答，降低学术幻觉"
+  ],
+  "cons": [
+    "引文意图分类并非 100% 准确，细微语境偶有误判，仍需人工判断",
+    "核心能力在付费墙后，个人订阅有一定成本",
+    "覆盖依赖出版商全文权限，部分付费文献内容偏薄",
+    "偏重引文语境分析，不擅长自主做多轮文献综合"
+  ],
+  "features": [
+    "Smart Citations：把每条引文标注为支持/反驳/提及并展示上下文",
+    "全文检索：在数亿篇文献中按内容与引文语境搜索",
+    "Scite Assistant：基于文献库的科研级问答",
+    "Reference Check：上传稿件标出撤稿或受争议引用",
+    "看板与提醒：关注主题/作者，收到新的反驳引文时获通知",
+    "Zotero 插件与浏览器扩展：浏览出版商页面时显示智能引文"
+  ],
+  "related": [
+    "perplexity",
+    "chatgpt",
+    "consensus"
+  ],
+  "content": "## Scite是什么？\nScite 是一个给科研人员用的文献智能平台，它解决的是一个很扎心的问题：一篇论文被引用了一千次，但其中五百次可能是在说“这方法有问题”。传统引用数只数次数，不数态度，所以高引用不等于高可信。Scite 用 Smart Citations（智能引文）来破这个局：它用深度学习分析每条引文周围的真实文本，判断对方是在“支持”、在“反驳”还是仅仅“提及”这篇论文。于是你不用打开每一篇 PDF，就能看到某项研究在学术圈里到底是被视为证据，还是被当成反面教材。据公开信息，Scite 由 Research Solutions 收购，已索引 10 亿+ 引文陈述、3 亿+ 学术来源，服务全球数百万用户。\n\n## 核心功能\n1. Smart Citations：每条引文标注为支持/反驳/提及，并展示原文语境片段。\n2. 全文检索：在海量文献中按内容或引文语境搜索具体论断。\n3. Scite Assistant：只基于已验证的引文库作答，降低学术幻觉风险。\n4. Reference Check：投稿前上传稿件，自动标出撤稿或受争议的参考文献。\n5. 看板与提醒：关注某个主题或作者，一旦出现新的“反驳”引文就通知你。\n\n## 版本/套餐对比\n| 版本 | 价格（参考） | 适合人群 |\n| --- | --- | --- |\n| 免费试用 | 7 天 | 先体验高级功能 |\n| Basic（个人） | $20/月（年付约 $12/月） | 学生、个体研究者 |\n| Pro（个人） | $50/月（年付约 $40/月） | 深度研究、需要专利/临床数据 |\n| Team / 企业 | $100/月起 / 定制 | 实验室、高校、机构 |\n\n（价格为公开渠道整理，具体以官网实时为准。）\n\n## 值不值得用？\nScite 的价值在于它是学术界的“事实核查员”：当你写论文、做综述或看一篇“突破性研究”时，它能立刻告诉你这项成果后来有没有被同行推翻。Reference Check 还能在投稿前帮你排雷。当然，它的引文分类不是绝对准确，细微语气可能误判，结论还是要自己把关；而且核心能力大多在付费墙后。结论：对博士生、科研人员、审稿人、科学记者这类“高利害关系准确性”人群，Scite 几乎是必备保险；纯轻度查资料的用户，先用免费试用即可。\n\n## 使用建议\n- 读一篇“重磅论文”前，先搜它的 Smart Citations，看支持和反驳的比例。\n- 写综述或投稿前用 Reference Check 扫一遍参考文献，避免引用已被撤稿的研究。\n- 设好主题看板，长期追踪你领域里新出现的“反驳”证据。\n- 配合 Zotero 插件使用，在文献管理里直接看到引文语境。\n\n## 适合谁用？\n- 推荐：博士生、高校研究者、审稿人、科学记者、药企研发。\n- 可考虑：需要做证据梳理的咨询与政策研究者。\n- 不推荐：只需要快速事实查询、不做严肃文献工作的普通用户（可用 Consensus 等）。",
+  "published": true,
+  "faq": [
+    {
+      "question": "Scite 免费吗？",
+      "answer": "提供 7 天免费试用；个人 Basic 约 $20/月（年付更便宜），无永久免费档。"
+    },
+    {
+      "question": "Smart Citations 是什么？",
+      "answer": "它把每条引文按语境分为“支持/反驳/提及”三类，帮助判断研究可信度。"
+    },
+    {
+      "question": "Scite 能检查我稿件的参考文献吗？",
+      "answer": "可以，Reference Check 会上传稿件并标出撤稿或受争议的引用。"
+    },
+    {
+      "question": "Scite 和 Consensus 有什么区别？",
+      "answer": "Consensus 偏“科学共识”式快答，Scite 偏“某篇论文到底被怎么引用”的可靠性核查。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Scite",
+    "Scite怎么样",
+    "Scite免费版",
+    "Scite使用教程",
+    "Scite和哪个好"
+  ],
+  "source_urls": [
+    "https://www.scite.ai/pricing",
+    "https://theaiagentindex.com/agents/scite-ai",
+    "https://www.aitools-directory.com/tools/scite",
+    "https://getaibriefs.com/tools/scite-ai"
+  ],
+  "confidence": "medium",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-21"
+}

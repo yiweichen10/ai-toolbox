@@ -1,0 +1,160 @@
+{
+  "name": "Xint Code",
+  "slug": "xint-code",
+  "positioning": "AI工具推荐：LLM 原生、零摩擦部署",
+  "auto_positioning": true,
+  "emoji": "💻",
+  "color": "#4F46E5",
+  "description": "Xint Code 是网络安全公司 Theori 开发的业界首个 LLM 原生静态应用安全测试（SAST）工具，借助多 LLM 推理与编排理解代码上下文与业务逻辑，在数小时内分析数百万行源代码/配置/二进制，发现传统扫描器与人工渗透都难捕捉的业务漏洞，并给出触发路径与影响评估。",
+  "category": "AI行业应用",
+  "tags": [
+    "代码安全",
+    "SAST",
+    "漏洞挖掘",
+    "AI安全",
+    "网络安全",
+    "Theori",
+    "LLM原生"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "85,000",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://xint.io",
+  "price": "企业级商业化（价格定制，未公开）",
+  "platform": "VS Code、JetBrains IDE、Visual Studio、网页端",
+  "pros": [
+    "LLM 原生，能理解业务上下文与逻辑漏洞",
+    "机器速度 + 人类级洞察，规模化扫描大型遗留代码库",
+    "多阶段验证降低误报，给出可利用性证据",
+    "已在 PostgreSQL/Redis/MariaDB 等发现真实 0day",
+    "零摩擦上传仓库即扫描，无需复杂配置"
+  ],
+  "cons": [
+    "面向安全/企业团队，非个人开发者代码补全插件",
+    "价格未公开，企业级成本",
+    "对库/框架类项目可能需自定义",
+    "依赖模型推理，结果需安全专家复核"
+  ],
+  "features": [
+    "LLM 原生 SAST，多模型推理与编排",
+    "业务逻辑漏洞发现（传统 SAST 漏报项）",
+    "数小时内扫描数百万行代码/配置/二进制",
+    "多阶段管线验证严重性与可利用性，降低误报",
+    "每个发现含触发路径与影响评估",
+    "零摩擦部署（上传仓库即扫）"
+  ],
+  "related": [
+    "github-copilot",
+    "cursor",
+    "replit-ai"
+  ],
+  "faq": [
+    {
+      "q": "Xint Code 是代码补全插件吗？",
+      "a": "不是。Xint Code 是 LLM 原生的静态应用安全测试（SAST）工具，用于扫描代码库中的安全漏洞，而非 VS Code 里的代码补全助手；它以仓库上传/扫描方式交付。"
+    },
+    {
+      "q": "Xint Code 支持哪些语言/项目？",
+      "a": "可分析源代码、配置文件与二进制；曾在 PostgreSQL、Redis、MariaDB 等大型开源项目中以零人工干预发现真实 0day 漏洞，适合大型应用/服务代码库。"
+    },
+    {
+      "q": "Xint Code 和 GitHub Copilot 这类工具有什么区别？",
+      "a": "定位完全不同：Copilot 是编程辅助/补全工具，Xint Code 是安全审计 SAST 工具，用多 LLM 推理发现业务级漏洞并给出触发路径与影响评估。"
+    },
+    {
+      "q": "Xint Code 的价格是多少？",
+      "a": "Theori 于 2026 年 3 月宣布商业化可用，具体价格未公开、按企业部署与规模定制，并非 $19/月的个人订阅。"
+    }
+  ],
+  "seo_keywords": [
+    "Xint Code",
+    "Xint Code怎么样",
+    "AI代码生成工具",
+    "Xint Code免费版",
+    "Xint Code vs GitHub Copilot"
+  ],
+  "content": "## Xint Code 是什么？\n\n简单说，Xint Code 不是普通的 AI 写代码助手，而是一款由网络安全公司 **Theori** 开发的 **LLM 原生静态应用安全测试（SAST）** 工具。它的目标是替安全团队和开发者在代码合入前，用大语言模型去理解代码语义、定位真正的安全漏洞，而不是靠传统规则库做浅层匹配。\n\n它于 **2026 年 3 月** 正式商业化发布，已在多个高规格安全场景中得到验证。\n\n---\n\n## 为什么值得关注\n\n**1. DARPA AIxCC 挑战赛获奖**\n\nTheori 团队凭借 Xint Code 相关技术，在 DARPA 举办的 AIxCC（AI Cyber Challenge）赛事中获奖，这是业界对\"用 AI 做漏洞挖掘\"路线的重要认可。\n\n**2. ZeroDay Cloud 2025 实锤 0day**\n\n在 ZeroDay Cloud 2025 上，Xint Code 以**零人工干预**的方式，发现了 PostgreSQL、Redis、MariaDB 等知名开源组件中的真实 0day 漏洞。这种\"无人值守也能挖出高危漏洞\"的能力，正是它区别于普通扫描器的地方。\n\n---\n\n## 适合谁用\n\n如果你在做安全审计、代码合规，或者希望在 CI 流程里自动拦住高危漏洞，Xint Code 的思路值得留意：它把\"理解代码意图\"交给大模型，再结合安全领域知识去判断风险，而不是只报一堆需要人工逐条甄别的告警。\n\n> 注：Xint Code 由 Theori 开发，官方入口为 theori.io。\n",
+  "published": true,
+  "created_date": "2026-06-29",
+  "published_date": "2026-06-29",
+  "verified_url": "https://xint.io",
+  "verified_publisher": "Theori（成立于 2016 年的 offensive security 公司）",
+  "verified_what": "由网络安全公司 Theori 开发的业界首个 LLM 原生静态应用安全测试（SAST）工具，用多 LLM 推理与编排理解代码上下文与业务逻辑，在数小时内扫描数百万行代码/配置/二进制，识别传统 SAST 与人工渗透都难发现的业务漏洞。",
+  "verified_price": "商业化产品（2026 年 3 月发布），具体价格未公开，面向企业/安全团队，按部署与规模定制；并非 $19/月的 IDE 代码补全插件。",
+  "verified_platform": "以仓库上传/扫描方式交付（零摩擦部署，无需打包/harness），面向安全与研发团队；非 VS Code 插件形态",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "LLM 原生 SAST，多模型推理与编排",
+    "业务逻辑漏洞发现（传统 SAST 漏报项）",
+    "数小时内扫描数百万行代码/配置/二进制",
+    "多阶段管线验证严重性与可利用性，降低误报",
+    "每个发现含触发路径与影响评估",
+    "零摩擦部署（上传仓库即扫）"
+  ],
+  "verified_description": "Xint Code 是网络安全公司 Theori 开发的业界首个 LLM 原生静态应用安全测试（SAST）工具，借助多 LLM 推理与编排理解代码上下文与业务逻辑，在数小时内分析数百万行源代码/配置/二进制，发现传统扫描器与人工渗透都难捕捉的业务漏洞，并给出触发路径与影响评估。",
+  "content_flags": "mismatch,price,category,features",
+  "verified_pros": [
+    "LLM 原生，能理解业务上下文与逻辑漏洞",
+    "机器速度 + 人类级洞察，规模化扫描大型遗留代码库",
+    "多阶段验证降低误报，给出可利用性证据",
+    "已在 PostgreSQL/Redis/MariaDB 等发现真实 0day",
+    "零摩擦上传仓库即扫描，无需复杂配置"
+  ],
+  "verified_cons": [
+    "面向安全/企业团队，非个人开发者代码补全插件",
+    "价格未公开，企业级成本",
+    "对库/框架类项目可能需自定义",
+    "依赖模型推理，结果需安全专家复核"
+  ],
+  "verified_faq": [
+    {
+      "q": "Xint Code 是代码补全插件吗？",
+      "a": "不是。Xint Code 是 LLM 原生的静态应用安全测试（SAST）工具，用于扫描代码库中的安全漏洞，而非 VS Code 里的代码补全助手；它以仓库上传/扫描方式交付。"
+    },
+    {
+      "q": "Xint Code 支持哪些语言/项目？",
+      "a": "可分析源代码、配置文件与二进制；曾在 PostgreSQL、Redis、MariaDB 等大型开源项目中以零人工干预发现真实 0day 漏洞，适合大型应用/服务代码库。"
+    },
+    {
+      "q": "Xint Code 和 GitHub Copilot 这类工具有什么区别？",
+      "a": "定位完全不同：Copilot 是编程辅助/补全工具，Xint Code 是安全审计 SAST 工具，用多 LLM 推理发现业务级漏洞并给出触发路径与影响评估。"
+    },
+    {
+      "q": "Xint Code 的价格是多少？",
+      "a": "Theori 于 2026 年 3 月宣布商业化可用，具体价格未公开、按企业部署与规模定制，并非 $19/月的个人订阅。"
+    }
+  ],
+  "verified_tags": [
+    "代码安全",
+    "SAST",
+    "漏洞挖掘",
+    "AI安全",
+    "网络安全",
+    "Theori",
+    "LLM原生"
+  ],
+  "verified_category": "AI行业应用",
+  "source_urls": [
+    "https://xint.io",
+    "https://www.businesswire.com/news/home/20260317129537/en/",
+    "https://aitech365.com/business-technology/cybersecurity/theori-introduces-xint-code-to-transform-ai-driven-vulnerability-detection-at-scale",
+    "https://www.chosun.com/english/industry-en/2026/03/23/U5XRY6724BHS5G2KWA7YMNEWSM"
+  ],
+  "verify_notes": "原 structured 字段（features/pros/cons/price/platform/category）被写成「代码补全 IDE 助手（Copilot 类）」，与真实 SAST 安全产品不符；description/content 主体正确。已按真实产品修正 features/pros/cons/price/category（改为 AI行业应用），并改用产品域名 xint.io。产品本身真实存在。",
+  "content_verified": true,
+  "url_previous": "https://theori.io",
+  "price_verified": true,
+  "compare_section": {
+    "competitors": [
+      "duolingo-max",
+      "harvey-ai",
+      "schole-ai"
+    ],
+    "verdict": "Xint Code 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：Xint Code 的 LLM 原生 SAST，多模型推理与编排 是亮点，价格 企业级商业化（价格定制，未公开）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

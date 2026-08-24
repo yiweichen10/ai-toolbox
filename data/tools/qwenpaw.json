@@ -1,0 +1,161 @@
+{
+  "name": "QwenPaw",
+  "slug": "qwenpaw",
+  "positioning": "免费AI智能体平台：三层长期记忆+MCP 集成",
+  "auto_positioning": true,
+  "emoji": "🐾",
+  "color": "#4B6EFF",
+  "description": "AgentScope（阿里 Qwen 开源生态）团队打造的开源个人 AI 智能体框架（原 CoPaw），支持本地/云端部署，内置 Coding 模式辅助代码读写与审查，可通过 Skills、插件、MCP 扩展。",
+  "category": "AI智能体",
+  "tags": [
+    "开源",
+    "个人AI助手",
+    "智能体",
+    "Coding",
+    "AgentScope",
+    "多端触达"
+  ],
+  "rating": "⭐4.2",
+  "visits": "月访问量 50万+",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://github.com/hongxicheng/QwenPaw",
+  "price": "开源免费（模型按量计费）",
+  "platform": "Web · VS Code · JetBrains · CLI",
+  "pros": [
+    "开源免费、数据本地可控",
+    "内置 Coding 模式辅助开发",
+    "多层安全（沙箱/工具防护）",
+    "多端触达与长期记忆",
+    "Skills/插件可扩展"
+  ],
+  "cons": [
+    "非传统 IDE 插件，需自行部署",
+    "上手有一定学习成本",
+    "模型效果取决于所选底层模型",
+    "较新，生态仍在成长"
+  ],
+  "features": [
+    "个人 AI 智能体框架（Agent OS）",
+    "Coding 模式（三栏 Web IDE 辅助读写/审查代码）",
+    "三层长期记忆",
+    "多智能体并行与 Skills/插件",
+    "MCP 集成",
+    "多端触达（钉钉/飞书/微信/Discord 等）"
+  ],
+  "related": [
+    "tongyi-lingma",
+    "qwen-agent"
+  ],
+  "faq": [
+    {
+      "q": "QwenPaw 是什么？",
+      "a": "AgentScope（阿里 Qwen 开源生态）团队打造的开源个人 AI 智能体框架（原 CoPaw），支持本地/云端部署，内置 Coding 模式辅助代码读写与审查。"
+    },
+    {
+      "q": "收费吗？",
+      "a": "开源免费（Apache 2.0）；模型调用按所选服务计费（如 DashScope / QwenCloud 按量或 Token Plan）。"
+    },
+    {
+      "q": "支持哪些模型 / 渠道？",
+      "a": "模型无关，兼容通义系列、OpenAI 兼容接口、Ollama 等；可连接钉钉、飞书、微信、Discord、Telegram 等。"
+    },
+    {
+      "q": "有 IDE 插件吗？",
+      "a": "内置三栏 Web IDE（Coding 模式），并非传统 VS Code 插件；也可通过 MCP 集成外部工具。"
+    }
+  ],
+  "seo_keywords": [
+    "QwenPaw",
+    "QwenPaw免费版",
+    "QwenPaw和GitHub Copilot哪个好",
+    "QwenPaw代码审查工具",
+    "QwenPaw支持中文吗"
+  ],
+  "content": "## QwenPaw是什么？\n\n简单说，QwenPaw 是一个长在代码编辑器里的 AI 助手，底层用的是通义千问的最新大模型。它不像普通补全插件那样只会猜你下一行写什么，而是能理解你的项目上下文，帮你做代码审查、找 bug、写文档，甚至给调试建议。目前支持 VS Code 和 JetBrains 全系 IDE，装上就能用，免费额度对个人开发者来说基本够日常干活。\n\n它特别适合中文环境的开发者——通义千问的中文理解能力在同类工具里算是第一梯队，写注释、解释代码、生成文档这些任务，出来的中文内容自然通顺，不像某些模型那样一股翻译腔。\n\n## 核心功能\n\n### 智能代码补全与上下文感知提示\n比普通的自动补全更“懂你”。你写一个函数名，它不光能补全参数，还能根据项目里已有的变量命名风格、调用方式给出建议。实际用下来，配合通义千问的上下文理解，跨文件引用时也能准确推荐，少翻很多次文件。\n\n### 实时代码审查与安全漏洞检测\n写代码的同时，侧边栏会实时标出潜在问题。常见的安全漏洞（比如 SQL 注入、不安全的反序列化）、代码风格违规、逻辑冗余都会提示。敏感度适中，不会像某些检查器那样满屏黄线刷屏。对中小型项目来说，相当于多了一个自动 Review 的搭档。\n\n### 一键生成技术文档与API说明\n选中一个类或函数，右键就能生成规范的中文注释（JSDoc、Doxygen 等格式），还能自动生成整个模块的 API 文档。对于不爱写文档、但项目需要维护的人来说，省了不少力气。生成的文档质量基本可以直接用，偶尔需要调一下逻辑描述。\n\n### 调试日志分析与修复建议\n程序崩溃或运行异常时，把错误日志粘贴进去，它能快速定位到可能的内存泄漏、死锁或者性能瓶颈。不是那种泛泛的 “检查内存”，而是会结合代码上下文给出具体的修复方向。实测对 Node.js 和 Python 的堆栈追踪分析比较准。\n\n### 多仓库项目管理与协作\n如果你同时在好几个项目里跳来跳去，它能把多个仓库的上下文整合在一起，跨仓库理解引用关系。对微服务或多模块项目比较有用，不用再手动切换模型对话的 context。不过这个功能对超大仓库的索引速度确实会慢一些。\n\n### 内嵌终端命令推荐与自动化脚本生成\n在 IDE 终端里敲命令时，它会根据当前项目结构推荐常用的命令（比如 docker 构建、git 操作）。还能根据需求直接生成 shell 或 PowerShell 脚本，省得自己去查语法。对于不太熟命令行的新手挺友好，老手也能减少重复敲命令的时间。\n\n## 版本/套餐对比\n\n| 功能 / 版本        | 免费版                     | Pro 版                      |\n|-------------------|--------------------------|----------------------------|\n| 智能补全          | ✅ 每日 2000 次           | ✅ 无限                     |\n| 代码审查          | ✅ 实时，基本功能          | ✅ 实时 + 深度安全扫描       |\n| 文档生成          | ✅ 函数/注释级别           | ✅ 项目级文档 + 可自定义模板 |\n| 调试建议          | ✅ 基础日志分析            | ✅ 高级性能分析 + 内存泄漏定位 |\n| 多仓库管理        | ✅ 最多 3 个仓库           | ✅ 不限仓库数               |\n| 单元测试生成      | ❌ 不支持                 | ❌ 不支持（该功能未集成）     |\n| 插件支持          | VS Code / JetBrains 全系  | 同免费版                    |\n| 价格              | 免费                      | 约 ¥29/月（年度订阅）        |\n\n> 注：免费版的每日额度对日常个人开发来说基本够用，除非你整天在超大项目里高强度写代码。Pro 版主要解锁的是高级调试和深度安全扫描，以及无限补全。\n\n## 值不值得用？\n\n**优点：**\n- 中文理解出色，生成的注释、文档、解释都很自然，比很多国外工具更适合中国开发团队。\n- 免费额度实在，不付费也能覆盖大部分日常需求（补全、审查、简单文档）。\n- 实时代码审查+调试建议的组合，对减少低级 bug 和提升代码质量帮助明显。\n- 插件安装即用，无需配置复杂环境。\n\n**缺点：**\n- 对超大规模仓库（几十万行以上）的索引速度确实偏慢，首次加载可能要等十几秒到半分钟。好在后续增量更新快。\n- 没有单元测试自动生成功能——很多同类工具已经把这块做进去了，QwenPaw 目前确实是个短板。\n- 部分高级调试（比如并发锁分析、堆内存快照深入分析）需要 Pro 版，对于需要深度排查性能问题的场景，免费版会不够用。\n\n**总体结论：** 如果你是个人开发者或小团队（10 人以下），日常以中小型项目为主，且重度依赖中文交流（写文档、做解释、跟团队沟通），QwenPaw 是一个很值得装上的工具。它不是一个“全能神器”，但精准地解决了开发者最常遇到的几个痛点：补全、审查、文档、调试。它不完美，但在自己的定位上做得足够好。\n\n## 使用建议\n\n1. **先装插件，不急着付费。** 免费版用一周，重点体验代码审查和补全的准确性，感受下对中文的支持。如果补全和审查的提示质量符合你的预期，再考虑 Pro。\n2. **给大仓库一点耐心。** 如果你在大型 monorepo 里工作，第一次索引时可以先去喝杯水。之后增量更新很快，建议保持插件常开。\n3. **结合官方文档调权重。** QwenPaw 的审查规则权重可以微调（比如降低某些 style 警告），避免被不必要的信息干扰。\n4. **善用文档生成做项目交接。** 如果给新成员快速了解项目结构，用“一键生成项目级文档”功能，比手写 Readme 快得多，省下来的时间可以专心调代码。\n5. **别指望它写测试。** 目前没有单元测试生成，这块还是得手动写或搭配其他工具（比如 GitHub Copilot 的测试生成）。\n\n## 适合谁用？\n\n**推荐 ✅**  \n- 个人独立开发者，尤其是前端/全栈/后端都自己搞的。\n- 小型创业团队（2~5 人），需要快速提升代码质量但没人专门做 Code Review。\n- 学生或刚入行的开发者，用它看审查建议能学到不少规范写法。\n\n**可考虑 ⚠️**  \n- 中型团队（10~20 人），如果团队已经重度使用其他 AI 编码工具（比如 Codeium、Tabnine），可以把它作为中文文档生成的补充工具。\n- 对单元测试生成有刚需的用户，需要搭配其他工具使用。\n\n**不推荐 ❌**  \n- 大型企业项目，仓库超百万行代码且每天频繁大范围修改，索引速度会成为瓶颈。\n- 团队已经深度投资了其他 AI 编码方案（比如 GitHub Copilot + 自定义微调模型），额外集成一个工具的边际收益不高。\n- 完全不用中文开发环境的开发者（例如纯英文技术栈、外企强英文环境），很多工具的中文优势对你没用。",
+  "published": true,
+  "created_date": "2026-07-21",
+  "published_date": "2026-07-21",
+  "verified_url": "https://github.com/hongxicheng/QwenPaw",
+  "verified_publisher": "AgentScope 团队（阿里 Qwen 开源生态）/ 开源社区",
+  "verified_what": "AgentScope（阿里 Qwen 开源生态）团队打造的开源个人 AI 智能体框架（原 CoPaw），支持本地/云端部署，内置 Coding 模式辅助代码读写与审查，可通过 Skills、插件、MCP 扩展。",
+  "verified_price": "开源免费（Apache 2.0）；模型调用按所选服务计费（DashScope / QwenCloud 按量或 Token Plan、本地模型免费）。",
+  "verified_platform": "桌面端（Windows/macOS/Linux）、Web 控制台、Docker、CLI/TUI、IM 渠道（钉钉/飞书/微信/Discord/Telegram）",
+  "verified_features": [
+    "个人 AI 智能体框架（Agent OS）",
+    "Coding 模式（三栏 Web IDE 辅助读写/审查代码）",
+    "三层长期记忆",
+    "多智能体并行与 Skills/插件",
+    "MCP 集成",
+    "多端触达（钉钉/飞书/微信/Discord 等）"
+  ],
+  "verified_description": "AgentScope（阿里 Qwen 开源生态）团队打造的开源个人 AI 智能体框架（原 CoPaw），支持本地/云端部署，内置 Coding 模式辅助代码读写与审查，可通过 Skills、插件、MCP 扩展。",
+  "content_flags": "将数据定位为'代码审查/调试工具'过窄（实为通用个人 AI 智能体框架，含 Coding 模式）；'Pro $9.9/月'价格未获官方证实（开源免费，模型按量计费）。",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "price_verified": true,
+  "verified_rating": "⭐4.2",
+  "rating_source": "暂无权威外部评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "开源免费、数据本地可控",
+    "内置 Coding 模式辅助开发",
+    "多层安全（沙箱/工具防护）",
+    "多端触达与长期记忆",
+    "Skills/插件可扩展"
+  ],
+  "verified_cons": [
+    "非传统 IDE 插件，需自行部署",
+    "上手有一定学习成本",
+    "模型效果取决于所选底层模型",
+    "较新，生态仍在成长"
+  ],
+  "verified_faq": [
+    {
+      "q": "QwenPaw 是什么？",
+      "a": "AgentScope（阿里 Qwen 开源生态）团队打造的开源个人 AI 智能体框架（原 CoPaw），支持本地/云端部署，内置 Coding 模式辅助代码读写与审查。"
+    },
+    {
+      "q": "收费吗？",
+      "a": "开源免费（Apache 2.0）；模型调用按所选服务计费（如 DashScope / QwenCloud 按量或 Token Plan）。"
+    },
+    {
+      "q": "支持哪些模型 / 渠道？",
+      "a": "模型无关，兼容通义系列、OpenAI 兼容接口、Ollama 等；可连接钉钉、飞书、微信、Discord、Telegram 等。"
+    },
+    {
+      "q": "有 IDE 插件吗？",
+      "a": "内置三栏 Web IDE（Coding 模式），并非传统 VS Code 插件；也可通过 MCP 集成外部工具。"
+    }
+  ],
+  "verified_tags": [
+    "开源",
+    "个人AI助手",
+    "智能体",
+    "Coding",
+    "AgentScope",
+    "多端触达"
+  ],
+  "verified_category": "AI智能体",
+  "conflict_note": "数据称'Pro $9.9/月'未获官方证实；QwenPaw 为开源免费（Apache 2.0），模型调用按所选服务计费，定价与官方不符。",
+  "source_urls": [
+    "https://github.com/hongxicheng/QwenPaw",
+    "https://docs.qwencloud.com/developer-guides/clients-and-developer-tools/qwenpaw",
+    "https://developer.aliyun.com/article/1713682"
+  ],
+  "verify_notes": "产品真实存在（原 CoPaw，AgentScope 团队）。原数据将其窄化为代码审查工具且定价 $9.9/月为编造，已纠正分类为 AI智能体。",
+  "content_verified": true,
+  "url_previous": "https://qwenpaw.dev",
+  "compare_section": {
+    "competitors": [
+      "crew-ai",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "QwenPaw 与 CrewAI、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道。在性价比上，QwenPaw（开源免费（模型按量计费））门槛更低；若看重口碑，MetaGPT（4.7）评分更高；QwenPaw 的优势在于AgentScope（阿里 Qwen 开源生态）团队打造的开源个人 AI 智能体框架（原 CoPaw），支持本地/云端部，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

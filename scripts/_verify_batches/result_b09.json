@@ -1,0 +1,126 @@
+{
+  "batch_id": "b09",
+  "category": "AI对话",
+  "tools": [
+    {
+      "slug": "stepfun-step2",
+      "name": "StepFun Step-2",
+      "url_current": "https://www.stepfun.com",
+      "url_ok": true,
+      "url_correct": "https://www.stepfun.com",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "阶跃星辰官网 stepfun.com（隐私政策、开放平台均引用该域名），Step 2 为其真实自研万亿参数底座模型；描述准确，content 截断但无矛盾，未见幻觉。"
+    },
+    {
+      "slug": "baichuan-2",
+      "name": "Baichuan 2",
+      "url_current": "https://www.baichuan-ai.com",
+      "url_ok": true,
+      "url_correct": "https://www.baichuan-ai.com",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content", "price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "Baichuan 2 是真实开源模型(2023, 4K 上下文)；站内称'2026年2.5系列/128K上下文/专业版¥99每月'，与官网当前主推的 Baichuan4/M3/M2 不符，128K 与 2.5 升级版及定价疑似编造（开源免费商用属实）。"
+    },
+    {
+      "slug": "mike-ai",
+      "name": "mike AI",
+      "url_current": "https://www.mikeai.co",
+      "url_ok": true,
+      "url_correct": "https://www.mikeai.co",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网为 AI 健身教练（Meal/Workout Plans + FitnessGPT）；站内 content 却写成'语音对话助手/支持100+语言/企业定制版'，严重幻觉；description（健身教练）正确。"
+    },
+    {
+      "slug": "alexa-plus",
+      "name": "Alexa Plus",
+      "url_current": "https://www.amazon.com/alexa-plus",
+      "url_ok": true,
+      "url_correct": "https://alexa.com",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "Alexa+ 真实存在（亚马逊生成式 AI 助手）；定价标 $5.99/月 错误，官方为随 Prime 免费或 $19.99/月（非Prime）。域名 amazon.com 正确，但 /alexa-plus 路径非规范产品页。"
+    },
+    {
+      "slug": "ada-ai",
+      "name": "Ada AI",
+      "url_current": "https://www.ada.cx/",
+      "url_ok": true,
+      "url_correct": "https://www.ada.cx/",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网为面向企业的 AI 客服平台（ACX，Agent 自动解决客户咨询/聊天/邮件/语音多渠道）；站内 content 却写成'通用聊天助手/写东西/提醒/翻译'，严重幻觉；description 正确。"
+    },
+    {
+      "slug": "minicpm-o",
+      "name": "MiniCPM-o",
+      "url_current": "https://huggingface.co/openbmb/MiniCPM-o",
+      "url_ok": true,
+      "url_correct": "https://huggingface.co/openbmb/MiniCPM-o",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "MiniCPM-o 实际由 OpenBMB（面壁智能）联合清华开源的端侧全模态模型；content 误写为'MiniMax 公司推出'，开发方张冠李戴。description 正确，url 为官方模型页。"
+    },
+    {
+      "slug": "glm-5-2",
+      "name": "GLM-5.2",
+      "url_current": "https://www.zhipuai.cn/",
+      "url_ok": true,
+      "url_correct": "https://www.zhipuai.cn/",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "GLM-5.2 真实存在（智谱 2026年6月上线并开源，Solid 1M 无损上下文、Code Arena 全球可用模型第一，对标 Claude Opus 4.7/4.8）；描述与官网一致，未见幻觉。"
+    },
+    {
+      "slug": "monid",
+      "name": "Monid",
+      "url_current": "https://monid.ai",
+      "url_ok": true,
+      "url_correct": "https://monid.ai",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "Monid 实为 Agent 工具调用路由器/统一付费层（200+ 数据端点、按调用付费、MCP 接入），非聊天助手；content 误写成'轻量 AI 助手/语音聊天/32K 上下文/1.2秒出回答'。description 正确。"
+    },
+    {
+      "slug": "stanley-ai",
+      "name": "Stanley AI",
+      "url_current": "https://stanleyai.com",
+      "url_ok": false,
+      "url_correct": "https://getstanley.ai",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": true,
+      "confidence": "high",
+      "notes": "当前域名 stanleyai.com 为 GoDaddy 待售占位域名，非官方（疑似仿冒/猜测域名）；官方为 getstanley.ai（Stan 的 Instagram/LinkedIn AI 内容创作助手）。content 误写为'全能AI助手/实时数据查询/日程管理'，实为内容脚本与增长助手；价格标 $19.9/月，官方为 $47/月。"
+    },
+    {
+      "slug": "gpt-5-6-sol",
+      "name": "GPT-5.6 Sol",
+      "url_current": "https://openai.com",
+      "url_ok": true,
+      "url_correct": "https://openai.com/index/gpt-5-6/",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "GPT-5.6 Sol 真实存在（OpenAI 2026 旗舰，1M 上下文、max/ultra 推理）；但 content 称其支持音频多模态，官方 API 文档显示 Sol 仅支持文本输入输出、图像输入，音频不支持，多模态能力被夸大。"
+    }
+  ]
+}

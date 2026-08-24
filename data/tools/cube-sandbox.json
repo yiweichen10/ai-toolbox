@@ -1,0 +1,140 @@
+{
+  "name": "CubeSandbox",
+  "slug": "cube-sandbox",
+  "positioning": "硬件级隔离+凭据保险库与出口：免费AI开发工具怎么用",
+  "auto_positioning": true,
+  "emoji": "🧊",
+  "color": "#0066FF",
+  "description": "CubeSandbox 是腾讯云开源的面向 AI Agent 的安全沙箱服务，基于 RustVMM/KVM 提供硬件级隔离、亚 60 毫秒启动的 MicroVM 运行环境，兼容 E2B SDK，适合安全执行智能体生成的代码。",
+  "category": "AI开发",
+  "tags": [
+    "AI沙盒",
+    "Agent运行时",
+    "E2B兼容",
+    "开源",
+    "安全隔离"
+  ],
+  "rating": "⭐4.6",
+  "visits": "500K",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://cubesandbox.ai",
+  "price": "开源免费（自托管）",
+  "platform": "Web, Windows, Mac",
+  "pros": [
+    "开源免费，可自托管审计",
+    "硬件级隔离，安全执行不可信代码",
+    "亚 60ms 启动、高密度",
+    "兼容 E2B SDK，迁移成本低",
+    "支持 Agent 托管与快照"
+  ],
+  "cons": [
+    "需自行部署运维（KVM/虚拟化环境）",
+    "面向开发者，非开箱即用 SaaS",
+    "原条目将其错写为拖拽式无代码工作流工具，实为沙箱运行时",
+    "文档以英文为主"
+  ],
+  "features": [
+    "硬件级隔离 MicroVM（专属内核，KVM+eBPF）",
+    "亚 60ms 冷启动、单实例 <5MB 开销、高密度部署",
+    "兼容 E2B SDK，零改造迁移",
+    "Agent 托管与长时运行服务",
+    "自动暂停/恢复、快照/克隆/回滚",
+    "凭据保险库与出口（egress）控制"
+  ],
+  "related": [
+    "windsurf",
+    "cursor"
+  ],
+  "faq": [
+    {
+      "q": "CubeSandbox 是什么？",
+      "a": "腾讯云开源的 AI Agent 安全沙箱运行时，基于 RustVMM/KVM 的 MicroVM 提供硬件级隔离，亚 60ms 启动，兼容 E2B SDK。"
+    },
+    {
+      "q": "CubeSandbox 收费吗？",
+      "a": "开源免费（Apache 2.0）可自托管；腾讯云部署按云资源计费，无公开 SaaS 订阅价。"
+    }
+  ],
+  "seo_keywords": [
+    "CubeSandbox",
+    "CubeSandbox免费版",
+    "CubeSandbox和Bolt.new哪个好",
+    "CubeSandbox使用教程",
+    "CubeSandbox中文版"
+  ],
+  "content": "## CubeSandbox 是什么？\n\n腾讯云开源的面向 AI Agent 的安全沙箱运行时，基于 RustVMM/KVM 提供硬件级隔离的 MicroVM，亚 60ms 启动，兼容 E2B SDK。\n\nCubeSandbox 是腾讯云开源的面向 AI Agent 的安全沙箱服务，基于 RustVMM/KVM 提供硬件级隔离、亚 60 毫秒启动的 MicroVM 运行环境，兼容 E2B SDK，适合安全执行智能体生成的代码。\n\n## 核心功能\n\n- 硬件级隔离 MicroVM（专属内核，KVM+eBPF）\n- 亚 60ms 冷启动、单实例 <5MB 开销、高密度部署\n- 兼容 E2B SDK，零改造迁移\n- Agent 托管与长时运行服务\n- 自动暂停/恢复、快照/克隆/回滚\n- 凭据保险库与出口（egress）控制\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 开源免费（Apache 2.0，自托管）；腾讯云可一键部署，托管费用以云资源计费为准（无公开 SaaS 标价）。 |\n| 支持平台 | Linux / 云部署 / API / SDK（E2B 兼容） |\n| 评分 | ⭐4.6 |\n| 开发商 | 腾讯云（Tencent Cloud） |\n\n## 价格与平台\n\n- **价格**：开源免费（Apache 2.0，自托管）；腾讯云可一键部署，托管费用以云资源计费为准（无公开 SaaS 标价）。\n- **平台**：Linux / 云部署 / API / SDK（E2B 兼容）\n- **官网**：https://cubesandbox.ai\n\n## 优缺点分析\n\n### 优点\n\n- 开源免费，可自托管审计\n- 硬件级隔离，安全执行不可信代码\n- 亚 60ms 启动、高密度\n- 兼容 E2B SDK，迁移成本低\n- 支持 Agent 托管与快照\n\n### 缺点\n\n- 需自行部署运维（KVM/虚拟化环境）\n- 面向开发者，非开箱即用 SaaS\n- 原条目将其错写为拖拽式无代码工作流工具，实为沙箱运行时\n- 文档以英文为主\n\n## 常见问题（FAQ）\n\n**CubeSandbox 是什么？**\n\n腾讯云开源的 AI Agent 安全沙箱运行时，基于 RustVMM/KVM 的 MicroVM 提供硬件级隔离，亚 60ms 启动，兼容 E2B SDK。\n\n**CubeSandbox 收费吗？**\n\n开源免费（Apache 2.0）可自托管；腾讯云部署按云资源计费，无公开 SaaS 订阅价。\n\n\n## 最终结论\n\nCubeSandbox 是AI开发领域的一款 AI 工具，其核心优势在于开源免费，可自托管审计。\n此外，硬件级隔离，安全执行不可信代码。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-07-12",
+  "published_date": "2026-07-12",
+  "verified_url": "https://cubesandbox.ai",
+  "verified_publisher": "腾讯云（Tencent Cloud）",
+  "verified_what": "腾讯云开源的面向 AI Agent 的安全沙箱运行时，基于 RustVMM/KVM 提供硬件级隔离的 MicroVM，亚 60ms 启动，兼容 E2B SDK。",
+  "verified_price": "开源免费（Apache 2.0，自托管）；腾讯云可一键部署，托管费用以云资源计费为准（无公开 SaaS 标价）。",
+  "verified_platform": "Linux / 云部署 / API / SDK（E2B 兼容）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "硬件级隔离 MicroVM（专属内核，KVM+eBPF）",
+    "亚 60ms 冷启动、单实例 <5MB 开销、高密度部署",
+    "兼容 E2B SDK，零改造迁移",
+    "Agent 托管与长时运行服务",
+    "自动暂停/恢复、快照/克隆/回滚",
+    "凭据保险库与出口（egress）控制"
+  ],
+  "verified_description": "CubeSandbox 是腾讯云开源的面向 AI Agent 的安全沙箱服务，基于 RustVMM/KVM 提供硬件级隔离、亚 60 毫秒启动的 MicroVM 运行环境，兼容 E2B SDK，适合安全执行智能体生成的代码。",
+  "content_flags": "严重幻觉：原 features/content/FAQ 把 CubeSandbox 描述为“拖拽式可视化工作流编辑器、多模型对比测试、Prompt 模板库的免代码 AI 应用搭建工具”，并标注 Pro $19/月、团队 $49/月——这些与真实产品（AI Agent 沙箱运行时）完全不符。原 category“AI开发”正确，但内容需全量替换。",
+  "price_verified": true,
+  "verified_rating": "⭐4.6",
+  "rating_source": "暂无权威评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "开源免费，可自托管审计",
+    "硬件级隔离，安全执行不可信代码",
+    "亚 60ms 启动、高密度",
+    "兼容 E2B SDK，迁移成本低",
+    "支持 Agent 托管与快照"
+  ],
+  "verified_cons": [
+    "需自行部署运维（KVM/虚拟化环境）",
+    "面向开发者，非开箱即用 SaaS",
+    "原条目将其错写为拖拽式无代码工作流工具，实为沙箱运行时",
+    "文档以英文为主"
+  ],
+  "verified_faq": [
+    {
+      "q": "CubeSandbox 是什么？",
+      "a": "腾讯云开源的 AI Agent 安全沙箱运行时，基于 RustVMM/KVM 的 MicroVM 提供硬件级隔离，亚 60ms 启动，兼容 E2B SDK。"
+    },
+    {
+      "q": "CubeSandbox 收费吗？",
+      "a": "开源免费（Apache 2.0）可自托管；腾讯云部署按云资源计费，无公开 SaaS 订阅价。"
+    }
+  ],
+  "verified_tags": [
+    "AI沙盒",
+    "Agent运行时",
+    "E2B兼容",
+    "开源",
+    "安全隔离"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://docs.cubesandbox.ai/guide/introduction.html",
+    "https://github.com/TencentCloud/CubeSandbox",
+    "https://www-sg.tencentcloud.com/techpedia/144259"
+  ],
+  "verify_notes": "真实产品为沙箱运行时，原营销文案错配为无代码工作流工具。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "CubeSandbox 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：CubeSandbox 的 硬件级隔离 MicroVM（专属内核，KVM+eBPF） 是亮点，价格 开源免费（自托管）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

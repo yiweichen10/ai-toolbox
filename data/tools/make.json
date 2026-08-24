@@ -1,0 +1,125 @@
+{
+  "name": "Make",
+  "slug": "make",
+  "positioning": "可视化拖拽工作流+Make AI：免费AI自动化工具",
+  "auto_positioning": true,
+  "emoji": "⚙️",
+  "color": "#d2ae33",
+  "description": "可视化自动化平台（原Integromat），通过拖拽连接3000+应用构建自动化工作流。比Zapier更灵活强大，支持复杂的数据处理、条件逻辑与AI Agents，是技术团队与高级用户的首选。",
+  "category": "AI自动化",
+  "tags": [
+    "AI自动化",
+    "工作流",
+    "无代码",
+    "集成",
+    "iPaaS"
+  ],
+  "rating": "⭐ 4.8",
+  "visits": "16万",
+  "badge": {
+    "type": "pick",
+    "text": "NEW"
+  },
+  "url": "https://www.make.com",
+  "price": "免费版 + Core $9/月（年付）",
+  "platform": "本地部署 / Web",
+  "pros": [
+    "3000+应用集成",
+    "可视化灵活，支持复杂逻辑",
+    "比Zapier便宜",
+    "支持复杂数据处理与错误处理",
+    "内置AI Agents与AI工具包"
+  ],
+  "cons": [
+    "学习曲线较陡",
+    "界面不如Zapier直观",
+    "需一定技术基础",
+    "免费版场景数受限",
+    "中文文档较少"
+  ],
+  "features": [
+    "可视化拖拽工作流",
+    "3000+应用集成",
+    "Make AI Agents 与 MCP Server",
+    "条件分支与错误处理",
+    "定时与Webhook触发",
+    "数据转换、路由与数据储存"
+  ],
+  "related": [
+    "claude",
+    "sora"
+  ],
+  "content": "## Make 是什么？\n\nMake（原Integromat）是可视化自动化平台，通过拖拽节点连接各种应用构建自动化工作流。支持1500+应用集成，比Zapier更灵活，支持复杂的数据处理和条件逻辑。\n\nMake是技术团队和高级用户的首选自动化工具。\n\n## 核心功能\n\n- **可视化工作流**：拖拽节点搭建自动化流程\n- **1500+应用**：连接主流SaaS应用\n- **复杂数据处理**：支持数据过滤、聚合、转换\n- **条件分支**：复杂条件逻辑\n- **错误处理**：完善的错误处理机制\n- **定时执行**：定时自动触发\n\n## 版本对比\n\n| 功能 | 免费版 | Core ($9/月) | Pro ($16/月) |\n|------|--------|-------------|-------------|\n| 操作次数 | 1000/月 | 10000/月 | 10000/月 |\n| 工作流 | 2个 | 无限制 | 无限制 |\n| 数据处理 | 基础 | 高级 | 高级 |\n\n## 优缺点分析\n\n### 👍 优点\n- 应用集成数量多\n- 灵活性极高，适合复杂场景\n- 价格比Zapier便宜\n- 支持复杂数据处理\n- 可视化操作直观\n\n### 👎 缺点\n- 学习曲线较陡\n- 界面不如Zapier直观\n- 需要一定技术基础\n- 免费版限制较多\n\n## 使用技巧\n\n1. **从模板开始**：用模板快速搭建基础流程。\n2. **数据路由**：用Router节点实现多条件分支。\n3. **错误处理**：给每个模块设置错误处理。\n\n## 适合人群\n\nMake适合技术团队、运维工程师和需要复杂自动化的用户。\n### 总结\n\nMake 是 AI自动化 领域中一款不错的 AI 工具。可视化自动化平台（原Integromat），通过拖拽连接各种应用构建自动化工作流。支持1500+应用集成，比Zapier更灵活强大，技术团队的首选。 从功能完整性来看，它覆盖了核心使用场景。\n\n**快速上手建议：**\n- 访问官网 www.make.com 注册账号\n- 从入门计划开始 了解核心功能\n- 参考官方文档和教程加速学习\n- 加入用户社区获取使用技巧和最佳实践\n\n**价格参考：** 基础$10/月起\n**支持平台：** 本地部署 / Web\n\n### 核心功能详解\n\nAI 自动化工具让用户无需编程就能创建自动化工作流。它将复杂的任务拆解为多个步骤，每个步骤由 AI 或预设操作完成，大幅提升工作效率。\n\n### 工作流构建方法\n\n1. **确定目标**：明确要自动化的任务和期望结果\n2. **拆解步骤**：将任务分解为可执行的子步骤\n3. **选择工具**：每个步骤选择合适的 AI 工具或 API\n4. **连接流程**：将步骤串联成完整的工作流\n5. **测试优化**：运行测试并根据结果调整\n\n### 常见自动化场景\n\n- 自动整理和分类邮件\n- 定期数据报表自动生成\n- 社交媒体内容自动发布\n- 客户信息自动录入 CRM\n- 监控网站变化并发送通知\n\n### 使用建议\n\n- 从简单的流程开始，逐步增加复杂度\n- 充分利用社区模板节省时间\n- 注意添加错误处理和重试机制\n- 定期检查工作流运行状态\n- 保持工作流文档的更新",
+  "published": true,
+  "faq": [
+    {
+      "q": "Make和Zapier有什么区别？",
+      "a": "都是工作流自动化平台。Make优势是可视化画布更直观、价格更低（Core年付$9/月起）、支持更复杂的条件与数据处理逻辑，且2025年起改用积分(credits)计费。Zapier应用集成更庞大、上手更简单。技术用户与复杂场景推荐Make。"
+    }
+  ],
+  "created_date": "2026-04-05",
+  "verified_url": "https://www.make.com",
+  "verified_publisher": "Make (Celonis 旗下)",
+  "verified_what": "可视化自动化平台（原Integromat），通过拖拽连接3000+应用构建自动化工作流，支持复杂数据处理、条件逻辑与AI Agents，是技术团队与高级用户的首选iPaaS。",
+  "verified_price": "Free $0（1,000 credits/月，2个活跃场景）；Core $9/月（年付，月付约 $10.59），10,000 credits；Pro $16/月（年付，月付约 $18.82）；Teams $29/月（年付）；Enterprise 定制。自2025年8月起计费单位由'操作次数'改为'积分(credits)'（非AI应用 1操作=1积分）。",
+  "verified_platform": "Web / API（Enterprise 支持私有化部署）",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "可视化拖拽工作流",
+    "3000+应用集成",
+    "Make AI Agents 与 MCP Server",
+    "条件分支与错误处理",
+    "定时与Webhook触发",
+    "数据转换、路由与数据储存"
+  ],
+  "verified_description": "可视化自动化平台（原Integromat），通过拖拽连接3000+应用构建自动化工作流。比Zapier更灵活强大，支持复杂的数据处理、条件逻辑与AI Agents，是技术团队与高级用户的首选。",
+  "content_flags": "原描述'1500+应用'已过时，现为3000+应用；计费已由'操作次数'改为'积分(credits)'；平台'本地部署/Web'中'本地部署'仅Enterprise支持，主体为云端SaaS。",
+  "price_verified": true,
+  "verified_pros": [
+    "3000+应用集成",
+    "可视化灵活，支持复杂逻辑",
+    "比Zapier便宜",
+    "支持复杂数据处理与错误处理",
+    "内置AI Agents与AI工具包"
+  ],
+  "verified_cons": [
+    "学习曲线较陡",
+    "界面不如Zapier直观",
+    "需一定技术基础",
+    "免费版场景数受限",
+    "中文文档较少"
+  ],
+  "verified_faq": [
+    {
+      "q": "Make和Zapier有什么区别？",
+      "a": "都是工作流自动化平台。Make优势是可视化画布更直观、价格更低（Core年付$9/月起）、支持更复杂的条件与数据处理逻辑，且2025年起改用积分(credits)计费。Zapier应用集成更庞大、上手更简单。技术用户与复杂场景推荐Make。"
+    }
+  ],
+  "verified_tags": [
+    "AI自动化",
+    "工作流",
+    "无代码",
+    "集成",
+    "iPaaS"
+  ],
+  "verified_category": "AI自动化",
+  "source_urls": [
+    "https://www.make.com/pricing",
+    "https://smartprocessflow.com/make-com-pricing",
+    "https://www.stackscored.com/pricing/workflow-automation/make",
+    "https://usagepricing.com/blueprint/make"
+  ],
+  "verify_notes": "官方定价页确认 Free/Core $9/Pro $16/Teams $29（年付）；2025年8月起信用分计费。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "zapier-ai",
+      "n8n",
+      "makersclaw"
+    ],
+    "verdict": "Make 与 Zapier AI、n8n、MakersClaw 同属AI自动化赛道。在性价比上，Make（免费版 + Core $9/月（年付））门槛更低；若看重口碑，n8n（⭐ 4.9）评分更高；Make 的优势在于可视化自动化平台（原Integromat），通过拖拽连接3000+应用构建自动化工作流，支持复杂数据处理、条件逻辑与AI，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

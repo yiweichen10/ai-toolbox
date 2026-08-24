@@ -1,0 +1,126 @@
+{
+  "batch_id": "b18",
+  "category": "AI自动化",
+  "tools": [
+    {
+      "slug": "n8n",
+      "name": "n8n",
+      "url_current": "https://n8n.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["platform"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "n8n 无官方 iOS/Android 应用（仅有第三方社区应用如 N8Ninja 等），官方定位为 Web 平台（云托管/自托管）。platform 字段'Web / iOS / Android'不准确。官网确认其开源、500+ 集成、支持自托管与云，description 中'300+ 应用集成'为旧数据但属真实范围，price'免费使用'对应自托管社区版（云版 $20/月起），未判定虚构。"
+    },
+    {
+      "slug": "zapier-ai",
+      "name": "Zapier AI",
+      "url_current": "https://zapier.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["platform", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "Zapier 为纯云 SaaS 自动化平台，不支持本地部署，platform 字段'本地部署 / Web'错误。content 版本对比表中 Professional 标 $29/月，实际为 $49/月（与 Starter 月付 $29.99 混淆），属虚构定价。官网 2026 定价：Free / Starter $19.99/月 / Professional $49/月 / Team $69/月；price 字段'免费使用'对应真实免费档，未判定虚构。"
+    },
+    {
+      "slug": "make",
+      "name": "Make",
+      "url_current": "https://www.make.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "Make（原 Integromat）为纯云可视化自动化平台（现属 Celonis），不支持本地部署，platform 字段'本地部署 / Web'错误。官网显示 3000+ 集成（description 中'1500+'为旧数据但属真实范围）；price 字段'基础$10/月起'与 Core 计划（$9/月）基本一致，未判定虚构。"
+    },
+    {
+      "slug": "bardeen",
+      "name": "Bardeen",
+      "url_current": "https://www.bardeen.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "Bardeen 实际定价为 Basic $10/月、Premium $50/月（或 $480/年）、Enterprise 定制（来源 bardeen.ai/pricing），无'个人专业版 $15/月（按年付）'方案，price 字段虚构。描述中'超 5000 个应用连接器'亦存疑，官网未宣称此数（现主打抓取/线索场景，集成列 Google Sheets、Airtable、Notion 等）。"
+    },
+    {
+      "slug": "activepieces",
+      "name": "Activepieces",
+      "url_current": "https://www.activepieces.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "Activepieces 云定价为 Standard 免费 + 按活跃流程 $5/个/月（用量计费）、Ultimate 定制（来源 activepieces.com/pricing），无 $19/月固定档位，price 字段金额虚构。其为开源（MIT）AI 自动化平台、支持自托管，description 基本准确（'200+ 应用'、'AI Workflow'均属实）。"
+    },
+    {
+      "slug": "flowmarket",
+      "name": "FlowMarket",
+      "url_current": "https://flowmarket.social",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "flowmarket.social 实际是面向 B2B 交易的 AI 代理撮合网络（企业创建代理自动发现/匹配/洽谈客户与供应商，替代冷外联），description 准确；但 content 将其写成'拼图式'工作流自动化平台（接入 GPT/Claude/Midjourney 等 200+ AI 应用、预制模板），属严重张冠李戴。price 字段'付费版$19/月起'未能在官网核实。"
+    },
+    {
+      "slug": "agent-browser",
+      "name": "Agent Browser",
+      "url_current": "https://agentbrowser.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform", "content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "未能直接抓取 agentbrowser.ai（WebFetch 失败），WebSearch 显示 'Agent Browser' 实为 Bright Data 的云端浏览器基础设施产品（通过 API/MCP 调用，兼容 Playwright/Puppeteer，按量计费，套餐约 $499/月 起），并非 Chrome/Firefox/Edge 浏览器扩展。存储的 price（$9.9/月）、platform（浏览器扩展）、content（浏览器扩展助手/多标签页/智能表单填写）均属张冠李戴。建议复核该 URL 是否确为 Bright Data 官方域名。"
+    },
+    {
+      "slug": "browser-use",
+      "name": "Browser Use",
+      "url_current": "https://browser-use.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "Browser Use 确为开源浏览器自动化框架 + 云（stealth browsers 从 $0.02/hr 起），description 准确。price 字段'约$19/月'未在官网明确体现（官网主打按量 $0.02/hr 及 custom models），无法确定是否虚构，故不判定幻觉。platform 字段（Win/macOS/Linux + 浏览器）合理。"
+    },
+    {
+      "slug": "dexbotic",
+      "name": "Dexbotic",
+      "url_current": "https://www.dexbotic.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "dexbotic.com 实际是原力灵机（ForceOrigins）开源的 VLA 具身智能机器人开发框架（训练/部署机器人操作与导航策略），description 准确；但 content 将其写成类 Zapier 的可视化工作流自动化平台（200+ 应用集成、智能触发器等），属严重张冠李戴。price 字段'$29/月付费版'对开源框架存疑，未能核实。"
+    },
+    {
+      "slug": "browser-act",
+      "name": "BrowserAct",
+      "url_current": "https://browseract.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "BrowserAct 确为 2026 年发布的 AI 网页抓取/自动化工具（从一句话生成可复用爬虫，支持 Make/n8n/Zapier 集成），description 基本准确。price 字段 Pro $19/月、团队版 $49/月 未能在官网核实，不确定是否虚构，故不判定幻觉。"
+    }
+  ]
+}

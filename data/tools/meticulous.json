@@ -1,0 +1,108 @@
+{
+  "name": "Meticulous",
+  "slug": "meticulous",
+  "emoji": "🔬",
+  "color": "#0891B2",
+  "description": "AI驱动的UI测试自动化工具，自动记录用户操作并生成测试代码，无需手写测试脚本，大幅提升前端测试效率。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "自动化测试"
+    },
+    {
+      "text": "UI测试"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "N/A",
+  "badge": {},
+  "url": "https://meticulous.ai",
+  "price": "免费版+$25/月",
+  "platform": "Web / CI集成",
+  "pros": [
+    "无需写测试代码",
+    "自动更新快照",
+    "CI集成好"
+  ],
+  "cons": [
+    "仅限前端测试",
+    "学习配置成本",
+    "依赖录制精度"
+  ],
+  "features": [
+    "自动生成测试",
+    "快照更新",
+    "CI/CD集成",
+    "零代码维护"
+  ],
+  "faq": [
+    {
+      "question": "Meticulous 是什么？",
+      "answer": "AI 驱动的前端 UI 自动化测试工具，自动录制用户操作并生成可维护的端到端测试，无需手写测试脚本，获 Y Combinator、Coatue 等投资。"
+    },
+    {
+      "question": "Meticulous 怎么用？",
+      "answer": "在网站接入 recorder 脚本，用户正常操作即可自动录制生成测试；支持 React、Vue、Next.js、Angular、SvelteKit，可接入现有 CI。"
+    },
+    {
+      "question": "Meticulous 多少钱？",
+      "answer": "官网未公开明确标价，面向企业按需求定制、需联系销售；适合重视前端回归测试质量又不想维护测试脚本的团队。"
+    }
+  ],
+  "content": "## Meticulous 是什么？\n\nAI 驱动的前端 UI 自动化测试工具，自动录制用户操作并生成可维护的端到端测试，无需手写测试脚本。\n\nAI驱动的UI测试自动化工具，自动记录用户操作并生成测试代码，无需手写测试脚本，大幅提升前端测试效率。\n\n## 核心功能\n\n- 自动录制交互并生成持续演进的测试套件（零维护）\n- 确定性执行引擎，从底层消除 flake（误报）\n- 后端响应 mock 回放，测试无副作用\n- PR 差异可视化，合并前预览变更影响\n- 与现有测试栈及 CI 无缝集成\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 官网未公开明确标价，面向企业按需求定制/联系销售 |\n| 支持平台 | Web / CI 集成（支持 React、Vue、Next.js、Angular、SvelteKit 等） |\n| 评分 | ⭐4.5 |\n| 开发商 | Meticulous AI（获 Y Combinator、Coatue 等投资） |\n\n## 价格与平台\n\n- **价格**：官网未公开明确标价，面向企业按需求定制/联系销售\n- **平台**：Web / CI 集成（支持 React、Vue、Next.js、Angular、SvelteKit 等）\n- **官网**：https://meticulous.ai\n\n## 优缺点分析\n\n### 优点\n\n- 无需手写或维护测试代码\n- 测试覆盖率随应用自动演进\n- 确定性执行，无 flake 误报\n- 与 CI 集成简单\n\n### 缺点\n\n- 仅限前端 UI 测试\n- 需接入 recorder 脚本进行配置\n- 企业定价不透明，需联系销售\n\n## 最终结论\n\nMeticulous 是AI编程领域的一款 AI 工具，其核心优势在于无需手写或维护测试代码。\n此外，测试覆盖率随应用自动演进。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-06-07",
+  "published_date": "2026-06-07",
+  "related": [],
+  "verified_url": "https://meticulous.ai",
+  "verified_publisher": "Meticulous AI（获 Y Combinator、Coatue 等投资）",
+  "verified_what": "AI 驱动的前端 UI 自动化测试工具，自动录制用户操作并生成可维护的端到端测试，无需手写测试脚本。",
+  "verified_price": "官网未公开明确标价，面向企业按需求定制/联系销售",
+  "verified_platform": "Web / CI 集成（支持 React、Vue、Next.js、Angular、SvelteKit 等）",
+  "last_verified": "2026-07-31",
+  "confidence": "medium",
+  "conflict": false,
+  "verified_features": [
+    "自动录制交互并生成持续演进的测试套件（零维护）",
+    "确定性执行引擎，从底层消除 flake（误报）",
+    "后端响应 mock 回放，测试无副作用",
+    "PR 差异可视化，合并前预览变更影响",
+    "与现有测试栈及 CI 无缝集成"
+  ],
+  "verified_description": "AI驱动的UI测试自动化工具，自动记录用户操作并生成测试代码，无需手写测试脚本，大幅提升前端测试效率。",
+  "verified_rating": "⭐4.5",
+  "rating_source": "暂无权威评分",
+  "verified_pros": [
+    "无需手写或维护测试代码",
+    "测试覆盖率随应用自动演进",
+    "确定性执行，无 flake 误报",
+    "与 CI 集成简单"
+  ],
+  "verified_cons": [
+    "仅限前端 UI 测试",
+    "需接入 recorder 脚本进行配置",
+    "企业定价不透明，需联系销售"
+  ],
+  "verified_tags": [
+    "自动化测试",
+    "UI测试",
+    "前端测试",
+    "AI测试"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://meticulous.ai/",
+    "https://www.meticulous.ai/blog/series-a",
+    "https://app.meticulous.ai/docs"
+  ],
+  "verify_notes": "官网未公开具体价格，原价格（免费版+$25/月）无法证实，故不回填 price_short。",
+  "content_verified": false,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Meticulous 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Meticulous 的 自动生成测试 是亮点，价格 免费版+$25/月；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

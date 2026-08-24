@@ -1,0 +1,66 @@
+{
+  "batch_id": "b17",
+  "category": "AI搜索",
+  "tools": [
+    {
+      "slug": "panda-probe",
+      "name": "PandaProbe",
+      "url_current": "https://pandaprobe.com",
+      "url_ok": true,
+      "url_correct": "https://pandaprobe.com",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网(pandaprobe.com)明确为 Chirpz AI 的开源智能体工程平台(追踪/评测/监控)，与存储 description 一致；但 content 把产品张冠李戴成『智能搜索与数据探测工具』，完全不符。官网定价 Hobby $0、Pro $29/month(美元)，存储写『¥29/月』币种错误；且无 iOS/Android 移动端(platform 虚构)。来源：pandaprobe.com 官网及 /pricing 页。"
+    },
+    {
+      "slug": "rankspot",
+      "name": "RankSpot",
+      "url_current": "https://www.rankspot.ai",
+      "url_ok": true,
+      "url_correct": "https://www.rankspot.ai",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网显示 RankSpot 是『自动研究/撰写/发布 SEO 文章』的 AI Agent(每天自动发博客)，与存储 description 一致；但 content 张冠李戴成『SEO排名监控和关键词分析工具(追踪 Google/Baidu/Bing 排名)』，实际并非排名监控器。官网定价 Starter $39/月起(Growth $79、Premium $149)，存储写『付费版$29/月起』且称『免费版可用』不实(仅 3 篇免费试用文章，无永久免费版)。来源：rankspot.ai 官网及 /pricing。"
+    },
+    {
+      "slug": "anysearch",
+      "name": "AnySearch",
+      "url_current": "https://anysearch.ai",
+      "url_ok": true,
+      "url_correct": "https://anysearch.ai",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网(anysearch.ai)显示它是面向电信/企业的 AI 商业智能平台(多租户、统一客服/工单/运维数据，由 AWS Bedrock 驱动)，并非『聚合 Google/Bing/百度的 AI 搜索工具』。存储的 description 与 content 均将产品张冠李戴成消费级搜索聚合器(调用 GPT-4o/Claude/DeepSeek 交叉验证)；官网为 usage-based 定价，无『Pro $9.9/月』档位(price 编造)。来源：anysearch.ai 官网。"
+    },
+    {
+      "slug": "githits",
+      "name": "GitHits",
+      "url_current": "https://githits.com",
+      "url_ok": true,
+      "url_correct": "https://githits.com",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网(githits.com)确为面向 AI 编程代理的开源代码/包版本化索引与 MCP 上下文层(GitHits, Inc.)，存储 description 准确；但 content 将其写成『淘开源项目/趋势看板/个性化订阅/团队协作』的推荐型发现工具，与官网『代码上下文层』定位有出入(张冠李戴成分，核心开源检索主题重叠故-confidence 降为 medium)。官网仅标『Start for Free』，未列出『Pro $9/月』档位，price 编造。来源：githits.com 官网。"
+    },
+    {
+      "slug": "nex-n2",
+      "name": "Nex-N2",
+      "url_current": "https://nex-agi.cn",
+      "url_ok": true,
+      "url_correct": "https://nex-agi.cn",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网(nex-agi.cn)显示 Nex-N2 是 Nex-AGI 开源的 MoE 大模型系列(Pro/mini，基于 Qwen3.5)，定位 Agentic LLM，与存储 description 一致；但 content 张冠李戴成『带溯源引用的 AI 搜索+知识引擎』(Perplexity 式)。官网未披露任何定价(模型权重开源、自部署)，存储的『免费版/Pro $15/月/团队 $30/月』系编造；亦无 Web/Chrome/iOS/Android 应用，platform 虚构。来源：nex-agi.cn 官网。"
+    }
+  ]
+}

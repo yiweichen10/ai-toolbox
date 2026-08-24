@@ -1,0 +1,98 @@
+{
+  "name": "whatsapp-mcp",
+  "slug": "whatsapp-mcp",
+  "positioning": "whatsapp-mcp是什么？让Claude读写你WhatsApp的开源MCP服务器好用吗",
+  "auto_positioning": false,
+  "emoji": "💬",
+  "color": "#25D366",
+  "description": "开源项目（github.com/lharries/whatsapp-mcp，MIT 许可，约 6.1 千星），把个人 WhatsApp 接进 Claude Desktop、Cursor 等 MCP 客户端：搜联系人、翻消息与媒体、给个人或群发送文本、图片、视频、文档和语音。它由 Go 桥接程序基于 whatsmeow 库走 WhatsApp Web 多设备接口连接你自己的账号，首次扫码登录，消息全量落在本地 SQLite，只有 Agent 通过工具主动读取时才会送给模型。需要注意：仓库最近一次提交在 2025 年 7 月，且 README 自己就提示了提示注入导致私人数据外泄的风险。",
+  "category": "AI自动化",
+  "tags": [
+    {
+      "text": "免费可用",
+      "type": "free"
+    },
+    {
+      "text": "开源项目"
+    },
+    {
+      "text": "MCP 服务器"
+    },
+    {
+      "text": "本地存储"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://github.com/lharries/whatsapp-mcp",
+  "price": "免费，MIT 许可开源自托管；成本只发生在你使用的模型侧（如 Claude 订阅或 API 调用）",
+  "platform": "macOS / Linux / Windows 自托管（需 Go、Python 3.6+ 与 uv；Windows 需开启 CGO_ENABLED 并安装 C 编译器；发可播放语音需 FFmpeg）。客户端支持 Claude Desktop、Cursor 等 MCP 客户端，走 stdio 本地运行",
+  "pros": [
+    "直连你自己的 WhatsApp 账号，不经第三方 API，也不用申请 Business API",
+    "消息全部落在本地 SQLite 并建索引，只有 Agent 通过工具访问时才交给模型，隐私边界由你掌握",
+    "工具粒度足够细：搜联系人、列会话、取消息上下文、查最近一次互动、发文本与媒体",
+    "MIT 许可、结构清晰（Go 桥接 + Python MCP server 两段式），二次改造和自建分支成本低"
+  ],
+  "cons": [
+    "上游仓库最近一次提交停在 2025 年 7 月，维护明显放缓，遇到接口变化基本要自己修",
+    "README 明确提示 lethal trifecta 风险：提示注入可能导致私人消息被外泄",
+    "走个人账号多设备通道，约 20 天需重新扫码认证，还受 WhatsApp 关联设备数量上限限制，这类用法是否符合平台条款需自行评估"
+  ],
+  "features": [
+    "消息检索：list_messages、get_message_context、get_last_interaction，按条件翻历史并带上下文",
+    "会话与联系人：list_chats、get_chat、search_contacts、get_direct_chat_by_contact、get_contact_chats",
+    "发送能力：send_message 发文本，send_file 发图片、视频、文档与音频，支持个人与群聊",
+    "语音消息：装好 FFmpeg 后自动把非 Opus 音频转成 .ogg Opus，发出去是可播放的语音条",
+    "本地存储：Go 桥接把 chats 与 messages 写入 SQLite 并建索引，便于快速搜索与检索",
+    "客户端接入：一份 mcpServers 配置即可接入 Claude Desktop 或 Cursor，重启后即出现 WhatsApp 集成"
+  ],
+  "related": [
+    "claude",
+    "claude-code",
+    "n8n"
+  ],
+  "content": "## whatsapp-mcp是什么？\n\nwhatsapp-mcp 是一个开源项目（github.com/lharries/whatsapp-mcp，MIT 许可，约 6.1 千星，2025 年 3 月建库），作用是把你个人的 WhatsApp 变成 Agent 能读能写的一个工具。接上之后，Claude Desktop 或 Cursor 里的 Agent 可以搜联系人、翻你的聊天记录（含图片、视频、文档、语音），也能给个人或群发消息和媒体文件。作者的动机写得很实在：你 99% 的生活都在 WhatsApp 里，把 LLM 接上，它才算拿到了完整上下文。\n\n实现是两段式的。一个 Go 写的桥接程序基于 whatsmeow 库走 WhatsApp Web 多设备接口连你的账号，首次运行时终端里出二维码，用手机扫一下完成认证，之后它负责把聊天与消息写进本地 SQLite；另一头是 Python 写的 MCP server，把这些数据包装成标准 MCP 工具给客户端调用。整条链路不依赖任何第三方 API，也不需要申请 WhatsApp Business API——这是它和多数商业方案最根本的区别。\n\n数据流向值得单独说：消息存在本机 SQLite，只有当 Agent 通过工具去读时才会送到模型那边，读什么由你控制。\n\n## 核心功能\n\n1. 消息检索：list_messages 按条件翻历史，get_message_context 取某条消息前后文，get_last_interaction 查和某人最近一次往来。\n2. 会话与联系人：list_chats 列会话及元信息，get_chat、get_direct_chat_by_contact、get_contact_chats、search_contacts 按名字或号码找人找群。\n3. 发送能力：send_message 发文本，send_file 发图片、视频、文档、音频，个人和群聊都支持。\n4. 语音消息：装了 FFmpeg 之后会自动把非 Opus 音频转成 .ogg Opus，对方收到的是可播放的语音条；没装 FFmpeg 也能用 send_file 发原始音频。\n5. 本地存储与索引：桥接程序在 whatsapp-bridge/store/ 下维护 SQLite，chats 与 messages 分表并建索引，搜索够快。\n6. 客户端接入：把一段 mcpServers 配置写进 Claude Desktop 的 claude_desktop_config.json 或 Cursor 的 mcp.json，重启就能看到 WhatsApp 集成。\n\n## 版本/套餐对比\n\n没有付费档。它是 MIT 许可的开源项目，自己跑、完全免费，唯一的花费在模型那一侧（Claude 订阅或 API 调用）。跨平台方面有个坑要提前知道：Windows 上 go-sqlite3 需要 CGO，项目文档给的解法是装 C 编译器（推荐 MSYS2，把 ucrt64\\bin 加进 PATH），然后 go env -w CGO_ENABLED=1 再跑，否则会直接报 CGO_ENABLED=0 的错。\n\n## 值不值得用？\n\n先说它好在哪。思路上它是对的：不绕商业 API、不上云，直接借 WhatsApp Web 的多设备通道接你自己的账号，数据留在本地 SQLite，模型只看你允许它看的部分。工具设计也务实，get_message_context、get_last_interaction 这种粒度明显是真用过的人设计的——找一条旧消息的来龙去脉，比笼统的「搜索」有用得多。代码只有 Go 桥接加 Python server 两块，想改想加自己动手门槛不高，这也是它衍生出一堆 fork 的原因。\n\n再说必须掂量的三件事。第一，维护：上游最近一次提交在 2025 年 7 月，一年左右没有新动作，WhatsApp 那边接口一变，你大概只能自己修或者去 fork 里找答案。第二，安全：README 自己就挂了警告，说它符合所谓 lethal trifecta 的条件，提示注入有可能导致私人数据被外泄——把一整部聊天史交给 Agent，这个风险不是理论上的。第三，账号：多设备通道大约 20 天要重新扫码，且受 WhatsApp 关联设备数上限约束，这类自动化用法是否符合平台条款，得你自己判断，别拿主号做实验。\n\n## 使用建议\n\n1. 先跑通再谈自动化：先起 Go 桥接、扫码，等历史消息同步完（聊天多的话要几分钟），再去接 MCP 客户端。\n2. 权限给小一点。日常先只用检索类工具，确认 Agent 的行为符合预期后再放开发送权限。\n3. 别在主号上做实验，尤其不要让 Agent 在群里自由发言——发出去的消息撤不回。\n4. 消息不同步时按文档处理：删掉 store 目录下的 messages.db 与 whatsapp.db 再重启桥接重新认证。\n5. 用之前先看一眼最新 commit 时间。这类停更项目建议自己 fork 一份并锁定依赖版本。\n\n## 适合谁用？\n\n推荐：会自己折腾环境、想让 Agent 拿到自己通信上下文的开发者，以及需要在本地做消息检索与批量回复的重度 WhatsApp 用户。\n可考虑：研究 MCP 生态如何连接个人数据源的开发者，可以拿它当参考实现读代码。\n不推荐：不熟悉 Go / Python 环境的普通用户，对隐私和合规要求严格的企业场景，以及需要长期稳定维护的生产系统。",
+  "published": true,
+  "faq": [
+    {
+      "question": "whatsapp-mcp 是免费的吗？",
+      "answer": "是。它是 MIT 许可的开源项目，自托管运行、完全免费，没有任何付费档位。实际花费只出现在你使用的模型一侧，比如 Claude 订阅或 API 调用。"
+    },
+    {
+      "question": "它需要 WhatsApp Business API 吗？",
+      "answer": "不需要。它通过 Go 桥接程序基于 whatsmeow 库走 WhatsApp Web 多设备接口，直接连你的个人账号，首次运行扫码认证即可，不依赖第三方 API。"
+    },
+    {
+      "question": "我的聊天记录会被上传到云端吗？",
+      "answer": "按项目说明，所有消息存储在本地 SQLite 数据库，只有当 Agent 通过工具访问时才会发给模型（这部分由你控制）。但 README 也警告存在提示注入导致私人数据外泄的风险，敏感对话建议慎用。"
+    },
+    {
+      "question": "这个项目还在维护吗？",
+      "answer": "维护节奏明显放缓。仓库最近一次提交在 2025 年 7 月，此后没有新动作。项目本身仍可用，但如果 WhatsApp 接口发生变化，你可能需要自己修或参考社区 fork，建议自行 fork 并锁定依赖。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "whatsapp-mcp",
+    "WhatsApp MCP 服务器",
+    "whatsapp-mcp 怎么用",
+    "Claude 连接 WhatsApp",
+    "whatsapp-mcp 安全吗"
+  ],
+  "source_urls": [
+    "https://github.com/lharries/whatsapp-mcp",
+    "https://api.github.com/repos/lharries/whatsapp-mcp",
+    "https://explainx.ai/mcp-servers/whatsapp-mcp",
+    "https://chat.mcp.so/server/whatsapp-mcp/lharries"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-19"
+}

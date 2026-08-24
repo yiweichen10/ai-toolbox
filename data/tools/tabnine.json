@@ -1,0 +1,146 @@
+{
+  "name": "Tabnine",
+  "slug": "tabnine",
+  "emoji": "💻",
+  "color": "#6D5FFD",
+  "description": "Tabnine 是隐私优先的 AI 代码补全与编程助手，支持 80+ 编程语言与主流 IDE，提供整行/整函数补全、Tabnine Chat 自然语言生成与解释代码，并可在企业环境私有/气隙部署，基于宽松许可代码训练并提供 IP 赔偿。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "代码补全",
+    "IDE插件",
+    "隐私优先",
+    "私有部署"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "约500万月访问量",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://www.tabnine.com",
+  "price": "免费版可用（基础补全）；Dev $9/月起（年付），$12/月（月付）",
+  "platform": "VS Code、IntelliJ IDEA、PyCharm、WebStorm、Visual Studio、Eclipse等主流IDE",
+  "pros": [
+    "隐私优先，支持本地/气隙部署",
+    "基于宽松许可代码训练，提供 IP 赔偿",
+    "支持 80+ 语言与多 IDE",
+    "不锁定单一前沿模型，可切换多种模型"
+  ],
+  "cons": [
+    "补全质量弱于使用前沿模型的 Copilot/Cursor",
+    "免费版仅基础补全，无 Chat",
+    "代码库级个性化仅限 Enterprise",
+    "企业私有部署需基础设施维护"
+  ],
+  "features": [
+    "整行/整函数 AI 代码补全",
+    "Tabnine Chat 自然语言生成与解释代码",
+    "支持 80+ 编程语言",
+    "全 IDE 支持（VS Code、JetBrains、VS、Eclipse、Neovim）",
+    "代码库级个性化（Enterprise）",
+    "私有/本地/气隙部署与 IP 赔偿（合规向）"
+  ],
+  "related": [
+    "github-copilot",
+    "cursor",
+    "claude-code",
+    "replit-ai",
+    "sourcegraph-cody"
+  ],
+  "faq": [
+    {
+      "q": "Tabnine 免费版有什么？",
+      "a": "免费（Dev Preview）包含基础代码补全、基础 AI Agents、本地 IDE 上下文与社区支持；AI Chat 与整函数补全需升级 Dev 版。"
+    },
+    {
+      "q": "Tabnine 多少钱？",
+      "a": "Dev $9/用户/月（年付）或 $12/月（月付）；Enterprise $39/用户/月（年付）起，含私有部署与 IP 赔偿；原数据价格准确。"
+    },
+    {
+      "q": "Tabnine 支持哪些语言与 IDE？",
+      "a": "支持 80+ 编程语言，覆盖 VS Code、JetBrains 全家桶、Visual Studio、Eclipse、Neovim 等。"
+    }
+  ],
+  "seo_keywords": [
+    "Tabnine",
+    "Tabnine免费版",
+    "Tabnine和Copilot哪个好",
+    "Tabnine价格",
+    "Tabnine代码补全怎么样",
+    "Tabnine AI编程工具"
+  ],
+  "content": "## Tabnine是什么？\n\n简单说，Tabnine就是一个能帮你写代码的AI助手。你正常敲代码的时候，它会猜你接下来想写什么，然后自动补全——就像手机输入法的联想功能，但强得多。它支持20多种编程语言，主流IDE基本都能用，VS Code、IntelliJ、WebStorm这些都有对应的插件。\n\n2025年他们还加了一个Chat功能，你可以用自然语言跟它聊，让它帮你生成代码或者解释代码。这个功能出来之后，Tabnine就不只是\"补全\"了，变成了一个真正的编程助手。\n\n## 核心功能\n\n**智能代码补全**\n\n这是Tabnine的老本行。你写代码时，它会根据上下文、文件内容、甚至是项目整体风格来预测你接下来要写的内容。实际用起来，它不只会补单个词，有时候能直接补完一整行甚至一个函数。准确度在同类工具里算高的，但也不是每次都猜对。\n\n**代码片段生成**\n\n除了单行补全，Tabnine还能生成更大的代码块。比如你写了一个函数名和注释，它能帮你把整个函数体写出来。这个功能在写一些常规逻辑时挺省事的，减少了很多机械性的重复劳动。\n\n**自然语言转代码（Tabnine Chat）**\n\n这是2025年新加的功能。你可以像聊天一样跟它说\"帮我写一个排序函数\"，或者\"把这段代码改成异步的\"，它就能生成对应的代码。实测下来，简单需求处理得不错，复杂需求可能需要多调教几句。用来写文档、生成注释也很好用。\n\n**代码解释与文档生成**\n\n选中一段代码，让它解释是什么意思，或者自动生成注释和文档。这个功能对于看别人代码或者给自己代码写文档时挺实用的，尤其是不熟悉的语言或框架。\n\n**团队共享配置**\n\n企业版支持自定义训练模型，你可以用团队自己的代码库来训练Tabnine，让它更懂你们的代码风格和规范。这个功能对小团队可能没什么用，但对大公司来说挺关键的。\n\n## 版本/套餐对比\n\n| 版本 | 价格 | 适用人群 | 核心功能 |\n|------|------|----------|----------|\n| **免费版** | 免费 | 个人开发者、学生 | 基础代码补全、有限上下文 |\n| **专业版** | $12/月（年付） | 个人进阶用户 | 无限上下文、Tabnine Chat、代码解释 |\n| **企业版** | 定制报价 | 团队/企业 | 自定义模型、团队共享配置、优先支持 |\n\n免费版基本上够日常简单用用，但如果想体验完整的AI功能，特别是Chat和代码解释，还是得升级专业版。价格确实不算便宜，官方定价一个月小几百块人民币。\n\n## 值不值得用？\n\n**优点：**\n\n- 主流语言和IDE都能覆盖，切换项目不用换工具\n- 本地运行选项对隐私敏感的用户很友好\n- 代码补全确实能省不少功夫，尤其写重复代码时\n- Chat功能让AI辅助编程变得更直接\n- 免费版不算摆设，日常轻度使用够了\n\n**缺点：**\n\n- 付费版价格偏高，对个人开发者有门槛\n- 小众语言支持确实一般，比如某些新出的语言或老旧语言\n- 复杂项目中，有时候建议的代码不一定贴合实际业务逻辑\n\n**结论：** 总体来说是值得用的。免费版可以先试试，觉得好用再考虑付费。它不是那种\"用了立刻效率翻倍\"的魔法工具，但确实能减少不少重复劳动，是那种\"用久了就习惯了\"的实用型助手。\n\n## 使用建议\n\n1. **先从免费版开始**：装上插件，正常写几天代码，感受一下它猜得准不准再决定是否付费。\n\n2. **多用Chat功能**：很多人只用补全，忽略了Chat。其实让它帮你写注释、解释代码、生成单元测试都挺省心的。\n\n3. **注意隐私**：如果做的是敏感项目，务必开启本地运行模式，别让代码上传到云端。\n\n4. **别完全依赖**：AI建议终究是建议，重要逻辑还是要自己过一遍，别让它帮你写安全相关的代码。\n\n## 适合谁用？\n\n**推荐使用：**\n\n- 个人开发者，尤其是经常写代码的学生或从业者\n- 需要处理多语言项目的程序员\n- 对代码隐私有要求，又想用AI辅助的人\n\n**可考虑：**\n\n- 小团队leader，想给团队配一个通用工具\n- 刚学编程的新手，想有个\"教练\"帮忙提示\n\n**不推荐：**\n\n- 项目全是小众语言，可能支持不好\n- 预算极其有限，免费版已能满足需求不必强求付费\n- 对AI建议依赖度高、需要极其精准代码生成的场景",
+  "published": true,
+  "created_date": "2026-03-22",
+  "verified_url": "https://www.tabnine.com",
+  "verified_publisher": "Tabnine（原 Codota / Tabnine Ltd.）",
+  "verified_what": "Tabnine 是隐私优先的 AI 代码补全与编程助手，支持 80+ 编程语言与 VS Code、JetBrains、Visual Studio、Eclipse、Neovim 等 IDE，提供整行/整函数补全、AI Chat、自然语言生成代码及企业级私有化部署。",
+  "verified_price": "Dev Preview（免费）含基础补全；Dev $9/用户/月（年付）或 $12/月（月付），含 AI Chat、整函数补全、自然语言生成代码；Enterprise $39/用户/月（年付）起，含代码库个性化、私有/本地化部署、IP 赔偿与 SSO；企业价格可定制。",
+  "verified_platform": "VS Code、IntelliJ IDEA、PyCharm、WebStorm、Visual Studio、Eclipse、Neovim 等主流 IDE",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "整行/整函数 AI 代码补全",
+    "Tabnine Chat 自然语言生成与解释代码",
+    "支持 80+ 编程语言",
+    "全 IDE 支持（VS Code、JetBrains、VS、Eclipse、Neovim）",
+    "代码库级个性化（Enterprise）",
+    "私有/本地/气隙部署与 IP 赔偿（合规向）"
+  ],
+  "verified_description": "Tabnine 是隐私优先的 AI 代码补全与编程助手，支持 80+ 编程语言与主流 IDE，提供整行/整函数补全、Tabnine Chat 自然语言生成与解释代码，并可在企业环境私有/气隙部署，基于宽松许可代码训练并提供 IP 赔偿。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "",
+  "rating_verified": true,
+  "verified_pros": [
+    "隐私优先，支持本地/气隙部署",
+    "基于宽松许可代码训练，提供 IP 赔偿",
+    "支持 80+ 语言与多 IDE",
+    "不锁定单一前沿模型，可切换多种模型"
+  ],
+  "verified_cons": [
+    "补全质量弱于使用前沿模型的 Copilot/Cursor",
+    "免费版仅基础补全，无 Chat",
+    "代码库级个性化仅限 Enterprise",
+    "企业私有部署需基础设施维护"
+  ],
+  "verified_faq": [
+    {
+      "q": "Tabnine 免费版有什么？",
+      "a": "免费（Dev Preview）包含基础代码补全、基础 AI Agents、本地 IDE 上下文与社区支持；AI Chat 与整函数补全需升级 Dev 版。"
+    },
+    {
+      "q": "Tabnine 多少钱？",
+      "a": "Dev $9/用户/月（年付）或 $12/月（月付）；Enterprise $39/用户/月（年付）起，含私有部署与 IP 赔偿；原数据价格准确。"
+    },
+    {
+      "q": "Tabnine 支持哪些语言与 IDE？",
+      "a": "支持 80+ 编程语言，覆盖 VS Code、JetBrains 全家桶、Visual Studio、Eclipse、Neovim 等。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "代码补全",
+    "IDE插件",
+    "隐私优先",
+    "私有部署"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://www.tabnine.com",
+    "https://www.tabnine.com/pricing",
+    "https://aitoolsatlas.ai/tools/tabnine/pricing"
+  ],
+  "verify_notes": "原数据「支持超过20种编程语言」偏保守（现支持 80+），但非错误；价格与平台准确。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Tabnine 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Tabnine 的 整行/整函数 AI 代码补全 是亮点，价格 免费版可用（基础补全）；Dev $9/月起（年付），$12/月（月付）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

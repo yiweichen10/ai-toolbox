@@ -1,0 +1,153 @@
+{
+  "name": "PMB",
+  "slug": "pmb",
+  "emoji": "📊",
+  "color": "#2563EB",
+  "description": "PMB 是面向 AI 编程代理的本地优先记忆工具，通过 MCP 协议为 Claude Code、Cursor、Codex、Zed 等提供跨会话的持久化项目记忆，数据存于本地 SQLite，离线、开源、无需 API key。",
+  "category": "AI编程",
+  "tags": [
+    "AI记忆",
+    "MCP",
+    "本地优先",
+    "开源",
+    "编程代理"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "月访问量 5,000,000",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://pmbai.dev",
+  "price": "免费 / 开源（Apache-2.0）",
+  "platform": "Web / iOS / Android",
+  "pros": [
+    "本地优先、完全离线，数据不出本机",
+    "开源免费、无遥测",
+    "读取路径无 LLM 调用，响应快（约 35ms）",
+    "通过 MCP 自动注入/记录记忆，无需手动调用",
+    "Claude Code/Cursor/Codex/Zed 共享同一记忆"
+  ],
+  "cons": [
+    "面向已用 CLI 编码代理的开发者，需自备代理与 API key",
+    "需本地安装 Python（>=3.11）与 pmb",
+    "记忆质量依赖写入内容，需自行维护",
+    "非项目管理工具，不替代 Jira/Asana 等"
+  ],
+  "features": [
+    "本地 SQLite 记忆存储：离线、可导出、数据不出本机",
+    "MCP 集成：Claude Code/Cursor/Codex/Zed 等自动读写记忆",
+    "本地仪表盘：实体图与git式时间线，可视化项目记忆",
+    "诚实影响追踪：标记未被遵循的「死」记忆",
+    "混合召回：BM25+向量+实体图+RRF，约 35ms",
+    "跨编辑器共享：切换代理不丢上下文"
+  ],
+  "related": [
+    "notion-ai"
+  ],
+  "faq": [
+    {
+      "q": "PMB 是什么？",
+      "a": "PMB 是本地优先的 AI 编程代理记忆工具，通过 MCP 把项目的决策、经验、事实存进本地 SQLite，并在每次会话前自动回传给 Claude Code/Cursor/Codex/Zed。"
+    },
+    {
+      "q": "收费吗？",
+      "a": "完全免费且开源（Apache-2.0），无付费档、无席位、无遥测，文件与代码均归你所有。"
+    },
+    {
+      "q": "支持哪些代理？",
+      "a": "Claude Code、Cursor、Codex、Zed、Windsurf、VS Code 等，通过 pmb connect 一键接入 MCP。"
+    },
+    {
+      "q": "需要联网或 API key 吗？",
+      "a": "不需要。PMB 完全离线运行，读取路径不调用 LLM，也不要求任何云端密钥。"
+    }
+  ],
+  "seo_keywords": [
+    "PMB",
+    "PMB项目管理",
+    "PMB和Notion哪个好",
+    "PMB免费版下载",
+    "PMB功能介绍"
+  ],
+  "content": "## PMB 是什么？\n\n本地优先的 AI 编程代理记忆工具，通过 MCP 为 Claude Code/Cursor/Codex/Zed 提供跨会话持久化项目记忆（决策、经验、事实），数据存于本地 SQLite，离线、无需 API key。\n\nPMB 是面向 AI 编程代理的本地优先记忆工具，通过 MCP 协议为 Claude Code、Cursor、Codex、Zed 等提供跨会话的持久化项目记忆，数据存于本地 SQLite，离线、开源、无需 API key。\n\n## 核心功能\n\n- 本地 SQLite 记忆存储：离线、可导出、数据不出本机\n- MCP 集成：Claude Code/Cursor/Codex/Zed 等自动读写记忆\n- 本地仪表盘：实体图与git式时间线，可视化项目记忆\n- 诚实影响追踪：标记未被遵循的「死」记忆\n- 混合召回：BM25+向量+实体图+RRF，约 35ms\n- 跨编辑器共享：切换代理不丢上下文\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 完全免费、开源（Apache-2.0），无付费档、无席位、无遥测。 |\n| 支持平台 | CLI / MCP；本地 Web 仪表盘；跨平台（Python >=3.11） |\n| 评分 | ⭐ 4.3 |\n| 开发商 | PMB 贡献者（开源，Apache-2.0；维护者 oleksiijko） |\n\n## 价格与平台\n\n- **价格**：完全免费、开源（Apache-2.0），无付费档、无席位、无遥测。\n- **平台**：CLI / MCP；本地 Web 仪表盘；跨平台（Python >=3.11）\n- **官网**：https://pmbai.dev\n\n## 优缺点分析\n\n### 优点\n\n- 本地优先、完全离线，数据不出本机\n- 开源免费、无遥测\n- 读取路径无 LLM 调用，响应快（约 35ms）\n- 通过 MCP 自动注入/记录记忆，无需手动调用\n- Claude Code/Cursor/Codex/Zed 共享同一记忆\n\n### 缺点\n\n- 面向已用 CLI 编码代理的开发者，需自备代理与 API key\n- 需本地安装 Python（>=3.11）与 pmb\n- 记忆质量依赖写入内容，需自行维护\n- 非项目管理工具，不替代 Jira/Asana 等\n\n## 常见问题（FAQ）\n\n**PMB 是什么？**\n\nPMB 是本地优先的 AI 编程代理记忆工具，通过 MCP 把项目的决策、经验、事实存进本地 SQLite，并在每次会话前自动回传给 Claude Code/Cursor/Codex/Zed。\n\n**收费吗？**\n\n完全免费且开源（Apache-2.0），无付费档、无席位、无遥测，文件与代码均归你所有。\n\n**支持哪些代理？**\n\nClaude Code、Cursor、Codex、Zed、Windsurf、VS Code 等，通过 pmb connect 一键接入 MCP。\n\n**需要联网或 API key 吗？**\n\n不需要。PMB 完全离线运行，读取路径不调用 LLM，也不要求任何云端密钥。\n\n\n## 最终结论\n\nPMB 是AI编程领域的一款 AI 工具，其核心优势在于本地优先、完全离线，数据不出本机。\n此外，开源免费、无遥测。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-07-18",
+  "published_date": "2026-07-18",
+  "verified_url": "https://pmbai.dev",
+  "verified_publisher": "PMB 贡献者（开源，Apache-2.0；维护者 oleksiijko）",
+  "verified_what": "本地优先的 AI 编程代理记忆工具，通过 MCP 为 Claude Code/Cursor/Codex/Zed 提供跨会话持久化项目记忆（决策、经验、事实），数据存于本地 SQLite，离线、无需 API key。",
+  "verified_price": "完全免费、开源（Apache-2.0），无付费档、无席位、无遥测。",
+  "verified_platform": "CLI / MCP；本地 Web 仪表盘；跨平台（Python >=3.11）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "本地 SQLite 记忆存储：离线、可导出、数据不出本机",
+    "MCP 集成：Claude Code/Cursor/Codex/Zed 等自动读写记忆",
+    "本地仪表盘：实体图与git式时间线，可视化项目记忆",
+    "诚实影响追踪：标记未被遵循的「死」记忆",
+    "混合召回：BM25+向量+实体图+RRF，约 35ms",
+    "跨编辑器共享：切换代理不丢上下文"
+  ],
+  "verified_description": "PMB 是面向 AI 编程代理的本地优先记忆工具，通过 MCP 协议为 Claude Code、Cursor、Codex、Zed 等提供跨会话的持久化项目记忆，数据存于本地 SQLite，离线、开源、无需 API key。",
+  "content_flags": "features/pros/cons/faq/content 整篇描述的是「项目管理工具」（任务分配、甘特图、会议纪要、风险预测、Slack/飞书集成），与真实产品（本地记忆工具）完全不符，属严重幻觉，需整体替换；description 已准确，保留。",
+  "verified_rating": "⭐ 4.3",
+  "rating_source": "",
+  "verified_pros": [
+    "本地优先、完全离线，数据不出本机",
+    "开源免费、无遥测",
+    "读取路径无 LLM 调用，响应快（约 35ms）",
+    "通过 MCP 自动注入/记录记忆，无需手动调用",
+    "Claude Code/Cursor/Codex/Zed 共享同一记忆"
+  ],
+  "verified_cons": [
+    "面向已用 CLI 编码代理的开发者，需自备代理与 API key",
+    "需本地安装 Python（>=3.11）与 pmb",
+    "记忆质量依赖写入内容，需自行维护",
+    "非项目管理工具，不替代 Jira/Asana 等"
+  ],
+  "verified_faq": [
+    {
+      "q": "PMB 是什么？",
+      "a": "PMB 是本地优先的 AI 编程代理记忆工具，通过 MCP 把项目的决策、经验、事实存进本地 SQLite，并在每次会话前自动回传给 Claude Code/Cursor/Codex/Zed。"
+    },
+    {
+      "q": "收费吗？",
+      "a": "完全免费且开源（Apache-2.0），无付费档、无席位、无遥测，文件与代码均归你所有。"
+    },
+    {
+      "q": "支持哪些代理？",
+      "a": "Claude Code、Cursor、Codex、Zed、Windsurf、VS Code 等，通过 pmb connect 一键接入 MCP。"
+    },
+    {
+      "q": "需要联网或 API key 吗？",
+      "a": "不需要。PMB 完全离线运行，读取路径不调用 LLM，也不要求任何云端密钥。"
+    }
+  ],
+  "verified_tags": [
+    "AI记忆",
+    "MCP",
+    "本地优先",
+    "开源",
+    "编程代理"
+  ],
+  "verified_category": "AI编程",
+  "conflict_note": "现有条目仅顶部 description 正确（本地优先 MCP 记忆工具），但其 pros/cons/features/faq/content 将 PMB 虚构为一款项目管理 SaaS（任务分配、甘特图、风险预测、Slack/飞书、$29/人/月、Web/iOS/Android）。真实 PMB（pmbai.dev，oleksiijko）是免费开源（Apache 2.0）的本地 CLI 记忆工具，无项目管理、无付费档。属严重失实。",
+  "source_urls": [
+    "http://pmbai.dev/",
+    "https://pypi.org/project/pmb-ai/",
+    "https://sheepnav.com/tools/pmb"
+  ],
+  "verify_notes": "原 description 准确，但 features/content 等描述的是另一款项目管理产品，应为编造。",
+  "content_verified": true,
+  "price_verified": true,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "PMB 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：PMB 的 本地 SQLite 记忆存储：离线、可导出、数据不出本机 是亮点，价格 免费 / 开源（Apache-2.0）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

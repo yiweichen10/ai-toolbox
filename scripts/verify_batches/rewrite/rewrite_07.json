@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "tabstack",
+    "name": "Tabstack",
+    "verdict": "REAL",
+    "official_url": "https://tabstack.co",
+    "vendor": "独立开发者 (Jamie Graham)",
+    "desc_issue": "记录域名 tabstack.io 非官方（真实站点为 tabstack.co）；且描述失实：真实 TabStack 明确标注“No gimmicky AI integration!（无AI功能）”，其“AI自动分类/智能搜索”等说法不成立，它只是新标签页书签管理工具",
+    "evidence": "Web搜索显示 TabStack 真实站点为 tabstack.co，且官方强调不含AI功能，与描述矛盾"
+  },
+  {
+    "slug": "flowmarket",
+    "name": "FlowMarket",
+    "verdict": "REAL",
+    "official_url": "https://flowmarket.social",
+    "vendor": "FlowMarket",
+    "desc_issue": "URL 错误且功能不符：记录 URL 为 flowmarket.ai，官方域名为 flowmarket.social；真实 FlowMarket 是面向 B2B 交易的『AI 代理网络（自动发现/匹配商机）』，并非『集成200+AI应用的可视化工作流自动化平台』。",
+    "evidence": "flowmarket.social 为官方站点，定位为 B2B deal flow 的 AI agent 网络（自动发现、匹配企业线索），2026 年上线；flowmarket.ai 非官方域名，记录的功能描述与实际产品不符。"
+  },
+  {
+    "slug": "skywork-3-1",
+    "name": "Skywork 3.1",
+    "verdict": "REAL",
+    "official_url": "https://skywork.ai",
+    "vendor": "昆仑万维（Kunlun Tech）",
+    "desc_issue": "条目 URL 记为 skywork.com；天工/Skywork 真实官网为海外 skywork.ai 与国内 tiangong.cn（skywork.com 非标准入口）。产品本身真实（天工 3.1 于 2026-06 发布）。",
+    "evidence": "昆仑万维天工 3.1 大模型及 Super Agents 真实发布；标准官网为 skywork.ai / tiangong.cn。"
+  },
+  {
+    "slug": "qoder",
+    "name": "Qoder",
+    "verdict": "REAL",
+    "official_url": "https://www.qoder.com",
+    "vendor": "阿里云（Alibaba Cloud）",
+    "desc_issue": "厂商描述错误：batch 称厂商为「Sana Labs」，实际为阿里云（原通义灵码 Lingma 升级更名）的 AI 智能体产品系列；官方站点为 qoder.com，batch 的 qoder.ai 非官方",
+    "evidence": "搜索确认 qoder.com 及 aliyun.com/product/qodercn 为阿里云 Qoder 官方站点，厂商为阿里云而非 Sana Labs"
+  },
+  {
+    "slug": "video-os",
+    "name": "VideoOS",
+    "verdict": "REAL",
+    "official_url": "https://jupitrr.com",
+    "vendor": "Jupitrr AI",
+    "desc_issue": "URL videoos.net does not belong to the product; real 'VideoOS' is Jupitrr AI's all-in-one video workflow at jupitrr.com. Description (video planning/editing/publishing) roughly matches Jupitrr's VideoOS.",
+    "evidence": "Jupitrr's VideoOS at jupitrr.com; videoos.net is an unrelated framework, not the product site."
+  },
+  {
+    "slug": "githits",
+    "name": "GitHits",
+    "verdict": "REAL",
+    "official_url": "https://githits.com",
+    "vendor": "GitHits (Jaakko Timonen 等，芬兰)",
+    "desc_issue": "记录URL githits.ai 应为 githits.com；描述基本准确（AI驱动代码/仓库发现），但其核心定位是面向AI编程代理的开源代码索引/MCP服务，而非'社区热度趋势分析'推荐平台",
+    "evidence": "githits.com确认GitHits为AI代理代码索引服务，2026年6月获175万美元种子轮"
+  },
+  {
+    "slug": "huddle01-vms",
+    "name": "Huddle01 VMs",
+    "verdict": "REAL",
+    "official_url": "https://huddle01.com",
+    "vendor": "Huddle01",
+    "desc_issue": "『VMs』并非Huddle01标准命名产品，但所描述平台（去中心化视频会议、Web3钱包登录、AI会议摘要）基本准确",
+    "evidence": "huddle01.com 为官方站点，去中心化实时音视频通信（DePIN），功能描述大体属实"
+  },
+  {
+    "slug": "spark-tts",
+    "name": "Spark-TTS",
+    "verdict": "REAL",
+    "official_url": "https://github.com/SparkAudio/Spark-TTS",
+    "vendor": "SparkAudio / 香港科技大学等",
+    "desc_issue": "记录的 GitHub 地址 github.com/spark-tts/spark-tts 拼写错误，正确仓库为 github.com/SparkAudio/Spark-TTS",
+    "evidence": "GitHub 正确仓库为 SparkAudio/Spark-TTS（基于 Qwen2.5 的开源 TTS）"
+  }
+]

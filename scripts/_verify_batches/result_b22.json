@@ -1,0 +1,90 @@
+{
+  "batch_id": "b22",
+  "category": "AI开发",
+  "tools": [
+    {
+      "slug": "verba",
+      "name": "Verba",
+      "url_current": "https://github.com/weaviate/Verba",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "GitHub仓库为真实官方主页，但项目已于2026年6月归档停止维护（最新版本2.1.3）。描述称'2026年已更新至v2.0版本，增强多模态检索和自定义工作流能力'与官方信息不符：项目已停更、不再有2026年持续更新，且官方功能列表（混合搜索/自动补全/分块/3D向量可视化等）未提及'多模态检索'与'自定义工作流'。（来源：github.com/weaviate/Verba 仓库归档声明与CHANGELOG）"
+    },
+    {
+      "slug": "base44",
+      "name": "Base44",
+      "url_current": "https://base44.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网真实（base44.com，已被Wix收购的无代码应用搭建平台）。但正文将其写成'代码补全与重构/Bug自动检测与修复/单元测试自动生成/项目文档自动生成'类IDE编程助手，与事实不符：Base44是用自然语言生成完整应用、网站与AI智能体的vibe coding平台，不做行内代码补全或自动单测生成。（来源：base44.com 产品页）。定价'$19/月起'与官网'Paid plans from $16/mo（年付）'接近，属年付/月付差异，不判为编造。"
+    },
+    {
+      "slug": "cube-sandbox",
+      "name": "CubeSandbox",
+      "url_current": "https://cubesandbox.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实（cubesandbox.ai 实际跳转/指向 cubesandbox.com，腾讯云出品）。但正文把产品写成'拖拽式工作流编辑器/AI版乐高'的无代码AI流程搭建器，严重张冠李戴：实际是面向AI Agent的开源安全沙箱服务，基于MicroVM、兼容E2B SDK、提供硬件级隔离与亚秒级启动。（来源：cubesandbox.com）。简短描述正确，长正文错误。"
+    },
+    {
+      "slug": "lm-studio",
+      "name": "LM Studio",
+      "url_current": "https://lmstudio.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实。定价'个人及商用免费'正确：LM Studio自2025年7月起个人与商用均免费，仅企业版高级功能（SSO/模型门禁等）另付费。正文提到的无GUI模式'llmster'真实存在（官方headless守护进程），OpenAI兼容API、Python/TS SDK均属实。（来源：lmstudio.ai/blog/free-for-work、lmstudio.ai/docs/app/basics/lmstudio-vs-llmster-vs-lms）"
+    },
+    {
+      "slug": "ollama",
+      "name": "Ollama",
+      "url_current": "https://ollama.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实。'开源免费'对本地工具成立（另有可选Pro云订阅$20/月，不改变本地版免费定性）。OpenAI兼容API默认localhost:11434、跨平台支持、模型库等描述均准确。（来源：ollama.com）"
+    },
+    {
+      "slug": "lite-llm",
+      "name": "LiteLLM",
+      "url_current": "https://www.litellm.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实（www.litellm.ai）。'开源免费（企业版付费）'正确；统一100+模型为OpenAI格式、网关Proxy、重试/回退、预算控制及被Netflix/Lemonade用于生产环境等描述均属实。（来源：litellm.ai）"
+    },
+    {
+      "slug": "harness-ai",
+      "name": "Harness AI",
+      "url_current": "https://www.harness.io/ai",
+      "url_ok": false,
+      "url_correct": "https://www.harness.io/products/harness-ai",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "存储URL https://www.harness.io/ai 返回404（非真实页面）；正确官网应为 https://www.harness.io/products/harness-ai。（来源：harness.io 站点结构）。描述'利用ML自动分析CI/CD流水线/测试报告/日志、生成代码审查建议、预测构建失败原因'与官方Harness AI能力一致，非幻觉；定价'暂未公开'为稳妥表述。（来源：developer.harness.io/docs/platform/harness-ai/overview）"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "name": "LocalBanana",
+  "slug": "localbanana",
+  "positioning": "免费AI提示词工具，实时预览编辑+一键复制到好用吗",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#8b5cf6",
+  "description": "专注于AI图像Prompt收集与结构化的平台",
+  "category": "AI提示词",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI提示词"
+    },
+    {
+      "text": "LocalBanana"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://www.localbanana.io/",
+  "price": "免费版/付费版",
+  "platform": "Web",
+  "pros": [
+    "提示词即拷即用",
+    "结构化解析易懂可改",
+    "可编辑区域降低误改成本",
+    "免费开放无需注册",
+    "围绕 Gemini 生态深度优化"
+  ],
+  "cons": [
+    "生成依赖 Google Gemini",
+    "国内访问门槛较高",
+    "面向图像创作较垂直"
+  ],
+  "features": [
+    "10,000+ 精选提示词",
+    "AI 结构化解析",
+    "可编辑区域区分",
+    "实时预览编辑",
+    "一键复制到 Gemini",
+    "Visual Studios 工作流"
+  ],
+  "related": [
+    "promptpilot",
+    "explinks-prompts",
+    "prompt-engineering-guide"
+  ],
+  "content": "## LocalBanana 是什么？\n\nLocalBanana 是围绕 Nano Banana（Google Gemini 原生图像生成）生态打造的 AI 图像提示词收集、结构化与创作工作台，也是一个\"视觉意图表达工作台\"：用户可以从参考图、场景、姿态或粗略想法出发，把它们变成 AI 图像、cosplay 方案、海报和可复用的视觉方向，无需从空白提示词框开始。平台提供超过 10,000 条精选提示词与参考素材，通过结构化解析、可编辑区域区分与实时预览，帮助用户理解提示词的工作原理，培养可迁移的创作能力。\n\n### 核心功能\n\n- **画廊浏览与多维度筛选**：按风格、题材、构图、比例等维度浏览 10,000+ 精选作品与参考，快速找到可复现的视觉方向。\n- **完整 Prompt 获取**：看到成品图即可一键复制生成该图所需的完整提示词。\n- **AI 结构化分析**：通过 AI 自动把复杂提示词拆解为清晰的结构化片段，解释每个部分的含义与作用。\n- **区分可编辑区域**：明确标注锁定区、可编辑区与高风险修改区，降低误改导致画面崩坏的成本。\n- **实时预览与编辑**：直接在原文中修改关键变量，实时预览编辑效果，所见即所得。\n- **一键复制与多工具兼容**：支持把编辑好的提示词一键复制到 Gemini、Google AI Studio、GPT 等生成工具中使用，并内置面向 cosplay、人像、海报的 Visual Studios 工作流。\n\n### 适用场景\n\n- **AI 绘画创作者**：从画廊获取成熟提示词并理解其结构，稳定复现高质量图像，摆脱\"空白提示词焦虑\"。\n- **cosplay 与视觉企划**：基于参考图规划角色造型、服装与场景，快速产出 cosplay 方案与海报。\n- **设计师快速出方案**：用参考驱动代替纯文字描述，把构图、配色、光影等视觉意图直接转化为可执行方向。\n\n### 价格\n\nLocalBanana 目前完全免费、无需注册即可开始创作，官方提供中英文双语界面。iOS 视觉工作台应用即将上线，具体付费政策以官网为准。\n\n### 优缺点\n\n- 优点：围绕 Nano Banana/Gemini 生态深度优化，提示词即拷即用；结构化解析让用户\"不仅会用还会改\"；区分可编辑区域，误改风险低；免费开放、无需注册。\n- 缺点：生成环节依赖 Google Gemini / AI Studio，国内访问与账号门槛较高；提示词面向 Nano Banana 深度调优，其他模型兼容性需自行测试；内容以图像/视觉创作为主，覆盖范围相对垂直。",
+  "published": true,
+  "faq": [
+    {
+      "q": "LocalBanana 是做什么的？",
+      "a": "它是围绕 Nano Banana（Google Gemini 原生图像生成）生态的提示词收集与视觉意图工作台，可从参考图、姿态、粗略想法出发生成图像、cosplay 方案和海报。"
+    },
+    {
+      "q": "需要付费或注册吗？",
+      "a": "目前完全免费、无需注册即可浏览与使用，官方提供中英文界面；生成环节需使用 Google Gemini 或 AI Studio。"
+    },
+    {
+      "q": "提示词可以在其他模型用吗？",
+      "a": "提示词深度针对 Nano Banana 调优，也可以一键复制到 Gemini、AI Studio、GPT 等工具测试，但其他模型的兼容效果需自行验证。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://www.localbanana.io/?utm_source=ai-bot.cn",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "verify_notes": "来源 ai-bot.cn 收录页采集；官网可达性验证：HTTP 200",
+  "seo_keywords": [
+    "LocalBanana",
+    "Nano Banana提示词",
+    "AI图像提示词",
+    "Gemini图像生成",
+    "提示词结构化"
+  ]
+}

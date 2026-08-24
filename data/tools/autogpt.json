@@ -1,0 +1,99 @@
+{
+  "name": "AutoGPT",
+  "slug": "autogpt",
+  "positioning": "AutoGPT是什么？自主AI智能体平台好用吗",
+  "auto_positioning": false,
+  "emoji": "🤖",
+  "color": "#7B61FF",
+  "description": "AutoGPT（由 Significant Gravitas 团队推出）是把「自主 Agent」概念带入大众视野的开源项目，你给一个目标，它就能拆成子任务、自主调用工具和联网检索，循环执行直到完成。GitHub 上该项目已收获超过 17 万 Star。后续团队推出 AutoGPT Platform，提供低代码界面、云端持续运行的 Agent 与 Agent 市场。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "自主智能体"
+    },
+    {
+      "text": "开源"
+    },
+    {
+      "text": "自动化"
+    },
+    {
+      "text": "免费可用",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://autogpt.net",
+  "price": "开源免费（MIT/Polyform 授权，可自托管）；官方云端平台处于 Beta/Waitlist 阶段，定价未公开；调用大模型 API 的费用由用户自行承担",
+  "platform": "Web（云端平台 Beta）、自托管（Docker/Local）、GitHub 开源",
+  "pros": [
+    "真正自主：设定目标后可自动拆解并循环执行，无需逐步提示",
+    "开源可自托管，代码可审查、可修改、可扩展",
+    "模块化工具/Block 架构，能连接 API、浏览器、数据库",
+    "提供 Agent 市场与低代码界面，降低使用门槛",
+    "社区活跃，功能持续演进"
+  ],
+  "cons": [
+    "自托管需要一定技术能力，配置有门槛",
+    "调用 GPT-4 等大模型跑复杂任务，API 成本可能较高",
+    "云端官方平台仍在 Beta/Waitlist，部分能力不稳定",
+    "自主 Agent 若不加约束可能「跑偏」，需要护栏"
+  ],
+  "features": [
+    "自主任务执行：把目标拆成子任务并自动循环执行",
+    "持续 Agent（Continuous Agents）：云端按触发器 24/7 运行",
+    "低代码工作流：拖拽式 Builder 搭建自动化",
+    "Block 组合：外部 API、数据处理、AI 推理灵活耦合",
+    "Agent 市场：可直接使用的成品 Agent（简历批改、线索挖掘等）",
+    "联网与工具集成：浏览器、文件、数据库等"
+  ],
+  "related": [
+    "manus",
+    "coze",
+    "dify"
+  ],
+  "content": "## AutoGPT 是什么？\nAutoGPT 是 2023 年把「自主 AI 智能体（Autonomous Agent）」这个概念真正引爆的开源项目，由 Significant Gravitas 团队维护，在 GitHub 上已收获超过 17 万 Star。它和「你问一句它答一句」的聊天机器人不同：你给它一个目标，它会自己把目标拆成子任务、自己调用搜索/文件/代码等工具、自己循环执行，直到认为目标完成（或失败）。\n\n这也是它让人兴奋也让人警惕的地方——它试图「自己想办法」，而不是等你的每一步指令。后续团队推出了 AutoGPT Platform，把这套能力包装成更低门槛的产品：拖拽式 Builder、云端 24/7 持续运行的 Agent、以及可直接用的成品 Agent 市场。\n\n## 核心功能\n1. **自主任务执行**：给定目标后自动拆解、循环执行，无需逐步提示。\n2. **持续 Agent（Continuous Agents）**：云端按触发器常驻运行，处理定时任务。\n3. **低代码工作流**：拖拽式 Builder，非技术用户也能搭自动化。\n4. **Block 组合**：把外部 API、数据处理、AI 推理像积木一样耦合。\n5. **Agent 市场**：简历批改、线索挖掘、视频生成等成品 Agent 直接可用。\n6. **联网与工具集成**：浏览器、文件、数据库都能被 Agent 调用。\n\n## 版本/套餐对比\nAutoGPT 开源本体采用 MIT/Polyform 授权，可免费自托管；官方云端平台（AutoGPT Platform）目前处于 Beta / Waitlist 阶段，公开定价尚未公布。调用大模型（如 OpenAI）API 的费用由用户自行承担，平台本身不捆绑模型计费。\n\n## 值不值得用？\n它的价值在于「真的能自己干活」和「代码开放可审计」，对开发者、自动化爱好者、想搭长期运行 Agent 的团队很有吸引力。但门槛和成本也实在：自托管要技术配置，跑 GPT-4 类模型的 API 费用可能不低，云端版还不稳定、需要排队等待。结论——想深入玩 Agent、愿意折腾的人值得试；只想开箱即用、怕折腾的人建议先观望。\n\n## 使用建议\n新手先从云端平台的 Waitlist 入手或本地 Docker 跑开源版；给 Agent 设定清晰的边界和触发条件，避免它「跑偏」；把昂贵的模型调用和明确的成功率目标挂钩，控制 API 成本；优先用现成 Block/Agent 模板，而不是从零造轮子。\n\n## 适合谁用？\n- **推荐**：开发者、自动化工程师、想搭私有 Agent 的团队。\n- **可考虑**：产品/运营想用现成 Agent 提效，但接受 Beta 不稳定。\n- **不推荐**：完全不懂技术、又不愿等 Waitlist 的非技术用户。",
+  "published": false,
+  "faq": [
+    {
+      "question": "AutoGPT 免费吗？",
+      "answer": "开源版本可免费自托管；官方云端平台 Beta 阶段定价未公开。"
+    },
+    {
+      "question": "AutoGPT 需要编程吗？",
+      "answer": "自托管需要技术配置；新平台提供低代码界面，但仍处 Waitlist 阶段。"
+    },
+    {
+      "question": "AutoGPT 和 ChatGPT 有什么区别？",
+      "answer": "ChatGPT 是逐步对话，AutoGPT 给你目标后自主执行多步任务。"
+    },
+    {
+      "question": "用 AutoGPT 贵吗？",
+      "answer": "软件本身免费，但调用大模型 API 按用量计费，复杂任务成本可能不低。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "AutoGPT",
+    "AutoGPT怎么样",
+    "AutoGPT免费版",
+    "AutoGPT使用教程",
+    "AutoGPT和哪个好"
+  ],
+  "source_urls": [
+    "https://autogpt.com",
+    "https://aicats.wiki/sites/10552.html",
+    "https://simplifyaitools.com/autogpt-autonomous-ai-agent-platform/",
+    "https://www.millforbusiness.com/tools/auto-gpt"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

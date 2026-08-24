@@ -1,0 +1,148 @@
+{
+  "name": "Superblocks",
+  "slug": "superblocks",
+  "emoji": "🧩",
+  "color": "#6950FF",
+  "description": "Superblocks 是用于构建、保护、部署与治理 AI 生成内部工具的平台，内置 Clark AI 助手，支持数据保留在自有 VPC、集中式权限与审计。",
+  "category": "AI开发",
+  "tags": [
+    "低代码",
+    "内部工具",
+    "AI代码生成"
+  ],
+  "rating": "⭐4.5（编辑评分）",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.superblocks.com/",
+  "price": "免费版（≤5用户）+ 付费 $49/创建者/月起",
+  "platform": "Web, Cloud, Self-hosted (VPC)",
+  "pros": [
+    "可视化拖拽构建界面，无需前端基础",
+    "支持连接主流数据库、REST API 和 GraphQL",
+    "内置 AI 助手辅助编写 JavaScript/SQL 代码",
+    "丰富的预置组件和模板，快速复用",
+    "完善的版本控制与团队协作功能"
+  ],
+  "cons": [
+    "高级定制需要 JavaScript 能力",
+    "复杂业务场景下性能可能受限",
+    "免费版有用户数和工作区限制"
+  ],
+  "features": [
+    "可视化应用构建器：100+ 组件、拖拽式 UI 与自定义设计系统",
+    "Clark AI Copilot：生成代码、组装 UI 并调试错误",
+    "50+ 集成：数据库、数据仓库、SaaS API 与 LLM，免写集成代码",
+    "On-Prem Agent：在你的 AWS/GCP/Azure VPC 内运行，数据不出网",
+    "集中治理：SSO/SCIM、RBAC、审计日志、密钥管理、GitHub/GitLab 与一键全球边缘部署"
+  ],
+  "related": [
+    "retool-ai",
+    "n8n"
+  ],
+  "faq": [
+    {
+      "q": "Superblocks 是否完全免费？",
+      "a": "Superblocks 提供免费的入门版（最多 5 名用户、无限应用），团队版和企业版按用户和功能收费。"
+    },
+    {
+      "q": "Superblocks 支持哪些数据库？",
+      "a": "支持 PostgreSQL、MySQL、MongoDB、Snowflake、BigQuery 等主流数据库，也支持 REST API 和 GraphQL 接口。"
+    },
+    {
+      "q": "非技术人员能用 Superblocks 吗？",
+      "a": "可以。拖拽式界面让非技术人员也能搭建简单应用，但复杂逻辑和集成仍需一定编程知识。"
+    },
+    {
+      "q": "Superblocks 和 Retool 有什么区别？",
+      "a": "两者都是低代码内部工具平台。Superblocks 更强调 AI 辅助编码和自动化工作流，以及 On-Prem Agent 的数据驻留能力；Retool 的组件生态和社区更成熟。"
+    }
+  ],
+  "seo_keywords": [
+    "Superblocks",
+    "Superblocks怎么样",
+    "Superblocks免费版",
+    "Superblocks使用教程",
+    "Superblocks和Retool哪个好"
+  ],
+  "content": "## Superblocks是什么？\n\n如果你团队里经常要搭一些内部用的管理后台、数据看板，或者想把重复的手动流程自动化一下，Superblocks 就是那种“省掉前端团队介入”的工具。它是一个低代码/无代码平台，专门用来快速构建内部工具——比如订单审核面板、用户数据管理、报表生成器之类的。\n\n和 Retool、Tooljet 这类工具类似，但 Superblocks 把 AI 助手直接嵌进了编辑器里，写 JavaScript 或者 SQL 的时候，它能帮你补全代码、生成片段，甚至直接根据描述造出 UI 组件。对于非技术同学来说，拖拖拽拽就能搭出基础界面；对于懂一点开发的人，又保留了自己写逻辑的空间。\n\n很多团队用它替代 Excel 共享文档或者零散的小脚本，把散落的数据源（数据库、API、GraphQL）集中到一个界面里统一操作。\n\n---\n\n## 核心功能\n\n### 1. 拖拽式 UI 编辑器\n\n左边栏拖组件（表格、表单、图表、按钮），右边栏调样式和绑定数据，和做 PPT 差不多。实际用起来，常见的后台布局基本都能靠预置组件拼出来，不需要写一行 HTML。不过要做出很复杂的自定义交互（比如嵌套弹窗 + 动态条件），还是得自己写点 JS 逻辑。\n\n### 2. 数据库及 API 连接器\n\n支持连接 PostgreSQL、MySQL、MongoDB 这类主流数据库，也支持 REST API 和 GraphQL。配置好连接后，可以直接在编辑器里写 SQL 查询或者调用接口，结果自动绑定到组件上。这一步对没有后端经验的人有点门槛，但官方提供了不少模板查询，直接改条件就行。\n\n### 3. AI 代码生成与补全\n\n这是它比较亮眼的地方。你在写 JavaScript 或 SQL 时，按一下快捷键或者描述需求（比如“把用户列表按注册时间倒序排列”），AI 就能给出代码片段。实际体验中，简单的逻辑基本一次对，复杂一点的（比如多表联查 + 条件分支）可能需要微调，但整体能省掉查文档和试错的时间。\n\n### 4. 自动化工作流与触发器\n\n可以设置“当数据满足某条件时自动执行后续操作”，比如：用户提交表单后，自动更新数据库并发送通知。这个功能对运营或客服场景很实用，减少人工盯数据的麻烦。不过工作流本身的调试反馈有点弱，出错了得靠日志排查。\n\n### 5. 团队协同与权限管理\n\n支持多人同时编辑，有版本历史可以回退。权限可以细到“某个人只能看某几列数据”或“只能读不能写”。对于需要给不同部门开不同视图的内部工具来说，这套权限体系够用。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 主要区别 | 典型限制 |\n|------|----------|----------|\n| 免费版 | 可体验核心功能 | 用户数有限（通常3-5人）、工作区数量有限、部分高级组件不可用 |\n| 团队版 | 无用户数限制，支持更多数据源和自动化运行次数 | 按年/按月付费，价格未公开，建议直接咨询官网 |\n| 企业版 | 私有部署、SSO、审计日志、专属支持 | 需要定制报价 |\n\n> 注：具体价格和限制以 Superblocks 官方最新信息为准，这里只是常见配置。建议先申请免费版试用，摸清是否满足需求再升级。\n\n---\n\n## 值不值得用？\n\n**优点：**\n- 上手快，懂点数据库的人花半天就能搭出一个可用的工具\n- AI 辅助确实能节约写代码的时间，尤其对 SQL 和不熟悉的 API 调用\n- 模板丰富，很多常见场景（CRM、工单系统、审批流）可以直接改改就用\n- 版本控制和团队协作体验比 Excel/共享文档正规太多\n\n**缺点：**\n- 要做高度定制（比如自定义图表样式、复杂交互）必须会 JavaScript，纯小白会被卡住\n- 数据量太大或请求太频繁时，页面加载变慢，性能不如纯原生开发\n- 免费版限制多，团队稍微大一点就得付费\n\n**总体结论：**  \n如果你团队经常需要“快速验证想法”或“给非技术同事一个操作面板”，Superblocks 值得花几天试试。但它不是万能替代方案——复杂、高并发、对 UI 要求极高的场景，还是老老实实让开发写。\n\n---\n\n## 使用建议\n\n1. **先从模板开始**：别自己从头搭。官方库里有很多行业模板（比如电商后台、客服系统），改数据源和字段就能用。\n2. **数据库连接提前准备好**：确认你的数据库 IP 白名单、SSL 配置都开了 Superblocks 的 IP 段，否则连不上排查半天。\n3. **利用 AI 助手写查询**：写复杂 SQL 时，先描述需求让 AI 生成，再校验结果，比自己从零写快很多。\n4. **权限先松后紧**：初期让所有人看所有数据，等工具稳定后再根据角色加权限，避免配置太多导致启动慢。\n5. **不要试图做大型系统**：内部工具追求“够用”，如果发现页面超过 20 个组件还在堆，建议考虑重构或用专业框架。\n\n---\n\n## 适合谁用？\n\n**推荐使用：**\n- 需要快速搭建内部后台的创业团队或中小企业\n- 运营、数据分析师（懂 SQL）想自己做个数据管理工具\n- 乙方公司给客户展示 Demo 或轻量级原型\n\n**可以考虑：**\n- 有一定开发能力但不想从头写 CRUD 的前端/全栈工程师\n- 需要把多个 API 和数据库整合到一个界面的中大型团队（建议先评估用户数和并发需求）\n\n**不推荐：**\n- 0 编程基础且不愿学任何 SQL/JS 的纯业务人员（遇到报错会卡住）\n- 对性能、UI 像素级定制有极高要求的项目（比如面向客户的生产环境）\n- 需要离线部署且预算有限的团队（企业版价格不便宜）",
+  "published": true,
+  "source_url": "https://www.superblocks.com/platform",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://www.superblocks.com/",
+  "verified_publisher": "Superblocks",
+  "verified_what": "用于构建、保护、部署与治理内部工具/应用/工作流的统一平台，内置 Clark AI 助手，支持通过 On-Prem Agent 将数据保留在自有 VPC。",
+  "verified_price": "免费版（最多 5 名用户，无限应用与工作流）；付费按用户计费，创建者 $49/月 + 终端用户 $15/月（年付）；Enterprise 定制。注：另有资料称 Team 档 $100/AI Builder/月，以官网为准。",
+  "verified_platform": "Web, Cloud, Self-hosted (VPC，通过 On-Prem Agent)",
+  "verified_features": [
+    "可视化应用构建器：100+ 组件、拖拽式 UI 与自定义设计系统",
+    "Clark AI Copilot：生成代码、组装 UI 并调试错误",
+    "50+ 集成：数据库、数据仓库、SaaS API 与 LLM，免写集成代码",
+    "On-Prem Agent：在你的 AWS/GCP/Azure VPC 内运行，数据不出网",
+    "集中治理：SSO/SCIM、RBAC、审计日志、密钥管理、GitHub/GitLab 与一键全球边缘部署"
+  ],
+  "verified_description": "Superblocks 是用于构建、保护、部署与治理 AI 生成内部工具的平台，内置 Clark AI 助手，支持数据保留在自有 VPC、集中式权限与审计。",
+  "content_flags": "长文价格对比未给出具体数字（现官网已公开 $49/创建者+$15/用户 等档位），略有陈旧；其余准确。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5（编辑评分）",
+  "rating_source": "编辑评分（站内综合判断）",
+  "rating_verified": true,
+  "verified_pros": [
+    "可视化拖拽构建界面，无需前端基础",
+    "支持连接主流数据库、REST API 和 GraphQL",
+    "内置 AI 助手辅助编写 JavaScript/SQL 代码",
+    "丰富的预置组件和模板，快速复用",
+    "完善的版本控制与团队协作功能"
+  ],
+  "verified_cons": [
+    "高级定制需要 JavaScript 能力",
+    "复杂业务场景下性能可能受限",
+    "免费版有用户数和工作区限制"
+  ],
+  "verified_faq": [
+    {
+      "q": "Superblocks 是否完全免费？",
+      "a": "Superblocks 提供免费的入门版（最多 5 名用户、无限应用），团队版和企业版按用户和功能收费。"
+    },
+    {
+      "q": "Superblocks 支持哪些数据库？",
+      "a": "支持 PostgreSQL、MySQL、MongoDB、Snowflake、BigQuery 等主流数据库，也支持 REST API 和 GraphQL 接口。"
+    },
+    {
+      "q": "非技术人员能用 Superblocks 吗？",
+      "a": "可以。拖拽式界面让非技术人员也能搭建简单应用，但复杂逻辑和集成仍需一定编程知识。"
+    },
+    {
+      "q": "Superblocks 和 Retool 有什么区别？",
+      "a": "两者都是低代码内部工具平台。Superblocks 更强调 AI 辅助编码和自动化工作流，以及 On-Prem Agent 的数据驻留能力；Retool 的组件生态和社区更成熟。"
+    }
+  ],
+  "verified_tags": [
+    "低代码",
+    "内部工具",
+    "AI代码生成"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://www.superblocks.com/",
+    "https://superblocks.com/blog/power-apps-vs-power-automate",
+    "https://superblocks.com/blog/zapier-vs-powerautomate"
+  ],
+  "verify_notes": "原 baseline 价格写“暂未公开”已过时，已修正为公开档位。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Superblocks 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Superblocks 的 可视化应用构建器：100+ 组件、拖拽式 UI 与自定义设计系统 是亮点，价格 免费版（≤5用户）+ 付费 $49/创建者/月起；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-09",
+  "created_date": "2026-08-09"
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260803-001",
+    "title": "Codex 用 Sol 指挥 Luna Max 省额度翻倍产出",
+    "summary": "Codex 高阶玩法：让 Sol 在 `~/.codex/agents/` 下创建 `luna-worker.toml` 子代理，模型设 `gpt-5.6-luna`、reasoning effort 设 max，Sol 负责拆任务与审代码，具体实现自动委托给 Luna Max。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "X：阿易 AI Notes (@AYi_AInotes)",
+    "source_url": "https://x.com/AYi_AInotes/status/2083867265179537565",
+    "published_at": "2026-08-02T18:47:27+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260803-002",
+    "title": "Grok 支持分析任意视频",
+    "summary": "Grok 可以分析任何视频 https://grok.com/share/bGVnYWN5_8013f7a3-f604-4351-8cd7-acecf3ef165b",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "X：Elon Musk (@elonmusk, xAI)",
+    "source_url": "https://x.com/elonmusk/status/2083800942927839307",
+    "published_at": "2026-08-02T14:23:54+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260803-003",
+    "title": "Meta AI 用第二个 AI 智能体当\"记忆教练\"，让长任务不跑偏",
+    "summary": "Meta AI 提出一种记忆模块，用独立的\"记忆智能体\"在固定间隔审查最近步骤、更新结构化记忆库，并决定是否向\"行动智能体\"的下一次调用添加提醒，以应对长任务中的\"行为状态衰减\"。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "The Decoder：AI News（RSS）",
+    "source_url": "https://the-decoder.com/meta-ai-uses-a-second-ai-agent-as-a-memory-coach-to-keep-long-tasks-on-track",
+    "published_at": "2026-08-02T20:57:38+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260803-004",
+    "title": "Thinking Machines Lab 发布 Inkling-Small：276B 总参数、12B 激活的开源权重多模态 MoE 模型",
+    "summary": "Thinking Machines Lab 发布开源权重 MoE 模型 Inkling-Small，总参数 276B、激活参数 12B，约为 975B 总参数 Inkling 的四分之一，原生支持文本、图像和音频推理，上下文窗口达 1M tokens，权重以 Apache 2.0 协议在 Hugging Face 上提供。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "MarkTechPost（RSS）",
+    "source_url": "https://www.marktechpost.com/2026/08/02/thinking-machines-lab-releases-inkling-small-276b-open-weights-multimodal-moe-model",
+    "published_at": "2026-08-03T04:35:50+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260803-005",
+    "title": "苹果漏洞赏金邮箱被 AI 垃圾报告淹没，真实 macOS 漏洞无人受理",
+    "summary": "苹果因大量 AI 生成的虚假漏洞报告堵塞审核流程，限制了安全研究员提交漏洞报告的数量。意大利初创公司 Bynario 用 ChatGPT 发现了一个可让攻击者完全控制设备的 macOS 严重漏洞，却因提交被拒而无法上报，CEO 估计该漏洞黑市价值10万至20万美元。苹果已联系 Bynario，同时自身正使用 Anthropic 和 OpenAI 的 AI 寻找漏洞，其最新更新修复数量是平时的五倍。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "The Decoder：AI News（RSS）",
+    "source_url": "https://the-decoder.com/a-real-macos-flaw-worth-200k-went-unreported-because-apples-bug-bounty-inbox-was-full-of-ai-slop",
+    "published_at": "2026-08-02T20:42:49+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260803-006",
+    "title": "GeoAI 教程：用 U-Net、Grounding DINO、SAM 与 Mask R-CNN 从 NAIP 影像提取建筑足迹",
+    "summary": "本教程设计了一套完整的 GeoAI 工作流，从高分辨率 NAIP 航拍影像中提取建筑足迹。流程涵盖配置深度学习环境、下载影像与标签、生成图像块和分割掩码，训练 ResNet-34 编码器的 U-Net 模型，并应用滑动窗口推理。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "MarkTechPost（RSS）",
+    "source_url": "https://www.marktechpost.com/2026/08/02/a-tutorial-on-geoai-designing-footprint-extraction-from-naip-imagery-using-u-net-grounding-dino-sam-and-mask-r-cnn",
+    "published_at": "2026-08-03T05:19:48+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260803-007",
+    "title": "Replit Design 一键提取品牌设计系统",
+    "summary": "找到了你喜欢的风格？将其提取为设计系统。\n\nReplit Design 可将任意画面提炼为包含你的颜色、字体和样式的实时风格指南，让每个新界面、帖子和应用都保持品牌一致。无需交接，不会走样，也不会丢失你最初的设计初衷。\n\n你的品牌，无处不在，一键搞定。\n\n立即体验：http://replit.com/design",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "X：Replit (@Replit)",
+    "source_url": "https://x.com/Replit/status/2084036577202737637",
+    "published_at": "2026-08-03T06:00:14+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260803-008",
+    "title": "研究揭示 LLM 存在显著偏差：明知任务不可能仍会执行",
+    "summary": "新论文《Would You Walk to the Car Wash？》提出 SaliTrap 基准，测试 12 个模型在 1，145 个提示中的常识推理，发现 LLM 存在\"显著偏差\"：显式数字和程序会压过未言明的物理前提。最佳模型仅 54.8% 避开陷阱，12 个中 8 个低于 30%；移除干扰后，四个代表性模型的正确率回升至 86.9%-91.8%。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "X：Rohan Paul (@rohanpaul_ai)",
+    "source_url": "https://x.com/rohanpaul_ai/status/2084011507306930300",
+    "published_at": "2026-08-03T04:20:37+08:00",
+    "tags": [
+      "paper"
+    ]
+  }
+]

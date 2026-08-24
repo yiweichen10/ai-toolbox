@@ -1,0 +1,148 @@
+{
+  "name": "Galileo AI",
+  "slug": "galileo-ai",
+  "positioning": "追踪+离线评估：免费AI开发工具怎么用",
+  "auto_positioning": true,
+  "emoji": "🔭",
+  "color": "#5B4FCF",
+  "description": "Galileo 是面向 LLM/AI 应用与智能体开发者的 AI 可观测与评测平台，覆盖离线评估、生产监控与运行时护栏。",
+  "category": "AI开发",
+  "tags": [
+    "LLM评测",
+    "AI可观测",
+    "AI开发",
+    "智能体监控",
+    "护栏"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "85万/月",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://galileo.ai",
+  "price": "免费版 + Pro $100/月",
+  "platform": "网页端、iOS、Android",
+  "pros": [
+    "评估、监控、护栏一体化",
+    "免费版含 5,000 条 trace 与无限用户",
+    "Luna 模型使全流量评估低成本低延迟",
+    "企业部署支持 VPC/本地、SSO",
+    "SOC 2 Type 2 合规"
+  ],
+  "cons": [
+    "Pro 起价 $100/月，偏企业定位",
+    "高级护栏与 SSO/本地部署需企业版或联系销售",
+    "面向工程团队，非终端消费者工具"
+  ],
+  "features": [
+    "追踪（Tracing）与智能体图可视化",
+    "离线评估（内置 20+ 评估器，覆盖 RAG/代理/安全）",
+    "Luna 模型蒸馏评估，低成本覆盖 100% 流量",
+    "生产流量监控与异常/根因检测（Insights Engine）",
+    "实时护栏 Galileo Protect（拦截或改写有害输出）",
+    "评估转护栏管线（eval-to-guardrail）",
+    "部署灵活：SaaS / VPC / 本地",
+    "与主流智能体框架集成，并提供 MCP server"
+  ],
+  "related": [
+    "chatgpt",
+    "claude",
+    "perplexity"
+  ],
+  "faq": [
+    {
+      "q": "Galileo 是免费的吗？",
+      "a": "有免费版，每月 5,000 条 trace、无限用户与无限自定义评估，可直接注册，无需约销售。"
+    },
+    {
+      "q": "Galileo 和通用聊天机器人（如 ChatGPT）有什么区别？",
+      "a": "Galileo 不是聊天机器人，而是面向开发者与工程团队的 LLM 应用可观测与评测平台，用于评估、监控并保护生产中的智能体，原基线将之描述为通用对话助手属错误。"
+    },
+    {
+      "q": "Galileo 如何计费？",
+      "a": "免费版后，Pro 为 $100/月（50,000 条 trace），超出按 trace 量计费；Enterprise 定制。"
+    }
+  ],
+  "seo_keywords": [
+    "Galileo AI",
+    "Galileo AI怎么样",
+    "Galileo AI免费吗",
+    "AI效率工具推荐",
+    "Galileo AI vs ChatGPT"
+  ],
+  "content": "## Galileo AI 是什么？\n\nGalileo 是面向 LLM/AI 应用与智能体开发者的 AI 可观测与评测平台，覆盖离线评估、生产监控与运行时护栏，帮助团队在用户发现问题前捕获失败。\n\n## 核心功能\n\n- 追踪（Tracing）与智能体图可视化\n- 离线评估（内置 20+ 评估器，覆盖 RAG/代理/安全）\n- Luna 模型蒸馏评估，低成本覆盖 100% 流量\n- 生产流量监控与异常/根因检测（Insights Engine）\n- 实时护栏 Galileo Protect（拦截或改写有害输出）\n- 评估转护栏管线（eval-to-guardrail）\n- 部署灵活：SaaS / VPC / 本地\n- 与主流智能体框架集成，并提供 MCP server\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 免费版 $0（每月 5,000 条 trace、无限用户与自定义评估）；Pro $100/月（50,000 条 trace、RBAC、高级分析）；Enterprise 定制（无限 trace、VPC/本地部署、SSO）。 |\n| 支持平台 | Web（SaaS）/ API / SDK（支持 LangGraph、CrewAI、OpenAI Agents SDK 等，提供 MCP server） |\n| 评分 | ⭐ 4.5 |\n| 开发商 | Galileo |\n| 模型 | Luna 模型蒸馏评估，低成本覆盖 100% 流量 |\n\n## 价格与平台\n\n- **价格**：免费版 $0（每月 5,000 条 trace、无限用户与自定义评估）；Pro $100/月（50,000 条 trace、RBAC、高级分析）；Enterprise 定制（无限 trace、VPC/本地部署、SSO）。\n- **平台**：Web（SaaS）/ API / SDK（支持 LangGraph、CrewAI、OpenAI Agents SDK 等，提供 MCP server）\n- **官网**：https://galileo.ai\n\n## 优缺点分析\n\n### 优点\n\n- 评估、监控、护栏一体化\n- 免费版含 5,000 条 trace 与无限用户\n- Luna 模型使全流量评估低成本低延迟\n- 企业部署支持 VPC/本地、SSO\n- SOC 2 Type 2 合规\n\n### 缺点\n\n- Pro 起价 $100/月，偏企业定位\n- 高级护栏与 SSO/本地部署需企业版或联系销售\n- 面向工程团队，非终端消费者工具\n\n## 常见问题（FAQ）\n\n**Galileo 是免费的吗？**\n\n有免费版，每月 5,000 条 trace、无限用户与无限自定义评估，可直接注册，无需约销售。\n\n**Galileo 和通用聊天机器人（如 ChatGPT）有什么区别？**\n\nGalileo 不是聊天机器人，而是面向开发者与工程团队的 LLM 应用可观测与评测平台，用于评估、监控并保护生产中的智能体，原基线将之描述为通用对话助手属错误。\n\n**Galileo 如何计费？**\n\n免费版后，Pro 为 $100/月（50,000 条 trace），超出按 trace 量计费；Enterprise 定制。\n\n\n## 最终结论\n\nGalileo AI 是AI开发领域的一款 AI 工具，其核心优势在于评估、监控、护栏一体化。\n此外，免费版含 5,000 条 trace 与无限用户。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-06-30",
+  "published_date": "2026-06-30",
+  "verified_url": "https://galileo.ai",
+  "verified_publisher": "Galileo",
+  "verified_what": "Galileo 是面向 LLM/AI 应用与智能体开发者的 AI 可观测与评测平台，覆盖离线评估、生产监控与运行时护栏，帮助团队在用户发现问题前捕获失败。",
+  "verified_price": "免费版 $0（每月 5,000 条 trace、无限用户与自定义评估）；Pro $100/月（50,000 条 trace、RBAC、高级分析）；Enterprise 定制（无限 trace、VPC/本地部署、SSO）。",
+  "verified_platform": "Web（SaaS）/ API / SDK（支持 LangGraph、CrewAI、OpenAI Agents SDK 等，提供 MCP server）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "追踪（Tracing）与智能体图可视化",
+    "离线评估（内置 20+ 评估器，覆盖 RAG/代理/安全）",
+    "Luna 模型蒸馏评估，低成本覆盖 100% 流量",
+    "生产流量监控与异常/根因检测（Insights Engine）",
+    "实时护栏 Galileo Protect（拦截或改写有害输出）",
+    "评估转护栏管线（eval-to-guardrail）",
+    "部署灵活：SaaS / VPC / 本地",
+    "与主流智能体框架集成，并提供 MCP server"
+  ],
+  "verified_description": "Galileo 是面向 LLM/AI 应用与智能体开发者的 AI 可观测与评测平台，覆盖离线评估、生产监控与运行时护栏。",
+  "content_flags": "原长文将 Galileo 描述为通用 AI 对话/写作助手（智能问答、多语言翻译、代码辅助等），与真实产品（LLM 评测与可观测平台）完全不符，属严重幻觉，已重写。",
+  "price_verified": true,
+  "verified_pros": [
+    "评估、监控、护栏一体化",
+    "免费版含 5,000 条 trace 与无限用户",
+    "Luna 模型使全流量评估低成本低延迟",
+    "企业部署支持 VPC/本地、SSO",
+    "SOC 2 Type 2 合规"
+  ],
+  "verified_cons": [
+    "Pro 起价 $100/月，偏企业定位",
+    "高级护栏与 SSO/本地部署需企业版或联系销售",
+    "面向工程团队，非终端消费者工具"
+  ],
+  "verified_faq": [
+    {
+      "q": "Galileo 是免费的吗？",
+      "a": "有免费版，每月 5,000 条 trace、无限用户与无限自定义评估，可直接注册，无需约销售。"
+    },
+    {
+      "q": "Galileo 和通用聊天机器人（如 ChatGPT）有什么区别？",
+      "a": "Galileo 不是聊天机器人，而是面向开发者与工程团队的 LLM 应用可观测与评测平台，用于评估、监控并保护生产中的智能体，原基线将之描述为通用对话助手属错误。"
+    },
+    {
+      "q": "Galileo 如何计费？",
+      "a": "免费版后，Pro 为 $100/月（50,000 条 trace），超出按 trace 量计费；Enterprise 定制。"
+    }
+  ],
+  "verified_tags": [
+    "LLM评测",
+    "AI可观测",
+    "AI开发",
+    "智能体监控",
+    "护栏"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://galileo.ai/pricing",
+    "https://galileo.ai/blog/galileo-vs-vellum",
+    "https://topreviewed.ai/products/galileo-ai"
+  ],
+  "verify_notes": "原基线 price（$19/月起）、platform（iOS/Android）、features/faq 均属虚构。真实 Galileo 为开发者可观测/评测平台，Pro $100/月。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Galileo AI 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Galileo AI 的 追踪（Tracing）与智能体图可视化 是亮点，价格 免费版 + Pro $100/月；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

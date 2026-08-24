@@ -1,0 +1,157 @@
+{
+  "name": "Augment Code",
+  "slug": "augment-code",
+  "positioning": "免费AI编程工具：AI 代理+自动代码审查",
+  "auto_positioning": true,
+  "emoji": "💻",
+  "color": "#6366F1",
+  "description": "Augment Code 是一款面向专业软件工程的 AI 编程平台，通过 Context Engine 对整代码库进行实时理解，提供智能补全、编程代理、自动代码审查与多文件上下文分析，帮助开发者更高效地编写、审查和优化代码。",
+  "category": "AI编程",
+  "tags": [
+    "代码补全",
+    "AI编程助手",
+    "代码调试",
+    "代码审查",
+    "软件开发"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "85万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.augmentcode.com",
+  "price": "免费 Community 版 + 付费（约 $30–100/月，按信用点）",
+  "platform": "VS Code、JetBrains IDEs、Neovim、Vim",
+  "pros": [
+    "代码库级上下文理解能力强",
+    "支持多种主流编程语言",
+    "与 VS Code/JetBrains 等 IDE 深度集成",
+    "代码解释、审查与文档生成实用",
+    "多文件上下文分析能力强"
+  ],
+  "cons": [
+    "免费版额度有限，且可能用于模型训练",
+    "付费档位较头部产品偏贵",
+    "国内访问速度可能不稳定"
+  ],
+  "features": [
+    "Context Engine 全代码库理解",
+    "智能代码补全与生成",
+    "AI 代理（从需求到 PR）",
+    "自动代码审查（Augment Code Review）",
+    "多文件上下文分析与重构",
+    "CLI（Auggie）与代理编排（Cosmos）"
+  ],
+  "related": [
+    "github-copilot",
+    "cursor",
+    "claude-code",
+    "tabnine",
+    "replit-ai"
+  ],
+  "faq": [
+    {
+      "q": "Augment Code 是免费的吗？",
+      "a": "提供免费 Community 版（有限用户消息/额度）；付费 Developer/Pro/Max 按月订阅，采用信用点计费。"
+    },
+    {
+      "q": "Augment Code 支持哪些 IDE？",
+      "a": "支持 VS Code、JetBrains 系列（IntelliJ IDEA、WebStorm 等）、Neovim、Vim，以及终端 CLI。"
+    },
+    {
+      "q": "Augment Code 和 GitHub Copilot 哪个好？",
+      "a": "Augment 在代码库级上下文理解与代码审查上表现突出；Copilot 在生态整合与稳定性上更成熟，具体看需求。"
+    },
+    {
+      "q": "Augment Code 支持中文吗？",
+      "a": "界面支持多语言；代码理解与生成支持主流编程语言，注释/文档生成以英文为主。"
+    }
+  ],
+  "seo_keywords": [
+    "Augment Code",
+    "Augment Code编程助手",
+    "Augment Code免费版",
+    "Augment Code vs Copilot",
+    "AI代码补全工具推荐"
+  ],
+  "content": "# Augment Code是什么？\n\n如果你平时写代码，应该能感觉到——现在单靠手动敲键盘已经有点累了。各种AI编程工具层出不穷，Augment Code就是其中比较值得关注的一个。\n\n简单来说，Augment Code是一个AI编程助手，核心作用是帮你写代码、解释代码、改代码。它不是那种只会给你补全一两行代码的工具，而是能理解整个项目的上下文。2026年的最新版本在代码解释、多文件分析和自动化重构这些方面做了明显升级，用起来比早期版本\"聪明\"不少。\n\n官方给它的定位是\"软件开发的人工智能编程助手\"，听起来有点官方，但实际用下来，它确实能帮你省不少功夫。\n\n---\n\n## 核心功能\n\n**智能代码补全**\n\n这个是基础功能了，但Augment Code做得比较扎实。它不只是根据你当前敲的字符猜下一个词，而是能理解你当前在写什么功能，然后给出整块整块的代码建议。比如你要写一个数据处理的函数，它可能直接把你想要的整个逻辑都补出来。不过具体效果还是要看语言和场景，主流语言支持更好，小众语言就一般般。\n\n**代码解释和注释生成**\n\n这个功能挺实用的。特别是当你接手别人的代码，或者自己写了很久回头看的时候，点一下就能得到一段解释。它不只是简单地翻译代码在做什么，而是会结合上下文告诉你这段代码的意图。不过有时候解释得比较\"机械化\"，需要你自己再消化一下。\n\n**自动化代码重构**\n\n这是2026版本的重点升级之一。你可以对着一段代码说\"帮我重构\"，它会给出几种不同的写法供你选择。比如把重复的逻辑抽出来、简化嵌套太深的if-else、优化变量命名之类的。实际用下来，它给出的方案大多数时候是合理的，但偶尔也会出现\"过度设计\"的情况，需要你自己判断。\n\n**Bug检测和修复建议**\n\n写代码的时候，它能帮你发现一些潜在的问题。比如变量类型不匹配、空指针风险、可能未定义的变量等。它不仅告诉你哪里有问题，还会给出修复方案。这个功能有点像一个随时在线的代码reviewer，虽然不能替代真正的测试，但能帮你catch一些低级错误。\n\n**多文件上下文分析**\n\n这是我觉得比较有用的一个点。很多AI编程工具只看当前文件，但Augment Code能理解项目里多个文件之间的关系。你问它\"这个函数在哪里被调用了\"，它能帮你找出来；你想改一个接口，它能告诉你会影响哪些地方。对于中大型项目来说，这个功能确实能提升不少效率。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 价格 | 主要功能 | 适用人群 |\n|------|------|----------|----------|\n| 免费版 | $0 | 基础代码补全、简单的代码解释、有限的上下文分析 | 个人开发者试试水 |\n| 专业版 | 付费 | 完整的多文件分析、自动化重构、Bug检测与修复建议、单元测试生成 | 职业开发者、小团队 |\n| 企业版 | 定制 | 团队协作功能、高级安全保护、优先技术支持、API集成 | 中大型团队 |\n\n免费版功能有一定限制，比如每天的请求次数、上下文窗口大小都会有所限制。专业版解锁了大部分实用功能，企业版则偏向团队协作和安全性。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 智能补全和生成能力确实比很多同类工具强一档，特别是对整体逻辑的理解\n- 多文件上下文分析是亮点，对中大型项目很友好\n- 主流编程语言支持覆盖面广，VS Code集成做得不错\n- 代码解释和文档生成功能比较实用，能省去不少读代码的时间\n\n**缺点：**\n\n- 免费版限制比较多，想好好用基本上要付费\n- 小众语言支持一般，如果你主要写一些冷门语言，体验会打折扣\n- 需要网络连接才能用，离线场景下完全歇菜\n- 国内访问速度有时不稳定，这个问题确实存在\n\n**总体结论：** 对于日常写代码的开发者来说，Augment Code是一个值得尝试的工具。它不能替代你的思考，但能帮你省掉不少重复劳动。免费版可以先体验一下，如果觉得有用再考虑专业版。\n\n---\n\n## 使用建议\n\n1. **先拿免费版试试**：不要一上来就付费，先用免费版跑几个真实项目，感受一下它的能力边界在哪里。\n\n2. **把它当助手而不是替代品**：AI给出的代码建议要自己审核一遍，特别是涉及业务逻辑的部分，不要无脑复制。\n\n3. **配合版本控制使用**：重构功能好用，但建议在动手之前先commit一下，避免改出问题回滚困难。\n\n4. **注意网络环境**：国内访问有时会卡，如果经常遇到这个问题，可能需要考虑网络加速方案。\n\n---\n\n## 适合谁用？\n\n**推荐使用：**\n\n- 日常需要写代码的开发者，无论是前端后端还是全栈\n- 维护中大型项目的团队，多文件分析功能很实用\n- 想要提升编码效率的程序员\n\n**可考虑使用：**\n\n- 主要使用小众编程语言的开发者——支持度可能不够理想\n- 对网络稳定性要求极高的工作场景\n- 预算有限的个人开发者——可以先用免费版试试\n\n**不推荐使用：**\n\n- 完全不写代码的人——这工具是给开发者用的\n- 需要离线工作的场景——没有网络它就用不了\n\n## 常见问题（FAQ）\n\n**Augment Code 是免费的吗？**\n\n提供免费 Community 版（有限用户消息/额度）；付费 Developer/Pro/Max 按月订阅，采用信用点计费。\n\n**Augment Code 支持哪些 IDE？**\n\n支持 VS Code、JetBrains 系列（IntelliJ IDEA、WebStorm 等）、Neovim、Vim，以及终端 CLI。\n\n**Augment Code 和 GitHub Copilot 哪个好？**\n\nAugment 在代码库级上下文理解与代码审查上表现突出；Copilot 在生态整合与稳定性上更成熟，具体看需求。\n\n**Augment Code 支持中文吗？**\n\n界面支持多语言；代码理解与生成支持主流编程语言，注释/文档生成以英文为主。",
+  "published": true,
+  "created_date": "2026-05-17",
+  "published_date": "2026-05-17",
+  "verified_url": "https://www.augmentcode.com",
+  "verified_publisher": "Augment Code（现为软件代理/代理编排公司，产品含 Augment、Cosmos）",
+  "verified_what": "Augment Code 是面向专业软件工程的 AI 原生编程平台，核心是其 Context Engine（对整个代码库、依赖、文档、历史变更的实时理解），提供 IDE 内的代码补全/代理、代码审查（Augment Code Review）、CLI（Auggie）与代理编排（Cosmos），支持 VS Code、JetBrains、Neovim/Vim 等。",
+  "verified_price": "免费 Community 版（有限额度，数据可用于训练）。付费采用信用点制：Developer 约 $30–50/月、Pro 约 $100/月、Max 约 $250/月，Enterprise 定制；早期曾有过 $19/月档位，现定价已调整。",
+  "verified_platform": "VS Code、JetBrains IDEs、Neovim、Vim、CLI（终端）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "Context Engine 全代码库理解",
+    "智能代码补全与生成",
+    "AI 代理（从需求到 PR）",
+    "自动代码审查（Augment Code Review）",
+    "多文件上下文分析与重构",
+    "CLI（Auggie）与代理编排（Cosmos）"
+  ],
+  "verified_description": "Augment Code 是一款面向专业软件工程的 AI 编程平台，通过 Context Engine 对整代码库进行实时理解，提供智能补全、编程代理、自动代码审查与多文件上下文分析，帮助开发者更高效地编写、审查和优化代码。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.6",
+  "rating_source": "站内编辑评分（人气/实用度）",
+  "rating_verified": true,
+  "verified_pros": [
+    "代码库级上下文理解能力强",
+    "支持多种主流编程语言",
+    "与 VS Code/JetBrains 等 IDE 深度集成",
+    "代码解释、审查与文档生成实用",
+    "多文件上下文分析能力强"
+  ],
+  "verified_cons": [
+    "免费版额度有限，且可能用于模型训练",
+    "付费档位较头部产品偏贵",
+    "国内访问速度可能不稳定"
+  ],
+  "verified_faq": [
+    {
+      "q": "Augment Code 是免费的吗？",
+      "a": "提供免费 Community 版（有限用户消息/额度）；付费 Developer/Pro/Max 按月订阅，采用信用点计费。"
+    },
+    {
+      "q": "Augment Code 支持哪些 IDE？",
+      "a": "支持 VS Code、JetBrains 系列（IntelliJ IDEA、WebStorm 等）、Neovim、Vim，以及终端 CLI。"
+    },
+    {
+      "q": "Augment Code 和 GitHub Copilot 哪个好？",
+      "a": "Augment 在代码库级上下文理解与代码审查上表现突出；Copilot 在生态整合与稳定性上更成熟，具体看需求。"
+    },
+    {
+      "q": "Augment Code 支持中文吗？",
+      "a": "界面支持多语言；代码理解与生成支持主流编程语言，注释/文档生成以英文为主。"
+    }
+  ],
+  "verified_tags": [
+    "代码补全",
+    "AI编程助手",
+    "代码调试",
+    "代码审查",
+    "软件开发"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://www.augmentcode.com",
+    "https://www.augmentcode.com/blog/augment-codes-pricing-is-changing",
+    "https://toolmesh.ai/tools/augment-code"
+  ],
+  "verify_notes": "官方域名 augmentcode.com 核实有效。原数据称「Pro 版 $19/月」已过时——2025-10 起改为信用点制（Developer ~$30–50、Pro ~$100、Max ~$250/月），已在校验价格中修正。产品形态描述准确。",
+  "content_verified": true,
+  "url_previous": "https://augmentcode.com",
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Augment Code 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Augment Code 的 Context Engine 全代码库理解 是亮点，价格 免费 Community 版 + 付费（约 $30–100/月，按信用点）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

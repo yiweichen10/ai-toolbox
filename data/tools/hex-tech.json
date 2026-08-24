@@ -1,0 +1,151 @@
+{
+  "name": "Hex.tech",
+  "slug": "hex-tech",
+  "positioning": "免费AI开发工具：多语言笔记本+数据应用",
+  "auto_positioning": true,
+  "emoji": "📊",
+  "color": "#0066FF",
+  "description": "Hex.tech 是由 Hex Technologies 推出的协作式 AI 数据分析工作区，融合 SQL、Python/R 笔记本、数据应用与实时协作，面向团队数据探索与决策。",
+  "category": "AI开发",
+  "tags": [
+    "协作数据科学",
+    "笔记本",
+    "SQL/Python"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://hex.tech",
+  "price": "免费版 + Pro $36/编辑/月 + Team $75/编辑/月 + 企业版定制",
+  "platform": "Web",
+  "pros": [
+    "协作式笔记本环境，支持实时共享和评论",
+    "原生支持 SQL 和 Python 混合使用",
+    "内置可视化组件和仪表盘创建",
+    "可一键将笔记本部署为交互式应用",
+    "与版本控制（Git）集成，便于团队协作"
+  ],
+  "cons": [
+    "免费版有功能和用量限制",
+    "高级功能需付费订阅",
+    "对大规模数据集的处理性能可能不如专用引擎"
+  ],
+  "features": [
+    "多语言笔记本：SQL、Python、R 与无代码单元格共存于同一画布",
+    "数据应用（Data Apps）：将分析一键发布为交互式应用与仪表盘",
+    "内置 AI 助手（Notebook Agent / Threads Agent / Semantic Model Agent）",
+    "实时协作、评论、版本控制与可复用组件",
+    "连接主流数据仓库/湖仓与 dbt，支持 Git、Airflow/Dagster 编排"
+  ],
+  "related": [
+    "replit-ai",
+    "cursor",
+    "github-copilot"
+  ],
+  "faq": [
+    {
+      "q": "Hex.tech 有免费版吗？",
+      "a": "提供免费的 Community 版（最多 5 个笔记本、小计算量），另有 14 天 Team 试用；付费版含 Professional $36/编辑/月、Team $75/编辑/月、Enterprise 定制。"
+    },
+    {
+      "q": "Hex.tech 支持哪些语言？",
+      "a": "原生支持 SQL 和 Python，也支持 R 语言，可在同一笔记本中混合使用。"
+    },
+    {
+      "q": "与 Jupyter Notebook 有什么区别？",
+      "a": "Hex 是云端协作平台，提供更强的团队协作、应用部署与版本控制，并内置 AI 助手与可视化组件，更适合团队数据项目。"
+    },
+    {
+      "q": "可以用来部署机器学习模型吗？",
+      "a": "可以将分析结果或模型预测包装为交互式应用分享给非技术用户，适合快速原型验证和内部分析工具。"
+    }
+  ],
+  "seo_keywords": [
+    "Hex.tech",
+    "Hex.tech怎么样",
+    "Hex.tech免费版",
+    "Hex.tech使用教程",
+    "Hex.tech和哪个好"
+  ],
+  "content": "## Hex.tech是什么？\n\n如果你和数据打过交道，应该知道数据科学工作流有多“碎” —— 写SQL拉数据、切到Python做清洗、再开个Jupyter Notebook跑模型，最后用Tableau画个图，整个流程散落在不同工具里，沟通全靠截图和眼神。\n\nHex.tech 就是想把这一切揉进一个地方。它是一个“协作式数据科学+AI平台”，简单说就是：在同一个浏览器窗口里，你能写SQL、写Python、写R，拉数据、做分析、建模型、画图表，最后还能一键把整个分析变成可交互的应用或仪表盘分享给同事。团队里的人可以实时看到你的进度、留评论、甚至一起改代码，支持Git版本管理，开个玩笑说，这就相当于数据科学版本的Google Docs + Jupyter + Streamlit合体。\n\n## 核心功能\n\n### 1. SQL + Python 双引擎笔记本\n这是Hex最核心的亮点。你可以先写一段SQL从数据库里拎出数据，紧接着在同一份笔记本里切到Python（或R）继续处理、建模，单元格之间还能直接传变量。不用像以前那样先把SQL结果导出成CSV，再手动导入Python环境。实际用起来很丝滑，尤其适合那些数据本身在数据库里、但分析逻辑需要复杂编程的场景。\n\n### 2. 交互式可视化与仪表盘\n笔记本里内置了可视化组件库，拖拽就能生成图表，不需要单独开Tableau。更爽的是，这些图表是活的——别人打开你的笔记本或仪表盘，可以筛选、缩放、甚至修改参数，实时看到结果变化。适合做那种“给老板看”的动态报告，不用每次都重新跑一遍。\n\n### 3. 应用部署与分享\n这是Hex最值钱的功能之一。你写完一个分析，点一下按钮就能把它变成一个交互式Web应用，比如一个参数可调的销售预测工具，或者一个让业务人员自己选时间范围的报表。不需要额外的部署环境、不需要写前端代码，分享个链接就行。很多团队反馈这个功能大大降低了“数据产品”的门槛。\n\n### 4. AI 辅助代码生成与解释\n内置了AI助手，能帮你写SQL或Python代码，也能解释一段复杂逻辑。比如你贴进去一段别人写的pandas代码，它直接告诉你每一步在干嘛。对于刚接触某个库的新人或临时接手别人笔记本的情况，这个功能很实用，省去搜文档的时间。不过AI生成代码的质量看场景，复杂业务逻辑建议还是自己验证。\n\n### 5. 版本控制与协作\n每个笔记本都支持Git集成，改了什么、谁改的、怎么回退，清清楚楚。团队协作时可以直接在笔记本里@同事、留评论，有点像代码Review的体验。相比传统Jupyter丢一个.ipynb文件在群里，Hex的协作感要专业得多。\n\n### 6. 数据连接器\n支持连接主流数据库（Postgres、Snowflake、BigQuery、Redshift等）和数据湖（S3、Databricks等）。配置好一次，整个团队都能用同一份数据源，不用每个人各自装驱动、写连接串。\n\n## 版本/套餐对比\n\n| 版本 | 适用场景 | 主要限制 |\n|------|----------|----------|\n| 免费版 | 个人探索、小项目试用 | 计算资源有限，协作功能受限（如共享笔记本数量少），不支持高级AI功能和部分数据连接器 |\n| 专业版（付费） | 小团队日常使用 | 具体功能、用量和价格请参考Hex官网，不同套餐在成员数、存储、运行时间等方面有差异 |\n| 团队版/企业版 | 大规模团队、生产级部署 | 提供更细粒度的权限管理、SSO、高级安全合规、专属支持等 |\n\n> 说明：Hex的定价模式不对外公开具体数字，官方提供免费版可以先用起来，确定需要后再按需升级。建议直接访问hex.tech查看最新套餐详情。\n\n## 值不值得用？\n\n**优点：**\n- **协作体验好：** 实时共享+评论+Git，比传统Jupyter强太多了。\n- **一站式：** 从SQL拉数到Python建模再到前端仪表盘，不用切工具，降低上下文切换成本。\n- **应用部署**：一键把分析变成可交互应用，对数据团队的交付价值提升明显。\n- **AI辅助**：对新手友好，对老手也能提效。\n\n**缺点：**\n- **免费版限制多：** 只能小规模用用，真要团队日常干活基本得付费。\n- **大规模数据处理：** 如果你经常跑几十TB的ETL或超复杂聚合，它的计算引擎不如专门的大数据工具（如Spark、DuckDB）从容，更适合中等规模的数据探索。\n- **生态锁定风险：** 所有分析都跑在Hex的云环境里，数据也通过它连接，如果后续想迁移，成本要考虑。\n\n**总体结论：** 如果你是一个3~10人的数据团队，日常工作以中轻度分析、报表、原型验证为主，Hex能明显提升协作效率和交付速度，值得一试。如果你只需要一个人写脚本，或者你的数据量级大到必须用Spark集群，那Hex可能不太对路。\n\n## 使用建议\n\n1. **从免费版开始试用**：连一个你常用的数据库（比如Postgres或Snowflake），跑一个真实的分析任务，感受一下笔记本的流畅度和协作体验。\n2. **优先用于“需要分享”的场景**：比如要给业务方看的临时报表、需要团队Review的分析模型、老板要的交互式看板。不要用它做纯个人离线探索（那用Jupyter更轻量）。\n3. **善用AI助手**：写SQL时让它帮你优化、写Python时让它解释，但重要逻辑记得手动验证。\n4. **合理规划数据源连接**：如果团队数据源较多，建议先统一通过Hex的数据连接器接入，避免每个人单独管理凭证。\n5. **注意免费版配额**：免费版每月有运行时长和存储限制，别让它跑长时间调度任务。\n\n## 适合谁用？\n\n**推荐：**\n- 中小型数据团队（3~20人），日常工作以数据查询、分析、报表、轻量建模为主。\n- 需要频繁交付“给业务方看的交互式分析”的数据分析师/科学家。\n- 尝试引入协作式数据科学工作流的团队，不愿自建基础设施。\n\n**可考虑：**\n- 单人数据工作者（但免费版够用的话也可以，性价比取决于你的分析频率）。\n- 已经深度使用Jupyter+Git+Streamlit的老手（迁移成本较高，但收益可能不如预期）。\n- 需要处理百GB以上大规模数据的团队（可以先评估性能，如果需要也可以将Hex作为前端+编排层，底层用其他引擎）。\n\n**不推荐：**\n- 只用Excel或BI工具就能满足需求的业务分析人员（没必要引入新工具）。\n- 超大规模数据仓库团队（每天跑PB级ETL的场合，Hex不是为这个设计的）。\n- 对数据安全要求极高、必须完全本地部署的行业（目前Hex是SaaS云服务，暂不支持私有化）。",
+  "published": true,
+  "source_url": "https://hex.tech",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://hex.tech",
+  "verified_publisher": "Hex Technologies Inc.",
+  "verified_what": "协作式 AI 数据分析工作区，融合 SQL、Python/R 笔记本、数据应用与实时协作，内置 Notebook Agent 等 AI 助手，面向团队数据探索与决策。",
+  "verified_price": "Community 免费；Professional $36/编辑/月；Team $75/编辑/月；Enterprise 定制（联系销售）。另有按计算用量（compute）付费。提供 14 天 Team 试用。",
+  "verified_platform": "Web",
+  "verified_features": [
+    "多语言笔记本：SQL、Python、R 与无代码单元格共存于同一画布",
+    "数据应用（Data Apps）：将分析一键发布为交互式应用与仪表盘",
+    "内置 AI 助手（Notebook Agent / Threads Agent / Semantic Model Agent）",
+    "实时协作、评论、版本控制与可复用组件",
+    "连接主流数据仓库/湖仓与 dbt，支持 Git、Airflow/Dagster 编排"
+  ],
+  "verified_description": "Hex.tech 是由 Hex Technologies 推出的协作式 AI 数据分析工作区，融合 SQL、Python/R 笔记本、数据应用与实时协作，面向团队数据探索与决策。",
+  "content_flags": "原基线 price 写“暂未公开”，实际官网已公开阶梯定价（Pro $36、Team $75/编辑/月），需修正。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "G2 列为行业领导者（未公布均分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "协作式笔记本环境，支持实时共享和评论",
+    "原生支持 SQL 和 Python 混合使用",
+    "内置可视化组件和仪表盘创建",
+    "可一键将笔记本部署为交互式应用",
+    "与版本控制（Git）集成，便于团队协作"
+  ],
+  "verified_cons": [
+    "免费版有功能和用量限制",
+    "高级功能需付费订阅",
+    "对大规模数据集的处理性能可能不如专用引擎"
+  ],
+  "verified_faq": [
+    {
+      "q": "Hex.tech 有免费版吗？",
+      "a": "提供免费的 Community 版（最多 5 个笔记本、小计算量），另有 14 天 Team 试用；付费版含 Professional $36/编辑/月、Team $75/编辑/月、Enterprise 定制。"
+    },
+    {
+      "q": "Hex.tech 支持哪些语言？",
+      "a": "原生支持 SQL 和 Python，也支持 R 语言，可在同一笔记本中混合使用。"
+    },
+    {
+      "q": "与 Jupyter Notebook 有什么区别？",
+      "a": "Hex 是云端协作平台，提供更强的团队协作、应用部署与版本控制，并内置 AI 助手与可视化组件，更适合团队数据项目。"
+    },
+    {
+      "q": "可以用来部署机器学习模型吗？",
+      "a": "可以将分析结果或模型预测包装为交互式应用分享给非技术用户，适合快速原型验证和内部分析工具。"
+    }
+  ],
+  "verified_tags": [
+    "协作数据科学",
+    "笔记本",
+    "SQL/Python"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://hex.tech/pricing/",
+    "https://www.interpretercode.com/articles/hex-pricing",
+    "https://www.flowtools.co/hex"
+  ],
+  "verify_notes": "官网定价为每编辑席位于月，另按计算用量计费。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Hex.tech 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Hex.tech 的 多语言笔记本：SQL、Python、R 与无代码单元格共存于同一画布 是亮点，价格 免费版 + Pro $36/编辑/月 + Team $75/编辑/月 + 企业版定制；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-05",
+  "created_date": "2026-08-05"
+}

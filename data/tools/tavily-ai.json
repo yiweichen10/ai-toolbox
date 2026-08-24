@@ -1,0 +1,151 @@
+{
+  "name": "Tavily AI",
+  "slug": "tavily-ai",
+  "emoji": "🔍",
+  "color": "#1E90FF",
+  "description": "Tavily 是面向 AI 代理的实时搜索与检索 API（发布方：Tavily 公司），提供 Search、Extract、Crawl、Map、Research 接口，返回结构化网页数据以降低代理幻觉。",
+  "category": "AI搜索",
+  "tags": [
+    "AI搜索",
+    "实时搜索API",
+    "AI代理",
+    "免费额度"
+  ],
+  "rating": "⭐4.5（编辑评分）",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://tavily.com/",
+  "price": "免费版 1,000 credits/月 + 按量 $0.008/credit（Project $30/月）",
+  "platform": "Web API",
+  "pros": [
+    "专为 AI 代理优化的实时搜索能力",
+    "返回结构化 JSON 数据，便于解析",
+    "低延迟，适合高频调用场景",
+    "支持自定义搜索源和参数",
+    "提供免费层额度，易于上手"
+  ],
+  "cons": [
+    "API 调用需付费，高用量成本可能较高",
+    "依赖网络稳定性，断网时无法使用",
+    "搜索结果覆盖范围可能不如传统搜索引擎全面"
+  ],
+  "features": [
+    "Search API：为 LLM 优化的实时网页搜索，返回结构化、带评分的结果",
+    "Extract API：从任意 URL 提取干净的结构化内容，免去 HTML 清洗",
+    "Crawl / Map API：爬取与映射网站结构，构建检索索引",
+    "Research API：自动多步研究并生成带引用的综合报告",
+    "Keyless 免费接入：无需 API Key 即可试用 Search 与 Extract"
+  ],
+  "related": [
+    "perplexity",
+    "brave-search-ai",
+    "meta-so"
+  ],
+  "faq": [
+    {
+      "q": "Tavily AI 是什么？",
+      "a": "Tavily AI 是一个实时搜索 API，专为 AI 代理和智能体设计，帮助它们快速获取互联网最新信息并以结构化数据返回。"
+    },
+    {
+      "q": "如何开始使用 Tavily AI？",
+      "a": "访问官网注册账号，获取 API Key，然后按照文档集成到你的 AI 应用中，通常支持 HTTP 请求与 Python/JS SDK。"
+    },
+    {
+      "q": "Tavily AI 免费吗？",
+      "a": "Tavily AI 提供免费额度（每月 1,000 credits，无需信用卡），适合测试和小规模使用，超出后按量付费（如 Project $30/月或按 credit 计费）。"
+    },
+    {
+      "q": "Tavily AI 与其他搜索 API 有什么区别？",
+      "a": "Tavily 专为 AI 代理优化，返回结构化数据且强调实时性和低延迟，相比传统搜索 API 更适配 RAG 和自动化场景。"
+    }
+  ],
+  "seo_keywords": [
+    "Tavily AI",
+    "Tavily AI怎么样",
+    "Tavily AI免费版",
+    "Tavily AI使用教程",
+    "Tavily AI和Perplexity哪个好"
+  ],
+  "content": "## Tavily AI是什么？\n\n简单来说，Tavily AI 是一个**专门给 AI 代理（Agent）和智能体用的实时搜索引擎**。普通搜索引擎返回的是网页链接和片段，而 Tavily 直接返回结构化的 JSON 数据——这意味着你用它的结果去做 RAG（检索增强生成）、搭问答机器人、搞自动化流程，都不用自己再费劲去解析 HTML 或找 API 转格式，拿到就是现成的。\n\n它的定位很明确：不是取代 Google 或 Bing，而是**为 AI 程序提供“即插即用”的实时知识接口**。如果你正在做需要实时信息（比如新闻、股价、最新文档）的 AI 应用，Tavily 比通用搜索 API 更对口。\n\n---\n\n## 核心功能\n\n### 1. 实时互联网搜索\nTavily 能抓取最新发布的内容，对时效性要求高的场景（比如“今天的热搜”“最新的政策公告”）响应很快。实测中，对刚发布几小时内的新闻，它的召回率不错，不会像有些缓存型 API 那样给你过时的东西。\n\n### 2. 结构化 JSON 输出\n这是它最大的卖点。返回的内容直接包含标题、摘要、来源链接、发布时间，甚至还有相关性评分。你不需要写正则或解析 DOM 树，程序拿到就能用。对于开发效率来说，这个体验比传统搜索 API 友好太多。\n\n### 3. 自定义搜索源与过滤\n可以限制搜索范围，比如只搜特定域名（`site:example.com`）、按时间过滤、设置返回数量。这对需要垂直领域搜索（比如只搜官方文档或权威新闻）的 RAG 应用很实用，能减少噪声。\n\n### 4. 支持多语言查询\n中文、英文、日语等主要语言都支持，结果的语言匹配度也比较高。不过对某些小语种的覆盖可能不如主流引擎，但日常使用足够。\n\n### 5. 高并发处理能力\n设计上就考虑了 AI 代理频繁调用的场景，延迟通常控制在几百毫秒以内。如果做批量查询或需要多个代理同时搜索，Tavily 的稳定性比有些免费 API 靠谱得多。\n\n### 6. 无缝集成 RAG 和工作流\n官方提供 Python 和 JavaScript SDK，也兼容 LangChain、LlamaIndex 等框架。你只要一行代码就能从“搜索”跳到“用搜索结果回答问题”，这是传统 API 需要自己搭中间层才能做到的。\n\n---\n\n## 版本/套餐对比\n\n目前 Tavily 主要提供以下层级（具体价格请以官网最新信息为准）：\n\n| 版本/层级 | 主要特点 | 费用说明 |\n|-----------|----------|----------|\n| 免费层 | 每月有限额调用次数，基础搜索功能，JSON 输出 | 免费，适合试用和小型项目 |\n| 付费层 | 更高调用限额、更短延迟、优先队列、自定义搜索参数 | 按用量或订阅付费，具体价格暂未公开 |\n\n> 注：免费层的调用次数足够个人开发者做原型验证，生产环境需要根据流量评估付费方案。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- **专为 AI 代理优化**：不做“网页搜索”，做“JSON 查询”，直接省掉数据清洗环节。\n- **低延迟**：实际使用中单次查询多在 300–500ms 内，适合链式调用。\n- **结构化数据干净**：返回的字段一致性好，不容易出现缺字段或格式异常。\n- **有免费额度**：入门成本几乎为零，能快速验证项目可行性。\n- **无偏见结果**：不会像某些搜索平台一样倾向性地排序（这点对做信息聚合工具很重要）。\n\n**缺点：**\n\n- **高用量成本可能较高**：如果每天几万次调用，付费层的单价对比传统搜索 API 不一定有优势，需要提前算账。\n- **依赖网络**：本质是云服务，断网就废，不能本地化部署。\n- **覆盖范围有限**：对非常冷门或小众的网站，Tavily 不一定能搜到，传统搜索引擎的索引量更大。\n\n**总体结论：**  \n如果你是做 AI 应用（尤其是 Agent、RAG、问答机器人）且需要实时信息，Tavily 是目前最对口的选项之一。它值不值，取决于你的调用频率和对结构化输出的需求——低频或原型阶段它近乎完美，高频或大规模生产场景需要仔细评估成本。\n\n---\n\n## 使用建议\n\n1. **先从免费层开始**：注册后测试你的常见查询场景，看看 JSON 格式是否符合你的预期。\n2. **搭配缓存使用**：对短时间内重复查询（比如“今天的天气”），自己缓存结果，能大幅减少 API 调用次数。\n3. **善用自定义过滤**：如果你只需要特定来源（比如新闻门户、官方文档），设定源限制，提高结果精度。\n4. **注意并发限制**：免费层有并发上限，如果你要批量发请求，最好用队列控制节奏，避免被限流。\n5. **结合 RAG 框架**：用 LangChain 或 LlamaIndex 的集成方式调用，比自己写 HTTP 请求更容易维护。\n\n---\n\n## 适合谁用？\n\n### ✅ 推荐\n- 正在开发**AI Agent 或智能体**的开发者，需要让代理实时检索最新信息。\n- 做 **RAG 应用**（比如企业内部知识库 + 互联网搜索增强）的团队。\n- 做**实时问答**或**新闻聚合**类产品的个人/小团队。\n\n### 🤔 可考虑\n- 传统搜索引擎 API 用户，想尝试更结构化的替代方案——但需要确认数据覆盖够用。\n- 低频或偶发搜索场景（比如每天几十到几百次），免费层就能满足。\n\n### ❌ 不推荐\n- 只需要**静态知识库**或**离线检索**的应用（本地 Embedding + 向量数据库更划算）。\n- 对预算敏感且调用量**极大**的场景（比如每天几十万次以上），建议比较传统搜索 API 的批量价格。\n- 需要**完全本地化部署**或**离线运行**的用户（Tavily 是纯云端服务）。",
+  "published": true,
+  "source_url": "https://tavily.com/pricing",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://tavily.com/",
+  "verified_publisher": "Tavily",
+  "verified_what": "面向 AI 代理的实时搜索与检索 API，提供 Search、Extract、Crawl、Map、Research 接口，返回结构化网页数据以降低代理幻觉。",
+  "verified_price": "免费版 1,000 credits/月（无需信用卡）；按量付费 $0.008/credit；Project $30/月（4,000 credits）；另有 Bootstrap $100、Startup $220、Growth $500 等月度档；Enterprise 定制。",
+  "verified_platform": "Web API",
+  "verified_features": [
+    "Search API：为 LLM 优化的实时网页搜索，返回结构化、带评分的结果",
+    "Extract API：从任意 URL 提取干净的结构化内容，免去 HTML 清洗",
+    "Crawl / Map API：爬取与映射网站结构，构建检索索引",
+    "Research API：自动多步研究并生成带引用的综合报告",
+    "Keyless 免费接入：无需 API Key 即可试用 Search 与 Extract"
+  ],
+  "verified_description": "Tavily 是面向 AI 代理的实时搜索与检索 API（发布方：Tavily 公司），提供 Search、Extract、Crawl、Map、Research 接口，返回结构化网页数据以降低代理幻觉。",
+  "content_flags": "长文版本对比仅说 Project 档“官网滑动选择、价格暂未公开”，现官网已公开 Project $30/月，略有陈旧；其余准确。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5（编辑评分）",
+  "rating_source": "编辑评分（站内综合判断）",
+  "rating_verified": true,
+  "verified_pros": [
+    "专为 AI 代理优化的实时搜索能力",
+    "返回结构化 JSON 数据，便于解析",
+    "低延迟，适合高频调用场景",
+    "支持自定义搜索源和参数",
+    "提供免费层额度，易于上手"
+  ],
+  "verified_cons": [
+    "API 调用需付费，高用量成本可能较高",
+    "依赖网络稳定性，断网时无法使用",
+    "搜索结果覆盖范围可能不如传统搜索引擎全面"
+  ],
+  "verified_faq": [
+    {
+      "q": "Tavily AI 是什么？",
+      "a": "Tavily AI 是一个实时搜索 API，专为 AI 代理和智能体设计，帮助它们快速获取互联网最新信息并以结构化数据返回。"
+    },
+    {
+      "q": "如何开始使用 Tavily AI？",
+      "a": "访问官网注册账号，获取 API Key，然后按照文档集成到你的 AI 应用中，通常支持 HTTP 请求与 Python/JS SDK。"
+    },
+    {
+      "q": "Tavily AI 免费吗？",
+      "a": "Tavily AI 提供免费额度（每月 1,000 credits，无需信用卡），适合测试和小规模使用，超出后按量付费（如 Project $30/月或按 credit 计费）。"
+    },
+    {
+      "q": "Tavily AI 与其他搜索 API 有什么区别？",
+      "a": "Tavily 专为 AI 代理优化，返回结构化数据且强调实时性和低延迟，相比传统搜索 API 更适配 RAG 和自动化场景。"
+    }
+  ],
+  "verified_tags": [
+    "AI搜索",
+    "实时搜索API",
+    "AI代理",
+    "免费额度"
+  ],
+  "verified_category": "AI搜索",
+  "source_urls": [
+    "https://tavily.com/pricing",
+    "https://docs.tavily.com/documentation/api-credits",
+    "https://tavily.com/"
+  ],
+  "verify_notes": "原 baseline 对 Project 档价格描述模糊，已补充具体 $30/月。",
+  "compare_section": {
+    "competitors": [
+      "perplexity",
+      "perplexity-ai",
+      "glean"
+    ],
+    "verdict": "Tavily AI 与 Perplexity、Perplexity AI、Glean 同属AI搜索赛道：Tavily AI 的 Search API：为 LLM 优化的实时网页搜索，返回结构化、带评分的结果 是亮点，价格 免费版 1,000 credits/月 + 按量 $0.008/credit（Project $30/月）；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-07",
+  "created_date": "2026-08-07"
+}

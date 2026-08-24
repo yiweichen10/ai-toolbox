@@ -1,0 +1,150 @@
+{
+  "name": "Augie AI",
+  "slug": "augie-ai",
+  "positioning": "免费AI视频工具推荐：内置素材库、点击式编辑",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#6366F1",
+  "description": "Augie AI（Augie by Storyblocks）是 Storyblocks 推出的 AI 视频生成与剪辑工具，可将脚本或素材快速转为带字幕与配乐的社媒短视频。",
+  "category": "AI视频",
+  "tags": [
+    "AI视频",
+    "视频生成",
+    "短视频",
+    "内容创作",
+    "Storyblocks"
+  ],
+  "rating": "⭐4.3（aitoollab 编辑评分）",
+  "visits": "约5万/月",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://www.augie.studio",
+  "price": "Lite 免费；Premium $34/月起；Unlimited $99/月（年付）；企业定制",
+  "platform": "Web、iOS、Android",
+  "pros": [
+    "界面简洁、上手快",
+    "从长内容快速生成短视频",
+    "模板与素材库丰富",
+    "支持品牌套件",
+    "适合营销/播客团队"
+  ],
+  "cons": [
+    "免费 Lite 档带水印且额度有限",
+    "高级功能（AI 脚本/声音克隆）需付费",
+    "主要面向英文内容",
+    "协作功能曾标注“即将推出”"
+  ],
+  "features": [
+    "AI 自动初稿（脚本/素材转视频）",
+    "社媒精彩片段提取",
+    "内置素材库（含 Getty Images 图库与音乐）",
+    "点击式编辑（字幕/音乐/转场/按平台格式化）",
+    "品牌一致性工具（Logo/配色/字体）",
+    "AI 脚本与声音克隆（付费档）"
+  ],
+  "related": [
+    "chatgpt",
+    "claude",
+    "notion-ai",
+    "jasper"
+  ],
+  "faq": [
+    {
+      "q": "Augie AI 是免费的吗？",
+      "a": "有免费 Lite 档（每月 5 分钟视频额度、单条最长 2 分钟、带水印）；付费 Premium 为 $34/月（年付）或 $40/月（月付），Unlimited 为 $99/月（年付）或 $80/月（月付），Enterprise 定制。"
+    },
+    {
+      "q": "Augie 支持哪些平台？",
+      "a": "Augie 为云端 Web 工具，通过浏览器使用，专注于将长视频/脚本转为 TikTok、Reels、YouTube Shorts 等短视频。"
+    },
+    {
+      "q": "Augie 和其他 AI 视频工具有什么区别？",
+      "a": "Augie 由 Storyblocks 推出，主打“从长内容到短视频”的自动初稿与剪辑，并内置 Getty 授权素材库，商用版权清晰，适合创作者与品牌营销团队。"
+    }
+  ],
+  "seo_keywords": [
+    "Augie AI",
+    "Augie AI怎么样",
+    "Augie AI免费版",
+    "AI创意工具推荐",
+    "Augie AI使用方法"
+  ],
+  "content": "## Augie AI 是什么？\nAugie（Augie Studio，全称 Augie by Storyblocks）是 Storyblocks 旗下的 AI 视频工作室，主打一句话就能上手做视频。它面向的是创作者、品牌、播客主和营销团队——这些人不一定会剪片，但又经常需要把长内容（比如一整期播客、一场直播、一段品牌视频）变成适合 TikTok、Reels、YouTube Shorts 的短视频。你给它一段脚本、一个想法，或者现成的素材，Augie 会自动拼出一份视频初稿：从素材库里挑片段、配字幕、加音乐和转场，再按平台尺寸导出，基本不用打开专业剪辑软件。官方把它定位为“为创作者和品牌打造的第一个 AI 视频工作室”。\n\n## 核心功能\n- AI 自动初稿：输入想法、脚本或原始素材，Augie 自动生成完整视频初稿，智能匹配片段与叙事，你只需做精修。\n- 社媒精彩片段：把长视频按你设定的长度和提示，自动识别关键时刻，生成可分享的短集锦，最大化旧内容价值。\n- 内置素材库：动态媒体库管理你的素材，并可直接调用 Getty Images 的约 1.2 亿张图片 / 视频片段与 9000+ 音乐曲库（付费档）。\n- 点击式编辑：拖拽、转场、字幕、音乐、特效、按平台格式化，全程无需剪辑经验。\n- 品牌一致性：上传 Logo、设定 HEX 色值、自定义字体、加品牌片尾卡，保证团队每个人做出来的视频都一个调性。\n- AI 脚本与声音：付费档支持 AI 写脚本、AI 配音和个人声音克隆；还能用文本生成图片/片段。\n- 一键分享导出：自动按社媒格式导出并分享。\n\n## 片段生成与素材细节\n在 Augie 的 Clip Generation 界面里，左侧是脚本编辑器（支持加粗、斜体、下划线等格式），右侧是生成区：你描述想要的画面、选择一个风格，点 Generate 就能出片。可选的风格包括 Advertising、Animation、Art Materials、Gaming、Corporate Scene、Miscellaneous 等。需要留意的是，这类生成式片段目前限制为 2 秒、动画暂时不可控，且官方明确标注“不适合商用”，更适合用来试创意、做概念验证。真正面向产出的能力，主要还是在你自己的素材和 Getty 图库基础上做自动剪辑与组装。\n\n## 协作与集成\nAugie 提供 Magic Search，帮你在自己的内容库里快速找到相关片段；付费档支持 Dropbox 媒体同步，把外部素材直接拉进工作流。品牌工具方面，付费用户可以接入品牌套件（brand kits），统一字体与配色，Enterprise 档还提供引导式培训、专属 Slack 支持和自定义安全选项。需要注意的是，免费 Lite 档带有水印、且不包含生成式 AI 功能，AI 脚本与声音克隆要从 Premium 起才开放；协作功能在帮助文档中一度标注为“即将推出”。\n\n## 与其他工具的配合\nAugie 擅长的是“从长内容到短视频”的上游自动生成，但它并不替代完整后期。对需要精细调色、复杂叙事或高度定制画面风格的片子，仍建议把 Augie 出的初稿导回 Premiere、Final Cut 或 After Effects 做精修。它更适合作为内容团队的高频出片引擎，而不是唯一的制作环节。此外它调用的是 Getty 的授权素材，商用版权相对清晰，这是很多免费 AI 生图工具给不了的安全感。\n\n## 一点上手建议\n如果你要快速试水，先用 Lite 档把一两条长视频转成短集锦，感受自动初稿的质量；确定要稳定产出时再升 Premium。上传参考素材、用好品牌套件，能让出来的片子更“像你们的品牌”，而不是千篇一律的模板感。对经常做内容的人，它最值得的用法是“把已有长片批量变短”，而不是从零生成长视频。\n\n## 定价\nAugie 官网帮助中心给出的档位是：Lite 免费（$0/月，每月 5 分钟视频额度、单条最长 2 分钟、带水印）；Premium $34/月（每月 20 分钟、单条 5 分钟、无 watermark、含 Getty 图库与 AI 脚本/声音克隆）；Unlimited $99/月（视频时长不限、单条最长 10 分钟、无限 AI 声音库）；Enterprise 为定制报价（含引导式培训、专属 Slack 支持）。\n\n## 适合谁\n- 内容创作者、播客主：把几小时长内容快速切成几十条短视频，扩大触达。\n- 营销团队与品牌：稳定产出带品牌感的广告、产品演示和宣传片。\n- 初创公司和小企业：没有专职剪辑也能做出像样的品牌视频。\n\n## 小结\nAugie 的价值在“快”和“零门槛”：它把视频制作从专业软件里解放出来，变成填脚本、点几下就能出片的工作流，特别适合需要高频产出社媒短视频的团队。它的边界是创意上限仍取决于素材和模板，精细调色、复杂叙事还是得回传统工具；但作为“上游快速出片机”，它已经很称职。需要提醒的是，它是一款 Web 端工作室，并没有独立的手机 App，移动端只能在浏览器里用。",
+  "published": true,
+  "created_date": "2026-03-22",
+  "verified_url": "https://www.augie.studio",
+  "verified_publisher": "Storyblocks（Augie by Storyblocks）",
+  "verified_what": "Storyblocks 推出的 AI 视频生成与剪辑工具（AI Video Studio），可将脚本或长视频/素材快速转为带字幕与配乐的社媒短视频。",
+  "verified_price": "Lite 免费（$0，每月 5 分钟视频额度、单条最长 2 分钟）；Premium $34/月（年付）或 $40/月（月付）；Unlimited $99/月（年付）或 $80/月（月付）；Enterprise 定制报价。",
+  "verified_platform": "Web（云端）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "AI 自动初稿（脚本/素材转视频）",
+    "社媒精彩片段提取",
+    "内置素材库（含 Getty Images 图库与音乐）",
+    "点击式编辑（字幕/音乐/转场/按平台格式化）",
+    "品牌一致性工具（Logo/配色/字体）",
+    "AI 脚本与声音克隆（付费档）"
+  ],
+  "verified_description": "Augie AI（Augie by Storyblocks）是 Storyblocks 推出的 AI 视频生成与剪辑工具，可将脚本或素材快速转为带字幕与配乐的社媒短视频。",
+  "content_flags": "原分类为“AI效率”建议更正为“AI视频”；原 FAQ 称“专业版每月 $19 起”错误（实际 Premium $34/月年付或 $40/月月付）；其余功能描述基本准确。原 features 含“多语言支持/API接口调用”等未明确证据，建议弱化。",
+  "price_verified": true,
+  "verified_rating": "⭐4.3（aitoollab 编辑评分）",
+  "rating_source": "aitoollab 编辑评分（公开评测较少）",
+  "rating_verified": true,
+  "verified_pros": [
+    "界面简洁、上手快",
+    "从长内容快速生成短视频",
+    "模板与素材库丰富",
+    "支持品牌套件",
+    "适合营销/播客团队"
+  ],
+  "verified_cons": [
+    "免费 Lite 档带水印且额度有限",
+    "高级功能（AI 脚本/声音克隆）需付费",
+    "主要面向英文内容",
+    "协作功能曾标注“即将推出”"
+  ],
+  "verified_faq": [
+    {
+      "q": "Augie AI 是免费的吗？",
+      "a": "有免费 Lite 档（每月 5 分钟视频额度、单条最长 2 分钟、带水印）；付费 Premium 为 $34/月（年付）或 $40/月（月付），Unlimited 为 $99/月（年付）或 $80/月（月付），Enterprise 定制。"
+    },
+    {
+      "q": "Augie 支持哪些平台？",
+      "a": "Augie 为云端 Web 工具，通过浏览器使用，专注于将长视频/脚本转为 TikTok、Reels、YouTube Shorts 等短视频。"
+    },
+    {
+      "q": "Augie 和其他 AI 视频工具有什么区别？",
+      "a": "Augie 由 Storyblocks 推出，主打“从长内容到短视频”的自动初稿与剪辑，并内置 Getty 授权素材库，商用版权清晰，适合创作者与品牌营销团队。"
+    }
+  ],
+  "verified_tags": [
+    "AI视频",
+    "视频生成",
+    "短视频",
+    "内容创作",
+    "Storyblocks"
+  ],
+  "verified_category": "AI视频",
+  "source_urls": [
+    "https://www.augie.studio",
+    "http://help.augie.studio/quick-start/pricing",
+    "https://aitechsuite.com/tools/augie.studio",
+    "https://www.toolmage.com/en/tool/augie"
+  ],
+  "verify_notes": "价格以官网实时为准；月付/年付价格不同。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "heygen",
+      "synthesia",
+      "sora"
+    ],
+    "verdict": "Augie AI 与 HeyGen、Synthesia、Sora 同属AI视频赛道：Augie AI 的 AI 自动初稿（脚本/素材转视频） 是亮点，价格 Lite 免费；Premium $34/月起；Unlimited $99/月（年付）；企业定制；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

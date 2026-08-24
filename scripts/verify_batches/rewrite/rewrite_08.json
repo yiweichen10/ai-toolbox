@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "monid",
+    "name": "Monid",
+    "verdict": "REAL",
+    "official_url": "https://monid.ai",
+    "vendor": "Monid",
+    "desc_issue": "产品定位严重失实：真实 Monid（monid.ai）是“面向AI智能体的工具调用路由器/统一付费层”（让Agent按需调用200+付费数据接口），并非面向普通用户的轻量级AI对话/知识问答助手；描述中的“个性化知识问答、任务规划”等面向C端的说法不成立",
+    "evidence": "Web搜索确认 monid.ai 为 Agent 原生工具路由与按调用付费平台，与描述的聊天助手定位不符"
+  },
+  {
+    "slug": "mike-ai",
+    "name": "mike AI",
+    "verdict": "REAL",
+    "official_url": "https://www.mikeai.co",
+    "vendor": "MikeAI",
+    "desc_issue": "URL 错误且功能不符：记录 URL 为 mikeai.com，官方域名为 mikeai.co；真实 MikeAI 是『AI 健身教练』（个性化训练/饮食计划），并非『语音交互智能对话助手』。",
+    "evidence": "mikeai.co 为 MikeAI 官方站点，AI 健身教练（FitnessGPT），2026 年上线；mikeai.com 非官方域名，记录的语音对话助手定位与真实产品完全不符。"
+  },
+  {
+    "slug": "stepfun",
+    "name": "阶跃星辰",
+    "verdict": "REAL",
+    "official_url": "https://www.stepfun.com",
+    "vendor": "阶跃星辰 (StepFun, 姜大昕 / Jiang Daxin, ex-Microsoft Research Asia)",
+    "desc_issue": "Founder misattributed: description says '由前百度高管李开复创立', but 李开复 founded 01.ai/零一万物, NOT StepFun. StepFun was founded by 姜大昕.",
+    "evidence": "StepFun confirmed real; founder is 姜大昕 (ex-Microsoft Research Asia), not 李开复."
+  },
+  {
+    "slug": "phinite",
+    "name": "Phinite",
+    "verdict": "REAL",
+    "official_url": "https://www.phinite.ai",
+    "vendor": "Phinite",
+    "desc_issue": "描述错误：实际产品是「多智能体 AI 编排操作系统（Multi-Agentic AI 平台）」，并非 AI 语音合成/音频修复工具",
+    "evidence": "搜索确认 phinite.ai 为真实多智能体 AI 编排平台，定位是 Agentic OS 而非语音合成工具"
+  },
+  {
+    "slug": "cocounsel",
+    "name": "CoCounsel",
+    "verdict": "REAL",
+    "official_url": "https://cocounsel.com",
+    "vendor": "Thomson Reuters (NOT Clio)",
+    "desc_issue": "Vendor/attribution wrong: batch says 'by Clio', but CoCounsel is Thomson Reuters' AI legal assistant (built on Westlaw). URL cocounsel.clio.com is misleading — Clio is a separate law-practice software company.",
+    "evidence": "CoCounsel is Thomson Reuters product (cocounsel.com); Clio is an unrelated legal-practice-management vendor."
+  },
+  {
+    "slug": "phind",
+    "name": "Phind",
+    "verdict": "REAL",
+    "official_url": "https://www.phind.com",
+    "vendor": "Phind",
+    "desc_issue": "记录URL为 phindai.org，非官方；官方站点为 phind.com",
+    "evidence": "多个来源确认 phind.com 为面向开发者的AI搜索引擎官方地址，phindai.org 为仿冒/第三方域名"
+  },
+  {
+    "slug": "base44",
+    "name": "Base44",
+    "verdict": "REAL",
+    "official_url": "https://base44.com",
+    "vendor": "Wix (Base44)",
+    "desc_issue": "记录 URL 为 base44.ai 系错误推测，真实官网为 base44.com（已被 Wix 收购）；描述整体合理，但更准确为无代码应用搭建平台(vibe coding)而非单纯代码生成",
+    "evidence": "Base44 官网为 base44.com，服务条款显示由 Wix.com Ltd. 运营；base44.ai 非官方域名"
+  },
+  {
+    "slug": "ada-health",
+    "name": "Ada Health",
+    "verdict": "REAL",
+    "official_url": "https://ada.com",
+    "vendor": "Ada Health GmbH",
+    "desc_issue": "官网实际为 ada.com（Ada Health GmbH），记录 URL adahealth.com 疑非官方主站",
+    "evidence": "Ada 官方站点为 ada.com，App Store 开发者为 Ada Health，产品描述基本一致"
+  }
+]

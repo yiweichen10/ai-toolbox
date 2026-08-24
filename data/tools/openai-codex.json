@@ -1,0 +1,121 @@
+{
+  "name": "OpenAI Codex",
+  "slug": "openai-codex",
+  "positioning": "AI编程工具推荐：自主代码生成、多语言支持",
+  "auto_positioning": true,
+  "emoji": "💻",
+  "color": "#f74016",
+  "description": "OpenAI推出的AI编程智能体（coding agent），可在云端沙盒中编写、运行和调试代码，并集成于ChatGPT。擅长代码生成、Bug修复与软件工程任务，是AI编程领域的标杆工具。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "代码生成",
+    "智能体"
+  ],
+  "rating": "⭐ 4.2",
+  "visits": "2万",
+  "badge": {
+    "type": null,
+    "text": "HOT"
+  },
+  "url": "https://openai.com/codex/",
+  "price": "ChatGPT 免费版可用（限量试用）+ Go $8/月 + Plus $20/月 + Pro $100-$200/月",
+  "platform": "本地部署 / Web",
+  "pros": [
+    "代码生成能力业界领先",
+    "支持数十种编程语言",
+    "OpenAI持续优化更新",
+    "深度集成ChatGPT与开发工具链"
+  ],
+  "cons": [
+    "需订阅ChatGPT方可使用",
+    "重度使用受速率限制",
+    "云端任务额度有限",
+    "API成本较高"
+  ],
+  "features": [
+    "自主代码生成",
+    "Bug修复与自动测试",
+    "代码解释与重构建议",
+    "多语言支持",
+    "GitHub仓库集成与编辑",
+    "云端沙盒执行（多智能体工作流）"
+  ],
+  "related": [
+    "sora",
+    "kimi"
+  ],
+  "content": "## OpenAI Codex 是什么？\n\nOpenAI Codex是OpenAI推出的AI编程模型，是GPT系列的代码专精版本。擅长代码生成、调试和软件工程任务，是GitHub Copilot的核心底层模型。\n\n## 核心功能\n\n- **代码生成**：根据自然语言描述生成完整代码\n- **代码补全**：智能补全代码片段和函数\n- **代码解释**：解释复杂代码的逻辑和功能\n- **Bug修复**：自动发现并修复代码错误\n- **单元测试**：自动生成测试用例\n- **重构建议**：提供代码优化和重构方案\n\n## 版本对比\n\nCodex主要通过OpenAI API调用，按token计费。\n\n## 优缺点分析\n\n### 👍 优点\n- 代码生成能力业界领先\n- 支持数十种编程语言\n- OpenAI持续优化更新\n\n### 👎 缺点\n- 没有独立用户界面，主要通过API\n- API使用成本较高\n- 国内访问受限\n\n## 适合人群\n\nOpenAI Codex适合通过API集成的开发者和企业。\n### 深度评测\n\nOpenAI Codex 是一款功能强大的 AI 编程工具。在实际开发中使用，它的代码生成质量令人满意，尤其是在 代码补全和自动完成 方面。\n\n与其他 AI 编程工具相比，OpenAI Codex 的 优势在于代码生成能力强。建议开发者在使用时充分利用它的 核心功能，在编码前先描述清楚需求。\n\n### 使用建议\n\n1. 先用自然语言描述需求，让 AI 生成初始代码\n2. 逐步迭代优化，每次只提一个修改意见\n3. 利用 测试工具 验证代码正确性\n4. 重要代码建议人工审查后再使用\n\n### 总结\n\nOpenAI Codex 是 AI编程 领域中一款不错的 AI 工具。OpenAI推出的AI编程模型，擅长代码生成和软件工程任务。是GitHub Copilot的底层模型之一，也是AI编程领域的标杆。 从功能完整性来看，它覆盖了核心使用场景。\n\n**快速上手建议：**\n- 访问官网 openai.com/index/introducing-codex 注册账号\n- 先使用免费版本 了解核心功能\n- 参考官方文档和教程加速学习\n- 加入用户社区获取使用技巧和最佳实践\n\n**价格参考：** 免费版+Pro $10/月\n**支持平台：** 本地部署 / Web\n\n### 核心功能详解\n\n这款 AI 编程工具的核心价值在于让开发者更高效地写代码。它能理解自然语言描述的需求，自动生成对应的代码。更重要的是，它不仅能写新代码，还能理解现有代码库，进行修改、重构和优化。\n\n在实际开发流程中，它的使用场景非常广泛：\n- **需求到代码**：描述功能需求，自动生成初始代码\n- **Bug 排查**：粘贴错误信息，AI 分析原因并给出修复方案\n- **代码审查**：让 AI 审查代码质量，发现潜在问题\n- **单元测试**：自动生成测试用例，提高代码覆盖率\n- **文档编写**：根据代码自动生成注释和 API 文档\n\n### 与其他 AI 编程工具对比\n\n- **GitHub Copilot**：最成熟的代码补全插件，IDE 集成最好\n- **Cursor**：全功能 AI IDE，适合独立开发者\n- **Claude Code**：终端原生，适合命令行开发者\n- 本工具在特定场景下有独特优势\n\n### 使用技巧\n\n1. 在编码前先用自然语言描述完整需求，再让 AI 生成\n2. 利用代码上下文功能，让 AI 理解项目结构\n3. 重要代码务必人工审查，AI 生成的代码可能有隐藏问题\n4. 善用版本控制，方便回退 AI 的修改\n5. 结合自动化测试验证 AI 生成代码的正确性\n\n### 相关工具：Codex Harness\n\nOpenAI 已将驱动 Codex 的底层执行框架 [Codex Harness](/tools/codex-harness/) 独立开源（2026-08-20，Apache-2.0），可在自有基础设施上部署运行，与 DeepSeek DSH 等开源 Harness 同台竞争。\n\n## 常见问题（FAQ）\n\n**OpenAI Codex是什么？**\n\nOpenAI Codex是OpenAI推出的云端AI编程智能体。在安全的沙盒环境中，AI可以编写、运行和调试代码，支持多种语言与框架，适合快速原型开发与软件工程任务，并集成于ChatGPT与CLI。",
+  "published": true,
+  "faq": [
+    {
+      "q": "OpenAI Codex是什么？",
+      "a": "OpenAI Codex是OpenAI推出的云端AI编程智能体。在安全的沙盒环境中，AI可以编写、运行和调试代码，支持多种语言与框架，适合快速原型开发与软件工程任务，并集成于ChatGPT与CLI。"
+    },
+    {
+      "question": "Codex Harness 开源了吗？",
+      "answer": "开源了。2026 年 8 月 20 日 OpenAI 以 Apache-2.0 协议全面开源 Codex Harness（驱动 Codex 的 Agent 运行时），详见本站 [Codex Harness](/tools/codex-harness/) 独立条目。"
+    }
+  ],
+  "created_date": "2026-03-22",
+  "verified_url": "https://openai.com/codex/",
+  "verified_publisher": "OpenAI",
+  "verified_what": "OpenAI推出的云端AI编程智能体（coding agent），可在安全沙盒中编写、运行和调试代码，并集成于ChatGPT与CLI。",
+  "verified_price": "包含在ChatGPT订阅中：Plus 20美元/月、Pro 200美元/月；亦可通过API按量计费（codex-mini-latest 输入1.50美元/百万tokens、输出6美元/百万tokens，含缓存折扣）。",
+  "verified_platform": "Web, CLI, API, VS Code/GitHub集成, ChatGPT",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "自主代码生成",
+    "Bug修复与自动测试",
+    "代码解释与重构建议",
+    "多语言支持",
+    "GitHub仓库集成与编辑",
+    "云端沙盒执行（多智能体工作流）"
+  ],
+  "verified_description": "OpenAI推出的AI编程智能体（coding agent），可在云端沙盒中编写、运行和调试代码，并集成于ChatGPT。擅长代码生成、Bug修复与软件工程任务，是AI编程领域的标杆工具。",
+  "content_flags": "原description称“是GitHub Copilot的底层模型之一”已过时（2025版Codex为独立云端编程智能体，非Copilot底层模型）；原price“免费版+Pro $10/月”错误（需ChatGPT Plus 20美元/月起）。",
+  "price_verified": true,
+  "verified_pros": [
+    "代码生成能力业界领先",
+    "支持数十种编程语言",
+    "OpenAI持续优化更新",
+    "深度集成ChatGPT与开发工具链"
+  ],
+  "verified_cons": [
+    "需订阅ChatGPT方可使用",
+    "重度使用受速率限制",
+    "云端任务额度有限",
+    "API成本较高"
+  ],
+  "verified_faq": [
+    {
+      "q": "OpenAI Codex是什么？",
+      "a": "OpenAI Codex是OpenAI推出的云端AI编程智能体。在安全的沙盒环境中，AI可以编写、运行和调试代码，支持多种语言与框架，适合快速原型开发与软件工程任务，并集成于ChatGPT与CLI。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "代码生成",
+    "智能体"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://openai.com/codex/",
+    "https://openai.com/zh-Hant/business/chatgpt-pricing",
+    "https://aipure.ai/cn/articles/open-ai-codex-release-and-how-to-try"
+  ],
+  "verify_notes": "2025版Codex定位为云端coding agent，与早期作为Copilot底层模型的Codex不同，已修正定位表述。",
+  "content_verified": true,
+  "url_previous": "https://openai.com/index/introducing-codex",
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "OpenAI Codex 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：OpenAI Codex 的 自主代码生成 是亮点，价格 含于ChatGPT Plus $20/月起；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "updated_date": "2026-08-23"
+}

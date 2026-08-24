@@ -1,0 +1,75 @@
+{
+  "name": "Google AI提示词库",
+  "slug": "google-prompt-gallery",
+  "positioning": "六大场景分类+中英双语示例：免费AI提示词工具怎么用",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#8b5cf6",
+  "description": "Google Cloud Vertex AI 官方生成式AI提示词示例库，按问答、分类、代码、提取、摘要、转换、写作等用途分类提供大量prompt示例，可在控制台直接查看测试。",
+  "category": "AI提示词",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI提示词"
+    },
+    {
+      "text": "Google AI提示词库"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/prompt-gallery",
+  "price": "免费版/付费版",
+  "platform": "Web",
+  "pros": [
+    "Google 官方出品权威可信",
+    "示例经平台实测验证",
+    "覆盖六大场景与多语言",
+    "免费浏览零门槛学习"
+  ],
+  "cons": [
+    "依赖 Google Cloud 技术栈",
+    "官方文档停更并迁移",
+    "运行需 Google 账号计费"
+  ],
+  "features": [
+    "100+ 官方验证模板",
+    "六大场景分类",
+    "完整提示词+参考响应",
+    "中英双语示例",
+    "免费浏览无需注册",
+    "提示词工程方法论"
+  ],
+  "related": [
+    "promptpilot",
+    "explinks-prompts",
+    "prompt-engineering-guide"
+  ],
+  "content": "## Google AI提示词库 是什么？\n\nGoogle AI提示词库（Vertex AI Prompt Gallery）是 Google Cloud 官方推出的生成式 AI 提示词示例资源库，收录了超过 100 个经 Vertex AI 平台实际运行验证的提示词模板，覆盖回答问题、文本分类、代码生成、内容提取、文档总结、语言翻译、内容创作六大核心场景。每个示例都包含完整的提示词内容、模型返回的参考响应以及推荐的模型参数，用户可直接复制使用或在此基础上修改，是接触 Google Gemini 等模型提示词写法的权威起点。\n\n### 核心功能\n\n- **六大类场景模板**：按回答问题、文本分类、代码生成、内容提取、文档总结、语言翻译、内容创作等用途分类，覆盖 100+ 具体场景。\n- **完整提示词 + 参考响应**：每个示例均附带验证过的完整提示词与模型输出示例，可直接对照学习\"好 Prompt\"长什么样。\n- **附带模型参数**：模板标注适配的模型与参数设置，方便在 Vertex AI 控制台直接运行测试。\n- **中英双语与多语言示例**：除中英文外还包含面向德语、法语、日语等语言的提示词示例。\n- **免费浏览与学习**：用户可免费访问、查看并复制全部示例，无需注册或登录。\n- **提示词工程思维框架**：内置定义 AI 角色、指定输出格式、设计 Few-shot 示例、处理多模态输入等方法论示例，帮助举一反三。\n\n### 适用场景\n\n- **开发者与数据科学家**：快速获取经平台验证的提示词作为起点，结合 Gemini 系列模型在 Vertex AI 上搭建原型。\n- **内容创作者**：学习文本生成、语言翻译、内容创作类提示词的结构化写法，提升输出质量。\n- **企业 AI 探索**：作为团队提示词标准化的参考资料，降低大模型应用试错成本。\n\n### 价格\n\n提示词库本身免费开放，浏览、复制全部示例均无需注册登录；若要在 Vertex AI 等平台实际运行这些提示词，将按对应平台的标准计费（新用户通常有免费额度）。注意：Google 官方已声明 Vertex AI 生成式 AI 文档停止更新，相关能力正迁移至 Gemini Enterprise Agent Platform，具体以官网为准。\n\n### 优缺点\n\n- 优点：Google 官方出品、权威性高；所有示例经平台实测验证，可直接复用；覆盖场景广、中英双语；免费浏览，零门槛学习。\n- 缺点：部分内容面向 Vertex AI/GCP 技术栈，普通用户上手偏专业；官方文档已停更并迁移，示例可能不再随新模型同步更新；运行提示词依赖 Google Cloud 账号与计费。",
+  "published": true,
+  "faq": [
+    {
+      "q": "Google AI提示词库收费吗？",
+      "a": "浏览、查看与复制全部示例完全免费，无需注册；但实际运行提示词需按 Google Cloud/Vertex AI 平台标准计费。"
+    },
+    {
+      "q": "提示词库覆盖哪些场景？",
+      "a": "覆盖回答问题、文本分类、代码生成、内容提取、文档总结、语言翻译、内容创作六大类，收录 100+ 经过平台验证的示例。"
+    },
+    {
+      "q": "官方还在更新这个资源库吗？",
+      "a": "官方已声明 Vertex AI 生成式 AI 文档停止更新，相关能力正迁移至 Gemini Enterprise Agent Platform，使用前建议以官网最新说明为准。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/prompt-gallery?utm_source=ai-bot.cn",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "verify_notes": "二轮核实(WebFetch 2026-08-05)：页面可访问，但官方已声明 Vertex AI 文档停更，服务迁移至 Gemini Enterprise Agent Platform。",
+  "seo_keywords": [
+    "Google AI提示词库",
+    "Vertex AI提示词",
+    "Gemini提示词示例",
+    "AI提示词模板",
+    "Google提示词画廊"
+  ]
+}

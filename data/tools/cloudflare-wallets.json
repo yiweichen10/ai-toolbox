@@ -1,0 +1,99 @@
+{
+  "name": "Cloudflare Wallets",
+  "slug": "cloudflare-wallets",
+  "positioning": "Cloudflare Wallets是什么？给AI Agent发钱包的可编程支付层怎么用",
+  "auto_positioning": false,
+  "emoji": "👛",
+  "color": "#F6821F",
+  "description": "Cloudflare 2026 年 8 月 4 日官宣的智能体互联网可编程钱包层。钱包分两种：Account Wallet 归人，用来存稳定币、注资和取回；Virtual Wallet 归 Agent，凭 API key 花钱，并受额度、允许列表与单笔上限三重护栏约束。配合 x402 协议把支付直接挂在 HTTP 请求上，Agent 不必注册账号就能按次试用付费 API、MCP 工具与内容。当前开放的是在 cloudflare.pay 申领 handle，官方对支付能力的措辞仍是「即将」。",
+  "category": "AI开发",
+  "tags": [
+    {
+      "text": "官方产品"
+    },
+    {
+      "text": "Agent 支付"
+    },
+    {
+      "text": "x402 协议"
+    },
+    {
+      "text": "抢先申领"
+    }
+  ],
+  "rating": "⭐ 4.2",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://cloudflare.pay/",
+  "price": "价格暂未公开（官方博客未公布费率与手续费；钱包内以稳定币计价，出入金仅在支持的地区开放，自充稳定币面向符合条件用户）",
+  "platform": "Web（cloudflare.pay 申领 handle 与管理账户钱包；虚拟钱包通过 API key 供 Agent 调用，作为 Cloudflare Agents SDK 的一项工具接入）",
+  "pros": [
+    "人机分权设计干净：Account Wallet 归人、Virtual Wallet 归 Agent，越权的钱花不出去",
+    "官方点名的三重护栏（额度 / 允许列表 / 单笔上限）把「Agent 乱花钱」变成可配置策略",
+    "基于 x402 把支付挂到 HTTP 请求上，Agent 试用付费 API 不用先注册账号",
+    "handle 机制给 Agent 一个人类可读身份（形如 research.example.cloudflare.pay），且声明与否完全可选",
+    "与 Monetization Gateway 组成买卖双边市场，收款与付款是同一套基建"
+  ],
+  "cons": [
+    "目前只能申领 handle，真正的支付能力官方措辞仍是 soon，上线时间没有承诺",
+    "资金侧依赖稳定币与出入金通道，仅在「支持的地区」「符合条件用户」范围内可用",
+    "费率与定价一个字没提，接入前算不出成本"
+  ],
+  "features": [
+    "Account Wallet：人类持有的账户钱包，可存入稳定币、向虚拟钱包授信、随时取回资金",
+    "Virtual Wallet：Agent 专用虚拟钱包，通过 API key 运作，花费上限由账户钱包封顶",
+    "支出护栏：allowance 额度、allow list 允许列表、maximum transaction size 单笔上限",
+    "x402 微支付：支付附加在 HTTP 请求上，可为 AI 推理、数据与内容按次付费",
+    "可读身份 handle：cloudflare.pay 下的子域式标识，让商家识别 Agent 归属，也支持完全匿名",
+    "异常消费复核：花费异常时由授权人复核，确认属实可提额或一次性注资，否则按策略拦下"
+  ],
+  "related": [
+    "cloudflare-os",
+    "cloudflare-computer",
+    "claude-agent-sdk"
+  ],
+  "content": "## Cloudflare Wallets是什么？\n\nCloudflare Wallets 是 Cloudflare 在 2026 年 8 月 4 日官宣的「智能体互联网可编程钱包」。它要解决的问题很具体：今天一个 AI Agent 想试用新 API，得先过一遍为人类设计的登录注册页，找人来绑支付方式，再生成 API key，最后才轮到调用。Agent 缺的其实是两样东西——一个稳定的身份标识，和一种原生的付款方式。缺了这两样，Agent 往往干脆放弃，把注册、付款和取 key 全甩回给人，也就谈不上自己去比较几十个 API。\n\nCloudflare 的解法是把钱包拆成两层。Account Wallet 是给人用的账户钱包，可以充值稳定币、向下授信、按需取回；Virtual Wallet 是给 Agent 的虚拟钱包，通过 API key 运作，能花多少由账户钱包封顶。再配合 x402 协议把支付直接附加在 HTTP 请求上，Agent 就能按次为 API、MCP 工具和内容付费，不用先注册账号。\n\n有一点必须讲清楚：按官方博客的措辞，「从今天起」能做的是在 cloudflare.pay 申领一个 Wallet handle，而「设置并使用钱包为 API 和内容付费」用的是 soon。现在你能拿到的是身份，钱还付不了。\n\n## 核心功能\n\n1. Account Wallet：人类持有，存入稳定币、把消费权委派给虚拟钱包、随时取回资金。\n2. Virtual Wallet：Agent 专用，凭 API key 在权限内花钱，上限由账户钱包设定。\n3. 支出护栏：官方点名的三件套是额度（allowance）、允许列表（allow list）、单笔最大交易额。\n4. x402 微支付：支付直接挂在 HTTP 请求上，可为推理、数据、内容按次结算；卖方侧对接 Monetization Gateway，构成双边市场。\n5. 可读身份 handle：cloudflare.pay 下形如 research.example.cloudflare.pay 的标识，让商家知道这个 Agent 代表哪个组织，是否声明完全由你决定。\n6. 异常复核与提额：出现异常快速消费时交由人工确认，确认是有意为之可提额或一次性注资，否则策略照常拦截。\n\n## 值不值得用？\n\n先把定位摆正：它现在不是一个「能跑起来」的产品，而是一层正在铺的基建。值得肯定的有两点。第一，人机分权这套设计是对的——把「人管钱包、Agent 管花钱」分开，再用额度、允许列表和单笔上限收口，比给 Agent 塞一张信用卡靠谱得多。官方那句话说得很在理：如果一个 Agent 只对 10 美元负责，你对它的容忍度自然比 1000 美元高；而试一次 API 只要几分钱时，10 美元足够它把一堆方案都摸一遍。约束反而换来了自由度。第二，钱包必须和卖方侧连起来才有意义，Cloudflare 手上有 Monetization Gateway，这是它比单点创业公司更有底气的地方。\n\n不看好的部分也直说：费率没公布，出入金只在支持的地区开放，稳定币自充仅面向符合条件用户，支付能力的上线时间没有承诺。如果你要的是「这个月就能把 Agent 付费搬进生产系统」，它给不了答案。\n\n## 使用建议\n\n1. 先去 cloudflare.pay 把 handle 占下来。身份类资源先到先得，成本几乎为零。\n2. 已经在用 Cloudflare Agents SDK 的团队，可以先照 x402 开发者文档把「付费端点」这条链路在测试环境跑通，等钱包开放再接真金。\n3. 提前设计护栏粒度。官方举的例子是「每位员工每周 100 美元推理预算」，这种额度模型最好在接入前就想好，别等上线再补。\n4. 别只盯买方。Monetization Gateway 是同一套基建的卖方侧，只看钱包会漏掉一半价值。\n\n## 适合谁用？\n\n推荐：正在做 Agent 商务、需要让 Agent 自主试用并支付 API 的开发者与平台团队，尤其是已经在 Cloudflare 生态里的团队。\n可考虑：关注 x402 与 Agent 身份标准演进的技术决策者，先申领 handle、观察后续放量。\n不推荐：现在就需要可用支付能力的业务，以及所在地区尚未开放出入金的用户——等它从 soon 变成 today 再动手。",
+  "published": true,
+  "faq": [
+    {
+      "question": "Cloudflare Wallets 现在能直接用来付款吗？",
+      "answer": "还不能。按官方博客 2026 年 8 月 4 日的说法，现在开放的是在 cloudflare.pay 申领 Wallet handle；「设置并使用钱包为 API 和内容付费」用的措辞是即将（soon），具体时间未公布。"
+    },
+    {
+      "question": "怎么防止 Agent 乱花钱？",
+      "answer": "靠账户钱包给虚拟钱包设护栏。官方明确提到三种：额度（allowance）、允许列表（allow list）和单笔最大交易额。超限时可由有权限的人工复核，确认后提额或一次性注资。"
+    },
+    {
+      "question": "Cloudflare Wallets 收费吗？",
+      "answer": "官方博客没有公布任何费率或手续费信息，价格暂未公开。可以确定的是钱包内以稳定币计价，出入金先在支持的地区开放，自充稳定币面向符合条件用户。"
+    },
+    {
+      "question": "它和 Cloudflare OS、Cloudflare Computer 是什么关系？",
+      "answer": "三者都属于 Cloudflare 围绕 Agent 做的基建，分工不同：Wallets 负责支付与身份，OS 与 Computer 分别偏工作空间与运行环境。Wallets 本身是加进 Cloudflare Agents SDK 的一项能力，和 Monetization Gateway 的卖方侧配对。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Cloudflare Wallets",
+    "Cloudflare Wallets是什么",
+    "Cloudflare Wallets怎么用",
+    "AI Agent 钱包",
+    "x402 协议支付"
+  ],
+  "source_urls": [
+    "https://blog.cloudflare.com/wallets/",
+    "https://blog.cloudflare.com/zh-cn/wallets/",
+    "https://cloudflare.pay/",
+    "https://developers.cloudflare.com/agents/tools/payments/x402/",
+    "https://www.listmystartup.app/startup/cloudflare-wallets"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-15"
+}

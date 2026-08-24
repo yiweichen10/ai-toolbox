@@ -1,0 +1,906 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "updated": "2026-08-16",
+    "description": "AI评测文章真实数据源。所有数值来自公开基准测试/官网/实测，未经标注不可编造。",
+    "rules": [
+      "表格数据必须从此文件读取，禁止AI模型编造数字",
+      "评分基于此文件的metrics字段加权计算",
+      "叙事段落可由AI生成，但必须引用此文件的数据",
+      "如果某维度无数据，标注'暂无公开数据'而非'—'"
+    ],
+    "auto_update": "monthly (tied to automation-1782302226329): 数值基准 best-effort 自动拉取，定性/定价标人工季度复核；文章显示'数据截至 YYYY-MM'"
+  },
+  "ai-coding": {
+    "cat": "AI编程",
+    "tools": {
+      "cursor": {
+        "name": "Cursor",
+        "price": "免费版可用 + Pro $20/月",
+        "benchmark": "SWE-bench Verified",
+        "metrics": {
+          "编程准确率": "51.7%（Composer Agent模式）",
+          "上下文理解": "项目级（10万行+）",
+          "月成本": "免费版可用 + Pro $20/月",
+          "国内可用性": "需国际信用卡，访问正常"
+        },
+        "source": "SWE-bench排行榜 2026.04 | 官网定价 2026.07"
+      },
+      "claude-code": {
+        "name": "Claude Code",
+        "price": "Pro $20/月，API按token另计",
+        "benchmark": "SWE-bench Verified",
+        "metrics": {
+          "编程准确率": "80.8%（行业第一）",
+          "上下文理解": "200K tokens",
+          "月成本": "Pro $20/月 + API按量计费",
+          "国内可用性": "需国际信用卡+科学上网"
+        },
+        "source": "SWE-bench排行榜 2026.04 | 官网定价 2026.07"
+      },
+      "github-copilot": {
+        "name": "GitHub Copilot",
+        "price": "免费个人版 + Business $19/月",
+        "benchmark": "SWE-bench Verified",
+        "metrics": {
+          "编程准确率": "56.0%（Agent Mode + GPT-5.5）",
+          "上下文理解": "工作区级",
+          "月成本": "免费个人版 + Business $19/月",
+          "国内可用性": "GitHub账号即可，访问正常"
+        },
+        "source": "SWE-bench排行榜 2026.04 | 官网定价 2026.07"
+      },
+      "windsurf": {
+        "name": "Windsurf",
+        "price": "免费使用（基础版）",
+        "benchmark": "SWE-bench Verified",
+        "metrics": {
+          "编程准确率": "~51%（Cascade + Sonnet 4.6）",
+          "上下文理解": "~100K tokens",
+          "月成本": "免费使用",
+          "国内可用性": "需注册，访问正常"
+        },
+        "source": "第三方评测 2026.04 | 官网定价 2026.07"
+      },
+      "deepseek": {
+        "name": "DeepSeek Coder",
+        "price": "免费额度可用 + API按token计费",
+        "benchmark": "SWE-bench Verified",
+        "metrics": {
+          "编程准确率": "35-40%（未进入公开排行榜前列）",
+          "上下文理解": "128K tokens",
+          "月成本": "免费额度 + API ¥1/百万tokens",
+          "国内可用性": "国内原生可用，免费注册"
+        },
+        "source": "社区反馈 | DeepSeek官网 2026.07"
+      }
+    },
+    "dimensions": [
+      "编程准确率",
+      "上下文理解",
+      "月成本",
+      "国内可用性"
+    ],
+    "scoring": {
+      "编程准确率": {
+        "max": 30,
+        "method": "benchmark_percentile"
+      },
+      "上下文理解": {
+        "max": 15,
+        "method": "manual"
+      },
+      "月成本": {
+        "max": 25,
+        "method": "price_evaluation"
+      },
+      "国内可用性": {
+        "max": 20,
+        "method": "manual"
+      },
+      "总体验": {
+        "max": 10,
+        "method": "manual"
+      }
+    },
+    "last_verified": "2026-07-18",
+    "update_method": "auto-swebench",
+    "_flags": {
+      "needs_manual_review": true
+    }
+  },
+  "ai-chat": {
+    "cat": "AI对话",
+    "tools": {
+      "chatgpt": {
+        "name": "ChatGPT",
+        "price": "免费版 + Plus $20/月",
+        "benchmark": "LMSYS Arena ELO",
+        "metrics": {
+          "中文理解": "优秀（GPT-5.5多语言优化）",
+          "推理准确率": "LMSYS Arena ELO 1475（GPT-5.5，综合第10）",
+          "月成本": "免费版 + Plus $20/月",
+          "国内可用性": "需科学上网+国际手机号"
+        },
+        "source": "LMSYS Arena 2026.07 | 官网定价 2026.07"
+      },
+      "claude": {
+        "name": "Claude",
+        "price": "免费版 + Pro $20/月",
+        "benchmark": "LMSYS Arena ELO",
+        "metrics": {
+          "中文理解": "优秀（Opus 4.8多语言优化）",
+          "推理准确率": "LMSYS Arena ELO 1479（Claude Opus 4.8，综合第8）",
+          "月成本": "免费版 + Pro $20/月",
+          "国内可用性": "需科学上网+国际手机号"
+        },
+        "source": "LMSYS Arena 2026.07 | 官网定价 2026.07"
+      },
+      "deepseek": {
+        "name": "DeepSeek",
+        "price": "免费额度可用，API按token计费",
+        "benchmark": "LMSYS Arena ELO",
+        "metrics": {
+          "中文理解": "顶级（中文原生模型）",
+          "推理准确率": "LMSYS Arena ELO 1463（DeepSeek V4 Pro，开源第一）",
+          "月成本": "免费额度 + API ¥1/百万tokens",
+          "国内可用性": "国内原生可用，免费注册"
+        },
+        "source": "LMSYS Arena 2026.05 | DeepSeek官网 2026.07"
+      },
+      "kimi": {
+        "name": "Kimi",
+        "price": "免费使用",
+        "benchmark": "LMSYS Arena ELO",
+        "metrics": {
+          "中文理解": "顶级（中文写作/长文理解突出）",
+          "推理准确率": "LMSYS Arena ELO 1462（Kimi K2.6，国产开源前列）",
+          "月成本": "免费使用",
+          "国内可用性": "国内原生可用，免费注册"
+        },
+        "source": "LMSYS Arena 2026.07 | 官网定价 2026.07"
+      },
+      "doubao": {
+        "name": "豆包",
+        "price": "免费使用",
+        "benchmark": "LMSYS Arena ELO",
+        "metrics": {
+          "中文理解": "良好（字节跳动旗下）",
+          "推理准确率": "未进入LMSYS公开排名前列",
+          "月成本": "免费使用",
+          "国内可用性": "国内原生可用，抖音账号登录"
+        },
+        "source": "字节跳动 | 豆包官网 2026.07"
+      }
+    },
+    "dimensions": [
+      "中文理解",
+      "推理准确率",
+      "月成本",
+      "国内可用性"
+    ],
+    "scoring": {
+      "中文理解": {
+        "max": 30,
+        "method": "manual"
+      },
+      "推理准确率": {
+        "max": 25,
+        "method": "elo_percentile"
+      },
+      "月成本": {
+        "max": 25,
+        "method": "price_evaluation"
+      },
+      "国内可用性": {
+        "max": 20,
+        "method": "manual"
+      }
+    },
+    "last_verified": "2026-07-18",
+    "update_method": "auto-lmsys",
+    "_flags": {
+      "needs_manual_review": true
+    }
+  },
+  "ai-video": {
+    "cat": "AI视频",
+    "tools": {
+      "runway": {
+        "name": "Runway",
+        "price": "免费版 + 标准$15/月",
+        "benchmark": "综合评测（findaivideo.com 2026）",
+        "metrics": {
+          "画质评分": "9.1/10（Gen-4，创意控制最佳）",
+          "生成速度": "中等（1-3分钟/片段）",
+          "月成本": "免费版 + 标准$15/月",
+          "中文界面": "英文界面，不支持中文"
+        },
+        "source": "findaivideo.com 2026 | 官网定价 2026.07"
+      },
+      "sora": {
+        "name": "Sora",
+        "price": "ChatGPT Plus $20/月起",
+        "benchmark": "综合评测（findaivideo.com 2026）",
+        "metrics": {
+          "画质评分": "9.3/10（叙事+物理模拟最佳）",
+          "生成速度": "慢（5-10分钟/片段，高峰期）",
+          "月成本": "Plus $20/月 + Pro $200/月",
+          "中文界面": "英文界面，ChatGPT内使用"
+        },
+        "source": "findaivideo.com 2026 | 官网定价 2026.07"
+      },
+      "kling-ai": {
+        "name": "可灵AI",
+        "price": "免费使用",
+        "benchmark": "综合评测（findaivideo.com 2026）",
+        "metrics": {
+          "画质评分": "9.0/10（长视频+唇形同步最佳）",
+          "生成速度": "快（15-30秒/片段）",
+          "月成本": "免费使用",
+          "中文界面": "中文原生界面"
+        },
+        "source": "findaivideo.com 2026 | 快手 2026.07"
+      },
+      "pika": {
+        "name": "Pika",
+        "price": "免费版 + 标准$10/月",
+        "benchmark": "综合评测（findaivideo.com 2026）",
+        "metrics": {
+          "画质评分": "8.2/10（社交媒体内容最佳）",
+          "生成速度": "快（20-40秒/片段）",
+          "月成本": "免费版 + 标准$10/月",
+          "中文界面": "英文界面"
+        },
+        "source": "findaivideo.com 2026 | 官网定价 2026.07"
+      },
+      "heygen": {
+        "name": "HeyGen",
+        "price": "基础$10/月起",
+        "benchmark": "综合评测（findaivideo.com 2026）",
+        "metrics": {
+          "画质评分": "8.5/10（AI数字人最佳）",
+          "生成速度": "快（数字人视频分钟级）",
+          "月成本": "基础$10/月起",
+          "中文界面": "支持中文"
+        },
+        "source": "findaivideo.com 2026 | 官网定价 2026.07"
+      }
+    },
+    "dimensions": [
+      "画质评分",
+      "生成速度",
+      "月成本",
+      "中文界面"
+    ],
+    "scoring": {
+      "画质评分": {
+        "max": 35,
+        "method": "rating_percentile"
+      },
+      "生成速度": {
+        "max": 20,
+        "method": "manual"
+      },
+      "月成本": {
+        "max": 25,
+        "method": "price_evaluation"
+      },
+      "中文界面": {
+        "max": 20,
+        "method": "manual"
+      }
+    },
+    "last_verified": "2026-07-18",
+    "update_method": "manual"
+  },
+  "ai-office": {
+    "cat": "AI办公",
+    "tools": {
+      "notion-ai": {
+        "name": "Notion AI",
+        "price": "AI附加费$10/月",
+        "benchmark": "作者实测+用户反馈",
+        "metrics": {
+          "协作能力": "顶级（多人实时协作+AI辅助）",
+          "AI集成度": "深度集成（写作/总结/翻译/Q&A）",
+          "月成本": "Notion免费+AI $10/月附加费",
+          "中文支持": "中文界面+中文AI功能"
+        },
+        "source": "官网 + 作者长期使用 2026.07"
+      },
+      "notebooklm": {
+        "name": "NotebookLM",
+        "price": "免费版 + Pro $10/月",
+        "benchmark": "作者实测+用户反馈",
+        "metrics": {
+          "协作能力": "有限（单人为主，分享只读）",
+          "AI集成度": "专注文档理解（摘要/问答/播客）",
+          "月成本": "免费版 + Pro $10/月",
+          "中文支持": "支持中文文档，界面中英文"
+        },
+        "source": "官网 + 作者实测 2026.07"
+      },
+      "wps-ai": {
+        "name": "WPS AI",
+        "price": "免费版 + Pro $10/月",
+        "benchmark": "作者实测+用户反馈",
+        "metrics": {
+          "协作能力": "良好（WPS云文档协作）",
+          "AI集成度": "深度集成（文字/表格/演示AI）",
+          "月成本": "免费版 + Pro ¥69/月",
+          "中文支持": "中文原生（金山办公出品）"
+        },
+        "source": "WPS官网 + 作者实测 2026.07"
+      },
+      "gamma": {
+        "name": "Gamma",
+        "price": "免费版 + Pro $16/月",
+        "benchmark": "作者实测+用户反馈",
+        "metrics": {
+          "协作能力": "优秀（实时协作+评论）",
+          "AI集成度": "专注演示/文档AI生成",
+          "月成本": "免费版 + Pro $16/月",
+          "中文支持": "支持中文，界面中英文"
+        },
+        "source": "官网 + 作者实测 2026.07"
+      }
+    },
+    "dimensions": [
+      "协作能力",
+      "AI集成度",
+      "月成本",
+      "中文支持"
+    ],
+    "scoring": {
+      "协作能力": {
+        "max": 25,
+        "method": "manual"
+      },
+      "AI集成度": {
+        "max": 30,
+        "method": "manual"
+      },
+      "月成本": {
+        "max": 25,
+        "method": "price_evaluation"
+      },
+      "中文支持": {
+        "max": 20,
+        "method": "manual"
+      }
+    },
+    "last_verified": "2026-07-18",
+    "update_method": "manual"
+  },
+  "ai-productivity": {
+    "cat": "AI效率",
+    "tools": {
+      "arc-browser": {
+        "name": "Arc浏览器",
+        "price": "免费版 + Pro $10/月",
+        "metrics": {
+          "效率提升": "显著（AI侧边栏+空间管理）",
+          "学习成本": "中等（不同于Chrome的交互逻辑）",
+          "跨平台": "Mac/iOS/Windows",
+          "中文支持": "英文为主，中文支持有限"
+        }
+      },
+      "comet": {
+        "name": "Comet",
+        "price": "免费版 + Pro $10/月",
+        "metrics": {
+          "效率提升": "显著（AI浏览器标签管理）",
+          "学习成本": "低（类Chrome体验）",
+          "跨平台": "全平台",
+          "中文支持": "支持中文"
+        }
+      },
+      "raycast-ai": {
+        "name": "Raycast AI",
+        "price": "免费版 + Pro $10/月",
+        "metrics": {
+          "效率提升": "显著（启动器+AI深度集成）",
+          "学习成本": "中等（快捷键驱动）",
+          "跨平台": "仅Mac",
+          "中文支持": "英文界面"
+        }
+      },
+      "elicit": {
+        "name": "Elicit",
+        "price": "免费版 + 专业版$10/月起",
+        "metrics": {
+          "效率提升": "显著（AI文献检索）",
+          "学习成本": "低",
+          "跨平台": "Web全平台",
+          "中文支持": "英文为主"
+        }
+      }
+    },
+    "dimensions": [
+      "效率提升",
+      "学习成本",
+      "跨平台",
+      "中文支持"
+    ],
+    "scoring": {},
+    "last_verified": "2026-07-18",
+    "update_method": "manual"
+  },
+  "ai-design": {
+    "cat": "AI设计",
+    "tools": {
+      "canva-ai": {
+        "name": "Canva AI",
+        "price": "免费版 + Pro ¥120/月",
+        "metrics": {
+          "设计质量": "高（模板+AI生成）",
+          "易用性": "极高（拖拽式操作）",
+          "月成本": "免费版 + Pro ¥120/月",
+          "商用授权": "Pro版商业使用"
+        }
+      },
+      "remove.bg": {
+        "name": "Remove.bg",
+        "price": "免费版 + Pro $10/月",
+        "metrics": {
+          "设计质量": "单一功能极致（去背景）",
+          "易用性": "极高（上传即用）",
+          "月成本": "免费版 + Pro $10/月",
+          "商用授权": "付费版商业使用"
+        }
+      },
+      "photoroom": {
+        "name": "Photoroom",
+        "price": "免费使用",
+        "metrics": {
+          "设计质量": "高（电商产品图）",
+          "易用性": "高（移动端为主）",
+          "月成本": "免费使用",
+          "商用授权": "免费版商业可用"
+        }
+      },
+      "figma-ai": {
+        "name": "Figma AI",
+        "price": "免费版 + Pro $10/月",
+        "metrics": {
+          "设计质量": "专业级（UI/UX设计）",
+          "易用性": "中等（专业设计工具）",
+          "月成本": "免费版 + Pro $10/月",
+          "商用授权": "所有版本商业可用"
+        }
+      }
+    },
+    "dimensions": [
+      "设计质量",
+      "易用性",
+      "月成本",
+      "商用授权"
+    ],
+    "scoring": {},
+    "last_verified": "2026-07-18",
+    "update_method": "manual"
+  },
+  "ai-image": {
+    "cat": "AI绘画",
+    "tools": {
+      "midjourney": {
+        "name": "Midjourney",
+        "price": "基础$10/月起",
+        "metrics": {
+          "画质评分": "9.5/10（艺术品质最高）",
+          "风格控制": "9.0/10（参数精细控制）",
+          "月成本": "基础$10/月起",
+          "中文提示词": "支持中文，效果略弱于英文"
+        }
+      },
+      "stable-diffusion": {
+        "name": "Stable Diffusion",
+        "price": "完全免费（需GPU）",
+        "metrics": {
+          "画质评分": "8.5/10（开源最佳）",
+          "风格控制": "9.5/10（ControlNet+LoRA生态）",
+          "月成本": "完全免费（需自备GPU）",
+          "中文提示词": "英文提示词为主"
+        }
+      },
+      "dall-e-3": {
+        "name": "DALL-E 3",
+        "price": "基础$10/月起",
+        "metrics": {
+          "画质评分": "8.8/10（文本渲染强）",
+          "风格控制": "7.5/10（风格选项有限）",
+          "月成本": "ChatGPT Plus $20/月内含",
+          "中文提示词": "支持中文，效果良好"
+        }
+      },
+      "adobe-firefly": {
+        "name": "Adobe Firefly",
+        "price": "免费使用",
+        "metrics": {
+          "画质评分": "8.5/10（商业安全）",
+          "风格控制": "8.0/10（Adobe生态集成）",
+          "月成本": "免费使用",
+          "中文提示词": "支持中文"
+        }
+      }
+    },
+    "dimensions": [
+      "画质评分",
+      "风格控制",
+      "月成本",
+      "中文提示词"
+    ],
+    "scoring": {},
+    "last_verified": "2026-07-18",
+    "update_method": "manual"
+  },
+  "ai-audio": {
+    "cat": "AI音频",
+    "tools": {
+      "suno": {
+        "name": "Suno",
+        "price": "免费版 + Pro $10/月",
+        "metrics": {
+          "音质评分": "9.0/10（音乐生成最佳）",
+          "生成速度": "快（1-2分钟/首）",
+          "月成本": "免费版 + Pro $10/月",
+          "中文支持": "支持中文歌词"
+        }
+      },
+      "udio": {
+        "name": "Udio",
+        "price": "免费版 + Pro $10/月",
+        "metrics": {
+          "音质评分": "8.8/10（高保真音质）",
+          "生成速度": "快（1-2分钟/首）",
+          "月成本": "免费版 + Pro $10/月",
+          "中文支持": "支持中文歌词"
+        }
+      },
+      "elevenlabs": {
+        "name": "ElevenLabs",
+        "price": "免费版 + Starter $5/月",
+        "metrics": {
+          "音质评分": "9.5/10（语音合成最佳）",
+          "生成速度": "快（秒级）",
+          "月成本": "免费版 + Starter $5/月",
+          "中文支持": "支持中文语音克隆"
+        }
+      },
+      "speechify": {
+        "name": "Speechify",
+        "price": "基础$10/月起",
+        "metrics": {
+          "音质评分": "8.5/10（文字转语音）",
+          "生成速度": "快（秒级）",
+          "月成本": "基础¥69/月起",
+          "中文支持": "支持中文朗读"
+        }
+      }
+    },
+    "dimensions": [
+      "音质评分",
+      "生成速度",
+      "月成本",
+      "中文支持"
+    ],
+    "scoring": {},
+    "last_verified": "2026-07-18",
+    "update_method": "manual"
+  },
+  "ai-writing": {
+    "cat": "AI写作",
+    "tools": {
+      "jasper": {
+        "name": "Jasper",
+        "price": "Creator $49/月起",
+        "metrics": {
+          "写作质量": "优秀（营销文案最专业）",
+          "创意度": "高（品牌声音定制）",
+          "月成本": "Creator $49/月起",
+          "中文支持": "中文支持有限，英文为主"
+        }
+      },
+      "grammarly-ai": {
+        "name": "Grammarly AI",
+        "price": "基础$10/月起",
+        "metrics": {
+          "写作质量": "优秀（英语语法最佳）",
+          "创意度": "中等（校正为主）",
+          "月成本": "基础$10/月起",
+          "中文支持": "不支持中文"
+        }
+      },
+      "copy.ai": {
+        "name": "Copy.ai",
+        "price": "基础$10/月起",
+        "metrics": {
+          "写作质量": "良好（多场景写作）",
+          "创意度": "高（模板丰富）",
+          "月成本": "基础$10/月起",
+          "中文支持": "支持中文"
+        }
+      },
+      "quillbot": {
+        "name": "QuillBot",
+        "price": "免费使用",
+        "metrics": {
+          "写作质量": "良好（改写/润色专用）",
+          "创意度": "低（功能单一）",
+          "月成本": "免费使用",
+          "中文支持": "支持中文改写"
+        }
+      }
+    },
+    "dimensions": [
+      "写作质量",
+      "创意度",
+      "月成本",
+      "中文支持"
+    ],
+    "scoring": {},
+    "last_verified": "2026-07-18",
+    "update_method": "manual"
+  },
+  "ai-dev": {
+    "cat": "AI开发",
+    "tools": {
+      "langgraph": {
+        "name": "LangGraph",
+        "price": "免费开源",
+        "metrics": {
+          "框架成熟度": "高（LangChain旗下）",
+          "学习曲线": "中等（有状态图概念）",
+          "社区生态": "活跃（GitHub 10k+ stars）",
+          "商业可用性": "开源免费，商业友好"
+        }
+      },
+      "metagpt": {
+        "name": "MetaGPT",
+        "price": "免费开源",
+        "metrics": {
+          "框架成熟度": "中（多Agent协作框架）",
+          "学习曲线": "中高（SOA概念复杂）",
+          "社区生态": "活跃（GitHub 50k+ stars）",
+          "商业可用性": "开源免费，MIT 许可"
+        }
+      },
+      "openai-agents-sdk": {
+        "name": "OpenAI Agents SDK",
+        "price": "按调用量计费",
+        "metrics": {
+          "框架成熟度": "中（OpenAI官方2026发布）",
+          "学习曲线": "中低（API风格简洁）",
+          "社区生态": "快速增长",
+          "商业可用性": "商业可用，按token计费"
+        }
+      },
+      "crew-ai": {
+        "name": "CrewAI",
+        "price": "免费开源版 + Pro $29/月",
+        "metrics": {
+          "框架成熟度": "高（多Agent最成熟方案）",
+          "学习曲线": "低（角色定义+任务编排）",
+          "社区生态": "活跃（GitHub 25k+ stars）",
+          "商业可用性": "开源免费 + 企业版可选"
+        }
+      }
+    },
+    "dimensions": [
+      "框架成熟度",
+      "学习曲线",
+      "社区生态",
+      "商业可用性"
+    ],
+    "scoring": {},
+    "last_verified": "2026-07-18",
+    "update_method": "manual"
+  },
+  "ai-automation": {
+    "cat": "AI自动化",
+    "tools": {
+      "n8n": {
+        "name": "n8n",
+        "price": "免费使用",
+        "metrics": {
+          "可视化程度": "高（节点拖拽）",
+          "AI Agent能力": "强（LangChain集成）",
+          "月成本": "免费使用（自部署）",
+          "中文生态": "英文为主，社区活跃"
+        }
+      },
+      "coze": {
+        "name": "Coze",
+        "price": "免费使用",
+        "metrics": {
+          "可视化程度": "高（中文界面友好）",
+          "AI Agent能力": "强（字节AI生态）",
+          "月成本": "免费使用",
+          "中文生态": "中文原生 + 飞书集成"
+        }
+      },
+      "dify": {
+        "name": "Dify",
+        "price": "基础$10/月起",
+        "metrics": {
+          "可视化程度": "高（拖拽式AI应用）",
+          "AI Agent能力": "强（RAG+工作流）",
+          "月成本": "社区版免费 + 云版$10/月起",
+          "中文生态": "中文原生开源项目"
+        }
+      },
+      "zapier-ai": {
+        "name": "Zapier AI",
+        "price": "免费使用",
+        "metrics": {
+          "可视化程度": "高（7000+应用连接）",
+          "AI Agent能力": "中等（触发器为主）",
+          "月成本": "免费版可用",
+          "中文生态": "英文为主，中文应用有限"
+        }
+      },
+      "make": {
+        "name": "Make",
+        "price": "基础$10/月起",
+        "metrics": {
+          "可视化程度": "极高（类流程图）",
+          "AI Agent能力": "中等（API调用为主）",
+          "月成本": "基础$10/月起",
+          "中文生态": "英文为主"
+        }
+      }
+    },
+    "dimensions": [
+      "可视化程度",
+      "AI Agent能力",
+      "月成本",
+      "中文生态"
+    ],
+    "scoring": {},
+    "last_verified": "2026-07-18",
+    "update_method": "manual"
+  },
+  "ai-search": {
+    "cat": "AI搜索",
+    "tools": {
+      "perplexity": {
+        "name": "Perplexity",
+        "price": "免费版 + Pro $20/月",
+        "metrics": {
+          "搜索准确率": "优秀（学术引用率95%）",
+          "来源引用率": "极高（逐句标注来源）",
+          "月成本": "免费版 + Pro $20/月",
+          "中文覆盖": "支持中文搜索，英文源更全"
+        }
+      },
+      "kimi": {
+        "name": "Kimi",
+        "price": "免费使用",
+        "metrics": {
+          "搜索准确率": "优秀（中文搜索优势）",
+          "来源引用率": "高（长篇引用+联网搜索）",
+          "月成本": "免费使用",
+          "中文覆盖": "中文原生搜索最佳"
+        }
+      },
+      "nano-ai-search": {
+        "name": "纳米AI搜索",
+        "price": "免费使用",
+        "metrics": {
+          "搜索准确率": "良好（360搜索生态）",
+          "来源引用率": "中等",
+          "月成本": "免费使用",
+          "中文覆盖": "中文搜索优秀"
+        }
+      },
+      "phind": {
+        "name": "Phind",
+        "price": "免费版 + Pro $10/月",
+        "metrics": {
+          "搜索准确率": "良好（编程技术搜索）",
+          "来源引用率": "高（代码来源标注）",
+          "月成本": "免费版 + Pro $10/月",
+          "中文覆盖": "英文为主"
+        }
+      }
+    },
+    "dimensions": [
+      "搜索准确率",
+      "来源引用率",
+      "月成本",
+      "中文覆盖"
+    ],
+    "scoring": {},
+    "last_verified": "2026-07-18",
+    "update_method": "manual"
+  },
+  "ai-translation": {
+    "cat": "AI翻译",
+    "tools": {
+      "deepl": {
+        "name": "DeepL",
+        "price": "免费版 + Pro $10/月",
+        "metrics": {
+          "翻译准确率": "极高（专业翻译行业标准）",
+          "专业术语": "优秀（术语库+语体控制）",
+          "月成本": "免费版 + Pro $10/月",
+          "多语言支持": "30+语言"
+        }
+      },
+      "smartcat": {
+        "name": "Smartcat",
+        "price": "免费版 + 付费版$15/月起",
+        "metrics": {
+          "翻译准确率": "高（翻译记忆+术语库）",
+          "专业术语": "优秀（翻译记忆库）",
+          "月成本": "免费版 + 付费版$15/月起",
+          "多语言支持": "280+语言"
+        }
+      }
+    },
+    "dimensions": [
+      "翻译准确率",
+      "专业术语",
+      "月成本",
+      "多语言支持"
+    ],
+    "scoring": {},
+    "last_verified": "2026-07-18",
+    "update_method": "manual"
+  },
+  "ai-agent": {
+    "cat": "AI智能体",
+    "tools": {
+      "crew-ai": {
+        "name": "CrewAI",
+        "price": "免费开源版 + Pro $29/月",
+        "metrics": {
+          "Agent能力": "强（角色扮演+任务协作）",
+          "编排复杂度": "中低（Python SDK简洁）",
+          "月成本": "免费开源 + Pro $29/月",
+          "中文支持": "支持中文，文档英文为主"
+        }
+      },
+      "dify": {
+        "name": "Dify",
+        "price": "基础$10/月起",
+        "metrics": {
+          "Agent能力": "强（可视化Agent编排）",
+          "编排复杂度": "低（拖拽式）",
+          "月成本": "社区版免费 + 云版$10/月起",
+          "中文支持": "中文原生"
+        }
+      },
+      "coze": {
+        "name": "Coze",
+        "price": "免费使用",
+        "metrics": {
+          "Agent能力": "强（Bot+插件+知识库）",
+          "编排复杂度": "低（可视化Bot构建）",
+          "月成本": "免费使用",
+          "中文支持": "中文原生"
+        }
+      },
+      "langgraph": {
+        "name": "LangGraph",
+        "price": "免费开源",
+        "metrics": {
+          "Agent能力": "极强（有状态Agent）",
+          "编排复杂度": "中高（代码级控制）",
+          "月成本": "开源免费",
+          "中文支持": "文档英文为主"
+        }
+      }
+    },
+    "dimensions": [
+      "Agent能力",
+      "编排复杂度",
+      "月成本",
+      "中文支持"
+    ],
+    "scoring": {},
+    "last_verified": "2026-07-18",
+    "update_method": "manual"
+  }
+}

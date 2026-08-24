@@ -1,0 +1,156 @@
+{
+  "name": "通义灵码",
+  "slug": "tongyi-lingma",
+  "emoji": "💻",
+  "color": "#3B82F6",
+  "description": "阿里云Qoder CN（原通义灵码）是AI编码助手，2026年5月品牌升级后支持Agent模式、多模型切换（GLM/DeepSeek/Kimi等）和全链路编程。Individual Basic免费（300 Credits），Pro月付。87%+开发者满意率。VS Code插件已停更。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "代码补全",
+    "阿里云",
+    "Qoder CN",
+    "国产大模型"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "85万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://lingma.aliyun.com",
+  "price": "Individual Basic免费(300 Credits)；Pro月付；Enterprise按席位",
+  "platform": "VS Code、JetBrains IDEs、Visual Studio、网页端",
+  "pros": [
+    "支持多种国产大模型自由切换（GLM/DeepSeek/Kimi/MiniMax），不锁定单一模型",
+    "Agent模式端到端完成工程级任务，自主拆解+执行",
+    "中文编程场景优化，百万开发者使用",
+    "与阿里云生态深度集成，企业版支持VPC私有部署"
+  ],
+  "cons": [
+    "2026年5月品牌升级（TONGYI Lingma → Qoder CN），用户存在认知迁移期",
+    "VS Code插件已停止更新，仅支持JetBrains和自研IDE",
+    "相比GitHub Copilot生态插件少",
+    "企业级功能需付费，且最低50席位的VPC门槛较高"
+  ],
+  "features": [
+    "行间代码补全与实时续写（跨文件上下文感知）",
+    "Agent模式（自主规划+工具调用+端到端编码任务）",
+    "多模型自由切换（GLM/DeepSeek/Kimi/MiniMax/通义）",
+    "Quest 2.0任务规划系统（含Repowiki项目知识库+Subagent专家协同）",
+    "个性化记忆（学习代码规范和历史修改，跨设备同步）",
+    "多模态问答（支持图片输入）和工程自动感知"
+  ],
+  "related": [
+    "github-copilot",
+    "cursor",
+    "kimi"
+  ],
+  "faq": [
+    {
+      "q": "通义灵码还是免费的吗？",
+      "a": "2026年5月20日起品牌升级为Qoder CN，引入Credits积分制。Individual Basic版免费（300 Credits）。Individual Pro/Pro+月付。原有的Lingma完全免费时代已结束。原Lite 40元/月、Pro 200元/月的旧定价也已升级为新Credits体系。"
+    },
+    {
+      "q": "通义灵码支持哪些IDE？",
+      "a": "Qoder CN IDE（独立桌面）、JetBrains全系列（IntelliJ IDEA、PyCharm等）。VS Code插件已停止更新（2026年新方案不再维护）。同时提供CLI命令行和Mobile移动端。QoderWork CN桌面办公版也集成。"
+    },
+    {
+      "q": "通义灵码和GitHub Copilot哪个好？",
+      "a": "通义灵码/Qoder CN优势在于：中文编程场景优化更佳、支持国产大模型切换（不锁定单一模型）、Agent模式端到端完成任务、与阿里云生态深度集成。Copilot优势：全球生态更成熟、插件更丰富、英文编程场景略优。"
+    },
+    {
+      "q": "通义灵码改名叫什么了？",
+      "a": "2026年5月20日起正式更名为Qoder CN（阿里云Qoder CN）。原名'TONGYI Lingma/通义灵码'已停用。产品从单一代码辅助工具升级为覆盖编程+办公+CLI+云Agent+数字员工的全栈AI智能体产品家族。"
+    }
+  ],
+  "seo_keywords": [
+    "通义灵码",
+    "通义灵码免费版",
+    "通义灵码怎么样",
+    "通义灵码和Copilot哪个好",
+    "通义灵码使用方法"
+  ],
+  "content": "## 通义灵码 是什么？\n\n阿里云AI编码助手（2026年5月20日品牌升级为Qoder CN），支持IDE插件/JetBrains/CLI多形态，提供代码补全、Agent模式、多模型切换等全链路编程能力\n\n阿里云Qoder CN（原通义灵码）是AI编码助手，2026年5月品牌升级后支持Agent模式、多模型切换（GLM/DeepSeek/Kimi等）和全链路编程。Individual Basic免费（300 Credits），Pro月付。87%+开发者满意率。VS Code插件已停更。\n\n## 核心功能\n\n- 行间代码补全与实时续写（跨文件上下文感知）\n- Agent模式（自主规划+工具调用+端到端编码任务）\n- 多模型自由切换（GLM/DeepSeek/Kimi/MiniMax/通义）\n- Quest 2.0任务规划系统（含Repowiki项目知识库+Subagent专家协同）\n- 个性化记忆（学习代码规范和历史修改，跨设备同步）\n- 多模态问答（支持图片输入）和工程自动感知\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | Individual Basic $0（300免费Credits）；Individual Pro 月付（含Credits配额）；Individual Pro+ 月付（更高配额）；Enterprise Standard 按席位月付；Enterprise VPC 按席位月付（最低50席位）+ Resource Pack Credits包。2026年5月20日前的旧Lingma定价：Lite 40元/月(18000次)，Pro 200元/月(90000次)。2026年6月20日后统一为Credits积分制，Individual订阅可在Desktop/JetBrains/QoderWork/Qoder CLI/Mobile间共享。 |\n| 支持平台 | Qoder CN IDE (独立桌面) / JetBrains全系列 / VS Code (插件已停止更新) / CLI / Mobile |\n| 评分 | ⭐ 4.5 |\n| 开发商 | 阿里云 |\n\n## 价格与平台\n\n- **价格**：Individual Basic $0（300免费Credits）；Individual Pro 月付（含Credits配额）；Individual Pro+ 月付（更高配额）；Enterprise Standard 按席位月付；Enterprise VPC 按席位月付（最低50席位）+ Resource Pack Credits包。2026年5月20日前的旧Lingma定价：Lite 40元/月(18000次)，Pro 200元/月(90000次)。2026年6月20日后统一为Credits积分制，Individual订阅可在Desktop/JetBrains/QoderWork/Qoder CLI/Mobile间共享。\n- **平台**：Qoder CN IDE (独立桌面) / JetBrains全系列 / VS Code (插件已停止更新) / CLI / Mobile\n- **官网**：https://lingma.aliyun.com\n\n## 优缺点分析\n\n### 优点\n\n- 支持多种国产大模型自由切换（GLM/DeepSeek/Kimi/MiniMax），不锁定单一模型\n- Agent模式端到端完成工程级任务，自主拆解+执行\n- 中文编程场景优化，百万开发者使用\n- 与阿里云生态深度集成，企业版支持VPC私有部署\n\n### 缺点\n\n- 2026年5月品牌升级（TONGYI Lingma → Qoder CN），用户存在认知迁移期\n- VS Code插件已停止更新，仅支持JetBrains和自研IDE\n- 相比GitHub Copilot生态插件少\n- 企业级功能需付费，且最低50席位的VPC门槛较高\n\n## 常见问题（FAQ）\n\n**通义灵码还是免费的吗？**\n\n2026年5月20日起品牌升级为Qoder CN，引入Credits积分制。Individual Basic版免费（300 Credits）。Individual Pro/Pro+月付。原有的Lingma完全免费时代已结束。原Lite 40元/月、Pro 200元/月的旧定价也已升级为新Credits体系。\n\n**通义灵码支持哪些IDE？**\n\nQoder CN IDE（独立桌面）、JetBrains全系列（IntelliJ IDEA、PyCharm等）。VS Code插件已停止更新（2026年新方案不再维护）。同时提供CLI命令行和Mobile移动端。QoderWork CN桌面办公版也集成。\n\n**通义灵码和GitHub Copilot哪个好？**\n\n通义灵码/Qoder CN优势在于：中文编程场景优化更佳、支持国产大模型切换（不锁定单一模型）、Agent模式端到端完成任务、与阿里云生态深度集成。Copilot优势：全球生态更成熟、插件更丰富、英文编程场景略优。\n\n**通义灵码改名叫什么了？**\n\n2026年5月20日起正式更名为Qoder CN（阿里云Qoder CN）。原名'TONGYI Lingma/通义灵码'已停用。产品从单一代码辅助工具升级为覆盖编程+办公+CLI+云Agent+数字员工的全栈AI智能体产品家族。\n\n\n## 最终结论\n\n通义灵码 是AI编程领域的一款 AI 工具，其核心优势在于支持多种国产大模型自由切换（GLM/DeepSeek/Kimi/MiniMax），不锁定单一模型。\n此外，Agent模式端到端完成工程级任务，自主拆解+执行。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-06-03",
+  "published_date": "2026-06-03",
+  "verified_url": "https://lingma.aliyun.com",
+  "verified_publisher": "阿里云",
+  "verified_what": "阿里云AI编码助手（2026年5月20日品牌升级为Qoder CN），支持IDE插件/JetBrains/CLI多形态，提供代码补全、Agent模式、多模型切换等全链路编程能力",
+  "verified_price": "Individual Basic $0（300免费Credits）；Individual Pro 月付（含Credits配额）；Individual Pro+ 月付（更高配额）；Enterprise Standard 按席位月付；Enterprise VPC 按席位月付（最低50席位）+ Resource Pack Credits包。2026年5月20日前的旧Lingma定价：Lite 40元/月(18000次)，Pro 200元/月(90000次)。2026年6月20日后统一为Credits积分制，Individual订阅可在Desktop/JetBrains/QoderWork/Qoder CLI/Mobile间共享。",
+  "verified_platform": "Qoder CN IDE (独立桌面) / JetBrains全系列 / VS Code (插件已停止更新) / CLI / Mobile",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "行间代码补全与实时续写（跨文件上下文感知）",
+    "Agent模式（自主规划+工具调用+端到端编码任务）",
+    "多模型自由切换（GLM/DeepSeek/Kimi/MiniMax/通义）",
+    "Quest 2.0任务规划系统（含Repowiki项目知识库+Subagent专家协同）",
+    "个性化记忆（学习代码规范和历史修改，跨设备同步）",
+    "多模态问答（支持图片输入）和工程自动感知"
+  ],
+  "verified_description": "阿里云Qoder CN（原通义灵码）是AI编码助手，2026年5月品牌升级后支持Agent模式、多模型切换（GLM/DeepSeek/Kimi等）和全链路编程。Individual Basic免费（300 Credits），Pro月付。87%+开发者满意率。VS Code插件已停更。",
+  "content_flags": "1. 产品名称过时：'通义灵码'已于2026年5月20日正式更名为'Qoder CN'（品牌升级）。2. 定价体系完全改变：旧'免费版/专业版（¥59/月）'已不存在，现为Individual Basic $0（300 Credits）、Individual Pro/Pro+月付。3. VS Code插件已停止更新——原文仍列出VS Code支持。4. 遗漏关键新功能：Agent模式、多模型切换（GLM/DeepSeek/Kimi/MiniMax）、Quest 2.0、Repowiki、Subagent、个性化记忆。5. 产品形态已从单一IDE插件扩展为Qoder IDE + CLI + Mobile + QoderWork CN办公版等完整产品矩阵。6. 价格单位：国内为人民币定价，国际为美元。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "编辑部评级（87%+开发者满意率，官方数据）",
+  "rating_verified": true,
+  "verified_pros": [
+    "支持多种国产大模型自由切换（GLM/DeepSeek/Kimi/MiniMax），不锁定单一模型",
+    "Agent模式端到端完成工程级任务，自主拆解+执行",
+    "中文编程场景优化，百万开发者使用",
+    "与阿里云生态深度集成，企业版支持VPC私有部署"
+  ],
+  "verified_cons": [
+    "2026年5月品牌升级（TONGYI Lingma → Qoder CN），用户存在认知迁移期",
+    "VS Code插件已停止更新，仅支持JetBrains和自研IDE",
+    "相比GitHub Copilot生态插件少",
+    "企业级功能需付费，且最低50席位的VPC门槛较高"
+  ],
+  "verified_faq": [
+    {
+      "q": "通义灵码还是免费的吗？",
+      "a": "2026年5月20日起品牌升级为Qoder CN，引入Credits积分制。Individual Basic版免费（300 Credits）。Individual Pro/Pro+月付。原有的Lingma完全免费时代已结束。原Lite 40元/月、Pro 200元/月的旧定价也已升级为新Credits体系。"
+    },
+    {
+      "q": "通义灵码支持哪些IDE？",
+      "a": "Qoder CN IDE（独立桌面）、JetBrains全系列（IntelliJ IDEA、PyCharm等）。VS Code插件已停止更新（2026年新方案不再维护）。同时提供CLI命令行和Mobile移动端。QoderWork CN桌面办公版也集成。"
+    },
+    {
+      "q": "通义灵码和GitHub Copilot哪个好？",
+      "a": "通义灵码/Qoder CN优势在于：中文编程场景优化更佳、支持国产大模型切换（不锁定单一模型）、Agent模式端到端完成任务、与阿里云生态深度集成。Copilot优势：全球生态更成熟、插件更丰富、英文编程场景略优。"
+    },
+    {
+      "q": "通义灵码改名叫什么了？",
+      "a": "2026年5月20日起正式更名为Qoder CN（阿里云Qoder CN）。原名'TONGYI Lingma/通义灵码'已停用。产品从单一代码辅助工具升级为覆盖编程+办公+CLI+云Agent+数字员工的全栈AI智能体产品家族。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "代码补全",
+    "阿里云",
+    "Qoder CN",
+    "国产大模型"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://lingma.aliyun.com",
+    "https://developer.aliyun.com/article/1745707",
+    "https://developer.aliyun.com/article/1750669",
+    "https://help.aliyun.com/document_detail/2796963.html"
+  ],
+  "verify_notes": "最重要的更新：品牌更名（TONGYI Lingma → Qoder CN，2026-05-20）和定价体系全面重构（Credits积分制取代旧的免费/专业/企业三层）。产品从单一编程工具升级为全栈产品家族。VS Code插件已停更需在platform字段中移除。所有旧SEO关键词中的'通义灵码'应在内容中标注为曾用名。建议待网站内容更新后同步调整slug（tongyi-lingma→qoder-cn）。",
+  "content_verified": true,
+  "url_previous": "https://tongyi.aliyun.com/lingma",
+  "compare_section": {
+    "competitors": [
+      "cline",
+      "codex-cli",
+      "lovable"
+    ],
+    "verdict": "通义灵码 与 Cline、Codex CLI、Lovable 同属AI编程赛道。在性价比上，通义灵码（Individual Basic免费(300 Credits)；Pro月付；Enterprise按席位）门槛更低；若看重口碑，Lovable（⭐4.9）评分更高；通义灵码 的优势在于阿里云AI编码助手（2026年5月20日品牌升级为Qoder CN），支持IDE插件/JetBrains/CLI多形态，，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

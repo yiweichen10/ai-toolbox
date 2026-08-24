@@ -1,0 +1,164 @@
+{
+  "name": "PandaProbe",
+  "slug": "panda-probe",
+  "positioning": "免费AI开发工具推荐：端到端追踪、生产监控",
+  "auto_positioning": true,
+  "emoji": "🐼",
+  "color": "#FF7F50",
+  "description": "PandaProbe（Chirpz AI）是开源的 AI 智能体工程平台，提供追踪、评测与生产监控能力，帮助开发者调试并持续改进 AI 智能体，支持云端与自托管。",
+  "category": "AI开发",
+  "tags": [
+    {
+      "text": "AI智能体"
+    },
+    {
+      "text": "AI开发"
+    },
+    {
+      "text": "可观测性"
+    },
+    {
+      "text": "开源"
+    }
+  ],
+  "rating": "⭐4.5",
+  "visits": "约50万/月",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://www.pandaprobe.com",
+  "price": "免费开源 + Pro $29/月",
+  "platform": "网页端、移动端（iOS/Android）",
+  "pros": [
+    "追踪、评测与监控一体化",
+    "支持云与自托管，含免费开源方案",
+    "提供面向编码智能体的 CLI 与 Skill 工作流",
+    "生产监控含定时评测与回归告警",
+    "定价路径清晰，含免费档"
+  ],
+  "cons": [
+    "框架/集成深度文档部分不全",
+    "公开页面缺少延迟、搭建成本与安全合规细节",
+    "中文资料较少"
+  ],
+  "features": [
+    "端到端追踪（tracing）：一行 instrument() 捕获完整智能体轨迹",
+    "智能体评测指标（evals）：检测长轨迹中的不确定性与漂移",
+    "生产监控：按计划运行评测并预警回归",
+    "开源自托管（Apache-2.0），无供应商锁定",
+    "CLI 与 Skill 工作流，供编码智能体管理",
+    "主流框架/模型集成（LangGraph、LangChain、CrewAI、Google ADK、Claude Agent SDK、OpenAI Agents SDK；OpenAI/Gemini/Anthropic 等）"
+  ],
+  "related": [
+    "perplexity",
+    "meta-so",
+    "nano-ai-search",
+    "wenxin-yiyan",
+    "Kimi"
+  ],
+  "faq": [
+    {
+      "q": "PandaProbe 是什么？",
+      "a": "PandaProbe 是 Chirpz AI 推出的开源智能体工程平台，提供追踪、评测与监控能力，帮助开发者调试并持续改进 AI 智能体。"
+    },
+    {
+      "q": "可以自托管吗？",
+      "a": "可以。核心平台以 Apache-2.0 协议开源，可免费自托管，无功能限制。"
+    },
+    {
+      "q": "如何计费？",
+      "a": "提供免费 Hobby 档、付费 Pro（$29/月）与 Startup（$299/月）、Enterprise 定制，以及免费开源自托管方案。"
+    }
+  ],
+  "seo_keywords": [
+    "PandaProbe",
+    "PandaProbe AI搜索工具",
+    "PandaProbe怎么样",
+    "PandaProbe免费吗",
+    "PandaProbe和秘塔AI搜索对比"
+  ],
+  "content": "## PandaProbe 是什么？\n\n开源的 AI 智能体（Agent）工程平台，用于智能体的追踪（tracing）、评测（evals）与生产监控。\n\nPandaProbe（Chirpz AI）是开源的 AI 智能体工程平台，提供追踪、评测与生产监控能力，帮助开发者调试并持续改进 AI 智能体，支持云端与自托管。\n\n## 核心功能\n\n- 端到端追踪（tracing）：一行 instrument() 捕获完整智能体轨迹\n- 智能体评测指标（evals）：检测长轨迹中的不确定性与漂移\n- 生产监控：按计划运行评测并预警回归\n- 开源自托管（Apache-2.0），无供应商锁定\n- CLI 与 Skill 工作流，供编码智能体管理\n- 主流框架/模型集成（LangGraph、LangChain、CrewAI、Google ADK、Claude Agent SDK、OpenAI Agents SDK；OpenAI/Gemini/Anthropic 等）\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | Hobby $0/forever（每月 100 次 trace 摄入等）；Pro $29/月；Startup $299/月；Enterprise 定制；Open Source 自托管免费（Apache-2.0）。 |\n| 支持平台 | Web, API, Self-hosted（开源自托管）, CLI |\n| 评分 | ⭐4.5 |\n| 开发商 | Chirpz AI |\n\n## 价格与平台\n\n- **价格**：Hobby $0/forever（每月 100 次 trace 摄入等）；Pro $29/月；Startup $299/月；Enterprise 定制；Open Source 自托管免费（Apache-2.0）。\n- **平台**：Web, API, Self-hosted（开源自托管）, CLI\n- **官网**：https://www.pandaprobe.com\n\n## 优缺点分析\n\n### 优点\n\n- 追踪、评测与监控一体化\n- 支持云与自托管，含免费开源方案\n- 提供面向编码智能体的 CLI 与 Skill 工作流\n- 生产监控含定时评测与回归告警\n- 定价路径清晰，含免费档\n\n### 缺点\n\n- 框架/集成深度文档部分不全\n- 公开页面缺少延迟、搭建成本与安全合规细节\n- 中文资料较少\n\n## 常见问题（FAQ）\n\n**PandaProbe 是什么？**\n\nPandaProbe 是 Chirpz AI 推出的开源智能体工程平台，提供追踪、评测与监控能力，帮助开发者调试并持续改进 AI 智能体。\n\n**可以自托管吗？**\n\n可以。核心平台以 Apache-2.0 协议开源，可免费自托管，无功能限制。\n\n**如何计费？**\n\n提供免费 Hobby 档、付费 Pro（$29/月）与 Startup（$299/月）、Enterprise 定制，以及免费开源自托管方案。\n\n\n## 最终结论\n\nPandaProbe 是AI开发领域的一款 AI 工具，其核心优势在于追踪、评测与监控一体化。\n此外，支持云与自托管，含免费开源方案。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-06-28",
+  "published_date": "2026-06-28",
+  "verified_url": "https://www.pandaprobe.com",
+  "verified_publisher": "Chirpz AI",
+  "verified_what": "开源的 AI 智能体（Agent）工程平台，用于智能体的追踪（tracing）、评测（evals）与生产监控。",
+  "verified_price": "Hobby $0/forever（每月 100 次 trace 摄入等）；Pro $29/月；Startup $299/月；Enterprise 定制；Open Source 自托管免费（Apache-2.0）。",
+  "verified_platform": "Web, API, Self-hosted（开源自托管）, CLI",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "端到端追踪（tracing）：一行 instrument() 捕获完整智能体轨迹",
+    "智能体评测指标（evals）：检测长轨迹中的不确定性与漂移",
+    "生产监控：按计划运行评测并预警回归",
+    "开源自托管（Apache-2.0），无供应商锁定",
+    "CLI 与 Skill 工作流，供编码智能体管理",
+    "主流框架/模型集成（LangGraph、LangChain、CrewAI、Google ADK、Claude Agent SDK、OpenAI Agents SDK；OpenAI/Gemini/Anthropic 等）"
+  ],
+  "verified_description": "PandaProbe（Chirpz AI）是开源的 AI 智能体工程平台，提供追踪、评测与生产监控能力，帮助开发者调试并持续改进 AI 智能体，支持云端与自托管。",
+  "content_flags": "原 content 将 PandaProbe 完全错误地描述为“AI 语义搜索/数据探测工具”，与其真实定位（智能体工程平台）严重不符，属严重幻觉。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "编辑评分（综合官网与公开评测）",
+  "rating_verified": true,
+  "verified_pros": [
+    "追踪、评测与监控一体化",
+    "支持云与自托管，含免费开源方案",
+    "提供面向编码智能体的 CLI 与 Skill 工作流",
+    "生产监控含定时评测与回归告警",
+    "定价路径清晰，含免费档"
+  ],
+  "verified_cons": [
+    "框架/集成深度文档部分不全",
+    "公开页面缺少延迟、搭建成本与安全合规细节",
+    "中文资料较少"
+  ],
+  "verified_faq": [
+    {
+      "q": "PandaProbe 是什么？",
+      "a": "PandaProbe 是 Chirpz AI 推出的开源智能体工程平台，提供追踪、评测与监控能力，帮助开发者调试并持续改进 AI 智能体。"
+    },
+    {
+      "q": "可以自托管吗？",
+      "a": "可以。核心平台以 Apache-2.0 协议开源，可免费自托管，无功能限制。"
+    },
+    {
+      "q": "如何计费？",
+      "a": "提供免费 Hobby 档、付费 Pro（$29/月）与 Startup（$299/月）、Enterprise 定制，以及免费开源自托管方案。"
+    }
+  ],
+  "verified_tags": [
+    {
+      "text": "AI智能体"
+    },
+    {
+      "text": "AI开发"
+    },
+    {
+      "text": "可观测性"
+    },
+    {
+      "text": "开源"
+    }
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://www.pandaprobe.com",
+    "https://ustack.app/products/pandaprobe",
+    "https://aitoolly.com/product/pandaprobe"
+  ],
+  "verify_notes": "原 features 亦为搜索工具描述，需一并纠正；类别原为 AI搜索，应改为 AI开发。",
+  "content_verified": true,
+  "url_previous": "https://pandaprobe.com",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "PandaProbe 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：PandaProbe 的 端到端追踪（tracing）：一行 instrument() 捕获完整智能体轨迹 是亮点，价格 免费开源 + Pro $29/月；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "name": "ElevenLabs Dubbing",
+  "slug": "elevenlabs-dubbing",
+  "positioning": "免费AI音频工具推荐：音频到音频模型、90+ 语言/",
+  "auto_positioning": true,
+  "emoji": "🎙️",
+  "color": "#1C1C1C",
+  "description": "ElevenLabs Dubbing 是 ElevenLabs 推出的 AI 视频/音频配音与翻译工具，基于 Dubbing v2 模型，可在 90+ 种语言间翻译音视频，并保留原说话者的情绪、语调与音色。",
+  "category": "AI音频",
+  "tags": [
+    {
+      "text": "视频翻译"
+    },
+    {
+      "text": "AI配音"
+    },
+    {
+      "text": "多语言",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://elevenlabs.io/dubbing",
+  "price": "按分钟计费（Automatic Dubbing 以美元计价）；免费额度输出带水印，付费版去水印。详见官网定价页",
+  "platform": "Web, API",
+  "pros": [
+    "保留原始语音特征，音色自然且情感丰富",
+    "支持多种主流语言，覆盖广泛",
+    "具备自动唇形同步功能，口型与配音匹配",
+    "处理速度快，适合长视频批量转换",
+    "可通过 API 集成到现有工作流"
+  ],
+  "cons": [
+    "免费版有字符数和使用次数限制",
+    "长视频或高清内容付费成本较高",
+    "部分稀有语言的支持质量仍在优化中"
+  ],
+  "features": [
+    "90+ 语言/口音的自动配音与翻译",
+    "保留原表演的情绪、语调与音色（声音克隆）",
+    "说话人分离，支持多说话人重叠语音",
+    "同步感知翻译，自动对齐起止时间",
+    "音频到音频模型（基于原声而非转录）",
+    "支持上传文件或粘贴 YouTube/TikTok 等链接"
+  ],
+  "related": [
+    "heygen",
+    "descript",
+    "synthesia"
+  ],
+  "faq": [
+    {
+      "question": "ElevenLabs Dubbing 支持哪些语言？",
+      "answer": "支持包括英语、中文、日语、韩语、法语、德语、西班牙语等数十种主流语言，具体列表可在官网页面上查看。"
+    },
+    {
+      "question": "配音能完全保留原说话人的音色和情感吗？",
+      "answer": "是的，ElevenLabs Dubbing 利用先进的语音克隆技术，在翻译后仍能保持原始说话人的音色、语调和情感，效果非常自然。"
+    },
+    {
+      "question": "免费版有哪些限制？",
+      "answer": "免费版每月提供一定时长的配音额度，超出后需付费；同时部分高级功能（如唇形同步、高清输出）可能仅限付费用户使用。"
+    },
+    {
+      "question": "口型同步效果如何？是否需要额外设置？",
+      "answer": "口型同步效果在主流语言上表现良好，系统会自动根据配音调整口型。用户无需手动操作，仅在导出时选择开启即可。"
+    }
+  ],
+  "seo_keywords": [
+    "ElevenLabs Dubbing",
+    "ElevenLabs Dubbing怎么样",
+    "ElevenLabs Dubbing免费版",
+    "ElevenLabs Dubbing使用教程",
+    "ElevenLabs Dubbing和哪个好"
+  ],
+  "content": "## ElevenLabs Dubbing 是 是什么？\n\nElevenLabs Dubbing 是 ElevenLabs 推出的 AI 视频/音频配音与翻译工具，基于 Dubbing v2 模型，可以在 90 多种语言之间翻译音视频，同时努力保留原说话者的情绪、语调和音色，而不是换成冷冰冰的机器嗓——这是它和简单机器翻译字幕最大的区别。\n\n它做的是\"翻译配音\"而非简单字幕：模型先把每位说话人的对白从背景音中分离出来，再用目标语言重新演绎，保留说话人的身份感和情绪起伏；即便多人重叠说话，也能分离成不同音轨。翻译过程感知时间轴，自动对齐起止，让口型和节奏尽量贴合原片。它采用音频到音频的思路，基于原声而非纯转录来生成，听感更连贯，也更适合有表演成分的内容。\n\n## 价格与平台\n\n使用上很灵活：你可以上传本地文件，也可以直接粘贴 YouTube、X、TikTok、Vimeo 等的链接，或填一个直链；Automatic Dubbing 单次支持最大 2 GB、180 分钟的内容，对长视频也够用。免费额度的输出带水印，付费版则去水印。价格按分钟计费（Automatic Dubbing 以美元计价），具体档位见官网定价页，按用量付费对偶发需求比较友好。\n\n## 核心功能\n\n对想要把课程、播客、短视频推向海外观众却不想重录配音的创作者，ElevenLabs Dubbing 提供了一条低门槛的本地化路径——保留原表演的味道，只是换了一种语言说出来，省下雇佣多语种配音员的成本。\n\n需要留意，配音质量很大程度上取决于原片的人声清晰度和语言对的难度；某些小语种或极强口音的内容，效果可能不如主流语种稳定。它也更适合\"已有成片、想做多语言版本\"的存量内容，而非边拍边译的直播场景。对面向海外的内容团队，建议先拿一条代表性视频试水，对比免费水印版与付费版的听感差异，再决定把它接进常规生产流程。把它当成\"把一门语言换成另一门语言、同时留住表演\"的桥梁，而非全自动的翻译流水线，预期会更准确。\n\n## 最终结论\n\n从工作流角度，ElevenLabs Dubbing 最适合作为\"出海内容的一道本地化工序\"，把成片批量翻成多语言版本。但它不是实时直播的方案，更适合存量视频。建议先选一条代表性内容做端到端试译，确认音色保留和口型对齐达到你的标准，再把它接进常规生产；对长视频，记得先核对免费与付费的时长与水印差异。出海内容做多语种化时，它可以成为你的常规工序。先把一条片子跑通，再决定是否把它纳入固定的出海流程，最稳妥。它值得你认真试一次。\n",
+  "published": true,
+  "source_url": "https://elevenlabs.io/docs/capabilities/dubbing",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "verified_url": "https://elevenlabs.io/dubbing",
+  "verified_publisher": "ElevenLabs",
+  "verified_what": "ElevenLabs的AI配音工具，自动翻译+重新配音音频/视频内容至29种语言，保留原说话人的音色、语速和情感特征。支持Dubbing Studio（精细化编辑）、自动配音（API批量处理），与主流字幕平台和出版商合作开发，商用版权清晰。",
+  "verified_price": "API Dubbing: $0.33/分钟(含水印自动) / $0.50/分钟(无水印+Dubbing Studio)；订阅计划：Free $0(10k credits) / Starter $5/月(30k) / Creator $22/月(100k+1专业语音克隆) / Pro $99/月(500k) / Scale $299/月(1.8M+3席位) / Business $990/月(6M+10席位)",
+  "verified_platform": "Web（ElevenLabs Studio）、API",
+  "verified_features": [
+    "AI配音：29种语言自动翻译+重新配音",
+    "原声保留：保留说话人音色/节奏/情感",
+    "Dubbing Studio：逐句精细编辑+时间轴调整",
+    "API批量处理（$0.33-0.50/分钟）",
+    "TTS语音合成（32+语言，Flash/Turbo/Multilingual v2/v3）",
+    "语音克隆（Instant免费+Professional付费）"
+  ],
+  "source_urls": [
+    "https://elevenlabs.io/pricing/api",
+    "https://elevenlabs.io",
+    "https://elevenlabsmagazine.com/what-is-eleven-laboratory-elevenlabs-guide-2026/"
+  ],
+  "verify_notes": "原始tools.json中此工具为Dubbing专项页面。ElevenLabs整体产品线远超配音：含TTS/语音克隆/音乐/SFX/对话AI。配音价格按分钟计费，非按月固定。订阅套餐含所有产品共享credits。",
+  "compare_section": {
+    "competitors": [
+      "spark-tts",
+      "elevenlabs",
+      "udio"
+    ],
+    "verdict": "ElevenLabs Dubbing 与 Spark-TTS、ElevenLabs、Udio 同属AI音频赛道。在性价比上，ElevenLabs Dubbing（按分钟计费（Automatic Dubbing 以美元计价）；免费额度输出带水印，付费版去水印。详见官网定价页）门槛更低；若看重口碑，ElevenLabs（⭐ 4.8）评分更高；ElevenLabs Dubbing 的优势在于ElevenLabs的AI配音工具，自动翻译+重新配音音频/视频内容至29种语言，保留原说话人的音色、语速和情感特征。支，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  },
+  "published_date": "2026-08-08",
+  "created_date": "2026-08-08"
+}

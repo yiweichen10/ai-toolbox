@@ -1,0 +1,638 @@
+{
+  "_comment": "分类规则引擎单一数据源（#15）。AI工具采集自动化与 classify_tool.py 均读取本文件，避免规则散落在 prompt 中难以维护。新增/调整分类只改这里。",
+  "categories": {
+    "AI对话": {
+      "keywords": [
+        "聊天助手",
+        "对话",
+        "chatbot",
+        "chat",
+        "对话模型",
+        "通用助手",
+        "虚拟陪伴"
+      ],
+      "examples": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Kimi",
+        "DeepSeek",
+        "通义",
+        "文心一言",
+        "智谱清言",
+        "腾讯元宝",
+        "Grok",
+        "Character AI",
+        "豆包"
+      ]
+    },
+    "AI写作": {
+      "keywords": [
+        "写作",
+        "文案",
+        "润色",
+        "语法",
+        "校对",
+        "SEO",
+        "博客",
+        "小说",
+        "提纲",
+        "扩写"
+      ],
+      "examples": [
+        "Jasper",
+        "Copy.ai",
+        "Grammarly",
+        "QuillBot",
+        "Frase",
+        "Surfer SEO",
+        "Writesonic",
+        "火山写作"
+      ],
+      "subcats": {
+        "ai-seo": [
+          "SEO",
+          "关键词",
+          "搜索意图",
+          "排名优化",
+          "SERP"
+        ],
+        "ai-grammar": [
+          "语法",
+          "拼写",
+          "润色",
+          "校对",
+          "改写",
+          "proofread",
+          "grammar"
+        ],
+        "ai-marketing-copy": [
+          "营销文案",
+          "广告文案",
+          "邮件营销",
+          "社媒文案",
+          "品牌内容",
+          "copywriting"
+        ],
+        "ai-content-writing": [
+          "通用写作",
+          "文章撰写",
+          "长篇",
+          "小说",
+          "故事",
+          "论文",
+          "学术写作",
+          "简历",
+          "报告",
+          "剧本",
+          "叙事",
+          "写作助手",
+          "文档创作",
+          "长文"
+        ]
+      }
+    },
+    "AI绘画": {
+      "keywords": [
+        "绘画",
+        "生图",
+        "插画",
+        "图像生成",
+        "文生图",
+        "midjourney",
+        "stable diffusion",
+        "漫画"
+      ],
+      "examples": [
+        "Midjourney",
+        "Stable Diffusion",
+        "DALL-E",
+        "文心一格",
+        "通义万相",
+        "Niji",
+        "NovelAI"
+      ]
+    },
+    "AI编程": {
+      "keywords": [
+        "代码",
+        "编程",
+        "IDE",
+        "Copilot",
+        "代码生成",
+        "补全",
+        "debug",
+        "开发助手",
+        "coder"
+      ],
+      "examples": [
+        "GitHub Copilot",
+        "Cursor",
+        "Codeium",
+        "通义灵码",
+        "文心快码",
+        "CodeBuddy",
+        "Tabnine",
+        "Qwen3-Coder",
+        "Claude Code"
+      ]
+    },
+    "AI视频": {
+      "keywords": [
+        "视频",
+        "video",
+        "文生视频",
+        "图生视频",
+        "数字人",
+        "剪辑",
+        "口型",
+        "短视频"
+      ],
+      "examples": [
+        "Runway",
+        "Sora",
+        "Pika",
+        "可灵",
+        "HeyGen",
+        "CapCut",
+        "即梦",
+        "Vidu",
+        "海螺",
+        "Luma"
+      ],
+      "subcats": {
+        "ai-video-generation": [
+          "文生视频",
+          "图生视频",
+          "视频生成",
+          "视频模型",
+          "图片动效",
+          "text-to-video"
+        ],
+        "ai-digital-human": [
+          "数字人",
+          "虚拟主播",
+          "口型同步",
+          "AI出镜",
+          "虚拟形象",
+          "avatar",
+          "talking head"
+        ],
+        "ai-video-editing": [
+          "视频剪辑",
+          "字幕",
+          "文本转视频",
+          "长视频转短",
+          "自动剪辑",
+          "视频编辑",
+          "配音"
+        ]
+      }
+    },
+    "AI音频": {
+      "keywords": [
+        "音频",
+        "音乐",
+        "配音",
+        "语音合成",
+        "TTS",
+        "唱歌",
+        "音效",
+        "播客"
+      ],
+      "examples": [
+        "Suno",
+        "Udio",
+        "ElevenLabs",
+        "讯飞智作",
+        "ChatTTS",
+        "Stable Audio",
+        "Riffusion"
+      ]
+    },
+    "AI办公": {
+      "keywords": [
+        "办公",
+        "文档",
+        "PPT",
+        "表格",
+        "会议",
+        "笔记",
+        "邮箱",
+        "效率办公",
+        "协作"
+      ],
+      "examples": [
+        "Notion AI",
+        "Office AI",
+        "飞书智能",
+        "钉钉",
+        "Gemini in Docs",
+        "PPT",
+        "问卷"
+      ]
+    },
+    "AI设计": {
+      "keywords": [
+        "设计",
+        "UI",
+        "UX",
+        "logo",
+        "海报",
+        "修图",
+        "品牌",
+        "原型",
+        "建站",
+        "平面"
+      ],
+      "examples": [
+        "Canva",
+        "Figma",
+        "即时设计",
+        "稿定",
+        "Looka",
+        "Remove.bg",
+        "美图",
+        "Pixso",
+        "Adobe Express"
+      ],
+      "subcats": {
+        "ai-ui-design": [
+          "UI",
+          "UX",
+          "原型",
+          "界面",
+          "Figma",
+          "设计稿",
+          "交互",
+          "前端代码",
+          "wireframe"
+        ],
+        "ai-image-editing": [
+          "修图",
+          "抠图",
+          "去背景",
+          "放大",
+          "图像增强",
+          "照片",
+          "background removal",
+          "upscale"
+        ],
+        "ai-graphic-design": [
+          "海报",
+          "平面",
+          "模板",
+          "社媒配图",
+          "H5",
+          "在线设计",
+          "图文",
+          "图表"
+        ],
+        "ai-brand-design": [
+          "logo",
+          "品牌",
+          "配色",
+          "商标",
+          "视觉识别",
+          "brand",
+          "icon"
+        ]
+      }
+    },
+    "AI搜索": {
+      "keywords": [
+        "搜索",
+        "search",
+        "问答引擎",
+        "聚合搜索",
+        "研究助手",
+        "检索"
+      ],
+      "examples": [
+        "Perplexity",
+        "秘塔",
+        "Devv",
+        "Felo",
+        "You.com",
+        "Brave Search"
+      ]
+    },
+    "AI翻译": {
+      "keywords": [
+        "翻译",
+        "translat",
+        "多语种",
+        "本地化",
+        "字幕翻译"
+      ],
+      "examples": [
+        "DeepL",
+        "Google 翻译",
+        "彩云小译",
+        "腾讯交互翻译",
+        "沉浸式翻译"
+      ]
+    },
+    "AI自动化": {
+      "keywords": [
+        "自动化",
+        "工作流",
+        "RPA",
+        "浏览器自动化",
+        "流程编排",
+        "zapier",
+        "n8n",
+        "agent 执行"
+      ],
+      "examples": [
+        "n8n",
+        "Zapier",
+        "Make",
+        "Browser Use",
+        "Bardeen",
+        "Dify 工作流",
+        "Coze 工作流"
+      ]
+    },
+    "AI效率": {
+      "keywords": [
+        "效率",
+        "日程",
+        "提醒",
+        "笔记整理",
+        "个人助理",
+        "知识管理",
+        "标签页",
+        "摘要"
+      ],
+      "examples": [
+        "Mem",
+        "Rewind",
+        "Todoist AI",
+        "Notion",
+        "滴答清单",
+        "Readwise"
+      ]
+    },
+    "AI智能体": {
+      "keywords": [
+        "智能体",
+        "agent",
+        "多智能体",
+        "Agent框架",
+        "自主代理",
+        "agent平台",
+        "工作流智能体"
+      ],
+      "examples": [
+        "OpenClaw",
+        "Coze",
+        "Dify",
+        "Manus",
+        "CrewAI",
+        "百度千帆Agent",
+        "Flowith",
+        "Genspark",
+        "AutoGPT"
+      ]
+    },
+    "AI开发": {
+      "keywords": [
+        "LLMOps",
+        "模型托管",
+        "API网关",
+        "向量库",
+        "微调",
+        "推理部署",
+        "MLOps",
+        "开发者平台"
+      ],
+      "examples": [
+        "SiliconFlow",
+        "OpenRouter",
+        "阿里云百炼",
+        "Fireworks",
+        "Together AI",
+        "Hugging Face",
+        "Replicate",
+        "LangChain"
+      ]
+    },
+    "AI行业应用": {
+      "keywords": [
+        "法律",
+        "医疗",
+        "金融",
+        "教育",
+        "招聘",
+        "客服",
+        "机器人",
+        "具身",
+        "安全",
+        "垂直行业",
+        "行业大模型"
+      ],
+      "examples": [
+        "Harvey",
+        "Hippocratic",
+        "Bloomberg GPT",
+        "Duolingo",
+        "Intercom",
+        "Unitree",
+        "AGIBOT",
+        "DeepSec"
+      ]
+    },
+    "AI学习": {
+      "keywords": [
+        "学习",
+        "教程",
+        "课程",
+        "入门",
+        "自学",
+        "学习平台",
+        "学习网站",
+        "培训",
+        "AI教育",
+        "在线课程",
+        "learn",
+        "course",
+        "tutorial",
+        "mooc",
+        "入门教程"
+      ],
+      "examples": [
+        "Coursera",
+        "Kaggle",
+        "DeepLearning.AI",
+        "fast.ai",
+        "飞桨AI Studio",
+        "AI大学堂",
+        "动手学深度学习",
+        "OpenAI Academy",
+        "Elements of AI",
+        "Udacity AI学院",
+        "ShowMeAI",
+        "Google AI",
+        "MachineLearningMastery",
+        "ML for Beginners"
+      ]
+    },
+    "AI检测": {
+      "keywords": [
+        "检测",
+        "查重",
+        "降AI率",
+        "降重",
+        "AIGC检测",
+        "AI率",
+        "内容检测",
+        "原创度",
+        "论文检测",
+        "plagiarism",
+        "detector",
+        "查AI率",
+        "AI内容识别",
+        "降AIGC"
+      ],
+      "examples": [
+        "GPTZero",
+        "朱雀AI检测",
+        "Originality.AI",
+        "CopyLeaks",
+        "Winston AI",
+        "稿易降AI率",
+        "笔灵降AI率",
+        "千笔降AI率",
+        "学术猹",
+        "PaperFake",
+        "AISEO AI Content Detector",
+        "Smodin",
+        "Sapling"
+      ],
+      "subcats": {
+        "ai-humanize": [
+          "降AI率",
+          "降重",
+          "降AIGC",
+          "AI率降低",
+          "改写降重",
+          "humanize",
+          "降AIGC痕迹"
+        ],
+        "ai-content-detector": [
+          "检测",
+          "查重",
+          "detector",
+          "原创度",
+          "plagiarism",
+          "AI内容识别",
+          "AI率检测"
+        ]
+      }
+    },
+    "AI提示词": {
+      "keywords": [
+        "提示词",
+        "prompt",
+        "提示词库",
+        "提示词工程",
+        "指令",
+        "咒语",
+        "AI指令",
+        "提示词生成",
+        "prompt库",
+        "prompt generator",
+        "提示词管理"
+      ],
+      "examples": [
+        "PromptHero",
+        "AIPRM",
+        "PromptBase",
+        "LangGPT",
+        "ClickPrompt",
+        "PromptPerfect",
+        "AI Short",
+        "Snack Prompt",
+        "Learning Prompt",
+        "提示工程指南",
+        "PromptPilot",
+        "PublicPrompts"
+      ]
+    },
+    "去中心化AI": {
+      "keywords": [
+        "去中心化",
+        "区块链",
+        "Web3",
+        "链上",
+        "decentralized",
+        "crypto",
+        "代币",
+        "分布式",
+        "去中心化算力",
+        "去中心化训练"
+      ],
+      "examples": [
+        "Bittensor",
+        "Render Network",
+        "Akash Network",
+        "ElizaOS",
+        "AIXBT"
+      ]
+    }
+  },
+  "special_rules": [
+    {
+      "match": [
+        "人形机器人",
+        "具身智能",
+        "四足机器人",
+        "机器人公司"
+      ],
+      "force_category": "AI行业应用",
+      "note": "人形/具身机器人归AI行业应用，不归AI自动化"
+    },
+    {
+      "match": [
+        "智能体构建",
+        "Agent框架",
+        "多智能体平台"
+      ],
+      "force_category": "AI智能体",
+      "note": "Agent构建平台优先归AI智能体"
+    },
+    {
+      "match": [
+        "工作流编排",
+        "浏览器自动化",
+        "RPA"
+      ],
+      "force_category": "AI自动化",
+      "note": "流程编排/RPA归AI自动化"
+    },
+    {
+      "match": [
+        "降AI率",
+        "降重",
+        "AIGC痕迹",
+        "论文查重"
+      ],
+      "force_category": "AI检测",
+      "note": "降AI率/查重类归AI检测"
+    },
+    {
+      "match": [
+        "AI学习",
+        "AI教程",
+        "AI课程",
+        "AI入门",
+        "学习平台",
+        "在线课程"
+      ],
+      "force_category": "AI学习",
+      "note": "AI学习/课程类归AI学习"
+    }
+  ],
+  "fallback_note": "不确定时归最贴近的既有类目；禁止随意堆入'AI效率'，AI效率仅限个人效率/知识管理类。"
+}

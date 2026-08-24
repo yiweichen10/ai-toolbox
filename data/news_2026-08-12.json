@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260812-001",
+    "title": "ChatGPT 与 Gemini 双双突破 10 亿用户",
+    "summary": "OpenAI 与 Google 的聊天机器人均跨过 10 亿用户门槛。OpenAI 在 8 月 6 日的博文中披露 ChatGPT 月活用户超 10 亿，Google CEO 皮查伊则宣布 Gemini 月活达 10 亿，成为其史上增长最快的产品。OpenAI 称 ChatGPT 在 7 月周活用户已达 10 亿，而 Gemini 在 2 月月活为 7.5 亿，增长势头更猛。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "The Verge：AI（RSS）",
+    "source_url": "https://www.theverge.com/ai-artificial-intelligence/978113/chatgpt-gemini-1-billion-users",
+    "published_at": "2026-08-12T03:41:42+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260812-002",
+    "title": "Runway Seedance 2.5 上线，支持50角色参考",
+    "summary": "完整阵容，完整曲目，一次生成一个。\n\nSeedance 2.5 已在 Runway 上线，支持 50 个独特角色参考，以及最长 30 秒、与音乐同步的片段。点击下方链接即可开始使用。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "X：Runway (@runwayml)",
+    "source_url": "https://x.com/runwayml/status/2087251184658657346",
+    "published_at": "2026-08-12T02:53:56+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260812-003",
+    "title": "OpenAI 用 Astra 模型攻克 10 道数学难题，数学家既兴奋又担忧",
+    "summary": "OpenAI 宣布其未发布的 Astra 模型解决了 10 道长期悬而未决的数学难题，涵盖球体堆积、纠错码、非 sofic 群存在性等领域，并发布超 250 页论文及 Lean 验证结果。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "The Verge：AI（RSS）",
+    "source_url": "https://www.theverge.com/ai-artificial-intelligence/977273/the-ai-takeover-of-mathematics-has-begun",
+    "published_at": "2026-08-11T19:00:00+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260812-004",
+    "title": "Apple Silicon 与 macOS 虚拟机：借助 Llama.cpp 实现 11-16 倍的 LLM 推理加速",
+    "summary": "研究团队为 macOS 虚拟机中的 Metal 能力查询构建进程级兼容层，使 llama.cpp 能选用更新的 Metal 内核。在 M1 Ultra 上，TinyLlama 1.1B 的提示处理速度提升 11.08 倍、token 生成提升 16.36 倍，接近裸机性能的 98%；Gemma 4 12B 的提示处理与生成速度分别提升 7.20 倍和 14.54 倍。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md",
+    "published_at": "2026-08-12T00:41:17+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260812-005",
+    "title": "NVIDIA 推出 Nemotron 3.5 Lightning，加速本地智能体任务",
+    "summary": "NVIDIA 发布 Nemotron 3.5 Lightning，一款可定制的开源 30B 混合专家（MoE）模型，专为常驻智能体设计。相比同类开源模型，其 token 生成速度最高提升 4 倍，任务完成时间缩短 30%。该模型采用开放权重，支持用户微调以匹配特定任务，并可在 RTX PC、DGX Spark 及 Jetson 等设备上运行。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "NVIDIA Blog（RSS）",
+    "source_url": "https://blogs.nvidia.com/blog/local-ai-open-source-models-agents-nemotron",
+    "published_at": "2026-08-11T21:00:25+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260812-006",
+    "title": "研究人员发现可读取 ChatGPT 等模型加密推理过程的 API 漏洞",
+    "summary": "Alexander Panfilov 团队发现 OpenAI、Anthropic、Google 等主要 AI 提供商 API 存在漏洞，可读取推理模型的加密思考过程。扫描约7000条公开会话发现62个 API 密钥、33个邮箱和33个密码。通过越狱，Anthropic 的 Haiku 4.5可逐字转写 Opus 4.8的原始推理；解码10000条推理轨迹的 API 成本约720美元。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "The Decoder：AI News（RSS）",
+    "source_url": "https://the-decoder.com/but-marinade-and-leaked-passwords-are-what-researchers-found-in-chatgpts-hidden-reasoning",
+    "published_at": "2026-08-12T01:38:49+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260812-007",
+    "title": "Gemini 助力 Database Migration Service 加速 PostgreSQL 迁移",
+    "summary": "Google Cloud 在 Database Migration Service（DMS）中推出由 Gemini 驱动的 AI 辅助代码转换，可将 Oracle 或 SQL Server 的存储过程、触发器和自定义函数转换为 PostgreSQL PL/pgSQL 代码。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Google Cloud：Databases（RSS）",
+    "source_url": "https://cloud.google.com/blog/products/databases/accelerate-postgresql-migrations-with-gemini-in-dms",
+    "published_at": "2026-08-12T00:00:00+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260812-008",
+    "title": "用 ComfyUI API 实现 MiniMax-H3 多模态视频与音频生成流水线",
+    "summary": "本教程演示如何以 ComfyUI 为无头推理后端，构建端到端的 MiniMax-H3 视频生成工作流。通过 Python 直接构建执行图，支持文生视频、首尾帧条件生成和参考图像条件生成，并自动根据 GPU 显存选择 quality、balanced、squeeze 三种权重配置。流水线涵盖模型自动下载、节点模式校验、音视频联合解码与进度监控，无需图形界面即可复现实验。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "MarkTechPost（RSS）",
+    "source_url": "https://www.marktechpost.com/2026/08/10/implementing-a-minimax-h3-multimodal-video-and-audio-generation-pipeline-with-comfyui-apis",
+    "published_at": "2026-08-11T13:44:38+08:00",
+    "tags": [
+      "opinion"
+    ]
+  }
+]

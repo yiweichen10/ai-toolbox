@@ -1,0 +1,97 @@
+{
+  "name": "Mastra",
+  "slug": "mastra",
+  "positioning": "Mastra是什么？TypeScript优先的全栈Agent开发框架好用吗",
+  "auto_positioning": false,
+  "emoji": "⚡",
+  "color": "#6E56CF",
+  "description": "Mastra 是 TypeScript 优先的开源全栈 Agent 开发框架（Apache 2.0），提供 Agent、Workflow、Memory、RAG 与 Evals 一体化能力，并内置 OpenTelemetry 观测。它和 Vercel AI SDK 互操作良好，可一键部署到 Vercel、Cloudflare、Netlify 或独立 Node 服务，适合全栈团队在 Web 应用里直接落地智能体。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "免费可用",
+      "type": "free"
+    },
+    {
+      "text": "TypeScript"
+    },
+    {
+      "text": "开源框架"
+    },
+    {
+      "text": "RAG"
+    }
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://mastra.ai",
+  "price": "开源免费（Apache 2.0，Mastra Cloud 等可选付费托管）",
+  "platform": "TypeScript / Node.js（跨平台）",
+  "pros": [
+    "TypeScript 优先，类型安全贯穿 Agent 定义与工具输入输出",
+    "一体化能力：Agent、Workflow、Memory、RAG、Evals、Observability",
+    "和 Vercel AI SDK 互操作，模型路由覆盖数十家提供商",
+    "一键部署到 Vercel、Cloudflare Workers、Netlify 或独立 Node",
+    "原生 OpenTelemetry 追踪，生产行为全可见"
+  ],
+  "cons": [
+    "仅限 TypeScript/Node 生态，非 JS 团队用不上",
+    "高层抽象在需要细粒度控制时调试不够直观",
+    "生态与文档仍在快速成长，部分能力变动较快"
+  ],
+  "features": [
+    "类型化 Agent：一行声明指令、模型、工具，IDE 编译期即捕获 schema 不匹配",
+    "Workflow 引擎：基于 XState，支持 .then/.branch/.parallel/.suspend 控制流",
+    "Memory 与 RAG：会话记忆加内置 RAG 管线，支持 pgVector/Pinecone/Qdrant/MongoDB",
+    "Evals：内置 15+ 评估项，覆盖准确性、上下文与输出质量",
+    "Observability：原生 OTel 追踪，逐步记录 Agent/Workflow 执行",
+    "一键部署：Vercel、Cloudflare、Netlify、独立 Hono/Docker 均支持"
+  ],
+  "related": [
+    "langchain",
+    "pydantic-ai",
+    "google-adk"
+  ],
+  "content": "## Mastra是什么？\n\nMastra 是一个 TypeScript 优先的开源全栈 Agent 开发框架（Apache 2.0 协议），被不少开发者称为 LangChain.js 之后 TS 生态里最大的黑马。它的野心是把构建生产级 AI 应用需要的一整套能力——Agent、Workflow、Memory、RAG、Evals、可观测性——都收进一个框架里，让全栈团队不离开 TypeScript 就能把智能体直接落进 Web 应用，不用再起一套 Python 副服务。\n\n## 核心功能\n\n1. 类型化 Agent：用一份声明写清指令、模型与工具。框架全程类型安全，IDE 能在编译期就抓出工具输入和检索输出之间的 schema 不匹配，而不是等运行时才炸。\n2. Workflow 引擎：基于 XState 的图式工作流，提供 .then() 串流程、.branch() 走条件、.parallel() 并行、.suspend()/.resume() 做人工审核与续跑，长流程不怕中途挂。\n3. Memory 与 RAG：内置会话记忆与完整的 RAG 管线（切分、嵌入、向量库、检索、重排），开箱支持 pgVector、Pinecone、Qdrant、MongoDB，并带 GraphRAG 与 ReAG 等进阶玩法。\n4. Evals：内置 15+ 评估项，围绕准确性、可靠性、上下文与输出质量，让团队在每次代码变更时自动化跑评测。\n5. Observability：原生 OpenTelemetry 追踪，每一步 Agent/Workflow 执行——从查询嵌入到检索打分再到最终生成——都有完整 span 可追溯。\n6. 一键部署：Vercel、Cloudflare Workers、Netlify、独立 Hono 服务或 Docker 都能一条命令部署，你的 Agent 跑在你的应用所在之处。\n\n## 版本/套餐对比\n\nMastra 框架本身开源免费（Apache 2.0）。官方也提供 Mastra Cloud 等可选托管能力，具体付费档位未在公开资料中给出明确价格，建议以官网最新说明为准。\n\n## 值不值得用？\n\n优点：对 TS/Node 全栈团队极度友好，类型安全把很多 runtime 错误挡在编译期；一体化能力省去拼装多个库的麻烦；和 Vercel AI SDK 互操作、部署目标灵活；OTel 观测让生产可调试。缺点：只服务 TypeScript/Node 生态，非 JS 团队用不上；高层抽象在需要极细粒度控制时反而让调试不够直观；生态仍在快速成长，部分 API 变动较快。结论：如果你是全栈 TS 团队、想在应用内直接上 Agent，Mastra 是很顺手的选择。\n\n## 使用建议\n\n1. 用 Mastra Dev 本地环境先把 Agent 跑起来，可视化状态、记忆与工具调用。\n2. 需要明确流程控制的任务用 Workflow，别什么都丢给 LLM 自由发挥。\n3. RAG 场景直接接 @mastra/rag，选好向量库，上线前用 Evals 兜一遍质量。\n4. 部署目标挑和你基础设施一致的（Vercel/Cloudflare/Node），一条命令发版。\n\n## 适合谁用？\n\n推荐：TypeScript/Node 全栈团队，想在 Web 应用内直接落地智能体与 RAG。\n可考虑：已用 Vercel AI SDK、希望统一 Agent 与工作流栈的团队。\n不推荐：非 JavaScript 技术栈、或需要跨语言多运行时编排的大型异构团队。",
+  "published": true,
+  "faq": [
+    {
+      "question": "Mastra 只能用 TypeScript 吗？",
+      "answer": "是的，Mastra 是 TypeScript 优先的框架，面向 Node.js 生态，非 JS 团队通常不适合使用。"
+    },
+    {
+      "question": "Mastra 支持哪些向量数据库？",
+      "answer": "内置 RAG 管线开箱支持 pgVector、Pinecone、Qdrant 和 MongoDB，并提供元数据过滤与重排能力。"
+    },
+    {
+      "question": "Mastra 是免费的吗？",
+      "answer": "框架本身采用 Apache 2.0 开源协议，免费使用；官方也提供 Mastra Cloud 等可选托管，具体付费以官网为准。"
+    },
+    {
+      "question": "Mastra 和 LangChain 怎么比？",
+      "answer": "Mastra 更聚焦 TypeScript 全栈体验与一体化（Agent/Workflow/RAG/Evals/观测），类型安全更强；LangChain 生态更宽、语言覆盖更广。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Mastra",
+    "Mastra怎么样",
+    "Mastra免费版",
+    "Mastra使用教程",
+    "Mastra和哪个好"
+  ],
+  "source_urls": [
+    "https://mastra.ai/articles/rag-chatbot",
+    "https://mastra.ai/articles/rag-framework"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-20"
+}

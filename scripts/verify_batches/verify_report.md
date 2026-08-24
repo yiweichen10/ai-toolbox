@@ -1,0 +1,144 @@
+# aitoollab.cn 已发布工具核实报告
+
+- 核实总数: **397** / 397 已发布
+- 判定分布: REAL=389 | FAKE=0 | UNCERTAIN=8
+
+## 🟠 官网 URL 需修正 (48)
+- **RankSpot** (`rankspot`)：记录 `None` → 应为 `https://www.rankspot.ai` — 所有第三方评测与官网均指向 rankspot.ai（AI SEO 自动发布 Agent）
+- **Propane** (`propane`)：记录 `None` → 应为 `https://usepropane.ai` — usepropane.ai 官网及多篇报道确认其为丹麦 Propane ApS 的客户情报平台
+- **Sierra Ghostwriter** (`sierra-ghostwriter`)：记录 `None` → 应为 `https://sierra.ai` — Web搜索确认 Sierra 真实存在，但 Ghostwriter 为智能体构建工具，sierra-ghostwriter.ai 未确认为官方站点
+- **Cloud Computer Manus** (`cloud-computer-manus`)：记录 `None` → 应为 `https://manus.im` — Web搜索确认 Manus 存在且提供 Cloud Computer 功能，但官网为 manus.im，无独立 cloudcomputermanus.com
+- **Tabstack** (`tabstack`)：记录 `None` → 应为 `https://tabstack.co` — Web搜索显示 TabStack 真实站点为 tabstack.co，且官方强调不含AI功能，与描述矛盾
+- **Nex-N2** (`nex-n2`)：记录 `None` → 应为 `https://nex-agi.cn` — Web搜索确认 Nex-N2 为 Nex-AGI 开源智能体模型，官方域名为 nex-agi.cn，与搜索引擎描述不符
+- **Pencil AI** (`pencil-ai`)：记录 `None` → 应为 `https://trypencil.com` — trypencil.com 为 Pencil AI Limited 官方域名（AI 广告创意平台，2018 年起）；pencilai.io 未对应官方站点，且存在 pencilai.pro（另一 AI 视频产品）等同名混淆项。记录的描述与真实 Pencil 功能不符。
+- **Fooocus** (`fooocus`)：记录 `None` → 应为 `https://github.com/lllyasviel/Fooocus` — Fooocus 官方 README 明确声明：『我们没有任何 fooocus.com/.net/.co/.ai/.org/.pro/.one 等网站，这些全部是假的』，唯一官方来源是 GitHub 仓库。记录 URL fooocus.io 属官方点名的 FAKE 站点；但产品本身为真实开源图像生成工具，描述（开源/基于SDXL）准确。
+- **FlowMarket** (`flowmarket`)：记录 `None` → 应为 `https://flowmarket.social` — flowmarket.social 为官方站点，定位为 B2B deal flow 的 AI agent 网络（自动发现、匹配企业线索），2026 年上线；flowmarket.ai 非官方域名，记录的功能描述与实际产品不符。
+- **mike AI** (`mike-ai`)：记录 `None` → 应为 `https://www.mikeai.co` — mikeai.co 为 MikeAI 官方站点，AI 健身教练（FitnessGPT），2026 年上线；mikeai.com 非官方域名，记录的语音对话助手定位与真实产品完全不符。
+- **Domika** (`domika`)：记录 `None` → 应为 `None` — 检索到的真实 Domika 为家庭自动化客户端，与条目描述的 AI 助理不符，domika.ai 对应的 AI 助理产品无法确认。
+- **Mindra** (`mindra`)：记录 `None` → 应为 `https://mindra.co` — 检索确认 Mindra 真实存在但主域为 mindra.co，非 mindra.ai。
+- **F5-TTS** (`f5-tts`)：记录 `None` → 应为 `https://github.com/SWivid/F5-TTS` — GitHub 确认 F5-TTS 由 RVC-Boss/SWivid 维护，非 SunoAI；记录 URL github.com/SunoAI/F5-TTS 错误。
+- **Alpaca AI** (`alpaca-ai`)：记录 `None` → 应为 `None` — Stanford Alpaca 仅为研究项目，alpaca.ai 未对应所描述的商业产品，描述含夸大/虚构内容。
+- **Xint Code** (`xint-code`)：记录 `None` → 应为 `None` — 无明确检索结果确认 xintcode.ai 为真实 AI 编程工具，暂列为不确定。
+- **LingoAI** (`lingoai`)：记录 `None` → 应为 `None` — No clear independent confirmation that lingoai.com is this product's site. Apple App Store lists a 'LingoAI translated video' app; lingoai.io is an unrelated Web3 translation project. Could not verify the recorded URL or claims.
+- **MetaGPT** (`metagpt`)：记录 `None` → 应为 `https://github.com/geekan/MetaGPT` — MetaGPT is a real open-source multi-agent framework by DeepWisdom; metagpt.com is not the official site (official: deepwisdom.ai / github.com/geekan/MetaGPT).
+- **OpenClaw** (`openclaw`)：记录 `None` → 应为 `https://openclaw.ai` — OpenClaw confirmed real; it is an AI agent platform, official site is openclaw.ai (github.com/openclaw is only the org page).
+- **GPT-5.6 Sol** (`gpt-5-6-sol`)：记录 `None` → 应为 `https://openai.com` — GPT-5.6 Sol confirmed as a real OpenAI model; sol.openai.com is not an official OpenAI subdomain.
+- **Dexbotic** (`dexbotic`)：记录 `None` → 应为 `https://www.dexbotic.com` — 搜索显示官方站点为 dexbotic.com，产品为具身智能机器人框架而非自动化工作流
+- **Shadow AI** (`shadow-ai`)：记录 `None` → 应为 `None` — 搜索发现多个 Shadow AI 实体但均无法明确对应 batch 中描述的「影子模式后台 AI 助手」
+- **TradingAgents** (`trading-agents`)：记录 `None` → 应为 `https://www.tradingagents-ai.com` — 真实开源多智能体金融交易框架（Tauric Research），官方站点为 tradingagents-ai.com / tauric.ai，batch 的 .ai 域名非官方
+- **Qoder** (`qoder`)：记录 `None` → 应为 `https://www.qoder.com` — 搜索确认 qoder.com 及 aliyun.com/product/qodercn 为阿里云 Qoder 官方站点，厂商为阿里云而非 Sana Labs
+- **Wonder AI** (`wonder-ai`)：记录 `None` → 应为 `https://wonderai.app` — Wonder AI by Codeway is an AI art generator; official site wonderai.app (per toolify/Codeway product page).
+- **CosyVoice** (`cosy-voice`)：记录 `None` → 应为 `https://github.com/FunAudioLLM/CosyVoice` — CosyVoice is a real Alibaba FunAudioLLM TTS model; official GitHub is FunAudioLLM/CosyVoice (demo cosyvoice.org). Recorded cosyvoice.com is NOT the official site.
+- **MiniCPM-o** (`minicpm-o`)：记录 `None` → 应为 `https://huggingface.co/openbmb/MiniCPM-o` — MiniCPM-o is by ModelBest/OpenBMB (huggingface.co/openbmb); confirmed by modelbest.cn and multiple tech writeups. Not MiniMax.
+- **Jamie AI** (`jamie-ai`)：记录 `None` → 应为 `https://meetjamie.ai` — Official meetjamie.ai confirmed; privacy-first AI meeting notes, audio deleted after transcription.
+- **Glass Health** (`glass-health`)：记录 `None` → 应为 `https://glass.health` — Official glass.health confirmed; clinical AI (differential diagnosis, scribing) by Dereck Paul, 120k+ clinicians.
+- **VideoOS** (`video-os`)：记录 `None` → 应为 `https://jupitrr.com` — Jupitrr's VideoOS at jupitrr.com; videoos.net is an unrelated framework, not the product site.
+- **CoCounsel** (`cocounsel`)：记录 `None` → 应为 `https://cocounsel.com` — CoCounsel is Thomson Reuters product (cocounsel.com); Clio is an unrelated legal-practice-management vendor.
+- **DeepSec** (`deepsec`)：记录 `None` → 应为 `None` — No verified product at deepsec.io; 'DeepSec' matches a conference / Trend Micro / academic project, not a commercial AI security platform.
+- **PMB** (`pmb`)：记录 `None` → 应为 `https://pmbai.dev` — Official pmbai.dev confirmed; SQLite+LanceDB local memory, 29 MCP tools, no cloud/API key.
+- **Blop** (`blop`)：记录 `None` → 应为 `https://blopai.com` — Official blopai.com confirmed; 'Cursor for UX/UI optimization', QA agent for browser tests in GitHub Actions.
+- **Tempus AI** (`tempus-ai`)：记录 `None` → 应为 `https://www.gettempus.app` — App Store及gettempus.app确认Tempus AI为AI时间管理App，无tempus-ai.com
+- **Claude Fable 5** (`claude-fable-5`)：记录 `None` → 应为 `https://www.anthropic.com` — Anthropic透明度中心及多篇报道确认Claude Fable 5为Anthropic模型，无任何来源提及fable.anthropic.com
+- **GitHits** (`githits`)：记录 `None` → 应为 `https://githits.com` — githits.com确认GitHits为AI代理代码索引服务，2026年6月获175万美元种子轮
+- **Phind** (`phind`)：记录 `None` → 应为 `https://www.phind.com` — 多个来源确认 phind.com 为面向开发者的AI搜索引擎官方地址，phindai.org 为仿冒/第三方域名
+- **Algo** (`algo`)：记录 `None` → 应为 `None` — 检索仅见学术框架ALGO、algo-tech.ai推理平台、AlgoArena等，无 algo.ai 对应编程工具的确凿证据
+- **Amp** (`amp`)：记录 `None` → 应为 `https://sourcegraph.com/amp` — sourcegraph.com/amp 为官方地址，Sourcegraph创始团队出品，非Anthropic产品
+- **Base44** (`base44`)：记录 `None` → 应为 `https://base44.com` — Base44 官网为 base44.com，服务条款显示由 Wix.com Ltd. 运营；base44.ai 非官方域名
+- **Pixelle-Video** (`pixelle-video`)：记录 `None` → 应为 `https://github.com/AIDC-AI/Pixelle-Video` — Pixelle-Video 是 AIDC-AI 开源的全自动短视频引擎，官网 aidc-ai.github.io/Pixelle-Video 及 GitHub AIDC-AI/Pixelle-Video；pixelle-video.ai 未作为官方站点出现
+- **Velo AI** (`velo-ai`)：记录 `None` → 应为 `None` — 搜索未确认 veloai.com 为有效站点；真实 Velo 为 usevelo.ai（AI 视频），另存 velo-ai.tech(测试)、velorai.co 等不同产品
+- **open-design** (`open-design`)：记录 `None` → 应为 `https://open-design.ai` — Open Design 是 nexu-io 开源的 Claude Design 替代品，官网 open-design.ai、源码 github.com/nexu-io/open-design；open-design.io 非官方
+- **Flint** (`flint`)：记录 `None` → 应为 `https://www.flintnote.com` — Flint 为 AI 笔记与知识管理工具（flintnote.com，开源），描述中的知识图谱/语义搜索吻合，但 flint.sh 非其官网
+- **agent-skills** (`agent-skills`)：记录 `None` → 应为 `https://agentskills.ai` — Agentskills.ai 为真实站点（Pre-built AI Agents for Business Owners）；Anthropic 亦发布 Agent Skills 开放标准(agentskills.io)；agent-skills.ai 连字符域名为错误
+- **Spark-TTS** (`spark-tts`)：记录 `None` → 应为 `https://github.com/SparkAudio/Spark-TTS` — GitHub 正确仓库为 SparkAudio/Spark-TTS（基于 Qwen2.5 的开源 TTS）
+- **Ada Health** (`ada-health`)：记录 `None` → 应为 `https://ada.com` — Ada 官方站点为 ada.com，App Store 开发者为 Ada Health，产品描述基本一致
+- **Seedream 5.0 Pro** (`seedream-5-0-pro`)：记录 `None` → 应为 `https://seed.bytedance.com/zh/seedream5_0_pro` — Seedream 5.0 Pro 为字节跳动图像模型，官站 seed.bytedance.com，与阶跃星辰无关
+
+## 🟡 描述存在明显错误 (78)
+- **Mem** (`mem-ai`)：轻微：描述称其为'2026年创新产品'，实际 Mem 早在2020年就已推出；核心功能描述基本准确。
+- **Raycast AI** (`raycast-ai`)：轻微：平台标注为'本地部署 / Web'有误，Raycast 是 macOS 桌面应用，非本地部署/网页端。
+- **Looka** (`looka`)：轻微：价格标注'免费使用'有误导，Looka 生成 Logo 需付费下载（低清 $20 起）。
+- **Fliki** (`fliki`)：轻微：平台标注'本地部署 / Web'有误，Fliki 为纯 SaaS 网页应用。
+- **Galileo AI** (`galileo-ai`)：明显错误：描述称其为'专注工作学习效率的智能 AI 助手'，但真实的 galileo.ai 是面向 LLM 开发者的 AI 可观测与评测平台（AI observability & eval），用于监控/评估 AI 应用，并非通用对话助手。
+- **Kling 3.0** (`kling-3-0`)：轻微：'Kling 3.0'具体版本号无法确认是否为最新官方命名，但可灵 AI 视频产品确为真实存在。
+- **AnySceneGen** (`anyscenegen`)：轻微偏差：真实产品是面向具身智能/机器人训练的'仿真空间数据生成平台'（生成带物理属性的可仿真 3D 场景），而非主要面向建筑师/设计师/游戏开发者的创意出图工具；不过其确实具备文本生成场景与 3D 导出能力。域名 anyscenegen.ai 被本站列为官网，但未能完全独立确认即官方主域（真实厂商为 Intime AI）。
+- **RankSpot** (`rankspot`)：URL 错误：记录域名 rankspot.io 应为 rankspot.ai；且描述将其定位为'SEO 排名监控工具'，但真实 RankSpot 是自动化 SEO 内容发布 AI Agent（自动研究/写作/发布文章到博客），排名监控只是其部分能力。
+- **Propane** (`propane`)：严重错误：记录将该工具描述为'基于 GPT-4o 的 AI 写作助手（营销/文案模板）'，但真实的 Propane（usepropane.ai）是面向产品团队的'客户情报操作系统（customer intelligence OS）'，整合 HubSpot/Intercom/Slack 等客户数据供团队与 coding agent 使用，与写作助手毫无关系。记录 URL propane.ai 也非官方主域。
+- **Persona.js** (`persona-js`)：明显错误：描述称其为'基于 JavaScript 的 AI 角色构建框架（多模态人格模拟、动态记忆、虚拟伴侣/游戏 NPC）'，但真实的 Persona.js 是一个轻量级开源 Vanilla JS AI 聊天 UI 组件库（WebMCP-native，可嵌入网站的流式聊天部件），并非角色/人格模拟框架。域名 persona.js.org 参考为项目站点，官方主域或为 persona-chat.dev，未能完全独立确认。
+- **ChatGPT Work** (`chatgpt-work`)：轻微：描述称'基于 GPT-4o 模型'，实际 ChatGPT Work 基于 GPT-5.6；其余团队智能体定位准确。
+- **Gemini Omni** (`gemini-omni`)：轻微偏差：Gemini Omni 是 Google I/O 2026 发布的'视频生成/编辑模型'，并非能生成代码的通用助手；描述中'整合 Gemini 2.5 Pro'也已过时（当前为新一代 Omni 模型）。
+- **腾讯元宝** (`tencent-yuanbao`)：价格标注“基础$10/月起”与事实不符：腾讯元宝目前免费使用（内容摘录中也写明“完全免费”），属误导性定价信息
+- **PandaProbe** (`panda-probe`)：描述严重失实：真实产品 pandaprobe.com 是“开源 Agent 工程平台 / AI智能体追踪·评测·监控工具”（面向开发者），并非中文AI搜索/数据探测工具；功能、受众均不符
+- **Sierra Ghostwriter** (`sierra-ghostwriter`)：产品定位错误：Sierra 的 Ghostwriter 是“构建客户体验AI智能体”的平台，并非AI写作助手；且记录域名 sierra-ghostwriter.ai 非官方（Sierra 官网为 sierra.ai），疑似拼凑域名
+- **Cloud Computer Manus** (`cloud-computer-manus`)：产品定位偏差：真实“Cloud Computer”是 Manus（manus.im）平台的功能/特性，并非独立云桌面产品；记录域名 cloudcomputermanus.com 非官方，疑似拼凑域名
+- **Tabstack** (`tabstack`)：记录域名 tabstack.io 非官方（真实站点为 tabstack.co）；且描述失实：真实 TabStack 明确标注“No gimmicky AI integration!（无AI功能）”，其“AI自动分类/智能搜索”等说法不成立，它只是新标签页书签管理工具
+- **Monid** (`monid`)：产品定位严重失实：真实 Monid（monid.ai）是“面向AI智能体的工具调用路由器/统一付费层”（让Agent按需调用200+付费数据接口），并非面向普通用户的轻量级AI对话/知识问答助手；描述中的“个性化知识问答、任务规划”等面向C端的说法不成立
+- **Nex-N2** (`nex-n2`)：产品定位严重失实：真实 Nex-N2 是开源的“能动性大模型/AI智能体基础模型”（可部署的LLM），并非面向普通用户的“AI搜索与知识引擎”；记录域名 nex-n2.ai 未出现在任何官方来源（官方主页为 nex-agi.cn / nex.sii.edu.cn / HuggingFace / ModelScope）
+- **秒画** (`miaohua`)：厂商错误：记录描述称『字节跳动推出』，实际为商汤科技（SenseTime）旗下 AI 绘画产品；URL 正确。
+- **HappyHorse** (`happy-horse`)：类别/功能错误：记录称其为『提升工作效率的AI助手（任务管理/自动化工作流/数据分析）』，实际 HappyHorse 是 AI 视频生成器（文生/图生视频+原生音轨），产品定位完全不同。
+- **Pencil AI** (`pencil-ai`)：URL 错误且功能不符：记录 URL 为 pencilai.io，但 Pencil 官方站点为 trypencil.com；真实 Pencil 是面向电商/投放的 AI 广告创意生成平台，并非『智能AI设计助手（文本转图像/修图）』。
+- **Schole AI** (`schole-ai`)：定位偏差：记录描述为『面向学生/研究人员的作业解答学习助手』，真实 Scholé AI 更偏企业级（B2B）AI 素养与员工培训平台，而非单纯学生作业工具。URL 正确。
+- **Melty** (`melty-ai`)：功能错误：记录称其为『AI内容创作/文案生成工具』，实际 Melty 是开源 AI 代码编辑器（VS Code 分支），用于代码补全/生成/调试，非写作工具。
+- **FlowMarket** (`flowmarket`)：URL 错误且功能不符：记录 URL 为 flowmarket.ai，官方域名为 flowmarket.social；真实 FlowMarket 是面向 B2B 交易的『AI 代理网络（自动发现/匹配商机）』，并非『集成200+AI应用的可视化工作流自动化平台』。
+- **mike AI** (`mike-ai`)：URL 错误且功能不符：记录 URL 为 mikeai.com，官方域名为 mikeai.co；真实 MikeAI 是『AI 健身教练』（个性化训练/饮食计划），并非『语音交互智能对话助手』。
+- **Comet** (`comet`)：描述称其为“AI内容创作平台（博客/社媒/营销内容）”有误；comet.com 实际是 Comet ML，提供 ML 实验追踪与 LLM 可观测性平台 Opik，并非内容创作工具。
+- **Domika** (`domika`)：描述称其为“AI个人助理（日程/任务/对话）”，但真实 Domika 是 Home Assistant 客户端应用（domika.app，开发者 DevPocket），并非 AI 助理；domika.ai 与所描述的 AI 助理产品无法对应。
+- **Mindra** (`mindra`)：条目 URL 为 mindra.ai，但真实 Mindra 官网为 mindra.co（AI 智能体编排/部门化协作平台）；URL 需修正。
+- **F5-TTS** (`f5-tts`)：描述称“F5-TTS 是 Suno 团队开源”有误；F5-TTS 实为 SWivid 开源项目（github.com/SWivid/F5-TTS），Suno 是另一家音乐生成公司。
+- **Alpaca AI** (`alpaca-ai`)：描述称“斯坦福开发、2026年迭代至 Alpaca 2.0 可商用版本”误导；Stanford Alpaca 是 2023 年研究模型（stanford_alpaca，权重已下架），不存在 alpaca.ai 所描述的在售 2.0 商业产品。
+- **Xint Code** (`xint-code`)：xintcode.ai 无法检索到明确对应的真实产品；百度确有“文心快码”（wenxin-kuaima，独立条目），但 Xint Code 与之不同，无法确认其为真实存在的独立产品。
+- **Skywork 3.1** (`skywork-3-1`)：条目 URL 记为 skywork.com；天工/Skywork 真实官网为海外 skywork.ai 与国内 tiangong.cn（skywork.com 非标准入口）。产品本身真实（天工 3.1 于 2026-06 发布）。
+- **阶跃星辰** (`stepfun`)：Founder misattributed: description says '由前百度高管李开复创立', but 李开复 founded 01.ai/零一万物, NOT StepFun. StepFun was founded by 姜大昕.
+- **OpenClaw** (`openclaw`)：Misdescribed as a 'web scraping / data collection tool'. OpenClaw is actually a personal AI agent / assistant platform, not a web scraper.
+- **Tabbit** (`tabbit`)：Misdescribed as a '智能标签管理工具' (tab manager). Tabbit is actually an AI-native browser (Tabbit AI Browser), not just a tab/bookmark manager.
+- **GPT-5.6 Sol** (`gpt-5-6-sol`)：Recorded URL sol.openai.com is NOT a real OpenAI-owned domain; the GPT-5.6 Sol model itself is real (on openai.com).
+- **Glitter AI** (`glitter-ai`)：描述错误：实际产品是「屏幕录制+语音→自动生成分步指南/SOP」的文档生成工具，并非通用 AI 对话助手
+- **Dexbotic** (`dexbotic`)：描述完全错误：实际为开源 VLA（视觉-语言-动作）具身智能机器人开发框架，并非 Zapier 式自动化工作流平台；URL 应为 .com 而非 .ai
+- **Shadow AI** (`shadow-ai`)：描述为「隐私 AI 助手/影子模式后台助手」存疑：存在多个名为 Shadow AI 的实体（语音笔记、加密 agent、企业 AI 治理、科研实验设计等），均未明确匹配该描述，shadowai.com 是否为该产品的官方站点无法确认
+- **Qoder** (`qoder`)：厂商描述错误：batch 称厂商为「Sana Labs」，实际为阿里云（原通义灵码 Lingma 升级更名）的 AI 智能体产品系列；官方站点为 qoder.com，batch 的 qoder.ai 非官方
+- **Phinite** (`phinite`)：描述错误：实际产品是「多智能体 AI 编排操作系统（Multi-Agentic AI 平台）」，并非 AI 语音合成/音频修复工具
+- **Wonder AI** (`wonder-ai`)：Description mischaracterizes Wonder AI as a general creative-content tool (copywriting, image ideas, video scripts); it is actually an AI art/image generator (text-to-image) by Codeway. Recorded URL wonderai.com is not the confirmed official site (official is wonderai.app).
+- **MiniCPM-o** (`minicpm-o`)：Description wrongly attributes MiniCPM-o to 'MiniMax公司'; it is actually developed by ModelBest (面壁智能) / OpenBMB, NOT MiniMax. Recorded URL huggingface.co/MiniMaxAI/MiniCPM-o points to the wrong org (should be OpenBMB).
+- **CubeSandbox** (`cube-sandbox`)：Description misrepresents CubeSandbox as a no-code visual AI prototyping/workflow tool with '20+ models' and '10万开发者'; it is actually a secure MicroVM sandbox service for AI agents (E2B-compatible code/browser execution), not a drag-and-drop builder.
+- **Swytchcode** (`swytchcode`)：Description mischaracterizes Swytchcode as a 50+ language code-conversion/refactoring tool ('Python转JS'); it is actually an API/SDK integration automation tool for publishers (generates API integration code, CLI/MCP server, 15+ languages).
+- **Octarine** (`octarine`)：Description wrong: real Octarine is a local-first Markdown/PKM note-taking app, NOT a marketing/social-media content generation platform.
+- **Jamie AI** (`jamie-ai`)：Batch URL jamieai.com is wrong (real site meetjamie.ai). Description also overstates it as a general AI assistant; actual product is a privacy-first AI meeting note taker (German, GDPR-compliant, 100+ languages).
+- **VideoOS** (`video-os`)：URL videoos.net does not belong to the product; real 'VideoOS' is Jupitrr AI's all-in-one video workflow at jupitrr.com. Description (video planning/editing/publishing) roughly matches Jupitrr's VideoOS.
+- **CoCounsel** (`cocounsel`)：Vendor/attribution wrong: batch says 'by Clio', but CoCounsel is Thomson Reuters' AI legal assistant (built on Westlaw). URL cocounsel.clio.com is misleading — Clio is a separate law-practice software company.
+- **DeepSec** (`deepsec`)：No commercial 'DeepSec' AI security platform found at deepsec.io. Real 'DeepSec' references: the DeepSec security conference (deepsec.net), Trend Micro Deep Security, and an academic DEEPSEC adversarial-ML project. The described commercial AI pentest platform (with $49/mo pricing) is unverifiable.
+- **Unitree GD01** (`unitree-gd01`)：Description wrong: GD01 is a manned transformable mecha/robot (载人变形机甲, ~$650K), NOT a quadruped education robot.
+- **PMB** (`pmb`)：Description wrong: PMB is a local-first memory tool for AI coding agents (MCP, works with Claude Code/Cursor/Codex) — NOT a project management assistant.
+- **Blop** (`blop`)：Description wrong: Blop is a UX/UI optimization & QA testing agent (turns design feedback into code / Playwright browser tests in CI) — NOT a social-media design/poster assistant.
+- **Augie AI** (`augie-ai`)：实为AI视频生成/剪辑工具（Augie by Storyblocks），目录描述为通用'创意助手'略有偏差；且存在多个同名Augie产品（如销售助手myaugieai.com）易混淆
+- **Tempus AI** (`tempus-ai`)：记录URL tempus-ai.com 应为 gettempus.app；实际为AI日程规划/专注App（Tempus AI Daily Planner），功能描述基本准确但定价（$9.99/$29.99）与App Store实际不符
+- **Claude Fable 5** (`claude-fable-5`)：记录描述为'专注故事创作的AI写作工具(fable.anthropic.com)'与事实不符：Claude Fable 5是Anthropic的旗舰大模型（非写作工具），捏造了'超长叙事引擎/动态角色记忆/10万字故事'等能力；fable.anthropic.com并非Anthropic官方地址
+- **GitHits** (`githits`)：记录URL githits.ai 应为 githits.com；描述基本准确（AI驱动代码/仓库发现），但其核心定位是面向AI编程代理的开源代码索引/MCP服务，而非'社区热度趋势分析'推荐平台
+- **Alexa Plus** (`alexa-plus`)：订阅价记录为$5.99/月起，实际标准版为$19.99/月（Prime会员免费）；其余功能描述准确
+- **Phind** (`phind`)：记录URL为 phindai.org，非官方；官方站点为 phind.com
+- **清影AI** (`qingying-ai`)：描述称『360公司推出』，错误；清影(Ying)实为智谱AI基于CogVideoX开发的AI视频生成工具
+- **LightRAG** (`lightrag`)：描述称『香港中文大学（深圳）』，错误；实为香港大学（The University of Hong Kong）数据智能实验室开发，论文发表于EMNLP 2025
+- **Algo** (`algo`)：未找到 algo.ai 对应明确产品；同名『ALGO AI』多为 algo-tech.ai 推理平台，所描述『专注算法优化的AI编程工具』缺乏可靠来源，疑似泛化/虚构
+- **Ada AI** (`ada-ai`)：描述称是『个人日常对话助手/知识问答』，错误；ada.cx 实为面向企业的AI客服平台（ACX），自动解决客户咨询
+- **Amp** (`amp`)：记录URL为 platform.claude.com（Claude平台），且描述称『Anthropic推出、Claude Code前身』均错误；Amp 实为 Sourcegraph 推出的编程Agent，后与Sourcegraph独立为 Amp Inc.
+- **Zoona** (`zoona`)：描述完全错误：称 Zoona 是『AI视频生成与编辑平台』；实际 zoona.ai 是自主式AI客服代理平台（自动解决客户咨询），与视频生成无关
+- **Huddle01 VMs** (`huddle01-vms`)：『VMs』并非Huddle01标准命名产品，但所描述平台（去中心化视频会议、Web3钱包登录、AI会议摘要）基本准确
+- **Base44** (`base44`)：记录 URL 为 base44.ai 系错误推测，真实官网为 base44.com（已被 Wix 收购）；描述整体合理，但更准确为无代码应用搭建平台(vibe coding)而非单纯代码生成
+- **Pixelle-Video** (`pixelle-video`)：记录 URL pixelle-video.ai 错误（真实为开源项目主页）；且描述称“高级功能付费订阅”不实——Pixelle-Video 是完全免费的开源项目(Apache-2.0)，无付费计划
+- **Velo AI** (`velo-ai`)：记录 URL veloai.com 未获证实；描述为“通用效率/任务自动化工具”与真实 Velo(usevelo.ai，AI 视频工具)不符，疑似拼凑描述
+- **open-design** (`open-design`)：记录 URL open-design.io 错误（真实为 open-design.ai）；且描述称“专业版$19/月”不实——Open Design 为完全免费的开源工具(Apache-2.0)，无付费订阅计划
+- **Flint** (`flint`)：记录 URL flint.sh 未获证实；描述的“实时协作白板/多模态RAG引擎”与真实 Flint(flintnote.com，本地优先的开源笔记/知识管理工具，含知识图谱)不完全吻合，协作白板特性未证实
+- **agent-skills** (`agent-skills`)：记录 URL agent-skills.ai（带连字符）应无连字符 agentskills.ai；描述称“集成500+预置技能组件、多模型编排与混合推理”等具体数字未证实——真实 Agent Skills 为 Anthropic 发布的开放标准(SKILL.md 格式封装能力)
+- **Yoroll** (`yoroll`)：描述称其为“AI效率工具/智能任务管理和内容创作辅助”，实际是 AI 互动视频游戏创作平台（一句话生成可玩分支剧情游戏），并非任务管理/效率工具
+- **Spark-TTS** (`spark-tts`)：记录的 GitHub 地址 github.com/spark-tts/spark-tts 拼写错误，正确仓库为 github.com/SparkAudio/Spark-TTS
+- **Ada Health** (`ada-health`)：官网实际为 ada.com（Ada Health GmbH），记录 URL adahealth.com 疑非官方主站
+- **Strands Agents** (`strands-agents`)：描述称“Anthropic推出的AI智能体开发框架”，实际由 AWS（亚马逊云科技）开源开发，Anthropic 仅为贡献者之一（提供 API 接入支持）
+- **Seedream 5.0 Pro** (`seedream-5-0-pro`)：描述称“阶跃星辰于2026年初发布”且归类为AI对话，实际是字节跳动（ByteDance）Seed 团队的 AI 图像生成/编辑模型，并非对话类 LLM；记录 URL seedream.stepfun.com 也非官方（stepfun 为阶跃星辰域名，属张冠李戴），官方站点为 seed.bytedance.com
+
+## ⚪ 无法确认 (建议人工复核) (8)
+- **Domika** (`domika`) — 检索到的真实 Domika 为家庭自动化客户端，与条目描述的 AI 助理不符，domika.ai 对应的 AI 助理产品无法确认。
+- **Alpaca AI** (`alpaca-ai`) — Stanford Alpaca 仅为研究项目，alpaca.ai 未对应所描述的商业产品，描述含夸大/虚构内容。
+- **Xint Code** (`xint-code`) — 无明确检索结果确认 xintcode.ai 为真实 AI 编程工具，暂列为不确定。
+- **LingoAI** (`lingoai`) — No clear independent confirmation that lingoai.com is this product's site. Apple App Store lists a 'LingoAI translated video' app; lingoai.io is an unrelated Web3 translation project. Could not verify the recorded URL or claims.
+- **Shadow AI** (`shadow-ai`) — 搜索发现多个 Shadow AI 实体但均无法明确对应 batch 中描述的「影子模式后台 AI 助手」
+- **DeepSec** (`deepsec`) — No verified product at deepsec.io; 'DeepSec' matches a conference / Trend Micro / academic project, not a commercial AI security platform.
+- **Algo** (`algo`) — 检索仅见学术框架ALGO、algo-tech.ai推理平台、AlgoArena等，无 algo.ai 对应编程工具的确凿证据
+- **Velo AI** (`velo-ai`) — 搜索未确认 veloai.com 为有效站点；真实 Velo 为 usevelo.ai（AI 视频），另存 velo-ai.tech(测试)、velorai.co 等不同产品

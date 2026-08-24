@@ -1,0 +1,104 @@
+{
+  "name": "Claude Code",
+  "slug": "claude-code",
+  "positioning": "AI编程工具：终端AI编程+文件读写管理",
+  "auto_positioning": true,
+  "emoji": "💻",
+  "color": "#9771d4",
+  "description": "Anthropic推出的AI编程工具，直接在终端中使用Claude进行代码编写、调试和重构。支持理解整个代码库上下文，是目前最强大的命令行AI编程助手。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "AI编程"
+    },
+    {
+      "text": "AI生成"
+    },
+    {
+      "text": "付费"
+    }
+  ],
+  "rating": "⭐ 4.2",
+  "visits": "8万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://anthropic.com/claude-code",
+  "price": "基础$10/月起",
+  "platform": "Web",
+  "pros": [
+    "终端原生体验流畅",
+    "理解整个代码库上下文",
+    "代码质量高bug少",
+    "支持Git操作和文件管理",
+    "Agentic模式自主完成复杂任务"
+  ],
+  "cons": [
+    "需Anthropic API Key",
+    "网络依赖Claude服务",
+    "无图形化界面",
+    "大量使用API费用较高",
+    "国内访问需代理"
+  ],
+  "features": [
+    "终端AI编程",
+    "代码库全局理解",
+    "Git操作集成",
+    "文件读写管理",
+    "多文件编辑",
+    "错误自动修复"
+  ],
+  "related": [
+    "claude",
+    "chatgpt"
+  ],
+  "content": "## Claude Code 是什么？\n\nClaude Code是Anthropic推出的命令行AI编程工具，让开发者直接在终端中使用Claude进行代码编写、调试、重构和项目管理。它能理解整个代码库的上下文，是目前最强大的终端AI编程助手。\n\n与传统的AI编程插件不同，Claude Code直接运行在终端中，拥有完整的文件系统访问权限，可以自主完成从代码编写到Git提交的全流程操作。\n\n## 核心功能\n\n- **终端AI编程**：在命令行中直接与Claude对话编程，无需离开开发环境\n- **代码库全局理解**：能理解整个项目的文件结构、依赖关系和代码逻辑\n- **Git操作集成**：自动创建分支、提交代码、创建PR\n- **文件读写管理**：自主创建、修改、删除项目文件\n- **多文件编辑**：一次性修改多个文件，保持代码一致性\n- **错误自动修复**：遇到编译或运行错误时自动诊断和修复\n\n## 版本对比\n\n| 功能 | 免费版 | Claude Pro ($20/月) | Claude Max ($100/月) |\n|------|--------|---------------------|---------------------|\n| Claude Code访问 | 有限 | ✅ | ✅ 5倍用量 |\n| Opus 4模型 | ❌ | ✅ | ✅ |\n| Sonnet 4模型 | ✅ | ✅ | ✅ |\n| 代码库理解 | 有限 | 完整 | 完整 |\n\n## 优缺点分析\n\n### 👍 优点\n- 终端原生体验，对开发者来说最自然的工作方式\n- 能理解整个代码库上下文，跨文件引用准确\n- 生成的代码质量高，bug率低\n- 支持Git全流程操作，从编码到提交一站式\n- Agentic模式下可自主完成复杂的多步骤任务\n\n### 👎 缺点\n- 需要Anthropic API Key，国内获取不便\n- 强依赖网络连接，Claude服务不可用就无法使用\n- 没有图形化界面，对不熟悉终端的用户门槛高\n- 大量使用时API费用较高\n- 国内需要代理才能访问\n\n## 使用技巧\n\n1. **善用上下文**：在项目根目录启动Claude Code，它会自动理解整个项目。\n2. **分步指令**：复杂任务拆分成多步，每步确认后再继续。\n3. **Git集成**：让Claude Code自动创建分支和提交，避免手动操作。\n4. **代码审查**：完成编码后让Claude Code审查自己的代码。\n5. **/compact 命令**：上下文过长时使用压缩命令保持效率。\n\n## 适合人群\n\nClaude Code适合熟悉终端的全栈开发者和专业程序员。如果你日常在命令行中工作，Claude Code是最强大的AI编程伙伴。\n### 深度评测\n\nClaude Code 最大的优势在于它不是一个简单的代码补全工具，而是一个真正的\"AI程序员\"。它可以自主理解项目结构、读取多个文件、编写代码、运行测试、甚至创建 Git commit。\n\n在实际使用中，Claude Code 的代码质量非常高。它生成的代码通常比 GitHub Copilot 更完整、更少 bug，因为它能在写代码之前先理解整个项目的上下文。\n\n### 与其他工具的对比\n\nClaude Code vs GitHub Copilot：\n- Copilot 是代码补全插件，Claude Code 是独立终端工具\n- Copilot 只看当前文件，Claude Code 理解整个项目\n- Claude Code 可以自主执行 Git 操作和文件管理\n\nClaude Code vs Cursor：\n- Cursor 是完整 IDE，Claude Code 是轻量级终端工具\n- Cursor 适合前端和全栈开发，Claude Code 更适合后端和系统编程\n- Claude Code 的推理能力更强，适合复杂架构设计\n\n### 实际使用场景\n\n1. **新项目搭建**：告诉 Claude Code 你的需求，它能从零搭建完整的项目结构\n2. **Bug 修复**：把报错信息贴给它，它会自动定位问题并修复\n3. **代码重构**：选中一段代码让它优化，它会保持功能不变的情况下提升代码质量\n4. **学习新框架**：问它怎么用某个框架，它会直接在你的项目中写好示例代码\n5. **代码审查**：让它 review 你的 PR，给出改进建议\n\n### 注意事项\n\n- Claude Code 需要联网访问 Anthropic 的 API\n- 大量使用会产生较高的 API 费用（Max 计划 $100/月）\n- 对网络质量有要求，国内用户需要稳定的代理连接\n- 建议在重要项目上先在小分支上测试 Claude Code 的修改",
+  "published": true,
+  "faq": [
+    {
+      "question": "Claude Code是什么？怎么用？",
+      "answer": "Claude Code是Anthropic推出的AI编程助手，运行在终端中。它可以直接读写文件、执行命令、理解整个代码库。和Cursor不同，Claude Code是纯终端工具，适合喜欢命令行的开发者。"
+    },
+    {
+      "question": "Claude Code和Cursor有什么区别？",
+      "answer": "Claude Code在终端中运行，直接操作文件系统和git，适合后端和DevOps场景。Cursor是GUI编辑器，可视化更直观，适合前端和全栈开发。两者可以互补使用。"
+    }
+  ],
+  "created_date": "2026-03-22",
+  "verified_url": "https://anthropic.com/claude-code",
+  "verified_publisher": "Anthropic",
+  "verified_what": "Anthropic推出的全平台代理编程工具。以终端CLI为核心，同时支持VS Code/JetBrains扩展、Web、Desktop app、Slack、GitHub Actions CI/CD。Claude直接读代码库、编辑文件、执行命令、提交PR。2026年新功能：动态工作流(并行子代理)、Agent View、Routines定时任务、Computer Use桌面操作。",
+  "verified_price": "捆绑Claude订阅：Pro $20/月(适度日常) / Max 5x $100/月(重度多文件代理) / Max 20x $200/月(Opus级全量) / Team $25/席位/月(年付$20) / Enterprise $20/席位+API按量 / API按Token: Sonnet 5 $2/$10(首期至8/31,标准$3/$15), Opus 4.8 $5/$25(快速模式$30/$150), Fable 5 $10/$50",
+  "verified_platform": "终端CLI(macOS/Linux/Windows/WSL)、VS Code扩展(含Cursor/Devin Desktop兼容)、JetBrains扩展、Web、Desktop app、Slack、GitHub Actions/GitLab CI/CD",
+  "verified_features": [
+    "终端代理编程(读代码库+编辑+执行+调试)",
+    "多文件编辑与全局重构",
+    "动态工作流(10-100并行子代理)",
+    "Git/GitHub集成(Issue→代码→测试→PR全流程)",
+    "Agent View多会话管理",
+    "Routines(定时/事件驱动+API触发自动任务)",
+    "Computer Use(打开应用+浏览器+开发工具)"
+  ],
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "source_urls": [
+    "https://anthropic.com/claude-code",
+    "https://docs.anthropic.com/en/docs/claude-code/quickstart",
+    "https://www.anthropic.com/pricing",
+    "https://usagepricing.com/blueprint/claude-code"
+  ],
+  "verify_notes": "原始tools.json数据严重错误：price'基础$10/月起'→最低Pro$20捆绑；platform'Web'→以终端CLI为主+8种接口。全部来自anthropic.com官方域，无聚合站污染。",
+  "content_verified": true,
+  "url_previous": "https://docs.anthropic.com/en/docs/claude-code",
+  "compare_section": {
+    "competitors": [
+      "tongyi-lingma",
+      "cline",
+      "codex-cli"
+    ],
+    "verdict": "Claude Code 与 通义灵码、Cline、Codex CLI 同属AI编程赛道。若优先性价比，通义灵码（Individual Basic免费(300 Credits)；Pro月付；Enterprise按席位）门槛更低；若看重口碑，Cline（4.7）评分更高；Claude Code 的优势在于Anthropic推出的全平台代理编程工具。以终端CLI为核心，同时支持VS Code/JetBrains扩展、Web、，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

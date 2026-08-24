@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260804-001",
+    "title": "AirLLM 实现单块 4GB GPU 运行 70B 模型推理",
+    "summary": "AirLLM 项目支持在单块 4GB 显存 GPU 上运行 70B 参数大模型推理，无需多卡或大规模显存配置。该项目已开源，相关讨论在 Hacker News 上获得 103 点热度，引发社区关注。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://github.com/lyogavin/airllm",
+    "published_at": "2026-08-04T00:24:45+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260804-002",
+    "title": "Cloudflare 推出 Billable Usage API：为自助账户提供按产品与计费周期的程序化成本可见性",
+    "summary": "Cloudflare 发布 Billable Usage API，为自助账户提供单一端点，一次调用即可返回按产品和计费周期拆分的用量与成本，覆盖 Workers、R2、D1、Workers AI、Vectorize、Images 和 Stream。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Cloudflare Blog",
+    "source_url": "https://blog.cloudflare.com/billable-usage-api",
+    "published_at": "2026-08-03T21:00:00+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260804-003",
+    "title": "欧盟《人工智能法案》透明度规则生效，违规最高罚 1500 万欧元",
+    "summary": "欧盟《人工智能法案》下的新透明度义务于 8 月 2 日生效，要求公司披露用户何时与 AI 模型互动，并为合成音视频和文本添加机器可读标记。欧盟还推出了一套可选的 AI 披露标签供平台采用，但标注要求本身是强制性的。违规公司面临最高 1500 万欧元（约 1720 万美元）或全球年营业额 3% 的罚款，8 月 2 日前推出的模型有 4 个月宽限期。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "The Verge：AI（RSS）",
+    "source_url": "https://www.theverge.com/ai-artificial-intelligence/974571/eu-ai-act-transparency-labels-rules-deepfakes",
+    "published_at": "2026-08-04T01:38:45+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260804-004",
+    "title": "Qwen3.8-Max 发布：开源最强编码与协作模型，2.4T 参数",
+    "summary": "Qwen 正式发布 Qwen3.8-Max，这是 Qwen 家族迄今最强的模型，拥有 2.4T 参数（95B 激活），并首次开源 Qwen-Max 级权重，开放权重将于下周发布。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "Qwen：Blog Retrieval（API）",
+    "source_url": "https://qwen.ai/blog?id=qwen3.8",
+    "published_at": "2026-08-03T10:00:00+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260804-005",
+    "title": "Palantir 强劲季度后，CEO Alex Karp 称 AI 行业\"马克思主义\"",
+    "summary": "Palantir CEO Alex Karp 在季度股东信中警告，前沿 AI 实验室对企业过于不可信，并称其意图\"占有所谓合作伙伴的生产资料\"，带有\"马克思主义色彩\"。该公司第二季度营收 19 亿美元，同比增长 93%，利润 11 亿美元。Karp 主张 Palantir 提供模型无关的 AI 与分析软件，让企业掌控自身数据与 AI\"废气\"（提示词、编排、上下文）。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "TechCrunch：AI（RSS）",
+    "source_url": "https://techcrunch.com/2026/08/03/after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-marxist",
+    "published_at": "2026-08-04T07:19:50+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260804-006",
+    "title": "OpenRouter 推出 Ori Eval 简化评估流程",
+    "summary": "推出 Ori Eval：编写首个评估的最简单方式。\n\n没有绝对最好的模型，只有最适合每项任务的模型。Ori Eval 利用 OpenRouter 的 API 处理代码库中的每项任务，然后评估结果。\n\ncurl -fsSL https://openrouter.ai/skills/spawn-ori-eval",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "X：OpenRouter (@OpenRouter)",
+    "source_url": "https://x.com/OpenRouter/status/2084301100078027143",
+    "published_at": "2026-08-03T23:31:21+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260804-007",
+    "title": "MiniMax H3 正式开源：通用全模态生成系统支持 2K 视频与原生立体声",
+    "summary": "MiniMax 正式开源新一代通用视频模型 H3，可统一理解文本、图像、视频和音频，生成最高 2K 分辨率、最长 15 秒、带 32 kHz 原生立体声音频的视频。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "公众号：MiniMax（稀宇科技）",
+    "source_url": "https://mp.weixin.qq.com/s?__biz=MzE5MTA3NzcxMQ%3D%3D&mid=2247488931&idx=1&sn=0506e1d52edd5166becf35f5ebd83a07",
+    "published_at": "2026-08-03T10:44:09+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260804-008",
+    "title": "Kimi Work 幻灯片制作教程发布",
+    "summary": "使用 Kimi Work 制作幻灯片 - 教程 #1。\n\nKimi Slides 处理整个幻灯片制作流程：\n- 清晰的结构与研究，由 Kimi K3 驱动\n- 连贯的设计，包括精美的图表和 SmartArts\n- 可编辑并可直接下载\n\n欢迎在评论区告诉我们你还想看什么内容！",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "X：Kimi.ai (@Kimi_Moonshot)",
+    "source_url": "https://x.com/Kimi_Moonshot/status/2084245860339298423",
+    "published_at": "2026-08-03T19:51:51+08:00",
+    "tags": [
+      "opinion"
+    ]
+  }
+]

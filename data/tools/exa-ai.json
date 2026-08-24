@@ -1,0 +1,148 @@
+{
+  "name": "Exa AI",
+  "slug": "exa-ai",
+  "emoji": "🔍",
+  "color": "#3B82F6",
+  "description": "Exa 是面向 AI 应用的语义搜索与数据 API（发布方：Exa Labs），提供 Search、Deep Search、Websets、Research、Extract 等接口，以嵌入向量理解语义并返回结构化结果。",
+  "category": "AI搜索",
+  "tags": [
+    "语义搜索",
+    "API",
+    "RAG"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://exa.ai/",
+  "price": "按量付费；Search $7/1k，Deep Search $12/1k，Monitors $15/1k",
+  "platform": "Web, API",
+  "pros": [
+    "基于语义理解，搜索召回率高",
+    "支持多种查询模式（自然语言、关键词、嵌入向量）",
+    "易于集成到 AI 应用和代理工作流",
+    "响应速度快，适合实时场景",
+    "提供丰富的开发者文档和 SDK"
+  ],
+  "cons": [
+    "免费额度有限，高级功能需付费",
+    "需要一定的编程知识才能充分利用 API",
+    "中文和长尾查询的准确性略逊于英文"
+  ],
+  "features": [
+    "Search API：基于嵌入向量的语义搜索，理解查询意图而非关键词",
+    "Deep Search / Deep-Reasoning：多步检索与推理，返回结构化输出与引用",
+    "Websets / Company & People Search：批量返回结构化实体结果",
+    "Answer：带引用的 LLM 答案；Contents：网页全文抓取与摘要",
+    "Agent API 与 Monitors：异步深度研究、列表构建，以及定时监测网络新事件"
+  ],
+  "related": [
+    "perplexity",
+    "tavily-ai",
+    "brave-search-ai"
+  ],
+  "faq": [
+    {
+      "q": "Exa AI 是什么？",
+      "a": "Exa AI 是一个面向开发者的语义搜索引擎，提供 API 接口，允许用户通过自然语言查询获取精准的网页链接和内容，常用于 RAG 和 AI 代理场景。"
+    },
+    {
+      "q": "Exa AI 如何收费？",
+      "a": "Exa 采用按量付费（预充值），无订阅、无最低消费：Search $7/1k 请求、Deep Search $12/1k、Deep-Reasoning $15/1k、Contents $1/1k 页、Monitors $15/1k。新账户赠 $20 信用点，免费层每月另赠 $10。"
+    },
+    {
+      "q": "Exa AI 与 Perplexity 有什么区别？",
+      "a": "Perplexity 更偏向终端用户的对话式搜索产品，而 Exa AI 主要提供 API 和开发者工具，专注于为 AI 应用提供底层搜索能力。"
+    },
+    {
+      "q": "如何集成 Exa AI 到我的应用中？",
+      "a": "注册获取 API Key，通过 HTTP 请求调用搜索接口，官方提供 Python、Node.js 等 SDK 以及 LangChain、LlamaIndex 等框架集成，亦支持 MCP。"
+    }
+  ],
+  "seo_keywords": [
+    "Exa AI",
+    "Exa AI 怎么样",
+    "Exa AI 免费版",
+    "Exa AI 使用教程",
+    "Exa AI 和 Perplexity 哪个好"
+  ],
+  "content": "# Exa AI：给AI应用装上一个“懂语义”的搜索引擎\n\n如果你最近在捣鼓AI应用或者RAG（检索增强生成），大概率会遇到一个头疼的问题：怎么让AI模型拿到最新、最准确的互联网信息？传统的关键词搜索往往答非所问，自己爬网页又太折腾。这时候，可以试试Exa AI。\n\n## Exa AI是什么？\n\n简单来说，Exa AI是一个**为开发者打造的语义搜索引擎**。它和普通搜索引擎最大的区别在于：你不用拼凑关键词，直接用自然语言问它就行。比如你想找“最近关于GPT-5的深度技术分析文章”，它就能理解你的意图，直接返回相关网页链接和内容摘要。\n\n它专为AI应用场景设计——你可以把它理解成一个“搜索引擎即API”的服务。写几行代码，就能让你的AI助手具备实时联网检索能力。不管是给聊天机器人补充知识库，还是在自动化工作流里抓取信息，Exa都提供了比较干净的接入方式。\n\n## 核心功能\n\n**1. 语义搜索**  \n这是Exa的核心卖点。输入“如何看待苹果Vision Pro的开发者反馈”，它不会返回一堆包含“苹果”“反馈”关键词的垃圾页面，而是真的找到深度评测和开发者讨论帖。实际使用中，召回质量明显高于传统全文搜索，尤其是对长句、复杂意图的匹配效果很惊喜。\n\n**2. 链接与内容检索**  \nExa不仅能返回URL列表，还能直接返回页面内容的摘要、标题甚至全文。这对RAG场景非常实用——你不需要自己再爬一遍网页，直接拿到结构化内容喂给大模型就行。\n\n**3. 嵌入向量生成**  \n如果你想做更定制化的语义匹配，Exa支持把查询和文档转换成向量。你可以把搜索结果嵌入到自己的向量数据库里，进行二次筛选或聚类。这功能对小众垂直领域的精准检索很有帮助。\n\n**4. 批量查询与异步处理**  \n当需要一次性搜索上百个问题（比如监控竞品动态、批量采集信息）时，Exa提供了批量API和异步模式。实测中，并发请求的处理速度让单线程慢慢爬显得像老古董，适合对时效性有要求的场景。\n\n**5. RESTful API与主流框架集成**  \n开发者文档清晰，SDK支持Python、JavaScript等主流语言。更关键的是，它原生兼容LangChain和LlamaIndex——你几乎不用改代码，把Exa作为工具节点接入Agent就完事了。这一点对于快速搭建原型非常友好。\n\n## 版本/套餐对比\n\n目前Exa AI提供免费版和付费版，具体价格暂未公开（需官网查询或联系销售）。以下为常见功能差异：\n\n| 特性 | 免费版 | 付费版 |\n|------|--------|--------|\n| 月度查询次数 | 有限（通常几百次） | 按量或包月，额度更高 |\n| 响应速度 | 标准 | 优先处理，延迟更低 |\n| 高级功能（向量嵌入、批量异步等） | 部分开放 | 全功能 |\n| 技术/商务支持 | 社区支持 | 专属支持 |\n\n**补充说明**：免费版足够用来测试和开发体验，但如果要在生产环境中大规模使用，付费方案是必要的。\n\n## 值不值得用？\n\n**优点**：\n- 语义理解确实强，尤其英文搜索的召回率很高，能帮你省掉大量关键词调试时间。\n- 集成成本低，和LangChain等框架的无缝对接让很多开发者“开箱即用”。\n- 响应速度快，实时场景（比如聊天机器人触发搜索）基本无感。\n\n**缺点**：\n- 免费额度有限，认真用起来很快就会用完，高级功能需要付费。\n- 对编程能力有要求——它本质是一个API，不是给普通用户用的搜索引擎。\n- 中文搜索和长尾冷门查询的准确性明显不如英文。如果你主要做中文场景，可能需要额外做一层query改写或后处理。\n\n**总体结论**：**值得一试**。尤其是做英文AI应用、RAG项目、或者需要高频联网检索的开发者，Exa是目前为数不多的“把语义搜索做成开发者友好服务”的工具。如果你是纯中文场景或者只想临时用一下，先试用免费版再决定。\n\n## 使用建议\n\n1. **先从免费版开始**：注册后直接调API感受一下语义质量，特别是针对你项目的典型查询。\n2. **善用嵌入向量模式**：如果你的搜索结果需要做去重、排序或者冷门领域的深度召回，把Exa的向量接入自己的数据库能大幅提升效果。\n3. **结合LangChain使用**：不需要自己写复杂的调用逻辑，直接在Agent里把它当一个tool用，代码量减少50%以上。\n4. **注意中文优化**：如果查询中文内容，最好先改写为更清晰的英文查询（Exa内部对英文支持更好），或者配合后处理过滤。\n\n## 适合谁用？\n\n**推荐**  \n- 正在搭建AI Agent或RAG系统的开发者  \n- 需要给聊天机器人/自动化工具补充实时互联网数据的团队  \n- 做竞品监控、信息采集的运营或研究人员（有编程基础）\n\n**可考虑**  \n- 对中文搜索要求不高的多语言项目  \n- 临时需要高质量搜索结果进行数据分析的工程师（用免费版即可）\n\n**不推荐**  \n- 完全不会写代码的普通用户（建议用传统搜索引擎）  \n- 主要依赖中文长尾关键词检索的场景（准确性可能不够，需要额外投入）  \n- 预算极度有限且搜索量巨大的项目（免费额度不够，付费成本需评估）\n\n---\n\n总的来说，Exa AI是AI开发者工具链里一个值得关注的选项。它不像某些AI产品那样吹得天花乱坠，但在“语义搜索即服务”这个细分方向上，确实做得扎实。如果你正在被传统搜索的低效折磨，不妨花一下午时间试试它的API——说不定就对上眼了。",
+  "published": true,
+  "source_url": "https://exa.ai/pricing",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://exa.ai/",
+  "verified_publisher": "Exa Labs（Exa, Inc.）",
+  "verified_what": "面向 AI 应用的语义搜索与数据 API，以嵌入向量理解查询意图并返回结构化结果，提供 Search、Deep Search、Contents、Answer、Monitors、Agent 等接口。",
+  "verified_price": "按量付费（预充值，无订阅、无最低消费）。Search $7/1k 请求；Deep Search $12/1k（deep / deep-lite）、Deep-Reasoning $15/1k；Contents $1/1k 页；Answer $5/1k；Monitors $15/1k；Agent 按 effort $0.012–$1.00/次。免费额度：新账户 $20 信用点 + 免费层每月 $10 信用点（最高 20,000 请求/月）。",
+  "verified_platform": "API, Web (Dashboard), MCP",
+  "verified_features": [
+    "Search API：基于嵌入向量的语义搜索，理解查询意图而非关键词",
+    "Deep Search / Deep-Reasoning：多步检索与推理，返回结构化输出与引用",
+    "Websets / Company & People Search：批量返回结构化实体结果",
+    "Answer：带引用的 LLM 答案；Contents：网页全文抓取与摘要",
+    "Agent API 与 Monitors：异步深度研究、列表构建，以及定时监测网络新事件"
+  ],
+  "verified_description": "Exa 是面向 AI 应用的语义搜索与数据 API（发布方：Exa Labs），提供 Search、Deep Search、Websets、Research、Extract 等接口，以嵌入向量理解语义并返回结构化结果。",
+  "content_flags": "价格中“Monitors $5/1k”已过时——现行 Monitors 为 $15/1k 请求；其余内容准确。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "暂无权威外部评分（保留编辑评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "基于语义理解，搜索召回率高",
+    "支持多种查询模式（自然语言、关键词、嵌入向量）",
+    "易于集成到 AI 应用和代理工作流",
+    "响应速度快，适合实时场景",
+    "提供丰富的开发者文档和 SDK"
+  ],
+  "verified_cons": [
+    "免费额度有限，高级功能需付费",
+    "需要一定的编程知识才能充分利用 API",
+    "中文和长尾查询的准确性略逊于英文"
+  ],
+  "verified_faq": [
+    {
+      "q": "Exa AI 是什么？",
+      "a": "Exa AI 是一个面向开发者的语义搜索引擎，提供 API 接口，允许用户通过自然语言查询获取精准的网页链接和内容，常用于 RAG 和 AI 代理场景。"
+    },
+    {
+      "q": "Exa AI 如何收费？",
+      "a": "Exa 采用按量付费（预充值），无订阅、无最低消费：Search $7/1k 请求、Deep Search $12/1k、Deep-Reasoning $15/1k、Contents $1/1k 页、Monitors $15/1k。新账户赠 $20 信用点，免费层每月另赠 $10。"
+    },
+    {
+      "q": "Exa AI 与 Perplexity 有什么区别？",
+      "a": "Perplexity 更偏向终端用户的对话式搜索产品，而 Exa AI 主要提供 API 和开发者工具，专注于为 AI 应用提供底层搜索能力。"
+    },
+    {
+      "q": "如何集成 Exa AI 到我的应用中？",
+      "a": "注册获取 API Key，通过 HTTP 请求调用搜索接口，官方提供 Python、Node.js 等 SDK 以及 LangChain、LlamaIndex 等框架集成，亦支持 MCP。"
+    }
+  ],
+  "verified_tags": [
+    "语义搜索",
+    "API",
+    "RAG"
+  ],
+  "verified_category": "AI搜索",
+  "source_urls": [
+    "https://exa.ai/docs/reference/pricing",
+    "https://exa.ai/pricing?tab=api"
+  ],
+  "verify_notes": "免费层每月含 $10 信用点（约 20,000 请求）；价格以官网为准。",
+  "compare_section": {
+    "competitors": [
+      "perplexity",
+      "perplexity-ai",
+      "glean"
+    ],
+    "verdict": "Exa AI 与 Perplexity、Perplexity AI、Glean 同属AI搜索赛道：Exa AI 的 Search API：基于嵌入向量的语义搜索，理解查询意图而非关键词 是亮点，价格 按量付费；Search $7/1k，Deep Search $12/1k，Monitors $15/1k；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-10",
+  "created_date": "2026-08-10"
+}

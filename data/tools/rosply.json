@@ -1,0 +1,151 @@
+{
+  "name": "Rosply",
+  "slug": "rosply",
+  "positioning": "视觉驱动+完整桌面控制，AI效率工具实测",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#4A90D9",
+  "description": "Rosply 是一款视觉驱动的 AI 桌面自动化智能体：看着屏幕截图、用自然语言指令模拟鼠标键盘操作，自动完成打开网页、填表、下发票、回邮件、控制 VS Code 等任务。一次买断 $29，无订阅，数据留本地。",
+  "category": "AI效率",
+  "tags": [
+    "AI桌面自动化",
+    "智能体",
+    "电脑控制",
+    "视觉驱动",
+    "买断制"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "500万+",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://rosply.com",
+  "price": "一次性买断 $29（Gumroad），无订阅",
+  "platform": "Windows 10/11（完整体验）/ Linux（支持）/ macOS（beta）；需 Python 3.11+；另有 Windows 应用与 ai.rosply.com 远程网页面板",
+  "pros": [
+    "视觉理解，无需 XPath 等脆弱选择器",
+    "一次性买断，价格低且无订阅",
+    "屏幕数据留本地，隐私友好",
+    "可接本地模型完全离线运行",
+    "支持 Claude Code MCP，可远程派发任务"
+  ],
+  "cons": [
+    "Windows 体验最完整，macOS 仍处 beta",
+    "依赖视觉模型，复杂界面偶有误判",
+    "需自备 OpenRouter/本地模型额度",
+    "每任务上限 200 动作，超长任务需分段"
+  ],
+  "features": [
+    "视觉驱动（每步截图送视觉模型理解界面）",
+    "完整桌面控制（点击/输入/滚动/快捷键）",
+    "VS Code 代码生成（经 OpenRouter 调用 DeepSeek V3）",
+    "语音唤醒「Hey Rosply」（本地 Whisper，可离线）",
+    "跨步骤持久记忆",
+    "紧急停止 Ctrl+H（每任务上限 200 动作）",
+    "Claude Code MCP 集成",
+    "模型无关（Qwen VL/Gemini/GPT-4o/本地模型）"
+  ],
+  "related": [
+    "chatgpt",
+    "claude",
+    "perplexity"
+  ],
+  "faq": [
+    {
+      "q": "Rosply 需要付费 API 吗？",
+      "a": "不需要。OpenRouter 免费额度即可起步，多数用户几天内无需加钱；也可接入本地视觉模型完全离线运行。"
+    },
+    {
+      "q": "Rosply 支持哪些系统？",
+      "a": "Windows 10/11 完整体验，Linux 支持，macOS 为 beta；需 Python 3.11+。"
+    },
+    {
+      "q": "如何随时停止？",
+      "a": "随时按 Ctrl+H 立即中止；每个任务上限 200 个动作防止失控循环。也可关闭终端窗口干净退出。"
+    }
+  ],
+  "seo_keywords": [
+    "Rosply",
+    "Rosply免费版",
+    "Rosply怎么样 2026",
+    "Rosply和ChatGPT哪个好",
+    "Rosply企业版价格"
+  ],
+  "content": "## Rosply 是什么？\n\nRosply 是一个“让你的 AI 智能体接管整台电脑”的自动化工具。用法很直白：你用大白话下个指令，比如“打开 Chrome 查一下我的邮件”“把今天的 deadline 加到日历”“自动下载这些发票”，Rosply 就会像人一样看着屏幕、模拟点击、输入和滚动，一步步把任务做完。它不需要你写脚本，也不依赖脆弱的网页选择器（XPath 之类），而是靠“视觉”理解界面——每走一步都截图发给视觉模型，像人看屏幕那样识别对话框、弹窗和动态 UI。\n\n它和那些“企业级 AI 协作中枢”不是一回事：Rosply 更像是装在你自己电脑上的私人自动化助手，专注把重复性的电脑操作自动化。\n\n## 核心功能\n\n- 视觉驱动（Vision-Powered）：每一步截图交给 AI，能读懂任何没有 API 的桌面应用，包括 Chrome、Excel、VS Code、老牌企业内网系统。\n- 完整桌面控制：点击、双击、右键、拖拽、输入、滚动、快捷键，操作系统支持的原生输入都能用。\n- 持久记忆：任务步骤之间能记住数值（比如在一页读到发票号，粘到另一页的表单里），记忆还能跨多次运行保留。\n- VS Code 代码生成：内置扩展可让 Rosply 直接写文件、搭建项目（默认通过 OpenRouter 调用 DeepSeek V3）。\n- 语音唤醒：说一声 “Hey Rosply” 就能口述任务，Whisper 在本地运行，离线也能唤醒，不用热键、不用聚焦窗口。\n- 紧急停止：按 Ctrl+H 可立即中止；每次运行上限 200 个动作，防止失控死循环。\n- Claude Code 集成：可注册为全局 MCP 服务器，从 Claude Code 直接把任务派发给你的 Windows PC。\n\n## 定价\n\nRosply 是一次性买断，没有订阅、没有席位限制：\n\n- 买断价：$29（约 ¥210），通过 Gumroad 购买；一次付费、永久使用，含完整源码与所有未来更新，你的数据留在本地。\n- AI 推理费：默认用 OpenRouter 的 Qwen VL（免费额度就能起步，很多人几天都不用加钱）；你也可以一行配置换成 Gemini Flash、GPT-4o、Claude，或完全本地运行的视觉模型。\n- 也就是说，$29 是软件本身的买断价，真正调用大模型按你自己的 API 额度走，不强制付费。\n\n## 适合谁\n\n- 每天被重复电脑操作（填表、下发票、整理文件、批量跑命令）折磨的办公族和开发者。\n- 想要“说一句话就自动干活”、又不想学 RPA 脚本的人。\n- 已经用 Claude Code、希望把桌面操作也交给 agent 的开发者（MCP 集成很顺）。\n- 重视本地隐私、希望屏幕截图和任务文本只发给自己选的模型的人。\n\n## 小结\n\nRosply 的价值在于“用视觉而不是脚本”来驱动任意桌面应用，门槛低、买断便宜（$29）、数据留本地。它最适合个人把琐碎的电脑活儿外包给 AI，而不是当企业协作平台用。要注意两点：一是平台以 Windows 10/11 最完整，Linux 能用、macOS 还是 beta；二是它依赖视觉模型，复杂界面偶尔会看错，关键步骤建议人盯一下，并善用 Ctrl+H 随时叫停。\n\n## 常见问题（FAQ）\n\n**Rosply 需要付费 API 吗？**\n\n不需要。OpenRouter 免费额度即可起步，多数用户几天内无需加钱；也可接入本地视觉模型完全离线运行。\n\n**Rosply 支持哪些系统？**\n\nWindows 10/11 完整体验，Linux 支持，macOS 为 beta；需 Python 3.11+。\n\n**如何随时停止？**\n\n随时按 Ctrl+H 立即中止；每个任务上限 200 个动作防止失控循环。也可关闭终端窗口干净退出。",
+  "published": true,
+  "created_date": "2026-07-24",
+  "published_date": "2026-07-24",
+  "verified_url": "https://rosply.com",
+  "verified_publisher": "Rosply",
+  "verified_what": "Rosply 是一款视觉驱动的 AI 桌面自动化智能体：通过观察屏幕截图、用自然语言指令控制鼠标与键盘，自动完成网页浏览、填表、文件操作、代码生成等任务，无需写脚本或依赖脆弱的网页选择器。",
+  "verified_price": "一次性买断 $29（通过 Gumroad 销售），无订阅、无席位限制，含完整源码与所有未来更新；调用大模型按用户自己的 OpenRouter 额度或本地模型计费，不强制付费。",
+  "verified_platform": "Windows 10/11（完整体验）、Linux（支持）、macOS（beta）；需 Python 3.11+；另有 Windows 应用与 ai.rosply.com 远程面板。",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "视觉驱动（每步截图送视觉模型理解界面）",
+    "完整桌面控制（点击/输入/滚动/快捷键）",
+    "VS Code 代码生成（经 OpenRouter 调用 DeepSeek V3）",
+    "语音唤醒「Hey Rosply」（本地 Whisper，可离线）",
+    "跨步骤持久记忆",
+    "紧急停止 Ctrl+H（每任务上限 200 动作）",
+    "Claude Code MCP 集成",
+    "模型无关（Qwen VL/Gemini/GPT-4o/本地模型）"
+  ],
+  "verified_description": "Rosply 是一款视觉驱动的 AI 桌面自动化智能体：看着屏幕截图、用自然语言指令模拟鼠标键盘操作，自动完成打开网页、填表、下发票、回邮件、控制 VS Code 等任务。一次买断 $29，无订阅，数据留本地。",
+  "content_flags": "原 pros/cons/features/faq 描述的是另一款「AI 对话助手」产品（含免费版每日 30 次对话、RAG 知识库、团队空间、Zapier 集成等），与 Rosply 实际桌面自动化产品不符，已据官网订正。",
+  "verified_pros": [
+    "视觉理解，无需 XPath 等脆弱选择器",
+    "一次性买断，价格低且无订阅",
+    "屏幕数据留本地，隐私友好",
+    "可接本地模型完全离线运行",
+    "支持 Claude Code MCP，可远程派发任务"
+  ],
+  "verified_cons": [
+    "Windows 体验最完整，macOS 仍处 beta",
+    "依赖视觉模型，复杂界面偶有误判",
+    "需自备 OpenRouter/本地模型额度",
+    "每任务上限 200 动作，超长任务需分段"
+  ],
+  "verified_faq": [
+    {
+      "q": "Rosply 需要付费 API 吗？",
+      "a": "不需要。OpenRouter 免费额度即可起步，多数用户几天内无需加钱；也可接入本地视觉模型完全离线运行。"
+    },
+    {
+      "q": "Rosply 支持哪些系统？",
+      "a": "Windows 10/11 完整体验，Linux 支持，macOS 为 beta；需 Python 3.11+。"
+    },
+    {
+      "q": "如何随时停止？",
+      "a": "随时按 Ctrl+H 立即中止；每个任务上限 200 个动作防止失控循环。也可关闭终端窗口干净退出。"
+    }
+  ],
+  "verified_tags": [
+    "AI桌面自动化",
+    "智能体",
+    "电脑控制",
+    "视觉驱动",
+    "买断制"
+  ],
+  "verified_category": "AI效率",
+  "conflict_note": "条目描述与内容（视觉驱动桌面自动化、$29 买断）与官网一致，但 pros/cons/features/faq 描述的是一个不存在于该产品的「AI 聊天助手」功能集（免费版限次、RAG、团队协作等），属字段错配/虚构，已据 rosply.com 订正 verified_*。",
+  "source_urls": [
+    "https://rosply.com",
+    "https://ustack.app/products/rosply",
+    "https://www.aitoolnet.com/rosply"
+  ],
+  "verify_notes": "核心身份准确，仅补充/订正了被错配的 pros/cons/features/faq。",
+  "content_verified": true,
+  "price_verified": true,
+  "compare_section": {
+    "competitors": [
+      "evidence-dev",
+      "semrush-ai",
+      "jamie-ai"
+    ],
+    "verdict": "Rosply 与 Evidence.dev、Semrush AI、Jamie AI 同属AI效率赛道：Rosply 的 视觉驱动（每步截图送视觉模型理解界面） 是亮点，价格 一次性买断 $29（Gumroad），无订阅；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "ada-health",
+    "description": "Ada Health 是 Ada Health GmbH 推出的 AI 健康评估与症状自查应用，通过智能问诊引导用户描述症状，并给出初步的健康方向与就医建议。",
+    "content": "Ada Health 由 Ada Health GmbH 开发，是一款面向个人与家庭的健康评估应用。用户回答关于症状的问题后，AI 会结合临床知识库给出可能方向、风险等级与就医建议，并明确强调不替代医生诊断。其官方站点为 ada.com，全球累计已完成数千万次症状评估，支持多语言，常用于辅助分诊与就医决策。"
+  },
+  {
+    "slug": "spark-tts",
+    "description": "Spark-TTS 是一个基于大语言模型（Qwen2.5）的开源零样本文本转语音（TTS）工具，支持中英文、多音色与可控语音生成。",
+    "content": "Spark-TTS 由 SparkAudio 联合香港科技大学等机构开源发布，是建立在 Qwen2.5 之上的高效 TTS 模型，采用单流解耦语音 token，支持零样本声音克隆、跨语言合成以及性别/音高/语速等参数控制。项目代码托管于 GitHub 的 SparkAudio/Spark-TTS 仓库，可本地部署，适用于语音助手、有声内容等场景。"
+  },
+  {
+    "slug": "seedream-5-0-pro",
+    "description": "Seedream 5.0 Pro 是字节跳动（ByteDance）Seed 团队推出的专业级 AI 图像生成与编辑模型，擅长高精度图像生成、图层分离与精准局部编辑。",
+    "content": "Seedream 5.0 Pro 由字节跳动 Seed 团队开发，是面向生产设计工作流的图像生成/编辑模型（非对话类大语言模型），支持文生图、图生图、多参考融合、4K 原生输出、图层分离与局部重绘，并原生支持十余种语言的多语种文字渲染。官方站点为 seed.bytedance.com，通过 BytePlus ModelArk 提供 API，与视频模型 Seedance 同属字节 GenMedia 多模态矩阵。"
+  },
+  {
+    "slug": "yoroll",
+    "description": "Yoroll 是 LinearGame 推出的 AI 互动视频游戏创作平台，用户通过文本、图片或短片即可生成可玩的分支剧情互动游戏。",
+    "content": "Yoroll 由 LinearGame（新加坡/旧金山团队）开发，定位为 AI 视频原生游戏平台：用户输入一句话或上传剧本、图片，AI 即生成包含分支剧情、角色与交互玩法的可玩互动影游，无需编程或 3D 建模。平台提供创作者内测，面向独立开发者、剧情创作者与短视频导演，可将文字创意快速转化为可发布的互动游戏。"
+  },
+  {
+    "slug": "strands-agents",
+    "description": "Strands Agents 是亚马逊云科技（AWS）开源的 AI 智能体开发 SDK，采用模型驱动方式，用少量代码即可构建并运行单/多智能体应用。",
+    "content": "Strands Agents 由 AWS（亚马逊云科技）开源发布，是一个模型驱动的 AI 智能体 SDK（支持 Python 与 TypeScript），开发者只需定义提示词与工具列表即可构建代理，并内置多智能体协作、MCP 集成与 AWS 服务对接。Anthropic 等公司为该项目贡献了模型 API 接入支持，但并非其创建者。官方站点为 strandsagents.com，已被 Amazon Q Developer 等 AWS 内部产品用于生产。"
+  }
+]

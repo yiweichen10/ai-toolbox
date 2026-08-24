@@ -1,0 +1,145 @@
+{
+  "name": "Flux",
+  "slug": "flux",
+  "positioning": "免费AI绘画，FLUX 3+开源权重本地部署好用吗",
+  "auto_positioning": true,
+  "emoji": "🎨",
+  "color": "#337b26",
+  "description": "Black Forest Labs（Stable Diffusion 原班团队）推出的视觉生成模型家族。2026-07-23 发布新一代统一多模态模型 FLUX 3：单一架构联合训练图像/视频/音频/动作预测，视频最高 20 秒并带原生同步音频；FLUX 3 Video 与 Action 处于申请制早期访问，图像版数周内推出、开放权重版预计年内发布，早期评测偏好率领先多数竞品。",
+  "category": "AI绘画",
+  "tags": [
+    "AI绘画",
+    "开源",
+    "文生图",
+    "照片级画质"
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "9万",
+  "badge": {
+    "type": "pick",
+    "text": "编辑推荐"
+  },
+  "url": "https://bfl.ai",
+  "price": "FLUX 3 早期访问暂无公开定价；FLUX.1 Schnell 开源免费(可商用)、Dev 开源非商用、Pro/FLUX.2 等 API 付费",
+  "platform": "Web / iOS / Android",
+  "pros": [
+    "开源免费且Schnell可商用",
+    "照片级画质与真实感强",
+    "可本地部署，隐私安全",
+    "社区生态活跃"
+  ],
+  "cons": [
+    "本地部署需GPU硬件",
+    "上手有一定门槛",
+    "生态较Stable Diffusion仍年轻"
+  ],
+  "features": [
+    "FLUX 3 统一多模态（2026-07-23）：单一架构联合训练图像/视频/音频/动作预测（Self-Flow）",
+    "FLUX 3 Video：最高 20 秒视频+原生同步音频（多语言对话/音效），支持文生视频、图生视频、视频转视频、关键帧控制与多镜头连续生成",
+    "FLUX 3 Action / FLUX-mimic：机器人动作预测，与 mimic robotics 合作已在 Audi 产线部署",
+    "FLUX 3 Image：图像生成与编辑，复杂提示词遵循与多语言文字渲染提升，数周内开放",
+    "FLUX.1/FLUX.2 经典图像模型：文生图、图生图、照片级真实感、精准文字渲染",
+    "开源权重本地部署（FLUX.1 Dev/Schnell）与云端 API"
+  ],
+  "related": [
+    "chatgpt",
+    "kimi"
+  ],
+  "content": "## Flux 是什么？\n\nFlux 是 Black Forest Labs（Stable Diffusion 原班人马，创始团队包括 Robin Rombach）推出的视觉生成模型家族。2026 年 7 月 23 日，BFL 发布新一代统一多模态模型 FLUX 3：单一架构联合训练图像、视频、音频与动作预测，视频生成最高 20 秒并带原生同步音频，被官方称为迈向视觉智能的基石（Real World Models）。\n\nFLUX 3 基于自研 Self-Flow 对齐方法，让图像/视频/音频在同一个模型中互相学习——例如生成爵士鼓演奏视频时，鼓棒敲击画面与声音是原生同步生成的，无需后期配音。这是 FLUX 从纯图像生成向统一多模态的关键跃迁。\n\n## 核心功能\n\n- **FLUX 3 Video（早期访问中）**：最高 20 秒视频 + 原生同步音频，支持文生视频、图生视频、视频转视频、关键帧控制与多镜头连续生成（角色跨镜头保持一致）；擅长多语言对话与音效设计\n- **FLUX 3 Image（数周内开放）**：图像生成与编辑，复杂提示词遵循能力与多语言文字渲染显著提升\n- **FLUX 3 Action / FLUX-mimic**：机器人动作预测，基于视频主干微调，与 mimic robotics 合作已在 Audi 产线部署（30 分钟数据即可学会新任务，传统方法需 30+ 小时）\n- **FLUX.1 / FLUX.2（经典图像模型）**：文生图、图生图、照片级真实感、精准文字渲染，可开源部署或 API 调用\n\n## 版本对比\n\n| 版本 | 状态 | 特点 |\n|------|------|------|\n| FLUX 3 Video | 早期访问（申请制） | 20秒视频+原生音频，统一多模态 |\n| FLUX 3 Image | 数周内开放 | 图像生成与编辑 |\n| FLUX 3 Dev | 2026年内开放权重 | 开源多模态骨干 |\n| FLUX 3 Action | 早期访问（申请制） | 机器人动作预测（FLUX-mimic） |\n| FLUX.1 Schnell | 开源免费（可商用） | 速度极快，适合快速迭代 |\n| FLUX.1 Dev | 开源（非商用） | 质量与速度平衡 |\n| FLUX.1 Pro / FLUX.2 | 付费API | 最高画质 |\n\n## 优缺点分析\n\n### 优点\n\n- 统一多模态架构：图/视频/音频/动作预测单一模型，各模态能力互相增强\n- 视频生成带原生同步音频（最高 20 秒），支持多语言对话，区别于视频加后期配音方案\n- 早期评测偏好率领先（BFL 数据）：vs Runway Gen-4.5 77%、Kling v3 Pro 60%、Seedance 2.0 约 52%，正式 benchmark 待发布\n- 开源传统延续：FLUX.1 Schnell 免费可商用，FLUX 3 Dev 开放权重版计划年内发布\n- 机器人动作预测（FLUX-mimic）已在 Audi 产线实测，探索物理 AI 方向\n\n### 缺点\n\n- FLUX 3 当前仅申请制早期访问，无公开 API 与定价，也未接入 fal.ai/Replicate 等平台\n- FLUX 3 Image 与开放权重版尚未发布（截至 2026-08）\n- 本地部署需要 GPU 硬件，有一定技术门槛\n- 生态较 Stable Diffusion 仍年轻\n\n## 使用技巧\n\n1. **FLUX 3 申请**：前往 bfl.ai/models/flux-3 提交早期访问申请，审核通过后可体验视频+音频生成。\n2. **FLUX.1 快速出图**：用 Schnell 版本快速生成多张预览，选定方案后再用 Dev/Pro 精修。\n3. **ComfyUI 集成**：FLUX.1 系列在 ComfyUI 中有成熟节点；FLUX 3 Dev 开放权重后预计同样获得社区支持。\n\n## 常见问题（FAQ）\n\n**FLUX 3 现在能用吗？**\n\nFLUX 3 Video 与 FLUX 3 Action 处于申请制早期访问（bfl.ai/models/flux-3 提交申请）；FLUX 3 Image 预计数周内开放；FLUX 3 Dev 开放权重版本预计 2026 年内发布。\n\n**FLUX 3 收费吗？**\n\n目前无公开定价。历史版本中 FLUX.1 Schnell 开源免费可商用、FLUX.1 Dev 开源非商用，FLUX.1 Pro/FLUX.2 等通过付费 API 调用。\n\n**FLUX 3 与 Sora/Midjourney 怎么选？**\n\n三者定位不同：FLUX 3 是统一多模态模型（图+视频+音频+动作预测），Midjourney 专注图像艺术性，Sora 专注视频生成。BFL 公布的早期评测显示 FLUX 3 Video 偏好率领先多数竞品，正式 benchmark 待发布。\n\n### 总结\n\nFlux 是 AI 绘画/视频领域的重要工具。Black Forest Labs 推出的统一多模态模型 FLUX 3，把图像、视频、音频与动作预测放进同一架构，20 秒带原生音频的视频生成是目前差异化亮点。开源传统延续（FLUX.1 Schnell 免费可商用），FLUX 3 Dev 开放权重版计划年内发布。\n\n**快速上手建议：**\n- 访问官网 bfl.ai 了解 FLUX 3 早期访问申请\n- 想快速体验可先用 FLUX.1 开源版本本地部署或 ComfyUI 集成\n- 关注官方博客获取 FLUX 3 Image / Dev 发布动态\n\n**价格参考：** FLUX 3 早期访问暂无公开定价；FLUX.1 Schnell 免费、Dev 开源非商用、Pro/FLUX.2 API 付费\n**支持平台：** Web / API / 开源本地部署\n\n> 以上信息来自 BFL 官方发布与公开报道（来源见页面），FLUX 3 处于早期访问阶段，功能与定价可能调整，请以官方最新信息为准。",
+  "published": true,
+  "faq": [
+    {
+      "q": "FLUX 3 是什么？",
+      "a": "Black Forest Labs 于 2026-07-23 发布的统一多模态模型：单一架构联合训练图像、视频、音频与动作预测（Self-Flow 架构），视频生成最高 20 秒并原生生成同步音频，属于新一代多模态流模型（Real World Models）。"
+    },
+    {
+      "q": "FLUX 3 现在能用吗？",
+      "a": "FLUX 3 Video 与 FLUX 3 Action（机器人动作预测）处于申请制早期访问，可在 bfl.ai/models/flux-3 提交申请；FLUX 3 Image 预计数周内开放；FLUX 3 Dev 开放权重版本预计 2026 年内发布。"
+    },
+    {
+      "q": "FLUX 3 免费吗？",
+      "a": "FLUX 3 目前无公开定价（早期访问阶段，未接入 fal.ai/Replicate 等平台）。历史版本中 FLUX.1 Schnell 开源免费可商用、FLUX.1 Dev 开源非商用，FLUX.1 Pro/FLUX.2 等通过付费 API 调用。"
+    },
+    {
+      "q": "FLUX 3 和 Midjourney/Sora 怎么选？",
+      "a": "三者定位不同：FLUX 3 是统一多模态模型（图+视频+音频+动作预测），Midjourney 专注图像艺术性，Sora 专注视频生成。BFL 公布的早期评测中 FLUX 3 Video 偏好率领先 Runway Gen-4.5（77%）等竞品，正式 benchmark 待发布。"
+    }
+  ],
+  "created_date": "2026-03-22",
+  "verified_url": "https://bfl.ai",
+  "verified_publisher": "Black Forest Labs",
+  "verified_what": "Black Forest Labs（Stable Diffusion 原班团队）推出的视觉生成模型家族。2026-07-23 发布新一代统一多模态模型 FLUX 3：单一架构联合训练图像/视频/音频/动作预测，视频生成最高 20 秒并带原生同步音频；FLUX 3 Video 与 FLUX 3 Action 处于申请制早期访问，FLUX 3 Image 数周内推出，FLUX 3 Dev 开放权重版预计年内发布。",
+  "verified_price": "FLUX 3 暂无公开定价（gated early access 申请制，官网定价页仍为 FLUX.2/FLUX.1）；历史开源版 FLUX.1 Schnell（免费可商用）、FLUX.1 Dev（开源非商用）与云端 API（FLUX.1 Pro/FLUX.2 等按调用计费）",
+  "verified_platform": "Web（Playground）、API（早期访问）、开源本地部署（FLUX.1 Dev/Schnell）",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "FLUX 3 统一多模态（2026-07-23）：单一架构联合训练图像/视频/音频/动作预测（Self-Flow）",
+    "FLUX 3 Video：最高 20 秒视频+原生同步音频（多语言对话/音效），支持文生视频、图生视频、视频转视频、关键帧控制与多镜头连续生成",
+    "FLUX 3 Action / FLUX-mimic：机器人动作预测，与 mimic robotics 合作已在 Audi 产线部署",
+    "FLUX 3 Image：图像生成与编辑，复杂提示词遵循与多语言文字渲染提升，数周内开放",
+    "FLUX.1/FLUX.2 经典图像模型：文生图、图生图、照片级真实感、精准文字渲染",
+    "开源权重本地部署（FLUX.1 Dev/Schnell）与云端 API"
+  ],
+  "verified_description": "Black Forest Labs（Stable Diffusion 原班团队）推出的视觉生成模型家族。2026-07-23 发布新一代统一多模态模型 FLUX 3：单一架构联合训练图像/视频/音频/动作预测，视频最高 20 秒并带原生同步音频；FLUX 3 Video 与 Action 处于申请制早期访问，图像版数周内推出、开放权重版预计年内发布，早期评测偏好率领先多数竞品。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.7",
+  "rating_source": "",
+  "rating_verified": true,
+  "verified_pros": [
+    "开源免费且Schnell可商用",
+    "照片级画质与真实感强",
+    "可本地部署，隐私安全",
+    "社区生态活跃"
+  ],
+  "verified_cons": [
+    "本地部署需GPU硬件",
+    "上手有一定门槛",
+    "生态较Stable Diffusion仍年轻"
+  ],
+  "verified_faq": [
+    {
+      "q": "FLUX 3 是什么？",
+      "a": "Black Forest Labs 于 2026-07-23 发布的统一多模态模型：单一架构联合训练图像、视频、音频与动作预测（Self-Flow 架构），视频生成最高 20 秒并原生生成同步音频，属于新一代多模态流模型（Real World Models）。"
+    },
+    {
+      "q": "FLUX 3 现在能用吗？",
+      "a": "FLUX 3 Video 与 FLUX 3 Action（机器人动作预测）处于申请制早期访问，可在 bfl.ai/models/flux-3 提交申请；FLUX 3 Image 预计数周内开放；FLUX 3 Dev 开放权重版本预计 2026 年内发布。"
+    },
+    {
+      "q": "FLUX 3 免费吗？",
+      "a": "FLUX 3 目前无公开定价（早期访问阶段，未接入 fal.ai/Replicate 等平台）。历史版本中 FLUX.1 Schnell 开源免费可商用、FLUX.1 Dev 开源非商用，FLUX.1 Pro/FLUX.2 等通过付费 API 调用。"
+    },
+    {
+      "q": "FLUX 3 和 Midjourney/Sora 怎么选？",
+      "a": "三者定位不同：FLUX 3 是统一多模态模型（图+视频+音频+动作预测），Midjourney 专注图像艺术性，Sora 专注视频生成。BFL 公布的早期评测中 FLUX 3 Video 偏好率领先 Runway Gen-4.5（77%）等竞品，正式 benchmark 待发布。"
+    }
+  ],
+  "verified_tags": [
+    "AI绘画",
+    "开源",
+    "文生图",
+    "照片级画质"
+  ],
+  "verified_category": "AI绘画",
+  "source_urls": [
+    "https://bfl.ai/blog",
+    "https://bfl.ai/models/flux-3",
+    "https://www.globenewswire.com/news-release/2026/07/23/3332364/0/en/Black-Forest-Labs-Unveils-FLUX-3-A-New-Multimodal-Frontier-Model-For-Visual-Intelligence.html",
+    "https://flux3.dev/"
+  ],
+  "verify_notes": "FLUX 3 官方发布确认（GlobeNewswire 官方新闻稿 2026-07-23 + bfl.ai 官方模型页/博客 + flux3.dev）：统一多模态流模型，Self-Flow 架构联合训练图像/视频/音频/动作预测；FLUX 3 Video 最高20秒+原生同步音频（多语言对话/音效），支持 T2V/I2V/V2V/关键帧/多镜头链式生成；FLUX-mimic 与 mimic robotics 合作、Audi 产线部署（30分钟数据微调 vs 传统30+小时）；FLUX 3 Video/Action 现 gated early access、Image 数周内、Dev 开放权重年内；无公开定价，未接入 fal.ai/Replicate。原页面 FLUX.1 时代信息（开源AI绘画）已过时，本轮更新。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "midjourney",
+      "miaohua",
+      "comfyui"
+    ],
+    "verdict": "Flux 与 Midjourney、秒画、ComfyUI 同属AI绘画赛道：Flux 的 文生图 是亮点，价格 开源免费 + API付费；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "content_flags": "版本更新（2026-08-05）：FLUX 3 于 2026-07-23 官方发布（统一多模态/20秒原生音频视频/动作预测，gated early access，无公开定价），原页面仍为 FLUX.1 时代开源绘画模型介绍（Schnell/Dev/Pro 对比），长文已按 FLUX 3 重写并保留 FLUX.1 历史信息。",
+  "url_previous": "https://blackforestlabs.ai",
+  "updated_date": "2026-08-05"
+}

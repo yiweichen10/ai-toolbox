@@ -1,0 +1,158 @@
+{
+  "name": "Baichuan 2",
+  "slug": "baichuan-2",
+  "positioning": "免费AI助手：代码编写辅助+多语言翻译",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#2563EB",
+  "description": "Baichuan 2是百川智能于2023年9月开源的大语言模型系列（7B/13B Base与Chat，含4bits量化），采用2.6万亿token语料训练，中文能力在同尺寸开源模型中领先，可免费商用（需邮件申请官方许可），上下文为4K。需注意：原描述所称“Baichuan 2.5系列、128K上下文、专业版¥99/月起”在本站核实中未见对应——百川当前旗舰开源模型已演进至Baichuan-M3/M2/M1系列，且Baichuan2官方上下文为4K（百川API后续模型才支持长窗口）。适合国内开发者作为中文开源基座或API平替使用。",
+  "category": "AI对话",
+  "tags": [
+    "大语言模型",
+    "中文AI",
+    "开源模型",
+    "LLM",
+    "百川智能"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "850万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.baichuan-ai.com",
+  "price": "开源免费可商用；百川API按量计费",
+  "platform": "Web/iOS/Android/API",
+  "pros": [
+    "中文语境理解能力强",
+    "开源可免费商用",
+    "部署门槛低(7B/13B)",
+    "社区与生态成熟",
+    "数学/代码能力较上代提升"
+  ],
+  "cons": [
+    "Baichuan 2仅4K上下文(非128K)",
+    "2023年模型，已非最新",
+    "专业领域深度有限",
+    "海外影响力有限"
+  ],
+  "features": [
+    "智能问答与对话",
+    "长文本分析摘要",
+    "代码编写辅助",
+    "多语言翻译",
+    "内容创作润色",
+    "API调用",
+    "开源权重可本地部署"
+  ],
+  "related": [
+    "wenxin-yiyan",
+    "chatgpt",
+    "claude",
+    "deepseek"
+  ],
+  "faq": [
+    {
+      "q": "Baichuan 2是免费的吗？",
+      "a": "开源7B/13B可免费商用（需邮件申请官方许可）。"
+    },
+    {
+      "q": "Baichuan 2支持多长上下文？",
+      "a": "Baichuan2系列为4K上下文；百川API（后续模型）支持最长192K窗口。"
+    },
+    {
+      "q": "和文心一言哪个好？",
+      "a": "均为优秀中文模型，按具体场景选择。"
+    },
+    {
+      "q": "如何获取？",
+      "a": "HuggingFace baichuan-inc 仓库下载权重，或通过百川API接入。"
+    }
+  ],
+  "seo_keywords": [
+    "Baichuan 2",
+    "Baichuan 2怎么样",
+    "Baichuan 2免费版",
+    "百川智能大模型",
+    "Baichuan 2 API"
+  ],
+  "content": "## Baichuan 2 是什么？\n\nBaichuan 2是百川智能于2023年9月开源的大语言模型系列（7B/13B Base与Chat，含4bits量化），采用2.6万亿token语料训练，可免费商用（需邮件申请许可），4K上下文。百川当前旗舰开源模型已演进至Baichuan-M3/M2/M1系列。\n\nBaichuan 2是百川智能于2023年9月开源的大语言模型系列（7B/13B Base与Chat，含4bits量化），采用2.6万亿token语料训练，中文能力在同尺寸开源模型中领先，可免费商用（需邮件申请官方许可），上下文为4K。需注意：原描述所称“Baichuan 2.5系列、128K上下文、专业版¥99/月起”在本站核实中未见对应——百川当前旗舰开源模型已演进至Baichuan-M3/M2/M1系列，且Baichuan2官方上下文为4K（百川API后续模型才支持长窗口）。适合国内开发者作为中文开源基座或API平替使用。\n\n## 核心功能\n\n- 智能问答与对话\n- 长文本分析摘要\n- 代码编写辅助\n- 多语言翻译\n- 内容创作润色\n- API调用\n- 开源权重可本地部署\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 开源模型免费可商用（需申请许可）；百川API按调用量计费（含搜索增强、最长192K窗口）。原数据所称“专业版¥99/月起”未在官网核实到明确对应档位。 |\n| 支持平台 | Web / API / 开源权重(HuggingFace) |\n| 评分 | ⭐ 4.3 |\n| 开发商 | 百川智能 (Baichuan Intelligence) |\n\n## 价格与平台\n\n- **价格**：开源模型免费可商用（需申请许可）；百川API按调用量计费（含搜索增强、最长192K窗口）。原数据所称“专业版¥99/月起”未在官网核实到明确对应档位。\n- **平台**：Web / API / 开源权重(HuggingFace)\n- **官网**：https://www.baichuan-ai.com\n\n## 优缺点分析\n\n### 优点\n\n- 中文语境理解能力强\n- 开源可免费商用\n- 部署门槛低(7B/13B)\n- 社区与生态成熟\n- 数学/代码能力较上代提升\n\n### 缺点\n\n- Baichuan 2仅4K上下文(非128K)\n- 2023年模型，已非最新\n- 专业领域深度有限\n- 海外影响力有限\n\n## 常见问题（FAQ）\n\n**Baichuan 2是免费的吗？**\n\n开源7B/13B可免费商用（需邮件申请官方许可）。\n\n**Baichuan 2支持多长上下文？**\n\nBaichuan2系列为4K上下文；百川API（后续模型）支持最长192K窗口。\n\n**和文心一言哪个好？**\n\n均为优秀中文模型，按具体场景选择。\n\n**如何获取？**\n\nHuggingFace baichuan-inc 仓库下载权重，或通过百川API接入。\n\n\n## 最终结论\n\nBaichuan 2 是AI对话领域的一款 AI 工具，其核心优势在于中文语境理解能力强。\n此外，开源可免费商用。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-05-20",
+  "published_date": "2026-05-20",
+  "verified_url": "https://www.baichuan-ai.com",
+  "verified_publisher": "百川智能 (Baichuan Intelligence)",
+  "verified_what": "Baichuan 2是百川智能于2023年9月开源的大语言模型系列（7B/13B Base与Chat，含4bits量化），采用2.6万亿token语料训练，可免费商用（需邮件申请许可），4K上下文。百川当前旗舰开源模型已演进至Baichuan-M3/M2/M1系列。",
+  "verified_price": "开源模型免费可商用（需申请许可）；百川API按调用量计费（含搜索增强、最长192K窗口）。原数据所称“专业版¥99/月起”未在官网核实到明确对应档位。",
+  "verified_platform": "Web / API / 开源权重(HuggingFace)",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "智能问答与对话",
+    "长文本分析摘要",
+    "代码编写辅助",
+    "多语言翻译",
+    "内容创作润色",
+    "API调用",
+    "开源权重可本地部署"
+  ],
+  "verified_description": "Baichuan 2是百川智能于2023年9月开源的大语言模型系列（7B/13B Base与Chat，含4bits量化），采用2.6万亿token语料训练，中文能力在同尺寸开源模型中领先，可免费商用（需邮件申请官方许可），上下文为4K。需注意：原描述所称“Baichuan 2.5系列、128K上下文、专业版¥99/月起”在本站核实中未见对应——百川当前旗舰开源模型已演进至Baichuan-M3/M2/M1系列，且Baichuan2官方上下文为4K（百川API后续模型才支持长窗口）。适合国内开发者作为中文开源基座或API平替使用。",
+  "content_flags": "OUTDATED_INFO|POSSIBLE_HALLUCINATION",
+  "verified_pros": [
+    "中文语境理解能力强",
+    "开源可免费商用",
+    "部署门槛低(7B/13B)",
+    "社区与生态成熟",
+    "数学/代码能力较上代提升"
+  ],
+  "verified_cons": [
+    "Baichuan 2仅4K上下文(非128K)",
+    "2023年模型，已非最新",
+    "专业领域深度有限",
+    "海外影响力有限"
+  ],
+  "verified_faq": [
+    {
+      "q": "Baichuan 2是免费的吗？",
+      "a": "开源7B/13B可免费商用（需邮件申请官方许可）。"
+    },
+    {
+      "q": "Baichuan 2支持多长上下文？",
+      "a": "Baichuan2系列为4K上下文；百川API（后续模型）支持最长192K窗口。"
+    },
+    {
+      "q": "和文心一言哪个好？",
+      "a": "均为优秀中文模型，按具体场景选择。"
+    },
+    {
+      "q": "如何获取？",
+      "a": "HuggingFace baichuan-inc 仓库下载权重，或通过百川API接入。"
+    }
+  ],
+  "verified_tags": [
+    "大语言模型",
+    "中文AI",
+    "开源模型",
+    "LLM",
+    "百川智能"
+  ],
+  "verified_category": "AI对话",
+  "conflict_note": "原数据存在明显不实信息：声称“2026年发布Baichuan 2.5系列、支持128K上下文、专业版¥99/月起”。核实显示Baichuan 2是2023年模型（4K上下文），百川当前旗舰为Baichuan-M3/M2/M1；“Baichuan 2.5/128K”未见官方依据；¥99/月专业版未在官网核实。已修正为准确描述并提供corrected_content。",
+  "source_urls": [
+    "https://www.baichuan-ai.com",
+    "https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat",
+    "https://github.com/baichuan-inc/Baichuan2"
+  ],
+  "verify_notes": "工具真实，但描述含过时与疑似编造信息，已重写。",
+  "content_verified": true,
+  "price_verified": true,
+  "compare_section": {
+    "competitors": [
+      "gemini",
+      "chatgpt",
+      "360-zhinain"
+    ],
+    "verdict": "Baichuan 2 与 Gemini、ChatGPT、360智脑 同属AI对话赛道：Baichuan 2 的 智能问答与对话 是亮点，价格 开源免费可商用；百川API按量计费；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

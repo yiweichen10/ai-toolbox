@@ -1,0 +1,152 @@
+{
+  "name": "LiteLLM",
+  "slug": "lite-llm",
+  "positioning": "免费AI开发工具：LLM 网关+重试、回退",
+  "auto_positioning": true,
+  "emoji": "🔗",
+  "color": "#FF6B35",
+  "description": "LiteLLM 是一个统一调用 100+ 大语言模型的开源网关与 Python SDK，将 OpenAI、Anthropic、Azure、Bedrock、Gemini 等各家接口统一为 OpenAI 格式，提供重试/回退、负载均衡、消费追踪与预算控制，被 Netflix、Lemonade 等团队用于生产环境。",
+  "category": "AI开发",
+  "tags": [
+    {
+      "text": "LLM网关"
+    },
+    {
+      "text": "统一API"
+    },
+    {
+      "text": "开源",
+      "type": "free"
+    },
+    {
+      "text": "多模型"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "开源项目，GitHub 活跃（1000+ 贡献者）",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.litellm.ai",
+  "price": "开源免费（企业版付费）",
+  "platform": "Python SDK / 自托管网关",
+  "pros": [
+    "一套接口调用 100+ 模型，切换 provider 几乎零成本",
+    "内置重试/回退与负载均衡，提升可用性",
+    "细粒度消费追踪与按 key/团队预算控制",
+    "提供代理服务器（Proxy）与 Python SDK 两种形态",
+    "被多家大型团队用于生产环境"
+  ],
+  "cons": [
+    "网关模式需要自行部署与运维",
+    "企业版高级功能（SSO、审计等）需付费",
+    "多 provider 行为差异仍需关注"
+  ],
+  "features": [
+    "统一 OpenAI 格式调用 100+ LLM",
+    "LLM 网关（Proxy Server）与虚拟密钥",
+    "重试、回退（Failover）与负载均衡",
+    "消费追踪、预算与速率限制",
+    "Guardrails、日志与可观测性（Langfuse 等）",
+    "支持 Ollama 等本地模型接入"
+  ],
+  "related": [
+    "ollama",
+    "openai-agents-sdk",
+    "claude",
+    "gemini"
+  ],
+  "faq": [
+    {
+      "question": "LiteLLM 是免费的吗？",
+      "answer": "LiteLLM 开源免费，可自托管使用；企业版提供 SSO、审计日志、定制化 SLA 等高级能力，需付费。"
+    },
+    {
+      "question": "LiteLLM 能调用哪些模型？",
+      "answer": "支持 OpenAI、Azure、Bedrock、Google、Anthropic、Ollama、OpenRouter 等 100+ 家 provider，均以统一的 OpenAI 格式调用。"
+    },
+    {
+      "question": "LiteLLM 和直接用各家的 SDK 有什么区别？",
+      "answer": "直接用各家 SDK 需要适配不同接口与错误格式；LiteLLM 把它们统一成 OpenAI 格式，并提供重试/回退、负载均衡与消费追踪，适合多模型生产环境。"
+    },
+    {
+      "question": "LiteLLM 支持本地模型吗？",
+      "answer": "支持。通过 ollama/llama2 这类 provider 前缀即可把本地 Ollama 模型接入 LiteLLM 的统一接口。"
+    }
+  ],
+  "seo_keywords": [
+    "LiteLLM",
+    "LiteLLM 中文",
+    "LiteLLM 网关",
+    "LLM 统一API",
+    "多模型调用"
+  ],
+  "content": "## LiteLLM 是什么？\n\nLiteLLM 是一个开源的 LLM 网关与 Python SDK，解决的是一个很实际的问题：当你要用 OpenAI、Anthropic、Azure、Bedrock、Gemini 等多家模型时，每家接口格式、错误结构都不一样，接起来很头疼。LiteLLM 把所有这些都统一成 OpenAI 的格式——你用同一套 `completion()` 调用，只要改个 model 名字（比如 `openai/gpt-5`、`anthropic/claude-sonnet-4-5`、`ollama/llama2`），就能在 100+ 模型之间切换。\n\n它被 Netflix、Lemonade 等团队的 GenAI 平台用来给开发者「Day 0」地提供模型访问能力，核心卖点是统一接口 + 稳定性（重试/回退）+ 成本可观测。\n\n## 核心功能\n\n**1. 统一 OpenAI 格式调用 100+ 模型**\n无论是 OpenAI、Azure、Bedrock、Vertex、Anthropic、Ollama 还是 OpenRouter，都通过一致的函数签名调用，输出格式也统一，迁移 provider 几乎不用改业务代码。\n\n**2. LLM 网关（Proxy Server）**\n除了 Python SDK，LiteLLM 还提供中心化网关：带认证授权、虚拟密钥、多租户消费追踪、按 key/团队/组织计费，配合 Admin UI 做监控。适合「平台团队给很多开发者发模型权限」的场景。\n\n**3. 重试、回退与负载均衡**\n某个 provider 限流或宕机时，LiteLLM 能在多个部署/provider 之间自动回退（Failover），并对 RPM/TPM 做追踪与冷却重试，显著提升线上可用性。\n\n**4. 消费追踪与预算控制**\n可以按 key、user、team、org 精确归因花费，设置预算与速率限制，并把日志写到 S3/GCS 等对象存储，方便财务与治理。\n\n**5. Guardrails、日志与可观测性**\n集成 Langfuse、Arize Phoenix、Langsmith、OTEL 等观测工具，并提供 Prompt Management、Pass-Through Endpoints 等能力。\n\n**6. 支持本地模型**\n通过 `ollama/llama2` 这类前缏即可把本机 Ollama 模型接入统一接口，云端/本地模型在同一条调用链里混用。\n\n## 值不值得用？\n\n**优点：**\n- 一套接口打天下，切换模型成本极低\n- 重试/回退 + 负载均衡，生产可用性更好\n- 消费追踪与预算控制开箱即用，适合多团队\n- SDK 与网关两种形态，灵活\n- 被多家大型团队验证过\n\n**缺点：**\n- 网关模式需要自己部署运绻\n- 企业版 SSO、审计等高级能力要付费\n- 各家模型行为差异仍在，不能假设完全等价\n\n**我的看法：** 只要你的项目打算接两家以上模型，或者需要给团队统一发模型权限并管成本，LiteLLM 几乎是标配。它不替代某个具体模型，而是把「调模型」这件脏活标准化了。\n\n## 使用建议\n\n1. **先从 SDK 试起**：`uv add litellm` 后改 model 名就能切 provider，成本最低\n2. **生产用网关**：多开发者/多模型时上 Proxy，配虚拟密钥与预算\n3. **配可观测**：接 Langfuse 等，把每次调用成本与质量看清楚\n4. **善用回退**：给关键链路配 provider 回退，避免单点限流\n\n## 适合谁用？\n\n**推荐：**\n- 需要接多模型的平台/基础设施团队\n- 做 AI 应用、想灵活换底层模型的开发者\n- 需要统一配额与成本治理的团队\n\n**可考虑：**\n- 只用单一模型、且不在乎接口差异的小项目（直接调官方 SDK 更简单）\n\n## 常见问题（FAQ）\n\n**LiteLLM 免费吗？**\n\n开源版 MIT 协议免费可自托管；企业版提供 SSO、审计日志、定制 SLA 等需付费。\n\n**LiteLLM 支持本地模型吗？**\n\n支持，通过 ollama/llama2 等 provider 前缀即可将本地模型接入统一接口。",
+  "published": true,
+  "created_date": "2026-07-20",
+  "published_date": "2026-07-20",
+  "verified_url": "https://www.litellm.ai",
+  "verified_publisher": "LiteLLM",
+  "verified_what": "开源 LLM 网关与 Python SDK，将 100+ 家大模型统一为 OpenAI 格式，提供重试/回退、负载均衡、消费追踪与预算控制。",
+  "verified_price": "开源版（OSS）免费（MIT）；企业版（Enterprise）含 SSO、审计日志、定制 SLA 等，需联系销售（公开资料约 Basic $250/月、Premium $30,000/年）。",
+  "verified_platform": "Python SDK、Proxy Server（Docker/自托管）、API、支持 AWS/Azure 市场部署",
+  "last_verified": "2026-07-31",
+  "confidence": "medium",
+  "conflict": false,
+  "verified_features": [
+    "统一 OpenAI 格式调用 100+ LLM",
+    "LLM 网关（Proxy）与虚拟密钥",
+    "重试/回退（Failover）与负载均衡",
+    "消费追踪、预算与速率限制",
+    "护栏（Guardrails）与可观测性日志（Langfuse 等）",
+    "支持 Ollama 等本地模型"
+  ],
+  "verified_description": "LiteLLM 是开源的 LLM 网关与 Python SDK，将 OpenAI、Anthropic、Azure、Bedrock、Gemini 等 100+ 模型统一为 OpenAI 格式，提供重试/回退、负载均衡、消费追踪与预算控制，被多家大型团队用于生产环境。",
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "编辑评分（本站）",
+  "verified_pros": [
+    "一套接口切换 100+ 模型，几乎零改造成本",
+    "内置重试/回退与负载均衡",
+    "细粒度消费追踪与预算控制",
+    "SDK 与网关两种形态",
+    "被 Netflix 等团队用于生产环境"
+  ],
+  "verified_cons": [
+    "网关模式需自托管与运维",
+    "企业高级功能（SSO、审计等）需付费",
+    "多 provider 行为差异仍需关注"
+  ],
+  "verified_faq": [
+    {
+      "q": "LiteLLM 免费吗？",
+      "a": "开源版 MIT 协议免费可自托管；企业版提供 SSO、审计日志、定制 SLA 等需付费。"
+    },
+    {
+      "q": "LiteLLM 支持本地模型吗？",
+      "a": "支持，通过 ollama/llama2 等 provider 前缀即可将本地模型接入统一接口。"
+    }
+  ],
+  "verified_tags": [
+    "LLM网关",
+    "统一API",
+    "开源",
+    "多模型"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://litellm.ai/",
+    "http://docs.litellm.ai/docs/enterprise",
+    "https://www.truefoundry.com/pt/blog/litellm-pricing-guide"
+  ],
+  "verify_notes": "企业版具体价格各第三方来源不一（$250/月 与 $30,000/年 为公开资料估算），以联系销售为准，故标 medium。",
+  "content_verified": false,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "LiteLLM 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：LiteLLM 的 统一 OpenAI 格式调用 100+ LLM 是亮点，价格 开源免费（企业版付费）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

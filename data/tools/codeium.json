@@ -1,0 +1,101 @@
+{
+  "name": "Codeium",
+  "slug": "codeium",
+  "positioning": "Codeium是什么？免费AI编程助手好用吗",
+  "auto_positioning": false,
+  "emoji": "💻",
+  "color": "#00C2A8",
+  "description": "Codeium 是一款免费的 AI 编程助手，支持 70+ 编程语言与 40+ IDE（VS Code、JetBrains、Neovim、Emacs 等），提供代码补全、AI 对话、重构与测试生成，被普遍视为 GitHub Copilot 的免费平替。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "免费编程助手"
+    },
+    {
+      "text": "代码补全"
+    },
+    {
+      "text": "70+语言"
+    },
+    {
+      "text": "VS Code"
+    },
+    {
+      "text": "免费可用",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://codeium.com",
+  "price": "个人版免费（无限补全+AI 对话）；Pro 约 $10/月；Teams 约 $15/用户/月；企业版定制（价格各来源略有差异，以官网为准）",
+  "platform": "VS Code、JetBrains、Neovim、Emacs、Sublime 等 40+ IDE 扩展；亦含 Windsurf IDE",
+  "pros": [
+    "个人版真正免费、无限补全，无需信用卡",
+    "IDE 覆盖最广，连 Vim/Emacs 都支持",
+    "补全延迟低，编辑体验流畅",
+    "70+ 语言，主流与小众语言都覆盖",
+    "内置 AI 对话，可解释/生成/重构代码"
+  ],
+  "cons": [
+    "复杂多文件与架构级推理不如 Cursor/Claude Code",
+    "无内置 Agent 式自主改文件能力（Cascade 有限额）",
+    "免费档用基础模型，深度上下文索引需付费",
+    "与 Windsurf 品牌关系易混淆"
+  ],
+  "features": [
+    "无限代码补全：个人版免费、低延迟、上下文感知",
+    "AI 聊天：在 IDE 内问答、生成函数、解释代码",
+    "多语言支持：70+ 编程语言",
+    "广 IDE 覆盖：VS Code、JetBrains、Neovim、Emacs 等 40+ 编辑器",
+    "重构与测试：从注释生成函数、补文档、写测试",
+    "语义代码搜索：跨代码库检索"
+  ],
+  "related": [
+    "github-copilot",
+    "chatgpt",
+    "deepseek"
+  ],
+  "content": "## Codeium 是什么？\nCodeium 是一款 AI 编程助手，也是目前最受欢迎的 GitHub Copilot 免费平替之一。它最大的卖点很直接：个人开发者可以永久免费使用无限量的代码补全，而且不用绑信用卡、没有试用倒计时。它支持 70+ 编程语言和 40+ 编辑器，从 VS Code、JetBrains 全家桶到 Vim、Emacs、Sublime 都覆盖，几乎你用哪个编辑器它都能接上。除了补全，它还内置 AI 对话，能在编辑器里解释代码、生成函数、写测试和做简单重构。其背后的公司还推出了完整的 AI IDE——Windsurf，但 Codeium 扩展本身仍是接入现有编辑器最轻量的免费路径。\n\n## 核心功能\n- 无限代码补全：个人版免费、低延迟，会读取当前文件与近期编辑给出上下文感知的建议。\n- AI 聊天：在 IDE 内问答、生成样板代码、解释不熟悉的代码块。\n- 多语言支持：覆盖 70+ 编程语言，主流到小众语言都能补全。\n- 广 IDE 覆盖：VS Code、JetBrains、Neovim、Emacs、Sublime 等 40+ 编辑器扩展。\n- 重构与测试：从注释生成函数、补 docstring、写单元测试。\n- 语义代码搜索：跨代码库做语义检索，快速定位逻辑。\n\n## 版本/套餐对比\nCodeium 采用 Freemium（价格各来源略有差异，以官网为准）：\n| 套餐 | 价格 | 主要权益 |\n| --- | --- | --- |\n| 个人 Free | $0 | 无限补全、AI 对话、70+ 语言、40+ IDE |\n| Pro | 约 $10/月 | 更强模型、更大上下文、高级聊天、优先模型 |\n| Teams | 约 $15/用户/月 | 管理后台、策略控制、优先支持 |\n| 企业版 | 定制 | 私有部署、SSO、SLA |\n\n## 值不值得用？\n优点：个人版真的免费且无上限，IDE 覆盖最广，补全快、体验顺；对用 Vim/Emacs 的开发者几乎是唯一高质量免费选择。缺点：复杂多文件改动的推理不如 Cursor/Claude Code；免费档用基础模型，深度代码库索引和 Agent 式自主编辑需付费；Codeium 与 Windsurf 的品牌关系容易让人混淆。结论：想零成本上手 AI 补全的人，Codeium 是首选；需要 Agent 自主编程或超大上下文再考虑 Cursor/Claude Code。\n\n## 使用建议\n1. 学生/个人：直接装免费版，VS Code 或 JetBrains 搜 Codeium 即可。\n2. 用 Vim/Emacs：Codeium 是少数覆盖这些编辑器的免费高质量补全。\n3. 隐私：默认允许退出代码训练，涉及专有代码建议开启。\n4. 想更强：Pro 档拿到更大上下文与高级模型，复杂项目更稳。\n5. 团队：用 Teams 档做集中管理与策略控制，比 Copilot Business 便宜。\n\n## 适合谁用？\n- 推荐：个人开发者、学生、用 Vim/Emacs/Sublime 的程序员、预算敏感的团队。\n- 可考虑：日常补全+聊天够用的中小团队、想先免费试 AI 编程的人。\n- 不推荐：需要 Agent 自主多文件编程/超深代码库理解的人（选 Cursor/Claude Code）。",
+  "published": false,
+  "faq": [
+    {
+      "question": "Codeium 真的免费吗？",
+      "answer": "个人版确实免费且无限量代码补全与 AI 对话，无需信用卡；Pro/Teams/企业版提供更强模型与管理能力，需付费。"
+    },
+    {
+      "question": "Codeium 支持哪些 IDE？",
+      "answer": "支持 40+ 编辑器，包括 VS Code、JetBrains 全家桶、Neovim、Emacs、Sublime、Vim、Eclipse、Jupyter 等。"
+    },
+    {
+      "question": "Codeium 和 GitHub Copilot 有什么区别？",
+      "answer": "两者都做补全与聊天；Codeium 个人版免费无限补全且 IDE 覆盖更广，Copilot 与 GitHub 生态结合更紧，按需选择。"
+    },
+    {
+      "question": "Codeium 支持多少种语言？",
+      "answer": "官方称支持 70+ 编程语言，主流语言到不少小众语言都在覆盖范围内。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Codeium",
+    "Codeium怎么样",
+    "Codeium免费版",
+    "Codeium使用教程",
+    "Codeium和哪个好"
+  ],
+  "source_urls": [
+    "https://codeium.com",
+    "https://buildfastwithai.com/ai-tools/codeium",
+    "https://top50aitools.com/pricing/codeium"
+  ],
+  "confidence": "medium",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

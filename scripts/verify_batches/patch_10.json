@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "phind",
+    "description": "Phind 是面向开发者的 AI 搜索引擎，针对编程问题优化，可直接检索技术文档、代码示例与开发者社区，给出带引用的代码答案。",
+    "content": "Phind 是一款专为程序员打造的 AI 搜索引擎，用自然语言提问即可获取精准的技术答案与可复用代码。它实时检索技术文档、Stack Overflow 与 GitHub，并标注引用来源，比通用搜索更高效。支持 Web 端与 VS Code 扩展，核心功能免费，Pro 版解锁更强模型与更高调用额度。官方站点为 phind.com。"
+  },
+  {
+    "slug": "qingying-ai",
+    "description": "清影（Ying）是智谱AI（Zhipu AI）推出的 AI 视频生成工具，基于 CogVideoX 模型，支持文生视频与图生视频，可生成数秒高清动态视频。",
+    "content": "清影（Ying）是智谱AI于2024年7月推出的 AI 视频生成模型，基于自研 CogVideoX 底座（DiT 架构），支持文生视频与图生视频，可将文字描述或图片生成数秒高清动态视频。用户可通过智谱清言 App 免费体验，企业可通过大模型开放平台调用 API。注意：清影由智谱AI开发，并非360公司产品。"
+  },
+  {
+    "slug": "lightrag",
+    "description": "LightRAG 是由香港大学（HKU）数据智能实验室（HKUDS）开发的开源轻量级检索增强生成（RAG）框架，基于知识图谱实现高效的双层级文档检索。",
+    "content": "LightRAG 是香港大学数据智能实验室（HKUDS）开源的轻量级 RAG 框架，论文发表于 EMNLP 2025。它通过构建知识图谱并结合向量检索，实现低层级（具体实体）与高层级（全局主题）的双层检索，擅长跨文档实体关系推理。支持增量更新与多种向量库，GitHub 获数万 Star，是开源 RAG 领域的热门方案。注意：开发团队为香港大学（HKU），非香港中文大学（深圳）。"
+  },
+  {
+    "slug": "ada-ai",
+    "description": "Ada（ada.cx）是面向企业的 AI 客服平台（Agentic Customer Experience），通过 AI 代理自动解决客户咨询，覆盖聊天、邮件、语音等多渠道。",
+    "content": "Ada 是面向企业的 AI 客户体验平台（ada.cx），并非个人聊天助手。它部署自主式 AI 代理，从企业知识库、文档与政策中学习，自动解决 80%+ 的客户咨询，覆盖聊天、邮件、语音等渠道，并在复杂场景无缝转人工。已被 monday.com、Cebu Pacific 等企业在金融、旅游、SaaS 等行业采用，注重合规与数据安全。"
+  },
+  {
+    "slug": "amp",
+    "description": "Amp 是由 Sourcegraph 推出（后独立为 Amp Inc.）的 AI 编程代理，以终端/VS Code 插件形式运行，支持自主推理、多文件编辑与复杂任务执行。",
+    "content": "Amp 是 Sourcegraph 团队打造、后独立为 Amp Inc. 的代理式 AI 编程工具，并非 Anthropic 产品，也不是 Claude Code 的前身。它以 CLI 与 VS Code 扩展形式运行，支持自主推理、多文件编辑、子代理并行与远程执行，可路由 GPT、Claude 等多模型。采用按量计费（零加价）或企业版，面向追求代码质量的开发者与团队。官方站点为 sourcegraph.com/amp。"
+  },
+  {
+    "slug": "zoona",
+    "description": "Zoona（zoona.ai）是自主式 AI 客服代理平台，可作为 7×24 小时的数字员工，从企业知识库学习并即时解决客户咨询，在需要时无缝转人工。",
+    "content": "Zoona 是面向现代支持团队的自主式 AI 客服代理平台（zoona.ai），并非 AI 视频生成工具。它通过同步企业知识库、文档与历史对话，在工单到达时即时解决 60%–70% 的常规问题，覆盖 SaaS、金融、电商、医疗等行业，并在敏感场景带着完整上下文转交人工。采用按量或订阅计费模式。"
+  },
+  {
+    "slug": "algo",
+    "description": "Algo（algo.ai）暂未能核实到与所描述功能对应的明确产品；同名 ALGO AI 多为 algo-tech.ai 推理平台或学术代码合成框架，建议人工复核。",
+    "content": "经检索，记录于 algo.ai 的『专注算法优化的 AI 编程工具』暂未找到对应的明确官方产品。网络上同名的 ALGO AI 主要指 algo-tech.ai 的推理/生成式 AI 开发者平台，以及学术论文中的代码合成框架，均与本项目描述不符。鉴于无法核实，建议下架或经人工复核确认后再发布，以免误导用户。"
+  }
+]

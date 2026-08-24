@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "base44",
+    "description": "Base44 是 Wix 收购的 AI 无代码应用搭建平台（vibe coding），通过自然语言即可生成完整可用的应用、网站与 AI 智能体，内置后端、认证、数据库与一键部署。",
+    "content": "Base44 是一款由 Wix 运营的 AI 无代码应用搭建平台（vibe coding）。用户用自然语言描述需求，即可生成包含页面、后端逻辑、用户登录、数据存储与一键部署的完整应用、网站或 AI 智能体，而非单纯的代码补全/片段生成工具。平台提供免费额度，付费版起价约 $16/月（按年计费），面向个人与团队快速构建可上线的全栈产品。官网为 base44.com。"
+  },
+  {
+    "slug": "pixelle-video",
+    "description": "Pixelle-Video 是阿里巴巴 AIDC-AI 团队开源的 AI 全自动短视频生成引擎（Apache-2.0），输入主题即可自动完成文案、配图/视频、语音合成与一键成片，完全免费且可商用。",
+    "content": "Pixelle-Video 是阿里巴巴 AIDC-AI 团队推出的开源 AI 全自动短视频引擎，基于 Apache-2.0 协议，完全免费且可商用，没有任何付费订阅计划。用户输入一个主题，它即可自动完成文案撰写、AI 配图/视频生成、语音合成（支持 Edge-TTS、Index-TTS 等），并一键合成适合抖音、小红书、YouTube 等平台的视频，支持竖屏/横屏多种尺寸与批量生成。项目托管于 GitHub（AIDC-AI/Pixelle-Video），可本地部署或云端运行。"
+  },
+  {
+    "slug": "open-design",
+    "description": "Open Design 是由 nexu-io 开发的开源 AI 设计工作台（Apache-2.0），作为本地优先、自带密钥（BYOK）的 Claude Design 替代品，将你已有的编程 Agent 变成设计引擎。",
+    "content": "Open Design 是 nexu-io 推出的开源 AI 设计工作台，采用 Apache-2.0 协议，完全免费、无任何付费订阅计划。它定位为本地优先、自带密钥（BYOK）的 Claude Design 开源替代品，可把你已安装的编程 Agent（如 Claude Code、Codex、Cursor、Gemini CLI 等）变成设计引擎，通过可组合的 SKILL.md 工作流，从文字描述生成网页、PPT、海报等设计产物。官网为 open-design.ai，源码托管于 GitHub（nexu-io/open-design）。"
+  },
+  {
+    "slug": "flint",
+    "description": "Flint 是一款本地优先的开源 AI 笔记与知识管理工具（flintnote.com，由 Tim Disney 开发），通过 AI Agent 帮助连接笔记、构建知识图谱并进行间隔复习，让个人笔记持续可用。",
+    "content": "Flint 是一款本地优先的开源 AI 笔记与知识管理工具（flintnote.com，由 Tim Disney 开发，目前处于开源测试阶段）。它把 AI Agent 嵌入笔记系统，自动发现笔记之间的关联、构建个人知识图谱，并通过间隔重复提醒你回顾旧笔记。笔记以本地 Markdown 文本存储，支持 PDF、网页、EPUB 导入与本地推理，数据完全归用户所有。它面向个人知识管理，并非实时协作白板类工具。"
+  },
+  {
+    "slug": "agent-skills",
+    "description": "Agent Skills 是 Anthropic 发布的开放标准，用 SKILL.md 格式把指令、脚本与资源打包成可复用、跨平台的“技能”，让 AI 代理按需加载领域能力（官网 agentskills.ai，规范见 agentskills.io）。",
+    "content": "Agent Skills 是 Anthropic 发布的开放标准，用于给 AI 代理扩展能力。开发者将指令、脚本和资源打包进一个含 SKILL.md 文件的目录，代理可根据任务动态发现并加载这些“技能”，从而把通用代理变成具备特定领域专长的专用代理。该标准支持跨平台复用（Claude、Cursor、Codex 等兼容工具均可加载），强调可移植与安全，并非某个封闭的“500+ 预置组件低代码平台”。官网为 agentskills.ai，规范详见 agentskills.io。"
+  }
+]

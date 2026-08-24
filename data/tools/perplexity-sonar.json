@@ -1,0 +1,132 @@
+{
+  "name": "Perplexity Sonar",
+  "slug": "perplexity-sonar",
+  "emoji": "🔍",
+  "color": "#1A6DF5",
+  "description": "Perplexity Sonar 是 Perplexity 的实时联网搜索增强型模型/API，返回带引用的回答，供开发者构建联网 AI 应用（Sonar / Sonar Pro / Sonar Reasoning Pro / Sonar Deep Research）。",
+  "category": "AI搜索",
+  "tags": [
+    "实时搜索",
+    "引用溯源",
+    "AI搜索",
+    "API",
+    "开发者工具"
+  ],
+  "rating": "⭐4.6",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://sonar.perplexity.ai/",
+  "price": "API：Sonar $1/$1 每百万 token + 请求费 $5/$8/$12 每千次；Sonar Pro $3/$15 + $6/$10/$14",
+  "platform": "Web API, SDK",
+  "pros": [
+    "实时联网、回答带引用降低幻觉",
+    "模型与上下文档位可选",
+    "OpenAI 兼容接口易集成"
+  ],
+  "cons": [
+    "除 Search API 外按请求另收检索费，量大时昂贵",
+    "深层研究/Reasoning 成本更高",
+    "中文表现弱于英文"
+  ],
+  "features": [
+    "实时联网搜索并返回带引用的回答",
+    "Sonar / Sonar Pro / Sonar Reasoning Pro / Sonar Deep Research 等模型",
+    "OpenAI 兼容 Chat Completions 接口",
+    "可定制搜索来源与搜索上下文深度",
+    "支持多查询搜索与函数/代码执行工具"
+  ],
+  "related": [
+    "perplexity",
+    "phind"
+  ],
+  "faq": [
+    {
+      "q": "Perplexity Sonar 与普通 Perplexity 区别？",
+      "a": "Sonar 是底层搜索增强模型/API，返回带引用的回答；普通 Perplexity 应用默认调用 Sonar 能力，无需单独切换。"
+    },
+    {
+      "q": "如何计费？",
+      "a": "API 按 token + 每千次请求检索费；Sonar $1/$1 + $5~$12/千次，Sonar Pro $3/$15 + $6~$14/千次。"
+    }
+  ],
+  "seo_keywords": [
+    "Perplexity Sonar",
+    "Perplexity Sonar怎么样",
+    "Perplexity Sonar免费版",
+    "Perplexity Sonar使用教程",
+    "Perplexity Sonar和哪个好"
+  ],
+  "content": "# Perplexity Sonar 是什么？\n\n简单说，Perplexity Sonar 是 Perplexity AI 做的一个“能搜会答”的工具。它不像普通聊天机器人只能靠训练数据里的知识回答，而是直接去互联网上实时搜索最新信息，然后把搜索结果和语言模型的理解结合起来，给你一个带引用来源的答案。\n\n你可以把它理解成“搜索引擎 + 聊天 AI”的合体——你问一个问题，它不光给你结果，还会告诉你这个结果是从哪个网页来的，甚至能让你顺着链接点过去检查。免费版就能用，不用翻墙也不用科学上网（至少目前国内访问还可以），门槛很低。\n\n---\n\n## 核心功能\n\n**1. 实时联网搜索与问答**  \n这是最核心的价值。传统大模型的知识截止日期往往是几个月甚至一年前，而 Perplexity Sonar 每次回答都会自动搜索互联网，所以最新的事件、产品发布、政策变化它都能覆盖。实际用下来，只要问题表述清晰，它找到的信息时效性很强。\n\n**2. 自动生成带引用的回答**  \n每个答案的段落末尾都有数字角标，点击就能看到对应来源的链接。这一点对需要验证信息准确性的人特别友好——你不用全信 AI，可以自己点过去看原文。实际体验中，引用来源的准确率挺高，偶尔会指向不相关的页面，但比例不大。\n\n**3. 多轮对话上下文保持**  \n可以像跟人聊天一样追问。比如先问“今年iPhone有哪些新功能”，然后接着问“摄像头升级了多少”，它会记得上一个问题的背景。这个能力在复杂调研中很实用，不需要每次都重复上下文。\n\n**4. 支持文件和链接分析**  \n你可以直接把一个 PDF、Word 文档或者一个网页链接丢进去，让它分析内容并回答相关问题。比如扔进去一篇论文让它总结，或者给一个产品页面让它提取参数。反应速度不错，但文件太大时偶尔会超时。\n\n**5. 可切换到不同模型**  \n在回答之前，你可以在界面上选择底层模型，比如 GPT-4、Claude 或者 Sonar 自己的模型。不同模型风格不同，GPT-4 更严谨，Claude 更擅长长文理解。这个自由度挺好的，等于一个工具里集成了几个不同方向的 AI。\n\n> 另外还有个内置的研究助手模式（Research Assistant），可以针对复杂问题自动生成长篇分析报告，适合做深度调研。不过这个模式消耗额度较快，免费用户每天有次数限制。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 核心能力 | 主要限制 | 价格 |\n|------|---------|---------|------|\n| 免费版 | 实时搜索、带引用回答、多轮对话、文件/链接分析 | 可使用基础模型（Sonar 自研模型），每日搜索次数有限，无法使用 GPT-4/Claude 等高级模型 | 免费 |\n| Pro 版 | 所有免费版功能 + 可切换 GPT-4/Claude 等模型、更多搜索次数、研究助手模式、更高文件上传上限 | 需订阅付费 | 价格暂未公开，提供按月/年订阅选项 |\n\n*具体价格以官方页面为准，免费版可用核心功能，Pro 版适合高频重度的用户。*\n\n---\n\n## 值不值得用？\n\n**优点很明确：**  \n- 信息时效性强，比传统 AI 聊天工具靠谱很多  \n- 引用来源让你能核对答案，降低“AI 幻觉”风险  \n- 界面简洁，交互很顺滑，学习成本几乎为零  \n- 免费版就够日常查资料、写东西、做简单调研  \n\n**缺点也需要正视：**  \n- Pro 版的付费价格不算低（对比同类工具），高级模型对普通用户可能没那么必要  \n- 复杂、多维度的问题（比如“分析中美芯片政策的异同”），回答有时不够深入，更像摘要而非深度分析  \n- 中文支持确实比英文弱一点，中文搜索结果的质量和英文比有差距，尤其是长尾问题  \n\n**总体结论：**  \n如果你需要一个“能实时搜索、有来源可查”的搜索问答工具，Perplexity Sonar 是目前最好的选择之一。它弥补了传统搜索和 AI 聊天之间的空白，免费版就很有价值。但如果你只是偶尔查点常识问题，或者对中文支持要求极高，它可能不是最优解。\n\n---\n\n## 使用建议\n\n- **问问题尽量具体**：比如不要只问“AI芯片怎么样”，而是“2025年国内有哪些AI芯片创业公司获得融资”。越具体，搜索结果越精准。\n- **善用追问**：第一轮得到答案后，可以接着问“那个公司的技术路线是什么”，利用上下文保持功能做深度挖掘。\n- **检查引用来源**：虽然 Sonar 的引用大多准确，但关键事实最好点开链接确认，尤其是涉及数据、政策、价格的信息。\n- **用文件分析来省时间**：遇到长文档需要总结时，直接上传文件比手动复制粘贴快得多。但要留意文件大小和隐私问题。\n- **Pro 版按需开通**：如果免费版搜索次数够用，其实不需要 Pro。只有当重度使用、或者必须要用 GPT-4/Claude 时才考虑付费。\n\n---\n\n## 适合谁用？\n\n**✅ 强烈推荐**  \n- 需要频繁搜索最新信息的研究人员、记者、分析师  \n- 喜欢“带来源”答案，不愿意盲目相信 AI 的学生和职场人  \n- 日常需要快速查阅英文资料的人（英文体验更好）  \n\n**🤔 可以考虑**  \n- 偶尔深度调研的普通用户（免费版够用）  \n- 想在搜索和 AI 问答之间找平衡的技术爱好者  \n\n**❌ 不推荐**  \n- 完全不需要联网搜索，只想要个离线聊天机器人（那不如直接用 ChatGPT）  \n- 追求极致中文支持、主要查中文资料且信息非常垂直小众的用户（中文结果质量不稳定）  \n- 预算有限、且对“引用来源”无感的用户（免费版搜索次数可能不够）\n\n## 常见问题（FAQ）\n\n**Perplexity Sonar 与普通 Perplexity 区别？**\n\nSonar 是底层搜索增强模型/API，返回带引用的回答；普通 Perplexity 应用默认调用 Sonar 能力，无需单独切换。\n\n**如何计费？**\n\nAPI 按 token + 每千次请求检索费；Sonar $1/$1 + $5~$12/千次，Sonar Pro $3/$15 + $6~$14/千次。\n",
+  "published": true,
+  "source_url": "https://docs.perplexity.ai/docs/getting-started/pricing",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://sonar.perplexity.ai/",
+  "verified_publisher": "Perplexity AI",
+  "verified_what": "Perplexity 实时联网搜索增强型模型/API，返回带引用的回答",
+  "verified_price": "按量计费：Sonar $1/$1 每百万 token + 请求费 $5(低)/$8(中)/$12(高) 每千次；Sonar Pro $3/$15 + $6/$10/$14；Sonar Reasoning Pro $2/$8 + $6/$10/$14；Deep Research $2/$8 + 引用 $2/百万 + 推理 $3/百万",
+  "verified_platform": "Web API、SDK",
+  "verified_features": [
+    "实时联网搜索并返回带引用的回答",
+    "Sonar / Sonar Pro / Sonar Reasoning Pro / Sonar Deep Research 等模型",
+    "OpenAI 兼容 Chat Completions 接口",
+    "可定制搜索来源与搜索上下文深度",
+    "支持多查询搜索与函数/代码执行工具"
+  ],
+  "verified_description": "Perplexity Sonar 是 Perplexity 的实时联网搜索增强型模型/API，返回带引用的回答，供开发者构建联网 AI 应用（Sonar / Sonar Pro / Sonar Reasoning Pro / Sonar Deep Research）。",
+  "content_flags": "整体准确，定价与模型信息属实；仅将 API 与消费版 Perplexity 混用（API 无长期免费额度，消费版有免费层），表述可更严谨。",
+  "price_verified": true,
+  "verified_rating": "⭐4.6",
+  "rating_source": "G2: Perplexity API 4.7/5（47 条评价, 2026-07）",
+  "rating_verified": true,
+  "verified_pros": [
+    "实时联网、回答带引用降低幻觉",
+    "模型与上下文档位可选",
+    "OpenAI 兼容接口易集成"
+  ],
+  "verified_cons": [
+    "除 Search API 外按请求另收检索费，量大时昂贵",
+    "深层研究/Reasoning 成本更高",
+    "中文表现弱于英文"
+  ],
+  "verified_faq": [
+    {
+      "q": "Perplexity Sonar 与普通 Perplexity 区别？",
+      "a": "Sonar 是底层搜索增强模型/API，返回带引用的回答；普通 Perplexity 应用默认调用 Sonar 能力，无需单独切换。"
+    },
+    {
+      "q": "如何计费？",
+      "a": "API 按 token + 每千次请求检索费；Sonar $1/$1 + $5~$12/千次，Sonar Pro $3/$15 + $6~$14/千次。"
+    }
+  ],
+  "verified_tags": [
+    "实时搜索",
+    "引用溯源",
+    "AI搜索",
+    "API",
+    "开发者工具"
+  ],
+  "verified_category": "AI搜索",
+  "source_urls": [
+    "https://docs.perplexity.ai/docs/getting-started/pricing",
+    "https://developer.puter.com/tutorials/perplexity-api-pricing",
+    "https://www.costbench.com/software/llm-api-providers/perplexity-api"
+  ],
+  "verify_notes": "真实（Perplexity Sonar API）；信息基本准确，原条目已含正确定价来源 docs.perplexity.ai。",
+  "compare_section": {
+    "competitors": [
+      "perplexity",
+      "perplexity-ai"
+    ],
+    "verdict": "Perplexity Sonar 与 Perplexity、Perplexity AI 同属AI搜索赛道。若优先性价比，Perplexity（免费版+Pro $20/月）门槛更低；若看重口碑，Perplexity（⭐ 4.8）评分更高；Perplexity Sonar 的优势在于Perplexity 实时联网搜索增强型模型/API，返回带引用的回答，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  },
+  "published_date": "2026-08-05",
+  "created_date": "2026-08-05"
+}

@@ -1,0 +1,150 @@
+{
+  "name": "Dataiku",
+  "slug": "dataiku",
+  "positioning": "免费AI开发工具推荐：全流程建模、可视化数据准备与",
+  "auto_positioning": true,
+  "emoji": "📊",
+  "color": "#2D9EE0",
+  "description": "Dataiku 是由 Dataiku 公司打造的通用 AI 平台（Universal AI Platform），覆盖数据准备、机器学习、LLM/智能体到模型部署与治理的企业级全流程。",
+  "category": "AI开发",
+  "tags": [
+    "数据科学",
+    "机器学习平台",
+    "自动化ML"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.dataiku.com",
+  "price": "免费版可用；付费版价格需联系销售",
+  "platform": "Web、桌面应用、云端部署",
+  "pros": [
+    "可视化操作界面，降低编码门槛",
+    "支持数据准备、建模、部署全流程",
+    "内置自动化机器学习（AutoML）",
+    "强大的团队协作与版本管理",
+    "可扩展的插件架构和 API 集成"
+  ],
+  "cons": [
+    "学习曲线较陡，初学者上手需要时间",
+    "社区规模和第三方资源不如开源工具丰富",
+    "付费版价格较高，中小企业可能负担较重"
+  ],
+  "features": [
+    "可视化数据准备与 AutoML（Visual Data Prep & AutoML）",
+    "全流程建模：训练、部署为 API、批预测",
+    "统一 AI 治理（Govern）：成本、合规与风险可视",
+    "LLM Mesh 与生成式 AI 助手：数据/ML/LLM 一体化",
+    "协作式工作流与多角色团队支持（含 SSO、权限）"
+  ],
+  "related": [
+    "hugging-face",
+    "langchain",
+    "pinecone"
+  ],
+  "faq": [
+    {
+      "q": "Dataiku适合哪些人群使用？",
+      "a": "Dataiku 主要面向数据科学家、数据分析师、机器学习工程师以及业务分析师，适合希望以低代码方式构建和管理 AI 模型的团队。"
+    },
+    {
+      "q": "Dataiku有免费版本吗？",
+      "a": "Dataiku 提供永久免费的 Free Edition（自托管，最多 3 用户），以及 14 天 Cloud 免费试用（最多 2 用户）。"
+    },
+    {
+      "q": "Dataiku与Jupyter Notebook相比有什么优势？",
+      "a": "Dataiku 提供更完整的端到端工作流管理、可视化的数据准备和自动化 ML，而 Jupyter 以灵活性和可定制性见长。Dataiku 更适合企业级协作和自动化生产。"
+    },
+    {
+      "q": "Dataiku支持哪些云平台部署？",
+      "a": "Dataiku 可部署在 AWS、Azure、GCP 等主流云平台，也支持本地私有化部署和混合云环境。"
+    }
+  ],
+  "seo_keywords": [
+    "Dataiku",
+    "Dataiku怎么样",
+    "Dataiku免费版",
+    "Dataiku使用教程",
+    "Dataiku和哪个好"
+  ],
+  "content": "## Dataiku是什么？\n\n简单说，Dataiku是一个企业级的“一站式”数据科学和机器学习平台。你不需要在Excel、Python、Jupyter、MLflow、Docker、Kubernetes之间来回折腾，Dataiku把这些环节串在了一起——从数据接入、清洗、做特征，到训练模型、部署成API，再到上线后的监控，都能在同一个界面完成。\n\n它特别强调“协作”和“可视化”。即使团队里有人不太会写代码，也可以通过拖拽、点选的方式参与数据分析和建模；而偏技术的人又能随时切换到Python/R/SQL写自定义脚本。有点像把Jupyter Notebook的灵活性和企业级平台的稳定性、权限管理揉在了一起，适合想规模化落地AI的团队。\n\n## 核心功能\n\n**1. 数据连接与准备**  \n支持各种数据源：本地CSV、云存储（S3、GCS）、数据库（MySQL、PostgreSQL、BigQuery）、甚至实时流数据。连接后可以用可视化流程编辑器做清洗、合并、数据类型转换。实际用下来，对于结构化数据，它的“自动化数据诊断”挺实用——能自动识别缺失值、异常值、分布，省掉很多手动探索的功夫。\n\n**2. 特征工程与可视化探索**  \n提供了大量内置的特征变换算子（标准化、编码、聚合、时间窗口等），可以直接在界面上拖拽使用，也能用Python表达式自定义。配合实时图表看每次变换后的分布变化，对快速迭代特征很有帮助。不过当数据集很大时，交互响应偶尔会慢一些。\n\n**3. 自动化机器学习（AutoML）**  \n你选定预测目标（分类/回归/时序等），设置好训练/验证集，平台会自动尝试多种算法（随机森林、XGBoost、LightGBM、甚至神经网络），并给出模型效果对比和可解释性报告。对于快速验证基线模型或非技术用户，AutoML的体验很友好。但如果你想精细调参，也可以手动接管。\n\n**4. 模型部署与API发布**  \n训练好的模型可以一键部署为REST API（也支持批量预测），并自动生成调用文档和示例代码。部署后还能设置资源配额、限流、回滚策略。多数用户反馈，从模型训练到上线API，熟练后几分钟就能搞定，比传统手动用Flask、Docker打包要快很多。\n\n**5. 模型性能监控与漂移检测**  \n上线后的模型可以设置定期监控——比如每天检查预测分布、特征分布是否发生漂移，并自动触发告警或重新训练。这个功能在企业生产环境中很实用，因为很多模型上线后数据会慢慢变化，没有监控等于“盲跑”。\n\n**6. 多用户协作与角色权限管理**  \n支持项目级的版本管理（类似Git的视觉差异对比）、代码/流程共享、评论和审批流程。管理员可以精细控制谁可以看哪些数据、谁可以部署模型。对于有合规要求（如金融、医疗）的团队，这点很关键。\n\n## 版本/套餐对比\n\n| 版本 | 主要面向 | 典型能力差异 |\n|------|----------|--------------|\n| Dataiku Free Edition | 个人学习、小团队试用 | 功能基本完整，但有用户数、数据量、模型部署数限制；不包含企业级安全与权限管理 |\n| Dataiku Enterprise | 中型团队、有合规需求 | 全量功能，含角色权限、审计日志、高可用部署、LDAP/SSO集成 |\n| Dataiku Cloud Starter | 需要云端托管，快速启动 | 提供SaaS版，免运维；按节点付费，适合不想自建基础设施的团队 |\n| Dataiku Cloud Business | 大型企业，需要定制SLA、私有云、高级支持 | 含专属实例、私有连接、合同级服务保障 |\n\n价格细节暂未公开，具体需联系销售。官方提供免费版（功能受限）和云版14天免费试用，可以先体验再决定。\n\n## 值不值得用？\n\n**优点**  \n- 可视化+代码双模式，确实降低了编码门槛，业务人员也能参与建模。  \n- 全流程打通：从数据到监控一条龙，减少工具切换的摩擦。  \n- AutoML和监控功能做得比较扎实，尤其漂移检测在企业场景很实用。  \n- 团队协作和版本管理完善，适合多人同时推进项目。\n\n**缺点**  \n- 学习曲线存在。虽然界面直观，但平台概念多（项目、流、配方、数据集……），初学者刚开始可能会有点懵。  \n- 社区和第三方资源远不如Python/R语言生态丰富，遇到冷门问题可能只能查官方文档。  \n- 付费版价格偏高，对中小企业和个人开发者来说，如果只是偶尔跑模型，可能不划算。\n\n**总体结论**：**非常适合中大型团队、有持续AI落地需求的企业**。它解决的是“规模化协作”和“生产化部署”的痛点，而不是“一个人跑个实验”。如果你只是偶尔做一次分析，或者团队很小且预算有限，开源工具（如Jupyter + MLflow）可能更灵活、成本更低。\n\n## 使用建议\n\n1. **先用免费版或云试用**。搭一个小项目跑一遍全流程（从数据导入到部署API），感受下界面逻辑和版本管理，再决定是否采购。  \n2. **注意培训投入**。团队成员至少要有1-2人能快速上手，之后再带动其他人。Dataiku官方有免费学习路径（Dataiku Academy），建议先学完“Dataiku 101”。  \n3. **从AutoML起步，再手工调优**。对大多数常规问题，先用AutoML跑出基线，然后针对最佳模型手动调参或做特征工程，效率更高。  \n4. **善用插件和API**。Dataiku支持Python/R/Java脚本扩展，也提供REST API用于集成到现有流水线（比如和Airflow、Kubernetes对接）。  \n5. **规划好数据访问权限**。团队人数多时，提前设计好角色和目录结构，否则后期调整成本高。\n\n## 适合谁用？\n\n**推荐**  \n- 数据科学团队（3人以上），有多个模型需要持续迭代和上线  \n- 企业AI部门，需要统一管控模型生命周期，有合规或审计需求  \n- 希望“业务人员参与数据分析”的跨职能团队  \n\n**可考虑**  \n- 有数据分析师但编程能力一般的团队（借助可视化+AutoML能快速产出）  \n- 云原生公司，能接受SaaS版按月付费，不想自己搭平台  \n\n**不推荐**  \n- 个人学习者或独立开发者（有免费的Jupyter/Colab/Python包就够了）  \n- 预算非常有限的初创公司（建议先用开源方案，等团队和项目规模大了再评估）  \n- 已有成熟技术栈、且工程师愿意自己维护Kubeflow/MLflow等开源平台的大团队（迁移成本可能高于收益）",
+  "published": true,
+  "source_url": "https://www.dataiku.com/",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://www.dataiku.com",
+  "verified_publisher": "Dataiku",
+  "verified_what": "企业级通用 AI 平台（Universal AI Platform，原 Dataiku DSS），覆盖数据准备、机器学习、LLM/智能体到模型部署与治理的端到端流程。",
+  "verified_price": "Free Edition（自托管，最多 3 用户，永久免费）；Cloud 14 天免费试用（最多 2 用户）；付费版（面向小团队/中型团队/企业，具体价格需联系销售，未公开）。",
+  "verified_platform": "Web, Cloud (SaaS), 自托管 (AWS/Azure/GCP/本地)",
+  "verified_features": [
+    "可视化数据准备与 AutoML（Visual Data Prep & AutoML）",
+    "全流程建模：训练、部署为 API、批预测",
+    "统一 AI 治理（Govern）：成本、合规与风险可视",
+    "LLM Mesh 与生成式 AI 助手：数据/ML/LLM 一体化",
+    "协作式工作流与多角色团队支持（含 SSO、权限）"
+  ],
+  "verified_description": "Dataiku 是由 Dataiku 公司打造的通用 AI 平台（Universal AI Platform），覆盖数据准备、机器学习、LLM/智能体到模型部署与治理的企业级全流程。",
+  "content_flags": "长文版本对比表中“Dataiku Cloud Starter / Cloud Business”等旧版套餐命名已过时，现行命名为 Free Edition、14 天 Cloud 试用及付费版（小团队/中型/企业），不影响主体事实。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "Gartner Peer Insights 4.8/5（249 评测，2022）；保留编辑评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "可视化操作界面，降低编码门槛",
+    "支持数据准备、建模、部署全流程",
+    "内置自动化机器学习（AutoML）",
+    "强大的团队协作与版本管理",
+    "可扩展的插件架构和 API 集成"
+  ],
+  "verified_cons": [
+    "学习曲线较陡，初学者上手需要时间",
+    "社区规模和第三方资源不如开源工具丰富",
+    "付费版价格较高，中小企业可能负担较重"
+  ],
+  "verified_faq": [
+    {
+      "q": "Dataiku适合哪些人群使用？",
+      "a": "Dataiku 主要面向数据科学家、数据分析师、机器学习工程师以及业务分析师，适合希望以低代码方式构建和管理 AI 模型的团队。"
+    },
+    {
+      "q": "Dataiku有免费版本吗？",
+      "a": "Dataiku 提供永久免费的 Free Edition（自托管，最多 3 用户），以及 14 天 Cloud 免费试用（最多 2 用户）。"
+    },
+    {
+      "q": "Dataiku与Jupyter Notebook相比有什么优势？",
+      "a": "Dataiku 提供更完整的端到端工作流管理、可视化的数据准备和自动化 ML，而 Jupyter 以灵活性和可定制性见长。Dataiku 更适合企业级协作和自动化生产。"
+    },
+    {
+      "q": "Dataiku支持哪些云平台部署？",
+      "a": "Dataiku 可部署在 AWS、Azure、GCP 等主流云平台，也支持本地私有化部署和混合云环境。"
+    }
+  ],
+  "verified_tags": [
+    "数据科学",
+    "机器学习平台",
+    "自动化ML"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://www.dataiku.com/plans",
+    "https://www.dataiku.com/de/product/plans-and-features/"
+  ],
+  "verify_notes": "付费版具体价格不公开，需联系销售；Free Edition 为自托管永久免费。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Dataiku 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Dataiku 的 可视化数据准备与 AutoML（Visual Data Prep & AutoML） 是亮点，价格 免费版可用；付费版价格需联系销售；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-13",
+  "created_date": "2026-08-13"
+}

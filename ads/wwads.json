@@ -1,0 +1,46 @@
+{
+  "_comment": "万维广告（wwads.cn）静态接入配置。wwads 要求 div 必须写死在 HTML（不能由 JS 动态插入），故由 scripts/inject_ads.py 在部署时直接烤入指定位置。注意：同一页面悬浮/固定只能二选一。2026-07-22 迁移到 Monetag(CPM)，已关闭。",
+  "enabled": false,
+  "script": "https://cdn.wwads.cn/js/makemoney.js",
+  "dataId": "397",
+  "pageTypes": ["tool", "article", "dict"],
+  "placements": [
+    {
+      "slot": "content-top",
+      "pageTypes": ["tool", "article", "dict"],
+      "layout": "horizontal",
+      "maxWidth": 728,
+      "target": [
+        "<div class=\"content-main\">",
+        "<main class=\"dict-detail-page\">"
+      ]
+    },
+    {
+      "slot": "sidebar-top",
+      "pageTypes": ["tool", "article", "dict"],
+      "layout": "vertical",
+      "maxWidth": 300,
+      "target": [
+        "<aside class=\"page-sidebar\">",
+        "<aside class=\"dict-detail-sidebar\">"
+      ]
+    },
+    {
+      "slot": "ranking-top",
+      "pageTypes": ["ranking"],
+      "layout": "horizontal",
+      "maxWidth": 728,
+      "target": [
+        "<div class=\"ranking-hero\">"
+      ]
+    },
+    {
+      "slot": "hotgrid-float",
+      "pageTypes": ["home"],
+      "html": "<div class=\"wwads-cn wwads-vertical wwads-sticky\" data-id=\"397\" style=\"max-width:280px\"></div>",
+      "target": [
+        "<div class=\"tools-grid\" id=\"hotGrid\">"
+      ]
+    }
+  ]
+}

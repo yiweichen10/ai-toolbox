@@ -1,0 +1,153 @@
+{
+  "name": "Rill Data",
+  "slug": "rill-data",
+  "positioning": "免费AI工具，对话式+指标优先好用吗",
+  "auto_positioning": true,
+  "emoji": "📊",
+  "color": "#4A90D9",
+  "description": "Rill Data 是由 Rill（Metamarkets 前团队创立）推出的代码优先（code-first）运营 BI 工具，用 SQL+YAML 定义 BI 资产，提供对话式 Agentic Analytics 与亚秒级交互仪表盘。",
+  "category": "AI行业应用",
+  "tags": [
+    "数据管道",
+    "仪表板",
+    "开源",
+    "BI"
+  ],
+  "rating": "⭐4.5（编辑评测）",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.rilldata.com",
+  "price": "开源免费 + 云端 Starter $20/人/月起",
+  "platform": "桌面应用（Desktop）、CLI、云端（Rill Cloud）",
+  "pros": [
+    "开源且可自托管，数据安全可控",
+    "使用标准 SQL 进行数据转换，学习成本低",
+    "内置高性能多维分析引擎，支持亚秒级查询",
+    "交互式仪表板支持实时过滤与下钻",
+    "与 dbt 等工具良好集成，适配现有数据栈"
+  ],
+  "cons": [
+    "社区相对较小，周边生态不够丰富",
+    "高级可视化自定义能力有限",
+    "大规模数据场景下对计算资源要求较高"
+  ],
+  "features": [
+    "BI-as-code：用 SQL+YAML 定义并版本化所有 BI 资产（Git 工作流）",
+    "对话式 Agentic Analytics：自然语言提问获得可视化、可验证答案",
+    "指标优先（Metrics-first）自动可视化",
+    "内嵌内存数据库，毫秒级交互查询与下钻",
+    "可嵌入分析（Embedded Analytics）与实时流摄入"
+  ],
+  "related": [
+    "supabase-ai",
+    "hex-tech",
+    "deepnote"
+  ],
+  "faq": [
+    {
+      "q": "Rill Data 是免费的吗？",
+      "a": "核心引擎开源可免费自托管；Rill Cloud 提供 30 天免费试用，之后 Starter 计划 $20/人/月起，Enterprise 需联系销售。"
+    },
+    {
+      "q": "Rill Data 与 Metabase 有什么区别？",
+      "a": "Rill 更侧重数据管道构建和 SQL 转换，内置维度建模能力，适合生产级仪表板；Metabase 更偏自助式 BI 查询和可视化。"
+    },
+    {
+      "q": "Rill Data 支持哪些数据源？",
+      "a": "支持 Postgres、MySQL、Snowflake、BigQuery、Redshift、DuckDB 等，通过 DuckDB 本地化查询。"
+    },
+    {
+      "q": "Rill Data 可以嵌入到其他应用中吗？",
+      "a": "可以，支持将仪表板通过 iframe 嵌入或使用 API 实现自定义集成。"
+    }
+  ],
+  "seo_keywords": [
+    "Rill Data",
+    "Rill Data怎么样",
+    "Rill Data免费版",
+    "Rill Data使用教程",
+    "Rill Data和哪个好"
+  ],
+  "content": "## Rill Data是什么？\n\n想象一下，以前做个数据看板，你可能得先在数据库里写一堆 SQL 算出宽表，再扔到 BI 工具里折腾半天。Rill Data 想解决的就是这个麻烦。\n\n它本质上是一个开源的数据平台，但它的设计思路很不一样。它把“数据转换”和“可视化探索”这两件事放在了同一个工作流里。你只需要用标准 SQL 去定义你的数据模型，Rill 会自动帮你构建出一个多维分析引擎。然后你就直接在浏览器里，像拉抽屉一样实时拖拽、过滤、下钻，去探查那些海量数据。\n\n别被“数据平台”这种词吓到，对于数据团队来说，它的感觉更像是一个“数据游乐场”：上手快，反馈及时，而且因为开源可以自己部署，数据安全问题也少了很多顾虑。\n\n## 核心功能\n\n### 1. 基于 SQL 的数据管道与转换\n\n这一点可能是它最吸引人的地方。很多「现代数据栈」的工具都需要学一堆新的概念，Rill 直接回归 SQL。你只要在它的模型文件里写好 `SELECT` 语句，它就负责把这些数据清洗、转换好。如果你熟悉 dbt，会发现这套逻辑非常亲切，学习成本几乎可以忽略。\n\n### 2. 自动生成多维数据集和度量模型\n\n这是它最值钱的能力。你写完 SQL 定义了“订单金额”和“用户数”这些指标后，剩下的维度（比如时间、地域、产品类型），Rill 会自动帮你索引好。它内置了一个高性能的多维分析引擎，会把你的数据自动预聚合。实际使用中，你点一下过滤，或者换个维度，基本是亚秒级的响应，传统 BI 那种“转圈圈”的体验会少很多。\n\n### 3. 交互式仪表板与图表\n\n仪表板的交互感很棒，支持实时过滤和下钻。比如你看到一个全国销售总图，双击某个省份，它就能瞬间下钻到该省的城市数据。这对于做数据分析、找异常点特别方便。图表样式虽然不算惊艳，但该有的柱状图、折线图、热力图都有，对日常分析来说是够用的。\n\n### 4. 支持增量构建和增量刷新\n\n数据不是一成不变的。Rill 支持增量构建和刷新，这意味着你每天跑一个全量更新可能很慢，但用 Rill 可以只处理新增或变化的数据，资源节省了不少。这一点对需要高频刷新看板的场景（比如实时运营监控）来说，是一个很实在的特性。\n\n### 5. 导出与集成\n\n做好的仪表板，你可以导出为静态网页，或者通过 iframe 嵌入到其他应用中。这对需要对外展示数据，或者把看板嵌入到公司内部系统里的场景很友好。同时它提供 CLI 工具，支持版本控制，这些细节都说明它不只是个玩具，而是考虑了团队协作的。\n\n## 版本/套餐对比\n\n| 特性 | 开源版（Community） | 企业版（Enterprise） |\n| :--- | :--- | :--- |\n| **部署方式** | 自托管（Docker 等） | 托管云服务 或 自托管 |\n| **核心功能** | 完整的数据管道、仪表板、探索功能 | 包含所有开源版功能 |\n| **性能与规模** | 受限于自托管资源 | 提供性能优化、更低的资源消耗 |\n| **安全与治理** | 基础安全（依赖自建环境） | 企业级 SSO、RBAC、审计日志 |\n| **支持与协作** | 社区支持 | 商业支持、SLA保障、团队协作增强 |\n| **价格** | 免费 | 价格暂未公开（通常需要联系销售） |\n\n**个人看法**：对大多数中小企业或数据小组来说，开源版基本够用了。企业版主要解决的是“大型团队协作”“高安全合规”和“超大规模数据性能”的问题。如果你们团队只有几个人，自己部署开源版是性价比最高的选择。\n\n## 值不值得用？\n\n**优点：**\n\n- **开源可控**：数据安全不用担心，想停服自检查都行。\n- **SQL 友好**：对分析师和工程师都很友好，不用学一堆新概念。\n- **性能惊喜**：内置的多维引擎响应快，数据探索体验很流畅。\n- **集成性好**：和 dbt、Git 这类工具配合默契，能融入现有工作流。\n\n**缺点：**\n\n- **社区生态相对小**：遇到冷门坑，网上能搜到的资料可能不如 Tableau 或 Metabase 多，更多要靠官方文档。\n- **可视化自定义上限不高**：如果你想做那种很精美、高度定制化的数据大屏，Rill 可能不是首选。它更偏向于“快速分析”而非“精美展示”。\n- **资源消耗**：在超大级别数据（比如几亿行以上）的场景下，对自托管服务器的计算资源有一定要求，需要合理规划硬件。\n\n**总体结论：** 值得一试，尤其适合那些厌倦了传统 BI 工具繁琐流程、又想保留 SQL 分析能力的团队。它不是万能药，但如果你需要的是一个快速、灵活、能由自己掌控的数据分析看板工具，Rill Data 是目前很值得关注的一个选项。\n\n## 使用建议\n\n1.  **先拿来练手**：不用一上来就想迁移整个数据栈。找一个小业务线（比如最近一个月的销售数据）用 Rill 搭一个看板，体验一下整个流程。\n2.  **从 dbt 迁移**：如果你的团队已经在用 dbt，配合 Rill 几乎是无缝衔接。可以直接把 dbt 模型通过 Rill 来展现，能省掉很多重复工作。\n3.  **善用“下钻”**：设计仪表板时，不要只看顶层汇总。把下钻路径设计好（比如：年份 -> 季度 -> 月份 -> 城市），你会发现提问和发现问题的效率会高很多。\n4.  **关注增量刷新**：如果数据量大、更新频次高，一定要研究一下增量构建的实现，这能帮你省下不少计算成本和等待时间。\n\n## 适合谁用？\n\n-   **推荐**\n    -   **数据工程师/分析师个人**：追求效率，喜欢用 SQL 解决问题。\n    -   **中小型数据团队**：预算有限，需要快速交付分析能力，且对数据安全比较重视。\n\n-   **可考虑**\n    -   **大型企业数据团队**：如果团队规模很大，且有足够预算，可以考虑企业版，但需要评估其规模化能力是否完全满足需求。\n    -   **数据可视化设计师**：如果主要工作是制作精美的数据报表或大屏，Rill 可能不太够用。\n\n-   **不推荐**\n    -   **纯业务人员（非技术背景）**：0 SQL 基础的用户上手有难度，不如直接用 Metabase 这种更“无代码”的工具。\n    -   **需要极复杂可视化效果的用户**：对图表的定制化、交互动画有极高要求的场景，Rill 满足不了。",
+  "published": true,
+  "source_url": "https://www.rilldata.com",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://www.rilldata.com",
+  "verified_publisher": "Rill（由 Metamarkets 前团队成员创立）",
+  "verified_what": "代码优先（code-first）的运营 BI 工具，用 SQL+YAML 定义 BI 资产，提供对话式 Agentic Analytics 与亚秒级交互仪表盘。",
+  "verified_price": "开源核心免费自托管；Rill Cloud 分档：Starter $20/人/月（最多 20 席位、3 项目）、Growth $30/人/月（最多 100 席位、10 项目）、Enterprise 定制；提供 30 天免费试用。",
+  "verified_platform": "Web（Rill Cloud）、CLI、自托管",
+  "verified_features": [
+    "BI-as-code：用 SQL+YAML 定义并版本化所有 BI 资产（Git 工作流）",
+    "对话式 Agentic Analytics：自然语言提问获得可视化、可验证答案",
+    "指标优先（Metrics-first）自动可视化",
+    "内嵌内存数据库，毫秒级交互查询与下钻",
+    "可嵌入分析（Embedded Analytics）与实时流摄入"
+  ],
+  "verified_description": "Rill Data 是由 Rill（Metamarkets 前团队创立）推出的代码优先（code-first）运营 BI 工具，用 SQL+YAML 定义 BI 资产，提供对话式 Agentic Analytics 与亚秒级交互仪表盘。",
+  "content_flags": "原 price 写“具体定价暂未公开”已过时，Rill Cloud 现已公开分档定价。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5（编辑评测）",
+  "rating_source": "编辑评测（暂无权威第三方评分来源）",
+  "rating_verified": true,
+  "verified_pros": [
+    "开源且可自托管，数据安全可控",
+    "使用标准 SQL 进行数据转换，学习成本低",
+    "内置高性能多维分析引擎，支持亚秒级查询",
+    "交互式仪表板支持实时过滤与下钻",
+    "与 dbt 等工具良好集成，适配现有数据栈"
+  ],
+  "verified_cons": [
+    "社区相对较小，周边生态不够丰富",
+    "高级可视化自定义能力有限",
+    "大规模数据场景下对计算资源要求较高"
+  ],
+  "verified_faq": [
+    {
+      "q": "Rill Data 是免费的吗？",
+      "a": "核心引擎开源可免费自托管；Rill Cloud 提供 30 天免费试用，之后 Starter 计划 $20/人/月起，Enterprise 需联系销售。"
+    },
+    {
+      "q": "Rill Data 与 Metabase 有什么区别？",
+      "a": "Rill 更侧重数据管道构建和 SQL 转换，内置维度建模能力，适合生产级仪表板；Metabase 更偏自助式 BI 查询和可视化。"
+    },
+    {
+      "q": "Rill Data 支持哪些数据源？",
+      "a": "支持 Postgres、MySQL、Snowflake、BigQuery、Redshift、DuckDB 等，通过 DuckDB 本地化查询。"
+    },
+    {
+      "q": "Rill Data 可以嵌入到其他应用中吗？",
+      "a": "可以，支持将仪表板通过 iframe 嵌入或使用 API 实现自定义集成。"
+    }
+  ],
+  "verified_tags": [
+    "数据管道",
+    "仪表板",
+    "开源",
+    "BI"
+  ],
+  "verified_category": "AI行业应用",
+  "source_urls": [
+    "https://www.rilldata.com/",
+    "https://www.rilldata.com/pricing",
+    "https://docs.rilldata.com/developers/other/FAQ"
+  ],
+  "verify_notes": "Rill 官网已改为突出 Agentic Analytics 与对话式分析；开源核心名为 rill（GitHub）。",
+  "compare_section": {
+    "competitors": [
+      "duolingo-max",
+      "harvey-ai",
+      "schole-ai"
+    ],
+    "verdict": "Rill Data 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：Rill Data 的 BI-as-code：用 SQL+YAML 定义并版本化所有 BI 资产（Git 工作流） 是亮点，价格 开源免费 + 云端 Starter $20/人/月起；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-11",
+  "created_date": "2026-08-11"
+}

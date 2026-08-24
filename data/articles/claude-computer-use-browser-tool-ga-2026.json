@@ -1,0 +1,70 @@
+{
+  "author": "AI工具宝箱编辑组",
+  "category": "AI资讯",
+  "content_type": "AI资讯",
+  "date": "2026-08-22",
+  "dateFull": "",
+  "description": "2026年8月20日 Anthropic 宣布 Computer Use、Skills API、Files API 在 Claude Platform 全面可用（GA），并发布全新的浏览器使用工具——从像素定位升级为 DOM 结构定位。本文拆解四件套能力、真实客户数据，并与 Qwen-UI-Agent 视觉派、传统 RPA 做三路线横评，帮你判断 AI 操作电脑时代该怎么选型。",
+  "keywords": "Claude Computer Use, Claude浏览器工具, Skills API, Files API, AI操作电脑, 浏览器自动化, DOM定位, Agent, 智能体, 视觉派结构派, 2026 AI",
+  "related_tools": [
+    "claude",
+    "claude-code",
+    "qwen-chat",
+    "chatgpt",
+    "gemini",
+    "grok",
+    "coze",
+    "dify",
+    "openclaw",
+    "cursor",
+    "kimi",
+    "microsoft-copilot"
+  ],
+  "seo_title": "",
+  "slug": "claude-computer-use-browser-tool-ga-2026",
+  "summary": "",
+  "tags": [
+    {
+      "text": "AI资讯",
+      "type": "hot"
+    },
+    {
+      "text": "Claude",
+      "type": "topic"
+    },
+    {
+      "text": "Computer Use",
+      "type": "topic"
+    },
+    {
+      "text": "Agent",
+      "type": "topic"
+    }
+  ],
+  "title": "Claude Computer Use 正式版上线：AI 操作电脑进入“生产级”，浏览器工具用 DOM 结构精准定位——视觉派与结构派两条路线对决（2026年8月）",
+  "content": "## 一句话结论\n\n**2026年8月20日，Anthropic 宣布 Computer Use、Skills API、Files API 在 Claude Platform 全面可用（GA）**，并发布一个关键新工具——浏览器使用工具（Browser use tool）。它不再靠\"截图+像素坐标\"猜着点，而是直接读取网页的 DOM 结构，认准输入框和按钮再动手；配合\"单轮多次动作\"的批处理能力，医疗理赔这类长流程任务从 32 分钟压到 13 分钟、单任务成本降约三成。**AI 操作电脑，正式从\"能演示\"进入\"能生产\"。**\n\n## 为什么是现在：AI 从\"能聊\"到\"能操作\"的临门一脚\n\n过去一年，主流大模型的差距在快速收窄：写文案、写代码、做图，几乎家家都会。真正拉开差距的，是谁能让 AI **替你把事做完**——不是给一份操作指南，而是自己打开软件、填表、点按钮、保存文件。\n\n[Claude](https://www.aitoollab.cn/tools/claude/) 的 Computer Use 从研究预览走到正式版，正是这条赛道的标志性事件。它让 AI 对着屏幕截图，像人一样点击、输入、滚动，去操作那些**从未为自动化设计过的软件**——老旧内部系统、没有 API 的医疗与保险门户、只能靠网页点击的管理后台。\n\n## Computer Use 正式版：从\"一次一步\"到\"一批多步\"\n\n预览版最大的痛点是慢：模型每走一步都要停下来确认截图、决定下一步，一个 30 分钟的人工流程，AI 要跑一两个小时，调用次数多、token 烧得凶。\n\n正式版的核心升级是**多动作轮次（multi-action turns）**：Claude 在一个模型调用里就能返回\"点击→输入→截图\"一连串动作，任务完成所需的调用次数和时间大幅下降。同时它现在符合 **HIPAA 标准**（签署 BAA 后可用于受监管的医疗工作负载），把合规门槛一并补齐。\n\nAnthropic 官方博客给出的案例很有说服力：保险科技公司 Asteroid 的理赔工作流，从 32 分钟缩短到 13 分钟，模型调用减少 32%–52%，单任务成本下降 25%–32%，任务完成率从 77% 提到 100%，而且**没有改一行 prompt**。\n\n## 全新 Browser use tool：从\"像素派\"到\"结构派\"\n\n这次更新最大的亮点，是一个独立的**浏览器使用工具**（工具代号 browser_toolset_20260801）。\n\n此前的屏幕操作是\"像素派\"：AI 看截图，猜测按钮在屏幕的哪个坐标，点下去。问题很明显——网页布局一变化（弹了广告、改版式、加了个横幅），坐标就全错。\n\n新工具是\"结构派\"：它除了看截图，还会**读取网页的 DOM 结构**，直接定位到具体的输入框、按钮、下拉菜单，用\"元素引用+坐标\"的方式操作。**页面布局变了，元素还在，照样找得到。** 这在网页应用自动化上是一次可靠性飞跃——毕竟现在绝大多数业务系统都是网页。\n\n## Skills API：把团队经验变成可版本化的技能\n\n光会操作软件还不够，Agent 得懂\"你们家怎么做事的\"。Skills API 解决的就是这个问题。\n\n一个技能（Skill）就是一个文件夹，里面放着行业标准指令、脚本和模板。比如银行的信贷审批技能，就封装了这家银行的信用评估方法论和备忘录格式规范。它的设计很克制：\n\n- **按需加载**：技能名称和一句话描述常驻上下文（约 100 个 token），完整的 SKILL.md 只在任务真正需要时才加载，不浪费上下文窗口；\n- **沙盒运行**：技能里的脚本在 Claude 的代码执行沙盒里跑，你不需要自己托管任何服务；\n- **零数据保留（ZDR）**：调用技能时服务器不保留数据；\n- **版本管理**：用 version_id 固定版本，或直接用 latest 跟随最新，团队可以把请求钉在某个工作流版本上。\n\n案例：Box 给银行做的 Agent，用技能封装信贷方法论和备忘录格式，读取 Box 里的财务报表与交易文档，直接生成可供分析师审阅的信贷备忘录——银行不用从零造 Agent，套用现成技能即可。\n\n## Files API：文档只传一次，处处引用\n\nAgent 干活离不开文档。Files API 的逻辑很简单：**上传一次文件（PDF、表格都行），拿到一个 file_id，之后的请求用 ID 引用**，不用反复上传；Agent 生成的文件也能通过它下载。\n\n正式版还加了三个实用能力：文件自动过期（expires_in_seconds，防止脏数据堆积）、速率限制提高到 500 RPM（原来的 5 倍）、每个组织 1TB 存储空间。\n\n## 三件事串起来：一个理赔 Agent 的完整闭环\n\n把四件套串起来看，就是一个\"生产级 Agent\"的标准结构：\n\n1. **Files API**：上传理赔申请书 PDF，拿到 file_id；\n2. **Skills API**：加载这家公司的理赔流程技能（怎么核对、怎么填写）；\n3. **Browser use tool**：打开保险公司的门户网站，认准表单字段，逐项填写提交；\n4. **Files API**：把提交回执保存成文件，交还给你。\n\nAnthropic 把这套能力定位为\"让 Agent 操作软件、运用团队经验、交付成品文件\"三件事一起做完——这也是企业愿意付费的完整闭环。开发者还可以把 [Claude Code](https://www.aitoollab.cn/tools/claude-code/) 或 [Cursor](https://www.aitoollab.cn/tools/cursor/) 接入这个循环，把代码类任务也编排进来。\n\n## 结构派 vs 视觉派：Claude 与 Qwen 的两条路线对决\n\n就在 Claude 转正的前一天，阿里发布了 [Qwen-UI-Agent](https://www.aitoollab.cn/articles/qwen-ui-agent-gui-automation-2026/)，一个走\"视觉派\"路线的 GUI 智能体基座模型——不依赖任何 API，纯靠\"看懂屏幕\"来操作手机 App、电脑软件和网页，真机基准 92.2%。两条路线放到一起，正好是当前 AI 操作设备的两种哲学：\n\n**结构派（Claude Browser use tool）**：读 DOM、认元素，可靠性高、抗布局变化，但前提是目标系统有可读的结构（网页天然满足）；\n**视觉派（Qwen-UI-Agent）**：看像素、理解语义，不需要任何 API 和结构信息，连没有 DOM 的桌面软件、手机 App 都能操作，但对复杂界面的稳定性和成本控制要求更高。\n\n对开发者来说这不是二选一：**网页自动化优先结构派，没有结构的场景（桌面软件、App、旧系统）交给视觉派**。两派互相补位，才是完整的\"数字员工\"。想搭这类 Agent 工作流，也可以先在 [Coze](https://www.aitoollab.cn/tools/coze/) 或 [Dify](https://www.aitoollab.cn/tools/dify/) 里跑通逻辑，再上生产环境。\n\n## 三路线横评：结构派 vs 视觉派 vs 传统 RPA\n\n传统 RPA 是更早的\"像素派\"：用固定坐标加 OCR 录制脚本，部署一次能跑，界面一改就废，维护成本极高。三者对比见下方信息图：结构派在抗变化上最强，视觉派在不依赖结构上最强，RPA 只剩\"遗产系统上的存量自动化\"这一个护城河。\n\n## 现实的两盆冷水：成本与安全\n\n兴奋之余，两件事必须说清楚。\n\n**成本**：Computer Use 每个动作都要截图，截图就烧 token。社区里有句大实话——\"大多数 Agent demo 死于成本，而不是能力：每点一下都在烧一张截图\"。Anthropic 的建议是缩放截图分辨率、限制历史、做缓存。多动作批处理能减少调用次数，但解决不了截图本身的消耗。跑生产任务前，先算清这笔账。\n\n**安全**：Anthropic 官方文档自己警告——\"在某些情况下，Claude 会遵循内容里出现的指令，即使它们与你的指令冲突。网页上或图片里的指令可能覆盖你的指令，或导致 Claude 犯错\"。这就是提示注入（prompt injection）。让 AI 上网操作，等于把\"点击权限\"交给了环境，网页里藏着的恶意指令，Agent 可能照单全收。**权限最小化、敏感操作人工确认、审计日志留痕**，是上生产的底线。\n\n## 三类人现在该做什么\n\n**开发者**：把 Beta header 换成正式 API，迁移到新工具集（browser_toolset_20260801），把单动作循环改成多动作批处理——同样的任务，调用次数能省一半。Skills API 加 Files API 的组合值得立刻接入：技能封装业务流程、文件按 ID 引用，代码量直接砍半。\n\n**企业**：可以先去微软 Foundry 用 Skills/Files API（已可用），或等 Google Cloud Vertex AI 支持（Computer/Browser 工具即将上线），在受监管的流程（理赔、开户、审批）上小范围试点。HIPAA 合规意味着医疗行业可以正式用了。建议从\"高价值、低风险、流程固定\"的任务切入，别一上来就放全权。\n\n**普通用户**：短期影响不大——这些能力主要面向开发者平台。但趋势已经很明显：AI 正在从\"帮你生成内容\"变成\"替你完成操作\"。与其纠结哪个模型更强，不如学一点 Agent 编排的思路，未来这种\"委托式\"用法会越来越多。\n\n## 诚实边界\n\n- Computer Use 目前不能与 Claude Managed Agents 一起使用（官方迁移指南有说明）；\n- 截图驱动的成本问题没有根治，多动作批处理只是缓解；\n- DOM 定位对\"现代、结构清晰的网页\"最有效，反爬、验证码、加密页面仍是难点；\n- 视觉派 Qwen-UI-Agent 的长尾 App 适配和定价策略还未完全公开；\n- 提示注入是结构性风险，不是打补丁能解决的，需要流程级防护。\n\n## 拐点判断\n\nAnthropic 把 Computer Use 从预览转正、把 Skills/Files 一起 GA，本质是在宣告：**\"AI 操作电脑\"从 demo 变成产品了**。加上一周前 [ChatGPT](https://www.aitoollab.cn/tools/chatgpt/) 的 Computer History（记住你在电脑上干过什么）、8月21日 [Grok Build](https://www.aitoollab.cn/tools/grok/) 全面开放应用生成，以及 [DeepSeek Harness](https://www.aitoollab.cn/articles/deepseek-harness-open-source-agent-framework-2026/) 的 Agent 运行时生态——2026 年 8 月这一周，AI 圈的竞争主线已经从\"谁的模型强\"切换到了\"**谁能让 Agent 真正替你干活**\"。\n\n对做工具导航和内容的人来说，下一波流量机会在\"Agent 落地\"而不是\"模型参数\"。[Gemini](https://www.aitoollab.cn/tools/gemini/)、[Kimi](https://www.aitoollab.cn/tools/kimi/)、[通义千问](https://www.aitoollab.cn/tools/qwen-chat/) 这些助手们也在同一时间点卷\"操作能力\"，普通人用 AI 的方式，会从\"对话\"变成\"委托\"。\n",
+  "faq": [
+    {
+      "question": "Claude Computer Use 免费吗？",
+      "answer": "Computer Use 属于 Claude Platform（开发者平台）能力，按 API 调用计费，没有单独免费额度；但 Anthropic 为开发者提供一定的免费试用额度。它和 ChatGPT 的付费订阅是两个体系，需要 API Key 才能调用。"
+    },
+    {
+      "question": "Computer Use 和浏览器使用工具（Browser use tool）有什么区别？",
+      "answer": "Computer Use 是通用屏幕操作能力（截图+鼠标键盘），浏览器工具是它的一个专门扩展：读取网页 DOM 结构，按元素引用定位，而不是按像素坐标点击。网页自动化优先用浏览器工具，桌面软件用 Computer Use。"
+    },
+    {
+      "question": "我没有编程基础，能用上 Computer Use 吗？",
+      "answer": "目前 Computer Use/Skills API/Files API 都面向开发者，需要调用 API 或使用 Claude Code 等工具。普通用户短期内用不上，但可以关注官方推出的 Cowork 等产品形态，Anthropic 正在把这类能力包装成更易用的界面。"
+    },
+    {
+      "question": "让 AI 操作我的电脑安全吗？",
+      "answer": "要警惕两类风险：一是提示注入——网页或图片里的恶意指令可能覆盖你的指令，Anthropic 官方文档明确警告过这一点；二是权限失控。生产环境应遵循权限最小化、敏感操作人工确认、保留审计日志，并避免让 Agent 接触高权限账户。"
+    },
+    {
+      "question": "视觉派和结构派哪条路线更好？",
+      "answer": "没有绝对优劣：结构派（Claude Browser use tool）读 DOM 定位，可靠、抗布局变化，适合网页自动化；视觉派（Qwen-UI-Agent）看屏幕理解语义，不需要 API 和结构，适合手机 App、桌面软件等无结构场景。成熟方案应两派互补，按目标系统选择。"
+    }
+  ],
+  "excerpt": "2026年8月20日 Anthropic 宣布 Computer Use、Skills API、Files API 在 Claude Platform 全面可用（GA），并发布全新的浏览器使用工具——从像素定位升级为 DOM 结构定位。本文拆解四件套能力、真实客户数据，并与 Qwen-UI-Agent 视觉派、传统 RPA 做三路线横评，帮你判断 AI 操作电脑时代该怎么选型。",
+  "updated_date": "2026-08-22"
+}

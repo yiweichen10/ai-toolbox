@@ -1,0 +1,150 @@
+{
+  "name": "Evidence.dev",
+  "slug": "evidence-dev",
+  "positioning": "免费AI效率工具，用 SQL+多数据源连接好用吗",
+  "auto_positioning": true,
+  "emoji": "📊",
+  "color": "#10B981",
+  "description": "Evidence 是开源的“代码即 BI”（BI as Code）框架，用 SQL+Markdown 构建报告、仪表盘与数据应用，基于 Git 版本控制；核心框架 MIT 许可免费，Evidence Cloud 托管 $15/用户/月起。",
+  "category": "AI效率",
+  "tags": [
+    "开源",
+    "数据分析",
+    "报告生成"
+  ],
+  "rating": "⭐ 4.8",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.evidence.dev",
+  "price": "开源免费；Cloud Team $15/用户/月起",
+  "platform": "Web、CLI、VSCode 扩展、云端（Evidence Cloud）",
+  "pros": [
+    "基于 SQL + Markdown，学习成本低",
+    "原生支持 Git 版本控制，便于团队协作",
+    "可生成静态站点，部署灵活（Vercel、Netlify 等）",
+    "内置丰富的交互式图表和表格组件",
+    "开源且社区活跃，扩展性强"
+  ],
+  "cons": [
+    "需要具备 SQL 基础才能使用",
+    "不支持实时数据更新（静态生成模式）",
+    "对大型数据集的处理能力有限（建议配合采样或聚合）"
+  ],
+  "features": [
+    "用 SQL + Markdown 构建数据产品（报告、仪表盘、应用）",
+    "Git 版本控制与测试，像软件一样发布与回溯",
+    "丰富交互式图表与组件，出版物级可视化",
+    "多数据源连接（Snowflake、BigQuery、ClickHouse、DuckDB、Postgres 等）",
+    "Evidence Cloud 托管、SSO、行级权限与 SOC 2 企业级安全"
+  ],
+  "related": [
+    "snowflake-ai",
+    "rill-data",
+    "hex-tech"
+  ],
+  "faq": [
+    {
+      "q": "Evidence.dev 免费吗？",
+      "a": "Evidence Core 框架采用 MIT 许可永久免费，可自托管在 Netlify、Vercel 或自有服务器；Evidence Cloud 托管版 Team $15/用户/月、Pro $25/用户/月、Enterprise 定制。"
+    },
+    {
+      "q": "使用 Evidence 需要编程知识吗？",
+      "a": "是的，你需要掌握 SQL 来查询数据，以及基础的 Markdown 语法来编写报告。不需要前端或后端编程经验。"
+    },
+    {
+      "q": "Evidence 支持哪些数据库？",
+      "a": "支持 PostgreSQL、MySQL、DuckDB、Snowflake、BigQuery、Redshift、SQLite 等主流数据库，也支持 CSV 文件。"
+    },
+    {
+      "q": "能否导出 PDF 或分享报告？",
+      "a": "可以。Evidence 支持导出为 PDF 或 XLSX，也可构建静态站点（如 Vercel）生成可分享链接，或部署到任意静态托管服务。"
+    }
+  ],
+  "seo_keywords": [
+    "Evidence.dev",
+    "Evidence.dev怎么样",
+    "Evidence.dev免费版",
+    "Evidence.dev使用教程",
+    "Evidence.dev和哪个好"
+  ],
+  "content": "## Evidence.dev是什么？\n\n简单说，Evidence.dev 是一个让你用 SQL + Markdown 写数据分析报告的开源工具。你不需要折腾复杂的 BI 平台，也不需要学什么新语言——你只要会写 SQL 查数据库，然后用 Markdown 把结果写成报告，再加上一些图表、表格，就能生成一个交互式的静态站点。整个过程像写代码一样，用 Git 做版本管理，改起来也方便。\n\n它本质上是个“数据文档”工具，把数据查询、可视化和文档放在一个项目里。你跑一次 SQL，数据就被抓成静态文件，报告就生成了。部署可以扔到 Vercel、Netlify 这类平台，团队里谁都能直接看。\n\n## 核心功能\n\n#### 1. SQL 查数据 + Markdown 写报告\n这是最核心的玩法。你在一个 `.md` 文件里写 Markdown，中间嵌入 SQL 查询块，Evidence 会在构建时执行这些 SQL，然后把结果渲染成表格或图表。比如你想做一个销售趋势报告，直接写个 ````sql SELECT date, revenue FROM sales ````，后面接 ````markdown <BarChart data={queryName} />```` 就完事。学习成本极低，只要你会 SQL 和基础 Markdown，几乎零磨合。\n\n#### 2. 交互式图表和表格\n内置了常见的可视化组件：折线图、柱状图、散点图、地图、表格等。图表默认带交互——鼠标悬停显示数值、排序、筛选。你不需要额外写前端代码，所有组件都以 Markdown 标签的形式调用，比如 `<LineChart data={sales_by_month} />`。实际用下来，日常分析报告 90% 的场景都能覆盖，而且图表风格简洁，直接可用。\n\n#### 3. Git 版本控制\n项目本身就是纯文本（SQL + Markdown），天然适合 Git。每个报告版本、每次修改都能追溯，团队协作时不会出现“谁改了我的图表”的混乱。对于注重数据报告质量和可复现的团队来说，这是非常扎实的基础能力。你可以像管理代码一样管理数据报告。\n\n#### 4. 部署为静态站点\n构建后生成静态 HTML/CSS/JS 文件，可以部署到 Vercel、Netlify、GitHub Pages 之类的平台。不需要服务器，不需要维护数据库连接（因为数据在构建时已经被抓取和序列化）。部署后就是一个个可分享的页面，团队成员或客户只需要浏览器就能查看。对于写周报、月报、项目复盘这类场景，比发邮件或 PDF 方便得多。\n\n#### 5. 多数据源支持\n支持连接 PostgreSQL、DuckDB、Snowflake、SQLite，甚至直接用 CSV 文件。所以无论是数据仓库、本地数据库还是随手导出的 Excel 表格，都能用 Evidence 来生成报告。灵活性不错，特别是 DuckDB 这种轻量级嵌入式数据库，配合作小数据集分析很顺手。\n\n## 版本/套餐对比\n\nEvidence 目前是**开源工具**，核心功能全部免费。它的代码仓库在 GitHub，你可以自行下载、部署、二次开发，没有任何功能限制。\n\n| 版本 | 费用 | 说明 |\n|------|------|------|\n| 开源版（社区版） | 免费 | 所有功能全开，无限制。部署在自己服务器或第三方静态托管。 |\n| 云托管服务（如果有） | 暂未公开 | 目前官方主要提供开源版本，未来可能推出云托管或企业版，具体以官网为准。 |\n\n实际使用中，绝大多数用户用开源版就够了。\n\n## 值不值得用？\n\n**优点**：\n- 学习成本极低，SQL + Markdown 人人会用，新人上手快。\n- Git 原生支持，数据报告可版本化、可协作，这一点比主流 BI 工具强。\n- 部署灵活，静态站点模式不需要运维，适合团队快速共享分析结果。\n- 图表组件够用且交互良好，省去了写前端代码的麻烦。\n\n**缺点**：\n- 有 SQL 门槛，不会 SQL 的人完全没法用，这限制了受众。\n- **不支持实时数据**。因为是静态生成，数据是一次性快照，做不了实时监控或 dashboard。如果需要实时刷新，得配合其他工具来做增量更新，比较复杂。\n- 处理**大数据集**吃力。构建时在内存中执行查询，数据量过大（比如几亿行）会慢甚至崩溃。官方建议对大表做聚合、采样后再用。\n\n**总体结论**：如果你日常工作是写 SQL 做分析报告，并且报告不需要实时更新，那 Evidence 是非常趁手的工具，值得一试。它不完美，但把“SQL 查数 + Markdown 写文档”这个场景做到了极致。\n\n## 使用建议\n\n1. **用 DuckDB 做本地测试**：DuckDB 轻量且不依赖网络，配合 CSV 或 Parquet 文件，可以快速跑通全流程。\n2. **数据量大的情况，先聚合再使用**：在 SQL 里先用 `GROUP BY` 汇总，或者从数据库里抽样，避免直接拉全量数据。\n3. **用 Git 分支管理报告**：比如每个版本一个分支，主分支保留最终发布版，开发分支做修改，合并前 review 一下 SQL 正确性。\n4. **部署到 Vercel 或 Netlify**：绑定 GitHub 仓库后自动部署，每次 push 自动构建新报告，连手动操作都省了。\n5. **用 `<Details>` 组件组织长报告**：如果报告内容很多，可以把详细数据折叠起来，只展示摘要，读者按需展开。\n\n## 适合谁用？\n\n**推荐**：\n- 数据分析师、数据运营、业务分析人员，日常用 SQL 写周报/月报。\n- 需要做**数据文档**的团队（比如产品数据看板、项目复盘、AB测试报告）。\n- 习惯用代码和 Git 工作流的技术团队。\n\n**可考虑**：\n- 数据工程师：用来快速生成数据质量报告或元数据文档。\n- 管理者：只需要看别人生成的报告，自己不写 SQL 的话可以只做读者。\n\n**不推荐**：\n- 完全不会 SQL 的业务人员（建议用 BI 工具或 Excel）。\n- 需要**实时更新**的数据监控场景（比如大屏、运营大盘）。\n- 数据量极大且无法做聚合的场景（建议考虑专业 BI 或 OLAP 引擎）。",
+  "published": true,
+  "source_url": "https://www.evidence.dev/",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://www.evidence.dev",
+  "verified_publisher": "Evidence",
+  "verified_what": "开源的“代码即 BI”（BI as Code）框架，用 SQL + Markdown 构建报告、仪表盘与数据应用，基于 Git 版本控制。",
+  "verified_price": "Evidence Core 开源框架（MIT 许可）永久免费、可自托管；Evidence Cloud 托管：Team $15/用户/月、Pro $25/用户/月、Enterprise 定制（含 AI 额度，超额 $0.01/信用点）。",
+  "verified_platform": "Web（静态站点/托管）, 自托管 (Netlify/Vercel/自有), CLI",
+  "verified_features": [
+    "用 SQL + Markdown 构建数据产品（报告、仪表盘、应用）",
+    "Git 版本控制与测试，像软件一样发布与回溯",
+    "丰富交互式图表与组件，出版物级可视化",
+    "多数据源连接（Snowflake、BigQuery、ClickHouse、DuckDB、Postgres 等）",
+    "Evidence Cloud 托管、SSO、行级权限与 SOC 2 企业级安全"
+  ],
+  "verified_description": "Evidence 是开源的“代码即 BI”（BI as Code）框架，用 SQL+Markdown 构建报告、仪表盘与数据应用，基于 Git 版本控制；核心框架 MIT 许可免费，Evidence Cloud 托管 $15/用户/月起。",
+  "content_flags": "定价描述“Evidence Cloud 企业托管定价需联系销售（暂未公开）”已过时——Evidence Cloud 现公开定价 Team $15、Pro $25/用户/月，Enterprise 定制。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.8",
+  "rating_source": "暂无权威外部评分（保留编辑评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "基于 SQL + Markdown，学习成本低",
+    "原生支持 Git 版本控制，便于团队协作",
+    "可生成静态站点，部署灵活（Vercel、Netlify 等）",
+    "内置丰富的交互式图表和表格组件",
+    "开源且社区活跃，扩展性强"
+  ],
+  "verified_cons": [
+    "需要具备 SQL 基础才能使用",
+    "不支持实时数据更新（静态生成模式）",
+    "对大型数据集的处理能力有限（建议配合采样或聚合）"
+  ],
+  "verified_faq": [
+    {
+      "q": "Evidence.dev 免费吗？",
+      "a": "Evidence Core 框架采用 MIT 许可永久免费，可自托管在 Netlify、Vercel 或自有服务器；Evidence Cloud 托管版 Team $15/用户/月、Pro $25/用户/月、Enterprise 定制。"
+    },
+    {
+      "q": "使用 Evidence 需要编程知识吗？",
+      "a": "是的，你需要掌握 SQL 来查询数据，以及基础的 Markdown 语法来编写报告。不需要前端或后端编程经验。"
+    },
+    {
+      "q": "Evidence 支持哪些数据库？",
+      "a": "支持 PostgreSQL、MySQL、DuckDB、Snowflake、BigQuery、Redshift、SQLite 等主流数据库，也支持 CSV 文件。"
+    },
+    {
+      "q": "能否导出 PDF 或分享报告？",
+      "a": "可以。Evidence 支持导出为 PDF 或 XLSX，也可构建静态站点（如 Vercel）生成可分享链接，或部署到任意静态托管服务。"
+    }
+  ],
+  "verified_tags": [
+    "开源",
+    "数据分析",
+    "报告生成"
+  ],
+  "verified_category": "AI效率",
+  "source_urls": [
+    "https://evidence.dev/cloud/",
+    "https://evidence.dev/"
+  ],
+  "verify_notes": "Core 框架 MIT 许可永久免费，可自托管；AI 信用点超额 $0.01/点。",
+  "compare_section": {
+    "competitors": [
+      "semrush-ai",
+      "jamie-ai",
+      "tempus-ai"
+    ],
+    "verdict": "Evidence.dev 与 Semrush AI、Jamie AI、Tempus AI 同属AI效率赛道：Evidence.dev 的 用 SQL + Markdown 构建数据产品（报告、仪表盘、应用） 是亮点，价格 开源免费；Cloud Team $15/用户/月起；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-08",
+  "created_date": "2026-08-08"
+}

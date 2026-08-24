@@ -1,0 +1,146 @@
+{
+  "name": "Anthropic Console",
+  "slug": "anthropic-console",
+  "positioning": "AI开发工具推荐：内置工具、提示工程工作台",
+  "auto_positioning": true,
+  "emoji": "🧠",
+  "color": "#2563EB",
+  "description": "Anthropic Console（Claude Platform）是 Anthropic 的官方 API 开发者平台，提供对 Fable 5、Opus 5、Sonnet 5、Haiku 4.5 等 Claude 系列模型的 API 访问、提示工程、评估和 Managed Agents 部署能力，是企业 AI 应用开发的核心工具。",
+  "category": "AI开发",
+  "tags": [
+    "AI助手",
+    "API平台",
+    "企业级"
+  ],
+  "rating": "⭐4.8",
+  "visits": "100万月访问",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://console.anthropic.com",
+  "price": "API 按量计费，无月费；Sonnet 5 $2/$10 每百万 Token",
+  "platform": "Web, iOS, Android",
+  "pros": [
+    "直接访问最新 Claude 模型（Fable 5、Opus 5 等）",
+    "完善的开发者工具链：提示评估、对比测试、Cookbook",
+    "Managed Agents 与丰富内置工具支持",
+    "按量计费灵活，批量处理省50%",
+    "企业级安全与合规（SOC 2、SSO、SCIM）"
+  ],
+  "cons": [
+    "纯 API 平台，无消费者级聊天界面（需配合 claude.ai 使用）",
+    "高昂用量下成本显著，大模型不便宜",
+    "仅 Web 端，无移动 App",
+    "不支持模型微调（Fine-tuning）——Anthropic 不提供此功能"
+  ],
+  "features": [
+    "Claude 模型 API 访问（Fable 5 / Opus 5 / Sonnet 5 / Haiku 4.5）",
+    "提示工程工作台（Prompt Engineering Workbench）",
+    "模型响应评估与对比测试",
+    "API 密钥管理与用量监控",
+    "Managed Agents：构建和部署 Agent 的 API 套件",
+    "内置工具：Web Search、Code Execution、Memory、Citations 等"
+  ],
+  "related": [
+    "claude",
+    "openai-codex",
+    "coze"
+  ],
+  "faq": [
+    {
+      "q": "Anthropic Console 是什么？",
+      "a": "Anthropic Console（现称 Claude Platform）是 Anthropic 的 API 开发者平台，提供 Claude 模型 API 访问、提示工程、评估工具和 Managed Agents 部署能力。与 claude.ai（消费者聊天产品）是不同的产品。"
+    },
+    {
+      "q": "如何开始使用？",
+      "a": "在 console.anthropic.com 注册账户，获取 API Key，通过 Web 工作台或 API 调用 Claude 模型。文档见 docs.anthropic.com。"
+    },
+    {
+      "q": "价格如何？",
+      "a": "按 Token 使用量计费，无固定月费。以 Sonnet 5 为例：输入 $2/百万 Token，输出 $10/百万 Token（推广价至2026-08-31）。Batch 处理半价。大模型如 Fable 5、Opus 5 价格更高。"
+    },
+    {
+      "q": "支持哪些模型？",
+      "a": "当前支持 Fable 5、Opus 5、Sonnet 5、Haiku 4.5。旧模型 Opus 4.8、Sonnet 4.6、Opus 4.7 等仍可用。"
+    }
+  ],
+  "content": "## Anthropic Console 是什么？\n\nAnthropic 官方 API 开发者平台，用于访问和管理 Claude 系列模型、提示工程、评估与部署\n\nAnthropic Console（Claude Platform）是 Anthropic 的官方 API 开发者平台，提供对 Fable 5、Opus 5、Sonnet 5、Haiku 4.5 等 Claude 系列模型的 API 访问、提示工程、评估和 Managed Agents 部署能力，是企业 AI 应用开发的核心工具。\n\n## 核心功能\n\n- Claude 模型 API 访问（Fable 5 / Opus 5 / Sonnet 5 / Haiku 4.5）\n- 提示工程工作台（Prompt Engineering Workbench）\n- 模型响应评估与对比测试\n- API 密钥管理与用量监控\n- Managed Agents：构建和部署 Agent 的 API 套件\n- 内置工具：Web Search、Code Execution、Memory、Citations 等\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | API 按量计费（Pay-as-you-go），无月费订阅。当前模型定价（每百万 Token）：Fable 5 $10/$50（输入/输出）；Opus 5 $5/$25；Sonnet 5 $2/$10（2026-08-31前推广价，标准价 $3/$15）；Haiku 4.5 $1/$5。Batch 处理省50%。平台功能（Managed Agents、Web Search、Code Execution 等）额外计费。 |\n| 支持平台 | Web（仅限桌面浏览器） |\n| 评分 | ⭐4.8 |\n| 开发商 | Anthropic |\n\n## 价格与平台\n\n- **价格**：API 按量计费（Pay-as-you-go），无月费订阅。当前模型定价（每百万 Token）：Fable 5 $10/$50（输入/输出）；Opus 5 $5/$25；Sonnet 5 $2/$10（2026-08-31前推广价，标准价 $3/$15）；Haiku 4.5 $1/$5。Batch 处理省50%。平台功能（Managed Agents、Web Search、Code Execution 等）额外计费。\n- **平台**：Web（仅限桌面浏览器）\n- **官网**：https://console.anthropic.com\n\n## 优缺点分析\n\n### 优点\n\n- 直接访问最新 Claude 模型（Fable 5、Opus 5 等）\n- 完善的开发者工具链：提示评估、对比测试、Cookbook\n- Managed Agents 与丰富内置工具支持\n- 按量计费灵活，批量处理省50%\n- 企业级安全与合规（SOC 2、SSO、SCIM）\n\n### 缺点\n\n- 纯 API 平台，无消费者级聊天界面（需配合 claude.ai 使用）\n- 高昂用量下成本显著，大模型不便宜\n- 仅 Web 端，无移动 App\n- 不支持模型微调（Fine-tuning）——Anthropic 不提供此功能\n\n## 常见问题（FAQ）\n\n**Anthropic Console 是什么？**\n\nAnthropic Console（现称 Claude Platform）是 Anthropic 的 API 开发者平台，提供 Claude 模型 API 访问、提示工程、评估工具和 Managed Agents 部署能力。与 claude.ai（消费者聊天产品）是不同的产品。\n\n**如何开始使用？**\n\n在 console.anthropic.com 注册账户，获取 API Key，通过 Web 工作台或 API 调用 Claude 模型。文档见 docs.anthropic.com。\n\n**价格如何？**\n\n按 Token 使用量计费，无固定月费。以 Sonnet 5 为例：输入 $2/百万 Token，输出 $10/百万 Token（推广价至2026-08-31）。Batch 处理半价。大模型如 Fable 5、Opus 5 价格更高。\n\n**支持哪些模型？**\n\n当前支持 Fable 5、Opus 5、Sonnet 5、Haiku 4.5。旧模型 Opus 4.8、Sonnet 4.6、Opus 4.7 等仍可用。\n\n\n## 最终结论\n\nAnthropic Console 是AI开发领域的一款 AI 工具，其核心优势在于直接访问最新 Claude 模型（Fable 5、Opus 5 等）。\n此外，完善的开发者工具链：提示评估、对比测试、Cookbook。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-04-15",
+  "verified_url": "https://console.anthropic.com",
+  "verified_publisher": "Anthropic",
+  "verified_what": "Anthropic 官方 API 开发者平台，用于访问和管理 Claude 系列模型、提示工程、评估与部署",
+  "verified_price": "API 按量计费（Pay-as-you-go），无月费订阅。当前模型定价（每百万 Token）：Fable 5 $10/$50（输入/输出）；Opus 5 $5/$25；Sonnet 5 $2/$10（2026-08-31前推广价，标准价 $3/$15）；Haiku 4.5 $1/$5。Batch 处理省50%。平台功能（Managed Agents、Web Search、Code Execution 等）额外计费。",
+  "verified_platform": "Web（仅限桌面浏览器）",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "Claude 模型 API 访问（Fable 5 / Opus 5 / Sonnet 5 / Haiku 4.5）",
+    "提示工程工作台（Prompt Engineering Workbench）",
+    "模型响应评估与对比测试",
+    "API 密钥管理与用量监控",
+    "Managed Agents：构建和部署 Agent 的 API 套件",
+    "内置工具：Web Search、Code Execution、Memory、Citations 等"
+  ],
+  "verified_description": "Anthropic Console（Claude Platform）是 Anthropic 的官方 API 开发者平台，提供对 Fable 5、Opus 5、Sonnet 5、Haiku 4.5 等 Claude 系列模型的 API 访问、提示工程、评估和 Managed Agents 部署能力，是企业 AI 应用开发的核心工具。",
+  "content_flags": "严重幻觉！1) description 及全文声称'集成 Claude 3.5'——完全过时，当前模型为 Fable 5/Opus 5/Sonnet 5/Haiku 4.5（Claude 3.5 为2024年产品）；2) features 和 content 称'模型微调'——Anthropic 不提供此功能；3) price 称'Pro版$20/月'——混淆了 API Console（按量计费）和 claude.ai 消费者产品（Pro $20/月）；4) platform 称'iOS, Android'——Console 仅 Web 端。content 全文大量引用 Claude 3.5，需完全重写。",
+  "price_verified": true,
+  "verified_rating": "⭐4.8",
+  "rating_source": "暂无权威评分（编辑评定，Anthropic 生态核心产品）",
+  "rating_verified": true,
+  "verified_pros": [
+    "直接访问最新 Claude 模型（Fable 5、Opus 5 等）",
+    "完善的开发者工具链：提示评估、对比测试、Cookbook",
+    "Managed Agents 与丰富内置工具支持",
+    "按量计费灵活，批量处理省50%",
+    "企业级安全与合规（SOC 2、SSO、SCIM）"
+  ],
+  "verified_cons": [
+    "纯 API 平台，无消费者级聊天界面（需配合 claude.ai 使用）",
+    "高昂用量下成本显著，大模型不便宜",
+    "仅 Web 端，无移动 App",
+    "不支持模型微调（Fine-tuning）——Anthropic 不提供此功能"
+  ],
+  "verified_faq": [
+    {
+      "q": "Anthropic Console 是什么？",
+      "a": "Anthropic Console（现称 Claude Platform）是 Anthropic 的 API 开发者平台，提供 Claude 模型 API 访问、提示工程、评估工具和 Managed Agents 部署能力。与 claude.ai（消费者聊天产品）是不同的产品。"
+    },
+    {
+      "q": "如何开始使用？",
+      "a": "在 console.anthropic.com 注册账户，获取 API Key，通过 Web 工作台或 API 调用 Claude 模型。文档见 docs.anthropic.com。"
+    },
+    {
+      "q": "价格如何？",
+      "a": "按 Token 使用量计费，无固定月费。以 Sonnet 5 为例：输入 $2/百万 Token，输出 $10/百万 Token（推广价至2026-08-31）。Batch 处理半价。大模型如 Fable 5、Opus 5 价格更高。"
+    },
+    {
+      "q": "支持哪些模型？",
+      "a": "当前支持 Fable 5、Opus 5、Sonnet 5、Haiku 4.5。旧模型 Opus 4.8、Sonnet 4.6、Opus 4.7 等仍可用。"
+    }
+  ],
+  "verified_tags": [
+    "AI助手",
+    "API平台",
+    "企业级"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://console.anthropic.com",
+    "https://claude.com/platform",
+    "https://www.anthropic.com/pricing"
+  ],
+  "verify_notes": "url(console.anthropic.com) 正确。这是核验中问题最严重的条目。description/features/content 大量引用 Claude 3.5（2024年模型），与当前 Fable 5/Opus 5/Sonnet 5/Haiku 4.5 严重脱节。声称有'模型微调'功能——不存在。price/platform 混淆了 API Console 与 claude.ai 消费者产品。已提供 corrected_content 完整重写。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "groq",
+      "llamaindex",
+      "hugging-face"
+    ],
+    "verdict": "Anthropic Console 与 Groq、LlamaIndex、Hugging Face 同属AI开发赛道。若优先性价比，Groq（免费tier可用；Llama 8B仅$0.05/1M输入token）门槛更低；口碑方面，Anthropic Console（⭐4.8）领先；Anthropic Console 的优势在于Anthropic 官方 API 开发者平台，用于访问和管理 Claude 系列模型、提示工程、评估与部署，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

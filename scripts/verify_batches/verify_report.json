@@ -1,0 +1,5151 @@
+{
+  "total_verified": 397,
+  "verdict_counts": {
+    "REAL": 389,
+    "UNCERTAIN": 8
+  },
+  "needs_fix": {
+    "fake": [],
+    "wrong_url": [
+      {
+        "slug": "rankspot",
+        "name": "RankSpot",
+        "recorded_url": null,
+        "correct_url": "https://www.rankspot.ai",
+        "evidence": "所有第三方评测与官网均指向 rankspot.ai（AI SEO 自动发布 Agent）"
+      },
+      {
+        "slug": "propane",
+        "name": "Propane",
+        "recorded_url": null,
+        "correct_url": "https://usepropane.ai",
+        "evidence": "usepropane.ai 官网及多篇报道确认其为丹麦 Propane ApS 的客户情报平台"
+      },
+      {
+        "slug": "sierra-ghostwriter",
+        "name": "Sierra Ghostwriter",
+        "recorded_url": null,
+        "correct_url": "https://sierra.ai",
+        "evidence": "Web搜索确认 Sierra 真实存在，但 Ghostwriter 为智能体构建工具，sierra-ghostwriter.ai 未确认为官方站点"
+      },
+      {
+        "slug": "cloud-computer-manus",
+        "name": "Cloud Computer Manus",
+        "recorded_url": null,
+        "correct_url": "https://manus.im",
+        "evidence": "Web搜索确认 Manus 存在且提供 Cloud Computer 功能，但官网为 manus.im，无独立 cloudcomputermanus.com"
+      },
+      {
+        "slug": "tabstack",
+        "name": "Tabstack",
+        "recorded_url": null,
+        "correct_url": "https://tabstack.co",
+        "evidence": "Web搜索显示 TabStack 真实站点为 tabstack.co，且官方强调不含AI功能，与描述矛盾"
+      },
+      {
+        "slug": "nex-n2",
+        "name": "Nex-N2",
+        "recorded_url": null,
+        "correct_url": "https://nex-agi.cn",
+        "evidence": "Web搜索确认 Nex-N2 为 Nex-AGI 开源智能体模型，官方域名为 nex-agi.cn，与搜索引擎描述不符"
+      },
+      {
+        "slug": "pencil-ai",
+        "name": "Pencil AI",
+        "recorded_url": null,
+        "correct_url": "https://trypencil.com",
+        "evidence": "trypencil.com 为 Pencil AI Limited 官方域名（AI 广告创意平台，2018 年起）；pencilai.io 未对应官方站点，且存在 pencilai.pro（另一 AI 视频产品）等同名混淆项。记录的描述与真实 Pencil 功能不符。"
+      },
+      {
+        "slug": "fooocus",
+        "name": "Fooocus",
+        "recorded_url": null,
+        "correct_url": "https://github.com/lllyasviel/Fooocus",
+        "evidence": "Fooocus 官方 README 明确声明：『我们没有任何 fooocus.com/.net/.co/.ai/.org/.pro/.one 等网站，这些全部是假的』，唯一官方来源是 GitHub 仓库。记录 URL fooocus.io 属官方点名的 FAKE 站点；但产品本身为真实开源图像生成工具，描述（开源/基于SDXL）准确。"
+      },
+      {
+        "slug": "flowmarket",
+        "name": "FlowMarket",
+        "recorded_url": null,
+        "correct_url": "https://flowmarket.social",
+        "evidence": "flowmarket.social 为官方站点，定位为 B2B deal flow 的 AI agent 网络（自动发现、匹配企业线索），2026 年上线；flowmarket.ai 非官方域名，记录的功能描述与实际产品不符。"
+      },
+      {
+        "slug": "mike-ai",
+        "name": "mike AI",
+        "recorded_url": null,
+        "correct_url": "https://www.mikeai.co",
+        "evidence": "mikeai.co 为 MikeAI 官方站点，AI 健身教练（FitnessGPT），2026 年上线；mikeai.com 非官方域名，记录的语音对话助手定位与真实产品完全不符。"
+      },
+      {
+        "slug": "domika",
+        "name": "Domika",
+        "recorded_url": null,
+        "correct_url": null,
+        "evidence": "检索到的真实 Domika 为家庭自动化客户端，与条目描述的 AI 助理不符，domika.ai 对应的 AI 助理产品无法确认。"
+      },
+      {
+        "slug": "mindra",
+        "name": "Mindra",
+        "recorded_url": null,
+        "correct_url": "https://mindra.co",
+        "evidence": "检索确认 Mindra 真实存在但主域为 mindra.co，非 mindra.ai。"
+      },
+      {
+        "slug": "f5-tts",
+        "name": "F5-TTS",
+        "recorded_url": null,
+        "correct_url": "https://github.com/SWivid/F5-TTS",
+        "evidence": "GitHub 确认 F5-TTS 由 RVC-Boss/SWivid 维护，非 SunoAI；记录 URL github.com/SunoAI/F5-TTS 错误。"
+      },
+      {
+        "slug": "alpaca-ai",
+        "name": "Alpaca AI",
+        "recorded_url": null,
+        "correct_url": null,
+        "evidence": "Stanford Alpaca 仅为研究项目，alpaca.ai 未对应所描述的商业产品，描述含夸大/虚构内容。"
+      },
+      {
+        "slug": "xint-code",
+        "name": "Xint Code",
+        "recorded_url": null,
+        "correct_url": null,
+        "evidence": "无明确检索结果确认 xintcode.ai 为真实 AI 编程工具，暂列为不确定。"
+      },
+      {
+        "slug": "lingoai",
+        "name": "LingoAI",
+        "recorded_url": null,
+        "correct_url": null,
+        "evidence": "No clear independent confirmation that lingoai.com is this product's site. Apple App Store lists a 'LingoAI translated video' app; lingoai.io is an unrelated Web3 translation project. Could not verify the recorded URL or claims."
+      },
+      {
+        "slug": "metagpt",
+        "name": "MetaGPT",
+        "recorded_url": null,
+        "correct_url": "https://github.com/geekan/MetaGPT",
+        "evidence": "MetaGPT is a real open-source multi-agent framework by DeepWisdom; metagpt.com is not the official site (official: deepwisdom.ai / github.com/geekan/MetaGPT)."
+      },
+      {
+        "slug": "openclaw",
+        "name": "OpenClaw",
+        "recorded_url": null,
+        "correct_url": "https://openclaw.ai",
+        "evidence": "OpenClaw confirmed real; it is an AI agent platform, official site is openclaw.ai (github.com/openclaw is only the org page)."
+      },
+      {
+        "slug": "gpt-5-6-sol",
+        "name": "GPT-5.6 Sol",
+        "recorded_url": null,
+        "correct_url": "https://openai.com",
+        "evidence": "GPT-5.6 Sol confirmed as a real OpenAI model; sol.openai.com is not an official OpenAI subdomain."
+      },
+      {
+        "slug": "dexbotic",
+        "name": "Dexbotic",
+        "recorded_url": null,
+        "correct_url": "https://www.dexbotic.com",
+        "evidence": "搜索显示官方站点为 dexbotic.com，产品为具身智能机器人框架而非自动化工作流"
+      },
+      {
+        "slug": "shadow-ai",
+        "name": "Shadow AI",
+        "recorded_url": null,
+        "correct_url": null,
+        "evidence": "搜索发现多个 Shadow AI 实体但均无法明确对应 batch 中描述的「影子模式后台 AI 助手」"
+      },
+      {
+        "slug": "trading-agents",
+        "name": "TradingAgents",
+        "recorded_url": null,
+        "correct_url": "https://www.tradingagents-ai.com",
+        "evidence": "真实开源多智能体金融交易框架（Tauric Research），官方站点为 tradingagents-ai.com / tauric.ai，batch 的 .ai 域名非官方"
+      },
+      {
+        "slug": "qoder",
+        "name": "Qoder",
+        "recorded_url": null,
+        "correct_url": "https://www.qoder.com",
+        "evidence": "搜索确认 qoder.com 及 aliyun.com/product/qodercn 为阿里云 Qoder 官方站点，厂商为阿里云而非 Sana Labs"
+      },
+      {
+        "slug": "wonder-ai",
+        "name": "Wonder AI",
+        "recorded_url": null,
+        "correct_url": "https://wonderai.app",
+        "evidence": "Wonder AI by Codeway is an AI art generator; official site wonderai.app (per toolify/Codeway product page)."
+      },
+      {
+        "slug": "cosy-voice",
+        "name": "CosyVoice",
+        "recorded_url": null,
+        "correct_url": "https://github.com/FunAudioLLM/CosyVoice",
+        "evidence": "CosyVoice is a real Alibaba FunAudioLLM TTS model; official GitHub is FunAudioLLM/CosyVoice (demo cosyvoice.org). Recorded cosyvoice.com is NOT the official site."
+      },
+      {
+        "slug": "minicpm-o",
+        "name": "MiniCPM-o",
+        "recorded_url": null,
+        "correct_url": "https://huggingface.co/openbmb/MiniCPM-o",
+        "evidence": "MiniCPM-o is by ModelBest/OpenBMB (huggingface.co/openbmb); confirmed by modelbest.cn and multiple tech writeups. Not MiniMax."
+      },
+      {
+        "slug": "jamie-ai",
+        "name": "Jamie AI",
+        "recorded_url": null,
+        "correct_url": "https://meetjamie.ai",
+        "evidence": "Official meetjamie.ai confirmed; privacy-first AI meeting notes, audio deleted after transcription."
+      },
+      {
+        "slug": "glass-health",
+        "name": "Glass Health",
+        "recorded_url": null,
+        "correct_url": "https://glass.health",
+        "evidence": "Official glass.health confirmed; clinical AI (differential diagnosis, scribing) by Dereck Paul, 120k+ clinicians."
+      },
+      {
+        "slug": "video-os",
+        "name": "VideoOS",
+        "recorded_url": null,
+        "correct_url": "https://jupitrr.com",
+        "evidence": "Jupitrr's VideoOS at jupitrr.com; videoos.net is an unrelated framework, not the product site."
+      },
+      {
+        "slug": "cocounsel",
+        "name": "CoCounsel",
+        "recorded_url": null,
+        "correct_url": "https://cocounsel.com",
+        "evidence": "CoCounsel is Thomson Reuters product (cocounsel.com); Clio is an unrelated legal-practice-management vendor."
+      },
+      {
+        "slug": "deepsec",
+        "name": "DeepSec",
+        "recorded_url": null,
+        "correct_url": null,
+        "evidence": "No verified product at deepsec.io; 'DeepSec' matches a conference / Trend Micro / academic project, not a commercial AI security platform."
+      },
+      {
+        "slug": "pmb",
+        "name": "PMB",
+        "recorded_url": null,
+        "correct_url": "https://pmbai.dev",
+        "evidence": "Official pmbai.dev confirmed; SQLite+LanceDB local memory, 29 MCP tools, no cloud/API key."
+      },
+      {
+        "slug": "blop",
+        "name": "Blop",
+        "recorded_url": null,
+        "correct_url": "https://blopai.com",
+        "evidence": "Official blopai.com confirmed; 'Cursor for UX/UI optimization', QA agent for browser tests in GitHub Actions."
+      },
+      {
+        "slug": "tempus-ai",
+        "name": "Tempus AI",
+        "recorded_url": null,
+        "correct_url": "https://www.gettempus.app",
+        "evidence": "App Store及gettempus.app确认Tempus AI为AI时间管理App，无tempus-ai.com"
+      },
+      {
+        "slug": "claude-fable-5",
+        "name": "Claude Fable 5",
+        "recorded_url": null,
+        "correct_url": "https://www.anthropic.com",
+        "evidence": "Anthropic透明度中心及多篇报道确认Claude Fable 5为Anthropic模型，无任何来源提及fable.anthropic.com"
+      },
+      {
+        "slug": "githits",
+        "name": "GitHits",
+        "recorded_url": null,
+        "correct_url": "https://githits.com",
+        "evidence": "githits.com确认GitHits为AI代理代码索引服务，2026年6月获175万美元种子轮"
+      },
+      {
+        "slug": "phind",
+        "name": "Phind",
+        "recorded_url": null,
+        "correct_url": "https://www.phind.com",
+        "evidence": "多个来源确认 phind.com 为面向开发者的AI搜索引擎官方地址，phindai.org 为仿冒/第三方域名"
+      },
+      {
+        "slug": "algo",
+        "name": "Algo",
+        "recorded_url": null,
+        "correct_url": null,
+        "evidence": "检索仅见学术框架ALGO、algo-tech.ai推理平台、AlgoArena等，无 algo.ai 对应编程工具的确凿证据"
+      },
+      {
+        "slug": "amp",
+        "name": "Amp",
+        "recorded_url": null,
+        "correct_url": "https://sourcegraph.com/amp",
+        "evidence": "sourcegraph.com/amp 为官方地址，Sourcegraph创始团队出品，非Anthropic产品"
+      },
+      {
+        "slug": "base44",
+        "name": "Base44",
+        "recorded_url": null,
+        "correct_url": "https://base44.com",
+        "evidence": "Base44 官网为 base44.com，服务条款显示由 Wix.com Ltd. 运营；base44.ai 非官方域名"
+      },
+      {
+        "slug": "pixelle-video",
+        "name": "Pixelle-Video",
+        "recorded_url": null,
+        "correct_url": "https://github.com/AIDC-AI/Pixelle-Video",
+        "evidence": "Pixelle-Video 是 AIDC-AI 开源的全自动短视频引擎，官网 aidc-ai.github.io/Pixelle-Video 及 GitHub AIDC-AI/Pixelle-Video；pixelle-video.ai 未作为官方站点出现"
+      },
+      {
+        "slug": "velo-ai",
+        "name": "Velo AI",
+        "recorded_url": null,
+        "correct_url": null,
+        "evidence": "搜索未确认 veloai.com 为有效站点；真实 Velo 为 usevelo.ai（AI 视频），另存 velo-ai.tech(测试)、velorai.co 等不同产品"
+      },
+      {
+        "slug": "open-design",
+        "name": "open-design",
+        "recorded_url": null,
+        "correct_url": "https://open-design.ai",
+        "evidence": "Open Design 是 nexu-io 开源的 Claude Design 替代品，官网 open-design.ai、源码 github.com/nexu-io/open-design；open-design.io 非官方"
+      },
+      {
+        "slug": "flint",
+        "name": "Flint",
+        "recorded_url": null,
+        "correct_url": "https://www.flintnote.com",
+        "evidence": "Flint 为 AI 笔记与知识管理工具（flintnote.com，开源），描述中的知识图谱/语义搜索吻合，但 flint.sh 非其官网"
+      },
+      {
+        "slug": "agent-skills",
+        "name": "agent-skills",
+        "recorded_url": null,
+        "correct_url": "https://agentskills.ai",
+        "evidence": "Agentskills.ai 为真实站点（Pre-built AI Agents for Business Owners）；Anthropic 亦发布 Agent Skills 开放标准(agentskills.io)；agent-skills.ai 连字符域名为错误"
+      },
+      {
+        "slug": "spark-tts",
+        "name": "Spark-TTS",
+        "recorded_url": null,
+        "correct_url": "https://github.com/SparkAudio/Spark-TTS",
+        "evidence": "GitHub 正确仓库为 SparkAudio/Spark-TTS（基于 Qwen2.5 的开源 TTS）"
+      },
+      {
+        "slug": "ada-health",
+        "name": "Ada Health",
+        "recorded_url": null,
+        "correct_url": "https://ada.com",
+        "evidence": "Ada 官方站点为 ada.com，App Store 开发者为 Ada Health，产品描述基本一致"
+      },
+      {
+        "slug": "seedream-5-0-pro",
+        "name": "Seedream 5.0 Pro",
+        "recorded_url": null,
+        "correct_url": "https://seed.bytedance.com/zh/seedream5_0_pro",
+        "evidence": "Seedream 5.0 Pro 为字节跳动图像模型，官站 seed.bytedance.com，与阶跃星辰无关"
+      }
+    ],
+    "desc_issue": [
+      {
+        "slug": "mem-ai",
+        "name": "Mem",
+        "issue": "轻微：描述称其为'2026年创新产品'，实际 Mem 早在2020年就已推出；核心功能描述基本准确。"
+      },
+      {
+        "slug": "raycast-ai",
+        "name": "Raycast AI",
+        "issue": "轻微：平台标注为'本地部署 / Web'有误，Raycast 是 macOS 桌面应用，非本地部署/网页端。"
+      },
+      {
+        "slug": "looka",
+        "name": "Looka",
+        "issue": "轻微：价格标注'免费使用'有误导，Looka 生成 Logo 需付费下载（低清 $20 起）。"
+      },
+      {
+        "slug": "fliki",
+        "name": "Fliki",
+        "issue": "轻微：平台标注'本地部署 / Web'有误，Fliki 为纯 SaaS 网页应用。"
+      },
+      {
+        "slug": "galileo-ai",
+        "name": "Galileo AI",
+        "issue": "明显错误：描述称其为'专注工作学习效率的智能 AI 助手'，但真实的 galileo.ai 是面向 LLM 开发者的 AI 可观测与评测平台（AI observability & eval），用于监控/评估 AI 应用，并非通用对话助手。"
+      },
+      {
+        "slug": "kling-3-0",
+        "name": "Kling 3.0",
+        "issue": "轻微：'Kling 3.0'具体版本号无法确认是否为最新官方命名，但可灵 AI 视频产品确为真实存在。"
+      },
+      {
+        "slug": "anyscenegen",
+        "name": "AnySceneGen",
+        "issue": "轻微偏差：真实产品是面向具身智能/机器人训练的'仿真空间数据生成平台'（生成带物理属性的可仿真 3D 场景），而非主要面向建筑师/设计师/游戏开发者的创意出图工具；不过其确实具备文本生成场景与 3D 导出能力。域名 anyscenegen.ai 被本站列为官网，但未能完全独立确认即官方主域（真实厂商为 Intime AI）。"
+      },
+      {
+        "slug": "rankspot",
+        "name": "RankSpot",
+        "issue": "URL 错误：记录域名 rankspot.io 应为 rankspot.ai；且描述将其定位为'SEO 排名监控工具'，但真实 RankSpot 是自动化 SEO 内容发布 AI Agent（自动研究/写作/发布文章到博客），排名监控只是其部分能力。"
+      },
+      {
+        "slug": "propane",
+        "name": "Propane",
+        "issue": "严重错误：记录将该工具描述为'基于 GPT-4o 的 AI 写作助手（营销/文案模板）'，但真实的 Propane（usepropane.ai）是面向产品团队的'客户情报操作系统（customer intelligence OS）'，整合 HubSpot/Intercom/Slack 等客户数据供团队与 coding agent 使用，与写作助手毫无关系。记录 URL propane.ai 也非官方主域。"
+      },
+      {
+        "slug": "persona-js",
+        "name": "Persona.js",
+        "issue": "明显错误：描述称其为'基于 JavaScript 的 AI 角色构建框架（多模态人格模拟、动态记忆、虚拟伴侣/游戏 NPC）'，但真实的 Persona.js 是一个轻量级开源 Vanilla JS AI 聊天 UI 组件库（WebMCP-native，可嵌入网站的流式聊天部件），并非角色/人格模拟框架。域名 persona.js.org 参考为项目站点，官方主域或为 persona-chat.dev，未能完全独立确认。"
+      },
+      {
+        "slug": "chatgpt-work",
+        "name": "ChatGPT Work",
+        "issue": "轻微：描述称'基于 GPT-4o 模型'，实际 ChatGPT Work 基于 GPT-5.6；其余团队智能体定位准确。"
+      },
+      {
+        "slug": "gemini-omni",
+        "name": "Gemini Omni",
+        "issue": "轻微偏差：Gemini Omni 是 Google I/O 2026 发布的'视频生成/编辑模型'，并非能生成代码的通用助手；描述中'整合 Gemini 2.5 Pro'也已过时（当前为新一代 Omni 模型）。"
+      },
+      {
+        "slug": "tencent-yuanbao",
+        "name": "腾讯元宝",
+        "issue": "价格标注“基础$10/月起”与事实不符：腾讯元宝目前免费使用（内容摘录中也写明“完全免费”），属误导性定价信息"
+      },
+      {
+        "slug": "panda-probe",
+        "name": "PandaProbe",
+        "issue": "描述严重失实：真实产品 pandaprobe.com 是“开源 Agent 工程平台 / AI智能体追踪·评测·监控工具”（面向开发者），并非中文AI搜索/数据探测工具；功能、受众均不符"
+      },
+      {
+        "slug": "sierra-ghostwriter",
+        "name": "Sierra Ghostwriter",
+        "issue": "产品定位错误：Sierra 的 Ghostwriter 是“构建客户体验AI智能体”的平台，并非AI写作助手；且记录域名 sierra-ghostwriter.ai 非官方（Sierra 官网为 sierra.ai），疑似拼凑域名"
+      },
+      {
+        "slug": "cloud-computer-manus",
+        "name": "Cloud Computer Manus",
+        "issue": "产品定位偏差：真实“Cloud Computer”是 Manus（manus.im）平台的功能/特性，并非独立云桌面产品；记录域名 cloudcomputermanus.com 非官方，疑似拼凑域名"
+      },
+      {
+        "slug": "tabstack",
+        "name": "Tabstack",
+        "issue": "记录域名 tabstack.io 非官方（真实站点为 tabstack.co）；且描述失实：真实 TabStack 明确标注“No gimmicky AI integration!（无AI功能）”，其“AI自动分类/智能搜索”等说法不成立，它只是新标签页书签管理工具"
+      },
+      {
+        "slug": "monid",
+        "name": "Monid",
+        "issue": "产品定位严重失实：真实 Monid（monid.ai）是“面向AI智能体的工具调用路由器/统一付费层”（让Agent按需调用200+付费数据接口），并非面向普通用户的轻量级AI对话/知识问答助手；描述中的“个性化知识问答、任务规划”等面向C端的说法不成立"
+      },
+      {
+        "slug": "nex-n2",
+        "name": "Nex-N2",
+        "issue": "产品定位严重失实：真实 Nex-N2 是开源的“能动性大模型/AI智能体基础模型”（可部署的LLM），并非面向普通用户的“AI搜索与知识引擎”；记录域名 nex-n2.ai 未出现在任何官方来源（官方主页为 nex-agi.cn / nex.sii.edu.cn / HuggingFace / ModelScope）"
+      },
+      {
+        "slug": "miaohua",
+        "name": "秒画",
+        "issue": "厂商错误：记录描述称『字节跳动推出』，实际为商汤科技（SenseTime）旗下 AI 绘画产品；URL 正确。"
+      },
+      {
+        "slug": "happy-horse",
+        "name": "HappyHorse",
+        "issue": "类别/功能错误：记录称其为『提升工作效率的AI助手（任务管理/自动化工作流/数据分析）』，实际 HappyHorse 是 AI 视频生成器（文生/图生视频+原生音轨），产品定位完全不同。"
+      },
+      {
+        "slug": "pencil-ai",
+        "name": "Pencil AI",
+        "issue": "URL 错误且功能不符：记录 URL 为 pencilai.io，但 Pencil 官方站点为 trypencil.com；真实 Pencil 是面向电商/投放的 AI 广告创意生成平台，并非『智能AI设计助手（文本转图像/修图）』。"
+      },
+      {
+        "slug": "schole-ai",
+        "name": "Schole AI",
+        "issue": "定位偏差：记录描述为『面向学生/研究人员的作业解答学习助手』，真实 Scholé AI 更偏企业级（B2B）AI 素养与员工培训平台，而非单纯学生作业工具。URL 正确。"
+      },
+      {
+        "slug": "melty-ai",
+        "name": "Melty",
+        "issue": "功能错误：记录称其为『AI内容创作/文案生成工具』，实际 Melty 是开源 AI 代码编辑器（VS Code 分支），用于代码补全/生成/调试，非写作工具。"
+      },
+      {
+        "slug": "flowmarket",
+        "name": "FlowMarket",
+        "issue": "URL 错误且功能不符：记录 URL 为 flowmarket.ai，官方域名为 flowmarket.social；真实 FlowMarket 是面向 B2B 交易的『AI 代理网络（自动发现/匹配商机）』，并非『集成200+AI应用的可视化工作流自动化平台』。"
+      },
+      {
+        "slug": "mike-ai",
+        "name": "mike AI",
+        "issue": "URL 错误且功能不符：记录 URL 为 mikeai.com，官方域名为 mikeai.co；真实 MikeAI 是『AI 健身教练』（个性化训练/饮食计划），并非『语音交互智能对话助手』。"
+      },
+      {
+        "slug": "comet",
+        "name": "Comet",
+        "issue": "描述称其为“AI内容创作平台（博客/社媒/营销内容）”有误；comet.com 实际是 Comet ML，提供 ML 实验追踪与 LLM 可观测性平台 Opik，并非内容创作工具。"
+      },
+      {
+        "slug": "domika",
+        "name": "Domika",
+        "issue": "描述称其为“AI个人助理（日程/任务/对话）”，但真实 Domika 是 Home Assistant 客户端应用（domika.app，开发者 DevPocket），并非 AI 助理；domika.ai 与所描述的 AI 助理产品无法对应。"
+      },
+      {
+        "slug": "mindra",
+        "name": "Mindra",
+        "issue": "条目 URL 为 mindra.ai，但真实 Mindra 官网为 mindra.co（AI 智能体编排/部门化协作平台）；URL 需修正。"
+      },
+      {
+        "slug": "f5-tts",
+        "name": "F5-TTS",
+        "issue": "描述称“F5-TTS 是 Suno 团队开源”有误；F5-TTS 实为 SWivid 开源项目（github.com/SWivid/F5-TTS），Suno 是另一家音乐生成公司。"
+      },
+      {
+        "slug": "alpaca-ai",
+        "name": "Alpaca AI",
+        "issue": "描述称“斯坦福开发、2026年迭代至 Alpaca 2.0 可商用版本”误导；Stanford Alpaca 是 2023 年研究模型（stanford_alpaca，权重已下架），不存在 alpaca.ai 所描述的在售 2.0 商业产品。"
+      },
+      {
+        "slug": "xint-code",
+        "name": "Xint Code",
+        "issue": "xintcode.ai 无法检索到明确对应的真实产品；百度确有“文心快码”（wenxin-kuaima，独立条目），但 Xint Code 与之不同，无法确认其为真实存在的独立产品。"
+      },
+      {
+        "slug": "skywork-3-1",
+        "name": "Skywork 3.1",
+        "issue": "条目 URL 记为 skywork.com；天工/Skywork 真实官网为海外 skywork.ai 与国内 tiangong.cn（skywork.com 非标准入口）。产品本身真实（天工 3.1 于 2026-06 发布）。"
+      },
+      {
+        "slug": "stepfun",
+        "name": "阶跃星辰",
+        "issue": "Founder misattributed: description says '由前百度高管李开复创立', but 李开复 founded 01.ai/零一万物, NOT StepFun. StepFun was founded by 姜大昕."
+      },
+      {
+        "slug": "openclaw",
+        "name": "OpenClaw",
+        "issue": "Misdescribed as a 'web scraping / data collection tool'. OpenClaw is actually a personal AI agent / assistant platform, not a web scraper."
+      },
+      {
+        "slug": "tabbit",
+        "name": "Tabbit",
+        "issue": "Misdescribed as a '智能标签管理工具' (tab manager). Tabbit is actually an AI-native browser (Tabbit AI Browser), not just a tab/bookmark manager."
+      },
+      {
+        "slug": "gpt-5-6-sol",
+        "name": "GPT-5.6 Sol",
+        "issue": "Recorded URL sol.openai.com is NOT a real OpenAI-owned domain; the GPT-5.6 Sol model itself is real (on openai.com)."
+      },
+      {
+        "slug": "glitter-ai",
+        "name": "Glitter AI",
+        "issue": "描述错误：实际产品是「屏幕录制+语音→自动生成分步指南/SOP」的文档生成工具，并非通用 AI 对话助手"
+      },
+      {
+        "slug": "dexbotic",
+        "name": "Dexbotic",
+        "issue": "描述完全错误：实际为开源 VLA（视觉-语言-动作）具身智能机器人开发框架，并非 Zapier 式自动化工作流平台；URL 应为 .com 而非 .ai"
+      },
+      {
+        "slug": "shadow-ai",
+        "name": "Shadow AI",
+        "issue": "描述为「隐私 AI 助手/影子模式后台助手」存疑：存在多个名为 Shadow AI 的实体（语音笔记、加密 agent、企业 AI 治理、科研实验设计等），均未明确匹配该描述，shadowai.com 是否为该产品的官方站点无法确认"
+      },
+      {
+        "slug": "qoder",
+        "name": "Qoder",
+        "issue": "厂商描述错误：batch 称厂商为「Sana Labs」，实际为阿里云（原通义灵码 Lingma 升级更名）的 AI 智能体产品系列；官方站点为 qoder.com，batch 的 qoder.ai 非官方"
+      },
+      {
+        "slug": "phinite",
+        "name": "Phinite",
+        "issue": "描述错误：实际产品是「多智能体 AI 编排操作系统（Multi-Agentic AI 平台）」，并非 AI 语音合成/音频修复工具"
+      },
+      {
+        "slug": "wonder-ai",
+        "name": "Wonder AI",
+        "issue": "Description mischaracterizes Wonder AI as a general creative-content tool (copywriting, image ideas, video scripts); it is actually an AI art/image generator (text-to-image) by Codeway. Recorded URL wonderai.com is not the confirmed official site (official is wonderai.app)."
+      },
+      {
+        "slug": "minicpm-o",
+        "name": "MiniCPM-o",
+        "issue": "Description wrongly attributes MiniCPM-o to 'MiniMax公司'; it is actually developed by ModelBest (面壁智能) / OpenBMB, NOT MiniMax. Recorded URL huggingface.co/MiniMaxAI/MiniCPM-o points to the wrong org (should be OpenBMB)."
+      },
+      {
+        "slug": "cube-sandbox",
+        "name": "CubeSandbox",
+        "issue": "Description misrepresents CubeSandbox as a no-code visual AI prototyping/workflow tool with '20+ models' and '10万开发者'; it is actually a secure MicroVM sandbox service for AI agents (E2B-compatible code/browser execution), not a drag-and-drop builder."
+      },
+      {
+        "slug": "swytchcode",
+        "name": "Swytchcode",
+        "issue": "Description mischaracterizes Swytchcode as a 50+ language code-conversion/refactoring tool ('Python转JS'); it is actually an API/SDK integration automation tool for publishers (generates API integration code, CLI/MCP server, 15+ languages)."
+      },
+      {
+        "slug": "octarine",
+        "name": "Octarine",
+        "issue": "Description wrong: real Octarine is a local-first Markdown/PKM note-taking app, NOT a marketing/social-media content generation platform."
+      },
+      {
+        "slug": "jamie-ai",
+        "name": "Jamie AI",
+        "issue": "Batch URL jamieai.com is wrong (real site meetjamie.ai). Description also overstates it as a general AI assistant; actual product is a privacy-first AI meeting note taker (German, GDPR-compliant, 100+ languages)."
+      },
+      {
+        "slug": "video-os",
+        "name": "VideoOS",
+        "issue": "URL videoos.net does not belong to the product; real 'VideoOS' is Jupitrr AI's all-in-one video workflow at jupitrr.com. Description (video planning/editing/publishing) roughly matches Jupitrr's VideoOS."
+      },
+      {
+        "slug": "cocounsel",
+        "name": "CoCounsel",
+        "issue": "Vendor/attribution wrong: batch says 'by Clio', but CoCounsel is Thomson Reuters' AI legal assistant (built on Westlaw). URL cocounsel.clio.com is misleading — Clio is a separate law-practice software company."
+      },
+      {
+        "slug": "deepsec",
+        "name": "DeepSec",
+        "issue": "No commercial 'DeepSec' AI security platform found at deepsec.io. Real 'DeepSec' references: the DeepSec security conference (deepsec.net), Trend Micro Deep Security, and an academic DEEPSEC adversarial-ML project. The described commercial AI pentest platform (with $49/mo pricing) is unverifiable."
+      },
+      {
+        "slug": "unitree-gd01",
+        "name": "Unitree GD01",
+        "issue": "Description wrong: GD01 is a manned transformable mecha/robot (载人变形机甲, ~$650K), NOT a quadruped education robot."
+      },
+      {
+        "slug": "pmb",
+        "name": "PMB",
+        "issue": "Description wrong: PMB is a local-first memory tool for AI coding agents (MCP, works with Claude Code/Cursor/Codex) — NOT a project management assistant."
+      },
+      {
+        "slug": "blop",
+        "name": "Blop",
+        "issue": "Description wrong: Blop is a UX/UI optimization & QA testing agent (turns design feedback into code / Playwright browser tests in CI) — NOT a social-media design/poster assistant."
+      },
+      {
+        "slug": "augie-ai",
+        "name": "Augie AI",
+        "issue": "实为AI视频生成/剪辑工具（Augie by Storyblocks），目录描述为通用'创意助手'略有偏差；且存在多个同名Augie产品（如销售助手myaugieai.com）易混淆"
+      },
+      {
+        "slug": "tempus-ai",
+        "name": "Tempus AI",
+        "issue": "记录URL tempus-ai.com 应为 gettempus.app；实际为AI日程规划/专注App（Tempus AI Daily Planner），功能描述基本准确但定价（$9.99/$29.99）与App Store实际不符"
+      },
+      {
+        "slug": "claude-fable-5",
+        "name": "Claude Fable 5",
+        "issue": "记录描述为'专注故事创作的AI写作工具(fable.anthropic.com)'与事实不符：Claude Fable 5是Anthropic的旗舰大模型（非写作工具），捏造了'超长叙事引擎/动态角色记忆/10万字故事'等能力；fable.anthropic.com并非Anthropic官方地址"
+      },
+      {
+        "slug": "githits",
+        "name": "GitHits",
+        "issue": "记录URL githits.ai 应为 githits.com；描述基本准确（AI驱动代码/仓库发现），但其核心定位是面向AI编程代理的开源代码索引/MCP服务，而非'社区热度趋势分析'推荐平台"
+      },
+      {
+        "slug": "alexa-plus",
+        "name": "Alexa Plus",
+        "issue": "订阅价记录为$5.99/月起，实际标准版为$19.99/月（Prime会员免费）；其余功能描述准确"
+      },
+      {
+        "slug": "phind",
+        "name": "Phind",
+        "issue": "记录URL为 phindai.org，非官方；官方站点为 phind.com"
+      },
+      {
+        "slug": "qingying-ai",
+        "name": "清影AI",
+        "issue": "描述称『360公司推出』，错误；清影(Ying)实为智谱AI基于CogVideoX开发的AI视频生成工具"
+      },
+      {
+        "slug": "lightrag",
+        "name": "LightRAG",
+        "issue": "描述称『香港中文大学（深圳）』，错误；实为香港大学（The University of Hong Kong）数据智能实验室开发，论文发表于EMNLP 2025"
+      },
+      {
+        "slug": "algo",
+        "name": "Algo",
+        "issue": "未找到 algo.ai 对应明确产品；同名『ALGO AI』多为 algo-tech.ai 推理平台，所描述『专注算法优化的AI编程工具』缺乏可靠来源，疑似泛化/虚构"
+      },
+      {
+        "slug": "ada-ai",
+        "name": "Ada AI",
+        "issue": "描述称是『个人日常对话助手/知识问答』，错误；ada.cx 实为面向企业的AI客服平台（ACX），自动解决客户咨询"
+      },
+      {
+        "slug": "amp",
+        "name": "Amp",
+        "issue": "记录URL为 platform.claude.com（Claude平台），且描述称『Anthropic推出、Claude Code前身』均错误；Amp 实为 Sourcegraph 推出的编程Agent，后与Sourcegraph独立为 Amp Inc."
+      },
+      {
+        "slug": "zoona",
+        "name": "Zoona",
+        "issue": "描述完全错误：称 Zoona 是『AI视频生成与编辑平台』；实际 zoona.ai 是自主式AI客服代理平台（自动解决客户咨询），与视频生成无关"
+      },
+      {
+        "slug": "huddle01-vms",
+        "name": "Huddle01 VMs",
+        "issue": "『VMs』并非Huddle01标准命名产品，但所描述平台（去中心化视频会议、Web3钱包登录、AI会议摘要）基本准确"
+      },
+      {
+        "slug": "base44",
+        "name": "Base44",
+        "issue": "记录 URL 为 base44.ai 系错误推测，真实官网为 base44.com（已被 Wix 收购）；描述整体合理，但更准确为无代码应用搭建平台(vibe coding)而非单纯代码生成"
+      },
+      {
+        "slug": "pixelle-video",
+        "name": "Pixelle-Video",
+        "issue": "记录 URL pixelle-video.ai 错误（真实为开源项目主页）；且描述称“高级功能付费订阅”不实——Pixelle-Video 是完全免费的开源项目(Apache-2.0)，无付费计划"
+      },
+      {
+        "slug": "velo-ai",
+        "name": "Velo AI",
+        "issue": "记录 URL veloai.com 未获证实；描述为“通用效率/任务自动化工具”与真实 Velo(usevelo.ai，AI 视频工具)不符，疑似拼凑描述"
+      },
+      {
+        "slug": "open-design",
+        "name": "open-design",
+        "issue": "记录 URL open-design.io 错误（真实为 open-design.ai）；且描述称“专业版$19/月”不实——Open Design 为完全免费的开源工具(Apache-2.0)，无付费订阅计划"
+      },
+      {
+        "slug": "flint",
+        "name": "Flint",
+        "issue": "记录 URL flint.sh 未获证实；描述的“实时协作白板/多模态RAG引擎”与真实 Flint(flintnote.com，本地优先的开源笔记/知识管理工具，含知识图谱)不完全吻合，协作白板特性未证实"
+      },
+      {
+        "slug": "agent-skills",
+        "name": "agent-skills",
+        "issue": "记录 URL agent-skills.ai（带连字符）应无连字符 agentskills.ai；描述称“集成500+预置技能组件、多模型编排与混合推理”等具体数字未证实——真实 Agent Skills 为 Anthropic 发布的开放标准(SKILL.md 格式封装能力)"
+      },
+      {
+        "slug": "yoroll",
+        "name": "Yoroll",
+        "issue": "描述称其为“AI效率工具/智能任务管理和内容创作辅助”，实际是 AI 互动视频游戏创作平台（一句话生成可玩分支剧情游戏），并非任务管理/效率工具"
+      },
+      {
+        "slug": "spark-tts",
+        "name": "Spark-TTS",
+        "issue": "记录的 GitHub 地址 github.com/spark-tts/spark-tts 拼写错误，正确仓库为 github.com/SparkAudio/Spark-TTS"
+      },
+      {
+        "slug": "ada-health",
+        "name": "Ada Health",
+        "issue": "官网实际为 ada.com（Ada Health GmbH），记录 URL adahealth.com 疑非官方主站"
+      },
+      {
+        "slug": "strands-agents",
+        "name": "Strands Agents",
+        "issue": "描述称“Anthropic推出的AI智能体开发框架”，实际由 AWS（亚马逊云科技）开源开发，Anthropic 仅为贡献者之一（提供 API 接入支持）"
+      },
+      {
+        "slug": "seedream-5-0-pro",
+        "name": "Seedream 5.0 Pro",
+        "issue": "描述称“阶跃星辰于2026年初发布”且归类为AI对话，实际是字节跳动（ByteDance）Seed 团队的 AI 图像生成/编辑模型，并非对话类 LLM；记录 URL seedream.stepfun.com 也非官方（stepfun 为阶跃星辰域名，属张冠李戴），官方站点为 seed.bytedance.com"
+      }
+    ]
+  },
+  "uncertain": [
+    {
+      "slug": "domika",
+      "name": "Domika",
+      "evidence": "检索到的真实 Domika 为家庭自动化客户端，与条目描述的 AI 助理不符，domika.ai 对应的 AI 助理产品无法确认。"
+    },
+    {
+      "slug": "alpaca-ai",
+      "name": "Alpaca AI",
+      "evidence": "Stanford Alpaca 仅为研究项目，alpaca.ai 未对应所描述的商业产品，描述含夸大/虚构内容。"
+    },
+    {
+      "slug": "xint-code",
+      "name": "Xint Code",
+      "evidence": "无明确检索结果确认 xintcode.ai 为真实 AI 编程工具，暂列为不确定。"
+    },
+    {
+      "slug": "lingoai",
+      "name": "LingoAI",
+      "evidence": "No clear independent confirmation that lingoai.com is this product's site. Apple App Store lists a 'LingoAI translated video' app; lingoai.io is an unrelated Web3 translation project. Could not verify the recorded URL or claims."
+    },
+    {
+      "slug": "shadow-ai",
+      "name": "Shadow AI",
+      "evidence": "搜索发现多个 Shadow AI 实体但均无法明确对应 batch 中描述的「影子模式后台 AI 助手」"
+    },
+    {
+      "slug": "deepsec",
+      "name": "DeepSec",
+      "evidence": "No verified product at deepsec.io; 'DeepSec' matches a conference / Trend Micro / academic project, not a commercial AI security platform."
+    },
+    {
+      "slug": "algo",
+      "name": "Algo",
+      "evidence": "检索仅见学术框架ALGO、algo-tech.ai推理平台、AlgoArena等，无 algo.ai 对应编程工具的确凿证据"
+    },
+    {
+      "slug": "velo-ai",
+      "name": "Velo AI",
+      "evidence": "搜索未确认 veloai.com 为有效站点；真实 Velo 为 usevelo.ai（AI 视频），另存 velo-ai.tech(测试)、velorai.co 等不同产品"
+    }
+  ],
+  "records": [
+    {
+      "slug": "mem-ai",
+      "name": "Mem",
+      "verdict": "REAL",
+      "official_url": "https://mem.ai",
+      "url_correct": true,
+      "vendor": "Mem Labs (Mem)",
+      "desc_issue": "轻微：描述称其为'2026年创新产品'，实际 Mem 早在2020年就已推出；核心功能描述基本准确。",
+      "confidence": "high",
+      "evidence": "多家评测站确认 mem.ai 为 Mem Labs 的 AI 笔记/知识管理应用"
+    },
+    {
+      "slug": "seedance",
+      "name": "Seedance",
+      "verdict": "REAL",
+      "official_url": "https://seed.bytedance.com/zh/seedance2_0",
+      "url_correct": true,
+      "vendor": "字节跳动 Seed 实验室",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "字节跳动官方 seed.bytedance.com 页面，AI 视频生成模型"
+    },
+    {
+      "slug": "raycast-ai",
+      "name": "Raycast AI",
+      "verdict": "REAL",
+      "official_url": "https://www.raycast.com",
+      "url_correct": true,
+      "vendor": "Raycast Technologies",
+      "desc_issue": "轻微：平台标注为'本地部署 / Web'有误，Raycast 是 macOS 桌面应用，非本地部署/网页端。",
+      "confidence": "high",
+      "evidence": "raycast.com 官方站点，Mac 效率工具"
+    },
+    {
+      "slug": "looka",
+      "name": "Looka",
+      "verdict": "REAL",
+      "official_url": "https://looka.com",
+      "url_correct": true,
+      "vendor": "Looka Inc.",
+      "desc_issue": "轻微：价格标注'免费使用'有误导，Looka 生成 Logo 需付费下载（低清 $20 起）。",
+      "confidence": "high",
+      "evidence": "looka.com 官方站点，AI Logo 设计工具"
+    },
+    {
+      "slug": "fliki",
+      "name": "Fliki",
+      "verdict": "REAL",
+      "official_url": "https://fliki.ai",
+      "url_correct": true,
+      "vendor": "Fliki",
+      "desc_issue": "轻微：平台标注'本地部署 / Web'有误，Fliki 为纯 SaaS 网页应用。",
+      "confidence": "high",
+      "evidence": "fliki.ai 官方站点，文本转视频工具"
+    },
+    {
+      "slug": "microsoft-copilot",
+      "name": "Copilot（微软）",
+      "verdict": "REAL",
+      "official_url": "https://copilot.microsoft.com",
+      "url_correct": true,
+      "vendor": "Microsoft",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "微软官方 copilot.microsoft.com"
+    },
+    {
+      "slug": "galileo-ai",
+      "name": "Galileo AI",
+      "verdict": "REAL",
+      "official_url": "https://galileo.ai",
+      "url_correct": true,
+      "vendor": "Galileo（已被 Cisco 收购）",
+      "desc_issue": "明显错误：描述称其为'专注工作学习效率的智能 AI 助手'，但真实的 galileo.ai 是面向 LLM 开发者的 AI 可观测与评测平台（AI observability & eval），用于监控/评估 AI 应用，并非通用对话助手。",
+      "confidence": "high",
+      "evidence": "galileo.ai 官网明确为 AI 评测/可观测平台，创始人 Vikram Chatterji 等"
+    },
+    {
+      "slug": "doubao",
+      "name": "豆包",
+      "verdict": "REAL",
+      "official_url": "https://www.doubao.com",
+      "url_correct": true,
+      "vendor": "字节跳动",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "doubao.com 官方站点，字节跳动 AI 助手"
+    },
+    {
+      "slug": "tongyi-efficiency",
+      "name": "通义效率",
+      "verdict": "REAL",
+      "official_url": "https://tongyi.aliyun.com/efficiency",
+      "url_correct": true,
+      "vendor": "阿里巴巴（阿里云）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "阿里云通义官方页面 tongyi.aliyun.com/efficiency"
+    },
+    {
+      "slug": "grammarly-ai",
+      "name": "Grammarly AI",
+      "verdict": "REAL",
+      "official_url": "https://www.grammarly.com",
+      "url_correct": true,
+      "vendor": "Grammarly Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "grammarly.com 官方站点，AI 写作助手"
+    },
+    {
+      "slug": "musicfx",
+      "name": "MusicFX",
+      "verdict": "REAL",
+      "official_url": "https://musicfx.google.com",
+      "url_correct": true,
+      "vendor": "Google",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Google 官方 musicfx.google.com，AI 音乐生成"
+    },
+    {
+      "slug": "internlm",
+      "name": "书生浦语",
+      "verdict": "REAL",
+      "official_url": "https://github.com/InternLM/InternLM",
+      "url_correct": true,
+      "vendor": "上海人工智能实验室",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "github.com/InternLM/InternLM 开源大模型仓库"
+    },
+    {
+      "slug": "bi-ling-ai",
+      "name": "笔灵AI",
+      "verdict": "REAL",
+      "official_url": "https://ibiling.cn",
+      "url_correct": true,
+      "vendor": "上海笔灵智能科技",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "ibiling.cn 官方站点，AI 写作助手"
+    },
+    {
+      "slug": "kling-3-0",
+      "name": "Kling 3.0",
+      "verdict": "REAL",
+      "official_url": "https://kling.kuaishou.com",
+      "url_correct": true,
+      "vendor": "快手（可灵 AI）",
+      "desc_issue": "轻微：'Kling 3.0'具体版本号无法确认是否为最新官方命名，但可灵 AI 视频产品确为真实存在。",
+      "confidence": "high",
+      "evidence": "kling.kuaishou.com 官方站点，快手可灵 AI 视频"
+    },
+    {
+      "slug": "bolt.new",
+      "name": "Bolt.new",
+      "verdict": "REAL",
+      "official_url": "https://bolt.new",
+      "url_correct": true,
+      "vendor": "StackBlitz",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "bolt.new 官方站点，AI 全栈开发工具"
+    },
+    {
+      "slug": "quark-ai",
+      "name": "夸克AI",
+      "verdict": "REAL",
+      "official_url": "https://www.quark.cn",
+      "url_correct": true,
+      "vendor": "阿里巴巴（夸克）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "quark.cn 官方站点，夸克 AI 搜索助手"
+    },
+    {
+      "slug": "clipdrop",
+      "name": "Clipdrop",
+      "verdict": "REAL",
+      "official_url": "https://clipdrop.co",
+      "url_correct": true,
+      "vendor": "Stability AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "clipdrop.co 官方站点（已被 Stability AI 收购），AI 图像处理"
+    },
+    {
+      "slug": "duolingo-max",
+      "name": "Duolingo Max",
+      "verdict": "REAL",
+      "official_url": "https://duolingo.com",
+      "url_correct": true,
+      "vendor": "Duolingo",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "duolingo.com 官方站点，Max 为 AI 高级订阅层"
+    },
+    {
+      "slug": "xinghuo-cognitive-model",
+      "name": "星火认知大模型",
+      "verdict": "REAL",
+      "official_url": "https://xinghuo.xfyun.cn/",
+      "url_correct": true,
+      "vendor": "科大讯飞（iFlytek）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "讯飞开放平台 xinghuo.xfyun.cn，星火大模型"
+    },
+    {
+      "slug": "deepgram",
+      "name": "Deepgram",
+      "verdict": "REAL",
+      "official_url": "https://deepgram.com",
+      "url_correct": true,
+      "vendor": "Deepgram",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "deepgram.com 官方站点，语音转文字平台"
+    },
+    {
+      "slug": "anyscenegen",
+      "name": "AnySceneGen",
+      "verdict": "REAL",
+      "official_url": "https://anyscenegen.ai",
+      "url_correct": true,
+      "vendor": "虚时科技（Intime AI）",
+      "desc_issue": "轻微偏差：真实产品是面向具身智能/机器人训练的'仿真空间数据生成平台'（生成带物理属性的可仿真 3D 场景），而非主要面向建筑师/设计师/游戏开发者的创意出图工具；不过其确实具备文本生成场景与 3D 导出能力。域名 anyscenegen.ai 被本站列为官网，但未能完全独立确认即官方主域（真实厂商为 Intime AI）。",
+      "confidence": "medium",
+      "evidence": "多家科技媒体报道虚时科技 2026-05 发布 AnySceneGen；github.com/AnySceneGen 存在"
+    },
+    {
+      "slug": "replicate",
+      "name": "Replicate",
+      "verdict": "REAL",
+      "official_url": "https://replicate.com",
+      "url_correct": true,
+      "vendor": "Replicate",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "replicate.com 官方站点，云端 AI 模型运行平台"
+    },
+    {
+      "slug": "robin-ai",
+      "name": "Robin AI",
+      "verdict": "REAL",
+      "official_url": "https://robinai.com",
+      "url_correct": true,
+      "vendor": "Robin AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "robinai.com 官方站点，法律 AI（合同审查）"
+    },
+    {
+      "slug": "zendesk-ai",
+      "name": "Zendesk AI",
+      "verdict": "REAL",
+      "official_url": "https://www.zendesk.com",
+      "url_correct": true,
+      "vendor": "Zendesk",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "zendesk.com 官方站点，客服平台内置 AI"
+    },
+    {
+      "slug": "rankspot",
+      "name": "RankSpot",
+      "verdict": "REAL",
+      "official_url": "https://www.rankspot.ai",
+      "url_correct": false,
+      "vendor": "RankSpot",
+      "desc_issue": "URL 错误：记录域名 rankspot.io 应为 rankspot.ai；且描述将其定位为'SEO 排名监控工具'，但真实 RankSpot 是自动化 SEO 内容发布 AI Agent（自动研究/写作/发布文章到博客），排名监控只是其部分能力。",
+      "confidence": "high",
+      "evidence": "所有第三方评测与官网均指向 rankspot.ai（AI SEO 自动发布 Agent）"
+    },
+    {
+      "slug": "propane",
+      "name": "Propane",
+      "verdict": "REAL",
+      "official_url": "https://usepropane.ai",
+      "url_correct": false,
+      "vendor": "Propane ApS（丹麦）",
+      "desc_issue": "严重错误：记录将该工具描述为'基于 GPT-4o 的 AI 写作助手（营销/文案模板）'，但真实的 Propane（usepropane.ai）是面向产品团队的'客户情报操作系统（customer intelligence OS）'，整合 HubSpot/Intercom/Slack 等客户数据供团队与 coding agent 使用，与写作助手毫无关系。记录 URL propane.ai 也非官方主域。",
+      "confidence": "high",
+      "evidence": "usepropane.ai 官网及多篇报道确认其为丹麦 Propane ApS 的客户情报平台"
+    },
+    {
+      "slug": "qwen-agent",
+      "name": "Qwen-Agent",
+      "verdict": "REAL",
+      "official_url": "https://github.com/QwenLM/Qwen-Agent",
+      "url_correct": true,
+      "vendor": "阿里巴巴（通义千问团队）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "github.com/QwenLM/Qwen-Agent 开源 Agent 框架"
+    },
+    {
+      "slug": "apache-superset",
+      "name": "Superset",
+      "verdict": "REAL",
+      "official_url": "https://superset.apache.org/",
+      "url_correct": true,
+      "vendor": "Apache Software Foundation",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "superset.apache.org 官方站点，开源 BI/数据可视化"
+    },
+    {
+      "slug": "qwen3-coder-next",
+      "name": "Qwen3-Coder-Next",
+      "verdict": "REAL",
+      "official_url": "https://tongyi.aliyun.com/qianwen",
+      "url_correct": true,
+      "vendor": "阿里巴巴（通义千问团队）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Qwen 官方博客 qwen.ai 与阿里云文档确认 2026-02 开源的 Qwen3-Coder-Next 代码模型"
+    },
+    {
+      "slug": "persona-js",
+      "name": "Persona.js",
+      "verdict": "REAL",
+      "official_url": "https://persona.js.org",
+      "url_correct": true,
+      "vendor": "Runtype Labs",
+      "desc_issue": "明显错误：描述称其为'基于 JavaScript 的 AI 角色构建框架（多模态人格模拟、动态记忆、虚拟伴侣/游戏 NPC）'，但真实的 Persona.js 是一个轻量级开源 Vanilla JS AI 聊天 UI 组件库（WebMCP-native，可嵌入网站的流式聊天部件），并非角色/人格模拟框架。域名 persona.js.org 参考为项目站点，官方主域或为 persona-chat.dev，未能完全独立确认。",
+      "confidence": "medium",
+      "evidence": "多篇技术评测与 LinkedIn 文章确认 Persona.js 为 Runtype Labs 的开源聊天 UI 库"
+    },
+    {
+      "slug": "chatgpt-work",
+      "name": "ChatGPT Work",
+      "verdict": "REAL",
+      "official_url": "https://chatgpt.com/work",
+      "url_correct": true,
+      "vendor": "OpenAI",
+      "desc_issue": "轻微：描述称'基于 GPT-4o 模型'，实际 ChatGPT Work 基于 GPT-5.6；其余团队智能体定位准确。",
+      "confidence": "high",
+      "evidence": "openai.com/chatgpt-work 官方页面，2026 年推出的团队智能体"
+    },
+    {
+      "slug": "notion-ai",
+      "name": "Notion AI",
+      "verdict": "REAL",
+      "official_url": "https://www.notion.so",
+      "url_correct": true,
+      "vendor": "Notion",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "notion.so 官方站点，Notion 内置 AI"
+    },
+    {
+      "slug": "gemini-omni",
+      "name": "Gemini Omni",
+      "verdict": "REAL",
+      "official_url": "https://gemini.google.com",
+      "url_correct": true,
+      "vendor": "Google",
+      "desc_issue": "轻微偏差：Gemini Omni 是 Google I/O 2026 发布的'视频生成/编辑模型'，并非能生成代码的通用助手；描述中'整合 Gemini 2.5 Pro'也已过时（当前为新一代 Omni 模型）。",
+      "confidence": "high",
+      "evidence": "Google 官方博客 blog.google 确认 Gemini Omni 为 2026 I/O 视频模型"
+    },
+    {
+      "slug": "hugging-face",
+      "name": "Hugging Face",
+      "verdict": "REAL",
+      "official_url": "https://huggingface.co",
+      "url_correct": true,
+      "vendor": "Hugging Face",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "huggingface.co 官方站点，开源 AI 社区/平台"
+    },
+    {
+      "slug": "kapkap",
+      "name": "KapKap",
+      "verdict": "REAL",
+      "official_url": "https://www.kapkap.com",
+      "url_correct": true,
+      "vendor": "KapKap",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 KapKap 为真实存在的AI视频剪辑/短视频生成工具，官网 kapkap.com"
+    },
+    {
+      "slug": "meta-so",
+      "name": "秘塔AI搜索",
+      "verdict": "REAL",
+      "official_url": "https://metaso.cn",
+      "url_correct": true,
+      "vendor": "秘塔科技 (Muta)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 metaso.cn 为秘塔科技出品的AI搜索引擎，描述与产品一致"
+    },
+    {
+      "slug": "gamma",
+      "name": "Gamma",
+      "verdict": "REAL",
+      "official_url": "https://gamma.app",
+      "url_correct": true,
+      "vendor": "Gamma",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 gamma.app 为真实AI演示文稿生成工具，描述一致"
+    },
+    {
+      "slug": "shulex",
+      "name": "Shulex",
+      "verdict": "REAL",
+      "official_url": "https://www.shulex.com",
+      "url_correct": true,
+      "vendor": "Shulex (数脉)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 shulex.com 为跨境电商AI数据分析工具，描述一致"
+    },
+    {
+      "slug": "tencent-yuanbao",
+      "name": "腾讯元宝",
+      "verdict": "REAL",
+      "official_url": "https://yuanbao.tencent.com",
+      "url_correct": true,
+      "vendor": "腾讯 (Tencent)",
+      "desc_issue": "价格标注“基础$10/月起”与事实不符：腾讯元宝目前免费使用（内容摘录中也写明“完全免费”），属误导性定价信息",
+      "confidence": "medium",
+      "evidence": "Web搜索确认 yuanbao.tencent.com 为腾讯混元大模型AI助手，但官方免费，价格字段有误"
+    },
+    {
+      "slug": "panda-probe",
+      "name": "PandaProbe",
+      "verdict": "REAL",
+      "official_url": "https://pandaprobe.com",
+      "url_correct": true,
+      "vendor": "Chirpz AI",
+      "desc_issue": "描述严重失实：真实产品 pandaprobe.com 是“开源 Agent 工程平台 / AI智能体追踪·评测·监控工具”（面向开发者），并非中文AI搜索/数据探测工具；功能、受众均不符",
+      "confidence": "high",
+      "evidence": "Web搜索显示 pandaprobe.com 为 Chirpz AI 的AI智能体可观测性平台，与描述的中文搜索工具完全不符"
+    },
+    {
+      "slug": "sierra-ghostwriter",
+      "name": "Sierra Ghostwriter",
+      "verdict": "REAL",
+      "official_url": "https://sierra.ai",
+      "url_correct": false,
+      "vendor": "Sierra",
+      "desc_issue": "产品定位错误：Sierra 的 Ghostwriter 是“构建客户体验AI智能体”的平台，并非AI写作助手；且记录域名 sierra-ghostwriter.ai 非官方（Sierra 官网为 sierra.ai），疑似拼凑域名",
+      "confidence": "medium",
+      "evidence": "Web搜索确认 Sierra 真实存在，但 Ghostwriter 为智能体构建工具，sierra-ghostwriter.ai 未确认为官方站点"
+    },
+    {
+      "slug": "freepik-ai",
+      "name": "Freepik AI",
+      "verdict": "REAL",
+      "official_url": "https://www.freepik.com",
+      "url_correct": true,
+      "vendor": "Freepik",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 freepik.com 为真实设计素材平台，其AI生图/抠图功能与描述一致"
+    },
+    {
+      "slug": "hedra",
+      "name": "Hedra",
+      "verdict": "REAL",
+      "official_url": "https://www.hedra.ai",
+      "url_correct": true,
+      "vendor": "Hedra Labs",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 hedra.ai 为真实AI角色视频生成工具，描述一致"
+    },
+    {
+      "slug": "poe",
+      "name": "Poe",
+      "verdict": "REAL",
+      "official_url": "https://poe.com",
+      "url_correct": true,
+      "vendor": "Quora",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 poe.com 为 Quora 的AI模型聚合平台，描述一致"
+    },
+    {
+      "slug": "pictory",
+      "name": "Pictory",
+      "verdict": "REAL",
+      "official_url": "https://pictory.ai",
+      "url_correct": true,
+      "vendor": "Pictory",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 pictory.ai 为真实文本转视频AI工具，描述一致"
+    },
+    {
+      "slug": "grain",
+      "name": "Grain",
+      "verdict": "REAL",
+      "official_url": "https://grain.com",
+      "url_correct": true,
+      "vendor": "Grain",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 grain.com 为真实AI会议录制转录助手，描述一致"
+    },
+    {
+      "slug": "huiwa",
+      "name": "绘蛙",
+      "verdict": "REAL",
+      "official_url": "https://huiwa.cn",
+      "url_correct": true,
+      "vendor": "阿里巴巴 (Alibaba)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 huiwa.cn 为阿里旗下AI图像生成工具，描述一致"
+    },
+    {
+      "slug": "wondershare-virbo",
+      "name": "万兴播爆",
+      "verdict": "REAL",
+      "official_url": "https://virbo.wondershare.com",
+      "url_correct": true,
+      "vendor": "万兴科技 (Wondershare)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 virbo.wondershare.com 为万兴科技AI数字人视频工具，描述一致"
+    },
+    {
+      "slug": "hera-launch",
+      "name": "Hera Launch",
+      "verdict": "REAL",
+      "official_url": "https://heralaunch.ai",
+      "url_correct": true,
+      "vendor": "Hera",
+      "desc_issue": null,
+      "confidence": "medium",
+      "evidence": "Web搜索确认 heralaunch.ai 为真实AI应用部署/启动平台，描述基本相符"
+    },
+    {
+      "slug": "magnific-ai",
+      "name": "Magnific AI",
+      "verdict": "REAL",
+      "official_url": "https://magnific.ai",
+      "url_correct": true,
+      "vendor": "Magnific AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 magnific.ai 为真实AI图像放大增强工具，描述一致"
+    },
+    {
+      "slug": "anyword",
+      "name": "Anyword",
+      "verdict": "REAL",
+      "official_url": "https://anyword.com",
+      "url_correct": true,
+      "vendor": "Anyword",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 anyword.com 为真实营销文案AI写作工具，描述一致"
+    },
+    {
+      "slug": "luma-dream-machine",
+      "name": "Luma Dream Machine",
+      "verdict": "REAL",
+      "official_url": "https://lumalabs.ai/dream-machine",
+      "url_correct": true,
+      "vendor": "Luma AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 lumalabs.ai/dream-machine 为 Luma AI 视频生成模型，描述一致"
+    },
+    {
+      "slug": "autify",
+      "name": "Autify",
+      "verdict": "REAL",
+      "official_url": "https://autify.com",
+      "url_correct": true,
+      "vendor": "Autify",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 autify.com 为真实AI自动化测试平台，描述一致"
+    },
+    {
+      "slug": "cloud-computer-manus",
+      "name": "Cloud Computer Manus",
+      "verdict": "REAL",
+      "official_url": "https://manus.im",
+      "url_correct": false,
+      "vendor": "Manus",
+      "desc_issue": "产品定位偏差：真实“Cloud Computer”是 Manus（manus.im）平台的功能/特性，并非独立云桌面产品；记录域名 cloudcomputermanus.com 非官方，疑似拼凑域名",
+      "confidence": "medium",
+      "evidence": "Web搜索确认 Manus 存在且提供 Cloud Computer 功能，但官网为 manus.im，无独立 cloudcomputermanus.com"
+    },
+    {
+      "slug": "wix-ai",
+      "name": "Wix AI",
+      "verdict": "REAL",
+      "official_url": "https://www.wix.com",
+      "url_correct": true,
+      "vendor": "Wix",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 wix.com 为真实建站平台，其AI建站助手与描述一致"
+    },
+    {
+      "slug": "visily",
+      "name": "Visily",
+      "verdict": "REAL",
+      "official_url": "https://visily.ai",
+      "url_correct": true,
+      "vendor": "Visily",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 visily.ai 为真实AI UI设计工具，描述一致"
+    },
+    {
+      "slug": "headlime",
+      "name": "Headlime",
+      "verdict": "REAL",
+      "official_url": "https://headlime.com",
+      "url_correct": true,
+      "vendor": "Headlime",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 headlime.com 为真实营销文案/标题AI写作工具，描述一致"
+    },
+    {
+      "slug": "riffusion",
+      "name": "Riffusion",
+      "verdict": "REAL",
+      "official_url": "https://riffusion.com",
+      "url_correct": true,
+      "vendor": "Riffusion",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 riffusion.com 为真实AI音乐生成工具，描述一致"
+    },
+    {
+      "slug": "meitu-design-ai",
+      "name": "美图设计室AI",
+      "verdict": "REAL",
+      "official_url": "https://design.meitu.com",
+      "url_correct": true,
+      "vendor": "美图公司 (Meitu)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 design.meitu.com 为美图旗下智能设计平台，描述一致"
+    },
+    {
+      "slug": "qdrant",
+      "name": "Qdrant",
+      "verdict": "REAL",
+      "official_url": "https://qdrant.tech",
+      "url_correct": true,
+      "vendor": "Qdrant",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 qdrant.tech 为真实Rust向量数据库/搜索引擎，描述一致"
+    },
+    {
+      "slug": "milvus",
+      "name": "Milvus",
+      "verdict": "REAL",
+      "official_url": "https://milvus.io",
+      "url_correct": true,
+      "vendor": "Zilliz",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 milvus.io 为真实开源向量数据库（由 Zilliz 主导），描述一致"
+    },
+    {
+      "slug": "tabstack",
+      "name": "Tabstack",
+      "verdict": "REAL",
+      "official_url": "https://tabstack.co",
+      "url_correct": false,
+      "vendor": "独立开发者 (Jamie Graham)",
+      "desc_issue": "记录域名 tabstack.io 非官方（真实站点为 tabstack.co）；且描述失实：真实 TabStack 明确标注“No gimmicky AI integration!（无AI功能）”，其“AI自动分类/智能搜索”等说法不成立，它只是新标签页书签管理工具",
+      "confidence": "medium",
+      "evidence": "Web搜索显示 TabStack 真实站点为 tabstack.co，且官方强调不含AI功能，与描述矛盾"
+    },
+    {
+      "slug": "buffer-ai",
+      "name": "Buffer AI",
+      "verdict": "REAL",
+      "official_url": "https://buffer.com",
+      "url_correct": true,
+      "vendor": "Buffer",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 buffer.com 为真实社媒管理工具，其 AI Assistant 与描述一致"
+    },
+    {
+      "slug": "monid",
+      "name": "Monid",
+      "verdict": "REAL",
+      "official_url": "https://monid.ai",
+      "url_correct": true,
+      "vendor": "Monid",
+      "desc_issue": "产品定位严重失实：真实 Monid（monid.ai）是“面向AI智能体的工具调用路由器/统一付费层”（让Agent按需调用200+付费数据接口），并非面向普通用户的轻量级AI对话/知识问答助手；描述中的“个性化知识问答、任务规划”等面向C端的说法不成立",
+      "confidence": "high",
+      "evidence": "Web搜索确认 monid.ai 为 Agent 原生工具路由与按调用付费平台，与描述的聊天助手定位不符"
+    },
+    {
+      "slug": "claude",
+      "name": "Claude",
+      "verdict": "REAL",
+      "official_url": "https://claude.ai",
+      "url_correct": true,
+      "vendor": "Anthropic",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 claude.ai 为 Anthropic 的AI助手，描述核心信息（安全、长文本、代码）准确"
+    },
+    {
+      "slug": "nex-n2",
+      "name": "Nex-N2",
+      "verdict": "REAL",
+      "official_url": "https://nex-agi.cn",
+      "url_correct": false,
+      "vendor": "Nex-AGI（上海，联合多家科研/创业团队）",
+      "desc_issue": "产品定位严重失实：真实 Nex-N2 是开源的“能动性大模型/AI智能体基础模型”（可部署的LLM），并非面向普通用户的“AI搜索与知识引擎”；记录域名 nex-n2.ai 未出现在任何官方来源（官方主页为 nex-agi.cn / nex.sii.edu.cn / HuggingFace / ModelScope）",
+      "confidence": "medium",
+      "evidence": "Web搜索确认 Nex-N2 为 Nex-AGI 开源智能体模型，官方域名为 nex-agi.cn，与搜索引擎描述不符"
+    },
+    {
+      "slug": "modelscope-agent",
+      "name": "Modelscope-Agent",
+      "verdict": "REAL",
+      "official_url": "https://modelscope.cn",
+      "url_correct": true,
+      "vendor": "阿里巴巴 / 魔搭社区（达摩院）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web搜索确认 ModelScope-Agent 为阿里魔搭开源AI智能体开发框架（github.com/modelscope/modelscope-agent），描述一致"
+    },
+    {
+      "slug": "harvey-ai",
+      "name": "Harvey AI",
+      "verdict": "REAL",
+      "official_url": "https://harvey.ai",
+      "url_correct": true,
+      "vendor": "Harvey (法律AI公司，多家顶级律所采用)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "harvey.ai 为真实官方站点，法律AI领域标杆产品，描述与官方定位一致。"
+    },
+    {
+      "slug": "adobe-firefly",
+      "name": "Adobe Firefly",
+      "verdict": "REAL",
+      "official_url": "https://firefly.adobe.com",
+      "url_correct": true,
+      "vendor": "Adobe",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "firefly.adobe.com 为 Adobe 官方站点，AI 图片生成工具，描述准确。"
+    },
+    {
+      "slug": "cleanvoice",
+      "name": "Cleanvoice",
+      "verdict": "REAL",
+      "official_url": "https://cleanvoice.ai",
+      "url_correct": true,
+      "vendor": "Cleanvoice (音频处理公司)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "cleanvoice.ai 为真实官方站点，AI 音频清理工具，描述准确。"
+    },
+    {
+      "slug": "brandmark",
+      "name": "Brandmark",
+      "verdict": "REAL",
+      "official_url": "https://brandmark.io",
+      "url_correct": true,
+      "vendor": "Brandmark (Logo/品牌设计公司)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "brandmark.io 为真实官方站点，AI 品牌/Logo 设计工具，描述准确。"
+    },
+    {
+      "slug": "miaohua",
+      "name": "秒画",
+      "verdict": "REAL",
+      "official_url": "https://miaohua.sensetime.com",
+      "url_correct": true,
+      "vendor": "商汤科技 (SenseTime) — 记录误写为字节跳动",
+      "desc_issue": "厂商错误：记录描述称『字节跳动推出』，实际为商汤科技（SenseTime）旗下 AI 绘画产品；URL 正确。",
+      "confidence": "high",
+      "evidence": "miaohua.sensetime.com 为商汤官方域名，秒画是商汤的文生图产品，并非字节跳动。"
+    },
+    {
+      "slug": "quillbot",
+      "name": "QuillBot",
+      "verdict": "REAL",
+      "official_url": "https://quillbot.com",
+      "url_correct": true,
+      "vendor": "QuillBot (Course Hero 旗下)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "quillbot.com 为真实官方站点，AI 写作/改写工具，描述准确。"
+    },
+    {
+      "slug": "heygen",
+      "name": "HeyGen",
+      "verdict": "REAL",
+      "official_url": "https://www.heygen.com",
+      "url_correct": true,
+      "vendor": "HeyGen (数字人视频公司)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "heygen.com 为真实官方站点，AI 数字人视频生成平台，描述准确。"
+    },
+    {
+      "slug": "stable-diffusion",
+      "name": "Stable Diffusion",
+      "verdict": "REAL",
+      "official_url": "https://stability.ai",
+      "url_correct": true,
+      "vendor": "Stability AI (原模型)；社区开源生态",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "stability.ai 为 Stability AI 官方站点，开源 AI 绘画模型，描述准确。"
+    },
+    {
+      "slug": "capcut-ai",
+      "name": "CapCut AI",
+      "verdict": "REAL",
+      "official_url": "https://www.capcut.com",
+      "url_correct": true,
+      "vendor": "字节跳动 (ByteDance)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "capcut.com 为字节跳动官方站点，AI 视频编辑工具，描述准确。"
+    },
+    {
+      "slug": "figma-ai",
+      "name": "Figma AI",
+      "verdict": "REAL",
+      "official_url": "https://www.figma.com",
+      "url_correct": true,
+      "vendor": "Figma (现为 Adobe 子公司)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "figma.com 为真实官方站点，Figma 内置 AI 功能，描述准确。"
+    },
+    {
+      "slug": "character-ai",
+      "name": "Character AI",
+      "verdict": "REAL",
+      "official_url": "https://character.ai",
+      "url_correct": true,
+      "vendor": "Character.AI (c.ai)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "character.ai 为真实官方站点，AI 角色扮演对话平台，描述准确。"
+    },
+    {
+      "slug": "happy-horse",
+      "name": "HappyHorse",
+      "verdict": "REAL",
+      "official_url": "https://happyhorse.ai",
+      "url_correct": true,
+      "vendor": "HappyHorse (AI 视频生成公司)",
+      "desc_issue": "类别/功能错误：记录称其为『提升工作效率的AI助手（任务管理/自动化工作流/数据分析）』，实际 HappyHorse 是 AI 视频生成器（文生/图生视频+原生音轨），产品定位完全不同。",
+      "confidence": "medium",
+      "evidence": "多个搜索结果确认 HappyHorse 为 AI 视频生成平台（happyhorses.ai、happy-horseai.net 等），以 150 亿参数模型生成带原生音频的 1080p 视频；记录描述的工作流/效率助手定位与真实产品不符。"
+    },
+    {
+      "slug": "baichuan-2",
+      "name": "Baichuan 2",
+      "verdict": "REAL",
+      "official_url": "https://www.baichuan-ai.com",
+      "url_correct": true,
+      "vendor": "百川智能 (Baichuan Intelligent)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "baichuan-ai.com 为百川智能官方站点，自研大语言模型，描述准确。"
+    },
+    {
+      "slug": "pencil-ai",
+      "name": "Pencil AI",
+      "verdict": "REAL",
+      "official_url": "https://trypencil.com",
+      "url_correct": false,
+      "vendor": "Pencil AI Limited",
+      "desc_issue": "URL 错误且功能不符：记录 URL 为 pencilai.io，但 Pencil 官方站点为 trypencil.com；真实 Pencil 是面向电商/投放的 AI 广告创意生成平台，并非『智能AI设计助手（文本转图像/修图）』。",
+      "confidence": "medium",
+      "evidence": "trypencil.com 为 Pencil AI Limited 官方域名（AI 广告创意平台，2018 年起）；pencilai.io 未对应官方站点，且存在 pencilai.pro（另一 AI 视频产品）等同名混淆项。记录的描述与真实 Pencil 功能不符。"
+    },
+    {
+      "slug": "uizard",
+      "name": "Uizard",
+      "verdict": "REAL",
+      "official_url": "https://uizard.io",
+      "url_correct": true,
+      "vendor": "Uizard (AI 设计公司)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "uizard.io 为真实官方站点，AI 驱动的 UI 设计工具（草图/截图/文字转设计稿），描述准确。"
+    },
+    {
+      "slug": "fooocus",
+      "name": "Fooocus",
+      "verdict": "REAL",
+      "official_url": "https://github.com/lllyasviel/Fooocus",
+      "url_correct": false,
+      "vendor": "lllyasviel (开源项目)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Fooocus 官方 README 明确声明：『我们没有任何 fooocus.com/.net/.co/.ai/.org/.pro/.one 等网站，这些全部是假的』，唯一官方来源是 GitHub 仓库。记录 URL fooocus.io 属官方点名的 FAKE 站点；但产品本身为真实开源图像生成工具，描述（开源/基于SDXL）准确。"
+    },
+    {
+      "slug": "pollinations",
+      "name": "Pollinations",
+      "verdict": "REAL",
+      "official_url": "https://pollinations.ai",
+      "url_correct": true,
+      "vendor": "Pollinations (AI 图像/媒体生成平台)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "pollinations.ai 为真实官方站点，AI 图像生成平台，描述准确。"
+    },
+    {
+      "slug": "tabnine",
+      "name": "Tabnine",
+      "verdict": "REAL",
+      "official_url": "https://www.tabnine.com",
+      "url_correct": true,
+      "vendor": "Tabnine (AI 编程助手公司)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "tabnine.com 为真实官方站点，AI 代码补全工具，描述准确。"
+    },
+    {
+      "slug": "schole-ai",
+      "name": "Schole AI",
+      "verdict": "REAL",
+      "official_url": "https://schole.ai",
+      "url_correct": true,
+      "vendor": "Scholé Inc. (EPFL 背景)",
+      "desc_issue": "定位偏差：记录描述为『面向学生/研究人员的作业解答学习助手』，真实 Scholé AI 更偏企业级（B2B）AI 素养与员工培训平台，而非单纯学生作业工具。URL 正确。",
+      "confidence": "medium",
+      "evidence": "schole.ai 为真实官方站点（Scholé Inc.，EPFL 起源），主打企业 AI 培训/素养，与记录中『学生作业助手』的消费级定位有偏差。"
+    },
+    {
+      "slug": "moonvalley",
+      "name": "Moonvalley",
+      "verdict": "REAL",
+      "official_url": "https://moonvalley.ai",
+      "url_correct": true,
+      "vendor": "Moonvalley (加拿大，前 DeepMind 成员创立)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "moonvalley.ai 为真实官方站点，AI 视频生成工具，描述准确。"
+    },
+    {
+      "slug": "melty-ai",
+      "name": "Melty",
+      "verdict": "REAL",
+      "official_url": "https://melty.ai",
+      "url_correct": true,
+      "vendor": "Meltylabs",
+      "desc_issue": "功能错误：记录称其为『AI内容创作/文案生成工具』，实际 Melty 是开源 AI 代码编辑器（VS Code 分支），用于代码补全/生成/调试，非写作工具。",
+      "confidence": "high",
+      "evidence": "melty.ai 为真实官方站点（meltylabs），开源 AI 代码编辑器，对标 Cursor；记录的内容写作定位与真实产品不符。"
+    },
+    {
+      "slug": "flowmarket",
+      "name": "FlowMarket",
+      "verdict": "REAL",
+      "official_url": "https://flowmarket.social",
+      "url_correct": false,
+      "vendor": "FlowMarket",
+      "desc_issue": "URL 错误且功能不符：记录 URL 为 flowmarket.ai，官方域名为 flowmarket.social；真实 FlowMarket 是面向 B2B 交易的『AI 代理网络（自动发现/匹配商机）』，并非『集成200+AI应用的可视化工作流自动化平台』。",
+      "confidence": "high",
+      "evidence": "flowmarket.social 为官方站点，定位为 B2B deal flow 的 AI agent 网络（自动发现、匹配企业线索），2026 年上线；flowmarket.ai 非官方域名，记录的功能描述与实际产品不符。"
+    },
+    {
+      "slug": "kensho-ai",
+      "name": "Kensho AI",
+      "verdict": "REAL",
+      "official_url": "https://www.kensho.com",
+      "url_correct": true,
+      "vendor": "S&P Global (标普全球)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "kensho.com 为 S&P Global 旗下 Kensho 官方站点，企业级 AI 数据分析平台，描述准确（记录 URL 字段含 'httpshttps' 前缀笔误，但规范域名 kensho.com 正确）。"
+    },
+    {
+      "slug": "open-router",
+      "name": "OpenRouter",
+      "verdict": "REAL",
+      "official_url": "https://openrouter.ai",
+      "url_correct": true,
+      "vendor": "OpenRouter (AI 模型聚合平台)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "openrouter.ai 为真实官方站点，AI 模型统一 API 网关，描述准确。"
+    },
+    {
+      "slug": "mintlify-editor",
+      "name": "Mintlify Editor",
+      "verdict": "REAL",
+      "official_url": "https://mintlify.com",
+      "url_correct": true,
+      "vendor": "Mintlify",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "mintlify.com 为真实官方站点，AI 文档编写平台，描述准确。"
+    },
+    {
+      "slug": "mike-ai",
+      "name": "mike AI",
+      "verdict": "REAL",
+      "official_url": "https://www.mikeai.co",
+      "url_correct": false,
+      "vendor": "MikeAI",
+      "desc_issue": "URL 错误且功能不符：记录 URL 为 mikeai.com，官方域名为 mikeai.co；真实 MikeAI 是『AI 健身教练』（个性化训练/饮食计划），并非『语音交互智能对话助手』。",
+      "confidence": "high",
+      "evidence": "mikeai.co 为 MikeAI 官方站点，AI 健身教练（FitnessGPT），2026 年上线；mikeai.com 非官方域名，记录的语音对话助手定位与真实产品完全不符。"
+    },
+    {
+      "slug": "mureka",
+      "name": "Mureka",
+      "verdict": "REAL",
+      "official_url": "https://mureka.ai",
+      "url_correct": true,
+      "vendor": "Mureka (AI 音乐生成公司)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "mureka.ai 为真实官方站点，AI 音乐生成工具，描述准确。"
+    },
+    {
+      "slug": "framer-ai",
+      "name": "Framer AI",
+      "verdict": "REAL",
+      "official_url": "https://www.framer.com",
+      "url_correct": true,
+      "vendor": "Framer",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "framer.com 为真实官方站点，内置 AI 网站设计助手，描述准确。"
+    },
+    {
+      "slug": "pear-ai",
+      "name": "PearAI",
+      "verdict": "REAL",
+      "official_url": "https://www.trypear.ai/",
+      "url_correct": true,
+      "vendor": "PearAI (开源 AI 代码编辑器)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "trypear.ai 为真实官方站点，开源 AI 代码编辑器，描述准确。"
+    },
+    {
+      "slug": "chatgpt",
+      "name": "ChatGPT",
+      "verdict": "REAL",
+      "official_url": "https://chat.openai.com",
+      "url_correct": true,
+      "vendor": "OpenAI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "chat.openai.com 为 OpenAI 官方（旧版/重定向入口，仍有效；当前规范域名为 chatgpt.com），ChatGPT 真实存在，描述准确。"
+    },
+    {
+      "slug": "comfyui",
+      "name": "ComfyUI",
+      "verdict": "REAL",
+      "official_url": "https://comfy.org/",
+      "url_correct": true,
+      "vendor": "Comfy (开源节点式图像工作流项目)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "comfy.org 为真实官方站点，基于节点工作流的 Stable Diffusion 图像生成界面，描述准确。"
+    },
+    {
+      "slug": "kimi",
+      "name": "Kimi",
+      "verdict": "REAL",
+      "official_url": "https://kimi.moonshot.cn",
+      "url_correct": true,
+      "vendor": "月之暗面 (Moonshot AI)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "kimi.moonshot.cn 为月之暗面官方站点，国产 AI 助手，描述准确。"
+    },
+    {
+      "slug": "qik-office",
+      "name": "Qik Office",
+      "verdict": "REAL",
+      "official_url": "https://qikoffice.com",
+      "url_correct": true,
+      "vendor": "Qik Office (企业级 AI 办公平台)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "qikoffice.com 为真实官方站点，企业级 AI 办公平台，描述准确。"
+    },
+    {
+      "slug": "vizard",
+      "name": "Vizard",
+      "verdict": "REAL",
+      "official_url": "https://vizard.ai",
+      "url_correct": true,
+      "vendor": "Vizard 团队",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "vizard.ai 为真实 AI 视频剪辑平台，检索结果确认其自动长视频切片与虚拟主播功能。"
+    },
+    {
+      "slug": "comet",
+      "name": "Comet",
+      "verdict": "REAL",
+      "official_url": "https://www.comet.com",
+      "url_correct": true,
+      "vendor": "Comet (Comet ML)",
+      "desc_issue": "描述称其为“AI内容创作平台（博客/社媒/营销内容）”有误；comet.com 实际是 Comet ML，提供 ML 实验追踪与 LLM 可观测性平台 Opik，并非内容创作工具。",
+      "confidence": "high",
+      "evidence": "comet.com 为真实官网，但业务定位与描述不符，属 ML 实验/可观测性平台。"
+    },
+    {
+      "slug": "feishu-assistant",
+      "name": "飞书智能助手",
+      "verdict": "REAL",
+      "official_url": "https://www.feishu.cn",
+      "url_correct": true,
+      "vendor": "字节跳动（飞书）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "feishu.cn 为飞书官网，其内置 AI 助手（文档/表格/会议/消息 AI）真实存在。"
+    },
+    {
+      "slug": "consensus",
+      "name": "Consensus",
+      "verdict": "REAL",
+      "official_url": "https://consensus.app",
+      "url_correct": true,
+      "vendor": "Consensus（学术搜索引擎公司）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "consensus.app 为真实 AI 学术搜索引擎，从论文提取证据并附引用。"
+    },
+    {
+      "slug": "domika",
+      "name": "Domika",
+      "verdict": "UNCERTAIN",
+      "official_url": null,
+      "url_correct": false,
+      "vendor": null,
+      "desc_issue": "描述称其为“AI个人助理（日程/任务/对话）”，但真实 Domika 是 Home Assistant 客户端应用（domika.app，开发者 DevPocket），并非 AI 助理；domika.ai 与所描述的 AI 助理产品无法对应。",
+      "confidence": "medium",
+      "evidence": "检索到的真实 Domika 为家庭自动化客户端，与条目描述的 AI 助理不符，domika.ai 对应的 AI 助理产品无法确认。"
+    },
+    {
+      "slug": "copy.ai",
+      "name": "Copy.ai",
+      "verdict": "REAL",
+      "official_url": "https://www.copy.ai",
+      "url_correct": true,
+      "vendor": "Copy.ai",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "copy.ai 为真实 AI 营销文案生成工具，含 100+ 模板。"
+    },
+    {
+      "slug": "pika",
+      "name": "Pika",
+      "verdict": "REAL",
+      "official_url": "https://pika.art",
+      "url_correct": true,
+      "vendor": "Pika Labs",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "pika.art 为真实 AI 视频生成工具（Pika Labs）。"
+    },
+    {
+      "slug": "minimax",
+      "name": "MiniMax",
+      "verdict": "REAL",
+      "official_url": "https://www.minimaxi.com",
+      "url_correct": true,
+      "vendor": "MiniMax（稀宇科技）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "minimaxi.com 为 MiniMax 官网，旗下海螺 AI 提供对话/语音合成/视频生成。"
+    },
+    {
+      "slug": "monica-ai",
+      "name": "Monica AI",
+      "verdict": "REAL",
+      "official_url": "https://monica.im",
+      "url_correct": true,
+      "vendor": "Butterfly Effect（蝴蝶效应科技）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "monica.im 为真实 AI 助手（浏览器扩展+网页/移动端）。"
+    },
+    {
+      "slug": "leonardo-ai",
+      "name": "Leonardo AI",
+      "verdict": "REAL",
+      "official_url": "https://leonardo.ai",
+      "url_correct": true,
+      "vendor": "Leonardo.Ai（已被 Canva 收购）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "leonardo.ai 为真实 AI 图像/游戏美术生成平台。"
+    },
+    {
+      "slug": "chatpdf",
+      "name": "ChatPDF",
+      "verdict": "REAL",
+      "official_url": "https://chatpdf.com",
+      "url_correct": true,
+      "vendor": "ChatPDF",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "chatpdf.com 为真实 PDF 对话问答工具。"
+    },
+    {
+      "slug": "mindra",
+      "name": "Mindra",
+      "verdict": "REAL",
+      "official_url": "https://mindra.co",
+      "url_correct": false,
+      "vendor": "Mindra 团队",
+      "desc_issue": "条目 URL 为 mindra.ai，但真实 Mindra 官网为 mindra.co（AI 智能体编排/部门化协作平台）；URL 需修正。",
+      "confidence": "medium",
+      "evidence": "检索确认 Mindra 真实存在但主域为 mindra.co，非 mindra.ai。"
+    },
+    {
+      "slug": "veed-io",
+      "name": "Veed.io",
+      "verdict": "REAL",
+      "official_url": "https://www.veed.io",
+      "url_correct": true,
+      "vendor": "Veed",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "veed.io 为真实在线 AI 视频编辑平台（自动字幕/剪辑/转录）。"
+    },
+    {
+      "slug": "flair-ai",
+      "name": "Flair AI",
+      "verdict": "REAL",
+      "official_url": "https://flair.ai",
+      "url_correct": true,
+      "vendor": "Flair AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "flair.ai 为真实 AI 品牌/营销视觉生成工具。"
+    },
+    {
+      "slug": "baichuan-ai",
+      "name": "百川智能",
+      "verdict": "REAL",
+      "official_url": "https://www.baichuan-ai.com",
+      "url_correct": true,
+      "vendor": "百川智能（王小川创立）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "baichuan-ai.com 为真实百川智能官网，提供大模型与 API。"
+    },
+    {
+      "slug": "f5-tts",
+      "name": "F5-TTS",
+      "verdict": "REAL",
+      "official_url": "https://github.com/SWivid/F5-TTS",
+      "url_correct": false,
+      "vendor": "SWivid（开源社区）",
+      "desc_issue": "描述称“F5-TTS 是 Suno 团队开源”有误；F5-TTS 实为 SWivid 开源项目（github.com/SWivid/F5-TTS），Suno 是另一家音乐生成公司。",
+      "confidence": "high",
+      "evidence": "GitHub 确认 F5-TTS 由 RVC-Boss/SWivid 维护，非 SunoAI；记录 URL github.com/SunoAI/F5-TTS 错误。"
+    },
+    {
+      "slug": "crew-ai",
+      "name": "CrewAI",
+      "verdict": "REAL",
+      "official_url": "https://crewai.com",
+      "url_correct": true,
+      "vendor": "CrewAI（João Moura 等）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "crewai.com 为真实开源多智能体协作框架。"
+    },
+    {
+      "slug": "alpaca-ai",
+      "name": "Alpaca AI",
+      "verdict": "UNCERTAIN",
+      "official_url": null,
+      "url_correct": false,
+      "vendor": null,
+      "desc_issue": "描述称“斯坦福开发、2026年迭代至 Alpaca 2.0 可商用版本”误导；Stanford Alpaca 是 2023 年研究模型（stanford_alpaca，权重已下架），不存在 alpaca.ai 所描述的在售 2.0 商业产品。",
+      "confidence": "medium",
+      "evidence": "Stanford Alpaca 仅为研究项目，alpaca.ai 未对应所描述的商业产品，描述含夸大/虚构内容。"
+    },
+    {
+      "slug": "codex-cli",
+      "name": "Codex CLI",
+      "verdict": "REAL",
+      "official_url": "https://github.com/openai/codex",
+      "url_correct": true,
+      "vendor": "OpenAI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "OpenAI Codex CLI 为真实开源命令行编程助手（官方仓库 github.com/openai/codex）。"
+    },
+    {
+      "slug": "rytr",
+      "name": "Rytr",
+      "verdict": "REAL",
+      "official_url": "https://rytr.me",
+      "url_correct": true,
+      "vendor": "Rytr",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "rytr.me 为真实 AI 写作助手，支持 30+ 语言与 40+ 模板。"
+    },
+    {
+      "slug": "chat-tts",
+      "name": "ChatTTS",
+      "verdict": "REAL",
+      "official_url": "https://github.com/2noise/ChatTTS",
+      "url_correct": true,
+      "vendor": "2noise（开源社区）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "github.com/2noise/ChatTTS 为真实开源对话式 TTS 模型。"
+    },
+    {
+      "slug": "symphony-agent",
+      "name": "Symphony Agent",
+      "verdict": "REAL",
+      "official_url": "https://symphonyagent.ai",
+      "url_correct": true,
+      "vendor": "Symphony Agent",
+      "desc_issue": null,
+      "confidence": "medium",
+      "evidence": "symphonyagent.ai 作为企业级多智能体协作平台有站点 listing，归类真实但独立性中等（主流 Symphony 为金融消息平台 runsymphony.com）。"
+    },
+    {
+      "slug": "xint-code",
+      "name": "Xint Code",
+      "verdict": "UNCERTAIN",
+      "official_url": null,
+      "url_correct": false,
+      "vendor": null,
+      "desc_issue": "xintcode.ai 无法检索到明确对应的真实产品；百度确有“文心快码”（wenxin-kuaima，独立条目），但 Xint Code 与之不同，无法确认其为真实存在的独立产品。",
+      "confidence": "low",
+      "evidence": "无明确检索结果确认 xintcode.ai 为真实 AI 编程工具，暂列为不确定。"
+    },
+    {
+      "slug": "resemble-ai",
+      "name": "Resemble AI",
+      "verdict": "REAL",
+      "official_url": "https://resemble.ai",
+      "url_correct": true,
+      "vendor": "Resemble AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "resemble.ai 为真实 AI 语音合成与声音克隆平台。"
+    },
+    {
+      "slug": "duiyou-ai",
+      "name": "堆友AI",
+      "verdict": "REAL",
+      "official_url": "https://d.design/",
+      "url_correct": true,
+      "vendor": "阿里巴巴设计（Alibaba Design）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "d.design 为真实阿里堆友 AI 图像生成平台，支持文生图/图生图/AI换装。"
+    },
+    {
+      "slug": "gpt-sovits",
+      "name": "GPT-SoVITS",
+      "verdict": "REAL",
+      "official_url": "https://github.com/RVC-Boss/GPT-SoVITS",
+      "url_correct": true,
+      "vendor": "RVC-Boss（花儿不哭，开源社区）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "github.com/RVC-Boss/GPT-SoVITS 为真实开源零样本语音克隆项目，记录 URL 正确。"
+    },
+    {
+      "slug": "baidu-qianfan-agent",
+      "name": "百度千帆Agent",
+      "verdict": "REAL",
+      "official_url": "https://qianfan.cloud.baidu.com/agent",
+      "url_correct": true,
+      "vendor": "百度智能云",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "qianfan.cloud.baidu.com 为百度千帆大模型平台，含 Agent 构建/多智能体协同能力，真实存在。"
+    },
+    {
+      "slug": "tldv",
+      "name": "tl;dv",
+      "verdict": "REAL",
+      "official_url": "https://tldv.io",
+      "url_correct": true,
+      "vendor": "tl;dv",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "tldv.io 为真实 AI 会议录制/转录/摘要平台，支持 Zoom/Meet/Teams。"
+    },
+    {
+      "slug": "skywork-3-1",
+      "name": "Skywork 3.1",
+      "verdict": "REAL",
+      "official_url": "https://skywork.ai",
+      "url_correct": true,
+      "vendor": "昆仑万维（Kunlun Tech）",
+      "desc_issue": "条目 URL 记为 skywork.com；天工/Skywork 真实官网为海外 skywork.ai 与国内 tiangong.cn（skywork.com 非标准入口）。产品本身真实（天工 3.1 于 2026-06 发布）。",
+      "confidence": "medium",
+      "evidence": "昆仑万维天工 3.1 大模型及 Super Agents 真实发布；标准官网为 skywork.ai / tiangong.cn。"
+    },
+    {
+      "slug": "wenxin-kuaima",
+      "name": "文心快码",
+      "verdict": "REAL",
+      "official_url": "https://cloud.baidu.com/product/code.html",
+      "url_correct": true,
+      "vendor": "百度（百度智能云 Comate）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "cloud.baidu.com/product/code.html 为百度文心快码（Comate）AI 编程工具页面，真实存在。"
+    },
+    {
+      "slug": "fellou",
+      "name": "Fellou",
+      "verdict": "REAL",
+      "official_url": "https://fellou.ai",
+      "url_correct": true,
+      "vendor": "Fellou 团队（基于 Eko 框架）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "fellou.ai 为真实 Agentic AI 浏览器，支持深度研究与网页/桌面自动化。"
+    },
+    {
+      "slug": "perplexity-ai",
+      "name": "Perplexity AI",
+      "verdict": "REAL",
+      "official_url": "https://www.perplexity.ai",
+      "url_correct": true,
+      "vendor": "Perplexity AI Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "perplexity.ai 为知名真实 AI 搜索引擎，支持实时联网。"
+    },
+    {
+      "slug": "graphrag",
+      "name": "GraphRAG",
+      "verdict": "REAL",
+      "official_url": "https://github.com/microsoft/graphrag",
+      "url_correct": true,
+      "vendor": "Microsoft",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "github.com/microsoft/graphrag 为微软真实开源的基于知识图谱的 RAG 系统。"
+    },
+    {
+      "slug": "meticulous",
+      "name": "Meticulous",
+      "verdict": "REAL",
+      "official_url": "https://meticulous.ai",
+      "url_correct": true,
+      "vendor": "Meticulous (YC-backed)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Web search confirms meticulous.ai is a real AI UI testing tool that records user actions and auto-generates tests."
+    },
+    {
+      "slug": "deepl",
+      "name": "DeepL",
+      "verdict": "REAL",
+      "official_url": "https://www.deepl.com",
+      "url_correct": true,
+      "vendor": "DeepL GmbH (Germany)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "DeepL is a well-known real AI translator; deepl.com is its official site."
+    },
+    {
+      "slug": "tiangong",
+      "name": "天工AI",
+      "verdict": "REAL",
+      "official_url": "https://www.tiangong-china.com",
+      "url_correct": true,
+      "vendor": "昆仑万维 (Kunlun Tech)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "天工AI by 昆仑万维 confirmed real; tiangong-china.com resolves and works as a real site."
+    },
+    {
+      "slug": "github-copilot",
+      "name": "GitHub Copilot",
+      "verdict": "REAL",
+      "official_url": "https://github.com/features/copilot",
+      "url_correct": true,
+      "vendor": "GitHub / Microsoft",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "GitHub Copilot is a real AI coding assistant; github.com/features/copilot is the official page."
+    },
+    {
+      "slug": "xinghuo-iflytek",
+      "name": "讯飞星火",
+      "verdict": "REAL",
+      "official_url": "https://xinghuo.xfyun.cn",
+      "url_correct": true,
+      "vendor": "科大讯飞 (iFlytek)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "讯飞星火 by 科大讯飞 confirmed real; xinghuo.xfyun.cn is the official site."
+    },
+    {
+      "slug": "lingoai",
+      "name": "LingoAI",
+      "verdict": "UNCERTAIN",
+      "official_url": null,
+      "url_correct": false,
+      "vendor": null,
+      "desc_issue": null,
+      "confidence": "low",
+      "evidence": "No clear independent confirmation that lingoai.com is this product's site. Apple App Store lists a 'LingoAI translated video' app; lingoai.io is an unrelated Web3 translation project. Could not verify the recorded URL or claims."
+    },
+    {
+      "slug": "krea-ai",
+      "name": "Krea AI",
+      "verdict": "REAL",
+      "official_url": "https://www.krea.ai",
+      "url_correct": true,
+      "vendor": "Krea",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Krea is a real real-time AI image generation tool; krea.ai is its official site."
+    },
+    {
+      "slug": "wenxin-yige",
+      "name": "文心一格",
+      "verdict": "REAL",
+      "official_url": "https://yige.baidu.com",
+      "url_correct": true,
+      "vendor": "百度 (Baidu)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "文心一格 by 百度 confirmed real; yige.baidu.com is the official site."
+    },
+    {
+      "slug": "canva-ai",
+      "name": "Canva AI",
+      "verdict": "REAL",
+      "official_url": "https://www.canva.com",
+      "url_correct": true,
+      "vendor": "Canva",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Canva is a real design platform with AI features; canva.com is the official site."
+    },
+    {
+      "slug": "language-tool",
+      "name": "LanguageTool",
+      "verdict": "REAL",
+      "official_url": "https://languagetool.org",
+      "url_correct": true,
+      "vendor": "LanguageTool (Germany)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "LanguageTool is a real open-source grammar/spell checker; languagetool.org is the official site."
+    },
+    {
+      "slug": "runway",
+      "name": "Runway",
+      "verdict": "REAL",
+      "official_url": "https://runwayml.com",
+      "url_correct": true,
+      "vendor": "Runway",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Runway is a real AI video tool (Gen-4.5 era; description mentions Gen-4, minor staleness, not a clear error); runwayml.com is the official site."
+    },
+    {
+      "slug": "avoma",
+      "name": "Avoma",
+      "verdict": "REAL",
+      "official_url": "https://avoma.com",
+      "url_correct": true,
+      "vendor": "Avoma",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Avoma is a real AI meeting assistant; avoma.com is the official site."
+    },
+    {
+      "slug": "zed-editor",
+      "name": "Zed Editor",
+      "verdict": "REAL",
+      "official_url": "https://zed.dev",
+      "url_correct": true,
+      "vendor": "Zed Industries (Nathan Sobo, ex-Atom)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Zed is a real Rust-based code editor with Zed AI; zed.dev is the official site."
+    },
+    {
+      "slug": "codebuddy-tengxun",
+      "name": "CodeBuddy腾讯",
+      "verdict": "REAL",
+      "official_url": "https://codebuddy.cloud.tencent.com",
+      "url_correct": true,
+      "vendor": "腾讯 (Tencent)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "CodeBuddy confirmed real Tencent AI coding assistant; cloud.tencent.com subdomain is a real Tencent property (main site is www.codebuddy.cn)."
+    },
+    {
+      "slug": "glm-5-1",
+      "name": "GLM-5.1",
+      "verdict": "REAL",
+      "official_url": "https://www.zhipuai.cn",
+      "url_correct": true,
+      "vendor": "智谱AI (Zhipu AI)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "GLM-5.1 confirmed as a real 2026 Zhipu AI model; zhipuai.cn is the official site."
+    },
+    {
+      "slug": "chuangketie-ai",
+      "name": "创客贴AI",
+      "verdict": "REAL",
+      "official_url": "https://www.chuangkit.com",
+      "url_correct": true,
+      "vendor": "创客贴",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "创客贴 is a real design platform with AI features; chuangkit.com is the official site."
+    },
+    {
+      "slug": "kapwing",
+      "name": "Kapwing",
+      "verdict": "REAL",
+      "official_url": "https://www.kapwing.com",
+      "url_correct": true,
+      "vendor": "Kapwing",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Kapwing is a real AI online video editor; kapwing.com is the official site."
+    },
+    {
+      "slug": "stepfun",
+      "name": "阶跃星辰",
+      "verdict": "REAL",
+      "official_url": "https://www.stepfun.com",
+      "url_correct": true,
+      "vendor": "阶跃星辰 (StepFun, 姜大昕 / Jiang Daxin, ex-Microsoft Research Asia)",
+      "desc_issue": "Founder misattributed: description says '由前百度高管李开复创立', but 李开复 founded 01.ai/零一万物, NOT StepFun. StepFun was founded by 姜大昕.",
+      "confidence": "high",
+      "evidence": "StepFun confirmed real; founder is 姜大昕 (ex-Microsoft Research Asia), not 李开复."
+    },
+    {
+      "slug": "metagpt",
+      "name": "MetaGPT",
+      "verdict": "REAL",
+      "official_url": "https://github.com/geekan/MetaGPT",
+      "url_correct": false,
+      "vendor": "DeepWisdom (geekan)",
+      "desc_issue": null,
+      "confidence": "medium",
+      "evidence": "MetaGPT is a real open-source multi-agent framework by DeepWisdom; metagpt.com is not the official site (official: deepwisdom.ai / github.com/geekan/MetaGPT)."
+    },
+    {
+      "slug": "tuguaishou",
+      "name": "图怪兽",
+      "verdict": "REAL",
+      "official_url": "https://www.tuguaishou.com",
+      "url_correct": true,
+      "vendor": "图怪兽 (上海遇图网络科技)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "图怪兽 is a real AI design platform; tuguaishou.com is its brand domain."
+    },
+    {
+      "slug": "intercom-fin",
+      "name": "Intercom Fin",
+      "verdict": "REAL",
+      "official_url": "https://www.intercom.com/fin",
+      "url_correct": true,
+      "vendor": "Intercom",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Intercom Fin is a real AI customer support agent; intercom.com/fin is the official page."
+    },
+    {
+      "slug": "openclaw",
+      "name": "OpenClaw",
+      "verdict": "REAL",
+      "official_url": "https://openclaw.ai",
+      "url_correct": false,
+      "vendor": "Peter Steinberger (openclaw.ai)",
+      "desc_issue": "Misdescribed as a 'web scraping / data collection tool'. OpenClaw is actually a personal AI agent / assistant platform, not a web scraper.",
+      "confidence": "high",
+      "evidence": "OpenClaw confirmed real; it is an AI agent platform, official site is openclaw.ai (github.com/openclaw is only the org page)."
+    },
+    {
+      "slug": "coda-ai",
+      "name": "Coda AI",
+      "verdict": "REAL",
+      "official_url": "https://coda.io",
+      "url_correct": true,
+      "vendor": "Coda (now Superhuman Docs)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Coda is a real doc/workspace platform with AI features; coda.io is the official site."
+    },
+    {
+      "slug": "cartesia",
+      "name": "Cartesia",
+      "verdict": "REAL",
+      "official_url": "https://cartesia.ai",
+      "url_correct": true,
+      "vendor": "Cartesia",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Cartesia is a real real-time voice AI platform; cartesia.ai is the official site."
+    },
+    {
+      "slug": "postiz",
+      "name": "Postiz",
+      "verdict": "REAL",
+      "official_url": "https://postiz.com",
+      "url_correct": true,
+      "vendor": "Postiz (open-source)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Postiz is a real AI social media scheduling tool; postiz.com is the official site."
+    },
+    {
+      "slug": "longcat20",
+      "name": "LongCat-2.0",
+      "verdict": "REAL",
+      "official_url": "https://longcat.ai",
+      "url_correct": true,
+      "vendor": "美团 (Meituan)",
+      "desc_issue": null,
+      "confidence": "medium",
+      "evidence": "LongCat-2.0 confirmed as a real Meituan multimodal model/agent platform (longcat.ai); product exists though positioned as a general AI platform rather than purely a long-text writing tool."
+    },
+    {
+      "slug": "zhu-zhan-ai",
+      "name": "触站AI",
+      "verdict": "REAL",
+      "official_url": "https://www.czhanai.com",
+      "url_correct": true,
+      "vendor": "触站AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "触站AI is a real domestic AI art platform; czhanai.com is the official site."
+    },
+    {
+      "slug": "sembly",
+      "name": "Sembly",
+      "verdict": "REAL",
+      "official_url": "https://sembly.ai",
+      "url_correct": true,
+      "vendor": "Sembly",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Sembly is a real AI meeting assistant; sembly.ai is the official site."
+    },
+    {
+      "slug": "midjourney",
+      "name": "Midjourney",
+      "verdict": "REAL",
+      "official_url": "https://www.midjourney.com",
+      "url_correct": true,
+      "vendor": "Midjourney",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Midjourney is a real top-tier AI art tool; midjourney.com is the official site (V8.1 era; description mentions V7, minor staleness)."
+    },
+    {
+      "slug": "graphify",
+      "name": "Graphify",
+      "verdict": "REAL",
+      "official_url": "https://graphify.ai",
+      "url_correct": true,
+      "vendor": "Graphify",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Graphify is a real AI data visualization tool; graphify.ai is the official site."
+    },
+    {
+      "slug": "tabbit",
+      "name": "Tabbit",
+      "verdict": "REAL",
+      "official_url": "https://tabbit.ai",
+      "url_correct": true,
+      "vendor": "Tabbit (北京酷讯互动科技有限公司)",
+      "desc_issue": "Misdescribed as a '智能标签管理工具' (tab manager). Tabbit is actually an AI-native browser (Tabbit AI Browser), not just a tab/bookmark manager.",
+      "confidence": "medium",
+      "evidence": "Tabbit confirmed real; it is an AI browser, not merely a bookmark/tab manager."
+    },
+    {
+      "slug": "gpt-5-6-sol",
+      "name": "GPT-5.6 Sol",
+      "verdict": "REAL",
+      "official_url": "https://openai.com",
+      "url_correct": false,
+      "vendor": "OpenAI",
+      "desc_issue": "Recorded URL sol.openai.com is NOT a real OpenAI-owned domain; the GPT-5.6 Sol model itself is real (on openai.com).",
+      "confidence": "high",
+      "evidence": "GPT-5.6 Sol confirmed as a real OpenAI model; sol.openai.com is not an official OpenAI subdomain."
+    },
+    {
+      "slug": "figma-for-agents",
+      "name": "Figma for Agents",
+      "verdict": "REAL",
+      "official_url": "https://www.figma.com/agents",
+      "url_correct": true,
+      "vendor": "Figma",
+      "desc_issue": null,
+      "confidence": "medium",
+      "evidence": "Figma is a real design platform; figma.com is the official domain. The /agents path was not independently confirmed via search but is a plausible Figma AI feature."
+    },
+    {
+      "slug": "recall-ai",
+      "name": "Recall",
+      "verdict": "REAL",
+      "official_url": "https://www.getrecall.ai",
+      "url_correct": true,
+      "vendor": "Recall",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 getrecall.ai 为真实存在的 AI 第二大脑/知识管理工具官网"
+    },
+    {
+      "slug": "murf-ai",
+      "name": "Murf AI",
+      "verdict": "REAL",
+      "official_url": "https://murf.ai",
+      "url_correct": true,
+      "vendor": "Murf AI Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 murf.ai 为真实 AI 语音生成平台官网"
+    },
+    {
+      "slug": "nano-ai-search",
+      "name": "纳米AI搜索",
+      "verdict": "REAL",
+      "official_url": "https://www.n.cn",
+      "url_correct": true,
+      "vendor": "三六零（360集团）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 n.cn 为 360 推出的纳米 AI 搜索官网"
+    },
+    {
+      "slug": "gemini",
+      "name": "Gemini",
+      "verdict": "REAL",
+      "official_url": "https://gemini.google.com",
+      "url_correct": true,
+      "vendor": "Google",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 gemini.google.com 为 Google Gemini 官方站点"
+    },
+    {
+      "slug": "make",
+      "name": "Make",
+      "verdict": "REAL",
+      "official_url": "https://www.make.com",
+      "url_correct": true,
+      "vendor": "Make（前身为 Integromat，现属 Celonis）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 make.com 为真实可视化自动化工作流平台官网"
+    },
+    {
+      "slug": "wenxin-yiyan",
+      "name": "文心一言",
+      "verdict": "REAL",
+      "official_url": "https://yiyan.baidu.com",
+      "url_correct": true,
+      "vendor": "百度（Baidu）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 yiyan.baidu.com 为百度文心一言官方站点"
+    },
+    {
+      "slug": "glitter-ai",
+      "name": "Glitter AI",
+      "verdict": "REAL",
+      "official_url": "https://www.glitter.ai",
+      "url_correct": true,
+      "vendor": "Glitter AI（创始人 Yuval Karmi）",
+      "desc_issue": "描述错误：实际产品是「屏幕录制+语音→自动生成分步指南/SOP」的文档生成工具，并非通用 AI 对话助手",
+      "confidence": "medium",
+      "evidence": "glitter.ai 为真实站点，但其功能为步骤指南生成器而非 AI 对话助手"
+    },
+    {
+      "slug": "liblibai",
+      "name": "LiblibAI",
+      "verdict": "REAL",
+      "official_url": "https://www.liblib.art",
+      "url_correct": true,
+      "vendor": "北京奇点星宇科技有限公司（LiblibAI）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 liblib.art 为真实 AI 图像/模型创作社区官网"
+    },
+    {
+      "slug": "ag2",
+      "name": "AG2",
+      "verdict": "REAL",
+      "official_url": "https://www.ag2.ai",
+      "url_correct": true,
+      "vendor": "AG2 社区（AutoGen 原班作者主导的开源延续项目）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 ag2.ai 为真实多智能体框架官网"
+    },
+    {
+      "slug": "sora",
+      "name": "Sora",
+      "verdict": "REAL",
+      "official_url": "https://openai.com/sora",
+      "url_correct": true,
+      "vendor": "OpenAI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 openai.com/sora 为 OpenAI 视频生成模型官网"
+    },
+    {
+      "slug": "agibot-zhiyuan",
+      "name": "AGIBOT智元",
+      "verdict": "REAL",
+      "official_url": "https://www.agibot.com",
+      "url_correct": true,
+      "vendor": "智元创新（AGIBOT，稚晖君团队）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 agibot.com 为智元机器人官方站点"
+    },
+    {
+      "slug": "supabase-ai",
+      "name": "Supabase",
+      "verdict": "REAL",
+      "official_url": "https://supabase.com",
+      "url_correct": true,
+      "vendor": "Supabase Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 supabase.com 为真实开源后端/AI 数据库平台官网"
+    },
+    {
+      "slug": "predis-ai",
+      "name": "Predis AI",
+      "verdict": "REAL",
+      "official_url": "https://predis.ai",
+      "url_correct": true,
+      "vendor": "Predis AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 predis.ai 为真实社媒内容/视频生成平台官网"
+    },
+    {
+      "slug": "dexbotic",
+      "name": "Dexbotic",
+      "verdict": "REAL",
+      "official_url": "https://www.dexbotic.com",
+      "url_correct": false,
+      "vendor": "原力灵机（ForceOrigins，CEO 唐文斌）",
+      "desc_issue": "描述完全错误：实际为开源 VLA（视觉-语言-动作）具身智能机器人开发框架，并非 Zapier 式自动化工作流平台；URL 应为 .com 而非 .ai",
+      "confidence": "high",
+      "evidence": "搜索显示官方站点为 dexbotic.com，产品为具身智能机器人框架而非自动化工作流"
+    },
+    {
+      "slug": "6pen-art",
+      "name": "6pen Art",
+      "verdict": "REAL",
+      "official_url": "https://6pen.art",
+      "url_correct": true,
+      "vendor": "北京毛线球科技有限公司（面包多）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 6pen.art 为真实 AI 绘画平台官网"
+    },
+    {
+      "slug": "eqxiu",
+      "name": "易企秀",
+      "verdict": "REAL",
+      "official_url": "https://www.eqixiu.com",
+      "url_correct": true,
+      "vendor": "北京中网易企秀科技有限公司",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 eqixiu.com 为真实 H5/营销内容制作平台官网"
+    },
+    {
+      "slug": "shadow-ai",
+      "name": "Shadow AI",
+      "verdict": "UNCERTAIN",
+      "official_url": null,
+      "url_correct": false,
+      "vendor": "不确定",
+      "desc_issue": "描述为「隐私 AI 助手/影子模式后台助手」存疑：存在多个名为 Shadow AI 的实体（语音笔记、加密 agent、企业 AI 治理、科研实验设计等），均未明确匹配该描述，shadowai.com 是否为该产品的官方站点无法确认",
+      "confidence": "low",
+      "evidence": "搜索发现多个 Shadow AI 实体但均无法明确对应 batch 中描述的「影子模式后台 AI 助手」"
+    },
+    {
+      "slug": "trading-agents",
+      "name": "TradingAgents",
+      "verdict": "REAL",
+      "official_url": "https://www.tradingagents-ai.com",
+      "url_correct": false,
+      "vendor": "Tauric Research",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "真实开源多智能体金融交易框架（Tauric Research），官方站点为 tradingagents-ai.com / tauric.ai，batch 的 .ai 域名非官方"
+    },
+    {
+      "slug": "unstructured",
+      "name": "Unstructured",
+      "verdict": "REAL",
+      "official_url": "https://unstructured.io",
+      "url_correct": true,
+      "vendor": "Unstructured Technologies",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 unstructured.io 为真实非结构化数据预处理平台官网"
+    },
+    {
+      "slug": "vidu-ai",
+      "name": "Vidu AI",
+      "verdict": "REAL",
+      "official_url": "https://www.vidu.cn",
+      "url_correct": true,
+      "vendor": "生数科技（Shengshu Technology）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 vidu.cn 为真实 AI 视频生成平台官网"
+    },
+    {
+      "slug": "agent-browser",
+      "name": "Agent Browser",
+      "verdict": "REAL",
+      "official_url": "https://agentbrowser.ai",
+      "url_correct": true,
+      "vendor": "Agent Browser 开源团队",
+      "desc_issue": null,
+      "confidence": "medium",
+      "evidence": "搜索确认 agentbrowser.ai 为面向 AI Agent 的开源浏览器自动化 CLI 项目"
+    },
+    {
+      "slug": "langchain",
+      "name": "LangChain",
+      "verdict": "REAL",
+      "official_url": "https://www.langchain.com",
+      "url_correct": true,
+      "vendor": "LangChain, Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 langchain.com 为真实大模型应用开发框架官网"
+    },
+    {
+      "slug": "qoder",
+      "name": "Qoder",
+      "verdict": "REAL",
+      "official_url": "https://www.qoder.com",
+      "url_correct": false,
+      "vendor": "阿里云（Alibaba Cloud）",
+      "desc_issue": "厂商描述错误：batch 称厂商为「Sana Labs」，实际为阿里云（原通义灵码 Lingma 升级更名）的 AI 智能体产品系列；官方站点为 qoder.com，batch 的 qoder.ai 非官方",
+      "confidence": "high",
+      "evidence": "搜索确认 qoder.com 及 aliyun.com/product/qodercn 为阿里云 Qoder 官方站点，厂商为阿里云而非 Sana Labs"
+    },
+    {
+      "slug": "beatoven-ai",
+      "name": "Beatoven.ai",
+      "verdict": "REAL",
+      "official_url": "https://beatoven.ai",
+      "url_correct": true,
+      "vendor": "Beatoven",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 beatoven.ai 为真实 AI 背景音乐生成平台官网"
+    },
+    {
+      "slug": "zi-dong-tai-chu",
+      "name": "紫东太初",
+      "verdict": "REAL",
+      "official_url": "https://taichu.ia.ac.cn",
+      "url_correct": true,
+      "vendor": "中科院自动化所（中国科学院自动化研究所）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 taichu.ia.ac.cn 为中科院自动化所紫东太初多模态大模型官网"
+    },
+    {
+      "slug": "augment-code",
+      "name": "Augment Code",
+      "verdict": "REAL",
+      "official_url": "https://www.augmentcode.com",
+      "url_correct": true,
+      "vendor": "Augment Code（The Software Agent Company）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 augmentcode.com 为真实 AI 编程/软件智能体平台官网"
+    },
+    {
+      "slug": "soundraw",
+      "name": "Soundraw",
+      "verdict": "REAL",
+      "official_url": "https://soundraw.io",
+      "url_correct": true,
+      "vendor": "SOUNDRAW Inc.（东京/纽约）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 soundraw.io 为真实 AI 音乐生成平台官网"
+    },
+    {
+      "slug": "spline-ai",
+      "name": "Spline AI",
+      "verdict": "REAL",
+      "official_url": "https://spline.design/ai",
+      "url_correct": true,
+      "vendor": "Spline",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 spline.design/ai 为真实 AI 3D 设计生成工具官网"
+    },
+    {
+      "slug": "phinite",
+      "name": "Phinite",
+      "verdict": "REAL",
+      "official_url": "https://www.phinite.ai",
+      "url_correct": true,
+      "vendor": "Phinite",
+      "desc_issue": "描述错误：实际产品是「多智能体 AI 编排操作系统（Multi-Agentic AI 平台）」，并非 AI 语音合成/音频修复工具",
+      "confidence": "high",
+      "evidence": "搜索确认 phinite.ai 为真实多智能体 AI 编排平台，定位是 Agentic OS 而非语音合成工具"
+    },
+    {
+      "slug": "surfer-seo",
+      "name": "Surfer SEO",
+      "verdict": "REAL",
+      "official_url": "https://surferseo.com",
+      "url_correct": true,
+      "vendor": "Surfer（Surfer Sp. z o.o.，波兰）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 surferseo.com 为真实 SEO 内容优化平台官网"
+    },
+    {
+      "slug": "semrush-ai",
+      "name": "Semrush AI",
+      "verdict": "REAL",
+      "official_url": "https://www.semrush.com",
+      "url_correct": true,
+      "vendor": "Semrush",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 semrush.com 为真实 SEO/内容营销平台官网"
+    },
+    {
+      "slug": "designs-ai",
+      "name": "Designs.ai",
+      "verdict": "REAL",
+      "official_url": "https://designs.ai",
+      "url_correct": true,
+      "vendor": "Designs.ai（Inmagine Group，马来西亚）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 designs.ai 为真实一站式 AI 设计平台官网"
+    },
+    {
+      "slug": "mistral-ai",
+      "name": "Mistral AI",
+      "verdict": "REAL",
+      "official_url": "https://mistral.ai",
+      "url_correct": true,
+      "vendor": "Mistral AI（法国）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "搜索确认 mistral.ai 为真实法国大模型公司官网"
+    },
+    {
+      "slug": "respeecher",
+      "name": "Respeecher",
+      "verdict": "REAL",
+      "official_url": "https://www.respeecher.com",
+      "url_correct": true,
+      "vendor": "Respeecher",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Well-known AI voice cloning/dubbing platform; respeecher.com is the official site (used by Hollywood/studios)."
+    },
+    {
+      "slug": "dall-e-3",
+      "name": "DALL-E 3",
+      "verdict": "REAL",
+      "official_url": "https://openai.com/dall-e-3",
+      "url_correct": true,
+      "vendor": "OpenAI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "OpenAI's image generation model; official page openai.com/dall-e-3."
+    },
+    {
+      "slug": "qwen-chat",
+      "name": "千问",
+      "verdict": "REAL",
+      "official_url": "https://tongyi.aliyun.com/qianwen",
+      "url_correct": true,
+      "vendor": "阿里巴巴/阿里云 (Alibaba Cloud)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Alibaba's Tongyi Qianwen assistant; official site tongyi.aliyun.com/qianwen."
+    },
+    {
+      "slug": "napkin-ai",
+      "name": "Napkin AI",
+      "verdict": "REAL",
+      "official_url": "https://www.napkin.ai",
+      "url_correct": true,
+      "vendor": "Napkin AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI diagram/visual generator; napkin.ai is the official site."
+    },
+    {
+      "slug": "fathom",
+      "name": "Fathom",
+      "verdict": "REAL",
+      "official_url": "https://fathom.video",
+      "url_correct": true,
+      "vendor": "Fathom",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI meeting notetaker for Zoom/Meet; fathom.video official."
+    },
+    {
+      "slug": "zhipu-chatglm",
+      "name": "智谱清言",
+      "verdict": "REAL",
+      "official_url": "https://chatglm.cn",
+      "url_correct": true,
+      "vendor": "智谱AI (Zhipu AI)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Zhipu AI's ChatGLM assistant; chatglm.cn is the official site."
+    },
+    {
+      "slug": "vidu-2-0",
+      "name": "Vidu 2.0",
+      "verdict": "REAL",
+      "official_url": "https://www.vidu.studio",
+      "url_correct": true,
+      "vendor": "生数科技 (Shengshu Technology) + 清华大学",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Shengshu/Tsinghua AI video model; vidu.studio confirmed official (also vidu.com)."
+    },
+    {
+      "slug": "tensor.art",
+      "name": "Tensor.Art",
+      "verdict": "REAL",
+      "official_url": "https://tensor.art",
+      "url_correct": true,
+      "vendor": "Tensor.Art",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Cloud Stable Diffusion platform; tensor.art official."
+    },
+    {
+      "slug": "tongyi-lingma",
+      "name": "通义灵码",
+      "verdict": "REAL",
+      "official_url": "https://tongyi.aliyun.com/lingma",
+      "url_correct": true,
+      "vendor": "阿里巴巴/阿里云 (Alibaba Cloud)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Alibaba's AI coding assistant; tongyi.aliyun.com/lingma official."
+    },
+    {
+      "slug": "descript",
+      "name": "Descript",
+      "verdict": "REAL",
+      "official_url": "https://www.descript.com",
+      "url_correct": true,
+      "vendor": "Descript",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI audio/video editor (edit by text); descript.com official."
+    },
+    {
+      "slug": "opus-clip",
+      "name": "Opus Clip",
+      "verdict": "REAL",
+      "official_url": "https://www.opus.pro",
+      "url_correct": true,
+      "vendor": "Opus Clip",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI short-video clipping tool; opus.pro official."
+    },
+    {
+      "slug": "flux",
+      "name": "Flux",
+      "verdict": "REAL",
+      "official_url": "https://blackforestlabs.ai",
+      "url_correct": true,
+      "vendor": "Black Forest Labs",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Open-source image model by Black Forest Labs; blackforestlabs.ai official."
+    },
+    {
+      "slug": "lingban-ai",
+      "name": "灵办AI",
+      "verdict": "REAL",
+      "official_url": "https://ilingban.com",
+      "url_correct": true,
+      "vendor": "灵伴科技 (Lingban Tech)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Confirmed via multiple listings; ilingban.com is the official site (AI office/study assistant)."
+    },
+    {
+      "slug": "wonder-ai",
+      "name": "Wonder AI",
+      "verdict": "REAL",
+      "official_url": "https://wonderai.app",
+      "url_correct": false,
+      "vendor": "Codeway",
+      "desc_issue": "Description mischaracterizes Wonder AI as a general creative-content tool (copywriting, image ideas, video scripts); it is actually an AI art/image generator (text-to-image) by Codeway. Recorded URL wonderai.com is not the confirmed official site (official is wonderai.app).",
+      "confidence": "medium",
+      "evidence": "Wonder AI by Codeway is an AI art generator; official site wonderai.app (per toolify/Codeway product page)."
+    },
+    {
+      "slug": "groq",
+      "name": "Groq",
+      "verdict": "REAL",
+      "official_url": "https://groq.com",
+      "url_correct": true,
+      "vendor": "Groq",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI inference acceleration (LPU) company; groq.com official."
+    },
+    {
+      "slug": "bloop",
+      "name": "Bloop",
+      "verdict": "REAL",
+      "official_url": "https://bloop.ai",
+      "url_correct": true,
+      "vendor": "Bloop (acquired by Sourcegraph)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI code search tool; bloop.ai official; acquired by Sourcegraph (2024)."
+    },
+    {
+      "slug": "browser-use",
+      "name": "Browser Use",
+      "verdict": "REAL",
+      "official_url": "https://browser-use.com",
+      "url_correct": true,
+      "vendor": "Browser Use",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Open-source browser automation framework for AI agents; browser-use.com official."
+    },
+    {
+      "slug": "tencent-docs-ai",
+      "name": "腾讯文档AI",
+      "verdict": "REAL",
+      "official_url": "https://docs.qq.com",
+      "url_correct": true,
+      "vendor": "腾讯 (Tencent)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Tencent Docs AI assistant (Hunyuan-based); docs.qq.com official."
+    },
+    {
+      "slug": "hunyuan-image",
+      "name": "混元图像",
+      "verdict": "REAL",
+      "official_url": "https://hunyuan.tencent.com",
+      "url_correct": true,
+      "vendor": "腾讯混元 (Tencent Hunyuan)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Tencent Hunyuan image generation/editing tool; hunyuan.tencent.com official."
+    },
+    {
+      "slug": "langgraph",
+      "name": "LangGraph",
+      "verdict": "REAL",
+      "official_url": "https://langchain-ai.github.io/langgraph",
+      "url_correct": true,
+      "vendor": "LangChain (LangChain AI)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Open-source framework for stateful multi-agent apps by LangChain; langchain-ai.github.io/langgraph official docs."
+    },
+    {
+      "slug": "hirevue-ai",
+      "name": "HireVue AI",
+      "verdict": "REAL",
+      "official_url": "https://www.hirevue.com",
+      "url_correct": true,
+      "vendor": "HireVue",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI video interview/platform; hirevue.com official."
+    },
+    {
+      "slug": "modelbest",
+      "name": "面壁智能",
+      "verdict": "REAL",
+      "official_url": "https://modelbest.cn",
+      "url_correct": true,
+      "vendor": "面壁智能 (ModelBest)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Chinese LLM startup (MiniCPM series); modelbest.cn official."
+    },
+    {
+      "slug": "chroma",
+      "name": "Chroma",
+      "verdict": "REAL",
+      "official_url": "https://www.trychroma.com",
+      "url_correct": true,
+      "vendor": "Chroma",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Open-source vector database for AI apps; trychroma.com official."
+    },
+    {
+      "slug": "cosy-voice",
+      "name": "CosyVoice",
+      "verdict": "REAL",
+      "official_url": "https://github.com/FunAudioLLM/CosyVoice",
+      "url_correct": false,
+      "vendor": "阿里巴巴达摩院/通义实验室 (Alibaba Tongyi / FunAudioLLM)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "CosyVoice is a real Alibaba FunAudioLLM TTS model; official GitHub is FunAudioLLM/CosyVoice (demo cosyvoice.org). Recorded cosyvoice.com is NOT the official site."
+    },
+    {
+      "slug": "activepieces",
+      "name": "Activepieces",
+      "verdict": "REAL",
+      "official_url": "https://www.activepieces.com",
+      "url_correct": true,
+      "vendor": "Activepieces",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Open-source automation/workflow platform; activepieces.com official."
+    },
+    {
+      "slug": "haystack",
+      "name": "Haystack",
+      "verdict": "REAL",
+      "official_url": "https://haystack.deepset.ai",
+      "url_correct": true,
+      "vendor": "deepset",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Open-source NLP/RAG framework by deepset; haystack.deepset.ai official."
+    },
+    {
+      "slug": "minicpm-o",
+      "name": "MiniCPM-o",
+      "verdict": "REAL",
+      "official_url": "https://huggingface.co/openbmb/MiniCPM-o",
+      "url_correct": false,
+      "vendor": "面壁智能 (ModelBest) / OpenBMB",
+      "desc_issue": "Description wrongly attributes MiniCPM-o to 'MiniMax公司'; it is actually developed by ModelBest (面壁智能) / OpenBMB, NOT MiniMax. Recorded URL huggingface.co/MiniMaxAI/MiniCPM-o points to the wrong org (should be OpenBMB).",
+      "confidence": "high",
+      "evidence": "MiniCPM-o is by ModelBest/OpenBMB (huggingface.co/openbmb); confirmed by modelbest.cn and multiple tech writeups. Not MiniMax."
+    },
+    {
+      "slug": "play-ht",
+      "name": "Play.ht",
+      "verdict": "REAL",
+      "official_url": "https://play.ht",
+      "url_correct": true,
+      "vendor": "Play.ht",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI text-to-speech platform; play.ht official."
+    },
+    {
+      "slug": "wondercraft-ai",
+      "name": "Wondercraft AI",
+      "verdict": "REAL",
+      "official_url": "https://wondercraft.ai",
+      "url_correct": true,
+      "vendor": "Wondercraft",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI podcast/audio creation tool; wondercraft.ai official."
+    },
+    {
+      "slug": "elicit",
+      "name": "Elicit",
+      "verdict": "REAL",
+      "official_url": "https://elicit.org",
+      "url_correct": true,
+      "vendor": "Ought",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI research assistant for papers; elicit.org official (by Ought)."
+    },
+    {
+      "slug": "pinecone",
+      "name": "Pinecone",
+      "verdict": "REAL",
+      "official_url": "https://www.pinecone.io",
+      "url_correct": true,
+      "vendor": "Pinecone",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Managed vector database; pinecone.io official."
+    },
+    {
+      "slug": "cube-sandbox",
+      "name": "CubeSandbox",
+      "verdict": "REAL",
+      "official_url": "https://cubesandbox.ai",
+      "url_correct": true,
+      "vendor": "tektite-io (CubeSandbox)",
+      "desc_issue": "Description misrepresents CubeSandbox as a no-code visual AI prototyping/workflow tool with '20+ models' and '10万开发者'; it is actually a secure MicroVM sandbox service for AI agents (E2B-compatible code/browser execution), not a drag-and-drop builder.",
+      "confidence": "medium",
+      "evidence": "tektite-io/CubeSandbox is open-source secure sandbox for AI agents (docs.cubesandbox.ai); not a no-code prototyping tool."
+    },
+    {
+      "slug": "swytchcode",
+      "name": "Swytchcode",
+      "verdict": "REAL",
+      "official_url": "https://swytchcode.com",
+      "url_correct": true,
+      "vendor": "Swytchcode",
+      "desc_issue": "Description mischaracterizes Swytchcode as a 50+ language code-conversion/refactoring tool ('Python转JS'); it is actually an API/SDK integration automation tool for publishers (generates API integration code, CLI/MCP server, 15+ languages).",
+      "confidence": "medium",
+      "evidence": "swytchcode.com is an 'AI solutions engineer for API & SDK publishers'; not a code-translator."
+    },
+    {
+      "slug": "coderabbit",
+      "name": "CodeRabbit",
+      "verdict": "REAL",
+      "official_url": "https://www.coderabbit.ai",
+      "url_correct": true,
+      "vendor": "CodeRabbit",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official site coderabbit.ai; AI code-review bot for GitHub/GitLab PRs, widely referenced."
+    },
+    {
+      "slug": "kling-ai",
+      "name": "可灵AI",
+      "verdict": "REAL",
+      "official_url": "https://klingai.kuaishou.com",
+      "url_correct": true,
+      "vendor": "快手 (Kuaishou)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Kuaishou official Kling AI site; AI video/image-to-video generation, domestic benchmark."
+    },
+    {
+      "slug": "tome",
+      "name": "Tome",
+      "verdict": "REAL",
+      "official_url": "https://tomeapp.ai/",
+      "url_correct": true,
+      "vendor": "Tome",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official tomeapp.ai; AI presentation & narrative storytelling tool."
+    },
+    {
+      "slug": "speechify",
+      "name": "Speechify",
+      "verdict": "REAL",
+      "official_url": "https://speechify.com",
+      "url_correct": true,
+      "vendor": "Speechify Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official speechify.com; TTS with 100+ languages and celebrity voices."
+    },
+    {
+      "slug": "jasper",
+      "name": "Jasper",
+      "verdict": "REAL",
+      "official_url": "https://www.jasper.ai",
+      "url_correct": true,
+      "vendor": "Jasper AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official jasper.ai; enterprise marketing copy generator with 50+ templates."
+    },
+    {
+      "slug": "recraft",
+      "name": "Recraft",
+      "verdict": "REAL",
+      "official_url": "https://www.recraft.ai",
+      "url_correct": true,
+      "vendor": "Recraft",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official recraft.ai; AI vector/illustration/SVG generator for designers."
+    },
+    {
+      "slug": "suno",
+      "name": "Suno",
+      "verdict": "REAL",
+      "official_url": "https://suno.com",
+      "url_correct": true,
+      "vendor": "Suno",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official suno.com; AI music/song generation from text prompts."
+    },
+    {
+      "slug": "brave-search-ai",
+      "name": "Brave Search AI",
+      "verdict": "REAL",
+      "official_url": "https://search.brave.com",
+      "url_correct": true,
+      "vendor": "Brave Software",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official Brave Search with AI answer summaries; privacy-first, ad-free."
+    },
+    {
+      "slug": "opencode",
+      "name": "OpenCode",
+      "verdict": "REAL",
+      "official_url": "https://opencode.ai",
+      "url_correct": true,
+      "vendor": "SST / Anomaly (OpenCode)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official opencode.ai; open-source terminal-based AI coding agent."
+    },
+    {
+      "slug": "zapier-ai",
+      "name": "Zapier AI",
+      "verdict": "REAL",
+      "official_url": "https://zapier.com",
+      "url_correct": true,
+      "vendor": "Zapier",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official zapier.com; automation platform with 6000+ app integrations and AI features."
+    },
+    {
+      "slug": "ideogram",
+      "name": "Ideogram",
+      "verdict": "REAL",
+      "official_url": "https://ideogram.ai",
+      "url_correct": true,
+      "vendor": "Ideogram",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official ideogram.ai; AI image generator known for in-image text rendering."
+    },
+    {
+      "slug": "coze",
+      "name": "Coze",
+      "verdict": "REAL",
+      "official_url": "https://www.coze.com",
+      "url_correct": true,
+      "vendor": "字节跳动 (ByteDance)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official coze.com; ByteDance no-code AI bot/agent builder."
+    },
+    {
+      "slug": "octarine",
+      "name": "Octarine",
+      "verdict": "REAL",
+      "official_url": "https://octarine.ai",
+      "url_correct": true,
+      "vendor": "Octarine (open-source, local-first notes)",
+      "desc_issue": "Description wrong: real Octarine is a local-first Markdown/PKM note-taking app, NOT a marketing/social-media content generation platform.",
+      "confidence": "medium",
+      "evidence": "octarine.ai is a local-first Markdown notes/PKM app; does not match the marketing-content description."
+    },
+    {
+      "slug": "langflow",
+      "name": "Langflow",
+      "verdict": "REAL",
+      "official_url": "https://langflow.org",
+      "url_correct": true,
+      "vendor": "Langflow",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official langflow.org; open-source visual LangChain workflow builder."
+    },
+    {
+      "slug": "jamie-ai",
+      "name": "Jamie AI",
+      "verdict": "REAL",
+      "official_url": "https://meetjamie.ai",
+      "url_correct": false,
+      "vendor": "Jamie (German company)",
+      "desc_issue": "Batch URL jamieai.com is wrong (real site meetjamie.ai). Description also overstates it as a general AI assistant; actual product is a privacy-first AI meeting note taker (German, GDPR-compliant, 100+ languages).",
+      "confidence": "high",
+      "evidence": "Official meetjamie.ai confirmed; privacy-first AI meeting notes, audio deleted after transcription."
+    },
+    {
+      "slug": "glass-health",
+      "name": "Glass Health",
+      "verdict": "REAL",
+      "official_url": "https://glass.health",
+      "url_correct": false,
+      "vendor": "Glass Health Inc (San Francisco)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official glass.health confirmed; clinical AI (differential diagnosis, scribing) by Dereck Paul, 120k+ clinicians."
+    },
+    {
+      "slug": "video-os",
+      "name": "VideoOS",
+      "verdict": "REAL",
+      "official_url": "https://jupitrr.com",
+      "url_correct": false,
+      "vendor": "Jupitrr AI",
+      "desc_issue": "URL videoos.net does not belong to the product; real 'VideoOS' is Jupitrr AI's all-in-one video workflow at jupitrr.com. Description (video planning/editing/publishing) roughly matches Jupitrr's VideoOS.",
+      "confidence": "medium",
+      "evidence": "Jupitrr's VideoOS at jupitrr.com; videoos.net is an unrelated framework, not the product site."
+    },
+    {
+      "slug": "moyin-gongfang",
+      "name": "魔音工坊",
+      "verdict": "REAL",
+      "official_url": "https://www.moyin.com/",
+      "url_correct": true,
+      "vendor": "魔音工坊 (喜马拉雅/Ximalaya 旗下)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official moyin.com; Chinese AI text-to-speech tool with emotional/real-time dubbing."
+    },
+    {
+      "slug": "cocounsel",
+      "name": "CoCounsel",
+      "verdict": "REAL",
+      "official_url": "https://cocounsel.com",
+      "url_correct": false,
+      "vendor": "Thomson Reuters (NOT Clio)",
+      "desc_issue": "Vendor/attribution wrong: batch says 'by Clio', but CoCounsel is Thomson Reuters' AI legal assistant (built on Westlaw). URL cocounsel.clio.com is misleading — Clio is a separate law-practice software company.",
+      "confidence": "high",
+      "evidence": "CoCounsel is Thomson Reuters product (cocounsel.com); Clio is an unrelated legal-practice-management vendor."
+    },
+    {
+      "slug": "deepsec",
+      "name": "DeepSec",
+      "verdict": "UNCERTAIN",
+      "official_url": null,
+      "url_correct": false,
+      "vendor": "Unknown / unverified",
+      "desc_issue": "No commercial 'DeepSec' AI security platform found at deepsec.io. Real 'DeepSec' references: the DeepSec security conference (deepsec.net), Trend Micro Deep Security, and an academic DEEPSEC adversarial-ML project. The described commercial AI pentest platform (with $49/mo pricing) is unverifiable.",
+      "confidence": "low",
+      "evidence": "No verified product at deepsec.io; 'DeepSec' matches a conference / Trend Micro / academic project, not a commercial AI security platform."
+    },
+    {
+      "slug": "taskade",
+      "name": "Taskade",
+      "verdict": "REAL",
+      "official_url": "https://taskade.com",
+      "url_correct": true,
+      "vendor": "Taskade",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official taskade.com; AI team collaboration, tasks, notes, mind-maps, agents."
+    },
+    {
+      "slug": "adcreative-ai",
+      "name": "AdCreative AI",
+      "verdict": "REAL",
+      "official_url": "https://www.adcreative.ai",
+      "url_correct": true,
+      "vendor": "AdCreative.ai",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official adcreative.ai; AI ad-creative generation for high-conversion marketing."
+    },
+    {
+      "slug": "unitree-gd01",
+      "name": "Unitree GD01",
+      "verdict": "REAL",
+      "official_url": "https://www.unitree.com",
+      "url_correct": true,
+      "vendor": "宇树科技 (Unitree Robotics)",
+      "desc_issue": "Description wrong: GD01 is a manned transformable mecha/robot (载人变形机甲, ~$650K), NOT a quadruped education robot.",
+      "confidence": "medium",
+      "evidence": "Unitree GD01 is a human-rideable transformable mecha unveiled in 2025; not a quadruped education platform."
+    },
+    {
+      "slug": "zety-ai",
+      "name": "Zety AI",
+      "verdict": "REAL",
+      "official_url": "https://zety.com",
+      "url_correct": true,
+      "vendor": "Zety",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official zety.com; resume builder with AI writing/optimization features."
+    },
+    {
+      "slug": "kanwas",
+      "name": "Kanwas",
+      "verdict": "REAL",
+      "official_url": "https://kanwas.ai",
+      "url_correct": true,
+      "vendor": "Kanwas",
+      "desc_issue": null,
+      "confidence": "medium",
+      "evidence": "Official kanwas.ai; AI team-context workspace / workflow automation."
+    },
+    {
+      "slug": "cluely",
+      "name": "Cluely",
+      "verdict": "REAL",
+      "official_url": "https://cluely.com",
+      "url_correct": true,
+      "vendor": "Cluely",
+      "desc_issue": null,
+      "confidence": "medium",
+      "evidence": "Official cluely.com; AI assistant (notably for live meetings/interviews)."
+    },
+    {
+      "slug": "pmb",
+      "name": "PMB",
+      "verdict": "REAL",
+      "official_url": "https://pmbai.dev",
+      "url_correct": false,
+      "vendor": "gunbark.dev / open-source (oleksiijko)",
+      "desc_issue": "Description wrong: PMB is a local-first memory tool for AI coding agents (MCP, works with Claude Code/Cursor/Codex) — NOT a project management assistant.",
+      "confidence": "high",
+      "evidence": "Official pmbai.dev confirmed; SQLite+LanceDB local memory, 29 MCP tools, no cloud/API key."
+    },
+    {
+      "slug": "slidesai",
+      "name": "SlidesAI",
+      "verdict": "REAL",
+      "official_url": "https://slidesai.io",
+      "url_correct": true,
+      "vendor": "SlidesAI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official slidesai.io; AI slide generator as Google Slides / PowerPoint plugin."
+    },
+    {
+      "slug": "humata-ai",
+      "name": "Humata AI",
+      "verdict": "REAL",
+      "official_url": "https://humata.ai",
+      "url_correct": true,
+      "vendor": "Humata",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official humata.ai; AI PDF/document analysis and Q&A."
+    },
+    {
+      "slug": "blop",
+      "name": "Blop",
+      "verdict": "REAL",
+      "official_url": "https://blopai.com",
+      "url_correct": false,
+      "vendor": "Blop (blopai.com, founder Alejandro Laurlund)",
+      "desc_issue": "Description wrong: Blop is a UX/UI optimization & QA testing agent (turns design feedback into code / Playwright browser tests in CI) — NOT a social-media design/poster assistant.",
+      "confidence": "high",
+      "evidence": "Official blopai.com confirmed; 'Cursor for UX/UI optimization', QA agent for browser tests in GitHub Actions."
+    },
+    {
+      "slug": "kaiber",
+      "name": "Kaiber",
+      "verdict": "REAL",
+      "official_url": "https://kaiber.ai",
+      "url_correct": true,
+      "vendor": "Kaiber",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official kaiber.ai; AI image-to-video / music-video generation tool."
+    },
+    {
+      "slug": "warp-terminal",
+      "name": "Warp Terminal",
+      "verdict": "REAL",
+      "official_url": "https://www.warp.dev",
+      "url_correct": true,
+      "vendor": "Warp",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official warp.dev; Rust-based AI-powered terminal for developers."
+    },
+    {
+      "slug": "wordtune",
+      "name": "Wordtune",
+      "verdict": "REAL",
+      "official_url": "https://www.wordtune.com",
+      "url_correct": true,
+      "vendor": "AI21 Labs",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Official wordtune.com; AI rewriting / tone-adjustment writing assistant by AI21 Labs."
+    },
+    {
+      "slug": "ironclad-ai",
+      "name": "Ironclad AI",
+      "verdict": "REAL",
+      "official_url": "https://www.ironclad.ai",
+      "url_correct": true,
+      "vendor": "Ironclad, Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Ironclad官网ironclad.ai及公开资料确认其为AI合同管理与法律审查平台"
+    },
+    {
+      "slug": "gaoding-ai",
+      "name": "稿定设计AI",
+      "verdict": "REAL",
+      "official_url": "https://www.gaoding.com",
+      "url_correct": true,
+      "vendor": "稿定（厦门稿定股份）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "稿定设计官网gaoding.com，国内知名在线设计平台，AI功能属实"
+    },
+    {
+      "slug": "wps-ai",
+      "name": "WPS AI",
+      "verdict": "REAL",
+      "official_url": "https://ai.wps.cn",
+      "url_correct": true,
+      "vendor": "金山办公（Kingsoft Office）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "WPS官方论坛多处确认ai.wps.cn为WPS AI官网"
+    },
+    {
+      "slug": "otter.ai",
+      "name": "Otter.ai",
+      "verdict": "REAL",
+      "official_url": "https://otter.ai",
+      "url_correct": true,
+      "vendor": "Otter.ai (AISense Inc.)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "知名AI会议转录工具，官网otter.ai，功能与描述一致"
+    },
+    {
+      "slug": "remove.bg",
+      "name": "Remove.bg",
+      "verdict": "REAL",
+      "official_url": "https://www.remove.bg",
+      "url_correct": true,
+      "vendor": "Canva (收购)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "全球知名AI去背景工具，官网remove.bg"
+    },
+    {
+      "slug": "weaviate",
+      "name": "Weaviate",
+      "verdict": "REAL",
+      "official_url": "https://weaviate.io",
+      "url_correct": true,
+      "vendor": "Weaviate (SeMI Technologies)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "开源向量数据库，官网weaviate.io，描述准确"
+    },
+    {
+      "slug": "writesonic",
+      "name": "Writesonic",
+      "verdict": "REAL",
+      "official_url": "https://writesonic.com",
+      "url_correct": true,
+      "vendor": "Writesonic Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI写作/SEO内容平台，官网writesonic.com"
+    },
+    {
+      "slug": "luma-ai",
+      "name": "Luma AI",
+      "verdict": "REAL",
+      "official_url": "https://lumalabs.ai",
+      "url_correct": true,
+      "vendor": "Luma AI (Luma Labs)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Luma AI及Dream Machine视频模型，官网lumalabs.ai"
+    },
+    {
+      "slug": "n8n",
+      "name": "n8n",
+      "verdict": "REAL",
+      "official_url": "https://n8n.io",
+      "url_correct": true,
+      "vendor": "n8n GmbH",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "开源工作流自动化平台，官网n8n.io"
+    },
+    {
+      "slug": "eightfold",
+      "name": "Eightfold",
+      "verdict": "REAL",
+      "official_url": "https://eightfold.ai",
+      "url_correct": true,
+      "vendor": "Eightfold AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "人才智能/招聘平台，官网eightfold.ai"
+    },
+    {
+      "slug": "pixso-ai",
+      "name": "Pixso AI",
+      "verdict": "REAL",
+      "official_url": "https://pixso.cn",
+      "url_correct": true,
+      "vendor": "Pixso（即时设计团队）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "国产UI设计工具Pixso，官网pixso.cn，内置AI功能"
+    },
+    {
+      "slug": "augie-ai",
+      "name": "Augie AI",
+      "verdict": "REAL",
+      "official_url": "https://augie.ai",
+      "url_correct": true,
+      "vendor": "Storyblocks (Augie)",
+      "desc_issue": "实为AI视频生成/剪辑工具（Augie by Storyblocks），目录描述为通用'创意助手'略有偏差；且存在多个同名Augie产品（如销售助手myaugieai.com）易混淆",
+      "confidence": "medium",
+      "evidence": "augie.ai对应Augie（Storyblocks旗下AI视频工具），同名产品较多致歧义"
+    },
+    {
+      "slug": "lumen5",
+      "name": "Lumen5",
+      "verdict": "REAL",
+      "official_url": "https://lumen5.com",
+      "url_correct": true,
+      "vendor": "Lumen5",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI文本转视频平台，官网lumen5.com"
+    },
+    {
+      "slug": "wujie-ai",
+      "name": "无界AI",
+      "verdict": "REAL",
+      "official_url": "https://www.wujieai.com",
+      "url_correct": true,
+      "vendor": "无界AI团队（超次元）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "国产AI绘画平台，官网wujieai.com"
+    },
+    {
+      "slug": "tencent-hunyuan",
+      "name": "腾讯混元",
+      "verdict": "REAL",
+      "official_url": "https://hunyuan.tencent.com",
+      "url_correct": true,
+      "vendor": "腾讯",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "腾讯混元大模型，官网hunyuan.tencent.com"
+    },
+    {
+      "slug": "verba",
+      "name": "Verba",
+      "verdict": "REAL",
+      "official_url": "https://github.com/weaviate/Verba",
+      "url_correct": true,
+      "vendor": "Weaviate",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Weaviate开源RAG应用Verba，GitHub仓库确认"
+    },
+    {
+      "slug": "colossyan",
+      "name": "Colossyan",
+      "verdict": "REAL",
+      "official_url": "https://colossyan.com",
+      "url_correct": true,
+      "vendor": "Colossyan",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI数字人视频平台，官网colossyan.com"
+    },
+    {
+      "slug": "jenni-ai",
+      "name": "Jenni AI",
+      "verdict": "REAL",
+      "official_url": "https://jenni.ai",
+      "url_correct": true,
+      "vendor": "Jenni AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "学术写作AI助手，官网jenni.ai"
+    },
+    {
+      "slug": "decohere",
+      "name": "Decohere",
+      "verdict": "REAL",
+      "official_url": "https://decohere.ai",
+      "url_correct": true,
+      "vendor": "Decohere",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI视频/图像生成工具，官网decohere.ai"
+    },
+    {
+      "slug": "tempus-ai",
+      "name": "Tempus AI",
+      "verdict": "REAL",
+      "official_url": "https://www.gettempus.app",
+      "url_correct": false,
+      "vendor": "Anh Nguyen / Van Anh Chu (Tempus AI Daily Planner)",
+      "desc_issue": "记录URL tempus-ai.com 应为 gettempus.app；实际为AI日程规划/专注App（Tempus AI Daily Planner），功能描述基本准确但定价（$9.99/$29.99）与App Store实际不符",
+      "confidence": "high",
+      "evidence": "App Store及gettempus.app确认Tempus AI为AI时间管理App，无tempus-ai.com"
+    },
+    {
+      "slug": "tongyi-wanxiang",
+      "name": "通义万相",
+      "verdict": "REAL",
+      "official_url": "https://tongyi.aliyun.com/wanxiang",
+      "url_correct": true,
+      "vendor": "阿里巴巴（通义实验室）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "阿里通义万相，官网tongyi.aliyun.com/wanxiang"
+    },
+    {
+      "slug": "webflow-ai",
+      "name": "Webflow AI",
+      "verdict": "REAL",
+      "official_url": "https://webflow.com",
+      "url_correct": true,
+      "vendor": "Webflow, Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Webflow无代码建站平台内置AI，官网webflow.com"
+    },
+    {
+      "slug": "devin-ai",
+      "name": "Devin AI",
+      "verdict": "REAL",
+      "official_url": "https://devin.ai",
+      "url_correct": true,
+      "vendor": "Cognition Labs",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Cognition推出的AI软件工程师Devin，官网devin.ai"
+    },
+    {
+      "slug": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "verdict": "REAL",
+      "official_url": "https://www.anthropic.com",
+      "url_correct": false,
+      "vendor": "Anthropic",
+      "desc_issue": "记录描述为'专注故事创作的AI写作工具(fable.anthropic.com)'与事实不符：Claude Fable 5是Anthropic的旗舰大模型（非写作工具），捏造了'超长叙事引擎/动态角色记忆/10万字故事'等能力；fable.anthropic.com并非Anthropic官方地址",
+      "confidence": "medium",
+      "evidence": "Anthropic透明度中心及多篇报道确认Claude Fable 5为Anthropic模型，无任何来源提及fable.anthropic.com"
+    },
+    {
+      "slug": "invideo-ai",
+      "name": "InVideo AI",
+      "verdict": "REAL",
+      "official_url": "https://invideo.io",
+      "url_correct": true,
+      "vendor": "InVideo",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI文本转视频平台，官网invideo.io"
+    },
+    {
+      "slug": "prowritingaid",
+      "name": "ProWritingAid",
+      "verdict": "REAL",
+      "official_url": "https://prowritingaid.com",
+      "url_correct": true,
+      "vendor": "ProWritingAid (Orpheus Technology)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "英文写作辅助工具，官网prowritingaid.com"
+    },
+    {
+      "slug": "sourcegraph-cody",
+      "name": "Sourcegraph Cody",
+      "verdict": "REAL",
+      "official_url": "https://sourcegraph.com/cody",
+      "url_correct": true,
+      "vendor": "Sourcegraph",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Sourcegraph推出的AI编程助手Cody，官网sourcegraph.com/cody"
+    },
+    {
+      "slug": "githits",
+      "name": "GitHits",
+      "verdict": "REAL",
+      "official_url": "https://githits.com",
+      "url_correct": false,
+      "vendor": "GitHits (Jaakko Timonen 等，芬兰)",
+      "desc_issue": "记录URL githits.ai 应为 githits.com；描述基本准确（AI驱动代码/仓库发现），但其核心定位是面向AI编程代理的开源代码索引/MCP服务，而非'社区热度趋势分析'推荐平台",
+      "confidence": "high",
+      "evidence": "githits.com确认GitHits为AI代理代码索引服务，2026年6月获175万美元种子轮"
+    },
+    {
+      "slug": "lottiefiles-ai",
+      "name": "LottieFiles AI",
+      "verdict": "REAL",
+      "official_url": "https://lottiefiles.com",
+      "url_correct": true,
+      "vendor": "LottieFiles (Nattu Adnan & Shafiu Hussain)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "LottieFiles含AI动画功能(Motion Copilot等)，官网lottiefiles.com"
+    },
+    {
+      "slug": "relume",
+      "name": "Relume",
+      "verdict": "REAL",
+      "official_url": "https://relume.io",
+      "url_correct": true,
+      "vendor": "Relume",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI网站结构/设计系统生成工具，官网relume.io"
+    },
+    {
+      "slug": "relevance-ai",
+      "name": "Relevance AI",
+      "verdict": "REAL",
+      "official_url": "https://relevanceai.com",
+      "url_correct": true,
+      "vendor": "Relevance AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI应用开发/智能体平台，官网relevanceai.com"
+    },
+    {
+      "slug": "alexa-plus",
+      "name": "Alexa Plus",
+      "verdict": "REAL",
+      "official_url": "https://www.amazon.com/alexa-plus",
+      "url_correct": true,
+      "vendor": "Amazon",
+      "desc_issue": "订阅价记录为$5.99/月起，实际标准版为$19.99/月（Prime会员免费）；其余功能描述准确",
+      "confidence": "high",
+      "evidence": "亚马逊Alexa+官方页面确认其为生成式AI语音助手"
+    },
+    {
+      "slug": "d-id",
+      "name": "D-ID",
+      "verdict": "REAL",
+      "official_url": "https://www.d-id.com",
+      "url_correct": true,
+      "vendor": "D-ID",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI数字人/照片说话视频平台，官网d-id.com"
+    },
+    {
+      "slug": "stepfun-step2",
+      "name": "StepFun Step-2",
+      "verdict": "REAL",
+      "official_url": "https://www.stepfun.com",
+      "url_correct": true,
+      "vendor": "阶跃星辰（StepFun）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "stepfun.com 为阶跃星辰官网，Step-2 是多模态大模型，描述准确"
+    },
+    {
+      "slug": "360-zhinain",
+      "name": "360智脑",
+      "verdict": "REAL",
+      "official_url": "https://ai.360.cn",
+      "url_correct": true,
+      "vendor": "三六零（360）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "ai.360.cn 为360智脑官网，基于360大模型，描述准确"
+    },
+    {
+      "slug": "krisp",
+      "name": "Krisp",
+      "verdict": "REAL",
+      "official_url": "https://krisp.ai",
+      "url_correct": true,
+      "vendor": "Krisp.ai, Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "krisp.ai 为官方站点，AI实时降噪工具，描述准确"
+    },
+    {
+      "slug": "phind",
+      "name": "Phind",
+      "verdict": "REAL",
+      "official_url": "https://www.phind.com",
+      "url_correct": false,
+      "vendor": "Phind",
+      "desc_issue": "记录URL为 phindai.org，非官方；官方站点为 phind.com",
+      "confidence": "high",
+      "evidence": "多个来源确认 phind.com 为面向开发者的AI搜索引擎官方地址，phindai.org 为仿冒/第三方域名"
+    },
+    {
+      "slug": "elevenlabs",
+      "name": "ElevenLabs",
+      "verdict": "REAL",
+      "official_url": "https://elevenlabs.io",
+      "url_correct": true,
+      "vendor": "ElevenLabs",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "elevenlabs.io 为官方站点，顶级AI语音合成/声音克隆工具，描述准确"
+    },
+    {
+      "slug": "qingying-ai",
+      "name": "清影AI",
+      "verdict": "REAL",
+      "official_url": "https://chatglm.cn",
+      "url_correct": true,
+      "vendor": "智谱AI（Zhipu AI）",
+      "desc_issue": "描述称『360公司推出』，错误；清影(Ying)实为智谱AI基于CogVideoX开发的AI视频生成工具",
+      "confidence": "high",
+      "evidence": "经济日报/百度百科等确认清影由智谱AI发布，非360；chatglm.cn 为智谱域名"
+    },
+    {
+      "slug": "lightrag",
+      "name": "LightRAG",
+      "verdict": "REAL",
+      "official_url": "https://github.com/HKUDS/LightRAG",
+      "url_correct": true,
+      "vendor": "香港大学（HKU）数据智能实验室 / HKUDS",
+      "desc_issue": "描述称『香港中文大学（深圳）』，错误；实为香港大学（The University of Hong Kong）数据智能实验室开发，论文发表于EMNLP 2025",
+      "confidence": "high",
+      "evidence": "论文与仓库确认 HKUDS=香港大学数据智能实验室，非香港中文大学（深圳）"
+    },
+    {
+      "slug": "kilo-code",
+      "name": "Kilo Code",
+      "verdict": "REAL",
+      "official_url": "https://kilocode.ai",
+      "url_correct": true,
+      "vendor": "Kilo Code Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "kilocode.ai 与 kilo.ai 均为官方站点（开源VS Code编程Agent，Apache-2.0），kilocode.dev 为同产品相关域名"
+    },
+    {
+      "slug": "openai-codex",
+      "name": "OpenAI Codex",
+      "verdict": "REAL",
+      "official_url": "https://openai.com/index/introducing-codex",
+      "url_correct": true,
+      "vendor": "OpenAI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "openai.com Codex 官方介绍页，AI编程模型，描述准确"
+    },
+    {
+      "slug": "notebooklm",
+      "name": "NotebookLM",
+      "verdict": "REAL",
+      "official_url": "https://notebooklm.google.com",
+      "url_correct": true,
+      "vendor": "Google",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "notebooklm.google.com 为官方站点，Google AI学习研究助手，描述准确"
+    },
+    {
+      "slug": "algo",
+      "name": "Algo",
+      "verdict": "UNCERTAIN",
+      "official_url": null,
+      "url_correct": false,
+      "vendor": null,
+      "desc_issue": "未找到 algo.ai 对应明确产品；同名『ALGO AI』多为 algo-tech.ai 推理平台，所描述『专注算法优化的AI编程工具』缺乏可靠来源，疑似泛化/虚构",
+      "confidence": "low",
+      "evidence": "检索仅见学术框架ALGO、algo-tech.ai推理平台、AlgoArena等，无 algo.ai 对应编程工具的确凿证据"
+    },
+    {
+      "slug": "sensenova",
+      "name": "商汤日日新",
+      "verdict": "REAL",
+      "official_url": "https://platform.sensenova.com",
+      "url_correct": true,
+      "vendor": "商汤科技（SenseTime）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "platform.sensenova.com 为商汤日日新大模型平台官网，描述准确"
+    },
+    {
+      "slug": "ada-ai",
+      "name": "Ada AI",
+      "verdict": "REAL",
+      "official_url": "https://www.ada.cx",
+      "url_correct": true,
+      "vendor": "Ada（Ada Support Inc.）",
+      "desc_issue": "描述称是『个人日常对话助手/知识问答』，错误；ada.cx 实为面向企业的AI客服平台（ACX），自动解决客户咨询",
+      "confidence": "high",
+      "evidence": "ada.cx 官网明确为AI客服/客户体验平台，非个人助理"
+    },
+    {
+      "slug": "codesandbox-ai",
+      "name": "CodeSandbox AI",
+      "verdict": "REAL",
+      "official_url": "https://codesandbox.io",
+      "url_correct": true,
+      "vendor": "CodeSandbox（StackBlitz）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "codesandbox.io 为官方站点，云端IDE含AI编程助手，描述准确"
+    },
+    {
+      "slug": "cognition-ai",
+      "name": "Cognition AI",
+      "verdict": "REAL",
+      "official_url": "https://cognition.ai",
+      "url_correct": true,
+      "vendor": "Cognition Labs（Devin）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "cognition.ai 为官方站点，Cognition Labs 出品的AI编程代理（Devin），描述准确"
+    },
+    {
+      "slug": "cline",
+      "name": "Cline",
+      "verdict": "REAL",
+      "official_url": "https://cline.dev",
+      "url_correct": true,
+      "vendor": "Cline（开源社区）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "cline.dev 为官方站点，开源AI编程助手VS Code/JetBrains扩展，描述准确"
+    },
+    {
+      "slug": "huoshan-writing",
+      "name": "火山写作",
+      "verdict": "REAL",
+      "official_url": "https://www.volcengine.com/product/writing",
+      "url_correct": true,
+      "vendor": "字节跳动 / 火山引擎",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "volcengine.com/product/writing 为火山写作官网，基于豆包大模型，描述准确"
+    },
+    {
+      "slug": "ragflow",
+      "name": "RAGFlow",
+      "verdict": "REAL",
+      "official_url": "https://ragflow.io",
+      "url_correct": true,
+      "vendor": "InfiniFlow（无限光年）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "ragflow.io 为官方站点，开源RAG引擎，描述准确"
+    },
+    {
+      "slug": "chuchu-ai",
+      "name": "触手AI",
+      "verdict": "REAL",
+      "official_url": "https://www.chuchuai.com",
+      "url_correct": true,
+      "vendor": "触手AI团队",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "chuchuai.com 为官方站点，国产AI绘画工具，描述准确"
+    },
+    {
+      "slug": "boomy",
+      "name": "Boomy",
+      "verdict": "REAL",
+      "official_url": "https://boomy.com",
+      "url_correct": true,
+      "vendor": "Boomy Corporation",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "boomy.com 为官方站点，AI音乐生成工具，描述准确"
+    },
+    {
+      "slug": "glean",
+      "name": "Glean",
+      "verdict": "REAL",
+      "official_url": "https://www.glean.com",
+      "url_correct": true,
+      "vendor": "Glean Technologies",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "glean.com 为官方站点，企业级AI搜索/知识管理平台，描述准确"
+    },
+    {
+      "slug": "iconscout-ai",
+      "name": "IconScout AI",
+      "verdict": "REAL",
+      "official_url": "https://iconscout.com/ai",
+      "url_correct": true,
+      "vendor": "IconScout",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "iconscout.com/ai 为官方AI生成页面，图标/插画生成，描述准确"
+    },
+    {
+      "slug": "claude-code",
+      "name": "Claude Code",
+      "verdict": "REAL",
+      "official_url": "https://docs.anthropic.com/en/docs/claude-code",
+      "url_correct": true,
+      "vendor": "Anthropic",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Anthropic官方文档页，终端AI编程工具，描述准确"
+    },
+    {
+      "slug": "scalenut",
+      "name": "Scalenut",
+      "verdict": "REAL",
+      "official_url": "https://scalenut.com",
+      "url_correct": true,
+      "vendor": "Scalenut",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "scalenut.com 为官方站点，AI SEO/内容营销平台，描述准确"
+    },
+    {
+      "slug": "amp",
+      "name": "Amp",
+      "verdict": "REAL",
+      "official_url": "https://sourcegraph.com/amp",
+      "url_correct": false,
+      "vendor": "Sourcegraph（Amp Inc.）",
+      "desc_issue": "记录URL为 platform.claude.com（Claude平台），且描述称『Anthropic推出、Claude Code前身』均错误；Amp 实为 Sourcegraph 推出的编程Agent，后与Sourcegraph独立为 Amp Inc.",
+      "confidence": "high",
+      "evidence": "sourcegraph.com/amp 为官方地址，Sourcegraph创始团队出品，非Anthropic产品"
+    },
+    {
+      "slug": "aiva",
+      "name": "AIVA",
+      "verdict": "REAL",
+      "official_url": "https://aiva.ai",
+      "url_correct": true,
+      "vendor": "AIVA（卢森堡）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "aiva.ai 为官方站点，专业级AI音乐创作引擎，描述准确"
+    },
+    {
+      "slug": "deepseek",
+      "name": "DeepSeek",
+      "verdict": "REAL",
+      "official_url": "https://deepseek.com",
+      "url_correct": true,
+      "vendor": "深度求索（DeepSeek）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "deepseek.com 为官方站点，国产AI助手/大模型，描述（含版本号）基本准确"
+    },
+    {
+      "slug": "zoona",
+      "name": "Zoona",
+      "verdict": "REAL",
+      "official_url": "https://zoona.ai",
+      "url_correct": true,
+      "vendor": "Zoona / SparrowDesk",
+      "desc_issue": "描述完全错误：称 Zoona 是『AI视频生成与编辑平台』；实际 zoona.ai 是自主式AI客服代理平台（自动解决客户咨询），与视频生成无关",
+      "confidence": "high",
+      "evidence": "zoona.ai 官网及Product Hunt均显示其为AI客服代理，非视频工具"
+    },
+    {
+      "slug": "flowise",
+      "name": "Flowise",
+      "verdict": "REAL",
+      "official_url": "https://flowiseai.com",
+      "url_correct": true,
+      "vendor": "FlowiseAI Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "flowiseai.com 为官方站点，开源低代码AI工作流平台，描述准确"
+    },
+    {
+      "slug": "huddle01-vms",
+      "name": "Huddle01 VMs",
+      "verdict": "REAL",
+      "official_url": "https://huddle01.com",
+      "url_correct": true,
+      "vendor": "Huddle01",
+      "desc_issue": "『VMs』并非Huddle01标准命名产品，但所描述平台（去中心化视频会议、Web3钱包登录、AI会议摘要）基本准确",
+      "confidence": "medium",
+      "evidence": "huddle01.com 为官方站点，去中心化实时音视频通信（DePIN），功能描述大体属实"
+    },
+    {
+      "slug": "perplexity",
+      "name": "Perplexity",
+      "verdict": "REAL",
+      "official_url": "https://www.perplexity.ai",
+      "url_correct": true,
+      "vendor": "Perplexity AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "perplexity.ai 为官方站点，AI搜索引擎，描述准确"
+    },
+    {
+      "slug": "browser-act",
+      "name": "BrowserAct",
+      "verdict": "REAL",
+      "official_url": "https://browseract.com",
+      "url_correct": true,
+      "vendor": "BrowserAct",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "browseract.com 为官方站点，AI浏览器自动化/网页抓取工具，描述准确"
+    },
+    {
+      "slug": "pitch-ai",
+      "name": "Pitch AI",
+      "verdict": "REAL",
+      "official_url": "https://pitch.com",
+      "url_correct": true,
+      "vendor": "Pitch（Pitch.com Inc.）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "pitch.com 为官方站点，云端演示文稿工具并集成AI功能，描述准确"
+    },
+    {
+      "slug": "jasper-chat",
+      "name": "Jasper Chat",
+      "verdict": "REAL",
+      "official_url": "https://www.jasper.ai/chat",
+      "url_correct": true,
+      "vendor": "Jasper AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Jasper Chat 是 Jasper AI 的对话式写作助手，官网 jasper.ai/chat 正常"
+    },
+    {
+      "slug": "jsdesign-ai",
+      "name": "即时设计AI",
+      "verdict": "REAL",
+      "official_url": "https://js.design",
+      "url_correct": true,
+      "vendor": "即时设计 (js.design)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "国产在线设计工具 js.design，被称为中国版 Figma，官网正常"
+    },
+    {
+      "slug": "udio",
+      "name": "Udio",
+      "verdict": "REAL",
+      "official_url": "https://www.udio.com",
+      "url_correct": true,
+      "vendor": "Udio",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "与 Suno 齐名的 AI 音乐生成工具，官网 udio.com 正常"
+    },
+    {
+      "slug": "beautiful.ai",
+      "name": "Beautiful.ai",
+      "verdict": "REAL",
+      "official_url": "https://www.beautiful.ai",
+      "url_correct": true,
+      "vendor": "Beautiful.ai",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI 演示文稿设计工具，官网 beautiful.ai 正常"
+    },
+    {
+      "slug": "photoroom",
+      "name": "Photoroom",
+      "verdict": "REAL",
+      "official_url": "https://www.photoroom.com",
+      "url_correct": true,
+      "vendor": "PhotoRoom",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI 图片编辑/去背景工具，官网 photoroom.com 正常"
+    },
+    {
+      "slug": "veo",
+      "name": "Veo",
+      "verdict": "REAL",
+      "official_url": "https://deepmind.google/technologies/veo",
+      "url_correct": true,
+      "vendor": "Google DeepMind",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Google DeepMind 的 AI 视频生成模型，官网地址正确"
+    },
+    {
+      "slug": "whee",
+      "name": "WHEE",
+      "verdict": "REAL",
+      "official_url": "https://www.whee.com",
+      "url_correct": true,
+      "vendor": "美图公司 (Meitu)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "美图公司推出的 AI 图片生成/编辑平台，官网 whee.com 正常"
+    },
+    {
+      "slug": "base44",
+      "name": "Base44",
+      "verdict": "REAL",
+      "official_url": "https://base44.com",
+      "url_correct": false,
+      "vendor": "Wix (Base44)",
+      "desc_issue": "记录 URL 为 base44.ai 系错误推测，真实官网为 base44.com（已被 Wix 收购）；描述整体合理，但更准确为无代码应用搭建平台(vibe coding)而非单纯代码生成",
+      "confidence": "high",
+      "evidence": "Base44 官网为 base44.com，服务条款显示由 Wix.com Ltd. 运营；base44.ai 非官方域名"
+    },
+    {
+      "slug": "synthesia",
+      "name": "Synthesia",
+      "verdict": "REAL",
+      "official_url": "https://www.synthesia.io",
+      "url_correct": true,
+      "vendor": "Synthesia",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI 数字人视频平台，官网 synthesia.io 正常"
+    },
+    {
+      "slug": "replit-ai",
+      "name": "Replit AI",
+      "verdict": "REAL",
+      "official_url": "https://replit.com",
+      "url_correct": true,
+      "vendor": "Replit",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "在线编程平台 Replit 的 AI 功能，官网 replit.com 正常"
+    },
+    {
+      "slug": "read-ai",
+      "name": "Read AI",
+      "verdict": "REAL",
+      "official_url": "https://read.ai",
+      "url_correct": true,
+      "vendor": "Read AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI 会议摘要/文档阅读工具，官网 read.ai 正常"
+    },
+    {
+      "slug": "spellbook",
+      "name": "Spellbook",
+      "verdict": "REAL",
+      "official_url": "https://www.spellbook.legal",
+      "url_correct": true,
+      "vendor": "Rally (Spellbook)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "法律 AI 写作助手，官网 spellbook.legal 正常（由 Rally 开发）"
+    },
+    {
+      "slug": "khroma",
+      "name": "Khroma",
+      "verdict": "REAL",
+      "official_url": "https://khroma.co",
+      "url_correct": true,
+      "vendor": "Khroma",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI 配色方案生成工具，官网 khroma.co 正常"
+    },
+    {
+      "slug": "anijam",
+      "name": "Anijam",
+      "verdict": "REAL",
+      "official_url": "https://www.anijam.ai",
+      "url_correct": true,
+      "vendor": "Anijam (anistudio.ai)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI 动画生成平台，官网 anijam.ai 正常，联系邮箱 contact@anijam.ai"
+    },
+    {
+      "slug": "stockimg-ai",
+      "name": "StockImg AI",
+      "verdict": "REAL",
+      "official_url": "https://stockimg.ai",
+      "url_correct": true,
+      "vendor": "StockImg AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI 库存图片生成工具，官网 stockimg.ai 正常"
+    },
+    {
+      "slug": "pixelle-video",
+      "name": "Pixelle-Video",
+      "verdict": "REAL",
+      "official_url": "https://github.com/AIDC-AI/Pixelle-Video",
+      "url_correct": false,
+      "vendor": "AIDC-AI (阿里巴巴智能计算团队)",
+      "desc_issue": "记录 URL pixelle-video.ai 错误（真实为开源项目主页）；且描述称“高级功能付费订阅”不实——Pixelle-Video 是完全免费的开源项目(Apache-2.0)，无付费计划",
+      "confidence": "high",
+      "evidence": "Pixelle-Video 是 AIDC-AI 开源的全自动短视频引擎，官网 aidc-ai.github.io/Pixelle-Video 及 GitHub AIDC-AI/Pixelle-Video；pixelle-video.ai 未作为官方站点出现"
+    },
+    {
+      "slug": "cerebras",
+      "name": "Cerebras",
+      "verdict": "REAL",
+      "official_url": "https://cerebras.ai",
+      "url_correct": true,
+      "vendor": "Cerebras Systems",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI 超级计算/晶圆级芯片厂商，官网 cerebras.ai 正常"
+    },
+    {
+      "slug": "adobe-express-ai",
+      "name": "Adobe Express AI",
+      "verdict": "REAL",
+      "official_url": "https://express.adobe.com",
+      "url_correct": true,
+      "vendor": "Adobe",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Adobe 的在线 AI 设计平台，官网 express.adobe.com 正常"
+    },
+    {
+      "slug": "fireflies.ai",
+      "name": "Fireflies.ai",
+      "verdict": "REAL",
+      "official_url": "https://fireflies.ai",
+      "url_correct": true,
+      "vendor": "Fireflies.ai",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI 会议记录/转录工具，官网 fireflies.ai 正常"
+    },
+    {
+      "slug": "wensi-ai",
+      "name": "文思AI",
+      "verdict": "REAL",
+      "official_url": "https://wensi.sodabot.cn/",
+      "url_correct": true,
+      "vendor": "苏哒智能 (SodaBot)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "苏哒智能推出的国产 AI 写作工作台，官网 wensi.sodabot.cn 正常"
+    },
+    {
+      "slug": "jimeng-ai",
+      "name": "即梦AI",
+      "verdict": "REAL",
+      "official_url": "https://dreamina.jianying.com/",
+      "url_correct": true,
+      "vendor": "字节跳动 (ByteDance / 即梦 Dreamina)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "字节跳动旗下 AI 图像/视频生成工具，dreamina.jianying.com 正常"
+    },
+    {
+      "slug": "openai-agents-sdk",
+      "name": "OpenAI Agents SDK",
+      "verdict": "REAL",
+      "official_url": "https://platform.openai.com/docs/agents",
+      "url_correct": true,
+      "vendor": "OpenAI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "OpenAI 官方 AI 代理开发框架，文档地址正确"
+    },
+    {
+      "slug": "velo-ai",
+      "name": "Velo AI",
+      "verdict": "UNCERTAIN",
+      "official_url": null,
+      "url_correct": false,
+      "vendor": null,
+      "desc_issue": "记录 URL veloai.com 未获证实；描述为“通用效率/任务自动化工具”与真实 Velo(usevelo.ai，AI 视频工具)不符，疑似拼凑描述",
+      "confidence": "medium",
+      "evidence": "搜索未确认 veloai.com 为有效站点；真实 Velo 为 usevelo.ai（AI 视频），另存 velo-ai.tech(测试)、velorai.co 等不同产品"
+    },
+    {
+      "slug": "quizlet-ai",
+      "name": "Quizlet AI",
+      "verdict": "REAL",
+      "official_url": "https://quizlet.com",
+      "url_correct": true,
+      "vendor": "Quizlet",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Quizlet 平台的 AI 学习辅助功能，官网 quizlet.com 正常"
+    },
+    {
+      "slug": "mubert",
+      "name": "Mubert",
+      "verdict": "REAL",
+      "official_url": "https://mubert.com",
+      "url_correct": true,
+      "vendor": "Mubert",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI 免版税背景音乐生成平台，官网 mubert.com 正常"
+    },
+    {
+      "slug": "openhands",
+      "name": "OpenHands",
+      "verdict": "REAL",
+      "official_url": "https://all-hands.ai",
+      "url_correct": true,
+      "vendor": "All-Hands-AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "开源 AI 编程 Agent（原 OpenDevin），官网 all-hands.ai 正常"
+    },
+    {
+      "slug": "bloomberg-gpt",
+      "name": "Bloomberg GPT",
+      "verdict": "REAL",
+      "official_url": "https://www.bloomberg.com/company/press/bloomberg-gpt/",
+      "url_correct": true,
+      "vendor": "Bloomberg",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "彭博社 2023 年发布的金融领域大模型，官网新闻稿地址正确（已集成进彭博终端）"
+    },
+    {
+      "slug": "smartcat",
+      "name": "Smartcat",
+      "verdict": "REAL",
+      "official_url": "https://smartcat.com",
+      "url_correct": true,
+      "vendor": "Smartcat",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "AI 翻译与本地化平台，官网 smartcat.com 正常"
+    },
+    {
+      "slug": "cursor",
+      "name": "Cursor",
+      "verdict": "REAL",
+      "official_url": "https://cursor.com",
+      "url_correct": true,
+      "vendor": "Anysphere (Cursor)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "基于 VS Code 的 AI 代码编辑器，官网 cursor.com 正常"
+    },
+    {
+      "slug": "open-design",
+      "name": "open-design",
+      "verdict": "REAL",
+      "official_url": "https://open-design.ai",
+      "url_correct": false,
+      "vendor": "nexu-io",
+      "desc_issue": "记录 URL open-design.io 错误（真实为 open-design.ai）；且描述称“专业版$19/月”不实——Open Design 为完全免费的开源工具(Apache-2.0)，无付费订阅计划",
+      "confidence": "high",
+      "evidence": "Open Design 是 nexu-io 开源的 Claude Design 替代品，官网 open-design.ai、源码 github.com/nexu-io/open-design；open-design.io 非官方"
+    },
+    {
+      "slug": "flint",
+      "name": "Flint",
+      "verdict": "REAL",
+      "official_url": "https://www.flintnote.com",
+      "url_correct": false,
+      "vendor": "Tim Disney (Flint / flintnote.com)",
+      "desc_issue": "记录 URL flint.sh 未获证实；描述的“实时协作白板/多模态RAG引擎”与真实 Flint(flintnote.com，本地优先的开源笔记/知识管理工具，含知识图谱)不完全吻合，协作白板特性未证实",
+      "confidence": "medium",
+      "evidence": "Flint 为 AI 笔记与知识管理工具（flintnote.com，开源），描述中的知识图谱/语义搜索吻合，但 flint.sh 非其官网"
+    },
+    {
+      "slug": "agent-skills",
+      "name": "agent-skills",
+      "verdict": "REAL",
+      "official_url": "https://agentskills.ai",
+      "url_correct": false,
+      "vendor": "Anthropic (开放标准) / agentskills.ai",
+      "desc_issue": "记录 URL agent-skills.ai（带连字符）应无连字符 agentskills.ai；描述称“集成500+预置技能组件、多模型编排与混合推理”等具体数字未证实——真实 Agent Skills 为 Anthropic 发布的开放标准(SKILL.md 格式封装能力)",
+      "confidence": "medium",
+      "evidence": "Agentskills.ai 为真实站点（Pre-built AI Agents for Business Owners）；Anthropic 亦发布 Agent Skills 开放标准(agentskills.io)；agent-skills.ai 连字符域名为错误"
+    },
+    {
+      "slug": "anthropic-console",
+      "name": "Anthropic Console",
+      "verdict": "REAL",
+      "official_url": "https://console.anthropic.com",
+      "url_correct": true,
+      "vendor": "Anthropic",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Anthropic 官方 AI 平台/控制台，官网 console.anthropic.com 正常"
+    },
+    {
+      "slug": "hippocratic-ai",
+      "name": "Hippocratic AI",
+      "verdict": "REAL",
+      "official_url": "https://www.hippocraticai.com",
+      "url_correct": true,
+      "vendor": "Hippocratic AI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "官网 hippocraticai.com 确认，医疗AI Agent公司，已获多轮融资"
+    },
+    {
+      "slug": "windsurf",
+      "name": "Windsurf",
+      "verdict": "REAL",
+      "official_url": "https://codeium.com/windsurf",
+      "url_correct": true,
+      "vendor": "Codeium (Windsurf)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Windsurf 由 Codeium 推出，记录URL为历史/真实地址（现主站 windsurf.com，codeium.com/windsurf 仍可访问）"
+    },
+    {
+      "slug": "arc-browser",
+      "name": "Arc浏览器",
+      "verdict": "REAL",
+      "official_url": "https://arc.net",
+      "url_correct": true,
+      "vendor": "The Browser Company",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "arc.net 为 The Browser Company 官方站点，AI 浏览器属实"
+    },
+    {
+      "slug": "pixverse",
+      "name": "Pixverse",
+      "verdict": "REAL",
+      "official_url": "https://pixverse.ai",
+      "url_correct": true,
+      "vendor": "Pixverse",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "pixverse.ai 为官方站点，AI 视频生成工具属实"
+    },
+    {
+      "slug": "you.com",
+      "name": "You.com",
+      "verdict": "REAL",
+      "official_url": "https://you.com",
+      "url_correct": true,
+      "vendor": "You.com Inc.",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "you.com 为官方站点，AI 搜索引擎属实"
+    },
+    {
+      "slug": "grok",
+      "name": "Grok",
+      "verdict": "REAL",
+      "official_url": "https://grok.com",
+      "url_correct": true,
+      "vendor": "xAI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "grok.com 为 xAI 官方站点，与描述一致"
+    },
+    {
+      "slug": "dify",
+      "name": "Dify",
+      "verdict": "REAL",
+      "official_url": "https://dify.ai",
+      "url_correct": true,
+      "vendor": "Dify (LangGenius)",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "dify.ai 为官方站点，开源 LLM 应用开发平台属实"
+    },
+    {
+      "slug": "hailuo-ai",
+      "name": "海螺AI",
+      "verdict": "REAL",
+      "official_url": "https://www.hailuo.ai",
+      "url_correct": true,
+      "vendor": "MiniMax（上海稀宇科技）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "hailuo.ai 为 MiniMax 官方站点，海螺AI/视频属实"
+    },
+    {
+      "slug": "trae",
+      "name": "Trae",
+      "verdict": "REAL",
+      "official_url": "https://www.trae.ai",
+      "url_correct": true,
+      "vendor": "字节跳动（ByteDance）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "trae.ai 为字节跳动官方站点，AI 编程助手属实"
+    },
+    {
+      "slug": "lets-enhance",
+      "name": "Let's Enhance",
+      "verdict": "REAL",
+      "official_url": "https://letsenhance.io",
+      "url_correct": true,
+      "vendor": "Let's Enhance",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "letsenhance.io 为官方站点，AI 图像增强/放大工具属实"
+    },
+    {
+      "slug": "yoroll",
+      "name": "Yoroll",
+      "verdict": "REAL",
+      "official_url": "https://yoroll.ai",
+      "url_correct": true,
+      "vendor": "LinearGame（新加坡/旧金山）",
+      "desc_issue": "描述称其为“AI效率工具/智能任务管理和内容创作辅助”，实际是 AI 互动视频游戏创作平台（一句话生成可玩分支剧情游戏），并非任务管理/效率工具",
+      "confidence": "high",
+      "evidence": "yoroll.ai 为 LinearGame 的 AI 视频原生游戏平台，与描述功能不符"
+    },
+    {
+      "slug": "lovable",
+      "name": "Lovable",
+      "verdict": "REAL",
+      "official_url": "https://lovable.dev",
+      "url_correct": true,
+      "vendor": "Lovable（原名 GPT Engineer）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "lovable.dev 为官方站点，AI 全栈应用构建平台属实"
+    },
+    {
+      "slug": "v0.dev",
+      "name": "v0.dev",
+      "verdict": "REAL",
+      "official_url": "https://v0.dev",
+      "url_correct": true,
+      "vendor": "Vercel",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "v0.dev 为 Vercel 官方站点，AI 前端代码生成工具属实"
+    },
+    {
+      "slug": "01-ai",
+      "name": "零一万物",
+      "verdict": "REAL",
+      "official_url": "https://01.ai",
+      "url_correct": true,
+      "vendor": "零一万物 / 01.AI（李开复创办）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "01.ai 为官方站点，Yi 系列大模型及企业 AI 属实"
+    },
+    {
+      "slug": "elai",
+      "name": "Elai",
+      "verdict": "REAL",
+      "official_url": "https://elai.io",
+      "url_correct": true,
+      "vendor": "Elai",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "elai.io 为官方站点，AI 虚拟人视频生成平台属实"
+    },
+    {
+      "slug": "xunfei-zhizuo",
+      "name": "讯飞智作",
+      "verdict": "REAL",
+      "official_url": "https://peiyin.xunfei.cn/",
+      "url_correct": true,
+      "vendor": "科大讯飞（iFlytek）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "peiyin.xunfei.cn 为科大讯飞官方站点，AI 配音/数字人创作平台属实"
+    },
+    {
+      "slug": "upscayl",
+      "name": "Upscayl",
+      "verdict": "REAL",
+      "official_url": "https://upscayl.org",
+      "url_correct": true,
+      "vendor": "Upscayl（开源，Nayam Amarshe 等）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "upscayl.org 为官方站点，免费开源 AI 图像超分工具属实"
+    },
+    {
+      "slug": "spark-tts",
+      "name": "Spark-TTS",
+      "verdict": "REAL",
+      "official_url": "https://github.com/SparkAudio/Spark-TTS",
+      "url_correct": false,
+      "vendor": "SparkAudio / 香港科技大学等",
+      "desc_issue": "记录的 GitHub 地址 github.com/spark-tts/spark-tts 拼写错误，正确仓库为 github.com/SparkAudio/Spark-TTS",
+      "confidence": "medium",
+      "evidence": "GitHub 正确仓库为 SparkAudio/Spark-TTS（基于 Qwen2.5 的开源 TTS）"
+    },
+    {
+      "slug": "ada-health",
+      "name": "Ada Health",
+      "verdict": "REAL",
+      "official_url": "https://ada.com",
+      "url_correct": false,
+      "vendor": "Ada Health GmbH",
+      "desc_issue": "官网实际为 ada.com（Ada Health GmbH），记录 URL adahealth.com 疑非官方主站",
+      "confidence": "medium",
+      "evidence": "Ada 官方站点为 ada.com，App Store 开发者为 Ada Health，产品描述基本一致"
+    },
+    {
+      "slug": "anythingllm",
+      "name": "AnythingLLM",
+      "verdict": "REAL",
+      "official_url": "https://anythingllm.com",
+      "url_correct": true,
+      "vendor": "AnythingLLM（Mintplex Labs）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "anythingllm.com 为官方站点，开源桌面 RAG 知识库应用属实"
+    },
+    {
+      "slug": "feishu-smart-partner",
+      "name": "飞书智能伙伴",
+      "verdict": "REAL",
+      "official_url": "https://www.feishu.cn/",
+      "url_correct": true,
+      "vendor": "字节跳动（飞书）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "飞书 aily 智能伙伴为官方 AI 助手（产品页 aily.feishu.cn），feishu.cn 为官方域，描述一致"
+    },
+    {
+      "slug": "krea-2",
+      "name": "Krea 2",
+      "verdict": "REAL",
+      "official_url": "https://www.krea.ai",
+      "url_correct": true,
+      "vendor": "Krea",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "krea.ai 为官方站点，Krea 2 为 2026 年发布的开源图像生成模型"
+    },
+    {
+      "slug": "topaz-photo-ai",
+      "name": "Topaz Photo AI",
+      "verdict": "REAL",
+      "official_url": "https://www.topazlabs.com/topaz-photo-ai",
+      "url_correct": true,
+      "vendor": "Topaz Labs",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "topazlabs.com 为官方站点，Topaz Photo AI 图像增强工具属实"
+    },
+    {
+      "slug": "aider",
+      "name": "Aider",
+      "verdict": "REAL",
+      "official_url": "https://aider.sh",
+      "url_correct": true,
+      "vendor": "Aider（开源，Paul Gauthier）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "aider.sh 为官方站点，终端 AI 配对编程助手属实"
+    },
+    {
+      "slug": "strands-agents",
+      "name": "Strands Agents",
+      "verdict": "REAL",
+      "official_url": "https://strandsagents.com",
+      "url_correct": true,
+      "vendor": "Amazon Web Services（AWS）",
+      "desc_issue": "描述称“Anthropic推出的AI智能体开发框架”，实际由 AWS（亚马逊云科技）开源开发，Anthropic 仅为贡献者之一（提供 API 接入支持）",
+      "confidence": "high",
+      "evidence": "AWS 官方开源博客确认 Strands Agents 为 AWS 开源 SDK，非 Anthropic 产品"
+    },
+    {
+      "slug": "miro-ai",
+      "name": "Miro AI",
+      "verdict": "REAL",
+      "official_url": "https://miro.com/ai",
+      "url_correct": true,
+      "vendor": "Miro",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "miro.com/ai 为官方站点，Miro 白板 AI 助手属实"
+    },
+    {
+      "slug": "llamaindex",
+      "name": "LlamaIndex",
+      "verdict": "REAL",
+      "official_url": "https://www.llamaindex.ai",
+      "url_correct": true,
+      "vendor": "LlamaIndex",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "llamaindex.ai 为官方站点，开源 LLM 数据框架属实"
+    },
+    {
+      "slug": "frase",
+      "name": "Frase",
+      "verdict": "REAL",
+      "official_url": "https://frase.io",
+      "url_correct": true,
+      "vendor": "Frase",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "frase.io 为官方站点，AI 内容营销/SEO 工具属实"
+    },
+    {
+      "slug": "seedream-5-0-pro",
+      "name": "Seedream 5.0 Pro",
+      "verdict": "REAL",
+      "official_url": "https://seed.bytedance.com/zh/seedream5_0_pro",
+      "url_correct": false,
+      "vendor": "字节跳动（ByteDance）",
+      "desc_issue": "描述称“阶跃星辰于2026年初发布”且归类为AI对话，实际是字节跳动（ByteDance）Seed 团队的 AI 图像生成/编辑模型，并非对话类 LLM；记录 URL seedream.stepfun.com 也非官方（stepfun 为阶跃星辰域名，属张冠李戴），官方站点为 seed.bytedance.com",
+      "confidence": "high",
+      "evidence": "Seedream 5.0 Pro 为字节跳动图像模型，官站 seed.bytedance.com，与阶跃星辰无关"
+    },
+    {
+      "slug": "lalamu",
+      "name": "Lalamu",
+      "verdict": "REAL",
+      "official_url": "https://lalamu.studio/",
+      "url_correct": true,
+      "vendor": "Lalamu Entertainment GmbH（奥地利）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "lalamu.studio 为官方站点，AI 口型同步工具属实"
+    },
+    {
+      "slug": "julius-ai",
+      "name": "Julius AI",
+      "verdict": "REAL",
+      "official_url": "https://julius.ai",
+      "url_correct": true,
+      "vendor": "Julius AI（旧金山 AI lab）",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "julius.ai 为官方站点，AI 数据分析工具属实"
+    },
+    {
+      "slug": "grok-4-5",
+      "name": "Grok 4.5",
+      "verdict": "REAL",
+      "official_url": "https://grok.com",
+      "url_correct": true,
+      "vendor": "xAI",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "Grok 4.5 于 2026-07 由 xAI 发布，grok.com 为官方站点，描述一致"
+    },
+    {
+      "slug": "bardeen",
+      "name": "Bardeen",
+      "verdict": "REAL",
+      "official_url": "https://www.bardeen.ai",
+      "url_correct": true,
+      "vendor": "Bardeen",
+      "desc_issue": null,
+      "confidence": "high",
+      "evidence": "bardeen.ai 为官方站点，AI 浏览器自动化/工作流工具属实"
+    }
+  ]
+}

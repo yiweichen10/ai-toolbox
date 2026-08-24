@@ -1,0 +1,131 @@
+{
+  "name": "AI Prompt Genius",
+  "slug": "ai-prompt-genius",
+  "positioning": "免费AI提示词工具，Google+12+语言支持好用",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#8b5cf6",
+  "description": "AI提示词库创建和管理工具",
+  "category": "AI提示词",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI提示词"
+    },
+    {
+      "text": "AI Prompt Genius"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://www.aipromptgenius.app/",
+  "price": "免费版/付费版",
+  "platform": "Web",
+  "pros": [
+    "完全免费、开源，无数据收集，隐私友好",
+    "Google Sheets 同步，跨设备无缝衔接",
+    "支持 12 种以上语言，中文友好",
+    "变量模板功能强，一套模板多处复用",
+    "开源代码可审查，社区活跃"
+  ],
+  "cons": [
+    "主要是 Chrome 浏览器扩展，环境受限",
+    "只管理提示词，本身不生成内容",
+    "同步依赖 Google Sheets 账户",
+    "没有原生移动端 App"
+  ],
+  "features": [
+    "斜杠快捷键搜索提示词",
+    "标签/文件夹/主题管理",
+    "{{变量}}模板复用",
+    "Google Sheets跨设备同步",
+    "12+语言支持",
+    "导入导出与对话存档"
+  ],
+  "related": [
+    "promptpilot",
+    "explinks-prompts",
+    "prompt-engineering-guide"
+  ],
+  "content": "## AI Prompt Genius 是什么？\n\nAI Prompt Genius 是一款免费、开源的 Chrome 浏览器扩展，帮你创建、整理和调用属于自己的 AI 提示词库。装上之后，在 ChatGPT 输入框里按一下斜杠（/）就能弹出搜索框，快速找到并填入之前保存的提示词；浏览网页时看到好提示词，选中右键就能一键存进库中。\n\n它本质上是一个\"提示词个人图书馆\"：支持标签、文件夹、自定义主题分类管理，支持 {{变量}} 模板（一套模板填不同内容反复用），还能通过 Google Sheets 跨设备同步，并支持 12 种以上语言（含中文）。由于完全开源、声明不收集用户数据，隐私上更让人放心。\n\n### 核心功能\n\n- **自定义提示词库**：自由创建、保存和编辑提示词，长期积累自己的最佳实践。\n- **斜杠（/）快捷键搜索**：在 ChatGPT 输入框内按斜杠即可按需搜索已保存的提示词，秒级调用。\n- **标签、文件夹与主题管理**：用可自定义的标签和文件夹分类整理大量提示词，支持自定义主题界面。\n- **提示词变量模板**：用 {{变量}} 占位符写一套模板，使用时输入具体内容即可自动替换，一套模板多处复用。\n- **Google Sheets 跨设备同步**：通过 Google Sheets 同步提示词库，在电脑、平板等多设备间保持一致。\n- **多语言支持**：内置 12+ 种语言界面，中文用户可无障碍使用。\n- **导入导出与对话存档**：提示词支持一键导入导出；还能把 ChatGPT 历史对话导出为 Markdown、HTML、PDF、PNG 等格式。\n- **预置模板与公共社区**：内置精选提示词模板，并可接入 subreddit 公共提示词分享社区（10 万+ 成员）。\n\n### 适用场景\n\n- **高频使用 ChatGPT 的创作者与研究者**：把常用提示词保存下来，告别每次重新输入或到处翻聊天记录。\n- **跨设备工作的个人或团队**：用 Google Sheets 同步提示词库，在不同设备上保持一致的工作流。\n- **多语言 AI 交互用户**：内置中文等多语言支持，配合提示词变量，可快速适配不同语言和场景的输出需求。\n\n### 价格\n\nAI Prompt Genius 核心功能完全免费、开源，可从 Chrome Web Store 直接安装；部分附加功能（如特定主题、去广告体验等）以官网为准。",
+  "published": true,
+  "faq": [
+    {
+      "q": "AI Prompt Genius 收费吗？",
+      "a": "核心功能完全免费、开源，直接从 Chrome Web Store 安装即可使用；个别附加功能以官网为准。"
+    },
+    {
+      "q": "如何快速调用保存的提示词？",
+      "a": "在 ChatGPT 输入框中按斜杠（/）键即可弹出搜索框，输入关键词就能找到并填入已保存的提示词。"
+    },
+    {
+      "q": "支持哪些 AI 工具？",
+      "a": "提示词为通用文本，可配合 ChatGPT、Claude 及各类 AI agent 和图像生成工具使用，兼容性强。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://www.aipromptgenius.app/",
+  "last_verified": "2026-08-05",
+  "confidence": "medium",
+  "verify_notes": ".app 官网为工具介绍页，与开源项目 GitHub 仓库及 Firefox 商店页信息基本一致；个别第三方站点提及 Pro 一次性买断版（仅去广告），未经官网确认",
+  "verified_publisher": "开源社区项目（GitHub: benf2004/ChatGPT-Prompt-Genius）",
+  "verified_what": "免费开源的AI提示词管理浏览器扩展",
+  "verified_price": "核心功能免费，开源",
+  "verified_platform": "Chrome / Edge / Firefox 浏览器扩展；Web",
+  "conflict": false,
+  "verified_features": [
+    "提示词库创建、分类与管理",
+    "发现、共享、导入和使用优质提示词",
+    "本地保存 ChatGPT 聊天历史",
+    "聊天记录导出为 Markdown、HTML、PDF、PNG 等格式",
+    "跨设备同步"
+  ],
+  "verified_description": "AI Prompt Genius 是一款免费开源的浏览器扩展，帮助用户发现、共享、导入和使用优质 AI 提示词，并可创建个性化提示词库进行分类管理。扩展支持将 ChatGPT 聊天历史自动保存在本地、以多种格式导出，提供主题自定义与跨设备同步，主要适配 ChatGPT 网页版使用。",
+  "verified_pros": [
+    "免费开源，无广告",
+    "提示词库管理与一键调用",
+    "聊天历史本地保存并多格式导出"
+  ],
+  "verified_cons": [
+    "主要适配 ChatGPT 网页版，其他模型支持有限"
+  ],
+  "verified_faq": [
+    {
+      "question": "需要付费吗",
+      "answer": "官网及浏览器商店页面显示核心功能免费，为开源项目。"
+    },
+    {
+      "question": "支持哪些浏览器",
+      "answer": "Chrome、Edge、Firefox 等浏览器应用商店均可安装。"
+    },
+    {
+      "question": "数据保存在哪里",
+      "answer": "扩展数据存储在本机浏览器中，不上传第三方服务器。"
+    }
+  ],
+  "verified_tags": [
+    {
+      "text": "AI提示词"
+    },
+    {
+      "text": "浏览器扩展"
+    },
+    {
+      "text": "提示词管理"
+    }
+  ],
+  "verified_category": "AI提示词",
+  "source_urls": [
+    "https://www.aipromptgenius.app/",
+    "https://addons.mozilla.org/zh-CN/firefox/addon/chatgpt-history/",
+    "https://github.com/benf2004/ChatGPT-Prompt-Genius"
+  ],
+  "content_verified": false,
+  "url_previous": "https://www.aipromptgenius.app/?utm_source=ai-bot.cn",
+  "seo_keywords": [
+    "AI Prompt Genius",
+    "ChatGPT提示词扩展",
+    "提示词管理器",
+    "提示词保存工具",
+    "开源提示词插件"
+  ]
+}

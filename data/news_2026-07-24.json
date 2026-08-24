@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260724-001",
+    "title": "佛州男子因相信 ChatGPT 拒绝就医而险些丧命，起诉 OpenAI 及 CEO 奥尔特曼",
+    "summary": "美国佛罗里达州 55 岁男子 Scott Winters 起诉 OpenAI，称 ChatGPT-4o 多次建议其无需就医，导致其因双肺血栓引发大面积肺栓塞，一度濒临死亡。诉状指控 OpenAI 存在疏忽和\"无证行医\"行为，要求经济赔偿并暂停 ChatGPT Health 服务。OpenAI 回应称 ChatGPT 不是医生，不应替代专业医疗护理。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "IT之家（RSS）",
+    "source_url": "https://www.ithome.com/0/980/890.htm",
+    "published_at": "2026-07-24T07:30:43+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260724-002",
+    "title": "ChatGPT 桌面版上线语音控制多智能体",
+    "summary": "ChatGPT 语音功能现已登陆桌面应用。\n\n只需使用语音，即可控制你的电脑，并指挥在 ChatGPT Work 或 Codex 中运行的多个智能体。\n\n该功能由 GPT-Live 驱动，因此它能够同时在该应用中说话、聆听并协调工作。\n\n今日起，面向 macOS 和 Windows 平台的 Plus、Pro、Business、Edu 及 Enterprise 计划用户全球推送。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "X：OpenAI (@OpenAI)",
+    "source_url": "https://x.com/OpenAI/status/2080378182469857576",
+    "published_at": "2026-07-24T03:43:04+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260724-003",
+    "title": "TheNumbers.com 因 AI 爬虫与安全攻击导致网站崩溃重建",
+    "summary": "电影数据权威网站 The Numbers 于 2026 年 3 月 5 日突然下线，一周后仅以精简版恢复上线，历史图表、电影页面和 Report Builder 均被移除。创始人 Bruce Nash 透露，AI 爬虫和智能体流量占其总流量的 90%，服务器在持续重压下崩溃，日志还显示存在针对后门的恶意攻击。团队被迫放弃运行 30 年、包含 16 万源文件的旧系统，在新基础设施上重建网站。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://stephenfollows.com/p/what-just-happened-to-thenumberscom-should-worry-us-all",
+    "published_at": "2026-07-24T02:35:29+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260724-004",
+    "title": "通义千问发布 Qwen-Audio-3.0-TTS，登顶 TTS 排行榜",
+    "summary": "阿里通义千问推出最新文本转语音模型 Qwen-Audio-3.0-TTS，提供 Flash（实时交互）和 Plus（高质量生成）两个版本。新功能包括细粒度内联标签控制（如【whisper】、【angry】）、自然语言风格控制、支持16种语言，以及一次生成长达3分钟的长文本。该模型目前在 Artificial Analysis TTS 排行榜上排名第一。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "X：通义千问 / Qwen (@Alibaba_Qwen)",
+    "source_url": "https://x.com/Alibaba_Qwen/status/2080270065547809133",
+    "published_at": "2026-07-23T20:33:27+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260724-005",
+    "title": "小红书 HELMSMAN：全闪存服务器实现高性能向量检索，硬件成本节省超90%",
+    "summary": "小红书引擎架构团队在 OSDI 2026提出 HELMSMAN，一个面向全闪存服务器的高性能向量近似最近邻搜索系统。该系统通过聚类式索引、定制化存储栈和分层学习式搜索剪枝，用约40台全闪存服务器承载了过去约35，000 CPU Core 和约350 TB DRAM 的负载，硬件成本节省超过90%。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "公众号：小红书技术（dots.llm）",
+    "source_url": "https://mp.weixin.qq.com/s/WCYE6itbTBPU0Q_3BfQxkA",
+    "published_at": "2026-07-23T12:00:00+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260724-006",
+    "title": "DARPA 与美国空军试飞 AI 操控的 F-16 战机",
+    "summary": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
+    "published_at": "2026-07-24T04:11:31+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260724-007",
+    "title": "Claude 语音模式现已支持 Opus、Sonnet 及连接工具与多语言",
+    "summary": "即日起，Claude 语音模式在 Opus、Sonnet 和 Haiku 上运行，并支持连接 Gmail、Slack 等工具及更多语言。用户可在对话中切换模型，语音模式默认沿用上次文本聊天使用的模型。该功能面向所有用户开放 beta 测试，免费版可使用 Haiku 及一个连接工具，付费版可访问更多模型和全部连接工具。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Claude：Blog（网页）",
+    "source_url": "https://claude.com/blog/think-through-hard-problems-in-voice-mode",
+    "published_at": "2026-07-24T03:55:29+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260724-008",
+    "title": "Apple 起诉 OpenAI 窃取硬件制造机密",
+    "summary": "Apple 指控多名前员工在 OpenAI 面试中窃取硬件制造机密，甚至将设备带出办公室进行\"展示\"。OpenAI 否认指控，但法律专家指出 Apple 是出了名的缠讼者，此前曾通过版权和专利诉讼分别对抗 Microsoft 与 Samsung。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "The Verge：AI（RSS）",
+    "source_url": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive",
+    "published_at": "2026-07-23T22:00:00+08:00",
+    "tags": [
+      "opinion"
+    ]
+  }
+]

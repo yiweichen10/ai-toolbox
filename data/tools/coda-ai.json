@@ -1,0 +1,154 @@
+{
+  "name": "Coda AI",
+  "slug": "coda-ai",
+  "positioning": "免费AI办公工具：AI 列+自动化工作流",
+  "auto_positioning": true,
+  "emoji": "📋",
+  "color": "#0F7676",
+  "description": "Coda AI 是 Coda 文档协作平台内置的智能助手，用自然语言创建文档、搭建自动化工作流、做数据分析和智能表格。2026 年 Coda 品牌升级为 Superrush Docs（原 coda.io 仍可用），并强化多模态 AI 与企业级数据库能力。",
+  "category": "AI办公",
+  "tags": [
+    "文档协作",
+    "项目管理",
+    "工作流自动化",
+    "AI写作助手"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "约85万/月",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://coda.io",
+  "price": "免费版可用，Pro 版 $12/Doc Maker/月起",
+  "platform": "网页/iOS/Android",
+  "pros": [
+    "文档、表格、项目管理融为一体，一站式协作",
+    "AI 助手支持自然语言指令，快速生成文档与工作流",
+    "模板丰富，覆盖产品管理、项目追踪、CRM 等场景",
+    "600+ Packs 集成（Slack、Google Drive、GitHub 等）",
+    "采用 Maker 计费，协作者（Editor/Viewer）永久免费"
+  ],
+  "cons": [
+    "学习曲线较陡，新手需时间熟悉 Doc 与 Table 交互逻辑",
+    "国内访问速度相对较慢，网络稳定性有待提升",
+    "AI 用量以 Credit 计量，超额需购买附加包"
+  ],
+  "features": [
+    "AI 文档与表格生成",
+    "AI 列（规模化数据处理）",
+    "自动化工作流（Automations）",
+    "600+ 集成（Packs）",
+    "团队知识库与智能搜索",
+    "AI 聊天问答"
+  ],
+  "related": [
+    "notion-ai",
+    "notebooklm",
+    "gamma",
+    "tome"
+  ],
+  "faq": [
+    {
+      "question": "Coda AI 免费版和付费版有什么区别？",
+      "answer": "Coda 采用 Maker 计费：免费版可创建文档并获基础 AI Credit；Pro（$12/Doc Maker/月）与 Team（$36/Doc Maker/月）提供更高 Credit 额度、更多自动化与 Packs，企业版可定制。"
+    },
+    {
+      "question": "Coda 和 Notion 哪个更适合项目管理？",
+      "answer": "Coda 的 Table 能力更强，适合需要复杂数据处理的项目管理；Notion 界面更简洁，适合以文档为主的团队，两者都支持 AI 辅助。"
+    },
+    {
+      "question": "Coda AI 支持中文吗？",
+      "answer": "支持中文界面与中文 AI 交互，但英文原生内容生成质量通常更佳，中文表达建议人工复核。"
+    },
+    {
+      "question": "如何用 Coda AI 创建自动化工作流？",
+      "answer": "在文档中使用 /automate 或 Add 按钮创建自动化规则，设置 When（触发条件）与 Then（执行动作）即可，如自动提醒、更新状态等。"
+    }
+  ],
+  "seo_keywords": [
+    "Coda AI",
+    "Coda AI怎么样",
+    "Coda AI和Notion AI哪个好",
+    "Coda AI免费版",
+    "Coda AI工作流自动化"
+  ],
+  "content": "## Coda AI是什么？\n\n简单说，Coda AI就是Coda文档协作平台里的智能助手。Coda这个工具本身就有点“另类”——它不是单纯的文档工具，也不是单纯的表格工具，而是一个把文档、表格、项目管理揉在一起的混合体。再加上AI能力，你可以用自然语言让它帮你写文档、做表格、搭工作流、分析数据。\n\n2026年的版本增加了多模态AI支持，能做跨文档分析和自动整理团队知识库。不过说实话，这些新功能国内用户用起来体验如何，还有待观察。\n\n---\n\n## 核心功能\n\n**1. AI智能文档生成**\n\n直接用大白话描述你想要的内容，Coda AI就能帮你生成文档或表格。比如你说“帮我做一个产品需求文档模板”，它就能产出一个像模像样的框架。这东西省脑子，适合赶时间的时候快速起步，但要想用得顺手，还是得学会怎么跟它“说话”。\n\n**2. 自动化工作流**\n\n设置好触发条件（比如某个表格更新了、有人填了表单），然后定义好动作（比如自动发通知、修改状态、生成报告），它就能帮你自动跑。适合那些每天重复做的事情，比如周报汇总、任务状态同步。上手需要一点逻辑思维，但弄好了确实能省不少手动操作。\n\n**3. 跨文档关联**\n\nCoda的文档之间可以互相链接，形成一个知识网络。这个功能配合AI很适合管理散落在各处的信息，比如把同一个项目的需求文档、测试用例、会议记录串起来，找东西的时候方便很多。\n\n**4. AI数据分析**\n\n用自然语言向表格提问，比如“这个月销售最好的产品是哪个”，它会自动查询并给你结果，还能生成可视化图表。适合非技术出身的人快速看数据，但复杂的数据分析还得靠手动折腾。\n\n**5. Packs集成生态**\n\nCoda接了500多个第三方工具，Slack、Google Drive、Notion、GitHub这些主流的都能连。实际使用中，连接本身不难，但有些Pack的稳定性取决于第三方平台，用的时候要有心理准备。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 主要AI功能 | 适合人群 |\n|------|-----------|---------|\n| **免费版** | 基础AI生成，次数有限 | 个人尝鲜 |\n| **Pro版**（$10/人/月） | 完整AI功能 + 更高使用额度 | 小团队 |\n| **Team版**（$18/人/月） | 团队协作 + 高级权限管理 | 中大型团队 |\n| **Enterprise版** | 自定义AI + 专属支持 | 大组织 |\n\n具体功能差异建议直接看官网，这里说的是大概情况。免费版AI功能确实受限，想认真用的话基本得付费。\n\n---\n\n## 值不值得用？\n\n**优点：**\n- **一体化**：文档、表格、项目管理不用来回切换，一个平台搞定\n- **AI助手**：自然语言处理能力ok，指令用对了效率提升明显\n- **模板丰富**：产品管理、CRM、项目追踪什么都有，搭起来快\n- **集成生态**：主流工具基本都接了，生态丰富\n- **权限管理**：细分程度高，团队用放心\n\n**缺点：**\n- **学习曲线**：Doc和Table的交互逻辑比较独特，新手需要时间适应\n- **访问速度**：国内访问确实慢，网络不稳定的时候体验打折扣\n- **AI限制**：免费版AI功能聊胜于无，想好好用就得花钱\n\n**总体结论：**\n如果你团队需要的是一个“文档+表格+项目管理+自动化”的集成工具，Coda AI是值得试试的。但前提是你愿意花时间学它的用法，并且对国内访问速度有一定容忍度。单纯想要AI写文档的话，市面上有更轻量的选择。\n\n---\n\n## 使用建议\n\n1. **先从模板开始**：Coda模板库里有很多现成的，先套用再根据自己的需求改，比从零开始容易上手。\n\n2. **学会用自然语言下指令**：AI功能不是摆设，但需要表达清晰。比如“生成一个每周站会记录模板”比“帮我做个东西”效果好得多。\n\n3. **先做小范围试点**：建议先在一个小项目上用，熟练了再推广到全团队，避免一开始就把整个工作流搞得太复杂。\n\n4. **注意数据同步**：如果和Slack、Google Drive这些工具联动，记得检查同步状态，有时候网络问题会导致数据不同步。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n- 需要文档+表格+项目管理一体化的小团队\n- 对自动化工作流有需求的运营、产品、项目管理者\n- 愿意投入时间学习新工具的团队\n\n**可考虑：**\n- 个人用户想尝鲜AI文档功能（免费版够不够用看需求）\n- 对国内访问速度不敏感的团队\n\n**不推荐：**\n- 只需要简单文档协作的团队（Google Docs/飞书文档更轻）\n- 对访问速度要求极高的国内团队\n- 完全不想花时间学习工具的人",
+  "published": true,
+  "created_date": "2026-06-09",
+  "published_date": "2026-06-09",
+  "verified_url": "https://coda.io",
+  "verified_publisher": "Coda, Inc.（2026 年起品牌升级为 Superhuman Docs）",
+  "verified_what": "Coda AI 是 Coda 文档协作平台内置的 AI 助手，可在文档、表格与项目中用自然语言生成内容、自动化工作流并智能分析数据。",
+  "verified_price": "免费版 $0；Pro $12/Doc Maker/月（Maker 计费，仅对创建文档者收费）；Team $36/Doc Maker/月；Enterprise 定制",
+  "verified_platform": "网页 / iOS / Android / Windows / Mac",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "AI 文档与表格生成",
+    "AI 列（规模化数据处理）",
+    "自动化工作流（Automations）",
+    "600+ 集成（Packs）",
+    "团队知识库与智能搜索",
+    "AI 聊天问答"
+  ],
+  "verified_description": "Coda AI 是 Coda 文档协作平台内置的智能助手，用自然语言创建文档、搭建自动化工作流、做数据分析和智能表格。2026 年 Coda 品牌升级为 Superrush Docs（原 coda.io 仍可用），并强化多模态 AI 与企业级数据库能力。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "站点编辑评分（保留 editorial rating，非外部评测）",
+  "rating_verified": true,
+  "verified_pros": [
+    "文档、表格、项目管理融为一体，一站式协作",
+    "AI 助手支持自然语言指令，快速生成文档与工作流",
+    "模板丰富，覆盖产品管理、项目追踪、CRM 等场景",
+    "600+ Packs 集成（Slack、Google Drive、GitHub 等）",
+    "采用 Maker 计费，协作者（Editor/Viewer）永久免费"
+  ],
+  "verified_cons": [
+    "学习曲线较陡，新手需时间熟悉 Doc 与 Table 交互逻辑",
+    "国内访问速度相对较慢，网络稳定性有待提升",
+    "AI 用量以 Credit 计量，超额需购买附加包"
+  ],
+  "verified_faq": [
+    {
+      "question": "Coda AI 免费版和付费版有什么区别？",
+      "answer": "Coda 采用 Maker 计费：免费版可创建文档并获基础 AI Credit；Pro（$12/Doc Maker/月）与 Team（$36/Doc Maker/月）提供更高 Credit 额度、更多自动化与 Packs，企业版可定制。"
+    },
+    {
+      "question": "Coda 和 Notion 哪个更适合项目管理？",
+      "answer": "Coda 的 Table 能力更强，适合需要复杂数据处理的项目管理；Notion 界面更简洁，适合以文档为主的团队，两者都支持 AI 辅助。"
+    },
+    {
+      "question": "Coda AI 支持中文吗？",
+      "answer": "支持中文界面与中文 AI 交互，但英文原生内容生成质量通常更佳，中文表达建议人工复核。"
+    },
+    {
+      "question": "如何用 Coda AI 创建自动化工作流？",
+      "answer": "在文档中使用 /automate 或 Add 按钮创建自动化规则，设置 When（触发条件）与 Then（执行动作）即可，如自动提醒、更新状态等。"
+    }
+  ],
+  "verified_tags": [
+    "文档协作",
+    "项目管理",
+    "工作流自动化",
+    "AI写作助手"
+  ],
+  "verified_category": "AI办公",
+  "source_urls": [
+    "https://coda.io/",
+    "https://coda.io/pricing",
+    "https://help.coda.io/hc/en-us/articles/39555725230989",
+    "https://coda.io/solutions/tool-consolidation"
+  ],
+  "verify_notes": "Coda 于 2026 年将品牌升级为 Superhuman Docs，coda.io 仍可用。官方采用 Maker 计费（仅对创建文档者收费），Pro $12、Team $36 每人每月；原数据写 $10/$18 略有偏差已校正。AI 用量以 Credit 计量而非固定次数。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "tome",
+      "tldv",
+      "slidesai"
+    ],
+    "verdict": "Coda AI 与 Tome、 tl;dv、SlidesAI 同属AI办公赛道：Coda AI 的 AI 文档与表格生成 是亮点，价格 免费版可用，Pro 版 $12/Doc Maker/月起；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "batch_id": "b48",
+  "category": "AI写作",
+  "tools": [
+    {
+      "slug": "bi-ling-ai",
+      "name": "笔灵AI",
+      "url_current": "https://ibiling.cn",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网可访问，确为AI写作助手，覆盖200+写作场景，与站内描述基本一致。定价'付费版29元/月起'经多源核实属实（getai.app、ai-bot.cn、naviai.cn 均显示月卡29元）。描述中'由上海笔灵智能科技开发'在官网未披露运营主体，无法核实但属软性归属，不构成硬幻觉。整体内容基本属实。"
+    },
+    {
+      "slug": "xunfei-zhizuo",
+      "name": "讯飞智作",
+      "url_current": "https://peiyin.xunfei.cn/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网可访问且确为科大讯飞旗下产品（运营方合肥科讯创想）。但官网（peiyin.xunfei.cn，域名即'配音'）核心定位是 AI 配音 / 数字人视频生成平台（文字转语音、数字人视频、声音形象定制），并非以 AI 写作、PPT 生成为核心。站内正文将'AI写作、PPT生成'列为首要核心功能，属功能张冠李戴。平台写'网页端、桌面端、移动端'，实际官网仅支持 Web 端 + 微信小程序，桌面/移动 App 未提及，平台字段不实。"
+    },
+    {
+      "slug": "melty-ai",
+      "name": "Melty",
+      "url_current": "https://melty.ai",
+      "url_ok": false,
+      "url_correct": "https://melty.sh",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL melty.ai 已被出售（GoDaddy parked 页面），非官网。真实官网为 melty.sh，项目仓库 github.com/meltylabs/melty，确为开源 AI 代码编辑器（基于 VS Code 分支，对标 Cursor/Windsurf），由 meltylabs 开发。站内描述（'开源 AI 代码编辑器'）正确，但正文将 Melty 写成'AI写作/文案生成工具'（智能文案、多场景模板、多语言润色、创意灵感等），与真实产品完全不符，属功能张冠李戴。"
+    },
+    {
+      "slug": "propane",
+      "name": "Propane",
+      "url_current": "https://usepropane.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网可访问，确为'面向产品团队的客户情报平台（Customer Intelligence for Product Teams）'，整合 300+ 工具的多源客户数据，供团队与 coding agent 使用。站内描述（'客户情报平台'）正确，但正文将其写成'基于 GPT-4o 的 AI 写作助手 / 营销文案工具（100+ 模板、SEO 优化、30+语言翻译）'，属功能张冠李戴。定价'免费版每日5次 + Pro版 $29/月'与官网（企业席位 / 统一费率 unlimited users、免费试用）不符，疑似编造。"
+    },
+    {
+      "slug": "goldfish",
+      "name": "Goldfish",
+      "url_current": "https://goldfish.ai",
+      "url_ok": false,
+      "url_correct": "https://www.goldfish.sh/",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL goldfish.ai 已被出售（Spaceship parked 页面），非官网。真实产品为 goldfish.sh（Product Hunt 上榜）：运行在 Mac 上的 AI 记忆 / 代回复助手，学习用户语气与上下文代写消息，Beta 阶段免费，聚焦 macOS。站内描述与正文将其写成'基于 GPT-5 的邮件/营销文案写作助手、支持 50+ 语言、Chrome 扩展、Web/iOS/Android'，与真实产品（Mac 桌面助手）完全不符，属功能张冠李戴；定价'付费版 $19/月起'也属编造（真实产品内测免费）。"
+    },
+    {
+      "slug": "invoko",
+      "name": "Invoko",
+      "url_current": "https://invoko.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网可访问，确为 Invoko，但真实产品是 macOS AI 语音桌面助手（用语音在任意应用内起草、总结、回复、执行操作，Apple Silicon Mac Beta），并非营销文案写作工具。站内描述（'专注营销文案、博客、社交媒体的 AI 写作助手'）与正文（营销文案/SEO/品牌语调/团队协作）均属功能张冠李戴。平台写'Web（Chrome 扩展即将推出）'，实际为 macOS 桌面应用，平台字段错误。定价'Pro $29/月、团队版 $99/月'未见于官网（Beta 免费），存疑。"
+    },
+    {
+      "slug": "longcat20",
+      "name": "LongCat-2.0",
+      "url_current": "https://longcat.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网可访问，确为 LongCat-2.0，但真实产品是美团（Meituan，HuggingFace 组织 meituan-longcat）推出的'AI Coding Agent'（万亿参数、1M 长上下文、强代码能力，深度集成 Claude Code 等编程工具），并非长文本 AI 写作平台。站内描述（'长文本AI写作与协作平台'）与正文（论文/报告/剧本写作、10万字上下文、多模态输入）均属功能张冠李戴。平台写'Web/Chrome扩展/iOS/Android'，实际以 API 及编程工具集成形式提供，平台字段错误。定价'免费版每日5000字 + Pro $19/月 + 团队 $49/月'与官网（API & Token 包，未公开明价）不符，存疑。"
+    },
+    {
+      "slug": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "url_current": "https://www.anthropic.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content"],
+      "conflict": true,
+      "confidence": "high",
+      "notes": "Anthropic 官网（anthropic.com）可访问，但其真实产品为 Claude Opus 5 / Sonnet 5 / Haiku / Claude Science 等，并不存在'Claude Fable 5'这一产品。描述称'旗舰大模型（Frontier Model）'，正文称'专为故事创作推出的 AI 写作工具'，均属虚构；且正文与描述互相矛盾（一个说'并非专门的写作/故事创作工具'，一个说'专门为故事创作'）。该条目为杜撰产品，描述与正文均为幻觉，建议人工裁定是否删除。URL 指向 Anthropic 官网本身无误，但无对应产品页。"
+    }
+  ]
+}

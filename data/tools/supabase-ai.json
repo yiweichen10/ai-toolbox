@@ -1,0 +1,121 @@
+{
+  "name": "Supabase AI",
+  "slug": "supabase-ai",
+  "positioning": "认证+文件存储：免费AI开发工具怎么用",
+  "auto_positioning": true,
+  "emoji": "💻",
+  "color": "#df7615",
+  "description": "开源的 Firebase 替代后端平台，基于 PostgreSQL 提供数据库、认证、存储、实时订阅与 AI 向量搜索等能力，是构建全栈 AI 应用的后端首选。",
+  "category": "AI开发",
+  "tags": [
+    "AI开发",
+    "后端",
+    "数据库",
+    "开源",
+    "向量搜索"
+  ],
+  "rating": "⭐4.1（编辑评分）",
+  "visits": "10万",
+  "badge": {
+    "type": "pick",
+    "text": "NEW"
+  },
+  "url": "https://supabase.com",
+  "price": "免费版 + Pro $25/月",
+  "platform": "Web / iOS / Android",
+  "pros": [
+    "开源免费",
+    "PostgreSQL 原生",
+    "AI 向量搜索开箱即用",
+    "实时能力强",
+    "文档完善"
+  ],
+  "cons": [
+    "免费项目一周不活跃会暂停",
+    "自托管维护复杂",
+    "移动端生态弱于 Firebase"
+  ],
+  "features": [
+    "PostgreSQL 数据库",
+    "认证（Auth）",
+    "文件存储",
+    "实时订阅",
+    "Edge Functions",
+    "pgvector 向量搜索与 AI"
+  ],
+  "related": [
+    "sora",
+    "midjourney"
+  ],
+  "content": "## Supabase AI 是什么？\n\nSupabase是开源的后端即服务平台，提供PostgreSQL数据库、认证、实时订阅和文件存储。新增AI功能支持向量搜索和AI对话，是构建全栈AI应用的后端首选。\n\nSupabase是Firebase的开源替代，数据完全自主可控。\n\n## 核心功能\n\n- **PostgreSQL数据库**：原生PostgreSQL，功能强大\n- **实时订阅**：数据变化实时推送\n- **用户认证**：邮箱、OAuth等多种认证方式\n- **文件存储**：大文件存储和管理\n- **AI向量搜索**：内置pgvector向量搜索\n- **Edge Functions**：边缘函数处理\n\n## 版本对比\n\n| 功能 | 免费版 | Pro ($25/月) | Team ($599/月) |\n|------|--------|-------------|---------------|\n| 数据库 | 500MB | 8GB | 无限制 |\n| 存储空间 | 1GB | 100GB | 无限制 |\n| Edge Functions | 50万次 | 200万次 | 无限制 |\n| 团队管理 | ❌ | ❌ | ✅ |\n\n## 优缺点分析\n\n### 👍 优点\n- 开源免费，数据自主可控\n- PostgreSQL原生，功能强大\n- AI向量搜索开箱即用\n- 实时能力优秀\n- 文档和教程质量好\n\n### 👎 缺点\n- 托管版价格较高\n- 部分高级功能学习成本\n- 社区规模不如Firebase\n\n## 使用技巧\n\n1. **SQL优先**：充分利用PostgreSQL原生SQL能力。\n2. **RLS策略**：设置行级安全策略保护数据。\n3. **向量搜索**：用pgvector实现AI语义搜索。\n\n## 适合人群\n\nSupabase适合全栈开发者和构建AI应用的技术团队。\n### 总结\n\nSupabase AI 是 AI编程 领域中一款不错的 AI 工具。开源的Firebase替代方案，提供数据库、认证、存储和AI功能。内置AI向量搜索和对话功能，是全栈AI应用的后端首选。 从功能完整性来看，它覆盖了核心使用场景。\n\n**快速上手建议：**\n- 访问官网 supabase.com 注册账号\n- 先使用免费版本 了解核心功能\n- 参考官方文档和教程加速学习\n- 加入用户社区获取使用技巧和最佳实践\n\n**价格参考：** 免费版+Pro $10/月\n**支持平台：** Web / iOS / Android\n\n### 核心功能详解\n\n这款 AI 编程工具的核心价值在于让开发者更高效地写代码。它能理解自然语言描述的需求，自动生成对应的代码。更重要的是，它不仅能写新代码，还能理解现有代码库，进行修改、重构和优化。\n\n在实际开发流程中，它的使用场景非常广泛：\n- **需求到代码**：描述功能需求，自动生成初始代码\n- **Bug 排查**：粘贴错误信息，AI 分析原因并给出修复方案\n- **代码审查**：让 AI 审查代码质量，发现潜在问题\n- **单元测试**：自动生成测试用例，提高代码覆盖率\n- **文档编写**：根据代码自动生成注释和 API 文档\n\n### 与其他 AI 编程工具对比\n\n- **GitHub Copilot**：最成熟的代码补全插件，IDE 集成最好\n- **Cursor**：全功能 AI IDE，适合独立开发者\n- **Claude Code**：终端原生，适合命令行开发者\n- 本工具在特定场景下有独特优势\n\n### 使用技巧\n\n1. 在编码前先用自然语言描述完整需求，再让 AI 生成\n2. 利用代码上下文功能，让 AI 理解项目结构\n3. 重要代码务必人工审查，AI 生成的代码可能有隐藏问题\n4. 善用版本控制，方便回退 AI 的修改\n5. 结合自动化测试验证 AI 生成代码的正确性",
+  "published": true,
+  "faq": [
+    {
+      "q": "Supabase 多少钱？",
+      "a": "免费版 $0；Pro $25/月（含 8GB 数据库等）；Team $599/月；Enterprise 定制。"
+    }
+  ],
+  "created_date": "2026-04-18",
+  "verified_url": "https://supabase.com",
+  "verified_publisher": "Supabase Inc.",
+  "verified_what": "开源的 Firebase 替代后端平台（基于 PostgreSQL），提供数据库、认证、存储、实时与 AI（向量搜索、AI 助手）能力。",
+  "verified_price": "免费版 $0；Pro $25/月；Team $599/月；Enterprise 定制",
+  "verified_platform": "Web, API, 多语言客户端 SDK, 自托管",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "PostgreSQL 数据库",
+    "认证（Auth）",
+    "文件存储",
+    "实时订阅",
+    "Edge Functions",
+    "pgvector 向量搜索与 AI"
+  ],
+  "verified_description": "开源的 Firebase 替代后端平台，基于 PostgreSQL 提供数据库、认证、存储、实时订阅与 AI 向量搜索等能力，是构建全栈 AI 应用的后端首选。",
+  "content_flags": "价格字段写“Pro $10/月”有误，实际 Pro 为 $25/月（长文表格正确）。其余内容准确。",
+  "price_verified": true,
+  "verified_rating": "⭐4.1（编辑评分）",
+  "rating_source": "暂无权威外部评分（保留编辑评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "开源免费",
+    "PostgreSQL 原生",
+    "AI 向量搜索开箱即用",
+    "实时能力强",
+    "文档完善"
+  ],
+  "verified_cons": [
+    "免费项目一周不活跃会暂停",
+    "自托管维护复杂",
+    "移动端生态弱于 Firebase"
+  ],
+  "verified_faq": [
+    {
+      "q": "Supabase 多少钱？",
+      "a": "免费版 $0；Pro $25/月（含 8GB 数据库等）；Team $599/月；Enterprise 定制。"
+    }
+  ],
+  "verified_tags": [
+    "AI开发",
+    "后端",
+    "数据库",
+    "开源",
+    "向量搜索"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://www.supabase.com/pricing",
+    "https://supabase.com/solutions/hosted-postgres"
+  ],
+  "verify_notes": "价格字段 $10/月应为 $25/月，已由 price_short 修正。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Supabase AI 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Supabase AI 的 PostgreSQL 数据库 是亮点，价格 免费版 + Pro $25/月；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

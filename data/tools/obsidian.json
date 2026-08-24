@@ -1,0 +1,99 @@
+{
+  "name": "Obsidian",
+  "slug": "obsidian",
+  "positioning": "Obsidian是什么？本地优先双链笔记与AI知识管理好用吗",
+  "auto_positioning": false,
+  "emoji": "🔗",
+  "color": "#8B6CEF",
+  "description": "Obsidian 是一款本地优先（local-first）的 Markdown 笔记与知识管理软件，所有笔记以纯文本 Markdown 文件保存在你自己的设备上，通过双向链接和图谱视图把零散想法连成知识网络。它拥有上千款社区插件，并可通过 Copilot、Smart Connections 等插件接入 AI，成为很多用户构建「第二大脑」的首选。",
+  "category": "AI效率",
+  "tags": [
+    {
+      "text": "本地笔记"
+    },
+    {
+      "text": "双向链接"
+    },
+    {
+      "text": "知识管理"
+    },
+    {
+      "text": "免费可用",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.8",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://obsidian.md",
+  "price": "个人使用完全免费；官方同步 Obsidian Sync 约 $4/月，发布 Publish 约 $8/月（以官网为准）",
+  "platform": "Windows、macOS、Linux、iOS、Android、Web",
+  "pros": [
+    "本地优先，数据 100% 存在自己设备，隐私和所有权最强",
+    "纯 Markdown 开放格式，永不被供应商锁定，可随时导出迁移",
+    "双向链接 + 图谱视图，构建真正互联的知识网络",
+    "上千款社区插件，AI 能力可通过 Copilot/Smart Connections 等自由扩展",
+    "个人使用完全免费，跨平台同步可选"
+  ],
+  "cons": [
+    "对新手有一定学习曲线，需要自己搭结构",
+    "AI 能力来自第三方插件，需自备 API Key，且非原生",
+    "实时协作弱，偏向个人而非团队云协同"
+  ],
+  "features": [
+    "本地 Markdown 存储：纯文本文件，离线可用",
+    "双向链接与反向链接：笔记互连成网",
+    "图谱视图：可视化笔记关系",
+    "Canvas 画布：无限画布做头脑风暴与图表",
+    "插件生态：1000+ 社区插件扩展功能",
+    "AI 集成：Copilot、Smart Connections 等插件接入 GPT/Claude/本地模型"
+  ],
+  "related": [
+    "notion",
+    "readwise",
+    "chatgpt"
+  ],
+  "content": "## Obsidian 是什么？\nObsidian 是一款「本地优先」的笔记与知识管理软件。和把数据锁在云端的笔记 App 不同，Obsidian 把你所有的笔记以纯文本 Markdown 文件存在你自己的电脑/手机上——你拥有数据，也拥有永久可访问性。它的灵魂是「双向链接」：在笔记之间建立连接，零散的想法就会长成一张可可视化的知识网络，这也是很多人拿它搭建「第二大脑」的原因。\n\n它不追求花哨，而是把「长期、私密、可拥有」放在第一位。上千款社区插件让它能无限扩展，而 AI 能力的加入（通过插件）则让它从被动记录升级为主动辅助思考。\n\n## 核心功能\n1. **本地 Markdown 存储**：纯文本文件，离线可用，永不被锁定。\n2. **双向链接与反向链接**：笔记互相引用，自然形成知识网。\n3. **图谱视图**：把笔记关系画成图，一眼看清结构。\n4. **Canvas 画布**：无限白板，做头脑风暴和关系图。\n5. **插件生态**：1000+ 社区插件，从任务管理到 AI 一应俱全。\n6. **AI 集成**：Copilot、Smart Connections 等插件接入 GPT/Claude/本地模型，做问答、语义检索、RAG 聊天。\n\n## 版本/套餐对比\n| 方案 | 价格 | 说明 |\n| --- | --- | --- |\n| 个人版 | 免费 | 核心功能无限使用 |\n| Obsidian Sync | 约 $4/月 | 端到端加密多端同步 |\n| Obsidian Publish | 约 $8/月 | 把笔记发布成网站 |\n| 商业许可 | 约 $50/用户/年 | 工作/团队用途 |\n（价格以官网为准）\n\n## 值不值得用？\n最大优点是数据完全本地、隐私最强、格式开放、插件极其丰富，而且个人使用免费。缺点也明显：新手有学习曲线，要自己搭结构；AI 不是原生的，得装插件、自备 API Key；实时协作弱，不适合强团队云协同。结论——重视隐私、想长期沉淀知识、愿意折腾的人，Obsidian 几乎是首选；想要开箱即用的团队协作者，可能更适合 Notion。\n\n## 使用建议\n从「Daily Note + 双向链接」起步，别一上来装几十个插件；AI 推荐先试 Copilot（对话+知识库问答）或 Smart Connections（语义发现关联笔记）；重要内容开 Obsidian Sync 加密备份，避免只存单设备。\n\n## 适合谁用？\n- **推荐**：研究者、写作者、注重隐私的长期知识管理者、极客。\n- **可考虑**：学生、需要本地整理资料的人，免费版已够用。\n- **不推荐**：需要多人实时协作、希望零配置即用的团队用户。",
+  "published": true,
+  "faq": [
+    {
+      "question": "Obsidian 免费吗？",
+      "answer": "核心功能个人使用完全免费，Sync 和 Publish 为付费附加服务。"
+    },
+    {
+      "question": "Obsidian 有内置 AI 吗？",
+      "answer": "没有原生 AI，需通过 Copilot、Smart Connections 等社区插件接入大模型。"
+    },
+    {
+      "question": "Obsidian 数据存在哪里？",
+      "answer": "默认保存在本地设备，支持可选的端到端加密同步。"
+    },
+    {
+      "question": "Obsidian 和 Notion 怎么选？",
+      "answer": "重视隐私、本地 ownership 和知识图谱选 Obsidian；需要团队实时协作选 Notion。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Obsidian",
+    "Obsidian怎么样",
+    "Obsidian免费版",
+    "Obsidian使用教程",
+    "Obsidian和哪个好"
+  ],
+  "source_urls": [
+    "https://obsidian.md",
+    "https://www.macaiapps.com/apps/obsidian",
+    "https://ai-nav.vercel.app/articles/best-ai-note-taking-apps-2025",
+    "https://aiproducthub.cn/sites/obsidian-ai-note-knowledge-management.html"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-18"
+}

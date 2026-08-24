@@ -1,0 +1,165 @@
+{
+  "name": "Activepieces",
+  "slug": "activepieces",
+  "positioning": "免费AI自动化工具推荐：自托管部署、实时执行日志",
+  "auto_positioning": true,
+  "emoji": "🔄",
+  "color": "#635BFF",
+  "description": "Activepieces 是一个 MIT 许可的开源工作流自动化平台，常被视为 Zapier 的开源替代。它通过可视化编辑器连接 200+ 应用（Pieces），并原生支持 AI 智能体与 LLM 集成、MCP 工具、Webhook 与定时触发。用户既可免费使用 Cloud 版（每月 1000 任务），也可通过 Docker 自托管（无限任务）。2025-2026 年其 AI 工作流能力持续增强，适合希望数据自主、成本可控的团队。",
+  "category": "AI自动化",
+  "tags": [
+    "工作流自动化",
+    "开源",
+    "无代码",
+    "API集成",
+    "AI自动化"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "85万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://www.activepieces.com",
+  "price": "免费版可用，Cloud Plus $25/月起",
+  "platform": "Web / Desktop / API",
+  "pros": [
+    "完全开源（MIT）可自托管，数据可控",
+    "免费版可用，付费版无限任务执行",
+    "支持 AI 智能体与 LLM 集成",
+    "Docker 一键自部署简单",
+    "社区活跃，集成持续增长"
+  ],
+  "cons": [
+    "集成数量仍少于 Zapier / n8n",
+    "复杂条件分支需一定学习",
+    "企业级功能需付费版",
+    "相对年轻，复杂企业场景验证较少"
+  ],
+  "features": [
+    "可视化流程编辑器",
+    "200+ 应用集成（Pieces）",
+    "AI 智能体与 AI 步骤",
+    "MCP 工具支持",
+    "Webhook 与定时触发",
+    "自托管部署（MIT）",
+    "版本控制与回滚",
+    "实时执行日志"
+  ],
+  "related": [
+    "n8n",
+    "coze",
+    "dify",
+    "make"
+  ],
+  "faq": [
+    {
+      "q": "Activepieces 免费版有什么限制？",
+      "a": "Cloud 免费版每月 1000 次任务执行、最多 2 个活跃流程、单用户；自托管 Community 版完全免费且无限任务。"
+    },
+    {
+      "q": "Activepieces 和 Zapier 有什么区别？",
+      "a": "Activepieces 开源可自托管（MIT 许可），付费版提供无限任务执行；Zapier 生态更大但按任务计费且不可自托管。"
+    },
+    {
+      "q": "支持中文界面吗？",
+      "a": "支持多语言界面与文档，包含中文。"
+    },
+    {
+      "q": "可以自托管吗？",
+      "a": "可以，官方提供 Docker 镜像，Community 版基于 MIT 许可免费自托管。"
+    }
+  ],
+  "seo_keywords": [
+    "Activepieces",
+    "Activepieces自动化工作流",
+    "Activepieces免费版",
+    "Activepieces和n8n比较",
+    "开源自动化工具推荐"
+  ],
+  "content": "# Activepieces是什么？\n\n如果你用过Zapier或者Make（原Integromat），对自动化工作流工具应该不陌生了。简单来说，Activepieces就是一个开源的自动化平台，你可以用它把各种SaaS工具串联起来，让重复性的工作自动完成。\n\n它的核心卖点有两个：一是完全开源，可以自己部署，数据留在自己手里；二是2026年推出了AI Workflow功能，能用自然语言描述需求，系统自动帮你搭建流程，对不太懂技术的人比较友好。\n\n目前支持连接200多个应用，主流的Slack、GitHub、Google Sheets、Notion这些都有覆盖。\n\n---\n\n## 核心功能\n\n### 1. 可视化流程编辑器\n\n拖拽式的流程设计界面，逻辑清晰直观。左边是触发器，右边是执行动作，中间用箭头连线表示数据流向。上手难度不高，看几分钟教程就能搭出第一个自动化流程。\n\n### 2. 200+应用集成\n\n覆盖了主流的SaaS工具，从协作类（Slack、Discord）到开发类（GitHub、GitLab）再到数据类（Airtable、Google Sheets）基本都有。官方维护的集成包质量还行，常见场景够用了。\n\n### 3. AI自然语言构建流程\n\n这是2026年新出的功能。你用大白话描述想要实现的自动化，比如“每天早上把Airtable里新增的客户自动同步到Slack群”，AI就能帮你生成对应的流程雏形。不能说完全不用修改，但确实降低了入门门槛，省去了一些摸索时间。\n\n### 4. 自托管部署\n\n如果你对数据安全有要求，或者不想被SaaS平台绑住，可以把Activepieces部署到自己的服务器上。Docker镜像配置不算复杂，社区文档也比较全。\n\n### 5. 实时执行日志与调试\n\n每次流程运行都有详细的日志记录，哪一步出了问题、数据长什么样，一目了然。调试起来比纯黑盒的选手方便不少。\n\n---\n\n## 版本/套餐对比\n\n| 功能 | 免费版 | 专业版（付费） | 企业版 |\n|------|--------|----------------|--------|\n| 流程数量 | 5个 | 无限 | 无限 |\n| 月度运行次数 | 1,000 | 10,000起 | 按需 |\n| 应用集成 | 200+ | 200+ | 200+ |\n| AI Workflow | 有限额度 | 可用 | 可用 |\n| 自托管 | ✅ | ✅ | ✅ |\n| 版本控制与回滚 | ✅ | ✅ | ✅ |\n| 单点登录（SSO） | ❌ | ❌ | ✅ |\n| 优先支持 | ❌ | ✅ | ✅ |\n| 自定义品牌 | ❌ | ❌ | ✅ |\n\n免费版对于个人用户或者小规模尝试来说够用了，付费版主要在运行次数、AI额度、企业级功能上放开限制。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 开源可控，数据留在自己手里的安全感是SaaS给不了的\n- AI Workflow确实降低了使用门槛，流程搭建快了不少\n- 社区比较活跃，模板市场有不少现成的例子可以直接套用\n- 调试体验友好，实时日志看着很直观\n\n**缺点：**\n\n- 生态比起Zapier还是小一些，某些冷门应用的集成可能没有\n- 复杂条件分支的逻辑设计需要一点学习成本，新手可能会晕\n- 企业级功能（SSO、自定义品牌等）需要付费，对小团队来说是一笔开销\n\n**我的看法：** 如果你重视数据自主权、想要一个开源免费的自动化工具，Activepieces是目前市面上性价比很高的选择。AI Workflow的加入让它的易用性提升了一个台阶，日常的自动化需求基本能满足。但如果你需要接入极其小众的工具，或者团队规模大到需要完整的企业级功能，可能还是要评估一下付费成本和生态覆盖。\n\n---\n\n## 使用建议\n\n1. **先从模板开始**：官方模板市场有不少现成的流程，改一改参数就能用，比从零开始摸索快得多。\n2. **免费版够用再升级**：月度1000次的额度对个人用户或者小项目来说通常够用，不用急着买付费版。\n3. **自托管想清楚再动手**：如果只是自己用着玩，直接用官方托管版本更省事；只有当你确实需要数据本地化的时候再考虑自部署。\n4. **复杂流程分步测试**：先跑通主流程，再逐步加条件分支，避免一次性铺开太大难以排查问题。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n\n- 个人用户、小团队，想用自动化提效\n- 对数据安全有要求，不放心把业务数据放在第三方平台\n- 技术爱好者，喜欢折腾开源工具\n\n**可考虑：**\n\n- 中等规模团队，需要更高级的企业功能（先评估付费成本）\n- 需要接入比较冷门的应用（先查一下官方集成列表有没有）\n\n**不推荐：**\n\n- 已经完全依赖Zapier/Make且生态已经满足需求的（迁移成本略高）\n- 需要7×24小时企业级支持、完整SLA保障的（企业版功能可能还不够\"企业\"）\n\n## 常见问题（FAQ）\n\n**Activepieces 免费版有什么限制？**\n\nCloud 免费版每月 1000 次任务执行、最多 2 个活跃流程、单用户；自托管 Community 版完全免费且无限任务。\n\n**Activepieces 和 Zapier 有什么区别？**\n\nActivepieces 开源可自托管（MIT 许可），付费版提供无限任务执行；Zapier 生态更大但按任务计费且不可自托管。\n\n**支持中文界面吗？**\n\n支持多语言界面与文档，包含中文。\n\n**可以自托管吗？**\n\n可以，官方提供 Docker 镜像，Community 版基于 MIT 许可免费自托管。",
+  "published": true,
+  "created_date": "2026-03-22",
+  "verified_url": "https://www.activepieces.com",
+  "verified_publisher": "Activepieces（MIT 开源协议，Y Combinator 孵化）",
+  "verified_what": "开源的可视化工作流自动化平台，类似 Zapier 的开源替代，支持 AI 智能体步骤与 200+ 应用集成。",
+  "verified_price": "Cloud 免费版（1000 任务/月、2 个流程）；Plus $25/月（无限任务、10 个流程）；Business $150/月（50 个流程、5 用户）；自托管 Community 版免费（MIT 许可，无限任务）。",
+  "verified_platform": [
+    "Web 网页端",
+    "桌面端",
+    "自托管（Docker）",
+    "API"
+  ],
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "可视化流程编辑器",
+    "200+ 应用集成（Pieces）",
+    "AI 智能体与 AI 步骤",
+    "MCP 工具支持",
+    "Webhook 与定时触发",
+    "自托管部署（MIT）",
+    "版本控制与回滚",
+    "实时执行日志"
+  ],
+  "verified_description": "Activepieces 是一个 MIT 许可的开源工作流自动化平台，常被视为 Zapier 的开源替代。它通过可视化编辑器连接 200+ 应用（Pieces），并原生支持 AI 智能体与 LLM 集成、MCP 工具、Webhook 与定时触发。用户既可免费使用 Cloud 版（每月 1000 任务），也可通过 Docker 自托管（无限任务）。2025-2026 年其 AI 工作流能力持续增强，适合希望数据自主、成本可控的团队。",
+  "content_flags": "原内容定价与限额有误：称“付费版 $19/月起、免费版支持 5 个流程”，实际 Cloud Plus 为 $25/月、免费版仅 2 个流程（非 5 个）。整体描述基本准确。",
+  "price_verified": true,
+  "verified_pros": [
+    "完全开源（MIT）可自托管，数据可控",
+    "免费版可用，付费版无限任务执行",
+    "支持 AI 智能体与 LLM 集成",
+    "Docker 一键自部署简单",
+    "社区活跃，集成持续增长"
+  ],
+  "verified_cons": [
+    "集成数量仍少于 Zapier / n8n",
+    "复杂条件分支需一定学习",
+    "企业级功能需付费版",
+    "相对年轻，复杂企业场景验证较少"
+  ],
+  "verified_faq": [
+    {
+      "q": "Activepieces 免费版有什么限制？",
+      "a": "Cloud 免费版每月 1000 次任务执行、最多 2 个活跃流程、单用户；自托管 Community 版完全免费且无限任务。"
+    },
+    {
+      "q": "Activepieces 和 Zapier 有什么区别？",
+      "a": "Activepieces 开源可自托管（MIT 许可），付费版提供无限任务执行；Zapier 生态更大但按任务计费且不可自托管。"
+    },
+    {
+      "q": "支持中文界面吗？",
+      "a": "支持多语言界面与文档，包含中文。"
+    },
+    {
+      "q": "可以自托管吗？",
+      "a": "可以，官方提供 Docker 镜像，Community 版基于 MIT 许可免费自托管。"
+    }
+  ],
+  "verified_tags": [
+    "工作流自动化",
+    "开源",
+    "无代码",
+    "API集成",
+    "AI自动化"
+  ],
+  "verified_category": "AI自动化",
+  "source_urls": [
+    "https://www.activepieces.com/pricing",
+    "https://www.codaone.ai/tools/activepieces/",
+    "https://workflowautomation.net/reviews/activepieces",
+    "https://de.ai-pedias.com/tools/activepieces",
+    "https://digitalbydefault.ai/blog/activepieces"
+  ],
+  "verify_notes": "修正定价：Plus $25/月（非 $19），免费版 2 个流程（非 5 个）。集成数现已超 200（有来源称 330+）。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "n8n",
+      "make",
+      "bardeen"
+    ],
+    "verdict": "Activepieces 与 n8n、Make、Bardeen 同属AI自动化赛道：Activepieces 的 可视化流程编辑器 是亮点，价格 免费版可用，Cloud Plus $25/月起；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

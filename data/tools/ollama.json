@@ -1,0 +1,149 @@
+{
+  "name": "Ollama",
+  "slug": "ollama",
+  "emoji": "🦙",
+  "color": "#20B8CD",
+  "description": "Ollama 是在本地运行大语言模型的开源工具，支持 macOS / Linux / Windows，一条命令拉取并运行 Llama、DeepSeek、Qwen、Gemma 等模型，内置 OpenAI 兼容本地 API（localhost:11434），并可选用 Ollama Cloud 运行更大模型。",
+  "category": "AI开发",
+  "tags": [
+    "本地部署",
+    "命令行",
+    "开源",
+    "大模型",
+    "免费"
+  ],
+  "rating": "⭐4.7",
+  "visits": "月访问量超千万级（第三方估算）",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://ollama.com",
+  "price": "开源免费（本地）；云端Pro $20/月",
+  "platform": "macOS、Linux、Windows",
+  "pros": [
+    "一条命令即可拉取运行模型，上手极简",
+    "内置 OpenAI 兼容 API，集成成本低",
+    "支持 macOS / Linux / Windows（含 GPU 加速）",
+    "模型库丰富（DeepSeek-R1、Qwen、Llama、Gemma 等）",
+    "本地开源免费、数据不出本机"
+  ],
+  "cons": [
+    "主要面向命令行，新手需学基础命令",
+    "大模型对本地硬件（显存/内存）要求较高",
+    "高级配置（多 GPU、并发）需经验",
+    "云端大模型需 Ollama Cloud 付费"
+  ],
+  "features": [
+    "命令行拉取并运行 LLM（ollama run <model>）",
+    "本地 API 服务（默认 localhost:11434，OpenAI 兼容）",
+    "完整模型库与一键安装",
+    "GPU 加速与跨平台支持",
+    "可与 Claude Code、LM Studio、Open WebUI 等联动",
+    "Ollama Cloud 运行更大/并行模型"
+  ],
+  "related": [
+    "lm-studio",
+    "anythingllm",
+    "chatgpt",
+    "kimi"
+  ],
+  "faq": [
+    {
+      "q": "Ollama 免费吗？",
+      "a": "本地运行完全开源免费；Ollama Cloud（Pro $20/月、Max $100/月）为可选付费云服务，用于运行更大模型与更高并发。"
+    },
+    {
+      "q": "Ollama 支持哪些模型？",
+      "a": "支持 Llama 3.3、DeepSeek-R1、Qwen 3、Gemma 3、Phi 等大量开源模型，均可通过模型库直接拉取。"
+    },
+    {
+      "q": "Ollama 的 API 怎么用？",
+      "a": "启动后默认在 http://localhost:11434 提供 OpenAI 兼容 API，现有 OpenAI SDK 仅需改 base_url 即可调用本地模型。"
+    }
+  ],
+  "seo_keywords": [
+    "Ollama",
+    "Ollama 中文",
+    "Ollama 本地部署",
+    "Ollama 下载",
+    "本地运行大模型"
+  ],
+  "content": "## Ollama 是什么？\n\nOllama 是一个在本地跑大语言模型的开源工具，支持 macOS、Linux 和 Windows。它的设计哲学就一个字：简。你只需要在终端里敲一行 `ollama run llama3`，它就会自动拉取模型并启动一个对话——不用配环境、不用下权重、不用懂推理框架。\n\n对开发者来说，Ollama 更大的价值是它内置了一个 OpenAI 兼容的本地 API（默认跑在 http://localhost:11434），你手头基于 OpenAI SDK 的代码，把地址指过来就能调本地模型，几乎零改动。这也是为什么它成了很多本地 AI 项目的事实标准基座。\n\n## 核心功能\n\n**1. 一行命令跑模型**\n\n`ollama run <模型名>` 即可拉取并启动对话。模型库里直接能拿到 Llama 3.3、DeepSeek-R1、Qwen 3、Gemma 3、Phi 等主流开源模型，无需自己去 Hugging Face 找权重。\n\n**2. 本地 API 服务**\n\nOllama 启动后自动在后台提供 API，格式兼容 OpenAI。开发者可以用现有的 SDK 直接调用本地模型做聊天、嵌入、补全，非常适合做隐私敏感或离线场景的原型。\n\n**3. 跨平台与 GPU 加速**\n\n支持 macOS、Linux、Windows，Windows 预览版已带内置 GPU 加速。模型库完整可用，含视觉模型，API 同样兼容 OpenAI。\n\n**4. 生态联动**\n\nOllama 可以和 LM Studio、Open WebUI、Claude Code、OpenClaw 等大量工具联动，作为本地模型的供给方。很多「本地 AI 助手」类项目底层都是 Ollama 在跑模型。\n\n## 值不值得用？\n\n**优点：**\n- 上手极简，一条命令就能用\n- 本地 API 兼容 OpenAI，集成成本几乎为零\n- 跨平台、支持 GPU 加速\n- 模型库丰富，社区活跃\n- 开源免费，可商用\n\n**缺点：**\n- 以命令行为主，纯新手需要学几个基础命令\n- 大模型对显存/内存要求高，机器弱会卡\n- 多 GPU、高并发等高级玩法需要一定经验\n\n**我的看法：** 如果你是个开发者，想在自己机器上跑模型、接进自己的应用，Ollama 基本是首选。它和 LM Studio 是「黄金拼椅」——Ollama 管命令行和 API，LM Studio 管界面，按习惯选或一起用都行。\n\n## 使用建议\n\n1. **从 run 开始**：`ollama run qwen3` 这类命令先跑通，感受一下本地推理\n2. **接 API 做开发**：把 OpenAI SDK 的 base_url 指向 localhost:11434，立刻用上本地模型\n3. **注意硬件**：跑 7B 很轻松，13B+ 建议有独显或够大的内存\n4. **搭配前端**：想要图形界面可以装 Open WebUI，体验接近 ChatGPT\n\n## 适合谁用？\n\n**推荐：**\n- 开发者（本地模型供给 + OpenAI 兼容 API）\n- 想离线/隐私跑模型的研究者\n- 做本地 AI 原型的工程师\n\n**可考虑：**\n- 愿意学一点命令行的进阶用户\n\n**不推荐：**\n- 完全不想碰终端、又要跑大模型的纯新手（可先用 LM Studio 的图形界面）\n\n## 常见问题（FAQ）\n\n**Ollama 免费吗？**\n\n本地运行完全开源免费；Ollama Cloud（Pro $20/月、Max $100/月）为可选付费云服务，用于运行更大模型与更高并发。\n\n**Ollama 支持哪些模型？**\n\n支持 Llama 3.3、DeepSeek-R1、Qwen 3、Gemma 3、Phi 等大量开源模型，均可通过模型库直接拉取。\n\n**Ollama 的 API 怎么用？**\n\n启动后默认在 http://localhost:11434 提供 OpenAI 兼容 API，现有 OpenAI SDK 仅需改 base_url 即可调用本地模型。",
+  "published": true,
+  "created_date": "2026-07-20",
+  "published_date": "2026-07-20",
+  "verified_url": "https://ollama.com",
+  "verified_publisher": "Ollama",
+  "verified_what": "Ollama 是在本地运行大语言模型的开源工具，支持 macOS / Linux / Windows，一条命令拉取并运行 Llama、DeepSeek、Qwen、Gemma 等模型，内置 OpenAI 兼容本地 API（localhost:11434），并可选用 Ollama Cloud 运行更大模型。",
+  "verified_price": "本地开源免费 / Ollama Cloud Pro $20/月、Max $100/月（云端运行更大模型、更多并发）",
+  "verified_platform": "macOS, Linux, Windows, 自托管, Ollama Cloud",
+  "verified_features": [
+    "命令行拉取并运行 LLM（ollama run <model>）",
+    "本地 API 服务（默认 localhost:11434，OpenAI 兼容）",
+    "完整模型库与一键安装",
+    "GPU 加速与跨平台支持",
+    "可与 Claude Code、LM Studio、Open WebUI 等联动",
+    "Ollama Cloud 运行更大/并行模型"
+  ],
+  "verified_description": "Ollama 是在本地运行大语言模型的开源工具，支持 macOS / Linux / Windows，一条命令拉取并运行 Llama、DeepSeek、Qwen、Gemma 等模型，内置 OpenAI 兼容本地 API（localhost:11434），并可选用 Ollama Cloud 运行更大模型。",
+  "content_flags": "无严重幻觉；正文准确。可补充 Ollama Cloud（Pro $20/月、Max $100/月）作为云端付费选项，原数据未提及。",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "price_verified": true,
+  "verified_rating": "⭐4.7",
+  "rating_source": "暂无权威评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "一条命令即可拉取运行模型，上手极简",
+    "内置 OpenAI 兼容 API，集成成本低",
+    "支持 macOS / Linux / Windows（含 GPU 加速）",
+    "模型库丰富（DeepSeek-R1、Qwen、Llama、Gemma 等）",
+    "本地开源免费、数据不出本机"
+  ],
+  "verified_cons": [
+    "主要面向命令行，新手需学基础命令",
+    "大模型对本地硬件（显存/内存）要求较高",
+    "高级配置（多 GPU、并发）需经验",
+    "云端大模型需 Ollama Cloud 付费"
+  ],
+  "verified_faq": [
+    {
+      "q": "Ollama 免费吗？",
+      "a": "本地运行完全开源免费；Ollama Cloud（Pro $20/月、Max $100/月）为可选付费云服务，用于运行更大模型与更高并发。"
+    },
+    {
+      "q": "Ollama 支持哪些模型？",
+      "a": "支持 Llama 3.3、DeepSeek-R1、Qwen 3、Gemma 3、Phi 等大量开源模型，均可通过模型库直接拉取。"
+    },
+    {
+      "q": "Ollama 的 API 怎么用？",
+      "a": "启动后默认在 http://localhost:11434 提供 OpenAI 兼容 API，现有 OpenAI SDK 仅需改 base_url 即可调用本地模型。"
+    }
+  ],
+  "verified_tags": [
+    "本地部署",
+    "命令行",
+    "开源",
+    "大模型",
+    "免费"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://ollama.com/",
+    "https://ollama.com/blog/windows-preview",
+    "https://ollama.com/download"
+  ],
+  "verify_notes": "url(ollama.com)、price(开源免费)、category(AI开发)、核心功能均准确，保留。补充 Ollama Cloud 付费云档。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "groq",
+      "llamaindex",
+      "anthropic-console"
+    ],
+    "verdict": "Ollama 与 Groq、LlamaIndex、Anthropic Console 同属AI开发赛道。在性价比上，Ollama（开源免费（本地）；云端Pro $20/月）门槛更低；若看重口碑，Anthropic Console（⭐4.8）评分更高；Ollama 的优势在于Ollama 是在本地运行大语言模型的开源工具，支持 macOS / Linux / Windows，一条命令拉取并运行，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

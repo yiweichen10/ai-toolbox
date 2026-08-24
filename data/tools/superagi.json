@@ -1,0 +1,147 @@
+{
+  "name": "SuperAGI",
+  "slug": "superagi",
+  "emoji": "🤖",
+  "color": "#3B82F6",
+  "description": "SuperAGI 是社区驱动的开源自主 AI 智能体框架（托管于 GitHub，发布方 TransformerOptimus），用于构建、管理与运行自主代理；其团队同时提供面向快速上手的商业化云端平台 SuperAGI Cloud。",
+  "category": "AI开发",
+  "tags": [
+    "开源",
+    "自主代理",
+    "多代理"
+  ],
+  "rating": "⭐4.5（编辑评分）",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://superagi.com/",
+  "price": "开源免费 + Cloud 定制",
+  "platform": "Web, CLI, Cloud",
+  "pros": [
+    "完全开源，可自由定制和部署",
+    "提供可视化画布，降低代理构建门槛",
+    "支持多种工具和知识库集成（如 Slack、Google Drive、GitHub）",
+    "内置任务队列和资源管理，适合复杂工作流",
+    "活跃的社区与持续更新"
+  ],
+  "cons": [
+    "文档和教程尚不够完善，新手上手有一定学习成本",
+    "在复杂多代理场景下稳定性偶有波动",
+    "部分高级功能依赖外部 API，需要额外配置"
+  ],
+  "features": [
+    "自主智能体构建、管理与运行（可视化 GUI + Action Console）",
+    "工具市场（Marketplace）与多工具/向量库集成",
+    "多代理并发管理与资源调度",
+    "代理记忆存储与 ReAct 工作流",
+    "性能遥测与 token 用量优化"
+  ],
+  "related": [
+    "crew-ai",
+    "langgraph"
+  ],
+  "faq": [
+    {
+      "q": "SuperAGI 是免费的吗？",
+      "a": "SuperAGI 开源框架完全免费（MIT 许可证），可自行部署；官方也提供 SuperAGI Cloud 云端版本方便快速体验，具体价格未公开。"
+    },
+    {
+      "q": "SuperAGI 和 AutoGPT 有什么区别？",
+      "a": "SuperAGI 提供了更友好的可视化界面和更完善的任务管理功能，更适合非技术用户和团队协作；AutoGPT 更偏向命令行和单代理场景。"
+    },
+    {
+      "q": "SuperAGI 支持哪些工具集成？",
+      "a": "支持搜索、网页浏览、代码执行、Slack、Google Drive、GitHub、Jira 等多种工具，且可通过插件系统扩展。"
+    },
+    {
+      "q": "如何快速开始使用 SuperAGI？",
+      "a": "可以通过 Docker 一键部署，或使用官方云端版本；官方文档有详细的安装指南和示例教程。"
+    }
+  ],
+  "seo_keywords": [
+    "SuperAGI",
+    "SuperAGI怎么样",
+    "SuperAGI免费版",
+    "SuperAGI使用教程",
+    "SuperAGI和哪个好"
+  ],
+  "content": "## SuperAGI 是什么？\n\n简单说，SuperAGI 是一个开源的“AI智能体”框架。如果你想让 AI 不只是聊天，而是能主动执行任务——比如自动整理邮件、监控 GitHub 动态、跨平台调度工作流——那它就是为你准备的。\n\n它把底层的模型调用、工具集成、任务调度这些复杂逻辑封装好，提供可视化界面让你搭建和运行自主 AI 代理。代码完全开源，你可以本地部署，也可以上 Docker 进行云扩展。用过的朋友普遍感觉：它比 LangChain 更“开箱即用”，比 AutoGPT 更可控，适合需要长期运行、多步骤协作的自动化场景。\n\n## 核心功能\n\n1. **自主代理构建与运行**  \n   你只需定义目标和工具，代理就会自主分解任务、调用API、处理结果。实际使用中，它比单纯写 prompt 更稳定，因为内置了任务重试和异常处理。\n\n2. **可视化工作流编排**  \n   提供一块画布，拖拽就能搭建代理之间的协作链路。比如“A 代理抓取数据 → B 代理清洗 → C 代理写报告”。门槛降低很多，不需要懂代码也能快速验证想法。\n\n3. **多代理协作与通信**  \n   支持多个代理互相传递消息和结果。例如一个负责监控，另一个负责决策，第三个执行。听起来复杂，但框架帮你管理了冲突和同步，在实际项目里能把大型自动化拆解成小块。\n\n4. **丰富的工具和插件系统**  \n   内置 Slack、Google Drive、GitHub、浏览器等集成，也支持自定义插件。扩展性强，你需要的常见 SaaS 基本都覆盖了。不过部分工具需要额外配 API Key。\n\n5. **内置知识库和记忆管理**  \n   代理可以存储上下文和长期记忆，不是每次启动都从头开始。配合向量数据库（如 Pinecone），能实现基于历史任务的持续学习，适合客服、文档处理等场景。\n\n## 版本/套餐对比\n\n| 版本     | 开源版（自部署）               | 云版（如有，需自行核实） |\n|----------|--------------------------------|--------------------------|\n| 费用     | 免费（需自行承担服务器成本）   | 价格暂未公开，提供免费试用/免费版 |\n| 部署方式 | Docker / 本地 Python          | 平台托管                 |\n| 定制程度 | 完全自由，可修改源码           | 限制于平台能力           |\n| 适用场景 | 开发、测试、自用               | 生产环境、团队协作       |\n\n*注：云版的具体功能差异请参考官方文档，当前信息以官网为准。*\n\n## 值不值得用？\n\n**优点**  \n- 真正开源，社区活跃，更新快，Bug 修复及时。  \n- 可视化画板真的香，非技术用户也能快速上手基础编排。  \n- 任务队列和资源管理做得扎实，适合长时间运行的工作流。\n\n**缺点**  \n- 文档确实还欠缺火候，新手看官方 wiki 容易卡住，更多依赖社区和 GitHub Issues。  \n- 多代理并发时偶尔出现稳定性波动（内存泄漏或代理死锁），虽然社区在持续改进，但生产环境建议加监控。  \n- 高级功能（如使用 GPT-4 或特定向量数据库）需要额外配置 API 和依赖，不是完全的“零配置”。\n\n**总体结论**：如果你需要构建一个自定义的 AI 自动化系统，且愿意花一点时间排查细节，SuperAGI 是目前开源方案里性价比很高的选择。很值得一试，尤其适合技术团队或有动手能力的个人。\n\n## 使用建议\n\n1. **先跑官方示例**：从 GitHub 上拉取代码，用 Docker 部署，运行一个最简单的“定时抓取网页并总结”的代理，感受整体流程。\n2. **从小任务开始**：不要一开始就设计复杂的多代理协作。先用单代理 + 一个工具摸熟，再逐步加代理和编排。\n3. **善用社区资源**：遇到问题先搜 GitHub Issues 和 Discord，很多坑已经有人填了。\n4. **注意 API 成本**：如果用 GPT-4 或外部知识库，注意 token 消耗，建议设置每日限额。\n5. **定期更新**：SuperAGI 迭代快，尽量保持版本最新，稳定性提升明显。\n\n## 适合谁用？\n\n**推荐**  \n- 有技术背景的开发者 / AI 爱好者  \n- 需要搭建内部自动化工具的初创团队  \n- 对自主 AI 代理感兴趣，愿意动手折腾的学习者\n\n**可考虑**  \n- 非技术但有一定编程基础的产品经理（利用可视化画布快速原型）  \n- 想替代 Zapier/Make 但需要更多定制能力的企业用户（但需承担自部署运维成本）\n\n**不推荐**  \n- 完全没有代码基础，也不想学配置的纯小白（建议先用 Coze / Dify 等托管平台）  \n- 追求开箱即用、无需关注底层稳定性的个人（可能会被偶尔的 Bug 劝退）",
+  "published": true,
+  "source_url": "https://superagi.com/",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "created_date": "2026-07-30",
+  "published_date": "2026-07-30",
+  "conflict_note": "",
+  "verified_url": "https://superagi.com/",
+  "verified_publisher": "TransformerOptimus",
+  "verified_what": "社区驱动的开源自主 AI 智能体框架（GitHub 开源），用于构建、管理与运行自主代理；同时提供 SuperAGI Cloud 云端版本降低部署门槛。",
+  "verified_price": "开源框架免费（MIT 许可证）；SuperAGI Cloud 云端版价格未公开，提供试用。",
+  "verified_platform": "Web, CLI, Cloud",
+  "verified_features": [
+    "自主智能体构建、管理与运行（可视化 GUI + Action Console）",
+    "工具市场（Marketplace）与多工具/向量库集成",
+    "多代理并发管理与资源调度",
+    "代理记忆存储与 ReAct 工作流",
+    "性能遥测与 token 用量优化"
+  ],
+  "verified_description": "SuperAGI 是社区驱动的开源自主 AI 智能体框架（托管于 GitHub，发布方 TransformerOptimus），用于构建、管理与运行自主代理；其团队同时提供面向快速上手的商业化云端平台 SuperAGI Cloud。",
+  "content_flags": "内容基本准确，无严重幻觉。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5（编辑评分）",
+  "rating_source": "编辑评分（站内综合判断）",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全开源，可自由定制和部署",
+    "提供可视化画布，降低代理构建门槛",
+    "支持多种工具和知识库集成（如 Slack、Google Drive、GitHub）",
+    "内置任务队列和资源管理，适合复杂工作流",
+    "活跃的社区与持续更新"
+  ],
+  "verified_cons": [
+    "文档和教程尚不够完善，新手上手有一定学习成本",
+    "在复杂多代理场景下稳定性偶有波动",
+    "部分高级功能依赖外部 API，需要额外配置"
+  ],
+  "verified_faq": [
+    {
+      "q": "SuperAGI 是免费的吗？",
+      "a": "SuperAGI 开源框架完全免费（MIT 许可证），可自行部署；官方也提供 SuperAGI Cloud 云端版本方便快速体验，具体价格未公开。"
+    },
+    {
+      "q": "SuperAGI 和 AutoGPT 有什么区别？",
+      "a": "SuperAGI 提供了更友好的可视化界面和更完善的任务管理功能，更适合非技术用户和团队协作；AutoGPT 更偏向命令行和单代理场景。"
+    },
+    {
+      "q": "SuperAGI 支持哪些工具集成？",
+      "a": "支持搜索、网页浏览、代码执行、Slack、Google Drive、GitHub、Jira 等多种工具，且可通过插件系统扩展。"
+    },
+    {
+      "q": "如何快速开始使用 SuperAGI？",
+      "a": "可以通过 Docker 一键部署，或使用官方云端版本；官方文档有详细的安装指南和示例教程。"
+    }
+  ],
+  "verified_tags": [
+    "开源",
+    "自主代理",
+    "多代理"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://superagi.com/",
+    "https://github.com/TransformerOptimus/SuperAGI"
+  ],
+  "verify_notes": "开源框架与云端商业版并存，定价以云端定制为主。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "SuperAGI 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：SuperAGI 的 自主智能体构建、管理与运行（可视化 GUI + Action Console） 是亮点，价格 开源免费 + Cloud 定制；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "name": "MotherDuck",
+  "slug": "motherduck",
+  "positioning": "免费AI办公工具，AI 函数+本地+云端双执行好用吗",
+  "auto_positioning": true,
+  "emoji": "🦆",
+  "color": "#FF6B00",
+  "description": "MotherDuck 是由 MotherDuck 公司推出的、构建于 DuckDB 之上的无服务器云数据仓库，提供 SQL 与自然语言分析，支持本地与云端混合执行。",
+  "category": "AI办公",
+  "tags": [
+    "数据分析",
+    "云端数据库",
+    "SQL查询"
+  ],
+  "rating": "⭐4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://motherduck.com",
+  "price": "免费 Lite 版 + Business $250/月 起（按量计费）",
+  "platform": "Web、CLI、Python/Node.js/Go 客户端、WebAssembly",
+  "pros": [
+    "基于 DuckDB 提供极速查询性能",
+    "无服务器架构，无需管理基础设施",
+    "支持 CSV、Parquet、JSON 等多种文件格式直接查询",
+    "与 Python、Pandas 和常见 BI 工具无缝集成",
+    "提供免费 Lite 层，便于个人与小型团队上手"
+  ],
+  "cons": [
+    "相对较新，企业级生态与文档仍在完善",
+    "超大规模数据仓库或复杂 ETL 场景能力有限",
+    "数据存于托管云，不支持纯本地部署"
+  ],
+  "features": [
+    "基于 DuckDB 的无服务器云数据仓库，亚秒级查询",
+    "本地+云端双执行（Dual Execution）混合分析",
+    "自然语言转 SQL（MotherDuck MCP Server），供 AI 智能体查询",
+    "免费 Lite 层：10GB 存储 + 10 计算小时/月",
+    "AI 函数（prompt()、embedding()）与 Flights 智能体数据管道"
+  ],
+  "related": [
+    "snowflake-ai",
+    "databricks-ai",
+    "perplexity-ai"
+  ],
+  "faq": [
+    {
+      "q": "MotherDuck 与 DuckDB 是什么关系？",
+      "a": "MotherDuck 是 DuckDB 的云托管版本，无需自建维护即可通过 Web 界面或 API 使用 DuckDB 做数据分析，本地 DuckDB 的 SQL 可无缝迁移到云端。"
+    },
+    {
+      "q": "MotherDuck 免费吗？",
+      "a": "提供免费 Lite 层（10GB 存储 + 10 计算小时/月，无需信用卡），超出后按量计费；Business 套餐 $250/组织/月起，Enterprise 定制。"
+    },
+    {
+      "q": "支持哪些数据源？",
+      "a": "本地文件（CSV、Parquet、JSON 等）、对象存储（S3、GCS、Azure Blob），以及通过连接器查询 Snowflake、PostgreSQL、MySQL 等外部数据库。"
+    },
+    {
+      "q": "可以用 Python 或 R 调用吗？",
+      "a": "可以。提供 Python 与 R 客户端库，支持 Pandas DataFrame，也可用 Node.js 等通过连接字符串接入。"
+    }
+  ],
+  "seo_keywords": [
+    "MotherDuck",
+    "MotherDuck怎么样",
+    "MotherDuck免费版",
+    "MotherDuck使用教程",
+    "MotherDuck和哪个好"
+  ],
+  "content": "## ## MotherDuck是什么？\n\n简单说，MotherDuck 就是把 DuckDB 这个轻量级、高性能的嵌入式数据库搬到了云上，做成一个无服务器的 SQL 分析平台。你可以直接用它查询本地文件（比如 CSV、Parquet），也能秒连 S3、GCS 这些对象存储里的数据，甚至能通过 API 跟 Snowflake、PostgreSQL 做联动。对习惯了本地用 DuckDB 做数据分析的人来说，MotherDuck 等于给了你一个不用管服务器、随时可分享的云端版本。\n\n## ## 核心功能\n\n**1. 云端运行完整的 DuckDB 引擎**  \n跟本地用 DuckDB 体验几乎一致，但跑在云端。你不需要安装任何东西，打开网页就能写 SQL，查询速度依然很快，尤其对小到中型数据集，感受非常丝滑。\n\n**2. 直接查询对象存储（S3、GCS、Azure Blob）**  \n这也是它最实用的地方。你不需要把数据先导入到某个数据库，直接在建表时指向云端文件路径，就能像查本地表一样做分析。对经常跟数据湖打交道的人来说，省去了数据搬运的麻烦。\n\n**3. 提供 REST API 进行数据查询**  \n如果你习惯用代码驱动分析，可以通过 API 直接查询 MotherDuck 里的数据。很多用户会把它集成到自动化脚本或轻量级后端中，比较灵活。\n\n**4. 一键连接外部数据库**  \n支持通过连接器直接查询 Snowflake、PostgreSQL 等外部数据源。这个功能不是简单的复制数据，而是通过联邦查询实现实时访问。当然，性能取决于源库，但对临时对比、小规模联合分析来说是够用的。\n\n**5. Web 界面和 SQL 编辑器 + 查询结果分享**  \n界面做得很干净，写 SQL 有自动补全和结果预览。最方便的是，你可以把查询结果生成一个可分享的链接，甚至嵌入到 Notion、Confluence 这类文档里。团队协作用起来很顺手，不用每个人都装客户端。\n\n## ## 版本/套餐对比\n\n| 版本/套餐 | 说明（基于目前公开信息） |\n| --- | --- |\n| **免费版** | 提供一定额度的查询和数据存储，适合试用和轻量使用。具体配额和限制官方有说明。 |\n| **付费套餐** | 提供更大的计算资源、更多存储空间和协作功能。价格暂未完全公开，需联系官方或查看控制台。 |\n| **企业版** | 面向团队的高级功能，包括单点登录、细粒度权限控制、审计日志等。价格按需定制。 |\n\n> 注意：以上信息基于工具发布时的常见方案，实际以官网最新页面为准。MotherDuck 提供免费试用，建议直接用免费版体验核心功能。\n\n## ## 值不值得用？\n\n**优点**  \n- 查询速度确实快，DuckDB 的底子摆在那里，尤其对 TB 级以下的单机分析，体验远超传统云数仓。  \n- 无服务器架构，零运维，打开浏览器就能用。  \n- 对文件格式支持友好，CSV、Parquet、JSON 直接查，省去导入步骤。  \n- Python、Pandas、BI 工具（如 Tableau、Metabase）都能直接连，集成门槛低。  \n- 分享和协作功能实用，适合小团队快速做数据分析。\n\n**缺点**  \n- 毕竟还比较新，文档和社区支持没有成熟产品那么丰富，遇到冷门问题可能只能翻 GitHub Issue。  \n- 复杂 ETL 或超大规模数据仓库场景下，能力有限。它本质上是并行单机引擎的云端化，不擅长复杂分布式计算，不适合做企业级数仓的核心。  \n- 数据安全完全依赖云端托管，不支持私有化部署。对数据合规要求严的行业（金融、医疗）来说是个硬伤。\n\n**总体结论**  \n如果你主要做中小规模的数据分析（几十 GB 到几 TB），并且想要一个快速启动、无需运维的 SQL 环境，MotherDuck 很值得一试。但如果你需要跑复杂的 ETL 管道、管理几百 TB 的数据，或者必须本地部署，那它目前还不适合。\n\n## ## 使用建议\n\n1. **先试免费版**：注册后直接上传一个你手上的 CSV 或 Parquet 文件，跑几条查询感受一下响应速度，通常几秒内就能有结果。  \n2. **善用对象存储直连**：如果你数据已经放在 S3 或 GCS，不用复制到本地，直接在 MotherDuck 里创建外部表，省时省空间。  \n3. **结合 BI 工具使用**：MotherDuck 支持 Postgres 协议，很多 BI 工具可以直接连。适合做轻量级的临时报表，而不是生产级仪表盘。  \n4. **注意数据量级**：如果单表超过几十 GB，或者查询涉及大量 shuffle 操作，可能会遇到性能瓶颈。建议先小规模验证再决定是否迁移。  \n5. **关注更新**：因为产品迭代快，建议订阅官方博客或 Release Notes，新功能和文档补全速度很快。\n\n## ## 适合谁用？\n\n**👍 推荐**  \n- 数据科学家 / 分析师：手头有中小数据集，想快速用 SQL 探索，又不想装本地数据库。  \n- 小团队或创业公司：需要协作分析数据，但预算有限，不想自己搭数据基础设施。  \n- 经常跟 Parquet、CSV 打交道的数据工程师：用来做数据预览、快速聚合、交叉验证。\n\n**🤔 可考虑**  \n- 想尝试现代云分析工具但不想投入太多学习成本的个人用户。  \n- 需要临时性地查询外部数据库（如 Snowflake 的一个子集）做简单对比的场景。\n\n**❌ 不推荐**  \n- 大型企业核心数仓：数据量上百 TB、需要复杂 ETL 或高并发生产查询的，请绕道。  \n- 数据合规要求严格的行业：比如金融、医疗、政府，如果必须私有化部署，MotherDuck 目前不支持。  \n- 重度依赖 Spark 或 Presto 的现有架构团队：迁移成本高，且 MotherDuck 的能力边界明显。",
+  "published": true,
+  "source_url": "https://motherduck.com",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://motherduck.com",
+  "verified_publisher": "MotherDuck, Inc.（由 DuckDB 原班团队创立）",
+  "verified_what": "基于 DuckDB 的无服务器云数据仓库，提供 SQL 与自然语言查询的混合分析平台",
+  "verified_price": "Lite 免费：10GB 存储 + 10 计算小时/月，最多 3 名内部用户、2 个服务账户；Business $250/组织/月 + 按量计费（存储 $0.04/GB/月，Pulse 计算 $0.60/小时起）；Enterprise 定制报价",
+  "verified_platform": "Web, API, CLI, Python/R/Node.js SDK",
+  "verified_features": [
+    "基于 DuckDB 的无服务器云数据仓库，亚秒级查询",
+    "本地+云端双执行（Dual Execution）混合分析",
+    "自然语言转 SQL（MotherDuck MCP Server），供 AI 智能体查询",
+    "免费 Lite 层：10GB 存储 + 10 计算小时/月",
+    "AI 函数（prompt()、embedding()）与 Flights 智能体数据管道"
+  ],
+  "verified_description": "MotherDuck 是由 MotherDuck 公司推出的、构建于 DuckDB 之上的无服务器云数据仓库，提供 SQL 与自然语言分析，支持本地与云端混合执行。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "编辑评分（非外部权威评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "基于 DuckDB 提供极速查询性能",
+    "无服务器架构，无需管理基础设施",
+    "支持 CSV、Parquet、JSON 等多种文件格式直接查询",
+    "与 Python、Pandas 和常见 BI 工具无缝集成",
+    "提供免费 Lite 层，便于个人与小型团队上手"
+  ],
+  "verified_cons": [
+    "相对较新，企业级生态与文档仍在完善",
+    "超大规模数据仓库或复杂 ETL 场景能力有限",
+    "数据存于托管云，不支持纯本地部署"
+  ],
+  "verified_faq": [
+    {
+      "q": "MotherDuck 与 DuckDB 是什么关系？",
+      "a": "MotherDuck 是 DuckDB 的云托管版本，无需自建维护即可通过 Web 界面或 API 使用 DuckDB 做数据分析，本地 DuckDB 的 SQL 可无缝迁移到云端。"
+    },
+    {
+      "q": "MotherDuck 免费吗？",
+      "a": "提供免费 Lite 层（10GB 存储 + 10 计算小时/月，无需信用卡），超出后按量计费；Business 套餐 $250/组织/月起，Enterprise 定制。"
+    },
+    {
+      "q": "支持哪些数据源？",
+      "a": "本地文件（CSV、Parquet、JSON 等）、对象存储（S3、GCS、Azure Blob），以及通过连接器查询 Snowflake、PostgreSQL、MySQL 等外部数据库。"
+    },
+    {
+      "q": "可以用 Python 或 R 调用吗？",
+      "a": "可以。提供 Python 与 R 客户端库，支持 Pandas DataFrame，也可用 Node.js 等通过连接字符串接入。"
+    }
+  ],
+  "verified_tags": [
+    "数据分析",
+    "云端数据库",
+    "SQL查询"
+  ],
+  "verified_category": "AI办公",
+  "source_urls": [
+    "https://motherduck.com",
+    "https://motherduck.com/pricing"
+  ],
+  "verify_notes": "分类 AI办公 存疑（本质是云数据仓库/数据分析平台），但属可接受范围；尚无权威外部评分，保留编辑评分。",
+  "compare_section": {
+    "competitors": [
+      "tome",
+      "tldv",
+      "slidesai"
+    ],
+    "verdict": "MotherDuck 与 Tome、 tl;dv、SlidesAI 同属AI办公赛道：MotherDuck 的 基于 DuckDB 的无服务器云数据仓库，亚秒级查询 是亮点，价格 免费 Lite 版 + Business $250/月 起（按量计费）；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-12",
+  "created_date": "2026-08-12"
+}

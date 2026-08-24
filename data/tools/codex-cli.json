@@ -1,0 +1,159 @@
+{
+  "name": "Codex CLI",
+  "slug": "codex-cli",
+  "positioning": "免费AI编程工具：沙箱化命令执行+MCP协议支持",
+  "auto_positioning": true,
+  "emoji": "💻",
+  "color": "#10A37F",
+  "description": "OpenAI开源终端编码Agent（npm @openai/codex），通过自然语言完成代码编写、调试和重构。ChatGPT Plus $20/月含配额或自带API Key。4M+周活开发者，GitHub 75K+ stars。2026年新增IDE扩展和Cloud Agent。",
+  "category": "AI编程",
+  "tags": [
+    "CLI工具",
+    "终端编程",
+    "代码生成",
+    "OpenAI",
+    "开源"
+  ],
+  "rating": "⭐ 4.2",
+  "visits": "50万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/openai/codex",
+  "price": "Codex CLI开源免费；ChatGPT Plus($20/月)含配额或自带API Key付费",
+  "price_type": "free",
+  "platform": "macOS/Windows/Linux",
+  "pros": [
+    "开源免费（Apache 2.0），Rust构建，4M+周活开发者",
+    "ChatGPT Plus用户无需额外付费",
+    "AGENTS.md标准被60000+开源项目采用",
+    "MCP集成丰富，可接入GitHub/Linear/Notion等"
+  ],
+  "cons": [
+    "ChatGPT Plus有5小时滚动窗口限制，重度用户易触发",
+    "相比Claude Code在交互式编程和上下文管理上略逊",
+    "纯CLI界面，新手上手有门槛",
+    "与OpenAI Agents SDK定位重叠，造成选择困惑"
+  ],
+  "features": [
+    "终端自然语言代码生成与多文件编辑",
+    "AGENTS.md项目级指令支持",
+    "沙箱化命令执行（可配置审批模式）",
+    "MCP协议支持（接入外部工具）",
+    "ChatGPT Cloud Agent（异步后台任务，自动提交PR）",
+    "VS Code/JetBrains IDE扩展（2026年新增）"
+  ],
+  "related": [
+    "openai-codex",
+    "claude-code",
+    "codesandbox-ai",
+    "tabnine"
+  ],
+  "faq": [
+    {
+      "q": "Codex CLI是免费的吗？",
+      "a": "CLI工具本身开源免费。但运行需要OpenAI API费用或ChatGPT Plus/Pro/Business/Enterprise订阅配额。ChatGPT Plus $20/月包含Codex配额（5小时滚动窗口）。自带API Key则按token计费。"
+    },
+    {
+      "q": "Codex CLI和OpenAI Codex有什么区别？",
+      "a": "它们是同一产品。'Codex CLI'指开源终端工具（npm @openai/codex），'OpenAI Codex'是完整产品品牌，目前包含4个界面：CLI、VS Code/JetBrains IDE扩展、macOS App（Cloud Agent）、ChatGPT Web端。"
+    },
+    {
+      "q": "Codex CLI如何安装？",
+      "a": "npm install -g @openai/codex（需Node 22+）或 brew install --cask codex。不要用'npm i -g codex'（那是另一个包）。认证用ChatGPT账号或自带API Key。"
+    },
+    {
+      "q": "Codex CLI和Claude Code哪个好？",
+      "a": "Codex CLI优势：开源、ChatGPT Plus配额共享、MCP集成好、Rust构建速度快。Claude Code优势：交互式编程体验更好、上下文管理更严格、skills生态更成熟。选择取决于是否需要开源和ChatGPT生态绑定。"
+    }
+  ],
+  "seo_keywords": [
+    "Codex CLI",
+    "Codex CLI怎么用",
+    "Codex CLI免费吗",
+    "命令行代码生成工具",
+    "AI编程助手推荐"
+  ],
+  "content": "# Codex CLI是什么？\n\n简单说，Codex CLI是OpenAI出的一个命令行编程助手。你可以在终端里直接跟它“说话”，让它帮你写代码、修bug、优化代码。它不像那些需要打开浏览器或桌面软件的AI工具，你开着终端就能用，反应也快。\n\n它的定位比较明确——不是要取代开发者，而是帮你干一些重复性的coding活儿，比如生成一段工具函数、解释某行代码什么意思、或者帮你debug一个报错的堆栈。2026年这会儿，它已经是不少开发者日常工作中的“第二双手”了。\n\n---\n\n## 核心功能\n\n**1. 自然语言写代码**\n\n你不用记什么特殊语法，直接用大白话描述需求就行。比如打一行“帮我写个读取CSV文件并返回JSON的Python函数”，它就能给你生成可用的代码片段。生成结果通常可以直接用，稍微调调就能放进项目里。\n\n**2. 调试和错误修复**\n\n遇到报错了，把错误信息贴给它，它能帮你分析可能的原因，甚至直接给出修复方案。实际用下来，简单的语法错误和类型错误它处理得挺快，复杂逻辑问题可能需要多轮对话才能定位。\n\n**3. 代码审查和优化建议**\n\n丢一段代码让它“看看有没有问题”，它会指出一些潜在的性能问题或写法上的改进空间。这个功能适合在提交代码前快速过一遍，算是个免费的血缘检查工具。\n\n**4. 命令行翻译和解释**\n\n有时候接手别人的代码，看半天看不懂某段在干嘛。直接贴给它，让它用“人话”解释一遍是怎么工作的。遇到不熟悉的语言或框架时，这个功能挺实用。\n\n**5. 批量文件和脚本处理**\n\n可以一次性处理多个文件，或者让它帮你写一些自动化脚本。比如“把目录下所有.js文件里的console.log删掉”这种批量操作，它能生成对应的脚本帮你完成。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 适合人群 | 主要区别 |\n|------|----------|----------|\n| **免费开源版** | 个人开发者、学生 | 基本功能开源可用，社区维护 |\n| **Pro版** | 专业开发者、小团队 | 更快响应速度、更长上下文、优先支持 |\n| **Enterprise版** | 企业团队 | 私有部署选项、更高安全保障、专属客服 |\n\n免费版日常写代码够用，如果对响应速度和稳定性要求高，可以考虑Pro版。企业版主要针对有合规要求的团队。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 真的快，启动终端就能用，不用等网页加载\n- 集成度高，跟Git、Vim、VSCode那些工具可以配合着用\n- 开源免费这点很友好，学生党和个人开发者没有成本压力\n- 社区挺活跃，遇到问题容易找到现成的解决方案\n\n**缺点：**\n\n- 纯命令行界面，没用惯终端的人上手有点门槛\n- 功能上比桌面版AI助手弱一些，复杂项目的上下文理解能力有限\n- 国内访问GitHub可能需要代理\n- 没有图形界面，一些新手可能不适应这种交互方式\n\n**总体结论：** 对于日常需要写代码的人，它是个值得试试的工具。尤其如果你本身就在终端里工作，Codex CLI能帮你省不少查文档和改bug的时间。但如果你是完全的新手，或者更喜欢图形化界面，可能需要适应一下。\n\n---\n\n## 使用建议\n\n1. **先从简单任务开始**——让它帮你写个工具函数、解释一段代码，感受一下它的风格和能力，再逐步尝试复杂任务。\n\n2. **学会写好提示词**——虽然用自然语言就行，但需求描述越具体，结果越靠谱。比如比“写个函数”更有效的说法是“写一个接收两个数组参数、返回交集的JavaScript函数”。\n\n3. **结合Git使用**——在提交前让它帮你快速过一遍代码，能 catch 一些低级错误。\n\n4. **注意隐私**——虽然本地运行，但涉及敏感业务代码时还是留个心眼，别什么问题都往里丢。\n\n5. **关注社区动态**——OpenAI的更新频率不低，新功能通常先在社区里讨论，有什么坑也能提前知道。\n\n---\n\n## 适合谁用？\n\n**推荐使用：**\n- 日常在终端工作的开发者\n- 需要快速生成代码片段的学生或自学者\n- 想省掉查文档时间的程序员\n\n**可考虑使用：**\n- 对命令行不熟但愿意学的新手\n- 项目规模较大、需要更强上下文理解能力的团队\n\n**不推荐使用：**\n- 完全不想碰命令行的纯图形界面爱好者\n- 需要高度定制化企业解决方案的大公司（建议直接谈Enterprise）\n\n## 常见问题（FAQ）\n\n**Codex CLI是免费的吗？**\n\nCLI工具本身开源免费。但运行需要OpenAI API费用或ChatGPT Plus/Pro/Business/Enterprise订阅配额。ChatGPT Plus $20/月包含Codex配额（5小时滚动窗口）。自带API Key则按token计费。\n\n**Codex CLI和OpenAI Codex有什么区别？**\n\n它们是同一产品。'Codex CLI'指开源终端工具（npm @openai/codex），'OpenAI Codex'是完整产品品牌，目前包含4个界面：CLI、VS Code/JetBrains IDE扩展、macOS App（Cloud Agent）、ChatGPT Web端。\n\n**Codex CLI如何安装？**\n\nnpm install -g @openai/codex（需Node 22+）或 brew install --cask codex。不要用'npm i -g codex'（那是另一个包）。认证用ChatGPT账号或自带API Key。\n\n**Codex CLI和Claude Code哪个好？**\n\nCodex CLI优势：开源、ChatGPT Plus配额共享、MCP集成好、Rust构建速度快。Claude Code优势：交互式编程体验更好、上下文管理更严格、skills生态更成熟。选择取决于是否需要开源和ChatGPT生态绑定。",
+  "published": true,
+  "created_date": "2026-06-12",
+  "published_date": "2026-06-12",
+  "verified_url": "https://github.com/openai/codex",
+  "verified_publisher": "OpenAI",
+  "verified_what": "OpenAI开源终端编码Agent（npm @openai/codex），运行在本地终端用自然语言完成代码编写、调试和重构，支持ChatGPT Plus配额或自带API Key",
+  "verified_price": "Codex CLI本身开源免费。用量计费：(1)ChatGPT Plus $20/月包含Codex配额（5小时滚动窗口限制）；(2)ChatGPT Pro $200/月含20x配额；(3)自带OpenAI API Key按token计费(GPT-5.3-Codex: 43.75 credits/1M input, 350 credits/1M output)。ChatGPT Business $30/user/月也包含。",
+  "verified_platform": "macOS / Linux / Windows (WSL) — 终端CLI + VS Code扩展 + JetBrains扩展 + macOS App (Cloud Agent)",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "终端自然语言代码生成与多文件编辑",
+    "AGENTS.md项目级指令支持",
+    "沙箱化命令执行（可配置审批模式）",
+    "MCP协议支持（接入外部工具）",
+    "ChatGPT Cloud Agent（异步后台任务，自动提交PR）",
+    "VS Code/JetBrains IDE扩展（2026年新增）"
+  ],
+  "verified_description": "OpenAI开源终端编码Agent（npm @openai/codex），通过自然语言完成代码编写、调试和重构。ChatGPT Plus $20/月含配额或自带API Key。4M+周活开发者，GitHub 75K+ stars。2026年新增IDE扩展和Cloud Agent。",
+  "content_flags": "1. '免费开源'表述不准确——CLI工具本身开源但不免费使用（需要API费用或ChatGPT订阅）。2. 未提及ChatGPT Plus配额限制（5小时滚动窗口）。3. 未提及2026年新增的IDE扩展和macOS Cloud Agent（现在不是纯CLI工具了）。4. 未提及AGENTS.md、MCP、Rust构建等关键技术细节。5. 'Pro版'和'Enterprise版'的描述不准确——Codex没有独立的Pro/Enterprise版本，而是捆绑在ChatGPT订阅层级中。6. 评分4.6偏高，第三方评分约4.2（aicodereview.cc）到4.5（vibecoding.gallery 8.75/10转换）。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.2",
+  "rating_source": "aicodereview.cc 4.2/5; vibecoding.gallery 8.75/10",
+  "rating_verified": true,
+  "verified_pros": [
+    "开源免费（Apache 2.0），Rust构建，4M+周活开发者",
+    "ChatGPT Plus用户无需额外付费",
+    "AGENTS.md标准被60000+开源项目采用",
+    "MCP集成丰富，可接入GitHub/Linear/Notion等"
+  ],
+  "verified_cons": [
+    "ChatGPT Plus有5小时滚动窗口限制，重度用户易触发",
+    "相比Claude Code在交互式编程和上下文管理上略逊",
+    "纯CLI界面，新手上手有门槛",
+    "与OpenAI Agents SDK定位重叠，造成选择困惑"
+  ],
+  "verified_faq": [
+    {
+      "q": "Codex CLI是免费的吗？",
+      "a": "CLI工具本身开源免费。但运行需要OpenAI API费用或ChatGPT Plus/Pro/Business/Enterprise订阅配额。ChatGPT Plus $20/月包含Codex配额（5小时滚动窗口）。自带API Key则按token计费。"
+    },
+    {
+      "q": "Codex CLI和OpenAI Codex有什么区别？",
+      "a": "它们是同一产品。'Codex CLI'指开源终端工具（npm @openai/codex），'OpenAI Codex'是完整产品品牌，目前包含4个界面：CLI、VS Code/JetBrains IDE扩展、macOS App（Cloud Agent）、ChatGPT Web端。"
+    },
+    {
+      "q": "Codex CLI如何安装？",
+      "a": "npm install -g @openai/codex（需Node 22+）或 brew install --cask codex。不要用'npm i -g codex'（那是另一个包）。认证用ChatGPT账号或自带API Key。"
+    },
+    {
+      "q": "Codex CLI和Claude Code哪个好？",
+      "a": "Codex CLI优势：开源、ChatGPT Plus配额共享、MCP集成好、Rust构建速度快。Claude Code优势：交互式编程体验更好、上下文管理更严格、skills生态更成熟。选择取决于是否需要开源和ChatGPT生态绑定。"
+    }
+  ],
+  "verified_tags": [
+    "CLI工具",
+    "终端编程",
+    "代码生成",
+    "OpenAI",
+    "开源"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://github.com/openai/codex",
+    "https://dev.to/jovan_chan_9500711396d4e6/openai-codex-cli-review-2026",
+    "https://vibecoding.gallery/en/tools/openai-codex-cli",
+    "https://aicodereview.cc/tool/openai-codex"
+  ],
+  "verify_notes": "Codex CLI已从单一CLI工具发展为多界面产品家族（CLI + IDE + Cloud + Web）。AGENTS.md标准被60000+项目采用。GitHub 75K+ stars，npm 32M+年安装量。Pro/Team/Enterprise非独立产品定价，而是ChatGPT订阅层级。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "tongyi-lingma",
+      "cline",
+      "lovable"
+    ],
+    "verdict": "Codex CLI 与 通义灵码、Cline、Lovable 同属AI编程赛道。在性价比上，Codex CLI（Codex CLI开源免费；ChatGPT Plus($20/月)含配额或自带API Key付费）门槛更低；若看重口碑，Lovable（⭐4.9）评分更高；Codex CLI 的优势在于OpenAI开源终端编码Agent（npm @openai/codex），运行在本地终端用自然语言完成代码编写、调试和重，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

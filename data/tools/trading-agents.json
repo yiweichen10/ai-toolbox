@@ -1,0 +1,159 @@
+{
+  "name": "TradingAgents",
+  "slug": "trading-agents",
+  "positioning": "免费AI工具推荐：模型无关、多角色 AI 智能体",
+  "auto_positioning": true,
+  "emoji": "📈",
+  "color": "#1E3A5F",
+  "description": "TradingAgents（Tauric Research）是一个开源的多智能体 LLM 金融交易研究框架（MIT 许可），用多个分工协作的 AI 智能体（基本面/情绪/技术分析师、多空研究员、交易员、风控与组合经理）模拟真实交易机构的决策链路，产出可解释的交易分析结论；本体是开源框架，需自带 LLM API 运行，并非按月订阅的量化交易 SaaS。",
+  "category": "AI行业应用",
+  "tags": [
+    "智能交易",
+    "量化分析",
+    "多智能体",
+    "金融市场",
+    "LLM框架",
+    "开源",
+    "AI研究"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "85万/月",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://tradingagents.co",
+  "price": "免费开源（MIT）；可选托管平台",
+  "platform": "Web（托管平台可选）/ Linux / macOS / Windows（本地 Python/CLI 运行，API 接入）",
+  "pros": [
+    "开源免费（MIT），可自托管",
+    "多智能体模拟真实交易机构决策",
+    "模型无关，可接本地 Ollama 保护隐私",
+    "可解释、带决策日志与反思",
+    "研究用途，不替你盲目下单"
+  ],
+  "cons": [
+    "仅供研究，非投资建议/不直接下单盈利",
+    "需自备 LLM API 并按量付费",
+    "对新手有一定学习门槛",
+    "预测准确性受模型与数据影响"
+  ],
+  "features": [
+    "多角色 AI 智能体（基本面/情绪/技术分析师）",
+    "多空研究员结构化辩论",
+    "交易与风控智能体决策",
+    "模型无关（OpenAI/Claude/Gemini/DeepSeek/Ollama）",
+    "策略回测与研究框架",
+    "可解释的交易分析与决策日志"
+  ],
+  "related": [
+    "perplexity",
+    "claude",
+    "gamma"
+  ],
+  "faq": [
+    {
+      "q": "TradingAgents 是免费的吗？",
+      "a": "框架本身开源免费（MIT 许可），本地运行只需为使用的 LLM API 付费；另有可选托管的 TradingAgents-AI 网页平台，注册使用并收取少量算力成本。"
+    },
+    {
+      "q": "TradingAgents 会直接帮我下单赚钱吗？",
+      "a": "不会。它是研究框架，模拟交易机构的分析—辩论—决策—风控链路，产出可解释的交易结论，并不保证收益，也不替你直接实盘下单。"
+    },
+    {
+      "q": "TradingAgents 支持哪些模型？",
+      "a": "模型无关，支持 OpenAI、Anthropic、Google Gemini、xAI、DeepSeek、Qwen、GLM、Ollama 本地模型等，一行配置即可切换。"
+    },
+    {
+      "q": "TradingAgents 支持哪些交易平台？",
+      "a": "开源框架本身不绑定券商，通过 Yahoo Finance 等数据源覆盖多市场；原描述中「对接 Coinbase/Binance」等属于第三方集成设想，并非官方内置功能。"
+    }
+  ],
+  "seo_keywords": [
+    "TradingAgents",
+    "AI交易工具推荐",
+    "智能量化交易软件",
+    "AI市场分析工具",
+    "TradingAgents怎么样"
+  ],
+  "content": "## TradingAgents 是什么？\nTradingAgents（tradingagents.co）是一个开源的多智能体 LLM 金融交易框架，由 Tauric Research 发布，相关论文发表于 AAAI 2025。它的思路很有意思：用多个各司其职的 AI 智能体，去模拟一家真实交易机构是怎么做决策的。框架本身不替你下单赚钱，而是把“分析—辩论—决策—风控”这条链路拆给不同的角色，让它们协作产出可解释的交易结论。\n\n这里要和网上常见的描述划清界限：它不是一个“按月订阅 $29、还有 iOS/Android App 的量化交易 SaaS”。tradingagents.co 的本体是一个开源框架（GitHub 上 4 万+ Star、8000+ Fork），你把它跑在自己机器上，接上自己的大模型 API 和数据源来用。\n\n## 核心功能\n\n1. 多角色分工：基本面分析师评估财报与公司指标，情绪分析师从新闻和社媒看市场情绪，新闻分析师跟踪宏观与事件，技术分析师用 MACD、RSI 等指标找买卖点。\n2. 多空辩论：研究团队里有看涨和看空两位研究员，就同一份分析展开结构化辩论，平衡收益与风险，再形成更稳健的观点。\n3. 交易与风控：交易智能体综合判断进出场与仓位，风险管理团队持续评估波动和流动性，组合经理最后审批并执行（在模拟交易所中）。\n4. 模型无关：OpenAI、Claude、Gemini、DeepSeek、Ollama 本地模型等都能接，换模型往往只改一行配置，也支持无 GPU 运行。\n5. 可解释与可评估：输出保留推理过程和依据，支持回测、日志与交易记录，方便研究和复盘。\n\n## 定价\n\n框架本身是免费开源的（MIT 许可），任何人都能 clone 下来用。真正的成本来自你调用的 LLM API 和你选的金融数据源（如 Tushare、Yahoo Finance、Alpha Vantage、AkShare 等，部分免费、部分付费）。换句话说，工具不要钱，模型和数据的账单自己出。此外官方也提供了一个托管的 TradingAgents-AI 网页平台，注册即可用、收取少量算力成本，适合不想本地部署的人。\n\n## 适合谁\n\nTradingAgents 适合量化研究者、对交易感兴趣的技术人、以及想用多智能体做市场研究和策略验证的团队。它特别适合“想看清 AI 为什么得出某个结论”的人，因为每一步都有角色分工和辩论记录。它不适合期待“开箱即赚”的普通投资者——官方明确声明框架仅用于研究，表现受模型、温度、数据质量和时间区间影响，不构成投资建议。\n\n## 小结\n\nTradingAgents 是一个研究向的开源多智能体交易框架，价值在“可解释、可辩论、可评估”的决策流程，而不是某个付费黑盒。免费使用、自带 LLM，平台覆盖本地 CLI 与可选托管网页。把它当研究脚手架用最合适，别当成稳赚的交易软件。\n\n## 常见问题（FAQ）\n\n**TradingAgents 是免费的吗？**\n\n框架本身开源免费（MIT 许可），本地运行只需为使用的 LLM API 付费；另有可选托管的 TradingAgents-AI 网页平台，注册使用并收取少量算力成本。\n\n**TradingAgents 会直接帮我下单赚钱吗？**\n\n不会。它是研究框架，模拟交易机构的分析—辩论—决策—风控链路，产出可解释的交易结论，并不保证收益，也不替你直接实盘下单。\n\n**TradingAgents 支持哪些模型？**\n\n模型无关，支持 OpenAI、Anthropic、Google Gemini、xAI、DeepSeek、Qwen、GLM、Ollama 本地模型等，一行配置即可切换。\n\n**TradingAgents 支持哪些交易平台？**\n\n开源框架本身不绑定券商，通过 Yahoo Finance 等数据源覆盖多市场；原描述中「对接 Coinbase/Binance」等属于第三方集成设想，并非官方内置功能。",
+  "published": true,
+  "created_date": "2026-06-05",
+  "published_date": "2026-06-05",
+  "subcategory": "ai-finance",
+  "verified_url": "https://tradingagents.co",
+  "verified_publisher": "Tauric Research",
+  "verified_what": "由 Tauric Research 开源的多智能体 LLM 金融交易研究框架（MIT 许可），用基本面/情绪/技术分析师、多空研究员、交易员、风控与组合经理等分工协作的 AI 智能体模拟真实交易机构，产出可解释的交易分析结论；本体是开源框架，非按月订阅的量化交易 SaaS。",
+  "verified_price": "开源框架免费（MIT 许可）；本地运行需自带 LLM API（OpenAI/Claude/Gemini/DeepSeek/Ollama 等）按量付费，另有可选托管的 TradingAgents-AI 网页平台（注册使用，少量算力成本）。",
+  "verified_platform": "Web（托管平台可选）/ Linux / macOS / Windows（本地 Python/CLI 运行）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "多角色 AI 智能体（基本面/情绪/技术分析师）",
+    "多空研究员结构化辩论",
+    "交易与风控智能体决策",
+    "模型无关（OpenAI/Claude/Gemini/DeepSeek/Ollama）",
+    "策略回测与研究框架",
+    "可解释的交易分析与决策日志"
+  ],
+  "verified_description": "TradingAgents（Tauric Research）是一个开源的多智能体 LLM 金融交易研究框架（MIT 许可），用多个分工协作的 AI 智能体（基本面/情绪/技术分析师、多空研究员、交易员、风控与组合经理）模拟真实交易机构的决策链路，产出可解释的交易分析结论；本体是开源框架，需自带 LLM API 运行，并非按月订阅的量化交易 SaaS。",
+  "content_flags": "description",
+  "price_verified": true,
+  "verified_pros": [
+    "开源免费（MIT），可自托管",
+    "多智能体模拟真实交易机构决策",
+    "模型无关，可接本地 Ollama 保护隐私",
+    "可解释、带决策日志与反思",
+    "研究用途，不替你盲目下单"
+  ],
+  "verified_cons": [
+    "仅供研究，非投资建议/不直接下单盈利",
+    "需自备 LLM API 并按量付费",
+    "对新手有一定学习门槛",
+    "预测准确性受模型与数据影响"
+  ],
+  "verified_faq": [
+    {
+      "q": "TradingAgents 是免费的吗？",
+      "a": "框架本身开源免费（MIT 许可），本地运行只需为使用的 LLM API 付费；另有可选托管的 TradingAgents-AI 网页平台，注册使用并收取少量算力成本。"
+    },
+    {
+      "q": "TradingAgents 会直接帮我下单赚钱吗？",
+      "a": "不会。它是研究框架，模拟交易机构的分析—辩论—决策—风控链路，产出可解释的交易结论，并不保证收益，也不替你直接实盘下单。"
+    },
+    {
+      "q": "TradingAgents 支持哪些模型？",
+      "a": "模型无关，支持 OpenAI、Anthropic、Google Gemini、xAI、DeepSeek、Qwen、GLM、Ollama 本地模型等，一行配置即可切换。"
+    },
+    {
+      "q": "TradingAgents 支持哪些交易平台？",
+      "a": "开源框架本身不绑定券商，通过 Yahoo Finance 等数据源覆盖多市场；原描述中「对接 Coinbase/Binance」等属于第三方集成设想，并非官方内置功能。"
+    }
+  ],
+  "verified_tags": [
+    "智能交易",
+    "量化分析",
+    "多智能体",
+    "金融市场",
+    "LLM框架",
+    "开源",
+    "AI研究"
+  ],
+  "verified_category": "AI行业应用",
+  "source_urls": [
+    "https://tradingagents.co",
+    "https://github.com/TauricResearch/TradingAgents",
+    "https://arxiv.org/abs/2412.20138"
+  ],
+  "verify_notes": "原 description 字段把它写成「实时分析市场数据的智能交易分析助手/多模态预测 SaaS」，略有误导；content 已正确说明它是开源框架。已修正 verified_description 与 features。产品真实存在。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "duolingo-max",
+      "harvey-ai",
+      "schole-ai"
+    ],
+    "verdict": "TradingAgents 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：TradingAgents 的 多角色 AI 智能体（基本面/情绪/技术分析师） 是亮点，价格 免费开源（MIT）；可选托管平台；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

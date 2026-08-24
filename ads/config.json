@@ -1,0 +1,124 @@
+{
+  "_comment": "aitoollab.cn 广告位配置 — 修改后30秒内线上生效（fetch no-store），无需重建站点",
+  "version": 2,
+  "label": "相关推荐",
+  "slots": {
+    "content-top": {
+      "enabled": false,
+      "label": "",
+      "file": "slots/content-top.html",
+      "pageTypes": ["tool", "article", "dict"],
+      "target": [".content-main", "main.article-container", "main.container.home-container", "main.dict-detail-page", "main.container.main-content", "main"],
+      "position": "prepend"
+    },
+    "in-article": {
+      "enabled": false,
+      "label": "",
+      "file": "slots/in-article.html",
+      "pageTypes": ["tool", "article"],
+      "target": ["article.article-body > p:nth-of-type(4)", "article.article-body > h2:nth-of-type(2)"],
+      "position": "before"
+    },
+    "sidebar-top": {
+      "enabled": false,
+      "label": null,
+      "file": "slots/sidebar-top.html",
+      "pageTypes": ["tool", "article", "dict"],
+      "target": ["aside.page-sidebar", "aside.dict-detail-sidebar"],
+      "position": "prepend"
+    },
+    "sidebar-mid": {
+      "enabled": false,
+      "label": null,
+      "file": "slots/sidebar-mid.html",
+      "pageTypes": ["tool", "article", "dict"],
+      "target": ["aside.page-sidebar .sidebar-card:nth-of-type(2)", "aside.dict-detail-sidebar > *:nth-child(2)"],
+      "position": "before"
+    },
+    "sidebar-bottom": {
+      "enabled": false,
+      "label": null,
+      "file": "slots/sidebar-bottom.html",
+      "pageTypes": ["tool", "article", "dict"],
+      "target": ["aside.page-sidebar", "aside.dict-detail-sidebar"],
+      "position": "append"
+    },
+    "content-bottom": {
+      "enabled": false,
+      "label": "",
+      "file": "slots/content-bottom.html",
+      "pageTypes": ["home", "tool", "article", "category", "compare", "alternatives", "ranking", "quiz", "live", "dict", "misc"],
+      "target": [".content-main", "main.article-container", "main.container.home-container", "main.dict-detail-page", "main.container.main-content", "main"],
+      "position": "append"
+    },
+    "footer": {
+      "enabled": false,
+      "label": "",
+      "file": "slots/footer.html",
+      "pageTypes": ["home", "tool", "article", "category", "compare", "alternatives", "ranking", "quiz", "live", "dict", "misc"],
+      "target": ["footer"],
+      "position": "prepend"
+    },
+    "in-feed-grid": {
+      "enabled": false,
+      "label": null,
+      "file": "slots/in-feed-grid.html",
+      "pageTypes": ["home", "category"],
+      "target": [".tools-grid"],
+      "insertAfterIndex": 4
+    },
+    "news-top": {
+      "enabled": false,
+      "label": "相关推荐",
+      "file": "slots/news-top.html",
+      "pageTypes": ["news"],
+      "target": [".news-cards"],
+      "position": "before",
+      "maxWidth": 728,
+      "_comment": "资讯页顶部横幅位（2026-08-12 新增）。拿到联盟代码后：把真实广告代码写进 slots/news-top.html，并把 enabled 改为 true，fetch no-store 30秒内线上生效，无需重建。"
+    },
+    "news-inline": {
+      "enabled": false,
+      "label": "",
+      "file": "slots/news-inline.html",
+      "pageTypes": ["news"],
+      "target": [".news-cards"],
+      "insertAfterIndex": 3,
+      "_comment": "资讯页信息流中插广告位（第4条快讯之后，2026-08-12 新增）。与 loader 自动渲染的 CPS 卡相互独立，可同时开启。用法同上。"
+    },
+    "news-bottom": {
+      "enabled": false,
+      "label": "",
+      "file": "slots/news-bottom.html",
+      "pageTypes": ["news"],
+      "target": [".news-cards"],
+      "position": "after",
+      "maxWidth": 728,
+      "_comment": "资讯页列表底部通栏位（2026-08-12 新增）。用法同上。"
+    }
+  },
+  "cps": {
+    "enabled": true,
+    "news": {
+      "enabled": true,
+      "afterIndex": 3,
+      "_comment": "资讯页 CPS 推广卡（2026-08-12 新增）：loader.js 在 news 页面按第一条快讯的栏目标签匹配 cps.json 的 by_news_category 渠道（未命中用 default），渲染到第 afterIndex 条快讯之后（0 起，默认 3 = 第 4 条后）。想关闭资讯页卡片就改为 enabled:false（工具页卡片不受影响，由上方 cps.enabled 控制）。"
+    },
+    "article": {
+      "enabled": true,
+      "_comment": "文章页 CPS 推广卡（2026-08-12 新增）：桌面端侧边栏顶部、移动端正文第 4 段后（CSS 互斥只显示其一）。渠道按文章 data-category 匹配 cps.json 的 by_category → by_article_category → default。"
+    },
+    "tool": {
+      "enabled": true,
+      "afterIndex": 2,
+      "_comment": "工具页 CPS 推广卡（2026-08-13 新增移动正文中插）：桌面端侧边栏顶部、移动端正文第 afterIndex 段后（默认第 2 段后，CSS 互斥只显示其一），避免移动端卡片沉到页面底部。想改插入位置改 afterIndex 即可，无需重建。"
+    },
+    "_comment": "工具页 CPS 推广卡总开关。loader.js 检测到 cps.json 中链接仍含 {{ 占位符会自动跳过该卡（避免无效链接）。在 cps.json 填入真实推广链接后，线上自动生效（fetch no-store，无需重建）。"
+  },
+  "adsense": {
+    "publisherId": "ca-pub-5521852210294377",
+    "enabled": false,
+    "autoAds": false,
+    "_comment": "【2026-07-31】已关闭 enabled=false：adsbygoogle.js 在国内被墙，会触发 google.com/recaptcha iframe 超时 20s+ 严重拖慢全站加载。站点验证靠 meta 标签(google-site-verification)即可，无需加载脚本。autoAds 已关、页面无 ins 广告位，此脚本纯拖累。若未来要用 AdSense 投放，改回 true 并确保页面有广告位。"
+  }
+}

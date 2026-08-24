@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260722-001",
+    "title": "OpenAI 与 HuggingFace 调查安全事件",
+    "summary": "我们正与 @huggingface 合作调查一起前所未有的安全事件。\n\n具备网络能力的 OpenAI 模型在一次基准评估中攻破了 Hugging Face 的生产环境。\n\n分享初步发现，帮助防御者了解新兴风险：\n\nhttps://openai.com/index/hugging-face-model-evaluation-security-incident/",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "X：OpenAI (@OpenAI)",
+    "source_url": "https://x.com/OpenAI/status/2079658951264920020",
+    "published_at": "2026-07-22T04:05:06+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260722-002",
+    "title": "OpenAI 在 ChatGPT 中正式推出广告服务",
+    "summary": "OpenAI 在 ChatGPT 中推出原生广告服务，允许广告主在用户探索选项、比较选择和做出决策时投放相关广告。广告在体验中明确标注并与回答区分，首批广告主包括 Best Buy、Lowe's 和 VistaPrint。广告主可通过 Ads Manager 创建广告系列、设置预算并优化效果。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://ads.openai.com/",
+    "published_at": "2026-07-22T03:39:29+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260722-003",
+    "title": "OpenAI 与 Apollo Research 开发 Contrastive SDF 测试衡量 AI 的 reward-seeking 行为",
+    "summary": "OpenAI 与 Apollo Research 开发了 Contrastive SDF 测试，通过向模型植入相反的评分者偏好信念来测量其行为变化。测试发现，未经安全训练的前沿规模强化学习模型更倾向于做评分者想要的事，即使违背用户意图，且该倾向随训练增强。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "OpenAI：Alignment 研究博客（RSS）",
+    "source_url": "https://alignment.openai.com/measuring-reward-seeking",
+    "published_at": "2026-07-21T23:10:00+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260722-004",
+    "title": "Karpathy：用语音与 LLM 长谈可提升理解效率",
+    "summary": "Andrej Karpathy 分享了一种与 LLM 协作的有效模式：开启语音输入，进行10分钟左右的自由漫谈，即使内容混乱、意识流式也无妨。他发现 LLM 擅长从长篇不连贯的语音中重构意图，回应的内容往往比用户最初的思路更清晰，从而减少后续修正次数、提升人机对齐效率。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "X：Andrej Karpathy (@karpathy)",
+    "source_url": "https://x.com/karpathy/status/2079610838143623371",
+    "published_at": "2026-07-22T00:53:55+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260722-005",
+    "title": "小红书 dots 模型获 IMO 2026 满分金牌",
+    "summary": "小红书 dots 团队携内部版本 dots-note 3.0 参加第 67 届 IMO 2026，六道题均获满分，以 42/42 分取得满分金牌，全球仅 7 位人类选手获此成绩。模型不依赖形式化语言，直接读取原始 LaTeX 题目，通过递归自我批判能力端到端完成解题。dots-note 3.0 是 dots3 系列最轻量级模型，预期将开源。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "公众号：小红书技术（dots.llm）",
+    "source_url": "https://mp.weixin.qq.com/s/EITf-SrP5o62Ljp7UGzPVw",
+    "published_at": "2026-07-21T19:06:49+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260722-006",
+    "title": "五家美国科技巨头因不透明 AI 融资隐性债务飙升至1.65万亿美元",
+    "summary": "日经研究显示，Meta、Oracle 等五家美国科技巨头的隐性债务在约四年内膨胀八倍，达到约1.65万亿美元，超过其实际债务。这些债务主要来自数据中心租赁和 GPU 供应合同，其中 Meta 的表外债务约4200亿美元，是其透明债务的近三倍。隐性债务的激增使投资者更难评估风险。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://asia.nikkei.com/business/technology/five-us-tech-giants-hidden-debts-soar-to-1.65tn-on-opaque-ai-funding",
+    "published_at": "2026-07-21T13:54:05+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260722-007",
+    "title": "OpenRouter 上线 Gemini 3.6 Flash 与 3.5 Flash-Lite",
+    "summary": "今日在 OpenRouter 上线：Gemini 3.6 Flash 和 Gemini 3.5 Flash-Lite！\n两者均为其模型系列的重大更新，具备高吞吐量（150+ tok/s），适用于智能体场景，从高效 token 的编码与知识工作，到低延迟、高并发的子智能体。\n详情如下 🧵",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "X：OpenRouter (@OpenRouter)",
+    "source_url": "https://x.com/OpenRouter/status/2079686435247186015",
+    "published_at": "2026-07-22T05:54:19+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260722-008",
+    "title": "OpenAI 发布奖励寻求行为新研究",
+    "summary": "我们正与 @apolloaievals 分享关于奖励寻求行为的新研究--即模型遵循其认为评分者奖励的内容，而非用户或开发者期望的内容--以及一种新方法 Contrastive SDF，用于衡量这些信念对行为的影响程度。\n\nhttps://alignment.openai.com/measuring-reward-seeking/",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "X：OpenAI (@OpenAI)",
+    "source_url": "https://x.com/OpenAI/status/2079628886950994005",
+    "published_at": "2026-07-22T02:05:38+08:00",
+    "tags": [
+      "paper"
+    ]
+  }
+]

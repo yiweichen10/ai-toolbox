@@ -1,0 +1,70 @@
+{
+  "title": "美团LongCat-2.0深度解析：万亿参数、五万卡国产算力、OpenRouter全球前三——外卖巨头如何杀入AI大模型第一梯队？（2026年7月）",
+  "slug": "meituan-longcat-2-trillion-parameter-model-202607",
+  "date": "2026-07-06",
+  "dateFormatted": "2026年7月6日",
+  "category": "AI评测",
+  "tags": [
+    {
+      "text": "美团",
+      "type": "hot"
+    },
+    {
+      "text": "国产大模型",
+      "type": "hot"
+    },
+    {
+      "text": "开源",
+      "type": ""
+    }
+  ],
+  "description": "美团于2026年6月30日正式发布万亿参数大模型LongCat-2.0并全面开源。1.6T参数、MoE架构、五万卡国产算力全流程训练、OpenRouter全球调用量前三。深度拆解LSA稀疏注意力、零计算专家、MOPD多专家融合三大架构创新，以及与DeepSeek/豆包/Qwen/GLM的全维度横评。",
+  "keywords": "美团LongCat-2.0,万亿参数大模型,国产算力,MoE,开源大模型,Agentic Coding,美团AI,OpenRouter,SWE-bench,国产AI芯片,大模型评测",
+  "author": "AI工具宝箱编辑组",
+  "related_tools": [
+    "deepseek",
+    "doubao",
+    "kimi",
+    "glm-5-1",
+    "qwen-chat",
+    "open-router",
+    "claude",
+    "claude-code",
+    "openclaw",
+    "cursor",
+    "github-copilot",
+    "trae",
+    "aider",
+    "tencent-hunyuan",
+    "chatgpt",
+    "gemini",
+    "tongyi-lingma",
+    "baichuan-ai"
+  ],
+  "content": "<p>如果2025年有人告诉你「美团要做万亿参数大模型」，你大概率会以为这是个段子。外卖、骑手、到店、酒旅——这些关键词和大模型似乎八竿子打不着。但2026年6月30日，美团用一款<strong>1.6万亿参数、五万卡国产算力全流程训练、全球开发者调用量前三</strong>的开源大模型，让整个行业开始重新审视这家「被低估的AI巨头」。</p>\n\n<p>LongCat-2.0 的发布，意义远不止「又一个大模型」。它是<strong>业界首个在五万卡国产算力集群上完成全流程训练与推理的万亿参数模型</strong>——这意味着国产AI芯片在超大规模训练上首次交出了可复现的技术答卷。而在正式开源前，它的预览版已经在 OpenRouter 平台冲进全球调用量前三，排在前面的只有 Hermes 和 Claude Code 这样的「老牌Agent（智能体）基础设施」。</p>\n\n<p>本文将从技术架构、国产算力突破、基准测试、应用场景、竞品对比五个维度，对 LongCat-2.0 进行系统性拆解。</p>\n\n<h2>一、核心参数速览：这到底是个什么量级的模型？</h2>\n\n<p>先看一组硬数据：</p>\n\n<table>\n<thead><tr><th>参数项</th><th>LongCat-2.0</th><th>解读</th></tr></thead>\n<tbody>\n<tr><td>总参数量</td><td><strong>1.6T（万亿）</strong></td><td>国内开源社区中规模最大的模型之一</td></tr>\n<tr><td>激活参数量</td><td><strong>~48B（动态33B~56B）</strong></td><td>MoE（混合专家模型）架构，按token（词元）复杂度动态分配算力</td></tr>\n<tr><td>上下文窗口</td><td><strong>1M Token（原生）</strong></td><td>约75万英文单词，可一次性处理整个代码仓库</td></tr>\n<tr><td>训练数据</td><td><strong>30T+ Tokens</strong></td><td>覆盖中文、英文、多语言和代码</td></tr>\n<tr><td>训练算力</td><td><strong>五万卡国产芯片集群</strong></td><td>业界首个国产算力上的万亿参数模型</td></tr>\n<tr><td>日吞吐量</td><td><strong>1T tokens/day</strong></td><td>稳态训练效率</td></tr>\n<tr><td>架构</td><td><strong>MoE + LSA + MOPD</strong></td><td>稀疏注意力 + 零计算专家 + 多专家融合</td></tr>\n<tr><td>开源协议</td><td><strong>全面开源</strong></td><td>权重开放，开发者可二次开发</td></tr>\n<tr><td>API（应用程序接口）入口</td><td><strong>longcat.chat</strong></td><td>已面向全球开发者开放</td></tr>\n</tbody>\n</table>\n\n<p>注意一个关键数据：<strong>激活参数仅48B</strong>。这意味着虽然它「体重」1.6T，实际推理时只需要激活约3%的参数。这正是MoE（混合专家）架构的魅力——把算力花在刀刃上。</p>\n\n<h2>二、国模国芯：五万卡国产算力的「毕业考试」</h2>\n\n<p>LongCat-2.0 最引人注目的标签不是「万亿参数」，而是<strong>「完全跑在国产算力上」</strong>。</p>\n\n<p>LongCat团队对国产算力的探索始于2023年。三年里，团队从千卡起步，在三座大山上逐一攻坚：</p>\n\n<h3>稳定性：月均日故障率降低70%</h3>\n<p>万卡级训练中，硬件故障、通信异常、显存压力、数值波动是家常便饭。团队通过<strong>卡间通信异常处理、弹性扩缩卡和自动故障恢复</strong>三大机制，把月均日故障率砍掉了70%以上。说白了：以前训几天就可能坏一次，现在可以稳定跑数周。</p>\n\n<h3>正确性：Bitwise级的一致性验证</h3>\n<p>在大规模分布式训练中，不同卡上的计算结果可能出现微小偏差，累积起来足以让模型「跑偏」。LongCat团队自研了<strong>确定性算子</strong>，并建立了Bitwise一致性验证体系——逐位对比、逐参数检测，确保每一轮梯度更新都是正确的。同时针对国产芯片特性，提升了关键模块的计算精度，优化了Reduce逻辑。</p>\n\n<h3>效率：训练MFU提升1.5倍</h3>\n<p>通过<strong>流水线调度、显存优化和算子级控核</strong>三管齐下，训练MFU（Model FLOPs Utilization，算力利用率）提升了1.5倍。最终实现<strong>稳态日吞吐超过1T tokens/day</strong>——这是一个在国产算力上从未被验证过的数据。</p>\n\n<blockquote>\n<p><strong>一句话总结</strong>：LongCat-2.0证明的不是「国产芯片能不能训大模型」，而是「国产芯片能不能稳定、正确、高效地训万亿参数大模型」。它交了一份可复现的答卷。</p>\n</blockquote>\n\n<h2>三、架构创新：三个「杀手级」设计</h2>\n\n<p>万亿参数不是目的，让万亿参数在实际任务中「好用」才是。LongCat-2.0的架构围绕一个核心目标设计：<strong>让Agent真正能干活</strong>。</p>\n\n<h3>1. LSA稀疏注意力：100万Token不「失忆」</h3>\n\n<p>传统Transformer（Transformer（变换器））的自注意力机制，计算量随序列长度呈平方级增长。超过100K上下文后，模型开始「遗忘」前面的内容。LongCat-2.0自研的<strong>LSA（LongCat Sparse Attention）稀疏注意力机制</strong>，在处理长文本时不再逐字逐句计算注意力，而是智能筛选关键信息——将计算量从平方级降至线性级。</p>\n\n<p>这意味着什么？你可以把整个代码仓库（几十万行代码 + 文档 + 配置文件）一次性丢给LongCat-2.0，模型能从百万Token中找到你真正需要的那几行，而不会因为上下文太长而产生「幻觉」或漏掉关键信息。对于需要理解整个项目结构的Agent任务来说，这是质的飞跃。</p>\n\n<h3>2. 零计算专家+ScMoE：简单token不烧算力</h3>\n\n<p>代码任务中，不同token的计算需求天差地别。定义一个变量名，和推导一段递归算法，需要消耗的算力完全不在一个量级。</p>\n\n<p>LongCat-2.0的<strong>零计算专家机制</strong>实现了token级动态激活（33B~56B）：简单token直接被路由到「零计算专家」，几乎不消耗算力；复杂token自动分配到更大、更强的专家，获得更多计算资源。配合<strong>ScMoE（Scalable Mixture of Experts）</strong>架构，实现「该省则省，该花则花」的精细化算力调度。</p>\n\n<h3>3. MOPD多专家融合：一个模型，三套大脑</h3>\n\n<p>这是LongCat-2.0最独特的架构设计。它通过<strong>MOPD（Mixture of Parallel Domains）</strong>架构，在单一模型中融合了三组专家能力：</p>\n\n<ul>\n<li><strong>Agent Experts</strong>：专攻工具调用、自主纠错、多步骤任务规划</li>\n<li><strong>Reasoning（推理（推理能力）） Experts</strong>：深耕数学、STEM推理、逻辑推导</li>\n<li><strong>Interaction Experts</strong>：优化指令遵循、自然对话、交互体验</li>\n</ul>\n\n<p>推理时由门控网络根据任务类型动态调度最擅长的专家组合，而不是简单地把所有能力混在一起。这解释了为什么LongCat-2.0在编程、推理、对话等多个维度都能保持高水准——它不是「什么都会一点」，而是<strong>针对不同任务调用不同的大脑</strong>。</p>\n\n<h2>四、基准测试：跟GPT-5.5、Claude Opus掰手腕</h2>\n\n<p>技术讲再多，最终还是要看跑分。以下是LongCat-2.0在核心基准测试上的表现：</p>\n\n<table>\n<thead><tr><th>基准测试</th><th>LongCat-2.0</th><th>GPT-5.5</th><th>Claude Opus 4.6</th><th>Gemini 3.1 Pro</th></tr></thead>\n<tbody>\n<tr><td>SWE-bench Pro（编程工程）</td><td><strong>59.5</strong></td><td>58.6</td><td>57.3</td><td>54.2</td></tr>\n<tr><td>SWE-bench Multilingual（多语言编程）</td><td>77.3</td><td>-</td><td><strong>77.8</strong></td><td>-</td></tr>\n<tr><td>Terminal-Bench 2.1（终端指令）</td><td><strong>70.8</strong></td><td>-</td><td>-</td><td>-</td></tr>\n<tr><td>RWSearch（搜索智能体）</td><td><strong>78.8</strong></td><td>-</td><td>-</td><td>-</td></tr>\n<tr><td>FORTE（生产力场景）</td><td>73.2</td><td>-</td><td>-</td><td>-</td></tr>\n<tr><td>BrowseComp（浏览推理）</td><td><strong>79.9</strong></td><td>-</td><td>-</td><td>-</td></tr>\n</tbody>\n</table>\n\n<p>几个关键信号：</p>\n\n<p><strong>SWE-bench Pro 59.5分，超越GPT-5.5和Claude Opus 4.6。</strong>SWE-bench Pro考察的是真实GitHub Issue的修复能力——不是写几行代码，而是理解项目结构、定位bug、编写修复、通过测试。在这个最考验Agent「工程能力」的基准上，LongCat-2.0超越了全球公认的两大最强旗舰模型。</p>\n\n<p><strong>多语言编程77.3分，与Claude Opus 4.6（77.8）几乎持平。</strong>考虑到LongCat-2.0是开源模型且激活参数不到Claude Opus的零头，这个成绩含金量极高。</p>\n\n<p><strong>Terminal-Bench 70.8分。</strong>这个基准考察的是在真实Linux终端中执行运维和开发任务的能力，与纸上谈兵的代码评测不同，终端操作需要理解环境状态、处理错误、逐步纠错——这正是Agent的核心能力。</p>\n\n<h2>五、真实场景：不是Demo，是生产级</h2>\n\n<p>美团在内测期间收集了大量来自一线的真实「工作单」，展示了LongCat-2.0在生产环境中的实际表现：</p>\n\n<h3>Agent搭建：自然语言→SQL（结构化查询语言）自动化</h3>\n<p>业务人员用自然语言描述查询需求，LongCat-2.0自动完成全链路闭环：理解问题意图→规划查询步骤→生成SQL→执行查询→将数据结果转化为业务洞察。不需要写一行代码，不需要等数据团队排期。</p>\n\n<h3>代码库迁移：读懂老代码，重构新架构</h3>\n<p>给定一个旧版插件代码库和一份新版SDK文档，LongCat-2.0自主分析了整体架构、梳理核心逻辑、将整个插件重构为符合新API的实现——保留全部原有功能，修复了潜在隐患，编译一次通过。这类任务如果人工来做，可能需要2-3个工作日。</p>\n\n<h3>完整应用开发：一句话生成可运行产品</h3>\n<p>输入「儿童AI游戏训练场」的创意描述，LongCat-2.0逐步生成了技术选型、页面架构、游戏逻辑与视觉细节——从首页到三个完整可玩的游戏页面，全部代码一次产出，开箱即用。</p>\n\n<h3>3D交互演示：一句话生成一个Three.js世界</h3>\n<p>描述一个化学实验场景，LongCat-2.0直接生成了完整的Three.js 3D演示：透明烧瓶、荧光液体、泡沫喷发、液面下降、堆积效果——全部可交互。所有代码封装在一个HTML文件中，打开即用。</p>\n\n<h2>六、跟国产主流大模型比，LongCat-2.0处于什么位置？</h2>\n\n<p>2026年是国产大模型的「井喷年」。DeepSeek、豆包、Qwen、Kimi、GLM——每一家都有自己的看家本领。LongCat-2.0的特殊之处在哪里？</p>\n\n<table>\n<thead><tr><th>维度</th><th>LongCat-2.0</th><th>DeepSeek V4-Pro</th><th>豆包2.1 Pro</th><th>Qwen 3.7 Max</th><th>Kimi K2.7 Code</th></tr></thead>\n<tbody>\n<tr><td>总参数</td><td><strong>1.6T</strong></td><td>未公开（MoE）</td><td>未公开</td><td>未公开（MoE）</td><td>1T</td></tr>\n<tr><td>上下文</td><td><strong>1M</strong></td><td>128K</td><td>256K</td><td>128K</td><td>256K</td></tr>\n<tr><td>训练算力</td><td><strong>国产芯片</strong></td><td>未公开</td><td>未公开</td><td>未公开</td><td>未公开</td></tr>\n<tr><td>开源</td><td><strong>全面开源</strong></td><td>部分开源</td><td>闭源</td><td>开源</td><td>开源</td></tr>\n<tr><td>Agent导向</td><td><strong>原生设计</strong></td><td>通用</td><td>通用</td><td>通用</td><td>编程为主</td></tr>\n<tr><td>OpenRouter排名</td><td><strong>Top 3</strong></td><td>Top 10</td><td>不支持</td><td>依赖其他平台</td><td>Top 20</td></tr>\n</tbody>\n</table>\n\n<p><strong>LongCat-2.0的差异化优势不在「最强」，而在「最专」。</strong>它不是要做通用对话冠军，而是从架构层面就为Agent任务做了原生优化。MOPD三分脑的设计、1M原生上下文、零计算专家的精细化调度——这些设计选型说明美团从一开始就没打算做「又一个ChatGPT」，而是瞄准了<strong>AI Agent基础设施</strong>这个赛道。</p>\n\n<h2>七、行业影响：三个层面的深远改变</h2>\n\n<h3>对国产算力产业：一次「压力测试」级别的验证</h3>\n<p>五万卡国产芯片集群跑通万亿参数模型的全流程训练+推理，这是对国产算力生态<strong>从芯片到框架到调度的全栈验证</strong>。它打破了「国产芯片只能跑小模型」的刻板印象，为后续更大规模、更复杂的训练任务提供了可复制的技术路径。</p>\n\n<h3>对AI开源生态：1.6T参数的「公共基础设施」</h3>\n<p>开源社区不缺模型，但缺<strong>真正能干活的大规模Agent模型</strong>。LongCat-2.0以1.6T参数、1M上下文、原生Agent能力的配置全面开源，相当于给全球开发者建了一条「高速公路」——你不需要从头训模型，直接在美团搭好的地基上开发垂直应用即可。从本地生活到零售物流，从代码Agent到自动化办公，应用场景几乎无限。</p>\n\n<h3>对美团战略：从「科技赋能业务」到「技术成为业务」</h3>\n<p>LongCat-2.0的发布标志着美团AI战略的质变。过去，美团的AI投入主要服务于内部业务（配送调度、推荐系统、智能客服），AI是成本中心而非利润中心。现在，通过开源LongCat-2.0并建立API开放平台（longcat.chat），美团正在将AI从<strong>内部能力</strong>升级为<strong>对外开放的基础设施</strong>——这可能成为美团继外卖、到店之后的第三增长曲线。</p>\n\n<h2>八、如何开始使用？三种方式</h2>\n\n<p>目前接入LongCat-2.0有三种途径：</p>\n\n<ol>\n<li><strong>OpenRouter平台</strong>：搜索「LongCat」即可调用，无需配置，按量付费。这是最方便的方式，适合个人开发者和快速原型验证。</li>\n<li><strong>官方API（longcat.chat）</strong>：美团自家的API平台，提供更灵活的定价和SLA保障，适合企业级应用。</li>\n<li><strong>自行部署</strong>：模型权重已开源，有条件的团队可以自行下载部署。但需注意1.6T参数对硬件要求极高，建议优先使用云API。</li>\n</ol>\n\n<p>对于大多数开发者来说，OpenRouter是最推荐的入口——它已经是全球Agent开发者使用最多的模型分发平台之一，LongCat-2.0在上面有着极低的调用延迟和稳定的服务质量。</p>\n\n<h2>九、局限与展望：客观地说</h2>\n\n<p>LongCat-2.0不是完美的。它的激活参数仅48B——虽然这是MoE架构的特性而非缺陷，但在需要极深推理的纯数学/理论物理等少数任务上，大激活参数模型仍有优势。此外，作为一个新发布的开源模型，它的第三方工具集成生态（如LangChain、LlamaIndex的官方适配）还需要时间完善。</p>\n\n<p>但瑕不掩瑜。LongCat-2.0的发布传递了三个清晰信号：</p>\n\n<ol>\n<li><strong>国产算力已具备训练顶级大模型的能力</strong>，不是「能不能」的问题，而是「能不能规模化」的问题。</li>\n<li><strong>Agent Coding是2026年大模型竞争的核心战场</strong>，通用对话能力已不是差异化重点。</li>\n<li><strong>开源正在成为大模型的主流分发策略</strong>，闭源模型的护城河在快速收窄。</li>\n</ol>\n\n<p>对于开发者来说，现在是最好的时代。无论是DeepSeek、Qwen还是LongCat-2.0，你不需要花上亿美元去训练模型，就能用上世界级的AI基础设施。而LongCat-2.0凭借其在Agent领域的原生设计，很可能是今年最值得关注的<strong>「Agent-first」开源大模型</strong>。</p>\n\n<figure>\n<table>\n<thead><tr><th>对比维度</th><th>LongCat-2.0</th><th>GPT-5.5</th><th>Claude Opus 4.6</th><th>DeepSeek V4-Pro</th></tr></thead>\n<tbody>\n<tr><td>编程工程能力 (SWE-bench Pro)</td><td>59.5</td><td>58.6</td><td>57.3</td><td>-</td></tr>\n<tr><td>Agent调用量 (OpenRouter排名)</td><td>Top 3</td><td>N/A（闭源）</td><td>N/A（闭源）</td><td>Top 10</td></tr>\n<tr><td>开源状态</td><td>全面开源</td><td>闭源</td><td>闭源</td><td>部分开源</td></tr>\n<tr><td>算力自主可控</td><td>国产算力全流程</td><td>英伟达</td><td>谷歌TPU（张量处理器）</td><td>未公开</td></tr>\n<tr><td>上下文窗口</td><td>1M</td><td>256K</td><td>500K</td><td>128K</td></tr>\n<tr><td>Agent原生设计</td><td>MOPD三分脑</td><td>通用</td><td>通用</td><td>通用</td></tr>\n<tr><td>API价格（每百万Token输入）</td><td>待公布</td><td>$3.75</td><td>$15</td><td>$0.12（降价后）</td></tr>\n</tbody>\n</table>\n<figcaption style=\"text-align:center;font-size:13px;color:#94a3b8;\">▲ 2026年7月主流旗舰模型全维度对比</figcaption>\n</figure>\n\n\n<p><em>参考来源：美团技术团队官方博客（tech.meituan.com）、OpenRouter平台数据、AI产品库（AIProductHub）、各模型官方基准报告。数据截至2026年7月6日。</em></p>",
+  "orig_category": "AI评测",
+  "content_type": "AI评测",
+  "seo_title": "美团LongCat-2.0深度解析：万亿参数、五万卡国产算力、OpenRouter全球前三",
+  "faq": [
+    {
+      "question": "LongCat-2.0 是什么量级的模型？",
+      "answer": "总参数 1.6 万亿、激活约 48B 的 MoE 开源模型，上下文 1M token，训练数据 30T+，日吞吐 1T tokens；开源前预览版已在 OpenRouter 冲到全球调用量前三。"
+    },
+    {
+      "question": "LongCat-2.0 为什么强调国产算力？",
+      "answer": "它是业界首个在五万卡国产芯片集群上完成全流程训练与推理的万亿参数模型，验证了国产芯片能稳定、正确、高效地训万亿参数大模型。"
+    },
+    {
+      "question": "LongCat-2.0 的 1M 上下文是怎么做到的？",
+      "answer": "自研 LSA 稀疏注意力把计算量从平方级降到线性级，长文本只筛选关键信息，几十万行代码的仓库可以一次性丢进去处理。"
+    },
+    {
+      "question": "LongCat-2.0 有哪些架构创新？",
+      "answer": "三个：LSA 稀疏注意力、零计算专家加 ScMoE 的动态 token 级算力调度、MOPD 多专家融合（Agent、推理、交互三组专家按任务调度）。"
+    },
+    {
+      "question": "LongCat-2.0 在基准测试里表现如何？",
+      "answer": "在 SWE-bench 等编码和推理基准上直接对标 GPT-5.5、Claude Opus 4.6、Gemini 3.1 Pro，是国内开源社区规模最大的模型之一。"
+    }
+  ]
+}

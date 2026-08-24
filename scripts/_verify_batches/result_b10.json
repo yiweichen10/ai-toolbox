@@ -1,0 +1,54 @@
+{
+  "batch_id": "b10",
+  "category": "AI对话",
+  "tools": [
+    {
+      "slug": "gpt-live",
+      "name": "GPT-Live",
+      "url_current": "https://openai.com/index/introducing-gpt-live/",
+      "url_ok": true,
+      "url_correct": "https://openai.com/index/introducing-gpt-live/",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官方OpenAI公告页（2026-07-08发布）已直接核实。全双工语音模型、后台委派GPT-5.5、免费用户GPT-Live-1 mini / 付费用户GPT-Live-1、不单独收费等描述均与官网一致。正常。"
+    },
+    {
+      "slug": "skywork-3-1",
+      "name": "Skywork 3.1",
+      "url_current": "https://skywork.com",
+      "url_ok": false,
+      "url_correct": "https://skywork.ai",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "URL红线：当前 skywork.com 并非已核实官方域名（官方海外站为 skywork.ai，国内站为 tiangong.cn），疑似仿冒/错配，标 conflict。内容幻觉：站内将其描述为「MoE大语言模型/128K上下文/免费商用许可」与事实不符——真实天工3.1是昆仑万维发布的超级智能体平台，核心为 Skywork Design（无限画布设计）与 Dynamic Workflows（多智能体编排），并非通用聊天/编程基座模型，具体参数（128K、免费商用许可）无可靠来源。"
+    },
+    {
+      "slug": "grok-4-5",
+      "name": "Grok 4.5",
+      "url_current": "https://grok.com",
+      "url_ok": true,
+      "url_correct": "https://grok.com",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 grok.com 核实无误，简介（xAI 2026旗舰对话模型、实时联网、幽默风格、多模态、集成X数据）准确。但定价「Grok+ 订阅 $25/月」虚构：真实消费档为 Free / SuperGrok $30/月 / SuperGrok Heavy $300/月（年付折合约$25/月，并无Grok+档），且$25实为SuperGrok年付折算价；正文称图像生成「基于 Flux 架构」错误，Grok 实际使用自研 Aurora（自回归 MoE）模型，明确非 Flux/扩散架构。"
+    },
+    {
+      "slug": "gemini-omni",
+      "name": "Gemini Omni",
+      "url_current": "https://gemini.google.com",
+      "url_ok": true,
+      "url_correct": "https://gemini.google.com",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 gemini.google.com 核实无误，且简介（Google I/O 2026 发布的视频生成与编辑模型，可通过自然对话创作/编辑视频）准确。但正文长文将其描述为「全能多模态助手、200万token上下文、Google生态联动」与该产品真实定位不符——真实 Gemini Omni 是面向视频生成/编辑的世界模型（首款 Gemini Omni Flash 仅支持视频输出），正文混同于通用 Gemini Advanced，存在幻觉。"
+    }
+  ]
+}

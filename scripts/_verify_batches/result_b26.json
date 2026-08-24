@@ -1,0 +1,90 @@
+{
+  "batch_id": "b26",
+  "category": "AI视频",
+  "tools": [
+    {
+      "slug": "kling-3-0",
+      "name": "Kling 3.0",
+      "url_current": "https://kling.kuaishou.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网 https://kling.kuaishou.com 可访问（跳转 klingai.com），确为快手可灵 AI 视频生成工具，description（快手推出、文生/图生视频）与官网一致。会员价 $12.99/月 及 content 中“免费5秒/专业10秒/4K”等具体参数未能在官网直接核验，暂未发现编造迹象，但定价与参数细节建议人工复核。"
+    },
+    {
+      "slug": "moonvalley",
+      "name": "Moonvalley",
+      "url_current": "https://moonvalley.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网 https://moonvalley.ai 可访问，确为 AI 视频生成工具（现主打 Marey 模型，支持文生/图生视频），“由前 DeepMind 团队创立”背景属实。但 content 中定价 $9.99/月、“视频风格迁移”“提示词优化建议”等功能在官网未直接展示，无法确认是否编造，建议人工复核定价与功能清单。"
+    },
+    {
+      "slug": "vidu-2-0",
+      "name": "Vidu 2.0",
+      "url_current": "https://www.vidu.studio",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网 https://www.vidu.studio 可访问（导向 vidu.cn），确为生数科技 Vidu AI 视频工具，description 准确。content 中 ¥29/月起 定价及“运动笔刷”功能官网未直接展示，暂无确凿编造证据，建议人工复核定价。"
+    },
+    {
+      "slug": "hedra",
+      "name": "Hedra",
+      "url_current": "https://www.hedra.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网 https://www.hedra.ai 可访问，确为基于 Character-3 模型的角色/口型同步视频工具，description（角色视频、口型同步）准确。content 中专业版 $10/月、免费80积分、单次15秒上限等定价参数官网未直接展示，未发现编造，建议人工复核。"
+    },
+    {
+      "slug": "vida",
+      "name": "Vida",
+      "url_current": "https://vida.ai",
+      "url_ok": false,
+      "url_correct": "https://vid.ai",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网 https://vida.ai 两次抓取均失败；搜索结果显示 vida.io / vida.app / vida.live 均为企业级 AI 智能体/客服平台，并非视频工具，域名 vida.ai 下未发现与站内描述相符的“AI 视频生成平台”。站内 description 与 content 描述的文本转视频、虚拟角色定制、多语情感配音、自动字幕、4K 输出、Pro $15/月 / 团队 $49/月 等，与另一款产品 Vid.AI（vid.ai）高度相似但域名不同，疑似张冠李戴或编造。建议人工核实：该条目是否应为 Vid.AI（官网 https://vid.ai），或确属虚构需删除。url_correct 暂填最接近的 vid.ai 供参考。"
+    },
+    {
+      "slug": "zoona",
+      "name": "Zoona",
+      "url_current": "https://zoona.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 https://zoona.ai 可访问，实为 “Zoona AI Agents for Customer Service”（AI 客服代理平台），与站内 description 描述一致（本站将其归入 AI 视频分类本身存疑）。但 content 将 Zoona 写成“AI 短视频生成工具”（文本/图片/视频转视频、AI 智能剪辑、故事板分镜等），与真实产品严重不符，属功能张冠李戴的编造。建议按真实定位重写 content，或将该工具移出 AI 视频分类。"
+    },
+    {
+      "slug": "reloop-animation-studio",
+      "name": "Reloop Animation Studio",
+      "url_current": "https://reloop.studio",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 https://reloop.studio 可访问，实为 “AI UGC Video Generator”（用 AI 虚拟主播/形象生成 9:16 社媒短视频），并非 2D 动画工具。站内 description 与 content 将其写成支持角色骨骼绑定、自动补帧、IK/FK、面部捕捉的“2D 动画创作工具”，将真实产品功能完全张冠李戴，属明显编造。建议按真实定位（AI UGC 视频生成器）重写。"
+    }
+  ]
+}

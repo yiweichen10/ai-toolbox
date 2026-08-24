@@ -1,0 +1,78 @@
+{
+  "name": "Winston AI",
+  "slug": "winston-ai",
+  "emoji": "🕵️",
+  "color": "#7C3AED",
+  "description": "Winston AI 是面向教育与企业的高准确率 AI 内容检测工具，支持检测 ChatGPT、GPT-4 等生成文本，提供 PDF/图片 OCR 识别与 API 集成。",
+  "category": "AI检测",
+  "tags": [
+    "AIGC检测",
+    "AI内容检测",
+    "OCR",
+    "教育",
+    "API",
+    "免费"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "约60万/月",
+  "url": "https://gowinston.ai",
+  "price": "免费+付费",
+  "platform": "Web/API",
+  "pros": [
+    "多模态检测覆盖文本图片OCR",
+    "逐句高亮结果可解释",
+    "支持简体中文检测",
+    "报告可分享适合存档",
+    "团队协作与认证体系完善"
+  ],
+  "cons": [
+    "无长期免费版仅14天试用",
+    "积分消耗快尤其抄袭检测",
+    "中文准确率弱于英文",
+    "短文本检测置信度下降"
+  ],
+  "features": [
+    "逐句 AI 概率预测图",
+    "AI 图片与深度伪造检测",
+    "PDF/手写 OCR 扫描检测",
+    "4000 亿+ 来源抄袭比对",
+    "HUMN-1 真人内容认证徽章",
+    "API、Chrome 扩展与 Zapier"
+  ],
+  "related": [
+    "gptzero",
+    "originality-ai",
+    "copyleaks"
+  ],
+  "faq": [
+    {
+      "q": "Winston AI 的积分怎么消耗？",
+      "a": "文本检测约 1 credit/词，抄袭检测约 2 credit/词，AI 图片检测每张约 200-500 credit，付费档按月提供积分池。"
+    },
+    {
+      "q": "Winston AI 和 Turnitin 比怎么样？",
+      "a": "Turnitin 强在高校数据库与生态，Winston AI 在 AI 识别、图片/深度伪造与 OCR 检测方面更有特色，适合内容与出版场景。"
+    },
+    {
+      "q": "HUMN-1 认证是什么？",
+      "a": "Advanced/Elite 档可申请 HUMN-1 网站认证徽章，向读者展示该网站内容经过真人撰写标准校验，是一种信任标识。"
+    }
+  ],
+  "seo_keywords": [
+    "Winston AI AI检测",
+    "AI图片检测工具",
+    "论文AI检测工具",
+    "OCR文本检测",
+    "AI内容检测平台"
+  ],
+  "content": "## Winston AI 是什么？\n\nWinston AI 是面向教育与企业场景的 AI 内容检测平台，主打\"高准确率 + 多模态检测\"。除了识别 ChatGPT、Gemini、Claude、LLaMa 等生成文本并逐句标注 AI 概率，它还把 AI 图片/深度伪造检测、OCR 扫描（PDF、图片甚至手写）、抄袭检测、写作反馈整合到同一个平台，是市面上少见的\"检测全家桶\"。\n\n官网宣称 AI 文本检测准确率最高可达 99.98%，并提供了逐句着色的 AI 预测图、可分享的检测报告以及 HUMN-1 网站认证徽章——出版方可以在网站上挂出\"内容经真人校验\"的信任标识，这是它区别于多数竞品的一大特色。\n\n### 核心功能\n\n- **AI 文本检测**：识别 ChatGPT、Claude、Gemini、LLaMa 等模型输出，逐句给出 AI 概率与高亮标记。\n- **AI 图片与深度伪造检测**：识别 Midjourney、DALL-E、Stable Diffusion 生成的图片与 Deepfake，附 C2PA、Exif 等取证信息。\n- **OCR 扫描**：支持扫描 PDF、图片甚至手写笔记中的文字进行检测。\n- **高级抄袭检测**：在 4000 亿+ 网页、文档与数据库中进行比对并高亮来源。\n- **写作反馈与可读性评分**：辅助提升文本质量，不只做\"检测\"。\n- **PDF 报告分享与 HUMN-1 认证**：生成可分享报告，付费档可申请\"真人内容\"网站认证。\n- **API、Chrome 扩展与 Zapier 集成**：支持接入出版工作流与教学系统。\n- **多语言检测**：支持 14 种语言，含简体中文。\n\n### 适用场景\n\n- **教育机构**：论文与作业的 AI 检测，OCR 可处理扫描件与手写提交。\n- **出版社与媒体**：稿件审核 + 图片/深度伪造核实 + 报告存档。\n- **内容营销与 SEO 团队**：发布前把关 AI 率，配合 HUMN-1 认证向读者与搜索引擎展示内容可信度。\n\n### 价格\n\nWinston AI 采用积分制（credits），文本检测约 1 credit/词、抄袭检测约 2 credit/词、AI 图片检测约 200-500 credit/张。免费版提供 2,000 积分 / 14 天试用；付费档分为 Essential（约 10 万积分/月）、Advanced（约 20 万积分/月，最多 5 位成员）、Elite（约 50 万积分/月，成员不限），月付约 $18-$49，年付约 $10-$26。具体价格以官网为准。\n\n### 优缺点\n\n- 优点：文本 + 图片 + OCR + 抄袭多模态检测一体；逐句高亮可解释性强；支持简体中文；报告可分享、团队协作完善。\n- 缺点：免费版只是 14 天试用，无长期免费额度；积分消耗快（尤其抄袭检测）；中文准确率仍低于英文。\n\n### 常见问题\n\n**Winston AI 免费吗？** 只有 14 天试用（2,000 积分），没有长期免费版，试用后可按需订阅。\n\n**Winston AI 能扫描手写或图片文字吗？** 可以，OCR 功能支持扫描 PDF、图片与手写笔记中的文字再检测。\n\n**Winston AI 的中文检测效果怎么样？** 支持简体中文，但模型以英文语料为主，中文检测稳定性弱于英文，建议配合中文优化工具交叉验证。",
+  "published": true,
+  "created_date": "2026-08-03",
+  "published_date": "2026-08-03",
+  "subcategory": "ai-content-detector",
+  "confidence": "medium",
+  "conflict": false,
+  "content_flags": "new",
+  "price_verified": false,
+  "category_check": "AI检测(重归类 2026-08-05)"
+}

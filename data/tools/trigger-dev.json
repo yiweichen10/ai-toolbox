@@ -1,0 +1,164 @@
+{
+  "name": "Trigger.dev",
+  "slug": "trigger-dev",
+  "emoji": "⚡",
+  "color": "#6366F1",
+  "description": "Trigger.dev 是面向 TypeScript/JavaScript 开发者的开源后台任务与工作流编排框架（发布方：Trigger.dev），支持长时任务、定时/事件触发与自动重试。",
+  "category": "AI开发",
+  "tags": [
+    {
+      "text": "开源"
+    },
+    {
+      "text": "工作流"
+    },
+    {
+      "text": "定时任务",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://trigger.dev",
+  "price": "开源免费 + 云版 $0/$10/$50 每月",
+  "platform": "Web / CLI（云托管或自托管）",
+  "pros": [
+    "完全开源，可自托管，数据可控",
+    "原生 TypeScript/JavaScript 支持，类型安全",
+    "内建重试、超时、速率限制等可靠性机制",
+    "实时监控与日志面板，调试体验优秀",
+    "与 Next.js、Remix、Express 等框架无缝集成"
+  ],
+  "cons": [
+    "仅支持 TypeScript/JavaScript，不支持其他语言",
+    "对极简单的一次性任务可能显得过度设计",
+    "社区生态尚在完善中，插件和模板不如老牌工具丰富"
+  ],
+  "features": [
+    "在代码中定义 Job（后台任务），支持本地开发与版本控制",
+    "Webhook / 定时(cron) / 自定义事件 多种触发",
+    "自动重试与超时，无函数超时限制",
+    "队列与并发控制、实时日志与运行历史",
+    "React hooks 向前端实时展示进度",
+    "可自托管（Apache 2.0 开源）"
+  ],
+  "related": [
+    "n8n",
+    "temporal",
+    "make"
+  ],
+  "faq": [
+    {
+      "q": "Trigger.dev 是免费的吗？",
+      "a": "是的，Trigger.dev 开源免费，你可以自托管；官方云服务包含免费层（Free 计划含每月 $5 用量额度）。"
+    },
+    {
+      "q": "Trigger.dev 与 Temporal 有什么区别？",
+      "a": "Temporal 是更通用的工作流引擎，支持多语言；Trigger.dev 专为 TypeScript/JavaScript 开发者设计，上手更快，集成更轻量，但语言受限。"
+    },
+    {
+      "q": "Trigger.dev 能处理长时间运行的任务吗？",
+      "a": "可以。Trigger.dev 设计上就支持长达数小时甚至更久的作业，并提供心跳、暂停、取消等生命周期管理。"
+    },
+    {
+      "q": "如何开始使用 Trigger.dev？",
+      "a": "访问官网 trigger.dev，通过 CLI 初始化项目，或阅读文档中的快速开始指南，几分钟即可创建第一个后台任务。"
+    }
+  ],
+  "seo_keywords": [
+    "Trigger.dev",
+    "Trigger.dev怎么样",
+    "Trigger.dev免费版",
+    "Trigger.dev使用教程",
+    "Trigger.dev和Temporal哪个好"
+  ],
+  "content": "# Trigger.dev：开源后台任务编排，让TypeScript开发者告别“胶水代码”\n\n你写后端的时候，是不是经常被那些“定时跑一下”、“失败了重试两次”、“处理完回调另一个接口”之类的任务搞得头大？用队列库、再加个cron、再写个重试逻辑，最后还要自己搭个监控面板——想想就烦。  \n如果你恰好是TypeScript/JavaScript开发者，有个工具能把这些事一锅端，而且还能自己部署、代码开源、类型安全，你大概率会想试试。它就是 **Trigger.dev**。\n\n---\n\n## Trigger.dev是什么？\n\n**一个开源的后台任务与工作流编排平台**，专门为 TypeScript 和 JavaScript 开发者设计。你可以把它理解成一个“专门跑后台逻辑的引擎”——它能托管你那些需要长时间运行、需要重试、需要严格排队的任务，并且给你一个实时看板追踪一切。\n\n核心思路很简单：你定义一系列 **Job**（工作流），它们可以由定时器、Webhook 或其他事件触发，然后自动按顺序执行、失败自动重试、性能指标和日志全部记录下来。整个系统完全建立在 Node.js 生态上，类型安全，和你的现有框架（Next.js、Remix、Express 等）可以无缝对接。\n\n---\n\n## 核心功能\n\n### 1. 创建工作流（Jobs）并自动编排\n\n这是Trigger.dev的灵魂。你可以用纯 TypeScript 写一个 Job，比如“用户注册后延迟24小时发送欢迎邮件”，它会自动编排：先等24小时，再执行发送逻辑。如果需要调用外部API、查询数据库，你直接写代码就行，不需要任何额外框架。\n\n**实际感受**：真正做到了“写业务逻辑 = 写一个函数”，编排由系统帮你跑。\n\n### 2. 支持 cron 定时触发与 Webhook 事件触发\n\n两种最常用的触发方式都内置了。cron 可以精确到分钟，Webhook 可以接收外部服务的回调。比如每天凌晨3点清理过期数据，或者接收 Stripe 支付成功通知后更新订单状态——配置一下即可。\n\n**实用体验**：比自己去维护 node-cron + 队列库要省心很多，尤其是 Webhook 的签名验证和重试机制已经内置了。\n\n### 3. 自动重试与失败补偿策略\n\n后台任务最怕的就是“莫名其妙失败了，没人知道”。Trigger.dev 内置了指数退避重试、最大重试次数、超时设置，你甚至可以自定义失败时的补偿逻辑（比如发警报通知）。\n\n**真实感受**：不用再手动写 try-catch 大循环了，配置好重试策略，它自动帮你兜底。\n\n### 4. 队列管理与并发控制\n\n如果你有大量任务同时涌入（比如批量数据导入），它可以按队列管理，设置并发上限、速率限制，避免打爆下游API或数据库。每个任务都有独立的状态跟踪。\n\n**值得一提**：这对于需要控制流量的场景非常有用，比自己在 Redis 里实现一个限流器要方便得多。\n\n### 5. 实时日志、指标与运行历史查看\n\nWeb 仪表盘提供了清晰的运行历史、日志流、执行时间、错误详情。调试时不需要在 CloudWatch 里翻来翻去，直接在页面上就能定位问题。\n\n**个人评价**：这个观测能力是它最大的加分项之一，省掉了额外搭建 Grafana + Loki 的成本。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 说明 |\n|------|------|\n| **开源版 (Self-hosted)** | 完全免费，可自行部署在任何服务器上，数据完全自己掌控。需要自己维护基础设施。 |\n| **云托管版 (Trigger.dev Cloud)** | 提供免费额度（如每月2000次执行），超出后按量付费。无需运维，即开即用。 |\n| **企业版** | 支持私有云部署、高级安全策略、专属支持等，价格需联系销售。 |\n\n> 更详细的定价请参考 [Trigger.dev 官网](https://trigger.dev/pricing)，版本间的具体功能和限制会随更新变化。\n\n---\n\n## 值不值得用？\n\n### 优点\n- **完全开源**，可自托管，数据不出公司\n- **原生 TypeScript 支持**，类型安全，开发体验好\n- **内置重试、超时、速率限制**，不用自己写中间件\n- **实时监控面板**，调试和排障效率高\n- **与主流框架集成**，Next.js/Remix/Express 等项目都能直接用\n\n### 缺点\n- **只支持 TypeScript/JavaScript**，其他语言用户无法使用\n- **对于极简单的单次任务（比如发一封邮件）有点杀鸡用牛刀**，不如直接用函数调用\n- **社区生态还在成长**，插件、模板、第三方集成不如 Zapier 或 Airflow 丰富\n\n### 总体结论\n\n**如果你是一个 TypeScript 项目团队，需要处理定时任务、Webhook 回调、复杂工作流编排，那么 Trigger.dev 是目前最适合的开源选择之一。** 它比传统队列库更现代，比 Zapier 更可控，比自建方案更省心。但如果你的需求只是“每小时跑一个脚本”，可能没必要引入一个编排平台。\n\n---\n\n## 使用建议\n\n- **先从小任务开始**：拿一个简单的定时 Job（比如每日数据备份）做上线验证，熟悉它的工作流定义和日志面板。\n- **利用重试策略**：不要把重试逻辑写在业务代码里，交给 Trigger.dev 配置比你自己写 try-catch 更优雅。\n- **注意自托管的运维成本**：如果你没有 DevOps 人力，建议先用云版本；有自建需求再考虑自行部署。\n- **结合 Next.js App Router 或 Server Actions**：Trigger.dev 对 Serverless 场景做了优化，可以无缝触发后台任务，不用额外建 Worker。\n\n---\n\n## 适合谁用？\n\n### ✅ 推荐\n- 使用 TypeScript/Node.js 的中小型团队，需要可靠的定时任务和事件驱动后台\n- 正在从单体向微服务迁移，希望把后台逻辑从 API 中剥离出来\n- 对数据隐私要求高、希望自托管任务调度平台的公司\n\n### 🤔 可考虑\n- 使用 Python/Ruby/Go 等语言的团队，但愿意为部分 Node.js 服务引入新工具\n- 任务类型非常简单（只有几个 cron），且不想学新概念的开发者\n\n### ❌ 不推荐\n- 完全不用 JavaScript 技术栈的团队\n- 只需要极简任务（比如“每天早上9点发一条短信”），用系统自带计划任务就能搞定\n- 追求极致低延迟、高吞吐的实时处理（游戏服务器、高频交易等）——Trigger.dev 聚焦的是一般后台任务，不是实时数据流引擎\n\n---\n\n最后一句实在话：**如果你已经受够了自己写的“队列+重试+日志”三板斧，Trigger.dev 值得你花半小时试一试。** 开源、免费、类型安全，至少能让你少写一堆重复代码。",
+  "published": true,
+  "source_url": "https://trigger.dev/pricing",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://trigger.dev",
+  "verified_publisher": "Trigger.dev",
+  "verified_what": "面向 TypeScript/JavaScript 开发者的开源后台任务与工作流编排框架/平台，支持长时任务、定时与事件触发、自动重试，可自托管（Apache 2.0）。",
+  "verified_price": "开源免费（Apache 2.0 可自托管）；云版分 Free（$0/月，含每月 $5 用量额度）、Hobby（$10/月）、Pro（$50/月），按计算秒数+调用量计费，可加购并发额度。",
+  "verified_platform": "Web, Self-host (Docker), API",
+  "verified_features": [
+    "在代码中定义 Job（后台任务），支持本地开发与版本控制",
+    "Webhook / 定时(cron) / 自定义事件 多种触发",
+    "自动重试与超时，无函数超时限制",
+    "队列与并发控制、实时日志与运行历史",
+    "React hooks 向前端实时展示进度",
+    "可自托管（Apache 2.0 开源）"
+  ],
+  "verified_description": "Trigger.dev 是面向 TypeScript/JavaScript 开发者的开源后台任务与工作流编排框架（发布方：Trigger.dev），支持长时任务、定时/事件触发与自动重试。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "暂无权威评分（开源框架，编辑评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全开源，可自托管，数据可控",
+    "原生 TypeScript/JavaScript 支持，类型安全",
+    "内建重试、超时、速率限制等可靠性机制",
+    "实时监控与日志面板，调试体验优秀",
+    "与 Next.js、Remix、Express 等框架无缝集成"
+  ],
+  "verified_cons": [
+    "仅支持 TypeScript/JavaScript，不支持其他语言",
+    "对极简单的一次性任务可能显得过度设计",
+    "社区生态尚在完善中，插件和模板不如老牌工具丰富"
+  ],
+  "verified_faq": [
+    {
+      "q": "Trigger.dev 是免费的吗？",
+      "a": "是的，Trigger.dev 开源免费，你可以自托管；官方云服务包含免费层（Free 计划含每月 $5 用量额度）。"
+    },
+    {
+      "q": "Trigger.dev 与 Temporal 有什么区别？",
+      "a": "Temporal 是更通用的工作流引擎，支持多语言；Trigger.dev 专为 TypeScript/JavaScript 开发者设计，上手更快，集成更轻量，但语言受限。"
+    },
+    {
+      "q": "Trigger.dev 能处理长时间运行的任务吗？",
+      "a": "可以。Trigger.dev 设计上就支持长达数小时甚至更久的作业，并提供心跳、暂停、取消等生命周期管理。"
+    },
+    {
+      "q": "如何开始使用 Trigger.dev？",
+      "a": "访问官网 trigger.dev，通过 CLI 初始化项目，或阅读文档中的快速开始指南，几分钟即可创建第一个后台任务。"
+    }
+  ],
+  "verified_tags": [
+    {
+      "text": "开源"
+    },
+    {
+      "text": "工作流"
+    },
+    {
+      "text": "定时任务",
+      "type": "free"
+    }
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://www.trigger.dev",
+    "https://www.trigger.dev/pricing",
+    "https://trigger.dev/blog/v3-open-access"
+  ],
+  "verify_notes": "v3 已开放，官方定价与基线一致；开源协议 Apache 2.0。无需修正。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Trigger.dev 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Trigger.dev 的 在代码中定义 Job（后台任务），支持本地开发与版本控制 是亮点，价格 开源免费 + 云版 $0/$10/$50 每月；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-03",
+  "created_date": "2026-08-03"
+}

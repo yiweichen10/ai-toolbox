@@ -1,0 +1,80 @@
+{
+  "slug": "near-ai",
+  "name": "NEAR AI",
+  "emoji": "🔐",
+  "color": "#00C08B",
+  "description": "NEAR 协议的 AI 层，提供 IronClaw 安全智能体运行时、Agent Market 与基于 TEE 的私有推理，由 Transformer 作者 Illia Polosukhin 领导。",
+  "price": "生态使用 NEAR 代币结算；NEAR AI Cloud 与 GPU 市场按推理用量计费，具体费率以官网为准。",
+  "platform": "Web / API",
+  "content": "## 是什么\nNEAR AI 是 NEAR 协议的 AI 层，主打用户自有 AI，在可信执行环境（TEE）中运行模型、提供可验证的私有推理，并构建让智能体安全交易与协作的运行时与市场。\n\n## 核心特点\n- IronClaw 运行时：用 Rust 从零重写的安全智能体运行时，四大防线包括内存安全、WASM 沙箱、AES-256-GCM 加密保险库与 TEE。\n- 私有推理：NEAR AI Cloud 在 TEE（Intel TDX、NVIDIA 机密计算）中执行每次推理并返回硬件签名证明。\n- Agent Market：market.near.ai 上智能体可互相雇佣、协作完成复杂工作流。\n- 机密 GPU 市场：企业可按需租用 TEE 内执行的 GPU。\n\n## 技术原理\nIronClaw 让大模型永远接触不到原始凭证，凭证仅在与外部服务通信的网络边界注入。私有推理在密封硬件中完成，生成可独立验证的加密证明并锚定链上。创始人 Illia Polosukhin 是 Transformer 论文的共同作者。\n\n## 价格与收费\n生态使用 NEAR 代币结算，NEAR Intents 已引导超 100 万美元 NEAR 回购。NEAR AI Cloud 与 GPU 市场按用量计费，具体费率以官网为准。\n\n## 适用人群/场景\n适合对数据隐私有强需求的开发者与企业，以及需要安全运行长期智能体、处理敏感工作流的团队。\n\n数据以官网为准。",
+  "faq": [
+    {
+      "q": "NEAR AI 是什么？",
+      "a": "NEAR AI 是 NEAR 协议的 AI 层，主打用户自有 AI，在可信执行环境中运行模型并提供可验证的私有推理。"
+    },
+    {
+      "q": "IronClaw 是什么？",
+      "a": "IronClaw 是用 Rust 从零重写的安全智能体运行时，通过内存安全、WASM 沙箱、AES-256-GCM 加密保险库与 TEE 四层防线保护用户凭证。"
+    },
+    {
+      "q": "私有推理如何实现？",
+      "a": "NEAR AI Cloud 在 TEE（Intel TDX、NVIDIA 机密计算）中执行每次推理，并返回硬件签名的证明，证明计算确实发生在密封硬件中。"
+    },
+    {
+      "q": "Agent Market 是什么？",
+      "a": "market.near.ai 是一个基于信誉的智能体市场，专业智能体可以互相雇佣、协作完成复杂工作流。"
+    },
+    {
+      "q": "创始人是谁？",
+      "a": "Illia Polosukhin 是 NEAR Protocol 联合创始人，也是 Transformer 论文《Attention Is All You Need》的八位共同作者之一。"
+    },
+    {
+      "q": "NEAR 生态如何捕获价值？",
+      "a": "通过 NEAR Intents 费用开关与产品收入回购 NEAR 代币，已引导超 100 万美元回购。"
+    },
+    {
+      "q": "IronClaw 解决了什么问题？",
+      "a": "它解决了 OpenClaw 类智能体把用户凭证直接暴露给 LLM 服务商的安全缺陷，让大模型永远接触不到原始凭证。"
+    }
+  ],
+  "features": [
+    "IronClaw 安全运行时",
+    "TEE 私有推理",
+    "Agent Market 智能体市场",
+    "机密 GPU 市场"
+  ],
+  "pros": [
+    "Transformer 作者领衔",
+    "硬件级隐私保护（TEE）",
+    "智能体安全架构业界领先",
+    "生态已有真实回购"
+  ],
+  "cons": [
+    "TEE 仍存在侧信道攻击等理论风险",
+    "去中心化 AI 竞争激烈",
+    "生态整体处于早期"
+  ],
+  "tags": [
+    "去中心化AI",
+    "私有推理",
+    "AI Agent",
+    "TEE"
+  ],
+  "source_urls": [
+    "https://near.ai",
+    "https://alearesearch.io/newsletters/near-ai-userowned-intelligence-and",
+    "https://longbridge.com/zh-CN/news/276917351",
+    "https://m.theblockbeats.info/flash/334895"
+  ],
+  "url": "https://near.ai",
+  "category": "去中心化AI",
+  "rating": "⭐ 4.4",
+  "visits": "暂无数据",
+  "published": true,
+  "content_verified": true,
+  "confidence": "high",
+  "last_verified": "2026-08-17",
+  "published_date": "2026-08-17",
+  "created_date": "2026-08-17",
+  "badge": null
+}

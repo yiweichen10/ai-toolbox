@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "panda-probe",
+    "name": "PandaProbe",
+    "verdict": "REAL",
+    "official_url": "https://pandaprobe.com",
+    "vendor": "Chirpz AI",
+    "desc_issue": "描述严重失实：真实产品 pandaprobe.com 是“开源 Agent 工程平台 / AI智能体追踪·评测·监控工具”（面向开发者），并非中文AI搜索/数据探测工具；功能、受众均不符",
+    "evidence": "Web搜索显示 pandaprobe.com 为 Chirpz AI 的AI智能体可观测性平台，与描述的中文搜索工具完全不符"
+  },
+  {
+    "slug": "pencil-ai",
+    "name": "Pencil AI",
+    "verdict": "REAL",
+    "official_url": "https://trypencil.com",
+    "vendor": "Pencil AI Limited",
+    "desc_issue": "URL 错误且功能不符：记录 URL 为 pencilai.io，但 Pencil 官方站点为 trypencil.com；真实 Pencil 是面向电商/投放的 AI 广告创意生成平台，并非『智能AI设计助手（文本转图像/修图）』。",
+    "evidence": "trypencil.com 为 Pencil AI Limited 官方域名（AI 广告创意平台，2018 年起）；pencilai.io 未对应官方站点，且存在 pencilai.pro（另一 AI 视频产品）等同名混淆项。记录的描述与真实 Pencil 功能不符。"
+  },
+  {
+    "slug": "f5-tts",
+    "name": "F5-TTS",
+    "verdict": "REAL",
+    "official_url": "https://github.com/SWivid/F5-TTS",
+    "vendor": "SWivid（开源社区）",
+    "desc_issue": "描述称“F5-TTS 是 Suno 团队开源”有误；F5-TTS 实为 SWivid 开源项目（github.com/SWivid/F5-TTS），Suno 是另一家音乐生成公司。",
+    "evidence": "GitHub 确认 F5-TTS 由 RVC-Boss/SWivid 维护，非 SunoAI；记录 URL github.com/SunoAI/F5-TTS 错误。"
+  },
+  {
+    "slug": "glitter-ai",
+    "name": "Glitter AI",
+    "verdict": "REAL",
+    "official_url": "https://www.glitter.ai",
+    "vendor": "Glitter AI（创始人 Yuval Karmi）",
+    "desc_issue": "描述错误：实际产品是「屏幕录制+语音→自动生成分步指南/SOP」的文档生成工具，并非通用 AI 对话助手",
+    "evidence": "glitter.ai 为真实站点，但其功能为步骤指南生成器而非 AI 对话助手"
+  },
+  {
+    "slug": "swytchcode",
+    "name": "Swytchcode",
+    "verdict": "REAL",
+    "official_url": "https://swytchcode.com",
+    "vendor": "Swytchcode",
+    "desc_issue": "Description mischaracterizes Swytchcode as a 50+ language code-conversion/refactoring tool ('Python转JS'); it is actually an API/SDK integration automation tool for publishers (generates API integration code, CLI/MCP server, 15+ languages).",
+    "evidence": "swytchcode.com is an 'AI solutions engineer for API & SDK publishers'; not a code-translator."
+  },
+  {
+    "slug": "blop",
+    "name": "Blop",
+    "verdict": "REAL",
+    "official_url": "https://blopai.com",
+    "vendor": "Blop (blopai.com, founder Alejandro Laurlund)",
+    "desc_issue": "Description wrong: Blop is a UX/UI optimization & QA testing agent (turns design feedback into code / Playwright browser tests in CI) — NOT a social-media design/poster assistant.",
+    "evidence": "Official blopai.com confirmed; 'Cursor for UX/UI optimization', QA agent for browser tests in GitHub Actions."
+  },
+  {
+    "slug": "ada-ai",
+    "name": "Ada AI",
+    "verdict": "REAL",
+    "official_url": "https://www.ada.cx",
+    "vendor": "Ada（Ada Support Inc.）",
+    "desc_issue": "描述称是『个人日常对话助手/知识问答』，错误；ada.cx 实为面向企业的AI客服平台（ACX），自动解决客户咨询",
+    "evidence": "ada.cx 官网明确为AI客服/客户体验平台，非个人助理"
+  },
+  {
+    "slug": "flint",
+    "name": "Flint",
+    "verdict": "REAL",
+    "official_url": "https://www.flintnote.com",
+    "vendor": "Tim Disney (Flint / flintnote.com)",
+    "desc_issue": "记录 URL flint.sh 未获证实；描述的“实时协作白板/多模态RAG引擎”与真实 Flint(flintnote.com，本地优先的开源笔记/知识管理工具，含知识图谱)不完全吻合，协作白板特性未证实",
+    "evidence": "Flint 为 AI 笔记与知识管理工具（flintnote.com，开源），描述中的知识图谱/语义搜索吻合，但 flint.sh 非其官网"
+  }
+]

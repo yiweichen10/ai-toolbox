@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="alternate" type="application/rss+xml" title="AI工具宝箱 快讯 RSS" href="/rss.xml">
+    <meta name="google-adsense-account" content="ca-pub-5521852210294377">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aitoollab.cn · AI CMS 控制台</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #0b0b1a;
+    color: #cdd6f4;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image: radial-gradient(ellipse at 20% 0%, #1a1a3e 0%, transparent 50%);
+}
+header {
+    background: #111127;
+    border-bottom: 1px solid #252545;
+    padding: 20px 32px;
+    display: flex; align-items: center; gap: 16px;
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+}
+header h1 { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
+header .subtitle { font-size: 13px; color: #6c5ce7; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+header .refresh { margin-left: auto; font-size: 12px; color: #636e72; }
+main { max-width: 1320px; margin: 0 auto; padding: 24px 32px 60px; }
+
+/* Sections */
+section { margin-bottom: 28px; }
+section h2 {
+    font-size: 15px; font-weight: 600; color: #a0a8c0; text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
+}
+section h2::before { content: ''; width: 4px; height: 16px; background: #6c5ce7; border-radius: 2px; }
+
+/* Stats */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+.card {
+    background: #111127; border-radius: 10px; padding: 18px;
+    border: 1px solid #252545; transition: border-color 0.2s;
+}
+.card:hover { border-color: #6c5ce7; }
+.card-icon { font-size: 22px; margin-bottom: 6px; }
+.card-label { font-size: 12px; color: #636e72; text-transform: uppercase; letter-spacing: 0.5px; }
+.card-value { font-size: 28px; font-weight: 700; color: #fff; margin-top: 4px; }
+.card-sub { font-size: 11px; color: #45475a; display: block; margin-top: 4px; }
+
+/* Pipeline */
+.pipeline { background: #111127; border-radius: 10px; border: 1px solid #252545; padding: 18px 20px; }
+.pipeline-row {
+    display: flex; align-items: center; gap: 16px; padding: 10px 0;
+    border-bottom: 1px solid #1a1a35; font-size: 14px;
+}
+.pipeline-row:last-child { border-bottom: none; }
+.pipeline-time { color: #636e72; font-family: 'SF Mono', 'Fira Code', monospace; width: 50px; flex-shrink: 0; }
+.pipeline-task { color: #a0a8c0; width: 80px; flex-shrink: 0; font-weight: 600; }
+.pipeline-title { color: #cdd6f4; flex: 1; }
+.pipeline-detail { color: #636e72; font-size: 12px; }
+.pipeline-status { font-size: 13px; white-space: nowrap; }
+.pipeline-ok .pipeline-status { color: #a6e3a1; }
+.pipeline-error .pipeline-status { color: #f38ba8; }
+.pipeline-running .pipeline-status { color: #fab387; }
+.pipeline-pending .pipeline-status { color: #636e72; }
+.pipeline-ok { background: rgba(166,227,161,0.04); }
+.pipeline-error { background: rgba(243,139,168,0.06); }
+
+/* Content tables */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.table-wrap {
+    background: #111127; border-radius: 10px; border: 1px solid #252545;
+    padding: 0; overflow-x: auto;
+}
+.table-wrap h3 {
+    font-size: 13px; color: #a0a8c0; padding: 14px 16px 0; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.5px;
+}
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { padding: 10px 16px; text-align: left; border-bottom: 1px solid #1a1a35; }
+th { color: #636e72; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; background: #0d0d22; }
+.td-title { color: #cdd6f4; max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.td-date, .td-cat { color: #6c5ce7; font-weight: 600; white-space: nowrap; }
+.td-meta { color: #636e72; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Health */
+.health-row {
+    display: flex; gap: 14px; flex-wrap: wrap;
+}
+.health-item {
+    background: #111127; border-radius: 10px; border: 1px solid #252545;
+    padding: 14px 18px; font-size: 13px; flex: 1; min-width: 200px;
+}
+.badge-ok { color: #a6e3a1; }
+.badge-warn { color: #f9e2af; }
+
+/* Actions */
+.actions-row {
+    display: flex; gap: 12px; flex-wrap: wrap;
+}
+.btn {
+    background: #1a1a3e; border: 1px solid #252545; color: #a0a8c0;
+    padding: 10px 18px; border-radius: 8px; font-size: 13px; cursor: pointer;
+    transition: all 0.2s; font-family: inherit;
+}
+.btn:hover { border-color: #6c5ce7; color: #fff; background: #1f1f45; }
+.btn-code {
+    font-family: 'SF Mono', 'Fira Code', monospace; font-size: 12px;
+}
+.btn-accent { background: #6c5ce7; border-color: #6c5ce7; color: #fff; }
+.btn-accent:hover { background: #7c6cf7; }
+
+/* Footer */
+footer {
+    text-align: center; color: #45475a; font-size: 11px; padding: 20px;
+    border-top: 1px solid #1a1a35; margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .two-col { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+    header { flex-wrap: wrap; }
+    main { padding: 16px; }
+}
+</style>
+<style id="global-search-style">
+.global-search-bar{background:var(--surface);border-bottom:1px solid var(--border-light);padding:10px 16px;position:sticky;top:108px;z-index:150}
+.global-search-bar .search-box{max-width:640px;margin:0 auto}
+@media (min-width:769px){.global-search-bar{padding:12px 32px}}
+@media (max-width:768px){.global-search-bar{top:98px}}
+</style>
+        <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#00A64F">
+    <link rel="apple-touch-icon" href="/assets/icons/pwa-192.png">
+    <link rel="icon" href="/favicon.ico">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7cf34c7c8b66be4564949354dbc51337";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+
+<header>
+    <h1>&#x1f3af; aitoollab.cn</h1>
+    <span class="subtitle">AI CMS 控制台</span>
+    <span class="refresh">&#128339; 更新于 2026-08-24 08:16:00 CST</span>
+    <nav class="global-nav" aria-label="全局导航">
+        <div class="global-nav-inner">
+            <a href="/" class="gn-item">首页</a>
+            <a href="/tools/" class="gn-item">全部AI工具</a>
+            <a href="/category/" class="gn-item">工具分类</a>
+            <a href="/ranking/" class="gn-item">工具排行</a>
+            <a href="/news/" class="gn-item">快讯</a>
+            <a href="/dict/" class="gn-item">AI词典</a>
+            <a href="/quiz/" class="gn-item">AI工具选择器</a>
+            <a href="/live/" class="gn-item">实时面板</a>
+            <a href="/compare/" class="gn-item">对比评测</a>
+            <a href="/alternatives/" class="gn-item">替代方案</a>
+            <a href="/favorites.html" class="gn-item">我的收藏</a>
+        </div>
+    </nav>
+    </header>
+    <div class="global-search-bar" id="globalSearchBar">
+        <form class="search-box" action="/" method="get" role="search" aria-label="站内搜索">
+            <input type="search" name="q" id="globalSearchInput" placeholder="搜索AI工具或文章..." autocomplete="off">
+            <button type="submit" aria-label="搜索">🔍</button>
+        </form>
+    </div>
+
+<main>
+
+<!-- Stats -->
+<section>
+    <h2>&#128200; 全站统计</h2>
+    <div class="stats-grid">
+        
+    <div class="card" style="border-top: 3px solid #6c5ce7;">
+        <div class="card-icon">&#128736;</div>
+        <div class="card-label">已发布工具</div>
+        <div class="card-value">592</div>
+        <span class="card-sub">共 672 个, 80 草稿</span>
+    </div>
+        
+    <div class="card" style="border-top: 3px solid #00b894;">
+        <div class="card-icon">&#128221;</div>
+        <div class="card-label">文章</div>
+        <div class="card-value">192</div>
+        
+    </div>
+        
+    <div class="card" style="border-top: 3px solid #fdcb6e;">
+        <div class="card-icon">&#128218;</div>
+        <div class="card-label">词典词条</div>
+        <div class="card-value">124</div>
+        <span class="card-sub">共 183 个</span>
+    </div>
+        
+    <div class="card" style="border-top: 3px solid #e17055;">
+        <div class="card-icon">&#128451;</div>
+        <div class="card-label">分类</div>
+        <div class="card-value">19</div>
+        <span class="card-sub">5 子类目</span>
+    </div>
+        
+    <div class="card" style="border-top: 3px solid #0984e3;">
+        <div class="card-icon">&#128240;</div>
+        <div class="card-label">快讯天数</div>
+        <div class="card-value">37</div>
+        <span class="card-sub">最新 2026-08-24</span>
+    </div>
+        
+    <div class="card" style="border-top: 3px solid #a29bfe;">
+        <div class="card-icon">&#128269;</div>
+        <div class="card-label">PSEO 页面</div>
+        <div class="card-value">93</div>
+        <span class="card-sub">42 vs. 21 alt. 19 rank.</span>
+    </div>
+    </div>
+</section>
+
+<!-- Pipeline -->
+<section>
+    <h2>&#128340; 今日流水线 (2026-08-24)</h2>
+    <div class="pipeline">
+        
+    <div class="pipeline-row pipeline-ok">
+        <span class="pipeline-time">07:38</span>
+        <span class="pipeline-task">SEO 文章</span>
+        <span class="pipeline-title">Harvey Tenet 法律专用模型发布：基于 Kimi K3 后训练，准确率提升 82%、成本仅 1/4（2026年8月）</span>
+        <span class="pipeline-detail">生成1篇文章, 自动配图完成</span>
+        <span class="pipeline-status">&#9989; 已完成</span>
+    </div>
+
+    <div class="pipeline-row pipeline-ok">
+        <span class="pipeline-time">07:57</span>
+        <span class="pipeline-task">AI 词典</span>
+        <span class="pipeline-title">智能体工作流、可信AI</span>
+        <span class="pipeline-detail">发布2个AI词典词条</span>
+        <span class="pipeline-status">&#9989; 已完成</span>
+    </div>
+
+    <div class="pipeline-row pipeline-ok">
+        <span class="pipeline-time">08:15</span>
+        <span class="pipeline-task">AI 快讯</span>
+        <span class="pipeline-title">AI快讯 08-24</span>
+        <span class="pipeline-detail">采集8条AI行业新闻</span>
+        <span class="pipeline-status">&#9989; 已完成</span>
+    </div>
+
+    <div class="pipeline-row pipeline-pending">
+        <span class="pipeline-time">--:--</span>
+        <span class="pipeline-task">工具发布</span>
+        <span class="pipeline-title">—</span>
+        
+        <span class="pipeline-status">&#9200; 待启动</span>
+    </div>
+    </div>
+</section>
+
+<!-- Content -->
+<section>
+    <h2>&#128269; 内容概览</h2>
+    <div class="two-col">
+        <div class="table-wrap">
+            <h3>&#128221; 最近文章</h3>
+            <table>
+                <thead><tr><th>标题</th><th>日期</th><th>描述</th></tr></thead>
+                <tbody>
+    <tr>
+        <td class="td-title" title="Chrome DevTools MCP 教程（2026年8月更新）：安装配置与调试实战">Chrome DevTools MCP 教程（2026年8月更新）：安装配置与调试实战</td>
+        <td class="td-date">2026-08-24</td>
+        <td class="td-meta">Chrome DevTools MCP 2026 年 8 月更新教程：最新稳定版 v1.7.0 的新功能、Claude </td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Harvey Tenet 法律专用模型发布：基于 Kimi K3 后训练，准确率提升 82%、成本仅 1/4（2026年8月）">Harvey Tenet 法律专用模型发布：基于 Kimi K3 后训练，准确率提升 82%、成本仅</td>
+        <td class="td-date">2026-08-24</td>
+        <td class="td-meta">Harvey 2026年8月发布法律专用模型 Tenet，基于 Kimi K3 后训练，LAB 基准 all-pass </td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Agent Harness 运行时大战：DeepSeek DSH、OpenAI Codex、智谱ZCode、Kimi Code 四强对决（2026年8月）">Agent Harness 运行时大战：DeepSeek DSH、OpenAI Codex、智谱ZC</td>
+        <td class="td-date">2026-08-23</td>
+        <td class="td-meta">2026年8月 Agent Harness 运行时大战：DeepSeek DSH、OpenAI Codex Harnes</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Claude Computer Use 正式版上线：AI 操作电脑进入“生产级”，浏览器工具用 DOM 结构精准定位——视觉派与结构派两条路线对决（2026年8月）">Claude Computer Use 正式版上线：AI 操作电脑进入“生产级”，浏览器工具用 DO</td>
+        <td class="td-date">2026-08-22</td>
+        <td class="td-meta">2026年8月20日 Anthropic 宣布 Computer Use、Skills API、Files API 在 </td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="浏览器 MCP 实战教程：Chrome MCP 稳定版怎么配怎么用（2026年8月）">浏览器 MCP 实战教程：Chrome MCP 稳定版怎么配怎么用（2026年8月）</td>
+        <td class="td-date">2026-08-21</td>
+        <td class="td-meta">2026 年 8 月浏览器 MCP 怎么选怎么配：Chrome DevTools for agents 已出 1.0 稳</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Qwen-UI-Agent 发布：阿里让 AI 直接看懂屏幕操作 App，真机 92.2% 超越 GPT-5.6 Sol——GUI 智能体从嘴替到手替（2026年8月）">Qwen-UI-Agent 发布：阿里让 AI 直接看懂屏幕操作 App，真机 92.2% 超越 G</td>
+        <td class="td-date">2026-08-21</td>
+        <td class="td-meta">Qwen-UI-Agent 深度解析：阿里千问 2026-08-20 发布的 GUI 图形界面智能体基座模型，覆盖手机/</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Qwen3.8-27B vs DeepSeek V4 Flash：本地开源还是云端 API？2026 选型指南">Qwen3.8-27B vs DeepSeek V4 Flash：本地开源还是云端 API？2026</td>
+        <td class="td-date">2026-08-21</td>
+        <td class="td-meta">2026年8月阿里开源 Qwen3.8-27B（27B 稠密、Apache 2.0、原生多模态）与 DeepSeek V</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="DeepSeek Harness 开源解析：14万 Star 的"一切皆插件"Agent 框架，DeepSeek 想当 Agent 时代的底座（2026年8月）">DeepSeek Harness 开源解析：14万 Star 的"一切皆插件"Agent 框架，De</td>
+        <td class="td-date">2026-08-20</td>
+        <td class="td-meta">DeepSeek Harness（dsh）是 DeepSeek 开源的 AI Agent 运行时框架，MIT 协议，核心</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Cursor Origin发布：AI时代的代码托管平台来了——专为Agent并行协作设计，GitHub的护城河还稳吗（2026年8月）">Cursor Origin发布：AI时代的代码托管平台来了——专为Agent并行协作设计，GitHu</td>
+        <td class="td-date">2026-08-19</td>
+        <td class="td-meta">Cursor Origin是专为AI Agent协作时代打造的代码托管平台，8月17日进入早期Beta。本文拆解其仓库/</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Descript AI 使用教程：从上传到导出，改文字就能剪视频">Descript AI 使用教程：从上传到导出，改文字就能剪视频</td>
+        <td class="td-date">2026-08-19</td>
+        <td class="td-meta">Descript AI 是主流的文字化视频与播客剪辑工具，上传音视频后自动转录，删文字即删片段。这篇教程按上传→转录→文</td>
+    </tr></tbody>
+            </table>
+        </div>
+        <div class="table-wrap">
+            <h3>&#128736; 最新工具</h3>
+            <table>
+                <thead><tr><th>名称</th><th>分类</th><th>评分</th></tr></thead>
+                <tbody>
+    <tr>
+        <td class="td-title" title="ChatGPT">ChatGPT</td>
+        <td class="td-cat">AI对话</td>
+        <td class="td-meta">⭐ 4.9</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Claude">Claude</td>
+        <td class="td-cat">AI对话</td>
+        <td class="td-meta">⭐4.8</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Midjourney">Midjourney</td>
+        <td class="td-cat">AI绘画</td>
+        <td class="td-meta">⭐4.9</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="GitHub Copilot">GitHub Copilot</td>
+        <td class="td-cat">AI编程</td>
+        <td class="td-meta">⭐ 4.7</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Cursor">Cursor</td>
+        <td class="td-cat">AI编程</td>
+        <td class="td-meta">⭐ 4.8</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Kimi">Kimi</td>
+        <td class="td-cat">AI对话</td>
+        <td class="td-meta">⭐4.5</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="豆包">豆包</td>
+        <td class="td-cat">AI对话</td>
+        <td class="td-meta">⭐4.4</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Notion AI">Notion AI</td>
+        <td class="td-cat">AI办公</td>
+        <td class="td-meta">⭐4.6</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Runway">Runway</td>
+        <td class="td-cat">AI视频</td>
+        <td class="td-meta">⭐4.7</td>
+    </tr>
+
+    <tr>
+        <td class="td-title" title="Stable Diffusion">Stable Diffusion</td>
+        <td class="td-cat">AI绘画</td>
+        <td class="td-meta">⭐4.7</td>
+    </tr></tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Health -->
+<section>
+    <h2>&#128657; 系统健康</h2>
+    <div class="health-row">
+        <div class="health-item">
+            <div style="color:#636e72; font-size:11px; text-transform:uppercase; letter-spacing:1px;">链接检查</div>
+            <div style="margin-top:6px;"><span class="badge-warn">&#9888; 无检查记录</span></div>
+        </div>
+        <div class="health-item">
+            <div style="color:#636e72; font-size:11px; text-transform:uppercase; letter-spacing:1px;">数据大小</div>
+            <div style="margin-top:6px;">
+                <span>tools.json: 6.8 MB</span><br>
+                <span>articles.json: 2.7 MB</span><br>
+                <span>sitemap.xml: 224.8 KB</span>
+            </div>
+        </div>
+        <div class="health-item">
+            <div style="color:#636e72; font-size:11px; text-transform:uppercase; letter-spacing:1px;">构建命令</div>
+            <div style="margin-top:6px; font-family:monospace; font-size:13px;">
+                <div style="color:#a6e3a1;">python scripts/build.py -t all</div>
+                <div style="color:#89b4fa;">bash deploy.sh</div>
+                <div style="color:#fab387;">python scripts/gen_cms.py</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Actions -->
+<section>
+    <h2>&#9889; 快捷操作</h2>
+    <div class="actions-row">
+        <button class="btn btn-accent" onclick="location.reload()">&#128260; 刷新数据</button>
+        <div class="btn btn-code">&#128295; python scripts/build.py -t all</div>
+        <div class="btn btn-code">&#128640; bash deploy.sh</div>
+        <div class="btn btn-code">&#128269; python scripts/gen_cms.py</div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    aitoollab.cn AI CMS &middot; 本地仪表盘 &middot; 数据来源: data/*.json &middot; 2026-08-24 08:16:00 CST
+</footer>
+
+    <button id="darkModeToggle" class="dark-toggle-fab" aria-label="切换暗色模式" title="暗色模式">🌙</button>
+    <script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('darkModeToggle');
+  try{if(localStorage.getItem('theme')==='dark')root.setAttribute('data-theme','dark');}catch(e){}
+  function updateLabel(){
+    if(btn)btn.textContent=root.getAttribute('data-theme')==='dark'?'☀️':'🌙';
+  }
+  updateLabel();
+  if(btn)btn.addEventListener('click',function(){
+    var isDark=root.getAttribute('data-theme')==='dark';
+    root.setAttribute('data-theme',isDark?'light':'dark');
+    try{localStorage.setItem('theme',isDark?'light':'dark');}catch(e){}
+    updateLabel();
+  });
+})();
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/sw.js').catch(function () {});
+        });
+    }
+    </script>
+    <a id="favFab" class="fav-fab" href="/favorites.html" title="我的收藏" aria-label="我的收藏">☆ <b>0</b></a>
+</body>
+</html>

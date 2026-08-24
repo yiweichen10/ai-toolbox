@@ -1,0 +1,144 @@
+{
+  "name": "Kensho AI",
+  "slug": "kensho-ai",
+  "positioning": "Kensho+Adaptive，AI工具实测",
+  "auto_positioning": true,
+  "emoji": "📊",
+  "color": "#1E3A5F",
+  "description": "Kensho 是 S&P Global 旗下的企业级 AI 数据引擎，将可信金融数据与前沿 AI 结合，提供文档抽取、金融音频转写、实体识别与面向 LLM/Agent 的数据检索能力，主要服务金融、商业与政府机构的企业客户。",
+  "category": "AI行业应用",
+  "tags": [
+    "数据分析",
+    "商业智能",
+    "企业级AI",
+    "金融数据",
+    "S&P Global"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "约50万月访问",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.kensho.com/",
+  "price": "企业定制",
+  "platform": "Web / API",
+  "pros": [
+    "背靠 S&P Global 可信金融数据",
+    "覆盖抽取/转写/实体识别/检索的完整数据管线",
+    "支持 LLM 与 Agent 工作流的数据接入"
+  ],
+  "cons": [
+    "主要面向企业客户，个人难直接使用",
+    "无公开定价",
+    "产品偏底层数据能力，需集成到自有系统"
+  ],
+  "features": [
+    "Kensho Extract（PDF 文档结构化抽取）",
+    "Kensho Scribe（金融音频转写）",
+    "Kensho NERD（实体识别与消歧）",
+    "Kensho Link（企业实体关联）",
+    "LLM-ready API（确定性数据检索）",
+    "Adaptive Retrieval（自适应检索）",
+    "MCP Apps（在 AI 应用中可视化数据）"
+  ],
+  "related": [
+    "perplexity",
+    "bloomberg-gpt",
+    "notion-ai",
+    "chatgpt",
+    "claude"
+  ],
+  "faq": [
+    {
+      "q": "Kensho 提供哪些核心产品？",
+      "a": "主要包括 Kensho Extract（PDF 结构化抽取）、Kensho Scribe（金融音频转写）、Kensho NERD（实体识别）、Kensho Link（实体关联），以及面向 AI 工作流的 LLM-ready API 与 MCP Apps。"
+    },
+    {
+      "q": "Kensho 的 AI 能力如何接入大模型？",
+      "a": "通过 Kensho LLM-ready API 提供确定性数据检索，并通过 Adaptive Retrieval 与 MCP Apps 将 S&P Global 可信数据接入各类 LLM 与 Agent 应用。"
+    }
+  ],
+  "seo_keywords": [
+    "Kensho AI",
+    "Kensho AI数据分析",
+    "Kensho AI企业版",
+    "Kensho AI vs ChatGPT",
+    "Kensho AI免费试用"
+  ],
+  "content": "## Kensho AI是什么？\n\n如果你在金融行业工作，或者经常需要处理大量结构化数据，你大概率听过S&P Global的名字。Kensho AI就是他们家出的企业级AI数据分析平台，简单来说，它是一个用AI帮企业做数据分析的工具。\n\n跟普通的BI工具不太一样的地方在于，Kensho AI强调的是“用自然语言提问，AI帮你找答案”。你不用会写SQL，不用懂复杂的查询语句，直接用大白话问系统，它就能从你的数据里找出你需要的信息。这两年他们还集成了更先进的自然语言处理能力，对企业用户来说确实更友好了。\n\n不过需要明确一点：这个工具主要是面向企业客户的，个人用户想直接用的话，门槛还是比较高的。它更适合那些有专门的数据团队、需要在内部搭建数据分析体系的机构。\n\n## 核心功能\n\n**自然语言数据查询**\n\n这是Kensho AI最核心的卖点。你可以直接用自然语言提问，比如“去年Q3我们的营收相比前年同期增长了多少”，系统会理解你的问题并从数据库里提取相关数据。据官方介绍，这个功能对于金融行业常见的那些复杂指标特别有用。不过要获得准确的结果，前提是你的数据本身质量要够高。\n\n**智能数据分析报告生成**\n\n除了帮你查数，Kensho AI还能自动生成分析报告。它会根据数据自动提炼关键洞察，生成带有图表和文字说明的报告草稿。据用户反馈，这个功能在需要快速产出汇报材料的场景下特别省时间。\n\n**多数据源整合**\n\n企业里的数据通常分散在各个系统里，Kensho AI支持对接多个数据源，把不同来源的数据整合到一起。这个能力对于需要做跨部门、跨业务线分析的公司来说比较实用。\n\n**实时数据可视化与自定义仪表板**\n\n系统提供可视化报表和自定义仪表板功能，你可以根据自己的需求搭建数据看板。据用户反馈，仪表板的灵活度还不错，能满足大多数业务场景的需要。\n\n**预测性分析与异常检测预警**\n\n除了看历史数据，Kensho AI还支持预测性分析和异常检测。这个功能对于需要做风险管控的金融机构尤其有用，可以帮你提前发现数据中的异常波动。\n\n## 版本/套餐对比\n\n| 版本 | 目标用户 | 核心功能 | 适用场景 |\n|------|----------|----------|----------|\n| 免费版 | 初步评估 | 基础查询、简单报表 | 了解产品/概念验证 |\n| 专业版 | 中型企业 | 完整分析功能、API集成、仪表板 | 部门级数据分析 |\n| 企业版 | 大型机构 | 定制化部署、多数据源、预测分析、专属支持 | 全面数字化转型 |\n\n据官方介绍，各版本在数据处理量、API调用次数、技术支持级别等方面有差异，完整功能需要付费才能使用。\n\n## 值不值得用？\n\n**优点：**\n\n- 企业级数据安全保障，满足金融行业合规要求，这是它的一个核心优势\n- 自然语言查询确实降低了数据分析的技术门槛，会说话就能查数\n- 和S&P Global的数据生态深度集成，如果你本来就在用S&P的数据，那这个衔接会很顺畅\n- 可扩展性不错，支持大规模企业部署\n\n**缺点：**\n\n- 个人用户基本不用考虑了，定位就是企业级\n- 对数据质量有要求，前期需要做数据清洗和预处理\n- 学习曲线确实比较陡，新用户通常需要一段时间培训才能上手\n- 定制化部署周期较长，不是那种开箱即用的工具\n\n**总体结论：**\n\n如果你所在的企业有专门的数据团队、有明确的数据分析需求、且对数据合规有较高要求，那Kensho AI是一个值得考虑的选择。它在金融数据处理方面的专业性和合规性是它的核心竞争力。但如果你只是个人用户，或者企业规模较小、数据分析需求比较简单，那它可能不是最优解。\n\n## 使用建议\n\n1. **在正式采购前先用免费版做概念验证**，确认这个工具确实能解决你的实际问题\n2. **重视数据质量**，在导入Kensho AI之前先把数据清洗做好，这直接影响后续的分析效果\n3. **安排好培训时间**，据用户反馈，新用户需要一定的学习成本，建议预留专门的培训周期\n4. **明确你的核心需求**，这个工具功能很多，但并不是所有功能都是必需的，先聚焦最重要的场景\n\n## 适合谁用？\n\n**推荐：**\n\n- 金融机构（银行、券商、基金公司等）需要做数据分析、风控管理的团队\n- 大型企业有专门的数据团队，需要搭建统一的数据分析平台\n- 正在使用S&P Global数据产品的企业，希望实现数据一体化\n\n**可考虑：**\n\n- 中型企业，数据分析需求在增长，但团队规模不算特别大\n- 对数据合规有较高要求，但预算有限的机构\n\n**不推荐：**\n\n- 个人用户或小型团队，需求简单且预算有限\n- 没有专门数据团队的企业，买了可能用不起来\n- 数据基础较差、尚未做好数据治理的公司",
+  "published": true,
+  "created_date": "2026-05-20",
+  "published_date": "2026-05-20",
+  "subcategory": "ai-finance",
+  "verified_url": "https://www.kensho.com/",
+  "verified_publisher": "Kensho / S&P Global（标普全球于 2018 年收购）",
+  "verified_what": "S&P Global 旗下的企业级 AI 数据与解决方案引擎，将可信数据与前沿 AI 结合，提供文档抽取、语音转写、实体识别、数据关联及面向 LLM/Agent 的数据检索（LLM-ready API、MCP Apps）等能力。",
+  "verified_price": "企业定制定价（无公开价目）",
+  "verified_platform": [
+    "Web",
+    "API",
+    "Cloud"
+  ],
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "Kensho Extract（PDF 文档结构化抽取）",
+    "Kensho Scribe（金融音频转写）",
+    "Kensho NERD（实体识别与消歧）",
+    "Kensho Link（企业实体关联）",
+    "LLM-ready API（确定性数据检索）",
+    "Adaptive Retrieval（自适应检索）",
+    "MCP Apps（在 AI 应用中可视化数据）"
+  ],
+  "verified_description": "Kensho 是 S&P Global 旗下的企业级 AI 数据引擎，将可信金融数据与前沿 AI 结合，提供文档抽取、金融音频转写、实体识别与面向 LLM/Agent 的数据检索能力，主要服务金融、商业与政府机构的企业客户。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "站内编辑评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "背靠 S&P Global 可信金融数据",
+    "覆盖抽取/转写/实体识别/检索的完整数据管线",
+    "支持 LLM 与 Agent 工作流的数据接入"
+  ],
+  "verified_cons": [
+    "主要面向企业客户，个人难直接使用",
+    "无公开定价",
+    "产品偏底层数据能力，需集成到自有系统"
+  ],
+  "verified_faq": [
+    {
+      "q": "Kensho 提供哪些核心产品？",
+      "a": "主要包括 Kensho Extract（PDF 结构化抽取）、Kensho Scribe（金融音频转写）、Kensho NERD（实体识别）、Kensho Link（实体关联），以及面向 AI 工作流的 LLM-ready API 与 MCP Apps。"
+    },
+    {
+      "q": "Kensho 的 AI 能力如何接入大模型？",
+      "a": "通过 Kensho LLM-ready API 提供确定性数据检索，并通过 Adaptive Retrieval 与 MCP Apps 将 S&P Global 可信数据接入各类 LLM 与 Agent 应用。"
+    }
+  ],
+  "verified_tags": [
+    "数据分析",
+    "商业智能",
+    "企业级AI",
+    "金融数据",
+    "S&P Global"
+  ],
+  "verified_category": "AI行业应用",
+  "source_urls": [
+    "https://www.kensho.com/",
+    "https://www.kensho.com/solutions",
+    "https://kensho.com/news/category/Announcements"
+  ],
+  "verify_notes": "现有内容将其概括为“用自然语言提问、AI 找答案”的企业数据分析平台，方向正确但偏简化；Kensho 更偏底层数据准备与检索能力。已在校验描述中细化。",
+  "content_verified": true,
+  "url_previous": "https://www.kensho.com",
+  "compare_section": {
+    "competitors": [
+      "duolingo-max",
+      "harvey-ai",
+      "schole-ai"
+    ],
+    "verdict": "Kensho AI 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：Kensho AI 的 Kensho Extract（PDF 文档结构化抽取） 是亮点，价格 企业定制；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

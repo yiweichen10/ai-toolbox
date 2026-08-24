@@ -1,0 +1,42 @@
+{
+  "batch_id": "b49",
+  "category": "AI翻译",
+  "tools": [
+    {
+      "slug": "deepl",
+      "name": "DeepL",
+      "url_current": "https://www.deepl.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网为真实官网(deepl.com)。价格表虚构:DeepL 2026年已将套餐改名为 Individual / Team / Business / Enterprise,已不存在\"Pro\"与\"Ultimate\"档位;文中 Ultimate 写 $25/月,实际 Business 约 $57.49/月(来源:deepl.com/pro、usagepricing.com)。低档 \"Pro $9.99/月\" 近似 Individual(约$8.74-10.49/月)但档位命名已过时。功能与\"支持30+语言\"描述属实。"
+    },
+    {
+      "slug": "smartcat",
+      "name": "Smartcat",
+      "url_current": "https://smartcat.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网真实(smartcat.com)。价格编造:存储价\"付费版$15/月起\"错误,官网当前最低付费方案 Adapt 为 $1,200/年(约$100/月),无$15/月档(来源:smartcat.com/pricing)。另:描述称\"支持100+语言\"实际官网为280+语言,属低估但非虚构,未计入幻觉字段。"
+    },
+    {
+      "slug": "lingoai",
+      "name": "LingoAI",
+      "url_current": "https://lingoai.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 lingoai.io 真实,但其定位是 Web3/DePIN 去中心化 AI 数据平台(LingoTrans、DAO 众包翻译、Speak to Earn、语料挖矿、454种语言众包),并非普通消费级翻译工具。存储内容与描述把它写成\"文档批量翻译、行业术语库定制、离线翻译、$9.99/月起高级版\"等通用翻译器功能,属张冠李戴+价格虚构:官网无 $9.99/月订阅(来源:lingoai.io)。注:App Store 另有同名\"Lingo AI\"法语学习 App(周费$9.99),与本 Web3 站无关,勿混淆。"
+    }
+  ]
+}

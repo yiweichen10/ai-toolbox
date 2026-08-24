@@ -1,0 +1,152 @@
+{
+  "name": "AnythingLLM",
+  "slug": "anythingllm",
+  "positioning": "免费AI开发工具：多模型支持+多工作区管理",
+  "auto_positioning": true,
+  "emoji": "📚",
+  "color": "#6C5CE7",
+  "description": "AnythingLLM 是 Mintplex Labs 推出的开源（MIT）全栈 AI 应用，将各类文档转为可对话的本地知识库，支持多 LLM、多工作区与 Agent，桌面与 Docker 自托管均免费，云端托管 $50/月起。",
+  "category": "AI开发",
+  "tags": [
+    "知识库",
+    "向量数据库",
+    "RAG",
+    "文档问答",
+    "开源"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "约50万月访问量",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://anythingllm.com",
+  "price": "自托管免费；云版 $50/月起",
+  "platform": "Windows、macOS、Linux",
+  "pros": [
+    "开源免费（MIT），支持自托管与本地优先",
+    "支持多种文档格式与多 LLM 接入",
+    "内置向量库，开箱即用，降低门槛",
+    "多工作区管理与权限隔离",
+    "桌面应用对普通用户友好，数据隐私可控"
+  ],
+  "cons": [
+    "大规模文档处理可能较慢",
+    "免费/自托管版功能相对基础，企业级功能需云端付费",
+    "对硬件配置有一定要求",
+    "移动端支持较弱",
+    "云版价格较高（Basic $50/月起，并非低价档）"
+  ],
+  "features": [
+    "文档向量化与知识库构建",
+    "RAG 增强问答",
+    "多模型支持（OpenAI、Claude、Ollama 等）",
+    "多工作区管理",
+    "内置向量数据库（LanceDB），无需额外配置",
+    "Agent 与开发者 API",
+    "多用户权限与白标"
+  ],
+  "related": [
+    "langchain",
+    "llamaindex",
+    "pinecone",
+    "chatpdf"
+  ],
+  "faq": [
+    {
+      "q": "AnythingLLM 是免费的吗？",
+      "a": "桌面版与 Docker 自托管完全免费开源（MIT）；云端托管 Basic $50/月、Pro $99/月，Enterprise 定制。"
+    },
+    {
+      "q": "AnythingLLM 支持哪些文档格式？",
+      "a": "支持 PDF、Word、TXT、CSV、Markdown、HTML、代码库等多种常见格式。"
+    },
+    {
+      "q": "能本地部署吗？",
+      "a": "可以，支持完全本地部署，数据保存在本地设备，保障隐私。"
+    }
+  ],
+  "seo_keywords": [
+    "AnythingLLM",
+    "AnythingLLM中文版",
+    "AnythingLLM免费吗",
+    "AnythingLLM本地部署",
+    "RAG知识库工具"
+  ],
+  "content": "## AnythingLLM是什么？\n\n如果你曾经面对一堆PDF、Word文档或者网页内容，想让AI帮你快速找到答案，那AnythingLLM这个工具可能会让你觉得挺香的。\n\n简单来说，AnythingLLM是一个开源的桌面应用程序。你可以把各种文档丢给它，它会自动把内容转换成\"向量\"形式存起来，然后你就能像聊天一样问它问题，它会从你上传的这些资料里找答案给你。2026年的版本已经支持多模型集成和自定义RAG部署，既可以本地运行，也能选择云端服务。\n\n它不是那种需要写代码才能用的RAG系统，而是装好就能用的桌面应用，对普通用户比较友好。定位大概在\"比搜索引擎聪明一点，比自己搭整套RAG系统简单一点\"这个区间。\n\n## 核心功能\n\n**1. 文档向量化与知识库构建**\n\n这是AnythingLLM的核心能力。支持PDF、Word、TXT、网页等多种格式，拖进去就能自动处理，不需要你懂什么向量数据库、Embedding模型之类的概念。它内置了向量数据库，不用额外安装MySQL或者Milvus这些组件，这点对新手很友好。\n\n实际使用中，如果你有几十份文档需要整合成一个可以问答的知识库，体验还是不错的。不过文档量大的时候处理速度会变慢，这个后面会提到。\n\n**2. RAG增强问答**\n\n基于你上传的文档进行问答，和直接问ChatGPT最大的区别是：答案会引用你提供的资料，不容易\"一本正经地胡说八道\"。你可以追问细节，系统会结合上下文继续回答。\n\n**3. 多模型支持**\n\n这是它的一个亮点。可以同时接入多个LLM，比如OpenAI、Claude、Ollama（本地模型）。你可以根据不同场景切换使用——比如本地跑个轻量模型省API费用，需要更强能力时切到GPT-4或者Claude。\n\n**4. 多工作区管理**\n\n可以创建多个独立的工作区，每个工作区对应不同的知识库和对话记录。比如你可以分开管理\"项目A的资料\"\"个人笔记\"\"团队知识库\"，互相不干扰。\n\n**5. API接口支持**\n\n提供API，开发者可以把它集成到自己的应用里。这点对于想用RAG能力但不想自己从头搭系统的人来说挺实用的。\n\n## 版本/套餐对比\n\n| 项目 | 开源免费版 | 付费版 |\n|------|-----------|--------|\n| 部署方式 | 本地 | 本地/云端 |\n| 费用 | 免费 | 订阅制 |\n| 向量数据库 | 内置基础版 | 可扩展 |\n| 多模型支持 | 支持 | 完整支持 |\n| API功能 | 基础 | 完整 |\n| 技术支持 | 社区支持 | 官方支持 |\n\n具体功能差异建议直接看官方最新信息，这里只是让你有个大致概念。\n\n## 值不值得用？\n\n**优点：**\n\n- 完全开源免费，支持自托管，数据完全在自己手里\n- 支持的文档格式比较全，主流格式都能处理\n- 多模型接入灵活，不绑死在某一个LLM上\n- 内置向量数据库，省去额外配置\n- 多工作区管理清晰，适合知识分类\n- 本地运行确实更隐私，不用担心数据送到第三方\n\n**缺点：**\n\n- 大规模文档处理时速度会慢，尤其配置一般的机器\n- 免费版功能相对基础，企业级功能需要付费\n- 对硬件配置有一定要求，内存和硬盘空间需要跟上\n- 移动端支持目前比较弱，主要还是桌面端好用\n\n**我的看法：**对于个人用户和小型团队来说，免费版已经能cover大部分需求了。它最大的价值在于让你用相对低的门槛拥有一个\"私人的、基于你自己资料的AI助手\"。但如果你需要处理大量文档或者对响应速度要求很高，可能需要评估一下实际体验是否符合预期。\n\n## 使用建议\n\n1. **从小规模开始**：先挑几份核心文档试试，别一上来就喂几百份PDF\n2. **选对模型**：日常简单问答用Ollama本地跑可以省API费用，需要更强推理能力时再用GPT-4或Claude\n3. **善用工作区**：按项目或者用途分开管理，体验会好很多\n4. **硬件要跟上**：如果文档量大，建议内存16G以上，SSD会更流畅\n5. **免费版够用就先用**：付费升级可以等真正需要再说\n\n## 适合谁用？\n\n**推荐使用：**\n- 需要管理私有知识库的个人用户\n- 对数据隐私敏感的小团队\n- 开发者想快速集成RAG能力\n\n**可考虑使用：**\n- 企业用户（建议先评估大规模文档下的性能）\n- 对移动端有强需求的人（目前移动端体验一般）\n\n**不推荐：**\n- 完全没有技术基础、连软件都不想安装的人\n- 需要处理海量文档（成千上万份）的场景，性能可能跟不上",
+  "published": true,
+  "created_date": "2026-05-15",
+  "published_date": "2026-05-15",
+  "verified_url": "https://anythingllm.com",
+  "verified_publisher": "Mintplex Labs Inc.",
+  "verified_what": "全栈开源（MIT）的桌面 / 自托管 AI 应用，将文档、PDF、网页等转为可对话的向量知识库，支持多 LLM、多文档格式、多用户与 Agent，本地优先保护隐私。",
+  "verified_price": "桌面版与 Docker 自托管完全免费（MIT）；云端托管 Basic $50/月、Pro $99/月、Enterprise 联系销售（原数据称“云服务版起价$9/月”有误）。",
+  "verified_platform": "Windows、macOS、Linux（桌面）；Docker 自托管；Web 云端",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "文档向量化与知识库构建",
+    "RAG 增强问答",
+    "多模型支持（OpenAI、Claude、Ollama 等）",
+    "多工作区管理",
+    "内置向量数据库（LanceDB），无需额外配置",
+    "Agent 与开发者 API",
+    "多用户权限与白标"
+  ],
+  "verified_description": "AnythingLLM 是 Mintplex Labs 推出的开源（MIT）全栈 AI 应用，将各类文档转为可对话的本地知识库，支持多 LLM、多工作区与 Agent，桌面与 Docker 自托管均免费，云端托管 $50/月起。",
+  "content_flags": "价格偏差：原数据称云服务版起价 $9/月，实际官方云版 Basic $50/月、Pro $99/月",
+  "price_verified": true,
+  "verified_pros": [
+    "开源免费（MIT），支持自托管与本地优先",
+    "支持多种文档格式与多 LLM 接入",
+    "内置向量库，开箱即用，降低门槛",
+    "多工作区管理与权限隔离",
+    "桌面应用对普通用户友好，数据隐私可控"
+  ],
+  "verified_cons": [
+    "大规模文档处理可能较慢",
+    "免费/自托管版功能相对基础，企业级功能需云端付费",
+    "对硬件配置有一定要求",
+    "移动端支持较弱",
+    "云版价格较高（Basic $50/月起，并非低价档）"
+  ],
+  "verified_faq": [
+    {
+      "q": "AnythingLLM 是免费的吗？",
+      "a": "桌面版与 Docker 自托管完全免费开源（MIT）；云端托管 Basic $50/月、Pro $99/月，Enterprise 定制。"
+    },
+    {
+      "q": "AnythingLLM 支持哪些文档格式？",
+      "a": "支持 PDF、Word、TXT、CSV、Markdown、HTML、代码库等多种常见格式。"
+    },
+    {
+      "q": "能本地部署吗？",
+      "a": "可以，支持完全本地部署，数据保存在本地设备，保障隐私。"
+    }
+  ],
+  "verified_tags": [
+    "知识库",
+    "向量数据库",
+    "RAG",
+    "文档问答",
+    "开源"
+  ],
+  "verified_category": "AI开发",
+  "conflict_note": "仅价格字段有误（原写 $9/月，实为 $50/月起），其余内容准确；已在 verified_price_plans / price_short 中修正，保留原值由后续流程套用修正。",
+  "source_urls": [
+    "https://anythingllm.com",
+    "https://anythingllm.com/cloud",
+    "https://github.com/Mintplex-Labs/anything-llm"
+  ],
+  "verify_notes": "价格纠正：官方云服务 Basic $50/月、Pro $99/月，无 $9/月档位。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "AnythingLLM 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：AnythingLLM 的 文档向量化与知识库构建 是亮点，价格 自托管免费；云版 $50/月起；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

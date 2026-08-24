@@ -1,0 +1,136 @@
+{
+  "name": "朱雀AI检测助手",
+  "slug": "zhuque-ai-detect",
+  "positioning": "免费检测论文、文本、图片、视频，准确率92%",
+  "auto_positioning": true,
+  "emoji": "🔍",
+  "color": "#ef4444",
+  "description": "朱雀AI检测助手是腾讯朱雀实验室推出的免费AI内容检测工具，可识别文本、图片、视频中的AI生成痕迹，兼容GPT、Claude、DeepSeek、混元及Midjourney等主流生成模型，中文场景准确率尤为突出，适合学术诚信检测与内容审核。",
+  "category": "AI检测",
+  "subcategory": "ai-content-detector",
+  "tags": [
+    {
+      "text": "AI检测"
+    },
+    {
+      "text": "免费"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://matrix.tencent.com/ai-detect/",
+  "price": "免费",
+  "platform": "Web",
+  "pros": [
+    "完全免费，无需付费",
+    "支持文本、图像、视频多模态检测",
+    "中文场景检测优化，检测模型持续动态更新",
+    "腾讯朱雀实验室出品，技术实力与品牌背书强"
+  ],
+  "cons": [
+    "存在每日检测次数额度限制，游客模式次数较少",
+    "检测结果仅供参考，复杂场景建议结合人工判断",
+    "单次文本检测建议不少于350字，短文本检测效果受限"
+  ],
+  "features": [
+    "完全免费多模态AI检测",
+    "文本/图像/视频三种模态检测",
+    "中文场景检测能力突出",
+    "检测模型每月动态更新",
+    "学术诚信检测免费标注可疑段落",
+    "支持数据质量审核与筛选"
+  ],
+  "related": [
+    "speedai",
+    "xiangpiai",
+    "gaoyiai"
+  ],
+  "content": "## 朱雀AI检测 是什么？\n\n朱雀AI检测助手是腾讯朱雀实验室（腾讯混元安全团队）推出的免费多模态 AI 内容检测工具，可识别文本、图像和视频中的 AI 生成痕迹，文本检测准确率官网宣称超 92%、图像检测宣称达 98% 以上。工具支持 GPT、Claude、DeepSeek、混元等文生文模型，以及 Midjourney、Stable Diffusion、Sora 等图文视频模型生成内容的检测，面向学术诚信检测、社交媒体内容识别、数据质量审核等场景，基于数千万级数据训练、模型每月更新，中文场景检测能力尤为突出。\n\n### 核心功能\n\n- **文本AI检测**：识别 GPT、Claude、DeepSeek、混元等模型生成的文字，支持 txt、docx 格式上传与文本粘贴，可疑段落红色高亮标注。\n- **图像AI检测**：识别 Midjourney、Stable Diffusion、混元、豆包等生成的图片，支持 png、jpg、webp 等格式，识别生成痕迹与合成区域。\n- **视频AI检测**：支持 Sora、海螺、Veo 等文生视频模型生成内容的鉴别，覆盖电影、短视频等场景，可用于 DeepFake 鉴别。\n- **学术诚信检测**：免费检测论文、作文等文档是否由 AI 生成，精准标注可疑段落，辅助教师与机构审查。\n- **数据质量审核**：过滤 AI 生成数据，筛选人类真实数据用于模型训练与检索，规避模型崩溃风险。\n- **模型持续更新**：检测模型每月动态更新，持续适配新的 AI 生成方式，中文场景专项优化，英文检测同样可用。\n\n### 适用场景\n\n- **学术诚信检测**：检测学生论文、作业是否存在 AI 代写，精准标注可疑段落，维护学术诚信，是教师与教务的免费工具。\n- **社交媒体与媒体内容审核**：筛查平台内 AI 生成的虚假新闻、合成照片与机器评论，降低信息污染，辅助事实核查。\n- **数据质量与模型训练**：企业过滤 AI 生成数据，筛选人类真实数据用于训练，保证数据质量，减少无效数据混入。\n\n### 价格\n\n完全免费，官网标注为免费的在线 AI 检测助手，未发现付费方案。存在每日检测次数额度：游客模式文本与图片各约 5 次/日，登录后文本约 20 次/日、图片/视频约 30 次/日（第三方来源），可通过反馈赞踩额外获取次数，具体额度以官网为准。\n\n### 使用建议\n\n建议先注册登录以获取更高免费额度；文本检测建议单次不少于 350 字，图片单张不超过 20MB。检测结果以概率形式呈现，红色高亮段落应作为人工复核重点，涉及学术判定、媒体报道核实等严肃场景时，请结合人工审核综合评估，不宜仅凭单一工具结果下结论。日常可将朱雀用于论文、作业与自媒体内容的快速初筛，发现问题段落后再结合其他手段确认，检测模型每月更新，对新模型生成内容的识别会持续提升。 该工具面向普通用户完全免费开放，是日常快速鉴别 AI 内容的低门槛选择。",
+  "published": true,
+  "faq": [
+    {
+      "q": "朱雀AI检测收费吗？",
+      "a": "不收费。官网标注为免费的在线AI检测助手，学术诚信检测部分明确免费检测论文、作文等各类文档。"
+    },
+    {
+      "q": "支持检测哪些AI生成的内容？",
+      "a": "文本支持GPT、Claude、DeepSeek、混元等；图像支持混元、豆包、Midjourney、Stable Diffusion等；视频支持Sora、海螺、Veo等（官网）。"
+    },
+    {
+      "q": "检测的准确率如何？",
+      "a": "官网宣称文本检测整体准确率超92%、社交媒体图像检出准确率达98%+，检测模型每月更新。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://matrix.tencent.com/ai-detect/",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "verify_notes": "官网可正常访问。官方URL未变。每日检测次数额度信息来自第三方导航站，官网本身未明确标注；检测准确率数值为官网宣称值。",
+  "verified_publisher": "腾讯",
+  "verified_what": "腾讯推出的免费多模态AI内容检测助手",
+  "verified_price": "完全免费。官网标注为免费的在线AI检测助手，未发现任何付费方案；第三方来源显示存在每日检测次数额度（游客约5次/日，登录用户文本约20次/日）",
+  "verified_platform": "Web",
+  "conflict": false,
+  "verified_features": [
+    "文本AI检测：识别GPT、Claude、DeepSeek、混元等模型生成的文字，支持txt、docx格式上传（官网）",
+    "图像/视频AI检测：识别Midjourney、Stable Diffusion、Sora等生成的图片与视频，支持png、jpg、webp、mp4等格式（官网）",
+    "学术诚信检测：免费检测论文、作文等文档是否由AI生成，精准标注可疑段落（官网）",
+    "数据质量审核：过滤AI数据，筛选人类真实数据用于模型训练与检索（官网）",
+    "Benchmark评测：在HC3、Detect-RL、AIGTBENCH、MAGE、RAID等开源基准上评测检测效果（官网）"
+  ],
+  "verified_description": "朱雀AI检测助手是腾讯朱雀实验室推出的免费AI内容检测工具，可识别文本、图片、视频中的AI生成痕迹，兼容GPT、Claude、DeepSeek、混元及Midjourney等主流生成模型，中文场景准确率尤为突出，适合学术诚信检测与内容审核。",
+  "price_verified": true,
+  "verified_pros": [
+    "完全免费，无需付费（官网）",
+    "支持文本、图像、视频多模态检测（官网）",
+    "中文场景检测优化，检测模型持续动态更新（官网）"
+  ],
+  "verified_cons": [
+    "存在每日检测次数额度限制，游客模式次数较少（第三方来源）"
+  ],
+  "verified_faq": [
+    {
+      "question": "朱雀AI检测收费吗？",
+      "answer": "不收费。官网标注为免费的在线AI检测助手，学术诚信检测部分明确免费检测论文、作文等各类文档。"
+    },
+    {
+      "question": "支持检测哪些AI生成的内容？",
+      "answer": "文本支持GPT、Claude、DeepSeek、混元等；图像支持混元、豆包、Midjourney、Stable Diffusion等；视频支持Sora、海螺、Veo等（官网）。"
+    },
+    {
+      "question": "检测的准确率如何？",
+      "answer": "官网宣称文本检测整体准确率超92%、社交媒体图像检出准确率达98%+，检测模型每月更新。"
+    },
+    {
+      "question": "需要注册登录吗？",
+      "answer": "第三方来源显示游客可直接使用但额度较少，登录后每日免费额度更高。"
+    },
+    {
+      "question": "支持哪些文件格式？",
+      "answer": "文本支持txt、docx，图片支持png、jpg、webp，视频支持mp4、mov、avi等格式（官网）。"
+    }
+  ],
+  "verified_tags": [
+    {
+      "text": "AI检测"
+    },
+    {
+      "text": "免费"
+    }
+  ],
+  "verified_category": "AI检测",
+  "source_urls": [
+    "https://matrix.tencent.com/ai-detect/",
+    "https://www.chooseai.net/tools/124/",
+    "https://www.ytm.app/sites/7588.html"
+  ],
+  "content_verified": true,
+  "url_previous": "https://matrix.tencent.com/ai-detect/?utm_source=ai-bot.cn",
+  "updated_date": "2026-08-24",
+  "seo_keywords": [
+    "朱雀AI检测",
+    "腾讯AI检测",
+    "AI生成内容检测",
+    "论文AI率检测",
+    "免费AI检测工具"
+  ]
+}

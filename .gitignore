@@ -1,0 +1,108 @@
+# Environment variables (API keys, secrets)
+.env
+.env.*
+
+# Baidu push cache
+.baidu_pushed.json
+
+# 外链推送队列（每日生成，本地使用，不入库）
+backlink_push_queue/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups (never commit)
+*.bak
+.cleanup_backup/
+
+# 运行时数据（用户点赞等，由服务器生成，不进 git）
+data/tool_likes.json
+
+# Playwright logs
+.playwright-cli/
+*.log
+
+# Node modules
+node_modules/
+
+# Temp/scratch files at root
+_article_drafts.json
+_article_state.json
+_articles_humanized.json
+_temp_article.json
+_insert_article.py
+_list_articles.py
+
+# Deploy artifacts
+.github/
+
+# ===== 构建产物（build.py 生成；部署走 deploy.sh tar+scp，无需进 git）=====
+/tools/
+/articles/
+/category/
+/compare/
+/alternatives/
+/ranking/
+/quiz/
+/dict/
+/news/
+/images/
+/assets/
+/output/
+/reports/
+/live/
+/_verify/
+/author/
+/css/style.min.css
+
+# ===== assets 例外：保留 LOGO 矢量母版（改 LOGO 的权威源）=====
+!/assets/logo/
+!/assets/logo/logo-mark.svg
+
+# ===== data/：只保留核心内容数据源正本（tools/articles/dict/news 等）=====
+/data/*.bak*
+/data/*windsurf_bak
+/data/_*
+/data/ai_citation_reports/
+/data/health_reports/
+/data/classify_*
+/data/full_verify_*
+/data/classification_mismatches.json
+/data/category_seo_plan_2026.json
+/data/new_tools_*.json
+/data/new_article_*.md
+/data/insert_article.py
+/data/icon_coverage.json
+/data/tool_submission_log.json
+/data/url_health_report.json
+/data/version_update_candidates.json
+
+# ===== 根目录一次性脚本/备份/缓存 =====
+/indexnow_pushed.json
+/._*
+/_article_drafts.json
+/_article_state.json
+/_articles_humanized.json
+/_deadlink_inventory_*.md
+/audit_published.csv
+/batch009_extract.txt
+/add_*.py
+/aggressive_rescue.py
+/articles_backup_*.tar.gz
+/ai-hot-briefing-*.html
+/d2b58e*.txt
+/build_batch_*.py
+favicon.ico
+
+# 项目本地数据（自动化记忆/工作日志），不进 git
+.workbuddy/

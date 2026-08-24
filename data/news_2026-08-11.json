@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260811-001",
+    "title": "英伟达联合六大机构融资5000亿美元建 AI 工厂",
+    "summary": "英伟达宣布与 Apollo、BlackRock、Blackstone、Brookfield、Goldman Sachs 和 KKR 合作，建立独立融资平台，动员超5000亿美元第三方资本支持 AI 基础设施建设。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "X：Jensen Huang (@JensenHuang)",
+    "source_url": "https://x.com/JensenHuang/status/2086934705207959965",
+    "published_at": "2026-08-11T05:56:21+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260811-002",
+    "title": "Claude 未发布研究版将黎曼 zeta 函数零点下界从 41.6% 提升至 67.2%",
+    "summary": "Anthropic 员工让 Claude 尝试攻克黎曼猜想，虽未成功，但一个未发布的研究版 Claude 在相关问题上取得突破：将满足黎曼猜想的 zeta 函数零点比例下界从 41.6% 提升至 67.2%。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "Anthropic：Research（发表成果 · 网页）",
+    "source_url": "https://www.anthropic.com/research/riemann-zeta",
+    "published_at": "2026-08-11T01:46:50+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260811-003",
+    "title": "OpenRouter 推出由市场智慧驱动的新版 Auto 路由器",
+    "summary": "OpenRouter 基于每周超 55T token 的社区消费数据，推出新版 Auto 路由器（openrouter/auto），其模型选择在多数任务和成本档位上优于旧版。新路由器按约 30 种任务类型匹配近 7 天社区实际消费的模型，支持 cost_tier 参数（low 至 max）并遵循账户隐私设置。在 MMLU Pro 等基准上，新默认档位在多数领域以更低成本达到旧版同等性能。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "OpenRouter：Announcements（RSS）",
+    "source_url": "https://openrouter.ai/blog/announcements/introducing-the-new-auto-router",
+    "published_at": "2026-08-10T08:00:00+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260811-004",
+    "title": "tl；dv 逾18.1万段 AI 会议录音被公开暴露，可实时闯入他人通话",
+    "summary": "AI 会议记录平台 tl；dv 的 Firestore 数据库因缺乏租户隔离，任何已认证用户可查询全部18.1万段会议记录，涉及84，312名用户、35，003个域名，含23国政府及多所高校会议。处于录制状态的约1，000场会议会暴露可加入的会议 ID，研究者借此闯入马来西亚教育部及美国某大学创业团队的实时通话。该漏洞自2026年1月报告后6个月仍未修复，另有超1，000段会议内容为公开状态。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://bobdahacker.com/blog/tldv-hack",
+    "published_at": "2026-08-10T22:03:26+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260811-005",
+    "title": "Scale AI 开源 Muse 系列模型",
+    "summary": "1/ 今天有个重大消息：我们很快将发布 Muse Spark 1.2 的开源权重版本。\n\n同时，我们还将发布 Muse Glimmer--一个 30B 参数的智能体模型，采用 Apache 2.0 协议开源权重。Muse Glimmer 可在 24GB 显存上运行，且不损失智能体可靠性。🧵",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "X：Alexandr Wang（Scale AI 创始人/Meta 首席 AI 官） (@alexandr_wang)",
+    "source_url": "https://x.com/alexandr_wang/status/2086756152034066792",
+    "published_at": "2026-08-10T18:06:51+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260811-006",
+    "title": "千问开放平台上线：租房、寄快递、查理财等十余领域服务可对话办理",
+    "summary": "千问开放平台今日上线，面向生态伙伴和开发者开放手机、PC 和 AI 眼镜三类终端的服务接入，首批覆盖物流运输、房产居住、本地生活、理财、汽车等十多个领域。用户可在对话中@相关服务或点击\"圆点角标\"进入智能体，完成从咨询、推荐到下单的完整流程。平台支持标准化协议接入、一键授权与端到端调测，并提供账号、AI 支付、订单接入等基础设施。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "公众号：千问APP（阿里）",
+    "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzNDE5MDEwMQ%3D%3D&mid=2247488345&idx=1&sn=ef4e57c9c9350f9238d90211eb2dd453",
+    "published_at": "2026-08-10T10:07:18+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260811-007",
+    "title": "智能体真的会用电脑吗？a16z 用数据给出答案",
+    "summary": "a16z 数据显示，计算机操作智能体在 OSWorld-Verified 基准上的最佳成绩已从一年前的 42% 升至 85%，超过人类测试者约 72% 的水平，Claude Fable 5 以 85% 领先。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "a16z：News（RSS）",
+    "source_url": "https://www.a16z.news/p/can-agents-use-a-computer-yet-weve",
+    "published_at": "2026-08-10T22:00:46+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260811-008",
+    "title": "NVIDIA 发布 NemotronLabs VoiceChat 11B：开源全双工语音模型，支持约 450 毫秒轮换与实时工具调用",
+    "summary": "NVIDIA 发布开源端到端全双工语音对话模型 NemotronLabs VoiceChat 11B，在统一网络中完成流式语音理解与生成，实测轮换延迟 448 毫秒。该模型为首个支持对话中工具调用的开源全双工模型，通过独立输出通道及预置\"保持\"话术避免 API 执行期间冷场。权重与容器已公开，但仅限研究用途，需单张 80 GB 显存 GPU，目前无托管 API。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "MarkTechPost（RSS）",
+    "source_url": "https://www.marktechpost.com/2026/08/09/nvidia-releases-nemotronlabs-voicechat-11b-an-open-full-duplex-speech-to-speech-model-with-450-ms-turn-taking-and-live-tool-calling",
+    "published_at": "2026-08-10T07:58:34+08:00",
+    "tags": [
+      "models"
+    ]
+  }
+]

@@ -1,0 +1,91 @@
+{
+  "name": "LangWatch",
+  "slug": "langwatch",
+  "positioning": "开源的 LLMOps 平台，专注 AI Agent 的测试、观测与评估，通过全链路追踪与端到端仿真在出错前抓到幻觉与无依据回答。",
+  "auto_positioning": false,
+  "emoji": "👁️",
+  "color": "#10B981",
+  "description": "LangWatch 是一个开源的 LLMOps 平台，专注 AI Agent 的测试、观测与评估，仓库位于 github.com/langwatch，核心采用 Apache-2.0 许可证。它的目标是帮团队“在用户之前抓到边缘 case”——通过全链路追踪、端到端 Agent 仿真与数据集评估，让生产环境中的幻觉、无依据回答和 Token 浪费在出错前就被发现。它支持 Python / JS / TS，既提供云端免费层，也能用 Docker 完全自托管。",
+  "category": "AI开发",
+  "tags": [
+    "LLMOps",
+    "可观测性",
+    "评估",
+    "Agent测试",
+    "开源",
+    "OpenTelemetry"
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "pick",
+    "text": "开源"
+  },
+  "url": "https://langwatch.ai/",
+  "price": "开源免费（Apache-2.0），企业版定价以官网为准",
+  "platform": "Web / 自托管（Docker）/ Python / JS / TS",
+  "pros": [
+    "开源可自托管（Apache-2.0），数据主权与可控性强",
+    "端到端 Agent 仿真，定位 agent 在哪一步、为什么崩",
+    "OpenTelemetry 原生，框架与模型提供商无关，接入成本低",
+    "非技术成员也能用标注队列参与质量评审",
+    "支持 Python / JS / TS 与主流 agent 框架"
+  ],
+  "cons": [
+    "自托管需要一定的运维与基础设施投入",
+    "功能面较广，初次上手有一定学习曲线",
+    "更深入的治理与合规通常要走上企业版"
+  ],
+  "features": [
+    "全链路 Tracing：自动记录每次 LLM 调用、工具使用与用户交互",
+    "Agent 仿真测试：用真实场景（工具、状态、用户模拟器、评审器）跑端到端仿真",
+    "评估与数据集：批量评估、回归测试与 DSPy 实验，持续改进质量",
+    "Prompt 管理：prompt 留在 Git 中，prompt 版本关联 trace",
+    "OpenTelemetry 原生：兼容任何 OpenTelemetry 库，框架/模型无关",
+    "云 / 自托管双形态：云端免费层或 Docker / OnPrem 部署"
+  ],
+  "related": [
+    "langsmith",
+    "langchain",
+    "openai"
+  ],
+  "content": "## LangWatch 是什么？\n\nLangWatch 是一个开源的 LLMOps 平台，专注 AI Agent 的测试、观测与评估，仓库位于 github.com/langwatch，核心采用 Apache-2.0 许可证。它的目标是帮团队“在用户之前抓到边缘 case”——通过全链路追踪、端到端 Agent 仿真与数据集评估，让生产环境中的幻觉、无依据回答和 Token 浪费在出错前就被发现。它支持 Python / JS / TS，既提供云端免费层，也能用 Docker 完全自托管，避免数据锁定。\n\n## 核心功能\n\n1. 全链路 Tracing：自动记录每次 LLM 调用、工具使用与用户交互，看清 agent 的真实行为。\n2. Agent 仿真测试：用真实场景（工具、状态、用户模拟器、评审器）跑端到端仿真，定位 agent 在哪一步、为什么崩。\n3. 评估与数据集：批量评估、回归测试与 DSPy 实验，持续提高质量。\n4. Prompt 管理：把 prompt 留在 Git 里，prompt 版本关联 trace，非技术成员也能标注边缘案例。\n5. OpenTelemetry 原生：框架与模型提供商无关，能和现有 LLM 应用 / agent 框架直接打通。\n\n## 版本/套餐对比\n\nLangWatch 开源免费（Apache-2.0），可自托管；同时提供云端免费层与企业版（含 ISO 27001、混合部署、优先支持），具体价格以官网为准。\n\n## 值不值得用？\n\n如果说“把 agent 跑起来”已经不难，那“让 agent 稳定、可解释、可改进”才是真正的工程难点。LangWatch 把观测、测试、评估做成一套协作平台，让工程师、数据科学家和业务方能在同一处看质量。自托管要付出运维成本，但换来了数据主权与可控性，对要走生产的企业很划算。\n\n## 使用建议\n\n先用云端免费层跑通第一次 trace 与第一次仿真；把关键场景沉淀成评估数据集做回归；让领域专家用标注队列参与质量评审；需要数据驻留时切到 Docker / OnPrem 自托管。OpenTelemetry 原生意味着接入成本很低，不必大改现有代码。\n\n## 适合谁用？\n\n- 生产级 Agent 团队：需要可观测性与回归测试。\n- AI 工程师：要调试、评估并持续迭代 agent。\n- 业务 / 领域专家：想参与标注与质量评审、而不写代码的人。",
+  "published": true,
+  "faq": [
+    {
+      "question": "LangWatch 和 LangSmith 是什么关系？",
+      "answer": "两者都做 LLM 可观测与评估，是竞争关系。LangWatch 以开源、自托管和端到端 Agent 仿真见长，强调数据主权与不锁定。"
+    },
+    {
+      "question": "它要收费吗？",
+      "answer": "核心平台 Apache-2.0 开源免费，可自托管；云端有免费层，更深入的企业功能（合规、混合部署、优先支持）走企业版，具体价格见官网。"
+    },
+    {
+      "question": "支持哪些语言和框架？",
+      "answer": "提供 Python、JavaScript、TypeScript SDK，并基于 OpenTelemetry 原生，能对接任意 LLM 应用与 agent 框架。"
+    },
+    {
+      "question": "非技术人员能用吗？",
+      "answer": "可以。LangWatch 的标注队列与协作界面让领域专家无需写代码就能评审对话、标注边缘案例并参与质量改进。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "LangWatch",
+    "LLMOps",
+    "Agent可观测",
+    "AI评估平台",
+    "开源LLM监控"
+  ],
+  "source_urls": [
+    "https://langwatch.ai/",
+    "https://langwatch.ai/docs/",
+    "https://github.com/langwatch"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-21"
+}

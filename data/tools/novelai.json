@@ -1,0 +1,98 @@
+{
+  "name": "NovelAI",
+  "slug": "novelai",
+  "positioning": "NovelAI是什么？二次元AI绘画与小说创作好用吗",
+  "auto_positioning": false,
+  "emoji": "🖌️",
+  "color": "#C2454F",
+  "description": "NovelAI 是 Anlatan 推出的 AI 创作平台，集成了二次元 AI 绘画与小说/故事生成两大能力，支持角色一致性、局部重绘（Inpaint）、Vibe Transfer 风格迁移，基于 Stable Diffusion 技术，适合画师与写作爱好者。",
+  "category": "AI绘画",
+  "tags": [
+    {
+      "text": "二次元绘画"
+    },
+    {
+      "text": "小说生成"
+    },
+    {
+      "text": "角色一致性"
+    },
+    {
+      "text": "局部重绘"
+    },
+    {
+      "text": "Stable Diffusion"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://novelai.net",
+  "price": "试用（Paper）一次性免费：30 张图 + 50 次文本 + 100 次语音；Tablet $10/月、Scroll $15/月、Opus $25/月（价格来自官网订阅文档，以官网为准）",
+  "platform": "Web",
+  "pros": [
+    "绘画与写作一体，二次元插画与故事创作同平台",
+    "角色一致性与多角色提示，适合做系列角色",
+    "局部重绘、Image2Image、Vibe Transfer 等编辑能力强",
+    "故事文本端隐私加密，创作自由度较高",
+    "基于 Stable Diffusion，二次元画风成熟"
+  ],
+  "cons": [
+    "无公开消费级 API，难接入外部工作流",
+    "低档位图片生成受 Anlas 额度限制",
+    "无年付折扣，按月续费；学习曲线偏陡"
+  ],
+  "features": [
+    "二次元图像生成：基于 Stable Diffusion 的 anime 模型，画风成熟",
+    "角色一致性：多角色提示分别定义，保持构图与外观",
+    "局部重绘（Inpaint）：用画笔修正错误或更换细节",
+    "Image2Image 与 Enhance：基于原图改细节或提升精细度",
+    "Vibe Transfer：把喜欢作品的质感迁移到新生成",
+    "故事生成：文本/语音生成，支持 Lorebook 与记忆保持上下文"
+  ],
+  "related": [
+    "niji-journey",
+    "midjourney",
+    "stable-diffusion"
+  ],
+  "content": "## NovelAI 是什么？\nNovelAI 是 Anlatan 推出的 AI 创作平台，把「写故事」和「画二次元插画」这两件创作者最常做的事放在了同一个产品里。它的图像生成基于 Stable Diffusion 技术并针对动漫风格做了大量优化，擅长角色一致性、局部重绘（Inpaint）和风格迁移（Vibe Transfer）；文本侧则是一个以小说/故事生成为核心的 AI，支持 Lorebook 与记忆机制来保持长篇上下文。换句话说，你既可以用它画出角色立绘，也能让它接着把角色写进故事里，创作链路很顺。\n\n## 核心功能\n- 二次元图像生成：基于 Stable Diffusion 的 anime 模型，线条与角色表现成熟。\n- 角色一致性：可用多角色提示分别定义每个角色，保持构图与外观统一。\n- 局部重绘（Inpaint）：用画笔圈选修正错误，或改写某块细节生成新内容。\n- Image2Image 与 Enhance：基于原图改细节，或提升图像精细度。\n- Vibe Transfer：把一张喜欢作品的质感直接迁移到新生成，统一风格。\n- 故事生成：文本与语音生成，配合 Lorebook/记忆保持长篇叙事上下文。\n\n## 版本/套餐对比\n价格来自官网订阅文档（以官网为准）：\n| 套餐 | 价格 | 主要权益 |\n| --- | --- | --- |\n| 试用 Paper | $0（一次性） | 30 张图（最高 1024²）+ 50 次文本 + 100 次语音 |\n| Tablet | $10/月 | 无限文本/语音，1000 Anlas 图像额度 |\n| Scroll | $15/月 | 更大上下文记忆，1000 Anlas |\n| Opus | $25/月 | 最大上下文、无限图像生成、10000 Anlas |\n注：无年付折扣，图片额度用尽可单独购买 Anlas。\n\n## 值不值得用？\n优点：绘画+写作一体，二次元画风成熟，角色一致性与编辑工具（重绘/Vibe Transfer）很实用；文本端隐私加密，创作自由度高。缺点：没有公开消费级 API，难以接入自己的工作流；低档位图片受 Anlas 额度限制；无年付折扣，学习曲线偏陡。结论：做二次元插画兼写故事的创作者，NovelAI 很值；纯画商用大图的人 Opus 更划算，纯写作者则可先试用。\n\n## 使用建议\n1. 先走 Paper 试用，拿到 30 张图体会画风与提示词写法。\n2. 做系列角色：用多角色提示 + 参考图保持外观一致。\n3. 出图后多用 Inpaint 修手、修脸，再用 Enhance 提精细度。\n4. 想统一画风：用 Vibe Transfer 套用满意作品的质感。\n5. 高频出图直接上 Opus，避免 Anlas 额度焦虑。\n\n## 适合谁用？\n- 推荐：二次元画师、轻小说/同人写手、做角色设定与插画一体的创作者。\n- 可考虑：想尝试 AI 绘画的新手（先试用）、需要角色一致性的漫画爱好者。\n- 不推荐：需要把图像能力接入自有系统的开发者（无公开 API）、只要写实风格的人。",
+  "published": false,
+  "faq": [
+    {
+      "question": "NovelAI 免费吗？",
+      "answer": "有一次性免费试用（Paper）：登录后可获 30 张图像生成、50 次文本生成与 100 次语音生成；之后需订阅 Tablet/Scroll/Opus 档。"
+    },
+    {
+      "question": "NovelAI 的图像生成基于什么技术？",
+      "answer": "基于 Stable Diffusion 技术并针对动漫风格深度优化，支持角色一致性、局部重绘与 Vibe Transfer 等能力。"
+    },
+    {
+      "question": "NovelAI 和 Midjourney/Niji 有什么区别？",
+      "answer": "NovelAI 同时集成了故事生成与二次元绘画，强在创作一体与编辑工具；Midjourney/Niji 更偏纯图像且画风各异，NovelAI 无公开 API。"
+    },
+    {
+      "question": "NovelAI 订阅价格多少？",
+      "answer": "官网订阅文档显示 Tablet $10/月、Scroll $15/月、Opus $25/月，无年付折扣，图片额度用尽可单购 Anlas，具体以官网为准。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "NovelAI",
+    "NovelAI怎么样",
+    "NovelAI免费版",
+    "NovelAI使用教程",
+    "NovelAI和哪个好"
+  ],
+  "source_urls": [
+    "https://novelai.net",
+    "http://docs.novelai.net/en/subscription"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

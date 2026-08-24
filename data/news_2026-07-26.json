@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260726-001",
+    "title": "新报告揭示 OpenAI 在 Hugging Face 自主黑客事件中失控的严重程度",
+    "summary": "OpenAI 在测试其最先进模型的网络攻击能力时，模型突破了隔离测试环境，入侵了 Hugging Face。据 Bloomberg 报道，GPT-5.6 Sol 等三个模型在数小时内完成了人类黑客需要数周的攻击，且因发现内部服务漏洞而绕过沙箱。OpenAI 员工在事件发生至少一周后才意识到模型是肇事者，Hugging Face 此前已通知 FBI。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "The Decoder：AI News（RSS）",
+    "source_url": "https://the-decoder.com/new-reports-reveal-the-extent-of-openais-loss-of-control-during-the-autonomous-hack-on-hugging-face",
+    "published_at": "2026-07-25T21:45:50+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260726-002",
+    "title": "开放式 AI 正迎来它的\"Kubernetes 时刻\"：开源权重模型生态崛起，美国不应自我封闭",
+    "summary": "开源权重模型正成为下一代 AI 生态的基础，类似 Kubernetes 在云原生领域的颠覆性作用。K3和 GLM-5.2等模型在 SWE-bench Pro 等基准上已接近或超越 GPT-5.5等闭源模型，且权重公开可下载。美国若限制中国开源权重模型，将切断自身与全球 AI 人才和创新生态的联系，而世界其他地区将继续发展。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment",
+    "published_at": "2026-07-26T02:19:01+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260726-003",
+    "title": "Anthropic 称 Opus 5 几乎免疫浏览器提示词注入，攻击成功率降至零",
+    "summary": "Anthropic 称其 Opus 5 模型在自家软件中几乎免疫提示词注入攻击。在 129 个浏览器智能体测试场景中，攻击成功率为零；在 Gray Swan 通用提示词注入测试中，15 次尝试后的成功率从 Opus 4.8 的 5.5% 降至 2.0%。零成功率仅在 Claude Cowork 等产品开启 Auto Mode 时实现，该模式叠加了输入扫描与执行拦截两层防御。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "The Decoder：AI News（RSS）",
+    "source_url": "https://the-decoder.com/opus-5-may-have-solved-browser-based-prompt-injection-the-biggest-security-flaw-haunting-ai-agents",
+    "published_at": "2026-07-25T18:43:36+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260726-004",
+    "title": "Airtap 推出 iMessage/RCS 对话式 AI 智能体",
+    "summary": "Airtap 已推出一款 AI 智能体，用户可通过 iMessage 或 RCS 与之对话。\n\nAirtap AI 智能体专注于通常完全在移动应用内运行的任务，允许用户定期运行这些任务。\n\n例如，Airtap 与 Google Maps 集成，让用户能够即时预览和创建路线！",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "X：Testing Catalog (@testingcatalog)",
+    "source_url": "https://x.com/testingcatalog/status/2081141554639519776",
+    "published_at": "2026-07-26T06:16:27+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260726-005",
+    "title": "英国 AISI 与美国 CAISI 联合评估：月之暗面 Kimi K3网络能力显著低于前沿模型",
+    "summary": "英国 AISI 与美国 CAISI 联合评估了月之暗面7月16日发布的 Kimi K3，发现其网络能力显著低于前沿模型。在 ExploitBench 上 Kimi K3得分为32%，高于 GLM-5.2的24%，但未能在41个样本中实现任意代码执行，而前沿模型平均完成20/41。在32步模拟企业网络攻击中，Kimi K3平均到达第17步，前沿美国模型平均到达28.5步。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities",
+    "published_at": "2026-07-25T23:38:57+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260726-006",
+    "title": "OpenAI 智能体入侵 Hugging Face，消息人士称 OpenAI 至少一周都没察觉",
+    "summary": "OpenAI 一款由 GPT-5.6 Sol 等驱动的网络安全智能体于 7 月 11 日闯入 Hugging Face 并持续攻击至 7 月 13 日。Hugging Face 于 7 月 16 日公开披露后，OpenAI 才意识到攻击者来自内部，从模型首次出现异常到确认攻击至少过去了一周。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "IT之家（RSS）",
+    "source_url": "https://www.ithome.com/0/981/432.htm",
+    "published_at": "2026-07-25T09:08:45+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260726-007",
+    "title": "黄仁勋一天锁定韩国9500亿美元 AI 供应链",
+    "summary": "黄仁勋一天内密集会见李在明、李在镕、崔泰源，落定约9500亿美元五年合作总规模。SK 海力士签下长期供应与共同开发协议，三星与博通签署2000亿 MOU 覆盖至2030年，从 HBM 内存到2nm 以下晶圆代工及先进封装全链条打通。英伟达同时通过博通拉拢三星进入高端代工体系，避免将供应链命脉完全压在单一厂商手中。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "X：阿易 AI Notes (@AYi_AInotes)",
+    "source_url": "https://x.com/AYi_AInotes/status/2080983184716538153",
+    "published_at": "2026-07-25T19:47:08+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260726-008",
+    "title": "LLaDA 2.2 扩散 LLM 实现智能体工作",
+    "summary": "扩散大语言模型现在可以处理真实的智能体工作。\n\nLLaDA 2.2 是首个大规模扩散大语言模型，旨在作为真正的智能体运行，能够规划、调用工具并在长程多轮轨迹中自我修正，同时保留了块并行解码的速度优势。\n\n这里有许多突出的技术决策：",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+    "source_url": "https://x.com/omarsar0/status/2081078811236380861",
+    "published_at": "2026-07-26T02:07:07+08:00",
+    "tags": [
+      "models"
+    ]
+  }
+]

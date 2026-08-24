@@ -1,0 +1,78 @@
+{
+  "name": "AIXBT",
+  "slug": "aixbt",
+  "emoji": "📊",
+  "color": "#F7931E",
+  "description": "AI市场情报Agent，利用大语言模型自动追踪并压缩链上数据、社交信号与项目动态，每日输出大量分析内容，仅提供情报不执行交易。",
+  "category": "去中心化AI",
+  "tags": [
+    {
+      "text": "链上情报"
+    },
+    {
+      "text": "AI分析"
+    },
+    {
+      "text": "数据工具"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "visits": "N/A",
+  "badge": null,
+  "url": "https://aixbt.tech",
+  "price": "免费信息流 + 高级订阅",
+  "platform": "Web / X(Twitter)",
+  "pros": [
+    "自动情报",
+    "覆盖广",
+    "实时更新",
+    "纯信息工具"
+  ],
+  "cons": [
+    "不保证准确",
+    "偏加密领域",
+    "国内访问需合规"
+  ],
+  "features": [
+    "链上数据追踪",
+    "社交信号分析",
+    "项目动态播报",
+    "智能摘要"
+  ],
+  "faq": [
+    {
+      "q": "AIXBT 会自动帮我下单交易吗？",
+      "a": "不会，AIXBT 是市场情报 Agent，产出的是对叙事热度与市场情绪的解读，不是替你执行的交易机器人。"
+    },
+    {
+      "q": "AIXBT 建立在什么基础设施上？",
+      "a": "建立在 Virtuals Protocol 上，部署于 Base 链（以太坊 L2），由化名创建者 rxbt 打造。"
+    },
+    {
+      "q": "AIXBT Terminal 怎么收费？",
+      "a": "完整终端需持有 60 万 AIXBT（约 36 万美元），或用约 200 美元/月的订阅，公开帖子免费。"
+    },
+    {
+      "q": "AIXBT 的数据从哪里来？",
+      "a": "持续监控 400+ 个加密 KOL 账号，以及 Telegram、CoinGecko 与链上日志，经 Indigo 升级后还整合了 DeFiLlama 等数据。"
+    },
+    {
+      "q": "AIXBT 代币总量多少？",
+      "a": "AIXBT 为 ERC-20 代币，总供应量固定为 10 亿枚，主要用于门控终端访问与治理。"
+    },
+    {
+      "q": "什么是动量评分（Momentum Score）？",
+      "a": "它把 X 账号按社交图谱聚类，测量多个独立社区是否同时开始讨论同一项目，用于捕捉情绪升温的早期信号。"
+    }
+  ],
+  "content": "## 是什么\nAIXBT 是一个 AI 市场情报 Agent，全天候监控加密社交媒体、链上数据和市场趋势，把海量噪音过滤成可读的市场叙事与热度信号，通过 X 账号 @aixbt_agent 和 AIXBT Terminal 输出。\n\n## 核心特点\n- 实时情报流：持续扫描 400+ 个加密 KOL 账号，以及 Telegram、CoinGecko 与链上日志，识别新兴趋势与叙事。\n- 代币门控终端：完整 AIXBT Terminal 需持有 60 万 AIXBT（约 36 万美元）或按月付费约 200 美元订阅。\n- 动量评分与聚类分析：把 X 账号按社交图谱聚类，测量不同独立社区是否「不约而同」开始讨论同一项目，生成 momentum score。\n- Indigo 升级：集成 CoinGecko、DeFiLlama 等结构化数据源，强化巨鲸钱包追踪与代币估值分析。\n\n## 技术原理\nAIXBT 建立在 Virtuals Protocol 上，部署于 Base 链（以太坊 L2），由化名创建者 rxbt 打造。输入端接入大量 KOL 动态与市场数据，语言模型对信息排序、识别正在升温的故事，自动生成市场情报帖。需要强调的是：它产出的是「注意力与评论」，而不是替你自动下单的交易机器人。\n\n## 价格与收费\n公开帖子免费；深度终端需持有 60 万 AIXBT 或支付约 200 美元/月订阅费。AIXBT 代币总供应 10 亿枚，具体价格随市场波动，以官网为准。\n\n## 适用人群\n适合想用机器速度捕捉叙事热度、监控巨鲸动向与市场情绪的加密交易者、研究者与社区运营者。\n数据以官网为准。",
+  "published": true,
+  "source_urls": [
+    "https://aixbt.tech",
+    "https://docs.aixbt.tech/introduction/core-concepts"
+  ],
+  "content_verified": true,
+  "last_verified": "2026-08-16",
+  "created_date": "2026-08-16",
+  "published_date": "2026-08-16"
+}

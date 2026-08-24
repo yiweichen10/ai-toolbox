@@ -1,0 +1,126 @@
+{
+  "batch_id": "b43",
+  "category": "AI音频",
+  "tools": [
+    {
+      "slug": "suno",
+      "name": "Suno",
+      "url_current": "https://suno.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网定价卡显示 Pro $8/月、Premier $24/月（年付等价），但站内正文写 Pro $10/月、Premier $30/月（与官网旧版FAQ一致，与当前定价卡不符）。免费档 10首/天属实，V4/V5.5 模型属实。定价疑似过期，且官网自身新旧页面价格不一致，需人工确认当前实际月费。"
+    },
+    {
+      "slug": "udio",
+      "name": "Udio",
+      "url_current": "https://www.udio.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "Udio 实际分 Free / Standard($10/月) / Pro($30/月) 三档。站内写『Pro $10/月 500首/月』混淆了 Standard 与 Pro 两档，且 Udio 按积分计费（Standard 2400积分/月），并非『500首/月』。功能（文生歌/歌词/人声/延长）属实。URL正确。"
+    },
+    {
+      "slug": "elevenlabs",
+      "name": "ElevenLabs",
+      "url_current": "https://elevenlabs.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "整体准确。Starter 官网月费 $6（年付等价 $5），站内写 $5/月可视为年付价；Pro 积分官网 600k（站内写 50万）、Creator 官网 121k（站内写 10万）略有出入；语言数站内写 29，官方 TTS 为 29+。功能（TTS/声音克隆/29+语言/API/实时对话）均属实。无明显幻觉。"
+    },
+    {
+      "slug": "speechify",
+      "name": "Speechify",
+      "url_current": "https://speechify.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "description", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "① 价格错误：官网 Premium 网页版 $29/月（年付 $139），站内正文写 $11.99/月、价格字段写『基础$10/月起』，均不对。② 语言数错误：官网支持 60+ 语言、1000+ 声音，站内把 1000+ 声音误写成『支持100+语言』。③ 平台仅写 Web，实际支持 Web/iOS/Android/Mac/Windows/Chrome扩展。功能（TTS/文档朗读/网页朗读/4.5x速度）属实。URL正确。"
+    },
+    {
+      "slug": "krisp",
+      "name": "Krisp",
+      "url_current": "https://krisp.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "① 内容编造『虚拟背景：替代背景虚化』功能——Krisp 是音频降噪工具，无视频虚拟背景功能（实为噪声消除/回声消除/口音转换/转录）。② 价格字段写『$10/月起』与正文 $8/月及官网 Core $8/月不符（$10 实为呼叫中心 CC Core 坐席价）。③ 平台写 Web 不准确，实为桌面(Win/Mac)+移动(iOS/Android)+Chrome扩展。降噪/回声消除/语音增强等核心功能属实。URL正确。"
+    },
+    {
+      "slug": "murf-ai",
+      "name": "Murf AI",
+      "url_current": "https://murf.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "① 声音/语言数过时：官网现 200+ 声音、35+ 语言，站内写 120+ 声音、20+ 语言（为旧版数据）。② 价格字段写『免费使用』不准确——实为含付费 Pro 的 Freemium；正文写 Pro $26/月（历史价），现套餐已调整为 Creator $19/月起、Business $66/月起等，各来源数字不一。功能（TTS/视频配音/声音克隆/音调调节）属实。需人工确认当前套餐结构与声音/语言数。URL正确。"
+    },
+    {
+      "slug": "cleanvoice",
+      "name": "Cleanvoice",
+      "url_current": "https://cleanvoice.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["platform"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "平台写『Web / iOS / Android』，但 Cleanvoice 为纯网页应用（app.cleanvoice.ai），无 iOS/Android App。定价官网最低订阅 $11/月（10小时），站内写『基础$10/月 5小时/月』略有出入（官方基础档为 10小时/$11）。功能（填充词去除/呼吸声/长静音/时间线导出/转录/20+语言）均属实。URL正确。"
+    },
+    {
+      "slug": "play-ht",
+      "name": "Play.ht",
+      "url_current": "https://play.ht/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "价格编造/过期：官网无 $9.99 套餐。实际为 Free(5K字符/月) + Creator 约 $29-31/月 + 无限/Pro 约 $49-99/月 + 企业定制；站内『专业版$9.99/月起，无限字符』不实。语言 142、800+ 声音、2026 情感控制(7种情绪) 均属实；平台 Web/iOS/Android/Chrome扩展/WordPress插件/API 属实。URL正确（play.ht 为官网，WebFetch抓取失败但域名有效）。"
+    },
+    {
+      "slug": "wondercraft-ai",
+      "name": "Wondercraft AI",
+      "url_current": "https://wondercraft.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "价格过期/偏低：官网免费档约 6分钟/月（站内写 10分钟），专业版官网约 $20-45/月（站内写 $19/月起）。语言 30+ 基本吻合（Creator 档 30 语言、Pro 档 50 语言）。功能（播客/AI语音/多人协作/AI脚本/发布 Spotify·Apple）属实。注意：Wondercraft 现已定位为『AI视频工作室』，但仍支持播客。各官网价格页数字不一，需人工确认。URL正确（跳转 www.wondercraft.ai）。"
+    },
+    {
+      "slug": "mubert",
+      "name": "Mubert",
+      "url_current": "https://mubert.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "定价与官网 Mubert Render 完全一致（免费 25首/月、Creator $14/月、Pro $39/月）。功能（文生音乐/免版税/API/2026持续更新）属实；平台 Web/iOS/Android 合理（含 Mubert Play/Studio）。无幻觉。URL正确。"
+    }
+  ]
+}

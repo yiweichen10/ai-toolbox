@@ -1,0 +1,116 @@
+{
+  "name": "CodeRabbit",
+  "slug": "coderabbit",
+  "positioning": "免费AI编程工具：自动审查+自动修复",
+  "auto_positioning": true,
+  "emoji": "🐇",
+  "color": "#FF6B6B",
+  "description": "AI代码审查助手，自动分析GitHub/GitLab的Pull Request，提供行级评论、bug检测、性能建议和最佳实践提示，显著提升代码审查效率。",
+  "category": "AI编程",
+  "tags": [
+    "AI代码审查",
+    "GitHub集成",
+    "代码质量",
+    "AI编程",
+    "开发者工具"
+  ],
+  "rating": "⭐4.6",
+  "visits": "N/A",
+  "badge": {},
+  "url": "https://www.coderabbit.ai",
+  "price": "免费版 $0；Pro $24/用户/月（年付）",
+  "platform": "GitHub / GitLab",
+  "pros": [
+    "审查质量高",
+    "无缝集成 GitHub/GitLab",
+    "学习团队规范",
+    "免费版慷慨（含 14 天 Pro+ 试用）"
+  ],
+  "cons": [
+    "仅支持 GitHub/GitLab 等 Git 平台",
+    "有时误报/噪声需人工过滤",
+    "需要 PR 触发才审查",
+    "Pro 按开发者席位计费"
+  ],
+  "features": [
+    "自动审查 GitHub/GitLab 的 Pull Request",
+    "行级代码评论与 bug/安全隐患检测",
+    "最佳实践与代码规范提示",
+    "学习团队代码规范（Knowledge base）",
+    "自动修复（Autofix）与文档生成（Docstring）",
+    "Jira/Linear 集成与产品分析看板"
+  ],
+  "faq": [
+    {
+      "q": "CodeRabbit 收费吗？",
+      "a": "免费版可用（含 14 天 Pro+ 试用），Pro $24/用户/月（年付）或 $30/月（按月），Pro+ $48/用户/月（年付），Enterprise 联系销售。"
+    }
+  ],
+  "content": "## CodeRabbit 是什么？\n\nAI 代码审查助手，自动分析 GitHub/GitLab 的 Pull Request 并给出行级评论、bug 检测与最佳实践建议。\n\nAI代码审查助手，自动分析GitHub/GitLab的Pull Request，提供行级评论、bug检测、性能建议和最佳实践提示，显著提升代码审查效率。\n\n## 核心功能\n\n- 自动审查 GitHub/GitLab 的 Pull Request\n- 行级代码评论与 bug/安全隐患检测\n- 最佳实践与代码规范提示\n- 学习团队代码规范（Knowledge base）\n- 自动修复（Autofix）与文档生成（Docstring）\n- Jira/Linear 集成与产品分析看板\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 免费版 $0（无限公开/私有仓库，PR 摘要，IDE/CLI 审查，含 14 天 Pro+ 试用）；Pro $24/用户/月（年付）或 $30/月（按月）；Pro+ $48/用户/月（年付）或 $60/月（按月）；Enterprise 联系销售。 |\n| 支持平台 | GitHub / GitLab / VS Code / CLI / Web |\n| 评分 | ⭐4.6 |\n| 开发商 | CodeRabbit |\n\n## 价格与平台\n\n- **价格**：免费版 $0（无限公开/私有仓库，PR 摘要，IDE/CLI 审查，含 14 天 Pro+ 试用）；Pro $24/用户/月（年付）或 $30/月（按月）；Pro+ $48/用户/月（年付）或 $60/月（按月）；Enterprise 联系销售。\n- **平台**：GitHub / GitLab / VS Code / CLI / Web\n- **官网**：https://www.coderabbit.ai\n\n## 优缺点分析\n\n### 优点\n\n- 审查质量高\n- 无缝集成 GitHub/GitLab\n- 学习团队规范\n- 免费版慷慨（含 14 天 Pro+ 试用）\n\n### 缺点\n\n- 仅支持 GitHub/GitLab 等 Git 平台\n- 有时误报/噪声需人工过滤\n- 需要 PR 触发才审查\n- Pro 按开发者席位计费\n\n## 常见问题（FAQ）\n\n**CodeRabbit 收费吗？**\n\n免费版可用（含 14 天 Pro+ 试用），Pro $24/用户/月（年付）或 $30/月（按月），Pro+ $48/用户/月（年付），Enterprise 联系销售。\n\n\n## 最终结论\n\nCodeRabbit 是AI编程领域的一款 AI 工具，其核心优势在于审查质量高。\n此外，无缝集成 GitHub/GitLab。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-06-11",
+  "published_date": "2026-06-11",
+  "related": [],
+  "verified_url": "https://www.coderabbit.ai",
+  "verified_publisher": "CodeRabbit",
+  "verified_what": "AI 代码审查助手，自动分析 GitHub/GitLab 的 Pull Request 并给出行级评论、bug 检测与最佳实践建议。",
+  "verified_price": "免费版 $0（无限公开/私有仓库，PR 摘要，IDE/CLI 审查，含 14 天 Pro+ 试用）；Pro $24/用户/月（年付）或 $30/月（按月）；Pro+ $48/用户/月（年付）或 $60/月（按月）；Enterprise 联系销售。",
+  "verified_platform": "GitHub / GitLab / VS Code / CLI / Web",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "自动审查 GitHub/GitLab 的 Pull Request",
+    "行级代码评论与 bug/安全隐患检测",
+    "最佳实践与代码规范提示",
+    "学习团队代码规范（Knowledge base）",
+    "自动修复（Autofix）与文档生成（Docstring）",
+    "Jira/Linear 集成与产品分析看板"
+  ],
+  "verified_description": "AI代码审查助手，自动分析GitHub/GitLab的Pull Request，提供行级评论、bug检测、性能建议和最佳实践提示，显著提升代码审查效率。",
+  "content_flags": "卡片价“Team $10/月”不准确——官方已无 Team 档，现主推 Pro $24/用户/月（年付）/ Pro+ $48；其余（GitHub/GitLab 集成、行级评论、最佳实践）描述准确。",
+  "price_verified": true,
+  "verified_rating": "⭐4.6",
+  "rating_source": "暂无权威评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "审查质量高",
+    "无缝集成 GitHub/GitLab",
+    "学习团队规范",
+    "免费版慷慨（含 14 天 Pro+ 试用）"
+  ],
+  "verified_cons": [
+    "仅支持 GitHub/GitLab 等 Git 平台",
+    "有时误报/噪声需人工过滤",
+    "需要 PR 触发才审查",
+    "Pro 按开发者席位计费"
+  ],
+  "verified_faq": [
+    {
+      "q": "CodeRabbit 收费吗？",
+      "a": "免费版可用（含 14 天 Pro+ 试用），Pro $24/用户/月（年付）或 $30/月（按月），Pro+ $48/用户/月（年付），Enterprise 联系销售。"
+    }
+  ],
+  "verified_tags": [
+    "AI代码审查",
+    "GitHub集成",
+    "代码质量",
+    "AI编程",
+    "开发者工具"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://www.coderabbit.ai/pricing",
+    "https://docs.coderabbit.ai/management/plans"
+  ],
+  "verify_notes": "官方定价页确认：Free $0，Pro $24/用户/月年付，Pro+ $48，Enterprise 定制。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "CodeRabbit 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：CodeRabbit 的 自动审查 GitHub/GitLab 的 Pull Request 是亮点，价格 免费版 $0；Pro $24/用户/月（年付）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

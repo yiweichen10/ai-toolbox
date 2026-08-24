@@ -1,0 +1,93 @@
+{
+  "name": "Step 3.7 Flash",
+  "slug": "step-3-7-flash",
+  "positioning": "阶跃星辰（StepFun）2026年5月开源的专用于生产级 Agent 的 Flash 多模态模型，稀疏 MoE 架构，198B 总参/11B 激活，256K 上下文，最高 400 tokens/s，Apache 2.0 协议。",
+  "auto_positioning": false,
+  "emoji": "🚀",
+  "color": "#5B4BE0",
+  "description": "Step 3.7 Flash 是阶跃星辰（StepFun）于 2026 年 5 月发布并开源的旗舰级多模态推理模型，专为生产级 Agent 打造。采用稀疏 MoE 架构，总参数约 198B（含 1.8B 视觉编码器），每次推理仅激活 11B，最高速度 400 tokens/s，上下文窗口与最大输出均达 256K，以 Apache 2.0 在 GitHub、Hugging Face、ModelScope 同步开源并提供按量计费 API。",
+  "category": "AI对话",
+  "tags": [
+    "开源大模型",
+    "Agent",
+    "多模态",
+    "MoE",
+    "阶跃星辰"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "pick",
+    "text": "开源模型"
+  },
+  "url": "https://huggingface.co/stepfun-ai",
+  "price": "输入 $0.20/百万 tokens，输出 $1.15/百万 tokens，缓存读取 $0.04/百万 tokens（模型权重开源免费）",
+  "platform": [
+    "Web",
+    "API",
+    "开源（GitHub/Hugging Face/ModelScope）"
+  ],
+  "pros": [
+    "速度极快，最高 400 tokens/s，适合高频多轮 Agent 场景",
+    "原生多模态，能读 UI、图表、文档并直接调用工具",
+    "Apache 2.0 完全开源，可云端或本地部署",
+    "工具调用可靠性强，长程工作流不易跑偏",
+    "API 价格低，性价比高"
+  ],
+  "cons": [
+    "总参 198B 仍需可观算力，本地部署门槛不低",
+    "海外生态与英文资料为主，中文社区文档相对少"
+  ],
+  "features": [
+    "稀疏 MoE，198B 总参 / 11B 激活",
+    "256K 上下文与 256K 最大输出",
+    "原生视觉理解，内置 Python 工具可裁剪标注图像",
+    "low/medium/high 三档推理强度",
+    "高可靠工具调用，兼容 Claude Code、OpenClaw、Hermes Agent",
+    "把搜索当作推理的一部分，主动交叉验证"
+  ],
+  "related": [
+    "stepfun",
+    "chatgpt",
+    "hermes-agent"
+  ],
+  "content": "## Step 3.7 Flash 是什么？\nStep 3.7 Flash 是阶跃星辰（StepFun）于 2026 年 5 月 28/29 日发布并开源的旗舰级多模态推理模型，定位非常清晰：专门为生产级 Agent 打造。它采用稀疏 MoE 架构，总参数约 198B（其中视觉编码器 1.8B），每次推理仅激活 11B，因此在保持大模型能力的同时把推理成本和延迟压了下来。官方给出的速度上限是 400 tokens/s，上下文窗口 256K，最大输出也达到 256K。模型以 Apache 2.0 协议在 GitHub、Hugging Face 和 ModelScope 同步开源，并提供按量计费的 API，开发者既可以本地部署，也可以直接调用云端。\n\n## 核心功能\n1. 高速多模态推理：稀疏 MoE 让 11B 激活参数跑出接近旗舰的体验，最高 400 tokens/s，特别适合高频、多轮的 Agent 场景。\n2. 原生视觉理解：能直接读取产品 UI、文档、图表、表格和自然场景，并基于看到的内容写代码或调用工具；内置 Python 工具可在任务中途裁剪、缩放、标注图像。\n3. 三档推理强度：支持 low/medium/high 推理强度，按任务复杂度灵活切换成本与质量。\n4. 高可靠工具调用：在长程多轮工作流中稳定调用 API、浏览器、终端、Office 与外部系统，降低跑偏与失败概率。\n5. 主动搜索验证：把搜索当作推理的一部分，信息不确定时主动发起检索做交叉验证。\n\n## 版本/套餐对比\n模型权重本身开源免费；API 按 token 计费，输入 $0.20/百万 tokens，输出 $1.15/百万 tokens，缓存读取 $0.04/百万 tokens，无订阅门槛，用量越大边际成本越低。\n\n## 值不值得用？\n如果你在搭 Agent，Step 3.7 Flash 很值得试。它的核心卖点不是参数规模，而是以小博大——用约十分之一于主流旗舰的参数，在 SWE-Bench Pro（56.3%）、Terminal-Bench 2.1、τ-bench Telecom（98%+）等 Agent 基准上拿到媲美更大模型的成绩，且速度与成本明显占优。对成本敏感、又需要稳定工具调用的团队尤其合适。\n\n## 使用建议\n1. 优先通过 OpenClaw、Claude Code、Hermes Agent 等已适配框架接入，省去自己写工具编排。\n2. 高频短任务用 low/medium 强度控成本，复杂推理再切 high。\n3. 本地部署需准备足够显存与算力；轻量验证建议先走 API。\n\n## 适合谁用？（三档）\n- 重度用户：做生产级 Agent、需要稳定工具调用与长上下文的团队，直接上 API 或本地部署。\n- 中度用户：个人开发者想把多模态能力塞进工作流，先用免费开源权重跑通 Demo。\n- 轻度用户：偶尔需要视觉理解或文档处理的普通用户，用第三方封装的聊天入口即可。",
+  "published": false,
+  "faq": [
+    {
+      "q": "Step 3.7 Flash 真的开源吗？",
+      "a": "是的，模型以 Apache 2.0 协议在 GitHub、Hugging Face 和 ModelScope 同步开源，权重可免费下载，也提供按量计费的 API。"
+    },
+    {
+      "q": "它的上下文和速度是多少？",
+      "a": "上下文窗口与最大输出均为 256K tokens，最高生成速度约 400 tokens/s，适合高频多轮 Agent 工作流。"
+    },
+    {
+      "q": "能接入哪些 Agent 框架？",
+      "a": "官方已兼容 Claude Code、OpenClaw、Hermes Agent 等主流编程与智能体工具，支持云端与本地部署。"
+    },
+    {
+      "q": "API 怎么收费？",
+      "a": "按 token 计费：输入 $0.20/百万 tokens，输出 $1.15/百万 tokens，缓存读取 $0.04/百万 tokens，无订阅门槛。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Step 3.7 Flash",
+    "阶跃星辰",
+    "开源大模型",
+    "Agent 模型",
+    "Flash 模型"
+  ],
+  "source_urls": [
+    "https://www.jfdaily.com/staticsg/res/html/journal/detail.html?code=jfrb&date=2026-05-30&id=512920&page=02",
+    "https://vercel-ship.vercel.sh/ai-gateway/models/step-3.7-flash/about",
+    "https://m.10jqka.com.cn/20260529/c677070039.shtml",
+    "https://aiflashreport.com/models/step-3-7-flash.html"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

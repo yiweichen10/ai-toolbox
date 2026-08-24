@@ -1,0 +1,150 @@
+{
+  "name": "GraphRAG",
+  "slug": "graphrag",
+  "emoji": "🕸️",
+  "color": "#4F46E5",
+  "description": "GraphRAG 是微软开源（MIT）的基于知识图谱的模块化 RAG 系统，通过从文本抽取实体与关系构建图谱来增强多跳推理与全局问答，完全免费、可私有化部署，并不存在官方收费的企业版。",
+  "category": "AI开发",
+  "tags": [
+    "RAG",
+    "知识图谱",
+    "检索增强生成",
+    "开源"
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "85,000",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://github.com/microsoft/graphrag",
+  "price": "开源免费（MIT）",
+  "platform": "Python/Linux/macOS/Windows",
+  "pros": [
+    "知识图谱显著提升多跳推理与全局问答准确性",
+    "数据可全程本地化处理，隐私安全",
+    "开源 MIT，社区活跃、持续迭代",
+    "自动化索引，接入数据源相对容易",
+    "可视化图谱探索（社区工具）"
+  ],
+  "cons": [
+    "索引构建资源消耗大、耗时较长",
+    "初次配置与学习曲线较陡",
+    "图谱质量依赖原始数据质量",
+    "微软官方明确声明该代码为演示性质、并非官方支持产品",
+    "无商业技术支持渠道"
+  ],
+  "features": [
+    "图谱索引构建（实体与关系抽取）",
+    "混合检索（向量搜索 + 图遍历）",
+    "可配置的摘要生成，提升答案质量",
+    "本地与云端部署",
+    "API 接口，便于集成",
+    "多模型支持（OpenAI、Claude、Azure OpenAI、Ollama 等）"
+  ],
+  "related": [
+    "langchain",
+    "llamaindex",
+    "pinecone",
+    "milvus",
+    "qdrant",
+    "anythingllm",
+    "lightrag",
+    "ragflow"
+  ],
+  "faq": [
+    {
+      "q": "GraphRAG 和传统 RAG 有什么区别？",
+      "a": "传统 RAG 依赖向量相似度，难以捕捉实体间关系；GraphRAG 通过构建知识图谱理解复杂关联，在多步推理与全局性问题上表现更优。"
+    },
+    {
+      "q": "GraphRAG 支持哪些大模型？",
+      "a": "支持 OpenAI GPT 系列、Anthropic Claude、Azure OpenAI、Ollama 本地模型等主流 LLM API。"
+    },
+    {
+      "q": "GraphRAG 收费吗？",
+      "a": "不收费。GraphRAG 为 MIT 开源项目，可免费自托管；微软未提供任何官方商业“企业版”。"
+    }
+  ],
+  "seo_keywords": [
+    "GraphRAG",
+    "GraphRAG安装教程",
+    "GraphRAG vs 传统RAG",
+    "GraphRAG知识图谱构建",
+    "GraphRAG企业应用"
+  ],
+  "content": "## GraphRAG 是什么？\n\n微软开源的、基于知识图谱的模块化 RAG（检索增强生成）系统，从非结构化文本中抽取实体与关系构建知识图谱，增强多跳推理与全局问答能力。采用 MIT 许可，完全免费、可私有化部署。\n\nGraphRAG 是微软开源（MIT）的基于知识图谱的模块化 RAG 系统，通过从文本抽取实体与关系构建图谱来增强多跳推理与全局问答，完全免费、可私有化部署，并不存在官方收费的企业版。\n\n## 核心功能\n\n- 图谱索引构建（实体与关系抽取）\n- 混合检索（向量搜索 + 图遍历）\n- 可配置的摘要生成，提升答案质量\n- 本地与云端部署\n- API 接口，便于集成\n- 多模型支持（OpenAI、Claude、Azure OpenAI、Ollama 等）\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 完全开源免费（MIT 许可）；不存在官方收费的“企业版/商业授权”。可结合 Azure 或 Microsoft Fabric 的 graph-powered 能力（另行计费，但非 GraphRAG 本身收费）。 |\n| 支持平台 | Python（3.10+）；Linux / macOS / Windows；支持本地与云端部署 |\n| 评分 | ⭐ 4.7 |\n| 开发商 | Microsoft（基于 Microsoft Research 论文；代码属演示性质，非官方支持产品） |\n\n## 价格与平台\n\n- **价格**：完全开源免费（MIT 许可）；不存在官方收费的“企业版/商业授权”。可结合 Azure 或 Microsoft Fabric 的 graph-powered 能力（另行计费，但非 GraphRAG 本身收费）。\n- **平台**：Python（3.10+）；Linux / macOS / Windows；支持本地与云端部署\n- **官网**：https://github.com/microsoft/graphrag\n\n## 优缺点分析\n\n### 优点\n\n- 知识图谱显著提升多跳推理与全局问答准确性\n- 数据可全程本地化处理，隐私安全\n- 开源 MIT，社区活跃、持续迭代\n- 自动化索引，接入数据源相对容易\n- 可视化图谱探索（社区工具）\n\n### 缺点\n\n- 索引构建资源消耗大、耗时较长\n- 初次配置与学习曲线较陡\n- 图谱质量依赖原始数据质量\n- 微软官方明确声明该代码为演示性质、并非官方支持产品\n- 无商业技术支持渠道\n\n## 常见问题（FAQ）\n\n**GraphRAG 和传统 RAG 有什么区别？**\n\n传统 RAG 依赖向量相似度，难以捕捉实体间关系；GraphRAG 通过构建知识图谱理解复杂关联，在多步推理与全局性问题上表现更优。\n\n**GraphRAG 支持哪些大模型？**\n\n支持 OpenAI GPT 系列、Anthropic Claude、Azure OpenAI、Ollama 本地模型等主流 LLM API。\n\n**GraphRAG 收费吗？**\n\n不收费。GraphRAG 为 MIT 开源项目，可免费自托管；微软未提供任何官方商业“企业版”。\n\n\n## 最终结论\n\nGraphRAG 是AI开发领域的一款 AI 工具，其核心优势在于知识图谱显著提升多跳推理与全局问答准确性。\n此外，数据可全程本地化处理，隐私安全。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-07-05",
+  "published_date": "2026-07-05",
+  "verified_url": "https://github.com/microsoft/graphrag",
+  "verified_publisher": "Microsoft（基于 Microsoft Research 论文；代码属演示性质，非官方支持产品）",
+  "verified_what": "微软开源的、基于知识图谱的模块化 RAG（检索增强生成）系统，从非结构化文本中抽取实体与关系构建知识图谱，增强多跳推理与全局问答能力。采用 MIT 许可，完全免费、可私有化部署。",
+  "verified_price": "完全开源免费（MIT 许可）；不存在官方收费的“企业版/商业授权”。可结合 Azure 或 Microsoft Fabric 的 graph-powered 能力（另行计费，但非 GraphRAG 本身收费）。",
+  "verified_platform": "Python（3.10+）；Linux / macOS / Windows；支持本地与云端部署",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "图谱索引构建（实体与关系抽取）",
+    "混合检索（向量搜索 + 图遍历）",
+    "可配置的摘要生成，提升答案质量",
+    "本地与云端部署",
+    "API 接口，便于集成",
+    "多模型支持（OpenAI、Claude、Azure OpenAI、Ollama 等）"
+  ],
+  "verified_description": "GraphRAG 是微软开源（MIT）的基于知识图谱的模块化 RAG 系统，通过从文本抽取实体与关系构建图谱来增强多跳推理与全局问答，完全免费、可私有化部署，并不存在官方收费的企业版。",
+  "content_flags": "虚构企业版收费层级；版本号过时（最新已至 v3.x，而非 v2.0）",
+  "verified_pros": [
+    "知识图谱显著提升多跳推理与全局问答准确性",
+    "数据可全程本地化处理，隐私安全",
+    "开源 MIT，社区活跃、持续迭代",
+    "自动化索引，接入数据源相对容易",
+    "可视化图谱探索（社区工具）"
+  ],
+  "verified_cons": [
+    "索引构建资源消耗大、耗时较长",
+    "初次配置与学习曲线较陡",
+    "图谱质量依赖原始数据质量",
+    "微软官方明确声明该代码为演示性质、并非官方支持产品",
+    "无商业技术支持渠道"
+  ],
+  "verified_faq": [
+    {
+      "q": "GraphRAG 和传统 RAG 有什么区别？",
+      "a": "传统 RAG 依赖向量相似度，难以捕捉实体间关系；GraphRAG 通过构建知识图谱理解复杂关联，在多步推理与全局性问题上表现更优。"
+    },
+    {
+      "q": "GraphRAG 支持哪些大模型？",
+      "a": "支持 OpenAI GPT 系列、Anthropic Claude、Azure OpenAI、Ollama 本地模型等主流 LLM API。"
+    },
+    {
+      "q": "GraphRAG 收费吗？",
+      "a": "不收费。GraphRAG 为 MIT 开源项目，可免费自托管；微软未提供任何官方商业“企业版”。"
+    }
+  ],
+  "verified_tags": [
+    "RAG",
+    "知识图谱",
+    "检索增强生成",
+    "开源"
+  ],
+  "verified_category": "AI开发",
+  "conflict_note": "原数据存在虚构的“2.0 企业版 商业授权”付费层级——GraphRAG 为 MIT 开源、无任何商业企业版；且声称“已发布 2.0 版本”已过时，最新为 v3.1.0（2026-05）。微软官方 README 明确该代码属演示性质、非官方支持产品。保留原值仅作审计记录，已在 corrected_content 中给出修正文案。",
+  "source_urls": [
+    "https://github.com/microsoft/graphrag",
+    "https://github.com/microsoft/graphrag/releases/tag/v2.2.0",
+    "https://www.microsoft.com/en-us/research/project/graphrag/"
+  ],
+  "verify_notes": "FABRICATION：原内容中“2.0 企业版 / 商业授权”为虚构收费层级；版本号亦过时。其余对 GraphRAG 原理与能力的描述基本准确。",
+  "content_verified": true,
+  "price_verified": true,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "GraphRAG 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：GraphRAG 的 图谱索引构建（实体与关系抽取） 是亮点，价格 开源免费（MIT）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

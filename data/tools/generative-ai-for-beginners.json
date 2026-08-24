@@ -1,0 +1,77 @@
+{
+  "name": "Generative AI for Beginners",
+  "slug": "generative-ai-for-beginners",
+  "positioning": "免费AI学习工具推荐：提示工程到、微软官方免费开源课",
+  "auto_positioning": true,
+  "emoji": "📚",
+  "color": "#6366f1",
+  "description": "微软推出的面向初学者的免费生成式人工智能课程",
+  "category": "AI学习",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI学习"
+    },
+    {
+      "text": "Generative AI for Beginners"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://microsoft.github.io/generative-ai-for-beginners/",
+  "price": "免费",
+  "platform": "Web",
+  "pros": [
+    "完全免费开源无版权顾虑",
+    "课程体系完整覆盖主流主题",
+    "视频文档代码多形态学习",
+    "多语言支持含中文",
+    "微软官方出品质量有保障"
+  ],
+  "cons": [
+    "中文为自动翻译版本",
+    "动手实验可能产生云费用",
+    "内容迭代快需跟进 API 变化",
+    "Build 部分需要编程基础"
+  ],
+  "features": [
+    "微软官方免费开源课程",
+    "21 课 Learn+Build 双模式",
+    "Python/TypeScript 代码实操",
+    "提示工程到 RAG/Agent 全覆盖",
+    "50+ 语言自动翻译含中文",
+    "官方 Discord 学习社区"
+  ],
+  "related": [
+    "aidaxue",
+    "duidui-ai",
+    "aisharenet"
+  ],
+  "content": "## Generative AI for Beginners 是什么？\n\n《Generative AI for Beginners》是微软 Cloud Advocates（开发者倡导团队）推出的完全免费的生成式 AI 入门课程，GitHub 开源，目前包含 21 课（早期版本为 18 课）。课程目标是\"从零开始教任何人构建生成式 AI 应用\"：既有 Learn 型课程讲清概念，也有 Build 型课程用 Python 和 TypeScript 手把手写代码，覆盖提示工程、LLM、RAG、向量数据库、AI 智能体、微调等核心主题。\n\n课程免费、开源、多语言（自动翻译覆盖 50+ 语言含中文），每课配有短视频、书面文档、代码示例和额外学习资源，是微软官方为\"零基础开发者学习生成式 AI\"准备的路线图。\n\n### 核心功能/课程内容\n\n- **21 课系统体系**：从生成式 AI 与 LLM 入门、模型对比、负责任 AI，到提示工程基础与高级提示、文本/聊天/搜索/图像应用构建、低代码 AI、Function Calling、UX 设计、安全、RAG 与向量数据库、开源模型、AI Agents、微调等。\n- **Learn + Build 双模式**：Learn 课讲概念，Build 课带 Python 和 TypeScript 代码实操，边学边建。\n- **多语言支持**：GitHub Action 自动翻译，50+ 语言版本，中文学习者可直接阅读中文文档。\n- **配套视频**：每课都有短视频介绍，微软还单独发布了一整套视频版课程。\n- **代码示例与项目**：基于 Azure OpenAI / OpenAI API，提供可运行的代码示例和项目。\n- **社区支持**：官方 Azure AI Discord 社区可提问、交流和获得微软专家帮助。\n- **零门槛起步**：提供课程环境搭建（Course Setup）章节，无需预先配置复杂环境。\n\n### 适用场景\n\n- **零基础入门生成式 AI**：没有任何编程经验也能从概念课开始，逐步上手用代码构建应用。\n- **开发者系统学习 LLM 应用开发**：从提示工程到 RAG、微调、Agent，一条路径掌握大模型应用开发全流程。\n- **企业团队免费培训**：作为员工 AI 技能普及的免费教材，配合 Azure 生态使用。\n\n### 价格\n\n课程完全免费：所有课程内容、视频、代码示例和学习资源均免费开放，无需付费即可学完全部 21 课；仅在使用 Azure OpenAI 服务做实验时可能产生云资源费用，以官方定价为准。\n\n### 优缺点\n\n- 优点：微软官方出品免费开源；21 课体系完整覆盖主流主题；多语言含中文；视频+文档+代码多形态学习；有活跃的 Discord 社区。\n- 缺点：课程文档以英文为主，中文为自动翻译版本；动手实验依赖 Azure/OpenAI API 可能产生费用；内容迭代快，部分示例需跟随最新 API 调整。\n\n### 常见问题\n\n**Generative AI for Beginners 收费吗？** 完全免费，课程内容和代码示例全部开源；仅在运行 Azure OpenAI 等实验时可能产生云服务费用。\n\n**不会编程能学吗？** 可以，课程从概念课开始，并提供环境搭建章节；建议在 Build 课程前先掌握基础 Python 或 TypeScript。\n\n**课程有多少课？** 当前版本 21 课，早期版本 18 课，每课独立成章可单独学习。",
+  "published": true,
+  "faq": [
+    {
+      "q": "Generative AI for Beginners 收费吗？",
+      "a": "课程本身完全免费，内容和代码示例全部开源；仅在运行 Azure OpenAI 等动手实验时可能产生云服务费用。"
+    },
+    {
+      "q": "不会编程能学这门课程吗？",
+      "a": "可以，课程从概念课开始并提供环境搭建章节；但 Build 课程部分建议先掌握基础 Python 或 TypeScript。"
+    },
+    {
+      "q": "这门课程有中文版吗？",
+      "a": "有，GitHub 仓库通过自动翻译提供 50+ 语言版本，包括简体中文，可直接阅读中文文档。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://microsoft.github.io/generative-ai-for-beginners/?utm_source=ai-bot.cn",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "verify_notes": "来源 ai-bot.cn 收录页采集；官网可达性验证：HTTP 200",
+  "seo_keywords": [
+    "生成式AI入门课程",
+    "微软生成式AI课程",
+    "Generative AI for Beginners",
+    "大模型应用开发课程",
+    "免费AI课程"
+  ]
+}

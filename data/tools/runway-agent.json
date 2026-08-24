@@ -1,0 +1,147 @@
+{
+  "name": "Runway Agent",
+  "slug": "runway-agent",
+  "positioning": "时间线精修+对话式视频创作，AI智能体平台实测",
+  "auto_positioning": true,
+  "emoji": "🎬",
+  "color": "#00b4d8",
+  "description": "Runway 推出的对话式 AI 视频创作 Agent。一句话描述需求，自动完成概念提案、分镜、多场景生成、旁白、配乐与剪辑合成，几分钟产出可发布成片。2026年5月13日正式发布。",
+  "category": "AI智能体",
+  "tags": [
+    "AI智能体",
+    "AI视频",
+    "有免费额度"
+  ],
+  "rating": "⭐4.6",
+  "visits": "新上线",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://runwayml.com",
+  "price": "含在 Runway 订阅内（Standard $15/月起）",
+  "platform": "Web",
+  "pros": [
+    "一句话从创意到成片，门槛极低",
+    "对话式迭代，无需学习剪辑软件",
+    "多场景 + 旁白 + 配乐自动合成",
+    "多模型自动选优，覆盖 Gen-4.5、Veo、Kling 等",
+    "几分钟出片，大幅压缩制作周期"
+  ],
+  "cons": [
+    "重度依赖 Runway 订阅与 Credits，长期成本高",
+    "单次成片时长受底层模型限制，长视频需分段拼接",
+    "国内访问需科学上网",
+    "精细镜头语言仍需人工在时间线微调",
+    "复杂多角色叙事的连贯性仍有上限"
+  ],
+  "features": [
+    "对话式视频创作：用自然语言描述需求即可启动",
+    "概念与分镜提案：自动生成视觉方向和场景划分",
+    "多场景成片生成：一次生成多镜头视频并自动拼接",
+    "自动旁白与配乐：内置配音和背景音乐",
+    "参考图锚定风格：上传参考图锁定视觉方向",
+    "多比例与时长配置：支持横屏/竖屏及不同时长",
+    "时间线精修：生成后在时间线进行裁剪、拆分、调音",
+    "多模型自动调度：底层选用 Gen-4.5、Veo 3.1、Kling 3.0 等最优模型"
+  ],
+  "related": [
+    "runway",
+    "coze",
+    "openclaw",
+    "dify"
+  ],
+  "content": "## Runway Agent 是什么？\n\nRunway Agent 是 Runway 于 2026 年 5 月 13 日正式发布的对话式 AI 视频创作伙伴。与以往每次只能生成单个视频片段的工具不同，Agent 能通过一次对话，自主完成从概念提案、故事节奏设计到多场景成片（含旁白、对话和音乐）的全流程，并把传统需要数天甚至数周的审核制作周期压缩到几分钟。\n\n你可以把它理解为一位「驻扎在对话框里的视频导演」：你用自然语言描述想要什么，它先给出创意方向和分镜结构，你对话调整，满意后它一次性生成包含多个场景、配音、配乐并完成剪辑合成的成片。\n\n## 核心功能\n\n- **对话式创意**：用大白话描述需求，无需任何剪辑或设计基础\n- **概念与分镜提案**：自动生成视觉方向、故事节奏和场景划分\n- **多场景成片**：一次生成多镜头视频，自动拼接转场\n- **自动旁白与配乐**：内置语音旁白、对话和背景音乐\n- **参考图锚定**：上传参考图锁定视觉风格，保持品牌调性\n- **多比例与时长**：支持横屏/竖屏、不同时长配置\n- **时间线精修**：生成后在 Final Cut 时间线做裁剪、拆分、调音\n- **多模型调度**：底层自动选用 Gen-4.5、Seedance 2.0、Kling、Veo 等最优模型\n\n## 价格与可用方案\n\n| 方案 | 价格 | 说明 |\n|------|------|------|\n| 免费额度 | $0 | 注册可体验 Agent 基础生成 |\n| Standard | $15/月 | 日常创作，含 Credits |\n| Pro | $35/月 | 更高额度，专业创作 |\n| Unlimited | $95/月 | 无限制重度使用 |\n\nRunway Agent 面向所有 Runway 订阅用户开放，生成视频会消耗 Credits。建议先用 720p 迭代以节省额度，定稿后再 Upscale 到 4K。\n\n## 优缺点分析\n\n### 👍 优点\n- 一句话从创意到成片，门槛极低\n- 对话式迭代，无需学习剪辑软件\n- 多场景 + 旁白 + 配乐自动合成，省去后期\n- 多模型自动选优，成片质量有保障\n- 几分钟出片，把制作成本压到传统的一小部分\n\n### 👎 缺点\n- 重度依赖 Runway 订阅与 Credits，长期成本高\n- 单次成片时长受底层模型限制，长视频需自动拼接\n- 国内访问需要科学上网\n- 精细的镜头语言和品牌规范仍需人工在时间线微调\n- 复杂多角色叙事的连贯性仍有上限\n\n## 使用技巧\n\n1. **先定方向再生成**：在生成前认真审 Agent 的提纲，这是调整故事、画面和配音的最佳时机，能省下大量 Credits。\n2. **参考图锚定视觉**：上传品牌素材或风格参考图，让成片更贴合你的调性。\n3. **低分辨率迭代**：先用 720p 反复打磨，定稿再用 Upscale 到 4K，性价比最高。\n4. **多比例一次出**：让 Agent 把同一创意适配成 1:1、9:16 等多种比例，覆盖全平台分发。\n5. **对话微调**：成片不满意可以直接在聊天里让 Agent 改，不必回到时间线手动剪。\n\n## 适合人群\n\nRunway Agent 适合品牌市场团队、广告代理商、自媒体内容负责人、独立电影人以及任何「因为太慢、太贵、太复杂而一直没做视频」的人。如果你需要高频产出符合品牌调性的视频，它是一个改变工作流的工具。\n\n### 总结\n\nRunway Agent 是 AI视频 领域一次重要的范式升级——把「片段生成」推进到「对话式成片」。它让没有制作团队的创作者也能在几分钟内产出可发布的多场景视频。\n\n**快速上手建议：**\n- 访问官网 runwayml.com 注册账号\n- 进入 Agent 对话，用一句话描述你的视频需求\n- 上传参考图、选好比例与时长，审过提纲再生成\n- 在 Final Cut 时间线做最终微调\n\n**价格参考：** 包含在 Runway 订阅内（$15/月 起）\n**支持平台：** Web",
+  "published": true,
+  "faq": [
+    {
+      "q": "Runway Agent 是什么？",
+      "a": "Runway Agent 是 Runway 于 2026 年 5 月 13 日发布的对话式 AI 视频创作工具，通过一次对话完成概念提案、分镜、多场景生成、旁白、配乐与剪辑合成的完整流程。"
+    },
+    {
+      "q": "Runway Agent 要多少钱？",
+      "a": "Agent 面向所有 Runway 订阅用户开放，Standard $15/月起。生成视频消耗 Credits。免费账户有 125 一次性积分可体验。"
+    },
+    {
+      "q": "没有剪辑经验能用吗？",
+      "a": "能。只需用自然语言描述需求，Agent 会提案、生成并自动剪辑。如需精细控制也可在时间线编辑器手动微调。"
+    }
+  ],
+  "created_date": "2026-07-25",
+  "aeo_geo_updated": "2026-07-25",
+  "verified_url": "https://runwayml.com",
+  "verified_publisher": "Runway AI, Inc.",
+  "verified_what": "Runway 推出的对话式 AI 视频创作 Agent（2026-05-13 发布），一句话描述需求即可自动完成从概念到成片的完整视频制作流程",
+  "verified_price": "Runway Agent 面向所有 Runway 订阅用户开放。Runway 定价：Free $0（125一次性积分）、Standard $15/月（$12/月年付，625积分/月）、Pro $35/月（$28/月年付，2,250积分/月）、Max $95/月（$76/月年付，9,500积分/月）、Enterprise 定制。Agent 生成视频消耗 Credits。",
+  "verified_platform": "Web",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "对话式视频创作：用自然语言描述需求即可启动",
+    "概念与分镜提案：自动生成视觉方向和场景划分",
+    "多场景成片生成：一次生成多镜头视频并自动拼接",
+    "自动旁白与配乐：内置配音和背景音乐",
+    "参考图锚定风格：上传参考图锁定视觉方向",
+    "多比例与时长配置：支持横屏/竖屏及不同时长",
+    "时间线精修：生成后在时间线进行裁剪、拆分、调音",
+    "多模型自动调度：底层选用 Gen-4.5、Veo 3.1、Kling 3.0 等最优模型"
+  ],
+  "verified_description": "Runway 推出的对话式 AI 视频创作 Agent。一句话描述需求，自动完成概念提案、分镜、多场景生成、旁白、配乐与剪辑合成，几分钟产出可发布成片。2026年5月13日正式发布。",
+  "content_flags": "content 中价格表列出 'Unlimited $95/月'，但 Runway 已于 2026年6月将 Unlimited 更名为 Max（9,500积分/月含一月滚存），建议更新为 Max。其余内容准确，产品发布日期、核心功能描述均与官方一致。",
+  "price_verified": true,
+  "verified_rating": "⭐4.6",
+  "rating_source": "暂无权威评分（编辑评定，新产品）",
+  "rating_verified": true,
+  "verified_pros": [
+    "一句话从创意到成片，门槛极低",
+    "对话式迭代，无需学习剪辑软件",
+    "多场景 + 旁白 + 配乐自动合成",
+    "多模型自动选优，覆盖 Gen-4.5、Veo、Kling 等",
+    "几分钟出片，大幅压缩制作周期"
+  ],
+  "verified_cons": [
+    "重度依赖 Runway 订阅与 Credits，长期成本高",
+    "单次成片时长受底层模型限制，长视频需分段拼接",
+    "国内访问需科学上网",
+    "精细镜头语言仍需人工在时间线微调",
+    "复杂多角色叙事的连贯性仍有上限"
+  ],
+  "verified_faq": [
+    {
+      "q": "Runway Agent 是什么？",
+      "a": "Runway Agent 是 Runway 于 2026 年 5 月 13 日发布的对话式 AI 视频创作工具，通过一次对话完成概念提案、分镜、多场景生成、旁白、配乐与剪辑合成的完整流程。"
+    },
+    {
+      "q": "Runway Agent 要多少钱？",
+      "a": "Agent 面向所有 Runway 订阅用户开放，Standard $15/月起。生成视频消耗 Credits。免费账户有 125 一次性积分可体验。"
+    },
+    {
+      "q": "没有剪辑经验能用吗？",
+      "a": "能。只需用自然语言描述需求，Agent 会提案、生成并自动剪辑。如需精细控制也可在时间线编辑器手动微调。"
+    }
+  ],
+  "verified_tags": [
+    "AI智能体",
+    "AI视频",
+    "有免费额度"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://runwayml.com/news/introducing-runway-agent",
+    "https://runwayml.com/pricing",
+    "https://makefun.ai/runway-agent-ai-video-generator",
+    "https://ponpon.ai/pt/blog/runway-gen-4-5-agent-characters-may-2026"
+  ],
+  "verify_notes": "url(runwayml.com) 正确。Runway Agent 是确认存在的官方产品（2026-05-13发布）。现有 description、features、pros/cons 均准确。Content 中 'Unlimited' 已更名为 'Max'，需更新。price_short 准确。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "crew-ai",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Runway Agent 与 CrewAI、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道。若优先性价比，CrewAI（开源免费(自部署) / Enterprise $99-$499/月起 / Custom定制）门槛更低；若看重口碑，MetaGPT（4.7）评分更高；Runway Agent 的优势在于Runway 推出的对话式 AI 视频创作 Agent（2026-05-13 发布），一句话描述需求即可自动完成从概念到，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

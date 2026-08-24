@@ -1,0 +1,126 @@
+{
+  "batch_id": "b28",
+  "category": "AI设计",
+  "tools": [
+    {
+      "slug": "spline-ai",
+      "name": "Spline AI",
+      "url_current": "https://spline.design/ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网确认文字/图像转3D、AI纹理生成等功能，与站内基本吻合。定价“Pro版$12/月起”对应官网 Starter $12/月（Spline AI 为 +$5 附加项），基本合理。但正文所述“AI动画生成”一项在官网未见明确独立功能描述（官网 AI 3D Generation V1 主打文字/图像转3D及变体），疑为夸大或混淆，建议人工复核该点。"
+    },
+    {
+      "slug": "lottiefiles-ai",
+      "name": "LottieFiles AI",
+      "url_current": "https://lottiefiles.com/ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "low",
+      "notes": "官网 /ai 页面未展示任何定价数字（LottieFiles 定价页被 Cloudflare 拦截，无法核实站内“付费版$19/月起”）。功能方面：文字生成 Lottie 动画、Motion Copilot、Prompt to Themes（主题/风格迁移）、Raster/Prompt to Vector 等与官网 AI 工具集基本吻合，归属正确。因价格无法核实，标记为存疑待人工裁定。"
+    },
+    {
+      "slug": "clipdrop",
+      "name": "Clipdrop",
+      "url_current": "https://clipdrop.co",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "归属错误：Clipdrop 于 2024 年 2 月被 Jasper 从 Stability AI 收购，现为 Jasper 旗下产品（clipdrop.co 仍以独立产品运营）。站内描述“由 Stability AI 推出”“2026 年集成了最新的 Stability AI 3.0 模型”已过时且不准确（现由 Jasper 运营，底层模型仍来自 Stability）。功能（去背景、放大、Cleanup、Relight、Uncrop、SDXL 文生图）与官网吻合；定价“高级版$9.99/月起”大致合理。"
+    },
+    {
+      "slug": "topaz-photo-ai",
+      "name": "Topaz Photo AI",
+      "url_current": "https://www.topazlabs.com/topaz-photo-ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "定价已过期：Topaz Labs 于 2025 年 9 月取消永久授权，$199 一次性购买已不存在；产品已改名为“Topaz Photo”（原 URL 跳转至 topaz-photo，仍可达）。现订阅价为 $39/月（官网 Topaz Photo 方案），而非站内所写“一次性购买$199，订阅$19.99/月”。功能（降噪、锐化、放大、去模糊、RAW 支持）与官网吻合，平台 Windows/macOS 正确。"
+    },
+    {
+      "slug": "upscayl",
+      "name": "Upscayl",
+      "url_current": "https://upscayl.org",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "桌面版确为免费开源且支持批量处理，价格“免费（开源）”对桌面版正确（另有付费的 Upscayl Cloud）。但正文所述“v5.0 版本，新增……企业级 API 服务”不准确：“企业级 API 服务”实为付费的 Upscayl Cloud 功能，并非开源桌面版特性；官网亦未见“v5.0”明确版本号佐证。属功能归属/版本夸大，建议复核。"
+    },
+    {
+      "slug": "adobe-express-ai",
+      "name": "Adobe Express AI",
+      "url_current": "https://express.adobe.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网确认 Adobe Express Premium 为 $9.99/月，集成 Firefly 生成式 AI（文生图、智能抠图等），平台覆盖网页端/iOS/Android，与站内描述、定价、平台完全一致，未发现幻觉。"
+    },
+    {
+      "slug": "adcreative-ai",
+      "name": "AdCreative AI",
+      "url_current": "https://www.adcreative.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "定价范围有误：官网当前 Starter 起价 $29/月（季付）与站内下限一致，但 Ultimate 方案现为 $749–999/月，站内写的“上限 $299/月”已过期/明显偏低（现 Professional $185–249/月、Ultimate $749+/月）。功能（文生广告图、多尺寸适配、转化预测、Google/Meta 集成、文字转视频广告）与官网吻合。"
+    },
+    {
+      "slug": "predis-ai",
+      "name": "Predis AI",
+      "url_current": "https://predis.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "定价已过期：官网当前最低付费方案 Core 为 $19/月（月付）起，站内写“付费版$29/月起”偏低；且正文版本表“专业版约$29/月、团队版约$99/月”与官网 Core $19 / Rise $40 / Enterprise+ $212 不符。功能（社媒帖子/图文/视频生成、hashtag 推荐、排期发布、多账号管理）与官网吻合。"
+    },
+    {
+      "slug": "pencil-ai",
+      "name": "Pencil AI",
+      "url_current": "https://trypencil.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "功能张冠李戴：Pencil（Pencil AI Limited，trypencil.com）实际是面向电商/投放团队的 AI 广告创意与表现预测平台（基于历史广告数据生成并预测广告创意、预测 ROAS、直连 Meta/Google/TikTok 等投放），而非站内正文所描述的“用文字描述生成图片、智能修图、风格迁移、AI 元素生成”的通用 AI 设计助手。站内 slug 级描述（广告创意平台）正确，但正文内容整体编造了与该产品不匹配的功能。定价“$15/月起”大致接近官网（约 $14/月起）。"
+    },
+    {
+      "slug": "iconscout-ai",
+      "name": "IconScout AI",
+      "url_current": "https://iconscout.com/ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "定价编造/错误：官网 IconScout AI 包含在付费方案中（Individual $14.99/月、Team $24.99/月、Team+ $54.99/月），AI 额度为 500/1000/5000 每月，并无“免费版每月 10 个 AI 生成额度”；站内“专业版$9.99/月起”也偏低（实际 Individual 起价 $14.99/月）。功能（文字生成图标/插画、AI 矢量器、背景移除、Figma/Sketch 插件、多格式导出）与官网吻合。"
+    }
+  ]
+}

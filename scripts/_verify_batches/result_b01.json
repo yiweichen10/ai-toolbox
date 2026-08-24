@@ -1,0 +1,126 @@
+{
+  "batch_id": "b01",
+  "category": "AI编程",
+  "tools": [
+    {
+      "slug": "github-copilot",
+      "name": "GitHub Copilot",
+      "url_current": "https://github.com/features/copilot",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正确（github.com/features/copilot）。但定价已过时：当前官方方案为 Free $0 / Pro $10 / Pro+ $39 / Max $100，已无 $19 的 Business 档（历史档，现更名为 Pro/Pro+/Max）。存储价 '免费个人版+Business $19/月' 及内容表 'Business $19/月' 均不准确（来源：github.com/features/copilot）。"
+    },
+    {
+      "slug": "cursor",
+      "name": "Cursor",
+      "url_current": "https://cursor.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确（cursor.com / cursor.com/pricing）。定价 Free(Hobby) $0 / Pro $20/月 / Teams $40/用户/月，与存储一致；功能描述（Tab 补全、Cmd+K、Chat、多模型）准确。"
+    },
+    {
+      "slug": "replit-ai",
+      "name": "Replit AI",
+      "url_current": "https://replit.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确（replit.com/pricing）。但 Replit Core 现定价 $20/月（年付等价 $18/月），并非存储所称 $25/月；且现另有 Replit Pro $100/月。存储价 'Core $25/月' 及内容表 'Core ($25/月)' 错误（来源：replit.com/pricing）。"
+    },
+    {
+      "slug": "bolt.new",
+      "name": "Bolt.new",
+      "url_current": "https://bolt.new",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确（bolt.new/pricing，StackBlitz 出品，归属无误）。Bolt.new Pro 现定价 $25/月（非 $10 也非 $20）。存储价字段称 'Pro $10/月'、内容表称 'Pro ($20/月)'，两处均错且互相矛盾（来源：bolt.new/pricing）。"
+    },
+    {
+      "slug": "windsurf",
+      "name": "Windsurf",
+      "url_current": "https://codeium.com/windsurf",
+      "url_ok": false,
+      "url_correct": "https://devin.ai",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网已变：codeium.com/windsurf 与 windsurf.com 均重定向至 Devin（Cognition 收购 Windsurf 并改名 'Devin Desktop'，官方博客 windsurf-is-now-devin-desktop）。存储内容称 'Codeium 推出、Pro $15/月' 已过时：现归属 Cognition/Devin，Devin Pro 为 $20/月、Max $200/月（来源：devin.ai）。"
+    },
+    {
+      "slug": "lovable",
+      "name": "Lovable",
+      "url_current": "https://lovable.dev",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确（lovable.dev/pricing，原名 GPT Engineer，归属无误）。Lovable Pro 现定价 $25/月（非存储所称 $20/月）；存储价字段 '免费使用' 也低估了事实（为 Freemium，Pro $25/月，另有 Business $50）。内容表 'Pro ($20/月)' 错误（来源：lovable.dev/pricing）。"
+    },
+    {
+      "slug": "v0.dev",
+      "name": "v0.dev",
+      "url_current": "https://v0.dev",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确（v0.dev 现重定向至 v0.app，Vercel 出品，归属无误）。v0 现方案 Free $0 / Plus $30/用户/月 / Business $100/用户/月，并无 $10 的 Pro 档；存储价 'Pro $10/月' 及内容表 'Premium ($20/月)' 均错误（来源：v0.dev/pricing）。"
+    },
+    {
+      "slug": "claude-code",
+      "name": "Claude Code",
+      "url_current": "https://docs.anthropic.com/en/docs/claude-code",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正确（docs.anthropic.com/en/docs/claude-code，Anthropic 出品，归属无误）。但存储价 '基础$10/月起' 无对应方案：Claude Code 需 Claude 订阅，最低为 Claude Pro $20/月（或 Max $100/月），官方无 $10 档（来源：claude.com/pricing 及官方文档）。"
+    },
+    {
+      "slug": "openai-codex",
+      "name": "OpenAI Codex",
+      "url_current": "https://openai.com/index/introducing-codex",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正确（openai.com/index/introducing-codex，官方页，归属无误）。但存储价 'Pro $10/月' 错误：Codex 通过 ChatGPT 订阅（Pro $20 等）或 API 按 token 计费，无独立 $10 档（来源：openai.com 该页）。另描述称 '是 GitHub Copilot 的底层模型之一' 对 2025 版 Codex（云端软件工程智能体 codex-1）定位不准，当前官方页未提此关系。"
+    },
+    {
+      "slug": "hugging-face",
+      "name": "Hugging Face",
+      "url_current": "https://huggingface.co",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确（huggingface.co/pricing）。Hugging Face Pro $9/月 与存储 '付费计划起价$9/月' 一致；免费版可用。描述（开源模型/数据集社区、Spaces、Transformers 等）准确，无幻觉。"
+    }
+  ]
+}

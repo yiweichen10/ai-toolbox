@@ -1,0 +1,94 @@
+{
+  "name": "voice-pro",
+  "slug": "voice-pro",
+  "positioning": "abus-aikorea 开源的一站式 AI 配音/语音套件，基于 Gradio WebUI，集音频提取、人声分离、转录、零样本声音克隆、TTS 与多语种翻译于一体，可在本地自托管，被称为开源版 ElevenLabs 替代品。",
+  "auto_positioning": false,
+  "emoji": "🎤",
+  "color": "#FF6B6B",
+  "description": "voice-pro 是 abus-aikorea 开源的一站式 AI 配音与语音处理套件，本质上是一个基于 Gradio 的 WebUI，把视频/音频下载、人声分离、转录、声音克隆、TTS、翻译全部塞进同一条工作流。它最早是商业项目，后来把整套代码开源，因此常被称为开源版 ElevenLabs。对做双语字幕、多语种配音、视频本地化的创作者来说，它是一个能把订阅账单打到零的本地替代方案。",
+  "category": "AI音频",
+  "tags": [
+    "配音",
+    "语音克隆",
+    "开源",
+    "Gradio",
+    "多语种翻译"
+  ],
+  "rating": "⭐ 4.2",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "pick",
+    "text": "开源项目"
+  },
+  "url": "https://github.com/abus-aikorea/voice-pro",
+  "price": "开源免费（开源后完全免费、无时长限制；官方 ABUS 商业完整版需购买，价格见官网）",
+  "platform": [
+    "Windows",
+    "Linux",
+    "macOS",
+    "本地自托管"
+  ],
+  "pros": [
+    "全流程一体化，下载到配音一条龙",
+    "零样本声音克隆（F5-TTS/E2-TTS/CosyVoice）质量高",
+    "本地自托管，隐私与零边际成本",
+    "支持 100+ 语种翻译，适合出海创作者",
+    "开源，可改脚本接入自有模型"
+  ],
+  "cons": [
+    "首次运行需下载约 10GB 模型，安装耗时长",
+    "对 GPU 有要求（建议 4-8GB 显存），Windows 可能误报"
+  ],
+  "features": [
+    "音频提取（yt-dlp 下载处理）",
+    "人声分离（Demucs）",
+    "高精度转录（Faster-Whisper / Whisper-Timestamped）",
+    "零样本声音克隆（F5/E2/CosyVoice）",
+    "TTS（Edge-TTS、kokoro）",
+    "多语种翻译（Deep-Translator）"
+  ],
+  "related": [
+    "elevenlabs",
+    "suno",
+    "udio"
+  ],
+  "content": "## voice-pro 是什么？\nvoice-pro 是 abus-aikorea 开源的一站式 AI 配音与语音处理套件，本质上是一个基于 Gradio 的 WebUI，把创作者平时要来回切换的好几个工具——视频/音频下载、人声分离、转录、声音克隆、TTS、翻译——全部塞进同一条工作流。它最早是商业项目，后来把整套代码开源，因此常被称为开源版 ElevenLabs。对做双语字幕、多语种配音、视频本地化的创作者来说，它是一个能把订阅账单打到零的本地替代方案。\n\n## 核心功能\n1. 音频提取：内置 yt-dlp，可直接下载并处理 YouTube 等平台内容。\n2. 人声分离：用 Demucs 把人声与背景音乐干净分离，提升克隆质量。\n3. 高精度转录：支持 Faster-Whisper、Whisper-Timestamped 等，做到词级时间轴。\n4. 零样本声音克隆：集成 F5-TTS、E2-TTS、CosyVoice，少量参考音频即可复刻音色。\n5. 文本转语音：内置 Edge-TTS 与 kokoro，自然度高、开箱即用。\n6. 多语种翻译：集成 Deep-Translator，覆盖 100+ 语种。\n\n## 版本/套餐对比\n开源免费、无时长限制；需要商业无限制版本可购买 ABUS 官方版，具体价格见官网。\n\n## 值不值得用？\n对内容创作者，voice-pro 很值得。它一次性解决了下载—分离—转录—克隆—合成—翻译的完整链路，省去在四五个 SaaS 之间倒腾文件和预算。前提是你能接受本地部署的硬件门槛：建议 NVIDIA 显卡 4–8GB 显存，首次还要下载约 10GB 模型。\n\n## 使用建议\n1. Windows 用户跑 configure.bat + start.bat 基本一键安装；Linux/Mac 用 .sh 版本。\n2. 显存吃紧就把 Denoise 调到 0/1，并用 int 计算类型换速度。\n3. 长内容用 large 模型换准确率，短内容 medium/small 足够。\n\n## 适合谁用？（三档）\n- 重度用户：出海视频创作者、需要批量多语种配音的团队。\n- 中度用户：偶尔做配音、翻译的 UP 主，本地跑省钱。\n- 轻度用户：想体验声音克隆的玩家，先免费版试水。",
+  "published": true,
+  "faq": [
+    {
+      "q": "voice-pro 是免费的吗？",
+      "a": "开源免费，但 WebUI 首次运行有 30 分钟使用时长限制（重启可继续，已处理结果保留）；完整无限制版本需购买 ABUS 官方版。"
+    },
+    {
+      "q": "对电脑配置有什么要求？",
+      "a": "建议 NVIDIA 显卡 4–8GB 显存，首次运行会下载约 10GB 模型权重；Windows 可能被 SmartScreen 误报，需手动允许运行。"
+    },
+    {
+      "q": "支持哪些声音克隆模型？",
+      "a": "集成 F5-TTS、E2-TTS、CosyVoice 等零样本声音克隆模型，少量参考音频即可复刻音色；TTS 还内置 Edge-TTS 与 kokoro。"
+    },
+    {
+      "q": "可以做多语种配音吗？",
+      "a": "可以，集成 Deep-Translator 支持 100+ 语种翻译，配合转录与克隆，适合做双语字幕与出海视频本地化。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "voice-pro",
+    "AI 配音",
+    "AI 语音克隆",
+    "开源语音工具",
+    "多语种翻译"
+  ],
+  "source_urls": [
+    "https://aibit.im/en/article/voice-pro-open-source-ai-audio-dubbing-suite",
+    "https://www.technolati.com/voice-pro-the-open-source-elevenlabs-alternative-that-runs-entirely-locally",
+    "https://github.com/abus-aikorea/voice-pro"
+  ],
+  "confidence": "medium",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-18"
+}

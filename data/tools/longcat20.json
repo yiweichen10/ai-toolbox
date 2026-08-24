@@ -1,0 +1,141 @@
+{
+  "name": "LongCat-2.0",
+  "slug": "longcat20",
+  "positioning": "免费AI助手：Agentic+1.6T MoE，原",
+  "auto_positioning": true,
+  "emoji": "🐱",
+  "color": "#FF6B35",
+  "description": "LongCat-2.0 是美团于 2026 年 6 月发布的新一代基础大模型：1.6 万亿参数 MoE（平均激活约 480 亿），原生支持 1M 超长上下文，全程基于国产算力训练与推理，深度聚焦 Agentic Coding 与工具调用，已开源并提供 longcat.chat API 平台。",
+  "category": "AI对话",
+  "tags": [
+    "AI对话",
+    "大模型",
+    "开源",
+    "长上下文",
+    "智能体编程"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "约280万/月",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://longcat.ai",
+  "price": "开源免费 + API 平台",
+  "platform": "Web / Chrome扩展 / iOS / Android",
+  "pros": [
+    "万亿参数但激活参数可控，成本低",
+    "1M 长上下文",
+    "Agentic Coding 接近 Claude Opus 4.6",
+    "全栈开源、国产算力可部署"
+  ],
+  "cons": [
+    "定位为基础大模型，并非专门的“写作 / 协作平台”",
+    "需一定算力部署（虽已优化国产卡）",
+    "生态与工具链仍在成长"
+  ],
+  "features": [
+    "1.6T MoE，原生 1M 超长上下文",
+    "Agentic Coding 强（工具调用 / 复杂指令）",
+    "深度推理 + 自主执行 + 精准交互（MOPD 多专家）",
+    "全国产算力训练推理",
+    "开源多精度权重与推理代码",
+    "开放 API 平台"
+  ],
+  "related": [
+    "notion-ai",
+    "jasper",
+    "writesonic"
+  ],
+  "faq": [
+    {
+      "q": "LongCat-2.0 是什么？",
+      "a": "美团 2026 年 6 月发布的新一代基础大模型（1.6T MoE，1M 上下文），全程国产算力训练，聚焦智能体编程，已开源，并非专门的写作平台。"
+    },
+    {
+      "q": "LongCat-2.0 怎么用？",
+      "a": "可在 HuggingFace / ModelScope / GitHub 获取开源权重，或通过 longcat.chat API 平台调用。"
+    }
+  ],
+  "seo_keywords": [
+    "LongCat-2.0",
+    "LongCat-2.0免费版",
+    "LongCat-2.0怎么样",
+    "LongCat-2.0和Notion AI哪个好",
+    "长文本AI写作工具推荐"
+  ],
+  "content": "## LongCat-2.0 是什么？\n\n美团于 2026 年 6 月发布的新一代基础大模型 LongCat-2.0，1.6 万亿参数 MoE（平均激活约 480 亿），原生支持 1M 上下文，全程基于国产算力训练与推理，聚焦 Agentic Coding，已开源。\n\nLongCat-2.0 是美团于 2026 年 6 月发布的新一代基础大模型：1.6 万亿参数 MoE（平均激活约 480 亿），原生支持 1M 超长上下文，全程基于国产算力训练与推理，深度聚焦 Agentic Coding 与工具调用，已开源并提供 longcat.chat API 平台。\n\n## 核心功能\n\n- 1.6T MoE，原生 1M 超长上下文\n- Agentic Coding 强（工具调用 / 复杂指令）\n- 深度推理 + 自主执行 + 精准交互（MOPD 多专家）\n- 全国产算力训练推理\n- 开源多精度权重与推理代码\n- 开放 API 平台\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 开源模型（BF16/FP8/INT8 权重免费获取）；API 平台 longcat.chat 提供商用接入；训练 / 推理成本低于同规模万亿模型。 |\n| 支持平台 | ['开源（HuggingFace / ModelScope / GitHub）', 'longcat.chat API 平台', '国产算力（NPU）推理', 'Claude Code / OpenClaw / Hermes 等 Harness'] |\n| 评分 | ⭐ 4.6 |\n| 开发商 | 美团（Meituan） |\n| 上下文 | 1.6T MoE，原生 1M 超长上下文 |\n\n## 价格与平台\n\n- **价格**：开源模型（BF16/FP8/INT8 权重免费获取）；API 平台 longcat.chat 提供商用接入；训练 / 推理成本低于同规模万亿模型。\n- **平台**：['开源（HuggingFace / ModelScope / GitHub）', 'longcat.chat API 平台', '国产算力（NPU）推理', 'Claude Code / OpenClaw / Hermes 等 Harness']\n- **官网**：https://longcat.ai\n\n## 优缺点分析\n\n### 优点\n\n- 万亿参数但激活参数可控，成本低\n- 1M 长上下文\n- Agentic Coding 接近 Claude Opus 4.6\n- 全栈开源、国产算力可部署\n\n### 缺点\n\n- 定位为基础大模型，并非专门的“写作 / 协作平台”\n- 需一定算力部署（虽已优化国产卡）\n- 生态与工具链仍在成长\n\n## 常见问题（FAQ）\n\n**LongCat-2.0 是什么？**\n\n美团 2026 年 6 月发布的新一代基础大模型（1.6T MoE，1M 上下文），全程国产算力训练，聚焦智能体编程，已开源，并非专门的写作平台。\n\n**LongCat-2.0 怎么用？**\n\n可在 HuggingFace / ModelScope / GitHub 获取开源权重，或通过 longcat.chat API 平台调用。\n\n\n## 最终结论\n\nLongCat-2.0 是AI对话领域的一款 AI 工具，其核心优势在于万亿参数但激活参数可控，成本低。\n此外，1M 长上下文。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "subcategory": "",
+  "created_date": "2026-07-20",
+  "published_date": "2026-07-20",
+  "verified_url": "https://longcat.ai",
+  "verified_publisher": "美团（Meituan）",
+  "verified_what": "美团于 2026 年 6 月发布的新一代基础大模型 LongCat-2.0，1.6 万亿参数 MoE（平均激活约 480 亿），原生支持 1M 上下文，全程基于国产算力训练与推理，聚焦 Agentic Coding，已开源。",
+  "verified_price": "开源模型（BF16/FP8/INT8 权重免费获取）；API 平台 longcat.chat 提供商用接入；训练 / 推理成本低于同规模万亿模型。",
+  "verified_platform": [
+    "开源（HuggingFace / ModelScope / GitHub）",
+    "longcat.chat API 平台",
+    "国产算力（NPU）推理",
+    "Claude Code / OpenClaw / Hermes 等 Harness"
+  ],
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "1.6T MoE，原生 1M 超长上下文",
+    "Agentic Coding 强（工具调用 / 复杂指令）",
+    "深度推理 + 自主执行 + 精准交互（MOPD 多专家）",
+    "全国产算力训练推理",
+    "开源多精度权重与推理代码",
+    "开放 API 平台"
+  ],
+  "verified_description": "LongCat-2.0 是美团于 2026 年 6 月发布的新一代基础大模型：1.6 万亿参数 MoE（平均激活约 480 亿），原生支持 1M 超长上下文，全程基于国产算力训练与推理，深度聚焦 Agentic Coding 与工具调用，已开源并提供 longcat.chat API 平台。",
+  "content_flags": "原 description/content 将 LongCat-2.0 描述为“长文本 AI 写作与协作平台，专注超长文档生成 / 摘要 / 改写”，与事实不符——它实质是美团的基础大模型（类 Claude/GPT 的通用 LLM），强在编码与智能体任务而非写作平台；需更正。",
+  "price_verified": true,
+  "verified_pros": [
+    "万亿参数但激活参数可控，成本低",
+    "1M 长上下文",
+    "Agentic Coding 接近 Claude Opus 4.6",
+    "全栈开源、国产算力可部署"
+  ],
+  "verified_cons": [
+    "定位为基础大模型，并非专门的“写作 / 协作平台”",
+    "需一定算力部署（虽已优化国产卡）",
+    "生态与工具链仍在成长"
+  ],
+  "verified_faq": [
+    {
+      "q": "LongCat-2.0 是什么？",
+      "a": "美团 2026 年 6 月发布的新一代基础大模型（1.6T MoE，1M 上下文），全程国产算力训练，聚焦智能体编程，已开源，并非专门的写作平台。"
+    },
+    {
+      "q": "LongCat-2.0 怎么用？",
+      "a": "可在 HuggingFace / ModelScope / GitHub 获取开源权重，或通过 longcat.chat API 平台调用。"
+    }
+  ],
+  "verified_tags": [
+    "AI对话",
+    "大模型",
+    "开源",
+    "长上下文",
+    "智能体编程"
+  ],
+  "verified_category": "AI对话",
+  "conflict_note": "产品真实存在（美团 LongCat-2.0，2026-06-30 发布），但现有条目将其误述为“长文本写作平台”。已据官方源重写 verified_description 与 corrected_content，类别由 AI写作 更正为 AI对话。",
+  "source_urls": [
+    "https://longcat.ai/blog/longcat-2.0/",
+    "https://www.meituan.com/news/NN260706216009547",
+    "https://www.xinhuanet.com/tech/20260630/beb4fdc96a5644adbc5fddd10433b801/c.html"
+  ],
+  "verify_notes": "名称对应 LongCat-2.0（美团）。类别由 AI写作 更正为 AI对话。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "gemini",
+      "chatgpt",
+      "360-zhinain"
+    ],
+    "verdict": "LongCat-2.0 与 Gemini、ChatGPT、360智脑 同属AI对话赛道：LongCat-2.0 的 1.6T MoE，原生 1M 超长上下文 是亮点，价格 开源免费 + API 平台；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

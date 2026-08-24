@@ -1,0 +1,77 @@
+{
+  "name": "LangGPT",
+  "slug": "github",
+  "positioning": "免费AI提示词工具，结构化Role模板体+变量与动态",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#8b5cf6",
+  "description": "LangGPT是什么 LangGPT是一种...",
+  "category": "AI提示词",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI提示词"
+    },
+    {
+      "text": "LangGPT"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://github.com/langgptai/LangGPT",
+  "price": "免费版/付费版",
+  "platform": "Web",
+  "pros": [
+    "开源免费，无任何付费门槛",
+    "方法论系统，适合长期沉淀提示词能力",
+    "模板可复用、可维护，类编程范式",
+    "配套 GPTs 工具可自动生成结构化提示词",
+    "社区活跃，GitHub 万星且持续更新"
+  ],
+  "cons": [
+    "需要一定学习成本，入门不如零散技巧直观",
+    "文档与教程以中文为主，英文支持有限",
+    "模板复杂度过高时提示词体积偏大",
+    "依赖较强的模型（如 GPT-4/Claude）才能充分发挥"
+  ],
+  "features": [
+    "结构化Role模板体系",
+    "变量与动态引用机制",
+    "模块化组件自由复用",
+    "Workflow工作流定义",
+    "命令与条件句高级语法",
+    "GPTs与Kimi配套工具"
+  ],
+  "related": [
+    "promptpilot",
+    "explinks-prompts",
+    "prompt-engineering-guide"
+  ],
+  "content": "## LangGPT 是什么？\n\nLangGPT 是一套广受欢迎的结构化提示词（Structured Prompt）设计框架，由创作者\"云中江树\"（Emis）发起，GitHub 上收获 10000+ 星标，被社区称为\"最流行的提示词落地范式\"。它主张\"像写代码一样写提示词\"，通过 Role（角色）、Profile（简介）、Skills（技能）、Rules（规则）、Workflow（工作流）、Initialization（初始化）等标准化模块，把零散、靠试错堆出来的提示词，变成结构清晰、可复用、可维护的\"提示词程序\"。\n\n与普通提示词教程只给零散技巧不同，LangGPT 提供了一整套方法论 + 模板 + 工具 + 示例库：既可以直接用关键词触发主流模型生成 LangGPT 风格提示词，也可以借助官方 GPTs 工具（LangGPT GPTs、PromptGPT）自动生成，或花 5 分钟学会模板手写。项目还发表了配套学术论文（arXiv:2402.16929），并持续更新提示词理论文章。\n\n### 核心功能\n\n- **结构化 Role 模板**：将提示词划分为 Role/Profile/Skills/Rules/Workflow/Initialization 等模块，像填表一样快速生成逻辑清晰的高质量提示词。\n- **变量与动态引用机制**：支持变量语法，提示词内部可互相引用，修改一处全局生效，提升灵活性与可维护性。\n- **模块化复用**：常用技能、规则、工作流模块可像\"乐高积木\"一样组合复用到不同角色提示词中。\n- **工作流精确定义**：通过 Workflow 精确设定 AI 交互步骤，让多轮对话行为可预测、可控制。\n- **命令与高级语法**：支持命令、条件句、记忆器等高级特性，例如用 /language 中文 随时切换回复语言。\n- **丰富的生态工具**：官方提供 LangGPT GPTs、Kimi+ LangGPT、PromptGPT 等自动生成工具，以及示例库、Claude Code Skill 插件和配套论文。\n\n### 适用场景\n\n- **提示词进阶学习者**：希望从零散技巧进阶为系统化提示工程方法论的人，可借助模板与理论文章系统性学习。\n- **应用开发者与产品经理**：需要为 ChatGPT、Claude、DeepSeek 等模型编写稳定、可复用的系统提示词（System Prompt），支撑 Agent 与产品开发。\n- **高频 AI 使用者**：把重复性任务固化为结构化提示词模板，随取随用，提升日常 AI 使用质量与效率。\n\n### 价格\n\n完全免费、开源。模板、示例库、文档与配套工具全部开放，可直接在 GitHub 浏览或克隆到本地使用；官方 GPTs 工具基于 ChatGPT 平台，需自备 OpenAI 订阅（以官网为准）。",
+  "published": true,
+  "faq": [
+    {
+      "q": "LangGPT 是收费工具吗？",
+      "a": "不是。LangGPT 是完全开源免费的提示词框架，模板、示例与文档全部开放，可直接在 GitHub 使用或克隆到本地。"
+    },
+    {
+      "q": "LangGPT 适合新手吗？",
+      "a": "适合。官方提供多种上手方式：直接用自然语言要求模型按 LangGPT 风格写提示词，或用官方 GPTs 自动生成，或花 5 分钟学习基础模板。"
+    },
+    {
+      "q": "LangGPT 与普通提示词技巧有什么区别？",
+      "a": "普通技巧零散且靠试错，LangGPT 用结构化的 Role/Profile/Skills/Rules/Workflow 模块组织提示词，让提示词可复用、可维护、可组合，像写代码一样写提示词。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://github.com/langgptai/LangGPT",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "verify_notes": "来源 ai-bot.cn 收录页采集；官网可达性验证：复核通过(GitHub 200)",
+  "seo_keywords": [
+    "LangGPT",
+    "结构化提示词",
+    "提示词框架",
+    "提示词工程",
+    "Prompt模板"
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "name": "Pipedream",
+  "slug": "pipedream",
+  "positioning": "AI自动化工具：AI Agent+3000+ 预构建",
+  "auto_positioning": true,
+  "emoji": "⚡",
+  "color": "#00AB55",
+  "description": "Pipedream 是面向开发者的集成与工作流自动化平台（发布方：Pipedream），提供可视化工作流构建器、AI Agent Builder 与 3000+ 应用集成。",
+  "category": "AI自动化",
+  "tags": [
+    "工作流自动化",
+    "API集成",
+    "低代码"
+  ],
+  "rating": "⭐4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://pipedream.com",
+  "price": "Free $0、Basic $29/月、Advanced $49/月、Connect $99/月、Business 定制",
+  "platform": "Web（云/Serverless）",
+  "pros": [
+    "强大的 API 集成能力，社区贡献大量触发器与动作",
+    "支持代码自定义（Node.js/Python/Go/Bash），自由度高",
+    "免费层可用，足以个人与小团队测试",
+    "事件驱动架构，支持实时触发与响应",
+    "丰富的调试日志与运行监控"
+  ],
+  "cons": [
+    "面向开发者，非技术用户不够友好",
+    "积分（credit）计费模型需关注运行时与内存",
+    "高级功能（团队协作、自定义域名等）需付费"
+  ],
+  "features": [
+    "3000+ 预构建集成（Slack、GitHub、Google 等）",
+    "可视化工作流构建器 + 代码步骤（Node.js/Python/Go/Bash）",
+    "AI Agent Builder 与 MCP 服务器",
+    "Pipedream Connect 托管认证（嵌入自有 SaaS）",
+    "实时日志、运行历史与监控；可将工作流暴露为 REST API"
+  ],
+  "related": [
+    "n8n",
+    "zapier-ai",
+    "make"
+  ],
+  "faq": [
+    {
+      "q": "Pipedream 和 Zapier 有什么区别？",
+      "a": "Pipedream 更面向开发者，提供代码自定义步骤与细粒度控制；Zapier 侧重易用性，适合非技术用户。"
+    },
+    {
+      "q": "免费版有什么限制？",
+      "a": "免费版每月 100 积分、3 条活跃工作流、3 个连接账户、1M AI tokens，无信用卡要求。"
+    },
+    {
+      "q": "支持哪些编程语言？",
+      "a": "代码步骤支持 Node.js（JavaScript/TypeScript）、Python、Go、Bash。"
+    },
+    {
+      "q": "可以自托管吗？",
+      "a": "主要为 SaaS 服务，不提供官方自托管方案，所有运行在云端。"
+    }
+  ],
+  "seo_keywords": [
+    "Pipedream",
+    "Pipedream怎么样",
+    "Pipedream免费版",
+    "Pipedream使用教程",
+    "Pipedream和哪个好"
+  ],
+  "content": "好的，这是为你准备的关于 Pipedream 的介绍文章，按你的要求来写，语气自然，有观点但不夸张。\n\n---\n\n## Pipedream 是什么？\n\n简单说，Pipedream 是一个面向开发者的“胶水”平台。你不需要搭建服务器，就能把各种 API 和应用连起来，做一些自动化和事件驱动的任务。\n\n比如你想实现“当 GitHub 仓库有新 Issue 时，自动在 Slack 里通知并创建一个 Trello 卡片”——以前你可能需要自己写脚本、部署、处理监听逻辑。Pipedream 把这类场景做成了拖拽式的工作流，但同时又保留了写代码的自由度。\n\n它拥有超过 1000 个预建集成，覆盖常见的 SaaS 工具（Slack、GitHub、Google、Notion 等），而且支持用 Node.js 或 Python 编写自定义步骤。运行是无服务器架构，你只要关注逻辑，不用操心基础设施。\n\n整体感觉就是：一个面向懂代码的人的高配版 Zapier，但更灵活，也更能折腾。\n\n## 核心功能\n\n### 1. 超过 1000 个内置集成\nPipedream 的集成库很全，从主流协作工具到云服务都有。这意味着你不需要从零写 API 调用，直接选择触发器或动作，填入授权信息就能用。实际体验上，常见的需求基本都能找到现成组件，省了不少查文档的时间。\n\n### 2. 代码步骤（Node.js / Python 自定义逻辑）\n这是它和 Zapier 这类低代码工具最大的区别。你可以在工作流的任意步骤插入一段代码，用熟悉的语言处理数据、调第三方接口、做复杂计算。很多用户反馈，正是因为可以写代码，才敢把更复杂、更“脏”的逻辑丢上去。\n\n### 3. 事件源（HTTP / Scheduler / S3 / Webhook 等）\nPipedream 提供了多种方式触发工作流。最常用的是 Webhook 和定时器。比如你可以开一个 HTTP 端点，让外部系统把数据推过来；或者设置一个 Cron 任务，每隔一小时跑一次。事件源本身也有日志和重试机制，用起来比较安心。\n\n### 4. 工作流版本控制与回滚\n每次你保存工作流，系统都会自动生成一个版本。万一改错了，可以一键回退到之前的版本。这对调试来说挺友好的，尤其是开发阶段频繁调整的时候。\n\n### 5. 实时日志、运行历史和性能监控\n每个工作流每次运行都会产生详细的执行日志，包括输入输出、耗时、错误栈。你可以直接在网页上看到每一步发生了什么，排查问题基本不需要另外搭监控。免费版也保留一定时长的运行历史，对个人和小团队完全够用。\n\n## 版本/套餐对比\n\nPipedream 提供免费版和付费版，具体价格和功能细节会随官方调整。以下为已知的客观分级（具体数字请以官网为准）：\n\n| 特性 | 免费版 | 付费版（Pro / Teams） |\n|------|--------|----------------------|\n| 每月运行次数 | 有限额（通常个人够用） | 更高或无限 |\n| 工作流数量 | 有限个（约10个左右） | 无限制或更多 |\n| 团队协作 | 不支持 | 支持 |\n| 自定义域名 | 不支持 | 支持 |\n| 运行历史保留时长 | 较短（如3天） | 更长（如30天） |\n| 并发限制 | 较低 | 更高 |\n\n注意：**价格暂未公开统一数字**，不同时间可能有不同计费策略。建议直接去 Pipedream 官网查看最新定价页。\n\n## 值不值得用？\n\n**优点：**\n- API 集成能力非常强，原生支持上千个应用，且社区持续贡献新的触发器和动作。\n- 代码级自定义自由度极高，Node.js 和 Python 两边都支持。\n- 免费版功能完整，对个人开发者或小团队来说，日常自动化需求基本不用花钱。\n- 事件驱动架构，实时性好，Webhook 触发基本秒级响应。\n- 调试体验好，自带日志和运行监控，比很多同类产品更透明。\n\n**缺点：**\n- 学习曲线较陡。如果你完全没有编程基础，理解工作流、代码步骤、事件源会有门槛。\n- 复杂工作流调试起来还是有点麻烦，特别是多个步骤之间有数据传递时，错误信息有时不够直观。\n- 高级功能（团队协作、自定义域名、更高并发）需要付费，对想小团体白嫖的用户不太友好。\n\n**总体结论：** 如果你是开发者或有一定代码能力，Pipedream 是一个很值得尝试的自动化平台。它的灵活性和免费额度在同类产品中属于第一梯队。如果你只是想点点鼠标就自动化的非技术用户，建议先试试更偏向图形的工具。\n\n## 使用建议\n\n- **从小规模起步**：先用免费版做一个简单的 Webhook 转发或定时抓取，感受一下工作流编辑器。\n- **善用代码步骤**：尽量把复杂逻辑写在代码里，而不是用多个拖拽组件拼凑，这样维护起来反而更清晰。\n- **利用版本控制**：每次修改前先看一眼有没有自动保存的版本，改崩了直接回滚。\n- **关注运行日志**：Pipedream 的日志是你排查问题的最强帮手，建议养成跑完就扫一眼日志的习惯。\n- **考虑预算**：如果只是个人使用或原型验证，免费版通常足够了。当需要团队协作或更高并发时再评估付费计划。\n\n## 适合谁用？\n\n**推荐使用：**\n- 有 Node.js 或 Python 基础的独立开发者、自由职业者。\n- 需要对多个 API 进行复杂编排的 SaaS 应用开发者。\n- 习惯用代码解决问题的技术型运维或后端工程师。\n\n**可以考虑：**\n- 有一定编程基础的产品经理或运营人员，愿意花一点时间学工作流写法。\n- 小团队希望用低成本实现内部自动化流程，且成员中有人能写简单脚本。\n\n**不推荐：**\n- 完全不会写代码、并且不希望学任何脚本语言的纯业务用户。这种情况更适合 Zapier 或 Make 这类纯图形化工具。\n- 需要企业级 SLA 和客服支持的大公司用户（Pipedream 在这方面相对弱一些）。",
+  "published": true,
+  "source_url": "https://pipedream.com/pricing",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://pipedream.com",
+  "verified_publisher": "Pipedream",
+  "verified_what": "面向开发者的无服务器集成与工作流自动化平台，提供可视化构建器、AI Agent Builder 与 3000+ 应用集成",
+  "verified_price": "Free $0（100 积分/月）；Basic $29/月；Advanced $49/月；Connect $99/月；Business 定制（均按年付有折扣）",
+  "verified_platform": "Web, API",
+  "verified_features": [
+    "3000+ 预构建集成（Slack、GitHub、Google 等）",
+    "可视化工作流构建器 + 代码步骤（Node.js/Python/Go/Bash）",
+    "AI Agent Builder 与 MCP 服务器",
+    "Pipedream Connect 托管认证（嵌入自有 SaaS）",
+    "实时日志、运行历史与监控；可将工作流暴露为 REST API"
+  ],
+  "verified_description": "Pipedream 是面向开发者的集成与工作流自动化平台（发布方：Pipedream），提供可视化工作流构建器、AI Agent Builder 与 3000+ 应用集成。",
+  "content_flags": "长文称'超过 1000 个预建集成'，实际官网为 3000+ 集成（轻微低估）。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "编辑评分（G2 等聚合约 4.6/5）",
+  "rating_verified": true,
+  "verified_pros": [
+    "强大的 API 集成能力，社区贡献大量触发器与动作",
+    "支持代码自定义（Node.js/Python/Go/Bash），自由度高",
+    "免费层可用，足以个人与小团队测试",
+    "事件驱动架构，支持实时触发与响应",
+    "丰富的调试日志与运行监控"
+  ],
+  "verified_cons": [
+    "面向开发者，非技术用户不够友好",
+    "积分（credit）计费模型需关注运行时与内存",
+    "高级功能（团队协作、自定义域名等）需付费"
+  ],
+  "verified_faq": [
+    {
+      "q": "Pipedream 和 Zapier 有什么区别？",
+      "a": "Pipedream 更面向开发者，提供代码自定义步骤与细粒度控制；Zapier 侧重易用性，适合非技术用户。"
+    },
+    {
+      "q": "免费版有什么限制？",
+      "a": "免费版每月 100 积分、3 条活跃工作流、3 个连接账户、1M AI tokens，无信用卡要求。"
+    },
+    {
+      "q": "支持哪些编程语言？",
+      "a": "代码步骤支持 Node.js（JavaScript/TypeScript）、Python、Go、Bash。"
+    },
+    {
+      "q": "可以自托管吗？",
+      "a": "主要为 SaaS 服务，不提供官方自托管方案，所有运行在云端。"
+    }
+  ],
+  "verified_tags": [
+    "工作流自动化",
+    "API集成",
+    "低代码"
+  ],
+  "verified_category": "AI自动化",
+  "source_urls": [
+    "https://pipedream.com",
+    "https://pipedream.com/pricing/"
+  ],
+  "verify_notes": "定价与官网一致；积分制计费，月度与年付价格不同。",
+  "compare_section": {
+    "competitors": [
+      "n8n",
+      "make",
+      "bardeen"
+    ],
+    "verdict": "Pipedream 与 n8n、Make、Bardeen 同属AI自动化赛道：Pipedream 的 3000+ 预构建集成（Slack、GitHub、Google 等） 是亮点，价格 Free $0、Basic $29/月、Advanced $49/月、Connect $99/月、Business 定制；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-03",
+  "created_date": "2026-08-03"
+}

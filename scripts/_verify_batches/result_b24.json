@@ -1,0 +1,126 @@
+{
+  "batch_id": "b24",
+  "category": "AI视频",
+  "tools": [
+    {
+      "slug": "d-id",
+      "name": "D-ID",
+      "url_current": "https://www.d-id.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正常（d-id.com），确为AI数字人/口型同步平台。定价编造：站内称'付费计划起价$5.99/月（个人版）'，官方当前最低付费档为 Lite $4.7/月（Pro $16、Advanced $108、Enterprise 定制），并无'个人版'命名。描述中'口型同步准确率98.7%'为无法核实的具体数据，疑似夸大，但无确证，仅作提示。"
+    },
+    {
+      "slug": "veed-io",
+      "name": "Veed.io",
+      "url_current": "https://www.veed.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正常（veed.io），确为在线AI视频编辑平台（字幕/剪辑/降噪等）。定价基本属实：站内称'付费版$12起/月'，官方现档 Creator €11/月（≈$12）、Pro €23、Studio €37、Enterprise 定制，起价吻合。但官方套餐已更名（Creator/Pro/Studio），站内'个人专业版/团队版'为旧命名；价格量级无大错。"
+    },
+    {
+      "slug": "kaiber",
+      "name": "Kaiber",
+      "url_current": "https://kaiber.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正常（kaiber.ai，现为 Kaiber Canvas/Beat Sync 工作流）。定价虚假：站内称'免费版每月100积分，高级版$9.99/月起'，但官网无永久免费+每月积分方案，仅为'$5体验5天'试用后转 Creator；付费档为 Starter $10/月、Creator $29、Pro $99（无'高级版$9.99'档）。'免费版每月100积分'系编造。平台称'网页端、iOS、Android'，官网主要面向 Web，移动端需人工确认。"
+    },
+    {
+      "slug": "colossyan",
+      "name": "Colossyan",
+      "url_current": "https://colossyan.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正常（colossyan.com），确为企业培训向AI数字人视频平台。定价过期：站内称'付费版起价$19/月'，官方最低付费 Starter 为 $27/月（Professional $59、Enterprise 定制）。内容数据过期：站内称'30多种语言''70多种虚拟形象'，官方现已为 120+ 语言、300+ 头像。属数字过期而非张冠李戴。"
+    },
+    {
+      "slug": "elai",
+      "name": "Elai",
+      "url_current": "https://elai.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网域名 elai.io 正确（首页被 Cloudflare 拦截无法直接抓取，但搜索确认 elai.io/pricing 为官方页）。定价过期/命名错：站内称'Starter $29/月、Pro $99/月'，官方现档为 Free $0、Creator $29/月、Team $125/月、Enterprise 定制；'Pro $99'与当前不符（应为 Team $125），且已无 Starter/Pro 命名。内容称'30多种语言'配音，官方为 75+ 语言，数字过期。功能定位（AI虚拟人文本转视频）正确。"
+    },
+    {
+      "slug": "lalamu",
+      "name": "Lalamu",
+      "url_current": "https://lalamu.studio/",
+      "url_ok": false,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "官网 lalamu.studio 直接抓取返回 403，且多家第三方目录（dang.ai、aitemple）标注 Lalamu 已于2024年前后关停/被收购。站内描述（AI口型同步、Basic $9.99/Premium $19.99/120免费积分）与第三方目录一致，但官网当前不可达，疑似已停更。URL虽为官方域名但可能失效，建议人工裁定是否保留该条目。平台'Windows、Mac'客户端说法存疑（实际主要依附 Canva Web）。"
+    },
+    {
+      "slug": "invideo-ai",
+      "name": "InVideo AI",
+      "url_current": "https://invideo.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正常（invideo.io，现主推 Agent One AI 视频平台）。定价量级合理：站内称'付费版$15/月起'，第三方2026年资料显 Plus 约 $17–25/月（年付更低）、Max 约 $48–85/月、Team $40/席位起，起价与$15接近，未见明显编造。功能定位（文本提示生成视频、长视频、协作）与官网一致。各来源价格有出入，建议以官网实时为准复核精确数字。"
+    },
+    {
+      "slug": "pictory",
+      "name": "Pictory",
+      "url_current": "https://pictory.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正常（pictory.ai），确为文本/博客转视频AI工具。定价完全吻合：站内称'免费试用14天，Starter $25/月（年付）、月付$29'，官方 From $25/月，Starter $25（年付，$29原价）、Professional $35、Team $119、Enterprise 定制，14天试用一致。'支持70+语言AI配音''2026新增AI数字人'与官网（AI Avatar 标注 coming soon/即将上线）基本一致，数字人功能标注'即将上线'更准确。"
+    },
+    {
+      "slug": "kapwing",
+      "name": "Kapwing",
+      "url_current": "https://www.kapwing.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 kapwing.com 正确（直抓失败但搜索确认官网在线）。定价混乱/有误：站内价 'Starter $16/月、Pro $33/月'，且正文表格又称 'Pro $19/月'（内部不一致）；官方现档为 Free $0、Pro $16/月（年付）、Business $50/月、Enterprise 定制——并无 'Starter' 档，且 'Pro $33' 与官方不符（Business $50，无 $33 档）。建议以官方 Pro $16、Business $50 修正。"
+    },
+    {
+      "slug": "lumen5",
+      "name": "Lumen5",
+      "url_current": "https://lumen5.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正常（lumen5.com），确为文本/博客转视频平台。定价基本吻合：站内称'专业版$19/月起，企业版定制'，官方最低付费 Basic $19/月、Starter $59、Pro $149、Team 定制——起价$19与企业定制均对。但官方档位名为 Basic/Starter/Pro/Team，站内'专业版/团队版'命名错位（如把$19叫专业版、把$149叫团队版）。描述'服务超100万家企业'低于官网现称'超500万家企业'，属保守/过期但非错误。整体无明显幻觉。"
+    }
+  ]
+}

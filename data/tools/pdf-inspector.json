@@ -1,0 +1,95 @@
+{
+  "name": "pdf-inspector",
+  "slug": "pdf-inspector",
+  "positioning": "Firecrawl 出品的纯 Rust PDF 智能解析与分类库，先把 PDF 分为文字型/扫描型/图片型/混合型并保留字体坐标，再决定哪些页需要 OCR，可输出 LLM-ready Markdown，不依赖大模型、不调外部服务，性能远超 Python 系方案。",
+  "auto_positioning": false,
+  "emoji": "📄",
+  "color": "#F5650D",
+  "description": "pdf-inspector 是 Firecrawl 团队出品的纯 Rust PDF 智能解析与分类库，定位是 RAG 和 Agent 文档摄取层的前置路由器。它先把 PDF 分成文字型、扫描型、图片型、混合型四类并保留字体坐标，再判断哪些页面真正值得送 OCR，从而把算力花在刀刃上。整个流程不依赖大模型、不调用外部服务，输出 LLM-ready 的 Markdown，性能远超 Python 系方案，曾冲上 GitHub Trending 总榜。",
+  "category": "AI效率",
+  "tags": [
+    "PDF解析",
+    "Rust",
+    "开源",
+    "OCR路由",
+    "RAG"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "pick",
+    "text": "开源项目"
+  },
+  "url": "https://github.com/firecrawl/pdf-inspector",
+  "price": "开源免费（MIT，可自托管）",
+  "platform": [
+    "Rust 库",
+    "Node/Bun",
+    "Python 绑定",
+    "CLI",
+    "WebAssembly",
+    "本地"
+  ],
+  "pros": [
+    "纯 Rust 实现，单文档毫秒级，远快于 Python 方案",
+    "智能分类，仅扫描页进 OCR，节省算力",
+    "保留字体坐标，表格/脚注/跨页表结构不丢失",
+    "不依赖大模型与外部服务，适合隐私场景",
+    "多形态接入：Rust/Node/Python/CLI/WASM"
+  ],
+  "cons": [
+    "偏底层库，需要一定工程能力集成",
+    "复杂版式极端案例仍需人工校验"
+  ],
+  "features": [
+    "PDF 四类智能分类（Text/Scanned/Image/Mixed）",
+    "字体坐标保留与阅读顺序还原",
+    "表格边框+对齐判断，支持脚注与跨页表",
+    "智能 OCR 路由，文字页不走 OCR",
+    "输出 LLM-ready Markdown / 结构化 JSON",
+    "MIT 开源，提供多语言绑定"
+  ],
+  "related": [
+    "chatgpt",
+    "stepfun",
+    "hermes-agent"
+  ],
+  "content": "## pdf-inspector 是什么？\npdf-inspector 是 Firecrawl 团队出品的纯 Rust PDF 智能解析与分类库，定位是 RAG 和 Agent 文档摄取层的前置路由器。它不是又一个通用 PDF 解析器，而是先把 PDF 分成文字型（TextBased）、扫描型（Scanned）、图片型（ImageBased）、混合型（Mixed）四类，并保留字体坐标，再判断哪些页面真正值得送 OCR，从而把算力花在刀刃上。整个流程不依赖大模型、不调用外部服务，输出 LLM-ready 的 Markdown，性能远超 Python 系方案。它曾冲上 GitHub Trending 总榜，是 PDF-to-LLM 赛道里少见的硬核 Rust 实现。\n\n## 核心功能\n1. 低延迟分类：先把每页归到 Text/Scanned/Image/Mixed 四类，决定后续处理路径。\n2. 字体坐标保留：尽量按正常阅读顺序还原文本，多栏布局也不乱。\n3. 表格结构识别：结合表格边框与文本对齐，支持财务表、脚注与跨页表，输出 Markdown 表格。\n4. 智能 OCR 路由：约一半 PDF 是文字型，直接原生提取；只有扫描页才进 GPU OCR。\n5. LLM-ready 输出：可输出 Markdown 或结构化 JSON，直接喂给知识库或大模型。\n6. 多形态接入：提供 Rust 库、Node/Bun 包、Python 绑定、CLI 与 WebAssembly 版本。\n\n## 版本/套餐对比\n项目 MIT 开源、可自托管，无 SaaS 套餐；若需要 OCR 与规模化，可使用 Firecrawl 托管的 /parse API（按 credits 计费）。\n\n## 值不值得用？\n如果你在做 RAG、知识库或 Agent 的文档摄取，pdf-inspector 非常值得。纯 Rust 让它单文档毫秒级完成，且因为只在必要时 OCR，成本和时间都显著低于无脑全量 OCR 的方案。对隐私敏感、不想把文件传外部 API 的场景尤其合适。\n\n## 使用建议\n1. 先本地跑 CLI 验证分类与提取质量，再集成到摄取流水线。\n2. 文字型为主的文档直接原生提取，省掉 OCR 开销。\n3. 极端复杂版式（如特殊财务报表）抽取后做一次人工抽检。\n\n## 适合谁用？（三档）\n- 重度用户：做企业知识库/RAG 的团队，把它当文档摄取前置。\n- 中度用户：个人开发者处理论文、财报、法律文件转 Markdown。\n- 轻度用户：偶尔需要把 PDF 转成干净文本的用户，WebAssembly 版即可。",
+  "published": false,
+  "faq": [
+    {
+      "q": "pdf-inspector 需要调用大模型吗？",
+      "a": "不需要。它是纯 Rust 实现，不依赖大模型、也不调用外部服务，PDF 可在本地处理，适合对数据隐私敏感的场景。"
+    },
+    {
+      "q": "它和通用 PDF 解析器有什么不同？",
+      "a": "它先做四类智能分类并保留字体坐标，再决定哪些页才走 OCR，把算力花在刀刃上；表格、脚注、跨页表结构也能较好保留，输出 LLM-ready 的 Markdown/JSON。"
+    },
+    {
+      "q": "怎么接入？",
+      "a": "提供多种形态：Rust 库、Node/Bun 包、Python 绑定、CLI 与 WebAssembly 版本，可按项目技术栈选择。"
+    },
+    {
+      "q": "收费吗？",
+      "a": "pdf-inspector 本体 MIT 开源、可自托管，免费；若需要 OCR 与规模化能力，可使用 Firecrawl 托管的 /parse API（按 credits 计费）。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "pdf-inspector",
+    "PDF 解析",
+    "Rust PDF",
+    "OCR 路由",
+    "RAG 文档摄取"
+  ],
+  "source_urls": [
+    "https://www.firecrawl.dev/parse",
+    "https://github.com/firecrawl/pdf-inspector",
+    "https://ima.qq.com/wiki/?shareId=ca4d4514f69deb99a2cfb11df8b1bbf1851b1ba81a9dd9751e8b4742ec9b430f"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

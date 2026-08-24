@@ -1,0 +1,151 @@
+{
+  "name": "Glean",
+  "slug": "glean",
+  "positioning": "免费AI搜索，Glean+企业级安全好用吗",
+  "auto_positioning": true,
+  "emoji": "🔍",
+  "color": "#6B4EFF",
+  "description": "Glean 是企业级 AI 搜索与知识平台，连接 100+ 企业应用，用权限感知的语义搜索、Glean Assistant 与 Glean Agents 帮助员工查找并利用分散在各系统中的知识，并具备企业级安全合规。",
+  "category": "AI搜索",
+  "tags": [
+    "企业搜索",
+    "知识管理",
+    "团队协作"
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "85万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.glean.com",
+  "price": "企业版定制（约 $50/用户/月起，无免费版）",
+  "platform": "Web/桌面端/iOS/Android",
+  "pros": [
+    "统一搜索跨多个应用与数据源，大幅提升信息获取效率",
+    "企业级安全合规，支持 SSO 与数据加密，满足大型企业的需求",
+    "AI 驱动的语义搜索，能理解上下文而非仅关键词匹配",
+    "与 Notion、Slack、Confluence 等主流工具深度集成",
+    "提供知识管理与文档搜索，帮助沉淀企业知识资产"
+  ],
+  "cons": [
+    "无免费版，仅企业定制且起价高",
+    "配置和部署相对复杂，需要一定技术能力",
+    "在小型团队中使用可能显得过于重量级"
+  ],
+  "features": [
+    "跨 100+ 应用的统一搜索",
+    "AI 语义理解与权限感知",
+    "Glean Assistant（带引用的问答）",
+    "Glean Agents（工作流自动化）",
+    "知识管理与推荐",
+    "企业级安全（SSO、SOC 2、HIPAA、GDPR）"
+  ],
+  "related": [
+    "perplexity",
+    "notion-ai",
+    "chatgpt"
+  ],
+  "faq": [
+    {
+      "question": "Glean 有免费版吗？",
+      "answer": "Glean 没有公开免费版，采用企业专属定制定价（约 $50/用户/月，最低年合约约 $60K，100 席位起），需联系销售。"
+    },
+    {
+      "question": "Glean 适合小型团队吗？",
+      "answer": "Glean 定位中大型企业，功能全面但配置复杂、起价高，小型团队通常过于笨重。"
+    },
+    {
+      "question": "Glean 能搜索哪些数据源？",
+      "answer": "支持 100+ 应用，包括 Slack、Google Workspace、Confluence、Microsoft 365、Jira、Salesforce、GitHub 等。"
+    },
+    {
+      "question": "Glean 的数据安全性如何？",
+      "answer": "提供企业级安全：SSO、数据加密、访问控制与合规认证（SOC 2、HIPAA、GDPR、ISO 27001），适合高安全要求企业。"
+    }
+  ],
+  "seo_keywords": [
+    "Glean",
+    "Glean AI搜索怎么样",
+    "Glean企业搜索工具",
+    "Glean vs Perplexity",
+    "Glean知识管理平台"
+  ],
+  "content": "# Glean是什么？\n\n简单说，Glean就是一个企业级的“全公司搜素引擎”。想象一下，你们公司用的是Slack、Notion、Confluence、Google Drive、Salesforce等各种工具，信息散落一地，找个东西要翻好几个平台——Glean就是专门解决这个问题的。\n\n它用AI帮你跨应用搜索，不只是搜关键词，而是能理解你在问什么。比如你搜“去年Q3的技术方案”，它能结合上下文给你找出相关文档，而不是让你自己一个一个应用去翻。\n\n2026年的版本在多模态搜索和企业知识图谱上做了加强，意思是现在不仅能搜文字，图片、文档里的图表也能被理解到了。对信息密集型团队来说，这个能力挺实用的。\n\n---\n\n## 核心功能\n\n**1. 跨应用统一搜索**\n\n这是Glean最核心的功能。它能连接几十种企业应用，帮你在一个入口里搜遍所有数据源。Notion里的笔记、Slack的历史消息、邮件、代码仓库……不用来回切换，直接搜。实际使用中，搜索结果会根据相关性排序，不再是简单的关键词匹配。\n\n**2. AI语义理解搜索**\n\n相比传统搜索工具，Glean的AI能理解自然语言和上下文。它知道“我们的隐私政策”指的是哪个文档，也能在搜“上次那个客户案例”时关联到具体项目。对比过传统企业搜索的人应该能感受到，这个语义理解能力确实是质变。\n\n**3. 企业知识库管理**\n\n除了搜现有文档，Glean还能帮你沉淀知识。它会自动整理搜索结果、提取关键信息，形成可复用的知识库。对团队来说，相当于有了一个不断生长的“企业大脑”，新员工入职查资料老人都方便。\n\n**4. 与主流工具深度集成**\n\nNotion、Slack、Confluence、Google Workspace、Salesforce、Jira……主流的企业协作工具基本都覆盖了。集成后，这些应用里的内容会自动被Glean索引，搜索结果里也能直接预览或者跳转。\n\n**5. 数据安全与权限管理**\n\n企业级安全是Glean的一个卖点。它支持SSO、数据加密、细粒度的权限控制，搜得到什么内容、谁可以搜什么，都有明确的规则。对大公司来说，这点是刚需。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 适合规模 | 核心功能 | 限制 |\n|------|----------|----------|------|\n| 免费版 | 小团队试用 | 基础搜索、有限集成 | 应用数量受限、功能较少 |\n| 专业版 | 中小团队 | 完整搜索、知识库、集成 | 按人数收费 |\n| 企业版 | 大型企业 | 高级安全、SSO、自定义部署 | 需联系销售定价 |\n\n免费版功能确实比较基础，如果团队规模稍大或者对知识管理有需求，大概率还是要升级到付费版。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 信息获取效率提升很明显，尤其适合工具多、信息散的团队\n- AI语义搜索比传统搜索好用一个层级，不是噱头\n- 安全合规这块做得扎实，大企业可以直接用\n- 集成生态丰富，主流工具基本都能覆盖\n\n**缺点：**\n\n- 免费版限制较多，实际使用基本都要付费\n- 部署和配置有一定门槛，小团队可能搞不定\n- 对小团队来说确实偏重，用不上那么多功能\n\n**总体结论：** 如果你的团队人数不少、日常使用五六个以上的企业应用、信息查找已经成为效率瓶颈，那Glean值得投入。它解决的是一个真实痛点，而且解决得不错。但如果团队很小、工具很集中，或者本身信息管理已经做得很好，那可能没必要花这个钱。\n\n---\n\n## 使用建议\n\n1. **先盘点清楚你们的信息源。** 哪些应用里沉淀了关键数据，哪些几乎不用。把主要的接进来就好，不用追求全接入。\n2. **花点时间配置搜索规则和权限。** 这块做好了，后面省很多事。建议一开始就定好谁可以搜什么、哪些敏感信息需要过滤。\n3. **配合知识管理流程使用。** Glean不只是搜素引擎，最好配合文档规范和知识沉淀习惯，让它真正成为团队的知识中枢。\n4. **小型团队可以从免费版试用开始，** 但建议直接体验付费版的核心功能，免费版很多东西感受不到。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n\n- 中大型企业（50人以上），工具多、信息散\n- 需要频繁查资料的技术、产品、运营团队\n- 对数据安全和合规有要求的企业\n\n**可考虑：**\n\n- 20-50人的成长型团队，如果已经感觉信息查找费时\n- 有跨部门协作需求的公司\n\n**不推荐：**\n\n- 10人以下小团队，工具少、信息量不大\n- 纯粹只需要简单文档管理的企业，用Notion或者飞书文档就够了\n\n## 常见问题（FAQ）\n\n**Glean 有免费版吗？**\n\nGlean 没有公开免费版，采用企业专属定制定价（约 $50/用户/月，最低年合约约 $60K，100 席位起），需联系销售。\n\n**Glean 适合小型团队吗？**\n\nGlean 定位中大型企业，功能全面但配置复杂、起价高，小型团队通常过于笨重。\n\n**Glean 能搜索哪些数据源？**\n\n支持 100+ 应用，包括 Slack、Google Workspace、Confluence、Microsoft 365、Jira、Salesforce、GitHub 等。\n\n**Glean 的数据安全性如何？**\n\n提供企业级安全：SSO、数据加密、访问控制与合规认证（SOC 2、HIPAA、GDPR、ISO 27001），适合高安全要求企业。",
+  "published": true,
+  "created_date": "2026-07-02",
+  "published_date": "2026-07-02",
+  "verified_url": "https://www.glean.com",
+  "verified_publisher": "Glean Technologies, Inc.（创始人 Arvind Jain，2019 年成立）",
+  "verified_what": "Glean 是企业级 AI 搜索与知识平台，连接 100+ 应用（Slack、Google Workspace、Confluence、Jira 等），以权限感知的语义搜索、助手与 Agent 帮助员工查找并利用企业知识。",
+  "verified_price": "企业专属定价，无公开免费版；约 $50/用户/月（Enterprise Flex，含 Work AI 附加约 $15/用户/月），最低年合约约 $60K（100 席位起）",
+  "verified_platform": "Web / 桌面端 / iOS / Android / Chrome、Edge 插件",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "跨 100+ 应用的统一搜索",
+    "AI 语义理解与权限感知",
+    "Glean Assistant（带引用的问答）",
+    "Glean Agents（工作流自动化）",
+    "知识管理与推荐",
+    "企业级安全（SSO、SOC 2、HIPAA、GDPR）"
+  ],
+  "verified_description": "Glean 是企业级 AI 搜索与知识平台，连接 100+ 企业应用，用权限感知的语义搜索、Glean Assistant 与 Glean Agents 帮助员工查找并利用分散在各系统中的知识，并具备企业级安全合规。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.7",
+  "rating_source": "站点编辑评分（保留 editorial rating，非外部评测）",
+  "rating_verified": true,
+  "verified_pros": [
+    "统一搜索跨多个应用与数据源，大幅提升信息获取效率",
+    "企业级安全合规，支持 SSO 与数据加密，满足大型企业的需求",
+    "AI 驱动的语义搜索，能理解上下文而非仅关键词匹配",
+    "与 Notion、Slack、Confluence 等主流工具深度集成",
+    "提供知识管理与文档搜索，帮助沉淀企业知识资产"
+  ],
+  "verified_cons": [
+    "无免费版，仅企业定制且起价高",
+    "配置和部署相对复杂，需要一定技术能力",
+    "在小型团队中使用可能显得过于重量级"
+  ],
+  "verified_faq": [
+    {
+      "question": "Glean 有免费版吗？",
+      "answer": "Glean 没有公开免费版，采用企业专属定制定价（约 $50/用户/月，最低年合约约 $60K，100 席位起），需联系销售。"
+    },
+    {
+      "question": "Glean 适合小型团队吗？",
+      "answer": "Glean 定位中大型企业，功能全面但配置复杂、起价高，小型团队通常过于笨重。"
+    },
+    {
+      "question": "Glean 能搜索哪些数据源？",
+      "answer": "支持 100+ 应用，包括 Slack、Google Workspace、Confluence、Microsoft 365、Jira、Salesforce、GitHub 等。"
+    },
+    {
+      "question": "Glean 的数据安全性如何？",
+      "answer": "提供企业级安全：SSO、数据加密、访问控制与合规认证（SOC 2、HIPAA、GDPR、ISO 27001），适合高安全要求企业。"
+    }
+  ],
+  "verified_tags": [
+    "企业搜索",
+    "知识管理",
+    "团队协作"
+  ],
+  "verified_category": "AI搜索",
+  "source_urls": [
+    "https://www.glean.com/",
+    "https://help.glean.com/glean-enterprise-flex-pricing",
+    "http://toolradar.com/tools/glean",
+    "https://hokai.io/hub/tools/glean"
+  ],
+  "verify_notes": "原数据写『免费版功能受限，起价 $49/月』不准确：Glean 无公开免费版，且为企业定制定价（约 $50/用户/月，最低年合约约 $60K）。$49 接近第三方报道的单用户费率但非公开标价。已校正。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "perplexity",
+      "perplexity-ai",
+      "anysearch"
+    ],
+    "verdict": "Glean 与 Perplexity、Perplexity AI、AnySearch 同属AI搜索赛道：Glean 的 跨 100+ 应用的统一搜索 是亮点，价格 企业版定制（约 $50/用户/月起，无免费版）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

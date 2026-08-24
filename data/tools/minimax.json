@@ -1,0 +1,148 @@
+{
+  "name": "MiniMax",
+  "slug": "minimax",
+  "positioning": "免费AI助手，智能对话+AI视频生成好用吗",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#cdf32e",
+  "description": "国产AI平台MiniMax（稀宇科技），旗下海螺AI提供免费可用的智能对话与视频/语音/音乐生成。2026-07-31 发布通用多模态生成模型 MiniMax H3（统一理解文本/图像/视频/声音，原生双声道，最高15秒2K，0.8元/秒），H3-Base 权重已于 2026-08-02 开源；2026-08-13 发布开放权重音乐模型 MiniMax Music 3.0（一次生成最长5分钟完整歌曲，32kHz 立体声）。",
+  "category": "AI对话",
+  "tags": [
+    "AI对话",
+    "AI视频",
+    "语音合成",
+    "多模态",
+    "视频生成"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "10万",
+  "badge": {
+    "type": "new",
+    "text": "HOT"
+  },
+  "url": "https://www.minimaxi.com",
+  "price": "免费版 + 基础会员约$9.99/月；H3 视频 0.8元/秒(2K)；H3-Base 权重已开源",
+  "platform": "Web",
+  "pros": [
+    "国产可直连",
+    "H3 通用多模态：文本/图像/视频/声音统一理解，原生双声道",
+    "H3 定价仅主流视频模型1/3（2K 0.8元/秒）",
+    "H3-Base 权重已开源（2026-08-02，HF），支持本地部署",
+    "MiniMax Music 3.0 开放权重（2026-08-13）：一次生成最长5分钟完整歌曲"
+  ],
+  "cons": [
+    "完整 2K 工作流需本地权重+官方 API 组合（Context-IR/2K 重建为托管 API）",
+    "会员定价偏高，曾引发争议",
+    "知名度相对一线较低",
+    "各产品线整合度一般"
+  ],
+  "features": [
+    "智能对话（海螺AI）",
+    "MiniMax H3：通用多模态生成模型（2026-07-31 发布），文本/图像/视频/声音统一理解，原生双声道，最高15秒2K",
+    "H3-Base 开源（2026-08-02，Hugging Face）：33.1B dense Omni Transformer，原生768p/4-15秒/32kHz原生立体声/11种语言，FL2VA 与 Ref2VA 双 checkpoint，支持 SGLang/vLLM/diffusers/ComfyUI",
+    "AI视频生成（Hailuo 02 / H3，V2V动作迁移）",
+    "AI语音合成（Speech 2.6）",
+    "音乐生成（MiniMax Music 3.0，2026-08-13 发布，开放权重）：一次生成最长5分钟完整歌曲，32kHz立体声",
+    "MiniMax Agent（文档/PPT/网页/办公自动化）与开放API"
+  ],
+  "related": [
+    "chatgpt",
+    "kimi"
+  ],
+  "content": "## MiniMax 是什么？\n\n国内AI公司MiniMax（稀宇科技）推出的通用人工智能平台，旗下海螺AI提供智能对话与视频/语音/音乐生成，并提供 MiniMax Agent 与开放API。2026年7月31日发布新一代通用多模态生成模型 MiniMax H3，2026年8月2日将 H3-Base 权重开源至 Hugging Face；2026年8月13日又发布开放权重音乐生成模型 MiniMax Music 3.0。\n\nMiniMax（稀宇科技）推出的AI平台，旗下海螺AI提供智能对话与视频/语音生成。2026年7月发布新一代通用多模态生成模型 MiniMax H3：统一理解文本/图像/视频/声音，输出原生双声道音视频（最高15秒2K），定价0.8元/秒仅为主流视频模型1/3；H3-Base 权重已于2026年8月2日开源。\n\n## 核心功能\n\n- 智能对话（海螺AI）\n- MiniMax H3：通用多模态生成模型（2026-07发布），文本/图像/视频/声音统一理解，原生双声道，最高15秒2K\n- H3-Base 开源权重（2026-08-02 上线 Hugging Face）：33.1B dense Omni Transformer，原生768p、4-15秒、32kHz 原生立体声、11种语言，FL2VA 与 Ref2VA 双 checkpoint，支持 SGLang/vLLM/diffusers/ComfyUI\n- AI视频生成（Hailuo 02 / H3，V2V动作迁移）\n- AI语音合成（Speech 2.6）\n- 音乐生成（MiniMax Music 3.0，2026-08-13 发布，开放权重）：输入创意与可选歌词，一次生成最长5分钟完整歌曲，32kHz 立体声\n- MiniMax Agent（文档/PPT/网页/办公自动化）\n- 开放API（文本/语音/视频/图像/音乐）\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 海螺AI会员：基础约9.99美元/月、至臻约199.99美元/月（2025年因高价引发争议）；MiniMax Agent：基础会员19美元/月、Pro 69美元/月；MiniMax H3 视频生成按秒计费：2K分辨率0.8元/秒（约为主流旗舰模型1/3）、768P约主流720P的1/2；H3-Base 权重免费开源（MiniMax H3 Community License，适用区域排除美/欧/英/韩）；API按token计费。 |\n| 支持平台 | Web, API, iOS, Android, MiniMax Agent App, 开源本地部署（H3-Base） |\n| 评分 | ⭐ 4.5 |\n| 开发商 | MiniMax（稀宇科技） |\n| MiniMax H3 | 通用多模态生成模型（2026-07发布），文本/图像/视频/声音统一理解，原生双声道，最高15秒2K |\n\n## 价格与平台\n\n- **价格**：海螺AI会员：基础约9.99美元/月、至臻约199.99美元/月（2025年因高价引发争议）；MiniMax Agent：基础会员19美元/月、Pro 69美元/月；MiniMax H3 视频生成按秒计费：2K分辨率0.8元/秒（约为主流旗舰模型1/3）、768P约主流720P的1/2；H3-Base 权重免费开源；API按token计费。\n- **平台**：Web, API, iOS, Android, MiniMax Agent App, 开源本地部署（H3-Base）\n- **官网**：https://www.minimaxi.com\n\n## 优缺点分析\n\n### 优点\n\n- 国产可直连\n- H3 通用多模态：文本/图像/视频/声音统一理解，原生双声道\n- H3 定价仅主流视频模型1/3（2K 0.8元/秒）\n- H3 视频编辑能力 ArtificialAnalysis 全球第一\n- H3-Base 权重已开源（2026-08-02，HF），支持 SGLang/vLLM/diffusers/ComfyUI 本地部署\n\n### 缺点\n\n- 仅开源中间模块 H3-Base：提示词理解（Context-IR）与 2K 重建（Regenerate-2K）仍为托管 API，本地跑不出完整 2K 效果\n- 开源许可适用区域排除美国/欧盟/英国/韩国，且禁止用 H3 输出训练其他 AI 模型\n- 会员定价偏高，曾引发争议\n- 知名度相对一线较低\n- 各产品线整合度一般\n\n## 常见问题（FAQ）\n\n**MiniMax H3 是什么？**\n\nMiniMax H3 是 2026年7月31日发布的新一代通用多模态生成模型：可在文本、图片、视频、声音构成的多模态上下文中统一理解创作意图，输出原生双声道音视频，最高支持 15秒 2K 分辨率，定价 0.8元/秒（2K，约为主流旗舰1/3）。\n\n**MiniMax H3 开源了吗？**\n\n已开源。2026年8月2日 H3-Base 权重发布到 Hugging Face（MiniMaxAI/MiniMax-H3）：33.1B 参数，原生768p/4-15秒/32kHz原生立体声，FL2VA 与 Ref2VA 两个 checkpoint，支持 SGLang、vLLM、diffusers、ComfyUI 部署。但 H3-Context-IR（提示词理解）与 H3-Regenerate-2K（2K重建）模块仍是托管 API，完整 2K 工作流需要本地权重+官方API组合；开源许可适用区域排除美国、欧盟、英国与韩国。\n\n**MiniMax能做什么？**\n\nMiniMax（海螺AI）提供智能对话、AI语音通话与角色扮演、AI视频生成（Hailuo/H3）等；同时提供 MiniMax Agent 用于文档、PPT、网页与办公自动化，以及开放API供开发者接入。\n\n## 最终结论\n\nMiniMax 是AI对话领域的一款 AI 工具，其核心优势在于国产可直连。\n此外，H3 通用多模态：文本/图像/视频/声音统一理解，原生双声道，且 H3-Base 权重已开源，支持本地部署。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "faq": [
+    {
+      "q": "MiniMax H3 是什么？",
+      "a": "MiniMax H3 是 2026年7月31日发布的新一代通用多模态生成模型：可在文本、图片、视频、声音构成的多模态上下文中统一理解创作意图，输出原生双声道音视频，最高支持 15秒 2K 分辨率，定价 0.8元/秒（2K，约为主流旗舰1/3）。"
+    },
+    {
+      "q": "MiniMax H3 开源了吗？",
+      "a": "已开源。2026年8月2日 H3-Base 权重发布到 Hugging Face（MiniMaxAI/MiniMax-H3）：33.1B 参数，原生768p/4-15秒/32kHz原生立体声，FL2VA 与 Ref2VA 两个 checkpoint，支持 SGLang、vLLM、diffusers、ComfyUI 部署。但 H3-Context-IR（提示词理解）与 H3-Regenerate-2K（2K重建）模块仍是托管 API，完整 2K 工作流需要本地权重+官方API组合；开源许可适用区域排除美国、欧盟、英国与韩国。"
+    },
+    {
+      "q": "MiniMax Music 3.0 是什么？",
+      "a": "MiniMax Music 3.0 是 2026年8月13日发布的开放权重（open-weights）音乐生成模型：输入创意想法与可选歌词（支持 [Intro]/[Verse]/[Chorus] 等分段标签），一次生成最长5分钟的完整歌曲（作曲/编曲/演唱/制作），输出 32kHz 立体声 WAV。架构采用 8B Global LLM（基于 Qwen3 初始化）+ 0.6B Local LLM + Flow-Matching/Flow-VAE 合成；权重发布至 Hugging Face（MiniMaxAI/MiniMax-Music3），ComfyUI 已支持。"
+    },
+    {
+      "q": "MiniMax能做什么？",
+      "a": "MiniMax（海螺AI）提供智能对话、AI语音通话与角色扮演、AI视频生成（Hailuo/H3）、音乐生成（Music 3.0）等；同时提供 MiniMax Agent 用于文档、PPT、网页与办公自动化，以及开放API供开发者接入。"
+    }
+  ],
+  "created_date": "2026-03-22",
+  "verified_url": "https://www.minimaxi.com",
+  "verified_publisher": "MiniMax（稀宇科技）",
+  "verified_what": "MiniMax（稀宇科技）推出的 AI 平台，旗下海螺AI提供智能对话与视频/语音/音乐生成。2026-07-31 发布通用多模态生成模型 MiniMax H3，2026-08-02 将 H3-Base 权重开源至 Hugging Face（33.1B 参数，原生 768p/4-15 秒/32kHz 原生立体声，FL2VA 与 Ref2VA 双 checkpoint；提示词理解与 2K 重建模块仍为托管 API）。",
+  "verified_price": "海螺AI会员：基础约9.99美元/月、至臻约199.99美元/月（2025年因高价引发争议）；MiniMax Agent：基础19美元/月、Pro 69美元/月；MiniMax H3 视频生成按秒计费：2K 0.8元/秒（约主流旗舰1/3）、768P约主流720P的1/2；H3-Base 权重免费开源（MiniMax H3 Community License，适用区域排除美/欧/英/韩）；API按token计费。",
+  "verified_platform": "Web, API, iOS, Android, MiniMax Agent App, 开源本地部署（H3-Base）",
+  "last_verified": "2026-08-14",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "智能对话（海螺AI）",
+    "MiniMax H3：通用多模态生成模型（2026-07-31 发布），文本/图像/视频/声音统一理解，原生双声道，最高15秒2K",
+    "H3-Base 开源（2026-08-02，Hugging Face）：33.1B dense Omni Transformer，原生768p/4-15秒/32kHz原生立体声/11种语言，FL2VA 与 Ref2VA 双 checkpoint，支持 SGLang/vLLM/diffusers/ComfyUI",
+    "AI视频生成（Hailuo 02 / H3，V2V动作迁移）",
+    "AI语音合成（Speech 2.6）",
+    "音乐生成（MiniMax Music 3.0，2026-08-13 发布，开放权重）：一次生成最长5分钟完整歌曲，32kHz立体声",
+    "MiniMax Agent（文档/PPT/网页/办公自动化）与开放API"
+  ],
+  "verified_description": "国产AI平台MiniMax（稀宇科技），旗下海螺AI提供免费可用的智能对话与视频/语音/音乐生成。2026-07-31 发布通用多模态生成模型 MiniMax H3（统一理解文本/图像/视频/声音，原生双声道，最高15秒2K，0.8元/秒），H3-Base 权重已于 2026-08-02 开源；2026-08-13 发布开放权重音乐模型 MiniMax Music 3.0（一次生成最长5分钟完整歌曲，32kHz 立体声）。",
+  "content_flags": "音乐生成版本号过时（Music 2.6 → 3.0）；pros/cons 中 H3 开源状态表述过时（“宣布近期开源”/“尚未正式开源”→ 已于 08-02 开源）",
+  "verified_pros": [
+    "国产可直连",
+    "H3 通用多模态：文本/图像/视频/声音统一理解，原生双声道",
+    "H3 定价仅主流视频模型1/3（2K 0.8元/秒）",
+    "H3-Base 权重已开源（2026-08-02，HF），支持本地部署",
+    "MiniMax Music 3.0 开放权重（2026-08-13）：一次生成最长5分钟完整歌曲"
+  ],
+  "verified_cons": [
+    "完整 2K 工作流需本地权重+官方 API 组合（Context-IR/2K 重建为托管 API）",
+    "会员定价偏高，曾引发争议",
+    "知名度相对一线较低",
+    "各产品线整合度一般"
+  ],
+  "verified_faq": [
+    {
+      "q": "MiniMax H3 是什么？",
+      "a": "MiniMax H3 是 2026年7月31日发布的新一代通用多模态生成模型：可在文本、图片、视频、声音构成的多模态上下文中统一理解创作意图，输出原生双声道音视频，最高支持 15秒 2K 分辨率，定价 0.8元/秒（2K，约为主流旗舰1/3）。"
+    },
+    {
+      "q": "MiniMax H3 开源了吗？",
+      "a": "已开源。2026年8月2日 H3-Base 权重发布到 Hugging Face（MiniMaxAI/MiniMax-H3）：33.1B 参数，原生768p/4-15秒/32kHz原生立体声，FL2VA 与 Ref2VA 两个 checkpoint，支持 SGLang、vLLM、diffusers、ComfyUI 部署。但 H3-Context-IR（提示词理解）与 H3-Regenerate-2K（2K重建）模块仍是托管 API，完整 2K 工作流需要本地权重+官方API组合；开源许可适用区域排除美国、欧盟、英国与韩国。"
+    },
+    {
+      "q": "MiniMax Music 3.0 是什么？",
+      "a": "MiniMax Music 3.0 是 2026年8月13日发布的开放权重（open-weights）音乐生成模型：输入创意想法与可选歌词（支持 [Intro]/[Verse]/[Chorus] 等分段标签），一次生成最长5分钟的完整歌曲（作曲/编曲/演唱/制作），输出 32kHz 立体声 WAV。架构采用 8B Global LLM（基于 Qwen3 初始化）+ 0.6B Local LLM + Flow-Matching/Flow-VAE 合成；权重发布至 Hugging Face（MiniMaxAI/MiniMax-Music3），ComfyUI 已支持。"
+    },
+    {
+      "q": "MiniMax能做什么？",
+      "a": "MiniMax（海螺AI）提供智能对话、AI语音通话与角色扮演、AI视频生成（Hailuo/H3）、音乐生成（Music 3.0）等；同时提供 MiniMax Agent 用于文档、PPT、网页与办公自动化，以及开放API供开发者接入。"
+    }
+  ],
+  "verified_tags": [
+    "AI对话",
+    "AI视频",
+    "语音合成",
+    "多模态",
+    "视频生成"
+  ],
+  "verified_category": "AI对话",
+  "source_urls": [
+    "https://www.minimaxi.com/blog/minimax-music-3-0-cn",
+    "https://blog.comfy.org/p/minimax-music-3-state-of-the-art",
+    "https://huggingface.co/MiniMaxAI/MiniMax-Music3"
+  ],
+  "verify_notes": "MiniMax Music 3.0 2026-08-13 官方发布（minimaxi.com 博客 + HF MiniMaxAI/MiniMax-Music3 + ComfyUI 官方博客）；开放权重，一次生成最长5分钟完整歌曲，32kHz 立体声；H3 相关字段除 pros/cons 陈旧表述外未动",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "gemini",
+      "chatgpt",
+      "360-zhinain"
+    ],
+    "verdict": "MiniMax 与 Gemini、ChatGPT、360智脑 同属AI对话赛道：MiniMax 的 智能对话 是亮点，价格 免费版+Pro $10/月；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "price_verified": true,
+  "updated_date": "2026-08-14"
+}

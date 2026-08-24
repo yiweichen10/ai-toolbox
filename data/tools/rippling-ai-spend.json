@@ -1,0 +1,90 @@
+{
+  "name": "AI Spend Console by Rippling",
+  "slug": "rippling-ai-spend",
+  "positioning": "Rippling 推出的 AI 支出管理台，把 Claude、Cursor 等工具的花费汇总并按供应商/模型/员工拆分，再关联 GitHub 产出衡量 AI 投入的 ROI。",
+  "auto_positioning": false,
+  "emoji": "💸",
+  "color": "#2563EB",
+  "description": "AI Spend Console 是人力资源与 IT 平台 Rippling 在 2026 年 8 月 6 日推出的 AI 支出管理台，当天登上 Product Hunt 第 2 名。它面向财务与工程负责人，把分散在 Claude、Cursor 等 AI 工具上的花费汇总到一个地方，并按供应商、模型、员工维度拆分，再把支出和 GitHub 的实际产出（PR 数量、代码修订量）关联起来，试图回答“我们花在 AI 上的钱到底值不值”，且可免费开始、无需订阅 Rippling。",
+  "category": "AI效率",
+  "tags": [
+    "AI支出",
+    "成本管理",
+    "ROI",
+    "Claude",
+    "Cursor",
+    "可观测"
+  ],
+  "rating": "⭐ 4.8",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "Product Hunt #2"
+  },
+  "url": "https://rippling.com/",
+  "price": "免费开始，无需订阅 Rippling（完整定价以官网为准）",
+  "platform": "Web",
+  "pros": [
+    "跨工具支出追踪，把 Claude、Cursor 等 AI 花费集中到一处",
+    "按供应商、模型、员工多维拆分成本，定位异常用量",
+    "关联 GitHub 产出（PR 量、代码修订量），量化 AI 投入 ROI",
+    "AI 问答式洞察，可直接追问“这笔花费从哪来”",
+    "可免费开始使用，无需 Rippling 订阅"
+  ],
+  "cons": [
+    "洞察质量高度依赖数据接入的完整度",
+    "更深的企业治理与对接能力通常需走上付费企业版",
+    "作为 2026 年 8 月新发布产品，长期演进尚待观察"
+  ],
+  "features": [
+    "跨工具 AI 支出追踪：聚合 Claude、Cursor 等工具的花费",
+    "多维拆分：按供应商、模型、员工分别拆解成本",
+    "关联业务产出：对接 GitHub 数据（PR 量、代码修订量）衡量 ROI",
+    "AI 问答式洞察：直接追问花费来源与背后逻辑",
+    "集中仪表盘：一屏看全公司 AI 用量趋势与异常",
+    "免费起步：无需订阅 Rippling 即可使用"
+  ],
+  "related": [
+    "openai",
+    "langsmith",
+    "langchain"
+  ],
+  "content": "## AI Spend Console by Rippling 是什么？\n\nAI Spend Console 是人力资源与 IT 平台 Rippling 在 2026 年 8 月 6 日推出的 AI 支出管理台，当天登上 Product Hunt 第 2 名。它面向财务与工程负责人，把分散在 Claude、Cursor 等 AI 工具上的花费汇总到一个地方，并按供应商、模型、员工维度拆分，再把支出和 GitHub 的实际产出（PR 数量、代码修订量）关联起来，试图回答那个最难的问题：“我们花在 AI 上的钱，到底值不值？”关键是它可以免费开始，无需订阅 Rippling。\n\n## 核心功能\n\n1. 跨工具支出追踪：把 Claude、Cursor 等 AI 工具的花费集中到一处。\n2. 多维拆分：按供应商、模型、员工分别拆解成本。\n3. 关联业务产出：把支出对接 GitHub 数据（PR 量、代码修订量），衡量 ROI。\n4. AI 问答式洞察：直接问“这笔花费从哪来、是什么导致的”，回溯到具体洞察。\n5. 集中仪表盘：在一个面板看全公司的 AI 用量趋势与异常。\n\n## 版本/套餐对比\n\nAI Spend Console 可免费开始使用，且无需 Rippling 订阅；更深的企业治理与对接能力以官网定价为准，本页不臆测具体档位。\n\n## 值不值得用？\n\n当公司每个月 AI 账单从几百涨到几万、却没人能说清钱花哪了，这个控制台就是及时的“对账工具”。它的价值不在炫技，而在把“AI 支出”从黑盒变成可解释、可追责的资产。早期产品的功能是够用的，但深度治理通常要走上付费企业版。\n\n## 使用建议\n\n先免费接入你最常用的 AI 工具（Claude、Cursor 等），按员工维度看谁在用、用多少；再把支出和团队的 GitHub 产出对照，识别“高花费低产出”的环节；用异常告警盯住突发用量。注意它的洞察质量取决于数据接入的完整度，接得越全越准。\n\n## 适合谁用？\n\n- 财务负责人：需要向管理层解释 AI 预算去向。\n- 工程管理者：想量化团队 AI 工具的真实产出。\n- 成长期公司：AI 支出快速膨胀、急需统一视图者。",
+  "published": false,
+  "faq": [
+    {
+      "question": "AI Spend Console 需要订阅 Rippling 才能用吗？",
+      "answer": "不需要。它可以免费开始使用，且不强制要求 Rippling 订阅，适合先单独试用 AI 支出追踪能力。"
+    },
+    {
+      "question": "它支持哪些 AI 工具？",
+      "answer": "官方示例覆盖了 Claude、Cursor 等常见 AI 编程与生产力工具，按供应商、模型、员工维度汇总其花费。"
+    },
+    {
+      "question": "ROI 是怎么算出来的？",
+      "answer": "它把 AI 支出与 GitHub 的产出数据（如 PR 数量、代码修订量）关联，用统一视图回答“花出去的钱对应了多少工程产出”。"
+    },
+    {
+      "question": "能不能限制员工的 AI 用量？",
+      "answer": "社区讨论中提到了按员工维度追踪与潜在聚合限额的需求；具体策略控制能力以 Rippling 官方功能为准。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Rippling AI Spend",
+    "AI支出追踪",
+    "AI成本管理",
+    "AI ROI",
+    "Claude Cursor花费"
+  ],
+  "source_urls": [
+    "https://rippling.com/",
+    "https://www.hunted.space/dashboard/rippling",
+    "https://www.hunted.space/product/rippling"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

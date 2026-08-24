@@ -1,0 +1,18 @@
+{
+  "batch_id": "b19",
+  "category": "AI自动化",
+  "tools": [
+    {
+      "slug": "makersclaw",
+      "name": "MakersClaw",
+      "url_current": "https://makersclaw.com",
+      "url_ok": true,
+      "url_correct": "https://makersclaw.com",
+      "hallucination": true,
+      "hallucination_fields": ["price", "description", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网(makersclaw.com)自身定位为『Hire AI Agents That Work 24/7』的自主AI员工雇佣平台，并非『专为独立开发者与创客设计的AI自动化工作流引擎』；官网仅宣称『50+ Pre-built Skills』及Slack/Telegram/WhatsApp/Discord集成，未提『集成超过300个应用API』，也无『可视化拖拽工作流编辑器』『自然语言转工作流(NL2Workflow)』『AI决策节点』『MySQL/PostgreSQL节点』等功能描述（实为MCP工具如Brave Search/GitHub/Fetch等）。定价亦编造：官网为『$5免费启动额度+钱包充值』模式，不存在『免费版100次/月/高级版$19/月』档位。"
+    }
+  ]
+}

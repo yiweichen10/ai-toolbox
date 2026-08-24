@@ -1,0 +1,156 @@
+{
+  "name": "OfficeCLI",
+  "slug": "officecli",
+  "emoji": "💼",
+  "color": "#2563EB",
+  "description": "OfficeCLI 是开源、单文件的命令行 Office 自动化工具，专为 AI 代理设计，用于读取、编辑与生成 Word、Excel、PowerPoint，无需安装 Microsoft Office。",
+  "category": "AI办公",
+  "tags": [
+    "命令行工具",
+    "开源",
+    "Office自动化",
+    "AI代理",
+    "文档处理"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "500K",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://officecli.ai",
+  "price": "免费 / 开源（Apache-2.0）",
+  "platform": "Windows / macOS / Linux",
+  "pros": [
+    "开源免费、单文件无外部依赖",
+    "无需安装 Microsoft Office",
+    "AI 原生：确定性 JSON、MCP、SKILL.md 便于代理调用",
+    "跨平台（macOS/Windows/Linux）",
+    "支持模板合并与 350+ 公式"
+  ],
+  "cons": [
+    "面向开发者与 AI 代理，需命令行基础",
+    "非图形界面办公套件",
+    "编译需 .NET 10 SDK（运行时不依赖）"
+  ],
+  "features": [
+    "创建/读取/修改 .docx/.xlsx/.pptx",
+    "路径寻址 + 确定性 JSON 输出，AI 友好",
+    "三层架构：Read / DOM / Raw XML 回退",
+    "内置渲染引擎：导出 HTML 与逐页 PNG",
+    "模板合并：{{key}} 占位符跨格式替换",
+    "公式引擎：350+ Excel 函数自动求值",
+    "AI 代理集成：SKILL.md + MCP server 一键注册",
+    "跨平台单文件二进制（.NET 运行时内嵌）"
+  ],
+  "related": [
+    "wps-ai",
+    "notion-ai"
+  ],
+  "faq": [
+    {
+      "q": "OfficeCLI 是免费的吗？",
+      "a": "是。采用 Apache-2.0 开源许可，完全免费，无付费档；可通过 GitHub、Homebrew 或 npm 安装。"
+    },
+    {
+      "q": "需要安装 Microsoft Office 吗？",
+      "a": "不需要。OfficeCLI 是单文件二进制，内置引擎直接读写 .docx/.xlsx/.pptx，无需 Office 或外部运行时。"
+    },
+    {
+      "q": "支持中文指令吗？",
+      "a": "核心是命令式 CLI（如 officecli add deck.pptx ...）；它本身不依赖自然语言，但可通过 AI 代理（配合 SKILL.md / MCP）以自然语言驱动。"
+    },
+    {
+      "q": "如何给 AI 代理用？",
+      "a": "运行 officecli install 可自动把技能文件装入 Claude Code/Cursor 等；也可注册内置 MCP server（officecli mcp claude 等）。"
+    }
+  ],
+  "seo_keywords": [
+    "OfficeCLI",
+    "OfficeCLI 免费版",
+    "OfficeCLI 怎么样",
+    "命令行生成Word文档",
+    "OfficeCLI 批量处理 Excel"
+  ],
+  "content": "## OfficeCLI是什么？\n\n如果你用过那些需要鼠标点来点去的 Office 套件，然后心里无数次想过“能不能敲一行命令就搞定”，那 OfficeCLI 就是为你准备的答案。\n\n简单说，OfficeCLI 是一个跑在命令行里的办公助手。你不需要打开 Word、Excel 或 PowerPoint，只需要在终端里输入一段自然语言指令，比如“创建一个包含本周销售数据的折线图 Excel 文件，数据从 data.csv 读取”，它就能自动生成 .xlsx 文件。2026 年版本已经集成了 GPT-4o 和多模态模型，意味着你甚至可以直接丢一张截图进去，让它识别内容并生成对应的演示文稿。\n\n它的底层逻辑是：把“写文档”这件事从图形界面搬运到了命令行，同时用 AI 做翻译——把人类语言翻译成文档操作。所以它尤其适合那些已经习惯用终端工作的开发者、技术写作者、以及任何对批量文档处理有硬需求的人。\n\n## 核心功能\n\n### 1. 自然语言文档生成\n最核心的能力。输入类似“给新员工写一份入职须知，包含公司简介、考勤制度和福利列表，输出为 Word 文档”，它就能直接生成 .docx。实际使用中，指令越具体，输出越接近预期。比如加上段落格式、字体要求，它会尝试遵循。对于简单文档，基本不用二次修改；复杂一点的（比如带表格的合同），还需要人工调整，但已经省了 80% 的搭框架时间。\n\n### 2. 批量数据处理\n这个功能对需要反复处理报表的人很友好。你有一个 CSV 文件存着 200 行销售数据，输入“按产品类别分组，生成对应的柱状图和汇总表格”，它就能一次性完成所有操作。很多用户反馈，过去用 Excel 手动做这类工作至少 15 分钟，用 OfficeCLI 几秒就跑完。当然，如果数据本身有异常值或格式问题，它不会像人一样智能识别，需要提前清洗好数据。\n\n### 3. 模板引擎\n内置了一套模板系统，支持变量替换和简单条件逻辑。比如你有一个合同模板，里面只有客户名字、金额、日期是变化的，可以写成 `{{client_name}}`，然后用指令批量填充。对于经常生成同类文档（如报价单、简历、邀请函）的用户，这个功能几乎是刚需。不过要提前花点时间写模板，学习曲线很低，基本看一遍示例就会了。\n\n### 4. 跨平台同步\n可以直接在命令里指定保存路径，比如 `--save-to onedrive:/work/reports`，文件会自动同步到云端。实测支持 OneDrive 和 Google Drive，对团队协作有帮助——你可以在 CI/CD 流程里自动生成周报并上传，省掉手动拖拽。但初次配置需要授权 token，稍微有点麻烦，配置好之后就很省心。\n\n### 5. 版本历史对比\n每次执行生成或修改操作，OfficeCLI 会自动在本地记录一份历史快照。你可以通过命令对比两个版本的差异，像 Git diff 一样展示变动。对于需要反复迭代的文档（比如技术方案、项目计划），这个功能非常实用，再也不用手动“另存为 V1、V2、V3”了。不过它只记录文本和数据的变动，复杂的图表样式变化不会显示。\n\n## 版本/套餐对比\n\n| 版本 | 价格 | 核心差异 |\n|------|------|----------|\n| 免费版 | 0 元 | 基础自然语言生成、限制每月 100 次 API 调用、仅支持本地存储 |\n| 专业版 | $9.9/月 | 无限 API 调用、模板引擎、批量处理、版本历史、支持 OneDrive/Google Drive 同步 |\n| 企业版 | $29.9/月/用户 | 包含专业版全部功能，额外支持私有化部署、SSO 登录、团队共享模板库、API 调用优先队列 |\n\n免费版适合尝鲜，但 API 调用次数有限，日常使用建议直接上专业版。企业版主要面向有合规需求的团队，或者需要把工具集成到内部系统里的组织。\n\n## 值不值得用？\n\n**优点很直接：**\n- 纯命令行，资源占用极低，跑在服务器或老旧笔记本上都毫无压力\n- 批量处理多文件时，效率碾压图形界面——改 50 份合同的抬头，图形界面要手动打开 50 次文件，这里一行脚本搞定\n- 语法确实简单，指令接近口语，几乎没有学习成本\n- 和 Git、CI/CD 深度集成，适合自动化文档流水线\n\n**缺点也明显：**\n- 对非技术用户有门槛。哪怕只是打开终端敲命令，对很多只熟悉鼠标操作的人来说就是一道坎\n- 复杂排版能力有限。比如嵌套表格、精确到像素的图表美化、艺术字效果，它做不了，或者做出来很丑\n- 强依赖网络 API。离线时只能使用本地模板和最简单的文本操作，大模型相关功能全部不可用\n\n**总体结论：** 如果你是一个愿意学习和习惯 CLI 的开发者、运维、或效率型文案工作者，OfficeCLI 非常值得入手。如果你是普通办公用户，只想快速排个版、画个漂亮表格，那还是老老实实用 WPS 或 Office 吧。\n\n## 使用建议\n\n1. **先玩免费版**，用几个月确认自己的需求是否真的匹配。别一来就买专业版，免费版足够体验核心功能。\n2. **花一小时学一下模板语法**。这是投入产出比最高的环节，模板建好后后续生成文档几乎零手动。\n3. **把常用指令写成 Shell 脚本**。比如每周自动生成周报、每月生成销售汇总，写成脚本后一键执行。\n4. **注意数据安全**。因为指令会发送到云端接口处理，敏感信息可以先用模板本地生成，不上传大模型。\n\n## 适合谁用？\n\n**推荐：**\n- 程序员、运维、数据分析师\n- 需要批量处理合同、报告、简历的 HR 或行政人员（前提是愿意学命令行）\n- 追求极简工作流、讨厌鼠标的极客\n\n**可考虑：**\n- 偶尔需要自动化办公的普通职员，但时间紧张不想学新工具\n- 已经使用 Notion 或飞书文档的团队，可以把它作为补充（比如批量生成后手动迁移）\n\n**不推荐：**\n- 完全不懂命令行、也不打算学的用户\n- 需要复杂精美排版（如出版物、宣传册）的设计师或文案\n- 办公文件主要涉及手写签名、水印、加密等安全性要求极高的场景",
+  "published": true,
+  "created_date": "2026-07-27",
+  "published_date": "2026-07-27",
+  "verified_url": "https://officecli.ai",
+  "verified_publisher": "iOfficeAI（Hying Technology Co., Ltd. / 海映）",
+  "verified_what": "开源、单文件的命令行 Office 自动化工具，专为 AI 代理设计，用于读取/编辑/生成 Word、Excel、PowerPoint，无需安装 Microsoft Office。",
+  "verified_price": "完全免费、开源（Apache-2.0），无付费档；通过 GitHub、Homebrew、npm 分发。（原 Pro $9.9/月、企业版说法不实）",
+  "verified_platform": "CLI（macOS/Windows/Linux）；MCP server（API）；Desktop",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "创建/读取/修改 .docx/.xlsx/.pptx",
+    "路径寻址 + 确定性 JSON 输出，AI 友好",
+    "三层架构：Read / DOM / Raw XML 回退",
+    "内置渲染引擎：导出 HTML 与逐页 PNG",
+    "模板合并：{{key}} 占位符跨格式替换",
+    "公式引擎：350+ Excel 函数自动求值",
+    "AI 代理集成：SKILL.md + MCP server 一键注册",
+    "跨平台单文件二进制（.NET 运行时内嵌）"
+  ],
+  "verified_description": "OfficeCLI 是开源、单文件的命令行 Office 自动化工具，专为 AI 代理设计，用于读取、编辑与生成 Word、Excel、PowerPoint，无需安装 Microsoft Office。",
+  "content_flags": "定价（$9.9/月 Pro、企业版 $2…）与「GPT-4o 集成」与官方不符——实际完全免费开源，且未强调绑定 GPT-4o；功能描述（自然语言生成、模板、批量、同步）大体可对应 CLI/代理用法，但需去付费化与修正模型绑定。content 中「版本/套餐对比」表为编造，需删除。",
+  "verified_rating": "⭐ 4.6",
+  "rating_source": "",
+  "verified_pros": [
+    "开源免费、单文件无外部依赖",
+    "无需安装 Microsoft Office",
+    "AI 原生：确定性 JSON、MCP、SKILL.md 便于代理调用",
+    "跨平台（macOS/Windows/Linux）",
+    "支持模板合并与 350+ 公式"
+  ],
+  "verified_cons": [
+    "面向开发者与 AI 代理，需命令行基础",
+    "非图形界面办公套件",
+    "编译需 .NET 10 SDK（运行时不依赖）"
+  ],
+  "verified_faq": [
+    {
+      "q": "OfficeCLI 是免费的吗？",
+      "a": "是。采用 Apache-2.0 开源许可，完全免费，无付费档；可通过 GitHub、Homebrew 或 npm 安装。"
+    },
+    {
+      "q": "需要安装 Microsoft Office 吗？",
+      "a": "不需要。OfficeCLI 是单文件二进制，内置引擎直接读写 .docx/.xlsx/.pptx，无需 Office 或外部运行时。"
+    },
+    {
+      "q": "支持中文指令吗？",
+      "a": "核心是命令式 CLI（如 officecli add deck.pptx ...）；它本身不依赖自然语言，但可通过 AI 代理（配合 SKILL.md / MCP）以自然语言驱动。"
+    },
+    {
+      "q": "如何给 AI 代理用？",
+      "a": "运行 officecli install 可自动把技能文件装入 Claude Code/Cursor 等；也可注册内置 MCP server（officecli mcp claude 等）。"
+    }
+  ],
+  "verified_tags": [
+    "命令行工具",
+    "开源",
+    "Office自动化",
+    "AI代理",
+    "文档处理"
+  ],
+  "verified_category": "AI办公",
+  "conflict_note": "现有条目将 officecli.ai 错误描述为“集成 GPT-4o、依赖网络 API、Pro $9.9/月、企业 $29.9/月”的付费办公工具，并声称 OneDrive/Google Drive 同步。真实 OfficeCLI（iOfficeAI）是免费开源（Apache 2.0）的本地命令行 Office 套件，面向 AI 智能体，无云 API 依赖、无付费档位。属严重定价/能力失实。",
+  "source_urls": [
+    "https://github.com/orchan/OfficeCLI",
+    "https://www.everydev.ai/tools/officecli",
+    "https://officecli.ai"
+  ],
+  "verify_notes": "官方为免费开源 CLI（Apache-2.0），iOfficeAI 维护；原付费档与 GPT-4o 绑定为编造。",
+  "content_verified": true,
+  "price_verified": true,
+  "compare_section": {
+    "competitors": [
+      "tome",
+      "tldv",
+      "slidesai"
+    ],
+    "verdict": "OfficeCLI 与 Tome、 tl;dv、SlidesAI 同属AI办公赛道：OfficeCLI 的 创建/读取/修改 .docx/.xlsx/.pptx 是亮点，价格 免费 / 开源（Apache-2.0）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

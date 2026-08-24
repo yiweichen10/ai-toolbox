@@ -1,0 +1,126 @@
+{
+  "batch_id": "b04",
+  "category": "AI编程",
+  "tools": [
+    {
+      "slug": "mintlify-editor",
+      "name": "Mintlify Editor",
+      "url_current": "https://mintlify.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网正确（mintlify.com 为官方站）。产品定位准确：Mintlify 是文档平台，2026年确已推出面向团队与智能体的协作式 Editor（官方博客 2026-04-29 确认），AI补全/API文档生成等功能属实。但'专业版$49/月'未能在官网定价页（JS渲染）直接核实，存疑，未判定为编造。"
+    },
+    {
+      "slug": "hera-launch",
+      "name": "Hera Launch",
+      "url_current": "https://heralaunch.ai",
+      "url_ok": false,
+      "url_correct": "https://launch.hera.video",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "功能完全张冠李戴：真实 Hera Launch 是 AI 生成产品发布视频的工具（YC孵化，2026-04-30上线，从提示词生成可编辑的发布视频，浏览器端），而非描述中的'AI应用部署平台/CI/CD/多模态模型部署/自动扩缩容'；平台也非 iOS/Android。官方站应为 launch.hera.video（主站 hera.video）。来源：Product Hunt、creativeainews 等多方报道。"
+    },
+    {
+      "slug": "xint-code",
+      "name": "Xint Code",
+      "url_current": "https://theori.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确（Theori 官方站，产品 Xint Code 确为 AI-Powered SAST，产品页 code.xint.io）。但 description/content 中'ZeroDay Cloud 2025 零人工干预发现 PostgreSQL/Redis/MariaDB 真实 0day'在官网无任何记载（漏洞数显示占位'0+'），属虚构；'LLM原生'表述也与官网'AI-Powered SAST'不符，'2026年3月商业化发布'未获证实。"
+    },
+    {
+      "slug": "wenxin-kuaima",
+      "name": "文心快码",
+      "url_current": "https://cloud.baidu.com/product/code.html",
+      "url_ok": false,
+      "url_correct": "https://comate.baidu.com/zh",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "存储 URL cloud.baidu.com/product/code.html 非文心快码官方页（打开为满意度问卷，疑似失效/重定向）；正确官网为 https://comate.baidu.com/zh（百度 Comate/文心快码，多家来源一致）。产品描述基本准确：确为百度基于文心大模型的AI编程助手，'Comate 4.0'已发布，支持 VS Code/JetBrains 等主流IDE，与官方定位一致。"
+    },
+    {
+      "slug": "tongyi-lingma",
+      "name": "通义灵码",
+      "url_current": "https://tongyi.aliyun.com/lingma",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网正确（阿里云通义灵码，基于通义大模型，2.0版本确有其事，与描述一致）。功能描述准确。但'专业版¥59/月'未在本次抓取官网页直接核实（官网仅明示个人免费、企业方案），存疑，未判定为编造。"
+    },
+    {
+      "slug": "codebuddy-tengxun",
+      "name": "CodeBuddy腾讯",
+      "url_current": "https://codebuddy.cloud.tencent.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "确为腾讯云代码助手 CodeBuddy（基于腾讯混元/大模型，支持 VS Code/IntelliJ/Chrome/Edge，功能描述准确）。但定价编造：存储'专业版¥49/月'与官网不符——官网个人版当前为标准版99元/月（连续包月70元/月），旧版专业版为58元/人/月，均非¥49；且2026年7月起已改为标准/高级/旗舰三档，无'专业版¥49'档。来源：copilot.tencent.com/docs/ide/Account/pricing、cloud.tencent.com/document/product/215/126592。"
+    },
+    {
+      "slug": "ag2",
+      "name": "AG2",
+      "url_current": "https://ag2.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确（ag2.ai 为 AG2 官方站）。功能严重张冠李戴：真实 AG2 是开源多智能体框架（AutoGen 原班人马出品，'Build Systems, Not Prompts'），并非描述中的'AI编程开发平台/代码生成/调试/重构/混合专家架构'。定价'$19/月专业版'亦存疑（AG2 主打开源免费框架）。来源：ag2.ai 官方。"
+    },
+    {
+      "slug": "metagpt",
+      "name": "MetaGPT",
+      "url_current": "https://github.com/geekan/MetaGPT",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正确（GitHub geekan/MetaGPT，现 FoundationAgents/MetaGPT）。确为基于LLM的多智能体软件开发框架，MIT开源免费，与描述（角色扮演协作、需求到代码、自动文档/架构图等）一致。无幻觉。"
+    },
+    {
+      "slug": "pear-ai",
+      "name": "PearAI",
+      "url_current": "https://www.trypear.ai/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正确（trypear.ai，开源AI代码编辑器，对标 Cursor，基于 Roo Code/Cline + Continue，支持代码生成/对话/Agent）。描述与其定位一致。Pro $19/月与官网订阅模式相符（未直接列具体价但合理），未判定为编造。"
+    },
+    {
+      "slug": "augment-code",
+      "name": "Augment Code",
+      "url_current": "https://augmentcode.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正确（augmentcode.com，AI编程助手，强调代码库上下文理解/Cosmos智能体编排，支持 VS Code/JetBrains 等）。描述与其定位一致。Pro $19/月与历史定价相符（本次抓取页未直接列价但合理），未判定为编造。"
+    }
+  ]
+}

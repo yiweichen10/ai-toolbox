@@ -1,0 +1,153 @@
+{
+  "name": "Dify智能体",
+  "slug": "dify",
+  "positioning": "免费AI智能体平台，知识管道+插件市场好用吗",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#1E88E5",
+  "description": "开源的 AI 应用开发平台（LangGenius），可视化编排 Agentic 工作流、RAG 与 Agent，支持云端、VPC 或自托管部署。",
+  "category": "AI智能体",
+  "tags": [
+    "开源",
+    "AI应用开发",
+    "可视化编排"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://dify.ai",
+  "price": "Sandbox 免费；Professional $59/月（年付 $590）；Team $159/月（年付 $1590）",
+  "platform": "Web / API / 自托管(Docker、K8s)",
+  "pros": [
+    "开源免费可私有部署，数据安全可控",
+    "可视化编排 LLM 工作流，降低开发门槛",
+    "内置 RAG、Agent 构建、模型管理等功能",
+    "支持多种模型接入，灵活切换",
+    "社区活跃，持续迭代更新"
+  ],
+  "cons": [
+    "高级功能需要一定学习成本",
+    "部分功能文档不够完善",
+    "企业级支持需要付费版本"
+  ],
+  "features": [
+    "可视化工作流编排（Workflow Studio）：拖拽式构建可观测的 AI 应用逻辑",
+    "Agent 构建：赋予工具、记忆与边界的自主智能体",
+    "知识管道（RAG）：文件/网页/文档抽取、切片、索引与检索",
+    "插件市场：集成模型、工具与 MCP，复用已审批插件",
+    "多种发布方式：Web 应用、API、Embed 或 MCP 工具；支持云/自托管/开源社区版"
+  ],
+  "related": [
+    "coze",
+    "n8n",
+    "flowise"
+  ],
+  "faq": [
+    {
+      "q": "Dify智能体完全免费吗？",
+      "a": "Dify 提供开源 Community 版可免费自托管，云端也有免费的 Sandbox 套餐（200 消息额度）。付费云套餐 Professional 起价 $59/工作区/月（年付 $590），Team $159/月（年付 $1590）。"
+    },
+    {
+      "q": "Dify智能体能私有部署吗？",
+      "a": "可以。Dify 支持私有化部署，适合企业对数据安全和定制化有较高要求的场景。"
+    },
+    {
+      "q": "Dify智能体支持哪些大模型？",
+      "a": "支持接入 OpenAI、Claude、Gemini、xAI、DeepSeek、通义等多种 LLM，并可通过自定义接口扩展。"
+    },
+    {
+      "q": "Dify智能体适合哪些用户？",
+      "a": "适合开发者、AI 应用创业者以及企业团队，用于快速搭建 AI 助手、知识库问答、自动化工作流等应用。"
+    }
+  ],
+  "seo_keywords": [
+    "Dify智能体",
+    "Dify智能体怎么样",
+    "Dify智能体免费版",
+    "Dify智能体使用教程",
+    "Dify智能体和哪个好"
+  ],
+  "content": "## Dify智能体 是什么？\n\nDify 是开源的 AI 应用开发平台（出自 LangGenius），核心思路是用可视化的方式编排 Agentic 工作流、RAG 知识库和自主 Agent，并且同一套逻辑既能跑在云端，也能部署进你自己的 VPC 或完全自托管的环境里。对团队来说，这意味着从原型到生产不用推倒重来，也意味着你不会被某一家云服务锁死。\n\n## 核心功能\n\n它的工作流编排（Workflow Studio）采用拖拽式积木：用可视化节点和提示词定义应用\"怎么想、怎么取数、怎么决策、怎么调用工具、在哪里请求人工确认\"，整条逻辑链路清晰可见，方便测试、调试和交接。Agent 构建则赋予智能体工具、记忆与边界——让它能推理、能调用已审批的工具、能保留上下文，又始终停在设定好的范围内，避免跑偏。\n\n知识管道（RAG）负责把文件、网页、在线文档和网盘内容，做成可复用的抽取、清洗、切片、索引与检索流程，在接入 Agent 或工作流之前先验证召回效果，减少\"答非所问\"。插件市场把模型供应商、工具、数据源和 MCP 集成集中起来，团队可以复用已审批的插件，而不是每个项目都从零接线，沉淀下来的能力能跨应用复用。\n\n发布方式也很灵活：同一个应用可以发布成 Web 应用、API 端点、Embed 嵌入，或者 MCP 兼容的工具，并配合日志、反馈、标注与用量数据持续优化。部署上，Dify 提供托管云、企业自托管（支持 K8s 的 Helm chart，含 SSO、RBAC 与审计日志），以及开源于 GitHub、可一条命令用 Docker 跑起来的 Community 版，适合从个人验证到企业落地的各阶段。\n\n## 价格与平台\n\n价格上，Dify 提供免费的 Sandbox 云端套餐加开源 Community 版；付费有 Professional、Team、Enterprise 等档位，具体金额以官网 pricing 页面为准。对想要把 AI 能力沉淀进自有业务、又看重可控性的技术团队，Dify 是一个务实的出发点。\n\n## 不足与限制\n\n对已经有一定工程能力的团队，Dify 的意义不只是\"快点做出来\"，更是把 AI 应用的生命周期管起来：从可视化编排、知识库维护，到发布后的日志与反馈闭环，都在同一处完成。它不替你决定用哪个模型，也不替你写业务提示词，但把胶水层做扎实了，让你少写大量重复的工程代码。若你担心被云厂商绑定，开源 Community 版加自托管是条稳妥的路，代价是需要自己扛运维。对想认真把 AI 沉淀进业务、又不想被锁死的团队，Dify 提供了一个可以从小验证长到大的底座。\n\n## 最终结论\n\n从工作流角度，Dify 最适合作为\"AI 应用的运行底座\"：把编排、知识库、发布与监控收口到一处。但它不替你写业务提示词，也不替你选模型。建议从一个具体用例（如内部问答机器人）起步，先跑通 RAG 再上 Agent；对在意可控性的团队，开源版加自托管能从第一天就避免被云厂商锁定，只是运维要自己扛。\n",
+  "published": true,
+  "created_date": "2026-07-30",
+  "data_quality": {
+    "last_content_updated": "2026-07-28"
+  },
+  "source_url": "https://dify.ai ; https://dify.ai/pricing",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "published_date": "2026-07-30",
+  "conflict_note": "",
+  "verified_url": "https://dify.ai",
+  "verified_publisher": "LangGenius, Inc.",
+  "verified_what": "开源的 AI 应用开发平台（LangGenius），可视化编排 Agentic 工作流、RAG 与 Agent，支持云端、VPC 或自托管部署。",
+  "verified_price": "Sandbox 免费（200 消息额度，1 工作区/1 成员/5 应用）；Professional $59/工作区/月（年付 $590）；Team $159/工作区/月（年付 $1590）；Enterprise 定制（自托管+企业支持）。另有开源 Community 版免费自托管。",
+  "verified_platform": "Web, API, 自托管 (Docker/K8s), Cloud",
+  "verified_features": [
+    "可视化工作流编排（Workflow Studio）：拖拽式构建可观测的 AI 应用逻辑",
+    "Agent 构建：赋予工具、记忆与边界的自主智能体",
+    "知识管道（RAG）：文件/网页/文档抽取、切片、索引与检索",
+    "插件市场：集成模型、工具与 MCP，复用已审批插件",
+    "多种发布方式：Web 应用、API、Embed 或 MCP 工具；支持云/自托管/开源社区版"
+  ],
+  "verified_description": "开源的 AI 应用开发平台（LangGenius），可视化编排 Agentic 工作流、RAG 与 Agent，支持云端、VPC 或自托管部署。",
+  "content_flags": "FAQ 中“基础套餐从 $10/月起”已过时，现行 Professional 为 $59/月（年付 $590）；其余内容准确。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "暂无权威外部评分（保留编辑评分）",
+  "rating_verified": true,
+  "verified_pros": [
+    "开源免费可私有部署，数据安全可控",
+    "可视化编排 LLM 工作流，降低开发门槛",
+    "内置 RAG、Agent 构建、模型管理等功能",
+    "支持多种模型接入，灵活切换",
+    "社区活跃，持续迭代更新"
+  ],
+  "verified_cons": [
+    "高级功能需要一定学习成本",
+    "部分功能文档不够完善",
+    "企业级支持需要付费版本"
+  ],
+  "verified_faq": [
+    {
+      "q": "Dify智能体完全免费吗？",
+      "a": "Dify 提供开源 Community 版可免费自托管，云端也有免费的 Sandbox 套餐（200 消息额度）。付费云套餐 Professional 起价 $59/工作区/月（年付 $590），Team $159/月（年付 $1590）。"
+    },
+    {
+      "q": "Dify智能体能私有部署吗？",
+      "a": "可以。Dify 支持私有化部署，适合企业对数据安全和定制化有较高要求的场景。"
+    },
+    {
+      "q": "Dify智能体支持哪些大模型？",
+      "a": "支持接入 OpenAI、Claude、Gemini、xAI、DeepSeek、通义等多种 LLM，并可通过自定义接口扩展。"
+    },
+    {
+      "q": "Dify智能体适合哪些用户？",
+      "a": "适合开发者、AI 应用创业者以及企业团队，用于快速搭建 AI 助手、知识库问答、自动化工作流等应用。"
+    }
+  ],
+  "verified_tags": [
+    "开源",
+    "AI应用开发",
+    "可视化编排"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://dify.ai/pricing",
+    "https://dify.ai/pricing/dify-cloud"
+  ],
+  "verify_notes": "开源 Community 版与云端 Sandbox 均免费；价格以官网为准。",
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Dify智能体 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Dify智能体 的 可视化工作流编排（Workflow Studio）：拖拽式构建可观测的 AI 应用逻辑 是亮点，价格 Sandbox 免费；Professional $59/月（年付 $590）；Team $159/月（年付 $1590）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

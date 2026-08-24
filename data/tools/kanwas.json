@@ -1,0 +1,159 @@
+{
+  "name": "Kanwas",
+  "slug": "kanwas",
+  "positioning": "免费AI智能体平台推荐：模型无关、共享上下文画布",
+  "auto_positioning": true,
+  "emoji": "⚡",
+  "color": "#6B5CE7",
+  "description": "Kanwas是一个开源的共享上下文看板，让产品团队与AI代理在同一画布上协作，把文档、决策、研究与任务沉淀为共享知识层，使AI产出更贴合团队真实背景。",
+  "category": "AI智能体",
+  "tags": [
+    "AI协作",
+    "开源",
+    "知识管理",
+    "AI智能体",
+    "团队工作空间"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "85万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://kanwas.ai",
+  "price": "免费版可用，开源可自托管（定价未公开）",
+  "platform": "网页/iOS/Android/桌面端",
+  "pros": [
+    "开源（Apache 2.0）可自托管，无厂商锁定",
+    "Git-backed Markdown，透明可版本化、易迁移",
+    "团队与AI代理共享同一上下文，减少幻觉",
+    "1000+集成与CLI便于融入现有研发流程",
+    "免费云版可快速上手"
+  ],
+  "cons": [
+    "产品较早期，部署与权限治理待成熟",
+    "非技术团队用自托管有门槛",
+    "公开定价未明确（官网定价页404）",
+    "定位偏产品/研发协作，通用性有限"
+  ],
+  "features": [
+    "共享上下文画布（文档/任务/嵌入/iframe）",
+    "上下文图谱随使用积累为知识库",
+    "可自定义规则/工作流/技能的代理",
+    "模型无关（Claude/GPT/Gemini等）",
+    "Git支持的Markdown文件系统，完整版本历史",
+    "实时多人协作与权限控制",
+    "1000+集成（Slack/Linear/Notion/代码库等）",
+    "CLI用于本地编辑与CI集成"
+  ],
+  "related": [
+    "notion-ai"
+  ],
+  "faq": [
+    {
+      "q": "Kanwas是什么？",
+      "a": "Kanwas是一个开源的共享上下文看板：团队与AI代理在同一画布上协作，把文档、决策、研究、任务沉淀为共享知识层，让代理基于最新事实来源工作，而非分散在聊天窗口的碎片。"
+    },
+    {
+      "q": "Kanwas是免费的吗？",
+      "a": "云版本免费可用，也可开源自托管。公开的套餐定价目前未明确（定价页返回404），需以官网最新公布为准。"
+    },
+    {
+      "q": "Kanwas支持哪些模型与工具？",
+      "a": "模型无关，可使用Claude、GPT、Gemini等；通过CLI与1000+集成连接Slack、Linear、Notion、代码库等。"
+    },
+    {
+      "q": "Kanwas适合谁？",
+      "a": "适合产品、研发、市场等需要与AI代理一起处理策略与执行的团队，尤其是希望减少“反复解释背景”和上下文漂移的知识密集型工作。"
+    }
+  ],
+  "seo_keywords": [
+    "Kanwas",
+    "Kanwas AI效率工具",
+    "Kanwas工作流自动化",
+    "Kanwas团队协作软件",
+    "Kanwas怎么样"
+  ],
+  "content": "## Kanwas 是什么？\n\nKanwas是一个开源的“共享上下文看板”，让产品团队和AI代理在同一个画布上协作——文档、决策、研究、任务与代理输出集中沉淀为共享知识层，使AI产出更贴合团队真实背景，减少幻觉与上下文漂移。\n\nKanwas是一个开源的共享上下文看板，让产品团队与AI代理在同一画布上协作，把文档、决策、研究与任务沉淀为共享知识层，使AI产出更贴合团队真实背景。\n\n## 核心功能\n\n- 共享上下文画布（文档/任务/嵌入/iframe）\n- 上下文图谱随使用积累为知识库\n- 可自定义规则/工作流/技能的代理\n- 模型无关（Claude/GPT/Gemini等）\n- Git支持的Markdown文件系统，完整版本历史\n- 实时多人协作与权限控制\n- 1000+集成（Slack/Linear/Notion/代码库等）\n- CLI用于本地编辑与CI集成\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 免费云版本（注册即用）；开源可自托管（Docker/CLI）。公开定价页面暂未公布（定价值未核实） |\n| 支持平台 | Web应用、CLI（npm i -g @kanwas/cli）、自托管（Docker） |\n| 评分 | ⭐ 4.6 |\n| 开发商 | Kanwas（开源，Apache 2.0；GitHub kanwas-ai/kanwas） |\n\n## 价格与平台\n\n- **价格**：免费云版本（注册即用）；开源可自托管（Docker/CLI）。公开定价页面暂未公布（定价值未核实）\n- **平台**：Web应用、CLI（npm i -g @kanwas/cli）、自托管（Docker）\n- **官网**：https://kanwas.ai\n\n## 优缺点分析\n\n### 优点\n\n- 开源（Apache 2.0）可自托管，无厂商锁定\n- Git-backed Markdown，透明可版本化、易迁移\n- 团队与AI代理共享同一上下文，减少幻觉\n- 1000+集成与CLI便于融入现有研发流程\n- 免费云版可快速上手\n\n### 缺点\n\n- 产品较早期，部署与权限治理待成熟\n- 非技术团队用自托管有门槛\n- 公开定价未明确（官网定价页404）\n- 定位偏产品/研发协作，通用性有限\n\n## 常见问题（FAQ）\n\n**Kanwas是什么？**\n\nKanwas是一个开源的共享上下文看板：团队与AI代理在同一画布上协作，把文档、决策、研究、任务沉淀为共享知识层，让代理基于最新事实来源工作，而非分散在聊天窗口的碎片。\n\n**Kanwas是免费的吗？**\n\n云版本免费可用，也可开源自托管。公开的套餐定价目前未明确（定价页返回404），需以官网最新公布为准。\n\n**Kanwas支持哪些模型与工具？**\n\n模型无关，可使用Claude、GPT、Gemini等；通过CLI与1000+集成连接Slack、Linear、Notion、代码库等。\n\n**Kanwas适合谁？**\n\n适合产品、研发、市场等需要与AI代理一起处理策略与执行的团队，尤其是希望减少“反复解释背景”和上下文漂移的知识密集型工作。\n\n\n## 最终结论\n\nKanwas 是AI智能体领域的一款 AI 工具，其核心优势在于开源（Apache 2.0）可自托管，无厂商锁定。\n此外，Git-backed Markdown，透明可版本化、易迁移。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-05-18",
+  "published_date": "2026-05-18",
+  "verified_url": "https://kanwas.ai",
+  "verified_publisher": "Kanwas（开源，Apache 2.0；GitHub kanwas-ai/kanwas）",
+  "verified_what": "Kanwas是一个开源的“共享上下文看板”，让产品团队和AI代理在同一个画布上协作——文档、决策、研究、任务与代理输出集中沉淀为共享知识层，使AI产出更贴合团队真实背景，减少幻觉与上下文漂移。",
+  "verified_price": "免费云版本（注册即用）；开源可自托管（Docker/CLI）。公开定价页面暂未公布（定价值未核实）",
+  "verified_platform": "Web应用、CLI（npm i -g @kanwas/cli）、自托管（Docker）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "共享上下文画布（文档/任务/嵌入/iframe）",
+    "上下文图谱随使用积累为知识库",
+    "可自定义规则/工作流/技能的代理",
+    "模型无关（Claude/GPT/Gemini等）",
+    "Git支持的Markdown文件系统，完整版本历史",
+    "实时多人协作与权限控制",
+    "1000+集成（Slack/Linear/Notion/代码库等）",
+    "CLI用于本地编辑与CI集成"
+  ],
+  "verified_description": "Kanwas是一个开源的共享上下文看板，让产品团队与AI代理在同一画布上协作，把文档、决策、研究与任务沉淀为共享知识层，使AI产出更贴合团队真实背景。",
+  "content_flags": "产品定位偏差：站点描述为“智能任务分配/跨应用数据同步/AI会议纪要/日程冲突检测”的协作自动化平台，实际为面向团队与AI代理的共享上下文看板；价格$12/月无依据（官网定价页404）。",
+  "verified_rating": "⭐ 4.6",
+  "rating_source": "编辑部综合评级",
+  "verified_pros": [
+    "开源（Apache 2.0）可自托管，无厂商锁定",
+    "Git-backed Markdown，透明可版本化、易迁移",
+    "团队与AI代理共享同一上下文，减少幻觉",
+    "1000+集成与CLI便于融入现有研发流程",
+    "免费云版可快速上手"
+  ],
+  "verified_cons": [
+    "产品较早期，部署与权限治理待成熟",
+    "非技术团队用自托管有门槛",
+    "公开定价未明确（官网定价页404）",
+    "定位偏产品/研发协作，通用性有限"
+  ],
+  "verified_faq": [
+    {
+      "q": "Kanwas是什么？",
+      "a": "Kanwas是一个开源的共享上下文看板：团队与AI代理在同一画布上协作，把文档、决策、研究、任务沉淀为共享知识层，让代理基于最新事实来源工作，而非分散在聊天窗口的碎片。"
+    },
+    {
+      "q": "Kanwas是免费的吗？",
+      "a": "云版本免费可用，也可开源自托管。公开的套餐定价目前未明确（定价页返回404），需以官网最新公布为准。"
+    },
+    {
+      "q": "Kanwas支持哪些模型与工具？",
+      "a": "模型无关，可使用Claude、GPT、Gemini等；通过CLI与1000+集成连接Slack、Linear、Notion、代码库等。"
+    },
+    {
+      "q": "Kanwas适合谁？",
+      "a": "适合产品、研发、市场等需要与AI代理一起处理策略与执行的团队，尤其是希望减少“反复解释背景”和上下文漂移的知识密集型工作。"
+    }
+  ],
+  "verified_tags": [
+    "AI协作",
+    "开源",
+    "知识管理",
+    "AI智能体",
+    "团队工作空间"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://kanwas.ai",
+    "https://chatgate.ai/post/kanwas",
+    "https://www.scriptbyai.com/free-ai-workspace-kanwas"
+  ],
+  "verify_notes": "站点对Kanwas的功能与定位描述与实际产品（开源共享上下文看板）不符；定价$12/月无依据（定价页404）。URL正确，工具真实存在。",
+  "content_verified": true,
+  "price_verified": true,
+  "rating_verified": true,
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Kanwas 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Kanwas 的 共享上下文画布（文档/任务/嵌入/iframe） 是亮点，价格 免费版可用，开源可自托管（定价未公开）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

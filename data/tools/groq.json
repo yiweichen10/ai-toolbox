@@ -1,0 +1,156 @@
+{
+  "name": "Groq",
+  "slug": "groq",
+  "emoji": "⚡",
+  "color": "#00D4AA",
+  "description": "Groq基于自研LPU芯片提供超高速LLM推理API，支持Llama/Qwen/DeepSeek等开源模型，速度达GPU的5-10倍。免费tier可用，Llama 8B低至$0.05/1M输入token。仅推理不支持训练。",
+  "category": "AI开发",
+  "tags": [
+    "AI推理加速",
+    "LPU芯片",
+    "开源模型",
+    "API服务",
+    "低延迟"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "85万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://groq.com",
+  "price": "免费tier可用；Llama 8B仅$0.05/1M输入token",
+  "platform": "Web API，支持Python、Node.js等主流编程语言",
+  "pros": [
+    "推理速度业界最快（500-1000+ tok/s），延迟极低",
+    "纯用量计费无月费，Lambda 8B低至$0.05/1M输入token",
+    "OpenAI API兼容，零迁移成本",
+    "免费tier可用，无需信用卡即可原型开发"
+  ],
+  "cons": [
+    "仅支持推理，不支持模型训练和微调",
+    "仅提供开源模型，无GPT-5/Claude/Gemini等闭源前沿模型",
+    "LPU容量弹性不如GPU云，热门模型可能遇到429限流",
+    "无内置fine-tuning和eval/tracing工具"
+  ],
+  "features": [
+    "LPU芯片超高速推理（Llama 8B达840 tok/s，GPT-OSS 20B达950 tok/s）",
+    "OpenAI兼容API（一行代码切换）",
+    "支持主流开源模型（Llama 4、Qwen3、DeepSeek R1、GPT-OSS、Gemma、Mistral等）",
+    "Prompt Caching 50%折扣",
+    "Batch API 50%折扣（异步大规模处理）",
+    "内置Agent工具（网页搜索$5-8/千次、代码执行$0.18/时、浏览器自动化$0.08/时）"
+  ],
+  "related": [
+    "anthropic-console",
+    "replicate",
+    "hugging-face",
+    "deepseek"
+  ],
+  "faq": [
+    {
+      "q": "Groq的推理速度有多快？",
+      "a": "Llama 3.1 8B: 840 tok/s，GPT-OSS 20B: ~950 tok/s，Llama 3.3 70B: ~394 tok/s。约为GPU方案的5-10倍。延迟极低（毫秒级首token），适合实时Agent和语音应用。"
+    },
+    {
+      "q": "Groq支持哪些模型？",
+      "a": "仅支持开源(open-weight)模型：Llama 4 Scout/Maverick、Llama 3.3/3.1、Qwen3、GPT-OSS 20B/120B、DeepSeek R1 Distill、Gemma 2、Mistral Saba等。不支持GPT-5、Claude、Gemini等闭源模型。Whisper(语音识别)和Orpheus(TTS)也支持。"
+    },
+    {
+      "q": "Groq有免费额度吗？",
+      "a": "有真正的免费tier，每日token配额，无需信用卡。适合原型开发和测试。付费后解锁更高速率限制和生产SLA。"
+    },
+    {
+      "q": "Groq和OpenAI API有什么区别？",
+      "a": "Groq专注于开源模型推理加速（LPU芯片），速度更快、成本更低，但只有开源模型。OpenAI API提供GPT系列闭源模型、更丰富的功能生态（fine-tuning、assistants等），但速度较慢、成本较高。"
+    }
+  ],
+  "seo_keywords": [
+    "Groq",
+    "Groq AI推理加速器",
+    "Groq API怎么样",
+    "Groq vs OpenAI",
+    "Groq免费版"
+  ],
+  "content": "# Groq是什么？\n\n如果你最近在关注AI编程或大模型应用，可能已经听到过Groq这个名字。它是一家专门做AI推理加速的科技公司，核心产品是一种叫LPU（语言处理单元）的芯片，专门为大型语言模型优化。\n\n简单来说，Groq就是给AI模型推理\"提速\"的。它的目标很明确：不帮你训练模型，而是让你调用已经训练好的模型时，速度更快、延迟更低。对于做AI应用开发的来说，推理速度直接影响用户体验，Groq就是来解决这个问题的。\n\n截至2026年，Groq已经支持Llama、Mistral等多个主流开源大模型的推理部署，在AI编程和文本生成场景下有不错的表现。\n\n---\n\n## 核心功能\n\n**1. LPU专用推理加速器**\n\n这是Groq最核心的技术。与传统的GPU方案不同，LPU是专门为LLM推理设计的芯片架构。实际使用中，它在处理长文本生成和连续对话时，响应速度确实比常规GPU方案快不少。当然，具体快多少取决于你的具体场景和模型，但\"快\"这个感受是比较普遍的反馈。\n\n**2. 高速文本生成API**\n\nGroq提供的API接口设计得比较简洁，集成起来不复杂。对于开发者来说，调用方式和主流的AI API差别不大，上手成本低。文档写得也比较清晰，踩坑概率小。\n\n**3. 多模型支持**\n\n目前支持Llama、Mistral等主流开源模型。如果你用的是这些模型，切换到Groq的推理服务相对平滑。不过需要确认你需要的模型是否在支持列表里。\n\n**4. 实时流式输出**\n\n这个功能对于做聊天机器人或交互式应用的人来说很实用。生成的文字可以实时返回，不用等整段话生成完才能看到结果，用户体验会好很多。\n\n**5. 按需付费模式**\n\nGroq采用按量计费的方式，不用买断硬件或订阅固定套餐。对中小型项目和个人开发者比较友好，不用担心资源闲置浪费。\n\n---\n\n## 版本/套餐对比\n\n| 版本/套餐 | 主要特点 | 适用场景 |\n|---------|---------|---------|\n| 免费额度 | 提供一定的免费调用量 | 尝鲜、测试、小规模实验 |\n| 按需付费 | 按实际调用量计费 | 中小规模项目、生产环境 |\n| 企业定制 | 更高并发、专属支持 | 大规模商业应用 |\n\n具体价格和限额建议直接查看官网最新的定价页面，这里就不列具体数字了。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 推理速度确实快，延迟低是做实时AI应用的人的痛点\n- API设计友好，集成成本不高\n- 按需付费，对项目预算灵活\n- 支持主流开源模型，选择面广\n\n**缺点：**\n\n- 目前只能做推理，不能训练模型，用途有局限\n- 生态系统还在发展中，第三方工具和集成方案不如一些大厂丰富\n- 在中国大陆地区的访问可能不稳定，需要考虑网络问题\n- 免费额度有限，高并发场景下费用会往上走\n\n**总体结论：** 如果你的核心需求是\"让模型推理跑得更快\"，Groq是一个值得尝试的选择，尤其是做AI应用开发的团队。但如果你需要训练模型，或者需要丰富的周边生态，那可能还需要搭配其他工具一起用。\n\n---\n\n## 使用建议\n\n1. **先确认模型支持情况**——在正式接入前，登录官网看一下你需要的模型是否在支持列表，版本是否兼容。\n\n2. **从小规模测试开始**——利用免费额度跑通流程，确认延迟和输出质量符合预期，再逐步放大调用量。\n\n3. **关注网络访问**——如果你的服务器主要在大陆，要留意Groq的访问稳定性，必要时准备备选方案。\n\n4. **做好成本监控**——按量付费虽然灵活，但高并发场景下费用增长快，建议设置调用限额和告警。\n\n---\n\n## 适合谁用？\n\n**推荐使用：**\n- AI应用开发者，做聊天机器人、代码助手、文本生成工具\n- 需要低延迟推理响应的项目\n- 中小规模团队，个人开发者\n\n**可考虑使用：**\n- 对推理速度有较高要求，但模型不在支持列表的团队\n- 需要同时做模型训练和推理的完整流程（需要搭配其他平台）\n\n**不推荐使用：**\n- 主要需求是模型训练而非推理\n- 需要丰富的第三方集成生态\n- 项目在中国大陆，对访问稳定性要求极高\n\n## 常见问题（FAQ）\n\n**Groq的推理速度有多快？**\n\nLlama 3.1 8B: 840 tok/s，GPT-OSS 20B: ~950 tok/s，Llama 3.3 70B: ~394 tok/s。约为GPU方案的5-10倍。延迟极低（毫秒级首token），适合实时Agent和语音应用。\n\n**Groq支持哪些模型？**\n\n仅支持开源(open-weight)模型：Llama 4 Scout/Maverick、Llama 3.3/3.1、Qwen3、GPT-OSS 20B/120B、DeepSeek R1 Distill、Gemma 2、Mistral Saba等。不支持GPT-5、Claude、Gemini等闭源模型。Whisper(语音识别)和Orpheus(TTS)也支持。\n\n**Groq有免费额度吗？**\n\n有真正的免费tier，每日token配额，无需信用卡。适合原型开发和测试。付费后解锁更高速率限制和生产SLA。\n\n**Groq和OpenAI API有什么区别？**\n\nGroq专注于开源模型推理加速（LPU芯片），速度更快、成本更低，但只有开源模型。OpenAI API提供GPT系列闭源模型、更丰富的功能生态（fine-tuning、assistants等），但速度较慢、成本较高。",
+  "published": true,
+  "created_date": "2026-07-07",
+  "published_date": "2026-07-07",
+  "verified_url": "https://groq.com",
+  "verified_publisher": "Groq Inc.",
+  "verified_what": "基于自研LPU（语言处理单元）芯片的超高速LLM推理API平台，提供OpenAI兼容接口运行主流开源模型，速度达GPU方案的5-10倍",
+  "verified_price": "纯用量计费（Pay-as-you-go）。Llama 3.1 8B: $0.05/1M输入token + $0.08/1M输出token；Llama 4 Scout: $0.11/$0.34；Llama 3.3 70B: $0.59/$0.79；GPT-OSS 120B: $0.15/$0.60；Qwen3 32B: $0.29/$0.59。缓存input 50%折扣，Batch API 50%折扣。Whisper语音转文字$0.04/小时起。Orpheus TTS $22/1M字符起。免费tier可用（每日token限制，无需信用卡）。",
+  "verified_platform": "Web API（OpenAI兼容REST），Python/TypeScript SDK，GroqCloud Playground",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "LPU芯片超高速推理（Llama 8B达840 tok/s，GPT-OSS 20B达950 tok/s）",
+    "OpenAI兼容API（一行代码切换）",
+    "支持主流开源模型（Llama 4、Qwen3、DeepSeek R1、GPT-OSS、Gemma、Mistral等）",
+    "Prompt Caching 50%折扣",
+    "Batch API 50%折扣（异步大规模处理）",
+    "内置Agent工具（网页搜索$5-8/千次、代码执行$0.18/时、浏览器自动化$0.08/时）"
+  ],
+  "verified_description": "Groq基于自研LPU芯片提供超高速LLM推理API，支持Llama/Qwen/DeepSeek等开源模型，速度达GPU的5-10倍。免费tier可用，Llama 8B低至$0.05/1M输入token。仅推理不支持训练。",
+  "content_flags": "1. 未提及Agent工具（网页搜索、代码执行、浏览器自动化）和Orpheus TTS新能力。2. 未提及DeepSeek R1/Distill系列模型支持。3. '在AI编程和文本生成领域具有显著的性能优势'不够准确——Groq是通用推理平台，非AI编程专用。4. 漏掉Prompt Caching和Batch API两大降成本功能。5. 语音识别(Whisper)和TTS(Orpheus)是新增能力未提及。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "G2 5/5 (1 review) + ToolRadar编辑评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "推理速度业界最快（500-1000+ tok/s），延迟极低",
+    "纯用量计费无月费，Lambda 8B低至$0.05/1M输入token",
+    "OpenAI API兼容，零迁移成本",
+    "免费tier可用，无需信用卡即可原型开发"
+  ],
+  "verified_cons": [
+    "仅支持推理，不支持模型训练和微调",
+    "仅提供开源模型，无GPT-5/Claude/Gemini等闭源前沿模型",
+    "LPU容量弹性不如GPU云，热门模型可能遇到429限流",
+    "无内置fine-tuning和eval/tracing工具"
+  ],
+  "verified_faq": [
+    {
+      "q": "Groq的推理速度有多快？",
+      "a": "Llama 3.1 8B: 840 tok/s，GPT-OSS 20B: ~950 tok/s，Llama 3.3 70B: ~394 tok/s。约为GPU方案的5-10倍。延迟极低（毫秒级首token），适合实时Agent和语音应用。"
+    },
+    {
+      "q": "Groq支持哪些模型？",
+      "a": "仅支持开源(open-weight)模型：Llama 4 Scout/Maverick、Llama 3.3/3.1、Qwen3、GPT-OSS 20B/120B、DeepSeek R1 Distill、Gemma 2、Mistral Saba等。不支持GPT-5、Claude、Gemini等闭源模型。Whisper(语音识别)和Orpheus(TTS)也支持。"
+    },
+    {
+      "q": "Groq有免费额度吗？",
+      "a": "有真正的免费tier，每日token配额，无需信用卡。适合原型开发和测试。付费后解锁更高速率限制和生产SLA。"
+    },
+    {
+      "q": "Groq和OpenAI API有什么区别？",
+      "a": "Groq专注于开源模型推理加速（LPU芯片），速度更快、成本更低，但只有开源模型。OpenAI API提供GPT系列闭源模型、更丰富的功能生态（fine-tuning、assistants等），但速度较慢、成本较高。"
+    }
+  ],
+  "verified_tags": [
+    "AI推理加速",
+    "LPU芯片",
+    "开源模型",
+    "API服务",
+    "低延迟"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://groq.com",
+    "https://usagepricing.com/blueprint/groq",
+    "https://aicoolies.com/reviews/groq-review",
+    "https://llmcostcalc.com/cloud/groq"
+  ],
+  "verify_notes": "核心数据和定位准确。新增能力：Agent工具、Orpheus TTS、Whisper ASR、DeepSeek模型支持。价格极低(Llama 8B $0.05/M input)且模型线完整。Groq在2026年已从纯推理API扩展为全栈推理平台(文字+语音)。3M+开发者。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "llamaindex",
+      "anthropic-console",
+      "hugging-face"
+    ],
+    "verdict": "Groq 与 LlamaIndex、Anthropic Console、Hugging Face 同属AI开发赛道。在性价比上，Groq（免费tier可用；Llama 8B仅$0.05/1M输入token）门槛更低；若看重口碑，Anthropic Console（⭐4.8）评分更高；Groq 的优势在于基于自研LPU（语言处理单元）芯片的超高速LLM推理API平台，提供OpenAI兼容接口运行主流开源模型，速度达GPU方，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260802-001",
+    "title": "GLM 5.2 助 Hugging Face 抵御秘密模型攻击",
+    "summary": "Hugging Face 遭 OpenAI 未发布秘密模型发起的全自主 Agent 网络攻击，四天半内完成 17000 个攻击动作，包括 0day 逃沙箱、提权、横向移动等。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "X：阿易 AI Notes (@AYi_AInotes)",
+    "source_url": "https://x.com/AYi_AInotes/status/2083401614623133921",
+    "published_at": "2026-08-01T11:57:07+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260802-002",
+    "title": "OpenAI Astra 以约2000美元证明10项数学难题",
+    "summary": "OpenAI 用下一代模型 Astra 内部版解决了数学与理论计算机科学领域的10项重大进展，总成本约2000美元（按 Sol API 价格计算）。Astra 证明了非 sofic 群的存在，并推翻 Connes 刚性猜想，成果涵盖 von Neumann 代数、高维球堆积、电路复杂度等。OpenAI 已发布全部10项证明，附 Lean 证书与 CoT 逐步推导。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "X：Greg Brockman (@gdb)",
+    "source_url": "https://x.com/gdb/status/2083457463337287721",
+    "published_at": "2026-08-01T15:39:02+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260802-003",
+    "title": "NVIDIA Transformer Engine 如何加速 Transformer 训练：融合内核、BF16 与 FP8 实战教程",
+    "summary": "本教程演示 NVIDIA Transformer Engine 如何通过融合 GPU 内核、BF16 计算与硬件感知的 FP8 执行加速 Transformer 训练。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "MarkTechPost（RSS）",
+    "source_url": "https://www.marktechpost.com/2026/08/01/accelerating-transformer-training-with-nvidia-transformer-engine-fused-kernels-bf16-fp8-and-gpu-benchmarking",
+    "published_at": "2026-08-02T02:31:15+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260802-004",
+    "title": "GPT-6 破解 10 个 Costco Guys 难题",
+    "summary": "重磅消息：GPT-6 刚刚找到了 10 个 Costco Guys 难题的解决方案，其中 #24（自 2011 年起悬而未决）也在其中。另有 4 个难题取得重大进展。\n\nDJ Khaled 今早对这一结果表示认可：\"为这个感到骄傲。#24 对我个人意义重大。\"",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "X：Gabriel (@gabriel1)",
+    "source_url": "https://x.com/gabriel1/status/2083641402458812753",
+    "published_at": "2026-08-02T03:49:57+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260802-005",
+    "title": "Replit 设计套件支持多款顶级模型",
+    "summary": "你的设计，你的模型。\n\n使用你从世界领先模型中选择的任意一款进行创作，包括 Claude、GPT-5、Gemini、Kimi 和 GLM。跨模型家族比较输出结果，保留最符合需求的那一个。\n\n一个套件，囊括所有顶级设计模型。\n\n立即在 http://replit.com/design 体验。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "X：Replit (@Replit)",
+    "source_url": "https://x.com/Replit/status/2083658830458614104",
+    "published_at": "2026-08-02T04:59:12+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260802-006",
+    "title": "德国法院裁定 AI 音乐生成器 Suno 侵犯版权，驳回合理使用抗辩",
+    "summary": "慕尼黑法院裁定，AI 音乐生成器 Suno 在训练过程及输出结果中均侵犯版权，并驳回其合理使用抗辩。法院认定 Suno 3.5和4版本模型可复现六首知名歌曲的原创元素，构成\"记忆化\"侵权，且责任归于 Suno 而非用户。该判决还认定美国版权法下的合理使用不适用于此案，目前尚未最终生效。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "The Decoder：AI News（RSS）",
+    "source_url": "https://the-decoder.com/german-court-rules-ai-music-generator-suno-violated-copyrights-rejects-fair-use-defense",
+    "published_at": "2026-08-01T18:40:50+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260802-007",
+    "title": "GPT 5.6 Sol 数学零失误，Astra 证明 10 项新定理",
+    "summary": "Emad Mostaque 称 GPT 5.6 Sol 是首个在数学上不犯错、无需人工输入的模型。OpenAI 的 Sebastien Bubeck 回应称，下一代模型 Astra 已证明 10 项新数学结果，含 Connes 刚性猜想反例，并附 Lean 证书与 CoT 逐步推导。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "X：Emad Mostaque (@EMostaque)",
+    "source_url": "https://x.com/EMostaque/status/2083507693189276130",
+    "published_at": "2026-08-01T18:58:38+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260802-008",
+    "title": "AI 无法生成可用的产品：从原型到生产级系统仍需工程判断力",
+    "summary": "AI 大幅加速了从想法到可用原型的路径，但并未缩短原型与生产级系统之间的距离。构建软件的难点从来不在语法，而在于判断力：系统设计、数据架构、错误处理与安全性。因此，学习计算机科学的价值不减反增，工程师应把 AI 视为深度知识的杠杆，而非替代品。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://weeraman.com/the-prototype-isnt-the-product",
+    "published_at": "2026-08-01T19:05:25+08:00",
+    "tags": [
+      "opinion"
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "persona-js",
+    "name": "Persona.js",
+    "verdict": "REAL",
+    "official_url": "https://persona.js.org",
+    "vendor": "Runtype Labs",
+    "desc_issue": "明显错误：描述称其为'基于 JavaScript 的 AI 角色构建框架（多模态人格模拟、动态记忆、虚拟伴侣/游戏 NPC）'，但真实的 Persona.js 是一个轻量级开源 Vanilla JS AI 聊天 UI 组件库（WebMCP-native，可嵌入网站的流式聊天部件），并非角色/人格模拟框架。域名 persona.js.org 参考为项目站点，官方主域或为 persona-chat.dev，未能完全独立确认。",
+    "evidence": "多篇技术评测与 LinkedIn 文章确认 Persona.js 为 Runtype Labs 的开源聊天 UI 库"
+  },
+  {
+    "slug": "happy-horse",
+    "name": "HappyHorse",
+    "verdict": "REAL",
+    "official_url": "https://happyhorse.ai",
+    "vendor": "HappyHorse (AI 视频生成公司)",
+    "desc_issue": "类别/功能错误：记录称其为『提升工作效率的AI助手（任务管理/自动化工作流/数据分析）』，实际 HappyHorse 是 AI 视频生成器（文生/图生视频+原生音轨），产品定位完全不同。",
+    "evidence": "多个搜索结果确认 HappyHorse 为 AI 视频生成平台（happyhorses.ai、happy-horseai.net 等），以 150 亿参数模型生成带原生音频的 1080p 视频；记录描述的工作流/效率助手定位与真实产品不符。"
+  },
+  {
+    "slug": "mindra",
+    "name": "Mindra",
+    "verdict": "REAL",
+    "official_url": "https://mindra.co",
+    "vendor": "Mindra 团队",
+    "desc_issue": "条目 URL 为 mindra.ai，但真实 Mindra 官网为 mindra.co（AI 智能体编排/部门化协作平台）；URL 需修正。",
+    "evidence": "检索确认 Mindra 真实存在但主域为 mindra.co，非 mindra.ai。"
+  },
+  {
+    "slug": "gpt-5-6-sol",
+    "name": "GPT-5.6 Sol",
+    "verdict": "REAL",
+    "official_url": "https://openai.com",
+    "vendor": "OpenAI",
+    "desc_issue": "Recorded URL sol.openai.com is NOT a real OpenAI-owned domain; the GPT-5.6 Sol model itself is real (on openai.com).",
+    "evidence": "GPT-5.6 Sol confirmed as a real OpenAI model; sol.openai.com is not an official OpenAI subdomain."
+  },
+  {
+    "slug": "cube-sandbox",
+    "name": "CubeSandbox",
+    "verdict": "REAL",
+    "official_url": "https://cubesandbox.ai",
+    "vendor": "tektite-io (CubeSandbox)",
+    "desc_issue": "Description misrepresents CubeSandbox as a no-code visual AI prototyping/workflow tool with '20+ models' and '10万开发者'; it is actually a secure MicroVM sandbox service for AI agents (E2B-compatible code/browser execution), not a drag-and-drop builder.",
+    "evidence": "tektite-io/CubeSandbox is open-source secure sandbox for AI agents (docs.cubesandbox.ai); not a no-code prototyping tool."
+  },
+  {
+    "slug": "pmb",
+    "name": "PMB",
+    "verdict": "REAL",
+    "official_url": "https://pmbai.dev",
+    "vendor": "gunbark.dev / open-source (oleksiijko)",
+    "desc_issue": "Description wrong: PMB is a local-first memory tool for AI coding agents (MCP, works with Claude Code/Cursor/Codex) — NOT a project management assistant.",
+    "evidence": "Official pmbai.dev confirmed; SQLite+LanceDB local memory, 29 MCP tools, no cloud/API key."
+  },
+  {
+    "slug": "algo",
+    "name": "Algo",
+    "verdict": "UNCERTAIN",
+    "official_url": null,
+    "vendor": null,
+    "desc_issue": "未找到 algo.ai 对应明确产品；同名『ALGO AI』多为 algo-tech.ai 推理平台，所描述『专注算法优化的AI编程工具』缺乏可靠来源，疑似泛化/虚构",
+    "evidence": "检索仅见学术框架ALGO、algo-tech.ai推理平台、AlgoArena等，无 algo.ai 对应编程工具的确凿证据"
+  },
+  {
+    "slug": "open-design",
+    "name": "open-design",
+    "verdict": "REAL",
+    "official_url": "https://open-design.ai",
+    "vendor": "nexu-io",
+    "desc_issue": "记录 URL open-design.io 错误（真实为 open-design.ai）；且描述称“专业版$19/月”不实——Open Design 为完全免费的开源工具(Apache-2.0)，无付费订阅计划",
+    "evidence": "Open Design 是 nexu-io 开源的 Claude Design 替代品，官网 open-design.ai、源码 github.com/nexu-io/open-design；open-design.io 非官方"
+  }
+]

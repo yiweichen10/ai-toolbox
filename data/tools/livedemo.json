@@ -1,0 +1,136 @@
+{
+  "name": "LiveDemo",
+  "name_cn": "LiveDemo",
+  "slug": "livedemo",
+  "positioning": "AI办公工具怎么用？开源可自托管，数据自+交互式",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#84cc16",
+  "description": "Storylane、Navattic和Arcade的开源替代方案。创建交互式产品演示，无需任何编码。开源意味着可以自部署、自定义和自行扩展，避免了SaaS演示工具的供应商锁定和价格膨胀问题。",
+  "category": "AI办公",
+  "tags": [
+    {
+      "text": "AI办公"
+    },
+    {
+      "text": "免费可用",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "新品",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://www.livedemo.ai",
+  "price": "待确认",
+  "platform": "Web",
+  "pros": [
+    "开源可自部署，避免供应商锁定",
+    "无需设计师与编码即可制作演示",
+    "交互式演示比录屏更真实可信",
+    "提供长期免费档，零成本起步",
+    "一套演示供营销、销售、客户成功复用"
+  ],
+  "cons": [
+    "早期产品，部分功能仍在完善",
+    "自托管部署需一定技术能力",
+    "付费档按创作者计费，团队场景成本需评估",
+    "相比商业竞品，开箱即用的模板与生态较少"
+  ],
+  "features": [
+    "开源可自托管，数据自控",
+    "交互式 HTML 演示一键嵌入",
+    "AI 配音与个性化文案",
+    "线索捕获与高意向访客路由",
+    "完成率/流失节点互动分析",
+    "GIF/MP4/iframe 多格式导出"
+  ],
+  "related": [],
+  "content": "## LiveDemo 是什么？\n\nLiveDemo 是 Storylane、Navattic、Arcade 的开源替代方案，一个把真实产品流程捕获为可点击交互式 HTML 演示的产品体验平台。它的核心主张是「让访客自己体验产品」：把交互式演示直接嵌入官网或 PLG 流程，访客无需填表、无需预约就能亲手点过产品，从而实现自助筛选与销售线索自动路由。\n\nLiveDemo 强调「演示即基础设施」——开源意味着可以自部署、自定义、自行扩展，避免 SaaS 演示工具的供应商锁定与价格膨胀。创始人 George Apostolov 称「演示不应被任何厂商私有化，而应像 Web 服务器一样可以被每个软件公司运行、审查和拥有」。2026 年 7 月该产品在 Product Hunt 上榜（#3，346+ 票），同时提供免费托管档与付费档。\n\n### 核心功能\n\n- **交互式 HTML 演示**：通过浏览器扩展捕获产品流程，生成访客可点击的真实交互演示，比静态截图更可信。\n- **AI 配音与个性化文案**：为演示自动生成配音与个性化文案，支持按访客身份定制演示内容。\n- **分支逻辑、注释与表单**：演示内可设置分支路径、添加注释与表单，模拟真实使用流程。\n- **线索捕获（Lead Capture）**：在演示中嵌入表单，自动收集高意向访客线索并路由给销售。\n- **互动分析**：跟踪完成率、停留时间、流失节点与转化，看清什么内容真正推动交易。\n- **多格式导出与分享**：支持链接、iframe 嵌入、GIF 与 MP4 导出，一套演示供营销、销售、客户成功复用。\n\n### 适用场景\n\n- **PLG 自助体验**：SaaS 官网嵌入交互式演示，让自助买家无需预约即可「亲手」体验产品，提升转化。\n- **销售与客户成功**：销售用深度演示推进商机，客户成功用导览演示加速新用户上手。\n- **文档与帮助中心**：在文档、帮助中心与教程中嵌入可点击的流程演示，降低理解门槛。\n\n### 价格\n\nLiveDemo 提供长期免费档（Startup：1 名创作者、3 个已发布演示，含 AI 配音与基础洞察）；付费档 Pro 约 $34/月/创作者（无限演示、去水印、线索捕获、GIF/MP4 导出），Growth 约 $49/月（多工作区、自定义集成），Business 为定制方案（10 名创作者起，含白标、自定义域名与自托管）。各档位具体价格请以官网为准。\n\n> 以上信息依据 LiveDemo 官网定价页及产品文档整理，价格与功能如有变动，请以官网实时信息为准。",
+  "published": true,
+  "faq": [
+    {
+      "q": "LiveDemo 开源吗？",
+      "a": "是，核心代码开源可自托管（支持 Docker 部署）；同时提供托管服务，含免费档与付费档，去水印、分析、自托管等能力按档位解锁。"
+    },
+    {
+      "q": "LiveDemo 怎么制作演示？",
+      "a": "通过 Chrome 扩展捕获真实产品流程，平台会把它转换为可点击的交互式 HTML 演示，并支持 AI 配音、个性化文案、分支逻辑、表单与线索捕获。"
+    },
+    {
+      "q": "LiveDemo 和 Storylane、Arcade 比有什么不同？",
+      "a": "LiveDemo 主打开源与可自托管，数据和演示完全由团队掌控，避免商业 SaaS 的供应商锁定；核心功能（交互演示、线索捕获、分析）与主流商业工具类似，具体差异以官网为准。"
+    }
+  ],
+  "created_date": "2026-07-28",
+  "published_date": "2026-07-28",
+  "verified_url": "https://www.livedemo.ai",
+  "verified_publisher": "LiveDemo（创始人 George；2026 年 7 月 Product Hunt 发布）",
+  "verified_what": "开源交互式产品演示平台，将真实产品流程捕获为可点击的 HTML 演示，作为 Storylane、Navattic、Arcade 的开源替代方案。",
+  "verified_price": "免费版（1 名创建者、3 个已发布演示）；付费版约 $27–$127/月（Business/Pro/Creators 等档位，含去水印、线索捕获、分析、自托管等，具体以官网为准）。",
+  "verified_platform": "Web、Chrome 扩展捕获、自托管（Docker）、嵌入/链接/GIF/MP4 分享",
+  "last_verified": "2026-07-31",
+  "confidence": "medium",
+  "conflict": false,
+  "verified_features": [
+    "捕获产品流程生成可点击 HTML 交互演示",
+    "AI 配音与个性化文案",
+    "分支逻辑、注释与表单",
+    "线索捕获（Lead capture）",
+    "互动分析（完成率/停留/流失）",
+    "多格式导出（GIF/MP4/嵌入代码）"
+  ],
+  "verified_description": "LiveDemo 是 Storylane、Navattic 和 Arcade 的开源替代方案，通过 Chrome 扩展捕获产品流程，生成可点击的交互式 HTML 演示，支持 AI 配音、个性化文案、线索捕获与分析，并可自托管部署。",
+  "content_flags": "原 price 为「待确认」、features 仅「AI驱动」过简，已补充核实后的定价与功能。",
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "编辑评分（本站；新品，暂无权威第三方评分）",
+  "verified_pros": [
+    "开源可自托管，数据自控",
+    "无需设计师即可制作演示",
+    "交互式比录屏更真实",
+    "免费版可用"
+  ],
+  "verified_cons": [
+    "早期产品，部分功能待完善",
+    "付费版价格随档位差异较大",
+    "需一定初始配置/部署"
+  ],
+  "verified_faq": [
+    {
+      "q": "LiveDemo 开源吗？",
+      "a": "是，核心代码开源可自托管；托管版提供免费档与付费档（去水印、分析、自托管等）。"
+    }
+  ],
+  "verified_tags": [
+    "AI办公",
+    "产品演示",
+    "开源",
+    "免费可用"
+  ],
+  "verified_category": "AI办公",
+  "source_urls": [
+    "https://www.livedemo.ai",
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTEJjdmpuS1phT196d3VtVjA2akVLbWxGMUZhVDhRYmhCOVRndHRpekRxalNGd2EtanRLTGtvRUJEQ2FuWDFBY2JYbzhwVkFHNjEyR2NjRTZ5TzJZMF9QSmV3bkhWV2tUSWltV3liWlgxWTBuX3F0Ym5fbGd5UWRkZml4YVVpN05kaVgwcUoyQXhMc3M",
+    "https://hunted.space/product/livedemo"
+  ],
+  "verify_notes": "付费档位在各来源数字不一致（官方显示 Business $27/月、Creators $127/用户；第三方称 Pro $34/创作者/月），以官网为准，故标 medium。",
+  "content_verified": false,
+  "url_previous": "https://livedemo.ai",
+  "compare_section": {
+    "competitors": [
+      "tome",
+      "tldv",
+      "slidesai"
+    ],
+    "verdict": "LiveDemo 与 Tome、 tl;dv、SlidesAI 同属AI办公赛道：LiveDemo 的 AI驱动 是亮点，价格 待确认；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "seo_keywords": [
+    "LiveDemo 产品演示",
+    "开源交互式演示工具",
+    "Storylane 开源替代",
+    "产品导览制作",
+    "PLG 自助体验工具"
+  ]
+}

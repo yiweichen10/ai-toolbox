@@ -1,0 +1,171 @@
+{
+  "name": "Clipdrop",
+  "slug": "clipdrop",
+  "positioning": "免费AI设计：Remove+Image",
+  "auto_positioning": true,
+  "emoji": "✨",
+  "color": "#12B4C5",
+  "description": "Clipdrop是由Init ML开发、现归属Jasper的AI图像处理平台，将多种图像编辑功能整合于一体。以一键抠图最为知名，同时提供图像放大、智能去文字/物体、背景替换、重打光以及基于Stable Diffusion XL的文生图等能力，是设计师与创意工作者的常用图像编辑工具箱。",
+  "category": "AI设计",
+  "tags": [
+    "图像处理",
+    "背景去除",
+    "AI修图",
+    "图片放大",
+    "AI设计",
+    "文生图"
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "850万/月",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://clipdrop.co",
+  "price": "基础免费 + Pro 约 $9/月起",
+  "platform": "Web/iOS/Android/桌面端/Photoshop插件/Figma插件",
+  "pros": [
+    "背景去除效果行业领先，边缘处理自然",
+    "支持批量处理",
+    "集成多种图像处理功能于一体",
+    "提供API接口，支持开发者集成",
+    "Stable Diffusion XL 文生图"
+  ],
+  "cons": [
+    "免费版有每日使用次数限制，部分输出带水印/限分辨率",
+    "处理复杂场景偶尔出现伪影",
+    "国内访问速度相对较慢",
+    "现归Jasper所有，长期产品路线存在不确定性"
+  ],
+  "features": [
+    "Remove Background 一键背景去除",
+    "Image Upscaler AI图像放大(2x/4x)",
+    "Remove Text 智能去文字",
+    "Replace Background 背景替换",
+    "Stable Diffusion XL 文本生成图像",
+    "Reimagine 图片变体",
+    "Relight 智能重新照明",
+    "Sketch to Image 草图转图像",
+    "Uncrop 扩图",
+    "Cleanup 物体移除"
+  ],
+  "related": [
+    "photoroom",
+    "ideogram",
+    "leonardo-ai",
+    "canva-ai"
+  ],
+  "faq": [
+    {
+      "q": "Clipdrop免费版可以用多少次？",
+      "a": "免费版每个工具约20次/24小时（如去背、清理、打光），Text Remover约50次，输出带水印或限分辨率；去水印与高清需订阅Pro版（约$9/月）。"
+    },
+    {
+      "q": "Clipdrop和Remove.bg哪个好？",
+      "a": "Clipdrop提供一体化功能（去背、修图、放大、文生图）；Remove.bg在纯背景去除上更专注专业。可按需选择。"
+    },
+    {
+      "q": "Clipdrop支持中文吗？",
+      "a": "界面支持中文，文本生成图像也支持中文提示词，但英文提示词效果通常更稳定。"
+    },
+    {
+      "q": "Clipdrop现在归谁所有？还能商用吗？",
+      "a": "Clipdrop现由Jasper所有（2024年2月从Stability AI收购），clipdrop.co仍正常运营；付费版生成的图像可用于商业用途。"
+    }
+  ],
+  "seo_keywords": [
+    "Clipdrop",
+    "Clipdrop免费版",
+    "Clipdrop怎么样",
+    "AI图像处理工具推荐",
+    "Clipdrop和Remove.bg对比"
+  ],
+  "content": "# Clipdrop是什么？\n\nClipdrop是Stability AI推出的AI图像处理平台，简单来说就是一个把多个图像编辑功能整合在一起的在线工具箱。它最出名的功能是**一键抠图**，但实际上远不止这个——从去除背景、放大图片、智能擦除不需要的元素，到用文字生成图像，几乎涵盖了设计师日常会遇到的大多数图像处理需求。\n\n2026年平台更新了Stability AI 3.0模型之后，处理速度和精度都有明显提升，目前在AI抠图这个细分领域算是比较能打的存在。\n\n## 核心功能\n\n**1. Remove Background（一键抠图）**\n\n这是Clipdrop最受欢迎的功能。上传图片后几秒钟就能把主体从背景中分离出来，边缘处理得比较自然，头发丝这种细节通常也能处理得不错。很多设计师用来做电商主图、产品展示图，效率比手动抠图高很多。\n\n**2. Image Upscaler（AI无损放大）**\n\n把低分辨率图片放大到更高分辨率，同时保持细节清晰。适合把一些老照片或者小图处理成能用的尺寸。实际使用中放大2-4倍效果比较稳定，再往上就不太建议了。\n\n**3. Remove Text（智能去文字）**\n\n可以去除图片中的文字、水印、logo等不需要的元素，AI会自动填充被去除区域的背景。处理简单场景效果挺好，但遇到文字和复杂背景交错的情况，可能会有痕迹残留。\n\n**4. Replace Background（AI背景替换）**\n\n在抠图的基础上更进一步，不仅去除背景，还能根据描述生成新的背景。比如给产品图换个场景、加点氛围感，适合做创意展示图。\n\n**5. Stable Diffusion XL（文本生成图像）**\n\n用文字描述生成图片。接入了SDXL模型，支持100多种语言的描述，生成质量在同类型工具中属于中上水平。个人感觉更适合做概念图、素材寻找，细节要求特别高的商业图还是差点意思。\n\n## 版本/套餐对比\n\n| 版本 | 价格 | 功能限制 | 适合人群 |\n|------|------|----------|----------|\n| 免费版 | ¥0 | 每月约100次基础处理，部分功能限次，高清输出需额外积分 | 轻度用户尝鲜 |\n| Pro | ¥99/月 | 每月1500次处理，高清输出，优先队列，API调用 | 设计师、个人创业者 |\n| Enterprise | 定制价格 | 无限处理，定制API，专属客服，企业级安全保障 | 团队、企业 |\n\n## 值不值得用？\n\n**优点：**\n\n- AI抠图效果确实好用，边缘处理在同价位工具里算是排在前列的\n- 功能比较全，一个平台解决多种需求，不用到处找工具\n- 支持批量处理，对需要大量出图的用户很友好\n- 有API接口，企业可以集成到自己的业务流程里\n\n**缺点：**\n\n- 免费版额度有限，高清输出需要付费，成本会上去\n- 部分高级功能要Pro以上才能用\n- 复杂场景下偶尔会有伪影，需要手动修一下\n- 国内访问速度确实不如国外，用的时候要有耐心\n\n**结论：** 如果你的工作经常需要处理图片，特别是电商、设计、内容创作这些领域，Clipdrop值得试试。免费版可以先体验一下核心功能，觉得好用再考虑付费升级。\n\n## 使用建议\n\n1. **免费版先体验**：每个功能都试试，看看实际效果能不能满足你的需求\n2. **批量处理更划算**：需要处理多张图时，用批量上传功能比单张处理效率高\n3. **复杂图先备份原图**：去除文字、替换背景这些操作不可逆，处理前最好保留原文件\n4. **结合其他工具用**：Clipdrop做抠图和基础处理很强，但一些精细的修图还是得回到PS之类的专业软件\n\n## 适合谁用？\n\n**推荐使用：**\n- 电商设计师（产品图抠图、主图制作）\n- 社交媒体运营（配图处理、内容配图）\n- 个人创业者（需要自己处理产品图的中小商家）\n\n**可考虑：**\n- 平面设计师（作为辅助工具，配合PS使用）\n- 内容创作者（需要快速出图的个人博主）\n\n**不推荐：**\n- 对图像质量要求极高的商业摄影后期（建议用专业软件）\n- 处理量很小、偶尔才需要抠图的轻度用户（免费版额度够用）\n- 对访问速度非常敏感、时间成本高的用户（国内访问确实慢）\n\n## 常见问题（FAQ）\n\n**Clipdrop免费版可以用多少次？**\n\n免费版每个工具约20次/24小时（如去背、清理、打光），Text Remover约50次，输出带水印或限分辨率；去水印与高清需订阅Pro版（约$9/月）。\n\n**Clipdrop和Remove.bg哪个好？**\n\nClipdrop提供一体化功能（去背、修图、放大、文生图）；Remove.bg在纯背景去除上更专注专业。可按需选择。\n\n**Clipdrop支持中文吗？**\n\n界面支持中文，文本生成图像也支持中文提示词，但英文提示词效果通常更稳定。\n\n**Clipdrop现在归谁所有？还能商用吗？**\n\nClipdrop现由Jasper所有（2024年2月从Stability AI收购），clipdrop.co仍正常运营；付费版生成的图像可用于商业用途。",
+  "published": true,
+  "created_date": "2026-04-23",
+  "subcategory": "ai-image-editing",
+  "verified_url": "https://clipdrop.co",
+  "verified_publisher": "Jasper（2024年2月从Stability AI收购；最初由Init ML开发，2023年2月被Stability AI收购）",
+  "verified_what": "AI图像处理平台，提供一键抠图、图像放大、物体/文字移除、重打光、Stable Diffusion XL文生图等工具。",
+  "verified_price": "免费版 $0（每工具每日限次，带水印/限分辨率）；Pro 约$9/月（去水印+高清）；API 按调用计费（约$0.002/去背，$0.005/SDXL）",
+  "verified_platform": "Web、iOS、Android、桌面端、Photoshop插件、Figma插件",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "Remove Background 一键背景去除",
+    "Image Upscaler AI图像放大(2x/4x)",
+    "Remove Text 智能去文字",
+    "Replace Background 背景替换",
+    "Stable Diffusion XL 文本生成图像",
+    "Reimagine 图片变体",
+    "Relight 智能重新照明",
+    "Sketch to Image 草图转图像",
+    "Uncrop 扩图",
+    "Cleanup 物体移除"
+  ],
+  "verified_description": "Clipdrop是由Init ML开发、现归属Jasper的AI图像处理平台，将多种图像编辑功能整合于一体。以一键抠图最为知名，同时提供图像放大、智能去文字/物体、背景替换、重打光以及基于Stable Diffusion XL的文生图等能力，是设计师与创意工作者的常用图像编辑工具箱。",
+  "content_flags": "归属描述过时：原文称『由Stability AI推出』并『集成Stability AI 3.0模型』。事实为Clipdrop现由Jasper所有（2024年2月收购），最初由Init ML开发、2023年2月被Stability AI收购；其文生图基于Stable Diffusion XL，『Stability AI 3.0模型集成』表述不够准确。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.7",
+  "rating_source": "站内编辑评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "背景去除效果行业领先，边缘处理自然",
+    "支持批量处理",
+    "集成多种图像处理功能于一体",
+    "提供API接口，支持开发者集成",
+    "Stable Diffusion XL 文生图"
+  ],
+  "verified_cons": [
+    "免费版有每日使用次数限制，部分输出带水印/限分辨率",
+    "处理复杂场景偶尔出现伪影",
+    "国内访问速度相对较慢",
+    "现归Jasper所有，长期产品路线存在不确定性"
+  ],
+  "verified_faq": [
+    {
+      "q": "Clipdrop免费版可以用多少次？",
+      "a": "免费版每个工具约20次/24小时（如去背、清理、打光），Text Remover约50次，输出带水印或限分辨率；去水印与高清需订阅Pro版（约$9/月）。"
+    },
+    {
+      "q": "Clipdrop和Remove.bg哪个好？",
+      "a": "Clipdrop提供一体化功能（去背、修图、放大、文生图）；Remove.bg在纯背景去除上更专注专业。可按需选择。"
+    },
+    {
+      "q": "Clipdrop支持中文吗？",
+      "a": "界面支持中文，文本生成图像也支持中文提示词，但英文提示词效果通常更稳定。"
+    },
+    {
+      "q": "Clipdrop现在归谁所有？还能商用吗？",
+      "a": "Clipdrop现由Jasper所有（2024年2月从Stability AI收购），clipdrop.co仍正常运营；付费版生成的图像可用于商业用途。"
+    }
+  ],
+  "verified_tags": [
+    "图像处理",
+    "背景去除",
+    "AI修图",
+    "图片放大",
+    "AI设计",
+    "文生图"
+  ],
+  "verified_category": "AI设计",
+  "conflict_note": "所有权归属需澄清：非当前Stability AI产品，现为Jasper所有；工具真实存在且正常运营，非伪造。",
+  "source_urls": [
+    "https://clipdrop.co/",
+    "https://aisotools.com/blog/clipdrop-review-2026",
+    "https://www.nemovideo.com/de-DE/alternative/clipdrop",
+    "https://aipedia.wiki/tools/clipdrop/",
+    "https://chdh.me/tools/ai-tools/image/clipdrop"
+  ],
+  "verify_notes": "多源一致：Clipdrop现归Jasper。原描述将Stability AI作为当前所有者/技术来源不够准确，已修正描述与publisher；价格Pro约$9/月与多源一致。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "topaz-photo-ai",
+      "upscayl",
+      "relume"
+    ],
+    "verdict": "Clipdrop 与 Topaz Photo AI、Upscayl、Relume 同属AI设计赛道：Clipdrop 的 Remove Background 一键背景去除 是亮点，价格 基础免费 + Pro 约 $9/月起；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

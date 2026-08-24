@@ -1,0 +1,138 @@
+{
+  "name": "Nex-N2",
+  "slug": "nex-n2",
+  "positioning": "免费AI智能体平台：Agentic+Adaptive",
+  "auto_positioning": true,
+  "emoji": "🔍",
+  "color": "#3B82F6",
+  "description": "Nex-N2 是 Nex-AGI 开源的能动性（Agentic）大模型，通过统一的智能体思维框架将推理与行动结合，擅长智能体编程、深度研究与工具调用，提供 Pro（397B）与 mini（35B）两个开源版本。",
+  "category": "AI智能体",
+  "tags": [
+    "开源模型",
+    "AI智能体",
+    "大模型",
+    "智能体编程",
+    "工具调用"
+  ],
+  "rating": "⭐4.5",
+  "visits": "约300万/月",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://nex-agi.cn",
+  "price": "开源免费（云端按 token 计费）",
+  "platform": "Web / Chrome扩展 / iOS / Android",
+  "pros": [
+    "开源可本地部署，数据可控",
+    "编程与智能体能力强，居开源第一梯队",
+    "自适应推理显著节省 token 开销",
+    "统一思维范式，跨场景表现稳定"
+  ],
+  "cons": [
+    "需自部署或调用 API，门槛高于消费产品",
+    "Pro 版需较强算力（多卡 GPU）",
+    "无官方图形化 App 或零售订阅"
+  ],
+  "features": [
+    "Agentic Thinking 统一推理与行动",
+    "Adaptive Thinking 自适应推理深度，节省 token",
+    "Coherent Thinking 跨任务一致推理范式",
+    "顶尖编程与终端智能体能力（Terminal-Bench 2.1 达 75.3）",
+    "深度研究与工具调用",
+    "基于 Qwen3.5 后训练（Pro 397B / mini 35B）"
+  ],
+  "related": [
+    "perplexity",
+    "meta-so",
+    "nano-ai-search",
+    "phind"
+  ],
+  "faq": [
+    {
+      "q": "Nex-N2 是免费的吗？",
+      "a": "Nex-N2 模型开源免费，可自行本地部署；也可通过硅基流动等云平台按 token 计费调用，无官方零售订阅。"
+    },
+    {
+      "q": "Nex-N2 有哪些版本？",
+      "a": "提供 Nex-N2-Pro（基于 Qwen3.5-397B-A17B）与 Nex-N2-mini（基于 Qwen3.5-35B-A3B）两个开源版本，覆盖不同延迟与质量权衡。"
+    }
+  ],
+  "seo_keywords": [
+    "Nex-N2",
+    "Nex-N2 AI搜索怎么样",
+    "Nex-N2免费版使用教程",
+    "Nex-N2和Perplexity哪个好",
+    "Nex-N2 2026评测"
+  ],
+  "content": "## Nex-N2 是什么？\n\n开源的能动性（Agentic）大模型，通过统一的智能体思维框架将推理与行动结合，擅长智能体编程、深度研究与工具调用。\n\nNex-N2 是 Nex-AGI 开源的能动性（Agentic）大模型，通过统一的智能体思维框架将推理与行动结合，擅长智能体编程、深度研究与工具调用，提供 Pro（397B）与 mini（35B）两个开源版本。\n\n## 核心功能\n\n- Agentic Thinking 统一推理与行动\n- Adaptive Thinking 自适应推理深度，节省 token\n- Coherent Thinking 跨任务一致推理范式\n- 顶尖编程与终端智能体能力（Terminal-Bench 2.1 达 75.3）\n- 深度研究与工具调用\n- 基于 Qwen3.5 后训练（Pro 397B / mini 35B）\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 模型开源免费；通过硅基流动等云平台按 token 计费（Nex-N2-Pro 输入约 1.75 元/百万 tokens、输出约 7 元/百万 tokens）。无官方 $15/$30 零售订阅。 |\n| 支持平台 | 开源模型 / API（本地部署 sglang、Hugging Face、ModelScope、SiliconFlow；OpenRouter 即将上线） |\n| 评分 | ⭐4.5 |\n| 开发商 | Nex-AGI（上海创智学院联合奇绩智峰、模思智能、基流科技、跨赴科技等） |\n\n## 价格与平台\n\n- **价格**：模型开源免费；通过硅基流动等云平台按 token 计费（Nex-N2-Pro 输入约 1.75 元/百万 tokens、输出约 7 元/百万 tokens）。无官方 $15/$30 零售订阅。\n- **平台**：开源模型 / API（本地部署 sglang、Hugging Face、ModelScope、SiliconFlow；OpenRouter 即将上线）\n- **官网**：https://nex-agi.cn\n\n## 优缺点分析\n\n### 优点\n\n- 开源可本地部署，数据可控\n- 编程与智能体能力强，居开源第一梯队\n- 自适应推理显著节省 token 开销\n- 统一思维范式，跨场景表现稳定\n\n### 缺点\n\n- 需自部署或调用 API，门槛高于消费产品\n- Pro 版需较强算力（多卡 GPU）\n- 无官方图形化 App 或零售订阅\n\n## 常见问题（FAQ）\n\n**Nex-N2 是免费的吗？**\n\nNex-N2 模型开源免费，可自行本地部署；也可通过硅基流动等云平台按 token 计费调用，无官方零售订阅。\n\n**Nex-N2 有哪些版本？**\n\n提供 Nex-N2-Pro（基于 Qwen3.5-397B-A17B）与 Nex-N2-mini（基于 Qwen3.5-35B-A3B）两个开源版本，覆盖不同延迟与质量权衡。\n\n\n## 最终结论\n\nNex-N2 是AI智能体领域的一款 AI 工具，其核心优势在于开源可本地部署，数据可控。\n此外，编程与智能体能力强，居开源第一梯队。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-07-19",
+  "published_date": "2026-07-19",
+  "verified_url": "https://nex-agi.cn",
+  "verified_publisher": "Nex-AGI（上海创智学院联合奇绩智峰、模思智能、基流科技、跨赴科技等）",
+  "verified_what": "开源的能动性（Agentic）大模型，通过统一的智能体思维框架将推理与行动结合，擅长智能体编程、深度研究与工具调用。",
+  "verified_price": "模型开源免费；通过硅基流动等云平台按 token 计费（Nex-N2-Pro 输入约 1.75 元/百万 tokens、输出约 7 元/百万 tokens）。无官方 $15/$30 零售订阅。",
+  "verified_platform": "开源模型 / API（本地部署 sglang、Hugging Face、ModelScope、SiliconFlow；OpenRouter 即将上线）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "Agentic Thinking 统一推理与行动",
+    "Adaptive Thinking 自适应推理深度，节省 token",
+    "Coherent Thinking 跨任务一致推理范式",
+    "顶尖编程与终端智能体能力（Terminal-Bench 2.1 达 75.3）",
+    "深度研究与工具调用",
+    "基于 Qwen3.5 后训练（Pro 397B / mini 35B）"
+  ],
+  "verified_description": "Nex-N2 是 Nex-AGI 开源的能动性（Agentic）大模型，通过统一的智能体思维框架将推理与行动结合，擅长智能体编程、深度研究与工具调用，提供 Pro（397B）与 mini（35B）两个开源版本。",
+  "content_flags": "原条目将 Nex-N2 误写成面向消费者的 AI 搜索产品（含 Web/Chrome 扩展/iOS/Android、Pro $15/团队 $30 订阅），实际为开源大模型，无零售 App 与订阅定价，已整体更正",
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "暂无权威评分（基准见官网：Terminal-Bench 2.1 75.3、GDPval 1585）",
+  "rating_verified": true,
+  "verified_pros": [
+    "开源可本地部署，数据可控",
+    "编程与智能体能力强，居开源第一梯队",
+    "自适应推理显著节省 token 开销",
+    "统一思维范式，跨场景表现稳定"
+  ],
+  "verified_cons": [
+    "需自部署或调用 API，门槛高于消费产品",
+    "Pro 版需较强算力（多卡 GPU）",
+    "无官方图形化 App 或零售订阅"
+  ],
+  "verified_faq": [
+    {
+      "q": "Nex-N2 是免费的吗？",
+      "a": "Nex-N2 模型开源免费，可自行本地部署；也可通过硅基流动等云平台按 token 计费调用，无官方零售订阅。"
+    },
+    {
+      "q": "Nex-N2 有哪些版本？",
+      "a": "提供 Nex-N2-Pro（基于 Qwen3.5-397B-A17B）与 Nex-N2-mini（基于 Qwen3.5-35B-A3B）两个开源版本，覆盖不同延迟与质量权衡。"
+    }
+  ],
+  "verified_tags": [
+    "开源模型",
+    "AI智能体",
+    "大模型",
+    "智能体编程",
+    "工具调用"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://nex-agi.cn/",
+    "https://github.com/nex-agi/Nex-N2",
+    "https://www.sii.edu.cn/2026/0607/c27a1089/page.htm"
+  ],
+  "verify_notes": "原条目把开源模型 Nex-N2 误当作消费级 AI 搜索产品，含大量虚构的平台与定价，已全部更正。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Nex-N2 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Nex-N2 的 Agentic Thinking 统一推理与行动 是亮点，价格 开源免费（云端按 token 计费）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

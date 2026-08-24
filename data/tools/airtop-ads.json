@@ -1,0 +1,98 @@
+{
+  "name": "Airtop for Google Ads",
+  "slug": "airtop-ads",
+  "positioning": "Airtop for Google Ads是什么？对话式托管谷歌广告的AI Agent好用吗",
+  "auto_positioning": false,
+  "emoji": "📈",
+  "color": "#10B981",
+  "description": "Airtop 在自家对话式网页 Agent 底座上做的 Google Ads 原生自动化，2026 年 8 月 3 日登上 Product Hunt 当日第 3。给它一个公司网址，它会自己做关键词研究、搭主题式广告组与响应式搜索广告、审计搜索词与地域定向和转化跟踪找出漏钱的地方，并按证据直接在 Google Ads 里落地优化；审计与报告可定时推送到 Slack、邮件或表格。承载这套能力的营销 Agent 叫 Mark，据官方在 Product Hunt 发布贴中的说明，任何会影响花费的改动都必须先经人工批准。",
+  "category": "AI自动化",
+  "tags": [
+    {
+      "text": "有免费额度",
+      "type": "free"
+    },
+    {
+      "text": "广告投放"
+    },
+    {
+      "text": "云端浏览器 Agent"
+    },
+    {
+      "text": "改动需人工批准"
+    }
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://www.airtop.ai/google-ads",
+  "price": "官网定价页：Free $0/月（1,000 credits、3 个并发会话、1 个已部署 Agent、一次性 10,000 credits 奖励、7 天 Mark 试用）；Starter 页面在月付/年付切换下分别显示 $29/月 与 $26/月（年付立减 10% 且额度一次性发放）；Professional $170/月起、Enterprise $502/月起，这两档才标注 Mark included；另有 Custom 定制档。具体以官网为准",
+  "platform": "纯 Web（Agent 跑在 Airtop 云端浏览器，需授权连接 Google Ads 账户；可对接 Slack、邮件、Google 表格与 CRM）",
+  "pros": [
+    "从关键词研究到报告是一条闭环，而且不停在建议层面，能直接在 Google Ads 里实施改动",
+    "浪费审计做得实在：搜索词、地域定向、转化跟踪、设备表现逐项过，并给出可审阅的修复草案",
+    "会读你的 CRM pipeline、ICP 与历史投放，按成交而不是点击来做出价与排除决策",
+    "建系列时默认就是主题式广告组、紧凑关键词集加前置否词，广告写好先暂停等你签字",
+    "审计与报告能按小时/天/周或触发条件定时跑并推到 Slack、邮件，适合没有 PPC 专职的小团队"
+  ],
+  "cons": [
+    "Google Ads 这套能力挂在营销 Agent Mark 上，Free 与 Starter 只给 7 天 Mark 试用，长期用要上 Professional（$170/月起）",
+    "按 credits 计费，账户越大、审计跑得越勤，成本越难提前估准",
+    "界面与产出以英文为主，加上 Google Ads 在中国大陆无法直接投放，国内团队基本用不上它的主场景"
+  ],
+  "features": [
+    "关键词研究：给出公司网址后自行研究市场，产出投放要用的关键词表",
+    "广告系列创建：搭主题式广告组、紧凑关键词集与前置否词，写好响应式搜索广告并保持暂停待批",
+    "浪费检测：审计搜索词、地域定向与转化跟踪，指出预算具体漏在哪里",
+    "直接落地优化：按证据在 Google Ads 内实施调整，涉及花费的改动需人工批准",
+    "定时审计与报告：搜索词报告、设备拆分、质量得分审计、地域表现，用平实语言解释，可推 Slack/邮件",
+    "全漏斗上下文：读取 CRM pipeline、ICP 与定位，对已成交词加价、对不转化的人群做排除"
+  ],
+  "related": [
+    "browser-use",
+    "n8n",
+    "make"
+  ],
+  "content": "## Airtop for Google Ads是什么？\n\nAirtop 本身是个对话式网页 Agent 平台——用一句人话描述任务，它就能登录网站、浏览、抓数据、把活干完。Airtop for Google Ads 是它在这个底座上做的垂直能力，2026 年 8 月 3 日登上 Product Hunt 并拿到当日第 3。承载这套能力的营销 Agent 叫 Mark。\n\n它的起点很朴素：跑 Google Ads 太难了。后台界面绕，优化要专门经验，一不小心几千美元就买回一堆垃圾点击。Airtop 的做法是把 PPC 顾问那套流程做成对话式流水线——你给它公司网址和预算目标，它研究市场、产出关键词、搭好系列、审计浪费、定期出报告，全程不需要你懂 PPC。\n\n关键的一条边界要说清楚：按官方在 Product Hunt 发布贴里的答复，Mark 从不自行调动预算，它给建议和理由，改动仍需人来批准；任何会影响花费的动作都要先拿到你的明确同意。这也是它和「全自动托管」类工具最大的差别。\n\n## 核心功能\n\n1. 关键词研究：给它公司网址，它自己研究市场并生成投放要用的关键词表。\n2. 广告系列创建：搭主题式广告组、紧凑关键词集，一开始就把否词加上，写好响应式搜索广告后保持暂停状态等你签字。\n3. 浪费检测：审计搜索词、地域定向和转化跟踪，把预算漏点指出来——官方举的典型例子是宽泛匹配捞到无关搜索、地域定向设错、缺否词。\n4. 直接落地优化：不止给建议，会按证据在 Google Ads 内实施调整，并把修复方案写成草案让你 review。\n5. 定时审计与报告：搜索词报告、设备拆分、质量得分审计、地域表现，用平实语言解释，可按小时、天、周或触发条件跑，结果发到 Slack、邮件或表格。\n6. 全漏斗上下文：读取 CRM pipeline、ICP 与历史投放，把出价往已成交的词上倾斜，排除从不转化的人群，文案也照客户自己的说法写。\n\n## 版本/套餐对比\n\n官网定价页的档位是这样的：Free 档 $0/月，含 1,000 credits、3 个并发会话、1 个已部署 Agent，另有一次性 10,000 credits 奖励和 7 天 Mark 试用；Starter 档在月付/年付切换下分别显示 $29/月 和 $26/月（年付立减 10%，且额度一次性发放），并发会话 3 个、可部署 10 个 Agent、含集成代理；Professional $170/月起，30 个已部署 Agent、30 并发会话、自定义代理，并标注 Mark included；Enterprise $502/月起，不限 Agent 数、100 并发会话、提供 SOC 2 Type 2 报告，同样含 Mark；最上面还有 Custom 定制档。\n\n对广告场景最关键的一点：Free 和 Starter 只给 7 天 Mark 试用，Mark included 是从 Professional 起才有的。也就是说想长期用它管 Google Ads，实际起步价按官网是 $170/月这一档，别被 $26 的 Starter 误导。所有档位都按 credits 计量，具体价格与额度请以官网为准。\n\n## 值不值得用？\n\n先说好的。它最有价值的地方不是「会建系列」，而是浪费审计加上直接落地这两件事凑在一起。宽泛匹配捞垃圾流量、地域定向设错、转化跟踪本身就是坏的——这些问题不难懂，难的是没人有空每周翻一遍搜索词报告。让 Agent 定时跑审计、写好修复草案、你点头它就改，这个工作流对小团队是实打实省时间。读 CRM 按成交优化这点也比只看点击的工具高一档。\n\n再说不足。第一是钱：Google Ads 能力绑在 Mark 上，长期用要 Professional 起步，$170/月对个人和小微团队不算便宜；credits 制也让成本难以提前估准，账户越大越吃额度。第二是语言与地域：产品与产出以英文为主，而 Google Ads 在中国大陆无法直接投放，国内团队想用得先有海外业务和账户。第三，它终究是个建议加执行的助手，人工批准这道关既是安全阀也是工作量——你还是得看得懂它改了什么。\n\n## 使用建议\n\n1. 先用 Free 档加 7 天 Mark 试用把审计跑一遍。哪怕不让它改任何东西，光看它找出的漏钱点也能判断值不值。\n2. 从审计和报告开始，别一上来就让它建系列。先让它读懂你的账户，再谈动手。\n3. 把 CRM 接上再谈优化。没有转化与成交数据，任何出价决策都只是在猜。\n4. 报告定时推 Slack 或邮件，按周看。这类工具的价值在持续盯，不在一次性体检。\n5. 涉及预算与出价的改动，逐条看理由再批。它的设计前提就是人来把最后这道关。\n\n## 适合谁用？\n\n推荐：自己跑 Google Ads、没有 PPC 专职的海外 SaaS 与独立创业者，以及需要给多个客户批量做审计的小型营销团队。\n可考虑：已有投手但想把浪费审计和周报自动化的增长团队，用它当第二双眼睛。\n不推荐：只投国内平台的团队（Google Ads 在中国大陆无法直接投放）、预算撑不起 Professional 档的个人，以及要求工具支持中文界面的用户。",
+  "published": false,
+  "faq": [
+    {
+      "question": "Airtop for Google Ads 会自己动我的预算吗？",
+      "answer": "不会。按官方在 Product Hunt 发布贴里的答复，Mark 从不在没有人明确批准的情况下调动预算：它给出建议和理由，仍需人来批准；任何会影响花费的改动都要先获得你的同意。"
+    },
+    {
+      "question": "它多少钱？免费版能用吗？",
+      "answer": "官网定价页显示 Free 档 $0/月（1,000 credits、3 并发会话、1 个已部署 Agent、一次性 10,000 credits 奖励、7 天 Mark 试用）。但 Google Ads 能力挂在 Mark 上，Mark included 从 Professional（$170/月起）才有，Free 与 Starter 只是 7 天试用。"
+    },
+    {
+      "question": "具体能替我做哪些 Google Ads 工作？",
+      "answer": "官网列出五块：关键词研究、广告系列创建、浪费检测、优化实施、报告。它会审计搜索词、地域定向与转化跟踪找出预算漏点，写好响应式搜索广告并保持暂停待批，并可定时把审计结果推到 Slack 或邮件。"
+    },
+    {
+      "question": "中国大陆团队能用吗？",
+      "answer": "受限。Airtop 是纯 Web 产品、界面与产出以英文为主，而 Google Ads 在中国大陆无法直接投放，需要通过代理商或本身有海外账户与业务，否则用不上它的核心场景。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Airtop for Google Ads",
+    "Airtop 怎么用",
+    "Airtop 价格",
+    "Google Ads 自动化 AI",
+    "AI 管理谷歌广告好用吗"
+  ],
+  "source_urls": [
+    "https://www.airtop.ai/google-ads",
+    "https://www.airtop.ai/pricing",
+    "https://www.producthunt.com/products/airtop/launches/airtop-for-google-ads-automation",
+    "https://producthunt.programnotes.cn/en/p/product-hunt-daily-2026-08-04"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

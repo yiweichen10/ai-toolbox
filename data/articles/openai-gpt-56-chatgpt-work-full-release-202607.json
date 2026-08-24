@@ -1,0 +1,180 @@
+{
+  "title": "GPT-5.6全面开放深度解读：三档模型杀穿性价比、ChatGPT Work正面硬刚Claude Cowork——从「白宫拦截」到「全球推送」，OpenAI这10天经历了什么？（2026年7月）",
+  "slug": "openai-gpt-56-chatgpt-work-full-release-202607",
+  "date": "2026-07-11",
+  "dateFormatted": "2026年7月11日",
+  "category": "AI评测",
+  "tags": [
+    {
+      "text": "OpenAI",
+      "type": "hot"
+    },
+    {
+      "text": "GPT-5.6",
+      "type": "hot"
+    },
+    {
+      "text": "ChatGPT",
+      "type": "hot"
+    }
+  ],
+  "description": "7月10日OpenAI正式全球开放GPT-5.6系列模型（Sol/Terra/Luna三档），同步上线ChatGPT Work智能体生产力工具，Codex并入ChatGPT统一桌面端。从6月底白宫拦截到全面推送，深度解读Ultra多智能体并行、与Claude Fable 5/Cowork全方位对比、定价策略与选型建议。",
+  "keywords": "GPT-5.6,OpenAI,ChatGPT Work,Claude Cowork,GPT-5.6 Sol,Terra,Luna,Ultra模式,Codex,AI Agent,大模型对比,人工智能",
+  "author": "AI工具宝箱编辑组",
+  "related_tools": [
+    "chatgpt",
+    "claude",
+    "claude-code",
+    "cursor",
+    "gemini",
+    "kimi",
+    "deepseek",
+    "github-copilot",
+    "qwen-chat",
+    "notion-ai",
+    "gamma",
+    "canva-ai",
+    "microsoft-copilot"
+  ],
+  "content": "<p>10天前，<a href=\"/tools/chatgpt/\">GPT-5.6</a> 还是「白宫特供」——仅向约20家政府审查合作伙伴开放，普通用户连预览版都摸不到。10天后，它已经在全球24小时推送，覆盖所有套餐版本。而这次OpenAI不只是发了个模型，它干脆把 <strong>ChatGPT、Codex、Work 三合一</strong>做成了一个统一的桌面应用，正面叫板 Anthropic 的 Claude Cowork。</p>\n\n<p>7月10日凌晨，OpenAI 正式宣布 GPT-5.6 系列模型全球全面开放。同步上线的还有 <strong><a href=\"/tools/chatgpt/\">ChatGPT Work</a></strong>——一个能跨 Slack、Notion、Microsoft 365、Google Drive 等应用自主连续工作数小时的 AI 智能体。独立 Codex 编码工具也正式并入 ChatGPT 桌面端，聊天、办公智能体、代码开发三大功能统一入口。</p>\n\n<p>这是一次 OpenAI 产品战略的重大转向：<strong>从「回答问题」到「交付成果」</strong>。本文将从模型性能、定价策略、Work 功能、竞品对比四个维度，对这次发布进行全面解读。</p>\n\n<h2>一、从「白宫拦截」到「全球推送」：GPT-5.6的10天过山车</h2>\n\n<p>回顾一下时间线，这10天的剧情比美剧还紧凑：</p>\n\n<ul>\n<li><strong>6月26日</strong>：OpenAI 预览 GPT-5.6 三档模型族（Sol/Terra/Luna），Sol 在 Terminal-Bench 斩获 91.91%，随即被白宫以「与 Mythos 5 同级网络安全能力」为由限制发布，仅向约20家政府审查合作伙伴开放。</li>\n<li><strong>7月7日</strong>：美国政府完成安全审查流程，批准 GPT-5.6 向更广泛用户开放。</li>\n<li><strong>7月9-10日</strong>：OpenAI 正式全球推送 GPT-5.6，同步上线 ChatGPT Work，Codex 并入桌面端。</li>\n</ul>\n\n<p>从「国家安全威胁」到「全面开放」，仅用了不到两周。这背后释放的信号很明确：<strong>美国AI出口管制正在从前置封锁转向分级管理</strong>。GPT-5.6 Sol 虽然强大，但它的能力被确认未达到需要严格禁运的级别——和此前 Fable 5 被要求下架的剧情形成鲜明对比。</p>\n\n<h2>二、GPT-5.6三档模型：太阳、地球、月亮，各干各的活</h2>\n\n<p>GPT-5.6 最大的产品创新不是算法，而是<strong>分层定价体系</strong>。OpenAI 给三个版本取了天文学名字——Sol（太阳）、Terra（地球）、Luna（月亮）——不仅好听，定位也一目了然：</p>\n\n<table>\n<thead><tr><th>维度</th><th>Sol（旗舰）</th><th>Terra（均衡）</th><th>Luna（轻量）</th></tr></thead>\n<tbody>\n<tr><td><strong>定位</strong></td><td>复杂推理、编码、科研</td><td>日常知识工作</td><td>高频轻量任务</td></tr>\n<tr><td><strong>API（应用程序接口）输入/输出<br/>（每百万token（词元））</strong></td><td>$5 / $30</td><td>$2.5 / $15</td><td>$1 / $6</td></tr>\n<tr><td><strong>速度</strong></td><td>750 token/秒</td><td>快速</td><td>最快</td></tr>\n<tr><td><strong>对标</strong></td><td><a href=\"/tools/claude/\">Claude Fable 5</a><br/>（价格仅一半）</td><td>GPT-5.5<br/>（性能持平、价格减半）</td><td>Claude Opus 4.8<br/>（成本仅1/16）</td></tr>\n<tr><td><strong>最佳场景</strong></td><td>大型工程、长周期项目<br/>多Agent（智能体）协作</td><td>报告撰写、数据分析<br/>日常办公</td><td>快速问答、批量处理<br/>API高频调用</td></tr>\n</tbody>\n</table>\n\n<p>这套定价策略的精妙之处在于：Sol 维持旗舰价格锚点但提供最强性能，Terra 用一半的价格覆盖80%的日常场景，Luna 则把门槛压到极致——输入仅$1/百万token，比很多二线模型还便宜。</p>\n\n<p>以编码场景为例，OpenAI 官方数据显示：完成同等任务，GPT-5.6 Sol 的输出 token 数不到 Claude Fable 5 的一半，耗时缩短57%。这意味着虽然 Sol 的单价不算最低，但<strong>实际完成任务的综合成本只有 Fable 5 的约三分之一</strong>。</p>\n\n<p>还有一点值得注意：GPT-5.6 引入了更可预测的 <strong>Prompt Caching（提示词缓存） 机制</strong>，支持显式缓存断点，缓存读取享受 90% 折扣，最短保留 30 分钟。对于需要反复调用同一上下文的 Agent 场景，实际成本还会进一步降低。</p>\n\n<h2>三、基准测试成绩单：Sol在哪些地方赢了Fable 5？</h2>\n\n<p>先说结论：<strong>GPT-5.6 Sol 在编码Agent和综合推理两个维度上，以更低的成本战胜了 Fable 5</strong>。</p>\n\n<p>关键benchmark（基准测试）数据一览：</p>\n\n<ul>\n<li><strong>Agents Last Exam（55个专业工作流）</strong>：Sol 得分 53.6，比 Fable 5（自适应推理模式）高出 13.1 分。即便在中等推理档位下也比 Fable 5 高 11.4 分，成本仅为其四分之一。</li>\n<li><strong>Artificial Analysis Coding Agent Index v1.1</strong>：Sol 得分 80，比 Fable 5 高 2.8 分。更关键的是，输出 token 数不到 Fable 5 的一半，运行时间不到一半，成本降低约三分之一。</li>\n<li><strong>ARC-AGI-3</strong>：Sol 得分 7.8%，是首个通过 ARC-AGI-3 游戏关卡的前沿模型——这测试的不是知识储备，而是真正的抽象推理能力。</li>\n<li><strong>Terminal-Bench 2.1 & DeepSWE</strong>：Sol 均取得新的最佳成绩，尤其在需要长时间连续命令行操作和跨文件工程的任务中表现突出。</li>\n<li><strong>Artificial Analysis Intelligence Index</strong>：Sol 推理能力仅比 Fable 5 低 1 分，但完成任务时间减少 61%，成本约一半。</li>\n</ul>\n\n<p>小型模型也不含糊：Luna 的编码表现已优于 Claude Opus 4.8，成本约为 Fable 5 的十六分之一，运行时间约为其三分之一。</p>\n\n<h2>四、Ultra 模式：一个不够？那就四个一起上</h2>\n\n<p>GPT-5.6 最硬核的新能力是 <strong>Ultra 多智能体并行模式</strong>。</p>\n\n<p>如果说 Max 模式是让一个模型花更多时间思考，Ultra 模式就是直接把任务拆给多个 Agent 同时干。默认并行协调 4 个智能体，API 用户可通过 Responses API 多智能体 beta 版本手动扩展到 16 个。</p>\n\n<p>这不是简单的「多跑几次取最好结果」。OpenAI 的说法是：这 4-16 个 Agent 各司其职、互相协作——有的负责代码实现，有的负责测试验证，有的负责文档撰写，最后由总控 Agent 协调合并。在 BrowseComp、SEC-Bench Pro、Terminal-Bench 2.1 等评测中，多智能体配置让「得分-延迟曲线」整体向左上方移动——翻译成人话：更快拿到更好的结果。</p>\n\n<p>代价当然有：token 消耗线性增长。有网友反馈 Ultra 模式 15 分钟就能烧完 Pro 会员的 5 小时限额，但这恰恰说明了它的价值——以前等 AI 慢慢算，现在是它主动提速。</p>\n\n<p>API 层面还新增了 <strong>Programmatic Tool Calling（程序化工具调用）</strong>，允许开发者在代码中编排复杂的工具调用链，模型会根据上下文自动决定何时调用哪个工具、按什么顺序——相当于把 Agent 的任务调度逻辑直接内建到模型里。</p>\n\n<h2>五、ChatGPT Work：OpenAI的「Agent超级应用」</h2>\n\n<p>如果说 GPT-5.6 是引擎，ChatGPT Work 就是装了这个引擎的车。</p>\n\n<p>ChatGPT Work 的定位很清晰：一个能跨应用、跨文件、长时间自主工作的 AI 智能体。它不是「你问一句它答一句」的对话工具，而是「你说目标它出成果」的交付工具。</p>\n\n<p>核心能力：</p>\n\n<ul>\n<li><strong>跨应用信息收集</strong>：原生集成 Slack、Notion、Microsoft 365、Google Drive 等应用，自动从多个系统中提取上下文。</li>\n<li><strong>成品交付</strong>：直接生成表格、幻灯片、文档、Web 应用——不是给你一个草稿让你改，而是你能直接用的东西。</li>\n<li><strong>长任务分解执行</strong>：把复杂项目拆成多个步骤，持续数小时独立推进。</li>\n<li><strong>定时监控与汇报</strong>：按计划重复执行操作，监控一段时间内的变化并汇报。</li>\n<li><strong>Computer Use 电脑操控</strong>：桌面端内置浏览器和电脑操控能力，可以直接操作没有开放 API 的本地软件。</li>\n<li><strong>Sites 网页搭建</strong>：一键生成可视化报表、业务仪表盘与小型交互网站。</li>\n</ul>\n\n<p>OpenAI 透露，公司内部包括财务、销售团队已经在广泛使用 ChatGPT Work 加速日常工作。一个典型案例是：将客户调研的原始录音自动转化为营销活动简报，再据此生成全套营销素材——过去需要跨部门协作几天的活，现在一个人+Work 半天搞定。</p>\n\n<p>目前 ChatGPT Work 面向 Pro、Enterprise、Edu 套餐开放，Plus、Business 将在未来几天陆续获得权限。</p>\n\n<h2>六、Codex 并入 ChatGPT：编程助手不再「独自美丽」</h2>\n\n<p>这次发布还有一个重大变化：独立的 Codex 应用正式并入 ChatGPT 桌面端。</p>\n\n<p>合并后，ChatGPT 桌面应用统一整合聊天、Work 智能体和 Codex 编程三大功能。旧版 Codex 客户端更名为「ChatGPT Classic」保留使用，用户原有代码项目无缝迁移。</p>\n\n<p>Codex 的现状也值得关注：周活跃用户超过 500 万，其中超过 100 万用于软件开发以外的任务。这正是合并的驱动力——编程和办公之间的边界正在模糊。</p>\n\n<p>合并后 Codex 新增的能力包括：差异中的内联编辑、侧面板 PR 审查、更快的新一代 Computer Use、单项目支持多个代码仓库——都是从「辅助写代码」到「管理整个工程」的进化。</p>\n\n<h2>七、GPT-5.6 + Work vs Claude Fable 5 + Cowork：正面硬刚</h2>\n\n<p>这次发布的每一个动作都在对着 Anthropic 打。以下是全方位的对比：</p>\n\n<table>\n<thead><tr><th>对比维度</th><th>OpenAI 阵营</th><th>Anthropic 阵营</th><th>结论</th></tr></thead>\n<tbody>\n<tr><td><strong>旗舰模型</strong></td><td>GPT-5.6 Sol</td><td>Claude Fable 5</td><td>编码Agent Sol小胜，综合推理Sol大幅领先（+13.1分）</td></tr>\n<tr><td><strong>旗舰API价格<br/>（输入/输出）</strong></td><td>$5 / $30</td><td>$10 / $50</td><td>Sol 价格仅为 Fable 5 的一半</td></tr>\n<tr><td><strong>实际编码任务成本</strong></td><td>Fable 5 的 ~1/3</td><td>基准</td><td>Sol 大幅胜出（Token效率+速度双赢）</td></tr>\n<tr><td><strong>轻量模型</strong></td><td>Luna ($1/$6)</td><td>Opus 4.8 ($5/$20)</td><td>Luna 性能优于 Opus 4.8，价格仅1/4</td></tr>\n<tr><td><strong>智能体平台</strong></td><td>ChatGPT Work</td><td>Claude Cowork</td><td>功能接近，Work 集成应用更多</td></tr>\n<tr><td><strong>多Agent并行</strong></td><td>Ultra（4-16个）</td><td>不支持原生并行</td><td>OpenAI 独有优势</td></tr>\n<tr><td><strong>编程工具</strong></td><td>Codex（已合并）</td><td><a href=\"/tools/claude-code/\">Claude Code</a></td><td>各有千秋</td></tr>\n<tr><td><strong>缓存折扣</strong></td><td>90%</td><td>90%</td><td>持平</td></tr>\n</tbody>\n</table>\n\n<p>但 ChatGPT Work 也有槽点。Hacker News 上用户普遍反映：聊天被缩成了一个小弹窗、旧应用被改名为「Classic」（暗示即将被废弃）、Work 模式和 Code 模式的切换逻辑让人摸不着头脑。有评论直言：「别动已经好用的东西，新建一个隔壁的东西就行」。</p>\n\n<p>另一个关键差异是使用成本感知。Fable 5 已经从订阅制转为按量计费，用户每次调用都能看到 token 消耗。而 GPT-5.6 的 Ultra 模式虽然强大，token 消耗速度也让不少 Pro 用户喊「烧得太快」。</p>\n\n<h2>八、选型建议：不同角色怎么选？</h2>\n\n<p><strong>开发者/工程师：首选 GPT-5.6 Sol</strong></p>\n<p>编程 Agent 能力目前最强，Ultra 模式让你在大型工程中体验「四个AI同时写代码」的效率。如果预算敏感，Luna 的编码表现已优于 Opus 4.8，日常 coding 完全够用。</p>\n\n<p><strong>知识工作者/白领：ChatGPT Work 值得一试</strong></p>\n<p>跨应用自动化的能力是目前最完整的。特别是经常在 Slack、Notion、Google Drive、Microsoft 365 之间切来切去的用户——Work 能让这些应用「打通」。目前需要在 Pro/Enterprise/Edu 套餐下使用。</p>\n\n<p><strong>学生/个人用户：等 Plus 覆盖，先用 Luna</strong></p>\n<p>ChatGPT Work 暂时还没覆盖 Plus 用户（将在未来几天推送），但 Luna 模型已在免费版可用。日常写论文、做PPT、查资料，Luna 的速度和价格都很有诱惑力。</p>\n\n<p><strong>企业团队：建议双开对比</strong></p>\n<p>不要被任何一个厂商绑死。GPT-5.6 + Work 和 Claude + Cowork 各有利弊，建议团队在真实工作流中分别试用一周，基于实际产出和成本做决策。目前两家的旗舰模型差距已经小到「70分和72分」的区别——选哪家更多取决于你的工作流和生态，而不是模型本身的排名。</p>\n\n<h2>九、行业影响：AI Agent 大战进入「交付阶段」</h2>\n\n<p>GPT-5.6 + ChatGPT Work 的发布，标志着一个重要的行业转折：AI 竞争从「谁的模型更聪明」转向「谁的 Agent 更能干活」。</p>\n\n<p>看看战局：OpenAI 以 GPT-5.6 + ChatGPT Work + Codex 三位一体打「智能体全栈」；Anthropic 以 Claude Fable 5 + Cowork + Claude Code 走「安全可控」路线；Google 以 <a href=\"/tools/gemini/\">Gemini</a> 系列 + Workspace 深度整合靠「生态绑定」；国内厂商如 <a href=\"/tools/deepseek/\">DeepSeek V4 Pro</a>、<a href=\"/tools/qwen-chat/\">通义千问</a> Qwen 3.7 Max、<a href=\"/tools/kimi/\">Kimi K3</a> 等则以极高性价比追赶。</p>\n\n<p>有两个信号特别值得关注：</p>\n\n<p><strong>第一，定价分层正在成为行业标准</strong>。GPT-5.6 的 Sol/Terra/Luna 三档分级、Fable 5 的按量计费——模型厂商都在用「价格歧视」最大化覆盖不同支付意愿的用户。对用户来说这是好事：不需要为用不到的能力付钱。</p>\n\n<p><strong>第二，桌面端正在成为新的战场</strong>。ChatGPT Work、Claude Cowork 都不约而同地选择了桌面端作为主阵地。原因很简单：真正能改变工作方式的 Agent，必须能访问本地文件、操作本地软件、跨应用协作——这些只有桌面端能做到。</p>\n\n<p>最后回到一个根本问题：GPT-5.6 + ChatGPT Work 值不值得用？</p>\n\n<p>答案是取决于你想让AI帮你干什么。如果只是闲聊和简单问答，继续用免费版就够了。如果你想要一个能在多应用之间自动流转、持续数小时推进项目、最后交付完整成果的 AI 协作者——ChatGPT Work + GPT-5.6 Sol 代表了2026年7月这个时间点上最强的生产力组合。当然，Claude Cowork 同样优秀。真正的赢家，永远是那些先搞清楚「AI能帮我省掉哪部分工作」的人。</p>",
+  "infographic": {
+    "title": "GPT-5.6 vs Claude Fable 5 vs Opus 4.8 核心维度对比（2026年7月）",
+    "tools": [
+      {
+        "name": "GPT-5.6 Sol",
+        "color": "#10a37f"
+      },
+      {
+        "name": "GPT-5.6 Luna",
+        "color": "#34d399"
+      },
+      {
+        "name": "Claude Fable 5",
+        "color": "#d97706"
+      },
+      {
+        "name": "Claude Opus 4.8",
+        "color": "#f59e0b"
+      },
+      {
+        "name": "DeepSeek V4 Pro",
+        "color": "#3b82f6"
+      }
+    ],
+    "rows": [
+      {
+        "label": "综合推理（Agents Last Exam）",
+        "values": [
+          "53.6",
+          "—",
+          "40.5",
+          "—",
+          "—"
+        ],
+        "note": "越高越好"
+      },
+      {
+        "label": "编码Agent（Coding Agent Index）",
+        "values": [
+          "80",
+          "—",
+          "77.2",
+          "—",
+          "—"
+        ],
+        "note": "越高越好"
+      },
+      {
+        "label": "API输入价格（$/百万token）",
+        "values": [
+          "$5",
+          "$1",
+          "$10",
+          "$5",
+          "$0.28"
+        ],
+        "note": "越低越好"
+      },
+      {
+        "label": "API输出价格（$/百万token）",
+        "values": [
+          "$30",
+          "$6",
+          "$50",
+          "$20",
+          "$1.10"
+        ],
+        "note": "越低越好"
+      },
+      {
+        "label": "编码Token效率（相对Fable 5）",
+        "values": [
+          "~2x",
+          "~3x",
+          "1x",
+          "~0.7x",
+          "—"
+        ],
+        "note": "越少越好"
+      },
+      {
+        "label": "推理速度（token/秒）",
+        "values": [
+          "750",
+          "极快",
+          "~200",
+          "~300",
+          "~150"
+        ],
+        "note": "越高越好"
+      },
+      {
+        "label": "多Agent并行",
+        "values": [
+          "4-16个",
+          "不支持",
+          "不支持",
+          "不支持",
+          "不支持"
+        ],
+        "note": "越多越强"
+      },
+      {
+        "label": "编码任务综合成本",
+        "values": [
+          "~33%",
+          "~6%",
+          "100%",
+          "~80%",
+          "~5%"
+        ],
+        "note": "越低越省钱"
+      }
+    ]
+  },
+  "orig_category": "AI评测",
+  "content_type": "AI评测",
+  "seo_title": "GPT-5.6全面开放深度解读：三档模型杀穿性价比、ChatGPT Work正面硬刚Claude Cowork",
+  "faq": [
+    {
+      "question": "GPT-5.6 三档模型有什么区别？",
+      "answer": "Sol 是旗舰（输入 5 美元/百万 token），适合复杂推理和编码；Terra 均衡（2.5 美元），覆盖 80% 日常场景；Luna 轻量（1 美元），适合高频轻量任务和批量调用。"
+    },
+    {
+      "question": "GPT-5.6 为什么先被白宫限制？",
+      "answer": "6 月 26 日预览时因网络安全能力与 Mythos 5 同级被白宫限制，仅向约 20 家政府审查伙伴开放；7 月 7 日安全审查通过后，7 月 9-10 日全球推送。"
+    },
+    {
+      "question": "GPT-5.6 比 Claude Fable 5 强在哪？",
+      "answer": "编码场景输出 token 不到 Fable 5 的一半、耗时缩短 57%，综合成本约三分之一；Agents Last Exam 领先 13.1 分，Terminal-Bench 和 DeepSWE 都创了新高。"
+    },
+    {
+      "question": "GPT-5.6 的 Ultra 模式是什么？",
+      "answer": "多智能体并行模式，默认 4 个 Agent 同时协作，API 用户可扩展到 16 个；在 BrowseComp、Terminal-Bench 2.1 等评测上让得分-延迟曲线整体更优。"
+    },
+    {
+      "question": "ChatGPT Work 是什么？",
+      "answer": "能跨 Slack、Notion、Microsoft 365、Google Drive 自主连续工作数小时的 AI 智能体，和 Codex、聊天功能一起并入统一的 ChatGPT 桌面应用。"
+    }
+  ]
+}

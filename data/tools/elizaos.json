@@ -1,0 +1,85 @@
+{
+  "name": "ElizaOS",
+  "slug": "elizaos",
+  "emoji": "🤖",
+  "color": "#4A90D2",
+  "description": "开源AI Agent框架（ai16z生态），被誉为“Agent的Linux”，帮助开发者在数分钟内搭建可自主运行、跨平台交互的AI智能体，广泛用于Web3场景。",
+  "category": "去中心化AI",
+  "tags": [
+    {
+      "text": "AI Agent框架"
+    },
+    {
+      "text": "开源"
+    },
+    {
+      "text": "Web3"
+    }
+  ],
+  "rating": "⭐ 4.4",
+  "visits": "N/A",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://elizaos.ai",
+  "price": "开源免费",
+  "platform": "Node.js / TypeScript",
+  "pros": [
+    "开源活跃",
+    "多链集成",
+    "插件丰富",
+    "社区庞大"
+  ],
+  "cons": [
+    "需开发基础",
+    "文档迭代快",
+    "生态较新"
+  ],
+  "features": [
+    "Agent编排",
+    "多链钱包",
+    "插件系统",
+    "社交平台接入"
+  ],
+  "faq": [
+    {
+      "q": "ElizaOS 和 LangChain 有什么区别？",
+      "a": "LangChain 是通用 LLM 应用框架，ElizaOS 则从第一天起面向 Web3，内置链上读写、社交平台接入和自主智能体能力，开箱即用。"
+    },
+    {
+      "q": "ElizaOS 的智能体如何定义人格？",
+      "a": "通过 character file（TypeScript/JSON）配置智能体的名字、背景、知识领域、说话风格与行为约束。"
+    },
+    {
+      "q": "ElizaOS 支持哪些平台？",
+      "a": "通过 90+ 官方插件支持 Discord、Telegram、Twitter/X 等社交平台，以及 Solana、Ethereum、Base 等区块链和 OpenAI、Anthropic 等模型。"
+    },
+    {
+      "q": "ai16z 和 ElizaOS 是什么关系？",
+      "a": "项目最初以 ai16z 名义于 2024 年 10 月推出，后为避免与风投 a16z 的品牌冲突更名为 ElizaOS，2025 年完成从 $ai16z 到 $elizaOS 的代币迁移。"
+    },
+    {
+      "q": "ElizaOS 是免费的吗？",
+      "a": "框架本身开源免费，核心代码托管在 GitHub；托管平台与代币相关的付费细节以官网为准。"
+    },
+    {
+      "q": "一个智能体只有一套记忆吗？",
+      "a": "不是，记忆分多层，包括会话内对话历史、RAG 索引的知识库和跨会话的结构化关系记忆。"
+    },
+    {
+      "q": "需要多强的技术背景？",
+      "a": "官方强调「三条命令创建第一个智能体」，适合有基础 Node.js/Bun 使用经验的开发者快速上手。"
+    }
+  ],
+  "content": "## 是什么\nElizaOS 是一个开源的 TypeScript AI Agent 框架，前身是 ai16z 生态，被誉为「Agent 的 Linux」。它让开发者用几行配置就能创建能聊天、能上链、能运营社交账号的自主 AI 智能体。\n\n## 核心特点\n- 角色文件定义人格：通过 character file（TypeScript/JSON）配置智能体的名字、背景、知识领域与说话风格。\n- 90+ 官方插件：覆盖 Discord、Telegram、Twitter/X 等社交平台，以及 Solana、Ethereum、Base 等区块链，还有 OpenAI、Anthropic 等模型接入。\n- 持久记忆系统：智能体能记住对话历史、关系与知识，进行长期连贯互动。\n- 多智能体协作：可编排多个分工智能体（研究、交易、运营）共享记忆与消息传递。\n\n## 技术原理\n每个智能体由 Agent Runtime 统一调度，Runtime 管理状态、事件与记忆持久层；插件为智能体扩展动作能力，Provider 为 LLM 组装上下文，Evaluator 在对话后提取要点更新知识库。智能体可接多个客户端适配器，实现跨平台收发消息。\n\n## 价格与收费\nElizaOS 本身为开源免费框架，核心代码在 GitHub 开放；托管平台 Eliza Cloud 及代币 $elizaOS（2025 年由 $ai16z 迁移而来）的付费细节以官网为准。\n\n## 适用人群\n适合想快速构建 Web3 智能体、DeFi 客服机器人、链上监控员、游戏 NPC 或 DAO 助手的开发者，尤其面向既有区块链又有 AI 需求的团队。\n数据以官网为准。",
+  "published": true,
+  "source_urls": [
+    "https://elizaos.ai",
+    "http://iq.wiki/wiki/eliza-ai"
+  ],
+  "content_verified": true,
+  "last_verified": "2026-08-16",
+  "created_date": "2026-08-16",
+  "published_date": "2026-08-16"
+}

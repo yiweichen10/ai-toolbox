@@ -1,0 +1,156 @@
+{
+  "name": "Pieces",
+  "slug": "pieces",
+  "positioning": "免费AI开发工具：OS 级自动捕获工作+基于时间的可",
+  "auto_positioning": true,
+  "emoji": "🧩",
+  "color": "#6C63FF",
+  "description": "Pieces 是面向开发者与工作者的本地优先 AI 记忆层，在后台自动捕获代码、文档、聊天、浏览等上下文，沉淀为可搜索的长期记忆，并通过 MCP 接入 Copilot、Claude、Cursor 等 AI 助手，让任意工具都能调用跨应用上下文。",
+  "category": "AI开发",
+  "tags": [
+    "AI记忆",
+    "代码片段",
+    "开发者工具",
+    "本地优先",
+    "MCP"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://pieces.app",
+  "price": "免费下载；团队/企业版价格未公开",
+  "platform": "桌面端 Windows/macOS/Linux（需 PiecesOS），浏览器扩展，支持 VS Code/JetBrains/Chrome 等",
+  "pros": [
+    "本地优先，数据隐私可控、可离线",
+    "自动捕获上下文，免手动复制粘贴",
+    "可切换多家云端/本地模型或自带密钥",
+    "覆盖浏览器到 IDE 的广泛插件",
+    "强大搜索与标签，快速定位历史代码"
+  ],
+  "cons": [
+    "高级/团队功能需付费，免费版有限",
+    "团队协作能力仍在完善",
+    "模型切换或复杂查询时响应可能略慢",
+    "常驻后台占用一定系统资源"
+  ],
+  "features": [
+    "OS 级自动捕获工作上下文（代码、文档、聊天、浏览）",
+    "基于时间的可搜索长期记忆（LTM-2 引擎）",
+    "本地优先 / 端侧处理，隐私可控、可离线",
+    "代码片段保存、AI 标签与一键复用",
+    "Pieces MCP Server 将记忆接入 Copilot/Claude/Cursor/Goose",
+    "跨应用插件覆盖浏览器到 IDE"
+  ],
+  "related": [
+    "github-copilot",
+    "cursor",
+    "tabnine",
+    "sourcegraph-cody"
+  ],
+  "faq": [
+    {
+      "q": "Pieces 是免费的吗？",
+      "a": "Pieces 提供免费版（基础记忆与捕获），高级功能与团队/企业方案需付费，具体价格见官网。"
+    },
+    {
+      "q": "Pieces 支持哪些 IDE？",
+      "a": "支持 VS Code、Visual Studio、JetBrains 系列、JupyterLab、Sublime、Neovim 等，并提供浏览器扩展。"
+    },
+    {
+      "q": "Pieces 的数据存在哪里？",
+      "a": "默认本地优先（on-device）存储，用户可自行决定是否启用云端同步，隐私可控。"
+    },
+    {
+      "q": "Pieces 和 GitHub Copilot 有什么不同？",
+      "a": "Pieces 侧重跨应用上下文记忆与片段管理，并通过 MCP 接入各类 AI 助手；Copilot 主要做代码补全。二者可互补。"
+    }
+  ],
+  "seo_keywords": [
+    "Pieces",
+    "Pieces怎么样",
+    "Pieces免费版",
+    "Pieces使用教程",
+    "Pieces和哪个好"
+  ],
+  "content": "## Pieces 是一个面向工作者 是什么？\n\nPieces 是一个面向工作者（尤其是开发者）的本地优先 AI 记忆层。它不打断你的工作，而是在后台默默捕获屏幕、剪贴板、会议等内容，把散落在邮件、代码、聊天、浏览器里的工作上下文，整理成一份可搜索的记忆，并能被你随时提问——相当于给杂乱的数字工作流装了一层\"可检索的上下文\"。\n\n## 核心功能\n\n它运行在你的电脑上（需要 PiecesOS），默认捕获你正在使用的应用和复制粘贴的内容，会议与对话则是可选项。因为记忆是按时序沉淀的，你可以问\"三天前我看的那个网页讲了什么\"\"这周关于某项目我收集了哪些资料\"，Pieces 会基于真实上下文生成晨报、复盘、会议纪要等，把翻找记录的时间压缩成一次点击，而不必再靠大脑或一堆书签去回忆。\n\n隐私是它的一大卖点：记忆默认存在本地设备上（on-device），你可以随时暂停捕获、禁用某个应用的记录，或删除特定时间段、特定来源的数据。对企业，还能自带 API Key、设定组织级捕获策略以满足合规，在享受便利的同时把数据边界握在自己手里。\n\n## 价格与平台\n\n真正让它\"活\"起来的是 Pieces MCP Server：它把这份记忆接入 Claude、Cursor、Codex 等 MCP 就绪的 AI 助手，让你在任何工具里都能调出跨应用的上下文，而不必重复粘贴背景。Pieces 支持 Windows、macOS、Linux 桌面端，并配合浏览器扩展与 VS Code、JetBrains、Chrome 等集成。价格上可免费下载使用，团队/企业方案暂未公开。对同时在十几个工具间切换、又苦于上下文丢三落四的人，它是一个低摩擦的记忆外挂。\n\n使用 Pieces 的一个隐性前提是：你愿意让它常驻后台。它的价值随捕获的上下文越多而越大，刚装上时记忆是空的，用上一阵才会明显\"懂你\"。对担心隐私的人，本地优先和可控删除是它的底线，企业还能进一步约束捕获范围与 API Key。它不试图替你写东西，而是把散落的上下文重新连起来，让你和任意 AI 助手对话时都不必从头交代背景。对同时在十几个工具间切换、又苦于上下文丢三落四的重度用户，这种\"记忆外挂\"的回报最明显。\n\n## 最终结论\n\n从工作流角度，Pieces 的价值随使用时间累积：它越了解你的上下文，给出的晨报、复盘、会议纪要越准。但它不是记事本的替代品，而是把散落各处的上下文重新连起来。建议装好就让它常驻，并把常用应用（邮件、IDE、会议）纳入捕获；当你和 Claude、Cursor 等助手配合时，这份记忆才会真正被用起来。\n",
+  "published": true,
+  "source_url": "https://pieces.app",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://pieces.app",
+  "verified_publisher": "Pieces (Pieces for Developers)",
+  "verified_what": "Pieces 是本地优先（on-device）的 AI 记忆层 / OS 级 AI 伴侣，自动捕获代码、文档、聊天、浏览等上下文，形成可搜索记忆，并通过 MCP 接入 GitHub Copilot、Claude、Cursor 等 LLM。",
+  "verified_price": "可免费下载使用；团队/企业方案价格未公开（以官网为准）。",
+  "verified_platform": "桌面端 Windows / macOS / Linux（需 PiecesOS）；浏览器扩展；VS Code、Visual Studio、JetBrains、JupyterLab、Sublime、Neovim 等插件；CLI、Raycast、Obsidian",
+  "verified_features": [
+    "OS 级自动捕获工作上下文（代码、文档、聊天、浏览）",
+    "基于时间的可搜索长期记忆（LTM-2 引擎）",
+    "本地优先 / 端侧处理，隐私可控、可离线",
+    "代码片段保存、AI 标签与一键复用",
+    "Pieces MCP Server 将记忆接入 Copilot/Claude/Cursor/Goose",
+    "跨应用插件覆盖浏览器到 IDE"
+  ],
+  "verified_description": "Pieces 是面向开发者与工作者的本地优先 AI 记忆层，在后台自动捕获代码、文档、聊天、浏览等上下文，沉淀为可搜索的长期记忆，并通过 MCP 接入 Copilot、Claude、Cursor 等 AI 助手，让任意工具都能调用跨应用上下文。",
+  "price_verified": true,
+  "verified_pros": [
+    "本地优先，数据隐私可控、可离线",
+    "自动捕获上下文，免手动复制粘贴",
+    "可切换多家云端/本地模型或自带密钥",
+    "覆盖浏览器到 IDE 的广泛插件",
+    "强大搜索与标签，快速定位历史代码"
+  ],
+  "verified_cons": [
+    "高级/团队功能需付费，免费版有限",
+    "团队协作能力仍在完善",
+    "模型切换或复杂查询时响应可能略慢",
+    "常驻后台占用一定系统资源"
+  ],
+  "verified_faq": [
+    {
+      "q": "Pieces 是免费的吗？",
+      "a": "Pieces 提供免费版（基础记忆与捕获），高级功能与团队/企业方案需付费，具体价格见官网。"
+    },
+    {
+      "q": "Pieces 支持哪些 IDE？",
+      "a": "支持 VS Code、Visual Studio、JetBrains 系列、JupyterLab、Sublime、Neovim 等，并提供浏览器扩展。"
+    },
+    {
+      "q": "Pieces 的数据存在哪里？",
+      "a": "默认本地优先（on-device）存储，用户可自行决定是否启用云端同步，隐私可控。"
+    },
+    {
+      "q": "Pieces 和 GitHub Copilot 有什么不同？",
+      "a": "Pieces 侧重跨应用上下文记忆与片段管理，并通过 MCP 接入各类 AI 助手；Copilot 主要做代码补全。二者可互补。"
+    }
+  ],
+  "verified_tags": [
+    "AI记忆",
+    "代码片段",
+    "开发者工具",
+    "本地优先",
+    "MCP"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://pieces.app",
+    "https://pieces.app/use-cases/software-engineers",
+    "https://docs.pieces.app/plugins"
+  ],
+  "verify_notes": "官网与多来源确认 Pieces.app 为真实产品，定位（本地优先 AI 记忆层、MCP、on-device）与现有数据高度一致，无需重大修正。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Pieces 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Pieces 的 OS 级自动捕获工作上下文（代码、文档、聊天、浏览） 是亮点，价格 免费下载；团队/企业版价格未公开；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-05",
+  "created_date": "2026-08-05"
+}

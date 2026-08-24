@@ -1,0 +1,97 @@
+{
+  "name": "GitHub Copilot SDK",
+  "slug": "github-copilot-sdk",
+  "positioning": "GitHub Copilot SDK是什么？把Copilot智能体嵌进自家应用好用吗",
+  "auto_positioning": false,
+  "emoji": "🧩",
+  "color": "#24292F",
+  "description": "GitHub 官方开源项目（github/copilot-sdk，MIT 许可，约 1.04 万星），把 Copilot CLI 背后那套经生产验证的 Agent 运行时开放给开发者：规划、工具调用、文件编辑、流式输出与多轮会话开箱即用，不用自己写编排层。2026 年 4 月 2 日公开预览、6 月 2 日正式 GA，提供 Node/TypeScript、Python、Go、.NET、Rust、Java 六语言 SDK，支持自定义工具与 MCP、系统提示词分段改写、OpenTelemetry 追踪、hook 拦截与 BYOK。",
+  "category": "AI开发",
+  "tags": [
+    {
+      "text": "开源项目"
+    },
+    {
+      "text": "官方 SDK"
+    },
+    {
+      "text": "六语言支持"
+    },
+    {
+      "text": "MCP 支持"
+    }
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/github/copilot-sdk",
+  "price": "SDK 本身 MIT 开源免费；调用能力对所有 GitHub Copilot 订阅者开放（含免费的 Copilot Free），非 Copilot 用户可通过 BYOK 使用自己的 OpenAI、Microsoft Foundry、Anthropic 等密钥。官方说明：每次 prompt 会计入 Copilot 高级请求配额",
+  "platform": "跨平台（Node.js/TypeScript、Python、Go、.NET、Rust、Java 六语言 SDK；SDK 自动管理 Copilot CLI 进程生命周期，通过 JSON-RPC 经 stdio 或 TCP 通信）",
+  "pros": [
+    "复用 Copilot CLI 同一套经生产验证的 Agent 运行时，规划、工具调用、文件编辑不必自己实现",
+    "六语言官方 SDK，.NET、Java、Rust 这类企业语言也是一等公民，不是社区凑的绑定",
+    "自定义工具 + MCP + 可覆盖内置 grep/edit_file，扩展口子开得很大",
+    "系统提示词能按身份、语气、工具说明、安全规则分段替换，不用整段重写",
+    "内置 OpenTelemetry 与 hook 体系，权限审批、追踪、调试都有官方挂点"
+  ],
+  "cons": [
+    "SDK 开源但底座是 Copilot 闭源引擎，运行时与模型都无法自托管",
+    "计费绑定 Copilot 高级请求配额，高频 Agent 场景要先把额度算清楚",
+    "迭代非常快（8 月仍在几乎日更 CLI 依赖版本），API 已稳定但版本跟进有维护成本"
+  ],
+  "features": [
+    "Agent 运行时直连：planning、工具调用、文件编辑、token 级流式输出、多轮会话",
+    "自定义工具与 MCP：注册自有工具交给 Agent 自主调用，接入 MCP server，或覆盖内置工具",
+    "系统提示词分段定制：支持 replace / append / prepend 与动态 transform 回调",
+    "灵活认证：GitHub OAuth、GitHub Apps、环境变量 token，以及面向多家模型商的 BYOK",
+    "云端与远程会话：可创建带仓库元数据的云端会话，或按需开启远程会话 URL",
+    "Hook 与权限框架：pre/post tool use、会话启动、MCP 工具调用、权限请求都可拦截，只读工具可跳过授权"
+  ],
+  "related": [
+    "github-copilot",
+    "claude-agent-sdk",
+    "codex-cli"
+  ],
+  "content": "## GitHub Copilot SDK是什么？\n\nGitHub Copilot SDK 是 GitHub 官方的开源项目（仓库 github/copilot-sdk，MIT 许可，建库于 2026 年 1 月 14 日，目前约 1.04 万星），一句话概括就是：把 Copilot 的 Agent 能力做成可以嵌进你自己应用里的 SDK。它暴露的不是一个新模型接口，而是 Copilot CLI 背后那套已经在生产里跑过的 Agent 运行时——规划、工具调用、文件编辑、流式输出、多轮会话都由 Copilot 负责，你只负责定义 Agent 的行为，不用再自己搭一层编排。\n\n架构上它做得挺克制：你的应用调 SDK，SDK 自动拉起并管理 Copilot CLI 的 server 模式进程，两者之间走 JSON-RPC（stdio 或 TCP），CLI 再对接 GitHub 的模型与认证。也就是说进程管理这类脏活官方帮你兜了。时间线上，2026 年 4 月 2 日进入公开预览，6 月 2 日宣布正式 GA，API 面在 GA 时做过一轮基于预览反馈的清理，官方口径已是「稳定、可用于生产」。\n\n## 核心功能\n\n1. 自定义工具与 MCP：注册你自己的工具让 Agent 自主决定何时调用，接入 MCP server，甚至覆盖 grep、edit_file 这些内置工具。\n2. 系统提示词分段定制：按身份、语气、工具说明、安全规则等分区做 replace / append / prepend，或用动态 transform 回调改写，不必重写整段 prompt。\n3. 认证方式灵活：GitHub OAuth、GitHub Apps、环境变量 token，以及面向 OpenAI、Microsoft Foundry、Anthropic 等的 BYOK。\n4. 云端与远程会话：可创建带仓库元数据的云端会话，或按需开启远程会话 URL，适合把 Agent 放进 CI/CD 与内部平台。\n5. 可观测与可拦截：内置 OpenTelemetry 分布式追踪（W3C trace context 贯穿 CLI 启动、JSON-RPC 调用、会话操作与工具执行），配合 hook 体系可在工具调用前后、会话启动、权限请求处插手。\n\n## 版本/套餐对比\n\nSDK 代码本身是 MIT 开源、免费取用，真正决定成本的是背后的调用额度。官方在 GA 公告里写得很清楚：SDK 对所有 GitHub Copilot 订阅者开放，包括个人可用的 Copilot Free；不是 Copilot 用户也能通过 BYOK 用自己的模型密钥。同时有一句必须留意——对 Copilot 订阅者而言，每一次 prompt 都会计入你的高级请求（premium request）配额。所以选档逻辑其实是：轻量试水用 Copilot Free 或 BYOK，要把 Agent 放进日常研发流水线，就得按预计 prompt 量去反推该上哪档 Copilot 订阅。\n\n从预览到 GA 的增量也值得一提：新增了默认打包 Copilot CLI 二进制的 Rust SDK、Java 正式加入，多客户端协作（不同客户端向同一会话贡献工具与权限）更完善，斜杠命令与交互式输入提示在所有语言 SDK 上齐平。\n\n## 值不值得用？\n\n如果你本来就在 GitHub 生态里，这几乎是最省事的一条路。最大的价值不是「能调模型」，而是省掉了自建 Agent 编排的那几千行——权限、hook、追踪、多轮会话、文件编辑这些细节，自己写一遍就知道有多耗人。六语言覆盖也不是凑数，.NET 和 Java 有官方 SDK 这件事，对企业内部平台团队来说分量很足。\n\n短板同样明确。SDK 开源不等于底座开源：Copilot 引擎仍是闭源云服务，你无法自托管，也就意味着数据边界与可用性都得接受 GitHub 的条款。计费上和高级请求配额挂钩，Agent 一旦跑成高频任务，账单模型要提前算。另外它迭代得非常猛，8 月仓库里还在几乎每天更新 CLI 依赖版本——好处是问题修得快，代价是你得跟版本。\n\n## 使用建议\n\n1. 先跑官方 Getting Started 起一个最小 Agent，把 SDK 拉起 CLI、走通 JSON-RPC 这条链路确认环境没问题。\n2. 从 cookbook 里挑最接近你场景的配方改，比从零写省事得多。\n3. 上生产前先把权限框架配好：敏感操作走审批 handler，只读工具标记成免授权，能少一半误操作风险。\n4. 打开 OpenTelemetry 追踪再上量，慢在哪、卡在哪一目了然，别等出问题才补观测。\n5. 用 BYOK 还是 Copilot 配额，最好在设计阶段就定，两者的成本曲线完全不同。\n\n## 适合谁用？\n\n推荐：想在自家应用、内部平台或 IDE 扩展里嵌入 Agent 能力的开发团队，尤其是已经买了 Copilot、技术栈在 .NET / Java / Node 上的企业。\n可考虑：做 CI/CD 助手、代码审查机器人、面向客户的 AI 功能的团队，先用 Copilot Free 或 BYOK 验证可行性。\n不推荐：要求模型与运行时完全自托管、数据不出内网的场景，以及不接受按 prompt 计入配额这种计费方式的团队。",
+  "published": false,
+  "faq": [
+    {
+      "question": "GitHub Copilot SDK 是开源的吗？",
+      "answer": "是。它是 GitHub 官方开源项目，仓库地址 github/copilot-sdk，采用 MIT 许可，目前约 1.04 万星。但要注意 SDK 开源不等于底座开源——它背后调用的 Copilot 引擎仍是闭源云服务。"
+    },
+    {
+      "question": "用 Copilot SDK 要花钱吗？",
+      "answer": "SDK 免费。按官方 GA 公告，SDK 对所有 Copilot 订阅者开放（含个人可用的 Copilot Free），非 Copilot 用户可通过 BYOK 用自己的模型密钥。对 Copilot 订阅者，每次 prompt 会计入高级请求配额。"
+    },
+    {
+      "question": "支持哪些编程语言？",
+      "answer": "六种：Node.js/TypeScript（npm install @github/copilot-sdk）、Python（pip install github-copilot-sdk）、Go、.NET、Rust 与 Java。其中 Rust 与 Java 是在 2026 年 6 月 GA 时补齐的。"
+    },
+    {
+      "question": "它和 Claude Agent SDK 有什么不同？",
+      "answer": "定位相似但生态不同：Copilot SDK 复用的是 Copilot CLI 的运行时，天然贴 GitHub 的上下文、认证与权限模型，并提供六语言官方 SDK；Claude Agent SDK 则与 Claude Code 同源，主打 Python/TypeScript。选哪个通常取决于你团队已有的订阅与技术栈。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "GitHub Copilot SDK",
+    "GitHub Copilot SDK怎么用",
+    "GitHub Copilot SDK免费吗",
+    "Copilot SDK 教程",
+    "Copilot SDK 和 Claude Agent SDK 哪个好"
+  ],
+  "source_urls": [
+    "https://github.com/github/copilot-sdk",
+    "https://github.blog/changelog/2026-06-02-copilot-sdk-now-generally-available/",
+    "https://github.blog/changelog/2026-04-02-copilot-sdk-in-public-preview",
+    "https://api.github.com/repos/github/copilot-sdk"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

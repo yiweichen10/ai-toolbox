@@ -1,0 +1,126 @@
+{
+  "batch_id": "b14",
+  "category": "AI行业应用",
+  "tools": [
+    {
+      "slug": "zendesk-ai",
+      "name": "Zendesk AI",
+      "url_current": "https://www.zendesk.com",
+      "url_ok": true,
+      "url_correct": "https://www.zendesk.com",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网域名正确。价格写“基础版$49/用户/月起”无官方依据：官网 Support Team $19/席/月、Suite Team $55、AI（Copilot）为$50/席/月附加组件。功能与GPT-4/AI代理定位描述正常。"
+    },
+    {
+      "slug": "duolingo-max",
+      "name": "Duolingo Max",
+      "url_current": "https://duolingo.com",
+      "url_ok": true,
+      "url_correct": "https://duolingo.com",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网域名正确。定价写“约$12.99/月”错误，官网 Max 为 $29.99/月（年付$168）。GPT-4驱动、Roleplay/Explain My Answer 功能描述属实。"
+    },
+    {
+      "slug": "khanmigo",
+      "name": "Khanmigo",
+      "url_current": "https://khanmigo.khanacademy.org",
+      "url_ok": true,
+      "url_correct": "https://www.khanmigo.ai",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "可汗学院官方AI导师，GPT-4、苏格拉底式引导、多学科辅导属实。当前URL为 khanacademy.org 官方子域，产品主站为 khanmigo.ai。站内 price 字段为空（实际家长/学习者 $4/月或$44/年），非错误断言。"
+    },
+    {
+      "slug": "quizlet-ai",
+      "name": "Quizlet AI",
+      "url_current": "https://quizlet.com",
+      "url_ok": true,
+      "url_correct": "https://quizlet.com",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网域名正确。专业版“$7.99/月”为过期旧价，官网现 Quizlet Plus 约 $2.99–$3.74/月（年付$35.99–$44.99）；“教育版需联系销售”不实（教师版$35.99/年自助购买）。AI闪卡/Q-Chat功能描述正常。"
+    },
+    {
+      "slug": "ada-health",
+      "name": "Ada Health",
+      "url_current": "https://ada.com",
+      "url_ok": true,
+      "url_correct": "https://ada.com",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网域名正确，开发方 Ada Health GmbH（柏林）属实，症状评估/就医建议功能正常。专业版$9.99/月处于官方区间（$5–$10/月）上限，基本合理，非明显幻觉。"
+    },
+    {
+      "slug": "bloomberg-gpt",
+      "name": "Bloomberg GPT",
+      "url_current": "https://www.bloomberg.com/company/press/bloomberg-gpt/",
+      "url_ok": true,
+      "url_correct": "https://www.bloomberg.com/company/press/bloomberggpt-50-billion-parameter-llm-tuned-finance/",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "彭博官方金融大模型，500亿参数、2023年发布、基于彭博终端数据训练、需订阅终端机（$2,000+/月）均属实。URL为彭博官方新闻页，正确。"
+    },
+    {
+      "slug": "kensho-ai",
+      "name": "Kensho AI",
+      "url_current": "https://www.kensho.com",
+      "url_ok": true,
+      "url_correct": "https://www.kensho.com",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "S&P Global 旗下企业级AI数据分析平台，官网 kensho.com 正确，自然语言查询/企业定制定价描述属实。"
+    },
+    {
+      "slug": "cocounsel",
+      "name": "CoCounsel",
+      "url_current": "https://cocounsel.com",
+      "url_ok": false,
+      "url_correct": "https://cocounsel.thomsonreuters.com/",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "URL红线：cocounsel.com 已于2025-03-31停用，官方现为 cocounsel.thomsonreuters.com（非仿冒，系旧官方域退役，故 conflict=false）。内容称“Clio推出”错误——实为 Casetext 构建、汤森路透收购（描述栏“Thomson Reuters”才正确）。定价“$39/月、Clio用户可免费使用基础版”均不实：现为企业销售制 $104–$639/席/月，无公开免费版。"
+    },
+    {
+      "slug": "spellbook",
+      "name": "Spellbook",
+      "url_current": "https://www.spellbook.legal",
+      "url_ok": true,
+      "url_correct": "https://www.spellbook.legal",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 spellbook.legal 正确（旧域 spellbook.com 为$99首月促销页）。定价“免费版/专业版$29/月/团队版$99/月”无依据：现官网按团队人数定制、仅7天免费试用，无公开固定档位价格。Word插件/合同审查功能描述正常。"
+    },
+    {
+      "slug": "robin-ai",
+      "name": "Robin AI",
+      "url_current": "https://robinai.com",
+      "url_ok": true,
+      "url_correct": "https://robinai.com",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 robinai.com 正确。定价“个人版$29/月、专业版$99/月”不实：旧 Pro 曾为$100/席/月且已于2025年停用，现转为企业定制/演示报价（含免费档10条消息/日）。平台写“Chrome插件、VS Code插件”无依据——实为 Microsoft Word 插件 + 网页平台。基于 Claude（Anthropic）属实。"
+    }
+  ]
+}

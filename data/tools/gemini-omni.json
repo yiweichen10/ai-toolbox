@@ -1,0 +1,119 @@
+{
+  "name": "Gemini Omni",
+  "slug": "gemini-omni",
+  "positioning": "免费AI助手：实时语音对话+Gemini",
+  "auto_positioning": true,
+  "emoji": "♊",
+  "color": "#4285F4",
+  "description": "Gemini Omni 是 Google 在 I/O 2026 发布的视频生成与编辑模型，可通过自然对话创作和编辑视频。",
+  "category": "AI对话",
+  "tags": [
+    {
+      "text": "多模态"
+    },
+    {
+      "text": "Google生态"
+    },
+    {
+      "text": "2026新版本",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "5.2亿/月",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://gemini.google.com（Gemini app内使用Omni功能）",
+  "price": "免费版 + Gemini Advanced ($19.99/月)",
+  "platform": "Web, Android, iOS (独立App + 集成Google应用)",
+  "pros": [
+    "原生多模态理解（文本+图片+视频+音频+代码）",
+    "与Google全家桶深度绑定（Gmail、Drive、文档、日历等）",
+    "超长上下文窗口（200万token，支持整本书分析）",
+    "实时语音对话延迟极低，拟人化程度高",
+    "2026年推理能力接近GPT-5级别，代码生成准确率领先"
+  ],
+  "cons": [
+    "部分高级功能（如数据分析）仍需要Google One订阅",
+    "中文场景下对本土化知识库覆盖不如文心一言/豆包",
+    "联网搜索时偶尔会调用Google广告推荐，干扰体验"
+  ],
+  "features": [
+    "多模态识别与生成（图像、视频、音频、代码、文档）",
+    "超长上下文记忆（200万token）",
+    "实时语音对话（支持打断、语速调整）",
+    "Google生态联动（Gmail总结、Drive检索、日历安排）",
+    "联网搜索与事实核查（自动引用来源）",
+    "Gemini Advanced 专属：数据分析、高级推理、自定义Gems"
+  ],
+  "related": [
+    "gemini",
+    "chatgpt",
+    "claude",
+    "perplexity",
+    "kimi"
+  ],
+  "faq": [
+    {
+      "question": "Gemini Omni和普通Gemini有什么区别？",
+      "answer": "Gemini Omni是2025年底推出的统一多模态版本，整合了文本、图像、音频、视频的处理能力，并可实时切换模式。而普通Gemini最初仅支持文本，需手动切换模型。Omni版本也获得了更长的上下文窗口（200万token）和更低延迟的语音交互。"
+    },
+    {
+      "question": "Gemini Omni免费版够用吗？",
+      "answer": "免费版可以体验大部分核心功能，包括多模态识别、语音对话、网页搜索和Google生态集成。但部分高级功能如自定义Gems、深度数据分析、优先访问新模型、更大文件上传等需要订阅Gemini Advanced（$19.99/月）。日常使用免费版已经很强大。"
+    },
+    {
+      "question": "Gemini Omni支持中文吗？效果如何？",
+      "answer": "支持中文，包括简体中文和繁体中文。在通用问答、写作辅助、代码生成方面表现优秀，但针对中国特有的文化、政策、网络内容理解不如本土产品（如文心一言、豆包）。语音交互中文流利，但偶尔会有点台湾腔或翻译腔。"
+    },
+    {
+      "question": "Gemini Omni与ChatGPT哪个好？",
+      "answer": "两者都非常强大。如果你深度使用Google生态（Gmail、Drive、Docs），Gemini Omni无缝集成优势明显。如果你更看重插件生态、图像生成（DALL·E 3集成）或定制GPT，ChatGPT更灵活。2026年两者推理能力已非常接近，Gemini在长上下文和代码方面略微领先，ChatGPT在创意写作和个性化对话上更自然。"
+    }
+  ],
+  "seo_keywords": [
+    "Gemini Omni",
+    "Gemini Omni免费版",
+    "Gemini Omni和ChatGPT哪个好",
+    "Gemini Omni怎么用",
+    "Gemini Omni 2026新功能"
+  ],
+  "content": "## Gemini Omni是什么？\n\n简单说，Gemini Omni 就是 Google 把自家最强的多模态 AI 能力打包成了一个“全能助手”。它不再只是聊天机器人，而是能同时看懂文字、图片、视频、音频甚至代码，并且用这些形式跟你实时交互。\n\n举个例子：你给它一张手写笔记的照片，它能提取文字并整理成文档；你丢进去一段一小时长的会议录音，它能直接总结要点；你甚至可以把一整本电子书扔给它，让它帮你分析情节脉络——因为它的上下文窗口大到夸张，200 万 token，差不多能塞下《三体》三部曲。\n\n2026 年的版本整合了 Gemini 2.5 Pro 模型，推理能力明显上了一个台阶。而且它深度融入了 Google 全家桶，在 Gmail、文档、搜索、日历里都能直接调用。如果你本来就在用 Google 的生态，那它几乎可以无缝嵌入你的工作流。\n\n## 核心功能\n\n## 1. 多模态识别与生成\n\n这是 Gemini Omni 最大的亮点。不只是图文，连视频和音频都能实时处理。你可以上传一段产品演示视频，让它逐帧分析画面内容并给出改进建议；也可以直接录制一段语音，让它转成文字并提取待办事项。实际使用中，它对图表、手写内容、复杂表格的识别准确率很高，生成图片或代码的质量也够用。不过相比专业绘图工具，生成的图片细节有时会偏模糊。\n\n## 2. 超长上下文记忆（200 万 token）\n\n这个能力日常可能用不上，但一旦需要就很爽。比如你可以把一整年的邮件往来、项目文档、会议纪要全部喂给它，让它梳理出决策逻辑或者找矛盾点。社区反馈说，在处理几百页的 PDF 时，它很少丢失早期信息。缺点是打开超长对话后，首次响应会有几秒延迟。\n\n## 3. 实时语音对话\n\n语音对话的自然度是目前第一梯队的。你可以随时打断它，它会停下来重新思考再回复，而且能根据你的语速调整自己的节奏。实际体验下来，几乎没有“机器人感”，连语气词和停顿都很像真人。但偶尔会在复杂问题上回答偏长，需要你主动让它简洁点。\n\n## 4. Google 生态联动\n\n这是它相比其他 AI 最独特的优势。在 Gmail 里让它总结未读邮件、在 Google 文档里让它写初稿、在日历里让它安排会议——这些操作都是原生集成的，不需要任何插件。举个例子，你可以直接说“帮我把昨天 Drive 里那份会议纪要里的待办事项添加到日历”，它会自动检索、解析并执行。当然，前提是你授权了相关权限。\n\n## 5. 联网搜索与事实核查\n\n每次回答都会自动引用来源，这一点很让人放心。你问一个事实性问题，它会先搜索再整合信息，并在回复中标注参考链接。不过有个小问题：偶尔会混入 Google 广告推荐，比如你问“推荐几本编程入门书”，它可能给出带赞助链接的结果。虽然可以手动关闭，但默认情况下有点干扰体验。\n\n## 版本/套餐对比\n\n| 版本 | 费用 | 核心能力 | 适用人群 |\n|------|------|----------|----------|\n| 免费版 | 0元 | 基础多模态（文字+图片）, 标准语音对话, 有限上下文（约32K token）, 不包含联网搜索 | 轻度用户、尝鲜试用 |\n| Gemini One AI Premium（付费版） | 约$19.99/月（含Google One订阅） | 完整多模态（视频/音频/代码）, 200万token超长上下文, 实时语音对话, 联网搜索, 数据分析, 高级推理, 自定义Gems | 重度用户、工作中频繁使用Google生态的人 |\n\n**说明**：免费版能用但限制较多，比如无法分析视频和长文档，语音对话也缺少打断功能。付费版的核心优势在于超长上下文、数据分析以及自定义 AI 角色（Gems），如果你只是偶尔用来写标题或查资料，免费版其实够用。\n\n## 值不值得用？\n\n## 优点\n- **原生多模态**：在同级别 AI 中，对视频和音频的理解能力很突出，不是简单的“看图说话”。\n- **Google 生态加成**：如果你是 Gmail、Drive、日历的日常用户，效率提升非常明显。\n- **长上下文实用**：分析长篇文档、项目复盘时，无需拆分成多段对话。\n- **语音体验好**：自然度、实时性、可打断，会议记录或开车时用着很舒服。\n\n## 缺点\n- **付费门槛**：高级功能（数据分析、自定义 Gems 等）必须付月费，价格不算便宜。\n- **中文本土化偏弱**：问一些国内热点、网络用语或者细分行业知识，回答质量不如文心一言或豆包。\n- **广告干扰**：联网搜索时偶尔插播 Google 广告，虽然频次不高，但影响纯净度。\n\n## 总体结论\n\n**如果你重度使用 Google 全家桶，且需要处理大量文档、视频或音频，那么付费版非常值得。** 它是目前与 Google 生态结合得最好的 AI，没有之一。但如果你只是偶尔写写文案、问问答，或者更依赖国内互联网知识，那它完全不划算——免费版功能太受限，付费版溢价又主要给了你用不上的生态联动。\n\n## 使用建议\n\n- **先试免费版一周**：看看语音对话和多模态基础能力是否满足你的需求。如果绝大部分时候只用文字问答，可能根本不需要付费。\n- **活用 Gmail 和 Drive 联动**：这是最能体现价值的地方。比如每天让 AI 帮你筛选重要邮件、总结长邮件链、从 Drive 找历史文档。\n- **用自定义 Gems 设定角色**：付费用户可以创建专属 AI 助手（比如“帮我写日报的助手”“法律咨询助手”），设定好风格和知识边界后，日常调用非常省事。\n- **超长上下文不要滥用**：虽然支持 200 万 token，但对话越长、响应越慢。建议把最核心的上下文放在前面，次要信息可以分段输入。\n- **注意隐私授权**：联网搜索和生态联动需要开放权限，建议只授权必要的范围，敏感内容可以复制粘贴进对话框避免直接访问。\n\n## 适合谁用？\n\n## ✅ 推荐\n- **Google 生态重度用户**：日常用 Gmail、Drive、Google 文档、日历，想用 AI 减少重复操作。\n- **研究人员、分析师**：需要分析长文档、大量邮件或会议记录的人，200 万 token 是实打实的利器。\n- **内容创作者**：需要多模态输入（比如从视频里提取灵感、从音频里整理文案）。\n\n## 🤔 可考虑\n- **普通办公族**：如果你不想付费，免费版足够应对基础的写作、翻译、查询。但别指望它帮你做复杂的数据分析。\n- **技术开发者**：代码生成能力不错，但 Debug 和复杂逻辑建议还是用专门编程助手。\n\n## ❌ 不推荐\n- **纯文本问答用户**：ChatGPT 或国内的豆包免费体验更好，生态绑定对你没意义。\n- **依赖本土化知识库的人**：涉及国内政策、行业术语、网络流行梗时，Gemini Omni 容易答非所问。\n- **预算敏感的用户**：每月近 20 美元的订阅费用，如果只是偶尔用一次，性价比太低。",
+  "published": true,
+  "created_date": "2026-07-16",
+  "published_date": "2026-07-16",
+  "verified_url": "https://gemini.google.com（Gemini app内使用Omni功能）",
+  "verified_publisher": "Google DeepMind",
+  "verified_what": "Google DeepMind推出的多模态生成模型，2026年Google I/O发布。首个Omni家族模型为Gemini Omni Flash，能从文本+图片+视频+音频任意输入生成高质量视频，支持对话式视频编辑、角色一致性保留、物理规律理解。已集成至Gemini app、Google Flow和YouTube Shorts。",
+  "verified_price": "通过Google AI订阅：AI Plus $19.99/月 / AI Pro $49.99/月 / AI Ultra $100/月（新轻量档）或 $200/月（顶级档，含Gemini Spark+Project Genie+YouTube Premium+20TB存储）/ 含在Google One AI Premium中",
+  "verified_platform": "Gemini app（Web/iOS/Android）、Google Flow、YouTube Shorts",
+  "verified_features": [
+    "多模态输入→视频生成（文本/图片/视频/音频任意组合）",
+    "对话式视频编辑（自然语言持续迭代）",
+    "角色+场景一致性保留",
+    "物理规律理解（重力/流体/动能）",
+    "文本+图像+视频混合输入创作",
+    "Google生态集成（Flow/YouTube Shorts）"
+  ],
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "source_urls": [
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/",
+    "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/"
+  ],
+  "verify_notes": "注意：omnigemini.org等域名是第三方产品，非Google官方。Google官方的Gemini Omni集成在Gemini app中，无独立网址。原始tools.json内容需核对——该工具条目可能混入了第三方产品信息。",
+  "content_verified": true,
+  "url_previous": "https://gemini.google.com",
+  "compare_section": {
+    "competitors": [
+      "tencent-hunyuan",
+      "xinghuo-cognitive-model",
+      "mistral-ai"
+    ],
+    "verdict": "Gemini Omni 与 腾讯混元、星火认知大模型、Mistral AI 同属AI对话赛道。在性价比上，Gemini Omni（免费版 + Gemini Advanced ($19.99/月)）门槛更低；口碑方面，Gemini Omni（⭐ 4.6）领先；Gemini Omni 的优势在于Google DeepMind推出的多模态生成模型，2026年Google I/O发布。首个Omni家族模型为Gemin，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "name": "Cartesia",
+  "slug": "cartesia",
+  "positioning": "实时语音合成+语音克隆：免费AI音频工具怎么用",
+  "auto_positioning": true,
+  "emoji": "🎙️",
+  "color": "#6366F1",
+  "description": "Cartesia是一个专注于实时语音AI的平台，提供超低延迟的语音合成（TTS）与语音转文字（STT）能力。其Sonic系列模型首字节延迟可低至90ms，支持40+种语言、语音克隆、情绪与笑声表达，并提供Line语音代理平台，是构建AI语音助手和实时对话应用的常用选择。",
+  "category": "AI音频",
+  "tags": [
+    "语音合成",
+    "语音克隆",
+    "实时语音",
+    "低延迟",
+    "语音转文字",
+    "语音代理"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "85万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://cartesia.ai",
+  "price": "免费版$0；付费版$5/月起（Pro）",
+  "platform": "Web/API/SDK",
+  "pros": [
+    "超低延迟实时语音合成（首字节约90ms，Sonic-3.5）",
+    "支持40+种语言，覆盖全球约95%人口",
+    "即时语音克隆与Pro企业级克隆",
+    "支持笑声与情绪表达，语音更自然",
+    "提供免费额度（每月20K积分），按量计费无最低消费",
+    "企业级安全合规（SOC 2、HIPAA、PCI）"
+  ],
+  "cons": [
+    "免费版仅限个人使用",
+    "Pro语音克隆需付费订阅",
+    "按积分/代理分钟计费，成本预估较复杂",
+    "主要面向API开发者，非技术用户门槛较高"
+  ],
+  "features": [
+    "实时语音合成（Sonic TTS，首字节延迟约90ms）",
+    "语音克隆（10秒即时克隆）",
+    "语音转换/变声",
+    "40+种语言支持",
+    "流式语音转文字（Ink STT）",
+    "语音情感与笑声控制",
+    "语音代理平台（Line）",
+    "开发者 API/SDK"
+  ],
+  "related": [
+    "elevenlabs",
+    "respeecher",
+    "murf-ai",
+    "play-ht"
+  ],
+  "faq": [
+    {
+      "q": "Cartesia支持哪些语言？",
+      "a": "支持40+种语言，包括英语、中文、西班牙语、法语、德语、印地语等，覆盖约95%的世界人口，并对9种印度语言做了优化。"
+    },
+    {
+      "q": "Cartesia的延迟是多少？",
+      "a": "Sonic-3.5流式TTS首字节延迟约90ms，Turbo版本可低至40ms，非常适合实时对话场景。"
+    },
+    {
+      "q": "Cartesia有免费版吗？",
+      "a": "有，Free方案每月含20,000模型积分和1美元预付费语音代理，足够测试和个人项目使用。"
+    },
+    {
+      "q": "Cartesia的付费价格是多少？",
+      "a": "付费从Pro $5/月起，Startup $49/月，Scale $299/月，企业版可定制；按积分和代理分钟计费。"
+    }
+  ],
+  "seo_keywords": [
+    "Cartesia",
+    "Cartesia语音合成",
+    "Cartesia实时语音AI",
+    "Cartesia免费版",
+    "Cartesia vs ElevenLabs"
+  ],
+  "content": "## Cartesia 是什么？\n\nAI语音合成（TTS）与语音转文字（STT）平台，提供超低延迟的实时语音生成与流式转录，主打语音代理（voice agents）场景。\n\nCartesia是一个专注于实时语音AI的平台，提供超低延迟的语音合成（TTS）与语音转文字（STT）能力。其Sonic系列模型首字节延迟可低至90ms，支持40+种语言、语音克隆、情绪与笑声表达，并提供Line语音代理平台，是构建AI语音助手和实时对话应用的常用选择。\n\n## 核心功能\n\n- 实时语音合成（Sonic TTS，首字节延迟约90ms）\n- 语音克隆（10秒即时克隆）\n- 语音转换/变声\n- 40+种语言支持\n- 流式语音转文字（Ink STT）\n- 语音情感与笑声控制\n- 语音代理平台（Line）\n- 开发者 API/SDK\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | Free $0/月（20K积分 + $1预付费代理）；Pro $5/月（100K积分 + 商业授权 + 即时语音克隆）；Startup $49/月（125万积分 + Pro克隆 + 团队）；Scale $299/月（800万积分 + 优先支持）；Enterprise 定制。 |\n| 支持平台 | Web API、Python/JavaScript SDK、REST API、设备端 |\n| 评分 | ⭐ 4.5 |\n| 开发商 | Cartesia, Inc. |\n\n## 价格与平台\n\n- **价格**：Free $0/月（20K积分 + $1预付费代理）；Pro $5/月（100K积分 + 商业授权 + 即时语音克隆）；Startup $49/月（125万积分 + Pro克隆 + 团队）；Scale $299/月（800万积分 + 优先支持）；Enterprise 定制。\n- **平台**：Web API、Python/JavaScript SDK、REST API、设备端\n- **官网**：https://cartesia.ai\n\n## 优缺点分析\n\n### 优点\n\n- 超低延迟实时语音合成（首字节约90ms，Sonic-3.5）\n- 支持40+种语言，覆盖全球约95%人口\n- 即时语音克隆与Pro企业级克隆\n- 支持笑声与情绪表达，语音更自然\n- 提供免费额度（每月20K积分），按量计费无最低消费\n- 企业级安全合规（SOC 2、HIPAA、PCI）\n\n### 缺点\n\n- 免费版仅限个人使用\n- Pro语音克隆需付费订阅\n- 按积分/代理分钟计费，成本预估较复杂\n- 主要面向API开发者，非技术用户门槛较高\n\n## 常见问题（FAQ）\n\n**Cartesia支持哪些语言？**\n\n支持40+种语言，包括英语、中文、西班牙语、法语、德语、印地语等，覆盖约95%的世界人口，并对9种印度语言做了优化。\n\n**Cartesia的延迟是多少？**\n\nSonic-3.5流式TTS首字节延迟约90ms，Turbo版本可低至40ms，非常适合实时对话场景。\n\n**Cartesia有免费版吗？**\n\n有，Free方案每月含20,000模型积分和1美元预付费语音代理，足够测试和个人项目使用。\n\n**Cartesia的付费价格是多少？**\n\n付费从Pro $5/月起，Startup $49/月，Scale $299/月，企业版可定制；按积分和代理分钟计费。\n\n\n## 最终结论\n\nCartesia 是AI音频领域的一款 AI 工具，其核心优势在于超低延迟实时语音合成（首字节约90ms，Sonic-3.5）。\n此外，支持40+种语言，覆盖全球约95%人口。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-05-29",
+  "published_date": "2026-05-29",
+  "verified_url": "https://cartesia.ai",
+  "verified_publisher": "Cartesia, Inc.",
+  "verified_what": "AI语音合成（TTS）与语音转文字（STT）平台，提供超低延迟的实时语音生成与流式转录，主打语音代理（voice agents）场景。",
+  "verified_price": "Free $0/月（20K积分 + $1预付费代理）；Pro $5/月（100K积分 + 商业授权 + 即时语音克隆）；Startup $49/月（125万积分 + Pro克隆 + 团队）；Scale $299/月（800万积分 + 优先支持）；Enterprise 定制。",
+  "verified_platform": "Web API、Python/JavaScript SDK、REST API、设备端",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "实时语音合成（Sonic TTS，首字节延迟约90ms）",
+    "语音克隆（10秒即时克隆）",
+    "语音转换/变声",
+    "40+种语言支持",
+    "流式语音转文字（Ink STT）",
+    "语音情感与笑声控制",
+    "语音代理平台（Line）",
+    "开发者 API/SDK"
+  ],
+  "verified_description": "Cartesia是一个专注于实时语音AI的平台，提供超低延迟的语音合成（TTS）与语音转文字（STT）能力。其Sonic系列模型首字节延迟可低至90ms，支持40+种语言、语音克隆、情绪与笑声表达，并提供Line语音代理平台，是构建AI语音助手和实时对话应用的常用选择。",
+  "content_flags": "原数据称支持20+种语言（实际40+）；原price称付费版$19/月起（实际最低Pro $5/月，无$19档位）——价格存在虚构",
+  "price_verified": true,
+  "verified_pros": [
+    "超低延迟实时语音合成（首字节约90ms，Sonic-3.5）",
+    "支持40+种语言，覆盖全球约95%人口",
+    "即时语音克隆与Pro企业级克隆",
+    "支持笑声与情绪表达，语音更自然",
+    "提供免费额度（每月20K积分），按量计费无最低消费",
+    "企业级安全合规（SOC 2、HIPAA、PCI）"
+  ],
+  "verified_cons": [
+    "免费版仅限个人使用",
+    "Pro语音克隆需付费订阅",
+    "按积分/代理分钟计费，成本预估较复杂",
+    "主要面向API开发者，非技术用户门槛较高"
+  ],
+  "verified_faq": [
+    {
+      "q": "Cartesia支持哪些语言？",
+      "a": "支持40+种语言，包括英语、中文、西班牙语、法语、德语、印地语等，覆盖约95%的世界人口，并对9种印度语言做了优化。"
+    },
+    {
+      "q": "Cartesia的延迟是多少？",
+      "a": "Sonic-3.5流式TTS首字节延迟约90ms，Turbo版本可低至40ms，非常适合实时对话场景。"
+    },
+    {
+      "q": "Cartesia有免费版吗？",
+      "a": "有，Free方案每月含20,000模型积分和1美元预付费语音代理，足够测试和个人项目使用。"
+    },
+    {
+      "q": "Cartesia的付费价格是多少？",
+      "a": "付费从Pro $5/月起，Startup $49/月，Scale $299/月，企业版可定制；按积分和代理分钟计费。"
+    }
+  ],
+  "verified_tags": [
+    "语音合成",
+    "语音克隆",
+    "实时语音",
+    "低延迟",
+    "语音转文字",
+    "语音代理"
+  ],
+  "verified_category": "AI音频",
+  "source_urls": [
+    "https://cartesia.ai",
+    "https://cartesia.ai/pricing",
+    "https://audioaihub.com/text-to-speech/cartesia/"
+  ],
+  "verify_notes": "原content的$19/月起为虚构档位，已更正为Pro $5/月起；语言数由20+更正为40+。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "krisp",
+      "elevenlabs",
+      "udio"
+    ],
+    "verdict": "Cartesia 与 Krisp、ElevenLabs、Udio 同属AI音频赛道：Cartesia 的 实时语音合成（Sonic TTS，首字节延迟约90ms） 是亮点，价格 免费版$0；付费版$5/月起（Pro）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

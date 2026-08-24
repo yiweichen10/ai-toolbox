@@ -1,0 +1,141 @@
+{
+  "name": "Zed Editor",
+  "slug": "zed-editor",
+  "positioning": "Zed AI+实时多人协作：免费AI编程工具怎么用",
+  "auto_positioning": true,
+  "emoji": "⚡",
+  "color": "#5C4EE5",
+  "description": "Zed Editor 是由 Atom 原班人马打造的高性能代码编辑器，采用 Rust 编写，主打极致速度与内置 AI 辅助编程（Zed AI），支持多模型集成与实时协作。",
+  "category": "AI编程",
+  "tags": [
+    "代码编辑器",
+    "AI编程",
+    "Rust",
+    "高性能",
+    "协作"
+  ],
+  "rating": "⭐4.6",
+  "visits": "45万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://zed.dev",
+  "price": "免费版 + Pro $10/月",
+  "platform": "macOS / Windows / Linux / Web",
+  "pros": [
+    "启动与响应极快（Rust 编写）",
+    "原生 AI 补全与对话（Zed AI）",
+    "内置实时协作",
+    "支持 100+ 语言",
+    "免费版即可作为完整编辑器使用"
+  ],
+  "cons": [
+    "插件生态仍不及 VS Code",
+    "Windows 稳定性略低于 macOS",
+    "AI 托管模型需 Pro（可自带 Key 免费）",
+    "企业级功能（SSO 等）尚在完善"
+  ],
+  "features": [
+    "Zed AI：多模型编程助手（Claude、GPT-5、Gemini 等，或自带 Key）",
+    "实时多人协作（multiplayer）",
+    "Edit Predictions 代码补全",
+    "Agent 面板（支持 MCP 工具调用）",
+    "Git 集成与内置终端",
+    "远程开发"
+  ],
+  "related": [
+    "cursor",
+    "github-copilot",
+    "claude-code"
+  ],
+  "faq": [
+    {
+      "q": "Zed Editor 免费吗？",
+      "a": "Personal 版永久免费，含基础编辑、2000 次 edit predictions 与自带 API Key 使用 AI；Pro 版 $10/月解锁无限 edit predictions 与 Zed 托管 AI 模型。"
+    },
+    {
+      "q": "Zed 支持哪些 AI 模型？",
+      "a": "Zed AI 支持 Claude、GPT-5、Gemini 2.5 等，也可接入 Ollama 等本地模型或自带 Anthropic/OpenAI 等 API Key。"
+    }
+  ],
+  "seo_keywords": [
+    "Zed Editor",
+    "Zed Editor怎么样",
+    "Zed Editor免费吗",
+    "Zed AI编程助手",
+    "Zed Editor vs VS Code"
+  ],
+  "content": "# Zed Editor是什么？\n\n如果你最近在关注代码编辑器的动静，应该听说过Zed Editor这个名字。它是Atom编辑器的原班人马搞的新项目，用Rust重写的，主打的就是一个“快”字。\n\n说白了，Zed就是一个面向开发者的代码编辑器，2025年还推出了自己的AI功能——Zed AI。它想解决的问题很简单：让写代码这件事更流畅、更高效，同时把AI能力直接集成进编辑器里，而不是让你来回切换工具。\n\n# 核心功能\n\n## 1. Zed AI：内置AI编程助手\n\n这个应该是Zed最被关注的功能了。它集成了Claude、Gemini等多个主流大模型，你可以直接在编辑器里问AI问题、让它帮你补全代码、解释你选中的代码段。不用再开一个浏览器标签页去ChatGPT，集成度很高。不过要注意，AI功能需要Pro版本才能使用，免费版没有这个待遇。\n\n## 2. 协作模式：实时共同编辑\n\nZed支持实时共享编辑器和终端，类似于Google Docs的协作体验。你可以把编辑窗口分享给队友，双方能看到对方的光标和操作。这个功能对远程协作、代码审查、教学场景都挺实用的。\n\n## 3. 多光标编辑\n\n这是现代编辑器的标配功能了，Zed做得也不错。你可以同时在多个位置插入光标，进行批量修改。处理重复性代码时很省力，掌握之后效率提升明显。\n\n## 4. Git集成 + 终端模拟器\n\nZed内置了完整的Git支持，提交、分支、查看历史这些操作都可以在编辑器里完成。同时它还集成了终端，不用另外开窗口，直接在编辑器里就能跑命令。这两个功能组合起来，日常开发基本不需要频繁切换工具。\n\n## 5. 远程开发\n\n支持连接远程服务器开发，对于需要在服务器上直接改代码或者使用远程算力的场景，这个功能很实用。\n\n# 版本/套餐对比\n\n| 版本 | 价格 | 核心功能 | AI功能 |\n|------|------|----------|--------|\n| 免费版 | 免费 | 高性能编辑器、语法高亮、Git集成、终端、多光标协作 | 不包含 |\n| Pro版 | 付费 | 包含免费版全部功能 | Zed AI（多模型支持）、高级协作功能 |\n\n具体价格建议直接查看官网，这里就不列具体数字了。\n\n# 值不值得用？\n\n**优点：**\n- 速度确实快，响应延迟很低，用起来很流畅\n- AI补全和对话集成做得比较自然，不用来回切换\n- 界面清爽，主题可定制\n- 协作功能对团队使用场景很友好\n\n**缺点：**\n- 插件生态目前不如VS Code丰富，有些常用插件可能还没有\n- Windows版的稳定性略逊于macOS版\n- AI功能要付费才能用\n- 企业级功能（比如SSO）还在完善中\n\n**我的看法：** 如果你追求编辑器的流畅度，对AI辅助编程有需求，Zed是一个值得尝试的选择。特别是如果你已经用腻了VS Code，想换个轻量点的工具，它不会让你失望。但如果你特别依赖VS Code那些插件，或者在Windows上使用且追求稳定性，可能需要观望一下，等生态更成熟再用。\n\n# 使用建议\n\n1. **先试用免费版**：把基础功能摸熟，看看编辑体验是否符合你的习惯\n2. **熟悉快捷键**：Zed的快捷键设计和一些主流编辑器不太一样，上手需要适应一下\n3. **如果需要AI功能再考虑Pro**：免费版本身已经是一个完整的编辑器了，AI是额外的加成\n4. **关注插件更新**：生态在逐步完善，常用的插件可能很快就会出现\n\n# 适合谁用？\n\n**推荐：**\n- 追求编辑器速度和响应体验的开发者\n- 对AI编程辅助有需求的个人开发者\n- 小团队需要轻量级协作工具的\n\n**可考虑：**\n- 习惯VS Code插件生态的用户（需要确认常用插件是否有替代）\n- Windows用户（可以先用免费版测试稳定性）\n\n**不推荐：**\n- 对插件生态依赖极高，暂时离不开VS Code的\n- 需要完整企业级功能（如SSO、详细权限管理）的团队\n\n## 常见问题（FAQ）\n\n**Zed Editor 免费吗？**\n\nPersonal 版永久免费，含基础编辑、2000 次 edit predictions 与自带 API Key 使用 AI；Pro 版 $10/月解锁无限 edit predictions 与 Zed 托管 AI 模型。\n\n**Zed 支持哪些 AI 模型？**\n\nZed AI 支持 Claude、GPT-5、Gemini 2.5 等，也可接入 Ollama 等本地模型或自带 Anthropic/OpenAI 等 API Key。",
+  "published": true,
+  "created_date": "2026-07-02",
+  "published_date": "2026-07-02",
+  "verified_url": "https://zed.dev",
+  "verified_publisher": "Zed Industries",
+  "verified_what": "用 Rust 编写的高性能开源代码编辑器，内置 Zed AI 多模型编程助手与实时协作",
+  "verified_price": "Personal $0（永久免费，含 2000 次 edit predictions、可自带 API Key）；Pro $10/月（含 $5 token 额度、无限 edit predictions + 托管 AI 模型）；Business $30/席/月",
+  "verified_platform": "macOS / Windows / Linux / Web",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "Zed AI：多模型编程助手（Claude、GPT-5、Gemini 等，或自带 Key）",
+    "实时多人协作（multiplayer）",
+    "Edit Predictions 代码补全",
+    "Agent 面板（支持 MCP 工具调用）",
+    "Git 集成与内置终端",
+    "远程开发"
+  ],
+  "verified_description": "Zed Editor 是由 Atom 原班人马打造的高性能代码编辑器，采用 Rust 编写，主打极致速度与内置 AI 辅助编程（Zed AI），支持多模型集成与实时协作。",
+  "content_flags": "原内容版本对比表写“Pro $20/月”已过时：官网现 Personal 免费、Pro $10/月（含 $5 token 额度）、Business $30/席/月，且新增 token 用量计费。",
+  "price_verified": true,
+  "verified_rating": "⭐4.6",
+  "rating_source": "编辑评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "启动与响应极快（Rust 编写）",
+    "原生 AI 补全与对话（Zed AI）",
+    "内置实时协作",
+    "支持 100+ 语言",
+    "免费版即可作为完整编辑器使用"
+  ],
+  "verified_cons": [
+    "插件生态仍不及 VS Code",
+    "Windows 稳定性略低于 macOS",
+    "AI 托管模型需 Pro（可自带 Key 免费）",
+    "企业级功能（SSO 等）尚在完善"
+  ],
+  "verified_faq": [
+    {
+      "q": "Zed Editor 免费吗？",
+      "a": "Personal 版永久免费，含基础编辑、2000 次 edit predictions 与自带 API Key 使用 AI；Pro 版 $10/月解锁无限 edit predictions 与 Zed 托管 AI 模型。"
+    },
+    {
+      "q": "Zed 支持哪些 AI 模型？",
+      "a": "Zed AI 支持 Claude、GPT-5、Gemini 2.5 等，也可接入 Ollama 等本地模型或自带 Anthropic/OpenAI 等 API Key。"
+    }
+  ],
+  "verified_tags": [
+    "代码编辑器",
+    "AI编程",
+    "Rust",
+    "高性能",
+    "协作"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://zed.dev/pricing",
+    "https://zed.dev/blog/pricing-change-llm-usage-is-now-token-based",
+    "https://zed.dev/docs/ai/plans-and-usage"
+  ],
+  "verify_notes": "关键修正：Pro 价格由 $20/月 降为 $10/月（token 用量计费）。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Zed Editor 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Zed Editor 的 Zed AI：多模型编程助手（Claude、GPT-5、Gemini 等，或自带 Key） 是亮点，价格 免费版 + Pro $10/月；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

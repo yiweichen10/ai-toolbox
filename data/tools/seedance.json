@@ -1,0 +1,158 @@
+{
+  "name": "Seedance 2.0",
+  "slug": "seedance",
+  "positioning": "AI视频工具：多模态输入+视频编辑与延伸",
+  "auto_positioning": true,
+  "emoji": "🎬",
+  "color": "#4F46E5",
+  "description": "Seedance 是字节跳动 Seed 团队推出的多模态 AI 视频生成模型，基于统一音视频联合生成架构，支持文本/图片/音频/视频输入并生成带原生音频的 1080p 视频。2026年8月发布 Seedance 2.5 重大升级：单次视频生成时长从 15 秒提升至 30 秒并支持多轮延长，模型可在 30 秒内组织多个有逻辑关联的镜头（铺垫-推进-转折-收尾的完整故事结构），与同期开源的 MiniMax H3 形成直接竞争。",
+  "category": "AI视频",
+  "tags": [
+    "AI视频生成",
+    "多模态",
+    "音画同步"
+  ],
+  "rating": "⭐4.5（编辑评测）",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://seed.bytedance.com/seedance2_0",
+  "price": "暂未公开（经即梦/Dreamina、火山引擎等计费）",
+  "platform": "云端模型，经即梦(jimeng.jianying.com)/Dreamina 网页端及 API 使用",
+  "pros": [
+    "支持文字、图片、音频、视频四种模态输入",
+    "可生成 2K 影院级画质视频",
+    "原生音画同步，无需后期对齐",
+    "最长 15 秒视频时长，满足短视频创作需求",
+    "免费用户每日可生成，降低使用门槛"
+  ],
+  "cons": [
+    "视频时长限制在 15 秒以内",
+    "免费版每日生成次数有限，高峰时可能排队",
+    "对复杂场景的细节表现仍有提升空间"
+  ],
+  "features": [
+    "多模态输入：文本、图片、音频、视频（最多 9 图/3 视频/3 音频）",
+    "原生音视频联合生成（口型同步对话、音效、配乐）",
+    "跨帧角色与物体一致性",
+    "导演级镜头与运动控制",
+    "视频编辑与延伸（参考视频、局部编辑）"
+  ],
+  "related": [
+    "runway",
+    "pika",
+    "sora",
+    "veo",
+    "kling-3-0",
+    "luma-ai"
+  ],
+  "faq": [
+    {
+      "q": "Seedance 2.0 免费吗？",
+      "a": "Seedance 2.0 通过即梦或 Dreamina 等平台提供免费额度，同时也有付费版本解锁更多功能和高频使用权限。"
+    },
+    {
+      "q": "如何体验 Seedance 2.0？",
+      "a": "可访问即梦（jimeng.jianying.com）或 Dreamina 平台选择 Seedance 2.0 模型，也提供 API 接入。"
+    },
+    {
+      "q": "Seedance 2.0 支持哪些输入方式？",
+      "a": "支持文字、图片、音频、视频四种输入方式，可灵活组合实现多种创作场景。"
+    },
+    {
+      "q": "生成的视频画质和时长如何？",
+      "a": "可生成 2K 影院级画质视频，最长时长 15 秒，并支持原生音画同步。"
+    }
+  ],
+  "seo_keywords": [
+    "Seedance 2.0",
+    "Seedance 2.0怎么样",
+    "Seedance 2.0免费版",
+    "Seedance 2.0使用教程",
+    "Seedance 2.0和哪个好"
+  ],
+  "content": "## Seedance 2.0 是什么？\n\nSeedance 是字节跳动 Seed 团队推出的多模态 AI 视频生成模型，采用统一的音视频联合生成架构，不是先出画面再单独配乐，而是让画面和声音在同一套模型里一起长出来。它支持文本、图片、音频、视频多种输入，并生成带原生音频的 1080p 视频，这对需要\"画面+声音一次成片\"的短视频和广告场景很实用。\n\n## 核心功能\n\n输入上很灵活：你可以同时喂入最多 9 张图片、3 个视频片段、3 个音频片段，再加上自然语言指令，模型会引用这些素材里的构图、运动、镜头、视觉效果和声音元素来生成新内容。正因为是原生音视频联合生成，它能做出口型同步的对话、环境音效和配乐，并让声音与画面节奏对齐，而不是生硬贴上一段背景音乐。\n\n可控性方面，Seedance 强调跨帧的角色与物体一致性——同一人物或物品在不同镜头里外观稳定，叙事才立得住；导演级镜头与运动控制则让你用提示词规划运镜、设计视觉模板，呈现出低角度跟拍、环绕、推近等丰富镜头语言。视频编辑与延伸能力支持针对指定片段、角色或动作做定向修改，也能基于提示\"续拍\"出连贯的后续镜头，把生成从一次性产出变成可迭代的创作。\n\n## 价格与平台\n\nSeedance 本身是一个云端模型，通过即梦（jimeng.jianying.com）/Dreamina 的网页端，以及火山引擎等平台使用，按各平台各自的计费方式收费，模型价格暂未单独公开。对想用中文生态、又需要画面与声音一次成片的人来说，它是个顺手的选择。\n\n需要理解的是，Seedance 是底层模型能力，普通用户通常不直接和它打交道，而是通过即梦、Dreamina 或火山引擎这类前端去用——这也意味着它的实际体验、配额和价格，取决于你所用的那个平台，而非模型本身单独标价。对创作者来说，关注点应是\"我想做哪种片子、需要多长、要不要声音\"，再选对应入口。它目前更适合有清晰想法的半专业创作，而非完全无方向的随手生成；把输入素材准备得越具体，成片与预期越接近。\n\n## 最终结论\n\n从工作流角度，Seedance 更适合作为\"成片引擎\"嵌进你的创作流程，而不是孤立使用——你在即梦/Dreamina 里写想法、传素材，它负责把画面和声音一次生成。但它仍需要你给出清晰的输入：素材越具体、指令越明确，成片越贴近预期。把它当\"把脚本变成带声音的片子\"的那一步，而非创意本身，预期会更稳。想上手，从即梦或 Dreamina 里的一次小尝试开始最顺。真正用熟之后，你会发现它最省心的，是画面和声音不必再分两步去凑。\n",
+  "published": true,
+  "created_date": "2026-03-22",
+  "data_quality": {
+    "last_content_updated": "2026-07-28"
+  },
+  "source_url": "https://seed.bytedance.com/en/blog/official-launch-of-seedance-2-0",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://seed.bytedance.com/seedance2_0",
+  "verified_publisher": "字节跳动 Seed 团队",
+  "verified_what": "字节跳动 Seed 团队推出的多模态 AI 视频生成模型，基于统一音视频联合生成架构，支持文本/图片/音频/视频输入并生成带原生音频的视频。",
+  "verified_price": "暂未公开独立定价（通过即梦/Dreamina、火山引擎等平台使用，按各平台计费；部分平台提供免费额度）。",
+  "verified_platform": "云端模型，经即梦（jimeng.jianying.com）/Dreamina 网页端及 API 使用",
+  "verified_features": [
+    "多模态输入：文本、图片、音频、视频（最多 9 图/3 视频/3 音频）",
+    "原生音视频联合生成（口型同步对话、音效、配乐）",
+    "跨帧角色与物体一致性",
+    "导演级镜头与运动控制",
+    "视频编辑与延伸（参考视频、局部编辑）"
+  ],
+  "verified_description": "Seedance 是字节跳动 Seed 团队推出的多模态 AI 视频生成模型，基于统一音视频联合生成架构，支持文本/图片/音频/视频输入并生成带原生音频的 1080p 视频。",
+  "content_flags": "原 url 指向 seed.bytedance.com/en/seedance 易 404，已更正为官方 seedance2_0 页面；市面存在多个仿冒域名（如 seedance20.co、seeddance.ai），需注意甄别。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5（编辑评测）",
+  "rating_source": "编辑评测（暂无权威第三方评分来源）",
+  "rating_verified": true,
+  "verified_pros": [
+    "支持文字、图片、音频、视频四种模态输入",
+    "可生成 2K 影院级画质视频",
+    "原生音画同步，无需后期对齐",
+    "最长 15 秒视频时长，满足短视频创作需求",
+    "免费用户每日可生成，降低使用门槛"
+  ],
+  "verified_cons": [
+    "视频时长限制在 15 秒以内",
+    "免费版每日生成次数有限，高峰时可能排队",
+    "对复杂场景的细节表现仍有提升空间"
+  ],
+  "verified_faq": [
+    {
+      "q": "Seedance 2.0 免费吗？",
+      "a": "Seedance 2.0 通过即梦或 Dreamina 等平台提供免费额度，同时也有付费版本解锁更多功能和高频使用权限。"
+    },
+    {
+      "q": "如何体验 Seedance 2.0？",
+      "a": "可访问即梦（jimeng.jianying.com）或 Dreamina 平台选择 Seedance 2.0 模型，也提供 API 接入。"
+    },
+    {
+      "q": "Seedance 2.0 支持哪些输入方式？",
+      "a": "支持文字、图片、音频、视频四种输入方式，可灵活组合实现多种创作场景。"
+    },
+    {
+      "q": "生成的视频画质和时长如何？",
+      "a": "可生成 2K 影院级画质视频，最长时长 15 秒，并支持原生音画同步。"
+    }
+  ],
+  "verified_tags": [
+    "AI视频生成",
+    "多模态",
+    "音画同步"
+  ],
+  "verified_category": "AI视频",
+  "source_urls": [
+    "https://seed.bytedance.com/seedance2_0",
+    "https://seed.bytedance.com/en/blog/official-launch-of-seedance-2-0"
+  ],
+  "verify_notes": "官方页面为 seed.bytedance.com/seedance2_0；存在非官方仿冒站点，请勿混淆。",
+  "url_previous": "https://seed.bytedance.com/en/seedance",
+  "compare_section": {
+    "competitors": [
+      "heygen",
+      "synthesia",
+      "sora"
+    ],
+    "verdict": "Seedance 2.0 与 HeyGen、Synthesia、Sora 同属AI视频赛道：Seedance 2.0 的 多模态输入：文本、图片、音频、视频（最多 9 图/3 视频/3 音频） 是亮点，价格 暂未公开（经即梦/Dreamina、火山引擎等计费）；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "updated_date": "2026-08-05",
+  "published_date": "2026-08-12"
+}

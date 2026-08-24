@@ -1,0 +1,94 @@
+{
+  "name": "Cloudflare Computer",
+  "slug": "cloudflare-computer",
+  "positioning": "Cloudflare Computer是什么_开源Agent运行时_虚拟电脑",
+  "auto_positioning": false,
+  "emoji": "💻",
+  "color": "#F6821F",
+  "description": "Cloudflare 于 2026 年 8 月 3 日发布的开源 Agent 运行时（MIT），核心理念是「你的 Agent 需要一台电脑，而不是一个容器」。为 Agent 提供持久文件系统与可切换执行后端的虚拟电脑，让 Agent 像人一样操作文件、命令行与代码。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "开源项目"
+    },
+    {
+      "text": "Agent运行时"
+    },
+    {
+      "text": "免费可用",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "开源Preview"
+  },
+  "url": "https://github.com/cloudflare/computer",
+  "price": "价格暂未公开",
+  "platform": "Web",
+  "pros": [
+    "精准补上 Agent「文件易丢、环境割裂、难以续跑」的短板",
+    "持久工作区：SQLite 支撑的虚拟文件系统，跨任务跨重启保留文件",
+    "可切换执行后端（容器 / Shell / 隔离 JS），统一入口 runtime.exec()",
+    "文件与执行同源，无需手动在宿主与容器间搬运",
+    "MIT 开源，AI SDK 兼容工具集易集成"
+  ],
+  "cons": [
+    "仍是 Preview，API 不稳定、不适合生产",
+    "单个工作区约 10GB，重 I/O 与大型 monorepo 表现受限",
+    "依赖 Cloudflare 云底座（容器、Durable Objects、对象存储）"
+  ],
+  "features": [
+    "持久工作区：SQLite 支撑的虚拟文件系统，跨任务、跨重启保留文件",
+    "可切换执行后端：完整 Linux 容器、轻量 Shell（just-bash）、隔离 JavaScript 运行时",
+    "文件与执行同源：宿主侧写文件、执行环境直接处理，无需手动搬运",
+    "网关化安全：所有读写、命令、Git 操作都被 gate、审计与观测",
+    "易集成：AI SDK 兼容工具集（read/write/edit/ls/exec）",
+    "npm 包：@cloudflare/computer，可嵌入任意 Durable Object"
+  ],
+  "related": [
+    "claude",
+    "openai",
+    "dify"
+  ],
+  "content": "## Cloudflare Computer 是什么？\nCloudflare Computer（npm 包 @cloudflare/computer）是 Cloudflare 于 2026 年 8 月 3 日发布的开源 Agent 运行时（MIT），核心理念是「你的 Agent 需要一台电脑，而不是一个容器」。它为每个 Agent 提供一台「虚拟电脑」：底层用 SQLite 持久保存文件状态，上层暴露接近常见文件 API 的读写能力，Agent 写入 /notes.md，下一次任务还能读回。它动态编排轻量隔离环境（Isolate）与完整 Linux 容器，让 Agent 始终跑在最适合当前任务的算力原语上。这是 Cloudflare Agent 基建（OS / Computer / Wallets）中负责「运行环境」的一层。\n\n## 核心功能\n1. 持久工作区：SQLite 支撑的虚拟文件系统，跨任务、跨重启保留文件。\n2. 可切换执行后端：完整 Linux 容器、轻量 Shell（just-bash）、隔离 JavaScript 运行时，统一入口 workspace.runtime.exec()。\n3. 文件与执行同源：宿主侧写文件、执行环境直接处理，无需手动搬运。\n4. 网关化安全：所有读写、命令、Git 操作都被 gate、审计与观测。\n5. 易集成：AI SDK 兼容工具集（read/write/edit/ls/exec），可嵌入任意 Durable Object。\n\n## 版本/套餐对比\n开源项目（MIT），以 npm 包与自托管为主，无商业付费套餐。当前为 Preview 阶段，API 可能变化，官方明确建议仅用于实验与原型。\n\n## 值不值得用？\n优点：精准补上 Agent「文件易丢、环境割裂、难以续跑」的短板；设计上把持久存储与可执行环境合一，工程思路清晰。缺点：仍是 Preview，API 不稳定、不适合生产；单个工作区约 10GB、重 I/O 与大型 monorepo 表现受限；依赖 Cloudflare 云底座（容器、Durable Objects、对象存储）。结论：技术团队现在值得研究与做原型，但不应直接接生产代码。\n\n## 使用建议\n先只启用持久文件系统，确认读写、目录、搜索可用，再逐步加执行后端。做本地测试（npm ci 后可跑仓库测试），再用独立测试账号验证在线资源与权限边界。重 I/O、大型依赖安装、不可中断流程先放隔离环境观察。\n\n## 适合谁用？\n- 推荐：在 Cloudflare Workers 上做 Agent 原型、需要持久文件与偶发 Linux 命令的开发者。\n- 可考虑：研究 Agent 跨任务保留工作成果、文件型自动化的团队。\n- 不推荐：需要生产级稳定 API、大型 monorepo、重型依赖安装的现网任务。",
+  "published": false,
+  "faq": [
+    {
+      "question": "Cloudflare Computer 和容器方案有什么不同？",
+      "answer": "它认为给每个 Agent 都分配独立容器无法支撑海量并行 Agent，于是用 Isolate（隔离环境）做主力、容器做补充，按任务动态编排，并把持久文件系统与执行环境合一。"
+    },
+    {
+      "question": "现在能用在生产环境吗？",
+      "answer": "不能。官方明确标注为 Preview only，API 不稳定，当前只适合实验、探索和原型；生产代码、长期稳定 API、大型 monorepo 建议先隔离测试。"
+    },
+    {
+      "question": "怎么安装？",
+      "answer": "通过 npm 安装：npm install @cloudflare/computer。可先只启用持久文件系统验证读写，再逐步加执行后端；仓库含可直接运行的示例与教程。"
+    },
+    {
+      "question": "它的热度如何？",
+      "answer": "发布后冲上 GitHub 热榜，2026 年 8 月上旬 stars 快速攀升（据 8 月 9 日评测约 6.4k stars，且持续上涨），是 Cloudflare Agent 基建组合中最受关注的开源项目之一。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Cloudflare Computer",
+    "Cloudflare Computer怎么样",
+    "Cloudflare Computer免费版",
+    "Cloudflare Computer使用教程",
+    "Cloudflare Computer和哪个好"
+  ],
+  "source_urls": [
+    "https://github.com/cloudflare/computer",
+    "https://developers.cloudflare.com/changelog/post/2026-08-03-cloudflare-computer",
+    "https://blog.cloudflare.com/zh-tw/cloudflare-computer/"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

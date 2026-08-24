@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "cloud-computer-manus",
+    "name": "Cloud Computer Manus",
+    "verdict": "REAL",
+    "official_url": "https://manus.im",
+    "vendor": "Manus",
+    "desc_issue": "产品定位偏差：真实“Cloud Computer”是 Manus（manus.im）平台的功能/特性，并非独立云桌面产品；记录域名 cloudcomputermanus.com 非官方，疑似拼凑域名",
+    "evidence": "Web搜索确认 Manus 存在且提供 Cloud Computer 功能，但官网为 manus.im，无独立 cloudcomputermanus.com"
+  },
+  {
+    "slug": "melty-ai",
+    "name": "Melty",
+    "verdict": "REAL",
+    "official_url": "https://melty.ai",
+    "vendor": "Meltylabs",
+    "desc_issue": "功能错误：记录称其为『AI内容创作/文案生成工具』，实际 Melty 是开源 AI 代码编辑器（VS Code 分支），用于代码补全/生成/调试，非写作工具。",
+    "evidence": "melty.ai 为真实官方站点（meltylabs），开源 AI 代码编辑器，对标 Cursor；记录的内容写作定位与真实产品不符。"
+  },
+  {
+    "slug": "xint-code",
+    "name": "Xint Code",
+    "verdict": "UNCERTAIN",
+    "official_url": null,
+    "vendor": null,
+    "desc_issue": "xintcode.ai 无法检索到明确对应的真实产品；百度确有“文心快码”（wenxin-kuaima，独立条目），但 Xint Code 与之不同，无法确认其为真实存在的独立产品。",
+    "evidence": "无明确检索结果确认 xintcode.ai 为真实 AI 编程工具，暂列为不确定。"
+  },
+  {
+    "slug": "shadow-ai",
+    "name": "Shadow AI",
+    "verdict": "UNCERTAIN",
+    "official_url": null,
+    "vendor": "不确定",
+    "desc_issue": "描述为「隐私 AI 助手/影子模式后台助手」存疑：存在多个名为 Shadow AI 的实体（语音笔记、加密 agent、企业 AI 治理、科研实验设计等），均未明确匹配该描述，shadowai.com 是否为该产品的官方站点无法确认",
+    "evidence": "搜索发现多个 Shadow AI 实体但均无法明确对应 batch 中描述的「影子模式后台 AI 助手」"
+  },
+  {
+    "slug": "jamie-ai",
+    "name": "Jamie AI",
+    "verdict": "REAL",
+    "official_url": "https://meetjamie.ai",
+    "vendor": "Jamie (German company)",
+    "desc_issue": "Batch URL jamieai.com is wrong (real site meetjamie.ai). Description also overstates it as a general AI assistant; actual product is a privacy-first AI meeting note taker (German, GDPR-compliant, 100+ languages).",
+    "evidence": "Official meetjamie.ai confirmed; privacy-first AI meeting notes, audio deleted after transcription."
+  },
+  {
+    "slug": "claude-fable-5",
+    "name": "Claude Fable 5",
+    "verdict": "REAL",
+    "official_url": "https://www.anthropic.com",
+    "vendor": "Anthropic",
+    "desc_issue": "记录描述为'专注故事创作的AI写作工具(fable.anthropic.com)'与事实不符：Claude Fable 5是Anthropic的旗舰大模型（非写作工具），捏造了'超长叙事引擎/动态角色记忆/10万字故事'等能力；fable.anthropic.com并非Anthropic官方地址",
+    "evidence": "Anthropic透明度中心及多篇报道确认Claude Fable 5为Anthropic模型，无任何来源提及fable.anthropic.com"
+  },
+  {
+    "slug": "zoona",
+    "name": "Zoona",
+    "verdict": "REAL",
+    "official_url": "https://zoona.ai",
+    "vendor": "Zoona / SparrowDesk",
+    "desc_issue": "描述完全错误：称 Zoona 是『AI视频生成与编辑平台』；实际 zoona.ai 是自主式AI客服代理平台（自动解决客户咨询），与视频生成无关",
+    "evidence": "zoona.ai 官网及Product Hunt均显示其为AI客服代理，非视频工具"
+  },
+  {
+    "slug": "yoroll",
+    "name": "Yoroll",
+    "verdict": "REAL",
+    "official_url": "https://yoroll.ai",
+    "vendor": "LinearGame（新加坡/旧金山）",
+    "desc_issue": "描述称其为“AI效率工具/智能任务管理和内容创作辅助”，实际是 AI 互动视频游戏创作平台（一句话生成可玩分支剧情游戏），并非任务管理/效率工具",
+    "evidence": "yoroll.ai 为 LinearGame 的 AI 视频原生游戏平台，与描述功能不符"
+  }
+]

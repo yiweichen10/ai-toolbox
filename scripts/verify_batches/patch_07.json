@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "cosy-voice",
+    "description": "CosyVoice 是阿里巴巴通义实验室（FunAudioLLM）开源的多语种语音合成大模型，支持高自然度的文本转语音与零样本音色克隆，可通过阿里云百炼（DashScope）API 调用。",
+    "content": "CosyVoice 由阿里巴巴达摩院通义实验室（FunAudioLLM）开发，是一个开源的生成式语音合成大模型。它支持中文、英文、日文、韩文等多种语言及方言，具备零样本音色克隆与情感、韵律控制能力，语音自然度接近真人。开发者可直接在 GitHub（FunAudioLLM/CosyVoice）获取开源代码，或通过阿里云百炼（DashScope）平台的企业级 API 进行调用，广泛应用于有声内容创作、智能客服、视频配音等场景。"
+  },
+  {
+    "slug": "minicpm-o",
+    "description": "MiniCPM-o 是面壁智能（ModelBest）联合清华大学开源的端侧全模态大模型，支持图像、视频、音频、文本的输入与文本/语音输出，可在消费级设备本地运行。",
+    "content": "MiniCPM-o 由面壁智能（ModelBest）与清华大学共同研发，是基于 MiniCPM 系列升级的端侧多模态大模型（开源组织 OpenBMB）。它接受图像、视频、文本和音频输入，并以端到端方式生成高质量文本与语音，最新版本支持全双工全模态实时交互。模型参数量仅约 8B，却能在消费级显卡（如 RTX 5070）甚至手机、电脑上本地部署运行，适合需要数据不出端、低延迟多模态交互的 Agent 与嵌入式场景。注意：它与 MiniMax 公司无关。"
+  },
+  {
+    "slug": "wonder-ai",
+    "description": "Wonder AI 是 Codeway 推出的 AI 绘画（文生图）应用，用户输入文字描述并选择艺术风格即可生成数字艺术作品，覆盖 iOS、Android 与 Web。",
+    "content": "Wonder AI 由 Codeway 开发，是一款面向大众的 AI 艺术生成器（text-to-image）。用户只需输入一句文字描述（如诗歌、歌词或创意短语），选择一种艺术风格（立体派、赛博朋克、蒸汽朋克等），即可在数秒内生成独特的数字画作，并支持设为锁屏或分享到社交平台。它主要提供移动端 App 与 Web 体验，以「人人都能创作艺术」为卖点，并非用于文案写作或视频脚本生成的通用内容工具。"
+  },
+  {
+    "slug": "cube-sandbox",
+    "description": "CubeSandbox 是一个面向 AI Agent 的开源安全沙箱服务，基于 RustVMM/KVM 提供硬件级隔离、亚 60 毫秒启动的 MicroVM 运行环境，兼容 E2B SDK。",
+    "content": "CubeSandbox 是一个开源的高性能沙箱服务，专为运行 AI Agent 生成的不信任代码而设计。它基于 RustVMM 与 KVM 构建，每个沙箱运行在独立的 MicroVM 中（硬件级隔离，非 Docker 共享内核），平均冷启动时间低于 60 毫秒、单实例内存开销小于 5MB，单机可高密度部署数千实例。它对外兼容 E2B SDK，只需修改一个环境变量即可从 E2B 云无缝迁移，并支持百毫秒级快照、克隆与回滚。它并非零代码拖拽式 AI 原型搭建工具，而是底层的安全执行沙箱基础设施。"
+  },
+  {
+    "slug": "swytchcode",
+    "description": "Swytchcode 是面向 API/SDK 发布商的 AI 集成自动化工具，可一键生成 15+ 种编程语言的接入代码，并提供 CLI、MCP Server 与策略化安全执行能力。",
+    "content": "Swytchcode 是一款面向 API/SDK 发布商的开发者工具，定位为「AI 解决方案工程师」。它能将 API 文档自动转换为 15+ 种编程语言的生产级接入代码与文档/Playground，帮助发布商降低开发者接入门槛与支持成本。其核心是 swytchcode exec CLI 与 MCP Server：所有 API 调用都经策略校验后确定性执行并返回结构化 JSON，避免 AI 生成代码产生幻觉。它并非在不同编程语言之间做代码翻译/重构的工具，而是专注 API 集成自动化的平台。"
+  }
+]

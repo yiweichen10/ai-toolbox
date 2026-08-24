@@ -1,0 +1,126 @@
+{
+  "batch_id": "b39",
+  "category": "AI办公",
+  "tools": [
+    {
+      "slug": "notion-ai",
+      "name": "Notion AI",
+      "url_current": "https://www.notion.so",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网有效（notion.so为App域名）。定价已失效：Notion AI现随Business($20/人/月)与Enterprise套餐内置，旧\"AI附加费$10/月\"及\"+AI\"分级($14/$18/$25/月)定价已过期/编造。功能描述（文档生成、笔记总结、翻译、大纲、数据库）基本准确。"
+    },
+    {
+      "slug": "gamma",
+      "name": "Gamma",
+      "url_current": "https://gamma.app",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "low",
+      "notes": "官网有效，功能（AI演示/PPT生成）描述准确。但Pro月价各来源差异较大（$16–$25/月不等），官方价格页未直接展示固定数字；站内写\"Pro $16/月\"有来源支持但无法确证，存疑需人工裁定。"
+    },
+    {
+      "slug": "notebooklm",
+      "name": "NotebookLM",
+      "url_current": "https://notebooklm.google.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网有效（需登录）。免费版确存在；但付费NotebookLM Plus实为$19.99/月（随Google AI Pro/One AI Premium捆绑），站内写\"Pro $10/月\"错误（编造/过期）。另正文\"企业版¥0 按需定价\"亦不准确（企业版为联系销售）。功能（上传文档/学习指南/问答/音频概览）描述准确。"
+    },
+    {
+      "slug": "microsoft-copilot",
+      "name": "Copilot（微软）",
+      "url_current": "https://copilot.microsoft.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "copilot.microsoft.com为有效官网，网页版Copilot免费、Copilot Pro $20/月属实，无定价幻觉。唯一瑕疵：正文\"基于GPT-4\"表述可能已过时（现多用微软自研模型），但非硬性错误。"
+    },
+    {
+      "slug": "napkin-ai",
+      "name": "Napkin AI",
+      "url_current": "https://www.napkin.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网有效。站内价格字段写\"Pro $10/月\"，但同一正文表格却写\"Pro $20/月\"，自相矛盾；官网实际为Free/Plus($9/月)/Pro(~$20-22/月)，\"$10/月\"不准确。功能（文字转图表/流程图/思维导图/概念图）描述准确。"
+    },
+    {
+      "slug": "otter.ai",
+      "name": "Otter.ai",
+      "url_current": "https://otter.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网有效。有免费版(300分钟/月)且Pro $16.99/月、Business $30/月属实；功能（实时转录/说话人识别/关键词高亮/Zoom集成）准确，无幻觉。"
+    },
+    {
+      "slug": "feishu-assistant",
+      "name": "飞书智能助手",
+      "url_current": "https://www.feishu.cn",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网有效。飞书AI实为人民币计价（个人AI会员¥69/月起、企业版基础¥9900/年起），站内写\"基础$10/月起\"币种与金额均错误，属编造定价。另平台字段写\"本地部署 / Web\"不准确（飞书为SaaS云端服务，非本地部署）。功能（文档/表格/会议/消息AI）描述准确。"
+    },
+    {
+      "slug": "beautiful.ai",
+      "name": "Beautiful.ai",
+      "url_current": "https://www.beautiful.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网有效。Pro实际$12/月(年付)或$14.50/月，价格字段\"基础$10/月起\"偏低不准确；正文表格$12/月反而准确。另正文\"快速上手\"误写官网为www.beautiful.ai.com（正确为beautiful.ai）。功能描述准确。"
+    },
+    {
+      "slug": "tome",
+      "name": "Tome",
+      "url_current": "https://tomeapp.ai/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网有效（tomeapp.ai）。当前最低档Starter约$9.5/月，站内\"基础$10/月起\"基本吻合；功能（AI演示/叙事/图片生成/动效）准确。注意：正文\"快速上手\"误写官网为www.tome.com（正确为tomeapp.ai），但主URL字段正确。"
+    },
+    {
+      "slug": "fireflies.ai",
+      "name": "Fireflies.ai",
+      "url_current": "https://fireflies.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网有效。有免费版且Pro $10/月、Business $19/月属实；功能（自动转录/AI摘要/行动项提取/Zoom·Meet·Teams集成）准确，无幻觉。"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "name": "GPT-Live",
+  "slug": "gpt-live",
+  "positioning": "免费AI助手推荐：实时翻译、多种推理级别",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#4F46E5",
+  "description": "GPT-Live 是 OpenAI 于 2026 年 7 月发布的全双工语音模型，驱动新一代 ChatGPT Voice：可同时倾听与说话、自然打断与停顿，并把搜索与深度推理委派给后台前沿模型（发布初为 GPT-5.5），免费用户即可通过 GPT-Live-1 mini 体验。",
+  "category": "AI对话",
+  "tags": [
+    "AI对话",
+    "语音模型",
+    "全双工",
+    "实时翻译",
+    "免费可用"
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "内置于 ChatGPT（周活语音用户超 1.5 亿），无独立访问量",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://openai.com/blog/introducing-gpt-live",
+  "price": "ChatGPT 内置（免费可用）",
+  "platform": "iOS / Android / ChatGPT.com（内置于 ChatGPT 语音）",
+  "pros": [
+    "对话自然流畅，像真人",
+    "可随时打断、不冷场",
+    "免费用户可用 mini 版",
+    "后台前沿模型保证回答质量"
+  ],
+  "cons": [
+    "暂不支持视频 / 屏幕共享语音",
+    "后台模型随版本更新（初期 GPT-5.5）",
+    "高级语音功能仍受安全机制约束"
+  ],
+  "features": [
+    "全双工实时对话（边听边说）",
+    "自然打断 / 停顿与倾听反馈（mhmm / yeah）",
+    "后台委派搜索与深度推理（GPT-5.5）",
+    "实时翻译",
+    "多种推理级别（即时 / 中等 / 高）",
+    "视觉响应卡片（天气 / 股票 / 体育）"
+  ],
+  "related": [
+    "chatgpt",
+    "claude",
+    "gemini"
+  ],
+  "faq": [
+    {
+      "q": "GPT-Live 是什么？",
+      "a": "OpenAI 2026 年 7 月发布的全双工语音模型，驱动 ChatGPT Voice，可同时听说、自然打断，并将复杂任务委派给后台 GPT-5.5 等前沿模型。"
+    },
+    {
+      "q": "GPT-Live 免费吗？",
+      "a": "是，GPT-Live-1 mini 面向免费用户，GPT-Live-1 面向 Go/Plus/Pro 付费用户。"
+    }
+  ],
+  "seo_keywords": [
+    "GPT-Live",
+    "GPT-Live免费版",
+    "GPT-Live怎么样",
+    "GPT-Live和ChatGPT哪个好",
+    "实时语音AI助手推荐"
+  ],
+  "content": "## GPT-Live是什么？\n\nGPT-Live 是 OpenAI 于 2026 年 7 月推出的一代新语音模型，用来驱动 ChatGPT 的语音对话。它和过去的语音助手最大的不同，是建立在**全双工架构**之上——模型可以一边听你说话、一边自己开口，而不是“你说完→它再答”的轮次式来回。\n\n它也不是一个独立 App，而是 ChatGPT 语音背后的“引擎”。当你在 ChatGPT 里点开语音按钮，现在背后跑的就是 GPT-Live。对于需要搜索、深入推理或复杂操作的请求，它会把任务**委派给 GPT-5.5** 等前沿模型在后台处理，自己继续和你顺畅聊天。发布时它使用 GPT-5.5 Instant，未来会随着新模型持续升级。\n\n## 核心功能\n\n1. **全双工连续对话**\n   模型在生成回答的同时持续听你说话，可以自然打断、反问、停顿思考，而不是干等你说完。对话里它会用“嗯嗯”“明白了”这样短句表示在听，像真人一样接得住话。\n\n2. **把重活委派给前沿模型**\n   遇到需要联网搜索、深度推理的任务，GPT-Live 会交给 GPT-5.5（Instant 或 Thinking）在后台完成，结果回来再带回对话。处理这些任务时它仍能继续和你聊，不冷场。\n\n3. **实时翻译**\n   基于全双工架构，GPT-Live 能在对话中做实时翻译，跨语言交流更顺。\n\n4. **九种重新打造的声音**\n   OpenAI 为 GPT-Live 重做了 ChatGPT 里九种各具特色的声音，对话更有个性和表现力。\n\n5. **可视化回答卡片**\n   聊到天气、股票、体育等话题时，ChatGPT 语音可以弹出丰富的可视化卡片，边说边看更直观。语音继续支持搜索、记忆、图片和文件上传。\n\n6. **更会倾听的安全设计**\n   你需要思考时它会安静等待不抢话；有背景噪音时更专注你的声音。内置防语音冒充保障（用一组预定义声音，不会模仿真实人物），并有青少年保护等安全措施。\n\n## 版本/套餐对比\n\nGPT-Live 发布时提供两个变体，均内置于 ChatGPT 语音，**不单独收费**：\n\n| 变体 | 适用套餐 | 后台模型 | 推理级别 |\n|------|---------|---------|---------|\n| GPT-Live-1 | Go / Plus / Pro 默认驱动 | GPT-5.5 Instant / Thinking | Instant、Medium、High 可选 |\n| GPT-Live-1 mini | Free 用户默认 | GPT-5.5 Instant | Instant |\n\n注：Medium / High 使用 GPT-5.5 Thinking，分别采用中、高推理强度；你可在语音设置里选择推理级别。\n\n## 值不值得用？\n\n**优点：**\n- 对话自然度是迄今最高的一档：能打断、能停顿、会用“嗯嗯”接话，不像老版语音那样生硬或抢话。\n- 聪明：复杂问题会调用 GPT-5.5 在后台推理，回答质量比旧版高级语音模式明显更高（官方评测在 GPQA、BrowseComp 等基准上显著领先）。\n- 更会听：背景噪音下更聚焦，你思考时它不插嘴。\n- 多语言实时翻译、可视化卡片等让日常使用更实用。\n\n**缺点 / 局限：**\n- 发布初期**不支持语音与视频、屏幕共享结合**（旧的 Standard / 高级语音模式仍可在支持处使用）。\n- 对部分语言仍带有非母语口音或流利度不足，OpenAI 正在改进。\n- 仅限 ChatGPT 内使用（iOS / Android / ChatGPT.com），不是一个独立产品；API 计划推出但尚未全面开放（可注册意向表单）。\n\n**总体结论：**\n如果你常用 ChatGPT 语音聊天、练口语、通勤时免提交互，GPT-Live 是当前体验最好的升级，自然度和智能度都明显上一个台阶。它不是“另一个 AI 工具”，而是 ChatGPT 语音的底座，建议直接用 ChatGPT 语音体验，无需额外注册。\n\n## 使用建议\n\n- **直接用 ChatGPT 语音即可**：点语音按钮就是在用 GPT-Live，Free 用户默认 GPT-Live-1 mini，付费用户默认 GPT-Live-1。\n- **需要深度思考时选高推理级别**：在语音设置里把推理调到 Medium / High，复杂问题交给 GPT-5.5 Thinking。\n- **练口语 / 实时翻译很好用**：跨语言对话时它能在后台翻译，适合语言练习。\n- **想要可视化就直接问**：天气、股票、体育等话题会弹出卡片，比纯听更直观。\n- **注意它仍在迭代**：视频/屏幕共享结合还在路上，遇到就先用旧版语音模式。\n\n## 适合谁用？\n\n**推荐：**\n- 日常用 ChatGPT 语音聊天、通勤免提交互的人\n- 练外语口语、需要实时翻译的人\n- 想要更自然 AI 对话、讨厌生硬轮次式语音的人\n\n**可考虑：**\n- 已经订阅 ChatGPT Plus / Pro / Go 的用户（默认即用，无需额外操作）\n- 需要边聊边看可视化信息（天气/股票/体育）的人\n\n**不推荐：**\n- 想要独立 AI 语音 App 或自建部署的人（GPT-Live 内置于 ChatGPT，API 尚未全面开放）\n- 依赖语音+视频/屏幕共享场景的人（发布初期不支持）",
+  "published": true,
+  "created_date": "2026-07-27",
+  "published_date": "2026-07-27",
+  "verified_url": "https://openai.com/blog/introducing-gpt-live",
+  "verified_publisher": "OpenAI",
+  "verified_what": "OpenAI 于 2026 年 7 月发布的全双工语音模型，驱动新一代 ChatGPT Voice，可同时听说、自然打断，并将搜索 / 深度推理委派给后台前沿模型（发布初为 GPT-5.5）。",
+  "verified_price": "内置于 ChatGPT：GPT-Live-1 面向 Go/Plus/Pro 付费用户，GPT-Live-1 mini 面向免费用户；API 即将开放。",
+  "verified_platform": [
+    "ChatGPT（iOS/Android/Web）",
+    "API（即将开放）"
+  ],
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "全双工实时对话（边听边说）",
+    "自然打断 / 停顿与倾听反馈（mhmm / yeah）",
+    "后台委派搜索与深度推理（GPT-5.5）",
+    "实时翻译",
+    "多种推理级别（即时 / 中等 / 高）",
+    "视觉响应卡片（天气 / 股票 / 体育）"
+  ],
+  "verified_description": "GPT-Live 是 OpenAI 于 2026 年 7 月发布的全双工语音模型，驱动新一代 ChatGPT Voice：可同时倾听与说话、自然打断与停顿，并把搜索与深度推理委派给后台前沿模型（发布初为 GPT-5.5），免费用户即可通过 GPT-Live-1 mini 体验。",
+  "price_verified": true,
+  "verified_pros": [
+    "对话自然流畅，像真人",
+    "可随时打断、不冷场",
+    "免费用户可用 mini 版",
+    "后台前沿模型保证回答质量"
+  ],
+  "verified_cons": [
+    "暂不支持视频 / 屏幕共享语音",
+    "后台模型随版本更新（初期 GPT-5.5）",
+    "高级语音功能仍受安全机制约束"
+  ],
+  "verified_faq": [
+    {
+      "q": "GPT-Live 是什么？",
+      "a": "OpenAI 2026 年 7 月发布的全双工语音模型，驱动 ChatGPT Voice，可同时听说、自然打断，并将复杂任务委派给后台 GPT-5.5 等前沿模型。"
+    },
+    {
+      "q": "GPT-Live 免费吗？",
+      "a": "是，GPT-Live-1 mini 面向免费用户，GPT-Live-1 面向 Go/Plus/Pro 付费用户。"
+    }
+  ],
+  "verified_tags": [
+    "AI对话",
+    "语音模型",
+    "全双工",
+    "实时翻译",
+    "免费可用"
+  ],
+  "verified_category": "AI对话",
+  "source_urls": [
+    "https://openai.com/blog/introducing-gpt-live",
+    "https://openai.com/zh-Hans-CN/index/introducing-gpt-live/",
+    "https://new.qq.com/rain/a/20260709A091UI00"
+  ],
+  "verify_notes": "现有 description/content 与官方高度一致，无需修正。",
+  "content_verified": true,
+  "url_previous": "https://openai.com/index/introducing-gpt-live/",
+  "compare_section": {
+    "competitors": [
+      "gemini",
+      "chatgpt",
+      "360-zhinain"
+    ],
+    "verdict": "GPT-Live 与 Gemini、ChatGPT、360智脑 同属AI对话赛道：GPT-Live 的 全双工实时对话（边听边说） 是亮点，价格 ChatGPT 内置（免费可用）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

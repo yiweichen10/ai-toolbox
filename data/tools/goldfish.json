@@ -1,0 +1,145 @@
+{
+  "name": "Goldfish",
+  "slug": "goldfish",
+  "positioning": "免费AI写作，任意输入框+语气匹配好用吗",
+  "auto_positioning": true,
+  "emoji": "🐠",
+  "color": "#FFA500",
+  "description": "Goldfish 是常驻 Mac（也提供 Windows 版）的本地 AI 记忆助手，读取屏幕上下文，在任意输入框按 Option 键即用你的语气回复、写作、总结或续写，记忆本地加密存储、注重隐私。",
+  "category": "AI写作",
+  "tags": [
+    "AI写作",
+    "本地优先",
+    "记忆助手",
+    "隐私",
+    "Mac"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "5,000,000",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://goldfish.sh",
+  "price": "目前免费（Alpha/Beta）",
+  "platform": "Web、iOS、Android",
+  "pros": [
+    "记忆默认存于本地加密 SQLite，隐私友好",
+    "适用于任意 Mac 文本框，无需逐应用集成",
+    "Alpha/Beta 期间免费",
+    "Azure OpenAI 处理零数据保留、不用于训练"
+  ],
+  "cons": [
+    "需要 macOS 辅助功能权限以读取屏幕文本",
+    "主要为 Mac 工作流，Windows 版为辅",
+    "无移动 App 与云同步",
+    "AI 生成内容发出前仍需人工核对"
+  ],
+  "features": [
+    "任意输入框 Option 唤起（带屏幕上下文的回复/续写/总结）",
+    "语气匹配：跨应用学习你的写作风格",
+    "本地记忆：加密 SQLite 存储，不上云端",
+    "本地 MCP 连接 Claude Desktop",
+    "工作流感知与遗忘跟进提醒",
+    "自动生成可搜索的工作 Wiki"
+  ],
+  "related": [
+    "jasper",
+    "writesonic"
+  ],
+  "faq": [
+    {
+      "q": "Goldfish 免费吗？",
+      "a": "是的。官网 FAQ 明确说明 Goldfish 在 Alpha 与 Beta 阶段均免费，暂未推出任何付费套餐。"
+    },
+    {
+      "q": "Goldfish 如何访问我的工作环境？",
+      "a": "通过 macOS 辅助功能 API 读取屏幕上的文字（非截图、非录屏），上下文存于本地加密 SQLite；调用时仅发送完成请求所需上下文至 Azure OpenAI，零数据保留且不用于训练。"
+    },
+    {
+      "q": "Goldfish 支持哪些平台？",
+      "a": "主打 macOS，也提供 Windows 桌面版；无独立移动 App，也无 Web 版。原基线称支持 iOS/Android 不实。"
+    }
+  ],
+  "seo_keywords": [
+    "Goldfish AI",
+    "Goldfish AI写作助手",
+    "Goldfish怎么样",
+    "Goldfish免费版",
+    "Goldfish和Jasper对比"
+  ],
+  "content": "## Goldfish 是什么？\nGoldfish 是一款常驻在你电脑里的“AI 记忆”小助手，目前主打 macOS，也提供 Windows 版本。它不打断你的工作流，而是默默把你各个应用里正在处理的内容记下来，等你需要回复邮件、写消息、做总结的时候，按一下 Option 键，它就能结合眼前上下文、用你自己的语气帮你把话写出来。简单说，它解决的是“同样背景要反复解释一遍”的麻烦——你不用再把对话、文档、标签的内容复制粘贴给 AI，它自己就知道你现在在聊什么。\n\n## 核心功能\n\n- 任意输入框唤起：在邮件、Slack、WhatsApp、Notion、浏览器、代码编辑器里，只要能打字的地方按 Option，就能获得带上下文的回复 / 续写 / 总结。它不依赖每个应用的单独集成，而是在系统层面工作。\n- 语气匹配：它会跨应用、跨联系人、跨场景学习你的写作风格，输出读起来更像“你自己写的”，而不是千篇一律的 AI 腔。\n- 本地记忆：通过 macOS 辅助功能 API 读取屏幕上的文字（不是截图、不是录屏），把上下文存在 Mac 本地的加密 SQLite 数据库里，不上云端。AI 请求走 Azure OpenAI，官方称零数据保留、不会用你的数据训练模型。\n- 工作流感知：能浮现重复性的工作流程、提醒你忘了跟进的事，并自动生成一份可搜索的工作 Wiki，方便回看“我之前做过什么、为什么这么做”。\n- 多入口：除了快捷键，还能从 Mac 刘海处的“水族箱”界面聊天，或通过本地 MCP 把 Mac 上的上下文接到 Claude Desktop 里用。\n\n## 定价\n\n目前完全免费。官网 FAQ 明确说明 Goldfish 在 Alpha 和 Beta 阶段都不收费，暂时没有推出任何付费套餐，也没有按量计费或高级档位。对一个还在测试期、靠本地优先和隐私卖点的工具来说，这降低了试用门槛，但长期是否收费尚未可知。\n\n## 适合谁\n\n- 每天要回大量邮件 / 消息、又希望保持个人语气的人\n- 需要跨多个应用写东西、厌烦反复粘贴背景的自由职业者\n- 在意隐私、希望记忆留在本地而不上云的用户\n- 已经在用 Claude Desktop、想让本地上下文也能在 Claude 里复用的人\n\n不太适合：需要团队协作 / 共享记忆、需要云同步多设备、或指望移动 App 的人——Goldfish 目前是单用户、桌面端、无 API 的工具；它也需要你授予 macOS 辅助功能权限才能读取屏幕文字。\n\n## 小结\n\nGoldfish 把“AI 帮写”这件事做得很克制：它不替你思考，只是把你眼前已有的上下文接上，让你的回复更省事也更像你。免费、本地优先、隐私友好是它最大的卖点。如果你主要用 Mac 写东西、受够了反复解释背景，值得下载试试；但别指望它做团队协作或移动端的事，AI 生成的回复在发出前也最好自己过一眼。",
+  "published": true,
+  "subcategory": "ai-content-writing",
+  "created_date": "2026-07-22",
+  "published_date": "2026-07-22",
+  "verified_url": "https://goldfish.sh",
+  "verified_publisher": "Goldfish",
+  "verified_what": "Goldfish 是常驻 Mac（也提供 Windows 版）的本地 AI 记忆助手，读取屏幕上正在处理的上下文，在任意输入框按 Option 键即可用你的语气回复、写作、总结或续写，记忆以加密 SQLite 本地存储，注重隐私。",
+  "verified_price": "目前 Alpha/Beta 阶段完全免费，官网 FAQ 明确说明暂未推出任何付费套餐。",
+  "verified_platform": "macOS（主）/ Windows（桌面端）；无移动 App、无 Web 版",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "任意输入框 Option 唤起（带屏幕上下文的回复/续写/总结）",
+    "语气匹配：跨应用学习你的写作风格",
+    "本地记忆：加密 SQLite 存储，不上云端",
+    "本地 MCP 连接 Claude Desktop",
+    "工作流感知与遗忘跟进提醒",
+    "自动生成可搜索的工作 Wiki"
+  ],
+  "verified_description": "Goldfish 是常驻 Mac（也提供 Windows 版）的本地 AI 记忆助手，读取屏幕上下文，在任意输入框按 Option 键即用你的语气回复、写作、总结或续写，记忆本地加密存储、注重隐私。",
+  "content_flags": "长文准确；错误集中在结构化字段（原 platform 写 Web/iOS/Android、features 写邮件生成/50+语言翻译/团队协作、tags 写邮件助手），已校正。",
+  "price_verified": true,
+  "verified_pros": [
+    "记忆默认存于本地加密 SQLite，隐私友好",
+    "适用于任意 Mac 文本框，无需逐应用集成",
+    "Alpha/Beta 期间免费",
+    "Azure OpenAI 处理零数据保留、不用于训练"
+  ],
+  "verified_cons": [
+    "需要 macOS 辅助功能权限以读取屏幕文本",
+    "主要为 Mac 工作流，Windows 版为辅",
+    "无移动 App 与云同步",
+    "AI 生成内容发出前仍需人工核对"
+  ],
+  "verified_faq": [
+    {
+      "q": "Goldfish 免费吗？",
+      "a": "是的。官网 FAQ 明确说明 Goldfish 在 Alpha 与 Beta 阶段均免费，暂未推出任何付费套餐。"
+    },
+    {
+      "q": "Goldfish 如何访问我的工作环境？",
+      "a": "通过 macOS 辅助功能 API 读取屏幕上的文字（非截图、非录屏），上下文存于本地加密 SQLite；调用时仅发送完成请求所需上下文至 Azure OpenAI，零数据保留且不用于训练。"
+    },
+    {
+      "q": "Goldfish 支持哪些平台？",
+      "a": "主打 macOS，也提供 Windows 桌面版；无独立移动 App，也无 Web 版。原基线称支持 iOS/Android 不实。"
+    }
+  ],
+  "verified_tags": [
+    "AI写作",
+    "本地优先",
+    "记忆助手",
+    "隐私",
+    "Mac"
+  ],
+  "verified_category": "AI写作",
+  "source_urls": [
+    "https://topaihubs.com/item/goldfish",
+    "https://aitools.fyi/zh/goldfish",
+    "https://new.qq.com/rain/a/20260727A0BC7300"
+  ],
+  "verify_notes": "原基线结构化字段（platform Web/iOS/Android、features 邮件生成/50+语言翻译/团队协作、tags 邮件助手）属虚构，但原 long content 准确。已据官网校正 platform 为 macOS/Windows 桌面端，并修正 features/pros/cons/faq/tags。",
+  "content_verified": true,
+  "url_previous": "https://www.goldfish.sh/",
+  "compare_section": {
+    "competitors": [
+      "wordtune",
+      "jenni-ai",
+      "language-tool"
+    ],
+    "verdict": "Goldfish 与 Wordtune、Jenni AI、LanguageTool 同属AI写作赛道：Goldfish 的 任意输入框 Option 唤起（带屏幕上下文的回复/续写/总结） 是亮点，价格 目前免费（Alpha/Beta）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

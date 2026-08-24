@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260808-001",
+    "title": "OpenAI：因网络安全风险，延缓 Astra 模型发布",
+    "summary": "OpenAI 因内部与专家评估显示 Astra 在智能体编程和网络安全领域取得重大突破，依据《准备框架》将其列为旗下首个网络安全风险达\"关键\"级别的模型，决定延缓发布。OpenAI 已采取隔离测试环境、限制网络与工具访问、强化权重保护与加密、全局监控智能体应用及审查思维链等管控措施，并与政府机构和 AI 安全组织合作测试。CEO 萨姆·奥尔特曼表示 Astra 性能强劲，正全力推进公开发布。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "IT之家（RSS）",
+    "source_url": "https://www.ithome.com/0/987/221.htm",
+    "published_at": "2026-08-08T07:08:56+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260808-002",
+    "title": "Seedance 2.5 API 上线，视频生成开启「电影级长叙事」",
+    "summary": "火山引擎正式上线 Seedance 2.5 API，将单次视频生成时长从15秒提升至30秒，并支持最高50个全模态素材参考。模型在指令遵循、长叙事、真人感及声画质感上大幅提升，能稳定保持多角色外形与场景关系，兼容十余种语言。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "公众号：火山引擎",
+    "source_url": "https://mp.weixin.qq.com/s?__biz=MzI0NzU1NzI5NQ%3D%3D&mid=2247543416&idx=1&sn=badeafc780a939033a1e4cb0bba4221c",
+    "published_at": "2026-08-07T14:01:45+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260808-003",
+    "title": "斯坦福与 Arc Institute 用 AI 设计全新病毒基因组，16 种在实验室成功杀死细菌",
+    "summary": "斯坦福大学与 Arc Institute 团队用 AI 模型 Evo 从零设计完整病毒基因组，并在实验室构建出 16 种自然界不存在的功能性病毒。Evo 提出 70 万个候选基因组，团队仅筛选最有希望的 285 个序列合成并植入细菌，其中 16 个成功复制并杀死宿主。该研究已通过同行评审发表于《Science》，但 Evo 未接受人类病原体数据训练，且能否推广至其他病毒类群仍是未知数。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "The Decoder：AI News（RSS）",
+    "source_url": "https://the-decoder.com/stanford-and-arc-institute-scientists-used-ai-to-design-new-viruses-that-killed-bacteria-in-the-lab",
+    "published_at": "2026-08-07T20:50:56+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260808-004",
+    "title": "蚂蚁百灵开源 Ling-3.0-flash：124B 总参数 MoE 模型，支持 API、单机与高性能三种部署",
+    "summary": "蚂蚁百灵正式开源新一代原生混合推理模型 Ling-3.0-flash，采用 124B 总参数、5.1B 激活参数的 MoE 架构，并提供 FP8、FP4、INT4 等多个版本。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "公众号：蚂蚁百灵（Ling）",
+    "source_url": "https://mp.weixin.qq.com/s?__biz=MzkyODk2MDQwNw%3D%3D&mid=2247487457&idx=1&sn=24ad4a355d81291e53fbe680ca987112",
+    "published_at": "2026-08-07T20:02:16+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260808-005",
+    "title": "独立开发者用 VoxCPM 克隆网红声音，让 AI 终于\"会聊天\"了",
+    "summary": "独立开发者叶小叔用面壁智能开源的 VoxCPM 克隆千万粉丝网红声音，搭建 STT → LLM → VoxCPM（TTS）三段式实时对话管道，TTS 首包延迟不到 1 秒，端到端体感 2 到 3 秒。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "公众号：面壁智能（MiniCPM）",
+    "source_url": "https://mp.weixin.qq.com/s?__biz=Mzg3Mzg2MTg2NQ%3D%3D&mid=2247498927&idx=1&sn=c5fbfaac5ede8b1008d17337a1bdc70b",
+    "published_at": "2026-08-07T14:41:21+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260808-006",
+    "title": "OpenAI 将 Astra 列为首个\"关键\"网络安全模型",
+    "summary": "OpenAI 在评估其即将推出的模型 Astra 后，依据\"准备框架\"将其列为首个\"关键\"网络安全模型。OpenAI 表示已为此情景做好规划，并将实施额外控制措施以确保 Astra 后续开发的安全。该公司正努力让 Astra 广泛可用，并将其先进网络能力交到防御者手中。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "X：OpenAI (@OpenAI)",
+    "source_url": "https://x.com/OpenAI/status/2085801349866729975",
+    "published_at": "2026-08-08T02:52:48+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260808-007",
+    "title": "Kitesurf：一款在 V8 隔离环境中运行的\"代理优先\"浏览器",
+    "summary": "Cloudflare 推出 Kitesurf，一款专为 AI 智能体设计的浏览器，完全运行在 Workers 上，基于 V8 隔离环境，现已在 Browser Run 中免费开放测试。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://blog.cloudflare.com/kitesurf",
+    "published_at": "2026-08-08T02:54:34+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260808-008",
+    "title": "小红书联合浙大、复旦提出 CULTURE-MT：首个面向社媒翻译的「文化有效性」评测基准，入选 ICML 2026",
+    "summary": "小红书联合浙江大学、复旦大学提出 CULTURE-MT，这是首个面向中英社媒笔记翻译、兼顾文化符号传递与情感共鸣的评测基准，并首次提出「文化有效性」评估标准与自动评估模型 JUDGER（准确率 86.03%）。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "公众号：小红书技术（dots.llm）",
+    "source_url": "https://mp.weixin.qq.com/s?__biz=Mzg4OTc2MzczNg%3D%3D&mid=2247496008&idx=1&sn=08f2ce717483f63bc00a2181e59e3f40",
+    "published_at": "2026-08-07T17:59:00+08:00",
+    "tags": [
+      "paper"
+    ]
+  }
+]

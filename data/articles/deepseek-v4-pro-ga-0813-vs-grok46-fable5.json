@@ -1,0 +1,162 @@
+{
+  "title": "DeepSeek V4 Pro 正式版转正：1M 上下文 + 384K 输出，Agent 能力暴涨对打 Claude Fable 5——与 Grok 4.6、GPT-5.6 Sol 旗舰横评（2026年8月）",
+  "slug": "deepseek-v4-pro-ga-0813-vs-grok46-fable5",
+  "date": "2026-08-13",
+  "dateFull": "2026-08-13",
+  "category": "AI资讯",
+  "tags": [
+    {
+      "text": "AI资讯",
+      "type": "hot"
+    },
+    {
+      "text": "DeepSeek V4 Pro",
+      "type": "topic"
+    },
+    {
+      "text": "Grok 4.6",
+      "type": "topic"
+    },
+    {
+      "text": "Claude Fable 5",
+      "type": "topic"
+    },
+    {
+      "text": "AI Agent",
+      "type": "topic"
+    },
+    {
+      "text": "大模型横评",
+      "type": "topic"
+    }
+  ],
+  "excerpt": "8月13日 DeepSeek V4 Pro 从预览版正式转正（版本 0813）：1M 上下文 + 384K 输出，Agent 能力暴涨，DeepSWE 从 12.8 飙至 62.7，部分基准超越 Claude Fable 5。同一天 Grok 4.6 发布。本文做三强横评。",
+  "description": "2026年8月13日，DeepSeek V4 Pro 正式版转正（DeepSeek-V4-Pro-0813），1M 上下文、最大输出 384K token，Agent 能力大幅增强，DeepSWE 得分从预览版 12.8 升至 62.7，Cybergym、AutomationBench 超越 Claude Fable 5。同日 Grok 4.6（SpaceXAI）发布。本文对比 DeepSeek V4 Pro、Grok 4.6、Claude Fable 5 及 GPT-5.6 Sol 的参数、价格与 Agent 基准。",
+  "keywords": "DeepSeek V4 Pro 正式版, DeepSeek-V4-Pro-0813, Grok 4.6, Claude Fable 5, GPT-5.6 Sol, AI Agent, 大模型横评, 1M上下文, 384K输出, DeepSWE, 模型价格对比, 2026 AI旗舰, 开源模型, MoE",
+  "author": "AI工具宝箱编辑组",
+  "related_tools": [
+    "deepseek",
+    "grok",
+    "grok-4-5",
+    "claude",
+    "claude-fable-5",
+    "kimi",
+    "qwen-chat",
+    "zhipu-chatglm",
+    "glm-5-2",
+    "gemini"
+  ],
+  "infographic": {
+    "title": "2026年8月 Agent 旗舰三强横评",
+    "subtitle": "DeepSeek V4 Pro · Grok 4.6 · Claude Fable 5",
+    "icon": "⚔️",
+    "tools": [
+      {
+        "name": "DeepSeek V4 Pro",
+        "sub": "国产性价比旗舰 Agent",
+        "emoji": "🟢",
+        "badges": [
+          [
+            "价格仅 Fable 5 1/57",
+            "best"
+          ],
+          [
+            "MIT 开源",
+            "free"
+          ]
+        ]
+      },
+      {
+        "name": "Grok 4.6",
+        "sub": "长程 Agent 单模型",
+        "emoji": "🟪",
+        "badges": [
+          [
+            "$2/$6 便宜",
+            "score"
+          ],
+          [
+            "500K 上下文",
+            "score"
+          ]
+        ]
+      },
+      {
+        "name": "Claude Fable 5",
+        "sub": "最强推理/编码旗舰",
+        "emoji": "🟦",
+        "badges": [
+          [
+            "AA 指数 62 领先",
+            "best"
+          ],
+          [
+            "$10/$50 最贵",
+            "score"
+          ]
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "label": "核心定位",
+        "type": "text",
+        "values": [
+          "高性价比国产旗舰 Agent",
+          "长程 Agent + 视觉单模型",
+          "最强自主推理/编码"
+        ]
+      },
+      {
+        "label": "上下文窗口",
+        "type": "text",
+        "values": [
+          "1M",
+          "500K",
+          "1M"
+        ]
+      },
+      {
+        "label": "最大输出",
+        "type": "text",
+        "values": [
+          "384K",
+          "无上限",
+          "128K"
+        ]
+      },
+      {
+        "label": "价格($/百万token)",
+        "type": "text",
+        "values": [
+          "$0.435 入 / $0.87 出",
+          "$2 入 / $6 出",
+          "$10 入 / $50 出"
+        ]
+      },
+      {
+        "label": "架构与开源",
+        "type": "text",
+        "values": [
+          "MoE 1.6T · MIT 开源",
+          "1.5T V9 · 闭源",
+          "闭源"
+        ]
+      },
+      {
+        "label": "最适人群",
+        "type": "text",
+        "values": [
+          "追求极致性价比的团队",
+          "长程 Agent + 视觉任务",
+          "要能力天花板、不在乎成本"
+        ]
+      }
+    ],
+    "footer": "数据截至 2026-08-13 · aitoollab.cn"
+  },
+  "content": "# DeepSeek V4 Pro 正式版转正：1M 上下文 + 384K 输出，Agent 能力暴涨对打 Claude Fable 5——与 Grok 4.6、GPT-5.6 Sol 旗舰横评（2026年8月）\n\n**8 月 13 日凌晨，[DeepSeek](https://www.aitoollab.cn/tools/deepseek/) 官方把 V4 Pro 从预览版正式「转正」了。**\n\n定价页上的版本号已经悄悄变成 **DeepSeek-V4-Pro-0813**，调用方式不变，用 `deepseek-v4-pro` 就能调到最新正式版。这意味着，从 4 月底预览、到 7 月底 Flash 先转正，再到今天 Pro 落地，DeepSeek 的 V4 双旗舰终于全部进入生产可用状态。\n\n而就在同一天，[Grok 4.6](https://www.aitoollab.cn/tools/grok/) 也刚刚发布——两件事撞在一起，把「AI 旗舰模型的 Agent 决赛圈」彻底推向白热化。\n\n## 一、先把时间线捋清楚：V4 Pro 这次「转正」意味着什么\n\nDeepSeek 的 V4 系列走了很长的预览期：\n\n| 时间 | 事件 |\n|------|------|\n| 4 月 24 日 | V4 系列预览，Pro / Flash 双双开放权重（MIT 协议）+ API |\n| 7 月 15 日 | V4 系列正式版全量商用（峰谷分时计费首发） |\n| 7 月 31 日 | V4-Flash 率先转正为正式版 API |\n| 8 月 12–13 日 | **V4-Pro 正式版转正（版本 0813）** |\n\n「转正」的意义不止是改个版本号：它代表官方对稳定性、可用性的背书，接口行为从「可能变」进入「可依赖」。对已经把 DeepSeek 写进生产流程的团队，这是一个可以放心扩大规模的信号。\n\n## 二、V4 Pro 正式版的核心参数\n\n正式版的核心规格相当能打：\n\n- **上下文 1M token，最大输出 384K token**——国产模型里的头部水平，长文档、长代码库、连续多步 Agent 任务都更从容；\n- **thinking / 非 thinking 双模式**，默认开启 thinking；\n- **架构**：混合专家（MoE），总参 1.6 万亿、每 token 激活 490 亿（Hugging Face 模型卡数据）；\n- **能力**：JSON 结构化输出、工具调用、Responses API、兼容 Anthropic API 格式，另支持 Beta 阶段的对话前缀续写与 FIM 补全（FIM 仅限非思考模式）；\n- **并发限制 500**（Flash 为 2500，Pro 作为高端档限流更严）。\n\n## 三、最值得说的一点：Agent 能力暴涨\n\n这次转正真正的看点，是 Agent 能力的跃升。智东西的报道点得很准：**V4 Pro 正式版部分性能逼近甚至超越 [Claude Fable 5](https://www.aitoollab.cn/tools/claude-fable-5/)**。\n\n几个关键数字（均为 DeepSeek 官方口径）：\n\n- 在 AI 安全智能体基准 **Cybergym**、工作流智能体 **AutomationBench** 中，V4 Pro 正式版的表现**超越 Fable 5**；\n- 针对长周期、高复杂度真实软件工程的编程智能体测试 **DeepSWE**，得分从预览版的 **12.8 飙升至 62.7**；\n- 最大推理档位 V4-Pro-Max 的官方跑分：SWE-bench Verified 80.6%、LiveCodeBench 93.5%、GPQA Diamond 90.1%、MMLU-Pro 87.5%、Terminal Bench 2.0 67.9%。\n\n一句话总结：V4 Pro 从「会写代码」明显跨向「能独立跑长周期软件工程任务」，这正是 Agent 时代最值钱的能力。\n\n## 四、价格：便宜到离谱，但涨价已在上路\n\nV4 Pro 的价格体系如下（美元/百万 token，另附人民币价）：\n\n| 模型 | 输入(未命中) | 缓存命中 | 输出 |\n|------|--------------|----------|------|\n| **DeepSeek V4 Pro** | $0.435 | $0.003625 | $0.87 |\n| DeepSeek V4 Flash | $0.14 | $0.0028 | $0.28 |\n| Grok 4.6 | $2.00 | 未公布 | $6.00 |\n| GPT-5.6 Sol | $5.00 | $0.50 | $30.00 |\n| Claude Fable 5 | $10.00 | $1.00 | $50.00 |\n\n算一笔账：V4 Pro 的输出价是 GPT-5.6 Sol 的 **1/34**，是 Fable 5 的 **1/57**；缓存命中输入更是便宜到 Fable 5 的 **1/276**。人民币口径下，V4 Pro 是缓存命中输入 ¥0.025、未命中 ¥3、输出 ¥6（约为 Flash 的 3 倍）。\n\n但必须提醒：**8 月 6 日 DeepSeek 已预告「近期整体上调 API 定价、涨幅较大」**。这张价格表是涨价前最后的窗口，对成本敏感的业务要有心理准备。\n\n## 五、三强横评：V4 Pro vs Grok 4.6 vs Claude Fable 5\n\n8 月 13 日同一天，[Grok 4.6](https://www.aitoollab.cn/tools/grok/) 也发布了（SpaceXAI，前身 xAI）。把这两款新旗舰和 Claude Fable 5 放一起，就是当前 Agent 时代的三大路线对决：\n\n| 维度 | DeepSeek V4 Pro | Grok 4.6 | Claude Fable 5 |\n|------|-----------------|----------|----------------|\n| 核心定位 | 高性价比国产旗舰 Agent | 长程 Agent + 视觉单模型 | 最强自主推理/编码旗舰 |\n| 上下文 | 1M | 500K | 1M |\n| 最大输出 | 384K | 无上限 | 128K |\n| 输入/输出($/百万) | $0.435 / $0.87 | $2 / $6 | $10 / $50 |\n| 架构/开源 | MoE 1.6T，**MIT 开源** | 1.5T V9，闭源 | 闭源 |\n| AA 智能指数 | — | 61 | 62(Max) |\n\n（信息图见文末）\n\n### 关于 Grok 4.6，多说几句（用户点名要对比）\n\nGrok 4.6 是 **1.5 万亿参数 V9 底座的纯后训练升级**——底座和 Grok 4.5 一样，没加参数，全在 SFT + 强化学习上发力，专攻「长程 Agent 连贯性」：多步研究、跨代码库、把一个宽泛想法做成可用应用。\n\n- **价格**：$2 / $6（输入/输出），比 Fable 5 便宜 80% 左右，比 Claude Opus 4.8 的 $5/$25 也便宜一截；\n- **基准**：官方称 AA 智能指数 61，与 GPT-5.6 Sol 持平，落后 Fable 5 Max 的 62；DeepSWE v1.1 达 65.9%（比 Grok 4.5 的 54% 大涨）；GDPVal-AA v2 拿到 1753 领先；\n- **短板**：文档未公布缓存命中价（而 Agent 场景恰恰是缓存主导），且 4.5 代曾被开发者诟病幻觉率偏高，独立评测尚未跟上。\n\n### 三条路线怎么选\n\n- **要极致性价比 + 可控（可自部署）** → 选 DeepSeek V4 Pro。开源权重 + 1/57 的价格，是国产团队的默认答案；\n- **要长程 Agent + 视觉 + 便宜** → 选 Grok 4.6，$2/$6 在海外旗舰里最便宜，四档 reasoning 可调；\n- **要天花板 + 不在乎钱** → 选 Claude Fable 5，最难的自主编码和推理它仍是标杆。\n\n## 六、四个诚实边界（别被通稿带节奏）\n\n1. **所有跑分都是厂商自报**。V4 Pro 的 DeepSWE 62.7、Grok 4.6 的 AA 61，独立评测都还没复现，正式版 0813 更是「零独立样本」；\n2. **口径不完全可比**。DeepSWE v1.1 和 DeepSWE 不同版本、不同 harness 的分数不能直接对打，横向对比时要看版本号；\n3. **涨价悬而未决**。8/6 预告的「大幅涨价」尚未落地，现在看到的 V4 Pro 价格可能随时调整；\n4. **API 与网页版 CoT 有差异**。有开发者在 X 上反馈，V4 Pro 的 API 输出话术比网页端生硬、语序别扭，接入前建议用自己的任务跑一遍。\n\n## 七、结论：Agent 决赛圈，性价比成了新变量\n\nDeepSeek V4 Pro 转正 + Grok 4.6 发布，同一天落子，传递的信号高度一致：\n\n> **旗舰模型的竞争，已经从「谁更强」转向「谁在长周期 Agent 上又强又便宜」。**\n\n对普通开发者和内容团队，这是好消息——[Kimi](https://www.aitoollab.cn/tools/kimi/)、[千问](https://www.aitoollab.cn/tools/qwen-chat/)、[智谱清言](https://www.aitoollab.cn/tools/zhipu-chatglm/) 等国产模型也在同一条性价比赛道上，AI 的「能力通货膨胀」还在继续。\n\n## 常见问题（FAQ）\n\n**Q1：DeepSeek V4 Pro 正式版怎么调用？**\n直接沿用 `deepseek-v4-pro` 端点即可，官方已把底层版本切到 DeepSeek-V4-Pro-0813，无需改代码。\n\n**Q2：V4 Pro 和 V4 Flash 正式版怎么选？**\n要便宜跑量选 Flash（$0.14/$0.28，并发 2500）；要高质量长文档、复杂 Agent 选 Pro（1M 上下文 + 384K 输出），但 Pro 贵 3 倍、并发仅 500。\n\n**Q3：V4 Pro 正式版比预览版强在哪？**\n主要是 Agent 能力，DeepSWE 从 12.8 涨到 62.7，Cybergym、AutomationBench 超越 Fable 5，属于后训练层面的质变。\n\n**Q4：涨价什么时候落地？**\nDeepSeek 8 月 6 日只说了「近期」和「涨幅较大」，未给具体时间表，建议关注官方定价页。\n\n**Q5：Grok 4.6 值得从 4.5 迁移吗？**\n值得。底座不变、价格不变（$2/$6），纯后训练增益且无吞吐损失，一行改模型名即可迁移；但追求极限 Agent 跑分的团队，Kimi K3 在部分基准上仍领先。\n",
+  "orig_category": "AI资讯",
+  "content_type": "AI资讯",
+  "seo_title": "DeepSeek V4 Pro 正式版转正：1M 上下文 + 384K 输出"
+}

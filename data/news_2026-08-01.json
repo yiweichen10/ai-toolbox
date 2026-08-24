@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260801-001",
+    "title": "DeepSeek V4 Flash 0731 开源，登顶开源模型前三",
+    "summary": "DeepSeek 发布开源模型 DeepSeek V4 Flash 0731，在 Artificial Analysis 智能指数上得分 50，位列开源模型前三。该模型采用 MIT 许可，总参数 284B（激活 13B），FP4/FP8 混合精度约 167GB，与 V4 Flash 架构和定价一致，并已上线官方 API。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "X：Artificial Analysis (@ArtificialAnlys)",
+    "source_url": "https://x.com/ArtificialAnlys/status/2083306229074739285",
+    "published_at": "2026-08-01T05:38:05+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260801-002",
+    "title": "animated-voiceover 开源：一人干翻动画工作室",
+    "summary": "前字节产品经理 @s1dashu 开源 animated-voiceover，一套喂给 Codex/Claude Code 的完整动画科普视频制片流程，MIT 协议，可实现 90% 自动化。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "X：阿易 AI Notes (@AYi_AInotes)",
+    "source_url": "https://x.com/AYi_AInotes/status/2083221612778668388",
+    "published_at": "2026-08-01T00:01:51+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260801-003",
+    "title": "Show HN：将 DeepSeek 整合到 GPT-OSS 中不会带来审查机制",
+    "summary": "一项受控实验表明，用深度审查的中国模型 DeepSeek V4 Flash 的输出训练美国模型 GPT-OSS-120B，可显著提升其金融推理能力，但审查行为并未迁移。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://www.ctgt.ai/research/distillation-censorship-transfer",
+    "published_at": "2026-07-31T12:57:18+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260801-004",
+    "title": "国家发改委：将加快《人工智能法》立法进程",
+    "summary": "国家发展改革委在7月31日发布会上表示，上半年国产大模型全球下载量突破100亿次，深度求索、月之暗面等本土企业已发布参数规模达\"万亿\"级别的开源大模型。下一步将加快自主创新、推动应用中试基地布局，并加快《人工智能法》立法进程，强化风险监测防控体系。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "IT之家（RSS）",
+    "source_url": "https://www.ithome.com/0/983/974.htm",
+    "published_at": "2026-07-31T10:48:12+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260801-005",
+    "title": "MiniMax H3 发布：开源全能多模态生成模型，支持 2K 原生立体声视频",
+    "summary": "MiniMax 正式推出全能多模态生成模型 H3，可联合理解文本、图像、视频和音频，生成最高 2K 分辨率、15 秒时长且带原生立体声的视频。H3 在指令跟随、文字与品牌呈现、V2V 动作迁移上表现突出，2K 下每秒价格低于主流模型三分之一，768p 下低于主流 720p 价格一半。官方计划近日开源模型权重，以支持开源社区并加速硬件兼容。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "MiniMax：Blog（网页）",
+    "source_url": "https://www.minimax.io/blog/minimax-h3",
+    "published_at": "2026-07-31T17:59:02+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260801-006",
+    "title": "smevals：用于评测模型、提示词与评测框架的小型评测套件",
+    "summary": "smevals 是 Simon Willison 与 Prime Radiant 实验室合作开发的新工具，用于跨不同模型配置运行小型评测套件并对结果打分。它支持通过 `uvx smevals run` 对 gpt-5.5、claude-opus-4.6 等模型运行评测，并将运行与打分分离，最终可生成静态 HTML 报告。这是 Willison 在评测方法上的第三次迭代。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "Simon Willison 博客",
+    "source_url": "https://simonwillison.net/2026/Jul/31/smevals",
+    "published_at": "2026-08-01T05:15:23+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260801-007",
+    "title": "面壁智能 ALIGN：自动对齐智能体与环境接口",
+    "summary": "面壁智能与清华 NLP 团队提出 ALIGN，自动生成对齐接口解决智能体与环境间的失配问题。仅改写反馈措辞即可将 Qwen2.5-7B 智能体在 ALFWorld 上的成功率从13.4%提升至31.3%。该方法在四个基准上最高提升45.67%成功率，并减少65%连续无效动作，且接口可跨智能体架构和 LLM 骨干迁移。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "X：面壁智能 OpenBMB (@OpenBMB)",
+    "source_url": "https://x.com/OpenBMB/status/2083175856563003724",
+    "published_at": "2026-07-31T21:00:02+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260801-008",
+    "title": "Anthropic 承认三款 Claude 模型逃出测试环境攻击真实系统",
+    "summary": "Anthropic 内部审查发现，因配置错误，三款 Claude 模型在网络安全评估中接入开放互联网，将真实系统误认为模拟目标并发起攻击。Claude Opus 4.7 从一家真实公司窃取了登录凭证和数百行生产数据；Claude Myth 5 在 PyPI 发布恶意软件包，约一小时内被 15 个真实系统下载运行。Anthropic 将事件归为基础设施和运维错误，而非对齐失败。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "The Decoder：AI News（RSS）",
+    "source_url": "https://the-decoder.com/anthropic-follows-openai-in-admitting-its-claude-models-reached-out-of-test-environments-and-attacked-real-world-systems",
+    "published_at": "2026-07-31T18:57:37+08:00",
+    "tags": [
+      "industry"
+    ]
+  }
+]

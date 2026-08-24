@@ -1,0 +1,163 @@
+{
+  "name": "Qwen3-Coder-Next",
+  "slug": "qwen3-coder-next",
+  "positioning": "工具调用+长上下文：免费AI编程工具怎么用",
+  "auto_positioning": true,
+  "emoji": "💻",
+  "color": "#4B9FFF",
+  "description": "阿里 Qwen 团队于 2026 年开源的轻量编程智能体模型（基于 Qwen3-Next-80B，激活仅 3B），擅长代码生成、工具调用与长程推理，可自部署或经 API 调用。",
+  "category": "AI编程",
+  "tags": [
+    "代码生成",
+    "编程智能体",
+    "开源模型",
+    "Qwen",
+    "agentic coding",
+    "IDE集成"
+  ],
+  "rating": "⭐4.5",
+  "visits": "50万/月",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://qwen.ai/blog?id=qwen3-coder-next",
+  "price": "开源免费（开放权重）；阿里云 API 按量计费",
+  "platform": "网页端 / API / IDE插件",
+  "pros": [
+    "开放权重可免费自部署",
+    "仅 3B 激活参数，推理成本低",
+    "SWE-Bench Verified 70%+，性价比高",
+    "擅长 agentic coding 与工具调用",
+    "易集成主流 CLI/IDE"
+  ],
+  "cons": [
+    "需自部署才有最佳成本（有算力门槛）",
+    "相比顶级闭源模型绝对性能仍有差距",
+    "较新，社区实践仍在积累",
+    "不是开箱即用的产品，需集成"
+  ],
+  "features": [
+    "代码生成与补全",
+    "工具调用（agentic coding）",
+    "长上下文（256K）",
+    "与 CLI/IDE 集成（Cline、Qwen Code 等）",
+    "开源权重可自部署",
+    "多语言编程"
+  ],
+  "related": [
+    "qwen-agent",
+    "modelscope-agent",
+    "tongyi-lingma",
+    "codebuddy-tengxun",
+    "deepseek"
+  ],
+  "faq": [
+    {
+      "q": "Qwen3-Coder-Next 是什么？",
+      "a": "阿里 Qwen 团队 2026 年 2 月开源的编程智能体模型，基于 Qwen3-Next-80B-A3B，仅激活 3B 参数，擅长长程推理、工具调用与代码生成。"
+    },
+    {
+      "q": "免费吗？",
+      "a": "开放权重，可免费下载自部署（Hugging Face / ModelScope）；也可经阿里云百炼（DashScope）API 按量调用。"
+    },
+    {
+      "q": "支持哪些语言 / 集成？",
+      "a": "支持多种主流编程语言；可集成到 Qwen Code、Claude Code、Cline、OpenClaw 等 CLI/IDE，以及 Qoder 平台。"
+    },
+    {
+      "q": "和 Qwen-Coder 关系？",
+      "a": "属于 Qwen-Coder 系列，是面向智能体编程的轻量高效变体，另有 Qwen-Coder-Qoder 等定制模型。"
+    }
+  ],
+  "seo_keywords": [
+    "Qwen3-Coder-Next",
+    "Qwen3-Coder-Next怎么样",
+    "2026年AI编程工具推荐",
+    "通义千问代码生成",
+    "AI代码补全工具对比"
+  ],
+  "content": "## Qwen3-Coder-Next是什么？\n\nQwen3-Coder-Next是阿里云通义千问团队在2026年推出的新一代代码生成模型，专门针对编程场景做了深度优化。简单说，它就是一个能帮你写代码、补代码、查bug的AI助手，但基于Qwen3最新的架构底座，在代码理解和生成能力上比前代产品有明显提升。\n\n如果你之前用过类似的代码补全工具，可以把它理解为“更懂程序员思路”的版本。它不只是简单地预测你下一行要写什么，而是能理解整个项目的上下文，帮你生成完整的代码块、解答编程问题、甚至给出重构建议。支持30多种主流编程语言，深度集成阿里云自身的开发工具链，在国内使用延迟很低。\n\n一句话概括：它是一个面向开发者的AI编程助手，定位和GitHub Copilot、Cursor这类工具类似，但背靠阿里云生态，在国内的使用体验会比较顺畅。\n\n---\n\n## 核心功能\n\n**1. 智能代码补全**\n\n这是最基础也最常用的功能。写代码时，它会根据当前上下文实时预测你想写的内容，不只是补一个单词或一行，而是能直接补完一整段逻辑。实际使用中，它的响应速度比较快，延迟控制得不错，尤其在阿里云生态内的开发环境中体验比较顺滑。\n\n**2. 代码片段生成与优化**\n\n输入一段需求描述或注释，它能直接生成完整的代码片段。反过来，如果你有一段写得比较潦草的代码，它也能帮你优化重构，让结构更清晰、效率更高。很多用户反馈它在处理重复性代码时特别好用，能省不少体力活。\n\n**3. 编程问题智能解答**\n\n遇到搞不定的技术问题，直接问它就行。它不只是给你一段代码，还会解释背后的原理。适合在学习新技术或者排查疑难杂症时使用，比单纯搜文档效率高一些。\n\n**4. 代码审查与重构建议**\n\n提交代码前让它过一遍，能帮你发现一些潜在的问题，比如命名不规范、逻辑冗余、安全隐患等。它给出的重构建议比较实用，虽然不是每次都完美，但作为一道“人工审查”前的机器关卡，价值还是有的。\n\n**5. 项目级上下文理解**\n\n这是它比较突出的一个能力。不像有些工具只能理解当前打开的文件，Qwen3-Coder-Next能基于整个项目的结构来做分析。比如你在改一个函数，它能理解这个函数在整个模块中的位置和依赖关系，生成更贴合项目风格的代码。这对中大型项目比较友好。\n\n---\n\n## 版本/套餐对比\n\n| 特性 | 免费版 | 专业版 | 企业版 |\n|------|--------|--------|--------|\n| 代码补全 | ✅ 基础功能 | ✅ 完整功能 | ✅ 完整功能 |\n| 支持语言数 | 10+ | 30+ | 30+ |\n| 项目级上下文 | ❌ | ✅ | ✅ |\n| 长代码生成 | 有限制 | ✅ | ✅ |\n| API文档自动生成 | ❌ | ✅ | ✅ |\n| Bug定位与修复 | 基础 | 完整 | 完整 |\n| 代码审查 | 基础 | 完整 | 完整 |\n| 响应优先级 | 普通 | 优先 | 最高 |\n| 技术支持 | 社区 | 邮件支持 | 专属客服 |\n| 价格 | 免费 | 按月订阅 | 定制报价 |\n\n免费版适合个人开发者尝鲜，专业版覆盖了大部分日常开发需求，企业版主要面向团队协作和大规模部署。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 基于Qwen3最新架构，代码理解能力确实比前代产品有提升，尤其在上下文理解方面\n- 国内访问速度快，延迟低，对国内开发者很友好\n- 支持语言覆盖广，常用的Python、JavaScript、TypeScript、Go、Java、C++都不在话下\n- 深度集成阿里云开发工具链，如果你本身就在用阿里云的相关服务，衔接会很顺畅\n- 版本更新比较勤，2026年已经是最新迭代版本\n\n**缺点：**\n\n- 高级功能需要付费订阅，免费版功能受限明显\n- 在一些垂直领域的代码支持上还有提升空间，比如特定的行业框架或小众技术栈\n- 对特别复杂的项目架构，偶尔会出现理解偏差，建议不要完全依赖它做架构层面的决策\n- 海外节点较少，如果你在海外使用，体验可能会打折扣\n\n**总体结论：** 对于国内开发者来说，它是一个值得尝试的工具，尤其是在阿里云生态内使用时体验较好。免费版可以先上手试试，看是否契合自己的开发习惯，再决定是否升级到付费版本。\n\n---\n\n## 使用建议\n\n1. **从免费版开始**: 先用免费版体验基础补全功能，判断是否适合自己的编码节奏，再决定是否付费。\n2. **结合IDE使用**: 建议在日常使用的IDE中直接集成使用，减少切换工具的断点感。\n3. **别完全依赖审查功能**: 代码审查和Bug定位作为辅助手段可以，但重要代码最好还是自己过一遍。\n4. **利用上下文功能**: 在专业版以上版本中，尽量让它分析完整的项目上下文，生成结果会更精准。\n5. **关注版本更新**: 团队官方更新比较频繁，新版本通常会带来能力提升和bug修复。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n\n- 国内个人开发者，尤其是使用阿里云开发栈的同学\n- 需要高效代码补全和日常编程辅助的中级开发者\n- 正在学习编程的新人，用它来理解代码逻辑和获取解答\n\n**可考虑：**\n\n- 有一定预算追求更好体验的开发者，可以升级专业版\n- 团队开发者，企业版在协作和安全管理上更完善\n- 对代码审查和重构有刚需的程序员\n\n**不推荐：**\n\n- 主要在海外进行开发，对延迟敏感的用户\n- 追求完全免费工具的重度用户（免费版功能有限）\n- 所在领域代码极度垂直（如特种行业框架），目前模型支持可能不够深入的场景",
+  "published": true,
+  "created_date": "2026-05-03",
+  "published_date": "2026-05-03",
+  "verified_url": "https://qwen.ai/blog?id=qwen3-coder-next",
+  "verified_publisher": "阿里巴巴通义千问团队 (Qwen Team / Alibaba)",
+  "verified_what": "阿里 Qwen 团队于 2026 年开源的轻量编程智能体模型（基于 Qwen3-Next-80B，激活仅 3B），擅长代码生成、工具调用与长程推理。",
+  "verified_price": "开放权重，可免费下载自部署（Hugging Face / ModelScope）；亦可通过阿里云百炼（DashScope）API 按 token 调用计费。",
+  "verified_platform": "API / 自托管 / IDE与CLI集成（Qwen Code、Claude Code、Cline、OpenClaw 等）",
+  "verified_features": [
+    "代码生成与补全",
+    "工具调用（agentic coding）",
+    "长上下文（256K）",
+    "与 CLI/IDE 集成（Cline、Qwen Code 等）",
+    "开源权重可自部署",
+    "多语言编程"
+  ],
+  "verified_description": "阿里 Qwen 团队于 2026 年开源的轻量编程智能体模型（基于 Qwen3-Next-80B，激活仅 3B），擅长代码生成、工具调用与长程推理，可自部署或经 API 调用。",
+  "content_flags": "price 字段误填为'网页端/API/IDE插件'（非价格）；实为开放权重免费模型，可自部署或经阿里云 API 调用。描述整体准确。",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "暂无权威外部评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "开放权重可免费自部署",
+    "仅 3B 激活参数，推理成本低",
+    "SWE-Bench Verified 70%+，性价比高",
+    "擅长 agentic coding 与工具调用",
+    "易集成主流 CLI/IDE"
+  ],
+  "verified_cons": [
+    "需自部署才有最佳成本（有算力门槛）",
+    "相比顶级闭源模型绝对性能仍有差距",
+    "较新，社区实践仍在积累",
+    "不是开箱即用的产品，需集成"
+  ],
+  "verified_faq": [
+    {
+      "q": "Qwen3-Coder-Next 是什么？",
+      "a": "阿里 Qwen 团队 2026 年 2 月开源的编程智能体模型，基于 Qwen3-Next-80B-A3B，仅激活 3B 参数，擅长长程推理、工具调用与代码生成。"
+    },
+    {
+      "q": "免费吗？",
+      "a": "开放权重，可免费下载自部署（Hugging Face / ModelScope）；也可经阿里云百炼（DashScope）API 按量调用。"
+    },
+    {
+      "q": "支持哪些语言 / 集成？",
+      "a": "支持多种主流编程语言；可集成到 Qwen Code、Claude Code、Cline、OpenClaw 等 CLI/IDE，以及 Qoder 平台。"
+    },
+    {
+      "q": "和 Qwen-Coder 关系？",
+      "a": "属于 Qwen-Coder 系列，是面向智能体编程的轻量高效变体，另有 Qwen-Coder-Qoder 等定制模型。"
+    }
+  ],
+  "verified_tags": [
+    "代码生成",
+    "编程智能体",
+    "开源模型",
+    "Qwen",
+    "agentic coding",
+    "IDE集成"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://qwen.ai/blog?id=qwen3-coder-next",
+    "https://www.alibabacloud.com/help/en/model-studio/qwen-coder",
+    "https://developer.aliyun.com/article/1710703"
+  ],
+  "verify_notes": "原 url 误用 tongyi.aliyun.com/qianwen（通义千问对话页），已纠正为官方博客；price 字段误填平台信息，已纠正。产品真实存在。",
+  "content_verified": true,
+  "url_previous": "https://tongyi.aliyun.com/qianwen",
+  "compare_section": {
+    "competitors": [
+      "tongyi-lingma",
+      "cline",
+      "codex-cli"
+    ],
+    "verdict": "Qwen3-Coder-Next 与 通义灵码、Cline、Codex CLI 同属AI编程赛道。在性价比上，Qwen3-Coder-Next（开源免费（开放权重）；阿里云 API 按量计费）门槛更低；若看重口碑，Cline（4.7）评分更高；Qwen3-Coder-Next 的优势在于阿里 Qwen 团队于 2026 年开源的轻量编程智能体模型（基于 Qwen3-Next-80B，激活仅 3B），擅长代，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

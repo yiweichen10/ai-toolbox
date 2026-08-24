@@ -1,0 +1,123 @@
+{
+  "batch_id": "b47",
+  "category": "AI写作",
+  "tools": [
+    {
+      "slug": "language-tool",
+      "name": "LanguageTool",
+      "url_current": "https://languagetool.org",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网URL正常。定价编造：站内写『高级版每月€9.99起』，官网实际个人高级版约 $24.90/月（年付约 $69.90/年，折后更低），€9.99 明显偏低、为过时价格。另：正文功能#4『多语言即时翻译对照』官网未提供翻译功能（仅有改写/paraphrase），属轻微失实，建议复核。"
+    },
+    {
+      "slug": "prowritingaid",
+      "name": "ProWritingAid",
+      "url_current": "https://prowritingaid.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网URL正常。①定价编造：站内写『付费版$20/月起，年付$99/年』，官网当前 Premium 为 $30/月（年付 $120）、Premium Pro $36/月（$144/年），免费版仍限500词。②功能张冠李戴/编造：站内称『支持25种语言』——官网主打英文小说写作，未提25种语言；站内称『2026集成GPT-4』——官网仅提 Sparks 等AI功能，未宣称 GPT-4。"
+    },
+    {
+      "slug": "frase",
+      "name": "Frase",
+      "url_current": "https://frase.io",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网URL正常。①定价编造：站内写『免费版有限功能，专业版$12.99/月起』，官网当前最低 Starter $39/月（年付）/$49 月付，且仅有7天试用、无永久免费版，$12.99 为过时价格。②平台编造：站内写『iOS、Android』，官网无官方移动App，仅网页端 + Google Docs/WordPress 集成。多语言支持属实（18+语言）。"
+    },
+    {
+      "slug": "surfer-seo",
+      "name": "Surfer SEO",
+      "url_current": "https://surferseo.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网URL正常（surferseo.com）。定价编造：站内写『免费版可用，付费版$49起/月』，官网当前无免费版（仅7天退款保证），最低付费 Essential 约 $89–$99/月，$49 为过时价格。核心功能（SERP分析、内容编辑器、NLP、AI写作）属实。"
+    },
+    {
+      "slug": "scalenut",
+      "name": "Scalenut",
+      "url_current": "https://scalenut.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "conflict": true,
+      "confidence": "low",
+      "notes": "官网URL正常（scalenut.com）。但官网定位已转型为『AI + 专家托管式 GEO 服务』（强调 Book a call / 人工策略师），自助式 SaaS 定价与站内『免费版每月2000字、高级版$39/月起』无法在官网核实，疑似过时。因无法确认，标为存疑需人工裁定；未确认明显编造。"
+    },
+    {
+      "slug": "jasper-chat",
+      "name": "Jasper Chat",
+      "url_current": "https://www.jasper.ai/chat",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网URL正常（jasper.ai/chat）。定价 $39/月起 与官网 Creator（$39/月年付 或 $49 月付）一致，属实。核心功能（营销文案、品牌声音、SEO 集成）与官网一致。无幻觉。"
+    },
+    {
+      "slug": "octarine",
+      "name": "Octarine",
+      "url_current": "https://octarine.ai",
+      "url_ok": false,
+      "url_correct": "https://octarine.app",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": true,
+      "confidence": "high",
+      "notes": "①URL错误：octarine.ai 当前返回503/不可达，真实官网为 octarine.app（本地优先 Markdown/PKM 笔记应用，支持 macOS/Linux/iOS）。②张冠李戴：站内 description 准确（本地优先 Markdown/PKM 笔记），但正文将其歪曲为『AI驱动的创意内容生成平台』（营销文案、出图、剪视频），与实际产品完全不符。③定价编造：正文写『付费版$19/月起』，实际为一次性买断/免费增值模式，非 $19 月付订阅。"
+    },
+    {
+      "slug": "sierra-ghostwriter",
+      "name": "Sierra Ghostwriter",
+      "url_current": "https://sierra.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price", "platform"],
+      "conflict": true,
+      "confidence": "high",
+      "notes": "①URL可达且为真实公司（Sierra.ai = 企业级对话式 AI 智能体平台）。官网确有『Ghostwriter』产品，但它是『智能体构建工具』（用 SOP/文档自动生成面向客户体验的多语言、多渠道 AI 智能体），并非写作助手。②正文严重张冠李戴：将 Ghostwriter 描述成『AI写作助手（写文章、改文案、语法检查、中英日韩翻译、检测抄袭）』，能力完全虚构。③定价编造：正文写『免费版/¥98月/¥268人月』，官网为面向企业的结果导向定价（outcome-based），无此类个人订阅价。④平台编造：正文写『iOS/Android』，Sierra 为 B2B 平台无消费级移动App。站内 description 字段（Agent 构建平台）反而准确，建议以 description 为准修正正文。"
+    },
+    {
+      "slug": "wensi-ai",
+      "name": "文思AI",
+      "url_current": "https://wensi.sodabot.cn/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网可访问（显示为『文思助手』，AI写作助手/智能写作/公文写作），与站内描述（国产AI智能写作助手）一致。价格仅写『免费版/专业版』无具体数字，未构成可判定编造；平台 Web/iOS/Android 未能深入核实，建议人工复核是否确有 iOS/Android 客户端。未检出明确幻觉。"
+    },
+    {
+      "slug": "huoshan-writing",
+      "name": "火山写作",
+      "url_current": "https://www.volcengine.com/product/writing",
+      "url_ok": false,
+      "url_correct": "https://writingo.net",
+      "hallucination": true,
+      "hallucination_fields": ["platform"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "①URL失效：volcengine 产品页返回404，正确官网应为 writingo.net（火山写作确为字节跳动/火山引擎出品）。②平台编造：站内写『iOS、Android』，官网/公开资料显示仅网页端 + Chrome/Edge 浏览器插件，无移动App。③定价存疑：站内『高级会员¥29/月起』无法确认，有来源称 ¥39/月 或『官方暂无收费计划』，建议人工裁定。核心功能（润色/改写/续写/翻译、基于豆包/云雀大模型）属实。"
+    }
+  ]
+}

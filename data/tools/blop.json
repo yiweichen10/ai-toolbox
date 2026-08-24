@@ -1,0 +1,145 @@
+{
+  "name": "Blop",
+  "slug": "blop",
+  "positioning": "自然语言测试+测试即代码，AI开发工具实测",
+  "auto_positioning": true,
+  "emoji": "🎨",
+  "color": "#4A90D9",
+  "description": "面向代码代理团队的 QA 工具：用自然语言描述用户旅程，Agent 驱动真实浏览器（Playwright）执行测试，测试以代码形式留在仓库、跑在 CI，失败自动聚类并可由 Agent 开 PR 修复。",
+  "category": "AI开发",
+  "tags": [
+    "QA测试",
+    "AI开发",
+    "Playwright",
+    "测试即代码",
+    "开发工具"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "120万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://blopai.com/",
+  "price": "Starter €199/月起（14天试用）",
+  "platform": "Web",
+  "pros": [
+    "测试归你所有（代码在仓库里，不是供应商黑盒状态）",
+    "意图驱动而非选择器耦合，改 UI 后能自动修复",
+    "无需托管 runner"
+  ],
+  "cons": [
+    "目前仅支持 Playwright 运行时",
+    "自动修复仍在 early access",
+    "按月度授权额度计费，深度使用成本需评估"
+  ],
+  "features": [
+    "自然语言测试：描述旅程，Agent 驱动真实浏览器执行",
+    "测试即代码（.blop.ts），版本控制、可评审、归仓库所有",
+    "跑在你的 CI（GitHub Actions）上，无需自托管 runner",
+    "失败自动聚类（相同失败合并为一条）",
+    "Agent 自动开 PR 修复失败测试（early access）",
+    "合成监控：任意测试可定时对生产环境跑探测（uptime/p95）",
+    "GitHub/Slack/Linear/Jira 集成"
+  ],
+  "related": [
+    "canva-ai",
+    "adobe-firefly",
+    "recraft"
+  ],
+  "faq": [
+    {
+      "q": "Blop 是什么？",
+      "a": "Blop 是面向使用代码代理（coding agents）发布产品的团队的 QA 工具：描述一个用户旅程，Agent 驱动真实浏览器跑测试，测试以代码形式存在于你的仓库并运行在 CI 上。"
+    },
+    {
+      "q": "测试代码在哪里？",
+      "a": "在你自己仓库里，以 .blop.ts 文件形式存在，版本控制、可评审、可带走，Blop 不会把测试锁在它的仪表盘里。"
+    },
+    {
+      "q": "需要自己托管 runner 吗？",
+      "a": "不需要，Blop 通过你已有的 GitHub Actions runner（云端或自托管）执行测试。"
+    }
+  ],
+  "seo_keywords": [
+    "Blop",
+    "Blop AI设计工具",
+    "Blop免费版怎么样",
+    "Blop和Canva AI哪个好",
+    "Blop在线生图平台"
+  ],
+  "content": "## Blop 是什么？\n\n面向使用代码代理（coding agents）团队的 QA 工具：用自然语言描述用户旅程，Agent 驱动真实浏览器（Playwright）执行测试，测试以代码形式存在于仓库（.blop.ts）。\n\n面向代码代理团队的 QA 工具：用自然语言描述用户旅程，Agent 驱动真实浏览器（Playwright）执行测试，测试以代码形式留在仓库、跑在 CI，失败自动聚类并可由 Agent 开 PR 修复。\n\n## 核心功能\n\n- 自然语言测试：描述旅程，Agent 驱动真实浏览器执行\n- 测试即代码（.blop.ts），版本控制、可评审、归仓库所有\n- 跑在你的 CI（GitHub Actions）上，无需自托管 runner\n- 失败自动聚类（相同失败合并为一条）\n- Agent 自动开 PR 修复失败测试（early access）\n- 合成监控：任意测试可定时对生产环境跑探测（uptime/p95）\n- GitHub/Slack/Linear/Jira 集成\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | Starter €199/月、Team €599/月、Scale €1,499/月（均含 14 天试用；无限测试运行）。 |\n| 支持平台 | Web（SaaS）+ CI（GitHub Actions） |\n| 评分 | ⭐ 4.3 |\n| 开发商 | Blop（blopai.com） |\n\n## 价格与平台\n\n- **价格**：Starter €199/月、Team €599/月、Scale €1,499/月（均含 14 天试用；无限测试运行）。\n- **平台**：Web（SaaS）+ CI（GitHub Actions）\n- **官网**：https://blopai.com/\n\n## 优缺点分析\n\n### 优点\n\n- 测试归你所有（代码在仓库里，不是供应商黑盒状态）\n- 意图驱动而非选择器耦合，改 UI 后能自动修复\n- 无需托管 runner\n\n### 缺点\n\n- 目前仅支持 Playwright 运行时\n- 自动修复仍在 early access\n- 按月度授权额度计费，深度使用成本需评估\n\n## 常见问题（FAQ）\n\n**Blop 是什么？**\n\nBlop 是面向使用代码代理（coding agents）发布产品的团队的 QA 工具：描述一个用户旅程，Agent 驱动真实浏览器跑测试，测试以代码形式存在于你的仓库并运行在 CI 上。\n\n**测试代码在哪里？**\n\n在你自己仓库里，以 .blop.ts 文件形式存在，版本控制、可评审、可带走，Blop 不会把测试锁在它的仪表盘里。\n\n**需要自己托管 runner 吗？**\n\n不需要，Blop 通过你已有的 GitHub Actions runner（云端或自托管）执行测试。\n\n\n## 最终结论\n\nBlop 是AI开发领域的一款 AI 工具，其核心优势在于测试归你所有（代码在仓库里，不是供应商黑盒状态）。\n此外，意图驱动而非选择器耦合，改 UI 后能自动修复。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-07-19",
+  "published_date": "2026-07-19",
+  "subcategory": "",
+  "verified_url": "https://blopai.com/",
+  "verified_publisher": "Blop（blopai.com）",
+  "verified_what": "面向使用代码代理（coding agents）团队的 QA 工具：用自然语言描述用户旅程，Agent 驱动真实浏览器（Playwright）执行测试，测试以代码形式存在于仓库（.blop.ts）。",
+  "verified_price": "Starter €199/月、Team €599/月、Scale €1,499/月（均含 14 天试用；无限测试运行）。",
+  "verified_platform": "Web（SaaS）+ CI（GitHub Actions）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "自然语言测试：描述旅程，Agent 驱动真实浏览器执行",
+    "测试即代码（.blop.ts），版本控制、可评审、归仓库所有",
+    "跑在你的 CI（GitHub Actions）上，无需自托管 runner",
+    "失败自动聚类（相同失败合并为一条）",
+    "Agent 自动开 PR 修复失败测试（early access）",
+    "合成监控：任意测试可定时对生产环境跑探测（uptime/p95）",
+    "GitHub/Slack/Linear/Jira 集成"
+  ],
+  "verified_description": "面向代码代理团队的 QA 工具：用自然语言描述用户旅程，Agent 驱动真实浏览器（Playwright）执行测试，测试以代码形式留在仓库、跑在 CI，失败自动聚类并可由 Agent 开 PR 修复。",
+  "content_flags": "原条目描述为「社交媒体/平面设计 AI 生成器」与真实产品完全不符（编造），已整体重写为 QA 工具。",
+  "verified_rating": "⭐ 4.3",
+  "rating_source": "暂无权威外部评分（编辑评分）",
+  "verified_pros": [
+    "测试归你所有（代码在仓库里，不是供应商黑盒状态）",
+    "意图驱动而非选择器耦合，改 UI 后能自动修复",
+    "无需托管 runner"
+  ],
+  "verified_cons": [
+    "目前仅支持 Playwright 运行时",
+    "自动修复仍在 early access",
+    "按月度授权额度计费，深度使用成本需评估"
+  ],
+  "verified_faq": [
+    {
+      "q": "Blop 是什么？",
+      "a": "Blop 是面向使用代码代理（coding agents）发布产品的团队的 QA 工具：描述一个用户旅程，Agent 驱动真实浏览器跑测试，测试以代码形式存在于你的仓库并运行在 CI 上。"
+    },
+    {
+      "q": "测试代码在哪里？",
+      "a": "在你自己仓库里，以 .blop.ts 文件形式存在，版本控制、可评审、可带走，Blop 不会把测试锁在它的仪表盘里。"
+    },
+    {
+      "q": "需要自己托管 runner 吗？",
+      "a": "不需要，Blop 通过你已有的 GitHub Actions runner（云端或自托管）执行测试。"
+    }
+  ],
+  "verified_tags": [
+    "QA测试",
+    "AI开发",
+    "Playwright",
+    "测试即代码",
+    "开发工具"
+  ],
+  "verified_category": "AI开发",
+  "conflict_note": "blopai.com 公开资料存在两种定位：创始人帖文与工具目录称其为「AI UX 分析与优化代理」（扫描网站、生成代码修复、A/B 测试）；另一批开发者目录称其为「把自然语言用户流程转为 Playwright 浏览器测试的 QA 代理」。原始 features/content 将之描述为「社交媒体/平面设计 AI 生成器」与任一来源均不符，属编造。产品具体身份存疑，依规则未覆盖原值，仅保留审计轨迹。",
+  "source_urls": [
+    "https://blopai.com/"
+  ],
+  "verify_notes": "用户确认官网 blopai.com 定位为「面向代码代理团队的 QA 工具」，与实测一致，已重写。",
+  "content_verified": true,
+  "price_verified": true,
+  "url_previous": "https://blopai.com",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Blop 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Blop 的 自然语言测试：描述旅程，Agent 驱动真实浏览器执行 是亮点，价格 Starter €199/月起（14天试用）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

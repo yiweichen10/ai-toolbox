@@ -1,0 +1,132 @@
+{
+  "name": "Shadow AI",
+  "slug": "shadow-ai",
+  "positioning": "会议自动记录+语音输入，AI效率工具实测",
+  "auto_positioning": true,
+  "emoji": "🎭",
+  "color": "#1E1E2E",
+  "description": "macOS 上的 AI 界面工具：看屏幕、听语音、运行自定义 Skills，自动产出会议记录、邮件、代码等，本地优先、数据不出设备。",
+  "category": "AI效率",
+  "tags": [
+    "macOS",
+    "AI效率",
+    "会议记录",
+    "语音输入",
+    "本地优先"
+  ],
+  "rating": "⭐ 4.2",
+  "visits": "85,000",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://www.shadow.do/",
+  "price": "暂未公开",
+  "platform": "Web / iOS / Android / macOS / Windows",
+  "pros": [
+    "本地优先，隐私友好（默认不把数据用于训练）",
+    "无需机器人入会即可记录会议",
+    "Skills 完全可自定义"
+  ],
+  "cons": [
+    "仅支持 macOS",
+    "定价未公开"
+  ],
+  "features": [
+    "会议自动记录：自动检测会议、转写、识别发言人、抓取会议窗口截图",
+    "Actions：快捷键捕捉屏幕+语音，运行 Skill 输出邮件/笔记/代码等",
+    "自定义 Skills（每个 Skill 就是一个可编辑的提示词）",
+    "语音输入（比打字快 4 倍）",
+    "本地优先：转写在本机完成、音频不出设备、数据不用于训练",
+    "Webhook 对接 Zapier/n8n/Make，Markdown 导出"
+  ],
+  "related": [
+    "chatgpt",
+    "claude",
+    "notion-ai",
+    "monica-ai",
+    "raycast-ai"
+  ],
+  "faq": [
+    {
+      "q": "Shadow 是什么？",
+      "a": "Shadow 是 macOS 上的 AI 界面工具，能看屏幕、听声音、运行自定义 Skills，自动生成会议笔记、邮件、代码等输出。"
+    },
+    {
+      "q": "Shadow 如何处理隐私？",
+      "a": "本地优先：转写在本机完成、音频不出设备、会议内容本地存储；只有触发 Skills 时才调用 LLM API，数据不用于训练。"
+    }
+  ],
+  "seo_keywords": [
+    "Shadow AI",
+    "Shadow AI隐私保护工具",
+    "Shadow AI怎么样",
+    "Shadow AI免费版",
+    "Shadow AI替代品"
+  ],
+  "content": "## Shadow 是什么？\n\nShadow 是 macOS 上的 AI 界面工具，口号是「AI 需要的界面——看得见、听得见、跑得起来」。它捕捉你屏幕上显示、你口中说出、你选中的内容，然后运行你自己的提示词（Skills），把上下文变成你需要的输出。\n\n## 核心功能\n\n- **会议记录**：无需以机器人身份入会，Shadow 在后台自动开始/结束记录，转写每一句话、识别发言人、自动抓取会议窗口截图，会后输出会议纪要、BANT 拆解、跟进邮件等。\n- **Actions 快捷键**：按快捷键捕捉当前屏幕+语音输入，Shadow 调用 Skill 后把结果粘贴进当前应用或显示在注视的位置。\n- **自定义 Skills**：每个 Skill 就是一个提示词——输入什么上下文、输出到哪里都由你定义，可直接编辑或从零编写。\n- **语音输入**：语音指令比打字快约 4 倍。\n- **Webhook 与 Markdown**：通过 Webhook 对接 Zapier/n8n/Make，或以 .md 文件导出。\n\n## 隐私设计\n\nShadow 本地优先：转写在本机完成、音频不出设备、会议内容本地存储；Skills 只在触发时才调用 LLM API，会议内容与 Skill 输出永不用于模型训练。",
+  "published": true,
+  "created_date": "2026-05-17",
+  "published_date": "2026-05-17",
+  "verified_url": "https://www.shadow.do/",
+  "verified_publisher": "Shadow（shadow.do）",
+  "verified_what": "macOS 上的 AI 界面工具：能看屏幕、听语音、运行自定义 Skills（提示词技能），把会议与屏幕内容转化为笔记、邮件、代码等输出。",
+  "verified_price": "官网未公开价格（以官网为准）。",
+  "verified_platform": "macOS",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "会议自动记录：自动检测会议、转写、识别发言人、抓取会议窗口截图",
+    "Actions：快捷键捕捉屏幕+语音，运行 Skill 输出邮件/笔记/代码等",
+    "自定义 Skills（每个 Skill 就是一个可编辑的提示词）",
+    "语音输入（比打字快 4 倍）",
+    "本地优先：转写在本机完成、音频不出设备、数据不用于训练",
+    "Webhook 对接 Zapier/n8n/Make，Markdown 导出"
+  ],
+  "verified_description": "macOS 上的 AI 界面工具：看屏幕、听语音、运行自定义 Skills，自动产出会议记录、邮件、代码等，本地优先、数据不出设备。",
+  "content_flags": "原条目为「影子 AI」行业概念描述，已改写为 shadow.do 的真实产品 Shadow。",
+  "verified_pros": [
+    "本地优先，隐私友好（默认不把数据用于训练）",
+    "无需机器人入会即可记录会议",
+    "Skills 完全可自定义"
+  ],
+  "verified_cons": [
+    "仅支持 macOS",
+    "定价未公开"
+  ],
+  "verified_faq": [
+    {
+      "q": "Shadow 是什么？",
+      "a": "Shadow 是 macOS 上的 AI 界面工具，能看屏幕、听声音、运行自定义 Skills，自动生成会议笔记、邮件、代码等输出。"
+    },
+    {
+      "q": "Shadow 如何处理隐私？",
+      "a": "本地优先：转写在本机完成、音频不出设备、会议内容本地存储；只有触发 Skills 时才调用 LLM API，数据不用于训练。"
+    }
+  ],
+  "verified_tags": [
+    "macOS",
+    "AI效率",
+    "会议记录",
+    "语音输入",
+    "本地优先"
+  ],
+  "verified_category": "AI效率",
+  "conflict_note": "shadowai.com 为待售停放域名，无真实产品官网；“Shadow AI”既是行业概念，也被多家安全厂商用作产品名，原 entry 产品化功能无法核实且疑似编造，故保留概念性描述、不覆盖为具体产品。",
+  "source_urls": [
+    "https://www.shadow.do/"
+  ],
+  "verify_notes": "用户提供官网 shadow.do，已核实为 Mac AI 界面工具并重写。",
+  "content_verified": true,
+  "price_verified": true,
+  "url_previous": "https://shadowai.com",
+  "compare_section": {
+    "competitors": [
+      "evidence-dev",
+      "semrush-ai",
+      "jamie-ai"
+    ],
+    "verdict": "Shadow AI 与 Evidence.dev、Semrush AI、Jamie AI 同属AI效率赛道：Shadow AI 的 会议自动记录：自动检测会议、转写、识别发言人、抓取会议窗口截图 是亮点，价格 暂未公开；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

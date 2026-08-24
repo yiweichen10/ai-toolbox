@@ -1,0 +1,80 @@
+{
+  "slug": "io-net",
+  "name": "io.net",
+  "emoji": "⚡",
+  "color": "#7C3AED",
+  "description": "Solana 上全球最大的去中心化 GPU 网络，聚合全球闲置算力为 AI 训练与推理提供低成本 GPU。",
+  "price": "IO 代币最大供应量 8 亿枚；GPU 按小时计费，据称比 AWS 等中心化云便宜 50%–70%，具体费率以官网为准。",
+  "platform": "Web / API",
+  "content": "## 是什么\nio.net 是构建在 Solana 上的去中心化 GPU 网络，号称全球最大，聚合来自 138 个国家数据中心、矿场与个人设备的闲置 GPU，为 AI 训练、微调与推理提供按需算力。\n\n## 核心特点\n- 全球算力聚合：汇聚数千独立提供商的 GPU，成本据称比中心化云低 50%–70%。\n- OpenRouter 推理：是 OpenRouter 上最大的 DePIN 推理提供商，日处理超 40 亿 AI token。\n- IDE 销毁机制：至少 50% 的派息后网络收入用于永久销毁 IO 代币。\n- IO Intelligence：免费推理平台，提供 30+ 开源模型与 RAG、智能体工具。\n\n## 技术原理\nIO 代币用于支付算力、质押与治理。2026 年 6 月上线的激励动态引擎（IDE）把代币供给与真实使用挂钩：客户越多、销毁越多；同时将供应商收益锚定美元价值，避免代币下跌导致算力流失。\n\n## 价格与收费\nIO 代币最大供应量 8 亿枚，2024 年 6 月上线。GPU 按小时计费，官方称比中心化云便宜 50%–70%；已签下 800 万美元企业合约，月链上收益约 65 万美元。具体价格以官网为准。\n\n## 适用人群/场景\n适合需要低成本 GPU 做训练、微调、推理的 AI 开发者与初创团队，以及想出租闲置 GPU 的算力提供商。\n\n数据以官网为准。",
+  "faq": [
+    {
+      "q": "io.net 是什么？",
+      "a": "io.net 是 Solana 上全球最大的去中心化 GPU 网络，聚合全球闲置 GPU，为 AI 训练与推理提供按需算力。"
+    },
+    {
+      "q": "IO 代币总量是多少？",
+      "a": "最大供应量为 8 亿枚，2024 年 6 月上线，用于支付算力、质押与治理。"
+    },
+    {
+      "q": "IDE 是什么？",
+      "a": "激励动态引擎（IDE）于 2026 年 6 月上线，至少 50% 的派息后网络收入被永久销毁，首年目标销毁至少 1200 万枚 IO。"
+    },
+    {
+      "q": "io.net 在 OpenRouter 上的表现如何？",
+      "a": "io.net 是 OpenRouter 上最大的 DePIN 推理提供商，日处理超 40 亿 AI token，与中心化云厂商直接竞争。"
+    },
+    {
+      "q": "比中心化云便宜多少？",
+      "a": "官方称比 AWS、GCP 等中心化云低 50%–70%，并已签下 800 万美元企业合约。"
+    },
+    {
+      "q": "融资情况如何？",
+      "a": "完成 3000 万美元 A 轮，由 Hack VC 领投，估值 10 亿美元。"
+    },
+    {
+      "q": "IO Intelligence 是什么？",
+      "a": "io.net 推出的免费推理平台，提供 30+ 开源模型（如 Llama、DeepSeek）以及智能体基础设施与 RAG 服务。"
+    }
+  ],
+  "features": [
+    "去中心化 GPU 网络",
+    "OpenRouter 推理",
+    "IDE 收入销毁机制",
+    "IO Intelligence 推理平台"
+  ],
+  "pros": [
+    "成本比中心化云低 50%–70%",
+    "真实收入驱动的销毁机制",
+    "推理量已达 40 亿 token/日",
+    "供应商收益锚定美元、抗波动"
+  ],
+  "cons": [
+    "代币较历史高点大幅回撤",
+    "大量供应尚未解锁，存在稀释风险",
+    "精确链上指标难以独立验证"
+  ],
+  "tags": [
+    "去中心化AI",
+    "GPU算力",
+    "DePIN",
+    "AI推理"
+  ],
+  "source_urls": [
+    "https://io.net",
+    "https://io.net/blog/a-new-tokenomics-for-a-new-era-the-ide-is-now-live",
+    "https://io.net/blog/one-month-of-the-incentive-dynamic-engine-ide",
+    "https://www.coingecko.com/en/coins/io-net/nok"
+  ],
+  "url": "https://io.net",
+  "category": "去中心化AI",
+  "rating": "⭐ 4.3",
+  "visits": "暂无数据",
+  "published": true,
+  "content_verified": true,
+  "confidence": "high",
+  "last_verified": "2026-08-17",
+  "published_date": "2026-08-17",
+  "created_date": "2026-08-17",
+  "badge": null
+}

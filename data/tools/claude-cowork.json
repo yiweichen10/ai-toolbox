@@ -1,0 +1,93 @@
+{
+  "name": "Claude Cowork",
+  "slug": "claude-cowork",
+  "positioning": "Claude Cowork是什么_通用AI Agent_企业知识工作自动化",
+  "auto_positioning": false,
+  "emoji": "🤝",
+  "color": "#CC785C",
+  "description": "Anthropic 推出的通用型 AI Agent 产品，定位为「给非程序员用的 Claude Code」。把任务、文件和资料交给它，它会自己拆解计划并端到端执行。2026 年 7 月起扩展到 Web 与移动端，执行环境迁移到云端，关闭电脑后任务仍可续跑。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "企业Agent"
+    },
+    {
+      "text": "知识工作自动化"
+    },
+    {
+      "text": "远程执行"
+    }
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "企业级Agent热门"
+  },
+  "url": "https://www.claude.com/product/cowork",
+  "price": "价格暂未公开",
+  "platform": "Web",
+  "pros": [
+    "对非技术知识工作者极友好，把围绕工作的杂活自动化",
+    "远程续跑与定时任务解决了 Agent 必须守在电脑前的痛点",
+    "企业版治理能力完善（访问控制、支出控制、OpenTelemetry 可观测）",
+    "跨文件、日历、邮件、通信工具执行，场景覆盖广",
+    "超 90% 使用场景为非开发类知识工作"
+  ],
+  "cons": [
+    "仍属研究预览性质，邮件发送、文件交付等最终动作需用户审批",
+    "重度依赖 Claude 付费计划，无独立免费入口",
+    "移动端为 Beta，能力与稳定性仍在演进"
+  ],
+  "features": [
+    "跨应用执行：连接文件、日历、邮件、通信工具、网页自动处理任务",
+    "远程续跑：任务在关闭电脑后仍在云端执行，移动端接收判断类提问",
+    "定时任务：支持任意节奏排程，自动生成每日简报",
+    "并行处理：把大项目拆成可同时运行的子任务",
+    "企业治理：访问管理、支出控制、使用分析、OpenTelemetry 可观测",
+    "Slack 连接器：Team/Enterprise 计划内可接入协作"
+  ],
+  "related": [
+    "claude",
+    "openai",
+    "manus"
+  ],
+  "content": "## Claude Cowork 是什么？\nClaude Cowork 是 Anthropic 推出的通用型 AI Agent 产品，定位是「给非程序员用的 Claude Code」。用户把任务、文件和资料交给它，它会自己拆解计划并端到端执行，而不是停留在一次问答里。它最早于 2026 年 1 月 12 日以研究预览形态登陆 macOS（仅 Max 订阅者），4 月 9 日 GA 覆盖 macOS 与 Windows 并打包进所有付费计划，7 月 7 日进一步扩展到 Web 与移动端（Beta，Max 计划先行）。关键转折是把执行环境从本地电脑迁移到了 Anthropic 的远程基础设施——这意味着你合上笔记本去开会，Claude 仍在云端继续干活，定时任务也能离线运行。\n\n## 核心功能\n1. 跨应用执行：可连接文件、日历、邮件、通信工具、网页等，自动核对支出、整理合同续约风险、根据会议记录做客户材料。\n2. 远程续跑：任务在关闭电脑后仍在云端执行，移动端会收到需要人类判断的提问，批准后才继续。\n3. 定时任务：支持按任意节奏排程，自动生成每日简报等。\n4. 并行处理：把大项目拆成可同时运行的子任务，边研究边起草边整理。\n5. 企业治理：企业版提供访问管理、支出控制、使用分析、OpenTelemetry 可观测，活动可流入 SIEM。\n\n## 版本/套餐对比\n| 计划 | Cowork 包含情况 |\n| --- | --- |\n| Pro | 包含，适合快速任务与短报告 |\n| Max 5x / 20x | 包含，适合长时间复杂任务 |\n| Team | 包含，含 Slack 连接器 |\n| Enterprise | 包含，含管理控制、Analytics API、OpenTelemetry |\n\n（价格以 Anthropic 官网为准，本文不列具体数字。）\n\n## 值不值得用？\n优点：对非技术知识工作者极友好，把「围绕工作的杂活」自动化；远程续跑和定时任务解决了 Agent 必须守在电脑前的痛点；企业治理能力完善。缺点：仍属研究预览性质，邮件发送、文件交付等最终动作需用户审批；重度依赖 Claude 付费计划；手机端为 Beta。结论：如果你已经在用 Claude 且经常处理跨文档、跨日历的知识工作，值得一试。\n\n## 使用建议\n从低风险任务起步，比如让它不仅整理会议记录、生成每周简报。先连接 Google Drive、Gmail 等只读场景，确认准确率后再逐步开放写权限。需要人类拍板的关键动作保持「批准后才执行」。\n\n## 适合谁用？\n- 推荐：用 Claude 的职场知识工作者、需要自动整理文档/日历/邮件的团队、企业 IT 管理者。\n- 可考虑：想用 Agent 但不愿碰命令行的非技术用户。\n- 不推荐：只想要聊天问答的轻量用户、没有 Claude 付费计划的用户、对数据出境敏感且无法接受云端执行的场景。",
+  "published": false,
+  "faq": [
+    {
+      "question": "Claude Cowork 和 Claude Code 有什么区别？",
+      "answer": "Claude Code 是面向工程师的终端开发工具；Cowork 面向非技术知识工作者，可在文件、日历、邮件、通信工具之间执行多步任务，无需打开命令行。"
+    },
+    {
+      "question": "Cowork 在手机上能用吗？",
+      "answer": "可以。2026 年 7 月 7 日起 Cowork 扩展到 Web 与移动端（Beta，Max 计划先行），任务会话与文件同步到 Claude 账号，跨设备无缝衔接。"
+    },
+    {
+      "question": "任务在关闭电脑后还会继续吗？",
+      "answer": "会。Cowork 把执行环境迁到 Anthropic 远程基础设施，合上笔记本后任务仍可在云端续跑，定时任务也能离线执行；遇到需人类判断的问题会发到手机待你批准。"
+    },
+    {
+      "question": "Cowork 包含在我的 Claude 计划里吗？",
+      "answer": "包含在所有付费计划中（Pro / Max / Team / Enterprise）。企业版额外提供访问管理、支出控制与 OpenTelemetry 可观测，具体以 Anthropic 官网为准。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Claude Cowork",
+    "Claude Cowork怎么样",
+    "Claude Cowork免费版",
+    "Claude Cowork使用教程",
+    "Claude Cowork和哪个好"
+  ],
+  "source_urls": [
+    "https://claude.com/ja/product/cowork",
+    "https://the-agent-report.com/2026/07/claude-cowork-web-mobile-july-2026",
+    "https://www.frontiernews.ai/news/article/claude-cowork-goes-mobile-anthropics-10-day-sprint-9e98ef67"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

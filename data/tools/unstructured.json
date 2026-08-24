@@ -1,0 +1,140 @@
+{
+  "name": "Unstructured",
+  "slug": "unstructured",
+  "positioning": "多格式文档解析+RESTful：免费AI开发工具怎么",
+  "auto_positioning": true,
+  "emoji": "📄",
+  "color": "#2D3748",
+  "description": "Unstructured 是开源的文档预处理库/平台，将 PDF、Word、HTML、PPT 等非结构化数据转为结构化、AI 可用的文本与表格，广泛用于 RAG 数据管道，开源免费、并提供云端 API 与企业版。",
+  "category": "AI开发",
+  "tags": [
+    "文档处理",
+    "数据预处理",
+    "RAG",
+    "开源"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "45万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://unstructured.io/",
+  "price": "开源免费；API/企业版付费",
+  "platform": "Python、API、Docker",
+  "pros": [
+    "格式覆盖广，主流文档类型均可处理",
+    "开源免费，社区活跃、文档详尽",
+    "与 LangChain、LlamaIndex 集成顺畅",
+    "表格提取与布局识别在同类中属第一梯队",
+    "云端 API 免运维，降低使用门槛"
+  ],
+  "cons": [
+    "大文件处理速度偏慢",
+    "复杂排版（多栏/密集图文混排）识别有提升空间",
+    "企业版价格相对较高"
+  ],
+  "features": [
+    "多格式文档解析（PDF/Word/HTML/Markdown/PPT 等 60+ 类型）",
+    "智能表格提取与结构化",
+    "布局分析与区域识别（标题/正文/页眉页脚等）",
+    "RESTful API 服务",
+    "本地 Docker 部署",
+    "与 LangChain、LlamaIndex 无缝集成"
+  ],
+  "related": [
+    "langchain",
+    "llamaindex",
+    "ragflow"
+  ],
+  "faq": [
+    {
+      "q": "Unstructured 是免费的吗？",
+      "a": "核心开源库免费（Apache-2.0）；云端 API 与企业版提供更强的托管、SLA 与技术支持，需付费。"
+    },
+    {
+      "q": "Unstructured 支持中文文档吗？",
+      "a": "支持多语言文档处理（含中文、英文、日文等），但部分复杂排版可能需额外配置。"
+    },
+    {
+      "q": "如何集成到 RAG 应用？",
+      "a": "提供 Python SDK，可与 LangChain、LlamaIndex 等框架几行代码集成，完成文档预处理。"
+    }
+  ],
+  "seo_keywords": [
+    "Unstructured",
+    "Unstructured文档处理工具",
+    "Unstructured RAG",
+    "Unstructured vs LangChain",
+    "Unstructured开源文档解析"
+  ],
+  "content": "## Unstructured是什么？\n\n简单说，Unstructured是一个专门帮你“读懂”各种文档的开源工具。\n\n我们平时接触的PDF、Word、PPT、Markdown这些文件，里面的内容在程序眼里就是一堆乱码。Unstructured做的事情，就是把这些“非结构化”的文档，自动识别并提取出有用的文本、表格、章节结构，让AI能够更好地理解和处理它们。\n\n它在AI圈里被广泛用在RAG（检索增强生成）场景——简单理解就是让大模型能“读”你上传的文档，而不是仅靠训练时的知识来回答问题。\n\n---\n\n## 核心功能\n\n**1. 多格式文档解析**\n\n支持PDF、Word、HTML、Markdown、PPT等常见格式，基本覆盖了日常办公和开发中会遇到的所有文档类型。实际使用中，PDF和Word处理最成熟，其他格式也在持续优化。\n\n**2. 智能表格提取**\n\n能够识别文档中的表格结构，并转换成结构化数据。这对于需要从报告中提取数据的场景很实用。不过据社区反馈，复杂嵌套表格偶尔会有识别不准的情况。\n\n**3. 布局分析与区域识别**\n\n不只是提取文本，还能识别标题、正文、页眉页脚、图表说明等不同区域。这对保持文档的语义结构很有帮助，提取结果更有“可读性”。\n\n**4. RESTful API + 本地部署**\n\n既提供云端API直接调用，也支持Docker本地部署。两种方式都有完整文档，企业可以根据数据安全要求灵活选择。\n\n**5. 主流框架集成**\n\n与LangChain、LlamaIndex无缝对接，集成成本很低。如果你已经在用这些框架构建AI应用，引入Unstructured基本是开箱即用。\n\n---\n\n## 版本/套餐对比\n\n| 版本 | 部署方式 | 核心功能 | 适用场景 |\n|------|----------|----------|----------|\n| **开源免费版** | 本地Docker | 文档解析、表格提取、布局识别 | 个人项目、小团队原型 |\n| **云端API** | SaaS服务 | 开源版全部功能 + 维护托管 | 快速验证、避免运维 |\n| **企业版** | 私有化部署 / SaaS | 优先级支持、SLA保障、自定义功能 | 大规模生产环境、数据敏感业务 |\n\n开源版功能已经比较完整，企业版主要差别在于服务保障和定制能力。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 格式支持覆盖面广，基本主流文档格式都能处理\n- 开源免费，社区活跃，文档详尽，遇到问题容易找到答案\n- 与LangChain、LlamaIndex集成顺畅，AI应用开发效率高\n- 表格提取和布局识别在同类工具中属于第一梯队\n- 云端API选项很适合不想自己部署的用户\n\n**缺点：**\n\n- 大文件处理速度确实偏慢，大文档需要耐心等待\n- 复杂排版（比如多栏、图文混排密集的杂志类PDF）识别效果有提升空间\n- 企业版价格相对较高，小团队使用需要评估成本\n\n**总体结论：**\n\n对于需要让AI处理文档的场景，Unstructure是目前开源领域最靠谱的选择之一。云端API降低了使用门槛，企业版也有明确的适用人群。如果你的需求是中小规模的文档处理，当前功能基本够用；但对超大批量或复杂排版要求极高的场景，建议先小范围测试再决定是否全面采用。\n\n---\n\n## 使用建议\n\n1. **从小文件开始验证**：先用几份代表性文档测试效果，确认输出格式满足需求后再扩大规模。\n\n2. **云端API适合快速起步**：如果只是验证想法或处理量不大，直接用API省去部署麻烦。量大后再考虑本地部署降低成本。\n\n3. **注意文件预处理**：对扫描件PDF建议先做OCR处理，Unstructured对纯图片文档支持有限。\n\n4. **关注版本更新**：项目活跃度高，持续有新功能和改进，保持依赖版本更新能获得更好体验。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n\n- 正在构建RAG应用，需要让大模型“读”文档的开发者\n- 有大量历史文档需要结构化处理的企业\n- 数据科学团队，需要从PDF/Word中提取文本做分析\n\n**可考虑：**\n\n- 对文档处理速度要求极高的实时场景（需评估是否满足延迟需求）\n- 排版极其复杂的出版级文档处理（建议先测试）\n\n**不推荐：**\n\n- 纯图片扫描件的大量处理（更适合专门的OCR工具）\n- 预算极其有限且无技术能力的终端用户（上手有一定门槛）",
+  "published": true,
+  "created_date": "2026-06-10",
+  "published_date": "2026-06-10",
+  "verified_url": "https://unstructured.io/",
+  "verified_publisher": "Unstructured.io, Inc.（Unstructured 公司）",
+  "verified_what": "开源文档预处理库 / 平台，将 PDF、Word、HTML、PPT、Markdown、邮件等非结构化数据转换为结构化、AI 可用的文本与表格，是 RAG 数据管道中的常用预处理组件。",
+  "verified_price": "开源库免费（Apache-2.0）；云端 API 与 Enterprise 版付费（按量/订阅，企业定制 SLA）。",
+  "verified_platform": "Python、RESTful API、Docker、云端",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "多格式文档解析（PDF/Word/HTML/Markdown/PPT 等 60+ 类型）",
+    "智能表格提取与结构化",
+    "布局分析与区域识别（标题/正文/页眉页脚等）",
+    "RESTful API 服务",
+    "本地 Docker 部署",
+    "与 LangChain、LlamaIndex 无缝集成"
+  ],
+  "verified_description": "Unstructured 是开源的文档预处理库/平台，将 PDF、Word、HTML、PPT 等非结构化数据转为结构化、AI 可用的文本与表格，广泛用于 RAG 数据管道，开源免费、并提供云端 API 与企业版。",
+  "price_verified": true,
+  "verified_pros": [
+    "格式覆盖广，主流文档类型均可处理",
+    "开源免费，社区活跃、文档详尽",
+    "与 LangChain、LlamaIndex 集成顺畅",
+    "表格提取与布局识别在同类中属第一梯队",
+    "云端 API 免运维，降低使用门槛"
+  ],
+  "verified_cons": [
+    "大文件处理速度偏慢",
+    "复杂排版（多栏/密集图文混排）识别有提升空间",
+    "企业版价格相对较高"
+  ],
+  "verified_faq": [
+    {
+      "q": "Unstructured 是免费的吗？",
+      "a": "核心开源库免费（Apache-2.0）；云端 API 与企业版提供更强的托管、SLA 与技术支持，需付费。"
+    },
+    {
+      "q": "Unstructured 支持中文文档吗？",
+      "a": "支持多语言文档处理（含中文、英文、日文等），但部分复杂排版可能需额外配置。"
+    },
+    {
+      "q": "如何集成到 RAG 应用？",
+      "a": "提供 Python SDK，可与 LangChain、LlamaIndex 等框架几行代码集成，完成文档预处理。"
+    }
+  ],
+  "verified_tags": [
+    "文档处理",
+    "数据预处理",
+    "RAG",
+    "开源"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://unstructured.io/",
+    "https://github.com/Unstructured-IO/unstructured"
+  ],
+  "verify_notes": "原数据准确，官方主域为 unstructured.io，原数据 url 正确。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Unstructured 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Unstructured 的 多格式文档解析（PDF/Word/HTML/Markdown/PPT 等 60+ 类型） 是亮点，价格 开源免费；API/企业版付费；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

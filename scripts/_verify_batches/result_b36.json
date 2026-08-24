@@ -1,0 +1,126 @@
+{
+  "batch_id": "b36",
+  "category": "AI效率",
+  "tools": [
+    {
+      "slug": "buffer-ai",
+      "name": "Buffer AI",
+      "url_current": "https://buffer.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "定价错误。Buffer 实际档位：Free（已含 AI Assistant）、Essentials $5/频道/月、Team $10/频道/月，无 $15/月档；且 AI 助手在免费版即包含，并非'需订阅高级套餐'。描述与正文功能属实。"
+    },
+    {
+      "slug": "recall-ai",
+      "name": "Recall",
+      "url_current": "https://www.getrecall.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 getrecall.ai（跳转 recall.it）为 AI 知识库/摘要工具，与描述一致。定价：Free（每月 10 次 AI 摘要）+ Plus 约 $7–10/月（第三方口径 $7~$10），站内写 '$8/月' 属合理近似；平台官方为 Web/Chrome/Firefox 扩展 + iOS/Android，站内仅写 Web/Chrome 扩展（略有不全但非错误）。未见明显幻觉。"
+    },
+    {
+      "slug": "galileo-ai",
+      "name": "Galileo AI",
+      "url_current": "https://galileo.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "描述正确（galileo.ai 是面向 LLM/AI 应用的 AI 可观测与评测平台，现属 Cisco）。但正文将产品写成'通用 AI 聊天助手/学习搭子'，属功能张冠李戴（实际是开发者评测/监控/护栏平台，非对话机器人）。定价错误：实际 Free $0、Pro $100/月、Enterprise 定制，站内'$19/月'不实（该价格混淆了已并入 Google Stitch 的旧版 UI 设计工具 Galileo AI）。"
+    },
+    {
+      "slug": "shulex",
+      "name": "Shulex",
+      "url_current": "https://www.shulex.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "产品属实（跨境电商 AI 客服 + VOC.AI 评论分析），描述与正文功能一致。定价错误：站内写'付费版$39起/月'，实际 VOC.AI Pro 为 $99/月（中文站 ¥199/月），Team $299/月，Enterprise 定制。正文写的'专业版 ¥299/月'实为 Team 档价格。无 $39 档。"
+    },
+    {
+      "slug": "mindra",
+      "name": "Mindra",
+      "url_current": "https://mindra.co",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content", "price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "产品归属/功能张冠李戴。Mindra 实为 AI 代理编排平台（组建专业 Agent 团队跨工具执行营销/广告/销售/运营任务，3000+ 集成），并非站内描述的'智能思考辅助/复杂问题分析决策/多模态对话助手'。定价错误：实际为积分制，Free（含 $200 额度）+ Pro $400/月 + Enterprise 定制，无 '$12.99/月' 档。"
+    },
+    {
+      "slug": "shadow-ai",
+      "name": "Shadow AI",
+      "url_current": "https://shadowai.com",
+      "url_ok": false,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform"],
+      "conflict": true,
+      "confidence": "high",
+      "notes": "URL 失效：shadowai.com 为待售域名（GoDaddy 挂牌），并非产品官网。站内描述本身正确（'影子 AI'是企业治理术语，指员工私自使用未授权 AI 工具，并非具体产品），但 price('免费版/专业版$9.99/月') 与 platform('Web/iOS/Android/macOS/Windows') 将其当作可购买产品来描述，属编造。'影子 AI'作为概念无官方产品站点，url_correct 留空，建议人工裁定是否保留该词条或以概念科普形式呈现。"
+    },
+    {
+      "slug": "kanwas",
+      "name": "Kanwas",
+      "url_current": "https://kanwas.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "产品属实（团队'上下文大脑'/共享上下文协作空间，含 AI Agent、1000+ 连接）。描述称'集成200+企业应用'与官方'1000+ connections'略有出入，但整体定位可接受。定价编造：官网未公布任何价格，站内'免费版/专业版$12/月/企业版定制'中的 $12/月 无依据，疑似编造，建议人工核实。"
+    },
+    {
+      "slug": "postiz",
+      "name": "Postiz",
+      "url_current": "https://postiz.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "产品属实（开源 AI 社交媒体排程工具），描述与正文功能一致。定价错误：站内写'付费版$9/月起'，实际付费档为 Standard $29/月、Team $39、Pro $49、Ultimate $99，无 $9/月档；免费方案存在（开源自托管免费 / 云端 7 天试用）。"
+    },
+    {
+      "slug": "apache-superset",
+      "name": "Superset",
+      "url_current": "https://superset.apache.org/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": true,
+      "confidence": "medium",
+      "notes": "产品属实，开源免费（Apache 基金会），描述与正文核心功能（拖拽仪表盘、SQL Lab、40+ 图表、多数据源）均准确。但'2026 年增强 AI 驱动自然语言查询'这一说法在官网未明确证实（官网介绍未提及内置 NL2SQL/AI 查询功能），存疑，建议人工裁定。"
+    },
+    {
+      "slug": "tabstack",
+      "name": "Tabstack",
+      "url_current": "https://tabstack.co",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "URL 指向正确的产品：tabstack.co 是免费的新标签页/书签管理扩展（一键保存全部标签页、分组/文件夹组织），与描述一致。但正文编造功能：声称'AI 自动标签分类、跨设备同步、自然语言智能搜索'，官网并无这些功能（实为简单免费书签/标签管理器，无订阅）。定价错误：站内'专业版$4.99/月'不实，该产品完全免费、无付费档（注意另有同名不同域 tabstack.ai 为 Mozilla 网页自动化 API，是另一产品，勿混淆）。"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "name": "DeepSeek",
+  "slug": "deepseek",
+  "positioning": "免费开源大模型：V4系列+API按量计费",
+  "emoji": "🤖",
+  "color": "#4F6EF7",
+  "description": "DeepSeek 是深度求索推出的国产开源大模型，提供免费网页对话与按 token 计费的 API。2026年4月发布开源 DeepSeek-V4 系列（V4-Pro 1.6T/49B、V4-Flash 284B/13B），1M 上下文标配。2026年7月31日 V4-Flash 正式版开源（FP8/8bit 量化、MIT 协议）；2026年8月13日 V4-Pro 正式版（DeepSeek-V4-Pro-0813）上线，1M 上下文 + 384K 最大输出，Agent 能力逼近 Claude Fable 5。2026年8月21日上线实验性多模态视觉模型 DeepSeek-V4-Flash-Vision-Exp，成为 V4 系列首个支持图片输入的模型（纯文本能力与 V4-Flash 持平，视觉 Agent 能力接近 Opus 4.8）。",
+  "category": "AI对话",
+  "tags": [
+    "大模型",
+    "DeepSeek",
+    "V4",
+    "开源",
+    "长上下文"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://deepseek.com",
+  "price": "免费使用 + API 按量计费（V4-Pro 平时输出¥6/百万token，高峰翻倍）",
+  "platform": "Web",
+  "pros": [
+    "V4 系列开源且 1M 上下文标配",
+    "V4-Pro-0813 正式版 Agent 能力大幅提升（官方评测逼近 Claude Fable 5，SWE-bench 80.6%）",
+    "V4-Flash-0731 正式版 Agent 能力大幅提升（Terminal-Bench 2.1 达 82.7，超 V4-Pro 预览版）",
+    "0731 权重 MIT 开源，附 DSpark 推测解码模块",
+    "API 定价经济（Flash 约¥1/¥2每百万token）"
+  ],
+  "cons": [
+    "API 价格已预告将大幅上调（官方称涨幅较大，高峰时段翻倍：输出 6→12 元/百万token）",
+    "基准为厂商自报，DeepSeek Harness 尚未开源、外部暂无法复现",
+    "V4 预览版曾受高端算力限制，吞吐有限"
+  ],
+  "features": [
+    "DeepSeek-V4-Pro-0813：1.6T 总参 / 49B 激活，2026-08-13 正式版上线，1M 上下文 + 384K 最大输出，Agent 能力逼近 Claude Fable 5",
+    "DeepSeek-V4-Flash-0731：284B 总参 / 13B 激活，2026-07-31 正式版，Agent 基准全面超越 V4-Pro 预览版",
+    "DeepSeek-V4-Flash-Vision-Exp：实验性多模态视觉模型（2026-08-21 上线），V4 系列首个支持图片输入的模型，纯文本能力与 V4-Flash 持平，视觉 Agent 能力接近 Opus 4.8（官方自报），1M 上下文，图片按 token 计费（单张最多 384 tokens）",
+    "1M 上下文标配（DSA 稀疏注意力 + Token 压缩）",
+    "思考/非思考双模式，reasoning_effort 支持 low/high/max",
+    "0731 正式版开源 MIT 权重 + 原生 Responses API/Codex 支持"
+  ],
+  "related": [
+    "deepseek",
+    "chatgpt",
+    "claude",
+    "gemini"
+  ],
+  "faq": [
+    {
+      "q": "DeepSeek 当前最新版本是什么？",
+      "a": "DeepSeek-V4-Pro-0813（2026-08-13 正式版上线，取代 V4-Pro 预览版）与 DeepSeek-V4-Flash-0731（2026-07-31 正式版）。另有实验性多模态视觉模型 DeepSeek-V4-Flash-Vision-Exp（2026-08-21 上线，V4 系列首个支持图片输入的模型，纯文本能力与 V4-Flash 持平，视觉 Agent 能力接近 Opus 4.8）。V4-Pro-0813 支持 1M 上下文 + 384K 最大输出、默认思考模式，Agent 能力逼近 Claude Fable 5，API 定价暂与预览版一致。"
+    },
+    {
+      "q": "DeepSeek V4-Flash 0731 有开源权重吗？",
+      "a": "有。DeepSeek-V4-Flash-0731 权重已于 2026-07-31 同日以 MIT 许可发布在 Hugging Face（deepseek-ai/DeepSeek-V4-Flash-0731，48 个 Safetensors 分片），并原生支持 Responses API / Codex。"
+    },
+    {
+      "q": "DeepSeek API 怎么收费？",
+      "a": "V4-Pro-0813 与预览版定价一致：缓存命中输入¥0.025、未命中输入¥3、输出¥6（元/百万token）；V4-Flash 输入¥1/输出¥2；高峰时段（9:00-12:00、14:00-18:00）翻倍。V4-Flash-Vision-Exp 图片按 token 计费、单张最多 384 tokens，费率与 V4-Flash 一致。官方已预告近期整体大幅上调 API 定价，请以官网为准。"
+    }
+  ],
+  "seo_keywords": [
+    "DeepSeek V4 Pro",
+    "DeepSeek V4 Pro怎么样",
+    "DeepSeek V4 Pro免费版",
+    "DeepSeek V4 Pro使用教程",
+    "DeepSeek V4 Pro和哪个好"
+  ],
+  "content": "## DeepSeek 是什么？\n\n深度求索推出的国产开源大模型，提供免费网页对话与按 token 计费的 API；2026年4月发布开源 DeepSeek-V4 系列，2026-07-31 V4-Flash 正式版（DeepSeek-V4-Flash-0731）发布并开源权重，2026-08-13 V4-Pro 正式版（DeepSeek-V4-Pro-0813）上线，Agent 能力大幅提升；2026-08-21 上线实验性多模态视觉模型 DeepSeek-V4-Flash-Vision-Exp，成为 V4 系列首个支持图片输入的模型。\n\nDeepSeek 是深度求索推出的国产开源大模型，提供免费网页对话与按 token 计费的 API。2026年4月发布开源 DeepSeek-V4 系列（V4-Pro 1.6T/49B、V4-Flash 284B/13B），1M 上下文标配；2026-07-31 V4-Flash 正式版（DeepSeek-V4-Flash-0731）发布并开源权重，2026-08-13 V4-Pro 正式版（DeepSeek-V4-Pro-0813）上线，Agent 能力大幅提升；2026-08-21 上线实验性多模态视觉模型 DeepSeek-V4-Flash-Vision-Exp（V4 系列首个支持图片输入的模型，纯文本能力与 V4-Flash 持平，视觉 Agent 能力接近 Opus 4.8，官方自报）。\n\n## 核心功能\n\n- DeepSeek-V4-Pro-0813：1.6T 总参 / 49B 激活，2026-08-13 正式版上线，1M 上下文 + 384K 最大输出，Agent 能力逼近 Claude Fable 5\n- DeepSeek-V4-Flash-0731：284B 总参 / 13B 激活，2026-07-31 正式版，Agent 基准全面超越 V4-Pro 预览版\n- DeepSeek-V4-Flash-Vision-Exp：实验性多模态视觉模型（2026-08-21 上线），支持图文混合输入（base64 内联/外部 URL/Files API），视觉 Agent 能力接近 Opus 4.8（官方自报），图片按 token 计费、单张最多 384 tokens\n- 1M 上下文标配（DSA 稀疏注意力 + Token 压缩）\n- 思考/非思考双模式，reasoning_effort 支持 low/high/max\n- 0731 正式版开源 MIT 权重 + 原生 Responses API/Codex 支持\n\n## 实测数据 & 关键指标\n\n以下数据来自官方及公开评测信息（已核实），可溯源。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 免费使用 + API 按 token 计费（2026-07 正式版引入峰谷定价）：平时价 V4-Pro 输入¥0.025(缓存命中)/¥3(未命中)、输出¥6；V4-Flash 输入¥0.02(缓存命中)/¥1(未命中)、输出¥2（元/百万token）。高峰时段（北京时间每日9:00-12:00、14:00-18:00）价格翻倍。官方已预告近期整体大幅上调 API 定价。 |\n| 支持平台 | Web, App, API |\n| 评分 | ⭐ 4.5 |\n| 开发商 | 深度求索（DeepSeek） |\n| DeepSeek-V4-Pro-08 | 1.6T 总参 / 49B 激活，2026-08-13 正式版，1M 上下文 + 384K 最大输出，Agent 能力逼近 Claude Fable 5 |\n| DeepSeek-V4-Flash-07 | 284B 总参 / 13B 激活，2026-07-31 正式版，Agent 基准全面超越 V4-Pro 预览版 |\n| DeepSeek-V4-Flash-Vis | 实验性多模态视觉模型（2026-08-21），V4 系列首个支持图片输入的模型，视觉 Agent 能力接近 Opus 4.8（官方自报） |\n| 上下文 | 1M 上下文标配（DSA 稀疏注意力 + Token 压缩） |\n\n## 价格与平台\n\n- **价格**：免费使用 + API 按 token 计费（2026-07 正式版引入峰谷定价）：平时价 V4-Pro 输入¥0.025(缓存命中)/¥3(未命中)、输出¥6；V4-Flash 输入¥0.02(缓存命中)/¥1(未命中)、输出¥2（元/百万token）。高峰时段（北京时间每日9:00-12:00、14:00-18:00）价格翻倍。V4-Flash-Vision-Exp 图片按 token 计费、单张最多 384 tokens，费率与 V4-Flash 一致。官方已预告近期整体大幅上调 API 定价，预计涨幅较大，请以官网最新通知为准。\n- **平台**：Web, App, API\n- **官网**：https://deepseek.com\n\n## 优缺点分析\n\n### 优点\n\n- V4 系列开源且 1M 上下文标配\n- V4-Pro-0813 正式版 Agent 能力大幅提升（官方评测逼近 Claude Fable 5，SWE-bench 80.6%）\n- V4-Flash-0731 正式版 Agent 能力大幅提升（Terminal-Bench 2.1 达 82.7，超 V4-Pro 预览版）\n- 0731 权重 MIT 开源，附 DSpark 推测解码模块\n- API 定价经济（Flash 约¥1/¥2每百万token）\n\n### 缺点\n\n- API 价格已预告将大幅上调（官方称涨幅较大，高峰时段翻倍：输出 6→12 元/百万token）\n- 基准为厂商自报，DeepSeek Harness 尚未开源、外部暂无法复现\n- V4 预览版曾受高端算力限制，吞吐有限\n\n## 常见问题（FAQ）\n\n**DeepSeek 当前最新版本是什么？**\n\nDeepSeek-V4-Pro-0813（2026-08-13 正式版上线，取代 V4-Pro 预览版）与 DeepSeek-V4-Flash-0731（2026-07-31 正式版）。另有实验性多模态视觉模型 DeepSeek-V4-Flash-Vision-Exp（2026-08-21 上线，V4 系列首个支持图片输入的模型，纯文本能力与 V4-Flash 持平，视觉 Agent 能力接近 Opus 4.8）。V4-Pro-0813 支持 1M 上下文 + 384K 最大输出、默认思考模式，Agent 能力逼近 Claude Fable 5，API 定价暂与预览版一致。\n\n**DeepSeek V4-Flash 0731 有开源权重吗？**\n\n有。DeepSeek-V4-Flash-0731 权重已于 2026-07-31 同日以 MIT 许可发布在 Hugging Face（deepseek-ai/DeepSeek-V4-Flash-0731，48 个 Safetensors 分片），并原生支持 Responses API / Codex。\n\n**DeepSeek API 怎么收费？**\n\nV4-Pro-0813 与预览版定价一致：缓存命中输入¥0.025、未命中输入¥3、输出¥6（元/百万token）；V4-Flash 输入¥1/输出¥2；高峰时段（9:00-12:00、14:00-18:00）翻倍。V4-Flash-Vision-Exp 图片按 token 计费、单张最多 384 tokens，费率与 V4-Flash 一致。官方已预告近期整体大幅上调 API 定价，请以官网为准。网页版/App 免费使用。\n\n## 最终结论\n\nDeepSeek 是AI对话领域的一款 AI 工具，其核心优势在于V4 系列开源且 1M 上下文标配。\n此外，V4-Pro-0813 正式版上线，Agent 能力逼近 Claude Fable 5，整体进入第一梯队；2026-08-21 上线的实验性视觉模型 V4-Flash-Vision-Exp 补齐多模态短板，视觉 Agent 能力接近 Opus 4.8，多模态能力正式进入 API。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。\n",
+  "published": true,
+  "created_date": "2026-03-22",
+  "verified_url": "https://deepseek.com",
+  "verified_publisher": "深度求索（DeepSeek）",
+  "verified_what": "深度求索推出的国产开源大模型，提供免费网页对话与按 token 计费的 API；2026年4月发布开源 DeepSeek-V4 系列，2026-07-31 V4-Flash 正式版（DeepSeek-V4-Flash-0731）发布并开源权重，Agent 能力大幅提升。",
+  "verified_price": "免费使用 + API 按 token 计费（2026-07 正式版引入峰谷定价）：平时价 V4-Pro 输入¥0.025(缓存命中)/¥3(未命中)、输出¥6；V4-Flash 输入¥0.02(缓存命中)/¥1(未命中)、输出¥2（元/百万token）。高峰时段（北京时间每日9:00-12:00、14:00-18:00）价格翻倍。",
+  "verified_platform": "Web, App, API",
+  "last_verified": "2026-08-22",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "DeepSeek-V4-Pro-0813：1.6T 总参 / 49B 激活，2026-08-13 正式版上线，1M 上下文 + 384K 最大输出，Agent 能力逼近 Claude Fable 5",
+    "DeepSeek-V4-Flash-0731：284B 总参 / 13B 激活，2026-07-31 正式版，Agent 基准全面超越 V4-Pro 预览版",
+    "DeepSeek-V4-Flash-Vision-Exp：实验性多模态视觉模型（2026-08-21 上线），V4 系列首个支持图片输入的模型，纯文本能力与 V4-Flash 持平，视觉 Agent 能力接近 Opus 4.8（官方自报），1M 上下文，图片按 token 计费（单张最多 384 tokens）",
+    "1M 上下文标配（DSA 稀疏注意力 + Token 压缩）",
+    "思考/非思考双模式，reasoning_effort 支持 low/high/max",
+    "0731 正式版开源 MIT 权重 + 原生 Responses API/Codex 支持"
+  ],
+  "verified_description": "DeepSeek 是深度求索推出的国产开源大模型，提供免费网页对话与按 token 计费的 API。2026年4月发布开源 DeepSeek-V4 系列（V4-Pro 1.6T/49B、V4-Flash 284B/13B），1M 上下文标配。2026年7月31日 V4-Flash 正式版开源（FP8/8bit 量化、MIT 协议）；2026年8月13日 V4-Pro 正式版（DeepSeek-V4-Pro-0813）上线，1M 上下文 + 384K 最大输出，Agent 能力逼近 Claude Fable 5。2026年8月21日上线实验性多模态视觉模型 DeepSeek-V4-Flash-Vision-Exp，成为 V4 系列首个支持图片输入的模型（纯文本能力与 V4-Flash 持平，视觉 Agent 能力接近 Opus 4.8）。",
+  "content_flags": "原长文含幻觉, 已重写",
+  "price_verified": true,
+  "verified_pros": [
+    "V4 系列开源且 1M 上下文标配",
+    "V4-Pro-0813 正式版 Agent 能力大幅提升（官方评测逼近 Claude Fable 5，SWE-bench 80.6%）",
+    "V4-Flash-0731 正式版 Agent 能力大幅提升（Terminal-Bench 2.1 达 82.7，超 V4-Pro 预览版）",
+    "0731 权重 MIT 开源，附 DSpark 推测解码模块",
+    "API 定价经济（Flash 约¥1/¥2每百万token）"
+  ],
+  "verified_cons": [
+    "API 价格已预告将大幅上调（官方称涨幅较大，高峰时段翻倍：输出 6→12 元/百万token）",
+    "基准为厂商自报，DeepSeek Harness 尚未开源、外部暂无法复现",
+    "V4 预览版曾受高端算力限制，吞吐有限"
+  ],
+  "verified_faq": [
+    {
+      "q": "DeepSeek 当前最新版本是什么？",
+      "a": "DeepSeek-V4-Pro-0813（2026-08-13 正式版上线，取代 V4-Pro 预览版）与 DeepSeek-V4-Flash-0731（2026-07-31 正式版）。另有实验性多模态视觉模型 DeepSeek-V4-Flash-Vision-Exp（2026-08-21 上线，V4 系列首个支持图片输入的模型，纯文本能力与 V4-Flash 持平，视觉 Agent 能力接近 Opus 4.8）。V4-Pro-0813 支持 1M 上下文 + 384K 最大输出、默认思考模式，Agent 能力逼近 Claude Fable 5，API 定价暂与预览版一致。"
+    },
+    {
+      "q": "DeepSeek V4-Flash 0731 有开源权重吗？",
+      "a": "有。DeepSeek-V4-Flash-0731 权重已于 2026-07-31 同日以 MIT 许可发布在 Hugging Face（deepseek-ai/DeepSeek-V4-Flash-0731，48 个 Safetensors 分片），并原生支持 Responses API / Codex。"
+    },
+    {
+      "q": "DeepSeek API 怎么收费？",
+      "a": "V4-Pro-0813 与预览版定价一致：缓存命中输入¥0.025、未命中输入¥3、输出¥6（元/百万token）；V4-Flash 输入¥1/输出¥2；高峰时段（9:00-12:00、14:00-18:00）翻倍。V4-Flash-Vision-Exp 图片按 token 计费、单张最多 384 tokens，费率与 V4-Flash 一致。官方已预告近期整体大幅上调 API 定价，请以官网为准。"
+    }
+  ],
+  "verified_tags": [
+    "大模型",
+    "DeepSeek",
+    "V4",
+    "开源",
+    "长上下文"
+  ],
+  "verified_category": "AI对话",
+  "source_urls": [
+    "https://api-docs.deepseek.com/updates/",
+    "https://www.thepaper.cn/newsDetail_forward_33825583",
+    "https://finance.sina.cn/2026-08-21/detail-inipavkm8059242.d.html",
+    "https://news.qq.com/rain/a/20260821A0B95B00"
+  ],
+  "verify_notes": "2026-08-21 DeepSeek 官方上线实验性多模态视觉模型 V4-Flash-Vision-Exp（首个支持图片输入的 V4 模型）：纯文本能力与 V4-Flash 持平、视觉 Agent 接近 Opus 4.8（官方自报）、1M 上下文、API 支持 Chat Completions/Messages/Responses 三种格式与 base64/URL/Files API 三种图片传入、图片按 token 计费单张最多 384 tokens 费率与 V4-Flash 一致；同步推出免费 Files API。价格字段未动（费率未变）。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "tencent-hunyuan",
+      "xinghuo-cognitive-model",
+      "mistral-ai"
+    ],
+    "verdict": "DeepSeek 与 腾讯混元、星火认知大模型、Mistral AI 同属AI对话赛道。在性价比上，DeepSeek（免费使用 + API按token计费）门槛更低；口碑方面，DeepSeek（⭐ 4.5）领先；DeepSeek 的优势在于深度求索推出的国产开源大模型，提供免费网页对话与按token计费的API，在代码生成与数学推理方面表现突出，主力模型为D，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  },
+  "updated_date": "2026-08-22"
+}

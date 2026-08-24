@@ -1,0 +1,143 @@
+{
+  "name": "ChatGPT",
+  "slug": "chatgpt",
+  "positioning": "免费AI助手，智能对话+代码生成好用吗",
+  "auto_positioning": true,
+  "emoji": "🟢",
+  "color": "#10a37f",
+  "description": "OpenAI 推出的智能对话 AI，支持文本生成、代码编写、数据分析等多种任务。2026年7月 GPT-5.6 Sol/Terra/Luna 三档模型已全量发布；2026年8月起免费用户默认使用 GPT-5.6 Luna 并开放无限文本聊天，Plus/Pro 启用日常对话优化版 Sol，编码与 Agent 能力行业第一梯队。",
+  "category": "AI对话",
+  "tags": [
+    {
+      "text": "AI对话"
+    },
+    {
+      "text": "AI写作"
+    },
+    {
+      "text": "免费可用",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.9",
+  "visits": "12.5万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://openai.com/chatgpt/",
+  "price": "免费版（GPT-5.6 Luna 无限文本聊天）+ Go $8/月 + Plus $20/月 + Pro $200/月；API：Luna $0.2/$1.2、Terra $2/$12、Sol $5/$30",
+  "platform": "Web / iOS / Android",
+  "pros": [
+    "多模态能力行业领先",
+    "插件和GPTs生态丰富",
+    "持续更新迭代进步快",
+    "中文支持优秀",
+    "免费版功能已经很强"
+  ],
+  "cons": [
+    "国内需要科学上网",
+    "免费版使用次数限制",
+    "Plus价格对部分用户偏高",
+    "偶尔出现幻觉输出",
+    "隐私数据安全顾虑"
+  ],
+  "features": [
+    "GPT-5.6 三档模型（Sol 旗舰 1M 上下文 / Terra 中端 / Luna 轻量快速）",
+    "免费用户默认 GPT-5.6 Luna + 无限文本聊天（2026-08-06 官方宣布，下周起）+ Think 按钮按需深度推理",
+    "Plus/Pro 日常对话优化版 GPT-5.6 Sol（事实错误率 -68%）+ 思考强度滑块（5档）",
+    "多模态交互（文本/图片/音频）",
+    "深度研究（Deep Research）自动多步骤调研",
+    "Codex 编程代理（终端级代码执行，移动端免费）",
+    "GPTs 定制 + 插件生态",
+    "联网搜索 + 实时信息",
+    "DALL-E 图像生成",
+    "Projects + 定时任务 + Sites"
+  ],
+  "related": [
+    "claude",
+    "kimi",
+    "doubao"
+  ],
+  "content": "## ChatGPT 是什么？\n\nChatGPT是OpenAI开发的AI对话助手，全球使用人数最多的AI助手之一（官方 2026-08 公布周活跃用户达 10 亿）。2026年7月9日，OpenAI 发布新一代 GPT-5.6 模型家族，ChatGPT 由此进入 GPT-5.6 时代：Sol（旗舰）、Terra（中端）、Luna（轻量快速）三档模型覆盖从日常聊天到深度推理的全场景。\n\n作为通用AI平台，ChatGPT 已从最初的对话工具扩展为集对话、推理、代码、深度研究、图像生成、Agent 于一体的一站式平台，支持插件系统、GPTs 定制、联网搜索与代码执行。\n\n## GPT-5.6 三档模型\n\n- **GPT-5.6 Sol**：旗舰推理模型，面向编码、知识工作、网络安全与科学等复杂专业任务，1M 上下文窗口，API 定价每百万 tokens 输入 $5、输出 $30（发布至今未变）\n- **GPT-5.6 Terra**：中端高性价比模型，兼顾质量与成本，API 输入 $2 / 输出 $12（2026-07-30 起，较发布价下调 20%）\n- **GPT-5.6 Luna**：最快、成本最低的轻量版，面向高频日常任务，API 输入 $0.20 / 输出 $1.20（2026-07-30 起，较发布价下调 80%）\n\n## 2026年8月更新：免费畅聊与 Sol 升级\n\n2026年8月6日（美东时间）OpenAI 官方宣布 ChatGPT 新一轮更新：\n\n- **免费用户默认模型升级为 GPT-5.6 Luna**（替代原 GPT-5.5 Instant），本周起生效；下周起免费与 Go（$8/月）用户开放**无限文本聊天**，并新增\"思考\"（Think）按钮——遇到难题可调用更高阶推理能力（受滥用防护限制）。文件上传、图片生成等工具仍有限制\n- **Plus/Pro 用户启用日常对话优化版 GPT-5.6 Sol**：回答更直接、更聚焦，事实准确性显著提升——在金融、医疗、法律类提示词的内部评估中，含至少一个事实错误的回答比例较 GPT-5.5 Instant 降低约 68%（Luna 约 62%）；同时新增思考强度滑块（5档），可在网页/移动端/桌面端自由调节每轮回答的思考深度\n- 该 Sol 版本专为常规聊天界面优化，驱动 Work 与 Codex 的 GPT-5.6 Sol 版本不受本次发布影响\n\n## 核心功能\n\n- **智能对话**：自然流畅的多轮对话，支持文本、图片、音频输入\n- **代码生成与执行**：支持 50+ 编程语言，内置代码沙箱可直接运行验证\n- **深度推理**：Sol 链式思维推理，复杂问题逐步拆解、逐步验证\n- **深度研究（Deep Research）**：自动多步骤联网调研并产出报告\n- **Codex 编程代理**：终端级代码执行，移动端免费开放\n- **GPTs 定制**：创建专属 AI 助手，自定义角色、知识库与技能\n- **联网搜索**：获取实时信息，不再受知识截止日期限制\n- **图片生成（DALL-E）**、**Projects 项目管理**、**定时任务（Scheduled Tasks）** 与 **Sites 网页发布**\n\n## 版本与价格对比\n\n| 套餐 | 价格 | 默认模型 | 核心权益 |\n|------|------|---------|---------|\n| Free 免费版 | 0元 | GPT-5.6 Luna | 无限文本聊天（下周起）、Think 按钮按需深度推理；文件上传/图片等仍有限制 |\n| Go | $8/月 | GPT-5.6 Luna | 免费版基础上更多额度，同享 Think 按钮 |\n| Plus | $20/月 | 优化版 GPT-5.6 Sol | 思考强度滑块、深度推理与工具额度更高 |\n| Pro | $200/月 | 优化版 GPT-5.6 Sol | 最高推理额度，优先排队 |\n| API（按量） | 按 token 计费 | Sol/Terra/Luna | Sol $5/$30、Terra $2/$12、Luna $0.20/$1.20（每百万 tokens，2026-07-30 起） |\n\n## 实测数据\n\n以下数据均来自公开来源，可溯源核查（来源见文末）。\n\n| 指标 | 数值 | 数据来源 |\n|------|------|---------|\n| 周活跃用户 | 10 亿 | OpenAI 2026-08 官方公告 |\n| 事实错误率改善（Sol） | 较 GPT-5.5 Instant 降低约 68% | OpenAI 官方内部评估（金融/医疗/法律提示词，2026-08） |\n| 事实错误率改善（Luna） | 较 GPT-5.5 Instant 降低约 62% | OpenAI 官方内部评估（同上） |\n| Sol 上下文窗口 | 1M tokens | OpenAI 官方 GPT-5.6 发布资料 |\n| Luna API 价格 | $0.20 / $1.20 每百万 tokens | OpenAI 官方定价（2026-07-30 生效） |\n| Terra API 价格 | $2 / $12 每百万 tokens | OpenAI 官方定价（2026-07-30 生效） |\n| Sol API 价格 | $5 / $30 每百万 tokens | OpenAI 官方定价（发布至今） |\n\n> 数据说明：以上价格与模型信息均来自 OpenAI 官网公告（2026-08-06 更新公告与 2026-07-30 定价公告），未采用第三方评测数据。\n\n## 优缺点分析\n\n### 优点\n- GPT-5.6 三档模型覆盖全场景，从免费高频聊天到旗舰深度推理按需选择\n- 免费用户开放无限文本聊天，入门门槛大幅降低\n- Sol 编码与 Agent 能力处于行业第一梯队（驱动 Codex、深度研究）\n- 多模态、插件、GPTs、定时任务等生态完善\n- 官方持续高频迭代（发布三周即降价、产品层优化不停）\n\n### 缺点\n- 国内需要科学上网才能使用\n- 免费版文件上传、图片生成等工具仍有限制\n- Plus $20/月与 Pro $200/月对部分用户偏高\n- 长文本生成偶尔出现内容重复或幻觉，重要信息需人工核实\n- 隐私与数据安全方面有一定顾虑\n\n## 使用技巧\n\n1. **善用系统提示词**：在设置中自定义 ChatGPT 的角色和回复风格，获得更精准的回答。\n2. **按任务选模型**：日常问答用默认模型即可，复杂推理切 Sol 或调高思考滑块。\n3. **多模态输入**：直接上传图片、文件、截图让 ChatGPT 分析，比纯文本描述效果好很多。\n4. **分步提问**：复杂任务拆分成多步骤，每步确认后再进行下一步，准确率更高。\n5. **使用 GPTs**：社区有大量定制化的 GPTs，如翻译、写作、编程助手，直接使用。\n6. **代码执行**：让 ChatGPT 写代码并直接运行，快速验证结果。\n\n## 适合人群\n\nChatGPT 适合几乎所有需要 AI 辅助的用户：学生、上班族、程序员、内容创作者、研究人员。免费版已经能满足日常使用，Go/Plus 适合高频用户，Pro 适合重度推理与专业场景。\n\n## 常见问题（FAQ）\n\n**ChatGPT 免费版现在能无限用吗？**\n文本聊天可以。2026-08-06 官方宣布：免费与 Go 用户本周起默认模型升级为 GPT-5.6 Luna，下周起开放无限文本聊天，并新增\"思考\"按钮调用高阶推理；但文件上传、图片生成、语音等工具仍有限制。\n\n**GPT-5.6 Sol / Terra / Luna 有什么区别？**\nSol 是旗舰模型（深度推理、编码、专业任务，1M 上下文，API $5/$30）；Terra 是中端性价比款（$2/$12）；Luna 是最快最便宜的轻量款（$0.20/$1.20），也是免费用户的默认模型。\n\n**ChatGPT 和 Claude 哪个更好？**\n各有所长。ChatGPT 在多模态、插件生态、GPTs 市场与产品整合（Codex、深度研究）方面更强；Claude 在长文本写作与部分专业场景有口碑。建议都试试，根据具体需求选择。\n\n**ChatGPT 在国内怎么用？**\n需要通过科学上网访问，也可使用官方 API 接入第三方客户端。国内用户可考虑 DeepSeek、Kimi、豆包等国产替代品，功能接近且无需翻墙。\n\n**ChatGPT 能替代搜索引擎吗？**\n多数场景可以。时事新闻、技术问题、生活查询用 ChatGPT 更高效；但本地商家、地图导航、即时股价等实时场景传统搜索仍占优。\n\n**ChatGPT 安全吗？**\nOpenAI 为 GPT-5.6 发布了迄今最全面的 System Card，并对未成年用户增加了专门的安全训练与系统级防护。重要信息（价格、日期、数字）仍建议以官方来源二次核实。\n\n---\n来源：OpenAI 官网公告（openai.com）",
+  "published": true,
+  "faq": [
+    {
+      "q": "ChatGPT 免费版现在能无限用吗？",
+      "a": "文本聊天可以。2026-08-06 官方宣布：免费与 Go 用户本周起默认模型升级为 GPT-5.6 Luna，下周起开放无限文本聊天，并新增「思考」按钮调用高阶推理；但文件上传、图片生成、语音等工具仍有限制。"
+    },
+    {
+      "q": "GPT-5.6 Sol / Terra / Luna 有什么区别？",
+      "a": "Sol 是旗舰模型（深度推理、编码、专业任务，1M 上下文，API $5/$30）；Terra 是中端性价比款（$2/$12）；Luna 是最快最便宜的轻量款（$0.20/$1.20），也是免费用户的默认模型。"
+    },
+    {
+      "q": "ChatGPT 和 Claude 哪个更好？",
+      "a": "各有所长。ChatGPT 在多模态、插件生态、GPTs 市场与产品整合（Codex、深度研究）方面更强；Claude 在长文本写作与部分专业场景有口碑。建议都试试，根据具体需求选择。"
+    },
+    {
+      "q": "ChatGPT 在国内怎么用？",
+      "a": "需要通过科学上网访问，也可使用官方 API 接入第三方客户端。国内用户可考虑 DeepSeek、Kimi、豆包等国产替代品，功能接近且无需翻墙。"
+    }
+  ],
+  "created_date": "2026-03-22",
+  "aeo_geo_updated": "2026-06-23",
+  "verified_url": "https://openai.com/chatgpt/",
+  "verified_publisher": "OpenAI",
+  "verified_what": "OpenAI 推出的智能对话 AI，GPT-5.6 三档模型（Sol 旗舰/Terra 中端/Luna 轻量）2026-07-09 全量发布；2026-08-06 更新：免费用户默认升级 GPT-5.6 Luna 并开放无限文本聊天+Think 按钮，Plus/Pro 启用日常对话优化版 Sol+思考强度滑块；07-30 起 Luna 降 80%（$0.2/$1.2）、Terra 降 20%（$2/$12），Sol $5/$30 不变。",
+  "verified_price": "免费版（GPT-5.6 Luna 无限文本聊天）+ Go $8/月 + Plus $20/月 + Pro $200/月；API 按量：Luna $0.20/$1.20、Terra $2/$12、Sol $5/$30（每百万 tokens，2026-07-30 起）",
+  "verified_platform": "Web、Windows/macOS 桌面端、iOS/Android、API",
+  "verified_features": [
+    "GPT-5.6 三档模型（Sol 旗舰 1M 上下文 / Terra 中端 / Luna 轻量快速）",
+    "免费用户默认 GPT-5.6 Luna + 无限文本聊天（2026-08-06 官方宣布，下周起）+ Think 按钮按需深度推理",
+    "Plus/Pro 日常对话优化版 GPT-5.6 Sol（事实错误率 -68%）+ 思考强度滑块（5档）",
+    "多模态交互（文本/图片/音频）",
+    "深度研究（Deep Research）自动多步骤调研",
+    "Codex 编程代理（终端级代码执行，移动端免费）",
+    "GPTs 定制 + 插件生态",
+    "联网搜索 + 实时信息",
+    "DALL-E 图像生成",
+    "Projects + 定时任务 + Sites"
+  ],
+  "last_verified": "2026-08-07",
+  "confidence": "high",
+  "conflict": false,
+  "source_urls": [
+    "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+    "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+    "https://www.cls.cn/detail/2447861"
+  ],
+  "verify_notes": "官方公告（2026-08-06/美东）确认：Sol 优化版仅限 ChatGPT 常规聊天界面，Work/Codex 的 Sol 版本不变；价格变更 07-30 生效（Luna -80%、Terra -20%、Sol 不变，Fast mode 取代 Priority Processing）；周活 10 亿来自 OpenAI 公告（财联社转述）。gpt-5-6-sol 独立条目模型未变、价格正确，本轮不动。",
+  "content_verified": true,
+  "url_previous": "https://chatgpt.com",
+  "compare_section": {
+    "competitors": [
+      "tencent-hunyuan",
+      "xinghuo-cognitive-model",
+      "mistral-ai"
+    ],
+    "verdict": "ChatGPT 与 腾讯混元、星火认知大模型、Mistral AI 同属AI对话赛道。在性价比上，ChatGPT（免费版+Plus $20/月）门槛更低；口碑方面，ChatGPT（⭐ 4.9）领先；ChatGPT 的优势在于OpenAI推出的多模态AI助手。2026年7月当前默认模型为GPT-5.6系列(Sol/Terra/Luna)，GPT，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  },
+  "verified_description": "OpenAI 推出的智能对话 AI，支持文本生成、代码编写、数据分析等多种任务。2026年7月 GPT-5.6 Sol/Terra/Luna 三档模型已全量发布；2026年8月起免费用户默认使用 GPT-5.6 Luna 并开放无限文本聊天，Plus/Pro 启用日常对话优化版 Sol，编码与 Agent 能力行业第一梯队。",
+  "content_flags": "版本更新（2026-08-07）：长文原为 2026-04 GPT-5.4 时代内容（「基于GPT-5」、API $15/$75、上下文 200万/12.8万、SWE-bench 71.6%、Elo 1412 等）与已更新的 description（GPT-5.6 全量发布）严重矛盾；本轮按 GPT-5.6 时代全量重写，纳入 2026-08-06 官方更新（免费用户默认 Luna+无限文本聊天+Think 按钮；Plus/Pro 优化版 Sol+思考滑块；事实错误率 Luna -62%/Sol -68%）与 07-30 生效价格（Luna $0.2/$1.2、Terra $2/$12、Sol $5/$30 不变），并同步更新 faq。",
+  "price_verified": true,
+  "verified_faq": [
+    {
+      "q": "ChatGPT 免费版现在能无限用吗？",
+      "a": "文本聊天可以。2026-08-06 官方宣布：免费与 Go 用户本周起默认模型升级为 GPT-5.6 Luna，下周起开放无限文本聊天，并新增「思考」按钮调用高阶推理；但文件上传、图片生成、语音等工具仍有限制。"
+    },
+    {
+      "q": "GPT-5.6 Sol / Terra / Luna 有什么区别？",
+      "a": "Sol 是旗舰模型（深度推理、编码、专业任务，1M 上下文，API $5/$30）；Terra 是中端性价比款（$2/$12）；Luna 是最快最便宜的轻量款（$0.20/$1.20），也是免费用户的默认模型。"
+    },
+    {
+      "q": "ChatGPT 和 Claude 哪个更好？",
+      "a": "各有所长。ChatGPT 在多模态、插件生态、GPTs 市场与产品整合（Codex、深度研究）方面更强；Claude 在长文本写作与部分专业场景有口碑。建议都试试，根据具体需求选择。"
+    },
+    {
+      "q": "ChatGPT 在国内怎么用？",
+      "a": "需要通过科学上网访问，也可使用官方 API 接入第三方客户端。国内用户可考虑 DeepSeek、Kimi、豆包等国产替代品，功能接近且无需翻墙。"
+    }
+  ],
+  "updated_date": "2026-08-07"
+}

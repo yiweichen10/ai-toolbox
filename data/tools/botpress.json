@@ -1,0 +1,146 @@
+{
+  "name": "Botpress",
+  "slug": "botpress",
+  "emoji": "🤖",
+  "color": "#0057FF",
+  "description": "Botpress 是一站式 AI 智能体（Agent）构建平台，基于最新大语言模型打造，可用于客服支持、线索生成等场景，支持网页、语音与自定义应用部署，并提供免费版（商业 SaaS，非开源）。",
+  "category": "AI智能体",
+  "tags": [
+    "聊天机器人",
+    "AI智能体",
+    "可视化流程"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://botpress.com/",
+  "price": "免费版 $0；Plus/Team/Enterprise 以官网为准",
+  "platform": "Web, Cloud, Voice",
+  "pros": [
+    "可视化构建器与代码优先 ADK 双路开发",
+    "多渠道部署（Web、WhatsApp、Slack、Telegram 等）",
+    "企业级合规（SOC 2、GDPR）",
+    "内置 LLMz 推理引擎与 JavaScript 沙箱代码执行",
+    "提供免费版可快速验证场景"
+  ],
+  "cons": [
+    "高级企业功能（SSO、审计日志等）需付费订阅",
+    "复杂对话场景有一定学习曲线",
+    "当前为商业 SaaS，不提供开源自托管（旧版 v12 曾开源）"
+  ],
+  "features": [
+    "可视化 AI 智能体构建器（Botpress Studio）与代码优先开发工具包（ADK）",
+    "自定义推理引擎 LLMz：内置记忆管理、工具选择与安全 JavaScript 沙箱代码执行",
+    "全隔离运行时：每个已部署智能体运行在独立环境，支持版本化与持久化",
+    "多渠道部署：Web 嵌入、自定义应用与语音接口",
+    "企业级合规：SOC 2 与 GDPR 合规，支持与现有系统/API 集成"
+  ],
+  "related": [
+    "coze",
+    "dify",
+    "n8n"
+  ],
+  "faq": [
+    {
+      "q": "Botpress是免费的吗？",
+      "a": "Botpress 提供免费版（含每月 AI 点数/对话额度与 1 个智能体），付费版 Plus/Team 按对话量计费，Enterprise 定制报价。Botpress 当前为商业 SaaS 平台，并非开源项目。"
+    },
+    {
+      "q": "Botpress适合没有编程基础的人吗？",
+      "a": "Botpress Studio 提供可视化构建器，无编程基础也可搭建基础智能体；高级定制（API 集成、自定义动作）仍需一定开发知识。"
+    },
+    {
+      "q": "Botpress支持哪些渠道？",
+      "a": "支持 Web 聊天组件、WhatsApp、Slack、Telegram、Facebook Messenger、Teams、LINE 等主流渠道，并可通过 API 自定义接入。"
+    },
+    {
+      "q": "Botpress与其他聊天机器人平台（如 Dialogflow）相比优势是什么？",
+      "a": "Botpress 内置 LLMz 推理引擎、可视化与代码双路开发、企业级合规（SOC 2、GDPR）与丰富原生集成，面向可上线生产的 AI 智能体场景。"
+    }
+  ],
+  "seo_keywords": [
+    "Botpress",
+    "Botpress怎么样",
+    "Botpress免费版",
+    "Botpress使用教程",
+    "Botpress和Coze哪个好"
+  ],
+  "content": "## Botpress 是什么？\n\nBotpress 是一个一站式 AI 智能体（Agent）构建平台，基于最新的大语言模型打造，主要用于客服支持、线索生成等场景，可以把智能体部署到网页、语音和自定义应用里，并提供免费版。需要说清楚一点：Botpress 是一个商业化的 SaaS 平台，走企业级合规路线，并不是开源项目——它卖的是\"开箱即用的智能体生产环境\"，而不是让你自己托管源码。\n\n## 主要能做什么\n\n**1. 可视化构建器与代码工具包**\nBotpress Studio 用可视化方式搭智能体流程；偏好写代码的团队可以用 ADK（开发工具包）以代码优先的方式构建，两条路都通。\n\n**2. 自定义推理引擎 LLMz**\n内置记忆管理、工具选择和安全的 JavaScript 沙箱代码执行，让智能体不只是对话，还能真正调用工具、跑逻辑。\n\n**3. 全隔离运行时**\n每个已部署的智能体运行在独立环境里，支持版本化和持久化，一个智能体出问题不会拖累其他。\n\n**4. 多渠道部署**\nWeb 嵌入、自定义应用与语音接口都能接，一套智能体可以铺到多个触达面。\n\n**5. 企业级合规**\n平台通过 SOC 2 与 GDPR 合规，并经过 KPMG 渗透测试，数据保护达到行业标准，适合对合规有要求的组织。\n\n## 在哪些环境用\n\nBotpress 以 Web、Cloud 和 Voice 形式提供，基础设施跑在 AWS 上、自动扩缩，团队基本不用操心运维。\n\n## 价格怎么算\n\n- **免费版**：0 美元/月，含 100 次对话/月、3 个席位、3 个 AI 智能体，适合先验证想法。\n- **Plus**：150 美元/月（按年付），约 250 次对话/月。\n- **Team**：750 美元/月（按年付），约 1,500 次对话/月。\n- **Enterprise**：定制报价，面向大规模与高合规需求。\n\n对大多数团队来说，先用免费版跑通一个客服场景，再按对话量升到 Plus 或 Team 是顺理成章的路径；只有当合规、私有化和体量都上去了，才需要谈 Enterprise。\n\n## 值不值得用\n\n如果你要的是能直接上线、处理退款和账户更新这类多步流程、且合规到位的客服智能体，Botpress 是很省心的选择。它不太适合想完全自托管源码、自己掌控每一行部署细节的开源爱好者——那是另一类框架的阵地。\n\n## 常见问题（FAQ）\n\n**Botpress是免费的吗？**\n\nBotpress 提供免费版（含每月 AI 点数/对话额度与 1 个智能体），付费版 Plus/Team 按对话量计费，Enterprise 定制报价。Botpress 当前为商业 SaaS 平台，并非开源项目。\n\n**Botpress适合没有编程基础的人吗？**\n\nBotpress Studio 提供可视化构建器，无编程基础也可搭建基础智能体；高级定制（API 集成、自定义动作）仍需一定开发知识。\n\n**Botpress支持哪些渠道？**\n\n支持 Web 聊天组件、WhatsApp、Slack、Telegram、Facebook Messenger、Teams、LINE 等主流渠道，并可通过 API 自定义接入。\n\n**Botpress与其他聊天机器人平台（如 Dialogflow）相比优势是什么？**\n\nBotpress 内置 LLMz 推理引擎、可视化与代码双路开发、企业级合规（SOC 2、GDPR）与丰富原生集成，面向可上线生产的 AI 智能体场景。",
+  "published": true,
+  "source_url": "https://botpress.com/pricing",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://botpress.com/",
+  "verified_publisher": "Botpress（商业 SaaS 平台）",
+  "verified_what": "Botpress 是一站式 AI 智能体（Agent）构建平台，基于大语言模型，面向客服支持、线索生成等场景，支持网页、语音与自定义应用部署；商业 SaaS，非开源项目。",
+  "verified_price": "免费版 $0/月（含每月 AI 点数/对话额度，1 个智能体）；Plus 约 $150/月（约 250 对话/月，无限 AI 代理，WhatsApp 与自定义网页聊天）；Team 约 $750/月（无限席位、RBAC、团队协作）；Enterprise 定制报价。以官网为准。",
+  "verified_platform": "Web / Cloud / Voice / API",
+  "verified_features": [
+    "可视化 AI 智能体构建器（Botpress Studio）与代码优先开发工具包（ADK）",
+    "自定义推理引擎 LLMz：内置记忆管理、工具选择与安全 JavaScript 沙箱代码执行",
+    "全隔离运行时：每个已部署智能体运行在独立环境，支持版本化与持久化",
+    "多渠道部署：Web 嵌入、自定义应用与语音接口",
+    "企业级合规：SOC 2 与 GDPR 合规，支持与现有系统/API 集成"
+  ],
+  "verified_description": "Botpress 是一站式 AI 智能体（Agent）构建平台，基于最新大语言模型打造，可用于客服支持、线索生成等场景，支持网页、语音与自定义应用部署，并提供免费版（商业 SaaS，非开源）。",
+  "content_flags": "原 pros/cons/faq 错误地声称 Botpress 为“完全开源可自托管”，与事实（商业 SaaS）矛盾；长文描述已正确说明其为商业 SaaS，无需修正长文。",
+  "price_verified": true,
+  "verified_pros": [
+    "可视化构建器与代码优先 ADK 双路开发",
+    "多渠道部署（Web、WhatsApp、Slack、Telegram 等）",
+    "企业级合规（SOC 2、GDPR）",
+    "内置 LLMz 推理引擎与 JavaScript 沙箱代码执行",
+    "提供免费版可快速验证场景"
+  ],
+  "verified_cons": [
+    "高级企业功能（SSO、审计日志等）需付费订阅",
+    "复杂对话场景有一定学习曲线",
+    "当前为商业 SaaS，不提供开源自托管（旧版 v12 曾开源）"
+  ],
+  "verified_faq": [
+    {
+      "q": "Botpress是免费的吗？",
+      "a": "Botpress 提供免费版（含每月 AI 点数/对话额度与 1 个智能体），付费版 Plus/Team 按对话量计费，Enterprise 定制报价。Botpress 当前为商业 SaaS 平台，并非开源项目。"
+    },
+    {
+      "q": "Botpress适合没有编程基础的人吗？",
+      "a": "Botpress Studio 提供可视化构建器，无编程基础也可搭建基础智能体；高级定制（API 集成、自定义动作）仍需一定开发知识。"
+    },
+    {
+      "q": "Botpress支持哪些渠道？",
+      "a": "支持 Web 聊天组件、WhatsApp、Slack、Telegram、Facebook Messenger、Teams、LINE 等主流渠道，并可通过 API 自定义接入。"
+    },
+    {
+      "q": "Botpress与其他聊天机器人平台（如 Dialogflow）相比优势是什么？",
+      "a": "Botpress 内置 LLMz 推理引擎、可视化与代码双路开发、企业级合规（SOC 2、GDPR）与丰富原生集成，面向可上线生产的 AI 智能体场景。"
+    }
+  ],
+  "verified_tags": [
+    "聊天机器人",
+    "AI智能体",
+    "可视化流程"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://botpress.com/tw/pricing",
+    "https://botpress.com/tw/blog/botpress-vs-dialogflow-cx",
+    "https://aiflowreview.com/botpress-review-2025/"
+  ],
+  "verify_notes": "定价存在来源差异：官网（台湾页）显示 Plus $150/Team $750，第三方评测显示 Plus $89/Team $495；以官网为准。旧版 Botpress v12 曾开源，当前 Botpress 平台为闭源商业产品。",
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Botpress 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Botpress 的 可视化 AI 智能体构建器（Botpress Studio）与代码优先开发工具包（ADK） 是亮点，价格 免费版 $0；Plus/Team/Enterprise 以官网为准；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-14",
+  "created_date": "2026-08-14"
+}

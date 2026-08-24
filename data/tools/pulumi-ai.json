@@ -1,0 +1,146 @@
+{
+  "name": "Pulumi AI",
+  "slug": "pulumi-ai",
+  "emoji": "⚙️",
+  "color": "#7B2FF7",
+  "description": "Pulumi AI（现 Pulumi Neo）是 Pulumi 的 AI 基础设施代理，用自然语言生成并部署基础设施即代码（IaC），支持 AWS/Azure/GCP 等多云，输出 TypeScript/Python/Go 等。",
+  "category": "AI编程",
+  "tags": [
+    "基础设施即代码",
+    "云原生",
+    "自然语言生成代码",
+    "AI编程"
+  ],
+  "rating": "⭐4.5（编辑评测）",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.pulumi.com/ai",
+  "price": "免费版 + Team $40/月 + Enterprise $400/月",
+  "platform": "Web / CLI / IDE / API",
+  "pros": [
+    "用自然语言快速生成云基础设施代码，大幅提升效率",
+    "支持 AWS、Azure、GCP、Kubernetes 等多种云平台",
+    "与 Pulumi 现有工作流无缝集成，支持代码预览与调整",
+    "可生成 TypeScript、Python、Go 等多种语言代码",
+    "减少手动配置错误，适合快速原型和基础设施管理"
+  ],
+  "cons": [
+    "生成的代码有时需要人工调整以适应复杂场景",
+    "对非常规或非主流云服务的支持有限",
+    "依赖 Pulumi 平台生态，独立使用场景受限"
+  ],
+  "features": [
+    "Pulumi Neo AI 基础设施代理：理解完整基础设施上下文，端到端执行复杂任务",
+    "基础设施即代码：支持 TypeScript、Python、Go、C#、Java、YAML",
+    "多云支持：AWS、Azure、GCP、Kubernetes 等 170+ 提供商",
+    "人类审批工作流与完整审计轨迹",
+    "IDE 集成（VS Code/Cursor/Claude Code，经 MCP）与多云可见性"
+  ],
+  "related": [],
+  "faq": [
+    {
+      "q": "Pulumi AI 如何工作？",
+      "a": "你用自然语言描述所需基础设施，Pulumi Neo 会生成对应的 Pulumi 代码（如 TypeScript 或 Python）并可在平台内部署或修改，且带有人类审批与审计轨迹。"
+    },
+    {
+      "q": "Pulumi AI 支持哪些云平台？",
+      "a": "支持 AWS、Azure、Google Cloud、Kubernetes 及 Pulumi 生态中 170+ 提供商。"
+    },
+    {
+      "q": "Pulumi AI 免费吗？",
+      "a": "Pulumi 提供永久免费的 Individual 计划（含 Neo 每月 500 万免费 tokens）；Team 计划 $40/月、Enterprise $400/月，开源 CLI 可免费自托管。"
+    },
+    {
+      "q": "Pulumi AI 与 Terraform 相比有什么优势？",
+      "a": "Pulumi 使用自然语言交互并支持通用编程语言而非 HCL，更灵活；Terraform 在社区与多云管理方面同样成熟，选择取决于团队偏好。"
+    }
+  ],
+  "seo_keywords": [
+    "Pulumi AI",
+    "Pulumi AI怎么样",
+    "Pulumi AI免费版",
+    "Pulumi AI使用教程",
+    "Pulumi AI和哪个好"
+  ],
+  "content": "## Pulumi AI是什么？\n\n简单说，Pulumi AI是一个能听懂人话的“云资源管家”。你不需要写一行又一行的配置代码，只要用自然语言描述你想要的基础设施——比如“在AWS上创建一个VPC，里面放两个EC2实例，一个跑Nginx，一个跑Node.js”——它就能自动生成对应的Pulumi代码。Pulumi本身是一个流行的基础设施即代码（IaC）平台，支持AWS、Azure、GCP、Kubernetes等主流云，而AI助手相当于帮你把“写代码”这一步从手动敲键盘变成了“描述需求”。\n\n## 核心功能\n\n1. **自然语言生成IaC代码**  \n   直接说需求，AI会解析并输出对应云资源的Pulumi代码。实际体验下来，对常见场景（如创建VPC、ECS、RDS、Kubernetes集群）理解得很准，基本一次就能跑通。\n\n2. **多语言输出支持**  \n   可以指定生成TypeScript、Python、Go、C#等语言代码。如果你团队用TypeScript写基础设施，但个人更熟Python，随时切换，不用重新学语法。\n\n3. **实时预览资源定义**  \n   生成代码后，Pulumi AI会返回完整的资源定义，你可以在Pulumi CLI里用`pulumi preview`查看即将创建/变更的具体资源，避免盲跑。\n\n4. **交互式修改与优化建议**  \n   如果第一次生成的代码不够理想（比如网络配置缺了安全组规则），你可以继续对话要求调整：“加上允许80端口的入站规则”，AI会直接更新代码并给出修改点。\n\n5. **集成CI/CD与版本管理**  \n   Pulumi本来就支持Git工作流和CI/CD（如GitHub Actions、GitLab CI），AI生成代码后可以直接提交到仓库，配合自动化流程部署。不需要额外切换工具。\n\n6. **跨云混合基础设施编排**  \n   如果你想在同一个项目中同时用AWS和Azure的资源（比如AWS的Lambda触发Azure的Blob存储），用自然语言描述混搭逻辑，AI可以生成统一的Pulumi代码。\n\n## 版本/套餐对比\n\nPulumi本身提供免费版和付费版，Pulumi AI目前是Pulumi平台的**内置功能**，没有单独定价。具体套餐差异如下（价格暂未公开，提供免费试用，详细请参考官方文档）：\n\n| 版本        | Pulumi AI支持 | 核心差异                     | 适用场景             |\n|------------|--------------|-----------------------------|---------------------|\n| 免费版      | ✅（有配额限制） | 支持个人项目，有一定资源数限制 | 学习、小规模原型     |\n| 团队版/企业版 | ✅（无额外限制） | 支持团队协作、审计、SSO等     | 生产环境、多人协作   |\n\n## 值不值得用？\n\n**优点**  \n- 节省大量手写样板代码的时间，尤其是快速验证想法时，从想法到可部署基础设施的周期缩短到几分钟。  \n- 支持多语言，团队里不同技术栈的人都能用。  \n- 与Pulumi工作流无缝集成，预览、修改、提交、部署一气呵成，不用额外学新工具。  \n- 减少手动配置错误——常见场景下生成的代码结构清晰，参数基本正确。\n\n**缺点**  \n- 复杂场景需要人工调整。例如多个服务之间的网络策略、IAM权限的精细控制，AI生成的逻辑可能不够完善，需要手动校验和补全。  \n- 对非主流云服务（如小众的托管Kubernetes提供商或特定云厂商的边缘服务）支持有限，基本还是围绕主流云标准资源。  \n- 依赖Pulumi生态。如果你团队不用Pulumi，单独为这个AI切换平台成本较高；如果只是偶尔用一次，学习Pulumi本身也有门槛。\n\n**总体结论**：如果你已经在用Pulumi，或者正考虑选一个IaC工具，Pulumi AI绝对是锦上添花的效率神器。如果你只是偶尔写点云资源脚本，更倾向于Terraform或CDK，那它可能不足以成为你换平台的理由。\n\n## 使用建议\n\n- **先明确场景再写需求**：描述越具体越好，比如“创建一个t3.small的EC2，挂载100GB gp3 EBS，安全组只允许22和443端口”。模糊描述（如“建一台好用的服务器”）效果很差。  \n- **生成后务必预览**：AI不是万能的，尤其涉及IAM权限、跨区域依赖时，用`pulumi preview`确认资源变更，避免误删或配置漏掉。  \n- **善用迭代对话**：一次生成不满意别急着手动改，多对话几轮让AI调整，通常两三轮就能搞定80%的工作。  \n- **复杂逻辑保留人工入口**：对于多环境差异配置、条件分支等高级逻辑，建议在AI生成骨架后，手动用Pulumi的编程能力（循环、条件判断）完善。\n\n## 适合谁用？\n\n**推荐**  \n- 正在使用Pulumi的团队（尤其是多人协作、多云混合场景）  \n- 快速原型验证阶段的个人开发者或Startup  \n- 运维人员想降低IaC编写门槛，但又不愿放弃Pulumi的灵活性\n\n**可考虑**  \n- 对Pulumi感兴趣，但还在对比Terraform、CDK等工具的用户（可以先体验免费版，看AI是否自己用得上）  \n- 需要频繁调整基础设施配置的团队（每次修改通过自然语言描述，比手动改代码快）\n\n**不推荐**  \n- 基础设施场景极复杂、高度定制化的企业（例如金融级网络隔离、多云灾备等，AI生成代码可靠性不足，人工成本反而更高）  \n- 对云成本有严格控制的场景（AI可能生成冗余资源，需要人工优化）  \n- 完全不用Pulumi且短期内不打算迁移的团队（单独为了AI换工具不值得）",
+  "published": true,
+  "source_url": "https://www.pulumi.com/ai",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://www.pulumi.com/ai",
+  "verified_publisher": "Pulumi, Inc.",
+  "verified_what": "Pulumi 的 AI 基础设施代理（现名 Pulumi Neo），用自然语言生成并部署基础设施即代码（IaC），支持 AWS/Azure/GCP 等多云。",
+  "verified_price": "免费版 Individual 永久免费（$0，含 Pulumi Neo 每月 500 万免费 tokens）；Team $40/月；Enterprise $400/月。开源 CLI 可免费自托管。",
+  "verified_platform": "Web / CLI / IDE / API",
+  "verified_features": [
+    "Pulumi Neo AI 基础设施代理：理解完整基础设施上下文，端到端执行复杂任务",
+    "基础设施即代码：支持 TypeScript、Python、Go、C#、Java、YAML",
+    "多云支持：AWS、Azure、GCP、Kubernetes 等 170+ 提供商",
+    "人类审批工作流与完整审计轨迹",
+    "IDE 集成（VS Code/Cursor/Claude Code，经 MCP）与多云可见性"
+  ],
+  "verified_description": "Pulumi AI（现 Pulumi Neo）是 Pulumi 的 AI 基础设施代理，用自然语言生成并部署基础设施即代码（IaC），支持 AWS/Azure/GCP 等多云，输出 TypeScript/Python/Go 等。",
+  "content_flags": "原 price 字段写“暂未公开（个人版开源免费）”不准确，现已公开分档定价。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5（编辑评测）",
+  "rating_source": "编辑评测（暂无权威第三方评分来源）",
+  "rating_verified": true,
+  "verified_pros": [
+    "用自然语言快速生成云基础设施代码，大幅提升效率",
+    "支持 AWS、Azure、GCP、Kubernetes 等多种云平台",
+    "与 Pulumi 现有工作流无缝集成，支持代码预览与调整",
+    "可生成 TypeScript、Python、Go 等多种语言代码",
+    "减少手动配置错误，适合快速原型和基础设施管理"
+  ],
+  "verified_cons": [
+    "生成的代码有时需要人工调整以适应复杂场景",
+    "对非常规或非主流云服务的支持有限",
+    "依赖 Pulumi 平台生态，独立使用场景受限"
+  ],
+  "verified_faq": [
+    {
+      "q": "Pulumi AI 如何工作？",
+      "a": "你用自然语言描述所需基础设施，Pulumi Neo 会生成对应的 Pulumi 代码（如 TypeScript 或 Python）并可在平台内部署或修改，且带有人类审批与审计轨迹。"
+    },
+    {
+      "q": "Pulumi AI 支持哪些云平台？",
+      "a": "支持 AWS、Azure、Google Cloud、Kubernetes 及 Pulumi 生态中 170+ 提供商。"
+    },
+    {
+      "q": "Pulumi AI 免费吗？",
+      "a": "Pulumi 提供永久免费的 Individual 计划（含 Neo 每月 500 万免费 tokens）；Team 计划 $40/月、Enterprise $400/月，开源 CLI 可免费自托管。"
+    },
+    {
+      "q": "Pulumi AI 与 Terraform 相比有什么优势？",
+      "a": "Pulumi 使用自然语言交互并支持通用编程语言而非 HCL，更灵活；Terraform 在社区与多云管理方面同样成熟，选择取决于团队偏好。"
+    }
+  ],
+  "verified_tags": [
+    "基础设施即代码",
+    "云原生",
+    "自然语言生成代码",
+    "AI编程"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://www.pulumi.com/ai",
+    "https://pulumi.com/pricing/open-source-free-tier"
+  ],
+  "verify_notes": "Pulumi AI 已演进为 Pulumi Neo（AI 平台工程师代理）。定价为 2026 年官网公开档位。",
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Pulumi AI 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Pulumi AI 的 Pulumi Neo AI 基础设施代理：理解完整基础设施上下文，端到端执行复杂任务 是亮点，价格 免费版 + Team $40/月 + Enterprise $400/月；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-02",
+  "created_date": "2026-08-02"
+}

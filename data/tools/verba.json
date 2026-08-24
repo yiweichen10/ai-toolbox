@@ -1,0 +1,148 @@
+{
+  "name": "Verba",
+  "slug": "verba",
+  "positioning": "对话式问答+可视化前端：免费AI开发工具怎么用",
+  "auto_positioning": true,
+  "emoji": "🔍",
+  "color": "#2D3748",
+  "description": "Verba 是 Weaviate 推出的开源（MIT）RAG 应用，提供开箱即用的文档问答界面。需注意：项目已于 2026 年被官方停止维护并归档（最新 2.1.3），存在未修复漏洞 CVE-2026-65318，不建议新项目采用；如需官方 RAG 演示可参考 Weaviate playground。",
+  "category": "AI开发",
+  "tags": [
+    "RAG应用",
+    "开源",
+    "已停止维护"
+  ],
+  "rating": "⭐ 4.2",
+  "visits": "约45万月访问",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://github.com/weaviate/Verba",
+  "price": "开源免费（已停止维护）",
+  "platform": "Web/桌面端",
+  "pros": [
+    "开箱即用的 RAG 界面，降低上手门槛（历史评价）",
+    "多模型支持，灵活切换 LLM",
+    "与 Weaviate 深度集成",
+    "Docker 易部署（历史可用）"
+  ],
+  "cons": [
+    "项目已被官方停止维护并归档，不再修复 bug / 安全补丁",
+    "存在未修复的 SSRF 漏洞 CVE-2026-65318（影响 ≤2.1.3，无补丁）",
+    "不建议新项目采用",
+    "文档与社区支持已冻结"
+  ],
+  "features": [
+    "文档导入与索引",
+    "语义 / 混合搜索",
+    "对话式问答",
+    "多 LLM 后端支持（OpenAI、Claude、Ollama 等）",
+    "与 Weaviate 向量库深度集成",
+    "自定义分块策略",
+    "可视化前端"
+  ],
+  "related": [
+    "ragflow",
+    "AnythingLLM",
+    "LangChain",
+    "LlamaIndex",
+    "Haystack",
+    "Milvus",
+    "Qdrant",
+    "LightRAG"
+  ],
+  "faq": [
+    {
+      "q": "Verba 还在维护吗？",
+      "a": "不再维护。Weaviate 官方已于 2026 年宣布 Verba 项目停止开发并归档仓库（Repository Archived），不再提供更新、bug 修复或安全补丁，最新版本停留在 2.1.3。"
+    },
+    {
+      "q": "Verba 有安全风险吗？",
+      "a": "存在公开未修复漏洞 CVE-2026-65318（导入端点 SSRF，影响 ≤2.1.3，无补丁），不建议暴露在公网或用于生产。"
+    },
+    {
+      "q": "有没有替代方案？",
+      "a": "Weaviate 官方建议参考 playground.weaviate.io 的新一代方案（如 Elysia 等 agentic RAG 助手）；新项目不建议采用已停维护的 Verba。"
+    }
+  ],
+  "seo_keywords": [
+    "Verba",
+    "Verba RAG工具",
+    "Verba开源",
+    "Verba vs AnythingLLM",
+    "Verba部署教程"
+  ],
+  "content": "## Verba 是什么？\n\nWeaviate 推出的开源 RAG 应用（被称为 “Golden RAGtriever”），提供端到端的文档问答界面，结合 Weaviate 向量库与多种 LLM。重要提示：该项目已于 2026 年被官方宣布停止维护并归档（Repository Archived）。\n\nVerba 是 Weaviate 推出的开源（MIT）RAG 应用，提供开箱即用的文档问答界面。需注意：项目已于 2026 年被官方停止维护并归档（最新 2.1.3），存在未修复漏洞 CVE-2026-65318，不建议新项目采用；如需官方 RAG 演示可参考 Weaviate playground。\n\n## 核心功能\n\n- 文档导入与索引\n- 语义 / 混合搜索\n- 对话式问答\n- 多 LLM 后端支持（OpenAI、Claude、Ollama 等）\n- 与 Weaviate 向量库深度集成\n- 自定义分块策略\n- 可视化前端\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 开源免费（MIT）；无官方付费云（项目已停止维护，不再发布更新）。 |\n| 支持平台 | Python（pip install goldenverba）、Docker、Web 前端 |\n| 评分 | ⭐ 4.2 |\n| 开发商 | Weaviate（Weaviate B.V.） |\n\n## 价格与平台\n\n- **价格**：开源免费（MIT）；无官方付费云（项目已停止维护，不再发布更新）。\n- **平台**：Python（pip install goldenverba）、Docker、Web 前端\n- **官网**：https://github.com/weaviate/Verba\n\n## 优缺点分析\n\n### 优点\n\n- 开箱即用的 RAG 界面，降低上手门槛（历史评价）\n- 多模型支持，灵活切换 LLM\n- 与 Weaviate 深度集成\n- Docker 易部署（历史可用）\n\n### 缺点\n\n- 项目已被官方停止维护并归档，不再修复 bug / 安全补丁\n- 存在未修复的 SSRF 漏洞 CVE-2026-65318（影响 ≤2.1.3，无补丁）\n- 不建议新项目采用\n- 文档与社区支持已冻结\n\n## 常见问题（FAQ）\n\n**Verba 还在维护吗？**\n\n不再维护。Weaviate 官方已于 2026 年宣布 Verba 项目停止开发并归档仓库（Repository Archived），不再提供更新、bug 修复或安全补丁，最新版本停留在 2.1.3。\n\n**Verba 有安全风险吗？**\n\n存在公开未修复漏洞 CVE-2026-65318（导入端点 SSRF，影响 ≤2.1.3，无补丁），不建议暴露在公网或用于生产。\n\n**有没有替代方案？**\n\nWeaviate 官方建议参考 playground.weaviate.io 的新一代方案（如 Elysia 等 agentic RAG 助手）；新项目不建议采用已停维护的 Verba。\n\n\n## 最终结论\n\nVerba 是AI开发领域的一款 AI 工具，其核心优势在于开箱即用的 RAG 界面，降低上手门槛（历史评价）。\n此外，多模型支持，灵活切换 LLM。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-06-12",
+  "published_date": "2026-06-12",
+  "verified_url": "https://github.com/weaviate/Verba",
+  "verified_publisher": "Weaviate（Weaviate B.V.）",
+  "verified_what": "Weaviate 推出的开源 RAG 应用（被称为 “Golden RAGtriever”），提供端到端的文档问答界面，结合 Weaviate 向量库与多种 LLM。重要提示：该项目已于 2026 年被官方宣布停止维护并归档（Repository Archived）。",
+  "verified_price": "开源免费（MIT）；无官方付费云（项目已停止维护，不再发布更新）。",
+  "verified_platform": "Python（pip install goldenverba）、Docker、Web 前端",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "文档导入与索引",
+    "语义 / 混合搜索",
+    "对话式问答",
+    "多 LLM 后端支持（OpenAI、Claude、Ollama 等）",
+    "与 Weaviate 向量库深度集成",
+    "自定义分块策略",
+    "可视化前端"
+  ],
+  "verified_description": "Verba 是 Weaviate 推出的开源（MIT）RAG 应用，提供开箱即用的文档问答界面。需注意：项目已于 2026 年被官方停止维护并归档（最新 2.1.3），存在未修复漏洞 CVE-2026-65318，不建议新项目采用；如需官方 RAG 演示可参考 Weaviate playground。",
+  "content_flags": "状态严重失实：工具已停止维护/归档，却被描述为“2026年已更新至v2.0、持续增强多模态检索”；存在未修复漏洞 CVE-2026-65318",
+  "verified_pros": [
+    "开箱即用的 RAG 界面，降低上手门槛（历史评价）",
+    "多模型支持，灵活切换 LLM",
+    "与 Weaviate 深度集成",
+    "Docker 易部署（历史可用）"
+  ],
+  "verified_cons": [
+    "项目已被官方停止维护并归档，不再修复 bug / 安全补丁",
+    "存在未修复的 SSRF 漏洞 CVE-2026-65318（影响 ≤2.1.3，无补丁）",
+    "不建议新项目采用",
+    "文档与社区支持已冻结"
+  ],
+  "verified_faq": [
+    {
+      "q": "Verba 还在维护吗？",
+      "a": "不再维护。Weaviate 官方已于 2026 年宣布 Verba 项目停止开发并归档仓库（Repository Archived），不再提供更新、bug 修复或安全补丁，最新版本停留在 2.1.3。"
+    },
+    {
+      "q": "Verba 有安全风险吗？",
+      "a": "存在公开未修复漏洞 CVE-2026-65318（导入端点 SSRF，影响 ≤2.1.3，无补丁），不建议暴露在公网或用于生产。"
+    },
+    {
+      "q": "有没有替代方案？",
+      "a": "Weaviate 官方建议参考 playground.weaviate.io 的新一代方案（如 Elysia 等 agentic RAG 助手）；新项目不建议采用已停维护的 Verba。"
+    }
+  ],
+  "verified_tags": [
+    "RAG应用",
+    "开源",
+    "已停止维护"
+  ],
+  "verified_category": "AI开发",
+  "conflict_note": "原数据称“2026年已更新至v2.0版本，增强了多模态检索和自定义工作流能力”，与事实严重不符。Weaviate 官方已于 2026 年宣布 Verba 项目停止维护（Repository Archived / deprecated），最新版本 2.1.3，且存在未修复安全漏洞 CVE-2026-65318。原内容将其描述为持续活跃更新的工具，属严重状态错误。保留原值仅作审计记录，已在 corrected_content 中给出修正文案。",
+  "source_urls": [
+    "https://github.com/weaviate/Verba",
+    "https://weaviate.io/blog/verba-open-source-rag-app",
+    "https://cve.armis.com/CVE-2026-65318"
+  ],
+  "verify_notes": "严重状态错误：Verba 已官方停维护/归档，原数据误写为 2026 年持续更新。建议在站点上明确标注“已停止维护”或下架，避免误导用户。",
+  "content_verified": true,
+  "price_verified": true,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Verba 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Verba 的 文档导入与索引 是亮点，价格 开源免费（已停止维护）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

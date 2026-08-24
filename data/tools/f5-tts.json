@@ -1,0 +1,141 @@
+{
+  "name": "F5-TTS",
+  "slug": "f5-tts",
+  "emoji": "🎙️",
+  "color": "#8B5CF6",
+  "description": "F5-TTS 是由开源社区 SWivid 维护的基于 Flow Matching 的文本转语音模型，支持多语言语音合成与声音克隆，并非 Suno 团队产品。",
+  "category": "AI音频",
+  "tags": [
+    "文本转语音",
+    "声音克隆",
+    "开源免费",
+    "多语言",
+    "Flow Matching",
+    "AI音频"
+  ],
+  "rating": "⭐4.5",
+  "visits": "85万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://github.com/SWivid/F5-TTS",
+  "price": "开源免费",
+  "platform": "Web/Windows/Mac/Linux",
+  "pros": [
+    "完全开源免费，可本地部署",
+    "零样本声音克隆质量高",
+    "基于 Flow Matching，推理快（RTF 低）",
+    "支持中英等多语言",
+    "社区活跃"
+  ],
+  "cons": [
+    "本地部署需一定技术门槛",
+    "推理速度受硬件（显卡）影响",
+    "长文本合成偶有断句/节奏不一致",
+    "模型权重 CC BY-NC 4.0，商用需注意许可"
+  ],
+  "features": [
+    "文本转语音合成（Flow Matching + DiT）",
+    "零样本声音克隆",
+    "多语言与代码切换（中英等）",
+    "语速与情感控制",
+    "批量生成与 API 接口",
+    "Gradio WebUI / CLI / Docker"
+  ],
+  "related": [
+    "elevenlabs",
+    "cosy-voice",
+    "chat-tts",
+    "spark-tts"
+  ],
+  "faq": [
+    {
+      "q": "F5-TTS 是 Suno 团队的吗？",
+      "a": "不是。F5-TTS 由开源社区 SWivid（上海交大等）维护，与 Suno 无关。"
+    },
+    {
+      "q": "F5-TTS 免费吗？",
+      "a": "是，完全开源免费（代码 MIT，模型 CC BY-NC 4.0），可本地部署，商业使用需确认许可。"
+    }
+  ],
+  "seo_keywords": [
+    "F5-TTS",
+    "F5-TTS开源",
+    "F5-TTS声音克隆",
+    "免费文本转语音工具",
+    "F5-TTS使用教程"
+  ],
+  "content": "## F5-TTS 是什么？\n\nSWivid 团队开源的、基于 Flow Matching 的文本转语音（TTS）模型，支持零样本声音克隆与多语言合成，并非 Suno 团队产品。\n\nF5-TTS 是由开源社区 SWivid 维护的基于 Flow Matching 的文本转语音模型，支持多语言语音合成与声音克隆，并非 Suno 团队产品。\n\n## 核心功能\n\n- 文本转语音合成（Flow Matching + DiT）\n- 零样本声音克隆\n- 多语言与代码切换（中英等）\n- 语速与情感控制\n- 批量生成与 API 接口\n- Gradio WebUI / CLI / Docker\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 开源免费（代码 MIT 许可，模型权重 CC BY-NC 4.0，可本地部署）。 |\n| 支持平台 | Web（Gradio）/ Windows / Mac / Linux |\n| 评分 | ⭐4.5 |\n| 开发商 | SWivid（开源社区，上海交大等） |\n\n## 价格与平台\n\n- **价格**：开源免费（代码 MIT 许可，模型权重 CC BY-NC 4.0，可本地部署）。\n- **平台**：Web（Gradio）/ Windows / Mac / Linux\n- **官网**：https://github.com/SWivid/F5-TTS\n\n## 优缺点分析\n\n### 优点\n\n- 完全开源免费，可本地部署\n- 零样本声音克隆质量高\n- 基于 Flow Matching，推理快（RTF 低）\n- 支持中英等多语言\n- 社区活跃\n\n### 缺点\n\n- 本地部署需一定技术门槛\n- 推理速度受硬件（显卡）影响\n- 长文本合成偶有断句/节奏不一致\n- 模型权重 CC BY-NC 4.0，商用需注意许可\n\n## 常见问题（FAQ）\n\n**F5-TTS 是 Suno 团队的吗？**\n\n不是。F5-TTS 由开源社区 SWivid（上海交大等）维护，与 Suno 无关。\n\n**F5-TTS 免费吗？**\n\n是，完全开源免费（代码 MIT，模型 CC BY-NC 4.0），可本地部署，商业使用需确认许可。\n\n\n## 最终结论\n\nF5-TTS 是AI音频领域的一款 AI 工具，其核心优势在于完全开源免费，可本地部署。\n此外，零样本声音克隆质量高。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-06-24",
+  "published_date": "2026-06-24",
+  "verified_url": "https://github.com/SWivid/F5-TTS",
+  "verified_publisher": "SWivid（开源社区，上海交大等）",
+  "verified_what": "SWivid 团队开源的、基于 Flow Matching 的文本转语音（TTS）模型，支持零样本声音克隆与多语言合成，并非 Suno 团队产品。",
+  "verified_price": "开源免费（代码 MIT 许可，模型权重 CC BY-NC 4.0，可本地部署）。",
+  "verified_platform": "Web（Gradio）/ Windows / Mac / Linux",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "文本转语音合成（Flow Matching + DiT）",
+    "零样本声音克隆",
+    "多语言与代码切换（中英等）",
+    "语速与情感控制",
+    "批量生成与 API 接口",
+    "Gradio WebUI / CLI / Docker"
+  ],
+  "verified_description": "F5-TTS 是由开源社区 SWivid 维护的基于 Flow Matching 的文本转语音模型，支持多语言语音合成与声音克隆，并非 Suno 团队产品。",
+  "content_flags": "事实错误：正文称“它是Suno团队开源的文本转语音模型”，与 description 自相矛盾——F5-TTS 由 SWivid（上海交大等）维护，与 Suno 无关。功能/平台/价格描述基本准确。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "暂无权威评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全开源免费，可本地部署",
+    "零样本声音克隆质量高",
+    "基于 Flow Matching，推理快（RTF 低）",
+    "支持中英等多语言",
+    "社区活跃"
+  ],
+  "verified_cons": [
+    "本地部署需一定技术门槛",
+    "推理速度受硬件（显卡）影响",
+    "长文本合成偶有断句/节奏不一致",
+    "模型权重 CC BY-NC 4.0，商用需注意许可"
+  ],
+  "verified_faq": [
+    {
+      "q": "F5-TTS 是 Suno 团队的吗？",
+      "a": "不是。F5-TTS 由开源社区 SWivid（上海交大等）维护，与 Suno 无关。"
+    },
+    {
+      "q": "F5-TTS 免费吗？",
+      "a": "是，完全开源免费（代码 MIT，模型 CC BY-NC 4.0），可本地部署，商业使用需确认许可。"
+    }
+  ],
+  "verified_tags": [
+    "文本转语音",
+    "声音克隆",
+    "开源免费",
+    "多语言",
+    "Flow Matching",
+    "AI音频"
+  ],
+  "verified_category": "AI音频",
+  "source_urls": [
+    "https://github.com/SWivid/F5-TTS",
+    "https://www.newton.com.tw/wiki/F5-TTS/67315701"
+  ],
+  "verify_notes": "正文误称“Suno 团队”，实际由 SWivid 维护；已修正并补充 corrected_content。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "krisp",
+      "elevenlabs",
+      "udio"
+    ],
+    "verdict": "F5-TTS 与 Krisp、ElevenLabs、Udio 同属AI音频赛道：F5-TTS 的 文本转语音合成（Flow Matching + DiT） 是亮点，价格 开源免费；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

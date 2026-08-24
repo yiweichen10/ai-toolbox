@@ -1,0 +1,156 @@
+{
+  "name": "Persona.js",
+  "slug": "persona-js",
+  "positioning": "免费AI智能体平台，框架无关+三种布局好用吗",
+  "auto_positioning": true,
+  "emoji": "🎭",
+  "color": "#6C63FF",
+  "description": "Persona.js（@runtypelabs/persona）是 Runtype Labs 推出的开源（MIT）Vanilla JS AI 聊天 UI 组件库，可将流式对话、语音与多模态无缝嵌入任意网站，支持 WebMCP 页面工具、影子 DOM 样式隔离与悬浮/停靠/全屏多种布局。",
+  "category": "AI智能体",
+  "tags": [
+    "AI聊天UI",
+    "开源",
+    "Vanilla JS",
+    "WebMCP",
+    "前端组件库"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "月访问量 180万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://persona.js.org",
+  "price": "开源免费（MIT）；可选 Runtype 托管后端",
+  "platform": "Web / Node.js / 浏览器扩展",
+  "pros": [
+    "开源免费、MIT 许可",
+    "零框架依赖，可嵌入任意网站",
+    "影子 DOM 实现样式隔离",
+    "后端无关，适配任意 SSE 后端",
+    "丰富的插件与主题系统"
+  ],
+  "cons": [
+    "仅是前端 UI 库，需自备后端/模型",
+    "高级后端能力依赖 Runtype 托管或自建",
+    "配置项较多，上新功能需读文档"
+  ],
+  "features": [
+    "框架无关（纯 Vanilla JS，零框架依赖）",
+    "SSE 流式渲染与可插拔解析器",
+    "智能体循环与工具调用（含人工审批）",
+    "影子 DOM 样式隔离，不污染宿主页",
+    "三种布局（悬浮 / 停靠 / 全屏）",
+    "WebMCP 原生（发现页面工具并经用户批准调用）",
+    "语音输入/输出",
+    "可折叠推理（chain-of-thought）气泡",
+    "多模态附件（图片/PDF/DOCX/CSV 等）",
+    "14 钩子插件系统与三层设计令牌主题"
+  ],
+  "related": [
+    "character-ai",
+    "claude",
+    "gemini",
+    "coze"
+  ],
+  "faq": [
+    {
+      "q": "Persona.js 需要特定后端吗？",
+      "a": "不需要。它兼容任意 SSE 后端，可用 customFetch 与 parseSSEvent 适配请求/事件格式；也可配合 Runtype 托管后端一键接入。"
+    },
+    {
+      "q": "Persona.js 会破坏我现有页面的样式吗？",
+      "a": "不会。它使用 Shadow DOM 与带前缀的 CSS 实现完全样式隔离，不会泄漏到宿主页面。"
+    },
+    {
+      "q": "Persona.js 和 Character AI 有什么区别？",
+      "a": "Persona.js 是开源的前端 UI 组件库，开发者拥有完全控制权，可接入任意模型与后端；Character AI 是闭源消费级平台。"
+    }
+  ],
+  "seo_keywords": [
+    "Persona.js",
+    "Persona.js免费版",
+    "Persona.js怎么样",
+    "Persona.js和Character AI哪个好",
+    "AI角色框架推荐"
+  ],
+  "content": "## Persona.js 是什么？\n\nPersona.js（npm: @runtypelabs/persona）是 Runtype Labs 推出的开源（MIT）Vanilla JS AI 聊天 UI 组件库，可将流式对话、语音与多模态无缝嵌入任意网站，支持 WebMCP 页面工具与影子 DOM 样式隔离。\n\nPersona.js（@runtypelabs/persona）是 Runtype Labs 推出的开源（MIT）Vanilla JS AI 聊天 UI 组件库，可将流式对话、语音与多模态无缝嵌入任意网站，支持 WebMCP 页面工具、影子 DOM 样式隔离与悬浮/停靠/全屏多种布局。\n\n## 核心功能\n\n- 框架无关（纯 Vanilla JS，零框架依赖）\n- SSE 流式渲染与可插拔解析器\n- 智能体循环与工具调用（含人工审批）\n- 影子 DOM 样式隔离，不污染宿主页\n- 三种布局（悬浮 / 停靠 / 全屏）\n- WebMCP 原生（发现页面工具并经用户批准调用）\n- 语音输入/输出\n- 可折叠推理（chain-of-thought）气泡\n- 多模态附件（图片/PDF/DOCX/CSV 等）\n- 14 钩子插件系统与三层设计令牌主题\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 开源免费（MIT 许可证）；另有 Runtype 托管后端服务（CLI 快速接入智能体与客户端令牌），Persona 本体不收费。无 $299/月 企业版。 |\n| 支持平台 | Web / 任意前端栈（React、Vue、Svelte、Next、Hono、Express 等）；通过 CDN script 标签或 npm 安装；浏览器与 Node 环境。 |\n| 评分 | ⭐ 4.6 |\n| 开发商 | Runtype Labs（runtypelabs） |\n\n## 价格与平台\n\n- **价格**：开源免费（MIT 许可证）；另有 Runtype 托管后端服务（CLI 快速接入智能体与客户端令牌），Persona 本体不收费。无 $299/月 企业版。\n- **平台**：Web / 任意前端栈（React、Vue、Svelte、Next、Hono、Express 等）；通过 CDN script 标签或 npm 安装；浏览器与 Node 环境。\n- **官网**：https://persona.js.org\n\n## 优缺点分析\n\n### 优点\n\n- 开源免费、MIT 许可\n- 零框架依赖，可嵌入任意网站\n- 影子 DOM 实现样式隔离\n- 后端无关，适配任意 SSE 后端\n- 丰富的插件与主题系统\n\n### 缺点\n\n- 仅是前端 UI 库，需自备后端/模型\n- 高级后端能力依赖 Runtype 托管或自建\n- 配置项较多，上新功能需读文档\n\n## 常见问题（FAQ）\n\n**Persona.js 需要特定后端吗？**\n\n不需要。它兼容任意 SSE 后端，可用 customFetch 与 parseSSEvent 适配请求/事件格式；也可配合 Runtype 托管后端一键接入。\n\n**Persona.js 会破坏我现有页面的样式吗？**\n\n不会。它使用 Shadow DOM 与带前缀的 CSS 实现完全样式隔离，不会泄漏到宿主页面。\n\n**Persona.js 和 Character AI 有什么区别？**\n\nPersona.js 是开源的前端 UI 组件库，开发者拥有完全控制权，可接入任意模型与后端；Character AI 是闭源消费级平台。\n\n\n## 最终结论\n\nPersona.js 是AI智能体领域的一款 AI 工具，其核心优势在于开源免费、MIT 许可。\n此外，零框架依赖，可嵌入任意网站。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-07-12",
+  "published_date": "2026-07-12",
+  "verified_url": "https://persona.js.org",
+  "verified_publisher": "Runtype Labs（runtypelabs）",
+  "verified_what": "Persona.js（npm: @runtypelabs/persona）是 Runtype Labs 推出的开源（MIT）Vanilla JS AI 聊天 UI 组件库，可将流式对话、语音与多模态无缝嵌入任意网站，支持 WebMCP 页面工具与影子 DOM 样式隔离。",
+  "verified_price": "开源免费（MIT 许可证）；另有 Runtype 托管后端服务（CLI 快速接入智能体与客户端令牌），Persona 本体不收费。无 $299/月 企业版。",
+  "verified_platform": "Web / 任意前端栈（React、Vue、Svelte、Next、Hono、Express 等）；通过 CDN script 标签或 npm 安装；浏览器与 Node 环境。",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "框架无关（纯 Vanilla JS，零框架依赖）",
+    "SSE 流式渲染与可插拔解析器",
+    "智能体循环与工具调用（含人工审批）",
+    "影子 DOM 样式隔离，不污染宿主页",
+    "三种布局（悬浮 / 停靠 / 全屏）",
+    "WebMCP 原生（发现页面工具并经用户批准调用）",
+    "语音输入/输出",
+    "可折叠推理（chain-of-thought）气泡",
+    "多模态附件（图片/PDF/DOCX/CSV 等）",
+    "14 钩子插件系统与三层设计令牌主题"
+  ],
+  "verified_description": "Persona.js（@runtypelabs/persona）是 Runtype Labs 推出的开源（MIT）Vanilla JS AI 聊天 UI 组件库，可将流式对话、语音与多模态无缝嵌入任意网站，支持 WebMCP 页面工具、影子 DOM 样式隔离与悬浮/停靠/全屏多种布局。",
+  "content_flags": "虚构：原条目将 Persona.js 描述为带「18 种情绪状态机」「游戏 NPC 引擎」「企业版 $299/月」的 AI 角色人格框架，但真实 Persona.js 是 Runtype Labs 的开源（MIT）Vanilla JS AI 聊天 UI 组件库，无此类情感引擎与企业版定价。已据 GitHub/npm/官网订正。",
+  "verified_pros": [
+    "开源免费、MIT 许可",
+    "零框架依赖，可嵌入任意网站",
+    "影子 DOM 实现样式隔离",
+    "后端无关，适配任意 SSE 后端",
+    "丰富的插件与主题系统"
+  ],
+  "verified_cons": [
+    "仅是前端 UI 库，需自备后端/模型",
+    "高级后端能力依赖 Runtype 托管或自建",
+    "配置项较多，上新功能需读文档"
+  ],
+  "verified_faq": [
+    {
+      "q": "Persona.js 需要特定后端吗？",
+      "a": "不需要。它兼容任意 SSE 后端，可用 customFetch 与 parseSSEvent 适配请求/事件格式；也可配合 Runtype 托管后端一键接入。"
+    },
+    {
+      "q": "Persona.js 会破坏我现有页面的样式吗？",
+      "a": "不会。它使用 Shadow DOM 与带前缀的 CSS 实现完全样式隔离，不会泄漏到宿主页面。"
+    },
+    {
+      "q": "Persona.js 和 Character AI 有什么区别？",
+      "a": "Persona.js 是开源的前端 UI 组件库，开发者拥有完全控制权，可接入任意模型与后端；Character AI 是闭源消费级平台。"
+    }
+  ],
+  "verified_tags": [
+    "AI聊天UI",
+    "开源",
+    "Vanilla JS",
+    "WebMCP",
+    "前端组件库"
+  ],
+  "verified_category": "AI智能体",
+  "conflict_note": "原条目整体虚构：Persona.js 实为 Runtype Labs 的开源（MIT）Vanilla JS AI 聊天 UI 组件库，原描述中的「情感状态机 18 种情绪」「游戏 NPC 引擎」「企业版 $299/月 / 专业版 $29/月」等均不存在。已据 GitHub（runtypelabs/persona）、npm 与官网（persona-chat.dev）订正 verified_* 并提供 corrected_content 全量改写。",
+  "source_urls": [
+    "https://persona.js.org",
+    "https://www.persona-chat.dev/",
+    "https://github.com/runtypelabs/persona",
+    "https://www.everydev.ai/tools/persona-chat",
+    "https://topaihubs.com/item/personajs"
+  ],
+  "verify_notes": "persona.js.org 为 js.org 社区子域（实际项目站点 persona-chat.dev）。原 entry 与真实产品严重不符，建议整体替换。",
+  "content_verified": true,
+  "price_verified": true,
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Persona.js 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Persona.js 的 框架无关（纯 Vanilla JS，零框架依赖） 是亮点，价格 开源免费（MIT）；可选 Runtype 托管后端；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

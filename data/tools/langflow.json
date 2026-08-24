@@ -1,0 +1,158 @@
+{
+  "name": "Langflow",
+  "slug": "langflow",
+  "positioning": "免费AI开发工具推荐：多模型支持、可视化工作流编排",
+  "auto_positioning": true,
+  "emoji": "🔗",
+  "color": "#7C3AED",
+  "description": "Langflow 是一个开源的可视化 AI 工作流构建平台，基于 LangChain 构建，提供拖拽式界面帮助开发者快速创建复杂的 LLM 应用程序与智能体；支持多模态、MCP 服务器与企业级部署，已成为 AI 应用开发领域的主流工具之一。",
+  "category": "AI开发",
+  "tags": [
+    "可视化工作流",
+    "LangChain",
+    "开源",
+    "AI应用开发",
+    "RAG"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "85万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.langflow.org/",
+  "price": "开源免费自托管 + Langflow Cloud（Starter ~$29/月，Pro ~$99/月）",
+  "platform": "Web/桌面端/云服务",
+  "pros": [
+    "拖拽式可视化界面，降低 AI 应用开发门槛",
+    "完全开源透明，可自定义扩展",
+    "内置丰富的预置组件与模板库",
+    "支持主流大模型无缝切换集成",
+    "活跃的社区生态与持续更新"
+  ],
+  "cons": [
+    "相比纯代码方案灵活性略受限",
+    "复杂工作流性能与调试可能受影响",
+    "Cloud 付费档位价格不低"
+  ],
+  "features": [
+    "可视化工作流编排（拖拽）",
+    "多模型支持（OpenAI/Claude/Gemini 等）",
+    "RAG 检索增强生成",
+    "API 一键导出部署",
+    "组件市场与自定义组件",
+    "实时预览调试、MCP 服务器支持"
+  ],
+  "related": [
+    "langchain",
+    "coze",
+    "dify",
+    "n8n",
+    "flowise"
+  ],
+  "faq": [
+    {
+      "q": "Langflow 是免费的吗？",
+      "a": "开源核心可永久免费自托管使用；Langflow Cloud 提供免费额度及付费档位（Starter/Pro/Enterprise）。"
+    },
+    {
+      "q": "Langflow 和 Coze 有什么区别？",
+      "a": "Langflow 更偏向开发者自托管、开源可控；Coze 提供更完整的端到端方案，更适合非技术用户。"
+    },
+    {
+      "q": "可以用 Langflow 构建哪些应用？",
+      "a": "可用于构建智能问答/RAG 应用、聊天机器人、自动化工作流、内容生成工具等。"
+    },
+    {
+      "q": "Langflow 支持中文吗？",
+      "a": "界面已支持多语言（含中文，1.10 起增至七种语言）；大模型能力取决于所选 LLM 后端。"
+    }
+  ],
+  "seo_keywords": [
+    "Langflow",
+    "Langflow工作流构建工具",
+    "Langflow免费版",
+    "Langflow vs Coze",
+    "Langflow教程",
+    "Langflow安装部署"
+  ],
+  "content": "# Langflow是什么？\n\n简单说，Langflow是一个**让AI应用开发变得更简单**的工具。\n\n它基于LangChain开发，最大的特点就是**拖拽式可视化界面**——你不需要写一堆代码，通过图形界面就能把不同的AI组件拼在一起，搭出一个完整的工作流。对于想快速验证想法、但不想被代码细节卡住的人来说，这个体验挺友好的。\n\n2026年的最新版本在多模态和企业级部署方面做了增强，现在用的人确实越来越多了。\n\n---\n\n## 核心功能\n\n**1. 可视化工作流编排**\n\n这是Langflow的核心。你可以通过拖拽组件、连线的方式，把Prompt、模型、向量数据库这些「零件」组合成一条完整的数据处理流水线。不用纠结代码怎么写，逻辑一目了然。适合快速原型和团队内部沟通。\n\n**2. 多模型支持**\n\n主流大模型基本都支持，OpenAI、Claude、Gemini这些都能无缝切换。实际使用中切换模型的体验比较顺畅，换个配置参数就行，不用重构整个流程。\n\n**3. RAG检索增强生成**\n\n内置了RAG需要用到的组件，比如文档加载、文本分块、向量检索等。搭建一个简单的知识问答系统比纯代码实现快不少。当然如果要深度优化检索效果，还是需要一些调优。\n\n**4. API一键导出部署**\n\n做好的工作流可以一键生成API，直接部署使用。这个功能对企业级应用比较友好，不用自己再写接口层。\n\n**5. 组件市场扩展**\n\n社区提供不少预制组件，碰到特殊需求也能自己写自定义组件。生态目前还算活跃，但丰富程度和LangChain本身还有差距。\n\n---\n\n## 版本/套餐对比\n\n| 特性 | 免费开源版 | 企业版 |\n|------|-----------|--------|\n| 可视化工作流 | ✅ | ✅ |\n| 基础组件库 | ✅ | ✅ |\n| 多模型支持 | ✅ | ✅ |\n| RAG功能 | ✅ | ✅ |\n| API导出 | ✅ | ✅ |\n| 高级部署方案 | ❌ | ✅ |\n| 优先技术支持 | ❌ | ✅ |\n| 企业级安全/SSO | ❌ | ✅ |\n| 自定义组件市场 | ✅ | ✅ |\n\n企业版主要解决的是大规模部署、安全合规和技术支持这些问题。如果只是个人探索或小团队用，免费版基本够用。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 拖拽式界面确实降低了AI应用的开发门槛，入门友好\n- 开源透明，社区活跃，遇到问题能找到不少参考资料\n- 组件够用，主流场景能快速搭出可用的流程\n- 模型切换方便，不绑死在某一个供应商\n\n**缺点：**\n\n- 相比纯写代码，灵活性确实受限，有些复杂逻辑实现起来绕弯子\n- 工作流变复杂以后，性能和调试会变得棘手\n- 企业版要收费，而且价格不算低\n\n**总体结论：** 对于想快速上手AI应用开发的人，Langflow是一个值得尝试的选择。它不是完美的替代方案，但在「快速验证想法」这个场景下，效率提升明显。如果你追求极致灵活性，或者规模特别大，可能需要评估是否够用。\n\n---\n\n## 使用建议\n\n1. **从官方模板开始**——不要自己从头搭，先看社区分享的示例，工作原理更容易理解。\n\n2. **复杂流程记得拆分**——一个大工作流不如几个小工作流组合好维护，调试起来也方便。\n\n3. **生产环境先用免费版测试**——功能上区别不大，主要看部署和运维需求再决定是否升级企业版。\n\n4. **关注社区动态**——组件更新频率还可以，新出的模型支持往往第一时间在社区能看到。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n- 想快速验证AI产品想法的创业者\n- 非算法背景的开发者和产品经理\n- 需要给客户快速交付AI原型的团队\n\n**可考虑：**\n- 对灵活性要求极高的复杂应用（需要评估是否够用）\n- 有定制化安全合规要求的大企业（看企业版功能是否匹配）\n\n**不推荐：**\n- 已经有成熟LangChain技术栈的团队（直接写代码可能更高效）\n- 预算极其有限且不需要企业级支持的独立开发者（免费版其实够用，但企业版付费意愿不强的可以考虑其他方案）\n\n## 常见问题（FAQ）\n\n**Langflow 是免费的吗？**\n\n开源核心可永久免费自托管使用；Langflow Cloud 提供免费额度及付费档位（Starter/Pro/Enterprise）。\n\n**Langflow 和 Coze 有什么区别？**\n\nLangflow 更偏向开发者自托管、开源可控；Coze 提供更完整的端到端方案，更适合非技术用户。\n\n**可以用 Langflow 构建哪些应用？**\n\n可用于构建智能问答/RAG 应用、聊天机器人、自动化工作流、内容生成工具等。\n\n**Langflow 支持中文吗？**\n\n界面已支持多语言（含中文，1.10 起增至七种语言）；大模型能力取决于所选 LLM 后端。",
+  "published": true,
+  "created_date": "2026-05-25",
+  "published_date": "2026-05-25",
+  "verified_url": "https://www.langflow.org/",
+  "verified_publisher": "Langflow（现属 IBM）",
+  "verified_what": "Langflow 是开源的低代码 AI 构建器，用于构建和部署 AI 智能体与 MCP 服务器，基于 LangChain，提供拖拽式可视化界面，支持主流大模型、向量数据库与丰富的 AI 工具组件。",
+  "verified_price": "开源核心完全免费自托管（Apache 2.0）。Langflow Cloud 付费托管：社区/免费档有限额度；Starter 约 $29/月；Pro/Team 约 $99/月；Enterprise 定制（SSO、SOC 2、私有部署等）。",
+  "verified_platform": "Web 端 / 桌面端（Mac、Windows）/ 云 / 自托管（Docker）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "可视化工作流编排（拖拽）",
+    "多模型支持（OpenAI/Claude/Gemini 等）",
+    "RAG 检索增强生成",
+    "API 一键导出部署",
+    "组件市场与自定义组件",
+    "实时预览调试、MCP 服务器支持"
+  ],
+  "verified_description": "Langflow 是一个开源的可视化 AI 工作流构建平台，基于 LangChain 构建，提供拖拽式界面帮助开发者快速创建复杂的 LLM 应用程序与智能体；支持多模态、MCP 服务器与企业级部署，已成为 AI 应用开发领域的主流工具之一。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.6",
+  "rating_source": "站内编辑评分（人气/实用度）",
+  "rating_verified": true,
+  "verified_pros": [
+    "拖拽式可视化界面，降低 AI 应用开发门槛",
+    "完全开源透明，可自定义扩展",
+    "内置丰富的预置组件与模板库",
+    "支持主流大模型无缝切换集成",
+    "活跃的社区生态与持续更新"
+  ],
+  "verified_cons": [
+    "相比纯代码方案灵活性略受限",
+    "复杂工作流性能与调试可能受影响",
+    "Cloud 付费档位价格不低"
+  ],
+  "verified_faq": [
+    {
+      "q": "Langflow 是免费的吗？",
+      "a": "开源核心可永久免费自托管使用；Langflow Cloud 提供免费额度及付费档位（Starter/Pro/Enterprise）。"
+    },
+    {
+      "q": "Langflow 和 Coze 有什么区别？",
+      "a": "Langflow 更偏向开发者自托管、开源可控；Coze 提供更完整的端到端方案，更适合非技术用户。"
+    },
+    {
+      "q": "可以用 Langflow 构建哪些应用？",
+      "a": "可用于构建智能问答/RAG 应用、聊天机器人、自动化工作流、内容生成工具等。"
+    },
+    {
+      "q": "Langflow 支持中文吗？",
+      "a": "界面已支持多语言（含中文，1.10 起增至七种语言）；大模型能力取决于所选 LLM 后端。"
+    }
+  ],
+  "verified_tags": [
+    "可视化工作流",
+    "LangChain",
+    "开源",
+    "AI应用开发",
+    "RAG"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://www.langflow.org/",
+    "https://langflow.org/blog",
+    "https://aimode.in/langflow/"
+  ],
+  "verify_notes": "官方域名 langflow.org 核实有效。原数据称 Pro $49/月，与实际 Cloud 档位（Starter ~$29、Pro ~$99）有出入，已在校验价格中修正；产品形态描述准确。Langflow 现归属于 IBM。",
+  "content_verified": true,
+  "url_previous": "https://langflow.org",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Langflow 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Langflow 的 可视化工作流编排（拖拽） 是亮点，价格 开源免费自托管 + Langflow Cloud（Starter ~$29/月，Pro ~$99/月）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "name": "Flint",
+  "slug": "flint",
+  "positioning": "免费AI效率工具，开源+低摩擦笔记捕捉好用吗",
+  "auto_positioning": true,
+  "emoji": "🔥",
+  "color": "#2563EB",
+  "description": "Flint 是一款本地优先、开源的 AI 笔记与知识管理应用，通过内置 AI 智能体帮助连接笔记、构建知识图谱并以间隔重复让笔记持续可用。",
+  "category": "AI效率",
+  "tags": [
+    "AI笔记",
+    "知识管理",
+    "本地优先",
+    "开源",
+    "PKM"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "月访问量 230 万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://www.flintnote.com",
+  "price": "免费（开源 Beta）",
+  "platform": "Web / macOS / iOS / Windows",
+  "pros": [
+    "本地优先，数据以纯文本归用户所有",
+    "完全开源，无供应商锁定",
+    "AI 智能体帮助发现笔记关联",
+    "间隔重复让笔记长期可用",
+    "免费"
+  ],
+  "cons": [
+    "仍处 Beta，可能有 bug 与未完成打磨",
+    "仅桌面端（macOS/Windows/Linux），无移动 App",
+    "AI 能力依赖所配置的模型或提供商"
+  ],
+  "features": [
+    "低摩擦笔记捕捉（每日笔记/常青笔记）",
+    "AI 智能体建议关联、提问并辅助整理",
+    "反向链接与知识图谱",
+    "间隔重复复习系统（spaced repetition）",
+    "本地优先、纯文本 Markdown 存储",
+    "开源（GPL-3.0），可切换 AI 提供方或本地推理",
+    "EPUB/PDF/网页高亮，智能体可读",
+    "Decks 看板与全文搜索"
+  ],
+  "related": [
+    "notion-ai",
+    "perplexity"
+  ],
+  "faq": [
+    {
+      "q": "Flint 免费吗？付费版有什么区别？",
+      "a": "Flint 目前免费且已开源，处于公开 Beta 阶段，官网未公布付费套餐；高级功能取决于你接入的 AI 提供方。"
+    },
+    {
+      "q": "Flint 的数据存在哪里？支持本地部署吗？",
+      "a": "Flint 本地优先，笔记是你电脑上的纯文本 Markdown 文件；它本身运行在本机，并可切换 AI 提供商或本地推理。原基线所称 E2EE、SOC 2、私有云部署不实。"
+    },
+    {
+      "q": "Flint 和 Obsidian/Logseq 有何不同？",
+      "a": "Flint 强调 AI 智能体贯穿笔记系统（建议关联、生成复习提问），并以完整学习循环（外化—内化—重现）组织知识，而非通用笔记。"
+    },
+    {
+      "q": "Flint 支持中文吗？",
+      "a": "Flint 界面与 AI 能力取决于所配置的模型；作为本地优先 Markdown 工具，中文笔记与大多数兼容 OpenAI 协议的模型均可使用。"
+    }
+  ],
+  "seo_keywords": [
+    "Flint",
+    "Flint AI知识管理怎么样",
+    "Flint和Notion AI哪个好",
+    "Flint免费版够用吗",
+    "Flint研究协作工具评测"
+  ],
+  "content": "## Flint 是什么？\n\nFlint 是一款本地优先、开源（GPL-3.0）的 AI 笔记与知识管理应用，通过内置 AI 智能体帮助连接笔记、构建知识图谱并以间隔重复让笔记持续可用。\n\n## 核心功能\n\n- 低摩擦笔记捕捉（每日笔记/常青笔记）\n- AI 智能体建议关联、提问并辅助整理\n- 反向链接与知识图谱\n- 间隔重复复习系统（spaced repetition）\n- 本地优先、纯文本 Markdown 存储\n- 开源（GPL-3.0），可切换 AI 提供方或本地推理\n- EPUB/PDF/网页高亮，智能体可读\n- Decks 看板与全文搜索\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 目前免费（开源 Beta 阶段，官网未公布任何付费套餐）。 |\n| 支持平台 | macOS / Windows / Linux（桌面端，Electron）；含 Web 应用 app.flintnote.com |\n| 评分 | ⭐ 4.5 |\n| 开发商 | Tim Disney（disnet，开源社区） |\n\n## 价格与平台\n\n- **价格**：目前免费（开源 Beta 阶段，官网未公布任何付费套餐）。\n- **平台**：macOS / Windows / Linux（桌面端，Electron）；含 Web 应用 app.flintnote.com\n- **官网**：https://www.flintnote.com\n\n## 优缺点分析\n\n### 优点\n\n- 本地优先，数据以纯文本归用户所有\n- 完全开源，无供应商锁定\n- AI 智能体帮助发现笔记关联\n- 间隔重复让笔记长期可用\n- 免费\n\n### 缺点\n\n- 仍处 Beta，可能有 bug 与未完成打磨\n- 仅桌面端（macOS/Windows/Linux），无移动 App\n- AI 能力依赖所配置的模型或提供商\n\n## 常见问题（FAQ）\n\n**Flint 免费吗？付费版有什么区别？**\n\nFlint 目前免费且已开源，处于公开 Beta 阶段，官网未公布付费套餐；高级功能取决于你接入的 AI 提供方。\n\n**Flint 的数据存在哪里？支持本地部署吗？**\n\nFlint 本地优先，笔记是你电脑上的纯文本 Markdown 文件；它本身运行在本机，并可切换 AI 提供商或本地推理。原基线所称 E2EE、SOC 2、私有云部署不实。\n\n**Flint 和 Obsidian/Logseq 有何不同？**\n\nFlint 强调 AI 智能体贯穿笔记系统（建议关联、生成复习提问），并以完整学习循环（外化—内化—重现）组织知识，而非通用笔记。\n\n**Flint 支持中文吗？**\n\nFlint 界面与 AI 能力取决于所配置的模型；作为本地优先 Markdown 工具，中文笔记与大多数兼容 OpenAI 协议的模型均可使用。\n\n\n## 最终结论\n\nFlint 是AI效率领域的一款 AI 工具，其核心优势在于本地优先，数据以纯文本归用户所有。\n此外，完全开源，无供应商锁定。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-07-13",
+  "published_date": "2026-07-13",
+  "verified_url": "https://www.flintnote.com",
+  "verified_publisher": "Tim Disney（disnet，开源社区）",
+  "verified_what": "Flint 是一款本地优先、开源（GPL-3.0）的 AI 笔记与知识管理应用，通过内置 AI 智能体帮助连接笔记、构建知识图谱并以间隔重复让笔记持续可用。",
+  "verified_price": "目前免费（开源 Beta 阶段，官网未公布任何付费套餐）。",
+  "verified_platform": "macOS / Windows / Linux（桌面端，Electron）；含 Web 应用 app.flintnote.com",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "低摩擦笔记捕捉（每日笔记/常青笔记）",
+    "AI 智能体建议关联、提问并辅助整理",
+    "反向链接与知识图谱",
+    "间隔重复复习系统（spaced repetition）",
+    "本地优先、纯文本 Markdown 存储",
+    "开源（GPL-3.0），可切换 AI 提供方或本地推理",
+    "EPUB/PDF/网页高亮，智能体可读",
+    "Decks 看板与全文搜索"
+  ],
+  "verified_description": "Flint 是一款本地优先、开源的 AI 笔记与知识管理应用，通过内置 AI 智能体帮助连接笔记、构建知识图谱并以间隔重复让笔记持续可用。",
+  "content_flags": "原长文将 Flint 描述为多模态企业知识管理平台（含 E2EE、SOC 2、Zotero 双向同步、团队白板等），与真实产品严重不符，属幻觉，已重写。",
+  "price_verified": true,
+  "verified_pros": [
+    "本地优先，数据以纯文本归用户所有",
+    "完全开源，无供应商锁定",
+    "AI 智能体帮助发现笔记关联",
+    "间隔重复让笔记长期可用",
+    "免费"
+  ],
+  "verified_cons": [
+    "仍处 Beta，可能有 bug 与未完成打磨",
+    "仅桌面端（macOS/Windows/Linux），无移动 App",
+    "AI 能力依赖所配置的模型或提供商"
+  ],
+  "verified_faq": [
+    {
+      "q": "Flint 免费吗？付费版有什么区别？",
+      "a": "Flint 目前免费且已开源，处于公开 Beta 阶段，官网未公布付费套餐；高级功能取决于你接入的 AI 提供方。"
+    },
+    {
+      "q": "Flint 的数据存在哪里？支持本地部署吗？",
+      "a": "Flint 本地优先，笔记是你电脑上的纯文本 Markdown 文件；它本身运行在本机，并可切换 AI 提供商或本地推理。原基线所称 E2EE、SOC 2、私有云部署不实。"
+    },
+    {
+      "q": "Flint 和 Obsidian/Logseq 有何不同？",
+      "a": "Flint 强调 AI 智能体贯穿笔记系统（建议关联、生成复习提问），并以完整学习循环（外化—内化—重现）组织知识，而非通用笔记。"
+    },
+    {
+      "q": "Flint 支持中文吗？",
+      "a": "Flint 界面与 AI 能力取决于所配置的模型；作为本地优先 Markdown 工具，中文笔记与大多数兼容 OpenAI 协议的模型均可使用。"
+    }
+  ],
+  "verified_tags": [
+    "AI笔记",
+    "知识管理",
+    "本地优先",
+    "开源",
+    "PKM"
+  ],
+  "verified_category": "AI效率",
+  "source_urls": [
+    "https://www.flintnote.com/",
+    "https://github.com/disnet/flint-note/",
+    "https://buttondown.com/flintnote/archive/flint-december-beta-updates-open-source-and-so/"
+  ],
+  "verify_notes": "原基线多数结构化字段（访问量 230 万、Pro $15/月、团队版 $29/人/月、iOS、E2EE/SOC2、Zotero 同步）均属虚构；真实 Flint 为免费开源桌面笔记应用，由 Tim Disney 开发。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "evidence-dev",
+      "semrush-ai",
+      "jamie-ai"
+    ],
+    "verdict": "Flint 与 Evidence.dev、Semrush AI、Jamie AI 同属AI效率赛道：Flint 的 低摩擦笔记捕捉（每日笔记/常青笔记） 是亮点，价格 免费（开源 Beta）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

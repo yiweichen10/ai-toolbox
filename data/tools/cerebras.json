@@ -1,0 +1,155 @@
+{
+  "name": "Cerebras",
+  "slug": "cerebras",
+  "emoji": "⚡",
+  "color": "#6B4EFF",
+  "description": "Cerebras Systems 是 AI 超级计算与芯片公司，推出 WSE 系列晶圆级 AI 芯片（如 WSE-3，4 万亿晶体管），并通过 Cerebras Inference 提供全球最快的 AI 推理 API（约 20 倍于 GPU），面向开发者与企业。",
+  "category": "AI开发",
+  "tags": [
+    "AI芯片",
+    "AI推理",
+    "大模型训练",
+    "云计算",
+    "WSE",
+    "高速推理"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "85万",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://cerebras.ai",
+  "price": "免费额度 + 按量付费（Developer 从 $10 起）",
+  "platform": "Web云服务 / API",
+  "pros": [
+    "WSE-3 全球最大 AI 芯片，4 万亿晶体管",
+    "专为大规模 AI 训练/推理设计，速度领先",
+    "云端 API 无需自建超算",
+    "内存带宽远超传统 GPU",
+    "支持主流开源模型与自定义权重"
+  ],
+  "cons": [
+    "主要面向企业/开发者，个人门槛较高",
+    "企业级方案价格高",
+    "学习曲线较陡，需专业团队",
+    "部分区域访问受限"
+  ],
+  "features": [
+    "WSE-3 超级 AI 芯片（4 万亿晶体管）",
+    "Cerebras Inference 高速推理 API（约 20x GPU）",
+    "大规模语言模型训练加速",
+    "模型推理与微调服务",
+    "混合云与私有部署",
+    "Cerebras Code（高上下文代码补全）"
+  ],
+  "related": [
+    "hugging-face",
+    "replicate",
+    "groq"
+  ],
+  "faq": [
+    {
+      "q": "Cerebras 和 GPU 有什么区别？",
+      "a": "Cerebras 的 WSE 晶圆级芯片比传统 GPU 大数百倍、内存带宽更高，专为大规模 AI 训练/推理优化，推理速度可达 GPU 的数十倍。"
+    },
+    {
+      "q": "Cerebras Inference 怎么用？",
+      "a": "注册即获免费额度，Developer 档自服务最低 $10 起充、按 token 计费；也可经 OpenRouter、AWS 等接入。"
+    },
+    {
+      "q": "Cerebras 支持哪些模型？",
+      "a": "支持 Llama、Qwen、Gemma、GPT-OSS 等主流开源模型，并支持自定义模型权重与微调。"
+    },
+    {
+      "q": "Cerebras 适合个人开发者吗？",
+      "a": "可通过免费额度与按量付费使用推理 API，但企业级训练/部署成本较高，建议评估预算。"
+    }
+  ],
+  "seo_keywords": [
+    "Cerebras",
+    "Cerebras AI芯片",
+    "Cerebras Cloud怎么用",
+    "WSE-3超级计算机",
+    "Cerebras和GPU哪个好"
+  ],
+  "content": "# Cerebras是什么？\n\n如果你关注AI训练算力这个消息，应该多多少少听说过Cerebras这家公司。简单说，Cerebras Systems是专门做AI超级计算机的厂商，他们最出名的产品是WSE系列芯片——也就是Wafer Scale Engine。WSE-3是他们第三代产品，单颗芯片上有4万亿晶体管，这是目前世界上最大的AI处理器。\n\n传统GPU比如英伟达的旗舰卡，晶体管数量在几百亿这个级别，而Cerebras直接把这个数字堆到了万亿级别，可想而知的芯片面积有多大。他们把一整片晶圆做成一颗芯片，这种做法在行业里几乎没有第二家在做。\n\nCerebras不仅是卖芯片，还提供云端算力服务Cerebras Cloud，企业可以直接租用他们的算力，不需要自己买硬件建超算集群。现在很多大模型训练任务都在用他们的服务。\n\n---\n\n## 核心功能\n\n**1. WSE-3超级AI芯片**\n\n这是Cerebras的核心竞争力。4万亿晶体管带来的算力提升是质变的，特别适合需要大规模并行计算的AI训练任务。芯片面积大意味着更大的片上内存和更高的带宽，这对训练大模型非常关键。\n\n**2. Cerebras Cloud云算力服务**\n\n不用自己买硬件，通过云端就能调用WSE芯片的算力。对企业来说省去了 Infrastructure 的投入，但要注意价格确实不便宜。\n\n**3. 大规模语言模型训练加速**\n\nWSE-3设计上就是为千亿参数以上的大模型准备的，训练速度相比传统GPU集群有显著优势。据官方介绍能大幅缩短训练时间，这对于争分夺秒的AI研发团队很有吸引力。\n\n**4. 模型推理API服务**\n\n除了训练，也提供推理服务。企业可以直接调用API做模型部署，不需要自己搞定底层硬件优化。\n\n**5. 混合云和私有部署方案**\n\n不只是公有云，Cerebras也支持私有部署和混合云架构。这对有数据合规要求的企业很重要，敏感数据可以留在自己数据中心。\n\n---\n\n## 版本/套餐对比\n\n| 维度 | WSE-3芯片 | Cerebras Cloud | 私有部署 |\n|------|-----------|----------------|----------|\n| 适用场景 | 大规模AI训练 | 快速验证/中小规模训练 | 企业级核心业务 |\n| 晶体管数 | 4万亿 | - | 4万亿 |\n| 内存带宽 | 极高（片上） | 按需租用 | 极高 |\n| 部署方式 | 整机销售 | 云端即开即用 | 本地机房 |\n| 适合规模 | 超大规模研发 | 验证/中型训练 | 企业核心项目 |\n| 支持框架 | 主流AI框架 | 主流AI框架 | 主流AI框架 |\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 芯片规格确实领先，单颗芯片的算力和带宽传统GPU难以企及\n- 大幅缩短训练时间，对时间敏感的项目很有价值\n- 云端服务降低了使用门槛，不用自建超算集群\n- 支持主流框架，迁移成本相对可控\n\n**缺点：**\n\n- 价格确实比传统云计算方案高出不少\n- 主要面向企业，个人开发者基本用不上\n- 学习曲线陡峭，需要专业团队支持\n- 部分地区访问受限\n\n**总体结论：** 如果你是大型AI企业或研究机构，有预算有专业团队，Cerebras绝对值得考虑。但如果只是个人爱好者或小团队，性价比不高，不是最优选择。\n\n---\n\n## 使用建议\n\n1. **先验证再大规模投入** - 可以先用Cloud服务跑个小规模任务，评估效果再决定是否上私有部署\n2. **确保有专业运维团队** - WSE的部署和调优需要专业人士，不要想当然自己上手\n3. **考虑混合云方案** - 核心敏感数据用私有部署，非敏感任务用云端，这样可以控制成本\n4. **关注官方文档和技术支持** - Cerebras的技术支持团队是卖点，遇到问题及时求助\n\n---\n\n## 适合谁用？\n\n**推荐：**\n\n- 大型AI实验室和研究中心\n- 有大模型训练需求的头部科技企业\n- 需要快速训练迭代的AI产品团队\n\n**可考虑：**\n\n- 中等规模的AI公司，预算相对充足\n- 对训练时间有明确要求且愿意付费的项目\n\n**不推荐：**\n\n- 个人开发者和独立研究者\n- 预算有限的中小团队\n- 场景只是中小规模模型训练或推理\n\n## 常见问题（FAQ）\n\n**Cerebras 和 GPU 有什么区别？**\n\nCerebras 的 WSE 晶圆级芯片比传统 GPU 大数百倍、内存带宽更高，专为大规模 AI 训练/推理优化，推理速度可达 GPU 的数十倍。\n\n**Cerebras Inference 怎么用？**\n\n注册即获免费额度，Developer 档自服务最低 $10 起充、按 token 计费；也可经 OpenRouter、AWS 等接入。\n\n**Cerebras 支持哪些模型？**\n\n支持 Llama、Qwen、Gemma、GPT-OSS 等主流开源模型，并支持自定义模型权重与微调。\n\n**Cerebras 适合个人开发者吗？**\n\n可通过免费额度与按量付费使用推理 API，但企业级训练/部署成本较高，建议评估预算。",
+  "published": true,
+  "created_date": "2026-05-30",
+  "published_date": "2026-05-30",
+  "verified_url": "https://cerebras.ai",
+  "verified_publisher": "Cerebras Systems",
+  "verified_what": "AI 超级计算与芯片公司，推出 WSE 系列晶圆级 AI 芯片（如 WSE-3，4 万亿晶体管），并通过 Cerebras Inference 提供全球最快的 AI 推理 API（约 20 倍于 GPU），面向开发者与企业。",
+  "verified_price": "推理 API 免费额度（注册赠约 $5 免费额度）；Developer 按量自服务（最低 $10 起充，10 倍速率限制）；Cerebras Code Pro $50/月、Max $200/月（曾售罄）；企业版定制报价。",
+  "verified_platform": "Web 云服务 / API（含 AWS Marketplace、OpenRouter、HuggingFace、Vercel 等接入）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "WSE-3 超级 AI 芯片（4 万亿晶体管）",
+    "Cerebras Inference 高速推理 API（约 20x GPU）",
+    "大规模语言模型训练加速",
+    "模型推理与微调服务",
+    "混合云与私有部署",
+    "Cerebras Code（高上下文代码补全）"
+  ],
+  "verified_description": "Cerebras Systems 是 AI 超级计算与芯片公司，推出 WSE 系列晶圆级 AI 芯片（如 WSE-3，4 万亿晶体管），并通过 Cerebras Inference 提供全球最快的 AI 推理 API（约 20 倍于 GPU），面向开发者与企业。",
+  "content_flags": "price_incomplete: 原数据写「按需付费，联系销售获取报价」，遗漏了免费额度与 Developer 自服务档（$10 起），已补全",
+  "price_verified": true,
+  "verified_pros": [
+    "WSE-3 全球最大 AI 芯片，4 万亿晶体管",
+    "专为大规模 AI 训练/推理设计，速度领先",
+    "云端 API 无需自建超算",
+    "内存带宽远超传统 GPU",
+    "支持主流开源模型与自定义权重"
+  ],
+  "verified_cons": [
+    "主要面向企业/开发者，个人门槛较高",
+    "企业级方案价格高",
+    "学习曲线较陡，需专业团队",
+    "部分区域访问受限"
+  ],
+  "verified_faq": [
+    {
+      "q": "Cerebras 和 GPU 有什么区别？",
+      "a": "Cerebras 的 WSE 晶圆级芯片比传统 GPU 大数百倍、内存带宽更高，专为大规模 AI 训练/推理优化，推理速度可达 GPU 的数十倍。"
+    },
+    {
+      "q": "Cerebras Inference 怎么用？",
+      "a": "注册即获免费额度，Developer 档自服务最低 $10 起充、按 token 计费；也可经 OpenRouter、AWS 等接入。"
+    },
+    {
+      "q": "Cerebras 支持哪些模型？",
+      "a": "支持 Llama、Qwen、Gemma、GPT-OSS 等主流开源模型，并支持自定义模型权重与微调。"
+    },
+    {
+      "q": "Cerebras 适合个人开发者吗？",
+      "a": "可通过免费额度与按量付费使用推理 API，但企业级训练/部署成本较高，建议评估预算。"
+    }
+  ],
+  "verified_tags": [
+    "AI芯片",
+    "AI推理",
+    "大模型训练",
+    "云计算",
+    "WSE",
+    "高速推理"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://www.cerebras.ai",
+    "https://www.cerebras.ai/pricing",
+    "https://cerebras.ai/press-release/cerebras-launches-the-worlds-fastest-ai-inference",
+    "https://usagepricing.com/tools/pricing-calculator/cerebras"
+  ],
+  "verify_notes": "cerebras.ai 官方定价页与新闻稿确认免费额度、Developer 自服务（$10 起）与企业定制；现有描述准确，仅补全价格档位。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "Cerebras 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Cerebras 的 WSE-3 超级 AI 芯片（4 万亿晶体管） 是亮点，价格 免费额度 + 按量付费（Developer 从 $10 起）；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

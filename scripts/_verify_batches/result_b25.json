@@ -1,0 +1,126 @@
+{
+  "batch_id": "b25",
+  "category": "AI视频",
+  "tools": [
+    {
+      "slug": "wondershare-virbo",
+      "name": "万兴播爆",
+      "url_current": "https://virbo.wondershare.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正常，产品/公司（万兴科技 Wondershare）/功能与描述基本吻合（AI数字人、TTS、多语言配音、智能剪辑）。定价'付费版¥99/月起'在首页仅见'View Pricing'入口、未直接展示具体数字，无法核实，但功能描述无明显编造。"
+    },
+    {
+      "slug": "kapkap",
+      "name": "KapKap",
+      "url_current": "https://www.kapkap.com",
+      "url_ok": false,
+      "url_correct": "https://www.kapkap.ai",
+      "hallucination": true,
+      "hallucination_fields": ["description", "price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "①域名错误：kapkap.com 返回 403，真实官网为 kapkap.ai（KapKap - AI Talking Videos，开发商 Starii Global Limited）。②功能张冠李戴：描述称'专注于将长视频自动剪辑成短视频片段、智能识别高光时刻'，而 KapKap 实为 AI 口播/对口型视频工作室（lip-sync、Talking Photo、提词器、AI 脚本、4K 拍摄），并非长视频切片/高光识别工具。③定价'免费版+Pro $15/月'未体现，App Store 显示的是按分钟/Pro 内购（约 $7.99–$49.99），无 $15/月固定订阅，需人工核对。"
+    },
+    {
+      "slug": "vizard",
+      "name": "Vizard",
+      "url_current": "https://vizard.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正常，长视频自动切片+字幕能力属实，定价'免费版+Pro $20/月'与第三方评测一致。但描述称'内置AI虚拟主播功能'存疑——Vizard 官网及多个评测均定位为长视频切片/字幕/翻译工具，未见 AI 虚拟主播/数字人口播能力（此类能力多见于 HeyGen、Virbo、Synthesia）。疑似功能张冠李戴。"
+    },
+    {
+      "slug": "video-os",
+      "name": "VideoOS",
+      "url_current": "https://jupitrr.com",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content", "description"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 jupitrr.com 正确（产品确为 Jupitrr AI 的 VideoOS，公司归属无误）。但正文/描述把 VideoOS 写成'视频内容智能分析平台：识别人物/场景/物体、自动生成标签、提取精彩片段、多语言字幕'，与实际产品严重不符——Jupitrr VideoOS 是面向企业的'一站式视频工作流/口播视频编辑'平台（AI 剪辑口播视频、提词器、B-roll、AI 脚本、社媒发布、内容日历），不具备视频内容识别/自动打标能力。典型功能张冠李戴。定价'专业版起价$29/月'与第三方报价（Basic $10/Pro $25）略有出入。"
+    },
+    {
+      "slug": "pixelle-video",
+      "name": "Pixelle-Video",
+      "url_current": "https://github.com/AIDC-AI/Pixelle-Video",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price", "platform", "content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "GitHub 仓库真实存在（AIDC-AI 团队开源，Apache-2.0，可本地免费运行）。但站内数据严重编造：①定价'付费版$19/月起'错误——开源项目完全免费，无付费版；②平台'网页端/iOS/Android'错误——实为本地运行/桌面整合包（git clone 或 Windows 一键包），非 Web/App；③正文称'4K超清输出''多轨道时间轴编辑'官网未支持——项目定位为一键自动生成，无 4K 说明、无多轨剪辑。描述'阿里巴巴 AIDC-AI 团队'基本属实。"
+    },
+    {
+      "slug": "luma-dream-machine",
+      "name": "Luma Dream Machine",
+      "url_current": "https://lumalabs.ai/dream-machine",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网正常（Luma AI 产品，现已整合为 Luma 创意平台）。文本/图像转视频、镜头运动控制等功能属实。定价'免费30次/月、专业版$29.99/月起'与多来源（aiagentsquare/apostle/lumadreammachine.net）一致。无幻觉。"
+    },
+    {
+      "slug": "anijam",
+      "name": "Anijam",
+      "url_current": "https://anijam.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "low",
+      "notes": "官网正常（Anijam - AI Animation Agent，输入创意/故事生成动画）。描述'将静态图片转动态视频'及姿态控制/风格迁移/多角色动画等功能在首页难以逐一核实，定价'基础功能免费、高级功能付费订阅'也无法在首页确认。暂未发现明确幻觉，但部分功能描述置信度低，建议人工复核。"
+    },
+    {
+      "slug": "qingying-ai",
+      "name": "清影AI",
+      "url_current": "https://chatglm.cn/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["content"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网域名 chatglm.cn 为智谱官方站（清影入口为 chatglm.cn/video），URL 无误。但正文归属严重错误：内容称'清影AI是360公司推出的AI视频生成工具'，实际清影是智谱AI（Zhipu AI）基于 CogVideoX 的视频生成模型（国家科技资源共享服务台、智谱开放文档等多家权威来源证实），属张冠李戴到 360。description 部分'智谱AI（Zhipu AI）'正确。另：正文'付费版会员39元/月''3.0版本'等细节待核实。"
+    },
+    {
+      "slug": "hailuo-ai",
+      "name": "海螺AI",
+      "url_current": "https://www.hailuo.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网正常（跳转至 MiniMax 站，海螺AI 为 MiniMax/稀宇科技 产品）。文生视频/图生视频/智能对话/图像生成等多模态能力与描述一致。'视频生成质量达Sora级''2026全球用户超千万'为营销表述无法核实，定价'免费增值'无法在首页精确确认。暂未发现明确幻觉。"
+    },
+    {
+      "slug": "vidu-ai",
+      "name": "Vidu AI",
+      "url_current": "https://www.vidu.ai",
+      "url_ok": false,
+      "url_correct": "https://www.vidu.com",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "URL 疑似错误：www.vidu.ai 实际展现的是'面向销售团队的 AI 个性化视频外联'产品（不同公司/不同产品），而生数科技（联合清华）推出的 Vidu 视频生成模型官网为 vidu.com（多家来源佐证，支持文生/图生/参考生视频、多主体一致性）。站内描述的功能（生数科技、文生视频、图生视频、主体参照、风格迁移）与 vidu.com 的 Vidu 一致，故内容未见编造，但官网链接应改为 vidu.com。定价'免费100积分、付费$29/月起'未能在 vidu.ai 核实，需以 vidu.com 为准。"
+    }
+  ]
+}

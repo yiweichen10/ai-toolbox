@@ -1,0 +1,66 @@
+{
+  "batch_id": "b34",
+  "category": "AI绘画",
+  "tools": [
+    {
+      "slug": "wenxin-yige",
+      "name": "文心一格",
+      "url_current": "https://yige.baidu.com/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["description", "content"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 yige.baidu.com 真实存在，但百度已于2025年4月1日将文心一格服务迁移合并至文心一言官网（来源：百度百科/官网迁移公告），文中'2026年已升级至4.0版本'无官方依据，疑似虚构；'国内使用最广泛'等定性描述基本合理。定价'每月39元起'在部分第三方站点有提及，但官方产品已整合，建议以官网实时为准。"
+    },
+    {
+      "slug": "hunyuan-image",
+      "name": "混元图像",
+      "url_current": "https://hunyuan.tencent.com/",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "官网 hunyuan.tencent.com 真实。但定价虚构：腾讯混元图像/生图采用云资源包计费，免费额度为各模型一次性50次（非'每月100张'），混元生图3.0资源包1000次/160元·年≈13.3元/月，并无'会员39元/月无限量'套餐（来源：腾讯云官方计费文档）。功能描述（文生图/图生图/AI消除/图像扩展/角色一致性）与官网能力基本吻合，'混元图像2.0'在官网可见。"
+    },
+    {
+      "slug": "krea-2",
+      "name": "Krea 2",
+      "url_current": "https://www.krea.ai",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "Krea官网(krea.ai)真实，Krea 2确为2026年推出（发布说明5月GA）。但定价编造：官网实际为 Free $0(100算力单位/日)、Basic $9/月、Pro $35/月、Business $200/月（来源：krea.ai pricing），原'Pro $10/月、Business $30/月、免费每日10次生成'均不准确（免费实为100算力单位/日，非10次生成）。"
+    },
+    {
+      "slug": "seedream-5-0-pro",
+      "name": "Seedream 5.0 Pro",
+      "url_current": "https://seed.bytedance.com/zh/seedream5_0_pro",
+      "url_ok": true,
+      "url_correct": "",
+      "hallucination": false,
+      "hallucination_fields": [],
+      "conflict": false,
+      "confidence": "high",
+      "notes": "官网 seed.bytedance.com/zh/seedream5_0_pro 真实可访问，功能（交互式精准编辑、图层拆分、十余种语言原生生成）与官网一致；定价为保守表述'按Credits计费，以官网实时为准'，无虚构金额。"
+    },
+    {
+      "slug": "midjourney-scanner",
+      "name": "Midjourney Scanner",
+      "url_current": "https://midjourneyscanner.com",
+      "url_ok": false,
+      "url_correct": "",
+      "hallucination": true,
+      "hallucination_fields": ["price"],
+      "conflict": false,
+      "confidence": "medium",
+      "notes": "midjourneyscanner.com 域名已被 Porkbun 停放（'A Brand New Domain'待售），并非真实产品官网。联网检索未找到名为'Midjourney Scanner'的官方产品站点（仅有 promptsera、image2prompts 等同类反向提示词工具及 aidetectlab 检测工具）。原'免费版/专业版$9.9/月'定价无可靠来源，疑似虚构。建议核实该产品是否真实存在及其正确官网。"
+    }
+  ]
+}

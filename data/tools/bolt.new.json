@@ -1,0 +1,131 @@
+{
+  "name": "Bolt.new",
+  "slug": "bolt.new",
+  "positioning": "免费AI编程工具：AI代码生成+一键部署",
+  "auto_positioning": true,
+  "emoji": "💻",
+  "color": "#8d362d",
+  "description": "StackBlitz推出的AI全栈Web应用构建工具，在浏览器内通过自然语言描述即可生成、运行并一键部署完整Web应用，适合快速原型开发。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "全栈开发",
+    "AI生成",
+    "付费"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "7万",
+  "badge": {
+    "type": "new",
+    "text": "HOT"
+  },
+  "url": "https://bolt.new",
+  "price": "免费版 + Pro $20/月",
+  "platform": "Web / iOS / Android",
+  "pros": [
+    "自然语言生成应用",
+    "浏览器内实时运行预览",
+    "一键部署上线",
+    "支持全栈开发",
+    "零配置开箱即用"
+  ],
+  "cons": [
+    "生成代码质量一般，复杂项目受限",
+    "无原生移动App（纯Web）",
+    "免费额度有限",
+    "深度自定义/复杂项目能力有限",
+    "依赖网络环境"
+  ],
+  "features": [
+    "AI代码生成（全栈）",
+    "浏览器内实时预览运行",
+    "一键部署（Netlify等）",
+    "多框架支持（React/Vue/Next.js/Svelte）",
+    "数据库集成",
+    "GitHub集成与协作"
+  ],
+  "related": [
+    "chatgpt",
+    "sora"
+  ],
+  "content": "## Bolt.new 是什么？\n\nBolt.new是StackBlitz推出的AI全栈开发工具，通过自然语言描述即可生成完整的Web应用。用户只需描述想要的应用，AI会自动生成前端、后端代码并实时预览，支持一键部署上线。\n\nBolt.new让没有编程基础的人也能快速创建Web应用，是目前最流行的AI应用构建工具之一。\n\n## 核心功能\n\n- **AI代码生成**：用自然语言描述需求，AI自动生成完整代码\n- **实时预览**：代码修改即时预览效果，所见即所得\n- **一键部署**：生成的应用一键部署到公网\n- **全栈模板**：支持前后端一体化开发\n- **多框架支持**：支持React、Vue、Next.js、Svelte等主流框架\n- **协作编辑**：支持团队实时协作\n\n## 版本对比\n\n| 功能 | 免费版 | Pro ($20/月) |\n|------|--------|-------------|\n| 项目创建 | 有限 | 无限制 |\n| 部署 | 有限 | 无限制 |\n| AI生成次数 | 有限 | 更多 |\n| 自定义域名 | ❌ | ✅ |\n| 团队协作 | ❌ | ✅ |\n\n## 优缺点分析\n\n### 👍 优点\n- 自然语言生成应用，零编程基础也能用\n- 实时预览，修改即刻看到效果\n- 一键部署上线，快速验证想法\n- 支持前后端全栈开发\n- 零配置，开箱即用\n\n### 👎 缺点\n- 生成的代码质量一般，复杂逻辑可能有问题\n- 大型复杂项目能力有限\n- 免费版额度较少\n- 深度自定义能力不足\n- 依赖网络环境\n\n## 使用技巧\n\n1. **详细描述**：越详细的需求描述生成效果越好。\n2. **分步构建**：复杂应用分步骤描述，每步确认后再继续。\n3. **选择模板**：从模板开始比从零开始更快。\n4. **迭代优化**：生成后用自然语言让AI修改细节。\n5. **导出代码**：满意后导出代码到本地继续开发。\n\n## 适合人群\n\nBolt.new适合产品经理、创业者和非技术用户。如果你需要快速验证一个产品想法，Bolt.new是最快的方式。\n### 总结\n\nBolt.new 是 AI编程 领域中一款不错的 AI 工具。StackBlitz推出的AI全栈开发工具，通过自然语言描述即可生成完整Web应用。内置AI代码生成、实时预览和一键部署，是快速原型开发的神器。 从功能完整性来看，它覆盖了核心使用场景。\n\n**快速上手建议：**\n- 访问官网 bolt.new 注册账号\n- 先使用免费版本 了解核心功能\n- 参考官方文档和教程加速学习\n- 加入用户社区获取使用技巧和最佳实践\n\n**价格参考：** 免费版+Pro $10/月\n**支持平台：** Web / iOS / Android\n\n### 核心功能详解\n\n这款 AI 编程工具的核心价值在于让开发者更高效地写代码。它能理解自然语言描述的需求，自动生成对应的代码。更重要的是，它不仅能写新代码，还能理解现有代码库，进行修改、重构和优化。\n\n在实际开发流程中，它的使用场景非常广泛：\n- **需求到代码**：描述功能需求，自动生成初始代码\n- **Bug 排查**：粘贴错误信息，AI 分析原因并给出修复方案\n- **代码审查**：让 AI 审查代码质量，发现潜在问题\n- **单元测试**：自动生成测试用例，提高代码覆盖率\n- **文档编写**：根据代码自动生成注释和 API 文档\n\n### 与其他 AI 编程工具对比\n\n- **GitHub Copilot**：最成熟的代码补全插件，IDE 集成最好\n- **Cursor**：全功能 AI IDE，适合独立开发者\n- **Claude Code**：终端原生，适合命令行开发者\n- 本工具在特定场景下有独特优势\n\n### 使用技巧\n\n1. 在编码前先用自然语言描述完整需求，再让 AI 生成\n2. 利用代码上下文功能，让 AI 理解项目结构\n3. 重要代码务必人工审查，AI 生成的代码可能有隐藏问题\n4. 善用版本控制，方便回退 AI 的修改\n5. 结合自动化测试验证 AI 生成代码的正确性",
+  "published": true,
+  "faq": [
+    {
+      "q": "Bolt.new能做什么？",
+      "a": "Bolt.new是全栈AI开发工具，浏览器内用自然语言描述即可生成完整Web应用，AI自动编写前端（React等）、后端与数据库代码并实时预览，支持一键部署，适合快速原型与MVP验证。"
+    },
+    {
+      "q": "Bolt.new和Cursor有什么区别？",
+      "a": "Bolt.new偏快速原型，描述需求即生成完整应用，适合非开发者与浏览器内验证；Cursor是代码编辑器，适合有基础者精细开发。想快速验证想法用Bolt.new，深度开发用Cursor。"
+    }
+  ],
+  "created_date": "2026-04-03",
+  "verified_url": "https://bolt.new",
+  "verified_publisher": "StackBlitz",
+  "verified_what": "StackBlitz推出的AI全栈Web应用构建工具，在浏览器内用自然语言描述即可生成、运行并一键部署完整Web应用，适合快速原型与MVP验证。",
+  "verified_price": "Free $0（300K tokens/日，1M/月，公开项目，Bolt水印）；Pro $20/月（10M tokens/月，无日限，去水印，自定义域名，私享站点）；Teams $30+/seat/月（含Pro全部+团队管理）；另有Pro 50/100/200等高阶档；Enterprise定制。注：纯浏览器Web工具，无原生移动App。",
+  "verified_platform": "Web（浏览器内；无原生iOS/Android App）",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "AI代码生成（全栈）",
+    "浏览器内实时预览运行",
+    "一键部署（Netlify等）",
+    "多框架支持（React/Vue/Next.js/Svelte）",
+    "数据库集成",
+    "GitHub集成与协作"
+  ],
+  "verified_description": "StackBlitz推出的AI全栈Web应用构建工具，在浏览器内通过自然语言描述即可生成、运行并一键部署完整Web应用，适合快速原型开发。",
+  "content_flags": "价格字段'Pro $10/月'错误（实际Pro $20/月，内容表写$20正确，二者矛盾）；平台'Web / iOS / Android'错误（Bolt.new为纯浏览器Web工具，无原生移动App）；需修正价格与平台，非全文幻觉。",
+  "price_verified": true,
+  "verified_pros": [
+    "自然语言生成应用",
+    "浏览器内实时运行预览",
+    "一键部署上线",
+    "支持全栈开发",
+    "零配置开箱即用"
+  ],
+  "verified_cons": [
+    "生成代码质量一般，复杂项目受限",
+    "无原生移动App（纯Web）",
+    "免费额度有限",
+    "深度自定义/复杂项目能力有限",
+    "依赖网络环境"
+  ],
+  "verified_faq": [
+    {
+      "q": "Bolt.new能做什么？",
+      "a": "Bolt.new是全栈AI开发工具，浏览器内用自然语言描述即可生成完整Web应用，AI自动编写前端（React等）、后端与数据库代码并实时预览，支持一键部署，适合快速原型与MVP验证。"
+    },
+    {
+      "q": "Bolt.new和Cursor有什么区别？",
+      "a": "Bolt.new偏快速原型，描述需求即生成完整应用，适合非开发者与浏览器内验证；Cursor是代码编辑器，适合有基础者精细开发。想快速验证想法用Bolt.new，深度开发用Cursor。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "全栈开发",
+    "AI生成",
+    "付费"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://bolt.new/pricing",
+    "https://toolschool.ai/tools/bolt",
+    "https://toolquestor.com/zh/tool/boltnew",
+    "https://www.wingleung.me/2025/04/ai-coding-tool-bolt-new-web-app-development.html"
+  ],
+  "verify_notes": "官方域名bolt.new确认。原price'Pro $10/月'改为$20/月；原平台'Web/iOS/Android'改为Web（无原生移动App）。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "tongyi-lingma",
+      "cline",
+      "codex-cli"
+    ],
+    "verdict": "Bolt.new 与 通义灵码、Cline、Codex CLI 同属AI编程赛道。在性价比上，Bolt.new（免费版 + Pro $20/月）门槛更低；若看重口碑，Cline（4.7）评分更高；Bolt.new 的优势在于StackBlitz推出的AI全栈Web应用构建工具，在浏览器内用自然语言描述即可生成、运行并一键部署完整Web应用，适，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

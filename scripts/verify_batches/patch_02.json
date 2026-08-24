@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "panda-probe",
+    "description": "PandaProbe 是 Chirpz AI 推出的开源 AI 智能体（Agent）工程平台，面向开发者提供智能体的追踪、评测与监控能力。",
+    "content": "PandaProbe 是 Chirpz AI 推出的开源 AI 智能体（Agent）工程平台，面向开发者提供智能体的追踪（tracing）、评测（evaluation）与监控（monitoring）能力。它帮助团队在构建和调试 AI 智能体时观测每一步调用与执行情况，定位问题并评估运行质量，属于研发阶段的可观测性工具，而非面向普通用户的中文 AI 搜索或数据探测产品。官方站点为 pandaprobe.com。"
+  },
+  {
+    "slug": "sierra-ghostwriter",
+    "description": "Sierra Ghostwriter 是 Sierra 公司推出的智能体（Agent）构建平台，帮助企业打造面向客户体验的 AI 智能体。",
+    "content": "Sierra Ghostwriter 是 Sierra 公司的智能体（Agent）构建平台，让企业能够搭建和部署面向客户体验（Customer Experience）的 AI 智能体，用于处理客服、销售等对话式业务场景。它并非通用的 AI 写作助手，而是面向企业的对话式 AI 智能体开发工具。Sierra 的官方站点为 sierra.ai，Ghostwriter 是其智能体产品体系的一部分。"
+  },
+  {
+    "slug": "cloud-computer-manus",
+    "description": "Cloud Computer 是 AI 智能体平台 Manus（manus.im）提供的一项云端算力能力，作为其平台功能之一。",
+    "content": "Cloud Computer 是 Manus 智能体平台（manus.im）提供的一项云端算力功能，让用户能在云端环境中运行 AI 任务与各类应用，而非独立运营的云桌面产品。它是 Manus 整体能力的一部分，官方站点为 manus.im，并不存在单独的 cloudcomputermanus.com 独立站点。如需使用，应引导用户访问 manus.im 了解其 Cloud Computer 功能。"
+  },
+  {
+    "slug": "tabstack",
+    "description": "TabStack 是一款浏览器新标签页增强与书签管理工具，用可视化方式整理和收纳浏览器标签页。",
+    "content": "TabStack 是一款浏览器新标签页（new tab page）替换工具，主打可视化书签与标签页管理——可将当前窗口的所有标签一键收藏为分组，并用文件夹、颜色和页面进行归类整理。它完全免费，且明确不含 AI 功能（官方标注 “No gimmicky AI integration”），适合被大量标签页淹没、需要清爽管理浏览环境的用户。真实站点为 tabstack.co，并非 tabstack.io。"
+  },
+  {
+    "slug": "monid",
+    "description": "Monid 是面向 AI 智能体（Agent）的工具调用路由器与统一付费层，让 Agent 按需调用 200+ 外部数据接口。",
+    "content": "Monid（monid.ai）是面向 AI 智能体（Agent）的工具调用路由器与按调用付费平台。开发者无需为每个数据源单独注册订阅，Agent 可通过自然语言发现并调用 200 多个付费数据接口（如社交平台、网页搜索、电商数据等），所有费用从统一余额中按次扣除。它支持通过 MCP、CLI 或 HTTP API 接入，面向的是构建智能体的开发者，而非普通聊天用户。"
+  },
+  {
+    "slug": "nex-n2",
+    "description": "Nex-N2 是 Nex-AGI 开源的能动性（Agentic）大模型，专注于智能体编程、深度研究与工具调用等真实生产力任务。",
+    "content": "Nex-N2 是 Nex-AGI（上海）开源的能动性大模型（基础模型），基于 Qwen3.5 架构，提供 Pro（397B-A17B MoE）与 mini（35B-A3B）等规格，可在 HuggingFace / ModelScope 下载部署。它通过统一的“能动性思维（Agentic Thinking）”框架，在智能体编程、深度研究、工具调用与终端执行等真实工作流中表现突出，属于可部署的基础模型，并非面向普通用户的 AI 搜索或知识引擎产品。官方主页为 nex-agi.cn / nex.sii.edu.cn。"
+  }
+]

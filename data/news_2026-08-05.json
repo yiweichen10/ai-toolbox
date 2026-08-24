@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260805-001",
+    "title": "Swiftlet：在 Mac 上运行 80B 版 Qwen（内存 4.3 GB），在 iPhone 上运行 35B 版",
+    "summary": "Swiftlet 是一个 Swift + Metal 运行时，可在普通 Apple 设备上运行 Qwen3-Next 和 Qwen3.5/3.6 MoE 混合模型，仅将小型稠密核心驻留内存，按需从存储流式加载路由专家权重。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://github.com/leonickson1/Swiftlet",
+    "published_at": "2026-08-04T14:32:44+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260805-002",
+    "title": "在单颗 AMD MI300X 上运行 DeepSeek V4 Flash",
+    "summary": "一个开源仓库提供了在单颗 AMD MI300X 上生产运行 DeepSeek-V4-Flash-0731 的完整配置与补丁，无需额外量化或权重卸载。该 304B 参数模型在 192 GB HBM 上实现单流 168.6 tok/s 解码、8 并发流 542 tok/s 聚合吞吐，并验证了 256K 上下文。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
+    "published_at": "2026-08-04T20:56:45+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260805-003",
+    "title": "NVIDIA Alpamayo 2 Super 开放商用，面向 Robotaxi 与自动驾驶的前沿开源模型",
+    "summary": "NVIDIA Alpamayo 2 Super 现已开放商用，基于 Cosmos 3 Super Reasoner 构建，采用强化学习后训练，支持轨迹预测、因果链推理、元动作、自动标注及视觉问答等多任务输出。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "NVIDIA Blog（RSS）",
+    "source_url": "https://blogs.nvidia.com/blog/alpamayo-2-super-open-model-now-available",
+    "published_at": "2026-08-04T23:00:49+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260805-004",
+    "title": "Anthropic 与成立仅数月的云初创公司 Volta 签署 100 亿美元算力协议",
+    "summary": "Anthropic 与成立仅数月的云初创公司 Volta 签署 100 亿美元算力协议，约合每年 17 亿美元。Volta 估值 24 亿美元，硬件几乎全为租用：算力来自比特币矿商 Bitdeer 挪威 121MW 站点，芯片由 Nvidia 供应、Dell 组装。Anthropic 买的是交付速度，代价是承担超大规模云厂商合同从未有过的交易对手风险。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "X：Rohan Paul (@rohanpaul_ai)",
+    "source_url": "https://x.com/rohanpaul_ai/status/2084655258102546579",
+    "published_at": "2026-08-04T22:58:39+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260805-005",
+    "title": "Reflex 开源 XY：基于 Rust 的超快 Python 绘图库，可保持 1 亿点图表交互流畅",
+    "summary": "Reflex AI 发布 Apache-2.0 许可的 Python 交互式 2D 绘图库 XY，通过 Rust 原生核心、二进制缓冲传输和 WebGL2 渲染，在 1 万至 1 亿点范围内保持约 0.08 秒的渲染时间。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "MarkTechPost（RSS）",
+    "source_url": "https://www.marktechpost.com/2026/08/04/reflex-open-sources-xy-a-rust-backed-super-fast-python-charting-library-that-keeps-100-million-point-charts-interactive",
+    "published_at": "2026-08-04T16:57:47+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260805-006",
+    "title": "MiniMax-H3 通过 MLX 移植可在 Apple Silicon 上运行",
+    "summary": "MiniMax 发布 MiniMax-H3，一个可接受文本、图像、音频和视频并生成最长 15 秒带音频视频片段的通用全模态生成系统。Python 包 PipeNetwork/minimax-h3-mlx 将其移植到 MLX，支持 Apple Silicon 运行。作者在 M5 Max MacBook Pro 上实测，下载约 115 GB 模型文件，视频生成耗时不到 45 分钟。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "Simon Willison 博客",
+    "source_url": "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx",
+    "published_at": "2026-08-05T03:10:09+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260805-007",
+    "title": "商汤 SenseNova U1 开源：统一推理与图像生成",
+    "summary": "商汤发布开源模型 SenseNova U1，可在统一流程中同时进行推理与图像生成。其信息图模式可将单条提示词转为结构化幻灯片，交错模式则逐步生成图文内容，如演示六步画龙教程。模型已上线 SenseNova Studio、HuggingFace 及 GitHub。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "X：商汤 SenseTime (@SenseTime_AI)",
+    "source_url": "https://x.com/SenseTime_AI/status/2084667189479837741",
+    "published_at": "2026-08-04T23:46:03+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260805-008",
+    "title": "工信部发布首部 L3/L4自动驾驶系统安全要求强制性国标，2027年7月实施",
+    "summary": "工信部组织制定的《智能网联汽车 自动驾驶系统安全要求》（GB 44721-2026）强制性国家标准获批发布，拟于2027年7月1日起实施。这是我国首部针对 L3级有条件自动驾驶和 L4级高度自动驾驶系统的强制性国标，由2024年推荐性国标 GB/T 44721-2024升级而来，为自动驾驶产品明确了统一的安全准入基线。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "IT之家（RSS）",
+    "source_url": "https://www.ithome.com/0/985/665.htm",
+    "published_at": "2026-08-04T19:06:29+08:00",
+    "tags": [
+      "industry"
+    ]
+  }
+]

@@ -1,0 +1,152 @@
+{
+  "name": "Hera Launch",
+  "slug": "hera-launch",
+  "emoji": "🚀",
+  "color": "#6B4EE6",
+  "description": "Hera 是一款 AI 视频 / 动态图形生成工具，能把文字提示词或你的网站一键变成可用于产品发布与社媒的成片视频 / 动态图形，提供上百套模板，可在生成后编辑微调。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "AI部署"
+    },
+    {
+      "text": "应用启动"
+    },
+    {
+      "text": "开发者工具"
+    },
+    {
+      "text": "多模态AI",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.2",
+  "visits": "约8万月访问",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://hera.video",
+  "price": "免费版可用，付费版$29/月起",
+  "platform": "Web（网页端在线使用）。第三方信息提及提供 API。",
+  "pros": [
+    "一键部署多模态AI模型到生产环境",
+    "内置自动扩缩容机制，保障高可用性",
+    "提供完整的API接口和SDK，降低集成门槛",
+    "支持主流AI框架和模型，兼容性良好",
+    "实时监控和日志分析功能完善"
+  ],
+  "cons": [
+    "免费版功能受限，支持模型数量较少",
+    "文档和教程资源相对匮乏",
+    "国内访问速度可能不稳定"
+  ],
+  "features": [
+    "一键AI应用部署",
+    "多模态模型支持",
+    "自动扩缩容",
+    "API网关集成",
+    "实时监控与日志",
+    "团队协作与权限管理"
+  ],
+  "related": [
+    "replit-ai"
+  ],
+  "faq": [
+    {
+      "question": "Hera Launch支持哪些AI模型？",
+      "answer": "支持主流的LLM、图像生成、语音识别等模型，包括GPT系列、Claude、Stable Diffusion等。"
+    },
+    {
+      "question": "Hera Launch免费版有什么限制？",
+      "answer": "免费版每月有限额，支持部署1个应用，模型调用次数有限制，适合个人开发测试。"
+    },
+    {
+      "question": "如何将现有项目迁移到Hera Launch？",
+      "answer": "支持主流框架一键导入，提供迁移文档和CLI工具，通常10分钟内可完成迁移。"
+    },
+    {
+      "question": "Hera Launch适合哪些场景？",
+      "answer": "适合AI应用开发者、初创团队、需要快速将AI能力产品化的企业和个人开发者。"
+    }
+  ],
+  "seo_keywords": [
+    "Hera Launch",
+    "Hera Launch AI部署",
+    "Hera Launch怎么样",
+    "AI应用部署平台推荐",
+    "免费AI部署工具"
+  ],
+  "content": "## Hera Launch 是什么？\nHera 把自己定位为“你的 AI 动态设计师（AI Motion Designer）”。它做的事是把一段文字提示词，或者你自己的网站，变成可以直接拿去发布的产品视频 / 动态图形。不管是社媒短视频广告、产品发布片，还是需要图表、地图动画的说明视频，Hera 都提供上百套模板让你挑选和二次混编，生成后再手动微调细节。它面向的是市场、社媒、小微企业这类“需要高质量动效但请不起 / 等不起传统后期”的用户——过去做一条像样的动效往往要打开 After Effects 慢慢调，Hera 想把这个门槛压到“会写提示词就行”。\n\n## 核心功能\n\n- 提示词 / 网站生成视频：用自然语言描述想要的效果，或喂入网址，Hera 产出成片级视频内容，适合把落地页或产品卖点快速变成发布片。\n- 上百套模板：覆盖常见营销与说明场景，可探索、可 remix（混编）成新视频，不用从空白画布开始。\n- 生成后可编辑：官方强调“生成后还能编辑和个性化”，这是它区别于很多一键生成工具的地方——不满意的地方能改，而不是只能重新生成。\n- 图表、地图等动态图形：第三方评测特别提到它的 Charts、Graphics、Map 功能对数据类动画很实用，比如做带高亮的地图讲解、动态信息图。\n- 品牌化与风格控制：可调整颜色、风格，做贴合品牌的动画，对需要长期出统一调性内容的团队比较友好。\n\n## 定价\n\n采用免费 + 付费模式，美元计价。第三方聚合信息显示：免费版每月 50 次 AI 提示、含基础模板；Starter 约 $12/月（100 提示、优先队列）；Pro 约 $24/月（250 提示、完整模板库）；Mega 约 $54/月（不限量提示、企业功能）。需注意：Hera 官方定价页（hera.video/pricing）目前返回 404，以上价格来自第三方工具站，且不同站点数字略有出入（另有站点给出 Pro $40 / Mega $100），具体以下单时官网显示为准。\n\n## 适合谁\n\n- 内容创作者、YouTuber、市场 / 社媒运营，需要频繁出短视频广告或片头片尾\n- 需要快速出品牌动效的小微企业\n- 做数据可视化、地图类说明视频的人，看中它的 Charts / Map 能力\n\n不太适合：需要关键帧级手动精修、复杂影视特效，或依赖完整 3D 动画系统的专业动画师；它更偏“快出成品”，不是传统动画软件的替代品。\n\n## 小结\n\nHera 把“做动效”的门槛压得很低——会写提示词就能出片，还能事后微调，对营销和说明类视频很实用。先免费用 50 次提示感受模板和生成质量；若你经常要出品牌短视频，再考虑付费档。价格请以下单时官网显示为准，别直接引用第三方聚合数字下单。如果要做数据类视频，优先试它的 Charts / Map 模板；做品牌广告则先把品牌色和 logo 风格喂进去，生成后再微调，往往比从零描述更高效。\n\n## 常见问题（FAQ）\n\n**Hera 是什么？**\n\nHera 是 AI 动态设计平台，定位为 Your AI Motion Designer，将提示词或网站变成可编辑的产品发布 / 社媒视频与动态图形。\n\n**Hera 适合哪些场景？**\n\n适合市场、社媒、小微企业快速出品牌短视频、产品发布片与数据类说明视频。\n\n**Hera Launch 是什么？**\n\nHera Launch 是 Hera 中面向产品发布视频的工作流 / 模式，主打代码级可编辑的发布视频。",
+  "published": true,
+  "created_date": "2026-05-02",
+  "published_date": "2026-05-02",
+  "verified_url": "https://hera.video",
+  "verified_publisher": "Hera（Y Combinator S25 团队）",
+  "verified_what": "AI 动态设计 / 产品发布视频工具（Your AI Motion Designer），把文字提示或网站变成可用于产品发布与社媒的成片动态图形，生成后仍可编辑。",
+  "verified_price": "免费版 + 付费档；第三方评测显示 Standard $12/月（年付，月付 $20）、Pro $24/月（月付 $40）、Mega $60/月（月付 $100），具体以官网为准。",
+  "verified_platform": "Web",
+  "last_verified": "2026-07-31",
+  "confidence": "medium",
+  "conflict": false,
+  "verified_features": [
+    "提示词 / 网站一键生成产品视频与动态图形",
+    "100+ 可混编（remix）模板",
+    "生成后可编辑微调（文本、颜色、时序、构成）",
+    "Charts / Graphics / Map 数据类动态图形",
+    "品牌化与风格控制"
+  ],
+  "verified_description": "Hera 是一款 AI 视频 / 动态图形生成工具，能把文字提示词或你的网站一键变成可用于产品发布与社媒的成片视频 / 动态图形，提供上百套模板，可在生成后编辑微调。",
+  "content_flags": "原 features / pros / cons / faq 描述成 AI 应用部署平台（一键部署多模态模型、自动扩缩容、API 网关、实时监控日志），与真实定位（AI 视频/动态图形）严重不符，需整体替换。",
+  "verified_rating": "⭐4.2",
+  "rating_source": "编辑评分，暂无权威外部星级（第三方评测提及约 4.9/5 跨 127 条评价）",
+  "verified_pros": [
+    "会写提示词即可出片，门槛低",
+    "生成后仍可编辑，区别于纯一键生成工具",
+    "模板丰富，适合营销与说明类视频",
+    "Charts / Map 对数据动画实用"
+  ],
+  "verified_cons": [
+    "免费版功能受限",
+    "官方定价页曾返回 404，跨站点价格略有出入",
+    "偏快出成品，非关键帧级专业动画软件替代"
+  ],
+  "verified_faq": [
+    {
+      "q": "Hera 是什么？",
+      "a": "Hera 是 AI 动态设计平台，定位为 Your AI Motion Designer，将提示词或网站变成可编辑的产品发布 / 社媒视频与动态图形。"
+    },
+    {
+      "q": "Hera 适合哪些场景？",
+      "a": "适合市场、社媒、小微企业快速出品牌短视频、产品发布片与数据类说明视频。"
+    },
+    {
+      "q": "Hera Launch 是什么？",
+      "a": "Hera Launch 是 Hera 中面向产品发布视频的工作流 / 模式，主打代码级可编辑的发布视频。"
+    }
+  ],
+  "verified_tags": [
+    "AI视频",
+    "动态图形",
+    "产品视频",
+    "动画",
+    "营销视频"
+  ],
+  "verified_category": "AI视频",
+  "source_urls": [
+    "https://hera.video",
+    "https://hera-video-review.com/",
+    "https://www.creativeainews.com/articles/hera-launch-ai-product-launch-videos-prompt"
+  ],
+  "verify_notes": "launch.hera.video 应为 Hera Launch 模式入口，官方主域 hera.video；原长文 content 对视频/动态图形的描述准确，无需重写。",
+  "content_verified": false,
+  "url_previous": "https://launch.hera.video",
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "Hera Launch 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Hera Launch 的 一键AI应用部署 是亮点，价格 免费版可用，付费版$29/月起；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

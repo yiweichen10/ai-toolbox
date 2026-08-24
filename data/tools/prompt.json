@@ -1,0 +1,77 @@
+{
+  "name": "PromptFolder",
+  "slug": "prompt",
+  "positioning": "免费AI提示词工具：提示词保存与个人库管+Chrom",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#8b5cf6",
+  "description": "AI提示词生成和管理工具",
+  "category": "AI提示词",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI提示词"
+    },
+    {
+      "text": "PromptFolder"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://prompt.noonshot.com/",
+  "price": "免费版/付费版",
+  "platform": "Web",
+  "pros": [
+    "核心功能完全免费，注册即用",
+    "可视化设计器大幅降低 Midjourney 入门门槛",
+    "提示词可保存、编辑、复用",
+    "附带 ChatGPT 检测器等免费小工具",
+    "无需写代码或学习复杂提示词语法"
+  ],
+  "cons": [
+    "主要面向 Midjourney，对其他图像生成器支持有限",
+    "保存提示词需要注册账户",
+    "功能相比综合 AI 平台较为简单",
+    "更新节奏受 PromptFolder 整体规划影响"
+  ],
+  "features": [
+    "Midjourney可视化提示词设计",
+    "提示词保存与个人库管理",
+    "Midjourney Prompt Helper",
+    "ChatGPT AI内容检测",
+    "AI YouTube视频摘要",
+    "Chrome扩展斜杠调用"
+  ],
+  "related": [
+    "promptpilot",
+    "explinks-prompts",
+    "prompt-engineering-guide"
+  ],
+  "content": "## PromptFolder 是什么？\n\nPromptFolder（原 Noonshot.com）是一款专注于 Midjourney 的 AI 提示词生成与管理工具，现已并入 PromptFolder 平台。它通过可视化提示词设计器，把复杂的 Midjourney 提示词编写变成\"点选组合\"，让不懂提示词语法的新手也能轻松生成高质量 AI 绘画提示词。\n\n除了核心的 Midjourney 提示词功能外，PromptFolder 还提供 AI 内容检测、YouTube 视频摘要等免费小工具，并推出了 Chrome 扩展，可以在 ChatGPT 中用斜杠命令快速调用保存的提示词。整体定位是\"提示词创作 + 管理\"的一站式免费工具。\n\n### 核心功能\n\n- **可视化 Midjourney 提示词设计器**：通过引导式界面点选组合风格、主体、参数，自动生成完整的 Midjourney 提示词。\n- **提示词保存与管理**：将生成的提示词保存到个人账户，随时编辑、归类、复用，逐步积累属于自己的提示词库。\n- **Midjourney Prompt Helper**：帮助探索不同风格与复杂参数，是 Midjourney 用户的常用辅助工具。\n- **ChatGPT 检测器**：免费检测文本是否由 AI 生成，适合内容审核场景。\n- **AI YouTube 摘要器**：粘贴视频链接即可快速生成视频内容摘要，节省观看时间。\n- **Chrome 扩展**：在 ChatGPT 中输入斜杠（/）即可调出保存的提示词，加速日常调用。\n\n### 适用场景\n\n- **Midjourney AI 绘画用户**：不会写复杂提示词、希望快速提升出图质量的绘画爱好者，用可视化设计器组合提示词。\n- **需要保存提示词库的创作者**：把反复使用的成功提示词保存到个人账户，下次直接调用，保证作品风格一致。\n- **多工具效率用户**：需要 AI 文本检测或 YouTube 视频摘要，可作为顺手的免费辅助工具。\n\n### 价格\n\nPromptFolder 的核心提示词功能免费，注册账户即可保存和管理提示词；另有 ChatGPT 检测器、YouTube 摘要器等免费工具。更多高级功能与具体付费档位以官网为准。",
+  "published": true,
+  "faq": [
+    {
+      "q": "prompt.noonshot.com 是什么？",
+      "a": "它原本是 Noonshot.com 的 Midjourney 提示词设计工具，已被 PromptFolder 收购并整合，现在是一款免费、可视化的 Midjourney 提示词生成与管理工具。"
+    },
+    {
+      "q": "PromptFolder 收费吗？",
+      "a": "核心提示词功能免费，注册账户即可保存、管理和复用提示词；具体高级功能与价格以官网为准。"
+    },
+    {
+      "q": "能用于其他 AI 绘画模型吗？",
+      "a": "主要针对 Midjourney 设计；使用其他图像生成器的用户建议结合各自模型语法另行适配。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://prompt.noonshot.com/?utm_source=ai-bot.cn",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "verify_notes": "来源 ai-bot.cn 收录页采集；官网可达性验证：HTTP 200",
+  "seo_keywords": [
+    "Midjourney提示词",
+    "PromptFolder",
+    "Midjourney提示词生成器",
+    "AI绘画提示词",
+    "提示词管理"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "name": "TrojAI",
+  "slug": "trojai",
+  "emoji": "🔒",
+  "color": "#005A9C",
+  "description": "TrojAI Inc. 的企业级 Agentic AI 安全平台：统一发现、测试并保护 AI 智能体全生命周期，含红队测试、运行时防御、MCP 安全与员工 AI 使用保护，支持自托管。",
+  "category": "AI行业应用",
+  "tags": [
+    "AI安全",
+    "Agentic AI",
+    "红队测试",
+    "MCP安全",
+    "企业安全"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {},
+  "url": "https://troj.ai/",
+  "price": "企业定制",
+  "platform": "Python / CLI / Web",
+  "pros": [
+    "专为 Agentic AI 原生威胁设计（非传统安全工具改造）",
+    "支持完全自托管，数据留在企业内",
+    "企业级（服务 Fortune 100 金融客户）"
+  ],
+  "cons": [
+    "企业级定价不公开",
+    "主要面向大型企业"
+  ],
+  "features": [
+    "AI 资产发现：覆盖自有/第三方/桌面 Agent 与模型",
+    "红队测试（AI Red Teaming）：构建期评估注入攻击、越狱、数据泄露等风险",
+    "运行时防御：实时拦截提示注入、敏感数据泄露与违规输出",
+    "MCP 安全：全量监控 MCP 流量、拦截恶意 MCP 服务器与未授权工具调用",
+    "员工 AI 使用保护：实时检查 GenAI 使用、防止 PII 泄露",
+    "合规对齐 OWASP / MITRE / NIST，支持自托管"
+  ],
+  "related": [
+    "lakera-guard",
+    "prompt-armor"
+  ],
+  "faq": [
+    {
+      "q": "TrojAI 是什么？",
+      "a": "TrojAI Inc. 的企业级 AI 安全平台（troj.ai），口号是「Agentic AI 的安全平台」：统一发现、测试并保护企业内的 AI 智能体、模型与工具，覆盖构建期到运行期。"
+    },
+    {
+      "q": "与 MITRE TrojAI 有什么关系？",
+      "a": "troj.ai 是 TrojAI Inc. 的商业产品；MITRE/NIST 主导的开源项目（trojai.mitre.org）是同名不同项目，两者不要混淆。"
+    },
+    {
+      "q": "支持私有化部署吗？",
+      "a": "支持，TrojAI 提供完全本地（on-prem）部署选项，确保数据留在企业内。"
+    }
+  ],
+  "seo_keywords": [
+    "TrojAI",
+    "TrojAI怎么样",
+    "TrojAI免费版",
+    "TrojAI使用教程",
+    "TrojAI和哪个好"
+  ],
+  "content": "## TrojAI 是什么？\n\n企业级 Agentic AI 安全平台：一个平台完成 AI 智能体的发现、测试与保护，覆盖构建期到运行期，含红队测试、运行时防御与 MCP 安全。\n\nTrojAI Inc. 的企业级 Agentic AI 安全平台：统一发现、测试并保护 AI 智能体全生命周期，含红队测试、运行时防御、MCP 安全与员工 AI 使用保护，支持自托管。\n\n## 核心功能\n\n- AI 资产发现：覆盖自有/第三方/桌面 Agent 与模型\n- 红队测试（AI Red Teaming）：构建期评估注入攻击、越狱、数据泄露等风险\n- 运行时防御：实时拦截提示注入、敏感数据泄露与违规输出\n- MCP 安全：全量监控 MCP 流量、拦截恶意 MCP 服务器与未授权工具调用\n- 员工 AI 使用保护：实时检查 GenAI 使用、防止 PII 泄露\n- 合规对齐 OWASP / MITRE / NIST，支持自托管\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 企业定制报价（需联系销售；支持自托管部署）。 |\n| 支持平台 | Web（SaaS）/ 自托管（On-prem） |\n| 评分 | ⭐ 4.5 |\n| 开发商 | TrojAI Inc. |\n\n## 价格与平台\n\n- **价格**：企业定制报价（需联系销售；支持自托管部署）。\n- **平台**：Web（SaaS）/ 自托管（On-prem）\n- **官网**：https://troj.ai/\n\n## 优缺点分析\n\n### 优点\n\n- 专为 Agentic AI 原生威胁设计（非传统安全工具改造）\n- 支持完全自托管，数据留在企业内\n- 企业级（服务 Fortune 100 金融客户）\n\n### 缺点\n\n- 企业级定价不公开\n- 主要面向大型企业\n\n## 常见问题（FAQ）\n\n**TrojAI 是什么？**\n\nTrojAI Inc. 的企业级 AI 安全平台（troj.ai），口号是「Agentic AI 的安全平台」：统一发现、测试并保护企业内的 AI 智能体、模型与工具，覆盖构建期到运行期。\n\n**与 MITRE TrojAI 有什么关系？**\n\ntroj.ai 是 TrojAI Inc. 的商业产品；MITRE/NIST 主导的开源项目（trojai.mitre.org）是同名不同项目，两者不要混淆。\n\n**支持私有化部署吗？**\n\n支持，TrojAI 提供完全本地（on-prem）部署选项，确保数据留在企业内。\n\n\n## 最终结论\n\nTrojAI 是AI行业应用领域的一款 AI 工具，其核心优势在于专为 Agentic AI 原生威胁设计（非传统安全工具改造）。\n此外，支持完全自托管，数据留在企业内。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "source_url": "https://trojai.mitre.org",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "同名产品冲突：TrojAI 为 MITRE/NIST 主导的开源 AI 安全工具集（检测模型后门/对抗攻击）；另存在同名商业公司 Trojanic/TrojAI Inc. 提供 AI 信任与安全平台，同名歧义，待最终裁决删/留。",
+  "verified_url": "https://troj.ai/",
+  "verified_publisher": "TrojAI Inc.",
+  "verified_what": "企业级 Agentic AI 安全平台：一个平台完成 AI 智能体的发现、测试与保护，覆盖构建期到运行期，含红队测试、运行时防御与 MCP 安全。",
+  "verified_price": "企业定制报价（需联系销售；支持自托管部署）。",
+  "verified_platform": "Web（SaaS）/ 自托管（On-prem）",
+  "verified_features": [
+    "AI 资产发现：覆盖自有/第三方/桌面 Agent 与模型",
+    "红队测试（AI Red Teaming）：构建期评估注入攻击、越狱、数据泄露等风险",
+    "运行时防御：实时拦截提示注入、敏感数据泄露与违规输出",
+    "MCP 安全：全量监控 MCP 流量、拦截恶意 MCP 服务器与未授权工具调用",
+    "员工 AI 使用保护：实时检查 GenAI 使用、防止 PII 泄露",
+    "合规对齐 OWASP / MITRE / NIST，支持自托管"
+  ],
+  "verified_description": "TrojAI Inc. 的企业级 Agentic AI 安全平台：统一发现、测试并保护 AI 智能体全生命周期，含红队测试、运行时防御、MCP 安全与员工 AI 使用保护，支持自托管。",
+  "content_flags": "原条目（MITRE/NIST 开源工具集）与同名商业产品混淆；经用户确认 troj.ai 可访问且为真实商业产品，已按 troj.ai 重写。",
+  "price_verified": true,
+  "verified_pros": [
+    "专为 Agentic AI 原生威胁设计（非传统安全工具改造）",
+    "支持完全自托管，数据留在企业内",
+    "企业级（服务 Fortune 100 金融客户）"
+  ],
+  "verified_cons": [
+    "企业级定价不公开",
+    "主要面向大型企业"
+  ],
+  "verified_faq": [
+    {
+      "q": "TrojAI 是什么？",
+      "a": "TrojAI Inc. 的企业级 AI 安全平台（troj.ai），口号是「Agentic AI 的安全平台」：统一发现、测试并保护企业内的 AI 智能体、模型与工具，覆盖构建期到运行期。"
+    },
+    {
+      "q": "与 MITRE TrojAI 有什么关系？",
+      "a": "troj.ai 是 TrojAI Inc. 的商业产品；MITRE/NIST 主导的开源项目（trojai.mitre.org）是同名不同项目，两者不要混淆。"
+    },
+    {
+      "q": "支持私有化部署吗？",
+      "a": "支持，TrojAI 提供完全本地（on-prem）部署选项，确保数据留在企业内。"
+    }
+  ],
+  "verified_tags": [
+    "AI安全",
+    "Agentic AI",
+    "红队测试",
+    "MCP安全",
+    "企业安全"
+  ],
+  "verified_category": "AI行业应用",
+  "source_urls": [
+    "https://troj.ai/",
+    "https://docs.troj.ai/overview/what-is-trojai",
+    "https://troj.ai/platform"
+  ],
+  "verify_notes": "用户确认 troj.ai 可访问；已核实为 TrojAI Inc. 商业 Agentic AI 安全平台并重写。",
+  "url_previous": "https://trojai.mitre.org",
+  "compare_section": {
+    "competitors": [
+      "duolingo-max",
+      "harvey-ai",
+      "schole-ai"
+    ],
+    "verdict": "TrojAI 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：TrojAI 的 AI 资产发现：覆盖自有/第三方/桌面 Agent 与大模型 是亮点，价格 企业定制；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-09",
+  "created_date": "2026-08-09"
+}

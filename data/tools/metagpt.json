@@ -1,0 +1,165 @@
+{
+  "name": "MetaGPT",
+  "slug": "metagpt",
+  "positioning": "免费AI智能体平台，Data+多LLM支持好用吗",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#7C3AED",
+  "description": "MetaGPT是一个基于LLM的开源多智能体软件开发框架(MIT许可)，模拟软件公司的产品经理、架构师、工程师、QA等角色协作，将自然语言需求转化为PRD、设计文档和可运行代码。2025年推出商业版MGX。截至2026年GitHub约50K星标，但开发活跃度已放缓。",
+  "category": "AI智能体",
+  "tags": [
+    "多智能体框架",
+    "AI编程",
+    "代码生成",
+    "开源框架",
+    "软件开发自动化",
+    "LLM Agent"
+  ],
+  "rating": "4.7",
+  "visits": "85万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/FoundationAgents/MetaGPT",
+  "price": "免费开源(需自备API Key) / MGX商业版按官网定价",
+  "platform": "Web / GitHub / Python",
+  "pros": [
+    "首创'AI软件公司'多智能体范式，学术论文被ICLR 2024接收",
+    "开源免费(MIT)，可自部署，完全控制代码和数据",
+    "从需求到代码的全流程覆盖，含设计文档和架构图",
+    "支持多种LLM后端，不锁定单一供应商",
+    "MGX商业版提供更友好的产品化体验"
+  ],
+  "cons": [
+    "2026年开源仓库活跃度显著下降(最后一次提交2026年1月)，最新tag v0.8.2(2025年3月)",
+    "复杂大型项目处理能力有限，上下文丢失问题仍存",
+    "Python 3.9至<3.12版本限制，部分环境兼容性差",
+    "对提示词质量和任务描述依赖性高",
+    "团队重心可能已转向MGX商业产品"
+  ],
+  "features": [
+    "角色扮演多智能体: 产品经理(PRD)、架构师(设计文档)、工程师(代码)、QA(测试)等预设角色",
+    "SOP驱动协作: Code = SOP(Team)核心理念，标准化软件开发流程",
+    "一句话需求→完整项目: 输入一行需求，输出完整项目结构、代码和文档",
+    "Data Interpreter: 数据分析代理，自动进行数据处理和可视化",
+    "多LLM支持: OpenAI、Azure、Ollama、Groq等，通过config2.yaml配置",
+    "MGX(MetaGPT X): 2025年商业版自然语言编程产品，ProductHunt周冠军"
+  ],
+  "related": [
+    "claude-code",
+    "openai-codex",
+    "aider",
+    "trae",
+    "devin-ai"
+  ],
+  "faq": [
+    {
+      "q": "MetaGPT是免费的吗？",
+      "a": "开源框架免费(MIT许可证)，可pip install直接使用，需自备LLM API密钥(OpenAI/Claude等)。MGX商业产品需付费。"
+    },
+    {
+      "q": "MetaGPT和Devin AI有什么区别？",
+      "a": "MetaGPT是开源多智能体协作框架(MIT许可)，模拟团队协作开发；Devin AI是商业AI程序员产品，端到端代码执行和调试。MetaGPT输出更偏结构化工程产物(PRD+设计+代码)，Devin更偏自主完成任务。"
+    },
+    {
+      "q": "MetaGPT需要什么Python版本？",
+      "a": "Python 3.9或以上但低于3.12(python --version检查)。推荐使用conda创建环境: conda create -n metagpt python=3.9。"
+    },
+    {
+      "q": "MetaGPT仓库为什么2026年不怎么更新了？",
+      "a": "开源仓库最后提交为2026年1月，团队可能已将重心转向商业产品MGX(mgx.dev，2025年2月上线，获ProductHunt周冠军)。开源版仍可用但不活跃维护。"
+    }
+  ],
+  "seo_keywords": [
+    "MetaGPT",
+    "MetaGPT教程",
+    "MetaGPT多智能体",
+    "MetaGPT开源项目",
+    "AI软件开发框架推荐"
+  ],
+  "content": "## MetaGPT是什么？\n\n简单说，MetaGPT是一个让AI帮你写代码的框架，但它不是那种你扔一句\"帮我写个登录功能\"就完事的工具。它模拟了一个真实软件团队的工作方式——产品经理分析需求、架构师画图设计、开发者写代码、测试工程师写用例，各个角色各司其职，配合完成从需求到可运行代码的全过程。\n\n它的核心思路挺有意思：不只是让一个大语言模型闷头写代码，而是把开发过程拆分成多个\"岗位\"，每个岗位由一个AI代理负责，不同角色之间会\"沟通\"、会\"对齐\"，像真正的小团队一样协作。\n\n## 核心功能\n\n**1. 角色扮演式多智能体协作**\n\nMetaGPT内置了产品经理、架构师、开发者、测试工程师等角色。你提一个需求，系统会自动分配给这些角色，它们会互相交流、逐步推进项目。实际用起来会有一种\"看着一个虚拟团队开会讨论\"的既视感，适合理解需求如何变成具体实现。\n\n**2. 需求到代码的完整流程**\n\n从你输入需求描述开始，它会先产出需求文档，然后生成设计文档、画出架构图，接着写代码、生成测试用例，最后给你一个可运行的项目结构。相当于一条龙服务，省去了中间很多对接的功夫。\n\n**3. 自动生成设计文档和架构图**\n\n这个功能对新手比较友好，尤其是不知道如何开始一个项目时，它可以自动产出结构化的设计文档。不过具体质量取决于你描述需求的精细程度。\n\n**4. 代码审查和测试生成**\n\n代码写完后，系统会自动进行代码审查，并生成对应的测试用例。这相当于有个帮你兜底的人，虽然不能完全替代人工review，但能catch到一些基础问题。\n\n**5. 支持自定义角色和可配置的SOP流程**\n\n如果你有特殊的团队角色需求，可以自己定义智能体的行为。SOP流程也可以根据项目特点调整，灵活度比较高，适合有定制化需求的团队。\n\n## 版本/套餐对比\n\n| 版本 | 定位 | 适合场景 | 核心差异 |\n|------|------|----------|----------|\n| **MetaGPT（开源版）** | 基础版 | 个人开发者体验、小项目 | 免费开源，可自部署，基础功能完整 |\n| **MetaGPT Pro** | 专业版 | 中小团队正式项目 | 更高并发支持、优先算力、进阶SOP模板 |\n| **MetaGPT Enterprise** | 企业版 | 大型组织、复杂项目 | 私有化部署、专属支持、定制化开发流程 |\n\n## 值不值得用？\n\n**优点：**\n\n- 多智能体协作的思路确实比单一大模型写代码更接近真实开发流程，产出更有结构\n- 开源免费这点很友好，想自己部署、魔改都可以\n- 支持多种编程语言和框架，不挑技术栈\n- 社区比较活跃，文档也相对完善，遇到问题能找到不少参考\n\n**缺点：**\n\n- 复杂项目的处理能力还是有限，大项目容易出现上下文丢失的情况\n- 对提示词质量要求比较高，需求描述得越详细，产出才越好\n- 确实需要一定的技术背景才能用得顺手，纯新手可能会有落差\n- 模拟归模拟，生成的代码还是需要人工review和调整\n\n**结论：** 作为一个辅助开发工具，MetaGPT在中小规模项目上表现还不错，能帮你快速搭个框架、写写基础代码。但如果你期待它直接交付一个生产级项目，目前还不现实。它更像是一个帮你起头的助手，而不是一个能完全替代开发者的存在。\n\n## 使用建议\n\n1. **需求描述要具体。** 别只说\"做个电商系统\"，试着拆分成\"用户登录注册、商品展示、购物车、订单管理\"这样的小模块，分步输入效果更好。\n\n2. **用它来起头，不是来收尾。** 生成的代码当作初稿，自己再根据实际情况调整，而不是直接上线。\n\n3. **从小项目开始熟悉。** 建议先用简单的需求试试水，摸清楚它的脾气和能力边界，再用到更复杂的项目上。\n\n4. **关注提示词的优化。** 同一个需求，不同的写法产出质量可能差很多，这是提升效果的关键。\n\n## 适合谁用？\n\n**推荐：**\n\n- 有一定技术基础的开发者，想体验AI辅助编程\n- 中小团队想快速验证想法、搭建原型\n- 对多智能体协作感兴趣的研究者\n\n**可考虑：**\n\n- 技术团队负责人，想引入AI开发工具但预算有限\n- 开源爱好者，愿意自己部署和调优\n\n**不推荐：**\n\n- 完全没有技术背景的小白，期待输入需求就收获完整产品\n- 需要生产级、高可靠性代码的大型项目\n- 对代码质量要求极其严苛、无法接受AI生成结果需要review的团队",
+  "published": true,
+  "created_date": "2026-06-06",
+  "published_date": "2026-06-06",
+  "verified_url": "https://github.com/FoundationAgents/MetaGPT",
+  "verified_publisher": "DeepWisdom (深思维) / FoundationAgents, 创始人: Alexander Wu",
+  "verified_what": "MetaGPT是一个基于LLM的开源多智能体软件开发框架，通过模拟软件公司中产品经理、架构师、工程师、QA等角色协作，将一句话需求转化为用户故事、设计文档、API规范和可运行代码。2025年推出商业产品MGX(mgx.dev)。",
+  "verified_price": "开源框架: 免费(MIT许可证)、自部署、需自备LLM API Key; MGX商业产品(mgx.dev): 商业版定价需查看官网。元框架不收费，仅产生LLM API调用费用。",
+  "verified_platform": "Python(pip install metagpt) / CLI / Docker",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "角色扮演多智能体: 产品经理(PRD)、架构师(设计文档)、工程师(代码)、QA(测试)等预设角色",
+    "SOP驱动协作: Code = SOP(Team)核心理念，标准化软件开发流程",
+    "一句话需求→完整项目: 输入一行需求，输出完整项目结构、代码和文档",
+    "Data Interpreter: 数据分析代理，自动进行数据处理和可视化",
+    "多LLM支持: OpenAI、Azure、Ollama、Groq等，通过config2.yaml配置",
+    "MGX(MetaGPT X): 2025年商业版自然语言编程产品，ProductHunt周冠军"
+  ],
+  "verified_description": "MetaGPT是一个基于LLM的开源多智能体软件开发框架(MIT许可)，模拟软件公司的产品经理、架构师、工程师、QA等角色协作，将自然语言需求转化为PRD、设计文档和可运行代码。2025年推出商业版MGX。截至2026年GitHub约50K星标，但开发活跃度已放缓。",
+  "content_flags": "1) 仓库URL应为FoundationAgents/MetaGPT(geekan/MetaGPT仍可用但已迁移); 2) 分类'AI编程'应更正为'AI智能体'(本质是多智能体框架); 3) 声称'2026年已支持更复杂的项目架构和多模态任务处理'缺乏最新commit支撑; 4) 未提及开发活跃度下降和MGX商业产品分流; 5) visits/星标混淆(50K星标非85万访问)",
+  "price_verified": true,
+  "verified_rating": "4.7",
+  "rating_source": "GitHub星标与社区评价(约50K星标，但2026年活跃度下降)",
+  "rating_verified": true,
+  "verified_pros": [
+    "首创'AI软件公司'多智能体范式，学术论文被ICLR 2024接收",
+    "开源免费(MIT)，可自部署，完全控制代码和数据",
+    "从需求到代码的全流程覆盖，含设计文档和架构图",
+    "支持多种LLM后端，不锁定单一供应商",
+    "MGX商业版提供更友好的产品化体验"
+  ],
+  "verified_cons": [
+    "2026年开源仓库活跃度显著下降(最后一次提交2026年1月)，最新tag v0.8.2(2025年3月)",
+    "复杂大型项目处理能力有限，上下文丢失问题仍存",
+    "Python 3.9至<3.12版本限制，部分环境兼容性差",
+    "对提示词质量和任务描述依赖性高",
+    "团队重心可能已转向MGX商业产品"
+  ],
+  "verified_faq": [
+    {
+      "q": "MetaGPT是免费的吗？",
+      "a": "开源框架免费(MIT许可证)，可pip install直接使用，需自备LLM API密钥(OpenAI/Claude等)。MGX商业产品需付费。"
+    },
+    {
+      "q": "MetaGPT和Devin AI有什么区别？",
+      "a": "MetaGPT是开源多智能体协作框架(MIT许可)，模拟团队协作开发；Devin AI是商业AI程序员产品，端到端代码执行和调试。MetaGPT输出更偏结构化工程产物(PRD+设计+代码)，Devin更偏自主完成任务。"
+    },
+    {
+      "q": "MetaGPT需要什么Python版本？",
+      "a": "Python 3.9或以上但低于3.12(python --version检查)。推荐使用conda创建环境: conda create -n metagpt python=3.9。"
+    },
+    {
+      "q": "MetaGPT仓库为什么2026年不怎么更新了？",
+      "a": "开源仓库最后提交为2026年1月，团队可能已将重心转向商业产品MGX(mgx.dev，2025年2月上线，获ProductHunt周冠军)。开源版仍可用但不活跃维护。"
+    }
+  ],
+  "verified_tags": [
+    "多智能体框架",
+    "AI编程",
+    "代码生成",
+    "开源框架",
+    "软件开发自动化",
+    "LLM Agent"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://github.com/FoundationAgents/MetaGPT",
+    "https://hivebook.wiki/wiki/metagpt-multi-agent-framework-simulating-a-software-company",
+    "https://mgx.dev"
+  ],
+  "verify_notes": "MetaGPT的开源维护已明显放缓(最后提交2026年1月,最新tag v0.8.2于2025年3月)。2025年团队推出MGX商业产品并获ProductHunt周冠军，可能已转向商业化。建议更新条目以反映这一状态变化。分类应从'AI编程'改为'AI智能体'。",
+  "content_verified": true,
+  "url_previous": "https://github.com/geekan/MetaGPT",
+  "compare_section": {
+    "competitors": [
+      "crew-ai",
+      "openai-agents-sdk",
+      "qwen-agent"
+    ],
+    "verdict": "MetaGPT 与 CrewAI、OpenAI Agents SDK、Qwen-Agent 同属AI智能体赛道。在性价比上，MetaGPT（免费开源(需自备API Key) / MGX商业版按官网定价）门槛更低；口碑方面，MetaGPT（4.7）领先；MetaGPT 的优势在于MetaGPT是一个基于LLM的开源多智能体软件开发框架，通过模拟软件公司中产品经理、架构师、工程师、QA等角色协作，将，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "name": "Huddle01 VMs",
+  "slug": "huddle01-vms",
+  "emoji": "🎥",
+  "color": "#6C5CE7",
+  "description": "Huddle01 VMs是面向AI代理的MCP原生虚拟机（云算力）产品，用户或通过Claude/Cursor等支持MCP的工具用自然语言即可秒级创建并部署虚拟机，按秒计费，主打比主流云厂商低约70%的成本。",
+  "category": "AI智能体",
+  "tags": [
+    "云算力",
+    "AI基础设施",
+    "虚拟机",
+    "MCP",
+    "开发者工具"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "约12万/月",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://get.huddle01.com",
+  "price": "按秒计费，约$0.018/小时起",
+  "platform": "Web浏览器（Chrome、Firefox、Safari）、iOS/Android移动端",
+  "pros": [
+    "MCP原生，AI代理可自主部署，门槛极低",
+    "按秒计费，无闲置费、无出网加价",
+    "约比主流云厂商低70%成本",
+    "AMD EPYC裸金属性能，NVMe高IOPS",
+    "全球边缘节点低延迟"
+  ],
+  "cons": [
+    "与Huddle01早期“去中心化视频会议”品牌认知易混淆",
+    "面向开发者/AI代理，并非普通视频会议工具",
+    "企业级功能与合规依区域而异",
+    "新品牌，生态与文档仍在完善"
+  ],
+  "features": [
+    "MCP原生：AI代理用自然语言创建/部署VM（Claude Code/Cursor/Zed等）",
+    "AMD EPYC专用vCPU，NVMe无节流存储",
+    "按秒计费，无限出网流量，无出网加价",
+    "全球区域（亚太/欧洲/北美）低延迟",
+    "SSH密钥 + 公网IP + URL",
+    "控制台/CLI/MCP三种使用方式",
+    "支持Python脚本、Next.js等应用部署"
+  ],
+  "related": [
+    "notion-ai",
+    "descript"
+  ],
+  "faq": [
+    {
+      "q": "Huddle01 VMs是什么？",
+      "a": "它是面向AI代理的MCP原生虚拟机（云算力）产品，不是视频会议工具。你或你的AI代理用一句话即可创建并部署虚拟机，按秒计费。"
+    },
+    {
+      "q": "Huddle01 VMs怎么计费？",
+      "a": "按秒计费、无闲置费；Standard约$0.018/小时起，高阶配置到$0.26/小时；无限出网流量、无出网加价。"
+    },
+    {
+      "q": "哪些AI工具能用Huddle01 VMs？",
+      "a": "任何支持MCP的工具：Claude Code、Claude Desktop、Cursor、Antigravity、Windsurf、Zed、Continue等。"
+    },
+    {
+      "q": "Huddle01 VMs和AWS有什么区别？",
+      "a": "它是MCP原生的“代理可操作”云，强调无品牌税、无限出网、约低70%成本；传统云面向人类开发者，Huddle01 VMs面向AI代理自主部署。"
+    }
+  ],
+  "seo_keywords": [
+    "Huddle01 VMs",
+    "去中心化视频会议工具",
+    "Web3视频会议推荐",
+    "AI会议摘要工具",
+    "加密社区会议平台"
+  ],
+  "content": "## Huddle01 VMs 是什么？\n\nHuddle01 VMs是面向AI代理的MCP原生虚拟机（云算力）产品：用户或其AI代理（通过Claude/Cursor/Zed等支持MCP的工具）用自然语言即可秒级创建、部署虚拟机，按秒计费，主打比AWS/Azure/GCP低约70%的成本。\n\nHuddle01 VMs是面向AI代理的MCP原生虚拟机（云算力）产品，用户或通过Claude/Cursor等支持MCP的工具用自然语言即可秒级创建并部署虚拟机，按秒计费，主打比主流云厂商低约70%的成本。\n\n## 核心功能\n\n- MCP原生：AI代理用自然语言创建/部署VM（Claude Code/Cursor/Zed等）\n- AMD EPYC专用vCPU，NVMe无节流存储\n- 按秒计费，无限出网流量，无出网加价\n- 全球区域（亚太/欧洲/北美）低延迟\n- SSH密钥 + 公网IP + URL\n- 控制台/CLI/MCP三种使用方式\n- 支持Python脚本、Next.js等应用部署\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 按秒计费；Standard 4 vCPU/16GB $0.018/小时；Performance 8 vCPU/32GB $0.072/小时；Compute+ 16 vCPU/64GB $0.144/小时；Memory+ 8 vCPU/128GB $0.260/小时；无限出网流量、无标记加价 |\n| 支持平台 | 云端（Web控制台 console.huddle01.com、CLI、MCP）；预装Ubuntu 24.04 LTS |\n| 评分 | ⭐ 4.3 |\n| 开发商 | Huddle01（Graphene01 Inc.，YC孵化；由Web3实时音视频通信起家） |\n\n## 价格与平台\n\n- **价格**：按秒计费；Standard 4 vCPU/16GB $0.018/小时；Performance 8 vCPU/32GB $0.072/小时；Compute+ 16 vCPU/64GB $0.144/小时；Memory+ 8 vCPU/128GB $0.260/小时；无限出网流量、无标记加价\n- **平台**：云端（Web控制台 console.huddle01.com、CLI、MCP）；预装Ubuntu 24.04 LTS\n- **官网**：https://get.huddle01.com\n\n## 优缺点分析\n\n### 优点\n\n- MCP原生，AI代理可自主部署，门槛极低\n- 按秒计费，无闲置费、无出网加价\n- 约比主流云厂商低70%成本\n- AMD EPYC裸金属性能，NVMe高IOPS\n- 全球边缘节点低延迟\n\n### 缺点\n\n- 与Huddle01早期“去中心化视频会议”品牌认知易混淆\n- 面向开发者/AI代理，并非普通视频会议工具\n- 企业级功能与合规依区域而异\n- 新品牌，生态与文档仍在完善\n\n## 常见问题（FAQ）\n\n**Huddle01 VMs是什么？**\n\n它是面向AI代理的MCP原生虚拟机（云算力）产品，不是视频会议工具。你或你的AI代理用一句话即可创建并部署虚拟机，按秒计费。\n\n**Huddle01 VMs怎么计费？**\n\n按秒计费、无闲置费；Standard约$0.018/小时起，高阶配置到$0.26/小时；无限出网流量、无出网加价。\n\n**哪些AI工具能用Huddle01 VMs？**\n\n任何支持MCP的工具：Claude Code、Claude Desktop、Cursor、Antigravity、Windsurf、Zed、Continue等。\n\n**Huddle01 VMs和AWS有什么区别？**\n\n它是MCP原生的“代理可操作”云，强调无品牌税、无限出网、约低70%成本；传统云面向人类开发者，Huddle01 VMs面向AI代理自主部署。\n\n\n## 最终结论\n\nHuddle01 VMs 是AI智能体领域的一款 AI 工具，其核心优势在于MCP原生，AI代理可自主部署，门槛极低。\n此外，按秒计费，无闲置费、无出网加价。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-05-05",
+  "published_date": "2026-05-05",
+  "verified_url": "https://get.huddle01.com",
+  "verified_publisher": "Huddle01（Graphene01 Inc.，YC孵化；由Web3实时音视频通信起家）",
+  "verified_what": "Huddle01 VMs是面向AI代理的MCP原生虚拟机（云算力）产品：用户或其AI代理（通过Claude/Cursor/Zed等支持MCP的工具）用自然语言即可秒级创建、部署虚拟机，按秒计费，主打比AWS/Azure/GCP低约70%的成本。",
+  "verified_price": "按秒计费；Standard 4 vCPU/16GB $0.018/小时；Performance 8 vCPU/32GB $0.072/小时；Compute+ 16 vCPU/64GB $0.144/小时；Memory+ 8 vCPU/128GB $0.260/小时；无限出网流量、无标记加价",
+  "verified_platform": "云端（Web控制台 console.huddle01.com、CLI、MCP）；预装Ubuntu 24.04 LTS",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "MCP原生：AI代理用自然语言创建/部署VM（Claude Code/Cursor/Zed等）",
+    "AMD EPYC专用vCPU，NVMe无节流存储",
+    "按秒计费，无限出网流量，无出网加价",
+    "全球区域（亚太/欧洲/北美）低延迟",
+    "SSH密钥 + 公网IP + URL",
+    "控制台/CLI/MCP三种使用方式",
+    "支持Python脚本、Next.js等应用部署"
+  ],
+  "verified_description": "Huddle01 VMs是面向AI代理的MCP原生虚拟机（云算力）产品，用户或通过Claude/Cursor等支持MCP的工具用自然语言即可秒级创建并部署虚拟机，按秒计费，主打比主流云厂商低约70%的成本。",
+  "content_flags": "严重错误：站点将Huddle01 VMs描述为“去中心化视频会议产品/Web3视频会议，含AI会议摘要、实时翻译、链上会议存证、钱包/ENS登录”，实际它是面向AI代理的MCP原生云虚拟机（算力）产品，与视频会议无关。",
+  "verified_rating": "⭐ 4.3",
+  "rating_source": "编辑部综合评级",
+  "verified_pros": [
+    "MCP原生，AI代理可自主部署，门槛极低",
+    "按秒计费，无闲置费、无出网加价",
+    "约比主流云厂商低70%成本",
+    "AMD EPYC裸金属性能，NVMe高IOPS",
+    "全球边缘节点低延迟"
+  ],
+  "verified_cons": [
+    "与Huddle01早期“去中心化视频会议”品牌认知易混淆",
+    "面向开发者/AI代理，并非普通视频会议工具",
+    "企业级功能与合规依区域而异",
+    "新品牌，生态与文档仍在完善"
+  ],
+  "verified_faq": [
+    {
+      "q": "Huddle01 VMs是什么？",
+      "a": "它是面向AI代理的MCP原生虚拟机（云算力）产品，不是视频会议工具。你或你的AI代理用一句话即可创建并部署虚拟机，按秒计费。"
+    },
+    {
+      "q": "Huddle01 VMs怎么计费？",
+      "a": "按秒计费、无闲置费；Standard约$0.018/小时起，高阶配置到$0.26/小时；无限出网流量、无出网加价。"
+    },
+    {
+      "q": "哪些AI工具能用Huddle01 VMs？",
+      "a": "任何支持MCP的工具：Claude Code、Claude Desktop、Cursor、Antigravity、Windsurf、Zed、Continue等。"
+    },
+    {
+      "q": "Huddle01 VMs和AWS有什么区别？",
+      "a": "它是MCP原生的“代理可操作”云，强调无品牌税、无限出网、约低70%成本；传统云面向人类开发者，Huddle01 VMs面向AI代理自主部署。"
+    }
+  ],
+  "verified_tags": [
+    "云算力",
+    "AI基础设施",
+    "虚拟机",
+    "MCP",
+    "开发者工具"
+  ],
+  "verified_category": "AI智能体",
+  "conflict_note": "站点对产品类型描述完全错误（视频会议 vs 云虚拟机），已按真实产品重写。",
+  "source_urls": [
+    "https://get.huddle01.com",
+    "https://huddle01.com",
+    "https://ph.qjai.org/blog/20260504_huddle01-vms"
+  ],
+  "verify_notes": "Huddle01 VMs真实产品为MCP原生云虚拟机/算力，站点将其描述为去中心化视频会议属严重误述；URL用get.huddle01.com（品牌主域huddle01.com）。工具真实存在。",
+  "content_verified": true,
+  "url_previous": "https://huddle01.com",
+  "price_verified": true,
+  "rating_verified": true,
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Huddle01 VMs 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Huddle01 VMs 的 MCP原生：AI代理用自然语言创建/部署VM（Claude Code/Cursor/Zed等） 是亮点，价格 按秒计费，约$0.018/小时起；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

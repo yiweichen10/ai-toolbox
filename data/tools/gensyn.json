@@ -1,0 +1,80 @@
+{
+  "slug": "gensyn",
+  "name": "Gensyn",
+  "emoji": "🧠",
+  "color": "#FF6B35",
+  "description": "去中心化机器学习训练网络，用密码学验证算力，让全球闲置 GPU 参与 AI 训练并按贡献获得代币奖励。",
+  "price": "AIGENSYN 代币总量 100 亿枚；计算与数据服务按用量付费，具体费率以官网为准。",
+  "platform": "Web / API",
+  "content": "## 是什么\nGensyn 是一个去中心化机器学习训练网络，目标是打破大型云厂商对 AI 算力的垄断，让全球闲置 GPU 接入网络、参与模型训练并获得代币奖励。2026 年 4 月 22 日主网上线，首个应用 Delphi 是由 AI 结算的预测信息市场。\n\n## 核心特点\n- 去中心化算力：连接全球闲置 GPU，为开发者提供远低于中心化云厂商的训练成本。\n- 可验证计算：通过可复现执行环境，让机器证明任务确实完成，无需暴露敏感数据。\n- Delphi 信息市场：用户自定义参数，AI 系统生成并验证结果，支持链上交易、借贷。\n- 通缩机制：用链上收入回购代币并销毁其中的 70%。\n\n## 技术原理\nGensyn 由三大原语构成：可复现执行环境负责可验证计算，Agent eXchange Layer 负责节点间的点对点加密通信，EVM 兼容的 Layer 2 处理链上身份与结算。参与者贡献闲置算力，通过智能证明机制获得 AIGENSYN 代币。\n\n## 价格与收费\nAIGENSYN 代币总量 100 亿枚，初始流通约 3%，主网上线后相继登陆 Binance、Coinbase 等交易所。计算与数据服务按实际用量付费，具体费率以官网为准。\n\n## 适用人群/场景\n适合需要低成本训练算力的 AI 开发者、参与 Delphi 预测市场的交易者，以及想贡献闲置 GPU 赚取代币的个人与机构。\n\n数据以官网为准。",
+  "faq": [
+    {
+      "q": "Gensyn 是什么？",
+      "a": "Gensyn 是一个去中心化机器学习训练网络，让全球闲置 GPU 接入网络参与 AI 模型训练并获得代币奖励，打破中心化云厂商对算力的垄断。"
+    },
+    {
+      "q": "AIGENSYN 代币总量是多少？",
+      "a": "总供应量为 100 亿枚，初始流通约 3%，主网上线后已在 Binance、Coinbase 等交易所开盘。"
+    },
+    {
+      "q": "Delphi 是什么？",
+      "a": "Delphi 是 Gensyn 主网上线的首个应用，一个由 AI 结算的预测信息市场，用户自定义参数，AI 系统生成并验证结果，支持链上交易与借贷。"
+    },
+    {
+      "q": "Gensyn 的融资情况如何？",
+      "a": "累计融资约 7800 万美元，其中 a16z crypto 于 2023 年 6 月领投 4300 万美元 A 轮，其他投资方包括 Galaxy、CoinFund 等。"
+    },
+    {
+      "q": "创始人是谁？",
+      "a": "联合创始人为 Ben Fielding 与 Harry Grieve，两人 2020 年相识后决定共同打造去中心化机器学习网络。"
+    },
+    {
+      "q": "代币销毁机制是怎样的？",
+      "a": "Gensyn 用链上收入回购代币并永久销毁其中的 70%，形成与真实使用挂钩的通缩机制。"
+    },
+    {
+      "q": "主网何时上线？",
+      "a": "主网于 2026 年 4 月 22 日上线，代币生成事件（TGE）于 4 月 29 日进行。"
+    }
+  ],
+  "features": [
+    "去中心化 GPU 训练网络",
+    "可复现执行环境验证计算",
+    "Delphi AI 结算预测市场",
+    "代币回购销毁通缩机制"
+  ],
+  "pros": [
+    "a16z crypto、Galaxy 等顶级机构背书",
+    "主网已上线且有真实产品 Delphi",
+    "算力成本低于中心化云厂商",
+    "70% 回购销毁机制"
+  ],
+  "cons": [
+    "初始流通仅约 3%，存在解锁抛压",
+    "网络规模化需求仍需验证",
+    "代币价格波动大"
+  ],
+  "tags": [
+    "去中心化AI",
+    "机器学习训练",
+    "DePIN",
+    "预测市场"
+  ],
+  "source_urls": [
+    "https://gensyn.foundation",
+    "https://www.marketwebb.me/id/research/projects/aigensyn",
+    "https://www.ainvest.com/fr/news/xrphai-gensyn-surges-1800-binance-alpha-bitget-list-ai-token-2604",
+    "https://pwshub.com/finance/gensynai2qw4r8x9-upbit-to-list-decentralized-compute-token-gensyn-on-june-30"
+  ],
+  "url": "https://gensyn.foundation",
+  "category": "去中心化AI",
+  "rating": "⭐ 4.2",
+  "visits": "暂无数据",
+  "published": true,
+  "content_verified": true,
+  "confidence": "high",
+  "last_verified": "2026-08-17",
+  "published_date": "2026-08-17",
+  "created_date": "2026-08-17",
+  "badge": null
+}

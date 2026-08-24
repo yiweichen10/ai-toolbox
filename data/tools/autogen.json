@@ -1,0 +1,148 @@
+{
+  "name": "AutoGen",
+  "slug": "autogen",
+  "positioning": "免费AI智能体平台：事件驱动内核+AutoGen",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#0078D4",
+  "description": "AutoGen 是微软开源的多智能体 AI 应用开发框架（MIT 协议，已进入维护模式，新项目建议迁移至 Microsoft Agent Framework），支持多智能体对话、工具调用与代码执行。",
+  "category": "AI智能体",
+  "tags": [
+    "开源",
+    "微软",
+    "多智能体"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://github.com/microsoft/autogen",
+  "price": "完全免费开源（MIT）",
+  "platform": "Python 库、Web（AutoGen Studio）、CLI",
+  "pros": [
+    "支持多智能体协作，便于构建复杂工作流",
+    "兼容多种主流 LLM（GPT-4o、Claude、本地模型等）",
+    "内置人类参与机制，支持人工干预",
+    "完全开源，社区活跃",
+    "提供代码执行与工具调用能力"
+  ],
+  "cons": [
+    "已进入维护模式，不再新增功能，建议新项目迁移至 Microsoft Agent Framework",
+    "学习曲线较陡，需理解智能体编排概念",
+    "文档与示例在复杂场景下不够全面"
+  ],
+  "features": [
+    "多智能体对话与协作（AgentChat 编程框架）",
+    "事件驱动内核（Core），支持分布式代理",
+    "工具注册与代码执行（支持 Docker 沙箱）",
+    "AutoGen Studio 无代码 GUI 原型设计",
+    "MCP 协议集成与社区扩展"
+  ],
+  "related": [
+    "crew-ai",
+    "langgraph",
+    "ag2",
+    "openai-agents-sdk"
+  ],
+  "faq": [
+    {
+      "q": "AutoGen是免费的吗？",
+      "a": "是的，AutoGen 完全开源免费，采用 MIT 许可证，可以自由使用和修改，仅需自行承担 LLM API 调用费用。"
+    },
+    {
+      "q": "AutoGen支持哪些大语言模型？",
+      "a": "支持 OpenAI GPT 系列、Anthropic Claude、Google Gemini，以及通过 Ollama 运行的本地模型（如 Llama、Mistral 等）。"
+    },
+    {
+      "q": "AutoGen适合初学者吗？",
+      "a": "适合有一定 Python 基础和 LLM 应用概念的开发者，初学者需先了解多智能体概念与框架文档。"
+    },
+    {
+      "q": "AutoGen与CrewAI、LangGraph有什么区别？",
+      "a": "AutoGen 更侧重于对话式多智能体协作并内置人类参与；CrewAI 偏角色化编排；LangGraph 侧重图式工作流。目前 AutoGen 已进入维护模式，新项目建议迁移至 Microsoft Agent Framework。"
+    }
+  ],
+  "seo_keywords": [
+    "AutoGen",
+    "AutoGen怎么样",
+    "AutoGen免费版",
+    "AutoGen使用教程",
+    "AutoGen和哪个好"
+  ],
+  "content": "## AutoGen是什么？\n\n如果你玩过LangChain或者自己调过GPT API，大概能体会到“让一个LLM干复杂任务”有多容易翻车——逻辑一绕，模型就忘了前文，或者输出格式乱成一团。AutoGen就是微软为了解决这个问题搞出来的一个开源框架。它的核心思路很简单：**别让一个智能体干所有事，而是定义多个智能体，让它们互相聊天、分工协作**，就像你把一个项目拆给几个靠谱的同事，各管一摊，最后拼起来。\n\n举个例子：你想让AI写一份市场分析报告，传统做法是喂一堆数据然后让模型一次输出。但AutoGen里你可以让一个“数据整理员”智能体先查资料、一个“分析员”智能体写观点、一个“审核员”智能体检查逻辑，甚至再拉一个真人员工进来拍板。智能体之间通过对话自动协调，整个过程可编程、可回放、可打断。\n\n它底层兼容GPT-4、Claude、本地部署的模型（比如Llama），也支持你挂载Python代码执行、调用外部API。说白了，它就是个**LLM应用的“乐高底座”**，把单次对话变成了一场多角色分工表演。\n\n---\n\n## 核心功能\n\n### 1. 多智能体自动对话管理\n这是AutoGen最亮眼的点。你不需要手写复杂的链式调用，只需要定义几个智能体（比如“助理”“用户代理”“批评家”），设定它们的角色和对话规则，框架会自动处理谁先发言、怎么接话、对话终止条件。实际用下来，感觉就像在搭一个虚拟会议室，每个智能体按顺序敲桌子说话，逻辑清晰很多。\n\n### 2. 人类参与模式（输入、审批、修正）\n很多AI工具一跑到底，出了错你只能回头重来。AutoGen内置了“人类介入”——你可以设定在特定节点暂停，让人工输入提示、审核结果、或者直接修改中间输出。比如让智能体写代码，它写完后你可以像review代码一样改一改再让它继续。这个设计很实用，尤其在生产环境里，人类兜底能避免很多低级错误。\n\n### 3. 工具注册与调用\n智能体不是只能说话，它还能“动手”。你可以把任意Python函数、REST API、数据库查询注册成工具，智能体在对话中会根据需要自动调用。比如让一个智能体负责查天气API，另一个负责格式化输出，第三个负责存数据库。用起来有点微服务那味儿，但配置起来更直观——写个装饰器就行。\n\n### 4. 代码执行沙箱\n它自带一个安全的代码执行环境（支持Python和Jupyter Notebook），智能体写出的代码可以直接在沙箱里跑，然后把结果传回对话。这对写脚本、数据分析、调试程序类的任务特别友好。不过要注意，沙箱默认没联网权限，需要自己配，免得智能体偷偷爬外网。\n\n### 5. 工作流自定义与生态集成\n你可以像写流程图一样定义工作走法：顺序执行、并行任务、根据条件跳转。另外它跟LangChain、LangGraph能混着用——比如用LangChain做检索增强（RAG），然后把结果丢给AutoGen的智能体做决策。虽然集成起来稍微有点折腾（文档确实不够细），但至少给了你组合的自由。\n\n---\n\n## 版本/套餐对比\n\nAutoGen完全开源（MIT协议），托管在GitHub上，目前只有一个主线版本。没有付费套餐、也没有云托管版。你可以直接 `pip install pyautogen` 或在Docker里跑。\n\n如果想在企业级场景用大规模部署（比如上百个智能体同时跑），那就得自己处理负载均衡、模型调用限流、沙箱资源隔离——这些框架本身不提供，得依赖Kubernetes或你自己的基础设施。\n\n| 项目 | 说明 |\n|------|------|\n| 许可证 | MIT（完全开源） |\n| 官方支持 | 社区GitHub Issues + Discord |\n| 商业支持 | 无官方付费版，微软不兜底 |\n| 云服务 | 无（可自行部署在AWS/GCP/Azure） |\n| 价格 | 0（仅需支付LLM调用费用） |\n\n---\n\n## 值不值得用？\n\n**优点**  \n- 多智能体对话确实能降低复杂任务的出错率，尤其是那些需要多步骤推理、分模块执行的场景。  \n- 人类介入机制做得很到位，不是摆设，是真的能插话改数据。  \n- 开源生态活跃，微软团队在持续维护，社区也贡献了不少案例。  \n- 模型兼容性强，本地模型、商用API都能接，方便测试不同模型的效果。\n\n**缺点**  \n- **学习曲线挺陡的**。不是那种装好就能用的工具，你首先得理解“为什么需要多个智能体”“对话流怎么设计”，还需要熟悉它的配置语法（基于Python dict）。  \n- 文档示例偏少且覆盖不均衡。核心功能有demo，但比如自定义工具注册的边界情况、沙箱安全性配置，经常得去翻源代码或社区问答。  \n- 大规模并发时稳定性有坑。比如多个智能体同时调用同一个API，如果没有做好限流和重试机制，容易卡死。框架本身没提供现成的集群化方案。\n\n**总体结论**：如果你在做一个需要严谨分工的LLM应用（比如自动化报告生成、代码审查、多轮谈判模拟），AutoGen值得花时间去学。如果你只是搭个简单的问答机器人或聊天助手，那有点杀鸡用牛刀，直接用LangChain或OpenAI函数调用更省事。\n\n---\n\n## 使用建议\n\n1. **从小场景入手**：别一上来就搞10个智能体。先试“一个助理+一个用户代理”的二人组，跑通基础对话，再慢慢加角色。  \n2. **善用人肉模式**：在不确定智能体输出质量的关键环节（比如写代码、发邮件），设置人工确认节点。等跑熟了再逐步去掉。  \n3. **版本锁定**：AutoGen还在快速迭代，主版本之间API可能不兼容。建议用requirements.txt锁定版本号，别轻易升。  \n4. **沙箱隔离**：如果让智能体执行代码，务必用Docker容器化沙箱，别直接用本地环境，否则被注入个`rm -rf /`就傻了。  \n5. **看官方示例和社区案例**：它的GitHub仓库里的`notebook`文件夹有几个不错的jupyter例子，跑一遍能省很多试错时间。\n\n---\n\n## 适合谁用？\n\n**推荐**  \n- 正在开发多步骤、多模型协作的LLM产品的开发者或团队。  \n- 研究智能体架构、想尝试人机协作或自动化工作流的AI研究员。  \n- 已经用过LangChain，觉得链式调用太死板、想要更灵活对话机制的人。\n\n**可考虑**  \n- 需要轻度自动化（比如邮件回复生成、简单数据提取）但愿意花一周学习曲线换长期可控性的个人开发者。  \n- 企业AI项目PoC阶段，想验证“多智能体”是否比“单模型循环”更稳。\n\n**不推荐**  \n- 只想要一个开箱即用的聊天UI（直接抄ChatGPT的API）。  \n- 对编程不熟、只想通过图形界面配置工作流的非技术人员（AutoGen目前没有GUI）。  \n- 生产环境要求极低延迟、高并发且没有运维团队来兜底性能瓶颈的场景。",
+  "published": true,
+  "source_url": "https://github.com/microsoft/autogen",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://github.com/microsoft/autogen",
+  "verified_publisher": "Microsoft",
+  "verified_what": "微软开源的多智能体 AI 应用开发框架（MIT 协议），已进入维护模式，新项目建议迁移至 Microsoft Agent Framework。",
+  "verified_price": "完全免费开源（MIT 协议），仅需自行承担所调用 LLM 的 API 费用；无付费云托管版。",
+  "verified_platform": "Python 库 / GitHub / API",
+  "verified_features": [
+    "多智能体对话与协作（AgentChat 编程框架）",
+    "事件驱动内核（Core），支持分布式代理",
+    "工具注册与代码执行（支持 Docker 沙箱）",
+    "AutoGen Studio 无代码 GUI 原型设计",
+    "MCP 协议集成与社区扩展"
+  ],
+  "verified_description": "AutoGen 是微软开源的多智能体 AI 应用开发框架（MIT 协议，已进入维护模式，新项目建议迁移至 Microsoft Agent Framework），支持多智能体对话、工具调用与代码执行。",
+  "content_flags": "长文整体准确；需注意项目已进入维护模式，原文已说明新项目建议迁移至 Microsoft Agent Framework。",
+  "price_verified": true,
+  "verified_pros": [
+    "支持多智能体协作，便于构建复杂工作流",
+    "兼容多种主流 LLM（GPT-4o、Claude、本地模型等）",
+    "内置人类参与机制，支持人工干预",
+    "完全开源，社区活跃",
+    "提供代码执行与工具调用能力"
+  ],
+  "verified_cons": [
+    "已进入维护模式，不再新增功能，建议新项目迁移至 Microsoft Agent Framework",
+    "学习曲线较陡，需理解智能体编排概念",
+    "文档与示例在复杂场景下不够全面"
+  ],
+  "verified_faq": [
+    {
+      "q": "AutoGen是免费的吗？",
+      "a": "是的，AutoGen 完全开源免费，采用 MIT 许可证，可以自由使用和修改，仅需自行承担 LLM API 调用费用。"
+    },
+    {
+      "q": "AutoGen支持哪些大语言模型？",
+      "a": "支持 OpenAI GPT 系列、Anthropic Claude、Google Gemini，以及通过 Ollama 运行的本地模型（如 Llama、Mistral 等）。"
+    },
+    {
+      "q": "AutoGen适合初学者吗？",
+      "a": "适合有一定 Python 基础和 LLM 应用概念的开发者，初学者需先了解多智能体概念与框架文档。"
+    },
+    {
+      "q": "AutoGen与CrewAI、LangGraph有什么区别？",
+      "a": "AutoGen 更侧重于对话式多智能体协作并内置人类参与；CrewAI 偏角色化编排；LangGraph 侧重图式工作流。目前 AutoGen 已进入维护模式，新项目建议迁移至 Microsoft Agent Framework。"
+    }
+  ],
+  "verified_tags": [
+    "开源",
+    "微软",
+    "多智能体"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://github.com/microsoft/autogen",
+    "https://microsoft.github.io/autogen/stable/index.html"
+  ],
+  "verify_notes": "AutoGen 自 2026 年起进入维护模式（GitHub README 明确标注），微软建议新用户改用 Microsoft Agent Framework（MAF）。",
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "AutoGen 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：AutoGen 的 多智能体对话与协作（AgentChat 编程框架） 是亮点，价格 完全免费开源（MIT）；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-06",
+  "created_date": "2026-08-06"
+}

@@ -1,0 +1,171 @@
+{
+  "name": "OpenClaw",
+  "slug": "openclaw",
+  "positioning": "多模型兼容+技能：免费AI智能体平台怎么用",
+  "auto_positioning": true,
+  "emoji": "🦞",
+  "color": "#FF6B35",
+  "description": "OpenClaw 是由 Peter Steinberger 发起的开源个人 AI 智能体（agent）平台，让大模型获得本地系统权限，通过聊天应用自主执行自动化任务，数据与控制权掌握在用户手中。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "AI智能体"
+    },
+    {
+      "text": "开源"
+    },
+    {
+      "text": "自动化"
+    },
+    {
+      "text": "本地部署"
+    }
+  ],
+  "rating": "⭐4.8",
+  "visits": "约8万/月",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://openclaw.ai",
+  "price": "免费开源",
+  "platform": "Web/桌面端",
+  "pros": [
+    "完全开源，可自托管、数据自主",
+    "支持多渠道聊天应用接入，使用门槛低",
+    "社区活跃，技能生态丰富",
+    "本地运行兼顾隐私",
+    "多模型兼容"
+  ],
+  "cons": [
+    "部署与配置需要一定技术基础",
+    "拥有系统级权限，配置不当有安全风险",
+    "提示词注入仍是未解安全难题",
+    "中文资料与本地化仍在完善"
+  ],
+  "features": [
+    "本地优先运行，数据与控制权在用户手中",
+    "通过 WhatsApp/Telegram/Discord/Slack/Teams 等聊天应用驱动",
+    "多模型兼容（OpenAI、Anthropic、Google、本地模型等）",
+    "技能（Skill）插件体系，社区可扩展能力",
+    "本地持久记忆与自动化任务执行",
+    "安全加固与权限管控"
+  ],
+  "related": [
+    "n8n",
+    "zapier-ai",
+    "play-ht"
+  ],
+  "faq": [
+    {
+      "q": "OpenClaw 是什么？",
+      "a": "OpenClaw 是开源的个人 AI 智能体平台，让大模型获得本地系统权限，通过聊天应用自主完成自动化任务。"
+    },
+    {
+      "q": "OpenClaw 收费吗？",
+      "a": "核心项目开源免费，可自托管；官方也提供云/企业支持方案，具体定价以官网为准。"
+    },
+    {
+      "q": "OpenClaw 支持哪些模型？",
+      "a": "兼容 OpenAI、Anthropic、Google（含 Gemini/KIMI 等）以及本地模型。"
+    },
+    {
+      "q": "有安全风险吗？",
+      "a": "因具备系统级权限，配置不当可能带来数据泄露或恶意指令执行风险，需遵循官方安全最佳实践。"
+    }
+  ],
+  "seo_keywords": [
+    "OpenClaw",
+    "OpenClaw网页抓取工具",
+    "AI数据采集工具推荐",
+    "开源网页爬虫2026",
+    "OpenClaw vs 其他抓取工具"
+  ],
+  "content": "## OpenClaw 是什么？\n\n开源个人 AI 智能体平台，让大模型获得本地系统权限，通过聊天应用自主执行自动化任务。\n\nOpenClaw 是由 Peter Steinberger 发起的开源个人 AI 智能体（agent）平台，让大模型获得本地系统权限，通过聊天应用自主执行自动化任务，数据与控制权掌握在用户手中。\n\n## 核心功能\n\n- 本地优先运行，数据与控制权在用户手中\n- 通过 WhatsApp/Telegram/Discord/Slack/Teams 等聊天应用驱动\n- 多模型兼容（OpenAI、Anthropic、Google、本地模型等）\n- 技能（Skill）插件体系，社区可扩展能力\n- 本地持久记忆与自动化任务执行\n- 安全加固与权限管控\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 开源免费（自托管）；官方另有云/企业支持方案，具体定价以官网为准。 |\n| 支持平台 | Web, Desktop（自托管）, 跨聊天应用（WhatsApp/Telegram/Discord/Slack/Teams 等） |\n| 评分 | ⭐4.8 |\n| 开发商 | Peter Steinberger（OpenClaw 开源项目 / 基金会，OpenAI 支持） |\n\n## 价格与平台\n\n- **价格**：开源免费（自托管）；官方另有云/企业支持方案，具体定价以官网为准。\n- **平台**：Web, Desktop（自托管）, 跨聊天应用（WhatsApp/Telegram/Discord/Slack/Teams 等）\n- **官网**：https://openclaw.ai\n\n## 优缺点分析\n\n### 优点\n\n- 完全开源，可自托管、数据自主\n- 支持多渠道聊天应用接入，使用门槛低\n- 社区活跃，技能生态丰富\n- 本地运行兼顾隐私\n- 多模型兼容\n\n### 缺点\n\n- 部署与配置需要一定技术基础\n- 拥有系统级权限，配置不当有安全风险\n- 提示词注入仍是未解安全难题\n- 中文资料与本地化仍在完善\n\n## 常见问题（FAQ）\n\n**OpenClaw 是什么？**\n\nOpenClaw 是开源的个人 AI 智能体平台，让大模型获得本地系统权限，通过聊天应用自主完成自动化任务。\n\n**OpenClaw 收费吗？**\n\n核心项目开源免费，可自托管；官方也提供云/企业支持方案，具体定价以官网为准。\n\n**OpenClaw 支持哪些模型？**\n\n兼容 OpenAI、Anthropic、Google（含 Gemini/KIMI 等）以及本地模型。\n\n**有安全风险吗？**\n\n因具备系统级权限，配置不当可能带来数据泄露或恶意指令执行风险，需遵循官方安全最佳实践。\n\n\n## 最终结论\n\nOpenClaw 是AI智能体领域的一款 AI 工具，其核心优势在于完全开源，可自托管、数据自主。\n此外，支持多渠道聊天应用接入，使用门槛低。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "published": true,
+  "created_date": "2026-06-25",
+  "published_date": "2026-06-25",
+  "verified_url": "https://openclaw.ai",
+  "verified_publisher": "Peter Steinberger（OpenClaw 开源项目 / 基金会，OpenAI 支持）",
+  "verified_what": "开源个人 AI 智能体平台，让大模型获得本地系统权限，通过聊天应用自主执行自动化任务。",
+  "verified_price": "开源免费（自托管）；官方另有云/企业支持方案，具体定价以官网为准。",
+  "verified_platform": "Web, Desktop（自托管）, 跨聊天应用（WhatsApp/Telegram/Discord/Slack/Teams 等）",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "本地优先运行，数据与控制权在用户手中",
+    "通过 WhatsApp/Telegram/Discord/Slack/Teams 等聊天应用驱动",
+    "多模型兼容（OpenAI、Anthropic、Google、本地模型等）",
+    "技能（Skill）插件体系，社区可扩展能力",
+    "本地持久记忆与自动化任务执行",
+    "安全加固与权限管控"
+  ],
+  "verified_description": "OpenClaw 是由 Peter Steinberger 发起的开源个人 AI 智能体（agent）平台，让大模型获得本地系统权限，通过聊天应用自主执行自动化任务，数据与控制权掌握在用户手中。",
+  "content_flags": "原 content 将 OpenClaw 完全错误地描述为“开源网页数据采集/爬虫工具”，与其真实定位（AI 智能体平台）严重不符，属严重幻觉。",
+  "price_verified": true,
+  "verified_rating": "⭐4.8",
+  "rating_source": "编辑评分（综合 GitHub 20万+ stars、OpenAI 支持及市场热度）",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全开源，可自托管、数据自主",
+    "支持多渠道聊天应用接入，使用门槛低",
+    "社区活跃，技能生态丰富",
+    "本地运行兼顾隐私",
+    "多模型兼容"
+  ],
+  "verified_cons": [
+    "部署与配置需要一定技术基础",
+    "拥有系统级权限，配置不当有安全风险",
+    "提示词注入仍是未解安全难题",
+    "中文资料与本地化仍在完善"
+  ],
+  "verified_faq": [
+    {
+      "q": "OpenClaw 是什么？",
+      "a": "OpenClaw 是开源的个人 AI 智能体平台，让大模型获得本地系统权限，通过聊天应用自主完成自动化任务。"
+    },
+    {
+      "q": "OpenClaw 收费吗？",
+      "a": "核心项目开源免费，可自托管；官方也提供云/企业支持方案，具体定价以官网为准。"
+    },
+    {
+      "q": "OpenClaw 支持哪些模型？",
+      "a": "兼容 OpenAI、Anthropic、Google（含 Gemini/KIMI 等）以及本地模型。"
+    },
+    {
+      "q": "有安全风险吗？",
+      "a": "因具备系统级权限，配置不当可能带来数据泄露或恶意指令执行风险，需遵循官方安全最佳实践。"
+    }
+  ],
+  "verified_tags": [
+    {
+      "text": "AI智能体"
+    },
+    {
+      "text": "开源"
+    },
+    {
+      "text": "自动化"
+    },
+    {
+      "text": "本地部署"
+    }
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://openclaw.ai/blog/introducing-openclaw",
+    "https://www.ecns.cn/m/news/economy/2026-03-11/detail-ihfaqfsq8279482.shtml",
+    "https://news.sciencenet.cn/htmlnews/2026/2/560322.shtm"
+  ],
+  "verify_notes": "官方站为 openclaw.ai；原 features 亦为爬虫工具描述，需一并纠正。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "metagpt",
+      "openai-agents-sdk",
+      "kanwas"
+    ],
+    "verdict": "OpenClaw 与 MetaGPT、OpenAI Agents SDK、Kanwas 同属AI智能体赛道：OpenClaw 的 本地优先运行，数据与控制权在用户手中 是亮点，价格 免费开源；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

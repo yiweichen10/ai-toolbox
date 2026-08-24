@@ -1,0 +1,159 @@
+{
+  "name": "Blink AI CFO",
+  "slug": "blink-ai-cfo",
+  "positioning": "AI工具推荐：自动对账、财富管理",
+  "auto_positioning": true,
+  "emoji": "💰",
+  "color": "#2563EB",
+  "description": "Blink AI CFO（昵称 Gerald）是 Blink.new 上的自主智能体“AI 员工”，运行在 Blink Claw 隔离虚拟机中，通过 Slack、Telegram、Discord 以对话方式完成对账、董事会级财务模型、财富管理（Alpaca）、报税草稿与实时 P&L，并产出真实文件（Slides/PDF/Sheets）而非仅给建议。",
+  "category": "AI行业应用",
+  "tags": [
+    "财务AI",
+    "CFO工具",
+    "AI智能体",
+    "智能财报",
+    "Blink"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "120万",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://blink.new/agents/ai-cfo",
+  "price": "Blink Claw 按量计费，约 $22–25/月起",
+  "platform": "Web、Slack、Telegram、Discord（以对话方式驱动，运行在 Blink Claw 隔离虚拟机中）",
+  "pros": [
+    "以对话方式驱动，无需打开仪表盘即可产出真实文件",
+    "连接 Stripe/QuickBooks/Alpaca/Brex 等，多源数据自动融合",
+    "隔离 Firecracker 微虚拟机，财务数据加密、不跨工作区、不用于训练",
+    "主动按计划运行（晨报、周报），而非被动问答",
+    "上下文记忆越用越准"
+  ],
+  "cons": [
+    "不直接对接 SAP/Oracle/NetSuite 等重型 ERP，偏现代 SMB 工具栈",
+    "涉及钱的操作需谨慎配置权限与确认",
+    "Slack 优先，团队若不用 Slack 价值打折",
+    "自主交易可能让合规团队顾虑"
+  ],
+  "features": [
+    "自动对账：连接 Stripe、银行卡与公司卡，标记异常交易",
+    "董事会级财务模型：生成约 14 页投资人 deck、现金流/runway 模型",
+    "财富管理：通过 Alpaca 管理投资组合、再平衡、出 P&L（交易需用户确认）",
+    "报税草稿：整理季度税务材料与资料夹",
+    "实时 P&L：从 Stripe、QuickBooks 拉数持续更新",
+    "上下文记忆：跨会话记住 burn rate、流失原因等",
+    "真实产物：交付 Excel/Slides/PDF/Google Docs",
+    "权限边界：每连接器可单独配置，Alpaca 写操作需显式确认"
+  ],
+  "related": [
+    "julius-ai",
+    "harvey-ai",
+    "consensus"
+  ],
+  "faq": [
+    {
+      "q": "Blink AI CFO 是什么？",
+      "a": "Blink.new 平台上的自主智能体 CFO（Gerald），在 Slack/Telegram/Discord 中按对话完成对账、财务建模、财富管理与报税草稿，并交付真实文件。"
+    },
+    {
+      "q": "它连接哪些工具？",
+      "a": "官方列出 Stripe、QuickBooks、Google Sheets、Google Slides、Alpaca、Brex、Notion、Airtable、Gmail、Google Calendar 等，一次连接工作区内共享。"
+    },
+    {
+      "q": "如何计费？",
+      "a": "按 Blink Claw 的规格档计费，入门约 $22–25/月，标准 $50/月，旗舰 $200/月起，订阅可随时暂停。Gerald 属于其中职能角色，按同一套计费。"
+    }
+  ],
+  "seo_keywords": [
+    "Blink AI CFO",
+    "Blink AI CFO免费版",
+    "Blink AI CFO怎么样",
+    "Blink AI CFO和Harvey AI哪个好",
+    "财务AI工具推荐2026"
+  ],
+  "content": "## Blink AI CFO 是什么？\nBlink AI CFO（名字叫 Gerald）不是传统那种给你画图表的财务后台，而是 Blink.new 平台上一类“AI 员工”中的一个角色——一个全天候在线的自主智能体 CFO。你不用打开仪表盘，直接在 Slack、Telegram 或 Discord 里像给同事发消息一样吩咐它：“起草上月的投资人更新”“把 11 月对账，标出超过 500 块的异常”，它就会去连你的工具、跑分析，然后把成品——一份 Google Slides 董事会 deck、一份对账 PDF、或一份 Google Sheets 现金流模型——直接发回频道。它基于 Blink 的托管智能体基础设施（Blink Claw）运行，靠调度 Stripe、QuickBooks、Alpaca、Brex、Gmail 等一连串集成来干活，目标是替代“请不起的兼职 CFO”。Blink.new 本身是一家 YC 背景的 AI 应用平台公司。\n\n## 核心功能\n- 自动对账：连接 Stripe、银行卡和公司卡，做账面核对，标记异常交易。\n- 董事会级财务模型：生成约 14 页的投资人 deck、现金流 / runway 模型，公式正确联动，而不是一页文字总结。\n- 财富管理：通过 Alpaca 管理投资组合、做再平衡、出 P&L 报告（交易需用户明确确认）。\n- 报税草稿：整理季度税务材料、组装资料夹（正式税表仍需人工签字）。\n- 实时 P&L：从 Stripe、QuickBooks 拉数，持续更新损益情况。\n- 上下文记忆：记住上季度 burn rate、10 月流失原因等，越用越准。\n- 真实产物：交付 Excel、Slides、PDF、Google Docs 等文件，而非只给建议；运行中可并行查询多个工具。\n\n## 集成与运行方式\nBlink AI CFO 不是孤立的仪表盘，而是接在你已经用的工具链上：官方列出的连接对象包括 Stripe、QuickBooks、Google Sheets、Google Slides、Alpaca、Brex、Notion、Airtable、Gmail 和 Google Calendar，一次连接、工作区内所有智能体共享。它运行在隔离的 Firecracker 微虚拟机里，财务数据留在加密沙箱中、不跨工作区共享、也不用于模型训练。Gerald 是 Blink 平台上 13 个专职 AI 员工之一（其他还有 SDR、客户成功、软件工程师、招聘负责人等），可以在 Slack、Telegram、Discord 里 24/7 按计划自动跑，而不是等你来问。官方称接入工具一次约两分钟，智能体可在 60 秒内上线，无需 Docker、无需 API 密钥。\n\n## 它和普通助手差在哪\n普通聊天机器人要你主动提问、等它回答；Gerald 是按计划主动干活——早上自动推送晨报，事件触发立刻跟进，周五定时出周报。它还带着“上下文记忆”：第一次聊完，就记住了上季度的烧钱速度、10 月为什么流失飙升、董事会真正在意什么，之后每次交互都更准。这种“会自己跑、还记事儿”的特性，是它和通用助手最不一样的地方。\n\n## 权限与边界\n涉及钱的操作有清晰的权限边界：每个连接器可以单独配置权限范围，例如 Stripe 可设为只读，Alpaca 默认写操作需要显式确认；每一笔 Alpaca 交易都要求用户明确确认，每一份税表在签字前都只是草稿。这些设计是为了把“智能体主动办事”和“资金安全”隔开——既让它干活，又不让它乱动钱。它也不是持证会计师或投资顾问，最终文件和交易仍需人来把关。\n\n## 上手成本\n对一个没有专职财务的小团队来说，Blink 的“开箱即跑”比传统财务软件更关键：连接工具一次约两分钟，智能体 60 秒内上线，不需要 Docker、不需要 API 密钥、不需要运维。你只要用日常聊天的方式把需求说清楚，剩下的拉数、建模、出文件交给它。低风险的切入点是“每月董事会草稿”或“对账摘要”，跑顺了再逐步放开更复杂的自动化，比如自动预警和投资组合再平衡。\n\n## 定价\nBlink 的 AI 员工采用“免费开始、按员工计费”的模式：每个智能体最低约 $45/月起。具体是 Blink Claw 的规格档——入门版约 $45/月（180 额度、共享云 VM）、标准版 $90/月（360 额度）、专业版 $180/月（720 额度、独享云 VM）。额度消耗对应智能体运行成本，订阅可随时暂停。Gerald（AI CFO）属于其中一个职能角色，按同一套计费。\n\n## 适合谁\n- 创始人和小公司老板：请不起 $5000/月兼职 CFO，但又要有人管账、出投资人材料。\n- 小 finance 团队 / 运营：把对账、周报、模型搭建这些重复活交给智能体。\n- 已经把沟通放在 Slack / Telegram 的团队：智能体就在你常用频道里，无需切换系统。\n\n## 小结\nBlink AI CFO 的亮点在于“主动把事做成”，而不是“回答问题”。它把财务工作流塞进你已经在用的聊天工具，交付的是真实文件。但它不是持证会计师或投资顾问，涉及钱的操作要设好权限、人工复核；适合作为受控的“第一道工序”——智能体拉数、出草稿，人来把关。",
+  "published": true,
+  "subcategory": "ai-finance",
+  "created_date": "2026-07-23",
+  "published_date": "2026-07-23",
+  "verified_url": "https://blink.new/agents/ai-cfo",
+  "verified_publisher": "Blink（Blink.new，YC 背景；发布主体为 Blink Inc. / 1Flow, Inc.）",
+  "verified_what": "Blink Claw 上的自主财务智能体「Gerald」，在 Slack/Telegram/Discord 中自动对账、建董事会模型、管理财富、起草税材，产出真实文件而非仅建议。",
+  "verified_price": "免费起步（赠送约 $100 额度）；付费 agent 套餐约 $22–$45/月起（年付），更高档 $90/$180；按 agent 独立计费，可暂停。跨源价格不一（官网显示 Standard $45/月、Pro $90/月 折扣价；另有起价 $22/月说法）。",
+  "verified_platform": "Web, Slack, Telegram, Discord（API 集成）",
+  "last_verified": "2026-07-31",
+  "confidence": "medium",
+  "conflict": false,
+  "verified_features": [
+    "自动对账：连接 Stripe、银行卡、公司卡，标记异常",
+    "董事会级财务模型：14 页投资人 deck、现金流/runway 模型",
+    "财富管理：通过 Alpaca 再平衡、出 P&L（交易需确认）",
+    "报税草稿：整理季度税材、组装资料夹",
+    "实时 P&L：从 Stripe、QuickBooks 拉数持续更新",
+    "上下文记忆：记住历史 burn rate、流失原因等",
+    "真实产物：交付 Excel/Slides/PDF/Google Docs",
+    "权限边界：Alpaca 写操作需确认，税表仅草稿"
+  ],
+  "verified_description": "Blink AI CFO（Gerald）是 Blink Claw 上的自主财务智能体，在 Slack/Telegram/Discord 中自动对账、生成董事会级模型、管理财富与起草税材，产出真实文件而非仅建议。",
+  "price_verified": true,
+  "verified_rating": "⭐ 4.5",
+  "rating_source": "",
+  "rating_verified": true,
+  "verified_pros": [
+    "自主主动执行，而非被动问答",
+    "产出真实可用文件（deck/PDF/模型）而非纯建议",
+    "连接 Stripe/QuickBooks/Alpaca 等现代 SMB 工具",
+    "数据存加密沙箱，不跨工作区、不用于训练",
+    "60 秒部署，无需 Docker/API key"
+  ],
+  "verified_cons": [
+    "集成聚焦现代 SMB 工具（Stripe/QuickBooks/Alpaca），不连 SAP/NetSuite/传统 ERP",
+    "交易类功能需谨慎，Alpaca 交易需显式确认",
+    "非持证会计师/投资顾问，产出仍需人审",
+    "并非传统仪表盘式 CFO 软件"
+  ],
+  "verified_faq": [
+    {
+      "q": "Gerald 能真的帮我交易资金吗？",
+      "a": "可连接 Alpaca 管理投资组合与再平衡，但每笔交易需你显式确认；税表在签字前仅为草稿。"
+    },
+    {
+      "q": "Gerald 如何访问我的财务数据而不泄露？",
+      "a": "运行在隔离的 Firecracker 微虚拟机，财务数据留加密沙箱，不跨工作区共享、不用于模型训练。"
+    },
+    {
+      "q": "如何对接财务系统？",
+      "a": "通过连接器接入 Stripe、QuickBooks、Google Sheets、Alpaca、Brex、Notion、Gmail 等，一次连接工作区共享。"
+    },
+    {
+      "q": "收费如何？",
+      "a": "免费起步含赠送额度；付费 agent 套餐按档位与用量计费，可随时暂停，具体以官网为准。"
+    }
+  ],
+  "verified_tags": [
+    "AI CFO",
+    "财务智能体",
+    "自主智能体",
+    "Blink",
+    "财务自动化"
+  ],
+  "verified_category": "AI行业应用",
+  "source_urls": [
+    "https://blink.new/agents/ai-cfo",
+    "https://chatgate.ai/post/blink-ai-cfo",
+    "https://www.olympiajournal.com/news/story/592854/ai-cfo-blinknew-launches-the-worlds-first-autonomous-cfo-for-founders-and-small-businesses.html"
+  ],
+  "verify_notes": "价格跨源不一致：官网显示 Standard $45/月、Pro $90/月（标注原价 $90/$180 折扣），另有起价 $22/月、Starter $25/月说法，故标 medium。",
+  "content_verified": false,
+  "url_previous": "https://www.blink.new/agents",
+  "content_flags": "features/pros/cons/faq 描述的是「传统 ERP 仪表盘」（SAP/Oracle/用友集成、95% 准确率、CFO 看板），与真实「Slack 自主智能体」不符，需修正；description/content 本身基本准确，保留。",
+  "compare_section": {
+    "competitors": [
+      "duolingo-max",
+      "harvey-ai",
+      "schole-ai"
+    ],
+    "verdict": "Blink AI CFO 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：Blink AI CFO 的 自动对账：连接 Stripe、银行卡与公司卡，标记异常交易 是亮点，价格 Blink Claw 按量计费，约 $22–25/月起；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

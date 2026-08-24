@@ -1,0 +1,77 @@
+{
+  "name": "PublicPrompts",
+  "slug": "publicprompts",
+  "positioning": "一键复制即用+高频持续更新：免费AI提示词工具怎么用",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#8b5cf6",
+  "description": "PublicPrompts是什么 PublicP...",
+  "category": "AI提示词",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI提示词"
+    },
+    {
+      "text": "PublicPrompts"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://publicprompts.art",
+  "price": "免费",
+  "platform": "Web",
+  "pros": [
+    "完全免费，无需注册",
+    "提示词附带参数与效果示例，复现成功率高",
+    "提供 LoRA/DreamBooth 模型下载，资源稀缺",
+    "社区驱动，内容质量经过验证",
+    "更新频繁，紧跟最新模型趋势"
+  ],
+  "cons": [
+    "提示词以英文为主，中文支持有限",
+    "以 Stable Diffusion 生态为主，其他模型覆盖少",
+    "社区贡献质量参差，需要自行筛选",
+    "缺少系统性的教学引导，新手需自行摸索"
+  ],
+  "features": [
+    "数万条免费提示词",
+    "LoRA与DreamBooth模型资源",
+    "多维度分类与检索",
+    "一键复制即用",
+    "社区投票验证机制",
+    "高频持续更新"
+  ],
+  "related": [
+    "promptpilot",
+    "explinks-prompts",
+    "prompt-engineering-guide"
+  ],
+  "content": "## PublicPrompts 是什么？\n\nPublicPrompts（publicprompts.art）是一个专注提供免费、高质量 AI 提示词的开源平台，收录了数万条经社区验证的 Stable Diffusion 提示词，并同步提供 LoRA、DreamBooth、Embedding 等模型资源与生成参考。内容覆盖 3D 渲染、动漫、写实人像、像素艺术、奇幻场景等数十种风格，每条提示词都附带完整参数建议与效果示例，用户无需注册即可浏览、复制并使用。\n\n它的最大特点是\"社区共创 + 完全免费\"：提示词由全球 AI 创作者共同维护，通过社区投票机制筛选出经过实际验证的高质量内容，并定期更新最新模型（如 Sora 视频提示词）与风格资源，曾入选知名 AI 工具推荐清单。无论初学者还是 Stable Diffusion 重度用户，都能在这里找到可复现的提示词与模型。\n\n### 核心功能\n\n- **海量免费提示词库**：收录数万条高质量提示词，覆盖 3D、动漫、写实人像、像素艺术、奇幻等数十种风格，全部免费开放。\n- **LoRA 与 DreamBooth 模型资源**：提供 Synthwave、Pixel Art、Borderlands、Cal Arts、像素景观等特色模型，支持直接下载使用。\n- **多维度分类与检索**：按创作场景、模型类型等分类整理，支持关键词搜索与精准筛选，快速定位所需提示词。\n- **一键复制即用**：提示词卡片支持一键复制，可直接粘贴到 Automatic1111 WebUI、ComfyUI 等主流工具中使用。\n- **社区共创与投票**：开放用户提交通道，社区投票机制保证展示内容经过实际验证，并通过 Discord 社区交流协作。\n- **持续高频更新**：紧跟行业趋势，及时上线最新模型与提示词资源，保持内容时效性。\n\n### 适用场景\n\n- **AI 绘画新手入门**：直接复制社区验证过的提示词开始创作，避免从零调试参数。\n- **数字艺术家找灵感**：浏览不同风格（如 Synthwave、MicroWorlds）激发创作思路，或学习权重控制、Embedding、LoRA 触发词等高级用法。\n- **游戏开发与内容创作者**：获取角色、场景、道具的生成方案用于概念设计，或基于模板微调批量产出系列素材。\n\n### 价格\n\n完全免费，无隐藏付费墙。所有提示词、模型链接与资源均开放使用，无需注册账号即可浏览与复制。",
+  "published": true,
+  "faq": [
+    {
+      "q": "PublicPrompts 收费吗？",
+      "a": "完全免费。所有提示词、模型链接与资源均开放使用，无付费墙，也不需要注册账号即可浏览和复制。"
+    },
+    {
+      "q": "提示词适用于哪些工具？",
+      "a": "提示词为通用格式，适用于 Automatic1111 WebUI、ComfyUI 等主流 Stable Diffusion 工具，也兼容部分其他绘图模型。"
+    },
+    {
+      "q": "可以提交自己的提示词吗？",
+      "a": "可以。平台开放用户提交通道，鼓励分享原创优质提示词，并通过社区投票让优秀内容获得更多曝光。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://publicprompts.art",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "verify_notes": "来源 ai-bot.cn 收录页采集；官网可达性验证：HTTP 200",
+  "seo_keywords": [
+    "PublicPrompts",
+    "Stable Diffusion提示词",
+    "免费提示词库",
+    "AI绘画提示词",
+    "LoRA模型下载"
+  ]
+}

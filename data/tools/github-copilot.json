@@ -1,0 +1,103 @@
+{
+  "name": "GitHub Copilot",
+  "slug": "github-copilot",
+  "emoji": "💻",
+  "color": "#3178c6",
+  "description": "AI编程助手，集成在VS Code等编辑器中，自动补全代码、生成函数、修复bug，支持50+编程语言，编程效率提升显著。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "AI编程"
+    },
+    {
+      "text": "热门",
+      "type": "hot"
+    },
+    {
+      "text": "付费"
+    }
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "6.8万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/features/copilot",
+  "price": "免费个人版+Business $19/月",
+  "platform": "VS Code / JetBrains / Neovim",
+  "pros": [
+    "编辑器集成最好",
+    "代码补全速度快",
+    "支持50+编程语言",
+    "GitHub生态深度整合",
+    "免费个人版"
+  ],
+  "cons": [
+    "付费完整版较贵",
+    "偶有错误代码",
+    "理解项目上下文有限",
+    "Copilot+额外付费"
+  ],
+  "features": [
+    "代码补全",
+    "Chat问答",
+    "代码解释",
+    "单元测试生成",
+    "CLI助手",
+    "PR摘要"
+  ],
+  "related": [
+    "cursor",
+    "chatgpt"
+  ],
+  "content": "## GitHub Copilot 是什么？\n\nGitHub Copilot是由GitHub（Microsoft）推出的AI编程助手，深度集成在VS Code、JetBrains、Neovim等主流编辑器中。它能够理解代码上下文，自动补全代码、生成函数、修复bug，支持50+编程语言。\n\n2026年，Copilot推出了免费个人版，大幅降低了使用门槛，成为全球最广泛使用的AI编程工具。\n\n## 核心功能\n\n- **代码补全**：实时代码建议，按Tab即可接受\n- **Chat问答**：在编辑器中直接与AI对话编程问题\n- **代码解释**：选中代码，AI自动解释其功能\n- **单元测试生成**：自动为函数生成测试用例\n- **CLI助手**：在终端中用自然语言生成命令\n- **PR摘要**：自动生成Pull Request摘要\n\n## 版本对比\n\n| 方案 | 价格 | 特点 |\n|------|------|------|\n| 免费个人版 | $0 | 有限补全+Chat |\n| Individual | $10/月 | 完整补全+Chat |\n| Business | $19/月 | 企业管理+策略 |\n| Enterprise | $39/月 | 高级安全+合规 |\n\n## 优缺点分析\n\n### 👍 优点\n- 编辑器集成体验最好，支持最多IDE\n- 代码补全速度快，准确率高\n- 支持50+编程语言\n- 与GitHub生态深度整合（PR、Issue等）\n- 推出免费个人版，降低使用门槛\n\n### 👎 缺点\n- 完整功能需要付费\n- 偶尔生成错误代码，需要人工审查\n- 跨文件理解项目上下文能力有限\n- Agent模式（Copilot+）需要额外付费\n\n## 使用技巧\n\n1. **写注释触发补全**：先写函数注释，Copilot会根据注释生成代码。\n2. **Tab快速接受**：多按Tab，让Copilot自动完成更多代码。\n3. **Chat提问**：遇到问题直接在编辑器中问Copilot。\n4. **代码解释**：看不懂的代码选中后让Copilot解释。\n5. **测试生成**：写完函数后让Copilot生成测试用例。\n\n## 适合人群\n\nGitHub Copilot适合所有程序员，尤其是已经在使用VS Code或JetBrains的开发者。免费版已经能满足基本需求，是入门AI编程的最佳选择。\n### 总结\n\nGitHub Copilot 是 AI编程 领域中一款不错的 AI 工具。AI编程助手，集成在VS Code等编辑器中，自动补全代码、生成函数、修复bug，支持50+编程语言，编程效率提升显著。 从功能完整性来看，它覆盖了核心使用场景。\n\n**快速上手建议：**\n- 访问官网 github.com/features/copilot 注册账号\n- 先使用免费版本 了解核心功能\n- 参考官方文档和教程加速学习\n- 加入用户社区获取使用技巧和最佳实践\n\n**价格参考：** 免费个人版+Business $19/月\n**支持平台：** VS Code / JetBrains / Neovim\n",
+  "published": true,
+  "faq": [
+    {
+      "question": "GitHub Copilot和Cursor哪个好？",
+      "answer": "Cursor是独立编辑器，AI能力更深（支持项目级上下文），体验更沉浸。GitHub Copilot是VS Code插件，轻量灵活，可以配合你现有的VS Code环境。重度编程推荐Cursor，想在VS Code里轻度辅助推荐Copilot。"
+    },
+    {
+      "question": "GitHub Copilot有免费版吗？",
+      "answer": "GitHub Copilot对开源项目维护者、学生和认证的教育用户免费。普通用户$10/月或$100/年。企业版$39/月。相比Cursor的$20/月，Copilot价格更低。"
+    },
+    {
+      "question": "如何在VS Code里启用GitHub Copilot？",
+      "answer": "1）安装VS Code；2）安装GitHub Copilot扩展；3）登录GitHub账号授权；4）开始编码时，Copilot会自动给出代码补全建议，按Tab键采纳，按Esc拒绝。支持Python、JavaScript、TypeScript、Go、Java等主流语言。"
+    }
+  ],
+  "created_date": "2026-03-22",
+  "verified_url": "https://github.com/features/copilot",
+  "verified_publisher": "GitHub（Microsoft）",
+  "verified_what": "GitHub推出的AI编程助手，2026年6月1日起全面转为用量计费制（GitHub AI Credits）。集成多模型（Claude Opus/Sonnet/GPT-5.x/Gemini）+ 云代理自主编码 + MCP第三方代理（Claude Code/Codex）+ Copilot Spaces团队知识库。从编辑器内代码补全进化为全流程代理编程平台。",
+  "verified_price": "Free $0（2000次补全+有限Chat+Haiku 4.5/GPT-5 mini） / Pro $10/月（$15月credits含flex） / Pro+ $39/月（$70月credits） / Max $100/月（$200月credits） / Business $19/用户/月 / Enterprise $39/用户/月（池化credits+预算管控）",
+  "verified_platform": "VS Code、Visual Studio、JetBrains、Xcode、Neovim、Eclipse、GitHub.com、CLI、Windows Terminal、GitHub Mobile",
+  "verified_features": [
+    "多模型选择（Claude Opus/Sonnet/GPT-5.x/Gemini全系）",
+    "云代理（Copilot Cloud Agent：后台自主编码+PR提交）",
+    "第三方代理（Claude Code + OpenAI Codex via MCP）",
+    "Copilot Code Review（AI代码审查）",
+    "Copilot Spaces（团队知识库+共享上下文）",
+    "MCP生态（自定义服务器+第三方工具集成）"
+  ],
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "source_urls": [
+    "https://github.com/features/copilot",
+    "https://github.blog/2026-05-01-github-copilot-is-moving-to-usage-based-billing",
+    "https://docs.github.com/en/copilot/get-started/plans"
+  ],
+  "verify_notes": "重大变更：2026-06-01起全面用量计费，不再按'premium requests'计数。原始tools.json的features中缺少云代理、第三方代理、MCP生态等2026核心更新。Free计划升级为包含多模型+有限用量。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "tongyi-lingma",
+      "cline",
+      "codex-cli"
+    ],
+    "verdict": "GitHub Copilot 与 通义灵码、Cline、Codex CLI 同属AI编程赛道。在性价比上，GitHub Copilot（免费个人版+Business $19/月）门槛更低；口碑方面，GitHub Copilot（⭐ 4.7）领先；GitHub Copilot 的优势在于GitHub推出的AI编程助手，2026年6月1日起全面转为用量计费制（GitHub AI Credits）。集成多模型，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

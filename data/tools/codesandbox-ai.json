@@ -1,0 +1,162 @@
+{
+  "name": "CodeSandbox AI",
+  "slug": "codesandbox-ai",
+  "positioning": "免费AI编程工具，实时多人协作+一键部署好用吗",
+  "auto_positioning": true,
+  "emoji": "🖥️",
+  "color": "#24292E",
+  "description": "CodeSandbox 是一个云端开发环境与代码执行平台，2025 年起成为 Together AI 旗下产品。它当前主打 CodeSandbox SDK：基于 Firecracker microVM（约 2 秒冷启动）为 AI 智能体、代码解释与评测提供隔离、安全的沙箱；同时保留浏览器内 IDE、VM 开发环境与实时协作。提供免费 Build 版（5 成员、40 小时/月 VM 额度）及付费 Scale（约 $170/月）等方案，适合前端开发者、需要与 AI 智能体集成的团队以及教学场景。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "云IDE",
+    "在线代码编辑器",
+    "代码沙箱",
+    "智能体基础设施"
+  ],
+  "rating": "⭐ 4.3",
+  "visits": "约150万/月",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://codesandbox.io",
+  "price": "免费版可用，付费 Scale 约 $170/月起",
+  "platform": "Web浏览器（无需安装）",
+  "pros": [
+    "无需本地配置，浏览器即可开发",
+    "为 AI 智能体提供隔离、安全的代码执行沙箱",
+    "microVM 约 2 秒冷启动，可快照恢复",
+    "支持并行运行多个智能体",
+    "免费版额度可用，适合原型与学习"
+  ],
+  "cons": [
+    "定价页对爬虫不透明（部分抓取返回 403）",
+    "传统“AI 代码补全助手”定位已弱化，转向智能体基础设施",
+    "大型项目性能依赖 VM 规格",
+    "纯 Python 评测场景 E2B / Modal 可能更便宜"
+  ],
+  "features": [
+    "CodeSandbox SDK（程序化创建隔离沙箱）",
+    "Firecracker microVM（约 2 秒冷启动）",
+    "浏览器内 IDE 与 VM 开发环境",
+    "实时多人协作",
+    "一键部署",
+    "GitHub 集成与预览环境",
+    "Devboxes / 模板"
+  ],
+  "related": [
+    "replit-ai",
+    "cursor",
+    "claude-code",
+    "github-copilot"
+  ],
+  "faq": [
+    {
+      "q": "CodeSandbox 现在还做 AI 编程助手吗？",
+      "a": "CodeSandbox 自 2025 年被 Together AI 收购后，定位转向“CodeSandbox SDK”——为 AI 智能体与代码解释提供隔离沙箱；浏览器内 IDE 与 VM 开发环境仍保留，但不再以“AI 补全助手”为核心卖点。"
+    },
+    {
+      "q": "CodeSandbox 免费版和付费版有什么区别？",
+      "a": "免费 Build 版含 5 名成员、40 小时/月 VM 额度、无限沙箱；付费 Scale 约 $170/月，提升 VM 额度、并发与请求限制；另有编辑型 Pro 约 $12/月（第三方口径）。"
+    },
+    {
+      "q": "CodeSandbox 支持哪些语言/框架？",
+      "a": "支持 JavaScript/TypeScript、Python、React、Vue、Node.js 等主流前端与全栈框架，并提供丰富模板。"
+    },
+    {
+      "q": "CodeSandbox 可以离线使用吗？",
+      "a": "不可以，作为云端开发环境需要网络连接。"
+    }
+  ],
+  "seo_keywords": [
+    "CodeSandbox AI",
+    "CodeSandbox AI怎么样",
+    "在线代码编辑器推荐",
+    "CodeSandbox免费版够用吗",
+    "云端IDE对比本地IDE"
+  ],
+  "content": "# CodeSandbox AI是什么？\n\n如果你写过代码，应该知道本地配置开发环境这件事有多烦人——装依赖、配置路径、处理各种系统兼容性问题，一套下来半天就没了。CodeSandbox AI 就是来解决这个问题的：它是一个基于浏览器的在线 IDE，内置了 AI 编程助手，你打开网页就能写代码、运行项目，完全不需要在本地鼓捣环境。\n\n本质上，它把开发环境搬到了云端。你写代码，它帮你补全、帮你纠错、帮你跑项目。2026 年的最新版本又在 AI 理解和团队协作方面做了升级，现在支持多人实时一起改代码，AI 还能辅助调试，用起来确实比单纯写代码要省事一些。\n\n---\n\n## 核心功能\n\n**1. AI 代码补全与智能建议**\n\n写代码时，AI 会根据上下文给你提示，补全函数、推荐代码块。用了这段时间的感受是，日常开发中它能帮你减少不少敲键盘的重复劳动，尤其对一些常见的模式化代码，响应速度和准确性都挺靠谱。不过涉及复杂的业务逻辑时，还是得自己来判断。\n\n**2. 云端编译和运行**\n\n代码写完直接就能跑，不需要在本地搭建运行环境。它会在云端帮你编译、执行，浏览器里就能看到效果。前端项目尤其方便，改完刷新页面就能看到变化，调试效率比传统方式高出一截。\n\n**3. 实时多人协作**\n\n这个功能挺适合团队场景。多人可以同时编辑同一个项目，编辑位置会实时显示，沟通成本降低不少。之前看不少团队用它来做代码评审或者远程结对编程，体验比传统截图+语音的方式要流畅。\n\n**4. 一键部署**\n\n项目完成后可以一键部署到 Vercel、Netlify 这些主流平台，省去了手动配置的步骤。对需要快速演示或者上线简单项目的开发者来说，这个功能很实用。\n\n**5. 模板和预配置环境**\n\n内置了大量项目模板，前端框架、Node.js、Python 什么都有，选一个就能直接开始，不用自己从头配置。对于想快速验证想法的人来说，这点很友好。\n\n---\n\n## 版本对比\n\n| 功能 | 免费版 | Pro 版 | Team 版 |\n|------|--------|--------|---------|\n| 项目数量 | 有限制 | 无限 | 无限 |\n| 存储空间 | 有上限 | 更大 | 按需扩展 |\n| AI 功能 | 基础 | 完整 | 完整 |\n| 协作人数 | 2人 | 5人 | 团队规模 |\n| 私有项目 | 不支持 | 支持 | 支持 |\n| 优先级支持 | 无 | 有 | 有 |\n\n具体价格建议直接看官网，这里就不展开说了。\n\n---\n\n## 值不值得用？\n\n**优点：**\n\n- 真的不用本地配置，浏览器打开就能写，对新手或者偶尔写代码的人很友好\n- 协作功能做得好，团队使用场景下能明显提升效率\n- AI 补全和错误提示日常够用，能省不少查文档的时间\n- 模板丰富，启动项目很快\n\n**缺点：**\n\n- 免费版限制比较多，项目数量和存储空间很快就会不够用\n- 完全依赖网络，断网就用不了\n- 大型项目运行时响应会有延迟，体验不如本地\n\n**结论：** 对于个人开发者、小团队或者想快速原型验证的场景，它很好用。但如果你是专职做大型项目开发，对性能要求高，或者需要长期维护复杂代码库，可能还是本地 IDE + 独立 AI 工具更适合你。\n\n---\n\n## 使用建议\n\n1. **先用免费版试试**：看看功能是否满足你的需求，再决定是否付费\n2. **利用模板快速启动**：不要从零开始建项目，模板能省很多时间\n3. **团队协作时提前分工**：虽然支持多人同时编辑，但事先做好模块划分会更顺畅\n4. **重要项目记得备份**：虽然云端存储方便，但养成定期导出或关联 Git 仓库的习惯更稳妥\n\n---\n\n## 适合谁用？\n\n**推荐：**\n\n- 前端初学者，想快速上手写项目\n- 远程团队，需要频繁协作\n- 快速原型验证，需要立刻看到效果\n\n**可考虑：**\n\n- 中小规模项目的日常开发\n- 教学或演示场景\n\n**不推荐：**\n\n- 对性能要求极高的大型项目\n- 网络不稳定或需要离线开发的场景\n- 预算有限且需求简单的个人用户\n\n## 常见问题（FAQ）\n\n**CodeSandbox 现在还做 AI 编程助手吗？**\n\nCodeSandbox 自 2025 年被 Together AI 收购后，定位转向“CodeSandbox SDK”——为 AI 智能体与代码解释提供隔离沙箱；浏览器内 IDE 与 VM 开发环境仍保留，但不再以“AI 补全助手”为核心卖点。\n\n**CodeSandbox 免费版和付费版有什么区别？**\n\n免费 Build 版含 5 名成员、40 小时/月 VM 额度、无限沙箱；付费 Scale 约 $170/月，提升 VM 额度、并发与请求限制；另有编辑型 Pro 约 $12/月（第三方口径）。\n\n**CodeSandbox 支持哪些语言/框架？**\n\n支持 JavaScript/TypeScript、Python、React、Vue、Node.js 等主流前端与全栈框架，并提供丰富模板。\n\n**CodeSandbox 可以离线使用吗？**\n\n不可以，作为云端开发环境需要网络连接。",
+  "published": true,
+  "created_date": "2026-04-25",
+  "verified_url": "https://codesandbox.io",
+  "verified_publisher": "CodeSandbox（2025 年起成为 Together AI 旗下）",
+  "verified_what": "云端开发环境与代码执行平台，现主打 CodeSandbox SDK（基于 Firecracker microVM），为 AI 智能体与代码解释提供隔离沙箱；同时保留浏览器内 IDE / VM 开发环境。",
+  "verified_price": "Build 免费版（5 成员、40 小时/月 VM 额度、无限 Browser/VM 沙箱）；付费 Scale 约 $170/月（160 小时 VM 额度、250 并发 VM、1 万请求/小时）；另有编辑型 Pro 约 $12/月（第三方口径）；Enterprise 定制。",
+  "verified_platform": [
+    "Web 浏览器",
+    "VS Code 扩展",
+    "云（VM / microVM）"
+  ],
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "CodeSandbox SDK（程序化创建隔离沙箱）",
+    "Firecracker microVM（约 2 秒冷启动）",
+    "浏览器内 IDE 与 VM 开发环境",
+    "实时多人协作",
+    "一键部署",
+    "GitHub 集成与预览环境",
+    "Devboxes / 模板"
+  ],
+  "verified_description": "CodeSandbox 是一个云端开发环境与代码执行平台，2025 年起成为 Together AI 旗下产品。它当前主打 CodeSandbox SDK：基于 Firecracker microVM（约 2 秒冷启动）为 AI 智能体、代码解释与评测提供隔离、安全的沙箱；同时保留浏览器内 IDE、VM 开发环境与实时协作。提供免费 Build 版（5 成员、40 小时/月 VM 额度）及付费 Scale（约 $170/月）等方案，适合前端开发者、需要与 AI 智能体集成的团队以及教学场景。",
+  "content_flags": "原内容描述过时：将 CodeSandbox AI 定位为“集成在 IDE 中的 AI 编程助手（补全/错误诊断）”，但产品已转向智能体沙箱基础设施（CodeSandbox SDK），且定价（$9/月 Pro）已过时（现为免费 Build + Scale 约 $170/月）。",
+  "price_verified": true,
+  "verified_pros": [
+    "无需本地配置，浏览器即可开发",
+    "为 AI 智能体提供隔离、安全的代码执行沙箱",
+    "microVM 约 2 秒冷启动，可快照恢复",
+    "支持并行运行多个智能体",
+    "免费版额度可用，适合原型与学习"
+  ],
+  "verified_cons": [
+    "定价页对爬虫不透明（部分抓取返回 403）",
+    "传统“AI 代码补全助手”定位已弱化，转向智能体基础设施",
+    "大型项目性能依赖 VM 规格",
+    "纯 Python 评测场景 E2B / Modal 可能更便宜"
+  ],
+  "verified_faq": [
+    {
+      "q": "CodeSandbox 现在还做 AI 编程助手吗？",
+      "a": "CodeSandbox 自 2025 年被 Together AI 收购后，定位转向“CodeSandbox SDK”——为 AI 智能体与代码解释提供隔离沙箱；浏览器内 IDE 与 VM 开发环境仍保留，但不再以“AI 补全助手”为核心卖点。"
+    },
+    {
+      "q": "CodeSandbox 免费版和付费版有什么区别？",
+      "a": "免费 Build 版含 5 名成员、40 小时/月 VM 额度、无限沙箱；付费 Scale 约 $170/月，提升 VM 额度、并发与请求限制；另有编辑型 Pro 约 $12/月（第三方口径）。"
+    },
+    {
+      "q": "CodeSandbox 支持哪些语言/框架？",
+      "a": "支持 JavaScript/TypeScript、Python、React、Vue、Node.js 等主流前端与全栈框架，并提供丰富模板。"
+    },
+    {
+      "q": "CodeSandbox 可以离线使用吗？",
+      "a": "不可以，作为云端开发环境需要网络连接。"
+    }
+  ],
+  "verified_tags": [
+    "AI编程",
+    "云IDE",
+    "在线代码编辑器",
+    "代码沙箱",
+    "智能体基础设施"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://codesandbox.io",
+    "https://codesandbox.io/pricing?for=individual",
+    "https://aiproductivity.ai/pricing/codesandbox",
+    "https://aitoolsatlas.ai/tools/codesandbox/review",
+    "https://comparetiers.com/compare/codesandbox-vs-replit"
+  ],
+  "verify_notes": "修正定位与定价：现属 Together AI，核心为沙箱 SDK；Pro 不再 $9，免费 Build + Scale 约 $170/月（另有编辑型 Pro 约 $12/月第三方口径）。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "lovable",
+      "cursor",
+      "github-copilot"
+    ],
+    "verdict": "CodeSandbox AI 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：CodeSandbox AI 的 CodeSandbox SDK（程序化创建隔离沙箱） 是亮点，价格 免费版可用，付费 Scale 约 $170/月起；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

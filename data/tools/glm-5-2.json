@@ -1,0 +1,160 @@
+{
+  "name": "智谱 GLM 5.3",
+  "slug": "glm-5-2",
+  "emoji": "🧠",
+  "color": "#6B5BFF",
+  "description": "智谱 GLM 是智谱 AI（Z.ai）的基座大模型家族，当前旗舰 GLM-5.3（2026-08-14 发布）基于 GLM-5.2 同款基座、全部增益来自训练后扩展（post-training scaling）：开源 SOTA 的 Coding 能力（Z.ai Code Bench 较 5.2 提升 50%）、涌现的网络（赛博）能力（CyberGym 84.5% SOTA、ExploitBench 54.4% 较 5.2 翻倍），1M 无损上下文，MIT 开源。注意：纯文本基座模型，多模态需 GLM-5V-Turbo。",
+  "updated_date": "2026-08-19",
+  "category": "AI对话",
+  "tags": [
+    "大语言模型",
+    "国产大模型",
+    "开源",
+    "1M上下文",
+    "Coding",
+    "Agent",
+    "MIT许可"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "850万",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://www.zhipuai.cn/",
+  "price": "开源权重 MIT 免费（GLM-5.3 约 2026-08-28 释出）；API 走智谱 GLM Coding Plan 点数配额制，非高峰时段（UTC+8 工作日 14:00-18:00 之外，含周末）仅耗 50% 点数",
+  "platform": "Web/iOS/Android/小程序",
+  "pros": [
+    "开源 SOTA 的 Coding 能力（Z.ai Code Bench 较 5.2 提升 50%）",
+    "涌现赛博能力：CyberGym 84.5% 登顶、ExploitBench 较 5.2 翻倍",
+    "1M 无损上下文，长程任务稳定",
+    "MIT 开源 + 国产算力 Day 0 适配"
+  ],
+  "cons": [
+    "纯文本基座模型，多模态需 GLM-5V-Turbo",
+    "GLM Coding Plan 改为点数配额，定价不如按 token 直观",
+    "权重延后约两周开源（安全评估），非发布即得"
+  ],
+  "features": [
+    "1M 无损上下文（沿用 GLM-5.2 同款基座，数百 K 后仍稳定）",
+    "开源 SOTA Coding 能力（Z.ai Code Bench 较 5.2 +50%，当前最强开源编码模型）",
+    "涌现的网络/赛博能力（CyberGym 84.5% SOTA，ExploitBench 54.4% 较 5.2 翻倍）",
+    "长程 Agent 任务执行（工具调用+多步推理，长程编码 RL 吞吐 +2.3×）",
+    "MIT 开源 + 国产算力 Day 0 适配（昇腾/寒武纪/摩尔线程等）"
+  ],
+  "related": [
+    "chatgpt",
+    "claude",
+    "wenxin-yiyan"
+  ],
+  "faq": [
+    {
+      "q": "GLM-5.3 相比 GLM-5.2 强在哪？",
+      "a": "基座不变，全部增益来自训练后扩展（post-training scaling）。编码：Z.ai Code Bench 较 5.2 提升 50%，当前最强开源编码模型；涌现的网络（赛博）能力：CyberGym 84.5%（5.2 为 77.2%）、ExploitBench 54.4%（5.2 为 24.4%，翻倍有余）；Terminal-Bench 3.0 从 4.6 升至 28.3、DeepSWE v1.1 从 46.2 升至 66.9。"
+    },
+    {
+      "q": "GLM-5.3 支持多长上下文？",
+      "a": "沿用 GLM-5.2 同款基座，1M 无损上下文（100 万 tokens 真实可用），数百 K 之后仍稳定。"
+    },
+    {
+      "q": "GLM-5.3 是免费的吗？怎么调用？",
+      "a": "开源权重以 MIT 协议发布，GLM-5.3 约 2026-08-28 释出（安全评估完成后）；API 走智谱开放平台（Z.ai / bigmodel.cn）glm-5.3 端点，GLM Coding Plan 已全量推送、改为点数配额制，非高峰时段（UTC+8 周一至周五 14:00-18:00 之外，含周末）仅耗 50% 点数；智谱清言 / Z.ai 可直接体验。"
+    },
+    {
+      "q": "GLM-5.3 还能关闭思考（thinking disabled）吗？",
+      "a": "不支持。思考参数仅支持 low / high / max；若原代码使用 thinking.type:'disabled'，需改为 enabled 并将 reasoning_effort 设为 low，否则请求会失败。"
+    },
+    {
+      "q": "GLM-5.3 支持多模态（图片/视觉）吗？",
+      "a": "不支持。GLM-5.3 是纯文本基座模型；多模态场景请使用同系列 GLM-5V-Turbo。"
+    }
+  ],
+  "seo_keywords": [
+    "GLM-5.3",
+    "GLM-5.3怎么样",
+    "智谱GLM",
+    "GLM大模型",
+    "GLM-5.3和5.2对比",
+    "GLM-5.2怎么样",
+    "国产开源大模型推荐"
+  ],
+  "content": "# 智谱 GLM 是什么？\n\n智谱 GLM 是智谱 AI（Z.ai）推出的基座大语言模型家族，也是当前国产开源大模型第一梯队的代表。当前旗舰 **GLM-5.3** 于 2026 年 8 月 14 日发布，基于 GLM-5.2 同款基座，**全部性能增益来自训练后扩展（post-training scaling）**——不是换了更大的模型，而是把训练后这一阶段的规模与质量拉满。\n\n在 Artificial Analysis 综合榜单上，GLM-5.2 曾以 51 分位居开源模型第一；GLM-5.3 延续并放大了这一优势，重点攻下复杂编码与长程任务，并意外涌现出强劲的网络（赛博）安全能力。对中文用户和开发者来说，最值得关注的三点是：真·100 万上下文、开源 SOTA 的 Coding 能力、可私有部署的 MIT 开源权重。\n\n---\n\n## 当前旗舰：GLM-5.3 强在哪\n\nGLM-5.3 与 GLM-5.2 使用相同基座，提升全部来自 post-training。官方明确指出：\"Scaling post-training is all we did for GLM-5.3.\"\n\n**1. 开源 SOTA 的 Coding 能力**\n在智谱内部 Z.ai Code Bench 上较 GLM-5.2 提升 **50%**，官方称其为当前最强的开源权重编码模型。Terminal-Bench 3.0 从 4.6 跃升至 28.3、DeepSWE v1.1 从 46.2 升至 66.9、SWE-Marathon v1.1 从 19.4 升至 42.5、FrontieSWE 从 67.5 升至 78.1。\n\n**2. 涌现的网络（赛博）能力**\n随着 post-training 规模扩大，赛博能力增长超出预期：CyberGym 达 **84.5%**（5.2 为 77.2%，SOTA），ExploitBench 达 **54.4%**（5.2 为 24.4%，翻倍有余），ExploitGym 两小时完成 105 个任务、六小时内 130 个（5.2 为 29 / 39）。\n\n**3. 长程任务执行（Agent）**\n继承 GLM-5.2 的 RL 策略（IndexShare、SAO、slime 框架），并在系统层加入局部存储缓存、多教师 OPD、联合调度等优化，长程编码 RL 的端到端训练吞吐提升 **>2.3×**，增益在长链路任务上保持而不只是短任务。\n\n---\n\n## GLM 版本演进对比：5.1 → 5.2 → 5.3\n\n| 维度 | GLM-5.1（2025.4） | GLM-5.2（2026.6） | GLM-5.3（2026.8.14） |\n|------|------|------|------|\n| 定位 | 立住长程任务概念 | 把 1M 上下文做成工程可用 | Post-training 规模化，coding+赛博跃迁 |\n| 上下文 | 200K | **1M 无损** | 1M 无损（同基座） |\n| Terminal-Bench 2.1 | 63.5 | 81.0 | **88.2** |\n| Terminal-Bench 3.0 | — | 4.6 | **28.3** |\n| DeepSWE v1.1 | — | 46.2 | **66.9** |\n| SWE-Marathon v1.1 | — | 19.4 | **42.5** |\n| CyberGym | — | 77.2% | **84.5%** |\n| ExploitBench | — | 24.4% | **54.4%** |\n| 开源协议 | MIT | MIT | MIT（权重延后约 2 周释出） |\n| 升级节奏 | — | 约两月一版 | 继承 5.2 基座，训练后扩展 |\n\n一句话：5.1 把长程任务概念立住，5.2 把 1M 工程可用做扎实，5.3 用 post-training 把编码与赛博能力推到开源新高度。\n\n---\n\n## 免费吗？怎么用？\n\n- **开源权重**：以最宽松的 MIT 协议发布。GLM-5.3 权重在发布后约两周（约 2026-08-28，安全评估完成后）公开可用，技术平权无国界。\n- **API / 平台**：智谱开放平台（Z.ai / bigmodel.cn）提供 `glm-5.3` 端点；GLM Coding Plan 已全量推送，改为**点数配额制**——输入、缓存输入、输出分别计点，非高峰时段（UTC+8 周一至周五 14:00-18:00 之外，含周末）仅消耗 **50%** 点数。\n- **智谱清言 / Z.ai**：C 端对话产品基于 GLM 系列模型，Web 端与 App 可直接体验。\n- **编码集成**：可接入 ZCode、Claude Code、OpenCode 等编码环境。\n\n---\n\n## 值不值得用？\n\n**适合谁：**\n- 需要处理超长代码库、长文档、长链路 Agent 任务的开发者\n- 重视数据可控、想在本地或国产算力私有部署的团队（MIT 协议 + 国产芯片适配）\n- 以中文场景为主、追求性价比的 AI 应用开发者\n- 安全研究 / 赛博场景（GLM-5.3 的赛博能力为开源 SOTA）\n\n**不太适合：**\n- 只想要轻量聊天机器人的轻度用户（它更偏生产级底座）\n- 强依赖某个闭源生态、离不开商业 API 安全围栏的场景\n- 需要原生多模态（图片/视觉）的场景——应使用同系列 GLM-5V-Turbo\n\n**总体结论：** 如果你要的是能真干活的开源底座，智谱 GLM 目前是国产模型里最值得优先考虑的之一——1M 上下文 + 开源 SOTA 的 Coding + 涌现的赛博能力 + MIT 协议，这几点都是硬实力。\n",
+  "published": true,
+  "created_date": "2026-07-28",
+  "published_date": "2026-07-03",
+  "date": "2026-07-28",
+  "verified_url": "https://www.zhipuai.cn/",
+  "verified_publisher": "智谱AI（Zhipu AI / Z.ai）",
+  "verified_what": "智谱2026年6月发布的开源旗舰大模型，753B MoE架构，1M无损上下文，开源SOTA的Coding能力，MIT许可证。",
+  "verified_price": "开源权重 MIT 免费（GLM-5.3 约 2026-08-28 释出）；API 走智谱 GLM Coding Plan 点数配额制，非高峰时段（UTC+8 工作日 14:00-18:00 之外，含周末）仅耗 50% 点数",
+  "verified_platform": "Web/API/iOS/Android/小程序/OpenRouter/40+第三方平台",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "1M 无损上下文（沿用 GLM-5.2 同款基座，数百 K 后仍稳定）",
+    "开源 SOTA Coding 能力（Z.ai Code Bench 较 5.2 +50%，当前最强开源编码模型）",
+    "涌现的网络/赛博能力（CyberGym 84.5% SOTA，ExploitBench 54.4% 较 5.2 翻倍）",
+    "长程 Agent 任务执行（工具调用+多步推理，长程编码 RL 吞吐 +2.3×）",
+    "MIT 开源 + 国产算力 Day 0 适配（昇腾/寒武纪/摩尔线程等）"
+  ],
+  "verified_description": "智谱 GLM 是智谱 AI（Z.ai）的基座大模型家族，当前旗舰 GLM-5.3（2026-08-14 发布）基于 GLM-5.2 同款基座、全部增益来自训练后扩展（post-training scaling）：开源 SOTA 的 Coding 能力（Z.ai Code Bench 较 5.2 提升 50%）、涌现的网络（赛博）能力（CyberGym 84.5% SOTA、ExploitBench 54.4% 较 5.2 翻倍），1M 无损上下文，MIT 开源。注意：纯文本基座模型，多模态需 GLM-5V-Turbo。",
+  "content_flags": "关键矛盾：Pros中写'支持超长上下文窗口（最高128K）'，但Content和FAQ正确描述为'1M无损上下文'。这是典型的版本驱动页面数据不一致——Pros部分的128K可能是旧版本数据残留。此外，Cons中'多模态能力略弱于GPT-4V'不适用（GLM-5.2是纯文本模型，多模态对比应使用GLM-5V-Turbo）。",
+  "price_verified": true,
+  "verified_pros": [
+    "开源 SOTA 的 Coding 能力（Z.ai Code Bench 较 5.2 提升 50%）",
+    "涌现赛博能力：CyberGym 84.5% 登顶、ExploitBench 较 5.2 翻倍",
+    "1M 无损上下文，长程任务稳定",
+    "MIT 开源 + 国产算力 Day 0 适配"
+  ],
+  "verified_cons": [
+    "纯文本基座模型，多模态需 GLM-5V-Turbo",
+    "GLM Coding Plan 改为点数配额，定价不如按 token 直观",
+    "权重延后约两周开源（安全评估），非发布即得"
+  ],
+  "verified_faq": [
+    {
+      "q": "GLM-5.3 相比 GLM-5.2 强在哪？",
+      "a": "基座不变，全部增益来自训练后扩展（post-training scaling）。编码：Z.ai Code Bench 较 5.2 提升 50%，当前最强开源编码模型；涌现的网络（赛博）能力：CyberGym 84.5%（5.2 为 77.2%）、ExploitBench 54.4%（5.2 为 24.4%，翻倍有余）；Terminal-Bench 3.0 从 4.6 升至 28.3、DeepSWE v1.1 从 46.2 升至 66.9。"
+    },
+    {
+      "q": "GLM-5.3 支持多长上下文？",
+      "a": "沿用 GLM-5.2 同款基座，1M 无损上下文（100 万 tokens 真实可用），数百 K 之后仍稳定。"
+    },
+    {
+      "q": "GLM-5.3 是免费的吗？怎么调用？",
+      "a": "开源权重以 MIT 协议发布，GLM-5.3 约 2026-08-28 释出（安全评估完成后）；API 走智谱开放平台（Z.ai / bigmodel.cn）glm-5.3 端点，GLM Coding Plan 已全量推送、改为点数配额制，非高峰时段（UTC+8 周一至周五 14:00-18:00 之外，含周末）仅耗 50% 点数；智谱清言 / Z.ai 可直接体验。"
+    },
+    {
+      "q": "GLM-5.3 还能关闭思考（thinking disabled）吗？",
+      "a": "不支持。思考参数仅支持 low / high / max；若原代码使用 thinking.type:'disabled'，需改为 enabled 并将 reasoning_effort 设为 low，否则请求会失败。"
+    },
+    {
+      "q": "GLM-5.3 支持多模态（图片/视觉）吗？",
+      "a": "不支持。GLM-5.3 是纯文本基座模型；多模态场景请使用同系列 GLM-5V-Turbo。"
+    }
+  ],
+  "verified_tags": [
+    "大语言模型",
+    "国产大模型",
+    "开源",
+    "1M上下文",
+    "Coding",
+    "Agent",
+    "MIT许可"
+  ],
+  "verified_category": "AI对话",
+  "source_urls": [
+    "https://z.ai/blog/glm-5.3"
+  ],
+  "verify_notes": "GLM-5.3 官方发布（2026-08-14，z.ai/blog/glm-5.3）。glm-5-2 页为「智谱 GLM 版本演进专页」，name 带当前版本号（智谱 GLM 5.3），原地覆盖 5.2→5.3，不新建 glm-5-3 页。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "gemini",
+      "chatgpt",
+      "360-zhinain"
+    ],
+    "verdict": "GLM-5.2 与 Gemini、ChatGPT、360智脑 同属AI对话赛道：GLM-5.2 的 1M Solid无损上下文（100万tokens真可用） 是亮点，价格 开源免费(MIT)；API $1.40/$4.40每百万tokens；竞品各有侧重，可按预算与功能需求选择。"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "name": "Microsoft Agent Framework",
+  "slug": "microsoft-agent-framework",
+  "positioning": "Microsoft Agent Framework是什么？微软统一Agent框架好用吗",
+  "auto_positioning": false,
+  "emoji": "🧩",
+  "color": "#0078D4",
+  "description": "Microsoft Agent Framework 是微软官方的开源 Agent 编排框架，于 2026 年 4 月发布 1.0 版本，合并了 AutoGen 的实验性多智能体编排与 Semantic Kernel 的企业级能力。它面向 .NET 与 Python，提供企业级多智能体编排、连接器、工作流、记忆与 A2A/MCP 互操作，是微软技术栈构建生产级 Agent 的标准选择。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "免费可用",
+      "type": "free"
+    },
+    {
+      "text": "微软官方"
+    },
+    {
+      "text": "企业级"
+    },
+    {
+      "text": "多智能体"
+    }
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://learn.microsoft.com/agent-framework",
+  "price": "开源免费（SDK 免费，部署到 Azure AI Foundry 等按云资源用量计费）",
+  "platform": ".NET / Python（跨平台）",
+  "pros": [
+    "统一 AutoGen 与 Semantic Kernel，实验性与企业级能力兼得",
+    "企业级多智能体编排：顺序、并发、handoff、group chat、Magentic-One",
+    "内置中间件钩子、可插拔记忆、图式工作流与持久化状态",
+    "原生支持 A2A 与 MCP，跨运行时与跨厂商互操作",
+    "多模型连接器：Azure OpenAI、OpenAI、Claude、Bedrock、Gemini、Ollama"
+  ],
+  "cons": [
+    "体系庞大，初学者需要时间理解编排与工作流概念",
+    "深度能力（治理、观测）与 Azure 生态绑定较深",
+    "对非微软技术栈团队并不算最轻量的选择"
+  ],
+  "features": [
+    "单 Agent 与服务连接器：跨 .NET/Python 的稳定核心抽象",
+    "中间件钩子：在执行的每个阶段拦截、转换与扩展 Agent 行为",
+    "Agent 记忆与上下文：对话历史、键值状态、向量检索可插拔",
+    "Agent 工作流：图式引擎组合 Agent 与函数，支持检查点与续跑",
+    "多智能体编排：顺序/并发/handoff/group chat/Magentic-One",
+    "声明式 YAML：用版本化文件定义 Agent、工具、记忆与编排拓扑"
+  ],
+  "related": [
+    "langchain",
+    "claude-agent-sdk",
+    "google-adk"
+  ],
+  "content": "## Microsoft Agent Framework是什么？\n\nMicrosoft Agent Framework 是微软官方的开源 Agent SDK 与运行时，2026 年 4 月发布 1.0 稳定版，覆盖 .NET 与 Python。它的诞生源于一个很实在的诉求：开发者既想要 AutoGen 那种前沿的多智能体编排实验能力，又想要 Semantic Kernel 那种稳定、可观测、可治理的企业级底座。微软干脆把两者合并成一套统一框架，让团队不用在「能创新」和「能上线」之间二选一。\n\n## 核心功能\n\n1. 单 Agent 与服务连接器：核心 Agent 抽象在 .NET 和 Python 两端都已生产就绪，并自带 Foundry、Azure OpenAI、OpenAI、Anthropic Claude、Amazon Bedrock、Google Gemini、Ollama 等连接器。\n2. 中间件钩子：一条中间件管道，让你在执行的每个阶段拦截、转换和扩展行为——内容安全过滤、日志、合规策略都能挂上去，而不用改 Agent 的提示词。\n3. Agent 记忆与上下文：可插拔的记忆架构，支持对话历史、持久化键值状态与向量检索，后端可选 Foundry Agent Service、Mem0、Redis、Neo4j 或自定义存储。\n4. Agent 工作流：图式工作流引擎，把 Agent 与函数编排成确定、可重复的过程，支持分支、并行、检查点与中断恢复。\n5. 多智能体编排：内置源自微软研究院与 AutoGen 的模式——顺序、并发、handoff、group chat、Magentic-One，全部支持流式、人机协作审批与暂停续跑。\n\n## 版本/套餐对比\n\n框架本身开源免费，提供稳定的 1.0 API 与长期支持承诺。部署到 Azure AI Foundry、Azure AI Agent Service 等托管环境时会按云资源用量计费，本地开发与调试不收费。官方未提供分层商业定价，更多是与 Azure 订阅体系挂钩。\n\n## 值不值得用？\n\n优点：它把企业真正关心的可观测、合规、安全、长程持久化都做进了框架层面；A2A 与 MCP 的开放标准让它天然跨厂商、可移植；既能本地试验也能无缝上云。缺点：概念体系相对庞大，初学者需要消化编排与工作流；深度治理能力与 Azure 绑定较深；对非微软栈团队不算最轻量。结论：如果你的团队在 .NET/Python 上做生产级多智能体，它是目前最省心的一站式答案。\n\n## 使用建议\n\n1. 用几行代码先建一个单 Agent，跑通工具调用与多轮对话。\n2. 把合规、日志、内容安全用中间件钩子统一挂载，别散落在提示词里。\n3. 复杂任务用图式工作流显式控制执行路径，长任务记得开检查点。\n4. 多 Agent 协作优先用官方编排模式，再按需接 A2A/MCP 打通外部系统。\n\n## 适合谁用？\n\n推荐：在微软技术栈（.NET/Python、Azure）上构建生产级多智能体的团队。\n可考虑：需要统一治理、观测与合规的企业 AI 平台负责人。\n不推荐：只想快速做个轻量原型、不愿被 Azure 生态绑定的个人开发者。",
+  "published": false,
+  "faq": [
+    {
+      "question": "Microsoft Agent Framework 和 Semantic Kernel、AutoGen 是什么关系？",
+      "answer": "它是两者的统一继承者：合并了 AutoGen 的代理抽象与多智能体实验能力，以及 Semantic Kernel 的企业级功能（状态管理、类型安全、中间件、遥测），并新增了图式工作流。"
+    },
+    {
+      "question": "支持哪些模型和平台？",
+      "answer": "框架同时提供 .NET 与 Python SDK，连接器覆盖 Azure OpenAI、OpenAI、Anthropic Claude、Amazon Bedrock、Google Gemini、Ollama 等，模型选择相对开放。"
+    },
+    {
+      "question": "它是免费的吗？",
+      "answer": "框架本身开源免费，本地开发与调试不收费；部署到 Azure AI Foundry 等托管服务时按云资源用量计费。"
+    },
+    {
+      "question": "和 LangChain 这类框架比有什么不同？",
+      "answer": "更强调企业就绪：内置可观测、合规钩子、安全、长程持久化与跨运行时互操作（A2A/MCP），适合从原型直接走到生产部署。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Microsoft Agent Framework",
+    "Microsoft Agent Framework怎么样",
+    "Microsoft Agent Framework免费版",
+    "Microsoft Agent Framework使用教程",
+    "Microsoft Agent Framework和哪个好"
+  ],
+  "source_urls": [
+    "https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0",
+    "https://learn.microsoft.com/zh-cn/agent-framework/overview/"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14"
+}

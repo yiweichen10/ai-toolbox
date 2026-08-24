@@ -1,0 +1,152 @@
+{
+  "name": "LM Studio",
+  "slug": "lm-studio",
+  "emoji": "🖥️",
+  "color": "#7C3AED",
+  "description": "LM Studio 是一款在本地电脑上运行大语言模型的桌面应用，支持 macOS、Windows 和 Linux。用户可直接下载并运行 Llama、Qwen、DeepSeek、Gemma 等开源模型，提供聊天界面与兼容 OpenAI 的本地 REST API，所有推理均可离线进行，数据留在本地设备。",
+  "category": "AI开发",
+  "tags": [
+    "本地部署",
+    "大模型",
+    "离线推理",
+    "开源模型"
+  ],
+  "rating": "⭐4.6",
+  "visits": "月访问量超千万级（第三方估算）",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://lmstudio.ai",
+  "price": "完全免费（个人及商用）",
+  "platform": "macOS、Windows、Linux",
+  "pros": [
+    "完全本地运行，数据隐私有保障",
+    "内置模型发现与一键下载（Hugging Face）",
+    "提供兼容 OpenAI 的本地 REST API，便于接入现有应用",
+    "支持 llama.cpp（GGUF）与 Apple MLX，跨平台兼容性好",
+    "可作为 MCP 客户端连接本地模型"
+  ],
+  "cons": [
+    "模型推理速度依赖本机硬件（尤其是 GPU/内存）",
+    "大模型对磁盘与内存占用较高",
+    "需要一定技术基础配置开发接口"
+  ],
+  "features": [
+    "本地下载并运行开源 LLM（Llama、Qwen、DeepSeek、Gemma 等）",
+    "图形化聊天界面与多会话管理",
+    "OpenAI 兼容 REST API 与 lms CLI",
+    "Python / TypeScript SDK（lmstudio-python、lmstudio-js）",
+    "文档对话（RAG）与完全离线运行",
+    "无界面模式（llmster）用于服务器/CI 部署"
+  ],
+  "related": [
+    "ollama",
+    "anythingllm",
+    "chatgpt",
+    "kimi"
+  ],
+  "faq": [
+    {
+      "q": "LM Studio 是免费的吗？",
+      "a": "LM Studio 对个人和工作用途均免费，但需遵守其使用条款。"
+    },
+    {
+      "q": "LM Studio 支持哪些模型？",
+      "a": "支持 Llama、Qwen、DeepSeek、Gemma、Phi 等主流开源与开放权重模型，通过应用内 Discover 或 Hugging Face 下载。"
+    },
+    {
+      "q": "LM Studio 能离线使用吗？",
+      "a": "可以。下载模型权重后，聊天、API 与文档对话均可完全离线运行。"
+    },
+    {
+      "q": "LM Studio 和 Ollama 有什么区别？",
+      "a": "两者都能在本地跑模型。LM Studio 提供图形界面与模型商店；Ollama 更偏向命令行与开发者工作流，二者常配合使用。"
+    }
+  ],
+  "seo_keywords": [
+    "LM Studio",
+    "LM Studio 中文",
+    "LM Studio 本地部署",
+    "LM Studio 下载",
+    "本地运行大模型"
+  ],
+  "content": "## LM Studio 是什么？\n\nLM Studio 是一款让你在自己电脑上跑大语言模型（LLM）的桌面应用，支持 macOS、Windows 和 Linux。它的定位很清晰：不想把数据传到云端、又想用上 Llama、Qwen、DeepSeek、Gemma 这类开源模型的人，装一个就能用。\n\n你不需要懂推理框架，打开软件、在 Discover 里挑个模型、点下载，就能像用 ChatGPT 一样和它聊天。需要写代码调用时，它还能提供一个兼容 OpenAI 格式的本地 REST API，把你本地的模型接进自己的应用里。\n\n## 核心功能\n\n**1. 本地下载并运行开源模型**\n\nLM Studio 内置模型发现功能，可以直接从 Hugging Face 拉取 GGUF / Safetensors 权重的模型。支持 Llama、Qwen、DeepSeek、Gemma、Phi 等主流系列。模型加载到内存后即可对话，所有推理都在本机完成。\n\n**2. 类 ChatGPT 的聊天界面**\n\n提供图形化聊天窗口，支持多会话、提示词管理与本地模型配置。对不想碰命令行的用户很友好。\n\n**3. 兼容 OpenAI 的本地 API**\n\n这是开发者最常用的能力。LM Studio 暴露一个 OpenAI 兼容的 REST API（beta），你现有的基于 OpenAI SDK 的代码几乎不用改，把 base_url 指到本地即可。还提供 `lms` 命令行、Python SDK（lmstudio-python）和 TypeScript SDK（lmstudio-js）。\n\n**4. 文档对话（RAG）与离线运行**\n\n可以把文档拖进对话做离线问答；只要先把模型权重下载好，整个聊天与 API 服务都能断网运行，数据完全留在本地。\n\n**5. 无界面模式（llmster）**\n\nLM Studio 的 `llmster` 是无 GUI 的核心版本，适合部署在服务器、云实例或 CI 环境里做无头推理。\n\n## 值不值得用？\n\n**优点：**\n- 完全本地运行，隐私性最好，企业内网/离线环境也能用\n- 模型商店 + 一键下载，上手成本低\n- OpenAI 兼容 API，接入现有项目几乎零成本\n- 支持 llama.cpp（GGUF）与 Apple MLX，Mac/Win/Linux 通吃\n- 可作为 MCP 客户端，连接本地模型到 Codex、Claude Code 等工具\n\n**缺点：**\n- 推理速度完全看本机配置，没独显或内存小会明显卡\n- 大模型对磁盘和内存占用不低（比如 14B 模型就需要相当内存）\n- 想用 API/SDK 做开发，仍需一点技术基础\n\n**我的看法：** 如果你关心数据不出本机、又想方便地试各种开源模型，LM Studio 是目前最顺手的本地入口之一。配合 Ollama 一起用也很常见——一个管界面和 API，一个管命令行工作流。\n\n## 使用建议\n\n1. **先试小模型**：新手从 7B/8B 量化模型开始，确认本机跑得动再上更大的\n2. **善用本地 API**：把 base_url 指向 LM Studio，现有 OpenAI 代码直接复用\n3. **离线前先下权重**：计划断网使用，务必提前下载好模型文件\n4. **关注硬件**：跑 14B 以上建议 16G+ 内存、有独显更佳\n\n## 适合谁用？\n\n**推荐：**\n- 对数据隐私敏感的开发者与企业\n- 想本地试各类开源模型的研究者\n- 需要把本地模型接进自有应用的工程师\n\n**可考虑：**\n- 普通用户（界面友好，但大模型对机器有要求）\n\n**不推荐：**\n- 本机配置很低、又想跑超大模型的人（云端方案更现实）\n\n## 常见问题（FAQ）\n\n**LM Studio 是免费的吗？**\n\nLM Studio 对个人和工作用途均免费，但需遵守其使用条款。\n\n**LM Studio 支持哪些模型？**\n\n支持 Llama、Qwen、DeepSeek、Gemma、Phi 等主流开源与开放权重模型，通过应用内 Discover 或 Hugging Face 下载。\n\n**LM Studio 能离线使用吗？**\n\n可以。下载模型权重后，聊天、API 与文档对话均可完全离线运行。\n\n**LM Studio 和 Ollama 有什么区别？**\n\n两者都能在本地跑模型。LM Studio 提供图形界面与模型商店；Ollama 更偏向命令行与开发者工作流，二者常配合使用。",
+  "published": true,
+  "created_date": "2026-07-20",
+  "published_date": "2026-07-20",
+  "verified_url": "https://lmstudio.ai",
+  "verified_publisher": "LM Studio",
+  "verified_what": "在本地电脑上运行大语言模型的桌面应用，支持离线推理与 OpenAI 兼容 API",
+  "verified_price": "个人及商用免费（需遵守使用条款）。无付费计划，完全免费。",
+  "verified_platform": "macOS, Windows, Linux",
+  "last_verified": "2026-07-30",
+  "confidence": "high",
+  "conflict": false,
+  "verified_features": [
+    "本地下载并运行开源 LLM（Llama、Qwen、DeepSeek、Gemma 等）",
+    "图形化聊天界面与多会话管理",
+    "OpenAI 兼容 REST API 与 lms CLI",
+    "Python / TypeScript SDK（lmstudio-python、lmstudio-js）",
+    "文档对话（RAG）与完全离线运行",
+    "无界面模式（llmster）用于服务器/CI 部署"
+  ],
+  "verified_description": "LM Studio 是一款在本地电脑上运行大语言模型的桌面应用，支持 macOS、Windows 和 Linux。用户可直接下载并运行 Llama、Qwen、DeepSeek、Gemma 等开源模型，提供聊天界面与兼容 OpenAI 的本地 REST API，所有推理均可离线进行，数据留在本地设备。",
+  "price_verified": true,
+  "verified_rating": "⭐4.6",
+  "rating_source": "暂无权威评分（编辑评定）",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全本地运行，数据隐私有保障",
+    "内置模型发现与一键下载（Hugging Face）",
+    "提供兼容 OpenAI 的本地 REST API，便于接入现有应用",
+    "支持 llama.cpp（GGUF）与 Apple MLX，跨平台兼容性好",
+    "可作为 MCP 客户端连接本地模型"
+  ],
+  "verified_cons": [
+    "模型推理速度依赖本机硬件（尤其是 GPU/内存）",
+    "大模型对磁盘与内存占用较高",
+    "需要一定技术基础配置开发接口"
+  ],
+  "verified_faq": [
+    {
+      "q": "LM Studio 是免费的吗？",
+      "a": "LM Studio 对个人和工作用途均免费，但需遵守其使用条款。"
+    },
+    {
+      "q": "LM Studio 支持哪些模型？",
+      "a": "支持 Llama、Qwen、DeepSeek、Gemma、Phi 等主流开源与开放权重模型，通过应用内 Discover 或 Hugging Face 下载。"
+    },
+    {
+      "q": "LM Studio 能离线使用吗？",
+      "a": "可以。下载模型权重后，聊天、API 与文档对话均可完全离线运行。"
+    },
+    {
+      "q": "LM Studio 和 Ollama 有什么区别？",
+      "a": "两者都能在本地跑模型。LM Studio 提供图形界面与模型商店；Ollama 更偏向命令行与开发者工作流，二者常配合使用。"
+    }
+  ],
+  "verified_tags": [
+    "本地部署",
+    "大模型",
+    "离线推理",
+    "开源模型"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://lmstudio.ai/",
+    "https://lmstudio.ai/download",
+    "https://lmstudio.ai/?ref=minov.it"
+  ],
+  "verify_notes": "url(lmstudio.ai)、price(完全免费)、platform、features 均准确。content 无幻觉。rating 为编辑评定，保持不变。数据质量良好。",
+  "content_verified": true,
+  "compare_section": {
+    "competitors": [
+      "groq",
+      "llamaindex",
+      "anthropic-console"
+    ],
+    "verdict": "LM Studio 与 Groq、LlamaIndex、Anthropic Console 同属AI开发赛道。在性价比上，LM Studio（完全免费（个人及商用））门槛更低；若看重口碑，Anthropic Console（⭐4.8）评分更高；LM Studio 的优势在于在本地电脑上运行大语言模型的桌面应用，支持离线推理与 OpenAI 兼容 API，适合看重该特性的用户。",
+    "generated": "2026-07-30"
+  }
+}

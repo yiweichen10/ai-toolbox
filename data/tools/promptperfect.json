@@ -1,0 +1,76 @@
+{
+  "name": "PromptPerfect",
+  "slug": "promptperfect",
+  "positioning": "免费AI提示词工具：多语言优化+Arena 多模型对",
+  "auto_positioning": true,
+  "emoji": "💬",
+  "color": "#8b5cf6",
+  "description": "Jina AI推出的AI提示词生成与优化工具，把简单模糊的需求自动改写为适配GPT-4/Claude/Gemini/Llama/Midjourney/Stable Diffusion等模型的高质量提示词，支持批量优化与API集成，免费版每月20次优化。",
+  "category": "AI提示词",
+  "subcategory": "",
+  "tags": [
+    {
+      "text": "AI提示词"
+    },
+    {
+      "text": "PromptPerfect"
+    }
+  ],
+  "rating": "⭐ 4.0",
+  "url": "https://promptperfect.jina.ai/",
+  "price": "免费版/付费版",
+  "platform": "Web",
+  "pros": [
+    "老牌工具功能体系完整",
+    "适配文本与图像多类模型",
+    "批量与 API 工程化接入",
+    "多语言优化友好",
+    "交互式对比直观"
+  ],
+  "cons": [
+    "免费额度较少",
+    "高频使用需付费",
+    "复杂任务优化不确定"
+  ],
+  "features": [
+    "Auto-tune 自动调优",
+    "Interact 交互式优化",
+    "Arena 多模型对比",
+    "Prompt as a Service",
+    "Agents 智能体",
+    "多语言优化"
+  ],
+  "related": [
+    "promptpilot",
+    "explinks-prompts",
+    "prompt-engineering-guide"
+  ],
+  "content": "## PromptPerfect 是什么？\n\nPromptPerfect 是 Jina AI（极纳科技）推出的 AI 提示词生成与优化工具，能把简单模糊的需求自动改写为结构化、更精准的提示词，适配 GPT-4、Claude、Gemini、Llama、Midjourney、Stable Diffusion 等主流文本与图像模型。官方主打\"在几秒内优化提示词\"，并提供 Auto-tune 自动调优、Interact 交互式优化、Arena 多模型对比、Prompt as a Service 提示词 API 与 Agents 等完整工具链，是提示词工程领域知名度较高的老牌工具之一。\n\n### 核心功能\n\n- **Auto-tune 自动调优**：输入原始提示词，系统自动补充细节、明确任务目标与输出要求，一键获得高质量优化版本。\n- **Interact 交互式优化**：以对话方式与 AI 助手逐步打磨提示词，可自定义风格、语气、长度与目标模型。\n- **Arena 多模型横向对比**：在同一提示词下对比多个模型（如 GPT、Claude、Gemini）的输出效果，辅助精准选型。\n- **Prompt as a Service**：把优化好的提示词封装为 API 服务，供程序与业务流水线调用。\n- **Agents 与批量处理**：支持提示词级智能体与批量优化，适合高频使用 AI 的企业用户与内容团队。\n- **多语言与模板化**：内置中、英、日等多语言优化模块，并提供可复用模板、版本历史与对比导出。\n\n### 适用场景\n\n- **内容创作者与营销人员**：快速把创作需求转化为可直接出稿的提示词，提升文案、海报与社媒内容的产出效率。\n- **AI 工程师与开发者**：通过 API 集成提示词优化能力，批量打磨业务 Prompt，降低试错成本。\n- **图像生成艺术家**：针对 Midjourney、Stable Diffusion 等模型优化图像提示词，获得更稳定的构图与风格。\n\n### 价格\n\n据官网信息（2026 年核实）：免费版每天 10 次请求；Pro 版 19.99 美元/月（年付约 17% 优惠），含每天 500 次 Auto-tune/Interact 请求与 500 次 Arena 模型请求；Pro Max 版 99.99 美元/月，含 API 访问与更高请求额度；企业版按需定制，需联系销售。具体以官网为准。\n\n### 优缺点\n\n- 优点：老牌提示词优化工具，功能体系完整（调优、对比、API 全覆盖）；适配文本与图像多类模型；批量与 API 能力适合工程化接入；多语言支持友好。\n- 缺点：免费额度较少（每天 10 次），高频使用需付费订阅；优化效果对复杂任务存在不确定性；进阶功能集中在较高档位。",
+  "published": true,
+  "faq": [
+    {
+      "q": "PromptPerfect 免费版额度是多少？",
+      "a": "据官网信息，免费版每天 10 次请求（早期第三方信息称每月 20 次优化，以官网最新为准），适合轻度试用。"
+    },
+    {
+      "q": "支持哪些 AI 模型？",
+      "a": "支持 GPT-4、Claude、Gemini、Llama 等文本模型，以及 Midjourney、Stable Diffusion、DALL-E 等图像模型。"
+    },
+    {
+      "q": "可以接入自己的系统吗？",
+      "a": "可以，Pro Max 及以上档位提供 API 访问（Prompt as a Service），可把提示词优化能力集成到业务流水线。"
+    }
+  ],
+  "created_date": "2026-08-05",
+  "verified_url": "https://promptperfect.jinaai.cn/?utm_source=ai-bot.cn",
+  "last_verified": "2026-08-05",
+  "confidence": "high",
+  "verify_notes": "二轮核实(WebSearch 2026-08-05)：ai-bot.cn 提供的 jinaai.cn 域名已失效，官方真实官网为 promptperfect.jina.ai（多源一致），URL 已修正。",
+  "seo_keywords": [
+    "PromptPerfect",
+    "AI提示词优化",
+    "提示词生成器",
+    "Jina AI",
+    "提示词优化工具"
+  ]
+}
