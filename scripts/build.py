@@ -178,7 +178,6 @@ ARTICLE_CATEGORY_PAGES = [
     },
 ]
 
-
 def article_content_type(a):
     """文章内容类型：优先取数据字段，缺失时按分类+标题规则兜底（2026-08-08）。"""
     ct = a.get('content_type') or ''
@@ -221,7 +220,6 @@ def article_content_type(a):
     if any(k in title for k in _ana_kw):
         return '行业分析'
     return '行业分析'
-
 
 def ensure_article_content_types(articles):
     """新文章自动归类（2026-08-08）：content_type 缺失时按规则内存补齐，返回补写篇数。
@@ -309,54 +307,12 @@ if os.path.exists(_CRIT_PATH):
         CRITICAL_CSS = _cf.read().strip()
 
 # ── HTML 写盘出口：统一折叠多余空行(根因修复, 不在事后另写脚本) ──
-_PRE_BLOCK_RE = re.compile(r'(<pre\b.*?</pre>|<textarea\b.*?</textarea>)', re.S | re.I)
-def _collapse_blank_lines(html: str) -> str:
-    """折叠连续空行(3+ 换行→1空行), 保护 <pre>/<textarea> 内空白不被压缩。"""
-    _store = []
-    def _stash(m):
-        _store.append(m.group(1))
-        return "\x00%d\x00" % (len(_store) - 1)
-    html = _PRE_BLOCK_RE.sub(_stash, html)
-    html = re.sub(r'\n[ \t]*\n(?:[ \t]*\n)+', '\n\n', html)
-    for i, blk in enumerate(_store):
-        html = html.replace("\x00%d\x00" % i, blk)
-    return html
-
-def _emit(path: str, html: str) -> None:
-    """统一 HTML 写盘出口：落盘前折叠多余空行, 所有页面共用, 折叠逻辑只此一处。"""
-    # 2026-08-06: 偶发 Errno 22（文件被扫描/同步短暂占用），加重试避免流水线中断
-    import time as _t
-    for _attempt in range(5):
-        try:
-            with open(path, 'w', encoding='utf-8') as f:
-                f.write(_collapse_blank_lines(html))
-            return
-        except OSError:
-            if _attempt == 4:
-                raise
-            _t.sleep(0.4)
-
-
-def _record_build_error(kind: str, key: str, err: str) -> None:
-    """fail-soft 错误记录（2026-08-23）：单页渲染失败时追加到 data/build_errors.json，
-    供构建后排查。不抛异常、不阻断其他页面。"""
-    try:
-        import json as _j
-        _p = os.path.join(DATA_DIR, 'build_errors.json')
-        _lst = []
-        if os.path.exists(_p):
-            try:
-                with open(_p, 'r', encoding='utf-8') as _f:
-                    _lst = _j.load(_f)
-                    if not isinstance(_lst, list):
-                        _lst = []
-            except Exception:
-                _lst = []
-        _lst.append({'kind': kind, 'key': key, 'error': str(err)[:300]})
-        with open(_p, 'w', encoding='utf-8') as _f:
-            _j.dump(_lst[-200:], _f, ensure_ascii=False, indent=1)
-    except Exception:
-        pass  # 错误记录失败不影响构建
+# 2026-08-24: 抽到 build_lib/html_utils.py（模块1拆分），此处仅重导出以保持兼容
+from build_lib.html_utils import (
+    _PRE_BLOCK_RE, _collapse_blank_lines, _emit, _record_build_error,
+    extract_faq_section, markdown_to_html, shift_headings, escape_html, set_data_dir,
+)
+set_data_dir(DATA_DIR)
 
 # ── 工具图标：唯一解析入口，SVG优先，PNG其次 ──
 def resolve_icon(slug):
@@ -665,163 +621,6 @@ def get_category_slug(category_name):
     slug = '-'.join([item[0] for item in pinyin_list if item and item[0].strip()]).lower()
     return slug
 
-def extract_faq_section(md):
-    """从工具 markdown 正文剥离"常见问题（FAQ）"小节（P0-3，2026-08-09）。
-
-    历史模板把同一批 FAQ 同时写进 content 和 tool.faq，导致工具页 FAQ 重复出现。
-    现在统一由模板 faq-section 渲染（含 FAQ Schema），正文里不再保留该小节。
-    返回 (清理后的 markdown, [(question, answer), ...])。
-    """
-    if not md:
-        return md, []
-    lines = md.split('\n')
-    out = []
-    faqs = []
-    in_faq = False
-    q = None
-    buf = []
-
-    def flush():
-        nonlocal q, buf
-        if q is not None:
-            ans = '\n'.join(buf).strip()
-            if ans:
-                faqs.append((q, ans))
-        q = None
-        buf = []
-
-    for ln in lines:
-        stripped = ln.strip()
-        if re.match(r'^#{1,4}\s*常见问题', stripped):
-            flush()
-            in_faq = True
-            continue
-        if in_faq:
-            if re.match(r'^#{1,4}\s+', stripped):
-                # 下一个标题：FAQ 小节结束，该行属于正文
-                flush()
-                in_faq = False
-                out.append(ln)
-                continue
-            if not stripped:
-                if q is not None:
-                    buf.append(ln)
-                continue
-            # 独立行问题：**问题？**
-            mq = re.match(r'^\*\*(.+?)\*\*\s*$', stripped)
-            if mq:
-                flush()
-                q = mq.group(1).strip().rstrip('?？:：').strip()
-                continue
-            # 同行问题+答案：**问题**：答案
-            mq2 = re.match(r'^\*\*(.+?)\*\*\s*(.+)$', stripped)
-            if mq2 and q is None:
-                q = mq2.group(1).strip().rstrip('?？:：').strip()
-                buf.append(mq2.group(2).strip())
-                continue
-            if q is not None:
-                buf.append(ln)
-        else:
-            out.append(ln)
-    flush()
-    return '\n'.join(out), faqs
-
-def markdown_to_html(md):
-    """将Markdown转换为简单HTML"""
-    if not md:
-        return ''
-    html = md
-    # 水平分隔线（---）转为 <hr>，必须放在代码块处理之前，避免误匹配
-    html = re.sub(r'\n---\s*\n', '\n<hr>\n', html)
-    html = re.sub(r'^---\s*$', '<hr>', html, flags=re.MULTILINE)
-    # 代码块
-    html = re.sub(r'```(\w*)\n([\s\S]*?)```', lambda m: '<pre><code>' + m.group(2).replace('&','&amp;').replace('<','&lt;').replace('>','&gt;') + '</code></pre>', html)
-    # 表格
-    def table_replace(m):
-        header = m.group(1)
-        sep = m.group(2)
-        body = m.group(3)
-        headers = [c.strip() for c in header.split('|') if c.strip()]
-        # 列名纯文本（去掉HTML标签），用于移动端卡片式 data-label
-        plain_headers = [re.sub(r'<[^>]+>', '', h).strip() for h in headers]
-        rows = body.strip().split('\n')
-        table = '<table><thead><tr>'
-        for h in headers:
-            table += f'<th>{h}</th>'
-        table += '</tr></thead><tbody>'
-        for row in rows:
-            cells = [c.strip() for c in row.split('|') if c.strip()]
-            table += '<tr>'
-            for i, c in enumerate(cells):
-                label = plain_headers[i].replace('"', '&quot;') if i < len(plain_headers) else ''
-                table += f'<td data-label="{label}">{c}</td>'
-            table += '</tr>'
-        table += '</tbody></table>'
-        return table
-    html = re.sub(r'\n(\|.+\|)\n(\|[-:| ]+\|)\n((?:\|.+\|\n?)+)', table_replace, html)
-    # 标题（H1/H2/H3）
-    html = re.sub(r'^### (.+)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
-    html = re.sub(r'^## (.+)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
-    html = re.sub(r'^# (.+)$', r'<h1>\1</h1>', html, flags=re.MULTILINE)
-    # 引用
-    html = re.sub(r'^> (.+)$', r'<blockquote>\1</blockquote>', html, flags=re.MULTILINE)
-    # 加粗/行内代码
-    html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
-    html = re.sub(r'`([^`]+)`', r'<code>\1</code>', html)
-    # 图片 ![alt](url)（2026-08-17 新增：此前不支持，图片被当成带 ! 的普通链接）
-    # 必须在链接处理之前执行，否则 ! 会残留成正文文本
-    html = re.sub(r'!\[([^\]]*)\]\((https?://[^)]+)\)', r'<img src="\2" alt="\1" loading="lazy">', html)
-    html = re.sub(r'!\[([^\]]*)\]\((/[^)]+)\)', r'<img src="\2" alt="\1" loading="lazy">', html)
-    # 链接 [text](url) — 先处理站内相对链接，再处理外链
-    # ⚠️ 2026-08-18：必须带 class。此前两行都不带 class，而 style.css 从未定义
-    # 全局 a / .article-body a 的颜色，导致正文链接落到浏览器 UA 默认 -webkit-link
-    # (#0000EE 纯蓝)：亮色白底勉强可读，暗色深底只有 1.56:1 = 完全看不见。
-    # 站内 → .ilink（品牌绿），外链 → .ext-link（蓝系），两者在 style.css 第 18 节
-    # 定义了亮/暗两套颜色；同时 CSS 保留了 a[href^="http"]:not([class]) 兜底规则，
-    # 即使将来这里再漏 class 也不会瞎。改这两行时务必同步 CSS 第 18 节。
-    html = re.sub(r'\[([^\]]+)\]\((/[^)]+)\)', r'<a href="\2" class="ilink">\1</a>', html)
-    html = re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)', r'<a href="\2" target="_blank" rel="noopener" class="ext-link">\1</a>', html)
-    # 列表：将连续的 <li> 包裹在 <ul> 中
-    html = re.sub(r'^- (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
-    html = re.sub(r'^(\d+)\. (.+)$', r'<li>\2</li>', html, flags=re.MULTILINE)
-    # 把连续的裸 <li> 行用 <ul> 包裹起来
-    html = re.sub(r'((?:<li>.*?</li>\n?)+)', r'<ul>\1</ul>', html)
-    # 段落：将连续非标签行包裹成p
-    lines = html.split('\n')
-    result = []
-    in_p = False
-    for line in lines:
-        stripped = line.strip()
-        is_tag = stripped.startswith('<h') or stripped.startswith('<ul') or stripped.startswith('</ul') or stripped.startswith('<li') or stripped.startswith('<table') or stripped.startswith('</table') or stripped.startswith('<pre') or stripped.startswith('</pre') or stripped.startswith('<blockquote') or stripped.startswith('</blockquote') or stripped.startswith('<hr') or stripped == ''
-        if is_tag:
-            if in_p:
-                result.append('</p>')
-                in_p = False
-            result.append(line)
-        else:
-            if not in_p:
-                result.append('<p>' + line)
-                in_p = True
-            else:
-                result.append(line)
-    if in_p:
-        result.append('</p>')
-    return '\n'.join(result)
-
-def shift_headings(html, up=1):
-    """把 h1..h5 整体上移 up 级（h1->h2...）。用于工具页正文与模板H1解耦。"""
-    for lvl in range(5, 0, -1):
-        nxt = min(lvl + up, 6)
-        html = re.sub(rf'<h{lvl}([ >])', rf'<h{nxt}\1', html)
-        html = re.sub(rf'</h{lvl}>', f'</h{nxt}>', html)
-    return html
-
-
-def escape_html(text):
-    """转义HTML特殊字符（用于属性值）"""
-    return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
-
-
 def _parse_rating(val, default=4.0):
     """将写脏的 rating 字段解析为 float。
 
@@ -842,7 +641,6 @@ def _parse_rating(val, default=4.0):
 _TOOL_LINK_MAP = None
 _LINK_STOPWORDS = {'AI', 'API', 'GPT', 'Chat', 'ChatGPT', '工具', '助手',
                    '人工智能', '大模型', '机器人', 'AI工具', 'APP', 'App', '软件'}
-
 
 def load_tools():
     """目录优先加载工具数据。有 data/tools/*.json 则聚合，否则回退单体 tools.json。"""
@@ -868,7 +666,6 @@ def load_tools():
     with open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8') as f:
         return json.load(f)
 
-
 def load_articles():
     """目录优先加载文章数据。有 data/articles/*.json 则聚合，否则回退单体 articles.json。"""
     import glob as _glob
@@ -893,7 +690,6 @@ def load_articles():
     with open(os.path.join(DATA_DIR, 'articles.json'), 'r', encoding='utf-8') as f:
         return json.load(f)
 
-
 def get_tool_link_map():
     """返回 [(name, slug), ...] 用于正文行内内链，按名称长度降序以便最长优先匹配。"""
     global _TOOL_LINK_MAP
@@ -915,7 +711,6 @@ def get_tool_link_map():
         _TOOL_LINK_MAP = m
     return _TOOL_LINK_MAP
 
-
 # 内链正则缓存：工具名超过 512 会击穿 re.compile 内置缓存，导致每个工具页重复编译 7.7万次正则（35s/页）。
 # 改为模块级缓存，每个工具名全局只编译一次（2026-08-05 修复）。
 _LINK_PAT_CACHE = {}
@@ -928,7 +723,6 @@ def _get_link_pat(name):
             pat = re.compile(r'(?<![A-Za-z0-9])' + re.escape(name) + r'(?![A-Za-z0-9])', re.I)
         _LINK_PAT_CACHE[name] = pat
     return pat
-
 
 def inject_internal_links(html, current_slug='', max_links=5):
     """在正文 HTML 的文本节点中，把提到的其他工具名替换为指向 /tools/slug/ 的内链。
@@ -971,10 +765,8 @@ def inject_internal_links(html, current_slug='', max_links=5):
                 break  # 替换后跳出：避免后续短工具名在新插入的<a>内嵌套匹配
     return ''.join(parts)
 
-
 # 已发布工具 slug 集合缓存（坏链清理用）
 _PUBLISHED_TOOL_SLUGS = None
-
 
 def get_published_tool_slugs():
     """返回已发布工具的 slug 集合。"""
@@ -986,7 +778,6 @@ def get_published_tool_slugs():
         except Exception:
             _PUBLISHED_TOOL_SLUGS = set()
     return _PUBLISHED_TOOL_SLUGS
-
 
 def clean_broken_tool_links(html):
     """把指向未发布/不存在工具/文章的链接降级为纯文本，避免 404（2026-08-07 修复）。
@@ -1016,7 +807,6 @@ def clean_broken_tool_links(html):
         r'<a\s[^>]*?href="[^"]*?/(tools|articles)/([A-Za-z0-9._\-]+)(?:/index\.html|/(?:\?[^"]*)?)?"[^>]*>(.*?)</a>',
         _fix, html, flags=re.I | re.S)
 
-
 def get_category_stats(tools):
     """
     统计每个分类下的工具数量，并返回一个字典。
@@ -1034,7 +824,6 @@ def build_tool_title(tool):
     name = tool['name']
     pos = gen_positioning(tool)
     return build_title(name, pos, BUILD_YEAR)
-
 
 def build_tool_cross_links(tool, all_compares=None, all_alternatives=None, all_rankings=None):
     """生成工具页『相关对比/替代/排行』区块，救活孤岛详情页（P0-6）。"""
@@ -1078,7 +867,6 @@ def build_tool_cross_links(tool, all_compares=None, all_alternatives=None, all_r
         <div class="related-grid">{cards}</div>
     </div>'''
 
-
 def build_compare_section_html(tool, tool_map):
     """渲染 A-vs-B 竞品对比小节(数据来自已核查竞品的实时字段, 结论数据驱动)。"""
     cs = tool.get('compare_section')
@@ -1111,7 +899,6 @@ def build_compare_section_html(tool, tool_map):
         <p class="compare-verdict">{escape_html(verdict)}</p>
         <p class="compare-note">* 对比基于已核查的同赛道竞品数据, 编辑评分代表本站对该工具受欢迎度/实用度的评定。</p>
     </div>'''
-
 
 def build_tool_page(tool, all_tools, all_articles=None, all_compares=None, all_alternatives=None, all_rankings=None):
     """生成单个工具详情页的完整HTML"""
@@ -1722,7 +1509,6 @@ def build_tool_page(tool, all_tools, all_articles=None, all_compares=None, all_a
 </html>'''
     return html
 
-
 def build_compare_page(compare_data, all_tools, all_articles=None, existing_compare_slugs=None):
     """
     生成对比页面 (Phase 2: 程序化SEO)
@@ -1960,7 +1746,6 @@ def build_compare_page(compare_data, all_tools, all_articles=None, existing_comp
 </html>'''
     return html
 
-
 def build_alternatives_page(alt_data, all_tools, all_articles=None):
     """
     生成替代方案页面 (Phase 3: 替代方案页)
@@ -2106,11 +1891,9 @@ def build_alternatives_page(alt_data, all_tools, all_articles=None):
 </html>'''
     return html
 
-
 def build_compare_slug_from_slugs(slugs):
     """从slug列表构建对比页slug（供内部链接使用）"""
     return '-'.join(sorted(slugs))
-
 
 def load_compare_data():
     """加载对比数据文件"""
@@ -2120,7 +1903,6 @@ def load_compare_data():
             return json.load(f)
     return {"compares": [], "alternatives": [], "metadata": {}}
 
-
 def load_quiz_data():
     """加载Quiz数据文件 (Phase 4)"""
     quiz_file = os.path.join(DATA_DIR, 'quiz_data.json')
@@ -2129,7 +1911,6 @@ def load_quiz_data():
             return json.load(f)
     return {"quizzes": [], "metadata": {}}
 
-
 def load_ranking_data():
     """加载排名数据文件 (Phase 5)"""
     ranking_file = os.path.join(DATA_DIR, 'ranking_data.json')
@@ -2137,7 +1918,6 @@ def load_ranking_data():
         with open(ranking_file, 'r', encoding='utf-8') as f:
             return json.load(f)
     return {"rankings": [], "metadata": {}}
-
 
 # ════════════════════════════════════════════════════════
 # Phase 4: Quiz 页面构建
@@ -2584,7 +2364,6 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
 </html>'''
     return html
 
-
 # ════════════════════════════════════════════════════════
 # Phase 5: Ranking 页面构建
 # ════════════════════════════════════════════════════════
@@ -3015,7 +2794,6 @@ def load_live_data():
     print(f'  [WARN] live_data.json not found at {path}')
     return {}
 
-
 def _build_ranking_index_page(all_rankings):
     """生成 ranking/index.html 总入口页：列出所有排行榜链接（2026-08-13：移除 Meta Refresh，改为真实栏目页）"""
     items_html = ''
@@ -3075,7 +2853,6 @@ def _build_ranking_index_page(all_rankings):
 </html>'''
     return html
 
-
 def _build_compare_index_page(all_compares):
     """生成 compare/index.html 总入口页：列出所有对比评测链接"""
     items_html = ''
@@ -3131,7 +2908,6 @@ def _build_compare_index_page(all_compares):
 </html>'''
     return html
 
-
 def _build_alternatives_index_page(all_alternatives):
     """生成 alternatives/index.html 总入口页：列出所有替代方案链接"""
     items_html = ''
@@ -3186,7 +2962,6 @@ def _build_alternatives_index_page(all_alternatives):
 </body>
 </html>'''
     return html
-
 
 def build_live_page(live_data, page_config, all_tools, articles):
     """
@@ -3311,7 +3086,6 @@ def build_live_page(live_data, page_config, all_tools, articles):
     )
     return html
 
-
 def _live_nav_tabs(active_slug):
     tabs = [
         ('dashboard', '📊 总览面板'),
@@ -3325,7 +3099,6 @@ def _live_nav_tabs(active_slug):
         cls = ' class="active"' if s == active_slug else ''
         links_parts.append('<a href="/live/' + s + '/"' + cls + '>' + label + '</a>')
     return '<nav class="live-nav"><div class="container">' + ' '.join(links_parts) + '</div></nav>'
-
 
 def _live_section_dashboard(stats, matrix, trends, heatmap, h2h):
     total_tools = stats.get('total_tools', 0)
@@ -3408,7 +3181,6 @@ def _live_section_dashboard(stats, matrix, trends, heatmap, h2h):
 
     return '\n'.join(parts)
 
-
 def _live_section_matrix(matrix_data):
     tools_list = matrix_data.get('tools', [])
     dims_list = matrix_data.get('dimensions', [])
@@ -3441,7 +3213,6 @@ def _live_section_matrix(matrix_data):
         '<thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>'
         '<p style="text-align:center;margin-top:15px;font-size:14px;color:#666;">'
         '💡 点击工具名可跳转到详细评测页 | 共收录 %s 款工具 × %s 个维度</p></section>') % (title, desc, headers, body_rows, str(total_n), str(dim_n))
-
 
 def _live_section_trend(trends):
     cats = trends.get('categories', [])
@@ -3495,7 +3266,6 @@ def _live_section_trend(trends):
 
     return result
 
-
 def _make_sparkline(weekly_data):
     if not weekly_data:
         return ''
@@ -3511,7 +3281,6 @@ def _make_sparkline(weekly_data):
         pts.append('%d,%d' % (x, y))
     pts_str = ','.join(pts)
     return '<svg width="%d" height="50" viewBox="0 0 %d 50" preserveAspectRatio="none"><polyline fill="rgba(66,133,244,0.1)" stroke="#4285F4" stroke-width="2" points="%s" /></svg>' % (w_width, w_width, pts_str)
-
 
 def _live_section_heatmap(heatmap_data):
     items = heatmap_data.get('heatmap', [])
@@ -3555,7 +3324,6 @@ def _live_section_heatmap(heatmap_data):
     desc = heatmap_data.get('description') or ''
     return '<section class="live-section fullwidth"><h2>%s</h2><p class="desc">%s</p><div class="heatmap-container">%s</div></section>' % (title, desc, cards)
 
-
 def _live_section_battle(h2h):
     battles = h2h.get('battles', [])
 
@@ -3593,9 +3361,6 @@ def _live_section_battle(h2h):
     title = h2h.get('title') or ''
     desc = h2h.get('description') or ''
     return '<section class="live-section fullwidth"><h2>%s</h2><p class="desc">%s</p><div class="battle-container">%s</div></section>' % (title, desc, cards)
-
-
-
 
 def _build_category_index_page(tools_by_category):
     """生成 category/index.html 总入口页：分类宫格卡片（点击进入类目），卡片样式对齐首页热门榜 TOP30 的 hot-mini 紧凑小卡片"""
@@ -4041,7 +3806,6 @@ def _build_category_index_page(tools_by_category):
 </html>'''
     return html
 
-
 def get_subcat_def():
     """加载子类目定义 data/subcategories.json → {parent_slug:{name, subcats:{slug:{name,intro,how_to_choose}}}}"""
     if 'subcat_def_cache' not in globals():
@@ -4051,7 +3815,6 @@ def get_subcat_def():
         except Exception:
             globals()['subcat_def_cache'] = {}
     return globals()['subcat_def_cache']
-
 
 def build_category_page(category_name, tools_in_category, all_categories=None):
     """生成单个分类页的完整HTML
@@ -4358,7 +4121,6 @@ def build_category_page(category_name, tools_in_category, all_categories=None):
 </body>
 </html>'''
     return html
-
 
 def build_subcategory_page(parent_slug, parent_name, subcat_slug, subcat_data, tools_in_subcat, parent_count=0):
     """生成子类目独立页（独立SEO入口，扁平URL：/category/{subcat_slug}/）"""
@@ -4734,7 +4496,6 @@ def build_subcategory_page(parent_slug, parent_name, subcat_slug, subcat_data, t
 </html>'''
     return html
 
-
 # ═══════════════════════════════════════════════════════════════════════════
 # 文章 meta description 产出规范（权威定义 / 2026-07-24 定稿）
 # 依据：Google Search Central《如何撰写元描述》官方文档 + 像素宽度实测
@@ -4787,7 +4548,6 @@ def _get_article_description(article):
         elif _plain:
             raw = _plain[:160]
     return raw
-
 
 def build_article_page(article, all_articles, all_tools=None):
     """生成单个文章页的完整HTML"""
@@ -5452,7 +5212,6 @@ def build_article_page(article, all_articles, all_tools=None):
 </html>'''
     return html
 
-
 def _pagination_html(page_num, total_pages, url_template):
     """生成带数字页码的分页导航（P1-4，2026-08-09）。
     url_template 用 {n} 占位页码，如 '/articles/page/{n}/'。"""
@@ -5478,7 +5237,6 @@ def _pagination_html(page_num, total_pages, url_template):
         html += f'<a href="{_u(page_num + 1)}" class="next">下一页 &rarr;</a>\n'
     html += '</div>'
     return html
-
 
 def build_article_list_pages(articles):
     """生成文章分页列表页（/articles/page/1, page/2...）
@@ -5697,7 +5455,6 @@ def build_article_list_pages(articles):
     
     return total_pages
 
-
 def build_article_category_pages(articles):
     """生成文章内容分类页（2026-08-08，ROADMAP-TODO 第一阶段）：
     /articles/reviews/（AI工具评测）、/articles/tutorials/（AI实战教程）、
@@ -5911,7 +5668,6 @@ def build_article_category_pages(articles):
         built += 1
     return built
 
-
 def replace_between_tags(html, start_tag, new_content):
     """通过 div 嵌套深度精确替换标签间内容，避免正则贪婪匹配破坏HTML结构"""
     start_idx = html.find(start_tag)
@@ -5941,7 +5697,6 @@ def replace_between_tags(html, start_tag, new_content):
             pos = next_close + 6
 
     return html
-
 
 def generate_rss(articles):
     # 生成全站快讯 RSS（/rss.xml），取最新 50 篇文章
@@ -5981,7 +5736,6 @@ def generate_rss(articles):
     with open(os.path.join(BASE_DIR, 'rss.xml'), 'w', encoding='utf-8') as f:
         f.write(rss)
     print(f'[OK] rss.xml ({len(items)} items)')
-
 
 def build_tools_index_page(tools):
     """生成 /tools/ 全部AI工具大全页（SEO+GEO：全量静态内链 + ItemList/FAQ/speakable 结构化数据）。"""
@@ -6376,7 +6130,6 @@ def build_tools_index_page(tools):
 </html>'''
     return _collapse_blank_lines(html)
 
-
 def build_index_page(tools, articles):
     # 生成静态首页
     index_html_template = os.path.join(BASE_DIR, 'index.html')
@@ -6510,7 +6263,6 @@ def build_index_page(tools, articles):
     # ── 工具卡片HTML（委托共享函数）──
     def make_card_html(t, i):
         return make_tool_card_html(t, i)
-
 
     # ── 第二区块：热门榜 TOP30 紧凑小网格（按访问量降序，评分作展示）──
     def _parse_visits(v):
@@ -6866,7 +6618,6 @@ def build_index_page(tools, articles):
     html = re.sub(r'(<b id="statReviews">)[^<]*(</b>)', r'\g<1>' + str(_review_cnt) + r'\g<2>', html)
     html = re.sub(r'(<b id="statCompares">)[^<]*(</b>)', r'\g<1>' + str(_compare_cnt) + r'\g<2>', html)
 
-
     # 工具数量显示 — 用re.sub替换（模板中可能已有内容如"共 100+ 款"）
     html = re.sub(r'<span class="tool-count" id="toolCount">.*?</span>', f'<span class="tool-count" id="toolCount">共 {len(tools)} 款</span>', html)
 
@@ -7093,7 +6844,6 @@ def build_index_page(tools, articles):
 
     return html
 
-
 from urllib.parse import quote as url_quote
 
 def load_news_archive():
@@ -7261,8 +7011,6 @@ def build_news_page(all_tools=None):
         print(f'  [OK] news/{d}/index.html ({len(items)}条)')
 
     print(f'[OK] 快讯页完成: {len(dates)}期, {sum(len(v) for v in daily.values())}条')
-
-
 
 # === AI-NEWS-FUNC-BEGIN ===
 from urllib.parse import quote as url_quote
@@ -7871,7 +7619,6 @@ def build_dict_page(term, all_terms, index):
 </html>'''
     return html
 
-
 def _build_dict_index_page(terms):
     """生成AI词典总入口页 /dict/index.html"""
     # 按分类分组
@@ -7990,7 +7737,6 @@ def _build_dict_index_page(terms):
 </body>
 </html>'''
     return html
-
 
 def generate_sitemap(tools, articles, categories, compares=None, alternatives=None, quizzes=None, rankings=None, lives=None, dict_terms=None, news_urls=None):
     """生成 sitemap.xml"""
@@ -8233,11 +7979,9 @@ def _urlopen_bounded(req, timeout, label="request"):
         raise box['err']
     return box['resp']
 
-
 # 中文站 IndexNow key（与 Bing Webmaster Tools 验证文件 {KEY}.txt 一致）
 # 模块级统一常量，全量推送(push_to_indexnow)与增量单URL推送(_push_single_url)共用，避免硬编码漂移
 INDEXNOW_KEY = "e66c6b3965b6490abd7bee1521893b1b"
-
 
 def push_to_indexnow(urls):
     """通过 IndexNow 协议向 Bing/Yandex 等搜索引擎推送新链接"""
@@ -8275,7 +8019,6 @@ def push_to_indexnow(urls):
     except Exception as e:
         print(f"[IndexNow] Failed: {e}")
         return False
-
 
 def push_to_baidu(urls):
     """主动向百度搜索引擎推送链接
@@ -8325,7 +8068,6 @@ def push_to_baidu(urls):
         return False
     return total_success > 0
 
-
 def _push_single_url(url):
     """增量构建时推送单个新URL到百度和IndexNow"""
     import urllib.request, urllib.error
@@ -8359,7 +8101,6 @@ def _push_single_url(url):
     except Exception as e:
         print(f'[IndexNow] Failed: {e}')
 
-
 def _load_dict_terms():
     """加载AI词典数据"""
     dict_data_path = os.path.join(DATA_DIR, 'dict_terms.json')
@@ -8367,7 +8108,6 @@ def _load_dict_terms():
         with open(dict_data_path, 'r', encoding='utf-8') as f:
             return json.load(f)
     return []
-
 
 # ── AI 应答前缀拦截（2026-08-02）───────────────────────────────
 # 背景：内容生成时若把"对 prompt 作者的应答/汇报/思考"误写入 content 开头，
@@ -8396,7 +8136,6 @@ _AI_PREAMBLE_PATTERNS = [
     r'^应您的要求',
 ]
 _AI_PREAMBLE_RE = [re.compile(p) for p in _AI_PREAMBLE_PATTERNS]
-
 
 def _check_content_preamble(all_tools, articles):
     """构建前校验正文开头是否混入 AI 应答前缀。已发布命中→exit(1)，未发布命中→告警。"""
@@ -8435,7 +8174,6 @@ def _check_content_preamble(all_tools, articles):
     pub_count = len([t for t in all_tools if isinstance(t, dict) and t.get('published')])
     print(f'✅ 内容前缀校验通过（{pub_count} 已发布工具 + {len(articles)} 文章，'
           f'未发布告警 {len(draft_hits)}）')
-
 
 def _build_tool_incremental(tool, published_tools, articles, tools_by_category):
     """工具页 slug 增量：只重建该工具页 + 受影响聚合页（分类/全部工具/首页含搜索索引/排行）。
@@ -8479,7 +8217,6 @@ def _build_tool_incremental(tool, published_tools, articles, tools_by_category):
     _push_single_url(f'https://www.aitoollab.cn/tools/{slug}/index.html')
     print(f'\n[完成] 增量构建: 1 工具页 + 分类页 + 聚合页')
     return True
-
 
 def build_target(target, slug=None, no_push=False):
     """
@@ -8785,7 +8522,6 @@ def build_target(target, slug=None, no_push=False):
                     loc = f'quiz/' if is_main else f'quiz/{qslug}/'
                     print(f'  [FAIL] {loc}: {e}')
 
-
     # ═══════════════════════════════════════════════════════
     # Phase 5: Ranking Pages（独立条件，支持 --target ranking）
     # ═══════════════════════════════════════════════════════
@@ -8843,7 +8579,6 @@ def build_target(target, slug=None, no_push=False):
     # ═══════════════════════════════════════════════════════
     # AI词典
     # ═══════════════════════════════════════════════════════
-
 
 # === AI-NEWS-BUILD-BEGIN ===
     # ===== 快讯页 =====
@@ -9013,7 +8748,6 @@ def build_target(target, slug=None, no_push=False):
         
         print(f'\nDone! Target={target} | {len(published_tools)} tools + {len(articles)} articles + {quiz_count} quizzes + {ranking_count} rankings + {live_count} live')
 
-
 def _clean_all_broken_links():
     """全站兜底：所有 HTML 页面中指向未发布/不存在工具/文章的链接降级为纯文本（2026-08-07）。"""
     fixed = 0
@@ -9041,7 +8775,6 @@ def _clean_all_broken_links():
                     f.write(new)
                 fixed += 1
     return fixed
-
 
 def inject_site_logo():
     """后处理（2026-08-10）：全站头部标识统一为新品牌图形。
@@ -9092,7 +8825,6 @@ def inject_site_logo():
         print(f'[Post] 站点头部标识已统一更新 ({replaced} 个 HTML 文件)')
     return replaced
 
-
 def inject_favicon():
     """后处理：为所有HTML文件注入favicon图标引用标签"""
     favicon_html = '    <link rel="icon" href="/favicon.ico">\n'
@@ -9135,7 +8867,6 @@ def inject_favicon():
     if injected > 0:
         print(f'[Post] Injected favicon links into {injected} HTML files.')
     return injected
-
 
 def inject_global_nav():
     """后处理：将全局导航栏注入到header内部（header-inner之后、</header>之前），
@@ -9185,7 +8916,6 @@ def inject_global_nav():
         print(f'[Post] Injected global nav + search bar + dark mode into {injected} HTML files.')
     return injected
 
-
 def inject_fav_fab():
     """后处理：全站注入静态收藏悬浮按钮（#favFab）。
     之前收藏按钮由 favorites.js（defer）动态创建，弱网下要等整页解析完才出现；
@@ -9214,7 +8944,6 @@ def inject_fav_fab():
     if injected > 0:
         print(f'[Post] Injected static fav-fab into {injected} HTML files.')
     return injected
-
 
 def inject_footer_links():
     """后处理（P0-5，2026-08-09）：为 footer 只有版权+备案的内页补上站内链接
@@ -9246,7 +8975,6 @@ def inject_footer_links():
     if injected > 0:
         print(f'[Post] Injected footer links into {injected} HTML files.')
     return injected
-
 
 def inject_pwa():
     """后处理（P1-5，2026-08-09）：全站注入 PWA manifest / theme-color / apple-touch-icon，
@@ -9287,7 +9015,6 @@ def inject_pwa():
         print(f'[Post] Injected PWA manifest into {injected} HTML files.')
     return injected
 
-
 def inject_adsense_meta():
     """后处理：将 AdSense 站点验证 meta 标签注入所有页面 <head>，用于 Google AdSense 站点所有权验证。
     幂等：已含 google-adsense-account 的页面跳过；仅对含 <head> 的完整页面注入。"""
@@ -9317,7 +9044,6 @@ def inject_adsense_meta():
     if injected > 0:
         print(f'[Post] Injected AdSense verify meta into {injected} HTML files.')
     return injected
-
 
 def inject_baidu_tongji():
     """后处理（2026-08-14）：全站注入百度统计代码，补齐手工维护静态页（favorites/about/contact 等）
@@ -9351,7 +9077,6 @@ def inject_baidu_tongji():
         print(f'[Post] Injected Baidu Tongji code into {injected} HTML files.')
     return injected
 
-
 def inject_rss_link():
     """后处理：为全站 HTML 注入 RSS 声明（幂等）。"""
     RSS_LINK = '<link rel="alternate" type="application/rss+xml" title="AI工具宝箱 快讯 RSS" href="/rss.xml">'
@@ -9378,8 +9103,6 @@ def inject_rss_link():
     if injected > 0:
         print(f'[Post] Injected RSS link into {injected} HTML files.')
     return injected
-
-
 
 def inject_hreflang():
     """后处理：为中文站页面注入 hreflang 标签指向英文站对应页面"""
@@ -9469,7 +9192,6 @@ def inject_hreflang():
         print(f'[Post] Injected hreflang into {updated} HTML files ({skipped} skipped).')
     return updated
 
-
 # ═══════════════════════════════════════════════════════
 # #13 独占板块互链：在快讯/词典/Live/排名/对比/替代/Quiz 等
 # 独占板块页底部注入板块导航簇，形成内部链接网络（P0-13）
@@ -9483,7 +9205,6 @@ EXCLUSIVE_SECTIONS = [
     {'key': 'alternatives', 'slug': 'alternatives', 'name': '替代方案',     'emoji': '🔄', 'desc': '寻找最佳平替工具'},
     {'key': 'quiz',         'slug': 'quiz',         'name': 'AI工具选择器', 'emoji': '🎯', 'desc': '测一测你该用哪款'},
 ]
-
 
 def build_section_hub(current_key):
     """生成『独占板块』导航簇HTML（排除当前板块）。返回 '' 表示无兄弟板块。"""
@@ -9507,7 +9228,6 @@ def build_section_hub(current_key):
         f'  <div class="section-hub-grid">{cards}</div>\n'
         f'</section>'
     )
-
 
 def inject_section_hub():
     """后处理：向独占板块页（news/dict/live/ranking/compare/alternatives/quiz）注入板块导航簇。"""
@@ -9551,7 +9271,6 @@ def inject_section_hub():
     if injected > 0:
         print(f'[Post] Injected section-hub into {injected} exclusive-section pages ({skipped} skipped).')
     return injected
-
 
 def main():
     # Windows GBK 控制台兜底（2026-08-09 机制化修复）：Python 打印 emoji/中文
@@ -9659,7 +9378,6 @@ def main():
                     raise SystemExit(1)
     except FileNotFoundError:
         pass  # 注入脚本缺失不阻塞构建
-
 
 if __name__ == '__main__':
     main()
