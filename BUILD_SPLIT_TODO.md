@@ -13,7 +13,7 @@
 | 3 | 全站坏链清理 85s（每次构建固定成本） | **P1** | 📋 待执行 | 1-2h + 全量回归 |
 | 4 | `-s` 增量分支推送不受 `--no-push` 约束 | **P2** | 📋 待执行 | 0.5h |
 | 5 | `.bak2-6` 噪音未入 gitignore | **P2** | 📋 待执行 | 5min |
-| 6 | 函数内 `import build` + `build.` 前缀样板 | **P3** | 🚫 不建议 | — |
+| 6 | **build.py 瘦身成纯入口**（共享符号迁 ctx.py，消除 build. 前缀样板） | **P3** | 📋 待办（触发式） | 触发时 4-8h + 全量回归 |
 
 ---
 
@@ -89,18 +89,46 @@ git status 显示为 untracked 噪音（scripts/build.py.20260824.bak2-6、main.
 
 ---
 
-## #6 函数内 `import build` + `build.` 前缀样板（P3，不建议）
+## #6 build.py 瘦身成纯入口（P3，待办·触发式）
 
-### 现状
-render_* 模块函数内延迟 `import build` + `build.BASE_DIR` 等前缀访问 build.py 顶层共享符号。
-拆分时已全量压测（10/10 target），运行稳定。
+### 目标态
+build.py 收敛为**纯入口**（约 5 行）：
+```python
+from build_lib.main import main
+if __name__ == '__main__':
+    main()
+```
 
-### 为什么不建议
-彻底消除样板需再抽 `build_lib/ctx.py` 共享模块、动全部 13 模块 + build.py —— 属第二次重构，
-收益是代码整洁，风险是再踩一轮拆分坑（import 遗漏/循环/路径错位）。**为整洁而重构不值**。
+### 现状与债因
+build.py 现 614 行 = 入口 + **共享符号仓库**（SITE_DOMAIN/BASE_DIR/CSS_VERSION/GLOBAL_NAV/
+gen_positioning 等上百个常量函数，被 13 个 render 模块 `import build` + `build.xxx` 访问）
++ **冗余 import**（残留 `from build_lib.render_* import *`，main.py 已自行 import，build.py 这些无人使用）。
+债的代价：① 耦合面大——改 build.py 顶层符号影响所有依赖方；② 新共享符号持续往 build.py 塞，
+会重新膨胀；③ 依赖"整个模块"而非"所需符号"。
 
-### 何时做
-若未来有大规模改动（如新增板块、改模板体系）顺带迁移，不单独排期。
+### 触发条件（不单独排期，时机到了才做）
+- 新增第 14 个 render 模块 / 新板块时（反正要动文件）
+- 模板体系/构建流程大规模改造时
+- build.py 顶层又要新增共享常量时（出现膨胀信号）
+
+### 方案（触发时执行）
+1. 建 `build_lib/ctx.py`：搬入 build.py 全部共享常量 + 函数（BASE_DIR/DATA_DIR/CSS_VERSION/
+   动态常量容器/各类 HTML 常量块/ARTICLE_CATEGORY_PAGES/_SLUG_MAP/get_affiliate_url 等）
+2. build.py 清掉冗余 `from build_lib.render_* import *`（确认 main.py 已覆盖）
+3. 13 个模块顶层 `from build_lib.ctx import BASE_DIR, ...` 替换函数内 `import build` + `build.` 前缀
+4. 注意：TOOL_COUNT/CAT_COUNT/ART_COUNT 是**构建期动态常量**（build_target 里赋值），
+   需用 ctx 模块变量或改参数传递，不能静态 import
+5. 全量回归：10 target 压测 + `-t all --no-push` + check_closed_loop 13/13 + 页面抽样对比
+
+### 验收
+- build.py ≤ 10 行（纯入口）
+- 全模块无 `import build` / `build.` 前缀（除 main.py 启动）
+- 全量回归 EXIT=0 + 门禁 13/13 PASS
+- 与拆分前页面输出 diff 无功能差异（坏链清理输出一致）
+
+### 为什么不是现在
+收益纯代码整洁（零功能/性能提升），风险是二次重构（import 遗漏/循环/路径错位会重演）。
+当前 10/10 压测稳定，触发式还债最划算。
 
 ---
 
