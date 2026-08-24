@@ -608,19 +608,6 @@ CATEGORY_SLUG_MAP = {
     "去中心化AI": "decentralized-ai",
 }
 
-def get_category_slug(category_name):
-    """
-    根据中文分类名生成SEO友好的英文slug。
-    优先使用预设映射，否则使用拼音。
-    """
-    if category_name in CATEGORY_SLUG_MAP:
-        return CATEGORY_SLUG_MAP[category_name]
-    
-    # 使用pypinyin生成拼音，并转换为连字符连接的小写形式
-    pinyin_list = pinyin(category_name, style=Style.NORMAL)
-    slug = '-'.join([item[0] for item in pinyin_list if item and item[0].strip()]).lower()
-    return slug
-
 def _parse_rating(val, default=4.0):
     """将写脏的 rating 字段解析为 float。
 
@@ -637,79 +624,6 @@ def _parse_rating(val, default=4.0):
         return float(m.group())
     except (ValueError, TypeError):
         return default
-
-_TOOL_LINK_MAP = None
-_LINK_STOPWORDS = {'AI', 'API', 'GPT', 'Chat', 'ChatGPT', '工具', '助手',
-                   '人工智能', '大模型', '机器人', 'AI工具', 'APP', 'App', '软件'}
-
-def load_tools():
-    """目录优先加载工具数据。有 data/tools/*.json 则聚合，否则回退单体 tools.json。"""
-    import glob as _glob
-    d = os.path.join(DATA_DIR, 'tools')
-    if os.path.isdir(d):
-        files = sorted(_glob.glob(os.path.join(d, '*.json')))
-        if files:
-            out = []
-            for fp in files:
-                try:
-                    rec = json.load(open(fp, 'r', encoding='utf-8'))
-                except Exception as e:
-                    _record_build_error('load_tools', fp, str(e))
-                    continue
-                if isinstance(rec, list):
-                    out.extend(rec)
-                elif isinstance(rec, dict):
-                    out.append(rec)
-                else:
-                    _record_build_error('load_tools', fp, f'未知类型 {type(rec).__name__}')
-            return out
-    with open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-def load_articles():
-    """目录优先加载文章数据。有 data/articles/*.json 则聚合，否则回退单体 articles.json。"""
-    import glob as _glob
-    d = os.path.join(DATA_DIR, 'articles')
-    if os.path.isdir(d):
-        files = sorted(_glob.glob(os.path.join(d, '*.json')))
-        if files:
-            out = []
-            for fp in files:
-                try:
-                    rec = json.load(open(fp, 'r', encoding='utf-8'))
-                except Exception as e:
-                    _record_build_error('load_articles', fp, str(e))
-                    continue
-                if isinstance(rec, list):
-                    out.extend(rec)
-                elif isinstance(rec, dict):
-                    out.append(rec)
-                else:
-                    _record_build_error('load_articles', fp, f'未知类型 {type(rec).__name__}')
-            return out
-    with open(os.path.join(DATA_DIR, 'articles.json'), 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-def get_tool_link_map():
-    """返回 [(name, slug), ...] 用于正文行内内链，按名称长度降序以便最长优先匹配。"""
-    global _TOOL_LINK_MAP
-    if _TOOL_LINK_MAP is None:
-        try:
-            ts = load_tools()
-        except Exception:
-            ts = []
-        m = []
-        for t in ts:
-            # 只内链已发布工具，未发布（published=False）不生成链接，避免 404
-            if not t.get('published', True):
-                continue
-            nm = (t.get('name') or '').strip()
-            sl = t.get('slug')
-            if nm and sl:
-                m.append((nm, sl))
-        m.sort(key=lambda x: len(x[0]), reverse=True)
-        _TOOL_LINK_MAP = m
-    return _TOOL_LINK_MAP
 
 # 内链正则缓存：工具名超过 512 会击穿 re.compile 内置缓存，导致每个工具页重复编译 7.7万次正则（35s/页）。
 # 改为模块级缓存，每个工具名全局只编译一次（2026-08-05 修复）。
@@ -766,18 +680,6 @@ def inject_internal_links(html, current_slug='', max_links=5):
     return ''.join(parts)
 
 # 已发布工具 slug 集合缓存（坏链清理用）
-_PUBLISHED_TOOL_SLUGS = None
-
-def get_published_tool_slugs():
-    """返回已发布工具的 slug 集合。"""
-    global _PUBLISHED_TOOL_SLUGS
-    if _PUBLISHED_TOOL_SLUGS is None:
-        try:
-            _ts = load_tools()
-            _PUBLISHED_TOOL_SLUGS = {t.get('slug') for t in _ts if t.get('published', True)}
-        except Exception:
-            _PUBLISHED_TOOL_SLUGS = set()
-    return _PUBLISHED_TOOL_SLUGS
 
 def clean_broken_tool_links(html):
     """把指向未发布/不存在工具/文章的链接降级为纯文本，避免 404（2026-08-07 修复）。
@@ -1895,30 +1797,6 @@ def build_compare_slug_from_slugs(slugs):
     """从slug列表构建对比页slug（供内部链接使用）"""
     return '-'.join(sorted(slugs))
 
-def load_compare_data():
-    """加载对比数据文件"""
-    compare_file = os.path.join(DATA_DIR, 'compare_data.json')
-    if os.path.exists(compare_file):
-        with open(compare_file, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return {"compares": [], "alternatives": [], "metadata": {}}
-
-def load_quiz_data():
-    """加载Quiz数据文件 (Phase 4)"""
-    quiz_file = os.path.join(DATA_DIR, 'quiz_data.json')
-    if os.path.exists(quiz_file):
-        with open(quiz_file, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return {"quizzes": [], "metadata": {}}
-
-def load_ranking_data():
-    """加载排名数据文件 (Phase 5)"""
-    ranking_file = os.path.join(DATA_DIR, 'ranking_data.json')
-    if os.path.exists(ranking_file):
-        with open(ranking_file, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return {"rankings": [], "metadata": {}}
-
 # ════════════════════════════════════════════════════════
 # Phase 4: Quiz 页面构建
 # ════════════════════════════════════════════════════════
@@ -2784,15 +2662,6 @@ def build_ranking_page(ranking_data, all_tools, all_articles=None):
 # ═══════════════════════════════════════════════════════
 # Phase 5b: Live Dashboard 数据加载与页面构建（动态数据面板）
 # ═══════════════════════════════════════════════════════
-
-def load_live_data():
-    """加载 live dashboard 数据"""
-    path = os.path.join(DATA_DIR, 'live_data.json')
-    if os.path.exists(path):
-        with open(path, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    print(f'  [WARN] live_data.json not found at {path}')
-    return {}
 
 def _build_ranking_index_page(all_rankings):
     """生成 ranking/index.html 总入口页：列出所有排行榜链接（2026-08-13：移除 Meta Refresh，改为真实栏目页）"""
@@ -6846,21 +6715,6 @@ def build_index_page(tools, articles):
 
 from urllib.parse import quote as url_quote
 
-def load_news_archive():
-    import glob
-    files = sorted(glob.glob(os.path.join(BASE_DIR, 'data', 'news_*.json')), reverse=True)
-    daily = {}
-    dates = []
-    for fp in files:
-        try:
-            data = json.load(open(fp, 'r', encoding='utf-8'))
-            date_str = os.path.basename(fp).replace('news_', '').replace('.json', '')
-            daily[date_str] = data
-            dates.append(date_str)
-        except Exception:
-            continue
-    return daily, dates
-
 def build_news_page(all_tools=None):
     if all_tools is None:
         all_tools = load_tools()
@@ -7014,21 +6868,6 @@ def build_news_page(all_tools=None):
 
 # === AI-NEWS-FUNC-BEGIN ===
 from urllib.parse import quote as url_quote
-
-def load_news_archive():
-    import glob
-    files = sorted(glob.glob(os.path.join(BASE_DIR, 'data', 'news_*.json')), reverse=True)
-    daily = {}
-    dates = []
-    for fp in files:
-        try:
-            data = json.load(open(fp, 'r', encoding='utf-8'))
-            date_str = os.path.basename(fp).replace('news_', '').replace('.json', '')
-            daily[date_str] = data
-            dates.append(date_str)
-        except Exception:
-            continue
-    return daily, dates
 
 def build_news_page(all_tools=None):
     if all_tools is None:
@@ -8101,14 +7940,6 @@ def _push_single_url(url):
     except Exception as e:
         print(f'[IndexNow] Failed: {e}')
 
-def _load_dict_terms():
-    """加载AI词典数据"""
-    dict_data_path = os.path.join(DATA_DIR, 'dict_terms.json')
-    if os.path.exists(dict_data_path):
-        with open(dict_data_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return []
-
 # ── AI 应答前缀拦截（2026-08-02）───────────────────────────────
 # 背景：内容生成时若把"对 prompt 作者的应答/汇报/思考"误写入 content 开头，
 #      会污染线上页面（如 deepclaude 页曾出现"好的，没问题。这是一篇符合你所有要求的介绍文章…"）。
@@ -8759,6 +8590,13 @@ from build_lib.injectors import (
     inject_fav_fab, inject_footer_links, inject_pwa, inject_adsense_meta,
     inject_baidu_tongji, inject_rss_link, inject_hreflang,
     EXCLUSIVE_SECTIONS, build_section_hub, inject_section_hub,
+)
+
+# 2026-08-24: 数据加载层抽到 build_lib/data_loaders.py（模块3），此处重导出保持兼容
+from build_lib.data_loaders import (
+    get_category_slug, load_tools, load_articles, get_tool_link_map,
+    get_published_tool_slugs, load_compare_data, load_quiz_data,
+    load_ranking_data, load_live_data, load_news_archive, _load_dict_terms,
 )
 
 def main():
