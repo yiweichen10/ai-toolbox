@@ -1,96 +1,97 @@
 {
-  "name": "Hermes Agent",
-  "slug": "hermes-agent",
-  "positioning": "Hermes Agent是什么？NousResearch开源可自我进化的AI智能体框架好用吗",
-  "auto_positioning": false,
-  "emoji": "🦁",
-  "color": "#8B5CF6",
-  "description": "Hermes Agent 是开源研究机构 NousResearch 推出的智能体框架，主打「会和你一起成长的 AI Agent」，通过内置学习循环把经验沉淀为可复用技能并跨会话持久化记忆。它支持 300+ 模型和 40+ 工具、七种执行后端，可自托管在本地或按需唤醒的 Serverless 环境，几乎无厂商锁定。",
-  "category": "AI智能体",
-  "tags": [
-    {
-      "text": "免费可用",
-      "type": "free"
+    "name": "Hermes Agent",
+    "slug": "hermes-agent",
+    "positioning": "Hermes Agent是什么？NousResearch开源可自我进化的AI智能体框架好用吗",
+    "auto_positioning": false,
+    "emoji": "🦁",
+    "color": "#8B5CF6",
+    "description": "Hermes Agent 是开源研究机构 NousResearch 推出的智能体框架，主打「会和你一起成长的 AI Agent」，通过内置学习循环把经验沉淀为可复用技能并跨会话持久化记忆。它支持 300+ 模型和 40+ 工具、七种执行后端，可自托管在本地或按需唤醒的 Serverless 环境，几乎无厂商锁定。",
+    "category": "AI智能体",
+    "tags": [
+        {
+            "text": "免费可用",
+            "type": "free"
+        },
+        {
+            "text": "开源框架"
+        },
+        {
+            "text": "自进化"
+        },
+        {
+            "text": "持久记忆"
+        }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "hot",
+        "text": "HOT"
     },
-    {
-      "text": "开源框架"
-    },
-    {
-      "text": "自进化"
-    },
-    {
-      "text": "持久记忆"
-    }
-  ],
-  "rating": "⭐ 4.8",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "hot",
-    "text": "HOT"
-  },
-  "url": "https://github.com/NousResearch/hermes-agent",
-  "price": "免费开源，自托管运行（仅在调用模型 API 或云资源时产生费用）",
-  "platform": "Linux/macOS/Windows（CLI/桌面端/Web，支持 VPS、Modal、Daytona 自托管）",
-  "pros": [
-    "内置学习循环，任务后自动沉淀并持续优化可复用技能",
-    "跨会话持久化记忆与人格建模，用得越久越懂你",
-    "开源无厂商锁定，支持 200+ 模型与 40+ 工具",
-    "部署灵活，可本地或 Serverless 按需唤醒、几乎零成本待机",
-    "提供从 OpenClaw 等框架迁移的命令，导入记忆与技能"
-  ],
-  "cons": [
-    "偏开发者向，普通用户上手存在门槛",
-    "生态与文档仍在快速演进，成熟度有待沉淀",
-    "实际能力依赖外部模型 API，需自行配置密钥"
-  ],
-  "features": [
-    "自我进化技能：完成任务后自动生成结构化技能并持续打磨",
-    "跨会话记忆：长期记忆与人格画像持久化，上下文不丢失",
-    "多后端执行：本地 CLI、桌面端、Web 与 VPS/Serverless 部署",
-    "广泛模型兼容：300+ LLM、40+ 工具开箱即接",
-    "技能共享：技能可发布到 agentskills.io 社区复用",
-    "框架迁移：支持从 OpenClaw 等导入记忆、技能与配置"
-  ],
-  "related": [
-    "claude-agent-sdk",
-    "autogpt",
-    "langchain"
-  ],
-  "content": "## Hermes Agent是什么？\n\nHermes Agent 是开源研究机构 NousResearch 推出的智能体框架，主打一个理念——「会和你一起成长的 AI Agent」。和很多用完就忘的助手不同，它内置了一套自我学习循环：每次完成复杂任务后会自动沉淀出可复用的「技能」，并在后续使用中持续打磨这些技能；同时把对话、记忆和人格画像跨会话持久化，用得越久越懂你。它支持 300+ 模型和 40+ 工具、七种执行后端，可以跑在你自己的笔记本、Linux VPS，或 Modal/Daytona 这类按需唤醒的 Serverless 环境里，几乎零成本待机。\n\n## 核心功能\n\n1. 自我进化技能：任务完成后自动写结构化技能，存到 ~/.hermes/skills/，可共享到 agentskills.io，越用越聪明。\n2. 跨会话记忆：长期记忆加人格建模，换设备、关电脑再回来，上下文也不丢。\n3. 多后端执行：本地 CLI、桌面端、Web 界面，以及 Linux VPS、Modal、Daytona 部署都支持。\n4. 广泛模型与工具：200+ LLM、40+ 工具，几乎能接任何主流和开源模型。\n5. 迁移友好：提供从 OpenClaw 等框架迁移的命令，一键导入记忆、技能与 API 密钥。\n\n## 版本/套餐对比\n\nHermes Agent 采用开源免费模式，没有订阅墙。你完全可以自己部署运行，只在调用模型 API 或云资源时产生对应费用。官方开放了社区版与文档站，目前未提供商业定价档位，适合想把它当作长期资产养成的用户。\n\n## 值不值得用？\n\n优点：它真正解决了「Agent 不学习」这个核心痛点，持久化记忆加上技能的复利效应非常明显；开源、无厂商锁定；部署方式灵活。缺点：偏开发者向，上手有一定门槛；生态和文档成熟度仍在快速演进；实际能力依赖外部模型 API。结论：如果你追求的是会随使用变强的长期 Agent，它值得投入时间试一试。\n\n## 使用建议\n\n1. 先用官方 Quickstart 起一个本地 Agent，把技能生成链路跑通。\n2. 把常用工作流沉淀成技能，让它在后续调用中持续复利。\n3. 部署到便宜的 VPS 或 Serverless，让 Agent 在后台待命、按需唤醒。\n4. 订阅 agentskills.io 社区技能，少造轮子、多复用。\n\n## 适合谁用？\n\n推荐：追求持久记忆与自进化的开发者、研究人员和重度用户。\n可考虑：想把 Agent 当作个人助理长期养成的进阶玩家。\n不推荐：只想要开箱即用体验的普通消费者，以及不愿碰命令行的用户。",
-  "published": false,
-  "faq": [
-    {
-      "question": "Hermes Agent 是免费的吗？",
-      "answer": "是的，Hermes Agent 是开源项目，可免费自托管运行，仅在你调用模型 API 或使用云资源时产生相应费用，没有订阅墙。"
-    },
-    {
-      "question": "Hermes Agent 支持哪些模型？",
-      "answer": "据官方资料，它支持 200+ 大语言模型，覆盖主流闭源与开源模型，并内置 40+ 工具，兼容性强。"
-    },
-    {
-      "question": "它的「自我进化」是怎么实现的？",
-      "answer": "通过内置学习循环：完成任务后自动沉淀结构化技能并存储，后续使用中持续打磨，同时把记忆与人格画像跨会话持久化。"
-    },
-    {
-      "question": "可以从其他框架迁移过来吗？",
-      "answer": "可以，官方提供迁移命令（如从 OpenClaw 迁移），能够导入历史记忆、技能与 API 密钥，降低切换成本。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "Hermes Agent",
-    "Hermes Agent怎么样",
-    "Hermes Agent免费版",
-    "Hermes Agent使用教程",
-    "Hermes Agent和哪个好"
-  ],
-  "source_urls": [
-    "https://github.com/NousResearch/hermes-agent",
-    "https://aibars.net/en/library/open-source-ai/details/831545486166069248"
-  ],
-  "confidence": "high",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "price": "免费开源，自托管运行（仅在调用模型 API 或云资源时产生费用）",
+    "platform": "Linux/macOS/Windows（CLI/桌面端/Web，支持 VPS、Modal、Daytona 自托管）",
+    "pros": [
+        "内置学习循环，任务后自动沉淀并持续优化可复用技能",
+        "跨会话持久化记忆与人格建模，用得越久越懂你",
+        "开源无厂商锁定，支持 200+ 模型与 40+ 工具",
+        "部署灵活，可本地或 Serverless 按需唤醒、几乎零成本待机",
+        "提供从 OpenClaw 等框架迁移的命令，导入记忆与技能"
+    ],
+    "cons": [
+        "偏开发者向，普通用户上手存在门槛",
+        "生态与文档仍在快速演进，成熟度有待沉淀",
+        "实际能力依赖外部模型 API，需自行配置密钥"
+    ],
+    "features": [
+        "自我进化技能：完成任务后自动生成结构化技能并持续打磨",
+        "跨会话记忆：长期记忆与人格画像持久化，上下文不丢失",
+        "多后端执行：本地 CLI、桌面端、Web 与 VPS/Serverless 部署",
+        "广泛模型兼容：300+ LLM、40+ 工具开箱即接",
+        "技能共享：技能可发布到 agentskills.io 社区复用",
+        "框架迁移：支持从 OpenClaw 等导入记忆、技能与配置"
+    ],
+    "related": [
+        "claude-agent-sdk",
+        "autogpt",
+        "langchain"
+    ],
+    "content": "## Hermes Agent是什么？\n\nHermes Agent 是开源研究机构 NousResearch 推出的智能体框架，主打一个理念——「会和你一起成长的 AI Agent」。和很多用完就忘的助手不同，它内置了一套自我学习循环：每次完成复杂任务后会自动沉淀出可复用的「技能」，并在后续使用中持续打磨这些技能；同时把对话、记忆和人格画像跨会话持久化，用得越久越懂你。它支持 300+ 模型和 40+ 工具、七种执行后端，可以跑在你自己的笔记本、Linux VPS，或 Modal/Daytona 这类按需唤醒的 Serverless 环境里，几乎零成本待机。\n\n## 核心功能\n\n1. 自我进化技能：任务完成后自动写结构化技能，存到 ~/.hermes/skills/，可共享到 agentskills.io，越用越聪明。\n2. 跨会话记忆：长期记忆加人格建模，换设备、关电脑再回来，上下文也不丢。\n3. 多后端执行：本地 CLI、桌面端、Web 界面，以及 Linux VPS、Modal、Daytona 部署都支持。\n4. 广泛模型与工具：200+ LLM、40+ 工具，几乎能接任何主流和开源模型。\n5. 迁移友好：提供从 OpenClaw 等框架迁移的命令，一键导入记忆、技能与 API 密钥。\n\n## 版本/套餐对比\n\nHermes Agent 采用开源免费模式，没有订阅墙。你完全可以自己部署运行，只在调用模型 API 或云资源时产生对应费用。官方开放了社区版与文档站，目前未提供商业定价档位，适合想把它当作长期资产养成的用户。\n\n## 值不值得用？\n\n优点：它真正解决了「Agent 不学习」这个核心痛点，持久化记忆加上技能的复利效应非常明显；开源、无厂商锁定；部署方式灵活。缺点：偏开发者向，上手有一定门槛；生态和文档成熟度仍在快速演进；实际能力依赖外部模型 API。结论：如果你追求的是会随使用变强的长期 Agent，它值得投入时间试一试。\n\n## 使用建议\n\n1. 先用官方 Quickstart 起一个本地 Agent，把技能生成链路跑通。\n2. 把常用工作流沉淀成技能，让它在后续调用中持续复利。\n3. 部署到便宜的 VPS 或 Serverless，让 Agent 在后台待命、按需唤醒。\n4. 订阅 agentskills.io 社区技能，少造轮子、多复用。\n\n## 适合谁用？\n\n推荐：追求持久记忆与自进化的开发者、研究人员和重度用户。\n可考虑：想把 Agent 当作个人助理长期养成的进阶玩家。\n不推荐：只想要开箱即用体验的普通消费者，以及不愿碰命令行的用户。",
+    "published": true,
+    "faq": [
+        {
+            "question": "Hermes Agent 是免费的吗？",
+            "answer": "是的，Hermes Agent 是开源项目，可免费自托管运行，仅在你调用模型 API 或使用云资源时产生相应费用，没有订阅墙。"
+        },
+        {
+            "question": "Hermes Agent 支持哪些模型？",
+            "answer": "据官方资料，它支持 200+ 大语言模型，覆盖主流闭源与开源模型，并内置 40+ 工具，兼容性强。"
+        },
+        {
+            "question": "它的「自我进化」是怎么实现的？",
+            "answer": "通过内置学习循环：完成任务后自动沉淀结构化技能并存储，后续使用中持续打磨，同时把记忆与人格画像跨会话持久化。"
+        },
+        {
+            "question": "可以从其他框架迁移过来吗？",
+            "answer": "可以，官方提供迁移命令（如从 OpenClaw 迁移），能够导入历史记忆、技能与 API 密钥，降低切换成本。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "Hermes Agent",
+        "Hermes Agent怎么样",
+        "Hermes Agent免费版",
+        "Hermes Agent使用教程",
+        "Hermes Agent和哪个好"
+    ],
+    "source_urls": [
+        "https://github.com/NousResearch/hermes-agent",
+        "https://aibars.net/en/library/open-source-ai/details/831545486166069248"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14",
+    "published_date": "2026-08-24"
 }

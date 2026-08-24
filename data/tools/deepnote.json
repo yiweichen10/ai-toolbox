@@ -1,150 +1,152 @@
 {
-  "name": "Deepnote",
-  "slug": "deepnote",
-  "positioning": "Deepnote+云端协作笔记本，原生：免费AI开发",
-  "auto_positioning": true,
-  "emoji": "📓",
-  "color": "#2B6CB0",
-  "description": "Deepnote 是由 Deepnote 公司推出的云端协作式数据科学笔记本，支持 Python、R、SQL 与内置 AI 助手，面向团队实时协作与数据分析。",
-  "category": "AI开发",
-  "tags": [
-    "数据科学",
-    "协作笔记本",
-    "AI辅助",
-    "免费"
-  ],
-  "rating": "⭐ 4.6",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "recommend",
-    "text": "推荐"
-  },
-  "url": "https://deepnote.com",
-  "price": "免费版；Team $39/编辑者/月（年付 $31.20）",
-  "platform": "Web",
-  "pros": [
-    "基于云端，无需配置环境即可使用",
-    "内置 AI 代码自动补全和自然语言问答",
-    "支持 Python、R、SQL 等多种语言",
-    "实时协作，便于团队共享和共同编辑",
-    "与 GitHub、Slack 等工具深度集成"
-  ],
-  "cons": [
-    "免费版计算资源和运行时长有限",
-    "部分高级功能（如更大内存、GPU）需要付费",
-    "自托管部署不如 Jupyter 灵活"
-  ],
-  "features": [
-    "云端协作笔记本，原生支持 Python、R、SQL（Jinja）单元格",
-    "Deepnote AI：代码生成、补全、解释与修复（Team 含 GPT-5、Sonnet 4.6 访问）",
-    "实时多人协作编辑、评论与项目版本历史（7–30 天）",
-    "连接主流数据仓库/数据库，支持按需 Spark 集群",
-    "定时运行、交互式应用/看板与权限管理（SSO、SOC 2、HIPAA）"
-  ],
-  "related": [
-    "replit-ai",
-    "cursor",
-    "github-copilot"
-  ],
-  "faq": [
-    {
-      "q": "Deepnote是什么？",
-      "a": "Deepnote 是一款基于云的数据科学笔记本平台，类似于 Jupyter Notebook，但更注重协作和 AI 辅助。它允许团队在线编写和运行代码、可视化数据，并利用 AI 加速工作流程。"
-    },
-    {
-      "q": "Deepnote免费版有什么限制？",
-      "a": "免费版提供最多 3 名编辑者、5 个项目及有限的计算资源（5 GB RAM、2 vCPU）和有限 AI，适合个人学习和小型项目。"
-    },
-    {
-      "q": "Deepnote支持哪些编程语言？",
-      "a": "Deepnote 原生支持 Python、R 和 SQL，并可以通过扩展支持其他语言。用户可以在同一个笔记本中混合使用多种语言。"
-    },
-    {
-      "q": "Deepnote与Jupyter Notebook的主要区别是什么？",
-      "a": "Deepnote 是云端原生、协作优先的笔记本，无需本地安装；而 Jupyter 通常是本地或自托管。Deepnote 内置 AI 助手、实时协作和更多集成功能，但在自定义扩展和离线使用方面不如 Jupyter 灵活。"
-    }
-  ],
-  "seo_keywords": [
-    "Deepnote",
-    "Deepnote怎么样",
-    "Deepnote免费版",
-    "Deepnote使用教程",
-    "Deepnote和Jupyter哪个好"
-  ],
-  "content": "## Deepnote是什么？\n\n如果你用过 Jupyter Notebook，那理解 Deepnote 就很容易——它本质上是一个“云端版 Jupyter”，但多了很多现代协作和 AI 功能。你不需要在自己电脑上装 Python、配置环境、折腾包依赖，打开浏览器就能直接写代码、跑分析。内置的 AI 助手可以帮你自动补全代码、甚至用自然语言解释逻辑。支持 Python、R 和 SQL，团队还能实时一起编辑同一个笔记本，很像 Google Docs 之于 Word 的感觉。\n\n简单说：Deepnote 是把数据科学工作流搬到了云上，同时加了 AI 和多人协作的 buff。\n\n---\n\n## 核心功能\n\n## 1. AI 代码生成与解释\n这是最大的亮点。写代码时 AI 会给出补全建议，但你也可以直接问它“这段代码是什么意思”或者“帮我写个函数实现XX功能”。不需要切换窗口去查 Stack Overflow，省了很多来回折腾的时间。对于不熟悉的库或者复杂逻辑，解释得挺清楚，虽然不是每次都完美，但足够当个好搭档。\n\n## 2. 实时协作编辑与评论\n团队成员可以同时打开同一个笔记本，像共享文档一样实时看到对方的操作。还能在某个代码块或单元格上留下评论，做代码审查或者讨论思路。这比 Jupyter 的“写完发邮件/传Git”流程流畅太多了。实际使用中，数据分析和报告协作的效率提升是肉眼可见的。\n\n## 3. 版本历史与快照回溯\n每次运行或手动保存都会生成一个版本快照，你可以随时回退到任意历史状态。做过数据分析的都懂，改来改去发现原来版本更合理——这时候点一下就能回去，不用靠“_final_最终版_v3.ipynb”这种痛苦命名法。\n\n## 4. 内置数据可视化组件\n不需要额外写 matplotlib 或 seaborn 的冗长代码，直接通过可视化界面拖拽或配置就能快速生成图表。当然，你想用代码画深度的定制图也完全支持。对于快速探索数据分布、做初步报表，这个组件很顺手。\n\n## 5. 连接多种数据源\n支持直连数据库（PostgreSQL、MySQL、BigQuery 等）、云存储（S3、GCS），也能上传本地文件。数据导入后可以在笔记本里直接查询、分析。对于需要经常拉取不同数据源做分析的团队，少了一次导出和导入的麻烦。\n\n---\n\n## 版本/套餐对比\n\n| 版本/套餐 | 核心区别 | 适用场景 |\n| --- | --- | --- |\n| 免费版 | 有限的计算时长和内存（通常数小时/月），基础协作功能 | 个人学习、小项目试水 |\n| 专业版/团队版（付费） | 更大内存、GPU 加速、更多运行时长、高级集成（GitHub、Slack等） | 小团队日常分析、轻量生产任务 |\n| 企业版（付费） | 自定义部署选项、SSO、审计日志等企业级功能 | 对数据安全、合规要求高的组织 |\n\n*注：具体价格因地区和时间可能调整，建议访问 Deepnote 官网查看最新定价。免费版足够你体验核心功能，但重度使用还是需要付费。*\n\n---\n\n## 值不值得用？\n\n**优点**：\n- 零配置上手，浏览器即开即用，省去环境折腾。\n- AI 辅助确实能提升写代码和调试速度，尤其对非专业程序员（如业务分析师）友好。\n- 实时协作对团队项目来说很香，省去版本混乱和沟通成本。\n- 与 GitHub、Slack 等工具集成好，适合已有技术栈的团队。\n\n**缺点**：\n- 免费版资源有限，跑稍大的数据集或长时间训练模型会受限制。\n- 部分高级功能（如大内存、GPU）需要付费，而且价格不算便宜，个人用户可能觉得贵。\n- 如果你想完全掌控环境、自己部署到私有服务器，Deepnote 的自托管方案不如 Jupyter 灵活。\n\n**总体结论**：如果你或者你的团队需要频繁做数据分析、写报告，并且不想花时间在环境搭建和版本管理上，Deepnote 是一个很实用的工具。它用“云端+AI+协作”三个点解决了传统 Jupyter 的很多痛点。但如果你是重度计算用户或对成本敏感，建议先试用免费版再做决定。\n\n---\n\n## 使用建议\n\n1. **先从免费版开始** – 跑几个小型项目，感受一下 AI 助手的实际效果和协作体验。如果够用就继续用。\n2. **团队用的话，提前规划好版本** – 协作模式下注意命名规范和评论习惯，避免多人同时修改同一段代码冲突。\n3. **善用版本快照** – 每次重要修改后手动保存一个版本，关键时刻能救命。\n4. **连接外部数据源时注意权限** – 如果用到生产数据库，建议用只读账号或测试库，避免误操作。\n5. **重度计算任务考虑迁移** – 如果免费额度不够，而付费价格觉得高，可以把大规模训练或 ETL 放在本地或专用服务器上，只用 Deepnote 做分析和可视化。\n\n---\n\n## 适合谁用？\n\n**推荐**：\n- 数据科学/数据分析团队，需要多人协作完成报告或分析项目。\n- 初级数据从业者或转行者，不想在环境配置上浪费时间。\n- 业务分析师：会用 SQL 和简单 Python，但不熟悉命令行和包管理。\n\n**可考虑**：\n- 独立开发者或自由职业者，项目规模中等，愿意付费获取更好的计算资源。\n- 需要在云端快速分享分析结果给非技术同事的团队（一键导出 PDF/HTML 很方便）。\n\n**不推荐**：\n- 对本地环境有强依赖、需要自定义内核或大量专有工具链的用户。\n- 预算非常有限、且项目计算量较大的个人（免费额度不够用，付费又觉得不值）。\n- 对数据主权有严格要求、不能接受数据存储在第三方云平台的企业。",
-  "published": false,
-  "source_url": "https://deepnote.com/pricing",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
-  "conflict": false,
-  "content_verified": true,
-  "conflict_note": "",
-  "verified_url": "https://deepnote.com",
-  "verified_publisher": "Deepnote, Inc.",
-  "verified_what": "云端协作式数据科学笔记本，支持 Python、R、SQL 与内置 AI 助手，面向团队实时协作与数据分析。",
-  "verified_price": "Free（最多 3 编辑者、5 项目，有限 AI）；Team $39/编辑者/月（$31.20 年付）；Enterprise 定制；另有 Pro 个人版约 $9/月起（第三方来源）。",
-  "verified_platform": "Web (云端), API",
-  "verified_features": [
-    "云端协作笔记本，原生支持 Python、R、SQL（Jinja）单元格",
-    "Deepnote AI：代码生成、补全、解释与修复（Team 含 GPT-5、Sonnet 4.6 访问）",
-    "实时多人协作编辑、评论与项目版本历史（7–30 天）",
-    "连接主流数据仓库/数据库，支持按需 Spark 集群",
-    "定时运行、交互式应用/看板与权限管理（SSO、SOC 2、HIPAA）"
-  ],
-  "verified_description": "Deepnote 是由 Deepnote 公司推出的云端协作式数据科学笔记本，支持 Python、R、SQL 与内置 AI 助手，面向团队实时协作与数据分析。",
-  "content_flags": "无重大问题；内容与官方一致（含 GPT-5 / Sonnet 4.6 模型访问）。",
-  "price_verified": true,
-  "verified_rating": "⭐ 4.6",
-  "rating_source": "暂无权威外部评分（保留编辑评分）",
-  "rating_verified": true,
-  "verified_pros": [
-    "基于云端，无需配置环境即可使用",
-    "内置 AI 代码自动补全和自然语言问答",
-    "支持 Python、R、SQL 等多种语言",
-    "实时协作，便于团队共享和共同编辑",
-    "与 GitHub、Slack 等工具深度集成"
-  ],
-  "verified_cons": [
-    "免费版计算资源和运行时长有限",
-    "部分高级功能（如更大内存、GPU）需要付费",
-    "自托管部署不如 Jupyter 灵活"
-  ],
-  "verified_faq": [
-    {
-      "q": "Deepnote是什么？",
-      "a": "Deepnote 是一款基于云的数据科学笔记本平台，类似于 Jupyter Notebook，但更注重协作和 AI 辅助。它允许团队在线编写和运行代码、可视化数据，并利用 AI 加速工作流程。"
-    },
-    {
-      "q": "Deepnote免费版有什么限制？",
-      "a": "免费版提供最多 3 名编辑者、5 个项目及有限的计算资源（5 GB RAM、2 vCPU）和有限 AI，适合个人学习和小型项目。"
-    },
-    {
-      "q": "Deepnote支持哪些编程语言？",
-      "a": "Deepnote 原生支持 Python、R 和 SQL，并可以通过扩展支持其他语言。用户可以在同一个笔记本中混合使用多种语言。"
-    },
-    {
-      "q": "Deepnote与Jupyter Notebook的主要区别是什么？",
-      "a": "Deepnote 是云端原生、协作优先的笔记本，无需本地安装；而 Jupyter 通常是本地或自托管。Deepnote 内置 AI 助手、实时协作和更多集成功能，但在自定义扩展和离线使用方面不如 Jupyter 灵活。"
-    }
-  ],
-  "verified_tags": [
-    "数据科学",
-    "协作笔记本",
-    "AI辅助",
-    "免费"
-  ],
-  "verified_category": "AI开发",
-  "source_urls": [
-    "https://deepnote.com/pricing",
-    "https://deepnote.com/blog/jupyter-vs-deepnote"
-  ],
-  "verify_notes": "Pro 个人版 $9/月见于第三方来源，官方主推 Free/Team/Enterprise。",
-  "compare_section": {
-    "competitors": [
-      "anthropic-console",
-      "hugging-face",
-      "open-router"
+    "name": "Deepnote",
+    "slug": "deepnote",
+    "positioning": "Deepnote+云端协作笔记本，原生：免费AI开发",
+    "auto_positioning": true,
+    "emoji": "📓",
+    "color": "#2B6CB0",
+    "description": "Deepnote 是由 Deepnote 公司推出的云端协作式数据科学笔记本，支持 Python、R、SQL 与内置 AI 助手，面向团队实时协作与数据分析。",
+    "category": "AI开发",
+    "tags": [
+        "数据科学",
+        "协作笔记本",
+        "AI辅助",
+        "免费"
     ],
-    "verdict": "Deepnote 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Deepnote 的 云端协作笔记本，原生支持 Python、R、SQL（Jinja）单元格 是亮点，价格 免费版；Team $39/编辑者/月（年付 $31.20）；竞品各有侧重，可按预算与功能需求选择。"
-  }
+    "rating": "⭐ 4.6",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "recommend",
+        "text": "推荐"
+    },
+    "url": "https://deepnote.com",
+    "price": "免费版；Team $39/编辑者/月（年付 $31.20）",
+    "platform": "Web",
+    "pros": [
+        "基于云端，无需配置环境即可使用",
+        "内置 AI 代码自动补全和自然语言问答",
+        "支持 Python、R、SQL 等多种语言",
+        "实时协作，便于团队共享和共同编辑",
+        "与 GitHub、Slack 等工具深度集成"
+    ],
+    "cons": [
+        "免费版计算资源和运行时长有限",
+        "部分高级功能（如更大内存、GPU）需要付费",
+        "自托管部署不如 Jupyter 灵活"
+    ],
+    "features": [
+        "云端协作笔记本，原生支持 Python、R、SQL（Jinja）单元格",
+        "Deepnote AI：代码生成、补全、解释与修复（Team 含 GPT-5、Sonnet 4.6 访问）",
+        "实时多人协作编辑、评论与项目版本历史（7–30 天）",
+        "连接主流数据仓库/数据库，支持按需 Spark 集群",
+        "定时运行、交互式应用/看板与权限管理（SSO、SOC 2、HIPAA）"
+    ],
+    "related": [
+        "replit-ai",
+        "cursor",
+        "github-copilot"
+    ],
+    "faq": [
+        {
+            "q": "Deepnote是什么？",
+            "a": "Deepnote 是一款基于云的数据科学笔记本平台，类似于 Jupyter Notebook，但更注重协作和 AI 辅助。它允许团队在线编写和运行代码、可视化数据，并利用 AI 加速工作流程。"
+        },
+        {
+            "q": "Deepnote免费版有什么限制？",
+            "a": "免费版提供最多 3 名编辑者、5 个项目及有限的计算资源（5 GB RAM、2 vCPU）和有限 AI，适合个人学习和小型项目。"
+        },
+        {
+            "q": "Deepnote支持哪些编程语言？",
+            "a": "Deepnote 原生支持 Python、R 和 SQL，并可以通过扩展支持其他语言。用户可以在同一个笔记本中混合使用多种语言。"
+        },
+        {
+            "q": "Deepnote与Jupyter Notebook的主要区别是什么？",
+            "a": "Deepnote 是云端原生、协作优先的笔记本，无需本地安装；而 Jupyter 通常是本地或自托管。Deepnote 内置 AI 助手、实时协作和更多集成功能，但在自定义扩展和离线使用方面不如 Jupyter 灵活。"
+        }
+    ],
+    "seo_keywords": [
+        "Deepnote",
+        "Deepnote怎么样",
+        "Deepnote免费版",
+        "Deepnote使用教程",
+        "Deepnote和Jupyter哪个好"
+    ],
+    "content": "## Deepnote是什么？\n\n如果你用过 Jupyter Notebook，那理解 Deepnote 就很容易——它本质上是一个“云端版 Jupyter”，但多了很多现代协作和 AI 功能。你不需要在自己电脑上装 Python、配置环境、折腾包依赖，打开浏览器就能直接写代码、跑分析。内置的 AI 助手可以帮你自动补全代码、甚至用自然语言解释逻辑。支持 Python、R 和 SQL，团队还能实时一起编辑同一个笔记本，很像 Google Docs 之于 Word 的感觉。\n\n简单说：Deepnote 是把数据科学工作流搬到了云上，同时加了 AI 和多人协作的 buff。\n\n---\n\n## 核心功能\n\n## 1. AI 代码生成与解释\n这是最大的亮点。写代码时 AI 会给出补全建议，但你也可以直接问它“这段代码是什么意思”或者“帮我写个函数实现XX功能”。不需要切换窗口去查 Stack Overflow，省了很多来回折腾的时间。对于不熟悉的库或者复杂逻辑，解释得挺清楚，虽然不是每次都完美，但足够当个好搭档。\n\n## 2. 实时协作编辑与评论\n团队成员可以同时打开同一个笔记本，像共享文档一样实时看到对方的操作。还能在某个代码块或单元格上留下评论，做代码审查或者讨论思路。这比 Jupyter 的“写完发邮件/传Git”流程流畅太多了。实际使用中，数据分析和报告协作的效率提升是肉眼可见的。\n\n## 3. 版本历史与快照回溯\n每次运行或手动保存都会生成一个版本快照，你可以随时回退到任意历史状态。做过数据分析的都懂，改来改去发现原来版本更合理——这时候点一下就能回去，不用靠“_final_最终版_v3.ipynb”这种痛苦命名法。\n\n## 4. 内置数据可视化组件\n不需要额外写 matplotlib 或 seaborn 的冗长代码，直接通过可视化界面拖拽或配置就能快速生成图表。当然，你想用代码画深度的定制图也完全支持。对于快速探索数据分布、做初步报表，这个组件很顺手。\n\n## 5. 连接多种数据源\n支持直连数据库（PostgreSQL、MySQL、BigQuery 等）、云存储（S3、GCS），也能上传本地文件。数据导入后可以在笔记本里直接查询、分析。对于需要经常拉取不同数据源做分析的团队，少了一次导出和导入的麻烦。\n\n---\n\n## 版本/套餐对比\n\n| 版本/套餐 | 核心区别 | 适用场景 |\n| --- | --- | --- |\n| 免费版 | 有限的计算时长和内存（通常数小时/月），基础协作功能 | 个人学习、小项目试水 |\n| 专业版/团队版（付费） | 更大内存、GPU 加速、更多运行时长、高级集成（GitHub、Slack等） | 小团队日常分析、轻量生产任务 |\n| 企业版（付费） | 自定义部署选项、SSO、审计日志等企业级功能 | 对数据安全、合规要求高的组织 |\n\n*注：具体价格因地区和时间可能调整，建议访问 Deepnote 官网查看最新定价。免费版足够你体验核心功能，但重度使用还是需要付费。*\n\n---\n\n## 值不值得用？\n\n**优点**：\n- 零配置上手，浏览器即开即用，省去环境折腾。\n- AI 辅助确实能提升写代码和调试速度，尤其对非专业程序员（如业务分析师）友好。\n- 实时协作对团队项目来说很香，省去版本混乱和沟通成本。\n- 与 GitHub、Slack 等工具集成好，适合已有技术栈的团队。\n\n**缺点**：\n- 免费版资源有限，跑稍大的数据集或长时间训练模型会受限制。\n- 部分高级功能（如大内存、GPU）需要付费，而且价格不算便宜，个人用户可能觉得贵。\n- 如果你想完全掌控环境、自己部署到私有服务器，Deepnote 的自托管方案不如 Jupyter 灵活。\n\n**总体结论**：如果你或者你的团队需要频繁做数据分析、写报告，并且不想花时间在环境搭建和版本管理上，Deepnote 是一个很实用的工具。它用“云端+AI+协作”三个点解决了传统 Jupyter 的很多痛点。但如果你是重度计算用户或对成本敏感，建议先试用免费版再做决定。\n\n---\n\n## 使用建议\n\n1. **先从免费版开始** – 跑几个小型项目，感受一下 AI 助手的实际效果和协作体验。如果够用就继续用。\n2. **团队用的话，提前规划好版本** – 协作模式下注意命名规范和评论习惯，避免多人同时修改同一段代码冲突。\n3. **善用版本快照** – 每次重要修改后手动保存一个版本，关键时刻能救命。\n4. **连接外部数据源时注意权限** – 如果用到生产数据库，建议用只读账号或测试库，避免误操作。\n5. **重度计算任务考虑迁移** – 如果免费额度不够，而付费价格觉得高，可以把大规模训练或 ETL 放在本地或专用服务器上，只用 Deepnote 做分析和可视化。\n\n---\n\n## 适合谁用？\n\n**推荐**：\n- 数据科学/数据分析团队，需要多人协作完成报告或分析项目。\n- 初级数据从业者或转行者，不想在环境配置上浪费时间。\n- 业务分析师：会用 SQL 和简单 Python，但不熟悉命令行和包管理。\n\n**可考虑**：\n- 独立开发者或自由职业者，项目规模中等，愿意付费获取更好的计算资源。\n- 需要在云端快速分享分析结果给非技术同事的团队（一键导出 PDF/HTML 很方便）。\n\n**不推荐**：\n- 对本地环境有强依赖、需要自定义内核或大量专有工具链的用户。\n- 预算非常有限、且项目计算量较大的个人（免费额度不够用，付费又觉得不值）。\n- 对数据主权有严格要求、不能接受数据存储在第三方云平台的企业。",
+    "published": true,
+    "source_url": "https://deepnote.com/pricing",
+    "last_verified": "2026-07-31",
+    "confidence": "high",
+    "conflict": false,
+    "content_verified": true,
+    "conflict_note": "",
+    "verified_url": "https://deepnote.com",
+    "verified_publisher": "Deepnote, Inc.",
+    "verified_what": "云端协作式数据科学笔记本，支持 Python、R、SQL 与内置 AI 助手，面向团队实时协作与数据分析。",
+    "verified_price": "Free（最多 3 编辑者、5 项目，有限 AI）；Team $39/编辑者/月（$31.20 年付）；Enterprise 定制；另有 Pro 个人版约 $9/月起（第三方来源）。",
+    "verified_platform": "Web (云端), API",
+    "verified_features": [
+        "云端协作笔记本，原生支持 Python、R、SQL（Jinja）单元格",
+        "Deepnote AI：代码生成、补全、解释与修复（Team 含 GPT-5、Sonnet 4.6 访问）",
+        "实时多人协作编辑、评论与项目版本历史（7–30 天）",
+        "连接主流数据仓库/数据库，支持按需 Spark 集群",
+        "定时运行、交互式应用/看板与权限管理（SSO、SOC 2、HIPAA）"
+    ],
+    "verified_description": "Deepnote 是由 Deepnote 公司推出的云端协作式数据科学笔记本，支持 Python、R、SQL 与内置 AI 助手，面向团队实时协作与数据分析。",
+    "content_flags": "无重大问题；内容与官方一致（含 GPT-5 / Sonnet 4.6 模型访问）。",
+    "price_verified": true,
+    "verified_rating": "⭐ 4.6",
+    "rating_source": "暂无权威外部评分（保留编辑评分）",
+    "rating_verified": true,
+    "verified_pros": [
+        "基于云端，无需配置环境即可使用",
+        "内置 AI 代码自动补全和自然语言问答",
+        "支持 Python、R、SQL 等多种语言",
+        "实时协作，便于团队共享和共同编辑",
+        "与 GitHub、Slack 等工具深度集成"
+    ],
+    "verified_cons": [
+        "免费版计算资源和运行时长有限",
+        "部分高级功能（如更大内存、GPU）需要付费",
+        "自托管部署不如 Jupyter 灵活"
+    ],
+    "verified_faq": [
+        {
+            "q": "Deepnote是什么？",
+            "a": "Deepnote 是一款基于云的数据科学笔记本平台，类似于 Jupyter Notebook，但更注重协作和 AI 辅助。它允许团队在线编写和运行代码、可视化数据，并利用 AI 加速工作流程。"
+        },
+        {
+            "q": "Deepnote免费版有什么限制？",
+            "a": "免费版提供最多 3 名编辑者、5 个项目及有限的计算资源（5 GB RAM、2 vCPU）和有限 AI，适合个人学习和小型项目。"
+        },
+        {
+            "q": "Deepnote支持哪些编程语言？",
+            "a": "Deepnote 原生支持 Python、R 和 SQL，并可以通过扩展支持其他语言。用户可以在同一个笔记本中混合使用多种语言。"
+        },
+        {
+            "q": "Deepnote与Jupyter Notebook的主要区别是什么？",
+            "a": "Deepnote 是云端原生、协作优先的笔记本，无需本地安装；而 Jupyter 通常是本地或自托管。Deepnote 内置 AI 助手、实时协作和更多集成功能，但在自定义扩展和离线使用方面不如 Jupyter 灵活。"
+        }
+    ],
+    "verified_tags": [
+        "数据科学",
+        "协作笔记本",
+        "AI辅助",
+        "免费"
+    ],
+    "verified_category": "AI开发",
+    "source_urls": [
+        "https://deepnote.com/pricing",
+        "https://deepnote.com/blog/jupyter-vs-deepnote"
+    ],
+    "verify_notes": "Pro 个人版 $9/月见于第三方来源，官方主推 Free/Team/Enterprise。",
+    "compare_section": {
+        "competitors": [
+            "anthropic-console",
+            "hugging-face",
+            "open-router"
+        ],
+        "verdict": "Deepnote 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Deepnote 的 云端协作笔记本，原生支持 Python、R、SQL（Jinja）单元格 是亮点，价格 免费版；Team $39/编辑者/月（年付 $31.20）；竞品各有侧重，可按预算与功能需求选择。"
+    },
+    "published_date": "2026-08-24",
+    "created_date": "2026-08-24"
 }

@@ -1,96 +1,97 @@
 {
-  "name": "Readwise",
-  "slug": "readwise",
-  "positioning": "Readwise是什么？阅读高亮聚合与间隔复习工具好用吗",
-  "auto_positioning": false,
-  "emoji": "📚",
-  "color": "#1F7A8C",
-  "description": "Readwise 是一款主打「把读过的书真正记住」的阅读高亮管理工具，能把 Kindle、微信读书、Instapaper、Apple Books 等来源的高亮和笔记统一聚合到一个地方，并通过间隔复习（Spaced Repetition）与每日回顾，帮你把关键信息留存下来。在此基础上，Readwise Reader 还提供了一个集文章、PDF、Newsletter 与 YouTube 字幕于一体的统一阅读收件箱。",
-  "category": "AI效率",
-  "tags": [
-    {
-      "text": "阅读高亮"
+    "name": "Readwise",
+    "slug": "readwise",
+    "positioning": "Readwise是什么？阅读高亮聚合与间隔复习工具好用吗",
+    "auto_positioning": false,
+    "emoji": "📚",
+    "color": "#1F7A8C",
+    "description": "Readwise 是一款主打「把读过的书真正记住」的阅读高亮管理工具，能把 Kindle、微信读书、Instapaper、Apple Books 等来源的高亮和笔记统一聚合到一个地方，并通过间隔复习（Spaced Repetition）与每日回顾，帮你把关键信息留存下来。在此基础上，Readwise Reader 还提供了一个集文章、PDF、Newsletter 与 YouTube 字幕于一体的统一阅读收件箱。",
+    "category": "AI效率",
+    "tags": [
+        {
+            "text": "阅读高亮"
+        },
+        {
+            "text": "Kindle同步"
+        },
+        {
+            "text": "间隔复习"
+        },
+        {
+            "text": "知识管理"
+        }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "recommend",
+        "text": "推荐"
     },
-    {
-      "text": "Kindle同步"
-    },
-    {
-      "text": "间隔复习"
-    },
-    {
-      "text": "知识管理"
-    }
-  ],
-  "rating": "⭐ 4.6",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "recommend",
-    "text": "推荐"
-  },
-  "url": "https://readwise.io",
-  "price": "提供 30 天免费试用，付费订阅约 $8–13/月（以官网最新定价为准）",
-  "platform": "Web、iOS、Android、Mac、Windows（Reader 多端同步）",
-  "pros": [
-    "多来源高亮一键聚合，Kindle/微信读书/Instapaper/Apple Books 等都能导入",
-    "间隔复习机制科学，每天回顾真正帮你记住重点",
-    "Readwise Reader 统一阅读收件箱，文章/PDF/Newsletter/视频字幕一处读",
-    "可自动同步到 Notion、Obsidian、Roam 等笔记工具",
-    "新增 AI 摘要，把零散高亮压缩成可快速回顾的要点"
-  ],
-  "cons": [
-    "没有永久免费版，试用后必须付费，对轻度用户偏贵",
-    "高亮量一大容易信息过载，需要持续每日回顾才有效果",
-    "Reader 相比老牌稍显年轻，部分体验仍在打磨"
-  ],
-  "features": [
-    "多平台高亮导入：Kindle、微信读书、Instapaper、Apple Books、Pocket 等",
-    "每日回顾与间隔复习：按记忆曲线推送高亮",
-    "Readwise Reader 统一阅读收件箱：文章、PDF、Newsletter、YouTube 字幕",
-    "一键导出/同步到 Notion、Obsidian、Roam、Evernote 等",
-    "AI 摘要：把长文高亮压缩成要点",
-    "标签、搜索与批注：集中管理和连接想法"
-  ],
-  "related": [
-    "obsidian",
-    "notion",
-    "chatgpt"
-  ],
-  "content": "## Readwise 是什么？\nReadwise 的定位很朴素但很戳痛点：大多数人读了很多书、划了很多重点，但两周后就忘得差不多了。Readwise 做的事，就是把你散落在各处的高亮和笔记「解放」出来，统一收进一个地方，再通过科学的方式让你真的再见到、再用上它们。\n\n它最早以「高亮聚合 + 间隔复习」出名。你可以把 Kindle、微信读书、Instapaper、Apple Books、Pocket 等来源的高亮一键导入，Readwise 会按记忆曲线，在合适的时间把重点推回给你做每日回顾。对很多用户来说，这解决了「划了等于没划」的老问题。后续推出的 Readwise Reader，则把阅读本身也收编了——文章、PDF、Newsletter、甚至 YouTube 字幕，都能在一个统一收件箱里读，并在读的过程中直接高亮。\n\n## 核心功能\n1. **多平台高亮导入**：Kindle、微信读书、Instapaper、Apple Books、Pocket 等都能连，把碎片高亮汇到一处。\n2. **每日回顾与间隔复习**：按记忆曲线推送，帮你在遗忘前及时复习。\n3. **Readwise Reader 统一收件箱**：文章、PDF、Newsletter、视频字幕一处读，边读边划。\n4. **自动同步到笔记工具**：可一键把高亮/笔记持续同步到 Notion、Obsidian、Roam、Evernote。\n5. **AI 摘要**：把一大堆零散高亮压缩成可快速回顾的要点，复习更高效。\n6. **标签、搜索与批注**：集中管理，想法之间也能连接起来。\n\n## 版本/套餐对比\n| 方案 | 价格 | 适合人群 |\n| --- | --- | --- |\n| 免费试用 | 30 天 | 新用户全功能体验 |\n| Readwise 订阅 | 约 $8/月 | 想聚合高亮+复习的读者 |\n| Readwise Reader | 约 $13/月 | 想要统一阅读收件箱的用户 |\n（价格以官网最新为准）\n\n## 值不值得用？\n优点很明确：多来源高亮聚合 + 间隔复习，是市面上把「记住读过的内容」做得最扎实的方案之一；Reader 又补上了阅读入口。缺点也不少：没有永久免费版，试用后必须付费，对偶尔读书的人偏贵；高亮多了容易信息过载，需要你真的坚持每日回顾才见效。结论——如果你是高频阅读者、学生或知识工作者，它很值得；轻度用户可以先试用再决定。\n\n## 使用建议\n先用 30 天试用把 Kindle/微信读书接上，别急着导全部历史，挑最近在读的几本书；每天花 5–10 分钟做每日回顾比一次性刷几百条有用得多；如果你用 Obsidian/Notion，直接开自动同步，让高亮变成可检索的知识库。\n\n## 适合谁用？\n- **推荐**：每月读 3 本书以上的读者、备考学生、做研究/内容创作的知识工作者。\n- **可考虑**：偶尔阅读、想整理微信读书高亮的人，先用免费试用评估。\n- **不推荐**：只读不划、或希望长期白嫖的用户，付费门槛会劝退。",
-  "published": false,
-  "faq": [
-    {
-      "question": "Readwise 是免费的吗？",
-      "answer": "提供 30 天免费试用，但核心订阅为付费制，没有永久免费版。"
-    },
-    {
-      "question": "Readwise 支持微信读书吗？",
-      "answer": "支持，Readwise 可导入 Kindle、微信读书、Instapaper、Apple Books 等来源的高亮。"
-    },
-    {
-      "question": "Readwise 和 Readwise Reader 有什么区别？",
-      "answer": "Readwise 负责高亮聚合与复习，Readwise Reader 是统一阅读收件箱，负责读文章/PDF/Newsletter/视频字幕。"
-    },
-    {
-      "question": "Readwise 能同步到 Obsidian 吗？",
-      "answer": "可以，官方提供与 Obsidian、Notion、Roam 等的自动持续同步。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "Readwise",
-    "Readwise怎么样",
-    "Readwise免费版",
-    "Readwise使用教程",
-    "Readwise和哪个好"
-  ],
-  "source_urls": [
-    "https://readwise.io",
-    "https://www.bufferhive.com/top-reading-learning-apps-in-2025-for-smarter-learning",
-    "https://expandus.tech/blogs/appetite/how-to-revolutionize-your-reading-workflow-with-readwise"
-  ],
-  "confidence": "medium",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+    "url": "https://readwise.io",
+    "price": "提供 30 天免费试用，付费订阅约 $8–13/月（以官网最新定价为准）",
+    "platform": "Web、iOS、Android、Mac、Windows（Reader 多端同步）",
+    "pros": [
+        "多来源高亮一键聚合，Kindle/微信读书/Instapaper/Apple Books 等都能导入",
+        "间隔复习机制科学，每天回顾真正帮你记住重点",
+        "Readwise Reader 统一阅读收件箱，文章/PDF/Newsletter/视频字幕一处读",
+        "可自动同步到 Notion、Obsidian、Roam 等笔记工具",
+        "新增 AI 摘要，把零散高亮压缩成可快速回顾的要点"
+    ],
+    "cons": [
+        "没有永久免费版，试用后必须付费，对轻度用户偏贵",
+        "高亮量一大容易信息过载，需要持续每日回顾才有效果",
+        "Reader 相比老牌稍显年轻，部分体验仍在打磨"
+    ],
+    "features": [
+        "多平台高亮导入：Kindle、微信读书、Instapaper、Apple Books、Pocket 等",
+        "每日回顾与间隔复习：按记忆曲线推送高亮",
+        "Readwise Reader 统一阅读收件箱：文章、PDF、Newsletter、YouTube 字幕",
+        "一键导出/同步到 Notion、Obsidian、Roam、Evernote 等",
+        "AI 摘要：把长文高亮压缩成要点",
+        "标签、搜索与批注：集中管理和连接想法"
+    ],
+    "related": [
+        "obsidian",
+        "notion",
+        "chatgpt"
+    ],
+    "content": "## Readwise 是什么？\nReadwise 的定位很朴素但很戳痛点：大多数人读了很多书、划了很多重点，但两周后就忘得差不多了。Readwise 做的事，就是把你散落在各处的高亮和笔记「解放」出来，统一收进一个地方，再通过科学的方式让你真的再见到、再用上它们。\n\n它最早以「高亮聚合 + 间隔复习」出名。你可以把 Kindle、微信读书、Instapaper、Apple Books、Pocket 等来源的高亮一键导入，Readwise 会按记忆曲线，在合适的时间把重点推回给你做每日回顾。对很多用户来说，这解决了「划了等于没划」的老问题。后续推出的 Readwise Reader，则把阅读本身也收编了——文章、PDF、Newsletter、甚至 YouTube 字幕，都能在一个统一收件箱里读，并在读的过程中直接高亮。\n\n## 核心功能\n1. **多平台高亮导入**：Kindle、微信读书、Instapaper、Apple Books、Pocket 等都能连，把碎片高亮汇到一处。\n2. **每日回顾与间隔复习**：按记忆曲线推送，帮你在遗忘前及时复习。\n3. **Readwise Reader 统一收件箱**：文章、PDF、Newsletter、视频字幕一处读，边读边划。\n4. **自动同步到笔记工具**：可一键把高亮/笔记持续同步到 Notion、Obsidian、Roam、Evernote。\n5. **AI 摘要**：把一大堆零散高亮压缩成可快速回顾的要点，复习更高效。\n6. **标签、搜索与批注**：集中管理，想法之间也能连接起来。\n\n## 版本/套餐对比\n| 方案 | 价格 | 适合人群 |\n| --- | --- | --- |\n| 免费试用 | 30 天 | 新用户全功能体验 |\n| Readwise 订阅 | 约 $8/月 | 想聚合高亮+复习的读者 |\n| Readwise Reader | 约 $13/月 | 想要统一阅读收件箱的用户 |\n（价格以官网最新为准）\n\n## 值不值得用？\n优点很明确：多来源高亮聚合 + 间隔复习，是市面上把「记住读过的内容」做得最扎实的方案之一；Reader 又补上了阅读入口。缺点也不少：没有永久免费版，试用后必须付费，对偶尔读书的人偏贵；高亮多了容易信息过载，需要你真的坚持每日回顾才见效。结论——如果你是高频阅读者、学生或知识工作者，它很值得；轻度用户可以先试用再决定。\n\n## 使用建议\n先用 30 天试用把 Kindle/微信读书接上，别急着导全部历史，挑最近在读的几本书；每天花 5–10 分钟做每日回顾比一次性刷几百条有用得多；如果你用 Obsidian/Notion，直接开自动同步，让高亮变成可检索的知识库。\n\n## 适合谁用？\n- **推荐**：每月读 3 本书以上的读者、备考学生、做研究/内容创作的知识工作者。\n- **可考虑**：偶尔阅读、想整理微信读书高亮的人，先用免费试用评估。\n- **不推荐**：只读不划、或希望长期白嫖的用户，付费门槛会劝退。",
+    "published": true,
+    "faq": [
+        {
+            "question": "Readwise 是免费的吗？",
+            "answer": "提供 30 天免费试用，但核心订阅为付费制，没有永久免费版。"
+        },
+        {
+            "question": "Readwise 支持微信读书吗？",
+            "answer": "支持，Readwise 可导入 Kindle、微信读书、Instapaper、Apple Books 等来源的高亮。"
+        },
+        {
+            "question": "Readwise 和 Readwise Reader 有什么区别？",
+            "answer": "Readwise 负责高亮聚合与复习，Readwise Reader 是统一阅读收件箱，负责读文章/PDF/Newsletter/视频字幕。"
+        },
+        {
+            "question": "Readwise 能同步到 Obsidian 吗？",
+            "answer": "可以，官方提供与 Obsidian、Notion、Roam 等的自动持续同步。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "Readwise",
+        "Readwise怎么样",
+        "Readwise免费版",
+        "Readwise使用教程",
+        "Readwise和哪个好"
+    ],
+    "source_urls": [
+        "https://readwise.io",
+        "https://www.bufferhive.com/top-reading-learning-apps-in-2025-for-smarter-learning",
+        "https://expandus.tech/blogs/appetite/how-to-revolutionize-your-reading-workflow-with-readwise"
+    ],
+    "confidence": "medium",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14",
+    "published_date": "2026-08-24"
 }
