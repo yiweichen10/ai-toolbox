@@ -32,7 +32,7 @@ def _cfg():
 
 def _clean_all_broken_links():
     """全站兜底：所有 HTML 页面中指向未发布/不存在工具/文章的链接降级为纯文本（2026-08-07）。"""
-    from build import clean_broken_tool_links
+    from build_lib.render_tool import clean_broken_tool_links
     fixed = 0
     BASE_DIR = _cfg()['BASE_DIR']
     for root, dirs, files in os.walk(BASE_DIR):
