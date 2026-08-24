@@ -1,94 +1,95 @@
 {
-  "name": "Gemini API Managed Agents",
-  "slug": "gemini-managed-agents",
-  "positioning": "Gemini API Managed Agents是什么_托管式Agent_生产级Agent治理",
-  "auto_positioning": false,
-  "emoji": "🔷",
-  "color": "#4285F4",
-  "description": "Google 在 Gemini API 中提供的托管式 Agent 运行能力，单次 API 调用即可在隔离云端沙箱里协调推理、代码执行、包安装、文件管理与网页检索。2026 年 7 月 28 日升级默认模型为 Gemini 3.6 Flash，并加入环境钩子、Token 预算上限、定时触发器与免费层。",
-  "category": "AI智能体",
-  "tags": [
-    {
-      "text": "托管Agent"
+    "name": "Gemini API Managed Agents",
+    "slug": "gemini-managed-agents",
+    "positioning": "Gemini API Managed Agents是什么_托管式Agent_生产级Agent治理",
+    "auto_positioning": false,
+    "emoji": "🔷",
+    "color": "#4285F4",
+    "description": "Google 在 Gemini API 中提供的托管式 Agent 运行能力，单次 API 调用即可在隔离云端沙箱里协调推理、代码执行、包安装、文件管理与网页检索。2026 年 7 月 28 日升级默认模型为 Gemini 3.6 Flash，并加入环境钩子、Token 预算上限、定时触发器与免费层。",
+    "category": "AI智能体",
+    "tags": [
+        {
+            "text": "托管Agent"
+        },
+        {
+            "text": "Google生态"
+        },
+        {
+            "text": "免费可用",
+            "type": "free"
+        }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "new",
+        "text": "Google官方新升级"
     },
-    {
-      "text": "Google生态"
-    },
-    {
-      "text": "免费可用",
-      "type": "free"
-    }
-  ],
-  "rating": "⭐ 4.5",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "new",
-    "text": "Google官方新升级"
-  },
-  "url": "https://ai.google.dev/gemini-api/docs/agents",
-  "price": "价格暂未公开",
-  "platform": "Web",
-  "pros": [
-    "把 Agent 治理（钩子、预算、定时）做成平台能力，省去自建编排层",
-    "免费层降低了试水门槛，API Key 即可用",
-    "环境钩子可在工具调用边界拦截、阻断、lint 或审计",
-    "默认 Gemini 3.6 Flash 效率更高、单价更低",
-    "定时触发器复用同一沙箱，文件跨次保留"
-  ],
-  "cons": [
-    "生态相对 Google 系绑定（Vertex/Gemini）",
-    "SDK 目前没有 hookable fetch",
-    "仍需团队自己定义权限、失败处理与审查流程"
-  ],
-  "features": [
-    "隔离沙箱执行：单次 API 调用在远程沙箱跑代码、装包、读写文件、抓网页",
-    "环境钩子 Hooks：pre/post tool execution 时机运行自定义脚本，可拦截或审计",
-    "Token 预算上限：max_total_tokens 限制总消耗，超限返回 incomplete 并保留环境状态",
-    "定时触发器 Cron：把 agent、环境、prompt、cron 绑定为持久资源",
-    "免费层与多模型：免费项目可用 API Key；默认 3.6 Flash，可选 3.5 Flash / 3.5 Flash-Lite",
-    "Environments API：可列出、检查、删除沙箱会话"
-  ],
-  "related": [
-    "openai",
-    "dify",
-    "coze"
-  ],
-  "content": "## Gemini API Managed Agents 是什么？\nGemini API Managed Agents 是 Google 在 Gemini API 中提供的托管式 Agent 运行能力，开发者通过一个 API 调用即可在隔离的云端沙箱里协调推理、代码执行、包安装、文件管理与网页检索。它脱胎于 2026 年 6 月 22 日 GA 的 Interactions API，并在 7 月 7 日加入后台任务与远程 MCP 集成，7 月 28 日又迎来一次重大升级（默认模型换为 Gemini 3.6 Flash、加入环境钩子、Token 预算上限、定时触发器与免费层）。它和 Google ADK 互补：ADK 偏代码优先的本地构建，Managed Agents 偏云端托管、免自建编排的生产部署。\n\n## 核心功能\n1. 隔离沙箱执行：单次 API 调用在远程沙箱里跑代码、装包、读写文件、抓网页。\n2. 环境钩子（Hooks）：在沙箱里 pre/post tool execution 时机运行自定义脚本，可拦截、阻断、lint 或审计工具调用。\n3. Token 预算上限：用 max_total_tokens 限制输入+输出+思考总消耗，超限返回 incomplete 并保留环境状态以便续跑。\n4. 定时触发器（Cron）：把 agent、环境、prompt、cron 表达式绑定为持久资源，每次复用同一沙箱、文件可跨次保留。\n5. 免费层与多模型：免费层项目可用 API Key 直接试；默认 Gemini 3.6 Flash，也可选 3.5 Flash / 3.5 Flash-Lite。\n\n## 版本/套餐对比\n| 维度 | 免费层 | 付费/绑定计费项目 |\n| --- | --- | --- |\n| 访问 | API Key 即可，无需活跃计费 | 标准 Gemini API 计费 |\n| 模型 | Gemini 3.6 Flash 默认 | 同左，可指定其他模型 |\n| 限额 | 约 10 请求/分、1500/天 | 按用量计费 |\n\n（模型单价参考：3.6 Flash 输入 $1.50/百万 token、输出 $7.50/百万 token；Agent 平台本身无独立公开定价。）\n\n## 值不值得用？\n优点：把 Agent 治理（钩子、预算、定时）做成平台能力，省去自建编排层；免费层降低了试水门槛；默认模型效率更高、单价更低。缺点：生态相对 Google 系绑定；SDK 目前没有 hookable fetch；仍需要团队自己定义权限与审查流程。结论：在 Vertex/Gemini 生态里做生产级 Agent，这是目前最省心的落地方式。\n\n## 使用建议\n先用免费层起一个沙箱 Agent、挂上 hooks.json 体验合规闸门。生产环境务必设置 max_total_tokens 防止失控循环，用 cron 触发器替代外部调度器做周期任务。\n\n## 适合谁用？\n- 推荐：Google Cloud / Gemini 生态开发者、需要可治理生产 Agent 的团队。\n- 可考虑：想用托管 Agent 跑定时任务、文件处理的个人开发者。\n- 不推荐：强依赖 OpenAI/Anthropic 体系、希望完全自托管编排的团队。",
-  "published": false,
-  "faq": [
-    {
-      "question": "Gemini Managed Agents 和 Google ADK 有什么区别？",
-      "answer": "ADK 是代码优先的本地 Agent 构建框架；Managed Agents 是 Gemini API 里的托管运行能力，免去自建编排即可部署带钩子、定时触发与工具接入的生产级 Agent。"
-    },
-    {
-      "question": "有免费额度吗？",
-      "answer": "有。免费层项目用 API Key 即可使用，无需活跃计费，标准 Flash 速率限制约 10 请求/分、1500/天；一旦项目开启计费，该项目的免费层即失效。"
-    },
-    {
-      "question": "环境钩子能做什么？",
-      "answer": "在沙箱里工具调用前后运行自定义脚本：pre_tool_execution 可阻断或跳过调用并把原因回灌模型上下文，post_tool_execution 可做格式化、验证或审计，还支持 HTTP 钩子对接外部端点。"
-    },
-    {
-      "question": "Token 预算上限有什么用？",
-      "answer": "Agent 跑多轮自主循环可能失控烧钱，用 max_total_tokens 给输入+输出+思考总消耗设硬上限；触顶时交互安全暂停并返回 incomplete，环境状态保留，可带新预算续跑。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "Gemini API Managed Agents",
-    "Gemini API Managed Agents怎么样",
-    "Gemini API Managed Agents免费版",
-    "Gemini API Managed Agents使用教程",
-    "Gemini API Managed Agents和哪个好"
-  ],
-  "source_urls": [
-    "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks",
-    "https://gcn.com/google-upgrades-gemini-api-managed-agents/20244",
-    "https://cctest.ai/en/articles/gemini-api-managed-agents-add-3-6-flash-hooks-and-production-controls"
-  ],
-  "confidence": "high",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+    "url": "https://ai.google.dev/gemini-api/docs/agents",
+    "price": "价格暂未公开",
+    "platform": "Web",
+    "pros": [
+        "把 Agent 治理（钩子、预算、定时）做成平台能力，省去自建编排层",
+        "免费层降低了试水门槛，API Key 即可用",
+        "环境钩子可在工具调用边界拦截、阻断、lint 或审计",
+        "默认 Gemini 3.6 Flash 效率更高、单价更低",
+        "定时触发器复用同一沙箱，文件跨次保留"
+    ],
+    "cons": [
+        "生态相对 Google 系绑定（Vertex/Gemini）",
+        "SDK 目前没有 hookable fetch",
+        "仍需团队自己定义权限、失败处理与审查流程"
+    ],
+    "features": [
+        "隔离沙箱执行：单次 API 调用在远程沙箱跑代码、装包、读写文件、抓网页",
+        "环境钩子 Hooks：pre/post tool execution 时机运行自定义脚本，可拦截或审计",
+        "Token 预算上限：max_total_tokens 限制总消耗，超限返回 incomplete 并保留环境状态",
+        "定时触发器 Cron：把 agent、环境、prompt、cron 绑定为持久资源",
+        "免费层与多模型：免费项目可用 API Key；默认 3.6 Flash，可选 3.5 Flash / 3.5 Flash-Lite",
+        "Environments API：可列出、检查、删除沙箱会话"
+    ],
+    "related": [
+        "openai",
+        "dify",
+        "coze"
+    ],
+    "content": "## Gemini API Managed Agents 是什么？\nGemini API Managed Agents 是 Google 在 Gemini API 中提供的托管式 Agent 运行能力，开发者通过一个 API 调用即可在隔离的云端沙箱里协调推理、代码执行、包安装、文件管理与网页检索。它脱胎于 2026 年 6 月 22 日 GA 的 Interactions API，并在 7 月 7 日加入后台任务与远程 MCP 集成，7 月 28 日又迎来一次重大升级（默认模型换为 Gemini 3.6 Flash、加入环境钩子、Token 预算上限、定时触发器与免费层）。它和 Google ADK 互补：ADK 偏代码优先的本地构建，Managed Agents 偏云端托管、免自建编排的生产部署。\n\n## 核心功能\n1. 隔离沙箱执行：单次 API 调用在远程沙箱里跑代码、装包、读写文件、抓网页。\n2. 环境钩子（Hooks）：在沙箱里 pre/post tool execution 时机运行自定义脚本，可拦截、阻断、lint 或审计工具调用。\n3. Token 预算上限：用 max_total_tokens 限制输入+输出+思考总消耗，超限返回 incomplete 并保留环境状态以便续跑。\n4. 定时触发器（Cron）：把 agent、环境、prompt、cron 表达式绑定为持久资源，每次复用同一沙箱、文件可跨次保留。\n5. 免费层与多模型：免费层项目可用 API Key 直接试；默认 Gemini 3.6 Flash，也可选 3.5 Flash / 3.5 Flash-Lite。\n\n## 版本/套餐对比\n| 维度 | 免费层 | 付费/绑定计费项目 |\n| --- | --- | --- |\n| 访问 | API Key 即可，无需活跃计费 | 标准 Gemini API 计费 |\n| 模型 | Gemini 3.6 Flash 默认 | 同左，可指定其他模型 |\n| 限额 | 约 10 请求/分、1500/天 | 按用量计费 |\n\n（模型单价参考：3.6 Flash 输入 $1.50/百万 token、输出 $7.50/百万 token；Agent 平台本身无独立公开定价。）\n\n## 值不值得用？\n优点：把 Agent 治理（钩子、预算、定时）做成平台能力，省去自建编排层；免费层降低了试水门槛；默认模型效率更高、单价更低。缺点：生态相对 Google 系绑定；SDK 目前没有 hookable fetch；仍需要团队自己定义权限与审查流程。结论：在 Vertex/Gemini 生态里做生产级 Agent，这是目前最省心的落地方式。\n\n## 使用建议\n先用免费层起一个沙箱 Agent、挂上 hooks.json 体验合规闸门。生产环境务必设置 max_total_tokens 防止失控循环，用 cron 触发器替代外部调度器做周期任务。\n\n## 适合谁用？\n- 推荐：Google Cloud / Gemini 生态开发者、需要可治理生产 Agent 的团队。\n- 可考虑：想用托管 Agent 跑定时任务、文件处理的个人开发者。\n- 不推荐：强依赖 OpenAI/Anthropic 体系、希望完全自托管编排的团队。",
+    "published": true,
+    "faq": [
+        {
+            "question": "Gemini Managed Agents 和 Google ADK 有什么区别？",
+            "answer": "ADK 是代码优先的本地 Agent 构建框架；Managed Agents 是 Gemini API 里的托管运行能力，免去自建编排即可部署带钩子、定时触发与工具接入的生产级 Agent。"
+        },
+        {
+            "question": "有免费额度吗？",
+            "answer": "有。免费层项目用 API Key 即可使用，无需活跃计费，标准 Flash 速率限制约 10 请求/分、1500/天；一旦项目开启计费，该项目的免费层即失效。"
+        },
+        {
+            "question": "环境钩子能做什么？",
+            "answer": "在沙箱里工具调用前后运行自定义脚本：pre_tool_execution 可阻断或跳过调用并把原因回灌模型上下文，post_tool_execution 可做格式化、验证或审计，还支持 HTTP 钩子对接外部端点。"
+        },
+        {
+            "question": "Token 预算上限有什么用？",
+            "answer": "Agent 跑多轮自主循环可能失控烧钱，用 max_total_tokens 给输入+输出+思考总消耗设硬上限；触顶时交互安全暂停并返回 incomplete，环境状态保留，可带新预算续跑。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "Gemini API Managed Agents",
+        "Gemini API Managed Agents怎么样",
+        "Gemini API Managed Agents免费版",
+        "Gemini API Managed Agents使用教程",
+        "Gemini API Managed Agents和哪个好"
+    ],
+    "source_urls": [
+        "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks",
+        "https://gcn.com/google-upgrades-gemini-api-managed-agents/20244",
+        "https://cctest.ai/en/articles/gemini-api-managed-agents-add-3-6-flash-hooks-and-production-controls"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14",
+    "published_date": "2026-08-24"
 }
