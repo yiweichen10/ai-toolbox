@@ -250,6 +250,10 @@ def inject_internal_links(html, current_slug='', max_links=5):
                 break  # 替换后跳出：避免后续短工具名在新插入的<a>内嵌套匹配
     return ''.join(parts)
 
+# 2026-08-24：art_slugs 模块级缓存（load_articles 无缓存，全站坏链清理 1153 文件每文件重读 articles.json
+# 是 85s 主因）。单进程构建内文章数据不变，缓存安全；进程内数据变更需重置为 None。
+_CLEAN_BROKEN_ART_SLUGS = None
+
 def clean_broken_tool_links(html):
     import build  # 延迟：build 完全加载后解析 build 级符号
     """把指向未发布/不存在工具/文章的链接降级为纯文本，避免 404（2026-08-07 修复）。
@@ -257,12 +261,15 @@ def clean_broken_tool_links(html):
     2026-08-08 修复：/articles/ 下的非文章路径（分类页 reviews/tutorials/analysis、
     列表分页 page/N）不是文章链接，不能被降级——正则收紧为 URL 到 slug 即结束，
     并对已知分类页 slug 白名单放行。"""
+    global _CLEAN_BROKEN_ART_SLUGS
+    if _CLEAN_BROKEN_ART_SLUGS is None:
+        try:
+            _CLEAN_BROKEN_ART_SLUGS = {a.get('slug') for a in load_articles()}
+        except Exception:
+            _CLEAN_BROKEN_ART_SLUGS = set()
+    art_slugs = _CLEAN_BROKEN_ART_SLUGS
+    # published slug 集合：get_published_tool_slugs 自带模块级缓存，无需处理
     published = get_published_tool_slugs()
-    try:
-        _arts = load_articles()
-        art_slugs = {a.get('slug') for a in _arts}
-    except Exception:
-        art_slugs = set()
     # /articles/ 下的非文章目录（内容分类页），保持链接
     _valid_article_dirs = {cp['slug'] for cp in build.ARTICLE_CATEGORY_PAGES} | {'page'}
 

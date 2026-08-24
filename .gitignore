@@ -22,7 +22,7 @@ __pycache__/
 Thumbs.db
 
 # Backups (never commit)
-*.bak
+*.bak*
 .cleanup_backup/
 
 # 运行时数据（用户点赞等，由服务器生成，不进 git）

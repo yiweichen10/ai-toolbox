@@ -26,10 +26,11 @@ from build_lib.render_index import (build_index_page, build_tools_index_page)
 from build_lib.sitemap_push import (generate_sitemap, push_to_indexnow, push_to_baidu, _push_single_url)
 
 
-def _build_tool_incremental(tool, published_tools, articles, tools_by_category):
+def _build_tool_incremental(tool, published_tools, articles, tools_by_category, no_push=False):
     import build  # 延迟：build 完全加载后解析
     """工具页 slug 增量：只重建该工具页 + 受影响聚合页（分类/全部工具/首页含搜索索引/排行）。
-    不调用全站后处理注入（模板已自带 logo/nav/pwa/ads 标记），保证'用哪建哪'且不污染其他页。"""
+    不调用全站后处理注入（模板已自带 logo/nav/pwa/ads 标记），保证'用哪建哪'且不污染其他页。
+    no_push: 2026-08-24 语义统一——--no-push 时跳过推送（原无条件 _push_single_url）。"""
     slug = tool['slug']
     print(f'\n[增量构建] 仅构建工具: {tool.get("name")} ({slug})')
     # 交叉链接所需辅助数据
@@ -65,8 +66,9 @@ def _build_tool_incremental(tool, published_tools, articles, tools_by_category):
     except Exception as e:
         print(f'  [FAIL] ranking/index.html: {e}')
     print(f'[OK] ranking/* ({len(all_rankings)} 页)')
-    # 6. sitemap 增量推送该工具 URL
-    _push_single_url(f'https://www.aitoollab.cn/tools/{slug}/index.html')
+    # 6. sitemap 增量推送该工具 URL（2026-08-24：--no-push 时跳过）
+    if not no_push:
+        _push_single_url(f'https://www.aitoollab.cn/tools/{slug}/index.html')
     print(f'\n[完成] 增量构建: 1 工具页 + 分类页 + 聚合页')
     return True
 
@@ -154,7 +156,7 @@ def build_target(target, slug=None, no_push=False):
             # 工具页 slug 增量：改一个工具只重建它 + 受影响聚合页（用哪建哪）
             target_tool = next((t for t in published_tools if t['slug'] == slug), None)
             if target_tool:
-                return _build_tool_incremental(target_tool, published_tools, articles, tools_by_category)
+                return _build_tool_incremental(target_tool, published_tools, articles, tools_by_category, no_push=no_push)
             print(f'[ERROR] 未找到文章或工具: {slug}')
             return False
         print(f'\n[增量构建] 仅构建文章: {target_article["title"]}')
@@ -192,8 +194,9 @@ def build_target(target, slug=None, no_push=False):
             f.write(sitemap)
         print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles)')
 
-        # 推送新URL到百度和IndexNow
-        _push_single_url(f'https://www.aitoollab.cn/articles/{slug}/index.html')
+        # 推送新URL到百度和IndexNow（2026-08-24：--no-push 时跳过）
+        if not no_push:
+            _push_single_url(f'https://www.aitoollab.cn/articles/{slug}/index.html')
 
         print(f'\n[完成] 增量构建: 1篇文章 + 列表页 + sitemap')
         return True
