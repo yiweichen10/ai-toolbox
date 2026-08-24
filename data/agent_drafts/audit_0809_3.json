@@ -1,0 +1,117 @@
+[
+  {
+    "slug": "coldtea",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://coldtea.ai/pricing",
+      "https://coldtea.ai",
+      "https://www.163.com/dy/article/L423N3LE05561FZD.html",
+      "https://www.hunted.space/dashboard/coldtea"
+    ]
+  },
+  {
+    "slug": "goose",
+    "verdict": "ISSUES",
+    "issues": [
+      {
+        "field": "pros / features / content（lead/worker 双模型）",
+        "claim": "lead/worker 双模型配置：规划用强模型、执行用便宜模型，是实打实的成本控制",
+        "truth": "Goose 官方博客明确写道：『Lead/Worker mode has been removed from goose. It has been replaced by Planning Mode』。该双模型配置功能已被移除，由 Planning Mode（/plan 指定规划模型）取代。",
+        "source": "https://block.github.io/goose/blog/2025/08/11/llm-tag-team-lead-worker-model/",
+        "fix": "删除或改写为『Goose 曾提供 Lead/Worker 双模型配置，但已被移除，现由 Planning Mode（/plan 指定规划模型）取代』；将这条从 pros 中移除。"
+      },
+      {
+        "field": "content（安装命令）",
+        "claim": "macOS 用 `brew install --cask block-goose` 或 `brew install block-goose-cli`",
+        "truth": "当前官方安装方式为 curl 一键脚本或 `brew install goose`，未找到名为 block-goose / block-goose-cli 的 cask/公式；该安装命令疑似过时或错误。",
+        "source": "https://www.agentpatternscatalog.org/compositions/goose/",
+        "fix": "改为官方当前命令（curl 安装脚本，或确认后的正确 brew 包名）。"
+      }
+    ],
+    "sources": [
+      "https://www.block.xyz/inside/block-anthropic-and-openai-launch-the-agentic-ai-foundation",
+      "https://api.github.com/repos/aaif-goose/goose",
+      "https://block.github.io/goose/blog/2025/08/11/llm-tag-team-lead-worker-model/",
+      "https://www.agentpatternscatalog.org/compositions/goose/",
+      "https://goose.ac.cn/goose/docs/tutorials/lead-worker"
+    ]
+  },
+  {
+    "slug": "deepseek-reasonix",
+    "verdict": "ISSUES",
+    "issues": [
+      {
+        "field": "description / content / cons（版本表述）",
+        "claim": "1.0 版本用 Go 完全重写；1.0 刚从 TypeScript 重写为 Go；默认开发分支为 main-v2",
+        "truth": "官方主页与仓库显示 Go 重写位于 main-v2 分支（v2 内核），而 1.x 系列（如 v1.25.2 更新日志）仍是 TypeScript 版本并仍在维护/推进。将 Go 重写称作『1.0』不准确，应为『v2 / main-v2 分支的 Go 重写』。",
+        "source": "https://deepseekreasonix.com/ , https://api.github.com/repos/esengine/DeepSeek-Reasonix",
+        "fix": "将『1.0 用 Go 完全重写』改为『采用 Go 重写的 main-v2（v2）分支，1.x 为 TypeScript 旧版』，并统一版本口径。"
+      }
+    ],
+    "sources": [
+      "https://api.github.com/repos/esengine/DeepSeek-Reasonix",
+      "https://deepseekreasonix.com/",
+      "https://github.com/esengine/DeepSeek-Reasonix"
+    ]
+  },
+  {
+    "slug": "kiro-crew",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://kiro.dev/crew/",
+      "https://api.github.com/repos/kirodotdev/KiroCrew",
+      "https://raw.githubusercontent.com/kirodotdev/KiroCrew/main/README.md",
+      "https://blog.yeyupiaoling.cn/tag/Linux%20Disk%20Space%20Management",
+      "https://blog.csdn.net/Jackxiaochen/article/details/163542498",
+      "https://vibecompare.dev/tools/kiro/"
+    ]
+  },
+  {
+    "slug": "capacity-desktop",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://ustack.app/zh-CN/blogs/producthunt-daily-2026-08-05",
+      "https://roipad.com/saas-metrics/origin/ph_2774/venture-radar.php",
+      "https://launly.com/products/capacity-desktop",
+      "https://capacity.so/desktop"
+    ]
+  },
+  {
+    "slug": "reverse-skill",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://api.github.com/repos/zhaoxuya520/reverse-skill",
+      "https://www.toutiao.com/article/7669974665040822794",
+      "https://wangruofeng007.com/blog/2026-08/github-trending-daily-0803-edge-inference-race",
+      "https://www.yeyulingfeng.com/a/908306.html"
+    ]
+  },
+  {
+    "slug": "i-have-adhd",
+    "verdict": "ISSUES",
+    "issues": [
+      {
+        "field": "content / cons（单元测试数量）",
+        "claim": "仓库自带九个标准化单元测试且全部通过",
+        "truth": "官方仓库页面未提及『九个标准化单元测试』；仅有 tests/ 与 evals/ 目录（evals 含 14 个用例），且验证的是规则/钩子加载行为，并非『九个单元测试』。该具体数字无法核实，疑似编造。",
+        "source": "https://github.com/ayghri/i-have-adhd",
+        "fix": "删除『九个标准化单元测试』的具体数字，或改为『仓库带有验证规则/钩子加载的测试（具体数量以仓库为准）』，并去掉『全部通过』的断言。"
+      },
+      {
+        "field": "content / faq（全局常开标记文件）",
+        "claim": "Claude Code 侧执行 `touch ~/.claude/.i-have-adhd-always` 创建标记文件即可自动加载",
+        "truth": "仓库 README 显示的是 hooks/hooks.json 约定式自动加载与 always-on.js/.ps1 脚本，未出现名为 `.i-have-adhd-always` 的标记文件名；该文件名无法从官方文档核实。",
+        "source": "https://github.com/ayghri/i-have-adhd",
+        "fix": "核实自动加载的实际机制文件名，或改为描述『通过 hooks 配置实现全局常开』而不指定未确认的文件名。"
+      }
+    ],
+    "sources": [
+      "https://api.github.com/repos/ayghri/i-have-adhd",
+      "https://github.com/ayghri/i-have-adhd"
+    ]
+  }
+]

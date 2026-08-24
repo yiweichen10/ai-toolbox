@@ -1,0 +1,115 @@
+[
+  {
+    "slug": "claude-cowork",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://www.claude.com/product/cowork",
+      "https://www.frontiernews.ai/news/article/claude-cowork-goes-mobile-anthropics-10-day-sprint-9e98ef67",
+      "https://www.edgen.tech/zh/news/post/anthropic-brings-claude-cowork-to-mobile-as-90-of-users-skip-coding",
+      "https://agentmarketcap.ai/blog/2026/07/16/claude-cowork-web-mobile-telemetry-non-coding"
+    ]
+  },
+  {
+    "slug": "gemini-managed-agents",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://ai.google.dev/gemini-api/docs/agents",
+      "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/",
+      "https://gcn.com/google-upgrades-gemini-api-managed-agents/20244",
+      "https://byteiota.com/gemini-api-managed-agents-hooks-cron-free-tier"
+    ]
+  },
+  {
+    "slug": "cloudflare-os",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://github.com/cloudflare/cloudflare-os",
+      "https://www.blog.cloudflare.com/zh-tw/",
+      "https://freeourdays.com/posts/producthunt-daily-2026-08-07",
+      "https://producthunt.programnotes.cn/p/product-hunt-%E4%BB%8A%E6%97%A5%E7%83%AD%E6%A6%9C-2026-08-07"
+    ]
+  },
+  {
+    "slug": "cloudflare-computer",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://github.com/cloudflare/computer",
+      "https://developers.cloudflare.com/changelog/post/2026-08-03-cloudflare-computer",
+      "https://rohitraj.tech/en/notes/cloudflare-computer-vs-sandbox-agent-guide-2026"
+    ]
+  },
+  {
+    "slug": "tencentdb-agent-memory",
+    "verdict": "ISSUES",
+    "issues": [
+      {
+        "field": "description/content",
+        "claim": "于 2026 年 5 月正式开源",
+        "truth": "多个权威来源显示首次公开开源为 2026 年 7 月（2.0.0 beta）；仓库建库时间（juejin）为 2026-04-07。没有任何来源支持「5 月正式开源」这一说法，日期与可查证据不符。",
+        "source": "https://juejin.cn/post/7670369216241074202 ; https://www.infoq.cn/article/qm3RHL133SESFZJGrmeA",
+        "fix": "改为「2026 年 4 月建库、7 月（2.0.0 beta）首次公开开源」或「2026 年 7 月正式开源」。"
+      },
+      {
+        "field": "features/content",
+        "claim": "已适配 OpenClaw、Hermes、Claude Code、CodeBuddy、Codex、DeepSeek Harness 等",
+        "truth": "官方 README/分支显示当前已支持 OpenClaw、Hermes、Claude Code、CodeBuddy 及 SDK 集成；Codex、DeepSeek Harness 仍列在 Roadmap（v2.0.1 计划），尚未正式适配。将两者并列于「已适配」清单略有夸大。",
+        "source": "https://github.com/TencentCloud/TencentDB-Agent-Memory ; https://dev.to/andrew-ooo/tencentdb-agent-memory-review-team-memory-hub-for-ai-28g5",
+        "fix": "将 Codex、DeepSeek Harness 单独标注为「规划/即将支持」，或改为「已适配 OpenClaw、Hermes、Claude Code、CodeBuddy 等，Codex/DeepSeek Harness 在路线图中」。"
+      }
+    ],
+    "sources": [
+      "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "https://github.com/TencentCloud/TencentDB-Agent-Memory/releases",
+      "https://juejin.cn/post/7670369216241074202",
+      "https://agent.csdn.net/6a729d3310ee7a33f29620b9.html",
+      "https://www.infoq.cn/article/qm3RHL133SESFZJGrmeA"
+    ]
+  },
+  {
+    "slug": "soloop",
+    "verdict": "NEEDS_REVIEW",
+    "issues": [
+      {
+        "field": "description/content",
+        "claim": "由前百度产品经理 Wenhao Yu 创立",
+        "truth": "Product Hunt 官方发布页中 Wenhao Yu 自述仅称「Before Soloop, I built products at a large tech company」，并未点名百度；未能通过公开权威来源独立核实「百度产品经理」这一具体经历。其余（创始人姓名、审批优先 OS、AI CEO/CTO/CMO、PH 当日第二名、约 478 票、8 月 7 日上线）均核实无误。",
+        "source": "https://hunted.space/product/soloop",
+        "fix": "若无法从创始人 LinkedIn 等一手来源核实「百度」经历，建议改为「前大厂产品经理」；可保留其余已核实信息。"
+      }
+    ],
+    "sources": [
+      "https://hunted.space/product/soloop",
+      "https://mossai.org/cn/blog/post/product-hunt-2026-week32-ai-featured",
+      "https://www.hunted.space/history"
+    ]
+  },
+  {
+    "slug": "hey-noah",
+    "verdict": "NEEDS_REVIEW",
+    "issues": [
+      {
+        "field": "pros/content",
+        "claim": "Beta 阶段已代发约 17,000 次会议邀请",
+        "truth": "未能在官网（heynoah.io）或权威来源核实「17,000 会议邀请」这一具体数字。LinkedIn 投资人帖提到的是「300k+ tasks handled（累计处理任务）」，与「17,000 会议邀请」并非同一指标，无法交叉验证。创始人（Ashish Toshniwal）、PH 当日第一、SMS 优先定位、集成列表等均核实无误。",
+        "source": "https://www.heynoah.io ; https://www.linkedin.com/posts/siddharthaahluwalia_i-am-proud-to-call-ashish-toshniwal-a-dear-activity-7490444358916206593-Fwn3",
+        "fix": "核实 17,000 会议邀请的数据出处（官网博客/公告）；若无可引用来源，改为定性表述如「Beta 阶段已代发大量会议邀请」。"
+      },
+      {
+        "field": "description/content",
+        "claim": "2026 年 8 月 5 日登陆 Product Hunt 并拿下当日第一名",
+        "truth": "Product Hunt 历史记录显示 Hey Noah 于 2026-08-04 上线并获当日第一（571 票）。条目写 8 月 5 日，与 PH 记录相差一天，可能仅为时区差异（北京时间 8/5 vs 太平洋时间 8/4）。",
+        "source": "https://www.hunted.space/history",
+        "fix": "可保留「8 月 5 日」（若按北京时间），但建议注明时区或统一为 Product Hunt 记录的 8 月 4 日。"
+      }
+    ],
+    "sources": [
+      "https://www.heynoah.io",
+      "https://www.hunted.space/history",
+      "https://www.linkedin.com/posts/siddharthaahluwalia_i-am-proud-to-call-ashish-toshniwal-a-dear-activity-7490444358916206593-Fwn3"
+    ]
+  }
+]

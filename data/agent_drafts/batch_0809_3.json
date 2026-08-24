@@ -1,0 +1,683 @@
+[
+  {
+    "name": "Coldtea.ai",
+    "slug": "coldtea",
+    "positioning": "Coldtea.ai是什么？Agentic IDE带视觉QA和生产监控好用吗",
+    "auto_positioning": false,
+    "emoji": "🍵",
+    "color": "#0EA5E9",
+    "description": "Coldtea 是一款本地运行的 Agentic IDE（官方自称 ADE），把多 Agent 终端、视觉 QA 测试与 AI 生产监控收进同一个环境。它不卖自己的编程 Agent，而是接管 Claude Code、Codex、OpenCode 等你已经在用的 CLI Agent，再在外面补上「发布之后谁负责看」这一层：QA Agent 像真人一样跑你的 Web 与移动端，监控 Agent 盯生产信号并直接开 PR。2026 年 8 月在 Product Hunt 登顶当日榜首。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "免费可用",
+        "type": "free"
+      },
+      {
+        "text": "Agentic IDE"
+      },
+      {
+        "text": "视觉QA"
+      },
+      {
+        "text": "生产监控"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://coldtea.ai",
+    "price": "Free $0/永久（不限任务数、2,000 agentic credits/月约 200 次测试、每项目 7 天监控试用、免信用卡）；Pro $20/人/月（首个席位免费）+ 按量；Agentic testing Pro 加购 $120/月（10,000 credits）；生产监控按项目加购 Essentials $49/月、Complete $99/月；Enterprise 定制",
+    "platform": "macOS 桌面端（官方称 Windows / Linux 版本可加入等待名单）",
+    "pros": [
+      "不逼你换编辑器，直接接管已有的 Claude Code / Codex / OpenCode 等 CLI Agent",
+      "视觉 QA Agent 按「意图」而非像素比对判定，动态内容页面不容易误报",
+      "监控 Agent 会自己排查生产信号并直接提 PR，把告警变成可 review 的修复",
+      "终端与任务板永久免费，测试与监控是可选加购，起步成本几乎为零",
+      "支持 Sentry、Datadog、Grafana、New Relic、PostHog、Vercel 等主流监控源"
+    ],
+    "cons": [
+      "目前只有 macOS 版本，Windows / Linux 用户只能先排队",
+      "视觉 QA 与生产监控都按量计费，测试跑得密集时费用会明显上涨",
+      "产品 2026 年 8 月才刚上线，长期稳定性还缺少大规模团队的实战验证"
+    ],
+    "features": [
+      "多 Agent 终端：真实 shell 环境，多个编程 Agent 共享上下文、可分别或成组指挥",
+      "视觉 QA Agent：用自然语言描述 Web / 移动端流程，自动生成可自愈测试并在每个 PR 预览上跑",
+      "发布门禁：测试结果直接卡住部署，回归没过就不让合",
+      "AI 生产监控：跨错误日志、用户反馈与会话录像排查问题，并自动开 PR",
+      "技术债巡检：定期扫 Agent 大量产出的代码，把债务条目直接建到看板上",
+      "云端后台任务：同步 Linear / Jira 等看板，把任务丢给云端 Agent 并行跑，不占本机"
+    ],
+    "related": [
+      "claude-code",
+      "codex-cli",
+      "opencode"
+    ],
+    "content": "## Coldtea.ai是什么？\n\nColdtea 是一款跑在你自己机器上的 Agentic IDE，官方更喜欢叫它 ADE（Agentic Development Environment）。它的出发点跟市面上大多数 AI 编程工具不太一样：过去两年，几乎所有工具都在比谁写代码更快，而 Coldtea 认准的是另一件事——代码发出去之后，谁负责看后果。\n\n所以它做的不是又一个编程 Agent。你原来用 Claude Code、Codex 还是 OpenCode，继续用，Coldtea 只是把它们接进来，然后在外面补三层：一个能同时指挥多个 Agent 的真实终端，一批会像真人一样操作你的 App 的视觉 QA Agent，以及一套盯着生产环境、发现问题会自己去查并提 PR 的监控 Agent。2026 年 8 月它在 Product Hunt 上线，当天冲到日榜第一。\n\n## 核心功能\n\n1. 多 Agent 终端。跑的是真实 shell 命令而不是模拟环境，多个 Agent 之间共享上下文——一个 Agent 的会话状态另一个能直接读，不用你手动复制输出。可以单独指挥，也可以让它们成组规划、构建、互审。\n2. 视觉 QA Agent。你用自然语言描述 Web 或移动端的用户旅程，它转成可自愈的测试用例。Web 端直接驱动线上站点，每次 PR 跑在预览地址上；移动端会拉起模拟器加载真实构建包。关键点是它按「意图」判定而不是像素比对，所以动态内容页面不容易误报。\n3. 发布门禁。测试结果直接卡部署，回归没通过就不放行。这一步是把 QA Agent 从「参考意见」变成「硬性关卡」。\n4. AI 生产监控。跨错误日志、客户反馈和用户会话三类信号做排查，查出结果后直接开一个 PR 等你 review。支持 Sentry、Datadog、Grafana、New Relic、PostHog、Vercel 等一批常见提供方。\n5. 技术债巡检与云端任务。它会定期扫一遍代码库，把 Agent 大量产出后堆积的技术债列成条目建进看板；同时能同步 Linear、Jira 等看板，把任务派给云端后台 Agent 并行跑，不占你的笔记本。\n\n## 版本/套餐对比\n\n免费版 $0 永久：任务数不限、支持任意 CLI Agent、含云端运行，每月给 2,000 agentic credits（约 200 次测试运行），每个项目 2 个连接工具，外加 7 天生产监控试用，不用绑卡。Pro $20/人/月，首个席位免费，之后每加一位队友 $20，多了共享看板与团队协作评审。想加量的话，Agentic testing Pro 是 $120/月换 10,000 credits（约 1,000 次运行，Web 一次 10 credits、移动端一次 100）；生产监控按项目买，Essentials $49/月、Complete $99/月。企业版走定制报价。这套定价的思路很清楚：终端和看板不收钱，真正吃算力的 QA 与监控才按量收。\n\n## 值不值得用？\n\n它的判断我认可：Agent 把写代码的成本压下来之后，瓶颈确实往下游移了，回归和线上事故才是真正的痛点。把终端、测试、监控放进一个环境，也确实省掉了在三套工具间搬上下文的功夫。而且它不绑定 Agent、终端永久免费，试错成本很低。\n\n要留意的是三件事：一是目前只有 macOS 版，Windows 和 Linux 还在等待名单上；二是测试和监控都按量计费，如果你的 CI 里每个 PR 都跑全量移动端测试，账单涨得会比预期快；三是它 2026 年 8 月才刚上线，「捆绑三件事」这个判断是否在长期团队协作里成立，还得靠时间验证。\n\n## 使用建议\n\n1. 先只装终端。免费版把多 Agent 协作跑顺，确认你现有的 Claude Code / Codex 配置能无缝迁进来。\n2. 再开 QA，但别一上来就全量。挑两三条核心流程（登录、下单、支付）先自动化，Web 一次只花 10 credits，2,000 的免费额度够跑相当久。\n3. 移动端测试放到 release 前跑。一次 100 credits，别挂在每个 PR 上。\n4. 监控用 7 天试用先验一遍。看它开的 PR 质量到不到你能直接 review 的程度，再决定要不要按项目买。\n\n## 适合谁用？\n\n推荐：已经重度依赖编程 Agent、且被线上回归折腾过的中小研发团队和技术负责人，尤其是 macOS 环境的团队。\n可考虑：独立开发者和一人团队——免费版的终端加少量 QA 就够用，属于低成本收益明显的那类。\n不推荐：Windows / Linux 为主的团队（暂时用不上）；已有成熟 CI/CD 与 QA 体系、只想加一个代码补全的团队；以及对按量计费敏感、需要成本完全可预测的场景。",
+    "published": false,
+    "faq": [
+      {
+        "question": "Coldtea 是免费的吗？",
+        "answer": "有永久免费版。官方定价页写明 Free $0/永久，包含不限量任务、支持任意 CLI Agent、云端运行，以及每月 2,000 agentic credits（约 200 次测试运行）和每个项目 7 天的生产监控试用，无需信用卡。团队协作版 Pro 为 $20/人/月，首个席位免费。"
+      },
+      {
+        "question": "Coldtea 会替换掉我现在用的 Claude Code 吗？",
+        "answer": "不会。官方明确表示不卖另一个编程 Agent，Coldtea 兼容 Claude Code、Codex、OpenCode 等 CLI Agent，你的 shell 与配置会自动沿用，它做的是在这些 Agent 外面加上测试、监控与任务编排层。"
+      },
+      {
+        "question": "Coldtea 支持 Windows 吗？",
+        "answer": "截至目前官方说明是仅提供 macOS 版本，Windows 与 Linux 可以加入等待名单，尚未给出明确发布时间。"
+      },
+      {
+        "question": "视觉 QA Agent 遇到动态内容会不会误报？",
+        "answer": "官方的说法是它测试「意图」而不是静态快照：比如动态信息流刷出新内容算通过，但如果时间戳元素消失了就算失败。这一设计正是为了减少像素比对方案在动态页面上的误报。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Coldtea",
+      "Coldtea怎么样",
+      "Coldtea收费吗",
+      "Coldtea Agentic IDE",
+      "Coldtea和Cursor哪个好"
+    ],
+    "source_urls": [
+      "https://coldtea.ai/",
+      "https://coldtea.ai/pricing",
+      "https://coding4food.com/en/post/coldtea-ai-ade-ai-automation"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Goose",
+    "slug": "goose",
+    "positioning": "Goose是什么？Block开源免费AI编程Agent能替代Claude Code吗",
+    "auto_positioning": false,
+    "emoji": "🦆",
+    "color": "#16A34A",
+    "description": "Goose 是 Block（原 Square）开源的本机 AI 编程 Agent，Apache 2.0 协议，用 Rust 编写，桌面端与 CLI 共享同一套 Agent 内核。它不只给代码建议，还能装依赖、执行命令、改文件、跑测试。最大特点是不绑模型：可接 Anthropic、OpenAI、Google、Bedrock、OpenRouter 等十几家供应商，也能通过 Ollama 跑本地模型做到零 API 花费。项目现由 Linux 基金会旗下 AAIF 治理。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "免费可用",
+        "type": "free"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "本地运行"
+      },
+      {
+        "text": "多模型"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://block.github.io/goose",
+    "price": "免费开源（Apache 2.0），无订阅无席位费；实际成本仅为你自选模型供应商的 API 用量，改用 Ollama 等本地模型可做到零 API 支出",
+    "platform": "macOS / Linux / Windows（桌面应用 + CLI + 可嵌入 API）",
+    "pros": [
+      "Apache 2.0 完全免费，无订阅、无席位费、无厂商给你定配额",
+      "真正的模型中立：十几家供应商任选，Ollama 本地模型可零成本运行",
+      "Recipes 把工作流写成可参数化的 YAML，配合内置调度器能无人值守跑，还能进 CI/CD",
+      "lead/worker 双模型配置：规划用强模型、执行用便宜模型，是实打实的成本控制",
+      "桌面端与 CLI 共用一套内核，并通过 ACP 接入 VS Code、Cursor、JetBrains 等编辑器"
+    ],
+    "cons": [
+      "输出质量完全取决于你选的模型，官方文档也承认它最依赖强工具调用能力，配弱模型体验会明显下滑",
+      "它不是编辑器，没有可比 Cursor 的内联 diff 审阅界面，仍需自备 IDE",
+      "自带 API Key 意味着 token 账单和风险边界都在你身上，Agentic 循环烧钱较快"
+    ],
+    "features": [
+      "自主执行：给一个任务就能写代码、跑代码、看报错、自己改，直到收敛",
+      "Recipes：参数化 YAML 工作流，支持子配方，可分享、可被调度器无人值守执行",
+      "Subagents：并行拉起独立子代理处理可拆分任务",
+      "MCP 生态：70+ 官方扩展，兼容 MCP 服务器，可接数据库、Figma、VS Code 等外部工具",
+      "多模型与本地推理：15+ 供应商，含 Ollama / LM Studio 等本地方案，数据不出机器",
+      "安全控制：提示注入检测、工具权限控制、沙箱模式与对抗式审阅者"
+    ],
+    "related": [
+      "claude-code",
+      "codex-cli",
+      "cline"
+    ],
+    "content": "## Goose是什么？\n\nGoose 是 Block（就是 Square 和 Cash App 背后那家公司）开源的 AI 编程 Agent，Apache 2.0 协议，主体用 Rust 写，桌面端那层是 TypeScript。它的定位不是「代码助理」，而是「本机工程代理」——不只告诉你该怎么做，而是自己动手：装依赖、执行命令、编辑文件、跑测试并分析结果，把一个工程任务从开始推到交付。\n\n它最被拿来说的一点是免费。Claude Code 这类工具月费在 $20 到 $200 区间，2026 年 8 月 VentureBeat 专门写过一篇，讲 Goose 作为免费替代品正被开发者追捧：本地运行、无订阅、不依赖云端、也没有每几小时重置一次的速率限制。另一件值得注意的事是治理——项目现在归 Linux 基金会旗下的 AAIF（Agentic AI Foundation）管，Anthropic、Block 和 OpenAI 都是创始贡献方，路线图不由单一厂商说了算。GitHub 星数在 2026 年中已过 4.8 万。\n\n## 核心功能\n\n1. 自主执行闭环。给任务、走开，它会写代码、运行、发现报错、自己修，而不是把建议丢回给你。\n2. Recipes。这是它比较独特的一块：把重复工作写成参数化的 YAML 工作流文件，支持子配方，可以分享给团队、可以被内置调度器无人值守执行，也能塞进 CI/CD。多数开源编程 Agent 没有这层持久化能力。\n3. Subagents。可以并行拉起彼此独立的子代理，把能拆的任务同时推。\n4. 模型完全自选。十几家供应商——Anthropic、OpenAI、Google、Azure、Bedrock、OpenRouter 都行；也支持 Ollama、LM Studio 这类本地推理，数据一步不出机器。还能配 lead/worker 双模型：规划用贵的，执行用便宜的。\n5. MCP 扩展与安全控制。70+ 扩展、兼容 MCP 服务器，能接数据库、Figma、VS Code；同时内置提示注入检测、工具权限控制、沙箱模式和对抗式审阅者。\n\n## 版本/套餐对比\n\nGoose 没有套餐可比——Apache 2.0 开源，只有一个版本，桌面应用、CLI、可嵌入 API、全部扩展都在里面，不限用量，也没有企业版或 SLA。你真正要付的是模型钱：自带 API Key，按供应商标价直接结算；换成 Ollama 跑本地模型则 API 支出为零，代价是能力打折。安装很快：macOS 用 `brew install --cask block-goose` 或 `brew install block-goose-cli`，Linux / WSL 走官方 curl 一行脚本，Windows 下载 Release 包，装完 `goose configure` 走一遍向导选模型即可。\n\n## 值不值得用？\n\n值得，但要清楚它换来的是什么。你拿到的是控制权：不绑模型、不绑编辑器、不绑供应商，Recipes 还能把团队工作流沉淀成可执行的文件。这在开源阵营里属于第一梯队，而且 Block 内部上万名员工在用、又交给了 Linux 基金会，不像那种下个季度就没人维护的项目。\n\n你放弃的是「开箱即用的顺滑」。官方文档自己都承认 Goose 高度依赖模型的工具调用能力，配弱模型体验会明显下滑；它也不是编辑器，没有 Cursor 那种内联 diff 审阅面板；早期 Hacker News 上的反馈里有人提到过意外改动文件、部分扩展不可用、文档不清楚等问题；2026 年 4 月的仓库与文档迁移也带来过一段混乱。另外，自带 Key 意味着 Agentic 循环的 token 账单和「Agent 有 shell 权限」的风险边界都归你。\n\n## 使用建议\n\n1. 先用 Ollama 跑本地模型摸清操作习惯，零成本熟悉它的执行边界，再切云端模型做真活。\n2. 一定要配 lead/worker：规划走强模型，执行走便宜模型，这一步对长任务的账单影响很直观。\n3. 把重复劳动尽早写成 Recipe。一次投入，后面靠调度器无人值守跑，这才是 Goose 真正的复利点。\n4. 认真配权限和沙箱。它能执行真实命令，别在重要仓库里裸奔。\n5. 想留在编辑器里的话，走 ACP 接进 VS Code / Cursor / JetBrains，别硬逼自己换工作方式。\n\n## 适合谁用？\n\n推荐：已经握有模型 API Key、习惯命令行，且想摆脱订阅与厂商配额的开发者和小团队，尤其是需要把工作流固化成可复用文件的团队。\n可考虑：对隐私或成本敏感、打算配本地模型跑气隙环境的用户；以及正在为 $100-200/月的编程工具账单纠结的重度用户。\n不推荐：完全的编程新手（建议先从 Cursor 之类图形化工具入门）；需要 SLA、SSO 与厂商担责的采购导向型企业；以及只想要一个开箱最准、不愿折腾配置的用户。",
+    "published": false,
+    "faq": [
+      {
+        "question": "Goose 真的完全免费吗？",
+        "answer": "软件本身是的。Goose 采用 Apache 2.0 开源协议，没有付费档位、没有订阅和席位费。你唯一的支出是所选模型供应商的 API 用量；如果通过 Ollama 等方案跑本地模型，API 支出可以是零。"
+      },
+      {
+        "question": "Goose 能替代 Claude Code 吗？",
+        "answer": "能覆盖大部分场景但不是 1:1 替代。Goose 在免费、模型中立、本地运行和 Recipes 工作流上占优；Claude Code 在与 Anthropic 模型的深度适配和开箱即用的顺滑度上更强。官方文档也提到 Goose 高度依赖工具调用能力，配 Claude 系模型体验最好。"
+      },
+      {
+        "question": "Goose 支持哪些模型？可以本地跑吗？",
+        "answer": "支持十几家供应商，包括 Anthropic、OpenAI、Google、Azure、Bedrock、OpenRouter 等；同时支持 Ollama、LM Studio 等本地推理方案，代码和提示词不出本机。还可以配置 lead/worker 双模型来控制成本。"
+      },
+      {
+        "question": "Recipes 是什么？有什么用？",
+        "answer": "Recipes 是可复用的 YAML 工作流定义，能打包任务目标、所需扩展、结构化输入和子配方，相当于给 Agent 存的宏。它可以在团队间分享，也能被内置调度器无人值守执行或接入 CI/CD。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Goose",
+      "Goose怎么样",
+      "Goose免费吗",
+      "Goose替代Claude Code",
+      "Block Goose使用教程"
+    ],
+    "source_urls": [
+      "https://github.com/block/goose",
+      "https://block.github.io/goose",
+      "https://rywalker.com/research/goose",
+      "https://aiforautomation.io/news/2026-03-27-goose-33k-stars-free-claude-code-alternative-any-llm"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "DeepSeek-Reasonix",
+    "slug": "deepseek-reasonix",
+    "positioning": "DeepSeek-Reasonix是什么？DeepSeek原生终端编程Agent好用吗",
+    "auto_positioning": false,
+    "emoji": "🐋",
+    "color": "#4D6BFE",
+    "description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它不做通用 OpenAI 兼容层，而是直接对接 DeepSeek API，围绕 DeepSeek 稳定的 prefix-cache 设计了 append-only 运行循环，目标是让长会话把缓存命中率维持在高位、把输入 token 成本压下来。1.0 版本用 Go 完全重写，支持 CLI 与桌面端，内置 MCP、Skills 与记忆系统。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "免费可用",
+        "type": "free"
+      },
+      {
+        "text": "开源"
+      },
+      {
+        "text": "终端Agent"
+      },
+      {
+        "text": "DeepSeek原生"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://github.com/esengine/DeepSeek-Reasonix",
+    "price": "免费开源（MIT 协议）；实际支出为 DeepSeek API 的 token 用量，官方主张通过 prefix-cache 优化显著降低长会话的输入成本",
+    "platform": "终端 CLI（npx / npm 全局安装 / Homebrew，跨平台单静态二进制）+ 桌面客户端",
+    "pros": [
+      "围绕 DeepSeek 的 prefix-cache 做 append-only 循环，长会话缓存命中率高、输入 token 成本明显下降",
+      "1.0 用 Go 重写并产出单静态二进制，跨平台分发和零配置启动都很省事",
+      "写操作前可开只读规划门禁（/plan on），改危险代码前先给你看方案",
+      "内置 MCP、Skills 与记忆系统，能接外部工具并保留项目级经验",
+      "运行历史可复核：分支、检查点与命令历史让调试、交接和续跑都好办"
+    ],
+    "cons": [
+      "深度绑定 DeepSeek，想换其他模型供应商基本不适合用它",
+      "个人开发者主导的年轻项目，1.0 刚从 TypeScript 重写为 Go，0.x 旧版仅维护，迁移与稳定性仍需观察",
+      "偏终端向，不喜欢命令行的用户上手门槛较高"
+    ],
+    "features": [
+      "DeepSeek 直连：不走通用兼容层，直接对接官方 API，默认走低成本迭代路线，需要时再拉高推理强度",
+      "prefix-cache 优化循环：append-only 设计，专为多小时调试与重构这类长会话降低重复上下文开销",
+      "规划门禁：/plan on 进入只读规划，确认后才落盘，风险命令与写入边界需二次确认",
+      "推理强度切换：/pro 或 /effort 调档，硬重构与长链调试时给更多算力",
+      "MCP + Skills + 记忆：接入外部工具，沉淀项目专属技能与记忆，不做一次性对话",
+      "双入口与自检：CLI 与桌面客户端并行，/doctor 可一键排查 API、配置、hooks 与项目状态"
+    ],
+    "related": [
+      "claude-code",
+      "codex-cli",
+      "deepseek"
+    ],
+    "content": "## DeepSeek-Reasonix是什么？\n\nDeepSeek-Reasonix（一般简称 Reasonix）是 GitHub 上的一个开源终端编程 Agent，仓库在 esengine/DeepSeek-Reasonix，MIT 协议。定位跟 Claude Code、Codex CLI 是一类：在终端里自主完成代码编写、调试和仓库操作。\n\n但它有个很明确的取舍——不做通用的 OpenAI 兼容层，而是直接对着 api.deepseek.com 设计。核心动作是围绕 DeepSeek 那套稳定的 prefix-cache，把运行循环改成 append-only：上下文只往后追加、不重排，从而在长会话里把缓存命中率维持在高位，官方说法是能显著压低输入 token 的成本。这个思路很实在——用编程 Agent 最烧钱的地方，从来不是模型多聪明，而是每一轮都把整个上下文重发一遍。\n\n需要说明一句：这是个人开发者主导的项目，2026 年 8 月初在 GitHub Trending 上有过单日涨星八百多的记录，热度上升很快，但它不是 DeepSeek 官方出品的工具。\n\n## 核心功能\n\n1. DeepSeek 直连路径。相比通用兼容工具，它默认走低成本迭代，任务变难时再切更强的推理档位，整条链路都是按 DeepSeek 的特性调的。\n2. 长会话成本优化。这是它的立身之本：append-only 循环加缓存优先，专门对付持续调试、大重构和几小时连轴的工作，而不是问一句答一句。\n3. 规划门禁。`/plan on` 进只读规划模式，先把方案摆出来给你看，确认了才写盘；风险改动、命令执行和写入边界都要二次确认。相比那种「上来就改文件」的 Agent，这一层对生产仓库友好得多。\n4. 推理强度可调。`/pro` 或 `/effort` 切档，硬重构和长链路调试时给更多算力，日常小改省着用。\n5. MCP、Skills 与记忆。能接外部工具，也能把项目专属的技能和记忆存下来，不做一次性对话。运行历史方面提供分支、检查点和命令历史，调试、交接、续跑都有据可查。\n6. 双入口加自检。CLI 与桌面客户端并行，`/doctor` 一条命令排查 API、配置、hooks 与项目状态，启动失败时省很多猜的时间。\n\n## 版本/套餐对比\n\nReasonix 本身 MIT 开源、免费，没有订阅档位，你付的只是 DeepSeek 的 API token 费用。版本上要留意一件事：1.0 是用 Go 完全重写的版本，默认开发分支为 main-v2，产出单个静态二进制方便跨平台分发；0.x 的 TypeScript 旧版只做维护，不再推进新功能。安装路径有三条——`npx reasonix code` 直接试用，`npm i -g reasonix@next` 装成常驻命令，或者走 Homebrew；也提供桌面端下载。想用 Go 重写版就跟着 main-v2 分支走。\n\n## 值不值得用？\n\n如果你本来就用 DeepSeek，这工具的性价比很难被同类超过。它把「长会话省钱」这件事当成第一优先级来设计，而不是当作附带优化；规划门禁和运行历史这两块又照顾了生产仓库的安全感。终端优先、可以挂着一直跑，这也是熟练开发者更想要的形态。\n\n但要看清代价。第一是绑定：它就是为 DeepSeek 造的，你想随时换 Claude 或 GPT，就不该选它——去看 Goose 那类模型中立的方案。第二是成熟度：个人维护、1.0 刚完成语言级重写、0.x 停在维护状态，迁移期的坑不会少，用在关键项目上得留后手。第三是它偏终端，图形界面党会觉得别扭。\n\n## 使用建议\n\n1. 先 `npx reasonix code` 在一个非关键项目里试，别一上手就全局安装。\n2. 进仓库前先 `cd` 到目标项目再启动——文件、命令输出和项目记忆都是按仓库挂的，位置错了记忆就串。\n3. 生产代码一律先 `/plan on`。让它把方案摆出来，你看完再放行写操作。\n4. 日常小改保持默认低成本档，只在硬重构、长链调试时切 `/pro`。\n5. 起不来就跑 `/doctor`，比自己翻配置快。\n6. 如果你不是 DeepSeek 用户，别为了这套缓存优化专门换模型，收益不对等。\n\n## 适合谁用？\n\n推荐：已经在用 DeepSeek API、又需要长时间连续调试或大规模重构的开发者，特别是对 token 账单敏感的个人和小团队。\n可考虑：想在终端里试一套国产模型原生 Agent、能接受年轻项目风险的技术爱好者。\n不推荐：需要在多家模型供应商之间自由切换的团队；对稳定性要求极高、不愿承担重写期风险的生产环境；以及不习惯命令行、更想要图形化编辑器体验的用户。",
+    "published": false,
+    "faq": [
+      {
+        "question": "DeepSeek-Reasonix 是 DeepSeek 官方出的工具吗？",
+        "answer": "不是。它是 GitHub 上由 esengine 维护的第三方开源项目（仓库 esengine/DeepSeek-Reasonix，MIT 协议），只是深度对接了 DeepSeek 的 API 与 prefix-cache 特性，并非 DeepSeek 官方产品。"
+      },
+      {
+        "question": "Reasonix 怎么降低使用成本？",
+        "answer": "它围绕 DeepSeek 稳定的 prefix-cache 设计了 append-only 的运行循环，上下文只追加不重排，从而在长会话里维持较高的缓存命中率，减少重复上下文带来的输入 token 开销。此外它默认走低成本迭代路径，只在需要时才切更强的推理档位。"
+      },
+      {
+        "question": "怎么安装 Reasonix？",
+        "answer": "三种方式：`npx reasonix code` 直接试用；`npm i -g reasonix@next` 装成全局命令；或通过 Homebrew 安装。官方也提供桌面客户端下载。想用 Go 重写的 1.0 版本请跟随 main-v2 分支。"
+      },
+      {
+        "question": "它会不会直接改我的代码？",
+        "answer": "可以先关掉写权限。执行 `/plan on` 进入只读规划模式，Agent 会先给出方案供你审阅，确认后才执行写入；风险改动、命令执行与写入边界都会要求二次确认。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "DeepSeek-Reasonix",
+      "Reasonix怎么样",
+      "DeepSeek终端编程Agent",
+      "Reasonix安装教程",
+      "DeepSeek Reasonix免费吗"
+    ],
+    "source_urls": [
+      "https://github.com/esengine/DeepSeek-Reasonix",
+      "https://deepseekreasonix.com/"
+    ],
+    "confidence": "medium",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Kiro Crew",
+    "slug": "kiro-crew",
+    "positioning": "Kiro Crew是什么？AWS开源持久化Agent工作空间好用吗",
+    "auto_positioning": false,
+    "emoji": "👥",
+    "color": "#7C3AED",
+    "description": "Kiro Crew 是 AWS 于 2026 年 8 月 4 日以 Apache 2.0 开源的持久化 Agent 开发工作空间。它把编程 Agent 从「单次会话里的助手」升级为可 7×24 无人值守运行的队友：跨会话保留上下文、教训与技能，用 cron、Webhook 与心跳自动触发任务，并支持通过桌面端、Web 仪表盘、CLI 以及 Slack、Discord、Telegram 远程操控。底层跑在 kiro-cli 上，最初是 Amazon 内部项目 MeshClaw。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "开源"
+      },
+      {
+        "text": "持久记忆"
+      },
+      {
+        "text": "无人值守"
+      },
+      {
+        "text": "多Agent编排"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://github.com/kirodotdev/KiroCrew",
+    "price": "Kiro Crew 本体免费（Apache 2.0，自托管）；模型推理需 Kiro 账号，官方套餐为 Free $0（50 credits）、Pro $20（1,000 credits）、Pro+ $40（2,000 credits）、Pro Max $100（5,000 credits）、Power $200（10,000 credits），额外 credit $0.04/个",
+    "platform": "macOS / Linux / Windows（可跑在本机、Docker 容器或 EC2 等云主机；入口含桌面应用、Web 仪表盘、CLI、Slack、Discord、Telegram、企业微信）",
+    "pros": [
+      "跨会话持久：会话、记忆、调度与任务检查点在 Gateway 重启后仍可恢复，不用每天重新交代一遍上下文",
+      "真正的无人值守：时区感知 cron、带鉴权的 Webhook、PR 与部署心跳、检查点与重试，关掉笔记本任务照跑",
+      "自学习自演进：纠正会沉淀为 lessons，重复模式合成为 skills，且都能在仪表盘里查看、编辑、删除",
+      "七层纵深防护：OS 沙箱、命令默认拒绝、凭据脱敏、签名审计日志与交互式审批，全部开源可自行核验",
+      "不需要 AWS 账号，Gateway 与状态都在你自己控制的机器上，且远程入口丰富"
+    ],
+    "cons": [
+      "模型推理绑定 Kiro 账号与 credits 套餐，定时任务的每次唤醒都是计费决策，成本容易失控",
+      "安装前置较多：需 Python 3.10+、已登录的 kiro-cli，首次启动还要拉约 610MB 的嵌入模型",
+      "面向工程团队，配置 Gateway、沙箱与审批策略有一定学习成本，不适合轻量尝鲜"
+    ],
+    "features": [
+      "Gateway 架构：三层设计（Gateway / Agent Sessions / ACP Runtime），Gateway 负责路由、状态持久化、会话、审批、记忆与安全策略",
+      "自学习记忆系统：存偏好、活跃项目、教训、技能与知识图谱，且用户可检查、编辑、删除并限定作用域",
+      "无人值守调度：时区感知 cron 任务、带鉴权 Webhook、PR 与部署心跳、检查点与失败重试",
+      "多 Agent 与子 Agent 编排：跨仓库分派任务，把单次会话装不下的大工程拆开推进",
+      "专用 Apps：Issue Radar、Task Runner、DevFleets 等把重复工作封装进合适的界面",
+      "多端接入：桌面应用、Web 仪表盘（默认 localhost:5476）、CLI，以及 Slack / Discord / Telegram / 企业微信"
+    ],
+    "related": [
+      "claude-code",
+      "openclaw",
+      "agent-skills"
+    ],
+    "content": "## Kiro Crew是什么？\n\nKiro Crew 是 AWS 在 2026 年 8 月 4 日以 Apache 2.0 协议开源的持久化 Agent 开发工作空间。它解决的问题很具体：普通编程 Agent 活在一次会话里，进程一退什么都忘，任何跨越一个坐班时段的活儿都得手动重启一遍。Crew 把记忆、调度、审批和进行中的任务状态都存在一个本地 Gateway 里，所以周二下午开的活，周三早上还能在往前推。\n\n来路也挺有意思。它最初是 Amazon 内部三位工程师的业余项目，叫 MeshClaw，动机就是「启动一个任务、走开、回来看到可 review 的产出」。AWS 说它在不到半年里被超过 3.9 万名 Amazon 开发者采用，约 500 位贡献者、周均 143 次提交——正是这种自发采用促成了开源。2026 年 8 月 5 日它上了 Product Hunt，拿到 191 票、日榜第六，站内 10 条评价平均 5.0 分。\n\n## 核心功能\n\n1. Gateway 三层架构。Gateway 负责消息路由、状态持久化、会话管理、审批、记忆与安全策略；Agent Sessions 是隔离的对话或任务上下文；ACP Runtime 通过 Agent Client Protocol 驱动 kiro-cli。工具挂载走 MCP，两个都是开放标准。\n2. 自学习记忆。存的东西分得很细：偏好、活跃项目、教训（lessons）、技能（skills）和知识图谱。你说一句「标记任务完成前必须先跑 lint」，它会永久记住；失败经验会沉淀成教训影响后续行为；重复模式会被合成为可复用技能。关键是这些都能在仪表盘里看、改、删、限定范围，而不是黑盒。\n3. 无人值守调度。时区感知的 cron、带鉴权的 Webhook、PR 与部署心跳监控、检查点与失败重试。这套组合才让「关掉笔记本任务照跑」成立。\n4. 多 Agent 与子 Agent 编排。跨仓库分派，专门对付单次会话装不下的迁移、批量 review 这类工程。\n5. 专用 Apps 与多端接入。Issue Radar、Task Runner、DevFleets 等把重复工作封装进合适界面；入口有桌面应用、Web 仪表盘（默认 localhost:5476）、CLI，以及 Slack、Discord、Telegram、企业微信。\n6. 七层纵深防护。OS 沙箱、命令默认拒绝、凭据脱敏、签名审计日志、交互式审批——全开源，每一层你都能自己核验。\n\n## 版本/套餐对比\n\n软件本体免费，Apache 2.0，跑在你自己的硬件上，不需要 AWS 账号，也不依赖 AWS 托管控制平面。但 Agent 推理要走 Kiro 账号，按 credits 计费：Free 档 $0 给 50 credits，Pro $20 给 1,000，Pro+ $40 给 2,000，Pro Max $100 给 5,000，Power $200 给 10,000，额外 credit 单价 $0.04。这里有个容易被忽略的点——定时或后台任务发出的模型请求，和你在 IDE 里手敲一样计费。只跑脚本、不调模型的步骤不花钱，但一个每十五分钟唤醒 Agent 的 cron，本质上是笔预算决定，不只是一行配置。\n\n前置条件也要提前算：Python 3.10 以上、一个已经 `kiro-cli login` 过的 CLI（这是 Agent 后端，不是可选项，漏了会报看起来像网络问题的 ACP 超时）；Node 20/22+ 只在你要从源码构建仪表盘时才需要。首次启动记忆检索会拉 Qwen3-Embedding-0.6B，约 610MB，磁盘和等待时间都要留出来，下载完成前搜索是空的，属正常。\n\n## 值不值得用？\n\n方向上我认为它站对了。2026 年 Agent 工具的竞争重心明显从「单轮多聪明」转向「跨会话能不能接着干」，Crew 把记忆、调度、审批做成了基础设施而不是插件，还配了七层安全和完整审计——这是做给真实工程团队的，不是 demo。开源加自托管也意味着你能自己看清每一层在干什么。\n\n要掂量的是三件事：一是成本模型，无人值守很爽，但计费按模型调用走，cron 频率设错账单会很难看；二是安装门槛，Python、kiro-cli 登录、610MB 嵌入模型、Gateway 常驻服务，都不是五分钟能搞完的；三是它绑 Kiro 生态，推理必须走 Kiro 账号，不像 Goose 那样随便换供应商。\n\n## 使用建议\n\n1. 先 `kiro-cli login`，再装 Crew。顺序反了会遇到看起来像网络故障的超时错误。\n2. 第一个实验挑轻的：比如早间 PR 摘要，花两三个 credits 就能验证链路，别一上来就配长任务迁移。\n3. cron 频率从保守值起步。每十五分钟唤醒一次 Agent 前，先算一遍月度 credits。\n4. 认真读一遍沙箱和审批设置，再决定你愿意让它在你睡觉时做什么。\n5. 用仪表盘定期清理记忆和技能。学错的东西会一直生效，这是双刃剑。\n6. 如果你已经在用 OpenClaw、Hermes 这类平台的 skills，可以直接拿过来——官方说无需修改即可运行。\n\n## 适合谁用？\n\n推荐：需要跨会话推进的工程团队——大规模迁移、周期性 review、PR 监控、跨仓库故障排查这类活儿，尤其是能接受自托管一台常驻机器的团队。\n可考虑：已经在用 Kiro CLI、想给它加一层持久编排的开发者；以及想研究 Agent 基建架构的技术团队。\n不推荐：只想要一个会话内代码助手的个人用户；对 credits 计费敏感、需要成本完全可预测的场景；以及不愿绑定 Kiro 生态、坚持模型中立的团队。",
+    "published": false,
+    "faq": [
+      {
+        "question": "Kiro Crew 是免费的吗？",
+        "answer": "软件本体免费。Kiro Crew 以 Apache 2.0 开源、自托管运行，不需要 AWS 账号。但 Agent 的模型推理需要 Kiro 账号并消耗 credits，官方套餐为 Free $0（50 credits）、Pro $20（1,000）、Pro+ $40（2,000）、Pro Max $100（5,000）、Power $200（10,000），额外 credit $0.04/个。"
+      },
+      {
+        "question": "Kiro Crew 和普通编程 Agent 有什么区别？",
+        "answer": "普通编程 Agent 活在一次会话里，进程退出即失忆。Kiro Crew 是持久化工作空间，把记忆、调度、审批和进行中的任务状态存在本地 Gateway，Gateway 重启后仍可恢复，所以任务可以跨天、跨会话持续推进，也能在你关掉笔记本时继续跑。"
+      },
+      {
+        "question": "安装 Kiro Crew 需要什么前置条件？",
+        "answer": "需要 Python 3.10 或更高版本、一个已通过 `kiro-cli login` 认证的 kiro-cli（它是 Agent 后端，不是可选项），以及一台你愿意让它常驻运行的机器。Node.js 20/22+ 只在从源码构建仪表盘时才需要。首次启动记忆检索会下载约 610MB 的 Qwen3-Embedding-0.6B 模型。"
+      },
+      {
+        "question": "Kiro Crew 支持哪些远程操控方式？",
+        "answer": "装好一个 Gateway 后，可通过桌面应用、Web 仪表盘（默认 localhost:5476）、CLI，以及 Slack、Discord、Telegram、企业微信等聊天渠道接入；Gateway 本身可跑在 Mac、Docker 容器或 EC2 等云主机上。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Kiro Crew",
+      "Kiro Crew怎么样",
+      "Kiro Crew安装教程",
+      "AWS开源Agent工作空间",
+      "Kiro Crew收费吗"
+    ],
+    "source_urls": [
+      "https://github.com/kirodotdev/KiroCrew",
+      "https://www.rabinarayanpatra.com/blogs/how-to-set-up-kiro-crew-unattended-coding-tasks",
+      "https://www.aib.vote/en/news/aws-kiro-crew-agent-orchestrator",
+      "https://www.hunted.space/product/kiro"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Capacity Desktop",
+    "slug": "capacity-desktop",
+    "positioning": "Capacity Desktop是什么？免费本地Mac版AI建站工具好用吗",
+    "auto_positioning": false,
+    "emoji": "🧱",
+    "color": "#F97316",
+    "description": "Capacity Desktop 是一款免费、无需注册的 macOS 应用，用自然语言生成可运行的 Web、移动端、桌面与小游戏应用。它主打「本地优先 + 自带模型 Key」：项目就是本机上的普通文件夹和 git 仓库，AI 用你自己的 Claude / GPT / Gemini / DeepSeek 等 Key 按供应商原价计费，官方不转售 token、不加价卖 credits。2026 年 8 月 5 日在 Product Hunt 上线，被称为「住在 Mac 上的免费 Lovable」。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "免费可用",
+        "type": "free"
+      },
+      {
+        "text": "本地优先"
+      },
+      {
+        "text": "自然语言建站"
+      },
+      {
+        "text": "自带模型Key"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://capacity.so/desktop",
+    "price": "Beta 期间完全免费且无需注册；官方说明后续收费计划是一次性授权而非订阅，且不转售 AI token；模型费用由用户用自己的 API Key 按供应商原价直付",
+    "platform": "macOS（Apple Silicon）；官方称 Windows / Linux 在路线图上",
+    "pros": [
+      "项目就是普通文件夹加 git 仓库，能用任意编辑器打开、直接交给开发者，随时走人无锁定",
+      "自带模型 Key 按供应商原价计费，内置花费面板，不吃加价 credits 的差价",
+      "版本恢复时间线：每次改动都可回滚，AI 改歪了一键退回，不丢东西",
+      "零终端：自动检测并安装项目所需的 Git、Node 等开发工具，非技术用户不用碰命令行",
+      "自带 80+ 精选设计模板，也支持导入已有仓库；发布页一键连 GitHub + Vercel 并预检环境变量"
+    ],
+    "cons": [
+      "仅支持 Apple Silicon 的 macOS，Windows 与 Linux 只在路线图上",
+      "必须自备 AI API Key，对完全不懂供应商计费的新手是一道额外门槛",
+      "两人团队维护、且处于 Beta 阶段，正式定价与移动端上架流程都还没落地"
+    ],
+    "features": [
+      "自然语言生成应用：描述需求即产出可运行的 Web、移动端、桌面与小游戏项目",
+      "自带模型（BYOAI）：支持 Claude、GPT、Gemini、Grok、Kimi、DeepSeek、OpenRouter 等，账单直连供应商并有花费面板",
+      "版本恢复时间线：每次修改生成可恢复版本，一键回滚失败的 AI 生成",
+      "本地文件存储：项目以普通文件夹与 git 仓库形式存在本机，可随时导出或交接",
+      "模板库与导入：80+ 手工挑选的设计模板，或直接导入已有仓库继续做",
+      "一键发布与自动装工具：连接 GitHub + Vercel、预检环境变量后直接部署；自动安装 Git、Node 等依赖，无需终端"
+    ],
+    "related": [
+      "lovable",
+      "bolt.new",
+      "cursor"
+    ],
+    "content": "## Capacity Desktop是什么？\n\nCapacity Desktop 是一款 macOS 应用（目前仅支持 Apple Silicon），用自然语言把想法变成能跑的应用——Web、移动端、桌面端甚至小游戏都能生成。它的 Product Hunt 标语很直白：「一个住在你 Mac 上的免费 Lovable」。\n\n做它的是两个产品人 Baptiste 和 Samuel，动机说得很清楚：他们喜欢 Lovable 和 Bolt 带来的可能性，但不想为此付租——不想被加价卖 AI credits，不想代码被扣在云端工作区里，也不想「导出」是个事后补上的按钮。所以 Capacity Desktop 的设计原则是本地优先：项目就是你机器上一个普通文件夹加一个 git 仓库，AI 走你自己的 API Key 按原价结算，官方明确表态「我们卖工具，不转售 token」。2026 年 8 月 5 日上线 Product Hunt，拿到 140 票、当日第九，是这个两人团队的第三次发布，前两次分别是 Spec Coding 和 Capacity 2.0。\n\n## 核心功能\n\n1. 自然语言到真应用。描述需求，它生成完整可运行的项目，覆盖 Web、移动端、桌面和游戏几类形态。\n2. 自带模型（BYOAI）。支持 Claude、GPT、Gemini、Grok、Kimi、DeepSeek、OpenRouter 等，账单直接走供应商，应用内有花费面板，每次会话花多少一目了然。这一条是它跟主流云端建站工具最本质的差别——那些工具的 credits 里含加价，这里不含。\n3. 版本恢复时间线。每一次改动都生成一个可恢复版本，AI 生成跑偏了一键回滚，官方强调「不会丢任何状态」。用过 AI 建站工具的人都知道这个功能有多必要。\n4. 本地文件存储。项目是标准文件夹和 git 仓库，你可以在任意编辑器里打开，可以直接交给另一个开发者，也可以随时彻底离开这个平台。\n5. 模板库与导入。内置 80+ 手工挑选的设计模板，或者导入一个你已有的仓库继续做。\n6. 一键发布与自动装工具。发布页连 GitHub 和 Vercel，先预检环境变量再部署；另外它会自动识别项目需要的 Git、Node 等工具并帮你装好，全程不需要开终端——这一点对非技术用户很关键。\n\n## 版本/套餐对比\n\n现在只有一个版本：Beta 期间完全免费，不需要注册，下载即用。官方对后续收费给了明确表态——计划是一次性授权（one-time license），不做订阅，也永远不加价卖 credits；模型费用始终由你用自己的 Key 直付给供应商。这个承诺在 AI 建站这个普遍走订阅加 credits 的赛道里算是少见的选择。要注意的是正式定价尚未公布，移动端应用商店上架流程也还在路线图上没实现。\n\n## 值不值得用？\n\n对愿意自己管 API Key 的人来说，它的取舍很划算。你拿到的是所有权和透明度：代码是自己的、git 历史是自己的、AI 花费是自己的且看得见。加上版本回滚和自动装工具这两块打磨得细，实际体验比「又一个 AI 建站工具」要扎实。\n\n限制也很实在。第一是平台，只有 Apple Silicon 的 Mac，Windows 和 Linux 只在路线图上，官方还在评论区问用户更需要哪个。第二是自带 Key 这道门槛——对完全不懂供应商计费的用户来说，这是需要额外学习的一步，官方自己也把它列为「诚实的部分」。第三是团队只有两个人、产品还在 Beta，如果你想要的是全托管、浏览器打开就能用、AI 额度内置、完全不做基础设施决策的体验，那它不是给你的。\n\n## 使用建议\n\n1. 先确认硬件：必须是 Apple Silicon 的 Mac，Intel 机器目前用不了。\n2. 装之前先把 API Key 准备好。DeepSeek 或 Gemini 这类便宜的适合起步，摸清生成质量后再上贵模型。\n3. 从模板起步而不是从零描述。80+ 模板里挑接近的改，比空白开局收敛得快得多。\n4. 盯着花费面板做几轮，建立对「一次改动大概多少钱」的直觉，这是自带 Key 模式的必修课。\n5. 生成偏了立刻用恢复时间线回滚，别指望靠继续提示把它掰回来。\n6. 项目是标准 git 仓库，重要东西记得自己 push 一份到 GitHub。\n\n## 适合谁用？\n\n推荐：用 Apple Silicon Mac、已经有 AI API Key，且不愿意把代码和数据放在别人服务器上的独立开发者、产品经理和创业者。\n可考虑：想做内部小工具、自定义看板或原型的非技术专业人士——零终端加自动装工具这两点确实降低了门槛；也适合正在为云端建站工具的 credits 账单纠结的人。\n不推荐：Windows / Linux 用户（暂时无解）；需要团队协作与托管服务的场景；以及希望「注册即用、AI 额度内置、完全不管基础设施」的用户——这类需求更适合 Lovable 这类云端产品。",
+    "published": false,
+    "faq": [
+      {
+        "question": "Capacity Desktop 真的免费吗？",
+        "answer": "Beta 期间是的，下载即用且无需注册。官方说明后续收费计划是一次性授权而非订阅，也不会加价转售 AI credits。唯一持续支出是你自己的 AI API Key 费用，按供应商原价直付。"
+      },
+      {
+        "question": "Capacity Desktop 支持 Windows 吗？",
+        "answer": "目前不支持。它只提供 macOS（Apple Silicon）版本，Windows 与 Linux 在官方路线图上，尚未给出发布时间。开发者在 Product Hunt 评论中还在收集用户对平台优先级的反馈。"
+      },
+      {
+        "question": "它和 Lovable、Bolt 有什么区别？",
+        "answer": "最大差别是本地优先和自带模型。Lovable、Bolt 这类云端产品把项目托管在自己服务器上并出售含加价的 AI credits；Capacity Desktop 把项目存成你机器上的普通文件夹与 git 仓库，AI 走你自己的 Key 按原价计费，随时可以带着代码离开。"
+      },
+      {
+        "question": "生成的代码归我吗？可以交给开发者继续做吗？",
+        "answer": "可以。项目以标准文件夹加 git 仓库的形式存在本机，能用任意编辑器打开、直接交给其他开发者，也可以随时脱离这个工具继续开发，不存在平台锁定。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Capacity Desktop",
+      "Capacity Desktop怎么样",
+      "Mac AI建站工具",
+      "Capacity Desktop免费吗",
+      "Capacity Desktop和Lovable哪个好"
+    ],
+    "source_urls": [
+      "https://capacity.so/",
+      "https://completeaitraining.com/ai-tools/capacity-desktop/",
+      "https://launly.com/products/capacity-desktop",
+      "https://ustack.app/blogs/producthunt-daily-2026-08-05"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "reverse-skill",
+    "slug": "reverse-skill",
+    "positioning": "reverse-skill是什么？给Claude Code用的开源安全逆向技能包好用吗",
+    "auto_positioning": false,
+    "emoji": "🕶️",
+    "color": "#DC2626",
+    "description": "reverse-skill 是一个 GitHub 开源的安全技能路由包——不是独立工具，而是给 coding agent 用的方法论与配置集合，支持 Claude Code、Codex CLI、Cursor、Kiro、Cline 等客户端。它覆盖 APK、二进制、前端 JS 加密、固件、Pwn、恶意样本与 CTF 等 20+ 场景，先做工具索引与授权门禁，再按「方法论—脚本—证据—报告」组织工作流，目的是让 agent 别凭感觉乱试命令。2026 年 8 月登上 GitHub Trending 日榜。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "免费可用",
+        "type": "free"
+      },
+      {
+        "text": "开源插件"
+      },
+      {
+        "text": "安全研究"
+      },
+      {
+        "text": "技能路由"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://github.com/zhaoxuya520/reverse-skill",
+    "price": "免费开源（主仓库 MIT，其中不同子项目各自持有独立许可证）；本体不含模型，实际成本取决于你所用 coding agent 的模型开销",
+    "platform": "Windows / Linux / macOS / Kali Linux；需自备 coding agent 客户端（Claude Code、Codex CLI、Cursor、Kiro、Cline 等）以及 Java/JDK、Node.js 22.12+、Python 3.x",
+    "pros": [
+      "把资深安全工程师的方法论打包成 agent 能读懂的路由表和 playbook，让它从「瞎试命令」变成「按套路走」",
+      "授权门禁放在动手之前：先定 scope 与网络画像，未就绪不碰目标，合规意识到位",
+      "场景覆盖极广：APK、iOS、二进制、JS 加密、固件、Pwn、恶意样本、LLM 安全等 20+ 技能包，CTF 另含 40+ 子技能",
+      "经验会沉淀：时间线、证据链与发现路径都记成实战日志，同类目标下次直接站在上次结果上",
+      "客户端无关，Claude Code、Codex CLI、Cursor、Kiro、Cline 都能用，特定客户端适配层是可选加项而非依赖"
+    ],
+    "cons": [
+      "安装成本不低：Java、Node.js 22.12+、Python 以及 Kali 那套工具链都得先备齐",
+      "它只提供方法论与路由，实际能力仍取决于本机装了哪些工具、以及你用的模型强度",
+      "严格限于逆向、授权渗透与安全研究场景，没有授权的目标不能碰，误用有法律风险"
+    ],
+    "features": [
+      "路由先行：RULES.md 与 MASTER-ROUTING 先判断任务该走哪个技能包，避免 agent 上手乱试",
+      "三层授权门禁：case-init 与 scope.md 先确认授权范围与网络配置，未就绪不对目标动手",
+      "工具链自举：按平台执行 refresh-tool-index 脚本生成本机工具索引，缺什么按需补",
+      "20+ 场景技能包：apk-reverse、ida-reverse、radare2、js-reverse、firmware-pentest、pwn-chain、malware-analysis、llm-security 等",
+      "CTF 编排器：CTF-Sandbox-Orchestrator 下含 40+ 子技能，自动判题型并路由到对应解题 playbook",
+      "证据链与报告：按 Evidence → Finding → Path 留可复核记录，再经 docs-generator / diagram-generator 出图出报告"
+    ],
+    "related": [
+      "claude-code",
+      "cline",
+      "agent-skills"
+    ],
+    "content": "## reverse-skill是什么？\n\n先说清楚定位：reverse-skill 不是一个能独立运行的安全工具，它是一个 GitHub 开源的技能路由包——本质上是一堆写给 coding agent 读的 Markdown 方法论、路由规则和辅助脚本。你得先有 Claude Code、Codex CLI、Cursor、Kiro 或 Cline 这类客户端，把这套包挂上去，它才起作用。\n\n它要解决的痛点很具体。AI 编程助手在通用开发上很能干，但一碰安全就抓瞎：拿到一个 APK，它不知道该用 jadx 还是 apktool，该 Frida 注入还是 IDA 静态看；碰到加密的请求参数，它可能到处下断点然后跟丢。reverse-skill 等于给 agent 塞了一本安全攻防手册加一张路由表：先判断这是什么类型的任务，路由到对应技能包，检查本机有哪些工具可用，然后按写好的 playbook 一步步走。2026 年 8 月它登上 GitHub Trending 日榜，当时 all-language 榜单显示约 1.58 万 star、2,229 forks，窗口期新增 2,446 星。\n\n## 核心功能\n\n1. 路由先行。这是它的核心设计原则：先过 RULES.md 的全局路由规则和 MASTER-ROUTING 主路由阶梯，确定任务归属，再动手。routing.md 里维护着完整的场景到技能的映射矩阵。\n2. 三层授权门禁。动手之前先跑 case-init，写清 scope.md——授权范围、网络画像都得就绪，否则不对目标操作。这一点我认为是整个项目最值得称赞的设计：合规不是免责声明里的一句话，而是流程上的硬关卡。\n3. 工具链自举。按平台执行 refresh-tool-index 脚本（Windows 走 PowerShell、Linux/macOS 走 bash、Kali 有专用脚本），生成 skills/tool-index.md 记录本机检测到哪些工具，缺的按需补，而不是假装工具都在。\n4. 20+ 场景技能包。apk-reverse 管 Android，ida-reverse 和 radare2 分别处理 Windows 与 Linux 二进制，js-reverse 对付前端签名与加密参数，还有 firmware-pentest（固件/IoT）、pwn-chain、malware-analysis、patch-diff-exploit、edr-bypass-re、llm-security 等。\n5. CTF 编排器。CTF-Sandbox-Orchestrator 下有 40+ 子技能，覆盖 Pwn、Web、Crypto、Reverse、Misc 各类题型，系统自动判题型并路由到对应解题 playbook，每种题型都有自己的检查清单和工具调用顺序。\n6. 证据链与报告。按 Evidence → Finding → Path 的结构留可复核记录，再交给 docs-generator 和 diagram-generator 出报告与图表。这一步让 agent 的输出从「它说它发现了什么」变成「有链路可查」。\n\n## 版本/套餐对比\n\n主仓库 MIT 开源，免费，没有商业版本。要注意的是仓库里不同子项目各自持有独立许可证，商用前建议逐个确认。它本身不含模型，实际花费取决于你用的 coding agent——模型和 token 费用还是走你自己的账。前置条件要提前备好：Java/JDK（jadx、apktool 需要）、Node.js 22.12+（JS 工具链与 MCP 服务器）、Python 3.x（Frida 与辅助脚本），再加一个 AI 编码客户端。平台侧提供 Windows、Ubuntu/Debian、macOS 和 Kali Linux 的部署文档，Kali 有专门的目录和脚本。\n\n## 值不值得用？\n\n对安全从业者来说值得，而且它的价值不在「多了个工具」，在于把不确定性收掉。AI agent 在安全场景最大的问题就是不可预测——同一个 APK 分析两次可能走两条完全不同的路，中间还夹着几条乱试的命令。这套包用路由先行加固定 playbook 把这件事变得可重复，再配上证据链，输出才有交付价值。40+ CTF 子技能和自动沉淀的实战日志，对安全学习者和红队选手也是实打实的生产力。\n\n要提醒的还是三点。一是安装成本，Kali 工具链加 Java、Node、Python 一套装下来不轻松，别指望克隆完就能跑。二是它只给方法论，本机没装 IDA 就没法做 IDA 该做的事，能力上限还是取决于工具和模型。三是边界——项目明确面向逆向、授权渗透测试和安全研究，没有授权的目标不该拿来试，这不是免责套话，是真的会有法律后果。\n\n## 使用建议\n\n1. 克隆后第一件事是刷新工具索引，然后打开 skills/tool-index.md 确认检测结果，再决定要补装什么。\n2. 让 AI 客户端先读一遍 README_AI.md 和 RULES.md，它才知道该怎么用这套包，跳过这步等于没装。\n3. 第一次试用请用自建的 CTF 环境或自己写的测试 APK，别拿真实目标练手。\n4. 观察它是否老老实实建立了 scope、授权和网络配置。如果这一步被跳过，说明配置没生效，要回头查。\n5. 检查产出能不能沿 Evidence → Finding → Path 复核。这是判断它到底是在按流程走还是在编结果的最好办法。\n6. 把它当流程实验，别当「万能扫描按钮」。它优化的是方法论一致性，不是替你做判断。\n\n## 适合谁用？\n\n推荐：渗透测试工程师、逆向工程师、恶意样本分析师和红队成员——尤其是希望 AI 辅助但受不了它乱试命令的人。\n可考虑：CTF 选手（40+ 子技能相当于一个不眠的陪练）、安全教育者，以及需要可重复侦察与利用流程的赏金猎人。\n不推荐：没有安全背景的普通开发者（工具链门槛太高、且容易误用）；不愿意准备 Java/Node/Python 环境的人；以及任何打算用它碰未授权目标的场景——这既违反项目意图，也违法。",
+    "published": false,
+    "faq": [
+      {
+        "question": "reverse-skill 是一个独立的安全工具吗？",
+        "answer": "不是。它是一个开源的技能路由包，本质是写给 coding agent 读的方法论文档、路由规则与辅助脚本，需要配合 Claude Code、Codex CLI、Cursor、Kiro、Cline 等 AI 编码客户端使用，本身不执行分析，也不自带模型。"
+      },
+      {
+        "question": "使用 reverse-skill 需要准备什么环境？",
+        "answer": "需要 Java/JDK（供 jadx、apktool）、Node.js 22.12+（JS 工具链与 MCP 服务器）、Python 3.x（Frida 与辅助脚本），以及一个 AI 编码客户端。克隆仓库后按平台执行 refresh-tool-index 脚本生成本机工具索引，Windows 用 PowerShell 脚本，Linux/macOS 用 bash，Kali 有专用脚本。"
+      },
+      {
+        "question": "它覆盖哪些安全场景？",
+        "answer": "20+ 技能包，包括 APK/Android 逆向、iOS 移动端、二进制逆向（IDA / radare2）、前端 JS 签名与加密参数、固件与 IoT、渗透测试与漏洞扫描、Pwn 利用、恶意样本分析、补丁差分、EDR 绕过、LLM 安全等；CTF 另有 CTF-Sandbox-Orchestrator 下的 40+ 子技能。"
+      },
+      {
+        "question": "用它做安全测试合法吗？",
+        "answer": "项目明确面向逆向工程、已授权的渗透测试与安全研究，并在流程上把授权检查（scope）设为动手前的硬门禁，强调未就绪不操作目标。但工具本身不能为你的行为免责——对没有授权的目标使用仍属违法，务必在合法授权范围内使用。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "reverse-skill",
+      "reverse-skill怎么用",
+      "Claude Code 安全技能包",
+      "AI逆向分析工具",
+      "reverse-skill 安装教程"
+    ],
+    "source_urls": [
+      "https://github.com/zhaoxuya520/reverse-skill",
+      "https://pyshine.com/Reverse-Skill-Agent-Cybersecurity-Router/",
+      "https://neodrop.ai/zh-cn/post/Onn-JGH7XxU"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "i-have-adhd",
+    "slug": "i-have-adhd",
+    "positioning": "i-have-adhd是什么？让Claude Code先说下一步的输出风格插件好用吗",
+    "auto_positioning": false,
+    "emoji": "⚡",
+    "color": "#EAB308",
+    "description": "i-have-adhd 是 GitHub 上的开源输出风格插件（ayghri/i-have-adhd，MIT 协议），核心就是一个 Skill.md 加十条规则：先给行动、步骤编号、压住跑题、报具体分钟数、列表最多五项、不写开场寒暄和结尾客套。它不改模型能力，只改 AI 编码助手回答的组织方式，支持 Claude Code、Codex、Cursor、Antigravity 等客户端，一行命令装完即用。2026 年 7-8 月在 GitHub 上迅速涨到万星级别。",
+    "category": "AI编程",
+    "tags": [
+      {
+        "text": "免费可用",
+        "type": "free"
+      },
+      {
+        "text": "开源插件"
+      },
+      {
+        "text": "输出风格"
+      },
+      {
+        "text": "一行安装"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://github.com/ayghri/i-have-adhd",
+    "price": "免费开源（MIT 协议）；不含模型，不产生额外费用，反而因为压缩输出通常会省一些 token",
+    "platform": "跨平台，随 coding agent 客户端而定（Claude Code、Codex、Cursor、Antigravity 等）；支持插件市场安装，无需本地克隆",
+    "pros": [
+      "安装成本极低：两行命令装完，会话里打 /i-have-adhd 就生效，不用改模型也不用改工作流",
+      "省 token 又省注意力：去掉背景铺垫、寒暄和重复复盘，长会话下的成本与阅读负担都下降",
+      "规则明确可审：十条规则全部写在 Skill.md 里，不满意可以 fork 后自己改",
+      "内置两条安全规则：删文件等危险操作要求明确确认，连续失败三次后停止重试并回头检查判断",
+      "支持全局常开：建一个标记文件就能让每次会话自动加载规则，也可切回默认随时关掉"
+    ],
+    "cons": [
+      "只改输出格式，不会让 agent 变聪明，也不保证代码正确——结果仍需你自己验证",
+      "全局开启后容易在教学、头脑风暴或创意写作场景过度压缩解释，需要临时关掉",
+      "复杂长文本场景下模型未必严格遵守约束，仓库自带的单元测试只验证规则加载，不保证服从度"
+    ],
+    "features": [
+      "行动前置：第一行必须给出可执行操作——跑哪条命令、改哪个文件、目标是什么",
+      "步骤编号与进度同步：多步任务用数字列表，长任务每轮重述当前进度节点，避免上下文丢失",
+      "量化时间与结果可见：时间用具体分钟数表述，禁止「很快」这类模糊词；必须说明改完能看到什么效果",
+      "客观错误处理：报错按「位置—根因—修法」固定格式给，不绕弯",
+      "列表限长与去套话：列表最多五项，超出拆成「现在做 / 之后计划」；删除所有开场白、客套与收尾总结",
+      "多客户端与全局模式：Claude Code / Codex 插件市场一行安装，可用标记文件或 AGENTS.md 让规则常驻"
+    ],
+    "related": [
+      "claude-code",
+      "agent-skills",
+      "prompt-engineering-guide"
+    ],
+    "content": "## i-have-adhd是什么？\n\ni-have-adhd 是 GitHub 上的一个开源插件（ayghri/i-have-adhd，MIT 协议），东西小到有点反差：核心就是一个 Skill.md 文件加十条输出规则。它不是给人做注意力评估的工具，名字只是个比喻——它做的事是把 AI 编码助手的回答改造成更容易直接执行的格式。\n\n要治的毛病很多人都有体感：你问一个认证报错，模型先夸这个问题问得好，然后讲一遍 Express 中间件怎么工作、token 验证有哪些环节、cookie 可能有什么问题，最后一段才轻描淡写提一句「可以看看 src/auth.ts」。学习的时候这样挺好，但你在修线上问题的时候，需要的是下一步动作，不是一堂课。\n\n这个项目在 2026 年 7 月还是几千星，8 月初已经涨到万星级别，一度出现单周新增五千多星的记录——涨得这么猛，说明这个痛点确实积压了很久。\n\n## 核心功能\n\n1. 行动前置。第一行必须是立即可做的操作：跑哪条命令、改哪个文件路径、目标是什么。这是十条规则里最狠的一条。\n2. 步骤编号与进度同步。多个动作必须用数字列表，禁止大段文本；长任务每一轮都重述当前完成到哪个节点，避免几十轮之后你俩都忘了在干什么。\n3. 量化时间。时间必须给具体分钟数，「很快就好」这类词被明确禁止。\n4. 结果可见与客观报错。必须说明改完之后能观察到什么效果；出错按「错误位置—根本原因—修复方法」固定格式来。\n5. 列表限长与去套话。一个列表最多五项，超出的拆成「现在做 / 之后计划」两块；开场问候、客气收尾、重复总结全部删掉。\n6. 两条安全规则。删文件这类危险操作要求明确确认；连续失败三次后停止重试，回头重新检查之前的判断——这条对付 AI 反复撞墙的老毛病挺有效。\n\n对比效果在 README 里有例子：同一个认证问题，默认回答五句话里两句是寒暄，装上之后变成「运行 npm install、编辑某文件、跑测试」三行指令。\n\n## 版本/套餐对比\n\nMIT 开源，免费，只有一个版本，不含模型也不产生额外费用——考虑到它压缩输出，长期用下来通常还能省一点 token。安装两行就完：Claude Code 执行 `claude plugin marketplace add ayghri/i-have-adhd` 再 `claude plugin install i-have-adhd@i-have-adhd`，会话里打 `/i-have-adhd` 启用。Codex 是 `codex plugin marketplace add ayghri/i-have-adhd --ref main` 加 `codex plugin add i-have-adhd@i-have-adhd`，调用名 `$i-have-adhd`。想每次会话自动加载，Claude Code 侧建一个标记文件 `touch ~/.claude/.i-have-adhd-always`，Codex 侧把规则写进 `~/.codex/AGENTS.md`。整个过程不需要本地克隆，插件会从仓库拉内容。\n\n## 值不值得用？\n\n这是我见过投入产出比最高的一类项目之一——两行命令、零成本、五分钟就能自己 A/B 出结论。方法也很简单：拿同一个修 bug 任务开关插件各跑一遍，看回答是否从一大段背景说明变成「改哪个文件、跑哪条命令、下一步贴什么错误」。三个判断标准：第一行是不是可执行动作、步骤有没有编号、结尾是不是只剩一个明确的下一步。\n\n局限得说清楚。第一，它只改输出习惯，不会让 agent 变聪明，也不会替你确认命令是否安全，生成的代码照样要你验。第二，全局常开之后容易在需要深度解释、头脑风暴或创意写作的场景过度压缩——这时候直接说一句「给完整解释」临时松绑就行。第三，仓库自带九个标准化单元测试且全部通过，但那只验证规则脚本能正常加载，不保证模型在复杂长文本里严格服从约束。第四，社区反馈里提到过全局标记开启时危险命令确认可能被绕过、列表超五项不再拆分、旧版本插件报错等情况，多数靠清缓存拉最新 main 分支解决。\n\n## 使用建议\n\n1. 先按会话级用，打 `/i-have-adhd` 试几天，别一上来就设全局标记。\n2. 做一次严肃的 A/B：同一个 bug、同一个提示词，开关各跑一遍，自己判断值不值。\n3. 需要学原理或做方案讨论时明确要求「给完整解释」，临时松绑，别硬扛着规则问问题。\n4. 涉及删除、迁移等高风险操作时，建议手动关掉全局标记，别依赖插件的确认逻辑兜底。\n5. 遇到规则不生效或报错，先删本地缓存、拉最新 main 分支，再重新执行启用命令。\n6. 十条规则里有你不认同的，直接 fork 改 SKILL.md —— README 明确允许，这也是它最实用的一点。\n\n## 适合谁用？\n\n推荐：高频用 AI 写代码、查报错、拆任务的程序员、DevOps 与测试工程师，尤其是长会话下容易被大段文字带跑注意力的人。\n可考虑：需要统一 AI 输出格式以降低沟通成本的团队；以及节奏快、不想在废话里找核心动作的重度用户。\n不推荐：需要深度理论讲解或系统教学的初学者；做头脑风暴、创意与营销文案的场景；以及指望它提升模型正确率的人——它管格式，不管对错。",
+    "published": false,
+    "faq": [
+      {
+        "question": "i-have-adhd 怎么安装？",
+        "answer": "Claude Code 执行 `claude plugin marketplace add ayghri/i-have-adhd` 与 `claude plugin install i-have-adhd@i-have-adhd`，会话中输入 /i-have-adhd 启用。Codex 执行 `codex plugin marketplace add ayghri/i-have-adhd --ref main` 与 `codex plugin add i-have-adhd@i-have-adhd`，调用名为 $i-have-adhd。不需要本地克隆，插件会从仓库拉取内容。"
+      },
+      {
+        "question": "怎么让它每次会话都自动生效？",
+        "answer": "Claude Code 侧执行 `touch ~/.claude/.i-have-adhd-always` 创建标记文件即可自动加载；Codex 侧把规则写进 `~/.codex/AGENTS.md`。需要恢复默认时删除标记或移除规则即可。建议先按会话级试用一段时间再开全局。"
+      },
+      {
+        "question": "它会让 AI 变得更聪明吗？",
+        "answer": "不会。它只重塑输出格式，不改变模型的能力和事实正确性，生成的代码与方案仍需你自行验证测试。它的价值在于减少阅读负担、节省 token 和让下一步动作更明确。"
+      },
+      {
+        "question": "全局开启后会不会影响需要详细解释的场景？",
+        "answer": "会。全局开启时 AI 可能在教学、头脑风暴或创意写作场景过度压缩解释。这种情况下明确要求「给完整解释」即可临时松绑；涉及删除等高风险操作时，建议手动关闭全局标记，不要依赖插件的确认逻辑兜底。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "i-have-adhd",
+      "i-have-adhd插件",
+      "Claude Code 输出风格",
+      "Claude Code skill 推荐",
+      "让AI先说下一步"
+    ],
+    "source_urls": [
+      "https://github.com/ayghri/i-have-adhd",
+      "https://codingbeautydev.com/blog/i-have-adhd-skill/",
+      "https://www.besthub.dev/articles/how-to-make-ai-give-actionable-commands-first-the-9-1k-star-i-have-adhd-skill-42ec01f701e8",
+      "https://neodrop.ai/zh-cn/post/Onn-JGH7XxU"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  }
+]

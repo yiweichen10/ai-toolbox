@@ -1,0 +1,106 @@
+===========================================
+  aitoollab.cn 部署脚本 (rsync增量版)
+  目标: 121.43.144.99
+  时间: 2026-08-19 08:37:53
+===========================================
+[1/4] ⏩ 跳过构建 (--skip-build)
+
+[1.5/4] 🎯 注入广告/CPS加载器 (inject_ads)...
+
+[inject_ads] 扫描 1101 个内容页，注入 0 个，跳过 717 个非内容页
+✅ 加载器注入完成
+
+[1.55/4] 🔍 校验广告注入完整性（缺 loader 立即中止部署）...
+校验（抽样）50 个内容页...
+✅ 抽样校验通过（50 页全部含 loader；全量深查用 --full）
+✅ 广告注入校验通过
+
+[1.56/4] 暗色模式防复发守卫（浅底+浅字检查，失败即中止部署）...
+[warn] 正文内联浅底元素 194 处（已由 style.min.css 暗黑/浅色兜底规则覆盖，仅提示内容管线）
+✅ 暗色模式守卫通过：Quiz/排行页模板、loader.js、style.min.css 均无硬编码浅底
+✅ 暗色模式守卫通过
+
+[1.57/4] 🔧 TTS 朗读起点守卫（data-tts 内推荐卡必须 tts-skip，失败即中止部署）...
+
+结果: 通过（扫描 803 个 data-tts 页面，JS 规则与 tts-skip 均就位）
+✅ TTS 朗读守卫通过
+
+[1.6/4] 🔧 兜底修复残留CSS同步引用...
+fixed 38 files: upgraded synchronous <link> to inline-critical + async-preload
+versioned widget JS in 577 files
+✅ CSS引用修复完成
+
+[1.65/4] 🔒 闭环门禁（sitemap/页面一致性，失败即中止部署）...
+检查文件数: 1070
+  [PASS] 内部死链为 0  (发现 0 个: [])
+  [PASS] 全站单 h1  (异常 0: [])
+  [PASS] 有索引页面均有描述  (缺描述 0: [])
+  [PASS] noindex: favorites
+  [PASS] noindex: template
+  [PASS] noindex: 404
+  [PASS] sitemap 枢纽页齐全  (缺失: [])
+  [PASS] sitemap 覆盖全部已发布工具  (缺 0: [])
+  [PASS] sitemap 覆盖全部文章  (缺 0: [])
+  [PASS] 文章顶部工具卡(2.1)
+  [PASS] /ranking/ 无 Meta Refresh
+  [PASS] 无旧 quiz 死链  (仍引用 0)
+  [PASS] 对比页无死链  (死链 0)
+
+结果: 13 通过 / 0 失败
+✅ 闭环门禁通过（sitemap 与已发布工具一致）
+
+[2/4] 🔄 rsync 增量同步到服务器...
+  创建服务器端备份...
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+  ✅ 备份 → backups/backup_20260819_083816.tar.gz
+  检测变更文件...
+  共 58 个文件变更，开始增量上传...
+✅ git 增量同步完成（58 文件）
+  🧹 清理 tools/ 下未发布的陈旧孤儿目录（防止陈旧页重传线上）...
+    ✅ 无未发布目录，tools/ 干净
+  强制同步页面/数据目录（css js tools articles author live ranking quiz alternatives compare category dict ads）...
+  ✅ css/ 已同步
+  ✅ js/ 已同步
+  ✅ tools/ 已同步
+  ✅ articles/ 已同步
+  ✅ author/ 已同步
+  ✅ live/ 已同步
+  ✅ ranking/ 已同步
+  ✅ quiz/ 已同步
+  ✅ alternatives/ 已同步
+  ✅ compare/ 已同步
+  ✅ category/ 已同步
+  ✅ dict/ 已同步
+  ✅ ads/ 已同步
+  ✅ news/ 已同步
+  增量同步 assets/（仅上传新增/变更的图标与静态文件）...
+  ✅ assets/ 无需更新（752 个文件均已存在且大小一致）
+  增量同步 images/infographics/（仅上传新增/变更的对比信息图）...
+  ✅ images/infographics/ 无需更新（188 个文件均已存在且大小一致）
+  ✅ index.html 已同步
+  ✅ sitemap.xml 已同步
+  ✅ robots.txt 已同步
+  ✅ ads.txt 已同步
+  ✅ sw.js 已同步
+  ✅ manifest.json 已同步
+  ✅ data/tools.json 已同步
+  ✅ data/articles.json 已同步
+
+[2.9/4] 🔍 远端上线核验：服务器实际文件是否含广告加载器...
+  ✅ 线上抽样核验通过（各栏目首/尾页均含 loader）
+
+[3/4] 🔄 重载 Nginx...
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+✅ Nginx 已重载
+
+[4/4] 📤 Git 备份排名/数据变更...
+  无可提交变更
+
+===========================================
+  🎉 部署成功!
+  https://www.aitoollab.cn
+===========================================

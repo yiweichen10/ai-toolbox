@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260822-001",
+    "title": "SGLang 权重缓存守护实现亚秒级引擎重启",
+    "summary": "SGLang Weight Cache Daemon，零拷贝将权重加载从 495 秒降至 0.63 秒（785 倍），启动耗时减 93.9%，支持多实例共享。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "LMSYS：Blog（Chatbot Arena 团队）",
+    "source_url": "https://www.lmsys.org/blog/2026-08-21-sglang-fast-recovery",
+    "published_at": "2026-08-22T01:56:25+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260822-002",
+    "title": "Dreadnode 审计 22 个模型：37.1% 任务作弊",
+    "summary": "Dreadnode 审计 22 个前沿模型：37.1% 任务靠作弊，平均通过率 41.5% 而真实解决率仅 26.1%，加反作弊指令后仍有 8 个模型作弊。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://dreadnode.io/research/every-model-cheats-prompt-level-mitigation-of-cheating-on-offensive-cyber-tasks",
+    "published_at": "2026-08-21T17:25:43+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260822-003",
+    "title": "Anthropic 发布 AI 原生 SDLC 实战手册",
+    "summary": "Anthropic 发布 AI 原生 SDLC 实战手册，将六阶段流程重构为 AI 嵌入各环节闭环，以技能编码标准与持续评测替代阶段门禁，保留人工关键代码审查。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "Claude：Blog（网页）",
+    "source_url": "https://claude.com/blog/the-ai-native-sdlc-playbook",
+    "published_at": "2026-08-21T22:28:27+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260822-004",
+    "title": "面壁智能发布 MathForm：Lean 4 数学自动形式化",
+    "summary": "面壁智能 OpenBMB 发布 MathForm，FormalVerse 含 367K+ 已验证示例，Consistency Check 达 60.32%。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "Hugging Face：openbmb/MathForm-8B（模型卡）",
+    "source_url": "https://huggingface.co/openbmb/MathForm-8B",
+    "published_at": "2026-08-21T21:01:13+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260822-005",
+    "title": "美国民众对数据中心选址反对率升至 75%",
+    "summary": "Heatmap News 调查：75% 美国人反对在自家附近建数据中心，61% 强烈反对，一年前反对率仅 42%，与盖洛普 5 月民调（71% 反对）吻合。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "The Decoder：AI News（RSS）",
+    "source_url": "https://the-decoder.com/data-center-opposition-surged-from-42-to-75-percent-in-just-one-year-survey-finds",
+    "published_at": "2026-08-22T02:25:44+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260822-006",
+    "title": "Claude Mythos 5 安全能力扩展至更多防御者",
+    "summary": "Anthropic 宣布 Claude Mythos 5 集成至 Claude Security，推出 3500 万美元安全基金资助开源漏洞修复。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Claude：Blog（网页）",
+    "source_url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
+    "published_at": "2026-08-22T01:58:29+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260822-007",
+    "title": "Ling-3.0-flash 解码提速至 606 tok/s",
+    "summary": "蚂蚁与 RadixArk 将 Ling-3.0-flash 解码提速至 606 tok/s（原 288），TPOT 由 3.33 ms 降至 1.53 ms。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "LMSYS：Blog（Chatbot Arena 团队）",
+    "source_url": "https://www.lmsys.org/blog/2026-08-21-ling3-flash-spec-decode-blackwell",
+    "published_at": "2026-08-22T01:56:25+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260822-008",
+    "title": "AutoFigure：从文本描述自动生成科学图表",
+    "summary": "教程演示用 AutoFigure 将文本描述与论文内容直接生成出版级科学图表，支持 SVG/PNG 渲染、PDF 导出与画廊归档。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "MarkTechPost（RSS）",
+    "source_url": "https://www.marktechpost.com/2026/08/21/building-agentic-document-intelligence-pipelines-creating-scientific-figures-with-autofigure",
+    "published_at": "2026-08-22T06:00:25+08:00",
+    "tags": [
+      "opinion"
+    ]
+  }
+]

@@ -1,0 +1,613 @@
+[
+  {
+    "name": "jcode",
+    "slug": "jcode",
+    "positioning": "用 Rust 编写的开源终端编程 Agent 编排框架（harness），主打多会话线性扩展与极低资源占用，让笔记本也能并行驱动十几个 coding agent 流。",
+    "auto_positioning": false,
+    "emoji": "🦀",
+    "color": "#CE422B",
+    "description": "jcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目位于 github.com/1jehuang/jcode，采用 MIT 许可证。它定位为“下一代编码智能体 Harness”，位于 Claude、GPT、Codex 等模型与代码仓库之间，用 Rust 把每个会话的内存占用压到极低，解决多会话并行时内存爆掉、机器卡顿的痛点，支持 TUI、非交互运行、后台 server/client、语义记忆与多 Provider。",
+    "category": "AI编程",
+    "tags": [
+      "AI编程",
+      "终端Agent",
+      "Rust",
+      "多会话",
+      "开源",
+      "AI Swarm"
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "暂无数据",
+    "badge": "开源 · Rust",
+    "url": "https://github.com/1jehuang/jcode",
+    "price": "免费开源（MIT），无商业套餐",
+    "platform": "Linux / macOS / Windows（终端）",
+    "pros": [
+      "Rust 原生实现，启动毫秒级、单会话内存占用极小",
+      "多会话线性扩展，每新增一个会话仅多消耗约 10MB 内存",
+      "支持 40+ 模型 Provider，按会话切换模型与参数",
+      "内置语义记忆与 Swarm 多智能体协同，原生处理并发提交",
+      "开源 MIT，可自定义 harness 行为与工具链"
+    ],
+    "cons": [
+      "项目仍快速迭代，生态与文档规模相对有限",
+      "多会话/语义记忆等高级能力需要一定配置与学习成本",
+      "仅本地终端形态，缺少开箱即用的图形化管理界面"
+    ],
+    "features": [
+      "多会话 Swarm：同一仓库并行驱动多个 agent 流，无需 git worktree",
+      "Rust 原生性能：极低启动延迟与内存占用，适合笔记本与受限环境",
+      "语义记忆：对话编码为向量，余弦相似度检索相关上下文",
+      "40+ 模型 Provider：OAuth 接入多家模型，按会话配置",
+      "终端一体化：TUI、非交互运行、后台 server/client、语音输入与浏览器工具",
+      "内置 Mermaid 渲染引擎与侧边信息面板"
+    ],
+    "related": [
+      "openai",
+      "langchain",
+      "vllm"
+    ],
+    "content": "## jcode 是什么？\n\njcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目地址 github.com/1jehuang/jcode，采用 MIT 许可证。它把自己定位为“下一代编码智能体 Harness”：不是又一个聊天式 AI 助手，而是位于 Claude、GPT、Codex 等模型与你的代码仓库之间的一层轻量编排器。它的核心问题是——当你同时跑多个 coding agent 会话时，Node/Python 类的工具会迅速吃光内存、拖慢机器，而 jcode 用 Rust 把每个会话的资源占用压到极低，让你能在笔记本上并行驱动十几个 agent 流而不卡顿。\n\n## 核心功能\n\n1. 多会话 Swarm：在同一仓库里启动多个并行 agent 流，各自持有独立上下文，原生处理并发提交，无需 git worktree。\n2. Rust 原生性能：启动毫秒级、内存占用极小，适合笔记本和资源受限的开发机。\n3. 语义记忆：把每轮对话编码为向量，用余弦相似度检索相关上下文，模拟人类的“记得之前聊过什么”。\n4. 40+ 模型 Provider：通过 OAuth 接入多家模型，按会话切换模型与参数。\n5. 终端一体化：提供 TUI、非交互运行、后台 server/client、语音输入与浏览器工具，并内置 Mermaid 渲染。\n\n## 版本/套餐对比\n\njcode 为开源免费项目（MIT），无商业套餐；个人从源码或 Homebrew 安装即可使用，不存在付费档位。\n\n## 值不值得用？\n\n如果你只是偶尔让 AI 改几行代码，jcode 的复杂度未必划算；但如果你已经在“一个终端开五个 Claude Code、内存爆掉”的阶段，jcode 的多会话线性扩展几乎是刚需。它的强项是用极低的边际成本把“并行 agent”从炫技变成日常工作流，而不是堆功能。\n\n## 使用建议\n\n先用 Homebrew（brew tap 1jehuang/jcode && brew install jcode）或官方一键脚本装好；把常用任务拆成独立会话并行跑；开启语义记忆减少重复解释项目背景；需要可视化时在侧边面板看 Mermaid 与 Info Widgets。注意它仍在快速迭代，建议关注 GitHub Releases 的变更说明，避免用到的命令在新版本被调整。\n\n## 适合谁用？\n\n- 进阶开发者：同时维护多个 AI 编程会话、受内存与受启动速度困扰的人。\n- 小团队技术负责人：需要把大型任务拆解给多个 agent 并行完成的场景。\n- 开源爱好者：想自定义 harness 行为、接入自有模型与工具链的人。",
+    "published": false,
+    "faq": [
+      {
+        "question": "jcode 和普通 coding agent 有什么区别？",
+        "answer": "jcode 不是模型，而是编排层（harness）。它把 Claude、GPT、Codex 等模型接进来，重点解决多会话并行时的资源开销与协同，而不是提供另一个聊天界面。"
+      },
+      {
+        "question": "jcode 需要付费吗？",
+        "answer": "不需要。jcode 是 MIT 许可证的开源项目，免费使用，也没有商业套餐，成本只在于你调用的模型 API 费用。"
+      },
+      {
+        "question": "它支持哪些模型？",
+        "answer": "jcode 支持 40+ 模型 Provider，可通过 OAuth 接入，并能按会话分别配置模型与参数。"
+      },
+      {
+        "question": "多会话会互相干扰吗？",
+        "answer": "不会。jcode 原生处理并发提交，每个 agent 流持有独立上下文，仓库内多个 agent 同时工作也无需 git worktree 隔离。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "jcode",
+      "Rust编程Agent",
+      "多会话AI编程",
+      "coding agent harness",
+      "AI Swarm"
+    ],
+    "source_urls": [
+      "https://github.com/1jehuang/jcode",
+      "https://jcode.sh",
+      "https://dev.to/terminalchai/jcode-the-rust-native-agent-harness-for-multi-session-development-l4g"
+    ],
+    "confidence": "medium",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "gstack",
+    "slug": "gstack",
+    "positioning": "Y Combinator CEO Garry Tan 公开的开源 Claude Code 配置集，把 23 个专家角色与 8 个强力工具以斜杠命令形式打包，将单人 Claude Code 变成一支虚拟工程团队。",
+    "auto_positioning": false,
+    "emoji": "🏗️",
+    "color": "#F59E0B",
+    "description": "gstack 是 Y Combinator 现任 CEO Garry Tan 公开的开源 Claude Code 配置集，仓库位于 github.com/garrytan/gstack，采用 MIT 许可证。它把 Garry 本人日常使用的 Claude Code 设置完整开源——23 个主张明确的专家角色（CEO、设计师、工程经理、QA、安全官、发布工程师等）和 8 个强力工具，全部以 Markdown 斜杠命令存在，按 Think→Plan→Build→Review→Test→Ship→Reflect 的冲刺流程推进项目。",
+    "category": "AI编程",
+    "tags": [
+      "Claude Code",
+      "AI配置包",
+      "开源",
+      "提示词工程",
+      "vibe coding",
+      "虚拟团队"
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "暂无数据",
+    "badge": "开源 · YC CEO 出品",
+    "url": "https://github.com/garrytan/gstack",
+    "price": "免费开源（MIT），无付费版本",
+    "platform": "Claude Code（macOS / Linux / Windows）",
+    "pros": [
+      "23 个专家角色即开即用，覆盖从产品到发布的全流程",
+      "MIT 免费开源，团队可通过提交配置共享同一套流程",
+      "流程化冲刺（Think→Ship），避免并行 agent 变成混乱来源",
+      "与 Greptile 集成做双层 PR 审查，减少漏网 bug",
+      "强 opinionated 的默认设置，降低“该怎么用 AI”的决策成本"
+    ],
+    "cons": [
+      "仅限 Claude Code 环境，不兼容其他 coding agent",
+      "命令与流程较多，初上手需要学习与适应",
+      "默认流程相当武断，未必适合所有团队的工作方式"
+    ],
+    "features": [
+      "23 个专家斜杠命令：/office-hours 重新框定问题，/plan-ceo-review 挑战范围",
+      "8 个强力工具：/review 找出通过 CI 却会炸在生产的 bug，/ship 同步测试开 PR",
+      "流程化冲刺：技能按真实工程 sprint 排序，逐环喂给下一环",
+      "Greptile 双层审查：/review 与 /ship 读取并分类处理 PR 评论",
+      "浏览器与测试：内置无头 Chromium 的 /browse 与真实点击的 /qa",
+      "生产护栏：/careful、/freeze、/guard 组合约束危险操作"
+    ],
+    "related": [
+      "openai",
+      "langchain",
+      "langsmith"
+    ],
+    "content": "## gstack 是什么？\n\ngstack 是 Y Combinator 现任 CEO Garry Tan 公开的开源 Claude Code 配置集，仓库位于 github.com/garrytan/gstack，采用 MIT 许可证。它把 Garry 本人日常使用的 Claude Code 设置完整开源——23 个主张明确的专家角色（从 CEO、设计师、工程经理到 QA、安全官、发布工程师）和 8 个强力工具，全部以 Markdown 斜杠命令的形式存在。本质上，gstack 把“一个通用 AI 助手”重构成“一支虚拟工程团队”，让单人开发者也能按 Think→Plan→Build→Review→Test→Ship→Reflect 的冲刺流程推进项目。\n\n## 核心功能\n\n1. 23 个专家角色：/office-hours 重新框定产品问题，/plan-ceo-review 挑战范围，/plan-eng-review 锁定架构。\n2. 8 个强力工具：/review 找出通过 CI 却会炸在生产的 bug，/ship 同步、测试、开 PR。\n3. 流程化冲刺：技能按真实工程 sprint 排序，每个技能喂给下一个，避免并行 agent 变成混乱来源。\n4. Greptile 双层审查：/review 与 /ship 读取 Greptile 的 PR 评论并分类处理，有效问题进关键发现。\n5. 浏览器与测试：内置无头 Chromium 的 /browse 与 /qa，用真实浏览器点真实 bug。\n\n## 版本/套餐对比\n\ngstack 完全免费开源（MIT），无付费版本；安装即用，团队可通过提交 .claude/skills/gstack 共享同一套配置。\n\n## 值不值得用？\n\n如果你的工作方式是“丢一句话给 Claude Code 等代码”，gstack 会明显改变你的产出质量——它逼你在写代码前先想清楚产品与架构，并在合并前多层审查。代价是学习一堆斜杠命令、接受它相当“武断”的默认流程。对严肃做产品的独立开发者和小团队，性价比极高。\n\n## 使用建议\n\n`git clone https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd ~/.claude/skills/gstack && ./setup`，然后在 CLAUDE.md 里加入 gstack 段；从 /office-hours 起步，按流程走到 /ship；想给生产环境加护栏就用 /careful、/freeze、/guard 组合。团队共享时把 .claude/skills/gstack 提交进仓库，队友跑一次 setup 即可。\n\n## 适合谁用？\n\n- 独立开发者 / 创始人：想“像二十人团队一样交付”的个人。\n- 小团队：希望把评审、测试、部署流程标准化的工程组。\n- 追求流程纪律的人：认可“无流程的 10 个 agent = 10 个混乱源”的理念者。",
+    "published": false,
+    "faq": [
+      {
+        "question": "gstack 是模型还是工具？",
+        "answer": "gstack 既不是模型也不是独立软件，而是一套 Claude Code 的配置与技能包（Markdown 斜杠命令），把 Claude Code 改造成虚拟工程团队。"
+      },
+      {
+        "question": "使用 gstack 要花钱吗？",
+        "answer": "不需要。gstack 采用 MIT 许可证完全免费开源，你只需承担 Claude Code 本身的订阅与模型 API 费用。"
+      },
+      {
+        "question": "它只能在 Claude Code 里用吗？",
+        "answer": "是的，gstack 是为 Claude Code 设计的配置集，无法直接在 Cursor、Codex 等其他 coding agent 中使用。"
+      },
+      {
+        "question": "团队怎么共享同一套 gstack？",
+        "answer": "把 ~/.claude/skills/gstack 复制到仓库的 .claude/skills/gstack 并提交，队友执行一次 setup 即可获得完全相同的流程与角色。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "gstack",
+      "Garry Tan",
+      "Claude Code配置",
+      "AI软件工厂",
+      "虚拟工程团队"
+    ],
+    "source_urls": [
+      "https://github.com/garrytan/gstack",
+      "https://weihaoqu.github.io/learnAIDoc/wiki/gstack-ai-software-factory",
+      "https://gstacks.org/tw"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "ngrok AI Gateway",
+    "slug": "ngrok-ai-gateway",
+    "positioning": "ngrok 推出的托管式 AI 网关（ngrok.ai），用一个 key 一个 URL 统一路由 OpenAI、Anthropic 与自托管模型，内置可观测性、访问控制与故障回退。",
+    "auto_positioning": false,
+    "emoji": "🔀",
+    "color": "#6B46C1",
+    "description": "ngrok AI Gateway（ngrok.ai）是 ngrok 在 2026 年 8 月推出的托管式 AI 网关，于 8 月 5 日登上 Product Hunt 当日第 4 名。它解决“多模型混用时代每家一个 key、一套配置”的接入痛点：给你一个托管网关和一把访问密钥，把 OpenAI、Anthropic、自托管模型以及你自己硬件上跑的模型统一到一个 URL 下路由，私有模型通过 ngrok 网络接入而无需暴露公网。",
+    "category": "AI开发",
+    "tags": [
+      "AI网关",
+      "多模型路由",
+      "可观测性",
+      "OpenAI",
+      "Anthropic",
+      "故障回退"
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "暂无数据",
+    "badge": "Product Hunt #4",
+    "url": "https://ngrok.ai/",
+    "price": "免费起步，按需计费（具体定价以官网为准）",
+    "platform": "Web / API（云端托管）",
+    "pros": [
+      "一个 URL 统一路由 OpenAI、Anthropic 与自托管模型，无需重写应用",
+      "私有模型接入而不暴露到公网，安全性更好",
+      "统一可观测：token、延迟、错误、成本集中到一个面板",
+      "按应用/开发者签发访问密钥，细粒度控制可调用的供应商与模型",
+      "内置故障回退，模型或 key 失败时自动切到健康备援"
+    ],
+    "cons": [
+      "把模型流量又多托付给一层中间件，引入额外依赖",
+      "用量计费需要持续盯紧，避免账单失控",
+      "产品较新（2026 年 8 月刚发布），长期稳定性有待观察"
+    ],
+    "features": [
+      "统一 URL 路由：把 SDK 指向 gateway.ngrok.ai 即可在多家模型间切换",
+      "私有模型接入：本地 GPU / 内网模型经 ngrok 网络接入，不开端口不暴露公网",
+      "用量可观测：token、延迟、错误、模型、供应商与预估成本一屏掌握",
+      "访问控制：按应用或开发者签发独立密钥并限定可调用的模型",
+      "故障回退：定义模型列表，失败时自动尝试下一个健康备援",
+      "兼容 OpenAI / Anthropic / Vercel AI 等主流 SDK"
+    ],
+    "related": [
+      "openai",
+      "langchain",
+      "vllm"
+    ],
+    "content": "## ngrok AI Gateway 是什么？\n\nngrok AI Gateway（ngrok.ai）是 ngrok 在 2026 年 8 月推出的托管式 AI 网关，于 8 月 5 日登上 Product Hunt 当日第 4 名。它解决的是“多模型混用时代每家一个 key、一套配置”的接入痛点：给你一个托管网关和一把访问密钥，把 OpenAI、Anthropic、自托管模型以及你自己硬件上跑的模型统一到一个 URL 下路由。你的私有模型通过 ngrok 网络接入，既能和托管模型并列调度，又不必暴露到公网。\n\n## 核心功能\n\n1. 统一 URL 路由：把 SDK 指向 gateway.ngrok.ai，即可在 OpenAI、Anthropic、自托管模型间切换，无需重写应用。\n2. 私有模型接入：把跑在笔记本、本地 GPU 或私有网络上的模型接进来，不开端口、不暴露公网。\n3. 用量可观测：在一个面板追踪 token、延迟、错误、模型、供应商与预估成本，告别多个 provider 仪表盘来回切。\n4. 访问控制：按应用或开发者签发独立访问密钥，限定每个密钥可调用的供应商与模型。\n5. 故障回退：定义模型列表，当某个模型或 key 失败时自动尝试下一个健康备援。\n\n## 版本/套餐对比\n\nngrok AI Gateway 提供免费起步的托管层（可自带 OpenAI/Anthropic key，或用 ngrok 额度代发请求）；具体付费档位与额度以官网为准，本页不臆测价格。\n\n## 值不值得用？\n\n对已经在 juggling 多个 provider key、又不想自己搭一套网关的团队，ngrok.ai 几乎是降维打击——它把“模型路由 + 私有连通 + 可观测 + 回退”打包成基础设施，而不是又一个要维护的内部项目。代价是你把模型流量又多托付给一层中间件，用量计费需要盯紧，且产品本身较新。\n\n## 使用建议\n\n先把所有 provider key 收拢到 ngrok.ai 的一个网关下；用独立密钥给不同应用/开发者做权限隔离；在网关层配好回退顺序；把用量面板接进现有监控。它尤其适合“模型策略频繁变动”的阶段，用来吸收变化而不动应用代码。\n\n## 适合谁用？\n\n- 平台 / 基础设施团队：不想每次换模型都重搭一套网关。\n- 跑私有模型的开发者：需要把本地/内网模型安全接进生产。\n- 多模型策略团队：要在 OpenAI、Anthropic 与自托管之间灵活切换者。",
+    "published": false,
+    "faq": [
+      {
+        "question": "ngrok AI Gateway 和普通 AI 网关有什么不同？",
+        "answer": "它依托 ngrok 已有的网络能力，强调“私有模型不暴露公网”的安全接入，同时把路由、可观测、访问控制与回退做成开箱即用的托管层，而非需要自建的组件。"
+      },
+      {
+        "question": "可以自带模型 key 吗？",
+        "answer": "可以。你既能用 ngrok 的额度代发请求，也能带入自己的 OpenAI、Anthropic 或自定义 provider key，只把 ngrok.ai 当作统一入口与可观测层。"
+      },
+      {
+        "question": "它兼容哪些 SDK？",
+        "answer": "ngrok.ai 兼容 OpenAI、Anthropic、Vercel AI 等主流 SDK，把端点指向 gateway.ngrok.ai 即可，无需为切换模型重写应用。"
+      },
+      {
+        "question": "私有模型是怎么接入的？",
+        "answer": "私有模型通过 ngrok 网络接入网关，运行在笔记本、本地 GPU 或私有网络上，对外不需要开端口或暴露公网地址。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "ngrok AI Gateway",
+      "AI网关",
+      "多模型路由",
+      "LLM网关",
+      "AI可观测性"
+    ],
+    "source_urls": [
+      "https://ngrok.ai/",
+      "https://ngrok.com/",
+      "https://www.hunted.space/product/ngrok-ai-gateway",
+      "https://ainativefoundation.org/ai-native-product-insights-2026w32"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "AI Spend Console by Rippling",
+    "slug": "rippling-ai-spend",
+    "positioning": "Rippling 推出的 AI 支出管理台，把 Claude、Cursor 等工具的花费汇总并按供应商/模型/员工拆分，再关联 GitHub 产出衡量 AI 投入的 ROI。",
+    "auto_positioning": false,
+    "emoji": "💸",
+    "color": "#2563EB",
+    "description": "AI Spend Console 是人力资源与 IT 平台 Rippling 在 2026 年 8 月 6 日推出的 AI 支出管理台，当天登上 Product Hunt 第 2 名。它面向财务与工程负责人，把分散在 Claude、Cursor 等 AI 工具上的花费汇总到一个地方，并按供应商、模型、员工维度拆分，再把支出和 GitHub 的实际产出（PR 数量、代码修订量）关联起来，试图回答“我们花在 AI 上的钱到底值不值”，且可免费开始、无需订阅 Rippling。",
+    "category": "AI效率",
+    "tags": [
+      "AI支出",
+      "成本管理",
+      "ROI",
+      "Claude",
+      "Cursor",
+      "可观测"
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "暂无数据",
+    "badge": "Product Hunt #2",
+    "url": "https://rippling.com/",
+    "price": "免费开始，无需订阅 Rippling（完整定价以官网为准）",
+    "platform": "Web",
+    "pros": [
+      "跨工具支出追踪，把 Claude、Cursor 等 AI 花费集中到一处",
+      "按供应商、模型、员工多维拆分成本，定位异常用量",
+      "关联 GitHub 产出（PR 量、代码修订量），量化 AI 投入 ROI",
+      "AI 问答式洞察，可直接追问“这笔花费从哪来”",
+      "可免费开始使用，无需 Rippling 订阅"
+    ],
+    "cons": [
+      "洞察质量高度依赖数据接入的完整度",
+      "更深的企业治理与对接能力通常需走上付费企业版",
+      "作为 2026 年 8 月新发布产品，长期演进尚待观察"
+    ],
+    "features": [
+      "跨工具 AI 支出追踪：聚合 Claude、Cursor 等工具的花费",
+      "多维拆分：按供应商、模型、员工分别拆解成本",
+      "关联业务产出：对接 GitHub 数据（PR 量、代码修订量）衡量 ROI",
+      "AI 问答式洞察：直接追问花费来源与背后逻辑",
+      "集中仪表盘：一屏看全公司 AI 用量趋势与异常",
+      "免费起步：无需订阅 Rippling 即可使用"
+    ],
+    "related": [
+      "openai",
+      "langsmith",
+      "langchain"
+    ],
+    "content": "## AI Spend Console by Rippling 是什么？\n\nAI Spend Console 是人力资源与 IT 平台 Rippling 在 2026 年 8 月 6 日推出的 AI 支出管理台，当天登上 Product Hunt 第 2 名。它面向财务与工程负责人，把分散在 Claude、Cursor 等 AI 工具上的花费汇总到一个地方，并按供应商、模型、员工维度拆分，再把支出和 GitHub 的实际产出（PR 数量、代码修订量）关联起来，试图回答那个最难的问题：“我们花在 AI 上的钱，到底值不值？”关键是它可以免费开始，无需订阅 Rippling。\n\n## 核心功能\n\n1. 跨工具支出追踪：把 Claude、Cursor 等 AI 工具的花费集中到一处。\n2. 多维拆分：按供应商、模型、员工分别拆解成本。\n3. 关联业务产出：把支出对接 GitHub 数据（PR 量、代码修订量），衡量 ROI。\n4. AI 问答式洞察：直接问“这笔花费从哪来、是什么导致的”，回溯到具体洞察。\n5. 集中仪表盘：在一个面板看全公司的 AI 用量趋势与异常。\n\n## 版本/套餐对比\n\nAI Spend Console 可免费开始使用，且无需 Rippling 订阅；更深的企业治理与对接能力以官网定价为准，本页不臆测具体档位。\n\n## 值不值得用？\n\n当公司每个月 AI 账单从几百涨到几万、却没人能说清钱花哪了，这个控制台就是及时的“对账工具”。它的价值不在炫技，而在把“AI 支出”从黑盒变成可解释、可追责的资产。早期产品的功能是够用的，但深度治理通常要走上付费企业版。\n\n## 使用建议\n\n先免费接入你最常用的 AI 工具（Claude、Cursor 等），按员工维度看谁在用、用多少；再把支出和团队的 GitHub 产出对照，识别“高花费低产出”的环节；用异常告警盯住突发用量。注意它的洞察质量取决于数据接入的完整度，接得越全越准。\n\n## 适合谁用？\n\n- 财务负责人：需要向管理层解释 AI 预算去向。\n- 工程管理者：想量化团队 AI 工具的真实产出。\n- 成长期公司：AI 支出快速膨胀、急需统一视图者。",
+    "published": false,
+    "faq": [
+      {
+        "question": "AI Spend Console 需要订阅 Rippling 才能用吗？",
+        "answer": "不需要。它可以免费开始使用，且不强制要求 Rippling 订阅，适合先单独试用 AI 支出追踪能力。"
+      },
+      {
+        "question": "它支持哪些 AI 工具？",
+        "answer": "官方示例覆盖了 Claude、Cursor 等常见 AI 编程与生产力工具，按供应商、模型、员工维度汇总其花费。"
+      },
+      {
+        "question": "ROI 是怎么算出来的？",
+        "answer": "它把 AI 支出与 GitHub 的产出数据（如 PR 数量、代码修订量）关联，用统一视图回答“花出去的钱对应了多少工程产出”。"
+      },
+      {
+        "question": "能不能限制员工的 AI 用量？",
+        "answer": "社区讨论中提到了按员工维度追踪与潜在聚合限额的需求；具体策略控制能力以 Rippling 官方功能为准。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Rippling AI Spend",
+      "AI支出追踪",
+      "AI成本管理",
+      "AI ROI",
+      "Claude Cursor花费"
+    ],
+    "source_urls": [
+      "https://rippling.com/",
+      "https://www.hunted.space/dashboard/rippling",
+      "https://www.hunted.space/product/rippling"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "LangWatch",
+    "slug": "langwatch",
+    "positioning": "开源的 LLMOps 平台，专注 AI Agent 的测试、观测与评估，通过全链路追踪与端到端仿真在出错前抓到幻觉与无依据回答。",
+    "auto_positioning": false,
+    "emoji": "👁️",
+    "color": "#10B981",
+    "description": "LangWatch 是一个开源的 LLMOps 平台，专注 AI Agent 的测试、观测与评估，仓库位于 github.com/langwatch，核心采用 Apache-2.0 许可证。它的目标是帮团队“在用户之前抓到边缘 case”——通过全链路追踪、端到端 Agent 仿真与数据集评估，让生产环境中的幻觉、无依据回答和 Token 浪费在出错前就被发现。它支持 Python / JS / TS，既提供云端免费层，也能用 Docker 完全自托管。",
+    "category": "AI开发",
+    "tags": [
+      "LLMOps",
+      "可观测性",
+      "评估",
+      "Agent测试",
+      "开源",
+      "OpenTelemetry"
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "暂无数据",
+    "badge": "开源",
+    "url": "https://langwatch.ai/",
+    "price": "开源免费（Apache-2.0），企业版定价以官网为准",
+    "platform": "Web / 自托管（Docker）/ Python / JS / TS",
+    "pros": [
+      "开源可自托管（Apache-2.0），数据主权与可控性强",
+      "端到端 Agent 仿真，定位 agent 在哪一步、为什么崩",
+      "OpenTelemetry 原生，框架与模型提供商无关，接入成本低",
+      "非技术成员也能用标注队列参与质量评审",
+      "支持 Python / JS / TS 与主流 agent 框架"
+    ],
+    "cons": [
+      "自托管需要一定的运维与基础设施投入",
+      "功能面较广，初次上手有一定学习曲线",
+      "更深入的治理与合规通常要走上企业版"
+    ],
+    "features": [
+      "全链路 Tracing：自动记录每次 LLM 调用、工具使用与用户交互",
+      "Agent 仿真测试：用真实场景（工具、状态、用户模拟器、评审器）跑端到端仿真",
+      "评估与数据集：批量评估、回归测试与 DSPy 实验，持续改进质量",
+      "Prompt 管理：prompt 留在 Git 中，prompt 版本关联 trace",
+      "OpenTelemetry 原生：兼容任何 OpenTelemetry 库，框架/模型无关",
+      "云 / 自托管双形态：云端免费层或 Docker / OnPrem 部署"
+    ],
+    "related": [
+      "langsmith",
+      "langchain",
+      "openai"
+    ],
+    "content": "## LangWatch 是什么？\n\nLangWatch 是一个开源的 LLMOps 平台，专注 AI Agent 的测试、观测与评估，仓库位于 github.com/langwatch，核心采用 Apache-2.0 许可证。它的目标是帮团队“在用户之前抓到边缘 case”——通过全链路追踪、端到端 Agent 仿真与数据集评估，让生产环境中的幻觉、无依据回答和 Token 浪费在出错前就被发现。它支持 Python / JS / TS，既提供云端免费层，也能用 Docker 完全自托管，避免数据锁定。\n\n## 核心功能\n\n1. 全链路 Tracing：自动记录每次 LLM 调用、工具使用与用户交互，看清 agent 的真实行为。\n2. Agent 仿真测试：用真实场景（工具、状态、用户模拟器、评审器）跑端到端仿真，定位 agent 在哪一步、为什么崩。\n3. 评估与数据集：批量评估、回归测试与 DSPy 实验，持续提高质量。\n4. Prompt 管理：把 prompt 留在 Git 里，prompt 版本关联 trace，非技术成员也能标注边缘案例。\n5. OpenTelemetry 原生：框架与模型提供商无关，能和现有 LLM 应用 / agent 框架直接打通。\n\n## 版本/套餐对比\n\nLangWatch 开源免费（Apache-2.0），可自托管；同时提供云端免费层与企业版（含 ISO 27001、混合部署、优先支持），具体价格以官网为准。\n\n## 值不值得用？\n\n如果说“把 agent 跑起来”已经不难，那“让 agent 稳定、可解释、可改进”才是真正的工程难点。LangWatch 把观测、测试、评估做成一套协作平台，让工程师、数据科学家和业务方能在同一处看质量。自托管要付出运维成本，但换来了数据主权与可控性，对要走生产的企业很划算。\n\n## 使用建议\n\n先用云端免费层跑通第一次 trace 与第一次仿真；把关键场景沉淀成评估数据集做回归；让领域专家用标注队列参与质量评审；需要数据驻留时切到 Docker / OnPrem 自托管。OpenTelemetry 原生意味着接入成本很低，不必大改现有代码。\n\n## 适合谁用？\n\n- 生产级 Agent 团队：需要可观测性与回归测试。\n- AI 工程师：要调试、评估并持续迭代 agent。\n- 业务 / 领域专家：想参与标注与质量评审、而不写代码的人。",
+    "published": false,
+    "faq": [
+      {
+        "question": "LangWatch 和 LangSmith 是什么关系？",
+        "answer": "两者都做 LLM 可观测与评估，是竞争关系。LangWatch 以开源、自托管和端到端 Agent 仿真见长，强调数据主权与不锁定。"
+      },
+      {
+        "question": "它要收费吗？",
+        "answer": "核心平台 Apache-2.0 开源免费，可自托管；云端有免费层，更深入的企业功能（合规、混合部署、优先支持）走企业版，具体价格见官网。"
+      },
+      {
+        "question": "支持哪些语言和框架？",
+        "answer": "提供 Python、JavaScript、TypeScript SDK，并基于 OpenTelemetry 原生，能对接任意 LLM 应用与 agent 框架。"
+      },
+      {
+        "question": "非技术人员能用吗？",
+        "answer": "可以。LangWatch 的标注队列与协作界面让领域专家无需写代码就能评审对话、标注边缘案例并参与质量改进。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "LangWatch",
+      "LLMOps",
+      "Agent可观测",
+      "AI评估平台",
+      "开源LLM监控"
+    ],
+    "source_urls": [
+      "https://langwatch.ai/",
+      "https://langwatch.ai/docs/",
+      "https://github.com/langwatch"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Skrun",
+    "slug": "skrun",
+    "positioning": "开源的 Agent 运行时，把 Claude Code 等环境里的 Agent Skill（SKILL.md）变成可被 POST 请求调用的 HTTP 端点，实现“技能即服务”。",
+    "auto_positioning": false,
+    "emoji": "🔌",
+    "color": "#0EA5E9",
+    "description": "Skrun 是一个开源的 Agent 运行时，由日内瓦开发者 Ian Bernardo（GitHub 昵称 frizull）与同事 Tarcroi 创建，2026 年 4 月 8 日以 Show HN 形式发布，仓库位于 github.com/skrun-dev/skrun，采用 MIT 许可证。它的核心洞见是：你在 Claude Code、Copilot、Codex 里攒的 Agent Skill（SKILL.md）被困在各自工具里，不能被产品用 POST 请求调用；Skrun 把这些技能变成可调用的 HTTP 端点，让“技能即服务”成为现实。",
+    "category": "AI开发",
+    "tags": [
+      "Agent技能",
+      "API",
+      "开源",
+      "MCP",
+      "多模型",
+      "自托管"
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "暂无数据",
+    "badge": "开源 · Show HN",
+    "url": "https://github.com/skrun-dev/skrun",
+    "price": "免费开源（MIT），云部署定价未定",
+    "platform": "自托管（CLI / API，macOS / Linux / Windows）",
+    "pros": [
+      "把 SKILL.md 变成 API 极简，几分钟拿到可调用端点",
+      "多模型支持（Anthropic / OpenAI / Google / Mistral / Groq）+ 自动回退",
+      "有状态 Agent：用键值状态在多次运行间记住上下文",
+      "可接入 CLI 工具与任意 MCP server 扩展能力",
+      "MIT 开源，自托管即可，无供应商锁定"
+    ],
+    "cons": [
+      "早期项目，社区与生态规模还比较小",
+      "公开部署存在 prompt injection 等安全风险（官方沙箱方案仍在规划）",
+      "需自托管与运维，调用方要自己管契约与版本"
+    ],
+    "features": [
+      "SKILL.md → API：一条 init 加 deploy，把技能暴露成 POST /run 端点",
+      "多模型 + 自动回退：在 agent.yaml 选 provider，失败自动切下一个",
+      "有状态 Agent：用键值状态在多次运行间持久化上下文",
+      "工具调用：可捆绑自有 CLI 脚本，或接入任意 MCP server（如 Playwright）",
+      "类型化 I/O：定义结构化输入输出，保证 API 交互可靠",
+      "CLI 管理：10 条 CLI 命令负责初始化、测试与部署"
+    ],
+    "related": [
+      "openai",
+      "langchain",
+      "langsmith"
+    ],
+    "content": "## Skrun 是什么？\n\nSkrun 是一个开源的 Agent 运行时，由日内瓦的开发者 Ian Bernardo（GitHub 昵称 frizull）与同事 Tarcroi 创建，2026 年 4 月 8 日以 Show HN 形式发布，仓库位于 github.com/skrun-dev/skrun，采用 MIT 许可证。它的核心洞见很朴素：你在 Claude Code、Copilot、Codex 里攒了一大堆 Agent Skill（SKILL.md），但它们被困在各自的工具里，不能被产品用 POST 请求调用。Skrun 把这些技能变成可调用的 HTTP 端点，让“技能即服务”成为现实。\n\n## 核心功能\n\n1. SKILL.md → API：一条 `skrun init --from-skill` 加 `skrun deploy`，就把技能暴露成 POST /run 端点。\n2. 多模型 + 自动回退：在 agent.yaml 里选 Anthropic / OpenAI / Google / Mistral / Groq，失败自动切下一个。\n3. 有状态 Agent：用键值状态在多次运行间记住上下文。\n4. 工具调用：可捆绑自有 CLI 脚本，或接入任意 MCP server（如 Playwright）。\n5. 类型化 I/O 与 CLI：定义结构化输入输出，配套 10 条 CLI 命令管理部署。\n\n## 版本/套餐对比\n\nSkrun 完全免费开源（MIT），自托管即可；托管的云部署（沙箱 VM、调用方自带 key）仍在路线图中，具体商业化定价未定。\n\n## 值不值得用？\n\n如果你有一堆写好的 Skill 却只能手动触发，Skrun 是把它们“产品化”的最短路径——几分钟内就能拿到一个可被 webhook、后端或服务调用的 API。它的代价是早期项目的生态规模还小，且公开部署存在 prompt injection 等安全风险（官方也承认这点，沙箱方案在规划中）。\n\n## 使用建议\n\n先用 `npm install -g @skrun-dev/cli` 装好 CLI；把现有的 SKILL.md 通过 init 导入生成 agent.yaml；本地 `skrun dev` 起开发服务器测试；需要对外暴露时务必等沙箱方案成熟再上公网。多模型回退能缓解单点故障，但记得为跨技能的数据边界设好权限。\n\n## 适合谁用？\n\n- AI 开发者：想把自己的 Skill 变成可调用服务。\n- 初创 / 小团队：需要快速把 agent 能力拼进产品。\n- DevOps：关注 API 契约、版本与治理的部署者。",
+    "published": false,
+    "faq": [
+      {
+        "question": "Skrun 和普通 Agent 框架有什么不同？",
+        "answer": "Skrun 不重新定义 agent，而是把已有的 Agent Skill（SKILL.md）变成标准 HTTP 端点，强调“技能即服务”与可组合调用，而非再造一个编排框架。"
+      },
+      {
+        "question": "它收费吗？",
+        "answer": "不收费。Skrun 采用 MIT 许可证完全开源，自托管即可使用；托管的云部署仍在路线图，商业化定价尚未确定。"
+      },
+      {
+        "question": "公开部署安全吗？",
+        "answer": "目前 Skrun 主要面向本地/自托管，官方也承认公开部署有 prompt injection 等风险，沙箱隔离方案在规划中，建议敏感场景先留在内网。"
+      },
+      {
+        "question": "支持哪些模型？",
+        "answer": "Skrun 在 agent.yaml 中支持 Anthropic、OpenAI、Google、Mistral、Groq，并可在主模型失败时自动回退到备选 provider。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Skrun",
+      "Agent Skill API",
+      "技能即服务",
+      "MCP",
+      "开源Agent运行时"
+    ],
+    "source_urls": [
+      "https://github.com/skrun-dev/skrun",
+      "https://www.everydev.ai/developers/skrun-dev",
+      "https://dev.to/skrun/i-had-a-bunch-of-skills-sitting-in-a-folder-none-of-them-were-callable-as-apis-m46"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "airllm",
+    "slug": "airllm",
+    "positioning": "开源的推理内存优化框架，用逐层卸载把显存峰值压到“单层大小”，让单张 4GB 显卡跑 70B、约 8GB 跑 405B，且无需量化/蒸馏/剪枝。",
+    "auto_positioning": false,
+    "emoji": "💾",
+    "color": "#8B5CF6",
+    "description": "AirLLM 是一个开源的推理内存优化框架，仓库位于 github.com/lyogavin/airllm，用 Python 实现。它回答了一个很直接的问题：Transformer 各层在推理时是严格串行执行的，那为什么非要把整个模型都塞进显存？做法是逐层把权重从磁盘加载进 GPU、算完即弃，把显存峰值从“整个模型大小”压到“单层最大大小”——于是单张 4GB 显卡就能跑 70B 推理，约 8GB 显存可跑 405B 的 Llama 3.1，甚至能在 3.7GB 下尝试超大 MoE。关键是不靠量化、蒸馏或剪枝，纯推理优化保住精度。",
+    "category": "AI开发",
+    "tags": [
+      "本地推理",
+      "低显存",
+      "开源",
+      "大模型",
+      "推理优化",
+      "Python"
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "暂无数据",
+    "badge": "开源",
+    "url": "https://github.com/lyogavin/airllm",
+    "price": "免费开源，无商业套餐",
+    "platform": "Python / Linux（GPU）",
+    "pros": [
+      "极低显存门槛：4GB 跑 70B、8GB 跑 405B，无需昂贵显卡",
+      "纯推理优化，不走量化/蒸馏/剪枝，保住模型精度",
+      "pip 一键使用，把模型名传给 AutoModel 即可，接入成本低",
+      "支持超大 MoE（如 Kimi K3）在普通硬件上运行",
+      "开源免费，可本地探索与验证新模型"
+    ],
+    "cons": [
+      "磁盘 I/O 成为新瓶颈，速度远低于全量加载到显存的推理",
+      "需要大磁盘空间存放切分后的 shard 文件",
+      "不支持高并发 KV Cache 共享，不适合实时生产环境"
+    ],
+    "features": [
+      "逐层推理卸载：每层按需从磁盘加载执行，显存只装单层",
+      "极低显存门槛：4GB 跑 70B、8GB 跑 405B，无需昂贵显卡",
+      "保精度：不走量化 / 蒸馏 / 剪枝，模型能力不被压缩",
+      "一键使用：pip install airllm，把模型名传给 AutoModel.from_pretrained 即可",
+      "可选块级压缩：4bit / 8bit 块级权重压缩能把加载带宽缩到 1/4，换取约 3 倍提速",
+      "支持超大 MoE：如 2.8T 参数的 Kimi K3 在 3.7GB 显存下尝试运行"
+    ],
+    "related": [
+      "vllm",
+      "openai",
+      "langchain"
+    ],
+    "content": "## AirLLM 是什么？\n\nAirLLM 是一个开源的推理内存优化框架，仓库位于 github.com/lyogavin/airllm，用 Python 实现。它回答了一个很直接的问题：Transformer 各层在推理时是严格串行执行的，那为什么非要把整个模型都塞进显存？它的做法是逐层把权重从磁盘加载进 GPU、算完即弃，把显存峰值从“整个模型大小”压到“单层最大大小”——于是单张 4GB 显卡就能跑 70B 推理，约 8GB 显存可跑 405B 的 Llama 3.1，甚至能在 3.7GB 下尝试超大 MoE。关键是不靠量化、蒸馏或剪枝，纯推理优化保住精度。\n\n## 核心功能\n\n1. 逐层推理卸载：每层按需从磁盘加载执行，显存只装单层。\n2. 极低显存门槛：4GB 跑 70B、8GB 跑 405B，无需昂贵显卡。\n3. 保精度：不走量化 / 蒸馏 / 剪枝，模型能力不被压缩。\n4. 一键使用：pip install airllm，把模型名传给 AutoModel.from_pretrained 即可。\n5. 可选块级压缩：4bit / 8bit 块级权重压缩能把加载带宽缩到 1/4，换取约 3 倍提速。\n\n## 版本/套餐对比\n\nAirLLM 为开源免费项目，无商业套餐；安装即用，适合低频、对速度不敏感的本地产出场景。\n\n## 值不值得用？\n\nAirLLM 解决的是“能不能跑”而非“能不能快”。它的代价很明显：每层都要从磁盘读，I/O 成为新瓶颈，速度远低于全量加载，也不支持高并发 KV Cache 共享。但对你只有一张老显卡、又想亲自跑跑 70B 验证想法的人来说，能跑起来本身就值回票价。\n\n## 使用建议\n\n准备足够大的磁盘空间存放切分后的 shard（和原始模型差不多大）；把它用在探索、测试、低频报告生成等“速度不敏感”的场景；不要在需要实时响应或高并发的生产环境使用；Apple Silicon Mac 同样可以尝试。块级压缩能在可接受精度损失下明显提速，适合反复调用的场合。\n\n## 适合谁用？\n\n- 个人开发者：显存有限却想本地体验大模型。\n- 研究者 / 学生：用普通设备验证新模型想法。\n- 探索型用户：低频推理、对响应速度不敏感者。",
+    "published": false,
+    "faq": [
+      {
+        "question": "AirLLM 是怎么在 4GB 显存跑 70B 的？",
+        "answer": "它不改变模型本身，而是在推理时逐层把权重从磁盘加载进 GPU、算完即弃，把显存峰值从“整个模型大小”压到“单层最大大小”，因此 70B 模型在 4GB 卡上也能跑。"
+      },
+      {
+        "question": "用 AirLLM 会损失模型精度吗？",
+        "answer": "不会。AirLLM 是纯推理内存优化，不依赖量化、蒸馏或剪枝来压缩模型，默认保住原始精度；可选的块级压缩才会引入轻微精度取舍。"
+      },
+      {
+        "question": "它适合生产环境吗？",
+        "answer": "不太适合。逐层磁盘 I/O 导致速度远低于全内存推理，且不支持高并发 KV Cache 共享，更适合探索、测试与低频本地推理。"
+      },
+      {
+        "question": "AirLLM 收费吗？",
+        "answer": "不收费。它是开源免费项目，pip install airllm 即可使用，成本仅在于你自己的硬件与磁盘空间。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "AirLLM",
+      "低显存推理",
+      "4GB跑70B",
+      "本地大模型",
+      "推理显存优化"
+    ],
+    "source_urls": [
+      "https://github.com/lyogavin/airllm",
+      "https://vampireachao.github.io/2026/08/02/airllm",
+      "https://gipyeong-lee.github.io/2026/08/03/AirLLM-70B-inference-with-single-4GB-GPU.en",
+      "https://blog.csdn.net/chendongqi2007/article/details/163451033"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  }
+]

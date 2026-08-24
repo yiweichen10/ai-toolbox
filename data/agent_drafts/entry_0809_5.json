@@ -1,0 +1,491 @@
+[
+  {
+    "name": "Cloudflare Wallets",
+    "slug": "cloudflare-wallets",
+    "positioning": "Cloudflare Wallets是什么？给AI Agent发钱包的可编程支付层怎么用",
+    "auto_positioning": false,
+    "emoji": "👛",
+    "color": "#F6821F",
+    "description": "Cloudflare 2026 年 8 月 4 日官宣的智能体互联网可编程钱包层。钱包分两种：Account Wallet 归人，用来存稳定币、注资和取回；Virtual Wallet 归 Agent，凭 API key 花钱，并受额度、允许列表与单笔上限三重护栏约束。配合 x402 协议把支付直接挂在 HTTP 请求上，Agent 不必注册账号就能按次试用付费 API、MCP 工具与内容。当前开放的是在 cloudflare.pay 申领 handle，官方对支付能力的措辞仍是「即将」。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "官方产品"
+      },
+      {
+        "text": "Agent 支付"
+      },
+      {
+        "text": "x402 协议"
+      },
+      {
+        "text": "抢先申领"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://cloudflare.pay/",
+    "price": "价格暂未公开（官方博客未公布费率与手续费；钱包内以稳定币计价，出入金仅在支持的地区开放，自充稳定币面向符合条件用户）",
+    "platform": "Web（cloudflare.pay 申领 handle 与管理账户钱包；虚拟钱包通过 API key 供 Agent 调用，作为 Cloudflare Agents SDK 的一项工具接入）",
+    "pros": [
+      "人机分权设计干净：Account Wallet 归人、Virtual Wallet 归 Agent，越权的钱花不出去",
+      "官方点名的三重护栏（额度 / 允许列表 / 单笔上限）把「Agent 乱花钱」变成可配置策略",
+      "基于 x402 把支付挂到 HTTP 请求上，Agent 试用付费 API 不用先注册账号",
+      "handle 机制给 Agent 一个人类可读身份（形如 research.example.cloudflare.pay），且声明与否完全可选",
+      "与 Monetization Gateway 组成买卖双边市场，收款与付款是同一套基建"
+    ],
+    "cons": [
+      "目前只能申领 handle，真正的支付能力官方措辞仍是 soon，上线时间没有承诺",
+      "资金侧依赖稳定币与出入金通道，仅在「支持的地区」「符合条件用户」范围内可用",
+      "费率与定价一个字没提，接入前算不出成本"
+    ],
+    "features": [
+      "Account Wallet：人类持有的账户钱包，可存入稳定币、向虚拟钱包授信、随时取回资金",
+      "Virtual Wallet：Agent 专用虚拟钱包，通过 API key 运作，花费上限由账户钱包封顶",
+      "支出护栏：allowance 额度、allow list 允许列表、maximum transaction size 单笔上限",
+      "x402 微支付：支付附加在 HTTP 请求上，可为 AI 推理、数据与内容按次付费",
+      "可读身份 handle：cloudflare.pay 下的子域式标识，让商家识别 Agent 归属，也支持完全匿名",
+      "异常消费复核：花费异常时由授权人复核，确认属实可提额或一次性注资，否则按策略拦下"
+    ],
+    "related": [
+      "cloudflare-os",
+      "cloudflare-computer",
+      "claude-agent-sdk"
+    ],
+    "content": "## Cloudflare Wallets是什么？\n\nCloudflare Wallets 是 Cloudflare 在 2026 年 8 月 4 日官宣的「智能体互联网可编程钱包」。它要解决的问题很具体：今天一个 AI Agent 想试用新 API，得先过一遍为人类设计的登录注册页，找人来绑支付方式，再生成 API key，最后才轮到调用。Agent 缺的其实是两样东西——一个稳定的身份标识，和一种原生的付款方式。缺了这两样，Agent 往往干脆放弃，把注册、付款和取 key 全甩回给人，也就谈不上自己去比较几十个 API。\n\nCloudflare 的解法是把钱包拆成两层。Account Wallet 是给人用的账户钱包，可以充值稳定币、向下授信、按需取回；Virtual Wallet 是给 Agent 的虚拟钱包，通过 API key 运作，能花多少由账户钱包封顶。再配合 x402 协议把支付直接附加在 HTTP 请求上，Agent 就能按次为 API、MCP 工具和内容付费，不用先注册账号。\n\n有一点必须讲清楚：按官方博客的措辞，「从今天起」能做的是在 cloudflare.pay 申领一个 Wallet handle，而「设置并使用钱包为 API 和内容付费」用的是 soon。现在你能拿到的是身份，钱还付不了。\n\n## 核心功能\n\n1. Account Wallet：人类持有，存入稳定币、把消费权委派给虚拟钱包、随时取回资金。\n2. Virtual Wallet：Agent 专用，凭 API key 在权限内花钱，上限由账户钱包设定。\n3. 支出护栏：官方点名的三件套是额度（allowance）、允许列表（allow list）、单笔最大交易额。\n4. x402 微支付：支付直接挂在 HTTP 请求上，可为推理、数据、内容按次结算；卖方侧对接 Monetization Gateway，构成双边市场。\n5. 可读身份 handle：cloudflare.pay 下形如 research.example.cloudflare.pay 的标识，让商家知道这个 Agent 代表哪个组织，是否声明完全由你决定。\n6. 异常复核与提额：出现异常快速消费时交由人工确认，确认是有意为之可提额或一次性注资，否则策略照常拦截。\n\n## 值不值得用？\n\n先把定位摆正：它现在不是一个「能跑起来」的产品，而是一层正在铺的基建。值得肯定的有两点。第一，人机分权这套设计是对的——把「人管钱包、Agent 管花钱」分开，再用额度、允许列表和单笔上限收口，比给 Agent 塞一张信用卡靠谱得多。官方那句话说得很在理：如果一个 Agent 只对 10 美元负责，你对它的容忍度自然比 1000 美元高；而试一次 API 只要几分钱时，10 美元足够它把一堆方案都摸一遍。约束反而换来了自由度。第二，钱包必须和卖方侧连起来才有意义，Cloudflare 手上有 Monetization Gateway，这是它比单点创业公司更有底气的地方。\n\n不看好的部分也直说：费率没公布，出入金只在支持的地区开放，稳定币自充仅面向符合条件用户，支付能力的上线时间没有承诺。如果你要的是「这个月就能把 Agent 付费搬进生产系统」，它给不了答案。\n\n## 使用建议\n\n1. 先去 cloudflare.pay 把 handle 占下来。身份类资源先到先得，成本几乎为零。\n2. 已经在用 Cloudflare Agents SDK 的团队，可以先照 x402 开发者文档把「付费端点」这条链路在测试环境跑通，等钱包开放再接真金。\n3. 提前设计护栏粒度。官方举的例子是「每位员工每周 100 美元推理预算」，这种额度模型最好在接入前就想好，别等上线再补。\n4. 别只盯买方。Monetization Gateway 是同一套基建的卖方侧，只看钱包会漏掉一半价值。\n\n## 适合谁用？\n\n推荐：正在做 Agent 商务、需要让 Agent 自主试用并支付 API 的开发者与平台团队，尤其是已经在 Cloudflare 生态里的团队。\n可考虑：关注 x402 与 Agent 身份标准演进的技术决策者，先申领 handle、观察后续放量。\n不推荐：现在就需要可用支付能力的业务，以及所在地区尚未开放出入金的用户——等它从 soon 变成 today 再动手。",
+    "published": false,
+    "faq": [
+      {
+        "question": "Cloudflare Wallets 现在能直接用来付款吗？",
+        "answer": "还不能。按官方博客 2026 年 8 月 4 日的说法，现在开放的是在 cloudflare.pay 申领 Wallet handle；「设置并使用钱包为 API 和内容付费」用的措辞是即将（soon），具体时间未公布。"
+      },
+      {
+        "question": "怎么防止 Agent 乱花钱？",
+        "answer": "靠账户钱包给虚拟钱包设护栏。官方明确提到三种：额度（allowance）、允许列表（allow list）和单笔最大交易额。超限时可由有权限的人工复核，确认后提额或一次性注资。"
+      },
+      {
+        "question": "Cloudflare Wallets 收费吗？",
+        "answer": "官方博客没有公布任何费率或手续费信息，价格暂未公开。可以确定的是钱包内以稳定币计价，出入金先在支持的地区开放，自充稳定币面向符合条件用户。"
+      },
+      {
+        "question": "它和 Cloudflare OS、Cloudflare Computer 是什么关系？",
+        "answer": "三者都属于 Cloudflare 围绕 Agent 做的基建，分工不同：Wallets 负责支付与身份，OS 与 Computer 分别偏工作空间与运行环境。Wallets 本身是加进 Cloudflare Agents SDK 的一项能力，和 Monetization Gateway 的卖方侧配对。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Cloudflare Wallets",
+      "Cloudflare Wallets是什么",
+      "Cloudflare Wallets怎么用",
+      "AI Agent 钱包",
+      "x402 协议支付"
+    ],
+    "source_urls": [
+      "https://blog.cloudflare.com/wallets/",
+      "https://blog.cloudflare.com/zh-cn/wallets/",
+      "https://cloudflare.pay/",
+      "https://developers.cloudflare.com/agents/tools/payments/x402/",
+      "https://www.listmystartup.app/startup/cloudflare-wallets"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "GitHub Copilot SDK",
+    "slug": "github-copilot-sdk",
+    "positioning": "GitHub Copilot SDK是什么？把Copilot智能体嵌进自家应用好用吗",
+    "auto_positioning": false,
+    "emoji": "🧩",
+    "color": "#24292F",
+    "description": "GitHub 官方开源项目（github/copilot-sdk，MIT 许可，约 1.04 万星），把 Copilot CLI 背后那套经生产验证的 Agent 运行时开放给开发者：规划、工具调用、文件编辑、流式输出与多轮会话开箱即用，不用自己写编排层。2026 年 4 月 2 日公开预览、6 月 2 日正式 GA，提供 Node/TypeScript、Python、Go、.NET、Rust、Java 六语言 SDK，支持自定义工具与 MCP、系统提示词分段改写、OpenTelemetry 追踪、hook 拦截与 BYOK。",
+    "category": "AI开发",
+    "tags": [
+      {
+        "text": "开源项目"
+      },
+      {
+        "text": "官方 SDK"
+      },
+      {
+        "text": "六语言支持"
+      },
+      {
+        "text": "MCP 支持"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://github.com/github/copilot-sdk",
+    "price": "SDK 本身 MIT 开源免费；调用能力对所有 GitHub Copilot 订阅者开放（含免费的 Copilot Free），非 Copilot 用户可通过 BYOK 使用自己的 OpenAI、Microsoft Foundry、Anthropic 等密钥。官方说明：每次 prompt 会计入 Copilot 高级请求配额",
+    "platform": "跨平台（Node.js/TypeScript、Python、Go、.NET、Rust、Java 六语言 SDK；SDK 自动管理 Copilot CLI 进程生命周期，通过 JSON-RPC 经 stdio 或 TCP 通信）",
+    "pros": [
+      "复用 Copilot CLI 同一套经生产验证的 Agent 运行时，规划、工具调用、文件编辑不必自己实现",
+      "六语言官方 SDK，.NET、Java、Rust 这类企业语言也是一等公民，不是社区凑的绑定",
+      "自定义工具 + MCP + 可覆盖内置 grep/edit_file，扩展口子开得很大",
+      "系统提示词能按身份、语气、工具说明、安全规则分段替换，不用整段重写",
+      "内置 OpenTelemetry 与 hook 体系，权限审批、追踪、调试都有官方挂点"
+    ],
+    "cons": [
+      "SDK 开源但底座是 Copilot 闭源引擎，运行时与模型都无法自托管",
+      "计费绑定 Copilot 高级请求配额，高频 Agent 场景要先把额度算清楚",
+      "迭代非常快（8 月仍在几乎日更 CLI 依赖版本），API 已稳定但版本跟进有维护成本"
+    ],
+    "features": [
+      "Agent 运行时直连：planning、工具调用、文件编辑、token 级流式输出、多轮会话",
+      "自定义工具与 MCP：注册自有工具交给 Agent 自主调用，接入 MCP server，或覆盖内置工具",
+      "系统提示词分段定制：支持 replace / append / prepend 与动态 transform 回调",
+      "灵活认证：GitHub OAuth、GitHub Apps、环境变量 token，以及面向多家模型商的 BYOK",
+      "云端与远程会话：可创建带仓库元数据的云端会话，或按需开启远程会话 URL",
+      "Hook 与权限框架：pre/post tool use、会话启动、MCP 工具调用、权限请求都可拦截，只读工具可跳过授权"
+    ],
+    "related": [
+      "github-copilot",
+      "claude-agent-sdk",
+      "codex-cli"
+    ],
+    "content": "## GitHub Copilot SDK是什么？\n\nGitHub Copilot SDK 是 GitHub 官方的开源项目（仓库 github/copilot-sdk，MIT 许可，建库于 2026 年 1 月 14 日，目前约 1.04 万星），一句话概括就是：把 Copilot 的 Agent 能力做成可以嵌进你自己应用里的 SDK。它暴露的不是一个新模型接口，而是 Copilot CLI 背后那套已经在生产里跑过的 Agent 运行时——规划、工具调用、文件编辑、流式输出、多轮会话都由 Copilot 负责，你只负责定义 Agent 的行为，不用再自己搭一层编排。\n\n架构上它做得挺克制：你的应用调 SDK，SDK 自动拉起并管理 Copilot CLI 的 server 模式进程，两者之间走 JSON-RPC（stdio 或 TCP），CLI 再对接 GitHub 的模型与认证。也就是说进程管理这类脏活官方帮你兜了。时间线上，2026 年 4 月 2 日进入公开预览，6 月 2 日宣布正式 GA，API 面在 GA 时做过一轮基于预览反馈的清理，官方口径已是「稳定、可用于生产」。\n\n## 核心功能\n\n1. 自定义工具与 MCP：注册你自己的工具让 Agent 自主决定何时调用，接入 MCP server，甚至覆盖 grep、edit_file 这些内置工具。\n2. 系统提示词分段定制：按身份、语气、工具说明、安全规则等分区做 replace / append / prepend，或用动态 transform 回调改写，不必重写整段 prompt。\n3. 认证方式灵活：GitHub OAuth、GitHub Apps、环境变量 token，以及面向 OpenAI、Microsoft Foundry、Anthropic 等的 BYOK。\n4. 云端与远程会话：可创建带仓库元数据的云端会话，或按需开启远程会话 URL，适合把 Agent 放进 CI/CD 与内部平台。\n5. 可观测与可拦截：内置 OpenTelemetry 分布式追踪（W3C trace context 贯穿 CLI 启动、JSON-RPC 调用、会话操作与工具执行），配合 hook 体系可在工具调用前后、会话启动、权限请求处插手。\n\n## 版本/套餐对比\n\nSDK 代码本身是 MIT 开源、免费取用，真正决定成本的是背后的调用额度。官方在 GA 公告里写得很清楚：SDK 对所有 GitHub Copilot 订阅者开放，包括个人可用的 Copilot Free；不是 Copilot 用户也能通过 BYOK 用自己的模型密钥。同时有一句必须留意——对 Copilot 订阅者而言，每一次 prompt 都会计入你的高级请求（premium request）配额。所以选档逻辑其实是：轻量试水用 Copilot Free 或 BYOK，要把 Agent 放进日常研发流水线，就得按预计 prompt 量去反推该上哪档 Copilot 订阅。\n\n从预览到 GA 的增量也值得一提：新增了默认打包 Copilot CLI 二进制的 Rust SDK、Java 正式加入，多客户端协作（不同客户端向同一会话贡献工具与权限）更完善，斜杠命令与交互式输入提示在所有语言 SDK 上齐平。\n\n## 值不值得用？\n\n如果你本来就在 GitHub 生态里，这几乎是最省事的一条路。最大的价值不是「能调模型」，而是省掉了自建 Agent 编排的那几千行——权限、hook、追踪、多轮会话、文件编辑这些细节，自己写一遍就知道有多耗人。六语言覆盖也不是凑数，.NET 和 Java 有官方 SDK 这件事，对企业内部平台团队来说分量很足。\n\n短板同样明确。SDK 开源不等于底座开源：Copilot 引擎仍是闭源云服务，你无法自托管，也就意味着数据边界与可用性都得接受 GitHub 的条款。计费上和高级请求配额挂钩，Agent 一旦跑成高频任务，账单模型要提前算。另外它迭代得非常猛，8 月仓库里还在几乎每天更新 CLI 依赖版本——好处是问题修得快，代价是你得跟版本。\n\n## 使用建议\n\n1. 先跑官方 Getting Started 起一个最小 Agent，把 SDK 拉起 CLI、走通 JSON-RPC 这条链路确认环境没问题。\n2. 从 cookbook 里挑最接近你场景的配方改，比从零写省事得多。\n3. 上生产前先把权限框架配好：敏感操作走审批 handler，只读工具标记成免授权，能少一半误操作风险。\n4. 打开 OpenTelemetry 追踪再上量，慢在哪、卡在哪一目了然，别等出问题才补观测。\n5. 用 BYOK 还是 Copilot 配额，最好在设计阶段就定，两者的成本曲线完全不同。\n\n## 适合谁用？\n\n推荐：想在自家应用、内部平台或 IDE 扩展里嵌入 Agent 能力的开发团队，尤其是已经买了 Copilot、技术栈在 .NET / Java / Node 上的企业。\n可考虑：做 CI/CD 助手、代码审查机器人、面向客户的 AI 功能的团队，先用 Copilot Free 或 BYOK 验证可行性。\n不推荐：要求模型与运行时完全自托管、数据不出内网的场景，以及不接受按 prompt 计入配额这种计费方式的团队。",
+    "published": false,
+    "faq": [
+      {
+        "question": "GitHub Copilot SDK 是开源的吗？",
+        "answer": "是。它是 GitHub 官方开源项目，仓库地址 github/copilot-sdk，采用 MIT 许可，目前约 1.04 万星。但要注意 SDK 开源不等于底座开源——它背后调用的 Copilot 引擎仍是闭源云服务。"
+      },
+      {
+        "question": "用 Copilot SDK 要花钱吗？",
+        "answer": "SDK 免费。按官方 GA 公告，SDK 对所有 Copilot 订阅者开放（含个人可用的 Copilot Free），非 Copilot 用户可通过 BYOK 用自己的模型密钥。对 Copilot 订阅者，每次 prompt 会计入高级请求配额。"
+      },
+      {
+        "question": "支持哪些编程语言？",
+        "answer": "六种：Node.js/TypeScript（npm install @github/copilot-sdk）、Python（pip install github-copilot-sdk）、Go、.NET、Rust 与 Java。其中 Rust 与 Java 是在 2026 年 6 月 GA 时补齐的。"
+      },
+      {
+        "question": "它和 Claude Agent SDK 有什么不同？",
+        "answer": "定位相似但生态不同：Copilot SDK 复用的是 Copilot CLI 的运行时，天然贴 GitHub 的上下文、认证与权限模型，并提供六语言官方 SDK；Claude Agent SDK 则与 Claude Code 同源，主打 Python/TypeScript。选哪个通常取决于你团队已有的订阅与技术栈。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "GitHub Copilot SDK",
+      "GitHub Copilot SDK怎么用",
+      "GitHub Copilot SDK免费吗",
+      "Copilot SDK 教程",
+      "Copilot SDK 和 Claude Agent SDK 哪个好"
+    ],
+    "source_urls": [
+      "https://github.com/github/copilot-sdk",
+      "https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available",
+      "https://github.blog/changelog/2026-04-02-copilot-sdk-in-public-preview",
+      "https://api.github.com/repos/github/copilot-sdk"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "BrowserOS neo",
+    "slug": "browseros-neo",
+    "positioning": "BrowserOS neo是什么？给Claude Code和Codex用的本地Agent浏览器好用吗",
+    "auto_positioning": false,
+    "emoji": "🌐",
+    "color": "#2563EB",
+    "description": "BrowserOS 团队（Y Combinator 支持）推出的 Agent 专用浏览器，2026 年 8 月 7 日在 Product Hunt 发布并位列当日 Product of the Day 第 5。它不是给人看网页的第二个 Chrome，而是让 Claude Code、Cowork、Codex、Cursor、OpenClaw 等通过 MCP 一键接管的本地浏览器：一键导入 Chrome 登录态，Agent 在自己的标签页里带着你的真实账号干活，可并行多开、全程实时可看，每次会话还存成可拖动进度条的录像。AGPL-3.0 开源、完全免费，支持 macOS 与 Windows。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "免费可用",
+        "type": "free"
+      },
+      {
+        "text": "开源项目"
+      },
+      {
+        "text": "MCP 一键接入"
+      },
+      {
+        "text": "本地运行"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://browseros.com/neo",
+    "price": "免费，AGPL-3.0 开源；采用 BYOK（自带 AI 提供商密钥），费用只发生在你调用的模型侧",
+    "platform": "macOS / Windows 桌面浏览器（系统要求与 Chrome、Safari 一致）；通过 MCP 连接 Claude Code、Cowork、Codex、Cursor、VS Code、Zed、GitHub Copilot、OpenClaw、Hermes 等",
+    "pros": [
+      "Agent 用你已登录的真实账号办事，headless 与云浏览器最难跨的登录墙直接绕过",
+      "给 Agent 的是压缩后的页面快照而非原始 HTML 或截图，并把动作批量成一次调用，token 更省",
+      "多 Agent 并行各占一组隔离标签页，明确不会碰你正在用的标签和正在写的文档",
+      "每次会话存成可拖动的全屏录像，出错能回看到具体哪一步走偏再纠正指令",
+      "全程本地：历史、截图、回放、设置都是磁盘上的文件，AGPL-3.0 全量开源可审计"
+    ],
+    "cons": [
+      "AGPL-3.0 有传染性，商业二次分发或嵌入自家产品前需要过法务",
+      "Agent 直接使用你的真实登录态，误操作与提示注入风险实打实；官方也把「按 Agent 隔离 profile」列在路线图而非已交付功能",
+      "只有 macOS 与 Windows，暂无 Linux；且它定位是并存的第二浏览器，不接管日常使用"
+    ],
+    "features": [
+      "Chrome 登录态一键导入：Agent 带着你的 Gmail、GitHub、X 等会话直接办事",
+      "MCP 一键连接：Claude Code、Cowork、Codex、Cursor、VS Code、Zed 等免改配置文件、免 CLI",
+      "新标签页 cockpit 面板：哪个 Agent、在哪个站点、用了什么工具、走到第几步实时可见",
+      "并行 Agent：每个 Agent 独占一组分组标签页，互不干扰，也不动你自己的标签",
+      "会话回放：每次运行保存为可拖动进度条的全屏录像，便于复盘与纠偏",
+      "省 token 机制：压缩页面快照 + 动作批处理，减少往返次数与账单"
+    ],
+    "related": [
+      "browser-use",
+      "agent-browser",
+      "claude-code"
+    ],
+    "content": "## BrowserOS neo是什么？\n\nBrowserOS neo 是 BrowserOS 团队（背后有 Y Combinator 支持）做的一款「不给人用」的浏览器——官方标语直白得很：The Missing Browser for Claude, Cowork & Codex。它 2026 年 8 月 7 日在 Product Hunt 发布，拿下当日 Product of the Day 第 5，源码在 github.com/browseros-ai/BrowserOS，AGPL-3.0 许可，目前约 1.3 万星（官网自己写的是 12,000+）。\n\n它要补的是一个很具体的缺口：Claude Code、Codex 这类工具推理能力已经很强，可一旦任务碰到网页——查后台、填表单、预约——就卡住了。团队自己试过市面上的方案后给出的判断是：云浏览器跑在数据中心，登录你的账号很麻烦，而且 Twitter、LinkedIn 这类站点会因为机房 IP 直接拦；headless 浏览器又让你看不见 Agent 在干什么。所以他们的答案是一个跑在你自己机器上、带着你真实登录态、且能被你的 Agent 驱动的浏览器。\n\n它不是 Chrome 替代品，而是挨着 Chrome 放的第二个浏览器：你的账号在里面，Agent 在它自己的标签页里干活，你的标签一根手指都碰不到。顺带说一句，这个产品最初叫 BrowserClaw，后来因为 SEO 原因改名成 BrowserOS neo，官方 FAQ 明确说同一个东西、装过的不用重装。\n\n## 核心功能\n\n1. 一键导入 Chrome 登录态：Agent 以「你」的身份访问 Gmail、GitHub、X 甚至网银这类必须登录才有内容的地方。\n2. MCP 一键接入：Claude Code、Cowork、Codex、Cursor、VS Code、Zed、GitHub Copilot 点一下就连上，OpenClaw、Hermes 等也在支持列表里，其他工具用 URL 接入，不用编辑配置文件。\n3. cockpit 驾驶舱：新标签页就是控制台，每个 Agent 在哪个站点、用什么工具、走到第几步全都看得见。\n4. 并行多 Agent：每个 Agent 独占一组隔离的分组标签页，三个任务同时跑也不打架，你还能继续在自己的标签里干活。\n5. 会话回放：每次运行保存成可拖动进度条的全屏录像，navigate → read → act → submit 一步步复看，找到出错的那一刻再改指令。\n6. 省 token：Agent 拿到的是紧凑的页面快照而不是原始 HTML，动作还会批量成一次调用，往返更少、账单更小。\n\n## 版本/套餐对比\n\n没有套餐这回事——官方 FAQ 的原话是完全免费且在 AGPL-3.0 下开源，你只需要自带 AI 提供商的密钥（BYOK），费用发生在模型侧。下载分 macOS 与 Windows 两个版本，系统要求与 Chrome、Safari 相当。\n\n需要区分的是它和原版 BrowserOS 的关系：原版 BrowserOS 是给人用的开源 AI 浏览器（内置 Agent、40+ 集成、支持 Ollama/LM Studio 本地模型），neo 是独立安装的 Agent 专用浏览器，官方说法是两者可以并存，用不用原版都行。\n\n## 值不值得用？\n\n我觉得它抓住了一个真问题：登录墙后面才是真正的活。公开 API 只能到大门口，报销系统、广告后台、内部 CRM 这些地方 Agent 进不去就等于白说。neo 用「本地 + 真实登录态 + 可观测」这三件事把这层打开了，而且顺手解决了两个体验痛点——Agent 干活时你能盯着看，干完了还能回放复盘。省 token 这点也不是营销话术，压缩快照相比截图方案确实是量级差别。\n\n代价要认。第一是许可证：AGPL-3.0 对商业分发和嵌入有传染性，个人用无所谓，公司要包进产品必须先问法务。第二是风险模型变了：以前 Agent 顶多在沙箱里瞎点，现在它带着你的真实会话，误操作和提示注入的后果是实的；官方把「按 Agent 隔离 profile」放在路线图上，说明这块还没做完。第三是平台，只有 macOS 和 Windows，Linux 用户先等等。\n\n## 使用建议\n\n1. 先装上、连一个 Agent，用低风险任务开局，比如整理收藏夹、批量退订邮件，别一上手就让它动钱和线上系统。\n2. 把 cockpit 面板当默认新标签页真正用起来，前几次一定盯着看，摸清它在哪类页面容易走偏。\n3. 出错就回放，别靠记忆猜。找到走偏那一步，把指令写具体，比换模型有用。\n4. 涉及支付、发布、删除的操作，宁可自己按最后那一下——真实登录态下这类动作没有撤销键。\n5. 敏感账号建议不导入。等按 Agent 隔离 profile 落地后再考虑放开。\n\n## 适合谁用？\n\n推荐：Claude Code、Codex、Cursor 的重度用户，以及需要 Agent 在登录后台里干活的开发者和效率玩家。\n可考虑：想用 Agent 替代部分网页 RPA 的小团队，先在非关键流程上试，并注意 AGPL 的合规边界。\n不推荐：Linux 用户、需要把它嵌进商业产品分发的团队，以及不能接受 Agent 使用真实登录态的强合规场景。",
+    "published": false,
+    "faq": [
+      {
+        "question": "BrowserOS neo 免费吗？",
+        "answer": "免费。官方 FAQ 明确写着它完全免费且在 AGPL-3.0 许可下开源，你需要自带 AI 提供商的密钥（BYOK），实际花费只发生在你调用的模型那一侧。"
+      },
+      {
+        "question": "它支持哪些 AI 工具？",
+        "answer": "任何支持 MCP 的 Agent。官方列出可一键安装的包括 Claude Code、Claude Cowork、Cursor、Codex、VS Code、Zed 与 GitHub Copilot，网站上还标注了 OpenClaw、Hermes；其他工具通过 URL 接入。"
+      },
+      {
+        "question": "它会替代我的 Chrome 吗？",
+        "answer": "定位上是并存的第二浏览器：Agent 在 neo 里用你导入的登录态干活，你的主浏览器照旧自己用。官方也强调 Agent 只在自己的标签页里工作，不会关掉或操纵你正在用的标签。"
+      },
+      {
+        "question": "我之前下的 BrowserClaw 还能用吗？",
+        "answer": "能。官方 FAQ 说明 BrowserClaw 已改名为 BrowserOS neo，同一个浏览器、同一个项目，装过的不用重新下载，只是 GitHub 仓库名和 MCP server 名等处还留着旧称。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "BrowserOS neo",
+      "BrowserOS neo怎么用",
+      "BrowserOS neo免费吗",
+      "AI Agent 浏览器",
+      "BrowserOS neo 和 Browser Use 哪个好"
+    ],
+    "source_urls": [
+      "https://browseros.com/neo",
+      "https://github.com/browseros-ai/BrowserOS",
+      "https://www.browseros.com/",
+      "https://api.github.com/repos/browseros-ai/BrowserOS",
+      "https://hunted.space/dashboard/browseros_ai"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Airtop for Google Ads",
+    "slug": "airtop-ads",
+    "positioning": "Airtop for Google Ads是什么？对话式托管谷歌广告的AI Agent好用吗",
+    "auto_positioning": false,
+    "emoji": "📈",
+    "color": "#10B981",
+    "description": "Airtop 在自家对话式网页 Agent 底座上做的 Google Ads 原生自动化，2026 年 8 月 3 日登上 Product Hunt 当日第 3。给它一个公司网址，它会自己做关键词研究、搭主题式广告组与响应式搜索广告、审计搜索词与地域定向和转化跟踪找出漏钱的地方，并按证据直接在 Google Ads 里落地优化；审计与报告可定时推送到 Slack、邮件或表格。承载这套能力的营销 Agent 叫 Mark，据官方在 Product Hunt 发布贴中的说明，任何会影响花费的改动都必须先经人工批准。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "有免费额度",
+        "type": "free"
+      },
+      {
+        "text": "广告投放"
+      },
+      {
+        "text": "云端浏览器 Agent"
+      },
+      {
+        "text": "改动需人工批准"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.airtop.ai/google-ads",
+    "price": "官网定价页：Free $0/月（1,000 credits、3 个并发会话、1 个已部署 Agent、一次性 10,000 credits 奖励、7 天 Mark 试用）；Starter 页面在月付/年付切换下分别显示 $29/月 与 $26/月（年付立减 10% 且额度一次性发放）；Professional $170/月起、Enterprise $502/月起，这两档才标注 Mark included；另有 Custom 定制档。具体以官网为准",
+    "platform": "纯 Web（Agent 跑在 Airtop 云端浏览器，需授权连接 Google Ads 账户；可对接 Slack、邮件、Google 表格与 CRM）",
+    "pros": [
+      "从关键词研究到报告是一条闭环，而且不停在建议层面，能直接在 Google Ads 里实施改动",
+      "浪费审计做得实在：搜索词、地域定向、转化跟踪、设备表现逐项过，并给出可审阅的修复草案",
+      "会读你的 CRM pipeline、ICP 与历史投放，按成交而不是点击来做出价与排除决策",
+      "建系列时默认就是主题式广告组、紧凑关键词集加前置否词，广告写好先暂停等你签字",
+      "审计与报告能按小时/天/周或触发条件定时跑并推到 Slack、邮件，适合没有 PPC 专职的小团队"
+    ],
+    "cons": [
+      "Google Ads 这套能力挂在营销 Agent Mark 上，Free 与 Starter 只给 7 天 Mark 试用，长期用要上 Professional（$170/月起）",
+      "按 credits 计费，账户越大、审计跑得越勤，成本越难提前估准",
+      "界面与产出以英文为主，加上 Google Ads 在中国大陆无法直接投放，国内团队基本用不上它的主场景"
+    ],
+    "features": [
+      "关键词研究：给出公司网址后自行研究市场，产出投放要用的关键词表",
+      "广告系列创建：搭主题式广告组、紧凑关键词集与前置否词，写好响应式搜索广告并保持暂停待批",
+      "浪费检测：审计搜索词、地域定向与转化跟踪，指出预算具体漏在哪里",
+      "直接落地优化：按证据在 Google Ads 内实施调整，涉及花费的改动需人工批准",
+      "定时审计与报告：搜索词报告、设备拆分、质量得分审计、地域表现，用平实语言解释，可推 Slack/邮件",
+      "全漏斗上下文：读取 CRM pipeline、ICP 与定位，对已成交词加价、对不转化的人群做排除"
+    ],
+    "related": [
+      "browser-use",
+      "n8n",
+      "make"
+    ],
+    "content": "## Airtop for Google Ads是什么？\n\nAirtop 本身是个对话式网页 Agent 平台——用一句人话描述任务，它就能登录网站、浏览、抓数据、把活干完。Airtop for Google Ads 是它在这个底座上做的垂直能力，2026 年 8 月 3 日登上 Product Hunt 并拿到当日第 3。承载这套能力的营销 Agent 叫 Mark。\n\n它的起点很朴素：跑 Google Ads 太难了。后台界面绕，优化要专门经验，一不小心几千美元就买回一堆垃圾点击。Airtop 的做法是把 PPC 顾问那套流程做成对话式流水线——你给它公司网址和预算目标，它研究市场、产出关键词、搭好系列、审计浪费、定期出报告，全程不需要你懂 PPC。\n\n关键的一条边界要说清楚：按官方在 Product Hunt 发布贴里的答复，Mark 从不自行调动预算，它给建议和理由，改动仍需人来批准；任何会影响花费的动作都要先拿到你的明确同意。这也是它和「全自动托管」类工具最大的差别。\n\n## 核心功能\n\n1. 关键词研究：给它公司网址，它自己研究市场并生成投放要用的关键词表。\n2. 广告系列创建：搭主题式广告组、紧凑关键词集，一开始就把否词加上，写好响应式搜索广告后保持暂停状态等你签字。\n3. 浪费检测：审计搜索词、地域定向和转化跟踪，把预算漏点指出来——官方举的典型例子是宽泛匹配捞到无关搜索、地域定向设错、缺否词。\n4. 直接落地优化：不止给建议，会按证据在 Google Ads 内实施调整，并把修复方案写成草案让你 review。\n5. 定时审计与报告：搜索词报告、设备拆分、质量得分审计、地域表现，用平实语言解释，可按小时、天、周或触发条件跑，结果发到 Slack、邮件或表格。\n6. 全漏斗上下文：读取 CRM pipeline、ICP 与历史投放，把出价往已成交的词上倾斜，排除从不转化的人群，文案也照客户自己的说法写。\n\n## 版本/套餐对比\n\n官网定价页的档位是这样的：Free 档 $0/月，含 1,000 credits、3 个并发会话、1 个已部署 Agent，另有一次性 10,000 credits 奖励和 7 天 Mark 试用；Starter 档在月付/年付切换下分别显示 $29/月 和 $26/月（年付立减 10%，且额度一次性发放），并发会话 3 个、可部署 10 个 Agent、含集成代理；Professional $170/月起，30 个已部署 Agent、30 并发会话、自定义代理，并标注 Mark included；Enterprise $502/月起，不限 Agent 数、100 并发会话、提供 SOC 2 Type 2 报告，同样含 Mark；最上面还有 Custom 定制档。\n\n对广告场景最关键的一点：Free 和 Starter 只给 7 天 Mark 试用，Mark included 是从 Professional 起才有的。也就是说想长期用它管 Google Ads，实际起步价按官网是 $170/月这一档，别被 $26 的 Starter 误导。所有档位都按 credits 计量，具体价格与额度请以官网为准。\n\n## 值不值得用？\n\n先说好的。它最有价值的地方不是「会建系列」，而是浪费审计加上直接落地这两件事凑在一起。宽泛匹配捞垃圾流量、地域定向设错、转化跟踪本身就是坏的——这些问题不难懂，难的是没人有空每周翻一遍搜索词报告。让 Agent 定时跑审计、写好修复草案、你点头它就改，这个工作流对小团队是实打实省时间。读 CRM 按成交优化这点也比只看点击的工具高一档。\n\n再说不足。第一是钱：Google Ads 能力绑在 Mark 上，长期用要 Professional 起步，$170/月对个人和小微团队不算便宜；credits 制也让成本难以提前估准，账户越大越吃额度。第二是语言与地域：产品与产出以英文为主，而 Google Ads 在中国大陆无法直接投放，国内团队想用得先有海外业务和账户。第三，它终究是个建议加执行的助手，人工批准这道关既是安全阀也是工作量——你还是得看得懂它改了什么。\n\n## 使用建议\n\n1. 先用 Free 档加 7 天 Mark 试用把审计跑一遍。哪怕不让它改任何东西，光看它找出的漏钱点也能判断值不值。\n2. 从审计和报告开始，别一上来就让它建系列。先让它读懂你的账户，再谈动手。\n3. 把 CRM 接上再谈优化。没有转化与成交数据，任何出价决策都只是在猜。\n4. 报告定时推 Slack 或邮件，按周看。这类工具的价值在持续盯，不在一次性体检。\n5. 涉及预算与出价的改动，逐条看理由再批。它的设计前提就是人来把最后这道关。\n\n## 适合谁用？\n\n推荐：自己跑 Google Ads、没有 PPC 专职的海外 SaaS 与独立创业者，以及需要给多个客户批量做审计的小型营销团队。\n可考虑：已有投手但想把浪费审计和周报自动化的增长团队，用它当第二双眼睛。\n不推荐：只投国内平台的团队（Google Ads 在中国大陆无法直接投放）、预算撑不起 Professional 档的个人，以及要求工具支持中文界面的用户。",
+    "published": false,
+    "faq": [
+      {
+        "question": "Airtop for Google Ads 会自己动我的预算吗？",
+        "answer": "不会。按官方在 Product Hunt 发布贴里的答复，Mark 从不在没有人明确批准的情况下调动预算：它给出建议和理由，仍需人来批准；任何会影响花费的改动都要先获得你的同意。"
+      },
+      {
+        "question": "它多少钱？免费版能用吗？",
+        "answer": "官网定价页显示 Free 档 $0/月（1,000 credits、3 并发会话、1 个已部署 Agent、一次性 10,000 credits 奖励、7 天 Mark 试用）。但 Google Ads 能力挂在 Mark 上，Mark included 从 Professional（$170/月起）才有，Free 与 Starter 只是 7 天试用。"
+      },
+      {
+        "question": "具体能替我做哪些 Google Ads 工作？",
+        "answer": "官网列出五块：关键词研究、广告系列创建、浪费检测、优化实施、报告。它会审计搜索词、地域定向与转化跟踪找出预算漏点，写好响应式搜索广告并保持暂停待批，并可定时把审计结果推到 Slack 或邮件。"
+      },
+      {
+        "question": "中国大陆团队能用吗？",
+        "answer": "受限。Airtop 是纯 Web 产品、界面与产出以英文为主，而 Google Ads 在中国大陆无法直接投放，需要通过代理商或本身有海外账户与业务，否则用不上它的核心场景。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Airtop for Google Ads",
+      "Airtop 怎么用",
+      "Airtop 价格",
+      "Google Ads 自动化 AI",
+      "AI 管理谷歌广告好用吗"
+    ],
+    "source_urls": [
+      "https://www.airtop.ai/google-ads",
+      "https://www.airtop.ai/pricing",
+      "https://www.producthunt.com/posts/airtop-auth-2",
+      "https://producthunt.programnotes.cn/en/p/product-hunt-daily-2026-08-04"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "whatsapp-mcp",
+    "slug": "whatsapp-mcp",
+    "positioning": "whatsapp-mcp是什么？让Claude读写你WhatsApp的开源MCP服务器好用吗",
+    "auto_positioning": false,
+    "emoji": "💬",
+    "color": "#25D366",
+    "description": "开源项目（github.com/lharries/whatsapp-mcp，MIT 许可，约 6.1 千星），把个人 WhatsApp 接进 Claude Desktop、Cursor 等 MCP 客户端：搜联系人、翻消息与媒体、给个人或群发送文本、图片、视频、文档和语音。它由 Go 桥接程序基于 whatsmeow 库走 WhatsApp Web 多设备接口连接你自己的账号，首次扫码登录，消息全量落在本地 SQLite，只有 Agent 通过工具主动读取时才会送给模型。需要注意：仓库最近一次提交在 2025 年 7 月，且 README 自己就提示了提示注入导致私人数据外泄的风险。",
+    "category": "AI自动化",
+    "tags": [
+      {
+        "text": "免费可用",
+        "type": "free"
+      },
+      {
+        "text": "开源项目"
+      },
+      {
+        "text": "MCP 服务器"
+      },
+      {
+        "text": "本地存储"
+      }
+    ],
+    "rating": "⭐ 4.0",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://github.com/lharries/whatsapp-mcp",
+    "price": "免费，MIT 许可开源自托管；成本只发生在你使用的模型侧（如 Claude 订阅或 API 调用）",
+    "platform": "macOS / Linux / Windows 自托管（需 Go、Python 3.6+ 与 uv；Windows 需开启 CGO_ENABLED 并安装 C 编译器；发可播放语音需 FFmpeg）。客户端支持 Claude Desktop、Cursor 等 MCP 客户端，走 stdio 本地运行",
+    "pros": [
+      "直连你自己的 WhatsApp 账号，不经第三方 API，也不用申请 Business API",
+      "消息全部落在本地 SQLite 并建索引，只有 Agent 通过工具访问时才交给模型，隐私边界由你掌握",
+      "工具粒度足够细：搜联系人、列会话、取消息上下文、查最近一次互动、发文本与媒体",
+      "MIT 许可、结构清晰（Go 桥接 + Python MCP server 两段式），二次改造和自建分支成本低"
+    ],
+    "cons": [
+      "上游仓库最近一次提交停在 2025 年 7 月，维护明显放缓，遇到接口变化基本要自己修",
+      "README 明确提示 lethal trifecta 风险：提示注入可能导致私人消息被外泄",
+      "走个人账号多设备通道，约 20 天需重新扫码认证，还受 WhatsApp 关联设备数量上限限制，这类用法是否符合平台条款需自行评估"
+    ],
+    "features": [
+      "消息检索：list_messages、get_message_context、get_last_interaction，按条件翻历史并带上下文",
+      "会话与联系人：list_chats、get_chat、search_contacts、get_direct_chat_by_contact、get_contact_chats",
+      "发送能力：send_message 发文本，send_file 发图片、视频、文档与音频，支持个人与群聊",
+      "语音消息：装好 FFmpeg 后自动把非 Opus 音频转成 .ogg Opus，发出去是可播放的语音条",
+      "本地存储：Go 桥接把 chats 与 messages 写入 SQLite 并建索引，便于快速搜索与检索",
+      "客户端接入：一份 mcpServers 配置即可接入 Claude Desktop 或 Cursor，重启后即出现 WhatsApp 集成"
+    ],
+    "related": [
+      "claude",
+      "claude-code",
+      "n8n"
+    ],
+    "content": "## whatsapp-mcp是什么？\n\nwhatsapp-mcp 是一个开源项目（github.com/lharries/whatsapp-mcp，MIT 许可，约 6.1 千星，2025 年 3 月建库），作用是把你个人的 WhatsApp 变成 Agent 能读能写的一个工具。接上之后，Claude Desktop 或 Cursor 里的 Agent 可以搜联系人、翻你的聊天记录（含图片、视频、文档、语音），也能给个人或群发消息和媒体文件。作者的动机写得很实在：你 99% 的生活都在 WhatsApp 里，把 LLM 接上，它才算拿到了完整上下文。\n\n实现是两段式的。一个 Go 写的桥接程序基于 whatsmeow 库走 WhatsApp Web 多设备接口连你的账号，首次运行时终端里出二维码，用手机扫一下完成认证，之后它负责把聊天与消息写进本地 SQLite；另一头是 Python 写的 MCP server，把这些数据包装成标准 MCP 工具给客户端调用。整条链路不依赖任何第三方 API，也不需要申请 WhatsApp Business API——这是它和多数商业方案最根本的区别。\n\n数据流向值得单独说：消息存在本机 SQLite，只有当 Agent 通过工具去读时才会送到模型那边，读什么由你控制。\n\n## 核心功能\n\n1. 消息检索：list_messages 按条件翻历史，get_message_context 取某条消息前后文，get_last_interaction 查和某人最近一次往来。\n2. 会话与联系人：list_chats 列会话及元信息，get_chat、get_direct_chat_by_contact、get_contact_chats、search_contacts 按名字或号码找人找群。\n3. 发送能力：send_message 发文本，send_file 发图片、视频、文档、音频，个人和群聊都支持。\n4. 语音消息：装了 FFmpeg 之后会自动把非 Opus 音频转成 .ogg Opus，对方收到的是可播放的语音条；没装 FFmpeg 也能用 send_file 发原始音频。\n5. 本地存储与索引：桥接程序在 whatsapp-bridge/store/ 下维护 SQLite，chats 与 messages 分表并建索引，搜索够快。\n6. 客户端接入：把一段 mcpServers 配置写进 Claude Desktop 的 claude_desktop_config.json 或 Cursor 的 mcp.json，重启就能看到 WhatsApp 集成。\n\n## 版本/套餐对比\n\n没有付费档。它是 MIT 许可的开源项目，自己跑、完全免费，唯一的花费在模型那一侧（Claude 订阅或 API 调用）。跨平台方面有个坑要提前知道：Windows 上 go-sqlite3 需要 CGO，项目文档给的解法是装 C 编译器（推荐 MSYS2，把 ucrt64\\bin 加进 PATH），然后 go env -w CGO_ENABLED=1 再跑，否则会直接报 CGO_ENABLED=0 的错。\n\n## 值不值得用？\n\n先说它好在哪。思路上它是对的：不绕商业 API、不上云，直接借 WhatsApp Web 的多设备通道接你自己的账号，数据留在本地 SQLite，模型只看你允许它看的部分。工具设计也务实，get_message_context、get_last_interaction 这种粒度明显是真用过的人设计的——找一条旧消息的来龙去脉，比笼统的「搜索」有用得多。代码只有 Go 桥接加 Python server 两块，想改想加自己动手门槛不高，这也是它衍生出一堆 fork 的原因。\n\n再说必须掂量的三件事。第一，维护：上游最近一次提交在 2025 年 7 月，一年左右没有新动作，WhatsApp 那边接口一变，你大概只能自己修或者去 fork 里找答案。第二，安全：README 自己就挂了警告，说它符合所谓 lethal trifecta 的条件，提示注入有可能导致私人数据被外泄——把一整部聊天史交给 Agent，这个风险不是理论上的。第三，账号：多设备通道大约 20 天要重新扫码，且受 WhatsApp 关联设备数上限约束，这类自动化用法是否符合平台条款，得你自己判断，别拿主号做实验。\n\n## 使用建议\n\n1. 先跑通再谈自动化：先起 Go 桥接、扫码，等历史消息同步完（聊天多的话要几分钟），再去接 MCP 客户端。\n2. 权限给小一点。日常先只用检索类工具，确认 Agent 的行为符合预期后再放开发送权限。\n3. 别在主号上做实验，尤其不要让 Agent 在群里自由发言——发出去的消息撤不回。\n4. 消息不同步时按文档处理：删掉 store 目录下的 messages.db 与 whatsapp.db 再重启桥接重新认证。\n5. 用之前先看一眼最新 commit 时间。这类停更项目建议自己 fork 一份并锁定依赖版本。\n\n## 适合谁用？\n\n推荐：会自己折腾环境、想让 Agent 拿到自己通信上下文的开发者，以及需要在本地做消息检索与批量回复的重度 WhatsApp 用户。\n可考虑：研究 MCP 生态如何连接个人数据源的开发者，可以拿它当参考实现读代码。\n不推荐：不熟悉 Go / Python 环境的普通用户，对隐私和合规要求严格的企业场景，以及需要长期稳定维护的生产系统。",
+    "published": false,
+    "faq": [
+      {
+        "question": "whatsapp-mcp 是免费的吗？",
+        "answer": "是。它是 MIT 许可的开源项目，自托管运行、完全免费，没有任何付费档位。实际花费只出现在你使用的模型一侧，比如 Claude 订阅或 API 调用。"
+      },
+      {
+        "question": "它需要 WhatsApp Business API 吗？",
+        "answer": "不需要。它通过 Go 桥接程序基于 whatsmeow 库走 WhatsApp Web 多设备接口，直接连你的个人账号，首次运行扫码认证即可，不依赖第三方 API。"
+      },
+      {
+        "question": "我的聊天记录会被上传到云端吗？",
+        "answer": "按项目说明，所有消息存储在本地 SQLite 数据库，只有当 Agent 通过工具访问时才会发给模型（这部分由你控制）。但 README 也警告存在提示注入导致私人数据外泄的风险，敏感对话建议慎用。"
+      },
+      {
+        "question": "这个项目还在维护吗？",
+        "answer": "维护节奏明显放缓。仓库最近一次提交在 2025 年 7 月，此后没有新动作。项目本身仍可用，但如果 WhatsApp 接口发生变化，你可能需要自己修或参考社区 fork，建议自行 fork 并锁定依赖。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "whatsapp-mcp",
+      "WhatsApp MCP 服务器",
+      "whatsapp-mcp 怎么用",
+      "Claude 连接 WhatsApp",
+      "whatsapp-mcp 安全吗"
+    ],
+    "source_urls": [
+      "https://github.com/lharries/whatsapp-mcp",
+      "https://api.github.com/repos/lharries/whatsapp-mcp",
+      "https://explainx.ai/mcp-servers/whatsapp-mcp",
+      "https://chat.mcp.so/server/whatsapp-mcp/lharries"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "20260820-001",
+    "title": "智谱 GLM-5.3 上线：AA 指数 60 分并列开源第一",
+    "summary": "GLM-5.3 API 即日开放，擅长复杂编码与防御性网络安全；单任务成本为旗舰最低，API 定价与 GLM-5.2 持平，权重下周五开源。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "公众号：智谱（GLM）",
+    "source_url": "https://mp.weixin.qq.com/s?__biz=MzkyMzI3NzQ0Mg%3D%3D&mid=2247494105&idx=1&sn=8d7409e0fb846a3c7803c142b5d1a8e7",
+    "published_at": "2026-08-19T09:03:29+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260820-002",
+    "title": "DeepSeek-V4-Pro H20 优化逼近 B300",
+    "summary": "LMSYS 在 H20 优化 1.6 万亿参数 MoE 推理：单节点 271 tokens/s，B300 为 383.7 tokens/s，差 1.42 倍。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "LMSYS：Blog（Chatbot Arena 团队）",
+    "source_url": "https://www.lmsys.org/blog/2026-08-19-deepseek-v4-pro-engine-optimization-h20",
+    "published_at": "2026-08-20T01:56:13+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260820-003",
+    "title": "Liquid AI LFM2.5 量化版恢复 97% 精度",
+    "summary": "Liquid AI 推 LFM2.5 四款 Q4_0 检查点（230M 至 2.6B），经量化感知蒸馏训练，保持原生速度，恢复 BF16 精度损失 97%。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "Hugging Face：Blog（RSS）",
+    "source_url": "https://huggingface.co/blog/LiquidAI/qad",
+    "published_at": "2026-08-19T21:48:49+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260820-004",
+    "title": "smolvm 1.8.3 实测：硬件隔离沙箱跑不可信代码",
+    "summary": "smolvm 1.8.3 用硬件隔离 VM 沙箱运行不可信 Python/JS：离线镜像、无网络执行均正常，冷启动 0.6-1.5 秒，热执行约 50 毫秒。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "Simon Willison 博客",
+    "source_url": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox",
+    "published_at": "2026-08-20T07:16:00+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260820-005",
+    "title": "FastMetal 让 Mac 本地 30 秒生成视频",
+    "summary": "FastMetal 让 Mac 本地 30 秒生成 5 秒 480P 视频，无需 CUDA 与云端，仅占 3.9 GiB 内存。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "GitHub：hao-ai-lab/FastVideo",
+    "source_url": "https://github.com/hao-ai-lab/FastVideo",
+    "published_at": "2026-08-20T04:42:57+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260820-006",
+    "title": "IBM 论文：措辞改写致 LLM 分数波动 74.7%",
+    "summary": "IBM BenchDrift 框架：不改答案改写同一问题，8 模型 3 基准分数平均波动 74.7 个百分点，高置信区间丢 18.5% 正确回答。",
+    "category": "paper",
+    "category_label": "论文研究",
+    "source": "arXiv：IBM Research 论文",
+    "source_url": "https://arxiv.org/html/2608.11694v1",
+    "published_at": "2026-08-20T02:45:00+08:00",
+    "tags": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20260820-007",
+    "title": "Ornith-1.5 发布：从自我构建到自我优化",
+    "summary": "Ornith-1.5 将 Ornith-1.0 的自我构建框架扩展为完整自我优化闭环：模型自主提出任务、生成任务专属脚手架并产出解决方案用于强化学习。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+    "source_url": "https://ornith.ai/ornith_1_5.html",
+    "published_at": "2026-08-20T02:46:11+08:00",
+    "tags": [
+      "models"
+    ]
+  }
+]

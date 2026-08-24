@@ -1,0 +1,104 @@
+[
+  {
+    "slug": "hermes-agent",
+    "verdict": "ISSUES",
+    "issues": [
+      {
+        "field": "description/content/features",
+        "claim": "「支持 200+ 大模型和 40+ 工具、六种执行后端」、「它支持 200+ 大模型和 40+ 工具、六种执行后端」",
+        "truth": "官方 GitHub 仓库明确列出 7 种终端（执行）后端：local、Docker、SSH、Singularity、Modal、Daytona、Vercel Sandbox；模型方面，Nous Portal 提供 300+ 模型（并非仅 200+）。「六种」与官方「7 种」不符，「200+」为偏低表述。",
+        "source": "https://github.com/NousResearch/hermes-agent",
+        "fix": "将「六种执行后端」改为「七种执行后端」；「200+ 大模型」可改为更准确的「300+ 模型」。其余（40+ 工具、agentskills.io、OpenClaw 迁移、自我进化技能、跨会话记忆）均与官方一致，无需修改。"
+      }
+    ],
+    "sources": [
+      "https://github.com/NousResearch/hermes-agent"
+    ]
+  },
+  {
+    "slug": "microsoft-agent-framework",
+    "verdict": "ISSUES",
+    "issues": [
+      {
+        "field": "url",
+        "claim": "https://cloud.microsoft.com/agent-framework",
+        "truth": "该 URL 跳转至 Microsoft 账户登录页（AAD），并非公开产品/文档落地页，无法作为官网访问。官方文档落地页为 https://learn.microsoft.com/agent-framework（另有 devblogs.microsoft.com/agent-framework 博客）。",
+        "source": "https://learn.microsoft.com/agent-framework",
+        "fix": "将 url 改为 https://learn.microsoft.com/agent-framework。其余事实（2026 年 4 月发布 1.0、合并 AutoGen 与 Semantic Kernel、连接器含 Foundry/Azure OpenAI/OpenAI/Claude/Bedrock/Gemini/Ollama、Middleware Hooks、记忆后端 Foundry/Mem0/Redis/Neo4j、图式工作流、编排模式 sequential/concurrent/handoff/group chat/Magentic-One、YAML 声明式、A2A/MCP）均与官方 1.0 公告一致，无需修改。"
+      }
+    ],
+    "sources": [
+      "https://learn.microsoft.com/agent-framework",
+      "https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0"
+    ]
+  },
+  {
+    "slug": "google-adk",
+    "verdict": "ISSUES",
+    "issues": [
+      {
+        "field": "url",
+        "claim": "https://cloud.google.com/adk",
+        "truth": "该 URL 返回 404（页面不存在），不是有效官网。Google ADK 官方站点为 https://adk.dev（「Agent Development Kit」官方文档站，列明支持 Python、TypeScript、Go、Java、Kotlin）。",
+        "source": "https://adk.dev",
+        "fix": "将 url 改为 https://adk.dev。功能点（Workflow Agent 的 Sequential/Parallel/Loop、LlmAgent 动态路由、内置评估、部署到 Vertex AI Agent Engine/Cloud Run/Docker、模型无关/部署无关、多语言 Python/TypeScript/Go/Java）均属实，无需修改；仅补充 Kotlin 也已官方支持。"
+      }
+    ],
+    "sources": [
+      "https://adk.dev"
+    ]
+  },
+  {
+    "slug": "google-genkit",
+    "verdict": "ISSUES",
+    "issues": [
+      {
+        "field": "description/features/content/faq",
+        "claim": "「支持 JavaScript/TypeScript、Go、Python（Beta）与 Dart（Preview）」、「Python（Beta）、Dart（Preview）」",
+        "truth": "官方 genkit.dev 当前将 Python 与 Dart 均标注为「Preview」（Python 并非「Beta」）。其余语言（JS/TS、Go）、Apache 2.0 协议、Next.js/React/Angular/iOS/Android 集成、RAG、可观测性均与官方一致。",
+        "source": "https://genkit.dev",
+        "fix": "将「Python（Beta）」统一改为「Python（Preview）」，与 Dart（Preview）保持一致。此为成熟度标注误差，非虚构功能。"
+      }
+    ],
+    "sources": [
+      "https://genkit.dev",
+      "https://firebase.google.cn/docs/genkit/overview"
+    ]
+  },
+  {
+    "slug": "mastra",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://mastra.ai",
+      "https://mastra.ai/blog/using-ai-sdk-with-mastra",
+      "https://mastra.ai/blog/beta-launch"
+    ]
+  },
+  {
+    "slug": "pydantic-ai",
+    "verdict": "ISSUES",
+    "issues": [
+      {
+        "field": "description/features/content",
+        "claim": "「内置 Pydantic AI Gateway，单 key 接多模型，做智能路由与成本治理」、「Pydantic AI Gateway 单 key 接多模型」",
+        "truth": "Pydantic 官方提供的网关产品名为「Logfire AI Gateway」（SaaS），提供 LLM Routing / FinOps / BYOK / OpenTelemetry，并非独立命名为「Pydantic AI Gateway」的产品。其描述的能力（单 key 接多模型、智能路由与成本治理）属实，但产品名不准确。",
+        "source": "https://pydantic.dev",
+        "fix": "将「Pydantic AI Gateway」改为「Logfire AI Gateway」（或表述为「Pydantic 提供的 AI 网关 / Logfire AI Gateway」）。其余事实（1.0 发布时约 1500 万次下载、持久化执行支持 Temporal/DBOS/Prefect/Restate、Logfire 集成、100% 测试覆盖、V1 至少 6 个月 API 稳定及后续 6 个月安全修复）均与官方 v1 公告一致，无需修改。"
+      }
+    ],
+    "sources": [
+      "https://pydantic.dev/articles/pydantic-ai-v1",
+      "https://pydantic.dev"
+    ]
+  },
+  {
+    "slug": "claude-agent-sdk",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://docs.anthropic.com/en/api/agent-sdk",
+      "https://code.claude.com/docs/en/agent-sdk"
+    ]
+  }
+]

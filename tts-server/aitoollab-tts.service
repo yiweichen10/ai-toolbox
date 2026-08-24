@@ -1,0 +1,19 @@
+[Unit]
+Description=aitoollab TTS Service (edge-tts, independent of AI assistant)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/aitoollab-tts
+# uv 管理的 venv 直接调用可执行, 不污染系统 Python
+ExecStart=/opt/aitoollab-tts/.venv/bin/uvicorn tts_server:app --host 127.0.0.1 --port 8088
+Restart=on-failure
+RestartSec=3
+Environment=TTS_CACHE_DIR=/opt/aitoollab-tts/cache
+Environment=PYTHONUNBUFFERED=1
+StandardOutput=append:/var/log/aitoollab-tts.log
+StandardError=append:/var/log/aitoollab-tts.log
+
+[Install]
+WantedBy=multi-user.target

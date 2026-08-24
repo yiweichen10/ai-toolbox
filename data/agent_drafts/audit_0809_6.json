@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "qwen-work",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://www.alibabagroup.com/document-2021039099929952252256",
+      "https://baike.baidu.com/item/%E5%8D%83%E9%97%AE%E5%8A%9E%E5%85%AC/68324768",
+      "https://new.qq.com/rain/a/20260812A09ERZ00"
+    ]
+  },
+  {
+    "slug": "wps-comate",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://365.wps.cn/home?id=18385",
+      "https://comate.wps.cn",
+      "https://www.toutiao.com/article/7663057846539665954"
+    ]
+  },
+  {
+    "slug": "slackbot-ai",
+    "verdict": "ISSUES",
+    "issues": [
+      {
+        "field": "description / content",
+        "claim": "2026 年 8 月，Slack 又通过一组 MCP 服务把 Slackbot 接入整个 Salesforce 平台（CRM、Tableau、Data 360、Agentforce），并宣布 30 项 AI 新功能。",
+        "truth": "多家媒体明确：Salesforce 公布「30 项 Slack AI 新功能」的时间是 2026 年 3 月 31 日（Marc Benioff 在旧金山 St. Regis 酒店发布，为 2021 年收购以来最大产品升级）。2026 年 8 月 Slack 确有进一步将 Slackbot 通过 MCP 接入 Salesforce/第三方平台的滚动更新，但「30 项新功能」并非 8 月宣布。",
+        "source": "https://ai2.work/blog/salesforce-reinvents-slack-with-30-ai-features-what-enterprises-need-to-know ; https://www.techticia.com/salesforce-announces-an-ai-heavy-makeover-for-slack-with-30-new-features ; https://vantagepoint.io/blog/sf/slack-august-2026-admin-updates",
+        "fix": "将「宣布 30 项 AI 新功能」的日期改为 2026 年 3 月 31 日；保留 8 月部分作为「进一步通过 MCP 接入 Salesforce 平台（CRM、Tableau、Data 360、Agentforce 等）」的滚动更新表述。"
+      }
+    ],
+    "sources": [
+      "https://www.salesforce.com/ap/news/press-releases/2026/01/14/salesforce-announces-the-general-availability-of-slackbot-your-personal-agent-for-work-ph/",
+      "https://cloud.tencent.com.cn/developer/article/2670449",
+      "https://ai2.work/blog/salesforce-reinvents-slack-with-30-ai-features-what-enterprises-need-to-know",
+      "https://vantagepoint.io/blog/sf/slack-august-2026-admin-updates"
+    ]
+  },
+  {
+    "slug": "wispr-flow",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://wisprflow.ai/pricing",
+      "https://wisprflow.ai/whats-new",
+      "https://chatgate.ai/post/wispr-flow-notetaker",
+      "https://www.ic.work/article/wispr-flow-notetaker-hipaa-compliance-contradiction"
+    ]
+  },
+  {
+    "slug": "dover-mcp",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://chatgate.ai/post/dover-mcp",
+      "https://www.hunted.space/product/dover",
+      "https://ustack.app/blogs/producthunt-daily-2026-08-05"
+    ]
+  },
+  {
+    "slug": "troopr",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://aisagely.com/troopr-ai-scrum-master",
+      "https://launly.com/products/troopr-ai-scrum-master",
+      "https://www.linkedin.com/posts/troopr_troopr-ai-ai-scrum-master-writes-your-standup-activity-7491399017118167041-g0AE"
+    ]
+  },
+  {
+    "slug": "qwen3-8-max",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://stock.stockstar.com/JC2026081400009946.shtml",
+      "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-8-max-its-largest-and-most-capable-flagship-model-to-date_603420",
+      "https://venturebeat.com/technology/qwen3-8-max-arrives-with-a-bold-claim-it-outperforms-gpt-5-6-sol-max-and-fable-5-on-agentic-computer-use",
+      "https://segmentfault.com/a/1190000048111231"
+    ]
+  }
+]

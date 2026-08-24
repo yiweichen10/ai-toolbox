@@ -224,14 +224,17 @@ def article_content_type(a):
 
 
 def ensure_article_content_types(articles):
-    """新文章自动归类（2026-08-08）：content_type 缺失时按规则内存补齐，返回补写篇数。
-    幂等：已归类的不动；配合 article_content_type() 兜底，保证新增文章无需手工维护类型。
-    注意：只做内存赋值，不写回 articles.json（构建对数据只读，写回职责归发布管线/分类脚本）。"""
+    """新文章自动归类（2026-08-08）：content_type 缺失时按规则补齐并落盘，返回补写篇数。
+    幂等：已归类的不动；配合 article_content_type() 兜底，保证新增文章无需手工维护类型。"""
     changed = 0
     for a in articles:
         if a.get('content_type') not in ARTICLE_CONTENT_TYPES:
             a['content_type'] = article_content_type(a)
             changed += 1
+    if changed:
+        with open(os.path.join(DATA_DIR, 'articles.json'), 'w', encoding='utf-8') as f:
+            json.dump(articles, f, ensure_ascii=False, indent=2)
+        print(f'[OK] 自动归类 {changed} 篇新文章 content_type')
     return changed
 
 # 意图驱动标题引擎（2026-07-25）：long_tail / Title / Meta 生成，消除全站统一模板
@@ -335,28 +338,6 @@ def _emit(path: str, html: str) -> None:
             if _attempt == 4:
                 raise
             _t.sleep(0.4)
-
-
-def _record_build_error(kind: str, key: str, err: str) -> None:
-    """fail-soft 错误记录（2026-08-23）：单页渲染失败时追加到 data/build_errors.json，
-    供构建后排查。不抛异常、不阻断其他页面。"""
-    try:
-        import json as _j
-        _p = os.path.join(DATA_DIR, 'build_errors.json')
-        _lst = []
-        if os.path.exists(_p):
-            try:
-                with open(_p, 'r', encoding='utf-8') as _f:
-                    _lst = _j.load(_f)
-                    if not isinstance(_lst, list):
-                        _lst = []
-            except Exception:
-                _lst = []
-        _lst.append({'kind': kind, 'key': key, 'error': str(err)[:300]})
-        with open(_p, 'w', encoding='utf-8') as _f:
-            _j.dump(_lst[-200:], _f, ensure_ascii=False, indent=1)
-    except Exception:
-        pass  # 错误记录失败不影响构建
 
 # ── 工具图标：唯一解析入口，SVG优先，PNG其次 ──
 def resolve_icon(slug):
@@ -844,62 +825,14 @@ _LINK_STOPWORDS = {'AI', 'API', 'GPT', 'Chat', 'ChatGPT', '工具', '助手',
                    '人工智能', '大模型', '机器人', 'AI工具', 'APP', 'App', '软件'}
 
 
-def load_tools():
-    """目录优先加载工具数据。有 data/tools/*.json 则聚合，否则回退单体 tools.json。"""
-    import glob as _glob
-    d = os.path.join(DATA_DIR, 'tools')
-    if os.path.isdir(d):
-        files = sorted(_glob.glob(os.path.join(d, '*.json')))
-        if files:
-            out = []
-            for fp in files:
-                try:
-                    rec = json.load(open(fp, 'r', encoding='utf-8'))
-                except Exception as e:
-                    _record_build_error('load_tools', fp, str(e))
-                    continue
-                if isinstance(rec, list):
-                    out.extend(rec)
-                elif isinstance(rec, dict):
-                    out.append(rec)
-                else:
-                    _record_build_error('load_tools', fp, f'未知类型 {type(rec).__name__}')
-            return out
-    with open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-
-def load_articles():
-    """目录优先加载文章数据。有 data/articles/*.json 则聚合，否则回退单体 articles.json。"""
-    import glob as _glob
-    d = os.path.join(DATA_DIR, 'articles')
-    if os.path.isdir(d):
-        files = sorted(_glob.glob(os.path.join(d, '*.json')))
-        if files:
-            out = []
-            for fp in files:
-                try:
-                    rec = json.load(open(fp, 'r', encoding='utf-8'))
-                except Exception as e:
-                    _record_build_error('load_articles', fp, str(e))
-                    continue
-                if isinstance(rec, list):
-                    out.extend(rec)
-                elif isinstance(rec, dict):
-                    out.append(rec)
-                else:
-                    _record_build_error('load_articles', fp, f'未知类型 {type(rec).__name__}')
-            return out
-    with open(os.path.join(DATA_DIR, 'articles.json'), 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-
 def get_tool_link_map():
     """返回 [(name, slug), ...] 用于正文行内内链，按名称长度降序以便最长优先匹配。"""
     global _TOOL_LINK_MAP
     if _TOOL_LINK_MAP is None:
+        path = os.path.join(DATA_DIR, 'tools.json')
         try:
-            ts = load_tools()
+            with open(path, encoding='utf-8') as f:
+                ts = json.load(f)
         except Exception:
             ts = []
         m = []
@@ -981,7 +914,8 @@ def get_published_tool_slugs():
     global _PUBLISHED_TOOL_SLUGS
     if _PUBLISHED_TOOL_SLUGS is None:
         try:
-            _ts = load_tools()
+            with open(os.path.join(DATA_DIR, 'tools.json'), encoding='utf-8') as f:
+                _ts = json.load(f)
             _PUBLISHED_TOOL_SLUGS = {t.get('slug') for t in _ts if t.get('published', True)}
         except Exception:
             _PUBLISHED_TOOL_SLUGS = set()
@@ -996,7 +930,8 @@ def clean_broken_tool_links(html):
     并对已知分类页 slug 白名单放行。"""
     published = get_published_tool_slugs()
     try:
-        _arts = load_articles()
+        with open(os.path.join(DATA_DIR, 'articles.json'), encoding='utf-8') as f:
+            _arts = json.load(f)
         art_slugs = {a.get('slug') for a in _arts}
     except Exception:
         art_slugs = set()
@@ -6952,8 +6887,11 @@ def build_index_page(tools, articles):
 
     # 替换工具数量（动态计算）
     all_tools_count = 0
-    all_tools_data = load_tools()
-    all_tools_count = len(all_tools_data)
+    tools_json_path = os.path.join(DATA_DIR, 'tools.json')
+    if os.path.exists(tools_json_path):
+        with open(tools_json_path, 'r', encoding='utf-8') as f:
+            all_tools_data = json.load(f)
+            all_tools_count = len(all_tools_data)
     if all_tools_count > 100:
         count_text = f'已收录 {all_tools_count // 100 * 100}+ 工具'
     else:
@@ -7113,7 +7051,7 @@ def load_news_archive():
 
 def build_news_page(all_tools=None):
     if all_tools is None:
-        all_tools = load_tools()
+        all_tools = json.load(open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8'))
     daily, dates = load_news_archive()
     if not dates:
         print('[NEWS] 无快讯数据，跳过')
@@ -7284,7 +7222,7 @@ def load_news_archive():
 
 def build_news_page(all_tools=None):
     if all_tools is None:
-        all_tools = load_tools()
+        all_tools = json.load(open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8'))
     daily, dates = load_news_archive()
     if not dates:
         print('[NEWS] 无快讯数据，跳过')
@@ -8487,12 +8425,14 @@ def build_target(target, slug=None, no_push=False):
     target: 'all' | 'articles' | 'tools' | 'live' | 'sitemap' | 'index' | 'pseo' | 'ranking'
     slug: 指定文章slug，仅构建该文章页+列表页+sitemap（增量构建模式）
     """
-    # 加载数据（目录优先，回退单体）
-    all_tools = load_tools()
+    # 加载数据
+    with open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8') as f:
+        all_tools = json.load(f)
     # 填充 slug->name 映射，供标题引擎对比意图取竞品名
     _SLUG_MAP.clear()
     _SLUG_MAP.update({t['slug']: t for t in all_tools if t.get('slug')})
-    articles = load_articles()
+    with open(os.path.join(DATA_DIR, 'articles.json'), 'r', encoding='utf-8') as f:
+        articles = json.load(f)
     # AI 应答前缀拦截（fail-fast）：脏内容绝不进线上
     _check_content_preamble(all_tools, articles)
     # 按日期降序排列（最新文章在前），date格式兼容 "MM/DD" 和 "YYYY-MM-DD"
@@ -8632,17 +8572,12 @@ def build_target(target, slug=None, no_push=False):
     # ═══════════════════════════════════════════════════════
     if target in ('all', 'index', 'tools'):
         for category_name, tools_in_category in tools_by_category.items():
-            try:
-                category_slug = get_category_slug(category_name)
-                dir_path = os.path.join(BASE_DIR, 'category', category_slug)
-                os.makedirs(dir_path, exist_ok=True)
-                html = build_category_page(category_name, tools_in_category, all_categories=tools_by_category)
-                _emit(os.path.join(dir_path, 'index.html'), html)
-                print(f'[OK] category/{category_slug}/index.html')
-            except Exception as e:
-                # fail-soft（2026-08-23）：单分类页渲染失败仅跳过+记录，不拖垮整次构建
-                print(f'[FAIL] category/{category_name}/: {e}')
-                _record_build_error('category', category_name, str(e))
+            category_slug = get_category_slug(category_name)
+            dir_path = os.path.join(BASE_DIR, 'category', category_slug)
+            os.makedirs(dir_path, exist_ok=True)
+            html = build_category_page(category_name, tools_in_category, all_categories=tools_by_category)
+            _emit(os.path.join(dir_path, 'index.html'), html)
+            print(f'[OK] category/{category_slug}/index.html')
 
         # 子类目独立页（扁平URL，独立SEO入口）；按 subcategory 字段过滤
         _subdef = get_subcat_def()
@@ -8683,16 +8618,11 @@ def build_target(target, slug=None, no_push=False):
     if target in ('all', 'tools'):
         for tool in published_tools:
             slug = tool['slug']
-            try:
-                dir_path = os.path.join(BASE_DIR, 'tools', slug)
-                os.makedirs(dir_path, exist_ok=True)
-                html = build_tool_page(tool, published_tools, articles, all_compares, all_alternatives, all_rankings)
-                _emit(os.path.join(dir_path, 'index.html'), html)
-                print(f'[OK] tools/{slug}/index.html')
-            except Exception as e:
-                # fail-soft（2026-08-23）：单工具页渲染失败仅跳过+记录，不拖垮整次构建
-                print(f'[FAIL] tools/{slug}/: {e}')
-                _record_build_error('tool', slug, str(e))
+            dir_path = os.path.join(BASE_DIR, 'tools', slug)
+            os.makedirs(dir_path, exist_ok=True)
+            html = build_tool_page(tool, published_tools, articles, all_compares, all_alternatives, all_rankings)
+            _emit(os.path.join(dir_path, 'index.html'), html)
+            print(f'[OK] tools/{slug}/index.html')
 
     # ═══════════════════════════════════════════════════════
     # 文章页
@@ -8700,16 +8630,11 @@ def build_target(target, slug=None, no_push=False):
     if target in ('all', 'articles'):
         for article in articles:
             slug = article['slug']
-            try:
-                dir_path = os.path.join(BASE_DIR, 'articles', slug)
-                os.makedirs(dir_path, exist_ok=True)
-                html = build_article_page(article, articles, published_tools)
-                _emit(os.path.join(dir_path, 'index.html'), html)
-                print(f'[OK] articles/{slug}/index.html')
-            except Exception as e:
-                # fail-soft（2026-08-23）：单文章页渲染失败仅跳过+记录，不拖垮整次构建
-                print(f'[FAIL] articles/{slug}/: {e}')
-                _record_build_error('article', slug, str(e))
+            dir_path = os.path.join(BASE_DIR, 'articles', slug)
+            os.makedirs(dir_path, exist_ok=True)
+            html = build_article_page(article, articles, published_tools)
+            _emit(os.path.join(dir_path, 'index.html'), html)
+            print(f'[OK] articles/{slug}/index.html')
 
         # 文章分页列表页
         total_pages = build_article_list_pages(articles)
@@ -9587,22 +9512,6 @@ def main():
             print(_leak_run.stderr or '')
     except FileNotFoundError:
         pass  # 检查脚本缺失不阻塞构建
-    # 构建前数据校验闸（G3，2026-08-23）：脏数据（缺必填/重复 slug/格式错误）在进渲染前拦下。
-    # 与 check_internal_leak 同款子进程模式：ERROR 级（exit 1）中止构建，WARN 级不阻断。
-    try:
-        _val_script = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'validate_data.py')
-        if os.path.isfile(_val_script):
-            _val_env = os.environ.copy()
-            _val_env['PYTHONIOENCODING'] = 'utf-8'
-            _val_run = subprocess.run([sys.executable, _val_script],
-                                      capture_output=True, text=True, encoding='utf-8', env=_val_env)
-            for _line in (_val_run.stdout or '').strip().splitlines()[-6:]:
-                print('[validate]', _line)
-            if _val_run.returncode == 1:
-                print('[build][拦截] 数据校验未通过，中止构建（请修复 data/*.json 后重试）')
-                raise SystemExit(1)
-    except FileNotFoundError:
-        pass  # 校验脚本缺失不阻塞构建
     parser = argparse.ArgumentParser(description='AI工具宝箱 SSG 构建脚本')
     parser.add_argument('--target', '-t',
                         choices=['all', 'articles', 'tools', 'live', 'pseo', 'ranking', 'index', 'sitemap', 'dict', 'news', 'none'],

@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Stable Audio",
+    "slug": "stable-audio",
+    "positioning": "Stable Audio是什么？Stability AI音乐生成好用吗",
+    "auto_positioning": false,
+    "emoji": "🎵",
+    "color": "#6E56CF",
+    "description": "Stable Audio 是 Stability AI 推出的 AI 音乐与音效生成工具，用自然语言描述即可生成最长约 6 分钟、44.1kHz 立体声的高清音频。它同时支持音乐、音效与声音设计，并提供对内容创作者友好的商用授权。",
+    "category": "AI音频",
+    "tags": [
+      {"text": "音乐生成"},
+      {"text": "音效"},
+      {"text": "商用授权"},
+      {"text": "免费可用","type":"free"}
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "暂无数据",
+    "badge": {"type":"recommend","text":"推荐"},
+    "url": "https://stableaudio.com",
+    "price": "免费版可用；付费 Pro 约 $11.99/月（以官网实时价格为准）",
+    "platform": "Web",
+    "pros": [
+      "文本描述即可生成，几乎零门槛",
+      "音质达 CD 级（44.1kHz 立体声），适合专业后期",
+      "商用授权清晰，对视频/游戏/播客创作者友好",
+      "既支持音乐，也支持音效与声音设计，不只做歌曲",
+      "生成速度快，多数情况几十秒出片"
+    ],
+    "cons": [
+      "免费版额度与时长有限，且不能商用",
+      "相比 Suno/Udio，不擅长生成带人声的完整歌曲",
+      "重度使用额度用尽需付费，成本需注意"
+    ],
+    "features": [
+      "文本生成音乐与音效（Text-to-Audio）",
+      "音频转音频，做风格迁移与变体（Audio-to-Audio）",
+      "人声输入转音乐/音效（第一版 Beta）",
+      "最长约 6 分钟、44.1kHz 立体声输出",
+      "商用授权友好，可在商业项目使用",
+      "多种流派、乐器、情绪与节奏控制"
+    ],
+    "related": ["suno","udio","elevenlabs"],
+    "content": "## Stable Audio是什么？\nStable Audio 是 Stability AI（也就是推出 Stable Diffusion 的那家公司）推出的 AI 音乐与音效生成工具。它的思路很直接：你用自然语言描述想要的音乐或音效——比如“舒缓的 lo-fi 嘻哈、90 BPM、带钢琴和黑胶噪点”——模型就能在几十秒内生成一段可以听、可以下载、还能商用的音频。和 Suno、Udio 更偏向“生成带人声的完整歌曲”不同，Stable Audio 一开始的定位就是“音乐 + 音效 + 声音设计”的创作素材库，对做视频配乐、游戏音效、播客片头的人来说很实用。根据官网说明，现在它能生成最长 6 分钟、44.1kHz 立体声的高清音频，并允许在你自己的商业项目里使用。\n\n## 核心功能\n1. 文本生成音频（Text-to-Audio）：输入风格、乐器、情绪、节奏等描述，直接出音乐或音效，门槛极低。\n2. 音频转音频（Audio-to-Audio）：把一段已有的音频和文字一起喂进去，做风格迁移和变体，适合二次创作。\n3. 人声输入（Beta）：可以上传人声，让模型把它转成音乐或音效，目前是第一版测试功能。\n4. 商用授权友好：付费方案生成的音频可在视频、游戏、播客等商业项目里使用，省去版权顾虑。\n5. CD 级音质输出：44.1kHz 立体声，接近专业录音室标准，导出的素材能直接进后期工程。\n\n## 版本/套餐对比\n| 方案 | 每月生成额度 | 单次最长 | 商用 | 价格 |\n| --- | --- | --- | --- | --- |\n| 免费版 | 约 20 次 | 45 秒 | 不支持 | 免费 |\n| Pro 付费版 | 约 500 次 | 90 秒（官网现称最长 6 分钟） | 支持 | 约 $11.99/月（以官网为准） |\n\n注：免费版音频仅限个人非商业用途；具体额度与价格以官网实时页面为准。\n\n## 值不值得用？\n优点：上手快、出片快，文本描述即可生成；音质专业，适合做配乐和音效；商用授权清晰，对内容创作者友好。\n缺点：免费版时长和次数都有限，且不能商用；相比 Suno/Udio 在“带人声歌曲”上不是强项；额度用完需付费。\n结论：如果你要的是背景音乐、音效、声音素材，而不是一首带歌词的完整歌曲，Stable Audio 很值得一试，尤其是配合付费商用授权做项目时性价比不错。\n\n## 使用建议\n- 描述越具体越好：把流派、乐器、情绪、BPM、时长都写进提示词，效果明显更可控。\n- 先用免费版跑 20 次摸清模型脾气，确定常用风格后再考虑 Pro。\n- 生成后用 DAW（如 Audacity、Logic）做淡入淡出和拼接，能更自然地嵌进视频。\n- 商用前确认订阅的是支持商用的方案，避免版权风险。\n\n## 适合谁用？\n- 推荐：视频创作者、播客主、独立游戏开发者、需要批量配乐的营销团队。\n- 可考虑：音乐爱好者、想快速做演示小样的制作人。\n- 不推荐：主要想生成“带人声演唱的完整歌曲”的用户，建议优先看 Suno、Udio。",
+    "published": false,
+    "faq": [
+      {"question":"Stable Audio 生成的内容可以商用吗？","answer":"付费 Pro 方案生成的音频可在视频、游戏、播客等商业项目中使用；免费版仅限个人非商业用途。具体授权以官网条款为准。"},
+      {"question":"Stable Audio 和 Suno、Udio 有什么区别？","answer":"Stable Audio 更偏音乐素材、音效和声音设计，支持最长约 6 分钟、44.1kHz 立体声输出；Suno/Udio 更擅长生成带人声的完整歌曲。按需求选择即可。"},
+      {"question":"免费版能用多少次？","answer":"公开资料称免费版每月约 20 次生成、单次最长 45 秒，且仅限非商业用途；准确额度以官网实时页面为准。"},
+      {"question":"生成一段音乐要多久？","answer":"多数情况下几十秒内即可生成并预览、下载，适合快速出素材。"}
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Stable Audio","Stable Audio怎么样","Stable Audio免费版","Stable Audio使用教程","Stable Audio和哪个好"],
+    "source_urls": [
+      "https://stableaudio.com",
+      "https://www.songmeaning.io/tw/tw/ai-%E9%9F%B3%E6%A8%82%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7stability-ai-%E7%9A%84-stable-audio-%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90-88425",
+      "https://la-studio.cc/en/blog/dtm-paid-plan-comparison-ai-music-generation"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Fish Audio",
+    "slug": "fish-audio",
+    "positioning": "Fish Audio是什么？开源AI配音好用吗",
+    "auto_positioning": false,
+    "emoji": "🐟",
+    "color": "#1BC6C6",
+    "description": "Fish Audio 是国内团队打造的 AI 语音合成平台，基于开源的 Fish Speech 模型，提供高拟真文字转语音、约 15 秒声音克隆和实时语音 API。它支持 30+ 语言与情绪控制，面向视频配音、有声书、游戏角色与语音 Agent 等场景。",
+    "category": "AI音频",
+    "tags": [
+      {"text": "语音合成"},
+      {"text": "声音克隆"},
+      {"text": "多语种"},
+      {"text": "免费可用","type":"free"}
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "约 190 万/月（第三方估算）",
+    "badge": {"type":"hot","text":"HOT"},
+    "url": "https://fish.audio",
+    "price": "免费版可用；Plus / Pro 付费订阅，具体价格以官网 plan 页面为准",
+    "platform": "Web",
+    "pros": [
+      "声音自然度高，接近真人，被多家评测排到 TTS 前列",
+      "克隆仅需约 15 秒参考音频，保留口音与语调",
+      "支持 30+ 语言，同一声音可跨语种发音",
+      "有开源 Fish Speech 社区背书，迭代快",
+      "免费版门槛低，开发者 API 延迟低",
+      "提供 200 万+ 社区声音库，开箱即用"
+    ],
+    "cons": [
+      "各来源对月费报价差异较大，需以官网为准",
+      "部分高级音效（如笑声、叹息）仍在打磨",
+      "作为较新平台，生态成熟度不如 ElevenLabs 等头部竞品"
+    ],
+    "features": [
+      "高拟真文字转语音（TTS），支持情绪与副语言标签",
+      "约 15 秒参考音频即可克隆任意人声",
+      "实时流式语音 API，适合聊天机器人与语音客服",
+      "30+ 多语种支持，跨语种发音",
+      "情绪与副语言控制（愤怒、耳语、笑声等）",
+      "语音转文字（STT）与端到端语音 Agent"
+    ],
+    "related": ["elevenlabs","suno","stable-audio"],
+    "content": "## Fish Audio是什么？\nFish Audio 是国内团队做的 AI 语音合成平台，背后是开源的 Fish Speech 系列模型（采用 Apache-2.0 协议）。它能做三件很实在的事：文字转语音（TTS）、声音克隆、以及实时语音 API。最打动人的是“拟真度”——很多用户反馈它的声音自然度、情绪控制和口音保留都接近真人，甚至被一些独立评测排到 TTS 榜前列。它支持中英日等多语种（官网标注 30+ 语言），还提供 200 万+ 社区声音库和开发者 API，适合从个人配音到企业级语音 agent 的各种场景。2026 年周年活动期间，官方还把 S2.1 Pro 模型通过开发者 API 免费开放，并给主流套餐打了 5 折。\n\n## 核心功能\n1. 高拟真 TTS：文字转语音，支持情绪标签（愤怒、开心、窃笑、耳语等）和副语言控制，声音更有“人味”。\n2. 声音克隆：用约 15 秒的参考音频即可克隆任意人声，保留口音、语调和说话习惯。\n3. 实时语音 API：首帧延迟低（官方称可低于 300–500ms），适合做聊天机器人、语音客服等实时场景。\n4. 多语种支持：覆盖 30+ 语言，同一克隆声音也能跨语种发音。\n5. 语音转文字（STT）与语音 Agent：提供转写和企业级端到端语音方案。\n6. 社区声音库：200 万+ 用户上传声音，开箱即用。\n\n## 版本/套餐对比\n| 方案 | 额度 | 适合人群 | 价格 |\n| --- | --- | --- | --- |\n| 免费版 | 含免费额度 / 免费克隆 | 个人体验 | 免费 |\n| Plus | 中等额度，含商用授权 | 创作者 | 付费订阅（以官网为准） |\n| Pro | 大额度、全功能 | 企业 / 重度用户 | 付费订阅（以官网为准） |\n\n注：不同来源对月费报价差异较大（约 $5.5–$75/月不等，取决于按月/按年与活动折扣），实际价格请以官网 plan 页面为准；免费版仅限个人用途，商用需付费方案。\n\n## 值不值得用？\n优点：声音自然度高、克隆快（15 秒即可）、多语种、有开源社区背书、API 延迟低、免费版门槛低。\n缺点：价格口径混乱，需以官网为准；部分高级音效（如笑声、叹息）仍在打磨；作为较新平台，生态成熟度不如 ElevenLabs。\n结论：追求“像真人”的中文/多语种配音、又想要开源可控和合理成本，Fish Audio 是目前很值得试的首选之一。\n\n## 使用建议\n- 克隆自己的声音时，用安静环境、单人、稳定音量录 15 秒以上，效果更稳。\n- 用情绪标签和 [whispering]、[laughing] 等标记增强表现力，但别堆太多以免不自然。\n- 做实时语音 agent 直接调流式 API，注意控制首帧延迟。\n- 商用前确认订阅支持商用授权的套餐。\n\n## 适合谁用？\n- 推荐：视频/有声书配音、游戏与动画角色配音、需要多语种客服/语音 agent 的团队。\n- 可考虑：想做个人播客、学习外语听力的个人用户。\n- 不推荐：只需要极偶尔一两句配音、且不接受任何付费的用户；以及要求完全本地离线部署且不愿自建开源模型的用户。",
+    "published": false,
+    "faq": [
+      {"question":"Fish Audio 的声音克隆快吗？","answer":"官方与用户反馈显示，约 15 秒参考音频即可克隆人声，并保留口音、语调和说话习惯。"},
+      {"question":"支持哪些语言？","answer":"官网标注支持 30+ 语言，同一克隆声音也能跨语种发音，中英日等覆盖较好。"},
+      {"question":"免费版能商用吗？","answer":"不能。免费版仅限个人用途，商用需订阅支持商用授权的付费方案。"},
+      {"question":"有 API 吗？适合做实时语音吗？","answer":"有开发者 API，支持流式低延迟输出（官方称可低于 300–500ms），适合做聊天机器人、语音客服等实时场景。"}
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Fish Audio","Fish Audio怎么样","Fish Audio免费版","Fish Audio使用教程","Fish Audio和哪个好"],
+    "source_urls": [
+      "https://fish.audio",
+      "https://www.agiyes.com/aimodels/fish-audio-s1/",
+      "https://best-ai.org/tool/fish-audio"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "PromptBase",
+    "slug": "promptbase",
+    "positioning": "PromptBase是什么？AI提示词市场好用吗",
+    "auto_positioning": false,
+    "emoji": "💡",
+    "color": "#FF8A00",
+    "description": "PromptBase 是全球最大的 AI 提示词交易市场之一（官网显示 31 万+ 高质量提示词），连接买家与提示词创作者。它覆盖 Midjourney、ChatGPT、DALL·E、Gemini、Veo、Claude、Stable Diffusion 等主流模型，支持按个购买、创作者变现与站内生成。",
+    "category": "AI效率",
+    "tags": [
+      {"text": "提示词市场"},
+      {"text": "Midjourney"},
+      {"text": "ChatGPT"},
+      {"text": "免费可用","type":"free"}
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "暂无数据",
+    "badge": {"type":"recommend","text":"推荐"},
+    "url": "https://promptbase.com",
+    "price": "按提示词单次购买，约 $2.99–$11.99（部分更高）；含免费提示词",
+    "platform": "Web",
+    "pros": [
+      "提示词经审核与社区评分，质量相对有保障",
+      "覆盖模型全、分类细（Logo、营销、UI、商业写作等）",
+      "创作者能稳定变现，抽成约 80%",
+      "有免费提示词可先试水",
+      "支持站内直接生成图片/视频，流程顺畅"
+    ],
+    "cons": [
+      "按个购买，重度用户长期成本会累积",
+      "效果仍依赖所用 AI 模型与个人改写能力",
+      "非订阅制，没有一站式包月体验"
+    ],
+    "features": [
+      "海量提示词市场（官网 31 万+）",
+      "按模型（Midjourney/ChatGPT/Gemini/Veo 等）与分类筛选",
+      "创作者变现，卖家保留约 80% 收入",
+      "站内直接生成图片/视频，省去复制粘贴",
+      "App 构建器，用提示词搭建小型 AI 应用",
+      "“Hire”功能雇提示词工程师按需求定制"
+    ],
+    "related": ["midjourney","stable-diffusion","chatgpt"],
+    "content": "## PromptBase是什么？\nPromptBase 是目前规模最大的 AI 提示词交易市场之一（官网显示已有 31 万+ 高质量提示词）。它本质上是一个“提示词商店”：一边是买家，想给 Midjourney、ChatGPT、DALL·E、Gemini、Veo、Claude、Stable Diffusion 等模型找现成、好用的提示词；另一边是卖家（提示词创作者），把自己的提示词挂上去卖钱。平台对提示词有审核和社区评分，买家用之前能看到示例输出和卖家评分，避免“买了踩坑”。对不想在提示词上反复试错的人来说，花几美元买一个验证过的提示词，往往比自己琢磨一下午更高效。\n\n## 核心功能\n1. 提示词市场：按模型（Midjourney / ChatGPT / Gemini / Veo 等）和分类（Logo、营销、UI、商业写作等）筛选购买。\n2. 创作者变现：卖家每笔销售可保留约 80% 收入，平台抽成约 20%。\n3. 站内生成：部分模型支持直接在 PromptBase 里生成图片/视频，省去复制粘贴。\n4. App 构建器：用购买的提示词搭建小型 AI 应用，甚至嵌入自己网站。\n5. 雇人定制：通过 “Hire” 功能委托提示词工程师按需求定制。\n6. 免费提示词：平台提供一定数量的免费提示词供试用。\n\n## 版本/套餐对比\nPromptBase 采用“按提示词单次购买”模式，没有传统月费订阅：\n| 类型 | 价格 | 说明 |\n| --- | --- | --- |\n| 免费提示词 | $0 | 供试用与体验 |\n| 普通提示词 | 约 $2.99–$11.99 | 多数提示词在此区间 |\n| 专业/定制提示词 | 最高约 $23.99 | 复杂商业场景 |\n| 卖家抽成 | 创作者保留 80% | 平台收 20% |\n\n注：价格由卖家自主设定，具体以商品页为准；提现门槛约 $30。\n\n## 值不值得用？\n优点：提示词经过验证、带示例和评分，质量相对有保障；覆盖模型全、分类细；创作者能稳定变现；免费提示词可先试水。\n缺点：按个买，重度用户长期成本会累积；效果仍依赖你使用的 AI 模型和会否灵活改提示词；不是“订阅制一站式”体验。\n结论：如果你是偶尔需要高质量提示词、或想省下试错时间的内容创作者、营销人，PromptBase 很划算；如果你是每天都狂用提示词的人，长期看成本要注意。\n\n## 使用建议\n- 先搜免费提示词和带示例的条目，确认风格对味再付费。\n- 买之前看评分、销量和示例输出，优先选高分卖家。\n- 买来后根据实际需求改几个词，往往比原样照抄效果更好。\n- 想靠它赚钱，可以把自己验证过的提示词上架，利用 80% 分成变现。\n\n## 适合谁用？\n- 推荐：设计师、营销/自媒体从业者、需要稳定产出视觉/文案素材的小团队。\n- 可考虑：想学习提示词工程、研究别人怎么写提示词的学习者。\n- 不推荐：希望“一个订阅全搞定”的重度用户；以及只想要免费、不愿为单条提示词付费的人。",
+    "published": false,
+    "faq": [
+      {"question":"PromptBase 上的提示词多少钱？","answer":"采用按提示词单次购买，多数约 $2.99–$11.99，部分专业/定制提示词更高；平台也提供一定数量的免费提示词。"},
+      {"question":"卖家能赚多少？","answer":"卖家每笔销售通常可保留约 80% 收入，平台抽成约 20%；提现门槛约 $30。"},
+      {"question":"提示词质量有保障吗？","answer":"平台有审核、社区评分和示例输出，买家购买前可看评分与示例，相对减少踩坑概率。"},
+      {"question":"支持哪些 AI 模型？","answer":"覆盖 Midjourney、ChatGPT、DALL·E、Gemini、Veo、Claude、Stable Diffusion 等主流模型，分类也较细。"}
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["PromptBase","PromptBase怎么样","PromptBase免费版","PromptBase使用教程","PromptBase和哪个好"],
+    "source_urls": [
+      "https://promptbase.com",
+      "https://gongke.net/tools/promptbase",
+      "https://artificial-intelligence-wiki.com/prompt-engineering/chatgpt-prompts/prompt-marketplaces-guide"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  }
+]

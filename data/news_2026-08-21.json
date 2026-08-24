@@ -1,0 +1,106 @@
+[
+  {
+    "id": "20260821-001",
+    "title": "Mistral 推出 Agentic Search 多步检索",
+    "summary": "Mistral 用 search、open、navigate、read、grep 五工具循环检索，让模型在长文档与多来源中查找、定位并验证信息。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Mistral AI：News（网页）",
+    "source_url": "https://mistral.ai/news/agentic-search",
+    "published_at": "2026-08-21T00:02:07+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260821-002",
+    "title": "阿里发布 Qwen-UI-Agent GUI 智能体",
+    "summary": "阿里巴巴正式推出 Qwen-UI-Agent，一个以真实世界为中心的 GUI 智能体基座模型，覆盖移动端、电脑端、网页端及深度搜索（DeepSearch）环境。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "IT之家（RSS）",
+    "source_url": "https://www.ithome.com/0/992/239.htm",
+    "published_at": "2026-08-20T17:45:51+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260821-003",
+    "title": "Claude Code 初创公司指南：五大规则与创始人洞见",
+    "summary": "Anthropic 发布面向初创公司的 Claude Code 指南，基于十余家高增长公司调研，总结“人人皆可交付、自动化繁琐工作、信任但验证”等五大规则。",
+    "category": "opinion",
+    "category_label": "观点",
+    "source": "Claude：Blog（网页）",
+    "source_url": "https://claude.com/blog/claude-code-guide-for-startups",
+    "published_at": "2026-08-20T21:26:53+08:00",
+    "tags": [
+      "opinion"
+    ]
+  },
+  {
+    "id": "20260821-004",
+    "title": "OpenAI 首席财务官称最迟 2027 年上市",
+    "summary": "OpenAI 首席财务官称最迟 2027 年上市，6 月已秘密提交 IPO；本季度年化营收增长 35%、企业级 50%，AI 编程与办公产品周活 2000 万。",
+    "category": "industry",
+    "category_label": "行业动态",
+    "source": "IT之家（RSS）",
+    "source_url": "https://www.ithome.com/0/991/886.htm",
+    "published_at": "2026-08-20T08:17:26+08:00",
+    "tags": [
+      "industry"
+    ]
+  },
+  {
+    "id": "20260821-005",
+    "title": "AlloyDB ScaNN 扩至 100 亿向量",
+    "summary": "AlloyDB ScaNN 支持超 100 亿向量，四层树架构查询复杂度从 O(N^1/2) 降至 O(N^1/4)，p95 延迟 51 毫秒、召回率 95%。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Google Cloud：Databases（RSS）",
+    "source_url": "https://cloud.google.com/blog/products/databases/alloydb-scann-index-four-level-tree-improves-vector-search",
+    "published_at": "2026-08-21T00:00:00+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260821-006",
+    "title": "HF 发布 LFM2.5 DSpark 草稿模型",
+    "summary": "Hugging Face 发 LFM2.5 DSpark 草稿：投机解码不损质量，GPU 吞吐提升 3.18 倍、端侧 2.87 倍；草稿约 300M 参数。",
+    "category": "models",
+    "category_label": "模型发布",
+    "source": "Hugging Face：Blog（RSS）",
+    "source_url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
+    "published_at": "2026-08-21T00:52:57+08:00",
+    "tags": [
+      "models"
+    ]
+  },
+  {
+    "id": "20260821-007",
+    "title": "Claude Computer Use 全面可用",
+    "summary": "Anthropic 宣布 Computer Use、Skills API、Files API 全面可用，新增浏览器操作工具，智能体可操作软件并调用团队技能。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Claude：Blog（网页）",
+    "source_url": "https://claude.com/blog/computer-use-skills-api-files-api",
+    "published_at": "2026-08-21T04:27:01+08:00",
+    "tags": [
+      "products"
+    ]
+  },
+  {
+    "id": "20260821-008",
+    "title": "Anthropic 发布 Claude Academy",
+    "summary": "Anthropic 发布 Claude Academy，面向全球数百万用户，课程含 4D AI Fluency Framework 与持续学习项目。",
+    "category": "products",
+    "category_label": "产品发布",
+    "source": "Claude：Blog（网页）",
+    "source_url": "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai",
+    "published_at": "2026-08-21T01:56:58+08:00",
+    "tags": [
+      "products"
+    ]
+  }
+]

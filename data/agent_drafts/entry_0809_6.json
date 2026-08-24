@@ -1,0 +1,684 @@
+[
+  {
+    "name": "千问办公 QwenWork",
+    "slug": "qwen-work",
+    "positioning": "千问办公QwenWork是什么？阿里企业级Agent办公平台好用吗",
+    "auto_positioning": false,
+    "emoji": "🏢",
+    "color": "#FF6A00",
+    "description": "千问办公（QwenWork）是阿里巴巴的企业级 Agent 产品，2026 年 8 月 3 日开启公测，由 QoderWork、MuleRun、悟空三款产品整合而来，同时支持桌面端 Agent、云端 Agent 与企业协同 Agent。用一句自然语言描述目标，它会自动拆解任务、并行执行，交付可继续编辑的 Office 文件、网页或数据报告，底层由同日发布的旗舰模型 Qwen3.8-Max 驱动。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "公测免费",
+        "type": "free"
+      },
+      {
+        "text": "阿里出品"
+      },
+      {
+        "text": "企业级"
+      },
+      {
+        "text": "三端Agent"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.qwenwork.cn",
+    "price": "公测期开放免费体验，个人与企业用户均可注册使用；官方尚未公布正式商业定价",
+    "platform": "网页版 / Windows PC 客户端（钉钉 PC 端与手机端内置入口即将开放，独立 App 与国际版在规划中）",
+    "pros": [
+      "三端 Agent 一体：桌面端操作、云端执行、企业 IM 协同在同一入口打通",
+      "交付的是可编辑成果（Office 文件、网页、数据报告），不是一段没法用的文字",
+      "组织级 Skill 可把资深员工的工作过程沉淀下来，全团队复用",
+      "已初步打通钉钉 IM，后续连接企业真实数据库与工作流",
+      "公测期免费，直接用上阿里最新旗舰模型 Qwen3.8-Max"
+    ],
+    "cons": [
+      "仍处公测阶段，钉钉入口、独立 App 与国际版都还没完全落地",
+      "企业级价值依赖打通内部数据库与工作流，真正见效需要 IT 侧配合",
+      "正式商业定价未公布，长期使用成本无法提前测算"
+    ],
+    "features": [
+      "任务自动拆解：一条自然语言指令自动分解为子任务并并行执行",
+      "桌面端 Agent：直接操作本机文件与应用，承接 QoderWork 的基因",
+      "云端 Agent：任务在云端持续跑，关掉电脑也不中断，源自 MuleRun 的工作流能力",
+      "企业协同 Agent：嵌入钉钉 IM，在群里持续响应与推进事项",
+      "可编辑成果交付：产出原生 Office 文件、网页与数据报告",
+      "组织级 Skill：把一次成功的交互全过程沉淀为技能，向全组织共享"
+    ],
+    "related": [
+      "qwen",
+      "dingtalk",
+      "wps-ai"
+    ],
+    "content": "## 千问办公 QwenWork是什么？\n\n千问办公（QwenWork）是阿里巴巴的企业级 Agent 产品，2026 年 8 月 3 日正式开启公测，个人和企业用户都能在官网 qwenwork.cn 直接体验，目前网页版和独立 PC 客户端已开放。\n\n它不是从零做的新产品，而是一次内部整合：阿里把 QoderWork（桌面端操作）、MuleRun（云端工作流执行）、悟空（企业 IM 协同）三条 Agent 产品线合并成一个统一入口。按官方说法，这是业内首款同时支持桌面端 Agent、云端 Agent 与企业协同 Agent 的产品。使用逻辑很直白：你用一句自然语言描述目标，它自动拆解任务、并行执行，最后交付可继续编辑的 Office 文件、网页或数据报告，而不是丢给你一段还得自己返工的文字。驱动它的是阿里同日发布的旗舰模型 Qwen3.8-Max。\n\n## 核心功能\n\n1. 任务自动拆解与并行执行：一条指令进去，系统自己拆成子任务同时推进，用户不需要手动配置节点或写流程。\n2. 三端 Agent 一体：本地文件和应用交给桌面端 Agent，长时间任务丢到云端跑，团队协作的部分在企业 IM 里接住，三者共用一个入口。\n3. 交付可编辑成果：产出的是原生 Office 文件、网页和数据报告，可以直接接着改，这是它和「只会聊天」的助手最实际的差别。\n4. 组织级 Skill：完成一次复杂任务后，可以把全过程一键沉淀为「组织级 Skill」共享给全团队。官方举的例子是一家 20 人律所：资深律师做完首份并购尽调报告后沉淀成 Skill，新员工接到同类案件直接调用即可产出报告，不必逐项请教。\n5. 连接企业工作流：已初步打通钉钉 IM，未来将连接企业真实的数据库与工作流。官方演示的跨国场景是——中国团队讨论完新品方案后，Agent 自动整理决策背景、生成英文项目文档并同步待确认事项，中国团队下班后它继续在项目群里回答英国团队的问题。\n\n## 版本/套餐对比\n\n目前处于公测阶段，个人和企业用户都可以免费注册体验，官方尚未公布正式的商业定价与套餐分层。想评估长期投入的企业，建议先在公测期把关键场景跑一遍，等定价明确后再决定采购规模。\n\n## 值不值得用？\n\n优点很清楚：三端打通这件事目前少有产品做到，而「交付可编辑文件」而非只给文字，是真正决定能不能进日常工作流的分水岭；组织级 Skill 的设计也点在了企业最痛的地方——资深员工的经验很难传承。缺点同样明显：还在公测，钉钉入口、独立 App、国际版都没落地；企业级的价值高度依赖打通内部数据库和工作流，这部分离不开 IT 配合，不是注册就能见效；定价没公布，成本无法预估。\n\n结论：作为个人提效工具现在就能上手试，公测期免费；作为企业级采购对象，建议先小范围验证，别急着全员铺开。\n\n## 使用建议\n\n1. 先从一个有明确产出的任务开始，比如「把这几份表格整理成月度经营分析报告」，检验交付质量而不是对话体验。\n2. 分清任务该放哪端：涉及本机敏感文件用桌面端，长时间跑的用云端。\n3. 把跑通的高频工作流沉淀成组织级 Skill，这是团队复利的关键动作。\n4. 企业用户先规划数据接入范围和权限边界，再谈规模化推广。\n\n## 适合谁用？\n\n推荐：需要成批产出 Office 文档、报告、数据分析的知识工作者和企业团队。\n可考虑：已在使用钉钉、希望把 AI 接进现有协同体系的中大型企业。\n不推荐：只想找个聊天助手的用户，以及无法接受公测期功能变动和定价不确定的组织。",
+    "published": false,
+    "faq": [
+      {
+        "question": "千问办公 QwenWork 免费吗？",
+        "answer": "公测期开放免费体验，个人和企业用户都可以通过官网 qwenwork.cn 注册使用。官方目前尚未公布正式的商业定价与套餐分层。"
+      },
+      {
+        "question": "千问办公和通义千问App有什么区别？",
+        "answer": "通义千问偏通用对话，千问办公是企业级 Agent 产品，重点是自动拆解任务、并行执行并交付可编辑的 Office 文件、网页或数据报告，同时支持桌面端、云端与企业协同三类 Agent。"
+      },
+      {
+        "question": "千问办公支持哪些平台？",
+        "answer": "目前网页版和独立 PC 客户端已开放，钉钉 PC 端与手机端内置入口官方称近期开放，独立 App 与国际版还在规划中。"
+      },
+      {
+        "question": "千问办公用的是什么模型？",
+        "answer": "接入的是阿里 2026 年 8 月 3 日同步发布的旗舰模型 Qwen3.8-Max，该模型总参数 2.4 万亿、激活约 95B，支持 100 万 Token 上下文。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "千问办公",
+      "千问办公怎么样",
+      "QwenWork免费吗",
+      "千问办公使用教程",
+      "千问办公和WPS Comate哪个好"
+    ],
+    "source_urls": [
+      "https://www.qwenwork.cn",
+      "https://www.toutiao.com/article/7669653856464142857/",
+      "https://dy.163.com/article/L3DOEHMJ0514R9P4.html"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "WPS Comate",
+    "slug": "wps-comate",
+    "positioning": "WPS Comate是什么？金山办公组织级AI协同办公入口好用吗",
+    "auto_positioning": false,
+    "emoji": "🧠",
+    "color": "#D64545",
+    "description": "WPS Comate 是金山办公面向组织的 AI 协同办公入口，2026 年 7 月 15 日在「2026 AI 生产力大会」上与个人版灵犀专业版同日发布，作为全新组件助力 WPS 365 升级。它连接组织的数据、系统与流程，以 AI 岗位专家、自动化任务、Wiki 知识库、Skill 技能生态、团队协作空间、应用广场六大模块，把 AI 从「能回答」推到「能执行、能交付业务结果」。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "企业级",
+        "type": "free"
+      },
+      {
+        "text": "金山办公"
+      },
+      {
+        "text": "组织级Agent"
+      },
+      {
+        "text": "私有知识库"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "recommend",
+      "text": "推荐"
+    },
+    "url": "https://comate.wps.cn",
+    "price": "官方未单独公布 WPS Comate 定价，需具备 Comate 权益的企业账号；配套 WPS 365 套餐为体验版 0 元、商业协作版 199 元/人/年、商业高级版 399 元/人/年、商业旗舰版 599 元/人/年",
+    "platform": "Windows 10/11（8G 内存及以上）/ macOS 13 及以上（8G 内存及以上）桌面客户端，另可在 WPS 协作客户端内直接调用",
+    "pros": [
+      "本机模式与云端托管双引擎，敏感数据留本地、长任务丢云端，安全与效率能自己选",
+      "AI 岗位专家开箱即用，法务合规、供应链、人力、销售等角色自带领域知识与数据集",
+      "深度接文档能力，交付原生可编辑的表格与文档而非截图式结果",
+      "Token 额度可按企业/部门/用户分级管控，超额拦截，成本看得见",
+      "支持接入 DeepSeek、通义千问、Azure OpenAI、AWS Bedrock 上的 Claude 等外部模型"
+    ],
+    "cons": [
+      "纯企业向，个人用户基本用不上，需要有 Comate 权益的企业账号才能登录",
+      "价值取决于把 ERP、CRM、OA 等系统和知识真正接进来，落地依赖 IT 与管理配合",
+      "WPS Comate 自身定价未公开，采购需单独联系销售确认"
+    ],
+    "features": [
+      "AI 岗位专家：法务合规、项目管理、供应链、人力资源、销售管理、数据分析、市场营销等专家，自带领域知识、专属技能与数据集",
+      "自动化任务：按时间或事件触发，AI 准时把成果做出来",
+      "Wiki 知识库：把组织文档沉淀成越用越厚的实时参谋，支持权限内智能问答",
+      "Skill 技能生态：把重复工作流封装成可扩展、可共享的技能",
+      "团队协作空间：多人加多 Agent 在同一空间协同推进任务",
+      "Comate Studio 管控台：统一配置模型接入与四类 Token 策略，按人或按功能设每日额度"
+    ],
+    "related": [
+      "wps-ai",
+      "dingtalk",
+      "feishu"
+    ],
+    "content": "## WPS Comate是什么？\n\nWPS Comate 是金山办公面向组织推出的 AI 协同办公入口，2026 年 7 月 15 日在上海「2026 AI 生产力大会」上发布。同一天金山还发了面向个人的灵犀专业版——这两个是不同产品，别混淆：灵犀专业版是个人 AI 办公助理，WPS Comate 是组织级平台，作为全新组件助力 WPS 365 完成升级。\n\n它要解决的问题，金山办公 CEO 章庆元的说法很直接：许多企业的 AI 之所以难落地，并非模型不够聪明，而是缺乏统一的管理。通用大模型有海量世界知识，却不掌握企业自己的文档、数据与业务上下文。所以 WPS Comate 的重点不是再加一个聊天框，而是连接组织的数据、系统和流程，让 AI 融入工作流并交付业务结果。金山副总裁王冬把落地路径概括为「三二一」体系：三通（通知识、通数据、通能力，打通 ERP、CRM、OA 等系统）、两管（管成本、管安全，靠 Token 配额与身份/数据/终端/AI 行为四重可信机制）、一平（统平台，以 WPS Comate 作为统一入口，避免碎片化）。\n\n## 核心功能\n\n1. AI 岗位专家：法务合规、项目管理、供应链、人力资源、销售管理、数据分析、市场营销等专家开箱即用，每位专家自带领域知识、专属技能和数据集。典型场景如「高管问数」——对接企业数据系统，用自然语言做数据查询、下探分析与归因洞察。\n2. 双执行模式：本机模式在本地跑，适合操作本地文件和敏感数据；云端托管模式在云端跑，适合长时间运行、不依赖本地环境的任务。切换模式时技能、专家、团队工具栏会自动重载。\n3. Wiki 知识库与 Skill 技能生态：把组织文档沉淀成可权限内问答的知识库，把重复工作流封装成可扩展的技能。\n4. 自动化任务与团队协作空间：任务可定时触发自动出成果，多人加多 Agent 在同一空间协同推进。\n5. Comate Studio 管控：管理员可接入 DeepSeek、通义千问、Azure OpenAI、AWS Bedrock 上的 Claude 或任何符合 OpenAI 接口规范的模型，并按普通任务、应用任务、专家、系统调用四类策略设置每日 Token 额度，可细分到企业、部门、用户，超额直接拦截。\n\n## 版本/套餐对比\n\n官方没有单独公布 WPS Comate 的价格，使用需要具备 Comate 权益的企业账号，采购要联系销售。作为参照，配套的 WPS 365 公开定价为：体验版 0 元/人/年（最高 10GB 空间）、商业协作版 199 元/人/年（50GB/人）、商业高级版 399 元/人/年（365GB/人，含 AI 知识库）、商业旗舰版 599 元/人/年（2TB/人，完整 AI 能力与企业大脑）。WPS 素材库、项目管理、合同电子签等功能各档均需加价购买。\n\n## 值不值得用？\n\n优点在于它是少见的把「管理」当第一性问题的 AI 办公方案：Token 配额、权限隔离、模型自选、本地与云端分流，这些都是企业真正会卡住的地方；再加上 WPS 三十年的文档技术底子，交付的是原生可编辑文件。缺点也直白：纯企业向，个人用不上；效果强依赖 ERP/CRM/OA 与知识资产的接入深度，这是 IT 和管理的活，不是买了就有；自身定价不透明。\n\n结论：如果你的组织已经在用 WPS 365、且苦于 AI 试点散落各处无法统一治理，它值得认真评估；否则先别急。\n\n## 使用建议\n\n1. 先选一个数据边界清楚的场景试点，比如合同审查或考勤报表，别一上来就接全部系统。\n2. 敏感文件坚持走本机模式，长任务放云端托管，把这条规则写进团队规范。\n3. 上线前在 Comate Studio 里配好 Token 策略和权限范围，成本和越权都靠这一步兜住。\n4. 把试点中跑顺的流程封装成 Skill，再向其他部门复制，这才是组织复利的来源。\n\n## 适合谁用？\n\n推荐：已使用 WPS 365、需要统一治理 AI 并连接内部系统的中大型企业。\n可考虑：文档密集、知识传承压力大的法务、制造、金融类组织。\n不推荐：个人用户和小团队（可以看灵犀专业版），以及不打算投入 IT 资源做系统接入的企业。",
+    "published": false,
+    "faq": [
+      {
+        "question": "WPS Comate 和灵犀专业版是什么关系？",
+        "answer": "两者是金山办公 2026 年 7 月 15 日同日发布的两款产品：灵犀专业版面向个人，是专属 AI 办公助理；WPS Comate 面向组织，是助力 WPS 365 升级的组织级 AI 协同办公入口。"
+      },
+      {
+        "question": "WPS Comate 多少钱？",
+        "answer": "官方未单独公布 Comate 定价，需要具备 Comate 权益的企业账号，采购需联系销售。配套 WPS 365 公开价格为体验版 0 元、商业协作版 199 元/人/年、商业高级版 399 元/人/年、商业旗舰版 599 元/人/年。"
+      },
+      {
+        "question": "本机模式会把我的文件上传到云端吗？",
+        "answer": "WPS Comate 提供本机模式与云端托管两种执行模式，本机模式的任务在本地计算机执行，适合处理本地文件与敏感数据；需要长时间运行的任务可切到云端托管模式。具体数据边界建议以官方 FAQ 与企业管理员配置为准。"
+      },
+      {
+        "question": "WPS Comate 能接自己的大模型吗？",
+        "answer": "可以。管理员在 Comate Studio 中支持接入 DeepSeek、通义千问、Azure OpenAI、AWS Bedrock 上的 Claude，以及任何符合 OpenAI 接口规范的模型，并可配置每日 Token 额度策略。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "WPS Comate",
+      "WPS Comate怎么样",
+      "WPS Comate价格",
+      "WPS Comate使用教程",
+      "WPS Comate和灵犀专业版区别"
+    ],
+    "source_urls": [
+      "https://comate.wps.cn",
+      "https://new.qq.com/rain/a/20260716A07T5000",
+      "https://365.wps.cn/home?pkgid=1",
+      "https://plus.wps.cn/blog/p108343.html"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Slackbot AI",
+    "slug": "slackbot-ai",
+    "positioning": "Slackbot AI是什么？Salesforce重建的Slack智能体好用吗",
+    "auto_positioning": false,
+    "emoji": "💬",
+    "color": "#4A154B",
+    "description": "Slackbot AI 是 Salesforce 彻底重建的 Slack 助手，2026 年 1 月 13 日起面向 Business+ 与 Enterprise+ 客户分阶段 GA，从通知工具升级为完整的 AI Agent：能搜企业数据、起草文档、分析文件、安排会议并代表员工执行操作。2026 年 8 月，Slack 又通过一组 MCP 服务把 Slackbot 接入整个 Salesforce 平台（CRM、Tableau、Data 360、Agentforce），并宣布 30 项 AI 新功能。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "企业级",
+        "type": "free"
+      },
+      {
+        "text": "Salesforce出品"
+      },
+      {
+        "text": "免安装"
+      },
+      {
+        "text": "MCP客户端"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://www.salesforce.com/slack/",
+    "price": "包含在 Slack Business+ 与 Enterprise+ 套餐中，未单独收费；具体席位价格以 Slack 官方定价页为准",
+    "platform": "Slack（Web / 桌面端 / 移动端），可连接 Salesforce CRM、Tableau、Data 360、Google Drive、Microsoft Teams 等",
+    "pros": [
+      "零安装零配置，直接长在 Slack 里，员工不用学新工具也没有新账号要管",
+      "天然带上下文：能看你的会话、文件、频道和同事关系，不用每次重新交代背景",
+      "严格遵循既有权限，只能看到你本来有权看到的内容，并提供引用出处",
+      "作为 MCP 客户端可接 Agentforce 与 Salesforce 平台数据，一句话跨系统取数与执行",
+      "内部验证扎实：Salesforce 8 万员工全量推广，满意度 96%"
+    ],
+    "cons": [
+      "只对 Business+ 与 Enterprise+ 客户开放，低阶套餐用不到",
+      "价值高度绑定 Slack 与 Salesforce 生态，不用 Slack 的团队完全无关",
+      "能力边界随 Slack 里沉淀的信息质量而变，频道混乱的组织效果会打折"
+    ],
+    "features": [
+      "跨频道追进度：整合频道、通话与已连接工具的信息，直接给出关键结论与下一步",
+      "按你的语气起草：邮件、会议脉络、文章大纲等初稿从既有会话中取材",
+      "深度文件分析：即时读 PDF、表格与会议转录稿，抽取数据点或识别反馈趋势",
+      "执行动作：安排会议、创建 canvas、更新记录、触发审批等",
+      "MCP 客户端能力：通过 Salesforce 的 MCP 服务连接 CRM、Tableau、Data 360 与第三方应用",
+      "可复用 AI 技能：把自定义任务保存为技能，在不同场景重复调用"
+    ],
+    "related": [
+      "feishu",
+      "dingtalk",
+      "wps-ai"
+    ],
+    "content": "## Slackbot AI是什么？\n\nSlackbot 这个名字很老，但现在的 Slackbot 是彻底重造的东西。Slack CTO、Salesforce 联合创始人 Parker Harris 的比喻很不客气：旧版像一辆小三轮车，新版像一辆保时捷。旧 Slackbot 干的是算法活——提醒你把同事加进文档、建议归档频道、发通知；新版建立在大语言模型和一套很强的搜索能力之上，能访问 Salesforce 记录、云端硬盘文件、日历数据以及多年的 Slack 对话。\n\n时间线值得说清楚：这套愿景 2025 年 10 月在 Dreamforce 首次公布，2026 年 1 月 13 日起面向 Business+ 与 Enterprise+ 客户分阶段 GA，1 月到 2 月陆续放开。到 2026 年 8 月，Slack 又往前推了一大步——通过 Salesforce 的一组 MCP 服务把 Slackbot 接进整个 Salesforce 平台（CRM 数据、Tableau 分析、Data 360 客户画像和一批第三方应用），同时宣布 30 项 AI 新功能。所以如果你看到「8 月发布」的说法，那指的是这次平台级扩展，不是首次 GA。\n\n## 核心功能\n\n1. 追进度与追上下文：跨频道、通话和已连接工具整合信息，给出关键主题与下一步，而不是让你自己拼故事。\n2. 起草内容：邮件、会议脉络、文章大纲的初稿从你团队既有的对话里取材，语气也更贴合团队习惯。\n3. 文件分析：40 页的材料不用周五晚上硬读，PDF、表格、转录稿都能即时抽取数据点或识别趋势。\n4. 执行动作：安排会议、创建 canvas、更新记录、触发审批，一句话在 Slack 里完成。\n5. 当 MCP 客户端用：Salesforce 把平台能力暴露为 MCP 服务，Slackbot 作为客户端按需调用——销售可以问客户的成交历史、拿到实时 Tableau 图表、更新 CRM 记录并触发 DocuSign 审批，全程不切标签页。\n\n## 版本/套餐对比\n\nSlackbot 包含在 Slack Business+ 与 Enterprise+ 套餐中，没有单独收费，低阶套餐用不到。Enterprise 计划的组织所有者与管理员可以设定 Slackbot 的访问权限甚至完全禁用。具体席位价格以 Slack 官方定价页为准。\n\n## 值不值得用？\n\n优点是它把「上下文」这件事一次性解决了。大多数 AI 助手活在独立应用里，从零上下文起步，你得反复解释自己；Slackbot 直接读你本来就能看到的会话、文件和频道，还严格遵循权限、给出引用出处。内部数据也不糊：Salesforce 向全部 8 万员工推广，三分之二试过、其中 80% 持续使用、满意度 96%，员工报告每周省 2 到 20 小时。模型侧目前主要跑 Anthropic 的 Claude，官方称部分出于合规考虑，且明确不用客户数据训练模型，后续会引入更多供应商。\n\n缺点是它的价值完全绑定 Slack 与 Salesforce 生态；套餐门槛把中小客户挡在外面；而且它的聪明程度取决于你们 Slack 里沉淀的信息质量——频道混乱、决策不留痕的组织，效果会明显打折。\n\n## 使用建议\n\n1. 先用它做「我错过了什么」类查询，这是投入产出最快的场景。\n2. 重要结论仍要看引用出处，别把摘要当结论直接转发。\n3. 把重复任务存成可复用 AI 技能，比每次重新描述省事得多。\n4. 接 MCP 与 CRM 之前，先确认权限映射，尤其是跨部门数据的可见范围。\n\n## 适合谁用？\n\n推荐：已用 Slack Business+/Enterprise+，且大量决策沉淀在 Slack 里的企业。\n可考虑：同时使用 Salesforce CRM、希望在 Slack 内完成跨系统取数与操作的销售与运营团队。\n不推荐：不用 Slack 的团队，以及低阶套餐用户。",
+    "published": false,
+    "faq": [
+      {
+        "question": "Slackbot AI 什么时候正式发布的？",
+        "answer": "全新 Slackbot 于 2026 年 1 月 13 日起面向 Business+ 与 Enterprise+ 客户分阶段 GA，1 月至 2 月陆续放开；2026 年 8 月 Slack 又宣布通过 MCP 服务接入整个 Salesforce 平台并推出 30 项 AI 新功能。"
+      },
+      {
+        "question": "使用 Slackbot AI 需要额外付费吗？",
+        "answer": "不需要单独付费，它包含在 Slack Business+ 与 Enterprise+ 套餐中，但低阶套餐无法使用。具体席位价格以 Slack 官方定价页为准。"
+      },
+      {
+        "question": "Slackbot 会看到我没权限的内容吗？",
+        "answer": "不会。官方说明它只能看到你有权看到的内容，严格遵循既有权限与访问控制，并通过 Slack AI Guardrails 提供隐私、权限与引用出处三层保障。"
+      },
+      {
+        "question": "Slackbot 用的是哪家模型？会用我的数据训练吗？",
+        "answer": "目前主要运行在 Anthropic 的 Claude 上，Slack 表示部分出于合规考虑，后续会支持更多供应商。官方明确表示不会使用客户数据训练模型。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Slackbot AI",
+      "Slackbot AI怎么样",
+      "Slackbot AI收费吗",
+      "Slackbot AI使用教程",
+      "Slackbot和Copilot哪个好"
+    ],
+    "source_urls": [
+      "https://www.salesforce.com/ap/news/press-releases/2026/01/14/salesforce-announces-the-general-availability-of-slackbot-your-personal-agent-for-work-ph/",
+      "https://techcrunch.com/2026/01/13/slackbot-is-an-ai-agent-now/",
+      "https://venturebeat.com/category/business/feed",
+      "https://cloud.tencent.com.cn/developer/article/2670449"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Wispr Flow Notetaker",
+    "slug": "wispr-flow",
+    "positioning": "Wispr Flow Notetaker是什么？无机器人AI会议记录工具好用吗",
+    "auto_positioning": false,
+    "emoji": "🎙️",
+    "color": "#6366F1",
+    "description": "Wispr Flow Notetaker 是 Wispr Flow 在语音输入之外推出的会议记录功能，2026 年 8 月 5 日登上 Product Hunt 日榜前列。它不派机器人进会议，而是直接抓取设备系统音频，因此 Zoom、Google Meet、Teams、Slack Huddles、Discord、FaceTime 甚至线下面谈都能转录；支持说话人识别、跨会议提问，并可通过 MCP 把会议内容送进 Claude、ChatGPT 等 AI 工具。免费版即可使用。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "免费可用",
+        "type": "free"
+      },
+      {
+        "text": "无需机器人"
+      },
+      {
+        "text": "MCP支持"
+      },
+      {
+        "text": "仅Mac"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://wisprflow.ai",
+    "price": "Free 0 美元（含 Notetaker、说话人识别与 MCP，每周会议次数有上限）；Pro 15 美元/用户/月，年付 12 美元/用户/月；Enterprise 定制报价（Notetaker 企业版官方标注即将支持）",
+    "platform": "Notetaker 目前仅支持 macOS（说话人识别需 macOS 14.4 以上），Windows 与移动端官方称即将推出；语音输入支持 Mac / Windows / iOS / Android",
+    "pros": [
+      "不派机器人进会议，靠系统音频转录，Zoom/Meet/Teams/Discord 甚至线下对话都能覆盖",
+      "会前读取会议邀请与已教过的词汇，人名、术语识别更准",
+      "免费版就包含 Notetaker、说话人识别与 MCP，5 分钟以内的录音不计入每周额度",
+      "已订阅 Pro 的语音输入用户不加价获得会议记录，一份订阅覆盖两件事",
+      "可一步导入 Granola 的历史笔记，迁移成本极低"
+    ],
+    "cons": [
+      "Notetaker 目前仅限 macOS，Windows 与移动端未落地，混合设备团队难全员铺开",
+      "无可见机器人意味着参会者可能不知情，获取知情同意的责任完全落在使用者身上",
+      "启用 Notetaker 必须打开 Private Cloud Sync，而签署 HIPAA 所需的 BAA 会永久禁用该同步，真正需要 HIPAA 合规的机构等于用不了"
+    ],
+    "features": [
+      "无机器人转录：直接捕捉设备系统音频，不依赖接入会议 API",
+      "说话人识别：区分不同参会者并归属发言内容（需 macOS 14.4 以上）",
+      "术语与人名学习：会前读取会议邀请与已教词汇，提升专有名词准确率",
+      "跨会议提问：可针对单场会议或全部历史会议提问",
+      "MCP 集成：把会议笔记送进 Claude、ChatGPT、Cursor 等 AI 工具继续处理",
+      "日历与 Slack 连接：与既有工作流打通，输出摘要与待办"
+    ],
+    "related": [
+      "wps-ai",
+      "feishu",
+      "dingtalk"
+    ],
+    "content": "## Wispr Flow Notetaker是什么？\n\nWispr Flow 原本是个语音输入工具——按住说话，文字落进任何应用。Notetaker 是它 2026 年 8 月新加的会议记录能力，上线当周就冲到 Product Hunt 日榜前列。\n\n它最不一样的地方在于实现路径：不派机器人进会议室。市面上多数 AI 会议工具靠一个 bot 加入 Zoom 或 Meet 来录音，Notetaker 直接抓取设备的系统音频。这带来一个很实际的好处——覆盖面几乎不受限制：Zoom、Google Meet、Teams、Slack Huddles、Discord、FaceTime、WhatsApp，连线下面对面聊天都能转录，因为它根本不需要接入某个视频会议的 API。它还会在会前读取会议邀请和你已经教过的词汇，所以人名和行业术语的识别比通用转录准。转录完的内容可以直接提问，也能通过 MCP 送进 Claude、ChatGPT 或 Cursor 继续加工。\n\n## 核心功能\n\n1. 无机器人转录：捕捉系统音频，线上线下通吃，参会者界面里不会多出一个陌生 bot。\n2. 说话人识别：区分不同参会者并归属发言，这项需要 macOS 14.4 以上，比 Wispr Flow 主应用的最低要求高一截。\n3. 术语与人名学习：会前读邀请、读你教过的词汇，专有名词更准。\n4. 跨会议提问：可以只问某一场，也可以问「过去一个季度这个客户提过预算吗」这类跨会议问题。\n5. MCP 集成：免费版就带，会议笔记能直接被 Claude、ChatGPT、Cursor 读取，接着做摘要、待办或写进别的系统。\n\n## 版本/套餐对比\n\n免费版 0 美元，包含 Notetaker（仅 Mac）、说话人识别、跨会议提问、MCP、日历与 Slack 连接，以及每周 2000 词的桌面端语音输入额度，每周会议次数有上限但官方未公布具体数字，5 分钟以内的录音不计入额度。Pro 每用户 15 美元/月，年付降到 12 美元/月（约 144 美元/年），解锁无限语音输入、更高会议额度与更长笔记留存、进阶推理模型。Enterprise 为定制报价，提供 SOC 2 Type II、ISO 27001、SAML SSO、SCIM、审计日志等，但官方明确标注 Notetaker 企业版「即将支持」。学生与教育邮箱可享 Pro 五折。\n\n## 值不值得用？\n\n优点很扎实：无机器人的路线让覆盖面远超同类；免费版给得相当大方，MCP 也不设门槛；如果你本来就在为语音输入付 Pro，会议记录是白送的，一份订阅解决两件事；从 Granola 迁移只要一步。\n\n缺点必须认真看。第一，只支持 macOS，Windows 和移动端都还没落地，混合设备的团队没法全员铺开。第二，没有可见机器人意味着少了一个「正在录音」的提示，官方把获取知情同意的责任完整划给使用者——这不是一句免责声明就能解决的团队流程问题。第三，也是最硬的一处矛盾：启用 Notetaker 必须开 Private Cloud Sync，而一旦签署 HIPAA 所需的 BAA，Private Cloud Sync 会被永久禁用。也就是说，真正需要 HIPAA 合规的医疗机构，这个功能对他们等于摆设。\n\n结论：Mac 用户、尤其是已经在用 Wispr Flow 语音输入的人，免费版就值得试；但把它铺给全公司之前，先把设备、同意流程和合规这三关过一遍。\n\n## 使用建议\n\n1. 先拿一场低风险的内部会试，明确告知在录音，然后核对说话人标注和待办抽取是否准。\n2. 把「开场口头告知 + 日历备注」固化成团队规范，别只依赖产品文档里的那句提醒。\n3. 检查 Cloud Sync、留存时长与模型训练开关，敏感会议前务必确认一遍。\n4. 用 MCP 把笔记接进 AI 工具时注意，这会引入第二套留存与访问条款，别让数据边界断在这一步。\n\n## 适合谁用？\n\n推荐：Mac 用户、已在用 Wispr Flow 语音输入的个人与小团队。\n可考虑：会议密集、需要跨平台（含线下）统一记录的顾问、销售与研究者。\n不推荐：Windows 为主的团队，以及有 HIPAA 等强合规要求的医疗、法务机构。",
+    "published": false,
+    "faq": [
+      {
+        "question": "Wispr Flow Notetaker 免费吗？",
+        "answer": "免费版即包含 Notetaker、说话人识别、跨会议提问与 MCP，每周会议次数有上限（官方未公布具体数字），5 分钟以内的录音不计入额度。Pro 为每用户 15 美元/月、年付 12 美元/月。"
+      },
+      {
+        "question": "Notetaker 支持 Windows 吗？",
+        "answer": "目前仅支持 macOS，说话人识别还需要 macOS 14.4 以上版本。官方表示 Windows 版即将推出，移动端仍在路线图上，均未给出具体时间。"
+      },
+      {
+        "question": "它会派机器人加入我的会议吗？",
+        "answer": "不会。Notetaker 直接捕捉设备的系统音频，因此 Zoom、Google Meet、Teams、Slack Huddles、Discord、FaceTime 乃至线下面谈都能转录。代价是参会者看不到录音提示，官方要求使用者自行取得必要的知情同意。"
+      },
+      {
+        "question": "已经订阅了 Flow Pro，需要为 Notetaker 加钱吗？",
+        "answer": "不需要。Notetaker 落在既有的 Wispr Flow 订阅体系内，Pro 用户无需额外付费即可使用，且免费版本身也包含该功能。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Wispr Flow Notetaker",
+      "Wispr Flow怎么样",
+      "Wispr Flow免费版",
+      "Wispr Flow使用教程",
+      "Wispr Flow和Granola哪个好"
+    ],
+    "source_urls": [
+      "https://wisprflow.ai/pricing",
+      "https://www.ic.work/article/wispr-flow-notetaker-hipaa-compliance-contradiction",
+      "https://musthave.ai/wispr-flow-notetaker-bot-free-consent",
+      "https://mrktcorrect.com/blog/wispr-flow-vs-granola"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Dover MCP",
+    "slug": "dover-mcp",
+    "positioning": "Dover MCP是什么？在Claude和ChatGPT里跑招聘流程好用吗",
+    "auto_positioning": false,
+    "emoji": "🧑‍💼",
+    "color": "#10B981",
+    "description": "Dover MCP 是 Dover 官方的远程 MCP 服务，把它的免费 ATS（申请人追踪系统）接入 Claude、ChatGPT、Cursor、Codex 等 AI 工具。连上之后可以用自然语言审阅申请人、安排面试、添加面评、推进候选人阶段并协调招聘，访问通过 OAuth 授权并严格遵循团队既有权限。2026 年 8 月 5 日登上 Product Hunt，随 Dover 免费 ATS 一起提供。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "免费可用",
+        "type": "free"
+      },
+      {
+        "text": "MCP服务"
+      },
+      {
+        "text": "招聘ATS"
+      },
+      {
+        "text": "权限隔离"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.dover.com",
+    "price": "免费，随 Dover 免费 ATS 提供（该 ATS 为 0 元、不限用户与职位数）；Premium ATS 为 199 美元/月，含 AI 简历评分、AI 面试记录与优先支持",
+    "platform": "远程 MCP 服务（端点 https://app.dover.com/mcp），支持 Claude、Claude Code、ChatGPT 开发者模式、Cursor、Codex 等 MCP 客户端",
+    "pros": [
+      "把招聘搬进你本来就在用的 AI 工具，不用在 ATS、邮箱、日历、聊天窗之间反复横跳",
+      "OAuth 授权且严格继承 Dover 权限，成员只能看到自己有权查看的职位与候选人",
+      "完全免费，随 Dover 的免费 ATS 一起提供，不限用户数与职位数",
+      "覆盖读写两端：既能查管道状态，也能安排面试、写备注、推进阶段",
+      "覆盖客户端广，Claude、ChatGPT、Cursor、Codex 等主流 MCP 客户端都能接"
+    ],
+    "cons": [
+      "必须已有 Dover 工作区，它不是独立 ATS 也不是人才库，替代不了底层系统",
+      "能力上限受 Dover 平台本身限制，例如简历解析仅支持英文，日历邮箱偏向 Google Workspace",
+      "AI 可直接改动候选人阶段与对外沟通，涉及真实求职者，必须人工复核"
+    ],
+    "features": [
+      "职位与候选人查询：查看在招职位中最强的候选人，以及每个人所处的流程阶段",
+      "面试安排与准备：安排面试、生成面试问题、为用人经理做准备",
+      "流程推进：添加面评备注、把候选人推进到下一阶段",
+      "管道体检：识别哪些岗位候选人储备充足、哪些还需要主动搜寻",
+      "邮箱日历协同：结合邮箱与日历协调面试时间与候选人沟通",
+      "权限感知访问：OAuth 连接，可见范围由组织权限与招聘团队归属决定"
+    ],
+    "related": [
+      "dingtalk",
+      "feishu",
+      "wps-ai"
+    ],
+    "content": "## Dover MCP是什么？\n\nDover 是一家 YC 出身的公司，做的是面向初创企业的免费 ATS——发职位、搜候选人、管申请人、协调面试都在一个平台上。Dover MCP 是它 2026 年 8 月推出的远程 MCP 服务，作用很单一但很实用：把这套招聘系统接到 Claude、ChatGPT、Cursor、Codex 这些你已经天天在用的 AI 工具里。\n\n关键差别不在「AI 能读简历」，而在于 AI 拿到的是实时招聘上下文，不是你手动粘进去的一份简历或导出的表格。服务端暴露职位、候选人、申请与面试准备等能力，AI 于是能回答「后端高级工程师这个岗现在卡在哪」，也能直接安排面试、写面评、推进阶段。创始团队在发布时举的链式例子是：找候选人 → 安排面试 → 给用人经理做准备 → 面试后记录面评 → 推进到下一阶段 → 起草跟进邮件，一串动作在对话里走完。\n\n## 核心功能\n\n1. 查管道：看所有在招岗位中最强的候选人，以及每个人当前处于什么阶段。\n2. 安排与准备面试：定时间、生成面试问题、给用人经理做背景准备。\n3. 推进流程：添加备注与面评，把候选人移到下一阶段。\n4. 管道体检：识别哪些岗位候选人够用、哪些还得继续主动搜寻，这个视角在没有招聘运营的小团队里尤其缺。\n5. 邮箱日历协同：结合邮箱和日历协调面试安排与候选人沟通。\n\n接入方式：Dover 提供托管端点 https://app.dover.com/mcp，在 Dover 的 Settings → Integrations → AI Settings 里按指引配置。Claude 用自定义连接器，Claude Code 可直接加远程 HTTP 服务，ChatGPT 走开发者模式创建自定义 MCP 应用，Cursor、Codex 等用通用 HTTP MCP 配置。连接时通过 OAuth 授权。\n\n## 版本/套餐对比\n\nDover MCP 本身免费，随 Dover 的免费 ATS 一起提供——该 ATS 定价为 0 元，不限用户与职位数，包含招聘平台集成、邮箱集成与候选人跟踪。另有 Premium ATS 为 199 美元/月，增加 AI 简历评分、AI 面试记录与优先支持。需要注意的是，某些工作流可能依赖 Premium 功能，采购前最好在账号内确认清楚。\n\n## 值不值得用？\n\n优点是它切中了一个真痛点：初创公司里做招聘的往往是创始人或用人经理本人，没有专职招聘运营，而这些人一天大半时间泡在 AI 助手里。少切换四五个界面，效率差别是实打实的。权限设计也让人放心——可见范围由连接成员的权限和招聘团队归属决定，不会因为接了 AI 就越权。\n\n缺点同样要说清。它必须依附已有的 Dover 工作区，不是独立 ATS 也不是人才搜寻库；能力上限受 Dover 平台限制，第三方评测提到简历解析仅支持英文、且更适合用 Google Workspace 的团队。最要紧的是，对话式访问不会转移责任：候选人身份、面试细节、阶段变更和对外邮件，都在影响真实的人，发出去之前必须人工确认。\n\n结论：已经在用 Dover 的小团队，这是接近零成本的效率升级；不用 Dover 的团队，它不构成迁移理由。\n\n## 使用建议\n\n1. 先用最小权限账号在一个测试职位上连通，只做只读提问。\n2. 确认哪些动作需要审批、日志怎么看、如何撤销授权，再逐个开放写操作。\n3. 敏感岗位（如高管招聘）先不要接入，等流程和边界都跑熟。\n4. 所有对外沟通与阶段变更保持人工过目，把 ATS 继续当作唯一事实来源。\n\n## 适合谁用？\n\n推荐：已在使用 Dover 免费 ATS、且日常重度使用 Claude 或 ChatGPT 的初创团队。\n可考虑：没有专职招聘运营、由创始人或用人经理直接管招聘的公司。\n不推荐：不使用 Dover 的团队，以及需要多语言简历解析或完整自建招聘体系的组织。",
+    "published": false,
+    "faq": [
+      {
+        "question": "Dover MCP 收费吗？",
+        "answer": "不收费。它随 Dover 面向初创公司的免费 ATS 一起提供，该 ATS 为 0 元且不限用户与职位数。若需要 AI 简历评分、AI 面试记录等能力，则要升级到 199 美元/月的 Premium ATS。"
+      },
+      {
+        "question": "怎么把 Dover MCP 接到 Claude 或 ChatGPT？",
+        "answer": "Dover 提供托管端点 https://app.dover.com/mcp，在 Dover 的 Settings → Integrations → AI Settings 按指引配置。Claude 用自定义连接器，ChatGPT 走开发者模式创建自定义 MCP 应用，Cursor、Codex 等使用通用 HTTP MCP 配置，连接时通过 OAuth 授权。"
+      },
+      {
+        "question": "接入 AI 后候选人数据安全吗？",
+        "answer": "访问通过 OAuth 授权，且可见信息取决于连接成员在 Dover 的权限与招聘团队归属，AI 只能看到该账号本来有权查看的内容，随时可断开授权。由于招聘记录含敏感个人信息，建议先用最小权限账号测试。"
+      },
+      {
+        "question": "没有 Dover 账号能用 Dover MCP 吗？",
+        "answer": "不能。它是 Dover ATS 的连接层，不是独立的 ATS 或人才搜寻库，必须已有 Dover 工作区以及一个兼容的 MCP 客户端。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Dover MCP",
+      "Dover MCP怎么样",
+      "Dover MCP免费吗",
+      "Dover MCP使用教程",
+      "Dover ATS招聘AI工具"
+    ],
+    "source_urls": [
+      "https://www.dover.com",
+      "https://chatgate.ai/post/dover-mcp",
+      "https://www.productcool.com/product/dover-mcp"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Troopr AI Scrum Master",
+    "slug": "troopr",
+    "positioning": "Troopr AI Scrum Master是什么？Slack自动写站会日报好用吗",
+    "auto_positioning": false,
+    "emoji": "🏃",
+    "color": "#2563EB",
+    "description": "Troopr AI Scrum Master 是 Slack 原生的 AI 敏捷助手，2026 年 8 月发布。它不再向成员提问，而是直接汇总 Jira、GitHub 与 Slack 里的真实工作动态，替每位成员写站会更新并标记不一致之处，同时持续记住团队的工作方式，让日报越来越准。免费版最多 3 个席位，Standard 每席位 6 美元/月。",
+    "category": "AI办公",
+    "tags": [
+      {
+        "text": "免费版",
+        "type": "free"
+      },
+      {
+        "text": "Slack原生"
+      },
+      {
+        "text": "Jira集成"
+      },
+      {
+        "text": "自动站会"
+      }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.troopr.ai",
+    "price": "Free 0 美元（最多 3 个席位，含 3 个同步频道与 3 份定时报告，全部功能可用）；Standard 每席位 6 美元/月（参与者占席、只读成员免费）；Enterprise 定制报价（不限人数、支持 Slack Grid）",
+    "platform": "Slack（可连接 Jira Cloud / Jira Data Center 与 GitHub）",
+    "pros": [
+      "不问问题也能出日报，从 Jira、GitHub、Slack 的真实动态里自动生成更新",
+      "会标记不一致之处，比「和昨天一样」这种敷衍回答有用得多",
+      "持续记住团队的工作方式，用得越久写得越准",
+      "Slack 原生，一键从 Slack App Directory 或 Atlassian Marketplace 安装",
+      "免费版全功能可用且不是试用期，小团队可以长期白用"
+    ],
+    "cons": [
+      "强依赖 Jira、GitHub 与 Slack，工作动态不在这三处的团队价值有限",
+      "免费版仅 3 个席位，团队一扩张就得付费",
+      "AI 生成的进展仍需人工确认，误读提交或工单状态时会传递错误信息"
+    ],
+    "features": [
+      "自动生成站会更新：汇总 Jira、GitHub、Slack 活动，替每位成员起草进展",
+      "不一致标记：发现汇报与实际工作记录不符时主动指出",
+      "团队记忆：持续学习团队的协作方式与表达习惯",
+      "异步与实时双模式：可 DM 发草稿等确认，也可在实时会议中旁听记录并汇总报告",
+      "定时报告：按计划把汇总报告发到指定频道",
+      "报告管理：在网页应用中浏览、筛选、导出报告，可另存为 PDF"
+    ],
+    "related": [
+      "dingtalk",
+      "feishu",
+      "wps-ai"
+    ],
+    "content": "## Troopr AI Scrum Master是什么？\n\nTroopr 做 Slack 站会工具做了很多年，AI Scrum Master 是他们 2026 年 8 月推出的新产品，而这次的出发点是一句自我否定。创始人在发布时说得很坦诚：多年来他们看着同一个循环重复上演——机器人早上 9 点推送提问，所有人切走，到下午 4 点有人敷衍地输入「和昨天一样」。最后他们承认了那件不舒服的事：问题从来不在机器人，而在形式。站会机器人不过是一场跟着你钻进 Slack 的会议。\n\n所以 AI Scrum Master 换了路子——它不提问。它直接汇总 Jira、GitHub 和 Slack 里的真实工作动态，替每位成员写站会更新，并把汇报与实际记录不符的地方标出来。它还会持续记住团队的工作方式，用得越久写得越贴。\n\n这背后有个更大的判断：AI 智能体正在以贡献者的身份加入团队并放大产出，但每多一个贡献者，协调成本就增加。瓶颈正从「产出工作」转向「知道发生了什么」。工程主管长期在充当「人形中间件」，在 Slack 里追问进展、对齐 Jira 和 GitHub 的信息、主持一个主要为了搞清楚状况而存在的站会——这部分才是它想吃掉的活。\n\n## 核心功能\n\n1. 自动生成站会更新：从真实工作记录出发替每个人起草进展，不依赖成员手动填写。\n2. 不一致标记：汇报和代码提交、工单状态对不上时主动指出，这是它比传统站会机器人真正多出来的价值。\n3. 团队记忆：持续学习团队怎么协作、怎么表达，让每次汇报更精准。\n4. 异步与实时双模式：既能把草稿 DM 给成员确认后汇总，也能在实时会议中旁听、做笔记、会后出报告。\n5. 报告与定时推送：按计划把汇总报告发到指定频道，报告可在网页应用中浏览、筛选、导出，并另存为 PDF。\n\n## 版本/套餐对比\n\n免费版 0 美元，最多 3 个席位，含 3 个同步频道与 3 份定时报告，且官方标注「全部功能包含」——不是限时试用。Standard 为每席位 6 美元/月，计费口径值得注意：只有参与者占席位，只读成员免费，每席位配 2 个同步频道与 2 份定时报告并在工作区内汇总共享。Enterprise 为定制报价，不限人数、频道与报告量可自定义，并支持 Slack Grid。\n\n需要提醒的是，Troopr 旗下还有 Check-ins、Assistant 等其他产品线，定价与 AI Scrum Master 不同，采购时别看错档位。\n\n## 值不值得用？\n\n优点在于它诊断对了病根。市面上绝大多数站会工具还在优化「怎么把问题问得更巧」，Troopr 直接把提问这一步删掉了——对已经把工作痕迹留在 Jira 和 GitHub 的团队，这确实能省下每天那几分钟乘以每个人的时间，更重要的是省下工程主管到处对信息的精力。免费版给到 3 席位且全功能，小团队试错成本几乎为零。\n\n缺点也清楚。它强依赖 Jira、GitHub 与 Slack 这三个数据源，如果你们的实际工作动态大量发生在别处（比如设计稿、文档、线下），它能看到的就有限，写出来的进展会偏。免费版 3 席位对多数研发团队都不够，一扩张就得付费。还有一点必须强调：AI 从提交记录和工单状态推断进展，是会误读的——一个大重构的分支可能显示为「无进展」，一个改文案的提交也可能被当成实质推进，所以生成的日报仍需人工过目，尤其是要发给管理层的那份。\n\n结论：如果你的团队站会已经沦为形式、而工作痕迹又确实留在 Jira 和 GitHub 里，它值得用免费版认真试一轮。\n\n## 使用建议\n\n1. 先用免费版接一个小组、一个频道，连上 Jira 和 GitHub 跑一周再评估。\n2. 对照实际情况检查它写的进展，尤其看「不一致标记」是否命中真问题。\n3. 明确一条规则：对外或对上的报告必须有人过目后再发。\n4. 扩张前算清席位口径——只读成员免费这一点能显著降低实际成本。\n\n## 适合谁用？\n\n推荐：在 Slack 沟通、用 Jira 跟踪工作、站会已流于形式的研发团队。\n可考虑：管理多个小组、每天要花时间对齐进展的工程主管与项目经理。\n不推荐：不用 Slack 或 Jira 的团队，以及工作痕迹主要不落在代码与工单里的非研发团队。",
+    "published": false,
+    "faq": [
+      {
+        "question": "Troopr AI Scrum Master 有免费版吗？",
+        "answer": "有。免费版 0 美元，最多 3 个席位，包含 3 个同步频道与 3 份定时报告，官方标注全部功能均包含，不是限时试用。超出后 Standard 为每席位 6 美元/月。"
+      },
+      {
+        "question": "它和普通的 Slack 站会机器人有什么不同？",
+        "answer": "普通站会机器人靠向成员提问收集更新，Troopr AI Scrum Master 不提问——它直接汇总 Jira、GitHub 与 Slack 中的真实工作动态替每位成员生成更新，并标记汇报与实际记录不一致的地方。"
+      },
+      {
+        "question": "Troopr AI Scrum Master 需要连接哪些工具？",
+        "answer": "核心是 Slack，数据源包括 Jira（Cloud 与 Data Center）和 GitHub。工作动态越集中在这几个系统里，生成的站会更新就越准确。"
+      },
+      {
+        "question": "它生成的日报可以直接发给管理层吗？",
+        "answer": "不建议直接发。AI 从提交记录与工单状态推断进展存在误读可能，例如大型重构分支可能被判为无进展，因此对外或对上的报告建议人工过目后再发出。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Troopr AI Scrum Master",
+      "Troopr怎么样",
+      "Troopr免费版",
+      "Troopr使用教程",
+      "Slack站会机器人哪个好"
+    ],
+    "source_urls": [
+      "https://www.troopr.ai",
+      "https://www.m.aitntnews.com/aiProductDetail.html?productId=23718",
+      "https://ustack.app/zh-TW/products/troopr-check-ins"
+    ],
+    "confidence": "medium",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Qwen3.8-Max",
+    "slug": "qwen3-8-max",
+    "positioning": "Qwen3.8-Max是什么？阿里2.4万亿参数旗舰大模型好用吗",
+    "auto_positioning": false,
+    "emoji": "🚀",
+    "color": "#615CED",
+    "description": "Qwen3.8-Max 是阿里巴巴 2026 年 8 月 3 日发布的旗舰大模型，也是通义千问家族迄今尺寸最大、性能最强的一款：总参数 2.4 万亿，采用稀疏 MoE 架构与混合注意力机制，单次推理激活约 950 亿参数，支持最长 100 万 Token 上下文并原生集成多模态视觉理解。它同时是 Qwen Max 级旗舰史上首次开放权重，权重于 8 月 10 日当周上架 Hugging Face 与 ModelScope，并同步开源 Qwen3.8-27B。",
+    "category": "AI对话",
+    "tags": [
+      {
+        "text": "开源权重",
+        "type": "free"
+      },
+      {
+        "text": "阿里旗舰"
+      },
+      {
+        "text": "2.4万亿参数"
+      },
+      {
+        "text": "百万上下文"
+      }
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "暂无数据",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://qwen.ai",
+    "price": "API 国内每百万 Tokens 输入 12 元、输出 36 元，隐式缓存命中 1.5 元；海外每百万 Tokens 输入 2 美元、输出 6 美元，隐式缓存命中 0.25 美元；权重开源可自行部署",
+    "platform": "千问 AI 平台 API / 千问办公 QwenWork / Hugging Face 与 ModelScope 开源权重（含轻量版 Qwen3.8-27B）",
+    "pros": [
+      "Max 级旗舰首次开放权重，2.4 万亿参数模型可自行下载部署，这在闭源惯例下相当罕见",
+      "稀疏 MoE 单次仅激活约 95B 参数，推理成本远低于同规模稠密模型",
+      "100 万 Token 上下文加原生视觉理解，长文档与多模态任务不用额外拼管线",
+      "长周期自主任务能力突出，官方演示可连续数天无人工干预推进真实项目",
+      "同步开源 Qwen3.8-27B 轻量版，从云端到边缘都有可选方案"
+    ],
+    "cons": [
+      "2.4 万亿参数的本地部署门槛极高，绝大多数团队只能走 API",
+      "第三方 Arena 类榜单上综合表现仍排在 Anthropic Claude 系列之后",
+      "有消息称阿里计划向下一代开源模型的大型商用用户收取营收分成，长期授权成本存在不确定性"
+    ],
+    "features": [
+      "稀疏 MoE 架构：总参数 2.4 万亿，单次推理激活约 950 亿参数",
+      "混合注意力机制：支撑最长 100 万 Token 上下文窗口",
+      "原生多模态：文本与视觉理解一体，Vision Arena 榜单位列第二",
+      "长周期自主执行：官方称可连续 16 天无人工干预推进编码任务，产出 265 次提交",
+      "科研复现能力：连续自主工作约 125 小时复现 AI Reasoning 论文核心实验，过程中完成四轮自我进化",
+      "开放权重：Hugging Face 与 ModelScope 双平台上架，含 Qwen3.8-27B 轻量版"
+    ],
+    "related": [
+      "qwen",
+      "deepseek",
+      "kimi"
+    ],
+    "content": "## Qwen3.8-Max是什么？\n\nQwen3.8-Max 是阿里巴巴 2026 年 8 月 3 日正式发布的旗舰大模型，通义千问家族迄今尺寸最大、性能最强的一款（预览版此前于 7 月 19 日在 Token 计划、Qcoder 及 QcoderWork 平台露面）。\n\n硬指标先摆出来：总参数 2.4 万亿，采用稀疏混合专家（MoE）架构，单次推理仅激活约 950 亿参数；引入混合注意力机制，支持最长 100 万 Token 上下文窗口；原生集成多模态视觉理解能力。\n\n但这次发布真正的信号不在参数。Qwen Max 系列此前一直走「只给 API、不开放权重」的闭源路线，是通义千问产品线中级别最高的旗舰。这次破例开源——权重于 8 月 10 日当周上架 Hugging Face 与 ModelScope，同时开源轻量版 Qwen3.8-27B。这是 Qwen Max 级旗舰史上第一次开放下载。发布当天阿里港股一度上涨，市场读到的正是这个信号：阿里在用旗舰级产品争夺开源生态的话语权。\n\n## 核心功能\n\n1. 稀疏 MoE 加混合注意力：2.4 万亿总参数但只激活约 95B，这是它能把 API 价格压到这个水平的架构原因。\n2. 百万级上下文与原生视觉：长文档、长代码库和图像理解不需要再额外拼管线。据百度百科，它在 Vision Arena 榜单排名第二。\n3. 长周期自主执行：这是阿里发布会花时间最多的部分。官方称模型在编程实测中连续独立运行约 16 天、无人工干预，在 GitHub 上产出 265 次提交，自主搭建出一套可自我迭代的智能体框架。\n4. 科研与工程复现：科研场景中连续自主工作约 125 小时复现了一篇 AI Reasoning 领域论文的核心实验，过程中完成四轮自我进化；在长程复杂任务上还独立完成了一款 GCD/RSA 密码硬件加速器设计，无参考设计、无人类干预，单次不间断运行历经约 500 轮交互、71 次评估、13 个关键里程碑，把设计从首个跑通的 8298 门优化到 678 门。\n5. 评测成绩：据阿里官方与媒体报道，PaperBench 93.0（较上代提升 28.2）、OSWorld-Verified 86.1（主流模型第一）、CodeArena 全球第四。办公场景的对比数据也被反复引用——一支法务团队一周才能在数百份法律文档中完成的千余个条款标注，模型一小时完成。\n\n## 版本/套餐对比\n\nAPI 定价：国内每百万 Tokens 输入 12 元、输出 36 元，隐式缓存命中 1.5 元；海外每百万 Tokens 输入 2 美元、输出 6 美元，隐式缓存命中 0.25 美元。媒体测算这一价格约为闭源标杆 Anthropic Claude Opus 5 的四分之一成本。除 API 外，权重开源可自行部署，2.4 万亿参数的 Max 版适合有大规模算力的机构，轻量部署场景可选同步开源的 Qwen3.8-27B。模型也已接入阿里的 Agent 产品千问办公。\n\n## 值不值得用？\n\n优点很实在：Max 级旗舰开放权重，意味着有算力的机构第一次可以把这个级别的模型放进自己的机房，而不必受 API 约束；稀疏 MoE 让推理成本明显低于同规模稠密模型；百万上下文加原生视觉减少了工程拼装；长周期自主任务能力是它区别于「更会聊天」的关键——训练目标已经从「答得对」变成「干得完」。\n\n缺点也要认。2.4 万亿参数的本地部署门槛极高，绝大多数团队现实中还是只能走 API，开源更多是生态与信任层面的意义。第三方 Arena 类榜单上，Qwen 的综合排名仍在 Anthropic Claude 系列之后。另外有消息称阿里计划向下一代通义千问开源模型的大型商用用户收取营收分成，如果成立，长期授权成本存在不确定性，商用前建议确认授权条款。\n\n结论：想以更低成本拿到接近第一梯队的长上下文与 Agent 能力，它是目前性价比很突出的选择；追求单点最强的对话与推理体验，仍要横向对比。\n\n## 使用建议\n\n1. 先用 API 跑通场景再谈部署，尤其别低估 2.4 万亿参数的算力账。\n2. 长上下文任务把隐式缓存用起来，命中价格差一个数量级，成本能压下来。\n3. 让它跑长周期任务时设好检查点和人工介入位，「连续 16 天」是官方演示条件，不等于你的场景可以撒手不管。\n4. 轻量部署与边缘场景直接考虑 Qwen3.8-27B，别硬上 Max。\n5. 商用前确认开源授权条款，特别是营收分成相关的变化。\n\n## 适合谁用？\n\n推荐：需要长上下文、多模态与长周期 Agent 能力，且对 API 成本敏感的开发者与企业。\n可考虑：有自建算力、希望把旗舰模型私有化部署的机构，以及需要轻量部署的团队（选 27B）。\n不推荐：只做简单对话或轻量问答的个人用户（小模型更划算），以及无法接受开源授权条款变动风险的商用项目。",
+    "published": false,
+    "faq": [
+      {
+        "question": "Qwen3.8-Max 开源了吗？",
+        "answer": "开源了，而且是 Qwen Max 级旗舰史上首次开放权重。权重于 2026 年 8 月 10 日当周上架 Hugging Face 与 ModelScope，同时开源轻量版 Qwen3.8-27B。需注意商用授权条款，有消息称阿里计划向大型商用用户收取营收分成。"
+      },
+      {
+        "question": "Qwen3.8-Max 的参数和上下文是多少？",
+        "answer": "总参数 2.4 万亿，采用稀疏 MoE 架构，单次推理激活约 950 亿参数，配合混合注意力机制支持最长 100 万 Token 上下文窗口，并原生集成多模态视觉理解能力。"
+      },
+      {
+        "question": "Qwen3.8-Max 的 API 怎么收费？",
+        "answer": "国内每百万 Tokens 输入 12 元、输出 36 元，隐式缓存命中 1.5 元；海外每百万 Tokens 输入 2 美元、输出 6 美元，隐式缓存命中 0.25 美元。全球开发者均可通过千问 AI 平台调用。"
+      },
+      {
+        "question": "Qwen3.8-Max 和千问办公是什么关系？",
+        "answer": "千问办公（QwenWork）是阿里的企业级 Agent 产品，2026 年 8 月 3 日与 Qwen3.8-Max 同日发布并率先接入该模型，用户可以在千问办公里直接体验这个旗舰模型的能力。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+      "Qwen3.8-Max",
+      "Qwen3.8-Max怎么样",
+      "Qwen3.8-Max价格",
+      "Qwen3.8-Max开源",
+      "Qwen3.8-Max和DeepSeek哪个好"
+    ],
+    "source_urls": [
+      "https://qwen.ai",
+      "https://baike.baidu.com/item/Qwen3.8-Max/68312211",
+      "https://www.jiemian.com/article/14895823.html"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  }
+]

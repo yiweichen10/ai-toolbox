@@ -1,0 +1,485 @@
+[
+  {
+    "name": "Step 3.7 Flash",
+    "slug": "step-3-7-flash",
+    "positioning": "阶跃星辰（StepFun）2026年5月开源的专用于生产级 Agent 的 Flash 多模态模型，稀疏 MoE 架构，198B 总参/11B 激活，256K 上下文，最高 400 tokens/s，Apache 2.0 协议。",
+    "auto_positioning": false,
+    "emoji": "🚀",
+    "color": "#5B4BE0",
+    "description": "Step 3.7 Flash 是阶跃星辰（StepFun）于 2026 年 5 月发布并开源的旗舰级多模态推理模型，专为生产级 Agent 打造。采用稀疏 MoE 架构，总参数约 198B（含 1.8B 视觉编码器），每次推理仅激活 11B，最高速度 400 tokens/s，上下文窗口与最大输出均达 256K，以 Apache 2.0 在 GitHub、Hugging Face、ModelScope 同步开源并提供按量计费 API。",
+    "category": "AI对话",
+    "tags": ["开源大模型", "Agent", "多模态", "MoE", "阶跃星辰"],
+    "rating": "⭐ 4.6",
+    "visits": "暂无数据",
+    "badge": "开源模型",
+    "url": "https://huggingface.co/stepfun-ai",
+    "price": "输入 $0.20/百万 tokens，输出 $1.15/百万 tokens，缓存读取 $0.04/百万 tokens（模型权重开源免费）",
+    "platform": ["Web", "API", "开源（GitHub/Hugging Face/ModelScope）"],
+    "pros": [
+      "速度极快，最高 400 tokens/s，适合高频多轮 Agent 场景",
+      "原生多模态，能读 UI、图表、文档并直接调用工具",
+      "Apache 2.0 完全开源，可云端或本地部署",
+      "工具调用可靠性强，长程工作流不易跑偏",
+      "API 价格低，性价比高"
+    ],
+    "cons": [
+      "总参 198B 仍需可观算力，本地部署门槛不低",
+      "海外生态与英文资料为主，中文社区文档相对少"
+    ],
+    "features": [
+      "稀疏 MoE，198B 总参 / 11B 激活",
+      "256K 上下文与 256K 最大输出",
+      "原生视觉理解，内置 Python 工具可裁剪标注图像",
+      "low/medium/high 三档推理强度",
+      "高可靠工具调用，兼容 Claude Code、OpenClaw、Hermes Agent",
+      "把搜索当作推理的一部分，主动交叉验证"
+    ],
+    "related": ["stepfun", "chatgpt", "hermes-agent"],
+    "content": "## Step 3.7 Flash 是什么？\nStep 3.7 Flash 是阶跃星辰（StepFun）于 2026 年 5 月 28/29 日发布并开源的旗舰级多模态推理模型，定位非常清晰：专门为生产级 Agent 打造。它采用稀疏 MoE 架构，总参数约 198B（其中视觉编码器 1.8B），每次推理仅激活 11B，因此在保持大模型能力的同时把推理成本和延迟压了下来。官方给出的速度上限是 400 tokens/s，上下文窗口 256K，最大输出也达到 256K。模型以 Apache 2.0 协议在 GitHub、Hugging Face 和 ModelScope 同步开源，并提供按量计费的 API，开发者既可以本地部署，也可以直接调用云端。\n\n## 核心功能\n1. 高速多模态推理：稀疏 MoE 让 11B 激活参数跑出接近旗舰的体验，最高 400 tokens/s，特别适合高频、多轮的 Agent 场景。\n2. 原生视觉理解：能直接读取产品 UI、文档、图表、表格和自然场景，并基于看到的内容写代码或调用工具；内置 Python 工具可在任务中途裁剪、缩放、标注图像。\n3. 三档推理强度：支持 low/medium/high 推理强度，按任务复杂度灵活切换成本与质量。\n4. 高可靠工具调用：在长程多轮工作流中稳定调用 API、浏览器、终端、Office 与外部系统，降低跑偏与失败概率。\n5. 主动搜索验证：把搜索当作推理的一部分，信息不确定时主动发起检索做交叉验证。\n\n## 版本/套餐对比\n模型权重本身开源免费；API 按 token 计费，输入 $0.20/百万 tokens，输出 $1.15/百万 tokens，缓存读取 $0.04/百万 tokens，无订阅门槛，用量越大边际成本越低。\n\n## 值不值得用？\n如果你在搭 Agent，Step 3.7 Flash 很值得试。它的核心卖点不是参数规模，而是以小博大——用约十分之一于主流旗舰的参数，在 SWE-Bench Pro（56.3%）、Terminal-Bench 2.1、τ-bench Telecom（98%+）等 Agent 基准上拿到媲美更大模型的成绩，且速度与成本明显占优。对成本敏感、又需要稳定工具调用的团队尤其合适。\n\n## 使用建议\n1. 优先通过 OpenClaw、Claude Code、Hermes Agent 等已适配框架接入，省去自己写工具编排。\n2. 高频短任务用 low/medium 强度控成本，复杂推理再切 high。\n3. 本地部署需准备足够显存与算力；轻量验证建议先走 API。\n\n## 适合谁用？（三档）\n- 重度用户：做生产级 Agent、需要稳定工具调用与长上下文的团队，直接上 API 或本地部署。\n- 中度用户：个人开发者想把多模态能力塞进工作流，先用免费开源权重跑通 Demo。\n- 轻度用户：偶尔需要视觉理解或文档处理的普通用户，用第三方封装的聊天入口即可。",
+    "published": false,
+    "faq": [
+      {
+        "q": "Step 3.7 Flash 真的开源吗？",
+        "a": "是的，模型以 Apache 2.0 协议在 GitHub、Hugging Face 和 ModelScope 同步开源，权重可免费下载，也提供按量计费的 API。"
+      },
+      {
+        "q": "它的上下文和速度是多少？",
+        "a": "上下文窗口与最大输出均为 256K tokens，最高生成速度约 400 tokens/s，适合高频多轮 Agent 工作流。"
+      },
+      {
+        "q": "能接入哪些 Agent 框架？",
+        "a": "官方已兼容 Claude Code、OpenClaw、Hermes Agent 等主流编程与智能体工具，支持云端与本地部署。"
+      },
+      {
+        "q": "API 怎么收费？",
+        "a": "按 token 计费：输入 $0.20/百万 tokens，输出 $1.15/百万 tokens，缓存读取 $0.04/百万 tokens，无订阅门槛。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Step 3.7 Flash", "阶跃星辰", "开源大模型", "Agent 模型", "Flash 模型"],
+    "source_urls": [
+      "https://www.jfdaily.com/staticsg/res/html/journal/detail.html?code=jfrb&date=2026-05-30&id=512920&page=02",
+      "https://vercel-ship.vercel.sh/ai-gateway/models/step-3.7-flash/about",
+      "https://m.10jqka.com.cn/20260529/c677070039.shtml",
+      "https://aiflashreport.com/models/step-3-7-flash.html"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "ChatGPT Voice",
+    "slug": "chatgpt-voice",
+    "positioning": "OpenAI 于 2026年8月9日为 ChatGPT 桌面应用上线的语音交互功能，基于全新 ChatGPT-Live 全双工语音模型系列，可通过语音对话、控制 AI 智能体并在电脑上执行多步骤任务。",
+    "auto_positioning": false,
+    "emoji": "🎙️",
+    "color": "#10A37F",
+    "description": "ChatGPT Voice 是 OpenAI 为 ChatGPT 桌面应用上线的语音交互功能，底层基于当月推出的 ChatGPT-Live 全双工语音模型系列。用户可用语音直接对话、控制 AI 智能体，并让其在电脑上执行多步骤任务（如创建代码线程、提交 PR、定位 Bug），同时支持 ChatGPT Work 与 Codex，可调用计算机操作能力访问网站与应用。",
+    "category": "AI音频",
+    "tags": ["语音助手", "全双工", "ChatGPT", "桌面端", "GPT-Live"],
+    "rating": "⭐ 4.4",
+    "visits": "暂无数据",
+    "badge": "桌面端新上线",
+    "url": "https://chatgpt.com",
+    "price": "随 ChatGPT 订阅包含（Plus/Pro/Go 等）；免费用户可用 GPT-Live-1 mini",
+    "platform": ["桌面端（macOS/Windows）", "iOS", "Android", "Web"],
+    "pros": [
+      "全双工自然对话，可打断、可停顿，不再抢话",
+      "桌面端能语音控制 Agent 执行多步骤任务",
+      "支持 ChatGPT Work 与 Codex，可调用计算机操作能力",
+      "macOS 上通过 Appshots 读取屏幕内容（含 alt-text）",
+      "iOS 远程访问可在 Codex 中使用语音"
+    ],
+    "cons": [
+      "涉及付款、发消息、改权限等敏感操作仍需手动确认",
+      "暂不支持屏幕共享与视频共享"
+    ],
+    "features": [
+      "ChatGPT-Live 全双工语音模型系列",
+      "付费用户 GPT-Live-1，免费用户 GPT-Live-1 mini",
+      "语音控制 AI 智能体在电脑执行任务",
+      "支持 ChatGPT Work 与 Codex",
+      "macOS Appshots 读取屏幕内容",
+      "高敏感操作强制手动确认"
+    ],
+    "related": ["chatgpt", "elevenlabs", "stepfun"],
+    "content": "## ChatGPT Voice 是什么？\nChatGPT Voice 是 OpenAI 于 2026 年 8 月 9 日为 ChatGPT 桌面应用上线的语音交互功能，底层基于当月早些时候推出的全新 ChatGPT-Live 语音模型系列。它把 ChatGPT 从打字问答升级为动口指挥：你可以用自然语言直接对话、控制 AI 智能体，并让它在电脑上执行任务，比如创建代码线程、提交 Pull Request、定位 Bug 根本原因。简单说，语音不再是附属的输入方式，而是驱动 Agent 干活的入口。\n\n## 核心功能\n1. 全双工语音：真正能同时听和说，可以打断、可以停顿，不再因为短暂沉默被抢话，对话接近真人。\n2. 桌面端执行力：通过语音下达包含多个步骤的复杂指令，并在 AI 需要补充信息或确认时随时回应。\n3. 联动 Work 与 Codex：ChatGPT Voice 同时支持 ChatGPT Work 和 Codex，可调用计算机操作能力访问网站与应用。\n4. 屏幕理解：在 macOS 上借助 Appshots，可授权 ChatGPT 读取屏幕内容（含 alt-text），让语音指令更有的放矢。\n5. 移动远程：通过 iOS 应用的远程访问功能，也能在 Codex 中使用 ChatGPT Voice。\n\n## 版本/套餐对比\n付费用户（Pro/Plus/Go）默认使用完整的 GPT-Live-1 模型；免费用户可使用更轻量的 GPT-Live-1 mini。语音功能本身随 ChatGPT 订阅包含，无需额外付费。\n\n## 值不值得用？\n如果你本来就重度使用 ChatGPT，尤其在做开发或桌面办公，这次升级值得马上试。全双工解决了老版语音最恼人的抢话问题，桌面端的执行能力又让语音从聊天变成了办事。不过它目前仍是助手而非自动驾驶，敏感操作仍需你点头。\n\n## 使用建议\n1. 桌面端首次使用点输入框右侧语音图标并授权麦克风即可。\n2. 复杂任务用语音分步骤下指令，遇到付款、发消息、改权限等高风险操作，系统会强制让你手动确认，别指望它全自动。\n3. 想要更稳的推理，可在对话中让它调用前沿模型处理深度问题。\n\n## 适合谁用？（三档）\n- 重度用户：开发者用语音驱动 Codex 提交 PR、查 Bug，效率提升明显。\n- 中度用户：日常用 ChatGPT 写作、办公的人，用语音输入和追问更顺手。\n- 轻度用户：只想更自然地聊天、练口语的用户，免费版 GPT-Live-1 mini 已够用。",
+    "published": false,
+    "faq": [
+      {
+        "q": "ChatGPT Voice 和旧版语音有什么区别？",
+        "a": "核心变化是换成 ChatGPT-Live 全双工模型，可同时听和说、能打断停顿；桌面端还新增了控制 Agent 在电脑上执行多步骤任务的能力。"
+      },
+      {
+        "q": "免费用户能用吗？",
+        "a": "可以，免费用户使用更轻量的 GPT-Live-1 mini；Pro/Plus/Go 等付费用户可使用完整的 GPT-Live-1，语音功能本身随订阅包含。"
+      },
+      {
+        "q": "它能直接帮我操作电脑吗？",
+        "a": "桌面端可以调用计算机操作能力访问网站与应用、执行多步骤指令，但涉及付款、发消息、改权限等高风险操作会强制要求你手动确认。"
+      },
+      {
+        "q": "手机端能用语音控制 Codex 吗？",
+        "a": "可以，通过 iOS 应用的远程访问功能，就能在 Codex 中使用 ChatGPT Voice。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["ChatGPT Voice", "ChatGPT 语音", "GPT-Live", "全双工语音", "语音助手"],
+    "source_urls": [
+      "https://www.163.com/dy/article/L3SDSLPE0511B8LM.html",
+      "https://infosecu.technews.tw/2026/08/10/new-gpt-live-voice-mode/",
+      "https://news.aibase.com/zh/news/30207"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "HuggingFace Speech-to-Speech",
+    "slug": "hf-speech-to-speech",
+    "positioning": "Hugging Face 官方出品的本地语音 Agent 管线（开源项目），将 VAD→STT→LLM→TTS 串联为低延迟、全模块可替换的语音助手框架，通过 OpenAI Realtime 兼容的 WebSocket API 暴露，可完全本地运行、数据不出本机。",
+    "auto_positioning": false,
+    "emoji": "🗣️",
+    "color": "#FFD21E",
+    "description": "HuggingFace Speech-to-Speech 是 Hugging Face 官方出品的本地语音 Agent 管线，把 VAD（语音活动检测）→ STT（语音转写）→ LLM（大模型应答）→ TTS（语音合成）拆成四个可替换阶段，通过 OpenAI Realtime 兼容的 WebSocket API 暴露服务。整套栈可完全跑在本地，数据不出本机，是构建私有语音 Agent 与客服机器人的理想底座，已在数千台 Reachy Mini 机器人上作为对话后端投产。",
+    "category": "AI音频",
+    "tags": ["语音Agent", "开源", "本地运行", "Hugging Face", "WebSocket"],
+    "rating": "⭐ 4.3",
+    "visits": "暂无数据",
+    "badge": "开源项目",
+    "url": "https://github.com/huggingface/speech-to-speech",
+    "price": "开源免费（Apache-2.0，自托管，需自备算力）",
+    "platform": ["开源（Python/本地）", "支持本地与云端 LLM 后端"],
+    "pros": [
+      "全开源、本地运行，数据不出本机，隐私友好",
+      "模块化管线，VAD/STT/LLM/TTS 每个环节都可替换",
+      "OpenAI Realtime 兼容 WebSocket API，接入成本低",
+      "已在数千台 Reachy Mini 机器人上生产运行",
+      "兼容 Whisper、Llama、Qwen3-TTS、Gemma 等开源模型"
+    ],
+    "cons": [
+      "需要自行部署与配置，对非技术用户门槛较高",
+      "本地运行依赖 GPU/算力，延迟与效果受硬件影响"
+    ],
+    "features": [
+      "低延迟语音 Agent 管线：VAD → STT → LLM → TTS",
+      "每个组件可插拔替换",
+      "OpenAI Realtime 兼容 WebSocket 服务",
+      "支持 llama.cpp / vLLM 本地 LLM 后端",
+      "默认 Parakeet TDT + Qwen3-TTS 实时路径",
+      "已作为 Reachy Mini 机器人对话后端投产"
+    ],
+    "related": ["elevenlabs", "chatgpt", "suno"],
+    "content": "## HuggingFace Speech-to-Speech 是什么？\nHuggingFace Speech-to-Speech 是 Hugging Face 官方出品的本地语音 Agent 管线（开源项目），目标是让开发者用开源模型自建一个能听、会想、能说的语音助手。它把整条链路拆成四个可替换的阶段——VAD（语音活动检测）→ STT（语音转写）→ LLM（大模型应答）→ TTS（语音合成），通过 OpenAI Realtime 兼容的 WebSocket API 暴露服务。整套栈可以完全跑在本地，数据不出本机，是构建私有语音 Agent 与客服机器人的理想底座。它已在数千台 Reachy Mini 机器人上作为对话后端投产。\n\n## 核心功能\n1. 低延迟模块化管线：VAD→STT→LLM→TTS，每个阶段独立线程、队列连接，延迟可控。\n2. 全组件可插拔：STT、LLM、TTS 都能换，LLM 槽位支持任意 OpenAI 兼容协议。\n3. 本地或云端自由切换：既能指向托管供应商，也能指向本机 vLLM / llama.cpp，做到完全开源栈。\n4. 默认实时路径：Parakeet TDT 本地 STT + OpenAI 兼容 LLM + Qwen3-TTS 本地语音输出。\n5. 生产背书：作为 Reachy Mini 机器人的对话后端，已在真实硬件规模运行。\n\n## 版本/套餐对比\n项目本身开源免费（Apache-2.0），无 SaaS 套餐；成本主要是你自托管的算力。开发者按需选择本地模型规模即可。\n\n## 值不值得用？\n如果你要做自己的语音 Agent，而不是接第三方 API，这个项目非常值得。它把语音助手这件原本很碎的事，用一套标准管线收拢起来，又保留每个环节的替换自由。隐私敏感、需要私有部署的团队尤其合适。代价是你需要自己部署和调参。\n\n## 使用建议\n1. 先用 pip install speech-to-speech 跑通默认实时服务，再逐步替换模型。\n2. 想彻底本地化，就用 llama.cpp 起一个 Gemma 之类的本地 LLM 后端指过去。\n3. 任何 OpenAI Realtime 兼容客户端都能连，直接复用现有前端。\n\n## 适合谁用？（三档）\n- 重度用户：做语音 Agent 产品、客服机器人的团队，拿它当生产底座。\n- 中度用户：想给自己的应用加语音交互的开发者，fork 后改组件。\n- 轻度用户：单纯想本地跑个语音助手玩的研究者，按文档几步即可。",
+    "published": false,
+    "faq": [
+      {
+        "q": "它是完全开源的吗？",
+        "a": "是的，项目以 Apache-2.0 协议开源，并在 GitHub Trending 期间获得大量关注（约 10K stars，数据点会变动），可完全本地自托管。"
+      },
+      {
+        "q": "必须全部本地运行吗？",
+        "a": "不必须。LLM 槽位支持任意 OpenAI 兼容协议，你可以指向托管供应商，也可以指向本机 vLLM / llama.cpp，做到完全开源栈。"
+      },
+      {
+        "q": "接入成本高吗？",
+        "a": "不高，它通过 OpenAI Realtime 兼容的 WebSocket API 暴露服务，任何兼容客户端都能连，前端基本可复用。"
+      },
+      {
+        "q": "有哪些默认模型组合？",
+        "a": "默认实时路径为 Parakeet TDT 本地 STT + OpenAI 兼容 LLM + Qwen3-TTS 本地语音输出，每个环节都能替换。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Speech-to-Speech", "Hugging Face 语音", "本地语音Agent", "开源语音助手", "语音管线"],
+    "source_urls": [
+      "https://github.com/huggingface/speech-to-speech/tree/main",
+      "https://ima.qq.com/wiki/?shareId=8e4d900818b7253fc409e0f8d47c9d65724f8c88ec2bbbfd893f9bb5da34755f"
+    ],
+    "confidence": "medium",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "voice-pro",
+    "slug": "voice-pro",
+    "positioning": "abus-aikorea 开源的一站式 AI 配音/语音套件，基于 Gradio WebUI，集音频提取、人声分离、转录、零样本声音克隆、TTS 与多语种翻译于一体，可在本地自托管，被称为开源版 ElevenLabs 替代品。",
+    "auto_positioning": false,
+    "emoji": "🎤",
+    "color": "#FF6B6B",
+    "description": "voice-pro 是 abus-aikorea 开源的一站式 AI 配音与语音处理套件，本质上是一个基于 Gradio 的 WebUI，把视频/音频下载、人声分离、转录、声音克隆、TTS、翻译全部塞进同一条工作流。它最早是商业项目，后来把整套代码开源，因此常被称为开源版 ElevenLabs。对做双语字幕、多语种配音、视频本地化的创作者来说，它是一个能把订阅账单打到零的本地替代方案。",
+    "category": "AI音频",
+    "tags": ["配音", "语音克隆", "开源", "Gradio", "多语种翻译"],
+    "rating": "⭐ 4.2",
+    "visits": "暂无数据",
+    "badge": "开源项目",
+    "url": "https://github.com/abus-aikorea/voice-pro",
+    "price": "开源免费（WebUI 有 30 分钟试用限制；官方完整版需购买，价格见官网）",
+    "platform": ["Windows", "Linux", "macOS", "本地自托管"],
+    "pros": [
+      "全流程一体化，下载到配音一条龙",
+      "零样本声音克隆（F5-TTS/E2-TTS/CosyVoice）质量高",
+      "本地自托管，隐私与零边际成本",
+      "支持 100+ 语种翻译，适合出海创作者",
+      "开源，可改脚本接入自有模型"
+    ],
+    "cons": [
+      "首次运行需下载约 10GB 模型，安装耗时长",
+      "对 GPU 有要求（建议 4-8GB 显存），Windows 可能误报"
+    ],
+    "features": [
+      "音频提取（yt-dlp 下载处理）",
+      "人声分离（Demucs）",
+      "高精度转录（Faster-Whisper/WhisperX）",
+      "零样本声音克隆（F5/E2/CosyVoice）",
+      "TTS（Edge-TTS、kokoro）",
+      "多语种翻译（Deep-Translator）"
+    ],
+    "related": ["elevenlabs", "suno", "udio"],
+    "content": "## voice-pro 是什么？\nvoice-pro 是 abus-aikorea 开源的一站式 AI 配音与语音处理套件，本质上是一个基于 Gradio 的 WebUI，把创作者平时要来回切换的好几个工具——视频/音频下载、人声分离、转录、声音克隆、TTS、翻译——全部塞进同一条工作流。它最早是商业项目，后来把整套代码开源，因此常被称为开源版 ElevenLabs。对做双语字幕、多语种配音、视频本地化的创作者来说，它是一个能把订阅账单打到零的本地替代方案。\n\n## 核心功能\n1. 音频提取：内置 yt-dlp，可直接下载并处理 YouTube 等平台内容。\n2. 人声分离：用 Demucs 把人声与背景音乐干净分离，提升克隆质量。\n3. 高精度转录：支持 Faster-Whisper、Whisper-Timestamped、WhisperX 等，做到词级时间轴。\n4. 零样本声音克隆：集成 F5-TTS、E2-TTS、CosyVoice，少量参考音频即可复刻音色。\n5. 文本转语音：内置 Edge-TTS 与 kokoro，自然度高、开箱即用。\n6. 多语种翻译：集成 Deep-Translator，覆盖 100+ 语种。\n\n## 版本/套餐对比\n开源免费，但 WebUI 首次运行有 30 分钟使用时长限制（重启可继续，已处理结果保留）；需要完整无限制版本可购买 ABUS 官方版，具体价格见官网。\n\n## 值不值得用？\n对内容创作者，voice-pro 很值得。它一次性解决了下载—分离—转录—克隆—合成—翻译的完整链路，省去在四五个 SaaS 之间倒腾文件和预算。前提是你能接受本地部署的硬件门槛：建议 NVIDIA 显卡 4–8GB 显存，首次还要下载约 10GB 模型。\n\n## 使用建议\n1. Windows 用户跑 configure.bat + start.bat 基本一键安装；Linux/Mac 用 .sh 版本。\n2. 显存吃紧就把 Denoise 调到 0/1，并用 int 计算类型换速度。\n3. 长内容用 large 模型换准确率，短内容 medium/small 足够。\n\n## 适合谁用？（三档）\n- 重度用户：出海视频创作者、需要批量多语种配音的团队。\n- 中度用户：偶尔做配音、翻译的 UP 主，本地跑省钱。\n- 轻度用户：想体验声音克隆的玩家，先免费版试水。",
+    "published": false,
+    "faq": [
+      {
+        "q": "voice-pro 是免费的吗？",
+        "a": "开源免费，但 WebUI 首次运行有 30 分钟使用时长限制（重启可继续，已处理结果保留）；完整无限制版本需购买 ABUS 官方版。"
+      },
+      {
+        "q": "对电脑配置有什么要求？",
+        "a": "建议 NVIDIA 显卡 4–8GB 显存，首次运行会下载约 10GB 模型权重；Windows 可能被 SmartScreen 误报，需手动允许运行。"
+      },
+      {
+        "q": "支持哪些声音克隆模型？",
+        "a": "集成 F5-TTS、E2-TTS、CosyVoice 等零样本声音克隆模型，少量参考音频即可复刻音色；TTS 还内置 Edge-TTS 与 kokoro。"
+      },
+      {
+        "q": "可以做多语种配音吗？",
+        "a": "可以，集成 Deep-Translator 支持 100+ 语种翻译，配合转录与克隆，适合做双语字幕与出海视频本地化。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["voice-pro", "AI 配音", "AI 语音克隆", "开源语音工具", "多语种翻译"],
+    "source_urls": [
+      "https://aibit.im/en/article/voice-pro-open-source-ai-audio-dubbing-suite",
+      "https://www.technolati.com/voice-pro-the-open-source-elevenlabs-alternative-that-runs-entirely-locally",
+      "https://github.com/abus-aikorea/voice-pro"
+    ],
+    "confidence": "medium",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Ctruh Studio",
+    "slug": "ctruh-studio",
+    "positioning": "Ctruh 推出的 AI 驱动无代码 3D/XR 体验平台，用 VersaAI 由文字或图片生成可用于生产的 3D 模型，在浏览器中搭建产品展示、虚拟商店、配置器与 AR 体验，无需写代码、无需下载插件。",
+    "auto_positioning": false,
+    "emoji": "🧊",
+    "color": "#7C4DFF",
+    "description": "Ctruh Studio 是 Ctruh 推出的 AI 驱动无代码 3D/XR 体验平台，解决线上购物停留在 2D 平面的痛点。它用 VersaAI 由文字或图片生成可用于生产的 3D 模型，在浏览器原生引擎里搭建产品展示、虚拟商店、配置器与 AR 体验，无需写代码、无需下载插件。2026 年 8 月 3 日登陆 Product Hunt 拿下当日 #2（427 票）。",
+    "category": "AI设计",
+    "tags": ["3D", "XR", "无代码", "AR", "电商"],
+    "rating": "⭐ 4.3",
+    "visits": "暂无数据",
+    "badge": "Product Hunt #2",
+    "url": "https://www.ctruh.com",
+    "price": "价格暂未公开（上线赠送 launch credits，可免费试用）",
+    "platform": ["Web 浏览器", "无插件", "跨设备"],
+    "pros": [
+      "AI 生成 3D 资产，几分钟出模型",
+      "无代码、浏览器原生，无需下载",
+      "覆盖展示/配置器/虚拟商店/AR 全链路",
+      "一个资产库 + 一个 CMS，避免多供应商拼接",
+      "Product Hunt #2，社区反馈积极"
+    ],
+    "cons": [
+      "面向电商与品牌，通用 3D 创作能力有限",
+      "价格与高级功能细节尚未完全公开"
+    ],
+    "features": [
+      "VersaAI：文/图生成生产级 3D 模型",
+      "3D 可视化：旋转、缩放、多角度查看",
+      "虚拟试穿与 AR 空间放置",
+      "配置器：切换颜色/材质/变体",
+      "虚拟门店搭建",
+      "浏览器原生引擎，秒开无需下载"
+    ],
+    "related": ["midjourney", "stepfun", "chatgpt"],
+    "content": "## Ctruh Studio 是什么？\nCtruh Studio 是 Ctruh 推出的 AI 驱动无代码 3D/XR 体验平台，解决的核心痛点是：线上购物还停留在 2D 平面，用户看着照片就下单，结果买错、退货。Ctruh 的做法是让品牌和商家不用雇开发、不拼五家供应商、不等几周，直接在一个浏览器原生的平台里，用 AI 生成 3D 资产，搭建可交互的产品展示、虚拟商店、配置器和 AR 体验。它 2026 年 8 月 3 日登陆 Product Hunt，拿下当日 #2（427 票），社区反馈积极。\n\n## 核心功能\n1. VersaAI 生成 3D：输入文字或一张图片，几分钟产出可用于生产的 3D 模型，免去建模瓶颈。\n2. 3D 可视化： shoppers 可旋转、缩放、从任意角度查看产品。\n3. 虚拟试穿与 AR：把产品放到客户真实空间，或穿在客户身上。\n4. 配置器：切换颜色、材质、变体，实时看效果。\n5. 虚拟门店：搭建沉浸式购物环境，全程无代码。\n6. 浏览器原生引擎：秒级加载，无需下载插件，任何设备可用。\n\n## 版本/套餐对比\nCtruh Studio 上线赠送 launch credits 可免费试用；完整定价尚未完全公开，需到官网咨询。\n\n## 值不值得用？\n如果你是电商品牌或独立站卖家，想做 3D/AR 但被成本和工具劝退，Ctruh Studio 值得试。它把资产生成—展示—配置—试穿—门店整成一体，比起拼五家供应商，落地速度快得多。它的短板是偏电商场景，通用 3D 创作能力有限。\n\n## 使用建议\n1. 先从单款爆品做起：用 VersaAI 生成模型，做 3D 可视化和配置器。\n2. 再叠加 AR/虚拟试穿，提升转化与降低退货。\n3. 用免费 launch credits 验证效果，再决定是否深入。\n\n## 适合谁用？（三档）\n- 重度用户：有 sku 矩阵的电商品牌，做整套沉浸式购物。\n- 中度用户：单品独立站卖家，用 3D 展示提升信任。\n- 轻度用户：想试试 3D 营销的小团队，免费额度够玩。",
+    "published": false,
+    "faq": [
+      {
+        "q": "Ctruh Studio 需要写代码吗？",
+        "a": "不需要。它是无代码平台，基于浏览器原生引擎，无需下载插件，用 VersaAI 由文字或图片即可生成 3D 模型并搭建体验。"
+      },
+      {
+        "q": "它主要解决什么问题？",
+        "a": "解决线上购物停留在 2D 平面的痛点：让商家不用雇开发、不拼多家供应商，就能做产品展示、配置器、虚拟试穿、AR 与虚拟门店，降低退货。"
+      },
+      {
+        "q": "Ctruh Studio 收费吗？",
+        "a": "上线赠送 launch credits 可免费试用；完整定价尚未完全公开，需到官网咨询。"
+      },
+      {
+        "q": "在 Product Hunt 表现如何？",
+        "a": "2026 年 8 月 3 日登陆 Product Hunt，拿下当日 Product of the Day #2，约 427 票、93 条评论，社区反馈积极。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Ctruh Studio", "AI 3D", "无代码 3D", "XR 体验", "虚拟商店"],
+    "source_urls": [
+      "https://hunted.space/dashboard/ctruh-studio",
+      "https://www.linkedin.com/posts/ctruh_producthunt-ai-3d-activity-7489925943206146048-graM"
+    ],
+    "confidence": "medium",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Atlaso",
+    "slug": "atlaso",
+    "positioning": "Atlaso 是面向 AI 工具的共享记忆层，通过一次 MCP 接入，让 Claude Code、Cursor、Codex、Claude Desktop 等工具共享同一份上下文（项目、决策、工作习惯），自动捕获决策/风险点/未完成问题并在下次对话前回忆，个人与项目记忆分离。",
+    "auto_positioning": false,
+    "emoji": "🧠",
+    "color": "#00B8D9",
+    "description": "Atlaso 是一款面向 AI 工具的共享记忆层。很多开发者同时开着 Claude Code、Cursor、Codex 好几个编程助手，但每换一个入口就要把项目背景、技术决策、命名习惯重新讲一遍。Atlaso 通过一次 MCP 接入，让这些工具共享同一份上下文：自动捕获决策、风险点、未完成问题，并在下次对话前召回相关记忆，个人记忆与项目记忆分离，避免串项目。2026 年 8 月 4 日 Product Hunt 当日 #3。",
+    "category": "AI效率",
+    "tags": ["记忆层", "MCP", "跨工具", "上下文", "效率"],
+    "rating": "⭐ 4.1",
+    "visits": "暂无数据",
+    "badge": "Product Hunt 入围",
+    "url": "https://atlaso.ai",
+    "price": "Free 免费（1 设备 1 工具）；Pro $10/月；Build $25/月",
+    "platform": ["MCP 接入", "Claude Code", "Cursor", "Codex", "Claude Desktop", "Web"],
+    "pros": [
+      "跨工具共享记忆，告别反复介绍项目背景",
+      "一次 MCP 接入，几乎零配置（约 1 分钟，无需 API key）",
+      "记忆可查看、搜索、删除，非黑箱",
+      "个人记忆与项目记忆分离，防串项目",
+      "官方称保存前清理密钥、传输与存储加密"
+    ],
+    "cons": [
+      "新兴产品，无长期安全审计背书",
+      "免费版仅 1 设备 1 工具，跨工具价值需付费",
+      "工作上下文存放在第三方云端，敏感项目需谨慎"
+    ],
+    "features": [
+      "跨 AI 工具的统一记忆层（MCP）",
+      "自动捕获决策、风险点、未完成问题",
+      "会话前选择性召回相关记忆",
+      "个人记忆 / 项目记忆分离",
+      "仪表盘搜索与删除记忆",
+      "付费版含 Ambient Memory、背景增强、API"
+    ],
+    "related": ["chatgpt", "stepfun", "hermes-agent"],
+    "content": "## Atlaso 是什么？\nAtlaso 是一款面向 AI 工具的共享记忆层。很多开发者同时开着 Claude Code、Cursor、Codex 好几个编程助手，但每换一个入口，就要把项目背景、技术决策、命名习惯重新讲一遍——因为记忆被锁死在单个工具里。Atlaso 的解法是：通过一次 MCP 接入，让这些工具共享同一份上下文。它会在你工作的过程中自动捕获决策、风险点、未完成问题，并在下次对话前召回相关记忆，个人记忆与项目记忆分离，避免串项目。\n\n## 核心功能\n1. 跨工具统一记忆：Claude Code、Cursor、Codex、Claude Desktop、OpenCode 等接一次 MCP 即可共享记忆。\n2. 自动捕获与召回：每轮结束后沉淀决策/警告/待办，下轮对话前选择性召回相关内容。\n3. 个人 / 项目记忆分离：个人习惯跨工具跟随，项目上下文隔离到仓库，防泄漏。\n4. 可查看可管理：仪表盘能搜索、删除记忆，不是黑箱。\n5. 选择性混合检索：召回的是少量相关片段，而非整库注入。\n6. 付费版增强：Ambient Memory 开场简报、背景结构化、记忆 Q&A、JSON 导出与 API。\n\n## 版本/套餐对比\nFree 免费（限 1 设备 1 工具）；Pro $10/月，解锁无限工具设备、Ambient Memory、背景增强、记忆 Q&A、JSON 导出；Build $25/月，额外提供面向终端用户的开发者记忆 API。\n\n## 值不值得用？\n如果你同时用多个 AI 编程助手，Atlaso 值得一试，因为它真正切中重复解释背景的痛点，而且借 MCP 而非私有 SDK，接入摩擦极低。但要清醒：它是新晋产品，没有独立安全审计；工作上下文存在第三方云端，敏感项目先在非敏感仓库试。\n\n## 使用建议\n1. 先连一个工具、一个项目，验证它能记住一条明确技术决策，再手动删除看是否符合预期。\n2. 免费版只能验证单工具，跨工具价值要上 Pro。\n3. 改了某个决策后，检查召回结果是否同步更新，别盲目信任。\n\n## 适合谁用？（三档）\n- 重度用户：同时跑多个编程 Agent 的开发者，Pro 能明显省去重复说明。\n- 中度用户：用一两个 AI 工具、想攒长期上下文的个人。\n- 轻度用户：只想体验 AI 记得我的新手，免费版够用。",
+    "published": false,
+    "faq": [
+      {
+        "q": "Atlaso 是怎么接入的？",
+        "a": "通过一次 MCP 接入，官方称约 1 分钟、无需 API key；支持 Claude Code、Cursor、Codex、Claude Desktop、OpenCode 等，ChatGPT 标注为即将支持。"
+      },
+      {
+        "q": "免费版能用什么？",
+        "a": "Free 版限 1 设备 1 工具，能验证捕获与召回，但体现不出跨工具共享的核心价值；跨工具需升级 Pro（$10/月）。"
+      },
+      {
+        "q": "记忆安全吗？",
+        "a": "官方称保存前清理密钥、传输与存储加密、不会用记忆训练模型；但这些是厂商声明，非独立审计，敏感或受监管工作仍需自行评估。"
+      },
+      {
+        "q": "价格和套餐怎么分？",
+        "a": "Free 免费（1 设备 1 工具）；Pro $10/月，加无限工具设备与增强功能；Build $25/月，加开发者记忆 API。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Atlaso", "AI 记忆层", "MCP 记忆", "跨工具上下文", "AI 效率"],
+    "source_urls": [
+      "https://dreaming.press/posts/tool-highlight-atlaso-one-mcp-memory-across-coding-agents.html",
+      "https://chatgate.ai/post/atlaso",
+      "https://neodrop.ai/zh-cn/post/01cS6UrTar-"
+    ],
+    "confidence": "medium",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "pdf-inspector",
+    "slug": "pdf-inspector",
+    "positioning": "Firecrawl 出品的纯 Rust PDF 智能解析与分类库，先把 PDF 分为文字型/扫描型/图片型/混合型并保留字体坐标，再决定哪些页需要 OCR，可输出 LLM-ready Markdown，不依赖大模型、不调外部服务，性能远超 Python 系方案。",
+    "auto_positioning": false,
+    "emoji": "📄",
+    "color": "#F5650D",
+    "description": "pdf-inspector 是 Firecrawl 团队出品的纯 Rust PDF 智能解析与分类库，定位是 RAG 和 Agent 文档摄取层的前置路由器。它先把 PDF 分成文字型、扫描型、图片型、混合型四类并保留字体坐标，再判断哪些页面真正值得送 OCR，从而把算力花在刀刃上。整个流程不依赖大模型、不调用外部服务，输出 LLM-ready 的 Markdown，性能远超 Python 系方案，曾冲上 GitHub Trending 总榜。",
+    "category": "AI效率",
+    "tags": ["PDF解析", "Rust", "开源", "OCR路由", "RAG"],
+    "rating": "⭐ 4.5",
+    "visits": "暂无数据",
+    "badge": "开源项目",
+    "url": "https://github.com/firecrawl/pdf-inspector",
+    "price": "开源免费（MIT，可自托管）",
+    "platform": ["Rust 库", "Node/Bun", "Python 绑定", "CLI", "WebAssembly", "本地"],
+    "pros": [
+      "纯 Rust 实现，单文档毫秒级，远快于 Python 方案",
+      "智能分类，仅扫描页进 OCR，节省算力",
+      "保留字体坐标，表格/脚注/跨页表结构不丢失",
+      "不依赖大模型与外部服务，适合隐私场景",
+      "多形态接入：Rust/Node/Python/CLI/WASM"
+    ],
+    "cons": [
+      "偏底层库，需要一定工程能力集成",
+      "复杂版式极端案例仍需人工校验"
+    ],
+    "features": [
+      "PDF 四类智能分类（Text/Scanned/Image/Mixed）",
+      "字体坐标保留与阅读顺序还原",
+      "表格边框+对齐判断，支持脚注与跨页表",
+      "智能 OCR 路由，文字页不走 OCR",
+      "输出 LLM-ready Markdown / 结构化 JSON",
+      "MIT 开源，提供多语言绑定"
+    ],
+    "related": ["chatgpt", "stepfun", "hermes-agent"],
+    "content": "## pdf-inspector 是什么？\npdf-inspector 是 Firecrawl 团队出品的纯 Rust PDF 智能解析与分类库，定位是 RAG 和 Agent 文档摄取层的前置路由器。它不是又一个通用 PDF 解析器，而是先把 PDF 分成文字型（TextBased）、扫描型（Scanned）、图片型（ImageBased）、混合型（Mixed）四类，并保留字体坐标，再判断哪些页面真正值得送 OCR，从而把算力花在刀刃上。整个流程不依赖大模型、不调用外部服务，输出 LLM-ready 的 Markdown，性能远超 Python 系方案。它曾冲上 GitHub Trending 总榜，是 PDF-to-LLM 赛道里少见的硬核 Rust 实现。\n\n## 核心功能\n1. 低延迟分类：先把每页归到 Text/Scanned/Image/Mixed 四类，决定后续处理路径。\n2. 字体坐标保留：尽量按正常阅读顺序还原文本，多栏布局也不乱。\n3. 表格结构识别：结合表格边框与文本对齐，支持财务表、脚注与跨页表，输出 Markdown 表格。\n4. 智能 OCR 路由：约一半 PDF 是文字型，直接原生提取；只有扫描页才进 GPU OCR。\n5. LLM-ready 输出：可输出 Markdown 或结构化 JSON，直接喂给知识库或大模型。\n6. 多形态接入：提供 Rust 库、Node/Bun 包、Python 绑定、CLI 与 WebAssembly 版本。\n\n## 版本/套餐对比\n项目 MIT 开源、可自托管，无 SaaS 套餐；若需要 OCR 与规模化，可使用 Firecrawl 托管的 /parse API（按 credits 计费）。\n\n## 值不值得用？\n如果你在做 RAG、知识库或 Agent 的文档摄取，pdf-inspector 非常值得。纯 Rust 让它单文档毫秒级完成，且因为只在必要时 OCR，成本和时间都显著低于无脑全量 OCR 的方案。对隐私敏感、不想把文件传外部 API 的场景尤其合适。\n\n## 使用建议\n1. 先本地跑 CLI 验证分类与提取质量，再集成到摄取流水线。\n2. 文字型为主的文档直接原生提取，省掉 OCR 开销。\n3. 极端复杂版式（如特殊财务报表）抽取后做一次人工抽检。\n\n## 适合谁用？（三档）\n- 重度用户：做企业知识库/RAG 的团队，把它当文档摄取前置。\n- 中度用户：个人开发者处理论文、财报、法律文件转 Markdown。\n- 轻度用户：偶尔需要把 PDF 转成干净文本的用户，WebAssembly 版即可。",
+    "published": false,
+    "faq": [
+      {
+        "q": "pdf-inspector 需要调用大模型吗？",
+        "a": "不需要。它是纯 Rust 实现，不依赖大模型、也不调用外部服务，PDF 可在本地处理，适合对数据隐私敏感的场景。"
+      },
+      {
+        "q": "它和通用 PDF 解析器有什么不同？",
+        "a": "它先做四类智能分类并保留字体坐标，再决定哪些页才走 OCR，把算力花在刀刃上；表格、脚注、跨页表结构也能较好保留，输出 LLM-ready 的 Markdown/JSON。"
+      },
+      {
+        "q": "怎么接入？",
+        "a": "提供多种形态：Rust 库、Node/Bun 包、Python 绑定、CLI 与 WebAssembly 版本，可按项目技术栈选择。"
+      },
+      {
+        "q": "收费吗？",
+        "a": "pdf-inspector 本体 MIT 开源、可自托管，免费；若需要 OCR 与规模化能力，可使用 Firecrawl 托管的 /parse API（按 credits 计费）。"
+      }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["pdf-inspector", "PDF 解析", "Rust PDF", "OCR 路由", "RAG 文档摄取"],
+    "source_urls": [
+      "https://www.firecrawl.dev/parse",
+      "https://github.com/firecrawl/pdf-inspector",
+      "https://ima.qq.com/wiki/?shareId=ca4d4514f69deb99a2cfb11df8b1bbf1851b1ba81a9dd9751e8b4742ec9b430f"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  }
+]

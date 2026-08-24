@@ -1,0 +1,75 @@
+[
+  {
+    "slug": "jcode",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://github.com/1jehuang/jcode",
+      "https://github.com/1jehuang/mermaid-rs-renderer"
+    ]
+  },
+  {
+    "slug": "gstack",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://github.com/garrytan/gstack"
+    ]
+  },
+  {
+    "slug": "ngrok-ai-gateway",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://ngrok.ai/",
+      "https://www.hunted.space/dashboard/ngrok-ai-gateway",
+      "https://producthunt.programnotes.cn/en/p/product-hunt-daily-2026-08-06"
+    ]
+  },
+  {
+    "slug": "rippling-ai-spend",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://www.hunted.space/dashboard/rippling",
+      "https://hunted.space/product/rippling",
+      "https://producthunt.programnotes.cn/p/product-hunt-%E4%BB%8A%E6%97%A5%E7%83%AD%E6%A6%9C-2026-08-07"
+    ]
+  },
+  {
+    "slug": "langwatch",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://github.com/langwatch/langwatch",
+      "https://posthog.com/blog/best-ai-observability-tools",
+      "https://blog.brightcoding.dev/2025/08/23/langwatch-the-open-source-llm-monitoring-evaluation-optimization-toolkit"
+    ]
+  },
+  {
+    "slug": "skrun",
+    "verdict": "ISSUES",
+    "issues": [
+      {
+        "field": "features / content",
+        "claim": "配套 10 条 CLI 命令负责初始化、测试与部署；CLI 管理：10 条 CLI 命令负责初始化、测试与部署",
+        "truth": "GitHub 仓库当前 README 列出的可用 CLI 命令为 12 个（init、init --from-skill、dev、test、build、push、verify、unverify、run、deploy、pull、login/logout）。仅在 v0.1.1 初始发布时（dev.to 文章所述）为 10 个，现已扩展。其余事实（创建者 Ian Bernardo/frizull 与 Tarcroi、2026-04-08 Show HN、MIT、Anthropic/OpenAI/Google/Mistral/Groq、POST /run、npm @skrun-dev/cli）均核实无误。",
+        "source": "https://github.com/skrun-dev/skrun ; https://dev.to/skrun/i-had-a-bunch-of-skills-sitting-in-a-folder-none-of-them-were-callable-as-apis-m46 ; https://www.everydev.ai/developers/skrun-dev",
+        "fix": "将「10 条 CLI 命令」改为「一套 CLI 命令（约 12 个，如 init / dev / test / build / deploy 等）」，或注明「初始版本为 10 条」以与历史来源一致。"
+      }
+    ],
+    "sources": [
+      "https://github.com/skrun-dev/skrun",
+      "https://dev.to/skrun/i-had-a-bunch-of-skills-sitting-in-a-folder-none-of-them-were-callable-as-apis-m46",
+      "https://www.everydev.ai/developers/skrun-dev"
+    ]
+  },
+  {
+    "slug": "airllm",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://github.com/lyogavin/airllm"
+    ]
+  }
+]

@@ -1,0 +1,108 @@
+[
+  {
+    "slug": "step-3-7-flash",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://huggingface.co/stepfun-ai/Step-3.7-Flash",
+      "https://www.iheima.com/article-397937.html",
+      "https://xueqiu.com/4642157440/393082398",
+      "http://benchmarklist.com/models/stepfun-step-3.7-flash"
+    ]
+  },
+  {
+    "slug": "chatgpt-voice",
+    "verdict": "PASS",
+    "issues": [
+      {
+        "field": "price",
+        "claim": "免费用户可用 GPT-Live-1 mini（随 ChatGPT 订阅包含）",
+        "truth": "GPT-Live-1 mini 对免费用户在 Web/移动端可用；但桌面端 ChatGPT Voice 新语音需 Plus/Pro/Business/Edu/Enterprise 付费订阅，免费用户只能使用旧版语音模式。建议补充桌面端需付费的说明以免误导。",
+        "source": "https://www.ithinkdiff.com/chatgpt-voice-returns-mac-gpt-live-july-2026",
+        "fix": "改为：移动端/网页版免费用户使用 GPT-Live-1 mini；桌面端新语音功能需付费订阅。"
+      },
+      {
+        "field": "positioning/description",
+        "claim": "基于全新 ChatGPT-Live 全双工语音模型系列",
+        "truth": "OpenAI 官方产品名为 GPT-Live（非“ChatGPT-Live”）。属命名口径差异，非事实错误，但建议统一为官方命名 GPT-Live。",
+        "source": "https://openai.com/index/introducing-gpt-live/",
+        "fix": "统一使用官方名称 “GPT-Live”。"
+      }
+    ],
+    "sources": [
+      "https://openai.com/index/introducing-gpt-live/",
+      "https://www.bestaitools.com/openai-brings-voice-control-to-chatgpt-desktop-app",
+      "https://infosecu.technews.tw/2026/08/10/new-gpt-live-voice-mode/",
+      "https://www.ithinkdiff.com/chatgpt-voice-returns-mac-gpt-live-july-2026"
+    ]
+  },
+  {
+    "slug": "hf-speech-to-speech",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://github.com/huggingface/speech-to-speech",
+      "https://juejin.cn/post/7669035150309769270"
+    ]
+  },
+  {
+    "slug": "voice-pro",
+    "verdict": "ISSUES",
+    "issues": [
+      {
+        "field": "price",
+        "claim": "开源免费（WebUI 有 30 分钟试用限制；官方完整版需购买）",
+        "truth": "项目自 v3.2（2025-12-06）起已全面开源免费，无任何使用时长限制；早期 v2.0 仅有“最长 60 秒媒体”限制，并非 30 分钟。30 分钟限制为错误表述。",
+        "source": "https://github.com/abus-aikorea/voice-pro",
+        "fix": "删除“WebUI 有 30 分钟试用限制”说法；改为“开源后完全免费、无时长限制；官方 ABUS 商业完整版需购买”。"
+      },
+      {
+        "field": "features",
+        "claim": "高精度转录（Faster-Whisper/WhisperX）",
+        "truth": "当前最新 v4.0.0 已移除 WhisperX，转录支持 Faster-Whisper 与 Whisper-Timestamped（旧配置可回退 faster-whisper）。WhisperX 为过时信息。",
+        "source": "https://github.com/abus-aikorea/voice-pro",
+        "fix": "将转录支持改为 Faster-Whisper / Whisper-Timestamped，去掉 WhisperX。"
+      }
+    ],
+    "sources": [
+      "https://github.com/abus-aikorea/voice-pro"
+    ]
+  },
+  {
+    "slug": "ctruh-studio",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://www.ctruh.com",
+      "https://hunted.space/dashboard/ctruh-studio"
+    ]
+  },
+  {
+    "slug": "atlaso",
+    "verdict": "NEEDS_REVIEW",
+    "issues": [
+      {
+        "field": "positioning/content",
+        "claim": "2026 年 8 月 4 日 Product Hunt 当日 #3",
+        "truth": "Product Hunt 官方追踪（hunted.space）显示 Atlaso 于 2026-08-04 上线，获 250 票、23 评论，位列当日第 4（#4）；但本批原始素材来源 neodrop 记为“第 3 个产品”。排名为动态数据，二者存在冲突，需以最终榜单或人工复核确认。其余事实（MCP 共享记忆、Free 1 设备 1 工具、Pro $10/月、Build $25/月、约 1 分钟接入无需 API key、官方站 atlaso.ai）均核实无误。",
+        "source": "https://www.hunted.space/product/atlaso",
+        "fix": "复核 Product Hunt 当日最终名次：若以 hunted.space 为准则改为 #4；或注明“当日 #3/#4（排名波动）”。"
+      }
+    ],
+    "sources": [
+      "https://atlaso.ai",
+      "https://www.hunted.space/product/atlaso",
+      "https://www.toolworthy.ai/tool/atlaso",
+      "https://neodrop.ai/zh-cn/post/01cS6UrTar-"
+    ]
+  },
+  {
+    "slug": "pdf-inspector",
+    "verdict": "PASS",
+    "issues": [],
+    "sources": [
+      "https://github.com/firecrawl/pdf-inspector",
+      "https://blog.csdn.net/weixin_45635831/article/details/163498139"
+    ]
+  }
+]

@@ -402,7 +402,9 @@ if git diff --cached --quiet; then
 else
     TOOL_COUNT=$(find data/tools -name '*.json' 2>/dev/null | wc -l)
     ARTICLE_COUNT=$(find data/articles -name '*.json' 2>/dev/null | wc -l)
-    git commit -m "deploy: 全站构建+排名数据更新 (${TOOL_COUNT} tools + ${ARTICLE_COUNT} articles)" || true
+    # 2026-08-24 G5 修复：commit 失败必须暴露（去掉 || true），set -e 会中止部署并报错，
+    # 不再把"commit 失败"伪装成"部署成功"。git add 仍保留 || true（偶发文件锁失败不致命，下次重试）。
+    git commit -m "deploy: 全站构建+排名数据更新 (${TOOL_COUNT} tools + ${ARTICLE_COUNT} articles)"
     git push origin main 2>&1 || echo "  ⚠️ Git push failed (network may be down)"
     echo "  ✅ Git 已推送"
 fi

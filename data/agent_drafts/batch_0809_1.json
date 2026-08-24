@@ -1,0 +1,436 @@
+[
+  {
+    "name": "Hermes Agent",
+    "slug": "hermes-agent",
+    "positioning": "Hermes Agent是什么？NousResearch开源可自我进化的AI智能体框架好用吗",
+    "auto_positioning": false,
+    "emoji": "🦁",
+    "color": "#8B5CF6",
+    "description": "Hermes Agent 是开源研究机构 NousResearch 推出的智能体框架，主打「会和你一起成长的 AI Agent」，通过内置学习循环把经验沉淀为可复用技能并跨会话持久化记忆。它支持 200+ 大模型和 40+ 工具、六种执行后端，可自托管在本地或按需唤醒的 Serverless 环境，几乎无厂商锁定。",
+    "category": "AI智能体",
+    "tags": [
+      {"text": "免费可用", "type": "free"},
+      {"text": "开源框架"},
+      {"text": "自进化"},
+      {"text": "持久记忆"}
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "暂无数据",
+    "badge": {"type": "hot", "text": "HOT"},
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "price": "免费开源，自托管运行（仅在调用模型 API 或云资源时产生费用）",
+    "platform": "Linux/macOS/Windows（CLI/桌面端/Web，支持 VPS、Modal、Daytona 自托管）",
+    "pros": [
+      "内置学习循环，任务后自动沉淀并持续优化可复用技能",
+      "跨会话持久化记忆与人格建模，用得越久越懂你",
+      "开源无厂商锁定，支持 200+ 模型与 40+ 工具",
+      "部署灵活，可本地或 Serverless 按需唤醒、几乎零成本待机",
+      "提供从 OpenClaw 等框架迁移的命令，导入记忆与技能"
+    ],
+    "cons": [
+      "偏开发者向，普通用户上手存在门槛",
+      "生态与文档仍在快速演进，成熟度有待沉淀",
+      "实际能力依赖外部模型 API，需自行配置密钥"
+    ],
+    "features": [
+      "自我进化技能：完成任务后自动生成结构化技能并持续打磨",
+      "跨会话记忆：长期记忆与人格画像持久化，上下文不丢失",
+      "多后端执行：本地 CLI、桌面端、Web 与 VPS/Serverless 部署",
+      "广泛模型兼容：200+ LLM、40+ 工具开箱即接",
+      "技能共享：技能可发布到 agentskills.io 社区复用",
+      "框架迁移：支持从 OpenClaw 等导入记忆、技能与配置"
+    ],
+    "related": ["claude-agent-sdk", "autogpt", "langchain"],
+    "content": "## Hermes Agent是什么？\n\nHermes Agent 是开源研究机构 NousResearch 推出的智能体框架，主打一个理念——「会和你一起成长的 AI Agent」。和很多用完就忘的助手不同，它内置了一套自我学习循环：每次完成复杂任务后会自动沉淀出可复用的「技能」，并在后续使用中持续打磨这些技能；同时把对话、记忆和人格画像跨会话持久化，用得越久越懂你。它支持 200+ 大模型和 40+ 工具、六种执行后端，可以跑在你自己的笔记本、Linux VPS，或 Modal/Daytona 这类按需唤醒的 Serverless 环境里，几乎零成本待机。\n\n## 核心功能\n\n1. 自我进化技能：任务完成后自动写结构化技能，存到 ~/.hermes/skills/，可共享到 agentskills.io，越用越聪明。\n2. 跨会话记忆：长期记忆加人格建模，换设备、关电脑再回来，上下文也不丢。\n3. 多后端执行：本地 CLI、桌面端、Web 界面，以及 Linux VPS、Modal、Daytona 部署都支持。\n4. 广泛模型与工具：200+ LLM、40+ 工具，几乎能接任何主流和开源模型。\n5. 迁移友好：提供从 OpenClaw 等框架迁移的命令，一键导入记忆、技能与 API 密钥。\n\n## 版本/套餐对比\n\nHermes Agent 采用开源免费模式，没有订阅墙。你完全可以自己部署运行，只在调用模型 API 或云资源时产生对应费用。官方开放了社区版与文档站，目前未提供商业定价档位，适合想把它当作长期资产养成的用户。\n\n## 值不值得用？\n\n优点：它真正解决了「Agent 不学习」这个核心痛点，持久化记忆加上技能的复利效应非常明显；开源、无厂商锁定；部署方式灵活。缺点：偏开发者向，上手有一定门槛；生态和文档成熟度仍在快速演进；实际能力依赖外部模型 API。结论：如果你追求的是会随使用变强的长期 Agent，它值得投入时间试一试。\n\n## 使用建议\n\n1. 先用官方 Quickstart 起一个本地 Agent，把技能生成链路跑通。\n2. 把常用工作流沉淀成技能，让它在后续调用中持续复利。\n3. 部署到便宜的 VPS 或 Serverless，让 Agent 在后台待命、按需唤醒。\n4. 订阅 agentskills.io 社区技能，少造轮子、多复用。\n\n## 适合谁用？\n\n推荐：追求持久记忆与自进化的开发者、研究人员和重度用户。\n可考虑：想把 Agent 当作个人助理长期养成的进阶玩家。\n不推荐：只想要开箱即用体验的普通消费者，以及不愿碰命令行的用户。",
+    "published": false,
+    "faq": [
+      {"question": "Hermes Agent 是免费的吗？", "answer": "是的，Hermes Agent 是开源项目，可免费自托管运行，仅在你调用模型 API 或使用云资源时产生相应费用，没有订阅墙。"},
+      {"question": "Hermes Agent 支持哪些模型？", "answer": "据官方资料，它支持 200+ 大语言模型，覆盖主流闭源与开源模型，并内置 40+ 工具，兼容性强。"},
+      {"question": "它的「自我进化」是怎么实现的？", "answer": "通过内置学习循环：完成任务后自动沉淀结构化技能并存储，后续使用中持续打磨，同时把记忆与人格画像跨会话持久化。"},
+      {"question": "可以从其他框架迁移过来吗？", "answer": "可以，官方提供迁移命令（如从 OpenClaw 迁移），能够导入历史记忆、技能与 API 密钥，降低切换成本。"}
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Hermes Agent", "Hermes Agent怎么样", "Hermes Agent免费版", "Hermes Agent使用教程", "Hermes Agent和哪个好"],
+    "source_urls": [
+      "https://github.com/NousResearch/hermes-agent",
+      "https://aibars.net/en/library/open-source-ai/details/831545486166069248"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Microsoft Agent Framework",
+    "slug": "microsoft-agent-framework",
+    "positioning": "Microsoft Agent Framework是什么？微软统一Agent框架好用吗",
+    "auto_positioning": false,
+    "emoji": "🧩",
+    "color": "#0078D4",
+    "description": "Microsoft Agent Framework 是微软官方的开源 Agent 编排框架，于 2026 年 4 月发布 1.0 版本，合并了 AutoGen 的实验性多智能体编排与 Semantic Kernel 的企业级能力。它面向 .NET 与 Python，提供企业级多智能体编排、连接器、工作流、记忆与 A2A/MCP 互操作，是微软技术栈构建生产级 Agent 的标准选择。",
+    "category": "AI智能体",
+    "tags": [
+      {"text": "免费可用", "type": "free"},
+      {"text": "微软官方"},
+      {"text": "企业级"},
+      {"text": "多智能体"}
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "暂无数据",
+    "badge": {"type": "recommend", "text": "推荐"},
+    "url": "https://cloud.microsoft.com/agent-framework",
+    "price": "开源免费（SDK 免费，部署到 Azure AI Foundry 等按云资源用量计费）",
+    "platform": ".NET / Python（跨平台）",
+    "pros": [
+      "统一 AutoGen 与 Semantic Kernel，实验性与企业级能力兼得",
+      "企业级多智能体编排：顺序、并发、handoff、group chat、Magentic-One",
+      "内置中间件钩子、可插拔记忆、图式工作流与持久化状态",
+      "原生支持 A2A 与 MCP，跨运行时与跨厂商互操作",
+      "多模型连接器：Azure OpenAI、OpenAI、Claude、Bedrock、Gemini、Ollama"
+    ],
+    "cons": [
+      "体系庞大，初学者需要时间理解编排与工作流概念",
+      "深度能力（治理、观测）与 Azure 生态绑定较深",
+      "对非微软技术栈团队并不算最轻量的选择"
+    ],
+    "features": [
+      "单 Agent 与服务连接器：跨 .NET/Python 的稳定核心抽象",
+      "中间件钩子：在执行的每个阶段拦截、转换与扩展 Agent 行为",
+      "Agent 记忆与上下文：对话历史、键值状态、向量检索可插拔",
+      "Agent 工作流：图式引擎组合 Agent 与函数，支持检查点与续跑",
+      "多智能体编排：顺序/并发/handoff/group chat/Magentic-One",
+      "声明式 YAML：用版本化文件定义 Agent、工具、记忆与编排拓扑"
+    ],
+    "related": ["langchain", "claude-agent-sdk", "google-adk"],
+    "content": "## Microsoft Agent Framework是什么？\n\nMicrosoft Agent Framework 是微软官方的开源 Agent SDK 与运行时，2026 年 4 月发布 1.0 稳定版，覆盖 .NET 与 Python。它的诞生源于一个很实在的诉求：开发者既想要 AutoGen 那种前沿的多智能体编排实验能力，又想要 Semantic Kernel 那种稳定、可观测、可治理的企业级底座。微软干脆把两者合并成一套统一框架，让团队不用在「能创新」和「能上线」之间二选一。\n\n## 核心功能\n\n1. 单 Agent 与服务连接器：核心 Agent 抽象在 .NET 和 Python 两端都已生产就绪，并自带 Foundry、Azure OpenAI、OpenAI、Anthropic Claude、Amazon Bedrock、Google Gemini、Ollama 等连接器。\n2. 中间件钩子：一条中间件管道，让你在执行的每个阶段拦截、转换和扩展行为——内容安全过滤、日志、合规策略都能挂上去，而不用改 Agent 的提示词。\n3. Agent 记忆与上下文：可插拔的记忆架构，支持对话历史、持久化键值状态与向量检索，后端可选 Foundry Agent Service、Mem0、Redis、Neo4j 或自定义存储。\n4. Agent 工作流：图式工作流引擎，把 Agent 与函数编排成确定、可重复的过程，支持分支、并行、检查点与中断恢复。\n5. 多智能体编排：内置源自微软研究院与 AutoGen 的模式——顺序、并发、handoff、group chat、Magentic-One，全部支持流式、人机协作审批与暂停续跑。\n\n## 版本/套餐对比\n\n框架本身开源免费，提供稳定的 1.0 API 与长期支持承诺。部署到 Azure AI Foundry、Azure AI Agent Service 等托管环境时会按云资源用量计费，本地开发与调试不收费。官方未提供分层商业定价，更多是与 Azure 订阅体系挂钩。\n\n## 值不值得用？\n\n优点：它把企业真正关心的可观测、合规、安全、长程持久化都做进了框架层面；A2A 与 MCP 的开放标准让它天然跨厂商、可移植；既能本地试验也能无缝上云。缺点：概念体系相对庞大，初学者需要消化编排与工作流；深度治理能力与 Azure 绑定较深；对非微软栈团队不算最轻量。结论：如果你的团队在 .NET/Python 上做生产级多智能体，它是目前最省心的一站式答案。\n\n## 使用建议\n\n1. 用几行代码先建一个单 Agent，跑通工具调用与多轮对话。\n2. 把合规、日志、内容安全用中间件钩子统一挂载，别散落在提示词里。\n3. 复杂任务用图式工作流显式控制执行路径，长任务记得开检查点。\n4. 多 Agent 协作优先用官方编排模式，再按需接 A2A/MCP 打通外部系统。\n\n## 适合谁用？\n\n推荐：在微软技术栈（.NET/Python、Azure）上构建生产级多智能体的团队。\n可考虑：需要统一治理、观测与合规的企业 AI 平台负责人。\n不推荐：只想快速做个轻量原型、不愿被 Azure 生态绑定的个人开发者。",
+    "published": false,
+    "faq": [
+      {"question": "Microsoft Agent Framework 和 Semantic Kernel、AutoGen 是什么关系？", "answer": "它是两者的统一继承者：合并了 AutoGen 的代理抽象与多智能体实验能力，以及 Semantic Kernel 的企业级功能（状态管理、类型安全、中间件、遥测），并新增了图式工作流。"},
+      {"question": "支持哪些模型和平台？", "answer": "框架同时提供 .NET 与 Python SDK，连接器覆盖 Azure OpenAI、OpenAI、Anthropic Claude、Amazon Bedrock、Google Gemini、Ollama 等，模型选择相对开放。"},
+      {"question": "它是免费的吗？", "answer": "框架本身开源免费，本地开发与调试不收费；部署到 Azure AI Foundry 等托管服务时按云资源用量计费。"},
+      {"question": "和 LangChain 这类框架比有什么不同？", "answer": "更强调企业就绪：内置可观测、合规钩子、安全、长程持久化与跨运行时互操作（A2A/MCP），适合从原型直接走到生产部署。"}
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Microsoft Agent Framework", "Microsoft Agent Framework怎么样", "Microsoft Agent Framework免费版", "Microsoft Agent Framework使用教程", "Microsoft Agent Framework和哪个好"],
+    "source_urls": [
+      "https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0",
+      "https://learn.microsoft.com/zh-cn/agent-framework/overview/"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Google ADK",
+    "slug": "google-adk",
+    "positioning": "Google ADK是什么？谷歌Agent开发套件好用吗",
+    "auto_positioning": false,
+    "emoji": "🛠️",
+    "color": "#4285F4",
+    "description": "Google ADK（Agent Development Kit）是 Google 官方的智能体开发框架，代码优先、与 Gemini 及 Vertex AI 深度集成，但模型无关、部署无关。它支持 Python、TypeScript、Go、Java 多语言，提供灵活编排、多智能体架构、丰富工具生态与内置评估，是 Google Cloud 生态构建 Agent 的推荐起点。",
+    "category": "AI智能体",
+    "tags": [
+      {"text": "免费可用", "type": "free"},
+      {"text": "谷歌官方"},
+      {"text": "多语言"},
+      {"text": "Gemini"}
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "暂无数据",
+    "badge": {"type": "recommend", "text": "推荐"},
+    "url": "https://cloud.google.com/adk",
+    "price": "开源免费（调用 Gemini API 或使用 Vertex AI/Cloud Run 等按用量计费）",
+    "platform": "Python / TypeScript / Go / Java（跨平台）",
+    "pros": [
+      "代码优先，让智能体开发更接近常规软件开发",
+      "与 Gemini、Vertex AI 深度集成，同时模型无关、部署无关",
+      "多语言支持：Python、TypeScript、Go、Java",
+      "灵活编排：工作流 Agent（顺序/并行/循环）与 LLM 动态路由",
+      "内置评估，可对最终回答质量与执行轨迹系统打分"
+    ],
+    "cons": [
+      "最佳实践与示例仍以 Gemini/Google 生态为主",
+      "功能迭代快，部分语言版本的 API 仍在演进",
+      "对完全脱离 Google Cloud 的团队，部署链路不够轻"
+    ],
+    "features": [
+      "灵活编排：Workflow Agent 定义可预测流水线，或 LLM 驱动动态路由",
+      "多智能体架构：层次化组合专门 Agent，实现复杂协调与委派",
+      "丰富工具生态：预置搜索/代码执行、自定义函数、第三方库、其他 Agent 作工具",
+      "随时可部署：本地、Vertex AI Agent Engine、Cloud Run、Docker 皆可",
+      "内置评估：按测试用例评估回答质量与逐步执行轨迹",
+      "安全可靠的 Agent 模式：内置安全与最佳实践指导"
+    ],
+    "related": ["langchain", "claude-agent-sdk", "microsoft-agent-framework"],
+    "content": "## Google ADK是什么？\n\nGoogle ADK（Agent Development Kit，智能体开发套件）是 Google 官方推出的开源框架，目标是让构建和部署 AI 智能体「更像写软件」。它针对 Gemini 和 Google 生态做了优化，但官方明确强调它是模型无关、部署无关的，并且设计成能和其他框架兼容。换句话说，ADK 既照顾了 Google Cloud 用户，也尽量不把开发者锁死在某一家模型或某一种部署形态上。\n\n## 核心功能\n\n1. 灵活编排：你可以用 Workflow Agent（Sequential、Parallel、Loop）定义可预测的流水线，也可以用 LLM 驱动的 LlmAgent 转移做自适应动态路由，简单任务和复杂工作流都能覆盖。\n2. 多智能体架构：通过在层次结构里组合多个专门的 Agent，构建模块化、可扩展的应用，实现复杂的协调与委派，这点对真实业务很关键。\n3. 丰富工具生态：预置搜索、代码执行等工具，支持自定义函数、第三方库，甚至可以把另一个 Agent 当作工具来调用。\n4. 随时可部署：本地能跑，也能用 Vertex AI Agent Engine 扩缩容，或集成到 Cloud Run、Docker 自有基础设施，自由度很高。\n5. 内置评估：可以针对预定义测试用例，同时评估最终回答质量和逐步执行轨迹，让 Agent 表现变得可度量。\n\n## 版本/套餐对比\n\nADK 是开源框架，本身免费使用。实际成本来自模型调用与云部署：用 Gemini API 按 token 计费，部署到 Vertex AI Agent Engine、Cloud Run 等按云资源用量计费。官方未提供框架层面的商业档位，主要和 Google Cloud 订阅体系挂钩。\n\n## 值不值得用？\n\n优点：代码优先的开发体验很对工程师胃口；多语言（Python、TypeScript、Go、Java）覆盖广；与 Gemini/Vertex AI 的深度集成让你上手即用；内置评估把「Agent 好不好」变成可量化问题。缺点：最佳实践和示例仍然偏向 Gemini/Google 生态；各语言版本 API 还在快速演进；对完全不想碰 Google Cloud 的团队来说部署链路不够轻。结论：如果你本来就在 Google Cloud 上做 Agent，ADK 是顺理成章的推荐起点。\n\n## 使用建议\n\n1. 用 adk create 起一个项目，再用 adk web 打开本地调试界面，先把单 Agent 跑通。\n2. 复杂任务优先用 Workflow Agent 把路径写清楚，再考虑 LLM 动态路由。\n3. 多 Agent 协作时，把专门的子 Agent 组合成层次结构，明确谁负责委派。\n4. 上线前跑一遍内置评估，用测试用例盯住回答质量与执行轨迹。\n\n## 适合谁用？\n\n推荐：已经在 Google Cloud / Vertex AI 上构建 Agent 的团队与开发者。\n可考虑：想用多语言（尤其 Go/Java）写 Agent、又不想被单一厂商绑死的工程师。\n不推荐：只想在本地跑个轻量 Agent、完全不想接触云部署的个人用户。",
+    "published": false,
+    "faq": [
+      {"question": "Google ADK 支持哪些编程语言？", "answer": "官方支持 Python、TypeScript、Go 和 Java，覆盖从脚本到企业级服务的主要语言栈。"},
+      {"question": "ADK 只能用 Gemini 吗？", "answer": "不是。ADK 虽然针对 Gemini 与 Google 生态做了优化，但设计上是模型无关、部署无关的，也强调与其他框架兼容。"},
+      {"question": "Google ADK 是免费的吗？", "answer": "框架本身开源免费；成本来自 Gemini API 的 token 计费，以及部署到 Vertex AI、Cloud Run 等云资源的用量。"},
+      {"question": "ADK 和 Google Genkit 有什么区别？", "answer": "ADK 更聚焦智能体（Agent）的开发、编排与部署，Genkit 更偏向全栈 AI 应用（模型路由、结构化输出、RAG、可观测性），两者可互补使用。"}
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Google ADK", "Google ADK怎么样", "Google ADK免费版", "Google ADK使用教程", "Google ADK和哪个好"],
+    "source_urls": [
+      "https://adk.dev/get-started/python/",
+      "https://clouddocs-dot-devsite-v2-prod.appspot.com/gemini-enterprise-agent-platform/build/adk"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Google Genkit",
+    "slug": "google-genkit",
+    "positioning": "Google Genkit是什么？谷歌全栈AI应用开发框架好用吗",
+    "auto_positioning": false,
+    "emoji": "🔥",
+    "color": "#FFCA28",
+    "description": "Google Genkit 是 Google（Firebase）开源的全栈 AI 应用开发框架，提供统一的模型接口、结构化输出、工具调用、RAG 与可观测性，让开发者用最少胶水代码把 Gemini 等模型接入生产应用。它支持 JavaScript/TypeScript、Go、Python（Beta）与 Dart（Preview），并内置开发者 UI、CLI 与生产监控。",
+    "category": "AI智能体",
+    "tags": [
+      {"text": "免费可用", "type": "free"},
+      {"text": "谷歌开源"},
+      {"text": "全栈"},
+      {"text": "TypeScript"}
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "暂无数据",
+    "badge": {"type": "recommend", "text": "推荐"},
+    "url": "https://genkit.dev",
+    "price": "开源免费（Apache 2.0，模型调用与 Cloud 部署按用量计费）",
+    "platform": "Node.js / Go / Python / Dart（跨平台）",
+    "pros": [
+      "统一模型接口，可接入 Google、OpenAI、Anthropic、Ollama 等数百模型",
+      "简化 AI 开发：结构化输出、工具调用、多模态、上下文生成一体",
+      "全栈友好：与 Next.js、React、Angular、iOS、Android 无缝集成",
+      "内置开发者 UI 与 CLI，可对比模型、调试追踪、快速迭代",
+      "生产监控：请求量、延迟、错误率与可观测性指标一应俱全"
+    ],
+    "cons": [
+      "定位偏应用开发，重 Agent 编排时不如 ADK 专精",
+      "Python 仍为 Beta、Dart 仅 Preview，语言成熟度不一",
+      "生态以 Google / Firebase 服务集成最顺滑"
+    ],
+    "features": [
+      "广模型支持：统一接口接入 Google、OpenAI、Anthropic、Ollama 等",
+      "简化 AI 开发：流式 API 做结构化输出、Agent 工具调用、多模态",
+      "Web 与移动就绪：与 Next.js、React、Angular、iOS、Android 集成",
+      "跨语言支持：JS/TS、Go、Python（Beta）、Dart（Preview）一致 API",
+      "开发者工具：本地 CLI 与 Developer UI 测试、对比、追踪",
+      "生产监控：用可观测性面板跟踪性能、请求量、延迟与错误率"
+    ],
+    "related": ["langchain", "google-adk", "mastra"],
+    "content": "## Google Genkit是什么？\n\nGoogle Genkit 是 Google（通过 Firebase）开源的全栈 AI 应用开发框架，目标很朴素：让开发者用最少的胶水代码，把 Gemini 等大模型接进真实生产应用。它不止能做聊天机器人，也能做自动化、推荐、RAG 检索这类五花八门的功能。和那些只管「调模型」的库不同，Genkit 想的是端到端——从模型接入、结构化输出、工具调用，一直到部署后的监控，都给你包了起来。\n\n## 核心功能\n\n1. 广模型支持：用一套统一接口就能接入 Google、OpenAI、Anthropic、Ollama 等数百个模型，挑最适合你场景的用，不用为每个厂商改一遍代码。\n2. 简化 AI 开发：流式 API 覆盖结构化输出、Agent 式工具调用、上下文感知生成、多模态输入与输出，把复杂细节藏进框架里。\n3. Web 与移动就绪：和 Next.js、React、Angular、iOS、Android 通过专用客户端 SDK 与 helper 无缝衔接，前端团队上手快。\n4. 跨语言支持：提供 JavaScript/TypeScript、Go、Python（Beta）、Dart（Preview），API 与能力在各语言间尽量保持一致。\n5. 开发者工具：本地 CLI 加 Developer UI，可以针对单个输入或数据集测试流程、对比不同模型输出、用执行轨迹调试，迭代很快。\n6. 生产监控：用专门的可观测性面板跟踪模型性能、请求量、延迟、错误率，让上线的 AI 功能有迹可循。\n\n## 版本/套餐对比\n\nGenkit 本身采用 Apache 2.0 开源协议，免费使用，并可以接入大量带免费额度的服务起步。成本主要来自模型 API 调用与 Cloud 部署（如 Cloud Functions for Firebase、Cloud Run）。官方未给出框架层面的商业定价，与 Google Cloud 体系挂钩。\n\n## 值不值得用？\n\n优点：对全栈和前端开发者非常友好，统一模型接口省去大量对接成本；开发者 UI 与 CLI 的调试体验是真心好用；生产监控让它不只是玩具。缺点：它的重心在「AI 应用」而非「重 Agent 编排」，要搞复杂多智能体编排还是 ADK 更专精；Python 仍 Beta、Dart 仅 Preview，语言成熟度参差；与 Google/Firebase 服务集成最顺滑，脱离该生态要打折。结论：做全栈 AI 应用、尤其 Node/TS 栈的团队，Genkit 值得放进候选。\n\n## 使用建议\n\n1. 选好语言 SDK 与模型提供商，装好 Genkit CLI 与 Provider 包再初始化。\n2. 先用 Developer UI 把单个 flow 跑通、对比模型，再写业务代码。\n3. 需要检索时直接上 RAG 抽象，少自己造索引/检索轮子。\n4. 上线后用生产监控面板盯延迟与错误率，别等用户投诉才发现。\n\n## 适合谁用？\n\n推荐：Node.js/TypeScript 全栈与前端团队，想快速把模型能力落进 Web/移动应用。\n可考虑：Go/Python 服务端开发者构建生产级 AI 功能。\n不推荐：以复杂多智能体编排为核心需求、需要强 Agent 治理的团队（更建议看 ADK）。",
+    "published": false,
+    "faq": [
+      {"question": "Google Genkit 支持哪些语言？", "answer": "提供 JavaScript/TypeScript、Go、Python（Beta）与 Dart（Preview）的 SDK，API 与能力在各语言间尽量保持一致。"},
+      {"question": "Genkit 只能配合 Google 模型吗？", "answer": "不是。它用统一接口支持 Google、OpenAI、Anthropic、Ollama 等数百个模型，可自由选择最适合的提供商。"},
+      {"question": "Genkit 是免费的吗？", "answer": "框架采用 Apache 2.0 开源协议，免费使用；成本来自模型 API 调用与 Cloud 部署（如 Cloud Functions for Firebase、Cloud Run）的用量。"},
+      {"question": "Genkit 和 Google ADK 怎么选？", "answer": "Genkit 偏全栈 AI 应用（模型路由、结构化输出、RAG、可观测）；ADK 偏智能体编排与部署。做应用选 Genkit，做 Agent 选 ADK，也能互补。"}
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Google Genkit", "Google Genkit怎么样", "Google Genkit免费版", "Google Genkit使用教程", "Google Genkit和哪个好"],
+    "source_urls": [
+      "https://firebase.google.cn/docs/genkit/overview",
+      "https://github.com/firebase/genkit"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Mastra",
+    "slug": "mastra",
+    "positioning": "Mastra是什么？TypeScript优先的全栈Agent开发框架好用吗",
+    "auto_positioning": false,
+    "emoji": "⚡",
+    "color": "#6E56CF",
+    "description": "Mastra 是 TypeScript 优先的开源全栈 Agent 开发框架（Apache 2.0），提供 Agent、Workflow、Memory、RAG 与 Evals 一体化能力，并内置 OpenTelemetry 观测。它和 Vercel AI SDK 互操作良好，可一键部署到 Vercel、Cloudflare、Netlify 或独立 Node 服务，适合全栈团队在 Web 应用里直接落地智能体。",
+    "category": "AI智能体",
+    "tags": [
+      {"text": "免费可用", "type": "free"},
+      {"text": "TypeScript"},
+      {"text": "开源框架"},
+      {"text": "RAG"}
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "暂无数据",
+    "badge": {"type": "hot", "text": "HOT"},
+    "url": "https://mastra.ai",
+    "price": "开源免费（Apache 2.0，Mastra Cloud 等可选付费托管）",
+    "platform": "TypeScript / Node.js（跨平台）",
+    "pros": [
+      "TypeScript 优先，类型安全贯穿 Agent 定义与工具输入输出",
+      "一体化能力：Agent、Workflow、Memory、RAG、Evals、Observability",
+      "和 Vercel AI SDK 互操作，模型路由覆盖数十家提供商",
+      "一键部署到 Vercel、Cloudflare Workers、Netlify 或独立 Node",
+      "原生 OpenTelemetry 追踪，生产行为全可见"
+    ],
+    "cons": [
+      "仅限 TypeScript/Node 生态，非 JS 团队用不上",
+      "高层抽象在需要细粒度控制时调试不够直观",
+      "生态与文档仍在快速成长，部分能力变动较快"
+    ],
+    "features": [
+      "类型化 Agent：一行声明指令、模型、工具，IDE 编译期即捕获 schema 不匹配",
+      "Workflow 引擎：基于 XState，支持 .then/.branch/.parallel/.suspend 控制流",
+      "Memory 与 RAG：会话记忆加内置 RAG 管线，支持 pgVector/Pinecone/Qdrant/MongoDB",
+      "Evals：内置 15+ 评估项，覆盖准确性、上下文与输出质量",
+      "Observability：原生 OTel 追踪，逐步记录 Agent/Workflow 执行",
+      "一键部署：Vercel、Cloudflare、Netlify、独立 Hono/Docker 均支持"
+    ],
+    "related": ["langchain", "pydantic-ai", "google-adk"],
+    "content": "## Mastra是什么？\n\nMastra 是一个 TypeScript 优先的开源全栈 Agent 开发框架（Apache 2.0 协议），被不少开发者称为 LangChain.js 之后 TS 生态里最大的黑马。它的野心是把构建生产级 AI 应用需要的一整套能力——Agent、Workflow、Memory、RAG、Evals、可观测性——都收进一个框架里，让全栈团队不离开 TypeScript 就能把智能体直接落进 Web 应用，不用再起一套 Python 副服务。\n\n## 核心功能\n\n1. 类型化 Agent：用一份声明写清指令、模型与工具。框架全程类型安全，IDE 能在编译期就抓出工具输入和检索输出之间的 schema 不匹配，而不是等运行时才炸。\n2. Workflow 引擎：基于 XState 的图式工作流，提供 .then() 串流程、.branch() 走条件、.parallel() 并行、.suspend()/.resume() 做人工审核与续跑，长流程不怕中途挂。\n3. Memory 与 RAG：内置会话记忆与完整的 RAG 管线（切分、嵌入、向量库、检索、重排），开箱支持 pgVector、Pinecone、Qdrant、MongoDB，并带 GraphRAG 与 ReAG 等进阶玩法。\n4. Evals：内置 15+ 评估项，围绕准确性、可靠性、上下文与输出质量，让团队在每次代码变更时自动化跑评测。\n5. Observability：原生 OpenTelemetry 追踪，每一步 Agent/Workflow 执行——从查询嵌入到检索打分再到最终生成——都有完整 span 可追溯。\n6. 一键部署：Vercel、Cloudflare Workers、Netlify、独立 Hono 服务或 Docker 都能一条命令部署，你的 Agent 跑在你的应用所在之处。\n\n## 版本/套餐对比\n\nMastra 框架本身开源免费（Apache 2.0）。官方也提供 Mastra Cloud 等可选托管能力，具体付费档位未在公开资料中给出明确价格，建议以官网最新说明为准。\n\n## 值不值得用？\n\n优点：对 TS/Node 全栈团队极度友好，类型安全把很多 runtime 错误挡在编译期；一体化能力省去拼装多个库的麻烦；和 Vercel AI SDK 互操作、部署目标灵活；OTel 观测让生产可调试。缺点：只服务 TypeScript/Node 生态，非 JS 团队用不上；高层抽象在需要极细粒度控制时反而让调试不够直观；生态仍在快速成长，部分 API 变动较快。结论：如果你是全栈 TS 团队、想在应用内直接上 Agent，Mastra 是很顺手的选择。\n\n## 使用建议\n\n1. 用 Mastra Dev 本地环境先把 Agent 跑起来，可视化状态、记忆与工具调用。\n2. 需要明确流程控制的任务用 Workflow，别什么都丢给 LLM 自由发挥。\n3. RAG 场景直接接 @mastra/rag，选好向量库，上线前用 Evals 兜一遍质量。\n4. 部署目标挑和你基础设施一致的（Vercel/Cloudflare/Node），一条命令发版。\n\n## 适合谁用？\n\n推荐：TypeScript/Node 全栈团队，想在 Web 应用内直接落地智能体与 RAG。\n可考虑：已用 Vercel AI SDK、希望统一 Agent 与工作流栈的团队。\n不推荐：非 JavaScript 技术栈、或需要跨语言多运行时编排的大型异构团队。",
+    "published": false,
+    "faq": [
+      {"question": "Mastra 只能用 TypeScript 吗？", "answer": "是的，Mastra 是 TypeScript 优先的框架，面向 Node.js 生态，非 JS 团队通常不适合使用。"},
+      {"question": "Mastra 支持哪些向量数据库？", "answer": "内置 RAG 管线开箱支持 pgVector、Pinecone、Qdrant 和 MongoDB，并提供元数据过滤与重排能力。"},
+      {"question": "Mastra 是免费的吗？", "answer": "框架本身采用 Apache 2.0 开源协议，免费使用；官方也提供 Mastra Cloud 等可选托管，具体付费以官网为准。"},
+      {"question": "Mastra 和 LangChain 怎么比？", "answer": "Mastra 更聚焦 TypeScript 全栈体验与一体化（Agent/Workflow/RAG/Evals/观测），类型安全更强；LangChain 生态更宽、语言覆盖更广。"}
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Mastra", "Mastra怎么样", "Mastra免费版", "Mastra使用教程", "Mastra和哪个好"],
+    "source_urls": [
+      "https://mastra.ai/articles/rag-chatbot",
+      "https://mastra.ai/articles/rag-framework"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Pydantic AI",
+    "slug": "pydantic-ai",
+    "positioning": "Pydantic AI是什么？强类型Python Agent框架好用吗",
+    "auto_positioning": false,
+    "emoji": "🐍",
+    "color": "#E92063",
+    "description": "Pydantic AI 是由 Pydantic 作者团队维护的强类型 Python Agent 框架，1.0 版本发布时已有约 1500 万次下载。它用类型系统贯穿 Agent 的输入输出与结构化返回，模型无关，内置 Pydantic 校验、Logfire 可观测、MCP 支持与持久化执行，适合追求 schema 约束与类型安全的 Python 团队。",
+    "category": "AI智能体",
+    "tags": [
+      {"text": "免费可用", "type": "free"},
+      {"text": "Python"},
+      {"text": "类型安全"},
+      {"text": "开源框架"}
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "暂无数据",
+    "badge": {"type": "recommend", "text": "推荐"},
+    "url": "https://ai.pydantic.dev",
+    "price": "开源免费（Pydantic Logfire/Gateway 部分功能为付费 SaaS）",
+    "platform": "Python（跨平台）",
+    "pros": [
+      "类型安全贯穿内部与公开 API，把数据格式错误挡在编译与校验层",
+      "由 Pydantic 原班团队打造，结构化输出校验是看家本领",
+      "模型无关，内置路由与成本管控（Pydantic AI Gateway）",
+      "原生 Logfire 可观测，追踪、成本与调试一体化",
+      "持久化执行（Temporal/DBOS/Prefect/Restate）与 MCP 一等公民"
+    ],
+    "cons": [
+      "仅限 Python，非 Python 栈团队用不上",
+      "强类型与依赖注入对新手有一定学习曲线",
+      "部分高级能力（如 Graph 持久化、Embeddings）仍在新版本路线中"
+    ],
+    "features": [
+      "类型安全：内部与公开 API 全类型化，编码 Agent 也能受益",
+      "校验后结构化输出：依托 Pydantic 保证结构化返回的类型正确",
+      "模型路由与成本管控：Pydantic AI Gateway 单 key 接多模型",
+      "可观测性：与 Logfire 原生集成，追踪、token 成本与调试",
+      "MCP 支持：内置连接 MCP 服务器，访问文件系统/数据库/API",
+      "持久化执行：原生支持 Temporal、DBOS、Prefect、Restate 容错恢复"
+    ],
+    "related": ["langchain", "mastra", "claude-agent-sdk"],
+    "content": "## Pydantic AI是什么？\n\nPydantic AI 是由 Pydantic（那个被无数 Python 项目依赖的数据校验库）原班团队维护的 Agent 框架。它的核心卖点就一句话：用类型系统把 Agent 的输入输出和结构化返回都管起来。在你用 Pydantic 做数据校验早已习以为常的 Python 世界里，他们把同样的理念搬到了 GenAI 应用上——类型安全贯穿框架内部和公开 API，让你在把 Agent 推到用户面前之前，就把大部分数据格式错误挡在编译与校验阶段。1.0 版本发布时，项目已有约 1500 万次下载，足见势头。\n\n## 核心功能\n\n1. 类型安全：不仅是公开 API，框架内部也全程类型化。讽刺的是，编码 Agent 反而比人更吃类型安全的红利——用 Pydantic AI 时，它和你手里的 Agent 协作体验差距会更大。\n2. 校验后的结构化输出：作为 Pydantic 的亲儿子，结构化输出是看家本领，支持通过工具调用、Provider 托管结构化输出和手动提示三种方式，保证返回类型正确。\n3. 模型路由与成本管控：内置 Pydantic AI Gateway，单 key 接入多模型，做智能路由与成本治理，几乎零开销。\n4. 可观测性：和自家 Logfire 原生集成，追踪 LLM 调用、token 成本、失败调试，全部语义化 OpenTelemetry 数据，不锁死在私有标准。\n5. MCP 支持：内置连接 MCP 服务器，让 Agent 访问文件系统、数据库、API 等外部资源。\n6. 持久化执行：原生支持 Temporal、DBOS、Prefect、Restate，Agent 在 API 故障或重启时能从断点续跑，适合真实生产系统。\n\n## 版本/套餐对比\n\nPydantic AI 框架开源免费。围绕它的商业能力——Pydantic Logfire（可观测 SaaS）与 Pydantic AI Gateway（智能路由/FinOps）——部分为付费服务，具体档位以官网为准。1.0 承诺至少 6 个月 API 稳定，发布后还会为 V1 提供至少 6 个月安全修复。\n\n## 值不值得用？\n\n优点：对追求 schema 约束与类型安全的 Python 团队几乎是天作之合；100% 测试覆盖、文档示例都经单测，工程质量让人安心；依赖注入、流式、多智能体、人机协作工具审批一应俱全；Logfire 让生产可观测。缺点：仅限 Python；强类型与依赖注入对新手有门槛；部分能力（如图持久化执行、Embeddings 支持）仍在路线图中。结论：如果你用 Python 写生产级 Agent，又受够了「运行时才发现的格式错」，Pydantic AI 值得认真考虑。\n\n## 使用建议\n\n1. 用 uv add pydantic-ai 或 pip 安装，从最小 Agent 起手，先把 output_type 用 BaseModel 约束住。\n2. 接入 Logfire 做追踪与成本监控，上线前就把可观测搭好。\n3. 复杂工作流用依赖注入管理工具依赖，让 Agent 保持可测试。\n4. 长任务用持久化执行（Temporal/DBOS 等）兜底故障恢复。\n\n## 适合谁用？\n\n推荐：追求类型安全与结构化输出校验的 Python 团队与生产级项目。\n可考虑：已用 Pydantic/Logfire 技术栈、希望统一 AI 工程链路的团队。\n不推荐：非 Python 栈团队，或只想要零配置拖拽式 Agent 的用户。",
+    "published": false,
+    "faq": [
+      {"question": "Pydantic AI 是免费的吗？", "answer": "框架本身开源免费；围绕它的 Logfire（可观测）与 AI Gateway（路由/FinOps）部分为付费 SaaS，具体档位以官网为准。"},
+      {"question": "Pydantic AI 只能用 OpenAI 吗？", "answer": "不是，它是模型无关的，通过内置网关或各 Provider 包可接入 OpenAI、Anthropic、Google 等主流模型。"},
+      {"question": "它和 LangChain 有什么不同？", "answer": "Pydantic AI 更强调类型安全、Pydantic 校验与工程化质量（100% 测试覆盖、示例单测），把 Agent 当作正经软件来写，而非快速原型库。"},
+      {"question": "支持持久化执行吗？", "answer": "支持，原生集成 Temporal、DBOS、Prefect、Restate，让 Agent 在故障或重启时从断点续跑，适合生产环境。"}
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Pydantic AI", "Pydantic AI怎么样", "Pydantic AI免费版", "Pydantic AI使用教程", "Pydantic AI和哪个好"],
+    "source_urls": [
+      "https://pydantic.dev/articles/pydantic-ai-v1",
+      "https://pydantic.dev/pydantic-ai"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  },
+  {
+    "name": "Claude Agent SDK",
+    "slug": "claude-agent-sdk",
+    "positioning": "Claude Agent SDK是什么？Anthropic官方生产级Agent SDK好用吗",
+    "auto_positioning": false,
+    "emoji": "⚙️",
+    "color": "#D4A27F",
+    "description": "Claude Agent SDK 是 Anthropic 官方的生产级 Agent SDK，把驱动 Claude Code 的同一套工具、Agent 循环与上下文管理以库的形式开放，支持 Python 与 TypeScript。它内置文件读写、命令执行、网页搜索等工具，并原生支持 Hooks、子代理、MCP、权限控制、会话与技能系统，是 Anthropic 生态构建 Agent 的原生选择。",
+    "category": "AI智能体",
+    "tags": [
+      {"text": "免费可用", "type": "free"},
+      {"text": "Anthropic官方"},
+      {"text": "生产级"},
+      {"text": "MCP"}
+    ],
+    "rating": "⭐ 4.8",
+    "visits": "暂无数据",
+    "badge": {"type": "hot", "text": "HOT"},
+    "url": "https://docs.anthropic.com/en/api/agent-sdk",
+    "price": "免费使用（需 Anthropic API Key，按 API 调用计费）",
+    "platform": "Python / TypeScript（跨平台）",
+    "pros": [
+      "与 Claude Code 同源，复用经过实战打磨的 Agent 循环",
+      "内置工具齐全：读写文件、执行命令、网页搜索等",
+      "原生支持 Hooks、子代理、MCP、权限、会话与技能系统",
+      "Python 与 TypeScript 双语言，可嵌入自有进程",
+      "官方长期维护，文档与示例完善"
+    ],
+    "cons": [
+      "深度绑定 Claude 模型与 Anthropic 商业条款",
+      "生产部署需自行管理沙箱与会话基础设施",
+      "品牌使用受 Anthropic 规范限制，不能冒充 Claude Code"
+    ],
+    "features": [
+      "内置工具：读取、写入、编辑文件，运行命令，搜索网页",
+      "Hooks：在 Agent 生命周期关键节点运行自定义代码",
+      "子代理：为聚焦子任务派生专门的子 Agent",
+      "MCP：通过 Model Context Protocol 连接外部工具与数据源",
+      "权限：控制哪些工具自动运行、哪些需人工审批",
+      "会话与技能：跨交换维护上下文，可恢复或分叉，自动加载 .claude/ 配置"
+    ],
+    "related": ["langchain", "openai", "mastra"],
+    "content": "## Claude Agent SDK是什么？\n\nClaude Agent SDK 是 Anthropic 官方推出的生产级 Agent SDK。一句话概括它的定位：把驱动 Claude Code 的那套能力——工具、Agent 循环、上下文管理——打包成库，让你在自己的进程里用 Python 或 TypeScript 直接调用。换句话说，Claude Code 本身能干的事，你现在可以当作可编程组件嵌进自己的应用。官方还特意把它和 CLI、Client SDK、Managed Agents 做了区分：如果你不想自己实现工具循环，就选 Agent SDK；想跑长任务又不愿管沙箱，就去看 Managed Agents。\n\n## 核心功能\n\n1. 内置工具：开箱即用地读取、写入、编辑文件，运行命令，以及搜索网页，覆盖 Agent 最常需要的操作面。\n2. Hooks：在 Agent 生命周期的关键节点插入自定义代码，用来做日志、护栏、外部通知等，非常灵活。\n3. 子代理：针对聚焦的子任务派生专门的子 Agent，把大任务拆给更专精的角色处理。\n4. MCP：通过 Model Context Protocol 连接外部工具与数据源，文件系统、数据库、API 都能接。\n5. 权限：精细控制哪些工具自动运行、哪些必须人工审批，生产环境里这是安全底线。\n6. 会话与技能：跨多轮交换维护上下文，可随时恢复或分叉；自动从项目的 .claude/ 与 ~/.claude/ 加载技能、命令、记忆与配置，和 Claude Code 体验一致。\n\n## 版本/套餐对比\n\nSDK 本身免费使用，按调用量走 Anthropic API 计费。TypeScript SDK 把对应平台的 Claude Code 原生二进制作为可选依赖打包，无需单独安装 Claude Code。生产部署需注意：Anthropic 不允许第三方用 claude.ai 登录或转售速率限制，应使用 Quickstart 中的 API Key 认证方式。未提供分层商业定价。\n\n## 值不值得用？\n\n优点：和 Claude Code 同源，等于直接复用经过大量实战打磨的 Agent 循环，省去自己造轮子的坑；内置工具齐全、Hooks/子代理/MCP/权限/会话/技能一套全给；Python 与 TypeScript 双语言，文档与示例完善。缺点：深度绑定 Claude 模型与 Anthropic 商业条款，难以换模型；生产部署要自己管理沙箱与会话基础设施（不想管就上 Managed Agents）；品牌使用受规范限制，不能把它包装成 Claude Code。结论：如果你本就打算基于 Claude 构建单 Agent 加多子代理的应用，这是最正统、最省心的选择。\n\n## 使用建议\n\n1. 先跑官方 Quickstart，建一个能读代码、找 bug 并自动修复的最小 Agent，把链路打通。\n2. 用 Hooks 在关键节点挂日志与护栏，别等出事才补可观测。\n3. 复杂任务拆给子代理，主 Agent 负责编排与汇总。\n4. 需要外部能力时优先走 MCP，而不是在 Agent 里hardcode 调 API。\n\n## 适合谁用？\n\n推荐：想基于 Claude 构建单 Agent+多子代理应用的团队与开发者。\n可考虑：需要把 Claude 能力嵌入自有产品的工程团队（注意品牌合规）。\n不推荐：希望模型无关、随时切换多家 LLM 的团队（绑定较重）。",
+    "published": false,
+    "faq": [
+      {"question": "Claude Agent SDK 和 Claude Code 是什么关系？", "answer": "Agent SDK 把驱动 Claude Code 的同一套工具、Agent 循环与上下文管理以库的形式开放，可在 Python/TypeScript 中编程调用；Claude Code 是面向日常交互的终端界面。"},
+      {"question": "支持哪些语言？", "answer": "官方提供 Python 与 TypeScript 两种 SDK；若要用其他语言驱动，可通过 CLI 以子进程方式运行并指定 JSON 输出格式。"},
+      {"question": "Claude Agent SDK 免费吗？", "answer": "SDK 本身免费使用，但需 Anthropic API Key，按 API 调用量计费；生产环境须遵守 Anthropic 商业条款。"},
+      {"question": "和 Managed Agents 有什么区别？", "answer": "Agent SDK 在你自己的进程里跑 Agent 循环，需自行管理沙箱与会话；Managed Agents 是托管的 REST API，由 Anthropic 运行 Agent 与沙箱，适合长任务与异步场景。"}
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": ["Claude Agent SDK", "Claude Agent SDK怎么样", "Claude Agent SDK免费版", "Claude Agent SDK使用教程", "Claude Agent SDK和哪个好"],
+    "source_urls": [
+      "https://console.anthropic.com/docs/en/agent-sdk/overview",
+      "https://console.anthropic.com/docs/en/agent-sdk/quickstart"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14"
+  }
+]
