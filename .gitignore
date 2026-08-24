@@ -73,6 +73,10 @@ _list_articles.py
 /data/*.bak*
 /data/*windsurf_bak
 /data/_*
+# 单体大文件不进 git（拆分后 data/tools/ data/articles/ 目录为真相源；
+#   服务器靠 deploy.sh scp 同步单体；需要时可从目录聚合重建）
+/data/tools.json
+/data/articles.json
 /data/ai_citation_reports/
 /data/health_reports/
 /data/classify_*
@@ -106,3 +110,12 @@ favicon.ico
 
 # 项目本地数据（自动化记忆/工作日志），不进 git
 .workbuddy/
+
+# ===== 开发缓存/临时目录（Playwright profile、预览、实验副本，不进 git）=====
+/_cdp_profile/
+/_cdp_profile2/
+/_preview/
+/_cmp/
+/_empty_tmp/
+tmp/
+/-p/
