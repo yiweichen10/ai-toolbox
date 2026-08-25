@@ -695,7 +695,8 @@ def build_index_page(tools, articles):
     # 2026-08-14 修复：旧 tag_names 按 category 映射且漏了「AI工具教程」等分类，
     # 导致教程文章在 AI前沿 里被 fallback 误标成「AI资讯」，与 AI实战教程 区块的「教程」自相矛盾。
     _ct_tag = {'AI教程': '教程', 'AI评测': 'AI评测', 'AI资讯': 'AI资讯', '行业分析': 'AI洞察'}
-    for idx, a in enumerate(sorted_articles[:5]):
+    # 2026-08-25：展示最新 8 条；面板固定 340px（移动端 300px），超出滚动不压缩，两 tab 同高不闪跳
+    for idx, a in enumerate(sorted_articles[:8]):
         d = a.get('date', '')
         # 统一显示为 MM/DD
         display_date = d
