@@ -1114,7 +1114,7 @@
         }
       ],
       "total_tools": 672,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -1796,7 +1796,7 @@
         }
       ],
       "total_tools": 168,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "免费工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -2478,7 +2478,7 @@
         }
       ],
       "total_tools": 564,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "性价比评分 = 综合评分/(1+价格系数)，免费工具系数最优",
@@ -2502,6 +2502,28 @@
       "icon": "🚀",
       "ranked_tools": [
         {
+          "slug": "outsystems-ai",
+          "name": "OutSystems AI",
+          "emoji": "🤖",
+          "color": "#005B9F",
+          "score": 46.0,
+          "scores": {
+            "hot": 0.0,
+            "quality": 27.0,
+            "functionality": 9,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐4.5",
+          "price": "免费版 + 企业版定制报价",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "暂无数据",
+          "rank": 1
+        },
+        {
           "slug": "lindy-ai",
           "name": "Lindy AI",
           "emoji": "🤖",
@@ -2521,7 +2543,29 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 1
+          "rank": 2
+        },
+        {
+          "slug": "deepnote",
+          "name": "Deepnote",
+          "emoji": "📓",
+          "color": "#2B6CB0",
+          "score": 49.6,
+          "scores": {
+            "hot": 0.0,
+            "quality": 27.599999999999998,
+            "functionality": 12,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.6",
+          "price": "免费版；Team $39/编辑者/月（年付 $31.20）",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "暂无数据",
+          "rank": 3
         },
         {
           "slug": "deepseek-dsh",
@@ -2543,7 +2587,7 @@
             "text": "HOT"
           },
           "visits": "0",
-          "rank": 2
+          "rank": 4
         },
         {
           "slug": "kimi-code",
@@ -2565,7 +2609,7 @@
             "text": "HOT"
           },
           "visits": "0",
-          "rank": 3
+          "rank": 5
         },
         {
           "slug": "codex-harness",
@@ -2587,7 +2631,7 @@
             "text": "HOT"
           },
           "visits": "0",
-          "rank": 4
+          "rank": 6
         },
         {
           "slug": "krotos-studio",
@@ -2609,7 +2653,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 5
+          "rank": 7
         },
         {
           "slug": "alpaca-ai",
@@ -2631,7 +2675,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 6
+          "rank": 8
         },
         {
           "slug": "gensyn",
@@ -2650,7 +2694,7 @@
           "price": "AIGENSYN 代币总量 100 亿枚；计算与数据服务按用量付费，具体费率以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 7
+          "rank": 9
         },
         {
           "slug": "io-net",
@@ -2669,7 +2713,7 @@
           "price": "IO 代币最大供应量 8 亿枚；GPU 按小时计费，据称比 AWS 等中心化云便宜 50%–70%，具体费率以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 8
+          "rank": 10
         },
         {
           "slug": "grass",
@@ -2688,7 +2732,7 @@
           "price": "GRASS 代币总量 10 亿枚；共享带宽即可赚取代币，数据购买按量付费，具体以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 9
+          "rank": 11
         },
         {
           "slug": "sapien",
@@ -2707,7 +2751,7 @@
           "price": "SAPIEN 代币总量 10 亿枚；贡献者质押代币参与标注并获稳定币与代币奖励，企业按需购买数据集，具体以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 10
+          "rank": 12
         },
         {
           "slug": "near-ai",
@@ -2726,7 +2770,7 @@
           "price": "生态使用 NEAR 代币结算；NEAR AI Cloud 与 GPU 市场按推理用量计费，具体费率以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 11
+          "rank": 13
         },
         {
           "slug": "prime-intellect",
@@ -2745,7 +2789,7 @@
           "price": "按模块化用量计费，覆盖算力、RL 训练、沙箱、评测与推理；具体价格以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 12
+          "rank": 14
         },
         {
           "slug": "subquery",
@@ -2764,7 +2808,7 @@
           "price": "SQT 代币；AskSubQuery 提供免费额度，SQT 质押可获每日免费查询额度，超出按量付费，具体以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 13
+          "rank": 15
         },
         {
           "slug": "agentgpt",
@@ -2786,7 +2830,7 @@
             "text": "HOT"
           },
           "visits": "暂无数据",
-          "rank": 14
+          "rank": 16
         },
         {
           "slug": "snowflake-ai",
@@ -2808,7 +2852,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 15
+          "rank": 17
         },
         {
           "slug": "bittensor",
@@ -2827,7 +2871,7 @@
           "price": "开源网络（TAO代币激励，仅技术参与）",
           "badge": null,
           "visits": "N/A",
-          "rank": 16
+          "rank": 18
         },
         {
           "slug": "render-network",
@@ -2846,7 +2890,7 @@
           "price": "按量付费（RENDER代币结算）",
           "badge": null,
           "visits": "N/A",
-          "rank": 17
+          "rank": 19
         },
         {
           "slug": "akash-network",
@@ -2865,7 +2909,7 @@
           "price": "按量付费（AIToken结算，成本低于中心云）",
           "badge": null,
           "visits": "N/A",
-          "rank": 18
+          "rank": 20
         },
         {
           "slug": "elizaos",
@@ -2887,7 +2931,7 @@
             "text": "HOT"
           },
           "visits": "N/A",
-          "rank": 19
+          "rank": 21
         },
         {
           "slug": "aixbt",
@@ -2906,7 +2950,7 @@
           "price": "免费信息流 + 高级订阅",
           "badge": null,
           "visits": "N/A",
-          "rank": 20
+          "rank": 22
         },
         {
           "slug": "shopify-magic",
@@ -2928,7 +2972,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 21
+          "rank": 23
         },
         {
           "slug": "lakera",
@@ -2950,7 +2994,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 22
+          "rank": 24
         },
         {
           "slug": "feedhive",
@@ -2972,7 +3016,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 23
+          "rank": 25
         },
         {
           "slug": "botpress",
@@ -2994,7 +3038,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 24
+          "rank": 26
         },
         {
           "slug": "sigma-computing",
@@ -3016,7 +3060,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 25
+          "rank": 27
         },
         {
           "slug": "dumate",
@@ -3038,7 +3082,7 @@
             "text": "HOT"
           },
           "visits": "约116万/月",
-          "rank": 26
+          "rank": 28
         },
         {
           "slug": "dingding",
@@ -3060,7 +3104,7 @@
             "text": "HOT"
           },
           "visits": "暂无数据",
-          "rank": 27
+          "rank": 29
         },
         {
           "slug": "shimo",
@@ -3082,55 +3126,11 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 28
-        },
-        {
-          "slug": "yuque",
-          "name": "语雀",
-          "emoji": "📚",
-          "color": "#2BA471",
-          "score": 49.6,
-          "scores": {
-            "hot": 0.0,
-            "quality": 27.599999999999998,
-            "functionality": 12,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.6",
-          "price": "免费版可用；会员/高级套餐以官网最新公布为准",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "暂无数据",
-          "rank": 29
-        },
-        {
-          "slug": "google-translate",
-          "name": "Google 翻译",
-          "emoji": "🌐",
-          "color": "#4285F4",
-          "score": 50.8,
-          "scores": {
-            "hot": 0.0,
-            "quality": 28.799999999999997,
-            "functionality": 12,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.8",
-          "price": "免费",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "暂无数据",
           "rank": 30
         }
       ],
       "total_tools": 30,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "按收录时间和近期关注度排序",
@@ -3812,7 +3812,7 @@
         }
       ],
       "total_tools": 44,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI对话工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -4315,7 +4315,7 @@
         }
       ],
       "total_tools": 22,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI写作工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -4997,7 +4997,7 @@
         }
       ],
       "total_tools": 36,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI绘画工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -5682,7 +5682,7 @@
         }
       ],
       "total_tools": 62,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI编程工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -6367,7 +6367,7 @@
         }
       ],
       "total_tools": 45,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI视频工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -7046,7 +7046,7 @@
         }
       ],
       "total_tools": 37,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI音频工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -7725,7 +7725,7 @@
         }
       ],
       "total_tools": 45,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI办公工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -8410,7 +8410,7 @@
         }
       ],
       "total_tools": 37,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI设计工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -8963,7 +8963,7 @@
         }
       ],
       "total_tools": 24,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI搜索工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -9164,7 +9164,7 @@
         }
       ],
       "total_tools": 8,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI翻译工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -9629,7 +9629,7 @@
         }
       ],
       "total_tools": 20,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI自动化工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -10311,7 +10311,7 @@
         }
       ],
       "total_tools": 40,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI效率工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -10996,7 +10996,7 @@
         }
       ],
       "total_tools": 52,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI智能体工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -11681,7 +11681,7 @@
         }
       ],
       "total_tools": 68,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI开发工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -12363,7 +12363,7 @@
         }
       ],
       "total_tools": 42,
-      "last_updated": "2026-08-24 09:12",
+      "last_updated": "2026-08-25 11:26",
       "content": null,
       "methodology": {
         "scoring": "AI行业应用工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -12373,7 +12373,7 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-08-24T09:12:50.948066",
+    "generated_at": "2026-08-25T11:26:53.402332",
     "total_tools": 672,
     "update_frequency": "per-build",
     "methodology": {
