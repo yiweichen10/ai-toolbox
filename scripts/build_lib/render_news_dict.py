@@ -197,9 +197,9 @@ def build_news_page(all_tools=None):
 
     index_html = f'''<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI快讯 - {today} 精选 | AI行业每日动态 - AI工具宝箱</title>
-<meta name="description" content="{escape_html(_ns)}——AI工具宝箱{today}精选{len(today_news)}条AI快讯，覆盖大模型发布、AI产品更新、融资动态与行业政策，每条附官方来源可溯源并提炼要点，帮你高效掌握AI行业动态。">
-<meta name="keywords" content="AI快讯,AI新闻,AI日报,AI行业动态,{today}">
+<title>AI动态 - {today} 精选 | AI行业每日动态 - AI工具宝箱</title>
+<meta name="description" content="{escape_html(_ns)}——AI工具宝箱{today}精选{len(today_news)}条AI动态，覆盖大模型发布、AI产品更新、融资动态与行业政策，每条附官方来源可溯源并提炼要点，帮你高效掌握AI行业动态。">
+<meta name="keywords" content="AI动态,AI日报,AI行业动态,{today}">
 <link rel="canonical" href="{SITE}/news/"><style>{build.CRITICAL_CSS}</style>
 <link rel="preload" href="/css/style.min.css?v={build.CSS_VERSION}" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/css/style.min.css?v={build.CSS_VERSION}"></noscript><style>{SHARE_CSS}</style>
@@ -208,13 +208,13 @@ def build_news_page(all_tools=None):
 </head>
 <body data-page-type="news">
 {HEADER}
-<nav class="breadcrumb news-index"><a href="/">首页</a> &raquo; <span>AI快讯</span></nav>
+<nav class="breadcrumb news-index"><a href="/">首页</a> &raquo; <span>AI动态</span></nav>
 <main class="container news-index">
 <div class="news-header"><div class="news-header-top">
-<div><h1 class="news-page-title">AI快讯</h1><p class="news-page-date">{today} 更新 · 共{len(dates)}期 · 本页最近{len(index_dates)}天{_total_shown}条</p></div>
+<div><h1 class="news-page-title">AI动态</h1><p class="news-page-date">{today} 更新 · 共{len(dates)}期 · 本页最近{len(index_dates)}天{_total_shown}条</p></div>
 <div class="news-share"><label>分享：</label>
 <button class="news-share-btn" onclick="copyLink()">微信</button>
-<a class="news-share-btn" href="https://service.weibo.com/share/share.php?url={url_quote(SITE+'/news/')}&title={url_quote('AI快讯 - '+today+' 精选')}" target="_blank" rel="noopener">微博</a>
+<a class="news-share-btn" href="https://service.weibo.com/share/share.php?url={url_quote(SITE+'/news/')}&title={url_quote('AI动态 - '+today+' 精选')}" target="_blank" rel="noopener">微博</a>
 <a class="news-share-btn" href="/rss.xml" target="_blank" rel="noopener">RSS</a>
 </div></div>
 <div class="news-filter-bar">{pills}</div></div>
@@ -250,13 +250,13 @@ def build_news_page(all_tools=None):
         idx = dates.index(d)
         prev = f'<a href="/news/{dates[idx+1]}/" class="news-nav-btn">← {dates[idx+1]}</a>' if idx < len(dates)-1 else ''
         nxt = f'<a href="/news/{dates[idx-1]}/" class="news-nav-btn">{dates[idx-1]} →</a>' if idx > 0 else ''
-        title_d = f'{d} AI快讯 · AI行业每日动态 - AI工具宝箱'
+        title_d = f'{d} AI动态 · AI行业每日动态 - AI工具宝箱'
 
         daily_html = f'''<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title_d}</title>
-<meta name="description" content="{escape_html(_ns)}——AI工具宝箱{d}精选{len(items)}条AI快讯，覆盖大模型发布、AI产品更新、融资动态与行业政策，每条附官方来源可溯源并提炼要点，帮你高效掌握AI行业动态。">
-<meta name="keywords" content="AI快讯,AI新闻,{d}">
+<meta name="description" content="{escape_html(_ns)}——AI工具宝箱{d}精选{len(items)}条AI动态，覆盖大模型发布、AI产品更新、融资动态与行业政策，每条附官方来源可溯源并提炼要点，帮你高效掌握AI行业动态。">
+<meta name="keywords" content="AI动态,{d}">
 <link rel="canonical" href="{SITE}/news/{d}/"><style>{build.CRITICAL_CSS}</style>
 <link rel="preload" href="/css/style.min.css?v={build.CSS_VERSION}" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/css/style.min.css?v={build.CSS_VERSION}"></noscript><style>{SHARE_CSS}</style>
@@ -265,18 +265,18 @@ def build_news_page(all_tools=None):
 </head>
 <body data-page-type="news">
 {HEADER}
-<nav class="breadcrumb"><a href="/">首页</a> &raquo; <a href="/news/">AI快讯</a> &raquo; <span>{d}</span></nav>
+<nav class="breadcrumb"><a href="/">首页</a> &raquo; <a href="/news/">AI动态</a> &raquo; <span>{d}</span></nav>
 <main class="container">
 <div class="news-header"><div class="news-header-top">
-<div><h1 class="news-page-title">{d} AI快讯</h1><p class="news-page-date">{len(items)}条精选</p></div>
+<div><h1 class="news-page-title">{d} AI动态</h1><p class="news-page-date">{len(items)}条精选</p></div>
 <div class="news-share"><label>分享：</label>
 <button class="news-share-btn" onclick="copyLink()">微信</button>
-<a class="news-share-btn" href="https://service.weibo.com/share/share.php?url={url_quote(SITE+'/news/'+d+'/')}&title={url_quote(d+' AI快讯')}" target="_blank" rel="noopener">微博</a>
+<a class="news-share-btn" href="https://service.weibo.com/share/share.php?url={url_quote(SITE+'/news/'+d+'/')}&title={url_quote(d+' AI动态')}" target="_blank" rel="noopener">微博</a>
 <a class="news-share-btn" href="/rss.xml" target="_blank" rel="noopener">RSS</a>
 </div></div>
-<div class="news-nav-row">{prev} {nxt}<a href="/news/" class="news-nav-btn news-nav-home">全部快讯</a></div></div>
+<div class="news-nav-row">{prev} {nxt}<a href="/news/" class="news-nav-btn news-nav-home">全部动态</a></div></div>
 <div class="news-cards">{cards_d}</div>
-<div class="news-nav-row news-nav-bottom">{prev} {nxt}<a href="/news/" class="news-nav-btn news-nav-home">全部快讯</a></div>
+<div class="news-nav-row news-nav-bottom">{prev} {nxt}<a href="/news/" class="news-nav-btn news-nav-home">全部动态</a></div>
 </main>
 {FOOTER}
 {build.BACK_TO_TOP_BLOCK}
@@ -305,7 +305,7 @@ def build_news_page(all_tools=None):
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{cl} - 每日更新 | AI行业动态汇总 - AI工具宝箱</title>
 <meta name="description" content="{desc}">
-<meta name="keywords" content="AI快讯,{cl},{longtail}">
+<meta name="keywords" content="AI动态,{cl},{longtail}">
 <link rel="canonical" href="{SITE}/news/{cat}/"><style>{build.CRITICAL_CSS}</style>
 <link rel="preload" href="/css/style.min.css?v={build.CSS_VERSION}" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/css/style.min.css?v={build.CSS_VERSION}"></noscript><style>{SHARE_CSS}</style>
@@ -314,18 +314,18 @@ def build_news_page(all_tools=None):
 </head>
 <body data-page-type="news">
 {HEADER}
-<nav class="breadcrumb"><a href="/">首页</a> &raquo; <a href="/news/">AI快讯</a> &raquo; <span>{cl}</span></nav>
+<nav class="breadcrumb"><a href="/">首页</a> &raquo; <a href="/news/">AI动态</a> &raquo; <span>{cl}</span></nav>
 <main class="container">
 <div class="news-header"><div class="news-header-top">
 <div><h1 class="news-page-title">{cl}</h1><p class="news-page-date">{len(cat_items)}条 · 每日更新</p></div>
 <div class="news-share"><label>分享：</label>
 <button class="news-share-btn" onclick="copyLink()">微信</button>
-<a class="news-share-btn" href="https://service.weibo.com/share/share.php?url={url_quote(SITE+'/news/'+cat+'/')}&title={url_quote(cl+' - AI快讯')}" target="_blank" rel="noopener">微博</a>
+<a class="news-share-btn" href="https://service.weibo.com/share/share.php?url={url_quote(SITE+'/news/'+cat+'/')}&title={url_quote(cl+' - AI动态')}" target="_blank" rel="noopener">微博</a>
 <a class="news-share-btn" href="/rss.xml" target="_blank" rel="noopener">RSS</a>
 </div></div>
 <div class="news-catnav">{catnav}</div></div>
 <div class="news-cards">{cards_c}</div>
-<div class="news-archive"><h3 class="news-archive-title">全部快讯</h3><div class="news-archive-links"><a href="/news/" class="news-date-link">返回汇总</a></div></div>
+<div class="news-archive"><h3 class="news-archive-title">全部动态</h3><div class="news-archive-links"><a href="/news/" class="news-date-link">返回汇总</a></div></div>
 </main>
 {FOOTER}
 {build.BACK_TO_TOP_BLOCK}

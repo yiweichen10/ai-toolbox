@@ -1,90 +1,91 @@
 {
-  "name": "Skrun",
-  "slug": "skrun",
-  "positioning": "开源的 Agent 运行时，把 Claude Code 等环境里的 Agent Skill（SKILL.md）变成可被 POST 请求调用的 HTTP 端点，实现“技能即服务”。",
-  "auto_positioning": false,
-  "emoji": "🔌",
-  "color": "#0EA5E9",
-  "description": "Skrun 是一个开源的 Agent 运行时，由日内瓦开发者 Ian Bernardo（GitHub 昵称 frizull）与同事 Tarcroi 创建，2026 年 4 月 8 日以 Show HN 形式发布，仓库位于 github.com/skrun-dev/skrun，采用 MIT 许可证。它的核心洞见是：你在 Claude Code、Copilot、Codex 里攒的 Agent Skill（SKILL.md）被困在各自工具里，不能被产品用 POST 请求调用；Skrun 把这些技能变成可调用的 HTTP 端点，让“技能即服务”成为现实。",
-  "category": "AI开发",
-  "tags": [
-    "Agent技能",
-    "API",
-    "开源",
-    "MCP",
-    "多模型",
-    "自托管"
-  ],
-  "rating": "⭐ 4.3",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "pick",
-    "text": "开源 · Show HN"
-  },
-  "url": "https://github.com/skrun-dev/skrun",
-  "price": "免费开源（MIT），云部署定价未定",
-  "platform": "自托管（CLI / API，macOS / Linux / Windows）",
-  "pros": [
-    "把 SKILL.md 变成 API 极简，几分钟拿到可调用端点",
-    "多模型支持（Anthropic / OpenAI / Google / Mistral / Groq）+ 自动回退",
-    "有状态 Agent：用键值状态在多次运行间记住上下文",
-    "可接入 CLI 工具与任意 MCP server 扩展能力",
-    "MIT 开源，自托管即可，无供应商锁定"
-  ],
-  "cons": [
-    "早期项目，社区与生态规模还比较小",
-    "公开部署存在 prompt injection 等安全风险（官方沙箱方案仍在规划）",
-    "需自托管与运维，调用方要自己管契约与版本"
-  ],
-  "features": [
-    "SKILL.md → API：一条 init 加 deploy，把技能暴露成 POST /run 端点",
-    "多模型 + 自动回退：在 agent.yaml 选 provider，失败自动切下一个",
-    "有状态 Agent：用键值状态在多次运行间持久化上下文",
-    "工具调用：可捆绑自有 CLI 脚本，或接入任意 MCP server（如 Playwright）",
-    "类型化 I/O：定义结构化输入输出，保证 API 交互可靠",
-    "CLI 管理：约 12 个 CLI 命令负责初始化、测试与部署"
-  ],
-  "related": [
-    "openai",
-    "langchain",
-    "langsmith"
-  ],
-  "content": "## Skrun 是什么？\n\nSkrun 是一个开源的 Agent 运行时，由日内瓦的开发者 Ian Bernardo（GitHub 昵称 frizull）与同事 Tarcroi 创建，2026 年 4 月 8 日以 Show HN 形式发布，仓库位于 github.com/skrun-dev/skrun，采用 MIT 许可证。它的核心洞见很朴素：你在 Claude Code、Copilot、Codex 里攒了一大堆 Agent Skill（SKILL.md），但它们被困在各自的工具里，不能被产品用 POST 请求调用。Skrun 把这些技能变成可调用的 HTTP 端点，让“技能即服务”成为现实。\n\n## 核心功能\n\n1. SKILL.md → API：一条 `skrun init --from-skill` 加 `skrun deploy`，就把技能暴露成 POST /run 端点。\n2. 多模型 + 自动回退：在 agent.yaml 里选 Anthropic / OpenAI / Google / Mistral / Groq，失败自动切下一个。\n3. 有状态 Agent：用键值状态在多次运行间记住上下文。\n4. 工具调用：可捆绑自有 CLI 脚本，或接入任意 MCP server（如 Playwright）。\n5. 类型化 I/O 与 CLI：定义结构化输入输出，配套 约 12 个 CLI 命令管理部署。\n\n## 版本/套餐对比\n\nSkrun 完全免费开源（MIT），自托管即可；托管的云部署（沙箱 VM、调用方自带 key）仍在路线图中，具体商业化定价未定。\n\n## 值不值得用？\n\n如果你有一堆写好的 Skill 却只能手动触发，Skrun 是把它们“产品化”的最短路径——几分钟内就能拿到一个可被 webhook、后端或服务调用的 API。它的代价是早期项目的生态规模还小，且公开部署存在 prompt injection 等安全风险（官方也承认这点，沙箱方案在规划中）。\n\n## 使用建议\n\n先用 `npm install -g @skrun-dev/cli` 装好 CLI；把现有的 SKILL.md 通过 init 导入生成 agent.yaml；本地 `skrun dev` 起开发服务器测试；需要对外暴露时务必等沙箱方案成熟再上公网。多模型回退能缓解单点故障，但记得为跨技能的数据边界设好权限。\n\n## 适合谁用？\n\n- AI 开发者：想把自己的 Skill 变成可调用服务。\n- 初创 / 小团队：需要快速把 agent 能力拼进产品。\n- DevOps：关注 API 契约、版本与治理的部署者。",
-  "published": false,
-  "faq": [
-    {
-      "question": "Skrun 和普通 Agent 框架有什么不同？",
-      "answer": "Skrun 不重新定义 agent，而是把已有的 Agent Skill（SKILL.md）变成标准 HTTP 端点，强调“技能即服务”与可组合调用，而非再造一个编排框架。"
+    "name": "Skrun",
+    "slug": "skrun",
+    "positioning": "开源的 Agent 运行时，把 Claude Code 等环境里的 Agent Skill（SKILL.md）变成可被 POST 请求调用的 HTTP 端点，实现“技能即服务”。",
+    "auto_positioning": false,
+    "emoji": "🔌",
+    "color": "#0EA5E9",
+    "description": "Skrun 是一个开源的 Agent 运行时，由日内瓦开发者 Ian Bernardo（GitHub 昵称 frizull）与同事 Tarcroi 创建，2026 年 4 月 8 日以 Show HN 形式发布，仓库位于 github.com/skrun-dev/skrun，采用 MIT 许可证。它的核心洞见是：你在 Claude Code、Copilot、Codex 里攒的 Agent Skill（SKILL.md）被困在各自工具里，不能被产品用 POST 请求调用；Skrun 把这些技能变成可调用的 HTTP 端点，让“技能即服务”成为现实。",
+    "category": "AI开发",
+    "tags": [
+        "Agent技能",
+        "API",
+        "开源",
+        "MCP",
+        "多模型",
+        "自托管"
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "pick",
+        "text": "开源 · Show HN"
     },
-    {
-      "question": "它收费吗？",
-      "answer": "不收费。Skrun 采用 MIT 许可证完全开源，自托管即可使用；托管的云部署仍在路线图，商业化定价尚未确定。"
-    },
-    {
-      "question": "公开部署安全吗？",
-      "answer": "目前 Skrun 主要面向本地/自托管，官方也承认公开部署有 prompt injection 等风险，沙箱隔离方案在规划中，建议敏感场景先留在内网。"
-    },
-    {
-      "question": "支持哪些模型？",
-      "answer": "Skrun 在 agent.yaml 中支持 Anthropic、OpenAI、Google、Mistral、Groq，并可在主模型失败时自动回退到备选 provider。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "Skrun",
-    "Agent Skill API",
-    "技能即服务",
-    "MCP",
-    "开源Agent运行时"
-  ],
-  "source_urls": [
-    "https://github.com/skrun-dev/skrun",
-    "https://www.everydev.ai/developers/skrun-dev",
-    "https://dev.to/skrun/i-had-a-bunch-of-skills-sitting-in-a-folder-none-of-them-were-callable-as-apis-m46"
-  ],
-  "confidence": "high",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+    "url": "https://github.com/skrun-dev/skrun",
+    "price": "免费开源（MIT），云部署定价未定",
+    "platform": "自托管（CLI / API，macOS / Linux / Windows）",
+    "pros": [
+        "把 SKILL.md 变成 API 极简，几分钟拿到可调用端点",
+        "多模型支持（Anthropic / OpenAI / Google / Mistral / Groq）+ 自动回退",
+        "有状态 Agent：用键值状态在多次运行间记住上下文",
+        "可接入 CLI 工具与任意 MCP server 扩展能力",
+        "MIT 开源，自托管即可，无供应商锁定"
+    ],
+    "cons": [
+        "早期项目，社区与生态规模还比较小",
+        "公开部署存在 prompt injection 等安全风险（官方沙箱方案仍在规划）",
+        "需自托管与运维，调用方要自己管契约与版本"
+    ],
+    "features": [
+        "SKILL.md → API：一条 init 加 deploy，把技能暴露成 POST /run 端点",
+        "多模型 + 自动回退：在 agent.yaml 选 provider，失败自动切下一个",
+        "有状态 Agent：用键值状态在多次运行间持久化上下文",
+        "工具调用：可捆绑自有 CLI 脚本，或接入任意 MCP server（如 Playwright）",
+        "类型化 I/O：定义结构化输入输出，保证 API 交互可靠",
+        "CLI 管理：约 12 个 CLI 命令负责初始化、测试与部署"
+    ],
+    "related": [
+        "openai",
+        "langchain",
+        "langsmith"
+    ],
+    "content": "## Skrun 是什么？\n\nSkrun 是一个开源的 Agent 运行时，由日内瓦的开发者 Ian Bernardo（GitHub 昵称 frizull）与同事 Tarcroi 创建，2026 年 4 月 8 日以 Show HN 形式发布，仓库位于 github.com/skrun-dev/skrun，采用 MIT 许可证。它的核心洞见很朴素：你在 Claude Code、Copilot、Codex 里攒了一大堆 Agent Skill（SKILL.md），但它们被困在各自的工具里，不能被产品用 POST 请求调用。Skrun 把这些技能变成可调用的 HTTP 端点，让“技能即服务”成为现实。\n\n## 核心功能\n\n1. SKILL.md → API：一条 `skrun init --from-skill` 加 `skrun deploy`，就把技能暴露成 POST /run 端点。\n2. 多模型 + 自动回退：在 agent.yaml 里选 Anthropic / OpenAI / Google / Mistral / Groq，失败自动切下一个。\n3. 有状态 Agent：用键值状态在多次运行间记住上下文。\n4. 工具调用：可捆绑自有 CLI 脚本，或接入任意 MCP server（如 Playwright）。\n5. 类型化 I/O 与 CLI：定义结构化输入输出，配套 约 12 个 CLI 命令管理部署。\n\n## 版本/套餐对比\n\nSkrun 完全免费开源（MIT），自托管即可；托管的云部署（沙箱 VM、调用方自带 key）仍在路线图中，具体商业化定价未定。\n\n## 值不值得用？\n\n如果你有一堆写好的 Skill 却只能手动触发，Skrun 是把它们“产品化”的最短路径——几分钟内就能拿到一个可被 webhook、后端或服务调用的 API。它的代价是早期项目的生态规模还小，且公开部署存在 prompt injection 等安全风险（官方也承认这点，沙箱方案在规划中）。\n\n## 使用建议\n\n先用 `npm install -g @skrun-dev/cli` 装好 CLI；把现有的 SKILL.md 通过 init 导入生成 agent.yaml；本地 `skrun dev` 起开发服务器测试；需要对外暴露时务必等沙箱方案成熟再上公网。多模型回退能缓解单点故障，但记得为跨技能的数据边界设好权限。\n\n## 适合谁用？\n\n- AI 开发者：想把自己的 Skill 变成可调用服务。\n- 初创 / 小团队：需要快速把 agent 能力拼进产品。\n- DevOps：关注 API 契约、版本与治理的部署者。",
+    "published": true,
+    "faq": [
+        {
+            "question": "Skrun 和普通 Agent 框架有什么不同？",
+            "answer": "Skrun 不重新定义 agent，而是把已有的 Agent Skill（SKILL.md）变成标准 HTTP 端点，强调“技能即服务”与可组合调用，而非再造一个编排框架。"
+        },
+        {
+            "question": "它收费吗？",
+            "answer": "不收费。Skrun 采用 MIT 许可证完全开源，自托管即可使用；托管的云部署仍在路线图，商业化定价尚未确定。"
+        },
+        {
+            "question": "公开部署安全吗？",
+            "answer": "目前 Skrun 主要面向本地/自托管，官方也承认公开部署有 prompt injection 等风险，沙箱隔离方案在规划中，建议敏感场景先留在内网。"
+        },
+        {
+            "question": "支持哪些模型？",
+            "answer": "Skrun 在 agent.yaml 中支持 Anthropic、OpenAI、Google、Mistral、Groq，并可在主模型失败时自动回退到备选 provider。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "Skrun",
+        "Agent Skill API",
+        "技能即服务",
+        "MCP",
+        "开源Agent运行时"
+    ],
+    "source_urls": [
+        "https://github.com/skrun-dev/skrun",
+        "https://www.everydev.ai/developers/skrun-dev",
+        "https://dev.to/skrun/i-had-a-bunch-of-skills-sitting-in-a-folder-none-of-them-were-callable-as-apis-m46"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14",
+    "published_date": "2026-08-25"
 }

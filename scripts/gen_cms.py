@@ -34,7 +34,7 @@ def ensure_pipeline():
             "tasks": [
                 {"time": "--:--", "task_id": "seo_article",  "task_name": "SEO 文章",   "status": "pending", "title": "", "detail": ""},
                 {"time": "--:--", "task_id": "dict_release", "task_name": "AI 词典",    "status": "pending", "title": "", "detail": ""},
-                {"time": "--:--", "task_id": "ai_news",      "task_name": "AI 快讯",    "status": "pending", "title": "", "detail": ""},
+                {"time": "--:--", "task_id": "ai_news",      "task_name": "AI 动态",    "status": "pending", "title": "", "detail": ""},
                 {"time": "--:--", "task_id": "tool_release", "task_name": "工具发布",   "status": "pending", "title": "", "detail": ""},
             ]
         }

@@ -26,7 +26,7 @@ PIPELINE_FILE = os.path.join(BASE_DIR, 'data', '_pipeline.json')
 TASK_NAMES = {
     'seo_article': 'SEO 文章',
     'dict_release': 'AI 词典',
-    'ai_news': 'AI 快讯',
+    'ai_news': 'AI 动态',
     'tool_release': '工具发布',
 }
 

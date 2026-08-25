@@ -362,7 +362,7 @@ def inject_baidu_tongji():
 def inject_rss_link():
     """后处理：为全站 HTML 注入 RSS 声明（幂等）。"""
     BASE_DIR = _cfg()['BASE_DIR']
-    RSS_LINK = '<link rel="alternate" type="application/rss+xml" title="AI工具宝箱 快讯 RSS" href="/rss.xml">'
+    RSS_LINK = '<link rel="alternate" type="application/rss+xml" title="AI工具宝箱 AI动态 RSS" href="/rss.xml">'
     injected = 0
     for root, dirs, files in os.walk(BASE_DIR):
         for fname in files:
@@ -374,9 +374,13 @@ def inject_rss_link():
                     content = f.read()
             except Exception:
                 continue
-            if 'application/rss+xml' in content or '<head' not in content:
+            if '<head' not in content:
                 continue
-            content = re.sub(r'<head[^>]*>', lambda m: m.group(0) + '\n    ' + RSS_LINK, content, count=1)
+            if 'application/rss+xml' in content:
+                # 已存在 RSS 声明 → 更新文案（非跳过），让标题更名自动生效、不留旧残留
+                content = re.sub(r'<link[^>]*application/rss\+xml[^>]*>', RSS_LINK, content, count=1)
+            else:
+                content = re.sub(r'<head[^>]*>', lambda m: m.group(0) + '\n    ' + RSS_LINK, content, count=1)
             try:
                 with open(fpath, 'w', encoding='utf-8') as f:
                     f.write(content)
@@ -467,7 +471,7 @@ def inject_hreflang():
 
 
 EXCLUSIVE_SECTIONS = [
-    {'key': 'news',         'slug': 'news',         'name': 'AI快讯',       'emoji': '📰', 'desc': '每日AI行业最新动态'},
+    {'key': 'news',         'slug': 'news',         'name': 'AI动态',       'emoji': '📰', 'desc': '每日AI行业最新动态'},
     {'key': 'dict',         'slug': 'dict',         'name': 'AI词典',       'emoji': '📖', 'desc': 'AI专业术语白话解读'},
     {'key': 'live',         'slug': 'live',         'name': '实时面板',     'emoji': '📡', 'desc': 'AI工具实时热度数据'},
     {'key': 'ranking',      'slug': 'ranking',      'name': '工具排行',     'emoji': '📊', 'desc': '多维度的AI工具排名'},

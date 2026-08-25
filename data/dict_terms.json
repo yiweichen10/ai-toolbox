@@ -1887,7 +1887,8 @@
     ],
     "brief": "让AI自主规划、多文件修改、运行调试并迭代完成软件开发任务的编程范式，代表工具如Claude Code、Devin、Cursor Agent模式等。",
     "detail": "智能体编程（Agentic Coding）是 AI 编程的进阶形态：相比传统“代码补全”，它让 AI 以智能体方式自主完成软件开发任务——理解需求、规划步骤、读写多个文件、运行命令、调试报错并不断迭代，直到功能跑通。2025 年前后，随着 Claude Code、Devin 等工具的普及，这一概念快速成为开发者社区的主流话题。\n\n**与普通 AI 编程的区别**\n- 普通 AI 编程（如代码补全）：AI 只负责生成代码片段，由人来拼接和调试\n- 智能体编程：AI 拥有“项目视野”，能自主跨文件修改、执行测试、修复错误，人只负责提出目标和验收结果\n\n**核心能力**\n- 任务规划：把一个大需求拆解为可执行的小步骤\n- 工具调用：使用终端、文件系统、浏览器、API 等工具\n- 自我纠错：运行代码、读报错、改代码，循环直到通过\n\n**代表产品**\nClaude Code（Anthropic）、Devin（Cognition）、Cursor 的 Agent 模式、GitHub Copilot 的 Agent 模式、开源项目 OpenHands（原 OpenDevin）等。\n\n**挑战与趋势**\n智能体编程仍面临长任务稳定性、大型代码库理解、权限安全等挑战。2026 年的趋势是“多智能体协作开发”：不同 AI 分别担任架构、编码、测试等角色，共同完成复杂项目。",
-    "published": false
+    "published": true,
+    "published_date": "2026-08-25"
   },
   {
     "term": "浏览器智能体（Browser Agent）",
@@ -1901,7 +1902,8 @@
     ],
     "brief": "能自主打开网页、点击、填表、滚动并完成线上任务的AI智能体，代表如OpenAI Operator、Google Project Mariner等，是AI落地的重要入口。",
     "detail": "浏览器智能体（Browser Agent）是一种运行在浏览器中的 AI 智能体，它能像人一样操作网页——打开网址、点击按钮、填写表单、滚动页面、截图确认——从而自主完成订票、比价、填表、数据收集等线上任务。2025 年 OpenAI 发布 Operator，Google 推出 Project Mariner，标志着浏览器智能体进入大众视野。\n\n**工作原理**\n- 视觉理解：模型读取浏览器截图或页面 DOM，理解网页内容\n- 动作决策：决定点击哪个按钮、在哪个输入框填什么\n- 循环反馈：执行动作后观察新页面状态，继续下一步，直到任务完成\n\n**核心价值**\n- 无需 API：很多网站没有开放接口，浏览器智能体“像人一样操作”即可使用\n- 通用适配：一个智能体能操作成千上万的网站\n\n**代表产品**\nOpenAI Operator、Google Project Mariner、Anthropic Claude 的 Computer Use 能力、开源项目 UI-TARS 等。\n\n**挑战与趋势**\n主要挑战包括：操作速度较慢、复杂页面容易出错、涉及支付和个人信息时有安全风险。2026 年的趋势是浏览器智能体与“AI 操作系统”概念结合，成为个人数字助理的核心载体。",
-    "published": false
+    "published": true,
+    "published_date": "2026-08-25"
   },
   {
     "term": "垂直智能体（Vertical AI Agent）",
