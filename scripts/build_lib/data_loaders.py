@@ -84,6 +84,67 @@ def load_articles():
         return json.load(f)
 
 
+def sync_mono_from_shards(mono_name, dir_name, indent=2):
+    """散文件目录 → 单体文件 幂等合并（build 前自动聚合兜底，2026-08-25）。
+
+    背景：load_*() 目录优先后，自动化/旁路写散文件（data/<dir_name>/*.json）不再同步单体，
+    导致依赖单体的下游（gen_cms / server.py / 检查脚本）读到陈旧数据。
+    本函数在 build_target() 入口调用：把散文件目录合并回单体 data/<mono_name>，
+    只增改不删除（保护单体中的历史记录）；无差异时零写入。
+    返回：新增/变更条数（0 = 无需写盘）。
+    """
+    DATA_DIR, _ = _build_cfg()
+    d = os.path.join(DATA_DIR, dir_name)
+    if not os.path.isdir(d):
+        return 0
+    files = sorted(glob.glob(os.path.join(d, '*.json')))
+    if not files:
+        return 0
+    # 1. 聚合散文件
+    shards = []
+    for fp in files:
+        try:
+            rec = json.load(open(fp, 'r', encoding='utf-8'))
+        except Exception as e:
+            _record_build_error(f'sync_{dir_name}', fp, str(e))
+            continue
+        if isinstance(rec, list):
+            shards.extend(rec)
+        elif isinstance(rec, dict):
+            shards.append(rec)
+    # 2. 读单体（异常回退空表，不阻断）
+    mono_path = os.path.join(DATA_DIR, mono_name)
+    try:
+        with open(mono_path, 'r', encoding='utf-8') as f:
+            mono = json.load(f)
+    except Exception:
+        mono = []
+    if not isinstance(mono, list):
+        mono = []
+    # 3. 按 slug 合并：单体保序，散文件覆盖同名 + 追加新 slug
+    by_slug = {}
+    for r in mono:
+        if isinstance(r, dict) and r.get('slug'):
+            by_slug[r['slug']] = r
+    changed = 0
+    for r in shards:
+        if not isinstance(r, dict) or not r.get('slug'):
+            continue
+        if by_slug.get(r['slug']) != r:
+            by_slug[r['slug']] = r
+            changed += 1
+    # 4. 有差异才原子写回（temp + rename，防截断）
+    if changed:
+        tmp = mono_path + '.tmp'
+        try:
+            with open(tmp, 'w', encoding='utf-8') as f:
+                json.dump(list(by_slug.values()), f, ensure_ascii=False, indent=indent)
+            os.replace(tmp, mono_path)
+        except Exception as e:
+            _record_build_error(f'sync_{dir_name}', mono_path, str(e))
+    return changed
+
+
 _TOOL_LINK_MAP = None
 _LINK_STOPWORDS = {'AI', 'API', 'GPT', 'Chat', 'ChatGPT', '工具', '助手',
                    '人工智能', '大模型', '机器人', 'AI工具', 'APP', 'App', '软件'}

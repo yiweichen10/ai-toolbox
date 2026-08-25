@@ -120,22 +120,28 @@ def build_news_page(all_tools=None):
             title = title[:-1].rstrip()
         title_l = _linkify(escape_html(title))
         summary = (item.get('summary') or '').strip()
+        commentary = (item.get('commentary') or '').strip()  # 2026-08-25 原创评注（编辑整理+评注，合规去新闻化）
         src = escape_html(item.get('source',''))
         src_url = item.get('source_url','')
         ts = item.get('published_at','')
         ts_display = ts[:16].replace('T',' ')[5:] if ts else ''  # 08-14 22:27，去年份更简
         date_link = f'<a href="/news/{date_ctx}/" class="news-date-ctx">{date_ctx}</a>' if date_ctx else ''
         sum_html = f'<p class="news-item-summary">{_linkify(escape_html(summary))}</p>' if summary else ''
+        comm_html = (f'<div class="news-item-commentary"><span class="news-item-commentary-tag">评</span>'
+                     f'{_linkify(escape_html(commentary))}</div>') if commentary else ''  # 旧数据无 commentary 自动兜底
         readmore = f'<a href="{src_url}" target="_blank" rel="noopener nofollow" class="news-readmore">阅读原文</a>' if src_url else ''
         return f'''            <article class="news-item">
                 <i class="news-item-dot" style="background:{cc}"></i>
                 <div class="news-item-meta"><span class="news-item-cat" style="color:{cc}">{cl}</span>{f'<time>{ts_display}</time>' if ts_display else ''}</div>
                 <h2 class="news-item-title">{title_l}</h2>
                 {sum_html}
-                <div class="news-item-foot">{f'<span>来源：{src}</span>' if src else ''}{readmore}{date_link}</div>
+                {comm_html}
+                <div class="news-item-foot">{f'<span>源：{src}</span>' if src else ''}{readmore}{date_link}</div>
             </article>'''
 
     SHARE_CSS = '.news-share{display:flex;gap:8px;align-items:center}.news-share-btn{display:inline-flex;align-items:center;gap:4px;padding:5px 12px;border-radius:6px;border:1px solid #e2e8f0;background:#f8fafc;font-size:13px;color:#475569;cursor:pointer;text-decoration:none;transition:all .15s;font-family:inherit}.news-share-btn:hover{background:#e6f4ed;border-color:#00A64F;color:#00A64F}.news-share label{font-size:13px;color:#94a3b8;margin-right:4px}.news-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1e293b;color:#fff;padding:10px 20px;border-radius:8px;font-size:13px;z-index:999;opacity:0;transition:opacity .2s}.news-toast.show{opacity:1}[data-theme="dark"] .news-share-btn{background:#1e293b;border-color:#334155;color:#94a3b8}[data-theme="dark"] .news-share-btn:hover{background:rgba(0,166,79,0.12);border-color:#00A64F;color:#00A64F}.news-inlink{color:#00A64F;text-decoration:none;font-weight:600}.news-inlink:hover{text-decoration:none;opacity:.8}[data-theme="dark"] .news-inlink{color:#34d399}.news-catnav{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}.news-catnav-link{display:inline-block;padding:6px 14px;border-radius:20px;background:#f1f5f9;color:#475569;font-size:13px;text-decoration:none;transition:all .15s}.news-catnav-link:hover{background:#e6f4ed;color:#00A64F}[data-theme="dark"] .news-catnav-link{background:#1e293b;color:#94a3b8}[data-theme="dark"] .news-catnav-link:hover{background:rgba(0,166,79,.12);color:#34d399}.news-date-ctx{color:#94a3b8;font-size:12px;text-decoration:none;margin-left:2px}.news-date-ctx:hover{color:#00A64F}[data-page-type="news"] .container{max-width:780px;margin:0 auto;padding:6px 20px 32px}[data-page-type="news"] .breadcrumb{max-width:780px;padding:0 20px;margin:8px auto 8px}[data-page-type="news"] .container.news-index,[data-page-type="news"] .breadcrumb.news-index{max-width:1100px}.news-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:28px;align-items:start}.news-sidebar{position:sticky;top:16px;display:flex;flex-direction:column;gap:18px}.news-side-box{background:var(--surface,#fff);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:14px 16px}.news-side-title{font-size:14px;font-weight:700;margin:0 0 10px;color:var(--text-main,#1e293b)}.news-day-list{display:flex;flex-direction:column;gap:2px;max-height:380px;overflow-y:auto}.news-day-link{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:8px;font-size:13.5px;color:var(--text-main,#1e293b);text-decoration:none;line-height:1.4}.news-day-link:hover{background:#e6f4ed;color:#00A64F}.news-day-link .n{font-size:12px;color:#94a3b8;margin-left:8px;flex-shrink:0}.news-day-block{margin-bottom:28px;scroll-margin-top:200px}.news-day-divider{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 16px;padding:10px 14px 10px 16px;background:linear-gradient(90deg,#f0fdf4 0%,#f0fdf400 100%);border-left:5px solid #00A64F;border-radius:0 8px 8px 0}.news-day-divider .d{font-size:20px;font-weight:800;color:var(--text-main,#1e293b);letter-spacing:.5px}.news-day-divider .wk{display:inline-block;padding:2px 10px;background:#00A64F;color:#fff;font-size:12px;font-weight:700;border-radius:12px;letter-spacing:.5px}.news-day-divider a.news-day-more{margin-left:auto;font-size:12.5px;font-weight:500;color:#00A64F;text-decoration:none;opacity:.8}.news-day-divider a.news-day-more:hover{opacity:1;text-decoration:underline}[data-theme="dark"] .news-side-box{background:#1e293b;border-color:#334155}[data-theme="dark"] .news-day-link{color:#cbd5e1}[data-theme="dark"] .news-day-link:hover{background:rgba(0,166,79,.12);color:#34d399}[data-theme="dark"] .news-day-divider{background:linear-gradient(90deg,rgba(52,211,153,.10) 0%,rgba(52,211,153,0) 100%);border-left-color:#34d399}[data-theme="dark"] .news-day-divider .d{color:#f1f5f9}[data-theme="dark"] .news-day-divider .wk{background:#34d399;color:#0f172a}@media (max-width:900px){.news-layout{grid-template-columns:1fr}.news-sidebar{display:none}.news-day-divider{padding:8px 12px}.news-day-divider .d{font-size:18px}.news-day-block{scroll-margin-top:190px}.news-day-strip{display:flex}}html{scroll-behavior:smooth}[data-page-type="news"] .news-cards{display:block;position:relative;margin:0 0 8px;padding-left:24px;border-left:2px dotted #d8e0ea}.news-item{position:relative;padding:15px 0 17px}.news-item-dot{position:absolute;left:-30px;top:22px;width:11px;height:11px;border-radius:50%;box-shadow:0 0 0 3px var(--body-bg,#fff)}.news-item-meta{display:flex;gap:10px;align-items:baseline;font-size:12.5px;color:#94a3b8;margin-bottom:3px}.news-item-cat{font-weight:600}.news-item-title{font-size:17.5px;font-weight:700;line-height:1.55;margin:0 0 8px;color:var(--text-main,#1e293b)}.news-item-summary{font-size:14px;line-height:1.85;color:var(--text-muted,#475569);margin:0 0 8px}.news-item-foot{display:flex;gap:14px;align-items:center;font-size:12.5px;color:#94a3b8}[data-page-type="news"] .news-readmore{margin-left:auto;color:#00A64F;background:none;padding:0;border-radius:0;font-size:12.5px;font-weight:600;text-decoration:none}[data-page-type="news"] .news-readmore:hover{opacity:.75}.news-day-strip{display:none;gap:8px;overflow-x:auto;padding:2px 2px 12px;margin-bottom:4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}.news-day-strip::-webkit-scrollbar{display:none}.news-day-strip a{flex-shrink:0;padding:5px 13px;border-radius:16px;background:#f1f5f9;color:#475569;font-size:12.5px;text-decoration:none;white-space:nowrap}.news-day-strip a:active{background:#00A64F;color:#fff}[data-theme="dark"] [data-page-type="news"] .news-cards{border-left-color:#334155}[data-theme="dark"] .news-item-title{color:#f1f5f9}[data-theme="dark"] .news-item-summary{color:#94a3b8}[data-theme="dark"] .news-item-dot{box-shadow:0 0 0 3px #0f172a}[data-theme="dark"] [data-page-type="news"] .news-readmore{color:#34d399}[data-theme="dark"] .news-day-strip a{background:#1e293b;color:#94a3b8}@media (max-width:900px){.news-day-strip{display:flex}}'
+    # 2026-08-25 评注样式（编辑整理+评注；浅绿底呼应站点主题，dark 同步适配）
+    COMMENTARY_CSS = '.news-item-commentary{margin:6px 0 10px;padding:8px 12px;background:linear-gradient(90deg,#f0fdf4 0%,#f0fdf4 65%,#f0fdf400 100%);border-left:3px solid #00A64F;border-radius:0 8px 8px 0;font-size:13.5px;line-height:1.8;color:#334155}.news-item-commentary-tag{display:inline-block;vertical-align:top;margin:4px 8px 0 0;font-size:13px;font-weight:700;color:#00A64F;border:1px solid #00A64F;border-radius:3px;padding:0 3px;line-height:1.2}[data-theme="dark"] .news-item-commentary{background:linear-gradient(90deg,rgba(52,211,153,.12) 0%,rgba(52,211,153,.06) 65%,rgba(52,211,153,0) 100%);border-left-color:#34d399;color:#cbd5e1}[data-theme="dark"] .news-item-commentary-tag{color:#34d399;border-color:#34d399}'
     SHARE_JS = 'function copyLink(){navigator.clipboard.writeText(location.href).then(function(){var t=document.getElementById("newsToast");t.classList.add("show");setTimeout(function(){t.classList.remove("show")},1800)})}'
     FILTER_JS = f"""(function(){{
     var p=document.querySelectorAll('.news-filter-pill');
@@ -202,7 +208,7 @@ def build_news_page(all_tools=None):
 <meta name="keywords" content="AI动态,AI日报,AI行业动态,{today}">
 <link rel="canonical" href="{SITE}/news/"><style>{build.CRITICAL_CSS}</style>
 <link rel="preload" href="/css/style.min.css?v={build.CSS_VERSION}" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/style.min.css?v={build.CSS_VERSION}"></noscript><style>{SHARE_CSS}</style>
+<noscript><link rel="stylesheet" href="/css/style.min.css?v={build.CSS_VERSION}"></noscript><style>{SHARE_CSS}{COMMENTARY_CSS}</style>
 <!-- 百度统计（异步加载，不阻塞渲染） -->
 {build.BAIDU_TONGJI}
 </head>
@@ -259,7 +265,7 @@ def build_news_page(all_tools=None):
 <meta name="keywords" content="AI动态,{d}">
 <link rel="canonical" href="{SITE}/news/{d}/"><style>{build.CRITICAL_CSS}</style>
 <link rel="preload" href="/css/style.min.css?v={build.CSS_VERSION}" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/style.min.css?v={build.CSS_VERSION}"></noscript><style>{SHARE_CSS}</style>
+<noscript><link rel="stylesheet" href="/css/style.min.css?v={build.CSS_VERSION}"></noscript><style>{SHARE_CSS}{COMMENTARY_CSS}</style>
 <!-- 百度统计（异步加载，不阻塞渲染） -->
 {build.BAIDU_TONGJI}
 </head>
@@ -308,7 +314,7 @@ def build_news_page(all_tools=None):
 <meta name="keywords" content="AI动态,{cl},{longtail}">
 <link rel="canonical" href="{SITE}/news/{cat}/"><style>{build.CRITICAL_CSS}</style>
 <link rel="preload" href="/css/style.min.css?v={build.CSS_VERSION}" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/style.min.css?v={build.CSS_VERSION}"></noscript><style>{SHARE_CSS}</style>
+<noscript><link rel="stylesheet" href="/css/style.min.css?v={build.CSS_VERSION}"></noscript><style>{SHARE_CSS}{COMMENTARY_CSS}</style>
 <!-- 百度统计（异步加载，不阻塞渲染） -->
 {build.BAIDU_TONGJI}
 </head>

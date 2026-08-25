@@ -749,16 +749,35 @@ def build_index_page(tools, articles):
             except Exception:
                 _pd_display = ''
         dict_html += f'''                                <a class="dict-card-item" href="/dict/{term['slug']}/">
-                                    <div class="dict-card-icon">{term['emoji']}</div>
+                                    <div class="dict-card-icon">{term['emoji']}<span class="dict-card-date">{_pd_display}</span></div>
                                     <div class="dict-card-body">
                                         <h4>{escape_html(term['term'])} {new_badge}</h4>
                                         <p>{escape_html(term['brief'])}</p>
-                                        <span class="dict-card-date">{_pd_display}</span>
                                     </div>
                                 </a>
 '''
     dict_re = re.compile(r'<!-- DICT_CARDS_START -->[\s\S]*?<!-- DICT_CARDS_END -->')
     html = dict_re.sub(f'<!-- DICT_CARDS_START -->\n{dict_html}                                <!-- DICT_CARDS_END -->', html)
+
+    # ── 首页 AI辞典 独有样式内联注入（2026-08-25，方案B）──
+    # 目的：dict 卡片样式只被首页使用，从全局 style.css 剥离后内联到首页 <head>，
+    #       后续改首页辞典样式只需 build --target index（不触发全站 CSS hash 变更/全量重建）。
+    # 幂等：模板已含 id="home-dict-style" 则跳过。
+    if 'id="home-dict-style"' not in html:
+        dict_card_css = '''<style id="home-dict-style">
+.dict-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.dict-card-item{display:flex;gap:12px;padding:12px 14px;border-radius:var(--radius-md);text-decoration:none;border:1px solid #f1f5f9;transition:var(--transition)}
+.dict-card-item:hover{border-color:rgba(0,166,79,0.18);background:#fafaff;transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.dict-card-icon{font-size:22px;min-width:44px;flex-shrink:0;align-self:flex-start;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:5px 8px;background:var(--surface-2);border-radius:10px;line-height:1.1}
+.dict-card-body{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.dict-card-body h4{font-size:13.5px;font-weight:700;color:var(--text-main);margin-bottom:3px;display:flex;align-items:center;gap:6px}
+.dict-card-body p{font-size:12.5px;color:var(--text-muted);line-height:1.55;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.dict-card-date{display:inline-block;font-size:10px;color:#94a3b8;font-weight:600;letter-spacing:0.2px;line-height:1;margin-top:1px}
+.dict-view-all{display:block;text-align:center;margin-top:14px;font-size:13.5px;font-weight:600;color:var(--primary);text-decoration:none;padding:8px 0;transition:color .2s}
+.dict-view-all:hover{color:var(--secondary)}
+@media (max-width:640px){.dict-cards{grid-template-columns:1fr;gap:8px}}
+</style>'''
+        html = html.replace('</head>', dict_card_css + '\n</head>', 1)
 
     # ── 编辑实测 · 今日推荐（v6；2026-08-12 修复：日期与内容必须同源）──
     def _fmt_md(d):
