@@ -739,7 +739,8 @@ def build_index_page(tools, articles):
             all_dict = json.load(f)
             dict_terms = [t for t in all_dict if t.get('published', True)]
     dict_terms.sort(key=lambda t: t.get('published_date') or '2000-01-01', reverse=True)
-    for idx, term in enumerate(dict_terms[:8]):
+    # 2026-08-25：展示最新 12 条（3 排 × 4 列）；板块固定高度，超出由 content-tabs-body 滚动
+    for idx, term in enumerate(dict_terms[:12]):
         new_badge = '<span class="badge-new">NEW</span>' if idx < 2 else ''
         _pd = (term.get('published_date') or '').strip()
         _pd_display = ''
@@ -766,7 +767,7 @@ def build_index_page(tools, articles):
     # 幂等：模板已含 id="home-dict-style" 则跳过。
     if 'id="home-dict-style"' not in html:
         dict_card_css = '''<style id="home-dict-style">
-.dict-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.dict-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 .dict-card-item{display:flex;gap:10px;padding:10px 12px;border-radius:var(--radius-md);text-decoration:none;border:1px solid #f1f5f9;transition:var(--transition)}
 .dict-card-item:hover{border-color:rgba(0,166,79,0.18);background:#fafaff;transform:translateY(-2px);box-shadow:var(--shadow-sm)}
 .dict-card-icon{font-size:20px;min-width:38px;flex-shrink:0;align-self:flex-start;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:4px 6px;background:var(--surface-2);border-radius:8px;line-height:1.1}
