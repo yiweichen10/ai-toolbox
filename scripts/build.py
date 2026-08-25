@@ -172,7 +172,7 @@ ARTICLE_CATEGORY_PAGES = [
         'h1': 'AI资讯',
         'page_title': 'AI资讯 - 深度长文与行业动态 | AI工具宝箱',
  'description': 'AI工具宝箱AI资讯长文合集：宇树牵手DeepSeek、大模型发布、AI公司融资与行业动态等深度资讯文章，每条都经过编辑整理并附官方来源，数据每日更新，从事件背景到行业影响逐层拆解，并附数据来源与原文链接，帮你快速掌握AI行业正在发生的大事。',
-        'keywords': 'AI资讯,AI行业动态,AI新闻,AI资讯长文,AI行业资讯,大模型动态,AI快讯',
+        'keywords': 'AI资讯,AI行业动态,AI资讯长文,AI行业资讯,大模型动态,AI速览',
         'intro': 'AI 行业深度资讯长文：不只给标题，把来龙去脉和影响讲清楚。',
         'breadcrumb': 'AI资讯',
     },
