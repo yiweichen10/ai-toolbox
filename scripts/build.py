@@ -326,7 +326,7 @@ GLOBAL_NAV = '''    <nav class="global-nav" aria-label="全局导航">
             <a href="/tools/" class="gn-item">全部AI工具</a>
             <a href="/category/" class="gn-item">工具分类</a>
             <a href="/ranking/" class="gn-item">工具排行</a>
-            <a href="/news/" class="gn-item">快讯</a>
+            <a href="/news/" class="gn-item">AI动态</a>
             <a href="/dict/" class="gn-item">AI词典</a>
             <a href="/quiz/" class="gn-item">AI工具选择器</a>
             <a href="/live/" class="gn-item">实时面板</a>
