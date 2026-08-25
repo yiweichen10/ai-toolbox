@@ -695,8 +695,8 @@ def build_index_page(tools, articles):
     # 2026-08-14 修复：旧 tag_names 按 category 映射且漏了「AI工具教程」等分类，
     # 导致教程文章在 AI前沿 里被 fallback 误标成「AI资讯」，与 AI实战教程 区块的「教程」自相矛盾。
     _ct_tag = {'AI教程': '教程', 'AI评测': 'AI评测', 'AI资讯': 'AI资讯', '行业分析': 'AI洞察'}
-    # 2026-08-25：展示最新 8 条；面板固定 340px（移动端 300px），超出滚动不压缩，两 tab 同高不闪跳
-    for idx, a in enumerate(sorted_articles[:8]):
+    # 2026-08-25：展示最新 7 条；面板固定 350px（移动端 300px），超出滚动不压缩，两 tab 同高不闪跳
+    for idx, a in enumerate(sorted_articles[:7]):
         d = a.get('date', '')
         # 统一显示为 MM/DD
         display_date = d
@@ -766,13 +766,13 @@ def build_index_page(tools, articles):
     # 幂等：模板已含 id="home-dict-style" 则跳过。
     if 'id="home-dict-style"' not in html:
         dict_card_css = '''<style id="home-dict-style">
-.dict-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
-.dict-card-item{display:flex;gap:12px;padding:12px 14px;border-radius:var(--radius-md);text-decoration:none;border:1px solid #f1f5f9;transition:var(--transition)}
+.dict-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.dict-card-item{display:flex;gap:10px;padding:10px 12px;border-radius:var(--radius-md);text-decoration:none;border:1px solid #f1f5f9;transition:var(--transition)}
 .dict-card-item:hover{border-color:rgba(0,166,79,0.18);background:#fafaff;transform:translateY(-2px);box-shadow:var(--shadow-sm)}
-.dict-card-icon{font-size:22px;min-width:44px;flex-shrink:0;align-self:flex-start;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:5px 8px;background:var(--surface-2);border-radius:10px;line-height:1.1}
+.dict-card-icon{font-size:20px;min-width:38px;flex-shrink:0;align-self:flex-start;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:4px 6px;background:var(--surface-2);border-radius:8px;line-height:1.1}
 .dict-card-body{display:flex;flex-direction:column;justify-content:center;min-width:0}
-.dict-card-body h4{font-size:13.5px;font-weight:700;color:var(--text-main);margin-bottom:3px;display:flex;align-items:center;gap:6px}
-.dict-card-body p{font-size:12.5px;color:var(--text-muted);line-height:1.55;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.dict-card-body h4{font-size:13px;font-weight:700;color:var(--text-main);margin-bottom:2px;display:flex;align-items:center;gap:4px}
+.dict-card-body p{font-size:12px;color:var(--text-muted);line-height:1.5;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .dict-card-date{display:inline-block;font-size:10px;color:#94a3b8;font-weight:600;letter-spacing:0.2px;line-height:1;margin-top:1px}
 .dict-view-all{display:block;text-align:center;margin-top:14px;font-size:13.5px;font-weight:600;color:var(--primary);text-decoration:none;padding:8px 0;transition:color .2s}
 .dict-view-all:hover{color:var(--secondary)}
