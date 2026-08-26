@@ -1,0 +1,15 @@
+{
+  "term": "AI PC",
+  "slug": "ai-pc",
+  "en": "AI PC",
+  "emoji": "💻",
+  "category": "基础设施",
+  "tags": [
+    "端侧AI",
+    "硬件"
+  ],
+  "brief": "内置NPU等AI加速单元、能在本地直接运行大模型的个人电脑，无需联网即可用AI，是端侧AI的重要载体。",
+  "detail": "AI PC（AI Personal Computer）指内置专门AI加速硬件（通常是NPU神经处理单元）、能够在本地直接运行AI模型的个人电脑。与传统电脑相比，AI PC无需联网即可使用端侧大模型、AI助手、实时翻译、智能抠图等功能。\n\n**核心特征**：\n- NPU算力：专门的AI加速单元（如 Intel Core Ultra、AMD Ryzen AI、高通骁龙X系列），能效远高于CPU/GPU跑AI\n- 本地模型：可直接运行7B-14B参数的小语言模型（SLM）\n- 端云协同：简单任务本地秒回，复杂任务上云\n- 隐私安全：数据不出本机\n\n**关键优势**：\n- 隐私：敏感数据（文档、聊天）不出设备\n- 速度：免网络延迟，响应更快\n- 成本：长期使用免API费用\n- 离线可用：无网环境也能用AI\n\n**市场趋势**：2024年英特尔、AMD、高通开启AI PC元年，微软将 Copilot+ PC 作为Windows 11 AI功能载体。2026年AI PC已成为新电脑标配。\n\n**关联概念**：AI PC属于端侧AI（On-Device AI）在个人电脑场景的落地形态，与云端大模型形成互补——\"小模型在本地、大模型在云端\"。",
+  "published": true,
+  "published_date": "2026-08-21"
+}

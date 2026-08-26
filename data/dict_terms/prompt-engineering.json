@@ -1,0 +1,15 @@
+{
+  "term": "提示词工程（Prompt Engineering）",
+  "slug": "prompt-engineering",
+  "en": "Prompt Engineering",
+  "emoji": "✍️",
+  "category": "使用技巧",
+  "tags": [
+    "AI使用",
+    "技巧"
+  ],
+  "brief": "设计和优化输入给AI的提示词（Prompt），以获得更准确、更有用的输出结果。被称为\"与AI对话的艺术\"。",
+  "detail": "提示词工程（Prompt Engineering）是系统化地设计和优化AI输入提示的技术。好的Prompt能让AI输出质量提升数倍，差的Prompt则会导致答非所问。\n\n**核心技巧**：\n- **角色设定**：\"你是一位资深Python开发者\"——给AI明确的身份\n- **Few-shot**：给出2-3个示例，让AI理解期望的输出格式\n- **思维链（Chain-of-Thought）**：要求AI\"一步步思考\"，显著提升推理准确率\n- **结构化输出**：明确要求JSON/Markdown/表格格式\n- **约束条件**：字数限制、风格要求、禁止事项\n\n**进阶方法**：\n- **Tree of Thoughts**：探索多条推理路径，选择最优\n- **Self-Consistency**：多次生成取多数结果\n- **ReAct**：推理+行动交替进行\n\n**误区澄清**：Prompt Engineering不是\"玄学\"，而是基于对模型行为理解的系统化方法。2026年，随着模型理解能力提升，简单直接的Prompt往往比过度设计的复杂Prompt效果更好。",
+  "published": true,
+  "published_date": "2026-06-26"
+}

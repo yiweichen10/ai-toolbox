@@ -1,0 +1,15 @@
+{
+  "term": "推理模型（Reasoning Model）",
+  "slug": "reasoning-model",
+  "en": "Reasoning Model / LRM",
+  "emoji": "🧩",
+  "category": "技术原理",
+  "tags": [
+    "模型架构",
+    "思维链"
+  ],
+  "brief": "具备深度逻辑推理能力的大模型，能\"想清楚再回答\"，代表如OpenAI o系列、DeepSeek-R1、Claude Opus等。",
+  "detail": "推理模型（Reasoning Model），也称大推理模型（Large Reasoning Model，LRM），是2024-2026年兴起的一类大模型。与普通对话模型\"看完问题直接给答案\"不同，推理模型在给出最终答案前会先进行一段内部思考（隐含的思维链），逐步推理、检查、纠错，再输出结论。\n\n**核心机制**：\n- 推理时计算（Test-Time Compute）：把更多算力花在\"思考\"阶段，而非只花在训练阶段\n- 思维链（Chain-of-Thought）：模型显式或隐式地分步推理\n- 自我纠错：发现推理过程中的矛盾会回溯修正\n\n**适用场景**：数学证明、代码调试、复杂逻辑题、科学推理、长链条决策。推理模型在数学竞赛（如 AIME）、博士级科学问答（GPQA）等基准上远超普通模型。\n\n**代表产品**：OpenAI o1/o3系列、DeepSeek-R1（开源标杆）、Gemini 2.5 Thinking、Claude 的扩展思考模式。\n\n**注意区分**：推理模型（Reasoning Model，指会思考的模型）≠ 推理（Inference，指模型运行生成答案的过程）。前者是产品形态，后者是技术动作。",
+  "published": true,
+  "published_date": "2026-08-14"
+}

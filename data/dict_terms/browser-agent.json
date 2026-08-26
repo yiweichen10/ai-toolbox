@@ -1,0 +1,15 @@
+{
+  "term": "浏览器智能体（Browser Agent）",
+  "slug": "browser-agent",
+  "en": "Browser Agent",
+  "emoji": "🌐",
+  "category": "前沿概念",
+  "tags": [
+    "智能体",
+    "浏览器"
+  ],
+  "brief": "能自主打开网页、点击、填表、滚动并完成线上任务的AI智能体，代表如OpenAI Operator、Google Project Mariner等，是AI落地的重要入口。",
+  "detail": "浏览器智能体（Browser Agent）是一种运行在浏览器中的 AI 智能体，它能像人一样操作网页——打开网址、点击按钮、填写表单、滚动页面、截图确认——从而自主完成订票、比价、填表、数据收集等线上任务。2025 年 OpenAI 发布 Operator，Google 推出 Project Mariner，标志着浏览器智能体进入大众视野。\n\n**工作原理**\n- 视觉理解：模型读取浏览器截图或页面 DOM，理解网页内容\n- 动作决策：决定点击哪个按钮、在哪个输入框填什么\n- 循环反馈：执行动作后观察新页面状态，继续下一步，直到任务完成\n\n**核心价值**\n- 无需 API：很多网站没有开放接口，浏览器智能体“像人一样操作”即可使用\n- 通用适配：一个智能体能操作成千上万的网站\n\n**代表产品**\nOpenAI Operator、Google Project Mariner、Anthropic Claude 的 Computer Use 能力、开源项目 UI-TARS 等。\n\n**挑战与趋势**\n主要挑战包括：操作速度较慢、复杂页面容易出错、涉及支付和个人信息时有安全风险。2026 年的趋势是浏览器智能体与“AI 操作系统”概念结合，成为个人数字助理的核心载体。",
+  "published": true,
+  "published_date": "2026-08-25"
+}

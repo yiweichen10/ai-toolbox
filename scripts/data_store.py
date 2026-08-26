@@ -147,6 +147,38 @@ def save_articles_batch(articles, indent=2):
     return n
 
 
+def load_all_dict_terms():
+    return _load_all('dict_terms.json', 'dict_terms')
+
+
+def save_dict_term(term, indent=2):
+    """保存单个词典词条：写 data/dict_terms/<slug>.json + 原子同步 dict_terms.json(单体存在时)。"""
+    return _save_one(term, 'dict_terms.json', 'dict_terms', indent=indent)
+
+
+def save_dict_terms_batch(terms, indent=2):
+    """批量保存词典词条列表(2026-08-26 去单体化): 只写分片, 不写单体。"""
+    n = 0
+    for t in terms:
+        if isinstance(t, dict) and t.get('slug'):
+            save_dict_term(t, indent=indent)
+            n += 1
+    return n
+
+
+def delete_dict_term(slug):
+    p = os.path.join(DATA_DIR, 'dict_terms', f'{slug}.json')
+    if os.path.exists(p):
+        os.remove(p)
+    mono = os.path.join(DATA_DIR, 'dict_terms.json')
+    if os.path.isfile(mono):
+        if FileLock is not None:
+            with FileLock(mono + '.lock', timeout=30):
+                _delete_from_mono(mono, slug, 2)
+        else:
+            _delete_from_mono(mono, slug, 2)
+
+
 def delete_tool(slug):
     p = os.path.join(DATA_DIR, 'tools', f'{slug}.json')
     if os.path.exists(p):

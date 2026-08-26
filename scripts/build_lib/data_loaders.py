@@ -246,8 +246,24 @@ def load_news_archive():
 
 
 def _load_dict_terms():
-    """加载AI词典数据"""
+    """加载AI词典数据（2026-08-26 去单体化: 分片优先 data/dict_terms/*.json, 单体回退）"""
     DATA_DIR, _ = _build_cfg()
+    shard_dir = os.path.join(DATA_DIR, 'dict_terms')
+    if os.path.isdir(shard_dir) and any(f.endswith('.json') for f in os.listdir(shard_dir)):
+        out = []
+        for fn in sorted(os.listdir(shard_dir)):
+            if not fn.endswith('.json'):
+                continue
+            try:
+                with open(os.path.join(shard_dir, fn), 'r', encoding='utf-8') as f:
+                    rec = json.load(f)
+            except Exception:
+                continue
+            if isinstance(rec, list):
+                out.extend(rec)
+            elif isinstance(rec, dict):
+                out.append(rec)
+        return out
     dict_data_path = os.path.join(DATA_DIR, 'dict_terms.json')
     if os.path.exists(dict_data_path):
         with open(dict_data_path, 'r', encoding='utf-8') as f:

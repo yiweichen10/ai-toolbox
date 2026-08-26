@@ -1,0 +1,16 @@
+{
+  "term": "算力（Computing Power）",
+  "slug": "computing-power",
+  "en": "AI Computing Power",
+  "emoji": "⚡",
+  "category": "基础设施",
+  "tags": [
+    "硬件",
+    "基础",
+    "算力"
+  ],
+  "brief": "AI训练和推理所需的计算能力，以FLOPs衡量。算力是AI发展的三大支柱（算力、数据、算法）之首，被类比为AI时代的石油。",
+  "detail": "算力是AI时代最核心的基础设施资源。\n\n度量单位：TFLOPS(每秒1万亿次)、PFLOPS(每秒1千万亿次)、EFLOPS(每秒100亿亿次)。\n\n需求爆炸增长：GPT-1训练≈0.1 PFLOPS-day → GPT-3≈3640 PFLOPS-day → GPT-4≈数万PFLOPS-day。每18个月训练算力需求增长约8倍。\n\n来源：训练用H100/B200 GPU集群/Google TPU Pod（万卡集群，成本$50M-$1B）；推理算力已超过训练算力成为最大需求。\n\n算力即国力：美国对华AI芯片出口管制（A100/H100/B200禁售），中国推进国产替代（华为昇腾、寒武纪）。算力已成为国家战略资源。\n\n个人可用：消费级RTX 4090 24GB运行70B量化模型；云GPU AutoDL(中国¥1-5/小时)、RunPod($0.3-2/小时)；免费Google Colab(T4 GPU)、Kaggle(P100/TPU v3)。",
+  "published": true,
+  "published_date": "2026-07-26"
+}

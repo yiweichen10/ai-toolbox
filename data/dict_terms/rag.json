@@ -1,0 +1,15 @@
+{
+  "term": "检索增强生成（RAG）",
+  "slug": "rag",
+  "en": "Retrieval-Augmented Generation",
+  "emoji": "🔍",
+  "category": "技术原理",
+  "tags": [
+    "AI架构",
+    "知识检索"
+  ],
+  "brief": "Retrieval-Augmented Generation，先检索外部知识再生成回答的技术，有效减少AI幻觉，提升回答准确性。",
+  "detail": "检索增强生成（Retrieval-Augmented Generation，RAG）是一种将信息检索与文本生成相结合的AI架构。它解决了LLM的两大痛点：知识截止日期（训练数据有截止时间）和幻觉问题（编造不存在的事实）。\n\n**工作流程**：\n1. 用户提问 → 2. 将问题转为向量在知识库中检索相关文档 → 3. 将检索到的文档与问题一起送入LLM → 4. LLM基于检索到的真实信息生成回答\n\n**核心组件**：\n- **Embedding模型**：将文本转为向量（如OpenAI text-embedding-3、BGE-M3）\n- **向量数据库**：存储和检索向量（如Pinecone、Milvus、Chroma、Qdrant）\n- **检索策略**：语义搜索、混合搜索（语义+关键词）、重排序（Rerank）\n- **分块策略**：如何将文档切成合适的片段（Chunk）\n\n**进阶变体**：\n- **GraphRAG**：结合知识图谱，提升多跳推理能力\n- **Agentic RAG**：AI自主规划检索步骤，多次检索+验证\n- **Multimodal RAG**：支持图片、表格等多模态内容检索\n\n**典型应用**：企业知识库问答、客服系统、法律/医疗文档分析、个人知识管理。",
+  "published": true,
+  "published_date": "2026-06-26"
+}

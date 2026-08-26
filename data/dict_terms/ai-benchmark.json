@@ -1,0 +1,15 @@
+{
+  "term": "AI模型评测（Benchmark）",
+  "slug": "ai-benchmark",
+  "en": "AI Model Benchmark / Evaluation",
+  "emoji": "📊",
+  "category": "使用技巧",
+  "tags": [
+    "评测",
+    "对比"
+  ],
+  "brief": "用标准化测试衡量AI模型能力的系统。MMLU、HumanEval、AIME等评测榜单是选择AI模型的重要参考，但不能完全反映实际使用体验。",
+  "detail": "AI模型评测（Benchmark）是用标准化的测试集和评分规则来量化比较不同AI模型能力的方法。随着AI模型越来越多，评测成为选型和比较的关键工具。\n\n**主要评测维度**：\n\n**知识理解**\n- **MMLU**：多领域知识问答（57个学科）\n- **MMLU-Pro**：更难版本，减少侥幸正确\n- **GPQA**：研究生级别的专业问题\n\n**推理能力**\n- **AIME**：美国数学邀请赛题目\n- **MATH**：竞赛级数学题\n- **ARC-AGI**：抽象推理挑战\n\n**编程能力**\n- **HumanEval**：Python函数生成\n- **MBPP**：基础编程题\n- **SWE-bench**：真实GitHub Issue修复\n\n**语言能力**\n- **C-Eval**：中文综合能力评测\n- **CMMLU**：中文多领域知识\n- **WMT**：机器翻译质量\n\n**综合榜单**：\n- **LMSYS Chatbot Arena**：人类投票的对话模型排行（最有参考价值）\n- **Open LLM Leaderboard**：开源模型综合排行\n- **AlpacaEval**：自动+人工评估\n\n**评测的局限性**：\n- 🚫 数据污染：评测题目可能出现在训练数据中\n- 🚫 刷榜行为：专门优化评测成绩而非实际能力\n- 🚫 脱离实际：评测环境vs真实使用场景差异大\n- 🚫 中文不足：大多数评测以英文为主\n\n**如何选模型**：\n1. 先看Chatbot Arena（真实用户反馈）\n2. 再看与你任务相关的专项评测\n3. 最后自己用实际任务测试\n4. 不要迷信任何一个分数\n\n**2026年趋势**：\n评测体系正在从\"静态题库\"转向\"动态对抗评估\"。AI模型越来越强，传统评测的区分度下降。真实用户偏好（Chatbot Arena的Elo分数）变得比标准化测试分数更有参考价值。",
+  "published": true,
+  "published_date": "2026-07-14"
+}

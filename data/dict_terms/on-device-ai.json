@@ -1,0 +1,15 @@
+{
+  "term": "端侧AI（On-Device AI）",
+  "slug": "on-device-ai",
+  "en": "On-Device AI / Edge AI",
+  "emoji": "📱",
+  "category": "前沿概念",
+  "tags": [
+    "推理部署",
+    "隐私计算"
+  ],
+  "brief": "AI 模型直接在手机、电脑、IoT 设备本地运行，无需云端。2026年苹果智能、高通骁龙、微软 Copilot+ PC 推动端侧AI成为主流。",
+  "detail": "端侧AI（On-Device AI 或 Edge AI）是指将 AI 模型部署在本地设备（智能手机、笔记本电脑、智能音箱、车载系统等）上直接运行，而非通过云端 API 调用。\n\n**核心驱动因素**：\n- 延迟：本地推理无网络延迟，适合语音助手、实时翻译等场景\n- 隐私：数据不出设备，敏感信息在本地处理\n- 离线可用：飞机上、地铁里照样用 AI\n- 成本：无需为每次查询付费 API，大规模部署成本更低\n\n**2025-2026 关键进展**：\n- Apple Intelligence：iPhone/iPad/Mac 内置本地模型\n- 高通骁龙 8 Elite / X Elite：集成 Hexagon NPU，支持 70 亿参数模型本地运行\n- 微软 Copilot+ PC：配备 NPU（40+ TOPS），本地运行 Phi-Silica 模型\n- Google Gemini Nano：在 Pixel 手机上本地运行\n\n**技术基础**：GGUF/ONNX 格式、NPU 芯片、模型量化。\n\n**局限**：本地算力有限，超大规模模型仍需云端；电池续航也是约束因素。",
+  "published": true,
+  "published_date": "2026-08-07"
+}

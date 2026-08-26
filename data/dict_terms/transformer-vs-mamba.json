@@ -1,0 +1,15 @@
+{
+  "term": "Transformer vs Mamba（状态空间模型对比）",
+  "slug": "transformer-vs-mamba",
+  "en": "Transformer vs Mamba / State Space Models",
+  "emoji": "⚡",
+  "category": "前沿概念",
+  "tags": [
+    "模型架构",
+    "对比"
+  ],
+  "brief": "Transformer是当前AI的绝对主流架构，但Mamba等状态空间模型（SSM）以线性复杂度处理长序列，可能成为下一代架构。",
+  "detail": "Transformer架构统治了AI领域近8年，但其二次复杂度（计算量随输入长度平方增长）在处理超长序列时成为了瓶颈。Mamba等状态空间模型（SSM）以线性复杂度提供了新的可能。\n\n**Transformer的局限**：\n- Attention计算复杂度O(n²)：输入10万字，计算量暴增\n- 上下文窗口扩展到1M tokens后，推理成本极高\n- KV Cache占用大量显存\n\n**Mamba（状态空间模型）**：\n- 2023年由CMU和普林斯顿提出\n- 线性复杂度O(n)：处理长序列时效率远超Transformer\n- 选择性机制：类似Attention，选择性地记住或遗忘信息\n- 在长序列任务上表现优异\n\n**Mamba-2（2024）**：\n- 揭示了SSM与Attention的数学联系\n- 结合了两者的优势\n- 在语言建模上接近Transformer但在长序列上更快\n\n**混合架构**：\n- **Jamba（AI21 Labs）**：Transformer + Mamba混合\n- **Gemma 2（Google）**：部分层用SSM替代Attention\n- 趋势：不是\"替代\"而是\"混合\"，在不同层使用不同机制\n\n**2026年展望**：\n- Transformer短期内不会被完全替代\n- Mamba等架构在长文档处理、DNA序列分析等场景有优势\n- 混合架构可能是未来的主流方向\n- 对普通用户而言，Mamba还是一个\"底层技术概念\"，不影响日常使用\n\n**需要关注吗**：对开发者来说值得了解，对普通用户来说Transformer还是Mamba对使用体验影响极小。",
+  "published": true,
+  "published_date": "2026-07-09"
+}

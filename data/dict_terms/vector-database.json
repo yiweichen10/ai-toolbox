@@ -1,0 +1,15 @@
+{
+  "term": "向量数据库（Vector Database）",
+  "slug": "vector-database",
+  "en": "Vector Database",
+  "emoji": "🗄️",
+  "category": "基础设施",
+  "tags": [
+    "数据库",
+    "RAG"
+  ],
+  "brief": "专门存储和检索向量（数值数组）的数据库，是RAG系统和语义搜索的核心基础设施。支持\"找最相似的内容\"这种查询。",
+  "detail": "向量数据库是AI时代的新型数据库。传统数据库查\"精确匹配\"，向量数据库查\"语义相似\"。\n\n**为什么需要向量数据库**：\n- AI将一切转为向量（Embedding）后，需要高效存储和检索这些向量\n- \"找最相似的100个文档\"这种查询，传统数据库无法高效完成\n- 向量数据库使用ANN（近似最近邻）算法，在亿级向量中毫秒级检索\n\n**核心概念**：\n- **向量索引**：ANN算法的数据结构（HNSW、IVF、PQ等）\n- **相似度度量**：余弦相似度、欧氏距离、内积\n- **元数据过滤**：先过滤条件再向量搜索（如\"只搜2026年的文档\"）\n\n**主流产品**：\n- **Pinecone**：云原生，最易上手，按量付费\n- **Milvus（Zilliz）**：开源高性能，适合大规模部署\n- **Weaviate**：开源，内置向量化和混合搜索\n- **Chroma**：轻量级开源，适合原型和小项目\n- **Qdrant**：Rust编写，性能优秀\n- **pgvector**：PostgreSQL插件，无需额外部署\n- **Elasticsearch**：传统搜索引擎 + 向量搜索\n\n**选择建议**：\n- 小项目/原型 → Chroma或pgvector\n- 中等规模/生产 → Pinecone（省心）或Qdrant（性价比）\n- 大规模/企业 → Milvus\n- 已有Elasticsearch → 直接加向量搜索插件",
+  "published": true,
+  "published_date": "2026-07-03"
+}

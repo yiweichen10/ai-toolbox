@@ -1,0 +1,15 @@
+{
+  "term": "多智能体系统（Multi-Agent System）",
+  "slug": "multi-agent-system",
+  "en": "Multi-Agent System (MAS)",
+  "emoji": "🧩",
+  "category": "前沿概念",
+  "tags": [
+    "AI Agent",
+    "协作智能"
+  ],
+  "brief": "多个 AI Agent 各司其职、相互协作完成复杂任务的系统架构。比单一 Agent 更可靠、更可扩展，是 2026 年 Agent 技术的主流方向。",
+  "detail": "多智能体系统（Multi-Agent System，MAS）是指由多个独立的、各有专长的 AI Agent 组成的系统，它们通过通信和协调共同解决单个 Agent 难以处理的复杂任务。\n\n**为什么要多 Agent**：\n- 专业分工：一个 Agent 不可能同时精通编程、法律、设计、数据分析\n- 可靠性：多个 Agent 相互检查，「编程 Agent」写代码，「审查 Agent」找 bug\n- 可扩展性：加新能力只需加新 Agent，不必重新训练整个系统\n\n**常见架构模式**：\n- 流水线（Pipeline）：Agent A 输出 → Agent B 输入，串行处理（如：研究 → 写作 → 审校）\n- 轮流转（Round-Robin）：多个 Agent 轮流发言、讨论，相互反驳和补充\n- 中心化（Centralized）：一个「管家」Agent 分配任务、汇总结果\n- 去中心化（Decentralized）：Agent 自主发现彼此、自由协作\n\n**典型应用**：\n- 软件开发：架构师+ 前端+ 后端+ 测试+ 审查 多 Agent 协作开发（如 ChatDev、MetaGPT）\n- 客服系统：意图识别 Agent → 知识库 Agent → 工单处理 Agent\n- 金融分析：数据采集 Agent + 技术分析 Agent + 基本面 Agent + 风控 Agent\n\n**主流框架**：AutoGen（Microsoft）、CrewAI、LangGraph、OpenAI Swarm。",
+  "published": true,
+  "published_date": "2026-08-04"
+}

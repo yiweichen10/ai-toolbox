@@ -1,0 +1,16 @@
+{
+  "term": "OpenAPI / Swagger（API规范）",
+  "slug": "openapi",
+  "en": "OpenAPI Specification",
+  "emoji": "📋",
+  "category": "使用技巧",
+  "tags": [
+    "API",
+    "标准",
+    "开发"
+  ],
+  "brief": "REST API的描述标准，用JSON/YAML格式定义API接口。几乎所有AI API都提供OpenAPI规范文档。",
+  "detail": "OpenAPI（原名Swagger）是定义和描述REST API的行业标准。\n\n为什么对AI开发重要：API文档自动化（一个OpenAPI文件自动生成交互式文档）、代码自动生成（自动生成客户端SDK）、AI工具集成（Agent可读取OpenAPI理解API用法，MCP支持从OpenAPI自动生成工具，GPT Actions支持导入OpenAPI）。\n\nAI时代的OpenAPI：AI可用自然语言理解OpenAPI文档，根据文档自动构造API调用，自我纠错（API返回错误→AI理解→调整调用）。\n\nOpenAPI是AI与其他软件系统交互的通用语言之一。它和MCP互补：OpenAPI定义传统REST API，MCP定义AI原生工具接口。",
+  "published": true,
+  "published_date": "2026-07-31"
+}

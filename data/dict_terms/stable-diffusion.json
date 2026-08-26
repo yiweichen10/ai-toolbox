@@ -1,0 +1,15 @@
+{
+  "term": "稳定扩散（Stable Diffusion）",
+  "slug": "stable-diffusion",
+  "en": "Stable Diffusion",
+  "emoji": "🖼️",
+  "category": "基础概念",
+  "tags": [
+    "AI绘画",
+    "开源"
+  ],
+  "brief": "Stability AI开发的开源文生图模型，2022年发布后引爆了AI绘画革命。生态最为丰富，支持ControlNet、LoRA等无数扩展。",
+  "detail": "Stable Diffusion（SD）是Stability AI于2022年8月发布的开源文生图模型，也是AI绘画民主化的标志性产品。与闭源的Midjourney和DALL·E不同，SD的完全开源催生了极其繁荣的社区生态。\n\n**版本演进**：\n- **SD 1.x（2022）**：512×512分辨率，基础功能\n- **SD 2.x（2022）**：768×768，改进架构\n- **SDXL（2023）**：1024×1024，质量飞跃\n- **SD 3（2024）**：多模态Diffusion Transformer（MMDiT），文字渲染大幅改善\n- **SD 3.5（2024）**：稳定性改进 + 社区反馈整合\n\n**生态扩展**：\n- **ControlNet**：精确控制构图（姿势、深度图、线稿引导）\n- **LoRA**：训练特定人物/风格的轻量适配器\n- **IP-Adapter**：用参考图引导生成风格\n- **AnimateDiff**：将SD用于视频生成\n- **ComfyUI**：节点式工作流编辑器（比WebUI更灵活）\n- **Automatic1111 WebUI**：最流行的SD用户界面\n\n**部署方式**：\n- 本地部署（需要6GB+ VRAM）\n- 云GPU（AutoDL、Colab、RunPod）\n- 在线服务（Leonardo.AI、Civitai生成器）\n\n**与竞品的对比**：\n- vs Midjourney：SD免费+可控性高，但默认画质不如MJ\n- vs DALL·E：SD开源+生态丰富，DALL·E集成更好\n- vs Flux：SD生态更大，Flux文字渲染更强\n\n**2026年现状**：SD仍是开源AI绘画的基石，但Flux在文字渲染和图像质量方面已经超越。SD 3.5是稳定性和质量的均衡选择。",
+  "published": true,
+  "published_date": "2026-07-08"
+}

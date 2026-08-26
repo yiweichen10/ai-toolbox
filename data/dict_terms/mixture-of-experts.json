@@ -1,0 +1,15 @@
+{
+  "term": "混合专家模型（Mixture of Experts）",
+  "slug": "mixture-of-experts",
+  "en": "Mixture of Experts (MoE)",
+  "emoji": "🧩",
+  "category": "技术原理",
+  "tags": [
+    "模型架构",
+    "优化"
+  ],
+  "brief": "一种模型架构，由多个'专家'子模型和一个路由器组成。每次只激活部分专家，大幅降低推理成本。",
+  "detail": "请参见上方「MoE (混合专家模型)」条目。MoE（Mixture of Experts）和混合专家模型是同一概念的不同表述。",
+  "published": true,
+  "published_date": "2026-07-13"
+}

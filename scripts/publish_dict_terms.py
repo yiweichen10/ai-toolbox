@@ -18,13 +18,11 @@ def main():
                         help='仅预览不实际修改')
     args = parser.parse_args()
 
-    dict_path = os.path.join(BASE_DIR, 'data', 'dict_terms.json')
-    if not os.path.exists(dict_path):
-        print('[ERROR] dict_terms.json 不存在')
-        sys.exit(1)
+    sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+    # 2026-08-26 去单体化: 读分片 data/dict_terms/*.json, 写只落分片(单体已退役)
+    from data_store import load_all_dict_terms, save_dict_term
 
-    with open(dict_path, 'r', encoding='utf-8') as f:
-        terms = json.load(f)
+    terms = load_all_dict_terms()
 
     published = [t for t in terms if t.get('published')]
     pending = [t for t in terms if not t.get('published')]
@@ -43,16 +41,15 @@ def main():
         print(f'[DRY RUN] 将发布: {", ".join(names)}')
         return
 
-    # 标记为已发布
+    # 标记为已发布并写分片（每个词条一个文件 data/dict_terms/<slug>.json）
     for t in to_publish:
         t['published'] = True
         t['published_date'] = datetime.now().strftime('%Y-%m-%d')
-
-    with open(dict_path, 'w', encoding='utf-8') as f:
-        json.dump(terms, f, ensure_ascii=False, indent=2)
+        save_dict_term(t, indent=2)
 
     print(f'✅ 已发布 {len(to_publish)} 条: {", ".join(names)}')
     print(f'   已发布总量: {len(published) + len(to_publish)} / {len(terms)}')
+    print(f'   已写分片 data/dict_terms/<slug>.json')
 
 
 if __name__ == '__main__':

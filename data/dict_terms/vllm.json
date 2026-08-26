@@ -1,0 +1,16 @@
+{
+  "term": "vLLM推理引擎",
+  "slug": "vllm",
+  "en": "vLLM Inference Engine",
+  "emoji": "🚀",
+  "category": "基础设施",
+  "tags": [
+    "推理优化",
+    "部署",
+    "开源"
+  ],
+  "brief": "UC Berkeley开发的高性能LLM推理引擎。通过PagedAttention等技术，推理速度比HuggingFace快10-20倍。",
+  "detail": "vLLM推理引擎是当前最流行的高性能LLM推理引擎。核心创新PagedAttention将KV Cache像操作系统虚拟内存一样分页管理，显存利用率提升2-4倍。\n\n特性：Continuous Batching（动态批处理）、Tensor Parallelism（多卡并行）、量化支持（AWQ/GPTQ）、前缀缓存（相同System Prompt只计算一次）、投机解码（小模型预测+验证）。\n\n使用：pip install vllm && vllm serve Qwen/Qwen2.5-7B-Instruct --port 8000\n\n竞品：SGLang（斯坦福）、TensorRT-LLM（NVIDIA官方）、llama.cpp（CPU推理）、Ollama（桌面友好封装）。\n\nvLLM已成为开源LLM部署的事实标准，被Anthropic、Databricks等公司广泛使用。",
+  "published": true,
+  "published_date": "2026-07-20"
+}

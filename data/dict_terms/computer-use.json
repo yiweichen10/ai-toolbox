@@ -1,0 +1,15 @@
+{
+  "term": "计算机使用（Computer Use）",
+  "slug": "computer-use",
+  "en": "Computer Use",
+  "emoji": "🖱️",
+  "category": "前沿概念",
+  "tags": [
+    "智能体",
+    "自动化"
+  ],
+  "brief": "让AI像人一样操作电脑屏幕、点击和输入来完成任务的智能体能力，Anthropic 2024年推出Computer Use API开启这一方向。",
+  "detail": "计算机使用（Computer Use）指AI智能体像人类一样直接操作电脑——查看屏幕截图、移动鼠标、点击按钮、键入文字——从而使用各种软件完成真实任务的能力。2024年10月，Anthropic 为 Claude 推出 Computer Use API，被认为是这一方向的里程碑。\n\n**工作原理**：\n- 视觉理解：模型读取屏幕截图，理解界面元素\n- 动作生成：决定点击哪个坐标、输入什么文字\n- 循环执行：观察结果→调整动作→直到任务完成\n\n**与传统API调用的区别**：\n- API集成：软件需要专门开发接口，AI才能使用\n- Computer Use：无需接口改造，AI\"看着屏幕\"直接操作任何软件\n\n**应用场景**：自动化填写表单、操作SaaS后台（CRM/ERP）、数据录入与整理、测试软件、跨应用工作流（如从邮箱提取信息填入表格）。\n\n**挑战与趋势**：屏幕操作速度慢于API、准确率需持续提升、权限安全需要严格管控。2026年，OpenAI（Operator）、Google（Project Mariner）等也推出类似产品，\"AI直接操作电脑\"正成为Agent落地的重要形态。",
+  "published": true,
+  "published_date": "2026-08-22"
+}

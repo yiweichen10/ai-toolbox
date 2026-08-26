@@ -1,0 +1,15 @@
+{
+  "term": "BERT",
+  "slug": "bert",
+  "en": "BERT (Bidirectional Encoder Representations from Transformers)",
+  "emoji": "🔤",
+  "category": "技术原理",
+  "tags": [
+    "模型架构",
+    "NLP"
+  ],
+  "brief": "Google于2018年发布的预训练语言模型，通过双向上下文理解文本，是NLP预训练时代的里程碑。",
+  "detail": "BERT（Bidirectional Encoder Representations from Transformers，基于Transformer的双向编码器表示）是 Google 于2018年发布的预训练语言模型，被认为是 NLP 领域的\"ImageNet 时刻\"——它证明了\"大规模预训练+下游微调\"的范式可以在 NLP 全面奏效。\n\n**核心创新**：\n- 双向理解：同时从左到右和从右到左看文本（传统模型只能单向），能真正理解词语的上下文语义\n- 掩码语言建模（MLM）：随机遮盖句子中的部分词，让模型预测被遮住的词，从而学习双向语义\n- 下一句预测（NSP）：判断两句话是否连续，学习句子间关系\n\n**技术路线**：BERT 是\"编码器（Encoder）\"路线——擅长理解任务（分类、抽取、检索）；同一时期的 GPT 走\"解码器（Decoder）\"路线——擅长生成任务。后来事实证明解码器路线在规模放大后能力更强，成为当前大模型的主流。\n\n**影响与遗产**：BERT 发布后，几乎所有 NLP 任务都被\"预训练+微调\"范式重构，也催生了 RoBERTa、ALBERT、DistilBERT 等大量衍生模型。今天的大语言模型虽然在架构上进化了，但\"预训练打底\"的思想源头正是 BERT。",
+  "published": true,
+  "published_date": "2026-08-19"
+}

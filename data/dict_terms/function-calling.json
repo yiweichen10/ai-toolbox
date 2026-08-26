@@ -1,0 +1,15 @@
+{
+  "term": "函数调用（Function Calling）",
+  "slug": "function-calling",
+  "en": "Function Calling / Tool Use",
+  "emoji": "🛠️",
+  "category": "技术原理",
+  "tags": [
+    "AI开发",
+    "工具使用"
+  ],
+  "brief": "让AI模型能够调用外部函数/API的能力。AI不再只是\"说话\"，而是能\"做事\"——查天气、发邮件、操作数据库。",
+  "detail": "Function Calling（函数调用，也叫Tool Use）是让AI模型能够识别用户意图并调用相应外部函数的能力。这是AI从\"聊天机器人\"进化为\"AI Agent\"的关键一步。\n\n**工作流程**：\n1. 开发者定义可用的函数（名称、描述、参数Schema）\n2. AI分析用户输入，判断是否需要调用函数\n3. 如果需要，AI返回要调用的函数名和参数（JSON格式）\n4. 开发者的代码执行该函数，获得结果\n5. 将结果送回AI，AI基于结果生成自然语言回复\n\n**示例**：\n```python\n# 定义函数Schema\nfunctions = [{\n    \"name\": \"get_weather\",\n    \"description\": \"获取指定城市的天气\",\n    \"parameters\": {\n        \"city\": {\"type\": \"string\", \"description\": \"城市名\"}\n    }\n}]\n\n# 用户：\"北京今天天气怎么样？\"\n# AI返回：{\"name\": \"get_weather\", \"parameters\": {\"city\": \"北京\"}}\n# 代码执行get_weather(\"北京\") → \"晴，25°C\"\n# AI回复：\"北京今天晴天，气温25°C，适合外出。\"\n```\n\n**多个Function的编排**：\n现代AI可以自主决定调用哪些函数、以什么顺序调用、如何组合多个函数的结果。例如\"帮我订明天从北京到上海的机票，并发送行程到我的邮箱\"——AI会依次调用查航班、订票、发邮件三个函数。\n\n**主流实现**：\n- OpenAI Function Calling / Tools API\n- Anthropic Tool Use\n- Gemini Function Calling\n- 所有主流模型都支持，但API格式略有不同",
+  "published": true,
+  "published_date": "2026-07-04"
+}

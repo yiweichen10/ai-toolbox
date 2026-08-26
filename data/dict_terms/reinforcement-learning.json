@@ -1,0 +1,15 @@
+{
+  "term": "强化学习（Reinforcement Learning）",
+  "slug": "reinforcement-learning",
+  "en": "Reinforcement Learning",
+  "emoji": "🎮",
+  "category": "技术原理",
+  "tags": [
+    "AI训练",
+    "算法"
+  ],
+  "brief": "AI通过与环境的交互和试错来学习最优策略。RLHF（人类反馈强化学习）是让ChatGPT等模型变得更\"听话\"的关键技术。",
+  "detail": "强化学习（Reinforcement Learning，RL）是机器学习的三大范式之一（另外两个是监督学习和无监督学习）。它让AI通过在环境中试错来学习，就像训练宠物一样——做对了给奖励，做错了没有奖励。\n\n**核心概念**：\n- **Agent（智能体）**：做决策的AI\n- **Environment（环境）**：Agent所处的外部世界\n- **State（状态）**：环境当前的情况\n- **Action（动作）**：Agent可以做的事情\n- **Reward（奖励）**：环境对动作的反馈（好/坏）\n- **Policy（策略）**：从状态到动作的映射——Agent的\"行为准则\"\n\n**RLHF（人类反馈强化学习）**：\n这是让ChatGPT等AI助手\"好用\"的关键技术。流程如下：\n1. 人类标注员对AI的多个回答进行偏好排序\n2. 训练一个\"奖励模型\"来预测人类偏好\n3. 用强化学习优化AI，使其输出更符合人类偏好\n\n**RLHF的作用**：\n- 让模型更有帮助（不说废话）\n- 更安全（拒绝有害请求）\n- 更诚实（承认不确定）\n- 更符合指令（遵循格式要求）\n\n**2026年进展**：\n- **DPO（Direct Preference Optimization）**：直接优化偏好，无需训练奖励模型，更简单高效\n- **RLVR（可验证奖励强化学习）**：在数学、编程等可自动验证的任务上效果极佳\n- DeepSeek-R1用纯RL（无监督微调）就训练出了强大的推理能力",
+  "published": true,
+  "published_date": "2026-07-02"
+}

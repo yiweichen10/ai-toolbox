@@ -1,0 +1,15 @@
+{
+  "term": "测试时计算（Test-Time Compute）",
+  "slug": "test-time-compute",
+  "en": "Test-Time Compute / Inference-Time Compute",
+  "emoji": "⏳",
+  "category": "前沿概念",
+  "tags": [
+    "推理模型",
+    "计算资源"
+  ],
+  "brief": "在模型使用阶段（而非训练阶段）投入更多计算资源以提升答案质量。是 o1/o3 推理模型和 Extended Thinking 的理论基础，2026 年重塑了 AI 的成本结构。",
+  "detail": "测试时计算（Test-Time Compute，也称 Inference-Time Compute）是 2024-2026 年 AI 研究的核心范式转变——不再仅靠更大的训练来提升模型，而是让模型在回答时「多想一会」。\n\n**传统范式 vs 新范式**：\n- 传统：训练时用更多 GPU、更多数据 → 推理时快速一次前向传播出结果\n- 新范式：训练可以相对节省 → 推理时多步思考、多次采样、自我验证，「用计算换质量」\n\n**关键技术**：\n- 思维链（Chain of Thought）：模型写出推理步骤，增加 token 消耗换取更高准确率\n- 多数投票（Majority Voting）：同一问题跑多次，取最常见答案\n- 树搜索（Tree Search）：探索多条推理路径，选最优\n- 自我反思（Self-Reflection）：模型检查自己的答案并修正\n\n**经济影响**：推理模型的 Hidden Reasoning Tokens（隐藏推理 token）用户看不到但需付费，成本可能是标准响应的 5-20 倍。这改变了 AI API 的定价模型——不再只看输入/输出 token，「思考深度」成为新的成本维度。\n\n**代表产品**：OpenAI o1/o3、DeepSeek-R1、Claude Extended Thinking、Gemini Deep Think。",
+  "published": true,
+  "published_date": "2026-08-02"
+}

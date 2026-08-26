@@ -1,0 +1,15 @@
+{
+  "term": "大语言模型（LLM）",
+  "slug": "llm",
+  "en": "Large Language Model",
+  "emoji": "🤖",
+  "category": "基础概念",
+  "tags": [
+    "AI基础",
+    "模型"
+  ],
+  "brief": "通过海量文本训练的AI模型，能理解和生成自然语言。如GPT-5、Claude 4、DeepSeek-V3等。",
+  "detail": "大语言模型（Large Language Model，LLM）是一种基于Transformer架构的深度学习模型，通过在数十亿甚至数万亿个文本标记上进行训练，学会了语言的结构、知识和推理能力。\n\n**核心原理**：LLM本质上是一个\"下一个词预测器\"——给定一段文本，它预测最可能的下一个词。当这个简单机制扩大到足够大的规模时，涌现出了推理、翻译、编程、创作等复杂能力。\n\n**关键特性**：\n- 规模效应：参数越多（从7B到万亿级），能力越强\n- 上下文窗口：从早期的4K tokens扩展到现在的100万+ tokens\n- 多模态：现代LLM不仅能处理文字，还能理解图片、音频、视频\n\n**代表产品**：OpenAI GPT-5、Anthropic Claude 4、Google Gemini 2.5、DeepSeek-V3、Qwen3等。\n\n**应用场景**：聊天助手、内容创作、代码生成、数据分析、教育辅导、客户服务等几乎所有涉及语言的场景。",
+  "published": true,
+  "published_date": "2026-06-26"
+}

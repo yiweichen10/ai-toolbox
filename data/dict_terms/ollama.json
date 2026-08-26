@@ -1,0 +1,16 @@
+{
+  "term": "Ollama（本地大模型运行框架）",
+  "slug": "ollama",
+  "en": "Ollama",
+  "emoji": "🦙",
+  "category": "基础设施",
+  "tags": [
+    "部署",
+    "开源",
+    "工具"
+  ],
+  "brief": "最流行的本地LLM一键部署工具。一条命令下载并运行开源模型，支持macOS/Linux/Windows。",
+  "detail": "Ollama让本地运行大模型像安装普通软件一样简单。一条命令搞定所有底层复杂性（CUDA配置、模型格式转换、量化）。\n\n核心命令：ollama run deepseek-r1:7b（下载并运行）、ollama pull llama4（仅下载）、ollama list（已安装模型）。\n\n底层：基于llama.cpp的GGUF量化格式，自动检测GPU并显存卸载，支持Apple Silicon Metal加速，CPU推理优化(AVX2/AVX512)。\n\n关键特性：Modelfile（自定义参数）、REST API（OpenAI兼容）、多模型管理、并发请求。\n\n生态：Open WebUI（ChatGPT风格界面）、Continue.dev（IDE中AI编程后端）、LangChain/LlamaIndex集成。\n\nOllama让个人开发者在自己的电脑上运行大模型变得像安装Chrome一样简单，是AI民主化的重要推手。",
+  "published": true,
+  "published_date": "2026-07-20"
+}

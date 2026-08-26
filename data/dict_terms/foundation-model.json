@@ -1,0 +1,15 @@
+{
+  "term": "基础模型（Foundation Model）",
+  "slug": "foundation-model",
+  "en": "Foundation Model",
+  "emoji": "🏗️",
+  "category": "技术原理",
+  "tags": [
+    "模型架构",
+    "预训练"
+  ],
+  "brief": "在大规模数据上预训练、可适配多种下游任务的通用大模型，GPT、Claude、Gemini、Llama都是基础模型。",
+  "detail": "基础模型（Foundation Model）指在海量数据上大规模预训练、具备广泛通用能力、可通过微调或提示适配各种下游任务的AI模型。这个概念由斯坦福大学在2021年提出，强调模型是众多应用共同的\"地基\"。\n\n**关键特征**：\n- 大规模预训练：在TB级互联网数据上训练，成本极高\n- 通用能力：不针对单一任务，而是掌握语言、知识、推理的通用规律\n- 可适配：通过微调（Fine-tuning）、提示工程、RAG等方式快速适配具体场景\n\n**代表模型**：GPT系列、Claude、Gemini、DeepSeek、Llama、Qwen、Mistral。当模型代表当前技术能力的最高水平时，被称为\"前沿模型（Frontier Model）\"；当模型被裁剪成小尺寸、用于端侧部署时，则属于小语言模型（SLM）。\n\n**产业意义**：基础模型让\"一个模型服务千行百业\"成为可能——AI应用开发从\"从零训练\"变成\"站在巨人肩膀上适配\"，大幅降低了AI落地门槛。",
+  "published": true,
+  "published_date": "2026-08-14"
+}

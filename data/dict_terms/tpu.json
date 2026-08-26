@@ -1,0 +1,16 @@
+{
+  "term": "张量处理器（TPU）",
+  "slug": "tpu",
+  "en": "Tensor Processing Unit",
+  "emoji": "🔲",
+  "category": "基础设施",
+  "tags": [
+    "硬件",
+    "Google",
+    "算力"
+  ],
+  "brief": "Google自研的AI专用芯片，针对TensorFlow和JAX做了极致优化。在Google Cloud上训练和推理大模型的专属硬件。",
+  "detail": "张量处理器（TPU）是Google于2016年首次发布的AI专用加速芯片。\n\n发展：TPU v1(2016,仅推理)→v2/v3(2017-2018,支持训练)→v4(2021,MLPerf多轮领先)→v5p(2023,训练Gemini主力)→v6(2025-2026)。\n\n架构特点：脉动阵列（专为矩阵乘法设计）、高带宽内存HBM、Pod级扩展（4096个TPU组成一个Pod）。\n\n与GPU对比：TPU生态系统较小（Google独占）；性价比上同等算力更便宜；灵活性不如GPU（通用计算弱）；获取仅限Google Cloud（还可在Colab/Kaggle免费用）。\n\n战略意义：TPU是Google不依赖NVIDIA也能训练超大规模模型的核武器。虽然生态不如CUDA，但在Google内部和Cloud用户中提供了极有竞争力的性价比。",
+  "published": true,
+  "published_date": "2026-07-25"
+}

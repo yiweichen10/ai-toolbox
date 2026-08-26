@@ -12,15 +12,18 @@
 
 用法：python scripts/add_dict_terms_20260820.py
 前置：data/dict_terms.json 已备份（dict_terms.json.20260820.bak）
+2026-08-26 去单体化: 改用 data_store 分片写入（data/dict_terms/<slug>.json）
 """
 import json
 import os
 import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DICT_PATH = os.path.join(BASE_DIR, 'data', 'dict_terms.json')
 
 def main():
+    sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+    from data_store import load_all_dict_terms, save_dict_terms_batch
+
     # 读取三份扩充数据
     new_terms = []
     for f in ['dict_expansion_A.json', 'dict_expansion_B.json', 'dict_expansion_C.json']:
@@ -30,9 +33,8 @@ def main():
         new_terms.extend(data)
         print(f'读取 {f}: {len(data)} 条')
 
-    # 载入现有词库
-    with open(DICT_PATH, encoding='utf-8') as fp:
-        terms = json.load(fp)
+    # 载入现有词库（分片优先，回退单体）
+    terms = load_all_dict_terms()
     existing_slugs = {t['slug'] for t in terms}
     print(f'现有词库: {len(terms)} 条')
 
@@ -49,13 +51,14 @@ def main():
         existing_slugs.add(t['slug'])
         added += 1
 
-    with open(DICT_PATH, 'w', encoding='utf-8') as fp:
-        json.dump(terms, fp, ensure_ascii=False, indent=2)
+    # 只写分片（data/dict_terms/<slug>.json），不写单体
+    save_dict_terms_batch(terms, indent=2)
 
     published = sum(1 for t in terms if t.get('published'))
     pending = len(terms) - published
     print(f'\n✅ 追加完成: 新增 {added} 条, 跳过 {skipped} 条')
     print(f'词库总量: {len(terms)} 条（已发布 {published} / 待发布 {pending}）')
+    print(f'已写分片 data/dict_terms/<slug>.json')
 
 if __name__ == '__main__':
     main()

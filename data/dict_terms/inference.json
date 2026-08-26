@@ -1,0 +1,15 @@
+{
+  "term": "推理（Inference）",
+  "slug": "inference",
+  "en": "Inference",
+  "emoji": "🧠",
+  "category": "基础概念",
+  "tags": [
+    "模型运行",
+    "ML基础"
+  ],
+  "brief": "训练好的 AI 模型进行预测或生成输出的过程。每次调用 ChatGPT、生成一张 AI 图片，都是推理。",
+  "detail": "推理（Inference）是 AI 模型生命周期的第二阶段——模型完成训练后，用它来处理新数据、做出预测或生成内容的过程。\n\n**训练 vs 推理**：\n| 维度 | 训练 (Training) | 推理 (Inference) |\n|------|----------------|-----------------|\n| 目的 | 学习参数 | 使用模型 |\n| 计算量 | 极高（数周/数月） | 较低（毫秒/秒级） |\n| 数据方向 | 前向+反向传播 | 仅前向传播 |\n| 硬件 | 数千 GPU 集群 | 单卡或端侧设备 |\n| 频率 | 一次/定期 | 每次使用 |\n\n**推理的关键指标**：TTFT（Time To First Token）、TPS（Tokens Per Second）、吞吐量（Throughput）、延迟（Latency）。\n\n**推理优化技术（2026年关键）**：KV Cache、推测解码、批处理、Flash Attention、量化。\n\n**成本考量**：推理是 AI 应用的主要运营成本。推理模型在 Extended Thinking 模式下消耗大量隐藏推理 token，用户看不到但需付费。",
+  "published": true,
+  "published_date": "2026-08-08"
+}

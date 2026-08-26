@@ -1,0 +1,15 @@
+{
+  "term": "小语言模型（SLM）",
+  "slug": "slm",
+  "en": "Small Language Model",
+  "emoji": "📚",
+  "category": "基础概念",
+  "tags": [
+    "模型类型",
+    "端侧AI"
+  ],
+  "brief": "参数量在数亿到数十亿级别的精简语言模型，追求在有限资源下的最佳性能。与 LLM（千亿参数）形成互补，是 2026 年端侧AI 和成本敏感场景的主力。",
+  "detail": "小语言模型（Small Language Model，SLM）是指参数规模较小（通常 1B-14B）但通过高质量数据和精心训练达到接近大模型性能的语言模型。在 2025-2026 年，SLM 因端侧AI、成本控制和数据隐私需求而迅速崛起。\n\n**SLM vs LLM 对比**：\n| 维度 | SLM | LLM |\n|------|-----|-----|\n| 参数量 | 1B-14B | 70B-1000B+ |\n| 显存需求 | 2-8 GB | 40-200+ GB |\n| 推理速度 | 快（可在手机运行） | 慢（需GPU集群） |\n| 精度（复杂任务） | 接近但略低 | 最高 |\n| 部署成本 | 低 | 高 |\n\n**代表模型**：\n- Microsoft Phi-4（14B）：用「教科书级」数据训练，在数学和编程基准上追平或超越 Llama-3-70B\n- Google Gemma 3（1B-12B）：开源，支持 128K 上下文，面向开发者\n- Apple 端侧模型（3B）：集成在 iOS/macOS 中，驱动 Apple Intelligence\n- DeepSeek-V3-Lite、Qwen2.5-7B 等国内方案\n\n**为什么 SLM 重要**：\n- 成本：端侧运行几乎零边际成本，适合大规模部署\n- 隐私：数据不离开设备，满足 GDPR/HIPAA 等合规要求\n- 可定制：体量小，微调成本低，适合企业私有化部署\n- 延迟：本地推理毫秒级响应，远优于云端 API",
+  "published": true,
+  "published_date": "2026-08-02"
+}

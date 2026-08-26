@@ -1,0 +1,15 @@
+{
+  "term": "推测解码（Speculative Decoding）",
+  "slug": "speculative-decoding",
+  "en": "Speculative Decoding",
+  "emoji": "⚡",
+  "category": "技术原理",
+  "tags": [
+    "推理加速",
+    "模型优化"
+  ],
+  "brief": "用小模型「草拟」、大模型「审核」的推理加速技术，可在不损失质量的前提下将生成速度提升 2-3 倍。",
+  "detail": "推测解码（Speculative Decoding）是一种大模型推理加速技术，核心思想是「用小模型猜，用大模型验」。\n\n**工作原理**：\n1. 草稿阶段：用一个轻量级小模型快速生成 3-5 个候选 token\n2. 验证阶段：大模型一次性并行验证这些候选 token\n3. 接受或拒绝：接受的 token 直接输出，被拒绝的由大模型重新生成\n\n**为什么能加速**：大模型的推理瓶颈在显存带宽而非计算，推测解码让大模型一次验证多个 token，充分利用并行计算能力。\n\n**关键优势**：无损加速（数学上保证）、通常 2-3 倍加速、最优可达 3.5 倍。\n\n**2025-2026 发展**：Medusa 头、Eagle/EAGLE-2、vLLM/TensorRT-LLM/llama.cpp 均已内置支持。",
+  "published": true,
+  "published_date": "2026-08-09"
+}

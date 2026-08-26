@@ -1,0 +1,15 @@
+{
+  "term": "深度求索（DeepSeek）",
+  "slug": "deepseek",
+  "en": "DeepSeek",
+  "emoji": "🐋",
+  "category": "基础概念",
+  "tags": [
+    "AI公司",
+    "国产模型"
+  ],
+  "brief": "中国AI公司，以极高的性价比和开源策略闻名。DeepSeek-V3和R1系列在多项基准上比肩GPT-5，但API价格仅为1/10。",
+  "detail": "DeepSeek（深度求索）是中国最受瞩目的AI公司之一，由幻方量化孵化。2024-2026年间，DeepSeek以\"超高性价比+全面开源\"的策略震撼了全球AI行业。\n\n**核心产品**：\n\n**DeepSeek-V3（2024年12月）**\n- 671B参数MoE架构（激活37B）\n- 在代码、数学、推理等多项基准接近GPT-4o\n- 训练成本仅$5.6M（GPT-4的1/20）\n- 完全开源\n\n**DeepSeek-R1（2025年1月）**\n- 专注推理能力的模型\n- 纯RL训练（无SFT），展现\"自我反思\"能力\n- 在AIME数学竞赛中得分79.8%（超越大多数人类）\n- 推理过程透明可见\n\n**DeepSeek-V4（2025年12月）**\n- 新一代旗舰模型\n- 支持128K上下文\n- 多模态能力增强\n\n**核心优势**：\n- **极致性价比**：API价格$0.14/百万token（GPT-5的1/70）\n- **完全开源**：模型权重、训练方法全部公开\n- **技术创新**：MLA注意力机制、MoE架构优化\n- **中文优秀**：中文理解和生成能力一流\n\n**行业影响**：\n- 证明了\"不需要天价投入也能做出顶级AI\"\n- 推动了全球AI价格战\n- 开源模型与闭源模型的差距大幅缩小\n- 中国企业AI能力的标志性突破\n\n**API使用**：\n```python\nfrom openai import OpenAI\nclient = OpenAI(api_key=\"sk-xxx\", base_url=\"https://api.deepseek.com\")\nresponse = client.chat.completions.create(\n    model=\"deepseek-chat\",  # V4\n    messages=[{\"role\": \"user\", \"content\": \"你好\"}]\n)\n```\n\n**2026年现状**：DeepSeek是中国AI的明星企业，V4系列在性价比上无人能及，被全球开发者广泛采用。",
+  "published": true,
+  "published_date": "2026-07-12"
+}

@@ -1,0 +1,15 @@
+{
+  "term": "HuggingFace（抱抱脸）",
+  "slug": "huggingface",
+  "en": "Hugging Face",
+  "emoji": "🤗",
+  "category": "基础设施",
+  "tags": [
+    "平台",
+    "开源"
+  ],
+  "brief": "AI领域的\"GitHub\"。提供模型托管、数据集管理、训练部署、社区协作的一站式平台。是全球最大的AI模型和数据集仓库。",
+  "detail": "HuggingFace（简称HF）是全球最重要的AI开源平台，被称为\"AI的GitHub\"。它提供了从模型发现、使用、训练到部署的完整工具链。\n\n**核心产品**：\n\n**1. Models（模型仓库）**\n- 托管了50万+预训练模型\n- 涵盖NLP、CV、Audio、多模态等所有领域\n- 一键下载使用：`model = AutoModel.from_pretrained(\"model-name\")`\n\n**2. Datasets（数据集）**\n- 10万+开源数据集\n- 支持流式加载，无需下载整个数据集\n- 数据版本管理\n\n**3. Spaces（应用部署）**\n- 免费部署AI Demo应用\n- 支持Gradio、Streamlit、静态HTML\n- 适合展示模型效果\n\n**4. Transformers库**\n- 最流行的模型加载和推理库\n- 统一的API：BERT/GPT/T5/BART都用同一套代码\n- 支持PyTorch、TensorFlow、JAX\n\n**5. Inference API**\n- 无需部署直接调用模型\n- 免费层每日有限额\n\n**重要工具**：\n- **Transformers**：模型推理\n- **Diffusers**：扩散模型（SD/Flux）\n- **PEFT**：高效微调（LoRA等）\n- **TRL**：RLHF训练\n- **Datasets**：数据处理\n- **Accelerate**：分布式训练\n\n**商业模式**：\n- 开源工具免费\n- 企业版提供私有部署、SLA、安全合规\n- 按GPU时长收费的计算服务\n\n**2026年地位**：\nHuggingFace已成为AI开发的事实标准平台。无论是学术研究还是工业应用，几乎所有开源AI工作流都以HF为核心枢纽。",
+  "published": true,
+  "published_date": "2026-07-14"
+}

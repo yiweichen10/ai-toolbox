@@ -733,11 +733,28 @@ def build_index_page(tools, articles):
     # 无日期的基础词条（最早批次）沉底不占首页位，靠 /dict/ 索引页全量入口兜底。
     dict_html = ''
     dict_terms = []
-    dict_data_path = os.path.join(build.DATA_DIR, 'dict_terms.json')
-    if os.path.exists(dict_data_path):
-        with open(dict_data_path, 'r', encoding='utf-8') as f:
-            all_dict = json.load(f)
-            dict_terms = [t for t in all_dict if t.get('published', True)]
+    # 2026-08-26 去单体化: 分片优先 data/dict_terms/*.json, 单体回退
+    all_dict = []
+    dict_shard_dir = os.path.join(build.DATA_DIR, 'dict_terms')
+    if os.path.isdir(dict_shard_dir):
+        for fn in sorted(os.listdir(dict_shard_dir)):
+            if not fn.endswith('.json'):
+                continue
+            try:
+                with open(os.path.join(dict_shard_dir, fn), 'r', encoding='utf-8') as f:
+                    rec = json.load(f)
+                if isinstance(rec, dict):
+                    all_dict.append(rec)
+                elif isinstance(rec, list):
+                    all_dict.extend(rec)
+            except Exception:
+                continue
+    else:
+        mono = os.path.join(build.DATA_DIR, 'dict_terms.json')
+        if os.path.exists(mono):
+            with open(mono, 'r', encoding='utf-8') as f:
+                all_dict = json.load(f)
+    dict_terms = [t for t in all_dict if t.get('published', True)]
     dict_terms.sort(key=lambda t: t.get('published_date') or '2000-01-01', reverse=True)
     # 2026-08-25：展示最新 12 条（3 排 × 4 列）；板块固定高度，超出由 content-tabs-body 滚动
     for idx, term in enumerate(dict_terms[:12]):

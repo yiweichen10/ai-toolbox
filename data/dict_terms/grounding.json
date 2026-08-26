@@ -1,0 +1,15 @@
+{
+  "term": "事实对齐（Grounding）",
+  "slug": "grounding",
+  "en": "Grounding / Factual Alignment",
+  "emoji": "⚓",
+  "category": "使用技巧",
+  "tags": [
+    "AI可靠性",
+    "技巧"
+  ],
+  "brief": "让AI的输出基于真实数据源而非凭空生成的技术方法。结合RAG和实时搜索，确保AI回答的事实准确性。",
+  "detail": "事实对齐（Grounding，也称事实锚定）是指确保AI的生成内容基于可验证的真实信息来源。这是对抗AI幻觉的最有效手段之一。\n\n**Grounding的方法**：\n\n**1. 搜索增强（Search Grounding）**\n- AI在回答前先搜索互联网\n- 基于搜索结果生成回答，而非依赖训练记忆\n- Claude 4、Gemini 2.5、ChatGPT都支持联网搜索\n- 代表产品：Perplexity（原生搜索型AI）\n\n**2. 文档锚定（Document Grounding）**\n- 提供特定文档作为\"信息源\"\n- AI只能基于提供的文档回答\n- 适合法律、医疗、金融等需要精确引用的场景\n\n**3. 知识库锚定（Knowledge Base Grounding）**\n- 企业内部知识库 + RAG\n- AI回答必须引用内部文档\n- 保证信息的一致性和权威性\n\n**4. 实时数据锚定（Real-time Data Grounding）**\n- 连接实时数据库（股票、天气、新闻）\n- 确保时间敏感信息的准确性\n\n**Grounding vs RAG的区别**：\n- RAG是技术架构（检索 + 生成）\n- Grounding是质量标准（输出必须有据可查）\n- RAG是实现Grounding的最常用技术手段\n\n**最佳实践**：\n- 要求AI为每个断言标注来源\n- 关键信息让AI\"引用原文\"而非\"转述\"\n- 对AI的统计数据永远交叉验证\n- 使用\"如果你不确定，请说明\"的Prompt策略",
+  "published": true,
+  "published_date": "2026-07-07"
+}
