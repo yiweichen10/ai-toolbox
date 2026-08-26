@@ -251,7 +251,7 @@ echo "  强制同步页面/数据目录（css js tools articles author live rank
 #   旧写法 `tar cf - -C DIR d --exclude='*.bak'` 每次都以 2 退出且 exclude 无效，
 #   又被 `2>/dev/null || true` 完全吞掉 → 同步真伪无人可知，却照样打印"✅ 已同步"。
 #   现在：exclude 前置 + 捕获 tar/ssh 退出码 + 失败重试一次 + 两次失败即中止（避免线上半新半旧）。
-for d in css js tools articles author live ranking quiz alternatives compare category dict ads news; do
+for d in css js tools articles author live ranking quiz alternatives compare category dict ads news data/tools data/articles; do
     if [ -d "$LOCAL_DIR/$d" ]; then
         _sync_ok=0
         for _try in 1 2; do
