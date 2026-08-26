@@ -23,10 +23,12 @@ ARTICLES_FILE = os.path.join(BASE, "data", "articles.json")
 def load_data():
     with open(LIVE_FILE, "r", encoding="utf-8") as f:
         live = json.load(f)
-    with open(TOOLS_FILE, "r", encoding="utf-8") as f:
-        tools = json.load(f)
-    with open(ARTICLES_FILE, "r", encoding="utf-8") as f:
-        articles = json.load(f)
+    # 2026-08-26 去单体化: 分片优先
+    import sys as _sys
+    _sys.path.insert(0, os.path.join(BASE, "scripts"))
+    from data_store import load_all_tools, load_all_articles
+    tools = load_all_tools()
+    articles = load_all_articles()
     return live, tools, articles
 
 def analyze_data(live, tools):
@@ -252,17 +254,10 @@ def main():
         print(f"[SKIP] 文章已存在: {article['slug']}，跳过")
         return
 
-    # 备份
-    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-    bak = f"{ARTICLES_FILE}.{ts}.insight.bak"
-    shutil.copy2(ARTICLES_FILE, bak)
-    print(f"[OK] 备份: {bak}")
-
-    # 插入到开头
-    articles.insert(0, article)
-    with open(ARTICLES_FILE, "w", encoding="utf-8") as f:
-        json.dump(articles, f, ensure_ascii=False, indent=2)
-    print(f"[OK] 已写入 {ARTICLES_FILE}")
+    # 写入分片 (2026-08-26 去单体化: 单体已退役, 真源 data/articles/<slug>.json)
+    from data_store import save_article
+    save_article(article, indent=2)
+    print(f"[OK] 已写入分片 data/articles/{article.get('slug')}.json")
 
     # 构建并部署
     print("\n[INFO] 开始构建...")

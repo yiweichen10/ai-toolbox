@@ -54,11 +54,12 @@ CATEGORY_ICONS = {
 
 
 def load_tools():
-    """加载工具数据，返回已发布工具列表"""
-    if not os.path.exists(TOOLS_FILE):
+    """加载工具数据，返回已发布工具列表（2026-08-26：改读分片，单体已退役）"""
+    try:
+        from data_store import load_all_tools
+        all_tools = load_all_tools()
+    except Exception:
         return []
-    with open(TOOLS_FILE, 'r', encoding='utf-8') as f:
-        all_tools = json.load(f)
     return [t for t in all_tools if t.get('published', False)]
 
 

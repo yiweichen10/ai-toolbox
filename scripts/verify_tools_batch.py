@@ -181,7 +181,7 @@ def cmd_init():
 # --next N: 输出下一批待核查工具
 # ============================================================
 
-def cmd_next(batch_size, stale_days=120):
+def cmd_next(batch_size, stale_days=90):
     tools = load_tools()
     state = load_state()
     st = state.get('tools', {})
@@ -695,8 +695,8 @@ def main():
     ap = argparse.ArgumentParser(description='全量工具联网核查批控系统')
     ap.add_argument('--init', action='store_true', help='初始化核查状态')
     ap.add_argument('--next', type=int, metavar='N', help='输出下一批 N 个待核查工具(含过期需复核查的 stale verified)')
-    ap.add_argument('--stale-days', type=int, default=120, metavar='D',
-                    help='已核查工具超过该天数(默认120)未复核查则重新纳入复核查')
+    ap.add_argument('--stale-days', type=int, default=90, metavar='D',
+                    help='已核查工具超过该天数(默认90)未复核查则重新纳入复核查')
     ap.add_argument('--apply', type=str, metavar='FILE', help='将核查结果 JSON 写回 tools.json')
     ap.add_argument('--status', action='store_true', help='查看核查进度')
     ap.add_argument('--reset', nargs='+', metavar='SLUG', help='重置指定工具状态为 unverified')

@@ -297,12 +297,17 @@ KNOWN_AFFILIATE_PROGRAMS = {
 
 
 def load_tools():
-    """加载中英文站工具数据"""
+    """加载中英文站工具数据 (2026-08-26 中文站去单体化: 分片优先)"""
     tools = []
-    # 中文站
-    if ZH_TOOLS.exists():
-        with open(ZH_TOOLS, 'r', encoding='utf-8') as f:
-            zh_data = json.load(f)
+    # 中文站 (真源为分片 data/tools/*.json)
+    if ZH_TOOLS.is_dir() or (str(ZH_TOOLS).endswith('tools.json') and ZH_TOOLS.parent.joinpath('tools').is_dir()):
+        try:
+            import sys as _sys
+            _sys.path.insert(0, str(BASE_DIR / "scripts"))
+            from data_store import load_all_tools
+            zh_data = load_all_tools()
+        except Exception:
+            zh_data = json.load(open(ZH_TOOLS, encoding='utf-8')) if ZH_TOOLS.exists() else []
         for t in zh_data:
             tools.append({
                 "slug": t.get("slug", ""),
@@ -393,20 +398,43 @@ def save_positioning_for_site(site, updates):
     """将 {slug: positioning_text} 写回对应数据文件。
     positioning_text 为空字符串表示删除该字段（删）。
     写前自动备份原文件。返回成功条数。
+    2026-08-26 中文站去单体化: 写分片 data/tools/<slug>.json
     """
     if site == "zh":
         fpath = ZH_TOOLS
+        shard_dir = BASE_DIR / "data" / "tools"
+        use_shards = shard_dir.is_dir()
     else:
         fpath = EN_TOOLS
-    if not fpath.exists():
+        shard_dir = None
+        use_shards = False
+    if not use_shards and not fpath.exists():
         raise FileNotFoundError(f"数据文件不存在: {fpath}")
 
-    # 备份原文件
+    saved = 0
+    if use_shards:
+        # 写分片: 逐 slug 定位
+        import sys as _sys
+        _sys.path.insert(0, str(BASE_DIR / "scripts"))
+        from data_store import save_tool
+        for slug, val in updates.items():
+            sp = shard_dir / f"{slug}.json"
+            if not sp.exists():
+                continue
+            tool = json.loads(sp.read_text(encoding="utf-8"))
+            if val and val.strip():
+                tool["positioning"] = val.strip()[:POSITIONING_MAX]
+            else:
+                tool.pop("positioning", None)
+            save_tool(tool, indent=2)
+            saved += 1
+        return saved
+
+    # 单体/英文站旧路径
     bak = fpath.with_name(fpath.stem + ".json.positioning.bak")
     shutil.copy2(fpath, bak)
 
     data = json.loads(fpath.read_text(encoding="utf-8"))
-    saved = 0
     for slug, val in updates.items():
         tool = next((t for t in data if t.get("slug") == slug), None)
         if tool is None:

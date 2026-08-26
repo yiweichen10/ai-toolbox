@@ -465,13 +465,13 @@ def main():
     parser.add_argument("--category", type=str, default="", help="Only generate specific category")
     args = parser.parse_args()
 
-    # 加载工具数据
-    if not os.path.exists(TOOLS_FILE):
-        print(f"[ERROR] Tools file not found: {TOOLS_FILE}")
+    # 加载工具数据（2026-08-26：改读分片，单体已退役）
+    try:
+        from data_store import load_all_tools
+        all_tools = load_all_tools()
+    except Exception as e:
+        print(f"[ERROR] Failed to load tools: {e}")
         sys.exit(1)
-
-    with open(TOOLS_FILE, 'r', encoding='utf-8') as f:
-        all_tools = json.load(f)
 
     published_tools = [t for t in all_tools if t.get('published', False)]
     print(f"Loaded {len(published_tools)} published tools")

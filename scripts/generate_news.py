@@ -62,11 +62,13 @@ def main():
         print(f'✅ 已有 {len(existing)} 条快讯: {out_path}')
         return
 
-    # 尝试加载工具库用于自动匹配
-    tools_path = os.path.join(BASE_DIR, 'data', 'tools.json')
+    # 尝试加载工具库用于自动匹配（2026-08-26：改读分片，单体已退役）
     tools = []
-    if os.path.exists(tools_path):
-        tools = json.load(open(tools_path, 'r', encoding='utf-8'))
+    try:
+        from data_store import load_all_tools
+        tools = load_all_tools()
+    except Exception:
+        tools = []
 
     print(f'📰 AI快讯生成 — {today}')
     print(f'  工具库: {len(tools)} 条')

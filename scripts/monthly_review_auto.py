@@ -96,36 +96,10 @@ def main():
     print(f"[INFO] Slug: {article['slug']}")
     print(f"[INFO] 字数: {len(article['content'])}")
 
-    # 备份
-    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-    bak = f"{ARTICLES_FILE}.{ts}.review.bak"
-    shutil.copy2(ARTICLES_FILE, bak)
-    print(f"[OK] 备份: {bak}")
-
-    # 写入/替换
-    replaced = False
-    for i, a in enumerate(articles):
-        if a.get("slug") == article["slug"]:
-            articles[i] = article
-            replaced = True
-            print(f"[OK] 已替换 {article['slug']}")
-            break
-    if not replaced:
-        articles.insert(0, article)
-        print(f"[OK] 已插入新文章到开头")
-
-    with open(ARTICLES_FILE, "w", encoding="utf-8") as f:
-        json.dump(articles, f, ensure_ascii=False, indent=2)
-    print(f"[OK] 已写入 {ARTICLES_FILE}")
-
-    # 同步散文件（2026-08-25 修复）：build 目录优先，只写单体 build 读不到新评测文章。
-    # 统一走 data_store.save_article（写 data/articles/<slug>.json + 原子同步单体）。
-    try:
-        from data_store import save_article
-        save_article(article, indent=2)
-        print(f"[OK] 已同步散文件 data/articles/{article['slug']}.json")
-    except Exception as _se:
-        print(f"[WARN] 散文件同步失败（单体已写入，不影响构建兜底）: {_se}")
+    # 写入分片（2026-08-26 去单体化: 单体已删除, 真源为 data/articles/<slug>.json）
+    from data_store import save_article
+    save_article(article, indent=2)
+    print(f"[OK] 已写入分片 data/articles/{article['slug']}.json (单体已退役)")
 
     print("\n[INFO] 构建...")
     ret = os.system(f'cd /d "{BASE}" && python scripts/build.py')

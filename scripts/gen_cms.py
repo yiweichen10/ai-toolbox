@@ -48,8 +48,14 @@ def gather_data():
     now = datetime.now(CST)
     today = now.strftime('%Y-%m-%d')
 
-    tools = load_json(os.path.join(DATA_DIR, 'tools.json')) or []
-    articles = load_json(os.path.join(DATA_DIR, 'articles.json')) or []
+    # 2026-08-26 去单体化: tools/articles 读分片, 其余文件仍单文件
+    try:
+        from data_store import load_all_tools, load_all_articles
+        tools = load_all_tools()
+        articles = load_all_articles()
+    except Exception:
+        tools = load_json(os.path.join(DATA_DIR, 'tools.json')) or []
+        articles = load_json(os.path.join(DATA_DIR, 'articles.json')) or []
     dict_terms = load_json(os.path.join(DATA_DIR, 'dict_terms.json')) or []
     subcats = load_json(os.path.join(DATA_DIR, 'subcategories.json')) or []
     compare = load_json(os.path.join(DATA_DIR, 'compare_data.json')) or {}
@@ -98,10 +104,14 @@ def gather_data():
     latest_articles = articles[:10]
     latest_tools = [t for t in pub_tools if t.get('slug')][:10]
 
-    # Size stats
+    # Size stats (2026-08-26 去单体化: tools/articles 为分片目录, 统计目录总大小)
     def file_size(path):
-        try: return os.path.getsize(path)
-        except: return 0
+        try:
+            if os.path.isdir(path):
+                return sum(os.path.getsize(os.path.join(path, f)) for f in os.listdir(path) if f.endswith('.json'))
+            return os.path.getsize(path)
+        except Exception:
+            return 0
 
     return {
         'generated_at': now.strftime('%Y-%m-%d %H:%M:%S CST'),
@@ -133,8 +143,8 @@ def gather_data():
             'checked_at': health.get('checked_at', '') if health else '',
         },
         'filesizes': {
-            'tools_json': file_size(os.path.join(DATA_DIR, 'tools.json')),
-            'articles_json': file_size(os.path.join(DATA_DIR, 'articles.json')),
+            'tools_json': file_size(os.path.join(DATA_DIR, 'tools')),
+            'articles_json': file_size(os.path.join(DATA_DIR, 'articles')),
             'sitemap': file_size(os.path.join(BASE_DIR, 'sitemap.xml')),
         }
     }

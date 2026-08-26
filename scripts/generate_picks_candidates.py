@@ -16,6 +16,15 @@ DATA = os.path.join(BASE, 'data')
 
 
 def load(name, default):
+    # 2026-08-26 去单体化: tools.json/articles.json 读分片
+    if name in ('tools.json', 'articles.json'):
+        try:
+            import sys as _sys
+            _sys.path.insert(0, os.path.join(BASE, 'scripts'))
+            from data_store import load_all_tools, load_all_articles
+            return load_all_tools() if name == 'tools.json' else load_all_articles()
+        except Exception:
+            pass
     try:
         with open(os.path.join(DATA, name), encoding='utf-8') as f:
             return json.load(f)

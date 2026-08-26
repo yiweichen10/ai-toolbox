@@ -206,8 +206,9 @@ def main():
     ap.add_argument('--sample', type=int, default=0, help='仅随机抽样 N 个做网络检查')
     args = ap.parse_args()
 
-    with open(TOOLS_FILE, 'r', encoding='utf-8') as f:
-        tools = json.load(f)
+    # 2026-08-26 去单体化: 分片优先
+    from data_store import load_all_tools
+    tools = load_all_tools()
 
     today = datetime.date.today().strftime('%Y-%m-%d')
     print(f'[verify] 加载 {len(tools)} 个工具 ({today})')

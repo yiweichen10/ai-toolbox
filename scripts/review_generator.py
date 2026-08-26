@@ -64,15 +64,22 @@ def load_data():
     articles = []
     review_data = {}
     try:
-        with open(TOOLS_FILE, "r", encoding="utf-8") as f:
-            tools = json.load(f)
+        # 2026-08-26 去单体化: 分片优先
+        from data_store import load_all_tools, load_all_articles
+        tools = load_all_tools()
+        articles = load_all_articles()
     except Exception as e:
-        print(f"[WARN] 无法加载 tools.json: {e}")
-    try:
-        with open(ARTICLES_FILE, "r", encoding="utf-8") as f:
-            articles = json.load(f)
-    except Exception as e:
-        print(f"[WARN] 无法加载 articles.json: {e}")
+        print(f"[WARN] 无法加载分片 tools/articles: {e}")
+        try:
+            with open(TOOLS_FILE, "r", encoding="utf-8") as f:
+                tools = json.load(f)
+        except Exception as e2:
+            print(f"[WARN] 无法加载 tools.json: {e2}")
+        try:
+            with open(ARTICLES_FILE, "r", encoding="utf-8") as f:
+                articles = json.load(f)
+        except Exception as e3:
+            print(f"[WARN] 无法加载 articles.json: {e3}")
     try:
         with open(REVIEW_DATA_FILE, "r", encoding="utf-8") as f:
             review_data = json.load(f)
@@ -541,29 +548,10 @@ def main():
         print(article['content'])
         return
 
-    # 备份
-    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-    bak = f"{ARTICLES_FILE}.{ts}.v2.bak"
-    shutil.copy2(ARTICLES_FILE, bak)
-    print(f"[OK] 备份: {bak}")
-
-    # 写入
-    if rebuild_slug:
-        # 替换已有文章
-        for i, a in enumerate(articles):
-            if a.get("slug") == rebuild_slug:
-                articles[i] = article
-                print(f"[OK] 已替换 {rebuild_slug}")
-                break
-        else:
-            articles.insert(0, article)
-            print(f"[OK] 已插入新文章到开头")
-    else:
-        articles.insert(0, article)
-        print(f"[OK] 已插入新文章到开头")
-
-    with open(ARTICLES_FILE, "w", encoding="utf-8") as f:
-        json.dump(articles, f, ensure_ascii=False, indent=2)
+    # 写入分片 (2026-08-26 去单体化: 单体已退役, 真源 data/articles/<slug>.json)
+    from data_store import save_article
+    save_article(article, indent=2)
+    print(f"[OK] 已写入分片 data/articles/{article.get('slug')}.json")
 
     # 构建
     print("\n[INFO] 开始构建...")

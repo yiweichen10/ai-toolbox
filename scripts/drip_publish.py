@@ -162,9 +162,11 @@ def unique_slug(slug_base, existing_slugs):
 
 
 def merge_tools(tools_json, new_entries, count):
-    """把 new_entries 的前 count 条合并进 tools_json，返回 (updated_tools, published_ids, skipped_ids)。
-    skipped_ids 包含因重复被跳过的条目，后续也应从队列中清理。"""
-    tools = json.load(open(tools_json, 'r', encoding='utf-8'))
+    """把 new_entries 的前 count 条合并进工具库，返回 (updated_tools, published_ids, skipped_ids)。
+    skipped_ids 包含因重复被跳过的条目，后续也应从队列中清理。
+    2026-08-26 去单体化: 真源为分片 data/tools/*.json, 单体 tools.json 已退役。"""
+    from data_store import load_all_tools, save_tools_batch
+    tools = load_all_tools()
     existing_slugs = {t.get('slug', '') for t in tools}
     existing_names = {t.get('name', '').strip().lower() for t in tools}
     published = []
@@ -192,11 +194,15 @@ def merge_tools(tools_json, new_entries, count):
         print(f'  [ADD]  {name} → {entry["category"]}  ({entry["rating"]}★, {entry["visits"]}次)')
 
     if published:
-        json.dump(tools, open(tools_json, 'w', encoding='utf-8'),
-                  ensure_ascii=False, indent=2)
-        print(f'\n[OK] tools.json 已更新 (+{len(published)} 条, 共 {len(tools)} 条)')
+        # 2026-08-26: 只写分片(新增的每个工具一个文件), 不写单体
+        n = 0
+        for e in published:
+            from data_store import save_tool
+            save_tool(e, indent=2)
+            n += 1
+        print(f'\n[OK] 分片已更新 (+{n} 条新工具分片, 库共 {len(tools)} 条)')
     else:
-        print(f'\n[OK] tools.json 无变更 (队列中被跳过或全部重复)')
+        print(f'\n[OK] 无变更 (队列中被跳过或全部重复)')
 
     # 已存在 + 已发布的都要从队列清理（用 name 做 key，因为 JSON 反序列化后 id() 会变）
     for s in skipped:
@@ -247,14 +253,8 @@ def main():
             print(f'  [{idx+1}] {raw.get("name")} → {cat}')
         return
 
-    # 备份
-    tools_path = os.path.join(BASE_DIR, 'data', 'tools.json')
-    backup_path = tools_path + f'.{datetime.now(CST).strftime("%Y%m%d-%H%M%S")}.bak'
-    import shutil
-    shutil.copy2(tools_path, backup_path)
-    print(f'💾 已备份: {os.path.basename(backup_path)}')
-
-    _, used_names = merge_tools(tools_path, entries, count)
+    # 2026-08-26 去单体化: 单体已退役, 无需备份单体; 直接合并写分片
+    _, used_names = merge_tools(None, entries, count)
     trim_queue(source_map, used_names)
 
     # 刷新工具数据

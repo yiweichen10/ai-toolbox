@@ -61,14 +61,14 @@ def load_tools_category():
     if _TOOLS_CAT:
         return
     try:
-        p = os.path.join(SITE_ROOT, 'data', 'tools.json')
-        if not os.path.isfile(p):
-            p = os.path.join(BASE_DIR, 'data', 'tools.json')
-        if os.path.isfile(p):
-            for t in json.load(open(p, encoding='utf-8')):
-                s, c = t.get('slug'), t.get('category')
-                if s and c:
-                    _TOOLS_CAT[s] = c
+        # 2026-08-26 去单体化: 分片优先
+        import sys as _sys
+        _sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+        from data_store import load_all_tools
+        for t in load_all_tools():
+            s, c = t.get('slug'), t.get('category')
+            if s and c:
+                _TOOLS_CAT[s] = c
     except Exception:
         pass
 
@@ -78,15 +78,15 @@ def load_articles_category():
     if _ARTICLES_CAT:
         return
     try:
-        p = os.path.join(SITE_ROOT, 'data', 'articles.json')
-        if not os.path.isfile(p):
-            p = os.path.join(BASE_DIR, 'data', 'articles.json')
-        if os.path.isfile(p):
-            for a in json.load(open(p, encoding='utf-8')):
-                s = a.get('slug')
-                c = a.get('category') or a.get('content_type')
-                if s and c:
-                    _ARTICLES_CAT[s] = c
+        # 2026-08-26 去单体化: 分片优先
+        import sys as _sys
+        _sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+        from data_store import load_all_articles
+        for a in load_all_articles():
+            s = a.get('slug')
+            c = a.get('category') or a.get('content_type')
+            if s and c:
+                _ARTICLES_CAT[s] = c
     except Exception:
         pass
 
