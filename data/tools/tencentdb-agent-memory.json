@@ -1,95 +1,155 @@
 {
-    "name": "TencentDB-Agent-Memory",
-    "slug": "tencentdb-agent-memory",
-    "positioning": "TencentDB-Agent-Memory是什么_开源Agent记忆库_跨会话记忆共享",
-    "auto_positioning": false,
-    "emoji": "🧠",
-    "color": "#0052D9",
-    "description": "腾讯云开源的 Agent 记忆与资产管理平台（MIT），于 2026 年 7 月（2.0.0 beta）首次公开开源，直击 Agent「每轮对话都失忆」的痛点。把对话、文档、代码加工为 Chat Memory、Skill、Wiki、Code Graph 四类资产，经审核与权限控制后跨 Agent、跨框架共享。",
-    "category": "AI智能体",
-    "tags": [
-        {
-            "text": "开源项目"
-        },
-        {
-            "text": "Agent记忆"
-        },
-        {
-            "text": "免费可用",
-            "type": "free"
-        }
-    ],
-    "rating": "⭐ 4.5",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "hot",
-        "text": "GitHub日榜第一"
+  "name": "TencentDB-Agent-Memory",
+  "slug": "tencentdb-agent-memory",
+  "positioning": "TencentDB-Agent-Memory是什么_开源Agent记忆库_跨会话记忆共享",
+  "auto_positioning": false,
+  "emoji": "🧠",
+  "color": "#0052D9",
+  "description": "腾讯云开源的 Agent 记忆与资产管理平台（MIT，自托管免费），让 Claude Code、Codex、OpenCode 等任意 coding agent 跨会话共享记忆与技能，告别「每轮对话都失忆」。v2.0.1（2026-08-25 稳定版）新增 OpenCode/DeepSeek Harness/Codex CLI/WorkBuddy 开箱接入、会话内直接下指令与冷启动默认 Agent。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "开源项目"
     },
-    "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
-    "price": "价格暂未公开",
-    "platform": "Web",
-    "pros": [
-        "直击 Agent 记忆痛点，分层记忆 + 混合检索 + 多框架适配",
-        "默认本地 SQLite + sqlite-vec 零依赖部署，数据可不出域",
-        "四层长期记忆（L0-L3）覆盖跨会话个性化记忆",
-        "已适配 OpenClaw、Hermes、Claude Code、CodeBuddy、Codex、DeepSeek Harness 等",
-        "开源（MIT）可私有化部署，文档中英齐全"
-    ],
-    "cons": [
-        "作为较新的开源项目，生态与社区规模仍在成长",
-        "深度能力依赖对框架 hook 的接入改造",
-        "接入腾讯云向量数据库会产生云资源费用"
-    ],
-    "features": [
-        "四层长期记忆：L0 对话、L1 原子、L2 场景、L3 画像",
-        "短期上下文卸载：工具日志写入 refs/*.md，注入 Mermaid 任务画布",
-        "双存储后端：默认 SQLite + sqlite-vec + FTS5，可选 Tencent Cloud VectorDB",
-        "混合检索：keyword / embedding / hybrid RRF",
-        "框架适配：OpenClaw 插件、Hermes Gateway Docker、独立 HTTP v2 API 与 Python/TypeScript SDK",
-        "MemoryHub：统一管理、权限控制与 Skill/Wiki/CodeGraph 共享"
-    ],
-    "related": [
-        "claude",
-        "coze",
-        "dify"
-    ],
-    "content": "## TencentDB-Agent-Memory 是什么？\nTencentDB-Agent-Memory 是腾讯云开源的 Agent 记忆与资产管理平台（MIT），于 2026 年 7 月（2.0.0 beta）首次公开开源，目标是解决 Agent「每轮对话都失忆」的核心痛点。它把对话、文档、代码统一加工为 Chat Memory、Skill、Wiki、Code Graph 四类资产，经审核与权限控制后跨 Agent、跨框架共享。默认用本地 SQLite + sqlite-vec 零依赖部署，也可进阶接入腾讯云向量数据库（TCVDB）做 BM25 + Vector 混合检索。到 2026 年 8 月，v2.0.0 上线 Memory Hub 控制面板，记忆资产从「谁生产谁使用」升级为「团队治理、按需装备」，并登顶 GitHub 日榜（据 2026 年 8 月 5 日统计约 13.6k stars）。\n\n## 核心功能\n1. 四层长期记忆：L0 对话、L1 原子、L2 场景、L3 画像，覆盖跨会话个性化记忆。\n2. 短期上下文卸载：工具日志写入 refs/*.md，注入 Mermaid 任务画布，缓解 context window 压力。\n3. 双存储后端：默认 SQLite + sqlite-vec + FTS5，可选 Tencent Cloud VectorDB，支持 keyword/embedding/hybrid RRF 混合检索。\n4. 框架适配：提供 OpenClaw 插件、Hermes Gateway Docker、独立 HTTP v2 API 与 Python/TypeScript SDK，已适配 OpenClaw、Hermes、Claude Code、CodeBuddy、Codex、DeepSeek Harness（规划/即将支持） 等。\n5. 资产管理与权限：MemoryHub 统一管理和权限控制，Skill 沉淀与共享、Wiki 与 CodeGraph 按需检索。\n\n## 版本/套餐对比\n开源项目（MIT），以自托管为主：默认本地 SQLite 零依赖部署免费；进阶可接入腾讯云向量数据库（按云资源计费，具体以腾讯云官网为准）。\n\n## 值不值得用？\n优点：直击 Agent 记忆痛点，分层记忆 + 混合检索 + 多框架适配，工程完整、文档齐全；开源可私有化部署，数据不出域。缺点：作为较新的开源项目，生态与社区规模仍在成长；深度能力依赖对框架 hook 的接入改造。结论：做多 Agent、跨会话、跨框架记忆共享的团队，值得优先评估。\n\n## 使用建议\n先用一行命令装 OpenClaw 插件或拉起 ./start-all.sh 体验 Memory Hub（localhost:8125）。从个人记忆起步，确认召回质量后再开启团队共享与权限治理。接生产前核对向量库计费与数据合规。\n\n## 适合谁用？\n- 推荐：用 OpenClaw/Hermes/Claude Code/Codex 等框架、苦于 Agent 失忆的开发者与团队。\n- 可考虑：希望沉淀团队知识资产、做 Skill/Wiki 复用的组织。\n- 不推荐：只需要单次对话、无需跨会话记忆的轻量场景。",
-    "published": true,
-    "faq": [
-        {
-            "question": "TencentDB-Agent-Memory 是数据库产品吗？",
-            "answer": "不完全是。它是围绕 Agent 记忆与资产管理的中间层平台，默认用本地 SQLite + sqlite-vec 零依赖部署，也可接入腾讯云向量数据库做混合检索；重点在记忆的沉淀、检索与跨框架共享。"
-        },
-        {
-            "question": "支持哪些 Agent 框架？",
-            "answer": "已适配 OpenClaw、Hermes Agent、Claude Code、CodeBuddy、Codex、DeepSeek Harness 等，并提供 OpenClaw 插件、Hermes Gateway Docker 镜像、独立 HTTP v2 RESTful API 及 Python/TypeScript SDK。"
-        },
-        {
-            "question": "记忆是怎么分层的？",
-            "answer": "长期记忆分 L0 对话、L1 原子、L2 场景、L3 画像四层；短期上下文则通过 offload 把工具日志写入 refs/*.md 并注入 Mermaid 任务画布，缓解长任务的 context window 压力。"
-        },
-        {
-            "question": "收费吗？",
-            "answer": "项目本身 MIT 开源、自托管免费；默认本地 SQLite 部署零依赖零费用。若接入腾讯云向量数据库（TCVDB）等云资源，则按对应云服务计费。"
-        }
-    ],
-    "content_verified": true,
-    "conflict": false,
-    "verify_status": "verified",
-    "seo_keywords": [
-        "TencentDB-Agent-Memory",
-        "TencentDB-Agent-Memory怎么样",
-        "TencentDB-Agent-Memory免费版",
-        "TencentDB-Agent-Memory使用教程",
-        "TencentDB-Agent-Memory和哪个好"
-    ],
-    "source_urls": [
-        "https://github.com/TencentCloud/TencentDB-Agent-Memory",
-        "https://agent.csdn.net/6a729d3310ee7a33f29620b9.html",
-        "https://new.qq.com/rain/a/20260814A0DJBK00"
-    ],
-    "confidence": "high",
-    "created_date": "2026-08-14",
-    "updated_date": "2026-08-14",
-    "published_date": "2026-08-24"
+    {
+      "text": "Agent记忆"
+    },
+    {
+      "text": "免费可用",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "GitHub日榜第一"
+  },
+  "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+  "price": "开源自托管免费",
+  "platform": "Web",
+  "pros": [
+    "直击 Agent 记忆痛点，分层记忆 + 混合检索 + 多框架适配",
+    "默认本地 SQLite + sqlite-vec 零依赖部署，数据可不出域",
+    "四层长期记忆（L0-L3）覆盖跨会话个性化记忆",
+    "v2.0.1 已适配 OpenClaw/Hermes/Claude Code/Codex/OpenCode/DeepSeek Harness/WorkBuddy 等主流 coding agent",
+    "开源（MIT）可私有化部署，文档中英齐全"
+  ],
+  "cons": [
+    "作为较新的开源项目，生态与社区规模仍在成长",
+    "深度能力依赖对框架 hook 的接入改造",
+    "接入腾讯云向量数据库会产生云资源费用"
+  ],
+  "features": [
+    "四层长期记忆：L0 对话、L1 原子、L2 场景、L3 画像",
+    "短期上下文卸载：工具日志写入 refs/*.md，注入 Mermaid 任务画布",
+    "双存储后端：默认 SQLite + sqlite-vec + FTS5，可选 Tencent Cloud VectorDB，支持 keyword/embedding/hybrid RRF 混合检索",
+    "多客户端接入：OpenClaw、Hermes、Claude Code、CodeBuddy、Codex、DeepSeek Harness、OpenCode、WorkBuddy 等开箱接入",
+    "会话内指令与冷启动：对话中重置绑定/建任务，默认 Agent 自动生成、IDE 资产一键导入",
+    "MemoryHub 面板：统一管理、权限控制、跨会话记忆搜索与 Skill/Wiki/CodeGraph 共享"
+  ],
+  "related": [
+    "claude",
+    "coze",
+    "dify"
+  ],
+  "content": "## TencentDB-Agent-Memory 是什么？\nTencentDB-Agent-Memory 是腾讯云开源的 Agent 记忆与资产管理平台（MIT），于 2026 年 7 月首次公开开源，2026-08-25 发布 v2.0.1 稳定版，直击 Agent「每轮对话都失忆」的核心痛点。它把对话、文档、代码统一加工为 Chat Memory、Skill、Wiki、Code Graph 四类资产，经审核与权限控制后跨 Agent、跨框架共享。默认用本地 SQLite + sqlite-vec 零依赖部署，也可进阶接入腾讯云向量数据库（TCVDB）做 BM25 + Vector 混合检索。v2.0.1 在 v2.0.0（Memory Hub 控制面板）基础上大幅扩展了客户端接入范围与交互体验，并登顶 GitHub 日榜（约 13.6k stars）。\n\n## 核心功能\n1. 四层长期记忆：L0 对话、L1 原子、L2 场景、L3 画像，覆盖跨会话个性化记忆。\n2. 短期上下文卸载：工具日志写入 refs/*.md，注入 Mermaid 任务画布，缓解 context window 压力。\n3. 双存储后端：默认 SQLite + sqlite-vec + FTS5，可选 Tencent Cloud VectorDB，支持 keyword/embedding/hybrid RRF 混合检索。\n4. 多客户端接入：已适配 OpenClaw、Hermes、Claude Code、CodeBuddy、Codex、DeepSeek Harness（dsh）、OpenCode、WorkBuddy 等，提供 OpenClaw 插件、Hermes Gateway Docker、独立 HTTP v2 API 与 Python/TypeScript SDK。\n5. 资产管理与权限：MemoryHub 统一管理和权限控制，Skill 沉淀与共享、Wiki 与 CodeGraph 按需检索；v2.0.1 新增跨会话对话记忆搜索、资产 ID 展示复制。\n\n## v2.0.1 新增能力（2026-08-25）\n- 扩展客户端接入：新增 OpenCode、DeepSeek Harness（dsh）Web UI 会话、Codex CLI、WorkBuddy 开箱即用接入。\n- 会话内直接下指令：对话中途一键重置绑定（换团队/Agent/任务）、对话内直接创建/更新任务，无需切面板。\n- 冷启动开箱即用：创建团队/用户即自动生成默认 Agent，管理员可自定义默认 Agent 模板，支持从 IDE 已有 Agent 一键导入资产。\n- 绑定更稳：绑定持久化保存、重启不丢失，切换 Agent 后记忆与技能正确跟随不串场。\n- 技能体验升级：会话新建技能立即可被检索、技能支持在线编辑、新增接入向导技能。\n- 面板与部署增强：全新登录页动效、跨会话记忆搜索、一键部署脚本交互式配置与自动预检、客户端接入地址一键复制。\n- 性能与修复：Wiki 页面并发构建与单页失败重试、批量修复多 Agent 场景记忆检索为空、导入历史会话时间错乱等缺陷，新增清空对话记忆功能。\n\n## 版本/套餐对比\n开源项目（MIT），以自托管为主：默认本地 SQLite 零依赖部署免费；进阶可接入腾讯云向量数据库（按云资源计费，具体以腾讯云官网为准）。\n\n## 值不值得用？\n优点：直击 Agent 记忆痛点，分层记忆 + 混合检索 + 多框架适配，工程完整、文档齐全；开源可私有化部署，数据不出域；v2.0.1 已支持主流 coding agent 开箱挂上团队记忆。缺点：作为较新的开源项目，生态与社区规模仍在成长；深度能力依赖对框架 hook 的接入改造。结论：做多 Agent、跨会话、跨框架记忆共享的团队，值得优先评估。\n\n## 使用建议\n先用一行命令装 OpenClaw 插件或拉起 ./start-all.sh 体验 Memory Hub（localhost:8125）。从个人记忆起步，确认召回质量后再开启团队共享与权限治理。接生产前核对向量库计费与数据合规。\n\n## 适合谁用？\n- 推荐：用 OpenClaw/Hermes/Claude Code/Codex/OpenCode 等框架、苦于 Agent 失忆的开发者与团队。\n- 可考虑：希望沉淀团队知识资产、做 Skill/Wiki 复用的组织。\n- 不推荐：只需要单次对话、无需跨会话记忆的轻量场景。",
+  "published": true,
+  "faq": [
+    {
+      "question": "TencentDB-Agent-Memory 是数据库产品吗？",
+      "answer": "不完全是。它是围绕 Agent 记忆与资产管理的中间层平台，默认用本地 SQLite + sqlite-vec 零依赖部署，也可接入腾讯云向量数据库做混合检索；重点在记忆的沉淀、检索与跨框架共享。"
+    },
+    {
+      "question": "支持哪些 Agent 框架？",
+      "answer": "已适配 OpenClaw、Hermes、Claude Code、CodeBuddy、Codex、DeepSeek Harness（dsh），v2.0.1 新增 OpenCode、Codex CLI、WorkBuddy 开箱接入，并提供 OpenClaw 插件、Hermes Gateway Docker 镜像、独立 HTTP v2 RESTful API 及 Python/TypeScript SDK。"
+    },
+    {
+      "question": "记忆是怎么分层的？",
+      "answer": "长期记忆分 L0 对话、L1 原子、L2 场景、L3 画像四层；短期上下文则通过 offload 把工具日志写入 refs/*.md 并注入 Mermaid 任务画布，缓解长任务的 context window 压力。"
+    },
+    {
+      "question": "收费吗？",
+      "answer": "项目本身 MIT 开源、自托管免费；默认本地 SQLite 部署零依赖零费用。若接入腾讯云向量数据库（TCVDB）等云资源，则按对应云服务计费。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "TencentDB-Agent-Memory",
+    "TencentDB-Agent-Memory怎么样",
+    "TencentDB-Agent-Memory免费版",
+    "TencentDB-Agent-Memory使用教程",
+    "TencentDB-Agent-Memory和哪个好"
+  ],
+  "source_urls": [
+    "https://github.com/TencentCloud/TencentDB-Agent-Memory/releases"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-26",
+  "published_date": "2026-08-24",
+  "verified_description": "腾讯云开源的 Agent 记忆与资产管理平台（MIT，自托管免费），让 Claude Code、Codex、OpenCode 等任意 coding agent 跨会话共享记忆与技能，告别「每轮对话都失忆」。v2.0.1（2026-08-25 稳定版）新增 OpenCode/DeepSeek Harness/Codex CLI/WorkBuddy 开箱接入、会话内直接下指令与冷启动默认 Agent。",
+  "verified_features": [
+    "四层长期记忆：L0 对话、L1 原子、L2 场景、L3 画像",
+    "短期上下文卸载：工具日志写入 refs/*.md，注入 Mermaid 任务画布",
+    "双存储后端：默认 SQLite + sqlite-vec + FTS5，可选 Tencent Cloud VectorDB，支持 keyword/embedding/hybrid RRF 混合检索",
+    "多客户端接入：OpenClaw、Hermes、Claude Code、CodeBuddy、Codex、DeepSeek Harness、OpenCode、WorkBuddy 等开箱接入",
+    "会话内指令与冷启动：对话中重置绑定/建任务，默认 Agent 自动生成、IDE 资产一键导入",
+    "MemoryHub 面板：统一管理、权限控制、跨会话记忆搜索与 Skill/Wiki/CodeGraph 共享"
+  ],
+  "verified_pros": [
+    "直击 Agent 记忆痛点，分层记忆 + 混合检索 + 多框架适配",
+    "默认本地 SQLite + sqlite-vec 零依赖部署，数据可不出域",
+    "四层长期记忆（L0-L3）覆盖跨会话个性化记忆",
+    "v2.0.1 已适配 OpenClaw/Hermes/Claude Code/Codex/OpenCode/DeepSeek Harness/WorkBuddy 等主流 coding agent",
+    "开源（MIT）可私有化部署，文档中英齐全"
+  ],
+  "verified_cons": [
+    "作为较新的开源项目，生态与社区规模仍在成长",
+    "深度能力依赖对框架 hook 的接入改造",
+    "接入腾讯云向量数据库会产生云资源费用"
+  ],
+  "verified_faq": [
+    {
+      "question": "TencentDB-Agent-Memory 是数据库产品吗？",
+      "answer": "不完全是。它是围绕 Agent 记忆与资产管理的中间层平台，默认用本地 SQLite + sqlite-vec 零依赖部署，也可接入腾讯云向量数据库做混合检索；重点在记忆的沉淀、检索与跨框架共享。"
+    },
+    {
+      "question": "支持哪些 Agent 框架？",
+      "answer": "已适配 OpenClaw、Hermes、Claude Code、CodeBuddy、Codex、DeepSeek Harness（dsh），v2.0.1 新增 OpenCode、Codex CLI、WorkBuddy 开箱接入，并提供 OpenClaw 插件、Hermes Gateway Docker 镜像、独立 HTTP v2 RESTful API 及 Python/TypeScript SDK。"
+    },
+    {
+      "question": "记忆是怎么分层的？",
+      "answer": "长期记忆分 L0 对话、L1 原子、L2 场景、L3 画像四层；短期上下文则通过 offload 把工具日志写入 refs/*.md 并注入 Mermaid 任务画布，缓解长任务的 context window 压力。"
+    },
+    {
+      "question": "收费吗？",
+      "answer": "项目本身 MIT 开源、自托管免费；默认本地 SQLite 部署零依赖零费用。若接入腾讯云向量数据库（TCVDB）等云资源，则按对应云服务计费。"
+    }
+  ],
+  "verified_category": "AI智能体",
+  "verified_price": "MIT 开源 / 自托管免费（接入腾讯云向量数据库等云资源按云计费）",
+  "price_verified": true,
+  "corrected_content": "## TencentDB-Agent-Memory 是什么？\nTencentDB-Agent-Memory 是腾讯云开源的 Agent 记忆与资产管理平台（MIT），于 2026 年 7 月首次公开开源，2026-08-25 发布 v2.0.1 稳定版，直击 Agent「每轮对话都失忆」的核心痛点。它把对话、文档、代码统一加工为 Chat Memory、Skill、Wiki、Code Graph 四类资产，经审核与权限控制后跨 Agent、跨框架共享。默认用本地 SQLite + sqlite-vec 零依赖部署，也可进阶接入腾讯云向量数据库（TCVDB）做 BM25 + Vector 混合检索。v2.0.1 在 v2.0.0（Memory Hub 控制面板）基础上大幅扩展了客户端接入范围与交互体验，并登顶 GitHub 日榜（约 13.6k stars）。\n\n## 核心功能\n1. 四层长期记忆：L0 对话、L1 原子、L2 场景、L3 画像，覆盖跨会话个性化记忆。\n2. 短期上下文卸载：工具日志写入 refs/*.md，注入 Mermaid 任务画布，缓解 context window 压力。\n3. 双存储后端：默认 SQLite + sqlite-vec + FTS5，可选 Tencent Cloud VectorDB，支持 keyword/embedding/hybrid RRF 混合检索。\n4. 多客户端接入：已适配 OpenClaw、Hermes、Claude Code、CodeBuddy、Codex、DeepSeek Harness（dsh）、OpenCode、WorkBuddy 等，提供 OpenClaw 插件、Hermes Gateway Docker、独立 HTTP v2 API 与 Python/TypeScript SDK。\n5. 资产管理与权限：MemoryHub 统一管理和权限控制，Skill 沉淀与共享、Wiki 与 CodeGraph 按需检索；v2.0.1 新增跨会话对话记忆搜索、资产 ID 展示复制。\n\n## v2.0.1 新增能力（2026-08-25）\n- 扩展客户端接入：新增 OpenCode、DeepSeek Harness（dsh）Web UI 会话、Codex CLI、WorkBuddy 开箱即用接入。\n- 会话内直接下指令：对话中途一键重置绑定（换团队/Agent/任务）、对话内直接创建/更新任务，无需切面板。\n- 冷启动开箱即用：创建团队/用户即自动生成默认 Agent，管理员可自定义默认 Agent 模板，支持从 IDE 已有 Agent 一键导入资产。\n- 绑定更稳：绑定持久化保存、重启不丢失，切换 Agent 后记忆与技能正确跟随不串场。\n- 技能体验升级：会话新建技能立即可被检索、技能支持在线编辑、新增接入向导技能。\n- 面板与部署增强：全新登录页动效、跨会话记忆搜索、一键部署脚本交互式配置与自动预检、客户端接入地址一键复制。\n- 性能与修复：Wiki 页面并发构建与单页失败重试、批量修复多 Agent 场景记忆检索为空、导入历史会话时间错乱等缺陷，新增清空对话记忆功能。\n\n## 版本/套餐对比\n开源项目（MIT），以自托管为主：默认本地 SQLite 零依赖部署免费；进阶可接入腾讯云向量数据库（按云资源计费，具体以腾讯云官网为准）。\n\n## 值不值得用？\n优点：直击 Agent 记忆痛点，分层记忆 + 混合检索 + 多框架适配，工程完整、文档齐全；开源可私有化部署，数据不出域；v2.0.1 已支持主流 coding agent 开箱挂上团队记忆。缺点：作为较新的开源项目，生态与社区规模仍在成长；深度能力依赖对框架 hook 的接入改造。结论：做多 Agent、跨会话、跨框架记忆共享的团队，值得优先评估。\n\n## 使用建议\n先用一行命令装 OpenClaw 插件或拉起 ./start-all.sh 体验 Memory Hub（localhost:8125）。从个人记忆起步，确认召回质量后再开启团队共享与权限治理。接生产前核对向量库计费与数据合规。\n\n## 适合谁用？\n- 推荐：用 OpenClaw/Hermes/Claude Code/Codex/OpenCode 等框架、苦于 Agent 失忆的开发者与团队。\n- 可考虑：希望沉淀团队知识资产、做 Skill/Wiki 复用的组织。\n- 不推荐：只需要单次对话、无需跨会话记忆的轻量场景。",
+  "content_flags": "原长文停留在 v2.0.0 beta 表述，未覆盖 v2.0.1 稳定版新增的多客户端接入/会话内指令/冷启动等能力，已重写",
+  "last_verified": "2026-08-26",
+  "verify_notes": "v2.0.1 为稳定版（非 beta），相较 v2.0.0 增加多客户端接入（OpenCode/dsh/Codex CLI/WorkBuddy）、会话内指令、冷启动默认 Agent 等。开源 MIT 自托管免费，无商业定价页，价格字段保持「开源自托管免费」不变。未运行 scrape_price（无定价页可抓取，属开源工具）。其余候选（codex-cli/codex-harness alpha 预发布、deepseek-reasonix/jcode/kiro-crew 第三方或占位、Claude Code v2.1.246 修复类高频迭代、grok/opencode 第三方平台、localbanana 为 NVIDIA 硬件误匹配）均非真实版本变化，按惯例跳过。",
+  "verified_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+  "verified_publisher": "腾讯云",
+  "verified_what": "腾讯云开源的 Agent 记忆与资产管理平台（MIT），让 coding agent 跨会话共享记忆与技能",
+  "verified_platform": "Self-hosted (Docker / 本地 SQLite), Web (MemoryHub localhost:8125), HTTP v2 API, Python/TypeScript SDK",
+  "verified_tags": [
+    {
+      "text": "开源项目"
+    },
+    {
+      "text": "Agent记忆"
+    },
+    {
+      "text": "免费可用",
+      "type": "free"
+    }
+  ]
 }

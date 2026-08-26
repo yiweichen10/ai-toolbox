@@ -16,28 +16,6 @@
       "icon": "🏆",
       "ranked_tools": [
         {
-          "slug": "meitu-design-ai",
-          "name": "美图设计室AI",
-          "emoji": "🎨",
-          "color": "#FF6B6B",
-          "score": 96.5,
-          "scores": {
-            "hot": 39.49768787657147,
-            "quality": 27.0,
-            "functionality": 20,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费版 + 会员约29.9元/月（或199元/年）",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "约850万/月",
-          "rank": 1
-        },
-        {
           "slug": "glm-5-2",
           "name": "智谱 GLM 5.3",
           "emoji": "🧠",
@@ -57,6 +35,28 @@
             "text": "HOT"
           },
           "visits": "850万",
+          "rank": 1
+        },
+        {
+          "slug": "meitu-design-ai",
+          "name": "美图设计室AI",
+          "emoji": "🎨",
+          "color": "#FF6B6B",
+          "score": 96.5,
+          "scores": {
+            "hot": 39.49768787657147,
+            "quality": 27.0,
+            "functionality": 20,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费版 + 会员约29.9元/月（或199元/年）",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约850万/月",
           "rank": 2
         },
         {
@@ -585,10 +585,10 @@
           "rank": 26
         },
         {
-          "slug": "veed-io",
-          "name": "Veed.io",
-          "emoji": "🎬",
-          "color": "#777AB2",
+          "slug": "chatpdf",
+          "name": "ChatPDF",
+          "emoji": "📄",
+          "color": "#2563EB",
           "score": 91.5,
           "scores": {
             "hot": 39.49768787657147,
@@ -598,12 +598,12 @@
             "freshness": 8
           },
           "rating": "⭐ 4.5",
-          "price": "免费版 + 付费 $10/用户/月起",
+          "price": "免费版每天2个PDF；Plus $19.99/月（$139.99/年）",
           "badge": {
             "type": "recommend",
             "text": "推荐"
           },
-          "visits": "850万/月",
+          "visits": "850万",
           "rank": 27
         },
         {
@@ -629,10 +629,10 @@
           "rank": 28
         },
         {
-          "slug": "chatpdf",
-          "name": "ChatPDF",
-          "emoji": "📄",
-          "color": "#2563EB",
+          "slug": "veed-io",
+          "name": "Veed.io",
+          "emoji": "🎬",
+          "color": "#777AB2",
           "score": 91.5,
           "scores": {
             "hot": 39.49768787657147,
@@ -642,12 +642,12 @@
             "freshness": 8
           },
           "rating": "⭐ 4.5",
-          "price": "免费版每天2个PDF；Plus $19.99/月（$139.99/年）",
+          "price": "免费版 + 付费 $10/用户/月起",
           "badge": {
             "type": "recommend",
             "text": "推荐"
           },
-          "visits": "850万",
+          "visits": "850万/月",
           "rank": 29
         },
         {
@@ -739,28 +739,6 @@
           "rank": 33
         },
         {
-          "slug": "deepsec",
-          "name": "DeepSec",
-          "emoji": "🔒",
-          "color": "#1E3A5F",
-          "score": 90.8,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 27.0,
-            "functionality": 20,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费开源（Apache-2.0）",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "约85万/月",
-          "rank": 34
-        },
-        {
           "slug": "codebuddy-tengxun",
           "name": "CodeBuddy腾讯",
           "emoji": "🤖",
@@ -780,6 +758,28 @@
             "text": "推荐"
           },
           "visits": "85万",
+          "rank": 34
+        },
+        {
+          "slug": "deepsec",
+          "name": "DeepSec",
+          "emoji": "🔒",
+          "color": "#1E3A5F",
+          "score": 90.8,
+          "scores": {
+            "hot": 33.79768787657147,
+            "quality": 27.0,
+            "functionality": 20,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费开源（Apache-2.0）",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约85万/月",
           "rank": 35
         },
         {
@@ -871,28 +871,6 @@
           "rank": 39
         },
         {
-          "slug": "xinghuo-cognitive-model",
-          "name": "星火认知大模型",
-          "emoji": "🔥",
-          "color": "#4A90E2",
-          "score": 90.3,
-          "scores": {
-            "hot": 39.49768787657147,
-            "quality": 25.799999999999997,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "基础功能免费，API按量计费",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "850万",
-          "rank": 40
-        },
-        {
           "slug": "baichuan-2",
           "name": "Baichuan 2",
           "emoji": "🤖",
@@ -912,7 +890,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 41
+          "rank": 40
         },
         {
           "slug": "tongyi-efficiency",
@@ -934,7 +912,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 42
+          "rank": 41
         },
         {
           "slug": "wenxin-yige",
@@ -956,6 +934,28 @@
             "text": "推荐"
           },
           "visits": "约850万月访问",
+          "rank": 42
+        },
+        {
+          "slug": "xinghuo-cognitive-model",
+          "name": "星火认知大模型",
+          "emoji": "🔥",
+          "color": "#4A90E2",
+          "score": 90.3,
+          "scores": {
+            "hot": 39.49768787657147,
+            "quality": 25.799999999999997,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "基础功能免费，API按量计费",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "850万",
           "rank": 43
         },
         {
@@ -1003,28 +1003,6 @@
           "rank": 45
         },
         {
-          "slug": "tabnine",
-          "name": "Tabnine",
-          "emoji": "💻",
-          "color": "#6D5FFD",
-          "score": 90.2,
-          "scores": {
-            "hot": 38.18412902471531,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费版可用（基础补全）；Dev $9/月起（年付），$12/月（月付）",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "约500万月访问量",
-          "rank": 46
-        },
-        {
           "slug": "eqxiu",
           "name": "易企秀",
           "emoji": "🎨",
@@ -1044,7 +1022,7 @@
             "text": "推荐"
           },
           "visits": "月访问量约500万",
-          "rank": 47
+          "rank": 46
         },
         {
           "slug": "goldfish",
@@ -1066,6 +1044,28 @@
             "text": "NEW"
           },
           "visits": "5,000,000",
+          "rank": 47
+        },
+        {
+          "slug": "tabnine",
+          "name": "Tabnine",
+          "emoji": "💻",
+          "color": "#6D5FFD",
+          "score": 90.2,
+          "scores": {
+            "hot": 38.18412902471531,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费版可用（基础补全）；Dev $9/月起（年付），$12/月（月付）",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "约500万月访问量",
           "rank": 48
         },
         {
@@ -1091,10 +1091,10 @@
           "rank": 49
         },
         {
-          "slug": "metagpt",
-          "name": "MetaGPT",
-          "emoji": "🤖",
-          "color": "#7C3AED",
+          "slug": "cline",
+          "name": "Cline",
+          "emoji": "💻",
+          "color": "#4F46E5",
           "score": 90.0,
           "scores": {
             "hot": 33.79768787657147,
@@ -1104,7 +1104,7 @@
             "freshness": 8
           },
           "rating": "4.7",
-          "price": "免费开源(需自备API Key) / MGX商业版按官网定价",
+          "price": "免费开源(BYOK自付API费用) / Teams $20/用户/月 / Enterprise定制",
           "badge": {
             "type": "hot",
             "text": "HOT"
@@ -1114,7 +1114,7 @@
         }
       ],
       "total_tools": 672,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -1127,7 +1127,7 @@
       "id": "free",
       "slug": "best-free-ai-tools-ranking-2026",
       "title": "2026年最佳免费AI工具排行榜",
-      "meta_description": "完全免费的AI工具排行榜，168款免费AI工具按综合评分排序。帮你零成本体验最新AI技术。",
+      "meta_description": "完全免费的AI工具排行榜，169款免费AI工具按综合评分排序。帮你零成本体验最新AI技术。",
       "keywords": [
         "免费AI工具",
         "免费AI",
@@ -1421,28 +1421,6 @@
           "rank": 13
         },
         {
-          "slug": "xinghuo-cognitive-model",
-          "name": "星火认知大模型",
-          "emoji": "🔥",
-          "color": "#4A90E2",
-          "score": 90.3,
-          "scores": {
-            "hot": 39.49768787657147,
-            "quality": 25.799999999999997,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "基础功能免费，API按量计费",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "850万",
-          "rank": 14
-        },
-        {
           "slug": "baichuan-2",
           "name": "Baichuan 2",
           "emoji": "🤖",
@@ -1462,7 +1440,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 15
+          "rank": 14
         },
         {
           "slug": "tongyi-efficiency",
@@ -1482,6 +1460,28 @@
           "badge": {
             "type": "recommend",
             "text": "推荐"
+          },
+          "visits": "850万",
+          "rank": 15
+        },
+        {
+          "slug": "xinghuo-cognitive-model",
+          "name": "星火认知大模型",
+          "emoji": "🔥",
+          "color": "#4A90E2",
+          "score": 90.3,
+          "scores": {
+            "hot": 39.49768787657147,
+            "quality": 25.799999999999997,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "基础功能免费，API按量计费",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
           },
           "visits": "850万",
           "rank": 16
@@ -1685,28 +1685,6 @@
           "rank": 25
         },
         {
-          "slug": "mureka",
-          "name": "Mureka",
-          "emoji": "🎵",
-          "color": "#6366F1",
-          "score": 88.8,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 27.0,
-            "functionality": 18,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费试用 + 会员订阅（积分制）",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85万",
-          "rank": 26
-        },
-        {
           "slug": "f5-tts",
           "name": "F5-TTS",
           "emoji": "🎙️",
@@ -1721,6 +1699,28 @@
           },
           "rating": "⭐4.5",
           "price": "开源免费",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 26
+        },
+        {
+          "slug": "mureka",
+          "name": "Mureka",
+          "emoji": "🎵",
+          "color": "#6366F1",
+          "score": 88.8,
+          "scores": {
+            "hot": 33.79768787657147,
+            "quality": 27.0,
+            "functionality": 18,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费试用 + 会员订阅（积分制）",
           "badge": {
             "type": "recommend",
             "text": "推荐"
@@ -1795,8 +1795,8 @@
           "rank": 30
         }
       ],
-      "total_tools": 168,
-      "last_updated": "2026-08-26 07:17",
+      "total_tools": 169,
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "免费工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -1809,7 +1809,7 @@
       "id": "value",
       "slug": "best-value-ai-tools-ranking-2026",
       "title": "2026年AI工具性价比排行榜",
-      "meta_description": "综合考虑价格和性能，564款高性价比AI工具排名。免费+付费，每分钱都花在刀刃上。",
+      "meta_description": "综合考虑价格和性能，565款高性价比AI工具排名。免费+付费，每分钱都花在刀刃上。",
       "keywords": [
         "性价比AI",
         "AI工具性价比",
@@ -1819,28 +1819,6 @@
       ],
       "icon": "💰",
       "ranked_tools": [
-        {
-          "slug": "meitu-design-ai",
-          "name": "美图设计室AI",
-          "emoji": "🎨",
-          "color": "#FF6B6B",
-          "score": 96.5,
-          "scores": {
-            "hot": 39.49768787657147,
-            "quality": 27.0,
-            "functionality": 20,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费版 + 会员约29.9元/月（或199元/年）",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "约850万/月",
-          "rank": 1
-        },
         {
           "slug": "glm-5-2",
           "name": "智谱 GLM 5.3",
@@ -1861,6 +1839,28 @@
             "text": "HOT"
           },
           "visits": "850万",
+          "rank": 1
+        },
+        {
+          "slug": "meitu-design-ai",
+          "name": "美图设计室AI",
+          "emoji": "🎨",
+          "color": "#FF6B6B",
+          "score": 96.5,
+          "scores": {
+            "hot": 39.49768787657147,
+            "quality": 27.0,
+            "functionality": 20,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费版 + 会员约29.9元/月（或199元/年）",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约850万/月",
           "rank": 2
         },
         {
@@ -2367,10 +2367,10 @@
           "rank": 25
         },
         {
-          "slug": "veed-io",
-          "name": "Veed.io",
-          "emoji": "🎬",
-          "color": "#777AB2",
+          "slug": "chatpdf",
+          "name": "ChatPDF",
+          "emoji": "📄",
+          "color": "#2563EB",
           "score": 91.5,
           "scores": {
             "hot": 39.49768787657147,
@@ -2380,12 +2380,12 @@
             "freshness": 8
           },
           "rating": "⭐ 4.5",
-          "price": "免费版 + 付费 $10/用户/月起",
+          "price": "免费版每天2个PDF；Plus $19.99/月（$139.99/年）",
           "badge": {
             "type": "recommend",
             "text": "推荐"
           },
-          "visits": "850万/月",
+          "visits": "850万",
           "rank": 26
         },
         {
@@ -2411,10 +2411,10 @@
           "rank": 27
         },
         {
-          "slug": "chatpdf",
-          "name": "ChatPDF",
-          "emoji": "📄",
-          "color": "#2563EB",
+          "slug": "veed-io",
+          "name": "Veed.io",
+          "emoji": "🎬",
+          "color": "#777AB2",
           "score": 91.5,
           "scores": {
             "hot": 39.49768787657147,
@@ -2424,12 +2424,12 @@
             "freshness": 8
           },
           "rating": "⭐ 4.5",
-          "price": "免费版每天2个PDF；Plus $19.99/月（$139.99/年）",
+          "price": "免费版 + 付费 $10/用户/月起",
           "badge": {
             "type": "recommend",
             "text": "推荐"
           },
-          "visits": "850万",
+          "visits": "850万/月",
           "rank": 28
         },
         {
@@ -2477,8 +2477,8 @@
           "rank": 30
         }
       ],
-      "total_tools": 564,
-      "last_updated": "2026-08-26 07:17",
+      "total_tools": 565,
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "性价比评分 = 综合评分/(1+价格系数)，免费工具系数最优",
@@ -2502,20 +2502,20 @@
       "icon": "🚀",
       "ranked_tools": [
         {
-          "slug": "outsystems-ai",
-          "name": "OutSystems AI",
-          "emoji": "🤖",
-          "color": "#005B9F",
-          "score": 46.0,
+          "slug": "deepnote",
+          "name": "Deepnote",
+          "emoji": "📓",
+          "color": "#2B6CB0",
+          "score": 49.6,
           "scores": {
             "hot": 0.0,
-            "quality": 27.0,
-            "functionality": 9,
+            "quality": 27.599999999999998,
+            "functionality": 12,
             "value": 10,
             "freshness": 8
           },
-          "rating": "⭐4.5",
-          "price": "免费版 + 企业版定制报价",
+          "rating": "⭐ 4.6",
+          "price": "免费版；Team $39/编辑者/月（年付 $31.20）",
           "badge": {
             "type": "recommend",
             "text": "推荐"
@@ -2546,26 +2546,48 @@
           "rank": 2
         },
         {
-          "slug": "deepnote",
-          "name": "Deepnote",
-          "emoji": "📓",
-          "color": "#2B6CB0",
-          "score": 49.6,
+          "slug": "outsystems-ai",
+          "name": "OutSystems AI",
+          "emoji": "🤖",
+          "color": "#005B9F",
+          "score": 46.0,
           "scores": {
             "hot": 0.0,
-            "quality": 27.599999999999998,
-            "functionality": 12,
+            "quality": 27.0,
+            "functionality": 9,
             "value": 10,
             "freshness": 8
           },
-          "rating": "⭐ 4.6",
-          "price": "免费版；Team $39/编辑者/月（年付 $31.20）",
+          "rating": "⭐4.5",
+          "price": "免费版 + 企业版定制报价",
           "badge": {
             "type": "recommend",
             "text": "推荐"
           },
           "visits": "暂无数据",
           "rank": 3
+        },
+        {
+          "slug": "codex-harness",
+          "name": "OpenAI Codex Harness",
+          "emoji": "⚙️",
+          "color": "#10A37F",
+          "score": 41.8,
+          "scores": {
+            "hot": 0.0,
+            "quality": 25.799999999999997,
+            "functionality": 6,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "开源免费（Apache-2.0），推理走 OpenAI API",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "0",
+          "rank": 4
         },
         {
           "slug": "deepseek-dsh",
@@ -2587,7 +2609,7 @@
             "text": "HOT"
           },
           "visits": "0",
-          "rank": 4
+          "rank": 5
         },
         {
           "slug": "kimi-code",
@@ -2604,28 +2626,6 @@
           },
           "rating": "⭐ 4.2",
           "price": "免费层 + 会员订阅（$19/月起）",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "0",
-          "rank": 5
-        },
-        {
-          "slug": "codex-harness",
-          "name": "OpenAI Codex Harness",
-          "emoji": "⚙️",
-          "color": "#10A37F",
-          "score": 41.8,
-          "scores": {
-            "hot": 0.0,
-            "quality": 25.799999999999997,
-            "functionality": 6,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "开源免费（Apache-2.0），推理走 OpenAI API",
           "badge": {
             "type": "hot",
             "text": "HOT"
@@ -2697,25 +2697,6 @@
           "rank": 9
         },
         {
-          "slug": "io-net",
-          "name": "io.net",
-          "emoji": "⚡",
-          "color": "#7C3AED",
-          "score": 43.8,
-          "scores": {
-            "hot": 0.0,
-            "quality": 25.799999999999997,
-            "functionality": 12,
-            "value": 6,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "IO 代币最大供应量 8 亿枚；GPU 按小时计费，据称比 AWS 等中心化云便宜 50%–70%，具体费率以官网为准。",
-          "badge": null,
-          "visits": "暂无数据",
-          "rank": 10
-        },
-        {
           "slug": "grass",
           "name": "Grass",
           "emoji": "🌱",
@@ -2732,26 +2713,26 @@
           "price": "GRASS 代币总量 10 亿枚；共享带宽即可赚取代币，数据购买按量付费，具体以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 11
+          "rank": 10
         },
         {
-          "slug": "sapien",
-          "name": "Sapien",
-          "emoji": "🏷️",
-          "color": "#3B82F6",
-          "score": 42.0,
+          "slug": "io-net",
+          "name": "io.net",
+          "emoji": "⚡",
+          "color": "#7C3AED",
+          "score": 43.8,
           "scores": {
             "hot": 0.0,
-            "quality": 24.0,
+            "quality": 25.799999999999997,
             "functionality": 12,
             "value": 6,
             "freshness": 8
           },
-          "rating": "⭐ 4.0",
-          "price": "SAPIEN 代币总量 10 亿枚；贡献者质押代币参与标注并获稳定币与代币奖励，企业按需购买数据集，具体以官网为准。",
+          "rating": "⭐ 4.3",
+          "price": "IO 代币最大供应量 8 亿枚；GPU 按小时计费，据称比 AWS 等中心化云便宜 50%–70%，具体费率以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 12
+          "rank": 11
         },
         {
           "slug": "near-ai",
@@ -2770,7 +2751,7 @@
           "price": "生态使用 NEAR 代币结算；NEAR AI Cloud 与 GPU 市场按推理用量计费，具体费率以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 13
+          "rank": 12
         },
         {
           "slug": "prime-intellect",
@@ -2787,6 +2768,25 @@
           },
           "rating": "⭐ 4.5",
           "price": "按模块化用量计费，覆盖算力、RL 训练、沙箱、评测与推理；具体价格以官网为准。",
+          "badge": null,
+          "visits": "暂无数据",
+          "rank": 13
+        },
+        {
+          "slug": "sapien",
+          "name": "Sapien",
+          "emoji": "🏷️",
+          "color": "#3B82F6",
+          "score": 42.0,
+          "scores": {
+            "hot": 0.0,
+            "quality": 24.0,
+            "functionality": 12,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.0",
+          "price": "SAPIEN 代币总量 10 亿枚；贡献者质押代币参与标注并获稳定币与代币奖励，企业按需购买数据集，具体以官网为准。",
           "badge": null,
           "visits": "暂无数据",
           "rank": 14
@@ -2833,64 +2833,23 @@
           "rank": 16
         },
         {
-          "slug": "snowflake-ai",
-          "name": "Snowflake AI",
-          "emoji": "❄️",
-          "color": "#29B5E8",
-          "score": 42.0,
+          "slug": "aixbt",
+          "name": "AIXBT",
+          "emoji": "📊",
+          "color": "#F7931E",
+          "score": 43.0,
           "scores": {
             "hot": 0.0,
-            "quality": 27.0,
+            "quality": 24.0,
             "functionality": 9,
-            "value": 6,
+            "value": 10,
             "freshness": 8
           },
-          "rating": "⭐4.5（编辑评测）",
-          "price": "按用量计费（AI Credit $2.00 起，需 Snowflake 账户）",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "暂无数据",
+          "rating": "⭐ 4.0",
+          "price": "免费信息流 + 高级订阅",
+          "badge": null,
+          "visits": "N/A",
           "rank": 17
-        },
-        {
-          "slug": "bittensor",
-          "name": "Bittensor",
-          "emoji": "🧠",
-          "color": "#FF6B35",
-          "score": 40.8,
-          "scores": {
-            "hot": 0.0,
-            "quality": 25.799999999999997,
-            "functionality": 9,
-            "value": 6,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "开源网络（TAO代币激励，仅技术参与）",
-          "badge": null,
-          "visits": "N/A",
-          "rank": 18
-        },
-        {
-          "slug": "render-network",
-          "name": "Render Network",
-          "emoji": "🎨",
-          "color": "#6B46C1",
-          "score": 40.2,
-          "scores": {
-            "hot": 0.0,
-            "quality": 25.200000000000003,
-            "functionality": 9,
-            "value": 6,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.2",
-          "price": "按量付费（RENDER代币结算）",
-          "badge": null,
-          "visits": "N/A",
-          "rank": 19
         },
         {
           "slug": "akash-network",
@@ -2909,7 +2868,26 @@
           "price": "按量付费（AIToken结算，成本低于中心云）",
           "badge": null,
           "visits": "N/A",
-          "rank": 20
+          "rank": 18
+        },
+        {
+          "slug": "bittensor",
+          "name": "Bittensor",
+          "emoji": "🧠",
+          "color": "#FF6B35",
+          "score": 40.8,
+          "scores": {
+            "hot": 0.0,
+            "quality": 25.799999999999997,
+            "functionality": 9,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "开源网络（TAO代币激励，仅技术参与）",
+          "badge": null,
+          "visits": "N/A",
+          "rank": 19
         },
         {
           "slug": "elizaos",
@@ -2931,48 +2909,48 @@
             "text": "HOT"
           },
           "visits": "N/A",
+          "rank": 20
+        },
+        {
+          "slug": "render-network",
+          "name": "Render Network",
+          "emoji": "🎨",
+          "color": "#6B46C1",
+          "score": 40.2,
+          "scores": {
+            "hot": 0.0,
+            "quality": 25.200000000000003,
+            "functionality": 9,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.2",
+          "price": "按量付费（RENDER代币结算）",
+          "badge": null,
+          "visits": "N/A",
           "rank": 21
         },
         {
-          "slug": "aixbt",
-          "name": "AIXBT",
-          "emoji": "📊",
-          "color": "#F7931E",
-          "score": 43.0,
+          "slug": "snowflake-ai",
+          "name": "Snowflake AI",
+          "emoji": "❄️",
+          "color": "#29B5E8",
+          "score": 42.0,
           "scores": {
             "hot": 0.0,
-            "quality": 24.0,
+            "quality": 27.0,
             "functionality": 9,
-            "value": 10,
+            "value": 6,
             "freshness": 8
           },
-          "rating": "⭐ 4.0",
-          "price": "免费信息流 + 高级订阅",
-          "badge": null,
-          "visits": "N/A",
-          "rank": 22
-        },
-        {
-          "slug": "shopify-magic",
-          "name": "Shopify Magic",
-          "emoji": "🛍️",
-          "color": "#95BF47",
-          "score": 49.6,
-          "scores": {
-            "hot": 0.0,
-            "quality": 27.599999999999998,
-            "functionality": 12,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐4.6（编辑评测）",
-          "price": "免费（需 Shopify 订阅，基础版 $39/月）",
+          "rating": "⭐4.5（编辑评测）",
+          "price": "按用量计费（AI Credit $2.00 起，需 Snowflake 账户）",
           "badge": {
             "type": "recommend",
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 23
+          "rank": 22
         },
         {
           "slug": "lakera",
@@ -2994,67 +2972,89 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 24
+          "rank": 23
         },
         {
-          "slug": "feedhive",
-          "name": "FeedHive",
-          "emoji": "🐝",
-          "color": "#FF6B35",
-          "score": 42.0,
+          "slug": "shopify-magic",
+          "name": "Shopify Magic",
+          "emoji": "🛍️",
+          "color": "#95BF47",
+          "score": 49.6,
           "scores": {
             "hot": 0.0,
-            "quality": 27.0,
-            "functionality": 9,
-            "value": 6,
+            "quality": 27.599999999999998,
+            "functionality": 12,
+            "value": 10,
             "freshness": 8
           },
-          "rating": "⭐ 4.5",
-          "price": "Creator €15/月；Brand €22/月；Business €69/月；Agency €239/月（年付更省）",
+          "rating": "⭐4.6（编辑评测）",
+          "price": "免费（需 Shopify 订阅，基础版 $39/月）",
           "badge": {
             "type": "recommend",
             "text": "推荐"
+          },
+          "visits": "暂无数据",
+          "rank": 24
+        },
+        {
+          "slug": "airllm",
+          "name": "airllm",
+          "emoji": "💾",
+          "color": "#8B5CF6",
+          "score": 55.0,
+          "scores": {
+            "hot": 0.0,
+            "quality": 27.0,
+            "functionality": 18,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费开源，无商业套餐",
+          "badge": {
+            "type": "pick",
+            "text": "开源"
           },
           "visits": "暂无数据",
           "rank": 25
         },
         {
-          "slug": "botpress",
-          "name": "Botpress",
-          "emoji": "🤖",
-          "color": "#0057FF",
-          "score": 46.0,
+          "slug": "airtop-ads",
+          "name": "Airtop for Google Ads",
+          "emoji": "📈",
+          "color": "#10B981",
+          "score": 43.8,
           "scores": {
             "hot": 0.0,
-            "quality": 27.0,
-            "functionality": 9,
-            "value": 10,
+            "quality": 25.799999999999997,
+            "functionality": 12,
+            "value": 6,
             "freshness": 8
           },
-          "rating": "⭐ 4.5",
-          "price": "免费版 $0；Plus/Team/Enterprise 以官网为准",
+          "rating": "⭐ 4.3",
+          "price": "官网定价页：Free $0/月（1,000 credits、3 个并发会话、1 个已部署 Agent、一次性 10,000 credits 奖励、7 天 Mark 试用）；Starter 页面在月付/年付切换下分别显示 $29/月 与 $26/月（年付立减 10% 且额度一次性发放）；Professional $170/月起、Enterprise $502/月起，这两档才标注 Mark included；另有 Custom 定制档。具体以官网为准",
           "badge": {
-            "type": "recommend",
-            "text": "推荐"
+            "type": "new",
+            "text": "NEW"
           },
           "visits": "暂无数据",
           "rank": 26
         },
         {
-          "slug": "sigma-computing",
-          "name": "Sigma Computing",
-          "emoji": "📊",
-          "color": "#0052CC",
-          "score": 49.0,
+          "slug": "alibaba-translate",
+          "name": "阿里翻译",
+          "emoji": "🌍",
+          "color": "#FF6A00",
+          "score": 52.0,
           "scores": {
             "hot": 0.0,
             "quality": 27.0,
-            "functionality": 12,
+            "functionality": 15,
             "value": 10,
             "freshness": 8
           },
-          "rating": "⭐4.5（编辑评测）",
-          "price": "定价需联系销售（提供免费试用）",
+          "rating": "⭐ 4.5",
+          "price": "价格暂未公开（面向企业提供开放平台 API 与私有化部署，个人/开发者可通过阿里翻译开放平台使用含免费额度的调用，具体报价以官网为准）",
           "badge": {
             "type": "recommend",
             "text": "推荐"
@@ -3063,74 +3063,74 @@
           "rank": 27
         },
         {
-          "slug": "dumate",
-          "name": "DuMate（百度搭子）",
-          "emoji": "🤖",
-          "color": "#4E6EF2",
-          "score": 84.2,
+          "slug": "aliyun-bailian",
+          "name": "阿里云百炼",
+          "emoji": "🏭",
+          "color": "#FF6A00",
+          "score": 55.6,
           "scores": {
-            "hot": 34.567410538593435,
+            "hot": 0.0,
             "quality": 27.599999999999998,
-            "functionality": 12,
+            "functionality": 18,
             "value": 10,
             "freshness": 8
           },
           "rating": "⭐ 4.6",
-          "price": "个人体验版免费（每日签到领积分，支持全量功能）；个人 Pro 版次月起 59 元/月（25,000 积分/月）；个人 Max 版次月起 129 元/月（100,000 积分/月）；个人增量包 5,000 积分起购（仅 Pro/Max 用户）",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "约116万/月",
-          "rank": 28
-        },
-        {
-          "slug": "dingding",
-          "name": "钉钉",
-          "emoji": "💬",
-          "color": "#3296FA",
-          "score": 50.2,
-          "scores": {
-            "hot": 0.0,
-            "quality": 28.200000000000003,
-            "functionality": 12,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.7",
-          "price": "标准版免费；专业版 9800 元/年；专属版 98000 元/年起；钉钉 AI 助理：专业版+AI 助理 19800 元/年，专属版+AI 助理 118000 元/年起；另有 AI 算粒套餐（Free 免费至 Pro 980000 元/年）",
+          "price": "按 Token 用量计费，输入与输出分别计价，无最低消费。新用户开通百炼后各模型可获免费额度（官方帮助文档标注为各 100 万 Token，有效期开通后 90 天），Batch 批量调用通常为实时调用的半价，命中上下文缓存的输入单价更低。另提供 Token Plan（以 Credits 计量的团队订阅）、Coding Plan 等包月套餐。各模型单价差异较大，请以官方计费文档为准：https://help.aliyun.com/zh/model-studio/model-pricing",
           "badge": {
             "type": "hot",
             "text": "HOT"
           },
           "visits": "暂无数据",
+          "rank": 28
+        },
+        {
+          "slug": "atlaso",
+          "name": "Atlaso",
+          "emoji": "🧠",
+          "color": "#00B8D9",
+          "score": 49.6,
+          "scores": {
+            "hot": 0.0,
+            "quality": 24.599999999999998,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.1",
+          "price": "Free 免费（1 设备 1 工具）；Pro $10/月；Build $25/月",
+          "badge": {
+            "type": "hot",
+            "text": "Product Hunt 入围"
+          },
+          "visits": "暂无数据",
           "rank": 29
         },
         {
-          "slug": "shimo",
-          "name": "石墨文档",
-          "emoji": "📝",
-          "color": "#00C16E",
-          "score": 49.0,
+          "slug": "autogpt",
+          "name": "AutoGPT",
+          "emoji": "🤖",
+          "color": "#7B61FF",
+          "score": 47.8,
           "scores": {
             "hot": 0.0,
-            "quality": 27.0,
+            "quality": 25.799999999999997,
             "functionality": 12,
             "value": 10,
             "freshness": 8
           },
-          "rating": "⭐ 4.5",
-          "price": "免费版可用（含基础 AI 功能）；AI 高级功能需订阅会员，具体价格以官网为准",
+          "rating": "⭐ 4.3",
+          "price": "开源免费（MIT/Polyform 授权，可自托管）；官方云端平台处于 Beta/Waitlist 阶段，定价未公开；调用大模型 API 的费用由用户自行承担",
           "badge": {
-            "type": "recommend",
-            "text": "推荐"
+            "type": "hot",
+            "text": "HOT"
           },
           "visits": "暂无数据",
           "rank": 30
         }
       ],
       "total_tools": 30,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "按收录时间和近期关注度排序",
@@ -3220,28 +3220,6 @@
           "rank": 3
         },
         {
-          "slug": "xinghuo-cognitive-model",
-          "name": "星火认知大模型",
-          "emoji": "🔥",
-          "color": "#4A90E2",
-          "score": 90.3,
-          "scores": {
-            "hot": 39.49768787657147,
-            "quality": 25.799999999999997,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "基础功能免费，API按量计费",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "850万",
-          "rank": 4
-        },
-        {
           "slug": "baichuan-2",
           "name": "Baichuan 2",
           "emoji": "🤖",
@@ -3259,6 +3237,28 @@
           "badge": {
             "type": "recommend",
             "text": "推荐"
+          },
+          "visits": "850万",
+          "rank": 4
+        },
+        {
+          "slug": "xinghuo-cognitive-model",
+          "name": "星火认知大模型",
+          "emoji": "🔥",
+          "color": "#4A90E2",
+          "score": 90.3,
+          "scores": {
+            "hot": 39.49768787657147,
+            "quality": 25.799999999999997,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "基础功能免费，API按量计费",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
           },
           "visits": "850万",
           "rank": 5
@@ -3462,28 +3462,6 @@
           "rank": 14
         },
         {
-          "slug": "monica-ai",
-          "name": "Monica AI",
-          "emoji": "🤖",
-          "color": "#8B5CF6",
-          "score": 82.8,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 27.0,
-            "functionality": 12,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "基础免费版 + 高级版约 $9/月起",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85万",
-          "rank": 15
-        },
-        {
           "slug": "minicpm-o",
           "name": "MiniCPM-o",
           "emoji": "🤖",
@@ -3501,6 +3479,28 @@
           "badge": {
             "type": "new",
             "text": "NEW"
+          },
+          "visits": "85万",
+          "rank": 15
+        },
+        {
+          "slug": "monica-ai",
+          "name": "Monica AI",
+          "emoji": "🤖",
+          "color": "#8B5CF6",
+          "score": 82.8,
+          "scores": {
+            "hot": 33.79768787657147,
+            "quality": 27.0,
+            "functionality": 12,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "基础免费版 + 高级版约 $9/月起",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
           },
           "visits": "85万",
           "rank": 16
@@ -3812,7 +3812,7 @@
         }
       ],
       "total_tools": 44,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI对话工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -4078,28 +4078,6 @@
           "rank": 11
         },
         {
-          "slug": "huoshan-writing",
-          "name": "火山写作",
-          "emoji": "✍️",
-          "color": "#FE4A49",
-          "score": 85.8,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85万/月",
-          "rank": 12
-        },
-        {
           "slug": "bi-ling-ai",
           "name": "笔灵AI",
           "emoji": "✍️",
@@ -4119,6 +4097,28 @@
             "text": "推荐"
           },
           "visits": "85万月访问量",
+          "rank": 12
+        },
+        {
+          "slug": "huoshan-writing",
+          "name": "火山写作",
+          "emoji": "✍️",
+          "color": "#FE4A49",
+          "score": 85.8,
+          "scores": {
+            "hot": 33.79768787657147,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万/月",
           "rank": 13
         },
         {
@@ -4315,7 +4315,7 @@
         }
       ],
       "total_tools": 22,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI写作工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -4997,7 +4997,7 @@
         }
       ],
       "total_tools": 36,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI绘画工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -5351,6 +5351,28 @@
           "rank": 15
         },
         {
+          "slug": "kilo-code",
+          "name": "Kilo Code",
+          "emoji": "💻",
+          "color": "#6366F1",
+          "score": 85.8,
+          "scores": {
+            "hot": 33.79768787657147,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费开源，BYOK或Kilo Gateway按量付费",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 16
+        },
+        {
           "slug": "langchain",
           "name": "LangChain",
           "emoji": "⛓️",
@@ -5370,7 +5392,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 16
+          "rank": 17
         },
         {
           "slug": "symphony-agent",
@@ -5392,28 +5414,6 @@
             "text": "HOT"
           },
           "visits": "85万/月",
-          "rank": 17
-        },
-        {
-          "slug": "kilo-code",
-          "name": "Kilo Code",
-          "emoji": "💻",
-          "color": "#6366F1",
-          "score": 85.8,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费开源，BYOK或Kilo Gateway按量付费",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85万",
           "rank": 18
         },
         {
@@ -5505,28 +5505,6 @@
           "rank": 22
         },
         {
-          "slug": "qoder",
-          "name": "Qoder",
-          "emoji": "💻",
-          "color": "#6366F1",
-          "score": 84.5,
-          "scores": {
-            "hot": 32.48412902471531,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐4.5",
-          "price": "免费版 + 团队版 $40/席位/月",
-          "badge": {
-            "type": "new",
-            "text": "NEW"
-          },
-          "visits": "50万",
-          "rank": 23
-        },
-        {
           "slug": "opencode",
           "name": "OpenCode",
           "emoji": "💻",
@@ -5546,6 +5524,28 @@
             "text": "NEW"
           },
           "visits": "约50万月访问",
+          "rank": 23
+        },
+        {
+          "slug": "qoder",
+          "name": "Qoder",
+          "emoji": "💻",
+          "color": "#6366F1",
+          "score": 84.5,
+          "scores": {
+            "hot": 32.48412902471531,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐4.5",
+          "price": "免费版 + 团队版 $40/席位/月",
+          "badge": {
+            "type": "new",
+            "text": "NEW"
+          },
+          "visits": "50万",
           "rank": 24
         },
         {
@@ -5682,7 +5682,7 @@
         }
       ],
       "total_tools": 62,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI编程工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -5750,28 +5750,6 @@
           "rank": 2
         },
         {
-          "slug": "veed-io",
-          "name": "Veed.io",
-          "emoji": "🎬",
-          "color": "#777AB2",
-          "score": 91.5,
-          "scores": {
-            "hot": 39.49768787657147,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费版 + 付费 $10/用户/月起",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "850万/月",
-          "rank": 3
-        },
-        {
           "slug": "kapwing",
           "name": "Kapwing",
           "emoji": "🎬",
@@ -5791,6 +5769,28 @@
             "text": "推荐"
           },
           "visits": "850万",
+          "rank": 3
+        },
+        {
+          "slug": "veed-io",
+          "name": "Veed.io",
+          "emoji": "🎬",
+          "color": "#777AB2",
+          "score": 91.5,
+          "scores": {
+            "hot": 39.49768787657147,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费版 + 付费 $10/用户/月起",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "850万/月",
           "rank": 4
         },
         {
@@ -6367,7 +6367,7 @@
         }
       ],
       "total_tools": 45,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI视频工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -6457,9 +6457,9 @@
           "rank": 3
         },
         {
-          "slug": "mureka",
-          "name": "Mureka",
-          "emoji": "🎵",
+          "slug": "cartesia",
+          "name": "Cartesia",
+          "emoji": "🎙️",
           "color": "#6366F1",
           "score": 88.8,
           "scores": {
@@ -6470,7 +6470,7 @@
             "freshness": 8
           },
           "rating": "⭐ 4.5",
-          "price": "免费试用 + 会员订阅（积分制）",
+          "price": "免费版$0；付费版$5/月起（Pro）",
           "badge": {
             "type": "recommend",
             "text": "推荐"
@@ -6501,9 +6501,9 @@
           "rank": 5
         },
         {
-          "slug": "cartesia",
-          "name": "Cartesia",
-          "emoji": "🎙️",
+          "slug": "mureka",
+          "name": "Mureka",
+          "emoji": "🎵",
           "color": "#6366F1",
           "score": 88.8,
           "scores": {
@@ -6514,7 +6514,7 @@
             "freshness": 8
           },
           "rating": "⭐ 4.5",
-          "price": "免费版$0；付费版$5/月起（Pro）",
+          "price": "免费试用 + 会员订阅（积分制）",
           "badge": {
             "type": "recommend",
             "text": "推荐"
@@ -6677,28 +6677,6 @@
           "rank": 13
         },
         {
-          "slug": "resemble-ai",
-          "name": "Resemble AI",
-          "emoji": "🎤",
-          "color": "#6C5CE7",
-          "score": 84.6,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 25.799999999999997,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "免费版每月 1,000 秒，超出 $0.006/秒起",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85万",
-          "rank": 14
-        },
-        {
           "slug": "musicfx",
           "name": "MusicFX",
           "emoji": "🎵",
@@ -6716,6 +6694,28 @@
           "badge": {
             "type": "new",
             "text": "NEW"
+          },
+          "visits": "85万",
+          "rank": 14
+        },
+        {
+          "slug": "resemble-ai",
+          "name": "Resemble AI",
+          "emoji": "🎤",
+          "color": "#6C5CE7",
+          "score": 84.6,
+          "scores": {
+            "hot": 33.79768787657147,
+            "quality": 25.799999999999997,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "免费版每月 1,000 秒，超出 $0.006/秒起",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
           },
           "visits": "85万",
           "rank": 15
@@ -7046,7 +7046,7 @@
         }
       ],
       "total_tools": 37,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI音频工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -7180,28 +7180,6 @@
           "rank": 5
         },
         {
-          "slug": "tldv",
-          "name": " tl;dv",
-          "emoji": "🎥",
-          "color": "#7C3AED",
-          "score": 87.0,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 28.200000000000003,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.7",
-          "price": "免费版（无限录制），Pro $18/月起（年付）",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "85万",
-          "rank": 6
-        },
-        {
           "slug": "slidesai",
           "name": "SlidesAI",
           "emoji": "📊",
@@ -7216,6 +7194,28 @@
           },
           "rating": "⭐ 4.7",
           "price": "免费版可用；Pro $8.33/月起（年付）",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "85万",
+          "rank": 6
+        },
+        {
+          "slug": "tldv",
+          "name": " tl;dv",
+          "emoji": "🎥",
+          "color": "#7C3AED",
+          "score": 87.0,
+          "scores": {
+            "hot": 33.79768787657147,
+            "quality": 28.200000000000003,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.7",
+          "price": "免费版（无限录制），Pro $18/月起（年付）",
           "badge": {
             "type": "hot",
             "text": "HOT"
@@ -7680,28 +7680,6 @@
           "rank": 28
         },
         {
-          "slug": "wps-ai",
-          "name": "WPS AI办公",
-          "emoji": "📄",
-          "color": "#0066CC",
-          "score": 52.0,
-          "scores": {
-            "hot": 0.0,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "基础功能免费；企业版 ¥199/人/年起",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "暂无数据",
-          "rank": 29
-        },
-        {
           "slug": "airtable-ai",
           "name": "Airtable AI",
           "emoji": "📊",
@@ -7721,11 +7699,33 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
+          "rank": 29
+        },
+        {
+          "slug": "wps-ai",
+          "name": "WPS AI办公",
+          "emoji": "📄",
+          "color": "#0066CC",
+          "score": 52.0,
+          "scores": {
+            "hot": 0.0,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "基础功能免费；企业版 ¥199/人/年起",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "暂无数据",
           "rank": 30
         }
       ],
       "total_tools": 45,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI办公工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -7991,6 +7991,28 @@
           "rank": 11
         },
         {
+          "slug": "flair-ai",
+          "name": "Flair AI",
+          "emoji": "🎨",
+          "color": "#7B68EE",
+          "score": 85.8,
+          "scores": {
+            "hot": 33.79768787657147,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费版可用，Pro版$8/月起",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约85万/月",
+          "rank": 12
+        },
+        {
           "slug": "framer-ai",
           "name": "Framer AI",
           "emoji": "🎨",
@@ -8010,13 +8032,13 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 12
+          "rank": 13
         },
         {
-          "slug": "spline-ai",
-          "name": "Spline AI",
+          "slug": "huiwa",
+          "name": "绘蛙",
           "emoji": "🎨",
-          "color": "#FF5A1F",
+          "color": "#FF6B35",
           "score": 85.8,
           "scores": {
             "hot": 33.79768787657147,
@@ -8026,13 +8048,13 @@
             "freshness": 8
           },
           "rating": "⭐ 4.5",
-          "price": "免费版可用；Starter $12/月起，Spline AI 附加组件 +$5/月",
+          "price": "免费额度 + 算力/套餐付费",
           "badge": {
             "type": "recommend",
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 13
+          "rank": 14
         },
         {
           "slug": "lottiefiles-ai",
@@ -8054,7 +8076,29 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 14
+          "rank": 15
+        },
+        {
+          "slug": "spline-ai",
+          "name": "Spline AI",
+          "emoji": "🎨",
+          "color": "#FF5A1F",
+          "score": 85.8,
+          "scores": {
+            "hot": 33.79768787657147,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费版可用；Starter $12/月起，Spline AI 附加组件 +$5/月",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 16
         },
         {
           "slug": "uizard",
@@ -8071,50 +8115,6 @@
           },
           "rating": "⭐ 4.5",
           "price": "免费版可用，专业版$12/月起（年付）",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85万",
-          "rank": 15
-        },
-        {
-          "slug": "flair-ai",
-          "name": "Flair AI",
-          "emoji": "🎨",
-          "color": "#7B68EE",
-          "score": 85.8,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费版可用，Pro版$8/月起",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "约85万/月",
-          "rank": 16
-        },
-        {
-          "slug": "huiwa",
-          "name": "绘蛙",
-          "emoji": "🎨",
-          "color": "#FF6B35",
-          "score": 85.8,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费额度 + 算力/套餐付费",
           "badge": {
             "type": "recommend",
             "text": "推荐"
@@ -8410,7 +8410,7 @@
         }
       ],
       "total_tools": 37,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI设计工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -8874,28 +8874,6 @@
           "rank": 20
         },
         {
-          "slug": "nano-ai",
-          "name": "纳米AI",
-          "emoji": "🔍",
-          "color": "#4A90D9",
-          "score": 46.0,
-          "scores": {
-            "hot": 0.0,
-            "quality": 27.0,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐4.5",
-          "price": "免费（含付费会员增值服务）",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "暂无数据",
-          "rank": 21
-        },
-        {
           "slug": "felo",
           "name": "Felo",
           "emoji": "🌐",
@@ -8913,6 +8891,28 @@
           "badge": {
             "type": "hot",
             "text": "HOT"
+          },
+          "visits": "暂无数据",
+          "rank": 21
+        },
+        {
+          "slug": "nano-ai",
+          "name": "纳米AI",
+          "emoji": "🔍",
+          "color": "#4A90D9",
+          "score": 46.0,
+          "scores": {
+            "hot": 0.0,
+            "quality": 27.0,
+            "functionality": 9,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐4.5",
+          "price": "免费（含付费会员增值服务）",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
           },
           "visits": "暂无数据",
           "rank": 22
@@ -8963,7 +8963,7 @@
         }
       ],
       "total_tools": 24,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI搜索工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -9164,7 +9164,7 @@
         }
       ],
       "total_tools": 8,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI翻译工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -9496,28 +9496,6 @@
           "rank": 14
         },
         {
-          "slug": "kestra",
-          "name": "Kestra",
-          "emoji": "⚡",
-          "color": "#4A90D9",
-          "score": 46.0,
-          "scores": {
-            "hot": 0.0,
-            "quality": 27.0,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "开源免费 + 企业版定制",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "暂无数据",
-          "rank": 15
-        },
-        {
           "slug": "beam-ai",
           "name": "Beam AI",
           "emoji": "🚀",
@@ -9535,6 +9513,28 @@
           "badge": {
             "type": "new",
             "text": "NEW"
+          },
+          "visits": "暂无数据",
+          "rank": 15
+        },
+        {
+          "slug": "kestra",
+          "name": "Kestra",
+          "emoji": "⚡",
+          "color": "#4A90D9",
+          "score": 46.0,
+          "scores": {
+            "hot": 0.0,
+            "quality": 27.0,
+            "functionality": 9,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "开源免费 + 企业版定制",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
           },
           "visits": "暂无数据",
           "rank": 16
@@ -9629,7 +9629,7 @@
         }
       ],
       "total_tools": 20,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI自动化工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -9961,6 +9961,28 @@
           "rank": 14
         },
         {
+          "slug": "apache-superset",
+          "name": "Superset",
+          "emoji": "📊",
+          "color": "#5A4BEF",
+          "score": 85.8,
+          "scores": {
+            "hot": 33.79768787657147,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费开源（自托管），Preset云按用户收费",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万",
+          "rank": 15
+        },
+        {
           "slug": "elicit",
           "name": "Elicit",
           "emoji": "🔬",
@@ -9980,7 +10002,7 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 15
+          "rank": 16
         },
         {
           "slug": "postiz",
@@ -10000,28 +10022,6 @@
           "badge": {
             "type": "new",
             "text": "NEW"
-          },
-          "visits": "85万",
-          "rank": 16
-        },
-        {
-          "slug": "apache-superset",
-          "name": "Superset",
-          "emoji": "📊",
-          "color": "#5A4BEF",
-          "score": 85.8,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费开源（自托管），Preset云按用户收费",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
           },
           "visits": "85万",
           "rank": 17
@@ -10291,27 +10291,30 @@
           "rank": 29
         },
         {
-          "slug": "recall-ai",
-          "name": "Recall",
-          "emoji": "🧠",
-          "color": "#059669",
+          "slug": "obsidian",
+          "name": "Obsidian",
+          "emoji": "🔗",
+          "color": "#8B6CEF",
           "score": 50.8,
           "scores": {
             "hot": 0.0,
-            "quality": 25.799999999999997,
-            "functionality": 15,
+            "quality": 28.799999999999997,
+            "functionality": 12,
             "value": 10,
             "freshness": 8
           },
-          "rating": "⭐4.3",
-          "price": "免费版 + Plus 约 $10/月",
-          "badge": {},
-          "visits": "N/A",
+          "rating": "⭐ 4.8",
+          "price": "个人使用完全免费；官方同步 Obsidian Sync 约 $4/月，发布 Publish 约 $8/月（以官网为准）",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "暂无数据",
           "rank": 30
         }
       ],
       "total_tools": 40,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI效率工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -10907,6 +10910,28 @@
           "rank": 26
         },
         {
+          "slug": "claude-agent-sdk",
+          "name": "Claude Agent SDK",
+          "emoji": "⚙️",
+          "color": "#D4A27F",
+          "score": 50.8,
+          "scores": {
+            "hot": 0.0,
+            "quality": 28.799999999999997,
+            "functionality": 12,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.8",
+          "price": "免费使用（需 Anthropic API Key，按 API 调用计费）",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "暂无数据",
+          "rank": 27
+        },
+        {
           "slug": "hermes-agent",
           "name": "Hermes Agent",
           "emoji": "🦁",
@@ -10926,7 +10951,7 @@
             "text": "HOT"
           },
           "visits": "暂无数据",
-          "rank": 27
+          "rank": 28
         },
         {
           "slug": "pydantic-ai",
@@ -10946,28 +10971,6 @@
           "badge": {
             "type": "recommend",
             "text": "推荐"
-          },
-          "visits": "暂无数据",
-          "rank": 28
-        },
-        {
-          "slug": "claude-agent-sdk",
-          "name": "Claude Agent SDK",
-          "emoji": "⚙️",
-          "color": "#D4A27F",
-          "score": 50.8,
-          "scores": {
-            "hot": 0.0,
-            "quality": 28.799999999999997,
-            "functionality": 12,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.8",
-          "price": "免费使用（需 Anthropic API Key，按 API 调用计费）",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
           },
           "visits": "暂无数据",
           "rank": 29
@@ -10996,7 +10999,7 @@
         }
       ],
       "total_tools": 52,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI智能体工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -11130,28 +11133,6 @@
           "rank": 5
         },
         {
-          "slug": "llamaindex",
-          "name": "LlamaIndex",
-          "emoji": "📚",
-          "color": "#4F46E5",
-          "score": 87.0,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 28.200000000000003,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.7",
-          "price": "开源免费 + LlamaCloud $50/月（Starter）",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85万",
-          "rank": 6
-        },
-        {
           "slug": "langgraph",
           "name": "LangGraph",
           "emoji": "🔗",
@@ -11171,29 +11152,29 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 7
+          "rank": 6
         },
         {
-          "slug": "weaviate",
-          "name": "Weaviate",
-          "emoji": "🗄️",
-          "color": "#4B6BFF",
-          "score": 86.4,
+          "slug": "llamaindex",
+          "name": "LlamaIndex",
+          "emoji": "📚",
+          "color": "#4F46E5",
+          "score": 87.0,
           "scores": {
             "hot": 33.79768787657147,
-            "quality": 27.599999999999998,
+            "quality": 28.200000000000003,
             "functionality": 15,
             "value": 10,
             "freshness": 8
           },
-          "rating": "⭐ 4.6",
-          "price": "免费开源版+云托管（Flex $45/月起）",
+          "rating": "⭐ 4.7",
+          "price": "开源免费 + LlamaCloud $50/月（Starter）",
           "badge": {
             "type": "recommend",
             "text": "推荐"
           },
-          "visits": "85万/月",
-          "rank": 8
+          "visits": "85万",
+          "rank": 7
         },
         {
           "slug": "langflow",
@@ -11215,7 +11196,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 9
+          "rank": 8
         },
         {
           "slug": "ragflow",
@@ -11237,6 +11218,28 @@
             "text": "推荐"
           },
           "visits": "85万",
+          "rank": 9
+        },
+        {
+          "slug": "weaviate",
+          "name": "Weaviate",
+          "emoji": "🗄️",
+          "color": "#4B6BFF",
+          "score": 86.4,
+          "scores": {
+            "hot": 33.79768787657147,
+            "quality": 27.599999999999998,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.6",
+          "price": "免费开源版+云托管（Flex $45/月起）",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "85万/月",
           "rank": 10
         },
         {
@@ -11262,28 +11265,6 @@
           "rank": 11
         },
         {
-          "slug": "groq",
-          "name": "Groq",
-          "emoji": "⚡",
-          "color": "#00D4AA",
-          "score": 85.8,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "免费tier可用；Llama 8B仅$0.05/1M输入token",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "85万",
-          "rank": 12
-        },
-        {
           "slug": "chroma",
           "name": "Chroma",
           "emoji": "🗄️",
@@ -11303,7 +11284,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 13
+          "rank": 12
         },
         {
           "slug": "galileo-ai",
@@ -11325,6 +11306,28 @@
             "text": "NEW"
           },
           "visits": "85万/月",
+          "rank": 13
+        },
+        {
+          "slug": "groq",
+          "name": "Groq",
+          "emoji": "⚡",
+          "color": "#00D4AA",
+          "score": 85.8,
+          "scores": {
+            "hot": 33.79768787657147,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费tier可用；Llama 8B仅$0.05/1M输入token",
+          "badge": {
+            "type": "hot",
+            "text": "HOT"
+          },
+          "visits": "85万",
           "rank": 14
         },
         {
@@ -11681,7 +11684,7 @@
         }
       ],
       "total_tools": 68,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI开发工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -11969,28 +11972,6 @@
           "rank": 12
         },
         {
-          "slug": "khanmigo",
-          "name": "Khanmigo",
-          "emoji": "📚",
-          "color": "#14BF96",
-          "score": 81.8,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 27.0,
-            "functionality": 15,
-            "value": 6,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "$4/月（学习者）",
-          "badge": {
-            "type": "recommend",
-            "text": "推荐"
-          },
-          "visits": "85万",
-          "rank": 13
-        },
-        {
           "slug": "bloomberg-gpt",
           "name": "Bloomberg GPT",
           "emoji": "📈",
@@ -12010,29 +11991,29 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 14
+          "rank": 13
         },
         {
-          "slug": "kensho-ai",
-          "name": "Kensho AI",
-          "emoji": "📊",
-          "color": "#1E3A5F",
-          "score": 80.5,
+          "slug": "khanmigo",
+          "name": "Khanmigo",
+          "emoji": "📚",
+          "color": "#14BF96",
+          "score": 81.8,
           "scores": {
-            "hot": 32.48412902471531,
+            "hot": 33.79768787657147,
             "quality": 27.0,
             "functionality": 15,
             "value": 6,
             "freshness": 8
           },
           "rating": "⭐ 4.5",
-          "price": "企业定制",
+          "price": "$4/月（学习者）",
           "badge": {
             "type": "recommend",
             "text": "推荐"
           },
-          "visits": "约50万月访问",
-          "rank": 15
+          "visits": "85万",
+          "rank": 14
         },
         {
           "slug": "eightfold",
@@ -12054,6 +12035,28 @@
             "text": "推荐"
           },
           "visits": "约50万月访问量",
+          "rank": 15
+        },
+        {
+          "slug": "kensho-ai",
+          "name": "Kensho AI",
+          "emoji": "📊",
+          "color": "#1E3A5F",
+          "score": 80.5,
+          "scores": {
+            "hot": 32.48412902471531,
+            "quality": 27.0,
+            "functionality": 15,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "企业定制",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "约50万月访问",
           "rank": 16
         },
         {
@@ -12123,28 +12126,6 @@
           "rank": 19
         },
         {
-          "slug": "mike-ai",
-          "name": "mike AI",
-          "emoji": "🎤",
-          "color": "#6366F1",
-          "score": 79.3,
-          "scores": {
-            "hot": 32.48412902471531,
-            "quality": 25.799999999999997,
-            "functionality": 15,
-            "value": 6,
-            "freshness": 8
-          },
-          "rating": "⭐4.3",
-          "price": "一次性 $4.99 起 / 订阅 $29.99 每月",
-          "badge": {
-            "type": "new",
-            "text": "NEW"
-          },
-          "visits": "50万/月",
-          "rank": 20
-        },
-        {
           "slug": "ada-ai",
           "name": "Ada AI",
           "emoji": "🤖",
@@ -12164,6 +12145,28 @@
             "text": "NEW"
           },
           "visits": "50万",
+          "rank": 20
+        },
+        {
+          "slug": "mike-ai",
+          "name": "mike AI",
+          "emoji": "🎤",
+          "color": "#6366F1",
+          "score": 79.3,
+          "scores": {
+            "hot": 32.48412902471531,
+            "quality": 25.799999999999997,
+            "functionality": 15,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐4.3",
+          "price": "一次性 $4.99 起 / 订阅 $29.99 每月",
+          "badge": {
+            "type": "new",
+            "text": "NEW"
+          },
+          "visits": "50万/月",
           "rank": 21
         },
         {
@@ -12363,7 +12366,7 @@
         }
       ],
       "total_tools": 42,
-      "last_updated": "2026-08-26 07:17",
+      "last_updated": "2026-08-26 20:42",
       "content": null,
       "methodology": {
         "scoring": "AI行业应用工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -12373,7 +12376,7 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-08-26T07:17:27.801549",
+    "generated_at": "2026-08-26T20:42:22.925397",
     "total_tools": 672,
     "update_frequency": "per-build",
     "methodology": {
