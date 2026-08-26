@@ -87,8 +87,10 @@ def load_dict_term_map():
     - 按匹配文本长度降序（长词优先匹配，避免短词抢占）
     返回: [(match_text, slug, 'cjk'|'latin'), ...]
     """
-    with open(DICT_TERMS_JSON, "r", encoding="utf-8") as f:
-        terms = json.load(f)
+    import sys as _sys
+    _sys.path.insert(0, str(SITE_ROOT / "scripts"))
+    from data_store import load_all_dict_terms
+    terms = load_all_dict_terms()
 
     # 始终排除的短词 slug（太通用 / 容易误匹配）
     ALWAYS_EXCLUDE = {'api', 'gpu', 'npu', 'agi', 'moe', 'lora', 'token', 'sora'}

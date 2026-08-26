@@ -48,15 +48,16 @@ def gather_data():
     now = datetime.now(CST)
     today = now.strftime('%Y-%m-%d')
 
-    # 2026-08-26 去单体化: tools/articles 读分片, 其余文件仍单文件
+    # 2026-08-26 去单体化: tools/articles/dict_terms 读分片, 其余文件仍单文件
     try:
-        from data_store import load_all_tools, load_all_articles
+        from data_store import load_all_tools, load_all_articles, load_all_dict_terms
         tools = load_all_tools()
         articles = load_all_articles()
+        dict_terms = load_all_dict_terms()
     except Exception:
         tools = load_json(os.path.join(DATA_DIR, 'tools.json')) or []
         articles = load_json(os.path.join(DATA_DIR, 'articles.json')) or []
-    dict_terms = load_json(os.path.join(DATA_DIR, 'dict_terms.json')) or []
+        dict_terms = load_json(os.path.join(DATA_DIR, 'dict_terms.json')) or []
     subcats = load_json(os.path.join(DATA_DIR, 'subcategories.json')) or []
     compare = load_json(os.path.join(DATA_DIR, 'compare_data.json')) or {}
 

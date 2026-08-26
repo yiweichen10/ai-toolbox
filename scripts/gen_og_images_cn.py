@@ -464,22 +464,25 @@ def make_dict_og(term_data, out_path):
 
 # ─── Batch generation ───────────────────────────────────────────────────────────
 def _iter_articles():
-    p = DATA_DIR / "articles.json"
-    if p.exists():
-        for a in json.load(open(p, encoding="utf-8")):
-            yield a.get("slug"), a
+    import sys as _sys
+    _sys.path.insert(0, str(BASE_DIR / "scripts"))
+    from data_store import load_all_articles
+    for a in load_all_articles():
+        yield a.get("slug"), a
 
 def _iter_tools():
-    p = DATA_DIR / "tools.json"
-    if p.exists():
-        for t in json.load(open(p, encoding="utf-8")):
-            yield t.get("slug"), t
+    import sys as _sys
+    _sys.path.insert(0, str(BASE_DIR / "scripts"))
+    from data_store import load_all_tools
+    for t in load_all_tools():
+        yield t.get("slug"), t
 
 def _iter_dict():
-    p = DATA_DIR / "dict_terms.json"
-    if p.exists():
-        for d in json.load(open(p, encoding="utf-8")):
-            yield d.get("slug"), d
+    import sys as _sys
+    _sys.path.insert(0, str(BASE_DIR / "scripts"))
+    from data_store import load_all_dict_terms
+    for d in load_all_dict_terms():
+        yield d.get("slug"), d
 
 def main():
     ap = argparse.ArgumentParser()
