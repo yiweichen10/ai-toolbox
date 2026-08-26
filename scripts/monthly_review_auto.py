@@ -118,6 +118,15 @@ def main():
         json.dump(articles, f, ensure_ascii=False, indent=2)
     print(f"[OK] 已写入 {ARTICLES_FILE}")
 
+    # 同步散文件（2026-08-25 修复）：build 目录优先，只写单体 build 读不到新评测文章。
+    # 统一走 data_store.save_article（写 data/articles/<slug>.json + 原子同步单体）。
+    try:
+        from data_store import save_article
+        save_article(article, indent=2)
+        print(f"[OK] 已同步散文件 data/articles/{article['slug']}.json")
+    except Exception as _se:
+        print(f"[WARN] 散文件同步失败（单体已写入，不影响构建兜底）: {_se}")
+
     print("\n[INFO] 构建...")
     ret = os.system(f'cd /d "{BASE}" && python scripts/build.py')
     if ret != 0:

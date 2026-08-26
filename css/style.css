@@ -738,31 +738,31 @@ h2[id], h3[id], h4[id] { scroll-margin-top: 200px; }
 .tab-card-desc { font-size: 11px; color: #94a3b8; }
 .tab-card.active .tab-card-desc { color: rgba(0,166,79,0.65); }
 
-.content-tabs-body { padding: 18px 22px; height: 340px; overflow-y: auto; }
+.content-tabs-body { padding: 12px 14px; min-height: 340px; }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 
 /* 新闻列表 */
-.news-cards { display: flex; flex-direction: column; gap: 1px; }
+.news-cards { display: flex; flex-direction: column; gap: 0; }
 .news-card-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 10px;
+  gap: 9px;
+  padding: 7px 8px;
   border-radius: var(--radius-sm);
   text-decoration: none;
   transition: background .15s;
-  border-bottom: 1px solid #f8fafc;
+  border-bottom: 1px solid #f1f5f9;
 }
 .news-card-item:last-child { border-bottom: none; }
 .news-card-item:hover { background: #f8fafc; }
-.news-card-date { font-size: 12px; color: #94a3b8; white-space: nowrap; min-width: 38px; font-weight: 600; }
+.news-card-date { font-size: 11.5px; color: #94a3b8; white-space: nowrap; min-width: 34px; font-weight: 600; }
 .news-card-title {
   flex: 1; font-size: 13.5px; color: var(--text-main); font-weight: 500;
   display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
 }
 .news-card-tag {
-  font-size: 11px; padding: 2px 9px; border-radius: 16px;
+  font-size: 10.5px; padding: 1.5px 8px; border-radius: 16px;
   background: #f1f5f9; color: var(--text-muted); font-weight: 600;
   white-space: nowrap; flex-shrink: 0;
 }
@@ -828,42 +828,8 @@ h2[id], h3[id], h4[id] { scroll-margin-top: 200px; }
 .news-card-ad .ad-tag { background: #fef3c7; color: #d97706; font-weight: 700; }
 .news-card-ad:hover .ad-tag { background: #fde68a; color: #b45309; }
 
-/* AI辞典 */
-.dict-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
-.dict-card-item {
-  display: flex; gap: 12px; padding: 14px;
-  border-radius: var(--radius-md); text-decoration: none;
-  border: 1px solid #f1f5f9; transition: var(--transition);
-}
-.dict-card-item:hover {
-  border-color: rgba(0,166,79,0.18);
-  background: #fafaff;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
-}
-.dict-card-icon {
-  font-size: 26px; width: 44px; height: 44px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--surface-2); border-radius: 10px;
-}
-.dict-card-body h4 { font-size: 13.5px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
-.dict-card-body p {
-  font-size: 12.5px; color: var(--text-muted); line-height: 1.6;
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-}
-.dict-card-date {
-  display: inline-block; margin-top: 3px;
-  font-size: 11px; color: #94a3b8; font-weight: 600;
-  letter-spacing: 0.3px;
-}
-.dict-view-all {
-  display: block; text-align: center; margin-top: 16px;
-  font-size: 13.5px; font-weight: 600; color: var(--primary);
-  text-decoration: none; padding: 8px 0;
-  transition: color 0.2s;
-}
-.dict-view-all:hover { color: var(--secondary); }
-
+/* AI辞典 — 首页卡片样式已内联注入（build_lib/render_index.py home-dict-style，2026-08-25 方案B）
+   目的：只被首页使用的局部样式不进全局 CSS，避免改首页样式触发全站 CSS hash/全量重建 */
 /* AI词典列表页 */
 .dict-list-page { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
 .dict-list-header { text-align: center; margin-bottom: 32px; }
@@ -1700,8 +1666,7 @@ h2[id], h3[id], h4[id] { scroll-margin-top: 200px; }
   .tab-card-icon { width: 28px; height: 28px; font-size: 15px; }
   .tab-card-title { font-size: 12px; }
   .tab-card-desc { font-size: 10px; }
-  .content-tabs-body { padding: 12px; height: 270px; }
-  .dict-cards { grid-template-columns: 1fr; gap: 8px; }
+  .content-tabs-body { padding: 10px 12px; height: 270px; }
 
   /* Section */
   .section, .home-section, .cat-section { margin-bottom: 28px; scroll-margin-top: 110px; }
@@ -1785,7 +1750,7 @@ h2[id], h3[id], h4[id] { scroll-margin-top: 200px; }
   .tab-card { flex-direction: column; align-items: center; text-align: center; padding: 8px 5px; }
   .tab-card-desc { display: none; }
   .tab-card-title { font-size: 11px; }
-  .content-tabs-body { height: 240px; padding: 10px; }
+  .content-tabs-body { height: 240px; padding: 8px 10px; }
   .tool-meta { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: repeat(2, 1fr); }
   .article-body { padding: 12px 12px 14px; }
@@ -2557,7 +2522,7 @@ h2[id], h3[id], h4[id] { scroll-margin-top: 200px; }
 /* ── 内容标签：从左侧竖排大卡片改为顶部紧凑胶囊 ── */
 #contentTabs { display: block; }
 #contentTabs .content-tabs-nav { flex-direction: row; flex-wrap: wrap; gap: 8px; padding: 12px 12px 0; background: transparent; border-right: none; }
-#contentTabs .tab-card { display: inline-flex; flex-direction: row; align-items: center; gap: 7px; width: auto; height: auto; padding: 9px 16px; border-radius: 999px; background: rgba(127,127,127,0.06); border: 1px solid rgba(127,127,127,0.12); box-shadow: none; }
+#contentTabs .tab-card { display: inline-flex; flex-direction: row; align-items: center; gap: 7px; width: auto; height: auto; padding: 6px 14px; border-radius: 999px; background: rgba(127,127,127,0.06); border: 1px solid rgba(127,127,127,0.12); box-shadow: none; }
 #contentTabs .tab-card:hover { background: rgba(127,127,127,0.10); box-shadow: none; }
 #contentTabs .tab-card.active { background: rgba(0,166,79,0.10); border-color: rgba(0,166,79,0.30); box-shadow: none; }
 #contentTabs .tab-card-icon { display: none; }
@@ -2569,12 +2534,13 @@ h2[id], h3[id], h4[id] { scroll-margin-top: 200px; }
 #contentTabs .tab-card.active .tab-card-title { color: var(--primary); }
 #contentTabs .tab-card-desc { font-size: 11.5px; color: #94a3b8; }
 #contentTabs .tab-card.active .tab-card-desc { color: rgba(0,166,79,0.65); }
-#contentTabs .content-tabs-body { padding: 14px 16px 18px; height: 330px; }
+/* 固定高度 + 内部滚动：AI词典/AI前沿两块同高，切换不闪跳；放不下则滚动，不压缩卡片 */
+#contentTabs .content-tabs-body { padding: 10px 14px 12px; height: 330px; overflow-y: auto; }
 @media (max-width: 640px) {
   #contentTabs .content-tabs-nav { padding: 10px 10px 0; gap: 6px; }
-  #contentTabs .tab-card { padding: 8px 12px; }
+  #contentTabs .tab-card { padding: 6px 10px; }
   #contentTabs .tab-card-desc { display: none; }
-  #contentTabs .content-tabs-body { padding: 12px; height: 330px; }
+  #contentTabs .content-tabs-body { padding: 10px 12px 12px; height: 300px; overflow-y: auto; }
 }
 
 /* ── 今日推荐 · 编辑实测 ── */

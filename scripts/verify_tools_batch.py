@@ -25,7 +25,7 @@ import json
 import os
 import sys
 import argparse
-from datetime import datetime
+from datetime import datetime, timedelta
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS_JSON = os.path.join(BASE_DIR, 'data', 'tools.json')
@@ -163,7 +163,7 @@ def cmd_init():
 # --next N: 输出下一批待核查工具
 # ============================================================
 
-def cmd_next(batch_size):
+def cmd_next(batch_size, stale_days=120):
     tools = load_tools()
     state = load_state()
     st = state.get('tools', {})
@@ -171,7 +171,11 @@ def cmd_next(batch_size):
     # 建 slug->tool 映射
     tool_map = {t['slug']: t for t in tools if t.get('slug')}
 
-    # 筛选未核查的
+    # 新鲜度回收窗口: verified_at 早于该日期的已核工具, 重新纳入复核查
+    # 目的: 捕捉"纯暗降/静默调价"(无新闻/无版本动态, 普通版本监控遗漏的场景)
+    cutoff = (datetime.now() - timedelta(days=stale_days)).strftime('%Y-%m-%d')
+
+    # 筛选未核查的 + 过期需复核查的(stale verified)
     candidates = []
     for slug, info in st.items():
         if info['status'] in ('unverified', 'conflict'):
@@ -180,6 +184,10 @@ def cmd_next(batch_size):
             # 把名额让给真正未核查的工具, 避免虚构/已标记条目反复占用批次
             if tool.get('conflict_note'):
                 continue
+            candidates.append((slug, info, tool))
+        elif info['status'] == 'verified' and info.get('verified_at') and info['verified_at'] < cutoff:
+            # 已核但超过新鲜度窗口 → 纳入复核查(静默调价/暗降捕捉)
+            tool = tool_map.get(slug, {})
             candidates.append((slug, info, tool))
 
     # 按优先级降序
@@ -666,7 +674,9 @@ def cmd_reconcile():
 def main():
     ap = argparse.ArgumentParser(description='全量工具联网核查批控系统')
     ap.add_argument('--init', action='store_true', help='初始化核查状态')
-    ap.add_argument('--next', type=int, metavar='N', help='输出下一批 N 个待核查工具')
+    ap.add_argument('--next', type=int, metavar='N', help='输出下一批 N 个待核查工具(含过期需复核查的 stale verified)')
+    ap.add_argument('--stale-days', type=int, default=120, metavar='D',
+                    help='已核查工具超过该天数(默认120)未复核查则重新纳入复核查')
     ap.add_argument('--apply', type=str, metavar='FILE', help='将核查结果 JSON 写回 tools.json')
     ap.add_argument('--status', action='store_true', help='查看核查进度')
     ap.add_argument('--reset', nargs='+', metavar='SLUG', help='重置指定工具状态为 unverified')
@@ -677,7 +687,7 @@ def main():
     if args.init:
         cmd_init()
     elif args.next:
-        cmd_next(args.next)
+        cmd_next(args.next, stale_days=args.stale_days)
     elif args.apply:
         cmd_apply(args.apply)
     elif args.status:

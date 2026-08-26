@@ -36,18 +36,35 @@ echo "  时间: $(date '+%Y-%m-%d %H:%M:%S')"
 echo "==========================================="
 
 if [ "$SKIP_BUILD" = false ]; then
-    echo ""
-    echo "[0/4] 🔍 构建前数据校验闸 (validate_data, G3)..."
-    cd "$LOCAL_DIR"
-    # 脏数据（缺必填/重复 slug/格式错误）在进渲染前拦下，失败即中止部署
-    python scripts/validate_data.py || { echo "❌ 数据校验未通过，中止部署"; exit 1; }
-    echo "✅ 数据校验通过"
+echo ""
+echo "[0/4] 🔍 构建前数据校验闸 (validate_data, G3)..."
+cd "$LOCAL_DIR"
+# 脏数据（缺必填/重复 slug/格式错误）在进渲染前拦下，失败即中止部署
+python scripts/validate_data.py || { echo "❌ 数据校验未通过，中止部署"; exit 1; }
+echo "✅ 数据校验通过"
 
-    echo ""
-    echo "[0/4] 🔄 重新生成排名和仪表盘数据..."
-    cd "$LOCAL_DIR"
-    python scripts/regenerate_data.py
-    echo "✅ 数据生成完成"
+echo ""
+echo "[0/4] 🔄 散文件→单体 对齐（build 前聚合兜底，2026-08-25）..."
+# 必须在 regenerate_data/build 之前执行：它们读单体（articles.json/tools.json），
+# 若自动化旁路只写散文件，单体陈旧会导致 ranking/live 数据与首页内容不一致。
+cd "$LOCAL_DIR"
+python - << 'SYNC_PY' || true
+import sys, os
+sys.path.insert(0, os.path.join('scripts'))
+try:
+    from build_lib.data_loaders import sync_mono_from_shards
+    _a = sync_mono_from_shards('articles.json', 'articles', indent=2)
+    _t = sync_mono_from_shards('tools.json', 'tools', indent=4)
+    print(f"  [sync] articles +{_a} / tools +{_t}" + ("（单体已对齐）" if (_a or _t) else "（无差异，跳过）"))
+except Exception as _e:
+    print(f"  ⚠️ 聚合跳过（不阻断）: {_e}")
+SYNC_PY
+
+echo ""
+echo "[0/4] 🔄 重新生成排名和仪表盘数据..."
+cd "$LOCAL_DIR"
+python scripts/regenerate_data.py
+echo "✅ 数据生成完成"
 
     echo ""
     echo "[0.5/4] 🎨 生成关键CSS(min+critical)..."
@@ -324,10 +341,16 @@ if [ -d "$LOCAL_DIR/images/infographics" ]; then
     fi
     rm -f "$_srvf" "$_locf" 2>/dev/null || true   # ||true: 本地rm被WorkBuddy safe_delete拦截时不致命
 fi
+# 首页「AI前沿」板块新闻条目：由 build.py 构建时注入（build_index_page 目录优先读 193 篇，含最新日期）。
+# 2026-08-25 停用 inject_news_cards.py：它基于「index.html 不被构建重建」的旧假设，用**单体 articles.json**
+# 覆盖 build 的正确结果（曾把 08/25 覆盖成 08/24、并扩到 11 条）。build 是唯一写入者，勿再调用。
+# python scripts/inject_news_cards.py 11 || true
+
 # 根目录关键文件（含 ads.txt：AdSense 授权文件，缺失会导致广告失效）
 # 2026-08-08：加入 data/tools.json 与 data/articles.json —— 数据目录不在上方强制同步列表，
 #   只靠 git 增量会因“已提交未变更”而漏传，导致服务器工具库落后（529 vs 532 事故）
-for f in index.html sitemap.xml robots.txt ads.txt sw.js manifest.json data/tools.json data/articles.json; do
+# 2026-08-25：补 data/dict_terms.json（AI 辞典数据，未提交时 git 增量不漏传不了）
+for f in index.html sitemap.xml robots.txt ads.txt sw.js manifest.json data/tools.json data/articles.json data/dict_terms.json; do
     if [ -f "$LOCAL_DIR/$f" ]; then
         tar cf - -C "$LOCAL_DIR" "$f" 2>/dev/null | \
             ssh $SSH_OPTS "${SERVER_USER}@${SERVER_IP}" "cd ${REMOTE_DIR} && tar xf - --overwrite" 2>/dev/null || true
@@ -396,7 +419,7 @@ echo "[4/4] 📤 Git 备份排名/数据变更..."
 cd "$LOCAL_DIR"
 # 2026-08-23 数据拆分：单体 data/tools.json/articles.json 不再提交（改为提交 data/tools/ data/articles/ 小文件目录，
 # 每次部署只提交改动的小文件，彻底止 git 膨胀）。单体仍被 data_store 同步更新并 scp 到服务器供后端读取。
-git add data/live_data.json data/ranking_data.json data/subcategories.json data/_latest_infographic.json data/homepage_picks.json data/picks_candidates.json data/picks_history.json index.html live/ ranking/ scripts/build.py data/tools/ data/articles/ 2>/dev/null || true
+git add data/live_data.json data/ranking_data.json data/subcategories.json data/_latest_infographic.json data/homepage_picks.json data/picks_candidates.json data/picks_history.json index.html live/ ranking/ scripts/build.py scripts/build_lib/ data/tools/ data/articles/ 2>/dev/null || true
 if git diff --cached --quiet; then
     echo "  无可提交变更"
 else

@@ -92,6 +92,17 @@ def check_one(it):
         if CJK_ASCII_GLUE_RE.search(summary):
             warns.append('摘要中英文粘连(缺空格)')
 
+    # 2026-08-25 评注门禁（编辑整理+评注）：存量无 commentary 字段不警告，只查新增字段
+    commentary = (it.get('commentary') or '').strip()
+    if commentary:
+        if len(commentary) < 30:
+            warns.append(f'评注过短({len(commentary)}字,疑似敷衍)')
+        hit_comm = [w for w in CLICHE_WORDS if w in commentary]
+        if hit_comm:
+            warns.append(f'评注空话词({"/".join(hit_comm)})')
+        if summary and (summary[:20] in commentary or commentary[:20] in summary):
+            warns.append('评注复述摘要(无信息增量)')
+
     return fails, warns
 
 
