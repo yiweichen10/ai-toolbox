@@ -18,7 +18,8 @@ import json, os, re, sys
 
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 _SITE_ROOT = os.path.dirname(_SCRIPT_DIR)
-TOOLS_JSON = os.path.join(_SITE_ROOT, "data", "tools.json")
+TOOLS_JSON = os.path.join(_SITE_ROOT, "data", "tools.json")   # 兼容回退; 真源为分片
+TOOLS_SHARD_DIR = os.path.join(_SITE_ROOT, "data", "tools")
 LEAK_PATTERNS = [
     (r"收录来源", "含'收录来源'"),
     (r"收录自 ai-bot|来源：ai-bot|ai-bot\.cn（|（2026-08），官网已验证", "含 ai-bot 收录/验证溯源"),
@@ -29,11 +30,24 @@ LEAK_PATTERNS = [
 
 def check():
     try:
-        with open(TOOLS_JSON, encoding="utf-8") as f:
-            d = json.load(f)
+        # 2026-08-26 去单体化: 真源为分片 data/tools/*.json, 单体仅回退
+        if os.path.isdir(TOOLS_SHARD_DIR):
+            import glob
+            _all = []
+            for _fp in sorted(glob.glob(os.path.join(TOOLS_SHARD_DIR, "*.json"))):
+                try:
+                    with open(_fp, encoding="utf-8") as _f:
+                        _r = json.load(_f)
+                    _all.extend(_r if isinstance(_r, list) else [_r])
+                except Exception:
+                    continue
+            d = _all
+        else:
+            with open(TOOLS_JSON, encoding="utf-8") as f:
+                d = json.load(f)
     except Exception as e:
         # 检查器自身故障：不冒充"检测到泄漏"，返回 2 让调用方降级为警告
-        print(f"[leak-check][ERROR] 无法读取 {TOOLS_JSON}: {type(e).__name__}: {e}")
+        print(f"[leak-check][ERROR] 无法读取工具数据: {type(e).__name__}: {e}")
         return 2
     tools = d if isinstance(d, list) else d.get("tools", d.get("data", []))
     violations = []

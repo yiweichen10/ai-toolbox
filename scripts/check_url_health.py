@@ -19,6 +19,10 @@ import argparse
 import os
 from pathlib import Path
 
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'scripts'))
+from data_store import save_tools_batch, save_articles_batch
+
 # 从配置文件读取已知问题 URL 映射
 # 格式：{"旧URL": "新URL", ...}
 # 当检测到旧URL不可用时，提示用户更新
@@ -97,7 +101,7 @@ async def check_url(session: httpx.AsyncClient, name: str, url: str) -> dict:
 
 async def check_all_urls(concurrency: int = 10) -> list[dict]:
     """并发检查所有工具 URL"""
-    tools = json.load(open(TOOLS_JSON, encoding="utf-8"))
+    tools = load_all_tools()
     urls = [(t["name"], t.get("url", "")) for t in tools if t.get("url")]
 
     results = []
@@ -116,7 +120,7 @@ async def check_all_urls(concurrency: int = 10) -> list[dict]:
 
 def fix_url(name: str, old_url: str, new_url: str):
     """修复 tools.json 中的 URL"""
-    tools = json.load(open(TOOLS_JSON, encoding="utf-8"))
+    tools = load_all_tools()
     fixed = []
     for t in tools:
         if t.get("name") == name and t.get("url") == old_url:
@@ -130,7 +134,7 @@ def fix_url(name: str, old_url: str, new_url: str):
                 fixed.append(f"{name} (content)")
                 print(f"  [FIXED] {name} content 中的链接")
     if fixed:
-        json.dump(tools, open(TOOLS_JSON, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+        save_tools_batch(tools)
         print(f"  Saved: {TOOLS_JSON}")
     return fixed
 

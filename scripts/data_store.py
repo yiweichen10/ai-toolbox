@@ -116,13 +116,35 @@ def load_all_articles():
 
 
 def save_tool(tool, indent=4):
-    """保存单个工具：写 data/tools/<slug>.json + 原子同步 tools.json。"""
+    """保存单个工具：写 data/tools/<slug>.json + 原子同步 tools.json(单体存在时)。"""
     return _save_one(tool, 'tools.json', 'tools', indent=indent)
 
 
 def save_article(article, indent=2):
-    """保存单篇文章：写 data/articles/<slug>.json + 原子同步 articles.json。"""
+    """保存单篇文章：写 data/articles/<slug>.json + 原子同步 articles.json(单体存在时)。"""
     return _save_one(article, 'articles.json', 'articles', indent=indent)
+
+
+def save_tools_batch(tools, indent=2):
+    """批量保存工具列表(2026-08-26 去单体化): 只写分片, 不写单体。
+    供一次性维护脚本(整库读-改-写)替换 json.dump 单体写法。返回写入条数。"""
+    n = 0
+    for t in tools:
+        if isinstance(t, dict) and t.get('slug'):
+            save_tool(t, indent=indent)
+            n += 1
+    return n
+
+
+def save_articles_batch(articles, indent=2):
+    """批量保存文章列表(2026-08-26 去单体化): 只写分片, 不写单体。
+    供一次性维护脚本(整库读-改-写)替换 json.dump 单体写法。返回写入条数。"""
+    n = 0
+    for a in articles:
+        if isinstance(a, dict) and a.get('slug'):
+            save_article(a, indent=indent)
+            n += 1
+    return n
 
 
 def delete_tool(slug):

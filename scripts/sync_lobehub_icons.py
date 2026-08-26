@@ -108,7 +108,11 @@ def main():
     if not (args.scan or args.download):
         args.scan = True
 
-    tools = json.load(open(os.path.join(DATA_DIR, 'tools.json'), encoding='utf-8'))
+    # 2026-08-26 去单体化: 分片优先
+    import sys as _sys
+    _sys.path.insert(0, os.path.join(os.path.dirname(DATA_DIR), 'scripts'))
+    from data_store import load_all_tools
+    tools = load_all_tools()
     have = local_have()
     gap = [t for t in tools if t.get('slug') and t['slug'] not in have]
 

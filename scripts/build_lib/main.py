@@ -13,8 +13,7 @@ from build_lib.injectors import (inject_global_nav, inject_site_logo, inject_foo
                           inject_favicon, inject_hreflang, inject_adsense_meta, inject_baidu_tongji,
                           inject_fav_fab, inject_rss_link, inject_section_hub, _clean_all_broken_links)
 from build_lib.data_loaders import (load_tools, load_articles, get_published_tool_slugs, get_category_slug,
-                          load_compare_data, load_quiz_data, load_ranking_data, load_live_data, load_news_archive,
-                          sync_mono_from_shards)
+                          load_compare_data, load_quiz_data, load_ranking_data, load_live_data, load_news_archive)
 from build_lib.render_tool import (make_tool_card_html, build_tool_page, ensure_og_image, get_category_stats)
 from build_lib.render_article import (build_article_page, build_article_list_pages, build_article_category_pages, generate_rss)
 from build_lib.render_category import (build_category_page, build_subcategory_page, _build_category_index_page, get_subcat_def)
@@ -81,18 +80,10 @@ def build_target(target, slug=None, no_push=False):
     slug: 指定文章slug，仅构建该文章页+列表页+sitemap（增量构建模式）
     """
     # ═══════════════════════════════════════════════════════
-    # build 前自动聚合兜底（2026-08-25）：
-    # 散文件目录 → 单体 幂等合并。防自动化/旁路只写 data/<type>/*.json 不写单体，
-    # 导致依赖单体的下游（gen_cms / server.py / 检查脚本）读到陈旧数据。
-    # 幂等：无差异零写入；异常不阻断构建（仅告警）。
+    # 2026-08-26 去单体化(任务#7): 删除 build 前聚合兜底 sync_mono_from_shards。
+    # 单体 tools.json/articles.json 已退役, 数据真源为分片 data/tools/*.json + data/articles/*.json,
+    # 读取统一走 load_tools()/load_articles()(分片优先)。不再重建单体。
     # ═══════════════════════════════════════════════════════
-    try:
-        _n_art = sync_mono_from_shards('articles.json', 'articles', indent=2)
-        _n_tool = sync_mono_from_shards('tools.json', 'tools', indent=4)
-        if _n_art or _n_tool:
-            print(f'[sync] 散文件→单体聚合: articles +{_n_art} / tools +{_n_tool} (单体已对齐，防下游陈旧)')
-    except Exception as _sync_e:
-        print(f'[sync] 聚合跳过（不阻断构建）: {_sync_e}')
 
     # 加载数据（目录优先，回退单体）
     all_tools = load_tools()

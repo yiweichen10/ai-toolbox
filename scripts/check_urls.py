@@ -1,7 +1,11 @@
 import json
+import os, sys
 
-with open('data/tools.json', 'r', encoding='utf-8') as f:
-    tools = json.load(f)
+# 2026-08-26 去单体化: 分片优先
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'scripts'))
+from data_store import load_all_tools
+
+tools = load_all_tools()
 
 # All tools with www. prefix
 www_tools = [(t['name'], t['url']) for t in tools if t.get('url','').startswith('https://www.')]

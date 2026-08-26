@@ -55,8 +55,14 @@ VERSION_RE = re.compile(
 ACTION_WORDS = ["发布", "开源", "上线", "推出", "升级", "更新", "发布日", "支持", "宣布", "开源发布", "available", "release", "launch"]
 
 def load_tools():
-    with open(TOOLS_JSON, encoding="utf-8") as f:
-        return json.load(f)
+    """分片优先(真源 data/tools/*.json), 单体回退(2026-08-26 去单体化)。"""
+    try:
+        sys.path.insert(0, os.path.join(BASE_DIR, "scripts"))
+        from data_store import load_all_tools
+        return load_all_tools()
+    except Exception:
+        with open(TOOLS_JSON, encoding="utf-8") as f:
+            return json.load(f)
 
 def load_news(days):
     """加载最近 days 天所有 news_*.json 的条目（带日期）。"""

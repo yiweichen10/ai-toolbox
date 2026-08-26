@@ -128,8 +128,11 @@ def download_one(tool, force=False):
 def main():
     force = "--force" in sys.argv
     retry = "--retry" in sys.argv
-    with open(os.path.join(DATA_DIR, "tools.json"), "r", encoding="utf-8") as f:
-        tools = json.load(f)
+    # 2026-08-26 去单体化: 分片优先
+    import sys as _sys
+    _sys.path.insert(0, os.path.join(os.path.dirname(DATA_DIR), 'scripts'))
+    from data_store import load_all_tools
+    tools = load_all_tools()
 
     if retry and os.path.exists(os.path.join(DATA_DIR, "_icon_still_missing.json")):
         miss = json.load(open(os.path.join(DATA_DIR, "_icon_still_missing.json"), encoding="utf-8"))

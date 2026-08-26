@@ -10,6 +10,10 @@ import json
 import os
 import sys
 
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'scripts'))
+from data_store import save_tools_batch, save_articles_batch
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 TOOLS_JSON = os.path.join(DATA_DIR, 'tools.json')
@@ -18,8 +22,7 @@ from seo_title_helper import gen_long_tail
 
 
 def main():
-    with open(TOOLS_JSON, 'r', encoding='utf-8') as f:
-        tools = json.load(f)
+    tools = load_all_tools()
     slug_map = {t['slug']: t for t in tools if t.get('slug')}
     force = '--force' in sys.argv
 
@@ -32,8 +35,7 @@ def main():
         else:
             existing += 1
 
-    with open(TOOLS_JSON, 'w', encoding='utf-8') as f:
-        json.dump(tools, f, ensure_ascii=False, indent=4)
+    save_tools_batch(tools)
 
     print(f"long_tail 补全完成：新增 {added} 个，已有 {existing} 个，总计 {len(tools)} 个")
     # 抽样展示几个，确认话术自然

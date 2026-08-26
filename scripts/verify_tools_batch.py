@@ -95,18 +95,36 @@ def priority_score(tool):
 # ============================================================
 
 def load_tools():
-    with open(TOOLS_JSON, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    """分片优先加载(真源 data/tools/*.json), 单体仅作回退(2026-08-26 去单体化)。"""
+    try:
+        from data_store import load_all_tools
+        return load_all_tools()
+    except Exception:
+        with open(TOOLS_JSON, 'r', encoding='utf-8') as f:
+            return json.load(f)
 
 
 def save_tools(d):
-    # 备份当前
-    bak = TOOLS_JSON.replace('.json', f'.{TODAY}.bak')
-    import shutil
-    shutil.copy2(TOOLS_JSON, bak)
-    with open(TOOLS_JSON, 'w', encoding='utf-8') as f:
-        json.dump(d, f, ensure_ascii=False, indent=2)
-    print(f"[verify] tools.json 已保存, 备份: {bak}")
+    """去单体化后只写分片 data/tools/<slug>.json(一个工具一个文件)。
+    单体 tools.json 不再写入/不再备份(2026-08-26 任务#7: 干掉单体)。
+    """
+    try:
+        from data_store import save_tool
+    except Exception:
+        save_tool = None
+    n = 0
+    for t in d:
+        if not isinstance(t, dict) or not t.get('slug'):
+            continue
+        if save_tool is not None:
+            save_tool(t, indent=2)   # 写分片, 单体存在才同步(删掉单体后自动只写分片)
+        else:
+            sp = os.path.join(BASE_DIR, 'data', 'tools', f"{t['slug']}.json")
+            os.makedirs(os.path.dirname(sp), exist_ok=True)
+            with open(sp, 'w', encoding='utf-8') as f:
+                json.dump(t, f, ensure_ascii=False, indent=2)
+        n += 1
+    print(f"[verify] 已写 {n} 个工具分片 (data/tools/*.json), 不再写单体")
 
 
 def load_state():
@@ -312,6 +330,7 @@ def cmd_apply(results_file):
     applied = 0
     skipped = 0
     conflicts = 0
+    applied_slugs = []
 
     for r in results:
         slug = r.get('slug')
@@ -490,9 +509,10 @@ def cmd_apply(results_file):
         if tool['conflict']:
             conflicts += 1
         applied += 1
+        applied_slugs.append(slug)
 
     state['_meta']['updated'] = TODAY
-    save_tools(tools)
+    save_tools(tools)   # 2026-08-26 去单体化: 只写分片 data/tools/*.json, 不再写单体
     save_state(state)
 
     print(f"[apply] 结果: {applied} 已应用, {conflicts} 冲突标记, {skipped} 跳过")

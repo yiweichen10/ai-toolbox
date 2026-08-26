@@ -20,6 +20,10 @@ from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 from urllib.parse import urlparse
 
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'scripts'))
+from data_store import save_tools_batch, save_articles_batch
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS_JSON = os.path.join(BASE_DIR, "data", "tools.json")
 STATE_JSON = os.path.join(BASE_DIR, "data", "verify_state.json")
@@ -74,7 +78,7 @@ def validate_new_tool(name, slug, url):
         return False, f"slug 不合法（仅小写字母/数字/连字符）: {slug}"
 
     # 2) 查重
-    tools = json.load(open(TOOLS_JSON, encoding="utf-8"))
+    tools = load_all_tools()
     slugs = {t["slug"] for t in tools}
     names = {t.get("name", "").lower() for t in tools}
     if slug in slugs:
@@ -90,7 +94,7 @@ def validate_new_tool(name, slug, url):
 
 def add_tool(entry, desc=None, category=None):
     """通过门禁后写入 tools.json + verify_state（标记 unverified）。"""
-    tools = json.load(open(TOOLS_JSON, encoding="utf-8"))
+    tools = load_all_tools()
     state = json.load(open(STATE_JSON, encoding="utf-8"))
 
     slug = entry["slug"]
@@ -112,7 +116,7 @@ def add_tool(entry, desc=None, category=None):
         "needs_verification": True,
     }
     tools.append(base)
-    json.dump(tools, open(TOOLS_JSON, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    save_tools_batch(tools)
 
     st = state.setdefault("tools", {})
     st[slug] = {"name": entry["name"], "status": "unverified", "category": base["category"],

@@ -14,8 +14,9 @@ import json, re, os, sys
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(BASE, "scripts"))
 from rebuild_tool_content import build_content
+from data_store import load_all_tools
 
-tools = json.load(open(os.path.join(BASE, "data", "tools.json"), encoding="utf-8"))
+tools = load_all_tools()   # 2026-08-26 去单体化: 分片优先
 degraded = json.load(open(os.path.join(BASE, "data", "_degraded_tools_20260801.json"), encoding="utf-8"))["tools"]
 targets = [d["slug"] for d in degraded]
 tmap = {t["slug"]: t for t in tools}

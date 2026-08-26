@@ -1,6 +1,10 @@
 import json, os
 
-tools = json.load(open('data/tools.json', encoding='utf-8'))
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'scripts'))
+from data_store import save_tools_batch, save_articles_batch
+
+tools = load_all_tools()
 by = {t['slug']: t for t in tools}
 
 # (slug, field, old, new)
@@ -130,7 +134,7 @@ for slug, (bad_sub, good) in SRC_FIX.items():
     else:
         miss.append(f'[SRC_MISS] {slug} / bad_sub="{bad_sub}"')
 
-json.dump(tools, open('data/tools.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=4)
+save_tools_batch(tools)
 print('FIX APPLIED. tools.json written.')
 print(f'MISS count = {len(miss)}')
 for m in miss:

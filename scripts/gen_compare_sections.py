@@ -29,8 +29,10 @@ KNOWN_CATS = {'AI编程','AI开发','AI对话','AI视频','AI效率','AI设计',
 
 
 def load_tools():
-    with open(TOOLS_JSON, encoding='utf-8') as f:
-        return json.load(f)
+    # 2026-08-26 去单体化: 分片优先
+    sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+    from data_store import load_all_tools
+    return load_all_tools()
 
 
 def price_num(s):
@@ -171,9 +173,17 @@ def main():
     if args.dry_run:
         print("[compare] dry-run, 不写盘")
         return
-    shutil.copy2(TOOLS_JSON, TOOLS_JSON.replace('.json', f'.{TODAY}.bak'))
-    json.dump(tools, open(TOOLS_JSON, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
-    print(f"[compare] 已写回 {TOOLS_JSON} (备份 tools.{TODAY}.bak)")
+    # 2026-08-26 去单体化: 只写分片(生成过 compare_section 的工具), 不写单体
+    from data_store import save_tool
+    _n = 0
+    for t in tools:
+        if t.get('compare_section') and t['compare_section'].get('competitors'):
+            try:
+                save_tool(t, indent=2)
+                _n += 1
+            except Exception as e:
+                print(f"  ⚠️ 写分片失败 {t.get('slug')}: {e}")
+    print(f"[compare] 已写 {_n} 个工具分片 (data/tools/*.json)")
 
 
 if __name__ == '__main__':

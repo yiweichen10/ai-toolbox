@@ -23,6 +23,14 @@ DATA_DIR = os.path.join(BASE_DIR, 'data')
 
 
 def load_json(filename):
+    # 2026-08-26 去单体化: tools.json/articles.json 改读分片(真源), 单体已退役
+    if filename in ('tools.json', 'articles.json'):
+        sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+        try:
+            from build_lib.data_loaders import load_tools, load_articles
+            return load_tools() if filename == 'tools.json' else load_articles()
+        except Exception:
+            pass  # 回退原逻辑(单体若还在)
     path = os.path.join(DATA_DIR, filename)
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)

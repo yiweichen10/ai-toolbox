@@ -63,10 +63,12 @@ def main():
     # 尝试获取最近增加的文章标题作为 commit message
     commit_msg = f"[auto-grow] {datetime.now().strftime('%Y-%m-%d')} content update"
     try:
-        with open(os.path.join(BASE_DIR, 'data', 'articles.json'), 'r', encoding='utf-8') as f:
-            articles = json.load(f)
-            if articles:
-                commit_msg = f"[article] {articles[0].get('title', 'Daily Update')}"
+        # 2026-08-26 去单体化: 分片优先
+        sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+        from data_store import load_all_articles
+        articles = load_all_articles()
+        if articles:
+            commit_msg = f"[article] {articles[0].get('title', 'Daily Update')}"
     except:
         pass
 

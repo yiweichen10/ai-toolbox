@@ -5,9 +5,10 @@ from urllib.parse import urlparse
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 
-# 1. Load tools
-with open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8') as f:
-    tools = json.load(f)
+# 1. Load tools (2026-08-26 去单体化: 分片优先)
+sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+from data_store import load_all_tools
+tools = load_all_tools()
 
 # 2. Fetch Simple Icons index via jsDelivr CDN (mirrors npm)
 print("Fetching Simple Icons index via jsDelivr...")

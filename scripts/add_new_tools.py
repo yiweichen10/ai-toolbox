@@ -4,6 +4,10 @@
 """
 import json, re, os
 
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'scripts'))
+from data_store import save_tools_batch, save_articles_batch
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS_JSON_PATH = os.path.join(BASE_DIR, 'data', 'tools.json')
 
@@ -449,8 +453,7 @@ def is_duplicate(new_name, existing_tools):
     return False, None
 
 def main():
-    with open(TOOLS_JSON_PATH, 'r', encoding='utf-8') as f:
-        tools = json.load(f)
+    tools = load_all_tools()
 
     existing_slugs = {t["slug"].lower() for t in tools}
     print(f"现有工具: {len(tools)} 个")
@@ -472,8 +475,7 @@ def main():
         added += 1
         print(f"  ✅ 添加: {t['name']} ({t['slug']})")
 
-    with open(TOOLS_JSON_PATH, 'w', encoding='utf-8') as f:
-        json.dump(tools, f, ensure_ascii=False, indent=4)
+    save_tools_batch(tools)
 
     print(f"\n完成: 新增 {added} 个, 跳过 {skipped} 个, 总计 {len(tools)} 个")
 

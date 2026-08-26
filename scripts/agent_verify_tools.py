@@ -32,13 +32,20 @@ TODAY = datetime.now().strftime('%Y-%m-%d')
 
 
 def load_tools():
-    with open(TOOLS_JSON, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    # 2026-08-26 去单体化: 分片优先
+    try:
+        from data_store import load_all_tools
+        return load_all_tools()
+    except Exception:
+        with open(TOOLS_JSON, 'r', encoding='utf-8') as f:
+            return json.load(f)
 
 
 def save_tools(d):
-    with open(TOOLS_JSON, 'w', encoding='utf-8') as f:
-        json.dump(d, f, ensure_ascii=False, indent=4)
+    # 2026-08-26 去单体化: 只写分片, 不写单体
+    from data_store import save_tools_batch
+    n = save_tools_batch(d, indent=4)
+    print(f"[agent_verify] 已写 {n} 个工具分片 (data/tools/*.json)")
 
 
 def select_targets(d, batch, slugs):

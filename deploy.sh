@@ -44,23 +44,6 @@ python scripts/validate_data.py || { echo "❌ 数据校验未通过，中止部
 echo "✅ 数据校验通过"
 
 echo ""
-echo "[0/4] 🔄 散文件→单体 对齐（build 前聚合兜底，2026-08-25）..."
-# 必须在 regenerate_data/build 之前执行：它们读单体（articles.json/tools.json），
-# 若自动化旁路只写散文件，单体陈旧会导致 ranking/live 数据与首页内容不一致。
-cd "$LOCAL_DIR"
-python - << 'SYNC_PY' || true
-import sys, os
-sys.path.insert(0, os.path.join('scripts'))
-try:
-    from build_lib.data_loaders import sync_mono_from_shards
-    _a = sync_mono_from_shards('articles.json', 'articles', indent=2)
-    _t = sync_mono_from_shards('tools.json', 'tools', indent=4)
-    print(f"  [sync] articles +{_a} / tools +{_t}" + ("（单体已对齐）" if (_a or _t) else "（无差异，跳过）"))
-except Exception as _e:
-    print(f"  ⚠️ 聚合跳过（不阻断）: {_e}")
-SYNC_PY
-
-echo ""
 echo "[0/4] 🔄 重新生成排名和仪表盘数据..."
 cd "$LOCAL_DIR"
 python scripts/regenerate_data.py
@@ -212,24 +195,32 @@ fi
 
 # 🔴 陈旧页根因治理（2026-07-29）：build.py --target tools 只重建已发布页，
 #   未发布/已删除工具的本地 tools/<slug>/ 陈旧产物不会被重建，但下方全量 rsync 会重传 → 线上出现陈旧/错误内容。
-#   解决：deploy 前比对 tools.json 已发布 slug 与本地 tools/ 目录，删除多余本地孤儿目录（保留 _template 构建源）。
-if [ -d "$LOCAL_DIR/tools" ] && [ -f "$LOCAL_DIR/data/tools.json" ]; then
+#   解决：deploy 前比对已发布 slug(从分片 data/tools/*.json, 2026-08-26 去单体化) 与本地 tools/ 目录，删除多余本地孤儿目录（保留 _template 构建源）。
+if [ -d "$LOCAL_DIR/tools" ] && [ -d "$LOCAL_DIR/data/tools" ]; then
     echo "  🧹 清理 tools/ 下未发布的陈旧孤儿目录（防止陈旧页重传线上）..."
     python - "$LOCAL_DIR" << 'PYEOF'
-import json, os, re, sys, shutil
+import json, os, re, sys, shutil, glob
 _raw = sys.argv[1].replace('\\', '/')
 _m = re.match(r'^[\\/]([a-zA-Z])[\\/](.*)$', _raw)
 if _m:
     _raw = _m.group(1).upper() + ':/' + _m.group(2)
 base = os.path.normpath(_raw)
-tj = os.path.join(base, 'data', 'tools.json')
+# 2026-08-26: 真源改为分片 data/tools/*.json, 单体已退役
 tdir = os.path.join(base, 'tools')
 try:
-    d = json.load(open(tj, encoding='utf-8'))
-    tools = d.get('tools', d) if isinstance(d, dict) else d
+    tools = []
+    for fp in glob.glob(os.path.join(base, 'data', 'tools', '*.json')):
+        try:
+            rec = json.load(open(fp, encoding='utf-8'))
+        except Exception:
+            continue
+        if isinstance(rec, list):
+            tools.extend(rec)
+        elif isinstance(rec, dict):
+            tools.append(rec)
     published = {t.get('slug') for t in tools if t.get('published') and t.get('slug')}
 except Exception as e:
-    print("    ⚠️ 读取 tools.json 失败，跳过清理:", e); sys.exit(0)
+    print("    ⚠️ 读取分片 tools 失败，跳过清理:", e); sys.exit(0)
 removed = 0
 for name in os.listdir(tdir):
     full = os.path.join(tdir, name)
@@ -350,13 +341,21 @@ fi
 # 2026-08-08：加入 data/tools.json 与 data/articles.json —— 数据目录不在上方强制同步列表，
 #   只靠 git 增量会因“已提交未变更”而漏传，导致服务器工具库落后（529 vs 532 事故）
 # 2026-08-25：补 data/dict_terms.json（AI 辞典数据，未提交时 git 增量不漏传不了）
-for f in index.html sitemap.xml robots.txt ads.txt sw.js manifest.json data/tools.json data/articles.json data/dict_terms.json; do
+# 2026-08-26：去单体化(任务#7)，data/tools.json 与 data/articles.json 退役删除，
+#   数据真源为分片目录 data/tools/ data/articles/（下方页面/数据目录全量同步覆盖），故移出本列表。
+for f in index.html sitemap.xml robots.txt ads.txt sw.js manifest.json data/dict_terms.json; do
     if [ -f "$LOCAL_DIR/$f" ]; then
         tar cf - -C "$LOCAL_DIR" "$f" 2>/dev/null | \
             ssh $SSH_OPTS "${SERVER_USER}@${SERVER_IP}" "cd ${REMOTE_DIR} && tar xf - --overwrite" 2>/dev/null || true
         echo "  ✅ $f 已同步"
     fi
 done
+
+# 2026-08-26 去单体化(任务#7): 删除服务器残留单体 data/tools.json / data/articles.json
+# (单体已退役, 真源为分片目录 data/tools/ data/articles/; 旧单体不删会让 server.py 等读到陈旧镜像)
+echo "  🧹 清理服务器残留单体 data/tools.json data/articles.json (去单体化)..."
+ssh $SSH_OPTS "${SERVER_USER}@${SERVER_IP}" "rm -f ${REMOTE_DIR}/data/tools.json ${REMOTE_DIR}/data/articles.json" 2>/dev/null || true
+echo "  ✅ 远端单体已清理"
 
 # 处理删除的文件
 if [ -n "$DELETED_FILES" ]; then

@@ -18,10 +18,12 @@ TOOL_RE = re.compile(r'(?:https://www\.aitoollab\.cn)?/tools/([a-z0-9\-\.]+)/')
 
 
 def load():
-    with open(os.path.join(BASE, 'data', 'articles.json'), 'r', encoding='utf-8') as f:
-        articles = json.load(f)
-    with open(os.path.join(BASE, 'data', 'tools.json'), 'r', encoding='utf-8') as f:
-        tools = json.load(f)
+    # 2026-08-26 去单体化: 分片优先
+    import sys as _sys
+    _sys.path.insert(0, os.path.join(BASE, 'scripts'))
+    from data_store import load_all_articles, load_all_tools
+    articles = load_all_articles()
+    tools = load_all_tools()
     return articles, tools
 
 

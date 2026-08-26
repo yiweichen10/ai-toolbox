@@ -4,6 +4,10 @@
 """
 import json
 
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'scripts'))
+from data_store import save_tools_batch, save_articles_batch
+
 URL_FIXES = {
     # === 已验证的真实官网URL ===
     "ChatGPT": "https://chat.openai.com",
@@ -109,8 +113,7 @@ URL_FIXES = {
 }
 
 def main():
-    with open('data/tools.json', 'r', encoding='utf-8') as f:
-        tools = json.load(f)
+    tools = load_all_tools()
 
     fixed_count = 0
     not_found = []
@@ -127,8 +130,7 @@ def main():
         else:
             not_found.append(name)
 
-    with open('data/tools.json', 'w', encoding='utf-8') as f:
-        json.dump(tools, f, ensure_ascii=False, indent=4)
+    save_tools_batch(tools)
 
     print(f"\n共修正 {fixed_count} 个URL")
     if not_found:

@@ -11,10 +11,14 @@ GENERATE_SCRIPT = os.path.join(BASE_DIR, 'scripts', 'generate_tools.py')
 TOOLS_JSON = os.path.join(BASE_DIR, 'data', 'tools.json')
 
 def get_unpublished_count():
-    if not os.path.exists(TOOLS_JSON):
-        return 0
-    with open(TOOLS_JSON, 'r', encoding='utf-8') as f:
-        tools = json.load(f)
+    # 2026-08-26 去单体化: 分片优先
+    try:
+        from data_store import load_all_tools
+        tools = load_all_tools()
+    except Exception:
+        if not os.path.exists(TOOLS_JSON):
+            return 0
+        tools = load_all_tools()
     return sum(1 for t in tools if not t.get('published', False))
 
 def run_step(name, cmd):

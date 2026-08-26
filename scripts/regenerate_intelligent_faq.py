@@ -5,6 +5,10 @@ import os
 import random
 from datetime import datetime
 
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'scripts'))
+from data_store import save_tools_batch, save_articles_batch
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 TOOLS_JSON_PATH = os.path.join(DATA_DIR, 'tools.json')
@@ -94,8 +98,7 @@ def generate_intelligent_faq(tool):
 def main():
     print(f"[{datetime.now()}] 开始重新生成高质量 FAQ...")
     
-    with open(TOOLS_JSON_PATH, 'r', encoding='utf-8') as f:
-        tools = json.load(f)
+    tools = load_all_tools()
     
     # 只为已发布的工具生成 FAQ
     published_tools = [t for t in tools if t.get('published', False)]
@@ -106,8 +109,7 @@ def main():
         tool['faq'] = faqs
         print(f"  - {tool['name']}: {len(faqs)} 个 FAQ")
     
-    with open(TOOLS_JSON_PATH, 'w', encoding='utf-8') as f:
-        json.dump(tools, f, ensure_ascii=False, indent=4)
+    save_tools_batch(tools)
     
     print(f"[OK] 已完成 {len(published_tools)} 个工具的 FAQ 生成")
     print(f"下一步：运行 python build.py 重新生成页面")

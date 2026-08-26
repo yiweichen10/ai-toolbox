@@ -18,6 +18,10 @@ import time
 import argparse
 import requests
 
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'scripts'))
+from data_store import save_tools_batch, save_articles_batch
+
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
@@ -510,8 +514,7 @@ def main():
     # 读取已有工具
     existing_tools = []
     if os.path.exists(TOOLS_JSON_PATH):
-        with open(TOOLS_JSON_PATH, 'r', encoding='utf-8') as f:
-            existing_tools = json.load(f)
+        existing_tools = load_all_tools()
 
     existing_names = [t["name"] for t in existing_tools]
     existing_slugs = [t["slug"] for t in existing_tools]
@@ -652,8 +655,7 @@ def main():
                     existing_slugs.append(tool_data["slug"])
                     # 逐个保存，防止中途超时丢失数据
                     existing_tools.append(tool_data)
-                    with open(TOOLS_JSON_PATH, 'w', encoding='utf-8') as f:
-                        json.dump(existing_tools, f, ensure_ascii=False, indent=4)
+                    save_tools_batch(existing_tools)
                     print(f"    💾 已保存到 tools.json (累计 {len(existing_tools)} 个)")
                 time.sleep(1)
 
@@ -739,8 +741,7 @@ def main():
                 tool_data["data_quality"]["last_content_updated"] = datetime.now().strftime("%Y-%m-%d")
                 # 替换旧条目
                 existing_tools[matched_idx] = tool_data
-                with open(TOOLS_JSON_PATH, 'w', encoding='utf-8') as f:
-                    json.dump(existing_tools, f, ensure_ascii=False, indent=4)
+                save_tools_batch(existing_tools)
                 updated_count += 1
                 print(f"    ✅ 已更新 (slug保持: {tool_data['slug']}, 待重新发布)")
             time.sleep(1)

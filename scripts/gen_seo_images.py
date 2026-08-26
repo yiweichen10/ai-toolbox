@@ -681,16 +681,12 @@ body {{ margin:0; width:1200px; height:630px; font-family:"Noto Sans SC",sans-se
 
 def main():
     import re as _re
-    # 加载工具数据
-    with open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8') as f:
-        tools = json.load(f)
-
-    # 加载文章数据
-    articles = []
-    articles_path = os.path.join(DATA_DIR, 'articles.json')
-    if os.path.exists(articles_path):
-        with open(articles_path, 'r', encoding='utf-8') as f:
-            articles = json.load(f)
+    # 加载工具/文章数据 (2026-08-26 去单体化: 分片优先)
+    import sys as _sys
+    _sys.path.insert(0, os.path.join(os.path.dirname(DATA_DIR), 'scripts'))
+    from data_store import load_all_tools, load_all_articles
+    tools = load_all_tools()
+    articles = load_all_articles()
 
     print(f"共 {len(tools)} 个工具，{len(articles)} 篇文章，开始生成SEO图片...\n")
 

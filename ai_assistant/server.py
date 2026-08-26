@@ -282,20 +282,42 @@ def _norm(s):
 
 def _load_tools(force=False):
     global _INDEX
+    # 2026-08-26 去单体化(任务#7): 真源为分片目录 data/tools/*.json, 单体 tools.json 已退役。
+    # 目录存在时按目录最新 mtime 判定重载; 目录缺失回退单体(兼容未迁移环境)。
+    shard_dir = os.path.join(os.path.dirname(TOOLS_JSON), 'tools') if TOOLS_JSON.endswith('tools.json') else os.path.join(TOOLS_JSON, '..', 'tools')
+    shard_dir = os.path.normpath(shard_dir)
+    use_shards = os.path.isdir(shard_dir) and any(f.endswith('.json') for f in os.listdir(shard_dir))
     try:
-        mtime = os.path.getmtime(TOOLS_JSON)
+        if use_shards:
+            mtime = max(os.path.getmtime(os.path.join(shard_dir, f)) for f in os.listdir(shard_dir) if f.endswith('.json'))
+        else:
+            mtime = os.path.getmtime(TOOLS_JSON)
     except OSError:
         mtime = 0
     if not force and _INDEX['mtime'] == mtime and _INDEX['tools']:
         return _INDEX['tools']
     try:
-        with io.open(TOOLS_JSON, 'r', encoding='utf-8') as fh:
-            data = json.load(fh)
+        if use_shards:
+            import glob
+            raw = []
+            for fp in sorted(glob.glob(os.path.join(shard_dir, '*.json'))):
+                try:
+                    with io.open(fp, 'r', encoding='utf-8') as fh:
+                        rec = json.load(fh)
+                except Exception:
+                    continue
+                if isinstance(rec, list):
+                    raw.extend(rec)
+                elif isinstance(rec, dict):
+                    raw.append(rec)
+        else:
+            with io.open(TOOLS_JSON, 'r', encoding='utf-8') as fh:
+                data = json.load(fh)
+            raw = data.get('tools', data) if isinstance(data, dict) else data
     except Exception:
         if _INDEX['tools']:
             return _INDEX['tools']
         return []
-    raw = data.get('tools', data) if isinstance(data, dict) else data
     likes_map = _load_likes()['counts']
     tools = []
     for t in raw:

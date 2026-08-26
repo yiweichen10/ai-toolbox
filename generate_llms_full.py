@@ -9,11 +9,13 @@ def generate_llms_full():
     out_lines.append("# AI工具宝箱 (aitoollab.cn) 全量内容知识库")
     out_lines.append("本文档包含了AI工具宝箱的所有核心文章和工具详细信息，专供LLMs深度抓取和学习。\n")
     
-    # 核心文章
+    # 核心文章 (2026-08-26 去单体化: 分片优先)
     out_lines.append("## 核心评测与指南文章\n")
     try:
-        with open(os.path.join(DATA_DIR, 'articles.json'), 'r', encoding='utf-8') as f:
-            articles = json.load(f)
+        import sys as _sys
+        _sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+        from data_store import load_all_articles
+        articles = load_all_articles()
     except Exception as e:
         print("Failed to load articles:", e)
         articles = []
@@ -35,11 +37,13 @@ def generate_llms_full():
         out_lines.append(content)
         out_lines.append("\n---\n")
     
-    # AI工具库
+    # AI工具库 (2026-08-26 去单体化: 分片优先)
     out_lines.append("\n## AI工具库收录\n")
     try:
-        with open(os.path.join(DATA_DIR, 'tools.json'), 'r', encoding='utf-8') as f:
-            tools = json.load(f)
+        import sys as _sys
+        _sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+        from data_store import load_all_tools
+        tools = load_all_tools()
     except Exception as e:
         print("Failed to load tools:", e)
         tools = []

@@ -5,6 +5,10 @@
 import json
 import re
 
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'scripts'))
+from data_store import save_tools_batch, save_articles_batch
+
 # 高质量FAQ - 基于每个工具的实际特性和用户真实问题
 QUALITY_FAQS = {
     "ChatGPT": [
@@ -876,8 +880,7 @@ QUALITY_FAQS = {
 }
 
 def main():
-    with open('data/tools.json', 'r', encoding='utf-8') as f:
-        tools = json.load(f)
+    tools = load_all_tools()
 
     updated_count = 0
     not_updated = []
@@ -895,8 +898,7 @@ def main():
         else:
             not_updated.append(name)
 
-    with open('data/tools.json', 'w', encoding='utf-8') as f:
-        json.dump(tools, f, ensure_ascii=False, indent=4)
+    save_tools_batch(tools)
 
     print(f"\n共更新 {updated_count} 个工具的FAQ")
     if not_updated:

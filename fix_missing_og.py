@@ -10,10 +10,10 @@ IMAGES_DIR = os.path.join(BASE_DIR, 'images')
 
 sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
 from gen_seo_images import make_article_og_image, generate_image
+from data_store import load_all_articles
 
-# 读取文章数据
-with open(os.path.join(DATA_DIR, 'articles.json'), encoding='utf-8') as f:
-    articles = json.load(f)
+# 读取文章数据 (2026-08-26 去单体化: 分片优先)
+articles = load_all_articles()
 
 # 需要补生成的slug列表
 missing_slugs = [

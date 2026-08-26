@@ -117,8 +117,11 @@ def main():
     check("sitemap 枢纽页齐全", len(missing_hubs) == 0, f"缺失: {missing_hubs}")
     # 已发布工具/文章全覆盖
     import json
-    tools = json.load(open(os.path.join(ROOT, "data", "tools.json"), encoding="utf-8"))
-    arts = json.load(open(os.path.join(ROOT, "data", "articles.json"), encoding="utf-8"))
+    # 2026-08-26 去单体化(任务#7): 分片优先 data/tools/*.json + data/articles/*.json
+    sys.path.insert(0, os.path.join(ROOT, "scripts"))
+    from data_store import load_all_tools, load_all_articles
+    tools = load_all_tools()
+    arts = load_all_articles()
     pub_slugs = {t["slug"] for t in tools if t.get("published", True)}
     art_slugs = {a["slug"] for a in arts}
     miss_tools = [s for s in pub_slugs if f"https://www.aitoollab.cn/tools/{s}/" not in locs]

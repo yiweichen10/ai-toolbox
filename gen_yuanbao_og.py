@@ -8,6 +8,20 @@ from gen_seo_images import make_og_image, generate_image
 
 with open(os.path.join(BASE_DIR, 'data', 'tools.json'), 'r', encoding='utf-8') as f:
     tools = json.load(f)
+# 2026-08-26 去单体化: 分片优先
+import glob as _glob
+_shard_dir = os.path.join(BASE_DIR, 'data', 'tools')
+if os.path.isdir(_shard_dir):
+    _all = []
+    for _fp in sorted(_glob.glob(os.path.join(_shard_dir, '*.json'))):
+        try:
+            with open(_fp, encoding='utf-8') as _f:
+                _r = json.load(_f)
+            _all.extend(_r if isinstance(_r, list) else [_r])
+        except Exception:
+            continue
+    if _all:
+        tools = _all
 
 tool = next((t for t in tools if t['slug'] == 'tencent-yuanbao'), None)
 if not tool:

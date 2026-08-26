@@ -3,6 +3,10 @@ import os
 import random
 from datetime import datetime
 
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'scripts'))
+from data_store import save_tools_batch, save_articles_batch
+
 # 配置
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
@@ -156,8 +160,7 @@ def main():
         print(f"错误: {TOOLS_JSON_PATH} 文件不存在。")
         return
     
-    with open(TOOLS_JSON_PATH, 'r', encoding='utf-8') as f:
-        tools = json.load(f)
+    tools = load_all_tools()
     
     updated_count = 0
     for tool in tools:
@@ -169,8 +172,7 @@ def main():
             print(f"  - 为 {tool['name']} 生成 {len(faq)} 个 FAQ")
     
     # 保存更新后的数据
-    with open(TOOLS_JSON_PATH, 'w', encoding='utf-8') as f:
-        json.dump(tools, f, ensure_ascii=False, indent=4)
+    save_tools_batch(tools)
     
     print(f"[{datetime.now()}] 已为 {updated_count} 个工具生成 FAQ。")
 

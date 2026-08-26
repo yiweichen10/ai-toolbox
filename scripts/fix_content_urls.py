@@ -5,6 +5,10 @@
 import json
 import re
 
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'scripts'))
+from data_store import save_tools_batch, save_articles_batch
+
 # 旧URL -> 新URL 映射（用于content中的替换）
 CONTENT_URL_REPLACEMENTS = {
     "www.天工ai.com": "www.tiangong-china.com",
@@ -79,8 +83,7 @@ CONTENT_URL_REPLACEMENTS = {
 }
 
 def main():
-    with open('data/tools.json', 'r', encoding='utf-8') as f:
-        tools = json.load(f)
+    tools = load_all_tools()
 
     fix_count = 0
     for tool in tools:
@@ -101,8 +104,7 @@ def main():
             fix_count += 1
             print(f"  [CONTENT FIX] {tool['name']}")
 
-    with open('data/tools.json', 'w', encoding='utf-8') as f:
-        json.dump(tools, f, ensure_ascii=False, indent=4)
+    save_tools_batch(tools)
 
     print(f"\n共修复 {fix_count} 个工具的content中的虚假URL")
 

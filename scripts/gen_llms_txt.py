@@ -91,8 +91,11 @@ def article_sections(articles, domain, trailing_slash, per_cat=8, total=16):
 
 
 def build_cn():
-    tools = load_json(os.path.join(BASE, 'data', 'tools.json'))
-    articles = json.load(open(os.path.join(BASE, 'data', 'articles.json'), encoding='utf-8'))
+    # 2026-08-26 去单体化: 分片优先
+    sys.path.insert(0, os.path.join(BASE, 'scripts'))
+    from data_store import load_all_tools, load_all_articles
+    tools = load_all_tools()
+    articles = load_all_articles()
     pub = [t for t in tools if t.get('published')]
     today = datetime.now().strftime('%Y-%m-%d')
     free = 0

@@ -7,7 +7,7 @@ generate_compare_batch.py — 批量生成竞品对比内容（数据驱动，�
 3) compare_section：给无配置的热门工具批量配内嵌竞品对比版块（tools.json）
 合并写入 compare_data.json / tools.json，自动备份。
 """
-import json, shutil, re, datetime
+import json, shutil, re, datetime, os, sys
 from collections import defaultdict
 
 BASE = "data/"
@@ -15,7 +15,10 @@ TODAY = datetime.date.today().isoformat()
 CATS = ['AI编程','AI开发','AI对话','AI视频','AI效率','AI设计','AI办公','AI行业应用','AI绘画','AI音频','AI写作','AI智能体','AI搜索','AI自动化','AI翻译']
 
 def load_tools():
-    return json.load(open(BASE + "tools.json", encoding="utf-8"))
+    # 2026-08-26 去单体化: 分片优先
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__))))
+    from data_store import load_all_tools
+    return load_all_tools()
 
 def fmt_price(t):
     p = str(t.get("price") or "").strip()
@@ -137,7 +140,6 @@ def gen_alt_content(target, alts):
 
 def main():
     shutil.copy2(BASE + "compare_data.json", BASE + "compare_data.json.bak_" + TODAY.replace("-", ""))
-    shutil.copy2(BASE + "tools.json", BASE + "tools.2026-07-31.bak")
 
     tools = load_tools()
     T = {t["slug"]: t for t in tools}
@@ -225,13 +227,22 @@ def main():
             "verdict": f"{t['name']} 与 {'、'.join(x['name'] for x in cands)} 同属{cat}赛道：{t['name']} 的 {fmt_feats(t)[0]} 是亮点，价格 {fmt_price(t)}；竞品各有侧重，可按预算与功能需求选择。",
         }
         added_s += 1
-    json.dump(tools, open(BASE + "tools.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    # 2026-08-26 去单体化: 只写分片(compare_section 字段变更工具), 不写单体
+    from data_store import save_tool
+    _n = 0
+    for t in tools:
+        if t.get("compare_section") and t["compare_section"].get("competitors"):
+            try:
+                save_tool(t, indent=2)
+                _n += 1
+            except Exception as e:
+                print(f"  ⚠️ 写分片失败 {t.get('slug')}: {e}")
+    print(f"  [shard] compare_section 已写 {_n} 个分片")
 
     print(f"新增 compares: {added_c} 组 | alternatives: {added_a} 组 | compare_section 内嵌: {added_s} 个")
     print(f"compare_data.json 现: compares={len(cd['compares'])} alternatives={len(cd['alternatives'])}")
     # 校验
     json.load(open(BASE + "compare_data.json", encoding="utf-8"))
-    json.load(open(BASE + "tools.json", encoding="utf-8"))
     print("JSON 校验通过")
 
 if __name__ == "__main__":

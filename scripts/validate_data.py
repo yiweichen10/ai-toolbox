@@ -20,8 +20,9 @@ import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
-TOOLS_FILE = os.path.join(DATA_DIR, 'tools.json')
-ARTICLES_FILE = os.path.join(DATA_DIR, 'articles.json')
+# 2026-08-26 去单体化(任务#7): 真源为分片目录 data/tools/ data/articles/, 单体已退役。
+TOOLS_FILE = os.path.join(DATA_DIR, 'tools')
+ARTICLES_FILE = os.path.join(DATA_DIR, 'articles')
 
 # Windows 控制台编码兜底（与 build.py 一致）
 if hasattr(sys.stdout, 'reconfigure'):
@@ -46,6 +47,24 @@ def warn(msg):
 
 
 def load_json(path, label):
+    # 2026-08-26 去单体化: path 为分片目录 data/tools|articles, 聚合所有 *.json
+    import glob
+    if os.path.isdir(path):
+        out = []
+        for fp in sorted(glob.glob(os.path.join(path, '*.json'))):
+            try:
+                with open(fp, 'r', encoding='utf-8') as f:
+                    d = json.load(f)
+                if isinstance(d, list):
+                    out.extend(d)
+                elif isinstance(d, dict):
+                    out.append(d)
+            except Exception as e:
+                err(f'{label}: 分片 {os.path.basename(fp)} 解析失败: {e}')
+        if out:
+            return out
+        err(f'{label}: 分片目录为空 {path}')
+        return []
     try:
         with open(path, 'r', encoding='utf-8') as f:
             d = json.load(f)

@@ -32,9 +32,12 @@ ARTICLES_DIR = SITE_ROOT / "articles"
 
 
 def load_tool_map():
-    """加载工具名→slug映射，按名称长度降序排列（优先匹配长名）"""
-    with open(TOOLS_JSON, "r", encoding="utf-8") as f:
-        tools = json.load(f)
+    """加载工具名→slug映射，按名称长度降序排列（优先匹配长名）
+    2026-08-26 去单体化: 分片优先 data/tools/*.json"""
+    import sys as _sys
+    _sys.path.insert(0, str(SITE_ROOT / "scripts"))
+    from data_store import load_all_tools
+    tools = load_all_tools()
     # 按名称长度降序排列，避免 "Gemini" 先于 "Gemini 2.5" 被替换
     tool_map = sorted(
         [(t["name"], t["slug"]) for t in tools if t.get("published", True)],
@@ -349,8 +352,7 @@ def inject_site_cta(html: str, tool_map: list, current_slug: str = None) -> str:
 
     # 查找当前工具的分类
     current_tool = None
-    with open(TOOLS_JSON, "r", encoding="utf-8") as f:
-        tools = json.load(f)
+    tools = load_all_tools()
     for t in tools:
         if t["slug"] == current_slug:
             current_tool = t
