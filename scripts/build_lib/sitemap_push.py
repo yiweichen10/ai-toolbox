@@ -217,6 +217,21 @@ def generate_sitemap(tools, articles, categories, compares=None, alternatives=No
         <priority>0.6</priority>
     </url>''')
 
+    # 全局按 <loc> 去重（2026-08-27 GSC 治理：quiz//dict//news 枢纽页曾在多段重复注入，
+    # 线上 sitemap 出现重复条目。保留首现条目，防御任何上游分段重复添加。）
+    _seen_loc = set()
+    _deduped = []
+    for _blk in urls:
+        _m = _re_sm.search(r'<loc>(.*?)</loc>', _blk)
+        _u = _m.group(1) if _m else _blk
+        if _u in _seen_loc:
+            continue
+        _seen_loc.add(_u)
+        _deduped.append(_blk)
+    if len(_deduped) != len(urls):
+        print(f"[sitemap] ⚠️ 去重 {len(urls)-len(_deduped)} 条重复 URL")
+    urls = _deduped
+
     sitemap = f'''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {chr(10).join(urls)}
