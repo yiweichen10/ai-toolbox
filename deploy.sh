@@ -63,6 +63,17 @@ else
     echo "[1/4] ⏩ 跳过构建 (--skip-build)"
 fi
 
+# ── 部署前产物一致性门禁（2026-08-27，GSC 404 治理闭环）──
+# 背景：发现 pptbot 类"本地产物与线上/sitemap 脱节"缺口——若被同步覆盖会把线上打成 404。
+# 规则：sitemap 每条 URL 必须有对应本地 HTML，缺失即中止部署（skip-build 时同样检查）。
+echo ""
+echo "[1.2/4] 🚪 部署前门禁：sitemap ↔ 本地产物一致性..."
+# Windows/git-bash 下 $LOCAL_DIR 是 /c/... 格式，原生 python 不识别 → 转 Windows 路径
+_CHECK_DIR="$LOCAL_DIR"
+if command -v cygpath >/dev/null 2>&1; then _CHECK_DIR=$(cygpath -w "$LOCAL_DIR"); fi
+PYTHONIOENCODING=utf-8 python scripts/check_sitemap_artifacts.py "$_CHECK_DIR" || { echo "❌ 产物一致性门禁未通过，中止部署"; exit 1; }
+
+
 # 注入广告/CPS加载器（2026-07-14 启用：CPS推广卡需 loader.js + 工具页 data-category）
 echo ""
 echo "[1.5/4] 🎯 注入广告/CPS加载器 (inject_ads)..."
@@ -424,7 +435,9 @@ echo "✅ Nginx 已重载"
 # 现在：每次重载 Nginx 后全量 HEAD 线上 sitemap + 关键入口抽查，任何非 200 → 自动回滚并中止。
 echo ""
 echo "[3.5/4] 🩺 部署后健康检查（线上 sitemap 全量存活 + 关键入口）..."
-PYTHONIOENCODING=utf-8 python "$LOCAL_DIR/scripts/post_deploy_health_check.py"
+_HC_DIR="$LOCAL_DIR"
+if command -v cygpath >/dev/null 2>&1; then _HC_DIR=$(cygpath -w "$LOCAL_DIR"); fi
+PYTHONIOENCODING=utf-8 python "$_HC_DIR/scripts/post_deploy_health_check.py"
 HC_RC=$?
 if [ $HC_RC -ne 0 ]; then
     echo "  ❌ 健康检查未通过，回滚部署..."

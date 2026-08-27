@@ -32,6 +32,18 @@ js/tools-data.js（首页工具数据，构建时由 build.py 生成）
 > - `scripts/build.py` / `regenerate_data.py` / `optimize_css.py` 已内置 stdout 兜底，直接运行也不崩；
 > - 其他脚本（inject_ads.py / fix_css_refs.py 等）若直接运行报编码错，先设
 >   `$env:PYTHONIOENCODING='utf-8'` 再跑，并把兜底补进该脚本，不要只口头提醒。
+>
+> ⚠️ **Windows xargs 铁律（2026-08-27 立规，已踩坑）**：`deploy.sh` 本地用 `xargs` 批量把文件列表传给
+> `tar`/`ssh` 时，Git Bash 继承的**环境变量块实测 521KB（169 条）**远超 Windows `CreateProcess` 的
+> **32KB exec 上限**，GNU xargs 在 fork/exec 子进程时报 `environment is too large for exec` 并 rc=1——
+> **每次有新增文件时必失败**（无变更走 else 分支不触发，故时隐时现）。
+> - 症状：信息图/资产增量同步段 `xargs: environment is too large for exec` + 远端 `tar: This does not look like a tar archive`。
+> - **禁用** `printf list | xargs -0 tar cf - ...` 这类把大列表喂给 xargs 再 exec 外部命令的写法。
+> - **正确写法**：把列表写进临时文件，用 `tar cf - -C <dir> -T <listfile> | ssh ... "tar xf - --overwrite"`
+>   （`-T` 让 tar 内部读列表，**不 exec 外部命令**，彻底绕开 32KB 上限）；`-C` 必须放在 `-T` 之前才生效。
+> - ⚠️ **隐藏雷**：`assets/` 段原本同样用 xargs，但被 `2>/dev/null || true` 静默吞错——有变更时其实也悄悄失败，
+>   从未暴露。已随 infographics 段一并改为 `tar -T`（2026-08-27）。
+> - 120 行 `ls | tail | xargs rm -f` 在**远端 Linux** 执行，不受 Windows 环境变量限制，无需改。
 
 ## 目录速查
 
@@ -93,10 +105,19 @@ js/tools-data.js（首页工具数据，构建时由 build.py 生成）
 1. `python scripts/build.py -t none` 全量构建；
 1.5. `python scripts/check_closed_loop.py`（2026-08-13 新增全站门禁：内部死链 / 单 h1 /
      Meta 描述完整性 / noindex / sitemap 枢纽页与覆盖 / 旧死链回归，任一 FAIL 先修再部署）；
+1.6. `python scripts/check_sitemap_artifacts.py`（2026-08-27 新增，deploy.sh 已内置为
+     [1.2/4] 门禁：sitemap 每条 URL 必须有对应本地 HTML 产物，拦截 pptbot 类"本地产物
+     缺失会被同步打成线上 404"的镜像缺口）；
 2. `python scripts/dev_site_server.py 8090` 本地起服，抽查改动页面（200、无 JS 报错）；
 3. 跑相关校验脚本：`scripts/check_internal_leak.py`（构建已内置）、`scripts/check_urls.py` / `verify_*.py`（如涉及链接/页面）；
 4. 检查 diff 范围符合预期（不要包含无关页面或大范围时间戳变化）；
-5. 需要上线再执行 `bash deploy.sh`。
+5. 需要上线再执行 `bash deploy.sh`；
+   5.5. deploy.sh [3.5/4] 会在 Nginx 重载后跑 `scripts/post_deploy_health_check.py`
+   （线上 sitemap 全量 HEAD + 关键入口抽查，任何非 200 自动回滚中止）——背景：8/22
+   部署窗口期 4 页线上 404，被 Google 抓进 404 清单一周后才被发现。今后删页/改 slug
+   必须同步在 `nginx-old-url-redirects.conf` 补 301 并推送服务器（流程见
+   `GSC-404治理与索引率提升方案.md`）。
+
 
 ## 已知优化清单
 
