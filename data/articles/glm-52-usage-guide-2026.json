@@ -1,0 +1,54 @@
+{
+  "title": "智谱GLM-5.2使用指南：API、Coding Plan与本地部署怎么选",
+  "seo_title": "GLM-5.2怎么用：Coding Plan、API参数、1M上下文与开源部署",
+  "slug": "glm-52-usage-guide-2026",
+  "date": "2026-08-28",
+  "dateFull": "2026-08-28",
+  "category": "AI编程",
+  "content_type": "AI教程",
+  "tags": [
+    "智谱GLM-5.2",
+    "GLM-5.2使用教程",
+    "1M上下文",
+    "GLM Coding Plan",
+    "MIT开源",
+    "AI编程"
+  ],
+  "summary": "GLM-5.2 的四条用法与参数配置：清言对话、Coding Plan 接入编码工具、开放平台 API、MIT 权重自部署，含 1M 上下文开关和积分额度，以及 8 月后自动切换 GLM-5.3 的提醒。",
+  "description": "GLM-5.2 是智谱 2026 年 6 月发布的 1M 上下文旗舰基座模型，MIT 开源。四条上手路径讲清：智谱清言对话、GLM Coding Plan 接入 Claude Code 开满 1M 上下文、API 参数配置、753B 权重私有化部署，以及 8 月起 glm-5.2 自动切换 GLM-5.3 的坑。",
+  "keywords": "GLM-5.2, 智谱GLM-5.2怎么用, GLM-5.2使用指南, GLM-5.2 API, GLM Coding Plan, GLM-5.2 本地部署, 1M上下文配置, 智谱大模型",
+  "author": "AI工具宝箱编辑部",
+  "related_tools": [
+    "glm-5-2",
+    "zhipu-chatglm",
+    "zcode",
+    "claude-code",
+    "opencode",
+    "cline",
+    "vllm",
+    "hugging-face"
+  ],
+  "faq": [
+    {
+      "question": "GLM-5.2 现在还能直接调用吗？",
+      "answer": "能。智谱开放平台标准 API 里把 model 写成 glm-5.2 就照常可用，1M 上下文、128K 输出不变。但 GLM Coding Plan 从 8 月起调用 glm-5.2、glm-5.1 会自动切换到 GLM-5.3，想锁定版本只能走标准 API 或本地部署权重。"
+    },
+    {
+      "question": "GLM-5.2 是免费的吗？",
+      "answer": "模型权重以 MIT 协议开源，可免费商用、微调和二次发布，只需保留版权声明。托管调用是另一套：智谱清言等对话产品有免费额度，开放平台 API 按 token 计费，编码场景可用 GLM Coding Plan 订阅制，具体价格在开放平台价格页查询。"
+    },
+    {
+      "question": "怎么在 Claude Code 里打开 GLM 的 1M 上下文？",
+      "answer": "在 Claude Code 的 settings.json 里给模型名加 [1m] 后缀，例如 glm-5.2[1m]，同时把环境变量 CLAUDE_CODE_AUTO_COMPACT_WINDOW 设为 1000000。如果提示模型不存在，升级到最新版 Claude Code 再试；调用地址用 Anthropic 兼容端点 open.bigmodel.cn/api/anthropic。"
+    },
+    {
+      "question": "GLM-5.2 能识别图片吗？",
+      "answer": "不能。GLM-5.2 是纯文本基座模型，输入输出都是文本。需要视觉理解可以换同系列的 GLM-5V-Turbo，或者 2026 年 8 月 26 日发布的首个原生多模态变体 GLM-5.3-Flash。"
+    },
+    {
+      "question": "自己部署 GLM-5.2 要什么配置？",
+      "answer": "官方权重为 753B 参数、BF16 与 F32 精度，另提供 FP8 量化版，需要多卡整节点加 vLLM、SGLang 一类推理框架，个人开发者不建议自己扛。权重在 Hugging Face 的 zai-org/GLM-5.2，国内可用 hf-mirror 镜像或魔搭下载。"
+    }
+  ],
+  "content": "GLM-5.2 是智谱（Zhipu AI，海外品牌 Z.ai）2026 年 6 月发布的旗舰基座模型：1M 上下文、128K 最大输出、MIT 开源。用它有四条路——不写代码就在智谱清言或 Z.ai 选 GLM 系列；日常开发订 GLM Coding Plan；做产品走开放平台 API，model 填 glm-5.2；数据不能出内网就下权重自己部署。先说 8 月新增的坑：Coding Plan 里调 glm-5.2 会被自动切到 GLM-5.3。\n\n## 一、三条硬指标，先看清再动手\n\n![图1：官方文档 GLM-5.2 模型页，1M 上下文、128K 输出](https://www.aitoollab.cn/images/articles/glm-52-usage-guide-2026/1-spec.png)\n\n官方文档原话是「支持真正可用的 1M 上下文，实测可承载项目级工程上下文」。塞进去和读得懂是两回事：智谱给的实测样本是一次长程开发任务跑掉约 85 万 tokens，接近用满窗口。\n\n## 二、写代码：Coding Plan 最省事\n\n![图2：官方套餐页写明调用 GLM-5.2 将自动切换至 GLM-5.3](https://www.aitoollab.cn/images/articles/glm-52-usage-guide-2026/2-plan.png)\n\n按[官方文档](https://docs.bigmodel.cn/cn/coding-plan/latest-model)配地址：Claude Code 走 Anthropic 兼容 open.bigmodel.cn/api/anthropic，Codex 走 /api/v1，其他 OpenAI 兼容工具走 /api/coding/paas/v4。想在 Claude Code 里开满 1M，要在 settings.json 给模型名加 [1m] 后缀，并把 CLAUDE_CODE_AUTO_COMPACT_WINDOW 设成 1000000；识别不到就升级 Claude Code。会话里输 /effort 调思考强度。\n\n![图3：手机端看官方「如何切换模型」文档](https://www.aitoollab.cn/images/articles/glm-52-usage-guide-2026/3-claude.png)\n\n积分额度：Lite 每 5 小时 2000、每周 1 万；Pro 1.2 万/6 万；Max 2.8 万/14 万。高峰是周一至周五 14:00 到 18:00，非高峰只扣一半积分，大任务挪到夜里或周末跑更划算。\n\n## 三、做应用：API 参数怎么填\n\n接口 open.bigmodel.cn/api/paas/v4/chat/completions，model 填 glm-5.2。thinking 默认开启，5.2 允许关闭，5.3 起强制思考关不掉；reasoning_effort 在 low、high、max 里选，默认 max，简单问答降到 low 更快；max_tokens 默认 65536、上限 131072；temperature 1.0 和 top_p 0.95 建议二选一。做 Agent 记一条：保留式思考在标准 API 默认关闭，要把 clear_thinking 设为 False 并原样回传 reasoning_content，否则推理断链、缓存也丢。\n\n## 四、私有化：MIT 权重值不值得下\n\n![图4：HF 镜像站 zai-org/GLM-5.2 模型页，mit、753B](https://www.aitoollab.cn/images/articles/glm-52-usage-guide-2026/4-hf.png)\n\n权重在 Hugging Face 的 zai-org/GLM-5.2，国内走 hf-mirror 镜像更快。模型卡标着 753B 参数、BF16 与 F32 权重，另有官方 FP8 量化版。MIT 允许商用、微调、二次发布，保留版权声明就行。代价是 753B 单机跑不动，得多卡整节点加量化——个人用 API 更划算，自部署是为合规和私有数据。\n\n## 五、怎么问才不浪费 1M\n\n官方三个起手式：把一个真实仓库丢进去做技术盘点，要架构、模块职责、接口契约和技术债；用 /goal 模式交中型重构，先要执行计划和验证方式；把团队规范和禁止事项写进上下文再动手。\n\n## 还要不要继续用 5.2\n\nGLM-5.3（8 月 14 日发布）沿用 5.2 同款基座，增益全部来自后训练，编码基准提升约 50%。标准 API 仍可显式指定 glm-5.2，适合回归对比；新项目建议直接上 5.3，参数差异见 [GLM-5.3 发布解读](/articles/glm-5-3-post-training-cyber-security-2026/)。发布背景读 [智谱GLM-5.2与ZCode 3.0双发布解析](/articles/glm-52-zcode-3-release-analysis-202606/)，参数速查在 [/tools/glm-5-2/](/tools/glm-5-2/)。"
+}
