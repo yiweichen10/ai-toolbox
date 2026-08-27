@@ -555,7 +555,7 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.aitoollab.cn/"},
             {"@type": "ListItem", "position": 2, "name": "AI工具选择器", "item": "https://www.aitoollab.cn/quiz/"},
-            {"@type": "ListItem", "position": 3, "name": title[:30], "item": f"https://www.aitoollab.cn/quiz/{'/' if is_main_entry else slug + '/'}"}
+            {"@type": "ListItem", "position": 3, "name": title[:30], "item": f"https://www.aitoollab.cn/quiz/{'' if is_main_entry else slug + '/'}"}
         ]
     }
     breadcrumb_json = json.dumps(breadcrumb, ensure_ascii=False, indent=2)
@@ -572,11 +572,11 @@ def build_quiz_page(quiz_data, all_tools, all_articles=None):
     <title>{escape_html(title)} - AI工具宝箱</title>
     <meta name="description" content="{escape_html(meta_desc)}">
     <meta name="keywords" content="{escape_html(', '.join(keywords))},AI工具选择器,AI工具推荐">
-    <link rel="canonical" href="https://www.aitoollab.cn/quiz/{'/' if is_main_entry else slug + '/'}">
+    <link rel="canonical" href="https://www.aitoollab.cn/quiz/{'' if is_main_entry else slug + '/'}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(title)}">
     <meta property="og:description" content="{escape_html(meta_desc)}">
-    <meta property="og:url" content="https://www.aitoollab.cn/quiz/{'/' if is_main_entry else slug + '/'}">
+    <meta property="og:url" content="https://www.aitoollab.cn/quiz/{'' if is_main_entry else slug + '/'}">
     <meta property="og:image" content="{og_image}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{escape_html(title)} - AI工具宝箱">

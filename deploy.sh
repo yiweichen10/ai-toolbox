@@ -283,13 +283,16 @@ if [ -d "$LOCAL_DIR/assets" ]; then
     _ndiff=$(printf '%s\n' "$_diff" | grep -c . || true)
     if [ "$_ndiff" -gt 0 ]; then
         # -r: 空输入时不执行 tar；|| true: 即使远端 tar 偶发空归档错误也不中止整个部署脚本
-        printf '%s\n' "$_diff" | tr '\n' '\0' | xargs -0 -r tar cf - -C "$LOCAL_DIR/assets" 2>/dev/null | \
+        # 2026-08-27: Windows Git Bash 下 xargs exec 环境变量块过大(实测521KB>32KB上限)必失败，
+        # 改用 tar -T 列表文件（tar 内部读列表，不 exec 外部命令），根除 environment is too large。
+        printf '%s\n' "$_diff" > "$_locf.tarlist"
+        tar cf - -C "$LOCAL_DIR/assets" -T "$_locf.tarlist" 2>/dev/null | \
             ssh $SSH_OPTS "${SERVER_USER}@${SERVER_IP}" "cd ${REMOTE_DIR}/assets && tar xf - --overwrite" 2>/dev/null || true
         echo "  ✅ assets/ 增量同步完成：本地共 ${_total} 个文件，本次仅上传 ${_ndiff} 个新增/变更文件"
     else
         echo "  ✅ assets/ 无需更新（${_total} 个文件均已存在且大小一致）"
     fi
-    rm -f "$_srvf" "$_locf" 2>/dev/null || true   # ||true: 本地rm被WorkBuddy safe_delete拦截时不致命
+    rm -f "$_srvf" "$_locf" "$_locf.tarlist" 2>/dev/null || true   # ||true: 本地rm被WorkBuddy safe_delete拦截时不致命
 fi
 # 信息图 images/infographics/：增量同步——只传服务器缺失或大小变化的 PNG
 # （文章信息图由 build.py 自动引用 /images/infographics/{slug}-infographic.png，
@@ -308,7 +311,10 @@ if [ -d "$LOCAL_DIR/images/infographics" ]; then
         # 现改为：检查 tar|ssh 退出码，失败重试2次；传完再逐项 curl 校验 HTTP 200，仍失败则明确报错并 exit 1（不再谎报）。
         _ok=0
         for _try in 1 2; do
-            printf '%s\n' "$_diff" | tr '\n' '\0' | xargs -0 -r tar cf - -C "$LOCAL_DIR/images/infographics" | \
+            # 2026-08-27: 同上——xargs 在 Windows Git Bash 必失败（环境变量块 521KB > exec 32KB 上限），
+            # 改用 tar -T 列表文件，不 exec 外部命令，从根上消除该错误。
+            printf '%s\n' "$_diff" > "$_locf.tarlist"
+            tar cf - -C "$LOCAL_DIR/images/infographics" -T "$_locf.tarlist" | \
                 ssh $SSH_OPTS "${SERVER_USER}@${SERVER_IP}" "cd ${REMOTE_DIR}/images/infographics && tar xf - --overwrite"
             _rc=$?
             if [ "$_rc" -eq 0 ]; then _ok=1; break; fi
@@ -330,7 +336,7 @@ if [ -d "$LOCAL_DIR/images/infographics" ]; then
     else
         echo "  ✅ images/infographics/ 无需更新（${_total} 个文件均已存在且大小一致）"
     fi
-    rm -f "$_srvf" "$_locf" 2>/dev/null || true   # ||true: 本地rm被WorkBuddy safe_delete拦截时不致命
+    rm -f "$_srvf" "$_locf" "$_locf.tarlist" 2>/dev/null || true   # ||true: 本地rm被WorkBuddy safe_delete拦截时不致命
 fi
 # 首页「AI前沿」板块新闻条目：由 build.py 构建时注入（build_index_page 目录优先读 193 篇，含最新日期）。
 # 2026-08-25 停用 inject_news_cards.py：它基于「index.html 不被构建重建」的旧假设，用**单体 articles.json**
@@ -412,6 +418,20 @@ echo ""
 echo "[3/4] 🔄 重载 Nginx..."
 ssh $SSH_OPTS "${SERVER_USER}@${SERVER_IP}" "nginx -s reload 2>/dev/null || systemctl reload nginx || echo '  ⚠️ Nginx reload skipped'"
 echo "✅ Nginx 已重载"
+
+# ── 部署后线上健康闭环（2026-08-27，GSC 404 治理复盘）──
+# 背景：8/22 部署窗口期 4 个页面线上 404 但 sitemap 仍收录，Google 抓到计入 404 清单，一周后才被发现。
+# 现在：每次重载 Nginx 后全量 HEAD 线上 sitemap + 关键入口抽查，任何非 200 → 自动回滚并中止。
+echo ""
+echo "[3.5/4] 🩺 部署后健康检查（线上 sitemap 全量存活 + 关键入口）..."
+PYTHONIOENCODING=utf-8 python "$LOCAL_DIR/scripts/post_deploy_health_check.py"
+HC_RC=$?
+if [ $HC_RC -ne 0 ]; then
+    echo "  ❌ 健康检查未通过，回滚部署..."
+    rollback_deploy
+    exit 1
+fi
+echo "  ✅ 健康检查通过"
 
 echo ""
 echo "[4/4] 📤 Git 备份排名/数据变更..."
