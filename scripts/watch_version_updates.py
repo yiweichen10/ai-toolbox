@@ -216,8 +216,16 @@ def fetch_github_releases(tools, days=7):
                 })
         except Exception as e:
             print(f"[gh] 跳过 {repo}: {type(e).__name__}")
+    # 每 slug 只保留最新一条，压掉 alpha/patch 连发噪音（2026-08-27：codex 三发 alpha 曾占满候选位）
     if cands:
-        print(f"[gh] {len(repos)} 个 repo 扫描，近 {days} 天命中 {len(cands)} 条 release 候选")
+        _latest = {}
+        for c in cands:
+            k = c["slug"]
+            if k not in _latest or c["date"] > _latest[k]["date"]:
+                _latest[k] = c
+        dropped = len(cands) - len(_latest)
+        cands = list(_latest.values())
+        print(f"[gh] {len(repos)} 个 repo 扫描，近 {days} 天命中 {len(cands) + dropped} 条，按 slug 收敛为 {len(cands)} 条（去重 {dropped}）")
     return cands
 
 

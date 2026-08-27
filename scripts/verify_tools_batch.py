@@ -55,6 +55,23 @@ PRIORITY_KEYWORDS = [
 ]
 
 
+_GSC_BOOST_FILE = os.path.join(BASE_DIR, 'data', 'gsc-unindexed-boost.txt')
+
+def _load_gsc_boost():
+    s = set()
+    try:
+        with open(_GSC_BOOST_FILE, encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#'):
+                    s.add(line)
+    except FileNotFoundError:
+        pass
+    return s
+
+_GSC_BOOST = _load_gsc_boost()
+
+
 def priority_score(tool):
     """计算核查优先级, 分数越高越优先"""
     score = 0
@@ -86,6 +103,12 @@ def priority_score(tool):
     # 从未核查过的优先
     if not tool.get('last_verified'):
         score += 20
+
+    # GSC「已发现-尚未收录」boost（2026-08-27 新增）：
+    # Google 已抓取未收录的页面，内容更新触发 lastmod 变化可提升二次抓取与收录。
+    # 清单 data/gsc-unindexed-boost.txt 一行一个 slug（# 为注释），由 GSC 分层分析维护。
+    if _GSC_BOOST and slug in _GSC_BOOST:
+        score += 120
 
     return score
 
