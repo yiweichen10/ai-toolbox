@@ -5,7 +5,7 @@
   "auto_positioning": true,
   "emoji": "🔍",
   "color": "#1877F2",
-  "description": "Midjourney 发布的首款硬件产品：60 秒完成全身超声扫描、生成 3D 人体解剖模型的断层成像设备，由前 Apple Vision Pro 负责人带队，计划以「Midjourney Spa」门店形式落地。",
+  "description": "Midjourney 2026年6月17日发布的首款硬件：Midjourney Medical 部门的全身超声波扫描仪（Ultrasonic CT）。人站在平台上降入浅水池，约50万个超声传感元件60秒完成全身0.5mm级3D成像，无辐射无磁体。首家「水疗式」体验中心计划2027年底落地旧金山。",
   "category": "AI行业应用",
   "tags": [
     "医疗硬件",
@@ -21,7 +21,7 @@
     "text": "NEW"
   },
   "url": "https://www.midjourney.com/medical",
-  "price": "未上市（Spa 门店服务模式）",
+  "price": "尚未公开售价；以体验门店模式运营（规划2031年前部署5万台），目前仅研究性试扫",
   "platform": "Web",
   "pros": [
     "扫描速度快（60 秒 vs MRI 1-2 小时）",
@@ -47,16 +47,20 @@
   ],
   "faq": [
     {
-      "q": "Midjourney Scanner 是什么？",
-      "a": "Midjourney 于 2026-06-18 在旧金山发布的首款硬件：全身超声断层成像设备，60 秒生成 3D 人体解剖模型，由 Midjourney Medical 部门运营。"
+      "q": "Midjourney Scanner 是医疗诊断设备吗？",
+      "a": "目前不是。它没有任何FDA诊断许可，起步产品是体成分图谱，走FDA一般健康通道。诊断功能要等旧金山首店落地后才申请审批。"
     },
     {
-      "q": "它与 Midjourney 的 AI 绘画有什么关系？",
-      "a": "没有直接关系，这是 Midjourney 从软件跨界医疗硬件的首款产品，与 AI 图像生成业务独立。"
+      "q": "普通用户什么时候能用到？",
+      "a": "计划2027年底在旧金山联合广场的首家Midjourney Spa水疗式体验中心开放扫描，随后2028年扩展城市并推出定制芯片第三代设备。在此之前仅有研究性试扫（迄今约十余人）。"
     },
     {
-      "q": "可以购买吗？",
-      "a": "尚未上市。计划通过线下「Midjourney Spa」门店提供扫描服务，首家门店选址旧金山 Union Square，预计 2027 年底开业。"
+      "q": "和MRI有什么区别？",
+      "a": "原理完全不同：MRI用强磁体和射频，扫描需数十分钟且空间封闭；Scanner用水耦合+超声波阵列，60秒完成全身成像、无辐射。代价是超声对含气器官和骨后组织成像受限，且临床验证尚属空白。"
+    },
+    {
+      "q": "Scanner的技术是谁的？",
+      "a": "核心「片上超声」技术来自 Butterfly Network（NYSE: BFLY）的独家授权（2025年11月协议，预期总额约7400万美元），成像算法重建与算力集群由Midjourney自研，基础研究关联Caltech。"
     }
   ],
   "seo_keywords": [
@@ -66,7 +70,7 @@
     "Midjourney图片提取提示词",
     "Midjourney参数逆向工具"
   ],
-  "content": "## Midjourney Scanner 是什么？\n\nMidjourney 于 2026 年 6 月发布的首款硬件——60 秒完成全身扫描的超声断层成像设备，可生成高精度 3D 人体解剖模型。\n\nMidjourney 发布的首款硬件产品：60 秒完成全身超声扫描、生成 3D 人体解剖模型的断层成像设备，由前 Apple Vision Pro 负责人带队，计划以「Midjourney Spa」门店形式落地。\n\n## 核心功能\n\n- 60 秒完成全身超声扫描\n- 生成亚毫米级 3D 人体解剖模型（标注肌肉/骨骼/血管/器官等 25+ 结构）\n- 环形换能器阵列（数十万微型超声单元）\n- 2 petaflops 算力实时三维重建\n- 无辐射、无一次性耗材，单次边际成本趋近于零\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | 尚未上市/无公开定价；计划通过线下「Midjourney Spa」门店提供扫描服务，首家门店预计 2027 年底开业。 |\n| 支持平台 | 线下硬件设备（Spa 场景） |\n| 评分 | ⭐4.2 |\n| 开发商 | Midjourney（Midjourney Medical） |\n\n## 价格与平台\n\n- **价格**：尚未上市/无公开定价；计划通过线下「Midjourney Spa」门店提供扫描服务，首家门店预计 2027 年底开业。\n- **平台**：线下硬件设备（Spa 场景）\n- **官网**：https://www.midjourney.com/medical\n\n## 优缺点分析\n\n### 优点\n\n- 扫描速度快（60 秒 vs MRI 1-2 小时）\n- 无辐射\n- 由前 Apple Vision Pro 硬件负责人 Ahmad Abbas 带队\n- 与 Butterfly Network 独家技术合作（SEC 备案）\n\n### 缺点\n\n- 尚未获 FDA 批准，初期仅提供体成分图等非诊断功能\n- 团队小、目前扫描样本有限\n- 实际临床价值待验证\n\n## 常见问题（FAQ）\n\n**Midjourney Scanner 是什么？**\n\nMidjourney 于 2026-06-18 在旧金山发布的首款硬件：全身超声断层成像设备，60 秒生成 3D 人体解剖模型，由 Midjourney Medical 部门运营。\n\n**它与 Midjourney 的 AI 绘画有什么关系？**\n\n没有直接关系，这是 Midjourney 从软件跨界医疗硬件的首款产品，与 AI 图像生成业务独立。\n\n**可以购买吗？**\n\n尚未上市。计划通过线下「Midjourney Spa」门店提供扫描服务，首家门店选址旧金山 Union Square，预计 2027 年底开业。\n\n\n## 最终结论\n\nMidjourney Scanner 是AI行业应用领域的一款 AI 工具，其核心优势在于扫描速度快（60 秒 vs MRI 1-2 小时）。\n此外，无辐射。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "content": "## Midjourney Scanner 是什么？\n\nMidjourney Scanner 是以AI图像生成闻名的 Midjourney 于 2026 年 6 月 17 日在旧金山宣布的首款硬件产品，隶属于同日成立的 Midjourney Medical 部门——一台号称「更快、更便宜的MRI替代」的全身超声扫描仪。项目由前 Apple Vision Pro 负责人 Ahmad Abbas（2023年底加入Midjourney）带队。\n\n## 工作原理（Ultrasonic CT）\n\n与MRI的强磁体+射频完全不同，它用的是**水+声波+算力**：\n\n- 使用者站在平台上，以约 4cm/s 的速度被降入一个浅水池\n- 池壁环绕数十万个超声传感元件（官方称50万个，40个模块约35.8万个换能器），每个元件既是微型扬声器也是微型麦克风，以每秒上千次频率向人体发射并接收超声波\n- 声波穿过皮肤、脂肪、肌肉、骨骼时传播特性不同，计算机群据此重建出数百个0.5mm级体层切片，60秒输出一张全身3D解剖地图\n- 数据量惊人：官方称单个体层的可视化就需 40GB 以上数据中转，整套系统由21台服务器、约2 petaflops 算力处理最高806TB原始数据\n\n技术底层来自 Butterfly Network（NYSE: BFLY）的「片上超声」技术——双方2025年11月签署独家许可协议：预付1500万美元+每年1000万美元许可费+最高900万美元里程碑付款及硬件销售收入分成，预期总额约7400万美元，消息公布当日 Butterfly 股价涨超50%。\n\n## 2026年8月最新状态与路线图\n\n- **进度**：迄今仅约十余人完成试扫，未来12个月专注算法优化、研究试验与第二代硬件设计\n- **合规**：**没有任何FDA诊断许可**。起步产品是体成分图谱（肌肉/脂肪分布），走FDA「一般健康」通道规避器械审批；诊断功能计划待旧金山店落地后再申请\n- **首店**：2027年底在旧金山联合广场开设约2.3万平方米（25000平方英尺）的 Midjourney Spa——扫描仪+热水浴+桑拿+冷池的水疗式体验\n- **宏大目标**：2031年前全球部署5万台、月扫描10亿次，官方称「足够的早期筛查可避免30%的死亡和50%的医疗支出」——该目标尚无公开临床验证支撑\n- **资金**：全部由Midjourney图像生成业务收入自筹，无外部投资人\n\n## 优缺点分析\n\n### 👍 优点\n- 60秒全身成像、无辐射、不用躺在MRI隧道里，体验革命性\n- 图像重建正是Midjourney的技术主场，算力储备真实\n- 走健康筛查而非诊断起步，监管路径务实\n\n### 👎 缺点\n- 诊断能力完全未经验证，「替代MRI」目前是营销叙事\n- 水疗门店形态离大众可及很远，2027年前普通人无法体验\n- 超声对骨后组织、含气器官成像天然受限，0.5mm宣传值与临床可用性有距离\n\n## 适合人群\n\n目前普通用户无法使用。关注对象：健康科技投资者（Butterfly Network 供应链相关）、医学影像从业者、对AI公司跨界硬件感兴趣的观察者。\n\n### 冷静评估\n\n这是一个有真实工程能力的硬件赌注，但从「生成有趣的身体图像」到「FDA批准用于癌症检测」之间的鸿沟，已经吞掉过无数医疗AI创业公司。在拿到诊断许可和公开临床验证之前，它更应被看作「高端体成分仪」而非「MRI杀手」。\n",
   "published": true,
   "created_date": "2026-07-26",
   "published_date": "2026-07-26",
@@ -84,7 +88,7 @@
   ],
   "verified_description": "Midjourney 发布的首款硬件产品：60 秒完成全身超声扫描、生成 3D 人体解剖模型的断层成像设备，由前 Apple Vision Pro 负责人带队，计划以「Midjourney Spa」门店形式落地。",
   "content_flags": "原条目描述为「提示词/参数提取工具」且域名 midjourneyscanner.com 为停放页，与真实产品严重不符，已整体重写。",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-08-27",
   "confidence": "high",
   "conflict": false,
   "verified_rating": "⭐4.2",
@@ -99,11 +103,11 @@
   "verified_category": "AI行业应用",
   "conflict_note": "多源确认 midjourneyscanner.com 为 Porkbun 停放页、无任何产品；而真实「Midjourney Scanner」是 Midjourney Medical 的医疗设备（Gigazine 2026-06-18 报道，官网 midjourney.com/medical），与本条目描述的提示词提取工具完全不符，条目内容疑似虚构。",
   "source_urls": [
-    "https://www.chooseai.net/news/4480/",
-    "https://stackfutures.com/blog/midjourney-medical-scanner-full-body-ultrasound",
-    "https://caifuhao.eastmoney.com/news/20260622133246954219130"
+    "https://www.pymnts.com/news/artificial-intelligence/2026/midjourney-enters-medical-imaging-with-60-second-full-body-scan",
+    "https://pinggy.io/blog/ai_medical_imaging_diagnostics_2026",
+    "https://ir.butterflynetwork.com/News/press-releases/news-details/2026/Butterfly-Network-Provides-Commentary-on-Midjourney-Medicals-Full-Body-Ultrasound-Scanner-Announcement/default.aspx"
   ],
-  "verify_notes": "经用户核实确认：Midjourney 跨界发布全身超声波扫描仪，前苹果 Vision Pro 工程师带队。已按真实产品重写。",
+  "verify_notes": "2026-08-27 全量重写：补6/17发布会细节、Butterfly协议金额拆分、FDA合规状态、50万传感器/0.5mm/60s/2petaflops参数、2027首店与2031年5万台目标、试扫人数等（Fox News/Pinggy/IT之家多源交叉）。",
   "content_verified": true,
   "price_verified": true,
   "verified_pros": [

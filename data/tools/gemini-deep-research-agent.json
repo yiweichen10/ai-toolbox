@@ -5,7 +5,7 @@
   "auto_positioning": true,
   "emoji": "🔬",
   "color": "#4285F4",
-  "description": "Gemini Deep Research 是 Google 推出的深度研究智能体（基于 Gemini 模型），像研究助理一样自主规划多步路径、反复检索、综合数十到数百个来源，最后交出一份带引用的研究报告，并可连接 Gmail/Drive 等 Google 生态资料。",
+  "description": "Google 推出的深度研究智能体（gemini.google.com 内置）。像研究助理一样自主规划多步检索、遍历数十到数百个来源与你的 Gmail/Drive 资料，输出带引用的结构化报告。2026年4月起通过 Interactions API 开放并支持任意 MCP 连接。",
   "category": "AI搜索",
   "tags": [
     "深度研究",
@@ -21,7 +21,7 @@
     "text": "NEW"
   },
   "url": "https://gemini.google.com",
-  "price": "免费层有限次；完整能力需 Google AI Pro $19.99/月 或 Ultra",
+  "price": "所有 Gemini 计划均含（免费档次数受限）；付费档放宽额度，Ultra 档支持自动图表与跨应用整合；2026年起按算力计次，5小时刷新+周上限，Pro/Ultra 可购按量加油包",
   "platform": "Web, 移动, API",
   "pros": [
     "基于 Gemini 强推理，研究深度强",
@@ -53,15 +53,19 @@
   "faq": [
     {
       "q": "Gemini Deep Research 免费吗？",
-      "a": "免费层（Gemini 3.x Flash）可有限次使用 Deep Research；完整能力需 Google AI Pro（$19.99/月，原 Gemini Advanced）或 AI Ultra 订阅。"
+      "a": "所有 Gemini 计划（含免费档）都可使用，但免费档次数受限；付费档放宽额度，Ultra 档另有自动图表和跨应用深度整合。2026年起按算力计次：额度每5小时刷新并设周上限，Pro/Ultra 可购买按量加油包。"
     },
     {
-      "q": "如何使用 Gemini Deep Research？",
-      "a": "访问 gemini.google.com，选择支持深度研究的 Gemini 模型并启用 Deep Research 模式，输入问题后等待其自动规划、检索并生成带引用的报告。"
+      "q": "Deep Research 和 Project Mariner 什么关系？",
+      "a": "两条线已合流。Project Mariner（浏览器自动化原型）2026年5月4日关闭独立入口，技术并入 Gemini Agent 与 Chrome Auto Browse；Deep Research 专注「检索+综合+报告」，Gemini Agent 专注「跨应用执行操作」。"
     },
     {
-      "q": "支持中文吗？",
-      "a": "早期以英文优化为主，2026 年版本已大幅扩展多语言（含中文）支持；复杂研究用英文通常仍更佳，但中文场景已明显可用。"
+      "q": "开发者怎么调用 Deep Research？",
+      "a": "通过 Google 的 Interactions API（区别于普通 Gemini chat 端点，专为有状态多步智能体工作流设计），2026年4月起支持任意 MCP 连接，可接入私有数据库与外部工具。"
+    },
+    {
+      "q": "研究报告的引用可信吗？",
+      "a": "每条结论附来源链接可回溯，但仍建议对关键数据点击原文核实——与其他深度研究产品一样，它偶尔会综合错源或在长任务中遗漏更新。"
     }
   ],
   "seo_keywords": [
@@ -71,10 +75,10 @@
     "Gemini Deep Research Agent使用教程",
     "Gemini Deep Research Agent和哪个好"
   ],
-  "content": "## Gemini Deep Research Agent 是什么？\n\nGemini Deep Research 是 Google 推出的深度研究智能体（基于 Gemini 模型），它不像普通问答那样给一句快照，而是像一个研究助理：自己规划多步路径、反复检索、综合几十到几百个来源，最后交出一份带引用的研究报告，把\"研究\"这件事真正交给模型跑。\n\n它先自主规划研究路线——提出查询、读取结果、识别知识差距、再搜一轮，如此迭代深入，并能钻进网页内部抓取具体数据，而不是只停在搜索结果摘要。综合阶段，它会把来自公开网络和你的个人资料（如 Gmail、Drive、Chat 等 Google 生态来源）的信息融合起来，生成结构化的报告，关键论断都附上出处，方便你核对，也降低了\"瞎编引用\"的风险。\n\n## 适合人群\n\n你还能参与规划：在研究真正执行前，先查看并修改它拟定的研究计划，避免方向跑偏，让模型替你跑之前先对齐意图。产出可导出到 Google Docs，生成音频概览，以及可视化图表，让长报告更易消费，也更适合在团队里分享。面向开发者，它通过 Gemini App 与 Gemini API（Interactions API）提供，能把这种自主研究能力嵌进你自己的应用。\n\n## 价格与平台\n\n价格上，Gemini Deep Research 随 Gemini Advanced / Google AI Pro / Ultra 等订阅提供；免费版有每日研究次数限制，重度使用需升级。对需要做竞品分析、尽职调查、文献梳理等重研究活儿的人，它把\"从几天到几小时\"的研究周期压缩了下来。\n\n实际用下来，它的强项是有据可查的长报告，而非即时闲聊；对需要快、需要引用、需要跨多个来源综合的问题最有用。接入 Gmail、Drive 后，它能基于你的私人资料给答案，但这也要求你理解数据授权边界，清楚哪些资料被纳入了检索。对研究、战略、投研等\"信息密度高、容错率低\"的岗位，它是把冗长检索外包出去的利器。免费版适合先感受节奏，重度和团队用途再上订阅；把它当研究助理而非搜索引擎，才能发挥出\"自主规划+带引用报告\"的真正价值。\n\n## 最终结论\n\n从工作流角度，Gemini Deep Research 最适合作为\"重研究任务的前置引擎\"：先让它跑出带引用的报告，你再做判断和深加工。但它不是即时问答，复杂课题往往要等它多轮检索。建议把问题拆清楚、先确认研究计划，再放手让它查；接入个人资料后，它对\"基于我自己的数据\"的追问尤其有用，能省下大量手动翻找的时间。\n",
+  "content": "## Gemini Deep Research 是什么？\n\nGemini Deep Research 是 Google 于 2024 年 12 月随 Gemini 2.0 推出的深度研究智能体，基于 Gemini 系列模型（现为 Gemini 3 世代）。给它一个研究目标，它会自主规划多步搜索路径、反复检索并阅读数十到数百个来源（付费档可跨 Gmail/Drive 等你授权的私有资料），最后交出一份带来源引用的结构化研究报告，而不是一个链接列表。\n\n## 2026年8月最新状态\n\n- **API化 + MCP支持（2026年4月）**：Google 将 Deep Research Agent 通过 **Interactions API** 开放，支持「复杂长时程研究工作流」与**任意 MCP（模型上下文协议）连接**——开发者可把它接入私有数据库、专业数据源和企业知识库，不再限于 Google 自家服务与公开网页。行业普遍视其为研究智能体从消费功能转向企业基础设施的标志。\n- **并入智能体矩阵**：浏览器自动化原型 Project Mariner 已于 2026 年 5 月 4 日关闭独立入口，技术并入 **Gemini Agent** 与 Chrome Auto Browse；Deep Research（检索+综合+报告）与 Gemini Agent（跨应用执行）、Antigravity（编码智能体，2026年6月取代独立 Gemini CLI）、Gemini Spark（I/O 2026 发布的 24/7 后台智能体）构成 Gemini 智能体层。\n- **计费改为算力制**：不再按每日固定 prompt 数，按请求实际算力消耗计额度，每 5 小时刷新直至周上限；Pro/Ultra 重度用户可购买按量加油包而不必等重置。\n- **档位差异**：Deep Research 所有计划可用（含免费档，次数受限）；付费档放宽研究次数与来源数量；Ultra 用户额外获得自动生成图表/示意图与跨应用研究整合。\n\n## 核心功能\n\n- **自主多步研究**：先展示研究计划供你修改，确认后执行长任务\n- **带引用报告**：结论逐条挂来源链接，可回溯验证\n- **连接私有资料**：授权后检索你的 Gmail、Drive 等 Google 生态数据\n- **Interactions API**：有状态多步会话端点，支持MCP外部数据源\n- **多模态输出**：报告可自动生成图表、对比表（Ultra）\n\n## 优缺点分析\n\n### 👍 优点\n- 与 Google 搜索索引深度绑定，广域检索质量高\n- 研究计划可编辑，过程透明可控\n- API+MCP 开放后成为可组装的企业级组件\n\n### 👎 缺点\n- 免费档额度紧张，重度使用必须订阅\n- 中文语料检索深度弱于秘塔等本土工具\n- 长任务偶发中途失败需重跑\n\n## 适合人群\n\n需要跨源综合调研的分析师、学生、开发者（走API+MCP接入私有数据），以及深度绑定 Google Workspace 生态的用户。\n\n### 与同类产品怎么选\n\nOpenAI 的 Deep Research、Perplexity Research 与它同定位。选择逻辑：资料在 Google 生态里选 Deep Research；需要中文/学术文献选秘塔或 Elicit；需要接入企业私有系统做定制工作流，Interactions API + MCP 是目前开放度最高的一条路。\n",
   "published": true,
   "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/deep-research-agent-gemini-api/",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-08-27",
   "confidence": "high",
   "conflict": false,
   "content_verified": true,
@@ -131,12 +135,11 @@
   ],
   "verified_category": "AI搜索",
   "source_urls": [
-    "https://gemini.google.com",
-    "https://www.aiworthit.com/blog/google-gemini-review",
-    "https://geotoolbox.ai/blog/gemini-pricing",
-    "https://aipriceguide.co/pricing/gemini/"
+    "https://theagenttimes.com/agents/article/google-ships-major-gemini-deep-research-agent-update-with-mc-9f4a4711",
+    "https://sypalo.com/what-is-gemini",
+    "https://siuleeboss.com/ai-news/project-mariner-browser-agent-2026-08-24"
   ],
-  "verify_notes": "核心概念准确，仅模型版本与语言支持描述需更新。",
+  "verify_notes": "2026-08-27 全量重写：补2026-04 Interactions API+任意MCP支持、Project Mariner 2026-05-04关停并入Gemini Agent、算力制计费（5小时刷新+周上限+加油包）、Antigravity取代Gemini CLI（2026-06-18）、全计划可用与Ultra差异（TheAgentTimes/sypalo/dev.to多源交叉）。",
   "compare_section": {
     "competitors": [
       "perplexity",
