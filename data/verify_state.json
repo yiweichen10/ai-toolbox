@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-08-26",
+    "updated": "2026-08-27",
     "total": 672
   },
   "tools": {
@@ -4034,13 +4034,13 @@
     },
     "glm-5-2": {
       "name": "GLM-5.2",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
+      "verified_at": "2026-08-27",
+      "confidence": "high",
       "notes": ""
     },
     "browser-act": {

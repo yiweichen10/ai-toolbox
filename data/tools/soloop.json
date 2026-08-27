@@ -1,93 +1,94 @@
 {
-  "name": "Soloop",
-  "slug": "soloop",
-  "positioning": "Soloop是什么_审批优先Agent OS_独立创始人AI团队",
-  "auto_positioning": false,
-  "emoji": "🚀",
-  "color": "#7C3AED",
-  "description": "面向独立创始人的「审批优先 Agent 操作系统」（Approval-first Agent OS），由前大厂产品经理 Wenhao Yu 创立。把一人开公司需要的角色拆成 AI CEO / CTO / CMO 团队，Agent 负责执行但关键选择必须由创始人批准。2026 年 8 月 7 日登陆 Product Hunt 获当日第二名。",
-  "category": "AI智能体",
-  "tags": [
-    {
-      "text": "审批优先"
+    "name": "Soloop",
+    "slug": "soloop",
+    "positioning": "Soloop是什么_审批优先Agent OS_独立创始人AI团队",
+    "auto_positioning": false,
+    "emoji": "🚀",
+    "color": "#7C3AED",
+    "description": "面向独立创始人的「审批优先 Agent 操作系统」（Approval-first Agent OS），由前大厂产品经理 Wenhao Yu 创立。把一人开公司需要的角色拆成 AI CEO / CTO / CMO 团队，Agent 负责执行但关键选择必须由创始人批准。2026 年 8 月 7 日登陆 Product Hunt 获当日第二名。",
+    "category": "AI智能体",
+    "tags": [
+        {
+            "text": "审批优先"
+        },
+        {
+            "text": "一人公司"
+        },
+        {
+            "text": "AI团队"
+        }
+    ],
+    "rating": "⭐ 4.2",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "new",
+        "text": "PH当日第二"
     },
-    {
-      "text": "一人公司"
-    },
-    {
-      "text": "AI团队"
-    }
-  ],
-  "rating": "⭐ 4.2",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "new",
-    "text": "PH当日第二"
-  },
-  "url": "https://soloop.com",
-  "price": "价格暂未公开",
-  "platform": "Web",
-  "pros": [
-    "把创始人最稀缺的注意力与判断权交还本人，而非盲目全自动",
-    "三位角色围绕同一公司目标协作，避免多助手间上下文割裂",
-    "审批优先机制：高风险不可逆动作需硬签核，低风险可自动执行",
-    "工作区记忆持续积累，影响后续 AI 决策",
-    "每次只推一个最关键的「下一步」，降低决策负担"
-  ],
-  "cons": [
-    "产品很新、仍有粗糙边角",
-    "界面为英文、暂缺中文，社交分发目前聚焦 Twitter/X",
-    "官网未公开定价表，价格不透明"
-  ],
-  "features": [
-    "AI CEO：把一句话商业想法变成带周里程碑的结构化路线图",
-    "AI CTO：评估与拆解构建工作，给出时间量级判断",
-    "AI CMO：负责分发与增长，围绕低成本渠道做启动计划与触达",
-    "每日审批循环：汇总 AI 团队产出与需你 yes/no 的决策",
-    "工作区记忆：项目历史、用户反馈、代码变更留在 AI 工作区",
-    "AI Analyst（部分版本）：扫描数据发现机会与风险"
-  ],
-  "related": [
-    "openai",
-    "coze",
-    "manus"
-  ],
-  "content": "## Soloop 是什么？\nSoloop 是一款面向独立创始人的「审批优先 Agent 操作系统」（Approval-first Agent OS），由前大厂产品经理 Wenhao Yu 创立，2026 年 8 月 7 日登陆 Product Hunt 并拿下当日第二名（约 478 票）。它把一个人开公司需要的角色拆成一个 AI 团队：AI CEO 负责规划与优先级、AI CTO 负责构建与执行、AI CMO 负责找用户与销售，部分版本还配 AI Analyst 做信号检测。核心哲学是「审批优先」——Agent 负责执行与交接，但关键选择必须由创始人批准；低风险可逆动作可自动执行并记录，高风险不可逆动作需硬签核。\n\n## 核心功能\n1. AI CEO：把一句话商业想法变成带周里程碑的结构化路线图，标出每周真正需要你判断的决策。\n2. AI CTO：评估与拆解构建工作，给出「一天 / 一周 / 一个月陷阱」级别的时间判断。\n3. AI CMO：负责分发与增长，围绕 Twitter/X 等低成本渠道做启动计划、渠道选择与触达文案。\n4. 每日审批循环：每天汇总 AI 团队做了什么、哪几个决定需要你 yes/no，把「审批优先」落到机制。\n5. 工作区记忆：项目历史、用户反馈、代码变更、失败尝试留在 AI 工作区，影响下次的推荐。\n\n## 版本/套餐对比\nSoloop 目前处于早期阶段，官网未公开定价表；第三方评测显示可能采用「Agent 免费 + 付费」模式，具体以注册后为准。建议直接访问官网获取最新价格。\n\n## 值不值得用？\n优点：把「一人公司」最稀缺的注意力与判断权交还给创始人，而不是盲目全自动；三位角色围绕同一公司目标协作，避免多助手间上下文割裂。缺点：产品很新、仍有粗糙边角；界面为英文、暂缺中文，社交分发目前聚焦 Twitter/X；定价不透明。结论：已有产品雏形、但不擅长市场运营的独立开发者值得试用。\n\n## 使用建议\n先用一句话描述业务种子化 AI CEO 的首份路线图，从低风险任务（如内容草稿、竞品扫描）开始授权，确认准确率后再逐步开放发布、支出等高风险动作。注意防范「审批疲劳」——把不可逆动作保留给你拍板即可。\n\n## 适合谁用？\n- 推荐：有 repo/Demo/落地页但不确定下一步先做市场还是改功能的独立开发者；擅长做产品但不擅长运营的人。\n- 可考虑：想快速验证想法、不想招团队的创业者。\n- 不推荐：已有专职市场/技术/运营的成熟团队；只用中文、需要多平台分发的用户。",
-  "published": false,
-  "faq": [
-    {
-      "question": "Soloop 和一般自主 Agent 有什么不同？",
-      "answer": "核心区别在于「审批优先」：它不会趁你睡觉时自动发帖、花钱或部署代码，每个有风险的动作（发布内容、支出、改代码）都必须经你审批，低风险可逆动作才自动执行。"
-    },
-    {
-      "question": "Soloop 里的三个 AI 角色分别做什么？",
-      "answer": "AI CEO 负责规划与优先级、告诉你现在该做什么；AI CTO 负责技术执行、在沙盒里改代码并产出可部署结果；AI CMO 负责找用户与做推广，目前聚焦 Twitter/X。"
-    },
-    {
-      "question": "定价是多少？",
-      "answer": "截至 2026 年 8 月官网尚未公开定价表，第三方评测显示可能采用「Agent 免费 + 付费」模式，具体需注册后查看。"
-    },
-    {
-      "question": "适合没有技术背景的创始人吗？",
-      "answer": "适合。它把规划、构建、销售拆成协调的 AI 团队，非技术创始人可借 AI CTO 把想法翻译成可构建计划；但界面目前为英文、社交分发聚焦 Twitter/X，是需要留意的限制。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "Soloop",
-    "Soloop怎么样",
-    "Soloop免费版",
-    "Soloop使用教程",
-    "Soloop和哪个好"
-  ],
-  "source_urls": [
-    "https://soloop.ai",
-    "https://www.hunted.space/product/soloop",
-    "https://dev.to/maestro_morty_cc62e2c85ae/soloop-guide-how-to-use-it-best-prompts-use-cases-2026-1b91"
-  ],
-  "confidence": "medium",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+    "url": "https://soloop.com",
+    "price": "价格暂未公开",
+    "platform": "Web",
+    "pros": [
+        "把创始人最稀缺的注意力与判断权交还本人，而非盲目全自动",
+        "三位角色围绕同一公司目标协作，避免多助手间上下文割裂",
+        "审批优先机制：高风险不可逆动作需硬签核，低风险可自动执行",
+        "工作区记忆持续积累，影响后续 AI 决策",
+        "每次只推一个最关键的「下一步」，降低决策负担"
+    ],
+    "cons": [
+        "产品很新、仍有粗糙边角",
+        "界面为英文、暂缺中文，社交分发目前聚焦 Twitter/X",
+        "官网未公开定价表，价格不透明"
+    ],
+    "features": [
+        "AI CEO：把一句话商业想法变成带周里程碑的结构化路线图",
+        "AI CTO：评估与拆解构建工作，给出时间量级判断",
+        "AI CMO：负责分发与增长，围绕低成本渠道做启动计划与触达",
+        "每日审批循环：汇总 AI 团队产出与需你 yes/no 的决策",
+        "工作区记忆：项目历史、用户反馈、代码变更留在 AI 工作区",
+        "AI Analyst（部分版本）：扫描数据发现机会与风险"
+    ],
+    "related": [
+        "openai",
+        "coze",
+        "manus"
+    ],
+    "content": "## Soloop 是什么？\nSoloop 是一款面向独立创始人的「审批优先 Agent 操作系统」（Approval-first Agent OS），由前大厂产品经理 Wenhao Yu 创立，2026 年 8 月 7 日登陆 Product Hunt 并拿下当日第二名（约 478 票）。它把一个人开公司需要的角色拆成一个 AI 团队：AI CEO 负责规划与优先级、AI CTO 负责构建与执行、AI CMO 负责找用户与销售，部分版本还配 AI Analyst 做信号检测。核心哲学是「审批优先」——Agent 负责执行与交接，但关键选择必须由创始人批准；低风险可逆动作可自动执行并记录，高风险不可逆动作需硬签核。\n\n## 核心功能\n1. AI CEO：把一句话商业想法变成带周里程碑的结构化路线图，标出每周真正需要你判断的决策。\n2. AI CTO：评估与拆解构建工作，给出「一天 / 一周 / 一个月陷阱」级别的时间判断。\n3. AI CMO：负责分发与增长，围绕 Twitter/X 等低成本渠道做启动计划、渠道选择与触达文案。\n4. 每日审批循环：每天汇总 AI 团队做了什么、哪几个决定需要你 yes/no，把「审批优先」落到机制。\n5. 工作区记忆：项目历史、用户反馈、代码变更、失败尝试留在 AI 工作区，影响下次的推荐。\n\n## 版本/套餐对比\nSoloop 目前处于早期阶段，官网未公开定价表；第三方评测显示可能采用「Agent 免费 + 付费」模式，具体以注册后为准。建议直接访问官网获取最新价格。\n\n## 值不值得用？\n优点：把「一人公司」最稀缺的注意力与判断权交还给创始人，而不是盲目全自动；三位角色围绕同一公司目标协作，避免多助手间上下文割裂。缺点：产品很新、仍有粗糙边角；界面为英文、暂缺中文，社交分发目前聚焦 Twitter/X；定价不透明。结论：已有产品雏形、但不擅长市场运营的独立开发者值得试用。\n\n## 使用建议\n先用一句话描述业务种子化 AI CEO 的首份路线图，从低风险任务（如内容草稿、竞品扫描）开始授权，确认准确率后再逐步开放发布、支出等高风险动作。注意防范「审批疲劳」——把不可逆动作保留给你拍板即可。\n\n## 适合谁用？\n- 推荐：有 repo/Demo/落地页但不确定下一步先做市场还是改功能的独立开发者；擅长做产品但不擅长运营的人。\n- 可考虑：想快速验证想法、不想招团队的创业者。\n- 不推荐：已有专职市场/技术/运营的成熟团队；只用中文、需要多平台分发的用户。",
+    "published": true,
+    "faq": [
+        {
+            "question": "Soloop 和一般自主 Agent 有什么不同？",
+            "answer": "核心区别在于「审批优先」：它不会趁你睡觉时自动发帖、花钱或部署代码，每个有风险的动作（发布内容、支出、改代码）都必须经你审批，低风险可逆动作才自动执行。"
+        },
+        {
+            "question": "Soloop 里的三个 AI 角色分别做什么？",
+            "answer": "AI CEO 负责规划与优先级、告诉你现在该做什么；AI CTO 负责技术执行、在沙盒里改代码并产出可部署结果；AI CMO 负责找用户与做推广，目前聚焦 Twitter/X。"
+        },
+        {
+            "question": "定价是多少？",
+            "answer": "截至 2026 年 8 月官网尚未公开定价表，第三方评测显示可能采用「Agent 免费 + 付费」模式，具体需注册后查看。"
+        },
+        {
+            "question": "适合没有技术背景的创始人吗？",
+            "answer": "适合。它把规划、构建、销售拆成协调的 AI 团队，非技术创始人可借 AI CTO 把想法翻译成可构建计划；但界面目前为英文、社交分发聚焦 Twitter/X，是需要留意的限制。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "Soloop",
+        "Soloop怎么样",
+        "Soloop免费版",
+        "Soloop使用教程",
+        "Soloop和哪个好"
+    ],
+    "source_urls": [
+        "https://soloop.ai",
+        "https://www.hunted.space/product/soloop",
+        "https://dev.to/maestro_morty_cc62e2c85ae/soloop-guide-how-to-use-it-best-prompts-use-cases-2026-1b91"
+    ],
+    "confidence": "medium",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14",
+    "published_date": "2026-08-27"
 }

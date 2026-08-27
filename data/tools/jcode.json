@@ -1,91 +1,91 @@
 {
-    "name": "jcode",
-    "slug": "jcode",
-    "positioning": "用 Rust 编写的开源终端编程 Agent 编排框架（harness），主打多会话线性扩展与极低资源占用，让笔记本也能并行驱动十几个 coding agent 流。",
-    "auto_positioning": false,
-    "emoji": "🦀",
-    "color": "#CE422B",
-    "description": "jcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目位于 github.com/1jehuang/jcode，采用 MIT 许可证。它定位为“下一代编码智能体 Harness”，位于 Claude、GPT、Codex 等模型与代码仓库之间，用 Rust 把每个会话的内存占用压到极低，解决多会话并行时内存爆掉、机器卡顿的痛点，支持 TUI、非交互运行、后台 server/client、语义记忆与多 Provider。",
-    "category": "AI编程",
-    "tags": [
-        "AI编程",
-        "终端Agent",
-        "Rust",
-        "多会话",
-        "开源",
-        "AI Swarm"
-    ],
-    "rating": "⭐ 4.6",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "pick",
-        "text": "开源 · Rust"
+  "name": "jcode",
+  "slug": "jcode",
+  "positioning": "用 Rust 编写的开源终端编程 Agent 编排框架（harness），主打多会话线性扩展与极低资源占用，让笔记本也能并行驱动十几个 coding agent 流。",
+  "auto_positioning": false,
+  "emoji": "🦀",
+  "color": "#CE422B",
+  "description": "jcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目位于 github.com/1jehuang/jcode，采用 MIT 许可证。它定位为“下一代编码智能体 Harness”，位于 Claude、GPT、Codex 等模型与代码仓库之间，用 Rust 把每个会话的内存占用压到极低，解决多会话并行时内存爆掉、机器卡顿的痛点，支持 TUI、非交互运行、后台 server/client、语义记忆与多 Provider。",
+  "category": "AI编程",
+  "tags": [
+    "AI编程",
+    "终端Agent",
+    "Rust",
+    "多会话",
+    "开源",
+    "AI Swarm"
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "pick",
+    "text": "开源 · Rust"
+  },
+  "url": "https://github.com/1jehuang/jcode",
+  "price": "免费开源（MIT），无商业套餐",
+  "platform": "Linux / macOS / Windows（终端）",
+  "pros": [
+    "Rust 原生实现，启动毫秒级、单会话内存占用极小",
+    "多会话线性扩展，每新增一个会话仅多消耗约 10MB 内存",
+    "支持 40+ 模型 Provider，按会话切换模型与参数",
+    "内置语义记忆与 Swarm 多智能体协同，原生处理并发提交",
+    "开源 MIT，可自定义 harness 行为与工具链"
+  ],
+  "cons": [
+    "项目仍快速迭代，生态与文档规模相对有限",
+    "多会话/语义记忆等高级能力需要一定配置与学习成本",
+    "仅本地终端形态，缺少开箱即用的图形化管理界面"
+  ],
+  "features": [
+    "多会话 Swarm：同一仓库并行驱动多个 agent 流，无需 git worktree",
+    "Rust 原生性能：极低启动延迟与内存占用，适合笔记本与受限环境",
+    "语义记忆：对话编码为向量，余弦相似度检索相关上下文",
+    "40+ 模型 Provider：OAuth 接入多家模型，按会话配置",
+    "终端一体化：TUI、非交互运行、后台 server/client、语音输入与浏览器工具",
+    "内置 Mermaid 渲染引擎与侧边信息面板"
+  ],
+  "related": [
+    "openai",
+    "langchain",
+    "vllm"
+  ],
+  "content": "## jcode 是什么？\n\njcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目地址 github.com/1jehuang/jcode，采用 MIT 许可证。它把自己定位为“下一代编码智能体 Harness”：不是又一个聊天式 AI 助手，而是位于 Claude、GPT、Codex 等模型与你的代码仓库之间的一层轻量编排器。它的核心问题是——当你同时跑多个 coding agent 会话时，Node/Python 类的工具会迅速吃光内存、拖慢机器，而 jcode 用 Rust 把每个会话的资源占用压到极低，让你能在笔记本上并行驱动十几个 agent 流而不卡顿。\n\n## 核心功能\n\n1. 多会话 Swarm：在同一仓库里启动多个并行 agent 流，各自持有独立上下文，原生处理并发提交，无需 git worktree。\n2. Rust 原生性能：启动毫秒级、内存占用极小，适合笔记本和资源受限的开发机。\n3. 语义记忆：把每轮对话编码为向量，用余弦相似度检索相关上下文，模拟人类的“记得之前聊过什么”。\n4. 40+ 模型 Provider：通过 OAuth 接入多家模型，按会话切换模型与参数。\n5. 终端一体化：提供 TUI、非交互运行、后台 server/client、语音输入与浏览器工具，并内置 Mermaid 渲染。\n\n## 版本/套餐对比\n\njcode 为开源免费项目（MIT），无商业套餐；个人从源码或 Homebrew 安装即可使用，不存在付费档位。\n\n## 值不值得用？\n\n如果你只是偶尔让 AI 改几行代码，jcode 的复杂度未必划算；但如果你已经在“一个终端开五个 Claude Code、内存爆掉”的阶段，jcode 的多会话线性扩展几乎是刚需。它的强项是用极低的边际成本把“并行 agent”从炫技变成日常工作流，而不是堆功能。\n\n## 使用建议\n\n先用 Homebrew（brew tap 1jehuang/jcode && brew install jcode）或官方一键脚本装好；把常用任务拆成独立会话并行跑；开启语义记忆减少重复解释项目背景；需要可视化时在侧边面板看 Mermaid 与 Info Widgets。注意它仍在快速迭代，建议关注 GitHub Releases 的变更说明，避免用到的命令在新版本被调整。\n\n## 适合谁用？\n\n- 进阶开发者：同时维护多个 AI 编程会话、受内存与受启动速度困扰的人。\n- 小团队技术负责人：需要把大型任务拆解给多个 agent 并行完成的场景。\n- 开源爱好者：想自定义 harness 行为、接入自有模型与工具链的人。",
+  "published": true,
+  "faq": [
+    {
+      "question": "jcode 和普通 coding agent 有什么区别？",
+      "answer": "jcode 不是模型，而是编排层（harness）。它把 Claude、GPT、Codex 等模型接进来，重点解决多会话并行时的资源开销与协同，而不是提供另一个聊天界面。"
     },
-    "url": "https://github.com/1jehuang/jcode",
-    "price": "免费开源（MIT），无商业套餐",
-    "platform": "Linux / macOS / Windows（终端）",
-    "pros": [
-        "Rust 原生实现，启动毫秒级、单会话内存占用极小",
-        "多会话线性扩展，每新增一个会话仅多消耗约 10MB 内存",
-        "支持 40+ 模型 Provider，按会话切换模型与参数",
-        "内置语义记忆与 Swarm 多智能体协同，原生处理并发提交",
-        "开源 MIT，可自定义 harness 行为与工具链"
-    ],
-    "cons": [
-        "项目仍快速迭代，生态与文档规模相对有限",
-        "多会话/语义记忆等高级能力需要一定配置与学习成本",
-        "仅本地终端形态，缺少开箱即用的图形化管理界面"
-    ],
-    "features": [
-        "多会话 Swarm：同一仓库并行驱动多个 agent 流，无需 git worktree",
-        "Rust 原生性能：极低启动延迟与内存占用，适合笔记本与受限环境",
-        "语义记忆：对话编码为向量，余弦相似度检索相关上下文",
-        "40+ 模型 Provider：OAuth 接入多家模型，按会话配置",
-        "终端一体化：TUI、非交互运行、后台 server/client、语音输入与浏览器工具",
-        "内置 Mermaid 渲染引擎与侧边信息面板"
-    ],
-    "related": [
-        "openai",
-        "langchain",
-        "vllm"
-    ],
-    "content": "## jcode 是什么？\n\njcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目地址 github.com/1jehuang/jcode，采用 MIT 许可证。它把自己定位为“下一代编码智能体 Harness”：不是又一个聊天式 AI 助手，而是位于 Claude、GPT、Codex 等模型与你的代码仓库之间的一层轻量编排器。它的核心问题是——当你同时跑多个 coding agent 会话时，Node/Python 类的工具会迅速吃光内存、拖慢机器，而 jcode 用 Rust 把每个会话的资源占用压到极低，让你能在笔记本上并行驱动十几个 agent 流而不卡顿。\n\n## 核心功能\n\n1. 多会话 Swarm：在同一仓库里启动多个并行 agent 流，各自持有独立上下文，原生处理并发提交，无需 git worktree。\n2. Rust 原生性能：启动毫秒级、内存占用极小，适合笔记本和资源受限的开发机。\n3. 语义记忆：把每轮对话编码为向量，用余弦相似度检索相关上下文，模拟人类的“记得之前聊过什么”。\n4. 40+ 模型 Provider：通过 OAuth 接入多家模型，按会话切换模型与参数。\n5. 终端一体化：提供 TUI、非交互运行、后台 server/client、语音输入与浏览器工具，并内置 Mermaid 渲染。\n\n## 版本/套餐对比\n\njcode 为开源免费项目（MIT），无商业套餐；个人从源码或 Homebrew 安装即可使用，不存在付费档位。\n\n## 值不值得用？\n\n如果你只是偶尔让 AI 改几行代码，jcode 的复杂度未必划算；但如果你已经在“一个终端开五个 Claude Code、内存爆掉”的阶段，jcode 的多会话线性扩展几乎是刚需。它的强项是用极低的边际成本把“并行 agent”从炫技变成日常工作流，而不是堆功能。\n\n## 使用建议\n\n先用 Homebrew（brew tap 1jehuang/jcode && brew install jcode）或官方一键脚本装好；把常用任务拆成独立会话并行跑；开启语义记忆减少重复解释项目背景；需要可视化时在侧边面板看 Mermaid 与 Info Widgets。注意它仍在快速迭代，建议关注 GitHub Releases 的变更说明，避免用到的命令在新版本被调整。\n\n## 适合谁用？\n\n- 进阶开发者：同时维护多个 AI 编程会话、受内存与受启动速度困扰的人。\n- 小团队技术负责人：需要把大型任务拆解给多个 agent 并行完成的场景。\n- 开源爱好者：想自定义 harness 行为、接入自有模型与工具链的人。",
-    "published": true,
-    "faq": [
-        {
-            "question": "jcode 和普通 coding agent 有什么区别？",
-            "answer": "jcode 不是模型，而是编排层（harness）。它把 Claude、GPT、Codex 等模型接进来，重点解决多会话并行时的资源开销与协同，而不是提供另一个聊天界面。"
-        },
-        {
-            "question": "jcode 需要付费吗？",
-            "answer": "不需要。jcode 是 MIT 许可证的开源项目，免费使用，也没有商业套餐，成本只在于你调用的模型 API 费用。"
-        },
-        {
-            "question": "它支持哪些模型？",
-            "answer": "jcode 支持 40+ 模型 Provider，可通过 OAuth 接入，并能按会话分别配置模型与参数。"
-        },
-        {
-            "question": "多会话会互相干扰吗？",
-            "answer": "不会。jcode 原生处理并发提交，每个 agent 流持有独立上下文，仓库内多个 agent 同时工作也无需 git worktree 隔离。"
-        }
-    ],
-    "content_verified": true,
-    "conflict": false,
-    "verify_status": "verified",
-    "seo_keywords": [
-        "jcode",
-        "Rust编程Agent",
-        "多会话AI编程",
-        "coding agent harness",
-        "AI Swarm"
-    ],
-    "source_urls": [
-        "https://github.com/1jehuang/jcode",
-        "https://jcode.sh",
-        "https://dev.to/terminalchai/jcode-the-rust-native-agent-harness-for-multi-session-development-l4g"
-    ],
-    "confidence": "medium",
-    "created_date": "2026-08-14",
-    "updated_date": "2026-08-14",
-    "published_date": "2026-08-24"
+    {
+      "question": "jcode 需要付费吗？",
+      "answer": "不需要。jcode 是 MIT 许可证的开源项目，免费使用，也没有商业套餐，成本只在于你调用的模型 API 费用。"
+    },
+    {
+      "question": "它支持哪些模型？",
+      "answer": "jcode 支持 40+ 模型 Provider，可通过 OAuth 接入，并能按会话分别配置模型与参数。"
+    },
+    {
+      "question": "多会话会互相干扰吗？",
+      "answer": "不会。jcode 原生处理并发提交，每个 agent 流持有独立上下文，仓库内多个 agent 同时工作也无需 git worktree 隔离。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "jcode",
+    "Rust编程Agent",
+    "多会话AI编程",
+    "coding agent harness",
+    "AI Swarm"
+  ],
+  "source_urls": [
+    "https://github.com/1jehuang/jcode",
+    "https://jcode.sh",
+    "https://dev.to/terminalchai/jcode-the-rust-native-agent-harness-for-multi-session-development-l4g"
+  ],
+  "confidence": "medium",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-24"
 }

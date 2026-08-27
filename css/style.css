@@ -2365,7 +2365,7 @@ h2[id], h3[id], h4[id] { scroll-margin-top: 200px; }
 /* ===== TTS 悬浮 mini 播放条（右下角浮起 + 可拖拽 + 旋转环图标） ===== */
 .tts-mini{
   position:fixed;right:20px;bottom:20px;
-  width:240px;max-width:calc(100vw - 24px);
+  width:280px;max-width:calc(100vw - 24px);
   border-radius:18px;overflow:hidden;
   background:var(--surface-2);
   border:1px solid var(--border);
@@ -2415,14 +2415,14 @@ h2[id], h3[id], h4[id] { scroll-margin-top: 200px; }
 @keyframes tts-spin{to{transform:rotate(360deg);}}
 
 @media (max-width:640px){
-  .tts-mini{right:12px;bottom:12px;width:220px;padding:6px;gap:6px;}
-  .tts-mini-icon{width:36px;height:36px;}
-  .tts-mini-icon::before{width:24px;height:24px;}
-  .tts-mini-icon .glyph{font-size:11px;}
-  .tts-mini-title{font-size:11px;}
-  .tts-mini-sub{font-size:9.5px;gap:3px;}
-  .tts-mini-time{font-size:9.5px;}
-  .tts-mini-ctrl button{width:22px;height:22px;font-size:14px;}
+  .tts-mini{right:12px;bottom:12px;width:248px;padding:8px;gap:7px;}
+  .tts-mini-icon{width:40px;height:40px;}
+  .tts-mini-icon::before{width:27px;height:27px;}
+  .tts-mini-icon .glyph{font-size:12.5px;}
+  .tts-mini-title{font-size:12px;}
+  .tts-mini-sub{font-size:10.5px;gap:3px;}
+  .tts-mini-time{font-size:10.5px;}
+  .tts-mini-ctrl button{width:26px;height:26px;font-size:15px;}
 }
 
 /* ===== 文章页作者卡（2026-08-22 对标知乎作者区） ===== */

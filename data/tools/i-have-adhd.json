@@ -1,99 +1,99 @@
 {
-    "name": "i-have-adhd",
-    "slug": "i-have-adhd",
-    "positioning": "i-have-adhd是什么？让Claude Code先说下一步的输出风格插件好用吗",
-    "auto_positioning": false,
-    "emoji": "⚡",
-    "color": "#EAB308",
-    "description": "i-have-adhd 是 GitHub 上的开源输出风格插件（ayghri/i-have-adhd，MIT 协议），核心就是一个 Skill.md 加十条规则：先给行动、步骤编号、压住跑题、报具体分钟数、列表最多五项、不写开场寒暄和结尾客套。它不改模型能力，只改 AI 编码助手回答的组织方式，支持 Claude Code、Codex、Cursor、Antigravity 等客户端，一行命令装完即用。2026 年 7-8 月在 GitHub 上迅速涨到万星级别。",
-    "category": "AI编程",
-    "tags": [
-        {
-            "text": "免费可用",
-            "type": "free"
-        },
-        {
-            "text": "开源插件"
-        },
-        {
-            "text": "输出风格"
-        },
-        {
-            "text": "一行安装"
-        }
-    ],
-    "rating": "⭐ 4.4",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "hot",
-        "text": "HOT"
+  "name": "i-have-adhd",
+  "slug": "i-have-adhd",
+  "positioning": "i-have-adhd是什么？让Claude Code先说下一步的输出风格插件好用吗",
+  "auto_positioning": false,
+  "emoji": "⚡",
+  "color": "#EAB308",
+  "description": "i-have-adhd 是 GitHub 上的开源输出风格插件（ayghri/i-have-adhd，MIT 协议），核心就是一个 Skill.md 加十条规则：先给行动、步骤编号、压住跑题、报具体分钟数、列表最多五项、不写开场寒暄和结尾客套。它不改模型能力，只改 AI 编码助手回答的组织方式，支持 Claude Code、Codex、Cursor、Antigravity 等客户端，一行命令装完即用。2026 年 7-8 月在 GitHub 上迅速涨到万星级别。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "免费可用",
+      "type": "free"
     },
-    "url": "https://github.com/ayghri/i-have-adhd",
-    "price": "免费开源（MIT 协议）；不含模型，不产生额外费用，反而因为压缩输出通常会省一些 token",
-    "platform": "跨平台，随 coding agent 客户端而定（Claude Code、Codex、Cursor、Antigravity 等）；支持插件市场安装，无需本地克隆",
-    "pros": [
-        "安装成本极低：两行命令装完，会话里打 /i-have-adhd 就生效，不用改模型也不用改工作流",
-        "省 token 又省注意力：去掉背景铺垫、寒暄和重复复盘，长会话下的成本与阅读负担都下降",
-        "规则明确可审：十条规则全部写在 Skill.md 里，不满意可以 fork 后自己改",
-        "内置两条安全规则：删文件等危险操作要求明确确认，连续失败三次后停止重试并回头检查判断",
-        "支持全局常开：建一个标记文件就能让每次会话自动加载规则，也可切回默认随时关掉"
-    ],
-    "cons": [
-        "只改输出格式，不会让 agent 变聪明，也不保证代码正确——结果仍需你自己验证",
-        "全局开启后容易在教学、头脑风暴或创意写作场景过度压缩解释，需要临时关掉",
-        "复杂长文本场景下模型未必严格遵守约束，仓库自带的单元测试只验证规则加载，不保证服从度"
-    ],
-    "features": [
-        "行动前置：第一行必须给出可执行操作——跑哪条命令、改哪个文件、目标是什么",
-        "步骤编号与进度同步：多步任务用数字列表，长任务每轮重述当前进度节点，避免上下文丢失",
-        "量化时间与结果可见：时间用具体分钟数表述，禁止「很快」这类模糊词；必须说明改完能看到什么效果",
-        "客观错误处理：报错按「位置—根因—修法」固定格式给，不绕弯",
-        "列表限长与去套话：列表最多五项，超出拆成「现在做 / 之后计划」；删除所有开场白、客套与收尾总结",
-        "多客户端与全局模式：Claude Code / Codex 插件市场一行安装，可用标记文件或 AGENTS.md 让规则常驻"
-    ],
-    "related": [
-        "claude-code",
-        "agent-skills",
-        "prompt-engineering-guide"
-    ],
-    "content": "## i-have-adhd是什么？\n\ni-have-adhd 是 GitHub 上的一个开源插件（ayghri/i-have-adhd，MIT 协议），东西小到有点反差：核心就是一个 Skill.md 文件加十条输出规则。它不是给人做注意力评估的工具，名字只是个比喻——它做的事是把 AI 编码助手的回答改造成更容易直接执行的格式。\n\n要治的毛病很多人都有体感：你问一个认证报错，模型先夸这个问题问得好，然后讲一遍 Express 中间件怎么工作、token 验证有哪些环节、cookie 可能有什么问题，最后一段才轻描淡写提一句「可以看看 src/auth.ts」。学习的时候这样挺好，但你在修线上问题的时候，需要的是下一步动作，不是一堂课。\n\n这个项目在 2026 年 7 月还是几千星，8 月初已经涨到万星级别，一度出现单周新增五千多星的记录——涨得这么猛，说明这个痛点确实积压了很久。\n\n## 核心功能\n\n1. 行动前置。第一行必须是立即可做的操作：跑哪条命令、改哪个文件路径、目标是什么。这是十条规则里最狠的一条。\n2. 步骤编号与进度同步。多个动作必须用数字列表，禁止大段文本；长任务每一轮都重述当前完成到哪个节点，避免几十轮之后你俩都忘了在干什么。\n3. 量化时间。时间必须给具体分钟数，「很快就好」这类词被明确禁止。\n4. 结果可见与客观报错。必须说明改完之后能观察到什么效果；出错按「错误位置—根本原因—修复方法」固定格式来。\n5. 列表限长与去套话。一个列表最多五项，超出的拆成「现在做 / 之后计划」两块；开场问候、客气收尾、重复总结全部删掉。\n6. 两条安全规则。删文件这类危险操作要求明确确认；连续失败三次后停止重试，回头重新检查之前的判断——这条对付 AI 反复撞墙的老毛病挺有效。\n\n对比效果在 README 里有例子：同一个认证问题，默认回答五句话里两句是寒暄，装上之后变成「运行 npm install、编辑某文件、跑测试」三行指令。\n\n## 版本/套餐对比\n\nMIT 开源，免费，只有一个版本，不含模型也不产生额外费用——考虑到它压缩输出，长期用下来通常还能省一点 token。安装两行就完：Claude Code 执行 `claude plugin marketplace add ayghri/i-have-adhd` 再 `claude plugin install i-have-adhd@i-have-adhd`，会话里打 `/i-have-adhd` 启用。Codex 是 `codex plugin marketplace add ayghri/i-have-adhd --ref main` 加 `codex plugin add i-have-adhd@i-have-adhd`，调用名 `$i-have-adhd`。想每次会话自动加载，Claude Code 侧建一个标记文件 `touch ~/.claude/.i-have-adhd-always`，Codex 侧把规则写进 `~/.codex/AGENTS.md`。整个过程不需要本地克隆，插件会从仓库拉内容。\n\n## 值不值得用？\n\n这是我见过投入产出比最高的一类项目之一——两行命令、零成本、五分钟就能自己 A/B 出结论。方法也很简单：拿同一个修 bug 任务开关插件各跑一遍，看回答是否从一大段背景说明变成「改哪个文件、跑哪条命令、下一步贴什么错误」。三个判断标准：第一行是不是可执行动作、步骤有没有编号、结尾是不是只剩一个明确的下一步。\n\n局限得说清楚。第一，它只改输出习惯，不会让 agent 变聪明，也不会替你确认命令是否安全，生成的代码照样要你验。第二，全局常开之后容易在需要深度解释、头脑风暴或创意写作的场景过度压缩——这时候直接说一句「给完整解释」临时松绑就行。第三，仓库自带九个标准化单元测试且全部通过，但那只验证规则脚本能正常加载，不保证模型在复杂长文本里严格服从约束。第四，社区反馈里提到过全局标记开启时危险命令确认可能被绕过、列表超五项不再拆分、旧版本插件报错等情况，多数靠清缓存拉最新 main 分支解决。\n\n## 使用建议\n\n1. 先按会话级用，打 `/i-have-adhd` 试几天，别一上来就设全局标记。\n2. 做一次严肃的 A/B：同一个 bug、同一个提示词，开关各跑一遍，自己判断值不值。\n3. 需要学原理或做方案讨论时明确要求「给完整解释」，临时松绑，别硬扛着规则问问题。\n4. 涉及删除、迁移等高风险操作时，建议手动关掉全局标记，别依赖插件的确认逻辑兜底。\n5. 遇到规则不生效或报错，先删本地缓存、拉最新 main 分支，再重新执行启用命令。\n6. 十条规则里有你不认同的，直接 fork 改 SKILL.md —— README 明确允许，这也是它最实用的一点。\n\n## 适合谁用？\n\n推荐：高频用 AI 写代码、查报错、拆任务的程序员、DevOps 与测试工程师，尤其是长会话下容易被大段文字带跑注意力的人。\n可考虑：需要统一 AI 输出格式以降低沟通成本的团队；以及节奏快、不想在废话里找核心动作的重度用户。\n不推荐：需要深度理论讲解或系统教学的初学者；做头脑风暴、创意与营销文案的场景；以及指望它提升模型正确率的人——它管格式，不管对错。",
-    "published": true,
-    "faq": [
-        {
-            "question": "i-have-adhd 怎么安装？",
-            "answer": "Claude Code 执行 `claude plugin marketplace add ayghri/i-have-adhd` 与 `claude plugin install i-have-adhd@i-have-adhd`，会话中输入 /i-have-adhd 启用。Codex 执行 `codex plugin marketplace add ayghri/i-have-adhd --ref main` 与 `codex plugin add i-have-adhd@i-have-adhd`，调用名为 $i-have-adhd。不需要本地克隆，插件会从仓库拉取内容。"
-        },
-        {
-            "question": "怎么让它每次会话都自动生效？",
-            "answer": "Claude Code 侧执行 `touch ~/.claude/.i-have-adhd-always` 创建标记文件即可自动加载；Codex 侧把规则写进 `~/.codex/AGENTS.md`。需要恢复默认时删除标记或移除规则即可。建议先按会话级试用一段时间再开全局。"
-        },
-        {
-            "question": "它会让 AI 变得更聪明吗？",
-            "answer": "不会。它只重塑输出格式，不改变模型的能力和事实正确性，生成的代码与方案仍需你自行验证测试。它的价值在于减少阅读负担、节省 token 和让下一步动作更明确。"
-        },
-        {
-            "question": "全局开启后会不会影响需要详细解释的场景？",
-            "answer": "会。全局开启时 AI 可能在教学、头脑风暴或创意写作场景过度压缩解释。这种情况下明确要求「给完整解释」即可临时松绑；涉及删除等高风险操作时，建议手动关闭全局标记，不要依赖插件的确认逻辑兜底。"
-        }
-    ],
-    "content_verified": true,
-    "conflict": false,
-    "verify_status": "verified",
-    "seo_keywords": [
-        "i-have-adhd",
-        "i-have-adhd插件",
-        "Claude Code 输出风格",
-        "Claude Code skill 推荐",
-        "让AI先说下一步"
-    ],
-    "source_urls": [
-        "https://github.com/ayghri/i-have-adhd",
-        "https://codingbeautydev.com/blog/i-have-adhd-skill/",
-        "https://www.besthub.dev/articles/how-to-make-ai-give-actionable-commands-first-the-9-1k-star-i-have-adhd-skill-42ec01f701e8",
-        "https://neodrop.ai/zh-cn/post/Onn-JGH7XxU"
-    ],
-    "confidence": "high",
-    "created_date": "2026-08-14",
-    "updated_date": "2026-08-14",
-    "published_date": "2026-08-24"
+    {
+      "text": "开源插件"
+    },
+    {
+      "text": "输出风格"
+    },
+    {
+      "text": "一行安装"
+    }
+  ],
+  "rating": "⭐ 4.4",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/ayghri/i-have-adhd",
+  "price": "免费开源（MIT 协议）；不含模型，不产生额外费用，反而因为压缩输出通常会省一些 token",
+  "platform": "跨平台，随 coding agent 客户端而定（Claude Code、Codex、Cursor、Antigravity 等）；支持插件市场安装，无需本地克隆",
+  "pros": [
+    "安装成本极低：两行命令装完，会话里打 /i-have-adhd 就生效，不用改模型也不用改工作流",
+    "省 token 又省注意力：去掉背景铺垫、寒暄和重复复盘，长会话下的成本与阅读负担都下降",
+    "规则明确可审：十条规则全部写在 Skill.md 里，不满意可以 fork 后自己改",
+    "内置两条安全规则：删文件等危险操作要求明确确认，连续失败三次后停止重试并回头检查判断",
+    "支持全局常开：建一个标记文件就能让每次会话自动加载规则，也可切回默认随时关掉"
+  ],
+  "cons": [
+    "只改输出格式，不会让 agent 变聪明，也不保证代码正确——结果仍需你自己验证",
+    "全局开启后容易在教学、头脑风暴或创意写作场景过度压缩解释，需要临时关掉",
+    "复杂长文本场景下模型未必严格遵守约束，仓库自带的单元测试只验证规则加载，不保证服从度"
+  ],
+  "features": [
+    "行动前置：第一行必须给出可执行操作——跑哪条命令、改哪个文件、目标是什么",
+    "步骤编号与进度同步：多步任务用数字列表，长任务每轮重述当前进度节点，避免上下文丢失",
+    "量化时间与结果可见：时间用具体分钟数表述，禁止「很快」这类模糊词；必须说明改完能看到什么效果",
+    "客观错误处理：报错按「位置—根因—修法」固定格式给，不绕弯",
+    "列表限长与去套话：列表最多五项，超出拆成「现在做 / 之后计划」；删除所有开场白、客套与收尾总结",
+    "多客户端与全局模式：Claude Code / Codex 插件市场一行安装，可用标记文件或 AGENTS.md 让规则常驻"
+  ],
+  "related": [
+    "claude-code",
+    "agent-skills",
+    "prompt-engineering-guide"
+  ],
+  "content": "## i-have-adhd是什么？\n\ni-have-adhd 是 GitHub 上的一个开源插件（ayghri/i-have-adhd，MIT 协议），东西小到有点反差：核心就是一个 Skill.md 文件加十条输出规则。它不是给人做注意力评估的工具，名字只是个比喻——它做的事是把 AI 编码助手的回答改造成更容易直接执行的格式。\n\n要治的毛病很多人都有体感：你问一个认证报错，模型先夸这个问题问得好，然后讲一遍 Express 中间件怎么工作、token 验证有哪些环节、cookie 可能有什么问题，最后一段才轻描淡写提一句「可以看看 src/auth.ts」。学习的时候这样挺好，但你在修线上问题的时候，需要的是下一步动作，不是一堂课。\n\n这个项目在 2026 年 7 月还是几千星，8 月初已经涨到万星级别，一度出现单周新增五千多星的记录——涨得这么猛，说明这个痛点确实积压了很久。\n\n## 核心功能\n\n1. 行动前置。第一行必须是立即可做的操作：跑哪条命令、改哪个文件路径、目标是什么。这是十条规则里最狠的一条。\n2. 步骤编号与进度同步。多个动作必须用数字列表，禁止大段文本；长任务每一轮都重述当前完成到哪个节点，避免几十轮之后你俩都忘了在干什么。\n3. 量化时间。时间必须给具体分钟数，「很快就好」这类词被明确禁止。\n4. 结果可见与客观报错。必须说明改完之后能观察到什么效果；出错按「错误位置—根本原因—修复方法」固定格式来。\n5. 列表限长与去套话。一个列表最多五项，超出的拆成「现在做 / 之后计划」两块；开场问候、客气收尾、重复总结全部删掉。\n6. 两条安全规则。删文件这类危险操作要求明确确认；连续失败三次后停止重试，回头重新检查之前的判断——这条对付 AI 反复撞墙的老毛病挺有效。\n\n对比效果在 README 里有例子：同一个认证问题，默认回答五句话里两句是寒暄，装上之后变成「运行 npm install、编辑某文件、跑测试」三行指令。\n\n## 版本/套餐对比\n\nMIT 开源，免费，只有一个版本，不含模型也不产生额外费用——考虑到它压缩输出，长期用下来通常还能省一点 token。安装两行就完：Claude Code 执行 `claude plugin marketplace add ayghri/i-have-adhd` 再 `claude plugin install i-have-adhd@i-have-adhd`，会话里打 `/i-have-adhd` 启用。Codex 是 `codex plugin marketplace add ayghri/i-have-adhd --ref main` 加 `codex plugin add i-have-adhd@i-have-adhd`，调用名 `$i-have-adhd`。想每次会话自动加载，Claude Code 侧建一个标记文件 `touch ~/.claude/.i-have-adhd-always`，Codex 侧把规则写进 `~/.codex/AGENTS.md`。整个过程不需要本地克隆，插件会从仓库拉内容。\n\n## 值不值得用？\n\n这是我见过投入产出比最高的一类项目之一——两行命令、零成本、五分钟就能自己 A/B 出结论。方法也很简单：拿同一个修 bug 任务开关插件各跑一遍，看回答是否从一大段背景说明变成「改哪个文件、跑哪条命令、下一步贴什么错误」。三个判断标准：第一行是不是可执行动作、步骤有没有编号、结尾是不是只剩一个明确的下一步。\n\n局限得说清楚。第一，它只改输出习惯，不会让 agent 变聪明，也不会替你确认命令是否安全，生成的代码照样要你验。第二，全局常开之后容易在需要深度解释、头脑风暴或创意写作的场景过度压缩——这时候直接说一句「给完整解释」临时松绑就行。第三，仓库自带九个标准化单元测试且全部通过，但那只验证规则脚本能正常加载，不保证模型在复杂长文本里严格服从约束。第四，社区反馈里提到过全局标记开启时危险命令确认可能被绕过、列表超五项不再拆分、旧版本插件报错等情况，多数靠清缓存拉最新 main 分支解决。\n\n## 使用建议\n\n1. 先按会话级用，打 `/i-have-adhd` 试几天，别一上来就设全局标记。\n2. 做一次严肃的 A/B：同一个 bug、同一个提示词，开关各跑一遍，自己判断值不值。\n3. 需要学原理或做方案讨论时明确要求「给完整解释」，临时松绑，别硬扛着规则问问题。\n4. 涉及删除、迁移等高风险操作时，建议手动关掉全局标记，别依赖插件的确认逻辑兜底。\n5. 遇到规则不生效或报错，先删本地缓存、拉最新 main 分支，再重新执行启用命令。\n6. 十条规则里有你不认同的，直接 fork 改 SKILL.md —— README 明确允许，这也是它最实用的一点。\n\n## 适合谁用？\n\n推荐：高频用 AI 写代码、查报错、拆任务的程序员、DevOps 与测试工程师，尤其是长会话下容易被大段文字带跑注意力的人。\n可考虑：需要统一 AI 输出格式以降低沟通成本的团队；以及节奏快、不想在废话里找核心动作的重度用户。\n不推荐：需要深度理论讲解或系统教学的初学者；做头脑风暴、创意与营销文案的场景；以及指望它提升模型正确率的人——它管格式，不管对错。",
+  "published": true,
+  "faq": [
+    {
+      "question": "i-have-adhd 怎么安装？",
+      "answer": "Claude Code 执行 `claude plugin marketplace add ayghri/i-have-adhd` 与 `claude plugin install i-have-adhd@i-have-adhd`，会话中输入 /i-have-adhd 启用。Codex 执行 `codex plugin marketplace add ayghri/i-have-adhd --ref main` 与 `codex plugin add i-have-adhd@i-have-adhd`，调用名为 $i-have-adhd。不需要本地克隆，插件会从仓库拉取内容。"
+    },
+    {
+      "question": "怎么让它每次会话都自动生效？",
+      "answer": "Claude Code 侧执行 `touch ~/.claude/.i-have-adhd-always` 创建标记文件即可自动加载；Codex 侧把规则写进 `~/.codex/AGENTS.md`。需要恢复默认时删除标记或移除规则即可。建议先按会话级试用一段时间再开全局。"
+    },
+    {
+      "question": "它会让 AI 变得更聪明吗？",
+      "answer": "不会。它只重塑输出格式，不改变模型的能力和事实正确性，生成的代码与方案仍需你自行验证测试。它的价值在于减少阅读负担、节省 token 和让下一步动作更明确。"
+    },
+    {
+      "question": "全局开启后会不会影响需要详细解释的场景？",
+      "answer": "会。全局开启时 AI 可能在教学、头脑风暴或创意写作场景过度压缩解释。这种情况下明确要求「给完整解释」即可临时松绑；涉及删除等高风险操作时，建议手动关闭全局标记，不要依赖插件的确认逻辑兜底。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "i-have-adhd",
+    "i-have-adhd插件",
+    "Claude Code 输出风格",
+    "Claude Code skill 推荐",
+    "让AI先说下一步"
+  ],
+  "source_urls": [
+    "https://github.com/ayghri/i-have-adhd",
+    "https://codingbeautydev.com/blog/i-have-adhd-skill/",
+    "https://www.besthub.dev/articles/how-to-make-ai-give-actionable-commands-first-the-9-1k-star-i-have-adhd-skill-42ec01f701e8",
+    "https://neodrop.ai/zh-cn/post/Onn-JGH7XxU"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-24"
 }

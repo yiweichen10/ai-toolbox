@@ -1,97 +1,97 @@
 {
-    "name": "Pydantic AI",
-    "slug": "pydantic-ai",
-    "positioning": "Pydantic AI是什么？强类型Python Agent框架好用吗",
-    "auto_positioning": false,
-    "emoji": "🐍",
-    "color": "#E92063",
-    "description": "Pydantic AI 是由 Pydantic 作者团队维护的强类型 Python Agent 框架，1.0 版本发布时已有约 1500 万次下载。它用类型系统贯穿 Agent 的输入输出与结构化返回，模型无关，内置 Pydantic 校验、Logfire 可观测、MCP 支持与持久化执行，适合追求 schema 约束与类型安全的 Python 团队。",
-    "category": "AI智能体",
-    "tags": [
-        {
-            "text": "免费可用",
-            "type": "free"
-        },
-        {
-            "text": "Python"
-        },
-        {
-            "text": "类型安全"
-        },
-        {
-            "text": "开源框架"
-        }
-    ],
-    "rating": "⭐ 4.8",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "recommend",
-        "text": "推荐"
+  "name": "Pydantic AI",
+  "slug": "pydantic-ai",
+  "positioning": "Pydantic AI是什么？强类型Python Agent框架好用吗",
+  "auto_positioning": false,
+  "emoji": "🐍",
+  "color": "#E92063",
+  "description": "Pydantic AI 是由 Pydantic 作者团队维护的强类型 Python Agent 框架，1.0 版本发布时已有约 1500 万次下载。它用类型系统贯穿 Agent 的输入输出与结构化返回，模型无关，内置 Pydantic 校验、Logfire 可观测、MCP 支持与持久化执行，适合追求 schema 约束与类型安全的 Python 团队。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "免费可用",
+      "type": "free"
     },
-    "url": "https://ai.pydantic.dev",
-    "price": "开源免费（Pydantic Logfire/Gateway 部分功能为付费 SaaS）",
-    "platform": "Python（跨平台）",
-    "pros": [
-        "类型安全贯穿内部与公开 API，把数据格式错误挡在编译与校验层",
-        "由 Pydantic 原班团队打造，结构化输出校验是看家本领",
-        "模型无关，内置路由与成本管控（Pydantic AI Gateway）",
-        "原生 Logfire 可观测，追踪、成本与调试一体化",
-        "持久化执行（Temporal/DBOS/Prefect/Restate）与 MCP 一等公民"
-    ],
-    "cons": [
-        "仅限 Python，非 Python 栈团队用不上",
-        "强类型与依赖注入对新手有一定学习曲线",
-        "部分高级能力（如 Graph 持久化、Embeddings）仍在新版本路线中"
-    ],
-    "features": [
-        "类型安全：内部与公开 API 全类型化，编码 Agent 也能受益",
-        "校验后结构化输出：依托 Pydantic 保证结构化返回的类型正确",
-        "模型路由与成本管控：Logfire AI Gateway 单 key 接多模型",
-        "可观测性：与 Logfire 原生集成，追踪、token 成本与调试",
-        "MCP 支持：内置连接 MCP 服务器，访问文件系统/数据库/API",
-        "持久化执行：原生支持 Temporal、DBOS、Prefect、Restate 容错恢复"
-    ],
-    "related": [
-        "langchain",
-        "mastra",
-        "claude-agent-sdk"
-    ],
-    "content": "## Pydantic AI是什么？\n\nPydantic AI 是由 Pydantic（那个被无数 Python 项目依赖的数据校验库）原班团队维护的 Agent 框架。它的核心卖点就一句话：用类型系统把 Agent 的输入输出和结构化返回都管起来。在你用 Pydantic 做数据校验早已习以为常的 Python 世界里，他们把同样的理念搬到了 GenAI 应用上——类型安全贯穿框架内部和公开 API，让你在把 Agent 推到用户面前之前，就把大部分数据格式错误挡在编译与校验阶段。1.0 版本发布时，项目已有约 1500 万次下载，足见势头。\n\n## 核心功能\n\n1. 类型安全：不仅是公开 API，框架内部也全程类型化。讽刺的是，编码 Agent 反而比人更吃类型安全的红利——用 Pydantic AI 时，它和你手里的 Agent 协作体验差距会更大。\n2. 校验后的结构化输出：作为 Pydantic 的亲儿子，结构化输出是看家本领，支持通过工具调用、Provider 托管结构化输出和手动提示三种方式，保证返回类型正确。\n3. 模型路由与成本管控：内置 Logfire AI Gateway，单 key 接入多模型，做智能路由与成本治理，几乎零开销。\n4. 可观测性：和自家 Logfire 原生集成，追踪 LLM 调用、token 成本、失败调试，全部语义化 OpenTelemetry 数据，不锁死在私有标准。\n5. MCP 支持：内置连接 MCP 服务器，让 Agent 访问文件系统、数据库、API 等外部资源。\n6. 持久化执行：原生支持 Temporal、DBOS、Prefect、Restate，Agent 在 API 故障或重启时能从断点续跑，适合真实生产系统。\n\n## 版本/套餐对比\n\nPydantic AI 框架开源免费。围绕它的商业能力——Pydantic Logfire（可观测 SaaS）与 Logfire AI Gateway（智能路由/FinOps）——部分为付费服务，具体档位以官网为准。1.0 承诺至少 6 个月 API 稳定，发布后还会为 V1 提供至少 6 个月安全修复。\n\n## 值不值得用？\n\n优点：对追求 schema 约束与类型安全的 Python 团队几乎是天作之合；100% 测试覆盖、文档示例都经单测，工程质量让人安心；依赖注入、流式、多智能体、人机协作工具审批一应俱全；Logfire 让生产可观测。缺点：仅限 Python；强类型与依赖注入对新手有门槛；部分能力（如图持久化执行、Embeddings 支持）仍在路线图中。结论：如果你用 Python 写生产级 Agent，又受够了「运行时才发现的格式错」，Pydantic AI 值得认真考虑。\n\n## 使用建议\n\n1. 用 uv add pydantic-ai 或 pip 安装，从最小 Agent 起手，先把 output_type 用 BaseModel 约束住。\n2. 接入 Logfire 做追踪与成本监控，上线前就把可观测搭好。\n3. 复杂工作流用依赖注入管理工具依赖，让 Agent 保持可测试。\n4. 长任务用持久化执行（Temporal/DBOS 等）兜底故障恢复。\n\n## 适合谁用？\n\n推荐：追求类型安全与结构化输出校验的 Python 团队与生产级项目。\n可考虑：已用 Pydantic/Logfire 技术栈、希望统一 AI 工程链路的团队。\n不推荐：非 Python 栈团队，或只想要零配置拖拽式 Agent 的用户。",
-    "published": true,
-    "faq": [
-        {
-            "question": "Pydantic AI 是免费的吗？",
-            "answer": "框架本身开源免费；围绕它的 Logfire（可观测）与 AI Gateway（路由/FinOps）部分为付费 SaaS，具体档位以官网为准。"
-        },
-        {
-            "question": "Pydantic AI 只能用 OpenAI 吗？",
-            "answer": "不是，它是模型无关的，通过内置网关或各 Provider 包可接入 OpenAI、Anthropic、Google 等主流模型。"
-        },
-        {
-            "question": "它和 LangChain 有什么不同？",
-            "answer": "Pydantic AI 更强调类型安全、Pydantic 校验与工程化质量（100% 测试覆盖、示例单测），把 Agent 当作正经软件来写，而非快速原型库。"
-        },
-        {
-            "question": "支持持久化执行吗？",
-            "answer": "支持，原生集成 Temporal、DBOS、Prefect、Restate，让 Agent 在故障或重启时从断点续跑，适合生产环境。"
-        }
-    ],
-    "content_verified": true,
-    "conflict": false,
-    "verify_status": "verified",
-    "seo_keywords": [
-        "Pydantic AI",
-        "Pydantic AI怎么样",
-        "Pydantic AI免费版",
-        "Pydantic AI使用教程",
-        "Pydantic AI和哪个好"
-    ],
-    "source_urls": [
-        "https://pydantic.dev/articles/pydantic-ai-v1",
-        "https://pydantic.dev/pydantic-ai"
-    ],
-    "confidence": "high",
-    "created_date": "2026-08-14",
-    "updated_date": "2026-08-14",
-    "published_date": "2026-08-26"
+    {
+      "text": "Python"
+    },
+    {
+      "text": "类型安全"
+    },
+    {
+      "text": "开源框架"
+    }
+  ],
+  "rating": "⭐ 4.8",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://ai.pydantic.dev",
+  "price": "开源免费（Pydantic Logfire/Gateway 部分功能为付费 SaaS）",
+  "platform": "Python（跨平台）",
+  "pros": [
+    "类型安全贯穿内部与公开 API，把数据格式错误挡在编译与校验层",
+    "由 Pydantic 原班团队打造，结构化输出校验是看家本领",
+    "模型无关，内置路由与成本管控（Pydantic AI Gateway）",
+    "原生 Logfire 可观测，追踪、成本与调试一体化",
+    "持久化执行（Temporal/DBOS/Prefect/Restate）与 MCP 一等公民"
+  ],
+  "cons": [
+    "仅限 Python，非 Python 栈团队用不上",
+    "强类型与依赖注入对新手有一定学习曲线",
+    "部分高级能力（如 Graph 持久化、Embeddings）仍在新版本路线中"
+  ],
+  "features": [
+    "类型安全：内部与公开 API 全类型化，编码 Agent 也能受益",
+    "校验后结构化输出：依托 Pydantic 保证结构化返回的类型正确",
+    "模型路由与成本管控：Logfire AI Gateway 单 key 接多模型",
+    "可观测性：与 Logfire 原生集成，追踪、token 成本与调试",
+    "MCP 支持：内置连接 MCP 服务器，访问文件系统/数据库/API",
+    "持久化执行：原生支持 Temporal、DBOS、Prefect、Restate 容错恢复"
+  ],
+  "related": [
+    "langchain",
+    "mastra",
+    "claude-agent-sdk"
+  ],
+  "content": "## Pydantic AI是什么？\n\nPydantic AI 是由 Pydantic（那个被无数 Python 项目依赖的数据校验库）原班团队维护的 Agent 框架。它的核心卖点就一句话：用类型系统把 Agent 的输入输出和结构化返回都管起来。在你用 Pydantic 做数据校验早已习以为常的 Python 世界里，他们把同样的理念搬到了 GenAI 应用上——类型安全贯穿框架内部和公开 API，让你在把 Agent 推到用户面前之前，就把大部分数据格式错误挡在编译与校验阶段。1.0 版本发布时，项目已有约 1500 万次下载，足见势头。\n\n## 核心功能\n\n1. 类型安全：不仅是公开 API，框架内部也全程类型化。讽刺的是，编码 Agent 反而比人更吃类型安全的红利——用 Pydantic AI 时，它和你手里的 Agent 协作体验差距会更大。\n2. 校验后的结构化输出：作为 Pydantic 的亲儿子，结构化输出是看家本领，支持通过工具调用、Provider 托管结构化输出和手动提示三种方式，保证返回类型正确。\n3. 模型路由与成本管控：内置 Logfire AI Gateway，单 key 接入多模型，做智能路由与成本治理，几乎零开销。\n4. 可观测性：和自家 Logfire 原生集成，追踪 LLM 调用、token 成本、失败调试，全部语义化 OpenTelemetry 数据，不锁死在私有标准。\n5. MCP 支持：内置连接 MCP 服务器，让 Agent 访问文件系统、数据库、API 等外部资源。\n6. 持久化执行：原生支持 Temporal、DBOS、Prefect、Restate，Agent 在 API 故障或重启时能从断点续跑，适合真实生产系统。\n\n## 版本/套餐对比\n\nPydantic AI 框架开源免费。围绕它的商业能力——Pydantic Logfire（可观测 SaaS）与 Logfire AI Gateway（智能路由/FinOps）——部分为付费服务，具体档位以官网为准。1.0 承诺至少 6 个月 API 稳定，发布后还会为 V1 提供至少 6 个月安全修复。\n\n## 值不值得用？\n\n优点：对追求 schema 约束与类型安全的 Python 团队几乎是天作之合；100% 测试覆盖、文档示例都经单测，工程质量让人安心；依赖注入、流式、多智能体、人机协作工具审批一应俱全；Logfire 让生产可观测。缺点：仅限 Python；强类型与依赖注入对新手有门槛；部分能力（如图持久化执行、Embeddings 支持）仍在路线图中。结论：如果你用 Python 写生产级 Agent，又受够了「运行时才发现的格式错」，Pydantic AI 值得认真考虑。\n\n## 使用建议\n\n1. 用 uv add pydantic-ai 或 pip 安装，从最小 Agent 起手，先把 output_type 用 BaseModel 约束住。\n2. 接入 Logfire 做追踪与成本监控，上线前就把可观测搭好。\n3. 复杂工作流用依赖注入管理工具依赖，让 Agent 保持可测试。\n4. 长任务用持久化执行（Temporal/DBOS 等）兜底故障恢复。\n\n## 适合谁用？\n\n推荐：追求类型安全与结构化输出校验的 Python 团队与生产级项目。\n可考虑：已用 Pydantic/Logfire 技术栈、希望统一 AI 工程链路的团队。\n不推荐：非 Python 栈团队，或只想要零配置拖拽式 Agent 的用户。",
+  "published": true,
+  "faq": [
+    {
+      "question": "Pydantic AI 是免费的吗？",
+      "answer": "框架本身开源免费；围绕它的 Logfire（可观测）与 AI Gateway（路由/FinOps）部分为付费 SaaS，具体档位以官网为准。"
+    },
+    {
+      "question": "Pydantic AI 只能用 OpenAI 吗？",
+      "answer": "不是，它是模型无关的，通过内置网关或各 Provider 包可接入 OpenAI、Anthropic、Google 等主流模型。"
+    },
+    {
+      "question": "它和 LangChain 有什么不同？",
+      "answer": "Pydantic AI 更强调类型安全、Pydantic 校验与工程化质量（100% 测试覆盖、示例单测），把 Agent 当作正经软件来写，而非快速原型库。"
+    },
+    {
+      "question": "支持持久化执行吗？",
+      "answer": "支持，原生集成 Temporal、DBOS、Prefect、Restate，让 Agent 在故障或重启时从断点续跑，适合生产环境。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Pydantic AI",
+    "Pydantic AI怎么样",
+    "Pydantic AI免费版",
+    "Pydantic AI使用教程",
+    "Pydantic AI和哪个好"
+  ],
+  "source_urls": [
+    "https://pydantic.dev/articles/pydantic-ai-v1",
+    "https://pydantic.dev/pydantic-ai"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-26"
 }

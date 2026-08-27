@@ -36,6 +36,10 @@ js/tools-data.js（首页工具数据，构建时由 build.py 生成）
 ## 目录速查
 
 - `data/`：唯一数据源。`tools.json`（工具，6MB+）、`articles.json`、`compare_data.json`、`ranking_data.json`、`dict_terms.json` 等
+- ⚠️ **2026-08-25 数据架构变更（重要，改工具数据前必读）**：`build_lib/data_loaders.py` 的 `load_tools()`/`load_articles()` 改为**目录优先**——存在 `data/tools/*.json`（每工具一个 shard，672 个，与单体 1:1 镜像）时，直接聚合 shard 而**忽略** `data/tools.json`；并新增 `sync_mono_from_shards()` 在 build 入口把 shard **聚合回写**单体（shard 胜出）。即 **`data/tools/<slug>.json` 才是真源，`data/tools.json` 是构建派生物**。
+  - 后果：任何只写 `data/tools.json`（含 `verify_tools_batch.py --apply` 原逻辑、直接手改 mono）的更新，都会在下次 `build.py` 被 shard 覆盖而**静默丢失**。
+  - 正确做法：改工具数据**必须写 shard** `data/tools/<slug>.json`；`verify_tools_batch.py --apply` 已修复为同时写回 shard（见 2026-08-26 补丁）。文章同理走 `data/articles/*.json`。
+  - 诊断口诀：build 后数据"回滚"→ 八成是只动了 mono 没动 shard。
 - `scripts/`：构建与批处理脚本（build.py、regenerate_data.py、optimize_css.py、check_*.py 验证等）
 - `js/`：前端逻辑。`main.js`（首页渲染/搜索）、`favorites.js`（收藏）、`ai-assistant.js`、`tts-reader.js`；**`tools-data.js` 是构建产物，不要手改**
 - `css/`：`style.css` 是源文件，`style.min.css` 由 optimize_css.py 生成，**不要手改 min 文件**

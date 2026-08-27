@@ -1,97 +1,97 @@
 {
-    "name": "Google ADK",
-    "slug": "google-adk",
-    "positioning": "Google ADK是什么？谷歌Agent开发套件好用吗",
-    "auto_positioning": false,
-    "emoji": "🛠️",
-    "color": "#4285F4",
-    "description": "Google ADK（Agent Development Kit）是 Google 官方的智能体开发框架，代码优先、与 Gemini 及 Vertex AI 深度集成，但模型无关、部署无关。它支持 Python、TypeScript、Go、Java 多语言，提供灵活编排、多智能体架构、丰富工具生态与内置评估，是 Google Cloud 生态构建 Agent 的推荐起点。",
-    "category": "AI智能体",
-    "tags": [
-        {
-            "text": "免费可用",
-            "type": "free"
-        },
-        {
-            "text": "谷歌官方"
-        },
-        {
-            "text": "多语言"
-        },
-        {
-            "text": "Gemini"
-        }
-    ],
-    "rating": "⭐ 4.6",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "recommend",
-        "text": "推荐"
+  "name": "Google ADK",
+  "slug": "google-adk",
+  "positioning": "Google ADK是什么？谷歌Agent开发套件好用吗",
+  "auto_positioning": false,
+  "emoji": "🛠️",
+  "color": "#4285F4",
+  "description": "Google ADK（Agent Development Kit）是 Google 官方的智能体开发框架，代码优先、与 Gemini 及 Vertex AI 深度集成，但模型无关、部署无关。它支持 Python、TypeScript、Go、Java 多语言，提供灵活编排、多智能体架构、丰富工具生态与内置评估，是 Google Cloud 生态构建 Agent 的推荐起点。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "免费可用",
+      "type": "free"
     },
-    "url": "https://adk.dev",
-    "price": "开源免费（调用 Gemini API 或使用 Vertex AI/Cloud Run 等按用量计费）",
-    "platform": "Python / TypeScript / Go / Java（跨平台）",
-    "pros": [
-        "代码优先，让智能体开发更接近常规软件开发",
-        "与 Gemini、Vertex AI 深度集成，同时模型无关、部署无关",
-        "多语言支持：Python、TypeScript、Go、Java",
-        "灵活编排：工作流 Agent（顺序/并行/循环）与 LLM 动态路由",
-        "内置评估，可对最终回答质量与执行轨迹系统打分"
-    ],
-    "cons": [
-        "最佳实践与示例仍以 Gemini/Google 生态为主",
-        "功能迭代快，部分语言版本的 API 仍在演进",
-        "对完全脱离 Google Cloud 的团队，部署链路不够轻"
-    ],
-    "features": [
-        "灵活编排：Workflow Agent 定义可预测流水线，或 LLM 驱动动态路由",
-        "多智能体架构：层次化组合专门 Agent，实现复杂协调与委派",
-        "丰富工具生态：预置搜索/代码执行、自定义函数、第三方库、其他 Agent 作工具",
-        "随时可部署：本地、Vertex AI Agent Engine、Cloud Run、Docker 皆可",
-        "内置评估：按测试用例评估回答质量与逐步执行轨迹",
-        "安全可靠的 Agent 模式：内置安全与最佳实践指导"
-    ],
-    "related": [
-        "langchain",
-        "claude-agent-sdk",
-        "microsoft-agent-framework"
-    ],
-    "content": "## Google ADK是什么？\n\nGoogle ADK（Agent Development Kit，智能体开发套件）是 Google 官方推出的开源框架，目标是让构建和部署 AI 智能体「更像写软件」。它针对 Gemini 和 Google 生态做了优化，但官方明确强调它是模型无关、部署无关的，并且设计成能和其他框架兼容。换句话说，ADK 既照顾了 Google Cloud 用户，也尽量不把开发者锁死在某一家模型或某一种部署形态上。\n\n## 核心功能\n\n1. 灵活编排：你可以用 Workflow Agent（Sequential、Parallel、Loop）定义可预测的流水线，也可以用 LLM 驱动的 LlmAgent 转移做自适应动态路由，简单任务和复杂工作流都能覆盖。\n2. 多智能体架构：通过在层次结构里组合多个专门的 Agent，构建模块化、可扩展的应用，实现复杂的协调与委派，这点对真实业务很关键。\n3. 丰富工具生态：预置搜索、代码执行等工具，支持自定义函数、第三方库，甚至可以把另一个 Agent 当作工具来调用。\n4. 随时可部署：本地能跑，也能用 Vertex AI Agent Engine 扩缩容，或集成到 Cloud Run、Docker 自有基础设施，自由度很高。\n5. 内置评估：可以针对预定义测试用例，同时评估最终回答质量和逐步执行轨迹，让 Agent 表现变得可度量。\n\n## 版本/套餐对比\n\nADK 是开源框架，本身免费使用。实际成本来自模型调用与云部署：用 Gemini API 按 token 计费，部署到 Vertex AI Agent Engine、Cloud Run 等按云资源用量计费。官方未提供框架层面的商业档位，主要和 Google Cloud 订阅体系挂钩。\n\n## 值不值得用？\n\n优点：代码优先的开发体验很对工程师胃口；多语言（Python、TypeScript、Go、Java）覆盖广；与 Gemini/Vertex AI 的深度集成让你上手即用；内置评估把「Agent 好不好」变成可量化问题。缺点：最佳实践和示例仍然偏向 Gemini/Google 生态；各语言版本 API 还在快速演进；对完全不想碰 Google Cloud 的团队来说部署链路不够轻。结论：如果你本来就在 Google Cloud 上做 Agent，ADK 是顺理成章的推荐起点。\n\n## 使用建议\n\n1. 用 adk create 起一个项目，再用 adk web 打开本地调试界面，先把单 Agent 跑通。\n2. 复杂任务优先用 Workflow Agent 把路径写清楚，再考虑 LLM 动态路由。\n3. 多 Agent 协作时，把专门的子 Agent 组合成层次结构，明确谁负责委派。\n4. 上线前跑一遍内置评估，用测试用例盯住回答质量与执行轨迹。\n\n## 适合谁用？\n\n推荐：已经在 Google Cloud / Vertex AI 上构建 Agent 的团队与开发者。\n可考虑：想用多语言（尤其 Go/Java）写 Agent、又不想被单一厂商绑死的工程师。\n不推荐：只想在本地跑个轻量 Agent、完全不想接触云部署的个人用户。",
-    "published": true,
-    "faq": [
-        {
-            "question": "Google ADK 支持哪些编程语言？",
-            "answer": "官方支持 Python、TypeScript、Go 和 Java，覆盖从脚本到企业级服务的主要语言栈。"
-        },
-        {
-            "question": "ADK 只能用 Gemini 吗？",
-            "answer": "不是。ADK 虽然针对 Gemini 与 Google 生态做了优化，但设计上是模型无关、部署无关的，也强调与其他框架兼容。"
-        },
-        {
-            "question": "Google ADK 是免费的吗？",
-            "answer": "框架本身开源免费；成本来自 Gemini API 的 token 计费，以及部署到 Vertex AI、Cloud Run 等云资源的用量。"
-        },
-        {
-            "question": "ADK 和 Google Genkit 有什么区别？",
-            "answer": "ADK 更聚焦智能体（Agent）的开发、编排与部署，Genkit 更偏向全栈 AI 应用（模型路由、结构化输出、RAG、可观测性），两者可互补使用。"
-        }
-    ],
-    "content_verified": true,
-    "conflict": false,
-    "verify_status": "verified",
-    "seo_keywords": [
-        "Google ADK",
-        "Google ADK怎么样",
-        "Google ADK免费版",
-        "Google ADK使用教程",
-        "Google ADK和哪个好"
-    ],
-    "source_urls": [
-        "https://adk.dev/get-started/python/",
-        "https://clouddocs-dot-devsite-v2-prod.appspot.com/gemini-enterprise-agent-platform/build/adk"
-    ],
-    "confidence": "high",
-    "created_date": "2026-08-14",
-    "updated_date": "2026-08-14",
-    "published_date": "2026-08-24"
+    {
+      "text": "谷歌官方"
+    },
+    {
+      "text": "多语言"
+    },
+    {
+      "text": "Gemini"
+    }
+  ],
+  "rating": "⭐ 4.6",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://adk.dev",
+  "price": "开源免费（调用 Gemini API 或使用 Vertex AI/Cloud Run 等按用量计费）",
+  "platform": "Python / TypeScript / Go / Java（跨平台）",
+  "pros": [
+    "代码优先，让智能体开发更接近常规软件开发",
+    "与 Gemini、Vertex AI 深度集成，同时模型无关、部署无关",
+    "多语言支持：Python、TypeScript、Go、Java",
+    "灵活编排：工作流 Agent（顺序/并行/循环）与 LLM 动态路由",
+    "内置评估，可对最终回答质量与执行轨迹系统打分"
+  ],
+  "cons": [
+    "最佳实践与示例仍以 Gemini/Google 生态为主",
+    "功能迭代快，部分语言版本的 API 仍在演进",
+    "对完全脱离 Google Cloud 的团队，部署链路不够轻"
+  ],
+  "features": [
+    "灵活编排：Workflow Agent 定义可预测流水线，或 LLM 驱动动态路由",
+    "多智能体架构：层次化组合专门 Agent，实现复杂协调与委派",
+    "丰富工具生态：预置搜索/代码执行、自定义函数、第三方库、其他 Agent 作工具",
+    "随时可部署：本地、Vertex AI Agent Engine、Cloud Run、Docker 皆可",
+    "内置评估：按测试用例评估回答质量与逐步执行轨迹",
+    "安全可靠的 Agent 模式：内置安全与最佳实践指导"
+  ],
+  "related": [
+    "langchain",
+    "claude-agent-sdk",
+    "microsoft-agent-framework"
+  ],
+  "content": "## Google ADK是什么？\n\nGoogle ADK（Agent Development Kit，智能体开发套件）是 Google 官方推出的开源框架，目标是让构建和部署 AI 智能体「更像写软件」。它针对 Gemini 和 Google 生态做了优化，但官方明确强调它是模型无关、部署无关的，并且设计成能和其他框架兼容。换句话说，ADK 既照顾了 Google Cloud 用户，也尽量不把开发者锁死在某一家模型或某一种部署形态上。\n\n## 核心功能\n\n1. 灵活编排：你可以用 Workflow Agent（Sequential、Parallel、Loop）定义可预测的流水线，也可以用 LLM 驱动的 LlmAgent 转移做自适应动态路由，简单任务和复杂工作流都能覆盖。\n2. 多智能体架构：通过在层次结构里组合多个专门的 Agent，构建模块化、可扩展的应用，实现复杂的协调与委派，这点对真实业务很关键。\n3. 丰富工具生态：预置搜索、代码执行等工具，支持自定义函数、第三方库，甚至可以把另一个 Agent 当作工具来调用。\n4. 随时可部署：本地能跑，也能用 Vertex AI Agent Engine 扩缩容，或集成到 Cloud Run、Docker 自有基础设施，自由度很高。\n5. 内置评估：可以针对预定义测试用例，同时评估最终回答质量和逐步执行轨迹，让 Agent 表现变得可度量。\n\n## 版本/套餐对比\n\nADK 是开源框架，本身免费使用。实际成本来自模型调用与云部署：用 Gemini API 按 token 计费，部署到 Vertex AI Agent Engine、Cloud Run 等按云资源用量计费。官方未提供框架层面的商业档位，主要和 Google Cloud 订阅体系挂钩。\n\n## 值不值得用？\n\n优点：代码优先的开发体验很对工程师胃口；多语言（Python、TypeScript、Go、Java）覆盖广；与 Gemini/Vertex AI 的深度集成让你上手即用；内置评估把「Agent 好不好」变成可量化问题。缺点：最佳实践和示例仍然偏向 Gemini/Google 生态；各语言版本 API 还在快速演进；对完全不想碰 Google Cloud 的团队来说部署链路不够轻。结论：如果你本来就在 Google Cloud 上做 Agent，ADK 是顺理成章的推荐起点。\n\n## 使用建议\n\n1. 用 adk create 起一个项目，再用 adk web 打开本地调试界面，先把单 Agent 跑通。\n2. 复杂任务优先用 Workflow Agent 把路径写清楚，再考虑 LLM 动态路由。\n3. 多 Agent 协作时，把专门的子 Agent 组合成层次结构，明确谁负责委派。\n4. 上线前跑一遍内置评估，用测试用例盯住回答质量与执行轨迹。\n\n## 适合谁用？\n\n推荐：已经在 Google Cloud / Vertex AI 上构建 Agent 的团队与开发者。\n可考虑：想用多语言（尤其 Go/Java）写 Agent、又不想被单一厂商绑死的工程师。\n不推荐：只想在本地跑个轻量 Agent、完全不想接触云部署的个人用户。",
+  "published": true,
+  "faq": [
+    {
+      "question": "Google ADK 支持哪些编程语言？",
+      "answer": "官方支持 Python、TypeScript、Go 和 Java，覆盖从脚本到企业级服务的主要语言栈。"
+    },
+    {
+      "question": "ADK 只能用 Gemini 吗？",
+      "answer": "不是。ADK 虽然针对 Gemini 与 Google 生态做了优化，但设计上是模型无关、部署无关的，也强调与其他框架兼容。"
+    },
+    {
+      "question": "Google ADK 是免费的吗？",
+      "answer": "框架本身开源免费；成本来自 Gemini API 的 token 计费，以及部署到 Vertex AI、Cloud Run 等云资源的用量。"
+    },
+    {
+      "question": "ADK 和 Google Genkit 有什么区别？",
+      "answer": "ADK 更聚焦智能体（Agent）的开发、编排与部署，Genkit 更偏向全栈 AI 应用（模型路由、结构化输出、RAG、可观测性），两者可互补使用。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Google ADK",
+    "Google ADK怎么样",
+    "Google ADK免费版",
+    "Google ADK使用教程",
+    "Google ADK和哪个好"
+  ],
+  "source_urls": [
+    "https://adk.dev/get-started/python/",
+    "https://clouddocs-dot-devsite-v2-prod.appspot.com/gemini-enterprise-agent-platform/build/adk"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-24"
 }
