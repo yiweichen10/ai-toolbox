@@ -5,7 +5,7 @@
       "id": "overall",
       "slug": "2026-ai-tools-overall-ranking",
       "title": "2026年AI工具综合排行榜",
-      "meta_description": "2026年最新AI工具综合排行榜，基于评分、热度、功能等多维度数据计算。已收录672款主流AI工具，每日自动更新。",
+      "meta_description": "2026年最新AI工具综合排行榜，基于评分、热度、功能等多维度数据计算。已收录673款主流AI工具，每日自动更新。",
       "keywords": [
         "AI工具排行榜",
         "AI工具排名",
@@ -29,7 +29,7 @@
             "freshness": 8
           },
           "rating": "⭐ 4.5",
-          "price": "开源权重 MIT 免费（GLM-5.3 约 2026-08-28 释出）；API 走智谱 GLM Coding Plan 点数配额制，非高峰时段（UTC+8 工作日 14:00-18:00 之外，含周末）仅耗 50% 点数",
+          "price": "开源 MIT 免费；GLM-5.3-Flash API $0.15/$0.03/$0.50 每百万 token（约 GLM-5.2 的 1/10）",
           "badge": {
             "type": "hot",
             "text": "HOT"
@@ -1113,8 +1113,8 @@
           "rank": 50
         }
       ],
-      "total_tools": 672,
-      "last_updated": "2026-08-26 20:42",
+      "total_tools": 673,
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -1127,7 +1127,7 @@
       "id": "free",
       "slug": "best-free-ai-tools-ranking-2026",
       "title": "2026年最佳免费AI工具排行榜",
-      "meta_description": "完全免费的AI工具排行榜，169款免费AI工具按综合评分排序。帮你零成本体验最新AI技术。",
+      "meta_description": "完全免费的AI工具排行榜，168款免费AI工具按综合评分排序。帮你零成本体验最新AI技术。",
       "keywords": [
         "免费AI工具",
         "免费AI",
@@ -1137,28 +1137,6 @@
       ],
       "icon": "🆓",
       "ranked_tools": [
-        {
-          "slug": "glm-5-2",
-          "name": "智谱 GLM 5.3",
-          "emoji": "🧠",
-          "color": "#6B5BFF",
-          "score": 96.5,
-          "scores": {
-            "hot": 39.49768787657147,
-            "quality": 27.0,
-            "functionality": 20,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.5",
-          "price": "开源权重 MIT 免费（GLM-5.3 约 2026-08-28 释出）；API 走智谱 GLM Coding Plan 点数配额制，非高峰时段（UTC+8 工作日 14:00-18:00 之外，含周末）仅耗 50% 点数",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "850万",
-          "rank": 1
-        },
         {
           "slug": "open-router",
           "name": "OpenRouter",
@@ -1179,7 +1157,7 @@
             "text": "推荐"
           },
           "visits": "850万/月",
-          "rank": 2
+          "rank": 1
         },
         {
           "slug": "tongyi-wanxiang",
@@ -1201,7 +1179,7 @@
             "text": "推荐"
           },
           "visits": "约500万/月",
-          "rank": 3
+          "rank": 2
         },
         {
           "slug": "gptzero",
@@ -1220,7 +1198,7 @@
           "price": "免费+付费（Pro 订阅）",
           "badge": null,
           "visits": "约900万/月",
-          "rank": 4
+          "rank": 3
         },
         {
           "slug": "trae",
@@ -1242,7 +1220,7 @@
             "text": "NEW"
           },
           "visits": "850万",
-          "rank": 5
+          "rank": 4
         },
         {
           "slug": "hailuo-ai",
@@ -1264,7 +1242,7 @@
             "text": "NEW"
           },
           "visits": "500万",
-          "rank": 6
+          "rank": 5
         },
         {
           "slug": "quark-ai",
@@ -1286,7 +1264,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 7
+          "rank": 6
         },
         {
           "slug": "jimeng-ai",
@@ -1308,7 +1286,7 @@
             "text": "推荐"
           },
           "visits": "约500万/月",
-          "rank": 8
+          "rank": 7
         },
         {
           "slug": "figma-for-agents",
@@ -1330,7 +1308,7 @@
             "text": "NEW"
           },
           "visits": "500万+",
-          "rank": 9
+          "rank": 8
         },
         {
           "slug": "pollinations",
@@ -1352,7 +1330,7 @@
             "text": "HOT"
           },
           "visits": "520万",
-          "rank": 10
+          "rank": 9
         },
         {
           "slug": "open-design",
@@ -1374,7 +1352,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 11
+          "rank": 10
         },
         {
           "slug": "deepsec",
@@ -1396,7 +1374,7 @@
             "text": "推荐"
           },
           "visits": "约85万/月",
-          "rank": 12
+          "rank": 11
         },
         {
           "slug": "zhu-zhan-ai",
@@ -1418,7 +1396,7 @@
             "text": "推荐"
           },
           "visits": "约120万/月",
-          "rank": 13
+          "rank": 12
         },
         {
           "slug": "baichuan-2",
@@ -1440,7 +1418,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 14
+          "rank": 13
         },
         {
           "slug": "tongyi-efficiency",
@@ -1462,7 +1440,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 15
+          "rank": 14
         },
         {
           "slug": "xinghuo-cognitive-model",
@@ -1484,7 +1462,7 @@
             "text": "HOT"
           },
           "visits": "850万",
-          "rank": 16
+          "rank": 15
         },
         {
           "slug": "zoona",
@@ -1506,7 +1484,7 @@
             "text": "HOT"
           },
           "visits": "月访问量约 380 万",
-          "rank": 17
+          "rank": 16
         },
         {
           "slug": "tencent-hunyuan",
@@ -1528,7 +1506,7 @@
             "text": "推荐"
           },
           "visits": "850万",
-          "rank": 18
+          "rank": 17
         },
         {
           "slug": "trading-agents",
@@ -1550,7 +1528,7 @@
             "text": "NEW"
           },
           "visits": "85万/月",
-          "rank": 19
+          "rank": 18
         },
         {
           "slug": "gpt-sovits",
@@ -1572,7 +1550,7 @@
             "text": "HOT"
           },
           "visits": "85万",
-          "rank": 20
+          "rank": 19
         },
         {
           "slug": "longcat20",
@@ -1594,7 +1572,7 @@
             "text": "NEW"
           },
           "visits": "约280万/月",
-          "rank": 21
+          "rank": 20
         },
         {
           "slug": "invoko",
@@ -1616,7 +1594,7 @@
             "text": "NEW"
           },
           "visits": "月访问量约 320 万",
-          "rank": 22
+          "rank": 21
         },
         {
           "slug": "abot-world",
@@ -1638,7 +1616,7 @@
             "text": "推荐"
           },
           "visits": "240万/月",
-          "rank": 23
+          "rank": 22
         },
         {
           "slug": "nex-n2",
@@ -1660,7 +1638,7 @@
             "text": "NEW"
           },
           "visits": "约300万/月",
-          "rank": 24
+          "rank": 23
         },
         {
           "slug": "agent-skills",
@@ -1682,7 +1660,7 @@
             "text": "HOT"
           },
           "visits": "230万/月",
-          "rank": 25
+          "rank": 24
         },
         {
           "slug": "f5-tts",
@@ -1704,7 +1682,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 26
+          "rank": 25
         },
         {
           "slug": "mureka",
@@ -1726,7 +1704,7 @@
             "text": "推荐"
           },
           "visits": "85万",
-          "rank": 27
+          "rank": 26
         },
         {
           "slug": "mistral-ai",
@@ -1748,7 +1726,7 @@
             "text": "HOT"
           },
           "visits": "850万",
-          "rank": 28
+          "rank": 27
         },
         {
           "slug": "flint",
@@ -1770,7 +1748,7 @@
             "text": "NEW"
           },
           "visits": "月访问量 230 万",
-          "rank": 29
+          "rank": 28
         },
         {
           "slug": "persona-js",
@@ -1792,11 +1770,33 @@
             "text": "HOT"
           },
           "visits": "月访问量 180万",
+          "rank": 29
+        },
+        {
+          "slug": "duiyou-ai",
+          "name": "堆友AI",
+          "emoji": "🎨",
+          "color": "#FF6A00",
+          "score": 88.3,
+          "scores": {
+            "hot": 32.48412902471531,
+            "quality": 25.799999999999997,
+            "functionality": 20,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "堆豆消耗 + 免费额度 + 会员",
+          "badge": {
+            "type": "new",
+            "text": "NEW"
+          },
+          "visits": "50万",
           "rank": 30
         }
       ],
-      "total_tools": 169,
-      "last_updated": "2026-08-26 20:42",
+      "total_tools": 168,
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "免费工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -1833,7 +1833,7 @@
             "freshness": 8
           },
           "rating": "⭐ 4.5",
-          "price": "开源权重 MIT 免费（GLM-5.3 约 2026-08-28 释出）；API 走智谱 GLM Coding Plan 点数配额制，非高峰时段（UTC+8 工作日 14:00-18:00 之外，含周末）仅耗 50% 点数",
+          "price": "开源 MIT 免费；GLM-5.3-Flash API $0.15/$0.03/$0.50 每百万 token（约 GLM-5.2 的 1/10）",
           "badge": {
             "type": "hot",
             "text": "HOT"
@@ -2478,7 +2478,7 @@
         }
       ],
       "total_tools": 565,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "性价比评分 = 综合评分/(1+价格系数)，免费工具系数最优",
@@ -2502,6 +2502,69 @@
       "icon": "🚀",
       "ranked_tools": [
         {
+          "slug": "domika",
+          "name": "Domika",
+          "emoji": "🤖",
+          "color": "#4A90D9",
+          "score": 25.0,
+          "scores": {
+            "hot": 0.0,
+            "quality": 0,
+            "functionality": 15,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 暂无",
+          "price": "免费 + 订阅",
+          "badge": {
+            "type": "new",
+            "text": "NEW"
+          },
+          "visits": "暂无数据",
+          "rank": 1
+        },
+        {
+          "slug": "pptbot",
+          "name": "PPTBot",
+          "emoji": "📊",
+          "color": "#2f6fed",
+          "score": 46.8,
+          "scores": {
+            "hot": 0.0,
+            "quality": 25.799999999999997,
+            "functionality": 15,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.3",
+          "price": "按页计费（具体单价以官网为准），微信支付后异步转换、限时下载",
+          "badge": {},
+          "visits": "数据未公开",
+          "rank": 2
+        },
+        {
+          "slug": "unitree-h1",
+          "name": "宇树H1",
+          "emoji": "🤖",
+          "color": "#0066FF",
+          "score": 45.0,
+          "scores": {
+            "hot": 0.0,
+            "quality": 27.0,
+            "functionality": 12,
+            "value": 6,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "官方未公开标价；据第三方渠道，H1 约 65 万元人民币，H1-2 约 9.99-12.89 万美元，以官方销售报价为准",
+          "badge": {
+            "type": "new",
+            "text": "NEW"
+          },
+          "visits": "暂无数据",
+          "rank": 3
+        },
+        {
           "slug": "deepnote",
           "name": "Deepnote",
           "emoji": "📓",
@@ -2521,7 +2584,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 1
+          "rank": 4
         },
         {
           "slug": "lindy-ai",
@@ -2543,7 +2606,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 2
+          "rank": 5
         },
         {
           "slug": "outsystems-ai",
@@ -2565,7 +2628,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 3
+          "rank": 6
         },
         {
           "slug": "codex-harness",
@@ -2587,7 +2650,7 @@
             "text": "HOT"
           },
           "visits": "0",
-          "rank": 4
+          "rank": 7
         },
         {
           "slug": "deepseek-dsh",
@@ -2609,7 +2672,7 @@
             "text": "HOT"
           },
           "visits": "0",
-          "rank": 5
+          "rank": 8
         },
         {
           "slug": "kimi-code",
@@ -2631,7 +2694,7 @@
             "text": "HOT"
           },
           "visits": "0",
-          "rank": 6
+          "rank": 9
         },
         {
           "slug": "krotos-studio",
@@ -2653,7 +2716,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 7
+          "rank": 10
         },
         {
           "slug": "alpaca-ai",
@@ -2675,7 +2738,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 8
+          "rank": 11
         },
         {
           "slug": "gensyn",
@@ -2694,7 +2757,7 @@
           "price": "AIGENSYN 代币总量 100 亿枚；计算与数据服务按用量付费，具体费率以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 9
+          "rank": 12
         },
         {
           "slug": "grass",
@@ -2713,7 +2776,7 @@
           "price": "GRASS 代币总量 10 亿枚；共享带宽即可赚取代币，数据购买按量付费，具体以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 10
+          "rank": 13
         },
         {
           "slug": "io-net",
@@ -2732,7 +2795,7 @@
           "price": "IO 代币最大供应量 8 亿枚；GPU 按小时计费，据称比 AWS 等中心化云便宜 50%–70%，具体费率以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 11
+          "rank": 14
         },
         {
           "slug": "near-ai",
@@ -2751,7 +2814,7 @@
           "price": "生态使用 NEAR 代币结算；NEAR AI Cloud 与 GPU 市场按推理用量计费，具体费率以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 12
+          "rank": 15
         },
         {
           "slug": "prime-intellect",
@@ -2770,7 +2833,7 @@
           "price": "按模块化用量计费，覆盖算力、RL 训练、沙箱、评测与推理；具体价格以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 13
+          "rank": 16
         },
         {
           "slug": "sapien",
@@ -2789,7 +2852,7 @@
           "price": "SAPIEN 代币总量 10 亿枚；贡献者质押代币参与标注并获稳定币与代币奖励，企业按需购买数据集，具体以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 14
+          "rank": 17
         },
         {
           "slug": "subquery",
@@ -2808,7 +2871,7 @@
           "price": "SQT 代币；AskSubQuery 提供免费额度，SQT 质押可获每日免费查询额度，超出按量付费，具体以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 15
+          "rank": 18
         },
         {
           "slug": "agentgpt",
@@ -2830,7 +2893,7 @@
             "text": "HOT"
           },
           "visits": "暂无数据",
-          "rank": 16
+          "rank": 19
         },
         {
           "slug": "aixbt",
@@ -2849,7 +2912,7 @@
           "price": "免费信息流 + 高级订阅",
           "badge": null,
           "visits": "N/A",
-          "rank": 17
+          "rank": 20
         },
         {
           "slug": "akash-network",
@@ -2868,7 +2931,7 @@
           "price": "按量付费（AIToken结算，成本低于中心云）",
           "badge": null,
           "visits": "N/A",
-          "rank": 18
+          "rank": 21
         },
         {
           "slug": "bittensor",
@@ -2887,7 +2950,7 @@
           "price": "开源网络（TAO代币激励，仅技术参与）",
           "badge": null,
           "visits": "N/A",
-          "rank": 19
+          "rank": 22
         },
         {
           "slug": "elizaos",
@@ -2909,7 +2972,7 @@
             "text": "HOT"
           },
           "visits": "N/A",
-          "rank": 20
+          "rank": 23
         },
         {
           "slug": "render-network",
@@ -2928,7 +2991,7 @@
           "price": "按量付费（RENDER代币结算）",
           "badge": null,
           "visits": "N/A",
-          "rank": 21
+          "rank": 24
         },
         {
           "slug": "snowflake-ai",
@@ -2950,7 +3013,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 22
+          "rank": 25
         },
         {
           "slug": "lakera",
@@ -2972,7 +3035,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 23
+          "rank": 26
         },
         {
           "slug": "shopify-magic",
@@ -2994,7 +3057,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 24
+          "rank": 27
         },
         {
           "slug": "airllm",
@@ -3016,7 +3079,7 @@
             "text": "开源"
           },
           "visits": "暂无数据",
-          "rank": 25
+          "rank": 28
         },
         {
           "slug": "airtop-ads",
@@ -3038,7 +3101,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 26
+          "rank": 29
         },
         {
           "slug": "alibaba-translate",
@@ -3060,77 +3123,11 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 27
-        },
-        {
-          "slug": "aliyun-bailian",
-          "name": "阿里云百炼",
-          "emoji": "🏭",
-          "color": "#FF6A00",
-          "score": 55.6,
-          "scores": {
-            "hot": 0.0,
-            "quality": 27.599999999999998,
-            "functionality": 18,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.6",
-          "price": "按 Token 用量计费，输入与输出分别计价，无最低消费。新用户开通百炼后各模型可获免费额度（官方帮助文档标注为各 100 万 Token，有效期开通后 90 天），Batch 批量调用通常为实时调用的半价，命中上下文缓存的输入单价更低。另提供 Token Plan（以 Credits 计量的团队订阅）、Coding Plan 等包月套餐。各模型单价差异较大，请以官方计费文档为准：https://help.aliyun.com/zh/model-studio/model-pricing",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "暂无数据",
-          "rank": 28
-        },
-        {
-          "slug": "atlaso",
-          "name": "Atlaso",
-          "emoji": "🧠",
-          "color": "#00B8D9",
-          "score": 49.6,
-          "scores": {
-            "hot": 0.0,
-            "quality": 24.599999999999998,
-            "functionality": 15,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.1",
-          "price": "Free 免费（1 设备 1 工具）；Pro $10/月；Build $25/月",
-          "badge": {
-            "type": "hot",
-            "text": "Product Hunt 入围"
-          },
-          "visits": "暂无数据",
-          "rank": 29
-        },
-        {
-          "slug": "autogpt",
-          "name": "AutoGPT",
-          "emoji": "🤖",
-          "color": "#7B61FF",
-          "score": 47.8,
-          "scores": {
-            "hot": 0.0,
-            "quality": 25.799999999999997,
-            "functionality": 12,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "开源免费（MIT/Polyform 授权，可自托管）；官方云端平台处于 Beta/Waitlist 阶段，定价未公开；调用大模型 API 的费用由用户自行承担",
-          "badge": {
-            "type": "hot",
-            "text": "HOT"
-          },
-          "visits": "暂无数据",
           "rank": 30
         }
       ],
       "total_tools": 30,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "按收录时间和近期关注度排序",
@@ -3167,7 +3164,7 @@
             "freshness": 8
           },
           "rating": "⭐ 4.5",
-          "price": "开源权重 MIT 免费（GLM-5.3 约 2026-08-28 释出）；API 走智谱 GLM Coding Plan 点数配额制，非高峰时段（UTC+8 工作日 14:00-18:00 之外，含周末）仅耗 50% 点数",
+          "price": "开源 MIT 免费；GLM-5.3-Flash API $0.15/$0.03/$0.50 每百万 token（约 GLM-5.2 的 1/10）",
           "badge": {
             "type": "hot",
             "text": "HOT"
@@ -3812,7 +3809,7 @@
         }
       ],
       "total_tools": 44,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI对话工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -4315,7 +4312,7 @@
         }
       ],
       "total_tools": 22,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI写作工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -4997,7 +4994,7 @@
         }
       ],
       "total_tools": 36,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI绘画工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -5682,7 +5679,7 @@
         }
       ],
       "total_tools": 62,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI编程工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -6367,7 +6364,7 @@
         }
       ],
       "total_tools": 45,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI视频工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -7046,7 +7043,7 @@
         }
       ],
       "total_tools": 37,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI音频工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -7059,7 +7056,7 @@
       "id": "ai-office-tool-ranking-2026",
       "slug": "ai-office-tool-ranking-2026",
       "title": "2026年AI办公工具排行榜",
-      "meta_description": "2026年最新AI办公工具排行榜，已收录45款AI办公工具，按综合评分排序，帮你找到最适合的工具。",
+      "meta_description": "2026年最新AI办公工具排行榜，已收录46款AI办公工具，按综合评分排序，帮你找到最适合的工具。",
       "keywords": [
         "AI办公排行榜",
         "AI办公排名",
@@ -7724,8 +7721,8 @@
           "rank": 30
         }
       ],
-      "total_tools": 45,
-      "last_updated": "2026-08-26 20:42",
+      "total_tools": 46,
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI办公工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -8410,7 +8407,7 @@
         }
       ],
       "total_tools": 37,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI设计工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -8963,7 +8960,7 @@
         }
       ],
       "total_tools": 24,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI搜索工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -9164,7 +9161,7 @@
         }
       ],
       "total_tools": 8,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI翻译工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -9629,7 +9626,7 @@
         }
       ],
       "total_tools": 20,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI自动化工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -10314,7 +10311,7 @@
         }
       ],
       "total_tools": 40,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI效率工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -10999,7 +10996,7 @@
         }
       ],
       "total_tools": 52,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI智能体工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -11684,7 +11681,7 @@
         }
       ],
       "total_tools": 68,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI开发工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -12366,7 +12363,7 @@
         }
       ],
       "total_tools": 42,
-      "last_updated": "2026-08-26 20:42",
+      "last_updated": "2026-08-27 12:55",
       "content": null,
       "methodology": {
         "scoring": "AI行业应用工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -12376,8 +12373,8 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-08-26T20:42:22.925397",
-    "total_tools": 672,
+    "generated_at": "2026-08-27T12:55:22.280251",
+    "total_tools": 673,
     "update_frequency": "per-build",
     "methodology": {
       "scoring": "综合评分制（热度40% + 质量30% + 功能20% + 价值10%）",

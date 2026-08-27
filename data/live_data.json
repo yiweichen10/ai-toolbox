@@ -1,27 +1,27 @@
 {
   "metadata": {
     "version": "1.0",
-    "generated_at": "2026-08-26 20:42",
+    "generated_at": "2026-08-27 12:55",
     "source": "aitoollab.cn-regenerate-data",
-    "tool_count": 672,
-    "article_count": 195,
+    "tool_count": 673,
+    "article_count": 196,
     "update_policy": "每次构建自动生成"
   },
   "stats": {
-    "total_tools": 672,
+    "total_tools": 673,
     "total_categories": 19,
-    "total_articles": 195,
+    "total_articles": 196,
     "total_visits_str": "106869万",
     "avg_rating": 4.4,
     "price_distribution": {
-      "free": 169,
-      "freemium": 396,
-      "paid": 79,
+      "free": 168,
+      "freemium": 397,
+      "paid": 80,
       "enterprise": 28
     },
-    "today_active": "672",
-    "this_week_new": 6,
-    "last_updated": "2026-08-26 20:42",
+    "today_active": "673",
+    "this_week_new": 9,
+    "last_updated": "2026-08-27 12:55",
     "update_frequency": "每次构建自动更新"
   },
   "comparison_matrix": {
@@ -310,13 +310,13 @@
         "color": "#6B5BFF",
         "category": "AI对话",
         "values": {
-          "price": "开源权重 MIT 免费（GLM-5.3 约 2026-08-28 释出）；API 走智谱 GLM Coding Plan 点数配额制，非高峰时段（UTC+8 工作日 14:00-18:00 之外，含周末）仅耗 50% 点数",
+          "price": "开源 MIT 免费；GLM-5.3-Flash API $0.15/$0.03/$0.50 每百万 token（约 GLM-5.2 的 1/10）",
           "rating": "⭐ 4.5",
           "features_count": 7,
           "platform": "Web/iOS/Android/小程序",
           "chinese": "⚠️",
           "api": "✅",
-          "free_tier": 5
+          "free_tier": 3
         },
         "detail_url": "/tools/glm-5-2/"
       },
@@ -1046,48 +1046,48 @@
         "tool_count": 52
       },
       {
-        "category": "AI视频",
+        "category": "AI办公",
         "icon": "📊",
         "weekly_data": [
           {
             "week": "04/22",
-            "value": 472
+            "value": 482
           },
           {
             "week": "05/01",
-            "value": 611
+            "value": 624
           },
           {
             "week": "06/08",
-            "value": 645
+            "value": 660
           },
           {
             "week": "07/15",
-            "value": 567
+            "value": 580
           },
           {
             "week": "08/22",
-            "value": 471
+            "value": 482
           },
           {
             "week": "09/01",
-            "value": 469
+            "value": 480
           },
           {
             "week": "010/0",
-            "value": 586
+            "value": 599
           },
           {
             "week": "011/1",
-            "value": 738
+            "value": 754
           }
         ],
-        "current_value": 738,
+        "current_value": 754,
         "change_percent": 56.4,
-        "tool_count": 45
+        "tool_count": 46
       },
       {
-        "category": "AI办公",
+        "category": "AI视频",
         "icon": "📊",
         "weekly_data": [
           {
@@ -1499,6 +1499,32 @@
         "recommended_slug": "ag2"
       },
       {
+        "category": "AI办公",
+        "icon": "📊",
+        "tool_count": 46,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 5,
+            "names": [
+              "Cluely",
+              "灵办AI",
+              "Octarine"
+            ]
+          },
+          "freemium": {
+            "count": 32,
+            "names": [
+              "Airtable AI",
+              "Beautiful.ai",
+              "Coda AI"
+            ]
+          }
+        },
+        "top_feature": "Airtable AI",
+        "recommended_slug": "airtable-ai"
+      },
+      {
         "category": "AI视频",
         "icon": "📊",
         "tool_count": 45,
@@ -1525,39 +1551,13 @@
         "recommended_slug": "abot-world"
       },
       {
-        "category": "AI办公",
-        "icon": "📊",
-        "tool_count": 45,
-        "avg_rating": 4.5,
-        "by_price": {
-          "free": {
-            "count": 5,
-            "names": [
-              "Cluely",
-              "灵办AI",
-              "Octarine"
-            ]
-          },
-          "freemium": {
-            "count": 32,
-            "names": [
-              "Airtable AI",
-              "Beautiful.ai",
-              "Coda AI"
-            ]
-          }
-        },
-        "top_feature": "Airtable AI",
-        "recommended_slug": "airtable-ai"
-      },
-      {
         "category": "AI对话",
         "icon": "📊",
         "tool_count": 44,
         "avg_rating": 4.5,
         "by_price": {
           "free": {
-            "count": 14,
+            "count": 13,
             "names": [
               "Baichuan 2",
               "百川智能",
@@ -1565,7 +1565,7 @@
             ]
           },
           "freemium": {
-            "count": 24,
+            "count": 25,
             "names": [
               "360智脑",
               "Alexa Plus",
@@ -1828,7 +1828,7 @@
     {
       "slug": "dashboard",
       "title": "AI工具实时监控面板",
-      "meta_description": "实时追踪AI工具市场动态：总收录672款工具、19个分类，数据每日自动更新。",
+      "meta_description": "实时追踪AI工具市场动态：总收录673款工具、19个分类，数据每日自动更新。",
       "keywords": [
         "AI工具监控",
         "AI工具数据",
