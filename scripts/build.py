@@ -59,7 +59,7 @@ BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="返回顶部">
 <script>
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>150){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>
-<script src="/js/tts-reader.js?v={TTS_JS_VERSION}" defer></script>
+<script src="/js/tts-reader-{TTS_JS_VERSION}.js" defer></script>
 <script src="/js/favorites.js" defer></script>'''
 
 # 工具点赞按钮样式（/tools/ 列表页与工具详情页共用）
