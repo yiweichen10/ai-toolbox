@@ -295,6 +295,13 @@ WIDGET_CSS_VERSION = _file_cache_version(os.path.join(BASE_DIR, 'css', 'ai-widge
 WIDGET_JS_VERSION = _file_cache_version(os.path.join(BASE_DIR, 'js', 'ai-assistant.js'))
 LIKES_JS_VERSION = _file_cache_version(os.path.join(BASE_DIR, 'js', 'ai-likes.js'))
 TTS_JS_VERSION = _file_cache_version(os.path.join(BASE_DIR, 'js', 'tts-reader.js'))
+# 独立文件名机制（2026-08-27）：HTML 引用 js/tts-reader-<hash>.js（全新 URL 绕开一切缓存），
+# 此处必须保证该文件存在，否则 build 后 HTML 引用不存在的 JS → TTS 按钮全挂（404）。
+# 幂等：目标已存在且 md5 一致则跳过；内容变→hash 变→自动生成新文件。
+_TTS_HASHED_PATH = os.path.join(BASE_DIR, 'js', 'tts-reader-{}.js'.format(TTS_JS_VERSION))
+if not os.path.exists(_TTS_HASHED_PATH) or _file_cache_version(_TTS_HASHED_PATH) != TTS_JS_VERSION:
+    import shutil
+    shutil.copy2(os.path.join(BASE_DIR, 'js', 'tts-reader.js'), _TTS_HASHED_PATH)
 # BACK_TO_TOP_BLOCK 在上方已定义，此处把占位符替换成真实 hash（内容变→hash变→浏览器必拉新）
 BACK_TO_TOP_BLOCK = BACK_TO_TOP_BLOCK.replace('{TTS_JS_VERSION}', TTS_JS_VERSION)
 

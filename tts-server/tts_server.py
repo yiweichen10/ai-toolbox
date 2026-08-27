@@ -63,11 +63,24 @@ async def tts(
     key = _cache_key(text, voice)
     mp3 = CACHE_DIR / f"{key}.mp3"
 
-    if not mp3.exists():
+    # 缓存命中校验：文件存在且非空（>=500字节），防止合成中断残留的0字节空文件污染缓存
+    if not mp3.exists() or mp3.stat().st_size == 0:
+        # 先写临时文件，成功后再原子 rename，避免中断留下半成品/空文件
+        if mp3.exists() and mp3.stat().st_size == 0:
+            mp3.unlink(missing_ok=True)
+        tmp = mp3.with_suffix(".tmp")
+        if tmp.exists():
+            tmp.unlink(missing_ok=True)
         try:
             communicate = edge_tts.Communicate(text, voice)
-            await communicate.save(str(mp3))
+            await communicate.save(str(tmp))
+            if tmp.stat().st_size == 0:
+                tmp.unlink(missing_ok=True)
+                raise RuntimeError("edge-tts returned empty audio")
+            tmp.replace(mp3)  # 原子替换，确保缓存里永远是可用的文件
         except Exception as e:  # noqa: BLE001
+            if tmp.exists():
+                tmp.unlink(missing_ok=True)
             log.exception("edge-tts failed")
             raise HTTPException(status_code=502, detail=f"tts synthesis failed: {e}")
 
@@ -78,7 +91,7 @@ async def tts(
     return Response(
         content=mp3.read_bytes(),
         media_type="audio/mpeg",
-        headers={"Cache-Control": "public, max-age=31536000", "X-TTS-Voice": voice},
+        headers={"Cache-Control": "no-store", "X-TTS-Voice": voice},
     )
 
 
