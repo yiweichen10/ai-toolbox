@@ -36,11 +36,22 @@ def _emit(path: str, html: str) -> None:
     """统一 HTML 写盘出口：落盘前折叠多余空行, 所有页面共用, 折叠逻辑只此一处。"""
     # 2026-08-27: 目录不存在时先补建（增量构建 -s 新工具时页目录被删过会 FileNotFoundError）
     os.makedirs(os.path.dirname(path), exist_ok=True)
+    # 2026-08-28 增量发布依赖：内容逐字节相同则不写盘，保持 mtime 不变。
+    # 目的：deploy.sh --fast-article 用"构建后 mtime 变化"精确采集需要上传的文件；
+    # 否则增量构建会把上千个"内容没变"的页面也标成变更，增量退化成全量上传。
+    body = _collapse_blank_lines(html)
+    try:
+        if os.path.isfile(path):
+            with open(path, "r", encoding="utf-8") as _f0:
+                if _f0.read() == body:
+                    return
+    except OSError:
+        pass
     # 2026-08-06: 偶发 Errno 22（文件被扫描/同步短暂占用），加重试避免流水线中断
     for _attempt in range(5):
         try:
             with open(path, 'w', encoding='utf-8') as f:
-                f.write(_collapse_blank_lines(html))
+                f.write(body)
             return
         except OSError:
             if _attempt == 4:

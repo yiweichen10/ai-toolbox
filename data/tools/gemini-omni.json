@@ -5,7 +5,7 @@
   "auto_positioning": true,
   "emoji": "♊",
   "color": "#4285F4",
-  "description": "Gemini Omni 是 Google 在 I/O 2026 发布的视频生成与编辑模型，可通过自然对话创作和编辑视频。",
+  "description": "Gemini Omni 是 Google 在 I/O 2026 发布的视频生成与编辑模型，可通过自然对话创作和编辑视频。2026-08-28 推出生产就绪更新 Gemini Omni 1.1 Flash：场景续写（最长40秒）、首/末帧插值、4K 升采样、360p 快速预览。",
   "category": "AI对话",
   "tags": [
     {
@@ -41,12 +41,13 @@
     "联网搜索时偶尔会调用Google广告推荐，干扰体验"
   ],
   "features": [
-    "多模态识别与生成（图像、视频、音频、代码、文档）",
-    "超长上下文记忆（200万token）",
-    "实时语音对话（支持打断、语速调整）",
-    "Google生态联动（Gmail总结、Drive检索、日历安排）",
-    "联网搜索与事实核查（自动引用来源）",
-    "Gemini Advanced 专属：数据分析、高级推理、自定义Gems"
+    "多模态输入→视频生成（文本/图片/视频/音频任意组合）",
+    "对话式视频编辑（自然语言持续迭代）",
+    "角色+场景一致性保留",
+    "物理规律理解（重力/流体/动能）",
+    "文本+图像+视频混合输入创作",
+    "Google 生态集成（Flow/YouTube Shorts）",
+    "Gemini Omni 1.1 Flash（2026-08-28）：场景续写最长40秒、首/末帧插值、4K 升采样、360p 快速预览，经 Gemini API（AI Studio）开放"
   ],
   "related": [
     "gemini",
@@ -86,7 +87,7 @@
   "published_date": "2026-07-16",
   "verified_url": "https://gemini.google.com（Gemini app内使用Omni功能）",
   "verified_publisher": "Google DeepMind",
-  "verified_what": "Google DeepMind推出的多模态生成模型，2026年Google I/O发布。首个Omni家族模型为Gemini Omni Flash，能从文本+图片+视频+音频任意输入生成高质量视频，支持对话式视频编辑、角色一致性保留、物理规律理解。已集成至Gemini app、Google Flow和YouTube Shorts。",
+  "verified_what": "Google DeepMind 推出的视频生成与编辑模型（Omni 家族），2026 I/O 首发 Gemini Omni Flash，可通过文本/图像/视频/音频输入生成并对话式编辑视频。",
   "verified_price": "通过Google AI订阅：AI Plus $19.99/月 / AI Pro $49.99/月 / AI Ultra $100/月（新轻量档）或 $200/月（顶级档，含Gemini Spark+Project Genie+YouTube Premium+20TB存储）/ 含在Google One AI Premium中",
   "verified_platform": "Gemini app（Web/iOS/Android）、Google Flow、YouTube Shorts",
   "verified_features": [
@@ -95,16 +96,17 @@
     "角色+场景一致性保留",
     "物理规律理解（重力/流体/动能）",
     "文本+图像+视频混合输入创作",
-    "Google生态集成（Flow/YouTube Shorts）"
+    "Google 生态集成（Flow/YouTube Shorts）",
+    "Gemini Omni 1.1 Flash（2026-08-28）：场景续写最长40秒、首/末帧插值、4K 升采样、360p 快速预览，经 Gemini API（AI Studio）开放"
   ],
-  "last_verified": "2026-07-30",
+  "last_verified": "2026-08-28",
   "confidence": "high",
   "conflict": false,
   "source_urls": [
-    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/",
-    "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/"
+    "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+    "https://blog.google/innovation-and-ai/models-and-research/google-labs/new-creative-controls-google-flow/"
   ],
-  "verify_notes": "注意：omnigemini.org等域名是第三方产品，非Google官方。Google官方的Gemini Omni集成在Gemini app中，无独立网址。原始tools.json内容需核对——该工具条目可能混入了第三方产品信息。",
+  "verify_notes": "Gemini Omni 1.1 Flash 官方发布（2026-08-28，blog.google 官方公告）。属 Omni 家族生产就绪更新，新增场景续写/首末帧插值/4K升采样/360p预览等生成视频控制能力。仅更新结构化视频相关字段（description/verified_what/verified_features/features），价格未变（消费端 Gemini Advanced 套餐不受影响，1.1 Flash 为开发者 API 模型）故未跑 scrape_price。原 content 长文（对话助手叙事框架）为既有历史问题，超出本次版本补丁范围未改。",
   "content_verified": true,
   "url_previous": "https://gemini.google.com",
   "compare_section": {
@@ -115,5 +117,7 @@
     ],
     "verdict": "Gemini Omni 与 腾讯混元、星火认知大模型、Mistral AI 同属AI对话赛道。在性价比上，Gemini Omni（免费版 + Gemini Advanced ($19.99/月)）门槛更低；口碑方面，Gemini Omni（⭐ 4.6）领先；Gemini Omni 的优势在于Google DeepMind推出的多模态生成模型，2026年Google I/O发布。首个Omni家族模型为Gemin，适合看重该特性的用户。",
     "generated": "2026-07-30"
-  }
+  },
+  "verified_description": "Gemini Omni 是 Google 在 I/O 2026 发布的视频生成与编辑模型，可通过自然对话创作和编辑视频。2026-08-28 推出生产就绪更新 Gemini Omni 1.1 Flash：场景续写（最长40秒）、首/末帧插值、4K 升采样、360p 快速预览。",
+  "updated_date": "2026-08-28"
 }

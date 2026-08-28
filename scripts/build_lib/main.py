@@ -26,6 +26,40 @@ from build_lib.render_index import (build_index_page, build_tools_index_page)
 from build_lib.sitemap_push import (generate_sitemap, push_to_indexnow, push_to_baidu, _push_single_url)
 
 
+def _post_process_all():
+    """全站后处理注入链（2026-08-28 从 build_target 抽出，全量与增量共用同一份）。
+
+    背景：增量构建 -s 的文章分支原先只调了 8 个注入器，漏了 inject_fav_fab /
+    inject_rss_link / inject_section_hub 与全站坏链清理，导致"增量产物 != 全量产物"
+    （新页缺板块导航簇、缺 RSS 声明、坏链未降级）。现在两条路径必须走同一个函数，
+    改注入器只改这一处。"""
+    # 后处理：注入全局导航栏到所有HTML文件
+    inject_global_nav()
+    # 后处理：全站头部标识统一为新品牌图形（宝箱 + AI 星光）
+    inject_site_logo()
+    # 后处理：为内页 footer 补上站内链接（P0-5）
+    inject_footer_links()
+    # 后处理：PWA manifest（P1-5）
+    inject_pwa()
+    # 后处理：注入静态收藏悬浮按钮（首屏可见，不再等 JS）
+    inject_fav_fab()
+    # 后处理：注入favicon图标引用
+    inject_favicon()
+    # 后处理：注入 hreflang 标签（中英文站互链）
+    inject_hreflang()
+    inject_adsense_meta()
+    inject_baidu_tongji()
+    # 后处理：全站注入 RSS 声明
+    inject_rss_link()
+    # 后处理：注入独占板块导航簇（#13 板块互链）
+    inject_section_hub()
+
+    # 后处理：全站坏链兜底（2026-08-13：移出"仅推送时执行"分支，任何构建都清理死链）
+    _fixed = _clean_all_broken_links()
+    if _fixed:
+        print(f'[坏链清理] 已修复 {_fixed} 个页面中的坏链')
+
+
 def _build_tool_incremental(tool, published_tools, articles, tools_by_category, no_push=False):
     import build  # 延迟：build 完全加载后解析
     """工具页 slug 增量：只重建该工具页 + 受影响聚合页（分类/全部工具/首页含搜索索引/排行）。
@@ -166,45 +200,77 @@ def build_target(target, slug=None, no_push=False):
             print(f'[ERROR] 未找到文章或工具: {slug}')
             return False
         print(f'\n[增量构建] 仅构建文章: {target_article["title"]}')
-        dir_path = os.path.join(build.BASE_DIR, 'articles', slug)
-        os.makedirs(dir_path, exist_ok=True)
-        html = build_article_page(target_article, articles, published_tools)
-        _emit(os.path.join(dir_path, 'index.html'), html)
-        try:
-            import re as _re
-            md_text = f"# {target_article.get('title', '')}\n\n" + target_article.get('content', '')
-            md_text = _re.sub(r'<[^>]+>', ' ', md_text)
-            with open(os.path.join(dir_path, f"{slug}.md"), 'w', encoding='utf-8') as f:
-                f.write(md_text)
-        except:
-            pass
-        print(f'[OK] articles/{slug}/index.html')
 
-        # 更新文章分页列表页
+        # 交叉链接所需辅助数据（2026-08-28 修复）：增量分支原先不加载 compare/quiz/ranking/live/news，
+        # 直接 generate_sitemap 会少掉 130+ 条 URL（实测 1137 → 1000），把 sitemap 写残。
+        _cmp = load_compare_data()
+        all_compares = _cmp.get('compares', [])
+        all_alternatives = _cmp.get('alternatives', [])
+        all_quizzes = load_quiz_data().get('quizzes', [])
+        all_rankings = load_ranking_data().get('rankings', [])
+        all_lives = load_live_data().get('live_pages', [])
+        news_urls = build_news_page(published_tools) or []
+
+        def _emit_article(art):
+            _d = os.path.join(build.BASE_DIR, 'articles', art['slug'])
+            os.makedirs(_d, exist_ok=True)
+            _emit(os.path.join(_d, 'index.html'), build_article_page(art, articles, published_tools))
+            try:
+                import re as _re
+                _md = f"# {art.get('title', '')}\n\n" + art.get('content', '')
+                _md = _re.sub(r'<[^>]+>', ' ', _md)
+                with open(os.path.join(_d, f"{art['slug']}.md"), 'w', encoding='utf-8') as _f:
+                    _f.write(_md)
+            except Exception:
+                pass
+            print(f"[OK] articles/{art['slug']}/index.html")
+
+        _emit_article(target_article)
+
+        # 1) 上一篇/下一篇邻居：新文章插入日期序后，前后两页的分页链接必须重算（否则邻居"下一篇"仍指向旧页）
+        _idx = next((i for i, _a in enumerate(articles) if _a['slug'] == slug), None)
+        if _idx is not None:
+            for _n in (_idx - 1, _idx + 1):
+                if 0 <= _n < len(articles) and articles[_n]['slug'] != slug:
+                    _emit_article(articles[_n])
+
+        # 2) related_tools 指向的工具页：工具页会挂「相关文章」卡（render_tool.py related-card），
+        #    不重建就会漏掉新文章的入口
+        _tool_by_slug = {t['slug']: t for t in published_tools}
+        for _tslug in (target_article.get('related_tools') or []):
+            _t = _tool_by_slug.get(_tslug)
+            if _t:
+                _emit(os.path.join(build.BASE_DIR, 'tools', _tslug, 'index.html'),
+                      build_tool_page(_t, published_tools, articles, all_compares, all_alternatives, all_rankings))
+                print(f"[OK] tools/{_tslug}/index.html (相关文章)")
+
+        # 3) 首页：「最近更新 / 资讯卡」引用文章列表，不重建首页就没有新文章入口
+        _emit(os.path.join(build.BASE_DIR, 'index.html'), build_index_page(published_tools, articles))
+        print('[OK] index.html (首页)')
+
+        # 4) 文章分页列表页 + 内容分类页
         total_pages = build_article_list_pages(articles)
         print(f'[OK] 文章列表页已更新 ({total_pages} 页)')
         build_article_category_pages(articles)
 
-        # 后处理：注入全局导航
-        inject_global_nav()
-        inject_site_logo()
-        inject_footer_links()
-        inject_pwa()
-        inject_favicon()
-        inject_hreflang()
-        inject_adsense_meta()
-        inject_baidu_tongji()
+        # 5) 全站后处理链：与全量构建共用 _post_process_all()（2026-08-28 修复：
+        #    原增量分支漏了 inject_fav_fab / inject_rss_link / inject_section_hub / 坏链清理）
+        _post_process_all()
+
+        # 6) 全量 sitemap：参数必须与全量分支逐一对应
         dict_terms = [t for t in _load_dict_terms() if t.get('published', True)]
-        sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()], dict_terms=dict_terms)
+        sitemap = generate_sitemap(published_tools, articles, [get_category_slug(cat) for cat in tools_by_category.keys()],
+                                    all_compares, all_alternatives, all_quizzes, all_rankings, all_lives, dict_terms,
+                                    news_urls=news_urls if news_urls else None)
         with open(os.path.join(build.BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
             f.write(sitemap)
-        print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles)')
+        print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + {len(all_compares)} compares + {len(all_quizzes)} quizzes + {len(all_rankings)} rankings + {len(dict_terms)} dict)')
 
         # 推送新URL到百度和IndexNow（2026-08-24：--no-push 时跳过）
         if not no_push:
             _push_single_url(f'https://www.aitoollab.cn/articles/{slug}/index.html')
 
-        print(f'\n[完成] 增量构建: 1篇文章 + 列表页 + sitemap')
+        print(f'\n[完成] 增量构建: 1篇文章 + 邻居/工具页/首页/列表页 + 全量 sitemap')
         return True
 
     # 加载所有辅助数据（后续推送和sitemap需要）
@@ -476,31 +542,7 @@ def build_target(target, slug=None, no_push=False):
         _emit(os.path.join(build.BASE_DIR, 'index.html'), index_html)
         print(f'[OK] index.html (Static Pre-rendered)')
 
-    # 后处理：注入全局导航栏到所有HTML文件
-    inject_global_nav()
-    # 后处理：全站头部标识统一为新品牌图形（宝箱 + AI 星光）
-    inject_site_logo()
-    # 后处理：为内页 footer 补上站内链接（P0-5）
-    inject_footer_links()
-    # 后处理：PWA manifest（P1-5）
-    inject_pwa()
-    # 后处理：注入静态收藏悬浮按钮（首屏可见，不再等 JS）
-    inject_fav_fab()
-    # 后处理：注入favicon图标引用
-    inject_favicon()
-    # 后处理：注入 hreflang 标签（中英文站互链）
-    inject_hreflang()
-    inject_adsense_meta()
-    inject_baidu_tongji()
-    # 后处理：全站注入 RSS 声明
-    inject_rss_link()
-    # 后处理：注入独占板块导航簇（#13 板块互链）
-    inject_section_hub()
-
-    # 后处理：全站坏链兜底（2026-08-13：移出"仅推送时执行"分支，任何构建都清理死链）
-    _fixed = _clean_all_broken_links()
-    if _fixed:
-        print(f'[坏链清理] 已修复 {_fixed} 个页面中的坏链')
+    _post_process_all()  # 2026-08-28：与增量构建共用同一份后处理链
 
     # ═══════════════════════════════════════════════════════
     # sitemap + 推送（每次都执行）

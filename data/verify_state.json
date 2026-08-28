@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-08-27",
+    "updated": "2026-08-28",
     "total": 672
   },
   "tools": {
@@ -4540,14 +4540,14 @@
     },
     "gemini-omni": {
       "name": "Gemini Omni",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 190,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-08-28",
+      "confidence": "high",
+      "notes": "Gemini Omni 1.1 Flash 官方发布（2026-08-28，blog.google 官方公告）。属 Omni 家族生产就绪更新，新增场景续写/首末帧插值/4K升采样/360p预览等生成视频控制能力。仅更新结构化视频相关字段（description/verified_what/verified_features/features），价格未变（消费端 Gemini Advanced 套餐不受影响，1.1 Flash 为开发者 API 模型）故未跑 scrape_price。原 content 长文（对话助手叙事框架）为既有历史问题，超出本次版本补丁范围未改。"
     },
     "claude-code-routines": {
       "name": "Claude Code Routines",
