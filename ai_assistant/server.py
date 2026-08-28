@@ -196,6 +196,11 @@ if not os.path.isfile(TOOLS_JSON):
     _local = os.path.join(BASE_DIR, 'data', 'tools.json')
     if os.path.isfile(_local):
         TOOLS_JSON = _local
+    elif os.path.isdir(os.path.join(BASE_DIR, 'data', 'tools')):
+        # 2026-08-28 修复：单体退役后本地既无 data/tools.json、也不在服务器上，
+        # 原来的兜底会让 shard_dir 仍指向服务器路径 → 本地索引读到 0 个工具。
+        # 这里把基准路径落到本地 data 目录，让下面的 shard 目录推导正确工作。
+        TOOLS_JSON = _local
 
 LOG_FILE = cfg('LOG_FILE', '/var/www/aitoollab/logs/ai_assistant.log')
 if not os.path.isdir(os.path.dirname(LOG_FILE)):
