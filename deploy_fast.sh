@@ -221,8 +221,16 @@ if git diff --cached --quiet; then
     echo "  无可提交变更"
 else
     git commit -m "deploy(fast): 增量发布文章 ${SLUG}（build -s + 门禁 + 定向上传）"
-    git push origin main 2>&1 | tail -2 || echo "  ⚠️ Git push failed (network may be down)"
-    echo "  ✅ Git 已提交"
+    _PUSH_OUT="$(git push origin main 2>&1)"; _PUSH_RC=$?
+    echo "$_PUSH_OUT" | tail -2
+    # 2026-08-28 修假绿灯：原来 `git push ... || echo 警告` 后面无条件 echo "✅ Git 已推送"，
+    # 实测推送失败（网络抖动）时日志照样写"已推送"，坏提交就这么留在本地没人知道。
+    if [ -n "$(git log origin/main..HEAD --oneline)" ]; then
+        echo "  ⚠️ Git 未推送成功（rc=$_PUSH_RC），仍有未推送提交："
+        git log --oneline origin/main..HEAD | head -5 | sed 's/^/      /'
+    else
+        echo "  ✅ Git 已推送（本地与 origin/main 一致）"
+    fi
 fi
 
 echo ""

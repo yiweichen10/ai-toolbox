@@ -467,8 +467,16 @@ else
     # 2026-08-24 G5 修复：commit 失败必须暴露（去掉 || true），set -e 会中止部署并报错，
     # 不再把"commit 失败"伪装成"部署成功"。git add 仍保留 || true（偶发文件锁失败不致命，下次重试）。
     git commit -m "deploy: 全站构建+排名数据更新 (${TOOL_COUNT} tools + ${ARTICLE_COUNT} articles)"
-    git push origin main 2>&1 || echo "  ⚠️ Git push failed (network may be down)"
-    echo "  ✅ Git 已推送"
+    _PUSH_OUT="$(git push origin main 2>&1)"; _PUSH_RC=$?
+    echo "$_PUSH_OUT" | tail -2
+    # 2026-08-28 修假绿灯：原来 `git push ... || echo 警告` 后面无条件 echo "✅ Git 已推送"，
+    # 实测推送失败（网络抖动）时日志照样写"已推送"，坏提交就这么留在本地没人知道。
+    if [ -n "$(git log origin/main..HEAD --oneline)" ]; then
+        echo "  ⚠️ Git 未推送成功（rc=$_PUSH_RC），仍有未推送提交："
+        git log --oneline origin/main..HEAD | head -5 | sed 's/^/      /'
+    else
+        echo "  ✅ Git 已推送（本地与 origin/main 一致）"
+    fi
 fi
 
 echo ""
