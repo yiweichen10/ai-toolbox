@@ -48,11 +48,21 @@ js/tools-data.js（首页工具数据，构建时由 build.py 生成）
 
 ## 目录速查
 
-- `data/`：唯一数据源。`tools.json`（工具，6MB+）、`articles.json`、`compare_data.json`、`ranking_data.json`、`dict_terms.json` 等
-- ⚠️ **2026-08-25 数据架构变更（重要，改工具数据前必读）**：`build_lib/data_loaders.py` 的 `load_tools()`/`load_articles()` 改为**目录优先**——存在 `data/tools/*.json`（每工具一个 shard，672 个，与单体 1:1 镜像）时，直接聚合 shard 而**忽略** `data/tools.json`；并新增 `sync_mono_from_shards()` 在 build 入口把 shard **聚合回写**单体（shard 胜出）。即 **`data/tools/<slug>.json` 才是真源，`data/tools.json` 是构建派生物**。
-  - 后果：任何只写 `data/tools.json`（含 `verify_tools_batch.py --apply` 原逻辑、直接手改 mono）的更新，都会在下次 `build.py` 被 shard 覆盖而**静默丢失**。
-  - 正确做法：改工具数据**必须写 shard** `data/tools/<slug>.json`；`verify_tools_batch.py --apply` 已修复为同时写回 shard（见 2026-08-26 补丁）。文章同理走 `data/articles/*.json`。
-  - 诊断口诀：build 后数据"回滚"→ 八成是只动了 mono 没动 shard。
+- `data/`：唯一数据源，**全部是分片目录 + 少量小 JSON**：`data/tools/<slug>.json`（673 个）、`data/articles/<slug>.json`（198 个）、`data/dict_terms/<term>.json`（183 个）为真源；`compare_data.json`、`ranking_data.json`、`live_data.json`、`homepage_picks.json`、`news_YYYY-MM-DD.json` 等仍是单文件。⚠️ 单体 `data/tools.json` / `data/articles.json` **已于 2026-08-26 退役删除**（本地与服务器都清了），不要再读也不要再写。
+- ⚠️ **数据架构：分片即真源，单体已退役（2026-08-25 切换 / 2026-08-26 删除单体 / 2026-08-28 清口径）**
+  - `build_lib/data_loaders.py` 的 `load_tools()`/`load_articles()` 目录优先：`data/tools/*.json`、
+    `data/articles/*.json` 就是唯一真源；8/26 起 `sync_mono_from_shards()` 已从 build 入口移除，
+    8/28 该死函数已删除，单体文件本地与服务器均已删除（deploy.sh 每次还会 `rm -f` 远端残留单体兜底）。
+  - 后果（老坑，别再踩）：任何"只写 `data/tools.json`"的改动都会被分片覆盖而静默丢失；今天再跑
+    这类历史脚本（`apply_patches.py`、`update_r11.py`、`insert_*_06*.py`、`publish_decentralized_5.py` 等）
+    只会因为文件不存在而报错，或者更糟——把单体重新造出来变成"两份真源"。
+  - 正确做法：改数据一律走 `scripts/data_store.py`（`load_all_tools/load_all_articles/save_tool/save_article/
+    save_dict_term/delete_*`），它按实体写分片、原子替换、带文件锁；发布文章的唯一入口是
+    `scripts/publish_article.py`（内部就是 save_article）。
+  - 机制化守卫：新增 `scripts/check_mono_retired.py`（deploy.sh 与 deploy_fast.sh 已接入）——
+    单体文件一旦重新出现即 FAIL 中止部署；同时审计 `scripts/*.py` 里仍以单体为写路径的历史脚本并告警。
+    已改成分片优先的活脚本：`backlink_daily_pick.py`、`generate_compare_pages.py`、`generate_quiz_pages.py`
+    （这三个此前会因为单体不存在直接崩，属于"文档改了、脚本没跟上"的漏网）。
 - `scripts/`：构建与批处理脚本（build.py、regenerate_data.py、optimize_css.py、check_*.py 验证等）
 - `js/`：前端逻辑。`main.js`（首页渲染/搜索）、`favorites.js`（收藏）、`ai-assistant.js`、`tts-reader.js`；**`tools-data.js` 是构建产物，不要手改**
 - `css/`：`style.css` 是源文件，`style.min.css` 由 optimize_css.py 生成，**不要手改 min 文件**
@@ -140,6 +150,9 @@ js/tools-data.js（首页工具数据，构建时由 build.py 生成）
 1.6. `python scripts/check_sitemap_artifacts.py`（2026-08-27 新增，deploy.sh 已内置为
      [1.2/4] 门禁：sitemap 每条 URL 必须有对应本地 HTML 产物，拦截 pptbot 类"本地产物
      缺失会被同步打成线上 404"的镜像缺口）；
+1.7. `python scripts/check_mono_retired.py`（2026-08-28 新增，deploy.sh [1.3/4] 与
+     deploy_fast.sh 门禁段均已内置：单体 `data/tools.json`/`data/articles.json` 一旦重新出现
+     即中止部署，并审计 `scripts/*.py` 里仍以单体为写路径的脚本）；
 2. `python scripts/dev_site_server.py 8090` 本地起服，抽查改动页面（200、无 JS 报错）；
 3. 跑相关校验脚本：`scripts/check_internal_leak.py`（构建已内置）、`scripts/check_urls.py` / `verify_*.py`（如涉及链接/页面）；
 4. 检查 diff 范围符合预期（不要包含无关页面或大范围时间戳变化）；

@@ -4,8 +4,10 @@
 
 设计（解决单体全量重写 + 并发竞态 + 截断三害）：
 - 写入：每实体一个文件 data/<type>/<slug>.json（各自独立，无竞态、最小爆炸半径）
-- 单体同步：原子更新 data/<type>.json（temp+rename，防截断），供服务器后端 / 孤儿清理兼容
-- 读取：目录优先聚合，回退单体
+- 单体已退役（2026-08-26 任务#7）：data/tools.json / data/articles.json 本地与服务器均已删除，
+  真源只有 data/tools/*.json 与 data/articles/*.json。_sync_mono 仅在单体文件仍存在时才顺带更新，
+  正常情况下不再产生单体（新脚本一律走 load_all_* / save_* 系列）
+- 读取：目录优先聚合，单体仅作历史回退
 
 供发布脚本（publish_*）与维护脚本调用，替换直接 json.dump 整个单体。
 """

@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 自动发布入库校验脚本（2026-08-18 立）：替代人工确认环节，把一篇新文章草稿
-校验通过后插入 data/articles.json。任何校验不通过都不写文件并返回非 0，
+校验通过后写入分片 data/articles/<slug>.json（2026-08-26 去单体化：单体 data/articles.json 已退役，
+分片才是真源，统一走 data_store.save_article）。任何校验不通过都不写文件并返回非 0，
 由「SEO 选题写稿与自动发布」定时任务在发布链路中调用。
 
 用法:
@@ -31,8 +32,7 @@ except Exception:
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE, "data")
-ARTICLES_JSON = os.path.join(DATA_DIR, "articles.json")
-TOOLS_JSON = os.path.join(DATA_DIR, "tools.json")
+# 单体已退役（2026-08-26）：不再定义 data/articles.json、data/tools.json 路径常量，读写一律走 data_store
 ARTICLE_IMAGES_DIR = os.path.join(BASE, "images", "articles")
 
 VALID_CONTENT_TYPES = ("AI评测", "AI教程", "AI资讯", "行业分析")

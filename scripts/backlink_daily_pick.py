@@ -64,6 +64,12 @@ STALE_CATEGORIES = {"AI资讯", "AI行业动态", "ai-news", "industry-news", "A
 
 
 def load_articles():
+    """分片优先（真源 data/articles/*.json）；单体已退役，仅作历史回退。"""
+    sys.path.insert(0, os.path.join(BASE_DIR, "scripts"))
+    from data_store import load_all_articles
+    arts = load_all_articles()
+    if arts:
+        return arts
     with open(ARTICLES_PATH, encoding="utf-8") as f:
         return json.load(f)
 

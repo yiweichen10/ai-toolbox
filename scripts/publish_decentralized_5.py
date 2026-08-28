@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """发布 5 个去中心化 AI 工具（置 published=True + 生成 OG 图）"""
+import os as _os  # 2026-08-28 单体退役拦截（AGENTS.md「数据架构：分片即真源，单体已退役」）
+if not _os.path.exists(_os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),
+                                       "data", "tools.json")):
+    raise SystemExit("[已停用] 本脚本按已退役的单体 data/tools.json | data/articles.json 读写；"
+                     "真源是分片 data/tools/*.json + data/articles/*.json，"
+                     "改数据请走 scripts/data_store.py 的 load_all_*/save_* 后再用。")
+# --- 单体退役拦截 end ---
 import json, io, sys, os
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

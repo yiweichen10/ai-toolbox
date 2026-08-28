@@ -97,10 +97,15 @@ COMPARE_DIMENSIONS = {
 
 
 def load_tools():
-    """加载工具数据，返回已发布的工具列表"""
-    with open(DATA_FILE, 'r', encoding='utf-8') as f:
-        tools = json.load(f)
-    return [t for t in tools if t.get('published', False)]
+    """加载工具数据，返回已发布的工具列表（分片优先，真源 data/tools/*.json）。"""
+    sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+    from data_store import load_all_tools
+    raw = load_all_tools()
+    tools = raw.get('tools', raw) if isinstance(raw, dict) else raw
+    if not tools and os.path.exists(DATA_FILE):   # 单体已退役，仅历史回退
+        with open(DATA_FILE, 'r', encoding='utf-8') as f:
+            tools = json.load(f)
+    return [t for t in tools if isinstance(t, dict) and t.get('published', False)]
 
 
 def get_tool_by_slug(tools, slug):

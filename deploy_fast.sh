@@ -69,6 +69,7 @@ python scripts/check_sitemap_artifacts.py "$LOCAL_DIR"
 python scripts/check_ads_injected.py
 python scripts/check_dark_mode.py
 python scripts/check_tts_skip.py
+python scripts/check_mono_retired.py || { echo "❌ 单体守卫未通过，中止发布"; exit 1; }
 python scripts/check_closed_loop.py
 echo "✅ 门禁全部通过"
 

@@ -338,13 +338,17 @@ def main():
     parser.add_argument("--quiz", type=str, default="", help="Only generate specific quiz by id")
     args = parser.parse_args()
 
-    # 加载工具数据
-    if not os.path.exists(TOOLS_FILE):
-        print(f"[ERROR] Tools file not found: {TOOLS_FILE}")
+    # 加载工具数据（分片优先，真源 data/tools/*.json；单体 2026-08-26 已退役）
+    sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
+    from data_store import load_all_tools
+    _raw = load_all_tools()
+    all_tools = _raw.get('tools', _raw) if isinstance(_raw, dict) else _raw
+    if not all_tools and os.path.exists(TOOLS_FILE):
+        with open(TOOLS_FILE, 'r', encoding='utf-8') as f:
+            all_tools = json.load(f)
+    if not all_tools:
+        print("[ERROR] 无工具数据（data/tools/ 分片为空）")
         sys.exit(1)
-
-    with open(TOOLS_FILE, 'r', encoding='utf-8') as f:
-        all_tools = json.load(f)
 
     published_tools = [t for t in all_tools if t.get('published', False)]
     print(f"Loaded {len(published_tools)} published tools")

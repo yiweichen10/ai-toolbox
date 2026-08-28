@@ -73,6 +73,13 @@ _CHECK_DIR="$LOCAL_DIR"
 if command -v cygpath >/dev/null 2>&1; then _CHECK_DIR=$(cygpath -w "$LOCAL_DIR"); fi
 PYTHONIOENCODING=utf-8 python scripts/check_sitemap_artifacts.py "$_CHECK_DIR" || { echo "❌ 产物一致性门禁未通过，中止部署"; exit 1; }
 
+# ── 单体退役守卫（2026-08-28）──
+# 数据真源是分片 data/tools/*.json + data/articles/*.json；单体 8/26 已删除。
+# 任何脚本把单体重新写出来 = 出现"两份真源"，改动会被分片静默覆盖（8/25 踩过的坑），故硬阻断。
+echo ""
+echo "[1.3/4] 🚪 单体退役守卫（data/tools.json 与 data/articles.json 不得存在）..."
+PYTHONIOENCODING=utf-8 python scripts/check_mono_retired.py || { echo "❌ 单体守卫未通过，中止部署"; exit 1; }
+
 
 # 注入广告/CPS加载器（2026-07-14 启用：CPS推广卡需 loader.js + 工具页 data-category）
 echo ""
