@@ -24,6 +24,7 @@ js/tools-data.js（首页工具数据，构建时由 build.py 生成）
 - 本地预览：`python scripts/dev_site_server.py 8090`，然后访问 http://127.0.0.1:8090/
 - 改 CSS 后：`python scripts/optimize_css.py`（生成 style.min.css 与 critical CSS）
 - 部署：`bash deploy.sh`（内部会先 regenerate_data + optimize_css + build）
+- 只发一篇文章（增量，快）：`bash deploy_fast.sh <slug>`（2026-08-28 新增；`--dry-run` 只构建+门禁+列清单）
 - AI 助手后端（可选，本地聊天用）：`python ai_assistant/server.py`（端口 8123）
 
 > ⚠️ **Windows 编码铁律（2026-08-09 起机制化，别再踩）**：Windows 控制台默认 GBK，
@@ -86,6 +87,37 @@ js/tools-data.js（首页工具数据，构建时由 build.py 生成）
     - 排行页移动端：表格→sticky→卡片→两行卡片改了多轮，均因交付前未做多视口+多内容长度验证；
     - 搜索条 sticky：未排查全站其他 sticky 元素导致重叠，上线前应全局扫描 position:sticky；
     - build.py 模板 patch：上下文不唯一误改其他函数，patch 前用 inspect 确认目标函数归属。
+
+## 2026-08-28 增量构建修复 + 单篇文章快速发布通道（发文章必读）
+
+- 背景：写稿自动化每发一篇文章都跑 `bash deploy.sh` 全量构建（1100+ 页面）。`build.py -s <slug>`
+  增量通道早就存在，但有硬缺陷，用了会把线上打残，所以一直没人用。本次修到底并新增 `deploy_fast.sh`。
+- 修了什么（`scripts/build_lib/main.py` + `scripts/build_lib/html_utils.py`）：
+  1. **sitemap 写残**：`-s` 分支不加载 compare/quiz/ranking/live/news 数据就调 `generate_sitemap`，
+     实测 1141 条被写成 1000 条（掉 137：news 45 / compare 42 / alternatives 21 / ranking 19 / live 5 / quiz 5）。
+  2. **首页不重建**：新文章在首页「最近更新/资讯卡」拿不到入口 → 现在 `-s` 也重建 index.html + 搜索索引。
+  3. **日期邻居不重建**：新文章插进日期序后，前一篇文章的「下一篇」还指向旧文章 → 现在重建前后两篇。
+  4. **related_tools 工具页不重建**：工具页会挂「相关文章」卡（render_tool.py），漏建新文章就不出现在工具页 → 现在重建。
+  5. **后处理注入链统一**：抽出 `_post_process_all()`，全量与增量共用同一份（原增量漏
+     inject_fav_fab / inject_rss_link / inject_section_hub / 全站坏链清理，导致增量产物 != 全量产物）。
+  6. **`_emit()` 幂等**：内容逐字节相同就不写盘，保住 mtime——否则增量会把上千个"没变"的页面标成变更，
+     增量直接退化成全量上传。
+- 验收（AGENTS 规则 12「闭环」口径）：增量产物与全量产物**逐文件 sha1 一致**（唯一差异是 index.html 的
+  `?v=` 缓存戳，属每次构建必然变化）；sitemap 1141 == 1141；
+  `bash deploy_fast.sh nvidia-buys-huggingface-2026` 实跑全绿：51 个文件远端字节校验 51/51 一致、
+  首页含文章链接、Article/FAQPage/Breadcrumb/canonical/ad-loader 齐、1m15s（全量 deploy 3m42s）。
+- 用法：`bash deploy_fast.sh <slug> [--dry-run]`（构建 -s → 5 道门禁 → 远端备份 → tar -T 精准上传 →
+  线上逐文件 sha1 + 关键 URL 验收 → git 提交本次相关文件）。
+- **边界（不满足就必须走 `bash deploy.sh` 全量）**：
+  - 改模板 / `build_lib` / CSS / js → 全站页面要重出，必须全量；
+  - 改 `data/tools/*.json`、`dict_terms/`、`news_*.json`、compare/ranking/live → 必须全量；
+  - 删页 / 改 slug → 必须全量 + 在 `nginx-old-url-redirects.conf` 补 301；
+  - 跑过 `regenerate_data.py` 之后 → 必须全量。
+  - 口诀：**只动一篇文章的分片 → 增量；动了数据面或模板面 → 全量。**
+- 实现陷阱（别再改回去）：`deploy_fast.sh` 的上传清单 = git 差集 ∪ 构建 `[OK]` 声明 ∪ 关键枢纽页强制项
+  ∪ 本文章配图。`tools/` 等产物目录被 gitignore，只靠 git 差集会漏掉重建过的工具页；
+  配图与 OG 图也在 gitignore 里，必须显式补进去。远端 sha1 校验别用 `ssh + stdin 循环`
+  （Windows OpenSSH 客户端下 stdin 传不进远程 while，会假失败），把路径拼进远程命令分批跑。
 
 ## 内容与模板约定
 
