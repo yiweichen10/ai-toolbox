@@ -441,6 +441,13 @@ def main():
             if eq.get('slug') not in existing_slugs:
                 results['quizzes'].append(eq)
 
+    # 2026-08-28 修数据回退坑：--dry-run 原本也会无条件写 quiz_data.json，
+    # 而 dry-run 分支又跳过了"合并已有 quiz"，结果一次预览就把人工精选的 quiz 列表
+    # 覆盖成字母序前 N 个（实测 300+ 款 → 52 款）。预览模式必须真的不落盘。
+    if args.dry_run:
+        print(f"\n[DRY-RUN] 预览模式不写盘：跳过保存 {OUTPUT_FILE}（本次会写 {len(results['quizzes'])} 个 quiz）")
+        raise SystemExit(0)
+
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
