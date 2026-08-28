@@ -21,7 +21,7 @@
 #   不渲染 1100+ 页面，上传改为"本次实际变更文件"的 tar 精准同步，
 #   健康检查只查受影响 URL（全量版会 HEAD 整张 sitemap）。
 # ============================================================
-set -e
+set -eo pipefail   # 2026-08-28：管道里 build 失败必须被看见（见下方断言）
 export PYTHONIOENCODING=utf-8
 export PYTHONUTF8=1
 
@@ -62,6 +62,18 @@ git status --porcelain -uall | sort > "$WORK/before"
 _BUILD_FLAG=""
 if [ "$DRY_RUN" = true ]; then _BUILD_FLAG="--no-push"; fi  # 演练不重复推送
 python scripts/build.py -s "$SLUG" $_BUILD_FLAG | tee "$WORK/build.log"
+
+# 断言构建真的收尾了：以前只 set -e，管道里 build 崩了 tee 仍返回 0，
+# 结果"门禁全过 + 待上传只剩强制项"的假成功差点把半成品传上线（2026-08-28 实测踩到）。
+if ! grep -q '\[完成\] 增量构建' "$WORK/build.log"; then
+    echo "❌ 增量构建未正常收尾（日志缺 [完成] 标记），中止发布。日志尾部："
+    tail -15 "$WORK/build.log"
+    exit 1
+fi
+if [ ! -s "articles/${SLUG}/index.html" ] || [ "$(wc -c < "articles/${SLUG}/index.html")" -lt 5000 ]; then
+    echo "❌ 产物异常：articles/${SLUG}/index.html 缺失或过小，中止发布"
+    exit 1
+fi
 
 echo ""
 echo "[f2/5] 🚪 门禁（与全量部署同一批，任一失败即中止，不绕过）"

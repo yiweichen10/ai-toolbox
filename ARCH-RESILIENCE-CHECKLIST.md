@@ -1,5 +1,8 @@
 # 架构抗压改造清单（aitoollab.cn 静态站）
 
+> ⚠️ **口径更新（2026-08-28）**：本文以下出现 `data/tools.json` / `data/articles.json` 的地方均为历史写法。单体已于 2026-08-26 退役删除，真源是 `data/tools/<slug>.json`、`data/articles/<slug>.json`、`data/dict_terms/<term>.json` 分片目录；读写一律走 `scripts/data_store.py`。权威口径见 [AGENTS.md](AGENTS.md)「数据架构：分片即真源，单体已退役」，部署链路由 `scripts/check_mono_retired.py` 硬阻断单体复活。
+
+
 > 目标：让站点"越臃肿越稳"。无论未来功能多、内容多、上游怎么炸，线上不被污染、更新不被一处坏全卡死。
 > 原则：不是物理拆 `build.py`，而是**职责分层 + 每段 fail-soft 隔离 + 旁路幂等自治 + 原子上线**。
 > 状态：2026-08-23 推演产出，待评审。依据见 `.workbuddy/memory/2026-08-23.md` 与 MEMORY.md 工程铁律。
@@ -45,7 +48,7 @@ ads/loader.js + config.json  # 广告/ CPS 纯运行时，零构建（已落地�
 
 | ID | 任务 | 改动点 | 映射 | 验收标准 |
 |----|------|--------|------|----------|
-| T1 | **build.py 严格只读数据**（非"防内容漂移"，是并发安全+构建纯净） | 唯一写回在 `build.py:236 ensure_article_content_types`（仅补 `content_type` 分类标签，且有渲染兜底 L231）。**改法**：把 content_type 补全挪到**发布管线/regenerate_data.py**（文章创建时即写好），build 不再写 `data/*.json`。⚠️ 注意：此改**不会**改变页面内容（渲染本就有兜底），真实收益是消除"build 与发布自动化 07:30 抢写 articles.json"的并发竞争(S5)+让部分构建安全 | I5 + I7 + 数据不可变 | 跑全量 build，确认 `data/*.json` mtime 不变、内容零改动；新文章 content_type 在发布时已存在 |
+| T1 ✅已完成 | **build.py 严格只读数据**（非"防内容漂移"，是并发安全+构建纯净） | 唯一写回在 `build.py:236 ensure_article_content_types`（仅补 `content_type` 分类标签，且有渲染兜底 L231）。**改法**：把 content_type 补全挪到**发布管线/regenerate_data.py**（文章创建时即写好），build 不再写 `data/*.json`。⚠️ 注意：此改**不会**改变页面内容（渲染本就有兜底），真实收益是消除"build 与发布自动化 07:30 抢写 articles.json"的并发竞争(S5)+让部分构建安全 | I5 + I7 + 数据不可变 | 跑全量 build，确认 `data/*.json` mtime 不变、内容零改动；新文章 content_type 在发布时已存在 |
 | T2 | **外部化构建时间戳 + 日期兜底改"数据派生"（⚠️ 不是"剔除所有 now()"）** | 21 处 `now()` 绝大多数是"数据缺日期时的安全网"，盲删会砸：footer「更新于」空白(L2932/3204)、Schema dateModified 空(L1750/1954/2218/2738/3165)、sitemap lastmod 空(L7935)、文章日期兜底失效(L4882/5665)、实时面板「数据截至」空白(L2685)。**正确改法**：① 新增 `data/last_build.json`（orchestrator/deploy 每次写一次构建时间戳，build 只读）→ footer「更新于」用此值；② Schema/sitemap/文章日期兜底改读 `updated_date`/`last_updated`，真缺失用站点固定发布日(2026-03-21)常量，**绝不填今天**；③ `BUILD_YEAR`(L131)保留或硬编码 | I7 + 日期纪律 | 同输入构建→产物逐字节一致；footer/schema/sitemap 日期均非空且源于数据而非今天 |
 | T3 | **广告标记固化进模板（低风险高收益）** | `build.py` 模板直接输出 3 个静态标记：loader.js 引用 + `data-page-type` + `data-category`（build 渲染时本知页型/品类，零成本）；`inject_ads.py` 日常不再需跑 → 根除 08-21"--skip-build 跳过注入丢广告"。⚠️ 例外：wwads(L180-264)/AdSense(L140-177) 是"div 必须写死 HTML"的静态烤入，目前 config 均 `enabled=false`，保留为"仅重新启用时才跑"的可选后处理，不进日常管线 | I2 + 旁路幂等 | 新构建页含 3 标记；停跑 inject_ads 后广告正常；改 config.json 30s 生效全站零重建 |
 
@@ -77,7 +80,7 @@ ads/loader.js + config.json  # 广告/ CPS 纯运行时，零构建（已落地�
 
 | ID | 任务 | 改动点 | 映射 | 验收标准 |
 |----|------|--------|------|----------|
-| T13 | **文件锁 + 任务队列** | `flock` 保护 `tools.json` 写；构建任务入队列串行；4 自动化（文章07:30/词典07:50/快讯08:00/工具08:30）不并发 build | I5 | 两自动化同时触发 → 一个持锁一个排队，无双写丢数据 |
+| T13 | **文件锁 + 任务队列** | `flock` 保护分片写入（`data_store._atomic_write_json` + filelock，2026-08-26 起单体已退役）；构建任务入队列串行；4 自动化（文章07:30/词典07:50/快讯08:00/工具08:30）不并发 build | I5 | 两自动化同时触发 → 一个持锁一个排队，无双写丢数据 |
 
 ### P5 — 互动数据（用户 Q5：别人无我有）
 

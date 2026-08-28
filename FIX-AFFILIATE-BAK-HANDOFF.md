@@ -152,7 +152,7 @@ git push
 
 ## 七、风险提示
 
-- `tools.json`（662 个工具）是唯一数据源，**任何改动前先备份**
-  （WorkBuddy 环境可写，用 `Copy-Item tools.json tools.json.pre-bak-fix`）。
+- 工具数据唯一真源是 `data/tools/<slug>.json` 分片（单体 tools.json 已退役），**任何改动前先备份对应分片**
+  （走 `scripts/data_store.py` 的 `save_tool`，它自带原子写 + 文件锁）。
 - 修改 `affiliate_manager.py` 前同样先备份（步骤 1 已含）。
 - 补丁脚本 `patch_affiliate_bak.py` 幂等，重复运行无害。

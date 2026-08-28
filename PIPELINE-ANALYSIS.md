@@ -1,4 +1,7 @@
 # aitoolbox.hk 自动化流水线 — 深度分析报告
+
+> ⚠️ **口径更新（2026-08-28）**：本文以下出现 `data/tools.json` / `data/articles.json` 的地方均为历史写法。单体已于 2026-08-26 退役删除，真源是 `data/tools/<slug>.json`、`data/articles/<slug>.json`、`data/dict_terms/<term>.json` 分片目录；读写一律走 `scripts/data_store.py`。权威口径见 [AGENTS.md](AGENTS.md)「数据架构：分片即真源，单体已退役」，部署链路由 `scripts/check_mono_retired.py` 硬阻断单体复活。
+
 > 分析时间：2026-04-09 | 分析人：AI SEO Chief Officer
 
 ---
@@ -10,7 +13,7 @@
     ├── Step 1: auto_tool_maintenance.py   工具库存检查 & 补货
     ├── Step 2: generate_articles.py       SEO文章草稿生成
     ├── Step 3: humanize_articles.py       去AI味处理
-    ├── Step 4: add_articles.py            文章入库 (articles.json)
+    ├── Step 4: add_articles.py            文章入库（现为 publish_article.py → data/articles/<slug>.json 分片）
     ├── Step 5: gen_single_og.py           OG封面图生成
     ├── Step 6: build.py / build_en.py     全站SSG静态化构建
     └── Step 7: git push → Vercel 自动部署
@@ -18,7 +21,7 @@
 
 **技术栈确认：**
 - 纯静态 HTML SSG（无框架）
-- 数据层：JSON（tools.json / tools_en.json / articles.json / articles_en.json）
+- 数据层：JSON 分片（data/tools/*.json、data/articles/*.json；单体 tools.json/articles.json 已于 2026-08-26 退役）
 - 构建层：Python脚本（build.py / build_en.py）
 - 部署层：GitHub + Vercel（git push 即触发自动部署）
 - AI生成层：SiliconFlow DeepSeek-V3 API（已配置API Key）
@@ -28,7 +31,7 @@
 ## 二、流水线优点（已做得好的）
 
 ### ✅ 架构设计
-1. **数据驱动**：tools.json / articles.json 作为"单一数据源"，一处更新全站同步，架构设计正确。
+1. **数据驱动**：分片目录（data/tools/*.json、data/articles/*.json）作为单一数据源，一处更新全站同步；2026-08-26 起由单体拆成分片，读写统一走 scripts/data_store.py。
 2. **库存机制完善**：`auto_tool_maintenance.py` 有低库存预警（< 5 个触发补货），能防止断更。
 3. **SSG输出**：build_en.py 生成完整的 Schema.org 结构化数据（BreadcrumbList + SoftwareApplication + FAQPage），SEO技术基础扎实。
 4. **全自动部署**：git push → Vercel 自动部署，零手工操作。

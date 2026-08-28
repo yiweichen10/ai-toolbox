@@ -38,7 +38,7 @@
 
 ## P1 — 短期修（静默错误/数据丢失）
 
-### G4 build.py 写回 articles.json（并发竞争）
+### G4 build.py 写回 articles.json（并发竞争）— ✅ 已解决（2026-08-26 去单体化：构建对数据只读，写走 data_store 分片 + filelock）
 - **证据**：build.py L236 `ensure_article_content_types` 补写 `content_type` 并 `json.dump` 落盘；
   文章发布自动化（07:30）也在写 articles.json → 两写并发可互相覆盖丢数据。
 - **后果**：并发丢字段/损坏数据；且破坏"构建只读数据"纯函数原则。

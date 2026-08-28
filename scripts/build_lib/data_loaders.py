@@ -86,6 +86,11 @@ def load_articles():
 
 # sync_mono_from_shards() 已删除（2026-08-28 清理）：2026-08-26 去单体化后无人调用，
 # 单体 data/tools.json 与 data/articles.json 已从本地与服务器移除，分片目录就是唯一真源。
+
+_TOOL_LINK_MAP = None
+_LINK_STOPWORDS = {'AI', 'API', 'GPT', 'Chat', 'ChatGPT', '工具', '助手',
+                   '人工智能', '大模型', '机器人', 'AI工具', 'APP', 'App', '软件'}
+
 # 需要写单体兼容层的场景请走 scripts/data_store.py。
 def get_tool_link_map():
     """返回 [(name, slug), ...] 用于正文行内内链，按名称长度降序以便最长优先匹配。"""

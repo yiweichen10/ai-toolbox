@@ -24,7 +24,7 @@
 ## 🟡 P1 — 数据出来后做
 
 ### 3. 文章分类字段整体规范化
-- **现状**：articles.json（177 篇）category 字段约 30 种值，中英文混用、同义多值，导致 CPS 卡匹配大量落 default、utm_campaign 归因维度散乱。
+- **现状**：文章分片 `data/articles/*.json`（198 篇）category 字段约 30 种值，中英文混用、同义多值，导致 CPS 卡匹配大量落 default、utm_campaign 归因维度散乱。
 - **已做**：`industry-analysis`（12 篇）→「行业趋势」（2026-08-15）。
 - **剩余**：
   - 英文残留：`tool-review`(2) / `tools-comparison`(1) / `industry-news`(1) / `ai-news`(1)，共 5 篇；

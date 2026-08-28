@@ -30,6 +30,24 @@ def _cfg():
                 BAIDU_TONGJI=BAIDU_TONGJI)
 
 
+def _write_if_changed(path, text):
+    """内容相同就不写盘（2026-08-28）。
+
+    注入器每次构建都会遍历全站 HTML，无条件重写会让上千个"其实没变"的文件 mtime 抖动，
+    增量发布（deploy_fast.sh）就没法靠差异圈定要上传的文件，rsync 也要白扫一遍。
+    返回 True 表示确实写了盘。"""
+    try:
+        if os.path.isfile(path):
+            with open(path, 'r', encoding='utf-8') as _f:
+                if _f.read() == text:
+                    return False
+    except OSError:
+        pass
+    with open(path, 'w', encoding='utf-8') as _f:
+        _f.write(text)
+    return True
+
+
 def _clean_all_broken_links():
     """全站兜底：所有 HTML 页面中指向未发布/不存在工具/文章的链接降级为纯文本（2026-08-07）。"""
     from build_lib.render_tool import clean_broken_tool_links
@@ -55,8 +73,7 @@ def _clean_all_broken_links():
             )
             new = clean_broken_tool_links(html)
             if new != html:
-                with open(p, 'w', encoding='utf-8') as f:
-                    f.write(new)
+                _write_if_changed(p, new)
                 fixed += 1
     return fixed
 
@@ -98,8 +115,7 @@ def inject_site_logo():
                     '<a href="/" style="text-decoration:none;"><div>' + SITE_LOGO_MARK + ' AI工具宝箱', new
                 )
                 if new != content:
-                    with open(fpath, 'w', encoding='utf-8') as f:
-                        f.write(new)
+                    _write_if_changed(fpath, new)
                     replaced += 1
             except Exception:
                 pass
@@ -139,8 +155,7 @@ def inject_favicon():
                     changed = True
                     injected += 1
                 if changed:
-                    with open(fpath, 'w', encoding='utf-8') as f:
-                        f.write(content)
+                    _write_if_changed(fpath, content)
             except Exception:
                 pass
     if cleaned > 0:
@@ -185,8 +200,7 @@ def inject_global_nav():
                     content = content.replace('</body>', dark_html + '\n</body>', 1)
                     modified = True
                 if modified:
-                    with open(fpath, 'w', encoding='utf-8') as f:
-                        f.write(content)
+                    _write_if_changed(fpath, content)
                     injected += 1
             except Exception:
                 pass
@@ -215,8 +229,7 @@ def inject_fav_fab():
             if '</body>' not in content:
                 continue
             content = content.replace('</body>', fab_html + '</body>', 1)
-            with open(fpath, 'w', encoding='utf-8') as f:
-                f.write(content)
+            _write_if_changed(fpath, content)
             injected += 1
     if injected > 0:
         print(f'[Post] Injected static fav-fab into {injected} HTML files.')
@@ -246,8 +259,7 @@ def inject_footer_links():
                 continue
             content = content[:p_end + 4] + '\n' + FOOTER_LINKS_HTML + content[p_end + 4:]
             try:
-                with open(fpath, 'w', encoding='utf-8') as f:
-                    f.write(content)
+                _write_if_changed(fpath, content)
                 injected += 1
             except Exception:
                 continue
@@ -285,8 +297,7 @@ def inject_pwa():
             if '</body>' in content and 'navigator.serviceWorker.register' not in content:
                 content = content.replace('</body>', sw_register + '\n</body>', 1)
             try:
-                with open(fpath, 'w', encoding='utf-8') as f:
-                    f.write(content)
+                _write_if_changed(fpath, content)
                 injected += 1
             except Exception:
                 continue
@@ -316,8 +327,7 @@ def inject_adsense_meta():
                 continue
             content = _head_re.sub(lambda m: m.group(0) + '\n    ' + ADSENSE_META, content, count=1)
             try:
-                with open(fpath, 'w', encoding='utf-8') as f:
-                    f.write(content)
+                _write_if_changed(fpath, content)
                 injected += 1
             except Exception:
                 pass
@@ -349,8 +359,7 @@ def inject_baidu_tongji():
                 continue
             content = content.replace('</head>', BAIDU_TONGJI + '\n</head>', 1)
             try:
-                with open(fpath, 'w', encoding='utf-8') as f:
-                    f.write(content)
+                _write_if_changed(fpath, content)
                 injected += 1
             except Exception:
                 pass
@@ -382,8 +391,7 @@ def inject_rss_link():
             else:
                 content = re.sub(r'<head[^>]*>', lambda m: m.group(0) + '\n    ' + RSS_LINK, content, count=1)
             try:
-                with open(fpath, 'w', encoding='utf-8') as f:
-                    f.write(content)
+                _write_if_changed(fpath, content)
                 injected += 1
             except Exception:
                 pass
@@ -460,8 +468,7 @@ def inject_hreflang():
             )
             new_content = content[:m.end()] + hreflang_block + content[m.end():]
             try:
-                with open(fpath, 'w', encoding='utf-8') as f:
-                    f.write(new_content)
+                _write_if_changed(fpath, new_content)
                 updated += 1
             except Exception:
                 pass
@@ -539,8 +546,7 @@ def inject_section_hub():
                 skipped += 1
                 continue
             try:
-                with open(fpath, 'w', encoding='utf-8') as f:
-                    f.write(content)
+                _write_if_changed(fpath, content)
                 injected += 1
             except Exception:
                 pass

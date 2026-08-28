@@ -1,5 +1,8 @@
 # 站点改造待办清单（阶段规划）
 
+> ⚠️ **口径更新（2026-08-28）**：本文以下出现 `data/tools.json` / `data/articles.json` 的地方均为历史写法。单体已于 2026-08-26 退役删除，真源是 `data/tools/<slug>.json`、`data/articles/<slug>.json`、`data/dict_terms/<term>.json` 分片目录；读写一律走 `scripts/data_store.py`。权威口径见 [AGENTS.md](AGENTS.md)「数据架构：分片即真源，单体已退役」，部署链路由 `scripts/check_mono_retired.py` 硬阻断单体复活。
+
+
 > 说明：阶段划分基于早前对话整理（第一阶段已完成：上线/收录/Meta与标题治理/首页体验；文章归类+分类页 ✅ 2026-08-08 完成）。第二、三阶段为待办，可随实际情况调整。
 
 ---
@@ -19,7 +22,7 @@
 - 新增分类页是"加房间"，不拆旧房。
 
 ### 第一步：备份 + 归并分类（数据治理）
-1. 备份 `data/articles.json`（含时间戳的 .bak）；
+1. 备份要改的分片 `data/articles/<slug>.json`（含时间戳的 .bak；单体已退役，别再备份/改 data/articles.json）；
 2. 建立归并映射，把 22 个分类归并为 4 个内容类型：
 
 | 内容类型 | 归并来源分类 | 对应首页区块 |

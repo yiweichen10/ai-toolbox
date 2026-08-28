@@ -1,5 +1,8 @@
 # SYSTEM-MAP — aitoollab.cn 系统现状全图（2026-08-23 查证版）
 
+> ⚠️ **口径更新（2026-08-28）**：本文以下出现 `data/tools.json` / `data/articles.json` 的地方均为历史写法。单体已于 2026-08-26 退役删除，真源是 `data/tools/<slug>.json`、`data/articles/<slug>.json`、`data/dict_terms/<term>.json` 分片目录；读写一律走 `scripts/data_store.py`。权威口径见 [AGENTS.md](AGENTS.md)「数据架构：分片即真源，单体已退役」，部署链路由 `scripts/check_mono_retired.py` 硬阻断单体复活。
+
+
 > 本文件是**事实基线**：所有环节均经代码查证（build.py / deploy.sh / loader.js / config.json / 自动化DB）。
 > 后续任何架构讨论以本图为基准，先看全图再下结论，避免顾此失彼。
 
@@ -33,8 +36,9 @@
 
 | 文件 | 内容 | 消费方 |
 |---|---|---|
-| tools.json | 662 工具 | 工具页/分类/首页/排行/搜索索引/对比/替代 |
-| articles.json | 165+ 文章 | 文章页/列表/分类 |
+| `data/tools/<slug>.json` | 673 分片（617 已发布） | 工具页/分类/首页/排行/搜索索引/对比/替代 |
+| `data/articles/<slug>.json` | 198 分片 | 文章页/列表/分类 |
+| ~~tools.json / articles.json~~ | 已退役删除（2026-08-26） | 读取会走分片；写入被 `check_mono_retired.py` 阻断 |
 | compare_data.json | 对比+替代 | compare/、alternatives/ |
 | ranking_data.json | 排行 | ranking/ |
 | quiz_data.json | 选择器 | quiz/ |
@@ -44,12 +48,11 @@
 | homepage_picks.json | 首页推荐 | index |
 | affiliate_links.json | CPS 推广链接 | 立即使用按钮 |
 
-**构建期写回点（唯一）**：`build.py` L236 `ensure_article_content_types` 会补写
-`content_type` 字段到 articles.json（有渲染兜底，但并发时与发布自动化抢写存在竞争）。
+**构建对数据只读**（2026-08-26 起）：`ensure_article_content_types` 只在内存里补 `content_type`，**不再写回数据文件**；写数据的职责归发布管线（`publish_article.py` → `data_store.save_article` 写分片）。
 
 ---
 
-## 三、构建层（scripts/build.py，9524 行单体）
+## 三、构建层（scripts/build.py 薄壳 + build_lib/ 11 个模块，2026-08-24 拆分）
 
 ### 入口 main()（L9481）
 1. stdout 编码兜底（Windows GBK 防崩）

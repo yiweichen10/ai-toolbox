@@ -1,5 +1,8 @@
 # build.py 模块化拆分 — 遗留问题优化清单
 
+> ⚠️ **口径更新（2026-08-28）**：本文以下出现 `data/tools.json` / `data/articles.json` 的地方均为历史写法。单体已于 2026-08-26 退役删除，真源是 `data/tools/<slug>.json`、`data/articles/<slug>.json`、`data/dict_terms/<term>.json` 分片目录；读写一律走 `scripts/data_store.py`。权威口径见 [AGENTS.md](AGENTS.md)「数据架构：分片即真源，单体已退役」，部署链路由 `scripts/check_mono_retired.py` 硬阻断单体复活。
+
+
 > 背景：2026-08-24 完成 build.py 拆分（9665 → 614 行薄壳 + 13 个 build_lib 模块，
 > 模块10 `8825eeb` / 模块11 `11f762a`）。拆分过程与实测中发现以下遗留问题，
 > 按优先级排期，**暂不执行**，待用户确认后逐项修复。
@@ -26,7 +29,7 @@
 
 ### 根因（两个叠加）
 1. **slug 集合反复加载（主因）**：`clean_broken_tool_links` 每处理一个文件都重新执行
-   `get_published_tool_slugs()`（读 6MB tools.json）+ `load_articles()` → 1153 次重复 I/O。
+   `get_published_tool_slugs()`（原读 6MB 单体 tools.json）+ `load_articles()` → 1153 次重复 I/O。（已解决：单体退役改分片 + slug 集合模块级缓存）
 2. **正则回溯（次因）**：`<a\s[^>]*?href="[^"]*?/(tools|articles)/...` 惰性匹配 +
    `(.*?)</a>` 在长 HTML 上回溯（单文件最慢 0.88s）。
 
