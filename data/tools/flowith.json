@@ -1,98 +1,99 @@
 {
-  "name": "Flowith",
-  "slug": "flowith",
-  "positioning": "Flowith是什么？画布式多智能体平台好用吗",
-  "auto_positioning": false,
-  "emoji": "🎨",
-  "color": "#06B6D4",
-  "description": "Flowith 是一个以「无限画布」为核心的生产力平台，把 AI 智能体、知识管理与实时协作放在同一块可视觉化、可多线程的工作区里。它内置的 Neo 智能体能在画布上持续运行、记住上下文并自动执行多步任务；配合 Oracle 模式做自主任务规划、Knowledge Garden 沉淀知识，很适合深度研究与长线创作。",
-  "category": "AI智能体",
-  "tags": [
-    {
-      "text": "画布协作"
+    "name": "Flowith",
+    "slug": "flowith",
+    "positioning": "Flowith是什么？画布式多智能体平台好用吗",
+    "auto_positioning": false,
+    "emoji": "🎨",
+    "color": "#06B6D4",
+    "description": "Flowith 是一个以「无限画布」为核心的生产力平台，把 AI 智能体、知识管理与实时协作放在同一块可视觉化、可多线程的工作区里。它内置的 Neo 智能体能在画布上持续运行、记住上下文并自动执行多步任务；配合 Oracle 模式做自主任务规划、Knowledge Garden 沉淀知识，很适合深度研究与长线创作。",
+    "category": "AI智能体",
+    "tags": [
+        {
+            "text": "画布协作"
+        },
+        {
+            "text": "多智能体"
+        },
+        {
+            "text": "知识管理"
+        },
+        {
+            "text": "免费可用",
+            "type": "free"
+        }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "recommend",
+        "text": "推荐"
     },
-    {
-      "text": "多智能体"
-    },
-    {
-      "text": "知识管理"
-    },
-    {
-      "text": "免费可用",
-      "type": "free"
-    }
-  ],
-  "rating": "⭐ 4.4",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "recommend",
-    "text": "推荐"
-  },
-  "url": "https://flowith.io",
-  "price": "免费版 1000 积分；Professional $13.93/月（年付，约 2 万积分）；Ultimate $34.93/月（年付，约 5 万积分）；更高套餐与定制企业方案以官网为准",
-  "platform": "Web（浏览器访问，无独立客户端）",
-  "pros": [
-    "画布式多线程界面，复杂思路可视化、不丢上下文",
-    "Neo 自主 Agent 可持续运行，自动完成多步任务",
-    "Knowledge Garden 把文档/笔记沉淀为可检索知识库",
-    "支持 GPT-4、Claude 3.5、DALL·E 3 等多模型",
-    "实时协作，团队可在同一画布上共同工作"
-  ],
-  "cons": [
-    "上手有学习曲线，需要时间搭建自己的工作区",
-    "支持的文件类型相对有限",
-    "积分体系对重度用户成本上升，移动端体验偏弱"
-  ],
-  "features": [
-    "画布工作区：多线程、可视化组织想法与任务",
-    "Neo Agent：持续运行、跨步骤保留上下文",
-    "Oracle 模式：自主把复杂项目拆成可执行步骤",
-    "Knowledge Garden：文档/笔记结构化沉淀与检索",
-    "多模型支持：GPT-4、Claude 3.5、DALL·E 3 等",
-    "实时协作与社区工作流模板"
-  ],
-  "related": [
-    "manus",
-    "dify",
-    "coze"
-  ],
-  "content": "## Flowith 是什么？\nFlowith 的核心理念是「把 AI 放在一块无限画布上」。和一行行往下刷的聊天框不同，Flowith 让你在一个可视化、可多线程的工作区里同时管理多个 AI 对话和任务——想法、文档、提示词都是连在一起的节点。它内置的 Neo 智能体能在画布上持续运行，记住上下文、跨步骤完成任务；Oracle 模式负责把复杂项目自主拆成可执行步骤，Knowledge Garden 则把你的文档和笔记沉淀成可检索的知识库。\n\n用很多用户的话说，Flowith 像是「给深度思考者用的 AI 工作台」：它不追求秒回一句话，而是陪你把一整个长线项目想清楚、做出来。\n\n## 核心功能\n1. **画布工作区**：多线程、可视化组织想法与任务，上下文不丢。\n2. **Neo Agent**：持续运行，跨多步任务保留上下文并自动执行。\n3. **Oracle 模式**：自主把复杂项目拆成可落地步骤。\n4. **Knowledge Garden**：把上传的文档/笔记结构化沉淀、可检索。\n5. **多模型支持**：GPT-4、Claude 3.5、DALL·E 3 等同一界面可用。\n6. **实时协作与模板**：团队同画布协作，社区分享工作流。\n\n## 版本/套餐对比\n| 方案 | 价格（年付） | 额度 |\n| --- | --- | --- |\n| 免费版 | $0 | 1000 积分、基础模型、画布可用 |\n| Professional | $13.93/月 | 约 2 万积分、高级模型、团队功能 |\n| Ultimate | $34.93/月 | 约 5 万积分、更高优先级 |\n| 企业版 | 定制 | 定制方案 |\n（价格以官网为准）\n\n## 值不值得用？\nFlowith 的强项是「上下文持续 + 结构化思考」，对研究型项目、长文创作、战略规划这类容易在聊天工具里「断片」的工作特别合适。缺点是上手有学习曲线，要花时间搭自己的工作区；支持的文件类型有限；重度使用积分成本上升，移动端体验也偏弱。结论——靠系统思考吃饭的研究者/内容策略者值得投入；想要轻聊快答的人会觉得它太重。\n\n## 使用建议\n从一个研究课题或长文大纲开始，把资料先丢进 Knowledge Garden，再让 Neo 在画布上分步推进；用 Oracle 模式把大目标拆成小任务，而不是一口气丢一个模糊指令；团队项目直接开共享画布，分工一目了然。\n\n## 适合谁用？\n- **推荐**：研究者、内容策略者、分析师、做复杂项目的团队。\n- **可考虑**：学生、需要整理多源资料的人，先用免费版试水。\n- **不推荐**：只要快速聊天答案、移动端重度、或需要广泛文件格式支持的用户。",
-  "published": false,
-  "faq": [
-    {
-      "question": "Flowith 免费吗？",
-      "answer": "有免费版赠送 1000 积分，重度使用需升级 Professional/Ultimate。"
-    },
-    {
-      "question": "Flowith 和聊天式 AI 有什么不同？",
-      "answer": "它用画布保留上下文与结构，适合长线复杂项目，而非一次性问答。"
-    },
-    {
-      "question": "Flowith 支持团队协作吗？",
-      "answer": "支持，多个用户可在同一画布实时协作。"
-    },
-    {
-      "question": "Flowith 支持哪些 AI 模型？",
-      "answer": "可接入 GPT-4、Claude 3.5、DALL·E 3 等多种模型。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "Flowith",
-    "Flowith怎么样",
-    "Flowith免费版",
-    "Flowith使用教程",
-    "Flowith和哪个好"
-  ],
-  "source_urls": [
-    "https://flowith.io",
-    "https://gptonline.ai/flowith-ai/",
-    "https://itirupati.com/flowith/",
-    "https://www.fahimai.com/zh/ai-agent-builder/"
-  ],
-  "confidence": "high",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+    "url": "https://flowith.io",
+    "price": "免费版 1000 积分；Professional $13.93/月（年付，约 2 万积分）；Ultimate $34.93/月（年付，约 5 万积分）；更高套餐与定制企业方案以官网为准",
+    "platform": "Web（浏览器访问，无独立客户端）",
+    "pros": [
+        "画布式多线程界面，复杂思路可视化、不丢上下文",
+        "Neo 自主 Agent 可持续运行，自动完成多步任务",
+        "Knowledge Garden 把文档/笔记沉淀为可检索知识库",
+        "支持 GPT-4、Claude 3.5、DALL·E 3 等多模型",
+        "实时协作，团队可在同一画布上共同工作"
+    ],
+    "cons": [
+        "上手有学习曲线，需要时间搭建自己的工作区",
+        "支持的文件类型相对有限",
+        "积分体系对重度用户成本上升，移动端体验偏弱"
+    ],
+    "features": [
+        "画布工作区：多线程、可视化组织想法与任务",
+        "Neo Agent：持续运行、跨步骤保留上下文",
+        "Oracle 模式：自主把复杂项目拆成可执行步骤",
+        "Knowledge Garden：文档/笔记结构化沉淀与检索",
+        "多模型支持：GPT-4、Claude 3.5、DALL·E 3 等",
+        "实时协作与社区工作流模板"
+    ],
+    "related": [
+        "manus",
+        "dify",
+        "coze"
+    ],
+    "content": "## Flowith 是什么？\nFlowith 的核心理念是「把 AI 放在一块无限画布上」。和一行行往下刷的聊天框不同，Flowith 让你在一个可视化、可多线程的工作区里同时管理多个 AI 对话和任务——想法、文档、提示词都是连在一起的节点。它内置的 Neo 智能体能在画布上持续运行，记住上下文、跨步骤完成任务；Oracle 模式负责把复杂项目自主拆成可执行步骤，Knowledge Garden 则把你的文档和笔记沉淀成可检索的知识库。\n\n用很多用户的话说，Flowith 像是「给深度思考者用的 AI 工作台」：它不追求秒回一句话，而是陪你把一整个长线项目想清楚、做出来。\n\n## 核心功能\n1. **画布工作区**：多线程、可视化组织想法与任务，上下文不丢。\n2. **Neo Agent**：持续运行，跨多步任务保留上下文并自动执行。\n3. **Oracle 模式**：自主把复杂项目拆成可落地步骤。\n4. **Knowledge Garden**：把上传的文档/笔记结构化沉淀、可检索。\n5. **多模型支持**：GPT-4、Claude 3.5、DALL·E 3 等同一界面可用。\n6. **实时协作与模板**：团队同画布协作，社区分享工作流。\n\n## 版本/套餐对比\n| 方案 | 价格（年付） | 额度 |\n| --- | --- | --- |\n| 免费版 | $0 | 1000 积分、基础模型、画布可用 |\n| Professional | $13.93/月 | 约 2 万积分、高级模型、团队功能 |\n| Ultimate | $34.93/月 | 约 5 万积分、更高优先级 |\n| 企业版 | 定制 | 定制方案 |\n（价格以官网为准）\n\n## 值不值得用？\nFlowith 的强项是「上下文持续 + 结构化思考」，对研究型项目、长文创作、战略规划这类容易在聊天工具里「断片」的工作特别合适。缺点是上手有学习曲线，要花时间搭自己的工作区；支持的文件类型有限；重度使用积分成本上升，移动端体验也偏弱。结论——靠系统思考吃饭的研究者/内容策略者值得投入；想要轻聊快答的人会觉得它太重。\n\n## 使用建议\n从一个研究课题或长文大纲开始，把资料先丢进 Knowledge Garden，再让 Neo 在画布上分步推进；用 Oracle 模式把大目标拆成小任务，而不是一口气丢一个模糊指令；团队项目直接开共享画布，分工一目了然。\n\n## 适合谁用？\n- **推荐**：研究者、内容策略者、分析师、做复杂项目的团队。\n- **可考虑**：学生、需要整理多源资料的人，先用免费版试水。\n- **不推荐**：只要快速聊天答案、移动端重度、或需要广泛文件格式支持的用户。",
+    "published": true,
+    "faq": [
+        {
+            "question": "Flowith 免费吗？",
+            "answer": "有免费版赠送 1000 积分，重度使用需升级 Professional/Ultimate。"
+        },
+        {
+            "question": "Flowith 和聊天式 AI 有什么不同？",
+            "answer": "它用画布保留上下文与结构，适合长线复杂项目，而非一次性问答。"
+        },
+        {
+            "question": "Flowith 支持团队协作吗？",
+            "answer": "支持，多个用户可在同一画布实时协作。"
+        },
+        {
+            "question": "Flowith 支持哪些 AI 模型？",
+            "answer": "可接入 GPT-4、Claude 3.5、DALL·E 3 等多种模型。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "Flowith",
+        "Flowith怎么样",
+        "Flowith免费版",
+        "Flowith使用教程",
+        "Flowith和哪个好"
+    ],
+    "source_urls": [
+        "https://flowith.io",
+        "https://gptonline.ai/flowith-ai/",
+        "https://itirupati.com/flowith/",
+        "https://www.fahimai.com/zh/ai-agent-builder/"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14",
+    "published_date": "2026-08-29"
 }
