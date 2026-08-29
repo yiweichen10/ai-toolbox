@@ -62,8 +62,16 @@ def _post_process_all():
 
 def _build_tool_incremental(tool, published_tools, articles, tools_by_category, no_push=False):
     import build  # 延迟：build 完全加载后解析
-    """工具页 slug 增量：只重建该工具页 + 受影响聚合页（分类/全部工具/首页含搜索索引/排行）。
-    不调用全站后处理注入（模板已自带 logo/nav/pwa/ads 标记），保证'用哪建哪'且不污染其他页。
+    """工具页 slug 增量：只重建该工具页 + 受影响聚合页（分类/子类目/全部工具/首页含搜索索引/排行）。
+
+    2026-08-29 补齐三项（此前是半成品，从未被自动化使用过）：
+      ① 子类目页 + category 总入口 —— 新工具落在子类目时计数会变，漏建会缺入口。
+      ② 全站后处理注入 `_post_process_all()` —— 原实现明确"不调注入"，新页会缺
+         全局导航/RSS/PWA/fav-fab/坏链清理，与 08-21「漏注入丢全站广告」是同型风险。
+      ③ 全量 sitemap 重生成 —— 原实现只 `_push_single_url()` 推送单条 URL 而不写
+         sitemap.xml，新工具缺席 sitemap → deploy 门禁「sitemap 覆盖全部已发布工具」会拦。
+    收尾与文章 -s 分支保持同一套（注入 + 全量 sitemap），保证「增量产物 == 板块产物」。
+
     no_push: 2026-08-24 语义统一——--no-push 时跳过推送（原无条件 _push_single_url）。"""
     slug = tool['slug']
     print(f'\n[增量构建] 仅构建工具: {tool.get("name")} ({slug})')
@@ -84,6 +92,35 @@ def _build_tool_incremental(tool, published_tools, articles, tools_by_category, 
         _emit(os.path.join(build.BASE_DIR, 'category', cslug, 'index.html'),
               build_category_page(cat, tools_by_category[cat], all_categories=tools_by_category))
         print(f'[OK] category/{cslug}/index.html')
+
+    # 2.5 子类目独立页 + category 总入口（2026-08-29 补齐：
+    #     新工具若落在子类目，子类目页与总入口的计数/列表必须同步，否则缺入口）
+    _subdef = get_subcat_def()
+    _sub_slug = (tool.get('subcategory') or '').strip()
+    if _subdef and _sub_slug:
+        _flat_tools = [t for ts in tools_by_category.values() for t in ts]
+        for _parent_slug, _pdata in _subdef.items():
+            _subcats = _pdata.get('subcats') or {}
+            if _sub_slug not in _subcats:
+                continue
+            _sub_tools = [t for t in _flat_tools if t.get('subcategory') == _sub_slug]
+            if not _sub_tools:
+                continue
+            _parent_name = _pdata.get('name', _parent_slug)
+            _sub_dir = os.path.join(build.BASE_DIR, 'category', _sub_slug)
+            os.makedirs(_sub_dir, exist_ok=True)
+            _parent_count = len([t for t in _flat_tools if t.get('category') == _parent_name])
+            _html = build_subcategory_page(_parent_slug, _parent_name, _sub_slug,
+                                           _subcats[_sub_slug], _sub_tools, parent_count=_parent_count)
+            _emit(os.path.join(_sub_dir, 'index.html'), _html)
+            print(f'[OK] category/{_sub_slug}/index.html (子类目, {len(_sub_tools)}款)')
+    try:
+        _emit(os.path.join(build.BASE_DIR, 'category', 'index.html'),
+              _build_category_index_page(tools_by_category))
+        print('  [OK] category/index.html (总入口页)')
+    except Exception as e:
+        print(f'  [FAIL] category/index.html: {e}')
+
     # 3. 全部工具大全页
     _emit(os.path.join(build.BASE_DIR, 'tools', 'index.html'), build_tools_index_page(published_tools))
     print(f'[OK] tools/index.html')
@@ -100,10 +137,38 @@ def _build_tool_incremental(tool, published_tools, articles, tools_by_category, 
     except Exception as e:
         print(f'  [FAIL] ranking/index.html: {e}')
     print(f'[OK] ranking/* ({len(all_rankings)} 页)')
-    # 6. sitemap 增量推送该工具 URL（2026-08-24：--no-push 时跳过）
+    # 6. 重建 news 页并收集 news_urls（2026-08-29）
+    #    ⚠️ 必须在 _post_process_all() **之前**：build_news_page 是渲染动作，
+    #    放在注入之后会把刚注入的 导航/RSS/PWA/板块导航簇 覆盖掉（实测 news 页与
+    #    -t news 产物 50 处不一致）。与文章 -s 分支（先渲染 line 212、后注入 line 258）保持一致。
+    news_urls = build_news_page(published_tools) or []
+
+    # 7. 全站后处理注入（2026-08-29 补齐：与全量/文章增量共用同一份，
+    #    否则新页缺 全局导航/站点标识/footer/PWA/fav-fab/favicon/hreflang/RSS/板块导航簇/坏链清理）
+    _post_process_all()
+
+    # 8. 全量 sitemap 重生成（2026-08-29 补齐：参数必须与全量分支逐一对应，
+    #    原实现只推单条 URL 不写文件 → 新工具缺席 sitemap，会被 deploy 门禁拦下）
+    quiz_data = load_quiz_data()
+    all_quizzes = quiz_data.get('quizzes', [])
+    live_data = load_live_data()
+    all_lives = live_data.get('live_pages', [])
+    dict_terms = [t for t in _load_dict_terms() if t.get('published', True)]
+    sitemap = generate_sitemap(published_tools, articles,
+                               [get_category_slug(cat) for cat in tools_by_category.keys()],
+                               all_compares, all_alternatives, all_quizzes, all_rankings,
+                               all_lives, dict_terms, news_urls=news_urls if news_urls else None)
+    with open(os.path.join(build.BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
+        f.write(sitemap)
+    print(f'[OK] sitemap.xml ({len(published_tools)} tools + {len(articles)} articles + '
+          f'{len(all_compares)} compares + {len(all_alternatives)} alternatives + '
+          f'{len(all_quizzes)} quizzes + {len(all_rankings)} rankings + {len(all_lives)} live + '
+          f'{len(dict_terms)} dict)')
+
+    # 8. 推送新 URL（2026-08-24 语义：--no-push 时跳过）
     if not no_push:
         _push_single_url(f'https://www.aitoollab.cn/tools/{slug}/index.html')
-    print(f'\n[完成] 增量构建: 1 工具页 + 分类页 + 聚合页')
+    print(f'\n[完成] 增量构建: 1 工具页 + 分类页/子类目页 + 聚合页 + 全站注入 + 全量 sitemap')
     return True
 
 def build_target(target, slug=None, no_push=False):
@@ -510,8 +575,15 @@ def build_target(target, slug=None, no_push=False):
 # === AI-NEWS-BUILD-BEGIN ===
     # ===== 快讯页 =====
     news_urls = []
-    if target in ("all", "news"):
-        news_urls = build_news_page(published_tools)
+    # 2026-08-29：改为「所有构建方式都重建快讯页」（原仅 all / news 分支）。
+    #   ① 板块构建（-t tools / -t index 等）原先不重建 → news_urls 为空 → 产出的 sitemap
+    #      缺整个快讯板块，实测 -t tools 只出 1101 条而全量 1148 条（差 47），
+    #      即每天 08:30 的工具发布都会把线上 sitemap 写残，直到周日全量才恢复。
+    #   ② 必须在**渲染阶段**（早于 _post_process_all）执行：build_news_page 是渲染动作，
+    #      放在注入之后会把刚注入的 导航/RSS/PWA/板块导航簇 覆盖掉（实测 49 页产物不一致）。
+    #   ③ -t none 语义是「只做后处理注入、不重建页面」，故排除。
+    if target != 'none':
+        news_urls = build_news_page(published_tools) or []
 # === AI-NEWS-BUILD-END ===
 
     if target in ('all', 'dict'):
