@@ -458,7 +458,10 @@ echo "[4/4] 📤 Git 备份排名/数据变更..."
 cd "$LOCAL_DIR"
 # 2026-08-23 数据拆分：单体 data/tools.json/articles.json 不再提交（改为提交 data/tools/ data/articles/ 小文件目录，
 # 每次部署只提交改动的小文件，彻底止 git 膨胀）。单体仍被 data_store 同步更新并 scp 到服务器供后端读取。
-git add data/live_data.json data/ranking_data.json data/subcategories.json data/_latest_infographic.json data/homepage_picks.json data/picks_candidates.json data/picks_history.json index.html live/ ranking/ scripts/build.py scripts/build_lib/ data/tools/ data/articles/ 2>/dev/null || true
+# 2026-08-29 扩白名单：纳入构建辅助脚本与项目规则文件（原白名单只含 build.py + build_lib/，
+# 导致 seo_title_helper.py / publish_new_tools.py / AGENTS.md / .gitignore 的改动永不进 git，
+# 踩「无 git 不可回滚」血泪教训）。精准补路径，不用 git add -A（会误提交 scratch 文件）。
+git add data/live_data.json data/ranking_data.json data/subcategories.json data/_latest_infographic.json data/homepage_picks.json data/picks_candidates.json data/picks_history.json index.html live/ ranking/ scripts/build.py scripts/build_lib/ scripts/seo_title_helper.py scripts/publish_new_tools.py AGENTS.md .gitignore data/tools/ data/articles/ 2>/dev/null || true
 if git diff --cached --quiet; then
     echo "  无可提交变更"
 else
