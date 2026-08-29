@@ -171,6 +171,347 @@ def _build_tool_incremental(tool, published_tools, articles, tools_by_category, 
     print(f'\n[完成] 增量构建: 1 工具页 + 分类页/子类目页 + 聚合页 + 全站注入 + 全量 sitemap')
     return True
 
+
+def build_changed(no_push=False):
+    import build  # 延迟：build 完全加载后解析
+    """数据感知增量构建（2026-08-29）：分片动了哪些文件，就只构建受影响页面。
+
+    背景：data/tools|articles|dict_terms 自 08-25 分片化后即"一实体一文件"，变更天然可检测，
+    但构建层一直只有「板块全量 -t X」（板块内无差别重渲染）和「-s 单实体」（每实体重复一遍
+    全站收尾）两档。本函数补上真正的按需档：以 .build_state.json 记录上次构建时各分片 mtime，
+    本次对比得出变更实体，只渲染受影响页面；news / 全站注入 / sitemap 整次构建只做一遍。
+
+    策略（保守优先：聚合页宁多勿漏，全部依据已实测的依赖关系）：
+      - 构建面变更（build_lib / build.py / css / js 源文件）或无基线（首次）→ 大改动，回退全量
+      - 工具分片变更 → 该工具页 + 其分类页/子类目页 + category 总入口 + 大全页
+        + 首页(含 tools-data.js) + 成员含该 slug 的 compare/alternatives 页
+        （精确匹配 compared_tools / target_tool 字段）+ ranking 板块（19 页，保守全量）+ news 页
+      - 文章分片变更 → 文章页 + 日期邻居 + related_tools 工具页 + 列表页 + 内容分类页 + 首页
+      - 词典分片变更 → dict 板块全量（词条页含相邻导航，134 页成本低，精确切分不划算）
+      - news_*.json / pseo 数据文件变更 → 对应板块全量
+      - 任何变更 → rss + 一次 _post_process_all() + 全量 sitemap（口径与全量一致）
+      - 无变更 → 0 动作直接退出
+    分片被删除 → 回退全量（罕见操作，保守处理）。
+    回退统一走 build_target('all', no_push=no_push)，保证产物与全量逐字节一致。
+    """
+    import time as _time
+    import glob as _glob
+    import re as _re
+    t0 = _time.time()
+    state_path = os.path.join(build.BASE_DIR, '.build_state.json')
+    prev = {}
+    if os.path.exists(state_path):
+        try:
+            with open(state_path, 'r', encoding='utf-8') as _f:
+                prev = json.load(_f)
+        except Exception:
+            prev = {}
+
+    def _scan(d):
+        out = {}
+        if os.path.isdir(d):
+            for r, _, fs in os.walk(d):
+                for f in fs:
+                    if f.endswith('.json'):
+                        p = os.path.join(r, f)
+                        try:
+                            out[p] = os.path.getmtime(p)
+                        except OSError:
+                            pass
+        return out
+
+    tool_shards = _scan(os.path.join(build.BASE_DIR, 'data', 'tools'))
+    art_shards = _scan(os.path.join(build.BASE_DIR, 'data', 'articles'))
+    dict_shards = _scan(os.path.join(build.BASE_DIR, 'data', 'dict_terms'))
+    news_files = {}
+    for _p in _glob.glob(os.path.join(build.BASE_DIR, 'data', 'news_*.json')):
+        news_files[_p] = os.path.getmtime(_p)
+    pseo_files = {}
+    for _n in ('compare_data.json', 'ranking_data.json', 'live_data.json', 'quiz_data.json'):
+        _p = os.path.join(build.BASE_DIR, 'data', _n)
+        if os.path.exists(_p):
+            pseo_files[_p] = os.path.getmtime(_p)
+    # 构建面（大改动判定）：build_lib 脚本 / build.py / css 源 / js 源（排除构建产物 tools-data.js 与 tts-reader-<hash>.js）
+    surface = list(_glob.glob(os.path.join(build.BASE_DIR, 'scripts', 'build_lib', '*.py')))
+    surface.append(os.path.join(build.BASE_DIR, 'scripts', 'build.py'))
+    surface += _glob.glob(os.path.join(build.BASE_DIR, 'css', '*.css'))
+    surface += [p for p in _glob.glob(os.path.join(build.BASE_DIR, 'js', '*.js'))
+                if os.path.basename(p) != 'tools-data.js'
+                and not _re.match(r'tts-reader-.+\.js$', os.path.basename(p))]
+    cur = {}
+    for _d in (tool_shards, art_shards, dict_shards, news_files, pseo_files):
+        cur.update(_d)
+    for _p in surface:
+        try:
+            cur[_p] = os.path.getmtime(_p)
+        except OSError:
+            pass
+
+    def _fallback(reason):
+        print(f'[--changed] {reason} → 回退全量构建（保证产物一致性）')
+        rc = build_target('all', no_push=no_push)
+        _write_state(state_path, cur)
+        print(f'[--changed] 全量回退完成，基线已建立（{len(cur)} 文件）')
+        return rc
+
+    def _write_state(_sp, _m):
+        try:
+            with open(_sp, 'w', encoding='utf-8') as _f:
+                json.dump(_m, _f)
+        except OSError as _e:
+            print(f'[WARN] 状态文件写失败（下次将回退全量）：{_e}')
+
+    if not prev:
+        return _fallback('首次运行，无状态基线')
+
+    # ── 大改动判定 ──
+    _surface_changed = [p for p in surface if cur.get(p) != prev.get(p)]
+    if _surface_changed:
+        return _fallback(f'构建面变更 {_surface_changed[:3]}{"..." if len(_surface_changed) > 3 else ""}')
+
+    # ── 变更分类 ──
+    changed_tool_paths = [p for p in tool_shards if cur.get(p) != prev.get(p)]
+    deleted_paths = [p for p in prev if p not in cur and not p.endswith(('build.py',)) and os.path.dirname(p) in (
+        os.path.join(build.BASE_DIR, 'data', 'tools'),
+        os.path.join(build.BASE_DIR, 'data', 'articles'),
+        os.path.join(build.BASE_DIR, 'data', 'dict_terms'))]
+    if deleted_paths:
+        return _fallback(f'检测到分片删除 {len(deleted_paths)} 个')
+    changed_art_paths = [p for p in art_shards if cur.get(p) != prev.get(p)]
+    changed_dict_paths = [p for p in dict_shards if cur.get(p) != prev.get(p)]
+    changed_news = [p for p in news_files if cur.get(p) != prev.get(p)]
+    changed_pseo = [p for p in pseo_files if cur.get(p) != prev.get(p)]
+
+    if not (changed_tool_paths or changed_art_paths or changed_dict_paths or changed_news or changed_pseo):
+        print(f'[--changed] 数据零变更（基线 {len(prev)} 文件），0 动作退出（{_time.time() - t0:.1f}s）')
+        return True
+
+    # ── 数据加载与初始化（与 build_target 前置处理保持一致）──
+    all_tools = load_tools()
+    build._SLUG_MAP.clear()
+    build._SLUG_MAP.update({t['slug']: t for t in all_tools if t.get('slug')})
+    articles = load_articles()
+    build._check_content_preamble(all_tools, articles)
+
+    def _article_date_key(a):
+        d = a.get('date', '')
+        try:
+            if '-' in d and len(d) == 10:
+                parts = d.split('-')
+                return (int(parts[0]), int(parts[1]), int(parts[2]))
+            elif '/' in d:
+                parts = d.split('/')
+                return (2026, int(parts[0]), int(parts[1]))
+            return (0, 0, 0)
+        except Exception:
+            return (0, 0, 0)
+    articles.sort(key=lambda a: _article_date_key(a), reverse=True)
+    build.ensure_article_content_types(articles)
+    generate_rss(articles)
+    published_tools = [t for t in all_tools if t.get('published', False)]
+    build.TOOL_COUNT = len(published_tools)
+    build.CAT_COUNT = len({t.get('category') for t in published_tools if t.get('category')})
+    build.ART_COUNT = len(articles)
+    tools_by_category = {}
+    for _t in published_tools:
+        _c = _t.get('category')
+        if _c:
+            tools_by_category.setdefault(_c, []).append(_t)
+
+    compare_data = load_compare_data()
+    all_compares = compare_data.get('compares', [])
+    all_alternatives = compare_data.get('alternatives', [])
+    quiz_data = load_quiz_data()
+    all_quizzes = quiz_data.get('quizzes', [])
+    ranking_data = load_ranking_data()
+    all_rankings = ranking_data.get('rankings', [])
+    live_data = load_live_data()
+    all_lives = live_data.get('live_pages', [])
+    tools_by_slug = {t['slug']: t for t in published_tools}
+
+    def _slug_of(path):
+        return os.path.splitext(os.path.basename(path))[0]
+
+    changed_tool_slugs = [_slug_of(p) for p in changed_tool_paths]
+    changed_art_slugs = [_slug_of(p) for p in changed_art_paths]
+    print(f'[--changed] 变更：工具 {changed_tool_slugs or "-"} | 文章 {changed_art_slugs or "-"} '
+          f'| 词典 {len(changed_dict_paths)} | news {len(changed_news)} | pseo数据 {len(changed_pseo)}')
+
+    # ── 工具线 ──
+    if changed_tool_slugs:
+        for _sl in changed_tool_slugs:
+            _t = tools_by_slug.get(_sl)
+            if not _t:
+                continue  # 未发布/新占位：无页面产物
+            _dir = os.path.join(build.BASE_DIR, 'tools', _sl)
+            os.makedirs(_dir, exist_ok=True)
+            _emit(os.path.join(_dir, 'index.html'),
+                  build_tool_page(_t, published_tools, articles, all_compares, all_alternatives, all_rankings))
+            print(f'[OK] tools/{_sl}/index.html')
+        # 分类页/子类目页（受影响集合）
+        _cats = {tools_by_slug[s].get('category') for s in changed_tool_slugs if s in tools_by_slug}
+        _cats.discard(None)
+        for _c in _cats:
+            if _c in tools_by_category:
+                _cs = get_category_slug(_c)
+                _d = os.path.join(build.BASE_DIR, 'category', _cs)
+                os.makedirs(_d, exist_ok=True)
+                _emit(os.path.join(_d, 'index.html'),
+                      build_category_page(_c, tools_by_category[_c], all_categories=tools_by_category))
+                print(f'[OK] category/{_cs}/index.html')
+        _subs = {tools_by_slug[s].get('subcategory') for s in changed_tool_slugs if s in tools_by_slug}
+        _subs.discard(None)
+        _subdef = get_subcat_def()
+        _flat = [t for ts in tools_by_category.values() for t in ts]
+        for _ss in _subs:
+            if _subdef:
+                for _ps, _pd in _subdef.items():
+                    _scats = _pd.get('subcats') or {}
+                    if _ss not in _scats:
+                        continue
+                    _stools = [t for t in _flat if t.get('subcategory') == _ss]
+                    if not _stools:
+                        continue
+                    _sd = os.path.join(build.BASE_DIR, 'category', _ss)
+                    os.makedirs(_sd, exist_ok=True)
+                    _pc = len([t for t in _flat if t.get('category') == _pd.get('name', _ps)])
+                    _emit(os.path.join(_sd, 'index.html'),
+                          build_subcategory_page(_ps, _pd.get('name', _ps), _ss, _scats[_ss], _stools, parent_count=_pc))
+                    print(f'[OK] category/{_ss}/index.html (子类目)')
+        try:
+            _emit(os.path.join(build.BASE_DIR, 'category', 'index.html'), _build_category_index_page(tools_by_category))
+            print('  [OK] category/index.html (总入口页)')
+        except Exception as e:
+            print(f'  [FAIL] category/index.html: {e}')
+        _emit(os.path.join(build.BASE_DIR, 'tools', 'index.html'), build_tools_index_page(published_tools))
+        print('[OK] tools/index.html')
+        # compare/alternatives：精确匹配成员
+        _hit_c = [c for c in all_compares if set(c.get('compared_tools') or []) & set(changed_tool_slugs)]
+        for _c in _hit_c:
+            _cs = _c.get('slug', 'unknown')
+            _d = os.path.join(build.BASE_DIR, 'compare', _cs)
+            os.makedirs(_d, exist_ok=True)
+            try:
+                _emit(os.path.join(_d, 'index.html'),
+                      build_compare_page(_c, published_tools, articles,
+                                         existing_compare_slugs={c.get('slug') for c in all_compares}))
+                print(f'[OK] compare/{_cs}/index.html')
+            except Exception as e:
+                print(f'  [FAIL] compare/{_cs}/: {e}')
+        _hit_a = [a for a in all_alternatives if a.get('target_tool') in changed_tool_slugs]
+        for _a in _hit_a:
+            _as = _a.get('slug', 'unknown')
+            _d = os.path.join(build.BASE_DIR, 'alternatives', _as)
+            os.makedirs(_d, exist_ok=True)
+            try:
+                _emit(os.path.join(_d, 'index.html'), build_alternatives_page(_a, published_tools, articles))
+                print(f'[OK] alternatives/{_as}/index.html')
+            except Exception as e:
+                print(f'  [FAIL] alternatives/{_as}/: {e}')
+
+    # ── ranking（工具变更 → 保守全量，19 页成本低）──
+    if changed_tool_slugs:
+        for _rd in all_rankings:
+            _rs = _rd.get('slug', 'unknown')
+            _d = os.path.join(build.BASE_DIR, 'ranking', _rs)
+            os.makedirs(_d, exist_ok=True)
+            try:
+                _emit(os.path.join(_d, 'index.html'), build_ranking_page(_rd, published_tools, articles))
+            except Exception as e:
+                print(f'  [FAIL] ranking/{_rs}/: {e}')
+        try:
+            _emit(os.path.join(build.BASE_DIR, 'ranking', 'index.html'), _build_ranking_index_page(all_rankings))
+            print(f'[OK] ranking/* ({len(all_rankings)} 页)')
+        except Exception as e:
+            print(f'  [FAIL] ranking/index.html: {e}')
+
+    # ── 文章线 ──
+    if changed_art_slugs:
+        for _i, _a in enumerate(articles):
+            if _a['slug'] not in changed_art_slugs:
+                continue
+            _d = os.path.join(build.BASE_DIR, 'articles', _a['slug'])
+            os.makedirs(_d, exist_ok=True)
+            _emit(os.path.join(_d, 'index.html'), build_article_page(_a, articles, published_tools))
+            print(f'[OK] articles/{_a["slug"]}/index.html')
+            # 日期邻居（上一篇/下一篇链接）
+            for _j in (_i - 1, _i + 1):
+                if 0 <= _j < len(articles) and articles[_j]['slug'] != _a['slug']:
+                    _nd = os.path.join(build.BASE_DIR, 'articles', articles[_j]['slug'])
+                    _emit(os.path.join(_nd, 'index.html'),
+                          build_article_page(articles[_j], articles, published_tools))
+                    print(f'[OK] articles/{articles[_j]["slug"]}/index.html (邻居)')
+            # related_tools 工具页
+            for _ts in (_a.get('related_tools') or []):
+                if _ts in tools_by_slug:
+                    _td = os.path.join(build.BASE_DIR, 'tools', _ts)
+                    _emit(os.path.join(_td, 'index.html'),
+                          build_tool_page(tools_by_slug[_ts], published_tools, articles,
+                                          all_compares, all_alternatives, all_rankings))
+                    print(f'[OK] tools/{_ts}/index.html (related)')
+        total_pages = build_article_list_pages(articles)
+        build_article_category_pages(articles)
+        print(f'[OK] 文章列表页/分类页 ({total_pages} 页)')
+
+    # ── 词典线（保守：板块全量）──
+    if changed_dict_paths:
+        dict_terms = [t for t in _load_dict_terms() if t.get('published', True)]
+        if dict_terms:
+            _emit(os.path.join(build.BASE_DIR, 'dict', 'index.html'), _build_dict_index_page(dict_terms))
+            print('  [OK] dict/index.html (总入口页)')
+            for _i, _term in enumerate(dict_terms):
+                if _term['slug'] in {_slug_of(p) for p in changed_dict_paths}:
+                    _td = os.path.join(build.BASE_DIR, 'dict', _term['slug'])
+                    os.makedirs(_td, exist_ok=True)
+                    _emit(os.path.join(_td, 'index.html'), build_dict_page(_term, dict_terms, _i))
+                    print(f'[OK] dict/{_term["slug"]}/index.html')
+
+    # ── news / pseo 数据变更 → 对应板块全量 ──
+    for _p in changed_pseo:
+        _bn = os.path.basename(_p)
+        if _bn == 'compare_data.json':
+            for _c in all_compares:
+                _d = os.path.join(build.BASE_DIR, 'compare', _c.get('slug', 'unknown'))
+                os.makedirs(_d, exist_ok=True)
+                try:
+                    _emit(os.path.join(_d, 'index.html'),
+                          build_compare_page(_c, published_tools, articles,
+                                             existing_compare_slugs={c.get('slug') for c in all_compares}))
+                except Exception:
+                    pass
+            print(f'[OK] compare/* ({len(all_compares)} 页, 数据变更)')
+        elif _bn == 'ranking_data.json':
+            for _rd in all_rankings:
+                _d = os.path.join(build.BASE_DIR, 'ranking', _rd.get('slug', 'unknown'))
+                os.makedirs(_d, exist_ok=True)
+                _emit(os.path.join(_d, 'index.html'), build_ranking_page(_rd, published_tools, articles))
+            print(f'[OK] ranking/* ({len(all_rankings)} 页, 数据变更)')
+
+    # ── 首页（任何实体变更都重建：今日推荐/最近更新/计数/词典卡）──
+    _emit(os.path.join(build.BASE_DIR, 'index.html'), build_index_page(published_tools, articles))
+    print('[OK] index.html (含搜索索引)')
+
+    # ── news（保守：任何变更都重建，含工具链接与最近统计；必须早于注入）──
+    news_urls = build_news_page(published_tools) or []
+
+    # ── 一次全站注入 ──
+    _post_process_all()
+
+    # ── 一次全量 sitemap ──
+    dict_terms = [t for t in _load_dict_terms() if t.get('published', True)]
+    sitemap = generate_sitemap(published_tools, articles,
+                               [get_category_slug(cat) for cat in tools_by_category.keys()],
+                               all_compares, all_alternatives, all_quizzes, all_rankings,
+                               all_lives, dict_terms, news_urls=news_urls if news_urls else None)
+    with open(os.path.join(build.BASE_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
+        f.write(sitemap)
+    print(f'[OK] sitemap.xml (与全量同口径)')
+
+    _write_state(state_path, cur)
+    print(f'\n[完成] 数据感知增量构建（{_time.time() - t0:.1f}s）')
+    return True
+
+
 def build_target(target, slug=None, no_push=False):
     import build  # 延迟：build 完全加载后解析
     """
@@ -785,8 +1126,14 @@ def main():
     parser.add_argument('--no-push',
                         action='store_true',
                         help='只构建 HTML，不推送 sitemap/IndexNow/百度（本地验证用，等价 -t none 但会正常重建页面）')
+    parser.add_argument('--changed',
+                        action='store_true',
+                        help='数据感知增量：对比 .build_state.json 基线，只构建受变更分片影响的页面（2026-08-29）。构建面/无基线/分片删除自动回退全量')
     args = parser.parse_args()
-    build_target(args.target, slug=args.slug, no_push=args.no_push)
+    if args.changed:
+        build_changed(no_push=args.no_push)
+    else:
+        build_target(args.target, slug=args.slug, no_push=args.no_push)
 
     # 2026-08-13 机制化：构建完自动补跑广告/CPS 注入（幂等，重复跑无副作用）。
     # 背景：广告加载器不在模板里，是构建后由 scripts/inject_ads.py 单独注入的；
