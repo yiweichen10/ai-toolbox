@@ -224,15 +224,22 @@ def publish_new_tools(num_to_publish=3):
     except Exception as e:
         print(f"  [WARN] Phase3 自动生成失败 (非致命): {e}")
 
-    # 5. 运行build.py重新生成网站
-    # 2026-08-24：-t tools --no-push（拆分后实测优化）
-    #   -t tools：只重建工具相关页（详情/分类/首页/tools-data/sitemap），发布工具不涉及文章/词典/快讯，全量重建属浪费
-    #   --no-push：发布链路后续自动化会 build --target tools（推送点）或 deploy.sh，此处推送会造成百度 over quota + IndexNow 重复推送
-    print(f"正在运行 {BUILD_SCRIPT_PATH} -t tools --no-push 重新生成网站...")
-    result = subprocess.run(['python', BUILD_SCRIPT_PATH, '-t', 'tools', '--no-push'], capture_output=False)
+    # 5. 运行 build.py（2026-08-29 二次改造：-s ×3 → --changed 数据感知增量）
+    #   实测教训：-s ×3 = 99s，比 -t tools（78s）还慢——每个 -s 都重复一遍全站收尾
+    #   （注入扫 1312 文件 + news 50 页 + sitemap）。--changed 一次构建内完成：
+    #   检测分片 mtime → 只渲染变更工具页/受影响聚合页 → 全站收尾只做一遍。
+    #   构建面变更/无基线/分片删除 → 自动回退全量，兜底逻辑内建。
+    #   --no-push：后续 Step2/Step3 会 build -t tools（推送点）+ deploy.sh 上线
+    print(f"正在运行 {BUILD_SCRIPT_PATH} --changed --no-push（数据感知增量）...")
+    result = subprocess.run(['python', BUILD_SCRIPT_PATH, '--changed', '--no-push'], capture_output=False)
     if result.returncode != 0:
-        print("网站构建失败！")
-        return
+        # 容错：增量失败回退板块构建，宁可慢也不能出残页
+        print("[回退] --changed 失败，改用板块构建 -t tools 兜底 ...")
+        result = subprocess.run(['python', BUILD_SCRIPT_PATH, '-t', 'tools', '--no-push'],
+                                capture_output=False)
+        if result.returncode != 0:
+            print("网站构建失败！")
+            return
     print("网站重新生成完成。")
 
     # 6. Git commit + push 部署到 Vercel
@@ -247,7 +254,8 @@ def publish_new_tools(num_to_publish=3):
             if os.path.exists(tool_dir):
                 subprocess.run(['git', 'add', 'tools/' + t['slug'] + '/'], cwd=BASE_DIR, check=False)
         # 确保关键生成文件被跟踪
-        for path in ['data/tools.json', 'images/og/', 'sitemap.xml', 'js/tools-data.js', 'index.html']:
+        # 2026-08-29：data/tools.json 单体已退役（真源是分片），改为 add 分片目录
+        for path in ['data/tools/', 'images/og/', 'sitemap.xml', 'js/tools-data.js', 'index.html']:
             subprocess.run(['git', 'add', path], cwd=BASE_DIR, check=False)
         subprocess.run(['git', 'commit', '-m', commit_msg], cwd=BASE_DIR, check=True)
         subprocess.run(['git', 'push', 'origin', 'main'], cwd=BASE_DIR, check=True)

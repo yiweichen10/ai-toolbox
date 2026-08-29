@@ -1,5 +1,23 @@
 # -*- coding: utf-8 -*-
 import re
+import hashlib
+
+
+def _stable_idx(key: str, n: int) -> int:
+    """跨进程稳定的轮询下标（2026-08-29 修复，勿改回内置 hash）。
+
+    原实现用 abs(hash(slug)) % n，而 Python 的 str hash 受 PYTHONHASHSEED 随机化影响：
+    每个 Python 进程启动 seed 都不同 → 同一 slug 每次构建选中的话术不同 →
+    实测约 65 个工具页的 meta description 每次构建随机漂移。
+    危害：① 违反 AGENTS.md 硬性规则 4「构建必须稳定可复现」；
+    ② 搜索引擎每次抓取拿到不同摘要，页面被认为内容不稳定；
+    ③ 这些页每天被判定为变更、白白重传。
+    改用 md5 → 跨进程/跨平台/跨版本恒定。
+    """
+    if n <= 0:
+        return 0
+    digest = hashlib.md5((key or "").encode("utf-8")).hexdigest()
+    return int(digest, 16) % n
 
 """
 意图驱动标题引擎 — 为 AI工具宝箱 工具详情页生成差异化 Title / Meta / long_tail。
@@ -76,7 +94,7 @@ def gen_long_tail(tool, slug_info=None):
 
     # 1) 价格意图（多话术轮询）
     if "免费" in price:
-        return PRICE_TAILS[abs(hash(slug)) % len(PRICE_TAILS)]
+        return PRICE_TAILS[_stable_idx(slug, len(PRICE_TAILS))]
 
     # 2) 对比意图（仅同分类强竞品，避免跨类硬凑；多话术轮询）
     if slug_info:
@@ -89,12 +107,12 @@ def gen_long_tail(tool, slug_info=None):
                 rn = rt
                 rcat = cat  # 旧式 name map 兼容，不约束同分类
             if rn and 2 <= len(rn) <= 8 and rn != name and rcat == cat:
-                tpl = COMPARE_TAILS[abs(hash(slug + r)) % len(COMPARE_TAILS)]
+                tpl = COMPARE_TAILS[_stable_idx(slug + r, len(COMPARE_TAILS))]
                 return tpl.format(rival=rn)
 
     # 3) 分类话术兜底
     pool = CAT_TAILS.get(cat, DEFAULT_TAILS)
-    return pool[abs(hash(slug)) % len(pool)]
+    return pool[_stable_idx(slug, len(pool))]
 
 
 _TIME_NOISE = re.compile(
@@ -202,7 +220,7 @@ def _quality_fix(raw, name, cat, min_len=6):
     # 3) 过短 → 分类话术兜底（"本地优先"/"用于构建"/"AI平台" 等残废 tail）
     if len(raw) < min_len:
         pool = CAT_TAILS.get(cat, DEFAULT_TAILS)
-        raw = pool[abs(hash(name or "tool")) % len(pool)]
+        raw = pool[_stable_idx(name or "tool", len(pool))]
     # 4) 过长 → 在 12~26 字区间找语义断点（空格/的），否则硬截 24
     if len(raw) > 26:
         head = raw[:26]
@@ -279,7 +297,7 @@ def build_meta(name, tail, description, year=None, tool=None):
                 f"含{_cat}场景功能亮点、价格与上手难度，助你一眼看清适合谁。",
                 f"聚焦{_cat}场景，功能、价格、优缺点一次讲清，附实测结论。",
             ]
-            _extra = _variants[abs(hash(tool.get("slug", ""))) % len(_variants)]
+            _extra = _variants[_stable_idx(tool.get("slug", ""), len(_variants))]
             _sep = "" if meta.endswith(("。", "！", "？")) else "。"
             meta += _sep + _extra
     return meta[:160]

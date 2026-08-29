@@ -129,6 +129,27 @@ js/tools-data.js（首页工具数据，构建时由 build.py 生成）
   配图与 OG 图也在 gitignore 里，必须显式补进去。远端 sha1 校验别用 `ssh + stdin 循环`
   （Windows OpenSSH 客户端下 stdin 传不进远程 while，会假失败），把路径拼进远程命令分批跑。
 
+## 2026-08-29 板块构建 vs 全量：跨板块快照一致性（改工具数据必读）
+
+- **事实（实测）**：`--target X` 是**板块范围选择器**，不是增量。它跳过其他板块的**渲染**，
+  但那些板块的页面仍以「工具/文章」为数据源，存在两类消费模式（详见 `BUILD-IMPACT-MATRIX.md` 表5）：
+  1. **成员快照**：`ranking` / `compare` / `alternatives` / `quiz` 按预定义 slug 取成员的价格、
+     评分、描述快照（render_ranking.py:30-33、render_compare.py:38/272/457）。
+     → **新增工具无影响**（不在预定义名单）；**修改已有工具数据会陈旧**。
+  2. **聚合区块**：文章页「相关工具卡」按正文匹配 → 同分类补 → visits 热门补
+     （render_article.py:87-107），会因新工具/数据变化而变（错曝光，非错误信息）。
+- **当前无故障的原因**：唯一会修改已有工具数据的自动化（版本监控 automation-1785506588141）
+  跑的是 **`build.py` 全量**，天然覆盖 pseo 板块 → 快照自动同步。
+  实证（2026-08-29）：`glm-5-2` 在 3 个 ranking 榜均列第 1，08-27 写入的
+  `GLM-5.3-Flash` 已同步进 ranking 页 → **无陈旧**。
+- 🔴 **立规（防退化，不是修故障）**：任何修改 `data/tools/*.json`（尤其是 price / description /
+  verified_features / content）的变更，构建必须满足以下之一：
+  - `python scripts/build.py`（全量，推荐）；或
+  - `python scripts/build.py -t tools` **+ `python scripts/build.py -t pseo --no-push`**（补快照）。
+  - **仅 `-t tools` 而对已有工具做了数据修改 = 违规**，会让 compare/quiz/ranking 带着旧价格上线，
+    且该陈旧**无声无告警**，只能等下次全量。
+  - 新增工具（未动既有数据）不受此限，`-t tools` 即可。
+
 ## 内容与模板约定
 
 - **标题纪律（2026-08-13 立规）**：新文章标题（含 H1）控制在 60 字符以内；若正文标题较长，
