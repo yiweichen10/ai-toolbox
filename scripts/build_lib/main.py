@@ -234,7 +234,12 @@ def build_changed(no_push=False):
     # 构建面（大改动判定）：build_lib 脚本 / build.py / css 源 / js 源（排除构建产物 tools-data.js 与 tts-reader-<hash>.js）
     surface = list(_glob.glob(os.path.join(build.BASE_DIR, 'scripts', 'build_lib', '*.py')))
     surface.append(os.path.join(build.BASE_DIR, 'scripts', 'build.py'))
-    surface += _glob.glob(os.path.join(build.BASE_DIR, 'css', '*.css'))
+    # 2026-08-29 修复：构建面监控只含 css **源**（style.css），排除 optimize_css 产物
+    # （style.min.css / style.critical.css 每次 optimize_css 重生成 → mtime 变 →
+    #  误判"构建面变更" → 回退全量，增量失效）。js 源同理已排除产物（tools-data.js / tts-reader-<hash>.js）。
+    surface += [p for p in _glob.glob(os.path.join(build.BASE_DIR, 'css', '*.css'))
+                if not (os.path.basename(p).endswith('.min.css')
+                        or os.path.basename(p).endswith('.critical.css'))]
     surface += [p for p in _glob.glob(os.path.join(build.BASE_DIR, 'js', '*.js'))
                 if os.path.basename(p) != 'tools-data.js'
                 and not _re.match(r'tts-reader-.+\.js$', os.path.basename(p))]
