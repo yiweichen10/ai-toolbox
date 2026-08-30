@@ -1,0 +1,163 @@
+{
+  "name": "MAGI-2",
+  "slug": "magi-2",
+  "emoji": "🎬",
+  "color": "#7C3AED",
+  "positioning": "千亿级开源 MoE 音视频生成模型",
+  "auto_positioning": true,
+  "description": "MAGI-2 Preview 是 Sand.ai 于 2026-08-05 开源的千亿级（114B 总参数）MoE 音视频生成模型：文本、视频、音频统一进同一个 Transformer 联合建模，一次生成 10 秒 1080p 且带同步音频的视频，推理成本约 0.5 元/条，是开源视频生成的天花板级选择。",
+  "category": "AI视频",
+  "subcategory": "开源视频模型",
+  "tags": [
+    "开源模型",
+    "音视频生成",
+    "MoE",
+    "文生视频",
+    "图生视频"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "N/A",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://huggingface.co/sand-ai/MAGI-2-preview",
+  "price": "开源免费（权重+代码全开源，本地部署需自备算力）",
+  "platform": "Self-hosted / 开源（Docker + torchrun，需 8×NVIDIA Hopper GPU）",
+  "pros": [
+    "全球首个千亿级开源 MoE 视频模型（114B 总参数）",
+    "文本/视频/音频统一单流建模，原生音画同步",
+    "10 秒 1080p 视频推理成本约 0.5 元，约主流模型 1/10",
+    "权重与代码全开源，可私有化部署与领域微调",
+    "Artificial Analysis 视频生成榜排名第 6（仅 6B 激活参数）"
+  ],
+  "cons": [
+    "硬件门槛极高：需 8×H100/Hopper GPU，权重约 307GB",
+    "目前仅支持 10 秒固定时长输出",
+    "Preview 阶段，非轻量托管替代品，需工程部署能力",
+    "消费级 GPU 暂难直接运行（等待社区量化版本）",
+    "中文提示词表现中等"
+  ],
+  "features": [
+    "文生视频（T2V）",
+    "图生视频（I2V，静态图 + 文本驱动）",
+    "统一音视频生成（画面 + 同步音频一次成型）",
+    "MagiMoE 超细粒度专家架构（114B 总参 / 6B 激活）",
+    "单流 Transformer 联合建模文本/视频/音频",
+    "开源权重与推理代码（HuggingFace / GitHub）"
+  ],
+  "related": [
+    "kling-ai",
+    "gen-4-runway",
+    "hedra",
+    "heygen",
+    "fliki",
+    "descript"
+  ],
+  "faq": [
+    {
+      "q": "MAGI-2 是什么？",
+      "a": "MAGI-2 Preview 是 Sand.ai 于 2026 年 8 月 5 日发布并开源的千亿级（114B 总参数）MoE 音视频生成模型。它把文本、视频、音频放进同一个 Transformer 统一建模，输入提示词或“提示词+静图”即可一次生成 10 秒 1080p、且画面与声音同步的视频。"
+    },
+    {
+      "q": "MAGI-2 免费吗？怎么部署？",
+      "a": "模型权重与推理代码在 HuggingFace（sand-ai/MAGI-2-preview）与 GitHub（SandAI-org/MAGI-2-preview）全开源、可免费自部署，但本地推理需要 8 张 NVIDIA Hopper（如 H100）GPU、约 307GB 权重，并提供 Docker 镜像与 torchrun 脚本。无 SaaS 订阅门槛，但实际成本来自算力。"
+    },
+    {
+      "q": "MAGI-2 和主流视频模型有什么不同？",
+      "a": "最大差异是“统一音视频”：多数开源视频模型（如 Wan、LTX）只生成无声画面，音频需后处理；MAGI-2 用单流架构让口型、表情、动作、对白、环境声从生成之初就相互影响，音画同步更自然。代价是模型规模大（114B）、对硬件要求高。"
+    },
+    {
+      "q": "普通创作者能直接用 MAGI-2 吗？",
+      "a": "对多数个人创作者而言，本地点跑门槛偏高。更现实的做法是等社区量化/轻量版本，或使用托管视频生成服务。MAGI-2 当前更面向研究机构、基础设施团队与具备多卡算力、需要私有化部署的企业。"
+    }
+  ],
+  "seo_keywords": [
+    "MAGI-2",
+    "MAGI-2 Preview",
+    "Sand.ai MAGI-2",
+    "MAGI-2 开源",
+    "MAGI-2 怎么用",
+    "千亿开源视频模型",
+    "MAGI-2 vs 可灵"
+  ],
+  "content": "## MAGI-2 是什么？\n\nMAGI-2 Preview 是 Sand.ai 在 2026 年 8 月 5 日发布并开源的**千亿级（114B 总参数）MoE 音视频生成模型**，也是目前全球首个开源的千亿参数视频生成模型。它最核心的特点只有一句话：把文本、视频、音频放进**同一个 Transformer** 里联合建模，一次就能生成 10 秒 1080p、且画面与声音天然同步的视频。\n\n对创作者来说，这意味着过去“先出画面、再单独配口型/音效”的多段链路被压缩成一步——人物说话时，口型、表情、身体动作和环境声由同一套主干共同生成，镜头完整度更高。\n\n> Sand.ai 在官方技术博客中把长期目标表述为：以最可扩展的方式把视频中的信息压缩进模型，最终“使其成为物理 AGI 的基础”。MAGI-2 是一次围绕“视频模型如何规模化”的架构验证，而非面向个人用户的成品 App。\n\n---\n\n## 为什么 MAGI-2 值得关注？\n\n### 1. 千亿参数，但每次只激活 6B\n语言模型早就被 MoE 推到千亿、万亿级，开源视频模型却长期停在十几 B。MAGI-2 用一套叫 **MagiMoE** 的超细粒度专家架构把总参数推到 114B，却把每个 token 实际激活的参数压到约 6B：它将 3072 维隐藏表示拆成 12 个 256 维 head，每个 head 有 256 个专家、每次只选 6 个，单层共 3072 个 head-local 专家单元、每 token 激活 72 个。\n\n结果就是“存储容量很大、单步计算很省”——在 Artificial Analysis 视频生成榜单上排第 6，用的却只是 6B 激活参数。\n\n### 2. 统一音视频，原生音画同步\n多数开源视频模型只生成无声画面，音频要靠后续对口型或配乐补上。MAGI-2 延续 Sand.ai 在 MagiHuman 论文里的单流架构：文本、视频、音频作为统一 token 序列，在同一主干的每一层 self-attention 里持续交换信息。口型、表情、动作、对白、环境声从生成一开始就互相影响，而不是最后拼接。\n\n### 3. 极低的推理成本\n按 8 卡 H100 月租金折算，生成一条 10 秒 1080p 视频的推理成本约 **0.5 元**（蒸馏后模型），约为行业主流模型的十分之一。单次成本下降后，同一预算可以跑更多版本再人工筛选，对广告、短剧、动画、游戏资产等高频调用场景意义明显。\n\n---\n\n## MAGI-2 能做什么？\n\n| 能力 | 说明 |\n|------|------|\n| 文生视频（T2V） | 输入文本提示词，生成 10 秒 1080p 视频 |\n| 图生视频（I2V） | 输入静图 + 文本指令，让画面动起来并带同步音频 |\n| 统一音视频 | 画面与声音一次成型，非后处理拼接 |\n| 开源可私有化 | 权重 + 代码全开源，可本地/企业内网部署与微调 |\n\n需要明确：当前 Preview **仅支持 10 秒固定时长**，更长的视频、更高的一致性是下一步方向。\n\n---\n\n## 部署门槛高吗？\n\n实话实说，门槛很高。MAGI-2 需要 **8 张 NVIDIA Hopper（如 H100）GPU**，完整权重约 307GB（含预览阶段 DiT、refiner、Qwen3.5-27B 文本编码器、Wan2.2 视频 VAE、Stable Audio Open 1.0 音频 VAE 等），官方提供 Docker 镜像与 torchrun 脚本。对个人创作者而言，更现实的是等待社区量化/轻量版本，或使用托管视频服务。\n\n---\n\n## 值不值得用？\n\n**适合谁：** 研究机构、基础设施团队、具备多卡算力且需要私有化/领域微调的企业（尤其金融、医疗、工业等敏感行业，可内网部署）。\n\n**暂不适合谁：** 想要“开箱即用”的个人创作者——MAGI-2 是工程级研究发布，不是消费级产品。\n\n它的价值不在于“今天就能替代可灵/Runway”，而在于把千亿级视频 MoE 这条路线正式带进开源社区，让开发者和企业可以围绕统一音视频、细粒度专家、低成本推理继续验证。\n\n---\n\n## 常见问题\n\n**MAGI-2 和 MAGI-1 有什么区别？** MAGI-1（2025-04）是 24B 自回归视频模型，研究“视频该怎么生成”；MAGI-2 转向“视频模型该怎么规模化”，从自回归分块改为统一单流 + MoE，参数从 24B 扩到 114B。\n\n**有官方托管服务吗？** Sand.ai 另有托管的 Magi 产品（积分订阅制，可对静图做文本驱动动效），与开源 MAGI-2 权重是不同入口；开源模型本身免费，成本来自算力。\n\n---\n\n*以上参数（114B 总参 / 6B 激活、10 秒 1080p、0.5 元/条、AA 榜第 6）均来自 Sand.ai 官方博客、HuggingFace/GitHub 仓库及光明网等公开报道，整理于 2026-08-30，具体能力以官网为准。*",
+  "published": true,
+  "needs_verification": false,
+  "created_date": "2026-08-30",
+  "published_date": "2026-08-30",
+  "updated_date": "2026-08-30",
+  "verified_url": "https://huggingface.co/sand-ai/MAGI-2-preview",
+  "verified_publisher": "Sand.ai",
+  "verified_what": "Sand.ai 于 2026-08-05 开源的千亿级（114B 总参数）MoE 音视频生成模型 MAGI-2 Preview，采用统一单流架构联合建模文本/视频/音频，一次生成 10 秒 1080p 带同步音频的视频，权重与代码全开源。",
+  "verified_price": "开源免费（权重与代码在 HuggingFace / GitHub 全开源）；本地推理需 8×NVIDIA Hopper GPU 算力，无 SaaS 订阅（另有托管 Magi 服务为独立产品，采用积分订阅制）。",
+  "verified_platform": "Self-hosted / 开源（Docker 镜像 + torchrun，需 8×NVIDIA Hopper GPU，权重约 307GB）",
+  "verified_rating": "4.5",
+  "rating_source": "Artificial Analysis 视频生成榜单第 6（2026-08，仅 6B 激活参数）",
+  "rating_verified": true,
+  "last_verified": "2026-08-30",
+  "confidence": "high",
+  "conflict": false,
+  "conflict_note": null,
+  "verified_features": [
+    "文生视频（T2V）",
+    "图生视频（I2V，静态图 + 文本驱动）",
+    "统一音视频生成（画面 + 同步音频一次成型）",
+    "MagiMoE 超细粒度专家架构（114B 总参 / 6B 激活）",
+    "单流 Transformer 联合建模文本/视频/音频",
+    "开源权重与推理代码（HuggingFace / GitHub）"
+  ],
+  "verified_description": "MAGI-2 Preview 是 Sand.ai 于 2026-08-05 开源的千亿级（114B 总参数）MoE 音视频生成模型，文本/视频/音频统一单流建模，一次生成 10 秒 1080p 带同步音频的视频，权重与代码全开源。",
+  "content_flags": null,
+  "price_verified": true,
+  "verified_pros": [
+    "全球首个千亿级开源 MoE 视频模型（114B 总参数）",
+    "文本/视频/音频统一单流建模，原生音画同步",
+    "10 秒 1080p 视频推理成本约 0.5 元，约主流模型 1/10",
+    "权重与代码全开源，可私有化部署与领域微调",
+    "Artificial Analysis 视频生成榜排名第 6（仅 6B 激活参数）"
+  ],
+  "verified_cons": [
+    "硬件门槛极高：需 8×H100/Hopper GPU，权重约 307GB",
+    "目前仅支持 10 秒固定时长输出",
+    "Preview 阶段，非轻量托管替代品，需工程部署能力",
+    "消费级 GPU 暂难直接运行（等待社区量化版本）",
+    "中文提示词表现中等"
+  ],
+  "verified_faq": [
+    {
+      "q": "MAGI-2 是什么？",
+      "a": "MAGI-2 Preview 是 Sand.ai 于 2026 年 8 月 5 日发布并开源的千亿级（114B 总参数）MoE 音视频生成模型。它把文本、视频、音频放进同一个 Transformer 统一建模，输入提示词或“提示词+静图”即可一次生成 10 秒 1080p、且画面与声音同步的视频。"
+    },
+    {
+      "q": "MAGI-2 免费吗？怎么部署？",
+      "a": "模型权重与推理代码在 HuggingFace（sand-ai/MAGI-2-preview）与 GitHub（SandAI-org/MAGI-2-preview）全开源、可免费自部署，但本地推理需要 8 张 NVIDIA Hopper（如 H100）GPU、约 307GB 权重，并提供 Docker 镜像与 torchrun 脚本。无 SaaS 订阅门槛，但实际成本来自算力。"
+    },
+    {
+      "q": "MAGI-2 和主流视频模型有什么不同？",
+      "a": "最大差异是“统一音视频”：多数开源视频模型只生成无声画面，音频需后处理；MAGI-2 用单流架构让口型、表情、动作、对白、环境声从生成之初就相互影响，音画同步更自然。代价是模型规模大（114B）、对硬件要求高。"
+    },
+    {
+      "q": "普通创作者能直接用 MAGI-2 吗？",
+      "a": "对多数个人创作者而言，本地点跑门槛偏高。更现实的做法是等社区量化/轻量版本，或使用托管视频生成服务。MAGI-2 当前更面向研究机构、基础设施团队与具备多卡算力、需要私有化部署的企业。"
+    }
+  ],
+  "verified_tags": [
+    "开源模型",
+    "音视频生成",
+    "MoE",
+    "文生视频",
+    "图生视频"
+  ],
+  "verified_category": "AI视频",
+  "source_urls": [
+    "https://sand.ai/blog/magi-2-preview",
+    "https://huggingface.co/sand-ai/MAGI-2-preview",
+    "https://github.com/SandAI-org/MAGI-2-preview",
+    "https://tech.gmw.cn/2026-08/07/content_38932431.htm"
+  ],
+  "verify_notes": "2026-08-30 联网核实：Sand.ai 官方博客 + HuggingFace + GitHub + 光明网报道交叉确认；114B 总参 / 6B 激活 / 10s 1080p / 0.5元/条 / AA 榜第6 均一致。Preview 阶段，仅 10 秒固定时长。",
+  "content_verified": true,
+  "url_previous": null,
+  "compare_section": null
+}
