@@ -694,7 +694,8 @@ def build_index_page(tools, articles):
     # 标签统一走 content_type（与「AI实战教程/深度评测」区块同源）。
     # 2026-08-14 修复：旧 tag_names 按 category 映射且漏了「AI工具教程」等分类，
     # 导致教程文章在 AI前沿 里被 fallback 误标成「AI资讯」，与 AI实战教程 区块的「教程」自相矛盾。
-    _ct_tag = {'AI教程': 'AI实战教程', 'AI评测': 'AI工具评测', 'AI资讯': 'AI资讯', '行业分析': 'AI行业分析'}
+    # 2026-08-30 16:30：移动端版面有限，标签统一简写两字（教程/评测/资讯/行业）；文章列表页仍用全称
+    _ct_tag = {'AI教程': '教程', 'AI评测': '评测', 'AI资讯': '资讯', '行业分析': '行业'}
     # 2026-08-25：展示最新 7 条；面板固定 350px（移动端 300px），超出滚动不压缩，两 tab 同高不闪跳
     for idx, a in enumerate(sorted_articles[:7]):
         d = a.get('date', '')
