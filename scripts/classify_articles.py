@@ -79,31 +79,37 @@ def classify(category, title):
 
 
 def main():
-    path = sys.argv[1] if len(sys.argv) > 1 else 'data/articles.json'
-    with open(path, 'r', encoding='utf-8') as f:
-        articles = json.load(f)
+    # 2026-08-30 升级：单体 articles.json 已退役，改走 data_store 分片（幂等，可重跑）。
+    # 新增 category 归一：非 4 类标准值 → 归一为 classify 结果值（用户拍板：SEO/GEO/用户角度细分合并）。
+    # orig_category 仍仅缺失时写入，不覆盖已有值（原分类信息永不丢失）。
+    import os
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from data_store import load_all_articles, save_article
 
-    changed = 0
+    articles = load_all_articles()
+    changed_cat = changed_ct = changed_orig = 0
     dist = collections.Counter()
     for a in articles:
         cat = a.get('category', '')
         title = a.get('title', '')
-        if 'orig_category' not in a or not a.get('orig_category'):
+        if not a.get('orig_category'):
             a['orig_category'] = cat
-            changed += 1
-        ct = classify(a.get('orig_category', cat), title)
+            changed_orig += 1
+        ct = classify(a.get('orig_category') or cat, title)
         if a.get('content_type') != ct:
             a['content_type'] = ct
-            changed += 1
+            changed_ct += 1
+        if cat != ct:  # category 归一到 4 类标准值
+            a['category'] = ct
+            changed_cat += 1
         dist[ct] += 1
-
-    with open(path, 'w', encoding='utf-8') as f:
-        json.dump(articles, f, ensure_ascii=False, indent=2)
+        save_article(a)
 
     print('内容类型分布：')
     for k in ('AI评测', 'AI教程', 'AI资讯', '行业分析'):
         print('  %s: %d' % (k, dist.get(k, 0)))
-    print('共 %d 篇文章，更新 %d 处字段。' % (len(articles), changed))
+    print('共 %d 篇文章：category 归一 %d 处 / content_type 修正 %d 处 / orig_category 补档 %d 处。'
+          % (len(articles), changed_cat, changed_ct, changed_orig))
 
 
 if __name__ == '__main__':
