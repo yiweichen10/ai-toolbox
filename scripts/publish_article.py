@@ -245,6 +245,32 @@ def check_ai_flavor(a, errors):
             errors.append(f"命中 AI 味表达（写作铁律禁止）: {label}")
 
 
+def _derive_topic(article):
+    """推导细分主题（19 工具分类之一），列表页卡片细分标签用。
+    优先级：orig_category 匹配工具分类 → 正文工具名众数分类 → ''（回退大类）。
+    """
+    from collections import Counter
+    from data_store import load_all_tools
+
+    _norm = lambda s: re.sub(r'[^a-z0-9一-\u9fff]', '', str(s).lower())
+    try:
+        tools = load_all_tools()
+    except Exception:
+        return ''
+    tool_cats = {t.get('category') for t in tools if t.get('category')}
+    c = article.get('orig_category', '') or article.get('category', '')
+    if c in tool_cats:
+        return c
+    body = _norm((article.get('description') or '') + ' ' +
+                 (article.get('content') or article.get('markdown') or ''))
+    cats = [t.get('category') for t in tools
+            if t.get('published', True) and t.get('name') and
+            _norm(t.get('name', '')) in body and t.get('category')]
+    if cats:
+        return Counter(cats).most_common(1)[0][0]
+    return ''
+
+
 def main():
     parser = argparse.ArgumentParser(description="自动发布文章校验与入库")
     parser.add_argument("--draft", required=True, help="草稿 JSON 路径")
@@ -303,6 +329,13 @@ def main():
             if article.get("category") != _ct:
                 article["category"] = _ct
                 print(f"[OK] category 归一: {_orig_cat or '(空)'} -> {_ct}")
+        # 2026-08-30 闸门2：topic 细分主题（19 工具分类）——列表页卡片细分标签用。
+        # 已有则保留；缺失时：orig_category 匹配工具分类优先，正文工具名众数兜底。
+        if not article.get("topic"):
+            _topic = _derive_topic(article)
+            if _topic:
+                article["topic"] = _topic
+                print(f"[OK] topic 推导: {_topic}")
         save_article(article)
         print(f"[OK] 已入库 data/articles/{slug}.json: {slug}")
 
