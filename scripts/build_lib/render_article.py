@@ -25,6 +25,18 @@ def _article_type_label(article):
     return _CT_DISPLAY.get(build.article_content_type(article), 'AI资讯')
 
 
+def _article_card_label(article):
+    """文章卡片标签（2026-08-30 用户拍板：列表页细分、首页大类）。
+
+    优先级：topic（细分主题，如 AI编程/AI对话）→ 无则回退 content_type 大类全称。
+    与面包屑区分：面包屑 L2 用大类（指向 /articles/{analysis|...}/），卡片可细分。
+    """
+    topic = article.get('topic', '')
+    if topic:
+        return topic
+    return _article_type_label(article)
+
+
 def _get_article_description(article):
     """文章 meta description 兜底链（Fix 1）。
     优先级: description → summary → excerpt → 正文首段(去HTML标签截前100字)。
@@ -98,8 +110,9 @@ def build_article_page(article, all_articles, all_tools=None):
             if _norm(_t.get('name', '').lower()) in article_content_n:
                 matched_tools.append(_t)
         # 不够5个则按分类补充（只补充已发布工具）
+        # 2026-08-30：category 已归一为 4 类内容类型（匹配不上工具分类），改用 topic（19 工具分类细分主题）
         if len(matched_tools) < 5:
-            article_category = article.get('category', '')
+            article_category = article.get('topic', '') or article.get('category', '')
             same_cat_tools = [t for t in all_tools
                              if t.get('category') == article_category
                              and t not in matched_tools
@@ -775,7 +788,7 @@ def build_article_list_pages(articles):
                             <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
                             <div class="article-meta">
                                 <span class="date">{a.get('dateFull', a.get('date', ''))}</span>
-                                <span class="category">{escape_html(_article_type_label(a))}</span>
+                                <span class="category">{escape_html(_article_card_label(a))}</span>
                             </div>
                             <p class="summary">{escape_html(a.get('description', '')[:150])}</p>
                         </article>\n'''
@@ -1027,7 +1040,7 @@ def build_article_category_pages(articles):
                             <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
                             <div class="article-meta">
                                 <span class="date">{a.get('dateFull', a.get('date', ''))}</span>
-                                <span class="category">{escape_html(_article_type_label(a))}</span>
+                                <span class="category">{escape_html(_article_card_label(a))}</span>
                             </div>
                             <p class="summary">{escape_html(a.get('description', '')[:150])}</p>
                         </article>\n'''

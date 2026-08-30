@@ -29,5 +29,6 @@
       "question": "怎么搭一条 AI 审计工作流？",
       "answer": "建议三阶段：先用 Semgrep 全局扫描，把告警喂给大模型做意图分析，最后用 Claude Code 或 Codex Agent 深挖高危点并生成修复建议；作者实测 5 万行项目可跑通。"
     }
-  ]
+  ],
+  "topic": "AI对话"
 }
