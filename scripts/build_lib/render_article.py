@@ -13,6 +13,17 @@ from build_lib.render_tool import (
 )
 from build_lib.data_loaders import (get_category_slug,)
 
+# 2026-08-30：文章列表卡片标签统一用 content_type 标准名（4 种），与首页 _ct_tag 一致。
+# 背景：8/8 曾把 22+ 细分分类归并为 4 类 content_type，但日更脚本持续直写 category 细分值，
+# 归并成果被冲掉（现仅 45/200 为标准值）。标签层不再直显原始 category，数据层暂不动。
+_CT_DISPLAY = {'AI评测': 'AI工具评测', 'AI教程': 'AI实战教程', 'AI资讯': 'AI资讯', '行业分析': 'AI行业分析'}
+
+
+def _article_type_label(article):
+    """文章列表卡片标签：content_type → 标准显示名（兜底 AI资讯）。"""
+    import build  # 延迟导入：避免循环依赖，调用时 build 已加载
+    return _CT_DISPLAY.get(build.article_content_type(article), 'AI资讯')
+
 
 def _get_article_description(article):
     """文章 meta description 兜底链（Fix 1）。
@@ -760,7 +771,7 @@ def build_article_list_pages(articles):
                             <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
                             <div class="article-meta">
                                 <span class="date">{a.get('dateFull', a.get('date', ''))}</span>
-                                <span class="category">{escape_html(a.get('category', ''))}</span>
+                                <span class="category">{escape_html(_article_type_label(a))}</span>
                             </div>
                             <p class="summary">{escape_html(a.get('description', '')[:150])}</p>
                         </article>\n'''
@@ -1012,7 +1023,7 @@ def build_article_category_pages(articles):
                             <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
                             <div class="article-meta">
                                 <span class="date">{a.get('dateFull', a.get('date', ''))}</span>
-                                <span class="category">{escape_html(a.get('category', ''))}</span>
+                                <span class="category">{escape_html(_article_type_label(a))}</span>
                             </div>
                             <p class="summary">{escape_html(a.get('description', '')[:150])}</p>
                         </article>\n'''
