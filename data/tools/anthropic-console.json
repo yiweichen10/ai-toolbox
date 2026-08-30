@@ -73,8 +73,8 @@
   "verified_what": "Anthropic 官方 API 开发者平台，用于访问和管理 Claude 系列模型、提示工程、评估与部署",
   "verified_price": "API 按量计费（Pay-as-you-go），无月费订阅。当前模型定价（每百万 Token）：Fable 5 $10/$50（输入/输出）；Opus 5 $5/$25；Sonnet 5 $2/$10（2026-08-31前推广价，标准价 $3/$15）；Haiku 4.5 $1/$5。Batch 处理省50%。平台功能（Managed Agents、Web Search、Code Execution 等）额外计费。",
   "verified_platform": "Web（仅限桌面浏览器）",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "Claude 模型 API 访问（Fable 5 / Opus 5 / Sonnet 5 / Haiku 4.5）",
@@ -128,12 +128,10 @@
   ],
   "verified_category": "AI开发",
   "source_urls": [
-    "https://console.anthropic.com",
-    "https://claude.com/platform",
-    "https://www.anthropic.com/pricing"
+    "https://console.anthropic.com"
   ],
-  "verify_notes": "url(console.anthropic.com) 正确。这是核验中问题最严重的条目。description/features/content 大量引用 Claude 3.5（2024年模型），与当前 Fable 5/Opus 5/Sonnet 5/Haiku 4.5 严重脱节。声称有'模型微调'功能——不存在。price/platform 混淆了 API Console 与 claude.ai 消费者产品。已提供 corrected_content 完整重写。",
-  "content_verified": true,
+  "verify_notes": "driver-error: Command '['C:\\\\Users\\\\27040\\\\.workbuddy\\\\binaries\\\\python\\\\versions\\\\3.13.12\\\\python.exe', 'C:\\\\Users\\\\27040\\\\WorkBuddy\\\\20260321092139\\\\seo-site\\\\scripts\\\\scrape_price.py', '--slug', 'anthropic-console', '--url', 'https://console.anthropic.com', '--source-urls', 'https://console.anthropic.com,https://claude.com/platform,https://www.anthropic.com/pricing']' timed out after 120 second",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "groq",

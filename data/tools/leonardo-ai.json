@@ -61,8 +61,8 @@
   "verified_what": "面向游戏与插画的专业 AI 图像/视频生成平台，以角色设计、自定义模型训练与实时画布著称。",
   "verified_price": "免费版（150 快速积分/天，公开生成、社区模型）；Apprentice $12/月（年付 $10，8500 积分/月、商业授权、私有图像、LoRA 训练）；Artisan $30/月（年付 $24，25000 积分/月、无限 relaxed 生成、20 个模型、完整 API）；Maestro $60/月（年付 $48，60000 积分/月、最高优先级、视频生成）；另有团队计划（Starter $24/席/月起）。",
   "verified_platform": "Web, iOS, Android, API",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "角色与游戏素材生成",
@@ -105,12 +105,10 @@
   ],
   "verified_category": "AI绘画",
   "source_urls": [
-    "https://tickerr.ai/pricing/leonardo-ai",
-    "https://www.comparegen.ai/image/leonardo",
-    "https://toolworthy.ai/tool/leonardo-ai"
+    "https://leonardo.ai"
   ],
-  "verify_notes": "官方域名 leonardo.ai 确认。档位命名 Apprentice/Artisan 与当前官方一致；另有 Maestro $60 与团队计划。",
-  "content_verified": true,
+  "verify_notes": "无可用 URL 或渲染失败",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "magnific-ai",

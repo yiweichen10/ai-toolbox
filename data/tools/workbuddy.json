@@ -87,8 +87,8 @@
   "verified_what": "WorkBuddy 是腾讯推出的全场景 AI 办公智能体（AI Agent 工作台），用自然语言下达任务即可自主规划、调用工具并交付文档/图表等成果。",
   "verified_price": "体验版：免费（每月 500 积分，限免全模型）。标准版：¥70/月（原价 ¥99）。高级版：¥140/月（原价 ¥199）。旗舰版：¥700/月（原价 ¥999）。企业版另议。国际版 Pro $9.95/月、Team $40/席位/月。",
   "verified_platform": "Windows / macOS / iOS / Android / 鸿蒙 / 微信小程序 / 网页",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "medium",
   "conflict": false,
   "verified_features": [
     "全场景任务自主规划与执行（一句话交付成果）",
@@ -134,12 +134,10 @@
   ],
   "verified_category": "AI办公",
   "source_urls": [
-    "https://www.workbuddy.cn/",
-    "https://new.qq.com/rain/a/20260720A07WMH00",
-    "https://www.tencentcloud.com/act/pro/workbuddy"
+    "https://www.workbuddy.cn/"
   ],
-  "verify_notes": "workbuddy.cn 为腾讯官方；搜索结果中的 workbuddy365.com.cn 疑似第三方镜像/仿冒站点，请勿采用。定价以国内官网实时显示为准。",
-  "content_verified": true,
+  "verify_notes": "尝试 1 个候选 URL, 第 1 个(https://www.workbuddy.cn/)命中明确金额 | 抓取价表与现有 price 一致，无变化",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "tome",

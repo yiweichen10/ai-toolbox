@@ -71,7 +71,7 @@
       "a": "2026 年 8 月 3 日登陆 Product Hunt，拿下当日 Product of the Day #2，约 427 票、93 条评论，社区反馈积极。"
     }
   ],
-  "content_verified": true,
+  "content_verified": false,
   "conflict": false,
   "verify_status": "verified",
   "seo_keywords": [
@@ -82,11 +82,13 @@
     "虚拟商店"
   ],
   "source_urls": [
-    "https://hunted.space/dashboard/ctruh-studio",
-    "https://www.linkedin.com/posts/ctruh_producthunt-ai-3d-activity-7489925943206146048-graM"
+    "https://www.ctruh.com"
   ],
-  "confidence": "medium",
+  "confidence": "low",
   "created_date": "2026-08-14",
   "updated_date": "2026-08-14",
-  "published_date": "2026-08-24"
+  "published_date": "2026-08-24",
+  "verified_url": "https://www.ctruh.com",
+  "last_verified": "2026-08-30",
+  "verify_notes": "driver-error: Command '['C:\\\\Users\\\\27040\\\\.workbuddy\\\\binaries\\\\python\\\\versions\\\\3.13.12\\\\python.exe', 'C:\\\\Users\\\\27040\\\\WorkBuddy\\\\20260321092139\\\\seo-site\\\\scripts\\\\scrape_price.py', '--slug', 'ctruh-studio', '--url', 'https://www.ctruh.com', '--source-urls', 'https://hunted.space/dashboard/ctruh-studio,https://www.linkedin.com/posts/ctruh_producthunt-ai-3d-activity-7489925943206146048-graM']"
 }

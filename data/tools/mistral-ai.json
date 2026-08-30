@@ -87,7 +87,7 @@
   "published": true,
   "created_date": "2026-06-13",
   "published_date": "2026-06-13",
-  "verified_url": "https://mistral.ai",
+  "verified_url": "https://mistral.ai/pricing",
   "verified_publisher": "Mistral AI (法国巴黎, 2023创立, €1.7B Series C, €11.7B估值)",
   "verified_what": "法国领先的开源+商业大语言模型公司。两条产品线：Le Chat(消费者AI助手, 含Vibe CLI终端编程) + La Plateforme(开发者API)。旗舰模型Large 3/MoE 123B在推理+多语言方面表现突出，Devstral系列专注代码生成，Voxtral覆盖语音。关键差异：欧洲数据主权合规+VPC/本地部署+Apache 2.0开源模型。",
   "verified_price": "Le Chat: Free $0(有限)/Pro $14.99/月(学生$5.99)/Team $24.99/用户/月/Enterprise 询价；API: Large 3 $0.50/$1.50, Medium 3.5 $1.50/$7.50, Small 4 $0.15/$0.60, Devstral 2 $0.40/$2, Codestral $0.30/$0.90, Ministral 3B $0.10/$0.10 (per MTok)",
@@ -101,18 +101,14 @@
     "VPC/本地部署+GDPR+欧洲数据主权合规",
     "开源模型(Apache 2.0/Modified MIT)"
   ],
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "medium",
   "conflict": false,
   "source_urls": [
-    "https://mistral.ai/pricing",
-    "https://mistral.ai",
-    "https://rankvipai.com/ai-chatbots-and-assistants/mistral-ai-review/",
-    "https://costbench.pages.dev/software/ai-chatbots/mistral/price-history",
-    "https://www.cloudzero.com/blog/mistral-api-pricing"
+    "https://mistral.ai/pricing"
   ],
-  "verify_notes": "官方pricing页(mistral.ai/pricing)直接确认Pro$14.99, Team$24.99。costbench追踪确认2026-07最高档从$15→$25(Team计划调整)。API Large 3从第一轮的$2/$6确认降为$0.50/$1.50(官方定价页)。5个源一致。",
-  "content_verified": true,
+  "verify_notes": "尝试 2 个候选 URL, 第 2 个(https://mistral.ai/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "tencent-hunyuan",

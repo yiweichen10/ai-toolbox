@@ -58,13 +58,13 @@
     }
   ],
   "created_date": "2026-03-28",
-  "verified_url": "https://lovable.dev",
+  "verified_url": "https://lovable.dev/pricing",
   "verified_publisher": "Lovable（原 GPT Engineer）",
   "verified_what": "AI 全栈应用构建平台，通过对话生成完整 Web 应用（前端 + Supabase 后端 + 部署）。",
   "verified_price": "免费版 $0（5 每日积分，最多 30/月，公开项目）；Pro $25/月（年付 $21/月，100 月积分 + 5 每日积分，自定义域名、去 Lovable 水印、无限 lovable.app 域名）；Business $50/月（年付 $42/月，SSO、团队权限、内部发布）；Enterprise 定制（按公司规模平台费）。学生 Pro 5 折。",
   "verified_platform": "Web",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "medium",
   "conflict": false,
   "verified_features": [
     "对话式/自然语言全栈开发",
@@ -111,12 +111,10 @@
   ],
   "verified_category": "AI编程",
   "source_urls": [
-    "https://lovable.dev/pricing",
-    "https://usagepricing.com/blueprint/lovable",
-    "https://lovable.dev/es/guides/vibe-coding-apps-8-options-for-beginners"
+    "https://lovable.dev/pricing"
   ],
-  "verify_notes": "官方域名 lovable.dev 确认。定价已调整为积分制，Pro 为 $25/月（非原 $20）。",
-  "content_verified": true,
+  "verify_notes": "尝试 2 个候选 URL, 第 2 个(https://lovable.dev/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "tongyi-lingma",

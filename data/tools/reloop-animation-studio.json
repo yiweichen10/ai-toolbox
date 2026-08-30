@@ -80,8 +80,8 @@
   ],
   "verified_description": "Reloop（reloop.so）是面向营销人员的 AI 视频广告生成器，用 AI 智能体从产品简报自动生成带虚拟形象的高转化短视频广告，无需提示词与剪辑技能。",
   "content_flags": "原长文将 Reloop 描述为'2D 动画工作室'（角色骨骼绑定、自动补帧、面部捕捉、PSD 导入等），与真实产品（AI 视频广告生成器 reloop.so）严重不符，长文整体为虚构，需重写。定价原写 $19/$49 亦不实（真实为 $34/$99/$299 每月）。",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "medium",
   "conflict": false,
   "price_verified": true,
   "verified_rating": "⭐4.6",
@@ -116,12 +116,10 @@
   ],
   "verified_category": "AI视频",
   "source_urls": [
-    "https://reloop.so",
-    "https://www.toolify.ai/tool/reloop",
-    "https://app.aibase.cn/details/41457"
+    "https://reloop.so"
   ],
-  "verify_notes": "真实产品 Reloop（reloop.so）为 AI 视频广告生成器，非 2D 动画工作室；原条目'Reloop Animation Studio'定位、功能与定价（$19/$49）均为虚构，建议更名或重写。",
-  "content_verified": true,
+  "verify_notes": "尝试 1 个候选 URL, 第 1 个(https://reloop.so)命中明确金额 | 抓取价表与现有 price 一致，无变化",
+  "content_verified": false,
   "url_previous": "https://reloop.studio",
   "compare_section": {
     "competitors": [

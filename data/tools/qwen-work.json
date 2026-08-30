@@ -29,7 +29,7 @@
     "text": "HOT"
   },
   "url": "https://www.qwenwork.cn",
-  "price": "公测期开放免费体验，个人与企业用户均可注册使用；官方尚未公布正式商业定价",
+  "price": "免费版0元；标准版¥98/月（8折¥78/月）；高级版PRO已开售",
   "platform": "网页版 / Windows PC 客户端（钉钉 PC 端与手机端内置入口即将开放，独立 App 与国际版在规划中）",
   "pros": [
     "三端 Agent 一体：桌面端操作、云端执行、企业 IM 协同在同一入口打通",
@@ -87,12 +87,15 @@
     "千问办公和WPS Comate哪个好"
   ],
   "source_urls": [
-    "https://www.qwenwork.cn",
-    "https://www.toutiao.com/article/7669653856464142857/",
-    "https://dy.163.com/article/L3DOEHMJ0514R9P4.html"
+    "https://www.qwenwork.cn/pricing"
   ],
   "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14",
-  "published_date": "2026-08-26"
+  "updated_date": "2026-08-30",
+  "published_date": "2026-08-26",
+  "verified_url": "https://www.qwenwork.cn/pricing",
+  "verified_price": "免费版 0元；标准版 ¥98/月（连续包月8折 ¥78/月）；高级版 PRO 已开售（价见官网）",
+  "last_verified": "2026-08-30",
+  "price_verified": true,
+  "verify_notes": "抓取证实已公布正式定价（此前记录“官方尚未公布”），属静默调价/上线：标准版¥98/月（连续包月8折¥78），FREE 0元，PRO已开售"
 }

@@ -76,8 +76,8 @@
   "verified_what": "AI会议录制与转录工具，自动录制Zoom/Google Meet/MS Teams会议并生成AI摘要",
   "verified_price": "Free：无限录制和转录，AI笔记限10次/月；Pro $29/月（年付$18/月）：无限AI笔记，5000+集成，全局搜索；Business $98/月（年付$59/月）：销售辅导、CRM深度集成、AI教练；Enterprise 定制：私有化AI托管、SSO",
   "verified_platform": "Chrome插件 / Web / iOS / Android / Slack集成",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "自动会议录制（Zoom/Google Meet/MS Teams）",
@@ -128,12 +128,10 @@
   ],
   "verified_category": "AI办公",
   "source_urls": [
-    "https://tldv.io",
-    "https://toolchase.com/tool/tldv",
-    "https://decidenavigator.com/tools/tldv"
+    "https://tldv.io"
   ],
-  "verify_notes": "最大纠正：(1)免费版无45分钟限制而是无限录制；(2)价格从$12/月变$18-29/月；(3)已新增MS Teams支持；(4)免费版AI功能有月度限额。tl;dv是Anthropic官方合作伙伴。",
-  "content_verified": true,
+  "verify_notes": "driver-error: Command '['C:\\\\Users\\\\27040\\\\.workbuddy\\\\binaries\\\\python\\\\versions\\\\3.13.12\\\\python.exe', 'C:\\\\Users\\\\27040\\\\WorkBuddy\\\\20260321092139\\\\seo-site\\\\scripts\\\\scrape_price.py', '--slug', 'tldv', '--url', 'https://tldv.io', '--source-urls', 'https://tldv.io,https://toolchase.com/tool/tldv,https://decidenavigator.com/tools/tldv']' timed out after 120 seconds",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "slidesai",

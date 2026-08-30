@@ -60,13 +60,13 @@
     }
   ],
   "created_date": "2026-04-13",
-  "verified_url": "https://v0.dev",
+  "verified_url": "https://v0.dev/pricing",
   "verified_publisher": "Vercel",
   "verified_what": "Vercel 推出的 AI 前端代码生成工具，用自然语言或截图生成 React/Tailwind 代码与 UI 组件。",
   "verified_price": "免费版 $0（每月 $5 额度、每日 7 条消息、可部署到 Vercel、Design Mode 可视化编辑、GitHub 同步）；Plus $30/用户/月（全部模型、$30 月额度 + $2 每日登录额度、团队共享、集中计费）；Business $100/用户/月（训练数据默认退出、同上额度）；Enterprise 定制。模型按 token 计费（v0 Mini/Pro/Max/Max Fast 不同单价）。",
   "verified_platform": "Web, Vercel 部署, API",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "medium",
   "conflict": false,
   "verified_features": [
     "UI 代码生成（React/Tailwind）",
@@ -113,11 +113,10 @@
   ],
   "verified_category": "AI编程",
   "source_urls": [
-    "https://v0.app/pricing",
-    "https://vercel.com/pricing"
+    "https://v0.dev/pricing"
   ],
-  "verify_notes": "官方域名为 v0.dev（产品页 v0.app）。定价模型已大幅调整：旧 $10/$20 档取消，现为 Free/Plus $30/Business $100 积分制。",
-  "content_verified": true,
+  "verify_notes": "尝试 2 个候选 URL, 第 2 个(https://v0.dev/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "tongyi-lingma",

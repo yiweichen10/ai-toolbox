@@ -694,7 +694,7 @@ def build_index_page(tools, articles):
     # 标签统一走 content_type（与「AI实战教程/深度评测」区块同源）。
     # 2026-08-14 修复：旧 tag_names 按 category 映射且漏了「AI工具教程」等分类，
     # 导致教程文章在 AI前沿 里被 fallback 误标成「AI资讯」，与 AI实战教程 区块的「教程」自相矛盾。
-    _ct_tag = {'AI教程': '教程', 'AI评测': 'AI评测', 'AI资讯': 'AI资讯', '行业分析': '行业'}
+    _ct_tag = {'AI教程': 'AI实战教程', 'AI评测': 'AI工具评测', 'AI资讯': 'AI资讯', '行业分析': 'AI行业分析'}
     # 2026-08-25：展示最新 7 条；面板固定 350px（移动端 300px），超出滚动不压缩，两 tab 同高不闪跳
     for idx, a in enumerate(sorted_articles[:7]):
         d = a.get('date', '')
@@ -707,12 +707,9 @@ def build_index_page(tools, articles):
             parts = d.split('/')
             if len(parts) == 3:
                 display_date = f'{int(parts[0]):02d}/{int(parts[1]):02d}'
-        # 2026-08-30 修复：数据洞察（月度洞察）单独显示"洞察"，避免与一般行业分析/热点文章混淆
+        # 2026-08-30 修复：首页标签统一用标准 content_type 全称（AI实战教程/AI工具评测/AI资讯/AI行业分析）
         ctype = build.article_content_type(a)
-        if ctype == '行业分析' and a.get('category') == '数据洞察':
-            tag = '洞察'
-        else:
-            tag = _ct_tag.get(ctype, 'AI资讯')
+        tag = _ct_tag.get(ctype, 'AI资讯')
         news_html += f'''                                <a class="news-card-item" href="/articles/{a['slug']}/">
                                     <span class="news-card-date">{display_date}</span>
                                     <span class="news-card-title">{escape_html(a['title'])}</span>

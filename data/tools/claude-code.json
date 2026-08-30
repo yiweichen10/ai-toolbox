@@ -80,17 +80,14 @@
     "Routines(定时/事件驱动+API触发自动任务)",
     "Computer Use(打开应用+浏览器+开发工具)"
   ],
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "medium",
   "conflict": false,
   "source_urls": [
-    "https://anthropic.com/claude-code",
-    "https://docs.anthropic.com/en/docs/claude-code/quickstart",
-    "https://www.anthropic.com/pricing",
-    "https://usagepricing.com/blueprint/claude-code"
+    "https://anthropic.com/claude-code"
   ],
-  "verify_notes": "原始tools.json数据严重错误：price'基础$10/月起'→最低Pro$20捆绑；platform'Web'→以终端CLI为主+8种接口。全部来自anthropic.com官方域，无聚合站污染。",
-  "content_verified": true,
+  "verify_notes": "尝试 1 个候选 URL, 第 1 个(https://anthropic.com/claude-code)命中明确金额 | 抓取价表与现有 price 一致，无变化",
+  "content_verified": false,
   "url_previous": "https://docs.anthropic.com/en/docs/claude-code",
   "compare_section": {
     "competitors": [

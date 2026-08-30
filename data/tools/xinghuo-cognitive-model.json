@@ -70,13 +70,13 @@
   "published": true,
   "created_date": "2026-06-28",
   "published_date": "2026-06-28",
-  "verified_url": "https://xinghuo.xfyun.cn/",
+  "verified_url": "https://xinghuo.xfyun.cn/pricing-plans",
   "verified_publisher": "科大讯飞 (iFlytek)",
   "verified_what": "讯飞星火认知大模型，科大讯飞自研的国产多模态AI大模型，具备文本/语音/图像/视频理解与生成能力",
   "verified_price": "基础功能免费（V4.0自2026年5月全面免费开放）；API：Spark Lite免费，Spark Pro ¥0.018/千tokens，Spark Max ¥0.03/千tokens；高级写作服务基础版¥299/月，专业版¥999/月；企业定制按需报价",
   "verified_platform": "Web / iOS / Android / 微信小程序 / API",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "多模态输入：文本/语音/图片/视频",
@@ -126,13 +126,10 @@
   ],
   "verified_category": "AI对话",
   "source_urls": [
-    "https://xinghuo.xfyun.cn/",
-    "https://aiforyou.life/zh/tools/chatbots/spark-zh",
-    "https://www.chooseai.net/tools/704/",
-    "https://m.10jqka.com.cn/20260717/c678264394.shtml"
+    "https://xinghuo.xfyun.cn/pricing-plans"
   ],
-  "verify_notes": "最大纠正：版本号从'4.0'严重过时到'X2系列'（跨越X1.5、X2、X2-Flash、X2-VL多代）。2026年5月V4.0全面免费是重大政策。星火基于全国产算力（飞星一号）训练，MoE架构。高考数学148分是重要亮点但原文未提及。",
-  "content_verified": true,
+  "verify_notes": "第 1 个候选(https://xinghuo.xfyun.cn/)有定价页结构但无明确金额(可能动态加载/登录墙) | 仅检测到免费/Free 信号",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "tencent-hunyuan",

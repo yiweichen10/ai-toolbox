@@ -69,7 +69,7 @@
       "answer": "私有模型通过 ngrok 网络接入网关，运行在笔记本、本地 GPU 或私有网络上，对外不需要开端口或暴露公网地址。"
     }
   ],
-  "content_verified": true,
+  "content_verified": false,
   "conflict": false,
   "verify_status": "verified",
   "seo_keywords": [
@@ -80,13 +80,13 @@
     "AI可观测性"
   ],
   "source_urls": [
-    "https://ngrok.ai/",
-    "https://ngrok.com/",
-    "https://www.hunted.space/product/ngrok-ai-gateway",
-    "https://ainativefoundation.org/ai-native-product-insights-2026w32"
+    "https://ngrok.ai/"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "created_date": "2026-08-14",
   "updated_date": "2026-08-14",
-  "published_date": "2026-08-18"
+  "published_date": "2026-08-18",
+  "verified_url": "https://ngrok.ai/",
+  "last_verified": "2026-08-30",
+  "verify_notes": "尝试 1 个候选 URL, 第 1 个(https://ngrok.ai/)命中明确金额 | 抓取价表与现有 price 一致，无变化"
 }

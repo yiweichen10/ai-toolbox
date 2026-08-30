@@ -22,7 +22,7 @@
     "type": "hot",
     "text": null
   },
-  "url": "https://windsurf.com (永久重定向→devin.ai/desktop)",
+  "url": "https://windsurf.com",
   "price": "Free 有限额度；Pro $20/月（原Windsurf时期$15，更名后涨价）；Max $200/月；Teams $80/月起+平台费",
   "platform": "Windows / macOS / Linux（桌面端）/ VS Code 扩展 / JetBrains 扩展",
   "pros": [
@@ -64,7 +64,7 @@
     }
   ],
   "created_date": "2026-04-19",
-  "verified_url": "https://windsurf.com (永久重定向→devin.ai/desktop)",
+  "verified_url": "https://windsurf.com",
   "verified_publisher": "Cognition (2025-12收购Codeium/Windsurf, 2026-06-02更名Devin Desktop)",
   "verified_what": "Cognition出品的AI编程IDE。2026年6月从Windsurf更名为Devin Desktop，转型为Agent Command Center(Kanban统一管理本地+云端代理)。支持ACP开放协议运行Codex/Claude Agent等第三方代理。内置SWE-1.7编程模型(2026-07-08发布)、Devin Local代理(替代已退役Cascade)、Fast Context代码检索。",
   "verified_price": "Free $0(轻量代理配额+无限Tab补全) / Pro $20/月(全模型+云代理+SWE-1.7免费) / Max $200/月(极高配额) / Teams $80/月base+$40/全席位/月 / Enterprise 询价(SSO+VPC部署)",
@@ -78,17 +78,15 @@
     "Fast Context(毫秒级代码检索)",
     "Supercomplete智能Tab补全"
   ],
-  "last_verified": "2026-08-27",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "medium",
   "conflict": false,
   "source_urls": [
-    "https://devin.ai/desktop",
-    "https://devtoolsreview.com/best-for/windsurf-is-now-devin-desktop/",
-    "https://daily.dev/posts/mew0vvnbu"
+    "https://windsurf.com"
   ],
-  "verify_notes": "2026-08-27 更正+增补：Pro $15→$20（旧文定价沿用表述有误）、ACP开放协议8/14、v3.8.20共享默认8/21、Cascade 7/1弃用、Teams双轨计费。",
-  "content_verified": true,
-  "url_previous": "https://windsurf.com（重定向至devin.ai/desktop）",
+  "verify_notes": "尝试 1 个候选 URL, 第 1 个(https://windsurf.com)命中明确金额 | 抓取价表与现有 price 一致，无变化",
+  "content_verified": false,
+  "url_previous": "https://windsurf.com (永久重定向→devin.ai/desktop)",
   "compare_section": {
     "competitors": [
       "tongyi-lingma",

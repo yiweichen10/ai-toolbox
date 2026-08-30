@@ -72,7 +72,7 @@
       "answer": "包含在所有付费计划中（Pro / Max / Team / Enterprise）。企业版额外提供访问管理、支出控制与 OpenTelemetry 可观测，具体以 Anthropic 官网为准。"
     }
   ],
-  "content_verified": true,
+  "content_verified": false,
   "conflict": false,
   "verify_status": "verified",
   "seo_keywords": [
@@ -83,11 +83,12 @@
     "Claude Cowork和哪个好"
   ],
   "source_urls": [
-    "https://claude.com/ja/product/cowork",
-    "https://the-agent-report.com/2026/07/claude-cowork-web-mobile-july-2026",
-    "https://www.frontiernews.ai/news/article/claude-cowork-goes-mobile-anthropics-10-day-sprint-9e98ef67"
+    "https://www.claude.com/product/cowork"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+  "updated_date": "2026-08-14",
+  "verified_url": "https://www.claude.com/product/cowork",
+  "last_verified": "2026-08-30",
+  "verify_notes": "尝试 1 个候选 URL, 第 1 个(https://www.claude.com/product/cowork)命中明确金额 | 抓取价表与现有 price 一致，无变化"
 }

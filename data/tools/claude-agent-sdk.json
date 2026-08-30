@@ -76,7 +76,7 @@
       "answer": "Agent SDK 在你自己的进程里跑 Agent 循环，需自行管理沙箱与会话；Managed Agents 是托管的 REST API，由 Anthropic 运行 Agent 与沙箱，适合长任务与异步场景。"
     }
   ],
-  "content_verified": true,
+  "content_verified": false,
   "conflict": false,
   "verify_status": "verified",
   "seo_keywords": [
@@ -87,10 +87,12 @@
     "Claude Agent SDK和哪个好"
   ],
   "source_urls": [
-    "https://console.anthropic.com/docs/en/agent-sdk/overview",
-    "https://console.anthropic.com/docs/en/agent-sdk/quickstart"
+    "https://docs.anthropic.com/en/api/agent-sdk/pricing-plans"
   ],
-  "confidence": "high",
+  "confidence": "low",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+  "updated_date": "2026-08-14",
+  "verified_url": "https://docs.anthropic.com/en/api/agent-sdk/pricing-plans",
+  "last_verified": "2026-08-30",
+  "verify_notes": "第 1 个候选(https://docs.anthropic.com/en/api/agent-sdk)有定价页结构但无明确金额(可能动态加载/登录墙)"
 }

@@ -78,8 +78,8 @@
   "verified_what": "OpenAI推出的AI图像生成模型，深度集成于ChatGPT，以理解自然语言prompt与在图中准确渲染文字著称，是最易用的AI绘画工具之一。",
   "verified_price": "通过ChatGPT使用：Free版有限（约2-3张/天）；ChatGPT Plus $20/月（含DALL-E 3，约每3小时50张）；ChatGPT Pro $200/月（更高/无限额度）；Team $25/用户/月；Enterprise定制。API按图计费：$0.04–$0.12/张（依分辨率与质量）。",
   "verified_platform": "Web / iOS / Android / API",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "文生图",
@@ -136,13 +136,10 @@
   ],
   "verified_category": "AI绘画",
   "source_urls": [
-    "https://openai.com/dall-e-3",
-    "https://toolschool.ai/tools/dall-e-3",
-    "https://www.artificial-intelligence-wiki.com/ai-tools/ai-design-tools/dall-e-3-complete-guide",
-    "https://iseoai.com/dall-e-3"
+    "https://openai.com/dall-e-3"
   ],
-  "verify_notes": "官方域名为openai.com/dall-e-3（模型页）与openai.com（主站）。原price'$10/月起'错误，纠正为ChatGPT Plus $20/月起。",
-  "content_verified": true,
+  "verify_notes": "无可用 URL 或渲染失败",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "magnific-ai",

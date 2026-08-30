@@ -75,13 +75,13 @@
   "published": true,
   "created_date": "2026-03-22",
   "subcategory": "ai-video-editing",
-  "verified_url": "https://pictory.ai",
+  "verified_url": "https://pictory.ai/pricing",
   "verified_publisher": "Pictory Inc.",
   "verified_what": "AI视频生成平台，将文本/脚本/博客文章自动转化为专业视频，支持AI配音和自动字幕",
   "verified_price": "14天免费试用；Starter $25/月（年付，$29月付）：200视频分钟，5GB存储，1品牌套件；Professional $35/月（年付，$59月付）：600视频分钟，5品牌套件，AI数字人，500 GenAI积分；Team $119/月（年付，$199月付）：1800视频分钟，3+用户，2400 GenAI积分；Enterprise 定制",
   "verified_platform": "Web",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "medium",
   "conflict": false,
   "verified_features": [
     "文本/脚本/博客URL一键转视频",
@@ -131,12 +131,10 @@
   ],
   "verified_category": "AI视频",
   "source_urls": [
-    "https://pictory.ai/pricing",
-    "https://toolradar.com/tools/pictory",
-    "https://www.vidmetoo.com/ai-video-makers-for-beginners"
+    "https://pictory.ai/pricing"
   ],
-  "verify_notes": "关键纠正：Pictory无永久免费版（仅14天试用），非原文描述的'可生成3个视频'免费版。价格从Starter $25/月到Team $119/月。2026年新增AI数字人和GenAI积分系统。Pictory 2.0促销价格可能恢复标准定价（$29/$59/$199/月）。",
-  "content_verified": true,
+  "verify_notes": "尝试 2 个候选 URL, 第 2 个(https://pictory.ai/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "invideo-ai",

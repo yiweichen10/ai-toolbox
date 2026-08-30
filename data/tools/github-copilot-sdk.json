@@ -75,7 +75,7 @@
       "answer": "定位相似但生态不同：Copilot SDK 复用的是 Copilot CLI 的运行时，天然贴 GitHub 的上下文、认证与权限模型，并提供六语言官方 SDK；Claude Agent SDK 则与 Claude Code 同源，主打 Python/TypeScript。选哪个通常取决于你团队已有的订阅与技术栈。"
     }
   ],
-  "content_verified": true,
+  "content_verified": false,
   "conflict": false,
   "verify_status": "verified",
   "seo_keywords": [
@@ -86,12 +86,12 @@
     "Copilot SDK 和 Claude Agent SDK 哪个好"
   ],
   "source_urls": [
-    "https://github.com/github/copilot-sdk",
-    "https://github.blog/changelog/2026-06-02-copilot-sdk-now-generally-available/",
-    "https://github.blog/changelog/2026-04-02-copilot-sdk-in-public-preview",
-    "https://api.github.com/repos/github/copilot-sdk"
+    "https://github.com/github/copilot-sdk/pricing-plans"
   ],
-  "confidence": "high",
+  "confidence": "low",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+  "updated_date": "2026-08-14",
+  "verified_url": "https://github.com/github/copilot-sdk/pricing-plans",
+  "last_verified": "2026-08-30",
+  "verify_notes": "第 1 个候选(https://github.com/github/copilot-sdk)有定价页结构但无明确金额(可能动态加载/登录墙) | 检测到联系销售/企业版(无公开价)"
 }

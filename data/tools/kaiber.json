@@ -74,13 +74,13 @@
   "published": true,
   "created_date": "2026-04-29",
   "subcategory": "ai-video-editing",
-  "verified_url": "https://kaiber.ai",
+  "verified_url": "https://kaiber.ai/pricing",
   "verified_publisher": "Kaiber (independent)",
   "verified_what": "AI创意视频生成平台，将图片/文本/音频转化为动态艺术视频，主打音乐视频和视觉特效",
   "verified_price": "5天试用$5（500积分）；Starter $10/月（年付$8/月，500积分/月）；Creator $29/月（年付$23/月，1500积分/月，含商业使用权）；Pro $99/月（年付$79/月，5000积分/月，含批量生成）；Visionary 定制（无限积分）",
   "verified_platform": "Web / iOS / Android",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "medium",
   "conflict": false,
   "verified_features": [
     "文本/图片/音频转视频",
@@ -129,12 +129,10 @@
   ],
   "verified_category": "AI视频",
   "source_urls": [
-    "https://helpcenter.kaiber.ai/articles/6291249-kaiber-plans-what-you-need-to-know",
-    "https://kaiber.ai",
-    "https://toolradar.com/tools/kaiber"
+    "https://kaiber.ai/pricing"
   ],
-  "verify_notes": "价格信息是最大变更点——旧数据称有免费版（每月100积分）和$9.99/月起，实际已无永久免费版，最低付费$10/月。同时产品已升级为Superstudio统一工作台，新增Cuts批量剪辑功能。",
-  "content_verified": true,
+  "verify_notes": "尝试 2 个候选 URL, 第 2 个(https://kaiber.ai/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "invideo-ai",

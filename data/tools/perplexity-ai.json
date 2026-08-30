@@ -77,8 +77,8 @@
   ],
   "verified_description": "Perplexity AI 是 AI 搜索/对话式搜索引擎，每次回答均附带来源引用，可实时联网获取最新信息，并支持在 GPT、Claude、Gemini、Sonar 等多模型间切换。",
   "content_flags": "正文整体准确；但仅提 Pro $20/月，未提及新增的 Max $200/月、Enterprise Max $325/席/月 与 Perplexity Computer 等；无严重幻觉。",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-08-30",
+  "confidence": "low",
   "conflict": false,
   "price_verified": true,
   "verified_rating": "⭐4.8",
@@ -119,12 +119,10 @@
   ],
   "verified_category": "AI搜索",
   "source_urls": [
-    "https://perplexity.ai/pro",
-    "https://perplexity.ai/enterprise/pricing",
-    "https://gptprompts.ai/perplexity-pricing"
+    "https://www.perplexity.ai"
   ],
-  "verify_notes": "数据 url(perplexity.ai)、price(免费版可用，Pro版$20/月)、category(AI搜索) 均准确，保留。已补充 Max/Enterprise 等新档。",
-  "content_verified": true,
+  "verify_notes": "无可用 URL 或渲染失败",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "perplexity",

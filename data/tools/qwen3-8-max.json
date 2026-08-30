@@ -76,7 +76,7 @@
       "answer": "千问办公（QwenWork）是阿里的企业级 Agent 产品，2026 年 8 月 3 日与 Qwen3.8-Max 同日发布并率先接入该模型，用户可以在千问办公里直接体验这个旗舰模型的能力。"
     }
   ],
-  "content_verified": true,
+  "content_verified": false,
   "conflict": false,
   "verify_status": "verified",
   "seo_keywords": [
@@ -87,12 +87,13 @@
     "Qwen3.8-Max和DeepSeek哪个好"
   ],
   "source_urls": [
-    "https://qwen.ai",
-    "https://baike.baidu.com/item/Qwen3.8-Max/68312211",
-    "https://www.jiemian.com/article/14895823.html"
+    "https://qwen.ai/pricing-plans"
   ],
-  "confidence": "high",
+  "confidence": "low",
   "created_date": "2026-08-14",
   "updated_date": "2026-08-14",
-  "published_date": "2026-08-21"
+  "published_date": "2026-08-21",
+  "verified_url": "https://qwen.ai/pricing-plans",
+  "last_verified": "2026-08-30",
+  "verify_notes": "第 1 个候选(https://qwen.ai)有定价页结构但无明确金额(可能动态加载/登录墙) | 仅检测到免费/Free 信号"
 }
