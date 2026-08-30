@@ -99,7 +99,7 @@ def main():
         if a.get('content_type') != ct:
             a['content_type'] = ct
             changed_ct += 1
-        if cat != ct:  # category 归一到 4 类标准值
+        if cat != ct and cat != '数据洞察':  # category 归一到 4 类标准值（白名单：数据洞察=月度洞察专属身份，保留）
             a['category'] = ct
             changed_cat += 1
         dist[ct] += 1

@@ -292,14 +292,17 @@ def main():
     else:
         # 2026-08-30 闸门：category 归一到 4 类内容类型标准值
         # （背景：8/8 归并成果曾被日更直写细分 category 冲掉；SEO/GEO 要求分类单一语义）
+        # 白名单：月度洞察文章的专属分类"数据洞察"放行不归一（08-30 用户拍板保留其身份）
+        _CATEGORY_WHITELIST = {"数据洞察"}
         from classify_articles import classify
         _orig_cat = article.get("category", "")
         if not article.get("orig_category"):
             article["orig_category"] = _orig_cat
-        _ct = classify(article.get("orig_category") or _orig_cat, article.get("title", ""))
-        if article.get("category") != _ct:
-            article["category"] = _ct
-            print(f"[OK] category 归一: {_orig_cat or '(空)'} -> {_ct}")
+        if _orig_cat not in _CATEGORY_WHITELIST:
+            _ct = classify(article.get("orig_category") or _orig_cat, article.get("title", ""))
+            if article.get("category") != _ct:
+                article["category"] = _ct
+                print(f"[OK] category 归一: {_orig_cat or '(空)'} -> {_ct}")
         save_article(article)
         print(f"[OK] 已入库 data/articles/{slug}.json: {slug}")
 
