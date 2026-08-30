@@ -696,6 +696,8 @@ def build_index_page(tools, articles):
     # 导致教程文章在 AI前沿 里被 fallback 误标成「AI资讯」，与 AI实战教程 区块的「教程」自相矛盾。
     # 2026-08-30 16:40 定稿：恢复历史原版（git 实证 ea7c5ab/11f762a），仅修正错值 AI洞察→行业分析
     _ct_tag = {'AI教程': '教程', 'AI评测': 'AI评测', 'AI资讯': 'AI资讯', '行业分析': '行业分析'}
+    # 2026-08-30 17:25：月度洞察文章（category=数据洞察）单独显"洞察"，与普通行业分析文区分
+    _INSIGHT_CAT = '数据洞察'
     # 2026-08-25：展示最新 7 条；面板固定 350px（移动端 300px），超出滚动不压缩，两 tab 同高不闪跳
     for idx, a in enumerate(sorted_articles[:7]):
         d = a.get('date', '')
@@ -708,9 +710,12 @@ def build_index_page(tools, articles):
             parts = d.split('/')
             if len(parts) == 3:
                 display_date = f'{int(parts[0]):02d}/{int(parts[1]):02d}'
-        # 2026-08-30 修复：首页标签统一用标准 content_type 全称（AI实战教程/AI工具评测/AI资讯/AI行业分析）
-        ctype = build.article_content_type(a)
-        tag = _ct_tag.get(ctype, 'AI资讯')
+        # 2026-08-30 17:25：category=数据洞察（月度洞察）显"洞察"，其余按 content_type 标准映射
+        if a.get('category') == _INSIGHT_CAT:
+            tag = '洞察'
+        else:
+            ctype = build.article_content_type(a)
+            tag = _ct_tag.get(ctype, 'AI资讯')
         news_html += f'''                                <a class="news-card-item" href="/articles/{a['slug']}/">
                                     <span class="news-card-date">{display_date}</span>
                                     <span class="news-card-title">{escape_html(a['title'])}</span>
