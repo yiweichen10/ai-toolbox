@@ -225,8 +225,12 @@ def build_article_page(article, all_articles, all_tools=None):
         m = re.match(r'(\d{4})年(\d{1,2})月(\d{1,2})日', article_date)
         article_date = f'{m.group(1)}-{m.group(2).zfill(2)}-{m.group(3).zfill(2)}'
     article_date_modified = article.get('dateModified', article_date)
-    article_category = article.get('category', '文章')
-    article_category_slug = get_category_slug(article_category)
+    # 2026-08-30：category 已归一为 4 类内容类型值；面包屑第2级改指文章内容分类页
+    # （修复历史 bug：get_category_slug 拼音兜底曾让 Schema 面包屑指向不存在的 /category/{拼音}/ URL）
+    import build as _b
+    _ct_page = {cp['ctype']: cp['slug'] for cp in _b.ARTICLE_CATEGORY_PAGES}
+    article_category = _article_type_label(article)
+    article_category_slug = _ct_page.get(_b.article_content_type(article), 'analysis')
 
     breadcrumb_article_data = {
         "@context": "https://schema.org",
@@ -242,7 +246,7 @@ def build_article_page(article, all_articles, all_tools=None):
                 "@type": "ListItem",
                 "position": 2,
                 "name": article_category,
-                "item": f"https://www.aitoollab.cn/category/{article_category_slug}/"
+                "item": f"https://www.aitoollab.cn/articles/{article_category_slug}/"
             },
             {
                 "@type": "ListItem",
@@ -653,7 +657,7 @@ def build_article_page(article, all_articles, all_tools=None):
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
-        <a href="/">首页</a> &gt; <span>{escape_html(article.get('category', '文章'))}</span> &gt; <span>{escape_html(article['title'])[:20]}...</span>
+        <a href="/">首页</a> &gt; <span>{escape_html(article_category)}</span> &gt; <span>{escape_html(article['title'])[:20]}...</span>
     </nav>
 
     <main class="article-container-wide">

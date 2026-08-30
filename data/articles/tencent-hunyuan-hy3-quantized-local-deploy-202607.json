@@ -2,7 +2,7 @@
   "slug": "tencent-hunyuan-hy3-quantized-local-deploy-202607",
   "title": "把2950亿参数的大模型塞进单张显卡：腾讯混元Hy3量化版实测 + 2026本地部署大模型横评指南",
   "date": "2026-07-15",
-  "category": "教程指南",
+  "category": "AI教程",
   "excerpt": "2026年7月14日，腾讯混元发布Hy3量化版：2950亿参数旗舰模型1bit量化至85.5GiB，单张96GB显卡即可本地部署。本文实测量化效果、拆解硬件门槛，并横评混元Hy3、通义千问、DeepSeek三款开源旗舰的本地部署可行性，附llama.cpp手把手部署命令。",
   "tags": [
     "本地部署",

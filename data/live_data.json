@@ -1,27 +1,27 @@
 {
   "metadata": {
     "version": "1.0",
-    "generated_at": "2026-08-29 12:48",
+    "generated_at": "2026-08-30 15:39",
     "source": "aitoollab.cn-regenerate-data",
     "tool_count": 673,
-    "article_count": 199,
+    "article_count": 200,
     "update_policy": "每次构建自动生成"
   },
   "stats": {
     "total_tools": 673,
     "total_categories": 19,
-    "total_articles": 199,
+    "total_articles": 200,
     "total_visits_str": "106869万",
     "avg_rating": 4.4,
     "price_distribution": {
-      "free": 166,
-      "freemium": 399,
+      "free": 164,
+      "freemium": 401,
       "paid": 80,
       "enterprise": 28
     },
     "today_active": "673",
-    "this_week_new": 10,
-    "last_updated": "2026-08-29 12:48",
+    "this_week_new": 8,
+    "last_updated": "2026-08-30 15:39",
     "update_frequency": "每次构建自动更新"
   },
   "comparison_matrix": {
@@ -514,13 +514,13 @@
         "color": "#FA7298",
         "category": "AI对话",
         "values": {
-          "price": "免费使用，企业API按调用计费",
+          "price": "个人免费；企业API Hy4 输入¥6/输出¥18/缓存¥0.3、Hy3 输入¥1/输出¥4/缓存¥0.25（每百万token）",
           "rating": "⭐4.2",
           "features_count": 5,
           "platform": "网页端、API、企业微信、微信小程序",
           "chinese": "✅",
           "api": "✅",
-          "free_tier": 5
+          "free_tier": 3
         },
         "detail_url": "/tools/tencent-hunyuan/"
       },
@@ -1505,7 +1505,7 @@
         "avg_rating": 4.5,
         "by_price": {
           "free": {
-            "count": 5,
+            "count": 4,
             "names": [
               "Cluely",
               "灵办AI",
@@ -1513,7 +1513,7 @@
             ]
           },
           "freemium": {
-            "count": 32,
+            "count": 33,
             "names": [
               "Airtable AI",
               "Beautiful.ai",
@@ -1557,7 +1557,7 @@
         "avg_rating": 4.5,
         "by_price": {
           "free": {
-            "count": 13,
+            "count": 12,
             "names": [
               "Baichuan 2",
               "百川智能",
@@ -1565,7 +1565,7 @@
             ]
           },
           "freemium": {
-            "count": 25,
+            "count": 26,
             "names": [
               "360智脑",
               "Alexa Plus",
