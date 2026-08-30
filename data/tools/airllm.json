@@ -1,92 +1,92 @@
 {
-    "name": "airllm",
-    "slug": "airllm",
-    "positioning": "开源的推理内存优化框架，用逐层卸载把显存峰值压到“单层大小”，让单张 4GB 显卡跑 70B、约 8GB 跑 405B，且无需量化/蒸馏/剪枝。",
-    "auto_positioning": false,
-    "emoji": "💾",
-    "color": "#8B5CF6",
-    "description": "AirLLM 是一个开源的推理内存优化框架，仓库位于 github.com/lyogavin/airllm，用 Python 实现。它回答了一个很直接的问题：Transformer 各层在推理时是严格串行执行的，那为什么非要把整个模型都塞进显存？做法是逐层把权重从磁盘加载进 GPU、算完即弃，把显存峰值从“整个模型大小”压到“单层最大大小”——于是单张 4GB 显卡就能跑 70B 推理，约 8GB 显存可跑 405B 的 Llama 3.1，甚至能在 3.7GB 下尝试超大 MoE。关键是不靠量化、蒸馏或剪枝，纯推理优化保住精度。",
-    "category": "AI开发",
-    "tags": [
-        "本地推理",
-        "低显存",
-        "开源",
-        "大模型",
-        "推理优化",
-        "Python"
-    ],
-    "rating": "⭐ 4.5",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "pick",
-        "text": "开源"
+  "name": "airllm",
+  "slug": "airllm",
+  "positioning": "开源的推理内存优化框架，用逐层卸载把显存峰值压到“单层大小”，让单张 4GB 显卡跑 70B、约 8GB 跑 405B，且无需量化/蒸馏/剪枝。",
+  "auto_positioning": false,
+  "emoji": "💾",
+  "color": "#8B5CF6",
+  "description": "AirLLM 是一个开源的推理内存优化框架，仓库位于 github.com/lyogavin/airllm，用 Python 实现。它回答了一个很直接的问题：Transformer 各层在推理时是严格串行执行的，那为什么非要把整个模型都塞进显存？做法是逐层把权重从磁盘加载进 GPU、算完即弃，把显存峰值从“整个模型大小”压到“单层最大大小”——于是单张 4GB 显卡就能跑 70B 推理，约 8GB 显存可跑 405B 的 Llama 3.1，甚至能在 3.7GB 下尝试超大 MoE。关键是不靠量化、蒸馏或剪枝，纯推理优化保住精度。",
+  "category": "AI开发",
+  "tags": [
+    "本地推理",
+    "低显存",
+    "开源",
+    "大模型",
+    "推理优化",
+    "Python"
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "pick",
+    "text": "开源"
+  },
+  "url": "https://github.com/lyogavin/airllm",
+  "price": "免费开源，无商业套餐",
+  "platform": "Python / Linux（GPU）",
+  "pros": [
+    "极低显存门槛：4GB 跑 70B、8GB 跑 405B，无需昂贵显卡",
+    "纯推理优化，不走量化/蒸馏/剪枝，保住模型精度",
+    "pip 一键使用，把模型名传给 AutoModel 即可，接入成本低",
+    "支持超大 MoE（如 Kimi K3）在普通硬件上运行",
+    "开源免费，可本地探索与验证新模型"
+  ],
+  "cons": [
+    "磁盘 I/O 成为新瓶颈，速度远低于全量加载到显存的推理",
+    "需要大磁盘空间存放切分后的 shard 文件",
+    "不支持高并发 KV Cache 共享，不适合实时生产环境"
+  ],
+  "features": [
+    "逐层推理卸载：每层按需从磁盘加载执行，显存只装单层",
+    "极低显存门槛：4GB 跑 70B、8GB 跑 405B，无需昂贵显卡",
+    "保精度：不走量化 / 蒸馏 / 剪枝，模型能力不被压缩",
+    "一键使用：pip install airllm，把模型名传给 AutoModel.from_pretrained 即可",
+    "可选块级压缩：4bit / 8bit 块级权重压缩能把加载带宽缩到 1/4，换取约 3 倍提速",
+    "支持超大 MoE：如 2.8T 参数的 Kimi K3 在 3.7GB 显存下尝试运行"
+  ],
+  "related": [
+    "vllm",
+    "openai",
+    "langchain"
+  ],
+  "content": "## AirLLM 是什么？\n\nAirLLM 是一个开源的推理内存优化框架，仓库位于 github.com/lyogavin/airllm，用 Python 实现。它回答了一个很直接的问题：Transformer 各层在推理时是严格串行执行的，那为什么非要把整个模型都塞进显存？它的做法是逐层把权重从磁盘加载进 GPU、算完即弃，把显存峰值从“整个模型大小”压到“单层最大大小”——于是单张 4GB 显卡就能跑 70B 推理，约 8GB 显存可跑 405B 的 Llama 3.1，甚至能在 3.7GB 下尝试超大 MoE。关键是不靠量化、蒸馏或剪枝，纯推理优化保住精度。\n\n## 核心功能\n\n1. 逐层推理卸载：每层按需从磁盘加载执行，显存只装单层。\n2. 极低显存门槛：4GB 跑 70B、8GB 跑 405B，无需昂贵显卡。\n3. 保精度：不走量化 / 蒸馏 / 剪枝，模型能力不被压缩。\n4. 一键使用：pip install airllm，把模型名传给 AutoModel.from_pretrained 即可。\n5. 可选块级压缩：4bit / 8bit 块级权重压缩能把加载带宽缩到 1/4，换取约 3 倍提速。\n\n## 版本/套餐对比\n\nAirLLM 为开源免费项目，无商业套餐；安装即用，适合低频、对速度不敏感的本地产出场景。\n\n## 值不值得用？\n\nAirLLM 解决的是“能不能跑”而非“能不能快”。它的代价很明显：每层都要从磁盘读，I/O 成为新瓶颈，速度远低于全量加载，也不支持高并发 KV Cache 共享。但对你只有一张老显卡、又想亲自跑跑 70B 验证想法的人来说，能跑起来本身就值回票价。\n\n## 使用建议\n\n准备足够大的磁盘空间存放切分后的 shard（和原始模型差不多大）；把它用在探索、测试、低频报告生成等“速度不敏感”的场景；不要在需要实时响应或高并发的生产环境使用；Apple Silicon Mac 同样可以尝试。块级压缩能在可接受精度损失下明显提速，适合反复调用的场合。\n\n## 适合谁用？\n\n- 个人开发者：显存有限却想本地体验大模型。\n- 研究者 / 学生：用普通设备验证新模型想法。\n- 探索型用户：低频推理、对响应速度不敏感者。",
+  "published": true,
+  "faq": [
+    {
+      "question": "AirLLM 是怎么在 4GB 显存跑 70B 的？",
+      "answer": "它不改变模型本身，而是在推理时逐层把权重从磁盘加载进 GPU、算完即弃，把显存峰值从“整个模型大小”压到“单层最大大小”，因此 70B 模型在 4GB 卡上也能跑。"
     },
-    "url": "https://github.com/lyogavin/airllm",
-    "price": "免费开源，无商业套餐",
-    "platform": "Python / Linux（GPU）",
-    "pros": [
-        "极低显存门槛：4GB 跑 70B、8GB 跑 405B，无需昂贵显卡",
-        "纯推理优化，不走量化/蒸馏/剪枝，保住模型精度",
-        "pip 一键使用，把模型名传给 AutoModel 即可，接入成本低",
-        "支持超大 MoE（如 Kimi K3）在普通硬件上运行",
-        "开源免费，可本地探索与验证新模型"
-    ],
-    "cons": [
-        "磁盘 I/O 成为新瓶颈，速度远低于全量加载到显存的推理",
-        "需要大磁盘空间存放切分后的 shard 文件",
-        "不支持高并发 KV Cache 共享，不适合实时生产环境"
-    ],
-    "features": [
-        "逐层推理卸载：每层按需从磁盘加载执行，显存只装单层",
-        "极低显存门槛：4GB 跑 70B、8GB 跑 405B，无需昂贵显卡",
-        "保精度：不走量化 / 蒸馏 / 剪枝，模型能力不被压缩",
-        "一键使用：pip install airllm，把模型名传给 AutoModel.from_pretrained 即可",
-        "可选块级压缩：4bit / 8bit 块级权重压缩能把加载带宽缩到 1/4，换取约 3 倍提速",
-        "支持超大 MoE：如 2.8T 参数的 Kimi K3 在 3.7GB 显存下尝试运行"
-    ],
-    "related": [
-        "vllm",
-        "openai",
-        "langchain"
-    ],
-    "content": "## AirLLM 是什么？\n\nAirLLM 是一个开源的推理内存优化框架，仓库位于 github.com/lyogavin/airllm，用 Python 实现。它回答了一个很直接的问题：Transformer 各层在推理时是严格串行执行的，那为什么非要把整个模型都塞进显存？它的做法是逐层把权重从磁盘加载进 GPU、算完即弃，把显存峰值从“整个模型大小”压到“单层最大大小”——于是单张 4GB 显卡就能跑 70B 推理，约 8GB 显存可跑 405B 的 Llama 3.1，甚至能在 3.7GB 下尝试超大 MoE。关键是不靠量化、蒸馏或剪枝，纯推理优化保住精度。\n\n## 核心功能\n\n1. 逐层推理卸载：每层按需从磁盘加载执行，显存只装单层。\n2. 极低显存门槛：4GB 跑 70B、8GB 跑 405B，无需昂贵显卡。\n3. 保精度：不走量化 / 蒸馏 / 剪枝，模型能力不被压缩。\n4. 一键使用：pip install airllm，把模型名传给 AutoModel.from_pretrained 即可。\n5. 可选块级压缩：4bit / 8bit 块级权重压缩能把加载带宽缩到 1/4，换取约 3 倍提速。\n\n## 版本/套餐对比\n\nAirLLM 为开源免费项目，无商业套餐；安装即用，适合低频、对速度不敏感的本地产出场景。\n\n## 值不值得用？\n\nAirLLM 解决的是“能不能跑”而非“能不能快”。它的代价很明显：每层都要从磁盘读，I/O 成为新瓶颈，速度远低于全量加载，也不支持高并发 KV Cache 共享。但对你只有一张老显卡、又想亲自跑跑 70B 验证想法的人来说，能跑起来本身就值回票价。\n\n## 使用建议\n\n准备足够大的磁盘空间存放切分后的 shard（和原始模型差不多大）；把它用在探索、测试、低频报告生成等“速度不敏感”的场景；不要在需要实时响应或高并发的生产环境使用；Apple Silicon Mac 同样可以尝试。块级压缩能在可接受精度损失下明显提速，适合反复调用的场合。\n\n## 适合谁用？\n\n- 个人开发者：显存有限却想本地体验大模型。\n- 研究者 / 学生：用普通设备验证新模型想法。\n- 探索型用户：低频推理、对响应速度不敏感者。",
-    "published": true,
-    "faq": [
-        {
-            "question": "AirLLM 是怎么在 4GB 显存跑 70B 的？",
-            "answer": "它不改变模型本身，而是在推理时逐层把权重从磁盘加载进 GPU、算完即弃，把显存峰值从“整个模型大小”压到“单层最大大小”，因此 70B 模型在 4GB 卡上也能跑。"
-        },
-        {
-            "question": "用 AirLLM 会损失模型精度吗？",
-            "answer": "不会。AirLLM 是纯推理内存优化，不依赖量化、蒸馏或剪枝来压缩模型，默认保住原始精度；可选的块级压缩才会引入轻微精度取舍。"
-        },
-        {
-            "question": "它适合生产环境吗？",
-            "answer": "不太适合。逐层磁盘 I/O 导致速度远低于全内存推理，且不支持高并发 KV Cache 共享，更适合探索、测试与低频本地推理。"
-        },
-        {
-            "question": "AirLLM 收费吗？",
-            "answer": "不收费。它是开源免费项目，pip install airllm 即可使用，成本仅在于你自己的硬件与磁盘空间。"
-        }
-    ],
-    "content_verified": true,
-    "conflict": false,
-    "verify_status": "verified",
-    "seo_keywords": [
-        "AirLLM",
-        "低显存推理",
-        "4GB跑70B",
-        "本地大模型",
-        "推理显存优化"
-    ],
-    "source_urls": [
-        "https://github.com/lyogavin/airllm",
-        "https://vampireachao.github.io/2026/08/02/airllm",
-        "https://gipyeong-lee.github.io/2026/08/03/AirLLM-70B-inference-with-single-4GB-GPU.en",
-        "https://blog.csdn.net/chendongqi2007/article/details/163451033"
-    ],
-    "confidence": "high",
-    "created_date": "2026-08-14",
-    "updated_date": "2026-08-14",
-    "published_date": "2026-08-29"
+    {
+      "question": "用 AirLLM 会损失模型精度吗？",
+      "answer": "不会。AirLLM 是纯推理内存优化，不依赖量化、蒸馏或剪枝来压缩模型，默认保住原始精度；可选的块级压缩才会引入轻微精度取舍。"
+    },
+    {
+      "question": "它适合生产环境吗？",
+      "answer": "不太适合。逐层磁盘 I/O 导致速度远低于全内存推理，且不支持高并发 KV Cache 共享，更适合探索、测试与低频本地推理。"
+    },
+    {
+      "question": "AirLLM 收费吗？",
+      "answer": "不收费。它是开源免费项目，pip install airllm 即可使用，成本仅在于你自己的硬件与磁盘空间。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "AirLLM",
+    "低显存推理",
+    "4GB跑70B",
+    "本地大模型",
+    "推理显存优化"
+  ],
+  "source_urls": [
+    "https://github.com/lyogavin/airllm",
+    "https://vampireachao.github.io/2026/08/02/airllm",
+    "https://gipyeong-lee.github.io/2026/08/03/AirLLM-70B-inference-with-single-4GB-GPU.en",
+    "https://blog.csdn.net/chendongqi2007/article/details/163451033"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-08-29"
 }

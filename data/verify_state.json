@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-08-28",
+    "updated": "2026-08-30",
     "total": 672
   },
   "tools": {
@@ -1471,14 +1471,14 @@
     },
     "tencent-hunyuan": {
       "name": "腾讯混元",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 140,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-08-30",
+      "confidence": "high",
+      "notes": "scrape_price 对 hunyuan.tencent.com 首页 success=false（首页不渲染 API 价表）；价格经 WebSearch 命中官方腾讯新闻(i黑马/腾讯系)原文 + 官方模型广场 + 多家独立媒体(AI Weekly/TechNode/每日经济新闻)一致确认：Hy4 preview ¥6/¥18/¥0.3 每百万 token、Hy3 ¥1/¥4/¥0.25。版本发布为官方公告 + 多家独立媒体一致，高置信。Hy4 preview 为早期预览版，页面已注明。"
     },
     "01-ai": {
       "name": "零一万物",

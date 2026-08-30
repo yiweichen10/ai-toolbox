@@ -1,97 +1,98 @@
 {
-  "name": "PromptBase",
-  "slug": "promptbase",
-  "positioning": "PromptBase是什么？AI提示词市场好用吗",
-  "auto_positioning": false,
-  "emoji": "💡",
-  "color": "#FF8A00",
-  "description": "PromptBase 是全球最大的 AI 提示词交易市场之一（官网显示 31 万+ 高质量提示词），连接买家与提示词创作者。它覆盖 Midjourney、ChatGPT、DALL·E、Gemini、Veo、Claude、Stable Diffusion 等主流模型，支持按个购买、创作者变现与站内生成。",
-  "category": "AI提示词",
-  "tags": [
-    {
-      "text": "提示词市场"
+    "name": "PromptBase",
+    "slug": "promptbase",
+    "positioning": "PromptBase是什么？AI提示词市场好用吗",
+    "auto_positioning": false,
+    "emoji": "💡",
+    "color": "#FF8A00",
+    "description": "PromptBase 是全球最大的 AI 提示词交易市场之一（官网显示 31 万+ 高质量提示词），连接买家与提示词创作者。它覆盖 Midjourney、ChatGPT、DALL·E、Gemini、Veo、Claude、Stable Diffusion 等主流模型，支持按个购买、创作者变现与站内生成。",
+    "category": "AI提示词",
+    "tags": [
+        {
+            "text": "提示词市场"
+        },
+        {
+            "text": "Midjourney"
+        },
+        {
+            "text": "ChatGPT"
+        },
+        {
+            "text": "免费可用",
+            "type": "free"
+        }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "recommend",
+        "text": "推荐"
     },
-    {
-      "text": "Midjourney"
-    },
-    {
-      "text": "ChatGPT"
-    },
-    {
-      "text": "免费可用",
-      "type": "free"
-    }
-  ],
-  "rating": "⭐ 4.7",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "recommend",
-    "text": "推荐"
-  },
-  "url": "https://promptbase.com",
-  "price": "按提示词单次购买，约 $2.99–$11.99（部分更高）；含免费提示词",
-  "platform": "Web",
-  "pros": [
-    "提示词经审核与社区评分，质量相对有保障",
-    "覆盖模型全、分类细（Logo、营销、UI、商业写作等）",
-    "创作者能稳定变现，抽成约 80%",
-    "有免费提示词可先试水",
-    "支持站内直接生成图片/视频，流程顺畅"
-  ],
-  "cons": [
-    "按个购买，重度用户长期成本会累积",
-    "效果仍依赖所用 AI 模型与个人改写能力",
-    "非订阅制，没有一站式包月体验"
-  ],
-  "features": [
-    "海量提示词市场（官网 31 万+）",
-    "按模型（Midjourney/ChatGPT/Gemini/Veo 等）与分类筛选",
-    "创作者变现，卖家保留约 80% 收入",
-    "站内直接生成图片/视频，省去复制粘贴",
-    "App 构建器，用提示词搭建小型 AI 应用",
-    "“Hire”功能雇提示词工程师按需求定制"
-  ],
-  "related": [
-    "midjourney",
-    "stable-diffusion",
-    "chatgpt"
-  ],
-  "content": "## PromptBase是什么？\nPromptBase 是目前规模最大的 AI 提示词交易市场之一（官网显示已有 31 万+ 高质量提示词）。它本质上是一个“提示词商店”：一边是买家，想给 Midjourney、ChatGPT、DALL·E、Gemini、Veo、Claude、Stable Diffusion 等模型找现成、好用的提示词；另一边是卖家（提示词创作者），把自己的提示词挂上去卖钱。平台对提示词有审核和社区评分，买家用之前能看到示例输出和卖家评分，避免“买了踩坑”。对不想在提示词上反复试错的人来说，花几美元买一个验证过的提示词，往往比自己琢磨一下午更高效。\n\n## 核心功能\n1. 提示词市场：按模型（Midjourney / ChatGPT / Gemini / Veo 等）和分类（Logo、营销、UI、商业写作等）筛选购买。\n2. 创作者变现：卖家每笔销售可保留约 80% 收入，平台抽成约 20%。\n3. 站内生成：部分模型支持直接在 PromptBase 里生成图片/视频，省去复制粘贴。\n4. App 构建器：用购买的提示词搭建小型 AI 应用，甚至嵌入自己网站。\n5. 雇人定制：通过 “Hire” 功能委托提示词工程师按需求定制。\n6. 免费提示词：平台提供一定数量的免费提示词供试用。\n\n## 版本/套餐对比\nPromptBase 采用“按提示词单次购买”模式，没有传统月费订阅：\n| 类型 | 价格 | 说明 |\n| --- | --- | --- |\n| 免费提示词 | $0 | 供试用与体验 |\n| 普通提示词 | 约 $2.99–$11.99 | 多数提示词在此区间 |\n| 专业/定制提示词 | 最高约 $23.99 | 复杂商业场景 |\n| 卖家抽成 | 创作者保留 80% | 平台收 20% |\n\n注：价格由卖家自主设定，具体以商品页为准；提现门槛约 $30。\n\n## 值不值得用？\n优点：提示词经过验证、带示例和评分，质量相对有保障；覆盖模型全、分类细；创作者能稳定变现；免费提示词可先试水。\n缺点：按个买，重度用户长期成本会累积；效果仍依赖你使用的 AI 模型和会否灵活改提示词；不是“订阅制一站式”体验。\n结论：如果你是偶尔需要高质量提示词、或想省下试错时间的内容创作者、营销人，PromptBase 很划算；如果你是每天都狂用提示词的人，长期看成本要注意。\n\n## 使用建议\n- 先搜免费提示词和带示例的条目，确认风格对味再付费。\n- 买之前看评分、销量和示例输出，优先选高分卖家。\n- 买来后根据实际需求改几个词，往往比原样照抄效果更好。\n- 想靠它赚钱，可以把自己验证过的提示词上架，利用 80% 分成变现。\n\n## 适合谁用？\n- 推荐：设计师、营销/自媒体从业者、需要稳定产出视觉/文案素材的小团队。\n- 可考虑：想学习提示词工程、研究别人怎么写提示词的学习者。\n- 不推荐：希望“一个订阅全搞定”的重度用户；以及只想要免费、不愿为单条提示词付费的人。",
-  "published": false,
-  "faq": [
-    {
-      "question": "PromptBase 上的提示词多少钱？",
-      "answer": "采用按提示词单次购买，多数约 $2.99–$11.99，部分专业/定制提示词更高；平台也提供一定数量的免费提示词。"
-    },
-    {
-      "question": "卖家能赚多少？",
-      "answer": "卖家每笔销售通常可保留约 80% 收入，平台抽成约 20%；提现门槛约 $30。"
-    },
-    {
-      "question": "提示词质量有保障吗？",
-      "answer": "平台有审核、社区评分和示例输出，买家购买前可看评分与示例，相对减少踩坑概率。"
-    },
-    {
-      "question": "支持哪些 AI 模型？",
-      "answer": "覆盖 Midjourney、ChatGPT、DALL·E、Gemini、Veo、Claude、Stable Diffusion 等主流模型，分类也较细。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "PromptBase",
-    "PromptBase怎么样",
-    "PromptBase免费版",
-    "PromptBase使用教程",
-    "PromptBase和哪个好"
-  ],
-  "source_urls": [
-    "https://promptbase.com",
-    "https://gongke.net/tools/promptbase",
-    "https://artificial-intelligence-wiki.com/prompt-engineering/chatgpt-prompts/prompt-marketplaces-guide"
-  ],
-  "confidence": "high",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+    "url": "https://promptbase.com",
+    "price": "按提示词单次购买，约 $2.99–$11.99（部分更高）；含免费提示词",
+    "platform": "Web",
+    "pros": [
+        "提示词经审核与社区评分，质量相对有保障",
+        "覆盖模型全、分类细（Logo、营销、UI、商业写作等）",
+        "创作者能稳定变现，抽成约 80%",
+        "有免费提示词可先试水",
+        "支持站内直接生成图片/视频，流程顺畅"
+    ],
+    "cons": [
+        "按个购买，重度用户长期成本会累积",
+        "效果仍依赖所用 AI 模型与个人改写能力",
+        "非订阅制，没有一站式包月体验"
+    ],
+    "features": [
+        "海量提示词市场（官网 31 万+）",
+        "按模型（Midjourney/ChatGPT/Gemini/Veo 等）与分类筛选",
+        "创作者变现，卖家保留约 80% 收入",
+        "站内直接生成图片/视频，省去复制粘贴",
+        "App 构建器，用提示词搭建小型 AI 应用",
+        "“Hire”功能雇提示词工程师按需求定制"
+    ],
+    "related": [
+        "midjourney",
+        "stable-diffusion",
+        "chatgpt"
+    ],
+    "content": "## PromptBase是什么？\nPromptBase 是目前规模最大的 AI 提示词交易市场之一（官网显示已有 31 万+ 高质量提示词）。它本质上是一个“提示词商店”：一边是买家，想给 Midjourney、ChatGPT、DALL·E、Gemini、Veo、Claude、Stable Diffusion 等模型找现成、好用的提示词；另一边是卖家（提示词创作者），把自己的提示词挂上去卖钱。平台对提示词有审核和社区评分，买家用之前能看到示例输出和卖家评分，避免“买了踩坑”。对不想在提示词上反复试错的人来说，花几美元买一个验证过的提示词，往往比自己琢磨一下午更高效。\n\n## 核心功能\n1. 提示词市场：按模型（Midjourney / ChatGPT / Gemini / Veo 等）和分类（Logo、营销、UI、商业写作等）筛选购买。\n2. 创作者变现：卖家每笔销售可保留约 80% 收入，平台抽成约 20%。\n3. 站内生成：部分模型支持直接在 PromptBase 里生成图片/视频，省去复制粘贴。\n4. App 构建器：用购买的提示词搭建小型 AI 应用，甚至嵌入自己网站。\n5. 雇人定制：通过 “Hire” 功能委托提示词工程师按需求定制。\n6. 免费提示词：平台提供一定数量的免费提示词供试用。\n\n## 版本/套餐对比\nPromptBase 采用“按提示词单次购买”模式，没有传统月费订阅：\n| 类型 | 价格 | 说明 |\n| --- | --- | --- |\n| 免费提示词 | $0 | 供试用与体验 |\n| 普通提示词 | 约 $2.99–$11.99 | 多数提示词在此区间 |\n| 专业/定制提示词 | 最高约 $23.99 | 复杂商业场景 |\n| 卖家抽成 | 创作者保留 80% | 平台收 20% |\n\n注：价格由卖家自主设定，具体以商品页为准；提现门槛约 $30。\n\n## 值不值得用？\n优点：提示词经过验证、带示例和评分，质量相对有保障；覆盖模型全、分类细；创作者能稳定变现；免费提示词可先试水。\n缺点：按个买，重度用户长期成本会累积；效果仍依赖你使用的 AI 模型和会否灵活改提示词；不是“订阅制一站式”体验。\n结论：如果你是偶尔需要高质量提示词、或想省下试错时间的内容创作者、营销人，PromptBase 很划算；如果你是每天都狂用提示词的人，长期看成本要注意。\n\n## 使用建议\n- 先搜免费提示词和带示例的条目，确认风格对味再付费。\n- 买之前看评分、销量和示例输出，优先选高分卖家。\n- 买来后根据实际需求改几个词，往往比原样照抄效果更好。\n- 想靠它赚钱，可以把自己验证过的提示词上架，利用 80% 分成变现。\n\n## 适合谁用？\n- 推荐：设计师、营销/自媒体从业者、需要稳定产出视觉/文案素材的小团队。\n- 可考虑：想学习提示词工程、研究别人怎么写提示词的学习者。\n- 不推荐：希望“一个订阅全搞定”的重度用户；以及只想要免费、不愿为单条提示词付费的人。",
+    "published": true,
+    "faq": [
+        {
+            "question": "PromptBase 上的提示词多少钱？",
+            "answer": "采用按提示词单次购买，多数约 $2.99–$11.99，部分专业/定制提示词更高；平台也提供一定数量的免费提示词。"
+        },
+        {
+            "question": "卖家能赚多少？",
+            "answer": "卖家每笔销售通常可保留约 80% 收入，平台抽成约 20%；提现门槛约 $30。"
+        },
+        {
+            "question": "提示词质量有保障吗？",
+            "answer": "平台有审核、社区评分和示例输出，买家购买前可看评分与示例，相对减少踩坑概率。"
+        },
+        {
+            "question": "支持哪些 AI 模型？",
+            "answer": "覆盖 Midjourney、ChatGPT、DALL·E、Gemini、Veo、Claude、Stable Diffusion 等主流模型，分类也较细。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "PromptBase",
+        "PromptBase怎么样",
+        "PromptBase免费版",
+        "PromptBase使用教程",
+        "PromptBase和哪个好"
+    ],
+    "source_urls": [
+        "https://promptbase.com",
+        "https://gongke.net/tools/promptbase",
+        "https://artificial-intelligence-wiki.com/prompt-engineering/chatgpt-prompts/prompt-marketplaces-guide"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14",
+    "published_date": "2026-08-30"
 }
