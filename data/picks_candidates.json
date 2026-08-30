@@ -1,6 +1,48 @@
 {
-  "generated_at": "2026-08-30 17:43",
+  "generated_at": "2026-08-31 07:34",
   "picks": [
+    {
+      "slug": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "category": "AI对话",
+      "price": "API $10/百万输入·$50/百万输出 token；含于 Claude Pro $20/月、Max $100/月",
+      "visits": "月访问量500万+",
+      "rating": "⭐4.6",
+      "score": 73.8,
+      "tags": [
+        "编辑实测"
+      ],
+      "reason": "有深度评测支撑 · Claude Fable 5 是 Anthropic 于 2026 年 6 月发布的旗舰级前沿大",
+      "date": "2026-07-17"
+    },
+    {
+      "slug": "wenxin-yige",
+      "name": "文心一格",
+      "category": "AI绘画",
+      "price": "免费 + 会员39元/月起",
+      "visits": "约850万月访问",
+      "rating": "⭐ 4.3",
+      "score": 73.3,
+      "tags": [
+        "编辑实测"
+      ],
+      "reason": "有深度评测支撑 · 文心一格是百度基于文心大模型推出的AI艺术与创意辅助平台，用户输入中文描述即可生成油画、水彩、插",
+      "date": "2026-06-22"
+    },
+    {
+      "slug": "tabnine",
+      "name": "Tabnine",
+      "category": "AI编程",
+      "price": "免费版可用（基础补全）；Dev $9/月起（年付），$12/月（月付）",
+      "visits": "约500万月访问量",
+      "rating": "⭐ 4.5",
+      "score": 73.2,
+      "tags": [
+        "编辑实测"
+      ],
+      "reason": "有深度评测支撑 · Tabnine 是隐私优先的 AI 代码补全与编程助手，支持 80+ 编程语言与主流 IDE，提",
+      "date": "2026-03-22"
+    },
     {
       "slug": "whee",
       "name": "WHEE",
@@ -27,48 +69,6 @@
         "编辑实测"
       ],
       "reason": "有深度评测支撑 · AI 写作助手，可快速生成博客、邮件、社媒与广告文案，支持 30+ 语言与 40+ 模板；免费版",
-      "date": "2026-03-22"
-    },
-    {
-      "slug": "d-id",
-      "name": "D-ID",
-      "category": "AI视频",
-      "price": "免费试用；Lite $4.70/月起（年付）",
-      "visits": "150万+",
-      "rating": "⭐4.6",
-      "score": 70.8,
-      "tags": [
-        "编辑实测"
-      ],
-      "reason": "有深度评测支撑 · D-ID 是一款 AI 数字人视频创建平台，通过先进 AI 技术将静态照片转化为能说话、有表情的",
-      "date": "2026-03-22"
-    },
-    {
-      "slug": "comfyui",
-      "name": "ComfyUI",
-      "category": "AI绘画",
-      "price": "免费开源",
-      "visits": "85万",
-      "rating": "⭐4.8",
-      "score": 70.6,
-      "tags": [
-        "编辑实测"
-      ],
-      "reason": "有深度评测支撑 · ComfyUI 是完全免费开源的节点式 AI 图像/视频/音频生成工作流引擎，基于开源模型（SD",
-      "date": "2026-03-22"
-    },
-    {
-      "slug": "mubert",
-      "name": "Mubert",
-      "category": "AI音频",
-      "price": "免费版 25 首/月；Creator $14/月起",
-      "visits": "150万",
-      "rating": "⭐ 4.5",
-      "score": 70.2,
-      "tags": [
-        "编辑实测"
-      ],
-      "reason": "有深度评测支撑 · Mubert 是一个 AI 音乐生成平台，根据你输入的文字描述或选择的风格/情绪，自动生成一段免",
       "date": "2026-03-22"
     }
   ]
