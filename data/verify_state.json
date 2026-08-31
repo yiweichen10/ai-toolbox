@@ -2,8 +2,8 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-08-30",
-    "total": 672
+    "updated": "2026-08-31",
+    "total": 673
   },
   "tools": {
     "chatgpt": {
@@ -41,14 +41,14 @@
     },
     "github-copilot": {
       "name": "GitHub Copilot",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 190,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 1 个候选 URL, 第 1 个(https://github.com/features/copilot)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "cursor": {
       "name": "Cursor",
@@ -327,14 +327,14 @@
     },
     "dall-e-3": {
       "name": "DALL-E 3",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI绘画",
       "priority": 230,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "无可用 URL 或渲染失败"
     },
     "adobe-firefly": {
       "name": "Adobe Firefly",
@@ -371,14 +371,14 @@
     },
     "windsurf": {
       "name": "Windsurf（已更名 Devin Desktop）",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 190,
-      "attempts": 0,
-      "last_attempt": "2026-08-25",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 1 个候选 URL, 第 1 个(https://windsurf.com)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "grammarly-ai": {
       "name": "Grammarly AI",
@@ -404,14 +404,14 @@
     },
     "wps-ai": {
       "name": "WPS AI办公",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 180,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "无可用 URL 或渲染失败"
     },
     "character-ai": {
       "name": "Character AI",
@@ -481,36 +481,36 @@
     },
     "lovable": {
       "name": "Lovable",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 230,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 2 个候选 URL, 第 2 个(https://lovable.dev/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "v0.dev": {
       "name": "v0.dev",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 230,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 2 个候选 URL, 第 2 个(https://v0.dev/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "claude-code": {
       "name": "Claude Code",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 190,
-      "attempts": 0,
-      "last_attempt": "2026-08-25",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 1 个候选 URL, 第 1 个(https://anthropic.com/claude-code)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "openai-codex": {
       "name": "OpenAI Codex",
@@ -646,14 +646,14 @@
     },
     "leonardo-ai": {
       "name": "Leonardo AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI绘画",
       "priority": 230,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "无可用 URL 或渲染失败"
     },
     "freepik-ai": {
       "name": "Freepik AI",
@@ -712,14 +712,14 @@
     },
     "copy.ai": {
       "name": "Copy.ai",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI写作",
       "priority": 280,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 1 个候选 URL, 第 1 个(https://copy.ai)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "quillbot": {
       "name": "QuillBot",
@@ -1108,14 +1108,14 @@
     },
     "perplexity-ai": {
       "name": "Perplexity AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI搜索",
       "priority": 260,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "无可用 URL 或渲染失败"
     },
     "d-id": {
       "name": "D-ID",
@@ -1163,14 +1163,14 @@
     },
     "anthropic-console": {
       "name": "Anthropic Console",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI开发",
       "priority": 210,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "driver-error: Command '['C:\\\\Users\\\\27040\\\\.workbuddy\\\\binaries\\\\python\\\\versions\\\\3.13.12\\\\python.exe', 'C:\\\\Users\\\\27040\\\\WorkBuddy\\\\20260321092139\\\\seo-site\\\\scripts\\\\scrape_price.py', '--slug', 'anthropic-console', '--url', 'https://console.anthropic.com', '--source-urls', 'https://console.anthropic.com,https://claude.com/platform,https://www.anthropic.com/pricing']' timed out after 120 second"
     },
     "hugging-face": {
       "name": "Hugging Face",
@@ -1328,14 +1328,14 @@
     },
     "kaiber": {
       "name": "Kaiber",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI视频",
       "priority": 180,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 2 个候选 URL, 第 2 个(https://kaiber.ai/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "decohere": {
       "name": "Decohere",
@@ -1383,14 +1383,14 @@
     },
     "tldv": {
       "name": " tl;dv",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 180,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "driver-error: Command '['C:\\\\Users\\\\27040\\\\.workbuddy\\\\binaries\\\\python\\\\versions\\\\3.13.12\\\\python.exe', 'C:\\\\Users\\\\27040\\\\WorkBuddy\\\\20260321092139\\\\seo-site\\\\scripts\\\\scrape_price.py', '--slug', 'tldv', '--url', 'https://tldv.io', '--source-urls', 'https://tldv.io,https://toolchase.com/tool/tldv,https://decidenavigator.com/tools/tldv']' timed out after 120 seconds"
     },
     "seedance": {
       "name": "Seedance 2.0",
@@ -1416,14 +1416,14 @@
     },
     "elicit": {
       "name": "Elicit",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI效率",
       "priority": 180,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 2 个候选 URL, 第 2 个(https://elicit.com/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "anyword": {
       "name": "Anyword",
@@ -1559,14 +1559,14 @@
     },
     "comfyui": {
       "name": "ComfyUI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI绘画",
       "priority": 230,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 2 个候选 URL, 第 2 个(https://www.comfy.org/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "fooocus": {
       "name": "Fooocus",
@@ -1702,14 +1702,14 @@
     },
     "pictory": {
       "name": "Pictory",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI视频",
       "priority": 210,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 2 个候选 URL, 第 2 个(https://pictory.ai/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "kapwing": {
       "name": "Kapwing",
@@ -1933,14 +1933,14 @@
     },
     "xinghuo-cognitive-model": {
       "name": "星火认知大模型",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 210,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "第 1 个候选(https://xinghuo.xfyun.cn/)有定价页结构但无明确金额(可能动态加载/登录墙) | 仅检测到免费/Free 信号"
     },
     "aider": {
       "name": "Aider",
@@ -2241,14 +2241,14 @@
     },
     "mistral-ai": {
       "name": "Mistral AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 190,
-      "attempts": 0,
-      "last_attempt": "2026-08-25",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 2 个候选 URL, 第 2 个(https://mistral.ai/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "langchain": {
       "name": "LangChain",
@@ -4485,25 +4485,25 @@
     },
     "makersclaw": {
       "name": "MakersClaw",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI自动化",
       "priority": 190,
-      "attempts": 0,
-      "last_attempt": "2026-08-25",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "无可用 URL 或渲染失败"
     },
     "reloop-animation-studio": {
       "name": "Reloop Animation Studio",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI视频",
       "priority": 230,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 1 个候选 URL, 第 1 个(https://reloop.so)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "chatgpt-work": {
       "name": "ChatGPT Work",
@@ -4650,14 +4650,14 @@
     },
     "workbuddy": {
       "name": "WorkBuddy",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 210,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 1 个候选 URL, 第 1 个(https://www.workbuddy.cn/)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "codebuddy": {
       "name": "CodeBuddy",
@@ -4727,14 +4727,14 @@
     },
     "fireflies-ai": {
       "name": "Fireflies AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI效率",
       "priority": 230,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 2 个候选 URL, 第 2 个(https://fireflies.ai/pricing)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "notion-ai-meeting": {
       "name": "Notion AI Meeting",
@@ -4749,14 +4749,14 @@
     },
     "elevenlabs-dubbing": {
       "name": "ElevenLabs Dubbing",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI音频",
       "priority": 190,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "driver-error: Command '['C:\\\\Users\\\\27040\\\\.workbuddy\\\\binaries\\\\python\\\\versions\\\\3.13.12\\\\python.exe', 'C:\\\\Users\\\\27040\\\\WorkBuddy\\\\20260321092139\\\\seo-site\\\\scripts\\\\scrape_price.py', '--slug', 'elevenlabs-dubbing', '--url', 'https://elevenlabs.io/dubbing', '--source-urls', 'https://elevenlabs.io/pricing/api,https://elevenlabs.io,https://elevenlabsmagazine.com/what-is-eleven-laboratory-elevenl"
     },
     "minimax-m2-5": {
       "name": "MiniMax M2.5",
@@ -6839,25 +6839,25 @@
     },
     "claude-agent-sdk": {
       "name": "Claude Agent SDK",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI智能体",
       "priority": 210,
-      "attempts": 0,
-      "last_attempt": "2026-08-25",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "第 1 个候选(https://docs.anthropic.com/en/api/agent-sdk)有定价页结构但无明确金额(可能动态加载/登录墙)"
     },
     "claude-cowork": {
       "name": "Claude Cowork",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI智能体",
       "priority": 210,
-      "attempts": 0,
-      "last_attempt": "2026-08-25",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 1 个候选 URL, 第 1 个(https://www.claude.com/product/cowork)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "gemini-managed-agents": {
       "name": "Gemini API Managed Agents",
@@ -7026,14 +7026,14 @@
     },
     "ngrok-ai-gateway": {
       "name": "ngrok AI Gateway",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI开发",
       "priority": 210,
-      "attempts": 0,
-      "last_attempt": "2026-08-25",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "medium",
+      "notes": "尝试 1 个候选 URL, 第 1 个(https://ngrok.ai/)命中明确金额 | 抓取价表与现有 price 一致，无变化"
     },
     "rippling-ai-spend": {
       "name": "AI Spend Console by Rippling",
@@ -7059,13 +7059,13 @@
     },
     "skrun": {
       "name": "Skrun",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI开发",
       "priority": 60,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
+      "verified_at": "2026-08-31",
+      "confidence": "high",
       "notes": ""
     },
     "airllm": {
@@ -7092,14 +7092,14 @@
     },
     "github-copilot-sdk": {
       "name": "GitHub Copilot SDK",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI开发",
       "priority": 210,
-      "attempts": 0,
-      "last_attempt": "2026-08-25",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "第 1 个候选(https://github.com/github/copilot-sdk)有定价页结构但无明确金额(可能动态加载/登录墙) | 检测到联系销售/企业版(无公开价)"
     },
     "browseros-neo": {
       "name": "BrowserOS neo",
@@ -7136,14 +7136,14 @@
     },
     "qwen-work": {
       "name": "千问办公 QwenWork",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 210,
-      "attempts": 0,
-      "last_attempt": "2026-08-25",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "high",
+      "notes": "抓取证实已公布正式定价（此前记录“官方尚未公布”），属静默调价/上线：标准版¥98/月（连续包月8折¥78），FREE 0元，PRO已开售"
     },
     "wps-comate": {
       "name": "WPS Comate",
@@ -7202,14 +7202,14 @@
     },
     "qwen3-8-max": {
       "name": "Qwen3.8-Max",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 210,
-      "attempts": 0,
-      "last_attempt": "2026-08-25",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "第 1 个候选(https://qwen.ai)有定价页结构但无明确金额(可能动态加载/登录墙) | 仅检测到免费/Free 信号"
     },
     "step-3-7-flash": {
       "name": "Step 3.7 Flash",
@@ -7257,14 +7257,14 @@
     },
     "ctruh-studio": {
       "name": "Ctruh Studio",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI设计",
       "priority": 210,
-      "attempts": 0,
-      "last_attempt": "2026-08-25",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-08-30",
+      "verified_at": "2026-08-30",
+      "confidence": "low",
+      "notes": "driver-error: Command '['C:\\\\Users\\\\27040\\\\.workbuddy\\\\binaries\\\\python\\\\versions\\\\3.13.12\\\\python.exe', 'C:\\\\Users\\\\27040\\\\WorkBuddy\\\\20260321092139\\\\seo-site\\\\scripts\\\\scrape_price.py', '--slug', 'ctruh-studio', '--url', 'https://www.ctruh.com', '--source-urls', 'https://hunted.space/dashboard/ctruh-studio,https://www.linkedin.com/posts/ctruh_producthunt-ai-3d-activity-7489925943206146048-graM']"
     },
     "atlaso": {
       "name": "Atlaso",
@@ -7392,6 +7392,17 @@
       "status": "unverified",
       "category": "AI编程",
       "priority": 90,
+      "attempts": 0,
+      "last_attempt": null,
+      "verified_at": null,
+      "confidence": null,
+      "notes": ""
+    },
+    "pptbot": {
+      "name": "PPTBot",
+      "status": "unverified",
+      "category": "AI办公",
+      "priority": 10,
       "attempts": 0,
       "last_attempt": null,
       "verified_at": null,
