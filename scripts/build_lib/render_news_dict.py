@@ -550,16 +550,7 @@ def build_dict_page(term, all_terms, index):
                 <div class="site-logo">🛠 AI工具宝箱 <span>每日更新 · 已收录 {build.TOOL_COUNT} 款工具</span></div>
             </a>
         </div>
-        <nav class="global-nav" aria-label="全局导航">
-            <div class="global-nav-inner">
-                <a href="/ranking/" class="gn-item">📊 工具排行</a>
-                <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
-                <a href="/live/" class="gn-item">📈 实时面板</a>
-                <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
-                <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
-                <a href="/category/" class="gn-item">📂 全部分类</a>
-            </div>
-        </nav>
+        {build.GLOBAL_NAV}
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">
@@ -690,16 +681,7 @@ def _build_dict_index_page(terms):
                 <div class="site-logo">🛠 AI工具宝箱 <span>每日更新 · 已收录 {build.TOOL_COUNT} 款工具</span></div>
             </a>
         </div>
-        <nav class="global-nav" aria-label="全局导航">
-            <div class="global-nav-inner">
-                <a href="/ranking/" class="gn-item">📊 工具排行</a>
-                <a href="/quiz/" class="gn-item">🎯 AI工具选择器</a>
-                <a href="/live/" class="gn-item">📈 实时面板</a>
-                <a href="/compare/" class="gn-item">⚖️ 对比评测</a>
-                <a href="/alternatives/" class="gn-item">🔄 替代方案</a>
-                <a href="/category/" class="gn-item">📂 全部分类</a>
-            </div>
-        </nav>
+        {build.GLOBAL_NAV}
     </header>
 
     <nav class="breadcrumb" aria-label="面包屑导航">

@@ -148,6 +148,11 @@ def make_tool_card_html(tool, i):
     glow_styles = get_category_glow_styles(tool.get('category', ''))
     price_cls, price_text = get_price_info(tool)
     visits = tool.get('visits', '')
+    _visits_card = str(visits or '').strip()
+    if _visits_card.lower() in ('', '暂无数据', '0', 'none', 'n/a', 'na', '-', '未知', '无'):
+        _visits_card = ''  # 2026-08-31：列表卡片不外露 N/A 类无数据值
+    else:
+        _visits_card = f'<span class="visits">{escape_html(_visits_card)}</span>'
 
     icon_html = tool_icon_html(tool)
 
@@ -175,7 +180,7 @@ def make_tool_card_html(tool, i):
                             <p class="desc">{desc}</p>
                             <div class="footer-row">
                                 <span class="price-pill {price_cls}">{price_text}</span>
-                                <span class="visits">{visits}</span>
+                                {_visits_card}
                             </div>
                         </article>
                         </a>\n'''
@@ -590,8 +595,11 @@ def build_tool_page(tool, all_tools, all_articles=None, all_compares=None, all_a
         platform_html = f'<div class="tool-meta-item">📦 <strong>平台</strong>：{tool["platform"]}</div>'
 
     # 访问量短语（2026-08-16 评分行压缩：保留客观硬数据，无数据则不显示，避免"暂无数据"尴尬）
+    # 2026-08-31：补 N/A/n/a/NA/none/'-' 等无数据值（实测 19 个工具 visits='N/A' 外露"月访问约N/A"）
     _visits_raw = str(tool.get('visits', '') or '').strip()
-    _visits_clause = f' · 月访问约{_visits_raw}' if _visits_raw and _visits_raw not in ('暂无数据', '0', 'None') else ''
+    _visits_clause = (f' · 月访问约{_visits_raw}'
+                      if _visits_raw and _visits_raw.lower() not in ('暂无数据', '0', 'none', 'n/a', 'na', '-', '未知', '无')
+                      else '')
 
     # 结构化数据
     from datetime import datetime, timedelta

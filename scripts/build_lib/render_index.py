@@ -94,6 +94,9 @@ def build_tools_index_page(tools):
         rn = extract_rating_num(t.get('rating', ''))
         price_cls, price_text = get_price_info(t)
         visits = escape_html(str(t.get('visits', '')))
+        # 2026-08-31：无数据值（N/A 类）不外露
+        if visits.strip().lower() in ('', '暂无数据', '0', 'none', 'n/a', 'na', '-', '未知', '无'):
+            visits = ''
         icon_html = tool_icon_html(t, size='sm')
         rating_html = f'<span class="rating-inline">★{rn}</span>' if rn else ''
         return f'''                        <a class="tools-index-row" href="/tools/{slug}/">

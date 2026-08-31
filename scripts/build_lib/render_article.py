@@ -690,7 +690,7 @@ def build_article_page(article, all_articles, all_tools=None):
                         <span class="author-read">阅读 {max(3, len(article.get('content','')) // 400)} 分钟</span>
                     </div>
                     <div class="author-desc-row">
-                        <div class="author-desc">AI 工具实测与对比 · 已收录 580+ 款工具</div>
+                        <div class="author-desc">AI 工具实测与对比 · 已收录 {build.TOOL_COUNT}+ 款工具</div>
                         <div class="author-tts-slot" aria-hidden="true"></div>
                     </div>
                     <div class="author-meta-mobile" aria-hidden="true">

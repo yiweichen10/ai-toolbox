@@ -328,7 +328,8 @@ set_data_dir(DATA_DIR)
 # OG图片自动生成：缺失时自动调用gen_seo_images生成
 
 GLOBAL_NAV = '''    <nav class="global-nav" aria-label="全局导航">
-        <div class="global-nav-inner">
+        <button type="button" class="gn-toggle" aria-expanded="false" aria-controls="gnPanel" onclick="var n=this.closest('.global-nav');n.classList.toggle('gn-open');this.setAttribute('aria-expanded',n.classList.contains('gn-open'));this.textContent=n.classList.contains('gn-open')?'✕ 收起导航':'☰ 全站导航';">☰ 全站导航</button>
+        <div class="global-nav-inner" id="gnPanel">
             <a href="/" class="gn-item">首页</a>
             <a href="/tools/" class="gn-item">全部AI工具</a>
             <a href="/category/" class="gn-item">工具分类</a>
