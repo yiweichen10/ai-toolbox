@@ -1,27 +1,27 @@
 {
   "metadata": {
     "version": "1.0",
-    "generated_at": "2026-08-30 17:43",
+    "generated_at": "2026-08-31 11:16",
     "source": "aitoollab.cn-regenerate-data",
-    "tool_count": 673,
-    "article_count": 200,
+    "tool_count": 674,
+    "article_count": 203,
     "update_policy": "每次构建自动生成"
   },
   "stats": {
-    "total_tools": 673,
+    "total_tools": 674,
     "total_categories": 19,
-    "total_articles": 200,
+    "total_articles": 203,
     "total_visits_str": "106869万",
     "avg_rating": 4.4,
     "price_distribution": {
-      "free": 164,
+      "free": 165,
       "freemium": 401,
       "paid": 80,
       "enterprise": 28
     },
-    "today_active": "673",
+    "today_active": "674",
     "this_week_new": 8,
-    "last_updated": "2026-08-30 17:43",
+    "last_updated": "2026-08-31 11:16",
     "update_frequency": "每次构建自动更新"
   },
   "comparison_matrix": {
@@ -1046,7 +1046,7 @@
         "tool_count": 52
       },
       {
-        "category": "AI办公",
+        "category": "AI视频",
         "icon": "📊",
         "weekly_data": [
           {
@@ -1087,45 +1087,45 @@
         "tool_count": 46
       },
       {
-        "category": "AI视频",
+        "category": "AI办公",
         "icon": "📊",
         "weekly_data": [
           {
             "week": "04/22",
-            "value": 472
+            "value": 482
           },
           {
             "week": "05/01",
-            "value": 611
+            "value": 624
           },
           {
             "week": "06/08",
-            "value": 645
+            "value": 660
           },
           {
             "week": "07/15",
-            "value": 567
+            "value": 580
           },
           {
             "week": "08/22",
-            "value": 471
+            "value": 482
           },
           {
             "week": "09/01",
-            "value": 469
+            "value": 480
           },
           {
             "week": "010/0",
-            "value": 586
+            "value": 599
           },
           {
             "week": "011/1",
-            "value": 738
+            "value": 754
           }
         ],
-        "current_value": 738,
+        "current_value": 754,
         "change_percent": 56.4,
-        "tool_count": 45
+        "tool_count": 46
       },
       {
         "category": "AI对话",
@@ -1499,6 +1499,32 @@
         "recommended_slug": "ag2"
       },
       {
+        "category": "AI视频",
+        "icon": "📊",
+        "tool_count": 46,
+        "avg_rating": 4.5,
+        "by_price": {
+          "free": {
+            "count": 6,
+            "names": [
+              "Abot-World",
+              "海螺AI",
+              "MAGI-2"
+            ]
+          },
+          "freemium": {
+            "count": 33,
+            "names": [
+              "Anijam",
+              "Augie AI",
+              "CapCut AI"
+            ]
+          }
+        },
+        "top_feature": "Abot-World",
+        "recommended_slug": "abot-world"
+      },
+      {
         "category": "AI办公",
         "icon": "📊",
         "tool_count": 46,
@@ -1523,32 +1549,6 @@
         },
         "top_feature": "Airtable AI",
         "recommended_slug": "airtable-ai"
-      },
-      {
-        "category": "AI视频",
-        "icon": "📊",
-        "tool_count": 45,
-        "avg_rating": 4.5,
-        "by_price": {
-          "free": {
-            "count": 5,
-            "names": [
-              "Abot-World",
-              "海螺AI",
-              "Pixelle-Video"
-            ]
-          },
-          "freemium": {
-            "count": 33,
-            "names": [
-              "Anijam",
-              "Augie AI",
-              "CapCut AI"
-            ]
-          }
-        },
-        "top_feature": "Abot-World",
-        "recommended_slug": "abot-world"
       },
       {
         "category": "AI对话",
@@ -1828,7 +1828,7 @@
     {
       "slug": "dashboard",
       "title": "AI工具实时监控面板",
-      "meta_description": "实时追踪AI工具市场动态：总收录673款工具、19个分类，数据每日自动更新。",
+      "meta_description": "实时追踪AI工具市场动态：总收录674款工具、19个分类，数据每日自动更新。",
       "keywords": [
         "AI工具监控",
         "AI工具数据",
