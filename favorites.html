@@ -12,7 +12,7 @@
     <link rel="alternate" hreflang="en" href="https://aitoolbox.hk/favorites.html">
     <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.cn/favorites.html">
     <link rel="alternate" hreflang="x-default" href="https://aitoolbox.hk/favorites.html">
-    <link rel="stylesheet" href="/css/style.min.css?v=a900464dfa">
+    <link rel="stylesheet" href="/css/style.min.css?v=4e7ab76d78">
     <link rel="icon" href="/favicon.ico">
 <style id="global-search-style">
 .global-search-bar{background:var(--surface);border-bottom:1px solid var(--border-light);padding:10px 16px}
@@ -45,20 +45,21 @@ var _hmt = _hmt || [];
             <a href="/" style="text-decoration:none;"><div class="site-logo"><svg class="site-logo-mark" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><rect x="3.4" y="4.2" width="17.2" height="16.4" rx="3.4"/><path d="M12 7.5 Q14.19 10.21 16.9 12.4 Q14.19 14.59 12 17.3 Q9.81 14.59 7.1 12.4 Q9.81 10.21 12 7.5 Z" fill="currentColor" stroke="none"/></svg> AI工具宝箱 <span>每日更新 · 已收录数百款工具</span></div></a>
         </div>
         <nav class="global-nav" aria-label="全局导航">
-            <div class="global-nav-inner">
-                <a href="/" class="gn-item">首页</a>
-                <a href="/tools/" class="gn-item">全部AI工具</a>
+        <button type="button" class="gn-toggle" aria-expanded="false" aria-controls="gnPanel" onclick="var n=this.closest('.global-nav');n.classList.toggle('gn-open');this.setAttribute('aria-expanded',n.classList.contains('gn-open'));this.textContent=n.classList.contains('gn-open')?'✕ 收起导航':'☰ 全站导航';">☰ 全站导航</button>
+        <div class="global-nav-inner" id="gnPanel">
+            <a href="/" class="gn-item">首页</a>
+            <a href="/tools/" class="gn-item">全部AI工具</a>
             <a href="/category/" class="gn-item">工具分类</a>
-                <a href="/ranking/" class="gn-item">工具排行</a>
-                <a href="/news/" class="gn-item">快讯</a>
-                <a href="/dict/" class="gn-item">AI词典</a>
-                <a href="/quiz/" class="gn-item">AI工具选择器</a>
-                <a href="/live/" class="gn-item">实时面板</a>
-                <a href="/compare/" class="gn-item">对比评测</a>
-                <a href="/alternatives/" class="gn-item">替代方案</a>
-                <a href="/favorites.html" class="gn-item">我的收藏</a>
-            </div>
-        </nav>
+            <a href="/ranking/" class="gn-item">工具排行</a>
+            <a href="/news/" class="gn-item">AI动态</a>
+            <a href="/dict/" class="gn-item">AI词典</a>
+            <a href="/quiz/" class="gn-item">AI工具选择器</a>
+            <a href="/live/" class="gn-item">实时面板</a>
+            <a href="/compare/" class="gn-item">对比评测</a>
+            <a href="/alternatives/" class="gn-item">替代方案</a>
+            <a href="/favorites.html" class="gn-item">我的收藏</a>
+        </div>
+    </nav>
     </header>
     <div class="global-search-bar" id="globalSearchBar">
         <form class="search-box" action="/" method="get" role="search" aria-label="站内搜索">

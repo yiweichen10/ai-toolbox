@@ -207,6 +207,21 @@ body {
   scrollbar-width: none;
 }
 .global-nav-inner::-webkit-scrollbar { display: none; }
+/* 移动端导航折叠按钮（2026-08-31 P1）：桌面隐藏，仅移动端显示，见 RESPONSIVE 区块 */
+.gn-toggle {
+  display: none;
+  width: 100%;
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: left;
+  cursor: pointer;
+}
+[data-theme="dark"] .gn-toggle { border-bottom-color: #1e293b; color: #94a3b8; }
 .gn-item {
   display: inline-flex;
   align-items: center;
@@ -1604,6 +1619,12 @@ h2[id], h3[id], h4[id] { scroll-margin-top: 200px; }
   .header-inner { padding: 10px 16px; }
   .global-nav-inner { padding: 5px 14px; gap: 0; }
   .gn-item { padding: 5px 10px; font-size: 12px; }
+  /* 2026-08-31 移动端导航折叠：默认收起，点 ☰ 展开为可换行网格（替代 11 项横向滚动） */
+  .global-nav .gn-toggle { display: block; }
+  .global-nav .global-nav-inner { display: none; }
+  .global-nav.gn-open .global-nav-inner { display: flex; flex-wrap: wrap; row-gap: 2px; }
+  .global-nav.gn-open { border-bottom: 1px solid #f1f5f9; }
+  [data-theme="dark"] .global-nav.gn-open { border-bottom-color: #1e293b; }
 
   /* 搜索 */
   .search-bar-below-nav { padding: 10px 16px; top: 80px; }

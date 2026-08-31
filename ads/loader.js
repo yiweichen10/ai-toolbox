@@ -393,6 +393,17 @@
         }
         function insertAfterNthP(el, n) {
           var p = findTarget(['article.article-body > p:nth-of-type(' + n + ')']);
+          // 2026-08-31 修复：若目标段紧邻标题(h1-h4)，优先向后顺延到同段落块的下一 <p>；
+          // 顺延被非 <p> 元素(ul/table/div)挡住时，改为把卡片插到该标题之前（上一段落块末尾），
+          // 保证卡片永不落在"标题与其内容"之间切断阅读（工具页/文章页移动端均命中）
+          var guard = 0;
+          while (p && p.previousElementSibling && /^H[1-4]$/.test(p.previousElementSibling.tagName) && guard < 6) {
+            var nextEl = p.nextElementSibling;
+            if (nextEl && nextEl.tagName === 'P') { p = nextEl; guard++; continue; }
+            var head = p.previousElementSibling;
+            if (head && head.parentNode) { head.parentNode.insertBefore(el, head); return true; }
+            break;
+          }
           if (p && p.parentNode) { p.parentNode.insertBefore(el, p); return true; }
           var body = findTarget(['article.article-body']);
           if (body) { body.insertBefore(el, body.firstChild); return true; }

@@ -13,6 +13,7 @@
 - **方案**：云厂商降级为「AI编程 / AI开发」两品类的补充；主力换稿定、5118、AiPPT、讯飞等国内 AI 工具官方分销（注册返 + 会员分成 20-40%）。
 - **触发时机**：beacon 数据积累 1-2 周（约 2026-08-29 前后），跑 `python scripts/analyze_beacon.py` 看各品类真实点击率，用数据决定换哪个品类。
 - **依赖**：① beacon+utm 数据闭环（✅ 已建）；② 数据积累。
+- **进展（2026-08-31）**：①阿里云卡实证已是"云聚 AI"大模型/Agent 集合页（非云服务器，意图已匹配，14 天 17,643 曝光/45 点击/0 转化，设 9/7 验证点）；②沉浸式翻译专属卡已上线（by_slug，官方联盟 20% 佣金，链接 via=ming-jiang）；③AI翻译品类卡已由文心切换为沉浸式翻译（by_category，覆盖全部翻译类页面+AI翻译分类文章）；④新对比文《沉浸式翻译使用教程：免费版够用吗？和 DeepL 怎么选》上线（article slug=immersive-translate-guide-2026）；⑤待办=稿定/5118/AiPPT/讯飞等渠道核验、对比/替代/排行页 CPS 覆盖（P0-2）。
 
 ### 2. 变现覆盖缺口：高商业意图页面无 CPS 卡
 - **现状**：对比页 / 替代页 / 排行页 / 分类页的 pageType 非 tool/article/news，loader.js 不注入 CPS 卡。这些「XX替代 / XX vs XX」页面购买意图最强，却是变现空白。
@@ -90,3 +91,4 @@
 2. `ssh ... "grep beacon.gif /var/www/aitoollab/logs/access.log | grep -o 'act=[a-z]*' | sort | uniq -c"` → 看 impression 是否有；
 3. 本地起服 + 无头浏览器打开工具页，Network 面板看 `/ads/beacon.gif?act=impression` 是否发出；
 4. 若仍无 impression：检查 CPS 卡是否真的渲染（`/ads/cps.json` 与 `/ads/slots/cps-card.html` 是否 200、body `data-category` 是否命中 by_category）。
+
