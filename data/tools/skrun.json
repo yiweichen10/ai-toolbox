@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "🔌",
   "color": "#0EA5E9",
-  "description": "Skrun 是一个开源的 Agent 运行时，由日内瓦开发者 Ian Bernardo（GitHub 昵称 frizull）与同事 Tarcroi 创建，2026 年 4 月 8 日以 Show HN 形式发布，仓库位于 github.com/skrun-dev/skrun，采用 MIT 许可证。它的核心洞见是：你在 Claude Code、Copilot、Codex 里攒的 Agent Skill（SKILL.md）被困在各自工具里，不能被产品用 POST 请求调用；Skrun 把这些技能变成可调用的 HTTP 端点，让“技能即服务”成为现实。",
+  "description": "Skrun 是一个开源的 Agent 运行时（2026 年 4 月 8 日 Show HN 发布，MIT 许可证），由日内瓦开发者 Ian Bernardo（GitHub 昵称 frizull）与同事 Tarcroi 创建。它的核心洞见是：你在 Claude Code、Copilot、Codex 里攒的 Agent Skill（SKILL.md）被困在各自工具里，不能被产品用 POST 请求调用；Skrun 把这些技能变成可调用的 HTTP 端点，让“技能即服务”成为现实。2026-08-30 发布的 v1.0.0「Cloud Runtime & Production Foundation」将其从早期原型推进到生产可用：内置多租户云运行时、Operator Dashboard 与 GitHub OAuth / API key 鉴权。",
   "category": "AI开发",
   "tags": [
     "Agent技能",
@@ -32,7 +32,7 @@
     "MIT 开源，自托管即可，无供应商锁定"
   ],
   "cons": [
-    "早期项目，社区与生态规模还比较小",
+    "生态仍年轻，第三方集成与社区规模还比较小",
     "公开部署存在 prompt injection 等安全风险（官方沙箱方案仍在规划）",
     "需自托管与运维，调用方要自己管契约与版本"
   ],
@@ -42,14 +42,16 @@
     "有状态 Agent：用键值状态在多次运行间持久化上下文",
     "工具调用：可捆绑自有 CLI 脚本，或接入任意 MCP server（如 Playwright）",
     "类型化 I/O：定义结构化输入输出，保证 API 交互可靠",
-    "CLI 管理：约 12 个 CLI 命令负责初始化、测试与部署"
+    "CLI 管理：约 12 个 CLI 命令负责初始化、测试与部署",
+    "Cloud Runtime（v1.0.0）：多租户命名空间 + GitHub OAuth / API key 鉴权，共享实例上 push/verify/delete 限定命名空间所有者",
+    "Operator Dashboard：/dashboard 提供智能体 / 运行 / 统计看板、SSE 流式 Playground 与 API key 管理；SQLite 默认持久化存储（可选 Supabase）"
   ],
   "related": [
     "openai",
     "langchain",
     "langsmith"
   ],
-  "content": "## Skrun 是什么？\n\nSkrun 是一个开源的 Agent 运行时，由日内瓦的开发者 Ian Bernardo（GitHub 昵称 frizull）与同事 Tarcroi 创建，2026 年 4 月 8 日以 Show HN 形式发布，仓库位于 github.com/skrun-dev/skrun，采用 MIT 许可证。它的核心洞见很朴素：你在 Claude Code、Copilot、Codex 里攒了一大堆 Agent Skill（SKILL.md），但它们被困在各自的工具里，不能被产品用 POST 请求调用。Skrun 把这些技能变成可调用的 HTTP 端点，让“技能即服务”成为现实。\n\n## 核心功能\n\n1. SKILL.md → API：一条 `skrun init --from-skill` 加 `skrun deploy`，就把技能暴露成 POST /run 端点。\n2. 多模型 + 自动回退：在 agent.yaml 里选 Anthropic / OpenAI / Google / Mistral / Groq，失败自动切下一个。\n3. 有状态 Agent：用键值状态在多次运行间记住上下文。\n4. 工具调用：可捆绑自有 CLI 脚本，或接入任意 MCP server（如 Playwright）。\n5. 类型化 I/O 与 CLI：定义结构化输入输出，配套 约 12 个 CLI 命令管理部署。\n\n## 版本/套餐对比\n\nSkrun 完全免费开源（MIT），自托管即可；托管的云部署（沙箱 VM、调用方自带 key）仍在路线图中，具体商业化定价未定。\n\n## 值不值得用？\n\n如果你有一堆写好的 Skill 却只能手动触发，Skrun 是把它们“产品化”的最短路径——几分钟内就能拿到一个可被 webhook、后端或服务调用的 API。它的代价是早期项目的生态规模还小，且公开部署存在 prompt injection 等安全风险（官方也承认这点，沙箱方案在规划中）。\n\n## 使用建议\n\n先用 `npm install -g @skrun-dev/cli` 装好 CLI；把现有的 SKILL.md 通过 init 导入生成 agent.yaml；本地 `skrun dev` 起开发服务器测试；需要对外暴露时务必等沙箱方案成熟再上公网。多模型回退能缓解单点故障，但记得为跨技能的数据边界设好权限。\n\n## 适合谁用？\n\n- AI 开发者：想把自己的 Skill 变成可调用服务。\n- 初创 / 小团队：需要快速把 agent 能力拼进产品。\n- DevOps：关注 API 契约、版本与治理的部署者。",
+  "content": "## Skrun 是什么？\n\nSkrun 是一个开源的 Agent 运行时，由日内瓦的开发者 Ian Bernardo（GitHub 昵称 frizull）与同事 Tarcroi 创建，2026 年 4 月 8 日以 Show HN 形式发布，仓库位于 github.com/skrun-dev/skrun，采用 MIT 许可证。它的核心洞见很朴素：你在 Claude Code、Copilot、Codex 里攒了一大堆 Agent Skill（SKILL.md），但它们被困在各自的工具里，不能被产品用 POST 请求调用。Skrun 把这些技能变成可调用的 HTTP 端点，让“技能即服务”成为现实。\n\n## 核心功能\n\n1. SKILL.md → API：一条 `skrun init --from-skill` 加 `skrun deploy`，就把技能暴露成 POST /run 端点。\n2. 多模型 + 自动回退：在 agent.yaml 里选 Anthropic / OpenAI / Google / Mistral / Groq，失败自动切下一个。\n3. 有状态 Agent：用键值状态在多次运行间记住上下文。\n4. 工具调用：可捆绑自有 CLI 脚本，或接入任意 MCP server（如 Playwright）。\n5. 类型化 I/O 与 CLI：定义结构化输入输出，配套约 12 个 CLI 命令管理部署。\n6. Cloud Runtime（v1.0.0）：多租户命名空间让共享实例隔离——GitHub OAuth 登录（用户名即命名空间）或创建 `sk_live_*` API key，push / verify / delete 限定命名空间所有者；内置 Operator Dashboard（/dashboard）提供智能体、运行、统计看板与 SSE 流式 Playground，SQLite 默认持久化存储，可选 Supabase 上生产。\n\n## 版本 / 套餐对比\n\nSkrun 采用 MIT 许可证完全开源、自托管免费。2026-08-30 发布的 **v1.0.0「Cloud Runtime & Production Foundation」** 是其首个稳定版，把项目从早期原型推进到生产可用：多租户云运行时、Operator Dashboard、GitHub OAuth 与 API key 鉴权、版本备注（push 时 `-m` 像 git commit）、OpenAPI 3.1 规范，并通过四轮内部安全审计（16 项高危降为零）。托管的商业云定价目前仍未公布，自建多租户运行时本身不收费。\n\n## 值不值得用？\n\n如果你有一堆写好的 Skill 却只能手动触发，Skrun 是把它们“产品化”的最短路径——几分钟内就能拿到一个可被 webhook、后端或服务调用的 API。v1.0.0 已是稳定版、测试套件达 1800+ 单元与 140 项 E2E，但项目生态仍年轻；公开部署存在 prompt injection 等安全风险（官方沙箱方案已在规划），敏感场景建议先留在内网或自托管多租户实例。\n\n## 使用建议\n\n先用 `npm install -g @skrun-dev/cli` 装好 CLI（v1.0.0 起 `npx @skrun-dev/cli@1.0.0` 亦可）；把现有的 SKILL.md 通过 init 导入生成 agent.yaml；本地 `skrun dev` 起开发服务器测试；生产环境用 `skrun login` 走 GitHub OAuth 或 API key，避免共享实例上的 `dev-token` 被拒（v1.0.0 的 Breaking 变更）。多模型回退能缓解单点故障，但记得为跨技能的数据边界设好权限。\n\n## 适合谁用？\n\n- AI 开发者：想把自己的 Skill 变成可调用服务。\n- 初创 / 小团队：需要快速把 agent 能力拼进产品。\n- DevOps：关注 API 契约、版本与治理的部署者。",
   "published": true,
   "faq": [
     {
@@ -58,7 +60,7 @@
     },
     {
       "question": "它收费吗？",
-      "answer": "不收费。Skrun 采用 MIT 许可证完全开源，自托管即可使用；托管的云部署仍在路线图，商业化定价尚未确定。"
+      "answer": "不收费。Skrun 采用 MIT 许可证完全开源，自托管（含 v1.0.0 的 Cloud Runtime 多租户能力）即可免费使用；官方托管的商业云定价尚未公布。"
     },
     {
       "question": "公开部署安全吗？",
@@ -80,12 +82,27 @@
     "开源Agent运行时"
   ],
   "source_urls": [
+    "https://github.com/skrun-dev/skrun/releases",
     "https://github.com/skrun-dev/skrun",
-    "https://www.everydev.ai/developers/skrun-dev",
-    "https://dev.to/skrun/i-had-a-bunch-of-skills-sitting-in-a-folder-none-of-them-were-callable-as-apis-m46"
+    "https://www.npmjs.com/package/@skrun-dev/cli"
   ],
   "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14",
-  "published_date": "2026-08-25"
+  "updated_date": "2026-08-31",
+  "published_date": "2026-08-25",
+  "verified_price": "免费开源（MIT），自托管无商业授权费；v1.0.0 的 Cloud Runtime 为多租户自托管能力，官方商业云定价仍未公布。",
+  "last_verified": "2026-08-31",
+  "verified_features": [
+    "SKILL.md → API：一条 init 加 deploy，把技能暴露成 POST /run 端点",
+    "多模型 + 自动回退：在 agent.yaml 选 provider，失败自动切下一个",
+    "有状态 Agent：用键值状态在多次运行间持久化上下文",
+    "工具调用：可捆绑自有 CLI 脚本，或接入任意 MCP server（如 Playwright）",
+    "类型化 I/O：定义结构化输入输出，保证 API 交互可靠",
+    "CLI 管理：约 12 个 CLI 命令负责初始化、测试与部署",
+    "Cloud Runtime（v1.0.0）：多租户命名空间 + GitHub OAuth / API key 鉴权，共享实例上 push/verify/delete 限定命名空间所有者",
+    "Operator Dashboard：/dashboard 提供智能体 / 运行 / 统计看板、SSE 流式 Playground 与 API key 管理；SQLite 默认持久化存储（可选 Supabase）"
+  ],
+  "verified_description": "Skrun 是一个开源的 Agent 运行时（2026 年 4 月 8 日 Show HN 发布，MIT 许可证），由日内瓦开发者 Ian Bernardo（GitHub 昵称 frizull）与同事 Tarcroi 创建。它的核心洞见是：你在 Claude Code、Copilot、Codex 里攒的 Agent Skill（SKILL.md）被困在各自工具里，不能被产品用 POST 请求调用；Skrun 把这些技能变成可调用的 HTTP 端点，让“技能即服务”成为现实。2026-08-30 发布的 v1.0.0「Cloud Runtime & Production Foundation」将其从早期原型推进到生产可用：内置多租户云运行时、Operator Dashboard 与 GitHub OAuth / API key 鉴权。",
+  "content_flags": "原长文含幻觉, 已重写",
+  "verify_notes": ""
 }
