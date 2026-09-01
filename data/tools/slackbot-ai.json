@@ -1,98 +1,99 @@
 {
-  "name": "Slackbot AI",
-  "slug": "slackbot-ai",
-  "positioning": "Slackbot AI是什么？Salesforce重建的Slack智能体好用吗",
-  "auto_positioning": false,
-  "emoji": "💬",
-  "color": "#4A154B",
-  "description": "Slackbot AI 是 Salesforce 彻底重建的 Slack 助手，2026 年 1 月 13 日起面向 Business+ 与 Enterprise+ 客户分阶段 GA，从通知工具升级为完整的 AI Agent：能搜企业数据、起草文档、分析文件、安排会议并代表员工执行操作。2026 年 8 月，Slack 又通过一组 MCP 服务把 Slackbot 接入整个 Salesforce 平台（CRM、Tableau、Data 360、Agentforce），（注：这 30 项 AI 新功能实际于 2026 年 3 月 31 日发布，8 月为通过 MCP 接入 Salesforce 平台的滚动更新）并宣布 30 项 AI 新功能。",
-  "category": "AI办公",
-  "tags": [
-    {
-      "text": "企业级",
-      "type": "free"
+    "name": "Slackbot AI",
+    "slug": "slackbot-ai",
+    "positioning": "Slackbot AI是什么？Salesforce重建的Slack智能体好用吗",
+    "auto_positioning": false,
+    "emoji": "💬",
+    "color": "#4A154B",
+    "description": "Slackbot AI 是 Salesforce 彻底重建的 Slack 助手，2026 年 1 月 13 日起面向 Business+ 与 Enterprise+ 客户分阶段 GA，从通知工具升级为完整的 AI Agent：能搜企业数据、起草文档、分析文件、安排会议并代表员工执行操作。2026 年 8 月，Slack 又通过一组 MCP 服务把 Slackbot 接入整个 Salesforce 平台（CRM、Tableau、Data 360、Agentforce），（注：这 30 项 AI 新功能实际于 2026 年 3 月 31 日发布，8 月为通过 MCP 接入 Salesforce 平台的滚动更新）并宣布 30 项 AI 新功能。",
+    "category": "AI办公",
+    "tags": [
+        {
+            "text": "企业级",
+            "type": "free"
+        },
+        {
+            "text": "Salesforce出品"
+        },
+        {
+            "text": "免安装"
+        },
+        {
+            "text": "MCP客户端"
+        }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "hot",
+        "text": "HOT"
     },
-    {
-      "text": "Salesforce出品"
-    },
-    {
-      "text": "免安装"
-    },
-    {
-      "text": "MCP客户端"
-    }
-  ],
-  "rating": "⭐ 4.5",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "hot",
-    "text": "HOT"
-  },
-  "url": "https://www.salesforce.com/slack/",
-  "price": "包含在 Slack Business+ 与 Enterprise+ 套餐中，未单独收费；具体席位价格以 Slack 官方定价页为准",
-  "platform": "Slack（Web / 桌面端 / 移动端），可连接 Salesforce CRM、Tableau、Data 360、Google Drive、Microsoft Teams 等",
-  "pros": [
-    "零安装零配置，直接长在 Slack 里，员工不用学新工具也没有新账号要管",
-    "天然带上下文：能看你的会话、文件、频道和同事关系，不用每次重新交代背景",
-    "严格遵循既有权限，只能看到你本来有权看到的内容，并提供引用出处",
-    "作为 MCP 客户端可接 Agentforce 与 Salesforce 平台数据，一句话跨系统取数与执行",
-    "内部验证扎实：Salesforce 8 万员工全量推广，满意度 96%"
-  ],
-  "cons": [
-    "只对 Business+ 与 Enterprise+ 客户开放，低阶套餐用不到",
-    "价值高度绑定 Slack 与 Salesforce 生态，不用 Slack 的团队完全无关",
-    "能力边界随 Slack 里沉淀的信息质量而变，频道混乱的组织效果会打折"
-  ],
-  "features": [
-    "跨频道追进度：整合频道、通话与已连接工具的信息，直接给出关键结论与下一步",
-    "按你的语气起草：邮件、会议脉络、文章大纲等初稿从既有会话中取材",
-    "深度文件分析：即时读 PDF、表格与会议转录稿，抽取数据点或识别反馈趋势",
-    "执行动作：安排会议、创建 canvas、更新记录、触发审批等",
-    "MCP 客户端能力：通过 Salesforce 的 MCP 服务连接 CRM、Tableau、Data 360 与第三方应用",
-    "可复用 AI 技能：把自定义任务保存为技能，在不同场景重复调用"
-  ],
-  "related": [
-    "feishu",
-    "dingtalk",
-    "wps-ai"
-  ],
-  "content": "## Slackbot AI是什么？\n\nSlackbot 这个名字很老，但现在的 Slackbot 是彻底重造的东西。Slack CTO、Salesforce 联合创始人 Parker Harris 的比喻很不客气：旧版像一辆小三轮车，新版像一辆保时捷。旧 Slackbot 干的是算法活——提醒你把同事加进文档、建议归档频道、发通知；新版建立在大语言模型和一套很强的搜索能力之上，能访问 Salesforce 记录、云端硬盘文件、日历数据以及多年的 Slack 对话。\n\n时间线值得说清楚：这套愿景 2025 年 10 月在 Dreamforce 首次公布，2026 年 1 月 13 日起面向 Business+ 与 Enterprise+ 客户分阶段 GA，1 月到 2 月陆续放开。到 2026 年 8 月，Slack 又往前推了一大步——通过 Salesforce 的一组 MCP 服务把 Slackbot 接进整个 Salesforce 平台（CRM 数据、Tableau 分析、Data 360 客户画像和一批第三方应用），同时宣布 30 项 AI 新功能（注：这 30 项 AI 新功能实际于 2026 年 3 月 31 日发布，8 月为通过 MCP 接入 Salesforce 平台的滚动更新）。所以如果你看到「8 月发布」的说法，那指的是这次平台级扩展，不是首次 GA。\n\n## 核心功能\n\n1. 追进度与追上下文：跨频道、通话和已连接工具整合信息，给出关键主题与下一步，而不是让你自己拼故事。\n2. 起草内容：邮件、会议脉络、文章大纲的初稿从你团队既有的对话里取材，语气也更贴合团队习惯。\n3. 文件分析：40 页的材料不用周五晚上硬读，PDF、表格、转录稿都能即时抽取数据点或识别趋势。\n4. 执行动作：安排会议、创建 canvas、更新记录、触发审批，一句话在 Slack 里完成。\n5. 当 MCP 客户端用：Salesforce 把平台能力暴露为 MCP 服务，Slackbot 作为客户端按需调用——销售可以问客户的成交历史、拿到实时 Tableau 图表、更新 CRM 记录并触发 DocuSign 审批，全程不切标签页。\n\n## 版本/套餐对比\n\nSlackbot 包含在 Slack Business+ 与 Enterprise+ 套餐中，没有单独收费，低阶套餐用不到。Enterprise 计划的组织所有者与管理员可以设定 Slackbot 的访问权限甚至完全禁用。具体席位价格以 Slack 官方定价页为准。\n\n## 值不值得用？\n\n优点是它把「上下文」这件事一次性解决了。大多数 AI 助手活在独立应用里，从零上下文起步，你得反复解释自己；Slackbot 直接读你本来就能看到的会话、文件和频道，还严格遵循权限、给出引用出处。内部数据也不糊：Salesforce 向全部 8 万员工推广，三分之二试过、其中 80% 持续使用、满意度 96%，员工报告每周省 2 到 20 小时。模型侧目前主要跑 Anthropic 的 Claude，官方称部分出于合规考虑，且明确不用客户数据训练模型，后续会引入更多供应商。\n\n缺点是它的价值完全绑定 Slack 与 Salesforce 生态；套餐门槛把中小客户挡在外面；而且它的聪明程度取决于你们 Slack 里沉淀的信息质量——频道混乱、决策不留痕的组织，效果会明显打折。\n\n## 使用建议\n\n1. 先用它做「我错过了什么」类查询，这是投入产出最快的场景。\n2. 重要结论仍要看引用出处，别把摘要当结论直接转发。\n3. 把重复任务存成可复用 AI 技能，比每次重新描述省事得多。\n4. 接 MCP 与 CRM 之前，先确认权限映射，尤其是跨部门数据的可见范围。\n\n## 适合谁用？\n\n推荐：已用 Slack Business+/Enterprise+，且大量决策沉淀在 Slack 里的企业。\n可考虑：同时使用 Salesforce CRM、希望在 Slack 内完成跨系统取数与操作的销售与运营团队。\n不推荐：不用 Slack 的团队，以及低阶套餐用户。",
-  "published": false,
-  "faq": [
-    {
-      "question": "Slackbot AI 什么时候正式发布的？",
-      "answer": "全新 Slackbot 于 2026 年 1 月 13 日起面向 Business+ 与 Enterprise+ 客户分阶段 GA，1 月至 2 月陆续放开；2026 年 8 月 Slack 又宣布通过 MCP 服务接入整个 Salesforce 平台并推出 30 项 AI 新功能。"
-    },
-    {
-      "question": "使用 Slackbot AI 需要额外付费吗？",
-      "answer": "不需要单独付费，它包含在 Slack Business+ 与 Enterprise+ 套餐中，但低阶套餐无法使用。具体席位价格以 Slack 官方定价页为准。"
-    },
-    {
-      "question": "Slackbot 会看到我没权限的内容吗？",
-      "answer": "不会。官方说明它只能看到你有权看到的内容，严格遵循既有权限与访问控制，并通过 Slack AI Guardrails 提供隐私、权限与引用出处三层保障。"
-    },
-    {
-      "question": "Slackbot 用的是哪家模型？会用我的数据训练吗？",
-      "answer": "目前主要运行在 Anthropic 的 Claude 上，Slack 表示部分出于合规考虑，后续会支持更多供应商。官方明确表示不会使用客户数据训练模型。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "Slackbot AI",
-    "Slackbot AI怎么样",
-    "Slackbot AI收费吗",
-    "Slackbot AI使用教程",
-    "Slackbot和Copilot哪个好"
-  ],
-  "source_urls": [
-    "https://www.salesforce.com/ap/news/press-releases/2026/01/14/salesforce-announces-the-general-availability-of-slackbot-your-personal-agent-for-work-ph/",
-    "https://techcrunch.com/2026/01/13/slackbot-is-an-ai-agent-now/",
-    "https://venturebeat.com/category/business/feed",
-    "https://cloud.tencent.com.cn/developer/article/2670449"
-  ],
-  "confidence": "high",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+    "url": "https://www.salesforce.com/slack/",
+    "price": "包含在 Slack Business+ 与 Enterprise+ 套餐中，未单独收费；具体席位价格以 Slack 官方定价页为准",
+    "platform": "Slack（Web / 桌面端 / 移动端），可连接 Salesforce CRM、Tableau、Data 360、Google Drive、Microsoft Teams 等",
+    "pros": [
+        "零安装零配置，直接长在 Slack 里，员工不用学新工具也没有新账号要管",
+        "天然带上下文：能看你的会话、文件、频道和同事关系，不用每次重新交代背景",
+        "严格遵循既有权限，只能看到你本来有权看到的内容，并提供引用出处",
+        "作为 MCP 客户端可接 Agentforce 与 Salesforce 平台数据，一句话跨系统取数与执行",
+        "内部验证扎实：Salesforce 8 万员工全量推广，满意度 96%"
+    ],
+    "cons": [
+        "只对 Business+ 与 Enterprise+ 客户开放，低阶套餐用不到",
+        "价值高度绑定 Slack 与 Salesforce 生态，不用 Slack 的团队完全无关",
+        "能力边界随 Slack 里沉淀的信息质量而变，频道混乱的组织效果会打折"
+    ],
+    "features": [
+        "跨频道追进度：整合频道、通话与已连接工具的信息，直接给出关键结论与下一步",
+        "按你的语气起草：邮件、会议脉络、文章大纲等初稿从既有会话中取材",
+        "深度文件分析：即时读 PDF、表格与会议转录稿，抽取数据点或识别反馈趋势",
+        "执行动作：安排会议、创建 canvas、更新记录、触发审批等",
+        "MCP 客户端能力：通过 Salesforce 的 MCP 服务连接 CRM、Tableau、Data 360 与第三方应用",
+        "可复用 AI 技能：把自定义任务保存为技能，在不同场景重复调用"
+    ],
+    "related": [
+        "feishu",
+        "dingtalk",
+        "wps-ai"
+    ],
+    "content": "## Slackbot AI是什么？\n\nSlackbot 这个名字很老，但现在的 Slackbot 是彻底重造的东西。Slack CTO、Salesforce 联合创始人 Parker Harris 的比喻很不客气：旧版像一辆小三轮车，新版像一辆保时捷。旧 Slackbot 干的是算法活——提醒你把同事加进文档、建议归档频道、发通知；新版建立在大语言模型和一套很强的搜索能力之上，能访问 Salesforce 记录、云端硬盘文件、日历数据以及多年的 Slack 对话。\n\n时间线值得说清楚：这套愿景 2025 年 10 月在 Dreamforce 首次公布，2026 年 1 月 13 日起面向 Business+ 与 Enterprise+ 客户分阶段 GA，1 月到 2 月陆续放开。到 2026 年 8 月，Slack 又往前推了一大步——通过 Salesforce 的一组 MCP 服务把 Slackbot 接进整个 Salesforce 平台（CRM 数据、Tableau 分析、Data 360 客户画像和一批第三方应用），同时宣布 30 项 AI 新功能（注：这 30 项 AI 新功能实际于 2026 年 3 月 31 日发布，8 月为通过 MCP 接入 Salesforce 平台的滚动更新）。所以如果你看到「8 月发布」的说法，那指的是这次平台级扩展，不是首次 GA。\n\n## 核心功能\n\n1. 追进度与追上下文：跨频道、通话和已连接工具整合信息，给出关键主题与下一步，而不是让你自己拼故事。\n2. 起草内容：邮件、会议脉络、文章大纲的初稿从你团队既有的对话里取材，语气也更贴合团队习惯。\n3. 文件分析：40 页的材料不用周五晚上硬读，PDF、表格、转录稿都能即时抽取数据点或识别趋势。\n4. 执行动作：安排会议、创建 canvas、更新记录、触发审批，一句话在 Slack 里完成。\n5. 当 MCP 客户端用：Salesforce 把平台能力暴露为 MCP 服务，Slackbot 作为客户端按需调用——销售可以问客户的成交历史、拿到实时 Tableau 图表、更新 CRM 记录并触发 DocuSign 审批，全程不切标签页。\n\n## 版本/套餐对比\n\nSlackbot 包含在 Slack Business+ 与 Enterprise+ 套餐中，没有单独收费，低阶套餐用不到。Enterprise 计划的组织所有者与管理员可以设定 Slackbot 的访问权限甚至完全禁用。具体席位价格以 Slack 官方定价页为准。\n\n## 值不值得用？\n\n优点是它把「上下文」这件事一次性解决了。大多数 AI 助手活在独立应用里，从零上下文起步，你得反复解释自己；Slackbot 直接读你本来就能看到的会话、文件和频道，还严格遵循权限、给出引用出处。内部数据也不糊：Salesforce 向全部 8 万员工推广，三分之二试过、其中 80% 持续使用、满意度 96%，员工报告每周省 2 到 20 小时。模型侧目前主要跑 Anthropic 的 Claude，官方称部分出于合规考虑，且明确不用客户数据训练模型，后续会引入更多供应商。\n\n缺点是它的价值完全绑定 Slack 与 Salesforce 生态；套餐门槛把中小客户挡在外面；而且它的聪明程度取决于你们 Slack 里沉淀的信息质量——频道混乱、决策不留痕的组织，效果会明显打折。\n\n## 使用建议\n\n1. 先用它做「我错过了什么」类查询，这是投入产出最快的场景。\n2. 重要结论仍要看引用出处，别把摘要当结论直接转发。\n3. 把重复任务存成可复用 AI 技能，比每次重新描述省事得多。\n4. 接 MCP 与 CRM 之前，先确认权限映射，尤其是跨部门数据的可见范围。\n\n## 适合谁用？\n\n推荐：已用 Slack Business+/Enterprise+，且大量决策沉淀在 Slack 里的企业。\n可考虑：同时使用 Salesforce CRM、希望在 Slack 内完成跨系统取数与操作的销售与运营团队。\n不推荐：不用 Slack 的团队，以及低阶套餐用户。",
+    "published": true,
+    "faq": [
+        {
+            "question": "Slackbot AI 什么时候正式发布的？",
+            "answer": "全新 Slackbot 于 2026 年 1 月 13 日起面向 Business+ 与 Enterprise+ 客户分阶段 GA，1 月至 2 月陆续放开；2026 年 8 月 Slack 又宣布通过 MCP 服务接入整个 Salesforce 平台并推出 30 项 AI 新功能。"
+        },
+        {
+            "question": "使用 Slackbot AI 需要额外付费吗？",
+            "answer": "不需要单独付费，它包含在 Slack Business+ 与 Enterprise+ 套餐中，但低阶套餐无法使用。具体席位价格以 Slack 官方定价页为准。"
+        },
+        {
+            "question": "Slackbot 会看到我没权限的内容吗？",
+            "answer": "不会。官方说明它只能看到你有权看到的内容，严格遵循既有权限与访问控制，并通过 Slack AI Guardrails 提供隐私、权限与引用出处三层保障。"
+        },
+        {
+            "question": "Slackbot 用的是哪家模型？会用我的数据训练吗？",
+            "answer": "目前主要运行在 Anthropic 的 Claude 上，Slack 表示部分出于合规考虑，后续会支持更多供应商。官方明确表示不会使用客户数据训练模型。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "Slackbot AI",
+        "Slackbot AI怎么样",
+        "Slackbot AI收费吗",
+        "Slackbot AI使用教程",
+        "Slackbot和Copilot哪个好"
+    ],
+    "source_urls": [
+        "https://www.salesforce.com/ap/news/press-releases/2026/01/14/salesforce-announces-the-general-availability-of-slackbot-your-personal-agent-for-work-ph/",
+        "https://techcrunch.com/2026/01/13/slackbot-is-an-ai-agent-now/",
+        "https://venturebeat.com/category/business/feed",
+        "https://cloud.tencent.com.cn/developer/article/2670449"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14",
+    "published_date": "2026-09-01"
 }

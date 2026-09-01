@@ -1,99 +1,100 @@
 {
-  "name": "BrowserOS neo",
-  "slug": "browseros-neo",
-  "positioning": "BrowserOS neo是什么？给Claude Code和Codex用的本地Agent浏览器好用吗",
-  "auto_positioning": false,
-  "emoji": "🌐",
-  "color": "#2563EB",
-  "description": "BrowserOS 团队（Y Combinator 支持）推出的 Agent 专用浏览器，2026 年 8 月 7 日在 Product Hunt 发布并位列当日 Product of the Day 第 5。它不是给人看网页的第二个 Chrome，而是让 Claude Code、Cowork、Codex、Cursor、OpenClaw 等通过 MCP 一键接管的本地浏览器：一键导入 Chrome 登录态，Agent 在自己的标签页里带着你的真实账号干活，可并行多开、全程实时可看，每次会话还存成可拖动进度条的录像。AGPL-3.0 开源、完全免费，支持 macOS 与 Windows。",
-  "category": "AI自动化",
-  "tags": [
-    {
-      "text": "免费可用",
-      "type": "free"
+    "name": "BrowserOS neo",
+    "slug": "browseros-neo",
+    "positioning": "BrowserOS neo是什么？给Claude Code和Codex用的本地Agent浏览器好用吗",
+    "auto_positioning": false,
+    "emoji": "🌐",
+    "color": "#2563EB",
+    "description": "BrowserOS 团队（Y Combinator 支持）推出的 Agent 专用浏览器，2026 年 8 月 7 日在 Product Hunt 发布并位列当日 Product of the Day 第 5。它不是给人看网页的第二个 Chrome，而是让 Claude Code、Cowork、Codex、Cursor、OpenClaw 等通过 MCP 一键接管的本地浏览器：一键导入 Chrome 登录态，Agent 在自己的标签页里带着你的真实账号干活，可并行多开、全程实时可看，每次会话还存成可拖动进度条的录像。AGPL-3.0 开源、完全免费，支持 macOS 与 Windows。",
+    "category": "AI自动化",
+    "tags": [
+        {
+            "text": "免费可用",
+            "type": "free"
+        },
+        {
+            "text": "开源项目"
+        },
+        {
+            "text": "MCP 一键接入"
+        },
+        {
+            "text": "本地运行"
+        }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "new",
+        "text": "NEW"
     },
-    {
-      "text": "开源项目"
-    },
-    {
-      "text": "MCP 一键接入"
-    },
-    {
-      "text": "本地运行"
-    }
-  ],
-  "rating": "⭐ 4.6",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "new",
-    "text": "NEW"
-  },
-  "url": "https://browseros.com/neo",
-  "price": "免费，AGPL-3.0 开源；采用 BYOK（自带 AI 提供商密钥），费用只发生在你调用的模型侧",
-  "platform": "macOS / Windows 桌面浏览器（系统要求与 Chrome、Safari 一致）；通过 MCP 连接 Claude Code、Cowork、Codex、Cursor、VS Code、Zed、GitHub Copilot、OpenClaw、Hermes 等",
-  "pros": [
-    "Agent 用你已登录的真实账号办事，headless 与云浏览器最难跨的登录墙直接绕过",
-    "给 Agent 的是压缩后的页面快照而非原始 HTML 或截图，并把动作批量成一次调用，token 更省",
-    "多 Agent 并行各占一组隔离标签页，明确不会碰你正在用的标签和正在写的文档",
-    "每次会话存成可拖动的全屏录像，出错能回看到具体哪一步走偏再纠正指令",
-    "全程本地：历史、截图、回放、设置都是磁盘上的文件，AGPL-3.0 全量开源可审计"
-  ],
-  "cons": [
-    "AGPL-3.0 有传染性，商业二次分发或嵌入自家产品前需要过法务",
-    "Agent 直接使用你的真实登录态，误操作与提示注入风险实打实；官方也把「按 Agent 隔离 profile」列在路线图而非已交付功能",
-    "只有 macOS 与 Windows，暂无 Linux；且它定位是并存的第二浏览器，不接管日常使用"
-  ],
-  "features": [
-    "Chrome 登录态一键导入：Agent 带着你的 Gmail、GitHub、X 等会话直接办事",
-    "MCP 一键连接：Claude Code、Cowork、Codex、Cursor、VS Code、Zed 等免改配置文件、免 CLI",
-    "新标签页 cockpit 面板：哪个 Agent、在哪个站点、用了什么工具、走到第几步实时可见",
-    "并行 Agent：每个 Agent 独占一组分组标签页，互不干扰，也不动你自己的标签",
-    "会话回放：每次运行保存为可拖动进度条的全屏录像，便于复盘与纠偏",
-    "省 token 机制：压缩页面快照 + 动作批处理，减少往返次数与账单"
-  ],
-  "related": [
-    "browser-use",
-    "agent-browser",
-    "claude-code"
-  ],
-  "content": "## BrowserOS neo是什么？\n\nBrowserOS neo 是 BrowserOS 团队（背后有 Y Combinator 支持）做的一款「不给人用」的浏览器——官方标语直白得很：The Missing Browser for Claude, Cowork & Codex。它 2026 年 8 月 7 日在 Product Hunt 发布，拿下当日 Product of the Day 第 5，源码在 github.com/browseros-ai/BrowserOS，AGPL-3.0 许可，目前约 1.3 万星（官网自己写的是 12,000+）。\n\n它要补的是一个很具体的缺口：Claude Code、Codex 这类工具推理能力已经很强，可一旦任务碰到网页——查后台、填表单、预约——就卡住了。团队自己试过市面上的方案后给出的判断是：云浏览器跑在数据中心，登录你的账号很麻烦，而且 Twitter、LinkedIn 这类站点会因为机房 IP 直接拦；headless 浏览器又让你看不见 Agent 在干什么。所以他们的答案是一个跑在你自己机器上、带着你真实登录态、且能被你的 Agent 驱动的浏览器。\n\n它不是 Chrome 替代品，而是挨着 Chrome 放的第二个浏览器：你的账号在里面，Agent 在它自己的标签页里干活，你的标签一根手指都碰不到。顺带说一句，这个产品最初叫 BrowserClaw，后来因为 SEO 原因改名成 BrowserOS neo，官方 FAQ 明确说同一个东西、装过的不用重装。\n\n## 核心功能\n\n1. 一键导入 Chrome 登录态：Agent 以「你」的身份访问 Gmail、GitHub、X 甚至网银这类必须登录才有内容的地方。\n2. MCP 一键接入：Claude Code、Cowork、Codex、Cursor、VS Code、Zed、GitHub Copilot 点一下就连上，OpenClaw、Hermes 等也在支持列表里，其他工具用 URL 接入，不用编辑配置文件。\n3. cockpit 驾驶舱：新标签页就是控制台，每个 Agent 在哪个站点、用什么工具、走到第几步全都看得见。\n4. 并行多 Agent：每个 Agent 独占一组隔离的分组标签页，三个任务同时跑也不打架，你还能继续在自己的标签里干活。\n5. 会话回放：每次运行保存成可拖动进度条的全屏录像，navigate → read → act → submit 一步步复看，找到出错的那一刻再改指令。\n6. 省 token：Agent 拿到的是紧凑的页面快照而不是原始 HTML，动作还会批量成一次调用，往返更少、账单更小。\n\n## 版本/套餐对比\n\n没有套餐这回事——官方 FAQ 的原话是完全免费且在 AGPL-3.0 下开源，你只需要自带 AI 提供商的密钥（BYOK），费用发生在模型侧。下载分 macOS 与 Windows 两个版本，系统要求与 Chrome、Safari 相当。\n\n需要区分的是它和原版 BrowserOS 的关系：原版 BrowserOS 是给人用的开源 AI 浏览器（内置 Agent、40+ 集成、支持 Ollama/LM Studio 本地模型），neo 是独立安装的 Agent 专用浏览器，官方说法是两者可以并存，用不用原版都行。\n\n## 值不值得用？\n\n我觉得它抓住了一个真问题：登录墙后面才是真正的活。公开 API 只能到大门口，报销系统、广告后台、内部 CRM 这些地方 Agent 进不去就等于白说。neo 用「本地 + 真实登录态 + 可观测」这三件事把这层打开了，而且顺手解决了两个体验痛点——Agent 干活时你能盯着看，干完了还能回放复盘。省 token 这点也不是营销话术，压缩快照相比截图方案确实是量级差别。\n\n代价要认。第一是许可证：AGPL-3.0 对商业分发和嵌入有传染性，个人用无所谓，公司要包进产品必须先问法务。第二是风险模型变了：以前 Agent 顶多在沙箱里瞎点，现在它带着你的真实会话，误操作和提示注入的后果是实的；官方把「按 Agent 隔离 profile」放在路线图上，说明这块还没做完。第三是平台，只有 macOS 和 Windows，Linux 用户先等等。\n\n## 使用建议\n\n1. 先装上、连一个 Agent，用低风险任务开局，比如整理收藏夹、批量退订邮件，别一上手就让它动钱和线上系统。\n2. 把 cockpit 面板当默认新标签页真正用起来，前几次一定盯着看，摸清它在哪类页面容易走偏。\n3. 出错就回放，别靠记忆猜。找到走偏那一步，把指令写具体，比换模型有用。\n4. 涉及支付、发布、删除的操作，宁可自己按最后那一下——真实登录态下这类动作没有撤销键。\n5. 敏感账号建议不导入。等按 Agent 隔离 profile 落地后再考虑放开。\n\n## 适合谁用？\n\n推荐：Claude Code、Codex、Cursor 的重度用户，以及需要 Agent 在登录后台里干活的开发者和效率玩家。\n可考虑：想用 Agent 替代部分网页 RPA 的小团队，先在非关键流程上试，并注意 AGPL 的合规边界。\n不推荐：Linux 用户、需要把它嵌进商业产品分发的团队，以及不能接受 Agent 使用真实登录态的强合规场景。",
-  "published": false,
-  "faq": [
-    {
-      "question": "BrowserOS neo 免费吗？",
-      "answer": "免费。官方 FAQ 明确写着它完全免费且在 AGPL-3.0 许可下开源，你需要自带 AI 提供商的密钥（BYOK），实际花费只发生在你调用的模型那一侧。"
-    },
-    {
-      "question": "它支持哪些 AI 工具？",
-      "answer": "任何支持 MCP 的 Agent。官方列出可一键安装的包括 Claude Code、Claude Cowork、Cursor、Codex、VS Code、Zed 与 GitHub Copilot，网站上还标注了 OpenClaw、Hermes；其他工具通过 URL 接入。"
-    },
-    {
-      "question": "它会替代我的 Chrome 吗？",
-      "answer": "定位上是并存的第二浏览器：Agent 在 neo 里用你导入的登录态干活，你的主浏览器照旧自己用。官方也强调 Agent 只在自己的标签页里工作，不会关掉或操纵你正在用的标签。"
-    },
-    {
-      "question": "我之前下的 BrowserClaw 还能用吗？",
-      "answer": "能。官方 FAQ 说明 BrowserClaw 已改名为 BrowserOS neo，同一个浏览器、同一个项目，装过的不用重新下载，只是 GitHub 仓库名和 MCP server 名等处还留着旧称。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "BrowserOS neo",
-    "BrowserOS neo怎么用",
-    "BrowserOS neo免费吗",
-    "AI Agent 浏览器",
-    "BrowserOS neo 和 Browser Use 哪个好"
-  ],
-  "source_urls": [
-    "https://browseros.com/neo",
-    "https://github.com/browseros-ai/BrowserOS",
-    "https://www.browseros.com/",
-    "https://api.github.com/repos/browseros-ai/BrowserOS",
-    "https://hunted.space/dashboard/browseros_ai"
-  ],
-  "confidence": "high",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+    "url": "https://browseros.com/neo",
+    "price": "免费，AGPL-3.0 开源；采用 BYOK（自带 AI 提供商密钥），费用只发生在你调用的模型侧",
+    "platform": "macOS / Windows 桌面浏览器（系统要求与 Chrome、Safari 一致）；通过 MCP 连接 Claude Code、Cowork、Codex、Cursor、VS Code、Zed、GitHub Copilot、OpenClaw、Hermes 等",
+    "pros": [
+        "Agent 用你已登录的真实账号办事，headless 与云浏览器最难跨的登录墙直接绕过",
+        "给 Agent 的是压缩后的页面快照而非原始 HTML 或截图，并把动作批量成一次调用，token 更省",
+        "多 Agent 并行各占一组隔离标签页，明确不会碰你正在用的标签和正在写的文档",
+        "每次会话存成可拖动的全屏录像，出错能回看到具体哪一步走偏再纠正指令",
+        "全程本地：历史、截图、回放、设置都是磁盘上的文件，AGPL-3.0 全量开源可审计"
+    ],
+    "cons": [
+        "AGPL-3.0 有传染性，商业二次分发或嵌入自家产品前需要过法务",
+        "Agent 直接使用你的真实登录态，误操作与提示注入风险实打实；官方也把「按 Agent 隔离 profile」列在路线图而非已交付功能",
+        "只有 macOS 与 Windows，暂无 Linux；且它定位是并存的第二浏览器，不接管日常使用"
+    ],
+    "features": [
+        "Chrome 登录态一键导入：Agent 带着你的 Gmail、GitHub、X 等会话直接办事",
+        "MCP 一键连接：Claude Code、Cowork、Codex、Cursor、VS Code、Zed 等免改配置文件、免 CLI",
+        "新标签页 cockpit 面板：哪个 Agent、在哪个站点、用了什么工具、走到第几步实时可见",
+        "并行 Agent：每个 Agent 独占一组分组标签页，互不干扰，也不动你自己的标签",
+        "会话回放：每次运行保存为可拖动进度条的全屏录像，便于复盘与纠偏",
+        "省 token 机制：压缩页面快照 + 动作批处理，减少往返次数与账单"
+    ],
+    "related": [
+        "browser-use",
+        "agent-browser",
+        "claude-code"
+    ],
+    "content": "## BrowserOS neo是什么？\n\nBrowserOS neo 是 BrowserOS 团队（背后有 Y Combinator 支持）做的一款「不给人用」的浏览器——官方标语直白得很：The Missing Browser for Claude, Cowork & Codex。它 2026 年 8 月 7 日在 Product Hunt 发布，拿下当日 Product of the Day 第 5，源码在 github.com/browseros-ai/BrowserOS，AGPL-3.0 许可，目前约 1.3 万星（官网自己写的是 12,000+）。\n\n它要补的是一个很具体的缺口：Claude Code、Codex 这类工具推理能力已经很强，可一旦任务碰到网页——查后台、填表单、预约——就卡住了。团队自己试过市面上的方案后给出的判断是：云浏览器跑在数据中心，登录你的账号很麻烦，而且 Twitter、LinkedIn 这类站点会因为机房 IP 直接拦；headless 浏览器又让你看不见 Agent 在干什么。所以他们的答案是一个跑在你自己机器上、带着你真实登录态、且能被你的 Agent 驱动的浏览器。\n\n它不是 Chrome 替代品，而是挨着 Chrome 放的第二个浏览器：你的账号在里面，Agent 在它自己的标签页里干活，你的标签一根手指都碰不到。顺带说一句，这个产品最初叫 BrowserClaw，后来因为 SEO 原因改名成 BrowserOS neo，官方 FAQ 明确说同一个东西、装过的不用重装。\n\n## 核心功能\n\n1. 一键导入 Chrome 登录态：Agent 以「你」的身份访问 Gmail、GitHub、X 甚至网银这类必须登录才有内容的地方。\n2. MCP 一键接入：Claude Code、Cowork、Codex、Cursor、VS Code、Zed、GitHub Copilot 点一下就连上，OpenClaw、Hermes 等也在支持列表里，其他工具用 URL 接入，不用编辑配置文件。\n3. cockpit 驾驶舱：新标签页就是控制台，每个 Agent 在哪个站点、用什么工具、走到第几步全都看得见。\n4. 并行多 Agent：每个 Agent 独占一组隔离的分组标签页，三个任务同时跑也不打架，你还能继续在自己的标签里干活。\n5. 会话回放：每次运行保存成可拖动进度条的全屏录像，navigate → read → act → submit 一步步复看，找到出错的那一刻再改指令。\n6. 省 token：Agent 拿到的是紧凑的页面快照而不是原始 HTML，动作还会批量成一次调用，往返更少、账单更小。\n\n## 版本/套餐对比\n\n没有套餐这回事——官方 FAQ 的原话是完全免费且在 AGPL-3.0 下开源，你只需要自带 AI 提供商的密钥（BYOK），费用发生在模型侧。下载分 macOS 与 Windows 两个版本，系统要求与 Chrome、Safari 相当。\n\n需要区分的是它和原版 BrowserOS 的关系：原版 BrowserOS 是给人用的开源 AI 浏览器（内置 Agent、40+ 集成、支持 Ollama/LM Studio 本地模型），neo 是独立安装的 Agent 专用浏览器，官方说法是两者可以并存，用不用原版都行。\n\n## 值不值得用？\n\n我觉得它抓住了一个真问题：登录墙后面才是真正的活。公开 API 只能到大门口，报销系统、广告后台、内部 CRM 这些地方 Agent 进不去就等于白说。neo 用「本地 + 真实登录态 + 可观测」这三件事把这层打开了，而且顺手解决了两个体验痛点——Agent 干活时你能盯着看，干完了还能回放复盘。省 token 这点也不是营销话术，压缩快照相比截图方案确实是量级差别。\n\n代价要认。第一是许可证：AGPL-3.0 对商业分发和嵌入有传染性，个人用无所谓，公司要包进产品必须先问法务。第二是风险模型变了：以前 Agent 顶多在沙箱里瞎点，现在它带着你的真实会话，误操作和提示注入的后果是实的；官方把「按 Agent 隔离 profile」放在路线图上，说明这块还没做完。第三是平台，只有 macOS 和 Windows，Linux 用户先等等。\n\n## 使用建议\n\n1. 先装上、连一个 Agent，用低风险任务开局，比如整理收藏夹、批量退订邮件，别一上手就让它动钱和线上系统。\n2. 把 cockpit 面板当默认新标签页真正用起来，前几次一定盯着看，摸清它在哪类页面容易走偏。\n3. 出错就回放，别靠记忆猜。找到走偏那一步，把指令写具体，比换模型有用。\n4. 涉及支付、发布、删除的操作，宁可自己按最后那一下——真实登录态下这类动作没有撤销键。\n5. 敏感账号建议不导入。等按 Agent 隔离 profile 落地后再考虑放开。\n\n## 适合谁用？\n\n推荐：Claude Code、Codex、Cursor 的重度用户，以及需要 Agent 在登录后台里干活的开发者和效率玩家。\n可考虑：想用 Agent 替代部分网页 RPA 的小团队，先在非关键流程上试，并注意 AGPL 的合规边界。\n不推荐：Linux 用户、需要把它嵌进商业产品分发的团队，以及不能接受 Agent 使用真实登录态的强合规场景。",
+    "published": true,
+    "faq": [
+        {
+            "question": "BrowserOS neo 免费吗？",
+            "answer": "免费。官方 FAQ 明确写着它完全免费且在 AGPL-3.0 许可下开源，你需要自带 AI 提供商的密钥（BYOK），实际花费只发生在你调用的模型那一侧。"
+        },
+        {
+            "question": "它支持哪些 AI 工具？",
+            "answer": "任何支持 MCP 的 Agent。官方列出可一键安装的包括 Claude Code、Claude Cowork、Cursor、Codex、VS Code、Zed 与 GitHub Copilot，网站上还标注了 OpenClaw、Hermes；其他工具通过 URL 接入。"
+        },
+        {
+            "question": "它会替代我的 Chrome 吗？",
+            "answer": "定位上是并存的第二浏览器：Agent 在 neo 里用你导入的登录态干活，你的主浏览器照旧自己用。官方也强调 Agent 只在自己的标签页里工作，不会关掉或操纵你正在用的标签。"
+        },
+        {
+            "question": "我之前下的 BrowserClaw 还能用吗？",
+            "answer": "能。官方 FAQ 说明 BrowserClaw 已改名为 BrowserOS neo，同一个浏览器、同一个项目，装过的不用重新下载，只是 GitHub 仓库名和 MCP server 名等处还留着旧称。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "BrowserOS neo",
+        "BrowserOS neo怎么用",
+        "BrowserOS neo免费吗",
+        "AI Agent 浏览器",
+        "BrowserOS neo 和 Browser Use 哪个好"
+    ],
+    "source_urls": [
+        "https://browseros.com/neo",
+        "https://github.com/browseros-ai/BrowserOS",
+        "https://www.browseros.com/",
+        "https://api.github.com/repos/browseros-ai/BrowserOS",
+        "https://hunted.space/dashboard/browseros_ai"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14",
+    "published_date": "2026-09-01"
 }
