@@ -13,9 +13,14 @@
 (function () {
   'use strict';
 
-  var CONFIG_URL = '/ads/config.json';
-  var CPS_JSON_URL = '/ads/cps.json';
-  var CPS_TPL_URL = '/ads/slots/cps-card.html';
+  // ⚠️ 路径去广告特征（2026-09-01）：原 /ads/ 前缀命中 uBlock/AdGuard 默认规则，
+  // 实测约 57% 的页面访问未加载配置（08-31：真人PV 5275 → cps.json 仅 2258 次请求）。
+  // 物理文件仍在服务器 ads/ 目录，由 nginx 的 location /reco/ 做 alias 映射，磁盘文件名未变。
+  // 改动此处必须同步：① /etc/nginx/conf.d/aitoollab.conf 的 /reco/ 块
+  //                   ② scripts/analyze_beacon.py 的 BEACON_RE
+  var CONFIG_URL = '/reco/config.json';
+  var CPS_JSON_URL = '/reco/data.json';
+  var CPS_TPL_URL = '/reco/slots/cps-card.html';
   var STYLE_ID = 'ads-loader-style';
   var STYLE_CSS =
     /* 通用容器：完全透明，不做任何装饰 */
@@ -218,7 +223,7 @@
     }
 
     var url = slot.file || ('slots/' + id + '.html');
-    if (url.indexOf('/') !== 0) url = '/ads/' + url;
+    if (url.indexOf('/') !== 0) url = '/reco/' + url;
 
     return fetchText(url).then(function (html) {
       if (!html || !html.trim()) return; // 空文件：保留预留空间，不报错
@@ -290,7 +295,7 @@
       var imgMap = data.images || {};
       var imgPath = imgMap[mapping.network] || '';
       var fullImgPath = imgPath;
-      if (imgPath && imgPath.indexOf('/') !== 0) fullImgPath = '/ads/' + imgPath;
+      if (imgPath && imgPath.indexOf('/') !== 0) fullImgPath = '/reco/' + imgPath;
 
       return fetchText(CPS_TPL_URL).then(function (tpl) {
         if (!tpl || !tpl.trim()) return;
@@ -331,14 +336,17 @@
 
         var channel = mapping.network || '';
         // 曝光/点击双通道上报（2026-08-15）：
-        // ① 自建 beacon → /ads/beacon.gif，nginx access log 留痕，scripts/analyze_beacon.py 分析（主数据源）
+        // ① 自建 beacon → /reco/r.gif（2026-09-01 改路径规避拦截），nginx access log 留痕
         // ② 百度统计 _trackEvent（免费版无事件分析权限，仅备用，不依赖）
-        // 曝光只在可见时计一次（offsetParent 判断），避免桌面/移动双占位重复计数
+        // 曝光口径（2026-09-01 修正）：元素 ≥50% 进入视口并停留 ≥1s 才计一次（MRC viewable 标准）。
+        //   ⚠️ 原实现用 offsetParent !== null，语义仅为"参与布局未被 display:none 隐藏"，
+        //   与是否在视口内无关 → 用户没滚到也计曝光 → 分母虚高 → CTR 被系统性低估。勿改回。
+        var CPS_BEACON_URL = '/reco/r.gif';
         function cpsBeacon(act) {
           try {
             var m = location.pathname.match(/\/(tools|articles|news)\/([^/?#]+)/);
             var slug = m ? m[2] : '';
-            var src = '/ads/beacon.gif?act=' + encodeURIComponent(act)
+            var src = CPS_BEACON_URL + '?act=' + encodeURIComponent(act)
               + '&ch=' + encodeURIComponent(channel)
               + '&pt=' + encodeURIComponent(pageType)
               + (slug ? '&slug=' + encodeURIComponent(slug) : '')
@@ -348,19 +356,46 @@
         }
         function attachCpsTracking(w) {
           w.setAttribute('data-cps-channel', channel);
-          // 曝光必须在元素插入 DOM 后判断：创建时元素 detached，offsetParent 恒为 null，
-          // 若在此同步判断会导致真实流量 impression 全为 0（2026-08-15 修复）。
-          // setTimeout(0) 在同步插入完成后执行；桌面/移动双占位只有显示的那个 offsetParent 非 null。
-          window.setTimeout(function () {
-            if (w.offsetParent !== null) {
-              cpsBeacon('impression');
-              try {
-                if (window._hmt && window._hmt.push) {
-                  window._hmt.push(['_trackEvent', 'CPS', 'impression', channel + '|' + pageType]);
+          // 曝光判定（2026-09-01 重写）：IntersectionObserver，≥50% 可见且持续 ≥1s 才计一次。
+          // - 桌面/移动双占位天然去重：被 display:none 的那份永不进入视口，不会触发。
+          // - 用户快速滑过不计数（timer 在移出视口时清除）。
+          // - 老浏览器无 IntersectionObserver 时降级为"插入即计一次"，保证不丢数。
+          var impressionSent = false;
+          function sendImpression() {
+            if (impressionSent) return;
+            impressionSent = true;
+            cpsBeacon('impression');
+            try {
+              if (window._hmt && window._hmt.push) {
+                window._hmt.push(['_trackEvent', 'CPS', 'impression', channel + '|' + pageType]);
+              }
+            } catch (e) { /* 统计失败不影响展示 */ }
+          }
+          if (typeof window.IntersectionObserver !== 'function') {
+            window.setTimeout(sendImpression, 0);
+          } else {
+            var dwellTimer = null;
+            var io = new window.IntersectionObserver(function (entries) {
+              for (var i = 0; i < entries.length; i++) {
+                var e = entries[i];
+                if (e.isIntersecting && e.intersectionRatio >= 0.5) {
+                  if (!dwellTimer && !impressionSent) {
+                    dwellTimer = window.setTimeout(function () {
+                      dwellTimer = null;
+                      sendImpression();
+                    }, 1000);
+                  }
+                } else if (dwellTimer) {
+                  window.clearTimeout(dwellTimer);
+                  dwellTimer = null;
                 }
-              } catch (e) { /* 统计失败不影响展示 */ }
-            }
-          }, 0);
+              }
+              if (impressionSent && dwellTimer === null) {
+                try { io.disconnect(); } catch (e2) { /* 已断开 */ }
+              }
+            }, { threshold: [0, 0.5] });
+            window.setTimeout(function () { io.observe(w); }, 0);
+          }
           w.addEventListener('click', function (ev) {
             var link = ev.target && ev.target.closest ? ev.target.closest('a') : null;
             if (!link) return;

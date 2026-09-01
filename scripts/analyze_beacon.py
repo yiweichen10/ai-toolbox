@@ -38,7 +38,15 @@ TEST_SLUGS = {"e2e-test2"}
 LOG_PATH = "/var/www/aitoollab/logs/access.log"
 LOG_DIR = "/var/www/aitoollab/logs"  # 日志每日 03:12 切割，历史进 access.log-YYYYMMDD.gz
 HISTORY_DAYS = 14  # 拉取最近 N 天的 .gz 历史（周报看 7 天，留余量）
-BEACON_RE = re.compile(r'"(?:GET|POST)\s+(/ads/beacon\.gif\?[^"\s]*)\s+HTTP')
+# 2026-09-01 起 beacon 路径改为 /reco/r.gif（规避 uBlock/AdGuard 拦截），
+# 旧路径 /ads/beacon.gif 仍需兼容历史日志。两处必须同步：
+#   ① ads/loader.js 的 CPS_BEACON_URL  ② /etc/nginx/conf.d/aitoollab.conf 的 /reco/ 块
+BEACON_PATHS = r"/reco/r\.gif|/ads/beacon\.gif"
+BEACON_RE = re.compile(r'"(?:GET|POST)\s+((?:' + BEACON_PATHS + r')\?[^"\s]*)\s+HTTP')
+# 逐日漏斗口径：验证"广告拦截吃掉多少样本"，同时规避滚动窗口环比失真（周报必须用逐日数据比）
+PAGE_RE = r'"GET /(tools|articles|news)/'
+CFG_RE = r"/reco/data\.json|/ads/cps\.json"
+CRAWLER_RE = r"bot|spider|crawler|headless|python|curl|wget|scrapy|axios|okhttp"
 
 
 def parse_line(line):
@@ -59,12 +67,73 @@ def pad(s, width):
     return s + " " * max(0, width - w)
 
 
+def ssh_run(remote_cmd, timeout=120):
+    """执行远程命令，返回 stdout；失败返回 None。"""
+    cmd = ["ssh", "-i", SSH_KEY, "-o", "StrictHostKeyChecking=no", "-o", "ConnectTimeout=15",
+           SERVER, remote_cmd]
+    r = subprocess.run(cmd, capture_output=True, text=True,
+                       encoding="utf-8", errors="replace", timeout=timeout)
+    if r.returncode != 0 and not r.stdout:
+        print(f"[ERROR] ssh 执行失败：{r.stderr[:300]}")
+        return None
+    return r.stdout
+
+
+def run_funnel(days):
+    """逐日漏斗：真人PV → 配置加载 → 曝光 → 点击。
+
+    存在的意义有两个：
+      1) 量化广告拦截损失：配置加载数 / 真人PV 明显低于 100% 即说明被拦（或脚本未执行）。
+      2) 替代滚动窗口做环比：总量对比不可靠（窗口滑动会让总量不增反减），逐日对比才有效。
+    """
+    remote = (
+        f"cd {LOG_DIR} && for f in $(ls access.log-*.gz 2>/dev/null | sort | tail -{days}); do "
+        f"  d=$(basename $f .gz | sed 's/access.log-//'); "
+        f"  zcat $f 2>/dev/null > /tmp/_bf.$$; "
+        f"  pv=$(grep -E '{PAGE_RE}' /tmp/_bf.$$ | grep -viE '{CRAWLER_RE}' | wc -l); "
+        f"  cfg=$(grep -cE '{CFG_RE}' /tmp/_bf.$$); "
+        f"  imp=$(grep -E '{BEACON_PATHS}' /tmp/_bf.$$ | grep -c 'act=impression'); "
+        f"  clk=$(grep -E '{BEACON_PATHS}' /tmp/_bf.$$ | grep -c 'act=click'); "
+        f"  echo \"$d $pv $cfg $imp $clk\"; "
+        f"  rm -f /tmp/_bf.$$; "
+        f"done"
+    )
+    out = ssh_run(remote)
+    if not out:
+        return
+    print("== 逐日漏斗（按自然日聚合，不含当天未完整数据）==")
+    print(f"{pad('日期', 14)}{'真人PV':>9}{'配置加载':>10}{'加载率':>9}{'曝光':>8}{'点击':>7}{'点击率':>9}")
+    print("-" * 66)
+    tp = tc = ti = tk = 0
+    for line in out.splitlines():
+        parts = line.split()
+        if len(parts) != 5:
+            continue
+        d, pv, cfg, imp, clk = parts[0], int(parts[1]), int(parts[2]), int(parts[3]), int(parts[4])
+        tp += pv; tc += cfg; ti += imp; tk += clk
+        rate = f"{cfg / pv * 100:.0f}%" if pv else "-"
+        print(f"{pad(d, 14)}{pv:>9}{cfg:>10}{rate:>9}{imp:>8}{clk:>7}{pct(clk, imp):>9}")
+    if tp:
+        print("-" * 66)
+        print(f"{pad('合计', 14)}{tp:>9}{tc:>10}{f'{tc / tp * 100:.0f}%':>9}{ti:>8}{tk:>7}{pct(tk, ti):>9}")
+        print(f"\n加载率 = 配置加载 / 真人PV。明显低于 100% 说明广告配置未加载"
+              f"（uBlock/AdGuard 拦截 /ads/ 类路径，或脚本未执行）。")
+
+
 def main():
     ap = argparse.ArgumentParser(description="CPS beacon 曝光/点击分析")
     ap.add_argument("--file", help="本地 nginx 日志文件路径（不指定则 ssh 拉服务器）")
     ap.add_argument("--tail", type=int, default=50000, help="ssh 拉取时 grep 后保留的条数（默认 50000）")
     ap.add_argument("--raw", action="store_true", help="附加输出最近 20 条原始记录")
+    ap.add_argument("--funnel", action="store_true",
+                    help="输出逐日漏斗（真人PV / 配置加载 / 曝光 / 点击），"
+                         "用于验证广告拦截比例与替代滚动窗口做周环比")
+    ap.add_argument("--funnel-days", type=int, default=8, help="--funnel 回溯天数（默认 8）")
     args = ap.parse_args()
+
+    if args.funnel:
+        run_funnel(args.funnel_days)
+        return
 
     if args.file:
         with open(args.file, encoding="utf-8", errors="replace") as f:
@@ -72,10 +141,11 @@ def main():
         source = args.file
     else:
         # 拉取：当前 access.log + 最近 N 天 .gz 历史（日志每日切割，只读当前会漏历史数据）
+        # grep 必须同时匹配新旧 beacon 路径，否则改路径后统计直接归零
         remote_cmd = (
             f"{{ cat {LOG_PATH}; "
             f"find {LOG_DIR} -maxdepth 1 -name 'access.log-*.gz' -mtime -{HISTORY_DAYS} 2>/dev/null "
-            f"| sort | xargs -r zcat 2>/dev/null; }} | grep beacon.gif | tail -{args.tail}"
+            f"| sort | xargs -r zcat 2>/dev/null; }} | grep -E '{BEACON_PATHS}' | tail -{args.tail}"
         )
         cmd = ["ssh", "-i", SSH_KEY, "-o", "StrictHostKeyChecking=no", "-o", "ConnectTimeout=10",
                SERVER, remote_cmd]

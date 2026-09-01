@@ -36,7 +36,11 @@ except Exception:
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE_ROOT = sys.argv[1] if len(sys.argv) > 1 else BASE_DIR
 
-LOADER_TAG = '<script src="/ads/loader.js" defer></script>'
+# 2026-09-01 改为 /reco/ 前缀：原 /ads/ 命中 uBlock/AdGuard 默认规则，loader.js 被拦则
+# 后续 cps.json / beacon 全部不发（实测配置加载率仅 40%，见 .workbuddy/memory/2026-09-01.md）。
+# 物理文件仍在 ads/，由 nginx 的 location ^~ /reco/ 做 alias 映射。
+# 同步改动点：scripts/check_ads_injected.py、ads/loader.js 内部 URL、nginx /reco/ 块。
+LOADER_TAG = '<script src="/reco/loader.js" defer></script>'
 BODY_RE = re.compile(r'<body(\s[^>]*)?>', re.IGNORECASE)
 
 # 仅处理这些顶层目录（真实内容页）
@@ -343,6 +347,10 @@ def inject(html, page_type, rel=''):
             changed = True
 
     # 2) loader script
+    # 旧标签清理（2026-09-01）：模板外来源（历史产物/备份恢复）可能残留 /ads/ 版，先删再注入
+    if '<script src="/ads/loader.js" defer></script>' in html:
+        html = html.replace('<script src="/ads/loader.js" defer></script>', '')
+        changed = True
     if LOADER_TAG not in html:
         html = html.replace('</body>', LOADER_TAG + '\n</body>', 1)
         changed = True

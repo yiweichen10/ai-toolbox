@@ -402,7 +402,7 @@ _remote_check() {
         for d in tools articles category compare alternatives ranking quiz live dict news; do
             [ -d \"\$d\" ] || continue
             for f in \$(find \$d -name index.html | sort | head -3) \$(find \$d -name index.html | sort | tail -2); do
-                grep -q '/ads/loader.js' \"\$f\" || { miss=\$((miss+1)); echo \"  ❌ 线上缺 loader: \$f\"; }
+                grep -q '/reco/loader.js' \"\$f\" || { miss=\$((miss+1)); echo \"  ❌ 线上缺 loader: \$f\"; }
             done
         done
         echo \"REMOTE_MISS=\$miss\"" 2>/dev/null

@@ -63,7 +63,8 @@ def main():
         except Exception as e:
             missing.append((p, '读取失败: %s' % e))
             continue
-        if '/ads/loader.js' not in html:
+        # 2026-09-01 路径改为 /reco/loader.js（与 inject_ads.py LOADER_TAG 同步，规避广告拦截）
+        if '/reco/loader.js' not in html:
             missing.append((p, '缺少 loader'))
     mode = '全量' if full else '抽样'
     print('校验（%s）%d 个内容页...' % (mode, len(pages)))
