@@ -409,7 +409,7 @@ def build_tools_index_page(tools):
     {filter_js}
     <script src="/js/ai-likes.js?v={build.LIKES_JS_VERSION}" defer></script>
     <script src="/js/ai-assistant.js?v={build.WIDGET_JS_VERSION}" defer></script>
-    <script src="/ads/loader.js" defer></script>
+    <script src="/reco/loader.js" defer></script>
 </body>
 </html>'''
     return _collapse_blank_lines(html)

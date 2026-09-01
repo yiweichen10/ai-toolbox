@@ -993,7 +993,7 @@ def build_tool_page(tool, all_tools, all_articles=None, all_compares=None, all_a
     ''' + build.BACK_TO_TOP_BLOCK + '''
     <script src="/js/ai-likes.js?v={LIKES_JS_VERSION}" defer></script>
     <script src="/js/ai-assistant.js?v={WIDGET_JS_VERSION}" defer></script>
-    <script src="/ads/loader.js" defer></script>
+    <script src="/reco/loader.js" defer></script>
 </body>
 </html>'''
     return html
