@@ -1,47 +1,49 @@
 {
-  "generated_at": "2026-09-01 07:47",
+  "generated_at": "2026-09-02 07:33",
   "picks": [
     {
-      "slug": "gptzero",
-      "name": "GPTZero",
-      "category": "AI检测",
-      "price": "免费+付费（Pro 订阅）",
-      "visits": "约900万/月",
-      "rating": "⭐ 4.5",
-      "score": 74.6,
-      "tags": [
-        "编辑实测"
-      ],
-      "reason": "有深度评测支撑 · GPTZero 是全球使用量最大的 AI 内容检测工具之一，专门识别 ChatGPT、Claud",
-      "date": "2026-08-03"
-    },
-    {
-      "slug": "jimeng-ai",
-      "name": "即梦AI",
-      "category": "AI绘画",
-      "price": "免费额度 + 会员订阅",
-      "visits": "约500万/月",
-      "rating": "⭐ 4.5",
-      "score": 73.2,
-      "tags": [
-        "编辑实测"
-      ],
-      "reason": "有深度评测支撑 · 即梦AI是字节跳动旗下剪映团队推出的生成式AI创作平台，支持文生图、图生图、文生视频与图生视频，",
-      "date": "2026-05-16"
-    },
-    {
-      "slug": "tencent-hunyuan",
-      "name": "腾讯混元",
+      "slug": "gpt-live",
+      "name": "GPT-Live",
       "category": "AI对话",
-      "price": "个人免费；企业API Hy4 输入¥6/输出¥18/缓存¥0.3、Hy3 输入¥1/输出¥4/缓存¥0.25（每百万token）",
-      "visits": "850万",
-      "rating": "⭐4.2",
-      "score": 72.7,
+      "price": "ChatGPT 内置（免费可用）",
+      "visits": "内置于 ChatGPT（周活语音用户超 1.5 亿），无独立访问量",
+      "rating": "⭐ 4.7",
+      "score": 76.2,
+      "tags": [
+        "热门",
+        "编辑实测"
+      ],
+      "reason": "访问量领先 · GPT-Live 是 OpenAI 于 2026 年 7 月发布的全双工语音模型，驱动新一代 C",
+      "date": "2026-07-27"
+    },
+    {
+      "slug": "open-router",
+      "name": "OpenRouter",
+      "category": "AI开发",
+      "price": "免费额度 + 按 token 计费（5.5% 平台费）",
+      "visits": "850万/月",
+      "rating": "⭐ 4.7",
+      "score": 75.7,
       "tags": [
         "编辑实测"
       ],
-      "reason": "有深度评测支撑 · 腾讯混元是腾讯自研大语言模型家族（2026-08-28 开源新一代旗舰 Hy4 preview：",
-      "date": "2026-04-29"
+      "reason": "有深度评测支撑 · OpenRouter 是统一的 AI 模型 API 网关，用一个 OpenAI 兼容接口聚合 3",
+      "date": "2026-06-23"
+    },
+    {
+      "slug": "chatgpt-work",
+      "name": "ChatGPT Work",
+      "category": "AI办公",
+      "price": "随 ChatGPT 套餐（不单独售卖）",
+      "visits": "月访问量约 5000 万次",
+      "rating": "⭐ 4.6",
+      "score": 75.6,
+      "tags": [
+        "热门",
+        "编辑实测"
+      ],
+      "reason": "访问量领先 · ChatGPT Work 是 ChatGPT 的桌面/工作区能力：跨已连接的应用与文件研究、分析",
+      "date": "2026-07-15"
     },
     {
       "slug": "whee",

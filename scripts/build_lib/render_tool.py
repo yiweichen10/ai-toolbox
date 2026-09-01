@@ -13,6 +13,10 @@ from build_lib.data_loaders import (
     get_category_slug, get_published_tool_slugs, load_articles, _LINK_STOPWORDS,
 )
 
+# 停运提示里展示的"核实日期"。必须是固定值：若用当天日期，每次构建都会改这两个页面的文案，
+# 破坏构建可复现性。新增死链到 build.BROKEN_URLS 时，同步把本日期更新为复核当天。
+DEAD_LINK_NOTICE_DATE = '2026-09-01'
+
 
 def resolve_icon(slug):
     import build  # 延迟：build 完全加载后解析 build 级符号
@@ -858,16 +862,29 @@ def build_tool_page(tool, all_tools, all_articles=None, all_compares=None, all_a
             <figcaption>{escape_html(tool['name'])} 核心功能一览</figcaption>
         </figure>'''
 
-    # 失效URL的"立即使用"按钮（无href，保留文字）
+    # CTA 按钮（2026-09-02 改名）：官网可访问 → "访问官网"；
+    # 已人工复核确认失效的（build.BROKEN_URLS）→ 不可点击的禁用按钮 + 页面停运提示，绝不出站。
+    # 匹配忽略结尾斜杠（数据里 https://x.com/ 与清单里 https://x.com 视为同一条）。
     _tool_link, _is_aff = build.get_tool_link(tool, slug, 'zh')
-    if _tool_link in build.BROKEN_URLS:
-        build.action_btn_html = '<span class="action-btn action-btn-primary disabled">立即使用</span>'
-    elif _tool_link == '':
+    _norm_url = lambda u: (u or '').rstrip('/')
+    _broken_set = {_norm_url(u) for u in build.BROKEN_URLS}
+    build.dead_notice_html = ''
+    if _tool_link == '':
         # 空URL（如已下架工具）→ 指向站内同类替代品页面
         build.action_btn_html = '<a href="/tools/gamma/" class="action-btn action-btn-primary">查看替代工具</a>'
+    elif _norm_url(_tool_link) in _broken_set:
+        build.action_btn_html = (
+            '<span class="action-btn action-btn-primary disabled" '
+            'aria-disabled="true" title="官网已无法访问，暂不提供跳转">访问官网</span>'
+        )
+        build.dead_notice_html = (
+            '<div class="tool-dead-notice" role="status">⚠️ <strong>官网已无法访问</strong>：'
+            f'经 {DEAD_LINK_NOTICE_DATE} 人工复核（含跨境网络复核），{escape_html(tool["name"])} 的官方网站'
+            '已停止服务，我们已移除跳转外链，避免您点到死链。以下介绍仅作资料存档，建议改用同类替代工具。</div>'
+        )
     else:
         _rel = 'nofollow noopener sponsored' if _is_aff else 'nofollow noopener'
-        build.action_btn_html = f'<a href="{_tool_link}" target="_blank" rel="{_rel}" class="action-btn action-btn-primary">立即使用</a>'
+        build.action_btn_html = f'<a href="{_tool_link}" target="_blank" rel="{_rel}" class="action-btn action-btn-primary">访问官网</a>'
 
     # 文章内容（content_md 已在 FAQ 区块前预处理：优缺点 / FAQ 小节剥离）
     content_html = markdown_to_html(content_md)
@@ -948,6 +965,7 @@ def build_tool_page(tool, all_tools, all_articles=None, all_compares=None, all_a
                 <button type="button" class="action-btn action-btn-ghost" data-copy-link data-label="复制链接">复制链接</button>
                 <a href="/contact.html?tool={slug}" class="action-btn action-btn-ghost" title="价格、链接或信息有误？告诉我们">信息有误？</a>
             </div>
+            {build.dead_notice_html}
         </div>
 
         {features_html}

@@ -17,9 +17,14 @@ load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 SITE_DOMAIN = os.getenv('SITE_DOMAIN', 'https://www.aitoollab.cn')
 BAIDU_PUSH_TOKEN = os.getenv('BAIDU_PUSH_TOKEN', '')  # 百度推送token，留空则跳过百度推送
 
-# 已知失效的URL（404/403/部署删除等），这些工具的"立即使用"按钮无href，保留文字但不跳转
+# 已知失效的URL（DNS解析失败/404/官网停运等）：
+# 这些工具的"访问官网"按钮降级为不可点击（不出站），并在页面显示停运提示。
+# 判定标准：人工复核确认官网确实打不开（含挂VPN复核）。WAF 拦机器人的 403 属正常，不要加进来。
+# 匹配时忽略结尾斜杠，无需刻意保持格式一致。
 BROKEN_URLS = [
     'https://tome.app',
+    'https://ilingban.com',      # 灵办AI — 2026-09-01 核实：DNS解析失败，疑似停运
+    'https://snackprompt.com',   # Snack Prompt — 2026-09-01 核实：DNS解析失败，疑似停运
 ]
 
 # ── 推广链接系统 ──
