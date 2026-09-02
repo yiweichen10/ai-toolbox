@@ -62,17 +62,19 @@ def parse_ver_loose(s):
 
 
 def brand_token_of(name):
-    """从工具名取品牌锚定词 = 版本号前那个 token
-    'Claude Fable 5' -> 'Fable' | 'GLM-5.2' -> 'GLM' | 'Seedance 2.0' -> 'Seedance'
+    """从工具名取品牌锚定词 = 【最后一个】版本号前的那个 token。
+    覆盖版本号在中间(末尾是非版本词)的工具:
+      'Claude Fable 5' -> 'Fable' | 'GLM-5.2' -> 'GLM' | 'Seedance 2.0' -> 'Seedream'
+      'GPT-5.6 Sol' -> 'GPT' | 'Seedream 5.0 Pro' -> 'Seedream'
+    2026-09-03 修复: 旧逻辑要求版本号在名字末尾(re.match 锚定 $),
+    导致 'GPT-5.6 Sol'/'Seedream 5.0 Pro' 等被整条跳过、不在 desc_drift 守护范围内。
     """
     s = (name or "").strip()
-    m = re.match(r"^(.*?)[\s\-]*(\d+(?:\.\d+)*)\s*$", s)
-    if not m:
+    matches = list(re.finditer(r"([A-Za-z\u4e00-\u9fff][\w\u4e00-\u9fff\-]*?)[\s\-]*(\d+(?:\.\d+)*)", s))
+    if not matches:
         return None
-    head = m.group(1).strip(" -")
-    if not head:
-        return None
-    return head.split()[-1]
+    m = matches[-1]
+    return m.group(1).strip(" -") or None
 
 
 def max_ver_after(text, token):
@@ -113,6 +115,7 @@ def main():
     tools = load_all_tools()
     drift, rename_hint, desc_drift = [], [], []
     scanned = 0
+    b_scanned = 0  # desc_drift(B检查)覆盖的版本型工具数
     for t in tools:
         name = t.get("name", "") or ""
         slug = t.get("slug", "") or ""
@@ -127,6 +130,7 @@ def main():
             ((f.get("q") or "") + " " + (f.get("a") or "")) for f in (t.get("faq") or []) if isinstance(f, dict)
         )
         if btok:
+            b_scanned += 1
             v_desc = max_ver_after(t.get("description") or "", btok)
             v_body = max_ver_after(c_body, btok)
             if v_desc and v_body and v_desc > v_body:
@@ -196,7 +200,8 @@ def main():
                 "content_ver": ".".join(map(str, dominant[:2])),
             })
 
-    print(f"扫描含版本号的工具: {scanned} 个")
+    print(f"扫描含版本号的工具(A检查/FAMILIES+小数点版本): {scanned} 个")
+    print(f"desc_drift 覆盖的版本型工具(B检查/名字含任意版本号): {b_scanned} 个")
     print(f"\n🔴 版本漂移(内容写旧版) 命中: {len(drift)} 个")
     for x in drift:
         print(f"  - {x['name']} ({x['slug']})  名={x['name_ver']} 内容主版本={x['content_ver']}"
