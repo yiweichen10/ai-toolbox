@@ -1,6 +1,6 @@
 {
-  "title": "朱雀AI检测助手使用教程：论文、图片、视频怎么检测（2026）",
-  "seo_title": "朱雀AI检测怎么用：免费检测论文AI率、图片与视频，准确率92%",
+  "title": "朱雀ai检测助手使用教程：论文、图片、视频怎么检测（2026）",
+  "seo_title": "朱雀ai检测怎么用：免费检测论文AI率、图片与视频，准确率92%",
   "slug": "zhuque-ai-detect-usage-guide-2026",
   "date": "2026-08-31",
   "dateFull": "2026-08-31",
@@ -13,9 +13,9 @@
     "免费AI检测",
     "GPTZero"
   ],
-  "summary": "朱雀AI检测助手怎么用：文本/图片/视频三类检测操作、免费额度与限制、准确率口径、论文AI率检测场景，以及与GPTZero的选型对比。",
-  "description": "朱雀AI检测助手是腾讯朱雀实验室的免费多模态AI检测工具，文本检测准确率官网宣称92%以上。教程讲清论文AI率检测、图片与视频检测怎么操作、每日免费额度限制，以及与GPTZero的选型对比。",
-  "keywords": "朱雀AI检测, 朱雀AI检测助手, 论文AI率检测, AI内容检测, 免费AI检测工具, GPTZero对比, 腾讯AI检测",
+  "summary": "朱雀ai检测助手怎么用：文本/图片/视频三类检测操作、免费额度与限制、准确率口径、论文AI率检测场景，以及与GPTZero的选型对比。",
+  "description": "朱雀ai检测助手是腾讯朱雀实验室的免费多模态AI检测工具，文本检测准确率官网宣称92%以上。教程讲清论文AI率检测、图片与视频检测怎么操作、每日免费额度限制，以及与GPTZero的选型对比。",
+  "keywords": "朱雀ai, 朱雀AI检测, 朱雀AI检测助手, 论文AI率检测, AI内容检测, 免费AI检测工具, GPTZero对比, 腾讯AI检测",
   "author": "AI工具宝箱编辑部",
   "related_tools": [
     "zhuque-ai-detect",
@@ -26,15 +26,15 @@
   ],
   "faq": [
     {
-      "question": "朱雀AI检测助手是免费的吗？",
+      "question": "朱雀ai检测助手是免费的吗？",
       "answer": "完全免费，官网标注为免费的在线AI检测助手，学术诚信检测明确免费检测论文、作文等文档，未发现付费方案。每天有检测次数额度：游客模式文本和图片各约5次，登录后文本约20次、图片和视频约30次，反馈赞踩可额外获取（额度为第三方整理，以官网实际为准）。"
     },
     {
-      "question": "朱雀AI检测能测出哪些AI生成的内容？",
+      "question": "朱雀ai检测能测出哪些AI生成的内容？",
       "answer": "文本支持GPT、Claude、DeepSeek、混元等主流模型；图像支持Midjourney、Stable Diffusion、混元、豆包等；视频支持Sora、海螺、Veo等文生视频模型。检测模型每月更新，会持续适配新的生成方式。"
     },
     {
-      "question": "朱雀AI检测的准确率多少？",
+      "question": "朱雀ai检测的准确率多少？",
       "answer": "官网宣称文本检测整体准确率超92%、社交媒体图像检出准确率达98%以上，并在HC3、Detect-RL、AIGTBENCH、MAGE、RAID等开源基准上做了评测。检测结果以概率形式呈现，严肃场景建议结合人工复核。"
     },
     {
@@ -42,11 +42,11 @@
       "answer": "单次文本建议不少于350字，太短检测效果受限；支持txt、docx上传和直接粘贴。图片支持png、jpg、webp，单张不超过20MB；视频支持mp4、mov、avi等格式。"
     },
     {
-      "question": "朱雀AI检测和GPTZero怎么选？",
+      "question": "朱雀ai检测和GPTZero怎么选？",
       "answer": "中文内容优先用朱雀：免费、支持图片和视频、中文检测优化。英文论文或学术场景需要更细的检测报告，GPTZero更成熟，但中文检测弱于英文、高级功能要付费。建议中文初筛用朱雀，英文材料用GPTZero，重要结论结合人工判断。"
     }
   ],
-  "content": "朱雀AI检测助手是腾讯朱雀实验室（腾讯混元安全团队）出的免费多模态AI检测工具：文本、图片、视频都能查，网页版打开就能用，不用下载安装。官方宣称文本检测整体准确率超92%、社交媒体图像检出率达98%以上，中文场景检测效果比多数英文工具好。下面直接讲怎么用、免费额度有多少，以及和 GPTZero 怎么选。\n\n## 一、朱雀AI检测是什么\n\n官方入口是[腾讯矩阵 AI 检测页](https://matrix.tencent.com/ai-detect/)，页面顶部就是产品本体，切「文本」或「图片/视频」两个标签开始检测。它基于数千万级数据训练，检测模型每月更新，文本可识别 GPT、Claude、DeepSeek、混元等模型，图片覆盖 Midjourney、Stable Diffusion、混元、豆包，视频支持 Sora、海螺、Veo 等生成内容。\n\n![图1：朱雀AI检测官方首页，顶部为文本/图片/视频检测入口](https://www.aitoollab.cn/images/articles/zhuque-ai-detect-usage-guide-2026/1-core.png)\n\n## 二、检测论文和文本：三步出结果\n\n第一步，打开官网切到「文本」标签。第二步，粘贴文字或上传 txt、docx 文件——单次建议不少于 350 字，太短检测效果会打折扣。第三步，点检测按钮，页面给整段文字标出 AI 生成概率，可疑句子红色高亮。\n\n![图2：官方文本分析界面，逐句标注 AI 生成概率与可疑段落](https://www.aitoollab.cn/images/articles/zhuque-ai-detect-usage-guide-2026/2-text.png)\n\n学术诚信是它主打场景：论文、作文、作业都能免费检测。我建议老师收到作业先让朱雀过一遍，把红色高亮段落当重点复核对象，但别拿单次结果直接下结论——任何检测工具都可能误报，官网「重要声明」里也写明结果仅供参考。\n\n![图3：官方学术诚信检测与 Benchmark 评测区](https://www.aitoollab.cn/images/articles/zhuque-ai-detect-usage-guide-2026/3-academic.png)\n\n## 三、图片和视频怎么检测\n\n切到「图片/视频」标签，把文件拖进去就行。图片支持 png、jpg、webp，单张不超过 20MB；视频支持 mp4、mov、avi 等格式。这块对自媒体和平台运营最有用：鉴别 AI 合成图、DeepFake 视频，或者筛掉批量生成的机器评论和数据。\n\n## 四、免费额度和使用限制\n\n朱雀完全免费，没发现付费方案，但每天有次数限制：游客模式文本和图片各约 5 次/天，登录后文本约 20 次/天、图片和视频约 30 次/天，反馈赞踩还能额外拿次数（额度数字来自第三方整理，以官网实际为准）。手机浏览器打开同一个网址也能用，布局自动适配，适合临时查一篇稿子。\n\n![图4：手机端打开朱雀AI检测官方页，移动布局可直接检测](https://www.aitoollab.cn/images/articles/zhuque-ai-detect-usage-guide-2026/4-mobile.png)\n\n## 五、和GPTZero怎么选\n\nGPTZero 是全球使用量最大的 AI 检测工具之一，月访问约 900 万，逐句高亮和检测报告更细，学术机构认可度高，但它强项是英文，中文检测偏弱，高级功能要付费。我的建议：中文论文、作业、自媒体内容优先朱雀——免费还能查图查视频；英文论文和海外学术场景用 GPTZero；重要判定两个工具交叉验证后再给结论。参数对比看 [/tools/zhuque-ai-detect/](/tools/zhuque-ai-detect/) 和 [/tools/gptzero/](/tools/gptzero/)。AI 内容溯源是另一条判定思路，可参考 [Claude 全站水印与AI内容溯源解读](/articles/claude-watermark-ai-content-provenance-2026/)。",
+  "content": "朱雀ai检测助手（也写作朱雀AI检测助手）是腾讯朱雀实验室（腾讯混元安全团队）出的免费多模态AI检测工具：文本、图片、视频都能查，网页版打开就能用，不用下载安装。官方宣称文本检测整体准确率超92%、社交媒体图像检出率达98%以上，中文场景检测效果比多数英文工具好。下面直接讲怎么用、免费额度有多少，以及和 GPTZero 怎么选。\n\n## 一、朱雀AI检测是什么\n\n官方入口是[腾讯矩阵 AI 检测页](https://matrix.tencent.com/ai-detect/)，页面顶部就是产品本体，切「文本」或「图片/视频」两个标签开始检测。它基于数千万级数据训练，检测模型每月更新，文本可识别 GPT、Claude、DeepSeek、混元等模型，图片覆盖 Midjourney、Stable Diffusion、混元、豆包，视频支持 Sora、海螺、Veo 等生成内容。\n\n![图1：朱雀AI检测官方首页，顶部为文本/图片/视频检测入口](https://www.aitoollab.cn/images/articles/zhuque-ai-detect-usage-guide-2026/1-core.png)\n\n## 二、检测论文和文本：三步出结果\n\n第一步，打开官网切到「文本」标签。第二步，粘贴文字或上传 txt、docx 文件——单次建议不少于 350 字，太短检测效果会打折扣。第三步，点检测按钮，页面给整段文字标出 AI 生成概率，可疑句子红色高亮。\n\n![图2：官方文本分析界面，逐句标注 AI 生成概率与可疑段落](https://www.aitoollab.cn/images/articles/zhuque-ai-detect-usage-guide-2026/2-text.png)\n\n学术诚信是它主打场景：论文、作文、作业都能免费检测。我建议老师收到作业先让朱雀过一遍，把红色高亮段落当重点复核对象，但别拿单次结果直接下结论——任何检测工具都可能误报，官网「重要声明」里也写明结果仅供参考。\n\n![图3：官方学术诚信检测与 Benchmark 评测区](https://www.aitoollab.cn/images/articles/zhuque-ai-detect-usage-guide-2026/3-academic.png)\n\n## 三、图片和视频怎么检测\n\n切到「图片/视频」标签，把文件拖进去就行。图片支持 png、jpg、webp，单张不超过 20MB；视频支持 mp4、mov、avi 等格式。这块对自媒体和平台运营最有用：鉴别 AI 合成图、DeepFake 视频，或者筛掉批量生成的机器评论和数据。\n\n## 四、免费额度和使用限制\n\n朱雀完全免费，没发现付费方案，但每天有次数限制：游客模式文本和图片各约 5 次/天，登录后文本约 20 次/天、图片和视频约 30 次/天，反馈赞踩还能额外拿次数（额度数字来自第三方整理，以官网实际为准）。手机浏览器打开同一个网址也能用，布局自动适配，适合临时查一篇稿子。\n\n![图4：手机端打开朱雀AI检测官方页，移动布局可直接检测](https://www.aitoollab.cn/images/articles/zhuque-ai-detect-usage-guide-2026/4-mobile.png)\n\n## 五、和GPTZero怎么选\n\nGPTZero 是全球使用量最大的 AI 检测工具之一，月访问约 900 万，逐句高亮和检测报告更细，学术机构认可度高，但它强项是英文，中文检测偏弱，高级功能要付费。我的建议：中文论文、作业、自媒体内容优先朱雀——免费还能查图查视频；英文论文和海外学术场景用 GPTZero；重要判定两个工具交叉验证后再给结论。参数对比看 [/tools/zhuque-ai-detect/](/tools/zhuque-ai-detect/) 和 [/tools/gptzero/](/tools/gptzero/)。AI 内容溯源是另一条判定思路，可参考 [Claude 全站水印与AI内容溯源解读](/articles/claude-watermark-ai-content-provenance-2026/)。",
   "orig_category": "AI教程",
   "topic": "AI检测"
 }
