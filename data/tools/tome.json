@@ -25,7 +25,7 @@
     "type": "new",
     "text": null
   },
-  "url": "https://tomeapp.ai/",
+  "url": "https://tome.app/",
   "price": "基础$10/月起",
   "platform": "Web / iOS / Android",
   "pros": [
@@ -61,12 +61,12 @@
     }
   ],
   "created_date": "2026-03-22",
-  "verified_url": "https://tomeapp.ai/",
-  "verified_publisher": "Tome App AI",
+  "verified_url": "https://tome.app/",
+  "verified_publisher": "Magical Tome, Inc.（已于 2025-04-30 停运）",
   "verified_what": "AI PPT / 演示文稿生成工具，输入主题或上传文档，约 60 秒生成可编辑幻灯片，底层调用 GPT-4o、Claude、Gemini、DeepSeek 等多模型。",
   "verified_price": "免费版（每月可生成数份演示）；付费版 Starter 约 $15.9–$19.9/月起（各来源不一，以官网为准）。",
   "verified_platform": "Web（浏览器，移动端适配）",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-02",
   "confidence": "medium",
   "conflict": false,
   "verified_features": [
@@ -78,7 +78,7 @@
     "实时协作与分享链接"
   ],
   "verified_description": "Tome 是 AI 演示文稿与叙事工具，将想法自动转化为精美的演示页面，以叙事为核心理念，适合创意展示与商业提案。",
-  "content_flags": "原 content 末尾“访问官网 www.tome.com”为错误域名（应为 tomeapp.ai）；平台写 iOS/Android 未获证实；定价写 $10/月与各来源（$16–$20/月）有出入。长文整体描述准确，仅小幅校正。",
+  "content_flags": "2026-09-02 复核解决 07-31 遗留的双实体混淆：tome.app（官方 Tome，2025-04-30 停运，tome.app 现 404，团队转做 Lightfield，品牌被 AngelList 收购）；tomeapp.ai 系第三方产品（原 GenPPT 2026-03 改名蹭名），非官方，不得作为本条目外链。原 content 末尾\"访问官网 www.tome.com\"为错误域名；平台写 iOS/Android 未获证实。",
   "verified_rating": "⭐ 5.0",
   "rating_source": "编辑评分（外部来源定价与功能描述一致，未提供统一星级）",
   "verified_pros": [
@@ -107,13 +107,13 @@
     "演示文稿"
   ],
   "verified_category": "AI办公",
-  "conflict_note": "存在 Tome（tome.app，原版 AI 叙事工具）与 Tome App AI（tomeapp.ai）两个同名/近似实体；本条目 URL 指向 tomeapp.ai，按此核实。定价各来源不一，故标 medium。",
+  "conflict_note": "已解决：本条目为官方 Tome（tome.app，AI 叙事演示工具，2025-04-30 停运）。此前误指向 tomeapp.ai（原 GenPPT 改名的第三方蹭名站），已改回官方域名并加入死链清单。定价各来源不一，标 medium。",
   "source_urls": [
-    "https://tomeapp.ai/zh/about",
-    "https://agentwelt.com/tome-ai",
-    "https://creati.ai/tw/ai-tools/tome-ai-ppt"
+    "https://www.aichatdaily.com/tools/tome",
+    "https://aitrendtool.com/tools/tome",
+    "https://aiagents.wiki/agents/tome"
   ],
-  "verify_notes": "以 baseline 中的 tomeapp.ai 为准；若实际意指 tome.app 需另行核对。",
+  "verify_notes": "官网 tome.app 2026-09-02 实测 404；停运时间 2025-04-30 为多来源（aichatdaily/aitrendtool/aiagents.wiki）交叉印证。已加入 BROKEN_URLS，页面渲染停运提示 + 禁用按钮，不出站。",
   "content_verified": false,
   "compare_section": {
     "competitors": [

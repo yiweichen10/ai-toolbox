@@ -22,7 +22,8 @@ BAIDU_PUSH_TOKEN = os.getenv('BAIDU_PUSH_TOKEN', '')  # 百度推送token，留�
 # 判定标准：人工复核确认官网确实打不开（含挂VPN复核）。WAF 拦机器人的 403 属正常，不要加进来。
 # 匹配时忽略结尾斜杠，无需刻意保持格式一致。
 BROKEN_URLS = [
-    'https://tome.app',
+    'https://tome.app',          # Tome — 2026-09-02 核实：官方产品 2025-04-30 停运，tome.app 现 404；
+                                 #   勿改成 tomeapp.ai（原 GenPPT 改名的第三方蹭名站，非官方）
     'https://ilingban.com',      # 灵办AI — 2026-09-01 核实：DNS解析失败，疑似停运
     'https://snackprompt.com',   # Snack Prompt — 2026-09-01 核实：DNS解析失败，疑似停运
 ]

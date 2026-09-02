@@ -15,7 +15,7 @@ from build_lib.data_loaders import (
 
 # 停运提示里展示的"核实日期"。必须是固定值：若用当天日期，每次构建都会改这两个页面的文案，
 # 破坏构建可复现性。新增死链到 build.BROKEN_URLS 时，同步把本日期更新为复核当天。
-DEAD_LINK_NOTICE_DATE = '2026-09-01'
+DEAD_LINK_NOTICE_DATE = '2026-09-02'
 
 
 def resolve_icon(slug):
