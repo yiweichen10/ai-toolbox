@@ -686,7 +686,7 @@ def build_article_page(article, all_articles, all_tools=None):
                     <div class="author-name">
                         <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url"><span itemprop="name">AI工具宝箱编辑组</span></a></span>
                         <span class="author-badge">官方评测</span>
-                        <span class="author-cat-date"><span class="author-cat">AI资讯</span> <time datetime="{article_date}" itemprop="datePublished">{article_date}</time></span>
+                        <span class="author-cat-date"><span class="author-cat">{escape_html(article_category)}</span> <time datetime="{article_date}" itemprop="datePublished">{article_date}</time></span>
                         <span class="author-read">阅读 {max(3, len(article.get('content','')) // 400)} 分钟</span>
                     </div>
                     <div class="author-desc-row">
@@ -694,7 +694,7 @@ def build_article_page(article, all_articles, all_tools=None):
                         <div class="author-tts-slot" aria-hidden="true"></div>
                     </div>
                     <div class="author-meta-mobile" aria-hidden="true">
-                        <span class="author-cat">AI资讯</span> <time datetime="{article_date}">{article_date}</time>
+                        <span class="author-cat">{escape_html(article_category)}</span> <time datetime="{article_date}">{article_date}</time>
                     </div>
                 </div>
             </div>
