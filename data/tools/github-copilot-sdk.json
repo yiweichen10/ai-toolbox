@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "🧩",
   "color": "#24292F",
-  "description": "GitHub 官方开源项目（github/copilot-sdk，MIT 许可，约 1.04 万星），把 Copilot CLI 背后那套经生产验证的 Agent 运行时开放给开发者：规划、工具调用、文件编辑、流式输出与多轮会话开箱即用，不用自己写编排层。2026 年 4 月 2 日公开预览、6 月 2 日正式 GA，提供 Node/TypeScript、Python、Go、.NET、Rust、Java 六语言 SDK，支持自定义工具与 MCP、系统提示词分段改写、OpenTelemetry 追踪、hook 拦截与 BYOK。",
+  "description": "GitHub 官方开源项目（github/copilot-sdk，MIT 许可），把 Copilot CLI 背后那套经生产验证的 Agent 运行时开放给开发者：规划、工具调用、文件编辑、流式输出与多轮会话开箱即用。近期版本新增会话「rewind」文件变更回溯、会话级 GitHub token 动态刷新回调、Java 内置原生运行时（免装独立 CLI），以及内置插件目录与权限决策上下文等能力；提供 Node/TypeScript、Python、Go、.NET、Rust、Java 六语言 SDK。",
   "category": "AI开发",
   "tags": [
     {
@@ -44,11 +44,13 @@
   ],
   "features": [
     "Agent 运行时直连：planning、工具调用、文件编辑、token 级流式输出、多轮会话",
-    "自定义工具与 MCP：注册自有工具交给 Agent 自主调用，接入 MCP server，或覆盖内置工具",
-    "系统提示词分段定制：支持 replace / append / prepend 与动态 transform 回调",
-    "灵活认证：GitHub OAuth、GitHub Apps、环境变量 token，以及面向多家模型商的 BYOK",
-    "云端与远程会话：可创建带仓库元数据的云端会话，或按需开启远程会话 URL",
-    "Hook 与权限框架：pre/post tool use、会话启动、MCP 工具调用、权限请求都可拦截，只读工具可跳过授权"
+    "自定义工具与 MCP：注册自有工具交给 Agent 自主调用，接入 MCP server",
+    "系统提示词分段定制：replace / append / prepend 与动态 transform 回调",
+    "灵活认证：GitHub OAuth、GitHub Apps、环境变量 token 及多模型商 BYOK",
+    "会话 rewind：开启文件变更追踪后可回滚对话与已改文件到任意检查点",
+    "会话级 GitHub token 动态刷新回调（expiry-aware）",
+    "Java 内置原生运行时（Linux/Windows/macOS，免装独立 CLI）",
+    "Hook 与权限框架：pre/post tool use、权限请求可拦截，只读工具可跳过授权"
   ],
   "related": [
     "github-copilot",
@@ -75,7 +77,7 @@
       "answer": "定位相似但生态不同：Copilot SDK 复用的是 Copilot CLI 的运行时，天然贴 GitHub 的上下文、认证与权限模型，并提供六语言官方 SDK；Claude Agent SDK 则与 Claude Code 同源，主打 Python/TypeScript。选哪个通常取决于你团队已有的订阅与技术栈。"
     }
   ],
-  "content_verified": false,
+  "content_verified": true,
   "conflict": false,
   "verify_status": "verified",
   "seo_keywords": [
@@ -86,12 +88,26 @@
     "Copilot SDK 和 Claude Agent SDK 哪个好"
   ],
   "source_urls": [
-    "https://github.com/github/copilot-sdk/pricing-plans"
+    "https://github.com/github/copilot-sdk/releases"
   ],
-  "confidence": "low",
+  "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14",
-  "verified_url": "https://github.com/github/copilot-sdk/pricing-plans",
-  "last_verified": "2026-08-30",
-  "verify_notes": "第 1 个候选(https://github.com/github/copilot-sdk)有定价页结构但无明确金额(可能动态加载/登录墙) | 检测到联系销售/企业版(无公开价)"
+  "updated_date": "2026-09-02",
+  "verified_url": "https://github.com/github/copilot-sdk",
+  "last_verified": "2026-09-02",
+  "verify_notes": "watch 命中 v1.0.13-preview.4（2026-09-01）；上述新能力来自 GitHub 官方 releases 页面最新发布说明。页面原 last_verified 2026-08-30，补充近期新增能力。",
+  "verified_publisher": "GitHub",
+  "verified_what": "GitHub 官方开源的 Copilot Agent 运行时 SDK",
+  "verified_platform": "Node/TypeScript, Python, Go, .NET, Rust, Java",
+  "verified_features": [
+    "Agent 运行时直连：planning、工具调用、文件编辑、token 级流式输出、多轮会话",
+    "自定义工具与 MCP：注册自有工具交给 Agent 自主调用，接入 MCP server",
+    "系统提示词分段定制：replace / append / prepend 与动态 transform 回调",
+    "灵活认证：GitHub OAuth、GitHub Apps、环境变量 token 及多模型商 BYOK",
+    "会话 rewind：开启文件变更追踪后可回滚对话与已改文件到任意检查点",
+    "会话级 GitHub token 动态刷新回调（expiry-aware）",
+    "Java 内置原生运行时（Linux/Windows/macOS，免装独立 CLI）",
+    "Hook 与权限框架：pre/post tool use、权限请求可拦截，只读工具可跳过授权"
+  ],
+  "verified_description": "GitHub 官方开源项目（github/copilot-sdk，MIT 许可），把 Copilot CLI 背后那套经生产验证的 Agent 运行时开放给开发者：规划、工具调用、文件编辑、流式输出与多轮会话开箱即用。近期版本新增会话「rewind」文件变更回溯、会话级 GitHub token 动态刷新回调、Java 内置原生运行时（免装独立 CLI），以及内置插件目录与权限决策上下文等能力；提供 Node/TypeScript、Python、Go、.NET、Rust、Java 六语言 SDK。"
 }

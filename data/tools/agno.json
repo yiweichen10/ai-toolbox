@@ -1,141 +1,141 @@
 {
-    "name": "Agno",
-    "slug": "agno",
-    "positioning": "模型无关+私有部署：免费AI智能体平台怎么用",
-    "auto_positioning": true,
-    "emoji": "🤖",
-    "color": "#7C3AED",
-    "description": "Agno 是开源的 AI 智能体框架与高性能运行时，提供 SDK、AgentOS 运行时与控制平面，帮助开发者构建、运行并管理私有、安全的多智能体平台。",
-    "category": "AI智能体",
-    "tags": [
-        "开源",
-        "多模态",
-        "代理框架",
-        "AI智能体",
-        "AgentOS"
-    ],
-    "rating": "⭐4.5",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "recommend",
-        "text": "推荐"
+  "name": "Agno",
+  "slug": "agno",
+  "positioning": "模型无关+私有部署：免费AI智能体平台怎么用",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#7C3AED",
+  "description": "Agno 是开源的 AI 智能体框架与高性能运行时，提供 SDK、AgentOS 运行时与控制平面，帮助开发者构建、运行并管理私有、安全的多智能体平台。",
+  "category": "AI智能体",
+  "tags": [
+    "开源",
+    "多模态",
+    "代理框架",
+    "AI智能体",
+    "AgentOS"
+  ],
+  "rating": "⭐4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "recommend",
+    "text": "推荐"
+  },
+  "url": "https://www.agno.com/",
+  "price": "开源免费 + Pro $150/月",
+  "platform": "Python, Web (AgentOS UI), Docker/Cloud",
+  "pros": [
+    "完全开源，可私有化部署",
+    "支持多模态输入",
+    "兼容 OpenAI、Anthropic、Google 等",
+    "内置记忆与长期上下文",
+    "活跃社区与文档"
+  ],
+  "cons": [
+    "学习曲线较陡，需 Python 基础",
+    "中文文档与社区支持较少",
+    "插件生态弱于 LangChain",
+    "AgentOS 托管控制平面为付费 Pro"
+  ],
+  "features": [
+    "智能体、多智能体团队与工作流（内置记忆、知识、护栏、100+ 集成）",
+    "AgentOS 运行时（RBAC、审计日志、会话隔离）",
+    "模型无关（30+ 提供方）",
+    "原生支持 MCP、工具调用与 A2A 协议",
+    "私有部署（BYOC，可完全离线）"
+  ],
+  "related": [
+    "langchain",
+    "crew-ai",
+    "autogen"
+  ],
+  "faq": [
+    {
+      "q": "Agno 与 LangChain 有什么区别？",
+      "a": "Agno 更轻量、聚焦多代理场景，并内置可视化监控面板；LangChain 生态更大，适合复杂链式逻辑。"
     },
-    "url": "https://www.agno.com/",
-    "price": "开源免费 + Pro $150/月",
-    "platform": "Python, Web (AgentOS UI), Docker/Cloud",
-    "pros": [
-        "完全开源，可私有化部署",
-        "支持多模态输入",
-        "兼容 OpenAI、Anthropic、Google 等",
-        "内置记忆与长期上下文",
-        "活跃社区与文档"
-    ],
-    "cons": [
-        "学习曲线较陡，需 Python 基础",
-        "中文文档与社区支持较少",
-        "插件生态弱于 LangChain",
-        "AgentOS 托管控制平面为付费 Pro"
-    ],
-    "features": [
-        "智能体、多智能体团队与工作流（内置记忆、知识、护栏、100+ 集成）",
-        "AgentOS 运行时（RBAC、审计日志、会话隔离）",
-        "模型无关（30+ 提供方）",
-        "原生支持 MCP、工具调用与 A2A 协议",
-        "私有部署（BYOC，可完全离线）"
-    ],
-    "related": [
-        "langchain",
-        "crew-ai",
-        "autogen"
-    ],
-    "faq": [
-        {
-            "q": "Agno 与 LangChain 有什么区别？",
-            "a": "Agno 更轻量、聚焦多代理场景，并内置可视化监控面板；LangChain 生态更大，适合复杂链式逻辑。"
-        },
-        {
-            "q": "Agno 支持本地部署吗？",
-            "a": "支持。核心框架开源，可用 Docker 或 Python 自部署，也可接入 Ollama 等本地模型。"
-        }
-    ],
-    "seo_keywords": [
-        "Agno",
-        "Agno怎么样",
-        "Agno免费版",
-        "Agno使用教程",
-        "Agno和LangChain哪个好"
-    ],
-    "content": "## Agno是什么？\n\n简单说，Agno 是一个帮你“造 AI 智能体”的开源框架。如果你想让一个 AI 不仅能聊天，还能记住上下文、调用工具、多个代理一起干活，甚至能看图说话——那 Agno 就是干这个的。\n\n它有点像 LangChain，但更轻量、更聚焦于“智能体”这个概念。开发者可以用 Python 写几行代码，就能搭出一个能调用函数、记忆历史、对接不同大模型的多模态 AI 代理。而且因为是开源的，你可以部署在自己的服务器上，数据不外泄。\n\n## 核心功能\n\n### 1. 多模型集成与灵活切换  \nAgno 原生支持 OpenAI、Anthropic、Google 等主流 LLM，切换模型几乎不费劲。实际用的时候，你可以在同一个项目里，对不同的任务用不同的模型——比如复杂推理用 Claude，简单问答用 GPT-4o mini，省成本又灵活。\n\n### 2. 工具调用（Function Calling）  \n这是智能体的“手脚”。你可以给代理注册任意 Python 函数、API 或者本地脚本，它会在需要的时候自动调用。例如让代理查天气、发邮件、操作数据库，你只需写一个函数并注册进去。对比 LangChain 那套繁琐的工具链，Agno 直接很多。\n\n### 3. 长期和短期记忆管理  \n很多用户反馈，Agno 的记忆管理做得比多数轻量框架好。短期记忆像对话上下文，长期记忆会持久化到数据库，跨会话保持。比如你做一个客服代理，它能记住用户之前的偏好和历史问题，不用每次都重头聊。\n\n### 4. 多代理协作与任务编排  \n你可以定义多个不同角色的代理，让它们协作完成复杂任务。比如一个代理负责用户需求理解，另一个负责搜索信息，第三个负责生成报告。Agno 提供了队列和依赖机制来编排执行顺序，适合搭自动化工作流。\n\n### 5. 内置监控、日志与调试面板  \nAgno 自带一个可视化的面板，可以看到每次调用的耗时、使用的模型、调用的工具、记忆状态等。出 bug 时能快速定位，不像某些框架要自己配日志。对于生产部署，这个功能很实用。\n\n### 6. Python SDK 与 REST API 双重接口  \n即你可以写 Python 代码直接调用，也可以把代理封装成 API 给前端或者其他服务用。部署成微服务时，REST API 直接暴露，省去自己写中间层。\n\n## 版本/套餐对比\n\nAgno 是一个完全开源的项目，托管在 GitHub 上（MIT 许可证）。目前官方没有收费版本或企业套餐，所有功能在开源版中都可以使用。如果需要商业支持或托管服务，可以关注 GitHub 上的讨论和官方公告。简单说：免费、可自部署、无隐藏付费。\n\n| 版本 | 费用 | 核心区别 |\n|------|------|----------|\n| 开源版 | 免费 | 全部功能，可本地/私有部署，无功能限制 |\n\n## 值不值得用？\n\n**优点：**  \n- 完全开源，无供应商锁定，数据安全可控。  \n- 多模态支持（文本、图像）开箱即用，比很多只做文本的框架强。  \n- 内置记忆和监控，减少了从零搭建的麻烦。  \n- 社区活跃，GitHub 上 issue 和 PR 响应较快。\n\n**缺点：**  \n- 学习曲线确实存在——需要 Python 基础，对代理概念不熟悉的开发者上手稍慢。  \n- 中文文档和中文社区支持薄弱，遇到问题主要靠英文资料或 GitHub 讨论。  \n- 插件生态和第三方集成不如 LangChain 丰富，很多高级功能需要自己写代码封装。\n\n**总体结论：** 如果你是 Python 开发者，需要快速搭建一个多模态、可记忆、能私有部署的 AI 代理，Agno 是目前开源选项里相当平衡的选择。它不像 LangChain 那样“什么都包”但也会带来很多抽象负担，也不像一些极简框架那样缺功能。适合“有一定动手能力、想要生产级基础但不想要太重框架”的团队。\n\n## 使用建议\n\n- **先跑官方示例**：GitHub 上有几个 demo，比如“多代理新闻分析”“记忆对话机器人”，照着跑一遍，能最快理解核心概念。  \n- **善用内置面板**：调试和监控面板是宝藏，开发时多打开看看，能帮你厘清代理和工具的交互流程。  \n- **从单一代理开始**：不要一上来就搞多代理编排，先让单个代理能正确调用工具、记住上下文，再扩展协作。  \n- **注意模型成本**：多模态模型和长上下文记忆会消耗较多 token，建议在开发时用便宜模型（如 GPT-4o mini），上线再切换。  \n- **关注 GitHub release**：Agno 更新频繁，新功能（比如流式输出、更细粒度的权限控制）陆续在加，保持同步。\n\n## 适合谁用？\n\n**推荐使用：**  \n- 需要私有化部署 AI 代理的企业或团队（数据合规要求高）。  \n- 有一定 Python 基础，想从零构建自定义智能体的开发者。  \n- 想做多模态 AI 应用（看图、读文档等），但又不想被大厂绑定。  \n- 喜欢“控制细节”的技术人员，不希望框架帮你做太多黑盒决策。\n\n**可考虑使用：**  \n- 想从 LangChain 迁移过来的团队（如果你觉得 LangChain 太重、抽象层太多）。  \n- 学生或研究者，拿来做实验和原型验证。  \n- 非技术人员但有开发支持，可以找人帮忙搭初始框架。\n\n**不推荐使用：**  \n- 完全零编程基础的非技术人员（推荐直接使用现成的 AI 产品如 ChatGPT Plus）。  \n- 对中文文档和社区依赖极强的用户（你会感到孤单）。  \n- 需要大量预构建插件和生态的快速开发场景（这种情况 LangChain 或 Coze 可能更省心）。",
-    "published": true,
-    "source_url": "https://www.agno.com/",
-    "last_verified": "2026-07-31",
-    "confidence": "high",
-    "conflict": false,
-    "content_verified": true,
-    "conflict_note": "",
-    "verified_url": "https://www.agno.com/",
-    "verified_publisher": "Agno（前身为 Phidata）",
-    "verified_what": "开源 AI 智能体框架与运行时（AgentOS），用于构建、运行并管理私有、安全的多智能体系统",
-    "verified_price": "开源 SDK 免费（Apache-2.0）；AgentOS 控制平面 Pro $150/月（含 1 个 live connection、4 seats，额外 seat $30/月、connection $95/月）；Enterprise 定制",
-    "verified_platform": "Python / Web（AgentOS UI）/ Docker / Cloud",
-    "verified_features": [
-        "智能体、多智能体团队与工作流（内置记忆、知识、护栏、100+ 集成）",
-        "AgentOS 运行时（RBAC、审计日志、会话隔离）",
-        "模型无关（30+ 提供方）",
-        "原生支持 MCP、工具调用与 A2A 协议",
-        "私有部署（BYOC，可完全离线）"
-    ],
-    "verified_description": "Agno 是开源的 AI 智能体框架与高性能运行时，提供 SDK、AgentOS 运行时与控制平面，帮助开发者构建、运行并管理私有、安全的多智能体平台。",
-    "content_flags": "原 content 称“没有收费版本或企业套餐，所有功能在开源版中都可以使用”已过时：官网现已公开 Pro $150/月（AgentOS 托管控制平面）与 Enterprise 方案。",
-    "price_verified": true,
-    "verified_rating": "⭐4.5",
-    "rating_source": "编辑评分",
-    "rating_verified": true,
-    "verified_pros": [
-        "完全开源，可私有化部署",
-        "支持多模态输入",
-        "兼容 OpenAI、Anthropic、Google 等",
-        "内置记忆与长期上下文",
-        "活跃社区与文档"
-    ],
-    "verified_cons": [
-        "学习曲线较陡，需 Python 基础",
-        "中文文档与社区支持较少",
-        "插件生态弱于 LangChain",
-        "AgentOS 托管控制平面为付费 Pro"
-    ],
-    "verified_faq": [
-        {
-            "q": "Agno 与 LangChain 有什么区别？",
-            "a": "Agno 更轻量、聚焦多代理场景，并内置可视化监控面板；LangChain 生态更大，适合复杂链式逻辑。"
-        },
-        {
-            "q": "Agno 支持本地部署吗？",
-            "a": "支持。核心框架开源，可用 Docker 或 Python 自部署，也可接入 Ollama 等本地模型。"
-        }
-    ],
-    "verified_tags": [
-        "开源",
-        "多模态",
-        "代理框架",
-        "AI智能体",
-        "AgentOS"
-    ],
-    "verified_category": "AI智能体",
-    "source_urls": [
-        "https://www.agno.com/pricing",
-        "https://aiagentsquare.com/agents/agno",
-        "https://rywalker.com/research/agno"
-    ],
-    "verify_notes": "关键修正：AgentOS 云服务价格已公开为 Pro $150/月。",
-    "compare_section": {
-        "competitors": [
-            "openclaw",
-            "metagpt",
-            "openai-agents-sdk"
-        ],
-        "verdict": "Agno 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Agno 的 智能体、多智能体团队与工作流（内置记忆、知识、护栏、100+ 集成） 是亮点，价格 开源免费 + Pro $150/月；竞品各有侧重，可按预算与功能需求选择。"
+    {
+      "q": "Agno 支持本地部署吗？",
+      "a": "支持。核心框架开源，可用 Docker 或 Python 自部署，也可接入 Ollama 等本地模型。"
+    }
+  ],
+  "seo_keywords": [
+    "Agno",
+    "Agno怎么样",
+    "Agno免费版",
+    "Agno使用教程",
+    "Agno和LangChain哪个好"
+  ],
+  "content": "## Agno是什么？\n\n简单说，Agno 是一个帮你“造 AI 智能体”的开源框架。如果你想让一个 AI 不仅能聊天，还能记住上下文、调用工具、多个代理一起干活，甚至能看图说话——那 Agno 就是干这个的。\n\n它有点像 LangChain，但更轻量、更聚焦于“智能体”这个概念。开发者可以用 Python 写几行代码，就能搭出一个能调用函数、记忆历史、对接不同大模型的多模态 AI 代理。而且因为是开源的，你可以部署在自己的服务器上，数据不外泄。\n\n## 核心功能\n\n### 1. 多模型集成与灵活切换  \nAgno 原生支持 OpenAI、Anthropic、Google 等主流 LLM，切换模型几乎不费劲。实际用的时候，你可以在同一个项目里，对不同的任务用不同的模型——比如复杂推理用 Claude，简单问答用 GPT-4o mini，省成本又灵活。\n\n### 2. 工具调用（Function Calling）  \n这是智能体的“手脚”。你可以给代理注册任意 Python 函数、API 或者本地脚本，它会在需要的时候自动调用。例如让代理查天气、发邮件、操作数据库，你只需写一个函数并注册进去。对比 LangChain 那套繁琐的工具链，Agno 直接很多。\n\n### 3. 长期和短期记忆管理  \n很多用户反馈，Agno 的记忆管理做得比多数轻量框架好。短期记忆像对话上下文，长期记忆会持久化到数据库，跨会话保持。比如你做一个客服代理，它能记住用户之前的偏好和历史问题，不用每次都重头聊。\n\n### 4. 多代理协作与任务编排  \n你可以定义多个不同角色的代理，让它们协作完成复杂任务。比如一个代理负责用户需求理解，另一个负责搜索信息，第三个负责生成报告。Agno 提供了队列和依赖机制来编排执行顺序，适合搭自动化工作流。\n\n### 5. 内置监控、日志与调试面板  \nAgno 自带一个可视化的面板，可以看到每次调用的耗时、使用的模型、调用的工具、记忆状态等。出 bug 时能快速定位，不像某些框架要自己配日志。对于生产部署，这个功能很实用。\n\n### 6. Python SDK 与 REST API 双重接口  \n即你可以写 Python 代码直接调用，也可以把代理封装成 API 给前端或者其他服务用。部署成微服务时，REST API 直接暴露，省去自己写中间层。\n\n## 版本/套餐对比\n\nAgno 是一个完全开源的项目，托管在 GitHub 上（MIT 许可证）。目前官方没有收费版本或企业套餐，所有功能在开源版中都可以使用。如果需要商业支持或托管服务，可以关注 GitHub 上的讨论和官方公告。简单说：免费、可自部署、无隐藏付费。\n\n| 版本 | 费用 | 核心区别 |\n|------|------|----------|\n| 开源版 | 免费 | 全部功能，可本地/私有部署，无功能限制 |\n\n## 值不值得用？\n\n**优点：**  \n- 完全开源，无供应商锁定，数据安全可控。  \n- 多模态支持（文本、图像）开箱即用，比很多只做文本的框架强。  \n- 内置记忆和监控，减少了从零搭建的麻烦。  \n- 社区活跃，GitHub 上 issue 和 PR 响应较快。\n\n**缺点：**  \n- 学习曲线确实存在——需要 Python 基础，对代理概念不熟悉的开发者上手稍慢。  \n- 中文文档和中文社区支持薄弱，遇到问题主要靠英文资料或 GitHub 讨论。  \n- 插件生态和第三方集成不如 LangChain 丰富，很多高级功能需要自己写代码封装。\n\n**总体结论：** 如果你是 Python 开发者，需要快速搭建一个多模态、可记忆、能私有部署的 AI 代理，Agno 是目前开源选项里相当平衡的选择。它不像 LangChain 那样“什么都包”但也会带来很多抽象负担，也不像一些极简框架那样缺功能。适合“有一定动手能力、想要生产级基础但不想要太重框架”的团队。\n\n## 使用建议\n\n- **先跑官方示例**：GitHub 上有几个 demo，比如“多代理新闻分析”“记忆对话机器人”，照着跑一遍，能最快理解核心概念。  \n- **善用内置面板**：调试和监控面板是宝藏，开发时多打开看看，能帮你厘清代理和工具的交互流程。  \n- **从单一代理开始**：不要一上来就搞多代理编排，先让单个代理能正确调用工具、记住上下文，再扩展协作。  \n- **注意模型成本**：多模态模型和长上下文记忆会消耗较多 token，建议在开发时用便宜模型（如 GPT-4o mini），上线再切换。  \n- **关注 GitHub release**：Agno 更新频繁，新功能（比如流式输出、更细粒度的权限控制）陆续在加，保持同步。\n\n## 适合谁用？\n\n**推荐使用：**  \n- 需要私有化部署 AI 代理的企业或团队（数据合规要求高）。  \n- 有一定 Python 基础，想从零构建自定义智能体的开发者。  \n- 想做多模态 AI 应用（看图、读文档等），但又不想被大厂绑定。  \n- 喜欢“控制细节”的技术人员，不希望框架帮你做太多黑盒决策。\n\n**可考虑使用：**  \n- 想从 LangChain 迁移过来的团队（如果你觉得 LangChain 太重、抽象层太多）。  \n- 学生或研究者，拿来做实验和原型验证。  \n- 非技术人员但有开发支持，可以找人帮忙搭初始框架。\n\n**不推荐使用：**  \n- 完全零编程基础的非技术人员（推荐直接使用现成的 AI 产品如 ChatGPT Plus）。  \n- 对中文文档和社区依赖极强的用户（你会感到孤单）。  \n- 需要大量预构建插件和生态的快速开发场景（这种情况 LangChain 或 Coze 可能更省心）。",
+  "published": true,
+  "source_url": "https://www.agno.com/",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://www.agno.com/",
+  "verified_publisher": "Agno（前身为 Phidata）",
+  "verified_what": "开源 AI 智能体框架与运行时（AgentOS），用于构建、运行并管理私有、安全的多智能体系统",
+  "verified_price": "开源 SDK 免费（Apache-2.0）；AgentOS 控制平面 Pro $150/月（含 1 个 live connection、4 seats，额外 seat $30/月、connection $95/月）；Enterprise 定制",
+  "verified_platform": "Python / Web（AgentOS UI）/ Docker / Cloud",
+  "verified_features": [
+    "智能体、多智能体团队与工作流（内置记忆、知识、护栏、100+ 集成）",
+    "AgentOS 运行时（RBAC、审计日志、会话隔离）",
+    "模型无关（30+ 提供方）",
+    "原生支持 MCP、工具调用与 A2A 协议",
+    "私有部署（BYOC，可完全离线）"
+  ],
+  "verified_description": "Agno 是开源的 AI 智能体框架与高性能运行时，提供 SDK、AgentOS 运行时与控制平面，帮助开发者构建、运行并管理私有、安全的多智能体平台。",
+  "content_flags": "原 content 称“没有收费版本或企业套餐，所有功能在开源版中都可以使用”已过时：官网现已公开 Pro $150/月（AgentOS 托管控制平面）与 Enterprise 方案。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5",
+  "rating_source": "编辑评分",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全开源，可私有化部署",
+    "支持多模态输入",
+    "兼容 OpenAI、Anthropic、Google 等",
+    "内置记忆与长期上下文",
+    "活跃社区与文档"
+  ],
+  "verified_cons": [
+    "学习曲线较陡，需 Python 基础",
+    "中文文档与社区支持较少",
+    "插件生态弱于 LangChain",
+    "AgentOS 托管控制平面为付费 Pro"
+  ],
+  "verified_faq": [
+    {
+      "q": "Agno 与 LangChain 有什么区别？",
+      "a": "Agno 更轻量、聚焦多代理场景，并内置可视化监控面板；LangChain 生态更大，适合复杂链式逻辑。"
     },
-    "published_date": "2026-08-31",
-    "created_date": "2026-08-31"
+    {
+      "q": "Agno 支持本地部署吗？",
+      "a": "支持。核心框架开源，可用 Docker 或 Python 自部署，也可接入 Ollama 等本地模型。"
+    }
+  ],
+  "verified_tags": [
+    "开源",
+    "多模态",
+    "代理框架",
+    "AI智能体",
+    "AgentOS"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://www.agno.com/pricing",
+    "https://aiagentsquare.com/agents/agno",
+    "https://rywalker.com/research/agno"
+  ],
+  "verify_notes": "关键修正：AgentOS 云服务价格已公开为 Pro $150/月。",
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Agno 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Agno 的 智能体、多智能体团队与工作流（内置记忆、知识、护栏、100+ 集成） 是亮点，价格 开源免费 + Pro $150/月；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-31",
+  "created_date": "2026-08-31"
 }

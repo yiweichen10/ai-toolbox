@@ -1,151 +1,151 @@
 {
-    "name": "Smolagents",
-    "slug": "smolagents",
-    "positioning": "免费AI智能体平台推荐：代码智能体、模型无关",
-    "auto_positioning": true,
-    "emoji": "🤖",
-    "color": "#FFB300",
-    "description": "Smolagents 是 Hugging Face 推出的开源 Python 智能体库，用极少代码即可构建并运行智能体。原生支持代码智能体（CodeAgent），可调用任意 LLM 与工具，适合快速搭建轻量级 Agent 应用。",
-    "category": "AI智能体",
-    "tags": [
-        "开源",
-        "轻量级",
-        "Hugging Face",
-        "代码智能体"
-    ],
-    "rating": "⭐4.5（编辑评测）",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "new",
-        "text": "NEW"
+  "name": "Smolagents",
+  "slug": "smolagents",
+  "positioning": "免费AI智能体平台推荐：代码智能体、模型无关",
+  "auto_positioning": true,
+  "emoji": "🤖",
+  "color": "#FFB300",
+  "description": "Smolagents 是 Hugging Face 推出的开源 Python 智能体库，用极少代码即可构建并运行智能体。原生支持代码智能体（CodeAgent），可调用任意 LLM 与工具，适合快速搭建轻量级 Agent 应用。",
+  "category": "AI智能体",
+  "tags": [
+    "开源",
+    "轻量级",
+    "Hugging Face",
+    "代码智能体"
+  ],
+  "rating": "⭐4.5（编辑评测）",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://huggingface.co/docs/smolagents",
+  "price": "开源免费（Apache-2.0）",
+  "platform": "Python, Web (Hugging Face Hub / Gradio Spaces)",
+  "pros": [
+    "开源免费，无需授权费用",
+    "轻量级设计，易集成到现有项目",
+    "支持多种 LLM 后端（如 OpenAI、Hugging Face Inference API 等）",
+    "代码智能体可直接执行与调试代码",
+    "与 Hugging Face 生态紧密集成，共享模型与工具"
+  ],
+  "cons": [
+    "官方文档和示例相对较少",
+    "社区规模较小，第三方资源有限",
+    "高级功能（如多智能体协作）尚不完善"
+  ],
+  "features": [
+    "代码智能体（CodeAgent）：让 LLM 以 Python 代码作为动作，支持循环、条件与函数嵌套",
+    "工具调用智能体（ToolCallingAgent）：支持标准 JSON/文本工具调用范式",
+    "模型无关：兼容 Hugging Face 推理、OpenAI、Anthropic（LiteLLM）及本地 Transformers/Ollama",
+    "Hub 集成：可在 Hugging Face Hub 共享与加载智能体及工具",
+    "沙箱代码执行：支持 E2B、Modal、Blaxel、Docker 隔离运行，并提供 smolagent/webagent 命令行工具"
+  ],
+  "related": [
+    "hugging-face",
+    "langchain",
+    "crew-ai"
+  ],
+  "faq": [
+    {
+      "q": "Smolagents 是什么？",
+      "a": "Smolagents 是 Hugging Face 开发的开源轻量级 AI 智能体框架，核心是代码智能体（Code Agent），允许开发者通过简单 API 构建和部署能调用工具和执行代码的智能体。"
     },
-    "url": "https://huggingface.co/docs/smolagents",
-    "price": "开源免费（Apache-2.0）",
-    "platform": "Python, Web (Hugging Face Hub / Gradio Spaces)",
-    "pros": [
-        "开源免费，无需授权费用",
-        "轻量级设计，易集成到现有项目",
-        "支持多种 LLM 后端（如 OpenAI、Hugging Face Inference API 等）",
-        "代码智能体可直接执行与调试代码",
-        "与 Hugging Face 生态紧密集成，共享模型与工具"
-    ],
-    "cons": [
-        "官方文档和示例相对较少",
-        "社区规模较小，第三方资源有限",
-        "高级功能（如多智能体协作）尚不完善"
-    ],
-    "features": [
-        "代码智能体（CodeAgent）：让 LLM 以 Python 代码作为动作，支持循环、条件与函数嵌套",
-        "工具调用智能体（ToolCallingAgent）：支持标准 JSON/文本工具调用范式",
-        "模型无关：兼容 Hugging Face 推理、OpenAI、Anthropic（LiteLLM）及本地 Transformers/Ollama",
-        "Hub 集成：可在 Hugging Face Hub 共享与加载智能体及工具",
-        "沙箱代码执行：支持 E2B、Modal、Blaxel、Docker 隔离运行，并提供 smolagent/webagent 命令行工具"
-    ],
-    "related": [
-        "hugging-face",
-        "langchain",
-        "crew-ai"
-    ],
-    "faq": [
-        {
-            "q": "Smolagents 是什么？",
-            "a": "Smolagents 是 Hugging Face 开发的开源轻量级 AI 智能体框架，核心是代码智能体（Code Agent），允许开发者通过简单 API 构建和部署能调用工具和执行代码的智能体。"
-        },
-        {
-            "q": "Smolagents 与其他智能体框架（如 LangChain、CrewAI）有什么区别？",
-            "a": "Smolagents 更轻量、专注代码智能体，与 Hugging Face 生态深度集成；LangChain 提供丰富链和组件抽象，CrewAI 侧重多智能体协作。"
-        },
-        {
-            "q": "Smolagents 免费吗？",
-            "a": "完全开源免费，遵循 Apache 2.0 许可证，可自由使用、修改和分发。"
-        },
-        {
-            "q": "如何使用 Smolagents？",
-            "a": "通过 pip 安装 smolagents 包，导入并创建智能体对象，指定 LLM 后端和工具即可；官方文档提供快速入门示例。"
-        }
-    ],
-    "seo_keywords": [
-        "Smolagents",
-        "Smolagents怎么样",
-        "Smolagents免费版",
-        "Smolagents使用教程",
-        "Smolagents和哪个好"
-    ],
-    "content": "# Smolagents 是什么？\n\n如果你关注过 AI 智能体（Agent）的开发，应该知道市面上有不少框架，但大多要么太重量级、要么绑死某个模型。Smolagents 是 Hugging Face 推出的一个**轻量级、开源**的 AI 智能体框架，核心思路很简单：让你快速搭建一个能写代码、能调用工具的智能体，而且完全免费。\n\n它的名字叫 \"Smol\"（小而美），确实名副其实。它不像 LangChain、AutoGPT 那样给你一堆抽象层，而是提供一套简洁的 API，让你专注于定义智能体要做什么，而不是怎么跑起来。最关键的特色是 **Code Agent（代码智能体）**——智能体会生成 Python 代码来完成任务，然后直接在沙箱环境里执行，你可以看到代码、调试它，完全透明。\n\n目前 Smolagents 还比较新，官方文档不多，社区也不大，但如果你已经在用 Hugging Face 的生态，那这个工具几乎是开箱即用的：它天然支持 Hugging Face 上的模型和工具，也可以无缝切换 OpenAI 的 API。简单说，它是一个“野路子”但很实用的东西，适合想快速验证想法、不纠结复杂配置的开发者。\n\n## 核心功能\n\n### 1. 构建与运行 AI 智能体\n\nSmolagents 的核心就是让你用几行代码定义自己的智能体。你只需要指定一个 LLM 后端（比如 GPT-4、Hugging Face 上的开源模型），再给它一些工具，它就能自主完成任务。实际使用中，配置过程确实很轻量，不需要理解复杂的 Agent 循环或记忆机制。\n\n### 2. 工具调用（Tool Calling）\n\n智能体可以通过调用外部工具来获取信息或执行操作。比如搜索、计算、访问 API 等。Smolagents 把工具封装成标准接口，你可以直接用 Hugging Face Hub 上已有的工具，也可以自己写。感受上，工具调用的流程很顺畅，智能体在需要时会自动选择合适的工具并传递参数。\n\n### 3. 自定义工具扩展\n\n如果你需要的工具不在默认库里，可以自己写一个 Python 函数，加个装饰器就变成工具了。这是框架做得比较舒服的地方——不限制你用什么库、不强制继承某个基类，写起来就像在写普通 Python 代码。\n\n### 4. 多 LLM 后端切换\n\n支持 OpenAI、Hugging Face Inference API、Together AI 等常见后端。你在初始化智能体时直接换一个模型名就行，代码不用改。对于想在不同模型之间对比效果的开发者来说非常实用，而且 Hugging Face 的免费推理 API 让零成本尝鲜成为可能。\n\n### 5. 代码执行与沙箱环境\n\nCode Agent 会生成 Python 代码来解决问题，并在隔离的 Docker 容器里执行。这意味着你不怕智能体乱删文件或者搞坏系统。同时你也能查看生成的代码，调试起来很方便。实际体验中，这种“代码优先”的方式比自然语言指令更精确，尤其适合数据处理、自动化脚本这类场景。\n\n### 6. Hugging Face Hub 集成\n\n智能体和工具都可以直接发布到 Hugging Face Hub 上，别人可以一键使用你发布的智能体。反过来，你也可以在 Hub 上找到别人分享的工具和智能体，直接加载进来，生态联动做得不错。\n\n## 版本/套餐对比\n\n目前 Smolagents 没有提供多版本或套餐划分的选项。它完全开源免费，你从 GitHub 上拿下来就能用，没有任何授权费或隐藏付费点。如果你在意使用官方云服务（比如依赖 Hugging Face Inference API），则需要留意 Inference API 本身的免费额度限制，但这和 Smolagents 框架无关。\n\n| 项目 | 说明 |\n|------|------|\n| 框架费用 | 开源，免费 |\n| 授权方式 | MIT 许可证，可商用 |\n| 版本划分 | 无（仅有一个主版本，持续更新） |\n| 附加服务 | 无官方托管，需自建运行环境 |\n\n## 值不值得用？\n\n**优点：**\n- 确实轻量，几行就能跑起来，不像某些框架装半天依赖。\n- 代码智能体透明可控，你可以看到它每一步在写什么代码，方便调试和安全审查。\n- 开源免费，没有隐形成本，适合个人项目和小团队。\n- 与 Hugging Face 生态紧密结合，复用现有模型和工具很方便。\n\n**缺点：**\n- 官方文档偏少，遇到问题经常要翻源码或去 GitHub Issues 找答案。\n- 社区还小，第三方教程、插件、最佳实践不多。\n- 高级功能如多智能体协作、复杂记忆管理还在完善中，如果你需要这些，Smolagents 目前不够成熟。\n\n**总体结论：** 如果你已经在用 Hugging Face 生态，或者需要一个简单、透明、能直接执行代码的智能体框架，Smolagents 值得一试。但如果你需要成熟的社区支持、丰富的高级特性，或者不想自己写 Python，那它可能还不是最优选择。\n\n## 使用建议\n\n- **从简单例子开始**：官方 GitHub 仓库里有几个示例，照着跑一遍就能理解核心逻辑。\n- **优先用 Hugging Face 的免费推理 API**：不需要花钱就能试，等上手后再考虑换收费模型。\n- **把自己的工具写成标准函数**：自定义工具时保持简单，不要在工具内部做太多状态管理，否则智能体容易搞混。\n- **打开代码执行的可视化日志**：Smolagents 默认会打印生成的代码，建议保留这个输出，方便定位问题。\n- **不要期待一步到位**：智能体可能第一轮生成的代码有错误，你需要调整提示词或工具定义，多试几次才能达到理想效果。\n\n## 适合谁用？\n\n**推荐：**\n- Hugging Face 的深度用户，想快速构建自定义 AI 助手。\n- 喜欢让智能体直接写代码（而不是自然语言回复）的开发者。\n- 个人项目、原型验证、小型自动化任务。\n\n**可考虑：**\n- 想了解 Agent 机制但不想学太复杂框架的新手（前提是你会 Python）。\n- 需要低成本试用多个 LLM 后端的团队。\n\n**不推荐：**\n- 企业级生产环境，需要稳定社区支持、丰富文档和高级功能。\n- 非 Python 技术栈的团队（框架绑定 Python）。\n- 希望智能体“开箱即用”、不需要调优就能完美运行的人。\n\n## 常见问题（FAQ）\n\n**Smolagents 是什么？**\n\nSmolagents 是 Hugging Face 开发的开源轻量级 AI 智能体框架，核心是代码智能体（Code Agent），允许开发者通过简单 API 构建和部署能调用工具和执行代码的智能体。\n\n**Smolagents 与其他智能体框架（如 LangChain、CrewAI）有什么区别？**\n\nSmolagents 更轻量、专注代码智能体，与 Hugging Face 生态深度集成；LangChain 提供丰富链和组件抽象，CrewAI 侧重多智能体协作。\n\n**Smolagents 免费吗？**\n\n完全开源免费，遵循 Apache 2.0 许可证，可自由使用、修改和分发。\n\n**如何使用 Smolagents？**\n\n通过 pip 安装 smolagents 包，导入并创建智能体对象，指定 LLM 后端和工具即可；官方文档提供快速入门示例。",
-    "published": true,
-    "source_url": "https://github.com/huggingface/smolagents",
-    "last_verified": "2026-07-31",
-    "confidence": "high",
-    "conflict": false,
-    "content_verified": true,
-    "conflict_note": "",
-    "verified_url": "https://huggingface.co/docs/smolagents",
-    "verified_publisher": "Hugging Face",
-    "verified_what": "Hugging Face 推出的开源 Python 智能体库，用极少代码即可构建并运行智能体，原生支持代码智能体（CodeAgent）。",
-    "verified_price": "开源免费（Apache-2.0 许可证）。",
-    "verified_platform": "Python, Web（Hugging Face Hub / Gradio Spaces）",
-    "verified_features": [
-        "代码智能体（CodeAgent）：让 LLM 以 Python 代码作为动作，支持循环、条件与函数嵌套",
-        "工具调用智能体（ToolCallingAgent）：支持标准 JSON/文本工具调用范式",
-        "模型无关：兼容 Hugging Face 推理、OpenAI、Anthropic（LiteLLM）及本地 Transformers/Ollama",
-        "Hub 集成：可在 Hugging Face Hub 共享与加载智能体及工具",
-        "沙箱代码执行：支持 E2B、Modal、Blaxel、Docker 隔离运行，并提供 smolagent/webagent 命令行工具"
-    ],
-    "verified_description": "Smolagents 是 Hugging Face 推出的开源 Python 智能体库，用极少代码即可构建并运行智能体。原生支持代码智能体（CodeAgent），可调用任意 LLM 与工具，适合快速搭建轻量级 Agent 应用。",
-    "price_verified": true,
-    "verified_rating": "⭐4.5（编辑评测）",
-    "rating_source": "编辑评测（暂无权威第三方评分来源；GitHub 约 2.8 万 Star）",
-    "rating_verified": true,
-    "verified_pros": [
-        "开源免费，无需授权费用",
-        "轻量级设计，易集成到现有项目",
-        "支持多种 LLM 后端（如 OpenAI、Hugging Face Inference API 等）",
-        "代码智能体可直接执行与调试代码",
-        "与 Hugging Face 生态紧密集成，共享模型与工具"
-    ],
-    "verified_cons": [
-        "官方文档和示例相对较少",
-        "社区规模较小，第三方资源有限",
-        "高级功能（如多智能体协作）尚不完善"
-    ],
-    "verified_faq": [
-        {
-            "q": "Smolagents 是什么？",
-            "a": "Smolagents 是 Hugging Face 开发的开源轻量级 AI 智能体框架，核心是代码智能体（Code Agent），允许开发者通过简单 API 构建和部署能调用工具和执行代码的智能体。"
-        },
-        {
-            "q": "Smolagents 与其他智能体框架（如 LangChain、CrewAI）有什么区别？",
-            "a": "Smolagents 更轻量、专注代码智能体，与 Hugging Face 生态深度集成；LangChain 提供丰富链和组件抽象，CrewAI 侧重多智能体协作。"
-        },
-        {
-            "q": "Smolagents 免费吗？",
-            "a": "完全开源免费，遵循 Apache 2.0 许可证，可自由使用、修改和分发。"
-        },
-        {
-            "q": "如何使用 Smolagents？",
-            "a": "通过 pip 安装 smolagents 包，导入并创建智能体对象，指定 LLM 后端和工具即可；官方文档提供快速入门示例。"
-        }
-    ],
-    "verified_tags": [
-        "开源",
-        "轻量级",
-        "Hugging Face",
-        "代码智能体"
-    ],
-    "verified_category": "AI智能体",
-    "source_urls": [
-        "https://huggingface.co/docs/smolagents",
-        "https://github.com/huggingface/smolagents"
-    ],
-    "verify_notes": "最新版本 v1.26.0（2026-05）；GitHub 约 2.8 万 Star，Apache-2.0 许可。",
-    "compare_section": {
-        "competitors": [
-            "openclaw",
-            "metagpt",
-            "openai-agents-sdk"
-        ],
-        "verdict": "Smolagents 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Smolagents 的 代码智能体（CodeAgent）：让 LLM 以 Python 代码作为动作，支持循环、条件与函数嵌套 是亮点，价格 开源免费（Apache-2.0）；竞品各有侧重，可按预算与功能需求选择。"
+    {
+      "q": "Smolagents 与其他智能体框架（如 LangChain、CrewAI）有什么区别？",
+      "a": "Smolagents 更轻量、专注代码智能体，与 Hugging Face 生态深度集成；LangChain 提供丰富链和组件抽象，CrewAI 侧重多智能体协作。"
     },
-    "published_date": "2026-08-31",
-    "created_date": "2026-08-31"
+    {
+      "q": "Smolagents 免费吗？",
+      "a": "完全开源免费，遵循 Apache 2.0 许可证，可自由使用、修改和分发。"
+    },
+    {
+      "q": "如何使用 Smolagents？",
+      "a": "通过 pip 安装 smolagents 包，导入并创建智能体对象，指定 LLM 后端和工具即可；官方文档提供快速入门示例。"
+    }
+  ],
+  "seo_keywords": [
+    "Smolagents",
+    "Smolagents怎么样",
+    "Smolagents免费版",
+    "Smolagents使用教程",
+    "Smolagents和哪个好"
+  ],
+  "content": "# Smolagents 是什么？\n\n如果你关注过 AI 智能体（Agent）的开发，应该知道市面上有不少框架，但大多要么太重量级、要么绑死某个模型。Smolagents 是 Hugging Face 推出的一个**轻量级、开源**的 AI 智能体框架，核心思路很简单：让你快速搭建一个能写代码、能调用工具的智能体，而且完全免费。\n\n它的名字叫 \"Smol\"（小而美），确实名副其实。它不像 LangChain、AutoGPT 那样给你一堆抽象层，而是提供一套简洁的 API，让你专注于定义智能体要做什么，而不是怎么跑起来。最关键的特色是 **Code Agent（代码智能体）**——智能体会生成 Python 代码来完成任务，然后直接在沙箱环境里执行，你可以看到代码、调试它，完全透明。\n\n目前 Smolagents 还比较新，官方文档不多，社区也不大，但如果你已经在用 Hugging Face 的生态，那这个工具几乎是开箱即用的：它天然支持 Hugging Face 上的模型和工具，也可以无缝切换 OpenAI 的 API。简单说，它是一个“野路子”但很实用的东西，适合想快速验证想法、不纠结复杂配置的开发者。\n\n## 核心功能\n\n### 1. 构建与运行 AI 智能体\n\nSmolagents 的核心就是让你用几行代码定义自己的智能体。你只需要指定一个 LLM 后端（比如 GPT-4、Hugging Face 上的开源模型），再给它一些工具，它就能自主完成任务。实际使用中，配置过程确实很轻量，不需要理解复杂的 Agent 循环或记忆机制。\n\n### 2. 工具调用（Tool Calling）\n\n智能体可以通过调用外部工具来获取信息或执行操作。比如搜索、计算、访问 API 等。Smolagents 把工具封装成标准接口，你可以直接用 Hugging Face Hub 上已有的工具，也可以自己写。感受上，工具调用的流程很顺畅，智能体在需要时会自动选择合适的工具并传递参数。\n\n### 3. 自定义工具扩展\n\n如果你需要的工具不在默认库里，可以自己写一个 Python 函数，加个装饰器就变成工具了。这是框架做得比较舒服的地方——不限制你用什么库、不强制继承某个基类，写起来就像在写普通 Python 代码。\n\n### 4. 多 LLM 后端切换\n\n支持 OpenAI、Hugging Face Inference API、Together AI 等常见后端。你在初始化智能体时直接换一个模型名就行，代码不用改。对于想在不同模型之间对比效果的开发者来说非常实用，而且 Hugging Face 的免费推理 API 让零成本尝鲜成为可能。\n\n### 5. 代码执行与沙箱环境\n\nCode Agent 会生成 Python 代码来解决问题，并在隔离的 Docker 容器里执行。这意味着你不怕智能体乱删文件或者搞坏系统。同时你也能查看生成的代码，调试起来很方便。实际体验中，这种“代码优先”的方式比自然语言指令更精确，尤其适合数据处理、自动化脚本这类场景。\n\n### 6. Hugging Face Hub 集成\n\n智能体和工具都可以直接发布到 Hugging Face Hub 上，别人可以一键使用你发布的智能体。反过来，你也可以在 Hub 上找到别人分享的工具和智能体，直接加载进来，生态联动做得不错。\n\n## 版本/套餐对比\n\n目前 Smolagents 没有提供多版本或套餐划分的选项。它完全开源免费，你从 GitHub 上拿下来就能用，没有任何授权费或隐藏付费点。如果你在意使用官方云服务（比如依赖 Hugging Face Inference API），则需要留意 Inference API 本身的免费额度限制，但这和 Smolagents 框架无关。\n\n| 项目 | 说明 |\n|------|------|\n| 框架费用 | 开源，免费 |\n| 授权方式 | MIT 许可证，可商用 |\n| 版本划分 | 无（仅有一个主版本，持续更新） |\n| 附加服务 | 无官方托管，需自建运行环境 |\n\n## 值不值得用？\n\n**优点：**\n- 确实轻量，几行就能跑起来，不像某些框架装半天依赖。\n- 代码智能体透明可控，你可以看到它每一步在写什么代码，方便调试和安全审查。\n- 开源免费，没有隐形成本，适合个人项目和小团队。\n- 与 Hugging Face 生态紧密结合，复用现有模型和工具很方便。\n\n**缺点：**\n- 官方文档偏少，遇到问题经常要翻源码或去 GitHub Issues 找答案。\n- 社区还小，第三方教程、插件、最佳实践不多。\n- 高级功能如多智能体协作、复杂记忆管理还在完善中，如果你需要这些，Smolagents 目前不够成熟。\n\n**总体结论：** 如果你已经在用 Hugging Face 生态，或者需要一个简单、透明、能直接执行代码的智能体框架，Smolagents 值得一试。但如果你需要成熟的社区支持、丰富的高级特性，或者不想自己写 Python，那它可能还不是最优选择。\n\n## 使用建议\n\n- **从简单例子开始**：官方 GitHub 仓库里有几个示例，照着跑一遍就能理解核心逻辑。\n- **优先用 Hugging Face 的免费推理 API**：不需要花钱就能试，等上手后再考虑换收费模型。\n- **把自己的工具写成标准函数**：自定义工具时保持简单，不要在工具内部做太多状态管理，否则智能体容易搞混。\n- **打开代码执行的可视化日志**：Smolagents 默认会打印生成的代码，建议保留这个输出，方便定位问题。\n- **不要期待一步到位**：智能体可能第一轮生成的代码有错误，你需要调整提示词或工具定义，多试几次才能达到理想效果。\n\n## 适合谁用？\n\n**推荐：**\n- Hugging Face 的深度用户，想快速构建自定义 AI 助手。\n- 喜欢让智能体直接写代码（而不是自然语言回复）的开发者。\n- 个人项目、原型验证、小型自动化任务。\n\n**可考虑：**\n- 想了解 Agent 机制但不想学太复杂框架的新手（前提是你会 Python）。\n- 需要低成本试用多个 LLM 后端的团队。\n\n**不推荐：**\n- 企业级生产环境，需要稳定社区支持、丰富文档和高级功能。\n- 非 Python 技术栈的团队（框架绑定 Python）。\n- 希望智能体“开箱即用”、不需要调优就能完美运行的人。\n\n## 常见问题（FAQ）\n\n**Smolagents 是什么？**\n\nSmolagents 是 Hugging Face 开发的开源轻量级 AI 智能体框架，核心是代码智能体（Code Agent），允许开发者通过简单 API 构建和部署能调用工具和执行代码的智能体。\n\n**Smolagents 与其他智能体框架（如 LangChain、CrewAI）有什么区别？**\n\nSmolagents 更轻量、专注代码智能体，与 Hugging Face 生态深度集成；LangChain 提供丰富链和组件抽象，CrewAI 侧重多智能体协作。\n\n**Smolagents 免费吗？**\n\n完全开源免费，遵循 Apache 2.0 许可证，可自由使用、修改和分发。\n\n**如何使用 Smolagents？**\n\n通过 pip 安装 smolagents 包，导入并创建智能体对象，指定 LLM 后端和工具即可；官方文档提供快速入门示例。",
+  "published": true,
+  "source_url": "https://github.com/huggingface/smolagents",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://huggingface.co/docs/smolagents",
+  "verified_publisher": "Hugging Face",
+  "verified_what": "Hugging Face 推出的开源 Python 智能体库，用极少代码即可构建并运行智能体，原生支持代码智能体（CodeAgent）。",
+  "verified_price": "开源免费（Apache-2.0 许可证）。",
+  "verified_platform": "Python, Web（Hugging Face Hub / Gradio Spaces）",
+  "verified_features": [
+    "代码智能体（CodeAgent）：让 LLM 以 Python 代码作为动作，支持循环、条件与函数嵌套",
+    "工具调用智能体（ToolCallingAgent）：支持标准 JSON/文本工具调用范式",
+    "模型无关：兼容 Hugging Face 推理、OpenAI、Anthropic（LiteLLM）及本地 Transformers/Ollama",
+    "Hub 集成：可在 Hugging Face Hub 共享与加载智能体及工具",
+    "沙箱代码执行：支持 E2B、Modal、Blaxel、Docker 隔离运行，并提供 smolagent/webagent 命令行工具"
+  ],
+  "verified_description": "Smolagents 是 Hugging Face 推出的开源 Python 智能体库，用极少代码即可构建并运行智能体。原生支持代码智能体（CodeAgent），可调用任意 LLM 与工具，适合快速搭建轻量级 Agent 应用。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5（编辑评测）",
+  "rating_source": "编辑评测（暂无权威第三方评分来源；GitHub 约 2.8 万 Star）",
+  "rating_verified": true,
+  "verified_pros": [
+    "开源免费，无需授权费用",
+    "轻量级设计，易集成到现有项目",
+    "支持多种 LLM 后端（如 OpenAI、Hugging Face Inference API 等）",
+    "代码智能体可直接执行与调试代码",
+    "与 Hugging Face 生态紧密集成，共享模型与工具"
+  ],
+  "verified_cons": [
+    "官方文档和示例相对较少",
+    "社区规模较小，第三方资源有限",
+    "高级功能（如多智能体协作）尚不完善"
+  ],
+  "verified_faq": [
+    {
+      "q": "Smolagents 是什么？",
+      "a": "Smolagents 是 Hugging Face 开发的开源轻量级 AI 智能体框架，核心是代码智能体（Code Agent），允许开发者通过简单 API 构建和部署能调用工具和执行代码的智能体。"
+    },
+    {
+      "q": "Smolagents 与其他智能体框架（如 LangChain、CrewAI）有什么区别？",
+      "a": "Smolagents 更轻量、专注代码智能体，与 Hugging Face 生态深度集成；LangChain 提供丰富链和组件抽象，CrewAI 侧重多智能体协作。"
+    },
+    {
+      "q": "Smolagents 免费吗？",
+      "a": "完全开源免费，遵循 Apache 2.0 许可证，可自由使用、修改和分发。"
+    },
+    {
+      "q": "如何使用 Smolagents？",
+      "a": "通过 pip 安装 smolagents 包，导入并创建智能体对象，指定 LLM 后端和工具即可；官方文档提供快速入门示例。"
+    }
+  ],
+  "verified_tags": [
+    "开源",
+    "轻量级",
+    "Hugging Face",
+    "代码智能体"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://huggingface.co/docs/smolagents",
+    "https://github.com/huggingface/smolagents"
+  ],
+  "verify_notes": "最新版本 v1.26.0（2026-05）；GitHub 约 2.8 万 Star，Apache-2.0 许可。",
+  "compare_section": {
+    "competitors": [
+      "openclaw",
+      "metagpt",
+      "openai-agents-sdk"
+    ],
+    "verdict": "Smolagents 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Smolagents 的 代码智能体（CodeAgent）：让 LLM 以 Python 代码作为动作，支持循环、条件与函数嵌套 是亮点，价格 开源免费（Apache-2.0）；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-08-31",
+  "created_date": "2026-08-31"
 }

@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "🐋",
   "color": "#4D6BFE",
-  "description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它不做通用 OpenAI 兼容层，而是直接对接 DeepSeek API，围绕 DeepSeek 稳定的 prefix-cache 设计了 append-only 运行循环，目标是让长会话把缓存命中率维持在高位、把输入 token 成本压下来。1.0 版本用 Go 完全重写，支持 CLI 与桌面端，内置 MCP、Skills 与记忆系统。",
+  "description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.35.0（2026-08-31）新增隔离 Git Worktree 分叉、超长会话分块摘要恢复与更可靠的压缩；Studio 桌面端外壳正以 pre-release studio-v2.11.0 重构为 Electron。1.0 版本用 Go 完全重写，支持 CLI 与桌面端，内置 MCP、Skills 与记忆系统。",
   "category": "AI编程",
   "tags": [
     {
@@ -44,12 +44,12 @@
     "偏终端向，不喜欢命令行的用户上手门槛较高"
   ],
   "features": [
-    "DeepSeek 直连：不走通用兼容层，直接对接官方 API，默认走低成本迭代路线，需要时再拉高推理强度",
-    "prefix-cache 优化循环：append-only 设计，专为多小时调试与重构这类长会话降低重复上下文开销",
-    "规划门禁：/plan on 进入只读规划，确认后才落盘，风险命令与写入边界需二次确认",
+    "DeepSeek 直连：不走通用兼容层，直接对接官方 API，默认走低成本迭代路线",
+    "prefix-cache 优化循环：append-only 设计，专为长会话降低重复上下文开销",
+    "规划门禁：/plan on 进入只读规划，确认后才落盘，风险命令需二次确认",
     "推理强度切换：/pro 或 /effort 调档，硬重构与长链调试时给更多算力",
-    "MCP + Skills + 记忆：接入外部工具，沉淀项目专属技能与记忆，不做一次性对话",
-    "双入口与自检：CLI 与桌面客户端并行，/doctor 可一键排查 API、配置、hooks 与项目状态"
+    "MCP + Skills + 记忆：接入外部工具，沉淀项目专属技能与记忆",
+    "双入口与自检：CLI 与桌面客户端并行，/doctor 一键排查 API、配置、hooks 与项目状态"
   ],
   "related": [
     "claude-code",
@@ -87,10 +87,24 @@
     "DeepSeek Reasonix免费吗"
   ],
   "source_urls": [
-    "https://github.com/esengine/DeepSeek-Reasonix",
-    "https://deepseekreasonix.com/"
+    "https://github.com/esengine/DeepSeek-Reasonix/releases"
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+  "updated_date": "2026-09-02",
+  "verified_url": "https://github.com/esengine/DeepSeek-Reasonix",
+  "verified_publisher": "esengine",
+  "verified_what": "开源终端编程 Agent，直连 DeepSeek API",
+  "verified_platform": "CLI, Desktop（macOS/Linux/Windows）, MCP",
+  "last_verified": "2026-09-02",
+  "verified_features": [
+    "DeepSeek 直连：不走通用兼容层，直接对接官方 API，默认走低成本迭代路线",
+    "prefix-cache 优化循环：append-only 设计，专为长会话降低重复上下文开销",
+    "规划门禁：/plan on 进入只读规划，确认后才落盘，风险命令需二次确认",
+    "推理强度切换：/pro 或 /effort 调档，硬重构与长链调试时给更多算力",
+    "MCP + Skills + 记忆：接入外部工具，沉淀项目专属技能与记忆",
+    "双入口与自检：CLI 与桌面客户端并行，/doctor 一键排查 API、配置、hooks 与项目状态"
+  ],
+  "verified_description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.35.0（2026-08-31）新增隔离 Git Worktree 分叉、超长会话分块摘要恢复与更可靠的压缩；Studio 桌面端外壳正以 pre-release studio-v2.11.0 重构为 Electron。1.0 版本用 Go 完全重写，支持 CLI 与桌面端，内置 MCP、Skills 与记忆系统。",
+  "verify_notes": "GitHub 仓库最新稳定版为 v1.35.0（2026-08-31，含 Git Worktree 分叉、分块摘要恢复等用户可见改进）；watch 命中的 studio-v2.11.0 为 Studio 外壳 pre-release（非稳定线），已在描述中说明。页面原 updated_date 2026-08-14 已过时。"
 }

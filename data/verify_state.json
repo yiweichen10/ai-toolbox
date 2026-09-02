@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-08-31",
+    "updated": "2026-09-02",
     "total": 673
   },
   "tools": {
@@ -19,14 +19,14 @@
     },
     "claude": {
       "name": "Claude",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 140,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-02",
+      "confidence": "high",
+      "notes": "Anthropic 于 2026-09-01 发布 Claude Fable 5.1（model ID claude-fable-5-1），8 项公开基准全部第一、缓存读取价降 75%。claude.ai Pro 价格维持 $20/月不变。页面原 updated_date 2026-08-27，模型阵容补充 Fable 5.1。"
     },
     "midjourney": {
       "name": "Midjourney",
@@ -2703,14 +2703,14 @@
     },
     "codex-cli": {
       "name": "Codex CLI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-02",
+      "confidence": "high",
+      "notes": "GitHub 官方发布 rust-v0.152.1（2026-09-01），本次为 Guardian 审批 bugfix，无新增功能；页面原 last_verified 2026-07-30 已过时，补充最新版本号。"
     },
     "wonder-ai": {
       "name": "Wonder AI",
@@ -4518,14 +4518,14 @@
     },
     "claude-fable-5": {
       "name": "Claude Fable 5",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 140,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-02",
+      "confidence": "high",
+      "notes": "无头浏览器渲染 anthropic.com/claude/fable 确认：Fable 5.1 定价 $10/$50 每百万 token，缓存读取 $0.25/百万（降 75%）。页面原为 Fable 5（2026-06），升级为 Fable 5.1。价格字段已更新；长文价格表未重写以避免结构/溯源丢失。"
     },
     "grok-4-5": {
       "name": "Grok 4.5",
@@ -6773,14 +6773,14 @@
     },
     "hermes-agent": {
       "name": "Hermes Agent",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI智能体",
       "priority": 80,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-02",
+      "confidence": "high",
+      "notes": "GitHub 官方发布 v0.21.0（版本号 v2026.8.31），The Pantheon Release，大量用户可见新能力；页面原 updated_date 2026-08-14 已过时。"
     },
     "microsoft-agent-framework": {
       "name": "Microsoft Agent Framework",
@@ -6949,14 +6949,14 @@
     },
     "deepseek-reasonix": {
       "name": "DeepSeek-Reasonix",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 130,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-02",
+      "confidence": "high",
+      "notes": "GitHub 仓库最新稳定版为 v1.35.0（2026-08-31，含 Git Worktree 分叉、分块摘要恢复等用户可见改进）；watch 命中的 studio-v2.11.0 为 Studio 外壳 pre-release（非稳定线），已在描述中说明。页面原 updated_date 2026-08-14 已过时。"
     },
     "kiro-crew": {
       "name": "Kiro Crew",
@@ -7097,9 +7097,9 @@
       "priority": 210,
       "attempts": 1,
       "last_attempt": "2026-08-30",
-      "verified_at": "2026-08-30",
-      "confidence": "low",
-      "notes": "第 1 个候选(https://github.com/github/copilot-sdk)有定价页结构但无明确金额(可能动态加载/登录墙) | 检测到联系销售/企业版(无公开价)"
+      "verified_at": "2026-09-02",
+      "confidence": "high",
+      "notes": "watch 命中 v1.0.13-preview.4（2026-09-01）；上述新能力来自 GitHub 官方 releases 页面最新发布说明。页面原 last_verified 2026-08-30，补充近期新增能力。"
     },
     "browseros-neo": {
       "name": "BrowserOS neo",
@@ -7389,14 +7389,14 @@
     },
     "codex-harness": {
       "name": "OpenAI Codex Harness",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-02",
+      "confidence": "high",
+      "notes": "与 codex-cli 同源仓库 openai/codex，最新 rust-v0.152.1（2026-09-01）同批 bugfix；页面原 updated_date 2026-08-23 已过时，补充最新版本号。"
     },
     "pptbot": {
       "name": "PPTBot",

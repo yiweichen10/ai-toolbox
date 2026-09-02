@@ -5,7 +5,7 @@
   "auto_positioning": true,
   "emoji": "💻",
   "color": "#10A37F",
-  "description": "OpenAI开源终端编码Agent（npm @openai/codex），通过自然语言完成代码编写、调试和重构。ChatGPT Plus $20/月含配额或自带API Key。4M+周活开发者，GitHub 75K+ stars。2026年新增IDE扩展和Cloud Agent。",
+  "description": "OpenAI 开源的终端编码 Agent（npm @openai/codex），通过自然语言完成代码编写、调试与重构。ChatGPT Plus $20/月含配额或自带 API Key。持续迭代中，最新 rust 版 v0.152.1（2026-09-01）修复了 Guardian 审批在 Node REPL 策略下的兼容问题；4M+ 周活开发者，GitHub 75K+ stars，2026 年已新增 IDE 扩展与 Cloud Agent。",
   "category": "AI编程",
   "tags": [
     "CLI工具",
@@ -38,11 +38,11 @@
   ],
   "features": [
     "终端自然语言代码生成与多文件编辑",
-    "AGENTS.md项目级指令支持",
+    "AGENTS.md 项目级指令支持",
     "沙箱化命令执行（可配置审批模式）",
-    "MCP协议支持（接入外部工具）",
-    "ChatGPT Cloud Agent（异步后台任务，自动提交PR）",
-    "VS Code/JetBrains IDE扩展（2026年新增）"
+    "MCP 协议支持（接入外部工具）",
+    "ChatGPT Cloud Agent（异步后台任务，自动提交 PR）",
+    "VS Code / JetBrains IDE 扩展（2026 年新增）"
   ],
   "related": [
     "openai-codex",
@@ -81,21 +81,21 @@
   "published_date": "2026-06-12",
   "verified_url": "https://github.com/openai/codex",
   "verified_publisher": "OpenAI",
-  "verified_what": "OpenAI开源终端编码Agent（npm @openai/codex），运行在本地终端用自然语言完成代码编写、调试和重构，支持ChatGPT Plus配额或自带API Key",
+  "verified_what": "OpenAI 开源的终端编码 Agent",
   "verified_price": "Codex CLI本身开源免费。用量计费：(1)ChatGPT Plus $20/月包含Codex配额（5小时滚动窗口限制）；(2)ChatGPT Pro $200/月含20x配额；(3)自带OpenAI API Key按token计费(GPT-5.3-Codex: 43.75 credits/1M input, 350 credits/1M output)。ChatGPT Business $30/user/月也包含。",
-  "verified_platform": "macOS / Linux / Windows (WSL) — 终端CLI + VS Code扩展 + JetBrains扩展 + macOS App (Cloud Agent)",
-  "last_verified": "2026-07-30",
+  "verified_platform": "CLI, macOS, Linux, Windows, VS Code, JetBrains",
+  "last_verified": "2026-09-02",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
     "终端自然语言代码生成与多文件编辑",
-    "AGENTS.md项目级指令支持",
+    "AGENTS.md 项目级指令支持",
     "沙箱化命令执行（可配置审批模式）",
-    "MCP协议支持（接入外部工具）",
-    "ChatGPT Cloud Agent（异步后台任务，自动提交PR）",
-    "VS Code/JetBrains IDE扩展（2026年新增）"
+    "MCP 协议支持（接入外部工具）",
+    "ChatGPT Cloud Agent（异步后台任务，自动提交 PR）",
+    "VS Code / JetBrains IDE 扩展（2026 年新增）"
   ],
-  "verified_description": "OpenAI开源终端编码Agent（npm @openai/codex），通过自然语言完成代码编写、调试和重构。ChatGPT Plus $20/月含配额或自带API Key。4M+周活开发者，GitHub 75K+ stars。2026年新增IDE扩展和Cloud Agent。",
+  "verified_description": "OpenAI 开源的终端编码 Agent（npm @openai/codex），通过自然语言完成代码编写、调试与重构。ChatGPT Plus $20/月含配额或自带 API Key。持续迭代中，最新 rust 版 v0.152.1（2026-09-01）修复了 Guardian 审批在 Node REPL 策略下的兼容问题；4M+ 周活开发者，GitHub 75K+ stars，2026 年已新增 IDE 扩展与 Cloud Agent。",
   "content_flags": "1. '免费开源'表述不准确——CLI工具本身开源但不免费使用（需要API费用或ChatGPT订阅）。2. 未提及ChatGPT Plus配额限制（5小时滚动窗口）。3. 未提及2026年新增的IDE扩展和macOS Cloud Agent（现在不是纯CLI工具了）。4. 未提及AGENTS.md、MCP、Rust构建等关键技术细节。5. 'Pro版'和'Enterprise版'的描述不准确——Codex没有独立的Pro/Enterprise版本，而是捆绑在ChatGPT订阅层级中。6. 评分4.6偏高，第三方评分约4.2（aicodereview.cc）到4.5（vibecoding.gallery 8.75/10转换）。",
   "price_verified": true,
   "verified_rating": "⭐ 4.2",
@@ -140,12 +140,9 @@
   ],
   "verified_category": "AI编程",
   "source_urls": [
-    "https://github.com/openai/codex",
-    "https://dev.to/jovan_chan_9500711396d4e6/openai-codex-cli-review-2026",
-    "https://vibecoding.gallery/en/tools/openai-codex-cli",
-    "https://aicodereview.cc/tool/openai-codex"
+    "https://github.com/openai/codex/releases/tag/rust-v0.152.1"
   ],
-  "verify_notes": "Codex CLI已从单一CLI工具发展为多界面产品家族（CLI + IDE + Cloud + Web）。AGENTS.md标准被60000+项目采用。GitHub 75K+ stars，npm 32M+年安装量。Pro/Team/Enterprise非独立产品定价，而是ChatGPT订阅层级。",
+  "verify_notes": "GitHub 官方发布 rust-v0.152.1（2026-09-01），本次为 Guardian 审批 bugfix，无新增功能；页面原 last_verified 2026-07-30 已过时，补充最新版本号。",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -155,5 +152,6 @@
     ],
     "verdict": "Codex CLI 与 通义灵码、Cline、Lovable 同属AI编程赛道。在性价比上，Codex CLI（Codex CLI开源免费；ChatGPT Plus($20/月)含配额或自带API Key付费）门槛更低；若看重口碑，Lovable（⭐4.9）评分更高；Codex CLI 的优势在于OpenAI开源终端编码Agent（npm @openai/codex），运行在本地终端用自然语言完成代码编写、调试和重，适合看重该特性的用户。",
     "generated": "2026-07-30"
-  }
+  },
+  "updated_date": "2026-09-02"
 }

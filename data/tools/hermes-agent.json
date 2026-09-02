@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "🦁",
   "color": "#8B5CF6",
-  "description": "Hermes Agent 是开源研究机构 NousResearch 推出的智能体框架，主打「会和你一起成长的 AI Agent」，通过内置学习循环把经验沉淀为可复用技能并跨会话持久化记忆。它支持 300+ 模型和 40+ 工具、七种执行后端，可自托管在本地或按需唤醒的 Serverless 环境，几乎无厂商锁定。",
+  "description": "Hermes Agent 是开源机构 NousResearch 推出的智能体框架，主打「会和你一起成长的 AI Agent」。最新 v0.21.0（2026-08-31）把多个具名 Agent 组成可群聊、可互发消息的「AI 团队」（内置 Bot Mode 与 hermes peer），定时任务现在跨运行保留记忆、子 Agent 可运行中实时调度，并新增 MCP 命令中心与桌面浏览器直接驱动。支持 300+ 模型、40+ 工具、七种执行后端，可自托管运行。",
   "category": "AI智能体",
   "tags": [
     {
@@ -44,12 +44,13 @@
     "实际能力依赖外部模型 API，需自行配置密钥"
   ],
   "features": [
-    "自我进化技能：完成任务后自动生成结构化技能并持续打磨",
-    "跨会话记忆：长期记忆与人格画像持久化，上下文不丢失",
-    "多后端执行：本地 CLI、桌面端、Web 与 VPS/Serverless 部署",
-    "广泛模型兼容：300+ LLM、40+ 工具开箱即接",
-    "技能共享：技能可发布到 agentskills.io 社区复用",
-    "框架迁移：支持从 OpenClaw 等导入记忆、技能与配置"
+    "自我进化技能：任务完成后自动沉淀可复用技能并持续打磨",
+    "跨会话记忆：长期记忆与人格画像持久化，换设备不丢上下文",
+    "Bot Mode：内置多 Agent 群聊，具名 Agent 可互相 @、私信协作（hermes peer）",
+    "带记忆的定时任务：cron 跨运行持久化记忆与连续性",
+    "运行中实时调度子 Agent（delegate_task live orchestration）",
+    "MCP 命令中心：统一面板管理 MCP server、成本/用量可视化",
+    "桌面浏览器直接驱动：Agent 可导航、点击、读取应用内浏览器"
   ],
   "related": [
     "claude-agent-sdk",
@@ -87,11 +88,26 @@
     "Hermes Agent和哪个好"
   ],
   "source_urls": [
-    "https://github.com/NousResearch/hermes-agent",
-    "https://aibars.net/en/library/open-source-ai/details/831545486166069248"
+    "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31"
   ],
   "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14",
-  "published_date": "2026-08-24"
+  "updated_date": "2026-09-02",
+  "published_date": "2026-08-24",
+  "verified_url": "https://github.com/NousResearch/hermes-agent",
+  "verified_publisher": "NousResearch",
+  "verified_what": "开源智能体框架，主打会自我进化的 AI Agent",
+  "verified_platform": "Desktop, CLI, Web, Linux VPS, Serverless",
+  "last_verified": "2026-09-02",
+  "verified_features": [
+    "自我进化技能：任务完成后自动沉淀可复用技能并持续打磨",
+    "跨会话记忆：长期记忆与人格画像持久化，换设备不丢上下文",
+    "Bot Mode：内置多 Agent 群聊，具名 Agent 可互相 @、私信协作（hermes peer）",
+    "带记忆的定时任务：cron 跨运行持久化记忆与连续性",
+    "运行中实时调度子 Agent（delegate_task live orchestration）",
+    "MCP 命令中心：统一面板管理 MCP server、成本/用量可视化",
+    "桌面浏览器直接驱动：Agent 可导航、点击、读取应用内浏览器"
+  ],
+  "verified_description": "Hermes Agent 是开源机构 NousResearch 推出的智能体框架，主打「会和你一起成长的 AI Agent」。最新 v0.21.0（2026-08-31）把多个具名 Agent 组成可群聊、可互发消息的「AI 团队」（内置 Bot Mode 与 hermes peer），定时任务现在跨运行保留记忆、子 Agent 可运行中实时调度，并新增 MCP 命令中心与桌面浏览器直接驱动。支持 300+ 模型、40+ 工具、七种执行后端，可自托管运行。",
+  "verify_notes": "GitHub 官方发布 v0.21.0（版本号 v2026.8.31），The Pantheon Release，大量用户可见新能力；页面原 updated_date 2026-08-14 已过时。"
 }

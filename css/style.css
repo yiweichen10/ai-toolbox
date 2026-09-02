@@ -1319,6 +1319,14 @@ h2[id], h3[id], h4[id] { scroll-margin-top: 200px; }
 .action-btn { display: inline-flex; align-items: center; padding: 13px 28px; border-radius: var(--radius-md); font-size: 15px; font-weight: 700; text-decoration: none; transition: var(--transition); cursor: pointer; }
 .action-btn-primary { background: var(--bg-gradient); color: #fff; box-shadow: var(--shadow-md); }
 .action-btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); color: #fff; }
+/* 官网已失效：按钮降级为不可点击（2026-09-02） */
+.action-btn.disabled { opacity: 0.5; cursor: not-allowed; box-shadow: none; filter: grayscale(0.35); }
+.action-btn.disabled:hover { transform: none; box-shadow: none; }
+/* 停运提示条 */
+.tool-dead-notice { margin-top: 14px; padding: 12px 16px; border-radius: var(--radius-sm); background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.35); color: var(--text-main); font-size: 14px; line-height: 1.75; }
+.tool-dead-notice strong { color: #b91c1c; }
+[data-theme="dark"] .tool-dead-notice { background: rgba(239,68,68,0.14); border-color: rgba(248,113,113,0.45); }
+[data-theme="dark"] .tool-dead-notice strong { color: #fca5a5; }
 
 .article-body {
   background: var(--surface); border-radius: var(--radius-lg); padding: 24px 36px 36px;

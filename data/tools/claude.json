@@ -5,7 +5,7 @@
   "auto_positioning": true,
   "emoji": "🎭",
   "color": "#d97706",
-  "description": "Anthropic 推出的 AI 助手，以安全性、超长上下文与代码/Agent 能力著称。2026 年模型阵容包括 Opus 5（2026-07-24 发布）、Opus 4.8、Sonnet 5、Haiku 4.5 与面向长任务 Agent 的 Fable 5，在写作、编程与长文档分析场景表现卓越。",
+  "description": "Anthropic 推出的 AI 助手，以安全性、超长上下文与代码/Agent 能力著称。2026 年模型阵容包括 Opus 5（2026-07-24 发布）、Opus 4.8、Sonnet 5、Haiku 4.5 与面向长任务 Agent 的 Fable 5.1（2026-09-01 发布，8 项公开基准全部第一，提示缓存读取降价 75%、典型工作负载成本降约 25%）。在写作、编程与长文档分析场景表现卓越。",
   "category": "AI对话",
   "tags": [
     "AI对话",
@@ -70,9 +70,9 @@
   "aeo_geo_updated": "2026-06-23",
   "verified_url": "https://claude.ai",
   "verified_publisher": "Anthropic",
-  "verified_what": "Anthropic 开发的 AI 助手/对话模型，支持 Web、iOS、Android 与桌面端。2026 年阵容：Opus 5（2026-07-24 发布，$5/$25，1M 上下文，Fast 模式）、Opus 4.8、Sonnet 5、Haiku 4.5 与面向长任务 Agent 的 Fable 5（最强通用模型）；擅长长文本、代码与 Agent 任务。",
+  "verified_what": "Anthropic 推出的 AI 助手",
   "verified_price": "Free $0 / Pro $20/月（年付约$17/月）/ Max $100 或 $200/月 / Team $20–25/席/月 / Enterprise 询价；API：Opus 5 $5/百万输入、$25/百万输出（与 Opus 4.8 同价，Fast 模式约 2 倍价）",
-  "verified_platform": "Web, iOS, Android, 桌面端(Desktop), API",
+  "verified_platform": "Web, iOS, Android, API, Claude Code",
   "verified_features": [
     "智能对话",
     "长文档/长上下文分析",
@@ -81,9 +81,9 @@
     "联网搜索与文件分析",
     "项目/记忆/技能与 Artifacts"
   ],
-  "verified_description": "Anthropic 推出的 AI 助手，以安全性、超长上下文与代码/Agent 能力著称。2026 年模型阵容包括 Opus 5（2026-07-24 发布）、Opus 4.8、Sonnet 5、Haiku 4.5 与面向长任务 Agent 的 Fable 5，在写作、编程与长文档分析场景表现卓越。",
+  "verified_description": "Anthropic 推出的 AI 助手，以安全性、超长上下文与代码/Agent 能力著称。2026 年模型阵容包括 Opus 5（2026-07-24 发布）、Opus 4.8、Sonnet 5、Haiku 4.5 与面向长任务 Agent 的 Fable 5.1（2026-09-01 发布，8 项公开基准全部第一，提示缓存读取降价 75%、典型工作负载成本降约 25%）。在写作、编程与长文档分析场景表现卓越。",
   "content_flags": "版本更新（2026-08-04）：Opus 5 于 2026-07-24 官方发布（$5/百万输入、$25/百万输出、1M 上下文、Fast 模式、安全分类器自动回退），07-30 核查遗漏，本轮补充至 description/faq/price；正文仍称「Claude 4系列」为陈旧命名，正文数据为 2026-04 快照，未重写。",
-  "last_verified": "2026-08-27",
+  "last_verified": "2026-09-02",
   "confidence": "high",
   "conflict": false,
   "price_verified": true,
@@ -127,11 +127,10 @@
   ],
   "verified_category": "AI对话",
   "source_urls": [
-    "https://www.anthropic.com/news/claude-opus-5",
-    "https://anthropic.com/claude-opus-5-system-card",
-    "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-opus-5.html"
+    "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+    "https://aivy.com.au/news/claude-fable-5-1-launch"
   ],
-  "verify_notes": "2026-08-27 增补8月动态：语音模式多模型+9语言、browser/computer/Skills/Files API GA(8/20)、Opus5成Claude Code默认、Sonnet5促销价8/31到期。",
+  "verify_notes": "Anthropic 于 2026-09-01 发布 Claude Fable 5.1（model ID claude-fable-5-1），8 项公开基准全部第一、缓存读取价降 75%。claude.ai Pro 价格维持 $20/月不变。页面原 updated_date 2026-08-27，模型阵容补充 Fable 5.1。",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -142,5 +141,5 @@
     "verdict": "Claude 与 腾讯混元、星火认知大模型、Mistral AI 同属AI对话赛道。在性价比上，Claude（免费版 + Pro $20/月）门槛更低；口碑方面，Claude（⭐4.8）领先；Claude 的优势在于Anthropic 开发的 AI 助手/对话模型，支持 Web、iOS、Android 与桌面端，提供 Opus 4.8，适合看重该特性的用户。",
     "generated": "2026-07-30"
   },
-  "updated_date": "2026-08-27"
+  "updated_date": "2026-09-02"
 }
