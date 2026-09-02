@@ -74,7 +74,7 @@
   "verified_what": "Framer AI 是 Framer 网站设计与发布平台内置的 AI 能力，可通过自然语言描述生成完整网页、文案与布局，并提供 AI Agents 协助设计与发布。",
   "verified_price": "免费版 $0（500 试用积分，Framer 域名）；Basic $10/月（含自定义域名、2 个 CMS 集合）；Pro $30/月（10 个 CMS 集合、A/B 测试等）；Scale $100/月（用量计费）；Enterprise 定制。AI 功能消耗 Credits。",
   "verified_platform": "网页端、macOS、Windows",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-03",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -129,7 +129,7 @@
     "https://www.framer.com/pricing",
     "https://framer.com/blog/pricing-update/"
   ],
-  "verify_notes": "官方网址 framer.com；原数据「付费版$15起/月」为旧版 Mini 价格，现最低付费 Basic 为 $10/月，已在价格字段修正。",
+  "verify_notes": "scrape 命中定价页($10/$30/mo), 与记录一致",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -138,5 +138,6 @@
       "upscayl"
     ],
     "verdict": "Framer AI 与 Clipdrop、Topaz Photo AI、Upscayl 同属AI设计赛道：Framer AI 的 自然语言生成网站页面与文案 是亮点，价格 免费版可用；Basic $10/月起；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-03"
 }

@@ -160,7 +160,11 @@ def build_scoring_table(topic_data):
 
 def call_deepseek(prompt):
     """调用DeepSeek API生成叙事段落"""
-    import requests
+    try:
+        import requests
+    except ImportError:
+        print("[WARN] requests 未安装，跳过AI叙事生成，使用默认文本")
+        return None
     api_key = os.environ.get("DEEPSEEK_API_KEY", "")
     if not api_key:
         # Try reading from .env

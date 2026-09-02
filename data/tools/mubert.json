@@ -81,7 +81,7 @@
   "verified_what": "Mubert 是 AI 生成背景音乐平台，可按文本/风格/情绪生成免版税音乐，适用于视频、播客、游戏与广告。",
   "verified_price": "免费版 25 首/月（个人非商用）；Creator $14/月（500 生成/月，商用）；Pro $39/月；Business $199/月；API/企业定制。",
   "verified_platform": "网页端、iOS、Android",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-03",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -140,7 +140,7 @@
     "https://mubert.ai/pricing",
     "https://mubert.com/use-cases/cyberpunk-game-music-generator"
   ],
-  "verify_notes": "原数据定价（Creator $14/月、Pro $39/月、25 首/月免费）与官网一致。mubert.ai 为定价子域，主域 mubert.com 正确。",
+  "verify_notes": "scrape 命中定价页($14/mo Creator 起), 与记录一致",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -149,5 +149,6 @@
       "udio"
     ],
     "verdict": "Mubert 与 Krisp、ElevenLabs、Udio 同属AI音频赛道：Mubert 的 文本/风格/情绪生成音乐 是亮点，价格 免费版 25 首/月；Creator $14/月起；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-03"
 }

@@ -85,7 +85,7 @@
   "verified_what": "基于AI的图像增强与超分辨率放大工具，将低分辨率图片智能提升至高清（最高8K），并支持去噪、色彩优化与AI创意增强。",
   "verified_price": "免费版 $0（注册送10积分）；Starter $9/月（年付）/$12月付（100积分/月）；Pro $24/月（年付）/$32月付（300积分/月）；Max $34/月（年付）/$45月付（500积分/月）",
   "verified_platform": "网页端",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-03",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -147,7 +147,7 @@
     "https://letsenhance.io/",
     "https://letsenhance.io/pricing"
   ],
-  "verify_notes": "价格以官网为准：Starter $9/月(年付)、Pro $24/月(年付)、Max $34/月(年付)；免费为注册10积分。",
+  "verify_notes": "scrape 命中定价页($9/$24/$34/mo), 与记录一致",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -156,5 +156,6 @@
       "comfyui"
     ],
     "verdict": "Let's Enhance 与 Midjourney、秒画、ComfyUI 同属AI绘画赛道：Let's Enhance 的 AI图像超分辨率放大(最高8K) 是亮点，价格 免费版(10积分) + 付费 $9/月起；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-03"
 }

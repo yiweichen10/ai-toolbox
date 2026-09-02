@@ -28,8 +28,11 @@ import json
 import argparse
 import sys
 import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-TOOLS_JSON = os.path.join(os.path.dirname(__file__), '..', 'data', 'tools.json')
+# 2026-09-01 去单体化: 单体 data/tools.json 已退役删除, 改走分片真源
+from data_store import load_all_tools, save_tool
+
 SECTION_TITLE_TMPL = "{} 版本演进对比"
 
 
@@ -64,7 +67,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--slug', required=True)
     ap.add_argument('--facts', required=True, help='facts JSON 路径')
-    ap.add_argument('--tools', default=TOOLS_JSON)
+    ap.add_argument('--dry-run', action='store_true', help='只打印将写入的小节, 不落盘')
     args = ap.parse_args()
 
     facts = json.load(open(args.facts, encoding='utf-8'))
@@ -75,7 +78,7 @@ def main():
         print('facts 缺少 brand 或 versions，终止')
         sys.exit(1)
 
-    t = json.load(open(args.tools, encoding='utf-8'))
+    t = load_all_tools()
     target = None
     for x in t:
         if x.get('slug') == args.slug:
@@ -88,6 +91,7 @@ def main():
     section = build_section(brand, versions, notes)
     title = '## ' + SECTION_TITLE_TMPL.format(brand)
     content = target.get('content', '')
+    old_len = len(content)
     # 若已有同品牌小节则替换，否则追加
     if title in content:
         pre = content.split(title)[0].rstrip()
@@ -98,8 +102,14 @@ def main():
         print('已追加版本演进对比小节')
     target['content'] = target['content'].rstrip() + '\n'
 
-    json.dump(t, open(args.tools, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
-    print('saved', args.tools, '| 新 content 长度', len(target['content']))
+    if args.dry_run:
+        print('--- [dry-run] 将写入的小节 ---')
+        print(section)
+        print(f'--- [dry-run] content {old_len} -> {len(target["content"])} 字, 未落盘 ---')
+        return
+
+    save_tool(target)
+    print(f'saved data/tools/{args.slug}.json | content {old_len} -> {len(target["content"])} 字')
 
 
 if __name__ == '__main__':

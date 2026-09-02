@@ -1,98 +1,98 @@
 {
-    "name": "Troopr AI Scrum Master",
-    "slug": "troopr",
-    "positioning": "Troopr AI Scrum Master是什么？Slack自动写站会日报好用吗",
-    "auto_positioning": false,
-    "emoji": "🏃",
-    "color": "#2563EB",
-    "description": "Troopr AI Scrum Master 是 Slack 原生的 AI 敏捷助手，2026 年 8 月发布。它不再向成员提问，而是直接汇总 Jira、GitHub 与 Slack 里的真实工作动态，替每位成员写站会更新并标记不一致之处，同时持续记住团队的工作方式，让日报越来越准。免费版最多 3 个席位，Standard 每席位 6 美元/月。",
-    "category": "AI办公",
-    "tags": [
-        {
-            "text": "免费版",
-            "type": "free"
-        },
-        {
-            "text": "Slack原生"
-        },
-        {
-            "text": "Jira集成"
-        },
-        {
-            "text": "自动站会"
-        }
-    ],
-    "rating": "⭐ 4.2",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "new",
-        "text": "NEW"
+  "name": "Troopr AI Scrum Master",
+  "slug": "troopr",
+  "positioning": "Troopr AI Scrum Master是什么？Slack自动写站会日报好用吗",
+  "auto_positioning": false,
+  "emoji": "🏃",
+  "color": "#2563EB",
+  "description": "Troopr AI Scrum Master 是 Slack 原生的 AI 敏捷助手，2026 年 8 月发布。它不再向成员提问，而是直接汇总 Jira、GitHub 与 Slack 里的真实工作动态，替每位成员写站会更新并标记不一致之处，同时持续记住团队的工作方式，让日报越来越准。免费版最多 3 个席位，Standard 每席位 6 美元/月。",
+  "category": "AI办公",
+  "tags": [
+    {
+      "text": "免费版",
+      "type": "free"
     },
-    "url": "https://www.troopr.ai",
-    "price": "Free 0 美元（最多 3 个席位，含 3 个同步频道与 3 份定时报告，全部功能可用）；Standard 每席位 6 美元/月（参与者占席、只读成员免费）；Enterprise 定制报价（不限人数、支持 Slack Grid）",
-    "platform": "Slack（可连接 Jira Cloud / Jira Data Center 与 GitHub）",
-    "pros": [
-        "不问问题也能出日报，从 Jira、GitHub、Slack 的真实动态里自动生成更新",
-        "会标记不一致之处，比「和昨天一样」这种敷衍回答有用得多",
-        "持续记住团队的工作方式，用得越久写得越准",
-        "Slack 原生，一键从 Slack App Directory 或 Atlassian Marketplace 安装",
-        "免费版全功能可用且不是试用期，小团队可以长期白用"
-    ],
-    "cons": [
-        "强依赖 Jira、GitHub 与 Slack，工作动态不在这三处的团队价值有限",
-        "免费版仅 3 个席位，团队一扩张就得付费",
-        "AI 生成的进展仍需人工确认，误读提交或工单状态时会传递错误信息"
-    ],
-    "features": [
-        "自动生成站会更新：汇总 Jira、GitHub、Slack 活动，替每位成员起草进展",
-        "不一致标记：发现汇报与实际工作记录不符时主动指出",
-        "团队记忆：持续学习团队的协作方式与表达习惯",
-        "异步与实时双模式：可 DM 发草稿等确认，也可在实时会议中旁听记录并汇总报告",
-        "定时报告：按计划把汇总报告发到指定频道",
-        "报告管理：在网页应用中浏览、筛选、导出报告，可另存为 PDF"
-    ],
-    "related": [
-        "dingtalk",
-        "feishu",
-        "wps-ai"
-    ],
-    "content": "## Troopr AI Scrum Master是什么？\n\nTroopr 做 Slack 站会工具做了很多年，AI Scrum Master 是他们 2026 年 8 月推出的新产品，而这次的出发点是一句自我否定。创始人在发布时说得很坦诚：多年来他们看着同一个循环重复上演——机器人早上 9 点推送提问，所有人切走，到下午 4 点有人敷衍地输入「和昨天一样」。最后他们承认了那件不舒服的事：问题从来不在机器人，而在形式。站会机器人不过是一场跟着你钻进 Slack 的会议。\n\n所以 AI Scrum Master 换了路子——它不提问。它直接汇总 Jira、GitHub 和 Slack 里的真实工作动态，替每位成员写站会更新，并把汇报与实际记录不符的地方标出来。它还会持续记住团队的工作方式，用得越久写得越贴。\n\n这背后有个更大的判断：AI 智能体正在以贡献者的身份加入团队并放大产出，但每多一个贡献者，协调成本就增加。瓶颈正从「产出工作」转向「知道发生了什么」。工程主管长期在充当「人形中间件」，在 Slack 里追问进展、对齐 Jira 和 GitHub 的信息、主持一个主要为了搞清楚状况而存在的站会——这部分才是它想吃掉的活。\n\n## 核心功能\n\n1. 自动生成站会更新：从真实工作记录出发替每个人起草进展，不依赖成员手动填写。\n2. 不一致标记：汇报和代码提交、工单状态对不上时主动指出，这是它比传统站会机器人真正多出来的价值。\n3. 团队记忆：持续学习团队怎么协作、怎么表达，让每次汇报更精准。\n4. 异步与实时双模式：既能把草稿 DM 给成员确认后汇总，也能在实时会议中旁听、做笔记、会后出报告。\n5. 报告与定时推送：按计划把汇总报告发到指定频道，报告可在网页应用中浏览、筛选、导出，并另存为 PDF。\n\n## 版本/套餐对比\n\n免费版 0 美元，最多 3 个席位，含 3 个同步频道与 3 份定时报告，且官方标注「全部功能包含」——不是限时试用。Standard 为每席位 6 美元/月，计费口径值得注意：只有参与者占席位，只读成员免费，每席位配 2 个同步频道与 2 份定时报告并在工作区内汇总共享。Enterprise 为定制报价，不限人数、频道与报告量可自定义，并支持 Slack Grid。\n\n需要提醒的是，Troopr 旗下还有 Check-ins、Assistant 等其他产品线，定价与 AI Scrum Master 不同，采购时别看错档位。\n\n## 值不值得用？\n\n优点在于它诊断对了病根。市面上绝大多数站会工具还在优化「怎么把问题问得更巧」，Troopr 直接把提问这一步删掉了——对已经把工作痕迹留在 Jira 和 GitHub 的团队，这确实能省下每天那几分钟乘以每个人的时间，更重要的是省下工程主管到处对信息的精力。免费版给到 3 席位且全功能，小团队试错成本几乎为零。\n\n缺点也清楚。它强依赖 Jira、GitHub 与 Slack 这三个数据源，如果你们的实际工作动态大量发生在别处（比如设计稿、文档、线下），它能看到的就有限，写出来的进展会偏。免费版 3 席位对多数研发团队都不够，一扩张就得付费。还有一点必须强调：AI 从提交记录和工单状态推断进展，是会误读的——一个大重构的分支可能显示为「无进展」，一个改文案的提交也可能被当成实质推进，所以生成的日报仍需人工过目，尤其是要发给管理层的那份。\n\n结论：如果你的团队站会已经沦为形式、而工作痕迹又确实留在 Jira 和 GitHub 里，它值得用免费版认真试一轮。\n\n## 使用建议\n\n1. 先用免费版接一个小组、一个频道，连上 Jira 和 GitHub 跑一周再评估。\n2. 对照实际情况检查它写的进展，尤其看「不一致标记」是否命中真问题。\n3. 明确一条规则：对外或对上的报告必须有人过目后再发。\n4. 扩张前算清席位口径——只读成员免费这一点能显著降低实际成本。\n\n## 适合谁用？\n\n推荐：在 Slack 沟通、用 Jira 跟踪工作、站会已流于形式的研发团队。\n可考虑：管理多个小组、每天要花时间对齐进展的工程主管与项目经理。\n不推荐：不用 Slack 或 Jira 的团队，以及工作痕迹主要不落在代码与工单里的非研发团队。",
-    "published": true,
-    "faq": [
-        {
-            "question": "Troopr AI Scrum Master 有免费版吗？",
-            "answer": "有。免费版 0 美元，最多 3 个席位，包含 3 个同步频道与 3 份定时报告，官方标注全部功能均包含，不是限时试用。超出后 Standard 为每席位 6 美元/月。"
-        },
-        {
-            "question": "它和普通的 Slack 站会机器人有什么不同？",
-            "answer": "普通站会机器人靠向成员提问收集更新，Troopr AI Scrum Master 不提问——它直接汇总 Jira、GitHub 与 Slack 中的真实工作动态替每位成员生成更新，并标记汇报与实际记录不一致的地方。"
-        },
-        {
-            "question": "Troopr AI Scrum Master 需要连接哪些工具？",
-            "answer": "核心是 Slack，数据源包括 Jira（Cloud 与 Data Center）和 GitHub。工作动态越集中在这几个系统里，生成的站会更新就越准确。"
-        },
-        {
-            "question": "它生成的日报可以直接发给管理层吗？",
-            "answer": "不建议直接发。AI 从提交记录与工单状态推断进展存在误读可能，例如大型重构分支可能被判为无进展，因此对外或对上的报告建议人工过目后再发出。"
-        }
-    ],
-    "content_verified": true,
-    "conflict": false,
-    "verify_status": "verified",
-    "seo_keywords": [
-        "Troopr AI Scrum Master",
-        "Troopr怎么样",
-        "Troopr免费版",
-        "Troopr使用教程",
-        "Slack站会机器人哪个好"
-    ],
-    "source_urls": [
-        "https://www.troopr.ai",
-        "https://www.m.aitntnews.com/aiProductDetail.html?productId=23718",
-        "https://ustack.app/zh-TW/products/troopr-check-ins"
-    ],
-    "confidence": "medium",
-    "created_date": "2026-08-14",
-    "updated_date": "2026-08-14",
-    "published_date": "2026-09-02"
+    {
+      "text": "Slack原生"
+    },
+    {
+      "text": "Jira集成"
+    },
+    {
+      "text": "自动站会"
+    }
+  ],
+  "rating": "⭐ 4.2",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://www.troopr.ai",
+  "price": "Free 0 美元（最多 3 个席位，含 3 个同步频道与 3 份定时报告，全部功能可用）；Standard 每席位 6 美元/月（参与者占席、只读成员免费）；Enterprise 定制报价（不限人数、支持 Slack Grid）",
+  "platform": "Slack（可连接 Jira Cloud / Jira Data Center 与 GitHub）",
+  "pros": [
+    "不问问题也能出日报，从 Jira、GitHub、Slack 的真实动态里自动生成更新",
+    "会标记不一致之处，比「和昨天一样」这种敷衍回答有用得多",
+    "持续记住团队的工作方式，用得越久写得越准",
+    "Slack 原生，一键从 Slack App Directory 或 Atlassian Marketplace 安装",
+    "免费版全功能可用且不是试用期，小团队可以长期白用"
+  ],
+  "cons": [
+    "强依赖 Jira、GitHub 与 Slack，工作动态不在这三处的团队价值有限",
+    "免费版仅 3 个席位，团队一扩张就得付费",
+    "AI 生成的进展仍需人工确认，误读提交或工单状态时会传递错误信息"
+  ],
+  "features": [
+    "自动生成站会更新：汇总 Jira、GitHub、Slack 活动，替每位成员起草进展",
+    "不一致标记：发现汇报与实际工作记录不符时主动指出",
+    "团队记忆：持续学习团队的协作方式与表达习惯",
+    "异步与实时双模式：可 DM 发草稿等确认，也可在实时会议中旁听记录并汇总报告",
+    "定时报告：按计划把汇总报告发到指定频道",
+    "报告管理：在网页应用中浏览、筛选、导出报告，可另存为 PDF"
+  ],
+  "related": [
+    "dingtalk",
+    "feishu",
+    "wps-ai"
+  ],
+  "content": "## Troopr AI Scrum Master是什么？\n\nTroopr 做 Slack 站会工具做了很多年，AI Scrum Master 是他们 2026 年 8 月推出的新产品，而这次的出发点是一句自我否定。创始人在发布时说得很坦诚：多年来他们看着同一个循环重复上演——机器人早上 9 点推送提问，所有人切走，到下午 4 点有人敷衍地输入「和昨天一样」。最后他们承认了那件不舒服的事：问题从来不在机器人，而在形式。站会机器人不过是一场跟着你钻进 Slack 的会议。\n\n所以 AI Scrum Master 换了路子——它不提问。它直接汇总 Jira、GitHub 和 Slack 里的真实工作动态，替每位成员写站会更新，并把汇报与实际记录不符的地方标出来。它还会持续记住团队的工作方式，用得越久写得越贴。\n\n这背后有个更大的判断：AI 智能体正在以贡献者的身份加入团队并放大产出，但每多一个贡献者，协调成本就增加。瓶颈正从「产出工作」转向「知道发生了什么」。工程主管长期在充当「人形中间件」，在 Slack 里追问进展、对齐 Jira 和 GitHub 的信息、主持一个主要为了搞清楚状况而存在的站会——这部分才是它想吃掉的活。\n\n## 核心功能\n\n1. 自动生成站会更新：从真实工作记录出发替每个人起草进展，不依赖成员手动填写。\n2. 不一致标记：汇报和代码提交、工单状态对不上时主动指出，这是它比传统站会机器人真正多出来的价值。\n3. 团队记忆：持续学习团队怎么协作、怎么表达，让每次汇报更精准。\n4. 异步与实时双模式：既能把草稿 DM 给成员确认后汇总，也能在实时会议中旁听、做笔记、会后出报告。\n5. 报告与定时推送：按计划把汇总报告发到指定频道，报告可在网页应用中浏览、筛选、导出，并另存为 PDF。\n\n## 版本/套餐对比\n\n免费版 0 美元，最多 3 个席位，含 3 个同步频道与 3 份定时报告，且官方标注「全部功能包含」——不是限时试用。Standard 为每席位 6 美元/月，计费口径值得注意：只有参与者占席位，只读成员免费，每席位配 2 个同步频道与 2 份定时报告并在工作区内汇总共享。Enterprise 为定制报价，不限人数、频道与报告量可自定义，并支持 Slack Grid。\n\n需要提醒的是，Troopr 旗下还有 Check-ins、Assistant 等其他产品线，定价与 AI Scrum Master 不同，采购时别看错档位。\n\n## 值不值得用？\n\n优点在于它诊断对了病根。市面上绝大多数站会工具还在优化「怎么把问题问得更巧」，Troopr 直接把提问这一步删掉了——对已经把工作痕迹留在 Jira 和 GitHub 的团队，这确实能省下每天那几分钟乘以每个人的时间，更重要的是省下工程主管到处对信息的精力。免费版给到 3 席位且全功能，小团队试错成本几乎为零。\n\n缺点也清楚。它强依赖 Jira、GitHub 与 Slack 这三个数据源，如果你们的实际工作动态大量发生在别处（比如设计稿、文档、线下），它能看到的就有限，写出来的进展会偏。免费版 3 席位对多数研发团队都不够，一扩张就得付费。还有一点必须强调：AI 从提交记录和工单状态推断进展，是会误读的——一个大重构的分支可能显示为「无进展」，一个改文案的提交也可能被当成实质推进，所以生成的日报仍需人工过目，尤其是要发给管理层的那份。\n\n结论：如果你的团队站会已经沦为形式、而工作痕迹又确实留在 Jira 和 GitHub 里，它值得用免费版认真试一轮。\n\n## 使用建议\n\n1. 先用免费版接一个小组、一个频道，连上 Jira 和 GitHub 跑一周再评估。\n2. 对照实际情况检查它写的进展，尤其看「不一致标记」是否命中真问题。\n3. 明确一条规则：对外或对上的报告必须有人过目后再发。\n4. 扩张前算清席位口径——只读成员免费这一点能显著降低实际成本。\n\n## 适合谁用？\n\n推荐：在 Slack 沟通、用 Jira 跟踪工作、站会已流于形式的研发团队。\n可考虑：管理多个小组、每天要花时间对齐进展的工程主管与项目经理。\n不推荐：不用 Slack 或 Jira 的团队，以及工作痕迹主要不落在代码与工单里的非研发团队。",
+  "published": true,
+  "faq": [
+    {
+      "question": "Troopr AI Scrum Master 有免费版吗？",
+      "answer": "有。免费版 0 美元，最多 3 个席位，包含 3 个同步频道与 3 份定时报告，官方标注全部功能均包含，不是限时试用。超出后 Standard 为每席位 6 美元/月。"
+    },
+    {
+      "question": "它和普通的 Slack 站会机器人有什么不同？",
+      "answer": "普通站会机器人靠向成员提问收集更新，Troopr AI Scrum Master 不提问——它直接汇总 Jira、GitHub 与 Slack 中的真实工作动态替每位成员生成更新，并标记汇报与实际记录不一致的地方。"
+    },
+    {
+      "question": "Troopr AI Scrum Master 需要连接哪些工具？",
+      "answer": "核心是 Slack，数据源包括 Jira（Cloud 与 Data Center）和 GitHub。工作动态越集中在这几个系统里，生成的站会更新就越准确。"
+    },
+    {
+      "question": "它生成的日报可以直接发给管理层吗？",
+      "answer": "不建议直接发。AI 从提交记录与工单状态推断进展存在误读可能，例如大型重构分支可能被判为无进展，因此对外或对上的报告建议人工过目后再发出。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Troopr AI Scrum Master",
+    "Troopr怎么样",
+    "Troopr免费版",
+    "Troopr使用教程",
+    "Slack站会机器人哪个好"
+  ],
+  "source_urls": [
+    "https://www.troopr.ai",
+    "https://www.m.aitntnews.com/aiProductDetail.html?productId=23718",
+    "https://ustack.app/zh-TW/products/troopr-check-ins"
+  ],
+  "confidence": "medium",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-09-02"
 }

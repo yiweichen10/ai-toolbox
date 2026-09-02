@@ -80,7 +80,7 @@
   ],
   "verified_description": "Grok 4.5 是 xAI（现兼用 SpaceXAI 品牌）于 2026 年 7 月发布的编程向前沿推理模型，500K 上下文，支持函数调用、联网/X 搜索与代码执行，API 定价 $2/$6 每百万 token。",
   "content_flags": "整体尚可，但将 Grok 4.5 描述为'以幽默风格著称的对话模型'偏窄，实为编程向前沿推理模型；定价仅写 Grok+ $25/月，未体现 API $2/$6 每百万 token 的真实计费。",
-  "last_verified": "2026-07-30",
+  "last_verified": "2026-09-03",
   "confidence": "high",
   "conflict": false,
   "price_verified": true,
@@ -120,7 +120,7 @@
     "https://datanorth.ai/news/xai-releases-grok-4-5-coding-focused-model",
     "https://aipricecompare.org/models/grok-4-5.html"
   ],
-  "verify_notes": "Grok 4.5 真实（xAI，2026-07-08 发布），编程向前沿推理模型；原描述'幽默对话模型'偏窄，定价未体现 API $2/$6。",
+  "verify_notes": "scrape 命中官方定价页金额($2/$6 per M), 与记录一致, 无变化",
   "content_verified": true,
   "url_previous": "https://grok.com",
   "compare_section": {
@@ -131,5 +131,6 @@
     ],
     "verdict": "Grok 4.5 与 腾讯混元、星火认知大模型、Mistral AI 同属AI对话赛道。在性价比上，Grok 4.5（API $2/百万输入·$6/百万输出 token（缓存 $0.50）；Grok 应用免费版 + Grok+ $25/月）门槛更低；口碑方面，Grok 4.5（⭐4.7）领先；Grok 4.5 的优势在于xAI 编程向前沿推理模型，500K 上下文，支持工具调用与联网/X 搜索，适合看重该特性的用户。",
     "generated": "2026-07-30"
-  }
+  },
+  "updated_date": "2026-09-03"
 }

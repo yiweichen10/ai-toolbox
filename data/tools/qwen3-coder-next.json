@@ -96,8 +96,8 @@
   ],
   "verified_description": "阿里 Qwen 团队于 2026 年开源的轻量编程智能体模型（基于 Qwen3-Next-80B，激活仅 3B），擅长代码生成、工具调用与长程推理，可自部署或经 API 调用。",
   "content_flags": "price 字段误填为'网页端/API/IDE插件'（非价格）；实为开放权重免费模型，可自部署或经阿里云 API 调用。描述整体准确。",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-09-03",
+  "confidence": "low",
   "conflict": false,
   "price_verified": true,
   "verified_rating": "⭐4.5",
@@ -148,8 +148,8 @@
     "https://www.alibabacloud.com/help/en/model-studio/qwen-coder",
     "https://developer.aliyun.com/article/1710703"
   ],
-  "verify_notes": "原 url 误用 tongyi.aliyun.com/qianwen（通义千问对话页），已纠正为官方博客；price 字段误填平台信息，已纠正。产品真实存在。",
-  "content_verified": true,
+  "verify_notes": "渲染失败(无 pricing 页); WebSearch 确认开源权重免费+API 按量计费, 记录准确, 不回写",
+  "content_verified": false,
   "url_previous": "https://tongyi.aliyun.com/qianwen",
   "compare_section": {
     "competitors": [

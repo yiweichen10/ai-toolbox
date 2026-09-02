@@ -61,8 +61,8 @@
   "verified_what": "开源的 Firebase 替代后端平台（基于 PostgreSQL），提供数据库、认证、存储、实时与 AI（向量搜索、AI 助手）能力。",
   "verified_price": "免费版 $0；Pro $25/月；Team $599/月；Enterprise 定制",
   "verified_platform": "Web, API, 多语言客户端 SDK, 自托管",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-03",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "PostgreSQL 数据库",
@@ -108,8 +108,8 @@
     "https://www.supabase.com/pricing",
     "https://supabase.com/solutions/hosted-postgres"
   ],
-  "verify_notes": "价格字段 $10/月应为 $25/月，已由 price_short 修正。",
-  "content_verified": true,
+  "verify_notes": "scrape 误命中客户案例金额($10M ARR), 非定价页价, 无可用价信号, 不回写",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "anthropic-console",

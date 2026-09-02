@@ -1,5 +1,5 @@
 {
-  "name": "Claude Fable 5",
+  "name": "Claude Fable 5.1",
   "slug": "claude-fable-5",
   "positioning": "AI助手：100 万+长程自主智能体推理",
   "auto_positioning": true,
@@ -47,11 +47,11 @@
   ],
   "faq": [
     {
-      "q": "Claude Fable 5 是写作/故事创作工具吗？",
+      "q": "Claude Fable 5.1 是写作/故事创作工具吗？",
       "a": "不是。它是 Anthropic 的通用旗舰前沿模型（2026-06-09 发布），面向编程与知识工作，并非小说/故事创作专用工具。"
     },
     {
-      "q": "如何获取 Claude Fable 5？",
+      "q": "如何获取 Claude Fable 5.1？",
       "a": "通过 Claude 应用（Pro/Max/Team/Enterprise）或 Claude API（模型名 claude-fable-5），不在免费层。"
     },
     {
@@ -66,7 +66,7 @@
     "Claude Fable 5和ChatGPT哪个好",
     "Claude Fable 5故事创作教程"
   ],
-  "content": "## Claude Fable 5 是什么？\n\nAnthropic 旗舰前沿大语言模型，主打长程智能体推理、复杂编程与知识工作\n\nClaude Fable 5 是 Anthropic 于 2026 年 6 月发布的旗舰级前沿大语言模型，主打长程智能体推理、复杂编程与知识工作，具备自适应思考与 100 万 token 上下文。\n\n## 核心功能\n\n- 长程自主智能体推理（可连续运行数天）\n- 复杂编程与大规模代码迁移\n- 100 万 token 上下文 + 自适应思考\n- 文档/图表/表格视觉理解\n- 内置网络安全与生物安全护栏（触发时回退 Opus 4.8）\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 价格 | API $10/百万输入、$50/百万输出 token（提示缓存享 90% 输入折扣）；Claude 应用内含于 Pro $20/月、Max $100/月、Team/Enterprise，不在免费层 |\n| 支持平台 | Web（claude.ai）、API、Claude 移动端、GitHub Copilot、Harvey |\n| 评分 | ⭐4.6 |\n| 开发商 | Anthropic |\n| 上下文 | 100 万 token 上下文 + 自适应思考 |\n\n## 价格与平台\n\n- **价格**：API $10/百万输入、$50/百万输出 token（提示缓存享 90% 输入折扣）；Claude 应用内含于 Pro $20/月、Max $100/月、Team/Enterprise，不在免费层\n- **平台**：Web（claude.ai）、API、Claude 移动端、GitHub Copilot、Harvey\n- **官网**：https://www.anthropic.com/claude/fable\n\n## 优缺点分析\n\n### 优点\n\n- 前沿级编程与长程推理能力\n- 100 万 token 长上下文\n- 自适应思考，按任务难度调节算力\n\n### 缺点\n\n- 不面向免费层，需 Pro/Max/Team/Enterprise\n- 部分请求触发安全护栏回退\n- API 单价较高（$50/百万输出 token）\n\n## 常见问题（FAQ）\n\n**Claude Fable 5 是写作/故事创作工具吗？**\n\n不是。它是 Anthropic 的通用旗舰前沿模型（2026-06-09 发布），面向编程与知识工作，并非小说/故事创作专用工具。\n\n**如何获取 Claude Fable 5？**\n\n通过 Claude 应用（Pro/Max/Team/Enterprise）或 Claude API（模型名 claude-fable-5），不在免费层。\n\n**定价是多少？**\n\nAPI $10/百万输入、$50/百万输出 token；Claude 应用内含于订阅，不单独计费。\n\n\n## 最终结论\n\nClaude Fable 5 是AI对话领域的一款 AI 工具，其核心优势在于前沿级编程与长程推理能力。\n此外，100 万 token 长上下文。\n\n> 提示：以上数据来源于官方发布与公开评测（已核实）；价格与功能可能调整，请以官方最新信息为准。",
+  "content": "## Claude Fable 5.1 是什么？\n\nAnthropic 旗舰前沿大语言模型，主打长程智能体推理、复杂编程与知识工作\n\nClaude Fable 5.1 是 Anthropic 于 2026 年 9 月 1 日发布的旗舰级前沿大语言模型，接替 6 月 9 日发布的 Fable 5，主打长程智能体推理、复杂编程与知识工作，具备 100 万 token 上下文与自适应思考（默认开启，可按任务难度调节）。API 标识为 claude-fable-5-1。\n\n## 核心功能\n\n- 长程自主智能体推理（可连续运行数天）\n- 复杂编程与大规模代码迁移\n- 100 万 token 上下文（最大输出 12.8 万 token）+ 自适应思考（Fable 5.1 起默认开启）\n- 文档/图表/表格视觉理解\n- 内置网络安全与生物安全护栏（触发时网络安全任务回退 Claude Opus 4.8、生物任务回退 Claude Opus 5）；5.1 起误报显著下降（网安约 -60%、生物/医学约 -85%）\n\n## 关键数据\n\n以下数据来自官方及公开评测信息（已核实）。\n\n| 项目 | 详情 |\n|---|---|\n| 当前版本 | Claude Fable 5.1（2026-09-01 发布，接替 2026-06-09 的 Fable 5；API 标识 claude-fable-5-1） |\n| 价格 | API $10/百万输入、$50/百万输出 token；提示缓存读取 $0.25/百万 token（较 Fable 5 降 75%，官方测算典型负载成本降约 25%、高智能体负载最高降约 45%）；Claude 应用内含于 Pro $20/月、Max $100/月、Team/Enterprise，不在免费层 |\n| 支持平台 | Web（claude.ai）、API、Claude 移动端、GitHub Copilot、Harvey |\n| 评分 | ⭐4.6 |\n| 开发商 | Anthropic |\n| 上下文 | 100 万 token 上下文（最大输出 12.8 万 token）+ 自适应思考 |\n\n## 价格与平台\n\n- **价格**：API $10/百万输入、$50/百万输出 token；提示缓存读取 $0.25/百万 token（较 Fable 5 降 75%，官方测算典型负载成本降约 25%、高智能体负载最高降约 45%）；Claude 应用内含于 Pro $20/月、Max $100/月、Team/Enterprise，不在免费层\n- **平台**：Web（claude.ai）、API、Claude 移动端、GitHub Copilot、Harvey\n- **官网**：https://www.anthropic.com/claude/fable\n\n## 优缺点分析\n\n### 优点\n\n- 前沿级编程与长程推理能力\n- 100 万 token 长上下文\n- 自适应思考，按任务难度调节算力\n\n### 缺点\n\n- 不面向免费层，需 Pro/Max/Team/Enterprise\n- 部分请求触发安全护栏回退；渗透测试、漏洞利用生成、二进制漏洞扫描仍会重定向到 Opus 系列\n- API 单价较高（$50/百万输出 token）\n\n## 常见问题（FAQ）\n\n**Claude Fable 5.1 是写作/故事创作工具吗？**\n\n不是。它是 Anthropic 的通用旗舰前沿模型（当前为 Fable 5.1，2026-09-01 发布；初代 Fable 5 于 2026-06-09 发布），面向编程与知识工作，并非小说/故事创作专用工具。\n\n**如何获取 Claude Fable 5.1？**\n\n通过 Claude 应用（Pro/Max/Team/Enterprise）或 Claude API（当前模型名 claude-fable-5-1；旧版 claude-fable-5 退役不早于 2027-06-09），不在免费层。\n\n**定价是多少？**\n\nAPI $10/百万输入、$50/百万输出 token；提示缓存读取 $0.25/百万 token（较 Fable 5 降 75%）；Claude 应用内含于订阅，不单独计费。\n\n\n## 最终结论\n\nClaude Fable 5.1 是AI对话领域的一款 AI 工具，其核心优势在于前沿级编程与长程推理能力。\n此外，100 万 token 长上下文。\n\n> 提示：以上数据来源于官方发布页与公开评测（2026-09-02 核实，含 anthropic.com/claude/fable 官方页）；价格与功能可能调整，请以官方最新信息为准。\n\n## Claude Fable 版本演进对比\n\n| 对比维度 | Claude Fable 5（2026-06-09） | Claude Fable 5.1（2026-09-01） |\n|------|------|------|\n| API 标识 | claude-fable-5 | claude-fable-5-1 |\n| 输入 / 输出（每百万 token） | $10 / $50 | $10 / $50（不变） |\n| 提示缓存读取（每百万 token） | $1 | $0.25（降 75%） |\n| 上下文 / 最大输出 | 100 万 token / 12.8 万 token | 100 万 token / 12.8 万 token |\n| Terminal-Bench 4.0 | 42.0% | 55.8% |\n| Terminal-Bench-Science 0.1 | 24.7% | 52.6% |\n| AutomationBench | 17.1% | 31.4% |\n| CursorBench 3.2.0 | 70.5% | 73.4% |\n| GDPval-AA v2（Elo） | 1,723 | 1,853 |\n| OSWorld 2.0（strict） | 36.1% | 41.7% |\n| 知识截止 | 2026 年 1 月 | 2026 年 6 月 |\n| 退役时间 | 不早于 2027-06-09 | 不早于 2027-09-01 |\n\n**主要升级点：**\n- 提示缓存读取 $1/百万 → $0.25/百万（降 75%）；官方测算典型负载成本降约 25%，高智能体负载最高降约 45%\n- Terminal-Bench-Science 0.1：24.7% → 52.6%（官方标注标准误 ±3.5–4.5 分）\n- Terminal-Bench 4.0：42.0% → 55.8%\n- 知识截止：2026 年 1 月 → 2026 年 6 月\n- 安全护栏误报显著下降：网络安全场景约 -60%、生物/医学场景约 -85%；漏洞识别由「重定向到 Opus」改为允许（渗透测试/漏洞利用生成/二进制扫描仍重定向）\n- 退役时间：Fable 5 不早于 2027-06-09；Fable 5.1 不早于 2027-09-01\n\n后续若发布更新代（如 5.3 / 6.0），本小节会持续补充各代差异。\n",
   "published": true,
   "created_date": "2026-07-17",
   "published_date": "2026-07-17",
@@ -74,7 +74,7 @@
   "verified_url": "https://www.anthropic.com/claude/fable",
   "verified_publisher": "Anthropic",
   "verified_what": "Anthropic 旗舰级前沿大语言模型（长程 Agent 推理 / 复杂编程）",
-  "verified_price": "API $10/百万输入、$50/百万输出 token（提示缓存享 90% 输入折扣）；Claude 应用内含于 Pro $20/月、Max $100/月、Team/Enterprise，不在免费层",
+  "verified_price": "API $10/百万输入、$50/百万输出 token；提示缓存读取 $0.25/百万 token（较 Fable 5 降 75%，官方测算典型负载成本降约 25%、高智能体负载最高降约 45%）；Claude 应用内含于 Pro $20/月、Max $100/月、Team/Enterprise，不在免费层",
   "verified_platform": "Web（claude.ai）, API, Claude 移动端, Amazon Bedrock, Google Cloud, Microsoft Foundry",
   "verified_features": [
     "长程自主智能体推理（可连续运行数天）",
@@ -84,7 +84,7 @@
     "内置网络安全与生物安全护栏（触发时回退 Opus 系列）"
   ],
   "verified_description": "Claude Fable 5.1 是 Anthropic 于 2026 年 9 月 1 日发布的旗舰级前沿大语言模型，接替 6 月发布的 Fable 5，主打长程智能体推理、复杂编程与知识工作，具备 100 万 token 上下文与自适应思考（默认开启）。相比 Fable 5，它在 Terminal-Bench 4.0 达 55.8%、Agentic Science 达 52.6%（Fable 5 为 24.7%），并把提示缓存读取价降至 $0.25/百万 token（降 75%）。",
-  "content_flags": "关键数据表中价格为 Fable 5 口径（缓存读取未反映 5.1 的 $0.25/百万降价）；已通过 price 字段与描述修正，长文价格表未重写（重写风险高，建议人工复核）",
+  "content_flags": "已于 2026-09-02 同步：长文/FAQ 的 Fable 5.0 口径（发布日期、缓存读取价 $1/百万、模型名 claude-fable-5）已更新为 5.1 口径，并在文末新增「Claude Fable 版本演进对比」小节",
   "last_verified": "2026-09-02",
   "confidence": "high",
   "conflict": false,
@@ -104,11 +104,11 @@
   ],
   "verified_faq": [
     {
-      "q": "Claude Fable 5 是写作/故事创作工具吗？",
+      "q": "Claude Fable 5.1 是写作/故事创作工具吗？",
       "a": "不是。它是 Anthropic 的通用旗舰前沿模型（2026-06-09 发布），面向编程与知识工作，并非小说/故事创作专用工具。"
     },
     {
-      "q": "如何获取 Claude Fable 5？",
+      "q": "如何获取 Claude Fable 5.1？",
       "a": "通过 Claude 应用（Pro/Max/Team/Enterprise）或 Claude API（模型名 claude-fable-5），不在免费层。"
     },
     {
@@ -126,7 +126,10 @@
   "verified_category": "AI对话",
   "source_urls": [
     "https://www.anthropic.com/claude/fable",
-    "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+    "https://claudefa.st/blog/models/claude-fable-5-1",
+    "https://datanorth.ai/news/anthropic-releases-claude-fable-5-1",
+    "https://saassentinel.com/2026/09/02/anthropic-cuts-fable-5-1-cache-costs-by-75-as-new-models-target-agentic-workloads",
+    "https://news.qq.com/rain/a/20260902A06ZQW00"
   ],
   "verify_notes": "无头浏览器渲染 anthropic.com/claude/fable 确认：Fable 5.1 定价 $10/$50 每百万 token，缓存读取 $0.25/百万（降 75%）。页面原为 Fable 5（2026-06），升级为 Fable 5.1。价格字段已更新；长文价格表未重写以避免结构/溯源丢失。",
   "content_verified": true,
@@ -140,5 +143,6 @@
     "verdict": "Claude Fable 5 与 腾讯混元、星火认知大模型、Mistral AI 同属AI对话赛道。若优先性价比，腾讯混元（免费使用，企业API按调用计费）门槛更低；口碑方面，Claude Fable 5（⭐4.6）领先；Claude Fable 5 的优势在于Anthropic 旗舰前沿大语言模型，主打长程智能体推理、复杂编程与知识工作，适合看重该特性的用户。",
     "generated": "2026-07-30"
   },
-  "updated_date": "2026-09-02"
+  "updated_date": "2026-09-02",
+  "content_blocked": false
 }

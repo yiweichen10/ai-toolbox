@@ -68,7 +68,7 @@
   "verified_what": "全球流行的AI写作助手，实时检查语法、拼写与风格，并提供AI改写/生成（GrammarlyGO），覆盖浏览器、文档、桌面与移动端。",
   "verified_price": "免费版（基础语法/拼写/有限AI提示）；Pro $12/成员/月（年付）或 $30/月（月付）；Business $15/席位/月（年付，最少3席）；Enterprise定制。",
   "verified_platform": "Web / 浏览器插件 / Windows / macOS / 移动端（iOS/Android键盘） / Office插件",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-03",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -120,7 +120,7 @@
     "https://stackcompare.net/grammarly-pricing-2026-free-vs-premium-vs-business-full-breakdown",
     "https://www.getpricepulse.com/companies/grammarly-pricing.html"
   ],
-  "verify_notes": "官网grammarly.com确认。原「本地部署」为错误平台描述，应改为云端+多端插件。",
+  "verify_notes": "scrape 命中定价页($0/$12/$30), 与记录一致",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -129,5 +129,6 @@
       "language-tool"
     ],
     "verdict": "Grammarly AI 与 Wordtune、Jenni AI、LanguageTool 同属AI写作赛道：Grammarly AI 的 语法检查 是亮点，价格 免费版 + Pro $12/月（年付）或 $30/月（月付）；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-03"
 }

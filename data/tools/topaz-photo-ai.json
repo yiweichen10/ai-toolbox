@@ -86,7 +86,7 @@
   "verified_what": "Topaz Photo AI 是 Topaz Labs 推出的专业 AI 照片增强桌面软件，主打智能降噪、锐化、去模糊与无损放大，面向摄影师与设计师。",
   "verified_price": "Topaz Photo AI 已转为订阅制：Personal $17/月（或 $199/年）、Pro $50/月（或 $599/年）；亦可随 Topaz Studio 全家桶订阅（$69/月）。提供本地与云端渲染。",
   "verified_platform": "Windows / macOS（桌面端）",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-03",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -144,7 +144,7 @@
     "https://www.topazlabs.com/pricing",
     "https://topazlabs.com/topaz-photo-ai"
   ],
-  "verify_notes": "原数据称“一次性购买$199，订阅$19.99/月”，实际已改为年度订阅（$199/年）且起价约 $17/月；其余功能描述准确，已在校验中修正定价表述。",
+  "verify_notes": "scrape 命中定价页($17-25/mo 区间), 与记录一致",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -153,5 +153,6 @@
       "relume"
     ],
     "verdict": "Topaz Photo AI 与 Clipdrop、Upscayl、Relume 同属AI设计赛道：Topaz Photo AI 的 AI 智能降噪（ISO/彩色噪点） 是亮点，价格 订阅 $17–$50/月（年付 $199–$599）；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-03"
 }

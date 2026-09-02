@@ -78,10 +78,10 @@
   "content": "## Gemini Deep Research 是什么？\n\nGemini Deep Research 是 Google 于 2024 年 12 月随 Gemini 2.0 推出的深度研究智能体，基于 Gemini 系列模型（现为 Gemini 3 世代）。给它一个研究目标，它会自主规划多步搜索路径、反复检索并阅读数十到数百个来源（付费档可跨 Gmail/Drive 等你授权的私有资料），最后交出一份带来源引用的结构化研究报告，而不是一个链接列表。\n\n## 2026年8月最新状态\n\n- **API化 + MCP支持（2026年4月）**：Google 将 Deep Research Agent 通过 **Interactions API** 开放，支持「复杂长时程研究工作流」与**任意 MCP（模型上下文协议）连接**——开发者可把它接入私有数据库、专业数据源和企业知识库，不再限于 Google 自家服务与公开网页。行业普遍视其为研究智能体从消费功能转向企业基础设施的标志。\n- **并入智能体矩阵**：浏览器自动化原型 Project Mariner 已于 2026 年 5 月 4 日关闭独立入口，技术并入 **Gemini Agent** 与 Chrome Auto Browse；Deep Research（检索+综合+报告）与 Gemini Agent（跨应用执行）、Antigravity（编码智能体，2026年6月取代独立 Gemini CLI）、Gemini Spark（I/O 2026 发布的 24/7 后台智能体）构成 Gemini 智能体层。\n- **计费改为算力制**：不再按每日固定 prompt 数，按请求实际算力消耗计额度，每 5 小时刷新直至周上限；Pro/Ultra 重度用户可购买按量加油包而不必等重置。\n- **档位差异**：Deep Research 所有计划可用（含免费档，次数受限）；付费档放宽研究次数与来源数量；Ultra 用户额外获得自动生成图表/示意图与跨应用研究整合。\n\n## 核心功能\n\n- **自主多步研究**：先展示研究计划供你修改，确认后执行长任务\n- **带引用报告**：结论逐条挂来源链接，可回溯验证\n- **连接私有资料**：授权后检索你的 Gmail、Drive 等 Google 生态数据\n- **Interactions API**：有状态多步会话端点，支持MCP外部数据源\n- **多模态输出**：报告可自动生成图表、对比表（Ultra）\n\n## 优缺点分析\n\n### 👍 优点\n- 与 Google 搜索索引深度绑定，广域检索质量高\n- 研究计划可编辑，过程透明可控\n- API+MCP 开放后成为可组装的企业级组件\n\n### 👎 缺点\n- 免费档额度紧张，重度使用必须订阅\n- 中文语料检索深度弱于秘塔等本土工具\n- 长任务偶发中途失败需重跑\n\n## 适合人群\n\n需要跨源综合调研的分析师、学生、开发者（走API+MCP接入私有数据），以及深度绑定 Google Workspace 生态的用户。\n\n### 与同类产品怎么选\n\nOpenAI 的 Deep Research、Perplexity Research 与它同定位。选择逻辑：资料在 Google 生态里选 Deep Research；需要中文/学术文献选秘塔或 Elicit；需要接入企业私有系统做定制工作流，Interactions API + MCP 是目前开放度最高的一条路。\n",
   "published": true,
   "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/deep-research-agent-gemini-api/",
-  "last_verified": "2026-08-27",
-  "confidence": "high",
+  "last_verified": "2026-09-03",
+  "confidence": "medium",
   "conflict": false,
-  "content_verified": true,
+  "content_verified": false,
   "conflict_note": "",
   "verified_url": "https://gemini.google.com",
   "verified_publisher": "Google（Google DeepMind / Alphabet）",
@@ -139,7 +139,7 @@
     "https://sypalo.com/what-is-gemini",
     "https://siuleeboss.com/ai-news/project-mariner-browser-agent-2026-08-24"
   ],
-  "verify_notes": "2026-08-27 全量重写：补2026-04 Interactions API+任意MCP支持、Project Mariner 2026-05-04关停并入Gemini Agent、算力制计费（5小时刷新+周上限+加油包）、Antigravity取代Gemini CLI（2026-06-18）、全计划可用与Ultra差异（TheAgentTimes/sypalo/dev.to多源交叉）。",
+  "verify_notes": "gemini.google.com 需登录, 无公开定价页金额, 不回写, 待人工",
   "compare_section": {
     "competitors": [
       "perplexity",

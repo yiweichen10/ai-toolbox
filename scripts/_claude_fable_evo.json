@@ -1,0 +1,49 @@
+{
+  "brand": "Claude Fable",
+  "improvement_notes": [
+    "提示缓存读取 $1/百万 → $0.25/百万（降 75%）；官方测算典型负载成本降约 25%，高智能体负载最高降约 45%",
+    "Terminal-Bench-Science 0.1：24.7% → 52.6%（官方标注标准误 ±3.5–4.5 分）",
+    "Terminal-Bench 4.0：42.0% → 55.8%",
+    "知识截止：2026 年 1 月 → 2026 年 6 月",
+    "安全护栏误报显著下降：网络安全场景约 -60%、生物/医学场景约 -85%；漏洞识别由「重定向到 Opus」改为允许（渗透测试/漏洞利用生成/二进制扫描仍重定向）",
+    "退役时间：Fable 5 不早于 2027-06-09；Fable 5.1 不早于 2027-09-01"
+  ],
+  "versions": [
+    {
+      "name": "Claude Fable 5",
+      "date": "2026-06-09",
+      "specs": {
+        "API 标识": "claude-fable-5",
+        "输入 / 输出（每百万 token）": "$10 / $50",
+        "提示缓存读取（每百万 token）": "$1",
+        "上下文 / 最大输出": "100 万 token / 12.8 万 token",
+        "Terminal-Bench 4.0": "42.0%",
+        "Terminal-Bench-Science 0.1": "24.7%",
+        "AutomationBench": "17.1%",
+        "CursorBench 3.2.0": "70.5%",
+        "GDPval-AA v2（Elo）": "1,723",
+        "OSWorld 2.0（strict）": "36.1%",
+        "知识截止": "2026 年 1 月",
+        "退役时间": "不早于 2027-06-09"
+      }
+    },
+    {
+      "name": "Claude Fable 5.1",
+      "date": "2026-09-01",
+      "specs": {
+        "API 标识": "claude-fable-5-1",
+        "输入 / 输出（每百万 token）": "$10 / $50（不变）",
+        "提示缓存读取（每百万 token）": "$0.25（降 75%）",
+        "上下文 / 最大输出": "100 万 token / 12.8 万 token",
+        "Terminal-Bench 4.0": "55.8%",
+        "Terminal-Bench-Science 0.1": "52.6%",
+        "AutomationBench": "31.4%",
+        "CursorBench 3.2.0": "73.4%",
+        "GDPval-AA v2（Elo）": "1,853",
+        "OSWorld 2.0（strict）": "41.7%",
+        "知识截止": "2026 年 6 月",
+        "退役时间": "不早于 2027-09-01"
+      }
+    }
+  ]
+}

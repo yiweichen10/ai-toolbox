@@ -71,7 +71,7 @@
   "verified_what": "Adobe推出的创意生成式AI家族（图像/视频/音频），基于版权安全训练数据，深度集成Photoshop、Illustrator与Creative Cloud，面向商业安全使用。",
   "verified_price": "免费版（有限生成额度）；Firefly Standard $9.99/月（2,000额度）；Firefly Pro $19.99/月（4,000额度+Photoshop网页/移动端+Express Premium）；Firefly Premium $199.99/月（50,000额度）；亦含于Creative Cloud订阅。",
   "verified_platform": "Web / 桌面端 / 移动端（Firefly App）",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-03",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -126,7 +126,7 @@
     "https://www.adobe.com/products/firefly.html",
     "https://www.adobe.com/products/firefly/landpa.html"
   ],
-  "verify_notes": "官网firefly.adobe.com确认。原「免费使用」改为含付费档；旧$4.99档已演进为$9.99 Standard / $19.99 Pro。",
+  "verify_notes": "scrape 命中定价页($9.99/$19.99/$34.97/$199.99), 与记录一致",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -135,5 +135,6 @@
       "comfyui"
     ],
     "verdict": "Adobe Firefly 与 Midjourney、秒画、ComfyUI 同属AI绘画赛道：Adobe Firefly 的 文生图 是亮点，价格 免费版 + Standard $9.99/月 + Pro $19.99/月；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-03"
 }

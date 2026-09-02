@@ -1,98 +1,98 @@
 {
-    "name": "reverse-skill",
-    "slug": "reverse-skill",
-    "positioning": "reverse-skill是什么？给Claude Code用的开源安全逆向技能包好用吗",
-    "auto_positioning": false,
-    "emoji": "🕶️",
-    "color": "#DC2626",
-    "description": "reverse-skill 是一个 GitHub 开源的安全技能路由包——不是独立工具，而是给 coding agent 用的方法论与配置集合，支持 Claude Code、Codex CLI、Cursor、Kiro、Cline 等客户端。它覆盖 APK、二进制、前端 JS 加密、固件、Pwn、恶意样本与 CTF 等 20+ 场景，先做工具索引与授权门禁，再按「方法论—脚本—证据—报告」组织工作流，目的是让 agent 别凭感觉乱试命令。2026 年 8 月登上 GitHub Trending 日榜。",
-    "category": "AI编程",
-    "tags": [
-        {
-            "text": "免费可用",
-            "type": "free"
-        },
-        {
-            "text": "开源插件"
-        },
-        {
-            "text": "安全研究"
-        },
-        {
-            "text": "技能路由"
-        }
-    ],
-    "rating": "⭐ 4.5",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "hot",
-        "text": "HOT"
+  "name": "reverse-skill",
+  "slug": "reverse-skill",
+  "positioning": "reverse-skill是什么？给Claude Code用的开源安全逆向技能包好用吗",
+  "auto_positioning": false,
+  "emoji": "🕶️",
+  "color": "#DC2626",
+  "description": "reverse-skill 是一个 GitHub 开源的安全技能路由包——不是独立工具，而是给 coding agent 用的方法论与配置集合，支持 Claude Code、Codex CLI、Cursor、Kiro、Cline 等客户端。它覆盖 APK、二进制、前端 JS 加密、固件、Pwn、恶意样本与 CTF 等 20+ 场景，先做工具索引与授权门禁，再按「方法论—脚本—证据—报告」组织工作流，目的是让 agent 别凭感觉乱试命令。2026 年 8 月登上 GitHub Trending 日榜。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "免费可用",
+      "type": "free"
     },
-    "url": "https://github.com/zhaoxuya520/reverse-skill",
-    "price": "免费开源（主仓库 MIT，其中不同子项目各自持有独立许可证）；本体不含模型，实际成本取决于你所用 coding agent 的模型开销",
-    "platform": "Windows / Linux / macOS / Kali Linux；需自备 coding agent 客户端（Claude Code、Codex CLI、Cursor、Kiro、Cline 等）以及 Java/JDK、Node.js 22.12+、Python 3.x",
-    "pros": [
-        "把资深安全工程师的方法论打包成 agent 能读懂的路由表和 playbook，让它从「瞎试命令」变成「按套路走」",
-        "授权门禁放在动手之前：先定 scope 与网络画像，未就绪不碰目标，合规意识到位",
-        "场景覆盖极广：APK、iOS、二进制、JS 加密、固件、Pwn、恶意样本、LLM 安全等 20+ 技能包，CTF 另含 40+ 子技能",
-        "经验会沉淀：时间线、证据链与发现路径都记成实战日志，同类目标下次直接站在上次结果上",
-        "客户端无关，Claude Code、Codex CLI、Cursor、Kiro、Cline 都能用，特定客户端适配层是可选加项而非依赖"
-    ],
-    "cons": [
-        "安装成本不低：Java、Node.js 22.12+、Python 以及 Kali 那套工具链都得先备齐",
-        "它只提供方法论与路由，实际能力仍取决于本机装了哪些工具、以及你用的模型强度",
-        "严格限于逆向、授权渗透与安全研究场景，没有授权的目标不能碰，误用有法律风险"
-    ],
-    "features": [
-        "路由先行：RULES.md 与 MASTER-ROUTING 先判断任务该走哪个技能包，避免 agent 上手乱试",
-        "三层授权门禁：case-init 与 scope.md 先确认授权范围与网络配置，未就绪不对目标动手",
-        "工具链自举：按平台执行 refresh-tool-index 脚本生成本机工具索引，缺什么按需补",
-        "20+ 场景技能包：apk-reverse、ida-reverse、radare2、js-reverse、firmware-pentest、pwn-chain、malware-analysis、llm-security 等",
-        "CTF 编排器：CTF-Sandbox-Orchestrator 下含 40+ 子技能，自动判题型并路由到对应解题 playbook",
-        "证据链与报告：按 Evidence → Finding → Path 留可复核记录，再经 docs-generator / diagram-generator 出图出报告"
-    ],
-    "related": [
-        "claude-code",
-        "cline",
-        "agent-skills"
-    ],
-    "content": "## reverse-skill是什么？\n\n先说清楚定位：reverse-skill 不是一个能独立运行的安全工具，它是一个 GitHub 开源的技能路由包——本质上是一堆写给 coding agent 读的 Markdown 方法论、路由规则和辅助脚本。你得先有 Claude Code、Codex CLI、Cursor、Kiro 或 Cline 这类客户端，把这套包挂上去，它才起作用。\n\n它要解决的痛点很具体。AI 编程助手在通用开发上很能干，但一碰安全就抓瞎：拿到一个 APK，它不知道该用 jadx 还是 apktool，该 Frida 注入还是 IDA 静态看；碰到加密的请求参数，它可能到处下断点然后跟丢。reverse-skill 等于给 agent 塞了一本安全攻防手册加一张路由表：先判断这是什么类型的任务，路由到对应技能包，检查本机有哪些工具可用，然后按写好的 playbook 一步步走。2026 年 8 月它登上 GitHub Trending 日榜，当时 all-language 榜单显示约 1.58 万 star、2,229 forks，窗口期新增 2,446 星。\n\n## 核心功能\n\n1. 路由先行。这是它的核心设计原则：先过 RULES.md 的全局路由规则和 MASTER-ROUTING 主路由阶梯，确定任务归属，再动手。routing.md 里维护着完整的场景到技能的映射矩阵。\n2. 三层授权门禁。动手之前先跑 case-init，写清 scope.md——授权范围、网络画像都得就绪，否则不对目标操作。这一点我认为是整个项目最值得称赞的设计：合规不是免责声明里的一句话，而是流程上的硬关卡。\n3. 工具链自举。按平台执行 refresh-tool-index 脚本（Windows 走 PowerShell、Linux/macOS 走 bash、Kali 有专用脚本），生成 skills/tool-index.md 记录本机检测到哪些工具，缺的按需补，而不是假装工具都在。\n4. 20+ 场景技能包。apk-reverse 管 Android，ida-reverse 和 radare2 分别处理 Windows 与 Linux 二进制，js-reverse 对付前端签名与加密参数，还有 firmware-pentest（固件/IoT）、pwn-chain、malware-analysis、patch-diff-exploit、edr-bypass-re、llm-security 等。\n5. CTF 编排器。CTF-Sandbox-Orchestrator 下有 40+ 子技能，覆盖 Pwn、Web、Crypto、Reverse、Misc 各类题型，系统自动判题型并路由到对应解题 playbook，每种题型都有自己的检查清单和工具调用顺序。\n6. 证据链与报告。按 Evidence → Finding → Path 的结构留可复核记录，再交给 docs-generator 和 diagram-generator 出报告与图表。这一步让 agent 的输出从「它说它发现了什么」变成「有链路可查」。\n\n## 版本/套餐对比\n\n主仓库 MIT 开源，免费，没有商业版本。要注意的是仓库里不同子项目各自持有独立许可证，商用前建议逐个确认。它本身不含模型，实际花费取决于你用的 coding agent——模型和 token 费用还是走你自己的账。前置条件要提前备好：Java/JDK（jadx、apktool 需要）、Node.js 22.12+（JS 工具链与 MCP 服务器）、Python 3.x（Frida 与辅助脚本），再加一个 AI 编码客户端。平台侧提供 Windows、Ubuntu/Debian、macOS 和 Kali Linux 的部署文档，Kali 有专门的目录和脚本。\n\n## 值不值得用？\n\n对安全从业者来说值得，而且它的价值不在「多了个工具」，在于把不确定性收掉。AI agent 在安全场景最大的问题就是不可预测——同一个 APK 分析两次可能走两条完全不同的路，中间还夹着几条乱试的命令。这套包用路由先行加固定 playbook 把这件事变得可重复，再配上证据链，输出才有交付价值。40+ CTF 子技能和自动沉淀的实战日志，对安全学习者和红队选手也是实打实的生产力。\n\n要提醒的还是三点。一是安装成本，Kali 工具链加 Java、Node、Python 一套装下来不轻松，别指望克隆完就能跑。二是它只给方法论，本机没装 IDA 就没法做 IDA 该做的事，能力上限还是取决于工具和模型。三是边界——项目明确面向逆向、授权渗透测试和安全研究，没有授权的目标不该拿来试，这不是免责套话，是真的会有法律后果。\n\n## 使用建议\n\n1. 克隆后第一件事是刷新工具索引，然后打开 skills/tool-index.md 确认检测结果，再决定要补装什么。\n2. 让 AI 客户端先读一遍 README_AI.md 和 RULES.md，它才知道该怎么用这套包，跳过这步等于没装。\n3. 第一次试用请用自建的 CTF 环境或自己写的测试 APK，别拿真实目标练手。\n4. 观察它是否老老实实建立了 scope、授权和网络配置。如果这一步被跳过，说明配置没生效，要回头查。\n5. 检查产出能不能沿 Evidence → Finding → Path 复核。这是判断它到底是在按流程走还是在编结果的最好办法。\n6. 把它当流程实验，别当「万能扫描按钮」。它优化的是方法论一致性，不是替你做判断。\n\n## 适合谁用？\n\n推荐：渗透测试工程师、逆向工程师、恶意样本分析师和红队成员——尤其是希望 AI 辅助但受不了它乱试命令的人。\n可考虑：CTF 选手（40+ 子技能相当于一个不眠的陪练）、安全教育者，以及需要可重复侦察与利用流程的赏金猎人。\n不推荐：没有安全背景的普通开发者（工具链门槛太高、且容易误用）；不愿意准备 Java/Node/Python 环境的人；以及任何打算用它碰未授权目标的场景——这既违反项目意图，也违法。",
-    "published": true,
-    "faq": [
-        {
-            "question": "reverse-skill 是一个独立的安全工具吗？",
-            "answer": "不是。它是一个开源的技能路由包，本质是写给 coding agent 读的方法论文档、路由规则与辅助脚本，需要配合 Claude Code、Codex CLI、Cursor、Kiro、Cline 等 AI 编码客户端使用，本身不执行分析，也不自带模型。"
-        },
-        {
-            "question": "使用 reverse-skill 需要准备什么环境？",
-            "answer": "需要 Java/JDK（供 jadx、apktool）、Node.js 22.12+（JS 工具链与 MCP 服务器）、Python 3.x（Frida 与辅助脚本），以及一个 AI 编码客户端。克隆仓库后按平台执行 refresh-tool-index 脚本生成本机工具索引，Windows 用 PowerShell 脚本，Linux/macOS 用 bash，Kali 有专用脚本。"
-        },
-        {
-            "question": "它覆盖哪些安全场景？",
-            "answer": "20+ 技能包，包括 APK/Android 逆向、iOS 移动端、二进制逆向（IDA / radare2）、前端 JS 签名与加密参数、固件与 IoT、渗透测试与漏洞扫描、Pwn 利用、恶意样本分析、补丁差分、EDR 绕过、LLM 安全等；CTF 另有 CTF-Sandbox-Orchestrator 下的 40+ 子技能。"
-        },
-        {
-            "question": "用它做安全测试合法吗？",
-            "answer": "项目明确面向逆向工程、已授权的渗透测试与安全研究，并在流程上把授权检查（scope）设为动手前的硬门禁，强调未就绪不操作目标。但工具本身不能为你的行为免责——对没有授权的目标使用仍属违法，务必在合法授权范围内使用。"
-        }
-    ],
-    "content_verified": true,
-    "conflict": false,
-    "verify_status": "verified",
-    "seo_keywords": [
-        "reverse-skill",
-        "reverse-skill怎么用",
-        "Claude Code 安全技能包",
-        "AI逆向分析工具",
-        "reverse-skill 安装教程"
-    ],
-    "source_urls": [
-        "https://github.com/zhaoxuya520/reverse-skill",
-        "https://pyshine.com/Reverse-Skill-Agent-Cybersecurity-Router/",
-        "https://neodrop.ai/zh-cn/post/Onn-JGH7XxU"
-    ],
-    "confidence": "high",
-    "created_date": "2026-08-14",
-    "updated_date": "2026-08-14",
-    "published_date": "2026-09-02"
+    {
+      "text": "开源插件"
+    },
+    {
+      "text": "安全研究"
+    },
+    {
+      "text": "技能路由"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/zhaoxuya520/reverse-skill",
+  "price": "免费开源（主仓库 MIT，其中不同子项目各自持有独立许可证）；本体不含模型，实际成本取决于你所用 coding agent 的模型开销",
+  "platform": "Windows / Linux / macOS / Kali Linux；需自备 coding agent 客户端（Claude Code、Codex CLI、Cursor、Kiro、Cline 等）以及 Java/JDK、Node.js 22.12+、Python 3.x",
+  "pros": [
+    "把资深安全工程师的方法论打包成 agent 能读懂的路由表和 playbook，让它从「瞎试命令」变成「按套路走」",
+    "授权门禁放在动手之前：先定 scope 与网络画像，未就绪不碰目标，合规意识到位",
+    "场景覆盖极广：APK、iOS、二进制、JS 加密、固件、Pwn、恶意样本、LLM 安全等 20+ 技能包，CTF 另含 40+ 子技能",
+    "经验会沉淀：时间线、证据链与发现路径都记成实战日志，同类目标下次直接站在上次结果上",
+    "客户端无关，Claude Code、Codex CLI、Cursor、Kiro、Cline 都能用，特定客户端适配层是可选加项而非依赖"
+  ],
+  "cons": [
+    "安装成本不低：Java、Node.js 22.12+、Python 以及 Kali 那套工具链都得先备齐",
+    "它只提供方法论与路由，实际能力仍取决于本机装了哪些工具、以及你用的模型强度",
+    "严格限于逆向、授权渗透与安全研究场景，没有授权的目标不能碰，误用有法律风险"
+  ],
+  "features": [
+    "路由先行：RULES.md 与 MASTER-ROUTING 先判断任务该走哪个技能包，避免 agent 上手乱试",
+    "三层授权门禁：case-init 与 scope.md 先确认授权范围与网络配置，未就绪不对目标动手",
+    "工具链自举：按平台执行 refresh-tool-index 脚本生成本机工具索引，缺什么按需补",
+    "20+ 场景技能包：apk-reverse、ida-reverse、radare2、js-reverse、firmware-pentest、pwn-chain、malware-analysis、llm-security 等",
+    "CTF 编排器：CTF-Sandbox-Orchestrator 下含 40+ 子技能，自动判题型并路由到对应解题 playbook",
+    "证据链与报告：按 Evidence → Finding → Path 留可复核记录，再经 docs-generator / diagram-generator 出图出报告"
+  ],
+  "related": [
+    "claude-code",
+    "cline",
+    "agent-skills"
+  ],
+  "content": "## reverse-skill是什么？\n\n先说清楚定位：reverse-skill 不是一个能独立运行的安全工具，它是一个 GitHub 开源的技能路由包——本质上是一堆写给 coding agent 读的 Markdown 方法论、路由规则和辅助脚本。你得先有 Claude Code、Codex CLI、Cursor、Kiro 或 Cline 这类客户端，把这套包挂上去，它才起作用。\n\n它要解决的痛点很具体。AI 编程助手在通用开发上很能干，但一碰安全就抓瞎：拿到一个 APK，它不知道该用 jadx 还是 apktool，该 Frida 注入还是 IDA 静态看；碰到加密的请求参数，它可能到处下断点然后跟丢。reverse-skill 等于给 agent 塞了一本安全攻防手册加一张路由表：先判断这是什么类型的任务，路由到对应技能包，检查本机有哪些工具可用，然后按写好的 playbook 一步步走。2026 年 8 月它登上 GitHub Trending 日榜，当时 all-language 榜单显示约 1.58 万 star、2,229 forks，窗口期新增 2,446 星。\n\n## 核心功能\n\n1. 路由先行。这是它的核心设计原则：先过 RULES.md 的全局路由规则和 MASTER-ROUTING 主路由阶梯，确定任务归属，再动手。routing.md 里维护着完整的场景到技能的映射矩阵。\n2. 三层授权门禁。动手之前先跑 case-init，写清 scope.md——授权范围、网络画像都得就绪，否则不对目标操作。这一点我认为是整个项目最值得称赞的设计：合规不是免责声明里的一句话，而是流程上的硬关卡。\n3. 工具链自举。按平台执行 refresh-tool-index 脚本（Windows 走 PowerShell、Linux/macOS 走 bash、Kali 有专用脚本），生成 skills/tool-index.md 记录本机检测到哪些工具，缺的按需补，而不是假装工具都在。\n4. 20+ 场景技能包。apk-reverse 管 Android，ida-reverse 和 radare2 分别处理 Windows 与 Linux 二进制，js-reverse 对付前端签名与加密参数，还有 firmware-pentest（固件/IoT）、pwn-chain、malware-analysis、patch-diff-exploit、edr-bypass-re、llm-security 等。\n5. CTF 编排器。CTF-Sandbox-Orchestrator 下有 40+ 子技能，覆盖 Pwn、Web、Crypto、Reverse、Misc 各类题型，系统自动判题型并路由到对应解题 playbook，每种题型都有自己的检查清单和工具调用顺序。\n6. 证据链与报告。按 Evidence → Finding → Path 的结构留可复核记录，再交给 docs-generator 和 diagram-generator 出报告与图表。这一步让 agent 的输出从「它说它发现了什么」变成「有链路可查」。\n\n## 版本/套餐对比\n\n主仓库 MIT 开源，免费，没有商业版本。要注意的是仓库里不同子项目各自持有独立许可证，商用前建议逐个确认。它本身不含模型，实际花费取决于你用的 coding agent——模型和 token 费用还是走你自己的账。前置条件要提前备好：Java/JDK（jadx、apktool 需要）、Node.js 22.12+（JS 工具链与 MCP 服务器）、Python 3.x（Frida 与辅助脚本），再加一个 AI 编码客户端。平台侧提供 Windows、Ubuntu/Debian、macOS 和 Kali Linux 的部署文档，Kali 有专门的目录和脚本。\n\n## 值不值得用？\n\n对安全从业者来说值得，而且它的价值不在「多了个工具」，在于把不确定性收掉。AI agent 在安全场景最大的问题就是不可预测——同一个 APK 分析两次可能走两条完全不同的路，中间还夹着几条乱试的命令。这套包用路由先行加固定 playbook 把这件事变得可重复，再配上证据链，输出才有交付价值。40+ CTF 子技能和自动沉淀的实战日志，对安全学习者和红队选手也是实打实的生产力。\n\n要提醒的还是三点。一是安装成本，Kali 工具链加 Java、Node、Python 一套装下来不轻松，别指望克隆完就能跑。二是它只给方法论，本机没装 IDA 就没法做 IDA 该做的事，能力上限还是取决于工具和模型。三是边界——项目明确面向逆向、授权渗透测试和安全研究，没有授权的目标不该拿来试，这不是免责套话，是真的会有法律后果。\n\n## 使用建议\n\n1. 克隆后第一件事是刷新工具索引，然后打开 skills/tool-index.md 确认检测结果，再决定要补装什么。\n2. 让 AI 客户端先读一遍 README_AI.md 和 RULES.md，它才知道该怎么用这套包，跳过这步等于没装。\n3. 第一次试用请用自建的 CTF 环境或自己写的测试 APK，别拿真实目标练手。\n4. 观察它是否老老实实建立了 scope、授权和网络配置。如果这一步被跳过，说明配置没生效，要回头查。\n5. 检查产出能不能沿 Evidence → Finding → Path 复核。这是判断它到底是在按流程走还是在编结果的最好办法。\n6. 把它当流程实验，别当「万能扫描按钮」。它优化的是方法论一致性，不是替你做判断。\n\n## 适合谁用？\n\n推荐：渗透测试工程师、逆向工程师、恶意样本分析师和红队成员——尤其是希望 AI 辅助但受不了它乱试命令的人。\n可考虑：CTF 选手（40+ 子技能相当于一个不眠的陪练）、安全教育者，以及需要可重复侦察与利用流程的赏金猎人。\n不推荐：没有安全背景的普通开发者（工具链门槛太高、且容易误用）；不愿意准备 Java/Node/Python 环境的人；以及任何打算用它碰未授权目标的场景——这既违反项目意图，也违法。",
+  "published": true,
+  "faq": [
+    {
+      "question": "reverse-skill 是一个独立的安全工具吗？",
+      "answer": "不是。它是一个开源的技能路由包，本质是写给 coding agent 读的方法论文档、路由规则与辅助脚本，需要配合 Claude Code、Codex CLI、Cursor、Kiro、Cline 等 AI 编码客户端使用，本身不执行分析，也不自带模型。"
+    },
+    {
+      "question": "使用 reverse-skill 需要准备什么环境？",
+      "answer": "需要 Java/JDK（供 jadx、apktool）、Node.js 22.12+（JS 工具链与 MCP 服务器）、Python 3.x（Frida 与辅助脚本），以及一个 AI 编码客户端。克隆仓库后按平台执行 refresh-tool-index 脚本生成本机工具索引，Windows 用 PowerShell 脚本，Linux/macOS 用 bash，Kali 有专用脚本。"
+    },
+    {
+      "question": "它覆盖哪些安全场景？",
+      "answer": "20+ 技能包，包括 APK/Android 逆向、iOS 移动端、二进制逆向（IDA / radare2）、前端 JS 签名与加密参数、固件与 IoT、渗透测试与漏洞扫描、Pwn 利用、恶意样本分析、补丁差分、EDR 绕过、LLM 安全等；CTF 另有 CTF-Sandbox-Orchestrator 下的 40+ 子技能。"
+    },
+    {
+      "question": "用它做安全测试合法吗？",
+      "answer": "项目明确面向逆向工程、已授权的渗透测试与安全研究，并在流程上把授权检查（scope）设为动手前的硬门禁，强调未就绪不操作目标。但工具本身不能为你的行为免责——对没有授权的目标使用仍属违法，务必在合法授权范围内使用。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "reverse-skill",
+    "reverse-skill怎么用",
+    "Claude Code 安全技能包",
+    "AI逆向分析工具",
+    "reverse-skill 安装教程"
+  ],
+  "source_urls": [
+    "https://github.com/zhaoxuya520/reverse-skill",
+    "https://pyshine.com/Reverse-Skill-Agent-Cybersecurity-Router/",
+    "https://neodrop.ai/zh-cn/post/Onn-JGH7XxU"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-09-02"
 }

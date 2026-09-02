@@ -74,8 +74,8 @@
   "verified_what": "Runway 推出的对话式 AI 视频创作 Agent（2026-05-13 发布），一句话描述需求即可自动完成从概念到成片的完整视频制作流程",
   "verified_price": "Runway Agent 面向所有 Runway 订阅用户开放。Runway 定价：Free $0（125一次性积分）、Standard $15/月（$12/月年付，625积分/月）、Pro $35/月（$28/月年付，2,250积分/月）、Max $95/月（$76/月年付，9,500积分/月）、Enterprise 定制。Agent 生成视频消耗 Credits。",
   "verified_platform": "Web",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-09-03",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "对话式视频创作：用自然语言描述需求即可启动",
@@ -133,8 +133,8 @@
     "https://makefun.ai/runway-agent-ai-video-generator",
     "https://ponpon.ai/pt/blog/runway-gen-4-5-agent-characters-may-2026"
   ],
-  "verify_notes": "url(runwayml.com) 正确。Runway Agent 是确认存在的官方产品（2026-05-13发布）。现有 description、features、pros/cons 均准确。Content 中 'Unlimited' 已更名为 'Max'，需更新。price_short 准确。",
-  "content_verified": true,
+  "verify_notes": "scrape 误命中客户案例金额($200K/$100M), 非定价页价, 无可用价信号, 不回写",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "crew-ai",

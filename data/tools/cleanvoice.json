@@ -59,7 +59,7 @@
   "verified_what": "AI 音频清理与增强工具，自动去除录音中的填充词、口头禅、嘴音、呼吸声与静音，并提供 Studio Sound 音质增强、转录与总结，主要服务播客与视频创作者。",
   "verified_price": "免费试用（30 分钟音频，无需信用卡）；按量：5 小时 $11、10 小时 $20、30 小时 $45（积分 2 年有效）；订阅：10 小时/月 $11、30 小时/月 $30、100 小时/月 $90；企业版（200+ 小时）定制。",
   "verified_platform": "Web、API（开发者 SDK/API，非移动 App）",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-03",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -109,7 +109,7 @@
     "https://cleanvoice.ai/blog/podcast-editing-software-stack",
     "https://aitoolsatlas.ai/tools/cleanvoice-ai/pricing"
   ],
-  "verify_notes": "价格以官网 2026 年定价为准（欧元计价，约 $11 起）；移动端 App 未证实。",
+  "verify_notes": "scrape 命中定价页(€10/mo 起), 与记录一致",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -118,5 +118,6 @@
       "udio"
     ],
     "verdict": "Cleanvoice 与 Krisp、ElevenLabs、Udio 同属AI音频赛道：Cleanvoice 的 填充词去除（嗯/啊等，多语言） 是亮点，价格 免费试用；订阅约 $11/月起（10 小时/月）；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-03"
 }

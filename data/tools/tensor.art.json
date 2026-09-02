@@ -62,8 +62,8 @@
   "verified_what": "云端 Stable Diffusion / FLUX 生图平台与模型社区，无需本地 GPU 即可使用上万社区模型与 LoRA。",
   "verified_price": "免费版（每日 50–200 额度，各来源不一）；Pro $9.90/月（300 每日额度 + 1000 赠送），另有 Boost $9.99/月、季度/年付与一次性积分包（如 $29.90/万积分）。",
   "verified_platform": "Web",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-03",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "云端 SD / FLUX 文生图",
@@ -114,8 +114,8 @@
     "https://aigearbase.com/tool/tensorart",
     "https://toolchase.com/tool/tensor-art"
   ],
-  "verify_notes": "baseline 大致准确，仅定价细节与官方略有差异，已校正。",
-  "content_verified": true,
+  "verify_notes": "渲染失败; WebSearch 确认 免费+Pro $9.9/mo, 记录准确, 不回写",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "midjourney",

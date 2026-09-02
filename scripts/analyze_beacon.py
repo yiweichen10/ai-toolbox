@@ -85,23 +85,54 @@ def run_funnel(days):
     存在的意义有两个：
       1) 量化广告拦截损失：配置加载数 / 真人PV 明显低于 100% 即说明被拦（或脚本未执行）。
       2) 替代滚动窗口做环比：总量对比不可靠（窗口滑动会让总量不增反减），逐日对比才有效。
+
+    2026-09-02 修正两个数据完整性 bug：
+      a) logrotate 配了 delaycompress，最近一天的轮转文件是**未压缩的** access.log-YYYYMMDD
+        （无 .gz），旧 glob `access.log-*.gz` 会漏掉它 → 每次分析都丢最近完整天。
+      b) 旧版按"文件名日期"当天标日期，但文件实际覆盖 前日03:12→当日03:12，标签错位约 3 小时。
+        现改为按日志行内 `[DD/Mon/YYYY]` 真实日期聚合（单遍 awk，服务器端完成）。
     """
     remote = (
-        f"cd {LOG_DIR} && for f in $(ls access.log-*.gz 2>/dev/null | sort | tail -{days}); do "
-        f"  d=$(basename $f .gz | sed 's/access.log-//'); "
-        f"  zcat $f 2>/dev/null > /tmp/_bf.$$; "
-        f"  pv=$(grep -E '{PAGE_RE}' /tmp/_bf.$$ | grep -viE '{CRAWLER_RE}' | wc -l); "
-        f"  cfg=$(grep -cE '{CFG_RE}' /tmp/_bf.$$); "
-        f"  imp=$(grep -E '{BEACON_PATHS}' /tmp/_bf.$$ | grep -c 'act=impression'); "
-        f"  clk=$(grep -E '{BEACON_PATHS}' /tmp/_bf.$$ | grep -c 'act=click'); "
-        f"  echo \"$d $pv $cfg $imp $clk\"; "
-        f"  rm -f /tmp/_bf.$$; "
-        f"done"
+        f"cd {LOG_DIR} && {{ "
+        f"for f in $(ls -tr access.log-* 2>/dev/null | tail -n {days + 2}); do "
+        f"  case \"$f\" in *.gz) zcat \"$f\" 2>/dev/null;; *) cat \"$f\" 2>/dev/null;; esac; done; "
+        f"cat access.log 2>/dev/null; "
+        f"}} | gawk -v days={days} '"
+        "BEGIN {"
+        "  m[\"Jan\"]=\"01\";m[\"Feb\"]=\"02\";m[\"Mar\"]=\"03\";m[\"Apr\"]=\"04\";"
+        "  m[\"May\"]=\"05\";m[\"Jun\"]=\"06\";m[\"Jul\"]=\"07\";m[\"Aug\"]=\"08\";"
+        "  m[\"Sep\"]=\"09\";m[\"Oct\"]=\"10\";m[\"Nov\"]=\"11\";m[\"Dec\"]=\"12\";"
+        "  page=\"GET /(tools|articles|news)/\";"
+        "  crawl=\"bot|spider|crawler|headless|python|curl|wget|scrapy|axios|okhttp\";"
+        "  cfg=\"/reco/data[.]json|/ads/cps[.]json\";"
+        "  beacon=\"/reco/r[.]gif|/ads/beacon[.]gif\";"
+        "}"
+        "{"
+        "  dd=substr($4,2,2); mo=substr($4,5,3); yy=substr($4,9,4);"
+        "  if (dd ~ /^[0-9][0-9]$/ && (mo in m)) {"
+        "    d = yy m[mo] dd;"
+        "    if ($0 ~ page && $0 !~ crawl) pv[d]++;"
+        "    if ($0 ~ cfg) cfgc[d]++;"
+        "    if ($0 ~ beacon && $0 ~ /act=impression/) imp[d]++;"
+        "    if ($0 ~ beacon && $0 ~ /act=click/) clk[d]++;"
+        "  }"
+        "}"
+        "END {"
+        "  n=0; for (k in pv) if (k>0) ord[++n]=k;"
+        "  for(i=1;i<=n;i++) for(j=i+1;j<=n;j++) if(ord[j]<ord[i]){t=ord[i];ord[i]=ord[j];ord[j]=t}"
+        "  start = n > days ? n-days+1 : 1;"
+        "  for(i=start;i<=n;i++){ d=ord[i];"
+        "    print d, pv[d]+0, cfgc[d]+0, imp[d]+0, clk[d]+0;"
+        "  }"
+        "}'"
     )
-    out = ssh_run(remote)
+    out = ssh_run(remote, timeout=300)
     if not out:
         return
-    print("== 逐日漏斗（按自然日聚合，不含当天未完整数据）==")
+    # 剔除今天（未完整日，口径见 MEMORY 铁律）；如需包含改传参
+    from datetime import date
+    today = date.today().strftime("%Y%m%d")
+    print("== 逐日漏斗（按日志行内真实日期聚合，不含当天未完整数据）==")
     print(f"{pad('日期', 14)}{'真人PV':>9}{'配置加载':>10}{'加载率':>9}{'曝光':>8}{'点击':>7}{'点击率':>9}")
     print("-" * 66)
     tp = tc = ti = tk = 0
@@ -110,14 +141,17 @@ def run_funnel(days):
         if len(parts) != 5:
             continue
         d, pv, cfg, imp, clk = parts[0], int(parts[1]), int(parts[2]), int(parts[3]), int(parts[4])
+        if d == today:
+            print(f"{pad(d + ' (今天,未完整,已剔除)', 30)}{pv:>7}{cfg:>10}{'-':>9}{imp:>8}{clk:>7}{'-':>9}")
+            continue
         tp += pv; tc += cfg; ti += imp; tk += clk
         rate = f"{cfg / pv * 100:.0f}%" if pv else "-"
         print(f"{pad(d, 14)}{pv:>9}{cfg:>10}{rate:>9}{imp:>8}{clk:>7}{pct(clk, imp):>9}")
     if tp:
         print("-" * 66)
         print(f"{pad('合计', 14)}{tp:>9}{tc:>10}{f'{tc / tp * 100:.0f}%':>9}{ti:>8}{tk:>7}{pct(tk, ti):>9}")
-        print(f"\n加载率 = 配置加载 / 真人PV。明显低于 100% 说明广告配置未加载"
-              f"（uBlock/AdGuard 拦截 /ads/ 类路径，或脚本未执行）。")
+        print(f"\n加载率 = 配置加载 / 真人PV。上限受 无JS/预取访问 稀释；"
+              f"明显低于同类日说明被拦（或脚本未执行）。")
 
 
 def main():

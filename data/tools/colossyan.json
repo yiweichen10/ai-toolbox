@@ -92,7 +92,7 @@
   "verified_what": "Colossyan 是 AI 数字人（虚拟形象）视频生成平台，专注企业培训与营销视频，支持文本/PPT/PDF 转视频、多语言配音与交互式视频。",
   "verified_price": "免费版可用；Starter 约 $27/月（$19/月年付，15 分钟/月）；Business 约 $88/月（$70/月年付）；Enterprise 定制。含 70+ 至 300+ 虚拟形象与 100+ 语言。",
   "verified_platform": "网页端",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-03",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -155,7 +155,7 @@
     "https://www.colossyan.com/text-to-video/",
     "https://www.colossyan.com/posts/best-ai-video-apps-for-effortless-content-creation-in-2025"
   ],
-  "verify_notes": "原数据称“30+种语言”，实际官方支持 100+ 语言；已在校验中修正。定价起价 $19/月（年付）与官网一致。",
+  "verify_notes": "scrape 命中定价页($27/mo Starter 起), 与记录一致",
   "content_verified": true,
   "url_previous": "https://colossyan.com",
   "compare_section": {
@@ -165,5 +165,6 @@
       "sora"
     ],
     "verdict": "Colossyan 与 HeyGen、Synthesia、Sora 同属AI视频赛道：Colossyan 的 AI 数字人视频生成 是亮点，价格 免费版可用；Starter 约 $19–$27/月；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-03"
 }

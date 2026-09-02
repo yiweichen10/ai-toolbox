@@ -290,6 +290,17 @@ def cmd_next(batch_size, stale_days=90):
                 f"price_short 给出回填页面 price 字段的简明准确价(如原价错则必须修正); "
                 f"content_flags 列出长文问题; corrected_content 仅在长文有严重幻觉"
                 f"(如已停服却称在售)时提供修正全文, 否则留空。\n"
+                # === 2026-09-01 事故修复: 此前「版本升级/价格过时」被判为非严重幻觉,
+                # 只在 content_flags 记一句就完事, 导致线上出现「描述已 5.1 / 正文仍 5.0」
+                # (674 工具中 382 个 content_flags 非空且从未被处理)。
+                # 现在要求: 凡是长文/FAQ 含过时事实, 必须产出 stale_facts 定点替换清单,
+                # apply 阶段逐字替换 —— 既修了内容, 又不触发下方 4 道长文覆盖防护(不重写全文)。
+                f"【过时事实必须给 stale_facts】只要长文或 FAQ 里存在任何过时事实"
+                f"(旧版本号/旧发布日期/旧价格/旧模型名/旧功能上限/旧渠道), "
+                f"就必须在 stale_facts 里逐条给出定点替换对; 不要因为「不算严重幻觉」就只写 content_flags 了事。"
+                f"每条 old 必须是长文或 FAQ 中逐字出现的原文片段(建议 15-60 字, 保证唯一), "
+                f"new 是更正后的同位置文案(保留原有句式与结构, 只换事实)。"
+                f"不要给需要重写整段的长替换, 也不要输出 old 在原文里找不到的条目。\n"
                 f"输出格式见下方 results 模板。"
             ),
         }
@@ -321,6 +332,9 @@ def cmd_next(batch_size, stale_days=90):
             'verified_description': '<修正后的准确短介绍(基于官方事实); 若原介绍已准确可填原句>',
             'content_flags': '<长文 content 中的问题清单, 如"仍称在售/错误定价/过时数字"; 无则留空>',
             'corrected_content': '<仅当长文有严重幻觉(如已停服却称在售)时提供修正全文; 否则留空>',
+            'stale_facts': [
+                {'where': 'content 或 faq', 'old': '<长文/FAQ 中逐字出现的原文片段, 15-60 字>', 'new': '<更正后的同位置文案, 只换事实不改句式>'},
+            ],
             'confidence': '<high / medium / low>',
             'conflict': False,
             'conflict_note': '<如多源信息冲突, 在此说明; 否则留空>',
@@ -399,6 +413,53 @@ def cmd_apply(results_file):
                 tool['description'] = r['verified_description']   # 覆盖原短介绍为准确版
         if r.get('content_flags'):
             tool['content_flags'] = r['content_flags']
+
+        # ===== 过时事实定点替换（2026-09-01 新增，治「描述新版/正文旧版」）=====
+        # 背景: corrected_content 门槛太高(仅"严重幻觉"), 版本升级/价格过时被判为非严重,
+        #       结果只写 content_flags 不改长文 → 674 工具中 382 个 flag 从未被处理。
+        # 方案: 只接受逐字命中的 old→new 替换, 不重写整段/全文。
+        #       天然满足下方 4 道防护(长度只增不减、H2 不减、区块不丢、溯源保留)。
+        stale = r.get('stale_facts') or []
+        if stale and ok:
+            hit, miss = 0, []
+            content = tool.get('content', '') or ''
+            faq = tool.get('faq') or []
+            for item in stale:
+                if not isinstance(item, dict):
+                    continue
+                old = (item.get('old') or '').strip()
+                new = (item.get('new') or '').strip()
+                where = (item.get('where') or 'content').lower()
+                if not old or not new or old == new:
+                    continue
+                if where.startswith('faq'):
+                    done = False
+                    for f in faq:
+                        if not isinstance(f, dict):
+                            continue
+                        for k in ('q', 'a', 'question', 'answer'):
+                            if f.get(k) and old in f[k]:
+                                f[k] = f[k].replace(old, new, 1)
+                                done = True
+                                break
+                        if done:
+                            break
+                    (hit := hit + 1) if done else miss.append(old[:30])
+                else:
+                    if old in content:
+                        content = content.replace(old, new, 1)
+                        hit += 1
+                    else:
+                        miss.append(old[:30])
+            if hit:
+                tool['content'] = content
+                tool['faq'] = faq
+                tool['verified_faq'] = faq
+                note = f' | 过时事实定点替换 {hit} 处'
+                tool['content_flags'] = (tool.get('content_flags') or '') + note
+                print(f"[apply][定点] {slug}: 长文/FAQ 过时事实替换 {hit} 处")
+            if miss:
+                print(f"[apply][定点] {slug}: {len(miss)} 条 old 未在原文中逐字命中, 已丢弃(不猜改): {miss}")
 
         # ===== 长文覆盖防护（2026-08-01 事故修复）=====
         # 背景: 7/31 版本批次用精简 corrected_content(730字) 整体覆盖了 2768 字完整长文,

@@ -76,8 +76,8 @@
   "verified_what": "Webflow AI 是可视化建站平台 Webflow 内置的 AI 助手，可用自然语言把提示词生成可投产网站、生成页面区块、撰写与优化文案、优化 SEO/AEO，并生成可复用代码组件。",
   "verified_price": "站点 Starter 免费（Webflow.io 域名、2 个页面、50 次表单提交）；基础/CMS 等付费站点计划约 $14/月起（年付）；工作区计划 Core $15/席位/月起；另有 AI 积分加购（约 $20/月 2000 积分）。企业版定制。学生/教育可申请免费或优惠。",
   "verified_platform": "网页端（浏览器）",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-03",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "提示词一键生成可投产网站",
@@ -131,8 +131,8 @@
     "https://webflow.com/pricing",
     "https://webflow.com/ai"
   ],
-  "verify_notes": "原数据「付费计划$14/月起、学生教育版免费」与官方基本一致，价格合理，无需大改。",
-  "content_verified": true,
+  "verify_notes": "scrape 误命中客户案例金额($4M+/$200M pipeline), 非定价页价, 无可用价信号, 不回写",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "lovable",

@@ -79,8 +79,8 @@
   ],
   "verified_description": "Claude Code Routines 是 Anthropic 为 Claude Code 推出的自动化例程功能（研究预览），可将一段提示+仓库+连接器保存为云上例程，按定时/API/GitHub 事件自动运行。",
   "content_flags": "产品真实，但长文写入'例程市场/社区模板''VS Code 插件''免费用户 3 个私有例程'等未获官方证实的细节；官方域名应为 claude.ai/code/routines 或 docs.anthropic.com，原 url claude.ai/routines 不正确。",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-09-03",
+  "confidence": "medium",
   "conflict": false,
   "price_verified": true,
   "verified_rating": "⭐4.6",
@@ -119,8 +119,8 @@
     "https://daily.dev/posts/claude-code-now-supports-automated-routines-triggered-by-schedule-api-or-github-events-opxb7ldbw",
     "https://test.infoq.com/news/2026/05/anthropic-routines-claude/"
   ],
-  "verify_notes": "Claude Code Routines 确为 Anthropic 真实功能（研究预览）；原条目'例程市场'等细节未获证实，官方地址应为 claude.ai/code/routines 或 docs.anthropic.com。",
-  "content_verified": true,
+  "verify_notes": "Anthropic 文档称 routines 在 Pro/Max/Team/Enterprise 可用, 无独立价, 不回写",
+  "content_verified": false,
   "url_previous": "https://claude.ai/routines",
   "compare_section": {
     "competitors": [

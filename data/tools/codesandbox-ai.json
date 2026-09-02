@@ -88,8 +88,8 @@
     "VS Code 扩展",
     "云（VM / microVM）"
   ],
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-03",
+  "confidence": "medium",
   "conflict": false,
   "verified_features": [
     "CodeSandbox SDK（程序化创建隔离沙箱）",
@@ -149,8 +149,8 @@
     "https://aitoolsatlas.ai/tools/codesandbox/review",
     "https://comparetiers.com/compare/codesandbox-vs-replit"
   ],
-  "verify_notes": "修正定位与定价：现属 Together AI，核心为沙箱 SDK；Pro 不再 $9，免费 Build + Scale 约 $170/月（另有编辑型 Pro 约 $12/月第三方口径）。",
-  "content_verified": true,
+  "verify_notes": "codesandbox.io 定价页动态加载, 仅见 Try for free, 无明确金额, 不回写",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "lovable",

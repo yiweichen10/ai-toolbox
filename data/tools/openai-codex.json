@@ -63,8 +63,8 @@
   "verified_what": "OpenAI推出的云端AI编程智能体（coding agent），可在安全沙盒中编写、运行和调试代码，并集成于ChatGPT与CLI。",
   "verified_price": "包含在ChatGPT订阅中：Plus 20美元/月、Pro 200美元/月；亦可通过API按量计费（codex-mini-latest 输入1.50美元/百万tokens、输出6美元/百万tokens，含缓存折扣）。",
   "verified_platform": "Web, CLI, API, VS Code/GitHub集成, ChatGPT",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-03",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "自主代码生成",
@@ -106,8 +106,8 @@
     "https://openai.com/zh-Hant/business/chatgpt-pricing",
     "https://aipure.ai/cn/articles/open-ai-codex-release-and-how-to-try"
   ],
-  "verify_notes": "2025版Codex定位为云端coding agent，与早期作为Copilot底层模型的Codex不同，已修正定位表述。",
-  "content_verified": true,
+  "verify_notes": "渲染失败; WebSearch 确认 Free/Go $8/Plus $20/Pro $100-200, 记录准确, 不回写",
+  "content_verified": false,
   "url_previous": "https://openai.com/index/introducing-codex",
   "compare_section": {
     "competitors": [
