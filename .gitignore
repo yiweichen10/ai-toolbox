@@ -80,6 +80,8 @@ _list_articles.py
 #   服务器靠 deploy.sh scp 同步单体；需要时可从目录聚合重建）
 /data/tools.json
 /data/articles.json
+# 2026-09-03：AI 词典分片为发布内容，不进 git（服务器靠 deploy.sh rsync 同步）；只保留流程系统进 git
+/data/dict_terms/
 /data/ai_citation_reports/
 /data/health_reports/
 /data/classify_*
