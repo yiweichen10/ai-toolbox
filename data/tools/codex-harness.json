@@ -13,7 +13,7 @@
   "positioning": "企业级 Agent 运行时平台（Codex 执行层）",
   "rating": "⭐ 4.3",
   "rating_source": "GitHub 10.7万+ Star / 公开评测",
-  "description": "OpenAI 于 2026 年 8 月以 Apache-2.0 开源的 Agent 运行时框架，即驱动 Codex 编程智能体的底层执行层（Harness）。不做推理，负责上下文维护、工具调用、沙箱执行与权限审批，提供 codex exec、Codex SDK、app-server 三大组件。最新 rust 版 v0.152.1（2026-09-01）修复 Guardian 审批对 Node REPL 策略的兼容。",
+  "description": "OpenAI 于 2026 年 8 月以 Apache-2.0 开源的 Agent 运行时框架，即驱动 Codex 编程智能体的底层执行层（Harness）。不做推理，负责上下文维护、工具调用、沙箱执行与权限审批，提供 codex exec、Codex SDK、app-server 三大组件。最新 rust 版 v0.153.0-alpha.6（2026-09-02 发布，预发布通道）。",
   "url": "https://github.com/openai/codex",
   "tags": [
     {
@@ -77,20 +77,20 @@
     "OpenAI 开源"
   ],
   "created_date": "2026-08-23",
-  "updated_date": "2026-09-02",
+  "updated_date": "2026-09-03",
   "published": true,
   "content_verified": true,
   "confidence": "high",
-  "last_verified": "2026-09-02",
+  "last_verified": "2026-09-03",
   "source_urls": [
-    "https://github.com/openai/codex/releases/tag/rust-v0.152.1"
+    "https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.6"
   ],
   "visits": "0",
   "content": "## OpenAI Codex Harness 是什么？\n\nOpenAI Codex Harness 是驱动 OpenAI Codex 编程智能体的底层执行框架（Agent 运行时），2026 年 8 月 20 日由 OpenAI 以 Apache-2.0 协议全面开源，仓库 github.com/openai/codex 上线即获约 10.7 万 Star。它对应 DeepSeek DSH 等开源 Harness，是「Agent 执行层」赛道的重要玩家。\n\nHarness 不做推理，只负责执行层的「脏活」：上下文维护、工具调用、沙箱执行、权限审批、异常处理与人工审批断点。OpenAI 官方明确将其定义为「platform」而非「model」——用运行时锁住开发者，是这套开源动作的深层意图。\n\n## 三大核心组件\n\n- **codex exec**：命令行工具，适合自动化流水线、CI 任务与后台一次性作业\n- **Codex SDK**：TypeScript / Python 双接口，开发者可通过代码精确控制任务生命周期\n- **app-server**：通过 JSON-RPC 协议实现应用与本地 Codex 进程的持久连接，支持流式结果传输、任务中断与人工审批，特别适合深度集成智能体的产品开发\n\n## 实测数据与落地案例\n\nOpenAI 公布的数据显示：仅通过优化 Harness 的保留推理机制与上下文压缩算法两项，GPT-5.6 Sol 在 ARC-AGI-3 基准上的得分就从 13.3% 提升至 38.3%，同时输出 Token 减少至原来的六分之一——同一模型，不同 Harness，上限差距近 3 倍。\n\n- **Thrive Holdings**：将 Harness 嵌入专业税务申报系统，试点处理 7000 份申报表，准备时间缩短约三分之一\n- **思科**：用 Codex SDK 在云控制平台内构建自然语言 App Builder\n- **OpenAI 官方演示 Relay**：物流看板无聊天框，选中延误货单后系统自动关联数据、调用工具、生成方案，经人工审批后执行\n\n## 价格\n\nCodex Harness 框架以 Apache-2.0 协议完全开源免费，可自建部署并嵌入自有产品；推理调用走 OpenAI 自家 Responses API，按用量计费。\n\n## 优缺点分析\n\n### 👍 优点\n- Apache-2.0 完全开源，可直接嵌入自有 IDE / 应用 / 内部工具\n- 三大组件覆盖脚本、编程、产品集成全场景\n- Harness 侧优化实测收益大（得分近 3 倍、token 降至 1/6）\n- 企业级合规能力：审计、权限、沙箱体系完整\n\n### 👎 缺点\n- 存在「假开源」争议：贡献指南明确不接受外部 PR，生态开放性不及 DeepSeek DSH\n- 核心能力接口锁在 Rust 源码内部，二次开发门槛高\n- 模型仅支持 OpenAI 自家 Responses API，无法接入第三方模型\n- 集成调试与长期维护成本需开发者自行评估\n\n## 适合人群\n\nCodex Harness 适合需要把 Agent 深度嵌入自有业务软件的企业团队，尤其是已有审计、权限、沙箱等合规要求的场景；也适合希望用开源方式掌控 Agent 执行层、而非绑定通用聊天框的开发者。\n\n## 关键信息\n\n| 项目 | 内容 |\n|------|------|\n| 官方仓库 | github.com/openai/codex |\n| 开发商 | OpenAI |\n| 开源时间 | 2026年8月20日 |\n| 开源协议 | Apache-2.0 |\n| 核心组件 | codex exec / Codex SDK / app-server |\n| 价格 | 框架免费，推理走 OpenAI API |\n| 平台 | 本地部署（CLI / SDK / App Server） |\n\n> 以上信息来自 OpenAI 官方博客及公开报道（2026-08）。",
   "verified_url": "https://github.com/openai/codex",
   "verified_publisher": "OpenAI",
-  "verified_what": "OpenAI Codex 编程智能体的底层执行运行时（Agent Harness）",
-  "verified_platform": "CLI, Server, Linux, macOS, Windows",
+  "verified_what": "OpenAI 以 Apache-2.0 开源的 Agent 运行时框架，驱动 Codex 编程智能体的底层执行层（Harness）",
+  "verified_platform": "CLI, TypeScript/Python SDK, macOS/Windows/Linux",
   "conflict": false,
   "verified_features": [
     "codex exec 命令行工具（脚本/CI/后台作业）",
@@ -100,6 +100,6 @@
     "ARC-AGI-3 实测：保留推理+上下文压缩使 GPT-5.6 Sol 从 13.3% 升至 38.3%",
     "企业落地：Thrive 税务申报、思科 App Builder"
   ],
-  "verified_description": "OpenAI 于 2026 年 8 月以 Apache-2.0 开源的 Agent 运行时框架，即驱动 Codex 编程智能体的底层执行层（Harness）。不做推理，负责上下文维护、工具调用、沙箱执行与权限审批，提供 codex exec、Codex SDK、app-server 三大组件。最新 rust 版 v0.152.1（2026-09-01）修复 Guardian 审批对 Node REPL 策略的兼容。",
-  "verify_notes": "与 codex-cli 同源仓库 openai/codex，最新 rust-v0.152.1（2026-09-01）同批 bugfix；页面原 updated_date 2026-08-23 已过时，补充最新版本号。"
+  "verified_description": "OpenAI 于 2026 年 8 月以 Apache-2.0 开源的 Agent 运行时框架，即驱动 Codex 编程智能体的底层执行层（Harness）。不做推理，负责上下文维护、工具调用、沙箱执行与权限审批，提供 codex exec、Codex SDK、app-server 三大组件。最新 rust 版 v0.153.0-alpha.6（2026-09-02 发布，预发布通道）。",
+  "verify_notes": "与 codex-cli 同源仓库 openai/codex，同一 rust-v0.153.0-alpha.6 预发布（2026-09-02）。描述仅更新版本号+日期+预发布标识，不编造特性。"
 }

@@ -2,8 +2,8 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-09-02",
-    "total": 673
+    "updated": "2026-09-03",
+    "total": 674
   },
   "tools": {
     "chatgpt": {
@@ -74,22 +74,22 @@
     },
     "doubao": {
       "name": "豆包",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI对话",
       "priority": 140,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
     },
     "notion-ai": {
       "name": "Notion AI",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI办公",
       "priority": 140,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -338,14 +338,14 @@
     },
     "adobe-firefly": {
       "name": "Adobe Firefly",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI绘画",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "scrape 命中定价页($9.99/$19.99/$34.97/$199.99), 与记录一致"
     },
     "kling-ai": {
       "name": "可灵AI",
@@ -382,22 +382,22 @@
     },
     "grammarly-ai": {
       "name": "Grammarly AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI写作",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "scrape 命中定价页($0/$12/$30), 与记录一致"
     },
     "microsoft-copilot": {
       "name": "Copilot（微软）",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI办公",
       "priority": 140,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -459,14 +459,14 @@
     },
     "tiangong": {
       "name": "天工AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "渲染失败; WebSearch 确认 免费+超级智能体148元/月, 记录准确, 不回写"
     },
     "minimax": {
       "name": "MiniMax",
@@ -514,22 +514,22 @@
     },
     "openai-codex": {
       "name": "OpenAI Codex",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "渲染失败; WebSearch 确认 Free/Go $8/Plus $20/Pro $100-200, 记录准确, 不回写"
     },
     "n8n": {
       "name": "n8n",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI自动化",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -602,11 +602,11 @@
     },
     "synthesia": {
       "name": "Synthesia",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI视频",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -767,11 +767,11 @@
     },
     "figma-ai": {
       "name": "Figma AI",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI设计",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -899,25 +899,25 @@
     },
     "cleanvoice": {
       "name": "Cleanvoice",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI音频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "scrape 命中定价页(€10/mo 起), 与记录一致"
     },
     "arc-browser": {
       "name": "Arc浏览器",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI效率",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "渲染失败; WebSearch 确认 浏览器免费无付费档, 记录准确, 不回写"
     },
     "comet": {
       "name": "Comet",
@@ -987,14 +987,14 @@
     },
     "looka": {
       "name": "Looka",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI设计",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "渲染失败; WebSearch 确认 设计免费/Basic $20/Premium $65/Brand Kit $96 年, 记录准确, 不回写"
     },
     "pixverse": {
       "name": "PixVerse AI",
@@ -1020,14 +1020,14 @@
     },
     "tensor.art": {
       "name": "Tensor.Art",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI绘画",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "渲染失败; WebSearch 确认 免费+Pro $9.9/mo, 记录准确, 不回写"
     },
     "360-zhinain": {
       "name": "360智脑",
@@ -1053,14 +1053,14 @@
     },
     "brandmark": {
       "name": "Brandmark",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI设计",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "medium",
+      "notes": "定价页仅见 Pay-once 终身买断信号, 无明确档位价, 记录一次性买断价可能仍准, 不回写"
     },
     "make": {
       "name": "Make",
@@ -1075,14 +1075,14 @@
     },
     "supabase-ai": {
       "name": "Supabase AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI开发",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "scrape 误命中客户案例金额($10M ARR), 非定价页价, 无可用价信号, 不回写"
     },
     "recraft": {
       "name": "Recraft",
@@ -1218,36 +1218,36 @@
     },
     "miro-ai": {
       "name": "Miro AI",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI办公",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
     },
     "framer-ai": {
       "name": "Framer AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI设计",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "scrape 命中定价页($10/$30/mo), 与记录一致"
     },
     "webflow-ai": {
       "name": "Webflow AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "scrape 误命中客户案例金额($4M+/$200M pipeline), 非定价页价, 无可用价信号, 不回写"
     },
     "spline-ai": {
       "name": "Spline AI",
@@ -1262,25 +1262,25 @@
     },
     "lottiefiles-ai": {
       "name": "LottieFiles AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI设计",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "渲染失败; WebSearch 确认 免费+$19.99/mo Individual, 记录准确, 不回写"
     },
     "augie-ai": {
       "name": "Augie AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI视频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "渲染失败; WebSearch 确认 Lite免费/Premium $34/月/Unlimited $99/月年付, 记录准确, 不回写"
     },
     "glitter-ai": {
       "name": "Glitter AI",
@@ -1295,33 +1295,33 @@
     },
     "play-ht": {
       "name": "Play.ht",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI音频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "scrape 命中官方定价页: Free $0 / Pro $29/mo / Business $99/mo; 纯暗降($31.20->$29), 回填 price + 修正长文"
     },
     "wondercraft-ai": {
       "name": "Wondercraft AI",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI音频",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
     },
     "veed-io": {
       "name": "Veed.io",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI视频",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -1350,14 +1350,14 @@
     },
     "lets-enhance": {
       "name": "Let's Enhance",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI绘画",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "scrape 命中定价页($9/$24/$34/mo), 与记录一致"
     },
     "clipdrop": {
       "name": "Clipdrop",
@@ -1394,22 +1394,22 @@
     },
     "seedance": {
       "name": "Seedance 2.0",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI视频",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
     },
     "grain": {
       "name": "Grain",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI办公",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -1438,14 +1438,14 @@
     },
     "headlime": {
       "name": "Headlime",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI写作",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "scrape 命中定价页($59/mo), 与记录一致"
     },
     "activepieces": {
       "name": "Activepieces",
@@ -1460,14 +1460,14 @@
     },
     "codesandbox-ai": {
       "name": "CodeSandbox AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "medium",
+      "notes": "codesandbox.io 定价页动态加载, 仅见 Try for free, 无明确金额, 不回写"
     },
     "tencent-hunyuan": {
       "name": "腾讯混元",
@@ -1482,11 +1482,11 @@
     },
     "01-ai": {
       "name": "零一万物",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI对话",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -1504,11 +1504,11 @@
     },
     "baichuan-ai": {
       "name": "百川智能",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI对话",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -1526,11 +1526,11 @@
     },
     "cognition-ai": {
       "name": "Cognition AI",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI编程",
       "priority": 180,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -1548,11 +1548,11 @@
     },
     "tabnine": {
       "name": "Tabnine",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI编程",
       "priority": 180,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -1570,69 +1570,69 @@
     },
     "fooocus": {
       "name": "Fooocus",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI绘画",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
     },
     "topaz-photo-ai": {
       "name": "Topaz Photo AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI设计",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "scrape 命中定价页($17-25/mo 区间), 与记录一致"
     },
     "upscayl": {
       "name": "Upscayl",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI设计",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
     },
     "adobe-express-ai": {
       "name": "Adobe Express AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI设计",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "渲染失败; WebSearch 确认 Free $0/Premium $9.99/mo, 记录准确, 不回写"
     },
     "mubert": {
       "name": "Mubert",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI音频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "scrape 命中定价页($14/mo Creator 起), 与记录一致"
     },
     "aiva": {
       "name": "AIVA",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI音频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "scrape 命中定价页(€11/mo Standard 起), 与记录一致"
     },
     "soundraw": {
       "name": "Soundraw",
@@ -1647,25 +1647,25 @@
     },
     "boomy": {
       "name": "Boomy",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI音频",
       "priority": 180,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
     },
     "colossyan": {
       "name": "Colossyan",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI视频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "scrape 命中定价页($27/mo Starter 起), 与记录一致"
     },
     "elai": {
       "name": "Elai",
@@ -1867,11 +1867,11 @@
     },
     "zi-dong-tai-chu": {
       "name": "紫东太初",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI对话",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -2010,11 +2010,11 @@
     },
     "coda-ai": {
       "name": "Coda AI",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI办公",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -2109,11 +2109,11 @@
     },
     "lingoai": {
       "name": "LingoAI",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI翻译",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -2708,9 +2708,9 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-09-03",
       "confidence": "high",
-      "notes": "GitHub 官方发布 rust-v0.152.1（2026-09-01），本次为 Guardian 审批 bugfix，无新增功能；页面原 last_verified 2026-07-30 已过时，补充最新版本号。"
+      "notes": "GitHub Releases 官方确认 rust-v0.153.0-alpha.6 于 2026-09-02 发布（Pre-release/alpha.6）；Release Notes 正文仅含构建产物、未列具体变更，故描述仅更新版本号+日期+预发布标识，不编造特性。scrape_price 命中 GitHub 通用 pricing 导航（无工具价），开源免费无变化。"
     },
     "wonder-ai": {
       "name": "Wonder AI",
@@ -3264,14 +3264,14 @@
     },
     "qwen-agent": {
       "name": "Qwen-Agent",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI智能体",
       "priority": 140,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "medium",
+      "notes": "GitHub 定价页仅见 Enterprise/联系销售信号, 无公开金额, 不回写, 待人工"
     },
     "modelscope-agent": {
       "name": "Modelscope-Agent",
@@ -3341,14 +3341,14 @@
     },
     "qwen3-coder-next": {
       "name": "Qwen3-Coder-Next",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 140,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "渲染失败(无 pricing 页); WebSearch 确认开源权重免费+API 按量计费, 记录准确, 不回写"
     },
     "opencode": {
       "name": "OpenCode",
@@ -3544,9 +3544,9 @@
       "priority": 40,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-08-07",
+      "verified_at": "2026-09-03",
       "confidence": "high",
-      "notes": "v1.5.6 为 GitHub 官方最新稳定版（2026-08-06，v1.5.5...v1.5.6 diff）；页面原为 v1.5.5（2026-07-31）信息，上轮 08-02 更新 v1.5.5 时未预见 6 天后出新版。"
+      "notes": "GitHub Releases 官方确认 v1.5.7 于 2026-09-02 发布（Latest），新增 /workspace 终端用户查询入口、UI_TEMPLATES_DIR 可定制 UI 模板包、全局 USER_PROMPT_PREFIX 及多项安全/性能修复。内容中 v1.5.6 的历史归属（PGTableGraphStorage 等）保持准确，仅用 stale_facts 追加 v1.5.7 说明，不污染旧版本事实。scrape_price 命中 GitHub 通用 pricing 导航（无工具价），开源免费无变化。"
     },
     "graphrag": {
       "name": "GraphRAG",
@@ -4529,14 +4529,14 @@
     },
     "grok-4-5": {
       "name": "Grok 4.5",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 140,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "scrape 命中官方定价页金额($2/$6 per M), 与记录一致, 无变化"
     },
     "gemini-omni": {
       "name": "Gemini Omni",
@@ -4551,14 +4551,14 @@
     },
     "claude-code-routines": {
       "name": "Claude Code Routines",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 140,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "medium",
+      "notes": "Anthropic 文档称 routines 在 Pro/Max/Team/Enterprise 可用, 无独立价, 不回写"
     },
     "midjourney-scanner": {
       "name": "Midjourney Scanner",
@@ -4584,11 +4584,11 @@
     },
     "ollama": {
       "name": "Ollama",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI开发",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -4606,14 +4606,14 @@
     },
     "runway-agent": {
       "name": "Runway Agent",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI智能体",
       "priority": 140,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "scrape 误命中客户案例金额($200K/$100M), 非定价页价, 无可用价信号, 不回写"
     },
     "pulse": {
       "name": "Pulse",
@@ -4705,14 +4705,14 @@
     },
     "perplexity-comet": {
       "name": "Perplexity Comet",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI搜索",
       "priority": 140,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "low",
+      "notes": "渲染失败; WebSearch 确认 Free/Comet Plus $5/Pro $20/Max $200, 记录准确, 不回写"
     },
     "deepl-write": {
       "name": "DeepL Write",
@@ -4771,14 +4771,14 @@
     },
     "gemini-deep-research-agent": {
       "name": "Gemini Deep Research Agent",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI搜索",
       "priority": 140,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
+      "verified_at": "2026-09-03",
+      "confidence": "medium",
+      "notes": "gemini.google.com 需登录, 无公开定价页金额, 不回写, 待人工"
     },
     "deepclaude": {
       "name": "deepclaude",
@@ -4826,11 +4826,11 @@
     },
     "ace-studio": {
       "name": "ACE Studio",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI音频",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -5321,11 +5321,11 @@
     },
     "perplexity-sonar": {
       "name": "Perplexity Sonar",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI搜索",
       "priority": 160,
-      "attempts": 1,
-      "last_attempt": "2026-08-25",
+      "attempts": 2,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -5387,11 +5387,11 @@
     },
     "fireworks-ai": {
       "name": "Fireworks AI",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI开发",
       "priority": 180,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -6663,11 +6663,11 @@
     },
     "genspark": {
       "name": "Genspark",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI智能体",
       "priority": 180,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -6751,11 +6751,11 @@
     },
     "fish-audio": {
       "name": "Fish Audio",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI音频",
       "priority": 180,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -6861,11 +6861,11 @@
     },
     "gemini-managed-agents": {
       "name": "Gemini API Managed Agents",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI智能体",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -6954,9 +6954,9 @@
       "priority": 130,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-09-03",
       "confidence": "high",
-      "notes": "GitHub 仓库最新稳定版为 v1.35.0（2026-08-31，含 Git Worktree 分叉、分块摘要恢复等用户可见改进）；watch 命中的 studio-v2.11.0 为 Studio 外壳 pre-release（非稳定线），已在描述中说明。页面原 updated_date 2026-08-14 已过时。"
+      "notes": "GitHub Releases 官方确认 Reasonix CLI v1.36.0 稳定版于 2026-09-02 发布，Release Notes 列出桌面端粘性上下文文件固定、协作式会话接管、强制完成长文件读取及大量稳定性/性能修复。scrape_price 命中 GitHub 通用 pricing 导航（无工具价），开源免费无变化。"
     },
     "kiro-crew": {
       "name": "Kiro Crew",
@@ -7367,22 +7367,22 @@
     },
     "deepseek-dsh": {
       "name": "DeepSeek DSH",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI编程",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
     },
     "kimi-code": {
       "name": "Kimi Code",
-      "status": "unverified",
+      "status": "in_progress",
       "category": "AI编程",
       "priority": 160,
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-09-03",
       "verified_at": null,
       "confidence": null,
       "notes": ""
@@ -7394,15 +7394,26 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-09-03",
       "confidence": "high",
-      "notes": "与 codex-cli 同源仓库 openai/codex，最新 rust-v0.152.1（2026-09-01）同批 bugfix；页面原 updated_date 2026-08-23 已过时，补充最新版本号。"
+      "notes": "与 codex-cli 同源仓库 openai/codex，同一 rust-v0.153.0-alpha.6 预发布（2026-09-02）。描述仅更新版本号+日期+预发布标识，不编造特性。"
     },
     "pptbot": {
       "name": "PPTBot",
       "status": "unverified",
       "category": "AI办公",
       "priority": 10,
+      "attempts": 0,
+      "last_attempt": null,
+      "verified_at": null,
+      "confidence": null,
+      "notes": ""
+    },
+    "magi-2": {
+      "name": "MAGI-2",
+      "status": "unverified",
+      "category": "AI视频",
+      "priority": 40,
       "attempts": 0,
       "last_attempt": null,
       "verified_at": null,
