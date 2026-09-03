@@ -462,6 +462,16 @@ cd "$LOCAL_DIR"
 # 导致 seo_title_helper.py / publish_new_tools.py / AGENTS.md / .gitignore 的改动永不进 git，
 # 踩「无 git 不可回滚」血泪教训）。精准补路径，不用 git add -A（会误提交 scratch 文件）。
 git add data/live_data.json data/ranking_data.json data/subcategories.json data/_latest_infographic.json data/homepage_picks.json data/picks_candidates.json data/picks_history.json index.html live/ ranking/ scripts/build.py scripts/build_lib/ scripts/seo_title_helper.py scripts/publish_new_tools.py AGENTS.md .gitignore data/tools/ data/articles/ 2>/dev/null || true
+# 2026-09-01 扩白名单：纳入核实/版本治理链路的脚本与报告（同上教训，改动必须能回滚）
+#   verify_tools_batch.py   = 核实结果写回（本次新增 stale_facts 过时事实定点替换）
+#   check_version_drift.py  = 版本漂移巡检（本次修复：去单体化 + FAQ q/a 键名 + desc_drift）
+#   add_version_evo.py      = 版本演进对比小节写入（本次修复：去单体化 + --dry-run）
+#   analyze_beacon.py       = CPS beacon 漏斗分析（修 logrotate delaycompress 漏数 + 日期错位）
+git add scripts/verify_tools_batch.py scripts/check_version_drift.py scripts/add_version_evo.py scripts/analyze_beacon.py scripts/review_generator.py scripts/_claude_fable_evo.json scripts/_seedance_evo.json scripts/_patch_fable51_stale.py scripts/_patch_seedance25_stale.py scripts/_version_drift_report.json reports/ 2>/dev/null || true
+# 2026-09-03 扩白名单：纳入 AI 词典分片目录 data/dict_terms/（上一行 2026-08-29 只补了 tools/articles，
+#   漏掉 dict_terms，导致每日发布自动化 publish_dict_terms.py 写出的分片从未进 git、仓库与服务器数据长期漂移）。
+#   同时纳入 deploy.sh 本体，确保本白名单修复自身可回滚（deploy.sh 不在自身白名单内，改动若不显式加入会丢失）。
+git add data/dict_terms/ deploy.sh 2>/dev/null || true
 if git diff --cached --quiet; then
     echo "  无可提交变更"
 else
