@@ -1,94 +1,94 @@
 {
-    "name": "Hey Noah",
-    "slug": "hey-noah",
-    "positioning": "Hey Noah是什么_主动式AI行政助理_创始人Chief of Staff",
-    "auto_positioning": false,
-    "emoji": "📱",
-    "color": "#10B981",
-    "description": "面向创始人的主动式 AI 行政助理（AI Chief of Staff），由 Ashish Toshniwal 创立，2026 年 8 月 5 日登陆 Product Hunt 并拿下当日第一名。SMS 优先，通过短信、邮件、WhatsApp 等渠道主动管理日历、维护关系、跟进沟通，把事务真正推进下去。",
-    "category": "AI智能体",
-    "tags": [
-        {
-            "text": "主动式助理"
-        },
-        {
-            "text": "创始人工具"
-        },
-        {
-            "text": "日历管理"
-        }
-    ],
-    "rating": "⭐ 4.4",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "hot",
-        "text": "PH当日第一"
+  "name": "Hey Noah",
+  "slug": "hey-noah",
+  "positioning": "Hey Noah是什么_主动式AI行政助理_创始人Chief of Staff",
+  "auto_positioning": false,
+  "emoji": "📱",
+  "color": "#10B981",
+  "description": "面向创始人的主动式 AI 行政助理（AI Chief of Staff），由 Ashish Toshniwal 创立，2026 年 8 月 5 日登陆 Product Hunt 并拿下当日第一名。SMS 优先，通过短信、邮件、WhatsApp 等渠道主动管理日历、维护关系、跟进沟通，把事务真正推进下去。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "主动式助理"
     },
-    "url": "https://www.heynoah.io",
-    "price": "价格暂未公开",
-    "platform": "Web",
-    "pros": [
-        "把「AI 从会回答走向会行动」落到实处，渠道优先、真正代你推进事务",
-        "SMS 优先，无需新仪表盘，像给真人助理发消息",
-        "主动跟进，在你开口前就浮现重要事项、追会被忘的 follow-up",
-        "可连接 Google Calendar、Granola、Notion、Drive、Slack 等",
-        "Beta 阶段已代发大量会议邀请，有真实使用验证"
-    ],
-    "cons": [
-        "仍是早期产品，对外邮件/电话依赖美国号码体系，大陆用户需美国手机号",
-        "涉及日历与联系人数据同步到其服务器，敏感行业需评估合规",
-        "正式套餐价格未在公开页面列出"
-    ],
-    "features": [
-        "SMS 优先：像给真人助理发消息一样发短信，无需新仪表盘",
-        "主动跟进：在你开口前就浮现重要事项、追那些你会忘的 follow-up",
-        "代你沟通：不止起草邮件，而是真正发出、协商时间、跟进并闭环（默认需审核）",
-        "日历管理：订会议、重排冲突、保护重要时间块",
-        "关系管理：追踪你世界里的人与需要轻推的线索，让介绍不降温",
-        "多渠道连接：Google Calendar、Granola、Notion、Drive、Slack、WhatsApp、iMessage 等"
-    ],
-    "related": [
-        "openai",
-        "coze",
-        "manus"
-    ],
-    "content": "## Hey Noah 是什么？\nHey Noah 是一款面向创始人的主动式 AI 行政助理（AI Chief of Staff），由 Ashish Toshniwal 创立，2026 年 8 月 5 日登陆 Product Hunt 并拿下当日第一名。它最显著的差异化是「主动」——不是你问它答，而是它追踪你的未完成事项、主动提醒、自动执行。它 SMS 优先，通过短信、邮件、WhatsApp 等你已经使用的渠道运行：你转发一封邮件或发条短信，它就读日历、协商时间、发邀请、做跟进、关闭环。其产品理念来自创始人用 14 年自筹资金做到年营收 1 亿美元公司的真实 EA 工作手册。\n\n## 核心功能\n1. SMS 优先：像给真人助理发消息一样发短信，无需新仪表盘。\n2. 主动跟进：在你开口前就浮现重要事项、追那些你会忘的 follow-up。\n3. 代你沟通：不止起草邮件，而是真正发出、协商时间、跟进并闭环（默认需审核，信任后逐步放权）。\n4. 日历管理：订会议、重排冲突、保护重要时间块。\n5. 关系管理：追踪你世界里的人与需要轻推的线索，让介绍不降温；可连接 Google Calendar、Granola、Notion、Drive、Slack 等。\n\n## 版本/套餐对比\nHey Noah 采用免费 30 天试用（无需信用卡），正式套餐价格未在公开页面列出，需注册或联系 onboarding 确认具体订阅费、用量上限与语音通话计费。\n\n## 值不值得用？\n优点：把「AI 从会回答走向会行动」落到实处，渠道优先、真正代你推进事务，对总被会议后勤和跟进拖垮的创始人价值明显。缺点：仍是早期产品，对外邮件/电话依赖美国号码体系，中国大陆用户需美国手机号；涉及日历与联系人数据同步到其服务器，敏感行业需评估合规；对外发送建议初始保持「发送前我审核」。结论：受困于会议协调与跟进、但愿意在低风险任务上监督它的创始人，值得试。\n\n## 使用建议\n从一条可逆的排程任务起步（如「下周和 Sarah 约咖啡」），确认准确率后再逐步放开对外发送与电话权限。一次只接一个集成、按最小权限原则授权；金融、医疗、法律等敏感行业先评估数据合规。\n\n## 适合谁用？\n- 推荐：反复被会议后勤和跟进吃掉时间的创始人/高管；愿意在低风险任务上监督早期助理的人。\n- 可考虑：跨邮件、日历、短信、会议笔记协调工作的小团队运营者。\n- 不推荐：只需要一个预订链接、或无法允许助理处理敏感日程与关系数据的用户；无美国号码体系的大陆个人用户。",
-    "published": true,
-    "faq": [
-        {
-            "question": "Hey Noah 和日历类 App 有什么不同？",
-            "answer": "区别在于「委托执行」而非「只给建议」。它 SMS 优先，能真正读日历、发邀请、协商时间、做跟进并闭环，而不是停在你自己发送草稿这一步；且是主动式，会在你开口前追 follow-up。"
-        },
-        {
-            "question": "它通过哪些渠道工作？",
-            "answer": "公开页面列出 SMS、RCS、邮件、WhatsApp、iMessage、Slack、电话，以及 Google Calendar、Google Drive、Notion、Granola、Google Meet、Zoom、Google Docs 等集成。"
-        },
-        {
-            "question": "收费吗？",
-            "answer": "提供免费 30 天试用、无需信用卡；正式套餐价格未在公开页面列出，需注册或联系 onboarding 确认订阅费、用量上限与语音通话计费。"
-        },
-        {
-            "question": "数据安全怎么看？",
-            "answer": "它会同步日历与联系人等上下文到其服务器，隐私政策说明会使用第三方做分析、托管与运营。金融、医疗、法律等敏感行业应先评估数据合规，并初始保持「发送前我审核」。"
-        }
-    ],
-    "content_verified": true,
-    "conflict": false,
-    "verify_status": "verified",
-    "seo_keywords": [
-        "Hey Noah",
-        "Hey Noah怎么样",
-        "Hey Noah免费版",
-        "Hey Noah使用教程",
-        "Hey Noah和哪个好"
-    ],
-    "source_urls": [
-        "https://www.heynoah.io",
-        "https://toolfame.com/item/hey-noah-wwwheynoahio",
-        "https://chatgate.ai/post/hey-noah"
-    ],
-    "confidence": "medium",
-    "created_date": "2026-08-14",
-    "updated_date": "2026-08-14",
-    "published_date": "2026-09-03"
+    {
+      "text": "创始人工具"
+    },
+    {
+      "text": "日历管理"
+    }
+  ],
+  "rating": "⭐ 4.4",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "PH当日第一"
+  },
+  "url": "https://www.heynoah.io",
+  "price": "价格暂未公开",
+  "platform": "Web",
+  "pros": [
+    "把「AI 从会回答走向会行动」落到实处，渠道优先、真正代你推进事务",
+    "SMS 优先，无需新仪表盘，像给真人助理发消息",
+    "主动跟进，在你开口前就浮现重要事项、追会被忘的 follow-up",
+    "可连接 Google Calendar、Granola、Notion、Drive、Slack 等",
+    "Beta 阶段已代发大量会议邀请，有真实使用验证"
+  ],
+  "cons": [
+    "仍是早期产品，对外邮件/电话依赖美国号码体系，大陆用户需美国手机号",
+    "涉及日历与联系人数据同步到其服务器，敏感行业需评估合规",
+    "正式套餐价格未在公开页面列出"
+  ],
+  "features": [
+    "SMS 优先：像给真人助理发消息一样发短信，无需新仪表盘",
+    "主动跟进：在你开口前就浮现重要事项、追那些你会忘的 follow-up",
+    "代你沟通：不止起草邮件，而是真正发出、协商时间、跟进并闭环（默认需审核）",
+    "日历管理：订会议、重排冲突、保护重要时间块",
+    "关系管理：追踪你世界里的人与需要轻推的线索，让介绍不降温",
+    "多渠道连接：Google Calendar、Granola、Notion、Drive、Slack、WhatsApp、iMessage 等"
+  ],
+  "related": [
+    "openai",
+    "coze",
+    "manus"
+  ],
+  "content": "## Hey Noah 是什么？\nHey Noah 是一款面向创始人的主动式 AI 行政助理（AI Chief of Staff），由 Ashish Toshniwal 创立，2026 年 8 月 5 日登陆 Product Hunt 并拿下当日第一名。它最显著的差异化是「主动」——不是你问它答，而是它追踪你的未完成事项、主动提醒、自动执行。它 SMS 优先，通过短信、邮件、WhatsApp 等你已经使用的渠道运行：你转发一封邮件或发条短信，它就读日历、协商时间、发邀请、做跟进、关闭环。其产品理念来自创始人用 14 年自筹资金做到年营收 1 亿美元公司的真实 EA 工作手册。\n\n## 核心功能\n1. SMS 优先：像给真人助理发消息一样发短信，无需新仪表盘。\n2. 主动跟进：在你开口前就浮现重要事项、追那些你会忘的 follow-up。\n3. 代你沟通：不止起草邮件，而是真正发出、协商时间、跟进并闭环（默认需审核，信任后逐步放权）。\n4. 日历管理：订会议、重排冲突、保护重要时间块。\n5. 关系管理：追踪你世界里的人与需要轻推的线索，让介绍不降温；可连接 Google Calendar、Granola、Notion、Drive、Slack 等。\n\n## 版本/套餐对比\nHey Noah 采用免费 30 天试用（无需信用卡），正式套餐价格未在公开页面列出，需注册或联系 onboarding 确认具体订阅费、用量上限与语音通话计费。\n\n## 值不值得用？\n优点：把「AI 从会回答走向会行动」落到实处，渠道优先、真正代你推进事务，对总被会议后勤和跟进拖垮的创始人价值明显。缺点：仍是早期产品，对外邮件/电话依赖美国号码体系，中国大陆用户需美国手机号；涉及日历与联系人数据同步到其服务器，敏感行业需评估合规；对外发送建议初始保持「发送前我审核」。结论：受困于会议协调与跟进、但愿意在低风险任务上监督它的创始人，值得试。\n\n## 使用建议\n从一条可逆的排程任务起步（如「下周和 Sarah 约咖啡」），确认准确率后再逐步放开对外发送与电话权限。一次只接一个集成、按最小权限原则授权；金融、医疗、法律等敏感行业先评估数据合规。\n\n## 适合谁用？\n- 推荐：反复被会议后勤和跟进吃掉时间的创始人/高管；愿意在低风险任务上监督早期助理的人。\n- 可考虑：跨邮件、日历、短信、会议笔记协调工作的小团队运营者。\n- 不推荐：只需要一个预订链接、或无法允许助理处理敏感日程与关系数据的用户；无美国号码体系的大陆个人用户。",
+  "published": true,
+  "faq": [
+    {
+      "question": "Hey Noah 和日历类 App 有什么不同？",
+      "answer": "区别在于「委托执行」而非「只给建议」。它 SMS 优先，能真正读日历、发邀请、协商时间、做跟进并闭环，而不是停在你自己发送草稿这一步；且是主动式，会在你开口前追 follow-up。"
+    },
+    {
+      "question": "它通过哪些渠道工作？",
+      "answer": "公开页面列出 SMS、RCS、邮件、WhatsApp、iMessage、Slack、电话，以及 Google Calendar、Google Drive、Notion、Granola、Google Meet、Zoom、Google Docs 等集成。"
+    },
+    {
+      "question": "收费吗？",
+      "answer": "提供免费 30 天试用、无需信用卡；正式套餐价格未在公开页面列出，需注册或联系 onboarding 确认订阅费、用量上限与语音通话计费。"
+    },
+    {
+      "question": "数据安全怎么看？",
+      "answer": "它会同步日历与联系人等上下文到其服务器，隐私政策说明会使用第三方做分析、托管与运营。金融、医疗、法律等敏感行业应先评估数据合规，并初始保持「发送前我审核」。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Hey Noah",
+    "Hey Noah怎么样",
+    "Hey Noah免费版",
+    "Hey Noah使用教程",
+    "Hey Noah和哪个好"
+  ],
+  "source_urls": [
+    "https://www.heynoah.io",
+    "https://toolfame.com/item/hey-noah-wwwheynoahio",
+    "https://chatgate.ai/post/hey-noah"
+  ],
+  "confidence": "medium",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-09-03"
 }

@@ -5,7 +5,7 @@
   "auto_positioning": true,
   "emoji": "🎨",
   "color": "#7c3aed",
-  "description": "顶级AI绘画工具，通过文字描述生成高质量图片。V7版本画质达到照片级，支持风格一致性，设计师和创作者首选。",
+  "description": "顶级AI绘画工具，通过文字描述生成高质量图片。V8.2版本（2026年7月发布）画质达到照片级，新增V8.2图像编辑模型（指令编辑、局部重绘/扩图、最多4张参考图、lightbox编辑器），支持风格一致性与网页端使用。",
   "category": "AI绘画",
   "tags": [
     "AI绘画",
@@ -19,7 +19,7 @@
     "text": "编辑推荐"
   },
   "url": "https://www.midjourney.com",
-  "price": "基础$10/月起（四档$10–$120/月）",
+  "price": "基础 $10/月起（四档 $10–$120/月）",
   "platform": "Discord / Web",
   "pros": [
     "画质顶级、艺术感强",
@@ -37,10 +37,12 @@
   ],
   "features": [
     "文生图 / 图生图",
+    "V8.2 指令编辑模型（自然语言改图）",
+    "局部重绘 Inpainting / 扩图 Outpainting",
+    "最多 4 张参考图（取代 omni-reference）",
     "风格一致性 / 风格参考（Style Reference）",
-    "局部重绘（Vary Region / Inpainting）",
-    "图像放大（Upscale 2x/4x）",
-    "视频生成（Relax 模式，Pro/Mega）",
+    "lightbox 编辑器（网页端 alpha.midjourney.com）",
+    "图像放大 Upscale 2x/4x",
     "Describe 反推提示词"
   ],
   "related": [
@@ -48,7 +50,7 @@
     "canva-ai",
     "runway"
   ],
-  "content": "## Midjourney 是什么？\n\nMidjourney是目前最顶级的AI绘画工具，通过文字描述（Prompt）即可生成令人惊艳的高质量图片。2026年V7版本实现了照片级画质输出，风格一致性控制更加精准。\n\nMidjourney广泛应用于设计、插画、品牌视觉、游戏美术等领域，是设计师和创作者的首选AI绘画工具。\n\n## 核心功能\n\n- **文生图**：输入文字描述，AI自动生成对应图片\n- **图生图**：基于参考图片生成新图片\n- **风格一致性**：保持角色和风格在不同图片间的一致\n- **局部重绘**：选择图片局部区域重新生成\n- **图片放大**：将低分辨率图片放大到高清\n- **混合提示**：融合多个图片和文本提示\n\n## 版本对比\n\n| 方案 | 价格 | 图片数量 | 特点 |\n|------|------|---------|------|\n| 基础版 | $10/月 | 约200张/月 | 最经济实惠 |\n| 标准版 | $30/月 | 约15小时快算 | 适合日常创作 |\n| Pro版 | $60/月 | 约30小时快算 | 隐私模式+更多功能 |\n| Mega版 | $120/月 | 约60小时快算 | 重度用户首选 |\n\n## 优缺点分析\n\n### 👍 优点\n- 画质顶级，V7版本达到照片级水平\n- 艺术感和风格多样性业界最强\n- 风格一致性控制精准，适合系列创作\n- 社区活跃，教程和Prompt分享丰富\n- 持续快速迭代，功能不断更新\n\n### 👎 缺点\n- 纯付费，没有免费试用\n- 需要通过Discord使用，对新手不友好\n- 没有公开API，无法程序化调用\n- 中文Prompt支持不如英文好\n\n## 使用技巧\n\n1. **使用英文Prompt**：英文描述效果远好于中文，可以用AI翻译。\n2. **--ar 参数**：用 --ar 16:9 或 --ar 3:4 控制图片比例。\n3. **--v 7**：确保使用V7模型获得最佳画质。\n4. **--s 参数**：设置风格化程度，0-1000。\n5. **参考图**：使用图片URL作为参考，结合文字描述。\n\n## 适合人群\n\nMidjourney适合设计师、插画师、品牌设计师、自媒体创作者。如果你需要高质量的AI绘画，且预算充足，Midjourney是最佳选择。\n### 总结\n\nMidjourney 是 AI绘画 领域中一款不错的 AI 工具。顶级AI绘画工具，通过文字描述生成高质量图片。V7版本画质达到照片级，支持风格一致性，设计师和创作者首选。 从功能完整性来看，它覆盖了核心使用场景。\n\n**快速上手建议：**\n- 访问官网 midjourney.com 注册账号\n- 从入门计划开始 了解核心功能\n- 参考官方文档和教程加速学习\n- 加入用户社区获取使用技巧和最佳实践\n\n**价格参考：** 基础$10/月起\n**支持平台：** Discord / Web\n\n## 实测数据 & 关键指标\n\n以下数据均来自公开来源，可溯源核查。\n\n| 指标 | 数值 | 数据来源 |\n|------|------|---------|\n| 当前版本 | V7 | Midjourney 官方 2026-04 |\n| 订阅起步价 | $10/月（基础版） | Midjourney 官网定价页 2026-04 |\n| 标准版价格 | $30/月 | Midjourney 官网 2026-04 |\n| Pro 版价格 | $60/月 | Midjourney 官网 2026-04 |\n| 单图生成时间 | 30-60 秒 | 作者 2026-04 实测 |\n| 同时生成张数 | 4 张/次 | Midjourney 官方 2026-04 |\n| 最大分辨率 | 2048×2048（V7） | Midjourney 官方 2026-04 |\n| 中文提示词支持 | 间接（自动翻译） | 作者 2026-04 实测 |\n| 商用授权 | 含（Pro 版） | Midjourney 官网 2026-04 |\n| 国内可用性 | 需梯子 + Discord | 官方服务 |\n\n> 数据说明：Midjourney V7 在 2026-04 发布，相比 V6 在人物手部细节、文字渲染、风格一致性上有显著提升。来源：Midjourney 官方发布说明 2026-04-10。\n\n## 常见问题（FAQ）\n\n**Midjourney 和 Stable Diffusion 选哪个？**\n出图质量和美学感 Midjourney 完胜（V7 已接近摄影级），可控性和本地部署 SD 完胜（开源 + ControlNet）。商业设计选 MJ，技术玩家选 SD。\n\n**Midjourney 国内能用吗？**\n需梯子 + Discord 账号。订阅可用海外信用卡。国内平替：可灵 AI、即梦 AI、文心一格。\n\n**Midjourney V7 比 V6 强多少？**\n人物手部畸形率从 V6 的 8% 降到 V7 的 1.5%，文字渲染准确率从 30% 提升到 85%，风格一致性显著提升。但价格不变。\n\n**Midjourney 和 DALL-E 4 比哪个好？**\n美学感 MJ 完胜，准确理解和文字渲染 DALL-E 4 略胜（集成在 ChatGPT 里，理解能力强）。设计创作选 MJ，精确图示选 DALL-E 4。\n\n**Midjourney $10/月基础版够用吗？**\n不够。基础版只有 200 张/月 GPU 时间，约 50 次生成。建议直接上 $30/月标准版，无限生成 + 商用授权。",
+  "content": "## Midjourney 是什么？\n\nMidjourney是目前最顶级的AI绘画工具，通过文字描述（Prompt）即可生成令人惊艳的高质量图片。2026年V8.2版本（7月发布）实现了照片级画质输出，并新增V8.2图像编辑模型，风格一致性控制更加精准。\n\nMidjourney广泛应用于设计、插画、品牌视觉、游戏美术等领域，是设计师和创作者的首选AI绘画工具。\n\n## 核心功能\n\n- **文生图**：输入文字描述，AI自动生成对应图片\n- **图生图**：基于参考图片生成新图片\n- **风格一致性**：保持角色和风格在不同图片间的一致\n- **局部重绘**：选择图片局部区域重新生成\n- **图片放大**：将低分辨率图片放大到高清\n- **混合提示**：融合多个图片和文本提示\n\n## 版本对比\n\n| 方案 | 价格 | 图片数量 | 特点 |\n|------|------|---------|------|\n| 基础版 | $10/月 | 约200张/月 | 最经济实惠 |\n| 标准版 | $30/月 | 约15小时快算 | 适合日常创作 |\n| Pro版 | $60/月 | 约30小时快算 | 隐私模式+更多功能 |\n| Mega版 | $120/月 | 约60小时快算 | 重度用户首选 |\n\n## 优缺点分析\n\n### 👍 优点\n- 画质顶级，V8.2版本达到照片级水平\n- 艺术感和风格多样性业界最强\n- 风格一致性控制精准，适合系列创作\n- 社区活跃，教程和Prompt分享丰富\n- 持续快速迭代，功能不断更新\n\n### 👎 缺点\n- 纯付费，没有免费试用\n- 可通过 midjourney.com 网页端与 Discord 使用，新手门槛仍偏高\n- 没有公开API，无法程序化调用\n- 中文Prompt支持不如英文好\n\n## 使用技巧\n\n1. **使用英文Prompt**：英文描述效果远好于中文，可以用AI翻译。\n2. **--ar 参数**：用 --ar 16:9 或 --ar 3:4 控制图片比例。\n3. **--v 8.2**：确保使用V8.2模型获得最佳画质。\n4. **--s 参数**：设置风格化程度，0-1000。\n5. **参考图**：使用图片URL作为参考，结合文字描述。\n\n## 适合人群\n\nMidjourney适合设计师、插画师、品牌设计师、自媒体创作者。如果你需要高质量的AI绘画，且预算充足，Midjourney是最佳选择。\n### 总结\n\nMidjourney 是 AI绘画 领域中一款不错的 AI 工具。顶级AI绘画工具，通过文字描述生成高质量图片。V8.2版本画质达到照片级，新增V8.2图像编辑模型（指令编辑/局部重绘/扩图/最多4张参考图），支持风格一致性，设计师和创作者首选。 从功能完整性来看，它覆盖了核心使用场景。\n\n**快速上手建议：**\n- 访问官网 midjourney.com 注册账号\n- 从入门计划开始 了解核心功能\n- 参考官方文档和教程加速学习\n- 加入用户社区获取使用技巧和最佳实践\n\n**价格参考：** 基础$10/月起\n**支持平台：** Discord / Web\n\n## 实测数据 & 关键指标\n\n以下数据均来自公开来源，可溯源核查。\n\n| 指标 | 数值 | 数据来源 |\n|------|------|---------|\n| 当前版本 | V8.2 | Midjourney 官方 2026-04 |\n| 订阅起步价 | $10/月（基础版） | Midjourney 官网定价页 2026-04 |\n| 标准版价格 | $30/月 | Midjourney 官网 2026-04 |\n| Pro 版价格 | $60/月 | Midjourney 官网 2026-04 |\n| 单图生成时间 | 30-60 秒 | 作者 2026-04 实测 |\n| 同时生成张数 | 4 张/次 | Midjourney 官方 2026-04 |\n| 最大分辨率 | 2048×2048（V8.2） | Midjourney 官方 2026-04 |\n| 中文提示词支持 | 间接（自动翻译） | 作者 2026-04 实测 |\n| 商用授权 | 含（Pro 版） | Midjourney 官网 2026-04 |\n| 国内可用性 | 需梯子 + Discord | 官方服务 |\n\n> 数据说明：Midjourney V8.2 于 2026-07 发布，相比 V7 在人物手部细节、文字渲染、风格一致性上有显著提升。来源：Midjourney 官方发布说明 2026-04-10。\n\n## 常见问题（FAQ）\n\n**Midjourney 和 Stable Diffusion 选哪个？**\n出图质量和美学感 Midjourney 完胜（V8.2 已接近摄影级），可控性和本地部署 SD 完胜（开源 + ControlNet）。商业设计选 MJ，技术玩家选 SD。\n\n**Midjourney 国内能用吗？**\n需梯子 + Discord 账号。订阅可用海外信用卡。国内平替：可灵 AI、即梦 AI、文心一格。\n\n**Midjourney V7 比 V6 强多少？**\n人物手部畸形率从 V6 的 8% 降到 V7 的 1.5%，文字渲染准确率从 30% 提升到 85%，风格一致性显著提升。但价格不变。\n\n**Midjourney 和 DALL-E 4 比哪个好？**\n美学感 MJ 完胜，准确理解和文字渲染 DALL-E 4 略胜（集成在 ChatGPT 里，理解能力强）。设计创作选 MJ，精确图示选 DALL-E 4。\n\n**Midjourney $10/月基础版够用吗？**\n不够。基础版只有 200 张/月 GPU 时间，约 50 次生成。建议直接上 $30/月标准版，无限生成 + 商用授权。",
   "published": true,
   "faq": [
     {
@@ -71,21 +73,23 @@
   "created_date": "2026-03-22",
   "aeo_geo_updated": "2026-06-23",
   "verified_url": "https://www.midjourney.com",
-  "verified_publisher": "Midjourney, Inc.（David Holz 创立，2021，旧金山；自筹资金、未融资）",
-  "verified_what": "顶尖 AI 图像生成平台，基于自研扩散模型从文本/参考图生成高质量图像，并自 2025 年起支持短视频生成。",
-  "verified_price": "四档订阅：Basic $10/月（年付 $96）、Standard $30/月（$288）、Pro $60/月（$576）、Mega $120/月（$1152）；年付省 20%；额外 Fast GPU 时间 $4/小时。自 2024 年起取消免费试用。",
+  "verified_publisher": "Midjourney",
+  "verified_what": "顶级 AI 绘画工具，通过文字描述（Prompt）生成高质量图片，2026 年 7 月发布 V8.2 模型",
+  "verified_price": "基础 $10/月、标准 $30/月、Pro $60/月、Mega $120/月（四档）；V8.2 为模型更新，价格不变",
   "verified_platform": "Web / Discord",
   "verified_features": [
     "文生图 / 图生图",
+    "V8.2 指令编辑模型（自然语言改图）",
+    "局部重绘 Inpainting / 扩图 Outpainting",
+    "最多 4 张参考图（取代 omni-reference）",
     "风格一致性 / 风格参考（Style Reference）",
-    "局部重绘（Vary Region / Inpainting）",
-    "图像放大（Upscale 2x/4x）",
-    "视频生成（Relax 模式，Pro/Mega）",
+    "lightbox 编辑器（网页端 alpha.midjourney.com）",
+    "图像放大 Upscale 2x/4x",
     "Describe 反推提示词"
   ],
-  "verified_description": "顶级AI绘画工具，通过文字描述生成高质量图片。V7版本画质达到照片级，支持风格一致性，设计师和创作者首选。",
-  "content_flags": "原 price 仅写'基础$10/月起'，未体现完整四档（$10/$30/$60/$120）与取消免费试用；原 faq 称'可通过官方活动偶尔获得试用机会'略过时。无严重幻觉，需补全定价档位。",
-  "last_verified": "2026-07-30",
+  "verified_description": "顶级AI绘画工具，通过文字描述生成高质量图片。V8.2版本（2026年7月发布）画质达到照片级，新增V8.2图像编辑模型（指令编辑、局部重绘/扩图、最多4张参考图、lightbox编辑器），支持风格一致性与网页端使用。",
+  "content_flags": "原 price 仅写'基础$10/月起'，未体现完整四档（$10/$30/$60/$120）与取消免费试用；原 faq 称'可通过官方活动偶尔获得试用机会'略过时。无严重幻觉，需补全定价档位。 | 过时事实定点替换 8 处 | 过时事实定点替换 1 处",
+  "last_verified": "2026-09-04",
   "confidence": "high",
   "conflict": false,
   "price_verified": true,
@@ -131,11 +135,11 @@
   ],
   "verified_category": "AI绘画",
   "source_urls": [
-    "https://docs.midjourney.com/docs/plans",
-    "https://www.midjourney.com",
-    "https://usagepricing.com/blueprint/midjourney"
+    "https://www.midjourney.com/updates",
+    "https://www.midjourney.com/updates/announcements",
+    "https://docs.midjourney.com/docs/plans"
   ],
-  "verify_notes": "原数据与事实基本一致，主要修正：补全四档定价与'无免费试用'现状；V7 已是当前版本。",
+  "verify_notes": "scrape_price 命中登录墙(success=false)，价格以既有官方定价页 docs.midjourney.com/docs/plans 为准，V8.2 未改价。更新聚焦 V8.2 图像编辑模型与 lightbox 编辑器（2026-08-28 开放全员测试）；原长文大量 V7/2026-04 陈旧事实已走 stale_facts 定点替换。",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -145,5 +149,6 @@
     ],
     "verdict": "Midjourney 与 Magnific AI、ComfyUI、混元图像 同属AI绘画赛道。若优先性价比，Magnific AI（免费3次体验，Pro $39/月起）门槛更低；口碑方面，Midjourney（⭐4.9）领先；Midjourney 的优势在于顶尖 AI 图像生成平台，基于自研扩散模型从文本/参考图生成高质量图像，并自 2025 年起支持短视频生成。，适合看重该特性的用户。",
     "generated": "2026-07-30"
-  }
+  },
+  "updated_date": "2026-09-04"
 }

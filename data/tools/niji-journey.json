@@ -1,99 +1,100 @@
 {
-  "name": "Niji",
-  "slug": "niji-journey",
-  "positioning": "Niji·journey是什么？二次元AI绘画好用吗",
-  "auto_positioning": false,
-  "emoji": "🎨",
-  "color": "#FF5C8A",
-  "description": "Niji·journey（Niji Journey）是由 Spellbrush 与 Midjourney 联合开发的二次元/动漫风格 AI 绘画模型，专注于日式动画与漫画美学，擅长角色设计、场景构图与风格一致性，是画二次元插画的首选工具之一。",
-  "category": "AI绘画",
-  "tags": [
-    {
-      "text": "二次元"
+    "name": "Niji",
+    "slug": "niji-journey",
+    "positioning": "Niji·journey是什么？二次元AI绘画好用吗",
+    "auto_positioning": false,
+    "emoji": "🎨",
+    "color": "#FF5C8A",
+    "description": "Niji·journey（Niji Journey）是由 Spellbrush 与 Midjourney 联合开发的二次元/动漫风格 AI 绘画模型，专注于日式动画与漫画美学，擅长角色设计、场景构图与风格一致性，是画二次元插画的首选工具之一。",
+    "category": "AI绘画",
+    "tags": [
+        {
+            "text": "二次元"
+        },
+        {
+            "text": "动漫插画"
+        },
+        {
+            "text": "Midjourney"
+        },
+        {
+            "text": "角色一致性"
+        },
+        {
+            "text": "漫画"
+        }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "hot",
+        "text": "HOT"
     },
-    {
-      "text": "动漫插画"
-    },
-    {
-      "text": "Midjourney"
-    },
-    {
-      "text": "角色一致性"
-    },
-    {
-      "text": "漫画"
-    }
-  ],
-  "rating": "⭐ 4.7",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "hot",
-    "text": "HOT"
-  },
-  "url": "https://nijijourney.com",
-  "price": "与 Midjourney 共享订阅档位：Basic $10/月、Standard $30/月、Pro $60/月、Mega $120/月（年付约 8 折）；新用户有有限免费试用（具体以官网为准）",
-  "platform": "Web（nijijourney.com）、Discord（--niji 参数）、移动端 App",
-  "pros": [
-    "二次元/动漫风格专精，画风比通用模型更地道",
-    "角色一致性好，适合做角色设定集与漫画",
-    "支持多种动漫流派风格（少女/少年/青年/Chibi 等）",
-    "高分辨率输出，可放大到印刷级",
-    "与 Midjourney 共享成熟订阅，付费档位清晰"
-  ],
-  "cons": [
-    "需要订阅（或有限试用），无长期免费档",
-    "主要通过 Discord 命令或官网操作，新手要学提示词语法",
-    "风格相对固定在二次元，写实/西方插画不是强项"
-  ],
-  "features": [
-    "动漫风格图像生成：专训于动画与漫画作品，画风地道",
-    "角色一致性：可参考过往生成保持同一角色外观",
-    "多流派风格：通过风格参数切换少女/少年/青年/Chibi 等",
-    "高级提示控制：支持 --style、画幅、混乱度、风格化强度等参数",
-    "高分辨率输出：可生成并放大到较高分辨率，适合印刷与宣发",
-    "参考图风格迁移：用参考图统一多张作品视觉风格"
-  ],
-  "related": [
-    "midjourney",
-    "novelai",
-    "stable-diffusion"
-  ],
-  "content": "## Niji 是什么？\nNiji·journey（常写作 Niji Journey）是由 Spellbrush 与 Midjourney 联合开发的二次元/动漫风格 AI 绘画模型。和 Midjourney 偏写实的通用画风不同，Niji 专门在日式动画与漫画美学上做了训练，对大眼、发丝物理、上色与角色比例都有更深的理解，生成出来的图更「像日本本地的动画」，而不是西方工具硬加「anime」标签的产物。无论是想做原创角色立绘、漫画分镜背景，还是虚拟形象头像，Niji 都是画二次元插画的首选之一。\n\n## 核心功能\n- 动漫风格图像生成：模型专训于动画与漫画作品，输出地道日式画风。\n- 角色一致性：可参考之前的生成来保持同一角色的外观，方便做角色设定集。\n- 多流派风格：通过风格参数切换少女（shoujo）、少年（shounen）、青年（seinen）、Q 版（chibi）等美学。\n- 高级提示控制：支持 --style expressive/cute/scenic、画幅、混乱度、风格化强度等参数精细调控。\n- 高分辨率输出：可生成并放大到较高分辨率，质量足以用于漫画页、视觉小说素材与宣发图。\n- 参考图风格迁移：喂一张参考图，让新图沿用其视觉风格，统一系列作品观感。\n\n## 版本/套餐对比\nNiji 与 Midjourney 共享订阅档位（价格以官网为准）：\n| 套餐 | 价格 | 主要权益 |\n| --- | --- | --- |\n| Basic | $10/月 | 基础生成额度，标准分辨率 |\n| Standard | $30/月 | 更快生成、隐私模式、高分辨率放大 |\n| Pro | $60/月 | 最高速度、商用授权、优先支持 |\n| Mega | $120/月 | 最大额度与企业级需求 |\n年付约 8 折；新用户有有限免费试用。\n\n## 值不值得用？\n优点：二次元专精、画风地道，角色一致性在漫画与视觉小说创作里非常关键；多流派风格与参数控制给了创作者很大空间；高分辨率可商用。缺点：需要订阅或有限试用，没有长期免费档；操作以 Discord 命令或官网为主，新手要学提示词；风格固定在二次元，写实不是强项。结论：经常画动漫风插画、做角色或漫画的人，Niji 很值得订阅；只想偶尔玩玩、或要写实风格的人，性价比不高。\n\n## 使用建议\n1. 新手先从官网或移动端 App 的试用额度上手，少写命令也能出图。\n2. 做角色设定：用同一角色提示词 + 参考图，批量生成表情/姿势变体。\n3. 统一系列画风：用 --sref 参考图让多张图风格一致。\n4. 出最终稿再切回正常模式（非草稿模式）拿高分辨率。\n5. 商用注意订阅档位：公司年营收超一定门槛通常需 Pro/Mega 档。\n\n## 适合谁用？\n- 推荐：动漫创作者、插画师、游戏/视觉小说美术、二次元内容创作者。\n- 可考虑：漫画爱好者、想做虚拟形象/头像的普通用户（先试用）。\n- 不推荐：想要免费长期白嫖的人、需要写实或西方插画风格的人、完全不愿学提示词的新手。",
-  "published": false,
-  "faq": [
-    {
-      "question": "Niji 和 Midjourney 是什么关系？",
-      "answer": "Niji 是由 Spellbrush 与 Midjourney 联合开发的二次元专精模型，画风针对日式动画/漫画优化，并与 Midjourney 共享订阅档位。"
-    },
-    {
-      "question": "Niji 免费吗？",
-      "answer": "新用户有有限免费试用，但之后需要订阅 Midjourney 的 Basic（$10/月）及以上档位，没有长期免费档。"
-    },
-    {
-      "question": "Niji 生成的图能商用吗？",
-      "answer": "付费订阅用户通常可获得生成图的商用权利，但公司年营收超过一定门槛一般需订阅 Pro 或 Mega 档，具体以官网条款为准。"
-    },
-    {
-      "question": "怎么用 Niji 生成图？",
-      "answer": "可通过 nijijourney.com 官网、官方 Discord 服务器（加 --niji 参数）或移动端 App，输入文字描述并选择风格参数即可生成。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "Niji",
-    "Niji怎么样",
-    "Niji免费版",
-    "Niji使用教程",
-    "Niji和哪个好"
-  ],
-  "source_urls": [
-    "https://niji.midjourney.com",
-    "https://www.nemovideo.com/ru-RU/alternative/nijijourney",
-    "https://orbitarai.com/ai-tools/image-generators/anime-generators/niji-journey/"
-  ],
-  "confidence": "high",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+    "url": "https://nijijourney.com",
+    "price": "与 Midjourney 共享订阅档位：Basic $10/月、Standard $30/月、Pro $60/月、Mega $120/月（年付约 8 折）；新用户有有限免费试用（具体以官网为准）",
+    "platform": "Web（nijijourney.com）、Discord（--niji 参数）、移动端 App",
+    "pros": [
+        "二次元/动漫风格专精，画风比通用模型更地道",
+        "角色一致性好，适合做角色设定集与漫画",
+        "支持多种动漫流派风格（少女/少年/青年/Chibi 等）",
+        "高分辨率输出，可放大到印刷级",
+        "与 Midjourney 共享成熟订阅，付费档位清晰"
+    ],
+    "cons": [
+        "需要订阅（或有限试用），无长期免费档",
+        "主要通过 Discord 命令或官网操作，新手要学提示词语法",
+        "风格相对固定在二次元，写实/西方插画不是强项"
+    ],
+    "features": [
+        "动漫风格图像生成：专训于动画与漫画作品，画风地道",
+        "角色一致性：可参考过往生成保持同一角色外观",
+        "多流派风格：通过风格参数切换少女/少年/青年/Chibi 等",
+        "高级提示控制：支持 --style、画幅、混乱度、风格化强度等参数",
+        "高分辨率输出：可生成并放大到较高分辨率，适合印刷与宣发",
+        "参考图风格迁移：用参考图统一多张作品视觉风格"
+    ],
+    "related": [
+        "midjourney",
+        "novelai",
+        "stable-diffusion"
+    ],
+    "content": "## Niji 是什么？\nNiji·journey（常写作 Niji Journey）是由 Spellbrush 与 Midjourney 联合开发的二次元/动漫风格 AI 绘画模型。和 Midjourney 偏写实的通用画风不同，Niji 专门在日式动画与漫画美学上做了训练，对大眼、发丝物理、上色与角色比例都有更深的理解，生成出来的图更「像日本本地的动画」，而不是西方工具硬加「anime」标签的产物。无论是想做原创角色立绘、漫画分镜背景，还是虚拟形象头像，Niji 都是画二次元插画的首选之一。\n\n## 核心功能\n- 动漫风格图像生成：模型专训于动画与漫画作品，输出地道日式画风。\n- 角色一致性：可参考之前的生成来保持同一角色的外观，方便做角色设定集。\n- 多流派风格：通过风格参数切换少女（shoujo）、少年（shounen）、青年（seinen）、Q 版（chibi）等美学。\n- 高级提示控制：支持 --style expressive/cute/scenic、画幅、混乱度、风格化强度等参数精细调控。\n- 高分辨率输出：可生成并放大到较高分辨率，质量足以用于漫画页、视觉小说素材与宣发图。\n- 参考图风格迁移：喂一张参考图，让新图沿用其视觉风格，统一系列作品观感。\n\n## 版本/套餐对比\nNiji 与 Midjourney 共享订阅档位（价格以官网为准）：\n| 套餐 | 价格 | 主要权益 |\n| --- | --- | --- |\n| Basic | $10/月 | 基础生成额度，标准分辨率 |\n| Standard | $30/月 | 更快生成、隐私模式、高分辨率放大 |\n| Pro | $60/月 | 最高速度、商用授权、优先支持 |\n| Mega | $120/月 | 最大额度与企业级需求 |\n年付约 8 折；新用户有有限免费试用。\n\n## 值不值得用？\n优点：二次元专精、画风地道，角色一致性在漫画与视觉小说创作里非常关键；多流派风格与参数控制给了创作者很大空间；高分辨率可商用。缺点：需要订阅或有限试用，没有长期免费档；操作以 Discord 命令或官网为主，新手要学提示词；风格固定在二次元，写实不是强项。结论：经常画动漫风插画、做角色或漫画的人，Niji 很值得订阅；只想偶尔玩玩、或要写实风格的人，性价比不高。\n\n## 使用建议\n1. 新手先从官网或移动端 App 的试用额度上手，少写命令也能出图。\n2. 做角色设定：用同一角色提示词 + 参考图，批量生成表情/姿势变体。\n3. 统一系列画风：用 --sref 参考图让多张图风格一致。\n4. 出最终稿再切回正常模式（非草稿模式）拿高分辨率。\n5. 商用注意订阅档位：公司年营收超一定门槛通常需 Pro/Mega 档。\n\n## 适合谁用？\n- 推荐：动漫创作者、插画师、游戏/视觉小说美术、二次元内容创作者。\n- 可考虑：漫画爱好者、想做虚拟形象/头像的普通用户（先试用）。\n- 不推荐：想要免费长期白嫖的人、需要写实或西方插画风格的人、完全不愿学提示词的新手。",
+    "published": true,
+    "faq": [
+        {
+            "question": "Niji 和 Midjourney 是什么关系？",
+            "answer": "Niji 是由 Spellbrush 与 Midjourney 联合开发的二次元专精模型，画风针对日式动画/漫画优化，并与 Midjourney 共享订阅档位。"
+        },
+        {
+            "question": "Niji 免费吗？",
+            "answer": "新用户有有限免费试用，但之后需要订阅 Midjourney 的 Basic（$10/月）及以上档位，没有长期免费档。"
+        },
+        {
+            "question": "Niji 生成的图能商用吗？",
+            "answer": "付费订阅用户通常可获得生成图的商用权利，但公司年营收超过一定门槛一般需订阅 Pro 或 Mega 档，具体以官网条款为准。"
+        },
+        {
+            "question": "怎么用 Niji 生成图？",
+            "answer": "可通过 nijijourney.com 官网、官方 Discord 服务器（加 --niji 参数）或移动端 App，输入文字描述并选择风格参数即可生成。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "Niji",
+        "Niji怎么样",
+        "Niji免费版",
+        "Niji使用教程",
+        "Niji和哪个好"
+    ],
+    "source_urls": [
+        "https://niji.midjourney.com",
+        "https://www.nemovideo.com/ru-RU/alternative/nijijourney",
+        "https://orbitarai.com/ai-tools/image-generators/anime-generators/niji-journey/"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14",
+    "published_date": "2026-09-04"
 }

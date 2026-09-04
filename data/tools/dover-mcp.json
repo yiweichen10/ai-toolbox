@@ -1,97 +1,98 @@
 {
-  "name": "Dover MCP",
-  "slug": "dover-mcp",
-  "positioning": "Dover MCP是什么？在Claude和ChatGPT里跑招聘流程好用吗",
-  "auto_positioning": false,
-  "emoji": "🧑‍💼",
-  "color": "#10B981",
-  "description": "Dover MCP 是 Dover 官方的远程 MCP 服务，把它的免费 ATS（申请人追踪系统）接入 Claude、ChatGPT、Cursor、Codex 等 AI 工具。连上之后可以用自然语言审阅申请人、安排面试、添加面评、推进候选人阶段并协调招聘，访问通过 OAuth 授权并严格遵循团队既有权限。2026 年 8 月 5 日登上 Product Hunt，随 Dover 免费 ATS 一起提供。",
-  "category": "AI办公",
-  "tags": [
-    {
-      "text": "免费可用",
-      "type": "free"
+    "name": "Dover MCP",
+    "slug": "dover-mcp",
+    "positioning": "Dover MCP是什么？在Claude和ChatGPT里跑招聘流程好用吗",
+    "auto_positioning": false,
+    "emoji": "🧑‍💼",
+    "color": "#10B981",
+    "description": "Dover MCP 是 Dover 官方的远程 MCP 服务，把它的免费 ATS（申请人追踪系统）接入 Claude、ChatGPT、Cursor、Codex 等 AI 工具。连上之后可以用自然语言审阅申请人、安排面试、添加面评、推进候选人阶段并协调招聘，访问通过 OAuth 授权并严格遵循团队既有权限。2026 年 8 月 5 日登上 Product Hunt，随 Dover 免费 ATS 一起提供。",
+    "category": "AI办公",
+    "tags": [
+        {
+            "text": "免费可用",
+            "type": "free"
+        },
+        {
+            "text": "MCP服务"
+        },
+        {
+            "text": "招聘ATS"
+        },
+        {
+            "text": "权限隔离"
+        }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "new",
+        "text": "NEW"
     },
-    {
-      "text": "MCP服务"
-    },
-    {
-      "text": "招聘ATS"
-    },
-    {
-      "text": "权限隔离"
-    }
-  ],
-  "rating": "⭐ 4.3",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "new",
-    "text": "NEW"
-  },
-  "url": "https://www.dover.com",
-  "price": "免费，随 Dover 免费 ATS 提供（该 ATS 为 0 元、不限用户与职位数）；Premium ATS 为 199 美元/月，含 AI 简历评分、AI 面试记录与优先支持",
-  "platform": "远程 MCP 服务（端点 https://app.dover.com/mcp），支持 Claude、Claude Code、ChatGPT 开发者模式、Cursor、Codex 等 MCP 客户端",
-  "pros": [
-    "把招聘搬进你本来就在用的 AI 工具，不用在 ATS、邮箱、日历、聊天窗之间反复横跳",
-    "OAuth 授权且严格继承 Dover 权限，成员只能看到自己有权查看的职位与候选人",
-    "完全免费，随 Dover 的免费 ATS 一起提供，不限用户数与职位数",
-    "覆盖读写两端：既能查管道状态，也能安排面试、写备注、推进阶段",
-    "覆盖客户端广，Claude、ChatGPT、Cursor、Codex 等主流 MCP 客户端都能接"
-  ],
-  "cons": [
-    "必须已有 Dover 工作区，它不是独立 ATS 也不是人才库，替代不了底层系统",
-    "能力上限受 Dover 平台本身限制，例如简历解析仅支持英文，日历邮箱偏向 Google Workspace",
-    "AI 可直接改动候选人阶段与对外沟通，涉及真实求职者，必须人工复核"
-  ],
-  "features": [
-    "职位与候选人查询：查看在招职位中最强的候选人，以及每个人所处的流程阶段",
-    "面试安排与准备：安排面试、生成面试问题、为用人经理做准备",
-    "流程推进：添加面评备注、把候选人推进到下一阶段",
-    "管道体检：识别哪些岗位候选人储备充足、哪些还需要主动搜寻",
-    "邮箱日历协同：结合邮箱与日历协调面试时间与候选人沟通",
-    "权限感知访问：OAuth 连接，可见范围由组织权限与招聘团队归属决定"
-  ],
-  "related": [
-    "dingtalk",
-    "feishu",
-    "wps-ai"
-  ],
-  "content": "## Dover MCP是什么？\n\nDover 是一家 YC 出身的公司，做的是面向初创企业的免费 ATS——发职位、搜候选人、管申请人、协调面试都在一个平台上。Dover MCP 是它 2026 年 8 月推出的远程 MCP 服务，作用很单一但很实用：把这套招聘系统接到 Claude、ChatGPT、Cursor、Codex 这些你已经天天在用的 AI 工具里。\n\n关键差别不在「AI 能读简历」，而在于 AI 拿到的是实时招聘上下文，不是你手动粘进去的一份简历或导出的表格。服务端暴露职位、候选人、申请与面试准备等能力，AI 于是能回答「后端高级工程师这个岗现在卡在哪」，也能直接安排面试、写面评、推进阶段。创始团队在发布时举的链式例子是：找候选人 → 安排面试 → 给用人经理做准备 → 面试后记录面评 → 推进到下一阶段 → 起草跟进邮件，一串动作在对话里走完。\n\n## 核心功能\n\n1. 查管道：看所有在招岗位中最强的候选人，以及每个人当前处于什么阶段。\n2. 安排与准备面试：定时间、生成面试问题、给用人经理做背景准备。\n3. 推进流程：添加备注与面评，把候选人移到下一阶段。\n4. 管道体检：识别哪些岗位候选人够用、哪些还得继续主动搜寻，这个视角在没有招聘运营的小团队里尤其缺。\n5. 邮箱日历协同：结合邮箱和日历协调面试安排与候选人沟通。\n\n接入方式：Dover 提供托管端点 https://app.dover.com/mcp，在 Dover 的 Settings → Integrations → AI Settings 里按指引配置。Claude 用自定义连接器，Claude Code 可直接加远程 HTTP 服务，ChatGPT 走开发者模式创建自定义 MCP 应用，Cursor、Codex 等用通用 HTTP MCP 配置。连接时通过 OAuth 授权。\n\n## 版本/套餐对比\n\nDover MCP 本身免费，随 Dover 的免费 ATS 一起提供——该 ATS 定价为 0 元，不限用户与职位数，包含招聘平台集成、邮箱集成与候选人跟踪。另有 Premium ATS 为 199 美元/月，增加 AI 简历评分、AI 面试记录与优先支持。需要注意的是，某些工作流可能依赖 Premium 功能，采购前最好在账号内确认清楚。\n\n## 值不值得用？\n\n优点是它切中了一个真痛点：初创公司里做招聘的往往是创始人或用人经理本人，没有专职招聘运营，而这些人一天大半时间泡在 AI 助手里。少切换四五个界面，效率差别是实打实的。权限设计也让人放心——可见范围由连接成员的权限和招聘团队归属决定，不会因为接了 AI 就越权。\n\n缺点同样要说清。它必须依附已有的 Dover 工作区，不是独立 ATS 也不是人才搜寻库；能力上限受 Dover 平台限制，第三方评测提到简历解析仅支持英文、且更适合用 Google Workspace 的团队。最要紧的是，对话式访问不会转移责任：候选人身份、面试细节、阶段变更和对外邮件，都在影响真实的人，发出去之前必须人工确认。\n\n结论：已经在用 Dover 的小团队，这是接近零成本的效率升级；不用 Dover 的团队，它不构成迁移理由。\n\n## 使用建议\n\n1. 先用最小权限账号在一个测试职位上连通，只做只读提问。\n2. 确认哪些动作需要审批、日志怎么看、如何撤销授权，再逐个开放写操作。\n3. 敏感岗位（如高管招聘）先不要接入，等流程和边界都跑熟。\n4. 所有对外沟通与阶段变更保持人工过目，把 ATS 继续当作唯一事实来源。\n\n## 适合谁用？\n\n推荐：已在使用 Dover 免费 ATS、且日常重度使用 Claude 或 ChatGPT 的初创团队。\n可考虑：没有专职招聘运营、由创始人或用人经理直接管招聘的公司。\n不推荐：不使用 Dover 的团队，以及需要多语言简历解析或完整自建招聘体系的组织。",
-  "published": false,
-  "faq": [
-    {
-      "question": "Dover MCP 收费吗？",
-      "answer": "不收费。它随 Dover 面向初创公司的免费 ATS 一起提供，该 ATS 为 0 元且不限用户与职位数。若需要 AI 简历评分、AI 面试记录等能力，则要升级到 199 美元/月的 Premium ATS。"
-    },
-    {
-      "question": "怎么把 Dover MCP 接到 Claude 或 ChatGPT？",
-      "answer": "Dover 提供托管端点 https://app.dover.com/mcp，在 Dover 的 Settings → Integrations → AI Settings 按指引配置。Claude 用自定义连接器，ChatGPT 走开发者模式创建自定义 MCP 应用，Cursor、Codex 等使用通用 HTTP MCP 配置，连接时通过 OAuth 授权。"
-    },
-    {
-      "question": "接入 AI 后候选人数据安全吗？",
-      "answer": "访问通过 OAuth 授权，且可见信息取决于连接成员在 Dover 的权限与招聘团队归属，AI 只能看到该账号本来有权查看的内容，随时可断开授权。由于招聘记录含敏感个人信息，建议先用最小权限账号测试。"
-    },
-    {
-      "question": "没有 Dover 账号能用 Dover MCP 吗？",
-      "answer": "不能。它是 Dover ATS 的连接层，不是独立的 ATS 或人才搜寻库，必须已有 Dover 工作区以及一个兼容的 MCP 客户端。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "Dover MCP",
-    "Dover MCP怎么样",
-    "Dover MCP免费吗",
-    "Dover MCP使用教程",
-    "Dover ATS招聘AI工具"
-  ],
-  "source_urls": [
-    "https://www.dover.com",
-    "https://chatgate.ai/post/dover-mcp",
-    "https://www.productcool.com/product/dover-mcp"
-  ],
-  "confidence": "high",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+    "url": "https://www.dover.com",
+    "price": "免费，随 Dover 免费 ATS 提供（该 ATS 为 0 元、不限用户与职位数）；Premium ATS 为 199 美元/月，含 AI 简历评分、AI 面试记录与优先支持",
+    "platform": "远程 MCP 服务（端点 https://app.dover.com/mcp），支持 Claude、Claude Code、ChatGPT 开发者模式、Cursor、Codex 等 MCP 客户端",
+    "pros": [
+        "把招聘搬进你本来就在用的 AI 工具，不用在 ATS、邮箱、日历、聊天窗之间反复横跳",
+        "OAuth 授权且严格继承 Dover 权限，成员只能看到自己有权查看的职位与候选人",
+        "完全免费，随 Dover 的免费 ATS 一起提供，不限用户数与职位数",
+        "覆盖读写两端：既能查管道状态，也能安排面试、写备注、推进阶段",
+        "覆盖客户端广，Claude、ChatGPT、Cursor、Codex 等主流 MCP 客户端都能接"
+    ],
+    "cons": [
+        "必须已有 Dover 工作区，它不是独立 ATS 也不是人才库，替代不了底层系统",
+        "能力上限受 Dover 平台本身限制，例如简历解析仅支持英文，日历邮箱偏向 Google Workspace",
+        "AI 可直接改动候选人阶段与对外沟通，涉及真实求职者，必须人工复核"
+    ],
+    "features": [
+        "职位与候选人查询：查看在招职位中最强的候选人，以及每个人所处的流程阶段",
+        "面试安排与准备：安排面试、生成面试问题、为用人经理做准备",
+        "流程推进：添加面评备注、把候选人推进到下一阶段",
+        "管道体检：识别哪些岗位候选人储备充足、哪些还需要主动搜寻",
+        "邮箱日历协同：结合邮箱与日历协调面试时间与候选人沟通",
+        "权限感知访问：OAuth 连接，可见范围由组织权限与招聘团队归属决定"
+    ],
+    "related": [
+        "dingtalk",
+        "feishu",
+        "wps-ai"
+    ],
+    "content": "## Dover MCP是什么？\n\nDover 是一家 YC 出身的公司，做的是面向初创企业的免费 ATS——发职位、搜候选人、管申请人、协调面试都在一个平台上。Dover MCP 是它 2026 年 8 月推出的远程 MCP 服务，作用很单一但很实用：把这套招聘系统接到 Claude、ChatGPT、Cursor、Codex 这些你已经天天在用的 AI 工具里。\n\n关键差别不在「AI 能读简历」，而在于 AI 拿到的是实时招聘上下文，不是你手动粘进去的一份简历或导出的表格。服务端暴露职位、候选人、申请与面试准备等能力，AI 于是能回答「后端高级工程师这个岗现在卡在哪」，也能直接安排面试、写面评、推进阶段。创始团队在发布时举的链式例子是：找候选人 → 安排面试 → 给用人经理做准备 → 面试后记录面评 → 推进到下一阶段 → 起草跟进邮件，一串动作在对话里走完。\n\n## 核心功能\n\n1. 查管道：看所有在招岗位中最强的候选人，以及每个人当前处于什么阶段。\n2. 安排与准备面试：定时间、生成面试问题、给用人经理做背景准备。\n3. 推进流程：添加备注与面评，把候选人移到下一阶段。\n4. 管道体检：识别哪些岗位候选人够用、哪些还得继续主动搜寻，这个视角在没有招聘运营的小团队里尤其缺。\n5. 邮箱日历协同：结合邮箱和日历协调面试安排与候选人沟通。\n\n接入方式：Dover 提供托管端点 https://app.dover.com/mcp，在 Dover 的 Settings → Integrations → AI Settings 里按指引配置。Claude 用自定义连接器，Claude Code 可直接加远程 HTTP 服务，ChatGPT 走开发者模式创建自定义 MCP 应用，Cursor、Codex 等用通用 HTTP MCP 配置。连接时通过 OAuth 授权。\n\n## 版本/套餐对比\n\nDover MCP 本身免费，随 Dover 的免费 ATS 一起提供——该 ATS 定价为 0 元，不限用户与职位数，包含招聘平台集成、邮箱集成与候选人跟踪。另有 Premium ATS 为 199 美元/月，增加 AI 简历评分、AI 面试记录与优先支持。需要注意的是，某些工作流可能依赖 Premium 功能，采购前最好在账号内确认清楚。\n\n## 值不值得用？\n\n优点是它切中了一个真痛点：初创公司里做招聘的往往是创始人或用人经理本人，没有专职招聘运营，而这些人一天大半时间泡在 AI 助手里。少切换四五个界面，效率差别是实打实的。权限设计也让人放心——可见范围由连接成员的权限和招聘团队归属决定，不会因为接了 AI 就越权。\n\n缺点同样要说清。它必须依附已有的 Dover 工作区，不是独立 ATS 也不是人才搜寻库；能力上限受 Dover 平台限制，第三方评测提到简历解析仅支持英文、且更适合用 Google Workspace 的团队。最要紧的是，对话式访问不会转移责任：候选人身份、面试细节、阶段变更和对外邮件，都在影响真实的人，发出去之前必须人工确认。\n\n结论：已经在用 Dover 的小团队，这是接近零成本的效率升级；不用 Dover 的团队，它不构成迁移理由。\n\n## 使用建议\n\n1. 先用最小权限账号在一个测试职位上连通，只做只读提问。\n2. 确认哪些动作需要审批、日志怎么看、如何撤销授权，再逐个开放写操作。\n3. 敏感岗位（如高管招聘）先不要接入，等流程和边界都跑熟。\n4. 所有对外沟通与阶段变更保持人工过目，把 ATS 继续当作唯一事实来源。\n\n## 适合谁用？\n\n推荐：已在使用 Dover 免费 ATS、且日常重度使用 Claude 或 ChatGPT 的初创团队。\n可考虑：没有专职招聘运营、由创始人或用人经理直接管招聘的公司。\n不推荐：不使用 Dover 的团队，以及需要多语言简历解析或完整自建招聘体系的组织。",
+    "published": true,
+    "faq": [
+        {
+            "question": "Dover MCP 收费吗？",
+            "answer": "不收费。它随 Dover 面向初创公司的免费 ATS 一起提供，该 ATS 为 0 元且不限用户与职位数。若需要 AI 简历评分、AI 面试记录等能力，则要升级到 199 美元/月的 Premium ATS。"
+        },
+        {
+            "question": "怎么把 Dover MCP 接到 Claude 或 ChatGPT？",
+            "answer": "Dover 提供托管端点 https://app.dover.com/mcp，在 Dover 的 Settings → Integrations → AI Settings 按指引配置。Claude 用自定义连接器，ChatGPT 走开发者模式创建自定义 MCP 应用，Cursor、Codex 等使用通用 HTTP MCP 配置，连接时通过 OAuth 授权。"
+        },
+        {
+            "question": "接入 AI 后候选人数据安全吗？",
+            "answer": "访问通过 OAuth 授权，且可见信息取决于连接成员在 Dover 的权限与招聘团队归属，AI 只能看到该账号本来有权查看的内容，随时可断开授权。由于招聘记录含敏感个人信息，建议先用最小权限账号测试。"
+        },
+        {
+            "question": "没有 Dover 账号能用 Dover MCP 吗？",
+            "answer": "不能。它是 Dover ATS 的连接层，不是独立的 ATS 或人才搜寻库，必须已有 Dover 工作区以及一个兼容的 MCP 客户端。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "Dover MCP",
+        "Dover MCP怎么样",
+        "Dover MCP免费吗",
+        "Dover MCP使用教程",
+        "Dover ATS招聘AI工具"
+    ],
+    "source_urls": [
+        "https://www.dover.com",
+        "https://chatgate.ai/post/dover-mcp",
+        "https://www.productcool.com/product/dover-mcp"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14",
+    "published_date": "2026-09-04"
 }

@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-09-03",
+    "updated": "2026-09-04",
     "total": 674
   },
   "tools": {
@@ -30,14 +30,14 @@
     },
     "midjourney": {
       "name": "Midjourney",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI绘画",
       "priority": 110,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-04",
+      "confidence": "high",
+      "notes": "scrape_price 命中登录墙(success=false)，价格以既有官方定价页 docs.midjourney.com/docs/plans 为准，V8.2 未改价。更新聚焦 V8.2 图像编辑模型与 lightbox 编辑器（2026-08-28 开放全员测试）；原长文大量 V7/2026-04 陈旧事实已走 stale_facts 定点替换。"
     },
     "github-copilot": {
       "name": "GitHub Copilot",
@@ -2708,9 +2708,9 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-03",
+      "verified_at": "2026-09-04",
       "confidence": "high",
-      "notes": "GitHub Releases 官方确认 rust-v0.153.0-alpha.6 于 2026-09-02 发布（Pre-release/alpha.6）；Release Notes 正文仅含构建产物、未列具体变更，故描述仅更新版本号+日期+预发布标识，不编造特性。scrape_price 命中 GitHub 通用 pricing 导航（无工具价），开源免费无变化。"
+      "notes": "GitHub release 0.153.2 现为 Latest（非预发布）；变更仅为 GPT-6-Astra Fast 档描述文案修复，无功能变化；价格未变。scrape_price 命中 GitHub 通用导航(success=false)，开源免费已确证。"
     },
     "wonder-ai": {
       "name": "Wonder AI",
@@ -7004,14 +7004,14 @@
     },
     "jcode": {
       "name": "jcode",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 60,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-04",
+      "confidence": "high",
+      "notes": "GitHub release v0.81.5（Latest），8/14 后首次版本更新；价格未变（MIT 免费）。scrape_price 命中仓库但 amount 为误报（localhost/200k 等无关串），开源免费已确证。"
     },
     "gstack": {
       "name": "gstack",
@@ -7394,9 +7394,9 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-03",
+      "verified_at": "2026-09-04",
       "confidence": "high",
-      "notes": "与 codex-cli 同源仓库 openai/codex，同一 rust-v0.153.0-alpha.6 预发布（2026-09-02）。描述仅更新版本号+日期+预发布标识，不编造特性。"
+      "notes": "同 codex-cli 仓库；0.153.2 为 Latest 通道正式版，仅文案修复。scrape_price success=false（GitHub 无价），开源免费已确证，价格未变。"
     },
     "pptbot": {
       "name": "PPTBot",
