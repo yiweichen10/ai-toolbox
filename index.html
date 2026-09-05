@@ -180,8 +180,8 @@
 </style>
 
 <!-- JS defer 加载：tools-data.js，不阻塞渲染 -->
-<script src="/js/tools-data.js?v=1788650422" defer></script>
-<script src="/js/favorites.js?v=1788650422" defer></script>
+<script src="/js/tools-data.js?v=1788652349" defer></script>
+<script src="/js/favorites.js?v=1788652349" defer></script>
 
 <!-- 百度统计（异步加载，不阻塞渲染） -->
 <script>
@@ -365,17 +365,31 @@ var _hmt = _hmt || [];
                         <div class="tab-panel" id="panel-dict">
                             <div class="dict-cards">
                                 <!-- DICT_CARDS_START -->
+                                <a class="dict-card-item" href="/dict/emergent-abilities/">
+                                    <div class="dict-card-icon">🌟<span class="dict-card-date">09/06</span></div>
+                                    <div class="dict-card-body">
+                                        <h4>涌现能力（Emergent Abilities） <span class="badge-new">NEW</span></h4>
+                                        <p>大模型规模超过某个临界点后突然出现的、小模型不具备的能力（如思维链、多步推理），由Google 2022年论文系统描述。</p>
+                                    </div>
+                                </a>
+                                <a class="dict-card-item" href="/dict/extended-thinking/">
+                                    <div class="dict-card-icon">💭<span class="dict-card-date">09/06</span></div>
+                                    <div class="dict-card-body">
+                                        <h4>扩展思考（Extended Thinking） <span class="badge-new">NEW</span></h4>
+                                        <p>让模型在作答前先进行更长时间的内部推理和自查，从而提升复杂任务正确率的模式，Claude、Gemini等主流模型均支持。</p>
+                                    </div>
+                                </a>
                                 <a class="dict-card-item" href="/dict/dit/">
                                     <div class="dict-card-icon">🎬<span class="dict-card-date">09/05</span></div>
                                     <div class="dict-card-body">
-                                        <h4>扩散Transformer（DiT） <span class="badge-new">NEW</span></h4>
+                                        <h4>扩散Transformer（DiT） </h4>
                                         <p>把扩散模型的去噪骨干从卷积网络换成Transformer的生成架构，2024年后成为文生图、视频生成等领域的技术主流。</p>
                                     </div>
                                 </a>
                                 <a class="dict-card-item" href="/dict/dpo/">
                                     <div class="dict-card-icon">👍<span class="dict-card-date">09/05</span></div>
                                     <div class="dict-card-body">
-                                        <h4>直接偏好优化（DPO） <span class="badge-new">NEW</span></h4>
+                                        <h4>直接偏好优化（DPO） </h4>
                                         <p>让模型直接学习“哪个回答更好”的偏好数据，无需训练奖励模型和复杂强化学习，比RLHF更简单高效的对齐方法。</p>
                                     </div>
                                 </a>
@@ -433,20 +447,6 @@ var _hmt = _hmt || [];
                                     <div class="dict-card-body">
                                         <h4>存算一体（Computing-in-Memory） </h4>
                                         <p>将数据存储与计算融合在同一物理器件的芯片技术，用于打破“冯·诺依曼瓶颈”，被看作AI芯片能效的下一代突破口。</p>
-                                    </div>
-                                </a>
-                                <a class="dict-card-item" href="/dict/asr/">
-                                    <div class="dict-card-icon">🗣️<span class="dict-card-date">08/31</span></div>
-                                    <div class="dict-card-body">
-                                        <h4>语音识别（ASR） </h4>
-                                        <p>把人类语音自动转写成文字的AI技术，支撑语音输入、字幕、会议转写与语音助手，清晰语音的识别准确率已接近真人水平。</p>
-                                    </div>
-                                </a>
-                                <a class="dict-card-item" href="/dict/catastrophic-forgetting/">
-                                    <div class="dict-card-icon">🧨<span class="dict-card-date">08/31</span></div>
-                                    <div class="dict-card-body">
-                                        <h4>灾难性遗忘（Catastrophic Forgetting） </h4>
-                                        <p>模型在学习新任务时把旧知识“冲掉”的现象，是持续学习和增量微调面临的经典难题，微调不当会明显损害模型原有能力。</p>
                                     </div>
                                 </a>
                                 <!-- DICT_CARDS_END -->
