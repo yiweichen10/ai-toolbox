@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "🦀",
   "color": "#CE422B",
-  "description": "jcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目位于 github.com/1jehuang/jcode，采用 MIT 许可证。最新稳定版 v0.81.5（2026-09-03 发布），本版修复会话持久化、idle-agent 保留、OpenRouter 固定端点定价与 macOS Keychain 隔离等问题。它定位为「下一代编码智能体 Harness」，位于 Claude、GPT、Codex 等模型与代码仓库之间，用 Rust 把每个会话的内存占用压到极低，支持 TUI、非交互运行、后台 server/client、语义记忆与多 Provider。",
+  "description": "jcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目位于 github.com/1jehuang/jcode，采用 MIT 许可证。最新稳定版 v0.81.7（2026-09-04 发布，Latest）将 GPT-6 Astra 设为默认模型；继续以多会话线性扩展与极低资源占用为核心。它定位为「下一代编码智能体 Harness」，位于 Claude、GPT、Codex 等模型与代码仓库之间，用 Rust 把每个会话的内存占用压到极低，支持 TUI、非交互运行、后台 server/client、语义记忆与多 Provider。",
   "category": "AI编程",
   "tags": [
     "AI编程",
@@ -80,19 +80,27 @@
     "AI Swarm"
   ],
   "source_urls": [
-    "https://github.com/1jehuang/jcode/releases/tag/v0.81.5"
+    "https://github.com/1jehuang/jcode/releases/tag/v0.81.7"
   ],
   "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-09-04",
+  "updated_date": "2026-09-05",
   "published_date": "2026-08-24",
   "verified_url": "https://github.com/1jehuang/jcode",
   "verified_publisher": "1jehuang（个人开源项目）",
   "verified_what": "用 Rust 编写的开源终端编程 Agent 编排框架（harness），多会话并行内存占用极低",
   "verified_price": "免费开源（MIT），无商业套餐",
   "verified_platform": "CLI / TUI / 后台 server",
-  "last_verified": "2026-09-04",
-  "verified_description": "jcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目位于 github.com/1jehuang/jcode，采用 MIT 许可证。最新稳定版 v0.81.5（2026-09-03 发布），本版修复会话持久化、idle-agent 保留、OpenRouter 固定端点定价与 macOS Keychain 隔离等问题。它定位为「下一代编码智能体 Harness」，位于 Claude、GPT、Codex 等模型与代码仓库之间，用 Rust 把每个会话的内存占用压到极低，支持 TUI、非交互运行、后台 server/client、语义记忆与多 Provider。",
+  "last_verified": "2026-09-05",
+  "verified_description": "jcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目位于 github.com/1jehuang/jcode，采用 MIT 许可证。最新稳定版 v0.81.7（2026-09-04 发布，Latest）将 GPT-6 Astra 设为默认模型；继续以多会话线性扩展与极低资源占用为核心。它定位为「下一代编码智能体 Harness」，位于 Claude、GPT、Codex 等模型与代码仓库之间，用 Rust 把每个会话的内存占用压到极低，支持 TUI、非交互运行、后台 server/client、语义记忆与多 Provider。",
   "price_verified": true,
-  "verify_notes": "GitHub release v0.81.5（Latest），8/14 后首次版本更新；价格未变（MIT 免费）。scrape_price 命中仓库但 amount 为误报（localhost/200k 等无关串），开源免费已确证。"
+  "verify_notes": "GitHub release v0.81.7（Latest，发布标题 GPT-6 Astra default）于 2026-09-04 发布；据发布标题将 GPT-6 Astra 设为默认模型（详细 change notes 未在发布页展开，未编造）。scrape_price success=false（GitHub 无价），开源免费无变化。版本 v0.81.5→v0.81.7。",
+  "verified_features": [
+    "多会话 Swarm：同一仓库并行驱动多个 agent 流，无需 git worktree",
+    "Rust 原生性能：极低启动延迟与内存占用，适合笔记本与受限环境",
+    "语义记忆：对话编码为向量，余弦相似度检索相关上下文",
+    "40+ 模型 Provider：OAuth 接入多家模型，按会话配置",
+    "终端一体化：TUI、非交互运行、后台 server/client、语音输入与浏览器工具",
+    "内置 Mermaid 渲染引擎与侧边信息面板"
+  ]
 }

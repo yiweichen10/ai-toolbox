@@ -1,98 +1,98 @@
 {
-    "name": "Coldtea.ai",
-    "slug": "coldtea",
-    "positioning": "Coldtea.ai是什么？Agentic IDE带视觉QA和生产监控好用吗",
-    "auto_positioning": false,
-    "emoji": "🍵",
-    "color": "#0EA5E9",
-    "description": "Coldtea 是一款本地运行的 Agentic IDE（官方自称 ADE），把多 Agent 终端、视觉 QA 测试与 AI 生产监控收进同一个环境。它不卖自己的编程 Agent，而是接管 Claude Code、Codex、OpenCode 等你已经在用的 CLI Agent，再在外面补上「发布之后谁负责看」这一层：QA Agent 像真人一样跑你的 Web 与移动端，监控 Agent 盯生产信号并直接开 PR。2026 年 8 月在 Product Hunt 登顶当日榜首。",
-    "category": "AI编程",
-    "tags": [
-        {
-            "text": "免费可用",
-            "type": "free"
-        },
-        {
-            "text": "Agentic IDE"
-        },
-        {
-            "text": "视觉QA"
-        },
-        {
-            "text": "生产监控"
-        }
-    ],
-    "rating": "⭐ 4.5",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "new",
-        "text": "NEW"
+  "name": "Coldtea.ai",
+  "slug": "coldtea",
+  "positioning": "Coldtea.ai是什么？Agentic IDE带视觉QA和生产监控好用吗",
+  "auto_positioning": false,
+  "emoji": "🍵",
+  "color": "#0EA5E9",
+  "description": "Coldtea 是一款本地运行的 Agentic IDE（官方自称 ADE），把多 Agent 终端、视觉 QA 测试与 AI 生产监控收进同一个环境。它不卖自己的编程 Agent，而是接管 Claude Code、Codex、OpenCode 等你已经在用的 CLI Agent，再在外面补上「发布之后谁负责看」这一层：QA Agent 像真人一样跑你的 Web 与移动端，监控 Agent 盯生产信号并直接开 PR。2026 年 8 月在 Product Hunt 登顶当日榜首。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "免费可用",
+      "type": "free"
     },
-    "url": "https://coldtea.ai",
-    "price": "Free $0/永久（不限任务数、2,000 agentic credits/月约 200 次测试、每项目 7 天监控试用、免信用卡）；Pro $20/人/月（首个席位免费）+ 按量；Agentic testing Pro 加购 $120/月（10,000 credits）；生产监控按项目加购 Essentials $49/月、Complete $99/月；Enterprise 定制",
-    "platform": "macOS 桌面端（官方称 Windows / Linux 版本可加入等待名单）",
-    "pros": [
-        "不逼你换编辑器，直接接管已有的 Claude Code / Codex / OpenCode 等 CLI Agent",
-        "视觉 QA Agent 按「意图」而非像素比对判定，动态内容页面不容易误报",
-        "监控 Agent 会自己排查生产信号并直接提 PR，把告警变成可 review 的修复",
-        "终端与任务板永久免费，测试与监控是可选加购，起步成本几乎为零",
-        "支持 Sentry、Datadog、Grafana、New Relic、PostHog、Vercel 等主流监控源"
-    ],
-    "cons": [
-        "目前只有 macOS 版本，Windows / Linux 用户只能先排队",
-        "视觉 QA 与生产监控都按量计费，测试跑得密集时费用会明显上涨",
-        "产品 2026 年 8 月才刚上线，长期稳定性还缺少大规模团队的实战验证"
-    ],
-    "features": [
-        "多 Agent 终端：真实 shell 环境，多个编程 Agent 共享上下文、可分别或成组指挥",
-        "视觉 QA Agent：用自然语言描述 Web / 移动端流程，自动生成可自愈测试并在每个 PR 预览上跑",
-        "发布门禁：测试结果直接卡住部署，回归没过就不让合",
-        "AI 生产监控：跨错误日志、用户反馈与会话录像排查问题，并自动开 PR",
-        "技术债巡检：定期扫 Agent 大量产出的代码，把债务条目直接建到看板上",
-        "云端后台任务：同步 Linear / Jira 等看板，把任务丢给云端 Agent 并行跑，不占本机"
-    ],
-    "related": [
-        "claude-code",
-        "codex-cli",
-        "opencode"
-    ],
-    "content": "## Coldtea.ai是什么？\n\nColdtea 是一款跑在你自己机器上的 Agentic IDE，官方更喜欢叫它 ADE（Agentic Development Environment）。它的出发点跟市面上大多数 AI 编程工具不太一样：过去两年，几乎所有工具都在比谁写代码更快，而 Coldtea 认准的是另一件事——代码发出去之后，谁负责看后果。\n\n所以它做的不是又一个编程 Agent。你原来用 Claude Code、Codex 还是 OpenCode，继续用，Coldtea 只是把它们接进来，然后在外面补三层：一个能同时指挥多个 Agent 的真实终端，一批会像真人一样操作你的 App 的视觉 QA Agent，以及一套盯着生产环境、发现问题会自己去查并提 PR 的监控 Agent。2026 年 8 月它在 Product Hunt 上线，当天冲到日榜第一。\n\n## 核心功能\n\n1. 多 Agent 终端。跑的是真实 shell 命令而不是模拟环境，多个 Agent 之间共享上下文——一个 Agent 的会话状态另一个能直接读，不用你手动复制输出。可以单独指挥，也可以让它们成组规划、构建、互审。\n2. 视觉 QA Agent。你用自然语言描述 Web 或移动端的用户旅程，它转成可自愈的测试用例。Web 端直接驱动线上站点，每次 PR 跑在预览地址上；移动端会拉起模拟器加载真实构建包。关键点是它按「意图」判定而不是像素比对，所以动态内容页面不容易误报。\n3. 发布门禁。测试结果直接卡部署，回归没通过就不放行。这一步是把 QA Agent 从「参考意见」变成「硬性关卡」。\n4. AI 生产监控。跨错误日志、客户反馈和用户会话三类信号做排查，查出结果后直接开一个 PR 等你 review。支持 Sentry、Datadog、Grafana、New Relic、PostHog、Vercel 等一批常见提供方。\n5. 技术债巡检与云端任务。它会定期扫一遍代码库，把 Agent 大量产出后堆积的技术债列成条目建进看板；同时能同步 Linear、Jira 等看板，把任务派给云端后台 Agent 并行跑，不占你的笔记本。\n\n## 版本/套餐对比\n\n免费版 $0 永久：任务数不限、支持任意 CLI Agent、含云端运行，每月给 2,000 agentic credits（约 200 次测试运行），每个项目 2 个连接工具，外加 7 天生产监控试用，不用绑卡。Pro $20/人/月，首个席位免费，之后每加一位队友 $20，多了共享看板与团队协作评审。想加量的话，Agentic testing Pro 是 $120/月换 10,000 credits（约 1,000 次运行，Web 一次 10 credits、移动端一次 100）；生产监控按项目买，Essentials $49/月、Complete $99/月。企业版走定制报价。这套定价的思路很清楚：终端和看板不收钱，真正吃算力的 QA 与监控才按量收。\n\n## 值不值得用？\n\n它的判断我认可：Agent 把写代码的成本压下来之后，瓶颈确实往下游移了，回归和线上事故才是真正的痛点。把终端、测试、监控放进一个环境，也确实省掉了在三套工具间搬上下文的功夫。而且它不绑定 Agent、终端永久免费，试错成本很低。\n\n要留意的是三件事：一是目前只有 macOS 版，Windows 和 Linux 还在等待名单上；二是测试和监控都按量计费，如果你的 CI 里每个 PR 都跑全量移动端测试，账单涨得会比预期快；三是它 2026 年 8 月才刚上线，「捆绑三件事」这个判断是否在长期团队协作里成立，还得靠时间验证。\n\n## 使用建议\n\n1. 先只装终端。免费版把多 Agent 协作跑顺，确认你现有的 Claude Code / Codex 配置能无缝迁进来。\n2. 再开 QA，但别一上来就全量。挑两三条核心流程（登录、下单、支付）先自动化，Web 一次只花 10 credits，2,000 的免费额度够跑相当久。\n3. 移动端测试放到 release 前跑。一次 100 credits，别挂在每个 PR 上。\n4. 监控用 7 天试用先验一遍。看它开的 PR 质量到不到你能直接 review 的程度，再决定要不要按项目买。\n\n## 适合谁用？\n\n推荐：已经重度依赖编程 Agent、且被线上回归折腾过的中小研发团队和技术负责人，尤其是 macOS 环境的团队。\n可考虑：独立开发者和一人团队——免费版的终端加少量 QA 就够用，属于低成本收益明显的那类。\n不推荐：Windows / Linux 为主的团队（暂时用不上）；已有成熟 CI/CD 与 QA 体系、只想加一个代码补全的团队；以及对按量计费敏感、需要成本完全可预测的场景。",
-    "published": true,
-    "faq": [
-        {
-            "question": "Coldtea 是免费的吗？",
-            "answer": "有永久免费版。官方定价页写明 Free $0/永久，包含不限量任务、支持任意 CLI Agent、云端运行，以及每月 2,000 agentic credits（约 200 次测试运行）和每个项目 7 天的生产监控试用，无需信用卡。团队协作版 Pro 为 $20/人/月，首个席位免费。"
-        },
-        {
-            "question": "Coldtea 会替换掉我现在用的 Claude Code 吗？",
-            "answer": "不会。官方明确表示不卖另一个编程 Agent，Coldtea 兼容 Claude Code、Codex、OpenCode 等 CLI Agent，你的 shell 与配置会自动沿用，它做的是在这些 Agent 外面加上测试、监控与任务编排层。"
-        },
-        {
-            "question": "Coldtea 支持 Windows 吗？",
-            "answer": "截至目前官方说明是仅提供 macOS 版本，Windows 与 Linux 可以加入等待名单，尚未给出明确发布时间。"
-        },
-        {
-            "question": "视觉 QA Agent 遇到动态内容会不会误报？",
-            "answer": "官方的说法是它测试「意图」而不是静态快照：比如动态信息流刷出新内容算通过，但如果时间戳元素消失了就算失败。这一设计正是为了减少像素比对方案在动态页面上的误报。"
-        }
-    ],
-    "content_verified": true,
-    "conflict": false,
-    "verify_status": "verified",
-    "seo_keywords": [
-        "Coldtea",
-        "Coldtea怎么样",
-        "Coldtea收费吗",
-        "Coldtea Agentic IDE",
-        "Coldtea和Cursor哪个好"
-    ],
-    "source_urls": [
-        "https://coldtea.ai/",
-        "https://coldtea.ai/pricing",
-        "https://coding4food.com/en/post/coldtea-ai-ade-ai-automation"
-    ],
-    "confidence": "high",
-    "created_date": "2026-08-14",
-    "updated_date": "2026-08-14",
-    "published_date": "2026-09-04"
+    {
+      "text": "Agentic IDE"
+    },
+    {
+      "text": "视觉QA"
+    },
+    {
+      "text": "生产监控"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://coldtea.ai",
+  "price": "Free $0/永久（不限任务数、2,000 agentic credits/月约 200 次测试、每项目 7 天监控试用、免信用卡）；Pro $20/人/月（首个席位免费）+ 按量；Agentic testing Pro 加购 $120/月（10,000 credits）；生产监控按项目加购 Essentials $49/月、Complete $99/月；Enterprise 定制",
+  "platform": "macOS 桌面端（官方称 Windows / Linux 版本可加入等待名单）",
+  "pros": [
+    "不逼你换编辑器，直接接管已有的 Claude Code / Codex / OpenCode 等 CLI Agent",
+    "视觉 QA Agent 按「意图」而非像素比对判定，动态内容页面不容易误报",
+    "监控 Agent 会自己排查生产信号并直接提 PR，把告警变成可 review 的修复",
+    "终端与任务板永久免费，测试与监控是可选加购，起步成本几乎为零",
+    "支持 Sentry、Datadog、Grafana、New Relic、PostHog、Vercel 等主流监控源"
+  ],
+  "cons": [
+    "目前只有 macOS 版本，Windows / Linux 用户只能先排队",
+    "视觉 QA 与生产监控都按量计费，测试跑得密集时费用会明显上涨",
+    "产品 2026 年 8 月才刚上线，长期稳定性还缺少大规模团队的实战验证"
+  ],
+  "features": [
+    "多 Agent 终端：真实 shell 环境，多个编程 Agent 共享上下文、可分别或成组指挥",
+    "视觉 QA Agent：用自然语言描述 Web / 移动端流程，自动生成可自愈测试并在每个 PR 预览上跑",
+    "发布门禁：测试结果直接卡住部署，回归没过就不让合",
+    "AI 生产监控：跨错误日志、用户反馈与会话录像排查问题，并自动开 PR",
+    "技术债巡检：定期扫 Agent 大量产出的代码，把债务条目直接建到看板上",
+    "云端后台任务：同步 Linear / Jira 等看板，把任务丢给云端 Agent 并行跑，不占本机"
+  ],
+  "related": [
+    "claude-code",
+    "codex-cli",
+    "opencode"
+  ],
+  "content": "## Coldtea.ai是什么？\n\nColdtea 是一款跑在你自己机器上的 Agentic IDE，官方更喜欢叫它 ADE（Agentic Development Environment）。它的出发点跟市面上大多数 AI 编程工具不太一样：过去两年，几乎所有工具都在比谁写代码更快，而 Coldtea 认准的是另一件事——代码发出去之后，谁负责看后果。\n\n所以它做的不是又一个编程 Agent。你原来用 Claude Code、Codex 还是 OpenCode，继续用，Coldtea 只是把它们接进来，然后在外面补三层：一个能同时指挥多个 Agent 的真实终端，一批会像真人一样操作你的 App 的视觉 QA Agent，以及一套盯着生产环境、发现问题会自己去查并提 PR 的监控 Agent。2026 年 8 月它在 Product Hunt 上线，当天冲到日榜第一。\n\n## 核心功能\n\n1. 多 Agent 终端。跑的是真实 shell 命令而不是模拟环境，多个 Agent 之间共享上下文——一个 Agent 的会话状态另一个能直接读，不用你手动复制输出。可以单独指挥，也可以让它们成组规划、构建、互审。\n2. 视觉 QA Agent。你用自然语言描述 Web 或移动端的用户旅程，它转成可自愈的测试用例。Web 端直接驱动线上站点，每次 PR 跑在预览地址上；移动端会拉起模拟器加载真实构建包。关键点是它按「意图」判定而不是像素比对，所以动态内容页面不容易误报。\n3. 发布门禁。测试结果直接卡部署，回归没通过就不放行。这一步是把 QA Agent 从「参考意见」变成「硬性关卡」。\n4. AI 生产监控。跨错误日志、客户反馈和用户会话三类信号做排查，查出结果后直接开一个 PR 等你 review。支持 Sentry、Datadog、Grafana、New Relic、PostHog、Vercel 等一批常见提供方。\n5. 技术债巡检与云端任务。它会定期扫一遍代码库，把 Agent 大量产出后堆积的技术债列成条目建进看板；同时能同步 Linear、Jira 等看板，把任务派给云端后台 Agent 并行跑，不占你的笔记本。\n\n## 版本/套餐对比\n\n免费版 $0 永久：任务数不限、支持任意 CLI Agent、含云端运行，每月给 2,000 agentic credits（约 200 次测试运行），每个项目 2 个连接工具，外加 7 天生产监控试用，不用绑卡。Pro $20/人/月，首个席位免费，之后每加一位队友 $20，多了共享看板与团队协作评审。想加量的话，Agentic testing Pro 是 $120/月换 10,000 credits（约 1,000 次运行，Web 一次 10 credits、移动端一次 100）；生产监控按项目买，Essentials $49/月、Complete $99/月。企业版走定制报价。这套定价的思路很清楚：终端和看板不收钱，真正吃算力的 QA 与监控才按量收。\n\n## 值不值得用？\n\n它的判断我认可：Agent 把写代码的成本压下来之后，瓶颈确实往下游移了，回归和线上事故才是真正的痛点。把终端、测试、监控放进一个环境，也确实省掉了在三套工具间搬上下文的功夫。而且它不绑定 Agent、终端永久免费，试错成本很低。\n\n要留意的是三件事：一是目前只有 macOS 版，Windows 和 Linux 还在等待名单上；二是测试和监控都按量计费，如果你的 CI 里每个 PR 都跑全量移动端测试，账单涨得会比预期快；三是它 2026 年 8 月才刚上线，「捆绑三件事」这个判断是否在长期团队协作里成立，还得靠时间验证。\n\n## 使用建议\n\n1. 先只装终端。免费版把多 Agent 协作跑顺，确认你现有的 Claude Code / Codex 配置能无缝迁进来。\n2. 再开 QA，但别一上来就全量。挑两三条核心流程（登录、下单、支付）先自动化，Web 一次只花 10 credits，2,000 的免费额度够跑相当久。\n3. 移动端测试放到 release 前跑。一次 100 credits，别挂在每个 PR 上。\n4. 监控用 7 天试用先验一遍。看它开的 PR 质量到不到你能直接 review 的程度，再决定要不要按项目买。\n\n## 适合谁用？\n\n推荐：已经重度依赖编程 Agent、且被线上回归折腾过的中小研发团队和技术负责人，尤其是 macOS 环境的团队。\n可考虑：独立开发者和一人团队——免费版的终端加少量 QA 就够用，属于低成本收益明显的那类。\n不推荐：Windows / Linux 为主的团队（暂时用不上）；已有成熟 CI/CD 与 QA 体系、只想加一个代码补全的团队；以及对按量计费敏感、需要成本完全可预测的场景。",
+  "published": true,
+  "faq": [
+    {
+      "question": "Coldtea 是免费的吗？",
+      "answer": "有永久免费版。官方定价页写明 Free $0/永久，包含不限量任务、支持任意 CLI Agent、云端运行，以及每月 2,000 agentic credits（约 200 次测试运行）和每个项目 7 天的生产监控试用，无需信用卡。团队协作版 Pro 为 $20/人/月，首个席位免费。"
+    },
+    {
+      "question": "Coldtea 会替换掉我现在用的 Claude Code 吗？",
+      "answer": "不会。官方明确表示不卖另一个编程 Agent，Coldtea 兼容 Claude Code、Codex、OpenCode 等 CLI Agent，你的 shell 与配置会自动沿用，它做的是在这些 Agent 外面加上测试、监控与任务编排层。"
+    },
+    {
+      "question": "Coldtea 支持 Windows 吗？",
+      "answer": "截至目前官方说明是仅提供 macOS 版本，Windows 与 Linux 可以加入等待名单，尚未给出明确发布时间。"
+    },
+    {
+      "question": "视觉 QA Agent 遇到动态内容会不会误报？",
+      "answer": "官方的说法是它测试「意图」而不是静态快照：比如动态信息流刷出新内容算通过，但如果时间戳元素消失了就算失败。这一设计正是为了减少像素比对方案在动态页面上的误报。"
+    }
+  ],
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "seo_keywords": [
+    "Coldtea",
+    "Coldtea怎么样",
+    "Coldtea收费吗",
+    "Coldtea Agentic IDE",
+    "Coldtea和Cursor哪个好"
+  ],
+  "source_urls": [
+    "https://coldtea.ai/",
+    "https://coldtea.ai/pricing",
+    "https://coding4food.com/en/post/coldtea-ai-ade-ai-automation"
+  ],
+  "confidence": "high",
+  "created_date": "2026-08-14",
+  "updated_date": "2026-08-14",
+  "published_date": "2026-09-04"
 }

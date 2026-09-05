@@ -1,152 +1,152 @@
 {
-    "name": "TaskWeaver",
-    "slug": "taskweaver",
-    "positioning": "免费AI开发工具推荐：代码优先、有状态",
-    "auto_positioning": true,
-    "emoji": "🧩",
-    "color": "#0078D4",
-    "description": "TaskWeaver 是微软（Microsoft）开源的“代码优先”（code-first）AI 智能体框架，将用户需求转化为可执行的 Python 代码来规划并执行数据分析等复杂任务，支持插件、多 LLM 与有状态执行。",
-    "category": "AI开发",
-    "tags": [
-        "开源",
-        "AI代理",
-        "LLM框架"
-    ],
-    "rating": "⭐4.5（编辑评分）",
-    "visits": "暂无数据",
-    "badge": {
-        "type": "new",
-        "text": "NEW"
+  "name": "TaskWeaver",
+  "slug": "taskweaver",
+  "positioning": "免费AI开发工具推荐：代码优先、有状态",
+  "auto_positioning": true,
+  "emoji": "🧩",
+  "color": "#0078D4",
+  "description": "TaskWeaver 是微软（Microsoft）开源的“代码优先”（code-first）AI 智能体框架，将用户需求转化为可执行的 Python 代码来规划并执行数据分析等复杂任务，支持插件、多 LLM 与有状态执行。",
+  "category": "AI开发",
+  "tags": [
+    "开源",
+    "AI代理",
+    "LLM框架"
+  ],
+  "rating": "⭐4.5（编辑评分）",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://github.com/microsoft/TaskWeaver",
+  "price": "开源免费",
+  "platform": "本地部署 / Docker / Python（需 Python ≥ 3.10）",
+  "pros": [
+    "完全开源，可自由定制和私有化部署",
+    "支持多种 LLM（GPT、Claude、开源模型等）",
+    "内置代码解释器，可动态生成并执行 Python 等代码",
+    "插件架构灵活，便于扩展自定义功能",
+    "提供任务规划和多轮对话管理能力"
+  ],
+  "cons": [
+    "学习曲线较陡，需要理解框架架构",
+    "依赖本地运行环境或云服务器，配置稍复杂",
+    "文档和社区生态仍在完善中，部分功能缺少示例"
+  ],
+  "features": [
+    "代码优先（code-first）智能体框架，将需求转为 Python 代码执行",
+    "任务规划与分解（Planner），支持复杂任务拆解",
+    "内置代码解释器，支持插件与自定义算法封装",
+    "有状态（stateful）代码执行，保留会话上下文与内存数据",
+    "支持多种 LLM 后端（OpenAI、Azure OpenAI、Claude 等）"
+  ],
+  "related": [
+    "langchain",
+    "autogen",
+    "dify",
+    "crew-ai",
+    "flowise"
+  ],
+  "faq": [
+    {
+      "q": "TaskWeaver 与其他 AI 代理框架（如 LangChain）有什么区别？",
+      "a": "TaskWeaver 更注重代码执行和任务规划，内置了强大的代码解释器，适合需要动态生成代码的细分场景；而 LangChain 是一个更通用的 LLM 应用开发框架，专注链式调用和工具集成。两者可以互补。"
     },
-    "url": "https://github.com/microsoft/TaskWeaver",
-    "price": "开源免费",
-    "platform": "本地部署 / Docker / Python（需 Python ≥ 3.10）",
-    "pros": [
-        "完全开源，可自由定制和私有化部署",
-        "支持多种 LLM（GPT、Claude、开源模型等）",
-        "内置代码解释器，可动态生成并执行 Python 等代码",
-        "插件架构灵活，便于扩展自定义功能",
-        "提供任务规划和多轮对话管理能力"
-    ],
-    "cons": [
-        "学习曲线较陡，需要理解框架架构",
-        "依赖本地运行环境或云服务器，配置稍复杂",
-        "文档和社区生态仍在完善中，部分功能缺少示例"
-    ],
-    "features": [
-        "代码优先（code-first）智能体框架，将需求转为 Python 代码执行",
-        "任务规划与分解（Planner），支持复杂任务拆解",
-        "内置代码解释器，支持插件与自定义算法封装",
-        "有状态（stateful）代码执行，保留会话上下文与内存数据",
-        "支持多种 LLM 后端（OpenAI、Azure OpenAI、Claude 等）"
-    ],
-    "related": [
-        "langchain",
-        "autogen",
-        "dify",
-        "crew-ai",
-        "flowise"
-    ],
-    "faq": [
-        {
-            "q": "TaskWeaver 与其他 AI 代理框架（如 LangChain）有什么区别？",
-            "a": "TaskWeaver 更注重代码执行和任务规划，内置了强大的代码解释器，适合需要动态生成代码的细分场景；而 LangChain 是一个更通用的 LLM 应用开发框架，专注链式调用和工具集成。两者可以互补。"
-        },
-        {
-            "q": "TaskWeaver 支持哪些 LLM？",
-            "a": "TaskWeaver 通过抽象后端支持多种 LLM，包括 OpenAI GPT 系列、Azure OpenAI、Anthropic Claude 以及通过兼容接口接入的开源模型（如 Llama、Mistral 等）。"
-        },
-        {
-            "q": "如何安装 TaskWeaver？",
-            "a": "推荐使用 pip 安装：pip install taskweaver，然后按照官方文档配置 LLM 密钥和插件。也可直接从 GitHub 仓库克隆源码运行。"
-        },
-        {
-            "q": "TaskWeaver 可以在生产环境中使用吗？",
-            "a": "可以，但需要自行评估安全性和稳定性。TaskWeaver 提供了代码沙箱（如 Docker）来隔离执行环境，降低风险。建议在生产前充分测试并配置资源限制。"
-        }
-    ],
-    "seo_keywords": [
-        "TaskWeaver",
-        "TaskWeaver怎么样",
-        "TaskWeaver免费版",
-        "TaskWeaver使用教程",
-        "TaskWeaver和哪个好"
-    ],
-    "content": "# TaskWeaver：微软开源的AI Agent框架，让大模型真正“动手干活”\n\n## TaskWeaver是什么？\n\n简单说，TaskWeaver 是微软开源的一个 AI 框架，核心思路是把大语言模型（LLM）的“思考能力”和“执行代码的能力”绑在一起。常规的对话式 AI 只能跟你聊天，最多调个 API，但 TaskWeaver 会让 LLM 理解你的需求后，**自己写 Python 代码、跑 SQL、调用你注册的插件**，然后把结果返回给你。\n\n你可以把它理解为：一个能自动拆解任务、写代码执行、还能记住上下文的智能代理框架。它不是某个成品应用，而是一套基础设施，让开发者快速搭建自己的“企业级 AI 打工人”。\n\n## 核心功能\n\n**1. 基于 LLM 的任务规划与执行引擎**  \n给 LLM 一个复杂需求（比如“把上周的销售数据整理成报表，并标注异常值”），它会自动拆解成多个子任务（查询数据、计算指标、画图…），然后按顺序或并行执行。实际用起来感觉就像有一个会拆解步骤的助手，而不是只会输出一段文字。\n\n**2. 内置代码解释器（Python / SQL 等）**  \nTaskWeaver 自带沙盒环境，LLM 生成的代码可以直接运行。这意味着你可以让它“计算一下这个 CSV 里每个类别的平均值”或者“从数据库里把最近 30 天的订单拉出来”，它真的会写 SQL 跑完再告诉你结果。对于需要精确计算或数据操作的场景，这个能力比单纯依靠 LLM 生成文本靠谱得多。\n\n**3. 多轮对话状态管理**  \n不是每次用完就忘。TaskWeaver 会维护整个对话的上下文，比如你在上一轮说了“把筛选条件改为本月”，它会在下一轮里记住之前的查询结果和逻辑。对于企业场景里的多步操作，这个设计很关键，否则每次都要重讲一遍。\n\n**4. 自定义插件和工具注册**  \n可以把你自己的 API、内部工具、脚本包装成插件，让 LLM 在规划任务时自动选择调用。比如接上公司的 CRM 系统、内部知识库、审批流程等。插件架构很灵活，写一个 Python 类注册一下就好，上手成本不算高。\n\n**5. 多 LLM 后端统一接口**  \n支持 GPT、Claude、以及开源的 LLaMA 等模型，切换后端只需要改配置。对于企业来说，如果不想依赖 OpenAI，可以部署私有化的开源模型，数据不出网。实际使用中接口封装得不错，底层换模型后上层业务代码基本不用动。\n\n另外还支持复杂的 DAG 任务编排（有依赖关系的有向无环图），适合做数据管道或自动化流程。\n\n## 版本/套餐对比\n\n| 版本 | 说明 |\n|------|------|\n| **社区版（开源）** | GitHub 上可直接获取源码，MIT 许可证。完全免费，可自行修改、私有化部署。 |\n| **企业级部署** | 没有官方付费版本。需要自己配置服务器、数据库、安全策略。部分企业会基于社区版做二次开发，或使用微软 Azure 上的相关服务（如 Azure AI Agent）来降低运维成本。 |\n\n**价格：** 作为开源项目，TaskWeaver 本身不收费。你需要支付的是服务器 / 云资源费用（运行 LLM 和代码执行需要 GPU/CPU），以及如果使用商业化 LLM 的 API 费用。\n\n## 值不值得用？\n\n**优点：**\n- 完全开源，自由度高，可以私有化，数据安全可控。\n- 代码执行能力是真亮点，不是“假装会写代码”的幻觉式输出。\n- 插件体系设计合理，扩展性强，适合接入现有系统。\n- 支持多种 LLM，不绑定单一供应商。\n\n**缺点：**\n- 学习曲线确实陡。你得理解它的架构：Session、Planner、Code Interpreter、Plugin 之间的协作关系。对不熟悉 Python + LLM 编排的人来说，初次配置容易踩坑。\n- 依赖本地或云端环境，部署步骤比“一键安装”复杂。需要 Python 环境、依赖库、LLM 接口配置等。\n- 文档和社区还在成长中。部分功能（比如 DAG 编排）的示例较少，遇到问题有时只能翻源码。\n- 代码执行有安全隐患：沙盒虽然做了隔离，但企业使用时仍需谨慎配置权限。\n\n**总体结论：** 如果你是一个有技术能力的团队（至少有一名懂 Python 和 LLM 的开发者），需要构建一个能自主执行代码、处理复杂多步任务的 AI 助手，TaskWeaver 值得认真研究。它比 LangChain 更贴近“让 LLM 写代码并执行”的场景，比 AutoGPT 更结构化和可控。但如果只是想做个简单的聊天机器人，那完全没必要上这么重的框架。\n\n## 使用建议\n\n1. **先读官方 README 和几个样例**。它的 examples 目录里有财税、数据分析等场景的 demo，跑通一个就能理解核心流程。\n2. **从最简单的 Planner + Code Interpreter 开始**。先别急着加一堆插件，让 LLM 能写 Python 算数、读本地文件，感受下任务拆解的效果。\n3. **注意沙盒环境隔离**。代码执行默认在本地进程，生产环境建议放到 Docker 容器里，限制文件系统、网络和资源。\n4. **准备好硬件或云资源**。如果本地没有 GPU，跑开源模型会比较慢，建议用 API（如 GPT-4）先验证流程，再考虑私有化部署。\n5. **插件注册记得写清晰的描述**。LLM 选择插件依赖自然语言描述，描述越精确，Agent 选对工具的概率越高。\n\n## 适合谁用？\n\n**✅ 推荐：**\n- 有 Python 开发经验的技术团队，想快速搭建内部自动化助手（数据报表、代码审查、运维助手）。\n- 需要私有化部署的企业，数据不能出内网，又想用 LLM 的能力处理代码类任务。\n- 对 Agent 框架感兴趣、愿意折腾的开源爱好者。\n\n**🤔 可考虑：**\n- 分析师或轻度用户，熟悉 Python 但不想从零写 Agent 逻辑。可以基于 TaskWeaver 套个 Web UI 用。\n- 想绕过 OpenAI 方案、切换开源模型做实验的研究者。\n\n**❌ 不推荐：**\n- 完全不懂编程的业务人员。TaskWeaver 没有可视化配置界面，几乎所有操作都需要代码和命令行。\n- 只需要简单问答或文档总结的场景，用现成的 ChatPDF 或 RAG 工具更省心。\n- 项目周期紧、团队人力不足的小团队，建议先用更成熟的方案（如 LangChain + ReAct）验证可行性，再决定要不要上 TaskWeaver。",
-    "published": true,
-    "source_url": "https://github.com/microsoft/TaskWeaver",
-    "last_verified": "2026-07-31",
-    "confidence": "high",
-    "conflict": false,
-    "content_verified": true,
-    "conflict_note": "",
-    "verified_url": "https://github.com/microsoft/TaskWeaver",
-    "verified_publisher": "Microsoft",
-    "verified_what": "微软开源的 code-first（代码优先）AI 智能体框架，将用户需求转化为可执行的 Python 代码来规划并执行数据分析等复杂任务，支持插件、多 LLM 与有状态执行。",
-    "verified_price": "开源免费（MIT 许可证）",
-    "verified_platform": "本地部署 / Docker / Python（需 Python ≥ 3.10）",
-    "verified_features": [
-        "代码优先（code-first）智能体框架，将需求转为 Python 代码执行",
-        "任务规划与分解（Planner），支持复杂任务拆解",
-        "内置代码解释器，支持插件与自定义算法封装",
-        "有状态（stateful）代码执行，保留会话上下文与内存数据",
-        "支持多种 LLM 后端（OpenAI、Azure OpenAI、Claude 等）"
-    ],
-    "verified_description": "TaskWeaver 是微软（Microsoft）开源的“代码优先”（code-first）AI 智能体框架，将用户需求转化为可执行的 Python 代码来规划并执行数据分析等复杂任务，支持插件、多 LLM 与有状态执行。",
-    "content_flags": "内容基本准确，无严重幻觉。",
-    "price_verified": true,
-    "verified_rating": "⭐4.5（编辑评分）",
-    "rating_source": "编辑评分（站内综合判断）",
-    "rating_verified": true,
-    "verified_pros": [
-        "完全开源，可自由定制和私有化部署",
-        "支持多种 LLM（GPT、Claude、开源模型等）",
-        "内置代码解释器，可动态生成并执行 Python 等代码",
-        "插件架构灵活，便于扩展自定义功能",
-        "提供任务规划和多轮对话管理能力"
-    ],
-    "verified_cons": [
-        "学习曲线较陡，需要理解框架架构",
-        "依赖本地运行环境或云服务器，配置稍复杂",
-        "文档和社区生态仍在完善中，部分功能缺少示例"
-    ],
-    "verified_faq": [
-        {
-            "q": "TaskWeaver 与其他 AI 代理框架（如 LangChain）有什么区别？",
-            "a": "TaskWeaver 更注重代码执行和任务规划，内置了强大的代码解释器，适合需要动态生成代码的细分场景；而 LangChain 是一个更通用的 LLM 应用开发框架，专注链式调用和工具集成。两者可以互补。"
-        },
-        {
-            "q": "TaskWeaver 支持哪些 LLM？",
-            "a": "TaskWeaver 通过抽象后端支持多种 LLM，包括 OpenAI GPT 系列、Azure OpenAI、Anthropic Claude 以及通过兼容接口接入的开源模型（如 Llama、Mistral 等）。"
-        },
-        {
-            "q": "如何安装 TaskWeaver？",
-            "a": "推荐使用 pip 安装：pip install taskweaver，然后按照官方文档配置 LLM 密钥和插件。也可直接从 GitHub 仓库克隆源码运行。"
-        },
-        {
-            "q": "TaskWeaver 可以在生产环境中使用吗？",
-            "a": "可以，但需要自行评估安全性和稳定性。TaskWeaver 提供了代码沙箱（如 Docker）来隔离执行环境，降低风险。建议在生产前充分测试并配置资源限制。"
-        }
-    ],
-    "verified_tags": [
-        "开源",
-        "AI代理",
-        "LLM框架"
-    ],
-    "verified_category": "AI开发",
-    "source_urls": [
-        "https://github.com/microsoft/TaskWeaver",
-        "https://www.microsoft.com/en-us/research/blog/taskweaver-a-code-first-agent-framework-for-efficient-data-analytics-and-domain-adaptation/"
-    ],
-    "verify_notes": "开源项目，信息准确无需修正。",
-    "compare_section": {
-        "competitors": [
-            "anthropic-console",
-            "hugging-face",
-            "open-router"
-        ],
-        "verdict": "TaskWeaver 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：TaskWeaver 的 代码优先（code-first）智能体框架，将需求转为 Python 代码执行 是亮点，价格 开源免费；竞品各有侧重，可按预算与功能需求选择。"
+    {
+      "q": "TaskWeaver 支持哪些 LLM？",
+      "a": "TaskWeaver 通过抽象后端支持多种 LLM，包括 OpenAI GPT 系列、Azure OpenAI、Anthropic Claude 以及通过兼容接口接入的开源模型（如 Llama、Mistral 等）。"
     },
-    "published_date": "2026-09-04",
-    "created_date": "2026-09-04"
+    {
+      "q": "如何安装 TaskWeaver？",
+      "a": "推荐使用 pip 安装：pip install taskweaver，然后按照官方文档配置 LLM 密钥和插件。也可直接从 GitHub 仓库克隆源码运行。"
+    },
+    {
+      "q": "TaskWeaver 可以在生产环境中使用吗？",
+      "a": "可以，但需要自行评估安全性和稳定性。TaskWeaver 提供了代码沙箱（如 Docker）来隔离执行环境，降低风险。建议在生产前充分测试并配置资源限制。"
+    }
+  ],
+  "seo_keywords": [
+    "TaskWeaver",
+    "TaskWeaver怎么样",
+    "TaskWeaver免费版",
+    "TaskWeaver使用教程",
+    "TaskWeaver和哪个好"
+  ],
+  "content": "# TaskWeaver：微软开源的AI Agent框架，让大模型真正“动手干活”\n\n## TaskWeaver是什么？\n\n简单说，TaskWeaver 是微软开源的一个 AI 框架，核心思路是把大语言模型（LLM）的“思考能力”和“执行代码的能力”绑在一起。常规的对话式 AI 只能跟你聊天，最多调个 API，但 TaskWeaver 会让 LLM 理解你的需求后，**自己写 Python 代码、跑 SQL、调用你注册的插件**，然后把结果返回给你。\n\n你可以把它理解为：一个能自动拆解任务、写代码执行、还能记住上下文的智能代理框架。它不是某个成品应用，而是一套基础设施，让开发者快速搭建自己的“企业级 AI 打工人”。\n\n## 核心功能\n\n**1. 基于 LLM 的任务规划与执行引擎**  \n给 LLM 一个复杂需求（比如“把上周的销售数据整理成报表，并标注异常值”），它会自动拆解成多个子任务（查询数据、计算指标、画图…），然后按顺序或并行执行。实际用起来感觉就像有一个会拆解步骤的助手，而不是只会输出一段文字。\n\n**2. 内置代码解释器（Python / SQL 等）**  \nTaskWeaver 自带沙盒环境，LLM 生成的代码可以直接运行。这意味着你可以让它“计算一下这个 CSV 里每个类别的平均值”或者“从数据库里把最近 30 天的订单拉出来”，它真的会写 SQL 跑完再告诉你结果。对于需要精确计算或数据操作的场景，这个能力比单纯依靠 LLM 生成文本靠谱得多。\n\n**3. 多轮对话状态管理**  \n不是每次用完就忘。TaskWeaver 会维护整个对话的上下文，比如你在上一轮说了“把筛选条件改为本月”，它会在下一轮里记住之前的查询结果和逻辑。对于企业场景里的多步操作，这个设计很关键，否则每次都要重讲一遍。\n\n**4. 自定义插件和工具注册**  \n可以把你自己的 API、内部工具、脚本包装成插件，让 LLM 在规划任务时自动选择调用。比如接上公司的 CRM 系统、内部知识库、审批流程等。插件架构很灵活，写一个 Python 类注册一下就好，上手成本不算高。\n\n**5. 多 LLM 后端统一接口**  \n支持 GPT、Claude、以及开源的 LLaMA 等模型，切换后端只需要改配置。对于企业来说，如果不想依赖 OpenAI，可以部署私有化的开源模型，数据不出网。实际使用中接口封装得不错，底层换模型后上层业务代码基本不用动。\n\n另外还支持复杂的 DAG 任务编排（有依赖关系的有向无环图），适合做数据管道或自动化流程。\n\n## 版本/套餐对比\n\n| 版本 | 说明 |\n|------|------|\n| **社区版（开源）** | GitHub 上可直接获取源码，MIT 许可证。完全免费，可自行修改、私有化部署。 |\n| **企业级部署** | 没有官方付费版本。需要自己配置服务器、数据库、安全策略。部分企业会基于社区版做二次开发，或使用微软 Azure 上的相关服务（如 Azure AI Agent）来降低运维成本。 |\n\n**价格：** 作为开源项目，TaskWeaver 本身不收费。你需要支付的是服务器 / 云资源费用（运行 LLM 和代码执行需要 GPU/CPU），以及如果使用商业化 LLM 的 API 费用。\n\n## 值不值得用？\n\n**优点：**\n- 完全开源，自由度高，可以私有化，数据安全可控。\n- 代码执行能力是真亮点，不是“假装会写代码”的幻觉式输出。\n- 插件体系设计合理，扩展性强，适合接入现有系统。\n- 支持多种 LLM，不绑定单一供应商。\n\n**缺点：**\n- 学习曲线确实陡。你得理解它的架构：Session、Planner、Code Interpreter、Plugin 之间的协作关系。对不熟悉 Python + LLM 编排的人来说，初次配置容易踩坑。\n- 依赖本地或云端环境，部署步骤比“一键安装”复杂。需要 Python 环境、依赖库、LLM 接口配置等。\n- 文档和社区还在成长中。部分功能（比如 DAG 编排）的示例较少，遇到问题有时只能翻源码。\n- 代码执行有安全隐患：沙盒虽然做了隔离，但企业使用时仍需谨慎配置权限。\n\n**总体结论：** 如果你是一个有技术能力的团队（至少有一名懂 Python 和 LLM 的开发者），需要构建一个能自主执行代码、处理复杂多步任务的 AI 助手，TaskWeaver 值得认真研究。它比 LangChain 更贴近“让 LLM 写代码并执行”的场景，比 AutoGPT 更结构化和可控。但如果只是想做个简单的聊天机器人，那完全没必要上这么重的框架。\n\n## 使用建议\n\n1. **先读官方 README 和几个样例**。它的 examples 目录里有财税、数据分析等场景的 demo，跑通一个就能理解核心流程。\n2. **从最简单的 Planner + Code Interpreter 开始**。先别急着加一堆插件，让 LLM 能写 Python 算数、读本地文件，感受下任务拆解的效果。\n3. **注意沙盒环境隔离**。代码执行默认在本地进程，生产环境建议放到 Docker 容器里，限制文件系统、网络和资源。\n4. **准备好硬件或云资源**。如果本地没有 GPU，跑开源模型会比较慢，建议用 API（如 GPT-4）先验证流程，再考虑私有化部署。\n5. **插件注册记得写清晰的描述**。LLM 选择插件依赖自然语言描述，描述越精确，Agent 选对工具的概率越高。\n\n## 适合谁用？\n\n**✅ 推荐：**\n- 有 Python 开发经验的技术团队，想快速搭建内部自动化助手（数据报表、代码审查、运维助手）。\n- 需要私有化部署的企业，数据不能出内网，又想用 LLM 的能力处理代码类任务。\n- 对 Agent 框架感兴趣、愿意折腾的开源爱好者。\n\n**🤔 可考虑：**\n- 分析师或轻度用户，熟悉 Python 但不想从零写 Agent 逻辑。可以基于 TaskWeaver 套个 Web UI 用。\n- 想绕过 OpenAI 方案、切换开源模型做实验的研究者。\n\n**❌ 不推荐：**\n- 完全不懂编程的业务人员。TaskWeaver 没有可视化配置界面，几乎所有操作都需要代码和命令行。\n- 只需要简单问答或文档总结的场景，用现成的 ChatPDF 或 RAG 工具更省心。\n- 项目周期紧、团队人力不足的小团队，建议先用更成熟的方案（如 LangChain + ReAct）验证可行性，再决定要不要上 TaskWeaver。",
+  "published": true,
+  "source_url": "https://github.com/microsoft/TaskWeaver",
+  "last_verified": "2026-07-31",
+  "confidence": "high",
+  "conflict": false,
+  "content_verified": true,
+  "conflict_note": "",
+  "verified_url": "https://github.com/microsoft/TaskWeaver",
+  "verified_publisher": "Microsoft",
+  "verified_what": "微软开源的 code-first（代码优先）AI 智能体框架，将用户需求转化为可执行的 Python 代码来规划并执行数据分析等复杂任务，支持插件、多 LLM 与有状态执行。",
+  "verified_price": "开源免费（MIT 许可证）",
+  "verified_platform": "本地部署 / Docker / Python（需 Python ≥ 3.10）",
+  "verified_features": [
+    "代码优先（code-first）智能体框架，将需求转为 Python 代码执行",
+    "任务规划与分解（Planner），支持复杂任务拆解",
+    "内置代码解释器，支持插件与自定义算法封装",
+    "有状态（stateful）代码执行，保留会话上下文与内存数据",
+    "支持多种 LLM 后端（OpenAI、Azure OpenAI、Claude 等）"
+  ],
+  "verified_description": "TaskWeaver 是微软（Microsoft）开源的“代码优先”（code-first）AI 智能体框架，将用户需求转化为可执行的 Python 代码来规划并执行数据分析等复杂任务，支持插件、多 LLM 与有状态执行。",
+  "content_flags": "内容基本准确，无严重幻觉。",
+  "price_verified": true,
+  "verified_rating": "⭐4.5（编辑评分）",
+  "rating_source": "编辑评分（站内综合判断）",
+  "rating_verified": true,
+  "verified_pros": [
+    "完全开源，可自由定制和私有化部署",
+    "支持多种 LLM（GPT、Claude、开源模型等）",
+    "内置代码解释器，可动态生成并执行 Python 等代码",
+    "插件架构灵活，便于扩展自定义功能",
+    "提供任务规划和多轮对话管理能力"
+  ],
+  "verified_cons": [
+    "学习曲线较陡，需要理解框架架构",
+    "依赖本地运行环境或云服务器，配置稍复杂",
+    "文档和社区生态仍在完善中，部分功能缺少示例"
+  ],
+  "verified_faq": [
+    {
+      "q": "TaskWeaver 与其他 AI 代理框架（如 LangChain）有什么区别？",
+      "a": "TaskWeaver 更注重代码执行和任务规划，内置了强大的代码解释器，适合需要动态生成代码的细分场景；而 LangChain 是一个更通用的 LLM 应用开发框架，专注链式调用和工具集成。两者可以互补。"
+    },
+    {
+      "q": "TaskWeaver 支持哪些 LLM？",
+      "a": "TaskWeaver 通过抽象后端支持多种 LLM，包括 OpenAI GPT 系列、Azure OpenAI、Anthropic Claude 以及通过兼容接口接入的开源模型（如 Llama、Mistral 等）。"
+    },
+    {
+      "q": "如何安装 TaskWeaver？",
+      "a": "推荐使用 pip 安装：pip install taskweaver，然后按照官方文档配置 LLM 密钥和插件。也可直接从 GitHub 仓库克隆源码运行。"
+    },
+    {
+      "q": "TaskWeaver 可以在生产环境中使用吗？",
+      "a": "可以，但需要自行评估安全性和稳定性。TaskWeaver 提供了代码沙箱（如 Docker）来隔离执行环境，降低风险。建议在生产前充分测试并配置资源限制。"
+    }
+  ],
+  "verified_tags": [
+    "开源",
+    "AI代理",
+    "LLM框架"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://github.com/microsoft/TaskWeaver",
+    "https://www.microsoft.com/en-us/research/blog/taskweaver-a-code-first-agent-framework-for-efficient-data-analytics-and-domain-adaptation/"
+  ],
+  "verify_notes": "开源项目，信息准确无需修正。",
+  "compare_section": {
+    "competitors": [
+      "anthropic-console",
+      "hugging-face",
+      "open-router"
+    ],
+    "verdict": "TaskWeaver 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：TaskWeaver 的 代码优先（code-first）智能体框架，将需求转为 Python 代码执行 是亮点，价格 开源免费；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "published_date": "2026-09-04",
+  "created_date": "2026-09-04"
 }

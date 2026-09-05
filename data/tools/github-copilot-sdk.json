@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "🧩",
   "color": "#24292F",
-  "description": "GitHub 官方开源项目（github/copilot-sdk，MIT 许可），把 Copilot CLI 背后那套经生产验证的 Agent 运行时开放给开发者：规划、工具调用、文件编辑、流式输出与多轮会话开箱即用。近期版本新增会话「rewind」文件变更回溯、会话级 GitHub token 动态刷新回调、Java 内置原生运行时（免装独立 CLI），以及内置插件目录与权限决策上下文等能力；提供 Node/TypeScript、Python、Go、.NET、Rust、Java 六语言 SDK。",
+  "description": "GitHub 官方开源项目（github/copilot-sdk，MIT 许可），把 Copilot CLI 背后那套经生产验证的 Agent 运行时开放给开发者：规划、工具调用、文件编辑、流式输出与多轮会话开箱即用。v1.0.13（2026-09-04 发布，正式 Latest 稳定版，告别 -preview 预发布通道）新增：主机自有外部工具回调取消、客户端信息上报应用身份、Node Agent Factories 分页与完成通知、可选择的 ask_user 会话行为（elicitation 结构化表单）、会话级短期 GitHub 凭据轮换、扩展可请求敏感环境变量、Rust 早期会话事件订阅、主机注入托管设置权限、auto 模型路由档位控制（效率/均衡/智能）、沙箱绕过与非对象工具参数等；提供 Node/TypeScript、Python、Go、.NET、Rust、Java 六语言 SDK。",
   "category": "AI开发",
   "tags": [
     {
@@ -28,7 +28,7 @@
     "text": "HOT"
   },
   "url": "https://github.com/github/copilot-sdk",
-  "price": "SDK 本身 MIT 开源免费；调用能力对所有 GitHub Copilot 订阅者开放（含免费的 Copilot Free），非 Copilot 用户可通过 BYOK 使用自己的 OpenAI、Microsoft Foundry、Anthropic 等密钥。官方说明：每次 prompt 会计入 Copilot 高级请求配额",
+  "price": "开源免费（MIT）；Copilot 订阅者免费可用，每次 prompt 计入高级请求配额",
   "platform": "跨平台（Node.js/TypeScript、Python、Go、.NET、Rust、Java 六语言 SDK；SDK 自动管理 Copilot CLI 进程生命周期，通过 JSON-RPC 经 stdio 或 TCP 通信）",
   "pros": [
     "复用 Copilot CLI 同一套经生产验证的 Agent 运行时，规划、工具调用、文件编辑不必自己实现",
@@ -50,7 +50,11 @@
     "会话 rewind：开启文件变更追踪后可回滚对话与已改文件到任意检查点",
     "会话级 GitHub token 动态刷新回调（expiry-aware）",
     "Java 内置原生运行时（Linux/Windows/macOS，免装独立 CLI）",
-    "Hook 与权限框架：pre/post tool use、权限请求可拦截，只读工具可跳过授权"
+    "Hook 与权限框架：pre/post tool use、权限请求可拦截，只读工具可跳过授权",
+    "主机注入托管设置权限：会话创建可注入企业权限策略（deny/ask/allow 与禁用绕过权限模式）",
+    "auto 模型路由档位控制：会话级将 auto 路由推向效率 / 均衡 / 智能",
+    "扩展可请求敏感环境变量：joinSession 声明所需变量，经权限提示后写入扩展进程",
+    "外部工具回调取消：会话结束或请求完成时取消主机自有外部工具回调"
   ],
   "related": [
     "github-copilot",
@@ -88,14 +92,14 @@
     "Copilot SDK 和 Claude Agent SDK 哪个好"
   ],
   "source_urls": [
-    "https://github.com/github/copilot-sdk/releases"
+    "https://github.com/github/copilot-sdk/releases/tag/v1.0.13"
   ],
   "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-09-02",
+  "updated_date": "2026-09-05",
   "verified_url": "https://github.com/github/copilot-sdk",
-  "last_verified": "2026-09-02",
-  "verify_notes": "watch 命中 v1.0.13-preview.4（2026-09-01）；上述新能力来自 GitHub 官方 releases 页面最新发布说明。页面原 last_verified 2026-08-30，补充近期新增能力。",
+  "last_verified": "2026-09-05",
+  "verify_notes": "GitHub Releases 官方确认 v1.0.13 于 2026-09-04 发布并标记为 Latest 稳定版（此前为 v1.0.13-preview.4 预发布）；含大量新能力（外部工具回调取消、客户端信息、ask_user elicitation、会话级短期凭据轮换、敏感环境变量请求、托管设置权限、auto 路由档位等）。scrape_price success=false（GitHub 无价），开源免费无变化。版本 -preview.4→v1.0.13 稳定。",
   "verified_publisher": "GitHub",
   "verified_what": "GitHub 官方开源的 Copilot Agent 运行时 SDK",
   "verified_platform": "Node/TypeScript, Python, Go, .NET, Rust, Java",
@@ -107,7 +111,13 @@
     "会话 rewind：开启文件变更追踪后可回滚对话与已改文件到任意检查点",
     "会话级 GitHub token 动态刷新回调（expiry-aware）",
     "Java 内置原生运行时（Linux/Windows/macOS，免装独立 CLI）",
-    "Hook 与权限框架：pre/post tool use、权限请求可拦截，只读工具可跳过授权"
+    "Hook 与权限框架：pre/post tool use、权限请求可拦截，只读工具可跳过授权",
+    "主机注入托管设置权限：会话创建可注入企业权限策略（deny/ask/allow 与禁用绕过权限模式）",
+    "auto 模型路由档位控制：会话级将 auto 路由推向效率 / 均衡 / 智能",
+    "扩展可请求敏感环境变量：joinSession 声明所需变量，经权限提示后写入扩展进程",
+    "外部工具回调取消：会话结束或请求完成时取消主机自有外部工具回调"
   ],
-  "verified_description": "GitHub 官方开源项目（github/copilot-sdk，MIT 许可），把 Copilot CLI 背后那套经生产验证的 Agent 运行时开放给开发者：规划、工具调用、文件编辑、流式输出与多轮会话开箱即用。近期版本新增会话「rewind」文件变更回溯、会话级 GitHub token 动态刷新回调、Java 内置原生运行时（免装独立 CLI），以及内置插件目录与权限决策上下文等能力；提供 Node/TypeScript、Python、Go、.NET、Rust、Java 六语言 SDK。"
+  "verified_description": "GitHub 官方开源项目（github/copilot-sdk，MIT 许可），把 Copilot CLI 背后那套经生产验证的 Agent 运行时开放给开发者：规划、工具调用、文件编辑、流式输出与多轮会话开箱即用。v1.0.13（2026-09-04 发布，正式 Latest 稳定版，告别 -preview 预发布通道）新增：主机自有外部工具回调取消、客户端信息上报应用身份、Node Agent Factories 分页与完成通知、可选择的 ask_user 会话行为（elicitation 结构化表单）、会话级短期 GitHub 凭据轮换、扩展可请求敏感环境变量、Rust 早期会话事件订阅、主机注入托管设置权限、auto 模型路由档位控制（效率/均衡/智能）、沙箱绕过与非对象工具参数等；提供 Node/TypeScript、Python、Go、.NET、Rust、Java 六语言 SDK。",
+  "verified_price": "SDK 本身 MIT 开源免费；调用能力对所有 GitHub Copilot 订阅者开放（含免费的 Copilot Free），非 Copilot 用户可通过 BYOK 使用自己的 OpenAI、Microsoft Foundry、Anthropic 等密钥。官方说明：每次 prompt 会计入 Copilot 高级请求配额",
+  "price_verified": true
 }
