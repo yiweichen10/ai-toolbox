@@ -243,14 +243,28 @@ def build_changed(no_push=False):
     surface += [p for p in _glob.glob(os.path.join(build.BASE_DIR, 'js', '*.js'))
                 if os.path.basename(p) != 'tools-data.js'
                 and not _re.match(r'tts-reader-.+\.js$', os.path.basename(p))]
+    def _file_hash(path):
+        """内容哈希（构建面变更判定用）。mtime 会被 git/编辑器/杀软等无内容改动触碰，
+        导致误判'构建面变更'→回退全量（09-02、09-05 快讯+词典两次自动化均中招）。
+        内容哈希对'无改动'免疫，根除此类误报。"""
+        try:
+            import hashlib
+            h = hashlib.md5()
+            with open(path, 'rb') as _fh:
+                for _chk in iter(lambda: _fh.read(65536), b''):
+                    h.update(_chk)
+            return h.hexdigest()
+        except OSError:
+            return None
+
     cur = {}
     for _d in (tool_shards, art_shards, dict_shards, news_files, pseo_files):
         cur.update(_d)
+    # 2026-09-05 修复：构建面用内容哈希替代 mtime（见 _file_hash）。数据分片仍走 mtime（原子重写可靠）。
     for _p in surface:
-        try:
-            cur[_p] = os.path.getmtime(_p)
-        except OSError:
-            pass
+        _h = _file_hash(_p)
+        if _h is not None:
+            cur[_p] = _h
 
     def _fallback(reason):
         print(f'[--changed] {reason} → 回退全量构建（保证产物一致性）')
