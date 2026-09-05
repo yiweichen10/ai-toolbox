@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-09-04",
+    "updated": "2026-09-05",
     "total": 674
   },
   "tools": {
@@ -2708,9 +2708,9 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-04",
+      "verified_at": "2026-09-05",
       "confidence": "high",
-      "notes": "GitHub release 0.153.2 现为 Latest（非预发布）；变更仅为 GPT-6-Astra Fast 档描述文案修复，无功能变化；价格未变。scrape_price 命中 GitHub 通用导航(success=false)，开源免费已确证。"
+      "notes": "GitHub release v0.153.4（Latest）为 0.153 热修复：Astra 进入内置模型选择器并设为默认 + 异步提问引导按工具可用性限定；无功能变更。scrape_price success=false（GitHub 无价，命中通用导航），开源免费无变化。版本 v0.153.2→v0.153.4。"
     },
     "wonder-ai": {
       "name": "Wonder AI",
@@ -6954,9 +6954,9 @@
       "priority": 130,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-03",
+      "verified_at": "2026-09-05",
       "confidence": "high",
-      "notes": "GitHub Releases 官方确认 Reasonix CLI v1.36.0 稳定版于 2026-09-02 发布，Release Notes 列出桌面端粘性上下文文件固定、协作式会话接管、强制完成长文件读取及大量稳定性/性能修复。scrape_price 命中 GitHub 通用 pricing 导航（无工具价），开源免费无变化。"
+      "notes": "GitHub Releases 官方确认 Reasonix CLI v1.37.0 稳定版于 2026-09-04 发布：简化 Agent 核心+确定性完成流程、模型级视觉能力、ModelScope 预设（Qwen3.5-397B/DeepSeek-V4）、桌面滚动修复等。scrape_price success=false（GitHub 无价），开源免费无变化。版本 v1.36.0→v1.37.0。"
     },
     "kiro-crew": {
       "name": "Kiro Crew",
@@ -7009,9 +7009,9 @@
       "priority": 60,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-04",
+      "verified_at": "2026-09-05",
       "confidence": "high",
-      "notes": "GitHub release v0.81.5（Latest），8/14 后首次版本更新；价格未变（MIT 免费）。scrape_price 命中仓库但 amount 为误报（localhost/200k 等无关串），开源免费已确证。"
+      "notes": "GitHub release v0.81.7（Latest，发布标题 GPT-6 Astra default）于 2026-09-04 发布；据发布标题将 GPT-6 Astra 设为默认模型（详细 change notes 未在发布页展开，未编造）。scrape_price success=false（GitHub 无价），开源免费无变化。版本 v0.81.5→v0.81.7。"
     },
     "gstack": {
       "name": "gstack",
@@ -7097,9 +7097,9 @@
       "priority": 210,
       "attempts": 1,
       "last_attempt": "2026-08-30",
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-09-05",
       "confidence": "high",
-      "notes": "watch 命中 v1.0.13-preview.4（2026-09-01）；上述新能力来自 GitHub 官方 releases 页面最新发布说明。页面原 last_verified 2026-08-30，补充近期新增能力。"
+      "notes": "GitHub Releases 官方确认 v1.0.13 于 2026-09-04 发布并标记为 Latest 稳定版（此前为 v1.0.13-preview.4 预发布）；含大量新能力（外部工具回调取消、客户端信息、ask_user elicitation、会话级短期凭据轮换、敏感环境变量请求、托管设置权限、auto 路由档位等）。scrape_price success=false（GitHub 无价），开源免费无变化。版本 -preview.4→v1.0.13 稳定。"
     },
     "browseros-neo": {
       "name": "BrowserOS neo",
@@ -7394,9 +7394,9 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-04",
+      "verified_at": "2026-09-05",
       "confidence": "high",
-      "notes": "同 codex-cli 仓库；0.153.2 为 Latest 通道正式版，仅文案修复。scrape_price success=false（GitHub 无价），开源免费已确证，价格未变。"
+      "notes": "同 codex-cli 仓库；v0.153.4 为 Latest 通道热修复（Astra 默认模型 + 异步提问引导限定）。scrape_price success=false（GitHub 无价），开源免费无变化。版本 v0.153.2→v0.153.4。"
     },
     "pptbot": {
       "name": "PPTBot",
