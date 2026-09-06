@@ -80,8 +80,8 @@
   "verified_what": "Buffer 是社交媒体管理平台，提供多平台内容排程、互动收件箱与分析；内置 AI Assistant 辅助生成与改写帖子（免费版即包含）。",
   "verified_price": "免费版（最多 3 个频道，含 AI Assistant）；Essentials $5/频道/月；Team $10/频道/月；Enterprise 定制（按频道计费，频道越多单价越低）",
   "verified_platform": "网页端 / iOS / Android",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-06",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "AI 内容生成助手（含免费版，不限量 credits）",
@@ -133,13 +133,9 @@
     "AI文案生成"
   ],
   "verified_category": "AI效率",
-  "source_urls": [
-    "https://buffer.com/",
-    "https://buffer.com/pricing",
-    "https://support.buffer.com/hc/en-us/articles/1500005350522-Features-available-on-each-Buffer-plan"
-  ],
-  "verify_notes": "重要校正：Buffer 的 AI Assistant 在免费版即包含（不限量 credits），原数据『AI 功能仅付费版本可用』错误。定价为按频道计费：Essentials $5/频道/月、Team $10/频道/月，并非原表的 $15/$80 固定月费。已校正价格字段。",
-  "content_verified": true,
+  "source_urls": [],
+  "verify_notes": "抓取命中公司宣传数字($26.4M ARR)非定价页金额，假阳性；记录 Essentials $5/频道为已知准确值，未改。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "evidence-dev",

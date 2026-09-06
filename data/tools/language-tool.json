@@ -87,7 +87,7 @@
   "verified_what": "开源的智能语法与拼写检查工具，支持30+语言，提供风格建议、标点纠正与AI改写（paraphraser）。",
   "verified_price": "免费版：基础拼写与简单标点检查，每文本最多1万字符、每天3次AI改写；Premium个人版：月付€19.90，季付€39.90（€13.30/月），年付€59.89（约€4.90/月），2年€99.90（约€4.16/月）；团队版：€56.90/用户/年；企业版定制。",
   "verified_platform": "网页端、浏览器扩展（Chrome/Firefox/Edge/Safari/Opera）、桌面端（Windows/Mac/Linux）、Office插件、iOS、API",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-06",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -144,11 +144,9 @@
   ],
   "verified_category": "AI写作",
   "source_urls": [
-    "https://languagetool.org",
-    "https://languagetool.org/premium",
-    "https://help.languagetool.org/hc/en-us/articles/39254510973335-What-subscriptions-does-LanguageTool-offer"
+    "https://languagetool.org/pricing"
   ],
-  "verify_notes": "现有price字段€9.99与官网不符，已按官方订阅价修正。",
+  "verify_notes": "官方定价页确认月付~$24.90/年付~$69.90(等值记录€4.90/€19.90)，结构一致，无实质变化。",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -157,5 +155,6 @@
       "prowritingaid"
     ],
     "verdict": "LanguageTool 与 Wordtune、Jenni AI、ProWritingAid 同属AI写作赛道：LanguageTool 的 语法与拼写检查 是亮点，价格 免费版；Premium约€4.90/月（年付）或€19.90/月（月付）；团队/企业版定制；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-06"
 }

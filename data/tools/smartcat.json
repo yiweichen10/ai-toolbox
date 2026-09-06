@@ -83,8 +83,8 @@
   "verified_what": "Smartcat 是企业级 AI 翻译与本地化平台，结合 AI 翻译、人工译后编辑与 50 万+ 译员市场，支持 280+ 语言的内容生成与翻译。",
   "verified_price": "提供免费试用（15 天）；Basic 约 $99/月（年付 $1,200/年）起；Enterprise 定制（按 Smartwords 用量计费）",
   "verified_platform": "Web / iOS / Android / API / 浏览器插件",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-06",
+  "confidence": "medium",
   "conflict": false,
   "verified_features": [
     "AI 翻译（280+ 语言）",
@@ -139,13 +139,9 @@
     "翻译管理"
   ],
   "verified_category": "AI翻译",
-  "source_urls": [
-    "https://smartcat.com",
-    "http://help.smartcat.com/pricing/",
-    "https://ko.smartcat.ai/pricing/"
-  ],
-  "verify_notes": "原数据写『付费版 $15/月起』明显偏低，官方 Basic 起价约 $99/月（年付 $1,200/年），并主要采用 Smartwords 用量计费；所谓『免费版』实为 15 天免费试用，无永久免费档。语言数为 280+ 而非 100+，原描述低估但不算错误。已校正价格字段。",
-  "content_verified": true,
+  "source_urls": [],
+  "verify_notes": "官方页仅显示按词计费($1.20/千词起)及免费试用，未明确确认 $99/月订阅，记录未被否定，未改。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "lingoai",

@@ -22,7 +22,7 @@
     "text": "NEW"
   },
   "url": "https://cluely.com",
-  "price": "免费试用 + 付费订阅（Freemium）",
+  "price": "免费版 $0；Pro $11.99/月起",
   "platform": "网页端+iOS+Android",
   "pros": [
     "通话中即时辅助，而非仅会后总结",
@@ -85,9 +85,9 @@
   "verified_url": "https://cluely.com",
   "verified_publisher": "Cluely",
   "verified_what": "在屏幕上隐形运行的实时 AI 会议/通话助手，能实时感知屏幕与语音，在面试、销售电话、会议中即时给出「该说什么」「追问什么」等提示，并自动生成会议纪要；因「帮人通过面试」的争议营销走红，存在诚信与合规风险。",
-  "verified_price": "提供免费试用版；另有付费订阅方案（具体档位与价格以官网 cluely.com 为准）。",
+  "verified_price": "免费版 $0；Pro $11.99/月起。",
   "verified_platform": "macOS / Windows / iPhone（桌面端 App，可兼容 Zoom、Google Meet、Microsoft Teams 等）",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-06",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -144,13 +144,9 @@
   ],
   "verified_category": "AI办公",
   "source_urls": [
-    "https://cluely.com",
-    "https://cluely.com/#usage",
-    "https://hypertools.so/tool/cluely",
-    "https://www.theai.tw/tools/cluely",
-    "https://cluely.cc/zh"
+    "https://cluely.com/pricing"
   ],
-  "verify_notes": "Cluely 为真实产品，但现有 tools.json 中的描述严重失实：它并非通用聊天/写作/翻译/编程助手，而是「隐形」实时会议副驾（看屏幕+听语音、通话中给提示）。5+ 独立来源一致确认此定位。已提供 corrected_content 全文重写，并将分类由 AI对话 更正为 AI办公，价格由未核实的 $19.9/月 改为以官网为准的 Freemium。",
+  "verify_notes": "原记录为模糊占位「免费试用 + 付费订阅（Freemium）」。官方定价页渲染确认：Free $0，Pro from $11.99/mo。回填真实价。",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -159,5 +155,6 @@
       "slidesai"
     ],
     "verdict": "Cluely 与 Tome、 tl;dv、SlidesAI 同属AI办公赛道：Cluely 的 实时会议辅助（我该说什么） 是亮点，价格 免费试用 + 付费订阅（Freemium）；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-06"
 }

@@ -78,8 +78,8 @@
   "verified_what": "Zety 平台推出的 AI 简历与求职信写作助手，通过 AI 生成并优化简历内容、匹配目标职位关键词。",
   "verified_price": "免费版可用（TXT 永久免费下载）；Pro 版 14 天试用后自动续费 $25.95/4 周（约 $28/月），年付 $71.40/年；下载 PDF/Word 需付费。",
   "verified_platform": "网页端",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-06",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "AI 简历内容生成与优化",
@@ -127,13 +127,10 @@
   ],
   "verified_category": "AI办公",
   "source_urls": [
-    "https://zety.com",
-    "https://zety.com/pricing/",
-    "https://zety.com/blog/cost-of-zety",
-    "https://www.novaaitool.com/2026/07/top-10-best-ai-resume-builders-2026.html"
+    "https://frontdeskreview.com/software/resume-builders/zety"
   ],
-  "verify_notes": "官网、定价页与第三方评测一致确认 Zety 为真实 AI 简历工具；唯一严重错误为价格（原 $9.99/月 不实）。描述与核心功能准确，无需重写正文，仅修正价格字段。",
-  "content_verified": true,
+  "verify_notes": "官方定价页渲染失败；WebSearch 多源确认现价为 免费(TXT)/试用$1.95/14天后续$25.95/4周/年付$71.40(≈$5.95/月)。记录「Pro $28/月」已过时，但属失败抓取通道，标 low 不自动改，需人工校正。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "tome",

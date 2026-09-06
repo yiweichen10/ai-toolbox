@@ -82,7 +82,7 @@
   "verified_what": "AI 无代码应用搭建平台（vibe coding）：用自然语言描述需求，即可生成包含前端、后端、数据库、身份认证与托管的全栈 Web 应用，并一键发布。",
   "verified_price": "免费版 $0/月（25 消息积分+100 集成积分）；Starter $16/月（年付）或 $20/月（月付）；Builder $40/月（年付）或 $50/月（月付）；Pro $80/月（年付）或 $100/月（月付）；Elite $160/月（年付）或 $200/月（月付）。",
   "verified_platform": "Web（云端平台，含 Android 应用）",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-06",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -139,13 +139,9 @@
   ],
   "verified_category": "AI开发",
   "source_urls": [
-    "https://base44.com/",
-    "https://base44.com/blog/how-much-does-base44-cost",
-    "https://vibecoding.app/blog/base44-review",
-    "https://flowstep.ai/blog/base44-review/",
-    "https://justinmckelvey.com/blog/what-is-base44"
+    "https://base44.com"
   ],
-  "verify_notes": "原数据把 Base44 当成 IDE 代码补全工具描述，属严重产品身份错误；已按官方与多篇评测重写。价格以官网 2026-07 公布的年付价为准。",
+  "verify_notes": "官方定价页确认 Free $0 / Paid from $16/mo(年付)，与记录一致。",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -154,5 +150,6 @@
       "open-router"
     ],
     "verdict": "Base44 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Base44 的 自然语言生成全栈应用（前端+后端+数据库+认证+托管） 是亮点，价格 免费版 $0；付费 $16/月起（年付）；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-06"
 }

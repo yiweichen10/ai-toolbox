@@ -77,8 +77,8 @@
   "verified_what": "Wix 推出的 AI 建站助手（Wix ADI / Wix Harmony + Aria），通过对话生成完整网站",
   "verified_price": "免费版 $0（含 Wix 子域与品牌）；付费 Light $17/月、Core $29/月、Business $39/月、Business Elite $159/月（年付）；Enterprise 定制",
   "verified_platform": "网页端",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-06",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "AI 对话生成完整网站（Wix Harmony + Aria）",
@@ -123,13 +123,9 @@
     "智能建站"
   ],
   "verified_category": "AI设计",
-  "source_urls": [
-    "https://www.wix.com/",
-    "https://www.wix.com/upgrade/website",
-    "https://wix.com/blog/how-much-does-a-website-builder-cost"
-  ],
-  "verify_notes": "官方域名 www.wix.com 正确。定价（$17/月起）与 2026 Wix Harmony/Aria AI 功能均与官网一致。原数据描述准确。",
-  "content_verified": true,
+  "source_urls": [],
+  "verify_notes": "抓取命中功能演示($250 pay link)非定价，假阳性；记录「高级版$17/月起」为已知准确值，未改。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "clipdrop",

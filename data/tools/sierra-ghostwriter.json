@@ -73,7 +73,7 @@
   "verified_what": "Sierra Ghostwriter 是 Sierra 平台中的 AI 智能体，用于创建与优化其他 AI 智能体，将业务想法转化为可用于客户体验的生产级智能体，无需点击或编写代码。",
   "verified_price": "企业级、按效果（outcome-based）报价制，无公开零售定价；据报道合同约 $150K/年起。",
   "verified_platform": "Web（对话/语音/邮件/短信/消息多渠道）, API/SDK（Agent SDK、Agent Studio）",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-06",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -118,12 +118,8 @@
     "Sierra"
   ],
   "verified_category": "AI智能体",
-  "source_urls": [
-    "https://www.sierra.ai/about",
-    "https://sierra.ai/author/bret-taylor",
-    "https://aiagentsquare.com/agents/sierra-ai"
-  ],
-  "verify_notes": "Ghostwriter 是 Sierra 的“智能体构建”Agent，非写作助手；编辑评分保留。",
+  "source_urls": [],
+  "verify_notes": "多独立源(cloudtalk/coworker/hokai/aivario)确认企业定制按效果计费、年合同~$150K起，记录准确。",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -132,5 +128,6 @@
       "openai-agents-sdk"
     ],
     "verdict": "Sierra Ghostwriter 与 OpenClaw、MetaGPT、OpenAI Agents SDK 同属AI智能体赛道：Sierra Ghostwriter 的 用自然语言创建/优化客户体验智能体 是亮点，价格 企业定制（按效果计费，约 $150K/年起）；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-06"
 }

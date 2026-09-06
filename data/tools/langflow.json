@@ -85,7 +85,7 @@
   "verified_what": "Langflow 是开源的低代码 AI 构建器，用于构建和部署 AI 智能体与 MCP 服务器，基于 LangChain，提供拖拽式可视化界面，支持主流大模型、向量数据库与丰富的 AI 工具组件。",
   "verified_price": "开源核心完全免费自托管（Apache 2.0）。Langflow Cloud 付费托管：社区/免费档有限额度；Starter 约 $29/月；Pro/Team 约 $99/月；Enterprise 定制（SSO、SOC 2、私有部署等）。",
   "verified_platform": "Web 端 / 桌面端（Mac、Windows）/ 云 / 自托管（Docker）",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-06",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -139,12 +139,8 @@
     "RAG"
   ],
   "verified_category": "AI开发",
-  "source_urls": [
-    "https://www.langflow.org/",
-    "https://langflow.org/blog",
-    "https://aimode.in/langflow/"
-  ],
-  "verify_notes": "官方域名 langflow.org 核实有效。原数据称 Pro $49/月，与实际 Cloud 档位（Starter ~$29、Pro ~$99）有出入，已在校验价格中修正；产品形态描述准确。Langflow 现归属于 IBM。",
+  "source_urls": [],
+  "verify_notes": "开源自托管免费 + Langflow Cloud(Starter~$29/Pro~$99)，无变化。",
   "content_verified": true,
   "url_previous": "https://langflow.org",
   "compare_section": {
@@ -154,5 +150,6 @@
       "open-router"
     ],
     "verdict": "Langflow 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：Langflow 的 可视化工作流编排（拖拽） 是亮点，价格 开源免费自托管 + Langflow Cloud（Starter ~$29/月，Pro ~$99/月）；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-06"
 }

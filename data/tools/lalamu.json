@@ -85,8 +85,8 @@
   "verified_what": "AI口型同步（lip-sync）视频生成工具，可将音频与人物（真人/动漫/照片）的嘴唇动作自动匹配，也支持文字转语音与照片唱歌动画。",
   "verified_price": "免费版：120积分/月（约2分钟视频）；Basic：$9.99/月；Premium：$19.99/月（部分渠道列Pro $25/月）。",
   "verified_platform": "网页端、Canva插件、移动端（iOS/Android）",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-06",
+  "confidence": "medium",
   "conflict": false,
   "verified_features": [
     "AI口型自动同步",
@@ -140,13 +140,10 @@
   ],
   "verified_category": "AI视频",
   "source_urls": [
-    "https://lalamu.studio/",
-    "https://www.toolmage.com/en/tool/lalamustudio",
-    "https://aitechfy.com/aitool/lalamu-studio/",
-    "https://dang.ai/tool/ai-website-generator-lalamu"
+    "https://aitechfy.com/lalamu-studio"
   ],
-  "verify_notes": "dang.ai页面标注Lalamu“已关闭/被收购”，但同页及toolmage、aitechfy均将其描述为在售活跃工具并列出当前价格，故以活跃为准；价格字段与现有数据基本一致。",
-  "content_verified": true,
+  "verify_notes": "定价页渲染失败；WebSearch 多源(aitechfy/dang/conversiongems)确认 Basic $9.99/Premium $19.99/免费120积分，记录准确。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "heygen",

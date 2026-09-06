@@ -80,8 +80,8 @@
   "verified_what": "阿里巴巴旗下夸克（AI 旗舰应用「AI 超级框」）内置的智能助手，基于通义千问（Qwen）大模型，将 AI 对话、深度搜索、深度研究、AI 写作、AI 生图等整合于一体。",
   "verified_price": "完全免费（夸克浏览器/App 内置 AI 功能，无付费墙）。",
   "verified_platform": "iOS / Android / Web / Windows / Mac 桌面端",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-06",
+  "confidence": "medium",
   "conflict": false,
   "verified_features": [
     "智能搜索问答（AI 超级框）",
@@ -129,14 +129,9 @@
     "AI写作"
   ],
   "verified_category": "AI搜索",
-  "source_urls": [
-    "https://www.quark.cn",
-    "https://ai.quark.cn/",
-    "https://www.alibabagroup.com/document-1837325276262957056",
-    "https://www.cnr.cn/tech/techph/20250313/t20250313_527099069.shtml"
-  ],
-  "verify_notes": "阿里官方与多家媒体确认夸克为阿里 AI 旗舰应用、基于通义大模型、完全免费；现有数据准确，无需修正。",
-  "content_verified": true,
+  "source_urls": [],
+  "verify_notes": "免费产品，定价页渲染失败，记录「免费」维持。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "perplexity",

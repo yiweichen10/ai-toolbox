@@ -88,7 +88,7 @@
   "verified_what": "AI语音合成（TTS）与语音转文字（STT）平台，提供超低延迟的实时语音生成与流式转录，主打语音代理（voice agents）场景。",
   "verified_price": "Free $0/月（20K积分 + $1预付费代理）；Pro $5/月（100K积分 + 商业授权 + 即时语音克隆）；Startup $49/月（125万积分 + Pro克隆 + 团队）；Scale $299/月（800万积分 + 优先支持）；Enterprise 定制。",
   "verified_platform": "Web API、Python/JavaScript SDK、REST API、设备端",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-06",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -146,11 +146,9 @@
   ],
   "verified_category": "AI音频",
   "source_urls": [
-    "https://cartesia.ai",
-    "https://cartesia.ai/pricing",
-    "https://audioaihub.com/text-to-speech/cartesia/"
+    "https://cartesia.ai/pricing/"
   ],
-  "verify_notes": "原content的$19/月起为虚构档位，已更正为Pro $5/月起；语言数由20+更正为40+。",
+  "verify_notes": "官方定价页确认 Free $0 / Pro $5/mo / Startup $49/mo，Pro 与记录一致。",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -159,5 +157,6 @@
       "udio"
     ],
     "verdict": "Cartesia 与 Krisp、ElevenLabs、Udio 同属AI音频赛道：Cartesia 的 实时语音合成（Sonic TTS，首字节延迟约90ms） 是亮点，价格 免费版$0；付费版$5/月起（Pro）；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-06"
 }

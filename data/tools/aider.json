@@ -75,7 +75,7 @@
   "verified_what": "Aider 是一款开源的终端AI结对编程助手，可连接主流大模型，理解整个代码库并在 Git 仓库中直接编辑、创建、重构代码，自动提交。",
   "verified_price": "完全免费开源（Apache 2.0）；用户自备 LLM API Key（如 OpenAI、Anthropic、DeepSeek 等），按所用模型计费。",
   "verified_platform": "终端 / CLI、macOS、Linux、Windows、可集成任意 IDE",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-06",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -115,12 +115,8 @@
     "代码重构"
   ],
   "verified_category": "AI编程",
-  "source_urls": [
-    "https://www.aider.chat/",
-    "https://github.com/Aider-AI/aider",
-    "https://oss-ai-swe.org/aider"
-  ],
-  "verify_notes": "信息准确；GitHub Star 数在搜索结果中显示 39K–44K（随时间增长）。",
+  "source_urls": [],
+  "verify_notes": "开源免费(需自备LLM Key)，官方页含免费信号，无变化。",
   "content_verified": true,
   "url_previous": "https://aider.sh",
   "compare_section": {
@@ -130,5 +126,6 @@
       "github-copilot"
     ],
     "verdict": "Aider 与 Lovable、Cursor、GitHub Copilot 同属AI编程赛道：Aider 的 代码库地图（理解整个项目） 是亮点，价格 免费开源（需自备 LLM API Key）；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-06"
 }

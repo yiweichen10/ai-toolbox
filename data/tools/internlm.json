@@ -81,7 +81,7 @@
   "verified_what": "上海人工智能实验室开源的大语言模型系列（书生·浦语 / InternLM），支持超长上下文、联网搜索与工具调用，并提供多模态版本；开源可免费商用",
   "verified_price": "开源权重与工具链免费（含免费商用授权）；云端 API/托管服务按用量计费，企业版定制",
   "verified_platform": "Web（chat.intern-ai.org.cn）、API、GitHub 开源、本地部署、移动端",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-06",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -133,11 +133,9 @@
   ],
   "verified_category": "AI对话",
   "source_urls": [
-    "https://internlm.intern-ai.org.cn/",
-    "https://github.com/InternLM/InternLM",
-    "https://www.shlab.org.cn/news/5443966"
+    "https://internlm.intern-ai.org.cn/pricing-plans"
   ],
-  "verify_notes": "最新为 InternLM3-8B-Instruct（2025-01）与 Intern-S1（2025-07）；原称“2026 年最新 InternLM 3”年份略偏，但 InternLM3 确实存在。开源免费商用；URL 建议更新为官网 internlm.intern-ai.org.cn（原 GitHub 仓库亦有效）。",
+  "verify_notes": "开源免费商用 + 云端API/企业版按需，官方页含免费信号，无变化。",
   "content_verified": true,
   "url_previous": "https://github.com/InternLM/InternLM",
   "compare_section": {
@@ -147,5 +145,6 @@
       "360-zhinain"
     ],
     "verdict": "书生浦语 与 Gemini、ChatGPT、360智脑 同属AI对话赛道：书生浦语 的 智能对话与问答 是亮点，价格 开源免费商用；云端 API/企业版按需付费；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-06"
 }

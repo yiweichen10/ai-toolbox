@@ -81,8 +81,8 @@
   "verified_what": "开源 AI 编程 Agent（前身为 OpenDevin），可自主完成写代码、修 Bug、跑测试、提 PR 等软件开发任务，支持本地 Docker 自托管与云端托管，模型无关（BYOK）。",
   "verified_price": "开源自托管版完全免费（MIT，Docker 部署，自带 API Key）；云端个人版免费（每日 10 次对话，BYOK）；云端 Pro 版 $20/月（含运行时算力与 $20 赠金、GitHub/GitLab/Bitbucket/Slack 集成）；企业版定制报价（SSO/SAML、私有 VPC 自托管）。",
   "verified_platform": "Web / VS Code / CLI（Docker 自托管或云端）",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-06",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "自主写代码与补全",
@@ -132,15 +132,9 @@
     "Agent"
   ],
   "verified_category": "AI编程",
-  "source_urls": [
-    "https://openhands.dev",
-    "https://openhands.dev/pricing",
-    "https://www.openhands.dev/blog/cursor-alternatives",
-    "https://aicoderscope.com/blog/openhands-review-2026",
-    "https://jiangren.com.au/wiki/openhands-guide/05-faq"
-  ],
-  "verify_notes": "openhands.dev 官方定价页与多家评测一致确认 Pro $20/月；正文描述准确，仅 FAQ 内 $19 需更正为 $20。现有 price 字段已写 $20/月，正确。",
-  "content_verified": true,
+  "source_urls": [],
+  "verify_notes": "抓取命中融资数字($18.8M)非定价，假阳性；记录「开源免费+云端Pro $20/月」为已知准确值，未改。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "lovable",

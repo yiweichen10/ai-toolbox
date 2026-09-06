@@ -82,7 +82,7 @@
   "verified_what": "LangGraph 是 LangChain 团队推出的开源低层代理编排框架，用于构建有状态、可循环、可控的复杂多代理系统与长时间运行的工作流；内置代理运行时（持久化执行、短期记忆、人机协作、流式输出）。",
   "verified_price": "开源免费（MIT 许可证）。另有商业化的 LangGraph Platform（原 LangGraph Cloud）提供托管部署、可视化调试（LangGraph Studio）、监控与企业支持，需联系销售/按用量计费。",
   "verified_platform": "Python、JavaScript/TypeScript（也可通过 LangGraph Platform 部署托管）",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-06",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -136,12 +136,8 @@
     "LangChain"
   ],
   "verified_category": "AI开发",
-  "source_urls": [
-    "https://langchain-ai.github.io/langgraph/",
-    "https://www.langchain.com/blog/langgraph-v1",
-    "https://blog.langchain.com/langgraph-cloud/"
-  ],
-  "verify_notes": "官方文档域名 langchain-ai.github.io/langgraph 为 LangChain 官方 GitHub Pages，属真实官方来源。现有描述基本准确，仅补充 LangGraph Platform 商业托管层。",
+  "source_urls": [],
+  "verify_notes": "开源免费(MIT) + LangGraph Platform 企业云另计，无变化。",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -150,5 +146,6 @@
       "open-router"
     ],
     "verdict": "LangGraph 与 Anthropic Console、Hugging Face、OpenRouter 同属AI开发赛道：LangGraph 的 多代理编排与协调 是亮点，价格 免费开源（MIT）；LangGraph Platform 企业云服务另计；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-06"
 }

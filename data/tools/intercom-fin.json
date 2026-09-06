@@ -87,7 +87,7 @@
   "verified_what": "Intercom推出的AI客服代理（Fin AI Agent），基于Intercom自研的Fin AI Engine，可7×24在聊天/邮件/WhatsApp等多渠道自动回答客户问题并按“成功解决（outcome）”计费。",
   "verified_price": "Fin按$0.99/次成功解决（outcome）计费，每对话仅计一次；需搭配Intercom套餐（Essential/Advanced/Expert，按席位计费）。在Zendesk/Salesforce等现有工单系统上使用同样$0.99/outcome，无席位费。提供14天免费试用。",
   "verified_platform": "Web、iOS、Android、邮件、WhatsApp、社媒等全渠道",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-06",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -145,11 +145,9 @@
   ],
   "verified_category": "AI行业应用",
   "source_urls": [
-    "https://www.intercom.com/fin",
-    "https://www.intercom.com/pricing",
-    "https://fin.ai/pricing"
+    "https://www.intercom.com/fin/pricing-plans"
   ],
-  "verify_notes": "价格$74为虚构/错误，更正为$0.99/outcome+套餐；模型由GPT-4更正为Fin AI Engine。",
+  "verify_notes": "官方(intercom.com/pricing + help)确认 Fin $0.99/成功解决 + Essential 套餐起，记录准确。",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -158,5 +156,6 @@
       "schole-ai"
     ],
     "verdict": "Intercom Fin 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：Intercom Fin 的 AI自动回复客户咨询（Fin AI Agent） 是亮点，价格 Fin $0.99/成功解决；需Intercom套餐（Essential起）；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-06"
 }
