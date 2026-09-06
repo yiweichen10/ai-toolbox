@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-09-05",
+    "updated": "2026-09-06",
     "total": 674
   },
   "tools": {
@@ -6954,9 +6954,9 @@
       "priority": 130,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-06",
       "confidence": "high",
-      "notes": "GitHub Releases 官方确认 Reasonix CLI v1.37.0 稳定版于 2026-09-04 发布：简化 Agent 核心+确定性完成流程、模型级视觉能力、ModelScope 预设（Qwen3.5-397B/DeepSeek-V4）、桌面滚动修复等。scrape_price success=false（GitHub 无价），开源免费无变化。版本 v1.36.0→v1.37.0。"
+      "notes": "GitHub Releases 官方确认 Reasonix CLI v1.38.0 稳定版于 2026-09-05 发布：独立网络搜索、可靠协议恢复、统一管理页面、富链接菜单、稳定更新重启、模型图像能力覆盖。版本 v1.37.0→v1.38.0。开源免费无价格变化（scrape_price 不适用，GitHub 无价）。长文无过时版本号（仅提 1.0 Go 重写），故不重写长文。"
     },
     "kiro-crew": {
       "name": "Kiro Crew",
@@ -7070,14 +7070,14 @@
     },
     "airllm": {
       "name": "airllm",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI开发",
       "priority": 30,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "GitHub Releases 官方确认 AirLLM v4.0.0 于 2026-09-05 发布：新增 Streamed LoRA 训练，Qwen3.8-Flash-Next 在 6GB 显存（RTX 3060 Ti）下训练、Qwen3.8-27B 在 seq 512 下约 2GB。开源免费无价格变化，scrape_price 不适用（GitHub 无价）。版本型特性新增，长文无过时事实故不重写。"
     },
     "cloudflare-wallets": {
       "name": "Cloudflare Wallets",

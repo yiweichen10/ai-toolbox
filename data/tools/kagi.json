@@ -1,94 +1,95 @@
 {
-  "name": "Kagi",
-  "slug": "kagi",
-  "positioning": "Kagi是什么？付费无广告AI搜索引擎好用吗",
-  "auto_positioning": false,
-  "emoji": "🔑",
-  "color": "#E8553A",
-  "description": "Kagi 是一个由用户订阅而非广告驱动的搜索引擎，主打无广告、隐私优先和高质量结果。它提供 Kagi Assistant，把多家主流大模型（GPT、Claude、Gemini 等）聚合在一个私密、带搜索溯源的对话界面里，适合重视信息质量与数据隐私的重度搜索用户。",
-  "category": "AI搜索",
-  "tags": [
-    {
-      "text": "无广告搜索"
+    "name": "Kagi",
+    "slug": "kagi",
+    "positioning": "Kagi是什么？付费无广告AI搜索引擎好用吗",
+    "auto_positioning": false,
+    "emoji": "🔑",
+    "color": "#E8553A",
+    "description": "Kagi 是一个由用户订阅而非广告驱动的搜索引擎，主打无广告、隐私优先和高质量结果。它提供 Kagi Assistant，把多家主流大模型（GPT、Claude、Gemini 等）聚合在一个私密、带搜索溯源的对话界面里，适合重视信息质量与数据隐私的重度搜索用户。",
+    "category": "AI搜索",
+    "tags": [
+        {
+            "text": "无广告搜索"
+        },
+        {
+            "text": "隐私优先"
+        },
+        {
+            "text": "免费试用",
+            "type": "free"
+        }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "recommend",
+        "text": "推荐"
     },
-    {
-      "text": "隐私优先"
-    },
-    {
-      "text": "免费试用",
-      "type": "free"
-    }
-  ],
-  "rating": "⭐ 4.7",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "recommend",
-    "text": "推荐"
-  },
-  "url": "https://kagi.com",
-  "price": "试用约 100–150 次免费搜索；Starter $5/月、Pro $10/月、Ultimate $25/月（家庭/团队版另计）",
-  "platform": "Web、Orion 浏览器、浏览器扩展（支持 Safari/Chrome/Firefox 扩展）",
-  "pros": [
-    "无广告、无追踪，结果质量高、干扰少，搜索体验干净",
-    "隐私优先：不把查询关联账户、不收集遥测，甚至用隐私通行协议做匿名认证",
-    "Kagi Assistant 聚合多家大模型，回答带搜索溯源脚注，可随时开/关联网",
-    "高度可定制：域名排名、Lenses 过滤、bang 快捷搜索，按自己口味调结果",
-    "生态完整：Translate、News、Summarize、Small Web 等工具均零追踪"
-  ],
-  "cons": [
-    "长期日常使用需付费，免费仅约 100–150 次试用，对 casual 用户门槛高",
-    "生态与知名度仍小于谷歌等巨头，部分小众结果覆盖有限",
-    "高级 AI 模型集中在 Ultimate 档，想要好模型每月成本不低"
-  ],
-  "features": [
-    "无广告搜索：干净结果、强反追踪与可定制排名",
-    "Kagi Assistant：聚合 GPT/Claude/Gemini 等模型，带搜索溯源",
-    "域名排名与 Lenses：提升可信源、按内容类型过滤结果",
-    "Universal Summarizer：一键总结网页、视频、文档",
-    "Kagi Translate：240+ 语言即时翻译，保留语气与语境",
-    "Small Web：精选非商业、真人创作的小众站点"
-  ],
-  "related": [
-    "perplexity",
-    "chatgpt",
-    "devv"
-  ],
-  "content": "## Kagi是什么？\nKagi 是一个“你花钱买、而不是用广告和数据换”的搜索引擎。它的核心理念很简单：免费搜索引擎靠广告和追踪挣钱，所以会想方设法让你多点击；Kagi 靠订阅挣钱，所以只对付费用户负责，给你无广告、反追踪、质量优先的搜索结果。在搜索之外，Kagi 还做了一个叫 Kagi Assistant 的 AI 助手，把 GPT、Claude、Gemini 等多家主流大模型聚到一个私密、带搜索溯源的对话界面里，你可以随时开/关联网，让它基于 Kagi 的搜索结果作答并附上参考链接。对工程师、研究员、写作者这类“住在搜索里”的人，Kagi 更像“专业版搜索”，而不是随便逛逛的工具。\n\n## 核心功能\n1. 无广告搜索：结果干净、反追踪，并支持域名排名等深度定制。\n2. Kagi Assistant：聚合多家大模型，回答带脚注来源，可切换是否联网。\n3. 域名排名与 Lenses：把可信站点提前、把低质站点压后，或按类型（讨论、播客、PDF）过滤。\n4. Universal Summarizer：贴一个链接就能总结网页、视频或文档。\n5. Kagi Translate：240+ 语言即时翻译，尽量保留原文语气与语境。\n\n## 版本/套餐对比\n| 版本 | 价格 | 搜索/AI | 适合人群 |\n| --- | --- | --- | --- |\n| 试用 | 免费约 100–150 次 | 基础 + 基础 AI | 先体验是否适合自己 |\n| Starter | $5/月 | 300 次搜索/月 | 轻度到中度使用者 |\n| Pro | $10/月 | 无限搜索 + 标准模型 | 高频搜索、需要摘要/翻译 |\n| Ultimate | $25/月 | 无限 + 顶级模型 Assistant | 重度 AI 与隐私需求用户 |\n\n## 值不值得用？\nKagi 最打动人的是“干净”和“可控”：没有广告噪音，结果可以按你的偏好调，AI 助手还不卖你的数据。对重视隐私、每天大量搜索的人来说，这钱花得值。代价是它要付费，免费额度只够试水；而且它的生态和覆盖率毕竟拼不过谷歌，偶尔查极冷门内容还是得备一个通用引擎。结论：如果你每月搜索量很大、又在意广告追踪，Kagi 值得订阅；如果你只是偶尔搜一下，免费引擎加个广告拦截器也够用。\n\n## 使用建议\n- 先走免费试用，确认自己真的高频使用再订阅，别冲动。\n- 用域名排名把常看的优质站提前，用 Lenses 区分“找讨论”还是“找文档”。\n- AI 问答优先开联网，并看它给的脚注溯源，重要结论自己核对。\n- 配合 Orion 浏览器或扩展，把 Kagi 设成默认搜索，体验最顺。\n\n## 适合谁用？\n- 推荐：研究员、开发者、写作者、隐私敏感型重度搜索用户。\n- 可考虑：小团队（Kagi for Teams）需要私密协作搜索的场景。\n- 不推荐：极少搜索的 casual 用户、不愿为搜索付费的人。",
-  "published": false,
-  "faq": [
-    {
-      "question": "Kagi 免费吗？",
-      "answer": "提供约 100–150 次免费试用搜索；长期使用需订阅，Starter $5/月起。"
-    },
-    {
-      "question": "Kagi 的 AI 助手要另外花钱吗？",
-      "answer": "Assistant 已向各档开放，但顶级模型主要在 Ultimate（$25/月）档；Pro 档可用标准模型。"
-    },
-    {
-      "question": "Kagi 真的更隐私吗？",
-      "answer": "官方称不将查询关联账户、不收集遥测，并用隐私通行协议做匿名认证，数据不被用于广告。"
-    },
-    {
-      "question": "Kagi 和 Google 比有什么优势？",
-      "answer": "无广告、反追踪、可按需定制结果质量，且 AI 助手聚合多模型并带搜索溯源。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "Kagi",
-    "Kagi怎么样",
-    "Kagi免费版",
-    "Kagi使用教程",
-    "Kagi和哪个好"
-  ],
-  "source_urls": [
-    "https://www.kagi.com/",
-    "https://www.artificial-intelligence-wiki.com/ai-tools/ai-search-engines/kagi-ai-search-guide",
-    "https://trividi-digital.com/kagis-ai-search-assistant-gives-you-access-to-all-the-big-models-in-one-place/"
-  ],
-  "confidence": "high",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+    "url": "https://kagi.com",
+    "price": "试用约 100–150 次免费搜索；Starter $5/月、Pro $10/月、Ultimate $25/月（家庭/团队版另计）",
+    "platform": "Web、Orion 浏览器、浏览器扩展（支持 Safari/Chrome/Firefox 扩展）",
+    "pros": [
+        "无广告、无追踪，结果质量高、干扰少，搜索体验干净",
+        "隐私优先：不把查询关联账户、不收集遥测，甚至用隐私通行协议做匿名认证",
+        "Kagi Assistant 聚合多家大模型，回答带搜索溯源脚注，可随时开/关联网",
+        "高度可定制：域名排名、Lenses 过滤、bang 快捷搜索，按自己口味调结果",
+        "生态完整：Translate、News、Summarize、Small Web 等工具均零追踪"
+    ],
+    "cons": [
+        "长期日常使用需付费，免费仅约 100–150 次试用，对 casual 用户门槛高",
+        "生态与知名度仍小于谷歌等巨头，部分小众结果覆盖有限",
+        "高级 AI 模型集中在 Ultimate 档，想要好模型每月成本不低"
+    ],
+    "features": [
+        "无广告搜索：干净结果、强反追踪与可定制排名",
+        "Kagi Assistant：聚合 GPT/Claude/Gemini 等模型，带搜索溯源",
+        "域名排名与 Lenses：提升可信源、按内容类型过滤结果",
+        "Universal Summarizer：一键总结网页、视频、文档",
+        "Kagi Translate：240+ 语言即时翻译，保留语气与语境",
+        "Small Web：精选非商业、真人创作的小众站点"
+    ],
+    "related": [
+        "perplexity",
+        "chatgpt",
+        "devv"
+    ],
+    "content": "## Kagi是什么？\nKagi 是一个“你花钱买、而不是用广告和数据换”的搜索引擎。它的核心理念很简单：免费搜索引擎靠广告和追踪挣钱，所以会想方设法让你多点击；Kagi 靠订阅挣钱，所以只对付费用户负责，给你无广告、反追踪、质量优先的搜索结果。在搜索之外，Kagi 还做了一个叫 Kagi Assistant 的 AI 助手，把 GPT、Claude、Gemini 等多家主流大模型聚到一个私密、带搜索溯源的对话界面里，你可以随时开/关联网，让它基于 Kagi 的搜索结果作答并附上参考链接。对工程师、研究员、写作者这类“住在搜索里”的人，Kagi 更像“专业版搜索”，而不是随便逛逛的工具。\n\n## 核心功能\n1. 无广告搜索：结果干净、反追踪，并支持域名排名等深度定制。\n2. Kagi Assistant：聚合多家大模型，回答带脚注来源，可切换是否联网。\n3. 域名排名与 Lenses：把可信站点提前、把低质站点压后，或按类型（讨论、播客、PDF）过滤。\n4. Universal Summarizer：贴一个链接就能总结网页、视频或文档。\n5. Kagi Translate：240+ 语言即时翻译，尽量保留原文语气与语境。\n\n## 版本/套餐对比\n| 版本 | 价格 | 搜索/AI | 适合人群 |\n| --- | --- | --- | --- |\n| 试用 | 免费约 100–150 次 | 基础 + 基础 AI | 先体验是否适合自己 |\n| Starter | $5/月 | 300 次搜索/月 | 轻度到中度使用者 |\n| Pro | $10/月 | 无限搜索 + 标准模型 | 高频搜索、需要摘要/翻译 |\n| Ultimate | $25/月 | 无限 + 顶级模型 Assistant | 重度 AI 与隐私需求用户 |\n\n## 值不值得用？\nKagi 最打动人的是“干净”和“可控”：没有广告噪音，结果可以按你的偏好调，AI 助手还不卖你的数据。对重视隐私、每天大量搜索的人来说，这钱花得值。代价是它要付费，免费额度只够试水；而且它的生态和覆盖率毕竟拼不过谷歌，偶尔查极冷门内容还是得备一个通用引擎。结论：如果你每月搜索量很大、又在意广告追踪，Kagi 值得订阅；如果你只是偶尔搜一下，免费引擎加个广告拦截器也够用。\n\n## 使用建议\n- 先走免费试用，确认自己真的高频使用再订阅，别冲动。\n- 用域名排名把常看的优质站提前，用 Lenses 区分“找讨论”还是“找文档”。\n- AI 问答优先开联网，并看它给的脚注溯源，重要结论自己核对。\n- 配合 Orion 浏览器或扩展，把 Kagi 设成默认搜索，体验最顺。\n\n## 适合谁用？\n- 推荐：研究员、开发者、写作者、隐私敏感型重度搜索用户。\n- 可考虑：小团队（Kagi for Teams）需要私密协作搜索的场景。\n- 不推荐：极少搜索的 casual 用户、不愿为搜索付费的人。",
+    "published": true,
+    "faq": [
+        {
+            "question": "Kagi 免费吗？",
+            "answer": "提供约 100–150 次免费试用搜索；长期使用需订阅，Starter $5/月起。"
+        },
+        {
+            "question": "Kagi 的 AI 助手要另外花钱吗？",
+            "answer": "Assistant 已向各档开放，但顶级模型主要在 Ultimate（$25/月）档；Pro 档可用标准模型。"
+        },
+        {
+            "question": "Kagi 真的更隐私吗？",
+            "answer": "官方称不将查询关联账户、不收集遥测，并用隐私通行协议做匿名认证，数据不被用于广告。"
+        },
+        {
+            "question": "Kagi 和 Google 比有什么优势？",
+            "answer": "无广告、反追踪、可按需定制结果质量，且 AI 助手聚合多模型并带搜索溯源。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "Kagi",
+        "Kagi怎么样",
+        "Kagi免费版",
+        "Kagi使用教程",
+        "Kagi和哪个好"
+    ],
+    "source_urls": [
+        "https://www.kagi.com/",
+        "https://www.artificial-intelligence-wiki.com/ai-tools/ai-search-engines/kagi-ai-search-guide",
+        "https://trividi-digital.com/kagis-ai-search-assistant-gives-you-access-to-all-the-big-models-in-one-place/"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-08-14",
+    "published_date": "2026-09-06"
 }

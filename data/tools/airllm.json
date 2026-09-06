@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "💾",
   "color": "#8B5CF6",
-  "description": "AirLLM 是一个开源的推理内存优化框架，仓库位于 github.com/lyogavin/airllm，用 Python 实现。它回答了一个很直接的问题：Transformer 各层在推理时是严格串行执行的，那为什么非要把整个模型都塞进显存？做法是逐层把权重从磁盘加载进 GPU、算完即弃，把显存峰值从“整个模型大小”压到“单层最大大小”——于是单张 4GB 显卡就能跑 70B 推理，约 8GB 显存可跑 405B 的 Llama 3.1，甚至能在 3.7GB 下尝试超大 MoE。关键是不靠量化、蒸馏或剪枝，纯推理优化保住精度。",
+  "description": "AirLLM 是一个开源的推理内存优化框架，仓库位于 github.com/lyogavin/airllm，用 Python 实现。它回答了一个很直接的问题：Transformer 各层在推理时是严格串行执行的，那为什么非要把整个模型都塞进显存？做法是逐层把权重从磁盘加载进 GPU、算完即弃，把显存峰值从“整个模型大小”压到“单层最大大小”——于是单张 4GB 显卡就能跑 70B 推理，约 8GB 显存可跑 405B 的 Llama 3.1，甚至能在 3.7GB 下尝试超大 MoE。关键是不靠量化、蒸馏或剪枝，纯推理优化保住精度。最新 v4.0.0（2026-09-05）新增 Streamed LoRA 训练：冻结权重常驻磁盘、适配器放 GPU，Qwen3.8-Flash-Next 可在 6GB（RTX 3060 Ti）显存下、Qwen3.8-27B 在 seq 512 下约 2GB 显存即可训练微调。",
   "category": "AI开发",
   "tags": [
     "本地推理",
@@ -42,7 +42,8 @@
     "保精度：不走量化 / 蒸馏 / 剪枝，模型能力不被压缩",
     "一键使用：pip install airllm，把模型名传给 AutoModel.from_pretrained 即可",
     "可选块级压缩：4bit / 8bit 块级权重压缩能把加载带宽缩到 1/4，换取约 3 倍提速",
-    "支持超大 MoE：如 2.8T 参数的 Kimi K3 在 3.7GB 显存下尝试运行"
+    "支持超大 MoE：如 2.8T 参数的 Kimi K3 在 3.7GB 显存下尝试运行",
+    "Streamed LoRA 训练（v4.0.0 新增）：冻结权重常驻磁盘、适配器放 GPU，Qwen3.8-Flash-Next 在 6GB 显存（RTX 3060 Ti）下即可训练，Qwen3.8-27B 在 seq 512 下约 2GB 显存可训练微调"
   ],
   "related": [
     "vllm",
@@ -80,13 +81,28 @@
     "推理显存优化"
   ],
   "source_urls": [
-    "https://github.com/lyogavin/airllm",
-    "https://vampireachao.github.io/2026/08/02/airllm",
-    "https://gipyeong-lee.github.io/2026/08/03/AirLLM-70B-inference-with-single-4GB-GPU.en",
-    "https://blog.csdn.net/chendongqi2007/article/details/163451033"
+    "https://github.com/lyogavin/airllm/releases/tag/v4.0.0",
+    "https://github.com/lyogavin/airllm"
   ],
   "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14",
-  "published_date": "2026-08-29"
+  "updated_date": "2026-09-06",
+  "published_date": "2026-08-29",
+  "verified_url": "https://github.com/lyogavin/airllm",
+  "verified_publisher": "lyogavin",
+  "verified_what": "开源推理内存优化 + LoRA 训练框架，逐层卸载把显存峰值压到单层大小",
+  "verified_price": "免费开源，无商业套餐",
+  "verified_platform": "Python / Linux（GPU）",
+  "last_verified": "2026-09-06",
+  "verified_features": [
+    "逐层推理卸载：每层按需从磁盘加载执行，显存只装单层",
+    "极低显存门槛：4GB 跑 70B、8GB 跑 405B，无需昂贵显卡",
+    "保精度：不走量化 / 蒸馏 / 剪枝，模型能力不被压缩",
+    "一键使用：pip install airllm，把模型名传给 AutoModel.from_pretrained 即可",
+    "可选块级压缩：4bit / 8bit 块级权重压缩能把加载带宽缩到 1/4，换取约 3 倍提速",
+    "支持超大 MoE：如 2.8T 参数的 Kimi K3 在 3.7GB 显存下尝试运行",
+    "Streamed LoRA 训练（v4.0.0 新增）：冻结权重常驻磁盘、适配器放 GPU，Qwen3.8-Flash-Next 在 6GB 显存（RTX 3060 Ti）下即可训练，Qwen3.8-27B 在 seq 512 下约 2GB 显存可训练微调"
+  ],
+  "verified_description": "AirLLM 是一个开源的推理内存优化框架，仓库位于 github.com/lyogavin/airllm，用 Python 实现。它回答了一个很直接的问题：Transformer 各层在推理时是严格串行执行的，那为什么非要把整个模型都塞进显存？做法是逐层把权重从磁盘加载进 GPU、算完即弃，把显存峰值从“整个模型大小”压到“单层最大大小”——于是单张 4GB 显卡就能跑 70B 推理，约 8GB 显存可跑 405B 的 Llama 3.1，甚至能在 3.7GB 下尝试超大 MoE。关键是不靠量化、蒸馏或剪枝，纯推理优化保住精度。最新 v4.0.0（2026-09-05）新增 Streamed LoRA 训练：冻结权重常驻磁盘、适配器放 GPU，Qwen3.8-Flash-Next 可在 6GB（RTX 3060 Ti）显存下、Qwen3.8-27B 在 seq 512 下约 2GB 显存即可训练微调。",
+  "verify_notes": "GitHub Releases 官方确认 AirLLM v4.0.0 于 2026-09-05 发布：新增 Streamed LoRA 训练，Qwen3.8-Flash-Next 在 6GB 显存（RTX 3060 Ti）下训练、Qwen3.8-27B 在 seq 512 下约 2GB。开源免费无价格变化，scrape_price 不适用（GitHub 无价）。版本型特性新增，长文无过时事实故不重写。"
 }
