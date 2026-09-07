@@ -1,48 +1,47 @@
 {
-  "generated_at": "2026-09-07 07:19",
+  "generated_at": "2026-09-08 07:19",
   "picks": [
     {
-      "slug": "hugging-face",
-      "name": "Hugging Face",
-      "category": "AI开发",
-      "price": "免费版可用；PRO $9/月起",
-      "visits": "8000万+",
-      "rating": "⭐4.7",
-      "score": 76.2,
-      "tags": [
-        "热门",
-        "编辑实测"
-      ],
-      "reason": "访问量领先 · Hugging Face 是全球领先的 AI 社区和开发平台，托管超过200万个模型和50万个数",
-      "date": "2026-04-13"
-    },
-    {
-      "slug": "invideo-ai",
-      "name": "InVideo AI",
-      "category": "AI视频",
-      "price": "免费版 + Plus $25/月起·Max $60/月起",
-      "visits": "850万",
-      "rating": "⭐ 4.5",
-      "score": 74.5,
-      "tags": [
-        "编辑实测"
-      ],
-      "reason": "有深度评测支撑 · InVideo AI 是基于 200+ 图像/视频/音频模型的 AI 视频生成与编辑平台，输入文",
-      "date": "2026-04-30"
-    },
-    {
-      "slug": "mistral-ai",
-      "name": "Mistral AI",
+      "slug": "glm-5-2",
+      "name": "智谱 GLM 5.3",
       "category": "AI对话",
-      "price": "免费API额度+付费计划",
+      "price": "开源 MIT 免费；GLM-5.3-Flash API $0.15/$0.03/$0.50 每百万 token（约 GLM-5.2 的 1/10）",
       "visits": "850万",
       "rating": "⭐ 4.5",
       "score": 74.5,
       "tags": [
         "编辑实测"
       ],
-      "reason": "有深度评测支撑 · Mistral AI是法国领先的人工智能公司，专注于开发开源和商业大语言模型。2026年推出Mi",
-      "date": "2026-06-13"
+      "reason": "有深度评测支撑 · 智谱 GLM 是智谱 AI（Z.ai）的基座大模型家族，当前旗舰 GLM-5.3（2026-08",
+      "date": "2026-07-03"
+    },
+    {
+      "slug": "kling-3-0",
+      "name": "Kling 3.0",
+      "category": "AI视频",
+      "price": "免费版 + 会员¥66/月起（国内）/ Premier $64.99/月起（国际）",
+      "visits": "约500万/月",
+      "rating": "⭐4.7",
+      "score": 74.4,
+      "tags": [
+        "编辑实测"
+      ],
+      "reason": "有深度评测支撑 · 可灵 AI（Kling）是快手推出的 AI 视频生成模型，2026 年升级至 3.0 / 3.0",
+      "date": "2026-05-23"
+    },
+    {
+      "slug": "devin-ai",
+      "name": "Devin AI",
+      "category": "AI编程",
+      "price": "Free $0 / Pro $20/月 / Max $200/月",
+      "visits": "约520万",
+      "rating": "⭐ 4.5",
+      "score": 73.3,
+      "tags": [
+        "编辑实测"
+      ],
+      "reason": "有深度评测支撑 · Cognition Labs 推出的 AI 软件工程师 Devin：可独立完成代码编写、调试、修",
+      "date": "2026-06-18"
     },
     {
       "slug": "whee",
@@ -59,18 +58,18 @@
       "date": "2026-06-23"
     },
     {
-      "slug": "fish-audio",
-      "name": "Fish Audio",
-      "category": "AI音频",
-      "price": "免费版可用；Plus / Pro 付费订阅，具体价格以官网 plan 页面为准",
-      "visits": "约 190 万/月（第三方估算）",
-      "rating": "⭐ 4.6",
-      "score": 71.4,
+      "slug": "rytr",
+      "name": "Rytr",
+      "category": "AI写作",
+      "price": "免费版(1万字符/月) + Unlimited $9/月起",
+      "visits": "约450万月访问量",
+      "rating": "⭐4.2",
+      "score": 71.1,
       "tags": [
-        "新发布"
+        "编辑实测"
       ],
-      "reason": "今日新收录 · Fish Audio 是国内团队打造的 AI 语音合成平台，基于开源的 Fish Speech ",
-      "date": "2026-09-05"
+      "reason": "有深度评测支撑 · AI 写作助手，可快速生成博客、邮件、社媒与广告文案，支持 30+ 语言与 40+ 模板；免费版",
+      "date": "2026-03-22"
     }
   ]
 }
