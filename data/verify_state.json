@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-09-06",
+    "updated": "2026-09-07",
     "total": 674
   },
   "tools": {
@@ -1669,25 +1669,25 @@
     },
     "elai": {
       "name": "Elai",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI视频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "官方定价页渲染确认 Free $0 / Creator $29/mo($23年付) / Team $125/$100，记录价准确。"
     },
     "lalamu": {
       "name": "Lalamu",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI视频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "medium",
+      "notes": "定价页渲染失败；WebSearch 多源(aitechfy/dang/conversiongems)确认 Basic $9.99/Premium $19.99/免费120积分，记录准确。"
     },
     "invideo-ai": {
       "name": "InVideo AI",
@@ -1746,14 +1746,14 @@
     },
     "language-tool": {
       "name": "LanguageTool",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI写作",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "官方定价页确认月付~$24.90/年付~$69.90(等值记录€4.90/€19.90)，结构一致，无实质变化。"
     },
     "prowritingaid": {
       "name": "ProWritingAid",
@@ -1812,14 +1812,14 @@
     },
     "humata-ai": {
       "name": "Humata AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI效率",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "官方定价页确认 Free $0(60页)/Expert $9.99/月/Team $49/用户/月，记录价准确。"
     },
     "julius-ai": {
       "name": "Julius AI",
@@ -1834,25 +1834,25 @@
     },
     "adcreative-ai": {
       "name": "AdCreative AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI设计",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "官方定价页确认 Starter $39/Pro $249 与记录一致（Ultimate $999 未在当前片段显示但未被否定）。"
     },
     "lumen5": {
       "name": "Lumen5",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI视频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "官方定价页确认 Free $0/Basic $19/Starter $59/Pro $149（均年付），与记录完全一致。"
     },
     "predis-ai": {
       "name": "Predis AI",
@@ -1878,25 +1878,25 @@
     },
     "internlm": {
       "name": "书生浦语",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "开源免费商用 + 云端API/企业版按需，官方页含免费信号，无变化。"
     },
     "modelbest": {
       "name": "面壁智能",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "开源模型免费 + 企业方案定制，官方页含定价结构无金额，无变化。"
     },
     "jimeng-ai": {
       "name": "即梦AI",
@@ -1944,14 +1944,14 @@
     },
     "aider": {
       "name": "Aider",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "开源免费(需自备LLM Key)，官方页含免费信号，无变化。"
     },
     "trae": {
       "name": "Trae",
@@ -2054,36 +2054,36 @@
     },
     "buffer-ai": {
       "name": "Buffer AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI效率",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "low",
+      "notes": "抓取命中公司宣传数字($26.4M ARR)非定价页金额，假阳性；记录 Essentials $5/频道为已知准确值，未改。"
     },
     "pencil-ai": {
       "name": "Pencil AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI设计",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "原记录为模糊占位「免费试用 + 付费订阅（价格见官网）」。官方定价页渲染确认：Core $11/月(年付)/$14(月付)，Growth $44/月(年付)/$55(月付)。回填真实价。"
     },
     "smartcat": {
       "name": "Smartcat",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI翻译",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "medium",
+      "notes": "官方页仅显示按词计费($1.20/千词起)及免费试用，未明确确认 $99/月订阅，记录未被否定，未改。"
     },
     "relevance-ai": {
       "name": "Relevance AI",
@@ -2120,36 +2120,36 @@
     },
     "zety-ai": {
       "name": "Zety AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "low",
+      "notes": "官方定价页渲染失败；WebSearch 多源确认现价为 免费(TXT)/试用$1.95/14天后续$25.95/4周/年付$71.40(≈$5.95/月)。记录「Pro $28/月」已过时，但属失败抓取通道，标 low 不自动改，需人工校正。"
     },
     "lingban-ai": {
       "name": "灵办AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "low",
+      "notes": "中文站渲染失败，无公开金额，记录「免费版+付费会员」维持，需人工核实。"
     },
     "quark-ai": {
       "name": "夸克AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI搜索",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "medium",
+      "notes": "免费产品，定价页渲染失败，记录「免费」维持。"
     },
     "tencent-docs-ai": {
       "name": "腾讯文档AI",
@@ -2186,25 +2186,25 @@
     },
     "openhands": {
       "name": "OpenHands",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "low",
+      "notes": "抓取命中融资数字($18.8M)非定价，假阳性；记录「开源免费+云端Pro $20/月」为已知准确值，未改。"
     },
     "cluely": {
       "name": "Cluely",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "原记录为模糊占位「免费试用 + 付费订阅（Freemium）」。官方定价页渲染确认：Free $0，Pro from $11.99/mo。回填真实价。"
     },
     "groq": {
       "name": "Groq",
@@ -2626,14 +2626,14 @@
     },
     "sierra-ghostwriter": {
       "name": "Sierra Ghostwriter",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI智能体",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "多独立源(cloudtalk/coworker/hokai/aivario)确认企业定制按效果计费、年合同~$150K起，记录准确。"
     },
     "cloud-computer-manus": {
       "name": "Cloud Computer Manus",
@@ -2747,14 +2747,14 @@
     },
     "hera-launch": {
       "name": "Hera Launch",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "medium",
+      "notes": "第三方报价不一($15/$29/$39)，无法确定，记录「付费$29/月起」维持未改。"
     },
     "velo-ai": {
       "name": "Velo AI",
@@ -3198,14 +3198,14 @@
     },
     "langgraph": {
       "name": "LangGraph",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI开发",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "开源免费(MIT) + LangGraph Platform 企业云另计，无变化。"
     },
     "metagpt": {
       "name": "MetaGPT",
@@ -3253,14 +3253,14 @@
     },
     "langflow": {
       "name": "Langflow",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI开发",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "开源自托管免费 + Langflow Cloud(Starter~$29/Pro~$99)，无变化。"
     },
     "qwen-agent": {
       "name": "Qwen-Agent",
@@ -3594,25 +3594,25 @@
     },
     "base44": {
       "name": "Base44",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI开发",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "官方定价页确认 Free $0 / Paid from $16/mo(年付)，与记录一致。"
     },
     "uizard": {
       "name": "Uizard",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI设计",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "官方定价页确认 Free $0 / Pro $12/mo(年付) / Business $39/mo，Pro 与记录一致。"
     },
     "visily": {
       "name": "Visily",
@@ -3649,14 +3649,14 @@
     },
     "wix-ai": {
       "name": "Wix AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI设计",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "low",
+      "notes": "抓取命中功能演示($250 pay link)非定价，假阳性；记录「高级版$17/月起」为已知准确值，未改。"
     },
     "designs-ai": {
       "name": "Designs.ai",
@@ -3704,14 +3704,14 @@
     },
     "wujie-ai": {
       "name": "无界AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI绘画",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "medium",
+      "notes": "官方页含定价结构无明确金额（免费+积分/订阅），记录维持。"
     },
     "chuangketie-ai": {
       "name": "创客贴AI",
@@ -3792,36 +3792,36 @@
     },
     "cartesia": {
       "name": "Cartesia",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI音频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "官方定价页确认 Free $0 / Pro $5/mo / Startup $49/mo，Pro 与记录一致。"
     },
     "deepgram": {
       "name": "Deepgram",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI音频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "无头浏览器渲染官方定价页：STT Nova-3 单语当前优惠 $0.0057/分钟(常规$0.0065)、多语 $0.0065/分钟(常规$0.0077)。原记录 $0.0042/分钟已过时(暗涨)。同步修正长文两处价表。"
     },
     "taskade": {
       "name": "Taskade",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI效率",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "官方定价页确认 Free / Pro $10/mo(年付)，与记录一致。"
     },
     "read-ai": {
       "name": "Read AI",
@@ -3858,14 +3858,14 @@
     },
     "intercom-fin": {
       "name": "Intercom Fin",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI行业应用",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "官方(intercom.com/pricing + help)确认 Fin $0.99/成功解决 + Essential 套餐起，记录准确。"
     },
     "ada-ai": {
       "name": "Ada AI",
@@ -3902,14 +3902,14 @@
     },
     "khanmigo": {
       "name": "Khanmigo",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI行业应用",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-06",
+      "verified_at": "2026-09-06",
+      "confidence": "high",
+      "notes": "官方定价页确认 $4/month(学习者)/$44/year，与记录一致。"
     },
     "quizlet-ai": {
       "name": "Quizlet AI",
@@ -6954,9 +6954,9 @@
       "priority": 130,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-06",
+      "verified_at": "2026-09-07",
       "confidence": "high",
-      "notes": "GitHub Releases 官方确认 Reasonix CLI v1.38.0 稳定版于 2026-09-05 发布：独立网络搜索、可靠协议恢复、统一管理页面、富链接菜单、稳定更新重启、模型图像能力覆盖。版本 v1.37.0→v1.38.0。开源免费无价格变化（scrape_price 不适用，GitHub 无价）。长文无过时版本号（仅提 1.0 Go 重写），故不重写长文。"
+      "notes": ""
     },
     "kiro-crew": {
       "name": "Kiro Crew",
@@ -7009,9 +7009,9 @@
       "priority": 60,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-07",
       "confidence": "high",
-      "notes": "GitHub release v0.81.7（Latest，发布标题 GPT-6 Astra default）于 2026-09-04 发布；据发布标题将 GPT-6 Astra 设为默认模型（详细 change notes 未在发布页展开，未编造）。scrape_price success=false（GitHub 无价），开源免费无变化。版本 v0.81.5→v0.81.7。"
+      "notes": ""
     },
     "gstack": {
       "name": "gstack",
@@ -7235,13 +7235,13 @@
     },
     "hf-speech-to-speech": {
       "name": "HuggingFace Speech-to-Speech",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI音频",
       "priority": 30,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
+      "verified_at": "2026-09-07",
+      "confidence": "high",
       "notes": ""
     },
     "voice-pro": {
