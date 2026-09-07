@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "🐋",
   "color": "#4D6BFE",
-  "description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.38.0（2026-09-05）将网络搜索与主对话分离（独立恢复预算、缺来源时清晰报告）、增强协议恢复可靠性（可从有效历史恢复一次、重启保留状态）、并统一桌面管理页面（设置/回收站/自动化合入全窗口页），同时改进富链接菜单、更新重启稳定性与模型图像能力覆盖；1.0 版本用 Go 完全重写，支持 CLI 与桌面端，内置 MCP、Skills 与记忆系统。",
+  "description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.38.1（2026-09-06）恢复了 Ask 提交与恢复流程、隔离过期桌面会话状态、统一 Ask 与决策弹窗，并修复 DeepSeek 周末峰值计费（仅周一至周五生效）；v1.38.0 将网络搜索与主对话分离、增强协议恢复、统一桌面管理页面；1.0 版本用 Go 完全重写，支持 CLI 与桌面端，内置 MCP、Skills 与记忆系统。",
   "category": "AI编程",
   "tags": [
     {
@@ -92,17 +92,17 @@
     "DeepSeek Reasonix免费吗"
   ],
   "source_urls": [
-    "https://github.com/esengine/DeepSeek-Reasonix/releases/tag/v1.38.0",
-    "https://reasonix.io/changelog/v1.38.0/"
+    "https://github.com/esengine/DeepSeek-Reasonix/releases/tag/v1.38.1",
+    "https://reasonix.io/changelog/v1.38.1/"
   ],
   "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-09-06",
+  "updated_date": "2026-09-07",
   "verified_url": "https://github.com/esengine/DeepSeek-Reasonix",
   "verified_publisher": "esengine",
   "verified_what": "GitHub 开源终端编程 Agent，直连 DeepSeek API，围绕 prefix-cache 优化长会话成本",
   "verified_platform": "Terminal, CLI, Desktop (Studio), macOS/Windows/Linux",
-  "last_verified": "2026-09-06",
+  "last_verified": "2026-09-07",
   "verified_features": [
     "DeepSeek 直连：不走通用兼容层，直接对接官方 API，默认走低成本迭代路线",
     "prefix-cache 优化循环：append-only 设计，专为长会话降低重复上下文开销",
@@ -116,8 +116,8 @@
     "可靠协议恢复（v1.38.0）：可恢复的协议错误可从有效历史恢复一次，重启后保留恢复状态并遵守取消操作",
     "统一管理页面（v1.38.0）：设置、回收站与自动化合入全窗口管理页，共享导航与焦点隔离"
   ],
-  "verified_description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.38.0（2026-09-05）将网络搜索与主对话分离（独立恢复预算、缺来源时清晰报告）、增强协议恢复可靠性（可从有效历史恢复一次、重启保留状态）、并统一桌面管理页面（设置/回收站/自动化合入全窗口页），同时改进富链接菜单、更新重启稳定性与模型图像能力覆盖；1.0 版本用 Go 完全重写，支持 CLI 与桌面端，内置 MCP、Skills 与记忆系统。",
-  "verify_notes": "GitHub Releases 官方确认 Reasonix CLI v1.38.0 稳定版于 2026-09-05 发布：独立网络搜索、可靠协议恢复、统一管理页面、富链接菜单、稳定更新重启、模型图像能力覆盖。版本 v1.37.0→v1.38.0。开源免费无价格变化（scrape_price 不适用，GitHub 无价）。长文无过时版本号（仅提 1.0 Go 重写），故不重写长文。",
+  "verified_description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.38.1（2026-09-06）恢复了 Ask 提交与恢复流程、隔离过期桌面会话状态、统一 Ask 与决策弹窗，并修复 DeepSeek 周末峰值计费（仅周一至周五生效）；v1.38.0 将网络搜索与主对话分离、增强协议恢复、统一桌面管理页面；1.0 版本用 Go 完全重写，支持 CLI 与桌面端，内置 MCP、Skills 与记忆系统。",
+  "verify_notes": "",
   "verified_price": "免费开源（MIT 协议）；实际支出为 DeepSeek API 的 token 用量",
   "price_verified": true
 }

@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "🗣️",
   "color": "#FFD21E",
-  "description": "HuggingFace Speech-to-Speech 是 Hugging Face 官方出品的本地语音 Agent 管线，把 VAD（语音活动检测）→ STT（语音转写）→ LLM（大模型应答）→ TTS（语音合成）拆成四个可替换阶段，通过 OpenAI Realtime 兼容的 WebSocket API 暴露服务。整套栈可完全跑在本地，数据不出本机，是构建私有语音 Agent 与客服机器人的理想底座，已在数千台 Reachy Mini 机器人上作为对话后端投产。",
+  "description": "HuggingFace Speech-to-Speech 是 Hugging Face 官方出品的本地语音 Agent 管线，把 VAD（语音活动检测）→ STT（语音转写）→ LLM（大模型应答）→ TTS（语音合成）拆成四个可替换阶段，通过 OpenAI Realtime 兼容的 WebSocket API 暴露服务。首个正式大版本 v1.0.0 带来统一的 Realtime 引擎与显式 serve/talk/local 三条命令、更多语音后端（Qwen3-ASR 识别、OpenAI 兼容 STT/TTS、OmniVoice/Supertonic TTS）、更可靠的实时对话生命周期管理，并刷新 Apple Silicon MLX 默认配置（4-bit Qwen3-4B + 6-bit Qwen3-TTS，默认托管 LLM 为 gpt-5.6-terra）；整套栈可完全跑在本地，数据不出本机，已在数千台 Reachy Mini 机器人上作为对话后端投产。",
   "category": "AI音频",
   "tags": [
     "语音Agent",
@@ -43,7 +43,11 @@
     "OpenAI Realtime 兼容 WebSocket 服务",
     "支持 llama.cpp / vLLM 本地 LLM 后端",
     "默认 Parakeet TDT + Qwen3-TTS 实时路径",
-    "已作为 Reachy Mini 机器人对话后端投产"
+    "已作为 Reachy Mini 机器人对话后端投产",
+    "显式 serve / talk / local 命令（v1.0.0）：分别启动 Realtime 服务、麦克风/扬声器客户端，或单终端同时运行",
+    "更多语音后端（v1.0.0）：Qwen3-ASR 识别、OpenAI 兼容 STT/TTS 端点、OmniVoice 与 Supertonic TTS、实验性 vLLM Realtime 转录",
+    "更可靠的实时对话生命周期（v1.0.0）：有序的文本/音频/工具调用输出、打断响应处理、远程请求取消与会话清理",
+    "Apple Silicon MLX 配置刷新（v1.0.0）：默认 4-bit Qwen3-4B-Instruct + 6-bit Qwen3-TTS，默认托管 LLM 为 gpt-5.6-terra"
   ],
   "related": [
     "elevenlabs",
@@ -81,11 +85,27 @@
     "语音管线"
   ],
   "source_urls": [
-    "https://github.com/huggingface/speech-to-speech/tree/main",
-    "https://ima.qq.com/wiki/?shareId=8e4d900818b7253fc409e0f8d47c9d65724f8c88ec2bbbfd893f9bb5da34755f"
+    "https://github.com/huggingface/speech-to-speech/releases/tag/v1.0.0",
+    "https://github.com/huggingface/speech-to-speech/tree/main"
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14",
-  "published_date": "2026-08-22"
+  "updated_date": "2026-09-07",
+  "published_date": "2026-08-22",
+  "verified_price": "开源免费（Apache-2.0，自托管，需自备算力）",
+  "last_verified": "2026-09-07",
+  "verified_features": [
+    "低延迟语音 Agent 管线：VAD → STT → LLM → TTS",
+    "每个组件可插拔替换",
+    "OpenAI Realtime 兼容 WebSocket 服务",
+    "支持 llama.cpp / vLLM 本地 LLM 后端",
+    "默认 Parakeet TDT + Qwen3-TTS 实时路径",
+    "已作为 Reachy Mini 机器人对话后端投产",
+    "显式 serve / talk / local 命令（v1.0.0）：分别启动 Realtime 服务、麦克风/扬声器客户端，或单终端同时运行",
+    "更多语音后端（v1.0.0）：Qwen3-ASR 识别、OpenAI 兼容 STT/TTS 端点、OmniVoice 与 Supertonic TTS、实验性 vLLM Realtime 转录",
+    "更可靠的实时对话生命周期（v1.0.0）：有序的文本/音频/工具调用输出、打断响应处理、远程请求取消与会话清理",
+    "Apple Silicon MLX 配置刷新（v1.0.0）：默认 4-bit Qwen3-4B-Instruct + 6-bit Qwen3-TTS，默认托管 LLM 为 gpt-5.6-terra"
+  ],
+  "verified_description": "HuggingFace Speech-to-Speech 是 Hugging Face 官方出品的本地语音 Agent 管线，把 VAD（语音活动检测）→ STT（语音转写）→ LLM（大模型应答）→ TTS（语音合成）拆成四个可替换阶段，通过 OpenAI Realtime 兼容的 WebSocket API 暴露服务。首个正式大版本 v1.0.0 带来统一的 Realtime 引擎与显式 serve/talk/local 三条命令、更多语音后端（Qwen3-ASR 识别、OpenAI 兼容 STT/TTS、OmniVoice/Supertonic TTS）、更可靠的实时对话生命周期管理，并刷新 Apple Silicon MLX 默认配置（4-bit Qwen3-4B + 6-bit Qwen3-TTS，默认托管 LLM 为 gpt-5.6-terra）；整套栈可完全跑在本地，数据不出本机，已在数千台 Reachy Mini 机器人上作为对话后端投产。",
+  "verify_notes": ""
 }
