@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-09-07",
+    "updated": "2026-09-08",
     "total": 674
   },
   "tools": {
@@ -2708,9 +2708,9 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-08",
       "confidence": "high",
-      "notes": "GitHub release v0.153.4（Latest）为 0.153 热修复：Astra 进入内置模型选择器并设为默认 + 异步提问引导按工具可用性限定；无功能变更。scrape_price success=false（GitHub 无价，命中通用导航），开源免费无变化。版本 v0.153.2→v0.153.4。"
+      "notes": "GitHub 发布标签检测证实；Pre-release 仅资产清单无 Changelog，仅更新版本号与日期，不编造特性"
     },
     "wonder-ai": {
       "name": "Wonder AI",
@@ -6778,9 +6778,9 @@
       "priority": 80,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-09-08",
       "confidence": "high",
-      "notes": "GitHub 官方发布 v0.21.0（版本号 v2026.8.31），The Pantheon Release，大量用户可见新能力；页面原 updated_date 2026-08-14 已过时。"
+      "notes": "GitHub 发布标签检测证实；官方说明为补丁汇总版，列出概括性改动方向，不编造具体特性"
     },
     "microsoft-agent-framework": {
       "name": "Microsoft Agent Framework",
@@ -6899,9 +6899,9 @@
       "priority": 110,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-09-08",
       "confidence": "high",
-      "notes": "v2.0.1 为稳定版（非 beta），相较 v2.0.0 增加多客户端接入（OpenCode/dsh/Codex CLI/WorkBuddy）、会话内指令、冷启动默认 Agent 等。开源 MIT 自托管免费，无商业定价页，价格字段保持「开源自托管免费」不变。未运行 scrape_price（无定价页可抓取，属开源工具）。其余候选（codex-cli/codex-harness alpha 预发布、deepseek-reasonix/jcode/kiro-crew 第三方或占位、Claude Code v2.1.246 修复类高频迭代、grok/opencode 第三方平台、localbanana 为 NVIDIA 硬件误匹配）均非真实版本变化，按惯例跳过。"
+      "notes": "GitHub 发布标签 + Release Notes 证实；v2.0.2-beta.1 为 Pre-release，列出 MongoDB 后端/企业登录/可观测性等真实新特性"
     },
     "soloop": {
       "name": "Soloop",
@@ -7009,9 +7009,9 @@
       "priority": 60,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-07",
+      "verified_at": "2026-09-08",
       "confidence": "high",
-      "notes": ""
+      "notes": "GitHub 发布标签 + Release Notes 证实；v0.84.0 明确列出 remote login onboarding 改进"
     },
     "gstack": {
       "name": "gstack",
@@ -7394,9 +7394,9 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-05",
+      "verified_at": "2026-09-08",
       "confidence": "high",
-      "notes": "同 codex-cli 仓库；v0.153.4 为 Latest 通道热修复（Astra 默认模型 + 异步提问引导限定）。scrape_price success=false（GitHub 无价），开源免费无变化。版本 v0.153.2→v0.153.4。"
+      "notes": "GitHub 发布标签检测证实（与 codex-cli 同源 openai/codex）；Pre-release 仅资产清单，不编造特性"
     },
     "pptbot": {
       "name": "PPTBot",

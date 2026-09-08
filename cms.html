@@ -126,6 +126,15 @@ footer {
     main { padding: 16px; }
 }
 </style>
+<style id="global-search-style">
+.global-search-bar{background:var(--surface);border-bottom:1px solid var(--border-light);padding:10px 16px;position:sticky;top:108px;z-index:150}
+.global-search-bar .search-box{max-width:640px;margin:0 auto}
+@media (min-width:769px){.global-search-bar{padding:12px 32px}}
+@media (max-width:768px){.global-search-bar{top:98px}}
+</style>
+        <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#00A64F">
+    <link rel="apple-touch-icon" href="/assets/icons/pwa-192.png">
     <link rel="icon" href="/favicon.ico">
 <script>
 var _hmt = _hmt || [];
@@ -136,22 +145,13 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<style id="global-search-style">
-.global-search-bar{background:var(--surface);border-bottom:1px solid var(--border-light);padding:10px 16px;position:sticky;top:108px;z-index:150}
-.global-search-bar .search-box{max-width:640px;margin:0 auto}
-@media (min-width:769px){.global-search-bar{padding:12px 32px}}
-@media (max-width:768px){.global-search-bar{top:98px}}
-</style>
-        <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#00A64F">
-    <link rel="apple-touch-icon" href="/assets/icons/pwa-192.png">
 </head>
 <body>
 
 <header>
     <h1>&#x1f3af; aitoollab.cn</h1>
     <span class="subtitle">AI CMS 控制台</span>
-    <span class="refresh">&#128339; 更新于 2026-09-07 08:15:19 CST</span>
+    <span class="refresh">&#128339; 更新于 2026-09-08 08:09:44 CST</span>
     <nav class="global-nav" aria-label="全局导航">
         <button type="button" class="gn-toggle" aria-expanded="false" aria-controls="gnPanel" onclick="var n=this.closest('.global-nav');n.classList.toggle('gn-open');this.setAttribute('aria-expanded',n.classList.contains('gn-open'));this.textContent=n.classList.contains('gn-open')?'✕ 收起导航':'☰ 全站导航';">☰ 全站导航</button>
         <div class="global-nav-inner" id="gnPanel">
@@ -186,21 +186,21 @@ var _hmt = _hmt || [];
     <div class="card" style="border-top: 3px solid #6c5ce7;">
         <div class="card-icon">&#128736;</div>
         <div class="card-label">已发布工具</div>
-        <div class="card-value">648</div>
-        <span class="card-sub">共 674 个, 26 草稿</span>
+        <div class="card-value">651</div>
+        <span class="card-sub">共 674 个, 23 草稿</span>
     </div>
         
     <div class="card" style="border-top: 3px solid #00b894;">
         <div class="card-icon">&#128221;</div>
         <div class="card-label">文章</div>
-        <div class="card-value">212</div>
+        <div class="card-value">213</div>
         
     </div>
         
     <div class="card" style="border-top: 3px solid #fdcb6e;">
         <div class="card-icon">&#128218;</div>
         <div class="card-label">词典词条</div>
-        <div class="card-value">152</div>
+        <div class="card-value">154</div>
         <span class="card-sub">共 183 个</span>
     </div>
         
@@ -214,8 +214,8 @@ var _hmt = _hmt || [];
     <div class="card" style="border-top: 3px solid #0984e3;">
         <div class="card-icon">&#128240;</div>
         <div class="card-label">快讯天数</div>
-        <div class="card-value">51</div>
-        <span class="card-sub">最新 2026-09-07</span>
+        <div class="card-value">52</div>
+        <span class="card-sub">最新 2026-09-08</span>
     </div>
         
     <div class="card" style="border-top: 3px solid #a29bfe;">
@@ -229,30 +229,30 @@ var _hmt = _hmt || [];
 
 <!-- Pipeline -->
 <section>
-    <h2>&#128340; 今日流水线 (2026-09-07)</h2>
+    <h2>&#128340; 今日流水线 (2026-09-08)</h2>
     <div class="pipeline">
         
     <div class="pipeline-row pipeline-ok">
-        <span class="pipeline-time">07:25</span>
+        <span class="pipeline-time">07:24</span>
         <span class="pipeline-task">SEO 文章</span>
-        <span class="pipeline-title">垂直大模型开源潮来了：小米表格模型、阿里自动驾驶、微软语音模型，大厂为什么都在把 AI 塞进具体场景</span>
+        <span class="pipeline-title">递归自我改进来了：OpenAI 首次公开 RSI 进展，首席科学家警告超级智能失控</span>
         <span class="pipeline-detail">生成1篇文章, 自动配图完成</span>
         <span class="pipeline-status">&#9989; 已完成</span>
     </div>
 
     <div class="pipeline-row pipeline-ok">
-        <span class="pipeline-time">08:10</span>
+        <span class="pipeline-time">07:53</span>
         <span class="pipeline-task">AI 词典</span>
-        <span class="pipeline-title">3D高斯泼溅（3D Gaussian Splatting）, 图增强检索（GraphRAG）</span>
+        <span class="pipeline-title">组相对策略优化（GRPO）, AI护栏（Guardrails）</span>
         <span class="pipeline-detail">发布2个AI词典词条</span>
         <span class="pipeline-status">&#9989; 已完成</span>
     </div>
 
     <div class="pipeline-row pipeline-ok">
-        <span class="pipeline-time">08:15</span>
+        <span class="pipeline-time">08:09</span>
         <span class="pipeline-task">AI 动态</span>
-        <span class="pipeline-title">AI快讯 09-07</span>
-        <span class="pipeline-detail">采集6条AI行业新闻</span>
+        <span class="pipeline-title">AI快讯 09-08</span>
+        <span class="pipeline-detail">采集7条AI行业新闻</span>
         <span class="pipeline-status">&#9989; 已完成</span>
     </div>
 
@@ -275,6 +275,12 @@ var _hmt = _hmt || [];
             <table>
                 <thead><tr><th>标题</th><th>日期</th><th>描述</th></tr></thead>
                 <tbody>
+    <tr>
+        <td class="td-title" title="递归自我改进来了：OpenAI 首次公开 RSI 进展，首席科学家警告超级智能失控">递归自我改进来了：OpenAI 首次公开 RSI 进展，首席科学家警告超级智能失控</td>
+        <td class="td-date">2026-09-08</td>
+        <td class="td-meta">递归自我改进(RSI)是什么？OpenAI 为何首次公开 RSI 进展、目标 2028 年自动化 AI 研究员？Pach</td>
+    </tr>
+
     <tr>
         <td class="td-title" title="垂直大模型开源潮来了：小米表格模型、阿里自动驾驶、微软语音模型，大厂为什么都在把 AI 塞进具体场景">垂直大模型开源潮来了：小米表格模型、阿里自动驾驶、微软语音模型，大厂为什么都在把 AI 塞进具体场景</td>
         <td class="td-date">2026-09-07</td>
@@ -327,12 +333,6 @@ var _hmt = _hmt || [];
         <td class="td-title" title="2026年9月AI工具市场全景：674款工具数据揭示的最新趋势">2026年9月AI工具市场全景：674款工具数据揭示的最新趋势</td>
         <td class="td-date">2026-09-01</td>
         <td class="td-meta">基于 aitoollab.cn 收录的 674 款 AI 工具真实数据，揭示 2026年9月 AI 工具市场的最新趋势。</td>
-    </tr>
-
-    <tr>
-        <td class="td-title" title="AI智能体自主支付来了：x402、AP2与Agent Commerce协议全解析（2026）">AI智能体自主支付来了：x402、AP2与Agent Commerce协议全解析（2026）</td>
-        <td class="td-date">2026-08-31</td>
-        <td class="td-meta">AI智能体终于能自己花钱了：x402、AP2、ACP 三大协议把结算、授权、收银拆成标准层。本文讲清原理与对开发者、商家</td>
     </tr></tbody>
             </table>
         </div>
@@ -418,7 +418,7 @@ var _hmt = _hmt || [];
             <div style="margin-top:6px;">
                 <span>tools.json: 6.3 MB</span><br>
                 <span>articles.json: 2.9 MB</span><br>
-                <span>sitemap.xml: 248.1 KB</span>
+                <span>sitemap.xml: 249.5 KB</span>
             </div>
         </div>
         <div class="health-item">
@@ -446,10 +446,9 @@ var _hmt = _hmt || [];
 </main>
 
 <footer>
-    aitoollab.cn AI CMS &middot; 本地仪表盘 &middot; 数据来源: data/*.json &middot; 2026-09-07 08:15:19 CST
+    aitoollab.cn AI CMS &middot; 本地仪表盘 &middot; 数据来源: data/*.json &middot; 2026-09-08 08:09:44 CST
 </footer>
 
-    <a id="favFab" class="fav-fab" href="/favorites.html" title="我的收藏" aria-label="我的收藏">☆ <b>0</b></a>
     <button id="darkModeToggle" class="dark-toggle-fab" aria-label="切换暗色模式" title="暗色模式">🌙</button>
     <script>
 (function(){
@@ -474,5 +473,6 @@ var _hmt = _hmt || [];
         });
     }
     </script>
+    <a id="favFab" class="fav-fab" href="/favorites.html" title="我的收藏" aria-label="我的收藏">☆ <b>0</b></a>
 </body>
 </html>

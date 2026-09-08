@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "🦀",
   "color": "#CE422B",
-  "description": "jcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目位于 github.com/1jehuang/jcode，采用 MIT 许可证。最新稳定版 v0.83.0（Latest）新增原生 SSH 会话与远程登录：本地 TUI 可经 SSH 连接远程 Jcode server、工作区与 agent 执行留在远端，并能将本地托管的 OpenAI/Claude 登录显式导入受信 SSH 主机、用内置 API-key 登录 Novita；继续以多会话线性扩展与极低资源占用为核心。它定位为「下一代编码智能体 Harness」，位于 Claude、GPT、Codex 等模型与代码仓库之间，用 Rust 把每个会话的内存占用压到极低，支持 TUI、非交互运行、后台 server/client、语义记忆与多 Provider。",
+  "description": "jcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目位于 github.com/1jehuang/jcode，采用 MIT 许可证。最新稳定版 v0.84.0（Latest）优化远程登录引导：连接 SSH 主机前先以明确的「是/否」提问再决定是否导入本地 OpenAI/Claude 登录、远程登录选择器只列出主机实际支持的 Provider 并脱敏展示、修复粘贴输入串入提示词的问题；v0.83.0 已带来原生 SSH 会话与远程登录（本地 TUI 经 SSH 连接远程 Jcode server、工作区与 agent 执行留远端、可导入本地 OpenAI/Claude 登录）。它定位为「下一代编码智能体 Harness」，用 Rust 把每个会话内存占用压到极低，支持 TUI、非交互运行、后台 server/client、语义记忆与 40+ 模型 Provider。",
   "category": "AI编程",
   "tags": [
     "AI编程",
@@ -43,7 +43,8 @@
     "40+ 模型 Provider：OAuth 接入多家模型，按会话配置",
     "终端一体化：TUI、非交互运行、后台 server/client、语音输入与浏览器工具",
     "内置 Mermaid 渲染引擎与侧边信息面板",
-    "原生 SSH 会话与远程登录（v0.83.0）：本地 TUI 经 SSH 连接远程 Jcode server，工作区与 agent 执行留在远端；可将本地托管的 OpenAI/Claude 登录显式导入受信 SSH 主机，并用内置 API-key 登录 Novita"
+    "原生 SSH 会话与远程登录（v0.83.0）：本地 TUI 经 SSH 连接远程 Jcode server，工作区与 agent 执行留远端",
+    "更清晰的远程登录引导（v0.84.0）：SSH 连接前明确确认是否导入本地 OpenAI/Claude 登录，登录选择器只列主机支持的 Provider 并脱敏"
   ],
   "related": [
     "openai",
@@ -81,21 +82,21 @@
     "AI Swarm"
   ],
   "source_urls": [
-    "https://github.com/1jehuang/jcode/releases/tag/v0.83.0"
+    "https://github.com/1jehuang/jcode/releases/tag/v0.84.0"
   ],
   "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-09-07",
+  "updated_date": "2026-09-08",
   "published_date": "2026-08-24",
   "verified_url": "https://github.com/1jehuang/jcode",
   "verified_publisher": "1jehuang（个人开源项目）",
   "verified_what": "用 Rust 编写的开源终端编程 Agent 编排框架（harness），多会话并行内存占用极低",
   "verified_price": "免费开源（MIT），无商业套餐",
   "verified_platform": "CLI / TUI / 后台 server",
-  "last_verified": "2026-09-07",
-  "verified_description": "jcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目位于 github.com/1jehuang/jcode，采用 MIT 许可证。最新稳定版 v0.83.0（Latest）新增原生 SSH 会话与远程登录：本地 TUI 可经 SSH 连接远程 Jcode server、工作区与 agent 执行留在远端，并能将本地托管的 OpenAI/Claude 登录显式导入受信 SSH 主机、用内置 API-key 登录 Novita；继续以多会话线性扩展与极低资源占用为核心。它定位为「下一代编码智能体 Harness」，位于 Claude、GPT、Codex 等模型与代码仓库之间，用 Rust 把每个会话的内存占用压到极低，支持 TUI、非交互运行、后台 server/client、语义记忆与多 Provider。",
+  "last_verified": "2026-09-08",
+  "verified_description": "jcode 是一个用 Rust 编写的开源终端编程 Agent 编排框架（harness），项目位于 github.com/1jehuang/jcode，采用 MIT 许可证。最新稳定版 v0.84.0（Latest）优化远程登录引导：连接 SSH 主机前先以明确的「是/否」提问再决定是否导入本地 OpenAI/Claude 登录、远程登录选择器只列出主机实际支持的 Provider 并脱敏展示、修复粘贴输入串入提示词的问题；v0.83.0 已带来原生 SSH 会话与远程登录（本地 TUI 经 SSH 连接远程 Jcode server、工作区与 agent 执行留远端、可导入本地 OpenAI/Claude 登录）。它定位为「下一代编码智能体 Harness」，用 Rust 把每个会话内存占用压到极低，支持 TUI、非交互运行、后台 server/client、语义记忆与 40+ 模型 Provider。",
   "price_verified": true,
-  "verify_notes": "",
+  "verify_notes": "GitHub 发布标签 + Release Notes 证实；v0.84.0 明确列出 remote login onboarding 改进",
   "verified_features": [
     "多会话 Swarm：同一仓库并行驱动多个 agent 流，无需 git worktree",
     "Rust 原生性能：极低启动延迟与内存占用，适合笔记本与受限环境",
@@ -103,6 +104,7 @@
     "40+ 模型 Provider：OAuth 接入多家模型，按会话配置",
     "终端一体化：TUI、非交互运行、后台 server/client、语音输入与浏览器工具",
     "内置 Mermaid 渲染引擎与侧边信息面板",
-    "原生 SSH 会话与远程登录（v0.83.0）：本地 TUI 经 SSH 连接远程 Jcode server，工作区与 agent 执行留在远端；可将本地托管的 OpenAI/Claude 登录显式导入受信 SSH 主机，并用内置 API-key 登录 Novita"
+    "原生 SSH 会话与远程登录（v0.83.0）：本地 TUI 经 SSH 连接远程 Jcode server，工作区与 agent 执行留远端",
+    "更清晰的远程登录引导（v0.84.0）：SSH 连接前明确确认是否导入本地 OpenAI/Claude 登录，登录选择器只列主机支持的 Provider 并脱敏"
   ]
 }
