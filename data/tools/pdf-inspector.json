@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "📄",
   "color": "#F5650D",
-  "description": "pdf-inspector 是 Firecrawl 团队出品的纯 Rust PDF 智能解析与分类库，定位是 RAG 和 Agent 文档摄取层的前置路由器。它先把 PDF 分成文字型、扫描型、图片型、混合型四类并保留字体坐标，再判断哪些页面真正值得送 OCR，从而把算力花在刀刃上。整个流程不依赖大模型、不调用外部服务，输出 LLM-ready 的 Markdown，性能远超 Python 系方案，曾冲上 GitHub Trending 总榜。",
+  "description": "pdf-inspector 是 Firecrawl 团队出品的纯 Rust PDF 智能解析与分类库，定位是 RAG 和 Agent 文档摄取层的前置路由器。它先把 PDF 分成文字型、扫描型、图片型、混合型四类并保留字体坐标，再判断哪些页面真正值得送 OCR，从而把算力花在刀刃上。整个流程不依赖大模型、不调用外部服务，输出 LLM-ready 的 Markdown，性能远超 Python 系方案，曾冲上 GitHub Trending 总榜。最新版 v1.18.0（2026-09-08 发布）：改进文本几何与上下标处理、修复 PDF 加载、新增旋转文本边界与旋转元数据、嵌入粗体字体元数据恢复、修复经典交叉引用表。",
   "category": "AI效率",
   "tags": [
     "PDF解析",
@@ -47,7 +47,9 @@
     "表格边框+对齐判断，支持脚注与跨页表",
     "智能 OCR 路由，文字页不走 OCR",
     "输出 LLM-ready Markdown / 结构化 JSON",
-    "MIT 开源，提供多语言绑定"
+    "MIT 开源，提供多语言绑定",
+    "文本几何与上下标增强（v1.18.0）：上/下标基线元数据、可见页框相对定位、旋转文本边界与旋转元数据",
+    "PDF 加载与解析修复（v1.18.0）：边界对象流解压、嵌入粗体字体元数据恢复、修复经典交叉引用表"
   ],
   "related": [
     "chatgpt",
@@ -85,11 +87,22 @@
     "RAG 文档摄取"
   ],
   "source_urls": [
-    "https://www.firecrawl.dev/parse",
-    "https://github.com/firecrawl/pdf-inspector",
-    "https://ima.qq.com/wiki/?shareId=ca4d4514f69deb99a2cfb11df8b1bbf1851b1ba81a9dd9751e8b4742ec9b430f"
+    "https://github.com/firecrawl/pdf-inspector/releases/tag/v1.18.0"
   ],
   "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14"
+  "updated_date": "2026-09-09",
+  "last_verified": "2026-09-09",
+  "verified_features": [
+    "PDF 四类智能分类（Text/Scanned/Image/Mixed）",
+    "字体坐标保留与阅读顺序还原",
+    "表格边框+对齐判断，支持脚注与跨页表",
+    "智能 OCR 路由，文字页不走 OCR",
+    "输出 LLM-ready Markdown / 结构化 JSON",
+    "MIT 开源，提供多语言绑定",
+    "文本几何与上下标增强（v1.18.0）：上/下标基线元数据、可见页框相对定位、旋转文本边界与旋转元数据",
+    "PDF 加载与解析修复（v1.18.0）：边界对象流解压、嵌入粗体字体元数据恢复、修复经典交叉引用表"
+  ],
+  "verified_description": "pdf-inspector 是 Firecrawl 团队出品的纯 Rust PDF 智能解析与分类库，定位是 RAG 和 Agent 文档摄取层的前置路由器。它先把 PDF 分成文字型、扫描型、图片型、混合型四类并保留字体坐标，再判断哪些页面真正值得送 OCR，从而把算力花在刀刃上。整个流程不依赖大模型、不调用外部服务，输出 LLM-ready 的 Markdown，性能远超 Python 系方案，曾冲上 GitHub Trending 总榜。最新版 v1.18.0（2026-09-08 发布）：改进文本几何与上下标处理、修复 PDF 加载、新增旋转文本边界与旋转元数据、嵌入粗体字体元数据恢复、修复经典交叉引用表。",
+  "verify_notes": "GitHub 发布标签证实（firecrawl/pdf-inspector v1.18.0，2026-09-08 Latest）；原数据无版本号，补入 v1.18.0 真实更新；价格 MIT 开源免费无变化"
 }

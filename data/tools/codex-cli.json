@@ -5,7 +5,7 @@
   "auto_positioning": true,
   "emoji": "💻",
   "color": "#10A37F",
-  "description": "OpenAI 开源的终端编码 Agent（npm @openai/codex），通过自然语言完成代码编写、调试与重构。ChatGPT Plus $20/月含配额或自带 API Key。持续迭代中，最新 rust 版 v0.154.0-alpha.6（2026-09-07 发布，Pre-release 预发布通道）；该预发布仅提供多平台构建产物，官方未附文字版更新说明，无明确功能变更描述；4M+ 周活开发者，GitHub 75K+ stars，2026 年已新增 IDE 扩展与 Cloud Agent。",
+  "description": "OpenAI 开源的终端编码 Agent（npm @openai/codex），通过自然语言完成代码编写、调试与重构。ChatGPT Plus $20/月含配额或自带 API Key。持续迭代中，最新 rust 版 v0.154.0-alpha.8（2026-09-08 发布，Pre-release 预发布通道）；该预发布仅提供多平台构建产物，官方未附文字版更新说明，无明确功能变更描述；4M+ 周活开发者，GitHub 75K+ stars，2026 年已新增 IDE 扩展与 Cloud Agent。",
   "category": "AI编程",
   "tags": [
     "CLI工具",
@@ -84,7 +84,7 @@
   "verified_what": "OpenAI 开源的终端编码 Agent（npm @openai/codex），用自然语言完成代码编写、调试与重构",
   "verified_price": "开源免费；使用走 ChatGPT Plus($20/月)配额或自带 OpenAI API Key",
   "verified_platform": "CLI / IDE 扩展 / Cloud Agent",
-  "last_verified": "2026-09-08",
+  "last_verified": "2026-09-09",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -95,7 +95,7 @@
     "ChatGPT Cloud Agent（异步后台任务，自动提交 PR）",
     "VS Code / JetBrains IDE 扩展（2026 年新增）"
   ],
-  "verified_description": "OpenAI 开源的终端编码 Agent（npm @openai/codex），通过自然语言完成代码编写、调试与重构。ChatGPT Plus $20/月含配额或自带 API Key。持续迭代中，最新 rust 版 v0.154.0-alpha.6（2026-09-07 发布，Pre-release 预发布通道）；该预发布仅提供多平台构建产物，官方未附文字版更新说明，无明确功能变更描述；4M+ 周活开发者，GitHub 75K+ stars，2026 年已新增 IDE 扩展与 Cloud Agent。",
+  "verified_description": "OpenAI 开源的终端编码 Agent（npm @openai/codex），通过自然语言完成代码编写、调试与重构。ChatGPT Plus $20/月含配额或自带 API Key。持续迭代中，最新 rust 版 v0.154.0-alpha.8（2026-09-08 发布，Pre-release 预发布通道）；该预发布仅提供多平台构建产物，官方未附文字版更新说明，无明确功能变更描述；4M+ 周活开发者，GitHub 75K+ stars，2026 年已新增 IDE 扩展与 Cloud Agent。",
   "content_flags": "1. '免费开源'表述不准确——CLI工具本身开源但不免费使用（需要API费用或ChatGPT订阅）。2. 未提及ChatGPT Plus配额限制（5小时滚动窗口）。3. 未提及2026年新增的IDE扩展和macOS Cloud Agent（现在不是纯CLI工具了）。4. 未提及AGENTS.md、MCP、Rust构建等关键技术细节。5. 'Pro版'和'Enterprise版'的描述不准确——Codex没有独立的Pro/Enterprise版本，而是捆绑在ChatGPT订阅层级中。6. 评分4.6偏高，第三方评分约4.2（aicodereview.cc）到4.5（vibecoding.gallery 8.75/10转换）。",
   "price_verified": true,
   "verified_rating": "⭐ 4.2",
@@ -140,9 +140,9 @@
   ],
   "verified_category": "AI编程",
   "source_urls": [
-    "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.6"
+    "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.8"
   ],
-  "verify_notes": "GitHub 发布标签检测证实；Pre-release 仅资产清单无 Changelog，仅更新版本号与日期，不编造特性",
+  "verify_notes": "GitHub 发布标签检测证实；Pre-release 仅 162 个构建资产、无文字 Changelog，仅更新版本号与日期，不编造特性；价格开源免费无变化",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -153,5 +153,5 @@
     "verdict": "Codex CLI 与 通义灵码、Cline、Lovable 同属AI编程赛道。在性价比上，Codex CLI（Codex CLI开源免费；ChatGPT Plus($20/月)含配额或自带API Key付费）门槛更低；若看重口碑，Lovable（⭐4.9）评分更高；Codex CLI 的优势在于OpenAI开源终端编码Agent（npm @openai/codex），运行在本地终端用自然语言完成代码编写、调试和重，适合看重该特性的用户。",
     "generated": "2026-07-30"
   },
-  "updated_date": "2026-09-08"
+  "updated_date": "2026-09-09"
 }
