@@ -180,8 +180,8 @@
 </style>
 
 <!-- JS defer 加载：tools-data.js，不阻塞渲染 -->
-<script src="/js/tools-data.js?v=1788827500" defer></script>
-<script src="/js/favorites.js?v=1788827500" defer></script>
+<script src="/js/tools-data.js?v=1788911852" defer></script>
+<script src="/js/favorites.js?v=1788911852" defer></script>
 
 <!-- 百度统计（异步加载，不阻塞渲染） -->
 <script>
@@ -365,17 +365,31 @@ var _hmt = _hmt || [];
                         <div class="tab-panel" id="panel-dict">
                             <div class="dict-cards">
                                 <!-- DICT_CARDS_START -->
+                                <a class="dict-card-item" href="/dict/human-in-the-loop/">
+                                    <div class="dict-card-icon">🔄<span class="dict-card-date">09/09</span></div>
+                                    <div class="dict-card-body">
+                                        <h4>人在回路（Human-in-the-loop） <span class="badge-new">NEW</span></h4>
+                                        <p>在AI自动处理流程中保留人类审核、决策环节的设计模式，兼顾效率与可靠性，常用于医疗、金融等高风险场景。</p>
+                                    </div>
+                                </a>
+                                <a class="dict-card-item" href="/dict/hybrid-search/">
+                                    <div class="dict-card-icon">🔎<span class="dict-card-date">09/09</span></div>
+                                    <div class="dict-card-body">
+                                        <h4>混合检索（Hybrid Search） <span class="badge-new">NEW</span></h4>
+                                        <p>在同一搜索系统中同时使用关键词检索与向量语义检索的搜索方式，兼顾精确匹配与语义理解，是RAG系统的常用配置。</p>
+                                    </div>
+                                </a>
                                 <a class="dict-card-item" href="/dict/grpo/">
                                     <div class="dict-card-icon">📊<span class="dict-card-date">09/08</span></div>
                                     <div class="dict-card-body">
-                                        <h4>组相对策略优化（GRPO） <span class="badge-new">NEW</span></h4>
+                                        <h4>组相对策略优化（GRPO） </h4>
                                         <p>让模型针对同一问题生成多份回答，以组内相对优劣作为奖励信号的强化学习算法，是DeepSeek训练推理模型的核心技术。</p>
                                     </div>
                                 </a>
                                 <a class="dict-card-item" href="/dict/guardrails/">
                                     <div class="dict-card-icon">🛡️<span class="dict-card-date">09/08</span></div>
                                     <div class="dict-card-body">
-                                        <h4>AI护栏（Guardrails） <span class="badge-new">NEW</span></h4>
+                                        <h4>AI护栏（Guardrails） </h4>
                                         <p>为AI应用设置的安全边界和输出控制机制，防止模型生成有害、违规、不准确内容，是企业AI上线前必须考虑的安全层。</p>
                                     </div>
                                 </a>
@@ -435,20 +449,6 @@ var _hmt = _hmt || [];
                                         <p>由AI驱动的虚拟人物形象，能说话、对口型、做动作并实时互动，广泛应用于直播带货、客服、新闻播报与品牌代言。</p>
                                     </div>
                                 </a>
-                                <a class="dict-card-item" href="/dict/data-poisoning/">
-                                    <div class="dict-card-icon">☠️<span class="dict-card-date">09/03</span></div>
-                                    <div class="dict-card-body">
-                                        <h4>数据投毒（Data Poisoning） </h4>
-                                        <p>攻击者通过向训练数据中注入恶意样本，从而污染AI模型行为的安全威胁，可导致模型输出偏见、错误结果或被植入后门。</p>
-                                    </div>
-                                </a>
-                                <a class="dict-card-item" href="/dict/deep-synthesis/">
-                                    <div class="dict-card-icon">🎭<span class="dict-card-date">09/03</span></div>
-                                    <div class="dict-card-body">
-                                        <h4>深度合成（Deep Synthesis） </h4>
-                                        <p>利用深度学习等算法生成、编辑或篡改音视频内容的技术总称，属国内监管用语，涵盖AI换脸、语音合成、文生视频等。</p>
-                                    </div>
-                                </a>
                                 <!-- DICT_CARDS_END -->
                             </div>
                             <a class="dict-view-all" href="/dict/">查看全部 AI 词典 →</a>
@@ -460,32 +460,32 @@ var _hmt = _hmt || [];
                 <section class="home-section picks-section" id="picksSection">
                     <div class="section-header">
                         <h2>今日推荐<span>EDITOR'S PICKS</span></h2>
-                        <span class="picks-date" id="picksDate">09/08 精选</span>
+                        <span class="picks-date" id="picksDate">09/09 精选</span>
                     </div>
                     <div class="picks-grid" id="picksGrid">
 <!-- PICKS_START -->
-<a class="pick-card" href="/tools/glm-5-2/" data-slug="glm-5-2">
-      <img src="/assets/icons/glm-5-2.png" class="pick-logo" alt="智谱 GLM 5.3" loading="lazy" width="48" height="48">
+<a class="pick-card" href="/tools/claude-fable-5/" data-slug="claude-fable-5">
+      <img src="/assets/icons/claude-fable-5.svg" class="pick-logo" alt="Claude Fable 5.1" loading="lazy" width="48" height="48">
       <div class="pick-body">
-        <div class="pick-head"><span class="pick-name">智谱 GLM 5.3</span><span class="pick-tag">编辑实测</span></div>
-        <p class="pick-reason">智谱 GLM 是智谱 AI（Z.ai）的基座大模型家族，当前旗舰 GLM-5.3（2026</p>
-        <div class="pick-meta"><span>AI对话</span><span>开源 MIT 免费；GLM-5.3-Flash API $0.15/$0.03/$0.50 每百万 token（约 GLM-5.2 的 1/10）</span></div>
+        <div class="pick-head"><span class="pick-name">Claude Fable 5.1</span><span class="pick-tag">编辑实测</span></div>
+        <p class="pick-reason">Claude Fable 5.1 是 Anthropic 于 2026 年 9 月 1 日</p>
+        <div class="pick-meta"><span>AI对话</span><span>API $10/百万入·$50/百万出；缓存读取 $0.25/百万(降75%)；含Pro $20/月、Max $100/月</span></div>
       </div>
     </a>
-<a class="pick-card" href="/tools/kling-3-0/" data-slug="kling-3-0">
-      <img src="/assets/icons/kling-3-0.png" class="pick-logo" alt="Kling 3.0" loading="lazy" width="48" height="48">
+<a class="pick-card" href="/tools/wenxin-yige/" data-slug="wenxin-yige">
+      <img src="/assets/icons/wenxin-yige.svg" class="pick-logo" alt="文心一格" loading="lazy" width="48" height="48">
       <div class="pick-body">
-        <div class="pick-head"><span class="pick-name">Kling 3.0</span><span class="pick-tag">编辑实测</span></div>
-        <p class="pick-reason">可灵 AI（Kling）是快手推出的 AI 视频生成模型，2026 年升级至 3.0 /</p>
-        <div class="pick-meta"><span>AI视频</span><span>免费版 + 会员¥66/月起（国内）/ Premier $64.99/月起（国际）</span></div>
+        <div class="pick-head"><span class="pick-name">文心一格</span><span class="pick-tag">编辑实测</span></div>
+        <p class="pick-reason">文心一格是百度基于文心大模型推出的AI艺术与创意辅助平台，用户输入中文描述即可生成油画、水</p>
+        <div class="pick-meta"><span>AI绘画</span><span>免费 + 会员39元/月起</span></div>
       </div>
     </a>
-<a class="pick-card" href="/tools/devin-ai/" data-slug="devin-ai">
-      <img src="/assets/icons/devin-ai.svg" class="pick-logo" alt="Devin AI" loading="lazy" width="48" height="48">
+<a class="pick-card" href="/tools/tabnine/" data-slug="tabnine">
+      <img src="/assets/icons/tabnine.png" class="pick-logo" alt="Tabnine" loading="lazy" width="48" height="48">
       <div class="pick-body">
-        <div class="pick-head"><span class="pick-name">Devin AI</span><span class="pick-tag">编辑实测</span></div>
-        <p class="pick-reason">Cognition Labs 推出的 AI 软件工程师 Devin：可独立完成代码编写、调</p>
-        <div class="pick-meta"><span>AI编程</span><span>Free $0 / Pro $20/月 / Max $200/月</span></div>
+        <div class="pick-head"><span class="pick-name">Tabnine</span><span class="pick-tag">编辑实测</span></div>
+        <p class="pick-reason">Tabnine 是隐私优先的 AI 代码补全与编程助手，支持 80+ 编程语言与主流</p>
+        <div class="pick-meta"><span>AI编程</span><span>免费版可用（基础补全）；Dev $9/月起（年付），$12/月（月付）</span></div>
       </div>
     </a>
 <!-- PICKS_END -->
