@@ -11,7 +11,8 @@ from datetime import datetime
 from build_lib.html_utils import (_collapse_blank_lines, _record_build_error, _emit)
 from build_lib.injectors import (inject_global_nav, inject_site_logo, inject_footer_links, inject_pwa,
                           inject_favicon, inject_hreflang, inject_adsense_meta, inject_baidu_tongji,
-                          inject_fav_fab, inject_rss_link, inject_section_hub, _clean_all_broken_links)
+                          inject_fav_fab, inject_rss_link, inject_section_hub, inject_promo_banner,
+                          _clean_all_broken_links)
 from build_lib.data_loaders import (load_tools, load_articles, get_published_tool_slugs, get_category_slug,
                           load_compare_data, load_quiz_data, load_ranking_data, load_live_data, load_news_archive)
 from build_lib.render_tool import (make_tool_card_html, build_tool_page, ensure_og_image, get_category_stats)
@@ -58,6 +59,9 @@ def _post_process_all():
     _fixed = _clean_all_broken_links()
     if _fixed:
         print(f'[坏链清理] 已修复 {_fixed} 个页面中的坏链')
+
+    # 后处理：全站注入顶部推广横幅条
+    inject_promo_banner()
 
 
 def _build_tool_incremental(tool, published_tools, articles, tools_by_category, no_push=False):

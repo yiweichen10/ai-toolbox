@@ -553,3 +553,67 @@ def inject_section_hub():
     if injected > 0:
         print(f'[Post] Injected section-hub into {injected} exclusive-section pages ({skipped} skipped).')
     return injected
+
+
+PROMO_BANNER_HTML = '''    <!-- 顶部推广横幅条 -->
+    <div class="top-promo-banner">
+        <div class="tpb-inner">
+            <a href="https://teamorouter.cn/?i=bf8975d059" target="_blank" rel="nofollow noopener" class="tpb-link tpb-link-main">
+                <span class="tpb-icon">⚡</span>
+                <span class="tpb-text">一个免费白嫖 GLM 5.3 Flash 牛来 + Codex 的宝藏入口 →</span>
+            </a>
+        </div>
+    </div>'''
+
+PROMO_BANNER_CSS = '''<style id="top-promo-banner-style">
+.top-promo-banner{background:#0a0a0a;color:#fff;padding:8px 16px;font-size:14px;line-height:1.4;position:relative;z-index:200}
+.tpb-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap}
+.tpb-link{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;padding:4px 0;transition:all .15s ease}
+.tpb-link:hover{color:#34d399}
+.tpb-link:hover .tpb-icon{transform:scale(1.1)}
+.tpb-icon{font-size:15px;flex-shrink:0}
+.tpb-text{font-weight:500;letter-spacing:.2px}
+.tpb-link:hover .tpb-text{color:#34d399}
+.tpb-link .tpb-icon,.tpb-link .tpb-text{transition:all .15s ease}
+[data-theme="dark"] .top-promo-banner{background:#111111;border-bottom:1px solid rgba(255,255,255,.08)}
+@media (max-width:640px){.top-promo-banner{padding:7px 12px;font-size:12.5px}.tpb-link{gap:4px}.tpb-icon{font-size:13px}}
+@media (max-width:380px){.top-promo-banner{font-size:11.5px;padding:6px 10px}}
+</style>'''
+
+
+def inject_promo_banner():
+    """后处理：全站注入顶部推广横幅条（首页 + 所有内页）。"""
+    BASE_DIR = _cfg()['BASE_DIR']
+    injected = 0
+    for root, dirs, files in os.walk(BASE_DIR):
+        dirs[:] = [d for d in dirs if d not in ('.git', 'assets', 'images', 'css', 'js', 'ads', 'news', 'backups')]
+        for fname in files:
+            if not fname.endswith('.html'):
+                continue
+            fpath = os.path.join(root, fname)
+            try:
+                with open(fpath, encoding='utf-8') as f:
+                    content = f.read()
+            except Exception:
+                continue
+            # 跳过已注入的页面（幂等）
+            if 'class="top-promo-banner"' in content:
+                continue
+            # 在 <header class="header"> 之前插入横幅
+            if '<header class="header">' in content:
+                banner = PROMO_BANNER_HTML
+                # 首页 body 有 data-page-type="home"，其他页面没有
+                is_home = 'data-page-type="home"' in content
+                content = content.replace('<header class="header">', banner + '\n    <header class="header">', 1)
+                # 注入样式（幂等：已存在则不重复注入）
+                if 'id="top-promo-banner-style"' not in content:
+                    if '</head>' in content:
+                        content = content.replace('</head>', PROMO_BANNER_CSS + '\n</head>', 1)
+                try:
+                    _write_if_changed(fpath, content)
+                    injected += 1
+                except Exception:
+                    pass
+    if injected > 0:
+        print(f'[Post] Injected promo banner into {injected} HTML files.')
+    return injected

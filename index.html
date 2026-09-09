@@ -141,6 +141,82 @@
 .dict-view-all:hover{color:var(--secondary)}
 @media (max-width:640px){.dict-cards{grid-template-columns:1fr;gap:8px}}
 </style>
+<!-- 顶部推广横幅样式 -->
+<style id="top-promo-banner-style">
+.top-promo-banner {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+  z-index: 200;
+}
+.tpb-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.tpb-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  padding: 4px 0;
+  transition: all .15s ease;
+}
+.tpb-link:hover {
+  color: #34d399;
+}
+.tpb-link:hover .tpb-icon {
+  transform: scale(1.1);
+}
+.tpb-icon {
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.tpb-text {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.tpb-link:hover .tpb-text {
+  color: #34d399;
+}
+.tpb-link .tpb-icon,
+.tpb-link .tpb-text {
+  transition: all .15s ease;
+}
+/* 暗色模式适配 */
+[data-theme="dark"] .top-promo-banner {
+  background: #111111;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+/* 移动端响应式 */
+@media (max-width: 640px) {
+  .top-promo-banner {
+    padding: 7px 12px;
+    font-size: 12.5px;
+  }
+  .tpb-link {
+    gap: 4px;
+  }
+  .tpb-icon {
+    font-size: 13px;
+  }
+}
+@media (max-width: 380px) {
+  .top-promo-banner {
+    font-size: 11.5px;
+    padding: 6px 10px;
+  }
+}
+</style>
+
 <style id="home-hot-mini-style">
 #hotGrid {
   display: grid;
@@ -173,100 +249,15 @@
   max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .hot-mini-meta { font-size: 11px; color: var(--text-muted, #64748b); }
-@media (max-width:640px) {
+@media (max-width: 640px) {
   #hotGrid { grid-template-columns: repeat(auto-fill, minmax(98px, 1fr)); gap: 10px 8px; }
   .hot-mini-name { font-size: 12px; }
 }
 </style>
 
-<!-- 顶部推广横幅样式 -->
-<style id="top-promo-banner-style">
-.top-promo-banner {
-  background: #0a0a0a;
-  color: #fff;
-  padding: 8px 16px;
-  font-size: 14px;
-  line-height: 1.4;
-  position: relative;
-  z-index: 200;
-}
-.tpb-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  flex-wrap: wrap;
-}
-.tpb-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  white-space: nowrap;
-}
-.tpb-icon {
-  font-size: 15px;
-  flex-shrink: 0;
-}
-.tpb-text {
-  font-weight: 500;
-  letter-spacing: 0.2px;
-}
-.tpb-sep {
-  color: rgba(255,255,255,0.3);
-  margin: 0 14px;
-  user-select: none;
-}
-.tpb-item:hover .tpb-text {
-  color: #34d399;
-}
-.tpb-item:hover .tpb-icon {
-  transform: scale(1.1);
-}
-.tpb-item .tpb-icon,
-.tpb-item .tpb-text {
-  transition: all .15s ease;
-}
-/* 暗色模式适配 */
-[data-theme="dark"] .top-promo-banner {
-  background: #111111;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-/* 移动端响应式 */
-@media (max-width: 640px) {
-  .top-promo-banner {
-    padding: 7px 12px;
-    font-size: 12.5px;
-  }
-  .tpb-inner {
-    gap: 0;
-  }
-  .tpb-item {
-    gap: 4px;
-  }
-  .tpb-icon {
-    font-size: 13px;
-  }
-  .tpb-sep {
-    margin: 0 8px;
-    font-size: 12px;
-  }
-}
-@media (max-width: 380px) {
-  .top-promo-banner {
-    font-size: 11.5px;
-    padding: 6px 10px;
-  }
-  .tpb-sep {
-    margin: 0 6px;
-  }
-}
-</style>
-
 <!-- JS defer 加载：tools-data.js，不阻塞渲染 -->
-<script src="/js/tools-data.js?v=1788996015" defer></script>
-<script src="/js/favorites.js?v=1788996015" defer></script>
+<script src="/js/tools-data.js?v=1788997969" defer></script>
+<script src="/js/favorites.js?v=1788997969" defer></script>
 
 <!-- 百度统计（异步加载，不阻塞渲染） -->
 <script>
@@ -280,18 +271,13 @@ var _hmt = _hmt || [];
 </script>
 </head>
 <body data-page-type="home">
-    <!-- 顶部推广横幅条（类似 TeamoRouter 黑色横幅） -->
+    <!-- 顶部推广横幅条 -->
     <div class="top-promo-banner">
         <div class="tpb-inner">
-            <div class="tpb-item">
-                <span class="tpb-icon">🔥</span>
-                <span class="tpb-text">DeepSeek V4 上线 · 实测对比</span>
-            </div>
-            <div class="tpb-sep">|</div>
-            <div class="tpb-item">
+            <a href="https://teamorouter.cn/?i=bf8975d059" target="_blank" rel="nofollow noopener" class="tpb-link">
                 <span class="tpb-icon">⚡</span>
-                <span class="tpb-text">GPT-6 Astra 评测 · 低至官方0.8折 →</span>
-            </div>
+                <span class="tpb-text">一个免费白嫖 GLM 5.3 Flash 牛来 + Codex 的宝藏入口 →</span>
+            </a>
         </div>
     </div>
     <header class="header">
@@ -464,17 +450,31 @@ var _hmt = _hmt || [];
                         <div class="tab-panel" id="panel-dict">
                             <div class="dict-cards">
                                 <!-- DICT_CARDS_START -->
+                                <a class="dict-card-item" href="/dict/interpretability/">
+                                    <div class="dict-card-icon">🔍<span class="dict-card-date">09/10</span></div>
+                                    <div class="dict-card-body">
+                                        <h4>AI可解释性（Interpretability） <span class="badge-new">NEW</span></h4>
+                                        <p>研究AI决策过程和内部机制如何被人理解的技术方向，目标是让“黑盒”模型变得透明可信，是AI合规与安全的前提。</p>
+                                    </div>
+                                </a>
+                                <a class="dict-card-item" href="/dict/kv-cache/">
+                                    <div class="dict-card-icon">⚡<span class="dict-card-date">09/10</span></div>
+                                    <div class="dict-card-body">
+                                        <h4>KV缓存（KV Cache） <span class="badge-new">NEW</span></h4>
+                                        <p>大模型推理时缓存已计算过的注意力中间结果，避免重复计算，是让长文本对话和长上下文生成变快、变便宜的关键优化。</p>
+                                    </div>
+                                </a>
                                 <a class="dict-card-item" href="/dict/human-in-the-loop/">
                                     <div class="dict-card-icon">🔄<span class="dict-card-date">09/09</span></div>
                                     <div class="dict-card-body">
-                                        <h4>人在回路（Human-in-the-loop） <span class="badge-new">NEW</span></h4>
+                                        <h4>人在回路（Human-in-the-loop） </h4>
                                         <p>在AI自动处理流程中保留人类审核、决策环节的设计模式，兼顾效率与可靠性，常用于医疗、金融等高风险场景。</p>
                                     </div>
                                 </a>
                                 <a class="dict-card-item" href="/dict/hybrid-search/">
                                     <div class="dict-card-icon">🔎<span class="dict-card-date">09/09</span></div>
                                     <div class="dict-card-body">
-                                        <h4>混合检索（Hybrid Search） <span class="badge-new">NEW</span></h4>
+                                        <h4>混合检索（Hybrid Search） </h4>
                                         <p>在同一搜索系统中同时使用关键词检索与向量语义检索的搜索方式，兼顾精确匹配与语义理解，是RAG系统的常用配置。</p>
                                     </div>
                                 </a>
@@ -532,20 +532,6 @@ var _hmt = _hmt || [];
                                     <div class="dict-card-body">
                                         <h4>扩展思考（Extended Thinking） </h4>
                                         <p>让模型在作答前先进行更长时间的内部推理和自查，从而提升复杂任务正确率的模式，Claude、Gemini等主流模型均支持。</p>
-                                    </div>
-                                </a>
-                                <a class="dict-card-item" href="/dict/dit/">
-                                    <div class="dict-card-icon">🎬<span class="dict-card-date">09/05</span></div>
-                                    <div class="dict-card-body">
-                                        <h4>扩散Transformer（DiT） </h4>
-                                        <p>把扩散模型的去噪骨干从卷积网络换成Transformer的生成架构，2024年后成为文生图、视频生成等领域的技术主流。</p>
-                                    </div>
-                                </a>
-                                <a class="dict-card-item" href="/dict/dpo/">
-                                    <div class="dict-card-icon">👍<span class="dict-card-date">09/05</span></div>
-                                    <div class="dict-card-body">
-                                        <h4>直接偏好优化（DPO） </h4>
-                                        <p>让模型直接学习“哪个回答更好”的偏好数据，无需训练奖励模型和复杂强化学习，比RLHF更简单高效的对齐方法。</p>
                                     </div>
                                 </a>
                                 <!-- DICT_CARDS_END -->
