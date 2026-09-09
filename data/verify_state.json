@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-09-08",
+    "updated": "2026-09-09",
     "total": 674
   },
   "tools": {
@@ -2708,9 +2708,9 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-08",
+      "verified_at": "2026-09-09",
       "confidence": "high",
-      "notes": "GitHub 发布标签检测证实；Pre-release 仅资产清单无 Changelog，仅更新版本号与日期，不编造特性"
+      "notes": "GitHub 发布标签检测证实；Pre-release 仅 162 个构建资产、无文字 Changelog，仅更新版本号与日期，不编造特性；价格开源免费无变化"
     },
     "wonder-ai": {
       "name": "Wonder AI",
@@ -6954,9 +6954,9 @@
       "priority": 130,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-07",
+      "verified_at": "2026-09-09",
       "confidence": "high",
-      "notes": ""
+      "notes": "GitHub 发布标签 + 官方 changelog 证实（esengine/DeepSeek-Reasonix v1.38.2，2026-09-08 稳定版）；补充 v1.38.2 真实新特性，价格开源免费无变化"
     },
     "kiro-crew": {
       "name": "Kiro Crew",
@@ -7279,14 +7279,14 @@
     },
     "pdf-inspector": {
       "name": "pdf-inspector",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI效率",
       "priority": 30,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-09",
+      "confidence": "high",
+      "notes": "GitHub 发布标签证实（firecrawl/pdf-inspector v1.18.0，2026-09-08 Latest）；原数据无版本号，补入 v1.18.0 真实更新；价格 MIT 开源免费无变化"
     },
     "gensyn": {
       "name": "Gensyn",
@@ -7394,9 +7394,9 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-08",
+      "verified_at": "2026-09-09",
       "confidence": "high",
-      "notes": "GitHub 发布标签检测证实（与 codex-cli 同源 openai/codex）；Pre-release 仅资产清单，不编造特性"
+      "notes": "GitHub 发布标签检测证实（与 codex-cli 同源 openai/codex）；Pre-release 仅资产清单，不编造特性；价格开源免费无变化"
     },
     "pptbot": {
       "name": "PPTBot",
