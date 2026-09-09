@@ -173,15 +173,100 @@
   max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .hot-mini-meta { font-size: 11px; color: var(--text-muted, #64748b); }
-@media (max-width: 640px) {
+@media (max-width:640px) {
   #hotGrid { grid-template-columns: repeat(auto-fill, minmax(98px, 1fr)); gap: 10px 8px; }
   .hot-mini-name { font-size: 12px; }
 }
 </style>
 
+<!-- 顶部推广横幅样式 -->
+<style id="top-promo-banner-style">
+.top-promo-banner {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+  z-index: 200;
+}
+.tpb-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.tpb-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.tpb-icon {
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.tpb-text {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.tpb-sep {
+  color: rgba(255,255,255,0.3);
+  margin: 0 14px;
+  user-select: none;
+}
+.tpb-item:hover .tpb-text {
+  color: #34d399;
+}
+.tpb-item:hover .tpb-icon {
+  transform: scale(1.1);
+}
+.tpb-item .tpb-icon,
+.tpb-item .tpb-text {
+  transition: all .15s ease;
+}
+/* 暗色模式适配 */
+[data-theme="dark"] .top-promo-banner {
+  background: #111111;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+/* 移动端响应式 */
+@media (max-width: 640px) {
+  .top-promo-banner {
+    padding: 7px 12px;
+    font-size: 12.5px;
+  }
+  .tpb-inner {
+    gap: 0;
+  }
+  .tpb-item {
+    gap: 4px;
+  }
+  .tpb-icon {
+    font-size: 13px;
+  }
+  .tpb-sep {
+    margin: 0 8px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 380px) {
+  .top-promo-banner {
+    font-size: 11.5px;
+    padding: 6px 10px;
+  }
+  .tpb-sep {
+    margin: 0 6px;
+  }
+}
+</style>
+
 <!-- JS defer 加载：tools-data.js，不阻塞渲染 -->
-<script src="/js/tools-data.js?v=1788913948" defer></script>
-<script src="/js/favorites.js?v=1788913948" defer></script>
+<script src="/js/tools-data.js?v=1788996015" defer></script>
+<script src="/js/favorites.js?v=1788996015" defer></script>
 
 <!-- 百度统计（异步加载，不阻塞渲染） -->
 <script>
@@ -195,6 +280,20 @@ var _hmt = _hmt || [];
 </script>
 </head>
 <body data-page-type="home">
+    <!-- 顶部推广横幅条（类似 TeamoRouter 黑色横幅） -->
+    <div class="top-promo-banner">
+        <div class="tpb-inner">
+            <div class="tpb-item">
+                <span class="tpb-icon">🔥</span>
+                <span class="tpb-text">DeepSeek V4 上线 · 实测对比</span>
+            </div>
+            <div class="tpb-sep">|</div>
+            <div class="tpb-item">
+                <span class="tpb-icon">⚡</span>
+                <span class="tpb-text">GPT-6 Astra 评测 · 低至官方0.8折 →</span>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="header-inner">
             <a href="/" style="text-decoration:none;"><div class="site-logo"><svg class="site-logo-mark" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><rect x="3.4" y="4.2" width="17.2" height="16.4" rx="3.4"/><path d="M12 7.5 Q14.19 10.21 16.9 12.4 Q14.19 14.59 12 17.3 Q9.81 14.59 7.1 12.4 Q9.81 10.21 12 7.5 Z" fill="currentColor" stroke="none"/></svg> AI工具宝箱 <span>每日更新 · 已收录数百款工具</span></div></a>
@@ -313,20 +412,25 @@ var _hmt = _hmt || [];
                         <div class="tab-panel active" id="panel-news">
                             <div class="news-cards">
 <!-- NEWS_CARDS_START -->
+                                <a class="news-card-item" href="/articles/chatgpt-images-2-5-release-2026/">
+                                    <span class="news-card-date">09/10</span>
+                                    <span class="news-card-title">ChatGPT Images 2.5 发布：OpenAI 图像生成进入&quot;精准编辑&quot;时代，每周30亿张图的护城河能守住吗？</span>
+                                    <span class="news-card-tag">AI分析</span>
+                                </a>
                                 <a class="news-card-item" href="/articles/minicpm5-2b-open-source-2026/">
                                     <span class="news-card-date">09/09</span>
                                     <span class="news-card-title">2B 端侧小钢炮开源：面壁 MiniCPM5-2B 登顶全球 4B 以下榜，还把训练配方全公开了</span>
-                                    <span class="news-card-tag">AI分析</span>
-                                </a>
-                                <a class="news-card-item" href="/articles/openai-recursive-self-improvement-rsi-2026/">
-                                    <span class="news-card-date">09/08</span>
-                                    <span class="news-card-title">递归自我改进来了：OpenAI 首次公开 RSI 进展，首席科学家警告超级智能失控</span>
                                     <span class="news-card-tag">AI分析</span>
                                 </a>
                                 <a class="news-card-item news-card-ad" href="/articles/ai-free-tools-china-2026/" style="display:none">
                                     <span class="news-card-date">推广</span>
                                     <span class="news-card-title">2026年免费AI工具大盘点：这12款国产工具零成本上手</span>
                                     <span class="news-card-tag ad-tag">推荐</span>
+                                </a>
+                                <a class="news-card-item" href="/articles/openai-recursive-self-improvement-rsi-2026/">
+                                    <span class="news-card-date">09/08</span>
+                                    <span class="news-card-title">递归自我改进来了：OpenAI 首次公开 RSI 进展，首席科学家警告超级智能失控</span>
+                                    <span class="news-card-tag">AI分析</span>
                                 </a>
                                 <a class="news-card-item" href="/articles/vertical-domain-llm-open-source-wave-2026/">
                                     <span class="news-card-date">09/07</span>
@@ -346,11 +450,6 @@ var _hmt = _hmt || [];
                                 <a class="news-card-item" href="/articles/on-device-llm-million-context-xunfei-spark-x2-5-2026/">
                                     <span class="news-card-date">09/04</span>
                                     <span class="news-card-title">端侧大模型迎来百万上下文：讯飞星火X2.5开源，4B小模型如何干翻云端大模型</span>
-                                    <span class="news-card-tag">AI分析</span>
-                                </a>
-                                <a class="news-card-item" href="/articles/sept-2026-flagship-models-three-way-showdown/">
-                                    <span class="news-card-date">09/03</span>
-                                    <span class="news-card-title">2026年9月旗舰大模型三强对决：Claude Fable 5.1、Gemini 3.8 Flash、Meta Muse Spark 1.3 同维度横评</span>
                                     <span class="news-card-tag">AI分析</span>
                                 </a>
                                 <!-- NEWS_CARDS_END -->
@@ -460,32 +559,32 @@ var _hmt = _hmt || [];
                 <section class="home-section picks-section" id="picksSection">
                     <div class="section-header">
                         <h2>今日推荐<span>EDITOR'S PICKS</span></h2>
-                        <span class="picks-date" id="picksDate">09/09 精选</span>
+                        <span class="picks-date" id="picksDate">09/10 精选</span>
                     </div>
                     <div class="picks-grid" id="picksGrid">
 <!-- PICKS_START -->
-<a class="pick-card" href="/tools/claude-fable-5/" data-slug="claude-fable-5">
-      <img src="/assets/icons/claude-fable-5.svg" class="pick-logo" alt="Claude Fable 5.1" loading="lazy" width="48" height="48">
+<a class="pick-card" href="/tools/gptzero/" data-slug="gptzero">
+      <img src="/assets/icons/gptzero.png" class="pick-logo" alt="GPTZero" loading="lazy" width="48" height="48">
       <div class="pick-body">
-        <div class="pick-head"><span class="pick-name">Claude Fable 5.1</span><span class="pick-tag">编辑实测</span></div>
-        <p class="pick-reason">Claude Fable 5.1 是 Anthropic 于 2026 年 9 月 1 日</p>
-        <div class="pick-meta"><span>AI对话</span><span>API $10/百万入·$50/百万出；缓存读取 $0.25/百万(降75%)；含Pro $20/月、Max $100/月</span></div>
+        <div class="pick-head"><span class="pick-name">GPTZero</span><span class="pick-tag">编辑实测</span></div>
+        <p class="pick-reason">GPTZero 是全球使用量最大的 AI 内容检测工具之一，专门识别</p>
+        <div class="pick-meta"><span>AI检测</span><span>免费+付费（Pro 订阅）</span></div>
       </div>
     </a>
-<a class="pick-card" href="/tools/wenxin-yige/" data-slug="wenxin-yige">
-      <img src="/assets/icons/wenxin-yige.svg" class="pick-logo" alt="文心一格" loading="lazy" width="48" height="48">
+<a class="pick-card" href="/tools/jimeng-ai/" data-slug="jimeng-ai">
+      <img src="/assets/icons/jimeng-ai.svg" class="pick-logo" alt="即梦AI" loading="lazy" width="48" height="48">
       <div class="pick-body">
-        <div class="pick-head"><span class="pick-name">文心一格</span><span class="pick-tag">编辑实测</span></div>
-        <p class="pick-reason">文心一格是百度基于文心大模型推出的AI艺术与创意辅助平台，用户输入中文描述即可生成油画、水</p>
-        <div class="pick-meta"><span>AI绘画</span><span>免费 + 会员39元/月起</span></div>
+        <div class="pick-head"><span class="pick-name">即梦AI</span><span class="pick-tag">编辑实测</span></div>
+        <p class="pick-reason">即梦AI是字节跳动旗下剪映团队推出的生成式AI创作平台，支持文生图、图生图、文生视频与图生</p>
+        <div class="pick-meta"><span>AI绘画</span><span>免费额度 + 会员订阅</span></div>
       </div>
     </a>
-<a class="pick-card" href="/tools/tabnine/" data-slug="tabnine">
-      <img src="/assets/icons/tabnine.png" class="pick-logo" alt="Tabnine" loading="lazy" width="48" height="48">
+<a class="pick-card" href="/tools/tencent-hunyuan/" data-slug="tencent-hunyuan">
+      <img src="/assets/icons/tencent-hunyuan.svg" class="pick-logo" alt="腾讯混元" loading="lazy" width="48" height="48">
       <div class="pick-body">
-        <div class="pick-head"><span class="pick-name">Tabnine</span><span class="pick-tag">编辑实测</span></div>
-        <p class="pick-reason">Tabnine 是隐私优先的 AI 代码补全与编程助手，支持 80+ 编程语言与主流</p>
-        <div class="pick-meta"><span>AI编程</span><span>免费版可用（基础补全）；Dev $9/月起（年付），$12/月（月付）</span></div>
+        <div class="pick-head"><span class="pick-name">腾讯混元</span><span class="pick-tag">编辑实测</span></div>
+        <p class="pick-reason">腾讯混元是腾讯自研大语言模型家族（2026-08-28 开源新一代旗舰 Hy4</p>
+        <div class="pick-meta"><span>AI对话</span><span>个人免费；企业API Hy4 输入¥6/输出¥18/缓存¥0.3、Hy3 输入¥1/输出¥4/缓存¥0.25（每百万token）</span></div>
       </div>
     </a>
 <!-- PICKS_END -->
