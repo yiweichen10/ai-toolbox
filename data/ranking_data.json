@@ -1114,7 +1114,7 @@
         }
       ],
       "total_tools": 674,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -1127,7 +1127,7 @@
       "id": "free",
       "slug": "best-free-ai-tools-ranking-2026",
       "title": "2026年最佳免费AI工具排行榜",
-      "meta_description": "完全免费的AI工具排行榜，165款免费AI工具按综合评分排序。帮你零成本体验最新AI技术。",
+      "meta_description": "完全免费的AI工具排行榜，163款免费AI工具按综合评分排序。帮你零成本体验最新AI技术。",
       "keywords": [
         "免费AI工具",
         "免费AI",
@@ -1751,28 +1751,6 @@
           "rank": 28
         },
         {
-          "slug": "cluely",
-          "name": "Cluely",
-          "emoji": "✨",
-          "color": "#6366F1",
-          "score": 87.6,
-          "scores": {
-            "hot": 33.79768787657147,
-            "quality": 25.799999999999997,
-            "functionality": 18,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "免费试用 + 付费订阅（Freemium）",
-          "badge": {
-            "type": "new",
-            "text": "NEW"
-          },
-          "visits": "85万/月",
-          "rank": 29
-        },
-        {
           "slug": "comfyui",
           "name": "ComfyUI",
           "emoji": "🎨",
@@ -1792,11 +1770,33 @@
             "text": "推荐"
           },
           "visits": "85万",
+          "rank": 29
+        },
+        {
+          "slug": "cosy-voice",
+          "name": "CosyVoice",
+          "emoji": "🎙️",
+          "color": "#FF6B00",
+          "score": 87.5,
+          "scores": {
+            "hot": 32.48412902471531,
+            "quality": 27.0,
+            "functionality": 18,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐4.5",
+          "price": "开源免费；API 按量计费",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "50万",
           "rank": 30
         }
       ],
-      "total_tools": 165,
-      "last_updated": "2026-09-05 08:25",
+      "total_tools": 163,
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "免费工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -2478,7 +2478,7 @@
         }
       ],
       "total_tools": 566,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "性价比评分 = 综合评分/(1+价格系数)，免费工具系数最优",
@@ -2502,6 +2502,72 @@
       "icon": "🚀",
       "ranked_tools": [
         {
+          "slug": "uipath",
+          "name": "UiPath",
+          "emoji": "🤖",
+          "color": "#f47721",
+          "score": 46.6,
+          "scores": {
+            "hot": 0.0,
+            "quality": 27.599999999999998,
+            "functionality": 9,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.6",
+          "price": "社区版免费（最多 3 个 attended 机器人）；Automation Cloud Basic 约 25 美元/月起（欧洲区）；Standard/Enterprise 需联系销售；Attended 机器人约 420 美元/用户/年、Unattended 约 1,680 美元/机器人/年（合作伙伴指导价，非公开牌价）",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "暂无数据",
+          "rank": 1
+        },
+        {
+          "slug": "deepl-write",
+          "name": "DeepL Write",
+          "emoji": "✍️",
+          "color": "#042F5C",
+          "score": 46.0,
+          "scores": {
+            "hot": 0.0,
+            "quality": 27.0,
+            "functionality": 9,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费版可用（未登录单次约 1,500 字符）；付费随 DeepL Pro 订阅：Individual 约 8.74 美元/月（年付）、Team 约 28.74 美元/月（年付）、Business 约 57.49 美元/月（年付）；另有独立 Write 附加组件约 7.49 美元/用户/月",
+          "badge": {
+            "type": "recommend",
+            "text": "推荐"
+          },
+          "visits": "暂无数据",
+          "rank": 2
+        },
+        {
+          "slug": "buildship",
+          "name": "BuildShip",
+          "emoji": "🚀",
+          "color": "#2563EB",
+          "score": 46.0,
+          "scores": {
+            "hot": 0.0,
+            "quality": 27.0,
+            "functionality": 9,
+            "value": 10,
+            "freshness": 8
+          },
+          "rating": "⭐ 4.5",
+          "price": "免费版 $0；Starter $19/月；Pro $59/月；Business $449/月；Enterprise 定制",
+          "badge": {
+            "type": "new",
+            "text": "NEW"
+          },
+          "visits": "暂无数据",
+          "rank": 3
+        },
+        {
           "slug": "baichuan-3",
           "name": "百川3",
           "emoji": "🧠",
@@ -2521,7 +2587,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 1
+          "rank": 4
         },
         {
           "slug": "taskweaver",
@@ -2543,7 +2609,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 2
+          "rank": 5
         },
         {
           "slug": "anyscale",
@@ -2565,7 +2631,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 3
+          "rank": 6
         },
         {
           "slug": "agno",
@@ -2587,7 +2653,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 4
+          "rank": 7
         },
         {
           "slug": "smolagents",
@@ -2609,7 +2675,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 5
+          "rank": 8
         },
         {
           "slug": "figure-ai",
@@ -2631,7 +2697,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 6
+          "rank": 9
         },
         {
           "slug": "magi-2",
@@ -2653,7 +2719,7 @@
             "text": "NEW"
           },
           "visits": "N/A",
-          "rank": 7
+          "rank": 10
         },
         {
           "slug": "gen-4-runway",
@@ -2675,7 +2741,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 8
+          "rank": 11
         },
         {
           "slug": "domika",
@@ -2697,7 +2763,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 9
+          "rank": 12
         },
         {
           "slug": "pptbot",
@@ -2716,7 +2782,7 @@
           "price": "按页计费（具体单价以官网为准），微信支付后异步转换、限时下载",
           "badge": {},
           "visits": "数据未公开",
-          "rank": 10
+          "rank": 13
         },
         {
           "slug": "unitree-h1",
@@ -2738,7 +2804,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 11
+          "rank": 14
         },
         {
           "slug": "deepnote",
@@ -2760,7 +2826,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 12
+          "rank": 15
         },
         {
           "slug": "lindy-ai",
@@ -2782,7 +2848,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 13
+          "rank": 16
         },
         {
           "slug": "outsystems-ai",
@@ -2804,7 +2870,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 14
+          "rank": 17
         },
         {
           "slug": "codex-harness",
@@ -2826,7 +2892,7 @@
             "text": "HOT"
           },
           "visits": "0",
-          "rank": 15
+          "rank": 18
         },
         {
           "slug": "deepseek-dsh",
@@ -2848,7 +2914,7 @@
             "text": "HOT"
           },
           "visits": "0",
-          "rank": 16
+          "rank": 19
         },
         {
           "slug": "kimi-code",
@@ -2870,7 +2936,7 @@
             "text": "HOT"
           },
           "visits": "0",
-          "rank": 17
+          "rank": 20
         },
         {
           "slug": "krotos-studio",
@@ -2892,7 +2958,7 @@
             "text": "推荐"
           },
           "visits": "暂无数据",
-          "rank": 18
+          "rank": 21
         },
         {
           "slug": "alpaca-ai",
@@ -2914,7 +2980,7 @@
             "text": "NEW"
           },
           "visits": "暂无数据",
-          "rank": 19
+          "rank": 22
         },
         {
           "slug": "gensyn",
@@ -2933,7 +2999,7 @@
           "price": "AIGENSYN 代币总量 100 亿枚；计算与数据服务按用量付费，具体费率以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 20
+          "rank": 23
         },
         {
           "slug": "grass",
@@ -2952,7 +3018,7 @@
           "price": "GRASS 代币总量 10 亿枚；共享带宽即可赚取代币，数据购买按量付费，具体以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 21
+          "rank": 24
         },
         {
           "slug": "io-net",
@@ -2971,7 +3037,7 @@
           "price": "IO 代币最大供应量 8 亿枚；GPU 按小时计费，据称比 AWS 等中心化云便宜 50%–70%，具体费率以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 22
+          "rank": 25
         },
         {
           "slug": "near-ai",
@@ -2990,7 +3056,7 @@
           "price": "生态使用 NEAR 代币结算；NEAR AI Cloud 与 GPU 市场按推理用量计费，具体费率以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 23
+          "rank": 26
         },
         {
           "slug": "prime-intellect",
@@ -3009,7 +3075,7 @@
           "price": "按模块化用量计费，覆盖算力、RL 训练、沙箱、评测与推理；具体价格以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 24
+          "rank": 27
         },
         {
           "slug": "sapien",
@@ -3028,7 +3094,7 @@
           "price": "SAPIEN 代币总量 10 亿枚；贡献者质押代币参与标注并获稳定币与代币奖励，企业按需购买数据集，具体以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 25
+          "rank": 28
         },
         {
           "slug": "subquery",
@@ -3047,7 +3113,7 @@
           "price": "SQT 代币；AskSubQuery 提供免费额度，SQT 质押可获每日免费查询额度，超出按量付费，具体以官网为准。",
           "badge": null,
           "visits": "暂无数据",
-          "rank": 26
+          "rank": 29
         },
         {
           "slug": "agentgpt",
@@ -3069,68 +3135,11 @@
             "text": "HOT"
           },
           "visits": "暂无数据",
-          "rank": 27
-        },
-        {
-          "slug": "aixbt",
-          "name": "AIXBT",
-          "emoji": "📊",
-          "color": "#F7931E",
-          "score": 43.0,
-          "scores": {
-            "hot": 0.0,
-            "quality": 24.0,
-            "functionality": 9,
-            "value": 10,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.0",
-          "price": "免费信息流 + 高级订阅",
-          "badge": null,
-          "visits": "N/A",
-          "rank": 28
-        },
-        {
-          "slug": "akash-network",
-          "name": "Akash Network",
-          "emoji": "☁️",
-          "color": "#10A37F",
-          "score": 39.6,
-          "scores": {
-            "hot": 0.0,
-            "quality": 24.599999999999998,
-            "functionality": 9,
-            "value": 6,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.1",
-          "price": "按量付费（AIToken结算，成本低于中心云）",
-          "badge": null,
-          "visits": "N/A",
-          "rank": 29
-        },
-        {
-          "slug": "bittensor",
-          "name": "Bittensor",
-          "emoji": "🧠",
-          "color": "#FF6B35",
-          "score": 40.8,
-          "scores": {
-            "hot": 0.0,
-            "quality": 25.799999999999997,
-            "functionality": 9,
-            "value": 6,
-            "freshness": 8
-          },
-          "rating": "⭐ 4.3",
-          "price": "开源网络（TAO代币激励，仅技术参与）",
-          "badge": null,
-          "visits": "N/A",
           "rank": 30
         }
       ],
       "total_tools": 30,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "按收录时间和近期关注度排序",
@@ -3812,7 +3821,7 @@
         }
       ],
       "total_tools": 44,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI对话工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -4315,7 +4324,7 @@
         }
       ],
       "total_tools": 22,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI写作工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -4997,7 +5006,7 @@
         }
       ],
       "total_tools": 36,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI绘画工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -5682,7 +5691,7 @@
         }
       ],
       "total_tools": 62,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI编程工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -6367,7 +6376,7 @@
         }
       ],
       "total_tools": 46,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI视频工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -6426,7 +6435,7 @@
             "freshness": 8
           },
           "rating": "⭐ 4.7",
-          "price": "免费$200额度；STT按量$0.0042/分钟起",
+          "price": "免费 $200 额度；STT 按量 $0.0057/分钟起（常规 $0.0065/分钟）",
           "badge": {
             "type": "recommend",
             "text": "推荐"
@@ -7046,7 +7055,7 @@
         }
       ],
       "total_tools": 37,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI音频工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -7171,7 +7180,7 @@
             "freshness": 8
           },
           "rating": "⭐ 4.3",
-          "price": "免费试用 + 付费订阅（Freemium）",
+          "price": "免费版 $0；Pro $11.99/月起",
           "badge": {
             "type": "new",
             "text": "NEW"
@@ -7725,7 +7734,7 @@
         }
       ],
       "total_tools": 46,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI办公工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -8312,7 +8321,7 @@
             "freshness": 8
           },
           "rating": "⭐4.3",
-          "price": "免费试用 + 付费订阅（价格见官网）",
+          "price": "免费试用；Core $11/月起；Growth $44/月起",
           "badge": {
             "type": "new",
             "text": "NEW"
@@ -8410,7 +8419,7 @@
         }
       ],
       "total_tools": 37,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI设计工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -8963,7 +8972,7 @@
         }
       ],
       "total_tools": 24,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI搜索工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -9164,7 +9173,7 @@
         }
       ],
       "total_tools": 8,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI翻译工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -9629,7 +9638,7 @@
         }
       ],
       "total_tools": 20,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI自动化工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -10314,7 +10323,7 @@
         }
       ],
       "total_tools": 40,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI效率工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -10999,7 +11008,7 @@
         }
       ],
       "total_tools": 52,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI智能体工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -11684,7 +11693,7 @@
         }
       ],
       "total_tools": 68,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI开发工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -12366,7 +12375,7 @@
         }
       ],
       "total_tools": 42,
-      "last_updated": "2026-09-05 08:25",
+      "last_updated": "2026-09-09 08:03",
       "content": null,
       "methodology": {
         "scoring": "AI行业应用工具综合评分（热度40% + 质量30% + 功能20% + 价值10%）",
@@ -12376,7 +12385,7 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-09-05T08:25:46.449741",
+    "generated_at": "2026-09-09T08:03:49.642283",
     "total_tools": 674,
     "update_frequency": "per-build",
     "methodology": {
