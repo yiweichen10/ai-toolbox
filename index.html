@@ -186,8 +186,8 @@
 </style>
 
 <!-- JS defer 加载：tools-data.js，不阻塞渲染 -->
-<script src="/js/tools-data.js?v=1789011486" defer></script>
-<script src="/js/favorites.js?v=1789011486" defer></script>
+<script src="/js/tools-data.js?v=1789013209" defer></script>
+<script src="/js/favorites.js?v=1789013209" defer></script>
 
 <!-- 百度统计（异步加载，不阻塞渲染） -->
 <script>
@@ -201,7 +201,7 @@ var _hmt = _hmt || [];
 </script>
 <script>try{var t=+localStorage.getItem('tpbClosedAt');if(t&&Date.now()-t<864e5)document.documentElement.classList.add('tpb-remembered-closed')}catch(e){}</script>
 <style id="top-promo-banner-style">
-/* tpb:v2 */
+/* tpb:v3 */
 /* 关闭记忆：渲染前即隐藏，零闪烁 */
 .tpb-remembered-closed .top-promo-banner{display:none!important}
 .top-promo-banner{padding:8px 12px 0;transition:transform .32s ease,opacity .32s ease;will-change:transform}
@@ -234,7 +234,7 @@ var _hmt = _hmt || [];
     <header class="header">
         <div class="header-inner">
             <a href="/" style="text-decoration:none;"><div class="site-logo"><svg class="site-logo-mark" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><rect x="3.4" y="4.2" width="17.2" height="16.4" rx="3.4"/><path d="M12 7.5 Q14.19 10.21 16.9 12.4 Q14.19 14.59 12 17.3 Q9.81 14.59 7.1 12.4 Q9.81 10.21 12 7.5 Z" fill="currentColor" stroke="none"/></svg> AI工具宝箱 <span>每日更新 · 已收录数百款工具</span></div></a>
-        <!-- 顶部推广横幅条 [tpb:v2]（PC端 header 内 logo 右侧，移动端独占一行；文案/链接由 /reco/tpb.json 驱动，后台改完秒级生效） -->
+        <!-- 顶部推广横幅条 [tpb:v3]（PC端 header 内 logo 右侧，移动端独占一行；文案/链接由 /reco/tpb.json 驱动，后台改完秒级生效） -->
         <div class="top-promo-banner" id="topPromoBanner">
             <div class="tpb-inner">
                 <a href="https://teamorouter.cn/?i=bf8975d059" target="_blank" rel="nofollow noopener" class="tpb-link">
@@ -838,8 +838,9 @@ var _hmt = _hmt || [];
     }
     </script>
 <script src="/reco/loader.js" defer></script>
+
 <script>
-/* tpb:v2 */
+/* tpb:v3 */
 (function() {
   // 配置源（2026-09-10）：主路径 /reco/tpb.json —— /ads/ 前缀命中 uBlock/AdGuard 默认规则，
   // 实测线上仅约 30% 请求能到达（/ads/tpb-config.json 440 次 vs 首页 1507 次），
@@ -872,9 +873,13 @@ var _hmt = _hmt || [];
       var key = fingerprint(cfg);
       var closedAt = +readStore('tpbClosedAt') || 0;
       var lastKey = readStore('tpbKey') || '';
+      // 关闭记忆判定（v3，2026-09-10）：
+      //   必须「有关闭时间 + 未过冷却 + 指纹与当前广告完全一致」三者同时成立才继续隐藏。
+      //   旧版关闭记录只有 tpbClosedAt、没有 tpbKey（无法证明用户关的就是当前这条广告）→ 视为过期，
+      //   立即恢复显示；否则老用户升级后会"永远看不到横幅"（实测：旧记录 1h 前关闭 → 一直 none）。
       var remembered = closedAt > 0
         && (Date.now() - closedAt) < hours * 3600000
-        && (!lastKey || lastKey === key);
+        && lastKey === key;
       if (remembered) { b.style.display = 'none'; return; }
       // 记忆过期 / 广告内容已更换：解除 head 阶段预隐藏
       document.documentElement.classList.remove('tpb-remembered-closed');

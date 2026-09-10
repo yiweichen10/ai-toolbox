@@ -384,3 +384,42 @@ js/tools-data.js（首页工具数据，构建时由 build.py 生成）
   方便 AI 问答引用；⑤ FAQ 用用户和 AI 常问的自然问句；⑥ 至少 1 条站内链接，外链一律
   `target="_blank" rel="nofollow noopener"`；⑦ 数据与事实标注官方文档/发布页/新闻链接（EEAT 信号）；
   ⑧ 结构化数据交给模板输出。
+
+## 2026-09-10 顶部广告条（TPB）治理：配置路径 / 缓存 / 关闭冷却（改横幅或 nginx 时注意）
+
+**架构（四件套 + 版本戳）**：`scripts/build_lib/injectors.py::inject_promo_banner` 后处理注入
+① HTML 骨架（header-inner 内 logo 之后）② CSS（pill/full 双形态）③ head 预隐藏脚本（关闭记忆零闪烁）
+④ body 配置脚本（拉配置 → 冷却判定 → 文案/链接覆盖 → 滚动收起 → 关闭写入）。
+四件套标记 = `PROMO_BANNER_MARKERS`，**必须全在才算"已最新"**；缺任一件会剥离后重注入。
+配置源 = `ads/tpb-config.json`（物理文件），线上经 nginx `location = /reco/tpb.json`（alias）暴露。
+
+**三条铁律（每条都是实测踩出来的）**
+1. **配置 URL 禁用 `/ads/` 前缀**。`/ads/` 命中 uBlock/AdGuard 默认规则，实测当日
+   `/ads/tpb-config.json` 440 次 vs 首页 1507 次 = **仅 29% 可达**（`/reco/` 97%）——这是
+   "后台改了文案线上不更新"的主因。CPS 资源同理走 `/reco/`。
+2. **`/reco/` 必须在 sw.js 的 network-only 白名单里**（v6 已加）。否则 Service Worker 可缓存
+   配置 / 离线回退旧配置，后台改完不生效。改 SW 策略要同时 `CACHE_NAME` 升版。
+3. **不要重定义 `.header-inner`**。注入 CSS 曾写成 `.header-inner{…max-width:1200px;margin:0 auto}`，
+   覆盖站点全宽布局 → 1920 视口 logo 实测右移 348px（logo.x=380 / 导航.x=32）。横幅只用
+   `.header-inner .top-promo-banner{margin-left:auto}` 定位；移动端用 `flex-wrap` 让横幅独占一行。
+
+**关闭冷却 = 后台可配 + 内容指纹**：`cooldownHours`（后台 1/2/4/6/12/24，默认 6；0=不记忆）。
+localStorage 记 `tpbClosedAt` + `tpbKey`（文案/链接/形态/冷却的指纹）；**指纹变化 = 新广告，
+立即重新显示**，不受冷却压制。head 预隐藏固定按 24h 兜底（≥ 任何配置值），真实值由 body 脚本判定。
+判定式（v3，2026-09-10）：`closedAt>0 && 未过冷却 && lastKey===key` 三者同时成立才隐藏。
+**没有 `tpbKey` 的旧记录一律视为过期**——旧版关闭按钮只写 `tpbClosedAt`，若把它当成"用户关的就是
+当前广告"继续压制，改版后所有关过的老用户会**永远看不到横幅**（实测：旧记录 1h 前关闭 → 一直 `none`，
+这也是"横幅怎么不显示了"的常见误判来源）。改版本戳时记得同步 HTML/CSS/JS 三处字面量
+（`PROMO_BANNER_MARKERS` 含版本戳本身，任一处不同步会导致每次构建都白重注入）。
+
+**剥离/替换 HTML 片段禁用跨块贪婪正则**：首版用 `…</button>…</div></div>` 剥离旧版横幅，
+实测一路吃到移动端导航按钮、把 header 整段吞掉。改为「坐标定位 + div 配对扫描」(`_scan_div_end`)。
+
+**后台入口**：`start_tpb.bat` → http://127.0.0.1:8898（`tpb_manager.py`，改文案/链接/开关/冷却 +
+实时预览 + 一键部署上线，无需构建）；CMS 控制台（`scripts/gen_cms.py`）快捷操作有按钮；
+`affiliate_manager.py`(8899) 顶栏也有入口。部署走 `scp ads/tpb-config.json`，**不经过 deploy.sh**。
+
+**验收 SOP（改完必跑）**：本地 `python scripts/dev_site_server.py 8090`（已加 `/reco/→ads/` 映射，
+与线上同路径）→ 多视口 1920/1440/1280/768/390 检查 logo 与导航左对齐、横幅独占一行 → 点 × 后刷新
+必须隐藏 → 改配置文案后刷新必须**立即显示新文案**。
+

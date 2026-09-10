@@ -555,18 +555,21 @@ def inject_section_hub():
     return injected
 
 
-PROMO_BANNER_VERSION = 'tpb:v2'   # 片段版本戳：旧版页面被自动剥离并升级为新版（避免"注入后永不升级"）
-# 「已是最新版」的判定标记：四件套必须全在，缺任何一件都视为需要重注入
+PROMO_BANNER_VERSION = 'tpb:v3'   # 片段版本戳：旧版页面被自动剥离并升级为新版（避免"注入后永不升级"）
+# 「已是最新版」的判定标记：必须全在，缺任何一件都视为需要重注入
 # （2026-09-10 踩坑：只看 tpb:v2 戳会误判——HTML/CSS 已带戳但 body JS 未注入，
 #   导致横幅拿到配置却无法绑定关闭按钮，且此后永远跳过注入）
+# 注意：① 必须包含版本戳本身，否则改了 JS 逻辑、版本戳升级后仍会被判为"已最新"而跳过；
+#      ② JS 用专有特征串 'var CONFIG_URLS' 判重，不能用版本戳（HTML/CSS 已带戳）。
 PROMO_BANNER_MARKERS = (
+    PROMO_BANNER_VERSION,              # ⓪ 版本戳（升版即全站重注入）
     'class="top-promo-banner"',        # ① HTML 骨架
     'id="top-promo-banner-style"',     # ② 样式
     'tpbClosedAt',                     # ③ head 预隐藏脚本
     'var CONFIG_URLS',                 # ④ body 配置脚本
 )
 
-PROMO_BANNER_HTML = '''        <!-- 顶部推广横幅条 [tpb:v2]（PC端 header 内 logo 右侧，移动端独占一行；文案/链接由 /reco/tpb.json 驱动，后台改完秒级生效） -->
+PROMO_BANNER_HTML = '''        <!-- 顶部推广横幅条 [tpb:v3]（PC端 header 内 logo 右侧，移动端独占一行；文案/链接由 /reco/tpb.json 驱动，后台改完秒级生效） -->
         <div class="top-promo-banner" id="topPromoBanner">
             <div class="tpb-inner">
                 <a href="https://teamorouter.cn/?i=bf8975d059" target="_blank" rel="nofollow noopener" class="tpb-link">
@@ -583,7 +586,7 @@ PROMO_BANNER_HTML = '''        <!-- 顶部推广横幅条 [tpb:v2]（PC端 heade
 PROMO_BANNER_HEAD_JS = '''<script>try{var t=+localStorage.getItem('tpbClosedAt');if(t&&Date.now()-t<864e5)document.documentElement.classList.add('tpb-remembered-closed')}catch(e){}</script>'''
 
 PROMO_BANNER_JS = '''<script>
-/* tpb:v2 */
+/* tpb:v3 */
 (function() {
   // 配置源（2026-09-10）：主路径 /reco/tpb.json —— /ads/ 前缀命中 uBlock/AdGuard 默认规则，
   // 实测线上仅约 30% 请求能到达（/ads/tpb-config.json 440 次 vs 首页 1507 次），
@@ -616,9 +619,13 @@ PROMO_BANNER_JS = '''<script>
       var key = fingerprint(cfg);
       var closedAt = +readStore('tpbClosedAt') || 0;
       var lastKey = readStore('tpbKey') || '';
+      // 关闭记忆判定（v3，2026-09-10）：
+      //   必须「有关闭时间 + 未过冷却 + 指纹与当前广告完全一致」三者同时成立才继续隐藏。
+      //   旧版关闭记录只有 tpbClosedAt、没有 tpbKey（无法证明用户关的就是当前这条广告）→ 视为过期，
+      //   立即恢复显示；否则老用户升级后会"永远看不到横幅"（实测：旧记录 1h 前关闭 → 一直 none）。
       var remembered = closedAt > 0
         && (Date.now() - closedAt) < hours * 3600000
-        && (!lastKey || lastKey === key);
+        && lastKey === key;
       if (remembered) { b.style.display = 'none'; return; }
       // 记忆过期 / 广告内容已更换：解除 head 阶段预隐藏
       document.documentElement.classList.remove('tpb-remembered-closed');
@@ -652,7 +659,7 @@ PROMO_BANNER_JS = '''<script>
 </script>'''
 
 PROMO_BANNER_CSS = '''<style id="top-promo-banner-style">
-/* tpb:v2 */
+/* tpb:v3 */
 /* 关闭记忆：渲染前即隐藏，零闪烁 */
 .tpb-remembered-closed .top-promo-banner{display:none!important}
 .top-promo-banner{padding:8px 12px 0;transition:transform .32s ease,opacity .32s ease;will-change:transform}
