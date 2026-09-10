@@ -555,7 +555,7 @@ def inject_section_hub():
     return injected
 
 
-PROMO_BANNER_VERSION = 'tpb:v4'   # 片段版本戳：旧版页面被自动剥离并升级为新版（避免"注入后永不升级"）
+PROMO_BANNER_VERSION = 'tpb:v5'   # 片段版本戳：旧版页面被自动剥离并升级为新版（避免"注入后永不升级"）
 # 「已是最新版」的判定标记：必须全在，缺任何一件都视为需要重注入
 # （2026-09-10 踩坑：只看 tpb:v2 戳会误判——HTML/CSS 已带戳但 body JS 未注入，
 #   导致横幅拿到配置却无法绑定关闭按钮，且此后永远跳过注入）
@@ -569,7 +569,7 @@ PROMO_BANNER_MARKERS = (
     'var CONFIG_URLS',                 # ④ body 配置脚本
 )
 
-PROMO_BANNER_HTML = '''        <!-- 顶部推广横幅条 [tpb:v4]（PC端 header 内 logo 右侧，移动端独占一行；文案/链接由 /reco/tpb.json 驱动，后台改完秒级生效） -->
+PROMO_BANNER_HTML = '''        <!-- 顶部推广横幅条 [tpb:v5]（PC端 header 内 logo 右侧，移动端独占一行；文案/链接由 /reco/tpb.json 驱动，后台改完秒级生效） -->
         <div class="top-promo-banner" id="topPromoBanner">
             <div class="tpb-inner">
                 <a href="https://teamorouter.cn/?i=bf8975d059" target="_blank" rel="nofollow noopener" class="tpb-link">
@@ -586,7 +586,7 @@ PROMO_BANNER_HTML = '''        <!-- 顶部推广横幅条 [tpb:v4]（PC端 heade
 PROMO_BANNER_HEAD_JS = '''<script>try{var t=+localStorage.getItem('tpbClosedAt');if(t&&Date.now()-t<864e5)document.documentElement.classList.add('tpb-remembered-closed')}catch(e){}</script>'''
 
 PROMO_BANNER_JS = '''<script>
-/* tpb:v4 */
+/* tpb:v5 */
 (function() {
   // 配置源（2026-09-10）：主路径 /reco/tpb.json —— /ads/ 前缀命中 uBlock/AdGuard 默认规则，
   // 实测线上仅约 30% 请求能到达（/ads/tpb-config.json 440 次 vs 首页 1507 次），
@@ -659,7 +659,7 @@ PROMO_BANNER_JS = '''<script>
 </script>'''
 
 PROMO_BANNER_CSS = '''<style id="top-promo-banner-style">
-/* tpb:v4 */
+/* tpb:v5 */
 /* 关闭记忆：渲染前即隐藏，零闪烁 */
 .tpb-remembered-closed .top-promo-banner{display:none!important}
 .top-promo-banner{padding:8px 12px 0;transition:transform .32s ease,opacity .32s ease;will-change:transform}
@@ -673,7 +673,7 @@ PROMO_BANNER_CSS = '''<style id="top-promo-banner-style">
    否则两端的 space-between 会把横幅推到页面最右侧（2026-09-10 用户反馈"应排在 logo 后面"）。
    同样刻意不重定义 .header-inner —— 旧版覆盖成 max-width:1200px;margin:0 auto 会让宽屏下
    header 整体居中、与下方全宽导航错位，看起来像"logo 右移"（1920 实测偏移 348px，同日修复）。 */
-.header-inner .top-promo-banner{flex:0 1 auto;min-width:0;padding:0;margin-right:auto}
+.header-inner .top-promo-banner{flex:0 1 auto;min-width:0;padding:0;margin-left:12px;margin-right:auto}
 .header-inner .top-promo-banner .tpb-inner{margin:0;max-width:720px}
 .header-inner .site-logo{white-space:nowrap}
 .tpb-link{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;min-width:0}
