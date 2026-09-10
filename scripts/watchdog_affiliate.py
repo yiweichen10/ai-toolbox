@@ -35,18 +35,29 @@ def log(msg):
 
 
 def start_manager():
-    try:
-        # 脱离 Job 对象，避免被 WorkBuddy 等父进程会话一起杀掉
-        flags = subprocess.CREATE_BREAKAWAY_FROM_JOB | subprocess.CREATE_NO_WINDOW
-        subprocess.Popen(
-            [PYTHONW, MANAGER],
-            cwd=os.path.dirname(MANAGER),
-            creationflags=flags,
-            close_fds=True,
-        )
-        log("watchdog: started affiliate_manager")
-    except Exception as e:
-        log(f"watchdog: failed to start affiliate_manager: {e}")
+    """启动管理台。按「breakaway → 无窗口 → 普通」逐级降级。
+
+    2026-09-10 修：原先只试 CREATE_BREAKAWAY_FROM_JOB，在受限的 Job 环境（如被上层沙箱/会话
+    包在 Job 对象里）会直接抛 [WinError 5] 拒绝访问，导致 watchdog 每 60 秒重试一次仍起不来，
+    8899 长期打不开——表现就是"工具管理台怎么没有了"。降级后至少能起来。"""
+    attempts = [
+        (subprocess.CREATE_BREAKAWAY_FROM_JOB | subprocess.CREATE_NO_WINDOW, 'breakaway'),
+        (subprocess.CREATE_NO_WINDOW, 'no-window'),
+        (0, 'plain'),
+    ]
+    for flags, tag in attempts:
+        try:
+            subprocess.Popen(
+                [PYTHONW, MANAGER],
+                cwd=os.path.dirname(MANAGER),
+                creationflags=flags,
+                close_fds=True,
+            )
+            log(f"watchdog: started affiliate_manager ({tag})")
+            return True
+        except OSError as e:
+            log(f"watchdog: start failed ({tag}): {e}")
+    return False
 
 
 def main():

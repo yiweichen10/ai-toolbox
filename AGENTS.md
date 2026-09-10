@@ -400,8 +400,10 @@ js/tools-data.js（首页工具数据，构建时由 build.py 生成）
 2. **`/reco/` 必须在 sw.js 的 network-only 白名单里**（v6 已加）。否则 Service Worker 可缓存
    配置 / 离线回退旧配置，后台改完不生效。改 SW 策略要同时 `CACHE_NAME` 升版。
 3. **不要重定义 `.header-inner`**。注入 CSS 曾写成 `.header-inner{…max-width:1200px;margin:0 auto}`，
-   覆盖站点全宽布局 → 1920 视口 logo 实测右移 348px（logo.x=380 / 导航.x=32）。横幅只用
-   `.header-inner .top-promo-banner{margin-left:auto}` 定位；移动端用 `flex-wrap` 让横幅独占一行。
+   覆盖站点全宽布局 → 1920 视口 logo 实测右移 348px（logo.x=380 / 导航.x=32）。横幅定位只用
+   `.header-inner .top-promo-banner{margin-left:12px;margin-right:auto}` —— `margin-right:auto` 用来抵消
+   站点 `.header-inner` 的 `justify-content:space-between`（否则横幅被推到页面最右端，用户 2026-09-10
+   反馈"应排在 logo 文字后面"）；移动端用 `flex-wrap` 让横幅独占一行。
 
 **关闭冷却 = 后台可配 + 内容指纹**：`cooldownHours`（后台 1/2/4/6/12/24，默认 6；0=不记忆）。
 localStorage 记 `tpbClosedAt` + `tpbKey`（文案/链接/形态/冷却的指纹）；**指纹变化 = 新广告，

@@ -548,6 +548,10 @@ tr:hover { background: #161821; }
 <div class="tabs">
     <button class="tab tab-zh active" data-site="zh" onclick="switchTab(this)">🇨🇳 中文站 <span class="tab-count" id="tab-zh">0</span></button>
     <button class="tab tab-en" data-site="en" onclick="switchTab(this)">🌐 英文站 <span class="tab-count" id="tab-en">0</span></button>
+    <!-- 2026-09-10：顶部广告条管理入口（独立运营台，端口 8898；需先双击 start_tpb.bat 启动） -->
+    <button class="tab" style="margin-left:auto;border-bottom-color:transparent;color:#4ade80"
+            title="顶部广告条（文案/链接/开关/关闭冷却）独立运营台，端口 8898 —— 需先双击 start_tpb.bat 启动"
+            onclick="window.open('http://127.0.0.1:8898','_blank')">🎯 顶部广告条管理</button>
 </div>
 
 <div class="controls">

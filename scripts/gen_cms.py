@@ -439,6 +439,8 @@ footer {{
     <h2>&#9889; 快捷操作</h2>
     <div class="actions-row">
         <button class="btn btn-accent" onclick="location.reload()">&#128260; 刷新数据</button>
+        <button class="btn btn-accent" onclick="window.open('http://127.0.0.1:8898','_blank')">&#127919; 广告条管理台（双击 start_tpb.bat 启动）</button>
+        <button class="btn btn-accent" onclick="window.open('http://127.0.0.1:8899','_blank')">&#128203; 工具管理台（双击 start_affiliate.bat 启动）</button>
         <div class="btn btn-code">&#128295; python scripts/build.py -t all</div>
         <div class="btn btn-code">&#128640; bash deploy.sh</div>
         <div class="btn btn-code">&#128269; python scripts/gen_cms.py</div>

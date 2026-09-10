@@ -476,6 +476,10 @@ git add deploy.sh 2>/dev/null || true
 #   此前均未被 git 跟踪（改动无法回滚，违反"必须能回滚"铁律）；sw.js 因新增 /reco/ 纯网络白名单
 #   也必须入库（SW 缓存旧配置 = "后台改了线上不更新"的老根因之一）。
 git add tpb_manager.py start_tpb.bat ads/tpb-config.json sw.js 2>/dev/null || true
+# 2026-09-10 第二次扩容：运营后台三件套。gen_cms.py（CMS 控制台生成器）、affiliate_manager.py（8899
+#   工具管理台，顶栏加广告条入口）、watchdog_affiliate.py（启动降级修复：breakaway 被 Job 拒时回退
+#   no-window，否则 8899 长期起不来 = 用户以为"后台被删了"）。同属"改动必须能回滚"铁律。
+git add scripts/gen_cms.py affiliate_manager.py scripts/watchdog_affiliate.py 2>/dev/null || true
 if git diff --cached --quiet; then
     echo "  无可提交变更"
 else
