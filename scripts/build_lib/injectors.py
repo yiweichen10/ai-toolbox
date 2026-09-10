@@ -555,7 +555,7 @@ def inject_section_hub():
     return injected
 
 
-PROMO_BANNER_VERSION = 'tpb:v3'   # 片段版本戳：旧版页面被自动剥离并升级为新版（避免"注入后永不升级"）
+PROMO_BANNER_VERSION = 'tpb:v4'   # 片段版本戳：旧版页面被自动剥离并升级为新版（避免"注入后永不升级"）
 # 「已是最新版」的判定标记：必须全在，缺任何一件都视为需要重注入
 # （2026-09-10 踩坑：只看 tpb:v2 戳会误判——HTML/CSS 已带戳但 body JS 未注入，
 #   导致横幅拿到配置却无法绑定关闭按钮，且此后永远跳过注入）
@@ -569,7 +569,7 @@ PROMO_BANNER_MARKERS = (
     'var CONFIG_URLS',                 # ④ body 配置脚本
 )
 
-PROMO_BANNER_HTML = '''        <!-- 顶部推广横幅条 [tpb:v3]（PC端 header 内 logo 右侧，移动端独占一行；文案/链接由 /reco/tpb.json 驱动，后台改完秒级生效） -->
+PROMO_BANNER_HTML = '''        <!-- 顶部推广横幅条 [tpb:v4]（PC端 header 内 logo 右侧，移动端独占一行；文案/链接由 /reco/tpb.json 驱动，后台改完秒级生效） -->
         <div class="top-promo-banner" id="topPromoBanner">
             <div class="tpb-inner">
                 <a href="https://teamorouter.cn/?i=bf8975d059" target="_blank" rel="nofollow noopener" class="tpb-link">
@@ -586,7 +586,7 @@ PROMO_BANNER_HTML = '''        <!-- 顶部推广横幅条 [tpb:v3]（PC端 heade
 PROMO_BANNER_HEAD_JS = '''<script>try{var t=+localStorage.getItem('tpbClosedAt');if(t&&Date.now()-t<864e5)document.documentElement.classList.add('tpb-remembered-closed')}catch(e){}</script>'''
 
 PROMO_BANNER_JS = '''<script>
-/* tpb:v3 */
+/* tpb:v4 */
 (function() {
   // 配置源（2026-09-10）：主路径 /reco/tpb.json —— /ads/ 前缀命中 uBlock/AdGuard 默认规则，
   // 实测线上仅约 30% 请求能到达（/ads/tpb-config.json 440 次 vs 首页 1507 次），
@@ -659,7 +659,7 @@ PROMO_BANNER_JS = '''<script>
 </script>'''
 
 PROMO_BANNER_CSS = '''<style id="top-promo-banner-style">
-/* tpb:v3 */
+/* tpb:v4 */
 /* 关闭记忆：渲染前即隐藏，零闪烁 */
 .tpb-remembered-closed .top-promo-banner{display:none!important}
 .top-promo-banner{padding:8px 12px 0;transition:transform .32s ease,opacity .32s ease;will-change:transform}
@@ -668,12 +668,13 @@ PROMO_BANNER_CSS = '''<style id="top-promo-banner-style">
 /* 全屏通栏形态（tpb-config.json style="full" 时启用） */
 .top-promo-banner.tpb-full{padding:0}
 .top-promo-banner.tpb-full .tpb-inner{max-width:none;border-radius:0;margin:0;padding:8px 16px;box-shadow:none}
-/* PC端：横幅挂在 header-inner 内 logo 右侧。
-   刻意不重定义 .header-inner —— 旧版把它覆盖成 padding:12px 20px + max-width:1200px;margin:0 auto，
-   宽屏（≥1440）下 header 内容被整体居中、与下方全宽导航错位，看起来像"logo 右移"
-   （1920 视口实测 logo x=380 而导航 x=32，右移 348px，2026-09-10 修复）。 */
-.header-inner .top-promo-banner{flex:0 1 auto;min-width:0;padding:0;margin-left:auto}
-.header-inner .top-promo-banner .tpb-inner{max-width:720px;margin:0 0 0 auto}
+/* PC端：横幅紧跟 logo 文字右侧（不贴最右边、也不居中）。
+   margin-right:auto 抵消站点 .header-inner 的 justify-content:space-between，
+   否则两端的 space-between 会把横幅推到页面最右侧（2026-09-10 用户反馈"应排在 logo 后面"）。
+   同样刻意不重定义 .header-inner —— 旧版覆盖成 max-width:1200px;margin:0 auto 会让宽屏下
+   header 整体居中、与下方全宽导航错位，看起来像"logo 右移"（1920 实测偏移 348px，同日修复）。 */
+.header-inner .top-promo-banner{flex:0 1 auto;min-width:0;padding:0;margin-right:auto}
+.header-inner .top-promo-banner .tpb-inner{margin:0;max-width:720px}
 .header-inner .site-logo{white-space:nowrap}
 .tpb-link{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;min-width:0}
 .tpb-icon{font-size:15px;flex-shrink:0;transition:transform .15s ease}
@@ -684,7 +685,7 @@ PROMO_BANNER_CSS = '''<style id="top-promo-banner-style">
 .tpb-close:hover{background:rgba(255,255,255,.3);color:#fff}
 [data-theme="dark"] .tpb-inner{background:linear-gradient(135deg,rgba(0,66,35,.95),rgba(4,108,64,.92) 55%,rgba(13,128,84,.90));box-shadow:0 2px 14px rgba(0,0,0,.35)}
 /* 移动端（对齐站点 768px 断点）：横幅独占一行；同样不覆盖站点 .header-inner 的 padding/布局 */
-@media (max-width:768px){.header-inner{flex-wrap:wrap;row-gap:6px}.header-inner .top-promo-banner{flex:1 1 100%;width:100%;margin-left:0;padding:0}.header-inner .top-promo-banner .tpb-inner{max-width:100%;margin:0}.top-promo-banner{padding:0}.tpb-inner{max-width:100%;padding:6px 8px 6px 12px;gap:6px}.tpb-text{font-size:12.5px}.tpb-icon{font-size:13px}.tpb-close{width:20px;height:20px;font-size:12px}}
+@media (max-width:768px){.header-inner{flex-wrap:wrap;row-gap:6px}.header-inner .top-promo-banner{flex:1 1 100%;width:100%;margin:0;padding:0}.header-inner .top-promo-banner .tpb-inner{max-width:100%;margin:0}.top-promo-banner{padding:0}.tpb-inner{max-width:100%;padding:6px 8px 6px 12px;gap:6px}.tpb-text{font-size:12.5px}.tpb-icon{font-size:13px}.tpb-close{width:20px;height:20px;font-size:12px}}
 @media (max-width:380px){.tpb-text{font-size:11.5px}}
 </style>'''
 

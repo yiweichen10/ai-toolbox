@@ -33,7 +33,7 @@ SSH_KEY = os.path.expanduser('~/.ssh/id_ed25519_aitoollab')
 PORT = 8898
 VALID_STYLES = ('pill', 'full')
 COOLDOWN_DEFAULT = 6          # 关闭横幅后默认冷却小时数（可被 tpb-config.json 的 cooldownHours 覆盖）
-COOLDOWN_CHOICES = (1, 2, 4, 6, 12, 24)
+COOLDOWN_CHOICES = (0, 1, 2, 4, 6, 12, 24)   # 0 = 关闭后立即恢复（等效"一直显示"，用户 2026-09-10 追加）
 
 
 def _parse_hours(v):
@@ -228,7 +228,12 @@ button:disabled{opacity:.45;cursor:not-allowed}
             <h1><span class="dot"></span>顶部推广横幅 · 运营台</h1>
             <div class="sub">aitoollab.cn · ads/tpb-config.json · 全站 fetch no-store 秒级生效，无需构建</div>
         </div>
-        <span id="stateBadge" class="state-badge state-on">显示中</span>
+        <div style="display:flex;align-items:center;gap:10px;flex:none">
+            <span id="stateBadge" class="state-badge state-on">显示中</span>
+            <a href="http://127.0.0.1:8899" target="_blank" rel="noopener"
+               style="font-size:12px;color:#94a3b8;text-decoration:none;border:1px solid #2a3040;border-radius:8px;padding:6px 11px;white-space:nowrap"
+               title="AI工具推广链接管理台（端口 8899，需先双击 start_affiliate.bat）">&#128203; 工具管理台 &rarr;</a>
+        </div>
     </div>
 
     <div class="grid">
@@ -269,7 +274,7 @@ button:disabled{opacity:.45;cursor:not-allowed}
             <div class="field">
                 <label>关闭后多久再显示</label>
                 <select id="fCooldown">__COOLDOWN_OPTIONS__</select>
-                <div class="hint">用户点 × 后的冷却时间（原先硬编码 24 小时）。文案或链接一旦变更，视为新广告，立即重新显示，不受冷却限制。</div>
+                <div class="hint">用户点 × 后的冷却时间。选 <b>0 小时</b> = 关掉后刷新立刻又出现（等效"一直显示"）。文案或链接一旦变更，视为新广告，立即重新显示，不受冷却限制。</div>
             </div>
             <div class="btnrow">
                 <button class="btn-save" id="btnSave" onclick="doSave(false)">💾 保存到本地</button>
@@ -328,8 +333,11 @@ function syncPreview(){
   var note = $('pvNote');
   if (note) {
     var h = Number(state.cooldownHours);
-    note.textContent = '预览为示意：线上横幅随 header 粘顶，滚动 80px 自动收起，回顶恢复；用户点 × 后 '
-      + (h > 0 ? h + ' 小时' : '不再') + '内不再显示（广告词/链接有变更时立即重新显示）。';
+    var cdText = h > 0
+      ? ('用户点 × 后 ' + h + ' 小时内不再显示')
+      : '用户点 × 后立即恢复显示（等效一直显示）';
+    note.textContent = '预览为示意：线上横幅随 header 粘顶（PC 端紧跟 logo 右侧），滚动 80px 自动收起，回顶恢复；'
+      + cdText + '（广告词/链接有变更时立即重新显示）。';
   }
 }
 function syncCount(){ $('textCount').textContent = $('fText').value.length + '/100'; }
@@ -421,7 +429,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
             opts = ''.join(
                 '<option value="%d"%s>%s</option>' % (
                     h, ' selected' if h == COOLDOWN_DEFAULT else '',
-                    ('%d 小时' % h) if h > 0 else '关闭后仅本次会话不再显示')
+                    ('%d 小时' % h) if h > 0 else '0 小时（关闭后立即恢复，等效一直显示）')
                 for h in COOLDOWN_CHOICES)
             body = HTML_TEMPLATE.replace('__COOLDOWN_OPTIONS__', opts).encode('utf-8')
             self.send_response(200)
