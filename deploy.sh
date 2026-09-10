@@ -362,6 +362,46 @@ if [ -d "$LOCAL_DIR/images/infographics" ]; then
     fi
     rm -f "$_srvf" "$_locf" "$_locf.tarlist" 2>/dev/null || true   # ||true: 本地rm被WorkBuddy safe_delete拦截时不致命
 fi
+# OG 分享图 images/og/：增量同步（2026-09-11 立规——此前 deploy.sh 从不同步该目录，
+#   导致新增工具/文章的 og:image 线上全 404、社交分享无图；实测线上 1042 张 vs 本地 1298 张，缺 256 张）。
+#   同 infographics 段：按「缺失 + 大小变化」双条件增量，tar -T 列表避免 Windows xargs 32KB exec 上限。
+echo "  增量同步 images/og/（仅上传新增/变更的 OG 分享图）..."
+if [ -d "$LOCAL_DIR/images/og" ]; then
+    _srvf=$(mktemp); _locf=$(mktemp)
+    ssh $SSH_OPTS "${SERVER_USER}@${SERVER_IP}" "cd ${REMOTE_DIR}/images/og 2>/dev/null && find . -type f -printf '%P %s\n'" 2>/dev/null | sort > "$_srvf"
+    ( cd "$LOCAL_DIR/images/og" && find . -type f -printf '%P %s\n' ) | sort > "$_locf"
+    # comm -3：本地独有 + 大小不一致（大小变化会出两行，sort -u 去重）
+    _diff=$(comm -3 "$_locf" "$_srvf" | awk '{print $1}' | grep -v '^$' | sort -u)
+    _total=$(grep -c . "$_locf" || true)
+    _ndiff=$(printf '%s\n' "$_diff" | grep -c . || true)
+    if [ "$_ndiff" -gt 0 ]; then
+        _ok=0
+        for _try in 1 2; do
+            printf '%s\n' "$_diff" > "$_locf.tarlist"
+            tar cf - -C "$LOCAL_DIR/images/og" -T "$_locf.tarlist" | \
+                ssh $SSH_OPTS "${SERVER_USER}@${SERVER_IP}" "cd ${REMOTE_DIR}/images/og && tar xf - --overwrite"
+            _rc=$?
+            if [ "$_rc" -eq 0 ]; then _ok=1; break; fi
+            echo "  ⚠️ OG 图上传第 ${_try} 次失败(rc=$_rc)，重试..." >&2
+        done
+        _miss=0
+        while IFS= read -r _f; do
+            [ -z "$_f" ] && continue
+            _http=$(curl -s -o /dev/null -w '%{http_code}' "https://www.aitoollab.cn/images/og/$_f")
+            if [ "$_http" != "200" ]; then echo "  ❌ OG 图线上未生效: $_f (HTTP $_http)" >&2; _miss=1; fi
+        done <<< "$_diff"
+        if [ "$_ok" -eq 1 ] && [ "$_miss" -eq 0 ]; then
+            echo "  ✅ images/og/ 增量同步完成：本地共 ${_total} 个文件，本次上传 ${_ndiff} 个（curl 校验通过）"
+        else
+            # 不 rollback：页面本身已部署正常，OG 缺失只影响分享预览，回滚会把好页面一起退回。
+            echo "  ❌ images/og/ 同步失败（不影响页面，但分享图会 404）——请重跑 deploy.sh" >&2
+            exit 1
+        fi
+    else
+        echo "  ✅ images/og/ 无需更新（${_total} 个文件均已存在且大小一致）"
+    fi
+    rm -f "$_srvf" "$_locf" "$_locf.tarlist" 2>/dev/null || true
+fi
 # 首页「AI前沿」板块新闻条目：由 build.py 构建时注入（build_index_page 目录优先读 193 篇，含最新日期）。
 # 2026-08-25 停用 inject_news_cards.py：它基于「index.html 不被构建重建」的旧假设，用**单体 articles.json**
 # 覆盖 build 的正确结果（曾把 08/25 覆盖成 08/24、并扩到 11 条）。build 是唯一写入者，勿再调用。
