@@ -514,6 +514,8 @@ git add data/live_data.json data/ranking_data.json data/subcategories.json data/
 #   add_version_evo.py      = 版本演进对比小节写入（本次修复：去单体化 + --dry-run）
 #   analyze_beacon.py       = CPS beacon 漏斗分析（修 logrotate delaycompress 漏数 + 日期错位）
 git add scripts/verify_tools_batch.py scripts/check_version_drift.py scripts/add_version_evo.py scripts/analyze_beacon.py scripts/review_generator.py scripts/_claude_fable_evo.json scripts/_seedance_evo.json scripts/_patch_fable51_stale.py scripts/_patch_seedance25_stale.py scripts/_version_drift_report.json reports/ 2>/dev/null || true
+# 2026-09-11：工具收录类一次性脚本入库（可回滚 + 留痕：盘古大模型）
+git add scripts/_add_pangu_20260910.py scripts/_fix_pangu_desc_20260911.py 2>/dev/null || true
 # 2026-09-03 修正：内容数据（data/dict_terms/ 等）不进 git，只提交流程系统（脚本/deploy.sh 等）。
 #   deploy.sh 本体纳入白名单，确保本脚本自身改动可回滚（deploy.sh 不在上方白名单内，不显式加入会丢失）。
 #   注：data/tools/ data/articles/ 仍按 2026-08-23 设计提交（内容正本备份），待用户决定是否同样移出 git。

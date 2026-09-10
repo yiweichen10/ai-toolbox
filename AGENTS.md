@@ -425,3 +425,17 @@ localStorage 记 `tpbClosedAt` + `tpbKey`（文案/链接/形态/冷却的指纹
 与线上同路径）→ 多视口 1920/1440/1280/768/390 检查 logo 与导航左对齐、横幅独占一行 → 点 × 后刷新
 必须隐藏 → 改配置文案后刷新必须**立即显示新文案**。
 
+
+## 2026-09-11 deploy.sh 补 images/og 增量同步（新增工具/文章必读）
+
+- **事实（实测）**：`deploy.sh` 此前只同步 `assets/` 与 `images/infographics/`，**从不同步 `images/og/`**。
+  线上 1042 张 vs 本地 1298 张 → **256 张 OG 分享图从未上线**，对应页面 `og:image` 全 404（分享无图、
+  微信/社媒预览为空），且因为不在清单里，每次部署都"成功"、永远不会被发现。
+- **修复**：deploy.sh 内新增 `images/og/` 增量同步段（紧跟 infographics 段），条件 = **缺失 + 大小变化**
+  （`comm -3`，infographics 段只比"缺失"，OG 重生成会改大小故额外覆盖）；上传用 `tar -T` 列表文件
+  （Windows xargs 32KB exec 上限，规则见上文），传后逐项 `curl` 校验 HTTP 200；失败**不 rollback**
+  （页面已正常，回滚会连好页面一起退回）但 `exit 1` 明确报错，不谎报成功。
+- **新增工具/文章的验收清单（缺一不可）**：① `/tools/<slug>/` 或 `/articles/<slug>/` 200；
+  ② `images/og/<slug>-og.png` 200（**OG 不在 deploy 白名单时代遗留最多**）；③ `assets/icons/<slug>.*` 200；
+  ④ 分类页 / 搜索 / sitemap 收录；⑤ title 与首句语义完整（首句被 30 字内截断后不能断在"的"上）。
+- 一次性补齐命令（列缺失清单→tar -T 上传）：`git` 不管、`deploy.sh` 现会自动做，历史缺口已一次性补完（256 张、33M）。
