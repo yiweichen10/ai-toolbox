@@ -134,8 +134,14 @@ if [ -d "$TARGET" ] && [ "$(ls -A $TARGET 2>/dev/null)" ]; then
     echo "BACKUP_OK=$BACKUP_DIR/backup_${TIMESTAMP}.tar.gz"
     echo "  ✅ 备份 → backups/backup_${TIMESTAMP}.tar.gz"
 fi
-# 仅保留最新 5 个备份（防止短时间多次部署把磁盘撑满）；7天前兜底删除
-ls -t "$BACKUP_DIR"/backup_*.tar.gz 2>/dev/null | tail -n +6 | xargs -r rm -f 2>/dev/null || true
+# 保留策略（2026-09-10 修）：原实现是「仅保留最新 5 个」
+#   ls -t ... | tail -n +6 | xargs rm
+# 这是**按部署次数**保留——今天在这台机器上跑了 5 次全量部署（含"别处"加顶部广告条那次），
+# 5 个槽位当天就被占满，9/9 及之前的全站包**全部被删除**，事后想回溯"某页面当时的形态"
+# 已经没有快照可用（实测：backups/ 只剩当天 5 个 307MB 包 + 8/28、8/31 两个增量小包）。
+# 改为**按自然日保留**：每天最多留 2 个（当天最早 + 最新），配合 7 天兜底 → 回溯窗口
+# 从"最近 5 次部署"变成"最近 7 天"（307MB × 最多 14 个 ≈ 4.3GB，服务器 40G 盘余量充足）。
+ls -t "$BACKUP_DIR"/backup_*.tar.gz 2>/dev/null | awk -F'/' '{f=$NF; d=substr(f,8,8); if (cnt[d]++ >= 2) print}' | xargs -r rm -f 2>/dev/null || true
 find "$BACKUP_DIR" -name "backup_*.tar.gz" -mtime +7 -delete 2>/dev/null || true
 BACKUP_SCRIPT
 # 捕获备份文件名（G2 回滚用）：远程 stdout 中 BACKUP_OK= 行
