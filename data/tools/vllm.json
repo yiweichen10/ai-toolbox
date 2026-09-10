@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "🚀",
   "color": "#30A2FF",
-  "description": "vLLM 是一个高吞吐、内存高效的大语言模型推理与服务引擎，最初由加州大学伯克利分校 Sky Computing Lab 开发，采用 Apache-2.0 协议开源。它的核心创新是 PagedAttention——像操作系统管理虚拟内存一样对 KV Cache 分页管理，大幅减少显存碎片，配合连续批处理和前缀缓存显著提升吞吐。项目已有 2000 多位贡献者，支持 200+ 模型架构，并可一行命令启动 OpenAI 兼容的 API 服务。",
+  "description": "vLLM 是一个高吞吐、内存高效的大语言模型推理与服务引擎，最初由加州大学伯克利分校 Sky Computing Lab 开发，采用 Apache-2.0 协议开源。它的核心创新是 PagedAttention——像操作系统管理虚拟内存一样对 KV Cache 分页管理，大幅减少显存碎片，配合连续批处理和前缀缓存显著提升吞吐。项目已有 2000 多位贡献者，支持 200+ 模型架构，并可一行命令启动 OpenAI 兼容的 API 服务。最新版 v0.29.0（2026-09-09 发布）：Model Runner V2 成为所有模型的默认运行器；新增腾讯 Hy4-preview（770B/49B MoE）、Qwen3.8-Flash-Next、GraniteSWA、NemotronH Omni V3、Kimi K3 NVFP4 等模型支持；Kimi-K3/DeepSeek V4 专项内核提速，Mamba 前缀缓存使 TTFT 提升 9%~25%。",
   "category": "AI开发",
   "tags": [
     {
@@ -93,13 +93,13 @@
     "vLLM和哪个好"
   ],
   "source_urls": [
-    "https://github.com/vllm-project/vllm",
-    "https://docs.vllm.com.cn/",
-    "https://www.local-llm.net/tools/vllm",
-    "https://redhatquickcourses.github.io/rhoai3-journey/rhoai3-journey/1/p3-deploy-vllm.html"
+    "https://github.com/vllm-project/vllm/releases/tag/v0.29.0"
   ],
   "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14",
-  "published_date": "2026-08-31"
+  "updated_date": "2026-09-10",
+  "published_date": "2026-08-31",
+  "last_verified": "2026-09-10",
+  "verified_description": "vLLM 是一个高吞吐、内存高效的大语言模型推理与服务引擎，最初由加州大学伯克利分校 Sky Computing Lab 开发，采用 Apache-2.0 协议开源。它的核心创新是 PagedAttention——像操作系统管理虚拟内存一样对 KV Cache 分页管理，大幅减少显存碎片，配合连续批处理和前缀缓存显著提升吞吐。项目已有 2000 多位贡献者，支持 200+ 模型架构，并可一行命令启动 OpenAI 兼容的 API 服务。最新版 v0.29.0（2026-09-09 发布）：Model Runner V2 成为所有模型的默认运行器；新增腾讯 Hy4-preview（770B/49B MoE）、Qwen3.8-Flash-Next、GraniteSWA、NemotronH Omni V3、Kimi K3 NVFP4 等模型支持；Kimi-K3/DeepSeek V4 专项内核提速，Mamba 前缀缓存使 TTFT 提升 9%~25%。",
+  "verify_notes": "GitHub release（2026-09-09，官方 Highlights 8 条）证实；原页面无版本号表述，按 pdf-inspector 先例补入版本号与要点（仅摘 Highlights 用户可见部分，Breaking changes 不展开）；Apache-2.0 开源免费无变化，价格字段未动"
 }

@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-09-09",
+    "updated": "2026-09-10",
     "total": 674
   },
   "tools": {
@@ -123,9 +123,9 @@
       "priority": 140,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-08-16",
+      "verified_at": "2026-09-10",
       "confidence": "high",
-      "notes": ""
+      "notes": "v6 为重大真实版本变化（旧模型同日全部退役），官方公告《Introducing v6》经 Music Business Worldwide/MusicRadar/AI Tech Daily 等 4 家独立媒体交叉证实（均 2026-09-09 发稿，引用 CEO Mikey Shulman 与 CPO Jack Brody 原话）；suno.com/pricing 无头渲染失败（success=false），但所有报道均未提及订阅价格变化（免费档每日 50 credits、Pro $10/月、Premier $30/月 维持），价格字段不动；v6-mini 使免费档从落后两代的 v4.5-all 升至当前一代。长文「2026 年 8 月补充」段的 v5.5 时长滑块等为 v5.5 历史事实，保留不动"
     },
     "canva-ai": {
       "name": "Canva AI",
@@ -2708,9 +2708,9 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-09",
+      "verified_at": "2026-09-10",
       "confidence": "high",
-      "notes": "GitHub 发布标签检测证实；Pre-release 仅 162 个构建资产、无文字 Changelog，仅更新版本号与日期，不编造特性；价格开源免费无变化"
+      "notes": "GitHub release 证实为 Latest 稳定版（前次应用的是 alpha.8 预发布），本次带完整文字版 Release Notes（New Features/Bug Fixes/Docs/Chores），仅摘用户可见要点；开源免费无变化（scrape_price 命中 GitHub 通用导航无价表），价格字段未动"
     },
     "wonder-ai": {
       "name": "Wonder AI",
@@ -6696,14 +6696,14 @@
     },
     "vllm": {
       "name": "vLLM",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI开发",
       "priority": 80,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-10",
+      "confidence": "high",
+      "notes": "GitHub release（2026-09-09，官方 Highlights 8 条）证实；原页面无版本号表述，按 pdf-inspector 先例补入版本号与要点（仅摘 Highlights 用户可见部分，Breaking changes 不展开）；Apache-2.0 开源免费无变化，价格字段未动"
     },
     "modal": {
       "name": "Modal",
@@ -6954,9 +6954,9 @@
       "priority": 130,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-09",
+      "verified_at": "2026-09-10",
       "confidence": "high",
-      "notes": "GitHub 发布标签 + 官方 changelog 证实（esengine/DeepSeek-Reasonix v1.38.2，2026-09-08 稳定版）；补充 v1.38.2 真实新特性，价格开源免费无变化"
+      "notes": "GitHub release（稳定版，GitHub verified signature）+ 官网 changelog 双源证实；长文与 FAQ 无版本号表述，无 stale_facts 需要；MIT 开源免费无变化，价格字段未动"
     },
     "kiro-crew": {
       "name": "Kiro Crew",
@@ -7284,9 +7284,9 @@
       "priority": 30,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-09",
+      "verified_at": "2026-09-10",
       "confidence": "high",
-      "notes": "GitHub 发布标签证实（firecrawl/pdf-inspector v1.18.0，2026-09-08 Latest）；原数据无版本号，补入 v1.18.0 真实更新；价格 MIT 开源免费无变化"
+      "notes": "GitHub release 证实为 Latest（2026-09-09），Changelog 自 v1.18.0 共 5 条变更；开源免费（MIT）无变化，价格字段未动"
     },
     "gensyn": {
       "name": "Gensyn",
@@ -7394,9 +7394,9 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-09",
+      "verified_at": "2026-09-10",
       "confidence": "high",
-      "notes": "GitHub 发布标签检测证实（与 codex-cli 同源 openai/codex）；Pre-release 仅资产清单，不编造特性；价格开源免费无变化"
+      "notes": "与 codex-cli 同为 openai/codex 发布；Harness 侧用户可见要点为 GPT-6-Astra/Worktree/Windows 后台服务共享与 MCP OAuth/沙箱修复；开源免费（Apache-2.0）无变化，价格字段未动"
     },
     "pptbot": {
       "name": "PPTBot",
