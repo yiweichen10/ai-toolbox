@@ -555,36 +555,86 @@ def inject_section_hub():
     return injected
 
 
-PROMO_BANNER_HTML = '''        <!-- 顶部推广横幅条（PC端放在header-inner内与logo并排，移动端保持胶囊形态） -->
+PROMO_BANNER_VERSION = 'tpb:v2'   # 片段版本戳：旧版页面被自动剥离并升级为新版（避免"注入后永不升级"）
+# 「已是最新版」的判定标记：四件套必须全在，缺任何一件都视为需要重注入
+# （2026-09-10 踩坑：只看 tpb:v2 戳会误判——HTML/CSS 已带戳但 body JS 未注入，
+#   导致横幅拿到配置却无法绑定关闭按钮，且此后永远跳过注入）
+PROMO_BANNER_MARKERS = (
+    'class="top-promo-banner"',        # ① HTML 骨架
+    'id="top-promo-banner-style"',     # ② 样式
+    'tpbClosedAt',                     # ③ head 预隐藏脚本
+    'var CONFIG_URLS',                 # ④ body 配置脚本
+)
+
+PROMO_BANNER_HTML = '''        <!-- 顶部推广横幅条 [tpb:v2]（PC端 header 内 logo 右侧，移动端独占一行；文案/链接由 /reco/tpb.json 驱动，后台改完秒级生效） -->
         <div class="top-promo-banner" id="topPromoBanner">
             <div class="tpb-inner">
                 <a href="https://teamorouter.cn/?i=bf8975d059" target="_blank" rel="nofollow noopener" class="tpb-link">
                     <span class="tpb-icon">&#9889;</span>
                     <span class="tpb-text">一个免费白嫖 GLM 5.3 Flash 牛来 + Codex 的宝藏入口 &#8594;</span>
                 </a>
-                <button type="button" class="tpb-close" aria-label="关闭横幅" onclick="(function(b){b.classList.add('tpb-collapsed');try{localStorage.setItem('tpbClosedAt',Date.now())}catch(e){}setTimeout(function(){b.style.display='none'},340)})(document.getElementById('topPromoBanner'))">&#10005;</button>
+                <button type="button" class="tpb-close" aria-label="关闭横幅">&#10005;</button>
             </div>
         </div>'''
 
-# head 内同步脚本：body 渲染前检查关闭记忆并给 <html> 加 class，横幅渲染时即隐藏（零闪烁）
+# head 内同步脚本：body 渲染前用「关闭记忆」给 <html> 加 class 预隐藏（零闪烁）。
+# 阈值用 24h 兜底（≥ 任何可配置冷却值），真实冷却小时数由 body 脚本 fetch 配置后精确判定，
+# 未超时则移除该 class 恢复显示。这样无需重建站点即可调整冷却时间。
 PROMO_BANNER_HEAD_JS = '''<script>try{var t=+localStorage.getItem('tpbClosedAt');if(t&&Date.now()-t<864e5)document.documentElement.classList.add('tpb-remembered-closed')}catch(e){}</script>'''
 
 PROMO_BANNER_JS = '''<script>
+/* tpb:v2 */
 (function() {
-  function initTPB() {
-    var b = document.getElementById('topPromoBanner');
-    if (!b || document.documentElement.classList.contains('tpb-remembered-closed')) return;
-    // 配置驱动：形态/文案/链接/开关（改 ads/tpb-config.json 即全站生效，无需重建）
-    fetch('/ads/tpb-config.json', { cache: 'no-store' })
+  // 配置源（2026-09-10）：主路径 /reco/tpb.json —— /ads/ 前缀命中 uBlock/AdGuard 默认规则，
+  // 实测线上仅约 30% 请求能到达（/ads/tpb-config.json 440 次 vs 首页 1507 次），
+  // 于是"后台改了文案线上看不到"；/reco/ 映射同一物理文件、实测 97% 可达。
+  var CONFIG_URLS = ['/reco/tpb.json', '/ads/tpb-config.json'];
+  var DEFAULT_COOLDOWN_H = 6;   // 后台未配置时的兜底冷却（小时）
+
+  function fetchCfg(i) {
+    if (i >= CONFIG_URLS.length) return Promise.resolve(null);
+    return fetch(CONFIG_URLS[i] + '?t=' + Date.now(), { cache: 'no-store' })
       .then(function(r) { return r.ok ? r.json() : null; })
       .catch(function() { return null; })
-      .then(function(cfg) {
-        if (!cfg) return;
-        if (cfg.enabled === false) { b.style.display = 'none'; return; }
-        if (cfg.style === 'full') b.classList.add('tpb-full');
-        if (cfg.text) { var el = b.querySelector('.tpb-text'); if (el) el.textContent = cfg.text; }
-        if (cfg.url) { var a = b.querySelector('.tpb-link'); if (a) a.href = cfg.url; }
+      .then(function(cfg) { return cfg || fetchCfg(i + 1); });
+  }
+  // 内容指纹：文案/链接/形态/冷却任一变化 => 视为新广告，忽略旧的关闭记忆
+  function fingerprint(cfg) {
+    return [cfg.text || '', cfg.url || '', cfg.style || '',
+            cfg.cooldownHours == null ? '' : cfg.cooldownHours].join('|');
+  }
+  function readStore(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function writeStore(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+  function initTPB() {
+    var b = document.getElementById('topPromoBanner');
+    if (!b) return;
+    fetchCfg(0).then(function(raw) {
+      var cfg = raw || {};
+      var hours = (typeof cfg.cooldownHours === 'number' && cfg.cooldownHours >= 0)
+        ? cfg.cooldownHours : DEFAULT_COOLDOWN_H;
+      var key = fingerprint(cfg);
+      var closedAt = +readStore('tpbClosedAt') || 0;
+      var lastKey = readStore('tpbKey') || '';
+      var remembered = closedAt > 0
+        && (Date.now() - closedAt) < hours * 3600000
+        && (!lastKey || lastKey === key);
+      if (remembered) { b.style.display = 'none'; return; }
+      // 记忆过期 / 广告内容已更换：解除 head 阶段预隐藏
+      document.documentElement.classList.remove('tpb-remembered-closed');
+      b.style.display = '';
+      if (cfg.enabled === false) { b.style.display = 'none'; return; }
+      if (cfg.style === 'full') b.classList.add('tpb-full');
+      if (cfg.text) { var el = b.querySelector('.tpb-text'); if (el) el.textContent = cfg.text; }
+      if (cfg.url) { var a = b.querySelector('.tpb-link'); if (a) a.href = cfg.url; }
+      var btn = b.querySelector('.tpb-close');
+      if (btn) btn.addEventListener('click', function() {
+        b.classList.add('tpb-collapsed');
+        writeStore('tpbClosedAt', String(Date.now()));
+        writeStore('tpbKey', key);
+        setTimeout(function() { b.style.display = 'none'; }, 340);
       });
+    });
     // 滚动 80px 自动收起，回顶恢复
     var hidden = false;
     window.addEventListener('scroll', function() {
@@ -602,6 +652,7 @@ PROMO_BANNER_JS = '''<script>
 </script>'''
 
 PROMO_BANNER_CSS = '''<style id="top-promo-banner-style">
+/* tpb:v2 */
 /* 关闭记忆：渲染前即隐藏，零闪烁 */
 .tpb-remembered-closed .top-promo-banner{display:none!important}
 .top-promo-banner{padding:8px 12px 0;transition:transform .32s ease,opacity .32s ease;will-change:transform}
@@ -610,10 +661,12 @@ PROMO_BANNER_CSS = '''<style id="top-promo-banner-style">
 /* 全屏通栏形态（tpb-config.json style="full" 时启用） */
 .top-promo-banner.tpb-full{padding:0}
 .top-promo-banner.tpb-full .tpb-inner{max-width:none;border-radius:0;margin:0;padding:8px 16px;box-shadow:none}
-/* PC端：横幅在header-inner内与logo并排 */
-.header-inner{display:flex;align-items:center;gap:16px;padding:12px 20px;max-width:1200px;margin:0 auto}
-.header-inner .top-promo-banner{flex:1;padding:0}
-.header-inner .top-promo-banner .tpb-inner{margin:0}
+/* PC端：横幅挂在 header-inner 内 logo 右侧。
+   刻意不重定义 .header-inner —— 旧版把它覆盖成 padding:12px 20px + max-width:1200px;margin:0 auto，
+   宽屏（≥1440）下 header 内容被整体居中、与下方全宽导航错位，看起来像"logo 右移"
+   （1920 视口实测 logo x=380 而导航 x=32，右移 348px，2026-09-10 修复）。 */
+.header-inner .top-promo-banner{flex:0 1 auto;min-width:0;padding:0;margin-left:auto}
+.header-inner .top-promo-banner .tpb-inner{max-width:720px;margin:0 0 0 auto}
 .header-inner .site-logo{white-space:nowrap}
 .tpb-link{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;min-width:0}
 .tpb-icon{font-size:15px;flex-shrink:0;transition:transform .15s ease}
@@ -623,19 +676,101 @@ PROMO_BANNER_CSS = '''<style id="top-promo-banner-style">
 .tpb-close{flex:none;width:22px;height:22px;border:none;border-radius:50%;background:rgba(255,255,255,.16);color:rgba(255,255,255,.9);font-size:13px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:background .15s ease,color .15s ease}
 .tpb-close:hover{background:rgba(255,255,255,.3);color:#fff}
 [data-theme="dark"] .tpb-inner{background:linear-gradient(135deg,rgba(0,66,35,.95),rgba(4,108,64,.92) 55%,rgba(13,128,84,.90));box-shadow:0 2px 14px rgba(0,0,0,.35)}
-@media (max-width:640px){.header-inner{flex-direction:column;align-items:flex-start;gap:6px;padding:10px 14px}.header-inner .top-promo-banner{width:100%}.header-inner .top-promo-banner .tpb-inner{max-width:100%}.top-promo-banner{padding:0}.tpb-inner{max-width:100%;padding:6px 8px 6px 12px;gap:6px}.tpb-text{font-size:12.5px}.tpb-icon{font-size:13px}.tpb-close{width:20px;height:20px;font-size:12px}}
+/* 移动端（对齐站点 768px 断点）：横幅独占一行；同样不覆盖站点 .header-inner 的 padding/布局 */
+@media (max-width:768px){.header-inner{flex-wrap:wrap;row-gap:6px}.header-inner .top-promo-banner{flex:1 1 100%;width:100%;margin-left:0;padding:0}.header-inner .top-promo-banner .tpb-inner{max-width:100%;margin:0}.top-promo-banner{padding:0}.tpb-inner{max-width:100%;padding:6px 8px 6px 12px;gap:6px}.tpb-text{font-size:12.5px}.tpb-icon{font-size:13px}.tpb-close{width:20px;height:20px;font-size:12px}}
 @media (max-width:380px){.tpb-text{font-size:11.5px}}
 </style>'''
 
 
-def inject_promo_banner():
-    """后处理：全站注入顶部推广横幅条（PC端插入 header-inner 内部与 logo 并排，移动端独占一行）。
+def _scan_div_end(html, open_start):
+    """从 `<div …>` 的 '<' 位置开始做标签配对扫描，返回其配对 </div> 之后的索引（找不到返回 -1）。
 
-    组成：HEAD_JS（关闭记忆同步检查，修闪烁）+ CSS（pill/full 双形态 + header-inner flex）
-          + HTML（header-inner 内）+ JS（fetch tpb-config.json 配置驱动 + 滚动收起）。
+    为什么不用正则跨块匹配：早期版本横幅的注释文案/结构各不相同（有的没有关闭按钮、有的没有注释），
+    用「注释 → button → 两层 div」这类跨块写正则会一路吃到页面里**别的** `</button>`
+    （如移动端导航按钮），把 header 整段吞掉（2026-09-10 实测踩到）。配对扫描只看 div 层级，安全。"""
+    import re as _re
+    depth = 0
+    for m in _re.finditer(r'<div\b[^>]*>|</div>', html[open_start:]):
+        if m.group(0).startswith('</'):
+            depth -= 1
+            if depth == 0:
+                return open_start + m.end()
+        else:
+            depth += 1
+    return -1
+
+
+def _strip_promo_banner(content):
+    """剥离旧版横幅片段（HTML/CSS/head JS/body JS），供版本升级重注入。
+
+    历史背景：注入器原先只做「页面已含 banner 就跳过」的幂等判断，
+    导致早期注入的旧版片段**永远不会被升级**（2026-09-10 发现：index.html/about.html
+    仍是 v1、部分页面甚至缺 banner）。现在改为「版本戳不匹配 → 剥离 + 重注入」。
+    每一步都用「坐标 + 就近查找闭合标签」定位，绝不跨块贪婪匹配。"""
+    import re as _re
+
+    # 1) 横幅 HTML 块：按 class 定位（老版没有 id），配对扫描 div 层级；循环删除以防多个
+    while True:
+        m = _re.search(r'<div class="top-promo-banner"[^>]*>', content)
+        if not m:
+            break
+        start = m.start()
+        end = _scan_div_end(content, start)
+        if end == -1:
+            break
+        # 顺带吃掉紧邻的注释行（如「<!-- 顶部推广横幅条 … -->」）
+        pre = content.rfind('<!--', max(0, start - 400), start)
+        if pre != -1 and content.find('-->', pre, start) != -1:
+            line_start = content.rfind('\n', 0, pre) + 1
+            if content[line_start:pre].strip() == '':
+                start = line_start
+        content = content[:start] + content[end:]
+        content = _re.sub(r'\n{3,}', '\n\n', content, count=1)
+
+    # 2) 样式块
+    s = content.find('<style id="top-promo-banner-style">')
+    if s != -1:
+        e = content.find('</style>', s)
+        if e != -1:
+            e = content.find('>', e) + 1
+            line_start = content.rfind('\n', 0, s) + 1
+            content = content[:line_start] + content[e:]
+
+    # 3) 脚本块：head 预隐藏脚本 / body 配置脚本（含旧版 initTPB）
+    changed = True
+    while changed:
+        changed = False
+        for marker in ('tpbClosedAt', 'topPromoBanner', 'initTPB'):
+            idx = content.find(marker)
+            if idx == -1:
+                continue
+            s = content.rfind('<script', 0, idx)
+            if s == -1:
+                continue
+            if content.find('</script>', s, idx) != -1:
+                continue          # marker 不在 script 内（例如残留在 onclick 属性里），不碰
+            e = content.find('</script>', idx)
+            if e == -1:
+                continue
+            e = content.find('>', e) + 1
+            line_start = content.rfind('\n', 0, s) + 1
+            content = content[:line_start] + content[e:]
+            changed = True
+    return content
+
+
+def inject_promo_banner():
+    """后处理：全站注入顶部推广横幅条（PC端插入 header-inner 内 logo 之后，横幅在右，移动端独占一行）。
+
+    组成：HEAD_JS（关闭记忆同步预隐藏，修闪烁）+ CSS（pill/full 双形态 + 不覆盖站点 header 布局）
+          + HTML（header-inner 内）+ JS（fetch /reco/tpb.json 配置驱动 + 冷却记忆 + 滚动收起）。
+    配置源：ads/tpb-config.json（物理文件），线上经 nginx `location = /reco/tpb.json` 映射暴露；
+            /ads/ 前缀会被 uBlock/AdGuard 默认规则拦掉约 70%，故不再作为主路径。
+    幂等：页面片段含 PROMO_BANNER_VERSION 戳则跳过；含旧版片段则先剥离再重注入（可升级）。
     幂等标记：top-promo-banner / top-promo-banner-style / tpbClosedAt / tpb-remembered-closed。"""
     BASE_DIR = _cfg()['BASE_DIR']
     injected = 0
+    upgraded = 0
     for root, dirs, files in os.walk(BASE_DIR):
         dirs[:] = [d for d in dirs if d not in ('.git', 'assets', 'images', 'css', 'js', 'ads', 'news', 'backups')]
         for fname in files:
@@ -647,29 +782,41 @@ def inject_promo_banner():
                     content = f.read()
             except Exception:
                 continue
-            # 跳过已注入的页面（幂等）
-            if 'class="top-promo-banner"' in content:
-                continue
-            # 插入 <div class="header-inner"> 内部第一个子元素位置（PC端与logo并排）
+            has_banner = 'class="top-promo-banner"' in content
+            if has_banner and all(mk in content for mk in PROMO_BANNER_MARKERS):
+                continue          # 四件套齐全（幂等）
+            if has_banner:
+                content = _strip_promo_banner(content)   # 残缺/旧版：剥离后按新版重注入
+                upgraded += 1
+            # 插入 logo </a> 之后（logo在左、横幅在右），移动端独占一行
             if 'class="header-inner"' in content:
-                content = content.replace('class="header-inner"', 'class="header-inner"\n' + PROMO_BANNER_HTML, 1)
-                # head 内：同步关闭记忆检查脚本 + 样式（均幂等）
-                if '</head>' in content:
-                    head_inject = ''
-                    if 'tpb-remembered-closed' not in content:
-                        head_inject += PROMO_BANNER_HEAD_JS + '\n'
-                    if 'id="top-promo-banner-style"' not in content:
-                        head_inject += PROMO_BANNER_CSS + '\n'
-                    if head_inject:
-                        content = content.replace('</head>', head_inject + '</head>', 1)
-                # body 末尾：配置驱动 + 滚动收起脚本（幂等）
-                if 'id="topPromoBanner"' in content and '/ads/tpb-config.json' not in content and '</body>' in content:
-                    content = content.replace('</body>', PROMO_BANNER_JS + '\n</body>', 1)
+                import re as _re
+                _m = _re.search(r'class="header-inner"', content)
+                _close_a = content.find('</a>', _m.end()) if _m else -1
+                if _close_a != -1:
+                    _ins = _close_a + 4
+                    content = content[:_ins] + '\n' + PROMO_BANNER_HTML + content[_ins:]
+                    # head 内：同步关闭记忆检查脚本 + 样式（均幂等）
+                    if '</head>' in content:
+                        head_inject = ''
+                        if 'tpb-remembered-closed' not in content:
+                            head_inject += PROMO_BANNER_HEAD_JS + '\n'
+                        if 'id="top-promo-banner-style"' not in content:
+                            head_inject += PROMO_BANNER_CSS + '\n'
+                        if head_inject:
+                            content = content.replace('</head>', head_inject + '</head>', 1)
+                    # body 末尾：配置驱动 + 滚动收起脚本（按 JS 专有特征串判重，不能用版本戳——
+                    # HTML/CSS 片段已含版本戳，会把这条件永远判为 False，JS 永远注不进去）
+                    if ('id="topPromoBanner"' in content
+                            and 'var CONFIG_URLS' not in content
+                            and '</body>' in content):
+                        content = content.replace('</body>', PROMO_BANNER_JS + '\n</body>', 1)
                 try:
                     _write_if_changed(fpath, content)
                     injected += 1
                 except Exception:
                     pass
     if injected > 0:
-        print(f'[Post] Injected promo banner into {injected} HTML files.')
+        print(f'[Post] Injected promo banner into {injected} HTML files '
+              f'({upgraded} upgraded from older version).')
     return injected

@@ -472,6 +472,10 @@ git add scripts/verify_tools_batch.py scripts/check_version_drift.py scripts/add
 #   deploy.sh 本体纳入白名单，确保本脚本自身改动可回滚（deploy.sh 不在上方白名单内，不显式加入会丢失）。
 #   注：data/tools/ data/articles/ 仍按 2026-08-23 设计提交（内容正本备份），待用户决定是否同样移出 git。
 git add deploy.sh 2>/dev/null || true
+# 2026-09-10 扩白名单：顶部广告条治理链路。tpb_manager.py / ads/tpb-config.json / start_tpb.bat
+#   此前均未被 git 跟踪（改动无法回滚，违反"必须能回滚"铁律）；sw.js 因新增 /reco/ 纯网络白名单
+#   也必须入库（SW 缓存旧配置 = "后台改了线上不更新"的老根因之一）。
+git add tpb_manager.py start_tpb.bat ads/tpb-config.json sw.js 2>/dev/null || true
 if git diff --cached --quiet; then
     echo "  无可提交变更"
 else

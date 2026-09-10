@@ -1,4 +1,6 @@
-/* AI工具宝箱 Service Worker v5（2026-08-27 二次修：/tts /api /ads 纯网络不回退假响应，杜绝"读一段跳一段"）（2026-08-27 bump：HTML/JS/CSS 全部 network-only，
+/* AI工具宝箱 Service Worker v6（2026-09-10：/reco/ 加入纯网络白名单——顶部横幅配置 /reco/tpb.json
+ *   与 CPS /reco/*.json 属动态端点，被 SW 缓存会导致"后台改了文案线上不更新"，必须每次走网络）
+ * （v5 2026-08-27 二次修：/tts /api /ads 纯网络不回退假响应，杜绝"读一段跳一段"）（2026-08-27 bump：HTML/JS/CSS 全部 network-only，
  * 杜绝 SW 缓存旧页面/旧 ?v=hash 资源导致朗读跳段、样式错乱）
  * 背景：v3 的 fetch 正则 /\.html?$/ 只匹配带后缀的页面，漏掉了目录型路由
  * （如 /tools/language-tool/），使旧 HTML（指向旧 JS 版本号）被缓存并在弱网回退时吐出。
@@ -7,7 +9,7 @@
  *   2. 仅预缓存根壳做离线兜底；所有动态资源（HTML/JS/CSS）一律走网络、永不缓存。
  * 策略：动态资源 network-only（失败仅回退预缓存根壳）；静态资源网络优先+缓存回退。
  */
-var CACHE_NAME = 'aitoollab-cache-v5';
+var CACHE_NAME = 'aitoollab-cache-v6';
 var PRECACHE_URLS = [
   '/',
   '/manifest.json',
@@ -39,6 +41,7 @@ function isNetworkOnly(url) {
   var p = url.pathname;
   if (p.indexOf('/js/') === 0) return true;
   if (p.indexOf('/css/') === 0) return true;
+  if (p.indexOf('/reco/') === 0) return true;  // v6：/reco/ = 广告/CPS 动态配置（tpb.json 横幅配置、cps.json），必须走网络，否则后台改完不生效
   if (p === '/tts' || p.indexOf('/api/') === 0 || p.indexOf('/ads/') === 0) return true; // v5：动态端点绝不走缓存（失败回退假 HTML 会毒死 fetch→decode 链路，2026-08-27"读一段跳一段"根因之一）
   if (/\.html?$/.test(p)) return true;          // 带后缀的页面
   if (p === '/' || p.charAt(p.length - 1) === '/') return true; // 目录型路由（/ 、/tools/xxx/）
@@ -55,7 +58,7 @@ self.addEventListener('fetch', function (event) {
   if (isNetworkOnly(url)) {
     var p = url.pathname;
     // API/TTS/JS/CSS：纯网络，失败就是失败——绝不回退假响应（v5 修复）
-    if (p === '/tts' || p.indexOf('/api/') === 0 || p.indexOf('/js/') === 0 || p.indexOf('/css/') === 0 || p.indexOf('/ads/') === 0) {
+    if (p === '/tts' || p.indexOf('/api/') === 0 || p.indexOf('/js/') === 0 || p.indexOf('/css/') === 0 || p.indexOf('/ads/') === 0 || p.indexOf('/reco/') === 0) {
       event.respondWith(fetch(req));
       return;
     }

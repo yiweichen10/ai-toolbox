@@ -142,160 +142,10 @@
 @media (max-width:640px){.dict-cards{grid-template-columns:1fr;gap:8px}}
 </style>
 <!-- 顶部推广横幅：关闭记忆同步检查（head内同步执行，渲染前生效，消除闪烁） -->
-<script>try{var t=+localStorage.getItem('tpbClosedAt');if(t&&Date.now()-t<864e5)document.documentElement.classList.add('tpb-remembered-closed')}catch(e){}</script>
 <!-- 顶部推广横幅样式（品牌绿渐变 + 透明毛玻璃 + 胶囊/全屏双形态 + sticky收起） -->
-<style id="top-promo-banner-style">
-/* 关闭记忆：渲染前即隐藏，零闪烁 */
-.tpb-remembered-closed .top-promo-banner { display: none !important; }
-.top-promo-banner {
-  padding: 8px 12px 0;
-  transition: transform .32s ease, opacity .32s ease;
-  will-change: transform;
-}
-.top-promo-banner.tpb-collapsed {
-  transform: translateY(-110%);
-  opacity: 0;
-  pointer-events: none;
-}
-.tpb-inner {
-  max-width: 720px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border-radius: 999px;
-  padding: 7px 10px 7px 16px;
-  background: linear-gradient(135deg, rgba(0,133,58,.93), rgba(5,150,105,.90) 55%, rgba(16,185,129,.86));
-  box-shadow: 0 2px 12px rgba(0,83,44,.22);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-}
-/* PC端：横幅在header-inner内与logo并排 */
-.header-inner{display:flex;align-items:center;gap:16px;padding:12px 20px;max-width:1200px;margin:0 auto}
-.header-inner .top-promo-banner{flex:1;padding:0}
-.header-inner .top-promo-banner .tpb-inner{margin:0}
-.header-inner .site-logo{white-space:nowrap}
-/* 全屏通栏形态（tpb-config.json style="full" 时启用） */
-.top-promo-banner.tpb-full { padding: 0; }
-.top-promo-banner.tpb-full .tpb-inner {
-  max-width: none;
-  border-radius: 0;
-  margin: 0;
-  padding: 8px 16px;
-  box-shadow: none;
-}
-.tpb-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #fff;
-  text-decoration: none;
-  min-width: 0;
-}
-.tpb-icon {
-  font-size: 15px;
-  flex-shrink: 0;
-  transition: transform .15s ease;
-}
-.tpb-text {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: .2px;
-  transition: color .15s ease;
-}
-.tpb-link:hover .tpb-text {
-  color: #fbbf24;
-}
-.tpb-link:hover .tpb-icon {
-  transform: scale(1.12) rotate(8deg);
-}
-.tpb-close {
-  flex: none;
-  width: 22px;
-  height: 22px;
-  border: none;
-  border-radius: 50%;
-  background: rgba(255,255,255,.16);
-  color: rgba(255,255,255,.9);
-  font-size: 13px;
-  line-height: 1;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  transition: background .15s ease, color .15s ease;
-}
-.tpb-close:hover {
-  background: rgba(255,255,255,.3);
-  color: #fff;
-}
-/* 暗色模式：渐变加深 */
-[data-theme="dark"] .tpb-inner {
-  background: linear-gradient(135deg, rgba(0,66,35,.95), rgba(4,108,64,.92) 55%, rgba(13,128,84,.90));
-  box-shadow: 0 2px 14px rgba(0,0,0,.35);
-}
-/* 移动端响应式 */
-@media (max-width: 640px) {
-  .header-inner{flex-direction:column;align-items:flex-start;gap:6px;padding:10px 14px}
-  .header-inner .top-promo-banner{width:100%}
-  .header-inner .top-promo-banner .tpb-inner{max-width:100%}
-  .top-promo-banner { padding: 0; }
-  .tpb-inner {
-    max-width: 100%;
-    padding: 6px 8px 6px 12px;
-    gap: 6px;
-  }
-  .tpb-text {
-    font-size: 12.5px;
-  }
-  .tpb-icon {
-    font-size: 13px;
-  }
-  .tpb-close {
-    width: 20px;
-    height: 20px;
-    font-size: 12px;
-  }
-}
-@media (max-width: 380px) {
-  .tpb-text {
-    font-size: 11.5px;
-  }
-}
-</style>
-<script>
-(function() {
-  function initTPB() {
-    var b = document.getElementById('topPromoBanner');
-    if (!b || document.documentElement.classList.contains('tpb-remembered-closed')) return;
-    // 配置驱动：形态/文案/链接/开关（改 ads/tpb-config.json 即全站生效，无需重建）
-    fetch('/ads/tpb-config.json', { cache: 'no-store' })
-      .then(function(r) { return r.ok ? r.json() : null; })
-      .catch(function() { return null; })
-      .then(function(cfg) {
-        if (!cfg) return;
-        if (cfg.enabled === false) { b.style.display = 'none'; return; }
-        if (cfg.style === 'full') b.classList.add('tpb-full');
-        if (cfg.text) { var el = b.querySelector('.tpb-text'); if (el) el.textContent = cfg.text; }
-        if (cfg.url) { var a = b.querySelector('.tpb-link'); if (a) a.href = cfg.url; }
-      });
-    // 滚动 80px 自动收起，回顶恢复
-    var hidden = false;
-    window.addEventListener('scroll', function() {
-      var y = window.scrollY || window.pageYOffset || 0;
-      if (y > 80 && !hidden) { hidden = true; b.classList.add('tpb-collapsed'); }
-      else if (y <= 80 && hidden) { hidden = false; b.classList.remove('tpb-collapsed'); }
-    }, { passive: true });
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTPB);
-  } else {
-    initTPB();
-  }
-})();
-</script>
+
+
+
 
 <style id="home-hot-mini-style">
 #hotGrid {
@@ -336,8 +186,8 @@
 </style>
 
 <!-- JS defer 加载：tools-data.js，不阻塞渲染 -->
-<script src="/js/tools-data.js?v=1789002767" defer></script>
-<script src="/js/favorites.js?v=1789002767" defer></script>
+<script src="/js/tools-data.js?v=1789011486" defer></script>
+<script src="/js/favorites.js?v=1789011486" defer></script>
 
 <!-- 百度统计（异步加载，不阻塞渲染） -->
 <script>
@@ -349,21 +199,53 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
+<script>try{var t=+localStorage.getItem('tpbClosedAt');if(t&&Date.now()-t<864e5)document.documentElement.classList.add('tpb-remembered-closed')}catch(e){}</script>
+<style id="top-promo-banner-style">
+/* tpb:v2 */
+/* 关闭记忆：渲染前即隐藏，零闪烁 */
+.tpb-remembered-closed .top-promo-banner{display:none!important}
+.top-promo-banner{padding:8px 12px 0;transition:transform .32s ease,opacity .32s ease;will-change:transform}
+.top-promo-banner.tpb-collapsed{transform:translateY(-110%);opacity:0;pointer-events:none}
+.tpb-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:7px 10px 7px 16px;background:linear-gradient(135deg,rgba(0,133,58,.93),rgba(5,150,105,.90) 55%,rgba(16,185,129,.86));box-shadow:0 2px 12px rgba(0,83,44,.22);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+/* 全屏通栏形态（tpb-config.json style="full" 时启用） */
+.top-promo-banner.tpb-full{padding:0}
+.top-promo-banner.tpb-full .tpb-inner{max-width:none;border-radius:0;margin:0;padding:8px 16px;box-shadow:none}
+/* PC端：横幅挂在 header-inner 内 logo 右侧。
+   刻意不重定义 .header-inner —— 旧版把它覆盖成 padding:12px 20px + max-width:1200px;margin:0 auto，
+   宽屏（≥1440）下 header 内容被整体居中、与下方全宽导航错位，看起来像"logo 右移"
+   （1920 视口实测 logo x=380 而导航 x=32，右移 348px，2026-09-10 修复）。 */
+.header-inner .top-promo-banner{flex:0 1 auto;min-width:0;padding:0;margin-left:auto}
+.header-inner .top-promo-banner .tpb-inner{max-width:720px;margin:0 0 0 auto}
+.header-inner .site-logo{white-space:nowrap}
+.tpb-link{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;min-width:0}
+.tpb-icon{font-size:15px;flex-shrink:0;transition:transform .15s ease}
+.tpb-text{font-size:14px;font-weight:500;letter-spacing:.2px;transition:color .15s ease}
+.tpb-link:hover .tpb-text{color:#fbbf24}
+.tpb-link:hover .tpb-icon{transform:scale(1.12) rotate(8deg)}
+.tpb-close{flex:none;width:22px;height:22px;border:none;border-radius:50%;background:rgba(255,255,255,.16);color:rgba(255,255,255,.9);font-size:13px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:background .15s ease,color .15s ease}
+.tpb-close:hover{background:rgba(255,255,255,.3);color:#fff}
+[data-theme="dark"] .tpb-inner{background:linear-gradient(135deg,rgba(0,66,35,.95),rgba(4,108,64,.92) 55%,rgba(13,128,84,.90));box-shadow:0 2px 14px rgba(0,0,0,.35)}
+/* 移动端（对齐站点 768px 断点）：横幅独占一行；同样不覆盖站点 .header-inner 的 padding/布局 */
+@media (max-width:768px){.header-inner{flex-wrap:wrap;row-gap:6px}.header-inner .top-promo-banner{flex:1 1 100%;width:100%;margin-left:0;padding:0}.header-inner .top-promo-banner .tpb-inner{max-width:100%;margin:0}.top-promo-banner{padding:0}.tpb-inner{max-width:100%;padding:6px 8px 6px 12px;gap:6px}.tpb-text{font-size:12.5px}.tpb-icon{font-size:13px}.tpb-close{width:20px;height:20px;font-size:12px}}
+@media (max-width:380px){.tpb-text{font-size:11.5px}}
+</style>
 </head>
 <body data-page-type="home">
     <header class="header">
         <div class="header-inner">
-            <!-- 顶部推广横幅条（PC端放在header-inner内与logo并排，移动端保持胶囊形态） -->
-            <div class="top-promo-banner" id="topPromoBanner">
-                <div class="tpb-inner">
-                    <a href="https://teamorouter.cn/?i=bf8975d059" target="_blank" rel="nofollow noopener" class="tpb-link">
-                        <span class="tpb-icon">⚡</span>
-                        <span class="tpb-text">一个免费白嫖 GLM 5.3 Flash 牛来 + Codex 的宝藏入口 →</span>
-                    </a>
-                    <button type="button" class="tpb-close" aria-label="关闭横幅" onclick="(function(b){b.classList.add('tpb-collapsed');try{localStorage.setItem('tpbClosedAt',Date.now())}catch(e){}setTimeout(function(){b.style.display='none'},340)})(document.getElementById('topPromoBanner'))">×</button>
-                </div>
-            </div>
             <a href="/" style="text-decoration:none;"><div class="site-logo"><svg class="site-logo-mark" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><rect x="3.4" y="4.2" width="17.2" height="16.4" rx="3.4"/><path d="M12 7.5 Q14.19 10.21 16.9 12.4 Q14.19 14.59 12 17.3 Q9.81 14.59 7.1 12.4 Q9.81 10.21 12 7.5 Z" fill="currentColor" stroke="none"/></svg> AI工具宝箱 <span>每日更新 · 已收录数百款工具</span></div></a>
+        <!-- 顶部推广横幅条 [tpb:v2]（PC端 header 内 logo 右侧，移动端独占一行；文案/链接由 /reco/tpb.json 驱动，后台改完秒级生效） -->
+        <div class="top-promo-banner" id="topPromoBanner">
+            <div class="tpb-inner">
+                <a href="https://teamorouter.cn/?i=bf8975d059" target="_blank" rel="nofollow noopener" class="tpb-link">
+                    <span class="tpb-icon">&#9889;</span>
+                    <span class="tpb-text">一个免费白嫖 GLM 5.3 Flash 牛来 + Codex 的宝藏入口 &#8594;</span>
+                </a>
+                <button type="button" class="tpb-close" aria-label="关闭横幅">&#10005;</button>
+            </div>
+        </div>
+
+            </div>
         </div>
         <nav class="global-nav" aria-label="全局导航">
         <button type="button" class="gn-toggle" aria-expanded="false" aria-controls="gnPanel" onclick="var n=this.closest('.global-nav');n.classList.toggle('gn-open');this.setAttribute('aria-expanded',n.classList.contains('gn-open'));this.textContent=n.classList.contains('gn-open')?'✕ 收起导航':'☰ 全站导航';">☰ 全站导航</button>
@@ -675,7 +557,7 @@ var _hmt = _hmt || [];
                         <h2>最新发布<span>NEW RELEASES</span></h2>
                     </div>
                     <div class="tools-grid" id="recentGrid">
-<a class="release-item" href="/tools/gstack/"><img class="release-logo" src="/assets/icons/gstack.png" alt="gstack" loading="lazy" width="44" height="44"><div class="release-body"><div class="release-head"><span class="release-name">gstack</span><span class="release-date">09/10</span></div><p class="release-desc">gstack 是 Y Combinator 现任 CEO Garry Tan 公开的开源 Claude Code 配置集，仓库位于 gith</p><div class="release-meta"><span>AI编程</span><span>免费开源（MIT），无付费版本</span></div></div></a><a class="release-item" href="/tools/novelai/"><img class="release-logo" src="/assets/icons/novelai.png" alt="NovelAI" loading="lazy" width="44" height="44"><div class="release-body"><div class="release-head"><span class="release-name">NovelAI</span><span class="release-date">09/10</span></div><p class="release-desc">NovelAI 是 Anlatan 推出的 AI 创作平台，集成了二次元 AI 绘画与小说/故事生成两大能力，支持角色一致性、局部重绘（In</p><div class="release-meta"><span>AI绘画</span><span>试用（Paper）一次性免费：30 张图 + 50 次文本 + 100 次语音；Tablet $10/月、Scroll $15/月、Opus $25/月（价格来自官网订阅文档，以官网为准）</span></div></div></a><a class="release-item" href="/tools/pangu/"><div class="release-logo release-logo-fallback">🏔</div><div class="release-body"><div class="release-head"><span class="release-name">盘古大模型</span><span class="release-date">09/10</span></div><p class="release-desc">想用国产全栈自主可控的大模型？华为盘古大模型提供 505B 开源 MoE 旗舰（openPangu-2.0-Pro）、512K 超长上下文与</p><div class="release-meta"><span>AI开发</span><span>开源权重免费（openPangu-2.0-Pro 可商用下载）；华为云 MaaS 按 Token 计费（openPangu-2.0-Pro 约 3.2 元/百万输入、14.5 元/百万输出，32K 以上请求另档）；企业版盘古大脑目录价约 70 万元/年起，以官网为准</span></div></div></a>
+<a class="release-item" href="/tools/gstack/"><img class="release-logo" src="/assets/icons/gstack.png" alt="gstack" loading="lazy" width="44" height="44"><div class="release-body"><div class="release-head"><span class="release-name">gstack</span><span class="release-date">09/10</span></div><p class="release-desc">gstack 是 Y Combinator 现任 CEO Garry Tan 公开的开源 Claude Code 配置集，仓库位于 gith</p><div class="release-meta"><span>AI编程</span><span>免费开源（MIT），无付费版本</span></div></div></a><a class="release-item" href="/tools/novelai/"><img class="release-logo" src="/assets/icons/novelai.png" alt="NovelAI" loading="lazy" width="44" height="44"><div class="release-body"><div class="release-head"><span class="release-name">NovelAI</span><span class="release-date">09/10</span></div><p class="release-desc">NovelAI 是 Anlatan 推出的 AI 创作平台，集成了二次元 AI 绘画与小说/故事生成两大能力，支持角色一致性、局部重绘（In</p><div class="release-meta"><span>AI绘画</span><span>试用（Paper）一次性免费：30 张图 + 50 次文本 + 100 次语音；Tablet $10/月、Scroll $15/月、Opus $25/月（价格来自官网订阅文档，以官网为准）</span></div></div></a><a class="release-item" href="/tools/pangu/"><img class="release-logo" src="/assets/icons/pangu.png" alt="盘古大模型" loading="lazy" width="44" height="44"><div class="release-body"><div class="release-head"><span class="release-name">盘古大模型</span><span class="release-date">09/10</span></div><p class="release-desc">想用国产全栈自主可控的大模型？华为盘古大模型提供 505B 开源 MoE 旗舰（openPangu-2.0-Pro）、512K 超长上下文与</p><div class="release-meta"><span>AI开发</span><span>开源权重免费（openPangu-2.0-Pro 可商用下载）；华为云 MaaS 按 Token 计费（openPangu-2.0-Pro 约 3.2 元/百万输入、14.5 元/百万输出，32K 以上请求另档）；企业版盘古大脑目录价约 70 万元/年起，以官网为准</span></div></div></a>
                     </div>
                 </section>
 
@@ -956,5 +838,73 @@ var _hmt = _hmt || [];
     }
     </script>
 <script src="/reco/loader.js" defer></script>
+<script>
+/* tpb:v2 */
+(function() {
+  // 配置源（2026-09-10）：主路径 /reco/tpb.json —— /ads/ 前缀命中 uBlock/AdGuard 默认规则，
+  // 实测线上仅约 30% 请求能到达（/ads/tpb-config.json 440 次 vs 首页 1507 次），
+  // 于是"后台改了文案线上看不到"；/reco/ 映射同一物理文件、实测 97% 可达。
+  var CONFIG_URLS = ['/reco/tpb.json', '/ads/tpb-config.json'];
+  var DEFAULT_COOLDOWN_H = 6;   // 后台未配置时的兜底冷却（小时）
+
+  function fetchCfg(i) {
+    if (i >= CONFIG_URLS.length) return Promise.resolve(null);
+    return fetch(CONFIG_URLS[i] + '?t=' + Date.now(), { cache: 'no-store' })
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .catch(function() { return null; })
+      .then(function(cfg) { return cfg || fetchCfg(i + 1); });
+  }
+  // 内容指纹：文案/链接/形态/冷却任一变化 => 视为新广告，忽略旧的关闭记忆
+  function fingerprint(cfg) {
+    return [cfg.text || '', cfg.url || '', cfg.style || '',
+            cfg.cooldownHours == null ? '' : cfg.cooldownHours].join('|');
+  }
+  function readStore(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function writeStore(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+  function initTPB() {
+    var b = document.getElementById('topPromoBanner');
+    if (!b) return;
+    fetchCfg(0).then(function(raw) {
+      var cfg = raw || {};
+      var hours = (typeof cfg.cooldownHours === 'number' && cfg.cooldownHours >= 0)
+        ? cfg.cooldownHours : DEFAULT_COOLDOWN_H;
+      var key = fingerprint(cfg);
+      var closedAt = +readStore('tpbClosedAt') || 0;
+      var lastKey = readStore('tpbKey') || '';
+      var remembered = closedAt > 0
+        && (Date.now() - closedAt) < hours * 3600000
+        && (!lastKey || lastKey === key);
+      if (remembered) { b.style.display = 'none'; return; }
+      // 记忆过期 / 广告内容已更换：解除 head 阶段预隐藏
+      document.documentElement.classList.remove('tpb-remembered-closed');
+      b.style.display = '';
+      if (cfg.enabled === false) { b.style.display = 'none'; return; }
+      if (cfg.style === 'full') b.classList.add('tpb-full');
+      if (cfg.text) { var el = b.querySelector('.tpb-text'); if (el) el.textContent = cfg.text; }
+      if (cfg.url) { var a = b.querySelector('.tpb-link'); if (a) a.href = cfg.url; }
+      var btn = b.querySelector('.tpb-close');
+      if (btn) btn.addEventListener('click', function() {
+        b.classList.add('tpb-collapsed');
+        writeStore('tpbClosedAt', String(Date.now()));
+        writeStore('tpbKey', key);
+        setTimeout(function() { b.style.display = 'none'; }, 340);
+      });
+    });
+    // 滚动 80px 自动收起，回顶恢复
+    var hidden = false;
+    window.addEventListener('scroll', function() {
+      var y = window.scrollY || window.pageYOffset || 0;
+      if (y > 80 && !hidden) { hidden = true; b.classList.add('tpb-collapsed'); }
+      else if (y <= 80 && hidden) { hidden = false; b.classList.remove('tpb-collapsed'); }
+    }, { passive: true });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTPB);
+  } else {
+    initTPB();
+  }
+})();
+</script>
 </body>
 </html>
