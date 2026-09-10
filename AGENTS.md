@@ -439,3 +439,37 @@ localStorage 记 `tpbClosedAt` + `tpbKey`（文案/链接/形态/冷却的指纹
   ② `images/og/<slug>-og.png` 200（**OG 不在 deploy 白名单时代遗留最多**）；③ `assets/icons/<slug>.*` 200；
   ④ 分类页 / 搜索 / sitemap 收录；⑤ title 与首句语义完整（首句被 30 字内截断后不能断在"的"上）。
 - 一次性补齐命令（列缺失清单→tar -T 上传）：`git` 不管、`deploy.sh` 现会自动做，历史缺口已一次性补完（256 张、33M）。
+
+
+## 2026-09-11 deploy.sh 提交可见性 + 结果可判定（部署必读）
+
+**事故 A（静默裹带）**：本次部署时工作区存在**其他会话遗留的 `deploy.sh` 手改**（即上一条的
+`images/og/` 同步段）。白名单里本来就有 `deploy.sh`（2026-09-03 有意加，保证本脚本可回滚），
+于是该改动被**静默卷进部署 commit `b511f82`，日志里零提示**，靠人事后 `git status` 才发现。
+→ 结论不是收紧白名单（部署态必须可回滚，白名单是刻意设计），而是**让手改源码在提交时可见**。
+
+**修复 A（提交内容审计，deploy.sh `[4/4]` 段）**：所有 `git add` 之后、`commit` 之前，列出本次
+staged 文件里**所有非构建产物**（= 手改源码），并写入 commit body 留痕。
+- 判定口径：排除 `data/` `articles/` `tools/` `category/` `compare/` `alternatives/` `ranking/`
+  `quiz/` `dict/` `news/` `live/` `author/` `images/` `index.html` `404.html` `rss.xml` `sitemap.xml`
+  `js/tools-data.js` `css/style.min.css` `css/critical*.css`；**其余一律视为手改源码**。
+- 刻意**不**排除 `robots.txt` / `ads.txt` / `manifest.json` / `sw.js` / `css/style.css`——它们最容易被顺手裹带。
+- 效果（实测 commit `8003f94` / `fe4fa1f`）：日志打出 `⚠️ 本次提交含 N 个「手改源码」文件`，
+  commit body 记 `手改源码文件(2): .gitignore deploy.sh`。
+
+**事故 B（结果不可判定）**：调用方习惯 `bash deploy.sh --skip-build | tail -N` 收日志，尾部常被截断在
+`images/infographics/` 或 `images/og/` 同步段 → 看起来"中断、`[4/4]` git 未提交"，于是重复重跑。
+实际多数情况脚本已跑完。
+
+**修复 B（部署结果落盘）**：deploy.sh 开头写 `status=RUNNING`，收尾写 `SUCCESS`，
+健康检查失败回滚时写 `FAILED`。
+- 文件：`.deploy_last_result.json`（已 gitignore），形如
+  `{"status":"SUCCESS","mode":"skip-build","detail":"commit=fe4fa1f pushed=yes health_urls=1246 manual_src=2","at":"...","pid":...}`
+- **判定口径：看这个文件，不看 stdout 尾部。** `RUNNING` 且时间陈旧 = 真中断（才需要重跑）；
+  `SUCCESS` = 全链路完成（含 `[4/4]` git 提交与推送）。
+- 健康检查改用 `tee .deploy_health.log`（也 gitignore），既能实时看进度，又能从中提取存活 URL 数写进结果文件。
+
+**顺带修**：① 未提交改动提示块原放在 `commit` **之前**，会把刚 staged 的文件也列进来、并谎称
+"不会上线"（实际已在本次 commit 内）——已移到 `commit` **之后**，语义修正为"除本次提交外的残留改动"。
+② `cms.html`（`gen_cms.py` 产物、已被 git 跟踪）此前不在白名单 → 每次 `gen_cms` 后永久挂在"未提交"里、
+改动无法回滚，已纳入白名单。
