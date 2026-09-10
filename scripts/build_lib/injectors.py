@@ -555,34 +555,53 @@ def inject_section_hub():
     return injected
 
 
-PROMO_BANNER_HTML = '''    <!-- 顶部推广横幅条 -->
-    <div class="top-promo-banner">
-        <div class="tpb-inner">
-            <a href="https://teamorouter.cn/?i=bf8975d059" target="_blank" rel="nofollow noopener" class="tpb-link tpb-link-main">
-                <span class="tpb-icon">⚡</span>
-                <span class="tpb-text">一个免费白嫖 GLM 5.3 Flash 牛来 + Codex 的宝藏入口 →</span>
-            </a>
-        </div>
-    </div>'''
+PROMO_BANNER_HTML = '''        <!-- 顶部推广横幅条（sticky随header粘顶，滚动80px自动收起，可手动关闭） -->
+        <div class="top-promo-banner" id="topPromoBanner">
+            <div class="tpb-inner">
+                <a href="https://teamorouter.cn/?i=bf8975d059" target="_blank" rel="nofollow noopener" class="tpb-link">
+                    <span class="tpb-icon">⚡</span>
+                    <span class="tpb-text">一个免费白嫖 GLM 5.3 Flash 牛来 + Codex 的宝藏入口 →</span>
+                </a>
+                <button type="button" class="tpb-close" aria-label="关闭横幅" onclick="(function(b){b.classList.add('tpb-collapsed');try{localStorage.setItem('tpbClosedAt',Date.now())}catch(e){}setTimeout(function(){b.style.display='none'},340)})(document.getElementById('topPromoBanner'))">×</button>
+            </div>
+        </div>'''
+
+PROMO_BANNER_JS = '''<script>
+(function() {
+  var b = document.getElementById('topPromoBanner');
+  if (!b) return;
+  try {
+    var t = +localStorage.getItem('tpbClosedAt');
+    if (t && Date.now() - t < 864e5) { b.style.display = 'none'; return; }
+  } catch (e) {}
+  var hidden = false;
+  window.addEventListener('scroll', function() {
+    var y = window.scrollY || window.pageYOffset || 0;
+    if (y > 80 && !hidden) { hidden = true; b.classList.add('tpb-collapsed'); }
+    else if (y <= 80 && hidden) { hidden = false; b.classList.remove('tpb-collapsed'); }
+  }, { passive: true });
+})();
+</script>'''
 
 PROMO_BANNER_CSS = '''<style id="top-promo-banner-style">
-.top-promo-banner{background:#0a0a0a;color:#fff;padding:8px 16px;font-size:14px;line-height:1.4;position:relative;z-index:200}
-.tpb-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap}
-.tpb-link{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;padding:4px 0;transition:all .15s ease}
-.tpb-link:hover{color:#34d399}
-.tpb-link:hover .tpb-icon{transform:scale(1.1)}
-.tpb-icon{font-size:15px;flex-shrink:0}
-.tpb-text{font-weight:500;letter-spacing:.2px}
-.tpb-link:hover .tpb-text{color:#34d399}
-.tpb-link .tpb-icon,.tpb-link .tpb-text{transition:all .15s ease}
-[data-theme="dark"] .top-promo-banner{background:#111111;border-bottom:1px solid rgba(255,255,255,.08)}
-@media (max-width:640px){.top-promo-banner{padding:7px 12px;font-size:12.5px}.tpb-link{gap:4px}.tpb-icon{font-size:13px}}
-@media (max-width:380px){.top-promo-banner{font-size:11.5px;padding:6px 10px}}
+.top-promo-banner{padding:8px 12px 0;transition:transform .32s ease,opacity .32s ease;will-change:transform}
+.top-promo-banner.tpb-collapsed{transform:translateY(-110%);opacity:0;pointer-events:none}
+.tpb-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:7px 10px 7px 16px;background:linear-gradient(135deg,rgba(0,133,58,.93),rgba(5,150,105,.90) 55%,rgba(16,185,129,.86));box-shadow:0 2px 12px rgba(0,83,44,.22);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.tpb-link{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;min-width:0}
+.tpb-icon{font-size:15px;flex-shrink:0;transition:transform .15s ease}
+.tpb-text{font-size:14px;font-weight:500;letter-spacing:.2px;transition:color .15s ease}
+.tpb-link:hover .tpb-text{color:#fbbf24}
+.tpb-link:hover .tpb-icon{transform:scale(1.12) rotate(8deg)}
+.tpb-close{flex:none;width:22px;height:22px;border:none;border-radius:50%;background:rgba(255,255,255,.16);color:rgba(255,255,255,.9);font-size:13px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:background .15s ease,color .15s ease}
+.tpb-close:hover{background:rgba(255,255,255,.3);color:#fff}
+[data-theme="dark"] .tpb-inner{background:linear-gradient(135deg,rgba(0,66,35,.95),rgba(4,108,64,.92) 55%,rgba(13,128,84,.90));box-shadow:0 2px 14px rgba(0,0,0,.35)}
+@media (max-width:640px){.top-promo-banner{padding:6px 8px 0}.tpb-inner{max-width:100%;padding:6px 8px 6px 12px;gap:6px}.tpb-text{font-size:12.5px}.tpb-icon{font-size:13px}.tpb-close{width:20px;height:20px;font-size:12px}}
+@media (max-width:380px){.tpb-text{font-size:11.5px}}
 </style>'''
 
 
 def inject_promo_banner():
-    """后处理：全站注入顶部推广横幅条（首页 + 所有内页）。"""
+    """后处理：全站注入顶部推广横幅条（插入 header 内部第一个子元素位置，随 header sticky 粘顶）。"""
     BASE_DIR = _cfg()['BASE_DIR']
     injected = 0
     for root, dirs, files in os.walk(BASE_DIR):
@@ -599,16 +618,15 @@ def inject_promo_banner():
             # 跳过已注入的页面（幂等）
             if 'class="top-promo-banner"' in content:
                 continue
-            # 在 <header class="header"> 之前插入横幅
+            # 插入 <header class="header"> 内部第一个子元素位置（随 header sticky 粘顶）
             if '<header class="header">' in content:
-                banner = PROMO_BANNER_HTML
-                # 首页 body 有 data-page-type="home"，其他页面没有
-                is_home = 'data-page-type="home"' in content
-                content = content.replace('<header class="header">', banner + '\n    <header class="header">', 1)
-                # 注入样式（幂等：已存在则不重复注入）
-                if 'id="top-promo-banner-style"' not in content:
-                    if '</head>' in content:
-                        content = content.replace('</head>', PROMO_BANNER_CSS + '\n</head>', 1)
+                content = content.replace('<header class="header">', '<header class="header">\n' + PROMO_BANNER_HTML, 1)
+                # 注入样式（幂等）
+                if 'id="top-promo-banner-style"' not in content and '</head>' in content:
+                    content = content.replace('</head>', PROMO_BANNER_CSS + '\n</head>', 1)
+                # 注入滚动/关闭逻辑脚本（幂等：以 tpbClosedAt 初始化脚本为标记）
+                if 'tpbClosedAt' not in content and '</body>' in content:
+                    content = content.replace('</body>', PROMO_BANNER_JS + '\n</body>', 1)
                 try:
                     _write_if_changed(fpath, content)
                     injected += 1
