@@ -38,7 +38,8 @@ fi
 DEPLOY_RESULT_FILE="$LOCAL_DIR/.deploy_last_result.json"
 _deploy_mark() {  # $1=status  $2=detail
     _d="$(printf '%s' "$2" | tr -d '"\\' | tr '\n' ' ')"
-    _m="full"; [ "$SKIP_BUILD" = true ] && _m="skip-build"
+    _m="full"
+    if [ "$SKIP_BUILD" = true ]; then _m="skip-build"; fi
     printf '{"status":"%s","mode":"%s","detail":"%s","at":"%s","pid":%s}\n' \
         "$1" "$_m" "$_d" "$(date '+%Y-%m-%d %H:%M:%S')" "$$" > "$DEPLOY_RESULT_FILE" 2>/dev/null || true
 }
@@ -545,7 +546,9 @@ git add tpb_manager.py start_tpb.bat ads/tpb-config.json sw.js 2>/dev/null || tr
 # 2026-09-10 第二次扩容：运营后台三件套。gen_cms.py（CMS 控制台生成器）、affiliate_manager.py（8899
 #   工具管理台，顶栏加广告条入口）、watchdog_affiliate.py（启动降级修复：breakaway 被 Job 拒时回退
 #   no-window，否则 8899 长期起不来 = 用户以为"后台被删了"）。同属"改动必须能回滚"铁律。
-git add scripts/gen_cms.py affiliate_manager.py scripts/watchdog_affiliate.py 2>/dev/null || true
+# 2026-09-11 补 cms.html：gen_cms.py 的产物、已在 git 跟踪，但此前不在白名单 → 每次 gen_cms 后
+#   它都永久挂在"未提交"里，改动无法回滚（同属"改动必须能回滚"铁律）。纳入白名单消除该缺口。
+git add scripts/gen_cms.py affiliate_manager.py scripts/watchdog_affiliate.py cms.html 2>/dev/null || true
 
 # ── 本次提交内容审计：暴露"被顺手裹进来的手改源码"（2026-09-11 立规）────────────
 # 事故回放（2026-09-11）：部署时工作区存在**其他会话遗留的 deploy.sh 手改**（新增 images/og/
@@ -567,12 +570,6 @@ if [ -n "$_MANUAL" ]; then
     fi
     echo "      提示：若其中有你本次没改过的文件 → 是其他会话/自动化遗留的未提交改动被裹进来了。"
     _COMMIT_BODY="手改源码文件(${_MN}): $(printf '%s' "$_MANUAL" | tr '\n' ' ')"
-fi
-# 本次未提交的改动（不随本次部署走，仅提示，避免"改了以为上线了"）
-_PENDING="$(git status --porcelain 2>/dev/null | head -12 || true)"
-if [ -n "$_PENDING" ]; then
-    echo "  ℹ️ 本次提交之外，工作区仍有未提交改动（这些**不会**上线，也不会进 git）："
-    printf '%s\n' "$_PENDING" | sed 's/^/      /'
 fi
 
 if git diff --cached --quiet; then
@@ -596,6 +593,16 @@ else
         _PUSHED=yes
         echo "  ✅ Git 已推送（本地与 origin/main 一致）"
     fi
+fi
+
+# ── 未进本次提交的残留改动（提示性，不阻断部署）──────────────────────────────
+# 位置刻意放在 commit 之后：此时 `git status` 里剩下的才是**真正没进本次提交**的改动。
+# （2026-09-11 修正：原先放在 commit 之前，会把刚 staged 的文件也列进来，提示"不会上线"
+#   实际已在本次 commit 内 → 语义反了。）
+_PENDING="$(git status --porcelain 2>/dev/null | head -12 || true)"
+if [ -n "$_PENDING" ]; then
+    echo "  ℹ️ 除本次提交外，工作区仍有未提交改动（不入本次 git，仅靠服务器 tar 备份回滚）："
+    printf '%s\n' "$_PENDING" | sed 's/^/      /'
 fi
 
 echo ""
