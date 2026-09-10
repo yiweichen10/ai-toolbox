@@ -124,3 +124,10 @@ favicon.ico
 /_empty_tmp/
 tmp/
 /-p/
+
+# ===== 部署运行态产物（2026-09-11：deploy.sh 落盘部署结果，供判定"是否真跑完"，不进 git）=====
+.deploy_last_result.json
+.deploy_health.log
+
+# ===== 一次性生成脚本（根目录 _gen_*.py，用完即弃，不进 git status 噪音）=====
+/_gen_*.py

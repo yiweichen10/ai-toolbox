@@ -29,6 +29,21 @@ if [ "$1" = "--skip-build" ]; then
     SKIP_BUILD=true
 fi
 
+# ── 部署结果落盘机制（2026-09-11 立规，专治"stdout 被 tail 截断导致误判部署中断"）──
+# 背景：调用方（自动化/人）习惯用 `bash deploy.sh --skip-build | tail -N` 收日志，
+#   一旦尾部被截断在 infographics/og 同步段，就会误判"部署中断、[4/4] git 未提交"，
+#   于是重复重跑。实际多数情况下脚本已跑完。
+# 机制：脚本开头写 RUNNING，收尾写 SUCCESS / FAILED。**判定部署结果只看本文件，不看 stdout 尾部**。
+#   文件里 status=RUNNING 且时间陈旧 = 真中断；SUCCESS = 全链路已完成。
+DEPLOY_RESULT_FILE="$LOCAL_DIR/.deploy_last_result.json"
+_deploy_mark() {  # $1=status  $2=detail
+    _d="$(printf '%s' "$2" | tr -d '"\\' | tr '\n' ' ')"
+    _m="full"; [ "$SKIP_BUILD" = true ] && _m="skip-build"
+    printf '{"status":"%s","mode":"%s","detail":"%s","at":"%s","pid":%s}\n' \
+        "$1" "$_m" "$_d" "$(date '+%Y-%m-%d %H:%M:%S')" "$$" > "$DEPLOY_RESULT_FILE" 2>/dev/null || true
+}
+_deploy_mark RUNNING "started"
+
 echo "==========================================="
 echo "  aitoollab.cn 部署脚本 (rsync增量版)"
 echo "  目标: ${SERVER_IP}"
@@ -490,10 +505,13 @@ echo ""
 echo "[3.5/4] 🩺 部署后健康检查（线上 sitemap 全量存活 + 关键入口）..."
 _HC_DIR="$LOCAL_DIR"
 if command -v cygpath >/dev/null 2>&1; then _HC_DIR=$(cygpath -w "$LOCAL_DIR"); fi
-PYTHONIOENCODING=utf-8 python "$_HC_DIR/scripts/post_deploy_health_check.py"
-HC_RC=$?
+# tee 落一份日志：既能实时看进度，又能给后面的 .deploy_last_result.json 提取存活 URL 数
+PYTHONIOENCODING=utf-8 python "$_HC_DIR/scripts/post_deploy_health_check.py" 2>&1 | tee "$LOCAL_DIR/.deploy_health.log"
+HC_RC=${PIPESTATUS[0]}
+HC_TOTAL="$(grep -oE '[0-9]+ 个 URL' "$LOCAL_DIR/.deploy_health.log" 2>/dev/null | grep -oE '^[0-9]+' | head -1 || true)"
 if [ $HC_RC -ne 0 ]; then
     echo "  ❌ 健康检查未通过，回滚部署..."
+    _deploy_mark FAILED "health-check-failed, rolled-back"
     rollback_deploy
     exit 1
 fi
@@ -528,6 +546,35 @@ git add tpb_manager.py start_tpb.bat ads/tpb-config.json sw.js 2>/dev/null || tr
 #   工具管理台，顶栏加广告条入口）、watchdog_affiliate.py（启动降级修复：breakaway 被 Job 拒时回退
 #   no-window，否则 8899 长期起不来 = 用户以为"后台被删了"）。同属"改动必须能回滚"铁律。
 git add scripts/gen_cms.py affiliate_manager.py scripts/watchdog_affiliate.py 2>/dev/null || true
+
+# ── 本次提交内容审计：暴露"被顺手裹进来的手改源码"（2026-09-11 立规）────────────
+# 事故回放（2026-09-11）：部署时工作区存在**其他会话遗留的 deploy.sh 手改**（新增 images/og/
+#   增量同步段）。因为白名单里本来就有 deploy.sh（2026-09-03 有意加，保证本脚本可回滚），
+#   该改动被静默卷入部署 commit（b511f82），日志里毫无提示，靠人"事后扫 git status"才发现。
+# 修正方向不是收紧白名单（部署态必须可回滚，白名单是刻意设计），而是**让它可见 + 留痕**：
+#   列出本次提交中所有「非构建产物」文件（= 手改源码），并在 commit body 里记账。
+# 判定口径：下列为「构建产物」，其余一律视为「手改源码」→ 进审计清单。
+#   刻意不排除 robots.txt / ads.txt / manifest.json / sw.js / css/style.css 等——它们虽然也在
+#   产物目录附近，但属手改源码，正是最容易被顺手裹进部署 commit 的一类（2026-09-11 事故同源）。
+_MANUAL="$(git diff --cached --name-only 2>/dev/null | grep -vE '^(data/|js/tools-data\.js$|css/style\.min\.css$|css/critical[^/]*\.css$|articles/|tools/|category/|compare/|alternatives/|ranking/|quiz/|dict/|news/|live/|author/|images/|index\.html$|404\.html$|rss\.xml$|sitemap\.xml$)' || true)"
+_COMMIT_BODY="仅构建产物与数据"
+if [ -n "$_MANUAL" ]; then
+    _MN=$(printf '%s\n' "$_MANUAL" | grep -c . || true)
+    echo "  ⚠️ 本次提交含 ${_MN} 个「手改源码」文件（非构建产物），请确认都是你有意为之："
+    printf '%s\n' "$_MANUAL" | head -20 | sed 's/^/      /'
+    if [ "$_MN" -gt 20 ]; then
+        echo "      ...（其余 $((_MN - 20)) 个略）"
+    fi
+    echo "      提示：若其中有你本次没改过的文件 → 是其他会话/自动化遗留的未提交改动被裹进来了。"
+    _COMMIT_BODY="手改源码文件(${_MN}): $(printf '%s' "$_MANUAL" | tr '\n' ' ')"
+fi
+# 本次未提交的改动（不随本次部署走，仅提示，避免"改了以为上线了"）
+_PENDING="$(git status --porcelain 2>/dev/null | head -12 || true)"
+if [ -n "$_PENDING" ]; then
+    echo "  ℹ️ 本次提交之外，工作区仍有未提交改动（这些**不会**上线，也不会进 git）："
+    printf '%s\n' "$_PENDING" | sed 's/^/      /'
+fi
+
 if git diff --cached --quiet; then
     echo "  无可提交变更"
 else
@@ -535,15 +582,18 @@ else
     ARTICLE_COUNT=$(find data/articles -name '*.json' 2>/dev/null | wc -l)
     # 2026-08-24 G5 修复：commit 失败必须暴露（去掉 || true），set -e 会中止部署并报错，
     # 不再把"commit 失败"伪装成"部署成功"。git add 仍保留 || true（偶发文件锁失败不致命，下次重试）。
-    git commit -m "deploy: 全站构建+排名数据更新 (${TOOL_COUNT} tools + ${ARTICLE_COUNT} articles)"
+    git commit -m "deploy: 全站构建+排名数据更新 (${TOOL_COUNT} tools + ${ARTICLE_COUNT} articles)" -m "${_COMMIT_BODY}"
+    _COMMIT_SHA="$(git rev-parse --short HEAD 2>/dev/null || echo '?')"
     _PUSH_OUT="$(git push origin main 2>&1)"; _PUSH_RC=$?
     echo "$_PUSH_OUT" | tail -2
     # 2026-08-28 修假绿灯：原来 `git push ... || echo 警告` 后面无条件 echo "✅ Git 已推送"，
     # 实测推送失败（网络抖动）时日志照样写"已推送"，坏提交就这么留在本地没人知道。
     if [ -n "$(git log origin/main..HEAD --oneline)" ]; then
+        _PUSHED=no
         echo "  ⚠️ Git 未推送成功（rc=$_PUSH_RC），仍有未推送提交："
         git log --oneline origin/main..HEAD | head -5 | sed 's/^/      /'
     else
+        _PUSHED=yes
         echo "  ✅ Git 已推送（本地与 origin/main 一致）"
     fi
 fi
@@ -553,3 +603,8 @@ echo "==========================================="
 echo "  🎉 部署成功!"
 echo "  https://www.aitoollab.cn"
 echo "==========================================="
+
+# 落盘结果（判定部署结果以此文件为准，不看 stdout 尾部是否被 tail 截断）
+_deploy_mark SUCCESS "commit=${_COMMIT_SHA:-none} pushed=${_PUSHED:-n/a} health_urls=${HC_TOTAL:-?} manual_src=$(printf '%s' "${_MANUAL:-}" | grep -c . || true)"
+echo "  [result] $(cat "$DEPLOY_RESULT_FILE" 2>/dev/null)"
+echo "  ℹ️ 判定部署结果请读 .deploy_last_result.json（status=SUCCESS 即全链路完成）"
