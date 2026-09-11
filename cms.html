@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <link rel="alternate" type="application/rss+xml" title="AI工具宝箱 AI动态 RSS" href="/rss.xml">
+    <meta name="google-adsense-account" content="ca-pub-5521852210294377">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>aitoollab.cn · AI CMS 控制台</title>
@@ -124,6 +126,25 @@ footer {
     main { padding: 16px; }
 }
 </style>
+<style id="global-search-style">
+.global-search-bar{background:var(--surface);border-bottom:1px solid var(--border-light);padding:10px 16px;position:sticky;top:108px;z-index:150}
+.global-search-bar .search-box{max-width:640px;margin:0 auto}
+@media (min-width:769px){.global-search-bar{padding:12px 32px}}
+@media (max-width:768px){.global-search-bar{top:98px}}
+</style>
+        <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#00A64F">
+    <link rel="apple-touch-icon" href="/assets/icons/pwa-192.png">
+    <link rel="icon" href="/favicon.ico">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7cf34c7c8b66be4564949354dbc51337";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </head>
 <body>
 
@@ -131,7 +152,29 @@ footer {
     <h1>&#x1f3af; aitoollab.cn</h1>
     <span class="subtitle">AI CMS 控制台</span>
     <span class="refresh">&#128339; 更新于 2026-09-11 07:24:46 CST</span>
-</header>
+    <nav class="global-nav" aria-label="全局导航">
+        <button type="button" class="gn-toggle" aria-expanded="false" aria-controls="gnPanel" onclick="var n=this.closest('.global-nav');n.classList.toggle('gn-open');this.setAttribute('aria-expanded',n.classList.contains('gn-open'));this.textContent=n.classList.contains('gn-open')?'✕ 收起导航':'☰ 全站导航';">☰ 全站导航</button>
+        <div class="global-nav-inner" id="gnPanel">
+            <a href="/" class="gn-item">首页</a>
+            <a href="/tools/" class="gn-item">全部AI工具</a>
+            <a href="/category/" class="gn-item">工具分类</a>
+            <a href="/ranking/" class="gn-item">工具排行</a>
+            <a href="/news/" class="gn-item">AI动态</a>
+            <a href="/dict/" class="gn-item">AI词典</a>
+            <a href="/quiz/" class="gn-item">AI工具选择器</a>
+            <a href="/live/" class="gn-item">实时面板</a>
+            <a href="/compare/" class="gn-item">对比评测</a>
+            <a href="/alternatives/" class="gn-item">替代方案</a>
+            <a href="/favorites.html" class="gn-item">我的收藏</a>
+        </div>
+    </nav>
+    </header>
+    <div class="global-search-bar" id="globalSearchBar">
+        <form class="search-box" action="/" method="get" role="search" aria-label="站内搜索">
+            <input type="search" name="q" id="globalSearchInput" placeholder="搜索AI工具或文章..." autocomplete="off">
+            <button type="submit" aria-label="搜索">🔍</button>
+        </form>
+    </div>
 
 <main>
 
@@ -408,5 +451,30 @@ footer {
     aitoollab.cn AI CMS &middot; 本地仪表盘 &middot; 数据来源: data/*.json &middot; 2026-09-11 07:24:46 CST
 </footer>
 
+    <button id="darkModeToggle" class="dark-toggle-fab" aria-label="切换暗色模式" title="暗色模式">🌙</button>
+    <script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('darkModeToggle');
+  try{if(localStorage.getItem('theme')==='dark')root.setAttribute('data-theme','dark');}catch(e){}
+  function updateLabel(){
+    if(btn)btn.textContent=root.getAttribute('data-theme')==='dark'?'☀️':'🌙';
+  }
+  updateLabel();
+  if(btn)btn.addEventListener('click',function(){
+    var isDark=root.getAttribute('data-theme')==='dark';
+    root.setAttribute('data-theme',isDark?'light':'dark');
+    try{localStorage.setItem('theme',isDark?'light':'dark');}catch(e){}
+    updateLabel();
+  });
+})();
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/sw.js').catch(function () {});
+        });
+    }
+    </script>
+    <a id="favFab" class="fav-fab" href="/favorites.html" title="我的收藏" aria-label="我的收藏">☆ <b>0</b></a>
 </body>
 </html>

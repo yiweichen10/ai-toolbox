@@ -215,8 +215,8 @@
 </style>
 
 <!-- JS defer 加载：tools-data.js，不阻塞渲染 -->
-<script src="/js/tools-data.js?v=1789082348" defer></script>
-<script src="/js/favorites.js?v=1789082348" defer></script>
+<script src="/js/tools-data.js?v=1789084384" defer></script>
+<script src="/js/favorites.js?v=1789084384" defer></script>
 
 <!-- 百度统计（异步加载，不阻塞渲染） -->
 <script>
@@ -412,17 +412,31 @@ var _hmt = _hmt || [];
                         <div class="tab-panel" id="panel-dict">
                             <div class="dict-cards">
                                 <!-- DICT_CARDS_START -->
+                                <a class="dict-card-item" href="/dict/model-parameters/">
+                                    <div class="dict-card-icon">⚙️<span class="dict-card-date">09/11</span></div>
+                                    <div class="dict-card-body">
+                                        <h4>模型参数（Parameters） <span class="badge-new">NEW</span></h4>
+                                        <p>大模型内部可学习的数值，决定模型的知识容量与能力边界，常以“7B、70B、千亿”描述规模，如GPT-3有1750亿参数。</p>
+                                    </div>
+                                </a>
+                                <a class="dict-card-item" href="/dict/model-routing/">
+                                    <div class="dict-card-icon">🔀<span class="dict-card-date">09/11</span></div>
+                                    <div class="dict-card-body">
+                                        <h4>模型路由（Model Routing） <span class="badge-new">NEW</span></h4>
+                                        <p>根据任务难度和需求，把请求智能分配给最合适的模型（大模型或小模型），在保证效果的同时降低成本、提升速度。</p>
+                                    </div>
+                                </a>
                                 <a class="dict-card-item" href="/dict/interpretability/">
                                     <div class="dict-card-icon">🔍<span class="dict-card-date">09/10</span></div>
                                     <div class="dict-card-body">
-                                        <h4>AI可解释性（Interpretability） <span class="badge-new">NEW</span></h4>
+                                        <h4>AI可解释性（Interpretability） </h4>
                                         <p>研究AI决策过程和内部机制如何被人理解的技术方向，目标是让“黑盒”模型变得透明可信，是AI合规与安全的前提。</p>
                                     </div>
                                 </a>
                                 <a class="dict-card-item" href="/dict/kv-cache/">
                                     <div class="dict-card-icon">⚡<span class="dict-card-date">09/10</span></div>
                                     <div class="dict-card-body">
-                                        <h4>KV缓存（KV Cache） <span class="badge-new">NEW</span></h4>
+                                        <h4>KV缓存（KV Cache） </h4>
                                         <p>大模型推理时缓存已计算过的注意力中间结果，避免重复计算，是让长文本对话和长上下文生成变快、变便宜的关键优化。</p>
                                     </div>
                                 </a>
@@ -480,20 +494,6 @@ var _hmt = _hmt || [];
                                     <div class="dict-card-body">
                                         <h4>图增强检索（GraphRAG） </h4>
                                         <p>将知识图谱与RAG结合的技术方案，通过实体与关系结构帮助模型完成多跳推理。微软2023年提出并开源了相关实现。</p>
-                                    </div>
-                                </a>
-                                <a class="dict-card-item" href="/dict/emergent-abilities/">
-                                    <div class="dict-card-icon">🌟<span class="dict-card-date">09/06</span></div>
-                                    <div class="dict-card-body">
-                                        <h4>涌现能力（Emergent Abilities） </h4>
-                                        <p>大模型规模超过某个临界点后突然出现的、小模型不具备的能力（如思维链、多步推理），由Google 2022年论文系统描述。</p>
-                                    </div>
-                                </a>
-                                <a class="dict-card-item" href="/dict/extended-thinking/">
-                                    <div class="dict-card-icon">💭<span class="dict-card-date">09/06</span></div>
-                                    <div class="dict-card-body">
-                                        <h4>扩展思考（Extended Thinking） </h4>
-                                        <p>让模型在作答前先进行更长时间的内部推理和自查，从而提升复杂任务正确率的模式，Claude、Gemini等主流模型均支持。</p>
                                     </div>
                                 </a>
                                 <!-- DICT_CARDS_END -->

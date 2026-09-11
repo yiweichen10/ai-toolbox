@@ -354,16 +354,24 @@ if [ -d "$LOCAL_DIR/images/infographics" ]; then
             # 2026-08-27: 同上——xargs 在 Windows Git Bash 必失败（环境变量块 521KB > exec 32KB 上限），
             # 改用 tar -T 列表文件，不 exec 外部命令，从根上消除该错误。
             printf '%s\n' "$_diff" > "$_locf.tarlist"
+            # 🔴 2026-09-11 修「重试循环是死代码」：脚本开头有 set -e，管道任一侧失败会**立即退出脚本**，
+            #   下一行 `_rc=$?` 与重试/回滚分支永远执行不到（实测 og 段就是这么静默死掉的）。
+            #   必须用 set +e 包住管道再取退出码，重试与 rollback_deploy 才真正生效。
+            set +e
             tar cf - -C "$LOCAL_DIR/images/infographics" -T "$_locf.tarlist" | \
                 ssh $SSH_OPTS "${SERVER_USER}@${SERVER_IP}" "cd ${REMOTE_DIR}/images/infographics && tar xf - --overwrite"
             _rc=$?
+            set -e
             if [ "$_rc" -eq 0 ]; then _ok=1; break; fi
             echo "  ⚠️ 信息图上传第 ${_try} 次失败(rc=$_rc)，重试..." >&2
         done
         _miss=0
         while IFS= read -r _f; do
             [ -z "$_f" ] && continue
-            _http=$(curl -s -o /dev/null -w '%{http_code}' "https://www.aitoollab.cn/images/infographics/$_f")
+            # 🔴 2026-09-11 修 Windows curl `/dev/null` 陷阱：Git Bash 下 `-o /dev/null` 实测**恒定返回 rc=23**
+            #   （Failed writing body，HTTP 码仍正确拿到），在 set -e 下会直接杀死整个部署脚本。
+            #   必须 `|| true` 兜底；判定线上是否生效只看 $_http，不看 curl 退出码。
+            _http=$(curl -s -o /dev/null -w '%{http_code}' "https://www.aitoollab.cn/images/infographics/$_f") || true
             if [ "$_http" != "200" ]; then echo "  ❌ 信息图线上未生效: $_f (HTTP $_http)" >&2; _miss=1; fi
         done <<< "$_diff"
         if [ "$_ok" -eq 1 ] && [ "$_miss" -eq 0 ]; then
@@ -394,16 +402,23 @@ if [ -d "$LOCAL_DIR/images/og" ]; then
         _ok=0
         for _try in 1 2; do
             printf '%s\n' "$_diff" > "$_locf.tarlist"
+            # 🔴 2026-09-11 同 infographics 段：set +e 包住管道才能取到真实退出码并触发重试
+            #   （否则 set -e 会在管道失败时直接退出，重试与 ❌ 报错都不可达）。
+            set +e
             tar cf - -C "$LOCAL_DIR/images/og" -T "$_locf.tarlist" | \
                 ssh $SSH_OPTS "${SERVER_USER}@${SERVER_IP}" "cd ${REMOTE_DIR}/images/og && tar xf - --overwrite"
             _rc=$?
+            set -e
             if [ "$_rc" -eq 0 ]; then _ok=1; break; fi
             echo "  ⚠️ OG 图上传第 ${_try} 次失败(rc=$_rc)，重试..." >&2
         done
         _miss=0
         while IFS= read -r _f; do
             [ -z "$_f" ] && continue
-            _http=$(curl -s -o /dev/null -w '%{http_code}' "https://www.aitoollab.cn/images/og/$_f")
+            # 🔴 2026-09-11 本段首跑即踩：Windows curl `-o /dev/null` 恒返回 rc=23（HTTP 码仍正确），
+            #   set -e 下会把整个部署脚本杀死在 [2/4] 段末（.deploy_last_result.json 永远停在 RUNNING）。
+            #   `|| true` 兜底；成败只认 $_http。
+            _http=$(curl -s -o /dev/null -w '%{http_code}' "https://www.aitoollab.cn/images/og/$_f") || true
             if [ "$_http" != "200" ]; then echo "  ❌ OG 图线上未生效: $_f (HTTP $_http)" >&2; _miss=1; fi
         done <<< "$_diff"
         if [ "$_ok" -eq 1 ] && [ "$_miss" -eq 0 ]; then
