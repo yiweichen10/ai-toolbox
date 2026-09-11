@@ -2476,7 +2476,8 @@ h2[id], h3[id], h4[id] { scroll-margin-top: 200px; }
 /* 2026-08-22：作者卡"🎧 听全文"按钮与简介同行（红框位置），避免单独占行 */
 .author-tts-slot{flex-shrink:0;display:flex;justify-content:flex-end;}
 .author-tts-slot .tts-bar{display:inline-flex;gap:6px;margin:0;}
-/* 2026-08-22：🎧 听全文按钮改为无背景+无外边框纯文字样式（避免边框/背景拉高宽度触发错位） */
+/* 2026-09-10：按用户要求回退到 8/23 版本（git 0515332）—— 作者卡内为纯文字样式，非胶囊。
+   原文注释保留：「🎧 听全文按钮改为无背景+无外边框纯文字样式（避免边框/背景拉高宽度触发错位）」 */
 .author-tts-slot .tts-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 14px;border:none;background:transparent;color:var(--primary);font-size:13px;font-weight:600;border-radius:6px;cursor:pointer;transition:all .15s;font-family:inherit;line-height:1.4;}
 .author-tts-slot .tts-btn:hover{background:rgba(0,166,79,.08);}
 .author-tts-slot .tts-btn.tts-stop{background:transparent;color:var(--text-muted);border:none;}

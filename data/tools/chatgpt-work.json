@@ -5,7 +5,7 @@
   "auto_positioning": true,
   "emoji": "💼",
   "color": "#10a37f",
-  "description": "ChatGPT Work 是 ChatGPT 的桌面/工作区能力：跨已连接的应用与文件研究、分析并产出文档/表格/演示等成果，随 ChatGPT 各套餐提供。",
+  "description": "ChatGPT Work 是 ChatGPT 的桌面/工作区能力：跨已连接的应用与文件研究、分析并产出文档/表格/演示等成果，随 ChatGPT 各套餐提供。2026-09-10 官方推出其垂直版本 ChatGPT for Financial Services（金融版）：由摩根士丹利与 Evercore 参与设计，内置 Daloopa、PitchBook、LSEG News、Crunchbase 等金融数据（由 OpenAI 索引托管，支持细粒度引用溯源），由 GPT-6 Astra 驱动，可生成估值模型、研究报告与 pitchbook，并支持企业模板与按角色的权限/合规导出；已面向符合条件的金融机构开放。",
   "category": "AI办公",
   "tags": [
     "AI办公",
@@ -35,6 +35,9 @@
   "features": [
     "跨已连接的应用与文件工作",
     "研究、分析并产出文档/表格/演示",
+    "ChatGPT for Financial Services（2026-09-10）：内置 Daloopa / PitchBook / LSEG News / Crunchbase 金融数据，由 OpenAI 索引托管并支持细粒度引用溯源",
+    "金融版由 GPT-6 Astra 驱动，可产出估值模型、研究报告与 pitchbook，并支持企业模板发布（Excel/Word/PowerPoint）",
+    "金融版企业治理：沿用 ChatGPT Enterprise 的 SAML SSO、SCIM、角色权限、信息屏障与合规日志导出",
     "与 ChatGPT 桌面版深度整合",
     "随 ChatGPT 各套餐提供"
   ],
@@ -46,11 +49,15 @@
   "faq": [
     {
       "q": "ChatGPT Work 是什么？",
-      "a": "ChatGPT Work 是 ChatGPT 的桌面/工作区能力：跨已连接的应用与文件研究、分析并产出文档/表格/演示等成果。"
+      "a": "ChatGPT Work 是 ChatGPT 的桌面/工作区能力：跨已连接的应用与文件研究、分析并产出文档/表格/演示等成果。官方在 2026-09-10 推出了它的垂直版本 ChatGPT for Financial Services（金融版），面向投资银行与股票研究场景，内置金融数据并由 GPT-6 Astra 驱动。"
     },
     {
       "q": "ChatGPT Work 单独收费吗？",
-      "a": "不单独售卖，随 ChatGPT 各套餐提供；原『$25/用户』对应的是 ChatGPT Business 套餐而非独立产品。"
+      "a": "不单独售卖，随 ChatGPT 各套餐提供；原『$25/用户』对应的是 ChatGPT Business 套餐而非独立产品。ChatGPT for Financial Services（2026-09-10 推出）面向符合条件的金融机构，需联系 OpenAI 或其客户团队开通。"
+    },
+    {
+      "q": "ChatGPT for Financial Services 是什么？",
+      "a": "OpenAI 于 2026-09-10 发布的金融行业定制版 ChatGPT Work：与摩根士丹利、Evercore 联合设计，内置 Daloopa、PitchBook、LSEG News、Crunchbase 等数据（由 OpenAI 索引托管，支持图表与结论溯源），由 GPT-6 Astra 驱动，可做估值/LBO 建模、财报分析、pitchbook 制作，并支持企业模板与合规治理（基于 ChatGPT Enterprise 的权限与审计能力）。"
     }
   ],
   "seo_keywords": [
@@ -69,16 +76,19 @@
   "verified_what": "ChatGPT Work 是 ChatGPT 的桌面/工作区能力：可跨已连接的应用与文件研究、分析并产出文档、表格、演示等成果（与 Codex 的代码模式并列的工作模式）。",
   "verified_price": "不单独售卖，随 ChatGPT 各套餐提供（Free/Plus/Pro/Business/Enterprise，不同套餐包含不同使用权限）。",
   "verified_platform": "Desktop, Web",
-  "last_verified": "2026-07-31",
+  "last_verified": "2026-09-11",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
     "跨已连接的应用与文件工作",
     "研究、分析并产出文档/表格/演示",
+    "ChatGPT for Financial Services（2026-09-10）：内置 Daloopa / PitchBook / LSEG News / Crunchbase 金融数据，由 OpenAI 索引托管并支持细粒度引用溯源",
+    "金融版由 GPT-6 Astra 驱动，可产出估值模型、研究报告与 pitchbook，并支持企业模板发布（Excel/Word/PowerPoint）",
+    "金融版企业治理：沿用 ChatGPT Enterprise 的 SAML SSO、SCIM、角色权限、信息屏障与合规日志导出",
     "与 ChatGPT 桌面版深度整合",
     "随 ChatGPT 各套餐提供"
   ],
-  "verified_description": "ChatGPT Work 是 ChatGPT 的桌面/工作区能力：跨已连接的应用与文件研究、分析并产出文档/表格/演示等成果，随 ChatGPT 各套餐提供。",
+  "verified_description": "ChatGPT Work 是 ChatGPT 的桌面/工作区能力：跨已连接的应用与文件研究、分析并产出文档/表格/演示等成果，随 ChatGPT 各套餐提供。2026-09-10 官方推出其垂直版本 ChatGPT for Financial Services（金融版）：由摩根士丹利与 Evercore 参与设计，内置 Daloopa、PitchBook、LSEG News、Crunchbase 等金融数据（由 OpenAI 索引托管，支持细粒度引用溯源），由 GPT-6 Astra 驱动，可生成估值模型、研究报告与 pitchbook，并支持企业模板与按角色的权限/合规导出；已面向符合条件的金融机构开放。",
   "content_flags": "原条目虚构『独立企业产品+$25/用户』定位，已按官方修正为随套餐提供的工作区能力。",
   "verified_pros": [
     "官方 OpenAI 能力",
@@ -92,11 +102,15 @@
   "verified_faq": [
     {
       "q": "ChatGPT Work 是什么？",
-      "a": "ChatGPT Work 是 ChatGPT 的桌面/工作区能力：跨已连接的应用与文件研究、分析并产出文档/表格/演示等成果。"
+      "a": "ChatGPT Work 是 ChatGPT 的桌面/工作区能力：跨已连接的应用与文件研究、分析并产出文档/表格/演示等成果。官方在 2026-09-10 推出了它的垂直版本 ChatGPT for Financial Services（金融版），面向投资银行与股票研究场景，内置金融数据并由 GPT-6 Astra 驱动。"
     },
     {
       "q": "ChatGPT Work 单独收费吗？",
-      "a": "不单独售卖，随 ChatGPT 各套餐提供；原『$25/用户』对应的是 ChatGPT Business 套餐而非独立产品。"
+      "a": "不单独售卖，随 ChatGPT 各套餐提供；原『$25/用户』对应的是 ChatGPT Business 套餐而非独立产品。ChatGPT for Financial Services（2026-09-10 推出）面向符合条件的金融机构，需联系 OpenAI 或其客户团队开通。"
+    },
+    {
+      "q": "ChatGPT for Financial Services 是什么？",
+      "a": "OpenAI 于 2026-09-10 发布的金融行业定制版 ChatGPT Work：与摩根士丹利、Evercore 联合设计，内置 Daloopa、PitchBook、LSEG News、Crunchbase 等数据（由 OpenAI 索引托管，支持图表与结论溯源），由 GPT-6 Astra 驱动，可做估值/LBO 建模、财报分析、pitchbook 制作，并支持企业模板与合规治理（基于 ChatGPT Enterprise 的权限与审计能力）。"
     }
   ],
   "verified_tags": [
@@ -109,9 +123,9 @@
   "verified_category": "AI办公",
   "conflict_note": "用户确认：ChatGPT Work 是独立可介绍的产品/功能，只是与桌面版整合（Codex 内含代码模式与 ChatGPT Work 模式）；定价以官方为准。",
   "source_urls": [
-    "https://chatgpt.com/work"
+    "https://openai.com/index/introducing-chatgpt-financial-services/"
   ],
-  "verify_notes": "用户确认 ChatGPT Work 可作独立产品/功能单独介绍（与 Codex 代码模式并列的工作模式）；已按官方口径修正定价表述。",
+  "verify_notes": "OpenAI 官方发布页证实 ChatGPT for Financial Services 是「a tailored ChatGPT Work experience」，2026-09-10 推出，内置 Daloopa/PitchBook/LSEG News/Crunchbase 数据、由 GPT-6 Astra 驱动、与 Morgan Stanley 和 Evercore 合作设计（路透同日报道）。价格无变化（不单独售卖），price 字段未动。",
   "content_verified": true,
   "price_verified": true,
   "compare_section": {
@@ -121,5 +135,6 @@
       "slidesai"
     ],
     "verdict": "ChatGPT Work 与 Tome、 tl;dv、SlidesAI 同属AI办公赛道：ChatGPT Work 的 跨已连接的应用与文件工作 是亮点，价格 随 ChatGPT 套餐（不单独售卖）；竞品各有侧重，可按预算与功能需求选择。"
-  }
+  },
+  "updated_date": "2026-09-11"
 }

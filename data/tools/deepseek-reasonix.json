@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "🐋",
   "color": "#4D6BFE",
-  "description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.38.3（2026-09-09）：无需活动会话即可保存模型设置（默认模型用于新会话、已有会话保留自己的选择）、本地桌面与远程 Serve 会话运行状态一致同步（修复任务结束后持续转圈）、每轮结果展示确认的净文件改动与实际执行的命令/退出码日志（缺失证据明确标注不伪装通过）、工作台欢迎页与会话恢复、输入栏操作与运行反馈优化，并修复收件箱扫描、文件读取进度、技能诊断误报、Windows 会话恢复与 MCP 进程关闭等问题；v1.38.2 引入仅追加会话日志与版本 head、独立网页搜索模型分配、统一图片理解（view_image）。",
+  "description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.38.5（2026-09-11）：桌面端迁移至 Electron、新增 DeepSeek V4.1 Flash 图片输入、OpenCode Go 提供商预设、跨桌面与远程会话的持久工具恢复（中断的工具执行可恢复）、独立 dock 标签，并包含读取证据生命周期改进（读取覆盖与写入守卫解耦）、输入区实时读数与回合指标准确性提升，以及 macOS 签名与公证修复、Windows 扩展关闭稳定性修复；官方说明 v1.38.4 未公开发布，本版包含 v1.38.3 以来的全部改动。",
   "category": "AI编程",
   "tags": [
     {
@@ -50,15 +50,15 @@
     "推理强度切换：/pro 或 /effort 调档，硬重构与长链调试时给更多算力",
     "MCP + Skills + 记忆：接入外部工具，沉淀项目专属技能与记忆",
     "双入口与自检：CLI 与桌面客户端并行，/doctor 一键排查 API、配置、hooks 与项目状态",
+    "桌面端 Electron 化（v1.38.5）：桌面客户端迁移至 Electron，新增独立 dock 标签",
+    "持久工具恢复（v1.38.5）：中断的工具执行可在桌面与远程会话中恢复，读取覆盖与写入守卫解耦避免重复工作",
+    "DeepSeek V4.1 Flash 图片输入（v1.38.5）：跟随官方新模型支持原生图片理解",
+    "OpenCode Go 提供商预设（v1.38.5）：新增 OpenCode Go 连接预设",
     "模型级视觉能力：视觉支持由模型能力元数据决定，自动从提供商 /models 响应解析",
-    "ModelScope 提供商预设：新增 OpenAI 兼容预设，含 Qwen3.5-397B、DeepSeek-V4 等精选模型",
     "独立网络搜索（v1.38.0）：与主对话解耦，拥有独立恢复预算，缺结构化来源时提供清晰报告",
-    "可靠协议恢复（v1.38.0）：可恢复的协议错误可从有效历史恢复一次，重启后保留恢复状态并遵守取消操作",
     "统一管理页面（v1.38.0）：设置、回收站与自动化合入全窗口管理页，共享导航与焦点隔离",
     "仅追加会话日志与版本 head（v1.38.2）：append-only DAG 日志 schema 2，分叉/回退/版本选择同日志内完成，支持并发写入",
-    "独立网页搜索模型分配（v1.38.2）：可为网页搜索查询指定专用连接与模型",
-    "统一图片理解（v1.38.2）：新增 view_image(path)，用户附件与工具图片结果共享图片摘要服务",
-    "Standard/Deep 会话展示设置（v1.38.2）：Standard 折叠已完成内容，Deep 保持展开"
+    "统一图片理解（v1.38.2）：新增 view_image(path)，用户附件与工具图片结果共享图片摘要服务"
   ],
   "related": [
     "claude-code",
@@ -96,17 +96,16 @@
     "DeepSeek Reasonix免费吗"
   ],
   "source_urls": [
-    "https://github.com/esengine/DeepSeek-Reasonix/releases/tag/v1.38.3",
-    "https://reasonix.io/changelog/v1.38.3/"
+    "https://github.com/esengine/DeepSeek-Reasonix/releases/tag/v1.38.5"
   ],
   "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-09-10",
+  "updated_date": "2026-09-11",
   "verified_url": "https://github.com/esengine/DeepSeek-Reasonix",
   "verified_publisher": "esengine",
   "verified_what": "GitHub 开源终端编程 Agent，直连 DeepSeek API，围绕 prefix-cache 优化长会话成本",
   "verified_platform": "Terminal, CLI, Desktop (Studio), macOS/Windows/Linux",
-  "last_verified": "2026-09-10",
+  "last_verified": "2026-09-11",
   "verified_features": [
     "DeepSeek 直连：不走通用兼容层，直接对接官方 API，默认走低成本迭代路线",
     "prefix-cache 优化循环：append-only 设计，专为长会话降低重复上下文开销",
@@ -114,18 +113,18 @@
     "推理强度切换：/pro 或 /effort 调档，硬重构与长链调试时给更多算力",
     "MCP + Skills + 记忆：接入外部工具，沉淀项目专属技能与记忆",
     "双入口与自检：CLI 与桌面客户端并行，/doctor 一键排查 API、配置、hooks 与项目状态",
+    "桌面端 Electron 化（v1.38.5）：桌面客户端迁移至 Electron，新增独立 dock 标签",
+    "持久工具恢复（v1.38.5）：中断的工具执行可在桌面与远程会话中恢复，读取覆盖与写入守卫解耦避免重复工作",
+    "DeepSeek V4.1 Flash 图片输入（v1.38.5）：跟随官方新模型支持原生图片理解",
+    "OpenCode Go 提供商预设（v1.38.5）：新增 OpenCode Go 连接预设",
     "模型级视觉能力：视觉支持由模型能力元数据决定，自动从提供商 /models 响应解析",
-    "ModelScope 提供商预设：新增 OpenAI 兼容预设，含 Qwen3.5-397B、DeepSeek-V4 等精选模型",
     "独立网络搜索（v1.38.0）：与主对话解耦，拥有独立恢复预算，缺结构化来源时提供清晰报告",
-    "可靠协议恢复（v1.38.0）：可恢复的协议错误可从有效历史恢复一次，重启后保留恢复状态并遵守取消操作",
     "统一管理页面（v1.38.0）：设置、回收站与自动化合入全窗口管理页，共享导航与焦点隔离",
     "仅追加会话日志与版本 head（v1.38.2）：append-only DAG 日志 schema 2，分叉/回退/版本选择同日志内完成，支持并发写入",
-    "独立网页搜索模型分配（v1.38.2）：可为网页搜索查询指定专用连接与模型",
-    "统一图片理解（v1.38.2）：新增 view_image(path)，用户附件与工具图片结果共享图片摘要服务",
-    "Standard/Deep 会话展示设置（v1.38.2）：Standard 折叠已完成内容，Deep 保持展开"
+    "统一图片理解（v1.38.2）：新增 view_image(path)，用户附件与工具图片结果共享图片摘要服务"
   ],
-  "verified_description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.38.3（2026-09-09）：无需活动会话即可保存模型设置（默认模型用于新会话、已有会话保留自己的选择）、本地桌面与远程 Serve 会话运行状态一致同步（修复任务结束后持续转圈）、每轮结果展示确认的净文件改动与实际执行的命令/退出码日志（缺失证据明确标注不伪装通过）、工作台欢迎页与会话恢复、输入栏操作与运行反馈优化，并修复收件箱扫描、文件读取进度、技能诊断误报、Windows 会话恢复与 MCP 进程关闭等问题；v1.38.2 引入仅追加会话日志与版本 head、独立网页搜索模型分配、统一图片理解（view_image）。",
-  "verify_notes": "GitHub release（稳定版，GitHub verified signature）+ 官网 changelog 双源证实；长文与 FAQ 无版本号表述，无 stale_facts 需要；MIT 开源免费无变化，价格字段未动",
+  "verified_description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.38.5（2026-09-11）：桌面端迁移至 Electron、新增 DeepSeek V4.1 Flash 图片输入、OpenCode Go 提供商预设、跨桌面与远程会话的持久工具恢复（中断的工具执行可恢复）、独立 dock 标签，并包含读取证据生命周期改进（读取覆盖与写入守卫解耦）、输入区实时读数与回合指标准确性提升，以及 macOS 签名与公证修复、Windows 扩展关闭稳定性修复；官方说明 v1.38.4 未公开发布，本版包含 v1.38.3 以来的全部改动。",
+  "verify_notes": "GitHub release 证实 v1.38.5 为稳定版（2026-09-11 发布，官方明确 v1.38.4 未公开发布），Release 摘要逐字引用；开源免费无变化（scrape_price 命中 GitHub 通用导航无价表），价格字段未动。",
   "verified_price": "免费开源（MIT 协议）；实际支出为 DeepSeek API 的 token 用量",
   "price_verified": true
 }

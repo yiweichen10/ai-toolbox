@@ -104,6 +104,13 @@ class Handler(BaseHTTPRequestHandler):
         if path == '/':
             path = '/index.html'
         rel = path.lstrip('/')
+        # 与线上 nginx 对齐：/reco/* → ads/*（2026-09-10 顶部横幅配置走 /reco/tpb.json，
+        # 因为 /ads/ 前缀会被 uBlock/AdGuard 拦掉；本地预览也要走同一条路径才算真验收）
+        # 注意：线上是 nginx alias 精确映射，URL 文件名与磁盘文件名可以不同，这里显式对齐。
+        if rel == 'reco/tpb.json':
+            rel = 'ads/tpb-config.json'
+        elif rel.startswith('reco/'):
+            rel = 'ads/' + rel[len('reco/'):]
         if '..' in rel:
             return self._send_bytes(403, b'forbidden', 'text/plain')
         full = os.path.join(BASE_DIR, rel.replace('/', os.sep))

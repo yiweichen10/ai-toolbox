@@ -13,7 +13,7 @@
   "positioning": "企业级 Agent 运行时平台（Codex 执行层）",
   "rating": "⭐ 4.3",
   "rating_source": "GitHub 10.7万+ Star / 公开评测",
-  "description": "OpenAI 于 2026 年 8 月以 Apache-2.0 开源的 Agent 运行时框架，即驱动 Codex 编程智能体的底层执行层（Harness）。不做推理，负责上下文维护、工具调用、沙箱执行与权限审批，提供 codex exec、Codex SDK、app-server 三大组件。最新 rust 版 v0.154.0（2026-09-09 发布，Latest 稳定通道，前次 alpha.8 预发布已转正）：GPT-6-Astra 支持、实验性 Worktree 隔离检出、内联问答、Windows 后台服务共享与守护进程生命周期管理、MCP OAuth 令牌刷新协调、启动阶段信任建立前不运行工作区控制助手等修复；弃用的 codex mcp-server 入口点已移除。",
+  "description": "OpenAI 于 2026 年 8 月以 Apache-2.0 开源的 Agent 运行时框架，即驱动 Codex 编程智能体的底层执行层（Harness）。不做推理，负责上下文维护、工具调用、沙箱执行与权限审批，提供 codex exec、Codex SDK、app-server 三大组件。当前版本 v0.154.0：rust 主通道于 2026-09-09 发布（前次 alpha.8 预发布已转正），带来 GPT-6-Astra 支持、实验性 Worktree 隔离检出、内联问答、Windows 后台服务共享与 MCP OAuth 令牌刷新协调等，并移除弃用的 codex mcp-server 入口；配套 Codex SDK 于 2026-09-10 发布同版本（Python 侧 pip install openai-codex==0.154.0），新增 max / ultra 推理强度档位、run()/turn() 支持 ExternalMessage 外部消息、resume/fork 支持 include_turns 与 source 元数据。",
   "url": "https://github.com/openai/codex",
   "tags": [
     {
@@ -27,6 +27,9 @@
   "features": [
     "codex exec 命令行工具（脚本/CI/后台作业）",
     "Codex SDK（TypeScript / Python 双接口）",
+    "SDK v0.154.0（2026-09-10）：新增 max 与 ultra 两档推理强度",
+    "SDK v0.154.0：同步与异步 run()/turn() 支持 ExternalMessage——外部内容可启动一轮或加入进行中的常规轮次（工具级权限，不授予用户授权），并返回独立事件流",
+    "SDK v0.154.0：resume/fork 支持 include_turns（历史选择只影响返回内容、不改模型上下文），新增单轮 turn_service_tier 与 source 元数据",
     "app-server（JSON-RPC 持久会话、事件流、任务中断、人工审批）",
     "上下文维护、工具调用、沙箱执行、权限审批",
     "ARC-AGI-3 实测：保留推理+上下文压缩使 GPT-5.6 Sol 从 13.3% 升至 38.3%",
@@ -77,12 +80,13 @@
     "OpenAI 开源"
   ],
   "created_date": "2026-08-23",
-  "updated_date": "2026-09-10",
+  "updated_date": "2026-09-11",
   "published": true,
   "content_verified": true,
   "confidence": "high",
-  "last_verified": "2026-09-10",
+  "last_verified": "2026-09-11",
   "source_urls": [
+    "https://github.com/openai/codex/releases/tag/python-v0.154.0",
     "https://github.com/openai/codex/releases/tag/rust-v0.154.0"
   ],
   "visits": "0",
@@ -95,13 +99,16 @@
   "verified_features": [
     "codex exec 命令行工具（脚本/CI/后台作业）",
     "Codex SDK（TypeScript / Python 双接口）",
+    "SDK v0.154.0（2026-09-10）：新增 max 与 ultra 两档推理强度",
+    "SDK v0.154.0：同步与异步 run()/turn() 支持 ExternalMessage——外部内容可启动一轮或加入进行中的常规轮次（工具级权限，不授予用户授权），并返回独立事件流",
+    "SDK v0.154.0：resume/fork 支持 include_turns（历史选择只影响返回内容、不改模型上下文），新增单轮 turn_service_tier 与 source 元数据",
     "app-server（JSON-RPC 持久会话、事件流、任务中断、人工审批）",
     "上下文维护、工具调用、沙箱执行、权限审批",
     "ARC-AGI-3 实测：保留推理+上下文压缩使 GPT-5.6 Sol 从 13.3% 升至 38.3%",
     "企业落地：Thrive 税务申报、思科 App Builder"
   ],
-  "verified_description": "OpenAI 于 2026 年 8 月以 Apache-2.0 开源的 Agent 运行时框架，即驱动 Codex 编程智能体的底层执行层（Harness）。不做推理，负责上下文维护、工具调用、沙箱执行与权限审批，提供 codex exec、Codex SDK、app-server 三大组件。最新 rust 版 v0.154.0（2026-09-09 发布，Latest 稳定通道，前次 alpha.8 预发布已转正）：GPT-6-Astra 支持、实验性 Worktree 隔离检出、内联问答、Windows 后台服务共享与守护进程生命周期管理、MCP OAuth 令牌刷新协调、启动阶段信任建立前不运行工作区控制助手等修复；弃用的 codex mcp-server 入口点已移除。",
-  "verify_notes": "与 codex-cli 同为 openai/codex 发布；Harness 侧用户可见要点为 GPT-6-Astra/Worktree/Windows 后台服务共享与 MCP OAuth/沙箱修复；开源免费（Apache-2.0）无变化，价格字段未动",
+  "verified_description": "OpenAI 于 2026 年 8 月以 Apache-2.0 开源的 Agent 运行时框架，即驱动 Codex 编程智能体的底层执行层（Harness）。不做推理，负责上下文维护、工具调用、沙箱执行与权限审批，提供 codex exec、Codex SDK、app-server 三大组件。当前版本 v0.154.0：rust 主通道于 2026-09-09 发布（前次 alpha.8 预发布已转正），带来 GPT-6-Astra 支持、实验性 Worktree 隔离检出、内联问答、Windows 后台服务共享与 MCP OAuth 令牌刷新协调等，并移除弃用的 codex mcp-server 入口；配套 Codex SDK 于 2026-09-10 发布同版本（Python 侧 pip install openai-codex==0.154.0），新增 max / ultra 推理强度档位、run()/turn() 支持 ExternalMessage 外部消息、resume/fork 支持 include_turns 与 source 元数据。",
+  "verify_notes": "GitHub openai/codex 于 2026-09-10 发布 python-v0.154.0（Python SDK，pip install openai-codex==0.154.0，匹配 openai-codex-cli-bin==0.154.0 运行时），Release Notes 逐字引用用户可见变更（max/ultra 推理强度、ExternalMessage、include_turns 等）；主通道 rust 版 v0.154.0 已于 2026-09-09 应用，本次仅补齐 SDK 侧能力。开源免费无变化（scrape_price 命中 GitHub 通用导航无价表），价格字段未动。",
   "verified_price": "开源免费（Apache-2.0），推理走 OpenAI API",
   "price_verified": true
 }

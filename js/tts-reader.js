@@ -465,7 +465,7 @@
 
     showMini(title, author);
     updateMiniBtn(false);
-    if (playBtn) playBtn.textContent = L.pause;
+    syncBars();   // 两个入口的按钮文案一起切到"暂停"
 
     if (useServer) {
       if ('speechSynthesis' in window) window.speechSynthesis.cancel();
@@ -481,24 +481,24 @@
     if (useServer) {
       if (wctx && state.wsrc) {   // Web Audio 模式：suspend/resume 全局时钟
         if (state.paused) {
-          wctx.resume().then(function(){ state.paused = false; updateMiniBtn(false); },
-                               function(){ state.paused = false; updateMiniBtn(false); });
+          wctx.resume().then(function(){ state.paused = false; updateMiniBtn(false); syncBars(); },
+                               function(){ state.paused = false; updateMiniBtn(false); syncBars(); });
         } else {
-          wctx.suspend().then(function(){ state.paused = true; updateMiniBtn(true); },
-                              function(){ state.paused = true; updateMiniBtn(true); });
+          wctx.suspend().then(function(){ state.paused = true; updateMiniBtn(true); syncBars(); },
+                              function(){ state.paused = true; updateMiniBtn(true); syncBars(); });
         }
         return;
       }
       var a = state.audio;
       if (!a) return;
-      if (a.paused) { a.play(); state.paused = false; updateMiniBtn(false); }
-      else { a.pause(); state.paused = true; updateMiniBtn(true); }
+      if (a.paused) { a.play(); state.paused = false; updateMiniBtn(false); syncBars(); }
+      else { a.pause(); state.paused = true; updateMiniBtn(true); syncBars(); }
     } else {
       if (!('speechSynthesis' in window)) return;
       if (window.speechSynthesis.paused) {
-        window.speechSynthesis.resume(); state.paused = false; updateMiniBtn(false);
+        window.speechSynthesis.resume(); state.paused = false; updateMiniBtn(false); syncBars();
       } else if (window.speechSynthesis.speaking) {
-        window.speechSynthesis.pause(); state.paused = true; updateMiniBtn(true);
+        window.speechSynthesis.pause(); state.paused = true; updateMiniBtn(true); syncBars();
       }
     }
   }
@@ -521,14 +521,7 @@
     }
     clearHL();
     hideMini();
-    var bars = document.querySelectorAll('.tts-bar');
-    for (var i = 0; i < bars.length; i++) {
-      var btn = bars[i].querySelector('.tts-btn');
-      if (btn) {
-        var isZh = /^zh/i.test(document.documentElement.lang || 'en');
-        btn.textContent = isZh ? '🎧 听全文' : '🎧 Listen';
-      }
-    }
+    syncBars();   // 所有入口按钮恢复"🎧 听全文"
   }
 
   function finish() {
@@ -542,42 +535,70 @@
       state.audio = null;
     }
     hideMini();
-    var bars = document.querySelectorAll('.tts-bar');
-    for (var i = 0; i < bars.length; i++) {
-      var btn = bars[i].querySelector('.tts-btn');
-      if (btn) {
-        var isZh = /^zh/i.test(document.documentElement.lang || 'en');
-        btn.textContent = isZh ? '🎧 听全文' : '🎧 Listen';
-      }
-    }
+    syncBars();   // 所有入口按钮恢复"🎧 听全文"
   }
 
-  function createBar(container) {
+  /* 2026-09-10：回退到 8/23 版本（git 0515332）—— 单一入口按钮，文案随播放状态切换。 */
+  function ttsLabel(kind) {
+    var isZh = /^zh/i.test(document.documentElement.lang || 'en');
+    if (kind === 'pause') return isZh ? '⏸ 暂停' : '⏸ Pause';
+    if (kind === 'resume') return isZh ? '▶ 继续' : '▶ Resume';
+    if (kind === 'stop') return isZh ? '⏹ 停止' : '⏹ Stop';
+    return isZh ? '🎧 听全文' : '🎧 Listen';
+  }
+
+  function syncBars() {
+    var kind = !state.started ? 'play' : (state.paused ? 'resume' : 'pause');
+    var entries = document.querySelectorAll('.tts-bar .tts-play');
+    for (var i = 0; i < entries.length; i++) { entries[i].textContent = ttsLabel(kind); }
+  }
+
+  /* 选正文首段：必须是"有实际文字"的段落。
+     2026-09-10 踩坑：直接取第一个 <p> 会命中模板里的空段落（段落内只有按钮），
+     胶囊因此独占一行，而不是像 8/22 设计那样与首段文字同行。 */
+  function pickFirstTextP(container) {
+    var ps = container.querySelectorAll('p');
+    for (var i = 0; i < ps.length; i++) {
+      var p = ps[i];
+      if (p.closest && (p.closest('.tts-skip') || p.closest('.related-tools') ||
+                        p.closest('.article-toc') || p.closest('.table-of-contents'))) continue;
+      var t = (p.textContent || '').replace(/\s+/g, '');
+      if (t.length < 20) continue;      // 空段落 / 纯占位段跳过
+      return p;
+    }
+    return null;
+  }
+
+  function buildEntryBar(container) {          // 作者卡：听全文入口
     var bar = document.createElement('span');
     bar.className = 'tts-bar';
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'tts-btn tts-play';
-    var isZh = /^zh/i.test(document.documentElement.lang || 'en');
-    btn.textContent = isZh ? '🎧 听全文' : '🎧 Listen';
+    btn.textContent = ttsLabel('play');
     bar.appendChild(btn);
-
-    var authorSlot = container.querySelector('.article-authorbar .author-tts-slot');
-    if (authorSlot) {
-      authorSlot.appendChild(bar);
-    } else {
-      var firstP = container.querySelector('p');
-      if (firstP) {
-        firstP.insertBefore(bar, firstP.firstChild);
-      } else {
-        var fb = container.querySelector('h3') || container.querySelector('h2');
-        if (fb) fb.appendChild(bar);
-        else container.insertBefore(bar, container.firstChild);
-      }
-    }
-
     btn.addEventListener('click', function () { start(container, btn); });
     return bar;
+  }
+
+  function createBar(container) {
+    // 2026-09-10：按用户要求回退到 8/23 版本（git 0515332）的落位逻辑 —— **单一入口**：
+    // 有作者卡就放进作者卡（文章页），没有才插正文首段前（工具页）。
+    // 文章页正文首段前**不再有任何朗读元素**；播放/暂停/继续由同一个按钮循环切换。
+    var authorSlot = container.querySelector('.article-authorbar .author-tts-slot');
+    if (authorSlot) {
+      authorSlot.appendChild(buildEntryBar(container));
+      return;
+    }
+
+    var firstP = pickFirstTextP(container);
+    if (firstP) {
+      firstP.insertBefore(buildEntryBar(container), firstP.firstChild);
+    } else {
+      var fb = container.querySelector('h3') || container.querySelector('h2');
+      if (fb) fb.appendChild(buildEntryBar(container));
+      else container.insertBefore(buildEntryBar(container), container.firstChild);
+    }
   }
 
   function initContainer(container) {

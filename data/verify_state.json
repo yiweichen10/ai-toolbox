@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-09-10",
+    "updated": "2026-09-11",
     "total": 674
   },
   "tools": {
@@ -13,9 +13,9 @@
       "priority": 190,
       "attempts": 0,
       "last_attempt": "2026-08-25",
-      "verified_at": "2026-08-25",
+      "verified_at": "2026-09-11",
       "confidence": "high",
-      "notes": "官方公告（2026-08-06/美东）确认：Sol 优化版仅限 ChatGPT 常规聊天界面，Work/Codex 的 Sol 版本不变；价格变更 07-30 生效（Luna -80%、Terra -20%、Sol 不变，Fast mode 取代 Priority Processing）；周活 10 亿来自 OpenAI 公告（财联社转述）。gpt-5-6-sol 独立条目模型未变、价格正确，本轮不动。"
+      "notes": "GPT-6 Astra 官方发布页证实模型 ID gpt-6-astra、标准价 $10/$50、Fast 2 倍、Critical 网络安全评级、向 Plus/Pro/Business/Enterprise 与 API/Azure/Bedrock 开放（Astra Pro 面向 Pro/Business/Enterprise，企业默认关闭）；价格用无头浏览器抓取官方 API 定价页（success=true，命中 gpt-6-astra $10.00/$1.00/$12.50/$50.00 及长上下文 $20/$75、Fast $20/$100，并含 gpt-5.6-sol $4/$20 促销说明）。原页面停留在 GPT-5.6 阵容且写 Sol 价格「发布至今未变」，属过时信息，已定点替换；页面订阅价（Plus $20/Pro $200 等）无变化证据，未改。"
     },
     "claude": {
       "name": "Claude",
@@ -244,9 +244,9 @@
       "priority": 140,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-08-22",
+      "verified_at": "2026-09-11",
       "confidence": "high",
-      "notes": "2026-08-21 DeepSeek 官方上线实验性多模态视觉模型 V4-Flash-Vision-Exp（首个支持图片输入的 V4 模型）：纯文本能力与 V4-Flash 持平、视觉 Agent 接近 Opus 4.8（官方自报）、1M 上下文、API 支持 Chat Completions/Messages/Responses 三种格式与 base64/URL/Files API 三种图片传入、图片按 token 计费单张最多 384 tokens 费率与 V4-Flash 一致；同步推出免费 Files API。价格字段未动（费率未变）。"
+      "notes": "官方公告（deepseek.com/news/deepseek-v4-1-flash）证实 V4.1-Flash 发布/开源、旧模型下线、V4 Pro 有序下线与定价下调；价格用无头浏览器抓取官方 API 定价页（success=true，命中明确金额：1M 输入缓存命中 off-peak $0.003/peak $0.006、未命中 $0.15/$0.3、输出 $0.6/$1.2，与官方人民币价 ¥0.02/¥0.04、¥1/¥2、¥4/¥8 一致），该页同时含 V4 Pro 下线说明。旧描述/FAQ 中「官方已预告近期整体大幅上调 API 定价」已被本次降价取代，全部走定点替换。"
     },
     "wenxin-yiyan": {
       "name": "文心一言",
@@ -4419,14 +4419,14 @@
     },
     "gpt-live": {
       "name": "GPT-Live",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI对话",
       "priority": 40,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-11",
+      "confidence": "high",
+      "notes": "官方 OpenAI 发布页证实 GPT-Live-1 于 2026-09-10 在 API 上线（可委派 GPT-6 Astra/第三方模型、WebRTC/WebSocket/Telephony、内置 ASR 与轮次检测、Full Duplex Bench 较 GPT-Realtime-2.1 提升 30pp、Tau3 配 GPT-6 Astra medium 档第一）；价格用无头浏览器抓取 developers.openai.com/api/docs/pricing（success=true，命中 'Model Price per minute gpt-live-1 $0.05'）。原 verified_price 中「API 即将开放」已过时，已改为已开放并写明单价。"
     },
     "longcat20": {
       "name": "LongCat-2.0",
@@ -4507,14 +4507,14 @@
     },
     "chatgpt-work": {
       "name": "ChatGPT Work",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 110,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-11",
+      "confidence": "high",
+      "notes": "OpenAI 官方发布页证实 ChatGPT for Financial Services 是「a tailored ChatGPT Work experience」，2026-09-10 推出，内置 Daloopa/PitchBook/LSEG News/Crunchbase 数据、由 GPT-6 Astra 驱动、与 Morgan Stanley 和 Evercore 合作设计（路透同日报道）。价格无变化（不单独售卖），price 字段未动。"
     },
     "claude-fable-5": {
       "name": "Claude Fable 5",
@@ -6954,9 +6954,9 @@
       "priority": 130,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-10",
+      "verified_at": "2026-09-11",
       "confidence": "high",
-      "notes": "GitHub release（稳定版，GitHub verified signature）+ 官网 changelog 双源证实；长文与 FAQ 无版本号表述，无 stale_facts 需要；MIT 开源免费无变化，价格字段未动"
+      "notes": "GitHub release 证实 v1.38.5 为稳定版（2026-09-11 发布，官方明确 v1.38.4 未公开发布），Release 摘要逐字引用；开源免费无变化（scrape_price 命中 GitHub 通用导航无价表），价格字段未动。"
     },
     "kiro-crew": {
       "name": "Kiro Crew",
@@ -7394,9 +7394,9 @@
       "priority": 90,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-10",
+      "verified_at": "2026-09-11",
       "confidence": "high",
-      "notes": "与 codex-cli 同为 openai/codex 发布；Harness 侧用户可见要点为 GPT-6-Astra/Worktree/Windows 后台服务共享与 MCP OAuth/沙箱修复；开源免费（Apache-2.0）无变化，价格字段未动"
+      "notes": "GitHub openai/codex 于 2026-09-10 发布 python-v0.154.0（Python SDK，pip install openai-codex==0.154.0，匹配 openai-codex-cli-bin==0.154.0 运行时），Release Notes 逐字引用用户可见变更（max/ultra 推理强度、ExternalMessage、include_turns 等）；主通道 rust 版 v0.154.0 已于 2026-09-09 应用，本次仅补齐 SDK 侧能力。开源免费无变化（scrape_price 命中 GitHub 通用导航无价表），价格字段未动。"
     },
     "pptbot": {
       "name": "PPTBot",
