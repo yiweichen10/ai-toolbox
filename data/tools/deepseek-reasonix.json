@@ -1,130 +1,159 @@
 {
-  "name": "DeepSeek-Reasonix",
-  "slug": "deepseek-reasonix",
-  "positioning": "DeepSeek-Reasonix是什么？DeepSeek原生终端编程Agent好用吗",
-  "auto_positioning": false,
-  "emoji": "🐋",
-  "color": "#4D6BFE",
-  "description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.38.5（2026-09-11）：桌面端迁移至 Electron、新增 DeepSeek V4.1 Flash 图片输入、OpenCode Go 提供商预设、跨桌面与远程会话的持久工具恢复（中断的工具执行可恢复）、独立 dock 标签，并包含读取证据生命周期改进（读取覆盖与写入守卫解耦）、输入区实时读数与回合指标准确性提升，以及 macOS 签名与公证修复、Windows 扩展关闭稳定性修复；官方说明 v1.38.4 未公开发布，本版包含 v1.38.3 以来的全部改动。",
-  "category": "AI编程",
-  "tags": [
-    {
-      "text": "免费可用",
-      "type": "free"
+    "name": "DeepSeek-Reasonix",
+    "slug": "deepseek-reasonix",
+    "positioning": "DeepSeek-Reasonix是什么？DeepSeek原生终端编程Agent好用吗",
+    "auto_positioning": false,
+    "emoji": "🐋",
+    "color": "#4D6BFE",
+    "description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.38.7（2026-09-11）：桌面端新增「浏览器控制」设置页，可启用内置浏览器、导入 Chrome 登录状态、忽略访客会话证书错误并清除浏览器数据；新增可配置检查点保留策略（[checkpoints] 的 retain_turns 与 blob_quota_bytes）；修复 Windows 桌面启动失效壳恢复、任务栏身份隔离（io.reasonix.desktop）、启动黑框闪现与窗口几何持久化，统一聊天记录的历史快照与实时事件投影，修复长内容溢出聊天面板与展开终端卡命令显示、逐模型 max_output_tokens 覆盖被静默丢弃、deepseek-flash 别名缺少思考深度控制、WSL 复制中文乱码等问题。桌面端自 v1.38.5 起迁移至 Electron，并在此前版本加入 DeepSeek V4.1 Flash 图片输入、OpenCode Go 提供商预设与跨桌面/远程会话的持久工具恢复；官方说明 v1.38.4 未公开发布，v1.38.7 包含 v1.38.3 以来全部改动。",
+    "category": "AI编程",
+    "tags": [
+        {
+            "text": "免费可用",
+            "type": "free"
+        },
+        {
+            "text": "开源"
+        },
+        {
+            "text": "终端Agent"
+        },
+        {
+            "text": "DeepSeek原生"
+        }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "暂无数据",
+    "badge": {
+        "type": "new",
+        "text": "NEW"
     },
-    {
-      "text": "开源"
-    },
-    {
-      "text": "终端Agent"
-    },
-    {
-      "text": "DeepSeek原生"
-    }
-  ],
-  "rating": "⭐ 4.3",
-  "visits": "暂无数据",
-  "badge": {
-    "type": "new",
-    "text": "NEW"
-  },
-  "url": "https://github.com/esengine/DeepSeek-Reasonix",
-  "price": "免费开源（MIT 协议）；实际支出为 DeepSeek API token 用量",
-  "platform": "终端 CLI（npx / npm 全局安装 / Homebrew，跨平台单静态二进制）+ 桌面客户端",
-  "pros": [
-    "围绕 DeepSeek 的 prefix-cache 做 append-only 循环，长会话缓存命中率高、输入 token 成本明显下降",
-    "1.0 用 Go 重写并产出单静态二进制，跨平台分发和零配置启动都很省事",
-    "写操作前可开只读规划门禁（/plan on），改危险代码前先给你看方案",
-    "内置 MCP、Skills 与记忆系统，能接外部工具并保留项目级经验",
-    "运行历史可复核：分支、检查点与命令历史让调试、交接和续跑都好办"
-  ],
-  "cons": [
-    "深度绑定 DeepSeek，想换其他模型供应商基本不适合用它",
-    "个人开发者主导的年轻项目，1.0 刚从 TypeScript 重写为 Go，0.x 旧版仅维护，迁移与稳定性仍需观察",
-    "偏终端向，不喜欢命令行的用户上手门槛较高"
-  ],
-  "features": [
-    "DeepSeek 直连：不走通用兼容层，直接对接官方 API，默认走低成本迭代路线",
-    "prefix-cache 优化循环：append-only 设计，专为长会话降低重复上下文开销",
-    "规划门禁：/plan on 进入只读规划，确认后才落盘，风险命令需二次确认",
-    "推理强度切换：/pro 或 /effort 调档，硬重构与长链调试时给更多算力",
-    "MCP + Skills + 记忆：接入外部工具，沉淀项目专属技能与记忆",
-    "双入口与自检：CLI 与桌面客户端并行，/doctor 一键排查 API、配置、hooks 与项目状态",
-    "桌面端 Electron 化（v1.38.5）：桌面客户端迁移至 Electron，新增独立 dock 标签",
-    "持久工具恢复（v1.38.5）：中断的工具执行可在桌面与远程会话中恢复，读取覆盖与写入守卫解耦避免重复工作",
-    "DeepSeek V4.1 Flash 图片输入（v1.38.5）：跟随官方新模型支持原生图片理解",
-    "OpenCode Go 提供商预设（v1.38.5）：新增 OpenCode Go 连接预设",
-    "模型级视觉能力：视觉支持由模型能力元数据决定，自动从提供商 /models 响应解析",
-    "独立网络搜索（v1.38.0）：与主对话解耦，拥有独立恢复预算，缺结构化来源时提供清晰报告",
-    "统一管理页面（v1.38.0）：设置、回收站与自动化合入全窗口管理页，共享导航与焦点隔离",
-    "仅追加会话日志与版本 head（v1.38.2）：append-only DAG 日志 schema 2，分叉/回退/版本选择同日志内完成，支持并发写入",
-    "统一图片理解（v1.38.2）：新增 view_image(path)，用户附件与工具图片结果共享图片摘要服务"
-  ],
-  "related": [
-    "claude-code",
-    "codex-cli",
-    "deepseek"
-  ],
-  "content": "## DeepSeek-Reasonix是什么？\n\nDeepSeek-Reasonix（一般简称 Reasonix）是 GitHub 上的一个开源终端编程 Agent，仓库在 esengine/DeepSeek-Reasonix，MIT 协议。定位跟 Claude Code、Codex CLI 是一类：在终端里自主完成代码编写、调试和仓库操作。\n\n但它有个很明确的取舍——不做通用的 OpenAI 兼容层，而是直接对着 api.deepseek.com 设计。核心动作是围绕 DeepSeek 那套稳定的 prefix-cache，把运行循环改成 append-only：上下文只往后追加、不重排，从而在长会话里把缓存命中率维持在高位，官方说法是能显著压低输入 token 的成本。这个思路很实在——用编程 Agent 最烧钱的地方，从来不是模型多聪明，而是每一轮都把整个上下文重发一遍。\n\n需要说明一句：这是个人开发者主导的项目，2026 年 8 月初在 GitHub Trending 上有过单日涨星八百多的记录，热度上升很快，但它不是 DeepSeek 官方出品的工具。\n\n## 核心功能\n\n1. DeepSeek 直连路径。相比通用兼容工具，它默认走低成本迭代，任务变难时再切更强的推理档位，整条链路都是按 DeepSeek 的特性调的。\n2. 长会话成本优化。这是它的立身之本：append-only 循环加缓存优先，专门对付持续调试、大重构和几小时连轴的工作，而不是问一句答一句。\n3. 规划门禁。`/plan on` 进只读规划模式，先把方案摆出来给你看，确认了才写盘；风险改动、命令执行和写入边界都要二次确认。相比那种「上来就改文件」的 Agent，这一层对生产仓库友好得多。\n4. 推理强度可调。`/pro` 或 `/effort` 切档，硬重构和长链路调试时给更多算力，日常小改省着用。\n5. MCP、Skills 与记忆。能接外部工具，也能把项目专属的技能和记忆存下来，不做一次性对话。运行历史方面提供分支、检查点和命令历史，调试、交接、续跑都有据可查。\n6. 双入口加自检。CLI 与桌面客户端并行，`/doctor` 一条命令排查 API、配置、hooks 与项目状态，启动失败时省很多猜的时间。\n\n## 版本/套餐对比\n\nReasonix 本身 MIT 开源、免费，没有订阅档位，你付的只是 DeepSeek 的 API token 费用。版本上要留意一件事：1.0 是用 Go 完全重写的版本，默认开发分支为 main-v2，产出单个静态二进制方便跨平台分发；0.x 的 TypeScript 旧版只做维护，不再推进新功能。安装路径有三条——`npx reasonix code` 直接试用，`npm i -g reasonix@next` 装成常驻命令，或者走 Homebrew；也提供桌面端下载。想用 Go 重写版就跟着 main-v2 分支走。\n\n## 值不值得用？\n\n如果你本来就用 DeepSeek，这工具的性价比很难被同类超过。它把「长会话省钱」这件事当成第一优先级来设计，而不是当作附带优化；规划门禁和运行历史这两块又照顾了生产仓库的安全感。终端优先、可以挂着一直跑，这也是熟练开发者更想要的形态。\n\n但要看清代价。第一是绑定：它就是为 DeepSeek 造的，你想随时换 Claude 或 GPT，就不该选它——去看 Goose 那类模型中立的方案。第二是成熟度：个人维护、1.0 刚完成语言级重写、0.x 停在维护状态，迁移期的坑不会少，用在关键项目上得留后手。第三是它偏终端，图形界面党会觉得别扭。\n\n## 使用建议\n\n1. 先 `npx reasonix code` 在一个非关键项目里试，别一上手就全局安装。\n2. 进仓库前先 `cd` 到目标项目再启动——文件、命令输出和项目记忆都是按仓库挂的，位置错了记忆就串。\n3. 生产代码一律先 `/plan on`。让它把方案摆出来，你看完再放行写操作。\n4. 日常小改保持默认低成本档，只在硬重构、长链调试时切 `/pro`。\n5. 起不来就跑 `/doctor`，比自己翻配置快。\n6. 如果你不是 DeepSeek 用户，别为了这套缓存优化专门换模型，收益不对等。\n\n## 适合谁用？\n\n推荐：已经在用 DeepSeek API、又需要长时间连续调试或大规模重构的开发者，特别是对 token 账单敏感的个人和小团队。\n可考虑：想在终端里试一套国产模型原生 Agent、能接受年轻项目风险的技术爱好者。\n不推荐：需要在多家模型供应商之间自由切换的团队；对稳定性要求极高、不愿承担重写期风险的生产环境；以及不习惯命令行、更想要图形化编辑器体验的用户。",
-  "published": false,
-  "faq": [
-    {
-      "question": "DeepSeek-Reasonix 是 DeepSeek 官方出的工具吗？",
-      "answer": "不是。它是 GitHub 上由 esengine 维护的第三方开源项目（仓库 esengine/DeepSeek-Reasonix，MIT 协议），只是深度对接了 DeepSeek 的 API 与 prefix-cache 特性，并非 DeepSeek 官方产品。"
-    },
-    {
-      "question": "Reasonix 怎么降低使用成本？",
-      "answer": "它围绕 DeepSeek 稳定的 prefix-cache 设计了 append-only 的运行循环，上下文只追加不重排，从而在长会话里维持较高的缓存命中率，减少重复上下文带来的输入 token 开销。此外它默认走低成本迭代路径，只在需要时才切更强的推理档位。"
-    },
-    {
-      "question": "怎么安装 Reasonix？",
-      "answer": "三种方式：`npx reasonix code` 直接试用；`npm i -g reasonix@next` 装成全局命令；或通过 Homebrew 安装。官方也提供桌面客户端下载。想用 Go 重写的 1.0 版本请跟随 main-v2 分支。"
-    },
-    {
-      "question": "它会不会直接改我的代码？",
-      "answer": "可以先关掉写权限。执行 `/plan on` 进入只读规划模式，Agent 会先给出方案供你审阅，确认后才执行写入；风险改动、命令执行与写入边界都会要求二次确认。"
-    }
-  ],
-  "content_verified": true,
-  "conflict": false,
-  "verify_status": "verified",
-  "seo_keywords": [
-    "DeepSeek-Reasonix",
-    "Reasonix怎么样",
-    "DeepSeek终端编程Agent",
-    "Reasonix安装教程",
-    "DeepSeek Reasonix免费吗"
-  ],
-  "source_urls": [
-    "https://github.com/esengine/DeepSeek-Reasonix/releases/tag/v1.38.5"
-  ],
-  "confidence": "high",
-  "created_date": "2026-08-14",
-  "updated_date": "2026-09-11",
-  "verified_url": "https://github.com/esengine/DeepSeek-Reasonix",
-  "verified_publisher": "esengine",
-  "verified_what": "GitHub 开源终端编程 Agent，直连 DeepSeek API，围绕 prefix-cache 优化长会话成本",
-  "verified_platform": "Terminal, CLI, Desktop (Studio), macOS/Windows/Linux",
-  "last_verified": "2026-09-11",
-  "verified_features": [
-    "DeepSeek 直连：不走通用兼容层，直接对接官方 API，默认走低成本迭代路线",
-    "prefix-cache 优化循环：append-only 设计，专为长会话降低重复上下文开销",
-    "规划门禁：/plan on 进入只读规划，确认后才落盘，风险命令需二次确认",
-    "推理强度切换：/pro 或 /effort 调档，硬重构与长链调试时给更多算力",
-    "MCP + Skills + 记忆：接入外部工具，沉淀项目专属技能与记忆",
-    "双入口与自检：CLI 与桌面客户端并行，/doctor 一键排查 API、配置、hooks 与项目状态",
-    "桌面端 Electron 化（v1.38.5）：桌面客户端迁移至 Electron，新增独立 dock 标签",
-    "持久工具恢复（v1.38.5）：中断的工具执行可在桌面与远程会话中恢复，读取覆盖与写入守卫解耦避免重复工作",
-    "DeepSeek V4.1 Flash 图片输入（v1.38.5）：跟随官方新模型支持原生图片理解",
-    "OpenCode Go 提供商预设（v1.38.5）：新增 OpenCode Go 连接预设",
-    "模型级视觉能力：视觉支持由模型能力元数据决定，自动从提供商 /models 响应解析",
-    "独立网络搜索（v1.38.0）：与主对话解耦，拥有独立恢复预算，缺结构化来源时提供清晰报告",
-    "统一管理页面（v1.38.0）：设置、回收站与自动化合入全窗口管理页，共享导航与焦点隔离",
-    "仅追加会话日志与版本 head（v1.38.2）：append-only DAG 日志 schema 2，分叉/回退/版本选择同日志内完成，支持并发写入",
-    "统一图片理解（v1.38.2）：新增 view_image(path)，用户附件与工具图片结果共享图片摘要服务"
-  ],
-  "verified_description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.38.5（2026-09-11）：桌面端迁移至 Electron、新增 DeepSeek V4.1 Flash 图片输入、OpenCode Go 提供商预设、跨桌面与远程会话的持久工具恢复（中断的工具执行可恢复）、独立 dock 标签，并包含读取证据生命周期改进（读取覆盖与写入守卫解耦）、输入区实时读数与回合指标准确性提升，以及 macOS 签名与公证修复、Windows 扩展关闭稳定性修复；官方说明 v1.38.4 未公开发布，本版包含 v1.38.3 以来的全部改动。",
-  "verify_notes": "GitHub release 证实 v1.38.5 为稳定版（2026-09-11 发布，官方明确 v1.38.4 未公开发布），Release 摘要逐字引用；开源免费无变化（scrape_price 命中 GitHub 通用导航无价表），价格字段未动。",
-  "verified_price": "免费开源（MIT 协议）；实际支出为 DeepSeek API 的 token 用量",
-  "price_verified": true
+    "url": "https://github.com/esengine/DeepSeek-Reasonix",
+    "price": "免费开源（MIT 协议）；实际支出为 DeepSeek API token 用量",
+    "platform": "终端 CLI（npx / npm 全局安装 / Homebrew，跨平台单静态二进制）+ 桌面客户端",
+    "pros": [
+        "围绕 DeepSeek 的 prefix-cache 做 append-only 循环，长会话缓存命中率高、输入 token 成本明显下降",
+        "1.0 用 Go 重写并产出单静态二进制，跨平台分发和零配置启动都很省事",
+        "写操作前可开只读规划门禁（/plan on），改危险代码前先给你看方案",
+        "内置 MCP、Skills 与记忆系统，能接外部工具并保留项目级经验",
+        "运行历史可复核：分支、检查点与命令历史让调试、交接和续跑都好办"
+    ],
+    "cons": [
+        "深度绑定 DeepSeek，想换其他模型供应商基本不适合用它",
+        "个人开发者主导的年轻项目，1.0 刚从 TypeScript 重写为 Go，0.x 旧版仅维护，迁移与稳定性仍需观察",
+        "偏终端向，不喜欢命令行的用户上手门槛较高"
+    ],
+    "features": [
+        "DeepSeek 直连：不走通用兼容层，直接对接官方 API，默认走低成本迭代路线",
+        "prefix-cache 优化循环：append-only 设计，专为长会话降低重复上下文开销",
+        "规划门禁：/plan on 进入只读规划，确认后才落盘，风险命令需二次确认",
+        "推理强度切换：/pro 或 /effort 调档，硬重构与长链调试时给更多算力",
+        "MCP + Skills + 记忆：接入外部工具，沉淀项目专属技能与记忆",
+        "双入口与自检：CLI 与桌面客户端并行，/doctor 一键排查 API、配置、hooks 与项目状态",
+        "桌面端 Electron 化（v1.38.5）：桌面客户端迁移至 Electron，新增独立 dock 标签",
+        "持久工具恢复（v1.38.5）：中断的工具执行可在桌面与远程会话中恢复，读取覆盖与写入守卫解耦避免重复工作",
+        "DeepSeek V4.1 Flash 图片输入（v1.38.5）：跟随官方新模型支持原生图片理解",
+        "OpenCode Go 提供商预设（v1.38.5）：新增 OpenCode Go 连接预设",
+        "模型级视觉能力：视觉支持由模型能力元数据决定，自动从提供商 /models 响应解析",
+        "独立网络搜索（v1.38.0）：与主对话解耦，拥有独立恢复预算，缺结构化来源时提供清晰报告",
+        "统一管理页面（v1.38.0）：设置、回收站与自动化合入全窗口管理页，共享导航与焦点隔离",
+        "仅追加会话日志与版本 head（v1.38.2）：append-only DAG 日志 schema 2，分叉/回退/版本选择同日志内完成，支持并发写入",
+        "统一图片理解（v1.38.2）：新增 view_image(path)，用户附件与工具图片结果共享图片摘要服务",
+        "内置浏览器控制设置（v1.38.7）：设置中心新增浏览器控制页，可启用内置浏览器、导入 Chrome 登录状态、忽略访客会话证书错误并清除浏览器数据",
+        "可配置检查点保留策略（v1.38.7）：[checkpoints] 新增 retain_turns 与 blob_quota_bytes，控制回溯快照保留",
+        "Windows 桌面启动与窗口修复（v1.38.7）：修复失效壳恢复、任务栏身份隔离（io.reasonix.desktop）、启动黑框闪现与窗口几何持久化",
+        "聊天记录投影统一（v1.38.7）：历史快照与实时事件统一投影，避免内容重复与事件遗漏"
+    ],
+    "related": [
+        "claude-code",
+        "codex-cli",
+        "deepseek"
+    ],
+    "content": "## DeepSeek-Reasonix是什么？\n\nDeepSeek-Reasonix（一般简称 Reasonix）是 GitHub 上的一个开源终端编程 Agent，仓库在 esengine/DeepSeek-Reasonix，MIT 协议。定位跟 Claude Code、Codex CLI 是一类：在终端里自主完成代码编写、调试和仓库操作。\n\n但它有个很明确的取舍——不做通用的 OpenAI 兼容层，而是直接对着 api.deepseek.com 设计。核心动作是围绕 DeepSeek 那套稳定的 prefix-cache，把运行循环改成 append-only：上下文只往后追加、不重排，从而在长会话里把缓存命中率维持在高位，官方说法是能显著压低输入 token 的成本。这个思路很实在——用编程 Agent 最烧钱的地方，从来不是模型多聪明，而是每一轮都把整个上下文重发一遍。\n\n需要说明一句：这是个人开发者主导的项目，2026 年 8 月初在 GitHub Trending 上有过单日涨星八百多的记录，热度上升很快，但它不是 DeepSeek 官方出品的工具。\n\n## 核心功能\n\n1. DeepSeek 直连路径。相比通用兼容工具，它默认走低成本迭代，任务变难时再切更强的推理档位，整条链路都是按 DeepSeek 的特性调的。\n2. 长会话成本优化。这是它的立身之本：append-only 循环加缓存优先，专门对付持续调试、大重构和几小时连轴的工作，而不是问一句答一句。\n3. 规划门禁。`/plan on` 进只读规划模式，先把方案摆出来给你看，确认了才写盘；风险改动、命令执行和写入边界都要二次确认。相比那种「上来就改文件」的 Agent，这一层对生产仓库友好得多。\n4. 推理强度可调。`/pro` 或 `/effort` 切档，硬重构和长链路调试时给更多算力，日常小改省着用。\n5. MCP、Skills 与记忆。能接外部工具，也能把项目专属的技能和记忆存下来，不做一次性对话。运行历史方面提供分支、检查点和命令历史，调试、交接、续跑都有据可查。\n6. 双入口加自检。CLI 与桌面客户端并行，`/doctor` 一条命令排查 API、配置、hooks 与项目状态，启动失败时省很多猜的时间。\n\n## 版本/套餐对比\n\nReasonix 本身 MIT 开源、免费，没有订阅档位，你付的只是 DeepSeek 的 API token 费用。 截至 2026 年 9 月 11 日，最新稳定版为 v1.38.7，桌面端（Electron）与 CLI 同步发版。版本上要留意一件事：1.0 是用 Go 完全重写的版本，默认开发分支为 main-v2，产出单个静态二进制方便跨平台分发；0.x 的 TypeScript 旧版只做维护，不再推进新功能。安装路径有三条——`npx reasonix code` 直接试用，`npm i -g reasonix@next` 装成常驻命令，或者走 Homebrew；也提供桌面端下载。想用 Go 重写版就跟着 main-v2 分支走。\n\n## 值不值得用？\n\n如果你本来就用 DeepSeek，这工具的性价比很难被同类超过。它把「长会话省钱」这件事当成第一优先级来设计，而不是当作附带优化；规划门禁和运行历史这两块又照顾了生产仓库的安全感。终端优先、可以挂着一直跑，这也是熟练开发者更想要的形态。\n\n但要看清代价。第一是绑定：它就是为 DeepSeek 造的，你想随时换 Claude 或 GPT，就不该选它——去看 Goose 那类模型中立的方案。第二是成熟度：个人维护、1.0 刚完成语言级重写、0.x 停在维护状态，迁移期的坑不会少，用在关键项目上得留后手。第三是它偏终端，图形界面党会觉得别扭。\n\n## 使用建议\n\n1. 先 `npx reasonix code` 在一个非关键项目里试，别一上手就全局安装。\n2. 进仓库前先 `cd` 到目标项目再启动——文件、命令输出和项目记忆都是按仓库挂的，位置错了记忆就串。\n3. 生产代码一律先 `/plan on`。让它把方案摆出来，你看完再放行写操作。\n4. 日常小改保持默认低成本档，只在硬重构、长链调试时切 `/pro`。\n5. 起不来就跑 `/doctor`，比自己翻配置快。\n6. 如果你不是 DeepSeek 用户，别为了这套缓存优化专门换模型，收益不对等。\n\n## 适合谁用？\n\n推荐：已经在用 DeepSeek API、又需要长时间连续调试或大规模重构的开发者，特别是对 token 账单敏感的个人和小团队。\n可考虑：想在终端里试一套国产模型原生 Agent、能接受年轻项目风险的技术爱好者。\n不推荐：需要在多家模型供应商之间自由切换的团队；对稳定性要求极高、不愿承担重写期风险的生产环境；以及不习惯命令行、更想要图形化编辑器体验的用户。",
+    "published": true,
+    "faq": [
+        {
+            "question": "DeepSeek-Reasonix 是 DeepSeek 官方出的工具吗？",
+            "answer": "不是。它是 GitHub 上由 esengine 维护的第三方开源项目（仓库 esengine/DeepSeek-Reasonix，MIT 协议），只是深度对接了 DeepSeek 的 API 与 prefix-cache 特性，并非 DeepSeek 官方产品。"
+        },
+        {
+            "question": "Reasonix 怎么降低使用成本？",
+            "answer": "它围绕 DeepSeek 稳定的 prefix-cache 设计了 append-only 的运行循环，上下文只追加不重排，从而在长会话里维持较高的缓存命中率，减少重复上下文带来的输入 token 开销。此外它默认走低成本迭代路径，只在需要时才切更强的推理档位。"
+        },
+        {
+            "question": "怎么安装 Reasonix？",
+            "answer": "三种方式：`npx reasonix code` 直接试用；`npm i -g reasonix@next` 装成全局命令；或通过 Homebrew 安装。官方也提供桌面客户端下载。想用 Go 重写的 1.0 版本请跟随 main-v2 分支。"
+        },
+        {
+            "question": "它会不会直接改我的代码？",
+            "answer": "可以先关掉写权限。执行 `/plan on` 进入只读规划模式，Agent 会先给出方案供你审阅，确认后才执行写入；风险改动、命令执行与写入边界都会要求二次确认。"
+        }
+    ],
+    "content_verified": true,
+    "conflict": false,
+    "verify_status": "verified",
+    "seo_keywords": [
+        "DeepSeek-Reasonix",
+        "Reasonix怎么样",
+        "DeepSeek终端编程Agent",
+        "Reasonix安装教程",
+        "DeepSeek Reasonix免费吗"
+    ],
+    "source_urls": [
+        "https://github.com/esengine/DeepSeek-Reasonix/releases/tag/v1.38.7",
+        "https://reasonix.io/changelog/v1.38.7/"
+    ],
+    "confidence": "high",
+    "created_date": "2026-08-14",
+    "updated_date": "2026-09-12",
+    "verified_url": "https://github.com/esengine/DeepSeek-Reasonix",
+    "verified_publisher": "esengine",
+    "verified_what": "GitHub 开源终端编程 Agent（MIT），直连 DeepSeek API，围绕 prefix-cache 优化长会话 token 成本；最新稳定版 v1.38.7",
+    "verified_platform": "终端 CLI（npx / npm 全局安装 / Homebrew，跨平台单二进制）+ 桌面客户端（Electron）+ 内置浏览器控制",
+    "last_verified": "2026-09-12",
+    "verified_features": [
+        "DeepSeek 直连：不走通用兼容层，直接对接官方 API，默认走低成本迭代路线",
+        "prefix-cache 优化循环：append-only 设计，专为长会话降低重复上下文开销",
+        "规划门禁：/plan on 进入只读规划，确认后才落盘，风险命令需二次确认",
+        "推理强度切换：/pro 或 /effort 调档，硬重构与长链调试时给更多算力",
+        "MCP + Skills + 记忆：接入外部工具，沉淀项目专属技能与记忆",
+        "双入口与自检：CLI 与桌面客户端并行，/doctor 一键排查 API、配置、hooks 与项目状态",
+        "桌面端 Electron 化（v1.38.5）：桌面客户端迁移至 Electron，新增独立 dock 标签",
+        "持久工具恢复（v1.38.5）：中断的工具执行可在桌面与远程会话中恢复，读取覆盖与写入守卫解耦避免重复工作",
+        "DeepSeek V4.1 Flash 图片输入（v1.38.5）：跟随官方新模型支持原生图片理解",
+        "OpenCode Go 提供商预设（v1.38.5）：新增 OpenCode Go 连接预设",
+        "模型级视觉能力：视觉支持由模型能力元数据决定，自动从提供商 /models 响应解析",
+        "独立网络搜索（v1.38.0）：与主对话解耦，拥有独立恢复预算，缺结构化来源时提供清晰报告",
+        "统一管理页面（v1.38.0）：设置、回收站与自动化合入全窗口管理页，共享导航与焦点隔离",
+        "仅追加会话日志与版本 head（v1.38.2）：append-only DAG 日志 schema 2，分叉/回退/版本选择同日志内完成，支持并发写入",
+        "统一图片理解（v1.38.2）：新增 view_image(path)，用户附件与工具图片结果共享图片摘要服务",
+        "内置浏览器控制设置（v1.38.7）：设置中心新增浏览器控制页，可启用内置浏览器、导入 Chrome 登录状态、忽略访客会话证书错误并清除浏览器数据",
+        "可配置检查点保留策略（v1.38.7）：[checkpoints] 新增 retain_turns 与 blob_quota_bytes，控制回溯快照保留",
+        "Windows 桌面启动与窗口修复（v1.38.7）：修复失效壳恢复、任务栏身份隔离（io.reasonix.desktop）、启动黑框闪现与窗口几何持久化",
+        "聊天记录投影统一（v1.38.7）：历史快照与实时事件统一投影，避免内容重复与事件遗漏"
+    ],
+    "verified_description": "DeepSeek-Reasonix（简称 Reasonix）是 GitHub 上的开源终端编程 Agent，由 esengine 维护，MIT 协议。它直接对接 DeepSeek API，围绕稳定的 prefix-cache 设计 append-only 运行循环，把长会话的缓存命中率维持在高位、压低输入 token 成本。最新稳定版 v1.38.7（2026-09-11）：桌面端新增「浏览器控制」设置页，可启用内置浏览器、导入 Chrome 登录状态、忽略访客会话证书错误并清除浏览器数据；新增可配置检查点保留策略（[checkpoints] 的 retain_turns 与 blob_quota_bytes）；修复 Windows 桌面启动失效壳恢复、任务栏身份隔离（io.reasonix.desktop）、启动黑框闪现与窗口几何持久化，统一聊天记录的历史快照与实时事件投影，修复长内容溢出聊天面板与展开终端卡命令显示、逐模型 max_output_tokens 覆盖被静默丢弃、deepseek-flash 别名缺少思考深度控制、WSL 复制中文乱码等问题。桌面端自 v1.38.5 起迁移至 Electron，并在此前版本加入 DeepSeek V4.1 Flash 图片输入、OpenCode Go 提供商预设与跨桌面/远程会话的持久工具恢复；官方说明 v1.38.4 未公开发布，v1.38.7 包含 v1.38.3 以来全部改动。",
+    "verify_notes": "GitHub Releases API 确认 v1.38.7（CLI）与 desktop-v1.38.7 均于 2026-09-11 发布、非预发布；scrape_price 命中 GitHub 通用导航（success=false），MIT 开源免费无价格变化，price 字段未动。",
+    "verified_price": "免费开源（MIT 协议）；实际支出为 DeepSeek API token 用量，无订阅档位",
+    "price_verified": true,
+    "content_flags": "长文与 FAQ 未写具体版本号，无过时事实；description 已同步至 v1.38.7 | 过时事实定点替换 1 处",
+    "verified_faq": [
+        {
+            "question": "DeepSeek-Reasonix 是 DeepSeek 官方出的工具吗？",
+            "answer": "不是。它是 GitHub 上由 esengine 维护的第三方开源项目（仓库 esengine/DeepSeek-Reasonix，MIT 协议），只是深度对接了 DeepSeek 的 API 与 prefix-cache 特性，并非 DeepSeek 官方产品。"
+        },
+        {
+            "question": "Reasonix 怎么降低使用成本？",
+            "answer": "它围绕 DeepSeek 稳定的 prefix-cache 设计了 append-only 的运行循环，上下文只追加不重排，从而在长会话里维持较高的缓存命中率，减少重复上下文带来的输入 token 开销。此外它默认走低成本迭代路径，只在需要时才切更强的推理档位。"
+        },
+        {
+            "question": "怎么安装 Reasonix？",
+            "answer": "三种方式：`npx reasonix code` 直接试用；`npm i -g reasonix@next` 装成全局命令；或通过 Homebrew 安装。官方也提供桌面客户端下载。想用 Go 重写的 1.0 版本请跟随 main-v2 分支。"
+        },
+        {
+            "question": "它会不会直接改我的代码？",
+            "answer": "可以先关掉写权限。执行 `/plan on` 进入只读规划模式，Agent 会先给出方案供你审阅，确认后才执行写入；风险改动、命令执行与写入边界都会要求二次确认。"
+        }
+    ],
+    "published_date": "2026-09-12"
 }

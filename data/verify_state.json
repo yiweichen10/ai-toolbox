@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-09-11",
+    "updated": "2026-09-12",
     "total": 674
   },
   "tools": {
@@ -6778,9 +6778,9 @@
       "priority": 80,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-08",
+      "verified_at": "2026-09-12",
       "confidence": "high",
-      "notes": "GitHub 发布标签检测证实；官方说明为补丁汇总版，列出概括性改动方向，不编造具体特性"
+      "notes": "GitHub Releases API 确认 v2026.9.11（v0.21.2）2026-09-11 发布、非预发布；scrape_price 返回的金额文本是官网营销文案（$5 VPS），非产品价，开源免费价格未变，price 字段未动。"
     },
     "microsoft-agent-framework": {
       "name": "Microsoft Agent Framework",
@@ -6883,14 +6883,14 @@
     },
     "cloudflare-computer": {
       "name": "Cloudflare Computer",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI智能体",
       "priority": 60,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-12",
+      "confidence": "high",
+      "notes": "版本依据 GitHub Releases API（0.3.0，2026-09-11，非预发布）；许可证与 stars 依据 GitHub Repo API（license=MIT，stargazers 9157）；scrape_price success=false（GitHub 无价表），price 改按官方 LICENSE 更正为「开源免费（MIT 协议）」。"
     },
     "tencentdb-agent-memory": {
       "name": "TencentDB-Agent-Memory",
@@ -6954,20 +6954,20 @@
       "priority": 130,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-09-11",
+      "verified_at": "2026-09-12",
       "confidence": "high",
-      "notes": "GitHub release 证实 v1.38.5 为稳定版（2026-09-11 发布，官方明确 v1.38.4 未公开发布），Release 摘要逐字引用；开源免费无变化（scrape_price 命中 GitHub 通用导航无价表），价格字段未动。"
+      "notes": "GitHub Releases API 确认 v1.38.7（CLI）与 desktop-v1.38.7 均于 2026-09-11 发布、非预发布；scrape_price 命中 GitHub 通用导航（success=false），MIT 开源免费无价格变化，price 字段未动。"
     },
     "kiro-crew": {
       "name": "Kiro Crew",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 110,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-12",
+      "confidence": "high",
+      "notes": "版本依据 GitHub Releases API（v0.6.0，2026-09-11，非预发布，此前的 insider 预览通道已被正式版取代）；价格经无头浏览器抓取 kiro.dev/pricing 真值核对，套餐与 credit 单价与页面现有文案完全一致，price 字段未改。"
     },
     "capacity-desktop": {
       "name": "Capacity Desktop",

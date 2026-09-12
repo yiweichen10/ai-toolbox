@@ -5,7 +5,7 @@
   "auto_positioning": false,
   "emoji": "👥",
   "color": "#7C3AED",
-  "description": "Kiro Crew 是 AWS 于 2026 年 8 月 4 日以 Apache 2.0 开源的持久化 Agent 开发工作空间。它把编程 Agent 从「单次会话里的助手」升级为可 7×24 无人值守运行的队友：跨会话保留上下文、教训与技能，用 cron、Webhook 与心跳自动触发任务，并支持通过桌面端、Web 仪表盘、CLI 以及 Slack、Discord、Telegram 远程操控。底层跑在 kiro-cli 上，最初是 Amazon 内部项目 MeshClaw。",
+  "description": "Kiro Crew 是 AWS 于 2026 年 8 月 4 日以 Apache 2.0 开源的持久化 Agent 开发工作空间。它把编程 Agent 从「单次会话里的助手」升级为可 7×24 无人值守运行的队友：跨会话保留上下文、教训与技能，用 cron、Webhook 与心跳自动触发任务，并支持通过桌面端、Web 仪表盘、CLI 以及 Slack、Discord、Telegram 远程操控。底层跑在 kiro-cli 上，最初是 Amazon 内部项目 MeshClaw。 2026-09-11 发布 v0.6.0：Python 3.12 成为最低要求、安装器自带 pinned CPython；可在 Claude Code / Codex / KAS 之间选择会话 harness（Preview），支持把聊天跑到其他已连接的 crew 上，新增折叠 diff、按 PR/review/issue 搜索会话，单个 chat turn 上限提升至 4 小时、子 Agent 上限 3 小时 / 1000 次工具调用，无人值守 plan 默认 2 小时封顶。",
   "category": "AI编程",
   "tags": [
     {
@@ -39,7 +39,7 @@
   ],
   "cons": [
     "模型推理绑定 Kiro 账号与 credits 套餐，定时任务的每次唤醒都是计费决策，成本容易失控",
-    "安装前置较多：需 Python 3.10+、已登录的 kiro-cli，首次启动还要拉约 610MB 的嵌入模型",
+    "安装前置较多：v0.6.0 起需 Python 3.12+、已登录的 kiro-cli，首次启动还要拉约 610MB 的嵌入模型",
     "面向工程团队，配置 Gateway、沙箱与审批策略有一定学习成本，不适合轻量尝鲜"
   ],
   "features": [
@@ -48,14 +48,20 @@
     "无人值守调度：时区感知 cron 任务、带鉴权 Webhook、PR 与部署心跳、检查点与失败重试",
     "多 Agent 与子 Agent 编排：跨仓库分派任务，把单次会话装不下的大工程拆开推进",
     "专用 Apps：Issue Radar、Task Runner、DevFleets 等把重复工作封装进合适的界面",
-    "多端接入：桌面应用、Web 仪表盘（默认 localhost:5476）、CLI，以及 Slack / Discord / Telegram / 企业微信"
+    "多端接入：桌面应用、Web 仪表盘（默认 localhost:5476）、CLI，以及 Slack / Discord / Telegram / 企业微信",
+    "可选会话 harness（v0.6.0 Preview）：在 Claude Code / Codex / KAS 之间选择 Agent 后端，监控循环、项目变更、跟进卡与对话重置在各后端均可工作",
+    "远程 crew 仪表盘（v0.6.0 Preview）：把聊天跑在其他已连接 crew 上，会话带服务器徽标与 crew 名，按 tab 焦点自动连接",
+    "更克制的聊天界面（v0.6.0）：diff 默认折叠为文件 +N/-M 芯片、草图板与分享为图片、输入区显示分支与未提交文件数",
+    "长任务上限提升（v0.6.0）：单个 chat turn 由 7200 秒升至 14400 秒，子 Agent 由 1800 秒升至 10800 秒、最大轮次由 200 升至 1000",
+    "Python 3.12 最低要求（v0.6.0）：安装器自带 pinned CPython，需沿用系统解释器时用 --system-python",
+    "无人值守防护（v0.6.0）：auto-run plan 默认 2 小时封顶（orchestrator.max_plan_duration_seconds），命令门禁改由沙箱 bind masks 承担（agent.sandbox 不应为 off）"
   ],
   "related": [
     "claude-code",
     "openclaw",
     "agent-skills"
   ],
-  "content": "## Kiro Crew是什么？\n\nKiro Crew 是 AWS 在 2026 年 8 月 4 日以 Apache 2.0 协议开源的持久化 Agent 开发工作空间。它解决的问题很具体：普通编程 Agent 活在一次会话里，进程一退什么都忘，任何跨越一个坐班时段的活儿都得手动重启一遍。Crew 把记忆、调度、审批和进行中的任务状态都存在一个本地 Gateway 里，所以周二下午开的活，周三早上还能在往前推。\n\n来路也挺有意思。它最初是 Amazon 内部三位工程师的业余项目，叫 MeshClaw，动机就是「启动一个任务、走开、回来看到可 review 的产出」。AWS 说它在不到半年里被超过 3.9 万名 Amazon 开发者采用，约 500 位贡献者、周均 143 次提交——正是这种自发采用促成了开源。2026 年 8 月 5 日它上了 Product Hunt，拿到 191 票、日榜第六，站内 10 条评价平均 5.0 分。\n\n## 核心功能\n\n1. Gateway 三层架构。Gateway 负责消息路由、状态持久化、会话管理、审批、记忆与安全策略；Agent Sessions 是隔离的对话或任务上下文；ACP Runtime 通过 Agent Client Protocol 驱动 kiro-cli。工具挂载走 MCP，两个都是开放标准。\n2. 自学习记忆。存的东西分得很细：偏好、活跃项目、教训（lessons）、技能（skills）和知识图谱。你说一句「标记任务完成前必须先跑 lint」，它会永久记住；失败经验会沉淀成教训影响后续行为；重复模式会被合成为可复用技能。关键是这些都能在仪表盘里看、改、删、限定范围，而不是黑盒。\n3. 无人值守调度。时区感知的 cron、带鉴权的 Webhook、PR 与部署心跳监控、检查点与失败重试。这套组合才让「关掉笔记本任务照跑」成立。\n4. 多 Agent 与子 Agent 编排。跨仓库分派，专门对付单次会话装不下的迁移、批量 review 这类工程。\n5. 专用 Apps 与多端接入。Issue Radar、Task Runner、DevFleets 等把重复工作封装进合适界面；入口有桌面应用、Web 仪表盘（默认 localhost:5476）、CLI，以及 Slack、Discord、Telegram、企业微信。\n6. 七层纵深防护。OS 沙箱、命令默认拒绝、凭据脱敏、签名审计日志、交互式审批——全开源，每一层你都能自己核验。\n\n## 版本/套餐对比\n\n软件本体免费，Apache 2.0，跑在你自己的硬件上，不需要 AWS 账号，也不依赖 AWS 托管控制平面。但 Agent 推理要走 Kiro 账号，按 credits 计费：Free 档 $0 给 50 credits，Pro $20 给 1,000，Pro+ $40 给 2,000，Pro Max $100 给 5,000，Power $200 给 10,000，额外 credit 单价 $0.04。这里有个容易被忽略的点——定时或后台任务发出的模型请求，和你在 IDE 里手敲一样计费。只跑脚本、不调模型的步骤不花钱，但一个每十五分钟唤醒 Agent 的 cron，本质上是笔预算决定，不只是一行配置。\n\n前置条件也要提前算：Python 3.10 以上、一个已经 `kiro-cli login` 过的 CLI（这是 Agent 后端，不是可选项，漏了会报看起来像网络问题的 ACP 超时）；Node 20/22+ 只在你要从源码构建仪表盘时才需要。首次启动记忆检索会拉 Qwen3-Embedding-0.6B，约 610MB，磁盘和等待时间都要留出来，下载完成前搜索是空的，属正常。\n\n## 值不值得用？\n\n方向上我认为它站对了。2026 年 Agent 工具的竞争重心明显从「单轮多聪明」转向「跨会话能不能接着干」，Crew 把记忆、调度、审批做成了基础设施而不是插件，还配了七层安全和完整审计——这是做给真实工程团队的，不是 demo。开源加自托管也意味着你能自己看清每一层在干什么。\n\n要掂量的是三件事：一是成本模型，无人值守很爽，但计费按模型调用走，cron 频率设错账单会很难看；二是安装门槛，Python、kiro-cli 登录、610MB 嵌入模型、Gateway 常驻服务，都不是五分钟能搞完的；三是它绑 Kiro 生态，推理必须走 Kiro 账号，不像 Goose 那样随便换供应商。\n\n## 使用建议\n\n1. 先 `kiro-cli login`，再装 Crew。顺序反了会遇到看起来像网络故障的超时错误。\n2. 第一个实验挑轻的：比如早间 PR 摘要，花两三个 credits 就能验证链路，别一上来就配长任务迁移。\n3. cron 频率从保守值起步。每十五分钟唤醒一次 Agent 前，先算一遍月度 credits。\n4. 认真读一遍沙箱和审批设置，再决定你愿意让它在你睡觉时做什么。\n5. 用仪表盘定期清理记忆和技能。学错的东西会一直生效，这是双刃剑。\n6. 如果你已经在用 OpenClaw、Hermes 这类平台的 skills，可以直接拿过来——官方说无需修改即可运行。\n\n## 适合谁用？\n\n推荐：需要跨会话推进的工程团队——大规模迁移、周期性 review、PR 监控、跨仓库故障排查这类活儿，尤其是能接受自托管一台常驻机器的团队。\n可考虑：已经在用 Kiro CLI、想给它加一层持久编排的开发者；以及想研究 Agent 基建架构的技术团队。\n不推荐：只想要一个会话内代码助手的个人用户；对 credits 计费敏感、需要成本完全可预测的场景；以及不愿绑定 Kiro 生态、坚持模型中立的团队。",
+  "content": "## Kiro Crew是什么？\n\nKiro Crew 是 AWS 在 2026 年 8 月 4 日以 Apache 2.0 协议开源的持久化 Agent 开发工作空间。它解决的问题很具体：普通编程 Agent 活在一次会话里，进程一退什么都忘，任何跨越一个坐班时段的活儿都得手动重启一遍。Crew 把记忆、调度、审批和进行中的任务状态都存在一个本地 Gateway 里，所以周二下午开的活，周三早上还能在往前推。\n\n来路也挺有意思。它最初是 Amazon 内部三位工程师的业余项目，叫 MeshClaw，动机就是「启动一个任务、走开、回来看到可 review 的产出」。AWS 说它在不到半年里被超过 3.9 万名 Amazon 开发者采用，约 500 位贡献者、周均 143 次提交——正是这种自发采用促成了开源。2026 年 8 月 5 日它上了 Product Hunt，拿到 191 票、日榜第六，站内 10 条评价平均 5.0 分。\n\n## 核心功能\n\n1. Gateway 三层架构。Gateway 负责消息路由、状态持久化、会话管理、审批、记忆与安全策略；Agent Sessions 是隔离的对话或任务上下文；ACP Runtime 通过 Agent Client Protocol 驱动 kiro-cli。工具挂载走 MCP，两个都是开放标准。\n2. 自学习记忆。存的东西分得很细：偏好、活跃项目、教训（lessons）、技能（skills）和知识图谱。你说一句「标记任务完成前必须先跑 lint」，它会永久记住；失败经验会沉淀成教训影响后续行为；重复模式会被合成为可复用技能。关键是这些都能在仪表盘里看、改、删、限定范围，而不是黑盒。\n3. 无人值守调度。时区感知的 cron、带鉴权的 Webhook、PR 与部署心跳监控、检查点与失败重试。这套组合才让「关掉笔记本任务照跑」成立。\n4. 多 Agent 与子 Agent 编排。跨仓库分派，专门对付单次会话装不下的迁移、批量 review 这类工程。\n5. 专用 Apps 与多端接入。Issue Radar、Task Runner、DevFleets 等把重复工作封装进合适界面；入口有桌面应用、Web 仪表盘（默认 localhost:5476）、CLI，以及 Slack、Discord、Telegram、企业微信。\n6. 七层纵深防护。OS 沙箱、命令默认拒绝、凭据脱敏、签名审计日志、交互式审批——全开源，每一层你都能自己核验。\n\n## 版本/套餐对比\n\n软件本体免费，Apache 2.0，跑在你自己的硬件上，不需要 AWS 账号，也不依赖 AWS 托管控制平面。 截至 2026 年 9 月 11 日的最新稳定版为 v0.6.0：Python 3.12 成为最低要求、可切换 Claude Code / Codex / KAS 作为会话 harness、支持把聊天跑在远程 crew 上，并把单个 chat turn 上限提到 4 小时。但 Agent 推理要走 Kiro 账号，按 credits 计费：Free 档 $0 给 50 credits，Pro $20 给 1,000，Pro+ $40 给 2,000，Pro Max $100 给 5,000，Power $200 给 10,000，额外 credit 单价 $0.04。这里有个容易被忽略的点——定时或后台任务发出的模型请求，和你在 IDE 里手敲一样计费。只跑脚本、不调模型的步骤不花钱，但一个每十五分钟唤醒 Agent 的 cron，本质上是笔预算决定，不只是一行配置。\n\n前置条件也要提前算：Python 3.12 以上（v0.6.0 起 3.12 成为最低要求，安装器会自带 pinned CPython）、一个已经 `kiro-cli login` 过的 CLI（这是 Agent 后端，不是可选项，漏了会报看起来像网络问题的 ACP 超时）；Node 20/22+ 只在你要从源码构建仪表盘时才需要。首次启动记忆检索会拉 Qwen3-Embedding-0.6B，约 610MB，磁盘和等待时间都要留出来，下载完成前搜索是空的，属正常。\n\n## 值不值得用？\n\n方向上我认为它站对了。2026 年 Agent 工具的竞争重心明显从「单轮多聪明」转向「跨会话能不能接着干」，Crew 把记忆、调度、审批做成了基础设施而不是插件，还配了七层安全和完整审计——这是做给真实工程团队的，不是 demo。开源加自托管也意味着你能自己看清每一层在干什么。\n\n要掂量的是三件事：一是成本模型，无人值守很爽，但计费按模型调用走，cron 频率设错账单会很难看；二是安装门槛，Python、kiro-cli 登录、610MB 嵌入模型、Gateway 常驻服务，都不是五分钟能搞完的；三是它绑 Kiro 生态，推理必须走 Kiro 账号，不像 Goose 那样随便换供应商。\n\n## 使用建议\n\n1. 先 `kiro-cli login`，再装 Crew。顺序反了会遇到看起来像网络故障的超时错误。\n2. 第一个实验挑轻的：比如早间 PR 摘要，花两三个 credits 就能验证链路，别一上来就配长任务迁移。\n3. cron 频率从保守值起步。每十五分钟唤醒一次 Agent 前，先算一遍月度 credits。\n4. 认真读一遍沙箱和审批设置，再决定你愿意让它在你睡觉时做什么。\n5. 用仪表盘定期清理记忆和技能。学错的东西会一直生效，这是双刃剑。\n6. 如果你已经在用 OpenClaw、Hermes 这类平台的 skills，可以直接拿过来——官方说无需修改即可运行。\n\n## 适合谁用？\n\n推荐：需要跨会话推进的工程团队——大规模迁移、周期性 review、PR 监控、跨仓库故障排查这类活儿，尤其是能接受自托管一台常驻机器的团队。\n可考虑：已经在用 Kiro CLI、想给它加一层持久编排的开发者；以及想研究 Agent 基建架构的技术团队。\n不推荐：只想要一个会话内代码助手的个人用户；对 credits 计费敏感、需要成本完全可预测的场景；以及不愿绑定 Kiro 生态、坚持模型中立的团队。",
   "published": true,
   "faq": [
     {
@@ -86,13 +92,58 @@
     "Kiro Crew收费吗"
   ],
   "source_urls": [
-    "https://github.com/kirodotdev/KiroCrew",
-    "https://www.rabinarayanpatra.com/blogs/how-to-set-up-kiro-crew-unattended-coding-tasks",
-    "https://www.aib.vote/en/news/aws-kiro-crew-agent-orchestrator",
-    "https://www.hunted.space/product/kiro"
+    "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.6.0",
+    "https://kiro.dev/pricing/"
   ],
   "confidence": "high",
   "created_date": "2026-08-14",
-  "updated_date": "2026-08-14",
-  "published_date": "2026-09-04"
+  "updated_date": "2026-09-12",
+  "published_date": "2026-09-04",
+  "verified_url": "https://github.com/kirodotdev/KiroCrew",
+  "verified_publisher": "AWS (kirodotdev)",
+  "verified_what": "AWS 开源的持久化 Agent 开发工作空间（Apache 2.0），跨会话保留记忆与调度，7×24 无人值守；最新 v0.6.0",
+  "verified_price": "本体免费开源（Apache 2.0，自托管）；模型推理走 Kiro 账号：Free $0（50 credits）、Pro $20（1,000）、Pro+ $40（2,000）、Pro Max $100（5,000）、Power $200（10,000），附加 credit $0.04/个",
+  "verified_platform": "macOS / Linux / Windows（本机、Docker、EC2 等；入口含桌面应用、Web 仪表盘、CLI、Slack、Discord、Telegram、企业微信）；v0.6.0 起要求 Python 3.12+",
+  "last_verified": "2026-09-12",
+  "verified_features": [
+    "Gateway 架构：三层设计（Gateway / Agent Sessions / ACP Runtime），Gateway 负责路由、状态持久化、会话、审批、记忆与安全策略",
+    "自学习记忆系统：存偏好、活跃项目、教训、技能与知识图谱，且用户可检查、编辑、删除并限定作用域",
+    "无人值守调度：时区感知 cron 任务、带鉴权 Webhook、PR 与部署心跳、检查点与失败重试",
+    "多 Agent 与子 Agent 编排：跨仓库分派任务，把单次会话装不下的大工程拆开推进",
+    "专用 Apps：Issue Radar、Task Runner、DevFleets 等把重复工作封装进合适的界面",
+    "多端接入：桌面应用、Web 仪表盘（默认 localhost:5476）、CLI，以及 Slack / Discord / Telegram / 企业微信",
+    "可选会话 harness（v0.6.0 Preview）：在 Claude Code / Codex / KAS 之间选择 Agent 后端，监控循环、项目变更、跟进卡与对话重置在各后端均可工作",
+    "远程 crew 仪表盘（v0.6.0 Preview）：把聊天跑在其他已连接 crew 上，会话带服务器徽标与 crew 名，按 tab 焦点自动连接",
+    "更克制的聊天界面（v0.6.0）：diff 默认折叠为文件 +N/-M 芯片、草图板与分享为图片、输入区显示分支与未提交文件数",
+    "长任务上限提升（v0.6.0）：单个 chat turn 由 7200 秒升至 14400 秒，子 Agent 由 1800 秒升至 10800 秒、最大轮次由 200 升至 1000",
+    "Python 3.12 最低要求（v0.6.0）：安装器自带 pinned CPython，需沿用系统解释器时用 --system-python",
+    "无人值守防护（v0.6.0）：auto-run plan 默认 2 小时封顶（orchestrator.max_plan_duration_seconds），命令门禁改由沙箱 bind masks 承担（agent.sandbox 不应为 off）"
+  ],
+  "verified_description": "Kiro Crew 是 AWS 于 2026 年 8 月 4 日以 Apache 2.0 开源的持久化 Agent 开发工作空间。它把编程 Agent 从「单次会话里的助手」升级为可 7×24 无人值守运行的队友：跨会话保留上下文、教训与技能，用 cron、Webhook 与心跳自动触发任务，并支持通过桌面端、Web 仪表盘、CLI 以及 Slack、Discord、Telegram 远程操控。底层跑在 kiro-cli 上，最初是 Amazon 内部项目 MeshClaw。 2026-09-11 发布 v0.6.0：Python 3.12 成为最低要求、安装器自带 pinned CPython；可在 Claude Code / Codex / KAS 之间选择会话 harness（Preview），支持把聊天跑到其他已连接的 crew 上，新增折叠 diff、按 PR/review/issue 搜索会话，单个 chat turn 上限提升至 4 小时、子 Agent 上限 3 小时 / 1000 次工具调用，无人值守 plan 默认 2 小时封顶。",
+  "content_flags": "长文两处过时事实已定点替换（Python 最低版本、版本/套餐对比未写版本号） | 过时事实定点替换 2 处",
+  "verified_faq": [
+    {
+      "question": "Kiro Crew 是免费的吗？",
+      "answer": "软件本体免费。Kiro Crew 以 Apache 2.0 开源、自托管运行，不需要 AWS 账号。但 Agent 的模型推理需要 Kiro 账号并消耗 credits，官方套餐为 Free $0（50 credits）、Pro $20（1,000）、Pro+ $40（2,000）、Pro Max $100（5,000）、Power $200（10,000），额外 credit $0.04/个。"
+    },
+    {
+      "question": "Kiro Crew 和普通编程 Agent 有什么区别？",
+      "answer": "普通编程 Agent 活在一次会话里，进程退出即失忆。Kiro Crew 是持久化工作空间，把记忆、调度、审批和进行中的任务状态存在本地 Gateway，Gateway 重启后仍可恢复，所以任务可以跨天、跨会话持续推进，也能在你关掉笔记本时继续跑。"
+    },
+    {
+      "question": "安装 Kiro Crew 需要什么前置条件？",
+      "answer": "需要 Python 3.10 或更高版本、一个已通过 `kiro-cli login` 认证的 kiro-cli（它是 Agent 后端，不是可选项），以及一台你愿意让它常驻运行的机器。Node.js 20/22+ 只在从源码构建仪表盘时才需要。首次启动记忆检索会下载约 610MB 的 Qwen3-Embedding-0.6B 模型。"
+    },
+    {
+      "question": "Kiro Crew 支持哪些远程操控方式？",
+      "answer": "装好一个 Gateway 后，可通过桌面应用、Web 仪表盘（默认 localhost:5476）、CLI，以及 Slack、Discord、Telegram、企业微信等聊天渠道接入；Gateway 本身可跑在 Mac、Docker 容器或 EC2 等云主机上。"
+    }
+  ],
+  "price_verified": true,
+  "verified_cons": [
+    "模型推理绑定 Kiro 账号与 credits 套餐，定时任务的每次唤醒都是计费决策，成本容易失控",
+    "安装前置较多：v0.6.0 起需 Python 3.12+、已登录的 kiro-cli，首次启动还要拉约 610MB 的嵌入模型",
+    "面向工程团队，配置 Gateway、沙箱与审批策略有一定学习成本，不适合轻量尝鲜"
+  ],
+  "verify_notes": "版本依据 GitHub Releases API（v0.6.0，2026-09-11，非预发布，此前的 insider 预览通道已被正式版取代）；价格经无头浏览器抓取 kiro.dev/pricing 真值核对，套餐与 credit 单价与页面现有文案完全一致，price 字段未改。"
 }
