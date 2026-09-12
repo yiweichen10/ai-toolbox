@@ -541,7 +541,8 @@ cd "$LOCAL_DIR"
 # 2026-08-29 扩白名单：纳入构建辅助脚本与项目规则文件（原白名单只含 build.py + build_lib/，
 # 导致 seo_title_helper.py / publish_new_tools.py / AGENTS.md / .gitignore 的改动永不进 git，
 # 踩「无 git 不可回滚」血泪教训）。精准补路径，不用 git add -A（会误提交 scratch 文件）。
-git add data/live_data.json data/ranking_data.json data/subcategories.json data/_latest_infographic.json data/homepage_picks.json data/picks_candidates.json data/picks_history.json index.html live/ ranking/ scripts/build.py scripts/build_lib/ scripts/seo_title_helper.py scripts/publish_new_tools.py AGENTS.md .gitignore data/tools/ data/articles/ 2>/dev/null || true
+git add data/live_data.json data/ranking_data.json data/subcategories.json data/_latest_infographic.json data/homepage_picks.json data/picks_candidates.json data/picks_history.json index.html live/ ranking/ scripts/build.py scripts/build_lib/ scripts/seo_title_helper.py scripts/publish_new_tools.py scripts/generate_tools.py AGENTS.md .gitignore data/tools/ data/articles/ 2>/dev/null || true
+# 2026-09-12 扩白名单：scripts/generate_tools.py（补库链路，本次修复去重读路径与版本升级误判，改动须能回滚）
 # 2026-09-01 扩白名单：纳入核实/版本治理链路的脚本与报告（同上教训，改动必须能回滚）
 #   verify_tools_batch.py   = 核实结果写回（本次新增 stale_facts 过时事实定点替换）
 #   check_version_drift.py  = 版本漂移巡检（本次修复：去单体化 + FAQ q/a 键名 + desc_drift）

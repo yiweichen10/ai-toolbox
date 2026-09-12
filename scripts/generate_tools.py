@@ -20,7 +20,7 @@ import requests
 
 import sys as _sys, os as _os
 _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'scripts'))
-from data_store import save_tools_batch, save_articles_batch
+from data_store import load_all_tools, save_tools_batch, save_articles_batch
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -512,9 +512,12 @@ def main():
         print(f"Agent验证关键词: {len(keywords_map)} 个工具")
 
     # 读取已有工具
-    existing_tools = []
-    if os.path.exists(TOOLS_JSON_PATH):
-        existing_tools = load_all_tools()
+    # 2026-09-12 修复：单体 data/tools.json 已于 2026-08-26 退役删除，原先的
+    # `if os.path.exists(TOOLS_JSON_PATH)` 守卫导致 existing_tools 恒为空 →
+    # 去重（同名/同 slug/相似）全部失效 → 会把已发布的 670 个工具当新工具重生成，
+    # 而 save_tool 无条件覆盖分片，存在"用新生成短文覆盖已发布长文"的事故风险。
+    # 分片才是真源，直接读分片，不再以单体是否存在为条件。
+    existing_tools = load_all_tools()
 
     existing_names = [t["name"] for t in existing_tools]
     existing_slugs = [t["slug"] for t in existing_tools]
@@ -686,6 +689,14 @@ def main():
             # 候选版本必须高于已有版本，否则是降级/误判，跳过以防覆盖成旧版内容
             if new_ver and old_ver and new_ver <= old_ver:
                 print(f"    ⏭️ 跳过降级覆盖: 候选 {new_name}({new_ver}) 不高于已有 {old_name}({old_ver})，不写旧版内容")
+                continue
+            # === 2026-09-12 加固：只认"双方都有版本号且候选更高"的真升级 ===
+            # 背景：is_duplicate_tool 会把「命名变体」误判为版本升级，例如
+            # Descript AI→Descript、OpusClip→Opus Clip、Coze智能体（扣子）→扣子Coze。
+            # 该分支会 LLM 重生成内容并把 published / content_verified 置 False，
+            # 等于让已发布工具的线上页面直接消失（且被新草稿覆盖）。真升级必须带更高版本号。
+            if not (new_ver and old_ver and new_ver > old_ver):
+                print(f"    ⏭️ 跳过非版本升级（命名变体或无法比对版本）: {old_name} → {new_name}，已发布内容保持不动")
                 continue
 
             # 收集同品牌所有已知版本（用于"版本演进对比"小节）
