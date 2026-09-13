@@ -21,6 +21,38 @@ sys.path.insert(0, os.path.join(BASE_DIR, "scripts"))
 # 2026-09-13 修：单体 data/tools.json 已于 2026-08-26 退役，本脚本原先直接读单体 →
 # 每次运行必 FileNotFoundError（"文档改了、脚本没跟上"的漏网）。改为分片真源 + data_store 写回。
 from data_store import load_all_tools, save_tool  # noqa: E402
+# 2026-09-13 修：本脚本原文用 abs(hash(slug)) % n 选模板，与 seo_title_helper 里
+# 2026-08-29 已修掉的反模式相同——str hash 受 PYTHONHASHSEED 随机化影响，
+# 同一 slug 每次进程选中的模板都不同 → 每次运行写回不同 positioning（违反
+# AGENTS.md 硬性规则 4「构建必须稳定可复现」）。改用跨进程恒定的 _stable_idx。
+from seo_title_helper import _stable_idx  # noqa: E402
+
+# positioning 总长上限（与 seo_title_helper._quality_fix 的 26 字上限一致）
+POS_LIMIT = 26
+
+# 单功能退化模板：两功能拼不下时使用，保证语义完整、不切词
+SINGLE_FREE_TPLS = [
+    "免费{label}：{f1}",
+    "免费{label}，{f1}好用吗",
+    "{f1}：免费{label}怎么用",
+    "免费{label}推荐：{f1}",
+]
+SINGLE_NOFREE_TPLS = [
+    "{label}：{f1}",
+    "{label}推荐：{f1}",
+    "{f1}，{label}实测",
+    "{label}怎么用？{f1}",
+]
+
+
+def _clip(s, n):
+    """收缩纯英文片段：只在空格边界收缩，找不到边界就返回空串（绝不切单词）。"""
+    s = (s or "").strip()
+    if len(s) <= n:
+        return s
+    if " " not in s:
+        return ""
+    return s[:n].rsplit(" ", 1)[0].strip().rstrip(" ：:+-、，,。")
 
 ORG_PAT = re.compile(
     r"(推出的|旗下的|开发的|发布的|打造的|开源的|来自|由 .*?(推出|开发|发布|打造))"
@@ -38,20 +70,38 @@ CAT_SHORT = {
 }
 
 
-def _short_feat(feat):
-    """取功能名（去掉括号注释与冒号后细节），≤10 字且不截断英文单词。"""
+_SEG_SPLIT = re.compile(r"[：:（(）)、，,/|｜+＋~～;；]")
+
+
+def _short_feat(feat, limit=10):
+    """取功能名：只取「完整片段」，绝不把中文词切成半截（2026-09-13 治本修复）。
+
+    原实现超长一律 s[:10] 硬切，且只保护英文单词边界 → 中文功能名被切成
+    "官方直播与线" / "紧" / "需自备" 这类半截词，拼进 positioning 后就是
+    语义残缺的标题（实测 95 个工具命中）。
+    现在：按分隔符切片段，按原顺序取第一个长度合适的完整片段；
+    没有合适片段就返回 None —— 宁可不生成，也不生成半截词。
+    """
     s = re.split(r"[（(]", feat)[0].strip()
-    s = re.split(r"[:：]", s)[0].strip()          # "Agent 构建：赋能..." → "Agent 构建"
     s = s.strip(" ：:+-、，,。")
-    if len(s) > 10:
-        cut = s[:10]
-        # 英文单词边界保护：若第 11 个字符是英文字母/数字（单词被从中间切断），回退到最近空格
-        if len(s) > 10 and (s[10].isascii() and (s[10].isalpha() or s[10].isdigit())):
-            sp = cut.rfind(" ")
-            if sp > 2:
-                return cut[:sp].rstrip(" ：:+-、，,。")
-        return cut.rstrip(" ：:+-、，,。")
-    return s
+    if not s:
+        return None
+    segs = [x.strip(" ：:+-、，,。") for x in _SEG_SPLIT.split(s)]
+    segs = [x for x in segs if x]
+    if not segs:
+        return None
+    for c in segs:                      # 原顺序优先，保留主功能名的语义权重
+        if not re.search(r"[\u4e00-\u9fffA-Za-z]", c):
+            continue                    # 纯数字/符号片段（"500"、"12"）不是功能名
+        if 2 <= len(c) <= limit:
+            return c
+    # 无 ≤limit 的完整片段：纯英文片段可按单词边界安全收缩，中文片段直接放弃
+    shortest = min(segs, key=len)
+    if shortest.isascii():
+        clipped = _clip(shortest, limit)
+        if 2 <= len(clipped) <= limit:
+            return clipped
+    return None
 
 
 def _pick_feats(feats):
@@ -63,7 +113,7 @@ def _pick_feats(feats):
             break
         for f in feats:
             s = _short_feat(f)
-            if not (2 <= len(s) <= max_len) or s in picked:
+            if not s or not (2 <= len(s) <= max_len) or s in picked:
                 continue
             en_words = re.findall(r"[A-Za-z0-9+/._-]{6,}", s)
             if max_en and any(len(w) > max_en for w in en_words):
@@ -85,8 +135,9 @@ def auto_positioning(tool):
         return None
     label = CAT_SHORT.get(cat, "AI工具")
     f1 = shorts[0]
-    f2 = shorts[1] if len(shorts) > 1 else shorts[0]
+    f2 = shorts[1] if len(shorts) > 1 else None
     slug = tool.get("slug", "")
+    positive = "免费" in price
     # 多句式轮询：避免全站 "免费X：A+B" 单一模板（2026-08-07 模板化风险修复）
     free_tpls = [
         "免费{label}：{f1}+{f2}",
@@ -100,20 +151,22 @@ def auto_positioning(tool):
         "{f1}+{f2}，{label}实测",
         "{label}怎么用？{f1}+{f2}",
     ]
-    if "免费" in price:
-        tpl = free_tpls[abs(hash(slug)) % len(free_tpls)]
-    else:
-        tpl = nofree_tpls[abs(hash(slug)) % len(nofree_tpls)]
-    pos = tpl.format(label=label, f1=f1, f2=f2)
-    # 总长 ≤26 兜底（英文保护：不截断英文单词）
-    if len(pos) > 26:
-        cut = pos[:26]
-        if len(pos) > 26 and (pos[26].isascii() and (pos[26].isalpha() or pos[26].isdigit())):
-            sp = cut.rfind(" ")
-            if sp > 4:
-                return cut[:sp].rstrip(" ：:+-、，,。")
-        return cut.rstrip(" ：:+-、，,。")
-    return pos
+    two = free_tpls if positive else nofree_tpls
+    one = SINGLE_FREE_TPLS if positive else SINGLE_NOFREE_TPLS
+    # 1) 两功能模板：装得下就用（信息量最大）
+    if f2:
+        tpl = two[_stable_idx(slug, len(two))]
+        pos = tpl.format(label=label, f1=f1, f2=f2)
+        if len(pos) <= POS_LIMIT:
+            return pos
+    # 2) 装不下 → 丢掉第二个功能，用单功能模板（绝不切词）
+    otpl = one[_stable_idx(slug, len(one))]
+    pos = otpl.format(label=label, f1=f1)
+    if len(pos) <= POS_LIMIT:
+        return pos
+    # 3) 兜底：分类话术尾（整词，语义完整）
+    fallback = ("免费" if positive else "") + label
+    return fallback if len(fallback) <= POS_LIMIT else label
 
 
 def classify(tool):
