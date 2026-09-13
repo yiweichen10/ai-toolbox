@@ -1,0 +1,152 @@
+{
+  "name": "ponytail",
+  "slug": "ponytail",
+  "emoji": "✂️",
+  "color": "#7C3AED",
+  "description": "ponytail 是一个把 YAGNI 检查（「这段代码真的该存在吗」）变成 AI agent 落笔前固定步骤的开源 skill。它以 Claude Code / Cursor skill 的形式分发，兼容 20 种 agent。作者用真实 agentic 会话做了基准测试（Claude Code 完成 12 个 feature 工单，Haiku 4.5，n=4），结果显示代码量降 54%、token 降 22%、成本降 20%、耗时降 27%，安全性 100%。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "YAGNI"
+    },
+    {
+      "text": "Agent Skill"
+    },
+    {
+      "text": "代码精简",
+      "type": "free"
+    },
+    {
+      "text": "Claude Code"
+    },
+    {
+      "text": "开源"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/DietrichGebert/ponytail",
+  "price": "开源免费（MIT）",
+  "platform": "多 agent 插件/skill（Claude Code/Cursor/Codex 等 20+ 平台）",
+  "pros": [
+    "把「这段代码真的该存在吗」的 YAGNI 检查前置为 agent 落笔前的固定步骤，从源头减少冗余代码",
+    "真实 agentic 会话基准显示：代码量降 54%、token 降 22%、成本降 20%、耗时降 27%",
+    "安全性表现 100%，没有因为少写代码而引入安全缺陷",
+    "以 skill 形式分发，兼容 20 种 agent，Claude Code / Cursor 用户可直接接入",
+    "作者主动撤回此前 baseline 有缺陷的 80~94% 省量结论，数据披露态度较为严谨"
+  ],
+  "cons": [
+    "基准测试样本量较小（Claude Code、Haiku 4.5、n=4），结论仍需更大规模验证",
+    "此前的 80~94% 省量结论因 baseline 缺陷被作者撤回，说明早期数据口径存在争议",
+    "需要已经在使用支持 skill 机制的 agent（如 Claude Code / Cursor），对纯手工编码场景帮助有限"
+  ],
+  "features": [
+    "YAGNI 决策阶梯精简代码",
+    "安全红线永不削减",
+    "子代理注入规则集",
+    "ponytail: 注释标记技术债",
+    "支持 20+ agent 平台"
+  ],
+  "related": [
+    "claude-code",
+    "cursor",
+    "agent-skills"
+  ],
+  "faq": [
+    {
+      "question": "ponytail 是做什么的？",
+      "answer": "ponytail 把「这段代码真的该存在吗」这一 YAGNI 检查变成 agent 落笔前的固定步骤，让 AI 编码 agent 在动手写代码前先做必要性判断，从而减少冗余实现。"
+    },
+    {
+      "question": "ponytail 真的能省代码和成本吗？",
+      "answer": "作者用真实 agentic 会话做了基准：Claude Code 完成 12 个 feature 工单、Haiku 4.5、n=4，结果是代码量降 54%、token 降 22%、成本降 20%、耗时降 27%，安全性 100%。需要注意样本量较小，且作者已主动撤回此前 baseline 有缺陷的 80~94% 省量结论。"
+    },
+    {
+      "question": "ponytail 支持哪些工具？",
+      "answer": "它以 Claude Code / Cursor skill 的形式分发，并宣称兼容 20 种 agent，官网仓库为 https://github.com/DietrichGebert/ponytail 。"
+    },
+    {
+      "question": "ponytail 怎么收费？",
+      "answer": "官方来源未公布收费信息，项目以 GitHub 仓库形式分发，价格暂未公开，具体以仓库说明为准。"
+    }
+  ],
+  "seo_keywords": [
+    "ponytail",
+    "ponytail怎么样",
+    "ponytail免费版",
+    "ponytail使用教程",
+    "ponytail和哪个好"
+  ],
+  "content": "## ponytail是什么？\n\n一句话说：它给 AI agent 装了一个\"先别急着写\"的开关。\n\n现在用 Claude Code、Cursor 这类工具写代码，最大的浪费往往不是写错，而是写多——agent 会认认真真给你造出一堆其实根本不需要的抽象层、工具函数、配置文件。ponytail 做的事很简单：把「这段代码真的该存在吗」（也就是 YAGNI 检查）变成 agent 落笔之前的固定步骤，而不是等代码写完再回头删。\n\n它本身不是一个新的编辑器或插件，而是一个以 skill 形式分发的定义文件，Claude Code、Cursor 用户可以直接装进去用，官方说兼容 20 种 agent。项目在 GitHub 上开源（github.com/DietrichGebert/ponytail），2026 年 9 月首发，目前 128,671 stars、本周新增 12,719——这个增长速度说明它踩到了不少人的痛点。\n\n## 核心功能\n\n**1. 落笔前的 YAGNI 检查**\n这是整个项目的核心。agent 在动手写代码之前，先判断这段代码是否真的应该存在。实际用起来的感觉是：它不会让 agent 变\"懒\"，而是让它先停下来问一句。很多冗余代码就是在\"顺手多写一层\"里产生的，前置检查比事后清理便宜得多。\n\n**2. Claude Code skill 分发**\n以 Claude Code 的 skill 形式打包，可以按官方方式安装接入。对于已经在用 Claude Code 的人，几乎没有接入成本，不需要改工作流。\n\n**3. Cursor skill 分发**\n同样提供 Cursor 版本，适配 Cursor 的使用习惯。两个主流工具都覆盖到了，不用为了用它换工具。\n\n**4. 兼容 20 种 agent**\n除了 Claude Code 和 Cursor，还适配了其他 20 种编码 agent。这个数字的实际意义是：如果你用的是比较小众的 agent，也值得先去仓库里翻一眼有没有对应实现，很可能已经有了。\n\n**5. 附带真实 agentic 会话基准数据**\n作者跑了真实的 agentic 会话做基准：Claude Code 完成 12 个 feature 工单，模型用 Haiku 4.5，n=4。结果是代码量降 54%、token 降 22%、成本降 20%、耗时降 27%，安全性 100%——也就是没有因为少写代码而引入安全缺陷。这个数据比同类项目常见的那种\"我本地跑了一下感觉快多了\"要实在。\n\n## 版本/套餐对比\n\n坦白说，这个项目没有传统意义上的\"套餐\"。它是开源仓库分发的 skill 定义，官方也没有公布付费版本或套餐信息。所以更实用的对比是按接入形态来看：\n\n| 接入形态 | 适用环境 | 获取方式 | 价格 |\n|---|---|---|---|\n| Claude Code skill | Claude Code | 从官方仓库安装 skill | 开源仓库分发，价格信息暂未公开 |\n| Cursor skill | Cursor | 从官方仓库安装 skill | 开源仓库分发，价格信息暂未公开 |\n| 其他 agent 适配 | 官方列出的 20 种 agent 生态 | 仓库内查看对应实现 | 开源仓库分发，价格信息暂未公开 |\n| 纯手工编码 | 不涉及 agent | 无对应形态 | — |\n\n需要提醒的是：你得先有一个支持 skill 机制的 agent，这个工具才有落点。\n\n## 值不值得用？\n\n**优点**\n\n- 切入点找得准。把 YAGNI 前置成固定步骤，比事后做代码审查、删冗余要省事，这是从源头减量。\n- 数据是真实 agentic 会话跑出来的，不是合成场景。代码量降 54%、token 降 22%、成本降 20%、耗时降 27%，安全性 100%，四项一起看才有意义——单纯少写代码谁都能做到，关键是安全性没有掉。\n- 覆盖广，Claude Code / Cursor 直接可用，另外兼容 20 种 agent，迁移成本低。\n- 作者主动撤回了此前 baseline 有缺陷的 80~94% 省量结论。这一点我个人比较看重——愿意打自己脸的项目，后续数据可信度通常更高。\n\n**缺点**\n\n- 样本量确实小。Claude Code、Haiku 4.5、n=4，就四个样本。这个量级能说明方向，但不足以下定论，换个模型或换个代码库结果可能不一样。\n- 早期的 80~94% 省量结论被作者自己撤回，说明这个项目的数据口径经历过一次修正。看它后续基准时，最好保持同样的警惕。\n- 门槛在于前置条件：你得已经在用支持 skill 机制的 agent。纯手工写代码的场景，它帮不上忙。\n\n**总体结论**：值得试。它不是那种能改变一切的工具，但思路是对的，接入成本低，数据披露态度也算诚实。如果你每天用 Claude Code 或 Cursor 写业务代码，花十分钟装上试试，收益风险比很高。只是别把 54% 这个数字当成你项目的预期值。\n\n## 使用建议\n\n1. **先在一个真实项目上试，别在 demo 上试。** 这类前置检查的价值在有一定复杂度的代码库里才体现得出来，玩具项目本来也没什么冗余可省。\n2. **关注它\"劝退\"了多少行代码，而不只是总代码量。** 装之前可以记一下当前某个 feature 的产出体量，装之后对比同类任务，感受会更直观。\n3. **别把它当成代码质量的保险。** 安全性 100% 是在那次特定基准里的结果，不代表用了它就自动安全。该做的 review 还是要做。\n4. **去仓库里确认你的 agent 在不在兼容列表里。** 20 种覆盖听起来多，但没对上就是没对上，先看再装。\n5. **顺手把基准方法也读一遍。** 作者连撤回的数据都留着讨论，这种仓库的方法论部分往往比结论更有参考价值。\n\n## 适合谁用？\n\n**推荐**\n\n- 每天用 Claude Code 或 Cursor 写业务代码，且经常要花时间清理 agent 生成的冗余代码的人。\n- 团队里在推 agentic 编码流程、想从源头控制代码膨胀的技术负责人。\n- 对 YAGNI 有认同感、但自己盯不住 agent 别乱写的开发者。\n\n**可考虑**\n\n- 用的是兼容列表里的其他 agent，但还不确定收益是否明显——可以装上看一两周再决定。\n- 项目前期、代码量本身还很小，冗余问题暂时不严重的情况。\n\n**不推荐**\n\n- 基本不用编码 agent、纯手工写代码的人。没有落点，装不了也没意义。\n- 指望靠它一次解决代码质量问题的——它的作用域就是\"少写不该写的代码\"，仅此而已。\n- 需要大规模、多模型验证数据才愿意采纳工具的人。目前 n=4 的基准还不能满足这个要求，可以等后续更大规模的测试出来再看。",
+  "published": false,
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "source_url": "https://github.com/DietrichGebert/ponytail",
+  "verified_url": "https://github.com/DietrichGebert/ponytail",
+  "verified_publisher": "Dietrich Gebert（独立开发者）",
+  "verified_what": "让 AI 编码 agent 遵循 YAGNI 的精简规则插件（最懒资深工程师）",
+  "verified_price": "开源免费（MIT）",
+  "verified_platform": "多 agent 插件/skill（Claude Code/Cursor/Codex 等 20+ 平台）",
+  "verified_features": [
+    "YAGNI 决策阶梯精简代码",
+    "安全红线永不削减",
+    "子代理注入规则集",
+    "ponytail: 注释标记技术债",
+    "支持 20+ agent 平台"
+  ],
+  "verified_description": "让 AI 编码 agent 遵循 YAGNI 的精简规则插件（最懒资深工程师）",
+  "verified_pros": [
+    "把「这段代码真的该存在吗」的 YAGNI 检查前置为 agent 落笔前的固定步骤，从源头减少冗余代码",
+    "真实 agentic 会话基准显示：代码量降 54%、token 降 22%、成本降 20%、耗时降 27%",
+    "安全性表现 100%，没有因为少写代码而引入安全缺陷",
+    "以 skill 形式分发，兼容 20 种 agent，Claude Code / Cursor 用户可直接接入",
+    "作者主动撤回此前 baseline 有缺陷的 80~94% 省量结论，数据披露态度较为严谨"
+  ],
+  "verified_cons": [
+    "基准测试样本量较小（Claude Code、Haiku 4.5、n=4），结论仍需更大规模验证",
+    "此前的 80~94% 省量结论因 baseline 缺陷被作者撤回，说明早期数据口径存在争议",
+    "需要已经在使用支持 skill 机制的 agent（如 Claude Code / Cursor），对纯手工编码场景帮助有限"
+  ],
+  "verified_faq": [
+    {
+      "q": "ponytail 是做什么的？",
+      "a": "ponytail 把「这段代码真的该存在吗」这一 YAGNI 检查变成 agent 落笔前的固定步骤，让 AI 编码 agent 在动手写代码前先做必要性判断，从而减少冗余实现。"
+    },
+    {
+      "q": "ponytail 真的能省代码和成本吗？",
+      "a": "作者用真实 agentic 会话做了基准：Claude Code 完成 12 个 feature 工单、Haiku 4.5、n=4，结果是代码量降 54%、token 降 22%、成本降 20%、耗时降 27%，安全性 100%。需要注意样本量较小，且作者已主动撤回此前 baseline 有缺陷的 80~94% 省量结论。"
+    },
+    {
+      "q": "ponytail 支持哪些工具？",
+      "a": "它以 Claude Code / Cursor skill 的形式分发，并宣称兼容 20 种 agent，官网仓库为 https://github.com/DietrichGebert/ponytail 。"
+    },
+    {
+      "q": "ponytail 怎么收费？",
+      "a": "官方来源未公布收费信息，项目以 GitHub 仓库形式分发，价格暂未公开，具体以仓库说明为准。"
+    }
+  ],
+  "verified_tags": [
+    "YAGNI",
+    "Agent Skill",
+    "代码精简",
+    "Claude Code",
+    "开源"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://github.com/DietrichGebert/ponytail"
+  ],
+  "confidence": "high",
+  "last_verified": "2026-09-14",
+  "created_date": "2026-09-14",
+  "conflict_note": "",
+  "verify_notes": "GitHub API 实测 137,275 stars，候选 heat_signal 写 128,671，星数不符。",
+  "content_flags": "采集期数据与核验时不一致（非内容冲突）：GitHub API 实测 137,275 stars，候选 heat_signal 写 128,671，星数不符。 长文字段（content/faq）未经外部逐条核验，仅短字段已核实。",
+  "positioning": "让AI Agent按YAGNI原则少写代码",
+  "auto_positioning": false
+}

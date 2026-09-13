@@ -63,8 +63,8 @@
   "verified_what": "AI 会议记录与转录工具，实时转录会议音频并生成摘要，支持说话人区分与多平台集成。",
   "verified_price": "Basic 免费（300 转录分钟/月、无限会议、Zoom/Meet/Teams/Slack 集成、3 次终身文件导入）；Pro $8.33/用户/月（年付，约 $99.99/年；1200 应用内录制分钟、10 次月度文件导入、高级模板）；Business $19.99/用户/月（6000 转录分钟/月、4 小时/会议、3 场并发、优先支持）；Enterprise 定制（SSO、HIPAA 等）。",
   "verified_platform": "Web, iOS, Android, 桌面端, API, Chrome 扩展",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-09-13",
+  "confidence": "medium",
   "conflict": false,
   "verified_features": [
     "实时转录",
@@ -111,11 +111,11 @@
   ],
   "verified_category": "AI办公",
   "source_urls": [
-    "https://otter.ai/pricing",
-    "https://otter.ai/"
+    "https://otter.ai/blog/otter-vs-fathom-which-ai-meeting-tool-is-better",
+    "https://otter.ai/pricing"
   ],
-  "verify_notes": "官方域名 otter.ai 确认。Pro 当前年付 $8.33/月（旧 $16.99 月度价已不主推）。",
-  "content_verified": true,
+  "verify_notes": "首页渲染仅见 Basic 免费与 Business From $19.99/month per user，未展示 Pro 档；WebSearch 多源（含 otter.ai 官方博客）确认 Pro $8.33/user/月（年付，月付 $16.99）、Business $19.99（月付 $30），记录准确，未改。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "tldv",

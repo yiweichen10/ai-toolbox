@@ -72,7 +72,7 @@
       "a": "可以，通过 iOS 应用的远程访问功能，就能在 Codex 中使用 ChatGPT Voice。"
     }
   ],
-  "content_verified": true,
+  "content_verified": false,
   "conflict": false,
   "verify_status": "verified",
   "seo_keywords": [
@@ -87,8 +87,10 @@
     "https://infosecu.technews.tw/2026/08/10/new-gpt-live-voice-mode/",
     "https://news.aibase.com/zh/news/30207"
   ],
-  "confidence": "high",
+  "confidence": "low",
   "created_date": "2026-08-14",
   "updated_date": "2026-08-14",
-  "published_date": "2026-08-23"
+  "published_date": "2026-08-23",
+  "last_verified": "2026-09-13",
+  "verify_notes": "渲染失败（需登录），记录「随 ChatGPT 订阅包含（Plus/Pro/Go 等）」维持，需人工核实。"
 }

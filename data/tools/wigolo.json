@@ -1,0 +1,152 @@
+{
+  "name": "wigolo",
+  "slug": "wigolo",
+  "emoji": "🌐",
+  "color": "#00C2A8",
+  "description": "wigolo 是一个为 AI Agent 提供联网能力的开源工具，让智能体无需申请和配置第三方搜索 API key，即可自主完成联网搜索、网页抓取与资料研究。一次接入后，Agent 就能自己上网查资料，省掉申请与付费第三方搜索 API 的环节。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "AI智能体"
+    },
+    {
+      "text": "联网搜索"
+    },
+    {
+      "text": "网页抓取"
+    },
+    {
+      "text": "Agent研究"
+    },
+    {
+      "text": "免API Key",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://github.com/KnockOutEZ/wigolo",
+  "price": "完全免费（AGPL-3.0，无付费层）",
+  "platform": "MCP 服务器 / REST / SDK / CLI / Docker，本地优先",
+  "pros": [
+    "免 API key 即可使用，省去第三方搜索 API 的申请流程",
+    "省掉付费第三方搜索 API 的成本环节",
+    "一次接入就让 Agent 具备自主上网查资料的能力",
+    "同时覆盖联网搜索、网页抓取与研究三类能力",
+    "GitHub 热度表现亮眼，已获得 5,123 stars"
+  ],
+  "cons": [
+    "项目首发于 2026-09，属于较新的工具，生态与文档仍在完善中",
+    "面向 Agent 开发者，非技术用户直接上手有一定门槛",
+    "实际搜索与抓取效果依赖项目后续维护与更新频率"
+  ],
+  "features": [
+    "免 API key 本地搜索抓取",
+    "10 个核心 Web 工具",
+    "research 自主收集循环",
+    "本地缓存零查询成本",
+    "支持 LangChain/CrewAI 等"
+  ],
+  "related": [
+    "browser-use",
+    "tavily-ai",
+    "exa-ai"
+  ],
+  "faq": [
+    {
+      "question": "wigolo 是做什么的？",
+      "answer": "wigolo 为 Agent 提供免 API key 的联网搜索、抓取与研究能力，一次接入即可让 Agent 自主上网查资料。"
+    },
+    {
+      "question": "使用 wigolo 需要自己申请搜索 API key 吗？",
+      "answer": "不需要。wigolo 的核心卖点就是免 API key，省掉了申请第三方搜索 API 的环节，也省去相应的付费成本。"
+    },
+    {
+      "question": "wigolo 怎么获取和接入？",
+      "answer": "wigolo 托管在 GitHub 上（https://github.com/KnockOutEZ/wigolo），可以在仓库中查看项目说明并接入到自己的 Agent 中。"
+    },
+    {
+      "question": "wigolo 收费吗？",
+      "answer": "官方来源未公布具体价格信息，目前价格暂未公开。其定位是免 API key、省去第三方搜索 API 付费环节，具体计费方式请以官方仓库说明为准。"
+    }
+  ],
+  "seo_keywords": [
+    "wigolo",
+    "wigolo怎么样",
+    "wigolo免费版",
+    "wigolo使用教程",
+    "wigolo和哪个好"
+  ],
+  "content": "# wigolo：让 AI Agent 自己上网，不用再折腾搜索 API key\n\n## wigolo是什么？\n\n简单说，wigolo 是给 AI Agent 用的一个联网能力层。\n\n平时你想让 Agent 上网查点东西，流程通常是：先去 SerpAPI、Bing 之类的服务注册账号，申请 API key，绑定支付方式，再写进代码里调通——中间任何一步卡住，Agent 就还是个\"断网\"的聪明大脑。\n\nwigolo 想解决的就是这一段。按照项目的官方描述，它是\"给 agent 提供免 API key 的联网搜索、抓取与研究能力，一次接入即可让 agent 自主上网查资料，省掉申请与付费第三方搜索 API 的环节\"。\n\n也就是说：接入一次，Agent 自己就能搜网页、抓页面、翻资料，你不用再去各家搜索服务那边办手续。\n\n它属于 AI 智能体这个分类，代码放在 GitHub 上（https://github.com/KnockOutEZ/wigolo），在 GitHub Trending 上被不少人看到，目前拿到 5,123 stars。项目首发于 2026-09，算是很新的东西。\n\n## 核心功能\n\n**1. 免 API key 的联网搜索**\n\n用途：让 Agent 直接发起网络搜索，不用事先配置任何搜索服务的密钥。\n实际感受：这是它最大的卖点。省掉的不只是填 key 那两分钟，而是整套\"注册—审批—配额—账单\"的流程。对个人开发者和小团队来说，这块摩擦确实是实打实的。\n\n**2. 网页抓取与内容提取**\n\n用途：把搜到的链接打开，把页面内容取回来，交给 Agent 继续处理。\n实际感受：搜索和抓取是配套的两步——只搜不抓，Agent 拿到的还是摘要；能抓取，才谈得上\"真的读了这篇资料\"。具体抓取质量和抗反爬表现，取决于项目本身的维护情况。\n\n**3. 面向 Agent 的自主资料研究**\n\n用途：让 Agent 围绕一个主题自己找、自己看、自己汇总，而不是每搜一次都要人给一次指令。\n实际感受：这一层是\"搜索能力\"和\"研究能力\"的分界线。有了它，Agent 更接近一个能自己干活的助手，而不是一个需要你不断喂搜索词的执行器。\n\n**4. 一次接入，Agent 自主上网**\n\n用途：集成一次之后，联网这件事就交给 Agent 自己判断。\n实际感受：省心是省心，但也意味着你要对自己的 Agent 逻辑有点信心——放它自己上网，检索方向和抓取范围最好还是有个约束。\n\n**5. 免掉第三方搜索 API 的申请与付费环节**\n\n用途：把申请配置和付费成本这两道坎一起去掉。\n实际感受：对做原型、做 side project 的人特别友好，因为你不用先想\"这个月搜索预算多少\"。对已经有稳定搜索方案、账单也跑得动的团队，这个优势就没那么大。\n\n## 版本/套餐对比\n\n需要说清楚：wigolo 目前公开的信息里，没有版本分层，也没有公开的定价细节。\n\n| 项目 | 情况 |\n| --- | --- |\n| 获取方式 | 开源项目，代码托管在 GitHub |\n| 价格 | 暂未公开 |\n| 版本/套餐分层 | 未见公开的版本或套餐划分 |\n| 首发时间 | 2026-09 |\n| 社区热度 | GitHub 5,123 stars（来源：GitHub Trending） |\n\n如果你要评估能否用在正式项目里，价格和授权细节建议直接去仓库看最新说明，别拿二手信息做决策。\n\n## 值不值得用？\n\n**优点**\n- 免 API key，省掉了第三方搜索服务最烦人的申请流程\n- 省掉第三方搜索 API 的付费成本环节，做原型阶段压力小\n- 一次接入就覆盖联网搜索、网页抓取、资料研究三类能力，不用自己拼三个轮子\n- GitHub 上 5,123 stars，说明至少有一批人在关注，不是无人维护的孤岛\n\n**缺点**\n- 2026-09 才首发，是个很新的项目，生态和文档都还在完善中，遇到问题不一定有现成答案\n- 面向 Agent 开发者，非技术用户直接上手有门槛，不是那种\"点开即用\"的产品\n- 实际的搜索和抓取效果，很大程度上依赖项目后续的维护和更新频率——这类工具最怕的就是停更\n\n**总体结论**：值得试，但别急着押上生产环境。如果你正好在做需要联网的 Agent，又不想为了拿个搜索结果就去开一堆账号，wigolo 是一个成本很低的尝试选项。花点时间跑通，再决定要不要接进正式流程。它现在的定位更像\"一个靠谱的候选方案\"，而不是\"已经验证过的成熟基础设施\"。\n\n## 使用建议\n\n- **先读仓库，别急着写代码。** 从 GitHub 仓库的说明和示例入手，搞清楚接入方式和依赖，比直接上手试错快得多。\n- **小范围验证再扩大。** 挑一两个你真实需要的查询场景，看看搜索召回和网页抓取的结果够不够用，再考虑接进主流程。\n- **把它当能力层，不是搜索引擎。** wigolo 解决的是\"Agent 怎么上网\"，不是\"给我一个更好的搜索框\"，预期别放错位置。\n- **给 Agent 设边界。** 既然它能让 Agent 自主上网，检索范围、抓取深度、循环次数这些最好自己有控制，不然容易跑偏。\n- **关注更新节奏。** 新项目最值得看的指标是提交频率和 issue 响应速度。这两样还行，就可以放心一些；长期没动静，就要准备替代方案。\n- **抓取时留意目标站点的规则。** 技术上能抓不等于适合抓，涉及版权和站点条款的部分自己把关。\n\n## 适合谁用？\n\n**推荐**\n- 正在开发 AI Agent、需要给 Agent 加联网能力的开发者\n- 做原型、做 side project，不想为搜索 API 走申请和付费流程的个人\n- 手上有研究工作流类 Agent，需要\"搜索 + 抓取\"这一整套能力的团队\n\n**可考虑**\n- 想减少第三方搜索依赖、做技术选型对比的团队\n- 愿意读文档、能接受新项目不完善的技术型用户\n- 对成本敏感，但可以接受一定试错成本的早期项目\n\n**不推荐**\n- 非技术用户，想找一个开箱即用的联网搜索产品\n- 对稳定性和正式支持要求很高的生产环境——项目太新，建议先观察一段时间\n- 已经有稳定搜索方案、账单也完全跑得动的团队，迁移动力不大",
+  "published": false,
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "source_url": "https://github.com/KnockOutEZ/wigolo",
+  "verified_url": "https://github.com/KnockOutEZ/wigolo",
+  "verified_publisher": "KnockOutEZ / yourtowhid（独立开发者）",
+  "verified_what": "本地优先的 AI agent 联网工具层（搜索/抓取/爬取/研究），免 API key",
+  "verified_price": "完全免费（AGPL-3.0，无付费层）",
+  "verified_platform": "MCP 服务器 / REST / SDK / CLI / Docker，本地优先",
+  "verified_features": [
+    "免 API key 本地搜索抓取",
+    "10 个核心 Web 工具",
+    "research 自主收集循环",
+    "本地缓存零查询成本",
+    "支持 LangChain/CrewAI 等"
+  ],
+  "verified_description": "本地优先的 AI agent 联网工具层（搜索/抓取/爬取/研究），免 API key",
+  "verified_pros": [
+    "免 API key 即可使用，省去第三方搜索 API 的申请流程",
+    "省掉付费第三方搜索 API 的成本环节",
+    "一次接入就让 Agent 具备自主上网查资料的能力",
+    "同时覆盖联网搜索、网页抓取与研究三类能力",
+    "GitHub 热度表现亮眼，已获得 5,123 stars"
+  ],
+  "verified_cons": [
+    "项目首发于 2026-09，属于较新的工具，生态与文档仍在完善中",
+    "面向 Agent 开发者，非技术用户直接上手有一定门槛",
+    "实际搜索与抓取效果依赖项目后续维护与更新频率"
+  ],
+  "verified_faq": [
+    {
+      "q": "wigolo 是做什么的？",
+      "a": "wigolo 为 Agent 提供免 API key 的联网搜索、抓取与研究能力，一次接入即可让 Agent 自主上网查资料。"
+    },
+    {
+      "q": "使用 wigolo 需要自己申请搜索 API key 吗？",
+      "a": "不需要。wigolo 的核心卖点就是免 API key，省掉了申请第三方搜索 API 的环节，也省去相应的付费成本。"
+    },
+    {
+      "q": "wigolo 怎么获取和接入？",
+      "a": "wigolo 托管在 GitHub 上（https://github.com/KnockOutEZ/wigolo），可以在仓库中查看项目说明并接入到自己的 Agent 中。"
+    },
+    {
+      "q": "wigolo 收费吗？",
+      "a": "官方来源未公布具体价格信息，目前价格暂未公开。其定位是免 API key、省去第三方搜索 API 付费环节，具体计费方式请以官方仓库说明为准。"
+    }
+  ],
+  "verified_tags": [
+    "AI智能体",
+    "联网搜索",
+    "网页抓取",
+    "Agent研究",
+    "免API Key"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://github.com/KnockOutEZ/wigolo"
+  ],
+  "confidence": "medium",
+  "last_verified": "2026-09-14",
+  "created_date": "2026-09-14",
+  "conflict_note": "",
+  "verify_notes": "GitHub API 实测 5,246 stars，候选写 5,123，轻微时差，不视为矛盾。",
+  "content_flags": "长文字段（content/faq）未经外部逐条核验，仅短字段已核实。",
+  "positioning": "免API Key的Agent联网搜索工具层",
+  "auto_positioning": false
+}

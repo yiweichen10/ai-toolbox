@@ -1,0 +1,148 @@
+{
+  "name": "Catenary",
+  "slug": "catenary",
+  "emoji": "🪢",
+  "color": "#111827",
+  "description": "Catenary 是一款专为 AI 编程 agent 设计的空间画布式 IDE，它把「agent 才是主要用户」作为前提，重新设计代码环境。用户可以在空间画布上与多个编码 agent 协同工作，属于 agent-first 开发环境这一新品类。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "空间画布"
+    },
+    {
+      "text": "AI编程Agent"
+    },
+    {
+      "text": "Agent-first IDE"
+    },
+    {
+      "text": "开发环境",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://thecatenary.app/",
+  "price": "免费版 Free $0 + Pro 一次性 $19（标准 $29）",
+  "platform": "桌面 App（macOS/Windows/Linux），本地优先",
+  "pros": [
+    "以 agent 为主要用户重新设计代码环境，属于 agent-first 开发环境这一新品类",
+    "采用空间画布式界面，代码与任务的组织方式更直观",
+    "支持与多个编码 agent 协同工作，适合多 agent 并行开发场景",
+    "为 AI 编程 agent 专门优化，而非在传统 IDE 上做外挂式增强",
+    "已在 Product Hunt 2026-09-09 上榜，获得初期关注"
+  ],
+  "cons": [
+    "产品较新（2026-09-09 首发），生态与使用经验尚在早期积累阶段",
+    "价格与具体支持的 agent 列表等细节尚未公开披露",
+    "空间画布式交互与传统 IDE 习惯差异较大，可能需要适应成本"
+  ],
+  "features": [
+    "可视化连线连接多个 agent",
+    "一键 worktree 隔离工作区",
+    "Monaco 编辑器 + diff 预览",
+    "Maestro 多 agent 编排模式",
+    "100% 本地优先，零遥测"
+  ],
+  "related": [
+    "cursor",
+    "claude-code",
+    "openhands"
+  ],
+  "faq": [
+    {
+      "question": "Catenary 是什么类型的工具？",
+      "answer": "Catenary 是一款专为 AI 编程 agent 设计的空间画布式 IDE，属于 agent-first 开发环境这一新品类，核心理念是把「agent 才是主要用户」作为前提来重新设计代码环境。"
+    },
+    {
+      "question": "Catenary 可以同时和多个编码 agent 协同吗？",
+      "answer": "可以。根据官方描述，Catenary 支持与多个编码 agent 协同工作，这正是其空间画布式设计要解决的问题之一。"
+    },
+    {
+      "question": "Catenary 什么时候发布的？",
+      "answer": "Catenary 的首发日期为 2026-09-09，并于同日在 Product Hunt 上榜。"
+    },
+    {
+      "question": "Catenary 的收费和价格是多少？",
+      "answer": "目前官方来源未公布具体价格信息，因此价格暂未公开，建议关注其官网或 Product Hunt 页面获取后续更新。"
+    }
+  ],
+  "seo_keywords": [
+    "Catenary",
+    "Catenary怎么样",
+    "Catenary免费版",
+    "Catenary使用教程",
+    "Catenary和哪个好"
+  ],
+  "content": "## Catenary是什么？\n\n一句话说，Catenary 是一个**给 AI 编程 agent 用的 IDE**——注意，不是\"给程序员用的、顺便支持 AI 的 IDE\"，而是把 AI agent 当成主要用户来重新设计的代码环境。\n\n这个区别听起来像文字游戏，但其实是它最核心的卖点。传统 IDE 的思路是：人类写代码，AI 在旁边补全或改几行。Catenary 的前提反过来——agent 才是干活的主体，那代码该怎么组织、任务该怎么摆放、人该怎么介入，都得重来一遍。\n\n它用的载体是**空间画布**。不是我们熟悉的文件树 + 标签页，而是一块可以自由铺开的画布，代码、任务、多个 agent 的产出都在这块画面上展开。你可以同时指挥多个编码 agent 并行工作，自己更像是一个在画布上巡视和拍板的人。\n\n产品属于 **agent-first 开发环境**这个新品类，官网在 [Product Hunt](https://www.producthunt.com/products/catenary) 上，2026 年 9 月 9 日首发并上榜。\n\n## 核心功能\n\n**1. 空间画布式 IDE 界面**\n\n代码和任务不是塞进层层折叠的目录里，而是铺在一块二维画布上。好处是并行的工作流一眼能看全，哪个 agent 在干什么、哪块任务卡住了，视觉上很直观。代价也很明显：如果你习惯了 `Ctrl+P` 一把梭的传统编辑器，前几次打开会有点找不到北。\n\n**2. 面向 AI 编程 agent 的环境设计**\n\n这是它和\"传统 IDE 加个 AI 插件\"最本质的分界。插件式增强是在旧结构上贴一层，agent 依然要迁就人类的文件组织和上下文边界；Catenary 是从环境本身出发去适配 agent 的工作方式。这类改动实际效果如何，目前公开信息还不多，但方向是清楚的。\n\n**3. 多编码 agent 协同**\n\n支持同时对接多个编码 agent。多 agent 并行是这两年被反复讨论的方向，难点往往不在\"能不能跑\"，而在\"人怎么管得过来\"。空间画布算是它给出的一个答案——用空间位置来承载并行关系。\n\n**4. Agent-first 工作流**\n\n整条工作流围绕 agent 展开，人的角色更偏向定义目标、审查结果、做决策。对习惯一行行手写代码的人来说，这个转变需要主动接受。\n\n**5. 代码环境的重构与重新设计**\n\n不是加功能，是把代码环境重新想一遍。这种\"重做底层假设\"的产品，通常上限高、磨合期也长。\n\n## 版本/套餐对比\n\n目前官方**未公开披露价格与套餐细节**，也没有公开具体支持哪些编码 agent 的完整列表。所以这里不做任何推测性填写。\n\n| 项目 | 当前公开状态 |\n|---|---|\n| 价格 | 暂未公开 |\n| 套餐/版本划分 | 暂未公开 |\n| 具体支持的 agent 列表 | 暂未公开 |\n| 首发时间 | 2026-09-09（Product Hunt 上榜） |\n| 产品形态 | 空间画布式 IDE，agent-first 开发环境 |\n\n想了解最新情况，建议直接看官网页面，那里会更新得比任何二手介绍都快。\n\n## 值不值得用？\n\n先说优点。**定位足够清晰**是它最大的优势——市面上大量工具都在说\"我们也是 AI 原生的\"，但真正做到从假设层面重来的不多。Catenary 至少在这个问题上没有含糊。空间画布 + 多 agent 协同的组合，也确实切中了多任务并行时的管理痛点。\n\n再说缺点，而且要说实在点：\n\n- **太新了。** 2026-09-09 才首发，生态、文档、社区经验都还在早期累积阶段，遇到问题大概率得自己摸索。\n- **信息不透明。** 价格、支持的 agent 列表这些关键决策信息都还没公开，现在很难判断长期成本。\n- **交互习惯差异大。** 空间画布不是小改动，它挑战的是你十几年的编辑器肌肉记忆。适应成本真实存在，而且不是每个人都能适应过来。\n\n**总体结论：值得关注，但不必急着 all in。** 如果你本来就在做多 agent 并行开发，或者对 agent-first 这个方向有真实需求，它值得花时间试一下,它的思路很可能代表了一个方向。如果你只是想要一个\"AI 补全更聪明的 VS Code\"，那它大概率不是你要的东西,而且换过去还会让你难受。\n\n## 使用建议\n\n- **先拿边缘项目试水。** 别一上来就把主力仓库搬过去，空间画布的操作逻辑需要时间建立直觉。\n- **从\"多 agent 并行\"这个场景切进去。** 这是它相对传统 IDE 优势最明显的地方，也最容易让你判断出它到底适不适合你。\n- **把注意力放在工作流上，而不是编辑器手感上。** 拿它和 VS Code 比快捷键、比插件生态，基本没有意义,它想解决的本来就不是那个问题。\n- **盯紧官方页面的更新。** 价格和 agent 支持列表一旦公开，会直接影响你要不要长期用下去。\n- **接受\"早期产品\"的定位。** 遇到粗糙的地方是正常的，关键看它迭代的方向对不对。\n\n## 适合谁用？\n\n**推荐：**\n- 日常需要同时跑多个编码 agent 的开发者\n- 对 agent-first 工作流有兴趣、愿意花时间适应新交互的人\n- 想提前摸清\"AI 编程工具下一步会往哪走\"的从业者\n\n**可考虑：**\n- 团队里在探索多 agent 协作流程的技术负责人\n- 对传统 IDE 已经有点审美疲劳、想换换思路的开发者\n- 做 AI 工具选型、需要了解新品类动向的人\n\n**不推荐：**\n- 只想在现有 IDE 上获得更好补全体验的人\n- 对交互习惯变化容忍度低、不想重新学一套操作的人\n- 需要稳定生产环境、看重成熟生态和完整文档的团队\n- 预算敏感、需要先看到明确价格再做决定的人（目前价格未公开）\n\n---\n\n以上信息基于 Product Hunt 公开页面及产品官方描述整理，价格与具体 agent 支持情况以官网最新说明为准。",
+  "published": false,
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "source_url": "https://thecatenary.app/",
+  "verified_url": "https://thecatenary.app/",
+  "verified_publisher": "GioNicolas（Giorgio Nícolas，独立开发者）",
+  "verified_what": "为 AI 编程 agent 设计的空间画布式 IDE 与终端编排器",
+  "verified_price": "免费版 Free $0 + Pro 一次性 $19（标准 $29）",
+  "verified_platform": "桌面 App（macOS/Windows/Linux），本地优先",
+  "verified_features": [
+    "可视化连线连接多个 agent",
+    "一键 worktree 隔离工作区",
+    "Monaco 编辑器 + diff 预览",
+    "Maestro 多 agent 编排模式",
+    "100% 本地优先，零遥测"
+  ],
+  "verified_description": "为 AI 编程 agent 设计的空间画布式 IDE 与终端编排器",
+  "verified_pros": [
+    "以 agent 为主要用户重新设计代码环境，属于 agent-first 开发环境这一新品类",
+    "采用空间画布式界面，代码与任务的组织方式更直观",
+    "支持与多个编码 agent 协同工作，适合多 agent 并行开发场景",
+    "为 AI 编程 agent 专门优化，而非在传统 IDE 上做外挂式增强",
+    "已在 Product Hunt 2026-09-09 上榜，获得初期关注"
+  ],
+  "verified_cons": [
+    "产品较新（2026-09-09 首发），生态与使用经验尚在早期积累阶段",
+    "价格与具体支持的 agent 列表等细节尚未公开披露",
+    "空间画布式交互与传统 IDE 习惯差异较大，可能需要适应成本"
+  ],
+  "verified_faq": [
+    {
+      "q": "Catenary 是什么类型的工具？",
+      "a": "Catenary 是一款专为 AI 编程 agent 设计的空间画布式 IDE，属于 agent-first 开发环境这一新品类，核心理念是把「agent 才是主要用户」作为前提来重新设计代码环境。"
+    },
+    {
+      "q": "Catenary 可以同时和多个编码 agent 协同吗？",
+      "a": "可以。根据官方描述，Catenary 支持与多个编码 agent 协同工作，这正是其空间画布式设计要解决的问题之一。"
+    },
+    {
+      "q": "Catenary 什么时候发布的？",
+      "a": "Catenary 的首发日期为 2026-09-09，并于同日在 Product Hunt 上榜。"
+    },
+    {
+      "q": "Catenary 的收费和价格是多少？",
+      "a": "目前官方来源未公布具体价格信息，因此价格暂未公开，建议关注其官网或 Product Hunt 页面获取后续更新。"
+    }
+  ],
+  "verified_tags": [
+    "空间画布",
+    "AI编程Agent",
+    "Agent-first IDE",
+    "开发环境"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://thecatenary.app/"
+  ],
+  "confidence": "medium",
+  "last_verified": "2026-09-14",
+  "created_date": "2026-09-14",
+  "conflict_note": "",
+  "verify_notes": "候选 PH 链接 403；真实官网 thecatenary.app。官方站含 Free + Pro $19 买断，非纯免费。",
+  "content_flags": "长文字段（content/faq）未经外部逐条核验，仅短字段已核实。",
+  "positioning": "为AI编程Agent做的空间画布式IDE",
+  "auto_positioning": false
+}

@@ -69,8 +69,8 @@
   "verified_what": "在线编程平台 Replit 的 AI 功能（Replit Agent），支持代码补全、AI 对话编程、一键部署。",
   "verified_price": "Starter 免费；Core $20/月（年付，较原 $25 降价）；Pro $100/月（年付 $95）；Enterprise 定制",
   "verified_platform": "Web",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-09-13",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "代码补全",
@@ -125,11 +125,10 @@
   "verified_category": "AI编程",
   "source_urls": [
     "https://replit.com/pricing",
-    "https://replit.com/blog/pro-plan",
-    "https://replit.com/"
+    "https://replit.com/pricing"
   ],
-  "verify_notes": "Core 价格由 $25 修正为 $20/月；新增 Pro $100/月档；原 FAQ 模板填充内容已替换。",
-  "content_verified": true,
+  "verify_notes": "抓取被 Cloudflare 拦截（假阳性）；第三方价格追踪站称 2026-09-11 起已移除免费 Starter 档，但 replit.com/pricing 与官网首页仍列 Starter Free，证据冲突 → 维持记录「免费版+Core $20/月」，标 low 不改，列为待观察项。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "tongyi-lingma",

@@ -65,8 +65,8 @@
   "verified_what": "全球领先的自动化集成平台，内置 AI（Copilot、Agents、Chatbots、MCP）实现无代码工作流自动化。",
   "verified_price": "免费版 $0（100 任务/月、无限 Zaps、Tables/Forms/AI 工具）；Professional $19.99/月（年付，750 任务/月、多步 Zaps、高级应用、Webhooks）；Team $69/月（年付，25 用户、共享文件夹与连接、SSO、优先支持）；Enterprise 定制。",
   "verified_platform": "Web, iOS, Android, API",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-09-13",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "AI 工作流构建（Zapier Copilot）",
@@ -114,10 +114,10 @@
   "verified_category": "AI自动化",
   "source_urls": [
     "https://zapier.com/pricing",
-    "https://www.zapier.com/blog/zapier-pricing"
+    "https://zapier.com/pricing"
   ],
-  "verify_notes": "官方域名 zapier.com 确认。应用连接数现为 7000+，Professional 价格下调至 $19.99/月。",
-  "content_verified": true,
+  "verify_notes": "首页渲染无价表（$40k+/$1M 为客户案例数字，假阳性）；官方定价页确认 Free $0 / Professional Starting from $19.99/month / Team $69/month，记录准确，未改。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "n8n",

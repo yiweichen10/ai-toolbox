@@ -64,7 +64,7 @@
   "verified_what": "AI 音乐生成工具（与 Suno 齐名），可生成带人声的完整歌曲。",
   "verified_price": "免费版（100 credits/月）；Standard $10/月（$8/月年付）；Pro $30/月（$24/月年付）；可按量购 credits",
   "verified_platform": "Web / iOS / Android",
-  "last_verified": "2026-07-30",
+  "last_verified": "2026-09-13",
   "confidence": "high",
   "conflict": false,
   "verified_features": [
@@ -116,10 +116,10 @@
   "verified_category": "AI音频",
   "source_urls": [
     "https://www.udio.com/pricing",
-    "https://apps.apple.com/tm/app/udio-ai-music-maker-studio/id6511211165",
-    "https://itunes.apple.com/cn/app/id6511211165"
+    "https://www.udio.com/pricing",
+    "https://apps.apple.com/tm/app/udio-ai-music-maker-studio/id6511211165"
   ],
-  "verify_notes": "价格档位名称需修正：Standard $10/月，Pro $30/月（年付 $24）；原 FAQ 模板填充内容已替换为基于官网的事实。",
+  "verify_notes": "官方定价页渲染确认 Free $0 / Standard $10（月付）$8（年付）/ Pro $30（月付）$24（年付），与记录一致。",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -129,5 +129,6 @@
     ],
     "verdict": "Udio 与 Spark-TTS、ElevenLabs、Suno 同属AI音频赛道。在性价比上，Udio（免费版+Standard $10/月）门槛更低；若看重口碑，ElevenLabs（⭐ 4.8）评分更高；Udio 的优势在于AI 音乐生成工具（与 Suno 齐名），可生成带人声的完整歌曲。，适合看重该特性的用户。",
     "generated": "2026-07-30"
-  }
+  },
+  "updated_date": "2026-09-13"
 }

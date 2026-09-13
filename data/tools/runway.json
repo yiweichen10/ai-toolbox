@@ -82,7 +82,7 @@
   ],
   "verified_description": "专业AI视频编辑和生成工具，Gen-4.5支持高质量文生视频。支持去背景、视频修复、AI特效等，影视创作者必备。",
   "content_flags": "原 price '免费版+标准$15/月' 对月付准确，但年付为 $12/月，且 Pro 现为 $28/月（年付）；原描述'Gen-4'已升级到 Gen-4.5。需修正模型名与年付价说明。无严重幻觉。",
-  "last_verified": "2026-07-30",
+  "last_verified": "2026-09-13",
   "confidence": "high",
   "conflict": false,
   "price_verified": true,
@@ -128,11 +128,11 @@
   ],
   "verified_category": "AI视频",
   "source_urls": [
+    "https://runwayml.com/pricing",
     "https://runwayml.com/en/pricing",
-    "https://runwayml.com/",
-    "https://docs.dev.runwayml.com/guides/pricing/"
+    "https://runwayml.com/"
   ],
-  "verify_notes": "修正点：模型名 Gen-4 → Gen-4.5；Standard 年付 $12/月（月付 $15），Pro $28/月（月付 $35）。原价格月付口径基本正确。",
+  "verify_notes": "官方定价页渲染确认 Free $0（125 一次性 credits）/ Standard $12/月（年付，月付 $15）/ Pro $28/月（年付，月付 $35）/ Max $76/月（年付）；记录 Standard $12、Pro $28 准确。",
   "content_verified": true,
   "compare_section": {
     "competitors": [
@@ -142,5 +142,6 @@
     ],
     "verdict": "Runway 与 InVideo AI、Vidu AI、Kaiber 同属AI视频赛道。在性价比上，Runway（免费版+标准$12/月（Pro $28/月））门槛更低；口碑方面，Runway（⭐4.7）领先；Runway 的优势在于专业 AI 视频/图像/音频生成与编辑平台，提供 Gen-4.5 等生成模型及 GWM 世界模型研究。，适合看重该特性的用户。",
     "generated": "2026-07-30"
-  }
+  },
+  "updated_date": "2026-09-13"
 }

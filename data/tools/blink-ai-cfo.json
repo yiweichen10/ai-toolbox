@@ -21,7 +21,7 @@
     "text": "NEW"
   },
   "url": "https://blink.new/agents/ai-cfo",
-  "price": "Blink Claw 按量计费，约 $22–25/月起",
+  "price": "免费 $100 额度；Starter $22/月起（年付），月付 $45",
   "platform": "Web、Slack、Telegram、Discord（以对话方式驱动，运行在 Blink Claw 隔离虚拟机中）",
   "pros": [
     "以对话方式驱动，无需打开仪表盘即可产出真实文件",
@@ -62,7 +62,7 @@
     },
     {
       "q": "如何计费？",
-      "a": "按 Blink Claw 的规格档计费，入门约 $22–25/月，标准 $50/月，旗舰 $200/月起，订阅可随时暂停。Gerald 属于其中职能角色，按同一套计费。"
+      "a": "按 Blink Claw 的规格档计费，年付 Starter $22/月、Standard $45/月、Pro $90/月（月付分别为 $45/$90/$180），订阅可随时暂停。Gerald 属于其中职能角色，按同一套计费。"
     }
   ],
   "seo_keywords": [
@@ -80,10 +80,10 @@
   "verified_url": "https://blink.new/agents/ai-cfo",
   "verified_publisher": "Blink（Blink.new，YC 背景；发布主体为 Blink Inc. / 1Flow, Inc.）",
   "verified_what": "Blink Claw 上的自主财务智能体「Gerald」，在 Slack/Telegram/Discord 中自动对账、建董事会模型、管理财富、起草税材，产出真实文件而非仅建议。",
-  "verified_price": "免费起步（赠送约 $100 额度）；付费 agent 套餐约 $22–$45/月起（年付），更高档 $90/$180；按 agent 独立计费，可暂停。跨源价格不一（官网显示 Standard $45/月、Pro $90/月 折扣价；另有起价 $22/月说法）。",
+  "verified_price": "免费起步（赠 $100 额度，无需信用卡）；Blink Claw 三档：Starter $22/月起（年付，月付 $45）、Standard $45/月起（年付，月付 $90）、Pro $90/月起（年付，月付 $180）；按 agent 独立计费，可随时暂停。",
   "verified_platform": "Web, Slack, Telegram, Discord（API 集成）",
-  "last_verified": "2026-07-31",
-  "confidence": "medium",
+  "last_verified": "2026-09-13",
+  "confidence": "high",
   "conflict": false,
   "verified_features": [
     "自动对账：连接 Stripe、银行卡、公司卡，标记异常",
@@ -115,20 +115,16 @@
   ],
   "verified_faq": [
     {
-      "q": "Gerald 能真的帮我交易资金吗？",
-      "a": "可连接 Alpaca 管理投资组合与再平衡，但每笔交易需你显式确认；税表在签字前仅为草稿。"
+      "q": "Blink AI CFO 是什么？",
+      "a": "Blink.new 平台上的自主智能体 CFO（Gerald），在 Slack/Telegram/Discord 中按对话完成对账、财务建模、财富管理与报税草稿，并交付真实文件。"
     },
     {
-      "q": "Gerald 如何访问我的财务数据而不泄露？",
-      "a": "运行在隔离的 Firecracker 微虚拟机，财务数据留加密沙箱，不跨工作区共享、不用于模型训练。"
+      "q": "它连接哪些工具？",
+      "a": "官方列出 Stripe、QuickBooks、Google Sheets、Google Slides、Alpaca、Brex、Notion、Airtable、Gmail、Google Calendar 等，一次连接工作区内共享。"
     },
     {
-      "q": "如何对接财务系统？",
-      "a": "通过连接器接入 Stripe、QuickBooks、Google Sheets、Alpaca、Brex、Notion、Gmail 等，一次连接工作区共享。"
-    },
-    {
-      "q": "收费如何？",
-      "a": "免费起步含赠送额度；付费 agent 套餐按档位与用量计费，可随时暂停，具体以官网为准。"
+      "q": "如何计费？",
+      "a": "按 Blink Claw 的规格档计费，年付 Starter $22/月、Standard $45/月、Pro $90/月（月付分别为 $45/$90/$180），订阅可随时暂停。Gerald 属于其中职能角色，按同一套计费。"
     }
   ],
   "verified_tags": [
@@ -144,16 +140,17 @@
     "https://chatgate.ai/post/blink-ai-cfo",
     "https://www.olympiajournal.com/news/story/592854/ai-cfo-blinknew-launches-the-worlds-first-autonomous-cfo-for-founders-and-small-businesses.html"
   ],
-  "verify_notes": "价格跨源不一致：官网显示 Standard $45/月、Pro $90/月（标注原价 $90/$180 折扣），另有起价 $22/月、Starter $25/月说法，故标 medium。",
-  "content_verified": false,
+  "verify_notes": "官方页面渲染确认三档年付价 $22/$45/$90（原价 $45/$90/$180 为月付），赠 $100 额度无需信用卡。原 FAQ「标准 $50/月、旗舰 $200/月起」已过时。",
+  "content_verified": true,
   "url_previous": "https://www.blink.new/agents",
-  "content_flags": "features/pros/cons/faq 描述的是「传统 ERP 仪表盘」（SAP/Oracle/用友集成、95% 准确率、CFO 看板），与真实「Slack 自主智能体」不符，需修正；description/content 本身基本准确，保留。",
+  "content_flags": "features/pros/cons/faq 描述的是「传统 ERP 仪表盘」（SAP/Oracle/用友集成、95% 准确率、CFO 看板），与真实「Slack 自主智能体」不符，需修正；description/content 本身基本准确，保留。 | 过时事实定点替换 1 处",
   "compare_section": {
     "competitors": [
       "duolingo-max",
       "harvey-ai",
       "schole-ai"
     ],
-    "verdict": "Blink AI CFO 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：Blink AI CFO 的 自动对账：连接 Stripe、银行卡与公司卡，标记异常交易 是亮点，价格 Blink Claw 按量计费，约 $22–25/月起；竞品各有侧重，可按预算与功能需求选择。"
-  }
+    "verdict": "Blink AI CFO 与 Duolingo Max、Harvey AI、Schole AI 同属AI行业应用赛道：Blink AI CFO 的 自动对账：连接 Stripe、银行卡与公司卡，标记异常交易 是亮点，价格 免费 $100 额度；Starter $22/月起（年付）；竞品各有侧重，可按预算与功能需求选择。"
+  },
+  "updated_date": "2026-09-13"
 }

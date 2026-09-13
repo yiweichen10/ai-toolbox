@@ -74,8 +74,8 @@
   "verified_what": "开源的能动性（Agentic）大模型，通过统一的智能体思维框架将推理与行动结合，擅长智能体编程、深度研究与工具调用。",
   "verified_price": "模型开源免费；通过硅基流动等云平台按 token 计费（Nex-N2-Pro 输入约 1.75 元/百万 tokens、输出约 7 元/百万 tokens）。无官方 $15/$30 零售订阅。",
   "verified_platform": "开源模型 / API（本地部署 sglang、Hugging Face、ModelScope、SiliconFlow；OpenRouter 即将上线）",
-  "last_verified": "2026-07-31",
-  "confidence": "high",
+  "last_verified": "2026-09-13",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "Agentic Thinking 统一推理与行动",
@@ -125,8 +125,8 @@
     "https://github.com/nex-agi/Nex-N2",
     "https://www.sii.edu.cn/2026/0607/c27a1089/page.htm"
   ],
-  "verify_notes": "原条目把开源模型 Nex-N2 误当作消费级 AI 搜索产品，含大量虚构的平台与定价，已全部更正。",
-  "content_verified": true,
+  "verify_notes": "中文站渲染失败，无公开金额，记录「开源免费（云端按 token 计费）」维持，需人工核实。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "openclaw",

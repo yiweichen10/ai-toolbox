@@ -1,0 +1,153 @@
+{
+  "name": "Magnitude",
+  "slug": "magnitude",
+  "emoji": "🧲",
+  "color": "#4F46E5",
+  "description": "Magnitude 是一个开源的本地推理服务器，启动时会先探测你的硬件（GPU、显存带宽、量化档位），据此推荐真正跑得动的模型并自动完成下载与调优（含投机解码）。空闲时它会自动卸载模型释放内存，同时可直接对接 Pi、OpenCode、Hermes、OpenClaw、Codex、Claude Code、Cline 等已有 agent，省去「让 agent 自己装 Ollama」的猜测环节。",
+  "category": "AI开发",
+  "tags": [
+    {
+      "text": "本地推理"
+    },
+    {
+      "text": "开源"
+    },
+    {
+      "text": "硬件探测与模型推荐",
+      "type": "free"
+    },
+    {
+      "text": "Agent 对接"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/magnitudedev/magnitude",
+  "price": "开源免费（Apache 2.0）",
+  "platform": "本地推理服务器（mac/Win/Linux，GPU/CPU）",
+  "pros": [
+    "开源项目，代码可审计、可自行部署",
+    "启动即探测 GPU、显存带宽与量化档位，推荐真正跑得动的模型，减少「装了跑不动」的试错",
+    "自动下载与调优模型，并内置投机解码提升推理速度",
+    "空闲时自动卸载模型释放内存，笔记本/单机使用更友好",
+    "可直接对接 Pi、OpenCode、Hermes、OpenClaw、Codex、Claude Code、Cline 等已有 agent，接入成本低",
+    "GitHub 热度较高，约 3,400~3,580 stars 并进入周榜"
+  ],
+  "cons": [
+    "属于较新的项目，稳定性和长期维护情况仍需观察",
+    "本地推理效果高度依赖自身硬件，低配设备可跑的模型有限",
+    "具体支持的操作系统、模型清单与性能数据暂未在来源中明确"
+  ],
+  "features": [
+    "探测硬件推荐合适模型",
+    "自动下载与端到端调优",
+    "一键接入现有 agent",
+    "空闲自动卸载释放内存",
+    "完全本地离线，零 token 成本"
+  ],
+  "related": [
+    "ollama",
+    "lm-studio",
+    "vllm"
+  ],
+  "faq": [
+    {
+      "question": "Magnitude 是什么？和 Ollama 有什么区别？",
+      "answer": "Magnitude 是一个开源的本地推理服务器。相比让 agent 自己「猜着装 Ollama」，它会先探测你的硬件（GPU、显存带宽、量化档位），据此推荐真正跑得动的模型并自动下载、调优（含投机解码），还能直接对接 Pi、OpenCode、Codex、Claude Code、Cline 等已有 agent。"
+    },
+    {
+      "question": "Magnitude 收费吗？",
+      "answer": "根据来源信息，Magnitude 是开源项目，托管在 GitHub 上（github.com/magnitudedev/magnitude），未提及任何付费方案，具体价格信息暂未公开。"
+    },
+    {
+      "question": "Magnitude 对硬件有什么要求？",
+      "answer": "项目本身会根据你的 GPU、显存带宽与量化档位来判断能跑哪些模型，因此没有统一的硬性门槛；实际可选模型规模取决于你的机器配置，官方未公布具体的最低配置要求。"
+    },
+    {
+      "question": "Magnitude 能和我正在用的 AI 编程 agent 配合吗？",
+      "answer": "可以。来源说明它可直接对接 Pi、OpenCode、Hermes、OpenClaw、Codex、Claude Code、Cline 等已有 agent，作为一个本地推理后端来提供服务。"
+    }
+  ],
+  "seo_keywords": [
+    "Magnitude",
+    "Magnitude怎么样",
+    "Magnitude免费版",
+    "Magnitude使用教程",
+    "Magnitude和哪个好",
+    "Magnitude 本地推理服务器",
+    "Magnitude GitHub",
+    "Magnitude 对接 Claude Code"
+  ],
+  "content": "# Magnitude 介绍：先摸清你的硬件，再决定跑什么模型\n\n## Magnitude是什么？\n\n如果你试过让 coding agent 用本地模型干活，大概率踩过这个坑：你跟 Claude Code 或者 Cline 说\"用本地模型跑吧\"，它就开始自己猜——装 Ollama、拉一个听着很厉害的模型，结果你 8G 显存的笔记本根本带不动，或者跑起来慢到怀疑人生。\n\nMagnitude 就是冲这个问题来的。按官方描述，它是一个**开源的本地推理服务器**，启动时的第一件事不是加载模型，而是探测你的硬件：GPU 型号、显存带宽、量化档位。搞清楚你这台机器到底能吃下什么，再推荐真正跑得动的模型，然后自动下载、自动调优，调优里还包括投机解码（speculative decoding）。空闲的时候它会把模型卸掉，把内存还给你。\n\n另一个实用点是接入方式：Pi、OpenCode、Hermes、OpenClaw、Codex、Claude Code、Cline 这些现成的 agent 都能直接对接，不用你手动改一堆配置。项目在 GitHub 上热度不错，约 3,400~3,580 stars，还上过周榜（数据来源：GitHub Trending）。\n\n---\n\n## 核心功能\n\n**1. 硬件探测 + 模型推荐**\n启动即扫 GPU、显存带宽和量化档位，然后基于这台机器的真实能力推荐模型。这个逻辑看似简单，但正是最省事的地方——它把\"这个模型我到底跑不跑得动\"的判断从你脑子里挪到了程序里，减少了\"下载两小时、跑起来 0.3 token/s\"的试错成本。\n\n**2. 模型自动下载与自动调优**\n推荐完直接帮你拉模型，并做对应的参数调优。对不想研究 KV cache、context 长度、batch size 这些细节的人来说，这部分几乎是纯收益：你不用懂，它替你配。\n\n**3. 投机解码加速**\n内置 speculative decoding。简单说就是用一个小的草稿模型先猜、大模型再验证，在合适场景下能明显改善推理速度。注意这是\"合适场景\"——它不是万能加速键，具体效果还是要看你的硬件和模型组合。\n\n**4. 空闲自动卸载模型**\n一段时间没请求就把模型从显存/内存里卸掉。笔记本用户会很喜欢这个设计，本地推理最烦的就是\"我就查个东西，结果显存被一个模型占了一整晚\"。\n\n**5. 直接对接已有 agent**\n这是 Magnitude 最有区分度的一点。Pi、OpenCode、Hermes、OpenClaw、Codex、Claude Code、Cline 都能接，意味着你不需要换掉现有工作流，只是把\"本地模型从哪来\"这一层换掉。接入成本低，这点很实在。\n\n---\n\n## 版本/套餐对比\n\nMagnitude 是开源项目，没有做订阅制分档，所以这里不存在\"免费版 vs Pro 版\"的对比。来源里也没有提供价格信息。\n\n| 维度 | 情况 |\n| --- | --- |\n| 项目类型 | 开源本地推理服务器，代码可审计、可自行部署 |\n| 价格 | 来源未提供价格信息；开源项目本身可自行部署 |\n| 版本分档 | 来源中未提及分档版本 |\n| 支持的操作系统 | 来源中未明确 |\n| 支持的模型清单 | 来源中未明确 |\n| 硬件要求 | 取决于本机硬件，来源未给出具体门槛 |\n\n如果你在意\"能不能装在我这台机器上\"\"支持哪些模型\"，建议直接去仓库 README 和 issue 里确认，这些是目前公开信息里没写清楚的部分。\n\n---\n\n## 值不值得用？\n\n**优点：**\n- 开源，代码能看、能自己部署，不用担心被某个服务卡脖子\n- 硬件探测 + 模型推荐这套流程，确实解决了\"装了跑不动\"的经典痛点\n- 下载和调优自动化，投机解码也一并做了，省心\n- 空闲卸载对单机 / 笔记本用户友好\n- 能接现成的 agent，不用迁移工作流\n- GitHub 热度有信号（约 3,400~3,580 stars，进过周榜），至少说明有人在关注\n\n**缺点：**\n- 项目较新，稳定性和长期维护意愿还需要时间验证\n- 本地推理的天花板就是你的硬件，低配设备可选模型本来就有限，工具再好也变不出算力\n- 支持的操作系统、模型清单、性能基准这些关键信息，来源里没有明确，选型前得自己查\n- 自动调优是黑盒式的省心，但对想精细控制参数的人可能不够灵活\n\n**结论：** 值得试，但别当成成熟基础设施。如果你的场景是\"想让本地模型接进现有 agent 工作流，又不想折腾环境\"，Magnitude 的思路非常对路，值得花一个小时装来看看。如果是要上生产环境，建议再观望一阵，等它的文档和生态更完整。\n\n---\n\n## 使用建议\n\n- **先看硬件探测结果，再决定预期。** 它推荐的模型列表基本就是你机器的真实上限，别指望超出这个范围。\n- **优先接你已经在用的 agent。** 现成支持列表里有的话，直接接，别重新搭一套工作流。\n- **显存紧张就用空闲卸载。** 默认行为别关掉，尤其是笔记本。\n- **投机解码按场景判断。** 长文本生成类的任务更值得开，短请求可能感受不明显。\n- **动手前先翻仓库的 issue 和 README。** 操作系统支持、模型清单这些信息目前公开渠道没写全，自己确认一遍比踩坑强。\n- **别一上来就拉最大的模型。** 先跑一个中等规模、确认整条链路通了，再考虑往上换。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n- 已经在用 Claude Code、Cline、Codex 等 agent，想切到本地模型的人\n- 硬件配置中上（有独立显卡、显存够），想把本地推理真正用起来的人\n- 喜欢开源、愿意自己部署和折腾的技术用户\n- 笔记本用户，尤其在意内存占用和\"跑完就释放\"的\n\n**可考虑：**\n- 对本地推理好奇、想先体验一下的新手（但要有心理准备，硬件不行体验就一般）\n- 对推理速度有要求、想试试投机解码效果的人\n- 需要代码可审计、不接受闭源方案的小团队\n\n**不推荐：**\n- 硬件比较老、显存很小，还期望跑大模型的\n- 要上生产环境、需要稳定 SLA 和长期支持承诺的\n- 完全不碰命令行、不想自己排查环境问题的用户\n- 只想开箱即用、不愿看文档的人（这个项目目前文档完整度还不确定）",
+  "published": false,
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "source_url": "https://github.com/magnitudedev/magnitude",
+  "verified_url": "https://github.com/magnitudedev/magnitude",
+  "verified_publisher": "magnitudedev（Magnitude）",
+  "verified_what": "开源本地推理引擎，探测硬件并推荐/下载/调优可在本机跑的模型",
+  "verified_price": "开源免费（Apache 2.0）",
+  "verified_platform": "本地推理服务器（mac/Win/Linux，GPU/CPU）",
+  "verified_features": [
+    "探测硬件推荐合适模型",
+    "自动下载与端到端调优",
+    "一键接入现有 agent",
+    "空闲自动卸载释放内存",
+    "完全本地离线，零 token 成本"
+  ],
+  "verified_description": "开源本地推理引擎，探测硬件并推荐/下载/调优可在本机跑的模型",
+  "verified_pros": [
+    "开源项目，代码可审计、可自行部署",
+    "启动即探测 GPU、显存带宽与量化档位，推荐真正跑得动的模型，减少「装了跑不动」的试错",
+    "自动下载与调优模型，并内置投机解码提升推理速度",
+    "空闲时自动卸载模型释放内存，笔记本/单机使用更友好",
+    "可直接对接 Pi、OpenCode、Hermes、OpenClaw、Codex、Claude Code、Cline 等已有 agent，接入成本低",
+    "GitHub 热度较高，约 3,400~3,580 stars 并进入周榜"
+  ],
+  "verified_cons": [
+    "属于较新的项目，稳定性和长期维护情况仍需观察",
+    "本地推理效果高度依赖自身硬件，低配设备可跑的模型有限",
+    "具体支持的操作系统、模型清单与性能数据暂未在来源中明确"
+  ],
+  "verified_faq": [
+    {
+      "q": "Magnitude 是什么？和 Ollama 有什么区别？",
+      "a": "Magnitude 是一个开源的本地推理服务器。相比让 agent 自己「猜着装 Ollama」，它会先探测你的硬件（GPU、显存带宽、量化档位），据此推荐真正跑得动的模型并自动下载、调优（含投机解码），还能直接对接 Pi、OpenCode、Codex、Claude Code、Cline 等已有 agent。"
+    },
+    {
+      "q": "Magnitude 收费吗？",
+      "a": "根据来源信息，Magnitude 是开源项目，托管在 GitHub 上（github.com/magnitudedev/magnitude），未提及任何付费方案，具体价格信息暂未公开。"
+    },
+    {
+      "q": "Magnitude 对硬件有什么要求？",
+      "a": "项目本身会根据你的 GPU、显存带宽与量化档位来判断能跑哪些模型，因此没有统一的硬性门槛；实际可选模型规模取决于你的机器配置，官方未公布具体的最低配置要求。"
+    },
+    {
+      "q": "Magnitude 能和我正在用的 AI 编程 agent 配合吗？",
+      "a": "可以。来源说明它可直接对接 Pi、OpenCode、Hermes、OpenClaw、Codex、Claude Code、Cline 等已有 agent，作为一个本地推理后端来提供服务。"
+    }
+  ],
+  "verified_tags": [
+    "本地推理",
+    "开源",
+    "硬件探测与模型推荐",
+    "Agent 对接"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://github.com/magnitudedev/magnitude"
+  ],
+  "confidence": "high",
+  "last_verified": "2026-09-14",
+  "created_date": "2026-09-14",
+  "conflict_note": "",
+  "verify_notes": "GitHub API 实测 4,459 stars，候选 heat_signal 写 3,431~3,580，星数不符。",
+  "content_flags": "采集期数据与核验时不一致（非内容冲突）：GitHub API 实测 4,459 stars，候选 heat_signal 写 3,431~3,580，星数不符。 长文字段（content/faq）未经外部逐条核验，仅短字段已核实。",
+  "positioning": "开源本地推理服务器，按硬件选模型",
+  "auto_positioning": false
+}

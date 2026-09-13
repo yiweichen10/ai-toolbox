@@ -78,8 +78,8 @@
   ],
   "verified_description": "开源AI绘画模型，可本地部署免费使用。社区活跃，模型和LoRA资源丰富，自定义能力极强。",
   "content_flags": "原 price '完全免费（需GPU）' 大体准确，但官方 API/DreamStudio 是付费的，需补充；原 features 列 'SDXL Turbo' 准确。无严重幻觉，仅补充 API 收费说明。",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-09-13",
+  "confidence": "low",
   "conflict": false,
   "price_verified": true,
   "verified_rating": "⭐4.7",
@@ -128,8 +128,8 @@
     "https://stability.ai/blog/stable-diffusion-xl-beta-available-for-api-customers-and-dreamstudio-users",
     "https://en.wikipedia.org/wiki/Stable_Diffusion"
   ],
-  "verify_notes": "修正点：补充官方 API 按 $0.01/credit 计费（模型本身仍免费开源）。整体描述准确。",
-  "content_verified": true,
+  "verify_notes": "渲染失败，记录「模型免费开源（API $0.01/credit）」维持，需人工核实。",
+  "content_verified": false,
   "url_previous": "https://stability.ai",
   "compare_section": {
     "competitors": [

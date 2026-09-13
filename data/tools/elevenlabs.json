@@ -67,8 +67,8 @@
   "verified_what": "顶级AI语音合成与声音克隆平台，提供文字转语音、声音克隆、多语言配音、语音翻译与对话式AI，语音自然逼真，是播客与视频配音首选。",
   "verified_price": "Free $0（10,000 credits/月）；Starter $6/月（年付约$5/月，30,000 credits，含即时声音克隆与商业授权）；Creator $22/月（首月$11/年付$11，121,000 credits，含专业声音克隆）；Pro $99/月（600,000 credits）；Scale $299/月；Business $990/月。年付可省2个月。",
   "verified_platform": "Web / iOS / Android / API",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-09-13",
+  "confidence": "low",
   "conflict": false,
   "verified_features": [
     "文字转语音(TTS)",
@@ -121,8 +121,8 @@
     "https://www.agiyes.com/aimodels/elevenlabs",
     "https://aicats.wiki/tw?p=62538"
   ],
-  "verify_notes": "官方域名为elevenlabs.io，确认无误。Starter年付$5/月与月付$6/月并存，原price字段'$5/月'实为年付价，保留。",
-  "content_verified": true,
+  "verify_notes": "首页渲染未现价表（$1B 为捐赠公告数字，假阳性）；官方定价页多源确认 Starter $6/月（年付 $5）、Creator $22、Pro $99，记录「Starter $5/月起（年付）/$6 月付」准确，未改。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "spark-tts",

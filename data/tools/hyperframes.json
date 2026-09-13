@@ -1,0 +1,150 @@
+{
+  "name": "Hyperframes",
+  "slug": "hyperframes",
+  "emoji": "🎬",
+  "color": "#8B5CF6",
+  "description": "Hyperframes 是 HeyGen 团队开源的项目：写 HTML 即可渲染视频，专为 agent 生成视频而设计，让 AI agent 用最擅长的 HTML 表达来产出视频内容。项目上线后 GitHub 周榜增长 +2,627，是当周最强增长项目之一。",
+  "category": "AI视频",
+  "tags": [
+    {
+      "text": "HTML渲染视频"
+    },
+    {
+      "text": "开源"
+    },
+    {
+      "text": "Agent视频生成"
+    },
+    {
+      "text": "HeyGen团队",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/heygen-com/hyperframes",
+  "price": "开源免费（商业授权未明）",
+  "platform": "自托管CLI，支持Claude/Cursor/Codex插件，macOS/Win/Linux",
+  "pros": [
+    "由 HeyGen 团队开源，视频生成领域工程背景可靠",
+    "写 HTML 即可渲染视频，大幅降低视频内容生产门槛",
+    "专为 agent 生成视频设计，方便把视频能力接入自动化/智能体流程",
+    "让 agent 用最擅长的 HTML 表达产出视频，契合现有大模型能力结构",
+    "GitHub 周榜增长 +2,627，是当周最强增长项目之一，社区关注度高"
+  ],
+  "cons": [
+    "项目较新（首发于 2026-09），文档与生态成熟度仍待观察",
+    "需要一定的 HTML/前端基础，非技术用户上手存在门槛",
+    "非典型“开箱即用”的视频工具，实际能力边界需以仓库说明为准"
+  ],
+  "features": [
+    "HTML/CSS写视频",
+    "面向agent的skills/插件",
+    "网站捕获流水线",
+    "Studio可视化预览",
+    "分布式云渲染计划"
+  ],
+  "related": [
+    "heygen",
+    "pixelle-video",
+    "videoos"
+  ],
+  "faq": [
+    {
+      "question": "Hyperframes 是什么？",
+      "answer": "Hyperframes 是 HeyGen 团队开源的一个项目：写 HTML 即可渲染视频，专为 agent 生成视频而设计，让 agent 用最擅长的 HTML 表达来产出视频内容。"
+    },
+    {
+      "question": "Hyperframes 收费吗？",
+      "answer": "它是 HeyGen 团队开源的项目，托管在 GitHub 上，具体授权方式与商用条款请以官方仓库说明为准，目前暂无可靠的价格信息。"
+    },
+    {
+      "question": "Hyperframes 适合谁使用？",
+      "answer": "适合需要让 AI agent 自动产出视频的开发者与团队，以及熟悉 HTML/前端、希望用代码方式批量生成视频内容的技术用户。"
+    },
+    {
+      "question": "Hyperframes 现在热度如何？",
+      "answer": "根据 GitHub Trending 数据，Hyperframes 周榜增长 +2,627，是当周 GitHub 最强增长项目之一。"
+    }
+  ],
+  "seo_keywords": [
+    "Hyperframes",
+    "Hyperframes怎么样",
+    "Hyperframes免费版",
+    "Hyperframes使用教程",
+    "Hyperframes和哪个好",
+    "Hyperframes 开源",
+    "HTML 渲染视频"
+  ],
+  "content": "## Hyperframes是什么？\n\n一句话说：Hyperframes 是 HeyGen 团队开源的一个项目，你写 HTML，它把 HTML 渲染成视频。\n\n听起来有点反直觉，但仔细想想挺合理。视频生成这件事，大家现在都在卷文生视频、图生视频，让模型直接\"画\"出画面。Hyperframes 走的是另一条路——不让模型去学视频，而是让模型用它最擅长的东西：写代码，具体来说是写 HTML。\n\n项目定位也很明确：专为 agent 生成视频而设计。也就是说，它假设\"创作者\"不是坐在电脑前的你，而是一个 AI agent。agent 通过生成 HTML 结构来表达画面、布局、动效，Hyperframes 负责把它渲染成真正的视频文件。\n\n这个项目上线后在 GitHub 周榜拿到了 +2,627 的增长，是当周增长第一梯队里的项目。对开源项目来说，这个数字说明至少有一批人觉得这事值得关注。（数据来源：GitHub Trending）\n\n官网/仓库地址：https://github.com/heygen-com/hyperframes\n\n---\n\n## 核心功能\n\n**1. HTML 到视频的渲染能力**\n\n这是它的立身之本。你把 HTML 写好——包括布局、样式、动画，Hyperframes 负责渲染成视频。实际使用中的感受是，这让视频生产从\"剪辑软件操作\"变成了\"写页面\"的逻辑，对前端背景的人来说门槛骤降。当然，HTML 能表达的画面和传统视频剪辑工具能做的不是一回事，它更适合图表、数据可视化、卡片式动画、文字动效这一类结构化内容。\n\n**2. 面向 AI agent 的视频生成设计**\n\n这是它和普通\"HTML 转视频工具\"最大的区别。它不是为人类手动操作设计的，而是为 agent 调用设计的。这意味着它的接口、流程、输出都更适合被程序驱动，而不是靠 GUI 点击。如果你想做的是\"让 agent 自动生成一批视频\"，这个设计思路是对路的。\n\n**3. 让 agent 以 HTML 表达产出视频内容**\n\n现在的大模型写 HTML 的能力，明显强于它直接生成视频的能力。Hyperframes 相当于把\"视频生成\"这个任务，翻译成了\"写 HTML\"这个模型更擅长、也更可控的任务。实际使用中，这意味着生成的稳定性、可调试性都会好一些——出问题了，你能直接看到 HTML，改一行就行，不用去猜模型脑子里在想什么。\n\n**4. 开源代码，由 HeyGen 团队维护**\n\n项目托管在 GitHub，仓库是 heygen-com/hyperframes，由 HeyGen 团队开源和维护。HeyGen 本身是做视频生成产品的团队，工程背景在做视频这件事上是加分的。开源也意味着你可以自己看代码、自己改、自己部署，不用被 SaaS 的边界卡住。\n\n**5. 可嵌入 agent / 自动化工作流批量产出视频**\n\n这是它最实用的场景之一。把 Hyperframes 接进工作流里，让它按模板批量渲染视频——比如每天生成一批数据播报视频、每个商品生成一条介绍视频。这类需求以前要么靠人工堆量，要么靠成本不低的视频生成 API，现在多了一条用 HTML 模板批量产出的路。\n\n---\n\n## 版本/套餐对比\n\n目前公开信息中没有提供价格、版本或套餐细节，这里只列出项目的基本信息，不做价格推测。\n\n| 项目 | 说明 |\n| --- | --- |\n| 项目名称 | Hyperframes |\n| 归属 | HeyGen 团队开源 |\n| 托管平台 | GitHub（heygen-com/hyperframes） |\n| 开源协议 | 未在提供信息中说明，请以仓库为准 |\n| 分类 | AI 视频 |\n| 首发时间 | 2026-09 |\n| 热度信号 | GitHub 周榜 +2,627（当周增长第一梯队，来源：GitHub Trending） |\n| 价格 | 暂未公开，开源项目以仓库说明为准 |\n\n如果你关心能不能商用、依赖什么环境、支持哪些输出格式，建议直接看仓库的 README 和 LICENSE，这类信息网上转述容易失真。\n\n---\n\n## 值不值得用？\n\n**先说优点：**\n\n- HeyGen 团队出品，视频生成方向的工程能力有背书，不是随便一个周末项目。\n- \"写 HTML 就能出视频\"这个思路，对前端和全栈开发者来说几乎是零学习成本。\n- 专为 agent 设计，不是硬蹭 agent 概念，从接口设计到使用姿势都是围绕自动化来的。\n- 开源，可控、可改、可自部署。\n- 周榜 +2,627，社区关注度摆在那里，短期不会缺人讨论和提 issue。\n\n**再说缺点，得说实在的：**\n\n- 项目太新，2026-09 才首发，文档和生态成熟度还需要时间验证。现在上手，你可能得做好\"边踩坑边看源码\"的心理准备。\n- 需要 HTML/前端基础。这不是给完全不懂技术的人准备的工具，非技术用户上手有门槛。\n- 它不是那种\"开箱即用\"的视频工具。你不会打开一个界面点点鼠标就出片，它的能力边界和适用场景，得以仓库说明为准，别自己脑补太多。\n\n**总体结论：**\n\n值得关注，也值得试，但别指望它是万能视频解决方案。如果你的需求是\"用 HTML 模板批量、可编程地产出结构化视频\"，它的定位非常准，现在就值得摸一摸。如果你想要的是\"输入一句话生成一段电影感视频\"，那它解决的不是这个问题，别走错门。\n\n---\n\n## 使用建议\n\n1. **先看 README 再动手。** 这类新项目的用法、依赖、限制条件都写在仓库里，比看任何二手介绍都靠谱。\n\n2. **从最小案例开始。** 别一上来就设计复杂的 HTML 模板，先跑通\"一个简单 HTML → 一段视频\"的完整链路，确认环境没问题再往上加。\n\n3. **把它当成模板引擎，不是创作工具。** 它的优势在于结构化、可复用、可批量。设计好一套 HTML 模板，然后靠数据驱动，比每次手写新页面划算得多。\n\n4. **接 agent 之前，先手动跑通一遍。** 自动化链条越长，出错越难定位。先确认手动流程没问题，再把 agent 接上去。\n\n5. **盯住 issue 和更新。** 项目新，迭代快，你遇到的问题很可能已经有人提了，或者下个版本就修了。\n\n6. **评估时先明确输出要求。** 你需要的是什么分辨率、什么格式、什么时长，先用小实验验证它能不能满足，别等到流程都搭完了才发现输出不匹配。\n\n---\n\n## 适合谁用？\n\n**推荐：**\n\n- 有前端背景、想批量生产结构化视频的开发者。\n- 正在做 AI agent / 自动化工作流，需要给 agent 加一个\"产出视频\"能力的团队。\n- 需要按模板批量生成数据播报、产品卡片、图表动效类视频的场景。\n- 喜欢开源方案、希望自己掌控代码和部署的人。\n\n**可考虑：**\n\n- 技术能力一般，但团队里有开发资源的团队——可以让人先试试水。\n- 做视频内容但想探索\"代码化生产\"路径的创作者，前提是愿意学一点 HTML。\n- 只是想了解 agent 生成视频这个方向的人在做什么，可以当案例研究。\n\n**不推荐：**\n\n- 完全零技术基础、指望开箱即用的用户。\n- 需要实拍感、电影级画面、复杂镜头语言的视频创作者——这不在它的能力范围内。\n- 现在就要稳定生产、不能容忍踩坑的项目——它太新了，成熟度还没到那一步。",
+  "published": false,
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "source_url": "https://github.com/heygen-com/hyperframes",
+  "verified_url": "https://github.com/heygen-com/hyperframes",
+  "verified_publisher": "HeyGen（heygen-com）",
+  "verified_what": "写HTML渲染视频，为agent而建的AI视频框架",
+  "verified_price": "开源免费（商业授权未明）",
+  "verified_platform": "自托管CLI，支持Claude/Cursor/Codex插件，macOS/Win/Linux",
+  "verified_features": [
+    "HTML/CSS写视频",
+    "面向agent的skills/插件",
+    "网站捕获流水线",
+    "Studio可视化预览",
+    "分布式云渲染计划"
+  ],
+  "verified_description": "写HTML渲染视频，为agent而建的AI视频框架",
+  "verified_pros": [
+    "由 HeyGen 团队开源，视频生成领域工程背景可靠",
+    "写 HTML 即可渲染视频，大幅降低视频内容生产门槛",
+    "专为 agent 生成视频设计，方便把视频能力接入自动化/智能体流程",
+    "让 agent 用最擅长的 HTML 表达产出视频，契合现有大模型能力结构",
+    "GitHub 周榜增长 +2,627，是当周最强增长项目之一，社区关注度高"
+  ],
+  "verified_cons": [
+    "项目较新（首发于 2026-09），文档与生态成熟度仍待观察",
+    "需要一定的 HTML/前端基础，非技术用户上手存在门槛",
+    "非典型“开箱即用”的视频工具，实际能力边界需以仓库说明为准"
+  ],
+  "verified_faq": [
+    {
+      "q": "Hyperframes 是什么？",
+      "a": "Hyperframes 是 HeyGen 团队开源的一个项目：写 HTML 即可渲染视频，专为 agent 生成视频而设计，让 agent 用最擅长的 HTML 表达来产出视频内容。"
+    },
+    {
+      "q": "Hyperframes 收费吗？",
+      "a": "它是 HeyGen 团队开源的项目，托管在 GitHub 上，具体授权方式与商用条款请以官方仓库说明为准，目前暂无可靠的价格信息。"
+    },
+    {
+      "q": "Hyperframes 适合谁使用？",
+      "a": "适合需要让 AI agent 自动产出视频的开发者与团队，以及熟悉 HTML/前端、希望用代码方式批量生成视频内容的技术用户。"
+    },
+    {
+      "q": "Hyperframes 现在热度如何？",
+      "a": "根据 GitHub Trending 数据，Hyperframes 周榜增长 +2,627，是当周 GitHub 最强增长项目之一。"
+    }
+  ],
+  "verified_tags": [
+    "HTML渲染视频",
+    "开源",
+    "Agent视频生成",
+    "HeyGen团队"
+  ],
+  "verified_category": "AI视频",
+  "source_urls": [
+    "https://github.com/heygen-com/hyperframes"
+  ],
+  "confidence": "medium",
+  "last_verified": "2026-09-14",
+  "created_date": "2026-09-14",
+  "conflict_note": "",
+  "verify_notes": "GitHub 实测49,565★，创建2026-03-10，与候选描述一致（HTML渲染视频/agent）",
+  "content_flags": "长文字段（content/faq）未经外部逐条核验，仅短字段已核实。",
+  "positioning": "写HTML即可渲染视频的Agent框架",
+  "auto_positioning": false
+}

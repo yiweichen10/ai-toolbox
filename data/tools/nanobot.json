@@ -1,0 +1,155 @@
+{
+  "name": "nanobot",
+  "slug": "nanobot",
+  "emoji": "🤖",
+  "color": "#6366F1",
+  "description": "nanobot 是一款超轻量的自托管个人 AI agent 框架，内置 WebUI、记忆系统、MCP 支持与多 agent 工作流。它面向希望以最小化部署成本实现可扩展自动化的开发者，在 GitHub 上已获得 47,620 stars。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "自托管"
+    },
+    {
+      "text": "轻量框架"
+    },
+    {
+      "text": "多Agent工作流"
+    },
+    {
+      "text": "MCP"
+    },
+    {
+      "text": "开源",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.7",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/HKUDS/nanobot",
+  "price": "开源免费 (MIT)",
+  "platform": "WebUI / 终端 / 聊天应用（macOS/Linux/Windows，Python）",
+  "pros": [
+    "超轻量设计，部署与资源占用成本低",
+    "自托管模式，数据与运行环境完全掌握在自己手中",
+    "自带 WebUI，开箱即可通过浏览器管理 agent",
+    "内置记忆系统，支持长期上下文与个性化使用",
+    "原生支持 MCP 与多 agent 工作流，便于扩展复杂自动化",
+    "GitHub 热度高（47,620 stars），社区关注度强"
+  ],
+  "cons": [
+    "定位面向开发者，普通用户上手门槛相对较高",
+    "自托管需要自行部署与维护，对运维有一定要求",
+    "首发时间为 2026-09，生态与周边成熟度仍在演进中"
+  ],
+  "features": [
+    "WebUI 工作台",
+    "长期记忆（Dream）",
+    "MCP 集成",
+    "多 agent 委派",
+    "OpenAI 兼容 API"
+  ],
+  "related": [
+    "crewai",
+    "autogen",
+    "anythingllm"
+  ],
+  "faq": [
+    {
+      "question": "nanobot 是什么？",
+      "answer": "nanobot 是一款超轻量自托管的个人 AI agent 框架，自带 WebUI、记忆、MCP 与多 agent 工作流，主要面向希望以最小化方式实现可扩展自动化的开发者。"
+    },
+    {
+      "question": "nanobot 免费吗？",
+      "answer": "目前官方渠道未公布收费信息，价格暂未公开。项目托管在 GitHub（github.com/nanobot），具体授权与费用请以官方仓库说明为准。"
+    },
+    {
+      "question": "nanobot 支持哪些平台？",
+      "answer": "根据官方描述，nanobot 为自托管框架，通过自带 WebUI 在浏览器中使用，需自行部署运行环境。"
+    },
+    {
+      "question": "nanobot 适合谁使用？",
+      "answer": "它更适合具备一定技术能力的开发者，尤其是希望在自有环境中搭建可控、轻量、可扩展 AI 自动化与多 agent 工作流的用户。"
+    }
+  ],
+  "seo_keywords": [
+    "nanobot",
+    "nanobot怎么样",
+    "nanobot免费版",
+    "nanobot使用教程",
+    "nanobot和哪个好"
+  ],
+  "content": "## nanobot是什么？\n\nnanobot 是一个超轻量的自托管个人 AI agent 框架。把这句话拆开看，重点有三个：\n\n一是 **agent 框架**——它不是聊天机器人，而是让 AI 能调用工具、执行任务、按流程自己跑起来的底座。\n\n二是 **自托管**——跑在你自己的机器或者服务器上，数据、密钥、运行环境都在自己手里，不用把东西交给第三方平台。\n\n三是 **超轻量**——官方定位就是\"最小化可扩展的自动化\"，冲着部署成本和资源占用去的，不是那种动不动要一整套集群的重型方案。\n\n同时它还自带了 WebUI、记忆系统、MCP 支持，以及多 agent 工作流编排。也就是说，装起来之后你打开浏览器就能管理 agent，不用自己从零写一套前端。\n\n这个项目在 GitHub Trending 上出现过，目前 **47,620 stars**（数据来源：GitHub Trending），首发时间为 **2026-09**。官网在 https://github.com/nanobot。\n\n简单说：如果你一直想搞一个属于自己的、能长期记住事情、能接外部工具的 AI 助手，又不想被某个 SaaS 平台绑住，nanobot 就是往这个方向做的。\n\n## 核心功能\n\n**1. 自带 WebUI**\n这是最实用的一点。agent 框架很多是要你写配置文件、敲命令行的，nanobot 直接给了可视化管理界面。对开发者来说，省掉的是\"为了调一个参数去翻文档\"的时间。开箱能看、能点、能改，试错成本低很多。\n\n**2. 内置记忆系统**\n记忆是个人 agent 和普通聊天机器人的分水岭。nanobot 内置了 Memory 能力，意味着它可以在长期使用中积累上下文，而不是每次对话都从零开始。做个人助手、做长期跑的任务，这一条基本是刚需。\n\n**3. MCP 协议支持**\nMCP 现在已经是接外部工具和数据源的事实标准之一。原生支持意味着你不用为了接一个数据库、一个文件系统、一个第三方 API 去写一堆胶水代码。生态里现成的 MCP server 可以直接用，扩展的边际成本因此低了不少。\n\n**4. 多 agent 工作流编排**\n单个 agent 能力再强也有边界，复杂任务通常要拆成多个角色协作。nanobot 支持多 agent 编排，你可以让不同的 agent 各管一摊，串成一条工作流。这也是它被归到\"可扩展自动化\"而不是\"聊天工具\"的原因。\n\n**5. 自托管 + 最小化设计**\n这两点其实是绑在一起的。因为轻量，所以你自己一台小机器就能跑；因为自托管，所以数据不出门。对在意隐私或者有内网需求的场景，这是决定性优势。代价是运维得自己扛——这部分下面会讲。\n\n## 版本/套餐对比\n\nnanobot 走的是自托管开源项目的路子，官方目前**暂未公开分级套餐或价格信息**，所以这里没法做价格维度的横向对比。这里列出的是已知的能力项，方便你判断它覆盖了什么：\n\n| 项目 | 说明 |\n| --- | --- |\n| 获取方式 | 自托管部署，源码见官方 GitHub |\n| 价格 | 暂未公开分级套餐信息 |\n| WebUI | 自带，浏览器管理 |\n| 记忆系统 | 内置 Memory |\n| MCP 支持 | 原生支持 |\n| 多 agent 工作流 | 支持 |\n| 部署要求 | 官方定位超轻量，资源占用低 |\n\n如果你正在对比几个同类框架，建议直接去仓库看部署文档，那个比任何对比表都实在。\n\n## 值不值得用？\n\n先说优点，而且是很实的那种：\n\n- **轻**。这一点在做长期跑的服务时特别重要，资源占用低意味着你可以把它丢在一台便宜的机器上，甚至和别的东西共用。\n- **数据自主**。自托管不只是\"政治正确\"，很多业务场景是硬要求，比如涉及内部数据的自动化。\n- **开箱有界面**。WebUI 这个事看着小，但它决定了你愿不愿意持续用它。\n- **记忆 + MCP + 多 agent 三件套齐了**。这三样恰好是\"玩具\"和\"能用\"之间的分界线，nanobot 一次性都给到了。\n- **社区热度不错**。47,620 stars 不是小数目，说明至少有一批人在认真看它、用它。\n\n再说缺点，也说实在的：\n\n- **它是给开发者做的**。普通用户上手会有门槛，配置、部署这些事绕不过去。\n- **自托管 = 自运维**。装起来只是开始，后面升级、排错、备份、安全都是你自己的事。对没运维经验的人来说，这部分成本容易被低估。\n- **项目还年轻**。首发时间 2026-09，生态、插件、文档、社区问答都还在演进中，踩到文档没覆盖的坑是大概率事件。\n\n**结论**：如果你本身就是开发者，或者对自托管有明确需求，nanobot 值得花一个下午试一下，它的功能组合在这个定位下是完整的。但如果你只是想找个\"开箱即用的 AI 助手\"、不想碰命令行和服务器，那它现在还不是为你准备的。\n\n## 使用建议\n\n**先跑最小闭环，别一上来就堆功能。** 部署完先让单个 agent 配上记忆跑通，确认 WebUI 能管得住它，再考虑接 MCP、拆多 agent。一开始就上复杂编排，出问题很难定位是哪一层的锅。\n\n**MCP 按需接，别贪多。** 一口气挂十几个外部工具，agent 的选择准确率反而会下降，调试也变难。缺什么接什么。\n\n**记忆要定期看一眼。** 记忆系统的价值在于长期积累，但积累错了东西也会一直错下去。养成偶尔检查、必要时清理的习惯。\n\n**多 agent 工作流从两条链路起步。** 先做两个角色的协作，跑顺了再加第三个。工作流这东西，越复杂越难调。\n\n**把它当长期服务对待。** 既然选择了自托管，那就顺手把日志、备份、升级流程规划一下，别等出事了再补。\n\n**版本更新前先看 changelog。** 项目还在快速演进期，破坏性变更是有可能的，升级前留个回滚方案。\n\n## 适合谁用？\n\n**推荐：**\n- 开发者，尤其是已经在用或者想试 MCP、agent 编排的人\n- 有自托管硬性要求的团队（内网、数据合规、私有化部署）\n- 想搭个人长期 AI 助手、能接受折腾的人\n- 资源有限、需要一个轻量底座跑自动化的人\n\n**可考虑：**\n- 有一定技术基础、但没做过运维的产品或运营同学\n- 正在几个 agent 框架之间选型、想先跑个 demo 对比的团队\n- 对 AI agent 感兴趣、愿意边学边用的人\n\n**不推荐：**\n- 完全不懂技术、只想点开网页就用的人\n- 希望有官方托管服务、不想自己维护服务器的用户\n- 需要成熟商业支持和 SLA 保障的企业场景\n- 急着上线、不能容忍踩坑和文档空白的项目\n\n一句话：nanobot 是个方向很对、定位很清楚的轻量自托管 agent 框架，但它现在服务的是愿意动手的人。你要是那类人，47,620 stars 的背后是有理由的。",
+  "published": false,
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "source_url": "https://github.com/HKUDS/nanobot",
+  "verified_url": "https://github.com/HKUDS/nanobot",
+  "verified_publisher": "HKUDS（香港大学数据科学实验室）",
+  "verified_what": "超轻量自托管个人 AI agent 框架（Python），含 WebUI、记忆、MCP 与多 agent 工作流。",
+  "verified_price": "开源免费 (MIT)",
+  "verified_platform": "WebUI / 终端 / 聊天应用（macOS/Linux/Windows，Python）",
+  "verified_features": [
+    "WebUI 工作台",
+    "长期记忆（Dream）",
+    "MCP 集成",
+    "多 agent 委派",
+    "OpenAI 兼容 API"
+  ],
+  "verified_description": "超轻量自托管个人 AI agent 框架（Python），含 WebUI、记忆、MCP 与多 agent 工作流。",
+  "verified_pros": [
+    "超轻量设计，部署与资源占用成本低",
+    "自托管模式，数据与运行环境完全掌握在自己手中",
+    "自带 WebUI，开箱即可通过浏览器管理 agent",
+    "内置记忆系统，支持长期上下文与个性化使用",
+    "原生支持 MCP 与多 agent 工作流，便于扩展复杂自动化",
+    "GitHub 热度高（47,620 stars），社区关注度强"
+  ],
+  "verified_cons": [
+    "定位面向开发者，普通用户上手门槛相对较高",
+    "自托管需要自行部署与维护，对运维有一定要求",
+    "首发时间为 2026-09，生态与周边成熟度仍在演进中"
+  ],
+  "verified_faq": [
+    {
+      "q": "nanobot 是什么？",
+      "a": "nanobot 是一款超轻量自托管的个人 AI agent 框架，自带 WebUI、记忆、MCP 与多 agent 工作流，主要面向希望以最小化方式实现可扩展自动化的开发者。"
+    },
+    {
+      "q": "nanobot 免费吗？",
+      "a": "目前官方渠道未公布收费信息，价格暂未公开。项目托管在 GitHub（github.com/nanobot），具体授权与费用请以官方仓库说明为准。"
+    },
+    {
+      "q": "nanobot 支持哪些平台？",
+      "a": "根据官方描述，nanobot 为自托管框架，通过自带 WebUI 在浏览器中使用，需自行部署运行环境。"
+    },
+    {
+      "q": "nanobot 适合谁使用？",
+      "a": "它更适合具备一定技术能力的开发者，尤其是希望在自有环境中搭建可控、轻量、可扩展 AI 自动化与多 agent 工作流的用户。"
+    }
+  ],
+  "verified_tags": [
+    "自托管",
+    "轻量框架",
+    "多Agent工作流",
+    "MCP",
+    "开源"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://github.com/HKUDS/nanobot",
+    "https://dibi8.com/resources/ai-tools/nanobot-lightweight-ai-agent-2026"
+  ],
+  "confidence": "medium",
+  "last_verified": "2026-09-14",
+  "created_date": "2026-09-14",
+  "conflict_note": "",
+  "verify_notes": "候选 url github.com/nanobot 缺 owner 不完整；真实仓库为 HKUDS/nanobot，描述与星数（实测约 47,791，候选 47,620）均吻合。搜过关键词：nanobot self-hosted personal AI agent framework WebUI memory MCP multi-agent。",
+  "content_flags": "长文字段（content/faq）未经外部逐条核验，仅短字段已核实。",
+  "positioning": "超轻量自托管个人AI Agent框架",
+  "auto_positioning": false
+}

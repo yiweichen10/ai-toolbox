@@ -75,10 +75,10 @@
     "last_content_updated": "2026-07-28"
   },
   "source_url": "https://www.descript.com/ ; https://descript.com/tour",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-09-13",
+  "confidence": "medium",
   "conflict": false,
-  "content_verified": true,
+  "content_verified": false,
   "conflict_note": "",
   "verified_publisher": "Descript, Inc.",
   "verified_what": "以文本化编辑为核心的 AI 视频与播客编辑平台，编辑文字即可编辑音视频",
@@ -132,12 +132,10 @@
   ],
   "verified_category": "AI视频",
   "source_urls": [
-    "https://www.descript.com/",
-    "https://descript.com/pricing/",
-    "https://aisiftr.com/tools/descript",
-    "https://toollibraryonline.com/descript-review"
+    "https://www.descript.com/pricing",
+    "https://www.descript.com/"
   ],
-  "verify_notes": "url(descript.com) 正确。价格已过时——最低付费从 $12/月 升至 $16/月(年付)。features/pros/cons 基本准确。content 无严重幻觉。G2 4.6、Capterra 4.7 可作为评级参考。",
+  "verify_notes": "首页渲染无价表；官方定价页多源确认 Hobbyist $24/月 或 $16/月年付、Creator $24年付、Business $50年付，记录「Hobbyist $16/月起（年付）」准确，未改。",
   "compare_section": {
     "competitors": [
       "invideo-ai",

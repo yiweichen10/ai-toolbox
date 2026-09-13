@@ -1,0 +1,152 @@
+{
+  "name": "Switch",
+  "slug": "switch",
+  "emoji": "🔀",
+  "color": "#6366F1",
+  "description": "Switch 能把任意 AI agent 直接接入 Slack、Teams、Discord、Telegram，让它以带名字的正式成员身份加入团队，并共享团队上下文与历史记录。每个频道都可以独立维护自己的上下文、参与者与规则，支持 Claude Code、OpenAI、Google ADK、LangChain 等主流框架。团队无需为每个助手单独开发一套界面，实际效果取决于权限管控的深度。",
+  "category": "AI智能体",
+  "tags": [
+    {
+      "text": "Slack集成"
+    },
+    {
+      "text": "团队协作"
+    },
+    {
+      "text": "AI Agent接入"
+    },
+    {
+      "text": "无需自建界面",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/sandbox-quantum/switch",
+  "price": "开源自托管（license 未公开）",
+  "platform": "自托管服务 + 聊天平台集成（Slack/Teams/Discord/Mattermost）",
+  "pros": [
+    "无需为每个 AI 助手单独开发一套界面，直接复用团队已有的聊天工具",
+    "Agent 以带名字的正式成员身份加入，自然融入团队协作流程",
+    "共享团队上下文与历史，让助手在多轮协作中保持连贯理解",
+    "每个频道可独立维护自己的上下文、参与者与规则，隔离性好",
+    "兼容 Claude Code、OpenAI、Google ADK、LangChain 等多种 Agent 框架"
+  ],
+  "cons": [
+    "实际效果取决于权限管控深度，权限配置不到位时存在风险",
+    "目前仅覆盖 Slack、Teams、Discord、Telegram 四个平台，其他协作工具暂不支持",
+    "价格与套餐信息尚未公开，团队预算评估存在不确定性"
+  ],
+  "features": [
+    "agent 以具名成员加入频道",
+    "每房间独立上下文与规则",
+    "连接器插件化接入各 agent",
+    "支持 Slack/Teams/Discord/Mattermost",
+    "开源可自托管，约十分钟接入"
+  ],
+  "related": [
+    "slackbot-ai",
+    "botpress",
+    "openai-agents-sdk"
+  ],
+  "faq": [
+    {
+      "question": "Switch 是什么？能解决什么问题？",
+      "answer": "Switch 是一个把 AI agent 接入团队聊天工具的中间层。它让任意 agent 直接进入 Slack、Teams、Discord、Telegram，成为带名字的正式成员并共享团队上下文与历史，从而免去为每个助手单独开发一套界面的成本。"
+    },
+    {
+      "question": "Switch 支持接入哪些平台和 Agent 框架？",
+      "answer": "消息平台方面支持 Slack、Microsoft Teams、Discord 和 Telegram；Agent 框架方面支持 Claude Code、OpenAI、Google ADK、LangChain 等。每个频道可以独立维护自己的上下文、参与者与规则。"
+    },
+    {
+      "question": "Switch 怎么收费？有免费版吗？",
+      "answer": "目前官方来源未公开具体价格与套餐信息，价格暂未公开，建议关注其 Product Hunt 页面或官方渠道获取最新定价说明。"
+    },
+    {
+      "question": "使用 Switch 有什么需要注意的地方？",
+      "answer": "官方描述提到效果取决于其权限管控深度。把 Agent 作为正式成员接入团队频道时，需要认真规划频道权限、可见范围与参与者规则，避免敏感上下文被不该看到的人或助手获取。"
+    }
+  ],
+  "seo_keywords": [
+    "Switch",
+    "Switch怎么样",
+    "Switch免费版",
+    "Switch使用教程",
+    "Switch和哪个好",
+    "Switch AI agent Slack",
+    "AI agent 接入 Slack",
+    "Switch Product Hunt"
+  ],
+  "content": "## Switch是什么？\n\n一句话说清楚：Switch 能让你的 AI agent 直接住进 Slack、Teams、Discord 或 Telegram，而且是作为**有名字的正式成员**出现，不是那种挂在侧边栏、没人搭理的机器人。\n\n它的官方描述是\"把任意 AI agent 直接接入 Slack、Teams、Discord、Telegram，成为带名字的正式成员，并共享团队上下文与历史\"。听起来有点抽象，换个说法：以前你想让一个 AI 助手参与团队协作，得先给它做一套界面，或者塞进某个独立工具里，同事还得额外打开一个页面。Switch 的思路是——团队本来就在聊 Slack 或 Teams，那就别折腾了，让 agent 直接进群。\n\n它于 2026 年 9 月 8 日在 Product Hunt 首发，当天拿下 #1，510 票（来源：Product Hunt）。这个热度说明一件事：大家确实受够了\"给每个 AI 助手单独造一套壳\"的重复劳动。\n\n## 核心功能\n\n**1. 任意 agent 直连四大聊天平台**\nSwitch 支持把 AI agent 接入 Slack、Teams、Discord、Telegram。你不用为每个助手单独开发界面，团队已有的聊天工具就是它的入口。这一点是它最实在的价值——省掉的不是一点开发量，而是一整套产品化的工作。\n\n**2. Agent 以\"带名字的正式成员\"身份加入**\n这是它和普通 chatbot 最大的区别。它有名字，在成员列表里，能被 @，能参与对话。实际使用中，这会明显改变同事对它的态度——它更像一个\"同事\"，而不是一个\"功能按钮\"。\n\n**3. 共享团队上下文与历史**\nAgent 能看到团队在频道里的上下文和历史记录，这意味着多轮协作时它不会每次都从零开始理解。据了解，这是它宣称相对于\"把 agent 关在独立窗口里\"的核心优势之一：理解是连贯的。\n\n**4. 每个频道独立维护上下文、参与者与规则**\n不同频道可以有各自独立的上下文、参与者范围和规则。这是个挺关键的隔离设计——产品和法务的 agent 不必共享同一套记忆，权限和语境都能分开管。对多团队、多项目的组织来说，这一点比\"能不能接入\"更重要。\n\n**5. 兼容主流 Agent 框架**\n支持 Claude Code、OpenAI、Google ADK、LangChain 等。也就是说，你不太需要因为用了 Switch 就推翻现有的 agent 技术栈，它更像是一层\"接入层\"，而不是要你换一整套方案。\n\n## 版本/套餐对比\n\n坦白说，目前能确认的信息有限——官方尚未公开价格与套餐细节。所以与其编一张表，不如把已知情况列清楚：\n\n| 项目 | 当前情况 |\n| --- | --- |\n| 价格 | 暂未公开 |\n| 套餐分层 | 暂未公开 |\n| 支持的平台 | Slack、Teams、Discord、Telegram（共 4 个） |\n| 支持的 Agent 框架 | Claude Code、OpenAI、Google ADK、LangChain 等 |\n| 免费试用 | 官方未在现有信息中说明 |\n\n如果你的团队需要先做预算评估，这块目前是空白的，建议直接去官网（Product Hunt 产品页）确认最新政策，别按猜测做规划。\n\n## 值不值得用？\n\n**优点：**\n\n- 复用团队已有的聊天工具，不用为每个 AI 助手单独做一套界面，这是最大的成本节省点。\n- Agent 以正式成员身份融入协作流程，比\"外挂一个机器人\"自然得多。\n- 共享团队上下文和历史，多轮协作的连贯性更好。\n- 按频道隔离上下文、参与者和规则，多团队场景下管理起来清爽。\n- 兼容 Claude Code、OpenAI、Google ADK、LangChain，不锁死技术栈。\n\n**缺点：**\n\n- 实际效果高度依赖权限管控的深度。权限配得糙，agent 能看到不该看的东西，这就不是\"体验问题\"而是\"风险问题\"了。\n- 目前只覆盖 Slack、Teams、Discord、Telegram 四个平台，用飞书、钉钉、企业微信的团队暂时用不上。\n- 价格和套餐没公开，预算评估有不确定性。\n\n**总体结论：** 值得关注，也值得在受控范围内试。它解决的是一个真实存在的痛点——agent 做出来了，但没有一个好的地方让它真正参与团队工作。不过它的成败不在\"接入\"这件事上，而在权限治理。如果你团队没有能力把权限和上下文边界设计清楚，先别急着全量铺开。\n\n## 使用建议\n\n1. **先定权限，再接入。** 别一上来就把 agent 拉进全员大群。先想清楚它该看哪些频道、能读什么历史、能做什么动作，再动手接。\n2. **从单一频道、单一 agent 起步。** 拿一个边界清晰的项目频道试水，观察上下文共享带来的实际效果，再决定是否扩展到其他团队。\n3. **利用频道隔离做分权。** 把不同敏感度的协作拆到不同频道，每个频道的参与者与规则单独配置，这是 Switch 相对好用的一个设计点。\n4. **顺手整理历史记录。** 既然 agent 会读频道历史，那频道里堆的废话、错信息也会成为它的输入。清理一下，收益比你想的大。\n5. **优先复用现有框架。** 如果你已经在用 Claude Code 或 LangChain，别为了 Switch 重写 agent 逻辑，把它当接入层用就好。\n6. **预算先问官方。** 价格未公开，采购前直接确认，别拿第三方转述当依据。\n\n## 适合谁用？\n\n**推荐：**\n- 团队已经在 Slack / Teams / Discord / Telegram 上重度协作，希望 agent 直接进频道的。\n- 手上已经有多个 AI agent，但每个都缺一个\"落脚点\"、不想重复做界面的团队。\n- 有明确权限治理能力，能按频道划分上下文和参与者边界的组织。\n\n**可考虑：**\n- 用飞书、钉钉等平台为主，但有部分业务跑在 Slack 或 Discord 的团队（只能覆盖一部分场景）。\n- 还在选 agent 框架、技术栈未定的团队——Switch 兼容性不错，但不该成为你选框架的理由。\n- 想先做小规模概念验证、再决定是否投入的团队。\n\n**不推荐：**\n- 协作工具完全不在支持列表内的团队，接不进去就是接不进去。\n- 权限体系还没理顺、数据敏感度又高的组织，这种场景下\"agent 能看全频道历史\"是负担不是优势。\n- 需要立刻做完整预算评估和长期采购决策的团队，价格信息没公开之前，决策依据不足。",
+  "published": false,
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "source_url": "https://github.com/sandbox-quantum/switch",
+  "verified_url": "https://github.com/sandbox-quantum/switch",
+  "verified_publisher": "SandboxAQ（sandbox-quantum）",
+  "verified_what": "把任意 AI agent 作为具名成员接入 Slack/Teams/Discord 等团队聊天平台",
+  "verified_price": "开源自托管（license 未公开）",
+  "verified_platform": "自托管服务 + 聊天平台集成（Slack/Teams/Discord/Mattermost）",
+  "verified_features": [
+    "agent 以具名成员加入频道",
+    "每房间独立上下文与规则",
+    "连接器插件化接入各 agent",
+    "支持 Slack/Teams/Discord/Mattermost",
+    "开源可自托管，约十分钟接入"
+  ],
+  "verified_description": "把任意 AI agent 作为具名成员接入 Slack/Teams/Discord 等团队聊天平台",
+  "verified_pros": [
+    "无需为每个 AI 助手单独开发一套界面，直接复用团队已有的聊天工具",
+    "Agent 以带名字的正式成员身份加入，自然融入团队协作流程",
+    "共享团队上下文与历史，让助手在多轮协作中保持连贯理解",
+    "每个频道可独立维护自己的上下文、参与者与规则，隔离性好",
+    "兼容 Claude Code、OpenAI、Google ADK、LangChain 等多种 Agent 框架"
+  ],
+  "verified_cons": [
+    "实际效果取决于权限管控深度，权限配置不到位时存在风险",
+    "目前仅覆盖 Slack、Teams、Discord、Telegram 四个平台，其他协作工具暂不支持",
+    "价格与套餐信息尚未公开，团队预算评估存在不确定性"
+  ],
+  "verified_faq": [
+    {
+      "q": "Switch 是什么？能解决什么问题？",
+      "a": "Switch 是一个把 AI agent 接入团队聊天工具的中间层。它让任意 agent 直接进入 Slack、Teams、Discord、Telegram，成为带名字的正式成员并共享团队上下文与历史，从而免去为每个助手单独开发一套界面的成本。"
+    },
+    {
+      "q": "Switch 支持接入哪些平台和 Agent 框架？",
+      "a": "消息平台方面支持 Slack、Microsoft Teams、Discord 和 Telegram；Agent 框架方面支持 Claude Code、OpenAI、Google ADK、LangChain 等。每个频道可以独立维护自己的上下文、参与者与规则。"
+    },
+    {
+      "q": "Switch 怎么收费？有免费版吗？",
+      "a": "目前官方来源未公开具体价格与套餐信息，价格暂未公开，建议关注其 Product Hunt 页面或官方渠道获取最新定价说明。"
+    },
+    {
+      "q": "使用 Switch 有什么需要注意的地方？",
+      "a": "官方描述提到效果取决于其权限管控深度。把 Agent 作为正式成员接入团队频道时，需要认真规划频道权限、可见范围与参与者规则，避免敏感上下文被不该看到的人或助手获取。"
+    }
+  ],
+  "verified_tags": [
+    "Slack集成",
+    "团队协作",
+    "AI Agent接入",
+    "无需自建界面"
+  ],
+  "verified_category": "AI智能体",
+  "source_urls": [
+    "https://github.com/sandbox-quantum/switch",
+    "https://www.xiaoyuzhoufm.com/episode/6aa0fbcb0b25e6011d222b50"
+  ],
+  "confidence": "high",
+  "last_verified": "2026-09-14",
+  "created_date": "2026-09-14",
+  "conflict_note": "",
+  "verify_notes": "候选 PH 链接返回 403；真实官方仓库为 sandbox-quantum/switch（SandboxAQ 出品）。",
+  "content_flags": "长文字段（content/faq）未经外部逐条核验，仅短字段已核实。",
+  "positioning": "让AI Agent成为Slack频道的正式成员",
+  "auto_positioning": false
+}

@@ -3,7 +3,7 @@
     "version": 1,
     "created": "2026-08-04",
     "updated": "2026-09-13",
-    "total": 674
+    "total": 675
   },
   "tools": {
     "chatgpt": {
@@ -74,47 +74,47 @@
     },
     "doubao": {
       "name": "豆包",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI对话",
       "priority": 140,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-30",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "notion-ai": {
       "name": "Notion AI",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI办公",
       "priority": 140,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-08-27",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "runway": {
       "name": "Runway",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI视频",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "官方定价页渲染确认 Free $0（125 一次性 credits）/ Standard $12/月（年付，月付 $15）/ Pro $28/月（年付，月付 $35）/ Max $76/月（年付）；记录 Standard $12、Pro $28 准确。"
     },
     "stable-diffusion": {
       "name": "Stable Diffusion",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI绘画",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "low",
+      "notes": "渲染失败，记录「模型免费开源（API $0.01/credit）」维持，需人工核实。"
     },
     "suno": {
       "name": "Suno",
@@ -129,14 +129,14 @@
     },
     "canva-ai": {
       "name": "Canva AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI设计",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "medium",
+      "notes": "抓取超时失败；WebSearch 官方定价页+多源确认 Pro 月付约 $14.99–$15（年付约 $12.99），记录「免费版+Pro $14.99/月」准确，未改。"
     },
     "sora": {
       "name": "Sora",
@@ -151,47 +151,47 @@
     },
     "perplexity": {
       "name": "Perplexity",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI搜索",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "low",
+      "notes": "渲染失败；多源（含招银国际研报、官方 hub/pricing 复核稿）确认 Pro $20/月、Max $200/月、企业版 $40/席/月，记录准确，未改。"
     },
     "pika": {
       "name": "Pika",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI视频",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "官方定价页渲染：Free $0 / Basic $8 per month (billed yearly) / Standard $28 (yearly) / Pro $76 (yearly)，年付 -20%。原记录「Standard $10/月（年付$8）」为旧档位名与旧价。"
     },
     "udio": {
       "name": "Udio",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI音频",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "官方定价页渲染确认 Free $0 / Standard $10（月付）$8（年付）/ Pro $30（月付）$24（年付），与记录一致。"
     },
     "replit-ai": {
       "name": "Replit AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "low",
+      "notes": "抓取被 Cloudflare 拦截（假阳性）；第三方价格追踪站称 2026-09-11 起已移除免费 Starter 档，但 replit.com/pricing 与官网首页仍列 Starter Free，证据冲突 → 维持记录「免费版+Core $20/月」，标 low 不改，列为待观察项。"
     },
     "jasper": {
       "name": "Jasper",
@@ -206,25 +206,25 @@
     },
     "gamma": {
       "name": "Gamma",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "medium",
+      "notes": "抓取失败；多源确认 Free 400 credits / Plus $10 per month（年付约 $8）/ Pro $20 per month（年付约 $16）/ Ultra，记录准确，未改。"
     },
     "elevenlabs": {
       "name": "ElevenLabs",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI音频",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "low",
+      "notes": "首页渲染未现价表（$1B 为捐赠公告数字，假阳性）；官方定价页多源确认 Starter $6/月（年付 $5）、Creator $22、Pro $99，记录「Starter $5/月起（年付）/$6 月付」准确，未改。"
     },
     "gemini": {
       "name": "Gemini",
@@ -360,14 +360,14 @@
     },
     "bolt.new": {
       "name": "Bolt.new",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "官方定价页渲染：Free $0 / Pro $25 per month billed monthly / Teams $30 per member per month。原记录 Pro $20/月 已过时（现为 $25/月，年付另有折扣）。"
     },
     "windsurf": {
       "name": "Windsurf（已更名 Devin Desktop）",
@@ -393,14 +393,14 @@
     },
     "microsoft-copilot": {
       "name": "Copilot（微软）",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI办公",
       "priority": 140,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-08-27",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "wps-ai": {
       "name": "WPS AI办公",
@@ -525,14 +525,14 @@
     },
     "n8n": {
       "name": "n8n",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI自动化",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-30",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "coze": {
       "name": "扣子Coze",
@@ -558,14 +558,14 @@
     },
     "zapier-ai": {
       "name": "Zapier AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI自动化",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "low",
+      "notes": "首页渲染无价表（$40k+/$1M 为客户案例数字，假阳性）；官方定价页确认 Free $0 / Professional Starting from $19.99/month / Team $69/month，记录准确，未改。"
     },
     "veo": {
       "name": "Veo",
@@ -591,25 +591,25 @@
     },
     "descript": {
       "name": "Descript AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI视频",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "medium",
+      "notes": "首页渲染无价表；官方定价页多源确认 Hobbyist $24/月 或 $16/月年付、Creator $24年付、Business $50年付，记录「Hobbyist $16/月起（年付）」准确，未改。"
     },
     "synthesia": {
       "name": "Synthesia",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI视频",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-30",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "luma-ai": {
       "name": "Luma AI",
@@ -767,14 +767,14 @@
     },
     "figma-ai": {
       "name": "Figma AI",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI设计",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-30",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "jsdesign-ai": {
       "name": "即时设计AI",
@@ -811,14 +811,14 @@
     },
     "otter.ai": {
       "name": "Otter.ai",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "medium",
+      "notes": "首页渲染仅见 Basic 免费与 Business From $19.99/month per user，未展示 Pro 档；WebSearch 多源（含 otter.ai 官方博客）确认 Pro $8.33/user/月（年付，月付 $16.99）、Business $19.99（月付 $30），记录准确，未改。"
     },
     "feishu-assistant": {
       "name": "飞书智能助手",
@@ -833,14 +833,14 @@
     },
     "beautiful.ai": {
       "name": "Beautiful.ai",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "官方定价页渲染：Pro $14.50/mo billed annually；Teams $40/MO billed annually（含 3 用户）；14 天免费试用。原记录 Pro $12/月 已过时。"
     },
     "tome": {
       "name": "Tome",
@@ -855,14 +855,14 @@
     },
     "fireflies.ai": {
       "name": "Fireflies.ai",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 110,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "官方定价页渲染确认 Free $0 / Pro $10 per seat/month（年付，月付 $18）/ Business $19（月付 $29）/ Enterprise $39，与记录一致。"
     },
     "speechify": {
       "name": "Speechify",
@@ -1218,14 +1218,14 @@
     },
     "miro-ai": {
       "name": "Miro AI",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI办公",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "framer-ai": {
       "name": "Framer AI",
@@ -1306,25 +1306,25 @@
     },
     "wondercraft-ai": {
       "name": "Wondercraft AI",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI音频",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "veed-io": {
       "name": "Veed.io",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI视频",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "kaiber": {
       "name": "Kaiber",
@@ -1394,25 +1394,25 @@
     },
     "seedance": {
       "name": "Seedance 2.0",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI视频",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-09-03",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "grain": {
       "name": "Grain",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI办公",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "elicit": {
       "name": "Elicit",
@@ -1482,14 +1482,14 @@
     },
     "01-ai": {
       "name": "零一万物",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI对话",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "stepfun": {
       "name": "阶跃星辰",
@@ -1504,14 +1504,14 @@
     },
     "baichuan-ai": {
       "name": "百川智能",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI对话",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "sensenova": {
       "name": "商汤日日新",
@@ -1526,14 +1526,14 @@
     },
     "cognition-ai": {
       "name": "Cognition AI",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI编程",
       "priority": 180,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-30",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "sourcegraph-cody": {
       "name": "Sourcegraph Cody",
@@ -1548,14 +1548,14 @@
     },
     "tabnine": {
       "name": "Tabnine",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI编程",
       "priority": 180,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "comfyui": {
       "name": "ComfyUI",
@@ -1570,14 +1570,14 @@
     },
     "fooocus": {
       "name": "Fooocus",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI绘画",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "topaz-photo-ai": {
       "name": "Topaz Photo AI",
@@ -1592,14 +1592,14 @@
     },
     "upscayl": {
       "name": "Upscayl",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI设计",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "adobe-express-ai": {
       "name": "Adobe Express AI",
@@ -1647,14 +1647,14 @@
     },
     "boomy": {
       "name": "Boomy",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI音频",
       "priority": 180,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-30",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "colossyan": {
       "name": "Colossyan",
@@ -1867,14 +1867,14 @@
     },
     "zi-dong-tai-chu": {
       "name": "紫东太初",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI对话",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "internlm": {
       "name": "书生浦语",
@@ -2010,14 +2010,14 @@
     },
     "coda-ai": {
       "name": "Coda AI",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI办公",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "semrush-ai": {
       "name": "Semrush AI",
@@ -2109,14 +2109,14 @@
     },
     "lingoai": {
       "name": "LingoAI",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI翻译",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "zety-ai": {
       "name": "Zety AI",
@@ -4133,14 +4133,14 @@
     },
     "swytchcode": {
       "name": "Swytchcode",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI编程",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "medium",
+      "notes": "首页渲染未出现价表，$49 为产品演示里的扣款示例（假阳性）；记录「免费基础版 / Pro 版 $10/月」无新证据支持或否定，标 medium 不回写，需人工核实。"
     },
     "octolens": {
       "name": "Octolens",
@@ -4177,14 +4177,14 @@
     },
     "blink-ai-cfo": {
       "name": "Blink AI CFO",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI行业应用",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "官方页面渲染确认三档年付价 $22/$45/$90（原价 $45/$90/$180 为月付），赠 $100 额度无需信用卡。原 FAQ「标准 $50/月、旗舰 $200/月起」已过时。"
     },
     "kollab": {
       "name": "Kollab",
@@ -4232,14 +4232,14 @@
     },
     "phinite": {
       "name": "Phinite",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI智能体",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "无头浏览器渲染官方定价页确认：Starter Free / Professional $100 per month / Enterprise Custom。原记录 Professional $249/月 已过时（官方现价 $100/月），Free 档由「5 用户」修正为「1 用户」。"
     },
     "qik-office": {
       "name": "Qik Office",
@@ -4364,14 +4364,14 @@
     },
     "stanley-ai": {
       "name": "Stanley AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI写作",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "low",
+      "notes": "官网渲染无价表；WebSearch 多源确认 Stanley for Instagram $47/月、Stanley for LinkedIn $149/月（分产品单独计费）。记录 $47/月 对 Instagram 档准确但未覆盖 LinkedIn 档，属失败抓取通道标 low 不自动改，建议人工补齐双档说明。"
     },
     "krea-2": {
       "name": "Krea 2",
@@ -4441,14 +4441,14 @@
     },
     "nex-n2": {
       "name": "Nex-N2",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI智能体",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "low",
+      "notes": "中文站渲染失败，无公开金额，记录「开源免费（云端按 token 计费）」维持，需人工核实。"
     },
     "skywork-3-1": {
       "name": "Skywork 3.1",
@@ -4584,14 +4584,14 @@
     },
     "ollama": {
       "name": "Ollama",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI开发",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-30",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "lite-llm": {
       "name": "LiteLLM",
@@ -4826,14 +4826,14 @@
     },
     "ace-studio": {
       "name": "ACE Studio",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI音频",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-30",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "algo": {
       "name": "Algo",
@@ -4903,14 +4903,14 @@
     },
     "tesla-optimus": {
       "name": "Tesla Optimus",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI行业应用",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "low",
+      "notes": "定价页 403 拒绝访问；记录「尚未正式销售（目标价 $20,000–$30,000）」维持，需人工核实。"
     },
     "unitree-h1": {
       "name": "宇树H1",
@@ -4958,14 +4958,14 @@
     },
     "trigger-dev": {
       "name": "Trigger.dev",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI开发",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "官方定价页渲染确认 Free $0 / Hobby $10 / Pro $50 / Enterprise Custom，与记录「开源免费 + 云版 $0/$10/$50 每月」完全一致。"
     },
     "pipedream": {
       "name": "Pipedream",
@@ -5035,14 +5035,14 @@
     },
     "kestra": {
       "name": "Kestra",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI自动化",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "medium",
+      "notes": "定价页渲染无明确金额（仅含免费/联系销售信号），记录「开源免费 + 企业版定制」未被否定，未改。"
     },
     "dagster": {
       "name": "Dagster",
@@ -5101,14 +5101,14 @@
     },
     "botpress": {
       "name": "Botpress",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI智能体",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "medium",
+      "notes": "首页渲染仅得营销对比数字（$9,000/yr 为 4 席 1,200 会话的对比口径），无官方价表；记录「免费版 $0；Plus/Team/Enterprise 以官网为准」维持，未改。"
     },
     "voiceflow": {
       "name": "Voiceflow",
@@ -5189,14 +5189,14 @@
     },
     "snowflake-ai": {
       "name": "Snowflake AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI行业应用",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "medium",
+      "notes": "定价页渲染失败（仅导航文本），记录「按用量计费（AI Credit $2.00 起）」未获新证据，未改，需人工核实。"
     },
     "hex-tech": {
       "name": "Hex.tech",
@@ -5266,14 +5266,14 @@
     },
     "rill-data": {
       "name": "Rill Data",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI行业应用",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "官方定价页渲染确认 Starter $20/seat/month、Growth $30/seat/month、Enterprise Custom，全部含 $250 usage credit，与记录一致。"
     },
     "evidence-dev": {
       "name": "Evidence.dev",
@@ -5310,25 +5310,25 @@
     },
     "exa-ai": {
       "name": "Exa AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI搜索",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "官方定价页渲染确认 Search $7/1k、Deep Search $12/1k（Deep-Reasoning $15/1k）、Monitors $15/1k、Contents $1/1k pages，与记录一致。"
     },
     "perplexity-sonar": {
       "name": "Perplexity Sonar",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI搜索",
       "priority": 160,
       "attempts": 2,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-30",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "glide-ai": {
       "name": "Glide AI",
@@ -5365,14 +5365,14 @@
     },
     "airtable-ai": {
       "name": "Airtable AI",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI办公",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "官方定价页渲染确认 Free $0 / Team $20 per seat/month（年付，月付 $24）/ Business $45（月付 $54），AI 额度 500(Free)/15,000(Team)，与记录一致。"
     },
     "together-ai": {
       "name": "Together AI",
@@ -5387,14 +5387,14 @@
     },
     "fireworks-ai": {
       "name": "Fireworks AI",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI开发",
       "priority": 180,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-07-31",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "anyscale": {
       "name": "Anyscale",
@@ -6663,14 +6663,14 @@
     },
     "genspark": {
       "name": "Genspark",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI智能体",
       "priority": 180,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-08-14",
+      "confidence": "medium",
+      "notes": "status reconciled 2026-09-13 (verified_at 取 updated_date)"
     },
     "flowith": {
       "name": "Flowith",
@@ -6740,25 +6740,25 @@
     },
     "stable-audio": {
       "name": "Stable Audio",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI音频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "high",
+      "notes": "官方定价页渲染：Solo $12/mo(660 credits)、Session $30/mo(1,800)、Producer $90/mo(6,000)、Studio $199/mo；免费版保留（每月 1 日重置）。原记录「Pro 约 $11.99/月」为旧计划名与旧价。"
     },
     "fish-audio": {
       "name": "Fish Audio",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI音频",
       "priority": 180,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-08-14",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (verified_at 取 updated_date)"
     },
     "promptbase": {
       "name": "PromptBase",
@@ -6861,14 +6861,14 @@
     },
     "gemini-managed-agents": {
       "name": "Gemini API Managed Agents",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI智能体",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-08-14",
+      "confidence": "high",
+      "notes": "status reconciled 2026-09-13 (verified_at 取 updated_date)"
     },
     "cloudflare-os": {
       "name": "Cloudflare OS",
@@ -7224,14 +7224,14 @@
     },
     "chatgpt-voice": {
       "name": "ChatGPT Voice",
-      "status": "unverified",
+      "status": "verified",
       "category": "AI音频",
       "priority": 130,
-      "attempts": 0,
-      "last_attempt": null,
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "attempts": 1,
+      "last_attempt": "2026-09-13",
+      "verified_at": "2026-09-13",
+      "confidence": "low",
+      "notes": "渲染失败（需登录），记录「随 ChatGPT 订阅包含（Plus/Pro/Go 等）」维持，需人工核实。"
     },
     "hf-speech-to-speech": {
       "name": "HuggingFace Speech-to-Speech",
@@ -7367,25 +7367,25 @@
     },
     "deepseek-dsh": {
       "name": "DeepSeek DSH",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI编程",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-08-23",
+      "confidence": 0.9,
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "kimi-code": {
       "name": "Kimi Code",
-      "status": "in_progress",
+      "status": "verified",
       "category": "AI编程",
       "priority": 160,
       "attempts": 1,
       "last_attempt": "2026-09-03",
-      "verified_at": null,
-      "confidence": null,
-      "notes": ""
+      "verified_at": "2026-08-23",
+      "confidence": 0.9,
+      "notes": "status reconciled 2026-09-13 (卡死 in_progress -> verified)"
     },
     "codex-harness": {
       "name": "OpenAI Codex Harness",
@@ -7414,6 +7414,17 @@
       "status": "unverified",
       "category": "AI视频",
       "priority": 40,
+      "attempts": 0,
+      "last_attempt": null,
+      "verified_at": null,
+      "confidence": null,
+      "notes": ""
+    },
+    "pangu": {
+      "name": "盘古大模型",
+      "status": "unverified",
+      "category": "AI开发",
+      "priority": 10,
       "attempts": 0,
       "last_attempt": null,
       "verified_at": null,

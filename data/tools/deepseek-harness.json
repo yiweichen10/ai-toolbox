@@ -1,0 +1,149 @@
+{
+  "name": "DeepSeek Harness",
+  "slug": "deepseek-harness",
+  "emoji": "🧩",
+  "color": "#4D6BFE",
+  "description": "DeepSeek 官方开源的通用 Agent 运行时（dsh），也是首个由头部模型厂商直接交付的 agent harness。它采用 everything-is-a-plugin 架构，跑在自研 Cordis 框架之上，只需 npx @deepseek-ai/dsh web 一条命令即可启动本地 Web UI，与 Claude Code、OpenCode 正面竞争。项目创建于 2026-08-13，不足一个月 GitHub stars 即突破 21 万，目前为开发者预览版，官方明确会有破坏性变更。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "DeepSeek官方开源"
+    },
+    {
+      "text": "Agent运行时"
+    },
+    {
+      "text": "everything-is-a-plugin",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "url": "https://github.com/deepseek-ai/deepseek-harness",
+  "price": "开源免费（MIT）",
+  "platform": "CLI + 本地 Web UI（npx @deepseek-ai/dsh web）",
+  "pros": [
+    "由 DeepSeek 官方开源，是首个由头部模型厂商直接交付的 agent harness，来源可信度高",
+    "采用 everything-is-a-plugin 架构，跑在自研 Cordis 框架之上，插件化扩展方式灵活",
+    "提供 npx @deepseek-ai/dsh web 一条命令启动本地 Web UI，上手成本较低",
+    "2026-08-13 创建后不足一个月 GitHub stars 突破 21 万，社区热度与关注度极高",
+    "与 Claude Code、OpenCode 处于同一赛道，便于开发者横向对比与选型"
+  ],
+  "cons": [
+    "目前仍为开发者预览版，官方明确表示会有破坏性变更，不适合直接用于生产环境",
+    "构建在自研 Cordis 框架之上，插件生态与第三方资料仍处于早期阶段",
+    "需要本地 Node.js 环境通过 npx 启动 Web UI，并非纯云端开箱即用"
+  ],
+  "features": [
+    "插件化架构 everything-is-a-plugin",
+    "本地 Web UI 一键启动",
+    "基于 Cordis 运行时",
+    "Agent Teams 多智能体",
+    "开发者预览版（含破坏性变更）"
+  ],
+  "related": [
+    "claude-code",
+    "opencode",
+    "codex-cli"
+  ],
+  "faq": [
+    {
+      "question": "DeepSeek Harness 是什么？",
+      "answer": "它是 DeepSeek 官方开源的通用 Agent 运行时（中文名 DeepSeek 智能体运行时 dsh），也是首个由头部模型厂商直接交付的 agent harness，采用 everything-is-a-plugin 架构并运行在自研 Cordis 框架之上。"
+    },
+    {
+      "question": "DeepSeek Harness 怎么安装和使用？",
+      "answer": "官方提供的一条命令是 npx @deepseek-ai/dsh web，执行后会启动本地 Web UI 进行使用。项目官网为 https://github.com/deepseek-ai/deepseek-harness。"
+    },
+    {
+      "question": "DeepSeek Harness 收费吗？",
+      "answer": "该项目由 DeepSeek 官方开源，属于开源免费项目；除开源信息外，官方暂未公开其他商业化定价信息。"
+    },
+    {
+      "question": "DeepSeek Harness 可以用于生产环境吗？",
+      "answer": "目前它仍是开发者预览版，官方明确提示会有破坏性变更，因此更适合尝鲜、测试和评估，生产环境使用需谨慎。"
+    }
+  ],
+  "seo_keywords": [
+    "DeepSeek Harness",
+    "DeepSeek Harness怎么样",
+    "DeepSeek Harness免费版",
+    "DeepSeek Harness使用教程",
+    "DeepSeek Harness和哪个好",
+    "DeepSeek Harness dsh",
+    "DeepSeek 智能体运行时",
+    "DeepSeek Harness 开源",
+    "DeepSeek Harness GitHub",
+    "agent harness 对比"
+  ],
+  "content": "## DeepSeek Harness是什么？\n\n一句话概括：**DeepSeek 官方开源的通用 Agent 运行时，代号 dsh**，中文名\"DeepSeek 智能体运行时\"。\n\n如果你用过 Claude Code 或者 OpenCode，那这个概念很好理解——这类东西通常被称为 **agent harness（智能体运行时/骨架）**。模型本身只是发动机，harness 才是底盘、变速箱和传动轴：它负责把模型接到文件系统、终端、工具调用、上下文管理上，让模型真的能\"动手干活\"，而不是只会在对话框里说话。\n\nDeepSeek Harness 的特殊之处在于它的出身：**这是首个由头部模型厂商直接交付的 agent harness**。以前这类工具大多是第三方团队或社区做的，模型厂商自己下场做运行时，它算是第一个。项目托管在 GitHub（github.com/deepseek-ai/deepseek-harness），创建于 2026-08-13，采用 everything-is-a-plugin 的插件化架构，跑在 DeepSeek 自研的 Cordis 框架之上。\n\n热度相当夸张：据 GitHub Trending 数据，项目创建后不足一个月，stars 就突破了 21 万（213,907）。这个量级基本说明整个开发者圈子都在围观它。\n\n上手方式也很直白：\n\n```bash\nnpx @deepseek-ai/dsh web\n```\n\n一条命令，本地起一个 Web UI。不过要注意，它**目前是开发者预览版**，官方明确说了会有破坏性变更——这句话不是客套，是真的会改。\n\n## 核心功能\n\n**1. 通用 Agent 运行时**\n这是它的本体。它不是某个具体任务的工具，而是一个可以承载智能体任务的运行底座——你给它任务，它负责调度模型、调用工具、维护上下文。实际使用中，这类运行时决定了 agent 干活的上限，比模型本身更能拉开体验差距。\n\n**2. everything-is-a-plugin 架构**\n整套系统里几乎所有东西都是插件，功能以插件形式组装，而不是硬编码在核心里。这个设计的好处很直接：想加能力就写插件，想砍功能就卸插件，核心保持干净。对喜欢自己动手的人来说可玩性很高；反过来，想开箱即用的人会觉得\"怎么什么都得配\"。\n\n**3. 跑在自研 Cordis 框架上**\nCordis 是 DeepSeek 自己的框架，DeepSeek Harness 构建在它之上。好处是官方能把整条链路捏在自己手里做优化；代价是目前这个框架的第三方资料和生态还处在很早期，遇到问题基本只能啃官方文档和源码。\n\n**4. 一条命令启动本地 Web UI**\n`npx @deepseek-ai/dsh web` 就完事，不用 clone 仓库、不用配一堆环境变量。对于习惯命令行工作流的人来说，这个门槛算是压得很低了。但前提是你本地得有 Node.js 环境——它不是纯云端服务，浏览器打开就能用的那种。\n\n**5. 开源可自托管，正面对标 Claude Code / OpenCode**\n代码在 GitHub 上公开，可以自己部署。这意味着你对自己的数据流向、运行环境有更多控制权。同时它的定位很清楚：就是冲着 Claude Code、OpenCode 这个赛道来的。对开发者来说是好事——同类工具多一个，横向对比和选型的空间就大一分。\n\n## 版本/套餐对比\n\n目前官方只提供了一个版本，没有分档套餐这一说，也没有公布收费信息。\n\n| 项目 | 当前情况 |\n| --- | --- |\n| 发布状态 | 开发者预览版（官方明确会有破坏性变更） |\n| 获取方式 | 开源，GitHub 仓库获取 |\n| 使用成本 | 官方未公布收费信息，项目以开源形式发布 |\n| 安装方式 | 本地 Node.js 环境 + `npx @deepseek-ai/dsh web` |\n| 运行形态 | 本地 Web UI，可自托管 |\n| 稳定性承诺 | 无，预览期不保证兼容性 |\n\n简单说：**现在没有\"买哪个版本\"的问题，只有\"要不要玩预览版\"的问题。**\n\n## 值不值得用？\n\n**优点：**\n- 出身可信。官方开源，还是首个头部模型厂商交付的 agent harness，不用担心来路不明。\n- 插件化架构灵活，扩展方向基本不受限，适合有自己想法的人。\n- 一条命令起 UI，上手动作极少。\n- 热度极高，21 万 stars 意味着社区关注度和后续迭代速度都有保障。\n- 和 Claude Code、OpenCode 同赛道，方便你放在一起对比选型。\n\n**缺点：**\n- 开发者预览版，官方明说有破坏性变更——拿它扛生产任务是不现实的。\n- Cordis 是自研框架，插件生态和第三方资料都很早期，踩坑只能自己爬。\n- 需要本地 Node.js 环境和 npx 启动，不是纯云端开箱即用。\n\n**结论：**\n如果你想研究 agent harness 到底该怎么设计，或者本来就活跃在 Claude Code / OpenCode 这类工具里、想多一个对比项，那 DeepSeek Harness 现在就很值得花一个下午去跑一跑。但如果你要的是能稳定交付、明天就要上生产的东西，**现在还不是时候**——等它走出预览版再说。\n\n## 使用建议\n\n- **别在生产仓库里试。** 建个单独的目录或者 playground 项目，预览版工具的破坏性变更不只是代码层面，还包括它可能对你的文件做的操作。\n- **锁版本。** 预览期上游更新频繁且不兼容，装的时候把版本固定住，别用 latest 一路飘。\n- **关注 changelog 和 issue。** 这种阶段的工具，官方 release note 比任何教程都有用。\n- **从最小插件集开始。** 它的 everything-is-a-plugin 很容易让人一上来装一堆插件，结果出问题时分不清是谁的锅。先跑通核心，再逐个加。\n- **做横向对比时用同一批任务。** 想判断它和 Claude Code、OpenCode 谁更合适，别凭感觉，拿你真实工作里常做的几件事分别跑一遍。\n- **注意凭证和权限。** 一个能读写文件、执行命令的 agent，给它什么权限是你的责任，尤其是自托管场景。\n- **把它当\"研究项目\"而不是\"生产力工具\"来预期。** 心态对了，收获会大很多。\n\n## 适合谁用？\n\n**推荐：**\n- 想搞清楚 agent harness 架构设计的开发者，尤其是对插件化系统感兴趣的\n- 已经在用 Claude Code 或 OpenCode、想找个替代方案做横向对比的人\n- 需要自托管、对代码和数据流向有掌控要求的团队\n- 习惯折腾早期项目、能接受破坏性变更的早期采用者\n\n**可考虑：**\n- 想试试 agent 编程但还没入门的开发者——门槛不算高，但预览期的坑可能会劝退你\n- 有 Node.js 环境、动手能力不错的产品或技术负责人，想评估这类工具的方向\n\n**不推荐：**\n- 要把 agent 能力接进生产系统的团队，预览版 + 破坏性变更的组合风险太高\n- 需要长期稳定 API、成熟插件生态和大量中文资料的场景\n- 不想碰命令行、期待打开网页就能用的用户——它至少需要你本地有 Node.js 环境\n- 指望它现在就能替代成熟商业工具的团队，现阶段它更像是一个方向明确但还在施工中的项目",
+  "published": false,
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "source_url": "https://github.com/deepseek-ai/deepseek-harness",
+  "verified_url": "https://github.com/deepseek-ai/deepseek-harness",
+  "verified_publisher": "DeepSeek（deepseek-ai）",
+  "verified_what": "DeepSeek 官方开源的通用 agent 运行时，插件化架构，含本地 Web UI",
+  "verified_price": "开源免费（MIT）",
+  "verified_platform": "CLI + 本地 Web UI（npx @deepseek-ai/dsh web）",
+  "verified_features": [
+    "插件化架构 everything-is-a-plugin",
+    "本地 Web UI 一键启动",
+    "基于 Cordis 运行时",
+    "Agent Teams 多智能体",
+    "开发者预览版（含破坏性变更）"
+  ],
+  "verified_description": "DeepSeek 官方开源的通用 agent 运行时，插件化架构，含本地 Web UI",
+  "verified_pros": [
+    "由 DeepSeek 官方开源，是首个由头部模型厂商直接交付的 agent harness，来源可信度高",
+    "采用 everything-is-a-plugin 架构，跑在自研 Cordis 框架之上，插件化扩展方式灵活",
+    "提供 npx @deepseek-ai/dsh web 一条命令启动本地 Web UI，上手成本较低",
+    "2026-08-13 创建后不足一个月 GitHub stars 突破 21 万，社区热度与关注度极高",
+    "与 Claude Code、OpenCode 处于同一赛道，便于开发者横向对比与选型"
+  ],
+  "verified_cons": [
+    "目前仍为开发者预览版，官方明确表示会有破坏性变更，不适合直接用于生产环境",
+    "构建在自研 Cordis 框架之上，插件生态与第三方资料仍处于早期阶段",
+    "需要本地 Node.js 环境通过 npx 启动 Web UI，并非纯云端开箱即用"
+  ],
+  "verified_faq": [
+    {
+      "q": "DeepSeek Harness 是什么？",
+      "a": "它是 DeepSeek 官方开源的通用 Agent 运行时（中文名 DeepSeek 智能体运行时 dsh），也是首个由头部模型厂商直接交付的 agent harness，采用 everything-is-a-plugin 架构并运行在自研 Cordis 框架之上。"
+    },
+    {
+      "q": "DeepSeek Harness 怎么安装和使用？",
+      "a": "官方提供的一条命令是 npx @deepseek-ai/dsh web，执行后会启动本地 Web UI 进行使用。项目官网为 https://github.com/deepseek-ai/deepseek-harness。"
+    },
+    {
+      "q": "DeepSeek Harness 收费吗？",
+      "a": "该项目由 DeepSeek 官方开源，属于开源免费项目；除开源信息外，官方暂未公开其他商业化定价信息。"
+    },
+    {
+      "q": "DeepSeek Harness 可以用于生产环境吗？",
+      "a": "目前它仍是开发者预览版，官方明确提示会有破坏性变更，因此更适合尝鲜、测试和评估，生产环境使用需谨慎。"
+    }
+  ],
+  "verified_tags": [
+    "DeepSeek官方开源",
+    "Agent运行时",
+    "everything-is-a-plugin"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://github.com/deepseek-ai/deepseek-harness"
+  ],
+  "confidence": "high",
+  "last_verified": "2026-09-14",
+  "created_date": "2026-09-14",
+  "conflict_note": "",
+  "verify_notes": "GitHub API 实测 222,531 stars，候选 heat_signal 写 213,907，星数不符；其余字段官方 README 支撑。",
+  "content_flags": "采集期数据与核验时不一致（非内容冲突）：GitHub API 实测 222,531 stars，候选 heat_signal 写 213,907，星数不符；其余字段官方 README 支撑。 长文字段（content/faq）未经外部逐条核验，仅短字段已核实。",
+  "positioning": "DeepSeek官方开源的通用Agent运行时",
+  "auto_positioning": false
+}

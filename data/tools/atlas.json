@@ -1,0 +1,152 @@
+{
+  "name": "Atlas",
+  "slug": "atlas",
+  "emoji": "🧭",
+  "color": "#CE422B",
+  "description": "Atlas 是一款用 Rust 编写的源码版本控制工具，专为 AI agent 场景设计。它用于追踪与查询多个并行工作的编码 agent 的改动，重点解决多个 agent 同时修改同一仓库时的改动归属与查询问题。",
+  "category": "AI开发",
+  "tags": [
+    {
+      "text": "版本控制"
+    },
+    {
+      "text": "AI Agent"
+    },
+    {
+      "text": "Rust"
+    },
+    {
+      "text": "多智能体"
+    },
+    {
+      "text": "开源",
+      "type": "free"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://github.com/pacifio/atlas",
+  "price": "开源免费（含组织同步可选）",
+  "platform": "桌面（macOS/Windows/Linux，Rust+Tauri）",
+  "pros": [
+    "用 Rust 编写，性能与稳定性有保障",
+    "专为 agent 设计，直接针对多 agent 协作场景",
+    "可追踪多个并行工作的编码 agent 的改动",
+    "支持查询改动归属，明确某个改动由哪个 agent 产生",
+    "开源项目，GitHub 已获得约 2,645 stars，社区关注度较高"
+  ],
+  "cons": [
+    "项目较新（2026-09 首发），生态与文档完善度有待观察",
+    "定位是 agent 场景的版本控制，与人类开发者习惯的常规工作流存在差异",
+    "需要接入现有编码 agent 管线，存在一定上手与部署成本"
+  ],
+  "features": [
+    "多 agent 并行会话",
+    "共享 agent 记忆",
+    "提交链接会话（检查点）",
+    "本地优先",
+    "@ 引用文件/符号"
+  ],
+  "related": [
+    "aider",
+    "openhands",
+    "claude-code"
+  ],
+  "faq": [
+    {
+      "question": "Atlas 是什么？",
+      "answer": "Atlas 是一款用 Rust 编写的、专为 agent 设计的源码版本控制工具，用于追踪与查询多个并行工作的编码 agent 的改动，主要解决多 agent 同时修改同一仓库时的归属与查询问题。"
+    },
+    {
+      "question": "Atlas 和 Git 有什么区别？",
+      "answer": "Atlas 的定位是面向 agent 的源码版本控制工具，核心目标是追踪和查询多个并行编码 agent 的改动归属，而不是面向人类开发者的通用协作流程。它针对的是多个 agent 同时改动同一仓库这一特定场景。"
+    },
+    {
+      "question": "Atlas 收费吗？",
+      "answer": "Atlas 托管在 GitHub 上（github.com/pacifio/atlas），目前没有公开的定价信息，具体授权与使用方式请以官方仓库说明为准。"
+    },
+    {
+      "question": "Atlas 怎么使用？",
+      "answer": "Atlas 是面向 agent 的源码版本控制工具，需要接入你的编码 agent 工作流程中使用。当前可公开获取的信息来自其 GitHub 仓库，安装与使用方式请以仓库中的文档为准。"
+    }
+  ],
+  "seo_keywords": [
+    "Atlas",
+    "Atlas怎么样",
+    "Atlas免费版",
+    "Atlas使用教程",
+    "Atlas和哪个好"
+  ],
+  "content": "## Atlas是什么？\n\n简单说，Atlas 是一个用 Rust 写的源码版本控制工具，但它不是给人类开发者用的，而是**给 AI agent 用的**。\n\n现在越来越多的团队会同时跑好几个编码 agent，让它们并行地改同一个仓库。问题马上就来了：git 的 commit 记的是\"谁提交的\"，可当三五个 agent 同时在一个仓库里干活，branch 和 commit message 根本说不清哪行代码是哪个 agent、哪个任务改的。出了问题想回溯、想定位、想比对，基本靠人工扒 diff。\n\nAtlas 要解决的就是这个痛点——它把\"改动归属\"当成一等公民，专门用来**追踪和查询多个并行工作的编码 agent 的改动**。项目托管在 GitHub（https://github.com/pacifio/atlas），从 GitHub Trending 上来看热度不低，目前约 2,645 stars，首发时间是 2026 年 9 月。\n\n所以你可以把它理解成：**多 agent 协作场景下的\"归属层\"**，而不是 git 的替代品。\n\n## 核心功能\n\n**1. 面向 AI agent 的源码版本控制**\n这是它的基本定位。它不是把 git 包一层那么简单，而是从设计上就假设\"提交者可能是机器、可能同时有多个\"。用途上，你可以把它当开发流程里的底层基础设施，而不是给人类看的 diff 工具。\n\n**2. 追踪多个并行 agent 的改动**\n多个 agent 同时跑任务时，改动会交叉、会叠加。Atlas 的重点就是把这些并行产生的改动记录下来并区分开。实际使用中这类工具最大的价值不是\"记录\"，而是当你想知道\"这一步是谁动的\"时不用现场考古。\n\n**3. 查询改动归属**\n这是它最核心的能力。给定一处改动，能查到它是由哪个 agent 产生的。对于需要审计、需要复盘 agent 行为、或者要做多 agent 效果评估的场景，这个能力比单纯的版本快照有用得多。\n\n**4. 应对多 agent 同改一个仓库的混乱**\n这是前两点的落地场景，也是最容易被低估的地方。多 agent 并发修改同一个仓库，本质上是个归属与查询难题——git 的分支模型不是为这种情况设计的。Atlas 直接冲着这个问题去，定位很明确。\n\n**5. 基于 Rust 实现，开源可获取**\nRust 带来的主要是性能和稳定性上的预期，作为开发流程里的底层工具，这一点挺关键——你不会希望一个常驻的版本追踪层本身成为瓶颈。同时它是开源项目，源码和更新都可以从 GitHub 仓库拿到，想深挖实现或者自己改都很方便。\n\n## 版本/套餐对比\n\n需要说明的是，目前公开渠道**没有提供具体的版本分层和定价信息**，能确认的是它以开源项目形式发布。\n\n| 版本 | 获取方式 | 费用 | 说明 |\n|---|---|---|---|\n| 开源版（GitHub） | 从 github.com/pacifio/atlas 获取源码与更新 | 未公开定价信息 | 项目当前公开的主要形态，可自行部署与二次开发 |\n\n如果后续有商业版或托管服务，建议直接看仓库的 README 和 Release 说明，以官方信息为准。\n\n## 值不值得用？\n\n**优点：**\n- 定位非常准。多 agent 并行改同一仓库的归属问题，是真实存在的、且 git 原生解决得不好的问题\n- Rust 实现，性能和稳定性上有个不错的底子\n- 改动归属查询这个能力，在 agent 行为审计和效果评估上很实用\n- 开源，2,645 stars 说明社区关注度确实起来了\n\n**缺点：**\n- 项目很新，2026 年 9 月首发，生态和文档的完善度还需要时间验证\n- 它的定位是 agent 场景的版本控制，跟人类开发者习惯的常规工作流不太一样，不能指望拿来当日常 git 用\n- 要接进现有编码 agent 管线，有一定的上手和部署成本，不是装上就完事\n\n**总体结论：** 值得关注，而且值得动手试。如果你已经在跑多 agent 的工作流，并且被\"改动的归属和查询\"折磨过，Atlas 是目前少有的正面回答这个问题的工具。但如果你现在还是一个 agent 顺序干活，那它对你暂时没什么用——痛点还没到。\n\n## 使用建议\n\n- **先想清楚你要解决什么问题。** 如果你的痛点是\"多个 agent 改动混在一起分不清\"，那 Atlas 对口；如果你只是想让 agent 帮你写代码，那先别上这个。\n- **从小范围接起。** 挑一个非核心仓库、或者一条不那么重要的 agent 管线先接进去，跑通追踪和归属查询这两步，再考虑扩大。\n- **把它当底层工具，而不是替代品。** 它和 git 是配合关系，不是二选一。设计部署方案时按这个前提来。\n- **盯紧仓库更新。** 项目新，接口和行为都有可能变，跟进 Release 说明比看二手介绍靠谱。\n- **关注文档完善度。** 新项目的文档往往滞后，接入前先扫一遍 README 和 issue，能省不少时间。\n\n## 适合谁用？\n\n**推荐：**\n- 已经在跑多个并行编码 agent 的团队，尤其是被改动归属问题卡住过的\n- 需要做 agent 行为审计、效果复盘、贡献度分析的技术团队\n- 喜欢在流程底层自己搭工具、愿意啃新项目的工程团队\n\n**可考虑：**\n- 正在做多 agent 协作平台或 agent 框架的开发者，可以把它当作参考实现或集成的候选\n- 目前 agent 数量不多、但预计会增长，想提前把基础设施铺好的团队\n\n**不推荐：**\n- 只用单个 agent、顺序干活的个人开发者——现阶段收益不明显，反而增加复杂度\n- 想找一个\"更好用的 git\"的人——Atlas 不是这个定位\n- 对文档完善度和生态成熟度有硬要求、不想踩坑的生产环境",
+  "published": false,
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "source_url": "https://github.com/pacifio/atlas",
+  "verified_url": "https://github.com/pacifio/atlas",
+  "verified_publisher": "pacifio",
+  "verified_what": "面向编码 agent 的源码版本控制工具，追踪多 agent 改动并共享会话记忆。",
+  "verified_price": "开源免费（含组织同步可选）",
+  "verified_platform": "桌面（macOS/Windows/Linux，Rust+Tauri）",
+  "verified_features": [
+    "多 agent 并行会话",
+    "共享 agent 记忆",
+    "提交链接会话（检查点）",
+    "本地优先",
+    "@ 引用文件/符号"
+  ],
+  "verified_description": "面向编码 agent 的源码版本控制工具，追踪多 agent 改动并共享会话记忆。",
+  "verified_pros": [
+    "用 Rust 编写，性能与稳定性有保障",
+    "专为 agent 设计，直接针对多 agent 协作场景",
+    "可追踪多个并行工作的编码 agent 的改动",
+    "支持查询改动归属，明确某个改动由哪个 agent 产生",
+    "开源项目，GitHub 已获得约 2,645 stars，社区关注度较高"
+  ],
+  "verified_cons": [
+    "项目较新（2026-09 首发），生态与文档完善度有待观察",
+    "定位是 agent 场景的版本控制，与人类开发者习惯的常规工作流存在差异",
+    "需要接入现有编码 agent 管线，存在一定上手与部署成本"
+  ],
+  "verified_faq": [
+    {
+      "q": "Atlas 是什么？",
+      "a": "Atlas 是一款用 Rust 编写的、专为 agent 设计的源码版本控制工具，用于追踪与查询多个并行工作的编码 agent 的改动，主要解决多 agent 同时修改同一仓库时的归属与查询问题。"
+    },
+    {
+      "q": "Atlas 和 Git 有什么区别？",
+      "a": "Atlas 的定位是面向 agent 的源码版本控制工具，核心目标是追踪和查询多个并行编码 agent 的改动归属，而不是面向人类开发者的通用协作流程。它针对的是多个 agent 同时改动同一仓库这一特定场景。"
+    },
+    {
+      "q": "Atlas 收费吗？",
+      "a": "Atlas 托管在 GitHub 上（github.com/pacifio/atlas），目前没有公开的定价信息，具体授权与使用方式请以官方仓库说明为准。"
+    },
+    {
+      "q": "Atlas 怎么使用？",
+      "a": "Atlas 是面向 agent 的源码版本控制工具，需要接入你的编码 agent 工作流程中使用。当前可公开获取的信息来自其 GitHub 仓库，安装与使用方式请以仓库中的文档为准。"
+    }
+  ],
+  "verified_tags": [
+    "版本控制",
+    "AI Agent",
+    "Rust",
+    "多智能体",
+    "开源"
+  ],
+  "verified_category": "AI开发",
+  "source_urls": [
+    "https://github.com/pacifio/atlas"
+  ],
+  "confidence": "medium",
+  "last_verified": "2026-09-14",
+  "created_date": "2026-09-14",
+  "conflict_note": "",
+  "verify_notes": "官方 About 与候选一致（source control for agents）。星数实测 ★3,557，候选记 2,645（自然增长）。官网 tryatlas.cc。",
+  "content_flags": "长文字段（content/faq）未经外部逐条核验，仅短字段已核实。",
+  "positioning": "为多个编码Agent做的源码版本控制",
+  "auto_positioning": false
+}

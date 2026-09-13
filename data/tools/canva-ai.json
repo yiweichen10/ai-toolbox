@@ -70,8 +70,8 @@
   "verified_what": "全球领先的在线设计平台，集成 Canva AI（Magic Studio）用于 AI 生图、智能排版、文案与视频编辑。",
   "verified_price": "免费版；Pro $14.99/月（年付 $119.99）；Business/Teams 约 $200/人/年；Enterprise 定制",
   "verified_platform": "Web / iOS / Android / Windows / Mac",
-  "last_verified": "2026-07-30",
-  "confidence": "high",
+  "last_verified": "2026-09-13",
+  "confidence": "medium",
   "conflict": false,
   "verified_features": [
     "AI生图（Magic Media）",
@@ -125,12 +125,11 @@
   ],
   "verified_category": "AI设计",
   "source_urls": [
-    "https://www.canva.com/pricing",
-    "https://apple.co/2U5Cnde",
-    "https://partner.canva.com/signup"
+    "https://www.canva.com/pricing/",
+    "https://www.canva.com/pricing"
   ],
-  "verify_notes": "价格字段需由「¥120/月」修正为「$14.99/月」（美国区为准，各地区币种/年付价不同）；FAQ 的 Pro 价格同步修正为 $14.99/月。",
-  "content_verified": true,
+  "verify_notes": "抓取超时失败；WebSearch 官方定价页+多源确认 Pro 月付约 $14.99–$15（年付约 $12.99），记录「免费版+Pro $14.99/月」准确，未改。",
+  "content_verified": false,
   "compare_section": {
     "competitors": [
       "figma-ai",

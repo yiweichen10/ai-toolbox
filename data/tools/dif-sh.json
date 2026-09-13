@@ -1,0 +1,149 @@
+{
+  "name": "dif.sh",
+  "slug": "dif-sh",
+  "emoji": "🚩",
+  "color": "#6366F1",
+  "description": "dif.sh 让 coding agent 直接在项目的纯文本文件里新增与切换 feature flag，开关配置随版本控制一起走，而不是另建一套 dashboard 服务。产品采用开源 + freemium 模式，契合 agent 主导的开发流程，但官方提示上生产前需要较强的护栏。",
+  "category": "AI编程",
+  "tags": [
+    {
+      "text": "feature flag"
+    },
+    {
+      "text": "coding agent"
+    },
+    {
+      "text": "开源",
+      "type": "free"
+    },
+    {
+      "text": "版本控制"
+    }
+  ],
+  "rating": "⭐ 4.5",
+  "visits": "暂无数据",
+  "badge": {
+    "type": "new",
+    "text": "NEW"
+  },
+  "url": "https://dif.sh/",
+  "price": "开源免费（MIT）；Dif Cloud $50/月",
+  "platform": "CLI（Rust）+ SDK + Web（Dif Cloud）；macOS/Linux/Windows",
+  "pros": [
+    "feature flag 以纯文本形式存放在项目内，配置随版本控制走，可 review、可回滚",
+    "无需另建一套 dashboard 服务，减少额外基础设施与运维成本",
+    "面向 coding agent 设计，agent 可直接在文件中新增与切换开关",
+    "开源 + freemium 模式，便于团队评估、试用与自主掌控",
+    "Product Hunt 首发获约 329 票，社区关注度较高"
+  ],
+  "cons": [
+    "官方明确提示上生产前需要较强的护栏，直接用于生产环境风险较高",
+    "不走独立 dashboard，习惯图形界面集中管理开关的团队需要适应",
+    "2026-09-05 才首发，生态成熟度与长期维护情况仍待观察"
+  ],
+  "features": [
+    "feature flag 存为仓库 .md 文件",
+    "agent 读 context.json 继承上下文",
+    "dif build 冲突检测拒编译",
+    "git 即审计日志，PR 即审批",
+    "可选 Dif Cloud 托管看板"
+  ],
+  "related": [
+    "cursor",
+    "claude-code",
+    "cline"
+  ],
+  "faq": [
+    {
+      "question": "dif.sh 是什么？",
+      "answer": "dif.sh 是一个让 coding agent 直接在项目纯文本文件里新增与切换 feature flag 的工具，开关配置随版本控制走，而不是另建一套 dashboard 服务，属于 AI 编程分类。"
+    },
+    {
+      "question": "dif.sh 怎么收费？",
+      "answer": "dif.sh 采用开源 + freemium 模式，具体价格数字暂未公开，可访问官网 https://dif.sh 了解最新方案。"
+    },
+    {
+      "question": "dif.sh 和传统 feature flag 平台有什么区别？",
+      "answer": "传统方案通常需要单独部署一套 dashboard 服务来管理开关，而 dif.sh 把开关配置放在项目内的纯文本文件中，随版本控制一起管理，更适合 agent 主导的开发流程。"
+    },
+    {
+      "question": "dif.sh 可以直接用在生产环境吗？",
+      "answer": "官方提示上生产前需要较强的护栏。建议先在开发或内部项目中验证流程，再逐步推进到生产环境。"
+    }
+  ],
+  "seo_keywords": [
+    "dif.sh",
+    "dif.sh怎么样",
+    "dif.sh免费版",
+    "dif.sh使用教程",
+    "dif.sh和哪个好"
+  ],
+  "content": "## dif.sh是什么？\n\n先说 feature flag（功能开关）这个东西。它的作用很朴素：让某段代码上线了但不生效，或者只对一部分人生效，随时能一键关掉。传统做法是接一个第三方服务，或者自己搭一套 dashboard + 数据库 + SDK，开关状态存在远端，代码里只留一个查询调用。\n\ndif.sh 的思路基本是反着来的。它让 coding agent 直接在项目的纯文本文件里新增和切换 feature flag——开关就是项目里的文件内容，跟着代码一起进版本控制。没有单独的 dashboard 服务，没有远端状态，开关的增删和切换本身就是一次普通的代码改动，可以 review、可以回滚、可以 diff。\n\n这个产品面向的是 agent 主导的开发流程：agent 本来就在读写项目文件，让它顺手把开关也改了，比让它去调一个外部 API 更自然。定位上是开源 + freemium，官方也明确提示：上生产前需要比较强的护栏。2026 年 9 月 5 日在 Product Hunt 首发，约 329 票，关注度不算低。\n\n## 核心功能\n\n**1. 在项目纯文本文件里新增 feature flag**\n这是它最核心的一件事。新增一个开关不是去后台点\"Create Flag\"，而是在项目文件里写一段配置。好处是这件事完全在代码上下文里发生，agent 不需要理解一套外部系统的语义，人也不需要额外开一个网页。\n\n**2. 在项目内切换开关**\n开和关也是改成文件内容。这意味着\"关掉某个功能\"这个动作天然带一条 git 记录——谁关的、什么时候关的、跟哪次提交一起关的，都在历史里。实际使用中这类可追溯性比想象中值钱，尤其是出事回滚的时候。\n\n**3. 开关配置跟随版本控制**\n开关和代码同进同退，可以一起提交、一起 review、一起回滚。传统 dashboard 方案里，代码回滚了但开关状态还留在远端，是需要人记得手动收尾的。dif.sh 把这两个状态合并成一个，省掉了这类\"状态不一致\"的坑。\n\n**4. 面向 coding agent 优化的流程**\n不是\"给 agent 加了个接口\"，而是整个设计假定 agent 是主要操作者。对已经在用 Claude Code、Cursor 这类工具跑改动流程的团队来说，这个契合度是它最实际的卖点。反过来，如果你的流程里 agent 参与度很低，这个优势基本用不上。\n\n**5. 不需要独立 dashboard 服务**\n省掉一套基础设施，也省掉它的运维、权限、可用性问题。但这是双刃剑：习惯在图形界面里集中看\"现在到底开了哪些开关\"的团队，需要重新适应纯文件的工作方式。\n\n## 版本/套餐对比\n\n公开信息里只说明了产品是**开源 + freemium**模式，具体的免费额度、付费档位和价格细节官方未在采集信息中给出，这里不编造，仅做定性对比：\n\n| 维度 | 开源版 | Freemium 版 |\n| --- | --- | --- |\n| 交付形式 | 开源代码，团队可自行部署与掌控 | 官方提供的免费+付费使用方式 |\n| 开关存储方式 | 项目内纯文本文件 | 同左，核心机制一致 |\n| 版本控制集成 | 随代码一同提交/回滚 | 同左 |\n| 是否需自建 dashboard | 不需要 | 不需要 |\n| 价格 | 开源免费（具体许可与条款以官网为准） | 具体档位与价格暂未公开 |\n| 适合场景 | 想完全自主掌控、愿意自己维护的团队 | 想先低成本试用、再决定是否深入 |\n\n具体差异建议直接看官网 dif.sh 的说明——这类开源+商业双轨的产品，免费版和付费版的边界往往就是\"要不要托管、要不要团队协作能力\"，而不是功能有没有。购买前务必自己确认。\n\n## 值不值得用？\n\n**优点：**\n- 开关配置就在项目里，可 review、可回滚，状态和代码不会分家\n- 不用再维护一套 dashboard 服务，少一份基础设施和运维成本\n- 对 agent 友好是真实差异点，不是包装出来的卖点\n- 开源 + freemium，试用门槛低，团队也能先看代码再决定\n- Product Hunt 首发约 329 票，说明这个\"去 dashboard 化\"的方向有人认\n\n**缺点：**\n- 官方自己都提示上生产需要较强护栏。这句话不能当免责声明略过，得当真\n- 没有图形化集中视图，习惯 dashboard 的团队会有一段不适应期\n- 2026 年 9 月才首发，生态、周边集成、长期维护都是未知数\n- 纯文本方案在开关数量少的时候很优雅，开关一多，怎么组织和检索本身就是个工程问题\n\n**总体结论：** 值得试，但别急着上生产。它在\"agent 时代 feature flag 应该长什么样\"这个问题上给了一个挺干净的答案，方向我认可。但它现在更适合作为一个思路验证工具、或者内部/非核心链路上的开关方案。要放到生产主流程，你需要自己补上审计、权限和误操作防护这几块——而这些恰好是传统 dashboard 产品替你做了的部分。\n\n## 使用建议\n\n1. **先在个人项目或内部工具上跑一遍。** 感受一下\"开关是文件\"这件事在日常开发里顺不顺手，再决定要不要往团队推。\n2. **把护栏当第一优先级，别当可选项。** 官方既然明确提示了，就说明默认配置不是为生产强度设计的。至少要想清楚：谁能改、改动怎么审、误关了怎么快速恢复。\n3. **给文件组织方式定个规矩。** 开关放在哪个目录、命名怎么统一、废弃的开关怎么清理——这些不定好，半年后就是一团乱麻。让 agent 改文件的自由度和项目规范性是矛盾的，规矩要提前立。\n4. **和现有方案并存一段时间。** 不必一刀切替换掉现有 feature flag 系统，可以拿一类低风险开关先切过来，用真实项目验证它的回滚链路和 agent 协作体验。\n5. **关注仓库活跃度。** 早期项目，维护节奏比功能列表更值得看。上线前先看看最近的提交和 issue 响应情况。\n\n## 适合谁用？\n\n**推荐：**\n- 已经在用 coding agent 跑日常改动、想让 agent 顺手管开关的团队\n- 小团队或个人开发者，不想为了几个功能开关再搭一套服务和数据库\n- 对配置\"一切皆文件、一切进 git\"这套理念本来就有认同的人\n- 想把 feature flag 的改动纳入 code review 流程的工程团队\n\n**可考虑：**\n- 正在评估 feature flag 方案、想对比\"去 dashboard\"路线的团队\n- 有非核心链路或内部系统可以拿来试点的中型团队\n- 对开源可控性有要求、愿意自己补护栏的技术团队\n\n**不推荐：**\n- 需要把开关管理交给非工程角色（产品、运营）自助操作的组织\n- 强合规、强审计要求的生产环境，现阶段直接上风险偏高\n- 团队里 agent 参与度很低、更依赖图形界面的人\n- 想要成熟生态、完善集成和长期 SLA 保障的采购场景",
+  "published": false,
+  "content_verified": true,
+  "conflict": false,
+  "verify_status": "verified",
+  "source_url": "https://dif.sh/",
+  "verified_url": "https://dif.sh/",
+  "verified_publisher": "dif.sh（创始人第三方报道不一：David Herzog / Chris Fowles / Drew Glover）",
+  "verified_what": "把 feature flag/A-B 测试写成仓库内纯文本 .md 文件，随 git 版本控制",
+  "verified_price": "开源免费（MIT）；Dif Cloud $50/月",
+  "verified_platform": "CLI（Rust）+ SDK + Web（Dif Cloud）；macOS/Linux/Windows",
+  "verified_features": [
+    "feature flag 存为仓库 .md 文件",
+    "agent 读 context.json 继承上下文",
+    "dif build 冲突检测拒编译",
+    "git 即审计日志，PR 即审批",
+    "可选 Dif Cloud 托管看板"
+  ],
+  "verified_description": "把 feature flag/A-B 测试写成仓库内纯文本 .md 文件，随 git 版本控制",
+  "verified_pros": [
+    "feature flag 以纯文本形式存放在项目内，配置随版本控制走，可 review、可回滚",
+    "无需另建一套 dashboard 服务，减少额外基础设施与运维成本",
+    "面向 coding agent 设计，agent 可直接在文件中新增与切换开关",
+    "开源 + freemium 模式，便于团队评估、试用与自主掌控",
+    "Product Hunt 首发获约 329 票，社区关注度较高"
+  ],
+  "verified_cons": [
+    "官方明确提示上生产前需要较强的护栏，直接用于生产环境风险较高",
+    "不走独立 dashboard，习惯图形界面集中管理开关的团队需要适应",
+    "2026-09-05 才首发，生态成熟度与长期维护情况仍待观察"
+  ],
+  "verified_faq": [
+    {
+      "q": "dif.sh 是什么？",
+      "a": "dif.sh 是一个让 coding agent 直接在项目纯文本文件里新增与切换 feature flag 的工具，开关配置随版本控制走，而不是另建一套 dashboard 服务，属于 AI 编程分类。"
+    },
+    {
+      "q": "dif.sh 怎么收费？",
+      "a": "dif.sh 采用开源 + freemium 模式，具体价格数字暂未公开，可访问官网 https://dif.sh 了解最新方案。"
+    },
+    {
+      "q": "dif.sh 和传统 feature flag 平台有什么区别？",
+      "a": "传统方案通常需要单独部署一套 dashboard 服务来管理开关，而 dif.sh 把开关配置放在项目内的纯文本文件中，随版本控制一起管理，更适合 agent 主导的开发流程。"
+    },
+    {
+      "q": "dif.sh 可以直接用在生产环境吗？",
+      "a": "官方提示上生产前需要较强的护栏。建议先在开发或内部项目中验证流程，再逐步推进到生产环境。"
+    }
+  ],
+  "verified_tags": [
+    "feature flag",
+    "coding agent",
+    "开源",
+    "版本控制"
+  ],
+  "verified_category": "AI编程",
+  "source_urls": [
+    "https://www.dif.sh/",
+    "https://bestaitoolfinder.com/dif-sh"
+  ],
+  "confidence": "medium",
+  "last_verified": "2026-09-14",
+  "created_date": "2026-09-14",
+  "conflict_note": "",
+  "verify_notes": "官网未标注公司名，创始人第三方报道互相冲突；其余字段由 dif.sh 官网支撑。",
+  "content_flags": "长文字段（content/faq）未经外部逐条核验，仅短字段已核实。",
+  "positioning": "把Feature Flag写进仓库纯文本文件",
+  "auto_positioning": false
+}
