@@ -61,8 +61,20 @@ js/tools-data.js（首页工具数据，构建时由 build.py 生成）
     `scripts/publish_article.py`（内部就是 save_article）。
   - 机制化守卫：新增 `scripts/check_mono_retired.py`（deploy.sh 与 deploy_fast.sh 已接入）——
     单体文件一旦重新出现即 FAIL 中止部署；同时审计 `scripts/*.py` 里仍以单体为写路径的历史脚本并告警。
-    已改成分片优先的活脚本：`backlink_daily_pick.py`、`generate_compare_pages.py`、`generate_quiz_pages.py`
-    （这三个此前会因为单体不存在直接崩，属于"文档改了、脚本没跟上"的漏网）。
+    已改成分片优先的活脚本：`backlink_daily_pick.py`、`generate_compare_pages.py`、`generate_quiz_pages.py`、
+    `check_description_quality.py`
+    （这 4 个此前会因为单体不存在直接崩，属于"文档改了、脚本没跟上"的漏网）。
+    - **第 4 个（2026-09-13 修）**：`check_description_quality.py`（description 首句质量巡检，
+      TITLE-GOVERNANCE.md 引用它）把 `data/tools.json` 拼在 `os.path.join(BASE_DIR, "data", "tools.json")` 里
+      → 运行必 `FileNotFoundError`；`--fix` 更是对单体做 raw 字符串插入（`json.dump` 都不走）。
+      已改：`from data_store import load_all_tools, save_tool`，写用 `save_tool(t, indent=2)`
+      （**分片 indent=2，用默认 4 会造成整库无谓 diff**），并在写后加读回校验（不一致即 exit 1）。
+    - ⚠️ **该漏网暴露了守卫本身的检测盲区（待后续修）**：`check_mono_retired.py` 的 `maybe_write` 只看
+      "写提示与单体引用在**同一行**"（`WRITE_HINT_RE` 逐 hit 行匹配）。本脚本的写路径是
+      `open(TOOLS_FILE, "w")`，而 `TOOLS_FILE = os.path.join(BASE_DIR, "data", "tools.json")`
+      在另一行 → 被误判进 "只读回退" 的 INFO 桶（非阻断），所以它崩了很久也没人拦。
+      修法（未做）：先收集"由单体路径赋值得到的变量名"，再据此匹配 `open(<var>, 'w')` / `json.dump(..., <var>)`。
+      在修好之前，**改数据类脚本必须自己确认写路径是分片**，别指望该守卫兜底。
 - `scripts/`：构建与批处理脚本（build.py、regenerate_data.py、optimize_css.py、check_*.py 验证等）
 - `js/`：前端逻辑。`main.js`（首页渲染/搜索）、`favorites.js`（收藏）、`ai-assistant.js`、`tts-reader.js`；**`tools-data.js` 是构建产物，不要手改**
 - `css/`：`style.css` 是源文件，`style.min.css` 由 optimize_css.py 生成，**不要手改 min 文件**

@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-09-12",
+    "updated": "2026-09-13",
     "total": 674
   },
   "tools": {
@@ -7064,9 +7064,9 @@
       "priority": 60,
       "attempts": 0,
       "last_attempt": null,
-      "verified_at": "2026-08-31",
+      "verified_at": "2026-09-13",
       "confidence": "high",
-      "notes": ""
+      "notes": "价格核实：scrape_price.py success=false（跳转 github.com/skrun-dev/skrun/pricing-plans，命中的是 GitHub 站点通用定价导航，无工具自身价目）→ 按 WebSearch/npm 兜底：npm @skrun-dev/cli@1.1.0 license=MIT、仓库 license=MIT、v1.1.0 发布说明未提及任何定价变更 → 开源免费不变，托管商业云定价仍未公布；price / verified_price 均未改动。"
     },
     "airllm": {
       "name": "airllm",

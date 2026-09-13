@@ -552,6 +552,13 @@ git add data/live_data.json data/ranking_data.json data/subcategories.json data/
 git add scripts/verify_tools_batch.py scripts/check_version_drift.py scripts/add_version_evo.py scripts/analyze_beacon.py scripts/review_generator.py scripts/_claude_fable_evo.json scripts/_seedance_evo.json scripts/_patch_fable51_stale.py scripts/_patch_seedance25_stale.py scripts/_version_drift_report.json reports/ 2>/dev/null || true
 # 2026-09-11：工具收录类一次性脚本入库（可回滚 + 留痕：盘古大模型）
 git add scripts/_add_pangu_20260910.py scripts/_fix_pangu_desc_20260911.py 2>/dev/null || true
+# 2026-09-13：单体退役漏网修复 + 版本监控留痕。
+#   check_description_quality.py = description 首句质量巡检，原硬编码读已退役的 data/tools.json
+#     （一跑必 FileNotFoundError，--fix 还是对单体做 raw 字符串插入）→ 改分片真源 + save_tool(indent=2)
+#     + 写后读回校验。改动属"必须能回滚"范畴，故纳入白名单。
+#   _build_skrun_verify_20260913.py = 版本监控当日一次性生成脚本（自带 old 逐字命中自校验），
+#     同 _add_pangu_* / _patch_* 先例入库留痕。
+git add scripts/check_description_quality.py scripts/_build_skrun_verify_20260913.py 2>/dev/null || true
 # 2026-09-11：快讯提炼脚本入库（AI快讯日更 automation-1784555527714 的一次性提炼脚本，
 #   幂等可重跑、含同日/跨天去重与字数体检，同属"改动必须能回滚 + 留痕"铁律）
 git add scripts/_news_refine_*.py 2>/dev/null || true

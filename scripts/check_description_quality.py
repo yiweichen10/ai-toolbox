@@ -17,7 +17,10 @@ import sys
 from datetime import datetime, timedelta
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TOOLS_FILE = os.path.join(BASE_DIR, "data", "tools.json")
+sys.path.insert(0, os.path.join(BASE_DIR, "scripts"))
+# 2026-09-13 修：单体 data/tools.json 已于 2026-08-26 退役，本脚本原先直接读单体 →
+# 每次运行必 FileNotFoundError（"文档改了、脚本没跟上"的漏网）。改为分片真源 + data_store 写回。
+from data_store import load_all_tools, save_tool  # noqa: E402
 
 ORG_PAT = re.compile(
     r"(推出的|旗下的|开发的|发布的|打造的|开源的|来自|由 .*?(推出|开发|发布|打造))"
@@ -135,7 +138,7 @@ def main():
     ap.add_argument("--overwrite", action="store_true", help="覆盖已自动生成的 positioning（人工值保留）")
     args = ap.parse_args()
 
-    tools = json.load(open(TOOLS_FILE, encoding="utf-8"))
+    tools = load_all_tools()
     cutoff = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
 
     a_hits, b_hits = [], []
@@ -171,21 +174,26 @@ def main():
     if args.fix:
         print(f"已自动生成 positioning: {len(fixed)} | 已有手动值跳过: {len(skipped_have_pos)} | 缺利益点需人工: {len(need_manual)}")
         if fixed:
-            import shutil
-            bak = TOOLS_FILE + ".auto-fix.bak"
-            shutil.copy2(TOOLS_FILE, bak)
-            with open(TOOLS_FILE, encoding="utf-8") as f:
-                raw = f.read()
+            by_slug = {t.get("slug"): t for t in tools}
+            written = 0
             for slug, pos in fixed:
-                needle = f'"slug": "{slug}",'
-                if raw.count(needle) != 1:
-                    print(f"  !!! {slug} 匹配异常，跳过")
+                t = by_slug.get(slug)
+                if not t:
+                    print(f"  !!! {slug} 不在分片真源中，跳过")
                     continue
-                raw = raw.replace(needle, needle + f' "positioning": "{pos}", "auto_positioning": true,', 1)
-            with open(TOOLS_FILE, "w", encoding="utf-8") as f:
-                f.write(raw)
-            json.load(open(TOOLS_FILE, encoding="utf-8"))
-            print(f"已写入 {len(fixed)} 个 positioning（备份: {bak}）")
+                t["positioning"] = pos
+                t["auto_positioning"] = True
+                save_tool(t, indent=2)
+                written += 1
+            print(f"已写入 {written} 个 positioning（分片真源 data/tools/*.json）")
+            # 读回校验：必须能在分片里查回刚写的新值
+            back = {x.get("slug"): x for x in load_all_tools()}
+            expect = dict(fixed)
+            bad = [s for s in expect if (back.get(s) or {}).get("positioning") != expect[s]]
+            if bad:
+                print(f"  !!! 读回校验失败 {len(bad)} 个: {bad[:5]}")
+                sys.exit(1)
+            print(f"  [OK] 读回校验通过 {written}/{written}")
             for s, p in fixed[:10]:
                 print(f"  {s} -> {p}")
         if need_manual:
