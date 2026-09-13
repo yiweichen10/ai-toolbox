@@ -425,6 +425,15 @@ def normalize_name(name):
 # 版本号模式：匹配 "v3", "2.5", "5.6", "4o" 等
 _VERSION_RE = re.compile(r'^v?\d+(\.\d+)?[a-z]?$')
 
+
+def _extract_ver(name):
+    """抽取名称中的版本号 → (主, 次)；无版本号返回 None。
+    2026-09-13 从 update_queue 循环内的嵌套 def 提升为模块级（每轮重复定义无必要）。"""
+    m = re.search(r'(\d+)(?:[.\-](\d+))?', name or '')
+    if not m:
+        return None
+    return (int(m.group(1)), int(m.group(2)) if m.group(2) else 0)
+
 # 无意义后缀词：附加到基础名上不构成新产品的词
 NOISE_SUFFIX_WORDS = {
     "ai", "pro", "plus", "lite", "beta", "free", "premium",
@@ -670,25 +679,17 @@ def main():
         for new_name, matched_idx, new_meta in update_queue:
             old_tool = existing_tools[matched_idx]
             old_name = old_tool["name"]
-            print(f"  🔄 {old_name} → {new_name}")
-
-            if args.dry_run:
-                print(f"    [DRY RUN] 以上将被更新")
-                updated_count += 1  # 计数以便展示
-                continue
 
             # === 版本方向校验（治本：防止"降级覆盖"把新版写成旧版）===
-            def _extract_ver(name):
-                m = re.search(r'(\d+)(?:[.\-](\d+))?', name or '')
-                if not m:
-                    return None
-                return (int(m.group(1)), int(m.group(2)) if m.group(2) else 0)
-
+            # 2026-09-13 调整：守卫移到 dry-run 打印之前。原先 dry-run 分支先 print
+            # "以上将被更新" 再 continue，导致 dry-run 把「真实运行会被跳过的命名变体」
+            # 也报成"将被更新" —— 实测 dry-run 报 4 条、真跑 0 条，会误导排查方向。
             new_ver = _extract_ver(new_name)
             old_ver = _extract_ver(old_name)
             # 候选版本必须高于已有版本，否则是降级/误判，跳过以防覆盖成旧版内容
             if new_ver and old_ver and new_ver <= old_ver:
-                print(f"    ⏭️ 跳过降级覆盖: 候选 {new_name}({new_ver}) 不高于已有 {old_name}({old_ver})，不写旧版内容")
+                print(f"  ⏭️ {old_name} → {new_name}")
+                print(f"    ⏭️ 跳过降级覆盖: 候选({new_ver}) 不高于已有({old_ver})，不写旧版内容")
                 continue
             # === 2026-09-12 加固：只认"双方都有版本号且候选更高"的真升级 ===
             # 背景：is_duplicate_tool 会把「命名变体」误判为版本升级，例如
@@ -696,7 +697,14 @@ def main():
             # 该分支会 LLM 重生成内容并把 published / content_verified 置 False，
             # 等于让已发布工具的线上页面直接消失（且被新草稿覆盖）。真升级必须带更高版本号。
             if not (new_ver and old_ver and new_ver > old_ver):
-                print(f"    ⏭️ 跳过非版本升级（命名变体或无法比对版本）: {old_name} → {new_name}，已发布内容保持不动")
+                print(f"  ⏭️ {old_name} → {new_name}")
+                print(f"    ⏭️ 跳过非版本升级（命名变体或无法比对版本），已发布内容保持不动")
+                continue
+
+            print(f"  🔄 {old_name} → {new_name}")
+            if args.dry_run:
+                print(f"    [DRY RUN] 以上将被更新")
+                updated_count += 1  # 计数以便展示
                 continue
 
             # 收集同品牌所有已知版本（用于"版本演进对比"小节）
