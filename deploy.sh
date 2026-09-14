@@ -295,9 +295,19 @@ for d in css js tools articles author live ranking quiz alternatives compare cat
     if [ -d "$LOCAL_DIR/$d" ]; then
         _sync_ok=0
         for _try in 1 2; do
+            # 🔴 2026-09-14 修「与本文件 357-359 行同型的死代码」：
+            #   ① 脚本开头 set -e 生效时，管道任一侧非 0 会**立即退出脚本** → 下方重试 /
+            #      rollback_deploy / 明确报错全都执行不到，表现为"部署静默死亡、日志半途而止"，
+            #      外层只能靠重跑自愈（2026-09-05~09-11 文章任务连续 7 天重跑即此类）。
+            #      必须 set +e 包住管道（infographics / og 两段 9-11 已修，本段当时漏网）。
+            #   ② `_se=$?` 取的是前一条**赋值语句**的退出码（恒 0），不是 ssh 的；且赋值本身会
+            #      重置 PIPESTATUS。必须先把整个 PIPESTATUS 数组落盘再取 [0]/[1]。
+            set +e
             tar cf - --exclude='*.bak' -C "$LOCAL_DIR" "$d" 2>/dev/null | \
                 ssh $SSH_OPTS "${SERVER_USER}@${SERVER_IP}" "cd ${REMOTE_DIR} && tar xf - --overwrite" 2>/dev/null
-            _te=${PIPESTATUS[0]}; _se=$?
+            _pst=("${PIPESTATUS[@]}")
+            set -e
+            _te=${_pst[0]:-0}; _se=${_pst[1]:-0}
             if [ "$_te" -eq 0 ] && [ "$_se" -eq 0 ]; then _sync_ok=1; break; fi
             echo "  ⚠️ $d/ 同步异常（tar=$_te ssh=$_se），第 $_try 次重试..."
         done
