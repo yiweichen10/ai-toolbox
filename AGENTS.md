@@ -267,6 +267,26 @@ js/tools-data.js（首页工具数据，构建时由 build.py 生成）
   2. `scripts/generate_picks_candidates.py`：auto 模式且当天已确认时，若文案损坏也强制重建
      （原来"今天已确认过就保持"会挡住损坏自愈）。
 
+## 2026-09-14 文章配图全量部署不上传（deploy.sh 补 images/articles/ 同步段）
+
+- **事故（当天实测）**：全量 `bash deploy.sh` 走完显示「部署成功」，但新文章
+  `/articles/kimi-k3-usage-guide-2026/` 的 4 张正文配图线上全部 404，文章图全裂；
+  交叉验证 `browser-mcp-practical-guide-2026/4-webmcp-docs-desktop.png` 也一直 404。
+- **根因（机制）**：`deploy.sh` 的 `images/` 同步是**白名单式**——只做了 `images/og/`（9/11 立）
+  和 `images/infographics/` 两个增量段，**`images/articles/` 从来没有任何同步步骤**；
+  `/images/` 又整体在 `.gitignore` 里（不加 git，目录 4.1M 全量太大也走不了 rsync 清单）。
+  过去文章配图之所以"看起来正常"，是因为作者都走 `deploy_fast.sh`——它的上传清单里**显式补了**
+  `images/articles/<slug>/` 与 `images/og/<slug>-og.png`（见本文件 2026-08-28 段"实现陷阱"）。
+  一旦某轮因改了模板/数据而必须走全量 `deploy.sh`，该文章的配图就静默漏传，且**无任何告警**。
+- **修复**：`deploy.sh` 在 `images/og/` 段之后新增 `images/articles/` 增量同步段，
+  沿用 infographics/og 同一套实现（`find -printf '%P %s'` 双端清单 → `comm -3` 取「缺失+大小变化」
+  → `tar cf - -C <dir> -T <listfile>` 管道上传，**禁用 xargs**，避免 32KB exec 上限）
+  + 逐个 `curl` HTTP 200 校验 + 失败重试一次 + 不 rollback（页面已好，缺图不该退回好页面）。
+  实测：本地 28 文件、补传 5 个（4 张本轮 + 1 张 browser-mcp 历史漏网），5/5 HTTP 200。
+- **规则**：新增任何"页面会引用但 git 不跟踪"的目录（images 子目录、字体、附件等），
+  必须同时在 `deploy.sh` 和 `deploy_fast.sh` 两条链路都确认同步或显式补传；
+  **验证口径是线上 HTTP 200，不是"本地存在"**——两者都只是中间产物。
+
 ## 2026-08-13 广告注入丢失事故（build.py 自动注入机制化）
 
 - 事件：线上文章/资讯页全部丢失广告加载器（`/ads/loader.js` 与 `data-category`），
