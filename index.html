@@ -215,8 +215,8 @@
 </style>
 
 <!-- JS defer 加载：tools-data.js，不阻塞渲染 -->
-<script src="/js/tools-data.js?v=1789428023" defer></script>
-<script src="/js/favorites.js?v=1789428023" defer></script>
+<script src="/js/tools-data.js?v=1789429987" defer></script>
+<script src="/js/favorites.js?v=1789429987" defer></script>
 
 <!-- 百度统计（异步加载，不阻塞渲染） -->
 <script>
@@ -412,17 +412,31 @@ var _hmt = _hmt || [];
                         <div class="tab-panel" id="panel-dict">
                             <div class="dict-cards">
                                 <!-- DICT_CARDS_START -->
+                                <a class="dict-card-item" href="/dict/reranking/">
+                                    <div class="dict-card-icon">📊<span class="dict-card-date">09/15</span></div>
+                                    <div class="dict-card-body">
+                                        <h4>重排序（Reranking） <span class="badge-new">NEW</span></h4>
+                                        <p>检索流程中对候选文档进行精细排序的技术。先用轻量方法粗召回，再用重排序模型精排，显著提升检索与问答质量。</p>
+                                    </div>
+                                </a>
+                                <a class="dict-card-item" href="/dict/reward-model/">
+                                    <div class="dict-card-icon">🏆<span class="dict-card-date">09/15</span></div>
+                                    <div class="dict-card-body">
+                                        <h4>奖励模型（Reward Model） <span class="badge-new">NEW</span></h4>
+                                        <p>给AI回答打分的模型，用来预测“这个回答人类是否喜欢”，是RLHF等对齐训练中扮演“裁判”角色的关键组件。</p>
+                                    </div>
+                                </a>
                                 <a class="dict-card-item" href="/dict/quantum-ml/">
                                     <div class="dict-card-icon">⚛️<span class="dict-card-date">09/14</span></div>
                                     <div class="dict-card-body">
-                                        <h4>量子机器学习（Quantum Machine Learning） <span class="badge-new">NEW</span></h4>
+                                        <h4>量子机器学习（Quantum Machine Learning） </h4>
                                         <p>将量子计算与机器学习相结合的前沿方向，利用量子叠加、纠缠等特性加速数据处理与模型训练。目前仍处于早期探索阶段。</p>
                                     </div>
                                 </a>
                                 <a class="dict-card-item" href="/dict/react/">
                                     <div class="dict-card-icon">🧮<span class="dict-card-date">09/14</span></div>
                                     <div class="dict-card-body">
-                                        <h4>ReAct模式（推理+行动） <span class="badge-new">NEW</span></h4>
+                                        <h4>ReAct模式（推理+行动） </h4>
                                         <p>让大模型交替进行“思考→行动→观察”循环的智能体范式，2022年论文提出后成为构建AI Agent的主流框架。</p>
                                     </div>
                                 </a>
@@ -480,20 +494,6 @@ var _hmt = _hmt || [];
                                     <div class="dict-card-body">
                                         <h4>KV缓存（KV Cache） </h4>
                                         <p>大模型推理时缓存已计算过的注意力中间结果，避免重复计算，是让长文本对话和长上下文生成变快、变便宜的关键优化。</p>
-                                    </div>
-                                </a>
-                                <a class="dict-card-item" href="/dict/human-in-the-loop/">
-                                    <div class="dict-card-icon">🔄<span class="dict-card-date">09/09</span></div>
-                                    <div class="dict-card-body">
-                                        <h4>人在回路（Human-in-the-loop） </h4>
-                                        <p>在AI自动处理流程中保留人类审核、决策环节的设计模式，兼顾效率与可靠性，常用于医疗、金融等高风险场景。</p>
-                                    </div>
-                                </a>
-                                <a class="dict-card-item" href="/dict/hybrid-search/">
-                                    <div class="dict-card-icon">🔎<span class="dict-card-date">09/09</span></div>
-                                    <div class="dict-card-body">
-                                        <h4>混合检索（Hybrid Search） </h4>
-                                        <p>在同一搜索系统中同时使用关键词检索与向量语义检索的搜索方式，兼顾精确匹配与语义理解，是RAG系统的常用配置。</p>
                                     </div>
                                 </a>
                                 <!-- DICT_CARDS_END -->
