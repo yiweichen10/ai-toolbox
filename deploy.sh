@@ -572,6 +572,11 @@ git add scripts/check_description_quality.py scripts/_build_skrun_verify_2026091
 # 2026-09-11：快讯提炼脚本入库（AI快讯日更 automation-1784555527714 的一次性提炼脚本，
 #   幂等可重跑、含同日/跨天去重与字数体检，同属"改动必须能回滚 + 留痕"铁律）
 git add scripts/_news_refine_*.py 2>/dev/null || true
+# 2026-09-14：快讯链路的三件套必须入库——此前 fetch_aihot_news.py / check_news_quality.py
+#   的改动一直游离在 git 外（改了没记录、坏了不能回滚），正是铁律#12 说的"新脚本忘补白名单"。
+#   新增 news_daily_pipeline.py 作为快讯日更的单一入口（串联采集→契约门禁→构建→部署→记录→线上验证）。
+#   注：data/news_*.json 属内容数据，按 2026-09-03 决策不进 git，此处不动。
+git add scripts/fetch_aihot_news.py scripts/check_news_quality.py scripts/news_daily_pipeline.py 2>/dev/null || true
 # 2026-09-03 修正：内容数据（data/dict_terms/ 等）不进 git，只提交流程系统（脚本/deploy.sh 等）。
 #   deploy.sh 本体纳入白名单，确保本脚本自身改动可回滚（deploy.sh 不在上方白名单内，不显式加入会丢失）。
 #   注：data/tools/ data/articles/ 仍按 2026-08-23 设计提交（内容正本备份），待用户决定是否同样移出 git。

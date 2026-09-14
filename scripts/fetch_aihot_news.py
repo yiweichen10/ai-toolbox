@@ -12,6 +12,7 @@ import json
 import os
 import re
 import sys
+import shutil
 import argparse
 from datetime import datetime, timezone, timedelta
 from urllib.request import Request, urlopen
@@ -37,6 +38,17 @@ CAT_LABEL = {
     'opinion': '观点',
     'paper': '论文研究',
 }
+# 上游 category 缺失时的关键词兜底表（顺序即优先级；命中不了回落 industry）
+# 顺序刻意把"政策/治理类"放最前：否则含"模型""发布"字样的政策新闻会被误判成模型发布。
+# 只放高辨识度词，模糊词（合作/投资/研究/安全）一律不列，让它们落到 industry 默认值。
+CAT_FALLBACK_HINTS = (
+    ('industry', ('呼吁', '放缓', '审慎', '准则', '监管', '治理', '政策', '合规', '出口管制',
+                  '国会', '白宫', '诉讼', '收购', '融资', '估值', '营收', '上市', '裁员')),
+    ('models', ('模型', '参数量', '架构', '开源', '权重', 'benchmark', '登顶', '跑分', '上下文窗口')),
+    ('paper', ('论文', '预印本', 'arxiv', '定理', '实验', '证明')),
+    ('products', ('发布', '上线', '推出', '公测', '开放', 'api', '应用', '订阅', '新功能', '更新')),
+)
+VALID_CATEGORIES = tuple(CAT_LABEL.keys())
 
 
 def fetch(since, take=50, mode='selected'):
@@ -142,9 +154,26 @@ def is_seen(title, url, sigs, urls, threshold=0.3):
     return False
 
 
+def _infer_category(it):
+    """上游 category 缺失（null/空）时的确定性兜底（2026-09-14 立规）。
+
+    背景：aihot API 偶发返回 "category": null（实证：2026-09-12 两条、2026-09-14 一条），
+    旧 to_news() 直接透传 → category=null → 页面空徽章 + 栏目筛选下该条消失。
+    这里按关键词做可解释的确定性推断，命中不了回落 industry，并在 stdout 告警供人工复核。
+    """
+    text = ' '.join(str(it.get(k) or '') for k in ('title', 'title_en', 'summary')).lower()
+    for cat, kws in CAT_FALLBACK_HINTS:
+        if any(k in text for k in kws):
+            return cat
+    return 'industry'
+
+
 def to_news(it, date_str):
-    cat_raw = it.get('category', '')
+    cat_raw = it.get('category') or ''
     cat = CAT_MAP.get(cat_raw, cat_raw)
+    if not cat:
+        cat = _infer_category(it)
+        print(f'  ⚠️ 上游缺分类，按关键词推断为 [{cat}]: {(it.get("title") or "")[:36]}')
     pa = it.get('publishedAt', '')
     try:
         t = datetime.fromisoformat(pa)
@@ -169,12 +198,53 @@ def to_news(it, date_str):
     }
 
 
+def _backfill_categories():
+    """一次性/可重复执行的存量修复（2026-09-14）：给历史 news_*.json 里 category 为 null/空
+    的条目补上推断分类（确定性规则，只补缺、不覆盖已有值），修前逐文件存 .bak。
+    只修"缺失"，不改任何已有分类 —— 遵守"category 一律不动"的边界。
+    """
+    import glob
+    fixed_total = 0
+    for fp in sorted(glob.glob(os.path.join(BASE_DIR, 'data', 'news_*.json'))):
+        try:
+            items = json.load(open(fp, encoding='utf-8'))
+        except Exception:
+            continue
+        if not isinstance(items, list):
+            continue
+        changed = []
+        for it in items:
+            if not it.get('category'):
+                cat = _infer_category(it)
+                changed.append((it.get('id'), it.get('category'), cat, (it.get('title') or '')[:36]))
+                it['category'] = cat
+                it['category_label'] = CAT_LABEL.get(cat, cat)
+                it['tags'] = [cat]
+        if not changed:
+            continue
+        shutil.copy2(fp, fp + '.bak')
+        with open(fp, 'w', encoding='utf-8') as f:
+            json.dump(items, f, ensure_ascii=False, indent=2)
+        json.load(open(fp, encoding='utf-8'))  # 读回校验
+        for _id, _old, _new, _t in changed:
+            print(f'  [补分类] {os.path.basename(fp)} {_id}: {_old!r} → {_new} | {_t}')
+        fixed_total += len(changed)
+    print(f'✅ 存量分类补全完成：修复 {fixed_total} 条')
+    return fixed_total
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--date')
     ap.add_argument('--take', type=int, default=50)
     ap.add_argument('--limit', type=int, default=8)
+    ap.add_argument('--backfill-categories', action='store_true',
+                    help='只给历史文件里缺失的 category 补推断值，不采集')
     args = ap.parse_args()
+
+    if args.backfill_categories:
+        _backfill_categories()
+        return
 
     today = args.date or datetime.now(CST).strftime('%Y-%m-%d')
     out = os.path.join(BASE_DIR, 'data', f'news_{today}.json')

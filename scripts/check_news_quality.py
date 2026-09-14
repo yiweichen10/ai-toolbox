@@ -44,6 +44,11 @@ VALUE_HINTS = (
     '价格', '成本', '性能', '用户', '亿', '万', '%', '$', '元', '参数量', '上下文',
     '周', '倍', '条', '天', '小时', '美元', '篇', '次', '个', 'GB', 'GPU', '月', '秒',
 )
+# 字段契约（2026-09-14 立规）：分类必须是五类之一，来源与链接不可缺。
+# 根因背景：上游 aihot 偶发 "category": null，旧 fetch 直接透传 → 页面空徽章 +
+# 栏目筛选下该条消失（实证 2026-09-12 ×2、2026-09-14 ×1）。此前门禁只查文本长度与
+# 空值，字段完整性从未被纳入合同，所以这类缺陷反复"逃逸"到人工兜底。
+VALID_CATEGORIES = ('models', 'products', 'industry', 'opinion', 'paper')
 
 
 def cjk_ratio(s):
@@ -69,6 +74,15 @@ def check_one(it):
         fails.append('空标题')
     if not summary:
         fails.append('空摘要')
+
+    # 字段契约（2026-09-14）：分类合法 + 来源/链接非空，缺一即硬伤
+    _cat = it.get('category')
+    if _cat not in VALID_CATEGORIES:
+        fails.append(f'分类缺失或非法(category={_cat!r}，应为 {"|".join(VALID_CATEGORIES)} 之一)')
+    if not (it.get('source') or '').strip():
+        fails.append('缺 source(来源名)')
+    if not (it.get('source_url') or '').strip():
+        fails.append('缺 source_url(原文链接)')
 
     if title:
         # 英文标题 = 完全无中文（快讯标题中英混排、英文专名多是常态，只要含中文即可读）
