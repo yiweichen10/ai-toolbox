@@ -38,14 +38,15 @@
     "声音克隆(Instant约1分钟 / Professional 30+分钟)",
     "语音翻译与AI配音(29+语言，Eleven v3支持70+语言)",
     "对话式AI(Conversational AI)",
-    "音效与音乐生成",
+    "音乐生成(ElevenMusic：Music v2.5 自 2026-09 起为默认模型，Free 每天 5 次、Pro 每月 400 次无损下载)",
+    "音效生成与视频配乐(Sound Effects / Studio / ElevenCreative / Flows 节点)",
     "API与SDK"
   ],
   "related": [
     "suno",
     "runway"
   ],
-  "content": "## ElevenLabs 是什么？\n\nElevenLabs是顶级的AI语音合成工具，支持文字转语音、声音克隆、多语言配音。生成的语音自然逼真，几乎难以分辨是AI合成，是播客、视频配音的首选工具。\n\n## 核心功能\n\n- **文字转语音**：输入文字生成自然语音\n- **声音克隆**：克隆任何人的声音（需授权）\n- **多语言配音**：支持29种语言的语音生成\n- **语音转换**：改变已有音频的声音\n- **API接口**：完善的开发者API\n- **实时对话**：低延迟实时语音对话\n\n## 版本对比\n\n| 方案 | 价格 | 字数/月 |\n|------|------|--------|\n| 免费 | $0 | 1万字 |\n| Starter | $5/月 | 3万字 |\n| Creator | $22/月 | 10万字 |\n| Pro | $99/月 | 50万字 |\n\n## 优缺点分析\n\n### 👍 优点\n- 语音质量顶级，自然逼真\n- 声音克隆功能强大\n- 支持29种语言\n- 有免费版可体验\n- API接口完善\n\n### 👎 缺点\n- 免费版字数有限\n- 声音克隆需付费\n- 中文语音选择相对少\n- 高级功能价格较高\n\n## 使用技巧\n\n1. **预置声音**：选择合适的预置声音作为起点。\n2. **调整参数**：微调稳定性、相似度等参数优化效果。\n3. **多语言配音**：视频配音时用多语言功能覆盖全球受众。\n4. **API集成**：开发者可以集成到自己的应用中。\n5. **声音克隆**：克隆自己的声音用于批量内容创作。\n\n## 适合人群\n\nElevenLabs适合视频创作者、播客主播、有声书制作者和开发者。如果你需要高质量的AI语音，ElevenLabs是目前最好的选择。\n### 总结\n\nElevenLabs 是 AI音频 领域中一款不错的 AI 工具。顶级AI语音合成工具，支持文字转语音、声音克隆、多语言配音。生成语音自然逼真，是播客、视频配音的首选。 从功能完整性来看，它覆盖了核心使用场景。\n\n**快速上手建议：**\n- 访问官网 elevenlabs.io 注册账号\n- 先使用免费版本 了解核心功能\n- 参考官方文档和教程加速学习\n- 加入用户社区获取使用技巧和最佳实践\n\n**价格参考：** 免费版+Starter $5/月\n**支持平台：** Web / API\n\n### 核心功能详解\n\nAI 音频工具涵盖了语音合成、音频编辑、声音克隆等多个方向。这款工具能帮助用户高效处理各类音频任务，从简单的文字转语音到复杂的音频制作都能胜任。\n\n### 主要功能特点\n\n1. **语音合成**：将文字转换为自然流畅的语音\n2. **音频编辑**：智能剪辑、降噪、混音\n3. **声音克隆**：基于少量样本复制特定声音\n4. **转录翻译**：将音频内容转为文字并翻译\n5. **音效生成**：根据描述生成各类音效\n\n### 使用技巧\n\n- 选择合适的语音模型对最终效果至关重要\n- 调整语速、音调和停顿能让语音更自然\n- 善用批量处理功能提高效率\n- 注意音频格式和采样率的设置\n- 生成后建议人工试听确认质量\n\n### 应用场景\n\n- 有声书和播客制作\n- 视频配音和旁白\n- 会议录音转文字\n- 语言学习和练习\n- 无障碍辅助工具",
+  "content": "## ElevenLabs 是什么？\n\nElevenLabs是顶级的AI语音合成工具，支持文字转语音、声音克隆、多语言配音。生成的语音自然逼真，几乎难以分辨是AI合成，是播客、视频配音的首选工具。\n\n## 核心功能\n\n- **文字转语音**：输入文字生成自然语音\n- **声音克隆**：克隆任何人的声音（需授权）\n- **多语言配音**：支持29种语言的语音生成\n- **语音转换**：改变已有音频的声音\n- **音乐生成**：ElevenMusic，Music v2.5 自 2026-09 起为默认模型（Free 每天 5 次、Pro 每月 400 次无损下载）\n- **API接口**：完善的开发者API\n- **实时对话**：低延迟实时语音对话\n\n## 版本对比\n\n| 方案 | 价格 | credits/月 |\n|------|------|-----------|\n| 免费 | $0 | 10,000 |\n| Starter | $6/月（年付折合 $5/月） | 30,000 |\n| Creator | $22/月（首月 50% off $11） | 121,000 |\n| Pro | $99/月 | 600,000 |\n| Scale | $299/月 | 1,800,000（含 3 座席） |\n| Business | $990/月 | 6,000,000（含 10 座席） |\n\n## 优缺点分析\n\n### 👍 优点\n- 语音质量顶级，自然逼真\n- 声音克隆功能强大\n- 支持29种语言\n- 有免费版可体验\n- API接口完善\n\n### 👎 缺点\n- 免费版字数有限\n- 声音克隆需付费\n- 中文语音选择相对少\n- 高级功能价格较高\n\n## 使用技巧\n\n1. **预置声音**：选择合适的预置声音作为起点。\n2. **调整参数**：微调稳定性、相似度等参数优化效果。\n3. **多语言配音**：视频配音时用多语言功能覆盖全球受众。\n4. **API集成**：开发者可以集成到自己的应用中。\n5. **声音克隆**：克隆自己的声音用于批量内容创作。\n\n## 适合人群\n\nElevenLabs适合视频创作者、播客主播、有声书制作者和开发者。如果你需要高质量的AI语音，ElevenLabs是目前最好的选择。\n### 总结\n\nElevenLabs 是 AI音频 领域中一款不错的 AI 工具。顶级AI语音合成工具，支持文字转语音、声音克隆、多语言配音。生成语音自然逼真，是播客、视频配音的首选。 从功能完整性来看，它覆盖了核心使用场景。\n\n**快速上手建议：**\n- 访问官网 elevenlabs.io 注册账号\n- 先使用免费版本 了解核心功能\n- 参考官方文档和教程加速学习\n- 加入用户社区获取使用技巧和最佳实践\n\n**价格参考：** 免费版 $0；Starter $6/月（年付折合 $5/月）；Creator $22/月（首月 $11）；Pro $99/月；Scale $299/月；Business $990/月\n**支持平台：** Web / API\n\n### 核心功能详解\n\nAI 音频工具涵盖了语音合成、音频编辑、声音克隆等多个方向。这款工具能帮助用户高效处理各类音频任务，从简单的文字转语音到复杂的音频制作都能胜任。\n\n### 主要功能特点\n\n1. **语音合成**：将文字转换为自然流畅的语音\n2. **音频编辑**：智能剪辑、降噪、混音\n3. **声音克隆**：基于少量样本复制特定声音\n4. **转录翻译**：将音频内容转为文字并翻译\n5. **音效生成**：根据描述生成各类音效\n\n### 使用技巧\n\n- 选择合适的语音模型对最终效果至关重要\n- 调整语速、音调和停顿能让语音更自然\n- 善用批量处理功能提高效率\n- 注意音频格式和采样率的设置\n- 生成后建议人工试听确认质量\n\n### 应用场景\n\n- 有声书和播客制作\n- 视频配音和旁白\n- 会议录音转文字\n- 语言学习和练习\n- 无障碍辅助工具",
   "published": true,
   "faq": [
     {
@@ -58,28 +59,33 @@
     },
     {
       "q": "ElevenLabs怎么收费？",
-      "a": "免费版$0（10,000 credits/月）；Starter $6/月（年付约$5），含商业授权与即时声音克隆；Creator $22/月（首月$11）；Pro $99/月。另有Scale $299与Business $990企业档。API按credits计费。"
+      "a": "免费版$0（10,000 credits/月）；Starter $6/月（年付折合$5/月），含商业授权与即时声音克隆；Creator $22/月（首月$11）；Pro $99/月。另有Scale $299与Business $990企业档。API按credits计费。"
+    },
+    {
+      "q": "ElevenLabs 的音乐生成（Music v2.5）有什么限制？",
+      "a": "ElevenLabs 于 2026-09 发布 Music v2.5，并设为 ElevenMusic 中提示词与参考音频生成的默认模型（Music v2 仍可继续使用），同步上线 ElevenCreative、Studio、Flows 与 API。官方称在 47,885 对盲测样本中多数情况下被优先选择。无损下载对所有套餐开放：Free 每天 5 次、Pro 每月 400 次；Free 套餐需标注 ElevenMusic 才能商用，引用其他艺人歌曲的音轨不可下载。"
     }
   ],
   "created_date": "2026-03-22",
   "verified_url": "https://elevenlabs.io",
   "verified_publisher": "ElevenLabs",
   "verified_what": "顶级AI语音合成与声音克隆平台，提供文字转语音、声音克隆、多语言配音、语音翻译与对话式AI，语音自然逼真，是播客与视频配音首选。",
-  "verified_price": "Free $0（10,000 credits/月）；Starter $6/月（年付约$5/月，30,000 credits，含即时声音克隆与商业授权）；Creator $22/月（首月$11/年付$11，121,000 credits，含专业声音克隆）；Pro $99/月（600,000 credits）；Scale $299/月；Business $990/月。年付可省2个月。",
+  "verified_price": "Free $0/月（10,000 credits）；Starter $6/月（年付折合 $5/月，30,000 credits，含商业授权）；Creator $22/月（首月 50% off $11，121,000 credits，含专业声音克隆）；Pro $99/月（600,000 credits）；Scale $299/月（1,800,000 credits，含 3 座席）；Business $990/月（6,000,000 credits，含 10 座席）；Enterprise 定制。年付 = 月付 × 10（省两个月）。",
   "verified_platform": "Web / iOS / Android / API",
-  "last_verified": "2026-09-13",
-  "confidence": "low",
+  "last_verified": "2026-09-14",
+  "confidence": "high",
   "conflict": false,
   "verified_features": [
     "文字转语音(TTS)",
     "声音克隆(Instant约1分钟 / Professional 30+分钟)",
     "语音翻译与AI配音(29+语言，Eleven v3支持70+语言)",
     "对话式AI(Conversational AI)",
-    "音效与音乐生成",
+    "音乐生成(ElevenMusic：Music v2.5 自 2026-09 起为默认模型，Free 每天 5 次、Pro 每月 400 次无损下载)",
+    "音效生成与视频配乐(Sound Effects / Studio / ElevenCreative / Flows 节点)",
     "API与SDK"
   ],
   "verified_description": "顶级AI语音合成与声音克隆平台，支持文字转语音、声音克隆、多语言配音与对话式AI，语音自然逼真，是播客与视频配音首选。",
-  "content_flags": "内容中'29种语言'仍可接受（AI配音支持29+语言，最新Eleven v3模型支持70+）；价格表Creator $22/月为月付价准确；整体无严重幻觉。注：原文未提及iOS/Android移动端，官方已有移动App。",
+  "content_flags": "内容中'29种语言'仍可接受（AI配音支持29+语言，最新Eleven v3模型支持70+）；价格表Creator $22/月为月付价准确；整体无严重幻觉。注：原文未提及iOS/Android移动端，官方已有移动App。 | 过时事实定点替换 3 处",
   "price_verified": true,
   "verified_pros": [
     "语音质量业界顶级，自然逼真",
@@ -105,7 +111,11 @@
     },
     {
       "q": "ElevenLabs怎么收费？",
-      "a": "免费版$0（10,000 credits/月）；Starter $6/月（年付约$5），含商业授权与即时声音克隆；Creator $22/月（首月$11）；Pro $99/月。另有Scale $299与Business $990企业档。API按credits计费。"
+      "a": "免费版$0（10,000 credits/月）；Starter $6/月（年付折合$5/月），含商业授权与即时声音克隆；Creator $22/月（首月$11）；Pro $99/月。另有Scale $299与Business $990企业档。API按credits计费。"
+    },
+    {
+      "q": "ElevenLabs 的音乐生成（Music v2.5）有什么限制？",
+      "a": "ElevenLabs 于 2026-09 发布 Music v2.5，并设为 ElevenMusic 中提示词与参考音频生成的默认模型（Music v2 仍可继续使用），同步上线 ElevenCreative、Studio、Flows 与 API。官方称在 47,885 对盲测样本中多数情况下被优先选择。无损下载对所有套餐开放：Free 每天 5 次、Pro 每月 400 次；Free 套餐需标注 ElevenMusic 才能商用，引用其他艺人歌曲的音轨不可下载。"
     }
   ],
   "verified_tags": [
@@ -117,12 +127,11 @@
   "verified_category": "AI音频",
   "source_urls": [
     "https://elevenlabs.io/pricing",
-    "https://elevenlabs.io/de/pricing",
-    "https://www.agiyes.com/aimodels/elevenlabs",
-    "https://aicats.wiki/tw?p=62538"
+    "https://elevenlabs.io/blog/music-v2-5-model",
+    "https://elevenmusic.io/blog/introducing-music-v2-5"
   ],
-  "verify_notes": "首页渲染未现价表（$1B 为捐赠公告数字，假阳性）；官方定价页多源确认 Starter $6/月（年付 $5）、Creator $22、Pro $99，记录「Starter $5/月起（年付）/$6 月付」准确，未改。",
-  "content_verified": false,
+  "verify_notes": "价格真值=无头浏览器渲染 elevenlabs.io/pricing（2026-09-14：Free $0/10k、Starter $6/30k、Creator $22/121k、Pro $99/600k、Scale $299/1.8M+3座席、Business $990/6M+10座席，年付=月付×10）；版本=官方博客 Music v2.5（2026-09，成为 ElevenMusic 默认模型，Free 每天 5 次 / Pro 每月 400 次无损下载，同步上线 ElevenCreative/Studio/Flows/API）。仅做定点替换，未改 description/price 可见字段。",
+  "content_verified": true,
   "compare_section": {
     "competitors": [
       "spark-tts",
@@ -131,5 +140,6 @@
     ],
     "verdict": "ElevenLabs 与 Spark-TTS、Udio、Suno 同属AI音频赛道。在性价比上，ElevenLabs（免费版 + Starter $5/月起（年付）/$6月付）门槛更低；口碑方面，ElevenLabs（⭐ 4.8）领先；ElevenLabs 的优势在于顶级AI语音合成与声音克隆平台，提供文字转语音、声音克隆、多语言配音、语音翻译与对话式AI，语音自然逼真，是播客与视频配，适合看重该特性的用户。",
     "generated": "2026-07-30"
-  }
+  },
+  "updated_date": "2026-09-14"
 }

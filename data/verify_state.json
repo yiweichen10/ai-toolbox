@@ -2,7 +2,7 @@
   "_meta": {
     "version": 1,
     "created": "2026-08-04",
-    "updated": "2026-09-13",
+    "updated": "2026-09-14",
     "total": 675
   },
   "tools": {
@@ -222,9 +222,9 @@
       "priority": 110,
       "attempts": 1,
       "last_attempt": "2026-09-13",
-      "verified_at": "2026-09-13",
-      "confidence": "low",
-      "notes": "首页渲染未现价表（$1B 为捐赠公告数字，假阳性）；官方定价页多源确认 Starter $6/月（年付 $5）、Creator $22、Pro $99，记录「Starter $5/月起（年付）/$6 月付」准确，未改。"
+      "verified_at": "2026-09-14",
+      "confidence": "high",
+      "notes": "价格真值=无头浏览器渲染 elevenlabs.io/pricing（2026-09-14：Free $0/10k、Starter $6/30k、Creator $22/121k、Pro $99/600k、Scale $299/1.8M+3座席、Business $990/6M+10座席，年付=月付×10）；版本=官方博客 Music v2.5（2026-09，成为 ElevenMusic 默认模型，Free 每天 5 次 / Pro 每月 400 次无损下载，同步上线 ElevenCreative/Studio/Flows/API）。仅做定点替换，未改 description/price 可见字段。"
     },
     "gemini": {
       "name": "Gemini",
