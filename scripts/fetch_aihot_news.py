@@ -38,17 +38,29 @@ CAT_LABEL = {
     'opinion': '观点',
     'paper': '论文研究',
 }
-# 上游 category 缺失时的关键词兜底表（顺序即优先级；命中不了回落 industry）
-# 顺序刻意把"政策/治理类"放最前：否则含"模型""发布"字样的政策新闻会被误判成模型发布。
-# 只放高辨识度词，模糊词（合作/投资/研究/安全）一律不列，让它们落到 industry 默认值。
-CAT_FALLBACK_HINTS = (
-    ('industry', ('呼吁', '放缓', '审慎', '准则', '监管', '治理', '政策', '合规', '出口管制',
-                  '国会', '白宫', '诉讼', '收购', '融资', '估值', '营收', '上市', '裁员')),
-    ('models', ('模型', '参数量', '架构', '开源', '权重', 'benchmark', '登顶', '跑分', '上下文窗口')),
-    ('paper', ('论文', '预印本', 'arxiv', '定理', '实验', '证明')),
-    ('products', ('发布', '上线', '推出', '公测', '开放', 'api', '应用', '订阅', '新功能', '更新')),
-)
 VALID_CATEGORIES = tuple(CAT_LABEL.keys())
+# 必填字段契约（2026-09-14 用户拍板：入口处拒绝，禁止兜底掩盖）
+REQUIRED_FIELDS = ('title', 'summary', 'category', 'source', 'source_url')
+
+
+def check_item(it):
+    """校验上游条目字段完整性。返回缺失/非法字段列表（空列表 = 合格）。
+
+    禁止在这里"补默认值"：上游给了不合规数据，就让它进不了门并如实报告，
+    由人分析根因（是上游分类缺失？还是选条策略取到了无分类条目？）。
+    """
+    bad = []
+    if not (it.get('title') or '').strip():
+        bad.append('title')
+    if not (it.get('summary') or '').strip():
+        bad.append('summary')
+    if it.get('category') not in VALID_CATEGORIES:
+        bad.append(f'category={it.get("category")!r}（不在白名单 {"|".join(VALID_CATEGORIES)}）')
+    if not (it.get('source') or it.get('attribution') or '').strip():
+        bad.append('source')
+    if not (it.get('url') or it.get('permalink') or '').strip():
+        bad.append('source_url')
+    return bad
 
 
 def fetch(since, take=50, mode='selected'):
@@ -154,26 +166,18 @@ def is_seen(title, url, sigs, urls, threshold=0.3):
     return False
 
 
-def _infer_category(it):
-    """上游 category 缺失（null/空）时的确定性兜底（2026-09-14 立规）。
-
-    背景：aihot API 偶发返回 "category": null（实证：2026-09-12 两条、2026-09-14 一条），
-    旧 to_news() 直接透传 → category=null → 页面空徽章 + 栏目筛选下该条消失。
-    这里按关键词做可解释的确定性推断，命中不了回落 industry，并在 stdout 告警供人工复核。
-    """
-    text = ' '.join(str(it.get(k) or '') for k in ('title', 'title_en', 'summary')).lower()
-    for cat, kws in CAT_FALLBACK_HINTS:
-        if any(k in text for k in kws):
-            return cat
-    return 'industry'
-
-
 def to_news(it, date_str):
+    """把上游条目转成我们的 news schema。
+
+    ⚠️ 这里**不做任何兜底**（2026-09-14 用户拍板）：上游字段不合规的条目在进 pick 之前
+    已被 check_item() 挡掉，能走到这里的必然是合格数据。若将来有人加回"猜一个值"的兜底，
+    等于把显性缺陷变成隐性错误——问题会出现在下游且无人知道。
+    """
     cat_raw = it.get('category') or ''
     cat = CAT_MAP.get(cat_raw, cat_raw)
     if not cat:
-        cat = _infer_category(it)
-        print(f'  ⚠️ 上游缺分类，按关键词推断为 [{cat}]: {(it.get("title") or "")[:36]}')
+        # 走到这里=上游契约被破坏，直接报错暴露，不要猜
+        raise ValueError(f'条目缺 category，拒绝转换：{(it.get("title") or "")[:40]}')
     pa = it.get('publishedAt', '')
     try:
         t = datetime.fromisoformat(pa)
@@ -198,13 +202,14 @@ def to_news(it, date_str):
     }
 
 
-def _backfill_categories():
-    """一次性/可重复执行的存量修复（2026-09-14）：给历史 news_*.json 里 category 为 null/空
-    的条目补上推断分类（确定性规则，只补缺、不覆盖已有值），修前逐文件存 .bak。
-    只修"缺失"，不改任何已有分类 —— 遵守"category 一律不动"的边界。
+def _audit_fields():
+    """只审计、不改数据：列出历史 news_*.json 里字段不合规的条目，供人分析根因。
+
+    这是"报告"不是"修复"（2026-09-14 用户拍板：不要兜底）。
+    历史数据的修正必须由人读过内容后判定写回，不能让脚本猜。
     """
     import glob
-    fixed_total = 0
+    bad_total = 0
     for fp in sorted(glob.glob(os.path.join(BASE_DIR, 'data', 'news_*.json'))):
         try:
             items = json.load(open(fp, encoding='utf-8'))
@@ -212,25 +217,27 @@ def _backfill_categories():
             continue
         if not isinstance(items, list):
             continue
-        changed = []
         for it in items:
-            if not it.get('category'):
-                cat = _infer_category(it)
-                changed.append((it.get('id'), it.get('category'), cat, (it.get('title') or '')[:36]))
-                it['category'] = cat
-                it['category_label'] = CAT_LABEL.get(cat, cat)
-                it['tags'] = [cat]
-        if not changed:
-            continue
-        shutil.copy2(fp, fp + '.bak')
-        with open(fp, 'w', encoding='utf-8') as f:
-            json.dump(items, f, ensure_ascii=False, indent=2)
-        json.load(open(fp, encoding='utf-8'))  # 读回校验
-        for _id, _old, _new, _t in changed:
-            print(f'  [补分类] {os.path.basename(fp)} {_id}: {_old!r} → {_new} | {_t}')
-        fixed_total += len(changed)
-    print(f'✅ 存量分类补全完成：修复 {fixed_total} 条')
-    return fixed_total
+            bad = []
+            if not (it.get('title') or '').strip():
+                bad.append('title')
+            if not (it.get('summary') or '').strip():
+                bad.append('summary')
+            if it.get('category') not in VALID_CATEGORIES:
+                bad.append(f'category={it.get("category")!r}')
+            if not (it.get('source') or '').strip():
+                bad.append('source')
+            if not (it.get('source_url') or '').strip():
+                bad.append('source_url')
+            if bad:
+                bad_total += 1
+                print(f'  [缺陷] {os.path.basename(fp)} {it.get("id")}: 缺 {", ".join(bad)} | {(it.get("title") or "")[:36]}')
+    if bad_total:
+        print(f'⚠️ 共 {bad_total} 条字段缺陷。请先分析根因（上游数据？写入路径？），'
+              f'由人读过内容后判定正确值再写回；禁止用脚本猜值填补。')
+    else:
+        print('✅ 字段审计通过：0 条缺陷')
+    return 1 if bad_total else 0
 
 
 def main():
@@ -238,13 +245,12 @@ def main():
     ap.add_argument('--date')
     ap.add_argument('--take', type=int, default=50)
     ap.add_argument('--limit', type=int, default=8)
-    ap.add_argument('--backfill-categories', action='store_true',
-                    help='只给历史文件里缺失的 category 补推断值，不采集')
+    ap.add_argument('--audit-fields', action='store_true',
+                    help='只审计历史 news_*.json 的字段完整性并列出缺陷清单，不改任何数据')
     args = ap.parse_args()
 
-    if args.backfill_categories:
-        _backfill_categories()
-        return
+    if args.audit_fields:
+        return _audit_fields()
 
     today = args.date or datetime.now(CST).strftime('%Y-%m-%d')
     out = os.path.join(BASE_DIR, 'data', f'news_{today}.json')
@@ -281,6 +287,25 @@ def main():
         json.dump([], open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
         return
 
+    # 字段契约拦截（2026-09-14 用户拍板）：上游字段不合规的条目**直接拒收**，
+    # 不做任何默认值/猜测填补。位置刻意放在 pick 之前 —— 不合格条目不占名额，
+    # 名额自然由其他合格新闻补上（与跨天去重同一层）。
+    rejected = []
+    kept = []
+    for it in items:
+        bad = check_item(it)
+        if bad:
+            rejected.append((it, bad))
+        else:
+            kept.append(it)
+    if rejected:
+        print(f'  ⛔ 字段契约拦截 {len(rejected)} 条（不猜值填补，直接拒收，名额由其他新闻补）：')
+        for it, bad in rejected:
+            print(f'     - 缺 {"/".join(bad)} | 源={it.get("source") or it.get("attribution") or "?"} '
+                  f'| {(it.get("title") or "")[:44]}')
+        print(f'     ℹ️ 若上游分类长期缺失，属采集策略问题，需先分析根因（勿加兜底）')
+    items = kept
+
     # 跨天去重：过滤与前 3 天同事件的条目（在 pick 前过滤，名额由其他新闻补上）
     sigs, seen_urls = load_recent_signatures(today)
     if sigs:
@@ -293,7 +318,15 @@ def main():
         if dropped:
             print(f'  ⟂ 跨天去重: 过滤 {dropped} 条与前 3 天同事件的条目')
 
+    if not items:
+        print('❌ 字段契约拦截 + 跨天去重后已无合格条目')
+        print('   → 先分析根因（上游接口异常？采集策略取错模式？），本次**不写文件、不发布**。')
+        sys.exit(2)
+
     chosen = pick(items, args.limit)
+    if len(chosen) < args.limit:
+        print(f'  ℹ️ 合格候选只有 {len(chosen)} 条（期望 {args.limit}）→ 如实少发，不凑数、不猜值补位')
+
     news = []
     for i, it in enumerate(chosen, 1):
         n = to_news(it, today)

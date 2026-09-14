@@ -112,7 +112,8 @@ def build_news_page(all_tools=None):
     def _card(item, first=False, date_ctx=None):
         # 时间线条目（2026-08-16 第三版，对标 ai-bot.cn 移动端：大标题自然换行、无下划线、去卡片盒）
         cat = item.get('category','')
-        cl = CAT_LABEL.get(cat, cat) or '资讯'  # 2026-09-14 兜底：上游 category 为 null 时不再渲染空徽章
+        cl = CAT_LABEL.get(cat, cat)  # 2026-09-14：撤掉 'or 资讯' 兜底——数据契约由采集端+门禁保证，
+                                      # 渲染层静默降级只会让缺陷在下游隐形存活。
         cc = CAT_COLOR.get(cat,'#64748b')
         # 标题规范化：去尾部多余标点（快准狠，标题干净利落）
         title = (item.get('title') or '').strip()

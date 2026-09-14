@@ -83,15 +83,28 @@ def _bash():
 # ── 步骤实现 ────────────────────────────────────────────────────────────────
 
 def step_fetch(args):
-    """1. 采集（幂等：文件已存在且有内容则跳过）"""
-    _run([_py(), "scripts/fetch_aihot_news.py"], "fetch")
+    """1. 采集（幂等：文件已存在且有内容则跳过）
+
+    采集端已内建**字段契约拦截**：上游条目缺 title/summary/category/source/source_url 时
+    直接拒收（不猜值填补），名额由其他合格新闻补上。这里只负责把拦截情况显式报出来，
+    并把"上游质量异常"与"正常防御"区分开。
+    """
+    out = _run([_py(), "scripts/fetch_aihot_news.py"], "fetch")
     fp = _latest_news_file()
     if not fp:
         raise RuntimeError("采集后仍无 data/news_*.json")
     items = json.load(open(fp, encoding="utf-8"))
     if not items:
         raise RuntimeError(f"采集结果为空：{os.path.basename(fp)}（上游无数据，本期不可发布）")
-    print(f"  → 本期 {len(items)} 条：{os.path.basename(fp)}")
+    n = len(items)
+    print(f"  → 本期 {n} 条：{os.path.basename(fp)}")
+
+    if "⛔ 字段契约拦截" in out:
+        print("  ⚠️ 本期有上游条目被字段契约拒收（明细见上）。这是**防御生效**，不是缺陷被掩盖；"
+              "但若连续多期发生或占比很高，属上游数据/采集策略问题 → 先分析根因，勿加兜底。")
+    if n < 5:
+        print(f"  ⚠️ 本期仅 {n} 条（历史常见 5-8 条）。若明显偏低，先分析：上游接口异常？"
+              f"跨天去重口径过宽？字段拦截过多？**不要靠补条目凑数**。")
     return fp
 
 
@@ -218,6 +231,18 @@ def main():
             STEP_FN[s](args)
     except Exception as e:
         print(f"\n❌ 快讯日更链路中止于 [{s}]：{e}")
+        print("\n── 先分析，别硬跑（2026-09-14 用户拍板）─────────────────────────")
+        print("  本项目禁止用「默认值 / 猜测 / 静默跳过」把缺陷填上继续跑——那只会把显性问题")
+        print("  变成下游的隐性错误，而且没人知道。正确姿势：")
+        print("   1) 取证：把上面的原始输出读完，确认真实取值（用 repr() 区分 None / '' / 键不存在），"
+              "别用真值判断猜")
+        print("   2) 分侧定位：谁写坏的（生产侧）+ 谁放行的（门禁侧），两侧都要找到，只修一侧还会复发")
+        print("   3) 判断根因类型：上游数据缺陷？选条策略错？契约没覆盖？边界没写？")
+        print("   4) 只修根因；存量坏数据由人读过内容后判定写回（逐文件 .bak + 写后读回校验），"
+              "不要用脚本猜值")
+        print("   5) 复现验证通过后再重跑本链路的对应段（--from <step>），不要从头盲跑")
+        print(f"\n  取证命令：{_py()} scripts/fetch_aihot_news.py --audit-fields   # 字段缺陷全库清单")
+        print(f"           {_py()} scripts/check_news_quality.py --today       # 本期质量明细")
         return 1
     print(f"\n🎉 快讯日更全链路完成（{int((datetime.now()-t0).total_seconds())}s）："
           f"{SITE}/news/{os.path.basename(_latest_news_file()).replace('news_','').replace('.json','')}/")
