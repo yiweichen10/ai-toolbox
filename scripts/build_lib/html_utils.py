@@ -182,7 +182,8 @@ def markdown_to_html(md):
     html = re.sub(r'!\[([^\]]*)\]\((/[^)]+)\)', r'<img src="\2" alt="\1" loading="lazy">', html)
     # 链接 [text](url)
     html = re.sub(r'\[([^\]]+)\]\((/[^)]+)\)', r'<a href="\2" class="ilink">\1</a>', html)
-    html = re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)', r'<a href="\2" target="_blank" rel="noopener" class="ext-link">\1</a>', html)
+    # 外链统一 target=_blank + rel=nofollow noopener（AGENTS 规则 7：站内外链一律 nofollow）
+    html = re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)', r'<a href="\2" target="_blank" rel="nofollow noopener" class="ext-link">\1</a>', html)
     # 列表：将连续的 <li> 包裹在 <ul> 中
     html = re.sub(r'^- (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     html = re.sub(r'^(\d+)\. (.+)$', r'<li>\2</li>', html, flags=re.MULTILINE)

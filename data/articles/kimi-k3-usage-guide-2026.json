@@ -1,0 +1,50 @@
+{
+  "title": "Kimi K3 使用教程：API 怎么调用、价格多少、模型怎么选（2026）",
+  "seo_title": "Kimi K3 使用教程：API 调用、价格与推理强度设置（2026）",
+  "slug": "kimi-k3-usage-guide-2026",
+  "date": "2026-09-14",
+  "dateFull": "2026-09-14",
+  "category": "AI教程",
+  "content_type": "AI教程",
+  "tags": [
+    "Kimi K3",
+    "月之暗面",
+    "Moonshot AI",
+    "AI教程",
+    "大模型API",
+    "开源大模型"
+  ],
+  "summary": "Kimi K3 是月之暗面 2026 年 7 月发布的旗舰模型，2.8 万亿参数、100 万 token 上下文。本文讲清三件事：网页端怎么用、API 怎么三步跑通、推理强度 low/high/max 怎么选，附官方价格表和两个迁移踩坑点。",
+  "description": "Kimi K3 使用教程：官网免费入口在哪、API 怎么三步调用、输入 ¥20 输出 ¥100 每百万 token 怎么算成本，以及 reasoning_effort 三档怎么选。含 K2.5 下线迁移说明。",
+  "keywords": "Kimi K3,Kimi K3怎么用,Kimi K3 API,Kimi K3价格,reasoning_effort,月之暗面,Moonshot AI,开源大模型",
+  "author": "AI工具宝箱",
+  "related_tools": [
+    "kimi",
+    "kimi-code"
+  ],
+  "faq": [
+    {
+      "question": "Kimi K3 免费吗？",
+      "answer": "网页版聊天免费，打开 kimi.com 登录就能用。API 调用按量计费，输入 ¥20/百万 token、输出 ¥100/百万 token；调用 K3 需要账户累计充值满 10 元，注册赠送的 15 元代金券不能用于 K3。"
+    },
+    {
+      "question": "Kimi K3 支持多长的上下文？",
+      "answer": "官方文档标注 100 万 token。按中文通常 1 个 token 约 1.5-2 个汉字估算，大约能一次装进几十万字的长文档，适合整本书、整套代码仓库级别的分析任务。"
+    },
+    {
+      "question": "reasoning_effort 该选 low、high 还是 max？",
+      "answer": "K3 常驻推理，没有关闭思考的开关。low 适合改错别字、格式转换这类简单活儿，响应最快；high 适合日常写代码和分析；max 是默认档，留给数学证明、复杂重构等高难度任务，代价是等待更久、token 消耗更多。"
+    },
+    {
+      "question": "Kimi K3 怎么本地部署？",
+      "answer": "官方已放出完整权重，是首个到 2.8 万亿参数级别的开源模型。但全量模型对显存要求极高，个人开发者实际能跑通的路径是等社区量化版（如 4bit）配合 vLLM 或 llama.cpp，官方也在与推理生态伙伴对齐上线细节。"
+    },
+    {
+      "question": "Kimi K2.5 和 moonshot-v1 还能用吗？",
+      "answer": "不能。官方已于 2026 年 8 月 31 日下线 kimi-k2.5 和 moonshot-v1 全系列，继续调用会返回 404（模型不存在）。迁移方式是直接把请求里的 model 字段改成 kimi-k3，接口格式不变。"
+    }
+  ],
+  "content": "Kimi K3 是月之暗面 2026 年 7 月发布的旗舰模型，2.8 万亿参数、100 万 token 上下文，也是目前参数规模最大的开源模型。普通用户上 [Kimi 官网](https://www.kimi.com/)免费聊天就能用，开发者走 API 按量付费。\n\n## 一、Kimi K3 是什么\n\n官方[模型列表](https://platform.moonshot.cn/docs/models)给的定位是「Kimi 迄今能力最强的模型」。参数 2.8 万亿（MoE，896 个专家激活 16 个）、上下文 100 万 token、原生视觉理解、权重已开源，模型 ID 是 `kimi-k3`。\n\n![图1：Kimi K3 官方技术博客首页，标题下标注 2.8T 参数与百万 token 上下文](https://www.aitoollab.cn/images/articles/kimi-k3-usage-guide-2026/1-k3-techblog.png)\n\n## 二、不想写代码：官网直接用\n\n打开 [kimi.com](https://www.kimi.com/) 登录后切到 K3，就是正常聊天。左侧栏是深度研究、文档、表格、PPT、Agent 集群这些入口。K3 强在长程任务——丢一份几百页的 PDF 或代码仓库进去，让它跨多轮自己推。\n\n![图2：kimi.com 首页对话界面（未登录态），中间是输入框，左侧是各种能力入口](https://www.aitoollab.cn/images/articles/kimi-k3-usage-guide-2026/2-kimi-web.png)\n\n## 三、开发者：三步跑通 API\n\n先在[开放平台](https://platform.moonshot.cn/)申请 API Key。K3 是旗舰模型，账户累计充值满 10 元才能解锁，注册送的代金券不能用。\n\n接口兼容 OpenAI 格式，把 base_url 换掉就能跑：\n\n```python\nclient = OpenAI(api_key=KEY, base_url=\"https://api.moonshot.cn/v1\")\nclient.chat.completions.create(model=\"kimi-k3\",\n    messages=[{\"role\": \"user\", \"content\": \"用一句话介绍 Kimi K3。\"}])\n```\n\n再按场景选推理强度。K3 常驻思考，没有「关思考」的开关，只能调深度：`low` 应付格式转换这类轻活儿，`high` 用于日常写代码，`max` 留给复杂重构。\n\n```python\nclient.chat.completions.create(model=\"kimi-k3\",\n    reasoning_effort=\"high\",   # low / high / max\n    messages=[{\"role\": \"user\", \"content\": \"证明根号 2 是无理数。\"}])\n```\n\n![图3：Kimi 开放平台首页的模型价格卡，K3 一栏列出三项价格](https://www.aitoollab.cn/images/articles/kimi-k3-usage-guide-2026/3-platform-pricing.png)\n\n## 四、价格怎么算\n\n官方口径是每百万 token：缓存命中 ¥2、输入 ¥20、输出 ¥100。一份 10 万字中文文档约 6 万 token，首次读入约 1.2 元，重复追问命中缓存只要约 0.12 元。省钱姿势是把不变的资料放最前，想再降成本可以换 `kimi-k2.7-code`。\n\n## 五、两个容易踩的坑\n\n**多轮对话别只留 content。** K3 返回的消息带着 `reasoning_content` 和 `tool_calls`，下一轮必须整条塞回 `messages`，只截 `content` 会让它丢推理过程。从 K2.x 迁过来的代码还要注意旧的 `thinking` 参数已作废。\n\n**老模型已经下线。** `kimi-k2.5` 和 `moonshot-v1` 全系列已在 2026 年 8 月 31 日停服，返回 404，把 model 改成 `kimi-k3` 即可。\n\n![图4：Kimi 官方模型列表文档，多模态模型一栏列出 kimi-k3](https://www.aitoollab.cn/images/articles/kimi-k3-usage-guide-2026/4-models-doc.png)\n\n写代码的人收益最大，长程编码和大型仓库理解是 K3 的设计重心，配合 [Kimi Code](/tools/kimi-code/) 或 Claude Code、Codex 都能接；做研究和长文档分析的人次之。模型能力边界见 [K3 横评](/articles/kimi-k3-open-weights-open-source-models-comparison-202607/)。\n",
+  "orig_category": "AI教程",
+  "topic": "AI编程"
+}
