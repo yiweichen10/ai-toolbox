@@ -108,8 +108,12 @@ def publish_new_tools(num_to_publish=3):
     # 3. 将更新后的数据保存（目录优先：写 data/tools/<slug>.json + 原子同步单体）
     from data_store import save_tool
     for tool in tools_to_publish_now:
-        save_tool(tool)
-    print(f"已发布 {len(tools_to_publish_now)} 个工具到 data/tools/（并同步 {TOOLS_JSON_PATH}）")
+        # ⚠️ 必须显式 indent=2：data_store.save_tool 的默认值是 4（历史遗留的异类），
+        # 而 generate_tools 写分片用的是 2 空格缩进。不传参 → 同一文件被两个写者
+        # 用不同缩进来回覆盖，每次发布都产生整文件 diff（2026-09-14 实测：
+        # 3 个新工具 287/287/299 行全文件 diff）。库内正则 2 空格（见 data_store 其他 saver）。
+        save_tool(tool, indent=2)
+    print(f"已发布 {len(tools_to_publish_now)} 个工具到 data/tools/（分片真源）")
 
     # 3.5 自动抓取工具官方 favicon/logo（治本 LOGO 未闭环，2026-08-17）
     # 背景：入库只写 emoji、从不核实真实 LOGO，导致大量工具回退 emoji 色块。
