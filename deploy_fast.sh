@@ -41,13 +41,24 @@ SITE="https://www.aitoollab.cn"
 LOCAL_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$LOCAL_DIR"
 
+# Windows/git-bash：bash 用的是 MSYS 路径（/c/... 、/tmp/...），原生 python 不认，
+# 会当成相对路径拼到当前盘（实测 C:\c\Users\... ）→ 门禁报"未找到 sitemap.xml"假失败。
+# deploy.sh 第 87-90 行早有此转换，deploy_fast.sh 2026-08-28 新增时漏带 →
+# 首次实跑即挂在 sitemap 门禁（2026-09-15）。凡把 bash 路径交给原生程序，一律先转。
+_winpath() {
+    if command -v cygpath >/dev/null 2>&1; then cygpath -w "$1"; else printf '%s' "$1"; fi
+}
+
 if [ ! -f "data/articles/${SLUG}.json" ]; then
     echo "❌ 找不到 data/articles/${SLUG}.json —— 分片才是真源（AGENTS.md 2026-08-25 数据架构）"
     exit 2
 fi
 
 WORK="$(mktemp -d)"
-trap 'rm -rf "$WORK"' EXIT
+# 清理是尽力而为，且**不得改写发布结论**：2026-09-15 实测，`rm -rf` 被环境拦截后
+# EXIT trap 的非 0 状态把一次"线上验收全过 + git 已推送"的成功发布翻转成 rc=1 ——
+# 调用方（automation 的 rc 判定）会据此判失败，属典型假失败。故先存原始状态再还原。
+trap '_rc=$?; rm -rf "$WORK" 2>/dev/null || true; exit $_rc' EXIT
 TS="$(date +%Y%m%d-%H%M%S)"
 
 echo "==========================================="
@@ -77,7 +88,7 @@ fi
 
 echo ""
 echo "[f2/5] 🚪 门禁（与全量部署同一批，任一失败即中止，不绕过）"
-python scripts/check_sitemap_artifacts.py "$LOCAL_DIR"
+python scripts/check_sitemap_artifacts.py "$(_winpath "$LOCAL_DIR")"
 python scripts/check_ads_injected.py
 python scripts/check_dark_mode.py
 python scripts/check_tts_skip.py
@@ -140,7 +151,7 @@ echo "  ✅ 已上传 ${N} 个文件"
 
 echo ""
 echo "[f5/5] 🩺 线上验收（真实用户路径 + 逐文件字节校验）"
-python - "$SITE" "$SLUG" "$WORK/upload" "$SSH_KEY" "$SERVER_IP" << 'PYCHK'
+python - "$SITE" "$SLUG" "$(_winpath "$WORK/upload")" "$(_winpath "$SSH_KEY")" "$SERVER_IP" << 'PYCHK'
 import hashlib, os, subprocess, sys, urllib.request
 
 site, slug, listfile, ssh_key, server_ip = sys.argv[1:6]
@@ -170,7 +181,11 @@ else:
 # 3) 文章页标题与结构化数据
 st, art = head(f"{site}/articles/{slug}/")
 txt = art.decode("utf-8", "ignore")
-for token in ["Article", "FAQPage", "BreadcrumbList", "canonical", "/ads/loader.js"]:
+# 2026-09-15：token 由 /ads/loader.js 改为 /reco/loader.js —— 广告 loader 于 2026-09-01
+# 迁到 /reco/ 前缀（原 /ads/ 命中 uBlock/AdGuard 默认规则被拦）。inject_ads.py 的
+# LOADER_TAG 与 check_ads_injected.py 当时都同步了，本脚本的验收 token 漏改 →
+# 门禁永远 FAIL 且指向错误方向（实测线上所有文章页都不含旧 token）。
+for token in ["Article", "FAQPage", "BreadcrumbList", "canonical", "/reco/loader.js"]:
     ok = token in txt
     print(f"  {'OK ' if ok else 'FAIL'} 文章页含 {token}")
     if not ok:
