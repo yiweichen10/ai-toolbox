@@ -54,8 +54,15 @@ def check_item(it):
         bad.append('title')
     if not (it.get('summary') or '').strip():
         bad.append('summary')
-    if it.get('category') not in VALID_CATEGORIES:
-        bad.append(f'category={it.get("category")!r}（不在白名单 {"|".join(VALID_CATEGORIES)}）')
+    # ⚠️ 校验口径必须与 to_news() 的归一化口径一致（2026-09-15 修）：
+    # 上游给的是**别名**（ai-models / ai-products / tip / industry / paper），
+    # 归一化由 CAT_MAP 在 to_news() 里完成。本函数若直接拿原始值比归一白名单，
+    # 会把别名 100% 误杀——实证：09-15 selected 9 条中 7 条被误拒（上游数据合规），
+    # 当天快讯只剩 2 条。CAT_MAP 是上游别名的静态映射表，不是"猜值兜底"。
+    _raw_cat = it.get('category')
+    _cat = CAT_MAP.get(_raw_cat) if isinstance(_raw_cat, str) else None
+    if _cat not in VALID_CATEGORIES:
+        bad.append(f'category={_raw_cat!r}（归一后={_cat!r}，不在白名单 {"|".join(VALID_CATEGORIES)}）')
     if not (it.get('source') or it.get('attribution') or '').strip():
         bad.append('source')
     if not (it.get('url') or it.get('permalink') or '').strip():
@@ -301,7 +308,7 @@ def main():
     if rejected:
         print(f'  ⛔ 字段契约拦截 {len(rejected)} 条（不猜值填补，直接拒收，名额由其他新闻补）：')
         for it, bad in rejected:
-            print(f'     - 缺 {"/".join(bad)} | 源={it.get("source") or it.get("attribution") or "?"} '
+            print(f'     - 不合规字段：{"/".join(bad)} | 源={it.get("source") or it.get("attribution") or "?"} '
                   f'| {(it.get("title") or "")[:44]}')
         print(f'     ℹ️ 若上游分类长期缺失，属采集策略问题，需先分析根因（勿加兜底）')
     items = kept
