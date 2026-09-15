@@ -190,6 +190,7 @@ def fetch_github_releases(tools, days=7):
         repos[t["slug"]] = (t.get("name", t["slug"]), repo)
     cutoff = datetime.now(CST) - timedelta(days=days)
     cands = []
+    errors = []   # 2026-09-15: 取数失败必须显式留痕，否则「0 命中」会被误读成「无变更」
     for slug, (display, repo) in repos.items():
         try:
             url = f"https://api.github.com/repos/{repo}/releases?per_page=15"
@@ -215,7 +216,19 @@ def fetch_github_releases(tools, days=7):
                     "matched_keyword": repo,
                 })
         except Exception as e:
-            print(f"[gh] 跳过 {repo}: {type(e).__name__}")
+            kind = type(e).__name__
+            if isinstance(e, HTTPError) and getattr(e, "code", 0) == 403:
+                kind = "HTTPError 403(疑似 API 限流/配额耗尽)"
+            errors.append({"repo": repo, "slug": slug, "error": kind})
+            print(f"[gh] 跳过 {repo}: {kind}")
+    # 2026-09-15 事故: 60 个 repo 全部 URLError 时脚本仍打印「命中 1 条」并以 0 退出，
+    # 导致 9 条真实候选被静默漏掉（次日复核才发现）。失败必须可见 —— 醒目标记 + 落盘 source_errors。
+    if errors:
+        sample = "; ".join(f"{x['repo']}({x['error']})" for x in errors[:3])
+        level = "FAIL" if len(errors) == len(repos) else "WARN"
+        print(f"[gh][{level}] GitHub 源取数失败 {len(errors)}/{len(repos)} 个 repo —— "
+              f"本次 GitHub 覆盖不完整，『命中数偏少』不等于『无变更』: {sample}"
+              + (" ..." if len(errors) > 3 else ""))
     # 每 slug 只保留最新一条，压掉 alpha/patch 连发噪音（2026-08-27：codex 三发 alpha 曾占满候选位）
     if cands:
         _latest = {}
@@ -226,7 +239,7 @@ def fetch_github_releases(tools, days=7):
         dropped = len(cands) - len(_latest)
         cands = list(_latest.values())
         print(f"[gh] {len(repos)} 个 repo 扫描，近 {days} 天命中 {len(cands) + dropped} 条，按 slug 收敛为 {len(cands)} 条（去重 {dropped}）")
-    return cands
+    return cands, errors
 
 
 def match(items, tools, only_slugs=None):
@@ -316,15 +329,19 @@ def main():
 
     cands = match(items, tools, args.slugs)
     # GitHub 源直接产出 candidates（title 为 'repo tag'，不走文本匹配）
+    gh_errors = []
     if "github" in srcs:
-        cands += fetch_github_releases(tools, args.days)
+        gh_cands, gh_errors = fetch_github_releases(tools, args.days)
+        cands += gh_cands
     # only_slugs 约束（github 候选同样受过滤）
     if args.slugs:
         cands = [c for c in cands if c["slug"] in args.slugs]
     cands.sort(key=lambda c: (c["date"], c["slug"]))
 
     result = {"updated": datetime.now().strftime("%Y-%m-%d %H:%M"),
-              "sources": srcs, "candidates": cands}
+              "sources": srcs,
+              "source_errors": {"github": gh_errors} if gh_errors else {},
+              "candidates": cands}
     with open(args.out, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 
